@@ -60,9 +60,10 @@ Produção:
 
 - Criar ou ativar um assistente Ask AI ou Agent Studio no painel Algolia para o mesmo índice DocSearch.
 - Copiar o `Agent ID` / `assistantId` desse assistente para `ALGOLIA_ASK_AI_ASSISTANT_ID`.
-- Fazer novo build/deploy para que o DocSearch UI passe a expor o Ask AI sidepanel.
+- Fazer novo build/deploy para que o DocSearch UI passe a expor o Ask AI no fluxo de pesquisa.
 - No painel Algolia, confirmar que o assistente está autorizado para `https://www.securitybydesign.dev/` e para os hosts locais usados em teste, por exemplo `http://localhost:3000/`.
-- A configuração atual do site assume o fluxo Agent Studio e liga `agentStudio: true` com `sidePanel: true`.
+- A configuração atual do site assume o fluxo Agent Studio e liga `agentStudio: true`.
+- Enquanto o repositório mantiver `@docsearch/css` 3.x, o build usa um placeholder local para o CSS do sidepanel esperado pelo adapter 4.x. Isto não afeta o Ask AI no modal de pesquisa.
 
 ## Aspetos documentais importantes para boa indexação
 
@@ -79,3 +80,4 @@ Produção:
 - A qualidade final do Ask AI depende do índice Algolia, da cobertura do crawler e da estabilidade semântica dos títulos/heading do manual.
 - Se o Ask AI responder com contexto demasiado amplo, o próximo ajuste natural é rever a configuração do assistente no Algolia e os atributos/facets do índice antes de mexer na estrutura editorial.
 - Se optares mais tarde por um assistente Ask AI “clássico” em vez de Agent Studio, a configuração do site deve ser revista para remover `agentStudio: true`.
+- O sidepanel do DocSearch v4.5+ pode ser ativado mais tarde, mas neste repositório isso requer primeiro alinhar `@docsearch/css` para a série 4.x e refrescar o lockfile.

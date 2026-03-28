@@ -1,0 +1,5 @@
+/*
+ * Placeholder stylesheet for DocSearch sidepanel imports while the project
+ * still pins @docsearch/css 3.x. Remove this file and the webpack alias in
+ * docusaurus.config.ts after upgrading @docsearch/css to 4.x.
+ */

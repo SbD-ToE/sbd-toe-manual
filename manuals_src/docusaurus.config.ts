@@ -1,5 +1,6 @@
 import type {Config} from '@docusaurus/types';
 import {existsSync, readFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
 import {themes as prismThemes} from 'prism-react-renderer';
 
 const sidebarPath = './sidebars-sbd-toe.ts';
@@ -57,10 +58,12 @@ const algoliaAskAiConfig = algoliaAskAiAssistantId
   ? {
       assistantId: algoliaAskAiAssistantId,
       agentStudio: true,
-      sidePanel: true,
       suggestedQuestions: true,
     }
   : undefined;
+const docsearchSidepanelCssPath = fileURLToPath(
+  new URL('./src/css/docsearch-sidepanel-placeholder.css', import.meta.url),
+);
 
 const hasAlgoliaCredentials = [
   algoliaAppId,
@@ -115,6 +118,25 @@ const config: Config = {
   ],
 
   themes: ['@docusaurus/theme-mermaid', '@docsearch/docusaurus-adapter'],
+
+  plugins: [
+    function docsearchSidepanelCssAliasPlugin() {
+      return {
+        name: 'docsearch-sidepanel-css-alias',
+        configureWebpack() {
+          return {
+            resolve: {
+              alias: {
+                // The repository still pins @docsearch/css 3.x, which doesn't ship
+                // the sidepanel stylesheet expected by DocSearch v4.6.
+                '@docsearch/css/dist/sidepanel.css': docsearchSidepanelCssPath,
+              },
+            },
+          };
+        },
+      };
+    },
+  ],
 
   presets: [
     [
@@ -239,7 +261,8 @@ const config: Config = {
     },
 
     // DocSearch is provided by the official Algolia adapter. The current Ask AI
-    // setup expects an Agent Studio assistant ID and enables the sidepanel UI.
+    // setup expects an Agent Studio assistant ID and exposes Ask AI in the
+    // search experience without requiring a custom chat widget.
     docsearch: {
       appId: algoliaAppId,
       apiKey: algoliaSearchApiKey,

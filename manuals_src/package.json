@@ -38,7 +38,7 @@
   "overrides": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@docsearch/css": "4.6.0"
+    "@docsearch/css": "^3.6.1"
   },
   "browserslist": {
     "production": [

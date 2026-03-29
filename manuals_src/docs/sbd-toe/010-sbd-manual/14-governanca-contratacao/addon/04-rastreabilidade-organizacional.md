@@ -16,9 +16,9 @@ Garantir que existe uma **ligação clara, documentada e auditável** entre:
 
 * A **classificação de risco** atribuída a cada aplicação ou sistema;
 * Os **requisitos de segurança aplicados** (Cap. 2);
-* As **cláusulas contratuais e exigências a terceiros** (Cap. 14.2);
+* As **cláusulas contratuais e exigências a terceiros** (`addon/02-clausulas-contratuais.md`);
 * Os **mecanismos de validação** (testes, revisões, evidência);
-* A **documentação de exceções ou compensações** (Cap. 14.1);
+* A **documentação de exceções ou compensações** (`addon/12-processo-excecoes.md`);
 * E os **responsáveis nomeados** por cada decisão.
 
 Este modelo de rastreabilidade assume que toda a evidência, independentemente de ser produzida manualmente ou por processos técnicos automatizados, é sempre associada a um responsável organizacional explícito.
@@ -85,7 +85,7 @@ flowchart LR
 
 * Esta tabela deve ser usada como **base para governação técnica** e decisão executiva;
 * Deve integrar os dados provenientes dos **checklists por capítulo SbD-ToE**;
-* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver Cap. 14.30).
+* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver `addon/kpis-governanca.md`).
 
 ---
 
@@ -93,9 +93,9 @@ flowchart LR
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos e matriz de aplicação
-* Cap. 14.1 - Governação e exceções
-* Cap. 14.2 - Cláusulas contratuais
-* Cap. 14.3 - Validação de fornecedores
-* Cap. 14.30 - KPIs de governação
+* `addon/01-modelo-governancao.md` — Governação e exceções
+* `addon/02-clausulas-contratuais.md` — Cláusulas contratuais
+* `addon/03-modelo-validacao-fornecedores.md` — Validação de fornecedores
+* `addon/kpis-governanca.md` — KPIs de governação
 
 ---

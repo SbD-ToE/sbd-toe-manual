@@ -100,7 +100,7 @@ Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing
 - **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro):** Catálogo de testes (SAST, DAST, fuzzing, etc.)
 - **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro):** Validação de segurança pré-produção
 
-**Lacuna intencional:** O SbD-ToE não estabelece critérios de elegibilidade para TLPT nem processos de attestation regulatório. Recomenda-se adicionar secção "Readiness TLPT" ao [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro) com critérios organizacionais; os relatórios SbD-ToE podem servir de base documental para processos de attestation.
+**Cobertura parcial — ver [Cap. 10 → addon 14: TLPT Readiness](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness):** O SbD-ToE enquadra o que é o TLPT, o que o distingue do PenTest convencional e como a maturidade do programa de testes se relaciona com o exercício. O que permanece fora do âmbito do manual são os critérios de elegibilidade (identificação pela autoridade competente), a qualificação formal de testers e providers segundo o Reg. Delegado (UE) 2025/1190, e o processo de attestation pela autoridade TLPT designada — estes aspectos são da competência das equipas de compliance e da relação com o supervisor.
 
 ---
 

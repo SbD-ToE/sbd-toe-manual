@@ -1,107 +1,80 @@
 ---
-
 id: gestao-excecoes
-title: Gestão de Exceções e Justificações Formais em IaC
+title: Excepções em IaC
 sidebar_position: 9
-description: Procedimentos e critérios para tratamento de exceções às práticas prescritas de IaC Seguro.
-tags: [excecoes, governacao, iac, controlo, seguranca, auditoria]
------------------------------------------------------------------
+description: Especificidades da gestão de excepções no contexto de Infraestrutura como Código — policy engines, enforcement e TTL
+tags: [excecoes, governacao, iac, controlo, opa, enforcement]
+---
 
-# ⚠️ Gestão de Exceções e Não-Conformidades em Projetos IaC
+# Excepções em IaC
 
-## 🌟 Objetivo
-
-Definir um **processo formal, auditável e temporário** para a gestão de exceções a políticas, requisitos ou controlos de segurança aplicáveis a projetos de Infraestrutura como Código (IaC).
-
-Este mecanismo existe para **permitir continuidade operacional sem comprometer governação**, assegurando que qualquer desvio é:
-
-* explicitamente conhecido;
-* tecnicamente justificado;
-* mitigado;
-* limitado no tempo.
-
-> Exceções são um mecanismo legítimo de gestão de risco. **Exceções não controladas são falhas de segurança.**
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
-## 📌 O que deve ser feito
+## Âmbito
 
-1. Definir **critérios objetivos** para aceitação de exceções em IaC;
-2. Estabelecer um **fluxo formal de submissão, análise e aprovação**;
-3. Registar todas as exceções com **metadados mínimos obrigatórios**;
-4. Garantir **ligação direta entre exceção, código, ambiente e requisito violado**;
-5. Aplicar **prazo de validade (TTL)** e revisão periódica obrigatória;
-6. Revogar automaticamente exceções expiradas ou não revalidadas;
-7. Reavaliar exceções sempre que haja **mudança relevante de contexto** (arquitetura, fornecedor, risco).
+Excepções a políticas e controlos de segurança aplicados por policy engines (OPA, Sentinel, Rego) sobre módulos, recursos e pipelines IaC — requisitos `IAC-001` a `IAC-013`.
 
 ---
 
-## ⚙️ Como deve ser feito
+## Triggers específicos deste domínio
 
-| Elemento          | Prescrição                                                                                                     |
-| ----------------- | -------------------------------------------------------------------------------------------------------------- |
-| Formato           | YAML ou JSON versionado (preferencial); `.md` apenas para exceções documentais                                 |
-| Campos mínimos    | ID, requisito violado, descrição, justificação, impacto, mitigação, ambiente, responsável, aprovador, validade |
-| Local de registo  | Diretório `exceptions/` no repositório IaC ou repositório central dedicado                                     |
-| Ligação ao código | Comentário estruturado (`# iac-exception: IAC-003`) ou anotação Rego                                           |
-| Aprovação         | AppSec obrigatório; GRC adicional para L3                                                                      |
-| Validade          | Máx. 90 dias, renovação exige nova avaliação                                                                   |
+- ferramenta de validação IaC indisponível com necessidade de deploy documentada como urgente;
+- requisito tecnicamente impossível de aplicar ao módulo ou recurso em causa, com justificação de arquitectura;
+- desvio intencional em ambiente de staging com controlo compensatório activo;
+- módulo legado integrado sem suporte às políticas actuais, com plano de migração.
 
 ---
 
-## 🗒️ Exemplo de exceção formalizada
+## Campos adicionais obrigatórios (IaC)
+
+| Campo | Obrigatório | Notas |
+|---|---|---|
+| Ambiente afectado | Sim | `staging` / `production` / `shared` |
+| Artefacto IaC afectado | Sim | Nome do módulo, recurso ou pipeline |
+| Regra / policy violada | Sim | ID da regra OPA / Sentinel / Rego |
+
+---
+
+## Registo no repositório
+
+**Ficheiro:** directório `exceptions/` no repositório IaC, ou repositório central dedicado com equivalência rastreável.
+
+**Formato:** YAML ou JSON versionado. Formato `.md` apenas para excepções documentais sem integração com policy engine.
 
 ```yaml
 id: IAC-EXC-003-2025-07-10
 requisito: IAC-003
-descricao: Execução temporária sem scanner tfsec
 ambiente: staging
 artefacto_afetado: pipeline-iac-staging
-justificacao: Deploy urgente para restauro de capacidade após incidente P1
-impacto: Possível omissão temporária de deteção de más configurações
-mitigacao: Execução manual de tfsec pós-deploy + revisão AppSec
-aprovado_por: appsec@org
-validade: 2025-07-20
+justificacao: "Deploy urgente para restauro de capacidade após incidente P1"
+impacto: "Possível omissão temporária de detecção de má configuração"
+mitigacao: "Execução manual de tfsec pós-deploy + revisão AppSec"
+aprovado_por: "appsec@org"
+validade: "2025-07-20"
+```
+
+**Ligação ao código:** comentário estruturado no recurso afectado:
+
+```hcl
+# iac-exception: IAC-EXC-003-2025-07-10
 ```
 
 ---
 
-## 🗓️ Quando aplicar
+## Integração com policy engines
 
-| Situação                             | Ação esperada                        |
-| ------------------------------------ | ------------------------------------ |
-| Ferramenta de validação indisponível | Submissão imediata de exceção formal |
-| Requisito tecnicamente impossível    | Exceção com mitigação compensatória  |
-| Desvio intencional em IaC            | Registo explícito e visível          |
-| Revisão periódica                    | Avaliação mensal ou por sprint       |
+- Excepções são avaliadas **por regra e por contexto** — não desactivam regras globalmente;
+- Policy engines (OPA/Sentinel/Rego) devem ser configurados para interpretar excepções activas como contexto de avaliação;
+- Excepções expiradas resultam em **bloqueio automático** do pipeline — a expiração não é silenciosa nem passa para estado permissivo por omissão.
 
 ---
 
-## 🧩 Integração com enforcement
+## Referências cruzadas
 
-* Exceções **não desativam regras** globalmente;
-* São avaliadas **por regra e por contexto**;
-* Devem ser **interpretáveis por *policy engines*** (OPA/Sentinel);
-* Exceções expiradas resultam em **bloqueio automático** do pipeline.
-
----
-
-## ✅ Benefícios diretos
-
-* Elimina desvios silenciosos e técnicos fora de governação;
-* Permite equilíbrio entre agilidade e segurança;
-* Fornece evidência clara para auditoria;
-* Reduz acumulação de dívida técnica e de risco.
-
----
-
-## 🔗 Referências cruzadas
-
-| Documento                           | Relação                                            |
-| ----------------------------------- | -------------------------------------------------- |
-| `addon/06-controle-enforcement.md`  | Tratamento técnico de exceções em *policy-as-code* |
-| `addon/08-matriz-requisitos-iac.md` | Requisitos IAC e validação                         |
-| Cap. 14 — Governança e Contratação  | Processo organizacional de exceções                |
-| SSDF (RV.1)                         | Gestão de desvios e risco                          |
-| OWASP SAMM (AA2.4, SR2.2)           | Governação de risco técnico                        |
-| SLSA (Build L3)                     | Controlo e aprovação formal                        |
+| Documento | Relação |
+|---|---|
+| `addon/06-controle-enforcement.md` | Tratamento técnico de excepções em policy-as-code |
+| `addon/08-matriz-requisitos-iac.md` | Requisitos IAC-001..013 que podem ter excepções |
+| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

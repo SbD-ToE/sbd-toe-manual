@@ -29,7 +29,7 @@ A maturidade organizacional não resulta apenas do aumento da automação, mas d
 
 ## 🌍 3. Aplicação transversal
 
-A maturidade de governaça afeta **todos os restantes capítulos**:
+A maturidade de governança afeta **todos os restantes capítulos**:
 
 * Define quando e como aplicar requisitos (Cap. 2);
 * Impede exceções não rastreadas (Cap. 1);
@@ -42,16 +42,16 @@ A maturidade de governaça afeta **todos os restantes capítulos**:
 
 A evolução do modelo SbD-ToE pode ser guiada por:
 
-* Adoção formal do modelo de governaça (Cap. 14.1);
+* Adoção formal do modelo de governança (`addon/01-modelo-governancao.md`);
 * Integração de revisões e exceções num ciclo trimestral;
-* Geração de KPIs e dashboards (Cap. 14.30);
+* Geração de KPIs e dashboards (`addon/kpis-governanca.md`);
 * Auditorias cruzadas entre aplicações, contratos e rastreabilidade.
 
 ---
 
 ## ✅ Recomendações finais
 
-* Rever anualmente a estrutura de governaça e roles atribuídos;
+* Rever anualmente a estrutura de governança e roles atribuídos;
 * Consolidar dados operacionais (checklists) com dados de processo (decisões);
 * Monitorizar a evolução de maturidade usando frameworks externos como baseline.
 
@@ -59,8 +59,8 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 
 ## 🔗 Ligações cruzadas
 
-* Cap. achievable-maturity de cada capítulo
-* Cap. 14.1 a 14.6 - componentes de suporte à maturidade
-* Cap. 14.30 - KPIs de governaça
+* `achievable-maturity.md` de cada capítulo
+* `addon/01` a `addon/07` — componentes de suporte à maturidade
+* `addon/kpis-governanca.md` — KPIs de governança
 
 ---

@@ -21,9 +21,9 @@ Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em co
 | Requisito | Aplicação prática |
 |-----------|--------------------|
 | ARC-001   | Zonas de confiança definidas (frontend público, backend, base de dados) |
-| ARC-005   | Threat modeling STRIDE aplicado aos fluxos entre componentes |
-| ARC-011   | Segmentação entre ambientes dev/stage/prod com permissões isoladas |
-| ARC-012   | Arquitetura validada com critérios formais por AppSec e Arquitetura |
+| ARC-005   | Threat modeling STRIDE aplicado nos fluxos entre componentes (fluxos críticos cobertos e mitigações registadas) |
+| ARC-011   | Segmentação entre ambientes dev/stage/prod com permissões e identidade isoladas |
+| ARC-012   | Checklist formal de aprovação preenchido por AppSec antes do deploy em produção |
 | ARC-013   | Validação automática da topologia via `Cartography` em CI/CD |
 
 ---
@@ -37,10 +37,10 @@ Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em co
 
 | Requisito | Aplicação prática |
 |-----------|--------------------|
-| ARC-002   | APIs internas isoladas da exposição externa |
-| ARC-003   | Revisão de arquitetura com checklist de AppSec |
-| ARC-006   | Serviços críticos isolados em subnets dedicadas |
-| ARC-010   | Diagrama de arquitetura versionado no repositório (`.drawio`) |
+| ARC-002   | Inventário de APIs expostas externamente com controlos associados documentados |
+| ARC-003   | Revisão de arquitectura com registo formal e checklist de AppSec |
+| ARC-006   | Serviços críticos com isolamento activo em subnets dedicadas |
+| ARC-010   | Diagrama de arquitectura versionado no repositório (`.drawio`) |
 
 ---
 

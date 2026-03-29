@@ -10,7 +10,7 @@ tags: [tipo:catalogo, tema:requisitos, rastreabilidade, criticidade, ASVS]
 # 🛠️ Catálogo de Requisitos Aplicacionais
 
 O **catálogo de requisitos de segurança** é um dos pilares do modelo SbD-ToE, funcionando como referência estruturada para garantir que cada aplicação, projeto ou sistema adota controlos adequados ao seu nível de risco, tipologia e contexto operacional.
-O catalogo de requisitos deve ser criado por organização, com base no que aqui indicamos como referência, e adaptado a cada uma das aplicações, adoptando o modelo de rastreabilidade e controlo sugerido neste capitulo. 
+O catálogo SbD-ToE fornece os **identificadores canónicos de referência** (`AUT-001`, `LOG-003`, etc.) — estáveis, independentes de projecto e alinhados com frameworks externos. Cada organização deve criar o seu próprio catálogo a partir desta base, e cada projecto instancia os requisitos aplicáveis sob a forma de **tags operacionais rastreáveis** (`SEC-L2-AUT-MFA`). A distinção entre os dois sistemas e o modelo de instanciação estão descritos em [Taxonomia e Rastreabilidade](./taxonomia-rastreabilidade).
 
 A existência de um catálogo formal permite:
 - Garantir **proporcionalidade** das exigências (L1, L2, L3), evitando sobrecarga ou lacunas;
@@ -50,6 +50,7 @@ Consulte a aplicação proporcional dos requisitos por domínio técnico no
 - [VAL - Validação de Dados](lista-requisitos-base#val)
 - [ERR - Gestão de Erros](lista-requisitos-base#err)
 - [CFG - Configuração Segura](lista-requisitos-base#cfg)
+- [ENC - Dados Sensíveis e Criptografia](lista-requisitos-base#enc)
 - [API - Segurança de APIs](lista-requisitos-base#api)
 - [INT - Mensagens e Integrações](lista-requisitos-base#int)
 - [REQ - Definição de Requisitos](lista-requisitos-base#req)

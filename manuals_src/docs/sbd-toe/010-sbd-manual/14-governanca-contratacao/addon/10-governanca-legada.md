@@ -15,7 +15,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ## 🌟 Objetivo
 
-* Permitir que projetos legados sejam enquadrados num modelo de governaça estruturado;
+* Permitir que projetos legados sejam enquadrados num modelo de governança estruturado;
 * Garantir visibilidade, rastreabilidade e compensações mesmo quando não é possível aplicar todos os requisitos;
 * Evitar exceções silenciosas que colocam em risco a coerência do modelo SbD-ToE.
 
@@ -41,7 +41,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
    * Compensações propostas
    * Validade e plano de reavaliação
 
-5. **Incluir o ativo no ciclo de revisão continuada** (Cap. 14.6)
+5. **Incluir o ativo no ciclo de revisão continuada** (`addon/06-validacao-continuada.md`)
 
 ---
 
@@ -51,7 +51,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 | ------------------------ | ---------------------------------------------------- |
 | Sistema                  | DataBroker interno                                   |
 | Nível de risco           | L3                                                   |
-| Requisitos não cumpridos | REQ-AUD-002, REQ-LOG-003                             |
+| Requisitos não cumpridos | AUD-002, LOG-003                                     |
 | Justificação             | Sistema core dependente de arquitetura pré-existente |
 | Compensações             | Monitorização por SIEM externo + controlo de acesso  |
 | Owner                    | joana.sousa\@empresa                                 |
@@ -64,7 +64,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 * Nunca ignorar ativos legados: tratar como exceção formal com rastreabilidade;
 * Incorporar o ciclo de revisão e melhoria contínua;
 * Monitorizar compensações e documentar desvios de forma transparente;
-* Incluir estes casos nos **KPIs de maturidade e governaça**.
+* Incluir estes casos nos **KPIs de maturidade e governança**.
 
 ---
 
@@ -72,8 +72,8 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos mínimos por risco
-* Cap. 14.1 - Modelo de decisão e exceções
-* Cap. 14.6 - Validação continuada
+* `addon/01-modelo-governancao.md` — Modelo de decisão e exceções
+* `addon/06-validacao-continuada.md` — Validação continuada
 * Cap. 08 / 09 - Integração com pipelines e execução isolada
 
 ---

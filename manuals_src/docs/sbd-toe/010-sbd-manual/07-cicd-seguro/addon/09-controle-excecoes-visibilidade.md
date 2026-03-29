@@ -1,95 +1,64 @@
 ---
 id: controle-excecoes-visibilidade
-title: Controlo de Exceções e Visibilidade Organizacional
+title: Excepções e Visibilidade em CI/CD
 sidebar_position: 9
-description: Regras formais para permitir exceções no pipeline, com registo, aprovação, prazo de validade e visibilidade por função.
-tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
+description: Especificidades da gestão de excepções no contexto de pipelines CI/CD — bypass de gates, visibilidade e métricas
+tags: [exceções, visibilidade, cicd, governação, auditoria]
 ---
 
+# Excepções e Visibilidade em CI/CD
 
-# 🧭 Controlo de exceções e visibilidade organizacional
-
-Mesmo com pipelines bem definidos, é inevitável que ocorram exceções - falhas temporárias, necessidades urgentes, aplicações legadas ou contextos específicos.
-
-Esta prática define como gerir **exceções de forma controlada, rastreável e aprovada**, e como garantir **visibilidade organizacional sobre conformidade, desvios e evolução das práticas** no CI/CD.
-
-> Exceções inevitáveis não podem ser invisíveis nem permanentes.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
-## 🎯 Objetivos
+## Âmbito
 
-- Permitir exceções justificadas, com controlo e responsabilização;
-- Detetar incumprimentos sistemáticos ou acidentais das políticas de pipeline;
-- Fornecer visibilidade técnica e executiva sobre o estado de segurança e maturidade CI/CD.
+Excepções a gates de segurança, políticas de pipeline e controlos de CI/CD — bypass temporário de validações, desactivação de ferramentas ou desvio a políticas de execução.
 
 ---
 
-## 🛠️ Práticas
+## Triggers específicos deste domínio
 
-1. **Gestão formal de exceções**  
-   - Toda exceção deve ser registada com motivo, impacto, responsável e prazo de validade;
-   - A aprovação deve ser formal (ex: ticket, comentário com reviewer, label `bypass-*`).
-
-2. **Exceções visíveis no pipeline e nos relatórios**  
-   - Devem ser **explicitamente assinaladas** em logs, artefactos ou metadados de execução;
-   - Exceções devem ter expiração e estar sujeitas a revisão.
-
-3. **Métricas agregadas de conformidade e exceções**  
-   - Exemplos de indicadores:  
-     - % de pipelines com SAST ativo;  
-     - Nº de exceções por categoria;  
-     - Aplicações L3 sem enforcement ativo.
-
-4. **Alertas de desvios críticos ou repetidos**  
-   - Detetar e sinalizar situações como:  
-     - Uso recorrente de `--force`;  
-     - Deploys sem gates;  
-     - Builds sem proveniência ou sem validações.
-
-5. **Reporting técnico e executivo**  
-   - Relatórios e dashboards periódicos com:  
-     - Ações corretivas para equipas técnicas;  
-     - Indicadores de risco e maturidade para gestão.
+- gate de segurança bloqueante em contexto de incidente crítico com necessidade de deploy urgente e documentado;
+- ferramenta de validação indisponível com impacto no ciclo de release;
+- aplicação legada integrada no pipeline sem suporte técnico aos controlos exigidos;
+- janela de excepção durante migração de pipeline com prazo delimitado.
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## Visibilidade obrigatória no pipeline
 
-| Nível | Exceções permitidas                         | Controlo esperado                                           |
-|-------|----------------------------------------------|-------------------------------------------------------------|
-| **L1** | Exceções técnicas justificadas               | Registo simples (ex: label, comentário)                     |
-| **L2** | Aprovadas por lead técnico ou segurança      | Registo + data de expiração + plano de revisão              |
-| **L3** | Exceções mínimas e temporárias               | Aprovadas formalmente; obrigam mitigação paralela ou compensatória |
+Toda a excepção activa deve ser **explicitamente assinalada** nos logs, artefactos de execução ou metadados do pipeline. Uma excepção invisível no pipeline é equivalente a um bypass não controlado.
 
----
+Mecanismos de sinalização por ferramenta:
 
-## 📌 Exemplos práticos
-
-- **GitHub Actions**  
-  - Labels como `bypass-security-gate`; aprovação visível no PR;  
-  - Métricas com GitHub Insights + Scorecard.
-
-- **GitLab CI**  
-  - Ficheiro `exception.yaml` no MR; revisão por `Security Approval`;  
-  - Dashboards com % de políticas aplicadas por projeto.
-
-- **Azure DevOps**  
-  - Exceções em `release override`, associadas a Work Items;  
-  - Dashboards (nativos ou Power BI) com KPIs por pipeline.
-
-- **Jenkins**  
-  - Comentários manuais no `Jenkinsfile`; uso de flags `bypass=true`;  
-  - Integração com Jira ou ServiceNow para controlo formal.
+| Ferramenta | Mecanismo sugerido |
+|---|---|
+| GitHub Actions | Label `bypass-security-gate` no PR; aprovação visível no histórico de execução |
+| GitLab CI | Ficheiro `exception.yaml` no MR; revisão por `Security Approval` |
+| Azure DevOps | Override em release associado a Work Item com referência ao registo de excepção |
+| Jenkins | Flag `bypass=true` comentado no `Jenkinsfile`; integração com Jira ou ServiceNow |
 
 ---
 
-## 📉 Riscos mitigados
+## Métricas associadas
 
-- Bypass silencioso de políticas de segurança (OSC&R: CI0002);
-- Ausência de rastreabilidade em falhas intencionais ou técnicas;
-- Incapacidade de avaliar a maturidade global de CI/CD;
-- Repetição sistemática de exceções sem ação corretiva.
+As excepções CI/CD contribuem directamente para os KPIs de maturidade (ver Cap. 14 — `kpis-governanca.md`):
+
+- % de pipelines com gates de segurança activos;
+- nº de excepções activas por categoria (SAST, SBOM, signing, deploy gates);
+- aplicações L3 com enforcement desactivado ou em excepção.
+
+Estes indicadores devem ser reportados no ciclo de governação.
 
 ---
 
+## Referências cruzadas
+
+| Documento | Relação |
+|---|---|
+| `addon/06-politicas-gates-pipeline.md` | Gates e políticas de pipeline que podem ser objecto de excepção |
+| `addon/07-validacoes-seguranca-integradas.md` | Validações integradas e condições de bypass |
+| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 — `kpis-governanca.md` | Indicadores de conformidade e excepções activas |

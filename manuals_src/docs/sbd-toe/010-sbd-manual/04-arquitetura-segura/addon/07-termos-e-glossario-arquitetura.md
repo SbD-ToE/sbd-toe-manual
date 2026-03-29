@@ -1,10 +1,12 @@
+---
 id: termos-e-glossario-arquitetura
 title: Glossário Operacional
 description: Termos usados no Capítulo 04 com definições operacionais e artefactos associados
-tags: [tipo:addon, jargao, arquitetura-segura, rastreabilidade, adr, threat-modeling, trust-boundaries]
+tags: [tipo:addon, tema:arquitetura, jargao, rastreabilidade, ADR, threat-modeling, trust-boundaries]
 sidebar_position: 7
-template: sbdtoe-addon
 ---
+
+<!--template: sbdtoe-addon -->
 
 > Este **glossário operacional** normaliza o vocabulário usado no Cap. 04 e nos seus artefactos    
 > **Objetivo:** garantir que termos críticos têm significado único, aplicação clara e ligação a evidências.
@@ -71,15 +73,14 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | Incidente ou *near-miss* | Retroalimentar controlos, ajustar desenho | RCA, *post-mortem*, atualização de controlos |
 | Ameaça emergente (*threat intel*) | Rever cobertura e priorização | `tm-sync-arquitetura.md` |
 
-## 🧩 Mapa rápido: ARC-XXX → Prática/Artefacto 
-> Exemplo de como referenciar no *lifecycle* (ajustar aos teus ARC reais):
+## 🧩 Mapa rápido: ARC-XXX → Prática/Artefacto
 
 | ARC-ID | Prática associada | Artefacto esperado |
 |---|---|---|
-| **ARC-015 - AuthN centralizada** | Integração OIDC; revisão *trust boundary* | ADR, `integration-review.md`, `solution-architecture.md` |
-| **ARC-023 - Segregação por contexto** | *Trust boundaries*, *least privilege* | Diagrama C4 anotado, *review* AppSec |
-| **ARC-031 - Criptografia em trâns./repouso** | *Key management*, *KMS* | `solution-architecture.md`, *evidence* CI/CD |
-| **ARC-042 - Observabilidade de segurança** | *Tracing*, *audit logs* | Plano de *logging*, métricas, *dashboards* |
+| **ARC-004 — Decisões de arquitectura documentadas** | ADR por decisão estrutural com impacto em segurança ou dependências | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
+| **ARC-005 — Threat modeling nos fluxos críticos** | TM workshop; sincronização ameaça→controlo→ARC | DFD anotado, `tm-sync-arquitetura.md`, registo de ameaças |
+| **ARC-006 — Isolamento entre domínios sensíveis** | Políticas de rede; segmentação lógica; ACLs; *admission control* | Diagrama C4 anotado, configuração de rede, *review* AppSec |
+| **ARC-008 — Fluxos de dados entre zonas protegidos** | DFD com controlos explícitos em cada fronteira de confiança | `trust-boundaries.md`, DFD versionado em repositório |
 
 ## 🔄 Como usar este jargão nas User Stories 
 - **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (ARC-XXX).  

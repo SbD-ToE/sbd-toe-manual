@@ -78,6 +78,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 | Capítulo 07 - CI/CD Seguro     | Findings originados em jobs de validação contínua |
 | `01-sast.md`, `02-dast.md`     | Produzem findings que devem ser triados       |
 | `09-feedback-equipa.md`        | Define mecanismos de comunicação e ownership   |
+| Cap. 14 — `addon/12-processo-excecoes.md` | Findings não resolvidos no SLA de TST-003 requerem excepção formal por este processo |
 
 ---
 

@@ -27,14 +27,13 @@ Cada modelo está associado a:
 
 ### ✔️ Requisitos aplicáveis
 
-- `ARC-001` (Zonas de confiança)
-- `ARC-003` (Fluxos representados)
-- `ARC-007` (Uso de padrão aprovado)
+- `ARC-001` (Zonas de confiança identificadas e documentadas)
+- `ARC-007` (Padrões de arquitectura reutilizáveis e aprovados)
+- `ARC-010` (Diagramas de arquitectura versionados e acessíveis)
 
 ### 🔑 Ameaças mitigadas
 
 - STRIDE: Tampering, Information Disclosure
-- OSC&R: ARC-01, ARC-03
 
 ### 🖼️ Diagrama sugerido
 
@@ -62,7 +61,6 @@ Cada modelo está associado a:
 ### 🔑 Ameaças mitigadas
 
 - STRIDE: Elevation of Privilege, Spoofing, Repudiation
-- OSC&R: ARC-03, ARC-06, GOV-01
 
 ### 🖼️ Diagrama sugerido
 
@@ -86,12 +84,11 @@ Cada modelo está associado a:
 
 ### ✔️ Requisitos aplicáveis
 
-- Todos os requisitos ARC-001 a ARC-011
+- Todos os requisitos ARC-001 a ARC-013
 
 ### 🔑 Ameaças mitigadas
 
 - STRIDE: Todas
-- OSC&R: ARC-01, ARC-03, GOV-01, GOV-02
 
 ### 🖼️ Diagrama sugerido
 
@@ -100,7 +97,7 @@ Cada modelo está associado a:
                             --> [Backend Pod] --> [Data Services]
 ```
 
-> ✅ Este modelo exige aplicação completa do capítulo, incluindo exceções formalizadas (ARC-011) e rastreabilidade integral (ARC-008).
+> ✅ Este modelo exige aplicação completa do capítulo, incluindo segmentação entre ambientes (ARC-011), aprovação formal (ARC-012), validação automática de topologia (ARC-013) e rastreabilidade integral (ARC-008).
 
 ---
 

@@ -84,7 +84,7 @@ Colaborar com DevOps na **configuração de pipelines seguros**, garantindo que 
 
 **User Stories:**
 - [US-01: Gestão segura de código fonte](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-01---gestão-segura-de-código-fonte) - PRs com revisão obrigatória e branch protection
-- [US-03: Scanners integrados](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-03---scanners-integrados-validação-empírica-obrigatória-valida%C3%A7%C3%A3o-emp%C3%ADrica-obrigat%C3%B3ria) - SAST, secrets scanning e bloqueio de falhas críticas
+- [US-03: Scanners integrados](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-03---scanners-integrados-validação-empírica-obrigatória) - SAST, secrets scanning e bloqueio de falhas críticas
 
 ### Cap. 08 - IaC (Infraestrutura como Código)
 Colaborar na escrita e **validação de templates IaC seguros**, garantindo que infraestrutura é versionada e auditável.

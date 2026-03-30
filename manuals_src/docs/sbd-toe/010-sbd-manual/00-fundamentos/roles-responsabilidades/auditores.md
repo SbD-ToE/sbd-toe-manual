@@ -55,7 +55,7 @@ Validar **implementação de requisitos por nível** (L1/L2/L3), verificar rastr
 Validar **rastreabilidade commit → pipeline → release**, verificar gestão de exceções.
 
 **Requisitos associados:**
-- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease-commitpipelinerelease) - GRC rastreia, Auditores validam
+- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease) - GRC rastreia, Auditores validam
 - [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado) - GRC gere, Auditores validam
 
 ### Cap. 08 - IaC e Infraestrutura

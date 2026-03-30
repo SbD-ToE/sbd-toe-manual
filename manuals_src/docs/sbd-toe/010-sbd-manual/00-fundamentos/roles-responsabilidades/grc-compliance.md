@@ -52,7 +52,7 @@ Publicar política de aplicação e providenciar formação (com Gestão/CISO).
 Rastrear **commit → pipeline → release** para suportar auditorias. Garantir exceções registadas, aprovadas e temporárias.
 
 **User Stories:**
-- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease-commitpipelinerelease) - Suportar auditorias
+- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease) - Suportar auditorias
 - [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado) - Evitar dívida técnica
 
 ### Cap. 08 - IaC e Infraestrutura

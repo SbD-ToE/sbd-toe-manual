@@ -48,7 +48,7 @@ Ser **owner de segurança designado** para aplicações críticas. Executar proc
 - [US-05: Designação formal de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Responsabilização clara (com Gestão/PMO)
 - [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Garantir preparação antes de acesso (com HR)
 - [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revogar acesso completamente (com HR/DevOps)
-- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso---prepara%C3%A7%C3%A3o-t%C3%A9cnica-e-valida%C3%A7%C3%A3o-de-contractors-pr%C3%A9-acesso---preparação-técnica-e-validação-de-contractors-pré-acesso---prepara%C3%A7%C3%A3o-t%C3%A9cnica-e-valida%C3%A7%C3%A3o-de-contractors-pr%C3%A9-acesso---preparação-técnica-e-validação-de-contractors-pré-acesso) - Manter least privilege (com Tech Lead)
+- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Manter least privilege (com Tech Lead)
 - [US-16: Feedback pós-projeto](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Informar re-hire (com Tech Lead)
 
 ---

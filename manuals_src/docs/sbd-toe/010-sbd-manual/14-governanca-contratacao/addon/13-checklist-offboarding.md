@@ -416,9 +416,9 @@ Offboarding é considerado **COMPLETO** quando:
 
 ## 📎 Referências & Links
 
-- [Preparação Técnica - US-15](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15)
-- [Offboarding - US-17](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17)
-- [Feedback Pós-Projeto - US-20](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-20)
+- [Preparação Técnica - US-15](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)
+- [Offboarding - US-17](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)
+- [Feedback Pós-Projeto - US-20](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-20---feedback-pós-projeto-e-rating-de-contractors)
 - [Template de Validação](./template-validacao-contractors)
 - [Política de Confidencialidade Pós-Término] (link interno)
 

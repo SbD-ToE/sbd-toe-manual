@@ -56,8 +56,8 @@ Definir **princípios de arquitetura segura**, produzir ficha de arquitetura com
 - [US-02: Ficha de arquitetura com controlos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-02---ficha-de-solução-com-controlos-e-rastreabilidade-arquitetural) - Solução segura e escalável
 - [US-07: Registro de decisões (ADR)](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-07---validação-arquitetural-automatizável-no-cicd-quando-aplicável) - Rastreabilidade e consistência
 - [US-08: Revisão de trust boundaries](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08---avaliação-de-impacto-no-negócio-e-priorização-de-trade-offs) - Validar autenticação, autorização, isolamento
-- [US-09: Sincronização threat model ↔ arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-09---sincronização-threat-modeling-arquitetura) - Controlos cobrem ameaças
-- [US-10: Triggers de revisão de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado-arquiteturais-com-controlos-compensatórios) - Documentação atualizada
+- [US-09: Sincronização threat model ↔ arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-09---sincronização-threat-modeling--arquitetura) - Controlos cobrem ameaças
+- [US-10: Triggers de revisão de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios) - Documentação atualizada
 - [US-11: Catálogo de padrões seguros](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-11---triggers-de-arquitetura-viva-e-disciplina-de-revisão) - Reutilização de designs validados
 - [US-12: Controlos de isolamento técnico](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-12---gate-arquitetural-antes-do-go-live) - Resiliência a sobre-carga e falhas
 - [US-14: Threat Modeling no design inicial](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14---identifica%C3%A7%C3%A3o-e-governa%C3%A7%C3%A3o-de-componentes-n%C3%A3o-determin%C3%ADsticos) - Especificar controlos proporcionais

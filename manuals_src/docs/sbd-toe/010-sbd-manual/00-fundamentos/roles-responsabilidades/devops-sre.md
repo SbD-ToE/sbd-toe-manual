@@ -83,7 +83,7 @@ Integrar **linters e SAST no pipeline** para detetar falhas precocemente e gerar
 Desenhar **pipelines com scanners, gates e assinaturas** de release, garantindo que apenas artefactos validados avançam entre fases.
 
 **User Stories:**
-- [US-02: Design seguro dos pipelines](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-02---design-seguro-dos-pipelines-versionamento-determinismo-e-revisão-versionamento-determinismo-e-revis%C3%A3o) - Pipelines versionados e auditáveis
+- [US-02: Design seguro dos pipelines](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-02---design-seguro-dos-pipelines-versionamento-determinismo-e-revisão) - Pipelines versionados e auditáveis
 - [US-04: Gestão de segredos](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-04---gestão-de-segredos) - OIDC com TTL curto
 - [US-05: Isolamento de runners](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-05---isolamento-de-runners) - Runners ephemerais e segregados
 - [US-06: Assinatura e proveniência](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-06---assinatura-e-proveniência) - Confiança em artefactos

@@ -74,7 +74,7 @@ Validar dependências externas, registar exceções técnicas, **rever guideline
 **User Stories:**
 - [US-02: Validação de dependências externas](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-02---revisão-de-código-segura) - Reduzir supply chain risk
 - [US-03: Registro e aprovação de exceções técnicas](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-03---gestão-de-dependências-no-código) - Rastreabilidade e revisão
-- [US-04: Revisão trimestral de guidelines](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-04---automatização-em-cicd-linters-sast) - Governação formal
+- [US-04: Revisão trimestral de guidelines](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-04---automatização-em-cicd-linters--sast) - Governação formal
 - [US-05: Perfis de validação L1-L3](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-05---gestão-de-exceções-técnicas) - Adequação ao risco
 - [US-06: Deteção automática de padrões perigosos](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-06---uso-validado-de-genia) - Bloqueio com feedback educativo
 
@@ -82,8 +82,8 @@ Validar dependências externas, registar exceções técnicas, **rever guideline
 Aplicar **gates distintos por L1-L3** e garantir scanners de containers/SBOM em pipelines. Executar DAST em staging.
 
 **User Stories:**
-- [US-07: Gates por risco](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-07---gates-por-risco-separação-sinaldecisão-separa%C3%A7%C3%A3o-sinaldecis%C3%A3o) - Segurança proporcional
-- [US-08: Cobertura ampliada](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-08---cobertura-ampliada-containers-e-sbom-containers-e-sbom) - Containers e SBOM
+- [US-07: Gates por risco](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-07---gates-por-risco-separação-sinaldecisão) - Segurança proporcional
+- [US-08: Cobertura ampliada](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-08---cobertura-ampliada-containers-e-sbom) - Containers e SBOM
 - [US-11: DAST em staging](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-11---testes-de-segurança-dinâmicos-dast) - Validação comportamental
 
 ### Cap. 08 - IaC e Infraestrutura

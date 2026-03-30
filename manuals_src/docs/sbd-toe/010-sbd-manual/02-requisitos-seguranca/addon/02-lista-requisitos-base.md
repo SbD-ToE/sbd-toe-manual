@@ -23,7 +23,9 @@ O SbD-ToE organiza os requisitos de segurança em **catálogos canónicos por do
 
 | Cap. | Prefixo(s) | Domínio | Objecto | Responsável típico |
 |------|-----------|---------|---------|-------------------|
+| 01 | `CLA` | Classificação de aplicações | Classificação formal de criticidade, reclassificação, risco residual e proporcionalidade de controlos | Product Owner, Tech Lead, AppSec, GRC |
 | 02 | `AUT` `ACC` `LOG` `SES` `VAL` `ERR` `CFG` `ENC` `API` `INT` `REQ` `DST` `IDE` | Requisitos aplicacionais | Propriedades de segurança do software em runtime | Equipa de desenvolvimento |
+| 03 | `THR` | Threat modeling | Identificação de ameaças, disposição formal, derivação de requisitos e rastreabilidade | Arquitecto técnico, AppSec |
 | 04 | `ARC` | Arquitectura segura | Design, estrutura e decisões do sistema | Arquitecto técnico, AppSec |
 | 05 | `DEP` | Dependências, SBOM e SCA | Componentes de terceiros incorporados | Equipa de desenvolvimento, AppSec |
 | 06 | `DEV` | Desenvolvimento seguro | Práticas e processos de desenvolvimento | Equipa de desenvolvimento, AppSec |
@@ -33,6 +35,7 @@ O SbD-ToE organiza os requisitos de segurança em **catálogos canónicos por do
 | 10 | `TST` | Testes de segurança | O programa de testes de segurança | AppSec, DevSecOps |
 | 11 | `DPL` | Deploy seguro | O processo de promoção a produção | DevSecOps, Release Management |
 | 12 | `OPS` | Monitorização e operações | O programa de monitorização operacional | Operations, SOC, DevSecOps |
+| 13 | `TRN` | Formação e onboarding | Capacitação, onboarding verificável, Security Champions e eficácia formativa | AppSec, PeopleOps, liderança técnica |
 | 14 | `GOV` | Governação e contratação | Modelo de governação, excepções, contratação e maturidade organizacional | AppSec, GRC, CISO |
 
 Cada capítulo contém o seu catálogo em `addon/00-catalogo-requisitos.md` (ou equivalente), com aplicabilidade por nível de risco (L1–L3) e critérios de aceitação no mesmo formato deste catálogo. A distinção entre catálogos é operacionalmente relevante: responsáveis, artefactos e ciclos de revisão diferem por domínio - um requisito do tipo `ARC-` é avaliado em revisão de arquitectura, não num PR de código.

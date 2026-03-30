@@ -9,6 +9,8 @@ tags: [kpi, metricas, formacao, onboarding, dashboards, rastreabilidade]
 
 Estes indicadores ajudam a avaliar se o programa de formação está a ser eficaz, abrangente e atualizado.
 
+> Este ficheiro é uma **síntese operacional** para uso quotidiano. O catálogo canónico de `TRN-Kxx` está em [`91-kpis-metricas.md`](./91-kpis-metricas.md).
+
 ---
 
 ## 🧮 KPIs operacionais
@@ -34,4 +36,3 @@ Estes indicadores ajudam a avaliar se o programa de formação está a ser efica
 ---
 
 > 📌 Estas métricas devem ser monitorizadas com o apoio de RH, AppSec e gestão técnica.
-

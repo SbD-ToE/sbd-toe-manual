@@ -14,6 +14,8 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 
 Os indicadores deste domínio avaliam a **eficácia operacional do programa de monitorização de segurança**: a cobertura de logging centralizado, a qualidade dos alertas, a velocidade de detecção e resposta, e a capacidade de correlação entre fontes. Este domínio opera sobre dados produzidos por todos os outros capítulos - os logs gerados pelo código (Cap. 06), pelo pipeline (Cap. 07), pelos containers (Cap. 09) e pela infraestrutura (Cap. 08) convergem aqui e são avaliados pela sua utilidade operacional.
 
+> Este ficheiro é o **catálogo canónico** de `OPS-Kxx`. O ficheiro [`07-metricas-indicadores.md`](./07-metricas-indicadores.md) é uma síntese operacional mais leve para uso quotidiano.
+
 A distinção central deste domínio: os requisitos `LOG-` (Cap. 02) definem o que o software deve registar; os indicadores `OPS-K` medem se esses registos são centralizados, analisados e accionados com eficácia. Um sistema com logging perfeito mas sem correlação, alertas ou resposta tem visibilidade zero do ponto de vista operacional.
 
 Os indicadores OPS alimentam a dimensão transversal **T-03 (Velocidade de resolução)** - especificamente MTTD e MTTR operacionais.

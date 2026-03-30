@@ -2,8 +2,11 @@
 id: riscos-processo-arquitetura
 title: Riscos de Processo na Arquitetura de Software
 description: Identificação e mitigação dos riscos inerentes ao processo de decisão arquitetural
-tags: [arquitetura, risco-processo, decisao, baseline, dependencias]
+tags: [tipo:addon, tema:arquitetura, risco-processo, decisao, baseline, dependencias, drift]
+sidebar_position: 8
 ---
+
+<!--template: sbdtoe-addon -->
 
 # 🛠️ Riscos de Processo na Arquitetura de Software
 

@@ -76,7 +76,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 ### 📌 O que deve ser feito
 
 1. Identificar e documentar requisitos de segurança com base no risco  
-   (ver [Capítulo 1 — Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro))
+   (ver [Capítulo 1 - Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro))
 2. Assegurar que todos os requisitos são **verificáveis e testáveis**
 3. Integrar requisitos de segurança no **backlog funcional** da aplicação
 4. Garantir **rastreabilidade sistemática** entre risco, requisito, controlo e evidência, utilizando a taxonomia definida
@@ -145,7 +145,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 Este capítulo define um conjunto **essencial e transversal de requisitos de segurança aplicacionais**, aplicáveis à maioria dos sistemas empresariais, web e *cloud-native*.
 
-As **características do processo de desenvolvimento e entrega** — incluindo elevado grau de automação, geração automática de artefactos, utilização de plataformas *low-code/no-code* ou maior dependência de terceiros — **não alteram o catálogo base de requisitos nem a classificação L1–L3 da aplicação**, que continuam a ser determinadas pelo impacto e exposição do sistema.
+As **características do processo de desenvolvimento e entrega** - incluindo elevado grau de automação, geração automática de artefactos, utilização de plataformas *low-code/no-code* ou maior dependência de terceiros - **não alteram o catálogo base de requisitos nem a classificação L1–L3 da aplicação**, que continuam a ser determinadas pelo impacto e exposição do sistema.
 
 No entanto, esses contextos **exigem maior rigor na aplicação, validação, evidência e rastreabilidade dos requisitos**, implicando o reforço das práticas descritas nos capítulos técnicos do manual, nomeadamente **Arquitetura Segura, CI/CD, Infraestrutura como Código, Desenvolvimento Seguro e Testes de Segurança**.
 
@@ -153,8 +153,8 @@ Aplicações com perfis técnicos específicos (ex.: sistemas embebidos, IoT, SC
 
 - OWASP Mobile Security Testing Guide (MSTG)
 - OWASP Internet of Things Project
-- IEC 62443 — Segurança em Sistemas Industriais
-- NIST SP 800-213 — IoT Device Cybersecurity
+- IEC 62443 - Segurança em Sistemas Industriais
+- NIST SP 800-213 - IoT Device Cybersecurity
 
 > A definição e manutenção do catálogo de requisitos e respetiva validação devem seguir sempre os princípios de coerência estrutural, proporcionalidade por nível de risco e rastreabilidade completa.
 

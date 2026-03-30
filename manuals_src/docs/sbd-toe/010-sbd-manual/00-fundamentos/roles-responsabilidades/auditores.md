@@ -39,14 +39,14 @@ São instrumentos formais para comprovar cumprimento perante autoridades:
 Validar **evidência de aplicação de práticas**, verificar **rastreabilidade de decisões** (ADR, exceções, aceitações de risco), confirmar **alinhamento com requisitos regulatórios** (NIS2, DORA, GDPR, SSDF, ISO 27001).
 
 **Requisitos associados:**
-- [US-12: Documentação de conformidade regulatória](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12--documentação-de-conformidade-regulatória) — GRC documenta, Auditores validam
+- [US-12: Documentação de conformidade regulatória](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12---rastreabilidade-e-conformidade-com-regulações-ssdf-nis2-iso-27001) - GRC documenta, Auditores validam
 
 ### Cap. 01 - Classificação de Aplicações
 Verificar **classificações de risco** e sua adequação ao contexto técnico e negócio. Validar KPIs de governação.
 
 **Requisitos associados:**
-- [US-08: KPIs de governação da classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-08--kpis-de-governação-da-classificação) — GRC consolida, Auditores validam
-- [US-09: Políticas organizacionais formais](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-09--políticas-organizacionais-formais) — Gestão publica, Auditores validam aplicação
+- [KPIs de governação da classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - GRC consolida, Auditores validam
+- [Políticas organizacionais formais](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - Gestão publica, Auditores validam aplicação
 
 ### Cap. 02 - Requisitos de Segurança
 Validar **implementação de requisitos por nível** (L1/L2/L3), verificar rastreabilidade requisitos → controlos → evidência.
@@ -55,24 +55,24 @@ Validar **implementação de requisitos por nível** (L1/L2/L3), verificar rastr
 Validar **rastreabilidade commit → pipeline → release**, verificar gestão de exceções.
 
 **Requisitos associados:**
-- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09--rastreabilidade-ponta-a-ponta) — GRC rastreia, Auditores validam
-- [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10--gestão-de-exceções) — GRC gere, Auditores validam
+- [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease-commitpipelinerelease) - GRC rastreia, Auditores validam
+- [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado) - GRC gere, Auditores validam
 
 ### Cap. 08 - IaC e Infraestrutura
 Validar **rastreabilidade ficheiro → recurso → ambiente**, verificar janelas de mudança e aprovações, validar exceções formais.
 
 **Requisitos associados:**
-- [US-07: Rastreabilidade ficheiro → recurso → ambiente](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-07--rastreabilidade-ficheiro--recurso--ambiente) — GRC documenta, Auditores validam
-- [US-13: Janela de mudança e aprovações](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-13--janela-de-mudança-e-aprovações-por-papel) — GRC define, Auditores validam
-- [US-14: Exceções formais em IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-14--exceções-formais-em-iac) — GRC/AppSec gerem, Auditores validam
+- [US-07: Rastreabilidade ficheiro → recurso → ambiente](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-07---rastreabilidade-ficheiro--recurso--ambiente) - GRC documenta, Auditores validam
+- [US-13: Janela de mudança e aprovações](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-13---janela-de-mudança-e-aprovações-por-papel) - GRC define, Auditores validam
+- [US-14: Exceções formais em IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-14---exceções-formais-em-iac) - GRC/AppSec gerem, Auditores validam
 
 ### Cap. 14 - Governança e Contratação
 Auditar **documentação de exceções**, verificar **aprovações formais**, validar **conformidade contratual com fornecedores**, verificar rastreabilidade completa.
 
 **Requisitos associados:**
-- [US-06: Repositório de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-06--repositório-de-conformidade-por-aplicação) — AppSec/Dev Lead mantêm, Auditores validam
-- [US-07: Validações periódicas de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07--validações-periódicas-de-conformidade) — AppSec/GRC executam, Auditores validam
-- [US-10: Checklist centralizado de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-10--checklist-centralizado-de-conformidade-sbd-toe) — AppSec/Dev Lead mantêm, Auditores usam
+- [US-06: Repositório de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores) - AppSec/Dev Lead mantêm, Auditores validam
+- [US-07: Validações periódicas de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07---ciclo-contínuo-de-revisão-e-reavaliação-de-exceções) - AppSec/GRC executam, Auditores validam
+- [US-10: Checklist centralizado de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-10---valida%C3%A7%C3%A3o-peri%C3%B3dica-de-aplica%C3%A7%C3%B5es-ciclo-de-conformidade) - AppSec/Dev Lead mantêm, Auditores usam
 
 ---
 

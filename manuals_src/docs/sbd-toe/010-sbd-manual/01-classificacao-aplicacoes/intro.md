@@ -40,7 +40,7 @@ O objetivo central do manual é:
 ## 🧠 Nota conceptual: risco e atributos
 
 O SbD-ToE trata o **risco como um conceito único**, independentemente da sua origem técnica ou processual.  
-O que varia são os **atributos do risco** — como origem, mecanismo, detetabilidade, reprodutibilidade e evidenciabilidade — que influenciam diretamente os requisitos e controlos aplicáveis.
+O que varia são os **atributos do risco** - como origem, mecanismo, detetabilidade, reprodutibilidade e evidenciabilidade - que influenciam diretamente os requisitos e controlos aplicáveis.
 
 > 📌 Ver: [Atributos do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/atributos-risco)
 

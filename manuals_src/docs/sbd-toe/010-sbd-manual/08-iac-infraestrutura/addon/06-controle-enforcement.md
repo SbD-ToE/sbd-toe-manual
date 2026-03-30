@@ -13,7 +13,7 @@ tags: [enforcement, controlo, políticas, iac, pipelines, segurança]
 
 Assegurar que todos os projetos de Infraestrutura como Código (IaC) cumprem **requisitos mínimos de segurança de forma automática, consistente e verificável**, através de mecanismos de *policy enforcement* integrados no ciclo de vida de desenvolvimento e operação.
 
-Este ficheiro define **como as políticas são aplicadas tecnicamente**, não quais são as políticas — essa definição ocorre nos requisitos e nas políticas organizacionais.
+Este ficheiro define **como as políticas são aplicadas tecnicamente**, não quais são as políticas - essa definição ocorre nos requisitos e nas políticas organizacionais.
 
 > O enforcement é um **mecanismo estrutural de defesa**: quando falha, a organização depende apenas de disciplina humana.
 

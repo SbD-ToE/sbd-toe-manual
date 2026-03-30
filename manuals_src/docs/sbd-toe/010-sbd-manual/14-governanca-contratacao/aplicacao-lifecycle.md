@@ -241,8 +241,8 @@ Como **Procurement Officer**, quero **executar o fluxo formal de validação de 
 **Integração.** Planeamento; Resp: Procurement Officer + AppSec Engineer + GRC Analyst; SLA: 2 semanas (L2), 1 semana (L3)  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](addon/03-modelo-validacao-fornecedores.md)  
-- [Exemplos Práticos](addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](./addon/modelo-validacao-fornecedores)
+- [Exemplos Práticos](./addon/exemplos-aplicacao-governanca)
 
 ---
 
@@ -276,7 +276,7 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 **Integração.** Operações + Validação; Resp: AppSec Engineer + GRC Analyst; Triggers: Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura; SLA: Reavaliação em 5 dias úteis  
 
 **Ligações úteis.**  
-- [Validação Continuada](addon/06-validacao-continuada.md)  
+- [Validação Continuada](./addon/validacao-continuada)
 
 ---
 
@@ -311,8 +311,8 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um repositório estruturado 
 **Integração.** Planeamento + Execução + Validação; Resp: AppSec Engineer + Dev Lead + GRC Analyst; SLA: Atualização por release ou 5 dias após evento crítico  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](./addon/controlos-praticas-sbd)
+- [Rastreabilidade Organizacional](./addon/rastreabilidade-organizacional)
 
 ---
 
@@ -347,7 +347,7 @@ Como **Gestão/PMO**, quero **designar formalmente um owner de segurança (Secur
 **Integração.** Planeamento; Resp: Gestão/PMO + Security Champion + AppSec Engineer; SLA: Designação no arranque do projeto ou mudança de owner  
 
 **Ligações úteis.**  
-- [Modelo de Governação](addon/01-modelo-governancao.md)  
+- [Modelo de Governação](./addon/modelo-governancao)
 - [Formação e Onboarding (Cap. 13)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 
 ---
@@ -384,8 +384,8 @@ Como **AppSec Engineer + GRC Analyst**, quero **executar validações periódica
 **Integração.** Validação + Auditoria; Resp: AppSec Engineer + GRC Analyst + Dev Lead; Triggers: Calendário cíclico, Release relevante, Incidente crítico; SLA: Ciclo completado em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Validação Continuada](addon/06-validacao-continuada.md)  
-- [Controlo Sistemático das Práticas](addon/11-controlos-praticas-sbd.md)  
+- [Validação Continuada](./addon/validacao-continuada)
+- [Controlo Sistemático das Práticas](./addon/controlos-praticas-sbd)
 
 ---
 
@@ -421,8 +421,8 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **Integração.** Auditoria + Operações; Resp: GRC Analyst + AppSec Engineer + CISO; Triggers: Trimestral (mínimo), Semestral (recomendado); SLA: Relatório publicado 5 dias após fim do período  
 
 **Ligações úteis.**  
-- [Governação e Maturidade](addon/07-governancao-e-maturidade.md)  
-- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
+- [Governação e Maturidade](./addon/governancao-maturidade)
+- [Rastreabilidade Organizacional](./addon/rastreabilidade-organizacional)
 
 ---
 
@@ -459,8 +459,8 @@ Como **CISO + AppSec Manager**, quero **formalizar e documentar o modelo de gove
 **Integração.** Planeamento + Execução contínua; Resp: CISO + AppSec Manager + Jurídico; Triggers: Arranque SbD-ToE, revisão anual, mudança organizacional; SLA: Publicação em 2 semanas  
 
 **Ligações úteis.**  
-- [Modelo de Governação](addon/01-modelo-governancao.md)  
-- [Exemplos de Decisão](addon/05-exemplos-praticos.md)  
+- [Modelo de Governação](./addon/modelo-governancao)
+- [Exemplos de Decisão](./addon/exemplos-aplicacao-governanca)
 - [Formação de Governação (Cap. 13)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 
 ---
@@ -498,9 +498,9 @@ Como **AppSec Engineer + Dev Lead**, quero **manter um checklist centralizado, v
 **Integração.** Planeamento + Execução + Validação + Auditoria; Resp: AppSec Engineer (validação) + Dev Lead (preenchimento) + GRC Analyst (consolidação); Triggers: Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual); SLA: Atualização em 5 dias úteis após trigger  
 
 **Ligações úteis.**  
-- [Controlo Sistemático das Práticas SbD-ToE](addon/11-controlos-praticas-sbd.md)  
-- [Rastreabilidade Organizacional](addon/04-rastreabilidade-organizacional.md)  
-- [Validação Periódica](addon/06-validacao-continuada.md)  
+- [Controlo Sistemático das Práticas SbD-ToE](./addon/controlos-praticas-sbd)
+- [Rastreabilidade Organizacional](./addon/rastreabilidade-organizacional)
+- [Validação Periódica](./addon/validacao-continuada)
 
 ---
 
@@ -537,9 +537,9 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 **Integração.** Validação + Operações; Resp: Procurement Officer (coordenação) + AppSec Engineer (análise técnica) + GRC Analyst (decisão e registo); Triggers: Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA; SLA: Reavaliação completada em 2 semanas desde trigger  
 
 **Ligações úteis.**  
-- [Modelo de Validação de Fornecedores](addon/03-modelo-validacao-fornecedores.md)  
-- [Validação Continuada](addon/06-validacao-continuada.md)  
-- [Exemplos de Aplicação](addon/05-exemplos-praticos.md)  
+- [Modelo de Validação de Fornecedores](./addon/modelo-validacao-fornecedores)
+- [Validação Continuada](./addon/validacao-continuada)
+- [Exemplos de Aplicação](./addon/exemplos-aplicacao-governanca)
 
 ---
 
@@ -578,9 +578,9 @@ Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado
 
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
-- [Validação de Fornecedores - US-06](#us-06)  
-- [Template de Validação de Contractors](/sbd-toe/sbd-manual/addon/02-template-validacao-contractors)  
-- [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/addon/12-guia-preparacao-sandbox)  
+- [Validação de Fornecedores - US-06](#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores)  
+- [Template de Validação de Contractors](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
+- [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/formacao-onboarding/addon/guia-preparacao-sandbox)  
 
 ---
 
@@ -625,8 +625,8 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
-- [Designação de Owners de Segurança - US-09](#us-09)  
-- [Preparação Técnica - US-15](#us-15)  
+- [Designação de Owners de Segurança - US-09](#us-09---designação-formal-de-owners-de-segurança-por-aplicação)  
+- [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
 
 ---
 
@@ -673,9 +673,9 @@ Como **Security Champion + HR + DevOps Lead**, quero **executar processo formal 
 **Integração.** Operações + Validação; Resp: HR (coordenação timeline) + DevOps (acesso técnico) + AppSec Engineer (validação) + Security Champion (checkpoints); Triggers: Data de término conhecida (programado), Rescisão imediata (unscheduled); SLA: Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes  
 
 **Ligações úteis.**  
-- [Reavaliação de Fornecedores - US-14](#us-14)  
-- [Preparação Técnica - US-15](#us-15)  
-- [Checklist de Offboarding](/sbd-toe/sbd-manual/addon/13-checklist-offboarding)  
+- [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
+- [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
+- [Checklist de Offboarding](/sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding)  
 
 ---
 
@@ -719,7 +719,7 @@ Como **AppSec Engineer + Security Monitoring Team**, quero **monitorizar continu
 **Integração.** Operações contínuo; Resp: AppSec Engineer (setup inicial) + Security Monitoring (operação 24x7); Triggers: Incidente, CVE crítico, SLA breach, mudança contratual; SLA: Alerta em **`<`1h** de deteção, escalonamento em `<`15 min  
 
 **Ligações úteis.**  
-- [Reavaliação de Fornecedores - US-14](#us-14)  
+- [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
 - [Monitorização - Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)  
 - [Dependências e SCA - Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle)  
 
@@ -763,8 +763,8 @@ Como **Security Champion + Infrastructure/Tech Lead**, quero **revisar trimestra
 **Integração.** Validação; Resp: Security Champion (coordenação) + Tech Lead (validação de necessidade) + DevOps (mudanças técnicas); Triggers: Calendário (trimestral), Mudança de projeto, Incidente; SLA: Revisão iniciada e completada em **1 semana**  
 
 **Ligações úteis.**  
-- [Preparação Técnica - US-15](#us-15)  
-- [Offboarding - US-17](#us-17)  
+- [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
+- [Offboarding - US-17](#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)  
 - [Requisitos de Autenticação e Acesso - Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle)  
 
 ---
@@ -806,9 +806,9 @@ Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado p�
 **Integração.** Operações pós-projeto; Resp: Security Champion (coordenação) + Tech Lead + AppSec Engineer (preenchimento); Triggers: Offboarding iniciado (US-17); SLA: Feedback completado em **3 dias úteis** após fim do contrato  
 
 **Ligações úteis.**  
-- [Offboarding - US-17](#us-17)  
-- [Reavaliação de Fornecedores - US-14](#us-14)  
-- [Designação de Owners - US-09](#us-09)  
+- [Offboarding - US-17](#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)  
+- [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
+- [Designação de Owners - US-09](#us-09---designação-formal-de-owners-de-segurança-por-aplicação)  
 
 ---
 

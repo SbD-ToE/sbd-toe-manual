@@ -1,116 +1,141 @@
 ---
 id: rastreabilidade-controlo
-title: Rastreabilidade entre Requisitos e Controlos Técnicos
-description: Ligação entre requisitos definidos, testes aplicáveis e controlos implementados
-tags: [rastreabilidade, requisitos, controlos, testes, cobertura]
+title: Modelo de Rastreabilidade entre Riscos, Requisitos e Controlos
+description: Como construir e manter uma matriz de rastreabilidade que liga riscos identificados, requisitos canónicos, tags operacionais de projeto, controlos técnicos e evidência auditável.
+tags: [tipo:modelo, tema:rastreabilidade, requisitos, controlos, evidencia, ALM, auditoria]
 ---
 
-# 🔗 Modelo de Rastreabilidade de Requisitos
+<!--template: sbdtoe-addon -->
 
-## 🌟 Objetivo
+# 🔗 Modelo de Rastreabilidade entre Riscos, Requisitos e Controlos
 
-Durante todo o ciclo de vida do software é necessário garantir a rastreabilidade entre o requisito e todos os aspetos relacionados, implementação, testes, excções etc. 
-Este manual descreve uma forma taxonomica de rastrear os requisitos formalmente e assim permitir a documentação e manutenção da **rastreabilidade entre riscos identificados, requisitos de segurança aplicados, respetivos controlos técnicos, mecanismos de validação e evidência associada**.  
+## Objetivo
+
+Ao longo do ciclo de vida do software, garantir que um requisito de segurança foi efectivamente implementado exige mais do que a sua definição - exige que a ligação entre risco, requisito, controlo técnico e evidência seja explícita, rastreável e auditável.
+
+Este modelo descreve como construir essa cadeia de rastreabilidade, articulando os dois sistemas de identificação do SbD-ToE:
+
+- O **ID canónico** (`AUT-001`, `LOG-003`) - referência normativa estável proveniente do catálogo;
+- A **tag operacional** (`SEC-L2-AUT-MFA`) - instância contextualizada adoptada pelo projecto.
+
+A distinção e a relação entre ambos estão detalhadas em [Taxonomia e Rastreabilidade](./taxonomia-rastreabilidade).
+
 Este modelo apoia:
 
 - A verificação sistemática da cobertura de segurança ao longo do ciclo de vida;
-- A preparação de auditorias internas e externas;
-- A integração com ferramentas de desenvolvimento, gestão de risco e conformidade.
-
-> Pode ser usado como template em Markdown, Excel, Jira, Confluence ou outras ferramentas ALM.
+- A preparação de auditorias internas, externas e regulatórias;
+- A integração com ferramentas ALM (Jira, ADO, Confluence, GitHub), gestão de risco e conformidade.
 
 ---
 
-## 🧱 Estrutura Sugerida
+## Estrutura da Matriz de Rastreabilidade
 
-o seguinte é um exemplo de instanciação do catalogo de requisitos a um projeto concreto, a lista completa para os requisitos em catalogo do manual pode ser (consultados aqui)[./controlos-requisitos] 
+Cada linha da matriz representa a ligação directa entre um risco identificado e o requisito de segurança que o endereça, com o respectivo controlo, método de validação e evidência esperada.
 
-| Risco (ID) | Requisito (ID) | Descrição do Requisito                          | Tipo de Controlo | Validação                     | Evidência                          |
-|------------|----------------|--------------------------------------------------|-------------------|-------------------------------|-------------------------------------|
-| RSK-001    | REQ-001        | Autenticação multifator com hardware token       | Preventivo        | Teste automatizado em CI/CD   | Captura de ecrã do fluxo de login   |
-| RSK-002    | REQ-002        | Logging centralizado com retenção de 180 dias    | Detetivo          | Revisão manual + script       | Output de `logrotate` + configuração |
-| RSK-003    | REQ-003        | Validação de input com base em schema definido   | Preventivo        | Testes unitários e integração | Logs de execução dos testes         |
-| RSK-004    | REQ-004        | Passwords com requisitos conforme NIST 800-63B   | Preventivo        | Análise estática (regex)      | Código fonte + screenshot           |
+### Colunas recomendadas
 
----
-
-## 🛠️ Como aplicar
-
-- Cada linha da matriz representa uma ligação direta entre um **risco identificado** e o **requisito de segurança correspondente**.
-- O tipo de controlo deve ser classificado como: `Preventivo`, `Detetivo` ou `Corretivo`.
-- A validação deve ser objetiva e comprovável: testes automatizados, revisão manual, análise estática, etc.
-- A evidência pode incluir logs, capturas de ecrã, ficheiros de configuração, ou outputs de ferramentas.
-
-> 🧩 Este modelo complementa a aplicação dos capítulos `01-gestao-risco`, `02-requisitos-seguranca` e `20-checklist-revisao.md`.
+| Coluna | Conteúdo | Exemplo |
+|--------|----------|---------|
+| **Risco** | Identificador e descrição sumária do risco (proveniente da análise de ameaças) | `RISK-AUTH-01` - acesso não autorizado por ausência de MFA |
+| **ID Canónico** | Referência normativa do catálogo SbD-ToE | `AUT-001` |
+| **Tag Operacional** | Instanciação do requisito no contexto do projecto | `SEC-L2-AUT-MFA` |
+| **Tipo de Controlo** | Classificação do controlo: `Preventivo`, `Detetivo` ou `Corretivo` | `Preventivo` |
+| **Validação** | Método objectivo de verificação | Teste automatizado em CI/CD |
+| **Evidência** | Artefacto auditável produzido | Log de falha de autenticação sem MFA |
 
 ---
 
-## 📘 Exemplos por Tema
+## Exemplo de Matriz
 
-| Tema                    | Requisito (Resumo)                                           | Tipo de Controlo   | Validação                      | Evidência                       |
-|-------------------------|--------------------------------------------------------------|--------------------|-------------------------------|----------------------------------|
-| Autenticação            | Sessões com timeout inativo de 15 min                        | Preventivo         | Teste manual + script browser | Configuração + gravação da sessão |
-| Controlo de Acesso      | RBAC com separação de funções (SoD)                          | Preventivo         | Revisão de roles + testes     | Printscreen de matrix de roles  |
-| Logging e Monitorização | Alertas em tempo real para falhas de login                   | Detetivo           | Simulação de falha            | Captura de alerta no SIEM        |
-| Gestão de Erros         | Mensagens de erro sem exposição de stack trace               | Preventivo         | Testes automatizados          | Output de testes de integração   |
-| Segurança de Código     | Linters e análise estática com política personalizada        | Preventivo         | Pipeline CI/CD                | Relatório de análise             |
-| SCA / Dependências      | Política de atualização crítica < 48h                        | Preventivo/Corretivo| Verificação de SLA            | Issue criada + commit            |
-| Dados Sensíveis         | Encriptação AES-256 em repouso para dados críticos           | Preventivo         | Revisão da configuração       | Output de KMS ou vault           |
-| Comunicação Segura      | TLS 1.2+ obrigatório para APIs internas                      | Preventivo         | Testes automatizados          | Scanner + resultado de verificação |
-| Ciclo de Vida de Sessão | Logout automático após X minutos de inatividade              | Preventivo         | Teste com navegador/script    | Gravação de sessão + logs        |
+O seguinte é um exemplo de instanciação do catálogo de requisitos a um projecto concreto. O catálogo completo pode ser consultado em [Lista de Requisitos Base](./lista-requisitos-base).
+
+| Risco | ID Canónico | Tag Operacional | Tipo de Controlo | Validação | Evidência |
+|-------|-------------|-----------------|------------------|-----------|-----------|
+| Acesso não autorizado por ausência de 2.º factor | `AUT-001` | `SEC-L2-AUT-MFA` | Preventivo | Teste funcional - login sem MFA falhado | Log de autenticação falhada; captura de ecrã |
+| Registo insuficiente para resposta a incidentes | `LOG-002` | `SEC-L2-LOG-DETALHE` | Detetivo | Revisão de logs em runtime | Exemplo de log com campos quem/quando/o quê/onde |
+| Injecção SQL por ausência de validação de input | `VAL-004` | `SEC-L2-VAL-SQLI` | Preventivo | Testes SAST + teste funcional com payload | Relatório de scanner; código com prepared statements |
+| Passwords armazenadas em claro | `AUT-006` | `SEC-L1-AUT-PLAIN` | Preventivo | Auditoria de configuração + scan | Evidência de hashing; ausência de credenciais em texto claro |
 
 ---
 
-## 📂 Organização recomendada
+## Exemplos por Domínio Técnico
 
-Este modelo pode ser estruturado por aplicação, por release ou por funcionalidade crítica.  
-Sugestão de organização prática:
-
-1. **Resumo e finalidade**
-2. **Legenda de colunas (risco, requisito, controlo, validação, evidência)**
-3. **Tabela rastreável (como as apresentadas acima)**
-4. **Referência cruzada com os requisitos definidos no Capítulo 2**
-5. **Apontadores para evidência (diretórios, commits, screenshots, pipelines)**
-
-Formatos sugeridos:
-
-- `.md` para rastreabilidade em Git;
-- `.csv` ou `.xlsx` para exportação e análise rápida;
-- Integração com campos personalizados em Jira, ADO, Confluence ou ferramentas ALM.
+| Domínio | ID Canónico | Tag Operacional (exemplo L2) | Tipo de Controlo | Validação | Evidência |
+|---------|-------------|------------------------------|------------------|-----------|-----------|
+| Autenticação | `AUT-005` | `SEC-L2-AUT-IDLE` | Preventivo | Teste de timeout por inactividade | Log de sessão expirada; configuração do servidor |
+| Controlo de Acesso | `ACC-002` | `SEC-L2-ACC-LEASTPRIV` | Preventivo | Revisão de roles + teste com utilizador restrito | Matriz de permissões; log de acesso negado |
+| Logging | `LOG-003` | `SEC-L2-LOG-INTEGRIDADE` | Detetivo | Tentativa de alteração de log; verificação de permissões | Evidência de protecção (read-only, syslog remoto, WORM) |
+| Gestão de Erros | `ERR-001` | `SEC-L1-ERR-EXPOSICAO` | Preventivo | Induzir erro; verificar resposta ao cliente | Mensagem genérica no cliente; stack trace apenas em log interno |
+| Configuração Segura | `CFG-003` | `SEC-L1-CFG-HARDCODE` | Preventivo | Análise estática + revisão do repositório | Ausência de segredos no código fonte; uso de cofre |
+| Dependências e SDKs | `API-006` | `SEC-L2-API-SDK` | Preventivo/Corretivo | Scan SCA; verificação de SBOM | SBOM gerado; relatório de dependências auditado |
+| Dados sensíveis | `ENC-002` | `SEC-L2-ENC-REST` | Preventivo | Revisão de configuração de base de dados e storage | Screenshot de políticas de encriptação; output de KMS/Vault |
+| Comunicação segura | `INT-003` | `SEC-L1-INT-TLS` | Preventivo | Teste de TLS; scanner de certificados | TLS 1.2+ activo; certificado válido; `Strict-Transport-Security` |
 
 ---
 
-## 🔗 Integração com o ciclo de vida
+## Como aplicar este modelo
 
-Este modelo deve ser aplicado:
-
-- Durante **revisões técnicas** e de **segurança de release**
-- Como suporte ao processo de **aceitação de riscos**
-- Em checkpoints formais como **go/no-go** ou auditorias ISO/PCI
-- Para registo de evidência técnica e validação contínua de requisitos
-
----
-
-## 📎 Ferramentas recomendadas
-
-| Finalidade                    | Ferramenta sugerida                |
-|-------------------------------|------------------------------------|
-| Versionamento leve            | Git + Markdown                     |
-| Análise e filtros             | Excel / CSV                        |
-| Integração no fluxo DevOps    | Jira, Azure DevOps, GitHub Issues  |
-| Validação e scanning          | SonarQube, ZAP, Trivy, scanners SAST/DAST |
-| Gestão de segredos / config   | Vault, KMS, parameter stores       |
-| Evidência de logs / alertas   | SIEM (ELK, Splunk, Sentinel...)    |
+- Cada linha representa a ligação entre um **risco identificado** e o **requisito canónico** que o endereça;
+- A **tag operacional** é o identificador que transita para o backlog, o código e o pipeline - é ela que torna o requisito rastreável ao artefacto de ciclo de vida;
+- O **tipo de controlo** classifica a natureza da medida: `Preventivo` (impede o incidente), `Detetivo` (detecta quando ocorre) ou `Corretivo` (mitiga as consequências);
+- A **validação** deve ser objectiva e reproduzível - teste automatizado, análise estática, revisão manual documentada;
+- A **evidência** é o artefacto que comprova, num contexto de auditoria, que o controlo está activo e efectivo.
 
 ---
 
-## ✅ Boas práticas
+## Organização recomendada por projecto
 
-- Criar e manter **uma matriz por aplicação ou projeto crítico**
-- Usar o modelo como **trilho de auditoria interno**
-- **Versionar todas as alterações** à matriz e à evidência associada
-- Rever a matriz em todos os ciclos de release
-- Incluir campos com referências aos requisitos (`REQ-XXX`) e riscos (`RSK-XXX`)
+Cada projecto deve manter a sua própria matriz de rastreabilidade, organizada por:
+
+1. **Cabeçalho** - identificação da aplicação, nível de risco (L1/L2/L3) e data de revisão;
+2. **Mapeamento de riscos** - proveniente da análise de ameaças (threat modeling);
+3. **Tabela rastreável** - com os campos descritos acima;
+4. **Referência cruzada** ao [Catálogo Base de Requisitos](./lista-requisitos-base) e ao [Plano de Validação](./validacao-requisitos);
+5. **Apontadores para evidência** - directórios, commits, screenshots, relatórios de pipeline.
+
+**Formatos sugeridos:**
+
+- `.md` versionado em Git - para rastreabilidade nativa no repositório;
+- `.csv` / `.xlsx` - para exportação e análise rápida;
+- Campos personalizados em Jira, ADO, Confluence ou ferramentas ALM equivalentes.
 
 ---
 
+## Integração no ciclo de vida
+
+A matriz deve ser revisitada:
+
+- Em **revisões de requisitos** no início de cada ciclo;
+- Durante **gates de release** e processos de go/no-go;
+- Como suporte à **aceitação formal de risco** e documentação de excepções;
+- Em checkpoints de auditoria - ISO 27001, PCI-DSS, DORA, ou equivalentes.
+
+---
+
+## Ferramentas de suporte
+
+| Finalidade | Ferramenta sugerida |
+|------------|---------------------|
+| Versionamento leve | Git + Markdown |
+| Análise e filtros | Excel / CSV |
+| Integração ALM | Jira, Azure DevOps, GitHub Issues |
+| Análise estática (SAST) | SonarQube, Semgrep, CodeQL |
+| Teste dinâmico (DAST) | OWASP ZAP, Burp Suite |
+| Análise de dependências (SCA) | Trivy, Snyk, Dependabot |
+| Gestão de segredos | HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
+| Centralização de logs / alertas | SIEM (ELK Stack, Splunk, Microsoft Sentinel) |
+
+---
+
+## Boas práticas
+
+- Manter **uma matriz por aplicação ou sistema crítico**, não uma única matriz global;
+- Usar a matriz como **trilho de auditoria interno** - actualizá-la em cada release;
+- **Versionar todas as alterações** à matriz e à evidência associada;
+- Referenciar sempre o **ID canónico** (`AUT-001`) e a **tag operacional** (`SEC-L2-AUT-MFA`) - o primeiro para rastreabilidade normativa, o segundo para rastreabilidade operacional;
+- Documentar **excepções** com justificação e aprovação formal; ver [Gestão de Excepções](./gestao-excecoes).
+
+---
+
+> Para a lista completa dos requisitos canónicos com critérios de aceitação por domínio, consultar o [Catálogo Base de Requisitos](./lista-requisitos-base).
+> Para os métodos de validação recomendados e evidências esperadas por domínio, consultar o [Plano de Validação de Requisitos](./validacao-requisitos).

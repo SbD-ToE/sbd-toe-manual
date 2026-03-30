@@ -37,19 +37,19 @@ Operacionaliza:
 Facilitar **discussões sobre criticidade e requisitos**, garantindo que toda a equipa compreende o contexto de risco. Rever classificação em integrações críticas ou mudanças relevantes.
 
 **User Stories:**
-- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02--revisão-em-integração-crítica-ou-mudança-relevante) — Atualizar controlos e rastreabilidade (com Arquitetos)
+- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade (com Arquitetos)
 
 ### Cap. 03 - Threat Modeling
 **Moderar sessões de threat modeling**, criar modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, garantir participação de toda a equipa.
 
 **User Stories:**
-- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01--criação-de-modelo-de-ameaça-inicial) — Riscos visíveis desde o início (com Arquitetos)
+- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - Riscos visíveis desde o início (com Arquitetos)
 
 ### Cap. 06 - Desenvolvimento Seguro
 Garantir que **cada PR é revisto com checklist de segurança obrigatória**, prevenindo vulnerabilidades e mantendo registo de conformidade.
 
 **User Stories:**
-- [US-01: Checklist de segurança em PR](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-01--revisão-de-pr-com-checklist-de-segurança) — Prevenir vulnerabilidades
+- [US-01: Checklist de segurança em PR](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-01---guidelines-de-desenvolvimento-seguro) - Prevenir vulnerabilidades
 
 ### Cap. 06-07 - Desenvolvimento e CI/CD
 Assegurar que **práticas seguras entram no sprint planning**, com DoD incluindo critérios de segurança validáveis.

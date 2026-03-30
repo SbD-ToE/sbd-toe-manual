@@ -1,7 +1,7 @@
 ---
 id: playbook
 title: "SbD-ToE 4 DORA: Playbook de Implementação"
-description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA — mapeamento direto de artigos para ações
+description: Roadmap prático para implementar SbD-ToE conforme requisitos DORA - mapeamento direto de artigos para ações
 tags: [playbook, dora, implementacao, roadmap]
 sidebar_position: 2
 ---
@@ -20,7 +20,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - O que fazer (ação concreta)
 - Evidência regulatória
 
-> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para DORA e outros frameworks.
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para DORA e outros frameworks.
 
 ---
 
@@ -39,7 +39,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 ## Como Implementar (Ordem Lógica)
 
 ### Fase 1: Governação (M0–M2)
-**DORA Art. 5** — Estabelecer supervisão da board
+**DORA Art. 5** - Estabelecer supervisão da board
 
 1. **Criar Comissão de Segurança Digital**
    - Membros: CISO, CTO, GRC Manager, General Counsel
@@ -54,13 +54,13 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 3. **Definir RACI**
    - Quem aprova o quê (aprovações formais)
    - Escalations (quando elevar)
-   - Referência: [Cap. 07 - Roles](/sbd-toe/teory-of-everything/roles)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
    - 📄 **Template:** [RACI e Governance](../exemplo-playbook/exemplo-raci-governance) - Exemplos de matrizes DORA-compatíveis
 
 ---
 
 ### Fase 2: Classificação e Inventário (M2–M4)
-**DORA Art. 5** — Conhecer o que é crítico
+**DORA Art. 5** - Conhecer o que é crítico
 
 1. **Inventariar Aplicações**
    - Nome, proprietário, dados processados
@@ -82,7 +82,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 ---
 
 ### Fase 3: Segurança Técnica (M4–M8)
-**DORA Art. 19–20** — Implementar controlos de resiliência
+**DORA Art. 19–20** - Implementar controlos de resiliência
 
 #### 3.1 CI/CD Seguro
 - **O que:** Gates de segurança no pipeline
@@ -106,7 +106,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 ---
 
 ### Fase 4: Operações (M8–M12)
-**DORA Art. 18** — Detetar e responder a incidentes
+**DORA Art. 18** - Detetar e responder a incidentes
 
 #### 4.1 Monitorização Centralizada
 - **O que:** Logs centralizados de apps, infra, acessos
@@ -129,10 +129,10 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 ---
 
 ### Fase 5: Supply Chain (M8–M12)
-**DORA Art. 26–28** — Gestão de fornecedores
+**DORA Art. 26–28** - Gestão de fornecedores
 
 #### 5.1 Fornecedores de Componentes (SBOM)
-**Já em Fase 3.2** — [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
+**Já em Fase 3.2** - [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
 
 #### 5.2 Fornecedores Contratuais
 - **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
@@ -145,7 +145,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 ---
 
 ### Fase 6: Validação e Testes (M12–M18)
-**DORA Art. 19–20** — Validar postura defensiva
+**DORA Art. 19–20** - Validar postura defensiva
 
 #### 6.1 Testes Contínuos
 - **SAST:** Análise estática de código (integrado em CI/CD)

@@ -48,7 +48,7 @@ Inclui modelos reutilizáveis de *user stories*, ações por papel, artefactos e
 
 ## 📝 User Stories e Cartões Reutilizáveis
 
-### US-01 — Seleção de requisitos por criticidade
+### US-01 - Seleção de requisitos por criticidade
 
 **Contexto.**  
 A seleção inicial de requisitos deve ser proporcional ao risco da aplicação (L1–L3).
@@ -88,7 +88,7 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 
 ---
 
-### US-02 — Revisão por alteração relevante
+### US-02 - Revisão por alteração relevante
 
 **Contexto.**  
 Requisitos aplicáveis devem ser revistos sempre que exista alteração material do contexto técnico, superfície de exposição, dados tratados ou arquitetura.
@@ -127,7 +127,7 @@ Como **Arquitetura/Tech Lead** e **Scrum Master/Team Lead**, quero rever requisi
 
 ---
 
-### US-03 — Gestão de Exceções com TTL e Revalidação Obrigatória
+### US-03 - Gestão de Exceções com TTL e Revalidação Obrigatória
 
 **Contexto.**  
 Nem todos os requisitos são aplicáveis. Exceções devem ser documentadas, justificadas, aprovadas e sujeitas a revalidação, evitando exceções permanentes.
@@ -169,7 +169,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 
 ---
 
-### US-04 — Rastreabilidade de requisitos
+### US-04 - Rastreabilidade de requisitos
 
 **Contexto.**  
 Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
@@ -212,7 +212,7 @@ Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados t�
 
 ---
 
-### US-05 — Definição de critérios de validação
+### US-05 - Definição de critérios de validação
 
 **Contexto.**  
 Cada requisito selecionado deve ter critérios de aceitação/validação explícitos e verificáveis.
@@ -255,7 +255,7 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 
 ---
 
-### US-06 — Validação de cobertura de testes
+### US-06 - Validação de cobertura de testes
 
 **Contexto.**  
 Requisitos devem ter validação associada para prevenir regressões e garantir eficácia.
@@ -298,7 +298,7 @@ Como **QA / Test Engineer**, quero garantir que os requisitos aplicáveis têm v
 
 ---
 
-### US-07 — Validação e aprovação final
+### US-07 - Validação e aprovação final
 
 **Contexto.**  
 A Equipa de Segurança deve validar a aplicação dos requisitos e aprovar exceções, controlando formalmente as decisões de risco.
@@ -341,7 +341,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 
 ---
 
-### US-08 — Catálogo de requisitos do projeto (criação e manutenção)
+### US-08 - Catálogo de requisitos do projeto (criação e manutenção)
 
 **Contexto.**  
 No arranque do projeto e sempre que existam alterações de âmbito, deve existir um **catálogo versionado de requisitos do projeto**, derivado da baseline organizacional e filtrado pela criticidade.
@@ -385,7 +385,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 
 ---
 
-### US-09 — Validação por requisito/domínio (REQ-XXX → evidência)
+### US-09 - Validação por requisito/domínio (REQ-XXX → evidência)
 
 **Contexto.**  
 Cada requisito ativo deve ter validação e evidência associadas.
@@ -425,11 +425,11 @@ Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critério
 
 **Ligações úteis.**
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)  
-- 🔗 [Controlos por requisito](./addon/controlos-requisitos)
+- 🔗 [Controlos por requisito](./addon/validacao-requisitos)
 
 ---
 
-### US-10 — Gates automáticos em CI/CD para requisitos de segurança
+### US-10 - Gates automáticos em CI/CD para requisitos de segurança
 
 **Contexto.**  
 Pipelines devem impor verificações automáticas alinhadas com requisitos aplicáveis, bloqueando merge/release quando falham.
@@ -470,12 +470,12 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD execute verifica
 | Merge/Release | PR/MR targeting main/release | DevOps/SRE + AppSec | Bloqueio automático até resolução |
 
 **Ligações úteis.**
-- 🔗 [Gates de segurança em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/gates-seguranca)  
+- 🔗 [Gates de segurança em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/politicas-gates-pipeline)  
 - 🔗 [SBOM e proveniência](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
 
 ---
 
-### US-11 — Geração de SBOM e assinatura de artefactos de build
+### US-11 - Geração de SBOM e assinatura de artefactos de build
 
 **Contexto.**  
 SBOMs e assinaturas suportam proveniência e auditoria.
@@ -510,7 +510,7 @@ Como **Developer** e **DevOps/SRE**, quero que a pipeline gere um SBOM e assine 
 
 ---
 
-### US-12 — Validação de tags `SEC-Lx-*` e requisitos no pipeline
+### US-12 - Validação de tags `SEC-Lx-*` e requisitos no pipeline
 
 **Contexto.**  
 Tags e referências devem estar presentes para garantir rastreabilidade.
@@ -542,7 +542,7 @@ Como **Developer** e **QA**, quero que o pipeline valide a presença e conformid
 
 ---
 
-### US-13 — Política, Formação e Procedimentos Operacionais
+### US-13 - Política, Formação e Procedimentos Operacionais
 
 **Contexto.**  
 Para consistência, a organização deve publicar políticas, responsabilidades e formação.
@@ -620,7 +620,7 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 
 **Ligações úteis.**
 - 🔗 [Governação do uso de automatismos](./addon/governanca-automatismos)
-- 🔗 [Gates automáticos em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/gates-seguranca)
+- 🔗 [Gates automáticos em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/politicas-gates-pipeline)
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)
 
 ---

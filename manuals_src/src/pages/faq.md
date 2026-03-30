@@ -1,12 +1,12 @@
 ---
 id: faq
-title: FAQ — Perguntas Frequentes
+title: FAQ - Perguntas Frequentes
 description: Respostas rápidas sobre aplicabilidade, âmbito, compliance e implementação do SbD-ToE
 tags: [faq, aplicabilidade, compliance, implementacao]
 sidebar_position: 7
 ---
 
-# FAQ — Perguntas Frequentes
+# FAQ - Perguntas Frequentes
 
 ## Âmbito e Aplicabilidade
 
@@ -62,7 +62,7 @@ O SbD-ToE ajuda a:
 
 **Em termos práticos:**
 - ISO 27001 diz: "Deve gerir vulnerabilidades" (controlo A.12.6).
-- SbD-ToE diz: "Cap. 05 — Como fazer SBOM, SCA, patching com SLAs, exceções formais, integração CI/CD".
+- SbD-ToE diz: "Cap. 05 - Como fazer SBOM, SCA, patching com SLAs, exceções formais, integração CI/CD".
 
 **Podem coexistir?** Sim, e devem. SbD-ToE fornece o "como técnico" que acelera implementação e auditoria ISO 27001.
 
@@ -76,10 +76,10 @@ O SbD-ToE ajuda a:
 
 | Regulamento | Cobertura SbD-ToE | Lacunas intencionais | Cross-check |
 |-------------|-------------------|---------------------|-------------|
-| **DORA** | 80–90% dos requisitos técnicos (Art. 5/18/19–20/26–28) | Templates ITS, aprovação board formal, concentração de fornecedores | [02-dora.md](/sbd-toe/002-cross-check-normativo/dora) |
-| **NIS2** | 80–90% dos requisitos técnicos (Art. 20/21/23) | Registo autoridade nacional, templates de reporte | [NIS2.md](/sbd-toe/002-cross-check-normativo/nis2) |
-| **CRA** | 70–80% (SBOM, patching, disclosure, testes) | Marcação CE, declaração de conformidade, organismos notificados | [05-cra.md](/sbd-toe/002-cross-check-normativo/cra) |
-| **GDPR** | 60–70% (Art. 25/32: PbD, segurança do tratamento) | ROPA, base legal, DPIA completa, transferências internacionais | [07-gdpr.md](/sbd-toe/002-cross-check-normativo/gdpr) |
+| **DORA** | 80–90% dos requisitos técnicos (Art. 5/18/19–20/26–28) | Templates ITS, aprovação board formal, concentração de fornecedores | [02-dora.md](/sbd-toe/cross-check-normativo/dora/intro) |
+| **NIS2** | 80–90% dos requisitos técnicos (Art. 20/21/23) | Registo autoridade nacional, templates de reporte | [NIS2.md](/sbd-toe/cross-check-normativo/nis2/intro) |
+| **CRA** | 70–80% (SBOM, patching, disclosure, testes) | Marcação CE, declaração de conformidade, organismos notificados | [05-cra.md](/sbd-toe/cross-check-normativo/cra/intro) |
+| **GDPR** | 60–70% (Art. 25/32: PbD, segurança do tratamento) | ROPA, base legal, DPIA completa, transferências internacionais | [07-gdpr.md](/sbd-toe/cross-check-normativo/gdpr/intro) |
 
 **Princípio:** O SbD-ToE fornece o **núcleo técnico** reutilizável. As partes jurídico-administrativas (contratos, bases legais, declarações formais) são tratadas por Jurídico/GRC.
 
@@ -104,13 +104,13 @@ O SbD-ToE ajuda a:
 **Não.** O SbD-ToE não é um esquema de certificação. É um **framework operacional interno**.
 
 **Mas:** as evidências SbD-ToE podem ser reutilizadas para **acelerar e simplificar** certificações externas:
-- **ISO 27001** (ISMS) — implementação de controlos técnicos A.8/A.12/A.14/A.16
-- **EUCC/EUCS/EU5G** (esquemas CSA da ENISA) — evidências de segurança de produto/serviço
-- **SOC 2 Type II** (para cloud/SaaS) — demonstração de Trust Service Criteria
+- **ISO 27001** (ISMS) - implementação de controlos técnicos A.8/A.12/A.14/A.16
+- **EUCC/EUCS/EU5G** (esquemas CSA da ENISA) - evidências de segurança de produto/serviço
+- **SOC 2 Type II** (para cloud/SaaS) - demonstração de Trust Service Criteria
 
 **Importante:** Reutilizar evidências reduz o esforço (80–90%), mas não substitui a auditoria/avaliação independente necessária para a certificação formal.
 
-Ver: [Certificação ENISA/CSA](/sbd-toe/002-cross-check-normativo/enisa-csa-certificacao)
+Ver: [Certificação ENISA/CSA](/sbd-toe/cross-check-normativo/enisa-csa/intro)
 
 ---
 
@@ -125,7 +125,7 @@ Depende da maturidade inicial:
 | **Greenfield** (nova organização/produto) | 3–6 meses | Cap. 01–02 (classificação/requisitos) → 06–07 (SDLC/CI-CD) → 12 (ops) |
 | **Brownfield com maturidade baixa** | 6–12 meses | Cap. 01 (inventário) → 05 (SBOM/SCA) → 10 (testes) → 12 (incidentes) → 14 (governação) |
 | **Brownfield com maturidade média** (já tem CI/CD, logs, etc.) | 4–8 meses | Gap analysis → Cap. 03 (TM) → 05 (SBOM) → 10 (testes avançados) → 14 (fornecedores) |
-| **Compliance-driven** (DORA/NIS2 deadline) | 6–18 meses | Usar playbooks específicos ([DORA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-dora-playbook), [NIS2](/sbd-toe/002-cross-check-normativo/sbd-toe-4-nis2-playbook)) |
+| **Compliance-driven** (DORA/NIS2 deadline) | 6–18 meses | Usar playbooks específicos ([DORA](/sbd-toe/cross-check-normativo/dora/playbook), [NIS2](/sbd-toe/cross-check-normativo/nis2/playbook)) |
 
 **Nota:** A implementação é **iterativa** (não "big bang"). Começa-se por apps críticas (L3) e expande-se progressivamente.
 
@@ -194,9 +194,9 @@ Ver: Cap. 02 addon 08, Cap. 05 addon 09, Cap. 14.
 - Dados sensíveis não cifrados.
 - Violações de conformidade regulatória (ex: DORA/NIS2/GDPR).
 
-**Regra:** Se o regulador ou a criticidade não o permite, não é exceção — é **não-conformidade**.
+**Regra:** Se o regulador ou a criticidade não o permite, não é exceção - é **não-conformidade**.
 
-Ver: [DORA cross-check — Exceções](/sbd-toe/002-cross-check-normativo/dora#gestão-de-exceções-e-desvios-artigos-5-18-19–20-26–28-dora)
+Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#gestão-de-exceções-e-desvios-artigos-5-18-19–20-26–28-dora)
 
 ---
 
@@ -243,7 +243,7 @@ Ver: [DORA cross-check — Exceções](/sbd-toe/002-cross-check-normativo/dora#g
 2. Usa playbooks específicos para ajustes (campos de reporte, templates).
 3. Runbook de incidentes único com bifurcação de canais (DORA → EBA, NIS2 → CSIRT, GDPR → DPO).
 
-Ver: [Convergência DORA & NIS2](/sbd-toe/002-cross-check-normativo/convergencia-dora-nis2)
+Ver: [Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/dora/convergencia-dora)
 
 ---
 
@@ -285,11 +285,11 @@ Métricas-chave por capítulo:
 
 ### Por onde começo?
 
-1. **Ler:** [Como usar este manual](/sbd-toe/001-how-to-manual/como-usar-este-manual)
-2. **Inventariar:** Cap. 01 — Listar e classificar apps críticas.
+1. **Ler:** [Como usar este manual](/sbd-toe/sbd-manual/fundamentos/como-usar)
+2. **Inventariar:** Cap. 01 - Listar e classificar apps críticas.
 3. **Gap analysis:** Comparar estado atual vs. requisitos Cap. 02.
 4. **Quick wins:** Cap. 05 (SBOM), Cap. 12 (logs centralizados), Cap. 14 (RACI).
-5. **Roadmap:** Escolher playbook relevante ([DORA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-dora-playbook), [NIS2](/sbd-toe/002-cross-check-normativo/sbd-toe-4-nis2-playbook), [CRA](/sbd-toe/002-cross-check-normativo/sbd-toe-4-cra-playbook), [GDPR](/sbd-toe/002-cross-check-normativo/sbd-toe-4-gdpr-playbook)).
+5. **Roadmap:** Escolher playbook relevante ([DORA](/sbd-toe/cross-check-normativo/dora/playbook), [NIS2](/sbd-toe/cross-check-normativo/nis2/playbook), [CRA](/sbd-toe/cross-check-normativo/cra/playbook), [GDPR](/sbd-toe/cross-check-normativo/gdpr/playbook)).
 
 ---
 
@@ -298,7 +298,7 @@ Métricas-chave por capítulo:
 - **Documentação completa:** SbD-ToE Capítulos 01–14
 - **Cross-checks normativos:** Secção 002
 - **Playbooks práticos:** Ver cada regulamento
-- **Comunidade:** (a definir — fórum, GitHub Discussions, etc.)
+- **Comunidade:** (a definir - fórum, GitHub Discussions, etc.)
 
 ---
 

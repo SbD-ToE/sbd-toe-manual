@@ -33,7 +33,7 @@ Focam-se em assegurar que:
 - **atualizações são automatizadas com análise de impacto** (semver, *release notes*, *changelogs*, testes e *static call graphs*),  
 - nenhuma biblioteca entra “por cópia manual” fora do *package manager*.
 
-> ⚠️ **Nota normativa — Limites do inventário de dependências**  
+> ⚠️ **Nota normativa - Limites do inventário de dependências**  
 > O SBOM representa a melhor aproximação possível à composição de um sistema num dado momento, mas **não constitui uma verdade absoluta**.  
 > Dependências podem ser introduzidas de forma indireta ou emergente (ex.: tooling, pipelines, code generation, runtime loading).  
 > Este capítulo prescreve práticas explícitas para **definir fronteiras de inventário, detetar desvios e governar dependências não-intencionais**, assegurando controlo efetivo da cadeia de fornecimento de software.
@@ -60,7 +60,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 🧪 Pilares de governação
+## 🧪 Pilares de governação {#pilares-de-governação}
 
 1. **Repositórios internos aprovados** como fonte única.  
 2. **Política de dependências** com critérios de aprovação e *pinning*.  

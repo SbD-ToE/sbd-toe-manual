@@ -9,7 +9,7 @@ tags: [avancado, governance, excecoes, contratos, auditoria, rastreabilidade]
 
 # 🧭 Recomendações Avançadas - Governança e Contratação
 
-Este ficheiro inclui práticas que reforçam a governaça da segurança aplicacional em contextos organizacionais com maior maturidade, complexidade contratual ou exigência regulatória.
+Este ficheiro inclui práticas que reforçam a governança da segurança aplicacional em contextos organizacionais com maior maturidade, complexidade contratual ou exigência regulatória.
 
 ---
 
@@ -40,8 +40,8 @@ Este ficheiro inclui práticas que reforçam a governaça da segurança aplicaci
 
 ## 🧾 4. Transparência e auditoria
 
-* Publicação de relatórios de governaça de segurança agregados por unidade ou projeto;
-* Revisões de governaça com apoio de comités técnicos ou auditorias externas;
+* Publicação de relatórios de governança de segurança agregados por unidade ou projeto;
+* Revisões de governança com apoio de comités técnicos ou auditorias externas;
 * Integração de requisitos de segurança como condição de aceitação contratual.
 
 ---
@@ -58,7 +58,7 @@ Este ficheiro inclui práticas que reforçam a governaça da segurança aplicaci
 >
 > * Modelos DevSecOps maduros;
 > * Responsabilidade regulatória significativa (financeiro, saúde, administração pública);
-> * Necessidade de visibilidade contínua e governaça auditável.
+> * Necessidade de visibilidade contínua e governança auditável.
 
 ---
 
@@ -68,4 +68,4 @@ Este ficheiro inclui práticas que reforçam a governaça da segurança aplicaci
 * Cap. 2 - Requisitos aplicacionais
 * Cap. 5 - Rastreabilidade e exceções
 * Cap. 13 - Formação e onboarding
-* Cap. 14.1 a 14.6 - Processos de governaça e contratação
+* `addon/01` a `addon/07` - Processos de governança e contratação

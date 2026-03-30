@@ -21,7 +21,7 @@ Requisitos podem ser bem definidos e controlos bem desenhados, mas só através 
 Este capítulo distingue-se por fornecer **evidência objetiva e auditável**: confirma se as medidas prescritas nos capítulos anteriores são eficazes e se resistem à pressão do uso em produção.  
 Inclui técnicas automatizadas (SAST, DAST, fuzzing, IAST) e validações manuais/ofensivas (PenTesting), criando uma rede complementar de garantias.
 
-👉 Em síntese, os testes de segurança não são uma “fase” opcional — são o **mecanismo contínuo de validação** que sustenta decisões de *go/no-go* em cada commit, build e release.
+👉 Em síntese, os testes de segurança não são uma “fase” opcional - são o **mecanismo contínuo de validação** que sustenta decisões de *go/no-go* em cada commit, build e release.
 
 ---
 

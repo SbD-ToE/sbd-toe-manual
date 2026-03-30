@@ -4,6 +4,7 @@ title: Ameaças Mitigadas - Governança e Contratação
 sidebar_position: 50
 description: Tabela de ameaças mitigadas pelas práticas de exceções, rastreabilidade, onboarding e validação formal descritas neste capítulo
 tags: [ameacas, governance, rastreabilidade, excecoes, contratos, osc&r, dsomm]
+draft: true
 ---
 
 

@@ -15,13 +15,13 @@ Neste contexto, a validação de código deixa de ser uma boa prática opcional 
 
 ---
 
-## Código não é confiança — é input
+## Código não é confiança - é input
 
 Um dos pressupostos fundamentais deste capítulo é simples, mas estrutural:
 
 > **Código não é confiável por defeito, independentemente da sua origem.**
 
-A origem do código — autoria humana, reutilização interna, bibliotecas externas ou ferramentas de apoio — não é um critério válido de confiança.  
+A origem do código - autoria humana, reutilização interna, bibliotecas externas ou ferramentas de apoio - não é um critério válido de confiança.  
 O único fator que transforma código em artefacto aceitável é a **validação técnica adequada ao risco**.
 
 Este princípio é coerente com o tratamento dado a:
@@ -35,7 +35,7 @@ O desenvolvimento seguro estende essa lógica ao próprio código produzido inte
 
 ## Validação como processo, não como evento
 
-Outro erro comum é tratar a validação como um **evento pontual** — tipicamente uma revisão final antes do merge.
+Outro erro comum é tratar a validação como um **evento pontual** - tipicamente uma revisão final antes do merge.
 
 No SbD-ToE, a validação é entendida como um **processo progressivo**, onde o código atravessa estados bem definidos, cada um reduzindo o risco introduzido:
 
@@ -90,7 +90,7 @@ existe para **disciplinar o processo presente** e reduzir erro sistémico.
 ## Ligação ao ciclo de vida
 
 Este addon define o **racional técnico** da validação de código.  
-A sua aplicação prática — gates, responsabilidades e artefactos — é descrita no `15-aplicacao-lifecycle.md` do capítulo.
+A sua aplicação prática - gates, responsabilidades e artefactos - é descrita no `15-aplicacao-lifecycle.md` do capítulo.
 
 A validação não substitui outras práticas do manual;  
 funciona como **ponto de convergência** entre desenvolvimento, testes e governação.

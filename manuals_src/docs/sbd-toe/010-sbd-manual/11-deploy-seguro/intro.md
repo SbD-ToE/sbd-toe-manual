@@ -25,8 +25,8 @@ Este capítulo não se limita a “executar o pipeline”. Procura estabelecer p
 A segurança do *deploy* é também governação: traduz-se na capacidade de explicar, perante auditoria ou incidente, **quem decidiu**, **o que foi aprovado**, **que evidência suportou a decisão** e **como se garantiu a integridade do que chegou a produção**.
 
 👉 Este capítulo complementa:
-- **CI/CD Seguro** — onde se garante integridade do *build*, rastreabilidade técnica e controlo do pipeline.  
-- **Monitorização e Operações** — onde se cobre a deteção de anomalias, resposta a incidentes e validação em *runtime*.
+- **CI/CD Seguro** - onde se garante integridade do *build*, rastreabilidade técnica e controlo do pipeline.  
+- **Monitorização e Operações** - onde se cobre a deteção de anomalias, resposta a incidentes e validação em *runtime*.
 
 ---
 

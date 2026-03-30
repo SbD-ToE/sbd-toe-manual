@@ -14,7 +14,7 @@ Objetivo: operacionalizar GDPR Art. 25/30/32/33–34/35 com base nas capacidades
 
 Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA sempre que possível.
 
-> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains de cifragem, KPIs de privacy e processos de incident response reutilizáveis.
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains de cifragem, KPIs de privacy e processos de incident response reutilizáveis.
 
 ---
 

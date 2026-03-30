@@ -422,10 +422,10 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
 ## 📎 Templates e Links
 
-- [Contractor Validation Template](02-template-validacao-contractors.md)
-- [Preparação Técnica - US-15](../aplicacao-lifecycle.md#us-15)
+- [Contractor Validation Template](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
+- [Preparação Técnica - US-15](../aplicacao-lifecycle#us-15)
 - [Formação e Onboarding - Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
-- [Offboarding Checklist](13-checklist-offboarding.md)
+- [Offboarding Checklist](/sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding)
 
 ---
 

@@ -133,7 +133,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 A definição destas obrigações mínimas baseia-se em:
 
 ### **Estudos de Incidentes Reais**
-- **Verizon DBIR** (Data Breach Investigations Report): A maioria dos breaches decorre de falhas básicas — credenciais fracas, patches não aplicadas, falta de logging.
+- **Verizon DBIR** (Data Breach Investigations Report): A maioria dos breaches decorre de falhas básicas - credenciais fracas, patches não aplicadas, falta de logging.
 - **ENISA Threat Landscape**: Vulnerabilidades conhecidas (ex.: CVEs) são exploradas rotineiramente porque básicos não estão em lugar.
 
 ### **OWASP Top 10**
@@ -264,16 +264,16 @@ Com as 8 obrigações implementadas:
 
 1. **Audita o estado atual**: Qual destas 8 obrigações estão já implementadas?
 2. **Prioriza gaps**: Qual é mais urgente? (Recomendação: começar com 1, 2, 5, 7)
-3. **Aloca recursos**: Cada obrigação tem um "dono" — Define responsabilidades
+3. **Aloca recursos**: Cada obrigação tem um "dono" - Define responsabilidades
 4. **Define timeline**: Qual é o prazo para 100% compliance?
 5. **Mede**: Estabelece KPIs para cada obrigação
 
 ---
 
 **Leitura Relacionada**:
-- [Papéis e Responsabilidades](./roles-responsabilidades/intro) — Quem implementa cada obrigação
-- [Cap. 01 — Classificação](../01-classificacao-aplicacoes/intro.md) — Como classificar aplicações
-- [Cap. 02 — Requisitos](../02-requisitos-seguranca/intro.md) — Como definir requisitos
+- [Papéis e Responsabilidades](./roles-responsabilidades/intro) - Quem implementa cada obrigação
+- [Cap. 01 - Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro) - Como classificar aplicações
+- [Cap. 02 - Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/intro) - Como definir requisitos
 
 ---
 

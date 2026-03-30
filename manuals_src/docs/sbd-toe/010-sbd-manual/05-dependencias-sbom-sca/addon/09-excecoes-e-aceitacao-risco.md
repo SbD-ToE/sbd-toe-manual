@@ -1,84 +1,68 @@
 ---
 id: excecoes-e-aceitacao-risco
-title: Exceções e Aceitação de Risco em Vulnerabilidades
-description: Formalização de desvios justificados em findings SCA, com critérios e rastreabilidade
-tags: [dependencias, sbom, sca, supply-chain, exceptions]
+title: Excepções e Aceitação de Risco em Vulnerabilidades de Dependências
+description: Especificidades da gestão de excepções no contexto de findings SCA/CVE
+tags: [dependencias, sbom, sca, exceptions, cve]
 ---
 
-# ⚖️ Exceções e Aceitação de Risco em Vulnerabilidades
+# Excepções e Aceitação de Risco em Vulnerabilidades de Dependências
 
-## 🌟 Objetivo
-
-Definir um processo formal para lidar com situações em que uma vulnerabilidade detetada numa dependência **não pode ser corrigida de imediato**, mas o risco é aceite de forma justificada e documentada.
-
-> 📌 Este mecanismo deve ser excecional, rastreável e com prazo definido. Nunca pode ser usado como pretexto para ignorar riscos reais.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
-## 🔍 Quando é aceitável uma exceção
+## Âmbito
 
-Uma exceção pode ser considerada se **todos os seguintes critérios forem analisados**:
-
-- A vulnerabilidade **não tem impacto direto** no contexto de execução da aplicação;
-- Não existe alternativa viável ou atualizada com o mesmo comportamento esperado;
-- Existem **controles compensatórios eficazes** (ex: sandboxing, WAF, autenticação forte);
-- A dependência está no caminho de build mas **não no runtime**;
-- O risco residual é documentado e aceite formalmente.
+Excepções a findings de análise de composição de software (SCA) - vulnerabilidades em dependências identificadas por scanner, referenciadas por CVE ou equivalente.
 
 ---
 
-## 📋 Processo de aceitação de risco
+## Triggers específicos deste domínio
 
-| Etapa                      | Responsável           | Artefacto                            |
-|---------------------------|------------------------|---------------------------------------|
-| Identificação do finding  | Scanner (SCA)         | CVE + componente                     |
-| Análise de impacto        | AppSec + Dev Lead     | Justificação técnica                 |
-| Validação compensatória   | AppSec / Arquiteto    | Evidência de controlo alternativo    |
-| Aprovação formal          | Security Officer / GRC| Registo com data e reavaliação       |
-| Revisão periódica         | AppSec + QA           | Checklist de findings aceites        |
+Uma excepção SCA exige que **todos** os seguintes critérios sejam analisados e documentados:
 
-> 🧩 Sugere-se um processo de exceções com validade limitada (ex: 90 dias), com alerta de expiração.
+- a vulnerabilidade não tem impacto directo no contexto de execução da aplicação (ex: dependência usada apenas no build, não no runtime);
+- não existe versão alternativa viável com o mesmo comportamento esperado;
+- existem controlos compensatórios eficazes e verificáveis (ex: sandboxing, WAF, isolamento de build);
+- o risco residual é explicitamente documentado e aceite formalmente.
+
+A ausência de patch disponível é condição necessária mas não suficiente para aprovação da excepção.
 
 ---
 
-## 📁 Template YAML de exceção
+## Campos adicionais obrigatórios (SCA)
+
+| Campo | Obrigatório | Notas |
+|---|---|---|
+| CVE / ID de vulnerabilidade | Sim | |
+| Componente afectado | Sim | Nome e versão exacta (ex: `lib-legacy@1.0.4`) |
+| Contexto de uso | Sim | `runtime` / `build-only` / `test-only` |
+| Versão corrigida disponível? | Sim | Se sim, justificação para não aplicar |
+
+---
+
+## Template YAML
 
 ```yaml
-- cve: CVE-2023-4567
-  componente: lib-legacy@1.0.4
-  motivo: "Dependência só usada no build; sem impacto no runtime"
-  controlo_compensatorio: "Build isolado em container não privilegiado"
-  aprovado_por: "sofia.ferreira@appsec.local"
-  validade: "2024-09-30"
+- cve: CVE-YYYY-NNNNN
+  componente: nome-do-pacote@versao
+  contexto: build-only | runtime | test-only
+  motivo: "Justificação técnica objectiva"
+  controlo_compensatorio: "Controlo alternativo aplicado"
+  aprovado_por: "nome@funcao"
+  validade: "YYYY-MM-DD"
   revisao_agendada: true
 ```
 
-> 🔐 Este ficheiro pode estar no repositório (`/security/excecoes.yaml`) ou num sistema de exceções centralizado.
+Localização sugerida: `/security/excecoes-sca.yaml` no repositório, ou sistema centralizado com equivalência rastreável.
 
 ---
 
-## ✅ Check de aceitação mínima
+## Referências cruzadas
 
-| Critério                                  | Obrigatório? |
-|-------------------------------------------|--------------|
-| CVE claramente identificado                | ✅            |
-| Componente afetado com versão específica  | ✅            |
-| Justificação técnica detalhada            | ✅            |
-| Controlo compensatório identificado       | ✅            |
-| Prazo de validade definido                | ✅            |
-| Responsável pela aprovação identificado   | ✅            |
-| Revisão programada                        | ✅            |
-
----
-
-## 🔗 Ligações com outros ficheiros
-
-| Documento                   | Relação com exceções                               |
-|-----------------------------|----------------------------------------------------|
-| `02-analise-sca.md`         | Origem dos findings que podem originar exceção     |
-| `04-integracao-ci-cd.md`    | Deve verificar existência e validade de exceções   |
-| `08-rastreabilidade-vulnerabilidades.md` | Regista a decisão de aceitar risco como estado final |
-
----
-
-> ✅ Aceitar risco não é abdicar da segurança - é uma decisão informada, documentada e revista. Deve ser visível, auditável e limitada no tempo.
+| Documento | Relação |
+|---|---|
+| `02-analise-sca.md` | Origem dos findings que podem originar excepção |
+| `04-integracao-ci-cd.md` | Verificação de validade das excepções no pipeline |
+| `08-rastreabilidade-vulnerabilidades.md` | Registo da decisão de aceitação de risco como estado final |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

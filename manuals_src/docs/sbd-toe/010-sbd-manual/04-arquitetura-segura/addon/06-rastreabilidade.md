@@ -1,61 +1,77 @@
 ---
-id: matriz-requisitos-iac
-title: Matriz de Requisitos Técnicos para Projetos IaC
-description: Requisitos específicos para garantir segurança em projetos de Infraestrutura como Código
-sidebar_position: 8
+id: rastreabilidade-arquitetural
+title: Rastreabilidade Arquitetural
+description: Modelo de rastreabilidade entre requisitos ARC, ameaças, decisões arquitecturais e evidência auditável, com template de matriz e critérios de actualização
+tags: [tipo:addon, tema:arquitetura, ARC, rastreabilidade, ADR, evidencia, threat-modeling, L1, L2, L3]
+sidebar_position: 6
 ---
 
-# 📘 Matriz de Requisitos Técnicos para Projetos IaC
+<!--template: sbdtoe-addon -->
 
-Este catálogo define requisitos de segurança **específicos para projetos de Infraestrutura como Código (IaC)**, que complementam os requisitos aplicacionais definidos no Capítulo 02.  
+# Rastreabilidade Arquitetural
 
-Estes requisitos são aplicáveis diretamente ao **código, estrutura e práticas dos próprios projetos IaC**, e incluem aspetos tanto **aplicacionais** (ex: versionamento, validação) como **infraestruturais** (ex: controlo de estado, segregação de ambientes, enforcement de políticas).
+A rastreabilidade arquitectural é a capacidade de demonstrar, de forma verificável, que cada requisito de segurança relevante tem uma decisão de design associada, um controlo implementado e evidência auditável.
 
----
-
-## 📊 Requisitos por nível de risco
-
-| ID       | Requisito                                                                                              | L1 | L2 | L3 | Cap. 2? | Referências                 | Justificação                                                                 |
-|----------|---------------------------------------------------------------------------------------------------------|----|----|----|---------|-----------------------------|--------------------------------------------------------------------------------|
-| IAC-001  | O projeto IaC deve usar backend remoto autenticado com locking ativado para controlo de estado         |    | X  | X  | -       | SSDF PW.5, Terraform Docs   | Evita concorrência e drift em ambientes críticos                              |
-| IAC-002  | Ambientes (dev, QA, prod) devem ser definidos de forma segregada e versionada                           | X  | X  | X  | REQ-004 | CIS 4.5, SSDF PM.2          | Impede alterações acidentais e permite revisão por ambiente                   |
-| IAC-003  | Todas as alterações devem ser sujeitas a validações automáticas (syntax, lint, policy, segurança)      | X  | X  | X  | REQ-005 | SSDF PS.2, SLSA Build L2    | Reforça integridade e conformidade contínua                                   |
-| IAC-004  | Módulos reutilizados devem ter origem confiável (repositório interno, hash ou verificação manual)      |    | X  | X  | -       | SLSA Source L2, Terraform   | Protege contra código externo malicioso ou obsoleto                           |
-| IAC-005  | O histórico de alterações deve ser completo, com tagging e releases rastreáveis                         | X  | X  | X  | REQ-002 | GitOps, SSDF CM.1           | Suporta rollback e auditoria                                                  |
-| IAC-006  | Devem existir convenções formais de nomeação, tagging e estrutura de diretórios                         |    | X  | X  | -       | Terraform Best Practices    | Facilita automação, rastreabilidade e revisão                                 |
-| IAC-007  | O plano (`terraform plan` ou equivalente) deve ser rastreado e aprovado antes do `apply`               |    | X  | X  | -       | SSDF PW.6                   | Garante controlo de alterações aplicadas                                      |
-| IAC-008  | O projeto IaC deve ter rastreabilidade entre ficheiros e os ambientes/recursos que afetam              |    | X  | X  | -       | SSDF CM.5                   | Permite accountability e avaliação de impacto                                 |
-| IAC-009  | Devem existir políticas de enforcement aplicadas automaticamente (ex: OPA, Sentinel, Rego, Conftest)   |    |    | X  | -       | SSDF PW.5, SLSA L3          | Reduz risco de erro humano e aplica controlo em pipelines                     |
-| IAC-010  | Os artefactos gerados (ex: `plan`, `apply`, manifests) devem ser armazenados com versionamento e hash  |    | X  | X  | -       | SLSA Provenance, SSDF PW.4  | Garante integridade e auditoria de mudanças em tempo                         |
+Sem rastreabilidade, uma arquitectura pode estar correcta mas não ser *demonstravelmente* segura - o que é insuficiente em contextos de auditoria, conformidade ou análise pós-incidente.
 
 ---
 
-## 📎 Notas explicativas
+## Modelo de rastreabilidade
 
-- **IAC-001**: aplica-se a projetos com múltiplos colaboradores e ambientes partilhados.
-- **IAC-004**: módulos não verificados podem conter configurações perigosas ou vulnerabilidades.
-- **IAC-007**: permite validar *o que será alterado* antes da execução e associar a change request.
-- **IAC-009**: enforcement automatizado evita drift organizacional e violações de política.
-- **IAC-010**: necessário para rastrear o impacto real do IaC aplicado em ambientes produtivos.
+O modelo liga cinco elementos em cadeia:
 
----
+```
+Ameaça (Cap. 03)  →  Requisito ARC-XXX  →  Decisão (ADR)  →  Controlo implementado  →  Evidência
+```
 
-## 🧾 Exemplos de evidência
-
-| Requisito   | Evidência sugerida                                                                      |
-|-------------|------------------------------------------------------------------------------------------|
-| IAC-001     | Configuração de backend remoto (`backend.tf`) com locking ativado                        |
-| IAC-003     | Log de execução de linter + scanner (ex: TFLint, tfsec, Checkov)                         |
-| IAC-005     | Histórico Git com tags, releases e convenções de commits                                 |
-| IAC-007     | Aprovação manual ou automática do `plan` via Pull Request com diff visível               |
-| IAC-009     | Política OPA/Rego em CI/CD + resultados visíveis e bloqueio se não conforme              |
+| Elemento | Descrição | Artefacto típico |
+|----------|-----------|-----------------|
+| **Ameaça** | Ameaça identificada no threat modeling (Cap. 03) - STRIDE, PASTA ou equivalente | Registo de TM, DFD anotado |
+| **Requisito ARC-XXX** | Requisito canónico do catálogo deste capítulo que mitiga a ameaça | `01-catalogo-requisitos.md` |
+| **Decisão (ADR)** | Architecture Decision Record que documenta como o requisito é satisfeito no contexto do projecto | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
+| **Controlo implementado** | A medida técnica ou processual em vigor que concretiza a decisão | Configuração de rede, política de admissão, processo de revisão |
+| **Evidência** | Artefacto verificável que comprova o controlo - versionado, reproduzível e auditável | Diagrama versionado, log de CI/CD, ata de revisão, checklist preenchido |
 
 ---
 
-## 🔗 Relacionado com outros capítulos
+## Template de matriz de rastreabilidade
 
-<!-- - [Capítulo 02 - Requisitos de Segurança (REQ-XXX)](../../02-requisitos-seguranca) -->
-- [Capítulo 06 - Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)
-- [Capítulo 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
-- [Capítulo 11 - Deploy e Controlo de Execução](/sbd-toe/sbd-manual/deploy-seguro/intro)
+A matriz pode ser mantida como tabela Markdown no repositório, backlog items com labels, ou secção na `solution-architecture.md`. O formato é secundário; a substância - ligação verificável entre requisito, decisão e evidência - é o critério determinante.
 
+| Req. ARC | Nome | Ameaça associada (Cap. 03) | Decisão / ADR | Controlo implementado | Evidência | Estado |
+|----------|------|---------------------------|---------------|-----------------------|-----------|--------|
+| ARC-001 | Zonas de confiança identificadas | Spoofing, Information Disclosure | ADR-003 | Diagrama C4 com trust boundaries delimitados | `docs/arch/trust-zones-v3.drawio` (rev. 2024-11) | Conforme |
+| ARC-005 | Threat modeling integrado | Elevation of Privilege, Tampering | ADR-007 | STRIDE aplicado em design session trimestral | `docs/tm/checkout-flow-2024-11.md` | Conforme |
+| ARC-006 | Isolamento entre domínios sensíveis | Lateral movement, Info Disclosure | ADR-009 | Network policies Kubernetes + ACLs no API Gateway | CI log: `validate-isolation` (pipeline #247) | Conforme |
+| ARC-011 | Segmentação entre ambientes | Tampering cross-env | ADR-012 | Namespaces isolados + credenciais separadas por ambiente | Auditoria IAM 2024-10, network policy review | Conforme |
+
+*Para L1: colunas `Ameaça associada` e `Decisão / ADR` são recomendadas mas não obrigatórias. Para L2 e L3: todos os campos são obrigatórios.*
+
+---
+
+## Critérios de actualização
+
+A matriz de rastreabilidade deve ser actualizada quando:
+
+- um requisito ARC for instanciado ou revisto no projecto;
+- um ADR for criado, actualizado ou invalidado;
+- ocorrer um evento de revisão arquitectural (ver triggers em [Glossário Operacional](./termos-e-glossario-arquitetura));
+- o nível de risco da aplicação for reclassificado;
+- uma excepção for aprovada, renovada ou expirada.
+
+Rastreabilidade desactualizada equivale a ausência de rastreabilidade para efeitos de auditoria.
+
+---
+
+## Instanciação operacional
+
+Para instanciação em projecto, cada requisito ARC é identificado com a tag operacional `SEC-Lx-ARC-CODIGO` (ex: `SEC-L2-ARC-005`), conforme descrito em [Taxonomia e Rastreabilidade](/sbd-toe/sbd-manual/requisitos-seguranca/addon/taxonomia-rastreabilidade).
+
+A tag operacional é o elo entre a matriz de rastreabilidade arquitectural e o backlog ou sistema de gestão de conformidade do projecto.
+
+---
+
+> Para o catálogo de requisitos, consultar [Catálogo de Requisitos ARC](./catalogo-requisitos-arquitetura).
+> Para critérios de validação por requisito, consultar [Plano de Validação Arquitetural](./validacao-arquitetural).
+> Para o modelo de decisão e evidência, consultar [Decisão e Evidência Arquitetural](./decisao-evidencia-arquitetural).
+> Para gestão de excepções à rastreabilidade, consultar [Gestão de Excepções](./excecoes).

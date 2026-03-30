@@ -1,73 +1,73 @@
 ---
-id: catalogo-requisitos
-title: Catálogo de Requisitos Técnicos de Arquitetura Segura
-description: Requisitos específicos aplicáveis ao design e revisão de arquiteturas seguras
-tags: [requisitos, arquitetura, segurança, rastreabilidade, threat-modeling]
+id: catalogo-requisitos-arquitetura
+title: Catálogo de Requisitos de Arquitectura Segura
+description: Catálogo canónico de requisitos de segurança estruturais e de design (ARC-001 a ARC-013), organizados por nível de risco, com critérios de aceitação para revisão de arquitectura, ADRs e auditorias técnicas.
+requirement_class: dominio
+tags: [tipo:catalogo, classe:dominio, tema:arquitetura, ARC, rastreabilidade, L1, L2, L3, threat-modeling, zonas-de-confianca, ADR, auditoria]
+sidebar_position: 1
 ---
 
-# 📘 Catálogo de Requisitos Técnicos de Arquitetura Segura
+<!--template: sbdtoe-addon -->
 
-## ❓ Porquê este catálogo está neste capítulo (e não apenas no Cap. 2)
+# Catálogo de Requisitos de Arquitectura Segura
 
-Embora o Capítulo 2 contenha o **catálogo geral de requisitos aplicacionais**, alguns capítulos - como este - cobrem **domínios técnicos especializados**, com **requisitos estruturais ou estratégicos** que:
+## Âmbito: requisitos estruturais e de design
 
-- **Não se aplicam diretamente a funcionalidades ou código**
-- São **avaliados em revisões técnicas, modelos de arquitetura ou critérios de projeto**
-- Exigem rastreabilidade própria com base em **zonas de confiança, fluxos de dados ou decisões de design**
+Este catálogo cobre **requisitos de segurança que se aplicam à concepção, documentação e revisão da arquitectura do sistema** - as propriedades estruturais que devem estar garantidas antes e independentemente da implementação. Incluem-se: definição de zonas de confiança, minimização da superfície de exposição, documentação de decisões de design, integração de threat modeling no processo de arquitectura, padrões reutilizáveis aprovados e versionamento de diagramas.
 
-Este catálogo fornece os **requisitos específicos de segurança da arquitetura**, que devem ser aplicados proporcionalmente ao risco da aplicação (Cap. 1), e **complementam** o catálogo geral.
+Para o mapeamento completo de todos os catálogos de requisitos do SbD-ToE por domínio técnico, prefixo canónico e responsável, consultar [Cap. 02 - Mapeamento de Catálogos](/sbd-toe/sbd-manual/requisitos-seguranca/addon/lista-requisitos-base#mapeamento-de-catalogos).
 
----
+Os requisitos aqui definidos são avaliados em **revisões de arquitectura**, na aprovação de decisões estruturais e em auditorias técnicas - não em testes de runtime nem em pipelines de CI/CD.
 
-## 🧱 Requisitos Técnicos por Nível de Risco
-| ID          | Requisito                                                                                          | L1 | L2 | L3 |
-| ----------- | -------------------------------------------------------------------------------------------------- | -- | -- | -- |
-| **ARC-001** | A arquitetura deve identificar e documentar zonas de confiança e fronteiras de segurança           | X  | X  | X  |
-| **ARC-002** | A exposição externa de componentes deve ser minimizada e justificada                               | X  | X  | X  |
-| **ARC-003** | Deve existir uma revisão de arquitetura com foco em segurança, proporcional ao risco da aplicação  |    | X  | X  |
-| **ARC-004** | As decisões de arquitetura devem ser documentadas com responsáveis, datas e justificações          |    | X  | X  |
-| **ARC-005** | A arquitetura deve considerar threat modeling nos fluxos e nos componentes críticos                |    | X  | X  |
-| **ARC-006** | A arquitetura deve integrar controlos técnicos para isolar domínios sensíveis                      | X  | X  | X  |
-| **ARC-007** | Devem existir padrões de arquitetura segura reutilizáveis, aprovados por segurança                 |    | X  | X  |
-| **ARC-008** | Devem ser identificados e protegidos os fluxos de dados entre zonas de confiança                   | X  | X  | X  |
-| **ARC-009** | Alterações significativas na arquitetura devem desencadear nova revisão de segurança               |    | X  | X  |
-| **ARC-010** | Diagrama(s) de arquitetura devem ser versionados, revistos periodicamente e acessíveis às equipas  | X  | X  | X  |
-| **ARC-011** | A arquitetura de aplicações críticas deve implementar segmentação lógica e física entre ambientes  |    |    | X  |
-| **ARC-012** | Devem ser definidos critérios formais de aprovação da arquitetura para aplicações de risco elevado |    |    | X  |
-| **ARC-013** | Devem existir mecanismos de validação automática da topologia em CI/CD ou repositórios como código |    |    | X  |
+> **Sobre a curadoria:** Este catálogo foi consolidado a partir de práticas reconhecidas - NIST SSDF, OWASP SAMM, ISO/IEC 27001, threat modeling frameworks (STRIDE, PASTA) e práticas de arquitectura segura. Deve ser adaptado ao contexto organizacional e revisto com cada ciclo de arquitectura significativo.
 
+Para a instanciação em projecto e a nomenclatura operacional de rastreabilidade (`SEC-Lx-ARC-CODIGO`), ver [Taxonomia e Rastreabilidade](/sbd-toe/sbd-manual/requisitos-seguranca/addon/taxonomia-rastreabilidade).
 
 ---
 
-## 🧩 Notas explicativas
+## Convenções
 
-- **ARC-003**: A revisão pode ser feita com checklist, peer review ou workshop técnico.
-- **ARC-005**: O threat modeling aqui é usado como **complemento à arquitetura**, não substituto.
-- **ARC-011**: Refere-se a isolamento de ambientes (dev, staging, prod) tanto em rede como em permissões.
-- **ARC-013**: Exemplo de ferramenta: validação de diagramas `.drawio` como código, Cartography, ReGraph.
+| Símbolo | Significado |
+|---------|-------------|
+| ✔ | Requisito obrigatório para este nível |
+| - | Não aplicável ou não obrigatório a este nível |
 
----
-
-## 🎯 Aplicação prática
-
-- Estes requisitos devem ser integrados em **modelos de arquitetura de referência**, **revisões técnicas**, ou critérios de aceitação
-- Devem estar ligados à **classificação de risco da aplicação (Cap. 1)**
-- Servem como base para auditorias técnicas, conformidade, e validação de segurança em SDLC
+Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui todos os de L1.
 
 ---
 
-## 🧾 Exemplos de evidência
+## Catálogo ARC - Arquitectura Segura
 
-| Requisito   | Tipo de evidência sugerida                              |
-|-------------|----------------------------------------------------------|
-| ARC-001     | Diagrama com zonas de confiança e legendas              |
-| ARC-003     | Ata da revisão, checklist preenchido, decisões arquivadas|
-| ARC-007     | Repositório de padrões com versionamento                 |
-| ARC-013     | Job de CI com output de validação de topologia           |
+Requisitos que garantem que o sistema é concebido, documentado e revisto com controlos estruturais proporcionais ao seu nível de risco.
+
+| ID | Nome | L1 | L2 | L3 | Critério de aceitação |
+|----|------|:--:|:--:|:--:|----------------------|
+| ARC-001 | Zonas de confiança identificadas e documentadas | ✔ | ✔ | ✔ | Diagrama com zonas de confiança delimitadas, identificadas e justificadas; versionado em repositório; revisto na última revisão de arquitectura. |
+| ARC-002 | Exposição externa minimizada e justificada | ✔ | ✔ | ✔ | Inventário de componentes expostos externamente; cada exposição acompanhada de justificação técnica e controlo associado (gateway, proxy, WAF, ACL). |
+| ARC-003 | Revisão de arquitectura com foco em segurança | - | ✔ | ✔ | Registo formal de revisão (ata, checklist ou relatório AppSec) com data, participantes e decisões; proporcional ao nível de risco da aplicação. |
+| ARC-004 | Decisões de arquitectura documentadas | - | ✔ | ✔ | ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa; campos: responsável, data, alternativas consideradas e justificação. |
+| ARC-005 | Threat modeling integrado nos fluxos críticos | - | ✔ | ✔ | Resultado de threat modeling disponível com ameaças identificadas, fluxos de dados críticos cobertos e mitigações registadas; ligado ao diagrama de arquitectura. |
+| ARC-006 | Controlos técnicos de isolamento entre domínios sensíveis | ✔ | ✔ | ✔ | Evidência de isolamento activo entre domínios sensíveis: políticas de rede, firewalls lógicos ou segmentação de APIs; testável e auditável. |
+| ARC-007 | Padrões de arquitectura reutilizáveis e aprovados | - | ✔ | ✔ | Repositório de padrões aprovados com data de última revisão; evidência de uso de padrão aprovado registada em revisão de arquitectura. |
+| ARC-008 | Fluxos de dados entre zonas de confiança protegidos | ✔ | ✔ | ✔ | Diagrama de fluxo de dados (DFD) com controlos explícitos em cada fronteira de confiança; actualizado e versionado. |
+| ARC-009 | Alterações significativas desencadeiam nova revisão | - | ✔ | ✔ | Processo documentado que define o limiar de "alteração significativa"; evidência de revisão executada após a última alteração que atingiu esse limiar. |
+| ARC-010 | Diagramas de arquitectura versionados e acessíveis | ✔ | ✔ | ✔ | Diagrama no repositório com histórico de versões; acessível às equipas relevantes; revisto pelo menos anualmente ou por release significativo. |
+| ARC-011 | Segmentação lógica e física entre ambientes | - | - | ✔ | Evidência de segregação de rede, permissões e identidade entre dev, staging e prod; documentada e verificável. |
+| ARC-012 | Critérios formais de aprovação para aplicações de risco elevado | - | - | ✔ | Checklist formal de aprovação preenchido e assinado por responsável de segurança; registo de aprovação anterior ao deploy em produção. |
+| ARC-013 | Validação automática de topologia em CI/CD ou como código | - | - | ✔ | Job de CI com output de validação de topologia (ex: Cartography, diagramas-como-código, checkov para topologia); logs de execução disponíveis. |
 
 ---
 
-> 🔗 Estes requisitos devem ser lidos em conjunto com:
-> - [Capítulo 1 - Classificação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
-<!-- > - [Capítulo 2 - Requisitos de Segurança Globais](/sbd-toe/sbd-manual/requisitos-seguranca/intro) -->
-> - [Capítulo 3 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)
+## Notas explicativas
+
+- **ARC-003**: A revisão pode ser feita com checklist estruturado, peer review de arquitectura ou workshop de AppSec; o formato é proporcional à complexidade da aplicação.
+- **ARC-005**: O threat modeling neste contexto é aplicado como instrumento de revisão de arquitectura - complementar ao processo autónomo de threat modeling descrito no Cap. 03.
+- **ARC-009**: Define-se "alteração significativa" como qualquer mudança que afecte fronteiras de confiança, fluxos de dados críticos, exposição externa ou decisões de isolamento documentadas.
+- **ARC-011**: Aplica-se tanto a isolamento de rede (VLANs, namespaces, peering policies) como a isolamento de identidade (IAM policies, service accounts distintas, sem cross-env credentials).
+- **ARC-013**: Ferramentas de exemplo: validação de diagramas `.drawio` como código, Cartography para análise de grafo de infra, ou verificações de topologia em pipelines Terraform/Pulumi.
+
+---
+
+> Para critérios de validação por requisito, método e papel responsável, consultar o [Plano de Validação Arquitetural](./validacao-arquitetural).
+> Para rastreabilidade entre requisitos, decisões e evidência, consultar [Rastreabilidade Arquitetural](./rastreabilidade-arquitetural).
+> Para gestão de excepções a estes requisitos, consultar [Gestão de Excepções](./excecoes).

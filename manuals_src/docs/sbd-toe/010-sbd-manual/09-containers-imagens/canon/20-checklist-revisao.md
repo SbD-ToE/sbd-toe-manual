@@ -7,7 +7,7 @@ tags: [checklist, containers, imagens, supply chain, kubernetes, auditoria]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Revisão Periódica — Containers e Imagens
+# ✅ Checklist de Revisão Periódica - Containers e Imagens
 
 Este checklist aplica-se a todos os projetos e pipelines que **constroem, distribuem ou executam containers e imagens** no âmbito do Capítulo 09 - Containers e Imagens.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições deste capítulo**, permitindo:

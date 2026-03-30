@@ -1,5 +1,5 @@
 ---
-id: 22-quiz-terceiros
+id: quiz-terceiros
 title: Quiz de Validação - Formação para Terceiros
 sidebar_position: 22
 description: Questionário mínimo para validar conhecimento de colaboradores externos com permissões técnicas

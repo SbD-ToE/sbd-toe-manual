@@ -25,7 +25,7 @@ A aplicação utiliza uma framework legada sem suporte nativo a validação auto
 
 **Nível de risco:** L2  
 
-**Controlos substituídos:** REQ-VAL-002, REQ-VAL-006  
+**Controlos substituídos:** VAL-002, VAL-006  
 **Compensação aplicada:** Validação em proxy com schema + testes de fuzzing  
 
 **Validade da exceção:** 6 meses  
@@ -65,7 +65,7 @@ A aplicação utiliza uma framework legada sem suporte nativo a validação auto
 Contrato de licenciamento de software de armazenamento em cloud, utilizado por sistemas L2.
 
 **Ações realizadas:**
-- [x] Atualização das cláusulas contratuais para refletir novos requisitos (REQ-DAT-004, REQ-BKP-002)
+- [x] Atualização das cláusulas contratuais para refletir novos requisitos (DAT-004, BKP-002)
 - [x] Validação técnica do SBOM do agente de sincronização
 - [x] Aceitação formal de SLA de mitigação de CVEs em `<`5 dias
 - [x] Formação atualizada da PO e da equipa de IT Ops envolvida
@@ -87,7 +87,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 
 **Nível de risco:** L3  
 
-**Requisito em falta:** REQ-ACC-007  
+**Requisito em falta:** ACC-007
 **Compensação:** Limitação de acesso por VPN + análise diária dos logs  
 
 **Aprovação:** Equipa AppSec + DevSecOps + CISO  
@@ -123,7 +123,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 |--------------------------|----------------------------------------------------------------|
 | Nome da aplicação         | app-inventario                                                |
 | Nível de risco            | L2                                                             |
-| Requisitos não aplicados  | REQ-LOG-005, REQ-AUD-003                                       |
+| Requisitos não aplicados  | LOG-005, AUD-003                                               |
 | Justificação técnica      | Sem infra para retenção prolongada; compensado com snapshots  |
 | Compensação aplicada      | Alertas via SIEM + backup externo                             |
 | Owner e aprovação         | nuno.ferreira@empresa + CISO                                  |

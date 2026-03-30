@@ -1,0 +1,160 @@
+
+[WARNING] Docusaurus found broken anchors!
+
+Please check the pages of your site in the list below, and make sure you don't reference any anchor that does not exist.
+Note: it's possible to ignore broken anchors with the 'onBrokenAnchors' Docusaurus configuration, and let the build pass.
+
+Exhaustive list of all broken anchors found:
+- Broken anchor on source page path = /faq:
+   -> linking to /sbd-toe/cross-check-normativo/dora/intro#gest%C3%A3o-de-exce%C3%A7%C3%B5es-e-desvios-artigos-5-18-19%E2%80%9320-26%E2%80%9328-dora
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/appsec-engineer:
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-02---revis%C3%A3o-de-criticidade-em-altera%C3%A7%C3%B5es-relevantes
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-03---revis%C3%A3o-peri%C3%B3dica-de-criticidade-cad%C3%AAncia-fixa-l1-anual-l2-semestral-l3-trimestral
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-06---verifica%C3%A7%C3%A3o-de-cobertura-de-amea%C3%A7as-vs-controlos
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-04---cat%C3%A1logo-de-requisitos-de-seguran%C3%A7a-do-projeto
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-04---documenta%C3%A7%C3%A3o-e-aprova%C3%A7%C3%A3o-de-riscos-residuais
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-03---revis%C3%A3o-de-designs-de-arquitetura
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-02---valida%C3%A7%C3%A3o-e-justifica%C3%A7%C3%A3o-de-depend%C3%AAncias-externas
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-03---registro-e-aprova%C3%A7%C3%A3o-de-exce%C3%A7%C3%B5es-t%C3%A9cnicas
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-04---revis%C3%A3o-e-publica%C3%A7%C3%A3o-trimestral-de-guidelines
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-05---perfis-de-valida%C3%A7%C3%A3o-l1l3-por-aplica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-06---dete%C3%A7%C3%A3o-autom%C3%A1tica-de-padr%C3%B5es-perigosos-no-pipeline
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-07---gates-por-risco
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-08---cobertura-ampliada
+   -> linking to /sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-03---assinatura-digital-de-imagens-e-proveni%C3%AAncia-verific%C3%A1vel
+   -> linking to /sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-05---monitoriza%C3%A7%C3%A3o-de-comportamento-de-containers-em-execu%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-01---estrat%C3%A9gia-de-testes-de-seguran%C3%A7a-por-aplica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-01---gates-autom%C3%A1ticos-no-deploy
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-04---gates-de-deploy-condicionais-por-risco
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-02---defini%C3%A7%C3%A3o-de-eventos-e-m%C3%A9tricas-cr%C3%ADticas-de-seguran%C3%A7a
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-04---classifica%C3%A7%C3%A3o-e-mapeamento-de-dom%C3%ADnios-de-monitoriza%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-05---correla%C3%A7%C3%A3o-de-eventos-entre-m%C3%BAltiplas-fontes
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---valida%C3%A7%C3%A3o-e-afina%C3%A7%C3%A3o-de-alertas
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-09---controlos-de-monitoriza%C3%A7%C3%A3o-proporcionais-ao-risco
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-03---code-clinics-estruturadas
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-07---manuten%C3%A7%C3%A3o-e-atualiza%C3%A7%C3%A3o-de-trilhos-formativos
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-08---trilhos-formativos-proporcionais-ao-n%C3%ADvel-de-risco
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-09---quizzes-de-valida%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-10---defini%C3%A7%C3%A3o-de-dod-por-formato-de-entrega
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-02---dashboard-organizacional-de-pr%C3%A1ticas-sbd
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-04---revis%C3%A3o-peri%C3%B3dica-de-exce%C3%A7%C3%B5es-e-compensa%C3%A7%C3%B5es
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-06---reposit%C3%B3rio-de-conformidade-por-aplica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07---valida%C3%A7%C3%B5es-peri%C3%B3dicas-de-conformidade
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-10---checklist-centralizado-de-conformidade-sbd-toe
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---monitoriza%C3%A7%C3%A3o-cont%C3%ADnua-de-fornecedores-cr%C3%ADticos
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/arquitetos-software:
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revis%C3%A3o-em-integra%C3%A7%C3%A3o-cr%C3%ADtica-ou-mudan%C3%A7a-relevante
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---cria%C3%A7%C3%A3o-de-modelo-de-amea%C3%A7a-inicial
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-02---valida%C3%A7%C3%A3o-de-arquitetura-atrav%C3%A9s-de-threat-modeling
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-03---atualiza%C3%A7%C3%A3o-em-altera%C3%A7%C3%B5es-significativas
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-06---aplica%C3%A7%C3%A3o-de-linddun-para-privacidade
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-01---defini%C3%A7%C3%A3o-de-princ%C3%ADpios-de-arquitetura-segura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-02---produ%C3%A7%C3%A3o-de-ficha-de-arquitetura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-07---registro-de-decis%C3%B5es-de-arquitetura-adr
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08---revis%C3%A3o-de-trust-boundaries-e-integra%C3%A7%C3%B5es
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-09---sincroniza%C3%A7%C3%A3o-entre-modelo-de-amea%C3%A7as-e-decis%C3%B5es-de-arquitetura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---triggers-de-revis%C3%A3o-de-arquitetura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-11---cat%C3%A1logo-de-padr%C3%B5es-de-arquitetura-segura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-12---controlos-t%C3%A9cnicos-de-isolamento
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14---threat-modeling-no-design-inicial-l2l3
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/auditores:
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12---documenta%C3%A7%C3%A3o-de-conformidade-regulat%C3%B3ria
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-08---kpis-de-governa%C3%A7%C3%A3o-da-classifica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-09---pol%C3%ADticas-organizacionais-formais
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gest%C3%A3o-de-exce%C3%A7%C3%B5es
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-06---reposit%C3%B3rio-de-conformidade-por-aplica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07---valida%C3%A7%C3%B5es-peri%C3%B3dicas-de-conformidade
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-10---checklist-centralizado-de-conformidade-sbd-toe
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/developer:
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-04---atualiza%C3%A7%C3%A3o-de-arquitetura-em-altera%C3%A7%C3%B5es-cr%C3%ADticas
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-03---scanners-integrados
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-01---versionamento-sem%C3%A2ntico--changelog-de-seguran%C3%A7a
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-01---logs-estruturados--centraliza%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---threat-modeling-por-feature%C3%A9picorefactor
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---exce%C3%A7%C3%B5es-de-seguran%C3%A7a--workflow-de-aprova%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-06---reposit%C3%B3rio-de-conformidade-por-aplica%C3%A7%C3%A3o
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/devops-sre:
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-09---classifica%C3%A7%C3%A3o-de-artefactos-t%C3%A9cnicos
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05---integra%C3%A7%C3%A3o-com-cicd
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-07---automa%C3%A7%C3%A3o-e-reutiliza%C3%A7%C3%A3o-de-modelos
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-05---valida%C3%A7%C3%A3o-da-arquitetura-em-cicd
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-13---segrega%C3%A7%C3%A3o-de-ambientes-devqastage---prod
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-02---design-seguro-dos-pipelines
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-02---deploy-apenas-de-artefactos-assinados-e-versionados
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-05---rollback-r%C3%A1pido-e-testado-periodicamente
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-06---monitoriza%C3%A7%C3%A3o-p%C3%B3s-deploy-para-dete%C3%A7%C3%A3o-imediata-de-anomalias
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-08---feature-flags-com-metadados-owner-e-expira%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---gest%C3%A3o-segura-de-segredos-zero-embebidos-em-artefactos
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-10---deploy-progressivo-canaryblue-green-com-valida%C3%A7%C3%A3o-autom%C3%A1tica
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-11---rollback-documentado-por-tipo-de-altera%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---classifica%C3%A7%C3%A3o-e-mapeamento-de-dom%C3%ADnios-de-monitoriza%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-08---integra%C3%A7%C3%A3o-com-siem-parsing-normaliza%C3%A7%C3%A3o-enriquecimento
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/fornecedores-terceiros:
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---forma%C3%A7%C3%A3o-m%C3%ADnima-obrigat%C3%B3ria-para-terceiros
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---trilho-formativo-obrigat%C3%B3rio-para-contractors
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---valida%C3%A7%C3%A3o-cont%C3%ADnua-de-fornecedores
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---prepara%C3%A7%C3%A3o-t%C3%A9cnica-de-contractors
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---offboarding-seguro-de-contractorsfornecedores
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-13---reavalia%C3%A7%C3%A3o-peri%C3%B3dica-de-fornecedores
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---monitoriza%C3%A7%C3%A3o-cont%C3%ADnua-de-fornecedores-cr%C3%ADticos
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/gestao-executiva:
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-09---pol%C3%ADticas-organizacionais-formais
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-07---publica%C3%A7%C3%A3o-de-pol%C3%ADtica-de-aplica%C3%A7%C3%A3o-de-requisitos
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---aprova%C3%A7%C3%A3o-formal-de-arquitetura-para-l3
+   -> linking to /sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-07---crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-de-seguran%C3%A7a-por-release
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-07---rastreabilidade-ponta-a-ponta
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---simula%C3%A7%C3%B5es-de-incidentes-war-room
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---kpis-de-capacita%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---forma%C3%A7%C3%A3o-m%C3%ADnima-obrigat%C3%B3ria-para-terceiros
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---trilho-formativo-obrigat%C3%B3rio-para-contractors
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---kpis-de-governa%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---designa%C3%A7%C3%A3o-formal-de-security-champion
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-08---consolida%C3%A7%C3%A3o-e-reporte-de-kpis
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-09---modelo-de-governa%C3%A7%C3%A3o-formal-com-al%C3%A7adas
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/grc-compliance:
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-04---registro-de-risco-residual
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-05---aceita%C3%A7%C3%B5es-com-ttl-e-alerta-de-re-aprova%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-08---kpis-de-governa%C3%A7%C3%A3o-da-classifica%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-07---publica%C3%A7%C3%A3o-de-pol%C3%ADtica-de-aplica%C3%A7%C3%A3o-de-requisitos
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta
+   -> linking to /sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gest%C3%A3o-de-exce%C3%A7%C3%B5es
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-11---mttd-e-mttr-de-incidentes
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12---documenta%C3%A7%C3%A3o-de-conformidade-regulat%C3%B3ria
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-03---kpis-de-capacita%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---simula%C3%A7%C3%B5es-de-incidentes-war-room
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---kpis-de-capacita%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---forma%C3%A7%C3%A3o-m%C3%ADnima-obrigat%C3%B3ria-para-terceiros
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---valida%C3%A7%C3%A3o-cont%C3%ADnua-de-fornecedores
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07---valida%C3%A7%C3%B5es-peri%C3%B3dicas-de-conformidade
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/operacoes:
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-03---alertas-cr%C3%ADticos-com-slas-definidos
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-10---integra%C3%A7%C3%A3o-de-alertas-com-playbooks-de-resposta-a-incidentes
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-05---correla%C3%A7%C3%A3o-de-eventos-entre-m%C3%BAltiplas-fontes
+   -> linking to /sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---valida%C3%A7%C3%A3o-e-afina%C3%A7%C3%A3o-de-alertas
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/product-owner:
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-01---sele%C3%A7%C3%A3o-de-requisitos-aplic%C3%A1veis-ao-projeto
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-03---crit%C3%A9rios-de-aceita%C3%A7%C3%A3o-de-seguran%C3%A7a-claros
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05---prioriza%C3%A7%C3%A3o-de-amea%C3%A7as-por-impacto-no-neg%C3%B3cio
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-06---valida%C3%A7%C3%A3o-de-impacto-de-requisitos-de-arquitetura
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gest%C3%A3o-de-exce%C3%A7%C3%B5es-de-arquitetura
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/qa:
+   -> linking to /sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08---valida%C3%A7%C3%A3o-de-arquitetura-antes-de-go-live
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-03---valida%C3%A7%C3%A3o-em-staging-pr%C3%A9-produ%C3%A7%C3%A3o
+   -> linking to /sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-04---gates-de-deploy-condicionais-por-risco
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-05---exerc%C3%ADcios-pr%C3%A1ticos-estruturados-labs-ctfs-simula%C3%A7%C3%B5es
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/scrum-master:
+   -> linking to /sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revis%C3%A3o-em-integra%C3%A7%C3%A3o-cr%C3%ADtica-ou-mudan%C3%A7a-relevante
+   -> linking to /sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---cria%C3%A7%C3%A3o-de-modelo-de-amea%C3%A7a-inicial
+   -> linking to /sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-01---revis%C3%A3o-de-pr-com-checklist-de-seguran%C3%A7a
+- Broken anchor on source page path = /sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/security-champion:
+   -> linking to /sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---threat-modeling-por-feature%C3%A9picorefactor
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---designa%C3%A7%C3%A3o-formal-de-security-champion
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---prepara%C3%A7%C3%A3o-t%C3%A9cnica-de-contractors
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---offboarding-seguro-de-contractorsfornecedores
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---revis%C3%A3o-trimestral-de-acesso-de-contractors
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---feedback-estruturado-p%C3%B3s-projeto-de-contractors
+- Broken anchor on source page path = /sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding:
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17
+   -> linking to /sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-20

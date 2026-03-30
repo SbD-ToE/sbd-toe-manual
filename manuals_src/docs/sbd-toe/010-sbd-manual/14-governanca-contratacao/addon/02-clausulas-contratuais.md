@@ -100,7 +100,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 
 Cada cláusula deve incluir:
 
-- Referência ao **requisito aplicável** (ex: REQ-LOG-002, ARC-005);
+- Referência ao **requisito aplicável** (ex: LOG-002, ARC-005);
 - Indicação do **nível de risco** (L1–L3);
 - Forma de validação esperada (evidência técnica, auditoria, testes);
 - Penalizações ou impacto contratual em caso de incumprimento;
@@ -136,6 +136,6 @@ Cada cláusula deve incluir:
 | Capítulo 01 - Gestão de Risco        | Define a proporcionalidade por nível L1–L3         |
 | Capítulo 02 - Requisitos de Segurança| Catálogo e requisitos aplicáveis por risco         |
 | addon/03-modelo-validacao-fornecedores.md | Requisitos de onboarding contratual               |
-| canon/20-checklist-revisao.md        | Verifica a formalização e aplicação contratual      |
+| addon/00-catalogo-requisitos.md      | GOV-006/GOV-007: critérios de aceitação contratuais |
 
 ---

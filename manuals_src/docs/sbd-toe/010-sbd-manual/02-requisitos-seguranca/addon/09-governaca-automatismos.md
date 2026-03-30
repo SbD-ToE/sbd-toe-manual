@@ -112,9 +112,9 @@ Quando relevante, deve existir referência explícita de que **foi usado automat
 
 Este anexo está alinhado com as seguintes referências:
 
-- **NIST SP 800-218A** — Secure Software Development Framework Profile for GenAI  
+- **NIST SP 800-218A** - Secure Software Development Framework Profile for GenAI  
 - **NIST AI Risk Management Framework 1.0**  
-- **ISO/IEC 42001:2023** — AI Management System  
+- **ISO/IEC 42001:2023** - AI Management System  
 - **OpenSSF – Secure Use of AI Code Assistants**
 
 Estas referências **não criam novos requisitos aplicacionais**, mas reforçam princípios de governação, responsabilização e validação já existentes no SbD-ToE.
@@ -123,10 +123,10 @@ Estas referências **não criam novos requisitos aplicacionais**, mas reforçam 
 
 ## 🧭 Relação com outros capítulos
 
-- Capítulo 1 — Classificação de risco: o uso de automatismos **não altera L1–L3**;
-- Capítulo 2 — Requisitos de Segurança: requisitos mantêm-se inalterados;
-- Capítulo 7 — CI/CD Seguro: gates automáticos tornam-se críticos;
-- Capítulo 14 — Governação e Exceções: políticas, formação e controlo formal.
+- Capítulo 1 - Classificação de risco: o uso de automatismos **não altera L1–L3**;
+- Capítulo 2 - Requisitos de Segurança: requisitos mantêm-se inalterados;
+- Capítulo 7 - CI/CD Seguro: gates automáticos tornam-se críticos;
+- Capítulo 14 - Governação e Exceções: políticas, formação e controlo formal.
 
 ---
 
@@ -137,5 +137,5 @@ O SbD-ToE **compreende e aceita a IA como ferramenta poderosa**, mas rejeita qua
 - a automação substitua responsabilidade;
 - a conveniência comprometa evidência.
 
-Este anexo assegura que a adoção de automatismos **reforça** — e nunca fragiliza — a aplicação rigorosa dos requisitos de segurança definidos neste manual.
+Este anexo assegura que a adoção de automatismos **reforça** - e nunca fragiliza - a aplicação rigorosa dos requisitos de segurança definidos neste manual.
 

@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Certificação ENISA/CSA (EUCC, EUCS, EU5G) — Nota de Enquadramento
+title: Certificação ENISA/CSA (EUCC, EUCS, EU5G) - Nota de Enquadramento
 description: Quando usar e como mapear ao SbD-ToE (evidências, decisão e reaproveitamento)
 tags: [certificacao, enisa, csa, eucc, eucs, eu5g, procurement]
 sidebar_position: 9
@@ -8,7 +8,7 @@ sidebar_position: 9
 
 # Certificação ENISA/CSA: quando usar e como mapear ao SbD‑ToE
 
-> Veja também: [CRA](/sbd-toe/cross-check-normativo/cra), [DORA](/sbd-toe/cross-check-normativo/dora), [NIS2](/sbd-toe/cross-check-normativo/nis2) e a [Nota de Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/convergencia-dora-nis2).
+> Veja também: [CRA](/sbd-toe/cross-check-normativo/cra/intro), [DORA](/sbd-toe/cross-check-normativo/dora/intro), [NIS2](/sbd-toe/cross-check-normativo/nis2/intro) e a [Nota de Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/dora/convergencia-dora).
 
 ## Âmbito
 
@@ -62,14 +62,14 @@ Notas:
 
 ## Esquemas em foco
 
-### EUCC — ICT products (base Common Criteria)
+### EUCC - ICT products (base Common Criteria)
 Objetivo: evidenciar que um produto TIC cumpre requisitos e foi avaliado segundo uma **Target of Evaluation** e **Security Functional/Assurance Requirements**. 
 Nível de garantia impacta a **profundidade de testes** e a **independência**.
 
-### EUCS — Cloud services
+### EUCS - Cloud services
 Objetivo: evidenciar controlos de segurança e governança de serviços Cloud. Abrange **gestão de risco, IAM, cifragem, operação, continuidade**, etc.
 
-### EU5G — Redes 5G
+### EU5G - Redes 5G
 Objetivo: evidenciar requisitos de segurança para fornecedores/operadores na cadeia 5G (equipamento, software, gestão, supply chain).
 
 ## Como se relaciona com DORA/NIS2/CRA
@@ -99,15 +99,15 @@ Objetivo: evidenciar requisitos de segurança para fornecedores/operadores na ca
 
 | Domínio SbD‑ToE | O que demonstra | Relevância CSA |
 |-----------------|-----------------|----------------|
-| Cap. 02 — Requisitos | Políticas e controlos mínimos por nível | Critérios de segurança documentados |
-| Cap. 04 — Arquitetura | Design seguro, IAM, cifragem, gestão de chaves | Controlos funcionais e de desenho |
-| Cap. 05 — SBOM/SCA | Inventário de componentes, gestão de CVEs | Vulnerability management e supply chain |
-| Cap. 06–07 — SDLC/CI‑CD | Gates, revisão, rastreabilidade, SoD | Secure lifecycle e integridade da build |
-| Cap. 08–09 — IaC/Containers | Configurações seguras e runtime | Endurecimento e consistência |
-| Cap. 10–11 — Testes/Release | SAST/DAST/fuzzing; gate “no‑critical” | Eficácia de controlos antes do release |
-| Cap. 12 — Operações | Monitorização, resposta, continuidade | Resiliência operacional |
-| Cap. 13 — Formação | Competências e awareness | Capacidade organizacional |
-| Cap. 14 — Governação | RACI, fornecedores, auditoria | Gestão e rastreabilidade |
+| Cap. 02 - Requisitos | Políticas e controlos mínimos por nível | Critérios de segurança documentados |
+| Cap. 04 - Arquitetura | Design seguro, IAM, cifragem, gestão de chaves | Controlos funcionais e de desenho |
+| Cap. 05 - SBOM/SCA | Inventário de componentes, gestão de CVEs | Vulnerability management e supply chain |
+| Cap. 06–07 - SDLC/CI‑CD | Gates, revisão, rastreabilidade, SoD | Secure lifecycle e integridade da build |
+| Cap. 08–09 - IaC/Containers | Configurações seguras e runtime | Endurecimento e consistência |
+| Cap. 10–11 - Testes/Release | SAST/DAST/fuzzing; gate “no‑critical” | Eficácia de controlos antes do release |
+| Cap. 12 - Operações | Monitorização, resposta, continuidade | Resiliência operacional |
+| Cap. 13 - Formação | Competências e awareness | Capacidade organizacional |
+| Cap. 14 - Governação | RACI, fornecedores, auditoria | Gestão e rastreabilidade |
 
 Sugere-se criar um **dossiê de certificação** com referências cruzadas (control matrix) entre requisitos do esquema (EUCC/EUCS/EU5G) e artefactos SbD‑ToE.
 
@@ -143,7 +143,7 @@ Sugere-se criar um **dossiê de certificação** com referências cruzadas (cont
 ## Referências
 
 - **Cybersecurity Act**: Regulamento (UE) 2019/881 (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881))
-- ENISA — Páginas dos esquemas de certificação (EUCC, EUCS, EU5G)
+- ENISA - Páginas dos esquemas de certificação (EUCC, EUCS, EU5G)
 - SbD‑ToE Capítulos 01–14; CRA/NIS2/DORA cross‑checks
 
 **Versão:** 1.0  

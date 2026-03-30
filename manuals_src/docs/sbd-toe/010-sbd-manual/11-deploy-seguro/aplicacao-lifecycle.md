@@ -140,7 +140,7 @@ Como **QA/Testes**, quero **validar *releases* em *staging* com ambiente segrega
 
 ### US-03 - *Gates* de aprovação no *deploy*
 
-Sem *gates*, a promoção a produção torna-se uma aposta — e a segurança não pode ser um jogo de sorte.
+Sem *gates*, a promoção a produção torna-se uma aposta - e a segurança não pode ser um jogo de sorte.
 
 **Contexto.** *Releases* sem *gates* podem promover código inseguro.
 

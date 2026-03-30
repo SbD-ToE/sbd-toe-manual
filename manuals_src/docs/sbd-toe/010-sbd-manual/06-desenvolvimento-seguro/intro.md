@@ -16,16 +16,16 @@ Os capítulos operacionais traduzem as prescrições fundacionais do SbD-ToE em 
 # Desenvolvimento Seguro
 
 O desenvolvimento é o **coração do ciclo de vida do software**.  
-É neste ponto que o valor de negócio se materializa em código executável — e é também aqui que decisões técnicas aparentemente menores podem introduzir vulnerabilidades com impacto duradouro.
+É neste ponto que o valor de negócio se materializa em código executável - e é também aqui que decisões técnicas aparentemente menores podem introduzir vulnerabilidades com impacto duradouro.
 
 Por esse motivo, este capítulo assume um papel **estrutural** no manual: sem práticas consistentes de desenvolvimento seguro, todos os controlos posteriores (CI/CD, testes, IaC, containers ou operações) passam a atuar apenas de forma corretiva ou paliativa.
 
 A evidência empírica é clara. Relatórios como o **Verizon DBIR**, bem como múltiplos estudos académicos e industriais, mostram de forma consistente que uma parte significativa das falhas exploradas tem origem em **más práticas de programação, validação insuficiente ou decisões técnicas não controladas** durante o desenvolvimento.
 
 A boa notícia é que estas falhas são, em grande medida, **preveníveis**.  
-Através de práticas sistemáticas e auditáveis — como guidelines claras, validações automatizadas, revisões formais, governação de exceções e o uso responsável de ferramentas de apoio ao desenvolvimento — é possível reduzir drasticamente a superfície de erro introduzida nesta fase.
+Através de práticas sistemáticas e auditáveis - como guidelines claras, validações automatizadas, revisões formais, governação de exceções e o uso responsável de ferramentas de apoio ao desenvolvimento - é possível reduzir drasticamente a superfície de erro introduzida nesta fase.
 
-Num contexto de utilização crescente de ferramentas avançadas de apoio ao desenvolvimento, este capítulo assume explicitamente que **a origem do código — humana ou automatizada — é irrelevante do ponto de vista do risco**, sendo sempre necessária validação técnica adequada, evidência verificável e responsabilização clara pelas decisões de incorporação.
+Num contexto de utilização crescente de ferramentas avançadas de apoio ao desenvolvimento, este capítulo assume explicitamente que **a origem do código - humana ou automatizada - é irrelevante do ponto de vista do risco**, sendo sempre necessária validação técnica adequada, evidência verificável e responsabilização clara pelas decisões de incorporação.
 
 O objetivo deste capítulo não é acrescentar burocracia, mas **estabelecer um ambiente onde cada decisão de desenvolvimento deixa evidência objetiva de segurança aplicada**, proporcional ao risco e rastreável ao longo do tempo.
 

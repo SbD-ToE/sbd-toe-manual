@@ -1,94 +1,57 @@
 ---
 id: excecoes-e-justificacoes
-title: Justificação Formal de Exceções
+title: Excepções em Desenvolvimento Seguro
 sidebar_position: 5
-description: Mecanismos formais para registar, aprovar e controlar exceções às regras de segurança durante o desenvolvimento
-tags: [exceções, validação, rastreabilidade, segurança, risco]
+description: Especificidades da gestão de excepções no contexto de desenvolvimento seguro - SAST, linters e revisão de código
+tags: [exceções, validação, rastreabilidade, segurança, desenvolvimento, sast]
 ---
 
-# 📝 Justificação Formal de Exceções
+# Excepções em Desenvolvimento Seguro
 
-> 💡 **Nota prática**:  
-> Em qualquer equipa ou projeto, haverá situações onde **nem todas as práticas recomendadas podem ser cumpridas** - por motivos técnicos, contextuais ou de legado.  
-> Ferramentas como **Kiuwan**, **SonarQube**, **Xygeni**, **Checkmarx** ou **Semgrep** já permitem registar exceções diretamente no relatório de findings, usando mecanismos como `mute`, `waive`, `false positive accepted`, ou comentários inline com anotação.  
-> Estas marcações são úteis, mas **não dispensam uma política clara de aprovação, justificação e rastreabilidade** - que deve ser transversal ao pipeline e ao repositório.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
-## 📌 Objetivos
+## Âmbito
 
-- Evitar a aplicação informal ou silenciosa de práticas inseguras.
-- Fornecer uma estrutura clara para aprovar, justificar e mitigar exceções.
-- Garantir que exceções não se tornam permanentes ou invisíveis.
-- Rastrear decisões de risco e assegurar responsabilização.
-- Integrar as exceções nos fluxos de revisão, CI/CD e auditoria.
----
-
-## 👥 Quem deve aplicar
-
-- **Equipa de desenvolvimento**: quando identifica a necessidade de exceção.
-- **Responsáveis técnicos (TLs, arquitetos)**: ao rever a proposta.
-- **Equipa de segurança / AppSec**: responsável pela aprovação formal.
+Excepções a práticas e controlos identificados por ferramentas SAST, linters ou revisão de código durante o desenvolvimento.
 
 ---
 
-## ⏱️ Quando aplicar
+## Triggers específicos deste domínio
 
-- Quando uma prática obrigatória não pode ser seguida por motivos justificados.
-- Antes da aceitação de código com potenciais desvios críticos.
-- Sempre que um PR introduz uma violação conhecida das guidelines.
-- Periodicamente, para rever exceções já aceites.
-
----
-
-## 🧱 Requisitos mínimos
-
-1. **Documentar a exceção num registo rastreável**
-   - Inclui descrição, motivo, impacto e risco identificado.
-
-2. **Justificar tecnicamente com base em contexto e restrições**
-   - Ex: limitações de framework, retrocompatibilidade, dependência externa.
-
-3. **Propor mitigação proporcional**
-   - Ex: testes adicionais, monitorização, plano de refatoração.
-
-4. **Submeter para aprovação formal**
-   - Deve ser avaliado por segurança ou owner técnico autorizado.
-
-5. **Definir validade temporal ou condição de revisão**
-   - A exceção não deve ser indefinida sem reavaliação.
+- finding de ferramenta SAST classificado como falso positivo com evidência técnica demonstrável;
+- prática obrigatória incompatível com constraint de framework ou biblioteca externa sem alternativa viável;
+- retrocompatibilidade com componente que não pode ser modificado no âmbito do projecto;
+- desvio temporário aceite em PR com plano de resolução datado e registado.
 
 ---
 
-## ✅ Como validar
+## Mecanismos de registo em ferramentas SAST
 
-- PR com link para o registo de exceção (issue, ficheiro, anotação).
-- Aprovação explícita por parte do revisor técnico ou AppSec.
-- Presença de comentário `@sec:justificado` no código afetado.
-- Registo incluído em artefactos de release ou auditoria.
+As ferramentas SAST permitem marcar findings directamente no relatório - `mute`, `waive`, `false positive accepted`, anotação inline. Estas marcações são válidas como mecanismo de registo técnico, mas **não substituem a aprovação formal** nem a cadeia de autoridade exigida pelo processo canónico.
 
----
-
-## 🧾 Como evidenciar
-
-- Ficheiro `excecoes-aprovadas.yml` versionado no repositório.
-- Issue/documento de exceção referenciado no PR ou merge commit.
-- Anotação explícita no código com referência a exceção aprovada.
-- Relatórios de segurança com mapeamento de exceções pendentes/revistas.
+Ferramentas de referência: Kiuwan, SonarQube, Xygeni, Checkmarx, Semgrep.
 
 ---
 
-## 🔄 Ligação a outras práticas
+## Rastreabilidade no repositório
 
-| Tema                                    | Ficheiro associado               |
-|-----------------------------------------|----------------------------------|
-| Guidelines e práticas obrigatórias      | `addon/01-boas-praticas-codigo.md` |
-| Validação via linters                   | `addon/02-linters-validacoes.md` |
-| Validação de dependências               | `addon/03-seguranca-dependencias.md` |
-| Revisão de código e bloqueios em PRs    | `addon/08-validacoes-codigo.md` |
-| Evidência e tagging                     | `addon/09-anotacoes-evidencia.md` |
+Além do registo no sistema de tracking, a excepção deve ser visível no repositório:
+
+- **Ficheiro versionado:** `excecoes-aprovadas.yml` com referência ao finding, justificação, aprovador e validade;
+- **Anotação inline:** comentário `@sec:justificado: <ID-excepção>` no código afectado;
+- **PR / merge commit:** link explícito ao registo de excepção no corpo do PR ou na mensagem de commit.
+
+O registo no repositório complementa o registo no sistema de tracking e garante rastreabilidade directa ao código. Não o substitui.
 
 ---
 
-> 📌 A gestão formal de exceções **não é um desvio da segurança**, mas uma forma madura de lidar com restrições reais.  
-> A ausência de registo e justificação transforma exceções técnicas em falhas organizacionais.
+## Referências cruzadas
+
+| Documento | Relação |
+|---|---|
+| `addon/01-boas-praticas-codigo.md` | Práticas que podem ter excepções associadas |
+| `addon/02-linters-validacoes.md` | Ferramentas que geram findings candidatos a excepção |
+| `addon/08-validacoes-codigo.md` | Revisão de código e bloqueios em PRs |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

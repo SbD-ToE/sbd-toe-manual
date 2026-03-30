@@ -1,9 +1,12 @@
 ---
 id: decisao-evidencia-arquitetural
 title: Decisão e Evidência Arquitetural
-description: Critérios de decisão, validação e evidência mínima para arquitetura segura
-tags: [arquitetura, decisao, evidencia, adr, baseline]
+description: Critérios de decisão, validação e evidência mínima para arquitetura segura, incluindo o modelo de baseline arquitetural e condições de invalidação
+tags: [tipo:addon, tema:arquitetura, decisao, evidencia, ADR, baseline, rastreabilidade]
+sidebar_position: 9
 ---
+
+<!--template: sbdtoe-addon -->
 
 # 🛠️ Decisão e Evidência Arquitetural
 

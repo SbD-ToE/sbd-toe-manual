@@ -117,7 +117,7 @@ Como **Developer**, quero aplicar as guidelines de código seguro aprovadas, par
 | Planeamento | Definição de stack | **Arquitetos de Software** + **Developer**    | Antes do 1.º sprint |
 
 **Ligações úteis.**  
-[Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro)
+[Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)
 
 ---
 
@@ -200,7 +200,7 @@ Como **AppSec Engineer**, quero validar e justificar dependências externas, par
 | Desenvolvimento | Inclusão dependência | **Developer** + **AppSec Engineer** | Antes do merge |
 
 **Nota - cruza com outras práticas**  
-Esta user story cruza com práticas como [Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca) e, de certa forma, permite a monitorização de *drift* como indicado em [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes).
+Esta user story cruza com práticas como [Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) e, de certa forma, permite a monitorização de *drift* como indicado em [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro).
 
 ---
 
@@ -243,14 +243,14 @@ Como **DevOps / SRE**, quero integrar linters e SAST no pipeline, para detetar f
 | CI/CD| Execução pipeline  | **DevOps / SRE**  | Cada build |
 
 **Ligações úteis.**  
-[CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro)
+[CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
 ---
 
 ### US-05 - Gestão de Exceções Técnicas
 
 **Contexto.**  
-Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas — mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
+Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas - mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
 
 :::userstory
 **História.**   
@@ -288,7 +288,7 @@ Como **AppSec Engineer**, quero registar e aprovar exceções técnicas, para ga
 | Release | Exceção solicitada | **AppSec Engineer** + **Product Owner (PO)** | Antes do go-live |
 
 **Ligações úteis.**  
-[Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca)
+[Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
 
@@ -333,7 +333,7 @@ Como **Developer**, quero usar IA generativa com revisão obrigatória e constra
 | Desenvolvimento | Uso GenIA  | **Developer** + **Quality Assurance (QA)** | Antes do merge |
 
 **Ligações úteis.**  
-[Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro)
+[Desenvolvimento Seguro](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)
 
 ---
 
@@ -421,7 +421,7 @@ Como **Developer**, quero anotar validações de segurança com `@sec:*`, para g
 ### US-09 - Gate de Segurança Pré-release
 
 **Contexto.**  
-Antes de cada *release* deve existir um ponto de controlo objetivo que consolide todas as evidências de segurança — relatórios SAST, SBOM, exceções, checklists e aprovações.
+Antes de cada *release* deve existir um ponto de controlo objetivo que consolide todas as evidências de segurança - relatórios SAST, SBOM, exceções, checklists e aprovações.
 
 :::userstory
 **História.**  
@@ -712,4 +712,4 @@ As *user stories* deste capítulo operacionalizam as prescrições normativas, a
 A integração destas ações no backlog e no pipeline transforma a segurança de software em disciplina diária e auditável.
 
 Em síntese: o capítulo demonstra que **desenvolvimento seguro é a fundação sobre a qual o resto do ciclo de vida assenta**.  
-Sem ele, nenhuma prática subsequente — seja CI/CD, IaC ou runtime — consegue oferecer confiança total.
+Sem ele, nenhuma prática subsequente - seja CI/CD, IaC ou runtime - consegue oferecer confiança total.

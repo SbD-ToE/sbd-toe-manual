@@ -84,7 +84,7 @@ flowchart TD
 
 | Área                    | Pergunta                                                   | Obrigatório (L2/L3) |
 | ----------------------- | ---------------------------------------------------------- | ------------------- |
-| Vulnerabilidades        | Existe política formal de patching com SLA < 7 dias?       | Sim (L2+)           |
+| Vulnerabilidades        | Existe política formal de patching com SLA &lt; 7 dias?       | Sim (L2+)           |
 | Acessos privilegiados   | MFA é usado para administração remota de sistemas?         | Sim (L2+)           |
 | Desenvolvimento seguro  | Adotam ASVS ou práticas equivalentes?                      | Recomendado         |
 | Incidentes de segurança | Existe canal 24/7 e plano formal de resposta a incidentes? | Sim (L3)            |

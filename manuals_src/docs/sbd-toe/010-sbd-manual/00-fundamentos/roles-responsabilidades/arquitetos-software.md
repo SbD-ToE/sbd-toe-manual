@@ -37,37 +37,37 @@ Concretizam:
 Rever **classificação e requisitos** sempre que ocorra integração crítica ou mudança estrutural relevante.
 
 **User Stories:**
-- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02--revisão-em-integração-crítica-ou-mudança-relevante) — Atualizar controlos e rastreabilidade
+- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade
 
 ### Cap. 03 - Threat Modeling
 Criar **modelo de ameaça inicial** com DFDs e STRIDE/LINDDUN, validar arquitetura identificando ameaças críticas antes do design, atualizar modelo em alterações significativas, aplicar LINDDUN quando há tratamento de dados pessoais.
 
 **User Stories:**
-- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01--criação-de-modelo-de-ameaça-inicial) — Riscos visíveis desde o início
-- [US-02: Validação de arquitetura via threat modeling](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-02--validação-de-arquitetura-através-de-threat-modeling) — Identificar ameaças antes do design
-- [US-03: Atualização em alterações significativas](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-03--atualização-em-alterações-significativas) — Manter modelo válido
-- [US-06: Aplicação de LINDDUN para privacidade](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-06--aplicação-de-linddun-para-privacidade) — Cobertura de ameaças GDPR
+- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - Riscos visíveis desde o início
+- [US-02: Validação de arquitetura via threat modeling](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-02---validação-de-arquitetura-com-threat-modeling) - Identificar ameaças antes do design
+- [US-03: Atualização em alterações significativas](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-03---atualização-do-modelo-após-alteração-técnica) - Manter modelo válido
+- [US-06: Aplicação de LINDDUN para privacidade](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-06---validação-de-impacto-no-negócio) - Cobertura de ameaças GDPR
 
 ### Cap. 04 - Arquitetura Segura
 Definir **princípios de arquitetura segura**, produzir ficha de arquitetura com controlos, registar decisões (ADR) com racional de segurança, rever trust boundaries e integrações, sincronizar modelo de ameaças com decisões, manter triggers de revisão, catálogo de padrões seguros, especificar controlos de isolamento, executar threat modeling no design inicial L2-L3.
 
 **User Stories:**
-- [US-01: Princípios de arquitetura segura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-01--definição-de-princípios-de-arquitetura-segura) — Orientar decisões técnicas
-- [US-02: Ficha de arquitetura com controlos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-02--produção-de-ficha-de-arquitetura) — Solução segura e escalável
-- [US-07: Registro de decisões (ADR)](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-07--registro-de-decisões-de-arquitetura-adr) — Rastreabilidade e consistência
-- [US-08: Revisão de trust boundaries](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08--revisão-de-trust-boundaries-e-integrações) — Validar autenticação, autorização, isolamento
-- [US-09: Sincronização threat model ↔ arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-09--sincronização-entre-modelo-de-ameaças-e-decisões-de-arquitetura) — Controlos cobrem ameaças
-- [US-10: Triggers de revisão de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10--triggers-de-revisão-de-arquitetura) — Documentação atualizada
-- [US-11: Catálogo de padrões seguros](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-11--catálogo-de-padrões-de-arquitetura-segura) — Reutilização de designs validados
-- [US-12: Controlos de isolamento técnico](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-12--controlos-técnicos-de-isolamento) — Resiliência a sobre-carga e falhas
-- [US-14: Threat Modeling no design inicial](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14--threat-modeling-no-design-inicial-l2l3) — Especificar controlos proporcionais
+- [US-01: Princípios de arquitetura segura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-01---definição-de-princípios-e-baseline-de-arquitetura-segura) - Orientar decisões técnicas
+- [US-02: Ficha de arquitetura com controlos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-02---ficha-de-solução-com-controlos-e-rastreabilidade-arquitetural) - Solução segura e escalável
+- [US-07: Registro de decisões (ADR)](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-07---validação-arquitetural-automatizável-no-cicd-quando-aplicável) - Rastreabilidade e consistência
+- [US-08: Revisão de trust boundaries](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08---avaliação-de-impacto-no-negócio-e-priorização-de-trade-offs) - Validar autenticação, autorização, isolamento
+- [US-09: Sincronização threat model ↔ arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-09---sincronização-threat-modeling--arquitetura) - Controlos cobrem ameaças
+- [US-10: Triggers de revisão de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios) - Documentação atualizada
+- [US-11: Catálogo de padrões seguros](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-11---triggers-de-arquitetura-viva-e-disciplina-de-revisão) - Reutilização de designs validados
+- [US-12: Controlos de isolamento técnico](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-12---gate-arquitetural-antes-do-go-live) - Resiliência a sobre-carga e falhas
+- [US-14: Threat Modeling no design inicial](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14---identifica%C3%A7%C3%A3o-e-governa%C3%A7%C3%A3o-de-componentes-n%C3%A3o-determin%C3%ADsticos) - Especificar controlos proporcionais
 
 ### Cap. 08 - IaC e Infraestrutura
 Colaborar na **segregação de ambientes** com tagging e permissões mínimas, governar módulos IaC com origem confiável.
 
 **User Stories:**
-- [US-02: Segregação de ambientes com tagging](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-02--segregação-de-ambientes-tagging-e-permissões-mínimas) — Isolamento e rastreabilidade
-- [US-04: Governança de módulos IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-04--governança-e-origem-confiável-de-módulos) — Evitar propagação de más práticas
+- [US-02: Segregação de ambientes com tagging](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-02---segregação-de-ambientes-tagging-e-permissões-mínimas) - Isolamento e rastreabilidade
+- [US-04: Governança de módulos IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-04---governança-e-origem-confiável-de-módulos) - Evitar propagação de más práticas
 
 ### Cap. 11-12 - Deploy e Operações
 Apoiar desenho **resiliente de ambientes** de produção com padrões de disponibilidade e recuperação.

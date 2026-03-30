@@ -90,7 +90,7 @@ flowchart TD
 | Browser → auth API     | `email/password` via `POST /login` (HTTPS)               |
 | auth API → DB          | Consulta de utilizador                                  |
 | auth API → JWT Gen     | Pedido de token JWT                                      |
-| JWT Gen → Browser      | JWT (`Authorization: Bearer <token>`)                   |
+| JWT Gen → Browser      | JWT (`Authorization: Bearer &lt;token&gt;`)                   |
 | Browser → Backend APIs | Pedido autenticado com JWT                              |
 | Browser → Admin Config | Acesso com JWT a `/admin/config`                        |
 | auth API → SIEM        | (Ausente) - sem logs estruturados                       |

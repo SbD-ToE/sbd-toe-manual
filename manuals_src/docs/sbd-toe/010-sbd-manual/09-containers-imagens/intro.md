@@ -22,7 +22,7 @@ A execução em containers tornou-se a norma em pipelines de CI/CD e em produç�
 Esta ubiquidade trouxe ganhos significativos de agilidade e portabilidade, mas introduziu **novos riscos de processo** quando a construção, validação e promoção de imagens passam a ser fortemente mediadas por pipelines automatizados.
 
 Hoje, imagens são frequentemente **derivadas, geradas, recombinadas ou promovidas automaticamente**, muitas vezes sem intervenção humana direta.  
-Neste contexto, falhas de governação — e não apenas falhas técnicas — tornam-se o vetor dominante de compromisso.
+Neste contexto, falhas de governação - e não apenas falhas técnicas - tornam-se o vetor dominante de compromisso.
 
 Casos reais ilustram este risco: ataques por *typosquatting* em registries públicos, segredos embebidos em imagens explorados em ambientes Kubernetes (como no **Tesla Kubernetes breach, 2018**), e incidentes de cadeia de fornecimento como o **SolarWinds** demonstram que **artefactos aparentemente válidos podem ser operacionalmente inseguros**.
 
@@ -39,9 +39,9 @@ Em ambos os casos, a automação **produz sinais**, não decisões.
 A aceitação do risco, a promoção entre ambientes e a autorização de execução são **responsabilidades humanas não delegáveis**.
 
 Este capítulo articula-se diretamente com:
-- **Cap. 05 — Dependências, SBOM e SCA**, tratando imagens como *supply chain artifacts* com proveniência verificável;
-- **Cap. 07 — CI/CD Seguro**, onde o pipeline é reconhecido como ator crítico de risco;
-- **Cap. 12 — Monitorização & Operações**, que assegura deteção e resposta em runtime.
+- **Cap. 05 - Dependências, SBOM e SCA**, tratando imagens como *supply chain artifacts* com proveniência verificável;
+- **Cap. 07 - CI/CD Seguro**, onde o pipeline é reconhecido como ator crítico de risco;
+- **Cap. 12 - Monitorização & Operações**, que assegura deteção e resposta em runtime.
 
 ---
 

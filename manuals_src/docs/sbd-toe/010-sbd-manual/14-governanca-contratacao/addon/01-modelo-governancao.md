@@ -109,6 +109,6 @@ Cada decisão deve incluir:
 | Capítulo 02 - Requisitos     | Define os requisitos aplicáveis por nível           |
 | Capítulo 06 - Desenvolvimento Seguro | Implica validações formais                     |
 | addon/06-validacao-continuada.md | Aplica a lógica de reavaliação e exceções        |
-| canon/20-checklist-revisao.md | Verifica aplicação real da governação              |
+| addon/12-processo-excecoes.md | Processo canónico de exceções e cadeia de autoridade |
 
 ---

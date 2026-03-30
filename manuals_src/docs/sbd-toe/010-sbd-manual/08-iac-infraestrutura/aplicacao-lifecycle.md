@@ -12,7 +12,7 @@ Este documento operacionaliza as práticas prescritas para **Infraestrutura como
 Enquanto o `intro.md` define o “quê” e o “porquê”, aqui mostramos o “como”: em que fases do ciclo de vida cada requisito se aplica, quem é responsável por executá-lo, como traduzi-lo em user stories reutilizáveis e quais as evidências que asseguram rastreabilidade e auditabilidade.  
 A intenção é clara: transformar prescrições em **ações verificáveis**, com proporcionalidade por risco e rastreabilidade completa.
 
-:::caution Nota Operacional — IaC como processo automatizado e assistido
+:::caution Nota Operacional - IaC como processo automatizado e assistido
 A execução de IaC ocorre tipicamente em pipelines automatizados e, cada vez mais, com **apoio de mecanismos de geração/sugestão de código e configuração** (templates, normalizadores, geradores, assistentes, etc.).  
 Para manter controlo efetivo e auditável, aplicam-se invariantes operacionais:
 
@@ -705,7 +705,7 @@ Não basta aplicar controlos isolados: é preciso garantir que todos se reforça
 - **Medir conformidade** com métricas (drift, bloqueios, exceções) e reportar por L1–L3.  
 - **Rever exceções periodicamente**, garantindo que não se eternizam como riscos ocultos.
 
-Em síntese, **IaC é software** — e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.
+Em síntese, **IaC é software** - e deve ser tratado com o mesmo rigor, visibilidade e proporcionalidade que qualquer outra peça crítica do ciclo de vida.
 
 ---
 

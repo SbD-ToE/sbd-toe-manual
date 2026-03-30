@@ -9,7 +9,7 @@ genia: process-risk-normalization
 # 🛠️ Riscos de Processo no CI/CD Moderno
 
 O pipeline de CI/CD é hoje um dos **ativos mais críticos** de qualquer organização que desenvolva software de forma contínua.  
-Tudo o que chega a produção — código, configuração, infraestrutura, artefactos — passa inevitavelmente por este mecanismo.
+Tudo o que chega a produção - código, configuração, infraestrutura, artefactos - passa inevitavelmente por este mecanismo.
 
 Durante muito tempo, o CI/CD foi visto apenas como uma **ferramenta de automação**: compilar, testar, empacotar, distribuir.  
 Essa visão já não é suficiente.
@@ -21,7 +21,7 @@ No contexto atual, o CI/CD é um **sistema de decisão operacional**, onde se de
 - quando uma versão é considerada aceitável;
 - quem assume responsabilidade por uma promoção.
 
-A adoção pervasiva de automação avançada — independentemente da tecnologia concreta — **não altera esta realidade**, mas **acentua os riscos de processo** associados ao pipeline.
+A adoção pervasiva de automação avançada - independentemente da tecnologia concreta - **não altera esta realidade**, mas **acentua os riscos de processo** associados ao pipeline.
 
 Este documento identifica esses riscos e estabelece **prescrições claras de mitigação, validação e evidência**, assegurando que o CI/CD permanece:
 
@@ -41,7 +41,7 @@ O CI/CD **pode executar ações**,
 
 Mas **não pode assumir responsabilidade**.
 
-A decisão final sobre qualquer ação irreversível — promoção, deploy, rollback, exposição a utilizadores — é sempre humana, atribuída a um papel explícito e sustentada por evidência verificável.
+A decisão final sobre qualquer ação irreversível - promoção, deploy, rollback, exposição a utilizadores - é sempre humana, atribuída a um papel explícito e sustentada por evidência verificável.
 
 ---
 
@@ -62,7 +62,7 @@ Por isso, os riscos associados à automação no CI/CD devem ser tratados **como
 
 ---
 
-## ⚠️ Risco R1 — Não-determinismo do pipeline
+## ⚠️ Risco R1 - Não-determinismo do pipeline
 
 ### Descrição
 
@@ -107,7 +107,7 @@ e passa a depender de **contexto implícito**, muitas vezes não versionado nem 
 
 ---
 
-## ⚠️ Risco R2 — Confusão entre sugestão automática e decisão efetiva
+## ⚠️ Risco R2 - Confusão entre sugestão automática e decisão efetiva
 
 ### Descrição
 
@@ -145,7 +145,7 @@ um *soft gate* mal definido transforma-se num *hard bypass*.
 
 ---
 
-## ⚠️ Risco R3 — Evidência plausível sem execução empírica
+## ⚠️ Risco R3 - Evidência plausível sem execução empírica
 
 ### Descrição
 
@@ -183,7 +183,7 @@ No CI/CD moderno, a aparência de rigor pode mascarar a ausência de validação
 
 ---
 
-## ⚠️ Risco R4 — Exfiltração de segredos e contexto sensível
+## ⚠️ Risco R4 - Exfiltração de segredos e contexto sensível
 
 ### Descrição
 
@@ -226,7 +226,7 @@ Qualquer dependência externa ou mecanismo de exportação implícita constitui 
 
 ---
 
-## ⚠️ Risco R5 — Diluição de responsabilidade operacional
+## ⚠️ Risco R5 - Diluição de responsabilidade operacional
 
 ### Descrição
 

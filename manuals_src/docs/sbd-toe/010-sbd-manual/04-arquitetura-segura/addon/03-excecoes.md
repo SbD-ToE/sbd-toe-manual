@@ -1,70 +1,64 @@
 ---
 id: excecoes
 sidebar_position: 3
-title: 📌 Exceções Justificadas aos Requisitos Arquiteturais
-description: Processo formal para submissão, avaliação e controlo de exceções a requisitos de arquitetura segura
+title: Excepções a Requisitos de Arquitectura Segura
+description: Especificidades da gestão de excepções no contexto dos requisitos de arquitectura segura (ARC-001..013)
+tags: [exceções, arquitectura, risco, rastreabilidade, adr]
 ---
 
-# 📌 Exceções Justificadas aos Requisitos Arquiteturais
+# Excepções a Requisitos de Arquitectura Segura
 
-Este documento define o processo para **submeter, aprovar, documentar e controlar exceções** aos requisitos de arquitetura segura (ARC-001 a ARC-011) definidos neste capítulo.
-
-> Nenhuma exceção pode ser aceite sem registo, justificação, aprovação e plano de revisão.
-
----
-
-## 🔍 Quando podem existir exceções justificadas
-
-- Limitações técnicas ou operacionais temporárias
-- Migração faseada entre ambientes ou arquiteturas
-- Integração de componentes herdados ou de terceiros
-- Custo desproporcional para risco L1
-
-> Em todos os casos, deve existir plano de revisão com horizonte temporal claro e medidas compensatórias.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
-## ✏️ Critérios de aceitação de exceção
+## Âmbito
 
-| Critério                                   | Aplicação obrigatória |
-|--------------------------------------------|-------------------------|
-| Justificação técnica documentada             | Sim                     |
-| Risco associado identificado e aceite       | Sim                     |
-| Mitigação parcial ou compensatória prevista | Sim                     |
-| Horizonte temporal definido (expiração)     | Sim                     |
-| Responsável nomeado                        | Sim                     |
-| Revisão periódica obrigatória               | L2 e L3                 |
+Excepções a requisitos do catálogo de arquitectura: `ARC-001` a `ARC-013`.
 
 ---
 
-## 📄 Modelo de registo de exceção
+## Triggers específicos deste domínio
 
-| Campo                     | Exemplo                                                   |
-|--------------------------|-----------------------------------------------------------|
-| Requisito afetado        | ARC-002 - Fronteiras técnicas entre zonas de confiança     |
-| Aplicação / componente     | API Publica - Integração Parceiros                    |
-| Justificação            | Gateway externo ainda não integrado no ambiente interno   |
-| Mitigação alternativa    | ACLs temporárias + monitorização + logging reforçado     |
-| Validade                 | 3 meses (expira a 2025-11-01)                             |
-| Responsável             | Arquiteto da Solução + CISO                             |
-| Revisão agendada         | Sim (em Q4 2025)                                          |
+- migração faseada entre ambientes ou arquitecturas com janela de não-conformidade delimitada e plano de conclusão;
+- integração de componente herdado ou de terceiro sem possibilidade de modificação arquitectural no âmbito do projecto;
+- custo de refactoring arquitectural desproporcionado face ao nível de risco efectivo do contexto (L1);
+- decisão de arquitectura documentada em ADR com aceitação de risco explícita e aprovada.
 
 ---
 
-## 🌐 Integração com rastreabilidade e auditoria
+## Identificação do requisito afectado
 
-- Todas as exceções devem ser incluídas na matriz de rastreabilidade
-- Devem ser mantidas como **artefactos formais** no repositório do projeto
-- A aprovação deve ser atribuída a um perfil com autoridade formal (ex: AppSec, Arquitetura)
-
-> ✉️ Exceções não documentadas ou com validade expirada devem ser tratadas como não conformidade crítica.
+- ID canónico do catálogo (ex: `ARC-003`, `ARC-008`);
+- tag operacional (ex: `SEC-L2-ARC-003`);
+- referência ao ADR associado, se existir.
 
 ---
 
-## 🏛️ Alinhamento normativo
+## Integração com rastreabilidade arquitectural
 
-- **ISO/IEC 27001 A.18.1.4** - Aceitação formal de riscos residuais
-- **SSDF GV.3** - Aprovar exceções e desviações de processos de segurança
-- **OWASP SAMM Governance** - Registo e ciclo de vida de decisões excecionais
+Excepções a requisitos ARC devem ser reflectidas na matriz de rastreabilidade (`06-rastreabilidade.md`), com:
+
+- identificação da ameaça não mitigada pelo controlo em falta;
+- referência ao ADR que documenta a decisão e as condições de reversão;
+- data de expiração alinhada com o plano de arquitectura.
+
+Excepções não registadas na matriz de rastreabilidade são tratadas como lacuna de cobertura.
 
 ---
+
+## Alinhamento normativo
+
+- ISO/IEC 27001 A.18.1.4 - aceitação formal de riscos residuais
+- SSDF GV.3 - aprovação de excepções e desvios de processos de segurança
+- OWASP SAMM Governance - registo e lifecycle de decisões excepcionais
+
+---
+
+## Referências cruzadas
+
+| Documento | Relação |
+|---|---|
+| `01-catalogo-requisitos.md` | Catálogo ARC-001..013 - requisitos que podem ter excepções |
+| `06-rastreabilidade.md` | Matriz de rastreabilidade onde a excepção é registada |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

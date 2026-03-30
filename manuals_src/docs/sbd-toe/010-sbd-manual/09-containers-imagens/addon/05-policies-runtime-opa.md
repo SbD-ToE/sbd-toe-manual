@@ -12,7 +12,7 @@ tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
 Garantir que *containers* **que não cumprem requisitos mínimos de segurança definidos pela organização não podem ser executados**, através de mecanismos formais e automáticos de enforcement, nomeadamente em **Kubernetes e pipelines CI/CD**.
 
 As políticas descritas neste capítulo **não decidem se um container é aceitável**.  
-Elas **impedem execuções manifestamente não conformes**, fornecendo um **mecanismo técnico de bloqueio** que suporta — mas não substitui — a governação e a decisão humana.
+Elas **impedem execuções manifestamente não conformes**, fornecendo um **mecanismo técnico de bloqueio** que suporta - mas não substitui - a governação e a decisão humana.
 
 Este ficheiro define como usar OPA, Kyverno e mecanismos equivalentes **como guardrails técnicos**, não como autoridade de risco.
 
@@ -27,7 +27,7 @@ As **políticas de execução** são regras formais avaliadas automaticamente no
 - **Produzir evidência objetiva de não conformidade**;
 - **Reduzir a margem de erro operacional** em ambientes automatizados.
 
-> 🔒 Uma política **nunca concede autorização** — apenas **recusa ausência de requisitos mínimos**.
+> 🔒 Uma política **nunca concede autorização** - apenas **recusa ausência de requisitos mínimos**.
 
 A aceitação de risco, a concessão de exceções e a promoção entre ambientes **são sempre decisões humanas explícitas**, tratadas fora do mecanismo de policy.
 
@@ -63,7 +63,7 @@ Uma execução pode:
 | **Admission Webhooks** | Validação customizada                                  | Enforcement específico              |
 | **Validadores CI/CD**  | Checks antecipados (ex.: OPA, Checkov, Semgrep)        | Redução de falhas antes do runtime  |
 
-Estas ferramentas **produzem decisões técnicas binárias (allow / deny)** — não decisões de risco.
+Estas ferramentas **produzem decisões técnicas binárias (allow / deny)** - não decisões de risco.
 
 ---
 

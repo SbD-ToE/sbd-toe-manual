@@ -6,7 +6,7 @@ tags: [rastreabilidade, frameworks, containers, imagens, SAMM, SSDF, SLSA, DSOMM
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks — Capítulo 09: Containers e Imagens
+# 📎 Rastreabilidade contra Frameworks - Capítulo 09: Containers e Imagens
 
 Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança relacionados com **construção, assinatura, proveniência, hardening e execução segura de containers e imagens**.
 
@@ -35,29 +35,29 @@ Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste
 
 ### 🛠️ NIST SSDF v1.1
 Cobertura direta de:
-- **PW.5** — Integridade de _builds_: _digest pinning_, reprodutibilidade, assinatura e atestação de imagens.
-- **RV.1–RV.2** — Verificação contínua: _image scanning_ (vulnerabilidades, licenças, configuração) com bloqueios por severidade.
-- **PS.1** — Revisão de alterações: validação de manifestos (Kubernetes/Helm/Compose) e aprovações formais antes do _deploy_.
+- **PW.5** - Integridade de _builds_: _digest pinning_, reprodutibilidade, assinatura e atestação de imagens.
+- **RV.1–RV.2** - Verificação contínua: _image scanning_ (vulnerabilidades, licenças, configuração) com bloqueios por severidade.
+- **PS.1** - Revisão de alterações: validação de manifestos (Kubernetes/Helm/Compose) e aprovações formais antes do _deploy_.
 
 ---
 
 ### 🧱 OWASP SAMM v2.1
 Atinge **nível 3** nos domínios:
-- **Deployment (DEP 1.2)** — _gates_ de segurança em CI/CD, controlo de promoção entre ambientes, registos privados e auditáveis.
-- **Verification (2.A/2.B)** — _scanning_ automatizado e validação de configuração com _policy-as-code_ (OPA/Conftest, _admission controllers_).
-- **Governance (GOV 1.2)** — Regras formais de operação de registos, retenção e limpeza de imagens, ownership e auditoria.
+- **Deployment (DEP 1.2)** - _gates_ de segurança em CI/CD, controlo de promoção entre ambientes, registos privados e auditáveis.
+- **Verification (2.A/2.B)** - _scanning_ automatizado e validação de configuração com _policy-as-code_ (OPA/Conftest, _admission controllers_).
+- **Governance (GOV 1.2)** - Regras formais de operação de registos, retenção e limpeza de imagens, ownership e auditoria.
 
 ---
 
 ### 📊 BSIMM13
 Práticas alinhadas com:
-- **CMVM 1.3** — Monitorização de conformidade e variações (p. ex., _drift_ entre imagens definidas e executadas).
-- **SE 2.2 / ST 1.1–1.4** — Integração de _scanners_ no _pipeline_, critérios de aceitação por severidade, registos de evidências e _playbooks_ de correção.
+- **CMVM 1.3** - Monitorização de conformidade e variações (p. ex., _drift_ entre imagens definidas e executadas).
+- **SE 2.2 / ST 1.1–1.4** - Integração de _scanners_ no _pipeline_, critérios de aceitação por severidade, registos de evidências e _playbooks_ de correção.
 
 ---
 
 ### 🧬 SLSA v1.0
-- **L2–L3** — Foco em proveniência: assinaturas, atestações, trilho de quem construiu o quê, quando e com que entradas; empacotamento seguro do _build_ de imagens e restrições de origem.
+- **L2–L3** - Foco em proveniência: assinaturas, atestações, trilho de quem construiu o quê, quando e com que entradas; empacotamento seguro do _build_ de imagens e restrições de origem.
 
 ---
 
@@ -72,8 +72,8 @@ Práticas alinhadas com:
 ---
 
 ### 🔄 OWASP DSOMM v2
-- **Supply Chain / Build & Deploy** — _Builds_ determinísticos, validações automáticas e políticas de promoção.
-- **Ops Monitoring** — _Audit trail_ completo: correlação entre _commit_, _pipeline run_, _digest_ e _deploy_ efetivo; deteção de _shadow containers_.
+- **Supply Chain / Build & Deploy** - _Builds_ determinísticos, validações automáticas e políticas de promoção.
+- **Ops Monitoring** - _Audit trail_ completo: correlação entre _commit_, _pipeline run_, _digest_ e _deploy_ efetivo; deteção de _shadow containers_.
 
 ---
 

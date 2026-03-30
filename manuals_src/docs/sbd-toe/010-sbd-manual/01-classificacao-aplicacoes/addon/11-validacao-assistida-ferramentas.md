@@ -1,13 +1,13 @@
 ---
 id: validacao-assistida-ferramentas
-title: Validação Assistida por Ferramentas — Risco de Processo
+title: Validação Assistida por Ferramentas - Risco de Processo
 sidebar_position: 11
 tags: [tipo:risco-processo, tema:automacao, validacao, decisao, rastreabilidade]
 ---
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Validação Assistida por Ferramentas — Risco de Processo
+# 🛠️ Validação Assistida por Ferramentas - Risco de Processo
 
 ## 🎯 Objetivo
 
@@ -27,13 +27,13 @@ O objetivo **não é proibir ferramentas**, mas sim:
 
 Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso de automação na classificação deve respeitar**:
 
-### I1 — Separação entre Sugestão e Decisão
+### I1 - Separação entre Sugestão e Decisão
 
 - Ferramentas **sugerem, analisam, ou correlacionam**.
 - A **decisão final é sempre humana**, atribuída a um role explícito (Developer, AppSec Engineer, GRC/Compliance).
-- A sugestão pode ser ignorada, modificada, ou aceite — mas a responsabilidade é sempre do decisor humano.
+- A sugestão pode ser ignorada, modificada, ou aceite - mas a responsabilidade é sempre do decisor humano.
 
-### I2 — Evidência Acima de Plausibilidade
+### I2 - Evidência Acima de Plausibilidade
 
 - Um resultado **plausível** (ex: "L2 porque E=2, D=2, I=1") não substitui **evidência verificável**.
 - Exemplos de evidência:
@@ -42,7 +42,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
   - Ameaças validadas por especialistas de domínio.
   - Exceções aprovadas formalmente.
 
-### I3 — Reprodutibilidade e Auditabilidade
+### I3 - Reprodutibilidade e Auditabilidade
 
 - Toda a sugestão deve ser **reproduzível** e **rastreável**:
   - Que ferramenta foi usada? (nome, versão, data)
@@ -50,13 +50,13 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
   - Que output gerou? (score, pontuação E/D/I, nível proposto)
   - Que critério de decisão foi aplicado? (threshold, regras, ponderação)
 
-### I4 — Proteção de Ativos Críticos
+### I4 - Proteção de Ativos Críticos
 
 - Qualquer ferramenta externa (SaaS, cloud, ou terceiros) é um **risco de supply chain**:
   - Dados sensíveis da aplicação (dados tratados, arquitetura, clientes) não devem ser enviados para sistemas desconhecidos.
   - Aprovação explícita requerida antes de usar qualquer ferramenta em L2/L3.
 
-### I5 — Rastreabilidade de Decisão e Execução
+### I5 - Rastreabilidade de Decisão e Execução
 
 - Toda a decisão de classificação deve responder:
   - **Quem decidiu?** (Developer, AppSec Engineer, Product Owner, etc.)
@@ -66,7 +66,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 🚨 Erros Plausíveis — Por Tipo de Assistência
+## 🚨 Erros Plausíveis - Por Tipo de Assistência
 
 ### A. Scoring Automático de E/D/I
 
@@ -114,9 +114,9 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## ✅ Checklist de Validação — Por Prática
+## ✅ Checklist de Validação - Por Prática
 
-### Checklist 1: US-01 (Classificação Inicial — Assistida)
+### Checklist 1: US-01 (Classificação Inicial - Assistida)
 
 **Quando**: Ferramenta propõe E/D/I ou nível L1/L2/L3.
 
@@ -140,7 +140,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### Checklist 2: US-03 & US-07 (Revisão — Assistida por Deteção de Alteração)
+### Checklist 2: US-03 & US-07 (Revisão - Assistida por Deteção de Alteração)
 
 **Quando**: Ferramenta detecta mudança e propõe reclassificação.
 
@@ -159,7 +159,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### Checklist 3: US-06 (Mapeamento de Ameaças — Assistido)
+### Checklist 3: US-06 (Mapeamento de Ameaças - Assistido)
 
 **Quando**: Ferramenta gera STRIDE/MITRE ATT&CK mapping.
 
@@ -180,7 +180,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 🔀 Trilho de Escalação — Discordância Humano ↔ Máquina
+## 🔀 Trilho de Escalação - Discordância Humano ↔ Máquina
 
 ### Cenário 1: Developer propõe L1, Ferramenta propõe L2
 
@@ -266,7 +266,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 📝 Exemplos — Boas e Más Práticas
+## 📝 Exemplos - Boas e Más Práticas
 
 ### ❌ Má Prática 1: Aceitar Sugestão sem Validação
 
@@ -301,7 +301,7 @@ Output: {
 Developer + Arquitetos: Revisam E/D/I narrativa
 - E=2: Confirmado? SIM (APIs internas, não públicas)
 - D=2: Confirmado? SIM (dados de utilizador, não PII)
-- I=1: Confirmado? NÃO — se cair, impacto é crítico → I=2
+- I=1: Confirmado? NÃO - se cair, impacto é crítico → I=2
 
 AppSec Engineer: Reclassifica E/D/I → L2 mantém-se (após ajuste I)
 
@@ -425,7 +425,7 @@ Adicionar ao DoD:
 
 ---
 
-## 📊 Matriz de Proporcionalidade — Esforço de Validação
+## 📊 Matriz de Proporcionalidade - Esforço de Validação
 
 | Prática | L1 | L2 | L3 |
 |---|---|---|---|
@@ -451,8 +451,8 @@ Adicionar ao DoD:
 
 ## 🔗 Referências Internas
 
-- [agent.md — Invariantes Canonicos](../../../000-teory-of-everything/agent#4-invariantes-canónicos-aplicáveis-a-todos-os-capítulos)
-- [US-01 — Classificação Inicial](../../aplicacao-lifecycle#us-01---classificação-inicial-da-aplicação)
-- [US-03 — Revisão Event-Based](../../aplicacao-lifecycle#us-03---revisão-por-alteração-relevante-event-based)
-- [US-06 — Mapeamento de Ameaças](../../aplicacao-lifecycle#us-06---mapeamento-de-ameaças-por-nível-de-risco)
-- [US-07 — Revisão Time-Based](../../aplicacao-lifecycle#us-07---revisão-periódica-time-based-da-classificação-cadência-obrigatória)
+- [Theory of Everything - Introdução](/sbd-toe/teory-of-everything/intro)
+- [US-01 - Classificação Inicial](../aplicacao-lifecycle#us-01---classificação-inicial-da-aplicação)
+- [US-03 - Revisão Event-Based](../aplicacao-lifecycle#us-03---revisão-por-alteração-relevante-event-based)
+- [US-06 - Mapeamento de Ameaças](../aplicacao-lifecycle#us-06---mapeamento-de-ameaças-por-nível-de-risco)
+- [US-07 - Revisão Time-Based](../aplicacao-lifecycle#us-07---revisão-periódica-time-based-da-classificação-cadência-obrigatória)

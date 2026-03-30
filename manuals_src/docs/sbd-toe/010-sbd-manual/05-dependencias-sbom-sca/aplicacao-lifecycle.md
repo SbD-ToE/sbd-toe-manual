@@ -130,7 +130,7 @@ Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade comp
 
 **Ligações úteis.**  
 - [SBOM - Normas CycloneDX e SPDX](https://www.cyclonedx.org)
-- [US-10 - Inventário e SBOM por Build](#us-10--inventário-e-sbom-por-build)
+- [US-10 - Inventário e SBOM por Build](#us-10---inventário-e-sbom-por-build)
 
 ---
 
@@ -509,7 +509,7 @@ Como **DevOps Engineer**, quero gerar automaticamente um **SBOM assinado por bui
 **Ligações úteis.**
 - [SLSA Provenance - Conceitos e Implementação](https://slsa.dev)
 - [Inventário e SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/inventario-sbom)
-- [US-11 - Alertas sobre Vulnerabilidades](#us-11--alertas-sobre-vulnerabilidades-em-componentes-usados)
+- [US-11 - Alertas sobre Vulnerabilidades](#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados)
 
 ---
 
@@ -567,7 +567,7 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 
 **Ligações úteis.**
 - [US-02 - SBOM em cada build](#us-02---sbom-em-cada-build)
-- [US-10 - Inventário e SBOM por Build](#us-10--inventário-e-sbom-por-build)
+- [US-10 - Inventário e SBOM por Build](#us-10---inventário-e-sbom-por-build)
 - [Cap. 12 - Monitorização & Operação Segura](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
 
 
@@ -625,7 +625,7 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 
 ---
 
-### US-13 — Inventário e controlo de dependências emergentes 
+### US-13 - Inventário e controlo de dependências emergentes 
 
 **Contexto.**  
 Em arquiteturas modernas, nem todas as dependências entram por declaração explícita em manifests ou lockfiles. Ferramentas de build, pipelines, code generation, plugins e carregamento em runtime podem introduzir **dependências emergentes** que não são imediatamente visíveis.
@@ -667,11 +667,11 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e controlar
 | CI/CD | Build / Release | DevOps + AppSec | Em cada release |
 
 **Ligações úteis.**
-- 🔗 Cap. 04 — Arquitetura Segura: `/sbd-manual/arquitetura-segura/intro`
-- 🔗 Cap. 07 — CI/CD Seguro: `/sbd-manual/cicd-seguro/intro`
+- 🔗 Cap. 04 - Arquitetura Segura: `/sbd-manual/arquitetura-segura/intro`
+- 🔗 Cap. 07 - CI/CD Seguro: `/sbd-manual/cicd-seguro/intro`
 
 ---
-## 🧩 Nota complementar — Inventário contínuo de componentes e alertas em produção
+## 🧩 Nota complementar - Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  
 Deve existir um **inventário contínuo de componentes de 3.ºs** por projeto e ambiente (dev/test/stage/prod), com **alertas automáticos** quando são publicadas vulnerabilidades que afetem versões implantadas.  
@@ -689,10 +689,10 @@ Isto complementa o SCA no pipeline ao:
 5. Abertura automática de incidente/tarefa com SLA proporcional L1–L3.  
 6. Evidência: SBOM, inventário, alertas, VEX, histórico de patching.
 
-**Integração com Cap. 12 — Monitorização & Operação Segura.**
+**Integração com Cap. 12 - Monitorização & Operação Segura.**
 
-Os user stories 10 e 11 estão muito relacionados com o exposto no **Cap. 12 — Monitorização & Operação Segura.**, evidenciando o aspeto critico de monitorização além da execução de um qualquer pipeline de build. É fácil implementar medidas de segurança durante o build, mas, depois de entrar em produção uma aplicação pode estar um longo periodo de tempo sem voltar ao pipeline de desenvolvimento, é portanto essencial rever periodicamente, ou espontaneamente, o SBOM das aplicações em produção. É mais grave uma nova vulnerabilidade ser encontrada numa aplicação em produção do que durante o processo de desenvolvimento, principalmente sem medidas de alarmistica ou periodicas de deteção.
-Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segura.** é exatamente esse controlo, definindo:
+Os user stories 10 e 11 estão muito relacionados com o exposto no **Cap. 12 - Monitorização & Operação Segura.**, evidenciando o aspeto critico de monitorização além da execução de um qualquer pipeline de build. É fácil implementar medidas de segurança durante o build, mas, depois de entrar em produção uma aplicação pode estar um longo periodo de tempo sem voltar ao pipeline de desenvolvimento, é portanto essencial rever periodicamente, ou espontaneamente, o SBOM das aplicações em produção. É mais grave uma nova vulnerabilidade ser encontrada numa aplicação em produção do que durante o processo de desenvolvimento, principalmente sem medidas de alarmistica ou periodicas de deteção.
+Ums dos aspetos fundamentais no  **Cap. 12 - Monitorização & Operação Segura.** é exatamente esse controlo, definindo:
 
 - Eventos: criação/fecho de alerta, mudança de exploitability, violação de SLA, drift.  
 - Métricas: MTTA, MTTR, ativos afetados, % exceções ativas, *patch latency*.  
@@ -722,7 +722,7 @@ Ums dos aspetos fundamentais no  **Cap. 12 — Monitorização & Operação Segu
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#matriz-de-proporcionalidade-l1l3}
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|

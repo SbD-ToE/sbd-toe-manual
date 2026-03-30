@@ -6,7 +6,7 @@ tags: [ameaças, containers, imagens, supply chain, kubernetes, proveniência, h
 sidebar_position: 50
 ---
 
-# 🔐 Ameaças Mitigadas — Capítulo 09: Containers e Imagens
+# 🔐 Ameaças Mitigadas - Capítulo 09: Containers e Imagens
 
 Este capítulo prescreve práticas de **construção segura de imagens, assinatura e proveniência, governação de registos, validação de manifestos e hardening do runtime**, garantindo integridade, rastreabilidade e segurança desde o _build_ até à execução.
 
@@ -91,4 +91,4 @@ As práticas deste capítulo reduzem **risco sistémico na cadeia de forneciment
 - Assegurarem **rastreabilidade auditável** de ponta a ponta (commit → imagem → deploy);
 - Reforçarem a **governação de registos** (acesso, retenção, limpeza e _ownership_ claros).
 
-> 📌 A cobertura está alinhada com **NIST SSDF (PW.5, RV.1–RV.2, PS.1)**, **SLSA (L2–L3)**, **CIS Benchmarks (Docker/K8s)**, **ENISA Cloud Security Baseline**, **BSIMM** e **OWASP/OSC&R** — constituindo evidência sólida de conformidade técnica para auditorias **NIS 2 / DORA**.
+> 📌 A cobertura está alinhada com **NIST SSDF (PW.5, RV.1–RV.2, PS.1)**, **SLSA (L2–L3)**, **CIS Benchmarks (Docker/K8s)**, **ENISA Cloud Security Baseline**, **BSIMM** e **OWASP/OSC&R** - constituindo evidência sólida de conformidade técnica para auditorias **NIS 2 / DORA**.

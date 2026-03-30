@@ -111,7 +111,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 | Cap. 09 - Containers | CNT-K04 (admission controller), CNT-K05 (imagens base actualizadas) |
 | Cap. 10 - Testes | TST-K01 (SAST por build), TST-K02 (DAST por release) |
 | Cap. 11 - Deploy | DPL-K01 (checklist pré-deploy), DPL-K06 (evidência rastreável) |
-| Cap. 12 - Operações | OPS (logging centralizado, alertas testados) |
+| Cap. 12 - Operações | OPS-K01 (logging centralizado), OPS-K02 (alertas testados) |
 | Cap. 14 - Governação | GOV-K07 (rastreabilidade organizacional completa) |
 
 **Frequência de medição:** mensal por domínio; trimestral para síntese transversal.
@@ -170,7 +170,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 | Cap. 09 - Containers | CNT-K02 (MTTR CVE em imagem) |
 | Cap. 10 - Testes | TST-K03 (% findings no SLA), TST-K04 (taxa de regressão) |
 | Cap. 11 - Deploy | DPL-K04 (rollbacks por segurança) |
-| Cap. 12 - Operações | MTTR operacional (MTTD + tempo de mitigação) |
+| Cap. 12 - Operações | OPS-K03 (MTTD), OPS-K04 (MTTR) |
 
 **Frequência de medição:** contínua (por evento para findings críticos); mensal para tendências.
 
@@ -256,6 +256,25 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 | Cap. 14 - Governação | 1 | 2 | 3 |
 
 **Frequência de medição:** anual - avaliação estruturada com evidência por domínio; comparação obrigatória com ciclo anterior.
+
+**Indicadores de domínio que alimentam T-06:**
+
+| Capítulo | Indicador de referência |
+|----------|------------------------|
+| Cap. 01 - Classificação | CLA-K01, CLA-K02 |
+| Cap. 02 - Requisitos | RQS-K01, RQS-K02 |
+| Cap. 03 - Threat Modeling | THR-K01, THR-K03 |
+| Cap. 04 - Arquitectura | ARC-K01, ARC-K04 |
+| Cap. 05 - Dependências | DEP-K01, DEP-K05 |
+| Cap. 06 - Desenvolvimento | DEV-K03, DEV-K06 |
+| Cap. 07 - CI/CD | CIC-K01, CIC-K04 |
+| Cap. 08 - IaC | IAC-K01, IAC-K07 |
+| Cap. 09 - Containers | CNT-K04, CNT-K05 |
+| Cap. 10 - Testes | TST-K01, TST-K02 |
+| Cap. 11 - Deploy | DPL-K01, DPL-K06 |
+| Cap. 12 - Operações | OPS-K01, OPS-K03, OPS-K04, OPS-K08 |
+| Cap. 13 - Formação | TRN-K01, TRN-K02, TRN-K07 |
+| Cap. 14 - Governação | GOV-K01, GOV-K07, GOV-K08 |
 
 ---
 

@@ -12,6 +12,8 @@ tags: [métricas, indicadores, mttd, mttr, dashboards, kpi]
 
 Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturidade** dos controlos de monitorização, deteção e resposta, permitindo melhoria contínua com base em dados operacionais.
 
+> Este ficheiro é uma **síntese operacional** para leitura quotidiana. O catálogo canónico de `OPS-Kxx` está em [`11-kpis-metricas.md`](./11-kpis-metricas.md).
+
 ---
 
 ## 📏 Indicadores de cobertura

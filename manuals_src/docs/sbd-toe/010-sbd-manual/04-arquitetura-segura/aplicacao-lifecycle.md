@@ -655,7 +655,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer um p
 
 ---
 
-### US-14 - Identificação e governação de componentes não determinísticos
+### US-15 - Identificação e governação de componentes não determinísticos
 
 **Contexto.**  
 Arquiteturas modernas podem incluir componentes cujo comportamento **não é estritamente determinístico** (ex.: motores de decisão probabilísticos, scoring heurístico, modelos estatísticos ou componentes de inferência). Estes componentes introduzem desafios específicos em termos de segurança, auditoria, explicabilidade e controlo operacional, que devem ser explicitamente tratados ao nível da arquitetura.

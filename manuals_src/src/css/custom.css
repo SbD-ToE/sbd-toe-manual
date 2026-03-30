@@ -259,6 +259,123 @@ html[data-theme='dark'] {
   justify-content: center;
 }
 
+/* =========================
+   Callout colapsável de tipo de capítulo
+   ========================= */
+:root {
+  --sl-chapter-basilar-bg: #fff8e6;
+  --sl-chapter-basilar-br: #f3d07a;
+  --sl-chapter-basilar-fg: #6e5200;
+
+  --sl-chapter-operacional-bg: #e9f8ea;
+  --sl-chapter-operacional-br: #55bf67;
+  --sl-chapter-operacional-fg: #1d5f2b;
+
+  --sl-chapter-organizacional-bg: #eef4ff;
+  --sl-chapter-organizacional-br: #7ba7ff;
+  --sl-chapter-organizacional-fg: #234e9a;
+}
+
+html[data-theme='dark'] {
+  --sl-chapter-basilar-bg: rgba(201, 155, 43, .10);
+  --sl-chapter-basilar-br: rgba(201, 155, 43, .38);
+  --sl-chapter-basilar-fg: #f3d88e;
+
+  --sl-chapter-operacional-bg: rgba(51, 161, 74, .10);
+  --sl-chapter-operacional-br: rgba(51, 161, 74, .34);
+  --sl-chapter-operacional-fg: #9fe0a9;
+
+  --sl-chapter-organizacional-bg: rgba(79, 130, 221, .11);
+  --sl-chapter-organizacional-br: rgba(79, 130, 221, .36);
+  --sl-chapter-organizacional-fg: #b9d2ff;
+}
+
+.sl-chapter-callout {
+  margin: .75rem 0 1.25rem;
+  border: 1px solid var(--sl-chapter-operacional-br);
+  border-left-width: 4px;
+  border-radius: 12px;
+  background: var(--sl-chapter-operacional-bg);
+}
+
+.sl-chapter-callout summary {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  cursor: pointer;
+  padding: .8rem 1rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--sl-chapter-operacional-fg);
+  list-style: none;
+}
+
+.sl-chapter-callout summary:hover {
+  background: rgba(255, 255, 255, .025);
+}
+
+.sl-chapter-callout summary::-webkit-details-marker {
+  display: none;
+}
+
+.sl-chapter-callout summary::after {
+  content: "▾";
+  margin-left: auto;
+  font-size: .95rem;
+  opacity: .75;
+  transition: transform .18s ease;
+}
+
+.sl-chapter-callout:not([open]) summary::after {
+  transform: rotate(-90deg);
+}
+
+.sl-chapter-callout__icon {
+  font-size: 1rem;
+  line-height: 1;
+  opacity: .9;
+}
+
+.sl-chapter-callout__content {
+  padding: 0 1rem 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.sl-chapter-callout__content > :first-child {
+  margin-top: 0;
+}
+
+.sl-chapter-callout__content > :last-child {
+  margin-bottom: 0;
+}
+
+.sl-chapter-callout--basilar {
+  border-color: var(--sl-chapter-basilar-br);
+  background: var(--sl-chapter-basilar-bg);
+}
+
+.sl-chapter-callout--basilar summary {
+  color: var(--sl-chapter-basilar-fg);
+}
+
+.sl-chapter-callout--operacional {
+  border-color: var(--sl-chapter-operacional-br);
+  background: var(--sl-chapter-operacional-bg);
+}
+
+.sl-chapter-callout--operacional summary {
+  color: var(--sl-chapter-operacional-fg);
+}
+
+.sl-chapter-callout--organizacional {
+  border-color: var(--sl-chapter-organizacional-br);
+  background: var(--sl-chapter-organizacional-bg);
+}
+
+.sl-chapter-callout--organizacional summary {
+  color: var(--sl-chapter-organizacional-fg);
+}
+
 .toe-diagram-svg {
   display: block;
   width: 100%;

@@ -6,14 +6,18 @@ tags: [tipo:prescricao, tema:requisitos, segurança, rastreabilidade, validaçã
 sidebar_position: 1
 ---
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="basilar" title="Capítulo Basilar">
+
+Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.
 
 Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo. A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
-:::
 
-# 🛠️ Requisitos de Segurança
+</ChapterTypeCallout>
+
+# Requisitos de Segurança
 
 Este capítulo define o **quadro normativo de requisitos de segurança aplicacionais** do SbD-ToE, bem como o **processo para a sua correta aplicação, validação e rastreabilidade** ao longo de todo o ciclo de vida de desenvolvimento.
 
@@ -164,10 +168,10 @@ Aplicações com perfis técnicos específicos (ex.: sistemas embebidos, IoT, SC
 
 | Política                           | Obrigatória | Aplicação           | Conteúdo mínimo esperado                                 |
 |------------------------------------|:-----------:|---------------------|----------------------------------------------------------|
-| Política de Requisitos de Segurança | Sim         | Todas as aplicações | Definição, revisão, rastreabilidade, aceitação de risco  |
-| Política de Testes de Segurança    | Sim         | Apps L2/L3          | Critérios, evidência, aceitação, ciclo de revisão        |
-| Política de Rastreabilidade        | Opcional    | Apps críticas       | Mapeamento requisito→controlo→validação, auditoria       |
-| Política de Gestão de Exceções     | Sim         | Todas               | Processo formal de justificação, registo e aceitação     |
+| [Política de Requisitos de Segurança](/sbd-toe/assets/policies/policy-requisitos-seguranca) | Sim         | Todas as aplicações | Definição, revisão, rastreabilidade, aceitação de risco  |
+| [Política de Estratégia de Testes de Segurança](/sbd-toe/assets/policies/policy-estrategia-testes)    | Sim         | Apps L2/L3          | Critérios, evidência, aceitação, ciclo de revisão        |
+| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)        | Opcional    | Apps críticas       | Mapeamento requisito→controlo→validação, auditoria       |
+| [Política de Gestão de Exceções](/sbd-toe/assets/policies/policy-gestao-excecoes)     | Sim         | Todas               | Processo formal de justificação, registo e aceitação     |
 
 [📎 Ver detalhe das políticas recomendadas para este capítulo](./policies-relevantes)  
 Para a versão impressa, ver o **anexo de políticas do manual**.

@@ -3,6 +3,7 @@ id: policy-dependencias
 title: Política de Gestão de Dependências
 description: Política organizacional que define os critérios de aprovação, pinning, bloqueio, auditing e atualização de dependências externas em projetos de software, proporcional ao nível de criticidade da aplicação (L1, L2, L3), com foco na redução de risco de supply chain e na garantia de rastreabilidade.
 tags: [policy, dependências, SCA, supply chain, CVE, licenças, pinning, SBOM, cap05, L1, L2, L3, governance]
+grupo: supply-chain
 sidebar_position: 10
 ---
 

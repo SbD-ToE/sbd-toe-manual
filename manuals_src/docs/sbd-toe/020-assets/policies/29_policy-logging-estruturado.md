@@ -3,6 +3,7 @@ id: policy-logging-estruturado
 title: Política de Logging Estruturado
 description: Política organizacional que define os requisitos para a produção, formatação, centralização, retenção e protecção de logs de aplicação e de segurança, incluindo schema mínimo de eventos, eventos obrigatórios, masking de dados sensíveis, imutabilidade e integração com SIEM, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, logging, structured logging, JSON, ECS, SIEM, retenção, imutabilidade, eventos de segurança, cap12, L1, L2, L3, governance, observabilidade]
+grupo: operacoes
 sidebar_position: 29
 ---
 

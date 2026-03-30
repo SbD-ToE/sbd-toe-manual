@@ -3,6 +3,7 @@ id: policy-rastreabilidade
 title: Política de Rastreabilidade e Auditoria
 description: Política organizacional transversal que define os requisitos de rastreabilidade entre requisitos, controlos, evidências de validação, artefactos de build e eventos operacionais, assegurando que a postura de segurança é auditável de forma contínua e proporcional ao nível de risco da aplicação.
 tags: [policy, rastreabilidade, auditoria, evidências, logs, WORM, commit, pipeline, release, cap02, cap06, cap07, cap08, cap09, cap12, cap14, L1, L2, L3, governance, transversal]
+grupo: governacao
 sidebar_position: 6
 ---
 

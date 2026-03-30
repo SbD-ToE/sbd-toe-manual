@@ -6,12 +6,16 @@ tags: [cicd, segurança, pipelines, automação, proveniência, devsecops, risco
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
-:::
+
+</ChapterTypeCallout>
 
 # CI/CD Seguro
 
@@ -114,10 +118,11 @@ A segurança de CI/CD depende de papéis distintos, mas complementares:
 
 | Política organizacional         | Obrigatória | Aplicação | Conteúdo mínimo |
 |---------------------------------|-------------|-----------|-----------------|
-| Política de CI/CD Seguro        | Sim         | Todos os projetos | Revisão por PR, runners seguros, scanners obrigatórios, gestão de segredos, assinatura/proveniência |
-| Política de Gestão de Segredos  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos estáticos, rotação periódica |
-| Política de Rastreabilidade     | Recomendado | GRC/Auditoria | Logs correlacionados commit→pipeline→release, retenção mínima, export imutável |
-| Política de Exceções CI/CD      | Sim         | AppSec, GRC | Registo formal, aprovações, prazo e compensações |
+| [Política de CI/CD Seguro](/sbd-toe/assets/policies/policy-cicd-seguro)        | Sim         | Todos os projetos | Revisão por PR, runners seguros, scanners obrigatórios, gestão de segredos, assinatura/proveniência |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos estáticos, rotação periódica |
+| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC/Auditoria | Logs correlacionados commit→pipeline→release, retenção mínima, export imutável |
+| [Política de Gestão de Exceções CI/CD](/sbd-toe/assets/policies/policy-gestao-excecoes)      | Sim         | AppSec, GRC | Registo formal, aprovações, prazo e compensações |
+| [Política de Aplicação Proporcional por Risco](/sbd-toe/assets/policies/policy-classificacao-risco) | ⚠️ Opcional | Organizações com classificação formal | Mapeamento entre nível de risco e controlos mínimos exigidos no pipeline |
 
 As políticas organizacionais relevantes encontram-se descritas no **Anexo de Políticas do Manual**, incluindo: CI/CD Seguro, Gestão de Segredos, Rastreabilidade e Exceções.
 

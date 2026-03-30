@@ -6,12 +6,16 @@ tags: [desenvolvimento, segurança, guidelines de código, linters, SAST, govern
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua função é **aplicar, operacionalizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua, consistente e mensurável.
 
 Os capítulos operacionais traduzem as prescrições fundacionais do SbD-ToE em práticas de **execução verificável**, assegurando que a segurança não depende de intenções individuais, mas de mecanismos sistemáticos integrados no ciclo de vida do software.
-:::
+
+</ChapterTypeCallout>
 
 # Desenvolvimento Seguro
 
@@ -122,10 +126,10 @@ Em última análise, trata-se de transformar **cada linha de código** numa opor
 
 | Política                                   | Obrigatória | Aplicação             | Conteúdo mínimo |
 |-------------------------------------------|-------------|-----------------------|-----------------|
-| **Política de Curadoria de Guidelines**   | Sim         | Todas as stacks       | Responsáveis, processo de seleção, *tailoring*, ciclos de revisão |
-| **Política de Revisão de Código**         | Sim         | PRs relevantes        | Checklist formal, reviewer designado, aprovação registada |
-| **Política de Gestão de Exceções**        | Sim         | Todos os projetos     | Justificação, mitigação, prazo e aprovação proporcional ao risco |
-| **Política de Uso de Ferramentas de Apoio ao Desenvolvimento** | Sim | Projetos aplicáveis | Regras de uso, revisão técnica, validação legal e responsabilidade |
+| [**Política de Curadoria de Guidelines**](/sbd-toe/assets/policies/policy-guidelines-desenvolvimento)   | Sim         | Todas as stacks       | Responsáveis, processo de seleção, *tailoring*, ciclos de revisão |
+| [**Política de Revisão de Código**](/sbd-toe/assets/policies/policy-revisao-codigo)         | Sim         | PRs relevantes        | Checklist formal, reviewer designado, aprovação registada |
+| [**Política de Gestão de Exceções**](/sbd-toe/assets/policies/policy-gestao-excecoes)        | Sim         | Todos os projetos     | Justificação, mitigação, prazo e aprovação proporcional ao risco |
+| [**Política de Uso de Ferramentas de Apoio ao Desenvolvimento**](/sbd-toe/assets/policies/policy-uso-ferramentas-apoio) | Sim | Projetos aplicáveis | Regras de uso, revisão técnica, validação legal e responsabilidade |
 
 Na versão impressa, as políticas relevantes incluem: **Curadoria de Guidelines**, **Revisão de Código**, **Gestão de Exceções** e **Uso controlado de ferramentas de apoio ao desenvolvimento**.
 

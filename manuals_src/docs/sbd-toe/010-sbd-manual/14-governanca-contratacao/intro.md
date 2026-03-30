@@ -6,15 +6,19 @@ tags: [governanca, contratacao, fornecedores, excecoes, rastreabilidade, conform
 sidebar_position: 0
 ---
 
-:::note Capítulo Organizacional
-Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="organizacional" title="Capítulo Organizacional">
+
+Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
 A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.
 
 Os capítulos organizacionais estabelecem a estrutura humana, processual e decisória
 que permite consolidar o SbD-ToE na organização.
 Sem estes elementos, a segurança por design torna-se pontual e dependente de indivíduos,
 perdendo a **consistência, autoridade e resiliência organizacional** necessárias à maturidade de longo prazo.
-:::
+
+</ChapterTypeCallout>
 
 
 # Governança & Contratação
@@ -134,11 +138,11 @@ defensável e sustentável**.
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| Política de Exceções de Segurança | Sim | AppSec + Gestão | Fluxo formal de pedido, aprovação e prazo |
-| Política de Contratação Segura | Sim | Jurídico / Procurement | Cláusulas SbD-ToE, validação contínua |
-| Política de Rastreabilidade Organizacional | Sim | GRC | Registo centralizado, dashboards |
-| Política de Auditoria de Fornecedores | Recomendado | Procurement + AppSec | Auditorias periódicas de segurança |
-| Política de KPIs de Governação | Sim | GRC + Direção | Métricas, relatórios, objetivos |
+| [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes) | Sim | AppSec + Gestão | Fluxo formal de pedido, aprovação e prazo |
+| [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura) | Sim | Jurídico / Procurement | Cláusulas SbD-ToE, validação contínua |
+| [Política de Rastreabilidade Organizacional](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional) | Sim | GRC | Registo centralizado, dashboards |
+| [Política de Contratação Segura — Auditoria de Fornecedores](/sbd-toe/assets/policies/policy-contratacao-segura) | Recomendado | Procurement + AppSec | Auditorias periódicas de segurança |
+| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC + Direção | Métricas, relatórios, objetivos |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**,
 onde estas políticas estão consolidadas transversalmente.

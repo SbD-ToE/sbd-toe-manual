@@ -3,6 +3,7 @@ id: policy-atualizacao-automatica
 title: Política de Atualização Automática de Dependências
 description: Política organizacional que define os requisitos para a operação de bots de atualização automática de dependências, incluindo critérios de auto-merge, análise de impacto, handoff humano e configuração proporcional ao nível de criticidade da aplicação (L2, L3).
 tags: [policy, dependências, atualização, Renovate, Dependabot, auto-merge, impact analysis, handoff, cap05, L2, L3, governance, supply chain]
+grupo: supply-chain
 sidebar_position: 13
 ---
 

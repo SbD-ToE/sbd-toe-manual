@@ -6,13 +6,17 @@ tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, 
 sidebar_position: 0
 ---
 
-:::note Capítulo Organizacional
-Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="organizacional" title="Capítulo Organizacional">
+
+Este capítulo é considerado **organizacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
+A sua função é **assegurar a adoção, governação e evolução sustentável** das práticas de segurança definidas nos capítulos basilares e operacionais.
 
 Os capítulos organizacionais estabelecem a estrutura humana e processual que permite consolidar o SbD-ToE na organização.
 Sem estes elementos, a segurança por design torna-se pontual e dependente de indivíduos, perdendo a **consistência e resiliência organizacional** necessárias à maturidade de longo prazo.
-:::
+
+</ChapterTypeCallout>
 
 
 # Formação e Capacitação
@@ -102,11 +106,11 @@ A formação é o que **transforma processos em cultura**.
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| Política de Formação Contínua | Sim | RH + AppSec | Plano anual, LMS, revisão periódica |
-| Política de Onboarding Seguro | Sim | RH + Gestão | Formação obrigatória no início |
-| Política de Security Champions | Recomendado | AppSec + Dev | Programa formal com papéis claros |
-| Política de Métricas de Capacitação | Sim | GRC | KPIs, eficácia, relatórios de auditoria |
-| Política de Exercícios Práticos | Recomendado | AppSec + QA/Dev | Labs, CTFs, simulações |
+| [Política de Formação e Capacitação em Segurança](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | RH + AppSec | Plano anual, LMS, revisão periódica |
+| [Política de Formação e Capacitação em Segurança — Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | RH + Gestão | Formação obrigatória no início |
+| [Política de Formação e Capacitação — Security Champions](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec + Dev | Programa formal com papéis claros |
+| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC | KPIs, eficácia, relatórios de auditoria |
+| [Política de Formação e Capacitação — Exercícios Práticos](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec + QA/Dev | Labs, CTFs, simulações |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.
 

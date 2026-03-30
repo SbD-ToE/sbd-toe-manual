@@ -3,6 +3,7 @@ id: policy-formacao-seguranca
 title: Política de Formação e Capacitação em Segurança
 description: Política organizacional que define os requisitos para o programa de formação e capacitação em segurança, incluindo onboarding obrigatório, trilhos formativos por perfil e nível de risco, programa de Security Champions, exercícios práticos, actualização de conteúdos, KPIs de eficácia e integração com os objectivos de performance individuais, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, formação, capacitação, onboarding, Security Champions, trilhos formativos, labs, CTF, KPIs formação, cap13, L1, L2, L3, governance, SSDF, SAMM]
+grupo: governacao
 sidebar_position: 37
 ---
 

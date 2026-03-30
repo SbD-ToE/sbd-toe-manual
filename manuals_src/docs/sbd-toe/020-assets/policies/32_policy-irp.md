@@ -3,6 +3,7 @@ id: policy-irp
 title: Política de Integração com IRP (Incident Response Plan)
 description: Política organizacional que define os requisitos de integração entre a monitorização de segurança e o processo de resposta a incidentes (IRP), incluindo critérios de activação, playbooks obrigatórios, fases de resposta, notificação regulatória, post-mortem e testes periódicos, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, IRP, incident response, playbook, SOAR, contenção, notificação, post-mortem, cap12, L1, L2, L3, governance, DORA]
+grupo: operacoes
 sidebar_position: 32
 ---
 

@@ -3,6 +3,7 @@ id: policy-gestao-excecoes
 title: Política de Gestão de Exceções de Segurança
 description: Política organizacional transversal que define o processo formal de submissão, avaliação, aprovação, registo e reavaliação de exceções a controlos de segurança obrigatórios, com alçadas proporcionais ao nível de risco da aplicação. Aplica-se a todos os capítulos SbD-ToE onde existam controlos com obrigatoriedade formal.
 tags: [policy, exceções, gestão de exceções, aprovação, alçadas, TTL, mitigação compensatória, cap01, cap02, cap05, cap06, cap07, cap14, L1, L2, L3, governance, transversal]
+grupo: risco
 sidebar_position: 5
 ---
 

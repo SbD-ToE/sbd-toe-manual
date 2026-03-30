@@ -6,12 +6,16 @@ tags: [monitorizacao, operacoes, deteção, resposta, logs, métricas, incidente
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
-:::
+
+</ChapterTypeCallout>
 
 
 # Monitorização & Operações
@@ -232,10 +236,10 @@ Este capítulo é **basilar** porque traduz segurança em capacidade de **deteta
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| Política de Logging Estruturado | Sim | Dev + DevOps | Logs normalizados e centralizados |
-| Política de Monitorização de Segurança | Sim | AppSec + SRE | Métricas críticas, dashboards e thresholds |
-| Política de Gestão de Alertas | Sim | IR + AppSec | Alertas críticos com SLA definido |
-| Política de Integração IRP | Sim | IR + GRC | Playbooks documentados e rastreabilidade |
-| Política de Métricas Operacionais | Recomendado | GRC | Revisão periódica de MTTD e MTTR |
+| [Política de Logging Estruturado](/sbd-toe/assets/policies/policy-logging-estruturado) | Sim | Dev + DevOps | Logs normalizados e centralizados |
+| [Política de Monitorização de Segurança](/sbd-toe/assets/policies/policy-monitorizacao-seguranca) | Sim | AppSec + SRE | Métricas críticas, dashboards e thresholds |
+| [Política de Gestão de Alertas](/sbd-toe/assets/policies/policy-gestao-alertas) | Sim | IR + AppSec | Alertas críticos com SLA definido |
+| [Política de Integração com IRP](/sbd-toe/assets/policies/policy-irp) | Sim | IR + GRC | Playbooks documentados e rastreabilidade |
+| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Recomendado | GRC | Revisão periódica de MTTD e MTTR |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.

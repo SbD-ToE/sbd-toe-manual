@@ -3,6 +3,7 @@ id: policy-requisitos-seguranca
 title: Política de Requisitos de Segurança
 description: Política organizacional que define como os requisitos de segurança devem ser selecionados, documentados, rastreados, validados e mantidos ao longo do ciclo de vida de cada aplicação, de forma proporcional ao nível de risco classificado.
 tags: [policy, requisitos, segurança, catálogo, backlog, rastreabilidade, validação, SDLC, cap02, L1, L2, L3, governance]
+grupo: design-analise
 sidebar_position: 7
 ---
 

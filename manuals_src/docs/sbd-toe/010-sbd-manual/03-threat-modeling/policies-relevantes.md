@@ -33,9 +33,9 @@ Estas políticas:
 
 | Nome da Política                               | Obrigatória | Aplicação                                             | Conteúdo mínimo esperado                                                                 |
 |------------------------------------------------|-------------|--------------------------------------------------------|------------------------------------------------------------------------------------------|
-| Política de Threat Modeling                    | ✅ Sim      | Todas as aplicações classificadas como L2 ou L3        | Critérios de obrigatoriedade, momentos de aplicação no ciclo, papéis envolvidos, ferramentas permitidas |
-| Política de Validação de Modelos de Ameaça     | ⚠️ Recomendado | Projetos com arquitetura nova ou alterações críticas | Processo de revisão técnica, validação cruzada por segurança, aceitação formal de risco  |
-| Política de Reutilização de Modelos de Ameaça  | ⚠️ Recomendado | Organizações com arquiteturas padronizadas           | Critérios para reaproveitamento seguro de modelos anteriores, validação por contexto     |
+| [Política de Threat Modeling](/sbd-toe/assets/policies/policy-threat-modeling)                    | ✅ Sim      | Todas as aplicações classificadas como L2 ou L3        | Critérios de obrigatoriedade, momentos de aplicação no ciclo, papéis envolvidos, ferramentas permitidas |
+| [Política de Validação de Modelos de Ameaça](/sbd-toe/assets/policies/policy-threat-modeling)     | ⚠️ Recomendado | Projetos com arquitetura nova ou alterações críticas | Processo de revisão técnica, validação cruzada por segurança, aceitação formal de risco  |
+| [Política de Reutilização de Modelos de Ameaça](/sbd-toe/assets/policies/policy-threat-modeling)  | ⚠️ Recomendado | Organizações com arquiteturas padronizadas           | Critérios para reaproveitamento seguro de modelos anteriores, validação por contexto     |
 
 ---
 

@@ -3,6 +3,7 @@ id: policy-arquitetura-segura
 title: Política de Arquitetura Segura
 description: Política organizacional que define os requisitos para a aplicação de princípios de arquitetura segura ao longo do ciclo de vida de aplicações classificadas L2 e L3, incluindo a definição de baseline, gestão de decisões arquiteturais (ADR), revisão de trust boundaries, integração com threat modeling e requisitos de aprovação formal.
 tags: [policy, arquitetura, ADR, trust boundaries, solution-architecture, padrões, cap04, L2, L3, governance, design]
+grupo: design-analise
 sidebar_position: 9
 ---
 

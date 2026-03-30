@@ -3,6 +3,7 @@ id: policy-uso-ferramentas-apoio
 title: Política de Uso de Ferramentas de Apoio ao Desenvolvimento
 description: Política organizacional que define os requisitos para o uso controlado de ferramentas de apoio ao desenvolvimento, incluindo assistentes de IA generativa (GenAI/Copilot), com foco em revisão obrigatória de output, rastreabilidade, validação de licenças e manutenção da responsabilidade humana, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, GenAI, Copilot, ferramentas, assistentes IA, revisão, licenças, rastreabilidade, desenvolvimento seguro, cap06, L1, L2, L3, governance]
+grupo: desenvolvimento
 sidebar_position: 16
 ---
 

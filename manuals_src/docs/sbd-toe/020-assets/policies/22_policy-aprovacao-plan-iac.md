@@ -3,6 +3,7 @@ id: policy-aprovacao-plan-iac
 title: Política de Aprovação de Plan IaC
 description: Política organizacional que define o processo formal de revisão e aprovação de planos de execução de IaC (terraform plan ou equivalente) antes de qualquer apply em ambientes de staging ou produção, incluindo separação de funções, assinatura de planos, dupla aprovação e janelas de execução, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, IaC, plan, apply, aprovação, separação de funções, assinatura, janela de mudança, cap08, L1, L2, L3, governance, infraestrutura]
+grupo: infraestrutura
 sidebar_position: 22
 ---
 

@@ -29,12 +29,12 @@ Estas políticas:
 
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Resumo do Conteúdo Necessário                                                  |
 |--------------------------------------------------|--------------|--------------------------------------------|---------------------------------------------------------------------------------|
-| Política de Monitorização e Logging              | ✅ Sim        | Todos os serviços e aplicações             | Definição de eventos, níveis de logging, formatos estruturados, destinos centralizados. |
-| Política de Alertas e Deteção de Comportamentos  | ✅ Sim        | Sistemas críticos e ambientes de produção  | Tipos de eventos sensíveis, thresholds, tolerância a falso-positivos, resposta. |
-| Política de Observabilidade de Serviços          | ⚠️ Opcional  | Microserviços e arquiteturas distribuídas  | Métricas mínimas, dashboards obrigatórios, correlação com logs.                |
-| Política de Retenção e Acesso a Registos         | ✅ Sim        | Todos os logs de segurança e operação      | Retenção ≥30 dias, ACL, cifragem, registo de acessos.                          |
-| Política de Resposta a Incidentes Operacionais   | ✅ Sim        | Todos os domínios com deteção ativa        | Canais de resposta, playbooks, reporte, owners de domínio.                     |
-| Política de Cobertura de Agentes e Instrumentação| ⚠️ Opcional  | Infraestrutura, cloud, endpoints           | Tipos de agentes obrigatórios, cobertura mínima, manutenção de visibilidade.   |
+| [Política de Monitorização e Logging](/sbd-toe/assets/policies/policy-logging-estruturado)              | ✅ Sim        | Todos os serviços e aplicações             | Definição de eventos, níveis de logging, formatos estruturados, destinos centralizados. |
+| [Política de Alertas e Deteção de Comportamentos](/sbd-toe/assets/policies/policy-gestao-alertas)  | ✅ Sim        | Sistemas críticos e ambientes de produção  | Tipos de eventos sensíveis, thresholds, tolerância a falso-positivos, resposta. |
+| [Política de Observabilidade de Serviços](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)          | ⚠️ Opcional  | Microserviços e arquiteturas distribuídas  | Métricas mínimas, dashboards obrigatórios, correlação com logs.                |
+| [Política de Retenção e Acesso a Registos](/sbd-toe/assets/policies/policy-logging-estruturado)         | ✅ Sim        | Todos os logs de segurança e operação      | Retenção ≥30 dias, ACL, cifragem, registo de acessos.                          |
+| [Política de Resposta a Incidentes Operacionais](/sbd-toe/assets/policies/policy-irp)   | ✅ Sim        | Todos os domínios com deteção ativa        | Canais de resposta, playbooks, reporte, owners de domínio.                     |
+| [Política de Cobertura de Agentes e Instrumentação](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)| ⚠️ Opcional  | Infraestrutura, cloud, endpoints           | Tipos de agentes obrigatórios, cobertura mínima, manutenção de visibilidade.   |
 
 ---
 

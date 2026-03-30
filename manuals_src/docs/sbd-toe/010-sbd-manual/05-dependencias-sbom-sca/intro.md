@@ -6,12 +6,16 @@ tags: [dependencias, sbom, sca, supply-chain, oss, cicd, governance]
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos. Estes capítulos traduzem as prescrições basilares em práticas de **execução verificável**, promovendo a **integração contínua da segurança** ao longo do ciclo de vida do software.
-:::
+
+</ChapterTypeCallout>
 
 # Dependências, SBOM e SCA
 
@@ -139,10 +143,11 @@ Ligação a outros capítulos:
 
 | Política                          | Obrigatória | Aplicação              | Conteúdo mínimo esperado                                  |
 |----------------------------------|-------------|------------------------|-----------------------------------------------------------|
-| Política de Dependências         | Sim         | Todos os projetos      | Critérios de aprovação, *pinning*, bloqueio externo       |
-| Política de SBOM                 | Sim         | Todos os builds        | CycloneDX/SPDX, versionamento, retenção                   |
-| Política de Exceções a CVEs      | Sim         | Projetos críticos      | Justificação, prazo, mitigação compensatória              |
-| Política de Bibliotecas Locais   | Sim         | Todos os repositórios  | Proibição de JS/PHP/DLL/JAR locais fora de *package manager* |
-| **Política de Atualização Automática** | Sim   | L2–L3                   | Bots ativos, *impact analysis*, critérios de *auto‑merge*, *handoff* humano |
+| [Política de Dependências](/sbd-toe/assets/policies/policy-dependencias)         | Sim         | Todos os projetos      | Critérios de aprovação, *pinning*, bloqueio externo       |
+| [Política de SBOM](/sbd-toe/assets/policies/policy-sbom)                 | Sim         | Todos os builds        | CycloneDX/SPDX, versionamento, retenção                   |
+| [Política de Exceções a CVEs](/sbd-toe/assets/policies/policy-excecoes-cve)      | Sim         | Projetos críticos      | Justificação, prazo, mitigação compensatória              |
+| [Política de Dependências — Bibliotecas Locais](/sbd-toe/assets/policies/policy-dependencias)   | Sim         | Todos os repositórios  | Proibição de JS/PHP/DLL/JAR locais fora de *package manager* |
+| [Política de Atualização Automática de Dependências](/sbd-toe/assets/policies/policy-atualizacao-automatica) | Sim   | L2–L3                   | Bots ativos, *impact analysis*, critérios de *auto‑merge*, *handoff* humano |
+| [Política de Gestão de Exceções](/sbd-toe/assets/policies/policy-gestao-excecoes) | ⚠️ Opcional | Todos os projetos | Processo formal de exceção a requisitos de supply chain: justificação, prazo e aprovação |
 
 Na versão impressa, consultar o **Anexo de Políticas do Manual**, onde estas políticas estão consolidadas transversalmente.

@@ -33,12 +33,12 @@ Estas políticas:
 
 | Nome da Política                              | Obrigatória? | Aplicação                                | Resumo do conteúdo necessário |
 |-----------------------------------------------|--------------|-------------------------------------------|-------------------------------|
-| Política de Execução Segura de Pipelines      | ✅ Sim       | Todas as pipelines de CI/CD               | Regras de execução autorizada; runners permitidos; controlo por branch/contexto; eventos que disparam builds. |
-| Política de Segregação de Ambientes e Runners | ✅ Sim       | Equipas DevOps, Segurança, Cloud          | Regras de isolamento por projeto/confiança; runners dedicados; proibição de execução cruzada sem aprovação. |
-| Política de Injeção e Proteção de Segredos    | ✅ Sim       | Toda a organização                        | Origem e gestão de segredos; proibição de hardcoded; mascaramento em logs; integração com vaults. |
-| Política de Validação de Artefactos e Proveniência | ✅ Sim   | Repositórios, pipelines, ambientes de staging/prod | Geração e verificação de proveniência; hash e assinatura; regras para promoção entre ambientes. |
-| Política de Revisão de Pipelines              | ⚠️ Opcional | Organizações com pipelines partilhadas    | Peer review obrigatória; controlo de alterações; aprovação técnica de templates. |
-| Política de Aplicação Proporcional por Risco  | ⚠️ Opcional | Organizações com classificação formal     | Mapeamento entre nível de risco e controlos mínimos exigidos no pipeline. |
+| [Política de Execução Segura de Pipelines](/sbd-toe/assets/policies/policy-cicd-seguro)      | ✅ Sim       | Todas as pipelines de CI/CD               | Regras de execução autorizada; runners permitidos; controlo por branch/contexto; eventos que disparam builds. |
+| [Política de Segregação de Ambientes e Runners](/sbd-toe/assets/policies/policy-cicd-seguro) | ✅ Sim       | Equipas DevOps, Segurança, Cloud          | Regras de isolamento por projeto/confiança; runners dedicados; proibição de execução cruzada sem aprovação. |
+| [Política de Injeção e Proteção de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)    | ✅ Sim       | Toda a organização                        | Origem e gestão de segredos; proibição de hardcoded; mascaramento em logs; integração com vaults. |
+| [Política de Validação de Artefactos e Proveniência](/sbd-toe/assets/policies/policy-cicd-seguro) | ✅ Sim   | Repositórios, pipelines, ambientes de staging/prod | Geração e verificação de proveniência; hash e assinatura; regras para promoção entre ambientes. |
+| [Política de Revisão de Pipelines](/sbd-toe/assets/policies/policy-cicd-seguro)              | ⚠️ Opcional | Organizações com pipelines partilhadas    | Peer review obrigatória; controlo de alterações; aprovação técnica de templates. |
+| [Política de Aplicação Proporcional por Risco](/sbd-toe/assets/policies/policy-classificacao-risco)  | ⚠️ Opcional | Organizações com classificação formal     | Mapeamento entre nível de risco e controlos mínimos exigidos no pipeline. |
 
 ---
 

@@ -6,12 +6,16 @@ tags: [testes, segurança, validação contínua, SAST, DAST, fuzzing, pentestin
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, traduzindo prescrições basilares em práticas de **execução verificável**, com **evidência objetiva, rastreável e auditável**.
-:::
+
+</ChapterTypeCallout>
 
 # Testes de Segurança
 
@@ -86,12 +90,12 @@ A responsabilidade pelos testes é **coletiva**, mas cada papel tem responsabili
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |--------|--------------|-----------|-----------------|
-| Política de Estratégia de Testes | Sim | AppSec | Documento versionado com mapeamento Cap. 2 ⇄ testes |
-| Política de SAST em PR | Sim | Dev + DevOps | Execução automática em PRs, thresholds L1–L3 |
-| Política de DAST/Fuzzing | Recomendado | QA/Testes | DAST autenticado, fuzzing em endpoints críticos |
-| Política de Gates CI/CD | Sim | DevOps + AppSec | Critérios formais, logs preservados, exceções registadas |
-| Política de Release Seguro | Sim | Gestão + AppSec | Checklist de release e aceitação de risco documentada |
-| Política de PenTesting | Recomendado (L2), Obrigatório (L3) | AppSec | Âmbito por risco, relatórios técnicos e retests |
+| [Política de Estratégia de Testes](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | AppSec | Documento versionado com mapeamento Cap. 2 ⇄ testes |
+| [Política de SAST em PR](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | Dev + DevOps | Execução automática em PRs, thresholds L1–L3 |
+| [Política de DAST e Fuzzing](/sbd-toe/assets/policies/policy-dast-fuzzing) | Recomendado | QA/Testes | DAST autenticado, fuzzing em endpoints críticos |
+| [Política de Gates CI/CD](/sbd-toe/assets/policies/policy-cicd-seguro) | Sim | DevOps + AppSec | Critérios formais, logs preservados, exceções registadas |
+| [Política de Release Seguro](/sbd-toe/assets/policies/policy-release-seguro) | Sim | Gestão + AppSec | Checklist de release e aceitação de risco documentada |
+| [Política de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting) | Recomendado (L2), Obrigatório (L3) | AppSec | Âmbito por risco, relatórios técnicos e retests |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**.
 

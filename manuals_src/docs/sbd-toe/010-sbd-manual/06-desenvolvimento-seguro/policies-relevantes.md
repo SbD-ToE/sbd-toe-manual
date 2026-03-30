@@ -23,11 +23,11 @@ Estas políticas garantem que:
 
 | Nome da Política                                  | Obrigatória? | Aplicação                            | Resumo do conteúdo necessário |
 |---------------------------------------------------|--------------|---------------------------------------|-------------------------------|
-| Política de Padrões de Codificação Segura         | ✅ Sim       | Todas as equipas de desenvolvimento  | Guia formal com boas práticas, padrões proibidos, regras obrigatórias por stack ou linguagem. |
-| Política de Validação e Revisão de Código         | ✅ Sim       | Todos os repositórios e pipelines     | Requisitos para revisão por pares, uso de linters, tags `@sec:`, rastreabilidade e bloqueios. |
-| Política de Aprovação de Dependências de Código   | ✅ Sim       | Introdução de bibliotecas e pacotes    | Processo formal para aprovar e rastrear dependências externas ou internas reutilizadas. |
-| Política de Justificação de Exceções Técnicas     | ⚠️ Opcional | Equipa de segurança, tech leads        | Casos aceitáveis de exceção, requisitos de documentação, prazo e aprovação formal. |
-| Política de Uso Controlado de GenIA em Desenvolvimento | ⚠️ Opcional | Equipas com acesso a ferramentas GenIA | Critérios para uso de sugestões automáticas (ex: Copilot); validação, anotação de origem, revisão obrigatória. |
+| [Política de Padrões de Codificação Segura](/sbd-toe/assets/policies/policy-guidelines-desenvolvimento)         | ✅ Sim       | Todas as equipas de desenvolvimento  | Guia formal com boas práticas, padrões proibidos, regras obrigatórias por stack ou linguagem. |
+| [Política de Validação e Revisão de Código](/sbd-toe/assets/policies/policy-revisao-codigo)         | ✅ Sim       | Todos os repositórios e pipelines     | Requisitos para revisão por pares, uso de linters, tags `@sec:`, rastreabilidade e bloqueios. |
+| [Política de Aprovação de Dependências de Código](/sbd-toe/assets/policies/policy-dependencias)   | ✅ Sim       | Introdução de bibliotecas e pacotes    | Processo formal para aprovar e rastrear dependências externas ou internas reutilizadas. |
+| [Política de Justificação de Exceções Técnicas](/sbd-toe/assets/policies/policy-gestao-excecoes)     | ⚠️ Opcional | Equipa de segurança, tech leads        | Casos aceitáveis de exceção, requisitos de documentação, prazo e aprovação formal. |
+| [Política de Uso Controlado de GenIA em Desenvolvimento](/sbd-toe/assets/policies/policy-uso-ferramentas-apoio) | ⚠️ Opcional | Equipas com acesso a ferramentas GenIA | Critérios para uso de sugestões automáticas (ex: Copilot); validação, anotação de origem, revisão obrigatória. |
 
 ---
 

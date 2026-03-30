@@ -3,6 +3,7 @@ id: policy-dast-fuzzing
 title: Política de DAST e Fuzzing
 description: Política organizacional que define os requisitos, critérios de execução, gestão de findings e responsabilidades para testes dinâmicos de segurança (DAST) e fuzzing, proporcional ao nível de risco da aplicação.
 tags: [policy, dast, fuzzing, testes dinâmicos, segurança, cap10, cap07, L2, L3, findings, pipeline]
+grupo: testes
 sidebar_position: 1
 ---
 

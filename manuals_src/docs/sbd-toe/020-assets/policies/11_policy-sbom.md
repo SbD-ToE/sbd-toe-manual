@@ -3,6 +3,7 @@ id: policy-sbom
 title: Política de SBOM (Software Bill of Materials)
 description: Política organizacional que define os requisitos de geração, formato, assinatura, proveniência, arquivamento e retenção de SBOMs (Software Bill of Materials) em builds de software, contentor e IaC, proporcional ao nível de criticidade da aplicação (L1, L2, L3).
 tags: [policy, SBOM, CycloneDX, SPDX, proveniência, assinatura, supply chain, cap05, cap07, cap09, L1, L2, L3, governance, rastreabilidade]
+grupo: supply-chain
 sidebar_position: 11
 ---
 

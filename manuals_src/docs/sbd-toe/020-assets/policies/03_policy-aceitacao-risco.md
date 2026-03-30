@@ -3,6 +3,7 @@ id: policy-aceitacao-risco
 title: Política de Aceitação de Risco Residual
 description: Política organizacional que define os critérios, o processo formal, as alçadas de aprovação e os requisitos de rastreabilidade para a aceitação de risco residual em aplicações classificadas L1 a L3, incluindo riscos provenientes de controlos não aplicados, findings não corrigidos e ameaças identificadas no threat modeling.
 tags: [policy, risco residual, aceitação de risco, exceções, cap01, cap03, cap10, governance, L1, L2, L3]
+grupo: risco
 sidebar_position: 3
 ---
 

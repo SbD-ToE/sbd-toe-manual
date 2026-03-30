@@ -3,6 +3,7 @@ id: policy-threat-modeling
 title: Política de Threat Modeling
 description: Política organizacional que define a obrigatoriedade, metodologia, triggers de execução, requisitos de aprovação formal, rastreabilidade e gestão dos artefactos de threat modeling ao longo do ciclo de vida de aplicações classificadas L2 e L3.
 tags: [policy, threat modeling, STRIDE, LINDDUN, PASTA, ameaças, cap03, cap04, L2, L3, governance, arquitetura, rastreabilidade]
+grupo: design-analise
 sidebar_position: 8
 ---
 

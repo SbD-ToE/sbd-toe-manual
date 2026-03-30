@@ -145,6 +145,12 @@ const config: Config = {
           items: [{label: 'SbD-ToE', to: '/sbd-toe/sbd-manual/'}],
         },
         {
+          title: 'Assets',
+          items: [
+            {label: 'Políticas Organizacionais', to: '/sbd-toe/assets/intro'},
+          ],
+        },
+        {
           title: 'Mais',
           items: [
             {label: 'GitHub', href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual'},

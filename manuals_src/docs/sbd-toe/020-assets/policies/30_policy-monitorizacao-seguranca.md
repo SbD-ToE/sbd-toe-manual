@@ -3,6 +3,7 @@ id: policy-monitorizacao-seguranca
 title: Política de Monitorização de Segurança
 description: Política organizacional que define os requisitos de monitorização de segurança em produção, incluindo definição de eventos críticos, integração com SIEM, correlação comportamental, cobertura de domínios de monitorização e revisão periódica de regras de detecção, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, monitorização, segurança, SIEM, correlação, detecção, anomalias, eventos críticos, cap12, L1, L2, L3, governance, SOC]
+grupo: operacoes
 sidebar_position: 30
 ---
 

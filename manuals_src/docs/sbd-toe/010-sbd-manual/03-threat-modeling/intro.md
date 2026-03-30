@@ -5,14 +5,18 @@ description: Identificação, análise e mitigação estruturada de ameaças dur
 tags: [threat-modeling, stride, linddun, requisitos, mitigacao, risco, arquitetura, SAMM, SSDF, SLSA, DSOMM]
 ---
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="basilar" title="Capítulo Basilar">
+
+Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.
 
 A ausência ou aplicação parcial do Threat Modeling compromete a **ligação formal entre risco, arquitetura e requisitos**, tornando inviável uma adoção consistente do SbD-ToE.
-:::
 
-# 📘 Capítulo 3 - Threat Modeling
+</ChapterTypeCallout>
+
+# Capítulo 3 - Threat Modeling
 
 ## 1. 🧭 O que cobre tecnicamente
 
@@ -126,3 +130,14 @@ Este capítulo cobre:
 > 📌 Este capítulo é **obrigatório** para aplicações **L2 e L3**.  
 > É o mecanismo que garante que os requisitos de segurança **respondem a ameaças reais**,  
 > e que a arquitetura é avaliada **antes** de ser explorada em produção.
+
+---
+
+## 📜 Políticas Organizacionais Relevantes
+
+| Política | Obrigatória? | Aplicação | Conteúdo mínimo |
+|----------|--------------|-----------|------------------|
+| [Política de Threat Modeling](/sbd-toe/assets/policies/policy-threat-modeling) | ✅ Sim (L2–L3) | AppSec, Arquitetura | Metodologia obrigatória, âmbito, artefactos mínimos, rastreabilidade e cadência |
+
+[📎 Ver detalhe das políticas recomendadas para este capítulo](./policies-relevantes)  
+Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**.

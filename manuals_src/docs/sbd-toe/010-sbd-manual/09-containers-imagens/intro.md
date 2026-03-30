@@ -8,12 +8,16 @@ tags:
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua, mensurável e auditável.
 
 Os capítulos operacionais assumem explicitamente o uso extensivo de automação no SSDLC moderno e tratam os **riscos introduzidos pelo próprio processo de execução**, não apenas pela tecnologia utilizada.
-:::
+
+</ChapterTypeCallout>
 
 
 # Containers e Execução Isolada
@@ -171,10 +175,10 @@ Elas garantem que não dependemos apenas da disciplina individual, mas de regras
 
 | Política organizacional         | Obrigatória | Aplicação | Conteúdo mínimo |
 |---------------------------------|-------------|-----------|-----------------|
-| Política de Containers Seguros  | Sim         | Todos os projetos | Allowlist + digest-only, scanners, assinatura/proveniência, RBAC/SA, NetworkPolicy |
-| Política de Gestão de Segredos  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos na imagem, rotação |
-| Política de Rastreabilidade     | Recomendado | GRC/Auditoria | Logs commit→pipeline→deploy, retenção, export imutável |
-| Política de Golden Base Images  | Sim         | Plataforma, AppSec | Catálogo, SLA de patching, depreciação |
-| Política de Builders/Runners    | Recomendado | DevOps | Ephemerais, mínimos, assinados, cache controlada |
+| [Política de Containers Seguros](/sbd-toe/assets/policies/policy-containers-seguros)  | Sim         | Todos os projetos | Allowlist + digest-only, scanners, assinatura/proveniência, RBAC/SA, NetworkPolicy |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos na imagem, rotação |
+| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC/Auditoria | Logs commit→pipeline→deploy, retenção, export imutável |
+| [Política de Golden Base Images](/sbd-toe/assets/policies/policy-golden-base-images)  | Sim         | Plataforma, AppSec | Catálogo, SLA de patching, depreciação |
+| [Política de CI/CD Seguro — Builders/Runners](/sbd-toe/assets/policies/policy-cicd-seguro)    | Recomendado | DevOps | Ephemerais, mínimos, assinados, cache controlada |
 
 ---

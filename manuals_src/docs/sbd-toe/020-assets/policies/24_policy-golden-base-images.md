@@ -3,6 +3,7 @@ id: policy-golden-base-images
 title: Política de Golden Base Images
 description: Política organizacional que define os requisitos para a criação, aprovação, versionamento semântico, patching, depreciação e revogação de imagens base de container aprovadas pela organização (Golden Base Images), incluindo SLAs de patching por criticidade e gestão do catálogo interno, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, golden base images, imagens base, container, catálogo, patching, digest, depreciação, revogação, cap09, L1, L2, L3, governance]
+grupo: infraestrutura
 sidebar_position: 24
 ---
 

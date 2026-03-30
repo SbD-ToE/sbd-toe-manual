@@ -3,6 +3,7 @@ id: policy-deploy-seguro
 title: Política de Deploy Seguro
 description: Política organizacional que define os requisitos de segurança para o processo de deploy de software em produção, incluindo verificação de artefactos assinados, separação de ambientes, estratégias de rollout progressivo, separação entre automação e autorização humana, e rastreabilidade ponta-a-ponta, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, deploy, deploy seguro, rollout, canary, blue-green, artefactos assinados, rollback, rastreabilidade, cap11, L1, L2, L3, governance]
+grupo: pipeline-entrega
 sidebar_position: 25
 ---
 

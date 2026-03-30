@@ -3,6 +3,7 @@ id: policy-containers-seguros
 title: Política de Containers Seguros
 description: Política organizacional que define os requisitos de segurança para a construção, scanning, assinatura, configuração de runtime e gestão de imagens de container, incluindo hardening de securityContext, policies de admissão em Kubernetes, isolamento de rede e monitorização de runtime, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, containers, Docker, Kubernetes, imagens, scanning, runtime, securityContext, OPA, Kyverno, assinatura, cap09, L1, L2, L3, governance]
+grupo: infraestrutura
 sidebar_position: 23
 ---
 

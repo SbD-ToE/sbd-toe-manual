@@ -6,12 +6,16 @@ tags: [infraestrutura, iac, terraform, segurança, automatização, DSOMM, SAMM,
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
-A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
+A sua função é **aplicar, automatizar e validar** as práticas definidas nos capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, traduzindo prescrições basilares em práticas de **execução verificável**, com evidência técnica, rastreabilidade e governação.
-:::
+
+</ChapterTypeCallout>
 
 ---
 
@@ -129,9 +133,11 @@ Políticas formais garantem que as práticas não dependem apenas da disciplina 
 
 | Política organizacional           | Obrigatória | Aplicação                     | Conteúdo mínimo |
 |----------------------------------|-------------|-------------------------------|-----------------|
-| Política de IaC Seguro            | Sim         | Todos os projetos IaC         | Padrões técnicos, segregação de ambientes, pipelines obrigatórios, enforcement de policies |
-| Política de Gestão de Módulos IaC | Recomendado | DevOps/Infra, Arquitetura     | Uso de módulos verificados, pinagem de versão, auditoria de origem |
-| Política de Rastreabilidade IaC   | Sim         | DevOps, GRC                   | Mapeamento ficheiro → recurso → ambiente, histórico auditável |
-| Política de Aprovação de `plan`   | Sim         | DevOps, AppSec                | Revisão humana obrigatória, critérios de impacto, rollback e SoD |
+| [Política de IaC Seguro](/sbd-toe/assets/policies/policy-iac-seguro)            | Sim         | Todos os projetos IaC         | Padrões técnicos, segregação de ambientes, pipelines obrigatórios, enforcement de policies |
+| [Política de Gestão de Módulos IaC](/sbd-toe/assets/policies/policy-iac-seguro) | Recomendado | DevOps/Infra, Arquitetura     | Uso de módulos verificados, pinagem de versão, auditoria de origem |
+| [Política de Rastreabilidade IaC](/sbd-toe/assets/policies/policy-rastreabilidade)   | Sim         | DevOps, GRC                   | Mapeamento ficheiro → recurso → ambiente, histórico auditável |
+| [Política de Aprovação de `plan` IaC](/sbd-toe/assets/policies/policy-aprovacao-plan-iac)   | Sim         | DevOps, AppSec                | Revisão humana obrigatória, critérios de impacto, rollback e SoD |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos) | Sim | DevOps, AppSec | OIDC/TTL curto, proibição de segredos em código IaC, rotação periódica |
+| [Política de Rollback e Recuperação](/sbd-toe/assets/policies/policy-rollback) | ⚠️ Reforçada | Ambientes críticos | Reversão automatizada, testes periódicos de restauração de estado |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do Manual**, onde estas políticas estão consolidadas transversalmente.

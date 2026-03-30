@@ -31,11 +31,11 @@ Estas políticas:
 
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Conteúdo mínimo esperado                                                                 |
 |--------------------------------------------------|--------------|--------------------------------------------|--------------------------------------------------------------------------------------------|
-| Política de Arquitetura Segura                   | ✅ Sim       | Todas as equipas com responsabilidade técnica | Padrões obrigatórios, definição de zonas de confiança, segmentação, requisitos mínimos     |
-| Política de Aprovação Técnica de Design          | ✅ Sim       | Projetos com impacto da arquitetura            | Processo formal de revisão, papéis e responsabilidades, critérios técnicos de aceitação    |
-| Política de Documentação e Versionamento Arquitetural | ✅ Sim   | Sistemas com criticidade L2 ou L3            | Regras de diagrama, versão controlada, atualização em alterações estruturais               |
-| Política de Rastreabilidade Arquitetónica        | ✅ Sim       | Projetos sujeitos a controlo ou auditoria    | Mapeamento de requisitos (ARC-00x) → componente → controlo técnico                         |
-| Política de Exceções Técnicas em Arquitetura     | ✅ Sim       | Sempre que um requisito não for aplicável    | Formulário formal, ciclo de revisão, plano compensatório, validade e owner técnico         |
+| [Política de Arquitetura Segura](/sbd-toe/assets/policies/policy-arquitetura-segura)                   | ✅ Sim       | Todas as equipas com responsabilidade técnica | Padrões obrigatórios, definição de zonas de confiança, segmentação, requisitos mínimos     |
+| [Política de Aprovação Técnica de Design](/sbd-toe/assets/policies/policy-arquitetura-segura)          | ✅ Sim       | Projetos com impacto da arquitetura            | Processo formal de revisão, papéis e responsabilidades, critérios técnicos de aceitação    |
+| [Política de Documentação e Versionamento Arquitetural](/sbd-toe/assets/policies/policy-arquitetura-segura) | ✅ Sim   | Sistemas com criticidade L2 ou L3            | Regras de diagrama, versão controlada, atualização em alterações estruturais               |
+| [Política de Rastreabilidade Arquitetónica](/sbd-toe/assets/policies/policy-rastreabilidade)        | ✅ Sim       | Projetos sujeitos a controlo ou auditoria    | Mapeamento de requisitos (ARC-00x) → componente → controlo técnico                         |
+| [Política de Exceções Técnicas em Arquitetura](/sbd-toe/assets/policies/policy-gestao-excecoes)     | ✅ Sim       | Sempre que um requisito não for aplicável    | Formulário formal, ciclo de revisão, plano compensatório, validade e owner técnico         |
 
 ---
 

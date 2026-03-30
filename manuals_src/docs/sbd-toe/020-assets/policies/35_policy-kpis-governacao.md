@@ -3,6 +3,7 @@ id: policy-kpis-governacao
 title: Política de KPIs de Governação de Segurança
 description: Política organizacional que define os requisitos para a definição, recolha, análise e reporte de KPIs de governação de segurança, incluindo categorias de métricas, cadência de reporting, responsabilidades, thresholds de intervenção e integração com frameworks de maturidade (SAMM, SSDF), proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, KPIs, governação, métricas, maturidade, SAMM, SSDF, reporting, dashboard, cap14, L1, L2, L3, governance, CISO, GRC]
+grupo: governacao
 sidebar_position: 35
 ---
 

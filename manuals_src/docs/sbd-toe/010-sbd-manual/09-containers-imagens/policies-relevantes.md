@@ -22,14 +22,14 @@ Estas políticas asseguram que:
 
 | Nome da Política | Obrigatória? | Aplicação | Resumo do Conteúdo Necessário |
 |------------------|--------------|------------|--------------------------------|
-| **Política de Construção Segura de Imagens** | ✅ Sim | Todos os pipelines de build | Define requisitos de base segura, _digest pinning_, versões fixas, _linting_ e validação automática de Dockerfiles; obriga revisão e aprovação antes de publicação. |
-| **Política de Gestão de Vulnerabilidades em Imagens** | ✅ Sim | Registos e pipelines CI/CD | Obriga _scanning_ automatizado (SCA, CVE, licenças); define critérios de severidade e prazos de correção; bloqueio em vulnerabilidades críticas. |
-| **Política de Assinatura e Proveniência de Imagens** | ✅ Sim | Registos internos e externos | Exige assinatura digital (Sigstore/Cosign), _attestations_ SLSA e verificação de integridade antes da execução. |
-| **Política de Governação de Registos e Repositórios de Containers** | ✅ Sim | Todos os registos e repositórios internos | Define _ownership_, controlo de acesso, _RBAC_, retenção, limpeza periódica, auditoria e _access logs_. |
-| **Política de Hardening e Execução Segura de Containers** | ⚠️ Reforçada | Ambientes de execução (Docker, Kubernetes, etc.) | Define parâmetros mínimos de isolamento (seccomp, AppArmor, SELinux), _network policies_, _least privilege_ e _read-only rootfs_. |
-| **Política de Gestão de Imagens Obsoletas e Limpeza** | ⚠️ Recomendável | Repositórios e pipelines | Estabelece prazos de retenção, políticas de _rebuild_ e remoção de imagens vulneráveis ou sem uso. |
-| **Política de Validação e Aprovação de Manifestos de Deploy** | ⚠️ Reforçada | Kubernetes, Compose, Helm | Obriga validação automatizada de manifestos com _policy-as-code_ (OPA, Conftest) e _admission controllers_ de segurança. |
-| **Política de Observabilidade e Auditoria de Execução de Containers** | ⚠️ Reforçada | Ambientes produtivos | Determina recolha de métricas, _runtime logs_, correlação commit-digest-deploy e alertas automáticos para _shadow containers_. |
+| [**Política de Construção Segura de Imagens**](/sbd-toe/assets/policies/policy-golden-base-images) | ✅ Sim | Todos os pipelines de build | Define requisitos de base segura, _digest pinning_, versões fixas, _linting_ e validação automática de Dockerfiles; obriga revisão e aprovação antes de publicação. |
+| [**Política de Gestão de Vulnerabilidades em Imagens**](/sbd-toe/assets/policies/policy-containers-seguros) | ✅ Sim | Registos e pipelines CI/CD | Obriga _scanning_ automatizado (SCA, CVE, licenças); define critérios de severidade e prazos de correção; bloqueio em vulnerabilidades críticas. |
+| [**Política de Assinatura e Proveniência de Imagens**](/sbd-toe/assets/policies/policy-containers-seguros) | ✅ Sim | Registos internos e externos | Exige assinatura digital (Sigstore/Cosign), _attestations_ SLSA e verificação de integridade antes da execução. |
+| [**Política de Governação de Registos e Repositórios de Containers**](/sbd-toe/assets/policies/policy-containers-seguros) | ✅ Sim | Todos os registos e repositórios internos | Define _ownership_, controlo de acesso, _RBAC_, retenção, limpeza periódica, auditoria e _access logs_. |
+| [**Política de Hardening e Execução Segura de Containers**](/sbd-toe/assets/policies/policy-containers-seguros) | ⚠️ Reforçada | Ambientes de execução (Docker, Kubernetes, etc.) | Define parâmetros mínimos de isolamento (seccomp, AppArmor, SELinux), _network policies_, _least privilege_ e _read-only rootfs_. |
+| [**Política de Gestão de Imagens Obsoletas e Limpeza**](/sbd-toe/assets/policies/policy-containers-seguros) | ⚠️ Recomendável | Repositórios e pipelines | Estabelece prazos de retenção, políticas de _rebuild_ e remoção de imagens vulneráveis ou sem uso. |
+| [**Política de Validação e Aprovação de Manifestos de Deploy**](/sbd-toe/assets/policies/policy-containers-seguros) | ⚠️ Reforçada | Kubernetes, Compose, Helm | Obriga validação automatizada de manifestos com _policy-as-code_ (OPA, Conftest) e _admission controllers_ de segurança. |
+| [**Política de Observabilidade e Auditoria de Execução de Containers**](/sbd-toe/assets/policies/policy-containers-seguros) | ⚠️ Reforçada | Ambientes produtivos | Determina recolha de métricas, _runtime logs_, correlação commit-digest-deploy e alertas automáticos para _shadow containers_. |
 
 ---
 

@@ -3,6 +3,7 @@ id: policy-rollback
 title: Política de Rollback
 description: Política organizacional que define os requisitos para a capacidade de rollback de deploys em produção, incluindo tipos de rollback por componente (binário, configuração, base de dados, infraestrutura), critérios de activação, RTO por nível de criticidade, procedimentos de teste periódico e rastreabilidade, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, rollback, reversão, deploy, RTO, base de dados, infraestrutura, resiliência, cap11, L1, L2, L3, governance]
+grupo: pipeline-entrega
 sidebar_position: 27
 ---
 

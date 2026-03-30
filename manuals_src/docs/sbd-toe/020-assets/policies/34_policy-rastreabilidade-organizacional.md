@@ -3,6 +3,7 @@ id: policy-rastreabilidade-organizacional
 title: Política de Rastreabilidade Organizacional
 description: Política organizacional que define os requisitos para a rastreabilidade das práticas de segurança ao longo do ciclo de vida das aplicações, incluindo repositório de conformidade por aplicação, designação de owners de segurança, validações periódicas por capítulo SbD-ToE, evidências auditáveis e dashboard organizacional, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, rastreabilidade, conformidade, owners, Security Champion, repositório conformidade, auditoria, dashboard, cap14, L1, L2, L3, governance, SSDF, ISO27001]
+grupo: governacao
 sidebar_position: 34
 ---
 

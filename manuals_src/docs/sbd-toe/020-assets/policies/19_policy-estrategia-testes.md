@@ -3,6 +3,7 @@ id: policy-estrategia-testes
 title: Política de Estratégia de Testes de Segurança
 description: Política organizacional que define os requisitos para a estratégia de testes de segurança ao longo do ciclo de vida de aplicações, incluindo SAST, DAST, SCA, IAST, fuzzing e testes manuais, com gates obrigatórios, SLAs de triagem de findings e gestão centralizada de resultados, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, testes de segurança, SAST, DAST, IAST, SCA, fuzzing, gates, findings, triagem, SLA, cap10, L1, L2, L3, governance, DevSecOps]
+grupo: testes
 sidebar_position: 19
 ---
 

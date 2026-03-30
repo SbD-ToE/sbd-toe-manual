@@ -33,12 +33,12 @@ Estas políticas:
 
 | Nome da Política                                      | Obrigatória? | Aplicação                                   | Resumo do conteúdo necessário |
 |-------------------------------------------------------|--------------|----------------------------------------------|-------------------------------|
-| Política de Gestão de Dependências e Bibliotecas      | ✅ Sim       | Todos os projetos com código de terceiros    | Regras para uso, aprovação, versionamento, atualização e bloqueio de dependências. |
-| Política de Integração e Gestão de SBOM               | ✅ Sim       | Pipelines de build, release e auditoria      | Formato exigido (CycloneDX/SPDX), frequência de geração, artefactos obrigatórios e retenção. |
-| Política de Avaliação de Vulnerabilidades em Componentes de Terceiros (SCA) | ✅ Sim       | Projetos com entrega para produção           | Obrigatoriedade de análise SCA, critérios de severidade, ciclo de resposta e registo de exceções. |
-| Política de Repositórios e Registos de Origem         | ⚠️ Opcional  | CI/CD, build agents, ambientes de execução   | Lista de registries autorizados, mirrors internos, políticas de fallback e caching. |
-| Política de Justificação de Vulnerabilidades Aceites  | ✅ Sim       | Quando um CVE é aceite sem patch imediato     | Requisitos para justificar exceções, aprovação formal, revalidação periódica. |
-| Política de Atualização Contínua de Dependências      | ⚠️ Opcional  | Projetos com ciclos curtos e contínuos       | Frequência de atualização, uso de ferramentas automáticas, rastreabilidade de alterações. |
+| [Política de Gestão de Dependências e Bibliotecas](/sbd-toe/assets/policies/policy-dependencias)      | ✅ Sim       | Todos os projetos com código de terceiros    | Regras para uso, aprovação, versionamento, atualização e bloqueio de dependências. |
+| [Política de Integração e Gestão de SBOM](/sbd-toe/assets/policies/policy-sbom)               | ✅ Sim       | Pipelines de build, release e auditoria      | Formato exigido (CycloneDX/SPDX), frequência de geração, artefactos obrigatórios e retenção. |
+| [Política de Avaliação de Vulnerabilidades em Componentes de Terceiros (SCA)](/sbd-toe/assets/policies/policy-excecoes-cve) | ✅ Sim       | Projetos com entrega para produção           | Obrigatoriedade de análise SCA, critérios de severidade, ciclo de resposta e registo de exceções. |
+| [Política de Repositórios e Registos de Origem](/sbd-toe/assets/policies/policy-dependencias)         | ⚠️ Opcional  | CI/CD, build agents, ambientes de execução   | Lista de registries autorizados, mirrors internos, políticas de fallback e caching. |
+| [Política de Justificação de Vulnerabilidades Aceites](/sbd-toe/assets/policies/policy-gestao-excecoes)  | ✅ Sim       | Quando um CVE é aceite sem patch imediato     | Requisitos para justificar exceções, aprovação formal, revalidação periódica. |
+| [Política de Atualização Contínua de Dependências](/sbd-toe/assets/policies/policy-atualizacao-automatica)      | ⚠️ Opcional  | Projetos com ciclos curtos e contínuos       | Frequência de atualização, uso de ferramentas automáticas, rastreabilidade de alterações. |
 
 ---
 

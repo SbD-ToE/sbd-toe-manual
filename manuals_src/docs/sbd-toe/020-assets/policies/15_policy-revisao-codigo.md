@@ -3,6 +3,7 @@ id: policy-revisao-codigo
 title: Política de Revisão de Código
 description: Política organizacional que define os requisitos para a revisão de código como ponto de controlo de segurança, incluindo checklist obrigatória, critérios de aprovação, papéis de reviewer, cobertura mínima e integração com ferramentas automáticas, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, code review, revisão de código, checklist, PR, SAST, desenvolvimento seguro, cap06, L1, L2, L3, governance]
+grupo: desenvolvimento
 sidebar_position: 15
 ---
 

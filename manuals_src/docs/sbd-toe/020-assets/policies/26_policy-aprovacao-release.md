@@ -3,6 +3,7 @@ id: policy-aprovacao-release
 title: Política de Aprovação de Release
 description: Política organizacional que define o processo formal de decisão go/no-go para releases de software, incluindo alçadas de aprovação por nível de criticidade, separação entre sinal automático e decisão humana, aceitação formal de risco residual e registo de evidências, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, release, aprovação, go/no-go, risco residual, sign-off, alçadas, cap10, cap11, L1, L2, L3, governance]
+grupo: pipeline-entrega
 sidebar_position: 26
 ---
 

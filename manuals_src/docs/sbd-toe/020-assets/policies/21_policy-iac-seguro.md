@@ -3,6 +3,7 @@ id: policy-iac-seguro
 title: Política de IaC Seguro
 description: Política organizacional que define os requisitos de segurança para a definição, validação, execução e manutenção de Infraestrutura como Código (IaC), incluindo scanning de configurações, policy-as-code, separação de ambientes, controlo de drift, módulos aprovados e assinatura de planos, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, IaC, Terraform, Pulumi, tfsec, checkov, OPA, policy-as-code, drift, módulos, assinatura, cap08, L1, L2, L3, governance, infraestrutura]
+grupo: infraestrutura
 sidebar_position: 21
 ---
 

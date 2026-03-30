@@ -6,15 +6,19 @@ tags: [introducao, arquitetura, requisitos, segurança]
 sidebar_position: 4
 ---
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.  
-A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="basilar" title="Capítulo Basilar">
+
+Este capítulo é considerado **basilar** no modelo *Security by Design - Theory of Everything (SbD-ToE)*.
+A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.
 
 Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo, a ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
-:::
+
+</ChapterTypeCallout>
 
 
-# 🏛️ Arquitetura Segura
+# Arquitetura Segura
 
 No SbD-ToE, Arquitetura Segura é tratada como um **processo de decisão técnica explícita**, proporcional ao risco da aplicação (L1–L3).  
 Decisões arquiteturais materializam a resposta a ameaças identificadas e condicionam requisitos, desenvolvimento, testes e operação, devendo ser validadas, versionadas e suportadas por evidência verificável.
@@ -135,9 +139,11 @@ Num sistema L3 com microserviços e exposição a terceiros:
 
 | Política | Obrigatória | Aplicação | Conteúdo mínimo |
 |----------|-------------|-----------|-----------------|
-| Política de Arquitetura Segura | Sim | Todos os projetos | Definição de princípios, padrões e controlos mínimos de arquitetura |
-| Política de Revisões Arquiteturais | Recomendado | Projetos L2–L3 | Critérios formais de revisão e aprovação AppSec |
-| Política de Automação em Pipelines | Recomendado | Projetos com CI/CD | Regras para validação automatizada de controlos de arquitetura |
+| [Política de Arquitetura Segura](/sbd-toe/assets/policies/policy-arquitetura-segura) | Sim | Todos os projetos | Definição de princípios, padrões e controlos mínimos de arquitetura |
+| [Política de Revisões Arquiteturais](/sbd-toe/assets/policies/policy-arquitetura-segura) | Recomendado | Projetos L2–L3 | Critérios formais de revisão e aprovação AppSec |
+| [Política de Automação em Pipelines](/sbd-toe/assets/policies/policy-cicd-seguro) | Recomendado | Projetos com CI/CD | Regras para validação automatizada de controlos de arquitetura |
+| [Política de Rastreabilidade de Decisões de Arquitetura](/sbd-toe/assets/policies/policy-rastreabilidade) | Recomendado | GRC, Arquitetura | Rastreabilidade de ADRs, evidências e decisões arquiteturais |
+| [Política de Gestão de Exceções](/sbd-toe/assets/policies/policy-gestao-excecoes) | Recomendado | AppSec, Gestão | Exceções técnicas de arquitetura: justificação, prazo e aprovação |
 
 Na versão impressa, as políticas relevantes encontram-se no **anexo de políticas do manual**, incluindo: Política de Arquitetura Segura, Política de Revisões Arquiteturais e Política de Automação em Pipelines.
 

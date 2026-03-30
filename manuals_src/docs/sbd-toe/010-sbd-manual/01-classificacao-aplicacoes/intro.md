@@ -5,13 +5,17 @@ description: Determinação da criticidade de aplicações para aplicar proporci
 tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
 ---
 
-:::caution Capítulo Basilar
-Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="basilar" title="Capítulo Basilar">
+
+Este capítulo é considerado **basilar** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua aplicação é **obrigatória** para garantir a coerência, rastreabilidade e eficácia das restantes práticas de segurança.
 
-Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo.  
+Os capítulos basilares constituem a **fundação técnica e metodológica** do modelo.
 A ausência ou aplicação parcial de qualquer um destes compromete a **integridade global** do SbD-ToE, tornando inviável a adoção coerente das práticas operacionais e de governação.
-:::
+
+</ChapterTypeCallout>
 
 # Classificação da Criticidade Aplicacional
 
@@ -154,9 +158,9 @@ A aplicação prática deste capítulo requer políticas formais que assegurem n
 
 | Política                                        | Obrigatória? | Aplicação                                | Conteúdo mínimo esperado                                                             |
 | ----------------------------------------------- | ------------ | ---------------------------------------- | ------------------------------------------------------------------------------------ |
-| Política de Classificação de Risco Aplicacional | ✅ Sim        | Todos os projetos e equipas de produto   | Modelo de classificação; momentos de aplicação; registo formal.                      |
-| Política de Aceitação de Risco Residual         | ✅ Sim        | Segurança, gestão, donos de produto      | Critérios de aceitação; responsáveis; validade; evidência rastreável.                |
-| Política de Revisão Periódica de Risco          | ✅ Sim        | Toda a organização                       | Frequência mínima; triggers obrigatórios; documentação.                              |
-| Política de Rastreabilidade de Decisões         | ⚠️ Opcional  | Contextos regulados ou auditáveis        | Versionamento; ligação a arquitetura, requisitos e controlos.                        |
+| [Política de Classificação de Risco Aplicacional](/sbd-toe/assets/policies/policy-classificacao-risco) | ✅ Sim        | Todos os projetos e equipas de produto   | Modelo de classificação; momentos de aplicação; registo formal.                      |
+| [Política de Aceitação de Risco Residual](/sbd-toe/assets/policies/policy-aceitacao-risco)         | ✅ Sim        | Segurança, gestão, donos de produto      | Critérios de aceitação; responsáveis; validade; evidência rastreável.                |
+| [Política de Revisão Periódica de Risco](/sbd-toe/assets/policies/policy-revisao-periodica-risco)          | ✅ Sim        | Toda a organização                       | Frequência mínima; triggers obrigatórios; documentação.                              |
+| [Política de Rastreabilidade de Decisões](/sbd-toe/assets/policies/policy-rastreabilidade)         | ⚠️ Opcional  | Contextos regulados ou auditáveis        | Versionamento; ligação a arquitetura, requisitos e controlos.                        |
 
 > 📌 Ver detalhes no **anexo de políticas do manual**.

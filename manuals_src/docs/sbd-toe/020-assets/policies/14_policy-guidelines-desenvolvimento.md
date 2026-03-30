@@ -3,6 +3,7 @@ id: policy-guidelines-desenvolvimento
 title: Política de Curadoria de Guidelines de Desenvolvimento Seguro
 description: Política organizacional que define os requisitos para a seleção, tailoring, publicação, versionamento e revisão periódica de guidelines de desenvolvimento seguro por stack tecnológica, incluindo a conversão de regras em configurações automáticas de linters e SAST, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, guidelines, desenvolvimento seguro, curadoria, linters, SAST, rulesets, tailoring, cap06, L1, L2, L3, governance]
+grupo: desenvolvimento
 sidebar_position: 14
 ---
 

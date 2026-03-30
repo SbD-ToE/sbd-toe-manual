@@ -3,6 +3,7 @@ id: policy-cicd-seguro
 title: Política de CI/CD Seguro
 description: Política organizacional que define os requisitos de segurança para pipelines de integração e entrega contínua, incluindo gates obrigatórios, scanners integrados, separação de ambientes, assinatura de artefactos, gestão de segredos no pipeline e aprovações de promoção, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, CI/CD, pipeline, SAST, SCA, secret detection, gates, assinatura, artefactos, separação de ambientes, cap07, L1, L2, L3, governance, DevSecOps]
+grupo: pipeline-entrega
 sidebar_position: 17
 ---
 

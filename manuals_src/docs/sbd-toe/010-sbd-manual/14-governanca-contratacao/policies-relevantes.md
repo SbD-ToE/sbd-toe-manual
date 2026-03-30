@@ -32,12 +32,12 @@ Estas políticas:
 
 | Nome da Política                                     | Obrigatória? | Aplicação                                           | Resumo do conteúdo necessário                                                                    |
 | ---------------------------------------------------- | ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| Política de Aprovação e Justificação de Exceções     | ✅ Sim        | Projetos com exigências de segurança                | Critérios para submissão, aprovação, validade e reavaliação de exceções.                         |
-| Política de Responsabilidades de Decisão de Risco    | ✅ Sim        | Todas as aplicações classificadas por risco         | Definição de owners por domínio, autoridade, registo e rastreabilidade.                          |
-| Política de Integração e Validação de Terceiros      | ✅ Sim        | Fornecedores, outsourcing, contractors              | Processo de onboarding, validação de formação, requisitos contratuais obrigatórios.              |
-| Política de Requisitos Contratuais de Segurança      | ✅ Sim        | Contratação de software, serviços, operação crítica | Requisitos mínimos por tipo de risco, templates e revisão legal obrigatória.                     |
-| Política de Formação de Aprovadores e Decisores      | ⚠️ Opcional  | Owners de exceções, risco, conformidade             | Exigência de formação atualizada sobre SbD antes de autorizar decisões com impacto de segurança. |
-| Política de Ciclo de Revisão de Exceções e Contratos | ⚠️ Opcional  | Exceções, contratos, sistemas críticos              | Revalidação obrigatória a cada release ou alteração significativa de risco.                      |
+| [Política de Aprovação e Justificação de Exceções](/sbd-toe/assets/policies/policy-gestao-excecoes)     | ✅ Sim        | Projetos com exigências de segurança                | Critérios para submissão, aprovação, validade e reavaliação de exceções.                         |
+| [Política de Responsabilidades de Decisão de Risco](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional)    | ✅ Sim        | Todas as aplicações classificadas por risco         | Definição de owners por domínio, autoridade, registo e rastreabilidade.                          |
+| [Política de Integração e Validação de Terceiros](/sbd-toe/assets/policies/policy-contratacao-segura)      | ✅ Sim        | Fornecedores, outsourcing, contractors              | Processo de onboarding, validação de formação, requisitos contratuais obrigatórios.              |
+| [Política de Requisitos Contratuais de Segurança](/sbd-toe/assets/policies/policy-contratacao-segura)      | ✅ Sim        | Contratação de software, serviços, operação crítica | Requisitos mínimos por tipo de risco, templates e revisão legal obrigatória.                     |
+| [Política de Formação de Aprovadores e Decisores](/sbd-toe/assets/policies/policy-formacao-seguranca)      | ⚠️ Opcional  | Owners de exceções, risco, conformidade             | Exigência de formação atualizada sobre SbD antes de autorizar decisões com impacto de segurança. |
+| [Política de Ciclo de Revisão de Exceções e Contratos](/sbd-toe/assets/policies/policy-gestao-excecoes) | ⚠️ Opcional  | Exceções, contratos, sistemas críticos              | Revalidação obrigatória a cada release ou alteração significativa de risco.                      |
 
 ---
 

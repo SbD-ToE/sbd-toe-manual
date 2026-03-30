@@ -3,6 +3,7 @@ id: policy-gestao-segredos
 title: Política de Gestão de Segredos
 description: Política organizacional que define os requisitos para o armazenamento, injeção, rotação, auditoria e revogação de segredos (chaves, tokens, credenciais, certificados) em aplicações, pipelines CI/CD, containers e infraestrutura, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, segredos, secrets, vault, OIDC, rotação, pipeline, container, infraestrutura, cap07, cap09, cap11, L1, L2, L3, governance, credenciais]
+grupo: pipeline-entrega
 sidebar_position: 18
 ---
 

@@ -33,9 +33,11 @@ Estas políticas:
 
 | Nome da Política                                        | Obrigatória? | Aplicação                                | Resumo do conteúdo necessário |
 |---------------------------------------------------------|--------------|-------------------------------------------|-------------------------------|
-| Política de Requisitos de Segurança Aplicacionais       | ✅ Sim       | Todos os projetos e equipas de produto    | Catálogo obrigatório, seleção por risco, rastreabilidade, critérios de aceitação |
-| Política de Integração de Requisitos no Backlog         | ⚠️ Opcional  | Equipa de desenvolvimento, PO, QA         | Requisitos devem constar nos artefactos de planeamento (stories/tasks) com tags |
-| Política de Validação de Requisitos em Pipelines        | ⚠️ Opcional  | DevOps, QA, segurança                     | Critérios mínimos automatizados para bloqueio de builds e validação de releases |
+| [Política de Requisitos de Segurança Aplicacionais](/sbd-toe/assets/policies/policy-requisitos-seguranca)       | ✅ Sim       | Todos os projetos e equipas de produto    | Catálogo obrigatório, seleção por risco, rastreabilidade, critérios de aceitação |
+| [Política de Integração de Requisitos no Backlog](/sbd-toe/assets/policies/policy-requisitos-seguranca)         | ⚠️ Opcional  | Equipa de desenvolvimento, PO, QA         | Requisitos devem constar nos artefactos de planeamento (stories/tasks) com tags |
+| [Política de Validação de Requisitos em Pipelines](/sbd-toe/assets/policies/policy-requisitos-seguranca)        | ⚠️ Opcional  | DevOps, QA, segurança                     | Critérios mínimos automatizados para bloqueio de builds e validação de releases |
+| [Política de Rastreabilidade e Auditoria](/sbd-toe/assets/policies/policy-rastreabilidade) | ⚠️ Opcional | Apps críticas, contextos auditados | Mapeamento requisito→controlo→validação; evidências rastreáveis para auditoria |
+| [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes) | ✅ Sim | Todas as aplicações | Processo formal de justificação, registo, prazo e aceitação de exceções a requisitos |
 
 ---
 

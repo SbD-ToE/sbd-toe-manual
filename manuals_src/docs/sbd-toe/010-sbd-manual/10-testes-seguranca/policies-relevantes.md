@@ -38,13 +38,15 @@ Estas políticas:
 
 | Nome da Política                                       | Obrigatória? | Aplicação                                 | Resumo do conteúdo necessário |
 |--------------------------------------------------------|--------------|--------------------------------------------|-------------------------------|
-| Política de Validação de Segurança Aplicacional       | ✅ Sim       | Todas as aplicações com entrega contínua   | Tipos de testes exigidos (SAST, DAST, fuzzing), níveis mínimos por criticidade, ferramentas aprovadas. |
-| Política de Gestão de Findings de Segurança            | ✅ Sim       | Todos os produtos com scanner ativo        | Processo de triagem, classificação, priorização, tracking, ownership e reporte de findings. |
-| Política de Exceções a Vulnerabilidades Identificadas  | ✅ Sim       | Quando um finding não é corrigido          | Justificação técnica, prazo de validade, revisão periódica, mitigação compensatória. |
-| Política de Execução de PenTesting Ofensivo            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (ex: semestral), âmbito, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
-| Política de Cobertura de Testes de Segurança           | ⚠️ Opcional  | Aplicações críticas (L2–L3)                | Definição de métricas de cobertura esperada, fuzzing dirigido, teste de regressões. |
-| Política de Integração de Testes com Ciclo de Vida     | ⚠️ Opcional  | Equipas com integração DevSecOps           | Definição de critérios BDD, integração com pipelines, PRs, e processos de release. |
-| Política de Revalidação e Observabilidade de Testes    | ⚠️ Opcional  | Ambientes com requisitos de auditoria      | Revalidação de findings, logging dos testes, análise de falhas de execução. |
+| [Política de Validação de Segurança Aplicacional](/sbd-toe/assets/policies/policy-estrategia-testes)       | ✅ Sim       | Todas as aplicações com entrega contínua   | Tipos de testes exigidos (SAST, DAST, fuzzing), níveis mínimos por criticidade, ferramentas aprovadas. |
+| [Política de Gestão de Findings de Segurança](/sbd-toe/assets/policies/policy-estrategia-testes)            | ✅ Sim       | Todos os produtos com scanner ativo        | Processo de triagem, classificação, priorização, tracking, ownership e reporte de findings. |
+| [Política de Exceções a Vulnerabilidades Identificadas](/sbd-toe/assets/policies/policy-excecoes-cve)  | ✅ Sim       | Quando um finding não é corrigido          | Justificação técnica, prazo de validade, revisão periódica, mitigação compensatória. |
+| [Política de Execução de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting)            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (ex: semestral), âmbito, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
+| [Política de Cobertura de Testes de Segurança](/sbd-toe/assets/policies/policy-estrategia-testes)           | ⚠️ Opcional  | Aplicações críticas (L2–L3)                | Definição de métricas de cobertura esperada, fuzzing dirigido, teste de regressões. |
+| [Política de Integração de Testes com Ciclo de Vida](/sbd-toe/assets/policies/policy-estrategia-testes)     | ⚠️ Opcional  | Equipas com integração DevSecOps           | Definição de critérios BDD, integração com pipelines, PRs, e processos de release. |
+| [Política de Revalidação e Observabilidade de Testes](/sbd-toe/assets/policies/policy-estrategia-testes)    | ⚠️ Opcional  | Ambientes com requisitos de auditoria      | Revalidação de findings, logging dos testes, análise de falhas de execução. |
+| [Política de DAST e Fuzzing](/sbd-toe/assets/policies/policy-dast-fuzzing) | ⚠️ Opcional | Aplicações L2/L3, APIs públicas | DAST autenticado, fuzzing em endpoints críticos, gestão de findings dinâmicos. |
+| [Política de Release Seguro](/sbd-toe/assets/policies/policy-release-seguro) | ✅ Sim | Todas as aplicações com entrega contínua | Checklist de release, go/no-go baseado em segurança, aceitação de risco documentada. |
 
 ---
 

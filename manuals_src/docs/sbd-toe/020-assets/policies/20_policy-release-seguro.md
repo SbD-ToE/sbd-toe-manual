@@ -3,6 +3,7 @@ id: policy-release-seguro
 title: Política de Release Seguro
 description: Política organizacional que define os requisitos para a aprovação formal de releases de software, incluindo checklist de segurança pré-release, gate automático de conformidade, critérios go/no-go, artefacto imutável de decisão e rastreabilidade ponta-a-ponta commit→pipeline→release, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, release, go/no-go, checklist, gate, aprovação, artefacto imutável, rastreabilidade, cap10, cap11, L1, L2, L3, governance]
+grupo: pipeline-entrega
 sidebar_position: 20
 ---
 

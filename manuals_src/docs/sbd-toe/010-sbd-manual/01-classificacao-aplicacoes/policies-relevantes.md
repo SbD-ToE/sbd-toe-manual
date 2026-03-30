@@ -30,10 +30,10 @@ Estas políticas:
 
 | Nome da Política                                   | Obrigatória? | Aplicação                             | Conteúdo mínimo esperado                                                                                      |
 |----------------------------------------------------|--------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Política de Classificação de Risco Aplicacional    | ✅ Sim       | Todos os projetos e equipas de produto | Modelo de classificação obrigatório (exposição, dados, impacto); momentos de aplicação; registo e rastreio. |
-| Política de Aceitação de Risco Residual            | ✅ Sim       | Segurança, gestão, donos de produto    | Critérios formais para aceitação; responsáveis; validade temporal; registo e rastreabilidade.               |
-| Política de Revisão Periódica de Risco             | ✅ Sim       | Toda a organização                     | Frequência mínima (ex: 6 meses); triggers obrigatórios; evidência exigida.                                   |
-| Política de Rastreabilidade de Decisões de Segurança | ⚠️ Opcional | Organizações sujeitas a auditoria      | Versionamento de classificações; ligação com arquitetura, requisitos e controlos.                           |
+| [Política de Classificação de Risco Aplicacional](/sbd-toe/assets/policies/policy-classificacao-risco)    | ✅ Sim       | Todos os projetos e equipas de produto | Modelo de classificação obrigatório (exposição, dados, impacto); momentos de aplicação; registo e rastreio. |
+| [Política de Aceitação de Risco Residual](/sbd-toe/assets/policies/policy-aceitacao-risco)            | ✅ Sim       | Segurança, gestão, donos de produto    | Critérios formais para aceitação; responsáveis; validade temporal; registo e rastreabilidade.               |
+| [Política de Revisão Periódica de Risco](/sbd-toe/assets/policies/policy-revisao-periodica-risco)             | ✅ Sim       | Toda a organização                     | Frequência mínima (ex: 6 meses); triggers obrigatórios; evidência exigida.                                   |
+| [Política de Rastreabilidade de Decisões de Segurança](/sbd-toe/assets/policies/policy-rastreabilidade) | ⚠️ Opcional | Organizações sujeitas a auditoria      | Versionamento de classificações; ligação com arquitetura, requisitos e controlos.                           |
 
 ---
 

@@ -3,6 +3,7 @@ id: policy-classificacao-risco
 title: Política de Classificação de Risco Aplicacional
 description: Política organizacional que define o modelo obrigatório de classificação de risco por eixos (Exposição, Dados, Impacto), os momentos de aplicação, os critérios de revisão e os requisitos de registo formal, para todas as aplicações desenvolvidas ou operadas pela organização.
 tags: [policy, classificação, risco, L1, L2, L3, cap01, eixos, exposição, dados, impacto, governance]
+grupo: risco
 sidebar_position: 2
 ---
 

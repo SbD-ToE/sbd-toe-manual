@@ -3,6 +3,7 @@ id: policy-excecoes-cve
 title: Política de Exceções a CVEs
 description: Política organizacional que define os critérios, o processo formal, as alçadas de aprovação, os controlos compensatórios e os prazos de reavaliação aplicáveis a exceções a vulnerabilidades conhecidas (CVEs) em dependências de software, proporcional ao nível de criticidade da aplicação (L1, L2, L3).
 tags: [policy, CVE, exceções, VEX, SCA, risco residual, compensação, reavaliação, cap05, L1, L2, L3, governance, supply chain]
+grupo: risco
 sidebar_position: 12
 ---
 

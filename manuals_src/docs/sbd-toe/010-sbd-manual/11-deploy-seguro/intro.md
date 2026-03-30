@@ -6,12 +6,16 @@ tags: [deploy, seguranca, producao, rollback, gates, sdlc]
 sidebar_position: 0
 ---
 
-:::tip Capítulo Operacional
-Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.  
+import ChapterTypeCallout from '@site/src/components/ChapterTypeCallout';
+
+<ChapterTypeCallout kind="operacional" title="Capítulo Operacional">
+
+Este capítulo é considerado **operacional** no modelo *Security by Design – Theory of Everything (SbD-ToE)*.
 A sua função é **aplicar, automatizar e validar** práticas definidas em capítulos basilares, garantindo a sua execução contínua e mensurável.
 
 Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específicos, traduzindo prescrições basilares em práticas de **execução verificável**, com **evidência auditável** ao longo do ciclo de vida do software.
-:::
+
+</ChapterTypeCallout>
 
 # Deploy Seguro
 
@@ -156,10 +160,10 @@ Esta matriz não é opcional: é o que garante que cada *deploy* é simultaneame
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| Política de Deploy Seguro | Sim | DevOps/SRE + AppSec | Promoção apenas de artefactos assinados e rastreáveis; validações mínimas; evidência |
-| Política de Aprovação de Release | Sim | Gestão de Produto + AppSec | *Gates* formais; critérios por criticidade; exceções registadas e temporais |
-| Política de Rollback | Sim | DevOps/SRE | *Rollback* definido por tipo, testado periodicamente, com evidência |
-| Política de Validação em Staging | Recomendado | QA/Testes | Validação funcional + segurança antes de promoção; dados controlados |
-| Política de Monitorização Pós-Deploy | Sim | DevOps/SRE | Métricas/alertas; correlação com eventos de *deploy*; processo de resposta |
+| [Política de Deploy Seguro](/sbd-toe/assets/policies/policy-deploy-seguro) | Sim | DevOps/SRE + AppSec | Promoção apenas de artefactos assinados e rastreáveis; validações mínimas; evidência |
+| [Política de Aprovação de Release](/sbd-toe/assets/policies/policy-aprovacao-release) | Sim | Gestão de Produto + AppSec | *Gates* formais; critérios por criticidade; exceções registadas e temporais |
+| [Política de Rollback](/sbd-toe/assets/policies/policy-rollback) | Sim | DevOps/SRE | *Rollback* definido por tipo, testado periodicamente, com evidência |
+| [Política de Deploy Seguro — Validação em Staging](/sbd-toe/assets/policies/policy-deploy-seguro) | Recomendado | QA/Testes | Validação funcional + segurança antes de promoção; dados controlados |
+| [Política de Monitorização Pós-Deploy](/sbd-toe/assets/policies/policy-monitorizacao-pos-deploy) | Sim | DevOps/SRE | Métricas/alertas; correlação com eventos de *deploy*; processo de resposta |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.

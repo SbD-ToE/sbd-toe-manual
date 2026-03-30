@@ -3,6 +3,7 @@ id: policy-monitorizacao-pos-deploy
 title: Política de Monitorização Pós-Deploy
 description: Política organizacional que define os requisitos de monitorização activa após cada deploy em produção, incluindo janela de observação obrigatória, métricas de saúde mínimas, thresholds de alerta, validação humana e critérios de activação de rollback, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, monitorização, pós-deploy, observabilidade, alertas, rollback, saúde, métricas, cap11, L1, L2, L3, governance]
+grupo: operacoes
 sidebar_position: 28
 ---
 

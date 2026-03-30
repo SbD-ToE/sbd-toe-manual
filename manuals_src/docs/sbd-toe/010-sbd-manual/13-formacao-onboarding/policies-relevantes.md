@@ -24,12 +24,12 @@ A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende 
 
 | Nome da Política                           | Obrigatória | Aplicação                                               | Conteúdo mínimo esperado                                                                                           |
 |--------------------------------------------|-------------|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| Política de Formação por Perfil            | Sim         | Todos os colaboradores com funções técnicas             | Definição de trilhos formativos por função (ex: Dev, QA, DevOps), com conteúdos mínimos, sequência e validação     |
-| Política de Validação de Onboarding        | Sim         | Todos os novos elementos técnicos (internos ou externos) | Formação obrigatória antes de permissões técnicas, quiz, checklist de onboarding validada pela equipa responsável |
-| Política de Integração de Terceiros        | Sim         | Fornecedores, contractors e equipas externas             | Termo de responsabilidade, formação mínima, quiz de validação e registo com rastreabilidade                        |
-| Política de Gestão de Conteúdos Formativos | Recomendada | Equipa AppSec, Champions e responsáveis por formação     | Estrutura modular por capítulo do SbD-ToE, templates versionados e artefactos aplicáveis aos projetos              |
-| Política de Indicadores de Formação        | Recomendada | Equipas de segurança, qualidade e governance             | KPIs de cobertura formativa por equipa, métricas de validação, alertas para formação incompleta ou desatualizada   |
-| Política de Atualização Formativa          | Opcional    | AppSec, equipa de formação e Champions                   | Revisão periódica de conteúdos, atualização após alterações relevantes (ex: incidentes, mudanças no SbD-ToE)       |
+| [Política de Formação por Perfil](/sbd-toe/assets/policies/policy-formacao-seguranca)            | Sim         | Todos os colaboradores com funções técnicas             | Definição de trilhos formativos por função (ex: Dev, QA, DevOps), com conteúdos mínimos, sequência e validação     |
+| [Política de Validação de Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca)        | Sim         | Todos os novos elementos técnicos (internos ou externos) | Formação obrigatória antes de permissões técnicas, quiz, checklist de onboarding validada pela equipa responsável |
+| [Política de Integração de Terceiros](/sbd-toe/assets/policies/policy-formacao-seguranca)        | Sim         | Fornecedores, contractors e equipas externas             | Termo de responsabilidade, formação mínima, quiz de validação e registo com rastreabilidade                        |
+| [Política de Gestão de Conteúdos Formativos](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendada | Equipa AppSec, Champions e responsáveis por formação     | Estrutura modular por capítulo do SbD-ToE, templates versionados e artefactos aplicáveis aos projetos              |
+| [Política de Indicadores de Formação](/sbd-toe/assets/policies/policy-kpis-governacao)        | Recomendada | Equipas de segurança, qualidade e governance             | KPIs de cobertura formativa por equipa, métricas de validação, alertas para formação incompleta ou desatualizada   |
+| [Política de Atualização Formativa](/sbd-toe/assets/policies/policy-formacao-seguranca)          | Opcional    | AppSec, equipa de formação e Champions                   | Revisão periódica de conteúdos, atualização após alterações relevantes (ex: incidentes, mudanças no SbD-ToE)       |
 
 ---
 

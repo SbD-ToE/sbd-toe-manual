@@ -3,6 +3,7 @@ id: policy-revisao-periodica-risco
 title: Política de Revisão Periódica de Risco
 description: Política organizacional que define a cadência obrigatória e os triggers de revisão da classificação de risco aplicacional, assegurando que o nível de criticidade e os controlos associados se mantêm adequados ao contexto técnico e de negócio ao longo de todo o ciclo de vida da aplicação.
 tags: [policy, revisão periódica, risco, classificação, cap01, cap14, cadência, triggers, event-based, time-based, L1, L2, L3, governance]
+grupo: risco
 sidebar_position: 4
 ---
 

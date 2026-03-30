@@ -3,6 +3,7 @@ id: policy-gestao-alertas
 title: Política de Gestão de Alertas
 description: Política organizacional que define os requisitos para a configuração, classificação, SLAs de resposta, escalonamento, runbooks e calibração de alertas de segurança e operacionais, incluindo prevenção de fadiga de alertas e métricas de qualidade, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, alertas, SLA, on-call, runbook, escalamento, fadiga de alertas, SIEM, cap12, L1, L2, L3, governance, operações]
+grupo: operacoes
 sidebar_position: 31
 ---
 

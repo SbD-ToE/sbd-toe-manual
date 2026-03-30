@@ -3,6 +3,7 @@ id: policy-contratacao-segura
 title: Política de Contratação Segura
 description: Política organizacional que define os requisitos de segurança aplicáveis ao ciclo de vida contratual com fornecedores e contractors, incluindo due diligence pré-contratual, cláusulas contratuais mínimas por nível de risco, onboarding técnico, monitorização de conformidade, reavaliação periódica e offboarding seguro, proporcional ao nível de criticidade (L1, L2, L3).
 tags: [policy, contratação, fornecedores, contractors, due diligence, cláusulas contratuais, onboarding, offboarding, conformidade, cap14, L1, L2, L3, governance, DORA, NIS2]
+grupo: governacao
 sidebar_position: 33
 ---
 

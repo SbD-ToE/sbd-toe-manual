@@ -10,7 +10,7 @@ sidebar_position: 24
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a **gestão do ciclo de vida de imagens base de container aprovadas pela organização** — as designadas Golden Base Images (GBI).
+Esta política define os requisitos para a **gestão do ciclo de vida de imagens base de container aprovadas pela organização** - as designadas Golden Base Images (GBI).
 
 Toda a imagem de container construída pela organização herda as características de segurança da sua imagem base. Uma imagem base não auditada, desactualizada ou de origem não verificada é uma vulnerabilidade estrutural que se propaga a todos os serviços que a utilizam. A centralização e governação das imagens base é, portanto, um controlo multiplicador: uma atualização de base bem gerida corrige vulnerabilidades em todos os serviços simultaneamente; uma base comprometida compromete todos.
 
@@ -54,7 +54,7 @@ O catálogo de GBIs (`golden-base-images.yaml` ou equivalente) é o inventário 
 
 As GBIs são armazenadas no registo interno de imagens da organização (Artifactory, Harbor, ECR, GCR ou equivalente), com:
 
-- [ ] Acesso controlado por autenticação — sem pull anónimo
+- [ ] Acesso controlado por autenticação - sem pull anónimo
 - [ ] Imutabilidade dos digests (uma vez publicado, o digest não pode ser alterado)
 - [ ] Tags semânticas associadas a digests imutáveis (sem redefinição de tags existentes)
 
@@ -190,10 +190,10 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 09 — Containers e Execução Isolada | US-01, US-11, US-15: bases seguras, patching, catálogo |
+| SbD-ToE Cap. 09 - Containers e Execução Isolada | US-01, US-11, US-15: bases seguras, patching, catálogo |
 | Política de Containers Seguros (`23_policy-containers-seguros.md`) | Uso de GBIs em builds e runtime |
 | Política de SBOM (`11_policy-sbom.md`) | SBOM por imagem base e rastreabilidade em runtime |
 | CIS Docker Benchmark v1.6 | Critérios de segurança de imagens base |
-| NIST SP 800-190 | Application Container Security — imagens base |
+| NIST SP 800-190 | Application Container Security - imagens base |
 | Cosign / Sigstore | Assinatura e verificação de GBIs |
 | Harbor / Artifactory | Registos internos de referência para gestão de GBIs |

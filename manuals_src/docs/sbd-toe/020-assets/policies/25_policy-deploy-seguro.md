@@ -47,7 +47,7 @@ Antes de iniciar qualquer deploy em staging ou produção, o pipeline deve verif
 | Gate de segurança pré-release com resultado APROVADO | Recomendado | Obrigatório | Obrigatório |
 
 :::warning
-Um artefacto reconstruído a partir do mesmo código não é equivalente ao artefacto que passou pelos testes — dependências podem ter mudado, variáveis de ambiente de build podem diferir. O deploy deve sempre usar o artefacto original testado, identificado pelo seu digest.
+Um artefacto reconstruído a partir do mesmo código não é equivalente ao artefacto que passou pelos testes - dependências podem ter mudado, variáveis de ambiente de build podem diferir. O deploy deve sempre usar o artefacto original testado, identificado pelo seu digest.
 :::
 
 ---
@@ -71,7 +71,7 @@ A aprovação deve referenciar:
 
 Ferramentas de automação podem executar deploys, mas não podem autorizar acções irreversíveis sem aprovação humana prévia registada:
 
-- O pipeline executa mecanicamente o que foi aprovado — não decide
+- O pipeline executa mecanicamente o que foi aprovado - não decide
 - A aprovação deve preceder a execução em ambientes de staging e produção
 - Deploys automáticos sem aprovação humana são permitidos apenas em ambientes de desenvolvimento
 
@@ -110,7 +110,7 @@ Se um critério de promoção falhar durante o rollout:
 
 O ambiente de produção deve estar estritamente separado dos ambientes de teste e staging:
 
-- [ ] Credenciais de produção distintas das de staging — sem partilha de service accounts
+- [ ] Credenciais de produção distintas das de staging - sem partilha de service accounts
 - [ ] Dados de produção nunca copiados para staging sem anonimização
 - [ ] Testes funcionais em staging com dados sintéticos ou anonimizados
 - [ ] Sem acesso de escrita ao ambiente de produção a partir de jobs de teste
@@ -184,7 +184,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 11 — Deploy Seguro | Artefactos assinados, gates, rollout, rollback, rastreabilidade |
+| SbD-ToE Cap. 11 - Deploy Seguro | Artefactos assinados, gates, rollout, rollback, rastreabilidade |
 | Política de Release Seguro (`20_policy-release-seguro.md`) | Gate pré-release e checklist de segurança |
 | Política de Aprovação de Release (`26_policy-aprovacao-release.md`) | Processo de aprovação formal |
 | Política de Rollback (`27_policy-rollback.md`) | Critérios e processo de rollback |

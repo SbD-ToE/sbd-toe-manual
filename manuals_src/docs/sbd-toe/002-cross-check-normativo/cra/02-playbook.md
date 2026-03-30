@@ -12,9 +12,9 @@ sidebar_position: 6
 
 Objetivo: Transformar requisitos CRA em ações concretas usando controlos existentes do SbD-ToE.
 
-Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já existem — ajusta-se formato, rigor e evidência.
+Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já existem - ajusta-se formato, rigor e evidência.
 
-> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e processos de vulnerability handling reutilizáveis.
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e processos de vulnerability handling reutilizáveis.
 
 ## Mapa Rápido CRA → SbD-ToE
 
@@ -27,7 +27,7 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 | Reporte Exploração | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbook exploração ativa | Runbook + JSON exemplo |
 | Documentação Segurança | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Guia de segurança do produto | PDF/Markdown guia publicado |
 | Exceções | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) addon 08, [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Política exceções CRA | Registos exceções + aprovadores |
-| Cadeia Fornecimento | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 09](/sbd-toe/sbd-manual/containers-runtime/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Checklist supply chain físico | Checklist preenchida |
+| Cadeia Fornecimento | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 09](/sbd-toe/sbd-manual/containers-imagens/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Checklist supply chain físico | Checklist preenchida |
 
 ---
 
@@ -36,7 +36,7 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 ### Fase 1 (M0–M1): Fundamentos & Governance
 1. Designar Owner CRA (GRC + AppSec)  
 2. Criar Política "Segurança de Produto & CRA" (aprovada por gestão)  
-3. Mapear roles SbD-ToE → papéis CRA (fabricante, importador — se aplicável)  
+3. Mapear roles SbD-ToE → papéis CRA (fabricante, importador - se aplicável)  
 4. Definir matriz criticidade produto (base L1–L3 adaptada)  
 **Evidências:** Ata aprovação; matriz criticidade; política versão 1.0
 
@@ -197,7 +197,7 @@ Escalação: Crítico → Board; High → CISO/AppSec; Medium/Low → AppSec.
 ## Próximos Passos Depois da Fase 9
 1. Avaliação formal conformidade (legal + técnico)  
 2. Preparar documentação para eventual auditoria/regulador  
-3. Integração com outras normas (ex: DORA, NIS2) — evitar duplicação  
+3. Integração com outras normas (ex: DORA, NIS2) - evitar duplicação  
 4. Refinar métricas (MTTP por componente, densidade vulnerabilidades)  
 5. Automatizar geração relatório trimestral CRA
 

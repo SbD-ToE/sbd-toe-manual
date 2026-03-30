@@ -12,7 +12,7 @@ sidebar_position: 7
 
 Esta política define como os **requisitos de segurança** devem ser selecionados, documentados, rastreados, validados e mantidos ao longo de todo o ciclo de vida de cada aplicação desenvolvida ou operada pela organização.
 
-A inclusão de requisitos de segurança no processo de desenvolvimento não é opcional — é a base que garante que a segurança é considerada por design e não corrigida a posteriori. Sem requisitos formais, a equipa desenvolve sem critérios explícitos de segurança, o que torna a validação impossível e a conformidade não demonstrável.
+A inclusão de requisitos de segurança no processo de desenvolvimento não é opcional - é a base que garante que a segurança é considerada por design e não corrigida a posteriori. Sem requisitos formais, a equipa desenvolve sem critérios explícitos de segurança, o que torna a validação impossível e a conformidade não demonstrável.
 
 ---
 
@@ -51,8 +51,8 @@ A seleção de requisitos deve ser **proporcional ao nível de risco** da aplica
 
 | Prática | L1 | L2 | L3 |
 |---|---|---|---|
-| Subconjunto essencial do catálogo | Obrigatório | — | — |
-| Catálogo completo aplicável ao nível | — | Obrigatório | Obrigatório |
+| Subconjunto essencial do catálogo | Obrigatório | - | - |
+| Catálogo completo aplicável ao nível | - | Obrigatório | Obrigatório |
 | Requisitos de domínio específico (auth, logging, API, etc.) | Recomendado | Obrigatório | Obrigatório |
 | Revisão independente da seleção | Não aplicável | Recomendado | Obrigatório |
 | Rastreabilidade bidirecional requisito → código | Recomendado | Obrigatório | Obrigatório |
@@ -84,9 +84,9 @@ SEC-Lx-Tyy-ZZZ
 ```
 
 Onde:
-- `Lx` — nível de criticidade (L1, L2, L3)
-- `Tyy` — categoria do domínio (ex: AUT, LOG, VAL, API, CFG, ENC, INT...)
-- `ZZZ` — número sequencial do requisito
+- `Lx` - nível de criticidade (L1, L2, L3)
+- `Tyy` - categoria do domínio (ex: AUT, LOG, VAL, API, CFG, ENC, INT...)
+- `ZZZ` - número sequencial do requisito
 
 A validação automática da presença de tags `SEC-Lx-*` nos PRs relevantes deve ser configurada no pipeline CI/CD em L2 e L3.
 
@@ -188,10 +188,10 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Catálogo base, taxonomia, user stories de seleção e rastreabilidade |
-| SbD-ToE Cap. 01 — Classificação de Aplicações | Nível de criticidade que determina a seleção proporcional |
-| SbD-ToE Cap. 03 — Threat Modeling | Trigger para revisão de requisitos após identificação de ameaças |
-| OWASP ASVS | Application Security Verification Standard — catálogo de referência |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Catálogo base, taxonomia, user stories de seleção e rastreabilidade |
+| SbD-ToE Cap. 01 - Classificação de Aplicações | Nível de criticidade que determina a seleção proporcional |
+| SbD-ToE Cap. 03 - Threat Modeling | Trigger para revisão de requisitos após identificação de ameaças |
+| OWASP ASVS | Application Security Verification Standard - catálogo de referência |
 | NIST SP 800-160 | Systems Security Engineering |
 | SSDF PW.1 | Definição de requisitos de segurança com base em risco |
-| ISO/IEC 27001 — Cláusula 8.1 | Planeamento e controlo operacional |
+| ISO/IEC 27001 - Cláusula 8.1 | Planeamento e controlo operacional |

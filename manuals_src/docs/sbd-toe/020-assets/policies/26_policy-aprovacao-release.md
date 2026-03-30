@@ -12,7 +12,7 @@ sidebar_position: 26
 
 Esta política define o processo formal de **decisão de go/no-go para releases de software**, clarificando as alçadas de aprovação, os critérios de aceitação, a separação entre sinal automático e decisão humana, e o registo de evidências.
 
-A aprovação de uma release é uma decisão de risco — não uma formalidade. O resultado dos gates automáticos (SAST, DAST, SCA) é um sinal que informa a decisão, mas não a substitui. A decisão requer um owner humano identificado, que aceita explicitamente o risco residual e o risco operacional de promover a versão, com base na evidência disponível.
+A aprovação de uma release é uma decisão de risco - não uma formalidade. O resultado dos gates automáticos (SAST, DAST, SCA) é um sinal que informa a decisão, mas não a substitui. A decisão requer um owner humano identificado, que aceita explicitamente o risco residual e o risco operacional de promover a versão, com base na evidência disponível.
 
 O objetivo desta política é garantir que:
 
@@ -35,7 +35,7 @@ O objetivo desta política é garantir que:
 
 ## 3. Distinção entre sinal automático e decisão humana
 
-O pipeline produz **sinais** — resultados de gates automáticos que informam o estado de segurança da release. Estes sinais não são decisões:
+O pipeline produz **sinais** - resultados de gates automáticos que informam o estado de segurança da release. Estes sinais não são decisões:
 
 | Sinal (automático) | O que indica | Não decide |
 |---|---|---|
@@ -55,7 +55,7 @@ A promoção a produção requer sempre uma decisão humana nominalmente regista
 |---|---|---|
 | L1 | Tech Lead | Gate automático APROVADO + revisão da checklist |
 | L2 | Tech Lead + AppSec Engineer | Gate automático APROVADO + checklist verificada + risco residual avaliado |
-| L3 | Tech Lead + AppSec Engineer + Security Officer (ou CISO delegado) — dupla aprovação | Gate automático APROVADO + checklist verificada + aceitação formal de risco residual |
+| L3 | Tech Lead + AppSec Engineer + Security Officer (ou CISO delegado) - dupla aprovação | Gate automático APROVADO + checklist verificada + aceitação formal de risco residual |
 
 ### 4.2 Aprovação de no-go com exceção
 
@@ -68,7 +68,7 @@ Quando o gate automático retorna REJEITADO mas existe justificação de negóci
 | L3 | CISO (ou Security Officer delegado) + AppSec Engineer | Justificação técnica e de negócio; exceção formal; plano de correção com data; notificação ao GRC |
 
 :::warning
-O override de um gate rejeitado não elimina o risco — adia a sua resolução. Toda a aprovação com override deve ser tratada como aceitação de risco residual com TTL máximo igual ao prazo do plano de correção.
+O override de um gate rejeitado não elimina o risco - adia a sua resolução. Toda a aprovação com override deve ser tratada como aceitação de risco residual com TTL máximo igual ao prazo do plano de correção.
 :::
 
 ---
@@ -84,7 +84,7 @@ Quando uma release é aprovada com findings em aberto (com exceções formais), 
 - [ ] Prazo de resolução com owner definido
 - [ ] Identidade do aprovador e timestamp
 
-A aceitação de risco residual é uma declaração formal — não um campo optativo da checklist.
+A aceitação de risco residual é uma declaração formal - não um campo optativo da checklist.
 
 ---
 
@@ -111,8 +111,8 @@ Em L3, o registo deve ser imutável (WORM ou equivalente) e retido conforme a Po
 
 Situações de incidente activo em produção podem requerer uma release de correcção urgente fora do processo normal. Nestes casos:
 
-- [ ] Aprovação de emergência obtida antes do deploy (mesmo que em canais informais — deve ser formalizada a posteriori no prazo máximo de 24h)
-- [ ] Gates de segurança executados mesmo em modo acelerado — sem bypass completo de SAST e secret detection
+- [ ] Aprovação de emergência obtida antes do deploy (mesmo que em canais informais - deve ser formalizada a posteriori no prazo máximo de 24h)
+- [ ] Gates de segurança executados mesmo em modo acelerado - sem bypass completo de SAST e secret detection
 - [ ] A release de emergência é marcada como tal no registo com justificação
 - [ ] Post-mortem realizado após a resolução com análise ao processo e medidas preventivas
 
@@ -145,11 +145,11 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 10 — Testes de Segurança | Critérios de go/no-go e aceitação de risco residual |
-| SbD-ToE Cap. 11 — Deploy Seguro | Gates de aprovação de deploy |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Separação entre sinal automático e decisão humana |
+| SbD-ToE Cap. 10 - Testes de Segurança | Critérios de go/no-go e aceitação de risco residual |
+| SbD-ToE Cap. 11 - Deploy Seguro | Gates de aprovação de deploy |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Separação entre sinal automático e decisão humana |
 | Política de Release Seguro (`20_policy-release-seguro.md`) | Gate pré-release e checklist de segurança |
 | Política de Deploy Seguro (`25_policy-deploy-seguro.md`) | Execução do deploy após aprovação |
 | Política de Gestão de Exceções (`05_policy-gestao-excecoes.md`) | Exceções activas referenciadas na aceitação de risco residual |
-| ISO/IEC 27001 — A.12.5 | Control of operational software |
+| ISO/IEC 27001 - A.12.5 | Control of operational software |
 | ITIL Release Management | Framework de gestão de releases |

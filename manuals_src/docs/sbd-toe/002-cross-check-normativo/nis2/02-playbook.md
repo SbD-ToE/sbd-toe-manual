@@ -1,7 +1,7 @@
 ---
 id: playbook
 title: "SbD-ToE 4 NIS2: Playbook de Implementação"
-description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 — mapeamento direto de artigos para ações
+description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 - mapeamento direto de artigos para ações
 tags: [playbook, nis2, implementacao, roadmap]
 sidebar_position: 3
 ---
@@ -20,7 +20,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 - O que fazer (ação concreta)
 - Evidência regulatória
 
-> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/indice) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para NIS2 e outros frameworks.
+> 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para NIS2 e outros frameworks.
 
 ---
 
@@ -39,7 +39,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ## Como Implementar (Ordem Lógica)
 
 ### Fase 1: Governação (M0–M2)
-**NIS2 Art. 20** — Estabelecer responsabilização da board
+**NIS2 Art. 20** - Estabelecer responsabilização da board
 
 1. **Criar Comissão de Cibersegurança**
    - Membros: Board member, CISO, CTO, GRC Manager, General Counsel
@@ -54,7 +54,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 3. **Definir RACI**
    - Quem aprova o quê (aprovações formais)
    - Escalations (quando elevar)
-   - Referência: [Cap. 07 - Roles](/sbd-toe/teory-of-everything/roles)
+   - Referência: [Cap. 07 - Roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 4. **Estabelecer Programa de Formação para a Gestão**
    - Periodicidade: Anual (mínimo)
@@ -65,7 +65,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 2: Classificação e Inventário (M2–M4)
-**NIS2 Art. 21** — Conhecer o que é crítico
+**NIS2 Art. 21** - Conhecer o que é crítico
 
 1. **Inventariar Aplicações e Sistemas**
    - Nome, proprietário, dados processados, serviços suportados
@@ -88,7 +88,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 3: Medidas de Gestão de Risco (M4–M8)
-**NIS2 Art. 21** — Implementar medidas técnicas e organizacionais
+**NIS2 Art. 21** - Implementar medidas técnicas e organizacionais
 
 #### 3.1 Políticas de Análise de Risco
 - **O que:** Identificar e avaliar riscos de cibersegurança
@@ -130,10 +130,10 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 4: Segurança da Cadeia de Fornecimento (M6–M10)
-**NIS2 Art. 21** — Gestão de fornecedores e terceiros
+**NIS2 Art. 21** - Gestão de fornecedores e terceiros
 
 #### 4.1 Fornecedores de Componentes (SBOM)
-**Já em Fase 3.2** — [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
+**Já em Fase 3.2** - [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) cobre isto com SCA + SBOM
 
 #### 4.2 Fornecedores Contratuais
 - **O que:** Pessoas/empresas contratadas (contractors, outsourcing)
@@ -152,7 +152,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 5: Deteção e Resposta a Incidentes (M8–M12)
-**NIS2 Art. 23** — Reporte de incidentes significativos
+**NIS2 Art. 23** - Reporte de incidentes significativos
 
 #### 5.1 Monitorização Centralizada
 - **O que:** Logs centralizados de apps, infra, acessos
@@ -179,7 +179,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 6: Continuidade e Crise (M8–M12)
-**NIS2 Art. 21** — Garantir continuidade operacional
+**NIS2 Art. 21** - Garantir continuidade operacional
 
 #### 6.1 Backups e Disaster Recovery
 - **O que:** Backups regulares, testados, off-site
@@ -196,7 +196,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 ---
 
 ### Fase 7: Validação e Testes (M12–M18)
-**NIS2 Art. 21** — Avaliar eficácia dos controlos
+**NIS2 Art. 21** - Avaliar eficácia dos controlos
 
 #### 7.1 Testes Contínuos
 - **SAST:** Análise estática de código (integrado em CI/CD)
@@ -251,7 +251,7 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 | **[Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)** | Art. 21 | Desenvolvimento seguro |
 | **[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)** | Art. 21 | CI/CD seguro, gates, trilho auditado |
 | **[Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro)** | Art. 21 | IaC segura |
-| **[Cap. 09](/sbd-toe/sbd-manual/containers-runtime/intro)** | Art. 21 | Containers/runtime seguros |
+| **[Cap. 09](/sbd-toe/sbd-manual/containers-imagens/intro)** | Art. 21 | Containers/runtime seguros |
 | **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 21 | Testes contínuos (SAST/DAST/penetração) |
 | **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 21 | Validação pré-deploy, conformidade requisitos |
 | **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 21, 23 | Monitorização, deteção/reporte de incidentes, continuidade |

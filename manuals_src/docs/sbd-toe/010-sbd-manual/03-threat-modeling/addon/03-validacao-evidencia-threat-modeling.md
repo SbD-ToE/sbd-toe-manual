@@ -87,6 +87,6 @@ Modelos não revistos devem ser considerados **potencialmente inválidos**.
 ## 6. Integração com outros capítulos
 
 O Threat Modeling validado constitui:
-- input direto para o Capítulo 02 — Requisitos de Segurança;
+- input direto para o Capítulo 02 - Requisitos de Segurança;
 - base de justificação para decisões arquiteturais;
 - evidência de aplicação proporcional ao risco definido no Capítulo 01.

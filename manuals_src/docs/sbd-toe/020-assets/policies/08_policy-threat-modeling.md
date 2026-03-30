@@ -10,7 +10,7 @@ sidebar_position: 8
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a realização de **threat modeling** — modelação sistemática de ameaças — em aplicações classificadas como L2 ou L3.
+Esta política define os requisitos para a realização de **threat modeling** - modelação sistemática de ameaças - em aplicações classificadas como L2 ou L3.
 
 O threat modeling é o elo entre a classificação de risco, os requisitos de segurança e os controlos aplicados. Sem modelação de ameaças, os requisitos de segurança perdem contexto e os controlos aplicados deixam de ter origem justificada: são aplicados por hábito ou convenção, não por análise de risco real.
 
@@ -39,7 +39,7 @@ A organização adota as seguintes metodologias, selecionadas proporcionalmente 
 
 | Metodologia | Foco | Quando aplicar |
 |---|---|---|
-| **STRIDE** | Ameaças técnicas (Spoofing, Tampering, Repudiation, Information Disclosure, DoS, Elevation of Privilege) | Aplicações expostas ou com lógica crítica — uso base em L2 e L3 |
+| **STRIDE** | Ameaças técnicas (Spoofing, Tampering, Repudiation, Information Disclosure, DoS, Elevation of Privilege) | Aplicações expostas ou com lógica crítica - uso base em L2 e L3 |
 | **LINDDUN** | Ameaças à privacidade | Sistemas com dados pessoais, sujeitos a RGPD ou obrigações de consentimento |
 | **PASTA** | Modelação baseada em risco de negócio | Sistemas regulados, críticos ou em contextos com exigência formal elevada |
 
@@ -76,14 +76,14 @@ Em complemento aos triggers, o modelo de ameaças deve ser revisto com cadência
 
 ### 5.1 Passos obrigatórios
 
-1. **Definir âmbito e assunções** — fronteiras do sistema, componentes incluídos, assunções de confiança, perfis de atacante
-2. **Criar ou atualizar o diagrama de arquitetura** — DFD (Data Flow Diagram) ou equivalente, com trust boundaries explícitas
-3. **Identificar ameaças** — usando a metodologia selecionada (STRIDE, LINDDUN, PASTA)
-4. **Avaliar e priorizar** — impacto, probabilidade, severidade por ameaça
-5. **Decidir por ameaça** — mitigar / aceitar / transferir / rejeitar — com justificação documentada
-6. **Mapear para requisitos e controlos** — ligar cada ameaça mitigada ao requisito ou controlo correspondente
-7. **Aprovar formalmente** — pela alçada adequada ao nível de risco
-8. **Arquivar** — versão aprovada com metadados de rastreabilidade
+1. **Definir âmbito e assunções** - fronteiras do sistema, componentes incluídos, assunções de confiança, perfis de atacante
+2. **Criar ou atualizar o diagrama de arquitetura** - DFD (Data Flow Diagram) ou equivalente, com trust boundaries explícitas
+3. **Identificar ameaças** - usando a metodologia selecionada (STRIDE, LINDDUN, PASTA)
+4. **Avaliar e priorizar** - impacto, probabilidade, severidade por ameaça
+5. **Decidir por ameaça** - mitigar / aceitar / transferir / rejeitar - com justificação documentada
+6. **Mapear para requisitos e controlos** - ligar cada ameaça mitigada ao requisito ou controlo correspondente
+7. **Aprovar formalmente** - pela alçada adequada ao nível de risco
+8. **Arquivar** - versão aprovada com metadados de rastreabilidade
 
 ### 5.2 Checklist de conteúdo mínimo do modelo
 
@@ -140,7 +140,7 @@ O threat modeling e a arquitetura segura devem estar sincronizados de forma bidi
 
 ## 9. Proteção e retenção dos artefactos
 
-Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos sensíveis** — contêm informação sobre a arquitetura interna, fluxos de dados e vulnerabilidades identificadas.
+Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos sensíveis** - contêm informação sobre a arquitetura interna, fluxos de dados e vulnerabilidades identificadas.
 
 ### 9.1 Controlo de acesso
 
@@ -152,8 +152,8 @@ Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos s
 
 | Nível | Classificação mínima recomendada |
 |---|---|
-| L2 | Confidencial — interno à equipa de produto e segurança |
-| L3 | Confidencial / Restrito — acesso limitado a AppSec, arquitetura e gestão |
+| L2 | Confidencial - interno à equipa de produto e segurança |
+| L3 | Confidencial / Restrito - acesso limitado a AppSec, arquitetura e gestão |
 
 ### 9.3 Retenção
 
@@ -175,7 +175,7 @@ A reutilização de um modelo de ameaças anterior como base para um novo projet
 - [ ] Decisões críticas herdadas sejam revalidadas explicitamente
 - [ ] A reutilização seja registada com o responsável pela revisão
 
-A reutilização sem revisão explícita é equivalente a não ter threat modeling — o modelo original não é válido para um contexto diferente.
+A reutilização sem revisão explícita é equivalente a não ter threat modeling - o modelo original não é válido para um contexto diferente.
 
 ---
 
@@ -219,9 +219,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 03 — Threat Modeling | Metodologias, user stories, artefactos, integração no SDLC |
-| SbD-ToE Cap. 04 — Arquitetura Segura | Sincronização threat modeling ↔ arquitetura |
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Ligação ameaça → requisito |
+| SbD-ToE Cap. 03 - Threat Modeling | Metodologias, user stories, artefactos, integração no SDLC |
+| SbD-ToE Cap. 04 - Arquitetura Segura | Sincronização threat modeling ↔ arquitetura |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Ligação ameaça → requisito |
 | STRIDE (Microsoft) | Metodologia de categorização de ameaças técnicas |
 | LINDDUN | Metodologia de ameaças à privacidade |
 | PASTA | Process for Attack Simulation and Threat Analysis |

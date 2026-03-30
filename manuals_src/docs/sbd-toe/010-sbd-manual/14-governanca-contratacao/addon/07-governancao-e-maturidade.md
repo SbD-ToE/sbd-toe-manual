@@ -60,7 +60,7 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 ## 🔗 Ligações cruzadas
 
 * `achievable-maturity.md` de cada capítulo
-* `addon/01` a `addon/07` — componentes de suporte à maturidade
-* `addon/kpis-governanca.md` — KPIs de governança
+* `addon/01` a `addon/07` - componentes de suporte à maturidade
+* `addon/kpis-governanca.md` - KPIs de governança
 
 ---

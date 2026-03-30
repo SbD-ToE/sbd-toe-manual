@@ -8,7 +8,7 @@ sidebar_position: 1
 
 # DORA: Cross-Check Normativo
 
-> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/cross-check-normativo/sbd-toe-4-dora-playbook).
+> Para implementação prática, consulte o [Playbook SbD-ToE 4 DORA](/sbd-toe/cross-check-normativo/dora/playbook).
 > 
 > Para exemplos práticos internos, ver pasta `exemplo-playbook/`.
 
@@ -100,7 +100,7 @@ Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing
 - **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro):** Catálogo de testes (SAST, DAST, fuzzing, etc.)
 - **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro):** Validação de segurança pré-produção
 
-**Cobertura parcial — ver [Cap. 10 → addon 14: TLPT Readiness](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness):** O SbD-ToE enquadra o que é o TLPT, o que o distingue do PenTest convencional e como a maturidade do programa de testes se relaciona com o exercício. O que permanece fora do âmbito do manual são os critérios de elegibilidade (identificação pela autoridade competente), a qualificação formal de testers e providers segundo o Reg. Delegado (UE) 2025/1190, e o processo de attestation pela autoridade TLPT designada — estes aspectos são da competência das equipas de compliance e da relação com o supervisor.
+**Cobertura parcial - ver [Cap. 10 → addon 14: TLPT Readiness](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness):** O SbD-ToE enquadra o que é o TLPT, o que o distingue do PenTest convencional e como a maturidade do programa de testes se relaciona com o exercício. O que permanece fora do âmbito do manual são os critérios de elegibilidade (identificação pela autoridade competente), a qualificação formal de testers e providers segundo o Reg. Delegado (UE) 2025/1190, e o processo de attestation pela autoridade TLPT designada - estes aspectos são da competência das equipas de compliance e da relação com o supervisor.
 
 ---
 
@@ -113,7 +113,7 @@ Os Artigos 26–28 estabelecem requisitos para inventário formal, avaliação d
 **Categoria 1: Fornecedores de Componentes de Software ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) - SBOM)**
 - **Contexto DORA:** Componentes de software (bibliotecas, frameworks) de terceiros constituem fornecedores implícitos de tecnologia
 - **Solução técnica:** SBOM (Software Bill of Materials) identifica dependências e respetivos fornecedores
-- **Característica:** Fornecedores implícitos — os autores de componentes frequentemente desconhecem que integram a cadeia de fornecimento
+- **Característica:** Fornecedores implícitos - os autores de componentes frequentemente desconhecem que integram a cadeia de fornecimento
 - **Gestão operacional:** SCA contínuo (análise de vulnerabilidades), gestão de atualizações de segurança, rastreamento de licenças
 - **Pré-requisito DORA:** Sem SBOM, a organização não consegue identificar fornecedores de software
 
@@ -129,7 +129,7 @@ Os Artigos 26–28 estabelecem requisitos para inventário formal, avaliação d
 - Checklist de offboarding seguro
 
 **Conformidade DORA (Art. 26–28):**
-- Ambas as categorias exigem inventário e supervisão — não existe opcionalidade
+- Ambas as categorias exigem inventário e supervisão - não existe opcionalidade
 - SBOM alimenta o inventário de risco técnico de componentes
 - Fornecedores contratuais alimentam o inventário de risco organizacional
 - **Lacuna intencional:** O SbD-ToE não inclui templates ITS nem fórmulas de análise de concentração DORA. A conformidade requer: manutenção de SBOM atualizado ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)), inventário formal de contractors ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)) e templates contratuais com cláusulas de segurança alinhadas com DORA.
@@ -188,10 +188,10 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 **Cenário crítico (incoerência com DORA):**
 | Situação | Risco | Impacto | Posição DORA |
 |----------|-------|--------|-------------|
-| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** — Violação Art. 5 (sem supervisão) + Art. 18 (sem rastreamento) |
-| **CVE crítico ignorado sem justificação** | Exposição contínua, compliance gap | Falha de gestão de risco TIC | ❌ **GRAVE** — Violação Art. 19–20 (teste de resiliência inadequado) |
-| **Exceção aprovada verbalmente (no Teams/email informal)** | Perda de trilho, falta de autoridade formal, re-negociação ad-hoc | Impossível auditar decisões | ❌ **CRÍTICO** — Sem evidência de governance; regulador questiona: "quem aprovou?" |
-| **Exceção expirada sem reavaliação** | Risco aceito torna-se risco não-aceito (drift), violação técnica silenciosa | Aplicação continua com risco acima de limite | ❌ **CRÍTICO** — Violação Art. 5 (falta de supervisão contínua) |
+| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** - Violação Art. 5 (sem supervisão) + Art. 18 (sem rastreamento) |
+| **CVE crítico ignorado sem justificação** | Exposição contínua, compliance gap | Falha de gestão de risco TIC | ❌ **GRAVE** - Violação Art. 19–20 (teste de resiliência inadequado) |
+| **Exceção aprovada verbalmente (no Teams/email informal)** | Perda de trilho, falta de autoridade formal, re-negociação ad-hoc | Impossível auditar decisões | ❌ **CRÍTICO** - Sem evidência de governance; regulador questiona: "quem aprovou?" |
+| **Exceção expirada sem reavaliação** | Risco aceito torna-se risco não-aceito (drift), violação técnica silenciosa | Aplicação continua com risco acima de limite | ❌ **CRÍTICO** - Violação Art. 5 (falta de supervisão contínua) |
 
 ---
 
@@ -203,7 +203,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 **Tradução operacional:**
 - Decisões de aceitação de risco (exceções) exigem aprovação documentada de autoridade formal
 - O regulador interpreta conhecimento prévio de vulnerabilidade explorada sem aprovação documentada como negligência de supervisão
-- Exceções requerem reavaliação periódica — a ausência de reavaliação constitui aprovação tácita indefinida, configurando falha de supervisão
+- Exceções requerem reavaliação periódica - a ausência de reavaliação constitui aprovação tácita indefinida, configurando falha de supervisão
 
 **Art. 18 (Incidentes):**
 > "Exceções a testes de resiliência ou vulnerabilidades não-remediadas devem ser reportadas com contexto."
@@ -228,7 +228,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | **[Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), addon 03** | Exceções a requisitos arquiteturais | ✅ Modelo de registo com horizonte temporal; responsáveis designados |
 | **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), addon 09** | Exceções a CVEs (formalização, owner, TTL, impacto) | ✅ Processo completo: identificação → justificação → aceitação → TTL → revalidação |
 | **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Exceções a testes de segurança (com aprovação formal) | ✅ Menção explícita: "exceções formais aprovadas" |
-| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Governança de exceções (RACI, approval flow, auditoria) | ⚠️ **PARCIAL** — User Stories definem roles, mas não explicam implicações DORA |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Governança de exceções (RACI, approval flow, auditoria) | ⚠️ **PARCIAL** - User Stories definem roles, mas não explicam implicações DORA |
 | **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Waivers e exceções temporárias (durante formação) | ✅ "Justificação formal documentada, aprovada por AppSec/GRC/gestão" |
 
 ---
@@ -241,7 +241,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 |-------|------------------|-----------|-----|
 | **L1** | Validação por AppSec Engineer (informal) | Aprovação por autoridade formal designada | ⚠️ Developer-friendly, mas falta escalada clara |
 | **L2** | Validação formal por AppSec + GRC | Aprovação por CISO ou equivalente formal | ✅ Adequado, mas manual não o diz explicitamente |
-| **L3** | Aprovação de Gestão Executiva/CISO | **Aprovação de board ou CRO (exigência DORA)** | ❌ **GAP CRÍTICO** — Manual não especifica "board-level approval" |
+| **L3** | Aprovação de Gestão Executiva/CISO | **Aprovação de board ou CRO (exigência DORA)** | ❌ **GAP CRÍTICO** - Manual não especifica "board-level approval" |
 
 **Como manifesta:** Organização aceita exceção L3 com aprovação de CISO; regulador questiona: "foi aprovada em board?" → sem ata = **falha de governance**.
 
@@ -266,7 +266,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | **Criação de exceção** | Documenta com owner, TTL, critérios | ✅ Bom | ✅ Alinhado |
 | **Reavaliação periódica** | Revisão 30 dias antes expiração; re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
 | **Rastreamento centralizado** | Ferramenta GRC; audit trail por aplicação | ✅ Bom | ⚠️ Manual não descreve formato de reporte a DORA |
-| **Escalada ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** — Sem guia de quando escalar ao regulador |
+| **Escalada ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** - Sem guia de quando escalar ao regulador |
 
 **Como manifesta:** Incidente de segurança; regulador pede: "mostre-me exceções relevantes" → organização não tem visão consolidada ou não sabe se deve reportar.
 

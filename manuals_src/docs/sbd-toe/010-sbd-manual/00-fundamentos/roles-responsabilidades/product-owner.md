@@ -40,27 +40,27 @@ Validar **classificações de risco** em função dos objetivos estratégicos do
 Selecionar **requisitos aplicáveis ao projeto** proporcionais ao risco. Garantir que cada requisito no backlog contém critérios de aceitação de segurança claros e testáveis.
 
 **User Stories:**
-- [US-01: Seleção de requisitos aplicáveis](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-01--seleção-de-requisitos-aplicáveis-ao-projeto) — Segurança proporcional ao risco
-- [US-03: Critérios de aceitação de segurança](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-03--critérios-de-aceitação-de-segurança-claros) — Validação consistente
+- [US-01: Seleção de requisitos aplicáveis](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-01---seleção-de-requisitos-por-criticidade) - Segurança proporcional ao risco
+- [US-03: Critérios de aceitação de segurança](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-03---gestão-de-exceções-com-ttl-e-revalidação-obrigatória) - Validação consistente
 
 ### Cap. 03 - Threat Modeling
 Priorizar **ameaças identificadas** de acordo com impacto no negócio, otimizando mitigação e investimento.
 
 **User Stories:**
-- [US-05: Priorização de ameaças por impacto](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05--priorização-de-ameaças-por-impacto-no-negócio) — Otimizar recursos de mitigação
+- [US-05: Priorização de ameaças por impacto](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05---gate-de-controlo-de-consistência-no-cicd) - Otimizar recursos de mitigação
 
 ### Cap. 04 - Arquitetura Segura
 Validar **impacto de requisitos de arquitetura** para priorizar mitigação. Gerir exceções com aprovação e controlos compensatórios.
 
 **User Stories:**
-- [US-06: Validação de impacto de requisitos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-06--validação-de-impacto-de-requisitos-de-arquitetura) — Priorizar mitigação
-- [US-10: Gestão de exceções de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10--gestão-de-exceções-de-arquitetura) — Equilibrar risco e entrega (com AppSec)
+- [US-06: Validação de impacto de requisitos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-06---atualização-da-baseline-após-alteração-arquitetural-significativa) - Priorizar mitigação
+- [US-10: Gestão de exceções de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado-arquiteturais-com-controlos-compensatórios) - Equilibrar risco e entrega (com AppSec)
 
 ### Cap. 05 - Dependências e SBOM
 Validar **findings e exceções antes do go-live**, tomando decisão informada de go/no-go baseada em análise de risco.
 
 **User Stories:**
-- [US-05: Validação de release (go/no-go)](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-05--validação-de-release-gono-go) — Decisão informada antes do go-live
+- [US-05: Validação de release (go/no-go)](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-05---validação-de-release-gono-go) - Decisão informada antes do go-live
 
 ### Cap. 07 - CI/CD Seguro
 Definir **gates de release** que bloqueiam versões inseguras, garantindo conformidade com thresholds estabelecidos.

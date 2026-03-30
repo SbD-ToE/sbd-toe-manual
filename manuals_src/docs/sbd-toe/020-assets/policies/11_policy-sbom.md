@@ -12,7 +12,7 @@ sidebar_position: 11
 
 Esta política define os requisitos para a **geração, assinatura, arquivamento e retenção de Software Bills of Materials (SBOM)** em todos os builds de software produzidos ou operados pela organização.
 
-Um SBOM é o inventário completo e verificável dos componentes que compõem um artefacto de software — dependências diretas, transitivas, versões, licenças e hashes. Sem SBOM, a resposta a um CVE requer pesquisa manual, a auditoria de supply chain é especulativa e a demonstração de conformidade regulatória torna-se impossível.
+Um SBOM é o inventário completo e verificável dos componentes que compõem um artefacto de software - dependências diretas, transitivas, versões, licenças e hashes. Sem SBOM, a resposta a um CVE requer pesquisa manual, a auditoria de supply chain é especulativa e a demonstração de conformidade regulatória torna-se impossível.
 
 O objetivo desta política é garantir que:
 
@@ -71,7 +71,7 @@ Os SBOMs devem ser produzidos em formato JSON ou XML. Formatos proprietários n�
 | SBOM para imagens de container | Recomendado | Obrigatório | Obrigatório |
 | SBOM arquivado como artefacto do pipeline | Recomendado | Obrigatório | Obrigatório |
 
-A geração do SBOM deve ser automatizada no pipeline — não é aceitável geração manual ou ad-hoc como substituto do SBOM de build.
+A geração do SBOM deve ser automatizada no pipeline - não é aceitável geração manual ou ad-hoc como substituto do SBOM de build.
 
 ---
 
@@ -184,9 +184,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Integração SBOM no pipeline de build e release |
-| SbD-ToE Cap. 09 — Containers e Imagens | SBOM por camada de imagem |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Integração SBOM no pipeline de build e release |
+| SbD-ToE Cap. 09 - Containers e Imagens | SBOM por camada de imagem |
 | Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes |
 | Política de Rastreabilidade (`06_policy-rastreabilidade.md`) | Arquivo e retenção de artefactos de build |
 | CycloneDX Specification | Formato SBOM preferido |

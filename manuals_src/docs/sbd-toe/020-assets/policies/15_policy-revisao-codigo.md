@@ -19,7 +19,7 @@ O objetivo desta política é garantir que:
 - Todo o PR relevante é revisto por pelo menos um reviewer com competência técnica adequada
 - A revisão inclui verificação de segurança com base em checklist normalizada
 - A aprovação é registada de forma rastreável e auditável
-- A revisão humana é complementada — não substituída — por análise automática
+- A revisão humana é complementada - não substituída - por análise automática
 
 ---
 
@@ -43,7 +43,7 @@ Cada PR deve ser avaliado com base nos seguintes pontos de controlo. A checklist
 
 ### 3.1 Autenticação e autorização
 - [ ] Endpoints protegidos com autenticação adequada ao contexto
-- [ ] Lógica de autorização verificada — não apenas autenticação
+- [ ] Lógica de autorização verificada - não apenas autenticação
 - [ ] Ausência de escalada de privilégios horizontal ou vertical
 - [ ] Tokens, sessões ou credenciais não expostos em logs ou respostas
 
@@ -59,7 +59,7 @@ Cada PR deve ser avaliado com base nos seguintes pontos de controlo. A checklist
 
 ### 3.4 Dependências e imports
 - [ ] Novas dependências aprovadas conforme Política de Dependências
-- [ ] Imports de bibliotecas validados — sem copiagem de código externo sem proveniência
+- [ ] Imports de bibliotecas validados - sem copiagem de código externo sem proveniência
 
 ### 3.5 Tratamento de erros e logging
 - [ ] Erros tratados sem exposição de informação técnica ao utilizador (stack traces, paths, versões)
@@ -87,7 +87,7 @@ Um PR só pode ser aprovado e fundido quando:
 - [ ] Nenhum reviewer aprovou o seu próprio código (self-approval proibida)
 
 :::warning
-A aprovação de um PR não é a confirmação de que o código está isento de vulnerabilidades — é a confirmação de que foi sujeito a revisão competente e sistemática. A responsabilidade de segurança é partilhada entre o autor e os reviewers.
+A aprovação de um PR não é a confirmação de que o código está isento de vulnerabilidades - é a confirmação de que foi sujeito a revisão competente e sistemática. A responsabilidade de segurança é partilhada entre o autor e os reviewers.
 :::
 
 ---
@@ -98,7 +98,7 @@ A aprovação de um PR não é a confirmação de que o código está isento de 
 
 | Nível | Reviewer mínimo | Reviewer adicional quando aplicável |
 |---|---|---|
-| L1 | Developer com competência na stack | — |
+| L1 | Developer com competência na stack | - |
 | L2 | Developer sénior ou Tech Lead | AppSec Engineer para alterações de segurança |
 | L3 | Tech Lead | AppSec Engineer obrigatório para alterações de segurança |
 
@@ -114,7 +114,7 @@ Em L3, recomenda-se rotação de reviewers para evitar pontos cegos sistemático
 
 ## 6. Integração com ferramentas automáticas
 
-A revisão humana complementa — não substitui — a análise automática. O pipeline deve executar, antes ou durante o PR, as seguintes verificações automáticas:
+A revisão humana complementa - não substitui - a análise automática. O pipeline deve executar, antes ou durante o PR, as seguintes verificações automáticas:
 
 | Verificação | Quando executa | Bloqueia merge em L2/L3? |
 |---|---|---|
@@ -176,7 +176,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 06 — Desenvolvimento Seguro | Revisão de código como controlo de segurança, proporcionalidade L1-L3 |
+| SbD-ToE Cap. 06 - Desenvolvimento Seguro | Revisão de código como controlo de segurança, proporcionalidade L1-L3 |
 | Política de Guidelines de Desenvolvimento (`14_policy-guidelines-desenvolvimento.md`) | Checklist derivada das guidelines por stack |
 | Política de CI/CD Seguro (`17_policy-cicd-seguro.md`) | Integração de SAST/linters no pipeline de PR |
 | OWASP Code Review Guide | Referência de boas práticas de revisão de código segura |

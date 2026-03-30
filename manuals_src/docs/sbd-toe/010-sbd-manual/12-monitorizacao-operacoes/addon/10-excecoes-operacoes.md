@@ -2,13 +2,13 @@
 id: excecoes-operacoes
 title: Excepções em Monitorização e Operações
 sidebar_position: 10
-description: Especificidades da gestão de excepções no contexto de monitorização e operações — alert silencing, retenção de logs e implicações regulatórias
+description: Especificidades da gestão de excepções no contexto de monitorização e operações - alert silencing, retenção de logs e implicações regulatórias
 tags: [exceções, operacoes, monitorizacao, alertas, retencao, DORA, NIS2, SIEM]
 ---
 
 # Excepções em Monitorização e Operações
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
@@ -21,19 +21,19 @@ Excepções a requisitos do catálogo de monitorização e operações: `OPS-001
 ## Triggers específicos deste domínio
 
 - alerta silenciado temporariamente por manutenção programada, ruído excessivo de falsos positivos, ou incapacidade técnica de resposta num período definido (OPS-005);
-- retenção de logs abaixo do mínimo definido na política ou exigido por regulação — por constrangimento de armazenamento, custo ou conflito com outra obrigação legal (OPS-003);
+- retenção de logs abaixo do mínimo definido na política ou exigido por regulação - por constrangimento de armazenamento, custo ou conflito com outra obrigação legal (OPS-003);
 - fonte de logs não integrada no SIEM por incompatibilidade técnica ou ausência de conector, com compensação de monitorização alternativa (OPS-004);
 - SLA de resposta a alertas não cumprível para determinado tipo de evento por falta de capacidade operacional, com plano de reforço (OPS-006).
 
 ---
 
-## Alert silencing — requisitos específicos
+## Alert silencing - requisitos específicos
 
 O silenciamento de alertas é o cenário de maior risco neste domínio: elimina visibilidade activa sem deixar evidência automática. Toda a excepção de silenciamento exige:
 
 - identificação precisa do alerta silenciado (ID, regra, fonte);
 - justificação técnica da impossibilidade de manter o alerta activo;
-- período de silenciamento com data de fim obrigatória — sem silenciamentos permanentes;
+- período de silenciamento com data de fim obrigatória - sem silenciamentos permanentes;
 - controlo compensatório de visibilidade activo durante o período (ex: revisão manual periódica, alerta alternativo, monitorização manual da fonte);
 - notificação ao responsável de segurança operacional (SOC lead ou equivalente).
 
@@ -41,7 +41,7 @@ Alertas silenciados sem data de fim ou sem controlo compensatório são tratados
 
 ---
 
-## Retenção de logs — implicações regulatórias
+## Retenção de logs - implicações regulatórias
 
 Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2, ou política interna) têm implicações que excedem a aprovação técnica:
 
@@ -67,7 +67,7 @@ Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2,
 
 | Documento | Relação |
 |---|---|
-| `00-catalogo-requisitos.md` | Catálogo OPS-001..010 — requisitos que podem ter excepções |
+| `00-catalogo-requisitos.md` | Catálogo OPS-001..010 - requisitos que podem ter excepções |
 | `03-alertas-eventos-criticos.md` | Alertas que podem ser objecto de silenciamento com excepção |
 | `08-matriz-controles-por-risco.md` | Matriz de controlos por nível de risco |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

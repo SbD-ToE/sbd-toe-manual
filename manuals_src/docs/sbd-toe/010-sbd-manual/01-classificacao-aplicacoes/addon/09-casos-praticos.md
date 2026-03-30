@@ -19,7 +19,7 @@ mas **assegurar o nível adequado de cuidado e controlo**.
 
 ---
 
-## 📝 Caso 1 — Plataforma de E-commerce Pública
+## 📝 Caso 1 - Plataforma de E-commerce Pública
 
 **Contexto**  
 Plataforma de vendas online, com pagamentos diretos e integração com terceiros.
@@ -42,7 +42,7 @@ Mesmo sem considerar incidentes passados, a combinação de exposição pública
 
 ---
 
-## 📝 Caso 2 — Portal Interno de RH Hospitalar
+## 📝 Caso 2 - Portal Interno de RH Hospitalar
 
 **Contexto**  
 Aplicação interna, acessível apenas na rede hospitalar, usada para gestão de RH.
@@ -64,7 +64,7 @@ Este caso demonstra que:
 
 ---
 
-## 📝 Caso 3 — Sistema de Faturação B2B
+## 📝 Caso 3 - Sistema de Faturação B2B
 
 **Contexto**  
 Sistema usado por clientes empresariais autenticados, com integração ERP.
@@ -87,7 +87,7 @@ Sistema relevante, mas com impacto controlável e sem dados regulados críticos.
 
 ---
 
-## 📝 Caso 4 — Ferramenta Interna de Gestão de Tarefas
+## 📝 Caso 4 - Ferramenta Interna de Gestão de Tarefas
 
 **Contexto**  
 Aplicação simples, usada internamente para gestão de tarefas.
@@ -109,7 +109,7 @@ Baixa exposição, baixo impacto e ausência de dados sensíveis justificam cont
 
 ---
 
-## 📝 Caso 5 — Serviço Core com DRP Crítico (Classificação Conservadora)
+## 📝 Caso 5 - Serviço Core com DRP Crítico (Classificação Conservadora)
 
 **Contexto**  
 Serviço central de negócio, classificado como **Crítico no DRP**:
@@ -134,7 +134,7 @@ Mesmo que o risco técnico pudesse ser L2, o custo de falha justifica
 
 ---
 
-## 📝 Caso 6 — Aplicação com Automação Avançada (incl. IA)
+## 📝 Caso 6 - Aplicação com Automação Avançada (incl. IA)
 
 **Contexto**  
 Aplicação interna que utiliza automação assistiva para:

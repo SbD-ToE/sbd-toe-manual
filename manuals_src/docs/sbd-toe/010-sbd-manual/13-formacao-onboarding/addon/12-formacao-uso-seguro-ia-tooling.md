@@ -1,11 +1,11 @@
 ---
 id: formacao-uso-seguro-ia-tooling
-title: "Addon-12 — Formação em Uso Seguro de IA e Tooling Pervasivo"
+title: "Addon-12 - Formação em Uso Seguro de IA e Tooling Pervasivo"
 description: Conteúdos formativos para assegurar uso responsável e seguro de ferramentas automatizadas, code assistants e IA generativa
 tags: [formacao, ia, tooling, copilot, code-generation, llm, automacao, guardrails]
 ---
 
-# 📚 Addon-12 — Formação em Uso Seguro de IA e Tooling Pervasivo
+# 📚 Addon-12 - Formação em Uso Seguro de IA e Tooling Pervasivo
 
 ## 🎯 Objetivo
 
@@ -31,7 +31,7 @@ Este addon define conteúdos formativos essenciais para cada capítulo técnico 
 
 ## 📖 Conteúdos Formativos por Capítulo Técnico
 
-### Cap 01 — Classificação de Aplicações
+### Cap 01 - Classificação de Aplicações
 
 **Ferramentas**: Assistentes de classificação de risco, templates automatizados
 
@@ -55,7 +55,7 @@ validation_date: "2026-01-04"
 
 ---
 
-### Cap 02 — Requisitos de Segurança
+### Cap 02 - Requisitos de Segurança
 
 **Ferramentas**: Geradores de requisitos (LLMs, templates automatizados)
 
@@ -79,7 +79,7 @@ REQ-AUTH-001: "Autenticação via OAuth 2.0 + PKCE com MFA obrigatório para rol
 
 ---
 
-### Cap 03 — Threat Modeling
+### Cap 03 - Threat Modeling
 
 **Ferramentas**: LLMs para threat analysis (ChatGPT, GitHub Copilot para threat lists)
 
@@ -105,7 +105,7 @@ Aprovação: "AppSec Lead validou arquitetura e controlo"
 
 ---
 
-### Cap 04 — Arquitetura Segura
+### Cap 04 - Arquitetura Segura
 
 **Ferramentas**: Geradores de diagramas (Mermaid, PlantUML), assistentes de ADR
 
@@ -135,7 +135,7 @@ Aprovação: "Arch Lead + AppSec + CTO"
 
 ---
 
-### Cap 05 — Dependências, SBOM, SCA
+### Cap 05 - Dependências, SBOM, SCA
 
 **Ferramentas**: SCA (Snyk, Dependabot, npm audit, safety)
 
@@ -165,7 +165,7 @@ Evidência: "PR-123 com testes + validação staging"
 
 ---
 
-### Cap 06 — Desenvolvimento Seguro
+### Cap 06 - Desenvolvimento Seguro
 
 **Ferramentas**: GitHub Copilot, ChatGPT, code generators, Cursor, Tabnine
 
@@ -208,7 +208,7 @@ password strength validation."
 
 ---
 
-### Cap 07 — CI/CD Seguro
+### Cap 07 - CI/CD Seguro
 
 **Ferramentas**: Pipeline automation (GitHub Actions, GitLab CI, Jenkins)
 
@@ -242,7 +242,7 @@ Aprovação: "AppSec valida contexto, aprova exceção com validade 6 meses"
 
 ---
 
-### Cap 08 — IaC e Infraestrutura
+### Cap 08 - IaC e Infraestrutura
 
 **Ferramentas**: Geradores de Terraform/CloudFormation, assistentes de IaC
 
@@ -279,7 +279,7 @@ resource "aws_iam_role" "app_role" {
 
 ---
 
-### Cap 09 — Containers e Imagens
+### Cap 09 - Containers e Imagens
 
 **Ferramentas**: Geradores de Dockerfile, assistentes de Kubernetes manifests
 
@@ -309,7 +309,7 @@ USER nonroot:nonroot  # ✅ Non-root user
 
 ---
 
-### Cap 10 — Testes de Segurança
+### Cap 10 - Testes de Segurança
 
 **Ferramentas**: Test generators (Copilot for tests, ChatGPT, test automation)
 
@@ -389,7 +389,7 @@ def test_authentication_security():
 
 ---
 
-### Cap 11 — Deploy Seguro
+### Cap 11 - Deploy Seguro
 
 **Ferramentas**: Automação de deploy (Terraform, Helm, Spinnaker, Argo)
 
@@ -418,7 +418,7 @@ on_error:
 
 ---
 
-### Cap 12 — Monitorização e Operações
+### Cap 12 - Monitorização e Operações
 
 **Ferramentas**: SOAR, alertas automáticos, correlação comportamental
 

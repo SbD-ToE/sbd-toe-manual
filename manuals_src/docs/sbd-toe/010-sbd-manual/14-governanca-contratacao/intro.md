@@ -49,7 +49,7 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 - **O que fazer:**  
   - Criar um **modelo formal e aprovado** de governação de segurança.  
-  - Estabelecer um **fluxo explícito** de exceções e aceitação de risco — processo canónico em [`addon/12-processo-excecoes.md`](./addon/processo-excecoes).
+  - Estabelecer um **fluxo explícito** de exceções e aceitação de risco - processo canónico em [`addon/12-processo-excecoes.md`](./addon/processo-excecoes).
   - Integrar **cláusulas contratuais de SbD-ToE** em fornecedores e parceiros.  
   - Definir auditorias e mecanismos de **validação contínua de terceiros**.  
   - Recolher, analisar e reportar **KPIs de governação** de forma sistemática.  

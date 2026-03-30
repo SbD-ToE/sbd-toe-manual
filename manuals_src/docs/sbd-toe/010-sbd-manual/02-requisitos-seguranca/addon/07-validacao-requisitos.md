@@ -1,14 +1,14 @@
 ---
 id: validacao-requisitos
 title: Validação de Requisitos de Segurança
-description: Modelo completo de validação dos requisitos do catálogo SbD-ToE — princípios, métodos por tipo de requisito, momentos do ciclo de vida e plano detalhado por domínio com tag operacional, método recomendado e evidência esperada.
+description: Modelo completo de validação dos requisitos do catálogo SbD-ToE - princípios, métodos por tipo de requisito, momentos do ciclo de vida e plano detalhado por domínio com tag operacional, método recomendado e evidência esperada.
 tags: [validação, requisitos, segurança-aplicacional, evidência, SAST, DAST, auditoria, rastreabilidade, ciclo-de-vida, CI-CD]
 sidebar_position: 7
 ---
 
 # ✅ Validação de Requisitos de Segurança
 
-A validação é o mecanismo que converte requisitos definidos em garantia observável. Não basta que um requisito exista no catálogo — é necessário confirmar que foi implementado, que funciona conforme esperado e que existe evidência auditável disso. Este documento prescreve como fazê-lo de forma sistemática, proporcional ao risco e integrada no ciclo de desenvolvimento.
+A validação é o mecanismo que converte requisitos definidos em garantia observável. Não basta que um requisito exista no catálogo - é necessário confirmar que foi implementado, que funciona conforme esperado e que existe evidência auditável disso. Este documento prescreve como fazê-lo de forma sistemática, proporcional ao risco e integrada no ciclo de desenvolvimento.
 
 ---
 
@@ -16,17 +16,17 @@ A validação é o mecanismo que converte requisitos definidos em garantia obser
 
 A validação de requisitos de segurança deve ser:
 
-- **Sistemática** — associada a momentos bem definidos do ciclo de vida, não ad-hoc;
-- **Proporcional ao risco** — requisitos de maior criticidade exigem validação mais profunda e independente;
-- **Rastreável** — cada validação produz ligação explícita entre requisito, método, resultado e evidência;
-- **Repetível** — automatizável ou documentada com suficiente detalhe para replicação;
-- **Independente** — sempre que possível, realizada por alguém fora da linha de implementação directa.
+- **Sistemática** - associada a momentos bem definidos do ciclo de vida, não ad-hoc;
+- **Proporcional ao risco** - requisitos de maior criticidade exigem validação mais profunda e independente;
+- **Rastreável** - cada validação produz ligação explícita entre requisito, método, resultado e evidência;
+- **Repetível** - automatizável ou documentada com suficiente detalhe para replicação;
+- **Independente** - sempre que possível, realizada por alguém fora da linha de implementação directa.
 
 ---
 
 ## 2) Métodos de validação
 
-A escolha do método depende do tipo de requisito e da fase em que é aplicado. Os métodos não são mutuamente exclusivos — para requisitos críticos, a combinação de dois ou mais é a abordagem correcta.
+A escolha do método depende do tipo de requisito e da fase em que é aplicado. Os métodos não são mutuamente exclusivos - para requisitos críticos, a combinação de dois ou mais é a abordagem correcta.
 
 ### Análise Estática (SAST)
 
@@ -58,7 +58,7 @@ Complementam a análise dinâmica com verificação explícita dos critérios de
 
 ### Revisão técnica estruturada
 
-Realizada por analistas, arquitectos ou elementos de segurança. Adequada para requisitos cujo controlo é distribuído ou implícito — segregação lógica, dependências externas, controlo de sessão transversal. Deve ocorrer após marcos relevantes: release candidate, pull request crítico, auditoria interna.
+Realizada por analistas, arquitectos ou elementos de segurança. Adequada para requisitos cujo controlo é distribuído ou implícito - segregação lógica, dependências externas, controlo de sessão transversal. Deve ocorrer após marcos relevantes: release candidate, pull request crítico, auditoria interna.
 
 ### Validação contínua em CI/CD
 
@@ -90,7 +90,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### AUT — Autenticação e Identidade
+### AUT - Autenticação e Identidade
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -107,7 +107,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### ACC — Controlo de Acesso
+### ACC - Controlo de Acesso
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -124,7 +124,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### LOG — Registo e Monitorização
+### LOG - Registo e Monitorização
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -141,7 +141,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### SES — Sessões e Estado
+### SES - Sessões e Estado
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -156,7 +156,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### VAL — Validação de Dados
+### VAL - Validação de Dados
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -170,7 +170,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### ERR — Gestão de Erros
+### ERR - Gestão de Erros
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -184,7 +184,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### CFG — Configuração Segura
+### CFG - Configuração Segura
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -198,7 +198,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### API — Segurança de APIs
+### API - Segurança de APIs
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -212,7 +212,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### INT — Mensagens e Integrações
+### INT - Mensagens e Integrações
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -227,7 +227,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### REQ — Definição de Requisitos
+### REQ - Definição de Requisitos
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -241,7 +241,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### DST — Distribuição de Artefactos
+### DST - Distribuição de Artefactos
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -255,7 +255,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### IDE — Ferramentas de Desenvolvimento
+### IDE - Ferramentas de Desenvolvimento
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -272,10 +272,10 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 Cada requisito validado deve produzir:
 
-- **Evidência de execução** — relatório, log, artefacto de validação, captura de ecrã;
-- **Resultado** — conforme / não conforme / parcial, com contexto suficiente para decisão;
-- **Ligação ao identificador** — tag operacional do projecto (`SEC-L2-AUT-MFA`) e ID canónico (`AUT-001`);
-- **Medida correctiva**, quando aplicável — acção, responsável, prazo.
+- **Evidência de execução** - relatório, log, artefacto de validação, captura de ecrã;
+- **Resultado** - conforme / não conforme / parcial, com contexto suficiente para decisão;
+- **Ligação ao identificador** - tag operacional do projecto (`SEC-L2-AUT-MFA`) e ID canónico (`AUT-001`);
+- **Medida correctiva**, quando aplicável - acção, responsável, prazo.
 
 ---
 
@@ -283,10 +283,10 @@ Cada requisito validado deve produzir:
 
 A validação deve ser incorporada num ciclo de melhoria contínua, com os métodos:
 
-- **Revistos com base em incidentes ou findings reais** — um finding recorrente indica lacuna no método, não apenas no controlo;
+- **Revistos com base em incidentes ou findings reais** - um finding recorrente indica lacuna no método, não apenas no controlo;
 - **Actualizados com novas técnicas** ou alterações ao catálogo;
 - **Automatizados sempre que possível**, para garantir cobertura consistente e escalável;
-- **Monitorizados com indicadores** — percentagem de requisitos validados por release, tempo médio de detecção de não conformidade.
+- **Monitorizados com indicadores** - percentagem de requisitos validados por release, tempo médio de detecção de não conformidade.
 
 ---
 

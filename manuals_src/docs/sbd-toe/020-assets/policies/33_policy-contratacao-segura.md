@@ -12,7 +12,7 @@ sidebar_position: 33
 
 Esta política define os **requisitos de segurança aplicáveis ao ciclo de vida contratual com fornecedores, parceiros e contractors** que acedem a sistemas, dados ou infraestrutura da organização.
 
-A externalização de competências técnicas e o recurso a serviços de terceiros são práticas operacionais correntes. No entanto, cada fornecedor ou contractor com acesso técnico representa um vector de risco adicional: pode introduzir vulnerabilidades, ter acesso a dados sensíveis sem enquadramento adequado, ou manter acesso residual após o términus do contrato. A gestão deste risco não pode ser relegada para uma cláusula genérica de confidencialidade — exige um processo estruturado que começa antes da assinatura do contrato e termina apenas com o offboarding verificado.
+A externalização de competências técnicas e o recurso a serviços de terceiros são práticas operacionais correntes. No entanto, cada fornecedor ou contractor com acesso técnico representa um vector de risco adicional: pode introduzir vulnerabilidades, ter acesso a dados sensíveis sem enquadramento adequado, ou manter acesso residual após o términus do contrato. A gestão deste risco não pode ser relegada para uma cláusula genérica de confidencialidade - exige um processo estruturado que começa antes da assinatura do contrato e termina apenas com o offboarding verificado.
 
 O objetivo desta política é garantir que:
 
@@ -91,7 +91,7 @@ Todos os contratos que impliquem acesso técnico devem incluir cláusulas de seg
 
 ### 4.3 Modelo contratual de referência
 
-A organização deve manter um modelo contratual padrão com cláusulas de segurança validadas juridicamente, actualizado anualmente ou após alterações regulatórias relevantes. O modelo deve ser disponibilizado a Procurement e Jurídico como referência de negociação — as cláusulas de segurança são requisitos mínimos, não pontos de negociação em contratos L2/L3.
+A organização deve manter um modelo contratual padrão com cláusulas de segurança validadas juridicamente, actualizado anualmente ou após alterações regulatórias relevantes. O modelo deve ser disponibilizado a Procurement e Jurídico como referência de negociação - as cláusulas de segurança são requisitos mínimos, não pontos de negociação em contratos L2/L3.
 
 ---
 
@@ -117,7 +117,7 @@ O acesso a sistemas da organização é **bloqueado até conclusão de todas as 
 
 ## 6. Monitorização de conformidade de fornecedores activos
 
-A relação contratual não termina com a assinatura — os fornecedores activos com acesso técnico devem ser monitorizados continuamente:
+A relação contratual não termina com a assinatura - os fornecedores activos com acesso técnico devem ser monitorizados continuamente:
 
 ### 6.1 Indicadores de conformidade a monitorizar
 
@@ -163,7 +163,7 @@ O offboarding de um contractor ou a rescisão de um contrato com fornecedor deve
 |---|---|
 | Saída planeada (fim de contrato) | No próprio dia de terminus |
 | Saída não planeada (rescisão imediata) | ≤ 2 horas após decisão |
-| Rescisão por causa de segurança | Imediato — revogação prioritária antes de qualquer outro procedimento |
+| Rescisão por causa de segurança | Imediato - revogação prioritária antes de qualquer outro procedimento |
 
 :::warning
 A manutenção de acessos activos após o términus do contrato é uma das causas mais comuns de acessos residuais não autorizados. O processo de offboarding deve ser automatizado ao máximo para evitar dependência de acção manual sob pressão ou com lacunas de informação.
@@ -212,12 +212,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 14 — Governança & Contratação | US-02: cláusulas contratuais; US-14: reavaliação de fornecedores; US-15: onboarding de contractors; US-17: offboarding |
+| SbD-ToE Cap. 14 - Governança & Contratação | US-02: cláusulas contratuais; US-14: reavaliação de fornecedores; US-15: onboarding de contractors; US-17: offboarding |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Registo e evidência de conformidade |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Credenciais de contractors e revogação |
-| ISO/IEC 27001 — A.15 | Supplier relationships |
+| ISO/IEC 27001 - A.15 | Supplier relationships |
 | ISO/IEC 27036 | Information security for supplier relationships |
 | NIST SP 800-161 | Cybersecurity Supply Chain Risk Management |
-| RGPD — Art. 28 | Subprocessadores de dados pessoais |
-| DORA — Art. 28-30 | ICT third-party risk management |
-| NIS2 — Art. 21 | Supply chain security measures |
+| RGPD - Art. 28 | Subprocessadores de dados pessoais |
+| DORA - Art. 28-30 | ICT third-party risk management |
+| NIS2 - Art. 21 | Supply chain security measures |

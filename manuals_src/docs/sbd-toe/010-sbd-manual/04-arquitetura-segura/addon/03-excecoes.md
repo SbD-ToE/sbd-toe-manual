@@ -8,7 +8,7 @@ tags: [exceções, arquitectura, risco, rastreabilidade, adr]
 
 # Excepções a Requisitos de Arquitectura Segura
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
@@ -49,9 +49,9 @@ Excepções não registadas na matriz de rastreabilidade são tratadas como lacu
 
 ## Alinhamento normativo
 
-- ISO/IEC 27001 A.18.1.4 — aceitação formal de riscos residuais
-- SSDF GV.3 — aprovação de excepções e desvios de processos de segurança
-- OWASP SAMM Governance — registo e lifecycle de decisões excepcionais
+- ISO/IEC 27001 A.18.1.4 - aceitação formal de riscos residuais
+- SSDF GV.3 - aprovação de excepções e desvios de processos de segurança
+- OWASP SAMM Governance - registo e lifecycle de decisões excepcionais
 
 ---
 
@@ -59,6 +59,6 @@ Excepções não registadas na matriz de rastreabilidade são tratadas como lacu
 
 | Documento | Relação |
 |---|---|
-| `01-catalogo-requisitos.md` | Catálogo ARC-001..013 — requisitos que podem ter excepções |
+| `01-catalogo-requisitos.md` | Catálogo ARC-001..013 - requisitos que podem ter excepções |
 | `06-rastreabilidade.md` | Matriz de rastreabilidade onde a excepção é registada |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

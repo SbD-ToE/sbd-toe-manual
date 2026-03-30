@@ -50,7 +50,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 
 ---
 
-### US-01 — Definição de princípios e baseline de arquitetura segura 
+### US-01 - Definição de princípios e baseline de arquitetura segura 
 
 **Contexto.**  
 No arranque de um projeto (ou épico significativo), é obrigatório estabelecer **princípios** e uma **baseline inicial**, para orientar decisões e evitar deriva arquitetural.
@@ -88,12 +88,12 @@ Como **Arquitetos de Software**, quero definir e versionar princípios de arquit
 | Início | Novo projeto / épico estrutural | Arquitetos de Software | Antes do design detalhado |
 
 **Ligações úteis.**
-- 🔗 Cap. 2 — Requisitos de Segurança: `/sbd-manual/requisitos-seguranca/intro`
-- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
+- 🔗 Cap. 2 - Requisitos de Segurança: `/sbd-manual/requisitos-seguranca/intro`
+- 🔗 Cap. 3 - Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-02 — Ficha de solução com controlos e rastreabilidade arquitetural 
+### US-02 - Ficha de solução com controlos e rastreabilidade arquitetural 
 
 **Contexto.**  
 Durante o design, a solução deve ser descrita com **controlos arquiteturais explícitos**, minimização de exposição e ligação a requisitos/ameaças.
@@ -140,7 +140,7 @@ Como **Arquitetos de Software**, quero produzir uma ficha de arquitetura com con
 
 ---
 
-### US-03 — Revisão formal do design arquitetural
+### US-03 - Revisão formal do design arquitetural
 
 **Contexto.**  
 Antes de implementar, o design deve ser revisto quanto a conformidade com princípios, requisitos e mitigação de ameaças.
@@ -177,11 +177,11 @@ Como **AppSec Engineer**, quero rever formalmente o design arquitetural, para ga
 | Planeamento | Design pronto para implementação | AppSec Engineer | Antes da implementação |
 
 **Ligações úteis.**
-- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
+- 🔗 Cap. 3 - Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-04 — Gestão de decisões arquiteturais (ADR)
+### US-04 - Gestão de decisões arquiteturais (ADR)
 
 **Contexto.**  
 Decisões de arquitetura críticas devem ser documentadas com alternativas e trade-offs, para preservar rastreabilidade e permitir revisão/invalidação.
@@ -224,7 +224,7 @@ Como **Arquitetos de Software**, quero registar decisões arquiteturais (ADR) co
 
 ---
 
-### US-05 — Revisão de fronteiras de confiança e integrações
+### US-05 - Revisão de fronteiras de confiança e integrações
 
 **Contexto.**  
 Integrações internas e com terceiros exigem revisão explícita de fronteiras de confiança e fluxos de dados (incluindo fluxos implícitos).
@@ -267,7 +267,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero rever trust boundaries 
 
 ---
 
-### US-06 — Atualização da baseline após alteração arquitetural significativa
+### US-06 - Atualização da baseline após alteração arquitetural significativa
 
 **Contexto.**  
 Alterações arquiteturais significativas invalidam decisões anteriores e exigem atualização da baseline e (quando aplicável) reavaliação de ameaças/requisitos.
@@ -307,11 +307,11 @@ Como **Developer**, quero atualizar a baseline arquitetural quando ocorrem alter
 | Desenvolvimento | Alteração significativa | Developer + Arquitetos de Software | No mesmo sprint |
 
 **Ligações úteis.**
-- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
+- 🔗 Cap. 3 - Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-07 — Validação arquitetural automatizável no CI/CD (quando aplicável)
+### US-07 - Validação arquitetural automatizável no CI/CD (quando aplicável)
 
 **Contexto.**  
 Determinados controlos arquiteturais podem ser validados de forma automatizada (ou semi-automatizada). O objetivo é **produzir evidência reprodutível**, não “substituir” revisão humana.
@@ -351,11 +351,11 @@ Como **DevOps/SRE + AppSec Engineer**, quero integrar validações automatizáve
 | CI/CD | Alteração com impacto | DevOps/SRE + AppSec Engineer | Em cada build relevante |
 
 **Ligações úteis.**
-- 🔗 Cap. 7 — CI/CD Seguro: `/sbd-manual/cicd-seguro//intro`
+- 🔗 Cap. 7 - CI/CD Seguro: `/sbd-manual/cicd-seguro//intro`
 
 ---
 
-### US-08 — Avaliação de impacto no negócio e priorização de trade-offs
+### US-08 - Avaliação de impacto no negócio e priorização de trade-offs
 
 **Contexto.**  
 Decisões arquiteturais implicam trade-offs com impacto no negócio. A priorização deve ser explícita e rastreável.
@@ -392,11 +392,11 @@ Como **Product Owner**, quero avaliar impacto no negócio de requisitos e decis�
 | Planeamento | Requisitos/decisões definidas | Product Owner | Antes da priorização de sprint |
 
 **Ligações úteis.**
-- 🔗 Cap. 1 — Classificação / risco: `/sbd-manual/classificacao-aplicacoes/intro`
+- 🔗 Cap. 1 - Classificação / risco: `/sbd-manual/classificacao-aplicacoes/intro`
 
 ---
 
-### US-09 — Sincronização Threat Modeling ↔ Arquitetura
+### US-09 - Sincronização Threat Modeling ↔ Arquitetura
 
 **Contexto.**  
 Decisões de arquitetura devem refletir ameaças priorizadas e, em sentido inverso, alterações arquiteturais exigem atualização do modelo de ameaças quando aplicável.
@@ -435,11 +435,11 @@ Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar arquitetura
 | Design / Alteração | Decisão/alteração significativa | Arquitetos de Software + AppSec Engineer | Antes do release |
 
 **Ligações úteis.**
-- 🔗 Cap. 3 — Threat Modeling: `/sbd-manual/threat-modeling/intro`
+- 🔗 Cap. 3 - Threat Modeling: `/sbd-manual/threat-modeling/intro`
 
 ---
 
-### US-10 — Gestão de exceções arquiteturais com controlos compensatórios
+### US-10 - Gestão de exceções arquiteturais com controlos compensatórios
 
 **Contexto.**  
 Quando um requisito/controlo arquitetural não pode ser aplicado, é necessária exceção formal com controlos compensatórios, *owner* e *sunset*.
@@ -480,11 +480,11 @@ Como **Product Owner + AppSec Engineer**, quero gerir exceções arquiteturais c
 | Design / Release | Impossibilidade de cumprir controlo | Product Owner + AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
-- 🔗 Cap. 14 — Governação: `/cap14/intro`
+- 🔗 Cap. 14 - Governação: `/cap14/intro`
 
 ---
 
-### US-11 — Triggers de “arquitetura viva” e disciplina de revisão
+### US-11 - Triggers de “arquitetura viva” e disciplina de revisão
 
 **Contexto.**  
 A arquitetura deve ser tratada como baseline viva. Existem eventos que obrigam a revisão e sincronização de evidência.
@@ -524,7 +524,7 @@ Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers
 
 ---
 
-### US-12 — Gate arquitetural antes do Go-live
+### US-12 - Gate arquitetural antes do Go-live
 
 **Contexto.**  
 Antes de produção, deve existir um **gate arquitetural** que confirme: controlos implementados, decisões válidas e exceções tratadas.
@@ -568,7 +568,7 @@ Como **QA/Test Engineer + AppSec Engineer + Arquitetos de Software**, quero exec
 
 ---
 
-### US-13 — Catálogo de padrões de arquitetura segura (reutilização governada)
+### US-13 - Catálogo de padrões de arquitetura segura (reutilização governada)
 
 **Contexto.**  
 Padrões aprovados reduzem variação e risco de omissão. A reutilização deve ser governada e versionada.
@@ -611,7 +611,7 @@ Como **Arquitetos de Software**, quero manter um catálogo versionado de padrõe
 
 ---
 
-### US-14 — Revisão formal de arquitetura para L3 (governação reforçada)
+### US-14 - Revisão formal de arquitetura para L3 (governação reforçada)
 
 **Contexto.**  
 Aplicações L3 exigem validação formal reforçada (incluindo segregação de funções e decisão auditável).
@@ -641,7 +641,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer um p
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Não | — |
+| L1 | Não | - |
 | L2 | Recomendado | Revisão *peer* reforçada |
 | L3 | Sim | Processo formal e auditável |
 
@@ -651,11 +651,11 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer um p
 | Release / Go-live | Release L3 | Gestão/CISO + Revisores definidos | SLA interno (ex.: ≥ 2 semanas antes) |
 
 **Ligações úteis.**
-- 🔗 Cap. 14 — Governação: `/cap14/intro`
+- 🔗 Cap. 14 - Governação: `/cap14/intro`
 
 ---
 
-### US-14 — Identificação e governação de componentes não determinísticos
+### US-14 - Identificação e governação de componentes não determinísticos
 
 **Contexto.**  
 Arquiteturas modernas podem incluir componentes cujo comportamento **não é estritamente determinístico** (ex.: motores de decisão probabilísticos, scoring heurístico, modelos estatísticos ou componentes de inferência). Estes componentes introduzem desafios específicos em termos de segurança, auditoria, explicabilidade e controlo operacional, que devem ser explicitamente tratados ao nível da arquitetura.
@@ -703,7 +703,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
 | Design / Revisão | Introdução ou alteração de componente não determinístico | Arquitetos de Software + AppSec Engineer | Antes da aprovação do design |
 
 **Ligações úteis.**
-- 🔗 Cap. 3 — Threat Modeling  
+- 🔗 Cap. 3 - Threat Modeling  
 - 🔗 Requisitos ARC-XXX aplicáveis à arquitetura
 
 ---

@@ -12,7 +12,7 @@ sidebar_position: 17
 
 Esta política define os requisitos de segurança aplicáveis ao **design, configuração e operação de pipelines de integração e entrega contínua (CI/CD)** para aplicações classificadas como L1, L2 ou L3.
 
-O pipeline CI/CD é um componente crítico da postura de segurança de uma organização: é o caminho pelo qual o código chega a produção. Um pipeline comprometido, mal configurado ou sem controlos adequados é equivalente a uma porta de serviço sem cadeado — pode ser usado para introduzir código malicioso, escalar privilégios, ou exfiltrar segredos sem que o processo de revisão de código seja relevante.
+O pipeline CI/CD é um componente crítico da postura de segurança de uma organização: é o caminho pelo qual o código chega a produção. Um pipeline comprometido, mal configurado ou sem controlos adequados é equivalente a uma porta de serviço sem cadeado - pode ser usado para introduzir código malicioso, escalar privilégios, ou exfiltrar segredos sem que o processo de revisão de código seja relevante.
 
 O objetivo desta política é garantir que:
 
@@ -102,7 +102,7 @@ O pipeline deve implementar separação física ou lógica entre ambientes (dese
 | Promoção a produção usa artefacto imutável do build (não rebuild) | Recomendado | Obrigatório | Obrigatório |
 | Rollback automático disponível em caso de falha de health check | Recomendado | Obrigatório | Obrigatório |
 
-A identidade que executa o deploy em produção deve ter permissões mínimas — o pipeline nunca deve ter acesso de escrita em infraestrutura de desenvolvimento e produção simultaneamente.
+A identidade que executa o deploy em produção deve ter permissões mínimas - o pipeline nunca deve ter acesso de escrita em infraestrutura de desenvolvimento e produção simultaneamente.
 
 ---
 
@@ -132,7 +132,7 @@ Cada execução de pipeline deve ser rastreável:
 
 ## 9. Integridade do pipeline
 
-O próprio pipeline é um vector de ataque — deve ser tratado com o mesmo rigor que o código de aplicação:
+O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor que o código de aplicação:
 
 - [ ] Dependências do pipeline (actions, plugins, steps externos) fixadas a versões específicas com hash (ex: `uses: actions/checkout@sha256:abc...`)
 - [ ] Sem uso de `latest` em steps de pipeline em L2/L3
@@ -180,9 +180,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 07 — CI/CD Seguro | Gates, scanners, artefactos, separação de ambientes |
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | SCA e SBOM no pipeline |
-| SbD-ToE Cap. 11 — Deploy Seguro | Gates de aprovação de promoção |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Gates, scanners, artefactos, separação de ambientes |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | SCA e SBOM no pipeline |
+| SbD-ToE Cap. 11 - Deploy Seguro | Gates de aprovação de promoção |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Segredos no pipeline |
 | Política de SBOM (`11_policy-sbom.md`) | Geração e arquivo de SBOM por build |
 | SLSA Framework | Níveis de integridade de supply chain do pipeline |

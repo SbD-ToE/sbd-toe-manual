@@ -33,7 +33,7 @@ Sem compreensão clara da origem e contexto de um fragmento de código, surgem r
 - conflitos com requisitos de segurança existentes;
 - riscos legais ou de licenciamento.
 
-Tratar código sem proveniência conhecida como “normal” é equivalente a aceitar uma dependência externa sem análise — algo que o SbD-ToE explicitamente rejeita.
+Tratar código sem proveniência conhecida como “normal” é equivalente a aceitar uma dependência externa sem análise - algo que o SbD-ToE explicitamente rejeita.
 
 ---
 
@@ -51,7 +51,7 @@ Tal como dependências externas:
 
 A diferença é apenas o perímetro de controlo, não a necessidade de validação.
 
-Esta perspetiva cria coerência direta com o Capítulo 05 — Dependências e Supply Chain, sem duplicar os seus mecanismos.
+Esta perspetiva cria coerência direta com o Capítulo 05 - Dependências e Supply Chain, sem duplicar os seus mecanismos.
 
 ---
 

@@ -68,4 +68,4 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 * Cap. 2 - Requisitos aplicacionais
 * Cap. 5 - Rastreabilidade e exceções
 * Cap. 13 - Formação e onboarding
-* `addon/01` a `addon/07` — Processos de governança e contratação
+* `addon/01` a `addon/07` - Processos de governança e contratação

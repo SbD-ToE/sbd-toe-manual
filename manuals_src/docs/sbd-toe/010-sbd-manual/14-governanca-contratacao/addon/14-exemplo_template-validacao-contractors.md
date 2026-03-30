@@ -220,10 +220,10 @@ Após aprovação neste template, o contractor segue:
 ## 📎 Anexos e Referências
 
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
-- [US-06: Fluxo de Validação de Fornecedores](../aplicacao-lifecycle.md#us-06)
-- [US-15: Preparação Técnica de Contractors](../aplicacao-lifecycle.md#us-15)
-- [US-16: Trilho de Formação](../aplicacao-lifecycle.md#us-16)
-- [Modelo de Governação](01-modelo-governancao.md)
+- [US-06: Fluxo de Validação de Fornecedores](../aplicacao-lifecycle#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores)
+- [US-15: Preparação Técnica de Contractors](../aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)
+- [US-16: Trilho de Formação](../aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors)
+- [Modelo de Governação](./modelo-governancao)
 
 ---
 

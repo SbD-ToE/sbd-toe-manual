@@ -12,7 +12,7 @@ sidebar_position: 12
 
 Esta política define os requisitos para a **formalização, aprovação, controlo e reavaliação de exceções a vulnerabilidades conhecidas (CVEs)** detetadas em dependências de software.
 
-A existência de um CVE num componente utilizado não implica necessariamente exploitabilidade imediata — pode tratar-se de uma vulnerabilidade sem vetor de ataque acessível no contexto da aplicação, de um componente que não está exposto, ou de uma situação em que o fix disponível introduz regressões que inviabilizam a atualização imediata. Contudo, a ausência de exploitabilidade direta não dispensa a formalização: exceções não registadas são risco invisível.
+A existência de um CVE num componente utilizado não implica necessariamente exploitabilidade imediata - pode tratar-se de uma vulnerabilidade sem vetor de ataque acessível no contexto da aplicação, de um componente que não está exposto, ou de uma situação em que o fix disponível introduz regressões que inviabilizam a atualização imediata. Contudo, a ausência de exploitabilidade direta não dispensa a formalização: exceções não registadas são risco invisível.
 
 O objetivo desta política é garantir que:
 
@@ -31,7 +31,7 @@ Esta política aplica-se a todas as vulnerabilidades conhecidas (CVEs, GHSA, OSV
 - Componentes presentes em imagens de container
 - Módulos e providers em artefactos IaC quando sujeitos a SCA
 
-Não se aplica a vulnerabilidades de código próprio (SAST findings) — essas são cobertas pela Política de Gestão de Exceções de Segurança.
+Não se aplica a vulnerabilidades de código próprio (SAST findings) - essas são cobertas pela Política de Gestão de Exceções de Segurança.
 
 ---
 
@@ -113,7 +113,7 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 | Medium | Qualquer | 180 dias | 90 dias | 45 dias |
 | Low | Qualquer | 365 dias | 180 dias | 90 dias |
 | Fix not available | Qualquer | 90 dias | 60 dias | 30 dias |
-| Not affected | — | Sem TTL* | Sem TTL* | Sem TTL* |
+| Not affected | - | Sem TTL* | Sem TTL* | Sem TTL* |
 
 *Exceções do tipo "Not affected" devem ser reavaliadas sempre que o componente é atualizado ou quando é publicada nova informação sobre o CVE que altere o contexto de exploitabilidade.
 
@@ -143,7 +143,7 @@ Quando o tipo de exceção é "Risk accepted", deve ser definido e verificado um
 | Runtime protection | RASP ou eBPF-based monitoring com deteção de tentativas de exploração |
 | Acesso restrito | Componente acessível apenas por utilizadores autenticados e autorizados, com MFA ativo |
 
-Os controlos compensatórios devem ser verificáveis — a sua eficácia deve poder ser demonstrada em auditoria.
+Os controlos compensatórios devem ser verificáveis - a sua eficácia deve poder ser demonstrada em auditoria.
 
 ---
 
@@ -197,8 +197,8 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | Processo SCA, gates, exceções formais |
-| SbD-ToE Cap. 14 — Governança e Contratação | Alçadas de exceção por nível de risco |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Processo SCA, gates, exceções formais |
+| SbD-ToE Cap. 14 - Governança e Contratação | Alçadas de exceção por nível de risco |
 | Política de Dependências (`10_policy-dependencias.md`) | SCA gates e bloqueios por severidade |
 | Política de SBOM (`11_policy-sbom.md`) | Inventário de componentes e correlação CVE-runtime |
 | Política de Gestão de Exceções (`05_policy-gestao-excecoes.md`) | Framework transversal de exceções de segurança |

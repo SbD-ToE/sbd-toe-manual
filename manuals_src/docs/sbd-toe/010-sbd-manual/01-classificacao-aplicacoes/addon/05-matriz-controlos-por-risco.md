@@ -96,7 +96,7 @@ A sua utilização não dispensa:
 Esta matriz **não define “o máximo a fazer”**,  
 define **o mínimo aceitável** para cada nível de risco.
 
-A segurança efetiva resulta da **aplicação consciente, evidenciável e proporcional** dos controlos —  
+A segurança efetiva resulta da **aplicação consciente, evidenciável e proporcional** dos controlos -  
 não da mera conformidade com uma tabela.
 
 ---

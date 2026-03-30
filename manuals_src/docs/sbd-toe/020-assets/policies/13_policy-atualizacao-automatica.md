@@ -12,7 +12,7 @@ sidebar_position: 13
 
 Esta política define os requisitos para a **operação controlada de bots de atualização automática de dependências** em repositórios de software classificados como L2 ou L3.
 
-Dependências desatualizadas acumulam vulnerabilidades e derivam do estado seguro aprovado. A atualização manual sistemática é ineficiente e propensa a omissões. Ferramentas de automação como Renovate ou Dependabot permitem detetar e propor atualizações de forma contínua — mas, sem critérios de governação claros, podem introduzir alterações breaking sem revisão humana adequada ou, inversamente, criar ruído que leva à desativação dos bots por frustração operacional.
+Dependências desatualizadas acumulam vulnerabilidades e derivam do estado seguro aprovado. A atualização manual sistemática é ineficiente e propensa a omissões. Ferramentas de automação como Renovate ou Dependabot permitem detetar e propor atualizações de forma contínua - mas, sem critérios de governação claros, podem introduzir alterações breaking sem revisão humana adequada ou, inversamente, criar ruído que leva à desativação dos bots por frustração operacional.
 
 O objetivo desta política é garantir que:
 
@@ -170,10 +170,10 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | Automação de atualização, impact analysis, handoff |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Automação de atualização, impact analysis, handoff |
 | Política de Dependências (`10_policy-dependencias.md`) | Aprovação de dependências e pinning |
 | Política de Exceções a CVEs (`12_policy-excecoes-cve.md`) | Gestão de CVEs detetados durante atualização |
 | Renovate Documentation | Configuração de bots de atualização |
 | Dependabot Documentation | Configuração alternativa em ecossistemas GitHub |
 | Semantic Versioning (semver.org) | Base para análise de impacto por tipo de versão |
-| NIST SP 800-161 | Supply Chain Risk Management — atualização de componentes |
+| NIST SP 800-161 | Supply Chain Risk Management - atualização de componentes |

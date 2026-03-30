@@ -2,19 +2,19 @@
 id: controle-excecoes-visibilidade
 title: Excepções e Visibilidade em CI/CD
 sidebar_position: 9
-description: Especificidades da gestão de excepções no contexto de pipelines CI/CD — bypass de gates, visibilidade e métricas
+description: Especificidades da gestão de excepções no contexto de pipelines CI/CD - bypass de gates, visibilidade e métricas
 tags: [exceções, visibilidade, cicd, governação, auditoria]
 ---
 
 # Excepções e Visibilidade em CI/CD
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
 ## Âmbito
 
-Excepções a gates de segurança, políticas de pipeline e controlos de CI/CD — bypass temporário de validações, desactivação de ferramentas ou desvio a políticas de execução.
+Excepções a gates de segurança, políticas de pipeline e controlos de CI/CD - bypass temporário de validações, desactivação de ferramentas ou desvio a políticas de execução.
 
 ---
 
@@ -44,7 +44,7 @@ Mecanismos de sinalização por ferramenta:
 
 ## Métricas associadas
 
-As excepções CI/CD contribuem directamente para os KPIs de maturidade (ver Cap. 14 — `kpis-governanca.md`):
+As excepções CI/CD contribuem directamente para os KPIs de maturidade (ver Cap. 14 - `kpis-governanca.md`):
 
 - % de pipelines com gates de segurança activos;
 - nº de excepções activas por categoria (SAST, SBOM, signing, deploy gates);
@@ -60,5 +60,5 @@ Estes indicadores devem ser reportados no ciclo de governação.
 |---|---|
 | `addon/06-politicas-gates-pipeline.md` | Gates e políticas de pipeline que podem ser objecto de excepção |
 | `addon/07-validacoes-seguranca-integradas.md` | Validações integradas e condições de bypass |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
-| Cap. 14 — `kpis-governanca.md` | Indicadores de conformidade e excepções activas |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `kpis-governanca.md` | Indicadores de conformidade e excepções activas |

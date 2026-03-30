@@ -12,12 +12,12 @@ sidebar_position: 4
 
 Esta política define os mecanismos obrigatórios de revisão da classificação de risco aplicacional e dos controlos de segurança associados, ao longo de todo o ciclo de vida de cada aplicação.
 
-A classificação de risco não é um ato pontual de onboarding — é um estado dinâmico que deve ser mantido atualizado. Alterações técnicas, de negócio ou regulatórias podem modificar a exposição, os dados tratados ou o impacto potencial de um incidente, sem que isso seja imediatamente visível. Sem revisão estruturada, a classificação envelhece silenciosamente e os controlos aplicados deixam de ser proporcionais ao risco real.
+A classificação de risco não é um ato pontual de onboarding - é um estado dinâmico que deve ser mantido atualizado. Alterações técnicas, de negócio ou regulatórias podem modificar a exposição, os dados tratados ou o impacto potencial de um incidente, sem que isso seja imediatamente visível. Sem revisão estruturada, a classificação envelhece silenciosamente e os controlos aplicados deixam de ser proporcionais ao risco real.
 
 Esta política estabelece dois mecanismos complementares de revisão:
 
-- **Time-based** — revisão com cadência periódica fixa, independente de alterações
-- **Event-based** — revisão despoletada por eventos técnicos ou de negócio relevantes
+- **Time-based** - revisão com cadência periódica fixa, independente de alterações
+- **Event-based** - revisão despoletada por eventos técnicos ou de negócio relevantes
 
 ---
 
@@ -29,7 +29,7 @@ Aplicações em processo de descomissionamento mantêm a obrigação de revisão
 
 ---
 
-## 3. Revisão time-based — cadência periódica
+## 3. Revisão time-based - cadência periódica
 
 ### 3.1 Cadências mínimas obrigatórias
 
@@ -65,7 +65,7 @@ A redução de nível de criticidade requer justificação técnica rigorosa e a
 
 ---
 
-## 4. Revisão event-based — triggers obrigatórios
+## 4. Revisão event-based - triggers obrigatórios
 
 ### 4.1 Triggers que obrigam a revisão imediata
 
@@ -93,7 +93,7 @@ Os seguintes eventos não obrigam a revisão imediata, mas devem ser avaliados p
 
 ### 4.3 Processo de revisão event-based
 
-1. **Identificar o trigger** — documentar o evento que originou a revisão
+1. **Identificar o trigger** - documentar o evento que originou a revisão
 2. **Avaliar o impacto** nos eixos E, D e I
 3. **Determinar se o nível deve ser alterado**
 4. **Documentar a decisão** com justificação técnica clara
@@ -112,7 +112,7 @@ Quando uma ferramenta propõe reclassificação ou alerta para uma potencial alt
 - O alerta deve ser avaliado por um AppSec Engineer antes de qualquer decisão
 - Atualizações de patch em dependências **não constituem**, por si só, trigger de revisão
 - Alterações minor/major em dependências críticas **devem ser avaliadas**
-- A decisão final é sempre **humana** — a ferramenta sinaliza, não decide
+- A decisão final é sempre **humana** - a ferramenta sinaliza, não decide
 
 ---
 
@@ -183,9 +183,9 @@ O histórico de revisões de todas as aplicações deve ser disponibilizado em a
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 01 — Classificação de Aplicações | Modelo E+D+I, cadências de revisão, triggers event-based |
-| SbD-ToE Cap. 14 — Governança e Contratação | Ciclo contínuo de revisão e reavaliação de exceções |
-| ISO/IEC 27001 — Cláusula 6.1 | Avaliação e tratamento de risco com revisão periódica |
+| SbD-ToE Cap. 01 - Classificação de Aplicações | Modelo E+D+I, cadências de revisão, triggers event-based |
+| SbD-ToE Cap. 14 - Governança e Contratação | Ciclo contínuo de revisão e reavaliação de exceções |
+| ISO/IEC 27001 - Cláusula 6.1 | Avaliação e tratamento de risco com revisão periódica |
 | NIST SP 800-30 | Guide for Conducting Risk Assessments |
-| NIST CSF — Identify (ID.RA) | Risk Assessment com revisão contínua |
+| NIST CSF - Identify (ID.RA) | Risk Assessment com revisão contínua |
 | SSDF PW.1 | Definição e revisão de requisitos de segurança baseada em risco |

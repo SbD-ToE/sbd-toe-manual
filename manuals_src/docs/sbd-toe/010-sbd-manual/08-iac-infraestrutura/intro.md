@@ -15,7 +15,7 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 
 ---
 
-## ⚠️ Nota Canónica — Infraestrutura como Processo Automatizado
+## ⚠️ Nota Canónica - Infraestrutura como Processo Automatizado
 
 A infraestrutura moderna é definida, validada e aplicada através de **processos altamente automatizados**, frequentemente apoiados por mecanismos de **geração, sugestão ou normalização automática de código e configuração**.
 
@@ -23,7 +23,7 @@ No contexto de IaC, esta realidade introduz riscos específicos que devem ser ex
 
 - **Sugestão não equivale a decisão**: mecanismos automáticos podem propor alterações, mas a decisão de impacto (`plan` e sobretudo `apply`) é sempre **humana, rastreável e formalmente aprovada**.
 - **Plausibilidade não equivale a evidência**: código aparentemente correto ou “bem explicado” não substitui **evidência de execução real**, nomeadamente `plan` efetivo, diffs auditáveis e artefactos versionados.
-- **Reprodutibilidade é obrigatória**: a segurança do IaC exige determinismo — versões de providers, módulos, políticas e ambientes de execução devem permitir reconstrução fiel e análise retrospetiva.
+- **Reprodutibilidade é obrigatória**: a segurança do IaC exige determinismo - versões de providers, módulos, políticas e ambientes de execução devem permitir reconstrução fiel e análise retrospetiva.
 - **O contexto de infraestrutura é um ativo crítico**: templates, topologias, permissões, naming e parâmetros operacionais constituem informação sensível; qualquer dependência externa ao controlo direto da organização deve ser tratada como **dependência de supply chain**, com risco potencial de exfiltração.
 
 Estas premissas são estruturais e aplicam-se **independentemente das ferramentas utilizadas**.
@@ -35,7 +35,7 @@ Estas premissas são estruturais e aplicam-se **independentemente das ferramenta
 A definição de infraestruturas através de código (Terraform, Pulumi, CloudFormation, etc.) tornou-se prática comum.  
 Esta abordagem trouxe ganhos claros de rapidez, consistência e escalabilidade. Mas, como qualquer tecnologia transformadora, trouxe também **novos riscos**: erros de configuração, permissões excessivas, uso de módulos maliciosos ou ambientes mal segregados.
 
-Este capítulo prescreve como **tratar o IaC como software crítico** — com requisitos, testes, ciclo de vida e auditoria.  
+Este capítulo prescreve como **tratar o IaC como software crítico** - com requisitos, testes, ciclo de vida e auditoria.  
 A ideia central é simples: se o IaC define a base onde o software corre, então **a sua segurança determina a segurança de tudo o resto**.
 
 ---
@@ -74,7 +74,7 @@ Para transformar recomendações em práticas de engenharia aplicáveis, a organ
 ## ⚙️ Como deve ser feito
 
 A execução depende de ferramentas práticas e da sua integração disciplinada em pipelines controlados.  
-Não basta confiar na experiência individual — é necessário **automatizar, restringir e auditar**:
+Não basta confiar na experiência individual - é necessário **automatizar, restringir e auditar**:
 
 - Ferramentas de scanning: `tfsec`, `checkov`, `kics`, `terrascan`  
 - Enforcement de políticas: `OPA`, `Sentinel`, `Conftest`  

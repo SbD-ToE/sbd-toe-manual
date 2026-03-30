@@ -131,4 +131,4 @@ Sem estes elementos, a automação transforma-se em risco sistémico.
 | `15-aplicacao-lifecycle.md`     | Aplicação operacional no ciclo de vida          |
 
 > 🧱 A segurança do pipeline começa na execução.  
-> Um runner inseguro **não é apenas um risco técnico** — é um mecanismo de aceitação implícita de risco.
+> Um runner inseguro **não é apenas um risco técnico** - é um mecanismo de aceitação implícita de risco.

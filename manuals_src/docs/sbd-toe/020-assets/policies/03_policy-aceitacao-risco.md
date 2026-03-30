@@ -12,7 +12,7 @@ sidebar_position: 3
 
 Esta política define o processo formal para a **aceitação de risco residual** em aplicações desenvolvidas ou operadas pela organização.
 
-Risco residual é o risco que permanece após a aplicação dos controlos de segurança definidos para o nível de criticidade da aplicação. A sua aceitação não é, por si só, uma falha — é uma decisão de gestão informada, desde que formalizada, aprovada com a alçada adequada, temporalmente delimitada e rastreável.
+Risco residual é o risco que permanece após a aplicação dos controlos de segurança definidos para o nível de criticidade da aplicação. A sua aceitação não é, por si só, uma falha - é uma decisão de gestão informada, desde que formalizada, aprovada com a alçada adequada, temporalmente delimitada e rastreável.
 
 A ausência de um processo formal de aceitação de risco leva a que decisões de risco sejam tomadas implicitamente, sem visibilidade, sem responsabilidade atribuída e sem mecanismo de revisão.
 
@@ -50,7 +50,7 @@ Um risco residual só pode ser aceite formalmente se cumprir **todos** os seguin
 - [ ] O risco residual está **dentro dos limiares definidos** para aceitação no nível em causa
 - [ ] Existem **evidências suficientes dos controlos aplicados** que reduzem o risco ao nível residual
 - [ ] Foi identificada e documentada uma **mitigação compensatória**, quando tecnicamente viável
-- [ ] A decisão de aceitação é **temporalmente delimitada** — com data de expiração e reavaliação
+- [ ] A decisão de aceitação é **temporalmente delimitada** - com data de expiração e reavaliação
 - [ ] A decisão é **formalmente aprovada** pela alçada adequada ao nível de risco
 
 :::warning
@@ -77,13 +77,13 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 
 ### 6.1 Passos obrigatórios
 
-1. **Identificar o risco residual** — origem, tipo, severidade e contexto técnico
-2. **Avaliar o impacto** — consequência real no contexto da aplicação e do negócio
-3. **Definir mitigação compensatória** — controlo alternativo ativo durante o período de aceitação
-4. **Documentar a justificação técnica** — por que razão o controlo não foi aplicado ou o finding não foi corrigido
-5. **Definir prazo de validade** — data de expiração da aceitação e data de reavaliação
-6. **Obter aprovação formal** — pela alçada adequada ao nível de risco (ver secção 7)
-7. **Registar** — no repositório de exceções da aplicação ou plataforma GRC
+1. **Identificar o risco residual** - origem, tipo, severidade e contexto técnico
+2. **Avaliar o impacto** - consequência real no contexto da aplicação e do negócio
+3. **Definir mitigação compensatória** - controlo alternativo ativo durante o período de aceitação
+4. **Documentar a justificação técnica** - por que razão o controlo não foi aplicado ou o finding não foi corrigido
+5. **Definir prazo de validade** - data de expiração da aceitação e data de reavaliação
+6. **Obter aprovação formal** - pela alçada adequada ao nível de risco (ver secção 7)
+7. **Registar** - no repositório de exceções da aplicação ou plataforma GRC
 
 ### 6.2 Checklist por registo de risco aceite
 
@@ -109,7 +109,7 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 | Low | Tech Lead | AppSec Engineer | AppSec Engineer |
 | Medium | AppSec Engineer | AppSec Engineer | AppSec Engineer + GRC |
 | High | AppSec Engineer | AppSec Engineer + Gestão | CISO |
-| Critical | Não recomendado — plano de remediação obrigatório | Não aceitável sem CISO | Não aceitável |
+| Critical | Não recomendado - plano de remediação obrigatório | Não aceitável sem CISO | Não aceitável |
 
 ---
 
@@ -117,9 +117,9 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 
 Todo o registo de risco aceite tem **data de expiração**. Na data de expiração, a equipa deve:
 
-1. **Reavaliar o risco** — o contexto mudou? A mitigação compensatória continua eficaz?
+1. **Reavaliar o risco** - o contexto mudou? A mitigação compensatória continua eficaz?
 2. **Decidir**: corrigir / renovar a aceitação / escalar
-3. **Renovar com nova aprovação** se a aceitação for mantida — sem renovação automática
+3. **Renovar com nova aprovação** se a aceitação for mantida - sem renovação automática
 4. **Registar a decisão** com nova data de expiração e aprovação atualizada
 
 Registos expirados sem reavaliação documentada são tratados como **risco não gerido** e devem ser escalados para AppSec.
@@ -175,10 +175,10 @@ O registo de riscos aceites deve ser disponibilizado integralmente em auditorias
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 01 — Classificação de Aplicações | Critérios de aceitação de risco por nível |
-| SbD-ToE Cap. 03 — Threat Modeling | Justificação formal de risco aceite em ameaças |
-| SbD-ToE Cap. 10 — Testes de Segurança | Aceitação de risk em findings de testes |
-| SbD-ToE Cap. 14 — Governança e Contratação | Processo formal de exceções com alçadas |
-| ISO/IEC 27001 — Cláusula 6.1.3 | Tratamento do risco de segurança da informação |
+| SbD-ToE Cap. 01 - Classificação de Aplicações | Critérios de aceitação de risco por nível |
+| SbD-ToE Cap. 03 - Threat Modeling | Justificação formal de risco aceite em ameaças |
+| SbD-ToE Cap. 10 - Testes de Segurança | Aceitação de risk em findings de testes |
+| SbD-ToE Cap. 14 - Governança e Contratação | Processo formal de exceções com alçadas |
+| ISO/IEC 27001 - Cláusula 6.1.3 | Tratamento do risco de segurança da informação |
 | NIST SP 800-30 | Guide for Conducting Risk Assessments |
 | SSDF PW.4 | Revisão de software para gestão de risco |

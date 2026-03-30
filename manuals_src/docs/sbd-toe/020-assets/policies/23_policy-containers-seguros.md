@@ -12,7 +12,7 @@ sidebar_position: 23
 
 Esta política define os requisitos de segurança para o **ciclo de vida completo de containers**: desde a escolha da imagem base, passando pela construção, scanning e assinatura, até à configuração de runtime e monitorização em produção.
 
-Containers oferecem isolamento lógico — não isolamento de segurança por defeito. Um container sem restrições de execução (a correr como root, com capabilities excessivas, sem read-only filesystem, sem NetworkPolicy) tem potencial de impacto no nó hospedeiro e em outros workloads que compromete as vantagens de isolamento que a tecnologia poderia oferecer. A segurança em containers não é automática — é o resultado de configuração deliberada e verificação sistemática.
+Containers oferecem isolamento lógico - não isolamento de segurança por defeito. Um container sem restrições de execução (a correr como root, com capabilities excessivas, sem read-only filesystem, sem NetworkPolicy) tem potencial de impacto no nó hospedeiro e em outros workloads que compromete as vantagens de isolamento que a tecnologia poderia oferecer. A segurança em containers não é automática - é o resultado de configuração deliberada e verificação sistemática.
 
 O objetivo desta política é garantir que:
 
@@ -58,7 +58,7 @@ Em L2/L3, imagens devem ser produzidas e armazenadas em registos internos contro
 
 - [ ] Registo interno como fonte de imagens em produção (não pulls directos de Docker Hub)
 - [ ] Allowlist de registos externos autorizados (para imagens base)
-- [ ] Acesso ao registo controlado por autenticação — sem acesso anónimo
+- [ ] Acesso ao registo controlado por autenticação - sem acesso anónimo
 
 ---
 
@@ -136,7 +136,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 - [ ] Sem segredos em variáveis `ENV` no Dockerfile
 - [ ] Sem segredos em `ARG` de build (persistem nas camadas da imagem)
 - [ ] Segredos injectados em runtime via Kubernetes Secrets (com encriptação em repouso) ou cofre externo (Vault, AWS Secrets Manager, etc.)
-- [ ] Alternativa preferida em L3: workload identity (IRSA, GKE Workload Identity, Vault Agent) — sem segredos persistidos
+- [ ] Alternativa preferida em L3: workload identity (IRSA, GKE Workload Identity, Vault Agent) - sem segredos persistidos
 
 ---
 
@@ -188,14 +188,14 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 09 — Containers e Execução Isolada | Construção, scanning, runtime, SBOM, signing |
+| SbD-ToE Cap. 09 - Containers e Execução Isolada | Construção, scanning, runtime, SBOM, signing |
 | Política de Golden Base Images (`24_policy-golden-base-images.md`) | Catálogo de imagens base aprovadas |
 | Política de SBOM (`11_policy-sbom.md`) | SBOM por imagem |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Segredos em containers |
 | CIS Docker Benchmark v1.6 | Controlos de referência para Docker |
 | CIS Kubernetes Benchmark | Controlos de referência para Kubernetes |
 | NIST SP 800-190 | Application Container Security Guide |
-| ENISA Cloud Baseline | Segurança em containers — baseline europeu |
+| ENISA Cloud Baseline | Segurança em containers - baseline europeu |
 | Cosign / Sigstore | Assinatura e verificação de imagens |
 | Falco | Runtime security para containers |
 | OPA Gatekeeper / Kyverno | Admission controllers para Kubernetes |

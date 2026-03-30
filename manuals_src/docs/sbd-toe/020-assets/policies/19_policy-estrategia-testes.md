@@ -12,7 +12,7 @@ sidebar_position: 19
 
 Esta política define os requisitos para a **estratégia de testes de segurança** ao longo do ciclo de vida de aplicações classificadas como L1, L2 ou L3.
 
-Testes de segurança não são uma fase — são um conjunto de práticas complementares que devem ser integradas em cada etapa do SDLC, desde a revisão de código até à validação em produção. Cada técnica tem âmbito e limitações distintas: o SAST encontra padrões no código estático mas não vê comportamento em runtime; o DAST valida a aplicação em execução mas não cobre todos os caminhos de código; o fuzzing descobre condições inesperadas que nenhuma das anteriores encontra de forma sistemática. A cobertura eficaz requer uma estratégia composta e proporcional ao risco.
+Testes de segurança não são uma fase - são um conjunto de práticas complementares que devem ser integradas em cada etapa do SDLC, desde a revisão de código até à validação em produção. Cada técnica tem âmbito e limitações distintas: o SAST encontra padrões no código estático mas não vê comportamento em runtime; o DAST valida a aplicação em execução mas não cobre todos os caminhos de código; o fuzzing descobre condições inesperadas que nenhuma das anteriores encontra de forma sistemática. A cobertura eficaz requer uma estratégia composta e proporcional ao risco.
 
 O objetivo desta política é garantir que:
 
@@ -164,8 +164,8 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 10 — Testes de Segurança | Estratégia, gates, findings, triagem, SLA |
-| SbD-ToE Cap. 07 — CI/CD Seguro | SAST, DAST e SCA integrados no pipeline |
+| SbD-ToE Cap. 10 - Testes de Segurança | Estratégia, gates, findings, triagem, SLA |
+| SbD-ToE Cap. 07 - CI/CD Seguro | SAST, DAST e SCA integrados no pipeline |
 | Política de DAST e Fuzzing (`01_policy-dast-fuzzing.md`) | Requisitos específicos de DAST e Fuzzing |
 | Política de Release Seguro (`20_policy-release-seguro.md`) | Checklist de release e aprovação com base nos testes |
 | OWASP Testing Guide (v4.2) | Metodologia de referência para testes de segurança |

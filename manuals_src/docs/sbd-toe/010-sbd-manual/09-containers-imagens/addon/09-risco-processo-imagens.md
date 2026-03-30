@@ -19,7 +19,7 @@ Este ficheiro estabelece o enquadramento canónico para esses riscos no SbD-ToE.
 
 ## 🎯 Âmbito e princípio fundamental
 
-Este documento **não trata vulnerabilidades de imagens** — essas são cobertas noutros ficheiros do capítulo.
+Este documento **não trata vulnerabilidades de imagens** - essas são cobertas noutros ficheiros do capítulo.
 Aqui tratamos exclusivamente do **risco introduzido pela forma como as imagens são produzidas, avaliadas e aceites**.
 
 > **Princípio central:**
@@ -192,11 +192,11 @@ Qualquer implementação que viole estes princípios deve ser considerada **não
 
 Este ficheiro é **transversal** e deve ser lido em conjunto com:
 
-* `01-imagens-base.md` — seleção e validação inicial
-* `03-assinatura-cadeia-trust.md` — integridade e proveniência
-* `05-policies-runtime-opa.md` — enforcement técnico
-* `06-inventario-sbom.md` — rastreabilidade de componentes
-* `exemplo-pipeline-container.md` / lifecycle — operacionalização
+* `01-imagens-base.md` - seleção e validação inicial
+* `03-assinatura-cadeia-trust.md` - integridade e proveniência
+* `05-policies-runtime-opa.md` - enforcement técnico
+* `06-inventario-sbom.md` - rastreabilidade de componentes
+* `exemplo-pipeline-container.md` / lifecycle - operacionalização
 
 Ele fornece o **enquadramento semântico** que dá sentido prescritivo aos controlos técnicos descritos nesses documentos.
 
@@ -211,4 +211,4 @@ Uma organização só pode afirmar que aplica corretamente este capítulo se con
 3. Em que contexto de risco.
 4. Quando e por quanto tempo essa decisão é válida.
 
-Sem estas respostas, não existe confiança operacional — apenas automação.
+Sem estas respostas, não existe confiança operacional - apenas automação.

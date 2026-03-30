@@ -10,9 +10,9 @@ tags: [excecoes, governanca, risco, aprovacao, rastreabilidade, lifecycle]
 
 Este documento define o processo canónico de gestão de excepções no SbD-ToE.
 
-É o documento de referência para todos os capítulos do manual. Cada capítulo de domínio especifica os seus triggers próprios, campos adicionais e integração com ferramentas — mas o processo, as alçadas e o lifecycle são invariantes e definidos aqui.
+É o documento de referência para todos os capítulos do manual. Cada capítulo de domínio especifica os seus triggers próprios, campos adicionais e integração com ferramentas - mas o processo, as alçadas e o lifecycle são invariantes e definidos aqui.
 
-Uma excepção é uma decisão de risco formal: reconhece que um controlo não está aplicado, documenta porquê, define o que compensa e estabelece quando é revista. O que não está neste modelo não é uma excepção — é uma falha silenciosa.
+Uma excepção é uma decisão de risco formal: reconhece que um controlo não está aplicado, documenta porquê, define o que compensa e estabelece quando é revista. O que não está neste modelo não é uma excepção - é uma falha silenciosa.
 
 ---
 
@@ -26,7 +26,7 @@ Aplica-se a qualquer situação em que um requisito ou controlo prescrito no SbD
 - migração faseada com janela de não-conformidade conhecida e delimitada;
 - conflito funcional ou contratual com evidência documentada.
 
-A causa não tem de ser excepcional — mas o tratamento tem de o ser. Toda a não-aplicação de um controlo activa este processo, sem excepção.
+A causa não tem de ser excepcional - mas o tratamento tem de o ser. Toda a não-aplicação de um controlo activa este processo, sem excepção.
 
 ---
 
@@ -62,7 +62,7 @@ Quantificar o risco residual criado:
 
 ### 4. Medidas compensatórias
 
-Identificar os controlos alternativos que reduzem o risco residual a um nível aceitável. A compensação não precisa de ser equivalente ao controlo em falta — precisa de ser proporcional ao risco residual e verificável.
+Identificar os controlos alternativos que reduzem o risco residual a um nível aceitável. A compensação não precisa de ser equivalente ao controlo em falta - precisa de ser proporcional ao risco residual e verificável.
 
 Excepções sem compensação identificada são aprovadas apenas em L1 com justificação de risco negligenciável.
 
@@ -87,12 +87,12 @@ Após aprovação, a excepção é registada com todos os campos obrigatórios e
 | Justificação técnica | Sim | Motivo objectivo; sem vagas generalidades |
 | Impacto e risco residual | Sim | |
 | Medida compensatória | Sim | Controlo alternativo aplicado ou comprometido |
-| **Quem pediu** | Sim | Autor do pedido — nome, função, equipa |
-| **Quem criou a avaliação de risco** | Sim | Responsável pela análise de impacto e risco residual — nome e função |
-| **Quem aprovou** | Sim | Aprovador formal — nome, função; conforme alçadas abaixo |
+| **Quem pediu** | Sim | Autor do pedido - nome, função, equipa |
+| **Quem criou a avaliação de risco** | Sim | Responsável pela análise de impacto e risco residual - nome e função |
+| **Quem aprovou** | Sim | Aprovador formal - nome, função; conforme alçadas abaixo |
 | Data de aprovação | Sim | |
 | **Cadeia de autoridade** | Sim | Ver secção abaixo |
-| **Evidências técnicas** | Sim | Artefactos que suportam justificação e compensação — relatórios de scanner, tickets, logs, ADRs, evidência de testes; referência por URL ou caminho rastreável |
+| **Evidências técnicas** | Sim | Artefactos que suportam justificação e compensação - relatórios de scanner, tickets, logs, ADRs, evidência de testes; referência por URL ou caminho rastreável |
 | Data de expiração | Sim | Máx. 90 dias; extensão exige reavaliação |
 | Trigger de revisão | Sim | Data fixa ou condição (incidente, mudança arquitectural, etc.) |
 
@@ -102,7 +102,7 @@ Campos em falta invalidam o registo. Um registo inválido não produz aprovaçã
 
 ## Cadeia de autoridade
 
-O registo de excepção não é o repositório dos artefactos de aprovação — é o índice que os referencia e garante que a cadeia é completa e rastreável. Os artefactos em si ficam nos sistemas onde foram produzidos (sistema de tickets, email, GRC, wiki).
+O registo de excepção não é o repositório dos artefactos de aprovação - é o índice que os referencia e garante que a cadeia é completa e rastreável. Os artefactos em si ficam nos sistemas onde foram produzidos (sistema de tickets, email, GRC, wiki).
 
 O que o registo tem de capturar é a **sequência de decisão**: quem identificou o problema, quem escalou, quem avaliou o risco, quem deu instrução de avançar e com que condições.
 
@@ -115,7 +115,7 @@ Estrutura mínima obrigatória:
 | Avaliação de risco | AppSec | Análise de impacto, risco residual e parecer sobre compensações | URL / ID |
 | Aprovação formal | Conforme alçadas (L1/L2/L3) | Decisão explícita com condições e validade | URL / ID |
 
-O meio não é prescrito — ticket, comentário num PR, nota num sistema GRC, registo em wiki, decisão num ADR. O que é prescrito é que **cada passo tem de ter uma acção registada, datada e atribuída a um papel**, com referência rastreável no campo correspondente.
+O meio não é prescrito - ticket, comentário num PR, nota num sistema GRC, registo em wiki, decisão num ADR. O que é prescrito é que **cada passo tem de ter uma acção registada, datada e atribuída a um papel**, com referência rastreável no campo correspondente.
 
 > Uma aprovação verbal sem registo não conta. Uma cadeia com passos em falta não produz aprovação válida.
 
@@ -135,7 +135,7 @@ Excepções L3 sem aprovação de AppSec e GRC/CISO são não conformes independ
 
 ## Validade, renovação e expiração
 
-O prazo máximo por defeito é **90 dias**. Extensões exigem nova avaliação completa — não são automáticas nem concedidas por omissão.
+O prazo máximo por defeito é **90 dias**. Extensões exigem nova avaliação completa - não são automáticas nem concedidas por omissão.
 
 Excepções expiradas sem renovação activa constituem **não conformidade** a partir da data de expiração. Devem ser tratadas como tal no ciclo de auditoria.
 
@@ -165,12 +165,12 @@ Cada capítulo de domínio define num ficheiro próprio os triggers característ
 
 | Capítulo | Ficheiro de especificidades |
 |---|---|
-| Cap. 02 — Requisitos aplicacionais | `addon/08-gestao-excecoes.md` |
-| Cap. 04 — Arquitectura Segura | `addon/03-excecoes.md` |
-| Cap. 05 — Dependências e SBOM | `addon/09-excecoes-e-aceitacao-risco.md` |
-| Cap. 06 — Desenvolvimento Seguro | `addon/05-excecoes-e-justificacoes.md` |
-| Cap. 07 — CI/CD Seguro | `addon/09-controle-excecoes-visibilidade.md` |
-| Cap. 08 — IaC | `addon/09-gestao-excecoes.md` |
+| Cap. 02 - Requisitos aplicacionais | `addon/08-gestao-excecoes.md` |
+| Cap. 04 - Arquitectura Segura | `addon/03-excecoes.md` |
+| Cap. 05 - Dependências e SBOM | `addon/09-excecoes-e-aceitacao-risco.md` |
+| Cap. 06 - Desenvolvimento Seguro | `addon/05-excecoes-e-justificacoes.md` |
+| Cap. 07 - CI/CD Seguro | `addon/09-controle-excecoes-visibilidade.md` |
+| Cap. 08 - IaC | `addon/09-gestao-excecoes.md` |
 
 ---
 

@@ -8,7 +8,7 @@ sidebar_position: 10
 
 # 🛠️ Evidência, Reprodutibilidade e Auditabilidade em Testes de Segurança
 
-Este anexo define regras **prescritivas** para garantir que os testes de segurança produzem **evidência verificável**, permitem **reprodução independente** e suportam **auditoria** — mesmo quando a execução é altamente automatizada.
+Este anexo define regras **prescritivas** para garantir que os testes de segurança produzem **evidência verificável**, permitem **reprodução independente** e suportam **auditoria** - mesmo quando a execução é altamente automatizada.
 
 O objetivo é evitar três falhas recorrentes em processos modernos de teste:
 

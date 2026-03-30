@@ -1,7 +1,7 @@
 ---
 id: plano-validacao-legacy
 title: Plano de Validação de Requisitos (conteúdo integrado)
-description: Este documento foi integrado e expandido no addon 07 — Validação de Requisitos. Consultar validacao-requisitos.
+description: Este documento foi integrado e expandido no addon 07 - Validação de Requisitos. Consultar validacao-requisitos.
 tags: [tipo:redirect, tema:validação, requisitos]
 ---
 

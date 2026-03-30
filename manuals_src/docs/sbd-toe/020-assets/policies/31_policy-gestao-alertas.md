@@ -10,9 +10,9 @@ sidebar_position: 31
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a **gestão do ciclo de vida completo de alertas** — desde a configuração e classificação, passando pelo SLA de resposta e escalonamento, até à calibração e eliminação de alertas que não cumprem o seu propósito.
+Esta política define os requisitos para a **gestão do ciclo de vida completo de alertas** - desde a configuração e classificação, passando pelo SLA de resposta e escalonamento, até à calibração e eliminação de alertas que não cumprem o seu propósito.
 
-Um alerta sem prazo de resposta é apenas ruído. Um sistema com centenas de alertas activos que ninguém responde está pior do que um sistema sem alertas — criou a ilusão de monitorização sem a substância. A fadiga de alertas (alert fatigue) é uma das causas mais documentadas de incidentes não detectados: quando tudo alerta, nada alerta. A gestão eficaz de alertas é uma prática disciplinada de signal/noise ratio, não de acumulação de regras.
+Um alerta sem prazo de resposta é apenas ruído. Um sistema com centenas de alertas activos que ninguém responde está pior do que um sistema sem alertas - criou a ilusão de monitorização sem a substância. A fadiga de alertas (alert fatigue) é uma das causas mais documentadas de incidentes não detectados: quando tudo alerta, nada alerta. A gestão eficaz de alertas é uma prática disciplinada de signal/noise ratio, não de acumulação de regras.
 
 O objetivo desta política é garantir que:
 
@@ -36,10 +36,10 @@ Todos os alertas devem ser classificados por severidade, que determina o SLA de 
 
 | Severidade | Critério | SLA de primeira resposta | Canal |
 |---|---|---|---|
-| **P1 — Critical** | Impacto imediato em produção ou comprometimento de segurança confirmado | ≤ 5 minutos | PagerDuty/OpsGenie (ligação) + Slack |
-| **P2 — High** | Impacto significativo em produção ou anomalia de segurança de alta severidade | ≤ 15 minutos | PagerDuty/OpsGenie + Slack |
-| **P3 — Medium** | Degradação de serviço ou anomalia que requer atenção mas não causa impacto imediato | ≤ 60 minutos | Slack + ticket |
-| **P4 — Low** | Evento informativo com potencial de degradação se ignorado | ≤ 4 horas (horário laboral) | Ticket |
+| **P1 - Critical** | Impacto imediato em produção ou comprometimento de segurança confirmado | ≤ 5 minutos | PagerDuty/OpsGenie (ligação) + Slack |
+| **P2 - High** | Impacto significativo em produção ou anomalia de segurança de alta severidade | ≤ 15 minutos | PagerDuty/OpsGenie + Slack |
+| **P3 - Medium** | Degradação de serviço ou anomalia que requer atenção mas não causa impacto imediato | ≤ 60 minutos | Slack + ticket |
+| **P4 - Low** | Evento informativo com potencial de degradação se ignorado | ≤ 4 horas (horário laboral) | Ticket |
 
 ---
 
@@ -84,9 +84,9 @@ As seguintes métricas devem ser acompanhadas mensalmente:
 | Métrica | Descrição | Target |
 |---|---|---|
 | Taxa de verdadeiros positivos (TVP) | % de alertas P1/P2 que correspondem a incidentes reais | > 70% |
-| Taxa de falsos positivos (TFP) | % de alertas P1/P2 que são ruído | < 30% |
+| Taxa de falsos positivos (TFP) | % de alertas P1/P2 que são ruído | &lt; 30% |
 | Tempo médio de resposta | Tempo médio entre alerta e primeira acção registada | ≤ SLA por severidade |
-| Alertas sem acção em 24h | Número de alertas P3/P4 sem acção em 24h | < 10% |
+| Alertas sem acção em 24h | Número de alertas P3/P4 sem acção em 24h | &lt; 10% |
 | Volume total de alertas por dia | Indicador de ruído sistémico | Trend descendente ou estável |
 
 ### 6.2 Critérios de intervenção
@@ -152,9 +152,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 12 — Monitorização & Operações | US-03, US-10: alertas com SLA, validação e tuning |
+| SbD-ToE Cap. 12 - Monitorização & Operações | US-03, US-10: alertas com SLA, validação e tuning |
 | Política de Monitorização de Segurança (`30_policy-monitorizacao-seguranca.md`) | Definição de eventos críticos a alertar |
 | Política de IRP (`32_policy-irp.md`) | Integração de alertas com resposta a incidentes |
 | PagerDuty / OpsGenie | Ferramentas de on-call e gestão de alertas de referência |
 | Site Reliability Engineering (Google SRE Book) | Alert Philosophy, SLO-based alerting |
-| NIST SP 800-61 | Computer Security Incident Handling — detecção e análise |
+| NIST SP 800-61 | Computer Security Incident Handling - detecção e análise |

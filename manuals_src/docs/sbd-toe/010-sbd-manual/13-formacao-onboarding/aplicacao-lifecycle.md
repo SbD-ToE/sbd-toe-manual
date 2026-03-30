@@ -75,8 +75,8 @@ Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em
 | Onboarding | Entrada de novo colaborador | RH + AppSec Engineer | Antes de acesso técnico |
 
 **Ligações úteis.**  
-[Checklist de Onboarding Técnico](formacao-onboarding/addon/10-checklist-onboarding)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)  
+[Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)  
 
 ---
 
@@ -116,9 +116,9 @@ Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevO
 | Ciclo contínuo | Trimestral (L3) / Anual (L1–L2) | AppSec Engineer + RH | Deadline comunicado com 2 semanas |
 
 **Ligações úteis.**  
-[Catálogo de Formação por Perfil Técnico](formacao-onboarding/addon/01-catalogo-formativo)  
-[Trilhos Formativos por Função e Risco](formacao-onboarding/addon/02-trilho-formativo)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)  
+[Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
+[Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)  
 
 ---
 
@@ -158,8 +158,8 @@ Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar a
 | Ciclo contínuo | Mensal | Security Champions + AppSec Engineer | Reunião mensal confirmada |
 
 **Ligações úteis.**  
-[Programa de Security Champions](formacao-onboarding/addon/03-programa-champions)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)  
+[Programa de Security Champions](./addon/programa-champions)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)  
 
 ---
 
@@ -262,9 +262,9 @@ Como **AppSec Engineer**, quero **executar code clinics estruturadas** (revisão
 | Desenvolvimento | Submissão de PRs | AppSec Engineer + Security Champions | Semanal/quinzenal |
 
 **Ligações úteis.**  
-[Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
-[Exemplo - Pull Request Seguro](formacao-onboarding/addon/07-exemplo1-manual-formacao-dev-pr-seguro)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Técnicas Formativas Avançadas](./addon/tecnicas-formativas)  
+[Exemplo - Pull Request Seguro](./addon/exemplo-manual-dev-pr)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -308,10 +308,10 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 | Planeamento/Design | Aprovação de feature | Security Champion + AppSec Engineer | Antes do sprint de desenvolvimento |
 
 **Ligações úteis.**  
-[Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
-[Integração Transversal com Capítulos Técnicos](formacao-onboarding/addon/05-integracao-transversal)  
-[Threat Modeling - Capítulo 03](/threat-modeling/intro)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Técnicas Formativas Avançadas](./addon/tecnicas-formativas)  
+[Integração Transversal com Capítulos Técnicos](./addon/integracao-transversal)  
+[Threat Modeling - Capítulo 03](/sbd-toe/sbd-manual/threat-modeling/intro)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -356,9 +356,9 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 | Operações/Auditoria | Trimestral ou pós-incidente | Gestão Executiva + GRC | Planeado anualmente |
 
 **Ligações úteis.**  
-[Técnicas Formativas Avançadas](formacao-onboarding/addon/04-tecnicas-formativas)  
-[Monitorização e Operações - Capítulo 12](/monitorizacao-operacoes/intro)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Técnicas Formativas Avançadas](./addon/tecnicas-formativas)  
+[Monitorização e Operações - Capítulo 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -403,9 +403,9 @@ Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos po
 | Governance/Auditoria | Anual (Q1) ou novo risco | AppSec Engineer + GRC + RH | Antes do ciclo de formação novo |
 
 **Ligações úteis.**  
-[Catálogo de Formação por Perfil Técnico](formacao-onboarding/addon/01-catalogo-formativo)  
-[Trilhos Formativos por Função e Risco](formacao-onboarding/addon/02-trilho-formativo)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
+[Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -455,9 +455,9 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 | Onboarding / Governance | Classificação da aplicação | AppSec Engineer + RH | Antes de primeira atribuição técnica |
 
 **Ligações úteis.**  
-[Trilhos Formativos por Função e Risco](formacao-onboarding/addon/02-trilho-formativo)  
-[Gestão de Risco e Classificação - Capítulo 01](/classificacao-aplicacoes/intro)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
+[Gestão de Risco e Classificação - Capítulo 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -503,9 +503,9 @@ Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador*
 | Onboarding | Entrada de novo colaborador | RH + GRC | Antes de acesso técnico |
 
 **Ligações úteis.**  
-[Checklist de Onboarding Técnico](formacao-onboarding/addon/10-checklist-onboarding)  
-[Trilhos Formativos por Função e Risco](formacao-onboarding/addon/02-trilho-formativo)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
+[Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -551,10 +551,10 @@ Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de valida�
 | Onboarding / Contínuo | Conclusão de trilho ou anualmente | AppSec Engineer + RH | Antes/durante acesso |
 
 **Ligações úteis.**  
-[Template de Quiz para Onboarding](formacao-onboarding/addon/11-template-quiz-onboarding)  
-[Quiz de Validação para Terceiros](formacao-onboarding/addon/22-template-quiz-terceiros)  
-[Catálogo de Formação por Perfil Técnico](formacao-onboarding/addon/01-catalogo-formativo)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Template de Quiz para Onboarding](./addon/quiz-onboarding)  
+[Quiz de Validação para Terceiros](./addon/quiz-terceiros)  
+[Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
 
@@ -600,11 +600,11 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 | Onboarding | Contrato de fornecedor | GRC + RH + AppSec Engineer | Antes de acesso |
 
 **Ligações úteis.**  
-[Modelo de Inclusão de Terceiros](formacao-onboarding/addon/20-modelo-inclusao-terceiros)  
-[Plano de Formação de Terceiros](formacao-onboarding/addon/21-plano-formacao-terceiros)  
-[Quiz de Validação para Terceiros](formacao-onboarding/addon/22-template-quiz-terceiros)  
-[Governança e Contratação - Capítulo 14](/governanca-contratacao/intro)  
-[Papéis e Responsabilidades](/sbd-toe/000-teory-of-everything/07-roles)
+[Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
+[Plano de Formação de Terceiros](./addon/plano-formacao-terceiros)  
+[Quiz de Validação para Terceiros](./addon/quiz-terceiros)  
+[Governança e Contratação - Capítulo 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ### US-14 - KPIs de Capacitação e Reporte (GRC)
 **Contexto.** KPIs dispersos reduzem a capacidade de avaliar impacto da formação. É necessário formalizar lista, responsáveis e cadência.

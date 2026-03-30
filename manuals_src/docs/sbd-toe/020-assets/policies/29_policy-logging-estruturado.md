@@ -12,7 +12,7 @@ sidebar_position: 29
 
 Esta política define os requisitos para a **produção, formatação, centralização, retenção e protecção de logs** em aplicações e sistemas da organização.
 
-Logs são o registo primário do comportamento de um sistema — são a base de toda a investigação de incidentes, auditoria de conformidade e detecção de anomalias de segurança. Logs descentralizados, não normalizados ou sem garantias de integridade não cumprem este papel: são ruído, não evidência. A transição de logging ad-hoc para logging estruturado centralizado é uma mudança de paradigma — não de ferramenta.
+Logs são o registo primário do comportamento de um sistema - são a base de toda a investigação de incidentes, auditoria de conformidade e detecção de anomalias de segurança. Logs descentralizados, não normalizados ou sem garantias de integridade não cumprem este papel: são ruído, não evidência. A transição de logging ad-hoc para logging estruturado centralizado é uma mudança de paradigma - não de ferramenta.
 
 O objetivo desta política é garantir que:
 
@@ -40,7 +40,7 @@ Esta política aplica-se a todos os sistemas em execução que produzam eventos 
 
 ### 3.1 Formato obrigatório
 
-Em L2/L3, todos os logs devem ser produzidos em formato **JSON** (ou compatível com Elastic Common Schema — ECS), legível por máquina e processável sem parsing personalizado:
+Em L2/L3, todos os logs devem ser produzidos em formato **JSON** (ou compatível com Elastic Common Schema - ECS), legível por máquina e processável sem parsing personalizado:
 
 - Sem logs em texto livre não estruturado em componentes críticos
 - Sem múltiplos formatos de log no mesmo sistema sem normalização na ingestão
@@ -89,7 +89,7 @@ Os seguintes dados nunca devem aparecer em logs, independentemente do nível:
 
 | Dado proibido | Alternativa |
 |---|---|
-| Passwords, PINs, respostas a perguntas secretas | Nunca registar — nem em hash |
+| Passwords, PINs, respostas a perguntas secretas | Nunca registar - nem em hash |
 | Tokens de sessão, JWT completos, API keys | Registar apenas o prefixo (ex: `Bearer eyJ...` → `Bearer eyJ[redacted]`) |
 | Números de cartão de crédito, IBAN | Masking obrigatório: `****-****-****-1234` |
 | Dados de saúde, dados biométricos | Nunca registar em logs operacionais |
@@ -166,10 +166,10 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 12 — Monitorização & Operações | US-01 (logging estruturado), US-07 (segurança e integridade de logs) |
+| SbD-ToE Cap. 12 - Monitorização & Operações | US-01 (logging estruturado), US-07 (segurança e integridade de logs) |
 | Elastic Common Schema (ECS) | Schema de referência para campos normalizados |
 | OWASP Logging Cheat Sheet | Boas práticas de logging seguro |
-| GDPR / RGPD — Art. 5(1)(e) | Limitação de conservação de dados pessoais |
-| DORA — Art. 12 | Requisitos de logging para entidades financeiras |
+| GDPR / RGPD - Art. 5(1)(e) | Limitação de conservação de dados pessoais |
+| DORA - Art. 12 | Requisitos de logging para entidades financeiras |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
-| ISO/IEC 27001 — A.12.4 | Logging and monitoring |
+| ISO/IEC 27001 - A.12.4 | Logging and monitoring |

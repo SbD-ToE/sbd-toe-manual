@@ -12,7 +12,7 @@ sidebar_position: 37
 
 Esta política define os requisitos para o **programa de formação e capacitação em segurança** da organização, cobrindo o onboarding de novos colaboradores, os trilhos formativos contínuos por perfil e nível de risco, o programa de Security Champions, os exercícios práticos e os mecanismos de avaliação de eficácia.
 
-Políticas, ferramentas e processos de segurança são ineficazes sem as pessoas que os operam. A formação em segurança não é um exercício de compliance anual — é o mecanismo que transforma prescrições técnicas em prática operacional diária. Um developer que compreende as implicações de segurança das decisões de código toma melhores decisões em cada pull request. Um DevOps que compreende o modelo de ameaça da sua infraestrutura configura-a de forma mais segura. Um Security Champion que tem autoridade, conhecimento e suporte institucional consegue disseminar e sustentar a cultura de segurança na sua equipa. Sem investimento deliberado em capacitação, o risco humano permanece o vector mais difícil de mitigar.
+Políticas, ferramentas e processos de segurança são ineficazes sem as pessoas que os operam. A formação em segurança não é um exercício de compliance anual - é o mecanismo que transforma prescrições técnicas em prática operacional diária. Um developer que compreende as implicações de segurança das decisões de código toma melhores decisões em cada pull request. Um DevOps que compreende o modelo de ameaça da sua infraestrutura configura-a de forma mais segura. Um Security Champion que tem autoridade, conhecimento e suporte institucional consegue disseminar e sustentar a cultura de segurança na sua equipa. Sem investimento deliberado em capacitação, o risco humano permanece o vector mais difícil de mitigar.
 
 O objetivo desta política é garantir que:
 
@@ -73,7 +73,7 @@ Os trilhos formativos são o conjunto de módulos obrigatórios e opcionais reco
 | **QA / Testes** | Testes de segurança básicos | Critérios de aceitação de segurança; fuzzing leve | Fuzzing avançado; validação de excepções; SAST/DAST |
 | **DevOps / SRE** | Gestão de segredos; configuração de ambientes | Integração segura em CI/CD; pipelines com gates de segurança | SLSA; proveniência; monitorização contínua; IaC seguro |
 | **Product Owner** | Requisitos mínimos de segurança; backlog seguro | Classificação de risco; gestão de excepções | Processo formal de aceitação de risco; revisão com AppSec |
-| **AppSec Engineer** | — | Facilitação de threat modeling; revisão de PRs; operação de ferramentas | Threat modeling avançado; análise de SBOM; gestão de programa |
+| **AppSec Engineer** | - | Facilitação de threat modeling; revisão de PRs; operação de ferramentas | Threat modeling avançado; análise de SBOM; gestão de programa |
 | **Security Champion** | Awareness geral | Políticas e práticas SbD-ToE; mentoria básica | Trilho avançado; threat modeling; liderança de CTFs; participação em war rooms |
 | **Gestão / Tech Lead** | Awareness executivo | Classificação de risco; exceções e aprovações | Métricas de maturidade; reporting executivo; pós-mortems |
 
@@ -96,7 +96,7 @@ O programa de Security Champions tem como objectivo distribuir competências de 
 | Requisito | Descrição |
 |---|---|
 | Designação formal | Security Champion designado por aplicação L2/L3 (ver Política de Rastreabilidade Organizacional) |
-| Trilho formativo específico | Formação adicional além do trilho base da função — threat modeling, gestão de excepções, liderança de exercícios |
+| Trilho formativo específico | Formação adicional além do trilho base da função - threat modeling, gestão de excepções, liderança de exercícios |
 | Responsabilidades documentadas | Mentoria da equipa; participação em revisões de código; coordenação com AppSec; submissão de excepções; manutenção do repositório de conformidade |
 | Comunidade de Champions | Reuniões regulares entre todos os Champions activos (mínimo mensal em L3); canal de comunicação dedicado; partilha de boas práticas e antipadrões |
 | Reconhecimento institucional | A função de Security Champion deve ter visibilidade e reconhecimento formal (ex: referência em avaliações de desempenho, participação em conferências de segurança) |
@@ -125,7 +125,7 @@ Os resultados dos exercícios devem ser registados com data, participantes, tipo
 
 ## 7. Actualização de conteúdos formativos
 
-Os trilhos formativos reflectem o estado da arte em determinado momento — sem actualização, tornam-se obsoletos e criam falsa confiança. Os conteúdos devem ser revistos:
+Os trilhos formativos reflectem o estado da arte em determinado momento - sem actualização, tornam-se obsoletos e criam falsa confiança. Os conteúdos devem ser revistos:
 
 | Cadência | Âmbito |
 |---|---|
@@ -149,8 +149,8 @@ A eficácia da formação deve ser medida com base em indicadores que vão além
 | Tempo médio para completar trilho | Indicador de acessibilidade e adequação da carga formativa | Referência interna |
 | % de Security Champions com formação válida | Champions com formação não expirada | 100% |
 | Taxa de reincidência de findings do mesmo tipo | Redução de vulnerabilidades recorrentes atribuíveis a lacunas de conhecimento | Trend descendente |
-| Tempo médio de resolução em exercícios | MTTR em simulações de incidente — melhoria ao longo do tempo | Trend descendente |
-| % de tópicos falhados no quiz | Identificação de áreas de conhecimento com maior lacuna — informa revisão de conteúdos | Trend descendente por tópico |
+| Tempo médio de resolução em exercícios | MTTR em simulações de incidente - melhoria ao longo do tempo | Trend descendente |
+| % de tópicos falhados no quiz | Identificação de áreas de conhecimento com maior lacuna - informa revisão de conteúdos | Trend descendente por tópico |
 
 Os KPIs de formação devem ser reportados trimestralmente ao GRC e integrados nos relatórios de governação de segurança.
 
@@ -195,13 +195,13 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 13 — Formação e Capacitação | US-03: Security Champions; US-04: exercícios práticos; US-09: actualização de trilhos; US-10: trilhos proporcionais por risco; US-14: KPIs de capacitação |
+| SbD-ToE Cap. 13 - Formação e Capacitação | US-03: Security Champions; US-04: exercícios práticos; US-09: actualização de trilhos; US-10: trilhos proporcionais por risco; US-14: KPIs de capacitação |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Designação formal de Security Champions |
 | Política de Contratação Segura (`33_policy-contratacao-segura.md`) | Formação mínima para contractors e fornecedores |
 | Política de IRP (`32_policy-irp.md`) | Tabletops e simulações de resposta a incidentes |
-| NIST SSDF — PO.3, PO.7 | Training requirements for secure software development |
-| OWASP SAMM — Education and Guidance | Security training and awareness practices |
+| NIST SSDF - PO.3, PO.7 | Training requirements for secure software development |
+| OWASP SAMM - Education and Guidance | Security training and awareness practices |
 | OWASP WebGoat / Juice Shop / DVWA | Plataformas de referência para labs em aplicações vulneráveis |
-| DORA — Art. 15 | ICT-related training requirements for financial entities |
-| NIS2 — Art. 21 | Cybersecurity training obligations |
-| ISO/IEC 27001 — A.7.2.2 | Information security awareness, education and training |
+| DORA - Art. 15 | ICT-related training requirements for financial entities |
+| NIS2 - Art. 21 | Cybersecurity training obligations |
+| ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |

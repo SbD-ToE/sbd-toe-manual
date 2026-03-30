@@ -1,13 +1,13 @@
 ---
 id: taxonomia-rastreabilidade
 title: Taxonomia de Rastreabilidade de Requisitos
-description: Dois sistemas de identificação complementares — o catálogo canónico SbD-ToE e as tags operacionais de projecto — e como articulá-los ao longo do ciclo de vida.
+description: Dois sistemas de identificação complementares - o catálogo canónico SbD-ToE e as tags operacionais de projecto - e como articulá-los ao longo do ciclo de vida.
 tags: [taxonomia, rastreabilidade, requisitos, domínios, ALM]
 ---
 
 # 🏷️ Taxonomia e Rastreabilidade de Requisitos de Segurança
 
-O SbD-ToE opera com **dois sistemas de identificação complementares**, cada um com propósito distinto. Compreender a diferença e a relação entre ambos é condição para implementar rastreabilidade efectiva — sem ela, o catálogo de requisitos fica desligado do trabalho real de desenvolvimento.
+O SbD-ToE opera com **dois sistemas de identificação complementares**, cada um com propósito distinto. Compreender a diferença e a relação entre ambos é condição para implementar rastreabilidade efectiva - sem ela, o catálogo de requisitos fica desligado do trabalho real de desenvolvimento.
 
 ---
 
@@ -28,13 +28,13 @@ CATEGORIA-NNN
 
 **Exemplos:** `AUT-001` (MFA obrigatório), `LOG-003` (protecção de integridade de logs), `VAL-002` (validação de parâmetros de entrada)
 
-Este ID é a **referência normativa permanente** — identifica o requisito no manual, nos cross-checks regulatórios, nas matrizes de controlo e em documentação de arquitectura. É independente de qualquer projecto específico.
+Este ID é a **referência normativa permanente** - identifica o requisito no manual, nos cross-checks regulatórios, nas matrizes de controlo e em documentação de arquitectura. É independente de qualquer projecto específico.
 
 ---
 
 ### Tag operacional (instanciação por projecto)
 
-Quando um requisito canónico é adoptado por um projecto concreto, é **instanciado** com o contexto desse projecto — nomeadamente o nível de risco — originando uma tag operacional rastreável:
+Quando um requisito canónico é adoptado por um projecto concreto, é **instanciado** com o contexto desse projecto - nomeadamente o nível de risco - originando uma tag operacional rastreável:
 
 ```
 SEC-Lx-DOMINIO-CODIGO
@@ -42,14 +42,14 @@ SEC-Lx-DOMINIO-CODIGO
 
 | Componente | Descrição | Exemplo |
 |------------|-----------|---------|
-| `SEC` | Prefixo fixo — indica requisito de segurança | `SEC` |
+| `SEC` | Prefixo fixo - indica requisito de segurança | `SEC` |
 | `Lx` | Nível de risco da aplicação (L1, L2 ou L3) | `L2` |
 | `DOMINIO` | Domínio técnico, alinhado com o catálogo | `AUT`, `LOG` |
 | `CODIGO` | Código semântico abreviado do requisito | `MFA`, `BRUTE` |
 
 **Exemplo completo:** `SEC-L2-AUT-MFA`
 
-Esta tag é o identificador usado nos artefactos de ciclo de vida do projecto — backlog, código, testes, pipeline, evidência de auditoria.
+Esta tag é o identificador usado nos artefactos de ciclo de vida do projecto - backlog, código, testes, pipeline, evidência de auditoria.
 
 ---
 
@@ -99,17 +99,17 @@ O mesmo requisito canónico pode originar tags distintas em projectos diferentes
 | Comentários no código-fonte | Tag operacional | `// SEC-L3-VAL-SQLI` |
 | Gates de CI/CD e validações automáticas | Tag operacional | `SEC-L2-AUT-MFA` |
 | Casos de teste e critérios de aceitação | Tag operacional + referência ao ID canónico | `SEC-L2-AUT-MFA` → `AUT-001` |
-| Relatórios de auditoria e evidência | Ambos — rastreabilidade completa | `AUT-001` / `SEC-L2-AUT-MFA` |
+| Relatórios de auditoria e evidência | Ambos - rastreabilidade completa | `AUT-001` / `SEC-L2-AUT-MFA` |
 
-A presença do ID canónico em relatórios e evidências é o que permite ligar o trabalho do projecto ao catálogo normativo — e, por extensão, a frameworks externos como ASVS, NIST ou requisitos regulatórios.
+A presença do ID canónico em relatórios e evidências é o que permite ligar o trabalho do projecto ao catálogo normativo - e, por extensão, a frameworks externos como ASVS, NIST ou requisitos regulatórios.
 
 ---
 
 ## 5) Verificação e manutenção
 
 As tags operacionais devem ser **validadas periodicamente** contra:
-- O [catálogo canónico](./catalogo-requisitos) — para garantir que os IDs referenciados existem e estão actualizados;
-- A [matriz de controlos por risco](./matriz-controlos-por-risco) — para confirmar que o nível `Lx` da tag é coerente com a classificação actual da aplicação.
+- O [catálogo canónico](./catalogo-requisitos) - para garantir que os IDs referenciados existem e estão actualizados;
+- A [matriz de controlos por risco](./matriz-controlos-por-risco) - para confirmar que o nível `Lx` da tag é coerente com a classificação actual da aplicação.
 
 A organização deve manter um registo com:
 - Requisitos adoptados e respectivos IDs canónicos;
@@ -119,4 +119,4 @@ A organização deve manter um registo com:
 
 ---
 
-> 📌 A distinção entre ID canónico e tag operacional não é apenas formal — é o mecanismo que permite **governança centralizada do catálogo** com **implementação descentralizada, rastreável e auditável** em cada projecto.
+> 📌 A distinção entre ID canónico e tag operacional não é apenas formal - é o mecanismo que permite **governança centralizada do catálogo** com **implementação descentralizada, rastreável e auditável** em cada projecto.

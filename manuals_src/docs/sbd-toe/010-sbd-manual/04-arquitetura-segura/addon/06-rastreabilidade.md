@@ -12,7 +12,7 @@ sidebar_position: 6
 
 A rastreabilidade arquitectural é a capacidade de demonstrar, de forma verificável, que cada requisito de segurança relevante tem uma decisão de design associada, um controlo implementado e evidência auditável.
 
-Sem rastreabilidade, uma arquitectura pode estar correcta mas não ser *demonstravelmente* segura — o que é insuficiente em contextos de auditoria, conformidade ou análise pós-incidente.
+Sem rastreabilidade, uma arquitectura pode estar correcta mas não ser *demonstravelmente* segura - o que é insuficiente em contextos de auditoria, conformidade ou análise pós-incidente.
 
 ---
 
@@ -26,17 +26,17 @@ Ameaça (Cap. 03)  →  Requisito ARC-XXX  →  Decisão (ADR)  →  Controlo im
 
 | Elemento | Descrição | Artefacto típico |
 |----------|-----------|-----------------|
-| **Ameaça** | Ameaça identificada no threat modeling (Cap. 03) — STRIDE, PASTA ou equivalente | Registo de TM, DFD anotado |
+| **Ameaça** | Ameaça identificada no threat modeling (Cap. 03) - STRIDE, PASTA ou equivalente | Registo de TM, DFD anotado |
 | **Requisito ARC-XXX** | Requisito canónico do catálogo deste capítulo que mitiga a ameaça | `01-catalogo-requisitos.md` |
 | **Decisão (ADR)** | Architecture Decision Record que documenta como o requisito é satisfeito no contexto do projecto | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
 | **Controlo implementado** | A medida técnica ou processual em vigor que concretiza a decisão | Configuração de rede, política de admissão, processo de revisão |
-| **Evidência** | Artefacto verificável que comprova o controlo — versionado, reproduzível e auditável | Diagrama versionado, log de CI/CD, ata de revisão, checklist preenchido |
+| **Evidência** | Artefacto verificável que comprova o controlo - versionado, reproduzível e auditável | Diagrama versionado, log de CI/CD, ata de revisão, checklist preenchido |
 
 ---
 
 ## Template de matriz de rastreabilidade
 
-A matriz pode ser mantida como tabela Markdown no repositório, backlog items com labels, ou secção na `solution-architecture.md`. O formato é secundário; a substância — ligação verificável entre requisito, decisão e evidência — é o critério determinante.
+A matriz pode ser mantida como tabela Markdown no repositório, backlog items com labels, ou secção na `solution-architecture.md`. O formato é secundário; a substância - ligação verificável entre requisito, decisão e evidência - é o critério determinante.
 
 | Req. ARC | Nome | Ameaça associada (Cap. 03) | Decisão / ADR | Controlo implementado | Evidência | Estado |
 |----------|------|---------------------------|---------------|-----------------------|-----------|--------|
@@ -71,7 +71,7 @@ A tag operacional é o elo entre a matriz de rastreabilidade arquitectural e o b
 
 ---
 
-> Para o catálogo de requisitos, consultar [Catálogo de Requisitos ARC](./catalogo-requisitos).
-> Para critérios de validação por requisito, consultar [Plano de Validação Arquitetural](./validacao).
+> Para o catálogo de requisitos, consultar [Catálogo de Requisitos ARC](./catalogo-requisitos-arquitetura).
+> Para critérios de validação por requisito, consultar [Plano de Validação Arquitetural](./validacao-arquitetural).
 > Para o modelo de decisão e evidência, consultar [Decisão e Evidência Arquitetural](./decisao-evidencia-arquitetural).
 > Para gestão de excepções à rastreabilidade, consultar [Gestão de Excepções](./excecoes).

@@ -12,7 +12,7 @@ sidebar_position: 32
 
 Esta política define os requisitos para a **integração entre os sistemas de monitorização de segurança e o processo formal de resposta a incidentes (IRP)** da organização.
 
-A detecção de um incidente de segurança só tem valor operacional quando conduz a uma resposta estruturada. Alertas sem playbooks associados tornam-se decisões ad-hoc sob pressão — precisamente quando as decisões mais importantes precisam de ser as mais rápidas e correctas. O IRP transforma a detecção em resposta: define quem faz o quê, em que ordem, com que autoridade e com que evidência.
+A detecção de um incidente de segurança só tem valor operacional quando conduz a uma resposta estruturada. Alertas sem playbooks associados tornam-se decisões ad-hoc sob pressão - precisamente quando as decisões mais importantes precisam de ser as mais rápidas e correctas. O IRP transforma a detecção em resposta: define quem faz o quê, em que ordem, com que autoridade e com que evidência.
 
 O objetivo desta política é garantir que:
 
@@ -48,20 +48,20 @@ O IRP é activado formalmente quando um alerta ou evento de segurança é confir
 | Anomalia de segurança de alta severidade | Padrão comportamental suspeito confirmado pelo SIEM | Após triagem positiva |
 | Vulnerabilidade crítica em produção | CVE Critical com exploit activo em sistema exposto | Activação preventiva |
 
-Um alerta não confirmado não activa o IRP formalmente — activa a fase de triagem. A activação formal ocorre após confirmação.
+Um alerta não confirmado não activa o IRP formalmente - activa a fase de triagem. A activação formal ocorre após confirmação.
 
 ---
 
 ## 4. Fases de resposta a incidentes
 
-### 4.1 Triagem (T0 — ≤ 15 minutos de detecção)
+### 4.1 Triagem (T0 - ≤ 15 minutos de detecção)
 
 - [ ] Alerta classificado: verdadeiro positivo ou falso positivo
 - [ ] Severidade atribuída (P1/P2/P3)
 - [ ] Responsável pelo incidente designado (Incident Commander)
 - [ ] Canal de comunicação do incidente aberto (war room se P1)
 
-### 4.2 Contenção (T1 — início imediato após confirmação)
+### 4.2 Contenção (T1 - início imediato após confirmação)
 
 - [ ] Acções de contenção imediata executadas (isolamento de sistema, revogação de credencial, bloqueio de IP)
 - [ ] Contenção documentada com timestamp e identidade do executor
@@ -120,12 +120,12 @@ Alguns incidentes requerem notificação a autoridades regulatórias dentro de p
 
 | Regulação | Tipo de incidente | Prazo |
 |---|---|---|
-| RGPD — Art. 33 | Violação de dados pessoais | ≤ 72 horas após conhecimento |
-| DORA — Art. 17/19 | Incidente TIC significativo (entidade financeira) | ≤ 4 horas (relatório inicial) + 72 horas (intermédio) |
-| NIS2 — Art. 23 | Incidente significativo em entidade essencial/importante | ≤ 24 horas (alerta) + 72 horas (notificação) |
+| RGPD - Art. 33 | Violação de dados pessoais | ≤ 72 horas após conhecimento |
+| DORA - Art. 17/19 | Incidente TIC significativo (entidade financeira) | ≤ 4 horas (relatório inicial) + 72 horas (intermédio) |
+| NIS2 - Art. 23 | Incidente significativo em entidade essencial/importante | ≤ 24 horas (alerta) + 72 horas (notificação) |
 
 :::warning
-A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. O prazo começa a contar a partir do momento em que a organização tem conhecimento do incidente — não quando a causa raiz é identificada.
+A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. O prazo começa a contar a partir do momento em que a organização tem conhecimento do incidente - não quando a causa raiz é identificada.
 :::
 
 ---
@@ -135,7 +135,7 @@ A determinação de se um incidente é notificável deve ser feita pelo GRC/Comp
 - [ ] Canal dedicado ao incidente (sem ruído de outros canais)
 - [ ] Incident Commander responsável pela comunicação interna e externa
 - [ ] Actualizações regulares ao management em incidentes P1 (ex: a cada 30 minutos)
-- [ ] Comunicação a utilizadores afectados quando aplicável — honesta e sem comprometer a investigação
+- [ ] Comunicação a utilizadores afectados quando aplicável - honesta e sem comprometer a investigação
 - [ ] Sem comunicação pública não autorizada por membros da equipa técnica
 
 ---
@@ -178,12 +178,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 12 — Monitorização & Operações | US-04: integração com IRP; playbooks; automação |
+| SbD-ToE Cap. 12 - Monitorização & Operações | US-04: integração com IRP; playbooks; automação |
 | Política de Monitorização de Segurança (`30_policy-monitorizacao-seguranca.md`) | Detecção de incidentes |
 | Política de Gestão de Alertas (`31_policy-gestao-alertas.md`) | Activação de IRP por alerta |
 | NIST SP 800-61 rev.2 | Computer Security Incident Handling Guide |
 | ISO/IEC 27035 | Information Security Incident Management |
-| RGPD — Art. 33-34 | Notificação de violação de dados pessoais |
-| DORA — Art. 17-20 | ICT incident management e reporting |
-| NIS2 — Art. 23 | Incident notification obligations |
+| RGPD - Art. 33-34 | Notificação de violação de dados pessoais |
+| DORA - Art. 17-20 | ICT incident management e reporting |
+| NIS2 - Art. 23 | Incident notification obligations |
 | MITRE ATT&CK | Táticas e técnicas para investigação de incidentes |

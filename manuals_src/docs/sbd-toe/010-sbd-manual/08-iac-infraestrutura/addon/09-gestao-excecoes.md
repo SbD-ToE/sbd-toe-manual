@@ -2,19 +2,19 @@
 id: gestao-excecoes
 title: Excepções em IaC
 sidebar_position: 9
-description: Especificidades da gestão de excepções no contexto de Infraestrutura como Código — policy engines, enforcement e TTL
+description: Especificidades da gestão de excepções no contexto de Infraestrutura como Código - policy engines, enforcement e TTL
 tags: [excecoes, governacao, iac, controlo, opa, enforcement]
 ---
 
 # Excepções em IaC
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
 ## Âmbito
 
-Excepções a políticas e controlos de segurança aplicados por policy engines (OPA, Sentinel, Rego) sobre módulos, recursos e pipelines IaC — requisitos `IAC-001` a `IAC-013`.
+Excepções a políticas e controlos de segurança aplicados por policy engines (OPA, Sentinel, Rego) sobre módulos, recursos e pipelines IaC - requisitos `IAC-001` a `IAC-013`.
 
 ---
 
@@ -65,9 +65,9 @@ validade: "2025-07-20"
 
 ## Integração com policy engines
 
-- Excepções são avaliadas **por regra e por contexto** — não desactivam regras globalmente;
+- Excepções são avaliadas **por regra e por contexto** - não desactivam regras globalmente;
 - Policy engines (OPA/Sentinel/Rego) devem ser configurados para interpretar excepções activas como contexto de avaliação;
-- Excepções expiradas resultam em **bloqueio automático** do pipeline — a expiração não é silenciosa nem passa para estado permissivo por omissão.
+- Excepções expiradas resultam em **bloqueio automático** do pipeline - a expiração não é silenciosa nem passa para estado permissivo por omissão.
 
 ---
 
@@ -77,4 +77,4 @@ validade: "2025-07-20"
 |---|---|
 | `addon/06-controle-enforcement.md` | Tratamento técnico de excepções em policy-as-code |
 | `addon/08-matriz-requisitos-iac.md` | Requisitos IAC-001..013 que podem ter excepções |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

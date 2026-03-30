@@ -20,24 +20,24 @@ Este addon prescreve como usar IA para acelerar e aumentar cobertura **sem subst
 
 ## 1) Princípios canónicos
 
-### P1 — IA é “assistente”, não “decisor”
+### P1 - IA é “assistente”, não “decisor”
 A IA pode propor: triagens, hipóteses, priorização, caminhos de reprodução, patch candidates, testes.  
-A decisão final (corrigir/aceitar/suprimir/defer) é sempre humana e rastreável — ver **US-21** e **US-22** no lifecycle.
+A decisão final (corrigir/aceitar/suprimir/defer) é sempre humana e rastreável - ver **US-21** e **US-22** no lifecycle.
 
-### P2 — Evidência tem de ser reprodutível sem IA
+### P2 - Evidência tem de ser reprodutível sem IA
 Qualquer finding confirmado tem de poder ser reproduzido por:
 - teste automatizado (regressão),
 - PoC mínima,
 - log/artefacto determinístico (SARIF, HTTP transcript, crash dump, etc.).
 
-### P3 — Dados sensíveis nunca entram “às cegas” num modelo
+### P3 - Dados sensíveis nunca entram “às cegas” num modelo
 Prompts e contextos devem respeitar:
 - minimização (apenas o necessário),
 - redacção/masking,
 - segregação de segredos (nunca colar tokens/headers reais),
 - política organizacional de uso de IA (ver anexo transversal de políticas).
 
-### P4 — Risco “modelo/supply chain” também é risco de segurança
+### P4 - Risco “modelo/supply chain” também é risco de segurança
 Ferramentas de IA (cloud ou local) fazem parte da cadeia de confiança.
 Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 - versionamento do modelo/config,
@@ -156,7 +156,7 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ## 3) Controlos obrigatórios quando se usa IA em testes
 
-### C1 — Registo mínimo de “interação com IA” (quando permitido)
+### C1 - Registo mínimo de “interação com IA” (quando permitido)
 Para decisões de severidade ≥ HIGH (L2/L3), registar:
 - objetivo do pedido,
 - contexto fornecido (redigido),
@@ -165,7 +165,7 @@ Para decisões de severidade ≥ HIGH (L2/L3), registar:
 
 > Se a política de privacidade impedir logging, registar pelo menos: “IA usada” + tipo de apoio + evidência determinística sem prompt.
 
-### C2 — Proteção contra prompt injection / conteúdo malicioso em artefactos
+### C2 - Proteção contra prompt injection / conteúdo malicioso em artefactos
 Quando a IA é alimentada com:
 - logs,
 - outputs de scanners,
@@ -179,13 +179,13 @@ Mitigação:
 - execução em contexto “no tools / no network” sempre que possível,
 - validação humana.
 
-### C3 — Separação de ambientes e credenciais
+### C3 - Separação de ambientes e credenciais
 IA usada para testes que interagem com runtime:
 - só em staging isolado,
 - com contas técnicas dedicadas,
 - com segredos geridos por vault e nunca copiados.
 
-### C4 — Proibição de “auto-merge” de correções de segurança
+### C4 - Proibição de “auto-merge” de correções de segurança
 Qualquer patch gerado com IA:
 - requer revisão humana,
 - requer testes (incluindo regressão de segurança),
@@ -197,9 +197,9 @@ Qualquer patch gerado com IA:
 
 Este addon reforça diretamente:
 
-- **US-10/US-11** (centralização e feedback) — IA pode acelerar triagem e reduzir ruído, sem perder rastreabilidade.
-- **US-21** (decisão assistida) — IA alimenta hipótese; decisão é humana, documentada.
-- **US-22** (validação empírica) — IA sugere como validar; confirmação é sempre por PoC/teste.
+- **US-10/US-11** (centralização e feedback) - IA pode acelerar triagem e reduzir ruído, sem perder rastreabilidade.
+- **US-21** (decisão assistida) - IA alimenta hipótese; decisão é humana, documentada.
+- **US-22** (validação empírica) - IA sugere como validar; confirmação é sempre por PoC/teste.
 
 ---
 
@@ -220,7 +220,7 @@ Este addon reforça diretamente:
 
 ## 6) Notas finais
 
-A IA pode ser um multiplicador brutal de produtividade em testes de segurança — **se** for usada como acelerador de análise e geração de artefactos, e não como substituto de evidência e responsabilidade.
+A IA pode ser um multiplicador brutal de produtividade em testes de segurança - **se** for usada como acelerador de análise e geração de artefactos, e não como substituto de evidência e responsabilidade.
 
 O critério de sucesso não é “menos trabalho humano”, mas sim:
 - **mais cobertura**, 

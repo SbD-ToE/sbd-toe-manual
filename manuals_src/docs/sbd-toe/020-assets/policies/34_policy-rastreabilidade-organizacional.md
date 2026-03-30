@@ -10,7 +10,7 @@ sidebar_position: 34
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a **rastreabilidade das práticas de segurança ao nível organizacional** — o conjunto de mecanismos que permitem demonstrar, a qualquer momento, o estado de conformidade de cada aplicação com os requisitos do SbD-ToE, identificar os responsáveis por cada decisão de segurança, e apresentar evidência auditável a auditores internos, externos ou reguladores.
+Esta política define os requisitos para a **rastreabilidade das práticas de segurança ao nível organizacional** - o conjunto de mecanismos que permitem demonstrar, a qualquer momento, o estado de conformidade de cada aplicação com os requisitos do SbD-ToE, identificar os responsáveis por cada decisão de segurança, e apresentar evidência auditável a auditores internos, externos ou reguladores.
 
 Conformidade sem rastreabilidade é uma declaração de intenção, não uma postura de segurança verificável. A rastreabilidade transforma práticas dispersas em evidência estruturada: permite detetar desvios antes de incidentes, suportar decisões de risco com dados históricos, e demonstrar maturidade de forma objectiva. Sem um mecanismo de rastreabilidade organizacional, o estado real de segurança das aplicações fica invisível para a gestão e para a auditoria.
 
@@ -36,11 +36,11 @@ O objetivo desta política é garantir que:
 
 ## 3. Repositório de conformidade por aplicação
 
-Cada aplicação deve ter um repositório de conformidade — um artefacto estruturado, versionado e auditável que consolida o estado de conformidade com todos os capítulos do SbD-ToE aplicáveis.
+Cada aplicação deve ter um repositório de conformidade - um artefacto estruturado, versionado e auditável que consolida o estado de conformidade com todos os capítulos do SbD-ToE aplicáveis.
 
 ### 3.1 Formato e conteúdo mínimo
 
-O repositório pode ser implementado como ficheiro YAML ou Markdown versionado em repositório de código, ferramenta GRC, ou sistema de gestão de conformidade. O formato específico não é prescrito — a auditabilidade e a acessibilidade são os requisitos determinantes.
+O repositório pode ser implementado como ficheiro YAML ou Markdown versionado em repositório de código, ferramenta GRC, ou sistema de gestão de conformidade. O formato específico não é prescrito - a auditabilidade e a acessibilidade são os requisitos determinantes.
 
 | Campo | Descrição | Obrigatoriedade |
 |---|---|---|
@@ -73,7 +73,7 @@ Para cada aplicação classificada como L2 ou L3, deve existir um **Security Cha
 
 | Requisito | Descrição |
 |---|---|
-| Designação formal | Por escrito — e-mail oficial, sistema de RH, ou documento assinado por gestor |
+| Designação formal | Por escrito - e-mail oficial, sistema de RH, ou documento assinado por gestor |
 | Responsabilidades documentadas | Submissão de excepções, validações periódicas, comunicação de risco, manutenção do repositório de conformidade |
 | Formação mínima concluída | O Security Champion deve ter completado o trilho de formação de segurança obrigatório para a sua função |
 | Substituto designado | Para continuidade em ausências prolongadas (L3 obrigatório) |
@@ -83,7 +83,7 @@ Para cada aplicação classificada como L2 ou L3, deve existir um **Security Cha
 A organização deve manter um registo centralizado de todos os Security Champions activos, com identificação da aplicação, identidade, data de designação e estado de formação. Este registo é a fonte de verdade para escalamento, comunicação de risco e auditoria.
 
 :::note
-A designação de Security Champion não exime os restantes membros da equipa das responsabilidades de segurança que lhes cabem nos termos das políticas aplicáveis. O Security Champion é o ponto de coordenação e de responsabilização — não o único responsável pela segurança da aplicação.
+A designação de Security Champion não exime os restantes membros da equipa das responsabilidades de segurança que lhes cabem nos termos das políticas aplicáveis. O Security Champion é o ponto de coordenação e de responsabilização - não o único responsável pela segurança da aplicação.
 :::
 
 ---
@@ -134,7 +134,7 @@ A organização deve manter visibilidade agregada do estado de conformidade do s
 | Alertas automáticos para desvios críticos | Não aplicável | Recomendado | Obrigatório |
 | Relatórios periódicos para gestão executiva | Não aplicável | Semestral | Trimestral |
 
-O dashboard não substitui o repositório de conformidade por aplicação — é uma vista agregada para gestão e decisão executiva. Os dados devem ser derivados dos repositórios de conformidade individuais para manter consistência.
+O dashboard não substitui o repositório de conformidade por aplicação - é uma vista agregada para gestão e decisão executiva. Os dados devem ser derivados dos repositórios de conformidade individuais para manter consistência.
 
 ---
 
@@ -154,7 +154,7 @@ Toda a evidência de conformidade deve satisfazer os seguintes requisitos para s
 
 | Tipo | Exemplos |
 |---|---|
-| Relatórios de ferramentas | Relatório SAST, SCA, DAST, PenTest — com versão de ferramenta, data e âmbito |
+| Relatórios de ferramentas | Relatório SAST, SCA, DAST, PenTest - com versão de ferramenta, data e âmbito |
 | Logs de pipeline | Evidência de execução de gate de segurança com resultado e timestamp |
 | Registos de revisão | Pull request com aprovação documentada e referência a checklist de segurança |
 | Decisões de excepção | Registo de excepção com aprovação, justificação e data de validade |
@@ -204,11 +204,11 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 14 — Governança & Contratação | US-04: rastreabilidade organizacional; US-08: repositório de conformidade; US-09: designação de owners; US-10: validação periódica; US-13: controlo sistemático por capítulo |
+| SbD-ToE Cap. 14 - Governança & Contratação | US-04: rastreabilidade organizacional; US-08: repositório de conformidade; US-09: designação de owners; US-10: validação periódica; US-13: controlo sistemático por capítulo |
 | Política de KPIs de Governação (`35_policy-kpis-governacao.md`) | Métricas derivadas dos dados de rastreabilidade |
 | Política de Contratação Segura (`33_policy-contratacao-segura.md`) | Rastreabilidade de fornecedores e contractors |
-| NIST SSDF — PO.3, PO.7 | Implementação de práticas de segurança e rastreabilidade |
-| OWASP SAMM — PO2, PO3 | Maturidade organizacional em segurança |
-| ISO/IEC 27001 — A.18 | Compliance and information security reviews |
-| DORA — Art. 17 | ICT risk management documentation and evidence |
-| NIS2 — Art. 21 | Cybersecurity measures and accountability |
+| NIST SSDF - PO.3, PO.7 | Implementação de práticas de segurança e rastreabilidade |
+| OWASP SAMM - PO2, PO3 | Maturidade organizacional em segurança |
+| ISO/IEC 27001 - A.18 | Compliance and information security reviews |
+| DORA - Art. 17 | ICT risk management documentation and evidence |
+| NIS2 - Art. 21 | Cybersecurity measures and accountability |

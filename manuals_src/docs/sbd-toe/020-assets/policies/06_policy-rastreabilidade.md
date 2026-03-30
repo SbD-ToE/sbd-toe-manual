@@ -12,7 +12,7 @@ sidebar_position: 6
 
 Esta política define os requisitos transversais de **rastreabilidade e auditoria** que devem ser satisfeitos ao longo de todo o ciclo de vida de cada aplicação.
 
-Rastreabilidade é a capacidade de reconstituir, a qualquer momento, a cadeia de decisões, evidências e artefactos que suportam a postura de segurança de uma aplicação — desde os requisitos definidos até ao código em produção, passando pelas validações executadas, as exceções aprovadas e os eventos operacionais registados.
+Rastreabilidade é a capacidade de reconstituir, a qualquer momento, a cadeia de decisões, evidências e artefactos que suportam a postura de segurança de uma aplicação - desde os requisitos definidos até ao código em produção, passando pelas validações executadas, as exceções aprovadas e os eventos operacionais registados.
 
 Sem rastreabilidade efetiva:
 
@@ -21,7 +21,7 @@ Sem rastreabilidade efetiva:
 - A conformidade regulatória não pode ser demonstrada de forma objetiva
 - Decisões de risco ficam sem evidência associada
 
-Esta política é **transversal** — aplica-se a todos os domínios do manual SbD-ToE onde exista produção de evidências, aprovações, artefactos ou eventos auditáveis.
+Esta política é **transversal** - aplica-se a todos os domínios do manual SbD-ToE onde exista produção de evidências, aprovações, artefactos ou eventos auditáveis.
 
 ---
 
@@ -44,11 +44,11 @@ Esta política cobre as seguintes dimensões de rastreabilidade:
 
 ## 3. Princípios fundamentais
 
-- **Rastreabilidade bidirecional** — deve ser possível navegar do requisito ao código e do código ao requisito
-- **Evidência executável** — relatórios produzidos por execução real, nunca por declaração manual sem suporte técnico
-- **Imutabilidade** — evidências de auditoria não devem ser alteráveis após produção; armazenamento WORM recomendado em L2/L3
-- **Correlação** — eventos de fontes distintas (commit, pipeline, log, incidente) devem ser correlacionáveis por identificadores comuns
-- **Proporcionalidade** — o nível de detalhe e formalismo escala com o nível de criticidade da aplicação
+- **Rastreabilidade bidirecional** - deve ser possível navegar do requisito ao código e do código ao requisito
+- **Evidência executável** - relatórios produzidos por execução real, nunca por declaração manual sem suporte técnico
+- **Imutabilidade** - evidências de auditoria não devem ser alteráveis após produção; armazenamento WORM recomendado em L2/L3
+- **Correlação** - eventos de fontes distintas (commit, pipeline, log, incidente) devem ser correlacionáveis por identificadores comuns
+- **Proporcionalidade** - o nível de detalhe e formalismo escala com o nível de criticidade da aplicação
 
 ---
 
@@ -161,7 +161,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 - [ ] Logs em formato estruturado (JSON ou equivalente) com campos mínimos: timestamp, nível, evento, origem, contexto
 - [ ] Identificador de correlação (`request_id` ou equivalente) propagado em todos os logs do mesmo fluxo
 - [ ] Logs enviados para sistema centralizado (L2/L3)
-- [ ] Acesso a logs restrito e auditado — sem acesso direto por funções de produção
+- [ ] Acesso a logs restrito e auditado - sem acesso direto por funções de produção
 - [ ] Integridade de logs verificável (hash ou assinatura) em L2/L3
 - [ ] Retenção WORM ativada no armazenamento em L3
 
@@ -227,15 +227,15 @@ O índice de evidências e os logs de auditoria devem ser disponibilizados integ
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Rastreabilidade requisito → controlo → validação |
-| SbD-ToE Cap. 06 — Desenvolvimento Seguro | Arquivo central de evidências de validação |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Rastreabilidade commit → pipeline → release |
-| SbD-ToE Cap. 08 — IaC e Infraestrutura | Rastreabilidade ficheiro → recurso → ambiente |
-| SbD-ToE Cap. 09 — Containers e Imagens | Proveniência e assinatura de imagens |
-| SbD-ToE Cap. 12 — Monitorização e Operações | Integridade e retenção de logs |
-| SbD-ToE Cap. 14 — Governança e Contratação | Rastreabilidade organizacional e conformidade |
-| ISO/IEC 27001 — Cláusula 9.1 | Monitorização, medição, análise e avaliação |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Rastreabilidade requisito → controlo → validação |
+| SbD-ToE Cap. 06 - Desenvolvimento Seguro | Arquivo central de evidências de validação |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Rastreabilidade commit → pipeline → release |
+| SbD-ToE Cap. 08 - IaC e Infraestrutura | Rastreabilidade ficheiro → recurso → ambiente |
+| SbD-ToE Cap. 09 - Containers e Imagens | Proveniência e assinatura de imagens |
+| SbD-ToE Cap. 12 - Monitorização e Operações | Integridade e retenção de logs |
+| SbD-ToE Cap. 14 - Governança e Contratação | Rastreabilidade organizacional e conformidade |
+| ISO/IEC 27001 - Cláusula 9.1 | Monitorização, medição, análise e avaliação |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | SSDF PW.8 | Archive and protect each software release |
-| NIS2 — Artigo 21 | Obrigações de registo e notificação |
-| DORA — Artigo 10 | Rastreabilidade de eventos e logs |
+| NIS2 - Artigo 21 | Obrigações de registo e notificação |
+| DORA - Artigo 10 | Rastreabilidade de eventos e logs |

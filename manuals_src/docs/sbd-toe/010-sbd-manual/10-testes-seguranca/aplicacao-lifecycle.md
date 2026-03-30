@@ -619,8 +619,8 @@ Como **AppSec + DevOps**, quero **framework de decisão estruturado para finding
 | Revisão | Trimestral | GRC + AppSec | Análise KPIs (cobertura, tempo-decisão) |
 
 **Ligações úteis.**  
-[Addon 11 — Framework de Decisão para Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/decisao-findings-testes)  
-[Addon 12 — Validação Empírica de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/validacao-empirica-findings)
+[Addon 08 - Gestão de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/gestao-findings)
+[Addon 10 - Evidência e Reprodutibilidade](/sbd-toe/sbd-manual/testes-seguranca/addon/evidencia-reprodutibilidade)
 
 ---
 
@@ -687,8 +687,8 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
 | Incidente | Vulnerabilidade explorada | AppSec + CISO | RCA obrigatório com Template S2 |
 
 **Ligações úteis.**  
-[Addon 12 — Validação Empírica de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/validacao-empirica-findings)  
-[Addon 11 — Framework de Decisão para Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/decisao-findings-testes)
+[Addon 10 - Evidência e Reprodutibilidade](/sbd-toe/sbd-manual/testes-seguranca/addon/evidencia-reprodutibilidade)
+[Addon 08 - Gestão de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/gestao-findings)
 
 ---
 
@@ -696,7 +696,7 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
 
 ### US-14 - Validação humana da interpretação final dos resultados
 
-Ferramentas podem correlacionar, priorizar e sugerir severidade — mas **não substituem validação humana**.  
+Ferramentas podem correlacionar, priorizar e sugerir severidade - mas **não substituem validação humana**.  
 Esta US garante que a equipa não toma decisões (merge/release/aceitação) com base apenas em scoring automático ou agregação de resultados.
 
 **Contexto.**  

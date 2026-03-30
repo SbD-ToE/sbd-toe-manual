@@ -123,7 +123,7 @@ A configuração do repositório interno deve ser registada em `repo-config.yaml
 
 ---
 
-## 7. SCA — Análise de composição de software
+## 7. SCA - Análise de composição de software
 
 ### 7.1 Integração no pipeline
 
@@ -215,9 +215,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | Inventário, SCA, alertas, artefactos, user stories |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Integração SCA no pipeline e gates |
-| SbD-ToE Cap. 09 — Containers e Imagens | Dependências em imagens base |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Inventário, SCA, alertas, artefactos, user stories |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Integração SCA no pipeline e gates |
+| SbD-ToE Cap. 09 - Containers e Imagens | Dependências em imagens base |
 | Política de SBOM (`11_policy-sbom.md`) | Geração e retenção de SBOM por build |
 | Política de Exceções a CVEs (`12_policy-excecoes-cve.md`) | Gestão de CVEs sem fix disponível |
 | OWASP Dependency-Check | Ferramenta SCA de referência |

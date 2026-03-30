@@ -11,7 +11,7 @@ tags: [governação, módulos, iac, reutilização, segurança, supply-chain, ra
 
 ## 🌟 Objetivo
 
-Assegurar que **todos os módulos reutilizados em projetos de Infraestrutura como Código (IaC)** — internos ou externos — são tratados como **componentes de supply chain**, sujeitos a governação formal, validação contínua e evidência auditável.
+Assegurar que **todos os módulos reutilizados em projetos de Infraestrutura como Código (IaC)** - internos ou externos - são tratados como **componentes de supply chain**, sujeitos a governação formal, validação contínua e evidência auditável.
 
 Em concreto, este ficheiro estabelece como garantir que os módulos são:
 

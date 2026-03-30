@@ -72,8 +72,8 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos mínimos por risco
-* `addon/01-modelo-governancao.md` — Modelo de decisão e exceções
-* `addon/06-validacao-continuada.md` — Validação continuada
+* `addon/01-modelo-governancao.md` - Modelo de decisão e exceções
+* `addon/06-validacao-continuada.md` - Validação continuada
 * Cap. 08 / 09 - Integração com pipelines e execução isolada
 
 ---

@@ -12,10 +12,10 @@ sidebar_position: 5
 
 Este documento define como validar cada requisito do catálogo de arquitectura segura (ARC-001 a ARC-013), especificando:
 
-- **o que validar** — o critério concreto de conformidade;
-- **como validar** — o método ou artefacto utilizado;
-- **quando** — o momento no ciclo de vida em que a validação deve ocorrer;
-- **responsável** — o papel que valida.
+- **o que validar** - o critério concreto de conformidade;
+- **como validar** - o método ou artefacto utilizado;
+- **quando** - o momento no ciclo de vida em que a validação deve ocorrer;
+- **responsável** - o papel que valida.
 
 ---
 
@@ -44,12 +44,12 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 | Critério de validação | L1 | L2 | L3 |
 |-----------------------|:--:|:--:|:--:|
 | Validação informal pelo Arquitecto técnico | ✔ | ✔ | ✔ |
-| Revisão formal com registo (ata, checklist ou relatório AppSec) | — | ✔ | ✔ |
-| Evidência arquivada com a release | — | ✔ | ✔ |
+| Revisão formal com registo (ata, checklist ou relatório AppSec) | - | ✔ | ✔ |
+| Evidência arquivada com a release | - | ✔ | ✔ |
 | Actualização após alteração relevante | ✔ | ✔ | ✔ |
-| Revisão por papel independente de segurança | — | — | ✔ |
-| Gate formal de aprovação antes de deploy em produção | — | — | ✔ |
-| Validação automática de topologia em CI/CD | — | — | ✔ |
+| Revisão por papel independente de segurança | - | - | ✔ |
+| Gate formal de aprovação antes de deploy em produção | - | - | ✔ |
+| Validação automática de topologia em CI/CD | - | - | ✔ |
 
 ---
 
@@ -61,6 +61,6 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-> Para o catálogo de requisitos, consultar [Catálogo de Requisitos ARC](./catalogo-requisitos).
-> Para rastreabilidade requisito→decisão→evidência, consultar [Rastreabilidade Arquitetural](./rastreabilidade).
+> Para o catálogo de requisitos, consultar [Catálogo de Requisitos ARC](./catalogo-requisitos-arquitetura).
+> Para rastreabilidade requisito→decisão→evidência, consultar [Rastreabilidade Arquitetural](./rastreabilidade-arquitetural).
 > Para gestão de excepções, consultar [Gestão de Excepções](./excecoes).

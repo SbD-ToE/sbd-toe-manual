@@ -12,14 +12,14 @@ sidebar_position: 20
 
 Esta política define os requisitos para a **aprovação formal de releases de software**, garantindo que nenhuma versão é promovida a produção sem evidência documentada de conformidade com os requisitos de segurança aplicáveis.
 
-Uma release é uma decisão de risco — não apenas uma operação técnica. Sem critérios de go/no-go explícitos, a decisão de promover a produção é tomada implicitamente, por omissão, sem visibilidade sobre o estado real de segurança. Esta política formaliza esse processo: a promoção a produção é um ato deliberado, com evidência agregada, aprovação registada e responsabilidade atribuída.
+Uma release é uma decisão de risco - não apenas uma operação técnica. Sem critérios de go/no-go explícitos, a decisão de promover a produção é tomada implicitamente, por omissão, sem visibilidade sobre o estado real de segurança. Esta política formaliza esse processo: a promoção a produção é um ato deliberado, com evidência agregada, aprovação registada e responsabilidade atribuída.
 
 O objetivo desta política é garantir que:
 
 - Cada release tem uma checklist de segurança verificada e registada
 - O gate de segurança pré-release é automático e produz um resultado binário (Aprovado/Rejeitado)
 - A decisão de go/no-go é tomada por pessoa com autoridade adequada e registada com identidade e timestamp
-- O artefacto promovido a produção é imutável — é o mesmo que passou pelos testes, não uma nova build
+- O artefacto promovido a produção é imutável - é o mesmo que passou pelos testes, não uma nova build
 - A rastreabilidade commit→pipeline→release é verificável em qualquer momento
 
 ---
@@ -45,7 +45,7 @@ O pipeline deve incluir um job `release-security-gate` executado antes de qualqu
 - [ ] Produz um relatório de resultado binário: **APROVADO** ou **REJEITADO**
 - [ ] Arquiva o relatório como artefacto imutável da release (ligado à tag/versão)
 
-O gate não substitui a aprovação humana — bloqueia a promoção se os critérios automáticos não forem cumpridos, e fornece evidência para que a aprovação humana seja informada.
+O gate não substitui a aprovação humana - bloqueia a promoção se os critérios automáticos não forem cumpridos, e fornece evidência para que a aprovação humana seja informada.
 
 ---
 
@@ -116,7 +116,7 @@ A aprovação deve ser registada com:
 
 ## 6. Imutabilidade do artefacto
 
-O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes — não uma nova build do mesmo código:
+O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes - não uma nova build do mesmo código:
 
 - [ ] A promoção consiste em mover o artefacto já construído e testado para produção, não em reconstruir
 - [ ] O artefacto é identificado por digest ou hash imutável, não apenas por tag
@@ -190,12 +190,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 10 — Testes de Segurança | Gate de segurança pré-release, checklist, aceitação de risco |
-| SbD-ToE Cap. 11 — Deploy Seguro | Aprovação de deploy, imutabilidade de artefacto |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Rastreabilidade commit→pipeline→release |
+| SbD-ToE Cap. 10 - Testes de Segurança | Gate de segurança pré-release, checklist, aceitação de risco |
+| SbD-ToE Cap. 11 - Deploy Seguro | Aprovação de deploy, imutabilidade de artefacto |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Rastreabilidade commit→pipeline→release |
 | Política de Estratégia de Testes (`19_policy-estrategia-testes.md`) | Gates e thresholds de SAST/DAST/SCA |
 | Política de SBOM (`11_policy-sbom.md`) | SBOM como evidência de release |
 | Política de Aprovação de Release (`26_policy-aprovacao-release.md`) | Processo detalhado de aprovação em L3 |
 | SLSA Framework | Integridade de build e promoção de artefactos |
 | NIST SP 800-218 (SSDF) PW.8 | Archive and protect each software release |
-| ISO/IEC 27001 — A.12.1 | Operational procedures and responsibilities |
+| ISO/IEC 27001 - A.12.1 | Operational procedures and responsibilities |

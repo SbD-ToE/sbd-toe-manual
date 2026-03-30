@@ -12,7 +12,7 @@ sidebar_position: 21
 
 Esta política define os requisitos de segurança aplicáveis ao **design, validação, execução e manutenção de Infraestrutura como Código (IaC)** em todos os ambientes geridos pela organização.
 
-O IaC define a base onde o software corre — um erro de configuração em IaC não é um bug de aplicação: é uma vulnerabilidade de infraestrutura com potencial impacto em todos os sistemas que a partilham. Grupos de segurança permissivos, IAM roles com acesso excessivo, buckets públicos, encriptação desactivada — todos estes erros são recorrentes em IaC não revisada e têm consequências proporcionalmente mais graves do que a maioria das vulnerabilidades de código.
+O IaC define a base onde o software corre - um erro de configuração em IaC não é um bug de aplicação: é uma vulnerabilidade de infraestrutura com potencial impacto em todos os sistemas que a partilham. Grupos de segurança permissivos, IAM roles com acesso excessivo, buckets públicos, encriptação desactivada - todos estes erros são recorrentes em IaC não revisada e têm consequências proporcionalmente mais graves do que a maioria das vulnerabilidades de código.
 
 O objetivo desta política é garantir que:
 
@@ -37,7 +37,7 @@ Esta política aplica-se a toda a infraestrutura definida como código, independ
 | **IaC como código** | Versionado, revisto, testado e auditado com o mesmo rigor que código de aplicação |
 | **Princípio do mínimo privilégio** | IAM roles e políticas com permissões mínimas para a função; sem wildcards em prod |
 | **Separação de ambientes** | Environments segregados com estado separado e credenciais distintas; sem referências cruzadas entre backends |
-| **Imutabilidade de infraestrutura** | Alterações via pipeline — não manual; alterações manuais são drift e devem ser revertidas |
+| **Imutabilidade de infraestrutura** | Alterações via pipeline - não manual; alterações manuais são drift e devem ser revertidas |
 | **Fail secure** | Configurações por defeito são as mais restritivas; permissões explícitas para o necessário |
 | **Sem hardcodes** | Segredos, IPs e referências sensíveis nunca hardcoded; passados como variáveis ou via cofre |
 
@@ -95,7 +95,7 @@ Módulos IaC de fontes externas (ex: Terraform Registry, GitHub público) devem 
 - [ ] Origem verificada (maintainer reconhecido, repositório activo)
 - [ ] Sem vulnerabilidades conhecidas na versão a adoptar
 - [ ] Licença compatível
-- [ ] Versão fixada (pinning) — sem uso de `latest` ou ranges em prod
+- [ ] Versão fixada (pinning) - sem uso de `latest` ou ranges em prod
 
 ### 6.2 Catálogo interno de módulos aprovados
 
@@ -105,7 +105,7 @@ Em L2/L3, a organização deve manter um catálogo de módulos IaC internos apro
 - [ ] Módulos com outputs documentados e tipados
 - [ ] Aprovação formal antes de publicação (AppSec Engineer + DevOps/SRE)
 - [ ] Módulos novos ou alterados sujeitos a revisão e scanning antes de publicação
-- [ ] Projetos referenciam módulos do catálogo interno — não cópias locais
+- [ ] Projetos referenciam módulos do catálogo interno - não cópias locais
 
 ---
 
@@ -200,7 +200,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 08 — IaC e Infraestrutura | Princípios, user stories, artefactos, ciclo de vida |
+| SbD-ToE Cap. 08 - IaC e Infraestrutura | Princípios, user stories, artefactos, ciclo de vida |
 | Política de Aprovação de Plan IaC (`22_policy-aprovacao-plan-iac.md`) | Processo detalhado de revisão e aprovação de plans |
 | Política de CI/CD Seguro (`17_policy-cicd-seguro.md`) | Pipeline de validação IaC |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Segredos em IaC e providers |
@@ -208,4 +208,4 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | OPA / Rego / Sentinel / Conftest | Ferramentas de policy-as-code |
 | CIS Benchmarks (AWS, Azure, GCP) | Controlos de referência para infraestrutura cloud |
 | NIST SP 800-190 | Application Container Security Guide (aplicável a IaC de containers) |
-| SLSA Framework | Integridade de build — aplicável a artefactos IaC |
+| SLSA Framework | Integridade de build - aplicável a artefactos IaC |

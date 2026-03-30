@@ -12,7 +12,7 @@ sidebar_position: 30
 
 Esta política define os requisitos para a **monitorização contínua de segurança em sistemas em produção**, cobrindo a definição de eventos críticos, a integração com SIEM, a correlação comportamental e a revisão periódica das regras de detecção.
 
-A monitorização de segurança transforma logs em inteligência operacional. Sem monitorização activa, ataques em curso, compromissos de credenciais e exfiltrações de dados podem persistir durante semanas ou meses sem serem detectados. A monitorização de segurança não é uma funcionalidade opcional de compliance — é o mecanismo primário de detecção de incidentes que não foram prevenidos pelos controlos de segurança anteriores.
+A monitorização de segurança transforma logs em inteligência operacional. Sem monitorização activa, ataques em curso, compromissos de credenciais e exfiltrações de dados podem persistir durante semanas ou meses sem serem detectados. A monitorização de segurança não é uma funcionalidade opcional de compliance - é o mecanismo primário de detecção de incidentes que não foram prevenidos pelos controlos de segurança anteriores.
 
 O objetivo desta política é garantir que:
 
@@ -116,7 +116,7 @@ As regras de correlação devem ser:
 
 ## 7. Validação e tuning de regras de detecção
 
-Alertas mal calibrados geram fadiga de alertas — que é o equivalente funcional a não ter alertas. A manutenção das regras de detecção é trabalho contínuo:
+Alertas mal calibrados geram fadiga de alertas - que é o equivalente funcional a não ter alertas. A manutenção das regras de detecção é trabalho contínuo:
 
 - [ ] Cada alerta tem um runbook associado que define o que fazer quando é activado
 - [ ] Simulação periódica de eventos que devem activar o alerta (em staging)
@@ -168,12 +168,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 12 — Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning |
+| SbD-ToE Cap. 12 - Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning |
 | Política de Logging Estruturado (`29_policy-logging-estruturado.md`) | Base de eventos para monitorização |
 | Política de Gestão de Alertas (`31_policy-gestao-alertas.md`) | SLAs e processo de resposta a alertas |
 | Política de IRP (`32_policy-irp.md`) | Integração da monitorização com resposta a incidentes |
 | MITRE ATT&CK | Framework de táticas e técnicas para definição de regras de detecção |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | NIST SP 800-137 | Information Security Continuous Monitoring |
-| ISO/IEC 27001 — A.12.4 | Logging and monitoring |
-| DORA — Art. 17 | ICT-related incident detection and reporting |
+| ISO/IEC 27001 - A.12.4 | Logging and monitoring |
+| DORA - Art. 17 | ICT-related incident detection and reporting |

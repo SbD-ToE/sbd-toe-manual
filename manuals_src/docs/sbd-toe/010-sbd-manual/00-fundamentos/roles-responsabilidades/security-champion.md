@@ -39,17 +39,17 @@ Ajudar **Developers e QA** no dia-a-dia, garantir que **checklists de segurança
 **Mentorar e evangelizar** a equipa em práticas de segurança. Liderar sessões de threat modeling por feature, épico ou refactor.
 
 **User Stories:**
-- [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06--threat-modeling-por-featureépicorefactor) — Security Champion lidera análise de ameaças (referenciada como Developer no lifecycle)
+- [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças (referenciada como Developer no lifecycle)
 
 ### Cap. 14 - Governança e Contratação
 Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, revisar trimestralmente acesso, recolher feedback pós-projeto.
 
 **User Stories:**
-- [US-05: Designação formal de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05--designação-formal-de-security-champion) — Responsabilização clara (com Gestão/PMO)
-- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11--preparação-técnica-de-contractors) — Garantir preparação antes de acesso (com HR)
-- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12--offboarding-seguro-de-contractorsfornecedores) — Revogar acesso completamente (com HR/DevOps)
-- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15--revisão-trimestral-de-acesso-de-contractors) — Manter least privilege (com Tech Lead)
-- [US-16: Feedback pós-projeto](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16--feedback-estruturado-pós-projeto-de-contractors) — Informar re-hire (com Tech Lead)
+- [US-05: Designação formal de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Responsabilização clara (com Gestão/PMO)
+- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Garantir preparação antes de acesso (com HR)
+- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revogar acesso completamente (com HR/DevOps)
+- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso---prepara%C3%A7%C3%A3o-t%C3%A9cnica-e-valida%C3%A7%C3%A3o-de-contractors-pr%C3%A9-acesso---preparação-técnica-e-validação-de-contractors-pré-acesso---prepara%C3%A7%C3%A3o-t%C3%A9cnica-e-valida%C3%A7%C3%A3o-de-contractors-pr%C3%A9-acesso---preparação-técnica-e-validação-de-contractors-pré-acesso) - Manter least privilege (com Tech Lead)
+- [US-16: Feedback pós-projeto](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Informar re-hire (com Tech Lead)
 
 ---
 

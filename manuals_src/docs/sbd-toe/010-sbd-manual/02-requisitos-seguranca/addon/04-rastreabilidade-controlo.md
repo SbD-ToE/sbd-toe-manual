@@ -11,12 +11,12 @@ tags: [tipo:modelo, tema:rastreabilidade, requisitos, controlos, evidencia, ALM,
 
 ## Objetivo
 
-Ao longo do ciclo de vida do software, garantir que um requisito de segurança foi efectivamente implementado exige mais do que a sua definição — exige que a ligação entre risco, requisito, controlo técnico e evidência seja explícita, rastreável e auditável.
+Ao longo do ciclo de vida do software, garantir que um requisito de segurança foi efectivamente implementado exige mais do que a sua definição - exige que a ligação entre risco, requisito, controlo técnico e evidência seja explícita, rastreável e auditável.
 
 Este modelo descreve como construir essa cadeia de rastreabilidade, articulando os dois sistemas de identificação do SbD-ToE:
 
-- O **ID canónico** (`AUT-001`, `LOG-003`) — referência normativa estável proveniente do catálogo;
-- A **tag operacional** (`SEC-L2-AUT-MFA`) — instância contextualizada adoptada pelo projecto.
+- O **ID canónico** (`AUT-001`, `LOG-003`) - referência normativa estável proveniente do catálogo;
+- A **tag operacional** (`SEC-L2-AUT-MFA`) - instância contextualizada adoptada pelo projecto.
 
 A distinção e a relação entre ambos estão detalhadas em [Taxonomia e Rastreabilidade](./taxonomia-rastreabilidade).
 
@@ -36,7 +36,7 @@ Cada linha da matriz representa a ligação directa entre um risco identificado 
 
 | Coluna | Conteúdo | Exemplo |
 |--------|----------|---------|
-| **Risco** | Identificador e descrição sumária do risco (proveniente da análise de ameaças) | `RISK-AUTH-01` — acesso não autorizado por ausência de MFA |
+| **Risco** | Identificador e descrição sumária do risco (proveniente da análise de ameaças) | `RISK-AUTH-01` - acesso não autorizado por ausência de MFA |
 | **ID Canónico** | Referência normativa do catálogo SbD-ToE | `AUT-001` |
 | **Tag Operacional** | Instanciação do requisito no contexto do projecto | `SEC-L2-AUT-MFA` |
 | **Tipo de Controlo** | Classificação do controlo: `Preventivo`, `Detetivo` ou `Corretivo` | `Preventivo` |
@@ -51,7 +51,7 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 
 | Risco | ID Canónico | Tag Operacional | Tipo de Controlo | Validação | Evidência |
 |-------|-------------|-----------------|------------------|-----------|-----------|
-| Acesso não autorizado por ausência de 2.º factor | `AUT-001` | `SEC-L2-AUT-MFA` | Preventivo | Teste funcional — login sem MFA falhado | Log de autenticação falhada; captura de ecrã |
+| Acesso não autorizado por ausência de 2.º factor | `AUT-001` | `SEC-L2-AUT-MFA` | Preventivo | Teste funcional - login sem MFA falhado | Log de autenticação falhada; captura de ecrã |
 | Registo insuficiente para resposta a incidentes | `LOG-002` | `SEC-L2-LOG-DETALHE` | Detetivo | Revisão de logs em runtime | Exemplo de log com campos quem/quando/o quê/onde |
 | Injecção SQL por ausência de validação de input | `VAL-004` | `SEC-L2-VAL-SQLI` | Preventivo | Testes SAST + teste funcional com payload | Relatório de scanner; código com prepared statements |
 | Passwords armazenadas em claro | `AUT-006` | `SEC-L1-AUT-PLAIN` | Preventivo | Auditoria de configuração + scan | Evidência de hashing; ausência de credenciais em texto claro |
@@ -76,9 +76,9 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 ## Como aplicar este modelo
 
 - Cada linha representa a ligação entre um **risco identificado** e o **requisito canónico** que o endereça;
-- A **tag operacional** é o identificador que transita para o backlog, o código e o pipeline — é ela que torna o requisito rastreável ao artefacto de ciclo de vida;
+- A **tag operacional** é o identificador que transita para o backlog, o código e o pipeline - é ela que torna o requisito rastreável ao artefacto de ciclo de vida;
 - O **tipo de controlo** classifica a natureza da medida: `Preventivo` (impede o incidente), `Detetivo` (detecta quando ocorre) ou `Corretivo` (mitiga as consequências);
-- A **validação** deve ser objectiva e reproduzível — teste automatizado, análise estática, revisão manual documentada;
+- A **validação** deve ser objectiva e reproduzível - teste automatizado, análise estática, revisão manual documentada;
 - A **evidência** é o artefacto que comprova, num contexto de auditoria, que o controlo está activo e efectivo.
 
 ---
@@ -87,16 +87,16 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 
 Cada projecto deve manter a sua própria matriz de rastreabilidade, organizada por:
 
-1. **Cabeçalho** — identificação da aplicação, nível de risco (L1/L2/L3) e data de revisão;
-2. **Mapeamento de riscos** — proveniente da análise de ameaças (threat modeling);
-3. **Tabela rastreável** — com os campos descritos acima;
+1. **Cabeçalho** - identificação da aplicação, nível de risco (L1/L2/L3) e data de revisão;
+2. **Mapeamento de riscos** - proveniente da análise de ameaças (threat modeling);
+3. **Tabela rastreável** - com os campos descritos acima;
 4. **Referência cruzada** ao [Catálogo Base de Requisitos](./lista-requisitos-base) e ao [Plano de Validação](./validacao-requisitos);
-5. **Apontadores para evidência** — directórios, commits, screenshots, relatórios de pipeline.
+5. **Apontadores para evidência** - directórios, commits, screenshots, relatórios de pipeline.
 
 **Formatos sugeridos:**
 
-- `.md` versionado em Git — para rastreabilidade nativa no repositório;
-- `.csv` / `.xlsx` — para exportação e análise rápida;
+- `.md` versionado em Git - para rastreabilidade nativa no repositório;
+- `.csv` / `.xlsx` - para exportação e análise rápida;
 - Campos personalizados em Jira, ADO, Confluence ou ferramentas ALM equivalentes.
 
 ---
@@ -108,7 +108,7 @@ A matriz deve ser revisitada:
 - Em **revisões de requisitos** no início de cada ciclo;
 - Durante **gates de release** e processos de go/no-go;
 - Como suporte à **aceitação formal de risco** e documentação de excepções;
-- Em checkpoints de auditoria — ISO 27001, PCI-DSS, DORA, ou equivalentes.
+- Em checkpoints de auditoria - ISO 27001, PCI-DSS, DORA, ou equivalentes.
 
 ---
 
@@ -130,9 +130,9 @@ A matriz deve ser revisitada:
 ## Boas práticas
 
 - Manter **uma matriz por aplicação ou sistema crítico**, não uma única matriz global;
-- Usar a matriz como **trilho de auditoria interno** — actualizá-la em cada release;
+- Usar a matriz como **trilho de auditoria interno** - actualizá-la em cada release;
 - **Versionar todas as alterações** à matriz e à evidência associada;
-- Referenciar sempre o **ID canónico** (`AUT-001`) e a **tag operacional** (`SEC-L2-AUT-MFA`) — o primeiro para rastreabilidade normativa, o segundo para rastreabilidade operacional;
+- Referenciar sempre o **ID canónico** (`AUT-001`) e a **tag operacional** (`SEC-L2-AUT-MFA`) - o primeiro para rastreabilidade normativa, o segundo para rastreabilidade operacional;
 - Documentar **excepções** com justificação e aprovação formal; ver [Gestão de Excepções](./gestao-excecoes).
 
 ---

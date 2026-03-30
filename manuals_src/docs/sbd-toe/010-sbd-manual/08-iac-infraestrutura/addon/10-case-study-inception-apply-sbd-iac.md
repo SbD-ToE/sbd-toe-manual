@@ -23,7 +23,7 @@ O projeto analisado define ambientes `dev`, `staging` e `prod` para um cluster K
 
 ## 🧭 Classificação de risco
 
-A classificação foi realizada segundo o **Capítulo 01 — Gestão de Risco**, tendo resultado em **L3**, com base nos seguintes fatores:
+A classificação foi realizada segundo o **Capítulo 01 - Gestão de Risco**, tendo resultado em **L3**, com base nos seguintes fatores:
 
 * Capacidade de impactar diretamente ambientes produtivos;
 * Controlo de recursos críticos (rede, identidade, certificados, logging);
@@ -54,7 +54,7 @@ Esta estrutura assegura que **nenhuma alteração pode ser aplicada sem passar p
 
 ## 🔍 Threat Modeling aplicado a IaC
 
-O *threat modeling* foi conduzido de acordo com o **Capítulo 03 — Threat Modeling**, tratando o projeto IaC como um **ativo crítico**.
+O *threat modeling* foi conduzido de acordo com o **Capítulo 03 - Threat Modeling**, tratando o projeto IaC como um **ativo crítico**.
 
 Foram analisados os principais fluxos e superfícies de ataque, considerando explicitamente cenários de:
 
@@ -91,14 +91,14 @@ Em nenhum momento a aceitação de alterações dependeu da autoria do código, 
 
 ## 📊 Validação, evidência e auditoria
 
-A estratégia de validação seguiu o modelo definido no **Capítulo 10 — Validação**:
+A estratégia de validação seguiu o modelo definido no **Capítulo 10 - Validação**:
 
 * Todos os *Pull Requests* exigem validação automática e revisão humana;
 * Relatórios de validação são arquivados por ambiente e *build*;
 * Comparação contínua entre `plan` aprovado e `apply` executado;
 * Exceções formalizadas, temporárias e aprovadas por AppSec, conforme **Capítulo 14**.
 
-Este modelo garante que **qualquer contribuição — humana ou automatizada — é sujeita ao mesmo escrutínio técnico**.
+Este modelo garante que **qualquer contribuição - humana ou automatizada - é sujeita ao mesmo escrutínio técnico**.
 
 ---
 

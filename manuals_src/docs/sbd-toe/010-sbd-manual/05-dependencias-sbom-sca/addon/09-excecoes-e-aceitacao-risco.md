@@ -7,13 +7,13 @@ tags: [dependencias, sbom, sca, exceptions, cve]
 
 # Excepções e Aceitação de Risco em Vulnerabilidades de Dependências
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
 ## Âmbito
 
-Excepções a findings de análise de composição de software (SCA) — vulnerabilidades em dependências identificadas por scanner, referenciadas por CVE ou equivalente.
+Excepções a findings de análise de composição de software (SCA) - vulnerabilidades em dependências identificadas por scanner, referenciadas por CVE ou equivalente.
 
 ---
 
@@ -65,4 +65,4 @@ Localização sugerida: `/security/excecoes-sca.yaml` no repositório, ou sistem
 | `02-analise-sca.md` | Origem dos findings que podem originar excepção |
 | `04-integracao-ci-cd.md` | Verificação de validade das excepções no pipeline |
 | `08-rastreabilidade-vulnerabilidades.md` | Registo da decisão de aceitação de risco como estado final |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

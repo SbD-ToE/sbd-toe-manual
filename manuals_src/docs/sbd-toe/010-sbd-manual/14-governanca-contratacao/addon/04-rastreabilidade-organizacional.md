@@ -93,9 +93,9 @@ flowchart LR
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos e matriz de aplicação
-* `addon/01-modelo-governancao.md` — Governação e exceções
-* `addon/02-clausulas-contratuais.md` — Cláusulas contratuais
-* `addon/03-modelo-validacao-fornecedores.md` — Validação de fornecedores
-* `addon/kpis-governanca.md` — KPIs de governação
+* `addon/01-modelo-governancao.md` - Governação e exceções
+* `addon/02-clausulas-contratuais.md` - Cláusulas contratuais
+* `addon/03-modelo-validacao-fornecedores.md` - Validação de fornecedores
+* `addon/kpis-governanca.md` - KPIs de governação
 
 ---

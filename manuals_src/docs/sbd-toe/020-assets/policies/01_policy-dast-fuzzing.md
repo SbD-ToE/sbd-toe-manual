@@ -16,8 +16,8 @@ O objetivo é garantir que vulnerabilidades comportamentais e de tratamento de i
 
 DAST e fuzzing são técnicas complementares:
 
-- **DAST** — simula o comportamento de um utilizador ou atacante externo sobre a aplicação em execução, identificando falhas que só se manifestam em runtime;
-- **Fuzzing** — injeta inputs malformados, inesperados ou aleatórios em endpoints críticos, revelando falhas de parsing, crashes e comportamentos anómalos não cobertos por testes planeados.
+- **DAST** - simula o comportamento de um utilizador ou atacante externo sobre a aplicação em execução, identificando falhas que só se manifestam em runtime;
+- **Fuzzing** - injeta inputs malformados, inesperados ou aleatórios em endpoints críticos, revelando falhas de parsing, crashes e comportamentos anómalos não cobertos por testes planeados.
 
 ---
 
@@ -33,7 +33,7 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 
 ---
 
-## 3. DAST — Testes Dinâmicos de Segurança
+## 3. DAST - Testes Dinâmicos de Segurança
 
 ### 3.1 Quando executar
 
@@ -46,8 +46,8 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 
 ### 3.2 Pré-requisitos de ambiente
 
-- O ambiente de execução deve ser **isolado** — DAST nunca deve ser executado em produção;
-- Os dados do ambiente de teste devem ser **fictícios ou mascarados** — nunca dados reais de utilizadores;
+- O ambiente de execução deve ser **isolado** - DAST nunca deve ser executado em produção;
+- Os dados do ambiente de teste devem ser **fictícios ou mascarados** - nunca dados reais de utilizadores;
 - O ambiente deve ser **equivalente a produção** em termos de versões, configurações e dependências;
 - O ambiente não deve ser **partilhado** com outros projetos durante a execução do scan.
 
@@ -56,8 +56,8 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 **Autenticação:**
 
 - [ ] Login flow configurado na ferramenta com sessão autenticada válida
-- [ ] Credenciais de teste segregadas — conta dedicada, nunca conta de utilizador real
-- [ ] Credenciais armazenadas como secrets no pipeline — nunca em texto simples ou repositório
+- [ ] Credenciais de teste segregadas - conta dedicada, nunca conta de utilizador real
+- [ ] Credenciais armazenadas como secrets no pipeline - nunca em texto simples ou repositório
 - [ ] Sessão com token de curta duração (TTL adequado à duração do scan)
 
 **Scope:**
@@ -83,7 +83,7 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 | Low / Info | Não bloqueia; registo; revisão trimestral |
 
 :::note Separação entre sinal automático e decisão humana
-O pipeline reporta o resultado (sinal automático). A decisão de override ou exceção é sempre **humana e documentada** — nunca implícita ou por timeout. Todo o override requer aprovação explícita de AppSec Engineer com registo de rationale e prazo de validade máximo.
+O pipeline reporta o resultado (sinal automático). A decisão de override ou exceção é sempre **humana e documentada** - nunca implícita ou por timeout. Todo o override requer aprovação explícita de AppSec Engineer com registo de rationale e prazo de validade máximo.
 :::
 
 ### 3.5 Artefactos produzidos
@@ -97,7 +97,7 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 
 ---
 
-## 4. Fuzzing — Testes de Inputs Inesperados
+## 4. Fuzzing - Testes de Inputs Inesperados
 
 ### 4.1 Quando executar
 
@@ -128,7 +128,7 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 
 **Ambiente:**
 
-- [ ] Instância da aplicação **isolada** para fuzzing — sem ligação a sistemas externos reais
+- [ ] Instância da aplicação **isolada** para fuzzing - sem ligação a sistemas externos reais
 - [ ] Monitorização ativa durante execução: CPU, memória, crashes, logs de erro
 - [ ] Mecanismo de deteção de crashes e respostas anómalas configurado
 
@@ -194,12 +194,12 @@ Todos os findings de DAST e fuzzing são consolidados na plataforma centralizada
 
 Quando um finding bloqueia o pipeline e a equipa avalia override ou exceção, a decisão deve ser documentada com os seguintes critérios:
 
-- [ ] **Exploitabilidade** — o finding é exploitável no contexto atual? De que forma?
-- [ ] **Mitigações existentes** — existem controlos compensatórios ativos?
-- [ ] **Impacto de negócio** — qual o impacto real se o finding for explorado?
-- [ ] **Remediação** — quando e como será corrigido?
-- [ ] **Decisão** — CORRIGIR / ACEITAR COM PRAZO / SUPRIMIR (com justificação)
-- [ ] **Aprovação** — AppSec Engineer (obrigatório para High e Critical)
+- [ ] **Exploitabilidade** - o finding é exploitável no contexto atual? De que forma?
+- [ ] **Mitigações existentes** - existem controlos compensatórios ativos?
+- [ ] **Impacto de negócio** - qual o impacto real se o finding for explorado?
+- [ ] **Remediação** - quando e como será corrigido?
+- [ ] **Decisão** - CORRIGIR / ACEITAR COM PRAZO / SUPRIMIR (com justificação)
+- [ ] **Aprovação** - AppSec Engineer (obrigatório para High e Critical)
 
 :::warning
 A decisão de suprimir um finding Critical requer aprovação adicional do responsável de segurança (CISO ou equivalente) e prazo máximo de 7 dias.
@@ -250,9 +250,9 @@ A evidência de execução desta política (relatórios, logs de gate, registos 
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 10 — Testes de Segurança | Requisitos de DAST, fuzzing, gestão de findings |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Integração de gates de segurança no pipeline |
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Rastreabilidade requisito → teste → evidência |
+| SbD-ToE Cap. 10 - Testes de Segurança | Requisitos de DAST, fuzzing, gestão de findings |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Integração de gates de segurança no pipeline |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Rastreabilidade requisito → teste → evidência |
 | OWASP Testing Guide (OTG) | Metodologia de testes dinâmicos |
 | OWASP Web Security Testing Guide (WSTG) | Cobertura de categorias de vulnerabilidades |
 | NIST SP 800-115 | Technical Guide to Information Security Testing |

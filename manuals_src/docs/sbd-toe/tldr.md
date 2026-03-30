@@ -1,11 +1,11 @@
 ---
 id: tldr
-title: "TL;DR — Resumo Executivo do SbD-ToE"
+title: "TL;DR - Resumo Executivo do SbD-ToE"
 description: "Resumo global e sínteses por capítulo do manual Security by Design - Theory of Everything."
 sidebar_position: 0
 ---
 
-# 🚀 TL;DR — Resumo Executivo do SbD-ToE {#tldr-sbdtoe}
+# 🚀 TL;DR - Resumo Executivo do SbD-ToE {#tldr-sbdtoe}
 
 <!--web-only-->
 > Esta página fornece uma visão executiva do manual **Security by Design - Theory of Everything (SbD-ToE)** e uma síntese objetiva de cada capítulo.  
@@ -17,7 +17,7 @@ sidebar_position: 0
 # 📘 1. O que é o SbD-ToE? {#o-que-e}
 O *Security by Design - Theory of Everything (SbD-ToE)* é um modelo **prescritivo, proporcional e verificável** para construir, validar e operar software seguro em qualquer organização.
 
-Integra princípios de **engenharia segura**, governação, práticas de SDLC, threat modeling, requisitos, arquitetura, dependências, pipelines, IaC, containers, operações e controlo contínuo — tudo com **evidência auditável**, **rastreabilidade global**, **mapeamento a frameworks** (SAMM, SSDF, SLSA, DSOMM) e **checklists canónicos**.
+Integra princípios de **engenharia segura**, governação, práticas de SDLC, threat modeling, requisitos, arquitetura, dependências, pipelines, IaC, containers, operações e controlo contínuo - tudo com **evidência auditável**, **rastreabilidade global**, **mapeamento a frameworks** (SAMM, SSDF, SLSA, DSOMM) e **checklists canónicos**.
 
 O SbD-ToE funciona como:
 
@@ -74,7 +74,7 @@ O SbD-ToE funciona como:
 
 > Cada síntese aponta para o capítulo correspondente com ligações absolutas.
 
-## 📘 Capítulo 01 — Classificação de Aplicações {#tldr-cap01}
+## 📘 Capítulo 01 - Classificação de Aplicações {#tldr-cap01}
 - Define o nível L1/L2/L3 com base em Exposição, Dados e Impacto.  
 - Obriga à documentação do nível para cada aplicação/projeto.  
 - Determina toda a proporcionalidade do manual.  
@@ -85,7 +85,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 02 — Requisitos de Segurança {#tldr-cap02}
+## 📘 Capítulo 02 - Requisitos de Segurança {#tldr-cap02}
 - Catálogo prescritivo e testável de requisitos L1–L3.  
 - Rastreabilidade global a frameworks (SSDF, SAMM, SLSA, etc.).  
 - Validação prática recomendada por requisito.  
@@ -96,7 +96,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 03 — Threat Modeling {#tldr-cap03}
+## 📘 Capítulo 03 - Threat Modeling {#tldr-cap03}
 - Identificação sistemática de ameaças e caminhos de abuso.  
 - Integração com design, arquitetura e requisitos.  
 - Aplicação proporcional por nível L1–L3.  
@@ -107,7 +107,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 04 — Arquitetura Segura {#tldr-cap04}
+## 📘 Capítulo 04 - Arquitetura Segura {#tldr-cap04}
 - Zonas de confiança, fronteiras, fluxos, identidades e segredos.  
 - Requisitos ARC-XXX específicos por domínio.  
 - Mapeamento de ameaças e controlos nativos.  
@@ -118,7 +118,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 05 — Dependências, SBOM e SCA {#tldr-cap05}
+## 📘 Capítulo 05 - Dependências, SBOM e SCA {#tldr-cap05}
 - Gestão robusta de dependências e da cadeia de fornecimento.  
 - SBOM obrigatório, assinado e versionado.  
 - Governação de exceções e validações contínuas.  
@@ -129,7 +129,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 06 — Desenvolvimento Seguro {#tldr-cap06}
+## 📘 Capítulo 06 - Desenvolvimento Seguro {#tldr-cap06}
 - Linters, secret scanning, guidelines e práticas por linguagem.  
 - Integração no IDE e no pipeline de integração contínua.  
 - Evidências: logs de scans, branches protegidas, revisões seguras.
@@ -139,7 +139,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 07 — CI/CD Seguro {#tldr-cap07}
+## 📘 Capítulo 07 - CI/CD Seguro {#tldr-cap07}
 - Pipelines tratados como produto seguro.  
 - Execução isolada, runners confiáveis, assinaturas e políticas.  
 - Evidências: logs, regras de publicação, cadeias reprodutíveis.
@@ -149,7 +149,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 08 — IaC Seguro {#tldr-cap08}
+## 📘 Capítulo 08 - IaC Seguro {#tldr-cap08}
 - IaC tratado como produto de software.  
 - Validações, módulos aprovados, ambientes reprodutíveis.  
 - Evidências: relatórios de lint/policies, módulos assinados, tags.
@@ -159,7 +159,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 09 — Containers e Imagens {#tldr-cap09}
+## 📘 Capítulo 09 - Containers e Imagens {#tldr-cap09}
 - Imagens assinadas, reprodutíveis e verificadas.  
 - Registos com RBAC forte e políticas de retenção e publicação.  
 - Evidências: assinatura, SBOM, logs de publicação, scans de segurança.
@@ -169,7 +169,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 10 — Testes de Segurança {#tldr-cap10}
+## 📘 Capítulo 10 - Testes de Segurança {#tldr-cap10}
 - Testes estáticos, dinâmicos, IAST, fuzzing, manual e exploratório.  
 - Proporcionalidade por nível L1–L3.  
 - Evidências: relatórios, reprodutibilidade, aceitação formal de resultados.
@@ -178,7 +178,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 11 — Logging, Telemetria e Monitorização {#tldr-cap11}
+## 📘 Capítulo 11 - Logging, Telemetria e Monitorização {#tldr-cap11}
 - Logs estruturados, telemetria, retenção e deteção de abuso.  
 - Integração com SOC ou ferramenta equivalente.  
 - Evidências: dashboards, query packs, alertas testados.
@@ -187,7 +187,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 12 — Gestão de Segredos {#tldr-cap12}
+## 📘 Capítulo 12 - Gestão de Segredos {#tldr-cap12}
 - Segredos fora de código e de pipelines.  
 - Cofres, rotação, princípios Zero Trust.  
 - Evidências: política de segredos, auditorias, validações de uso.
@@ -196,7 +196,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 13 — Recomendações Avançadas {#tldr-cap13}
+## 📘 Capítulo 13 - Recomendações Avançadas {#tldr-cap13}
 - Práticas reforçadas para organizações L2+ e L3.  
 - Automação avançada, deteção precoce, supply chain reforçada.
 
@@ -204,7 +204,7 @@ O SbD-ToE funciona como:
 
 ---
 
-## 📘 Capítulo 14 — Governação e Contratação {#tldr-cap14}
+## 📘 Capítulo 14 - Governação e Contratação {#tldr-cap14}
 - Relação com fornecedores, requisitos contratuais, validação contínua.  
 - Governação organizacional, métricas e indicadores.  
 - Evidências: contratos, SLA de segurança, dashboards de conformidade.
@@ -231,10 +231,10 @@ flowchart LR
 
 # 📊 6. Maturidade (visão resumida) {#maturidade}
 
-- **SAMM** — coberturas relevantes em design, implementação, verificação e operações.  
-- **SSDF** — práticas alinhadas em governança, proteção, análise e verificação.  
-- **SLSA** — foco em integridade de pipeline e proveniência de artefactos.  
-- **DSOMM** — reforço contínuo de práticas DevSecOps.
+- **SAMM** - coberturas relevantes em design, implementação, verificação e operações.  
+- **SSDF** - práticas alinhadas em governança, proteção, análise e verificação.  
+- **SLSA** - foco em integridade de pipeline e proveniência de artefactos.  
+- **DSOMM** - reforço contínuo de práticas DevSecOps.
 
 Quando aplicado de forma consistente, o SbD-ToE coloca a organização num patamar intermédio/sólido destes modelos, com margem clara para evoluções avançadas descritas nos capítulos de governação e recomendações.
 
@@ -242,9 +242,9 @@ Quando aplicado de forma consistente, o SbD-ToE coloca a organização num patam
 
 # 🔗 7. Ligações úteis {#links}
 
-- /cap00/intro — Theory of Everything (quando disponível)  
-- /cap15/ — Cross-check Normativo (quando aplicável)  
-- /capXX/canon/20-checklist-revisao — Checklists por capítulo  
+- /cap00/intro - Theory of Everything (quando disponível)  
+- /cap15/ - Cross-check Normativo (quando aplicável)  
+- /capXX/canon/20-checklist-revisao - Checklists por capítulo  
 
 ---
 

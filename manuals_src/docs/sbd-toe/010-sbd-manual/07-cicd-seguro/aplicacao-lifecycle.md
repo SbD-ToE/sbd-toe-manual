@@ -22,7 +22,7 @@ Este documento operacionaliza essas preocupações sem “falar de tecnologia”
 
 ## 🧭 Quando aplicar
 
-A segurança em pipelines não acontece apenas quando algo corre mal — ela é parte do seu ADN desde o primeiro commit.  
+A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
 Sempre que se cria, altera, executa ou promove um pipeline, existem *triggers* que exigem controlos específicos:
 
 | Momento *trigger*                                                   | Objetivo de segurança                                                                 | Papéis principais                               |
@@ -106,7 +106,7 @@ Políticas de branch protection; logs de revisão; histórico Git; auditoria de 
 ### US-02 - Design seguro dos pipelines (versionamento, determinismo e revisão)
 
 **Contexto.**  
-Pipelines inseguros são alvos privilegiados de ataque — e pipelines não reprodutíveis destroem auditoria.
+Pipelines inseguros são alvos privilegiados de ataque - e pipelines não reprodutíveis destroem auditoria.
 
 :::userstory
 **História.**  
@@ -146,7 +146,7 @@ Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revis
 ### US-03 - Scanners integrados (validação empírica obrigatória)
 
 **Contexto.**  
-Detetar cedo é mais barato e eficaz — mas só conta se houver execução real.
+Detetar cedo é mais barato e eficaz - mas só conta se houver execução real.
 
 :::userstory
 **História.**  
@@ -186,7 +186,7 @@ Relatórios de scanners; logs CI/CD; *exit codes*; registos de bloqueio; dashboa
 ### US-04 - Gestão de segredos
 
 **Contexto.**  
-Segredos estáticos expõem a organização — e logs descuidados tornam-se um canal de fuga.
+Segredos estáticos expõem a organização - e logs descuidados tornam-se um canal de fuga.
 
 :::userstory
 **História.**  
@@ -258,7 +258,7 @@ Configuração de runners; logs de execução; registos de isolamento; scripts d
 ### US-06 - Assinatura e proveniência
 
 **Contexto.**  
-Artefactos não assinados perdem legitimidade — e artefactos sem proveniência enfraquecem auditoria e confiança.
+Artefactos não assinados perdem legitimidade - e artefactos sem proveniência enfraquecem auditoria e confiança.
 
 :::userstory
 **História.**  
@@ -296,7 +296,7 @@ Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria 
 ### US-07 - Gates por risco (separação sinal/decisão)
 
 **Contexto.**  
-Nem todas as apps exigem o mesmo rigor — mas em nenhuma app um “sinal” substitui decisão.
+Nem todas as apps exigem o mesmo rigor - mas em nenhuma app um “sinal” substitui decisão.
 
 :::userstory
 **História.**  
@@ -371,7 +371,7 @@ Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 ### US-09 - Rastreabilidade ponta-a-ponta (commit→pipeline→release)
 
 **Contexto.**  
-Sem rastreio, auditoria é impossível — e investigação de incidentes torna-se especulativa.
+Sem rastreio, auditoria é impossível - e investigação de incidentes torna-se especulativa.
 
 :::userstory
 **História.**  
@@ -666,7 +666,7 @@ Run IDs; logs; *exit codes*; artefactos; política de evidência.
 ### US-17 - Contenção de contexto e higiene de logs/outputs
 
 **Contexto.**  
-O pipeline “vê” tudo — logo, é onde a fuga de contexto é mais provável.
+O pipeline “vê” tudo - logo, é onde a fuga de contexto é mais provável.
 
 :::userstory
 **História.**  
@@ -782,11 +782,11 @@ A matriz assegura que o esforço é proporcional ao risco **sem nunca compromete
 
 A segurança de pipelines não é opcional: é o **mecanismo de confiança** de toda a entrega contínua.
 
-- **Versiona e revê o pipeline como código** — e exige determinismo suficiente para auditoria.  
-- **Define gates binários e governáveis** — e nunca confundas sinais automáticos com decisões.  
-- **Exige evidência empírica** — logs, *exit codes* e artefactos, não apenas relatórios.  
-- **Protege segredos e minimiza contexto** — o pipeline é um ponto privilegiado de exfiltração.  
-- **Atribui ownership às ações irreversíveis** — promoções sem owner são um risco estrutural.  
-- **Controla exceções com TTL e compensações** — bypass só existe quando é governado.
+- **Versiona e revê o pipeline como código** - e exige determinismo suficiente para auditoria.  
+- **Define gates binários e governáveis** - e nunca confundas sinais automáticos com decisões.  
+- **Exige evidência empírica** - logs, *exit codes* e artefactos, não apenas relatórios.  
+- **Protege segredos e minimiza contexto** - o pipeline é um ponto privilegiado de exfiltração.  
+- **Atribui ownership às ações irreversíveis** - promoções sem owner são um risco estrutural.  
+- **Controla exceções com TTL e compensações** - bypass só existe quando é governado.
 
 Um CI/CD seguro é o garante silencioso de que tudo o que chega a produção é **íntegro, verificável, rastreável e assumido por responsáveis reais**.

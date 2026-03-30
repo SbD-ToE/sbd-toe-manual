@@ -7,7 +7,7 @@ tags: [exceções, requisitos, risco, validação, aplicacional]
 
 # Excepções a Requisitos de Segurança Aplicacionais
 
-> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 — `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
+> Processo base, alçadas, campos obrigatórios, cadeia de autoridade e lifecycle estão definidos em **Cap. 14 - `addon/12-processo-excecoes.md`**. Este ficheiro define apenas as especificidades deste domínio.
 
 ---
 
@@ -40,6 +40,6 @@ O campo "Requisito afectado" deve identificar:
 
 | Documento | Relação |
 |---|---|
-| `01-catalogo-requisitos.md` | Catálogo aplicacional — requisitos que podem ter excepções |
+| `01-catalogo-requisitos.md` | Catálogo aplicacional - requisitos que podem ter excepções |
 | `04-rastreabilidade-controlo.md` | Matriz de rastreabilidade onde a excepção é registada |
-| Cap. 14 — `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |
+| Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

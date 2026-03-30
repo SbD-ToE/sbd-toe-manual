@@ -12,7 +12,7 @@ sidebar_position: 35
 
 Esta política define os requisitos para a **definição, recolha, análise e reporte de indicadores-chave de desempenho (KPIs) do programa de governação de segurança** da organização.
 
-Um programa de segurança sem métricas é um programa sem feedback loop — não é possível determinar se está a funcionar, se está a melhorar ou se os recursos estão a ser aplicados nos problemas certos. KPIs de governação de segurança transformam actividade técnica em evidência de desempenho: permitem à gestão executiva tomar decisões estratégicas fundamentadas, identificar desvios sistémicos antes de se tornarem incidentes, e demonstrar maturidade a reguladores e auditores. Métricas mal definidas ou recolhidas sem rigor são tão prejudiciais quanto a ausência de métricas — criam confiança falsa e desviam atenção dos riscos reais.
+Um programa de segurança sem métricas é um programa sem feedback loop - não é possível determinar se está a funcionar, se está a melhorar ou se os recursos estão a ser aplicados nos problemas certos. KPIs de governação de segurança transformam actividade técnica em evidência de desempenho: permitem à gestão executiva tomar decisões estratégicas fundamentadas, identificar desvios sistémicos antes de se tornarem incidentes, e demonstrar maturidade a reguladores e auditores. Métricas mal definidas ou recolhidas sem rigor são tão prejudiciais quanto a ausência de métricas - criam confiança falsa e desviam atenção dos riscos reais.
 
 O objetivo desta política é garantir que:
 
@@ -53,7 +53,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | KPI | Descrição | Target |
 |---|---|---|
 | MTTR por severidade | Tempo médio entre identificação e remediação de findings | Critical ≤ 7 dias; High ≤ 30 dias |
-| Taxa de reincidência de findings | % de findings do mesmo tipo que reaparecem dentro de 90 dias | < 10% |
+| Taxa de reincidência de findings | % de findings do mesmo tipo que reaparecem dentro de 90 dias | &lt; 10% |
 | % de findings Critical/High remediados no SLA | Conformidade com SLAs definidos na política de testes | > 90% |
 | Taxa de exceções activas vs. findings totais | Indicador de acumulação de risco aceite | Trend descendente |
 
@@ -127,7 +127,7 @@ Determinados desvios nos KPIs devem activar acções correctivas imediatas, inde
 
 | Condição | Acção |
 |---|---|
-| % de alertas P1 respondidos dentro do SLA < 80% | Revisão imediata do processo de on-call e escalonamento |
+| % de alertas P1 respondidos dentro do SLA &lt; 80% | Revisão imediata do processo de on-call e escalonamento |
 | Taxa de reincidência de findings > 25% | Revisão do processo de remediação e das guidelines de desenvolvimento |
 | % de excepções expiradas sem reavaliação > 10% | Auditoria de excepções; escalamento para decisores |
 | Contractor activo sem onboarding concluído | Bloqueio de acesso até conclusão do onboarding |
@@ -154,7 +154,7 @@ O resultado da avaliação de maturidade deve:
 - Ser apresentado à gestão executiva como parte do relatório anual de segurança
 
 :::note
-A avaliação de maturidade não substitui os KPIs operacionais — são perspectivas complementares. Os KPIs medem desempenho corrente; a avaliação de maturidade mede a capacidade instalada para manter esse desempenho ao longo do tempo.
+A avaliação de maturidade não substitui os KPIs operacionais - são perspectivas complementares. Os KPIs medem desempenho corrente; a avaliação de maturidade mede a capacidade instalada para manter esse desempenho ao longo do tempo.
 :::
 
 ---
@@ -196,13 +196,13 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 14 — Governança & Contratação | US-05: KPIs de governação; US-11: consolidação de KPIs e maturidade |
+| SbD-ToE Cap. 14 - Governança & Contratação | US-05: KPIs de governação; US-11: consolidação de KPIs e maturidade |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Fonte de dados para KPIs de conformidade |
 | Política de Gestão de Alertas (`31_policy-gestao-alertas.md`) | KPIs de qualidade de alertas e SLAs |
 | Política de IRP (`32_policy-irp.md`) | KPIs de resposta a incidentes (MTTD, MTTR) |
-| OWASP SAMM v2 | Software Assurance Maturity Model — framework de maturidade |
-| NIST SSDF (SP 800-218) | Secure Software Development Framework — práticas e maturidade |
-| BSIMM | Building Security In Maturity Model — benchmark de indústria |
-| ISO/IEC 27001 — A.18 | Compliance; security reviews and audits |
-| DORA — Art. 6, 17 | ICT risk management and reporting requirements |
-| NIS2 — Art. 21 | Security measures and governance obligations |
+| OWASP SAMM v2 | Software Assurance Maturity Model - framework de maturidade |
+| NIST SSDF (SP 800-218) | Secure Software Development Framework - práticas e maturidade |
+| BSIMM | Building Security In Maturity Model - benchmark de indústria |
+| ISO/IEC 27001 - A.18 | Compliance; security reviews and audits |
+| DORA - Art. 6, 17 | ICT risk management and reporting requirements |
+| NIS2 - Art. 21 | Security measures and governance obligations |

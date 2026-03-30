@@ -12,7 +12,7 @@ sidebar_position: 9
 
 Esta política define os requisitos para a aplicação sistemática de **arquitetura segura** ao longo do ciclo de vida de aplicações classificadas como L2 ou L3.
 
-Arquitetura segura não é um documento — é um conjunto de decisões técnicas deliberadas, documentadas, aprovadas e mantidas atualizadas. Sem uma baseline arquitetural explícita, os controlos aplicados carecem de fundamento estrutural, os riscos de design passam despercebidos, e a rastreabilidade entre ameaças, requisitos e implementação torna-se impossível.
+Arquitetura segura não é um documento - é um conjunto de decisões técnicas deliberadas, documentadas, aprovadas e mantidas atualizadas. Sem uma baseline arquitetural explícita, os controlos aplicados carecem de fundamento estrutural, os riscos de design passam despercebidos, e a rastreabilidade entre ameaças, requisitos e implementação torna-se impossível.
 
 O objetivo desta política é garantir que:
 
@@ -46,7 +46,7 @@ A baseline organizacional de arquitetura segura deve incorporar os seguintes pri
 | **Defense in depth** | Controlos de segurança em múltiplas camadas; falha de um controlo não compromete o sistema |
 | **Fail secure** | Em caso de falha, o comportamento padrão deve ser o mais restritivo, não o mais permissivo |
 | **Gestão de dependências** | Dependências externas devem ser inventariadas, avaliadas e monitoradas como vetores de risco |
-| **Observabilidade segura** | Logs, métricas e traces são componentes arquiteturais — devem ser planeados, não adicionados a posteriori |
+| **Observabilidade segura** | Logs, métricas e traces são componentes arquiteturais - devem ser planeados, não adicionados a posteriori |
 | **Imutabilidade de artefactos** | Artefactos de produção devem ser imutáveis; alterações implicam nova build e nova promoção |
 
 ---
@@ -247,12 +247,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 04 — Arquitetura Segura | Princípios, user stories, artefactos, aplicação no ciclo de vida |
-| SbD-ToE Cap. 03 — Threat Modeling | Sincronização DFD ↔ trust boundaries ↔ modelo de ameaças |
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Ligação ADR e solução → requisitos (`REQ-*`) |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Gate de consistência arquitetural no pipeline |
-| NIST SP 800-160 | Systems Security Engineering — integração de segurança no design |
+| SbD-ToE Cap. 04 - Arquitetura Segura | Princípios, user stories, artefactos, aplicação no ciclo de vida |
+| SbD-ToE Cap. 03 - Threat Modeling | Sincronização DFD ↔ trust boundaries ↔ modelo de ameaças |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Ligação ADR e solução → requisitos (`REQ-*`) |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Gate de consistência arquitetural no pipeline |
+| NIST SP 800-160 | Systems Security Engineering - integração de segurança no design |
 | NIST SP 800-207 | Zero Trust Architecture |
 | TOGAF / SABSA | Frameworks de arquitetura empresarial com dimensão de segurança |
 | OWASP Application Security Architecture Cheat Sheet | Padrões de arquitetura segura para aplicações |
-| ISO/IEC 27001 — Cláusula 8.1 | Planeamento e controlo operacional de segurança |
+| ISO/IEC 27001 - Cláusula 8.1 | Planeamento e controlo operacional de segurança |

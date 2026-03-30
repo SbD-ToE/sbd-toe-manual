@@ -10,9 +10,9 @@ sidebar_position: 27
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a **capacidade de rollback de deploys em produção** — a capacidade de reverter, de forma controlada e verificável, uma versão de software ou de infraestrutura para o estado anterior em caso de incidente, regressão ou anomalia detectada pós-deploy.
+Esta política define os requisitos para a **capacidade de rollback de deploys em produção** - a capacidade de reverter, de forma controlada e verificável, uma versão de software ou de infraestrutura para o estado anterior em caso de incidente, regressão ou anomalia detectada pós-deploy.
 
-Rollback não é um plano de contingência de última instância — é um requisito de resiliência que deve ser planeado, implementado e testado antes de ser necessário. A diferença entre uma crise e uma resolução controlada está frequentemente na capacidade de reverter em minutos em vez de horas. Sem rollback testado, cada deploy em produção acumula risco operacional que só se materializa no pior momento possível.
+Rollback não é um plano de contingência de última instância - é um requisito de resiliência que deve ser planeado, implementado e testado antes de ser necessário. A diferença entre uma crise e uma resolução controlada está frequentemente na capacidade de reverter em minutos em vez de horas. Sem rollback testado, cada deploy em produção acumula risco operacional que só se materializa no pior momento possível.
 
 O objetivo desta política é garantir que:
 
@@ -37,7 +37,7 @@ O objetivo desta política é garantir que:
 
 ### 3.1 Rollback de binário (aplicação/imagem)
 
-O tipo mais frequente e geralmente o mais simples — reverter para a versão anterior do artefacto:
+O tipo mais frequente e geralmente o mais simples - reverter para a versão anterior do artefacto:
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -135,7 +135,7 @@ O RTO deve ser medido a partir da detecção do problema até ao serviço estar 
 
 ## 7. Teste periódico de rollback
 
-A capacidade de rollback deve ser testada periodicamente — um rollback não testado é uma capacidade teórica, não operacional:
+A capacidade de rollback deve ser testada periodicamente - um rollback não testado é uma capacidade teórica, não operacional:
 
 | Nível | Cadência mínima | Âmbito do teste |
 |---|---|---|
@@ -191,9 +191,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 11 — Deploy Seguro | US-04 (rollback rápido e testado), US-12 (rollback estruturado por tipo) |
+| SbD-ToE Cap. 11 - Deploy Seguro | US-04 (rollback rápido e testado), US-12 (rollback estruturado por tipo) |
 | Política de Deploy Seguro (`25_policy-deploy-seguro.md`) | Estratégias de deploy progressivo e rollback automático |
 | Política de Monitorização Pós-Deploy (`28_policy-monitorizacao-pos-deploy.md`) | Critérios de activação de rollback por monitorização |
-| ISO/IEC 22301 | Business Continuity Management — RTO e RPO |
+| ISO/IEC 22301 | Business Continuity Management - RTO e RPO |
 | NIST SP 800-61 | Computer Security Incident Handling Guide |
 | Site Reliability Engineering (Google SRE Book) | Práticas de rollback e error budget |

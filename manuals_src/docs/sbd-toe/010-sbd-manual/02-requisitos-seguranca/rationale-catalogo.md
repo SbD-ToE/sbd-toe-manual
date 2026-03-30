@@ -30,7 +30,7 @@ Contudo, a versão aqui apresentada:
 
 Desta forma, os temas cobrem não apenas preocupações clássicas de segurança funcional e técnica (ex.: autenticação, encriptação, controlo de acesso), mas também domínios relacionados com **práticas de desenvolvimento**, **automação**, **auditoria**, **cadeia de fornecimento** e **integração contínua**.
 
-Não obstante esta consolidação — que pode e deve ser adaptada a cada organização — o manual inclui noutros capítulos **requisitos específicos por domínio técnico**, como Arquitetura Segura, CI/CD, Supply Chain, Infraestrutura como Código ou Containers.
+Não obstante esta consolidação - que pode e deve ser adaptada a cada organização - o manual inclui noutros capítulos **requisitos específicos por domínio técnico**, como Arquitetura Segura, CI/CD, Supply Chain, Infraestrutura como Código ou Containers.
 
 Neste capítulo são tratados, de forma deliberada, os requisitos que podem ser classificados como **requisitos de segurança aplicacionais transversais**, aplicáveis a uma aplicação concreta e proporcionais ao seu nível de risco.
 
@@ -50,7 +50,7 @@ A estrutura dos 20 temas foi desenvolvida com base nas seguintes motivações fu
   Os agrupamentos refletem a forma como as organizações estruturam equipas, processos, pipelines e responsabilidades técnicas.
 
 - **Cobertura de lacunas identificadas em frameworks base**  
-  Domínios como *Threat Modeling*, *SBOM/SCA*, *CI/CD Seguro*, *Testes de Segurança* e *Governação* são tradicionalmente pouco ou mal cobertos em frameworks exclusivamente aplicacionais como o ASVS, mas são críticos na prática — razão pela qual surgem como temas autónomos.
+  Domínios como *Threat Modeling*, *SBOM/SCA*, *CI/CD Seguro*, *Testes de Segurança* e *Governação* são tradicionalmente pouco ou mal cobertos em frameworks exclusivamente aplicacionais como o ASVS, mas são críticos na prática - razão pela qual surgem como temas autónomos.
 
 ---
 

@@ -10,9 +10,9 @@ sidebar_position: 18
 
 ## 1. Objetivo
 
-Esta política define os requisitos para a **gestão do ciclo de vida completo de segredos** — chaves de API, tokens de acesso, passwords, certificados, credenciais de base de dados e quaisquer outros valores que, se expostos, permitam acesso não autorizado a sistemas, dados ou infraestrutura.
+Esta política define os requisitos para a **gestão do ciclo de vida completo de segredos** - chaves de API, tokens de acesso, passwords, certificados, credenciais de base de dados e quaisquer outros valores que, se expostos, permitam acesso não autorizado a sistemas, dados ou infraestrutura.
 
-Segredos são um dos vectores de comprometimento mais frequentes e impactantes: expostos em repositórios, logs, imagens de container ou pipelines, persistem muitas vezes durante meses sem serem rotacionados, transformando uma exposição temporária num risco permanente. A gestão eficaz de segredos não é apenas uma prática de higiene técnica — é um controlo de segurança fundamental cuja falha pode comprometer toda a postura de segurança da organização.
+Segredos são um dos vectores de comprometimento mais frequentes e impactantes: expostos em repositórios, logs, imagens de container ou pipelines, persistem muitas vezes durante meses sem serem rotacionados, transformando uma exposição temporária num risco permanente. A gestão eficaz de segredos não é apenas uma prática de higiene técnica - é um controlo de segurança fundamental cuja falha pode comprometer toda a postura de segurança da organização.
 
 O objetivo desta política é garantir que:
 
@@ -76,7 +76,7 @@ Ferramentas de referência: HashiCorp Vault, AWS Secrets Manager, Azure Key Vaul
 
 ## 5. Injeção em runtime
 
-Segredos devem ser injetados nas aplicações e pipelines exclusivamente em tempo de execução — nunca persistidos no sistema de ficheiros ou em variáveis de ambiente de forma permanente:
+Segredos devem ser injetados nas aplicações e pipelines exclusivamente em tempo de execução - nunca persistidos no sistema de ficheiros ou em variáveis de ambiente de forma permanente:
 
 ### 5.1 Aplicações
 
@@ -88,7 +88,7 @@ Segredos devem ser injetados nas aplicações e pipelines exclusivamente em temp
 
 - [ ] Segredos referenciados via mecanismo nativo do sistema de CI (`secrets.*`, `CI/CD Variables masked`, `Variable Groups`)
 - [ ] Output de comandos que acedam a segredos mascarado nos logs
-- [ ] Credenciais de cloud via OIDC/workload identity (token efémero, TTL ≤ 1h) — elimina chaves estáticas de longa duração
+- [ ] Credenciais de cloud via OIDC/workload identity (token efémero, TTL ≤ 1h) - elimina chaves estáticas de longa duração
 
 ### 5.3 Containers
 
@@ -166,12 +166,12 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 07 — CI/CD Seguro | Gestão e injeção de segredos em pipeline |
-| SbD-ToE Cap. 09 — Containers e Imagens | Segredos fora de imagens; workload identity |
-| SbD-ToE Cap. 11 — Deploy Seguro | Segredos em runtime de deploy |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Gestão e injeção de segredos em pipeline |
+| SbD-ToE Cap. 09 - Containers e Imagens | Segredos fora de imagens; workload identity |
+| SbD-ToE Cap. 11 - Deploy Seguro | Segredos em runtime de deploy |
 | Política de CI/CD Seguro (`17_policy-cicd-seguro.md`) | Secret detection no pipeline; masking de logs |
 | OWASP Secrets Management Cheat Sheet | Referência de boas práticas de gestão de segredos |
 | HashiCorp Vault Documentation | Cofre de referência; dynamic secrets; OIDC |
 | NIST SP 800-57 | Key Management Guidelines |
-| CIS Benchmark — Secrets Management | Controlos de referência |
+| CIS Benchmark - Secrets Management | Controlos de referência |
 | SSDF PO.5.2 | Implement and maintain secure environments for software development |

@@ -101,7 +101,7 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 - 📂 `dora/`
   - [Enquadramento do regulamento](dora/intro)
   - [Playbook de implementação prática](dora/playbook)
-  - [Análise de convergência com NIS2](dora/convergencia-nis2)
+  - [Análise de convergência com NIS2](dora/convergencia-dora)
 
 #### **[NIS2](nis2/intro)** (Network and Information Security Directive)
 - 📂 `nis2/`
@@ -125,11 +125,11 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 
 ### Exemplos e Templates de Suporte
 
-#### **[Exemplo-Playbook](exemplo-playbook/indice)**
-- 📂 [`exemplo-playbook/`](exemplo-playbook/indice)
+#### **[Exemplo-Playbook](exemplo-playbook/exemplo-toolchain-options)**
+- 📂 [`exemplo-playbook/`](exemplo-playbook/exemplo-toolchain-options)
   - Templates e exemplos reutilizáveis para implementação de qualquer framework
   - Ferramentas, KPIs, governance, relatórios, políticas, contratos
-  - [Ver índice completo](exemplo-playbook/indice) para detalhes
+  - [Ver índice completo](exemplo-playbook/exemplo-toolchain-options) para detalhes
 
 ---
 

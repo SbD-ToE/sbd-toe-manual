@@ -10,9 +10,9 @@ sidebar_position: 22
 
 ## 1. Objetivo
 
-Esta política define o processo formal de **revisão e aprovação de planos de execução de Infraestrutura como Código (IaC)** — `terraform plan`, `pulumi preview`, `cdk diff` ou equivalente — antes de qualquer operação de apply em ambientes de staging ou produção.
+Esta política define o processo formal de **revisão e aprovação de planos de execução de Infraestrutura como Código (IaC)** - `terraform plan`, `pulumi preview`, `cdk diff` ou equivalente - antes de qualquer operação de apply em ambientes de staging ou produção.
 
-O `apply` é a operação de maior impacto em IaC: cria, altera ou destrói recursos reais de infraestrutura. Um apply não revisto pode eliminar bases de dados, expor recursos à internet, remover grupos de segurança ou reconfigurabilidade políticas de acesso de forma irreversível no curto prazo. A aprovação formal do plan não é burocracia — é o mecanismo de controlo que separa automação eficiente de automação descontrolada.
+O `apply` é a operação de maior impacto em IaC: cria, altera ou destrói recursos reais de infraestrutura. Um apply não revisto pode eliminar bases de dados, expor recursos à internet, remover grupos de segurança ou reconfigurabilidade políticas de acesso de forma irreversível no curto prazo. A aprovação formal do plan não é burocracia - é o mecanismo de controlo que separa automação eficiente de automação descontrolada.
 
 O objetivo desta política é garantir que:
 
@@ -37,7 +37,7 @@ O objetivo desta política é garantir que:
 
 ### 3.1 Origem do plan
 
-O plan deve ser gerado exclusivamente pelo pipeline CI/CD — não por execução manual local:
+O plan deve ser gerado exclusivamente pelo pipeline CI/CD - não por execução manual local:
 
 - [ ] Job de plan executado a partir do commit revisto no PR
 - [ ] Credenciais de acesso ao provider injectadas pelo pipeline (OIDC/workload identity)
@@ -49,7 +49,7 @@ A geração local de plans para fins de revisão prévia é aceite durante o des
 
 O output do plan deve ser apresentado de forma legível no PR (comentário automático ou link para artefacto), incluindo:
 
-- [ ] Recursos a criar, alterar e destruir — com contagem e identificação
+- [ ] Recursos a criar, alterar e destruir - com contagem e identificação
 - [ ] Detalhes das alterações em recursos de segurança (grupos de segurança, IAM, políticas, encriptação)
 - [ ] Alertas de alterações destrutivas (recursos a ser eliminados ou substituídos)
 - [ ] Metadados: timestamp, autor do PR, commit SHA, ambiente alvo
@@ -62,7 +62,7 @@ O output do plan deve ser apresentado de forma legível no PR (comentário autom
 
 Antes de aprovar um plan, o reviewer deve verificar:
 
-- [ ] As alterações correspondem ao âmbito do PR — sem alterações não previstas
+- [ ] As alterações correspondem ao âmbito do PR - sem alterações não previstas
 - [ ] Nenhum recurso crítico é destruído ou substituído inesperadamente
 - [ ] Sem alterações a grupos de segurança, IAM roles ou políticas não documentadas no PR
 - [ ] Sem recursos expostos ao exterior sem justificação
@@ -91,7 +91,7 @@ Em L2/L3, o processo de apply deve implementar separação de funções:
 | Rever e aprovar o plan | DevOps/SRE sénior + AppSec | Ser o autor do PR |
 | Executar o apply em produção | Pipeline (automatizado) | Ser o mesmo que aprovou |
 
-Em L3, nenhuma pessoa individual deve ter permissão de executar unilateralmente um apply em produção — a execução deve ser feita pelo pipeline, condicionada à aprovação registada de pelo menos dois papéis distintos.
+Em L3, nenhuma pessoa individual deve ter permissão de executar unilateralmente um apply em produção - a execução deve ser feita pelo pipeline, condicionada à aprovação registada de pelo menos dois papéis distintos.
 
 ---
 
@@ -101,7 +101,7 @@ Em L3, o plan aprovado deve ser assinado antes de ser utilizado pelo job de appl
 
 - [ ] Plan serializado e assinado com chave gerida pelo pipeline (ex: Cosign, GPG)
 - [ ] Attestation do pipeline associada ao plan (proveniência: quem gerou, quando, a partir de que commit)
-- [ ] O job de apply verifica a assinatura antes de executar — rejeita plans sem assinatura válida ou com assinatura de plan diferente do aprovado
+- [ ] O job de apply verifica a assinatura antes de executar - rejeita plans sem assinatura válida ou com assinatura de plan diferente do aprovado
 - [ ] Logs de verificação de assinatura arquivados como evidência
 
 ---
@@ -168,7 +168,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 08 — IaC e Infraestrutura | US-06 (revisão formal de plan), US-09 (assinatura), US-15 (SoD) |
+| SbD-ToE Cap. 08 - IaC e Infraestrutura | US-06 (revisão formal de plan), US-09 (assinatura), US-15 (SoD) |
 | Política de IaC Seguro (`21_policy-iac-seguro.md`) | Requisitos gerais de IaC seguro |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Credenciais de pipeline para apply |
 | Política de Rastreabilidade (`06_policy-rastreabilidade.md`) | Arquivo de logs de apply |

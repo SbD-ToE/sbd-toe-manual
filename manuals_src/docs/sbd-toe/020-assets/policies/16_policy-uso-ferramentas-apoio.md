@@ -12,7 +12,7 @@ sidebar_position: 16
 
 Esta política define os requisitos para o **uso controlado de ferramentas de apoio ao desenvolvimento**, com particular enfoque em assistentes de inteligência artificial generativa (GenAI), ferramentas de geração de código, autocompletion assistido e sistemas de sugestão automática.
 
-A adoção de ferramentas GenAI no desenvolvimento de software é uma realidade crescente e, quando bem governada, pode aumentar a produtividade sem comprometer a segurança. O risco não está na ferramenta em si, mas na ausência de revisão e validação do output gerado — que pode conter vulnerabilidades conhecidas, violações de licença, ou desalinhamento com requisitos técnicos e de segurança que o modelo de linguagem desconhece.
+A adoção de ferramentas GenAI no desenvolvimento de software é uma realidade crescente e, quando bem governada, pode aumentar a produtividade sem comprometer a segurança. O risco não está na ferramenta em si, mas na ausência de revisão e validação do output gerado - que pode conter vulnerabilidades conhecidas, violações de licença, ou desalinhamento com requisitos técnicos e de segurança que o modelo de linguagem desconhece.
 
 O objetivo desta política é garantir que:
 
@@ -38,7 +38,7 @@ Não está no âmbito desta política o uso de ferramentas determinísticas de s
 
 ## 3. Princípio fundamental: a responsabilidade é sempre humana
 
-O uso de ferramentas GenAI não transfere nem dilui a responsabilidade do developer pelo código produzido. O código gerado por IA é tratado como **código de terceiros não auditado** — deve ser lido, compreendido, validado e assumido pelo developer antes de ser incluído numa base de código.
+O uso de ferramentas GenAI não transfere nem dilui a responsabilidade do developer pelo código produzido. O código gerado por IA é tratado como **código de terceiros não auditado** - deve ser lido, compreendido, validado e assumido pelo developer antes de ser incluído numa base de código.
 
 :::warning
 A aceitação de sugestões automáticas sem leitura e compreensão do código gerado é equivalente a copiar código de uma fonte desconhecida sem revisão. Esta prática é proibida em qualquer nível de criticidade.
@@ -152,11 +152,11 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 06 — Desenvolvimento Seguro | Uso controlado de GenAI, rastreabilidade, constrangimentos |
-| SbD-ToE Cap. 02 — Requisitos de Segurança | US-14: uso controlado de assistentes automatizados |
+| SbD-ToE Cap. 06 - Desenvolvimento Seguro | Uso controlado de GenAI, rastreabilidade, constrangimentos |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | US-14: uso controlado de assistentes automatizados |
 | Política de Revisão de Código (`15_policy-revisao-codigo.md`) | Revisão de PRs com output GenAI |
 | Política de Guidelines de Desenvolvimento (`14_policy-guidelines-desenvolvimento.md`) | Constrangimentos técnicos derivados de guidelines |
 | OWASP Top 10 LLM Application Security Risks | Riscos de segurança em aplicações baseadas em LLM |
 | EU AI Act | Requisitos regulatórios para sistemas de IA em contextos de alto risco |
-| ENISA — Cybersecurity of AI | Orientações de segurança para uso de IA em desenvolvimento |
+| ENISA - Cybersecurity of AI | Orientações de segurança para uso de IA em desenvolvimento |
 | GitHub Copilot Trust Center | Modelo de dados e privacidade de ferramenta de referência |

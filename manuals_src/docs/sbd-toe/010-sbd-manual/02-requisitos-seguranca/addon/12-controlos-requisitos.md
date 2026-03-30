@@ -1,7 +1,7 @@
 ---
 id: controlos-requisitos-legacy
 title: Validação de Requisitos por Domínio (conteúdo integrado)
-description: Este documento foi integrado no addon 07 — Validação de Requisitos. Consultar validacao-requisitos.
+description: Este documento foi integrado no addon 07 - Validação de Requisitos. Consultar validacao-requisitos.
 tags: [tipo:redirect, tema:validação, requisitos, controlos]
 ---
 

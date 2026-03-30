@@ -14,9 +14,9 @@ Esta política define o processo formal e transversal para a gestão de **exceç
 
 Uma exceção ocorre sempre que um controlo obrigatório para o nível de criticidade da aplicação **não pode ser aplicado** dentro do prazo esperado, ou quando existe um desvio deliberado e justificado a uma prática ou requisito de segurança.
 
-A existência de exceções é inevitável em qualquer programa de segurança maduro. O problema não é a exceção em si — é a exceção **informal, não registada, sem prazo e sem mitigação**. Exceções não geridas tornam-se dívida de risco permanente e são frequentemente o vetor de incidentes de segurança.
+A existência de exceções é inevitável em qualquer programa de segurança maduro. O problema não é a exceção em si - é a exceção **informal, não registada, sem prazo e sem mitigação**. Exceções não geridas tornam-se dívida de risco permanente e são frequentemente o vetor de incidentes de segurança.
 
-Esta política é **transversal** — aplica-se a todos os domínios e capítulos do manual SbD-ToE onde existam controlos com obrigatoriedade formal.
+Esta política é **transversal** - aplica-se a todos os domínios e capítulos do manual SbD-ToE onde existam controlos com obrigatoriedade formal.
 
 ---
 
@@ -39,11 +39,11 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ## 3. Princípios fundamentais
 
-- **Toda a exceção é temporária** — não existe exceção permanente; toda a exceção tem data de expiração
-- **Toda a exceção é documentada** — sem registo formal, não existe exceção; existe incumprimento
-- **Toda a exceção tem owner** — alguém é explicitamente responsável pelo acompanhamento
-- **Toda a exceção tem mitigação** — quando tecnicamente viável, existe um controlo compensatório ativo durante o período de exceção
-- **A aprovação é proporcional ao risco** — a alçada de aprovação escala com o nível de criticidade e a severidade do controlo excecionado
+- **Toda a exceção é temporária** - não existe exceção permanente; toda a exceção tem data de expiração
+- **Toda a exceção é documentada** - sem registo formal, não existe exceção; existe incumprimento
+- **Toda a exceção tem owner** - alguém é explicitamente responsável pelo acompanhamento
+- **Toda a exceção tem mitigação** - quando tecnicamente viável, existe um controlo compensatório ativo durante o período de exceção
+- **A aprovação é proporcional ao risco** - a alçada de aprovação escala com o nível de criticidade e a severidade do controlo excecionado
 
 ---
 
@@ -62,14 +62,14 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ### 5.1 Passos obrigatórios
 
-1. **Identificar o controlo excecionado** — qual o requisito, controlo ou prática que não está a ser cumprido
-2. **Justificar tecnicamente** — por que razão o controlo não pode ser aplicado (constrangimento técnico, dependência externa, prazo, custo de implementação)
-3. **Avaliar o impacto** — qual o risco adicional introduzido pela exceção no contexto da aplicação
-4. **Definir mitigação compensatória** — que controlo alternativo fica ativo durante o período de exceção
-5. **Definir prazo de expiração (TTL)** — data até à qual a exceção é válida; não existe renovação automática
-6. **Submeter para aprovação** — pela alçada adequada ao nível de risco (ver secção 6)
-7. **Registar formalmente** — no repositório de exceções da aplicação ou plataforma GRC
-8. **Comunicar** — ao Security Champion e à equipa responsável
+1. **Identificar o controlo excecionado** - qual o requisito, controlo ou prática que não está a ser cumprido
+2. **Justificar tecnicamente** - por que razão o controlo não pode ser aplicado (constrangimento técnico, dependência externa, prazo, custo de implementação)
+3. **Avaliar o impacto** - qual o risco adicional introduzido pela exceção no contexto da aplicação
+4. **Definir mitigação compensatória** - que controlo alternativo fica ativo durante o período de exceção
+5. **Definir prazo de expiração (TTL)** - data até à qual a exceção é válida; não existe renovação automática
+6. **Submeter para aprovação** - pela alçada adequada ao nível de risco (ver secção 6)
+7. **Registar formalmente** - no repositório de exceções da aplicação ou plataforma GRC
+8. **Comunicar** - ao Security Champion e à equipa responsável
 
 ### 5.2 Checklist por registo de exceção
 
@@ -122,7 +122,7 @@ A renovação de uma exceção exige **nova aprovação explícita** com reavali
 
 Cada exceção deve ser reavaliada na data de expiração. A equipa responsável deve:
 
-1. **Reavaliar o risco** — o contexto mudou? A mitigação compensatória continua eficaz?
+1. **Reavaliar o risco** - o contexto mudou? A mitigação compensatória continua eficaz?
 2. **Verificar se o controlo pode agora ser aplicado**
 3. **Decidir**: encerrar (controlo aplicado) / renovar (nova aprovação) / escalar
 
@@ -203,12 +203,12 @@ O registo de exceções deve ser disponibilizado integralmente em auditorias int
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 01 — Classificação de Aplicações | Proporcionalidade de exceções por nível |
-| SbD-ToE Cap. 02 — Requisitos de Segurança | Exceções a requisitos com TTL curto em L3 |
-| SbD-ToE Cap. 05 — Dependências, SBOM e SCA | Política de exceções a CVEs |
-| SbD-ToE Cap. 06 — Desenvolvimento Seguro | Gestão de exceções técnicas |
-| SbD-ToE Cap. 07 — CI/CD Seguro | Exceções e bypass controlado de gates |
-| SbD-ToE Cap. 14 — Governança e Contratação | Processo formal de exceções com alçadas por nível |
-| ISO/IEC 27001 — Cláusula 6.1.3 | Tratamento do risco — opção de aceitação |
-| NIST SP 800-53 — CA-7 | Monitorização contínua e gestão de desvios |
+| SbD-ToE Cap. 01 - Classificação de Aplicações | Proporcionalidade de exceções por nível |
+| SbD-ToE Cap. 02 - Requisitos de Segurança | Exceções a requisitos com TTL curto em L3 |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Política de exceções a CVEs |
+| SbD-ToE Cap. 06 - Desenvolvimento Seguro | Gestão de exceções técnicas |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Exceções e bypass controlado de gates |
+| SbD-ToE Cap. 14 - Governança e Contratação | Processo formal de exceções com alçadas por nível |
+| ISO/IEC 27001 - Cláusula 6.1.3 | Tratamento do risco - opção de aceitação |
+| NIST SP 800-53 - CA-7 | Monitorização contínua e gestão de desvios |
 | SSDF PW.4 | Revisão de software para gestão de risco |

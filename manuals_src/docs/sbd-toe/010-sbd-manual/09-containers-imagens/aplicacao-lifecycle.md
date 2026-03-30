@@ -377,7 +377,7 @@ Como **DevOps**, quero gerar SBOM (Software Bill of Materials) automaticamente a
 | CI/CD | Build de imagem | DevOps | Em cada build |
 
 **Ligações úteis.**  
-[Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/inventario-sbom), [Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)  
+[Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers),[Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)  
 
 ---
 

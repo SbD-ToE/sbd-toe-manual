@@ -31,7 +31,7 @@ A classificação deve ser realizada **antes do início do desenvolvimento** ou,
 
 ---
 
-## 3. Modelo de classificação — Eixos E+D+I
+## 3. Modelo de classificação - Eixos E+D+I
 
 A classificação de risco baseia-se na avaliação de três eixos independentes:
 
@@ -47,13 +47,13 @@ A pontuação combinada dos três eixos determina o nível de criticidade global
 
 | Nível | Descrição geral | Exemplos típicos |
 |---|---|---|
-| **L1** | Baixo risco — aplicação interna, sem dados sensíveis, impacto limitado | Ferramentas internas, dashboards sem PII, utilitários |
-| **L2** | Risco médio — exposição pública ou dados de utilizadores, impacto moderado | APIs públicas, aplicações com autenticação, portais de cliente |
-| **L3** | Risco elevado — sistemas regulados, PII, dados críticos, impacto severo | Sistemas financeiros, saúde, infraestrutura crítica, dados regulados |
+| **L1** | Baixo risco - aplicação interna, sem dados sensíveis, impacto limitado | Ferramentas internas, dashboards sem PII, utilitários |
+| **L2** | Risco médio - exposição pública ou dados de utilizadores, impacto moderado | APIs públicas, aplicações com autenticação, portais de cliente |
+| **L3** | Risco elevado - sistemas regulados, PII, dados críticos, impacto severo | Sistemas financeiros, saúde, infraestrutura crítica, dados regulados |
 
 ### 3.2 Critérios por eixo
 
-**Eixo E — Exposição:**
+**Eixo E - Exposição:**
 
 | Valor | Critério |
 |---|---|
@@ -61,7 +61,7 @@ A pontuação combinada dos três eixos determina o nível de criticidade global
 | Médio | Acesso autenticado por utilizadores externos ou parceiros |
 | Elevado | Acesso público sem autenticação, ou API exposta a terceiros |
 
-**Eixo D — Dados:**
+**Eixo D - Dados:**
 
 | Valor | Critério |
 |---|---|
@@ -69,7 +69,7 @@ A pontuação combinada dos três eixos determina o nível de criticidade global
 | Médio | Dados pessoais de utilizadores, dados de negócio com confidencialidade |
 | Elevado | PII sensível, dados regulados (RGPD, saúde, financeiro), segredos críticos |
 
-**Eixo I — Impacto:**
+**Eixo I - Impacto:**
 
 | Valor | Critério |
 |---|---|
@@ -126,12 +126,12 @@ Cada reavaliação deve documentar:
 
 ### 6.1 Passos obrigatórios
 
-1. **Aplicar o modelo E+D+I** — avaliar cada eixo com base nos critérios definidos na secção 3
-2. **Determinar o nível global** — L1, L2 ou L3, com base na pontuação combinada
-3. **Documentar o racional** — registar os critérios que determinaram cada eixo e o nível final
-4. **Obter validação** — revisão e aprovação por AppSec Engineer
-5. **Registar formalmente** — documento de classificação versionado, com data e responsável
-6. **Comunicar às equipas** — o nível determina os controlos obrigatórios a aplicar em todos os capítulos SbD-ToE
+1. **Aplicar o modelo E+D+I** - avaliar cada eixo com base nos critérios definidos na secção 3
+2. **Determinar o nível global** - L1, L2 ou L3, com base na pontuação combinada
+3. **Documentar o racional** - registar os critérios que determinaram cada eixo e o nível final
+4. **Obter validação** - revisão e aprovação por AppSec Engineer
+5. **Registar formalmente** - documento de classificação versionado, com data e responsável
+6. **Comunicar às equipas** - o nível determina os controlos obrigatórios a aplicar em todos os capítulos SbD-ToE
 
 ### 6.2 Aprovações por nível
 
@@ -201,9 +201,9 @@ A evidência de aplicação desta política (documentos de classificação, hist
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 01 — Classificação de Aplicações | Modelo E+D+I, critérios de nível, user stories de classificação |
-| SbD-ToE Cap. 14 — Governança e Contratação | Alçadas de aprovação, rastreabilidade organizacional |
-| ISO/IEC 27001 — Cláusula 6.1 | Avaliação e tratamento de risco |
+| SbD-ToE Cap. 01 - Classificação de Aplicações | Modelo E+D+I, critérios de nível, user stories de classificação |
+| SbD-ToE Cap. 14 - Governança e Contratação | Alçadas de aprovação, rastreabilidade organizacional |
+| ISO/IEC 27001 - Cláusula 6.1 | Avaliação e tratamento de risco |
 | NIST SP 800-30 | Guide for Conducting Risk Assessments |
 | OWASP Risk Rating Methodology | Critérios de avaliação de risco aplicacional |
 | SSDF PW.1 | Definição de requisitos de segurança baseada em risco |

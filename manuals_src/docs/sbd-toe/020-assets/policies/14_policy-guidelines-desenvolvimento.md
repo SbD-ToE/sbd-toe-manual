@@ -12,7 +12,7 @@ sidebar_position: 14
 
 Esta política define os requisitos para a **seleção, curadoria, versionamento e revisão periódica de guidelines de desenvolvimento seguro** aplicáveis às stacks tecnológicas utilizadas pela organização.
 
-Guidelines de desenvolvimento seguro não são documentos estáticos de boas práticas — são mecanismos vivos de governação técnica. Quando bem curadas e operacionalizadas como configurações de linters e rulesets SAST, reduzem a dependência de decisões ad-hoc, asseguram consistência entre equipas e tornam a conformidade verificável de forma automatizada.
+Guidelines de desenvolvimento seguro não são documentos estáticos de boas práticas - são mecanismos vivos de governação técnica. Quando bem curadas e operacionalizadas como configurações de linters e rulesets SAST, reduzem a dependência de decisões ad-hoc, asseguram consistência entre equipas e tornam a conformidade verificável de forma automatizada.
 
 O objetivo desta política é garantir que:
 
@@ -42,7 +42,7 @@ As guidelines organizacionais devem ser derivadas de fontes técnicas reconhecid
 | Rulesets upstream de ferramentas SAST | Semgrep, CodeQL, SonarQube, Bandit, ESLint Security, etc. |
 | Benchmarks do fabricante | Guidelines de segurança da linguagem ou framework (ex: Go security, Python security model) |
 
-O tailoring organizacional a partir destas fontes deve ser explicitamente documentado — indicando quais regras foram adotadas sem alteração, quais foram apertadas, quais foram desativadas e com que justificação.
+O tailoring organizacional a partir destas fontes deve ser explicitamente documentado - indicando quais regras foram adotadas sem alteração, quais foram apertadas, quais foram desativadas e com que justificação.
 
 ---
 
@@ -76,7 +76,7 @@ As configurações resultantes devem ser:
 
 - [ ] Versionadas no repositório central de configurações da organização
 - [ ] Reutilizáveis por projetos (por referência, não por cópia)
-- [ ] Aplicadas automaticamente pelo pipeline CI — não dependentes de configuração local do developer
+- [ ] Aplicadas automaticamente pelo pipeline CI - não dependentes de configuração local do developer
 
 ### 5.1 Proporcionalidade
 
@@ -159,7 +159,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 06 — Desenvolvimento Seguro | Curadoria de guidelines, operacionalização, proporcionalidade L1-L3 |
+| SbD-ToE Cap. 06 - Desenvolvimento Seguro | Curadoria de guidelines, operacionalização, proporcionalidade L1-L3 |
 | OWASP Secure Coding Practices | Baseline de desenvolvimento seguro |
 | OWASP Cheat Sheet Series | Referências por linguagem e framework |
 | CWE Top 25 | Fraquezas de implementação mais críticas |

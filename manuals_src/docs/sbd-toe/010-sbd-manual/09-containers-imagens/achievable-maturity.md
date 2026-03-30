@@ -127,4 +127,4 @@ Este mapeamento **não mede equipas ou ferramentas**, mas sim o **nível de matu
 - O Capítulo 09 apresenta **maturidade técnica elevada** nas práticas de *supply chain security* e *runtime hardening*.  
 - Alcança **nível 3 / 3 em SAMM** e **nível 3 / 4 em DSOMM**, e cobre integralmente os controlos **PW.5, RV.1, RV.2, PS.1 do SSDF**.  
 - Demonstra **conformidade com SLSA 3/4** e com os benchmarks **CIS** e **ENISA Cloud Baseline**, refletindo práticas de construção e execução seguras.  
-- Estas capacidades sustentam a **governação completa da cadeia de imagens** e integram-se com os capítulos 05 (Dependências) e 08 (IaC), garantindo **proveniência, integridade e observabilidade contínua** — pilares centrais da segurança moderna de containers.
+- Estas capacidades sustentam a **governação completa da cadeia de imagens** e integram-se com os capítulos 05 (Dependências) e 08 (IaC), garantindo **proveniência, integridade e observabilidade contínua** - pilares centrais da segurança moderna de containers.

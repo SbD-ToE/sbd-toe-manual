@@ -16,12 +16,12 @@ sidebar_position: 7
 ## 🧭 Contexto: Arquitetura como prática, não como cargo
 
 Nem todas as equipas que aplicam o SbD-ToE têm uma função formal de *Arquiteto*.  
-Em muitos projetos, **a arquitetura “acontece” naturalmente** — nas decisões tomadas durante o desenho e implementação do software.  
+Em muitos projetos, **a arquitetura “acontece” naturalmente** - nas decisões tomadas durante o desenho e implementação do software.  
 O Capítulo 4 parte deste princípio: não é preciso instituir um processo pesado ou um órgão de governação; basta **tornar explícitas e rastreáveis as decisões técnicas que já existem**.
 Para tal é necessário adoptar uma taxonomia comum que permita a partilha de informação e conhecimento e assim possivel de aplicar nas atividades embebidas neste capitulo.
 
 - **A arquitetura segura é uma prática coletiva.**  
-  Qualquer decisão técnica que afete segurança, escalabilidade ou dependências é, na prática, uma decisão arquitetural — mesmo que tomada por um developer.
+  Qualquer decisão técnica que afete segurança, escalabilidade ou dependências é, na prática, uma decisão arquitetural - mesmo que tomada por um developer.
 
 - **O objetivo é capturar raciocínio, não criar burocracia.**  
   Um *Architecture Decision Record* (ADR), uma ficha de arquitetura ou um *trust boundary* são apenas mecanismos para guardar o “porquê” técnico das escolhas feitas.
@@ -35,7 +35,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 - **Desenhar com consciência é desenhar seguro.**  
   O capítulo não cria nova documentação, mas ajuda a transformar o design implícito em **evidência verificável de segurança**.
 
-> 💬 Em resumo: *Security by Design* não é desenhar mais — é desenhar conscientemente, e assegurar a produção de evidencia e forma de manter o conhecimento.
+> 💬 Em resumo: *Security by Design* não é desenhar mais - é desenhar conscientemente, e assegurar a produção de evidencia e forma de manter o conhecimento.
 
 ---
 
@@ -77,10 +77,10 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 
 | ARC-ID | Prática associada | Artefacto esperado |
 |---|---|---|
-| **ARC-004 — Decisões de arquitectura documentadas** | ADR por decisão estrutural com impacto em segurança ou dependências | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
-| **ARC-005 — Threat modeling nos fluxos críticos** | TM workshop; sincronização ameaça→controlo→ARC | DFD anotado, `tm-sync-arquitetura.md`, registo de ameaças |
-| **ARC-006 — Isolamento entre domínios sensíveis** | Políticas de rede; segmentação lógica; ACLs; *admission control* | Diagrama C4 anotado, configuração de rede, *review* AppSec |
-| **ARC-008 — Fluxos de dados entre zonas protegidos** | DFD com controlos explícitos em cada fronteira de confiança | `trust-boundaries.md`, DFD versionado em repositório |
+| **ARC-004 - Decisões de arquitectura documentadas** | ADR por decisão estrutural com impacto em segurança ou dependências | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
+| **ARC-005 - Threat modeling nos fluxos críticos** | TM workshop; sincronização ameaça→controlo→ARC | DFD anotado, `tm-sync-arquitetura.md`, registo de ameaças |
+| **ARC-006 - Isolamento entre domínios sensíveis** | Políticas de rede; segmentação lógica; ACLs; *admission control* | Diagrama C4 anotado, configuração de rede, *review* AppSec |
+| **ARC-008 - Fluxos de dados entre zonas protegidos** | DFD com controlos explícitos em cada fronteira de confiança | `trust-boundaries.md`, DFD versionado em repositório |
 
 ## 🔄 Como usar este jargão nas User Stories 
 - **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (ARC-XXX).  
@@ -95,7 +95,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 - **L3**: Cobertura integral, *reviews* independentes, validações em CI/CD, automação de trigger onde possível.
 
 ## 🔗 Ligações Internas Úteis 
-- Cap. 01 — Gestão de Risco: `/sbd-toe/sbd-manual/01-classificacao-aplicacoes/intro`  
-- Cap. 02 — Requisitos de Segurança: `/sbd-toe/sbd-manual/02-requisitos-seguranca/intro`  
-- Cap. 03 — Threat Modeling: `/sbd-toe/sbd-manual/03-threat-modeling/intro`  
-- Cap. 04 — Arquitetura Segura (ficheiro *lifecycle*): `/sbd-toe/sbd-manual/04-arquitetura-segura/aplicacao-lifecycle`
+- Cap. 01 - Gestão de Risco: `/sbd-toe/sbd-manual/01-classificacao-aplicacoes/intro`  
+- Cap. 02 - Requisitos de Segurança: `/sbd-toe/sbd-manual/02-requisitos-seguranca/intro`  
+- Cap. 03 - Threat Modeling: `/sbd-toe/sbd-manual/03-threat-modeling/intro`  
+- Cap. 04 - Arquitetura Segura (ficheiro *lifecycle*): `/sbd-toe/sbd-manual/04-arquitetura-segura/aplicacao-lifecycle`

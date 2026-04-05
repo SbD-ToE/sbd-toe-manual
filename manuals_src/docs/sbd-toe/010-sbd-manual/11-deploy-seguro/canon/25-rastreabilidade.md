@@ -32,7 +32,7 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 | SSDF PO.5 | Implement and Maintain Secure Environments | 🔧 Reparação | Semântico em addons; sem row explícita SSDF publicada | addon (medium): Segregação de Ambientes e Validação Operacional |
 | SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Deploy apenas de artefactos verificados | aplicacao_lifecycle (strong): US-01 - Deploy apenas de artefactos verificados |
 | SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Monitorização pós-deploy e reação a incidentes | addon (medium): Monitorização e Reação a Incidentes de Runtime |
-| SSDF PW.9 | Use Well-Secured Settings by Default | 🔧 Reparação | CLAIM GAP — conteúdo existe em addons 04 e 08; sem row explícita publicada | addon (medium): Validações de Segurança antes de Deploy + Segregação de Ambientes |
+| SSDF PW.9 | Use Well-Secured Settings by Default | 🔧 Reparação | Conteúdo canónico em Cap. 02 `addon/07` família CFG-001→007 (debug off, env sep, no hardcoded, vault, drift); Cap. 11 não referencia esses critérios como validação pré-deploy explícita | addon (medium): Validações de Segurança antes de Deploy; → ver Cap. 02 addon CFG-001→007 |
 | SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefacto assinado e verificado antes de deploy | aplicacao_lifecycle (strong): US-01 - Deploy apenas de artefactos verificados |
 | SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Rastreabilidade end-to-end publicada | aplicacao_lifecycle (strong): US-05 - Rastreabilidade end-to-end |
 | SLSA-PRINCIPLE-TRUST-PLATFORMS | Trust platforms | ✅ Semântico | Verificação antes de deploy | addon (medium): Validações de Segurança antes de Deploy |
@@ -45,7 +45,7 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 | ASVS authentication_lifecycle | Auth lifecycle | ⚠️ Parcial | Deploy semântico; sem unit dedicado | addon (medium): Modelo de Controlo de Execução em Runtime |
 | ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Deploy semântico; sem unit dedicado | addon (medium): Modelo de Controlo de Execução em Runtime |
 | ASVS secure_transport | Secure transport | ⚠️ Parcial | Deploy e architecture; sem unit dedicado | sem unit dedicado no capítulo |
-| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔧 Reparação | CLAIM GAP — conteúdo existe em addons 04 e 08; sem secção dedicada publicada | addon (medium): Validações de Segurança antes de Deploy + Segregação de Ambientes |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔧 Reparação | Conteúdo canónico em Cap. 02 `addon/07` família CFG-001→007; Cap. 09 cobre enforcement técnico (OPA/Kyverno); Cap. 11 não referencia como critério explícito de validação pré-deploy | addon (medium): Validações de Segurança antes de Deploy; → ver Cap. 02 addon CFG-001→007 e Cap. 09 addon OPA/Kyverno |
 | DORA | Deploy seguro e reversível | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo DPL + addon (medium): Práticas de Release Management |
 | NIS2 | Deploy controlado | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo DPL - Deploy Seguro |
 

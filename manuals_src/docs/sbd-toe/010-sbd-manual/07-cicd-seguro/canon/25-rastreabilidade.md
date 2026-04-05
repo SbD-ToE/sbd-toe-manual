@@ -48,6 +48,7 @@ Este capítulo define práticas de **segurança operacional para pipelines CI/CD
 | CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software authorization e CI/CD toolchain | addon (medium): Políticas e gates por nível de aplicação |
 | ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Rastreabilidade de deploys e integridade de logs | addon (medium): Rastreabilidade de assinaturas e deploys |
 | ASVS security_event_logging_coverage | Security logging | ⚠️ Parcial | CI/CD logging adjacent | addon (medium): Excepções e Visibilidade em CI/CD |
+| SSDF PO.5 | Implement and Maintain Secure Environments for Software Development | 🔧 Reparação | Ambientes de CI/CD segregados e runners isolados cobertos semanticamente; sem row SSDF PO.5 explícita publicada | addon (medium): Isolamento e proteção de runners |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

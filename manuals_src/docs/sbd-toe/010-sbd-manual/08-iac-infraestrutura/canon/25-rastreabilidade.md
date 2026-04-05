@@ -43,7 +43,7 @@ Este capítulo define práticas de **infraestrutura definida como código** — 
 | ASVS secret_usage_isolation | Secret usage isolation | ⚠️ Parcial | IaC e isolamento de segredos | aplicacao_lifecycle (strong): US-10 — Gestão de segredos e identidades para IaC |
 | ASVS secure_transport | Secure transport | ⚠️ Parcial | IaC e deploy | addon (medium): Exemplos de Estrutura e Práticas Seguras em Projetos IaC |
 | ASVS service_to_service_auth | Service-to-service auth | ⚠️ Parcial | IaC | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
-| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ⚠️ Parcial | CLAIM GAP — conteúdo existe no addon `04-principios-sbd-iac.md` (fail securely, privilege minimum, immutability, secure defaults); sem secção dedicada a baseline integrity no catálogo de requisitos | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ✅ Semântico | Privilégio mínimo, separação de ambientes, immutability, OPA enforcement confirmados em unit `📌 Princípios essenciais aplicáveis a projetos IaC`; sem secção de baseline no catálogo de requisitos mas conteúdo substancial confirmado | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
 | NIS2 | Infraestrutura como código governada | ✅ Explícito | Overlay regulatório publicado | aplicacao_lifecycle (strong): US-08 — Enforcement automático de políticas |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap

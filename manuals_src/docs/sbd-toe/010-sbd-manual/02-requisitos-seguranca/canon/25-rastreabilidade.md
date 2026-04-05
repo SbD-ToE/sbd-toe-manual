@@ -37,8 +37,8 @@ Este capítulo define **requisitos de segurança proporcionais ao risco**, rastr
 | ASVS injection_and_sanitization | Injection prevention | ✅ Explícito | requirements_catalog (strong): VAL — Validação de Dados | Row publicada; cobertura de validação de input |
 | ASVS input_contract_validation | Structured input validation | ✅ Explícito | requirements_catalog (strong): VAL — Validação de Dados | Row publicada |
 | ASVS validation_before_internal_use | Validation before deserialization | ✅ Explícito | requirements_catalog (strong): VAL — Validação de Dados | Row publicada |
-| ASVS secure_coding_discipline_gap | Generic secure coding discipline | 🔴 Gap | — | Semantics presentes mas sem family dedicada; candidato a addon |
-| ASVS secure_configuration_baseline_gap | Secure defaults & baseline | 🔴 Gap | — | Semantics presentes mas sem secção dedicada |
+| ASVS secure_coding_discipline_gap | Generic secure coding discipline | ⚠️ Parcial | Conteúdo de coding discipline está em Cap. 06 `addon/01-boas-praticas-codigo.md` (CWE Top 25, funções perigosas, práticas proibidas); Cap. 02 cobre o âmbito VAL-001→007 (validação/sanitização) | addon (medium, Cap. 06): Boas Práticas de Escrita de Código Seguro |
+| ASVS secure_configuration_baseline_gap | Secure defaults & baseline | ✅ Semântico | Família CFG-001→007 confirmada em unit `addon/07-validacao-requisitos.md` (CFG-DEBUG, CFG-ENV, CFG-HARD, CFG-VAULT, CFG-DRIFT) | addon (medium): Validação de Requisitos de Segurança > CFG — Configuração Segura |
 | ASVS authentication_strength_and_assurance | Authentication strength | ⚠️ Parcial | requirements_catalog (strong): AUT — Autenticação e Identidade | Presente; não embalado como family ASVS |
 | CIS-5 | Account Management | ⚠️ Parcial | requirements_catalog (strong): ACC — Controlo de Acesso | Semantics presentes; CIS cobre âmbito empresarial mais largo |
 | CIS-6 | Access Control Management | ✅ Explícito | requirements_catalog (strong): ACC — Controlo de Acesso | Row publicada |

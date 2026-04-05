@@ -42,7 +42,7 @@ Este capítulo define práticas de **construção, assinatura, proveniência, ha
 | SLSA-VERIFY-DEPENDENCIES | Check dependencies | ⚠️ Parcial | Container deps e SBOM presentes | addon (medium): SBOM de Containers e Rastreabilidade de Runtime |
 | CAPEC-206 | Signing Malicious Code | ✅ Semântico | Artefactos assinados com verificação | addon (medium): Assinatura de Imagens e Cadeia de Confiança |
 | CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada via digest pinning | aplicacao_lifecycle (strong): US-01 — Imagens base pinned por digest |
-| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ⚠️ Parcial | Containers têm semantics de configuração segura (securityContext, OPA/Kyverno); sem secção dedicada a baseline integrity no catálogo de requisitos | addon (medium): Enforcement Técnico de Políticas no Runtime com OPA e Kyverno |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ✅ Semântico | securityContext (runAsNonRoot, allowPrivilegeEscalation:false), OPA/Gatekeeper, Kyverno e admission controllers confirmados em units dedicadas; conteúdo substancial em dois addons distintos | addon (medium): Enforcement Técnico de Políticas no Runtime com OPA e Kyverno; addon (medium): Execução Segura de Containers em Clusters Kubernetes |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

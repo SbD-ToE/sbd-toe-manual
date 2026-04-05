@@ -1,130 +1,71 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Normativa - Requisitos de Segurança
-description: Correspondência entre as práticas de requisitos e frameworks como SSDF, SAMM, ISO, DSOMM
-tags: [rastreabilidade, frameworks, SSDF, SAMM, DSOMM, ISO]
+title: Rastreabilidade — Capítulo 02: Requisitos de Segurança
+description: Rastreabilidade das práticas de requisitos de segurança face a frameworks normativos com pilot formal
+tags: [rastreabilidade, requisitos, ssdf, asvs, slsa, nis2]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 02: Requisitos de Segurança
+# Rastreabilidade — Capítulo 02: Requisitos de Segurança
 
-Este ficheiro estabelece a **rastreabilidade entre as práticas de definição, validação e gestão de requisitos de segurança** descritas neste capítulo e os principais frameworks de segurança aplicacional.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre os requisitos normativos e técnicos de segurança por meio de requisitos formalizados, validados e rastreáveis por risco.
+Este capítulo define **requisitos de segurança proporcionais ao risco**, rastreáveis e testáveis, integrados no backlog de produto. É o capítulo com maior volume de referências externas verificadas.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                          | Prática do Capítulo 02 que responde                            | Nível de Cobertura |
-|----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.1 / PW.4                              | Catálogo de requisitos, critérios, validação estruturada       | ✅ Completo         |
-| **OWASP SAMM v2.1** - Design → Security Requirements     | Requisitos por risco e tipo de aplicação, rastreabilidade      | ✅ Nível 3          |
-| **BSIMM13** - Requirements & Attack Models (AM1–AM2)     | Requisitos funcionais de segurança, ligados a ameaças          | ✅ Nível 2          |
-| **OWASP ASVS v5** - All levels (V1–V14)                  | Base para o catálogo de requisitos REQ-XXX                     | ✅ Completo         |
-| **ISO/IEC 27034** - Security Control Specification       | Requisitos testáveis, rastreáveis e auditáveis                 | ✅ Completo         |
-| **CIS Controls v8** - Múltiplos                          | Aplicação prática dos requisitos por controlo específico       | ✅ Completo         |
-| **ENISA SDLC / DevSecOps** - Security Requirements       | Integração de requisitos no ciclo de vida, backlog, validação  | ✅ Completo         |
-| **OWASP DSOMM** - Design & Development                   | Requisitos estruturados, reutilizáveis e alinhados a práticas de maturidade | ⚠️ Parcial      |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SCBI — Secure Coding & Build Integrity | Requisitos de codificação segura e critérios de aceitação |
+| ACO-ATB — Attack Surface & Threat Boundaries | Requisitos derivados de análise de superfície de ataque |
+| ACO-IAT — Identity, Access & Trust | Requisitos de autenticação, autorização e controlo de acesso |
+| ACO-SPC — Security Policy & Controls | Requisitos mapeados para políticas e controlos formais |
+
+> **Nota adjunct:** A família ASVS `secure_configuration_baseline_gap` e SSDF PW.9 apontam para pressão de configuração segura por omissão — tema coberto parcialmente aqui mas sem secção dedicada. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-Cobertura total dos objetivos **PW.1** (definição sistemática de requisitos por risco) e **PW.4** (validação técnica e formal), suportada por:
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PW.1 | Design Software to Meet Security Requirements | ✅ Explícito | Catálogo estruturado de requisitos por domínio |
+| SSDF PW.4 | Establish Security Criteria | ✅ Explícito | Critérios de aceitação por nível de risco (L1–L3) |
+| ASVS injection_and_sanitization | Injection prevention | ✅ Explícito | Row publicada; cobertura de validação de input |
+| ASVS input_contract_validation | Structured input validation | ✅ Explícito | Row publicada |
+| ASVS validation_before_internal_use | Validation before deserialization | ✅ Explícito | Row publicada |
+| ASVS secure_coding_discipline_gap | Generic secure coding discipline | 🔴 Gap | Semantics presentes mas sem family dedicada; candidato a addon |
+| ASVS secure_configuration_baseline_gap | Secure defaults & baseline | 🔴 Gap | Semantics presentes mas sem secção dedicada |
+| ASVS authentication_strength_and_assurance | Authentication strength | ⚠️ Parcial | Presente; não embalado como family ASVS |
+| CIS-5 | Account Management | ⚠️ Parcial | Semantics presentes; CIS cobre âmbito empresarial mais largo |
+| CIS-6 | Access Control Management | ✅ Explícito | Row publicada |
+| SLSA-VERIFY-EXPECTATIONS | Check verification expectations | ⚠️ Parcial | Critérios de aceitação presentes |
+| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Critérios de proveniência |
+| NIS2 | Medidas técnicas de segurança | ✅ Explícito | Overlay regulatório publicado |
 
-- [Catálogo de Requisitos](../addon/catalogo-requisitos)
-- [Matriz por Risco](../addon/matriz-controlos-por-risco)
-- [Validação Testável](../addon/validacao-requisitos)
-
----
-
-### 🧱 OWASP SAMM v2.1
-
-Práticas que asseguram **nível 3 em “Security Requirements”**:
-
-- Catálogo estruturado, proporcional ao risco, com rastreabilidade;
-- Taxonomia de requisitos e ligação a testes e validações;
-- Visibilidade operacional por backlog e exceções controladas.
-
----
-
-### 📊 BSIMM13
-
-Cobertura das práticas AM1–AM2:
-
-- Definição sistemática de requisitos com origem em modelos de ameaça;
-- Critérios de aceitação por requisito;
-- Requisitos aplicados em diferentes fases do SDLC.
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🔐 OWASP ASVS v5
+## Modelos de maturidade — pendente de normalização
 
-O catálogo de requisitos do SbD-ToE baseia-se no ASVS v5:
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
-- Requisitos agrupados por temas e níveis de risco;
-- Mapeamento direto às categorias V1–V14;
-- Rastreabilidade e testabilidade embutidas.
-
----
-
-### 🏛️ ISO/IEC 27034
-
-Práticas alinhadas com a especificação de controlos de segurança:
-
-- Requisitos definidos com objetivos claros e validação associada;
-- Integração no ciclo de vida e evidência auditável.
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Design → Security Requirements |
+| OWASP DSOMM | Requirements, Architecture, Verification |
+| BSIMM13 | Intelligence → Requirements and Attack Models |
 
 ---
 
-### 📐 CIS Controls v8
+## Ligações com outros capítulos
 
-Requisitos do capítulo mapeiam controlos como:
-
-- Control 6 (Account Management),
-- Control 8 (Audit Log Management),
-- Control 16 (Application Software Security),
-- E outros, via segmentação temática por domínio técnico.
-
----
-
-### 🔄 ENISA SDLC / DevSecOps
-
-As práticas incluem:
-
-- Integração nativa de requisitos em artefactos e processos de desenvolvimento;
-- Validação por critérios, testes e revisões;
-- Rastreabilidade para exceções e coverage.
-
----
-
-### ⚙️ OWASP DSOMM - Domínio "Design & Development"
-
-O capítulo suporta parcialmente os objetivos de maturidade definidos no domínio **Design & Development** do DSOMM:
-
-| Subdomínio DSOMM         | Estado no Capítulo 02                                 |
-|--------------------------|-------------------------------------------------------|
-| Security Requirements    | ✅ Completamente coberto - catálogo, validação, tags   |
-| Reusable Controls        | ⚠️ Parcial - matriz por risco, taxonomia, exceções     |
-| Design Guidelines        | ⚠️ Parcial - refletidas no conteúdo dos requisitos     |
-| Policy as Code           | 🔄 Opcional - abordado em `30-recomendacoes-avancadas` |
-
-> 📌 O capítulo permite atingir **maturidade intermédia (nível 2–3)** no DSOMM, se complementado com políticas formais e práticas de rastreabilidade reforçadas.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-Este capítulo depende diretamente de:
-
-- **Capítulo 01** - define a proporcionalidade por risco (L1–L3);
-- **Capítulo 03** - modelo de ameaças origina requisitos;
-- **Capítulo 04** - requisitos especializados por arquitetura;
-- **Capítulo 10** - reforça a maturidade atingida pelas práticas aqui definidas;
-- **Capítulos 13 e 14** - permitem governação contínua e exceções rastreáveis.
-
-> ✅ Esta rastreabilidade demonstra que o Capítulo 02 fornece **a espinha dorsal normativa da segurança aplicacional**, traduzindo requisitos normativos em práticas rastreáveis e validadas ao longo do ciclo de vida.
-
+- **Cap. 01** — classificação de risco determina o catálogo de requisitos aplicáveis (L1/L2/L3)
+- **Cap. 03** — threat modeling alimenta e valida os requisitos definidos aqui
+- **Cap. 06** — requisitos implementados e verificados no desenvolvimento
+- **Cap. 10** — requisitos testados com critérios de aceitação formais
+- **Cap. 14** — exceções a requisitos requerem aprovação formal

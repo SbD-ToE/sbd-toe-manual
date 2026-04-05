@@ -1,126 +1,67 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Normativa e Frameworks - Testes de Segurança
-description: Mapeamento entre as práticas deste capítulo e os requisitos normativos e frameworks de segurança.
-tags: [rastreabilidade, frameworks, ssdf, samm, slsa, dsoom]
+title: Rastreabilidade — Capítulo 10: Testes de Segurança
+description: Rastreabilidade das práticas de testes de segurança face a frameworks normativos com pilot formal
+tags: [rastreabilidade, testes, validacao, ssdf, asvs, cis, slsa, dora]
 sidebar_position: 25
 ---
 
+# Rastreabilidade — Capítulo 10: Testes de Segurança
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 10: Testes de Segurança
-
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança associados à validação, cobertura e integração de testes de segurança no ciclo de vida de software.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos técnicos e normativos exigidos para garantir que os riscos são efetivamente mitigados por testes de segurança automatizados e manuais.
+Este capítulo define uma **estratégia de testes de segurança proporcional ao risco** — SAST, DAST, IAST, fuzzing, pentesting — integrada no pipeline CI/CD com critérios de aceitação formais e gestão de findings.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                          | Prática do Capítulo 10 que responde                            | Nível de Cobertura |
-|----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.7 / RV.1 / RV.3                       | Validação automatizada, gestão de findings, cobertura por risco | ✅ Completo         |
-| **OWASP SAMM v2.1** - Verification → Security Testing    | Estratégia de testes, cobertura, testes dinâmicos e manuais    | ✅ Nível 3          |
-| **BSIMM13** - Security Testing (ST1–ST3)                 | Integração com CI/CD, testes múltiplos, correlação findings     | ✅ Nível 2          |
-| **ISO/IEC 27001** - A.14.2.8 / A.12.6.1                  | Testes técnicos de segurança e gestão de vulnerabilidades       | ✅ Completo         |
-| **ISO/IEC 27034** - Security Testing                     | Validação dos requisitos de segurança e rastreabilidade         | ✅ Completo         |
-| **CIS Controls v8** - Control 16.8 / 18.3                | Testes contínuos, gestão de findings, correções proporcionais   | ✅ Completo         |
-| **ENISA DevSecOps** - Secure Testing & Automation        | Validação contínua, cobertura por risco, gates e automação      | ✅ Completo         |
-| **OWASP DSOMM** - Testing / Design & Development         | Testes automáticos, regressão, gates, rastreabilidade           | ✅ Nível 2/3        |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-IVF — Integrity Verification & Findings | Estratégia de testes, execução, gestão de findings e rastreabilidade |
+| ACO-ATB — Attack Surface & Threat Boundaries | Cobertura de testes baseada em vetores de ataque identificados |
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-Cobertura total de:
-- **PW.7**: testes automáticos integrados (SAST, DAST, IAST, fuzzing - Addons 01–04);
-- **RV.1**: identificação e rastreio de vulnerabilidades (Addon 08);
-- **RV.3**: correção, validação e aceitação formal (Addon 08).
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PO.4 | Define Security Check Criteria | ✅ Semântico | Estratégia de testes proporcional ao risco |
+| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação automatizada integrada no pipeline |
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Row publicada; gestão de vulnerabilidades |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Row publicada; correção e validação |
+| CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Testing adjacent; CIS cobre âmbito mais largo |
+| CIS-18 | Penetration Testing | ✅ Explícito | Row publicada; pentesting formal e planeado |
+| ASVS injection_and_sanitization | Injection testing | ✅ Explícito | Row publicada |
+| ASVS validation_before_internal_use | Validation testing | ✅ Explícito | Row publicada |
+| ASVS controlled_failure | Controlled failure testing | ⚠️ Parcial | Testing adjacent |
+| ASVS error_handling_logging_hygiene | Error handling testing | ⚠️ Parcial | Testing adjacent |
+| SLSA-VERIFY-BUILD-LEVEL | Build level verification | ⚠️ Parcial | Test evidence e critérios de maturidade |
+| DORA | Testes de segurança baseados em risco | ✅ Explícito | Overlay regulatório publicado |
 
----
-
-### 🧱 OWASP SAMM v2.1
-
-Atinge **nível 3** em *Security Testing*:
-- Testes por tipo de aplicação e risco (Addon 00, 06);
-- Automatização e regressão (Addon 07);
-- Testes manuais e exploratórios (Addon 11).
-
----
-
-### 📊 BSIMM13
-
-Cobertura dos domínios:
-- **ST1–ST3**: testes integrados no ciclo, rastreáveis, com foco em risco e validação contínua;
-- Relacionamento direto com os requisitos definidos no Capítulo 02.
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Modelos de maturidade — pendente de normalização
 
-Controlos aplicáveis:
-- **A.14.2.8**: testes técnicos de segurança antes da entrega;
-- **A.12.6.1**: gestão de vulnerabilidades e rastreabilidade.
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
----
-
-### 🔐 ISO/IEC 27034
-
-Cobre:
-- Validação formal dos requisitos de segurança;
-- Rastreabilidade entre testes, código e requisitos (Addon 06).
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Verification → Security Testing |
+| OWASP DSOMM | Testing, Design & Development |
+| BSIMM13 | Security Testing (ST1–ST3) |
 
 ---
 
-### 📐 CIS Controls v8
+## Ligações com outros capítulos
 
-Controlos contemplados:
-- **16.8**: integração de testes no CI/CD;
-- **18.3**: gestão, tratamento e aceitação formal de findings.
-
----
-
-### 🔄 ENISA DevSecOps
-
-Cobertura total de:
-- Estratégia de testes segura, automatizada, escalável;
-- Cobertura por tipo de risco, severidade e contexto;
-- Gates de aprovação automática com rastreabilidade.
-
----
-
-### 🧪 OWASP DSOMM
-
-Cobertura sólida dos domínios **Testing** e **Design & Development**, incluindo:
-
-- **Automated Security Testing**: execução sistemática em pipeline (Addons 01–04);
-- **Test Coverage**: critérios por tipo e criticidade da aplicação (Addon 00);
-- **Feedback Loop**: dashboards, PR comments e alertas automáticos (Addon 07, 08);
-- **Regression Tests for Findings**: testes escritos a partir de vulnerabilidades (Addon 05);
-- **PenTesting**: âmbito formal e planeado (Addon 11);
-- **Manage Security Findings**: gestão completa do ciclo de vida de findings (Addon 08);
-- **Apply Test Gates**: thresholds e bloqueios configurados (Addon 06);
-- **Document Testing Strategy**: estratégia formal (Addon 00);
-- **Prioritize Security Work**: aplicação proporcional L1–L3 (Intro e matriz);
-- **Measure Progress**: rastreabilidade com backlog e dashboards (Addon 08).
-
-> 📌 O capítulo responde diretamente às práticas esperadas nos níveis 2–3 do OWASP DSOMM, sem dependência de ferramentas proprietárias e com rastreabilidade objetiva.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-Este capítulo integra-se diretamente com:
-
-- **Capítulo 01** - define a estratégia de testes proporcional ao risco;
-- **Capítulo 02** - requisitos validados diretamente com cobertura rastreável;
-- **Capítulo 06** - testes complementam validações em desenvolvimento;
-- **Capítulo 07** - integração com pipeline CI/CD;
-- **Capítulo 14** - findings e falhas ligam-se a processos de exceção e auditoria;
-- **Capítulo 13** - práticas avançadas ampliam a cobertura para métricas e observabilidade;
-- **Capítulo 03** - threat modeling como origem de casos de teste e vetores ofensivos;
-- **Capítulo 08** - aplicação das práticas a pipelines e projetos IaC.
-
-> 📌 Esta rastreabilidade comprova que os testes de segurança no SbD-ToE são estruturados, rastreáveis, proporcionais ao risco e operacionalmente sustentáveis.
+- **Cap. 01** — estratégia de testes proporcional à classificação de risco L1–L3
+- **Cap. 02** — requisitos testados com critérios de aceitação formais
+- **Cap. 03** — vetores de threat modeling traduzidos em casos de teste
+- **Cap. 06** — testes complementam as validações em desenvolvimento
+- **Cap. 07** — testes integrados como gates obrigatórios no pipeline
+- **Cap. 14** — findings ligados a processos de exceção e auditoria

@@ -1,92 +1,71 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Containers e Imagens
-description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos principais frameworks de segurança aplicáveis a containers, imagens e registos
-tags: [rastreabilidade, frameworks, containers, imagens, SAMM, SSDF, SLSA, DSOMM, CIS]
+title: Rastreabilidade — Capítulo 09: Containers e Imagens
+description: Rastreabilidade das práticas de segurança de containers face a frameworks normativos com pilot formal
+tags: [rastreabilidade, containers, imagens, ssdf, slsa, capec, asvs]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 09: Containers e Imagens
+# Rastreabilidade — Capítulo 09: Containers e Imagens
 
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança relacionados com **construção, assinatura, proveniência, hardening e execução segura de containers e imagens**.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os controlos aplicáveis à segurança de containers, desde o _build_ até ao _runtime_.
+Este capítulo define práticas de **construção, assinatura, proveniência, hardening e execução segura de containers e imagens** — desde o build até ao runtime.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                                                                 | Práticas do Capítulo 09 que respondem                                                                                          | Nível de Cobertura |
-|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| **NIST SSDF v1.1** - PW.5 (Build integrity), RV.1–RV.2 (Verification), PS.1 (Review)            | _Image scanning_ em CI/CD, bloqueios por severidade, verificação de integridade/assinatura, validação de manifestos antes do deploy | ✅ Completo         |
-| **OWASP SAMM v2.1** - Deployment (DEP 1.2), Verification (2.A/2.B), Governance (GOV 1.2)        | Pipelines rastreáveis, _policy-as-code_, revisão formal, _gates_ de segurança, controlo de registos privados                      | ✅ Nível 3          |
-| **BSIMM13** - CMVM 1.3, SE 2.2, ST 1.1–1.4                                                       | _Compliance/config scanning_, gestão de vulnerabilidades em imagens, proveniência e auditoria de _builds_ e _deploys_             | ✅ Nível 2/3        |
-| **SLSA v1.0** - L2–L3 (Source/Build/Provenance)                                                 | Assinatura e atestações de proveniência, _digest pinning_, _pipeline_ confiável e reprodutível                                   | ✅ Parcial→Completo |
-| **CIS Benchmarks** - Docker & Kubernetes                                                         | Hardening do _daemon/runtime_, _securityContext_, políticas de rede, _admission controllers_, _seccomp/AppArmor/SELinux_          | ✅ Completo         |
-| **ENISA Cloud Security Baseline** - Container Security                                           | Gestão de registos, isolamento, _least privilege_, varredura contínua de vulnerabilidades e configuração                          | ✅ Completo         |
-| **OWASP DSOMM v2** - Supply Chain, Build & Deploy, Ops Monitoring                               | _Build_ determinístico, validações automáticas, observabilidade e trilhos de auditoria de alterações                              | ✅ Nível 2/3        |
-| **ISO/IEC 27001/27002** - Secure development & change management (alto nível)                   | Regras formais para promoção de imagens, controlo de alteração e evidência de validação antes de produção                         | ✅ Parcial          |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-RPR — Release Process & Readiness | Assinatura de imagens, proveniência, aprovação antes de deploy |
+| ACO-TSV — Third-party & Supply Visibility | Imagens base e dependências de containers |
+| ACO-IVF — Integrity Verification & Findings | Image scanning, validação de manifesto, findings por severidade |
 
-> Nota: Para **ISO/IEC 27001/27002** a correspondência é intencionalmente **de alto nível**, focada em princípios de desenvolvimento/alteração segura e evidência auditável (sem dependência de numeração específica de controlos).
+> **Nota adjunct:** ASVS `secure_configuration_baseline_gap` tem pressão aqui — containers têm semantics de configuração segura (securityContext, policies) mas sem secção dedicada. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF v1.1
-Cobertura direta de:
-- **PW.5** - Integridade de _builds_: _digest pinning_, reprodutibilidade, assinatura e atestação de imagens.
-- **RV.1–RV.2** - Verificação contínua: _image scanning_ (vulnerabilidades, licenças, configuração) com bloqueios por severidade.
-- **PS.1** - Revisão de alterações: validação de manifestos (Kubernetes/Helm/Compose) e aprovações formais antes do _deploy_.
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | Integridade de imagem; digest pinning; reprodutibilidade |
+| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Manifesto e aprovação formal antes de deploy |
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Image scanning contínuo com bloqueios por severidade |
+| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ✅ Explícito | Scanning + critérios de aceitação formais |
+| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados; proveniência presente |
+| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico |
+| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Atestações e proveniência de imagens |
+| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Row publicada |
+| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | Container provenance |
+| SLSA-BUILD-PLATFORM-ISOLATION | Isolation | ⚠️ Parcial | Container isolation semântica |
+| SLSA-VERIFY-DEPENDENCIES | Check dependencies | ⚠️ Parcial | Container deps e SBOM presentes |
+| CAPEC-206 | Signing Malicious Code | ✅ Semântico | Artefactos assinados com verificação |
+| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada via digest pinning |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔴 Gap | Containers têm semantics; sem secção dedicada a baseline |
 
-### 🧱 OWASP SAMM v2.1
-Atinge **nível 3** nos domínios:
-- **Deployment (DEP 1.2)** - _gates_ de segurança em CI/CD, controlo de promoção entre ambientes, registos privados e auditáveis.
-- **Verification (2.A/2.B)** - _scanning_ automatizado e validação de configuração com _policy-as-code_ (OPA/Conftest, _admission controllers_).
-- **Governance (GOV 1.2)** - Regras formais de operação de registos, retenção e limpeza de imagens, ownership e auditoria.
-
----
-
-### 📊 BSIMM13
-Práticas alinhadas com:
-- **CMVM 1.3** - Monitorização de conformidade e variações (p. ex., _drift_ entre imagens definidas e executadas).
-- **SE 2.2 / ST 1.1–1.4** - Integração de _scanners_ no _pipeline_, critérios de aceitação por severidade, registos de evidências e _playbooks_ de correção.
-
----
-
-### 🧬 SLSA v1.0
-- **L2–L3** - Foco em proveniência: assinaturas, atestações, trilho de quem construiu o quê, quando e com que entradas; empacotamento seguro do _build_ de imagens e restrições de origem.
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🧰 CIS Benchmarks (Docker & Kubernetes)
-- Hardening de _runtime_ (parâmetros do _daemon_, _cgroups_, _namespaces_), **utilizador não-root**, capacidades mínimas, políticas de rede, e **_admission controllers_** para impor padrões de segurança.
+## Modelos de maturidade — pendente de normalização
+
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Implementation → Deployment, Verification |
+| OWASP DSOMM | Supply Chain, Build & Deploy, Ops Monitoring |
+| BSIMM13 | CMVM 1.3, SE 2.2, ST 1.1–1.4 |
 
 ---
 
-### ☁️ ENISA Cloud Security Baseline
-- Boas práticas de **registos privados e controlados**, isolamento _runtime_, gestão de vulnerabilidades e **observabilidade** de _deploys_ e alterações.
+## Ligações com outros capítulos
 
----
-
-### 🔄 OWASP DSOMM v2
-- **Supply Chain / Build & Deploy** - _Builds_ determinísticos, validações automáticas e políticas de promoção.
-- **Ops Monitoring** - _Audit trail_ completo: correlação entre _commit_, _pipeline run_, _digest_ e _deploy_ efetivo; deteção de _shadow containers_.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-Este capítulo integra e depende de práticas descritas noutros capítulos:
-
-- **Capítulo 05 - Dependências, SBOM e SCA**: inventário de componentes e vulnerabilidades herdadas pelas imagens base.  
-- **Capítulo 07 - CI/CD Seguro**: pontos de controlo automáticos no _pipeline_ (gates, _policy enforcement_, proveniência).  
-- **Capítulo 08 - IaC e Infraestrutura como Código**: coerência entre manifestos de _deploy_ (Kubernetes/Helm/Compose) e governação técnica de ambientes.  
-- **Capítulo 10 - Testes de Segurança**: integração de _scanners_, testes funcionais de segurança e validações de _runtime_.  
-- **Capítulo 14 - Governação e Contratação**: políticas de operação de registos, retenção, acesso e auditoria (suporte organizacional).
-
----
-
-> 📌 Este capítulo fornece a camada técnica essencial para garantir **integridade, proveniência e execução segura** de artefactos em produção. As práticas aqui descritas permitem **evidenciar conformidade** com requisitos modernos de _software supply chain security_ (SSDF, SLSA) e sustentam auditorias em contexto **NIS 2 / DORA**.
+- **Cap. 05** — inventário de componentes e vulnerabilidades herdadas pelas imagens base
+- **Cap. 07** — gates de controlo automático no pipeline (policy enforcement, proveniência)
+- **Cap. 08** — manifests de deploy coerentes com a infraestrutura provisionada
+- **Cap. 10** — scanners e testes funcionais de segurança integrados
+- **Cap. 14** — políticas de operação de registos, retenção e auditoria

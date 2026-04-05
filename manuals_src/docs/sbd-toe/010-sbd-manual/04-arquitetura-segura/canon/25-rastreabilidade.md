@@ -1,132 +1,71 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 04
-description: Mapeamento das práticas deste capítulo face a frameworks normativos e requisitos de segurança reconhecidos
-tags: [rastreabilidade, arquitetura, frameworks, ssdf, samm, slsa, iso, dsomm]
+title: Rastreabilidade — Capítulo 04: Arquitetura Segura
+description: Rastreabilidade das práticas de arquitetura segura face a frameworks normativos com pilot formal
+tags: [rastreabilidade, arquitetura, ssdf, asvs, slsa, cis]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 04: Arquitetura Segura
+# Rastreabilidade — Capítulo 04: Arquitetura Segura
 
-Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança aplicacional no que diz respeito à conceção, validação e governação da arquitetura.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos técnicos e normativos associados à arquitetura de software segura.
+Este capítulo define **padrões de arquitetura segura** — zonas de confiança, separação de funções, controlo de acesso por design — como fundação técnica verificável e rastreável.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                                | Prática do Capítulo 04 que responde                              | Nível de Cobertura |
-|----------------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.1 / PW.4 / RV.1                             | Requisitos de arquitetura, validação formal e rastreabilidade     | ✅ Completo         |
-| **OWASP SAMM v2.1** - Design → Architecture & Design           | Zonas de confiança, padrões, validação técnica                   | ✅ Nível 3          |
-| **BSIMM13** - Architecture Analysis (AA1–AA3)                  | Modelação, validação formal e documentação de arquitetura         | ✅ Nível 2          |
-| **ISO/IEC 27001** - A.14.2.1 / A.14.2.5                        | Definição, revisão e validação técnica da arquitetura             | ✅ Completo         |
-| **ISO/IEC 27034** - Application Security Architecture          | Referenciais, práticas e rastreabilidade de controlos de arquitetura | ✅ Completo       |
-| **SLSA v1.0** - Build Design Integrity (Nível 2–3)             | Segmentação e isolamento por design, definição da arquitetura segura| ✅ Parcial          |
-| **CIS Controls v8** - Control 4.1 / 4.3 / 16.1                 | Definição da arquitetura, separação de funções e controlo de execução| ✅ Completo         |
-| **ENISA SDLC / DevSecOps** - Secure Architecture & Review      | Validação formal, zonas de risco, diagramas e documentação        | ✅ Completo         |
-| **OWASP DSOMM** - Design & Development                         | Práticas formais de arquitetura, validações, rastreabilidade      | ✅ Nível 3          |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-ATB — Attack Surface & Threat Boundaries | Zonas de confiança, fronteiras e superfícies de ataque por design |
+| ACO-IAT — Identity, Access & Trust | Autenticação e autorização por design; princípio do menor privilégio |
+| ACO-SCBI — Secure Coding & Build Integrity | Padrões de arquitetura como input de design de código seguro |
 
 ---
 
-## 🧠 Notas Explicativas por Framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-- **PW.1**: Requisitos de arquitetura definidos com base na análise de risco (`ARC-001` a `ARC-011`);
-- **PW.4**: Validação da arquitetura antes de desenvolvimento e entrega, com documentação formal;
-- **RV.1**: Existência de rastreabilidade entre os requisitos, artefactos de arquitetura e decisões técnicas.
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PW.2 | Review the Software Design | ✅ Semântico | Revisão de arquitetura como disciplina de security review |
+| ASVS authorization_and_least_privilege | Authorization & least privilege | ⚠️ Parcial | Presente; não embalado explicitamente como family ASVS |
+| ASVS backend_component_authentication | Backend component auth | ⚠️ Parcial | Architecture e infra semantics |
+| ASVS backend_least_privilege | Backend least privilege | ⚠️ Parcial | Presente; não embalado |
+| ASVS architecture_and_dependency_hardening | Architecture hardening | ⚠️ Parcial | Presente; embalagem mais específica necessária |
+| ASVS identity_provider_and_federated_auth | Federated authentication | ⚠️ Parcial | OAuth/OIDC semantics presentes |
+| ASVS oauth_and_oidc_service_trust | OAuth & OIDC trust | ⚠️ Parcial | Architecture e deploy semantics |
+| ASVS secure_transport | Secure transport | ⚠️ Parcial | Architecture e deploy semantics |
+| ASVS service_to_service_auth | Service-to-service auth | ⚠️ Parcial | Architecture e IaC |
+| ASVS session_and_token_trust | Session & token trust | ⚠️ Parcial | Architecture e deploy |
+| ASVS frontend_browser_security | Frontend/browser security | ⚠️ Parcial | Requirements e architecture |
+| ASVS api_protocol_specific | API protocol specifics | ⚠️ Parcial | Architecture e deploy |
+| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
+| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Isolation semantics de arquitetura |
 
----
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
-### 🧱 OWASP SAMM v2.1
-
-Permite atingir **nível 3** no domínio *Architecture & Design*:
-- Zonas de confiança bem definidas;
-- Padrões de arquitetura aprovados e reutilizados;
-- Validações formais com critérios proporcionais ao risco;
-- Rastreabilidade entre requisitos e componentes técnicos.
-
----
-
-### 📊 BSIMM13
-
-Cobertura dos domínios:
-- **AA1**: Mapeamento da arquitetura com base em zonas, fluxos e ativos;
-- **AA2**: Validações técnicas com critérios definidos, recorrência e rastreio;
-- **AA3**: Documentação formal e versionada das decisões e diagramas.
+> **Nota:** Este capítulo é o mais referenciado pelos pilots MCP e ASVS em cobertura parcial. Não há gap de conteúdo — a pressão é de embalagem e referenciação cruzada mais explícita.
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Modelos de maturidade — pendente de normalização
 
-- **A.14.2.1**: Integração da arquitetura segura como parte do processo de desenvolvimento seguro;
-- **A.14.2.5**: Validação da arquitetura e dos controlos antes da entrega do sistema.
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
----
-
-### 🔐 ISO/IEC 27034
-
-- Tratamento da arquitetura como artefacto formal e verificável;
-- Integração de controlos de segurança diretamente na estrutura da arquitetura;
-- Rastreabilidade entre requisitos, ameaças, controlos e documentação técnica.
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Design → Security Architecture |
+| OWASP DSOMM | Design & Development |
+| BSIMM13 | Architecture Analysis (AA1–AA3) |
 
 ---
 
-### 🧬 SLSA v1.0
+## Ligações com outros capítulos
 
-- Contribuição parcial para **Build Design Integrity**:
-  - Diagrama da arquitetura claro com delimitação de zonas;
-  - Isolamento lógico proposto, mas dependente da camada infraestrutural;
-- Cobertura plena exige articulação com práticas do Capítulo 07 (CI/CD Seguro).
-
----
-
-### 🧱 CIS Controls v8
-
-- **4.1 / 4.3**: Separação lógica de ativos com base na função e risco;
-- **16.1**: Estrutura da arquitetura como mecanismo de controlo da superfície de ataque e configuração segura.
-
----
-
-### 🛰️ ENISA SDLC / DevSecOps
-
-- Práticas recomendadas de conceção segura formalmente representadas;
-- Revisão da arquitetura com critérios de exposição, impacto e risco;
-- Reutilização de modelos referenciais e documentação versionada.
-
----
-
-### 🧩 OWASP DSOMM - Design & Development
-
-- Definição formal da arquitetura, zonas de confiança e fronteiras
-- Validações de arquitetura proporcionais ao risco 
-- Rastreabilidade entre requisitos e componentes
-- Uso da arquitetura como base para identificação de ameaças 
-- Diagramas versionados, ADRs, exceções formais 
-
----
-
-## 🔗 Ligações com Outros Capítulos
-
-Este capítulo articula-se diretamente com:
-
-- **Capítulo 01 - Gestão de Risco**: as zonas de confiança e validações são proporcionais ao risco.
-- **Capítulo 02 - Requisitos de Segurança**: os requisitos `REQ-XXX` são rastreados até `ARC-XXX`.
-- **Capítulo 03 - Threat Modeling**: a arquitetura segura é a base para identificação de ameaças.
-- **Capítulo 09 - Containers e Zonas**: a arquitetura lógica sustenta o modelo de segmentação.
-- **Capítulo 10 - Testes de Validação**: a arquitetura é a entrada principal dos testes estruturais.
-
----
-
-## ✅ Conclusão
-
-A rastreabilidade demonstrada neste capítulo comprova que as práticas de arquitetura segura prescritas:
-
-- **Cumprem na íntegra os principais frameworks de segurança e normas internacionais**;
-- Funcionam como **estrutura de controlo técnico verificável, rastreável e auditável**;
-- São indispensáveis para **atingir níveis de maturidade elevados (nível 3)** em SAMM, SSDF, DSOMM e outros referenciais;
-- Constituem a base sobre a qual se constroem os restantes pilares do modelo SbD-ToE.
-
-> 🧱 **Este capítulo é fundacional**: sem arquitetura segura, nenhuma prática de threat modeling, validação, rastreabilidade ou exceção pode ser corretamente aplicada.
+- **Cap. 01** — zonas de confiança e validações proporcionais ao risco
+- **Cap. 02** — requisitos de arquitetura derivados dos REQ-XXX
+- **Cap. 03** — arquitetura segura como output primário de threat modeling
+- **Cap. 09** — arquitetura lógica sustenta modelo de segmentação de containers
+- **Cap. 10** — arquitetura é input principal de testes estruturais

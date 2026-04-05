@@ -1,121 +1,66 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 05
-description: Análise de rastreabilidade das práticas deste capítulo face aos principais frameworks normativos
-tags: [rastreabilidade, frameworks, dependencias, sbom, sca, supply-chain, dsomm]
+title: Rastreabilidade — Capítulo 05: Dependências, SBOM e SCA
+description: Rastreabilidade das práticas de gestão de dependências e supply chain face a frameworks normativos com pilot formal
+tags: [rastreabilidade, dependencias, sbom, sca, supply-chain, ssdf, slsa, capec, cis, dora, nis2]
 sidebar_position: 25
+---
+
+# Rastreabilidade — Capítulo 05: Dependências, SBOM e SCA
+
+Este capítulo define práticas de **gestão segura de dependências** — inventário (SBOM), análise de composição (SCA), critérios de aceitação e governação de supply chain de software.
 
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 05: Dependências, SBOM e SCA
+## Camada AppSec Core
 
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks relacionados com gestão segura de dependências, SBOM (Software Bill of Materials) e análise de composição de software (SCA).
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e de maturidade técnica associados à gestão segura de dependências e supply chain.
-
-> **Nota:** O SbD-ToE reconhece que a completude de inventário de dependências é limitada por fatores técnicos e operacionais.  
-> As práticas deste capítulo mitigam esse risco através da definição explícita de fronteiras de inventário, deteção de desvios e governação de dependências emergentes, reforçando os objetivos de frameworks como SSDF e SLSA sem assumir inventários perfeitos.
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-TSV — Third-party & Supply Visibility | SBOM, inventário de dependências, controlo de origem |
+| ACO-IVF — Integrity Verification & Findings | Análise contínua de vulnerabilidades (SCA), gestão de findings |
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Frameworks normativos — cobertura verificada
 
-| Requisito / Domínio (Framework)                                 | Prática do Capítulo 05 que responde                          | Nível de Cobertura |
-|-----------------------------------------------------------------|--------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.3 (Componentes de terceiros seguros)         | Inventário sistemático (SBOM), análise SCA, critérios de aceitação | ✅ Completo         |
-| **NIST SSDF** - RV.1 (Identificação de vulnerabilidades)        | Análise contínua de composição (SCA), rastreabilidade        | ✅ Completo         |
-| **OWASP SAMM** - Operations → Component Management              | Inventário completo (Addon 01), análise contínua, governança (Addon 02, 03, 05) | ✅ Nível 3          |
-| **BSIMM13** - SFD (Software Dependency Management)              | Inventário, política formal de aceitação e atualização, análise periódica | ✅ Nível 3          |
-| **SLSA v1.0** - Provenance & Dependencies (Nível 3)             | SBOM formal, controlo de registos de origem, validação contínua (Addon 01, 07) | ✅ Completo         |
-| **OWASP DSOMM** - Build & Deploy, Governance, Verification      | SCA contínua, SBOM integrado no pipeline, políticas e controlo de findings | ✅ Nível 2/3        |
-| **ISO/IEC 27001** - A.12.6.2 (Gestão Técnica de Vulnerabilidades)| Análise SCA contínua, rastreabilidade de vulnerabilidades (Addon 02, 08) | ✅ Completo         |
-| **ISO/IEC 27001** - A.15.1.3 (Supply Chain Security)            | Avaliação contínua do risco de supply chain (Addon 06)       | ✅ Completo         |
-| **CIS Controls v8** - Control 16.2 (Software Inventory)         | Inventário e SBOM completo, rastreabilidade                  | ✅ Completo         |
-| **CIS Controls v8** - Control 16.5 (Patch Management)           | Política formal de atualizações e aceitação de risco (Addon 05, 09) | ✅ Completo         |
-| **ENISA DevSecOps** - Dependency Management & SBOM              | Integração em pipelines CI/CD, geração contínua de SBOM (Addon 04) | ✅ Completo         |
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PW.3 | Verify Third-Party Software | ✅ Explícito | Inventário sistemático (SBOM), critérios de aceitação SCA |
+| SSDF PW.4 | Reuse Well-Secured Software | ✅ Semântico | Componentes controlados e com proveniência verificada |
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Análise SCA contínua, rastreabilidade de vulnerabilidades |
+| CAPEC-185 | Malicious Software Download | ✅ Semântico | Controlo de origem, allowlist de componentes |
+| CAPEC-446 | Malicious Logic via Third-Party Component | ✅ Semântico | SBOM, dependency risk, controlo de origem |
+| CAPEC-691 | Spoof Open-Source Metadata | ⚠️ Parcial | Dependency confusion adjacent; metadata verification |
+| CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software inventory presente; CIS abrange âmbito mais largo |
+| CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Dependency scanning adjacent |
+| ASVS architecture_and_dependency_hardening | Architecture & dependency hardening | ⚠️ Parcial | Dependências presente; hardening framing |
+| SLSA-VERIFY-DEPENDENCIES | Check dependencies recursively | ⚠️ Parcial | SBOM e verification presente; recursão completa não garantida |
+| DORA | Supply chain resilience | ✅ Explícito | Overlay regulatório publicado |
+| NIS2 | Segurança de fornecedores e dependências | ✅ Explícito | Overlay regulatório publicado |
 
-## 🧠 Notas explicativas por framework
-
-### 🛠️ NIST SSDF
-
-Cobertura integral dos controlos:
-- PW.3: Inventário formal (SBOM), critérios de aceitação e análise SCA contínua.
-- RV.1: Identificação e gestão de vulnerabilidades via SCA e rastreabilidade automatizada.
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🧱 OWASP SAMM
+## Modelos de maturidade — pendente de normalização
 
-Nível 3 alcançado em Component Management:
-- Inventário formal e completo (Addon 01)
-- Análise sistemática (Addon 02)
-- Governação e atualização (Addon 03, 05, 09)
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
----
-
-### 📊 BSIMM13
-
-Domínio **SFD** plenamente atendido:
-- Gestão sistemática de bibliotecas externas
-- Critérios de aceitação e atualização formalizados
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Operations → Component Management |
+| OWASP DSOMM | Build & Deploy, Governance, Verification |
+| BSIMM13 | Software Feature Design (SFD) |
 
 ---
 
-### 🔐 SLSA v1.0
+## Ligações com outros capítulos
 
-Cumprimento até Nível 3:
-- SBOM formal gerado por build
-- Proveniência de artefactos e integração CI/CD
-
----
-
-### 📦 OWASP DSOMM
-
-As práticas do capítulo respondem a quatro domínios fundamentais do DSOMM:
-
-| Domínio                 | Práticas relevantes no Capítulo 05                                 |
-|-------------------------|---------------------------------------------------------------------|
-| **Build & Deploy**      | SBOM e SCA automatizados no CI/CD (Addon 02, 03)                    |
-| **Governance & Policy** | Políticas formais de aceitação e atualização (Addon 05, 09)         |
-| **Verification**        | Rejeição de findings críticos sem exceções não justificadas         |
-| **Design & Dev**        | Escolha consciente e rastreável de bibliotecas (Addon 01)           |
-
-> O **nível de cobertura 2/3** é coerente com o atingido nos demais frameworks e demonstra integração prática das recomendações DSOMM.
-
----
-
-### 🏛️ ISO/IEC 27001
-
-Cobertura completa:
-- A.12.6.2: Gestão técnica contínua de vulnerabilidades
-- A.15.1.3: Gestão de risco em cadeia de fornecimento
-
----
-
-### 📐 CIS Controls v8
-
-Cobertura total:
-- 16.2: Inventário formal de software (SBOM)
-- 16.5: Política de atualização e aceitação de risco
-
----
-
-### 🔄 ENISA DevSecOps
-
-Cumprimento integral:
-- Geração e validação de SBOM automatizada em pipelines (Addon 04)
-
----
-
-## 🔗 Ligações com outros capítulos
-
-As práticas relativas à gestão segura de dependências, SBOM e SCA descritas neste capítulo:
-
-- **Dependem da classificação de risco** das aplicações (Capítulo 01)
-- **Apoiam a definição e validação de requisitos** (Capítulo 02)
-- **Constituem base técnica para segurança na cadeia CI/CD** (Capítulo 07)
-- **Suportam controlos contínuos de vulnerabilidades e validações** (Capítulo 10)
-
-> 📌 Esta rastreabilidade comprova que as práticas do Capítulo 05 respondem de forma estruturada e proporcional aos principais frameworks e normas, permitindo **auditoria, melhoria contínua e gestão de risco técnica e organizacional**.
+- **Cap. 01** — classificação de risco determina profundidade da análise SCA
+- **Cap. 07** — SBOM e SCA integrados como gates no pipeline CI/CD
+- **Cap. 09** — dependências de imagens base geridas via SBOM
+- **Cap. 10** — scanning de dependências como parte da estratégia de testes
+- **Cap. 14** — cláusulas contratuais de supply chain com fornecedores

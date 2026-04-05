@@ -1,114 +1,69 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Desenvolvimento Seguro
-description: Rastreabilidade entre as práticas deste capítulo e os requisitos dos principais frameworks de segurança de software
-tags: [rastreabilidade, frameworks, desenvolvimento, SAMM, SSDF, DSOMM]
+title: Rastreabilidade — Capítulo 06: Desenvolvimento Seguro
+description: Rastreabilidade das práticas de desenvolvimento seguro face a frameworks normativos com pilot formal
+tags: [rastreabilidade, desenvolvimento, codificacao, ssdf, asvs, cis, nis2]
 sidebar_position: 25
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 06: Desenvolvimento Seguro
+# Rastreabilidade — Capítulo 06: Desenvolvimento Seguro
 
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança de software relacionados com **codificação segura, automação, validação contínua e revisão estruturada**.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os controlos e requisitos aplicáveis ao desenvolvimento seguro.
+Este capítulo define práticas de **codificação segura** — guidelines, linters, revisão de código, controlo automático e humano — integradas no ciclo de desenvolvimento.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                          | Práticas do Capítulo 06 que respondem                          | Nível de Cobertura |
-|----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.5 / PW.7                              | Revisão de código, linters, validação automatizada             | ✅ Completo         |
-| **OWASP SAMM v2.1** - Implementation → Secure Build / Review | Guidelines, práticas seguras, controlo automático e humano     | ✅ Nível 3          |
-| **BSIMM13** - Code Review (CR1–CR3)                      | Revisão formal, integração com requisitos, evidência            | ✅ Nível 2          |
-| **ISO/IEC 27001** - A.14.2.5 / A.14.2.6                   | Revisão técnica e validação de segurança                       | ✅ Completo         |
-| **ISO/IEC 27034** - Coding Principles                    | Guidelines de codificação segura e verificação                 | ✅ Completo         |
-| **CIS Controls v8** - Control 16.3 / 16.11 / 16.12        | Linters, scanners, revisão de código estruturada               | ✅ Completo         |
-| **ENISA DevSecOps** - Secure Coding & CI Integration     | Linters, automação, rastreabilidade e revisão contínua         | ✅ Completo         |
-| **OWASP DSOMM** - Design & Development                   | Build seguro, validação contínua, rastreabilidade e evidência  | ✅ Nível 2/3        |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SCBI — Secure Coding & Build Integrity | Codificação segura, guidelines, controlo de qualidade de código |
+| ACO-IVF — Integrity Verification & Findings | Validação automatizada, findings de revisão de código |
+
+> **Nota:** O gap `secure_coding_discipline_gap` (ASVS) aponta para ausência de uma family unificadora de "disciplina de codificação segura". O conteúdo existe disperso — candidato a addon dedicado (e.g., `addon/02-disciplina-de-codigo-seguro.md`).
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-Cobertura direta de:
-- **PW.5** - Práticas de codificação segura formalizadas (Addon `01`, `07`);
-- **PW.7** - Validação automatizada e sistemática com linters e anotadores (Addon `02`, `08`, `09`).
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | Guidelines, linters e revisão formal |
+| SSDF PW.7 | Review and/or Analyze Human-Readable Code | ✅ Explícito | Revisão estruturada com critérios e rastreabilidade |
+| ASVS injection_and_sanitization | Injection prevention | ✅ Explícito | Row publicada |
+| ASVS input_contract_validation | Input contract validation | ✅ Explícito | Row publicada |
+| ASVS validation_before_internal_use | Validation before use | ✅ Explícito | Row publicada |
+| ASVS secure_coding_discipline_gap | Generic secure coding discipline | 🔴 Gap | Conteúdo existe mas não exposto como family; candidato a addon |
+| ASVS controlled_failure_and_non_revealing_errors | Controlled failure | ⚠️ Parcial | Secure development semantics |
+| ASVS error_handling_and_sensitive_logging_hygiene | Error handling hygiene | ⚠️ Parcial | Desenvolvimento e testing adjacent |
+| ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | Secure development semantics |
+| ASVS file_download_content_serving | File download & content serving | ⚠️ Parcial | Secure development adjacent |
+| ASVS secure_coding_architecture_documentation | Secure coding documentation | ⚠️ Parcial | Architecture e development |
+| CIS-16 | Application Software Security | ✅ Explícito | Linters, scanners, revisão estruturada (16.3, 16.11, 16.12) |
+| NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | Overlay regulatório publicado |
 
----
-
-### 🧱 OWASP SAMM v2.1
-
-Atinge **nível 3 de maturidade** nos domínios:
-- *Secure Build*: aplicação de guidelines técnicas e uso de ferramentas de controlo (Addon `01`, `02`, `08`);
-- *Secure Review*: validação técnica manual com rastreabilidade e evidência (Addon `09`).
-
----
-
-### 📊 BSIMM13
-
-Práticas alinhadas com:
-- **CR1–CR3** - Revisão estruturada com critérios de segurança e integração com requisitos técnicos (Addon `08`);
-- Evidência formal através de anotação, justificação e rastreabilidade (`09`, `05`).
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Modelos de maturidade — pendente de normalização
 
-Cobertura dos controlos:
-- **A.14.2.5** - Revisão técnica orientada à segurança das alterações de código;
-- **A.14.2.6** - Validação formal, justificação de exceções, registo e conformidade.
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
----
-
-### 🔐 ISO/IEC 27034
-
-Aplicação clara de:
-- Princípios de codificação segura documentados e seguidos por norma (Addon `01`);
-- Rastreabilidade entre guidelines internas e validação efetiva no ciclo de desenvolvimento (`07`, `08`).
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Implementation → Secure Build, Secure Code Review |
+| OWASP DSOMM | Design & Development, Build |
+| BSIMM13 | Code Review (CR1–CR3) |
 
 ---
 
-### 📐 CIS Controls v8
+## Ligações com outros capítulos
 
-Contempla:
-- **16.3** - Uso de linters, análise estática e validadores sintáticos (Addon `02`);
-- **16.11** - Validação formal de requisitos e controlos de segurança no código (`08`);
-- **16.12** - Revisão manual com critérios formais, anotação e evidenciação (`09`).
-
----
-
-### 🔄 ENISA DevSecOps
-
-Cobertura total dos princípios:
-- Aplicação de standards de codificação e validação estruturada (`01`, `07`);
-- Linters e validações automáticas integradas na pipeline (`02`, `08`);
-- Revisão técnica com evidência e rastreabilidade (`09`).
-
----
-
-### 🧬 OWASP DSOMM
-
-Domínio *Design & Development* coberto por:
-- **Secure Build** - Linters (`02`), validação de dependências (`03`) e controlo formal no processo de build (`08`);
-- **Security Testing** - Testes estruturados com anotação e evidência (`08`, `09`);
-- **Developer Guidance** - Diretrizes internas, formação e regras de exceção (`05`, `07`);
-- **Feedback Loops** - Evidência de falhas e registos que alimentam ciclos de melhoria.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-O Capítulo 06 depende e contribui para os seguintes capítulos:
-
-- **Capítulo 01 - Gestão de Risco**: define a exigência proporcional das práticas com base no nível L1–L3;
-- **Capítulo 02 - Requisitos de Segurança**: estabelece os REQ-XXX validados e implementados neste capítulo;
-- **Capítulo 05 - Dependências e SCA**: garante que os componentes usados em desenvolvimento são seguros e rastreáveis;
-- **Capítulo 07 - CI/CD Seguro**: onde estas práticas se integram como passos automatizados na pipeline;
-- **Capítulo 10 - Testes e Coverage de Segurança**: validação final e cruzamento com testes e métricas de segurança.
-
----
-
-> 📌 Este capítulo fornece a camada técnica essencial para aplicar e verificar os requisitos definidos pelo SbD-ToE. As práticas aqui descritas permitem evidenciar conformidade, uniformizar validações e criar pipelines auditáveis - estabelecendo uma ponte sólida entre teoria normativa e execução prática.
+- **Cap. 01** — exigência proporcional de práticas com base no nível L1–L3
+- **Cap. 02** — requisitos REQ-XXX implementados e verificados neste capítulo
+- **Cap. 05** — componentes usados no desenvolvimento validados via SCA
+- **Cap. 07** — práticas de codificação integradas como passos automatizados no pipeline
+- **Cap. 10** — validação final com testes e métricas de cobertura

@@ -1,96 +1,75 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade - Deploy Seguro
-description: Mapeamento top-down entre frameworks normativas e as práticas de segurança na entrega de código em produção.
-tags: [rastreabilidade, deploy, frameworks, ssdf, samm, ]
+title: Rastreabilidade — Capítulo 11: Deploy Seguro
+description: Rastreabilidade das práticas de deploy seguro face a frameworks normativos com pilot formal
+tags: [rastreabilidade, deploy, execucao, ssdf, slsa, capec, asvs, cis, dora, nis2]
 sidebar_position: 25
 ---
 
+# Rastreabilidade — Capítulo 11: Deploy Seguro e Controlo de Execução
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 11: Deploy Seguro e Controlo de Execução
-
-Este documento estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos definidos pelas principais frameworks, normas e modelos de maturidade que regulam a entrega, ativação e execução segura de software.
-
-> A análise é feita de forma **top-down**, demonstrando como o Capítulo 11 responde sistematicamente aos requisitos técnicos e organizacionais aplicáveis ao runtime seguro.
+Este capítulo define práticas de **entrega, ativação e execução segura** de software — o capítulo com maior volume total de referências externas verificadas.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                                    | Prática do Capítulo 11 que responde                          | Cobertura |
-|--------------------------------------------------------------------|----------------------------------------------------------------|-----------|
-| **NIST SSDF v1.1** - PW.6, PW.7                                    | Validações formais antes do deploy, readiness gates            | ✅        |
-| **NIST SSDF v1.1** - RV.3                                          | Monitorização pós-deploy, rollback automatizado                | ✅        |
-| **OWASP SAMM v2.1** - Release → Release Management                 | Gestão de releases, toggles, rollback                          | ✅ (N3)   |
-| **OWASP SAMM v2.1** - Release → Environment Management             | Segregação de ambientes, autorização de execução               | ✅ (N3)   |
-| **BSIMM13** - Deployment → DR1–DR3, SE2.5                          | Feature toggles, rastreabilidade, aprovação formal             | ✅        |
-| **SLSA v1.0** - Provenance Enforcement (L1–L3)                     | Deploy automatizado, rollback parcial, proveniência assinada   | 🔹 (L2)  |
-| **ISO/IEC 27001** - A.14.2.2, A.14.2.4                             | Transição controlada, segregação de ambientes                  | ✅        |
-| **CIS Controls v8** - 4.8, 6.8, 16.13                              | Deploy seguro, auditoria runtime, rollback                     | ✅        |
-| **ENISA DevSecOps** - Secure Deployment, Runtime Enforcement       | Deploy progressivo, validação pré-execução, runtime controlado | ✅        |
-| **OWASP DSOMM** - Design & Development (5 práticas)               | Validação formal, rollback, toggles rastreáveis                | ✅ (4/5) |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-RPR — Release Process & Readiness | Gestão de release, gates de promoção, rollback, readiness checks |
+| ACO-SPC — Security Policy & Controls | Políticas de autorização de execução, separação de ambientes |
+
+> **Nota adjunct:** SSDF PW.9 e ASVS `secure_configuration_baseline_gap` têm pressão significativa aqui — o deploy addon (`addon/01-modelo-controle-execucao.md`) toca no tema mas sem secção dedicada. Candidato prioritário ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🔹 NIST SSDF v1.1
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-- **PW.6–PW.7**: critérios objetivos de aceitação e validação automatizada (Addon 04);
-- **RV.3**: monitorização ativa e triggers de rollback (Addon 05, 07);
-- Todas as execuções são rastreáveis com owners e artefactos versionados.
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PO.5 | Implement and Maintain Secure Environments | 🔧 Reparação | Semantics em deploy addon; sem row explícita SSDF publicada |
+| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Row publicada via containers |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Row publicada; monitorização pós-deploy |
+| SSDF PW.9 | Use Well-Secured Settings by Default | 🔴 Gap | Deploy addon tem semantics; sem row explícita publicada |
+| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefacto assinado antes de deploy |
+| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Row publicada |
+| SLSA-PRINCIPLE-TRUST-PLATFORMS | Trust platforms | ✅ Semântico | Verificação antes de deploy |
+| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build | ✅ Semântico | Deployment controlado e reprodutível |
+| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Proveniência verificada antes de promoção |
+| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada, rollback |
+| CAPEC-669 | Alteration of Software Update | ✅ Semântico | Promoção verificada, rastreabilidade |
+| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Deploy config semantics; enterprise config além do âmbito |
+| CIS-6 | Access Control Management | ✅ Explícito | Row publicada |
+| ASVS authentication_lifecycle | Auth lifecycle | ⚠️ Parcial | Deploy semantics |
+| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Deploy semantics |
+| ASVS secure_transport | Secure transport | ⚠️ Parcial | Deploy e architecture |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔴 Gap | Semantics em deploy addon; sem secção dedicada |
+| DORA | Deploy seguro e reversível | ✅ Explícito | Overlay regulatório publicado |
+| NIS2 | Deploy controlado | ✅ Explícito | Overlay regulatório publicado |
 
-### 🔹 OWASP SAMM v2.1
-
-- **Release Management (N3)**: deploy controlado, toggles com expiração, rollback formal (Addon 03, 06, 07);
-- **Environment Management (N3)**: segregação de execução, gates formais e autorização dual (Addon 08).
-
-### 🔹 BSIMM13
-
-- **DR1–DR3**: reversibilidade de execução, rastreabilidade de artefactos e eventos de release;
-- **SE2.5**: aprovação formal com critérios AppSec e validação pré-produção (Addon 04, 06).
-
-### 🔹 SLSA v1.0
-
-- Cumprimento até **nível 2**:
-  - L1: pipelines automatizados (Cap. 07);
-  - L2: proveniência assinada antes da promoção (Addon 06);
-  - 🔹 L3 (observabilidade ativa) depende de práticas do Capítulo 12.
-
-### 🔹 ISO/IEC 27001
-
-- **A.14.2.2**: procedimentos formais de transição e deploy controlado;
-- **A.14.2.4**: ambientes segregados, execução rastreável e auditável.
-
-### 🔹 CIS Controls v8
-
-- **4.8**: deploy controlado com mecanismos de rollback definidos;
-- **6.8**: segregação e autorização de execução;
-- **16.13**: execução segura com observabilidade e resposta.
-
-### 🔹 ENISA DevSecOps
-
-- Pipeline de deploy com validações explícitas antes da execução (Addon 04);
-- Runtime controlado com mecanismos como kill switch, OPA ou equivalent (Addon 06, 07);
-- Execução progressiva e baseada em risco (Addon 07).
-
-### 🔹 OWASP DSOMM
-
-- Domínio **Design & Development**:
-  - 4 das 5 práticas cobertas: validação formal, rollback, toggles rastreáveis, readiness gates;
-  - Observabilidade contínua parcial - aprofundada no Cap. 12.
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-## 🔗 Ligações com outros capítulos
+## Modelos de maturidade — pendente de normalização
 
-As práticas aqui prescritas articulam-se diretamente com:
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
-- **Cap. 01 - Gestão de Risco**: identifica onde execução controlada é mandatória;
-- **Cap. 02 - Requisitos de Segurança**: define critérios técnicos de deploy seguro;
-- **Cap. 07 - CI/CD Seguro**: automatiza gates, rollback e validações no pipeline;
-- **Cap. 09 - Containers e Execução em Produção**: extensões runtime;
-- **Cap. 10 - Testes de Segurança**: integra os critérios de aceitação e regressão;
-- **Cap. 12 - Monitorização e Resposta**: reforça a observabilidade ativa do runtime.
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Implementation → Release Management, Environment Management |
+| OWASP DSOMM | Design & Development (deploy practices) |
+| BSIMM13 | Deployment (DR1–DR3, SE2.5) |
 
-> 📌 Esta rastreabilidade demonstra que o Capítulo 11 constitui uma **resposta prescritiva e integrada às exigências operacionais e normativas** de execução segura, validada e reversível em ambientes de produção.
+---
+
+## Ligações com outros capítulos
+
+- **Cap. 01** — classificação de risco identifica onde execução controlada é mandatória
+- **Cap. 02** — critérios técnicos de deploy derivados de requisitos
+- **Cap. 07** — pipeline automatiza gates, rollback e validações
+- **Cap. 09** — containers produzidos e assinados, promovidos por este capítulo
+- **Cap. 12** — observabilidade ativa do runtime pós-deploy

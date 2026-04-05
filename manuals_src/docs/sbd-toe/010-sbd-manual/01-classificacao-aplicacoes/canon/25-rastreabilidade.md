@@ -1,107 +1,56 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 01
+title: Rastreabilidade — Capítulo 01: Classificação de Aplicações
+description: Rastreabilidade das práticas de classificação de risco face a frameworks normativos com pilot formal
+tags: [rastreabilidade, classificacao, risco, ssdf, nis2, dora]
 sidebar_position: 25
-tags: [canon, rastreabilidade, frameworks, alinhamento]
 ---
 
-# 📎 Rastreabilidade contra Frameworks - Capítulo 01: Classificação do Risco
+# Rastreabilidade — Capítulo 01: Classificação de Aplicações
 
-Este ficheiro estabelece a **rastreabilidade entre as práticas de classificação do risco prescritas neste capítulo** e os requisitos dos principais frameworks de segurança, governação e gestão do ciclo de vida aplicacional.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos de avaliação, decisão e governação de risco nas práticas de segurança aplicacional.
+Este capítulo define o **mecanismo de classificação de risco** que determina a aplicação proporcional de práticas de segurança (L1–L3) em todos os capítulos do manual.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
+## Camada AppSec Core
 
-| Requisito / Domínio (Framework)                       | Prática do Capítulo 01 que responde                             | Nível de Cobertura |
-|-------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PO.1.1 / PO.1.2 / PO.3.2              | Classificação de risco, tratamento proporcional, risco residual | ✅ Completo         |
-| **OWASP SAMM v2.1** - Governance → Risk Management    | Avaliação formal, aplicação por tipo de aplicação, ciclo de vida| ✅ Nível 3          |
-| **OWASP DSOMM** - Governance / Risk / Requirements    | Classificação e priorização, rastreabilidade, aceitação formal  | ✅ Nível 2          |
-| **BSIMM13** - Strategy & Metrics (SM1–SM3)            | Classificação formal, exceções justificadas, rastreabilidade    | ✅ Nível 2          |
-| **ISO/IEC 27001** - A.6.1.2 / A.8.2.1 / A.18.2.3       | Avaliação de risco de ativos, aceitação formal, exceções        | ✅ Completo         |
-| **CIS Controls v8** - Control 4.1 / 4.3 / 17.1         | Classificação de sistemas, priorização de controlos, auditoria   | ✅ Completo         |
-| **ENISA SDLC / Risk** - Risk Profiling & Governance   | Aplicação de criticidade, decisão de segurança proporcional     | ✅ Completo         |
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SLG — Security Lifecycle & Governance | Classificação formal como base de governação do ciclo de vida |
+| ACO-TMR — Threat Modeling & Risk | Avaliação de risco como input da classificação de aplicações |
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Frameworks normativos — cobertura verificada
 
-### 🛠️ NIST SSDF
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-Cobertura integral de:
-- **PO.1.1**: identificação e categorização dos ativos (Addon 01, 02);
-- **PO.3.2**: decisões documentadas sobre exceções e risco residual (Addon 06, 09);
-- Integração com o ciclo de vida via critérios de aceitação (Addon 07).
+| Framework | Requisito / Prática | Cobertura | Nota |
+|-----------|--------------------|-----------|----|
+| SSDF PO.1 | Define Security Requirements | ✅ Explícito | Classificação de risco como base de requisitos proporcionais |
+| SSDF PO.3.2 | Maintain security toolchain configurations | ✅ Explícito | Proporcionalidade por nível de risco aplicada a toolchains |
+| DORA | Classificação por risco operacional | ✅ Explícito | Overlay regulatório publicado |
+| NIS2 | Classificação e governação por risco | ✅ Explícito | Overlay regulatório publicado |
 
----
-
-### 🧱 OWASP SAMM v2.1
-
-Atinge **nível 3** em *Risk Management*:
-- Classificação sistemática (Addon 01, 02);
-- Matriz de aplicação proporcional de práticas (Addon 04);
-- Rastreabilidade organizacional com base em risco (Addon 08).
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-### 🧭 OWASP DSOMM
+## Modelos de maturidade — pendente de normalização
 
-Cobre domínios centrais de:
-- **Governance / Risk Management**: modelo de classificação aplicável no SDLC (Addon 01, 02);
-- **Security Requirements**: definição e aplicação proporcional com base na criticidade (link com Cap. 2);
-- **Compliance Mapping**: decisão justificada sobre controlo, exceção ou aceitação (Addon 06);
-- Atinge **maturidade 2** nos domínios de governança e requisitos.
+> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
-> O Capítulo 01 estabelece as fundações exigidas no DSOMM para aplicar segurança em pipelines DevSecOps com proporcionalidade, rastreabilidade e autonomia.
-
----
-
-### 📊 BSIMM13
-
-Cobre práticas de:
-- Classificação de aplicações por impacto (SM1);
-- Justificação e registo de exceções de segurança (SM2);
-- Governação contínua da aplicação do modelo (SM3).
+| Modelo | Domínios relevantes |
+|--------|---------------------|
+| OWASP SAMM v2.1 | Governance → Risk Management |
+| OWASP DSOMM | Governance, Requirements |
+| BSIMM13 | Strategy & Metrics (SM1–SM3) |
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Ligações com outros capítulos
 
-Controlos cobertos:
-- **A.6.1.2**: avaliação de riscos e tratamento;
-- **A.8.2.1**: classificação da informação e ativos por impacto;
-- **A.18.2.3**: registo e aprovação de exceções de segurança.
-
----
-
-### 📐 CIS Controls v8
-
-Contempla:
-- **4.1**: classificação de aplicações e ativos críticos;
-- **4.3**: alinhamento de controlos com o nível de risco;
-- **17.1**: governança contínua e auditoria sobre decisões de segurança.
-
----
-
-### 🔄 ENISA SDLC / Risk
-
-Cobre integralmente:
-- Risk profiling aplicado ao SDLC;
-- Avaliação proporcional por tipo de aplicação;
-- Registo e auditoria de decisões sobre risco e controlos.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-O Capítulo 01 é a base de aplicação proporcional dos restantes:
-
-- Capítulo 02 - seleção de requisitos baseada no nível de risco;
-- Capítulo 03 - exigência de threat modeling consoante criticidade;
-- Capítulo 05 a 14 - aplicação seletiva de práticas com base em L1–L3;
-- Capítulo 13 / 14 - exceções, aceitação formal e rastreabilidade organizacional.
-
-> 📌 Esta rastreabilidade comprova que a classificação do risco no SbD-ToE é **o mecanismo central de governação e proporcionalidade**, assegurando segurança com eficiência operacional e cobertura normativa.
+- **Cap. 02–12** — a classificação L1/L2/L3 determina a exigência proporcional de todas as práticas
+- **Cap. 03** — threat modeling obrigatório a partir de nível L2
+- **Cap. 14** — exceções e aceitação de risco residual requerem classificação formal como pré-condição

@@ -16,10 +16,10 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-RPR — Release Process & Readiness | Gestão de release, gates de promoção, rollback, readiness checks |
-| ACO-SPC — Security Policy & Controls | Políticas de autorização de execução, separação de ambientes |
+| ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Gestão de release, gates de promoção, rollback, readiness checks |
+| ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Políticas de autorização de execução, separação de ambientes |
 
-> **Nota adjunct:** SSDF PW.9 e ASVS `secure_configuration_baseline_gap` têm pressão significativa aqui — o deploy addon (`addon/01-modelo-controle-execucao.md`) toca no tema mas sem secção dedicada. Candidato prioritário ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
+> **Nota adjunct:** `SSDF PW.9` e `ASVS secure_configuration_baseline_gap` são CLAIM GAPSs — o conteúdo existe em `addon/04-validacoes-pre-deploy.md` (misconfig check) e `addon/08-segregacao-e-validacao-operacional.md` (config auditing), mas sem row explícita publicada. Candidatos a reparação no próximo ciclo.
 
 ---
 
@@ -27,33 +27,35 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.5 | Implement and Maintain Secure Environments | 🔧 Reparação | Semantics em deploy addon; sem row explícita SSDF publicada |
-| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Row publicada via containers |
-| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Row publicada; monitorização pós-deploy |
-| SSDF PW.9 | Use Well-Secured Settings by Default | 🔴 Gap | Deploy addon tem semantics; sem row explícita publicada |
-| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefacto assinado antes de deploy |
-| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Row publicada |
-| SLSA-PRINCIPLE-TRUST-PLATFORMS | Trust platforms | ✅ Semântico | Verificação antes de deploy |
-| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build | ✅ Semântico | Deployment controlado e reprodutível |
-| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Proveniência verificada antes de promoção |
-| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada, rollback |
-| CAPEC-669 | Alteration of Software Update | ✅ Semântico | Promoção verificada, rastreabilidade |
-| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Deploy config semantics; enterprise config além do âmbito |
-| CIS-6 | Access Control Management | ✅ Explícito | Row publicada |
-| ASVS authentication_lifecycle | Auth lifecycle | ⚠️ Parcial | Deploy semantics |
-| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Deploy semantics |
-| ASVS secure_transport | Secure transport | ⚠️ Parcial | Deploy e architecture |
-| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔴 Gap | Semantics em deploy addon; sem secção dedicada |
-| DORA | Deploy seguro e reversível | ✅ Explícito | Overlay regulatório publicado |
-| NIS2 | Deploy controlado | ✅ Explícito | Overlay regulatório publicado |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.5 | Implement and Maintain Secure Environments | 🔧 Reparação | Semântico em addons; sem row explícita SSDF publicada | addon (medium): Segregação de Ambientes e Validação Operacional |
+| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Deploy apenas de artefactos verificados | aplicacao_lifecycle (strong): US-01 - Deploy apenas de artefactos verificados |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Monitorização pós-deploy e reação a incidentes | addon (medium): Monitorização e Reação a Incidentes de Runtime |
+| SSDF PW.9 | Use Well-Secured Settings by Default | 🔧 Reparação | CLAIM GAP — conteúdo existe em addons 04 e 08; sem row explícita publicada | addon (medium): Validações de Segurança antes de Deploy + Segregação de Ambientes |
+| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefacto assinado e verificado antes de deploy | aplicacao_lifecycle (strong): US-01 - Deploy apenas de artefactos verificados |
+| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Rastreabilidade end-to-end publicada | aplicacao_lifecycle (strong): US-05 - Rastreabilidade end-to-end |
+| SLSA-PRINCIPLE-TRUST-PLATFORMS | Trust platforms | ✅ Semântico | Verificação antes de deploy | addon (medium): Validações de Segurança antes de Deploy |
+| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build | ✅ Semântico | Deployment controlado e reprodutível | addon (medium): Controlo de Versão e Rollback Seguro |
+| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Proveniência verificada antes de promoção | addon (medium): Validações de Segurança antes de Deploy |
+| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada, rollback estruturado | aplicacao_lifecycle (strong): US-04 - Rollback rápido e testado |
+| CAPEC-669 | Alteration of Software Update | ✅ Semântico | Promoção verificada, rastreabilidade end-to-end | aplicacao_lifecycle (strong): US-05 - Rastreabilidade end-to-end |
+| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Deploy config semântico; enterprise config além do âmbito | addon (medium): Segregação de Ambientes e Validação Operacional |
+| CIS-6 | Access Control Management | ✅ Explícito | Controlo de execução e gates de aprovação | aplicacao_lifecycle (strong): US-07 - Controlo de execução com aprovação |
+| ASVS authentication_lifecycle | Auth lifecycle | ⚠️ Parcial | Deploy semântico; sem unit dedicado | addon (medium): Modelo de Controlo de Execução em Runtime |
+| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Deploy semântico; sem unit dedicado | addon (medium): Modelo de Controlo de Execução em Runtime |
+| ASVS secure_transport | Secure transport | ⚠️ Parcial | Deploy e architecture; sem unit dedicado | sem unit dedicado no capítulo |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔧 Reparação | CLAIM GAP — conteúdo existe em addons 04 e 08; sem secção dedicada publicada | addon (medium): Validações de Segurança antes de Deploy + Segregação de Ambientes |
+| DORA | Deploy seguro e reversível | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo DPL + addon (medium): Práticas de Release Management |
+| NIS2 | Deploy controlado | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo DPL - Deploy Seguro |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo. "Reparação" = CLAIM GAP — conteúdo existe mas sem row publicada.
+
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
 > Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.

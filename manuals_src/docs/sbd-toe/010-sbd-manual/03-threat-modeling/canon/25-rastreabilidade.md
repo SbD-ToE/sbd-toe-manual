@@ -16,8 +16,8 @@ Este capítulo define **metodologias de análise de ameaças** sistemáticas (ST
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-TMR — Threat Modeling & Risk | Processo formal de modelação de ameaças como prática central |
-| ACO-ATB — Attack Surface & Threat Boundaries | Identificação e delimitação de superfícies de ataque |
+| ACO-TMR — Threat Modeling, Risk Disposition & Mitigation Traceability | Processo formal de modelação de ameaças como prática central (primário) |
+| ACO-ATB — Architecture & Trust Boundaries | Identificação e delimitação de superfícies de ataque e fronteiras de confiança |
 
 ---
 
@@ -25,13 +25,15 @@ Este capítulo define **metodologias de análise de ameaças** sistemáticas (ST
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PW.2 | Review the Software Design | ✅ Semântico | Threat modeling como prática de revisão de design |
-| SSDF PW.9 | Use Well-Secured Settings by Default | ⚠️ Parcial | Recomendações avançadas contêm semantics de secure defaults |
-| ASVS business_logic_security | Business logic security | ⚠️ Parcial | Threat modeling e derivação de requisitos adjacentes |
-| ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | Threat modeling semantics de encoding |
-| CIS-16 | Application Software Security | ⚠️ Parcial | Threat modeling como prática formal de design (16.8) |
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento de requisito canónico. "Parcial" = sem unit dedicado no capítulo.
+
+| Framework | Requisito / Prática | Cobertura | Fonte verificada | Nota |
+|-----------|--------------------|-----------|-----------------|----|
+| SSDF PW.2 | Review the Software Design | ✅ Semântico | aplicacao_lifecycle (strong): US-02 — Validação de arquitetura com threat modeling | Threat modeling como prática de revisão de design |
+| SSDF PW.9 | Use Well-Secured Settings by Default | ⚠️ Parcial | addon (medium): Boas Práticas (metodologias e ferramentas) | Recomendações avançadas contêm semantics de secure defaults |
+| ASVS business_logic_security | Business logic security | ⚠️ Parcial | addon (medium): Mapeamento de Ameaças para Requisitos de Segurança | Threat modeling e derivação de requisitos adjacentes |
+| ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | addon (medium): Metodologias e Ferramentas de Threat Modeling | Threat modeling semantics de encoding |
+| CIS-16 | Application Software Security | ⚠️ Parcial | aplicacao_lifecycle (strong): US-01 — Criação do modelo de ameaça | Threat modeling como prática formal de design (16.8) |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
@@ -39,9 +41,9 @@ Este capítulo define **metodologias de análise de ameaças** sistemáticas (ST
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente de normalização formal. Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
 | Modelo | Domínios relevantes |

@@ -16,8 +16,8 @@ Este capítulo define uma **estratégia de testes de segurança proporcional ao 
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-IVF — Integrity Verification & Findings | Estratégia de testes, execução, gestão de findings e rastreabilidade |
-| ACO-ATB — Attack Surface & Threat Boundaries | Cobertura de testes baseada em vetores de ataque identificados |
+| ACO-TSV — Testing, Security Validation & Empirical Assurance | Estratégia de testes, execução, gestão de findings e rastreabilidade |
+| ACO-ATB — Architecture & Trust Boundaries | Cobertura de testes baseada em vetores de ataque identificados |
 
 ---
 
@@ -25,26 +25,28 @@ Este capítulo define uma **estratégia de testes de segurança proporcional ao 
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.4 | Define Security Check Criteria | ✅ Semântico | Estratégia de testes proporcional ao risco |
-| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação automatizada integrada no pipeline |
-| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Row publicada; gestão de vulnerabilidades |
-| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Row publicada; correção e validação |
-| CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Testing adjacent; CIS cobre âmbito mais largo |
-| CIS-18 | Penetration Testing | ✅ Explícito | Row publicada; pentesting formal e planeado |
-| ASVS injection_and_sanitization | Injection testing | ✅ Explícito | Row publicada |
-| ASVS validation_before_internal_use | Validation testing | ✅ Explícito | Row publicada |
-| ASVS controlled_failure | Controlled failure testing | ⚠️ Parcial | Testing adjacent |
-| ASVS error_handling_logging_hygiene | Error handling testing | ⚠️ Parcial | Testing adjacent |
-| SLSA-VERIFY-BUILD-LEVEL | Build level verification | ⚠️ Parcial | Test evidence e critérios de maturidade |
-| DORA | Testes de segurança baseados em risco | ✅ Explícito | Overlay regulatório publicado |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.4 | Define Security Check Criteria | ✅ Semântico | Estratégia de testes proporcional ao risco | addon (medium): Estratégia de Testes de Segurança no Ciclo de Vida |
+| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação automatizada integrada no pipeline | aplicacao_lifecycle (strong): US-02 - SAST obrigatório em Pull Request |
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Gestão de vulnerabilidades e findings | aplicacao_lifecycle (strong): US-10 - Gestão Centralizada de Findings com Triagem e SLA |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Correção, validação empírica e rastreabilidade | aplicacao_lifecycle (strong): US-13 - Validação Empírica de Exploitabilidade de Findings |
+| CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Testing adjacent; CIS cobre âmbito mais largo | sem unit dedicado no capítulo |
+| CIS-18 | Penetration Testing | ✅ Explícito | Pentesting formal e planeado | aplicacao_lifecycle (strong): US-08 - PenTesting ofensivo baseado em risco |
+| ASVS injection_and_sanitization | Injection testing | ✅ Semântico | Coberto via SAST e DAST | addon (medium): Testes Estáticos de Segurança (SAST) + Testes Dinâmicos de Segurança (DAST) |
+| ASVS validation_before_internal_use | Validation testing | ✅ Semântico | Coberto via estratégia de testes e catálogo | requirements_catalog (strong): Catálogo TST + addon (medium): Estratégia de Testes |
+| ASVS controlled_failure | Controlled failure testing | ⚠️ Parcial | Testing adjacent; sem unit dedicado | sem unit dedicado no capítulo |
+| ASVS error_handling_logging_hygiene | Error handling testing | ⚠️ Parcial | Testing adjacent; sem unit dedicado | sem unit dedicado no capítulo |
+| SLSA-VERIFY-BUILD-LEVEL | Build level verification | ⚠️ Parcial | Test evidence e critérios de maturidade | maturity (weak): SLSA - Build/Test Coverage |
+| DORA | Testes de segurança baseados em risco (TLPT) | ✅ Explícito | Overlay regulatório TLPT publicado | addon (medium): TLPT - Readiness e Enquadramento Regulatório (DORA) |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
+
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
 > Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.

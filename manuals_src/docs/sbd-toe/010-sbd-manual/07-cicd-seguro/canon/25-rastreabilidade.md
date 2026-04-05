@@ -16,10 +16,8 @@ Este capítulo define práticas de **segurança operacional para pipelines CI/CD
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SCBI — Secure Coding & Build Integrity | Integridade do build, execução autenticada, assinatura de artefactos |
-| ACO-RPR — Release Process & Readiness | Proveniência, trusted builders, gates de promoção |
-| ACO-IVF — Integrity Verification & Findings | Validação contínua, rastreabilidade de execuções |
-| ACO-TSV — Third-party & Supply Visibility | Controlo de dependências externas no pipeline (actions, scripts) |
+| ACO-SCBI — Supply Chain & Build Integrity | Integridade do build, execução autenticada, assinatura de artefactos, supply chain do pipeline |
+| ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Proveniência, trusted builders, gates de promoção, rollout controlado |
 
 ---
 
@@ -27,37 +25,39 @@ Este capítulo define práticas de **segurança operacional para pipelines CI/CD
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PW.4 | Establish Security Criteria | ✅ Explícito | Gates de segurança por risco (L1–L3) |
-| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação obrigatória antes de promoção |
-| SSDF PS.3 | Archive and Protect Each Release | ✅ Explícito | Assinatura e proveniência end-to-end |
-| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Row publicada; análise pós-build |
-| SSDF GV.2 | Perform Security Checkpoints | ✅ Explícito | Governação e rastreabilidade de execuções |
-| SSDF GV.3 | Implement Vulnerability Response Processes | ✅ Explícito | Logs, segregação rastreável |
-| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados e com proveniência |
-| SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | Row publicada |
-| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico |
-| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Row publicada |
-| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Row publicada |
-| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | CI/CD provenance |
-| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build process | ✅ Semântico | Pipeline-as-code |
-| SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | Runners e plataformas controladas |
-| SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | Runner isolation presente; L3 mais específico |
-| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Critérios de verificação presentes |
-| CAPEC-445 | Replication Through Removable Media / Config Manipulation | ⚠️ Parcial | Pipeline integrity |
-| CAPEC-511 | Infiltration of Software Development Environment | ⚠️ Parcial | CI/CD infrastructure compromise |
-| CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software authorization e CI/CD toolchain |
-| ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Row publicada |
-| ASVS security_event_logging_coverage | Security logging | ⚠️ Parcial | CI/CD logging adjacent |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PW.4 | Establish Security Criteria | ✅ Explícito | Gates de segurança por risco (L1–L3) | aplicacao_lifecycle (strong): US-07 — Gates por risco |
+| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação obrigatória antes de promoção | addon (medium): Segurança do código dentro do pipeline |
+| SSDF PS.3 | Archive and Protect Each Release | ✅ Explícito | Assinatura e proveniência end-to-end | addon (medium): Integridade e proveniência de artefactos |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Análise pós-build; rastreabilidade de findings | addon (medium): Validações de segurança integradas no pipeline |
+| SSDF GV.2 | Perform Security Checkpoints | ✅ Explícito | Governação e rastreabilidade de execuções | aplicacao_lifecycle (strong): US-09 — Rastreabilidade ponta-a-ponta |
+| SSDF GV.3 | Implement Vulnerability Response Processes | ✅ Explícito | Logs, segregação rastreável | addon (medium): Rastreabilidade de assinaturas e deploys |
+| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados e com proveniência | addon (medium): Integridade e proveniência de artefactos |
+| SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | Plataforma de build controlada e auditada | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
+| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico | addon (medium): Isolamento e proteção de runners |
+| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Assinatura e attestation de artefactos | addon (medium): Integridade e proveniência de artefactos |
+| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Proveniência distribuída com artefactos | addon (medium): Rastreabilidade de assinaturas e deploys |
+| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | CI/CD provenance gerada no pipeline | aplicacao_lifecycle (strong): US-06 — Assinatura e proveniência |
+| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build process | ✅ Semântico | Pipeline-as-code versionado e determinístico | aplicacao_lifecycle (strong): US-14 — Reprodutibilidade e determinismo |
+| SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | Runners e plataformas controladas | addon (medium): Isolamento e proteção de runners |
+| SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | Runner isolation presente; L3 mais específico | addon (medium): Isolamento e proteção de runners |
+| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Critérios de verificação presentes | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
+| CAPEC-445 | Replication Through Removable Media / Config Manipulation | ⚠️ Parcial | Pipeline integrity | addon (medium): Design seguro dos pipelines |
+| CAPEC-511 | Infiltration of Software Development Environment | ⚠️ Parcial | CI/CD infrastructure compromise | addon (medium): Gestão segura de código fonte |
+| CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software authorization e CI/CD toolchain | addon (medium): Políticas e gates por nível de aplicação |
+| ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Rastreabilidade de deploys e integridade de logs | addon (medium): Rastreabilidade de assinaturas e deploys |
+| ASVS security_event_logging_coverage | Security logging | ⚠️ Parcial | CI/CD logging adjacent | addon (medium): Excepções e Visibilidade em CI/CD |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
+
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
 ## Modelos de maturidade — pendente de normalização
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente — Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
 | Modelo | Domínios relevantes |

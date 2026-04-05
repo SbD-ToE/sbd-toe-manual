@@ -16,9 +16,9 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-ATB — Attack Surface & Threat Boundaries | Zonas de confiança, fronteiras e superfícies de ataque por design |
-| ACO-IAT — Identity, Access & Trust | Autenticação e autorização por design; princípio do menor privilégio |
-| ACO-SCBI — Secure Coding & Build Integrity | Padrões de arquitetura como input de design de código seguro |
+| ACO-ATB — Architecture & Trust Boundaries | Zonas de confiança, fronteiras e superfícies de ataque por design (primário) |
+| ACO-ITS — Integration Trust & Service-to-Service Security | Integrações entre serviços e padrões de confiança inter-serviço (secundário) |
+| ACO-IAT — Identity, Access & Session Trust | Autenticação e autorização por design; princípio do menor privilégio |
 
 ---
 
@@ -26,22 +26,24 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PW.2 | Review the Software Design | ✅ Semântico | Revisão de arquitetura como disciplina de security review |
-| ASVS authorization_and_least_privilege | Authorization & least privilege | ⚠️ Parcial | Presente; não embalado explicitamente como family ASVS |
-| ASVS backend_component_authentication | Backend component auth | ⚠️ Parcial | Architecture e infra semantics |
-| ASVS backend_least_privilege | Backend least privilege | ⚠️ Parcial | Presente; não embalado |
-| ASVS architecture_and_dependency_hardening | Architecture hardening | ⚠️ Parcial | Presente; embalagem mais específica necessária |
-| ASVS identity_provider_and_federated_auth | Federated authentication | ⚠️ Parcial | OAuth/OIDC semantics presentes |
-| ASVS oauth_and_oidc_service_trust | OAuth & OIDC trust | ⚠️ Parcial | Architecture e deploy semantics |
-| ASVS secure_transport | Secure transport | ⚠️ Parcial | Architecture e deploy semantics |
-| ASVS service_to_service_auth | Service-to-service auth | ⚠️ Parcial | Architecture e IaC |
-| ASVS session_and_token_trust | Session & token trust | ⚠️ Parcial | Architecture e deploy |
-| ASVS frontend_browser_security | Frontend/browser security | ⚠️ Parcial | Requirements e architecture |
-| ASVS api_protocol_specific | API protocol specifics | ⚠️ Parcial | Architecture e deploy |
-| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
-| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Isolation semantics de arquitetura |
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento de requisito canónico. "Parcial" = sem unit dedicado no capítulo.
+
+| Framework | Requisito / Prática | Cobertura | Fonte verificada | Nota |
+|-----------|--------------------|-----------|-----------------|----|
+| SSDF PW.2 | Review the Software Design | ✅ Semântico | aplicacao_lifecycle (strong): US-03 — Revisão formal do design arquitetural | Revisão de arquitetura como disciplina de security review |
+| ASVS authorization_and_least_privilege | Authorization & least privilege | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Presente; não embalado explicitamente como family ASVS |
+| ASVS backend_component_authentication | Backend component auth | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Architecture e infra semantics |
+| ASVS backend_least_privilege | Backend least privilege | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Presente; não embalado |
+| ASVS architecture_and_dependency_hardening | Architecture hardening | ⚠️ Parcial | addon (medium): Modelos de Arquitetura Segura Reutilizáveis | Presente; embalagem mais específica necessária |
+| ASVS identity_provider_and_federated_auth | Federated authentication | ⚠️ Parcial | addon (medium): Rastreabilidade Arquitetural | OAuth/OIDC semantics presentes |
+| ASVS oauth_and_oidc_service_trust | OAuth & OIDC trust | ⚠️ Parcial | addon (medium): Rastreabilidade Arquitetural | Architecture e deploy semantics |
+| ASVS secure_transport | Secure transport | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Architecture e deploy semantics |
+| ASVS service_to_service_auth | Service-to-service auth | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Architecture e IaC |
+| ASVS session_and_token_trust | Session & token trust | ⚠️ Parcial | addon (medium): Rastreabilidade Arquitetural | Architecture e deploy |
+| ASVS frontend_browser_security | Frontend/browser security | ⚠️ Parcial | addon (medium): Modelos de Arquitetura Segura Reutilizáveis | Requirements e architecture |
+| ASVS api_protocol_specific | API protocol specifics | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Architecture e deploy |
+| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | addon (medium): Plano de Validação Arquitetural | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
+| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
@@ -49,9 +51,9 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente de normalização formal. Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
 | Modelo | Domínios relevantes |

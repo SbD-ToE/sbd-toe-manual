@@ -16,8 +16,8 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SLG — Security Lifecycle & Governance | Governance formal, KPIs, ciclo de vida de conformidade |
-| ACO-SPC — Security Policy & Controls | Políticas formais, cláusulas contratuais, enforcement de controlos |
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Governance formal, KPIs, audit trail de conformidade, ciclo de vida de exceções |
+| ACO-SCBI — Supply Chain & Build Integrity | Gestão de fornecedores, cláusulas contratuais de supply chain, validação de terceiros |
 
 ---
 
@@ -25,27 +25,29 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.1 | Define Security Requirements | ✅ Explícito | Row publicada; governação de requisitos e exceções |
-| SSDF PO.2 | Implement Roles and Responsibilities | 🔧 Reparação | Ownership forte; sem row explicita PO.2 publicada — rastreabilidade precisa de authoring em Cap. 00 + 13 + 14 |
-| SSDF PO.3 | Implement Supporting Toolchains | ✅ Explícito | Row publicada |
-| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ⚠️ Parcial | Ações corretivas e auditoria; RV.2 mais técnico que governação |
-| CIS-5 | Account Management | ⚠️ Parcial | Governance semantics |
-| CIS-15 | Service Provider Management | ✅ Semântico | Gestão e validação contínua de fornecedores (15.1, 15.6) |
-| CIS-17 | Incident Response Management | ✅ Semântico | Auditoria e governação de conformidade (17.1) |
-| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Governance semantics |
-| ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | Governance adjacente |
-| DORA | Governança e contratação | ✅ Explícito | Overlay regulatório publicado |
-| NIS2 | Governança de fornecedores | ✅ Explícito | Overlay regulatório publicado |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.1 | Define Security Requirements | ✅ Explícito | Governação de requisitos e exceções formalizadas | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
+| SSDF PO.2 | Implement Roles and Responsibilities | 🔧 Reparação | Ownership forte; sem row explícita PO.2 publicada — rastreabilidade distribuída por Cap. 00 + 13 + 14 | addon (medium): Modelo de Governação para Security by Design |
+| SSDF PO.3 | Implement Supporting Toolchains | ✅ Explícito | Toolchain de governação publicada | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
+| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ⚠️ Parcial | Ações corretivas e auditoria; RV.2 mais técnico que governação | addon (medium): Validação Continuada e Revisões |
+| CIS-5 | Account Management | ⚠️ Parcial | Governance semântico; offboarding e gestão de acessos | addon (medium): Checklist de Offboarding Seguro |
+| CIS-15 | Service Provider Management | ✅ Semântico | Gestão e validação contínua de fornecedores (15.1, 15.6) | addon (medium): Modelo de Validação de Fornecedores e Terceiros |
+| CIS-17 | Incident Response Management | ✅ Semântico | Auditoria e governação de exceções e conformidade (17.1) | addon (medium): Processo Canónico de Gestão de Excepções |
+| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Governance semântico; sem unit dedicado | sem unit dedicado no capítulo |
+| ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | Governance adjacente; sem unit dedicado | sem unit dedicado no capítulo |
+| DORA | Governança e contratação | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV + addon (medium): Cláusulas Contratuais de Segurança |
+| NIS2 | Governança de fornecedores | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 > **Nota SSDF PO.2:** A rastreabilidade completa de PO.2 distribui-se por Cap. 00 (definição de papéis), Cap. 13 (formação e validação) e este capítulo (ownership formal e governação). A ausência de uma row PO.2 explícita publicada é o único item de reparação activo neste capítulo.
 
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
+
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
 > Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.

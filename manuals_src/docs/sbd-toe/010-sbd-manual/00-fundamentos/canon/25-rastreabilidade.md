@@ -16,7 +16,7 @@ Este capítulo define os **13 papéis do modelo SbD-ToE** com responsabilidades 
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SLG — Security Lifecycle & Governance | Papéis formais, ownership de práticas, ciclo de vida organizacional |
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Papéis formais, ownership de práticas, ciclo de vida organizacional |
 
 ---
 
@@ -24,13 +24,15 @@ Este capítulo define os **13 papéis do modelo SbD-ToE** com responsabilidades 
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.2 | Implement Roles and Responsibilities | ✅ Semântico | 13 papéis com responsabilidades por capítulo; sem row de rastreabilidade SSDF explícita publicada |
-| SSDF PO.2.1 | Each role has defined security responsibilities | ✅ Explícito | Definido em `roles-responsabilidades/` — responsabilidades per capita por capítulo |
-| SSDF PO.2.2 | Personnel have security knowledge for their role | ✅ Semântico | Requisitos de conhecimento implícitos; formação explícita em Cap. 13 |
-| NIS2 | Responsabilidades de gestão e papéis de segurança | ✅ Explícito | Overlay regulatório publicado; papéis mapeados para NIS2, DORA, GDPR, AI Act |
-| DORA | Roles de segurança em operações digitais | ✅ Explícito | Overlay regulatório publicado |
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento de requisito canónico. "Parcial" = sem unit dedicado no capítulo.
+
+| Framework | Requisito / Prática | Cobertura | Fonte verificada | Nota |
+|-----------|--------------------|-----------|-----------------|----|
+| SSDF PO.2 | Implement Roles and Responsibilities | ✅ Semântico | intro (strong): Papéis e Responsabilidades Organizacionais | 13 papéis com responsabilidades por capítulo; sem row de rastreabilidade SSDF explícita publicada |
+| SSDF PO.2.1 | Each role has defined security responsibilities | ✅ Explícito | intro (strong): Papéis e Responsabilidades Organizacionais > Os 13 Roles | Definido em `roles-responsabilidades/` — responsabilidades per capita por capítulo |
+| SSDF PO.2.2 | Personnel have security knowledge for their role | ✅ Semântico | supporting_reference (weak): Enquadramento Regulatório (múltiplos roles) | Requisitos de conhecimento implícitos; formação explícita em Cap. 13 |
+| NIS2 | Responsabilidades de gestão e papéis de segurança | ✅ Explícito | policy_reference (medium): GRC / Compliance > Enquadramento Regulatório | Overlay regulatório publicado; papéis mapeados para NIS2, DORA, GDPR, AI Act |
+| DORA | Roles de segurança em operações digitais | ✅ Explícito | policy_reference (medium): GRC / Compliance > Enquadramento Regulatório | Overlay regulatório publicado |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
@@ -40,9 +42,9 @@ O conteúdo primário para SSDF PO.2 reside neste capítulo — em `roles-respon
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente de normalização formal. Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) quando disponível.
 
 | Modelo | Domínios relevantes |

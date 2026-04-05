@@ -14,36 +14,39 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 
 ## Camada AppSec Core
 
-| Slice AppSec Core | Relevância |
-|-------------------|-----------|
-| ACO-SCBI — Secure Coding & Build Integrity | Codificação segura, guidelines, controlo de qualidade de código |
-| ACO-IVF — Integrity Verification & Findings | Validação automatizada, findings de revisão de código |
+| Slice AppSec Core | Âncora principal | Relevância |
+|-------------------|-----------------|-----------|
+| ACO-IVF — Input Validation, Safe Parsing & Controlled Failure | Primária | Validação de entrada, injeção, falha segura, gestão de erros — VAL + ERR requirements |
+| ACO-SCBI — Supply Chain & Build Integrity | Secundária | Segurança de dependências, proveniência do código |
 
-> **Nota:** O gap `secure_coding_discipline_gap` (ASVS) aponta para ausência de uma family unificadora de "disciplina de codificação segura". O conteúdo existe disperso — candidato a addon dedicado (e.g., `addon/02-disciplina-de-codigo-seguro.md`).
+> **Nota de mapeamento:** ACO-IVF é o principal espaço de normalização deste capítulo via `CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo`. ACO-SCBI é ativado pelo addon de dependências e proveniência.
 
 ---
 
 ## Frameworks normativos — cobertura verificada
 
-> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.  
+> Coluna **Fonte verificada** indica o `document_role` e `normative_weight` do unit que confirma a cobertura.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | Guidelines, linters e revisão formal |
-| SSDF PW.7 | Review and/or Analyze Human-Readable Code | ✅ Explícito | Revisão estruturada com critérios e rastreabilidade |
-| ASVS injection_and_sanitization | Injection prevention | ✅ Explícito | Row publicada |
-| ASVS input_contract_validation | Input contract validation | ✅ Explícito | Row publicada |
-| ASVS validation_before_internal_use | Validation before use | ✅ Explícito | Row publicada |
-| ASVS secure_coding_discipline_gap | Generic secure coding discipline | 🔴 Gap | Conteúdo existe mas não exposto como family; candidato a addon |
-| ASVS controlled_failure_and_non_revealing_errors | Controlled failure | ⚠️ Parcial | Secure development semantics |
-| ASVS error_handling_and_sensitive_logging_hygiene | Error handling hygiene | ⚠️ Parcial | Desenvolvimento e testing adjacent |
-| ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | Secure development semantics |
-| ASVS file_download_content_serving | File download & content serving | ⚠️ Parcial | Secure development adjacent |
-| ASVS secure_coding_architecture_documentation | Secure coding documentation | ⚠️ Parcial | Architecture e development |
-| CIS-16 | Application Software Security | ✅ Explícito | Linters, scanners, revisão estruturada (16.3, 16.11, 16.12) |
-| NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | Overlay regulatório publicado |
+| Framework | Requisito / Prática | Cobertura | Fonte verificada | Nota |
+|-----------|--------------------|-----------|----|---|
+| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | addon (medium): Boas Práticas + Guidelines de Equipa + Linters | Guidelines, linters e práticas proibidas |
+| SSDF PW.7 | Review and/or Analyze Human-Readable Code | ✅ Explícito | aplicacao_lifecycle (strong): US-02 Revisão de Código Segura | Revisão estruturada com critérios e rastreabilidade |
+| ASVS injection_and_sanitization | Injection prevention | ✅ Explícito | addon (medium): Boas Práticas; req VAL-004 via ACO-IVF-003 | Práticas proibidas + sanitização explícita |
+| ASVS input_contract_validation | Input contract validation | ✅ Explícito | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema, validação de entrada |
+| ASVS validation_before_internal_use | Validation before use | ✅ Explícito | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validação antes de uso interno |
+| ASVS secure_coding_discipline | Generic secure coding discipline | ✅ Semântico | addon (medium): Boas Práticas de Escrita; aplicacao_lifecycle (strong): US-13 Anti-patterns | Claim gap resolvido — conteúdo existe em addons |
+| ASVS controlled_failure_and_non_revealing_errors | Controlled failure | ✅ Semântico | requirements_catalog (strong): ERR-001–004 via ACO-IVF-005; addon (medium): Boas Práticas | Falha segura e erros não reveladores |
+| ASVS error_handling_and_sensitive_logging_hygiene | Error handling hygiene | ✅ Semântico | requirements_catalog (strong): ERR-005–007 via ACO-IVF-006 | Gestão centralizada, logs pseudonimizados |
+| ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | addon (medium): Boas Práticas (cobertura implícita) | Sem secção dedicada a encoding; coberto parcialmente |
+| ASVS file_download_content_serving | File download & content serving | ⚠️ Parcial | Sem unit dedicado em Cap. 06 | Mais relevante em Cap. 10 (testes) |
+| ASVS secure_coding_architecture_documentation | Secure coding documentation | ✅ Semântico | addon (medium): Anotações e Evidência + Guidelines de Equipa | Documentação de validações e práticas de equipa |
+| CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
+| NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
+
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit de normative_weight strong/medium com heading_path directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento de requisito canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
@@ -63,7 +66,7 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 ## Ligações com outros capítulos
 
 - **Cap. 01** — exigência proporcional de práticas com base no nível L1–L3
-- **Cap. 02** — requisitos REQ-XXX implementados e verificados neste capítulo
+- **Cap. 02** — requisitos VAL + ERR implementados e verificados neste capítulo; CFG-001–007 como baseline de configuração segura
 - **Cap. 05** — componentes usados no desenvolvimento validados via SCA
 - **Cap. 07** — práticas de codificação integradas como passos automatizados no pipeline
-- **Cap. 10** — validação final com testes e métricas de cobertura
+- **Cap. 10** — validação final com testes; file_download_content_serving mais coberto aqui

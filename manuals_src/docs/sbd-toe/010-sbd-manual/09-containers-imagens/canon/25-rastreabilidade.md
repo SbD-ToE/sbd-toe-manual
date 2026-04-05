@@ -16,9 +16,8 @@ Este capítulo define práticas de **construção, assinatura, proveniência, ha
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-RPR — Release Process & Readiness | Assinatura de imagens, proveniência, aprovação antes de deploy |
-| ACO-TSV — Third-party & Supply Visibility | Imagens base e dependências de containers |
-| ACO-IVF — Integrity Verification & Findings | Image scanning, validação de manifesto, findings por severidade |
+| ACO-SCBI — Supply Chain & Build Integrity | Container supply chain, imagens base, digest pinning, SBOM de containers, assinatura e proveniência |
+| ACO-IAT — Identity, Access & Session Trust | Container identity, workload identity, OIDC, RBAC e ServiceAccounts em execução |
 
 > **Nota adjunct:** ASVS `secure_configuration_baseline_gap` tem pressão aqui — containers têm semantics de configuração segura (securityContext, policies) mas sem secção dedicada. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
@@ -28,30 +27,32 @@ Este capítulo define práticas de **construção, assinatura, proveniência, ha
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | Integridade de imagem; digest pinning; reprodutibilidade |
-| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Manifesto e aprovação formal antes de deploy |
-| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Image scanning contínuo com bloqueios por severidade |
-| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ✅ Explícito | Scanning + critérios de aceitação formais |
-| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados; proveniência presente |
-| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico |
-| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Atestações e proveniência de imagens |
-| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Row publicada |
-| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | Container provenance |
-| SLSA-BUILD-PLATFORM-ISOLATION | Isolation | ⚠️ Parcial | Container isolation semântica |
-| SLSA-VERIFY-DEPENDENCIES | Check dependencies | ⚠️ Parcial | Container deps e SBOM presentes |
-| CAPEC-206 | Signing Malicious Code | ✅ Semântico | Artefactos assinados com verificação |
-| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada via digest pinning |
-| ASVS secure_configuration_baseline_gap | Secure configuration baseline | 🔴 Gap | Containers têm semantics; sem secção dedicada a baseline |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PW.5 | Create Source Code with Secure Coding Techniques | ✅ Explícito | Integridade de imagem; digest pinning; reprodutibilidade | addon (medium): Imagens Base Seguras e Minimalistas |
+| SSDF PS.1 | Protect Code and Data from Unauthorized Access | ✅ Explícito | Manifesto e aprovação formal antes de deploy | aplicacao_lifecycle (strong): US-03 — Assinatura e verificação de proveniência |
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Image scanning contínuo com bloqueios por severidade | aplicacao_lifecycle (strong): US-02 — Validação automática de vulnerabilidades |
+| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ✅ Explícito | Scanning + critérios de aceitação formais | addon (medium): Deteção e Tratamento de Vulnerabilidades em Imagens |
+| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados; proveniência presente | addon (medium): Assinatura de Imagens e Cadeia de Confiança |
+| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico | addon (medium): Hardening e Restrições de Execução em Containers |
+| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Atestações e proveniência de imagens | addon (medium): Assinatura de Imagens e Cadeia de Confiança |
+| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Proveniência distribuída com imagens assinadas | addon (medium): SBOM de Containers e Rastreabilidade de Runtime |
+| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | Container provenance gerada no build | aplicacao_lifecycle (strong): US-12 — Builders e Runners Ephemerais, Assinados e com Auditoria |
+| SLSA-BUILD-PLATFORM-ISOLATION | Isolation | ⚠️ Parcial | Container isolation semântica | addon (medium): Runners, Execução Isolada e Ambientes Controlados |
+| SLSA-VERIFY-DEPENDENCIES | Check dependencies | ⚠️ Parcial | Container deps e SBOM presentes | addon (medium): SBOM de Containers e Rastreabilidade de Runtime |
+| CAPEC-206 | Signing Malicious Code | ✅ Semântico | Artefactos assinados com verificação | addon (medium): Assinatura de Imagens e Cadeia de Confiança |
+| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada via digest pinning | aplicacao_lifecycle (strong): US-01 — Imagens base pinned por digest |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ⚠️ Parcial | Containers têm semantics de configuração segura (securityContext, OPA/Kyverno); sem secção dedicada a baseline integrity no catálogo de requisitos | addon (medium): Enforcement Técnico de Políticas no Runtime com OPA e Kyverno |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
+
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
 ## Modelos de maturidade — pendente de normalização
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente — Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
 | Modelo | Domínios relevantes |

@@ -16,8 +16,8 @@ Este capítulo define o **mecanismo de classificação de risco** que determina 
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SLG — Security Lifecycle & Governance | Classificação formal como base de governação do ciclo de vida |
-| ACO-TMR — Threat Modeling & Risk | Avaliação de risco como input da classificação de aplicações |
+| ACO-TMR — Threat Modeling, Risk Disposition & Mitigation Traceability | Avaliação de risco como input da classificação de aplicações (primário) |
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Classificação formal como base de governação do ciclo de vida |
 
 ---
 
@@ -25,20 +25,22 @@ Este capítulo define o **mecanismo de classificação de risco** que determina 
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.1 | Define Security Requirements | ✅ Explícito | Classificação de risco como base de requisitos proporcionais |
-| SSDF PO.3.2 | Maintain security toolchain configurations | ✅ Explícito | Proporcionalidade por nível de risco aplicada a toolchains |
-| DORA | Classificação por risco operacional | ✅ Explícito | Overlay regulatório publicado |
-| NIS2 | Classificação e governação por risco | ✅ Explícito | Overlay regulatório publicado |
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento de requisito canónico. "Parcial" = sem unit dedicado no capítulo.
+
+| Framework | Requisito / Prática | Cobertura | Fonte verificada | Nota |
+|-----------|--------------------|-----------|-----------------|----|
+| SSDF PO.1 | Define Security Requirements | ✅ Explícito | aplicacao_lifecycle (strong): US-02 — Aplicação da matriz de controlo | Classificação de risco como base de requisitos proporcionais |
+| SSDF PO.3.2 | Maintain security toolchain configurations | ✅ Explícito | aplicacao_lifecycle (strong): US-09 — Classificação de Artefactos Técnicos (Pipeline, IaC, Imagens) | Proporcionalidade por nível de risco aplicada a toolchains |
+| DORA | Classificação por risco operacional | ✅ Explícito | policy_reference (medium): Políticas Organizacionais — Gestão de Risco > Enquadramento Regulatório | Overlay regulatório publicado |
+| NIS2 | Classificação e governação por risco | ✅ Explícito | policy_reference (medium): Políticas Organizacionais — Gestão de Risco > Enquadramento Regulatório | Overlay regulatório publicado |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
+> ⏳ pendente de normalização formal. Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
 
 | Modelo | Domínios relevantes |

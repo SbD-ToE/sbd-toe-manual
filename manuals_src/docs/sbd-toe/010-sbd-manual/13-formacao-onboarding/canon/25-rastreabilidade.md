@@ -16,7 +16,7 @@ Este capítulo define **programas de formação por papel** — contínuos, rast
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SLG — Security Lifecycle & Governance | Formação como componente do ciclo de vida organizacional de segurança |
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Formação como componente do ciclo de vida organizacional de segurança; rastreabilidade e audit trail de capacitação |
 
 ---
 
@@ -24,22 +24,24 @@ Este capítulo define **programas de formação por papel** — contínuos, rast
 
 > Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
-| Framework | Requisito / Prática | Cobertura | Nota |
-|-----------|--------------------|-----------|----|
-| SSDF PO.2 | Implement Roles and Responsibilities | ✅ Semântico | PO.2.1/PO.2.2 cobertos via formação por função; conteúdo primário de PO.2 está em Cap. 00 |
-| SSDF PO.2.1 | Each role receives security training | ✅ Explícito | Formação obrigatória por papel com rastreabilidade |
-| SSDF PO.2.2 | Validate security knowledge before access | ✅ Explícito | Validação de conhecimento antes de atribuição de privilégios |
-| CIS-14 | Security Awareness and Skills Training | ✅ Explícito | 14.1/14.2/14.3 — formação proporcional ao risco, validação de acesso, formação contínua |
-| ASVS authentication_lifecycle | Auth lifecycle & recovery | ⚠️ Parcial | Onboarding semantics |
-| NIS2 | Capacitação e onboarding de segurança | ✅ Explícito | Overlay regulatório publicado |
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.2 | Implement Roles and Responsibilities | ✅ Semântico | PO.2.1/PO.2.2 cobertos via formação por função; conteúdo primário de PO.2 está em Cap. 00 | addon (medium): Manual de Formação por Perfil |
+| SSDF PO.2.1 | Each role receives security training | ✅ Explícito | Formação obrigatória por papel com rastreabilidade | aplicacao_lifecycle (strong): US-02 - Formação contínua e atualização + US-01 - Onboarding seguro |
+| SSDF PO.2.2 | Validate security knowledge before access | ✅ Explícito | Validação de conhecimento antes de atribuição de privilégios | aplicacao_lifecycle (strong): US-11 - Validação Formal de Conclusão + US-12 - Validação de Conhecimento |
+| CIS-14 | Security Awareness and Skills Training | ✅ Explícito | 14.1/14.2/14.3 — formação proporcional ao risco, validação, formação contínua | aplicacao_lifecycle (strong): US-01 a US-05 + addon (medium): Trilhos Formativos por Função e Risco |
+| ASVS authentication_lifecycle | Auth lifecycle & recovery | ⚠️ Parcial | Onboarding semântico; sem unit dedicado | addon (medium): Checklist de Onboarding Técnico Seguro |
+| NIS2 | Capacitação e onboarding de segurança | ✅ Explícito | Overlay regulatório publicado | intro (strong): Formação e Capacitação |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
 > **Nota SSDF PO.2:** O conteúdo primário de PO.2 (definição formal de papéis e responsabilidades) reside em `00-fundamentos/roles-responsabilidades/`. Cap. 13 cobre os sub-requisitos de formação e validação (PO.2.1, PO.2.2). A rastreabilidade completa de PO.2 requer leitura conjunta de Cap. 00 + Cap. 13 + Cap. 14.
 
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
+
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Modelos de maturidade — pendente de normalização formal
 
 > Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
 > Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.

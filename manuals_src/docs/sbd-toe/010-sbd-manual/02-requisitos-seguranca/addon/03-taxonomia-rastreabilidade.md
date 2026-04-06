@@ -68,6 +68,15 @@ VAL-002                →   SEC-L3-VAL-SQLI  (app com dados regulados, risco L3
 
 O mesmo requisito canónico pode originar tags distintas em projectos diferentes, reflectindo contextos de risco diferentes. Isto é intencional: **a proporcionalidade é uma propriedade do projecto, não do requisito**.
 
+Mais importante: a rastreabilidade não termina na tag operacional. A tag é o identificador visível do projecto, mas a cadeia mínima esperada deve continuar para montante e para jusante:
+
+```text
+classificação / risco → requisito canónico → tag operacional → ameaça / driver de risco
+→ critério de validação / teste / revisão → evidência → exceção / decisão de revisão
+```
+
+Sem esta cadeia, o requisito fica “presente” no projecto mas deixa de ser governável, auditável e reavaliável quando o contexto muda.
+
 ---
 
 ## 3) Domínios técnicos suportados
@@ -111,9 +120,17 @@ As tags operacionais devem ser **validadas periodicamente** contra:
 - O [catálogo canónico](./catalogo-requisitos) - para garantir que os IDs referenciados existem e estão actualizados;
 - A [matriz de controlos por risco](./matriz-controlos-por-risco) - para confirmar que o nível `Lx` da tag é coerente com a classificação actual da aplicação.
 
+Sempre que exista alteração material de risco, arquitetura, integração, dados tratados ou forma de validação, esta verificação deve ser tratada como **evento de revisão do requisito**. Nesses casos, a organização deve confirmar se:
+
+- o requisito continua aplicável tal como está;
+- a tag operacional continua coerente com o nível `Lx` do projecto;
+- a ligação ao *Threat Modeling* e à validação continua válida;
+- alguma [excepção documentada](./gestao-excecoes) deixou de ser aceitável ou precisa de revalidação.
+
 A organização deve manter um registo com:
 - Requisitos adoptados e respectivos IDs canónicos;
 - Tags operacionais activas por projecto/aplicação;
+- Registos de revisão, alteração ou re-trigger;
 - Validações executadas e evidência gerada;
 - [Excepções documentadas](./gestao-excecoes).
 

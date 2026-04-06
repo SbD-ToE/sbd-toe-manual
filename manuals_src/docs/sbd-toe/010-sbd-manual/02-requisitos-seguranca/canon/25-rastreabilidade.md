@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 02: Requisitos de Segurança
+title: "Rastreabilidade — Capítulo 02: Requisitos de Segurança"
 description: Rastreabilidade das práticas de requisitos de segurança face a frameworks normativos com pilot formal
 tags: [rastreabilidade, requisitos, ssdf, asvs, slsa, nis2]
 sidebar_position: 25

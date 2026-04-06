@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 06: Desenvolvimento Seguro
+title: "Rastreabilidade — Capítulo 06: Desenvolvimento Seguro"
 description: Rastreabilidade das práticas de desenvolvimento seguro face a frameworks normativos com pilot formal
 tags: [rastreabilidade, desenvolvimento, codificacao, ssdf, asvs, cis, nis2]
 sidebar_position: 25

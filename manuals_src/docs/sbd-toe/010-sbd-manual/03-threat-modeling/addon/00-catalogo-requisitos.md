@@ -71,4 +71,4 @@ Requisitos que garantem que o processo de threat modeling é conduzido com rigor
 > Para os riscos do próprio processo de threat modeling, consultar [Riscos do Processo de Threat Modeling](./riscos-processo-threat-modeling).
 > Para mapeamento de threats para requisitos de segurança, consultar [Mapeamento Threats → Requisitos](./mapeamento-threats-requisitos).
 > Para integração de threat modeling em CI/CD, consultar [Threat Modeling em CI/CD](./threat-modeling-ci).
-> Para KPIs e métricas de threat modeling, consultar [KPIs e Métricas de Threat Modeling](./kpis-metricas).
+> Para KPIs e métricas de threat modeling, consultar [KPIs e Métricas de Threat Modeling](./11-kpis-metricas.md).

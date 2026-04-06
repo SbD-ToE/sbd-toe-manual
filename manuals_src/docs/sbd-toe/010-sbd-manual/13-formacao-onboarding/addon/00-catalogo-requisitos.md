@@ -73,5 +73,5 @@ Requisitos que garantem que a competência de segurança das equipas é proporci
 > Para os trilhos formativos por perfil e nível de criticidade, consultar [Trilhos Formativos](./trilho-formativo).
 > Para o programa de Security Champions, consultar [Programa de Security Champions](./programa-champions).
 > Para a checklist canónica de onboarding, consultar [Checklist de Onboarding](./checklist-onboarding).
-> Para o modelo de inclusão de terceiros e contratados, consultar [Modelo de Inclusão de Terceiros](./modelo-inclusao-terceiros).
-> Para KPIs e métricas de eficácia formativa, consultar [KPIs e Métricas de Formação](./kpis-metricas).
+> Para o modelo de inclusão de terceiros e contratados, consultar [Modelo de Inclusão de Terceiros](./20-modelo-inclusao-terceiros.md).
+> Para KPIs e métricas de eficácia formativa, consultar [KPIs e Métricas de Formação](./11-kpis-metricas.md).

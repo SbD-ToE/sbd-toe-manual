@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 13: Formação e Onboarding
+title: "Rastreabilidade — Capítulo 13: Formação e Onboarding"
 description: Rastreabilidade das práticas de formação e onboarding face a frameworks normativos com pilot formal
 tags: [rastreabilidade, formacao, onboarding, ssdf, cis, nis2]
 sidebar_position: 25

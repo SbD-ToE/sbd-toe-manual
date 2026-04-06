@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 12: Monitorização e Operações
+title: "Rastreabilidade — Capítulo 12: Monitorização e Operações"
 description: Rastreabilidade das práticas de monitorização e resposta face a frameworks normativos com pilot formal
 tags: [rastreabilidade, monitorizacao, logging, resposta, ssdf, asvs, cis, dora, nis2]
 sidebar_position: 25

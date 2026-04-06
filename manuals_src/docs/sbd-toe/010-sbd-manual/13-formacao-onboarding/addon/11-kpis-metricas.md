@@ -1,7 +1,7 @@
 ---
 id: kpis-metricas-formacao
 title: KPIs e Métricas - Formação e Onboarding
-sidebar_position: 91
+sidebar_position: 11
 description: Indicadores técnicos e de processo para avaliação da eficácia, cobertura e impacto do programa de formação e onboarding em segurança, com thresholds por nível de risco e mapeamento para dimensões transversais de governação SbD-ToE.
 tags: [kpi, metricas, TRN, formacao, onboarding, champions, L1, L2, L3]
 ---

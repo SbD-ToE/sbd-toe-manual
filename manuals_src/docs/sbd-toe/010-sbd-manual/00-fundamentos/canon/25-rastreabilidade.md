@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 00: Fundamentos e Papéis
+title: "Rastreabilidade — Capítulo 00: Fundamentos e Papéis"
 description: Rastreabilidade das práticas de papéis, responsabilidades e fundamentos face a frameworks normativos com pilot formal
 tags: [rastreabilidade, roles, responsabilidades, governanca, ssdf, nis2, dora]
 sidebar_position: 25
@@ -48,7 +48,7 @@ O conteúdo primário para SSDF PO.2 reside neste capítulo — em `roles-respon
 
 ## Maturidade — referência separada
 
-A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
+A leitura de maturidade deste capítulo é tratada em [baseline.md](../baseline.md#modelos-de-maturidade).
 
 Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 

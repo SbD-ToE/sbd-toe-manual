@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 05: Dependências, SBOM e SCA
+title: "Rastreabilidade — Capítulo 05: Dependências, SBOM e SCA"
 description: Rastreabilidade das práticas de gestão de dependências e supply chain face a frameworks normativos com pilot formal
 tags: [rastreabilidade, dependencias, sbom, sca, supply-chain, ssdf, slsa, capec, cis, dora, nis2]
 sidebar_position: 25

@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 03: Threat Modeling
+title: "Rastreabilidade — Capítulo 03: Threat Modeling"
 description: Rastreabilidade das práticas de threat modeling face a frameworks normativos com pilot formal
 tags: [rastreabilidade, threat-modeling, ssdf, asvs, cis]
 sidebar_position: 25

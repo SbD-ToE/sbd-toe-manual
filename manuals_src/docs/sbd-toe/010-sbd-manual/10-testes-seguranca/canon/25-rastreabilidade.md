@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 10: Testes de Segurança
+title: "Rastreabilidade — Capítulo 10: Testes de Segurança"
 description: Rastreabilidade das práticas de testes de segurança face a frameworks normativos com pilot formal
 tags: [rastreabilidade, testes, validacao, ssdf, asvs, cis, slsa, dora]
 sidebar_position: 25

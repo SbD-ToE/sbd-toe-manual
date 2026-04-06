@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 09: Containers e Imagens
+title: "Rastreabilidade — Capítulo 09: Containers e Imagens"
 description: Rastreabilidade das práticas de segurança de containers face a frameworks normativos com pilot formal
 tags: [rastreabilidade, containers, imagens, ssdf, slsa, capec, asvs]
 sidebar_position: 25

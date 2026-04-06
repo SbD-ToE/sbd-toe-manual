@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 01: Classificação de Aplicações
+title: "Rastreabilidade — Capítulo 01: Classificação de Aplicações"
 description: Rastreabilidade das práticas de classificação de risco face a frameworks normativos com pilot formal
 tags: [rastreabilidade, classificacao, risco, ssdf, nis2, dora]
 sidebar_position: 25

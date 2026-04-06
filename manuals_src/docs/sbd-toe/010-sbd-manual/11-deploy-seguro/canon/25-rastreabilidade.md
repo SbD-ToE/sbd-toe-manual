@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 11: Deploy Seguro
+title: "Rastreabilidade — Capítulo 11: Deploy Seguro"
 description: Rastreabilidade das práticas de deploy seguro face a frameworks normativos com pilot formal
 tags: [rastreabilidade, deploy, execucao, ssdf, slsa, capec, asvs, cis, dora, nis2]
 sidebar_position: 25

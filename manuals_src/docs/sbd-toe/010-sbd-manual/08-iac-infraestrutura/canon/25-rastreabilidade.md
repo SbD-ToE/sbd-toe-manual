@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 08: IaC e Infraestrutura como Código
+title: "Rastreabilidade — Capítulo 08: IaC e Infraestrutura como Código"
 description: Rastreabilidade das práticas de IaC face a frameworks normativos com pilot formal
 tags: [rastreabilidade, iac, infraestrutura, ssdf, slsa, capec, asvs, cis, nis2]
 sidebar_position: 25

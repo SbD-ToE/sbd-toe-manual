@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 04: Arquitetura Segura
+title: "Rastreabilidade — Capítulo 04: Arquitetura Segura"
 description: Rastreabilidade das práticas de arquitetura segura face a frameworks normativos com pilot formal
 tags: [rastreabilidade, arquitetura, ssdf, asvs, slsa, cis]
 sidebar_position: 25

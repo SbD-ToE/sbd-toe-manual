@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 14: Governança e Contratação
+title: "Rastreabilidade — Capítulo 14: Governança e Contratação"
 description: Rastreabilidade das práticas de governança e contratação face a frameworks normativos com pilot formal
 tags: [rastreabilidade, governanca, contratos, fornecedores, ssdf, cis, asvs, dora, nis2]
 sidebar_position: 25

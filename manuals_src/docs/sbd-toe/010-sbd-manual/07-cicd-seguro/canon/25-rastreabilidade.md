@@ -1,6 +1,6 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade — Capítulo 07: CI/CD Seguro
+title: "Rastreabilidade — Capítulo 07: CI/CD Seguro"
 description: Rastreabilidade das práticas de segurança de pipeline face a frameworks normativos com pilot formal
 tags: [rastreabilidade, cicd, supply-chain, ssdf, slsa, capec, asvs, cis]
 sidebar_position: 25

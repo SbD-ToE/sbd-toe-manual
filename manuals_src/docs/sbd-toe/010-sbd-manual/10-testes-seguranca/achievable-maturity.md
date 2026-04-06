@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 10
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Testes de Segurança
 
 Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 10 - Testes de Segurança**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 As práticas abrangem testes automatizados (SAST, DAST, IAST), fuzzing, análise de resultados, rastreabilidade, gestão de findings, testes manuais (ex: PenTesting) e integração contínua no SDLC.
 
@@ -21,25 +21,19 @@ As práticas abrangem testes automatizados (SAST, DAST, IAST), fuzzing, análise
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-Este mapeamento avalia o **nível de completude e integração** das práticas prescritas no capítulo relativamente aos frameworks de referência. Cada avaliação segue o modelo próprio de maturidade da framework:
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Três níveis crescentes por domínio               |
-| OWASP DSOMM      | `n / m`                             | Níveis por domínio técnico                       |
-| NIST SSDF        | Lista de controlos cobertos         | Modelo binário e objetivo                        |
-| BSIMM            | Lista de práticas observadas        | Modelo observacional, não prescritivo            |
-| SLSA             | Nível acumulativo (1–4)             | Requisitos progressivos em cadeia de build/test  |
-
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
 | Framework     | Domínios Relevantes                  | Práticas Cobertas                                                     | Avaliação de Maturidade        |
 |---------------|---------------------------------------|------------------------------------------------------------------------|--------------------------------|
 | **SAMM v2.1** | Verification → Security Testing       | Testes automatizados, gates de validação, gestão de findings          | **2 / 3**                      |
-| **BSIMM13**   | SFD1, SE1, T1.3, T2.4, SE3.5          | Feedback automático, rastreabilidade, pentests                        | Contributo direto              |
-| **SSDF**      | RV.1, RV.3, RV.6, PS.2                | Validação automatizada, fuzzing, evidência e análise                  | **✔️ RV.1, RV.3, RV.6, PS.2** |
 | **SLSA v1.0** | Build/Test Coverage                   | Cobertura limitada, validação de artefactos antes de deploy           | **Nível 2 / 4**                |
 | **DSOMM**     | Testing, Design & Development         | Integração contínua, rastreabilidade por release, gates automáticos   | **2 / 3**                      |
 
@@ -66,29 +60,6 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ---
 
-## 🧱 NIST SSDF - Requisitos de Validação
-
-| Controlos NIST SSDF | Descrição                                        | Alinhamento com Cap. 10                       |
-|---------------------|--------------------------------------------------|-----------------------------------------------|
-| RV.1                | Validar código e artefactos                      | ✅ Com SAST/DAST automáticos e análise manual |
-| RV.3                | Gerir resultados e rastrear correções            | ✅ Via rastreabilidade e evidência             |
-| RV.6                | Fuzzing, testes dinâmicos                        | ✅ Inclui fuzzing contínuo e testes adversariais |
-| PS.2                | Planear e executar testes                        | ✅ Planeamento formal e rastreável             |
-
----
-
-## 🧱 BSIMM - Práticas Observadas em Organizações Reais
-
-| Prática BSIMM | Alinhamento com Cap. 10                                               |
-|---------------|------------------------------------------------------------------------|
-| SFD1.2        | Integração de SAST no ciclo de vida                                    |
-| SE1.1         | Geração automática de resultados                                        |
-| T1.3          | Validação ofensiva com objetivos definidos                             |
-| T2.4          | Acompanhamento de findings e regressão                                 |
-| SE3.5         | Feedback técnico a equipas de desenvolvimento                          |
-
----
-
 ## 🧱 SLSA - Build/Test Coverage
 
 | Nível | Requisitos principais                                             | Cobertura pelo Cap. 10                                 |
@@ -104,6 +75,7 @@ Este mapeamento avalia o **nível de completude e integração** das práticas p
 
 ## ✅ Conclusão
 
-- As práticas deste capítulo permitem atingir um **nível elevado de maturidade técnica** em segurança da validação;
-- Existe uma forte integração no SDLC com evidência, feedback e rastreabilidade contínua;
-- O capítulo serve de base robusta para ambientes CI/CD com validação automatizada e gestão de riscos técnicos.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+

@@ -2,12 +2,14 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Threat Modeling
 description: Alinhamento entre as práticas deste capítulo e os principais frameworks de segurança
-tags: [maturidade, threat-modeling, SAMM, SSDF, SLSA, DSOMM]
+tags: [maturidade, threat-modeling, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Threat Modeling
 
-Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 03** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **BSIMM**, **NIST SSDF**, **SLSA** e **OWASP DSOMM**.
+Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 03** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **OWASP DSOMM** e **SLSA**.
 
 O Threat Modeling é uma prática estruturante do ciclo de vida seguro. Permite antecipar riscos, definir requisitos proporcionais e justificar a aplicação de controlos de segurança. Este capítulo fornece uma abordagem repetível, rastreável e proporcional baseada em **STRIDE**, **DFDs**, *threat maps* e critérios de validação. Quando existe tratamento de dados pessoais, aplica-se **LINDDUN** de forma complementar.
 
@@ -15,19 +17,13 @@ O Threat Modeling é uma prática estruturante do ciclo de vida seguro. Permite 
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-Este documento **não mede a maturidade de uma organização**, mas sim o **grau de cobertura que as práticas deste capítulo oferecem relativamente às frameworks de referência**.
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-### Tipos de Avaliação Utilizados
-
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Framework prescritiva com 3 níveis por domínio   |
-| OWASP DSOMM      | `n / m` (até 4)                     | Domínios com níveis formais                      |
-| NIST SSDF        | Lista de controlos cobertos         | Modelo binário, sem níveis formais               |
-| BSIMM            | Lista de práticas cobertas          | Modelo observacional, não prescritivo            |
-| SLSA             | Nível máximo suportado (ex: 1 de 4) | Modelo acumulativo, não gradual por domínio      |
-
-As avaliações aqui descritas foram realizadas com base numa leitura técnico-científica de cada fonte original.
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
@@ -35,8 +31,6 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 |------------------|----------------------------------------------|------------------------------------------------------------------|-------------------------------------|
 | OWASP SAMM v2.1  | Design → Threat Assessment                   | Modelação estruturada com STRIDE, DFDs e análise por risco       | **2 / 3**                           |
 | OWASP DSOMM      | Architecture, Requirements, Risk Analysis    | Integração no SDLC, rastreabilidade, *threat maps* reutilizáveis | **2 / 4** (média dos domínios)      |
-| NIST SSDF v1.1   | PS.1, PS.3, RV.2                             | Identificação, revisão e aceitação de risco no design            | **✔️ PS.1, PS.3, RV.2**             |
-| BSIMM13          | Architecture Analysis (AA1, AA2)             | Mapeamento de ameaças, mitigação e controlo                      | Contributo direto                   |
 | SLSA v1.0        | Risk Awareness (Supply Chain)                | Apoio indireto à definição proporcional de controlos             | **Nível 1 / 4**                     |
 
 ---
@@ -65,30 +59,6 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ---
 
-## 🧱 NIST SSDF - Identify, Review & Validate in Design
-
-| Controlos NIST SSDF | Descrição                                        | Alinhamento com Cap. 03 |
-|---------------------|--------------------------------------------------|--------------------------|
-| **PS.1**            | Definir práticas de segurança no design          | ✅ Coberto               |
-| **PS.3**            | Rever design face a ameaças e riscos             | ✅ Coberto               |
-| **RV.2**            | Rever resultados/decisões com stakeholders       | ✅ Coberto               |
-
-> O threat modeling é tratado como atividade sistemática, documentada e integrada com backlog e arquitetura.
-
----
-
-## 🧱 BSIMM - Architecture Analysis (AA1, AA2)
-
-| Prática BSIMM | Alinhamento com Cap. 03                                        |
-|---------------|----------------------------------------------------------------|
-| **AA1.1**     | ✅ Mapeamento de ameaças por componente                        |
-| **AA1.2**     | ✅ Definição de técnicas de ataque e mitigação                 |
-| **AA2.1**     | ✅ Ligação com arquitetura formal e controlos selecionados     |
-
-> As práticas do capítulo contribuem diretamente para o domínio BSIMM de análise da arquitetura; automações e *gates* adicionais são tratados como avançados (ficheiro `30`).
-
----
-
 ## 🧱 SLSA - Supply Chain Risk Awareness
 
 | Nível | Requisitos principais                              | Cobertura pelo Cap. 03                   |
@@ -103,19 +73,7 @@ As avaliações aqui descritas foram realizadas com base numa leitura técnico-c
 
 ## ✅ Conclusão
 
-- O Capítulo 03 estabelece uma prática sólida de threat modeling, com artefactos formais, reutilizáveis e rastreáveis;  
-- Está alinhado com **SAMM 2/3**, **DSOMM média 2/4**, **BSIMM AA1 e AA2**, e **SSDF PS.1, PS.3, RV.2**;  
-- Fundamenta controlos técnicos, requisitos e decisões de arquitetura com base em análise de risco realista;  
-- Apoia diretamente a proporcionalidade e priorização de controlos ao longo do SDLC.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
 
----
-
-## 📊 Sumário Consolidado de Alinhamento por Framework
-
-| Framework         | Domínios Relevantes                         | Práticas ou Objetos Cobertos                                     | Avaliação de Maturidade             |
-|------------------|----------------------------------------------|------------------------------------------------------------------|-------------------------------------|
-| OWASP SAMM v2.1  | Design → Threat Assessment                   | Modelação estruturada com STRIDE, DFDs e análise por risco       | **2 / 3**                           |
-| OWASP DSOMM      | Architecture, Requirements, Risk Analysis    | Integração no SDLC, rastreabilidade, *threat maps* reutilizáveis | **2 / 4** (média dos domínios)      |
-| NIST SSDF v1.1   | PS.1, PS.3, RV.2                             | Identificação, revisão e aceitação de risco no design            | **✔️ PS.1, PS.3, RV.2**             |
-| BSIMM13          | Architecture Analysis (AA1, AA2)             | Mapeamento de ameaças, mitigação e controlo                      | Contributo direto                   |
-| SLSA v1.0        | Risk Awareness (Supply Chain)                | Apoio indireto à definição proporcional de controlos             | **Nível 1 / 4**                     |

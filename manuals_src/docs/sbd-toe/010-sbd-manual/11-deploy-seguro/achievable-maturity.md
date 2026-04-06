@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 11
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Deploy Seguro
 
 Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 11 - Deploy Seguro**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 As práticas cobrem: validação de readiness, controlo de triggers de deploy, rollback seguro, registo de decisões, gates automatizados e rastreabilidade organizacional em ambientes de produção.
 
@@ -21,25 +21,19 @@ As práticas cobrem: validação de readiness, controlo de triggers de deploy, r
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-Este mapeamento avalia o **grau de completude e sofisticação prática** face aos requisitos de cada framework. As métricas aplicadas seguem a estrutura nativa de cada referência:
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Três níveis por domínio                          |
-| OWASP DSOMM      | `n / m`                             | Níveis de maturidade por domínio técnico         |
-| NIST SSDF        | Lista de controlos cobertos         | Avaliação objetiva e não graduada                |
-| BSIMM            | Práticas observadas                 | Abordagem empírica                               |
-| SLSA             | Nível acumulativo (1–4)             | Requisitos progressivos                          |
-
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
 | Framework     | Domínios Relevantes                  | Práticas Cobertas                                                  | Avaliação de Maturidade        |
 |---------------|---------------------------------------|----------------------------------------------------------------------|--------------------------------|
 | **SAMM v2.1** | Verification → Security Testing       | Gates, validação final, rollback                                    | **3 / 3**                      |
-| **BSIMM13**   | Deployment → CMVM, SE2.5              | Controlo de promoção, exceções, logging                             | Contributo direto              |
-| **SSDF**      | RV.1.2, RV.2.3, RV.3.3                | Execução autorizada, rollback, logging e reversibilidade            | **✔️ RV.1.2, RV.2.3, RV.3.3** |
 | **SLSA v1.0** | Provenance, Build Triggers            | Controlos de promoção e artefactos, validações                      | **Nível 2 / 4**                |
 | **DSOMM**     | Design & Development                  | Deploy seguro, rastreabilidade, controlo formal de produção         | **4 / 5**                      |
 
@@ -65,26 +59,6 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ---
 
-## 🧱 NIST SSDF - Requisitos de Execução Autorizada
-
-| Controlos NIST SSDF | Descrição                                      | Alinhamento com Cap. 11                  |
-|---------------------|------------------------------------------------|------------------------------------------|
-| RV.1.2              | Autorizar a execução                           | ✅ Validação de readiness e triggers      |
-| RV.2.3              | Validar artefactos antes de produção           | ✅ Gates técnicos e revisão               |
-| RV.3.3              | Controlar rollback e revalidação               | ✅ Processo reversível documentado        |
-
----
-
-## 🧱 BSIMM - Práticas de Governança de Deployment
-
-| Prática BSIMM | Alinhamento com Cap. 11                                         |
-|---------------|------------------------------------------------------------------|
-| SE2.5         | Exceções formais e registo de decisões                          |
-| CMVM1.5       | Logging e auditoria do processo de deploy                       |
-| CMVM2.4       | Aprovação e validação automatizada                              |
-
----
-
 ## 🧱 SLSA - Controlo de Build e Proveniência
 
 | Nível | Requisitos principais                                      | Cobertura pelo Cap. 11                                |
@@ -100,6 +74,7 @@ Este mapeamento avalia o **grau de completude e sofisticação prática** face a
 
 ## ✅ Conclusão
 
-- Este capítulo atinge **nível elevado de maturidade em SAMM, SSDF, DSOMM e BSIMM**, abordando formalização, rollback, controlo de promoção e rastreabilidade;
-- A integração com Capítulos 07 (CI/CD) e 12 (Monitorização) pode reforçar o alinhamento com SLSA 3 e 4;
-- A maturidade obtida é suficiente para ambientes produtivos de elevada exigência.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+

@@ -4,7 +4,11 @@ title: Rastreabilidade — Capítulo 09: Containers e Imagens
 description: Rastreabilidade das práticas de segurança de containers face a frameworks normativos com pilot formal
 tags: [rastreabilidade, containers, imagens, ssdf, slsa, capec, asvs]
 sidebar_position: 25
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # Rastreabilidade — Capítulo 09: Containers e Imagens
 
@@ -50,16 +54,11 @@ Este capítulo define práticas de **construção, assinatura, proveniência, ha
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Maturidade — referência separada
 
-> ⏳ pendente — Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
-> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Modelo | Domínios relevantes |
-|--------|---------------------|
-| OWASP SAMM v2.1 | Implementation → Deployment, Verification |
-| OWASP DSOMM | Supply Chain, Build & Deploy, Ops Monitoring |
-| BSIMM13 | CMVM 1.3, SE 2.2, ST 1.1–1.4 |
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 

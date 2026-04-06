@@ -4,7 +4,11 @@ title: Rastreabilidade — Capítulo 02: Requisitos de Segurança
 description: Rastreabilidade das práticas de requisitos de segurança face a frameworks normativos com pilot formal
 tags: [rastreabilidade, requisitos, ssdf, asvs, slsa, nis2]
 sidebar_position: 25
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # Rastreabilidade — Capítulo 02: Requisitos de Segurança
 
@@ -50,16 +54,11 @@ Este capítulo define **requisitos de segurança proporcionais ao risco**, rastr
 
 ---
 
-## Modelos de maturidade — pendente de normalização formal
+## Maturidade — referência separada
 
-> ⏳ pendente de normalização formal. Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
-> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Modelo | Domínios relevantes |
-|--------|---------------------|
-| OWASP SAMM v2.1 | Design → Security Requirements |
-| OWASP DSOMM | Requirements, Architecture, Verification |
-| BSIMM13 | Intelligence → Requirements and Attack Models |
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 

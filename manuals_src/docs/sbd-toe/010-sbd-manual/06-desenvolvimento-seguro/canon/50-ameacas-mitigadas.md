@@ -4,14 +4,26 @@ title: Ameaças Mitigadas - Desenvolvimento Seguro
 description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento para OWASP, CAPEC, SSDF, entre outros
 tags: [ameaças, mitigação, desenvolvimento, codificação segura, validação, GenAI]
 sidebar_position: 50
+
 ---
 
 
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+
 # 🔐 Ameaças Mitigadas - Capítulo 06: Desenvolvimento Seguro
 
-Este capítulo prescreve práticas de **codificação segura, validações automatizadas, gestão de exceções e evidência de conformidade**, com o objetivo de garantir a integridade e segurança do código-fonte desde o início do ciclo de desenvolvimento.
+Este capítulo prescreve práticas de **codificação segura, validações automatizadas, gestão de exceções e evidência rastreável**, com o objetivo de garantir a integridade e segurança do código-fonte desde o início do ciclo de desenvolvimento.
 
 > 🎯 As ameaças mitigadas são originadas por **práticas de codificação inseguras, falta de validação sistemática, informalidade na aceitação de riscos técnicos e uso de GenAI sem controlo**.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 
@@ -86,4 +98,4 @@ O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-
 
 > 📦 Também reduz substancialmente o risco de problemas **que viriam a ser detetados por SBOM, SCA ou scanners**, ao garantir validações estruturadas, políticas de dependência e anotação de exceções desde a origem.
 
-> 📌 Este capítulo operacionaliza os princípios de **secure coding** e **continuous validation** de forma auditável e escalável - com impacto direto na conformidade com **SSDF, SAMM, ISO 27034, CAPEC e OWASP Top 10**.
+> 📌 Este capítulo operacionaliza princípios de **secure coding** e **continuous validation** de forma auditável e escalável, reduzindo categorias de ameaça que também surgem refletidas em **CAPEC**, **OWASP Top 10** e em standards de engineering assurance.

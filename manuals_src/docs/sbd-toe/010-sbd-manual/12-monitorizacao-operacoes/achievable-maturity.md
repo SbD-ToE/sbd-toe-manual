@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 12
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Monitorização e Operações
 
 Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 12 - Monitorização e Operações**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 As práticas abordam logging estruturado, métricas de segurança, alertas, integração com resposta a incidentes, correlação de eventos e observabilidade contínua.
 
@@ -21,25 +21,19 @@ As práticas abordam logging estruturado, métricas de segurança, alertas, inte
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-Este mapeamento avalia o **grau de completude e sofisticação** das práticas prescritas, de acordo com os mecanismos nativos de cada framework:
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Três níveis por domínio                          |
-| OWASP DSOMM      | `n / m`                             | Níveis de maturidade por domínio técnico         |
-| NIST SSDF        | Lista de controlos cobertos         | Avaliação binária (completo/incompleto)          |
-| BSIMM            | Práticas observadas                 | Enfoque empírico                                 |
-| SLSA             | Nível acumulativo (1–4)             | Requisitos progressivos                          |
-
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
 | Framework     | Domínios Relevantes                  | Práticas Cobertas                                              | Avaliação de Maturidade        |
 |---------------|---------------------------------------|------------------------------------------------------------------|--------------------------------|
 | **SAMM v2.1** | Operations → Incident Management      | Logging, alertas, KPIs, integração com resposta                 | **3 / 3**                      |
-| **BSIMM13**   | Deployment → TDI1.1, TDI2.2, IR1.4    | Telemetria, correlação, resposta                                | Contributo direto              |
-| **SSDF**      | DE.1.2, RV.1.2, RV.1.3                | Logging seguro, correlação, métricas operacionais               | **✔️ DE.1.2, RV.1.2, RV.1.3** |
 | **SLSA v1.0** | Observability                         | Logging e métricas integradas                                   | **Nível 2 / 4**                |
 | **DSOMM**     | Operations                            | Monitorização, deteção, alertas, IR, correlação                 | **5 / 5**                      |
 
@@ -65,26 +59,6 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ---
 
-## 🧱 NIST SSDF - Controlos de Monitorização
-
-| Controlos NIST SSDF | Descrição                                       | Alinhamento com Cap. 12                  |
-|---------------------|--------------------------------------------------|------------------------------------------|
-| DE.1.2              | Deteção ativa de eventos                         | ✅ Regras de deteção e correlação         |
-| RV.1.2              | Logging seguro e audível                         | ✅ Logging estruturado                    |
-| RV.1.3              | Avaliação contínua da integridade                | ✅ Métricas, KPIs e evidência             |
-
----
-
-## 🧱 BSIMM - Práticas Observadas
-
-| Prática BSIMM | Alinhamento com Cap. 12                                  |
-|---------------|-----------------------------------------------------------|
-| TDI1.1        | Coleta estruturada de telemetria                          |
-| TDI2.2        | Correlacionar eventos para deteção de ataques             |
-| IR1.4         | Ativação de planos de resposta a incidentes               |
-
----
-
 ## 🧱 SLSA - Observabilidade
 
 | Nível | Requisitos principais                                | Cobertura pelo Cap. 12                             |
@@ -100,6 +74,7 @@ Este mapeamento avalia o **grau de completude e sofisticação** das práticas p
 
 ## ✅ Conclusão
 
-- As práticas prescritas permitem atingir **maturidade elevada e completa em SAMM, DSOMM e SSDF**;
-- Os controlos cobrem os principais requisitos de deteção, rastreabilidade e resposta técnica;
-- A integração com resposta a incidentes e métricas de operação reforça o ciclo de segurança contínua.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+

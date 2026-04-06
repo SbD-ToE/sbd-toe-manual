@@ -4,14 +4,26 @@ title: Ameaças Mitigadas - Testes de Segurança
 description: Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.
 tags: [ameaças, mitigação, segurança, testes, osc&r, stride, capec, ssdf]
 sidebar_position: 50
+
 ---
 
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 10: Testes de Segurança
 
 Este capítulo define a estratégia, técnicas e ferramentas de **validação contínua da segurança da aplicação**, incluindo testes estáticos, dinâmicos, interativos, fuzzing, validação de regressão e pentesting.
 
 > ⚠️ As ameaças mitigadas por este capítulo são **técnicas e contextuais**, surgem na implementação e execução do software - e requerem **validação ativa e contínua para serem detetadas e corrigidas**.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

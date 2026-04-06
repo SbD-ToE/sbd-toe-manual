@@ -4,8 +4,12 @@ title: Ameaças Mitigadas - Formação e Onboarding Seguro
 description: Ameaças mitigadas pela aplicação sistemática das práticas de capacitação, onboarding e cultura técnica segura.
 tags: [ameacas, mitigacao, osc&r, cultura, onboarding, terceiros, segurança humana]
 sidebar_position: 50
+
 ---
 
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 13: Formação e Onboarding Seguro
 
@@ -13,6 +17,14 @@ Este capítulo estabelece práticas para garantir que todas as pessoas com impac
 Define requisitos de **formação por perfil**, **onboarding técnico rastreável**, **validação de conhecimento** e **programas de cultura ativa** (ex: Security Champions).
 
 > 🧠 Este é o único capítulo que atua sobre a **causa raiz humana** de falhas de segurança, mitigando riscos associados a desconhecimento, erro operacional e cultura negligente.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

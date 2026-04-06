@@ -4,13 +4,25 @@ title: Ameaças Mitigadas
 description: Ameaças mitigadas pelas práticas de segurança de CI/CD descritas neste capítulo
 tags: [ameaças, mitigação, cicd, supply chain, osc&r, stride, dsomm]
 sidebar_position: 50
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas – Capítulo 07: CI/CD Seguro
 
 O Capítulo 07 define práticas de **segurança operacional para pipelines CI/CD**, tratando o pipeline como **ativo crítico da cadeia de fornecimento de software**.
 
 As ameaças aqui tratadas correspondem a vetores explorados em incidentes reais (ex.: SolarWinds, Codecov, CircleCI) e a riscos estruturais identificados em **OSC&R**, **SLSA**, **OWASP CI/CD**, **ENISA DevSecOps** e **OWASP DSOMM**.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 
@@ -91,6 +103,6 @@ O Capítulo 07 é o **principal mecanismo de defesa operacional da supply chain 
 Este capítulo:
 - cobre ameaças técnicas e de processo;
 - complementa, mas não substitui, controlos basilares;
-- é essencial para conformidade com **SLSA**, **SSDF**, **DSOMM**, **OWASP CI/CD** e **ENISA DevSecOps**.
+- fornece mitigação técnica relevante para superfícies de ameaça também discutidas em **SLSA**, **OWASP CI/CD**, **DSOMM** e guias operacionais equivalentes.
 
 > 🔐 Muitas das ameaças aqui tratadas são **mitigáveis exclusivamente no momento de CI/CD**. Uma vez ultrapassada essa fase, o risco propaga-se inevitavelmente para produção.

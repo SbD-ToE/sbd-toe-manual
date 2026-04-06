@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 14
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Governança e Contratação
 
 Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 14 - Governança e Contratação**, com base nos principais frameworks de referência:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade organizacional, onboarding e validação de fornecedores, métricas e integração com modelos de maturidade.
 
@@ -21,23 +21,19 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Níveis progressivos por domínio                  |
-| OWASP DSOMM      | `n / m`                             | Maturidade por domínio técnico                   |
-| NIST SSDF        | Lista de controlos cumpridos        | Avaliação objetiva e cumulativa                  |
-| BSIMM            | Práticas observadas                 | Foco empírico nas atividades                     |
-| SLSA             | Nível cumulativo (1–4)              | Aplicável à cadeia de fornecimento               |
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
 | Framework     | Domínios Relevantes                      | Práticas Cobertas                                          | Avaliação de Maturidade                          |
 |---------------|-------------------------------------------|-------------------------------------------------------------|--------------------------------------------------|
 | **SAMM v2.1** | Governance, Education, Incident Management | Ownership, exceções, rastreabilidade, formação             | **2 / 3**                                        |
-| **BSIMM13**   | Governance & Compliance                   | Formalização de exceções, cláusulas contratuais, reviewers  | **SE2, CP1**                                     |
-| **SSDF**      | PO.1, PO.3, RV.1, RV.2                    | Papéis críticos, requisitos formais, onboarding, validação | **Completamente coberto**                        |
 | **SLSA v1.0** | Supply Chain Governance                   | Requisitos contratuais, aceitação de risco, rastreabilidade| **Contributo indireto - Nível 2 / 4**            |
 | **DSOMM**     | Governance, 3rd Party, Tooling, Training, Metrics | Exceções, KPIs, onboarding, validação, maturidade       | **4 / 5**                                        |
 
@@ -64,26 +60,6 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ---
 
-## 🧱 NIST SSDF - Controlos Cumpridos
-
-| Controlos NIST SSDF | Descrição                                       | Alinhamento com Cap. 14                    |
-|---------------------|--------------------------------------------------|--------------------------------------------|
-| PO.1.1              | Definir responsabilidades                        | ✅ Ownership por perfil                     |
-| PO.3.1              | Estabelecer critérios de aceitação               | ✅ Exceções e cláusulas contratuais         |
-| RV.1.1              | Verificar conformidade de terceiros              | ✅ Validação de fornecedores                |
-| RV.2.2              | Rastrear decisões de risco                       | ✅ Processo de exceções e aceitação formal  |
-
----
-
-## 🧱 BSIMM - Governance & Compliance
-
-| Prática BSIMM | Alinhamento com Cap. 14                                       |
-|---------------|---------------------------------------------------------------|
-| SE2           | Processo formal de exceções e aceitação de risco              |
-| CP1           | Inclusão de requisitos e cláusulas nos contratos de software  |
-
----
-
 ## 🧱 SLSA - Supply Chain
 
 | Nível | Requisitos principais                            | Cobertura pelo Cap. 14                       |
@@ -99,6 +75,7 @@ As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade or
 
 ## ✅ Conclusão
 
-- As práticas descritas posicionam a organização com **maturidade elevada em SAMM, SSDF e DSOMM**, com forte contributo para BSIMM e SLSA;
-- O modelo prescrito é diretamente aplicável a ambientes com fornecedores críticos, contratos sensíveis e requisitos regulatórios;
-- Serve de alicerce para suportar a segurança organizacional e a rastreabilidade de decisões estratégicas.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+

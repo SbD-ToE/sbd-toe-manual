@@ -4,7 +4,11 @@ title: Rastreabilidade — Capítulo 13: Formação e Onboarding
 description: Rastreabilidade das práticas de formação e onboarding face a frameworks normativos com pilot formal
 tags: [rastreabilidade, formacao, onboarding, ssdf, cis, nis2]
 sidebar_position: 25
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # Rastreabilidade — Capítulo 13: Formação e Onboarding Seguro
 
@@ -41,16 +45,11 @@ Este capítulo define **programas de formação por papel** — contínuos, rast
 
 ---
 
-## Modelos de maturidade — pendente de normalização formal
+## Maturidade — referência separada
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
-> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Modelo | Domínios relevantes |
-|--------|---------------------|
-| OWASP SAMM v2.1 | Governance → Education & Guidance |
-| OWASP DSOMM | Education & Training |
-| BSIMM13 | Training & Culture (T1–T3) |
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 

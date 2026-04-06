@@ -4,7 +4,11 @@ title: Rastreabilidade — Capítulo 12: Monitorização e Operações
 description: Rastreabilidade das práticas de monitorização e resposta face a frameworks normativos com pilot formal
 tags: [rastreabilidade, monitorizacao, logging, resposta, ssdf, asvs, cis, dora, nis2]
 sidebar_position: 25
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # Rastreabilidade — Capítulo 12: Monitorização e Operações
 
@@ -46,16 +50,11 @@ Este capítulo define práticas de **logging estruturado, deteção de ameaças 
 
 ---
 
-## Modelos de maturidade — pendente de normalização formal
+## Maturidade — referência separada
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
-> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Modelo | Domínios relevantes |
-|--------|---------------------|
-| OWASP SAMM v2.1 | Operations → Incident Management |
-| OWASP DSOMM | Operations (Logging, Monitoring, Alert Tuning, IR Integration) |
-| BSIMM13 | Deployment (TDI1.1, TDI2.2, IR1.4) |
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 

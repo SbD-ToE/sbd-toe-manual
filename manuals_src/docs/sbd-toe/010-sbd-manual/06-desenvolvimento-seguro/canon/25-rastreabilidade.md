@@ -4,7 +4,11 @@ title: Rastreabilidade — Capítulo 06: Desenvolvimento Seguro
 description: Rastreabilidade das práticas de desenvolvimento seguro face a frameworks normativos com pilot formal
 tags: [rastreabilidade, desenvolvimento, codificacao, ssdf, asvs, cis, nis2]
 sidebar_position: 25
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # Rastreabilidade — Capítulo 06: Desenvolvimento Seguro
 
@@ -50,16 +54,11 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 
 ---
 
-## Modelos de maturidade — pendente de normalização
+## Maturidade — referência separada
 
-> Scores de maturidade (SAMM, DSOMM, BSIMM) estão pendentes de pilot formal.  
-> Ver [achievable-maturity.md](../achievable-maturity.md) para o mapeamento de maturidade em curso.
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Modelo | Domínios relevantes |
-|--------|---------------------|
-| OWASP SAMM v2.1 | Implementation → Secure Build, Secure Code Review |
-| OWASP DSOMM | Design & Development, Build |
-| BSIMM13 | Code Review (CR1–CR3) |
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 

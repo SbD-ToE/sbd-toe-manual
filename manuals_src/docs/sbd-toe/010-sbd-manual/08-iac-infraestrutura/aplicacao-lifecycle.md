@@ -20,6 +20,7 @@ Para manter controlo efetivo e auditável, aplicam-se invariantes operacionais:
 - **Plausibilidade não é evidência**: a única verdade é o `plan` efetivo (e os artefactos gerados), não a “intenção” descrita no PR.
 - **Determinismo é obrigatório**: versões, providers, módulos, políticas e ambiente de execução devem permitir reprodução do `plan`.
 - **Minimização de contexto**: planos, logs, diffs e integrações externas não devem expor segredos nem topologia sensível.
+- **Baseline segura deve permanecer íntegra**: mudanças em módulos, providers, políticas ou templates devem reabrir a revisão da postura de hardening antes do próximo `apply`.
 
 As user stories abaixo operacionalizam estes princípios de forma verificável e proporcional ao risco (L1–L3).
 :::
@@ -37,7 +38,27 @@ A segurança em IaC deve ser aplicada **desde o planeamento até à operação**
 | Execução de `apply` | Executar apenas alterações aprovadas e assinadas | DevOps / SRE, GRC / Compliance |
 | Auditorias de *drift* | Detetar divergências entre IaC e ambiente real | DevOps / SRE, AppSec Engineers |
 | Atualização de módulos | Rever proveniência e *attestations* | AppSec Engineers, Auditores Internos |
+| Alteração de policy/provider/template | Revalidar baseline, regras de enforcement e impacto no hardening | DevOps / SRE, AppSec Engineers |
 | Revisão de exceções | Reavaliar riscos e prazos de compensação | GRC / Compliance, AppSec Engineers |
+
+---
+
+## 🔁 Regra de integridade do baseline
+
+Em IaC, o objeto a proteger não é apenas o recurso final em cloud ou on-prem. O objeto a proteger é também o **baseline versionado** que define como esse recurso nasce, é validado e pode ser alterado. Por isso, devem ser tratados como eventos de revisão obrigatória:
+
+- alteração de módulos, templates ou providers;
+- alteração de políticas bloqueantes ou critérios de `plan` / `apply`;
+- mudança de ambiente-alvo, segregação ou naming com impacto operacional;
+- novas exceções que reduzam hardening, validação ou enforcement;
+- resultados de *drift detection* que revelem divergência entre baseline e estado real.
+
+Quando um destes eventos ocorre, a equipa deve pelo menos:
+
+- confirmar que o baseline aprovado continua seguro para o contexto atual;
+- rever se as validações automáticas e gates continuam a bloquear *unsafe overrides*;
+- registar a decisão de revisão e o respetivo *owner*;
+- manter a rastreabilidade entre módulo/template, `plan`, evidência de validação e exceções aplicáveis.
 
 ---
 

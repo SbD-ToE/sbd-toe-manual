@@ -42,6 +42,8 @@ Esta abordagem trouxe ganhos claros de rapidez, consistência e escalabilidade. 
 Este capítulo prescreve como **tratar o IaC como software crítico** - com requisitos, testes, ciclo de vida e auditoria.  
 A ideia central é simples: se o IaC define a base onde o software corre, então **a sua segurança determina a segurança de tudo o resto**.
 
+Neste contexto, o capítulo funciona também como **centro operacional de baseline segura de configuração e hardening**: a infraestrutura deve partir de uma postura aprovada, versionada e validada, e qualquer desvio material deve ser bloqueado, revisto ou explicitamente aceite antes de chegar a ambientes reais.
+
 ---
 
 ## 🧭 O que cobre tecnicamente
@@ -56,6 +58,7 @@ As áreas cobertas incluem:
 - Origem confiável, integridade e versionamento de módulos e dependências  
 - Rastreabilidade completa de alterações (ficheiro → recurso → ambiente)  
 - Enforcement automático e bloqueante de políticas de segurança  
+- Preservação da integridade do baseline aprovado ao longo do tempo, incluindo revisão de templates, módulos e exceções  
 - Proteção de contexto e minimização de informação sensível em processos automatizados  
 
 ---
@@ -72,6 +75,7 @@ Para transformar recomendações em práticas de engenharia aplicáveis, a organ
 6. Garantia de **rastreabilidade completa** entre código, recursos e ambientes  
 7. **Enforcement automático** de políticas de segurança no pipeline  
 8. Versionamento, retenção e, quando aplicável, assinatura de todos os artefactos relevantes (`plan`, relatórios, manifests)  
+9. Revisão periódica de templates, módulos, políticas e exceções para detetar erosão do baseline, *drift* ou desvio silencioso da postura de hardening pretendida
 
 ---
 

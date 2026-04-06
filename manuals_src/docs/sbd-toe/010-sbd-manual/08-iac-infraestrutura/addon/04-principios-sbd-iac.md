@@ -14,6 +14,7 @@ tags: [princípios, security by design, iac, fundamentos, arquitetura segura]
 Garantir que todos os projetos IaC são desenhados e mantidos com base em princípios estruturais de **segurança por definição**, reforçando a fiabilidade e a resiliência da infraestrutura que provisionam.
 
 > O projeto IaC é um ativo crítico e deve refletir, no próprio código e estrutura, os princípios de segurança aplicáveis a qualquer aplicação de risco.
+> Isto inclui preservar uma **baseline segura e versionada** ao longo do tempo, e não apenas validar uma configuração pontual num único momento.
 
 ---
 
@@ -29,6 +30,7 @@ Garantir que todos os projetos IaC são desenhados e mantidos com base em princ�
 | **Visibilidade controlada** | Outputs, logs e metadados suficientes para auditoria sem expor topologia, segredos ou permissões              |
 | **Desacoplamento**          | Evitar hardcodes, dependências implícitas e sobreposição entre módulos e ambientes                            |
 | **Fail securely**           | Defaults seguros (ex.: recursos só criados com tags e permissões restritivas por omissão)                     |
+| **Integridade do baseline** | Templates, módulos, policies e exceções mantêm revisão, versionamento e controlo de desvio ao longo do tempo |
 | **Minimização de contexto** | Reduzir ao mínimo a exposição de planos, outputs, topologia e metadados fora do domínio controlado            |
 
 ---
@@ -64,6 +66,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 6. Evitar dependências circulares ou implícitas entre módulos e ambientes;
 7. Tratar *drift* e mudanças manuais como falha de segurança e não como exceção aceitável;
 8. Garantir que qualquer alteração automatizada é validada e aprovada antes de execução.
+9. Rever periodicamente módulos, templates, policies e exceções para confirmar que o baseline seguro continua íntegro.
 
 ---
 
@@ -88,7 +91,8 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 | Criação do projeto IaC  | Definir layout e aplicar princípios estruturais               |
 | Adição de novos módulos | Rever permissões, naming, outputs e tagging                   |
 | Alterações críticas     | Revalidar aderência aos princípios antes de aprovação         |
-| Auditoria / revisão     | Verificar rastreabilidade, tagging e minimização de exposição |
+| Mudança de policy/template/provider | Revalidar baseline segura e critérios de enforcement   |
+| Auditoria / revisão     | Verificar rastreabilidade, tagging, minimização de exposição e integridade do baseline |
 
 ---
 

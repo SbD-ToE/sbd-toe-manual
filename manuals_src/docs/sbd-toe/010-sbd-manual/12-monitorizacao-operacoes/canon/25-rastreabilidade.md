@@ -1,114 +1,67 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 12
+title: "Rastreabilidade — Capítulo 12: Monitorização e Operações"
+description: Rastreabilidade das práticas de monitorização e resposta face a frameworks normativos com pilot formal
+tags: [rastreabilidade, monitorizacao, logging, resposta, ssdf, asvs, cis, dora, nis2]
 sidebar_position: 25
-description: Mapeamento das práticas de monitorização e resposta face a frameworks como NIST SSDF, SAMM, ISO e CIS Controls.
-tags: [rastreabilidade, frameworks, normativo, monitorizacao, resposta, deteccao]
----
-
-
-# 📎 Rastreabilidade contra Frameworks - Capítulo 12: Monitorização, Operações e Telemetria
-
-Este documento estabelece a **rastreabilidade entre as práticas de monitorização, logging e resposta prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança operacional e deteção de ameaças.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre os requisitos normativos e técnicos associados à telemetria, visibilidade contínua e resposta coordenada.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
 
-| Framework / Requisito                                     | Prática do Capítulo 12 que responde                          | Avaliação         |
-|-----------------------------------------------------------|--------------------------------------------------------------|--------------------|
-| **NIST SSDF v1.1** - RV.1.2 / RV.1.3 / DE.1.2              | Logging estruturado, alertas, correlação e resposta           | ✅ Completo         |
-| **OWASP SAMM v2.1** - Operations → Incident Management     | Logging técnico, deteção, métricas operacionais               | ✅ Nível 3          |
-| **BSIMM13** - Deployment → TDI1.1 / TDI2.2 / IR1.4         | Logging, alertas, integração com IRP                          | ✅ 3 práticas        |
-| **SLSA v1.0** - Observability                              | Logging e alertas em runtime, sem proveniência completa       | ⚠️ Parcial (2/4)    |
-| **OWASP DSOMM** - Operations (5 práticas)                  | Logging seguro, alertas, correlação, IR e métricas            | ✅ 5/5              |
-| **ISO/IEC 27001** - A.12.4.x / A.16.1.x                    | Logging, deteção, resposta a incidentes                       | ✅ Completo         |
-| **CIS Controls v8** - Controlos 8, 17, 18                  | Logs protegidos, deteção e resposta automatizada              | ✅ Completo         |
-| **ENISA DevSecOps** - Logging / Observabilidade / IR       | Integração contínua com telemetria e resposta                 | ✅ Completo         |
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+
+# Rastreabilidade — Capítulo 12: Monitorização e Operações
+
+Este capítulo define práticas de **logging estruturado, deteção de ameaças e resposta operacional** — a fundação de segurança contínua e visibilidade em runtime.
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Camada AppSec Core
 
-### 🛠️ NIST SSDF v1.1
-
-Cobertura de:
-- **RV.1.2**: logging estruturado e seguro (Addon 02);
-- **RV.1.3**: uso de logs para análise e melhoria contínua (Addons 07, 05);
-- **DE.1.2**: mecanismos de deteção ativa com base em alertas (Addon 03).
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Logging estruturado, eventos de segurança, audit trail, centralização |
+| ACO-ITS — Integration Trust & Service-to-Service Security | Deteção de incidentes, resposta, integração com SIEM/SOAR |
 
 ---
 
-### 🧱 OWASP SAMM v2.1
+## Frameworks normativos — cobertura verificada
 
-Alinhamento com *Incident Management*:
-- Nível 1: logging de eventos críticos (Addon 01, 02);
-- Nível 2: alertas e deteção de anomalias (Addon 03, 06);
-- Nível 3: métricas como MTTD/MTTR e tuning (Addon 07).
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Logging e correlação como mecanismo de identificação | aplicacao_lifecycle (strong): US-01 - Logging estruturado + addon (medium): Logging Estruturado e Centralizado |
+| CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Monitoring adjacent; CIS cobre âmbito mais largo | addon (medium): Domínios e Abrangência da Monitorização |
+| CIS-8 | Audit Log Management | ✅ Explícito | Logging estruturado e seguro com integridade | addon (medium): Logging Estruturado e Centralizado |
+| CIS-18 | Penetration Testing | ✅ Explícito | Monitoring traceability de resultados e rastreabilidade | addon (medium): Monitorização como Suporte à Resposta |
+| ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Segurança e integridade dos logs | addon (medium): Logging Estruturado e Centralizado > Segurança e integridade dos logs |
+| ASVS security_event_logging_coverage | Security event logging | ✅ Explícito | Eventos mínimos obrigatórios e cobertura | aplicacao_lifecycle (strong): US-01 - Logging estruturado e eventos críticos |
+| ASVS structured_logging_shape | Structured logging | ✅ Explícito | Estrutura recomendada dos eventos de log | addon (medium): Logging Estruturado e Centralizado > Estrutura recomendada dos eventos |
+| ASVS error_handling_logging_hygiene | Error handling / logging hygiene | ⚠️ Parcial | Monitoring adjacent; sem unit dedicado | addon (medium): Logging Estruturado e Centralizado |
+| ASVS logging_documentation | Logging documentation | ⚠️ Parcial | Monitoring presente; sem unit dedicado | addon (medium): Logging Estruturado e Centralizado |
+| ASVS anti_automation | Anti-automation controls | ⚠️ Parcial | Monitoring adjacent; correlação de anomalias | addon (medium): Correlação e Deteção de Anomalias |
+| DORA | Monitorização e resposta operacional | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo OPS - Monitorização e Operações |
+| NIS2 | Monitorização e conformidade | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo OPS - Monitorização e Operações |
 
-### 📊 BSIMM13
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
-Domínio Deployment:
-- **TDI1.1**: logging técnico e de segurança com tagging (Addon 02);
-- **TDI2.2**: deteção baseada em eventos e comportamentos (Addon 03, 06);
-- **IR1.4**: integração com processos de resposta (Addon 05, 04).
-
----
-
-### 🔍 SLSA v1.0
-
-Domínio Observability:
-- Cobre níveis 1 e 2: runtime logs e alertas (Addon 02, 03);
-- Níveis 3 e 4 (proveniência auditável e verificação automática) requerem Cap. 07.
-
----
-
-### 🧠 OWASP DSOMM
-
-Domínio **Operations**:
-- **Logging**: estruturado, com ACLs e retenção (Addon 02);
-- **Monitoring**: alertas com base em severidade e comportamento (Addon 03);
-- **Alert Tuning**: métricas e tuning periódico (Addon 07);
-- **Incident Response Integration**: resposta e playbooks (Addon 05);
-- **Security Metrics & KPIs**: MTTD/MTTR operacionais (Addon 07).
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Maturidade — referência separada
 
-- **A.12.4.x**: logging técnico, retenção e acesso controlado (Addon 02);
-- **A.16.1.x**: deteção de incidentes, resposta e registos (Addon 05).
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
----
-
-### 📐 CIS Controls v8
-
-- **Control 8**: logging estruturado e seguro (Addon 02);
-- **Control 17**: alertas e correlação (Addon 03, 06);
-- **Control 18**: resposta automatizada e playbooks (Addon 05).
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 
-### 🔄 ENISA DevSecOps
+## Ligações com outros capítulos
 
-- Logging como parte da pipeline (Addon 02);
-- Observabilidade contínua (Addon 03, 04, 06);
-- Integração com processos de IR e controlo operacional (Addon 05, 07).
-
----
-
-## 🔗 Ligações com outros capítulos
-
-Este capítulo complementa:
-
-- **Capítulo 01** - classificação de risco determina âmbito de monitorização;
-- **Capítulo 02 / 03** - requisitos e ameaças que devem ser detetáveis via logging;
-- **Capítulo 07** - geração de logs e rastreabilidade nos pipelines CI/CD;
-- **Capítulo 09** - observabilidade e execução segura em ambientes containerizados;
-- **Capítulo 14** - suporte à auditoria e validação contínua de exceções operacionais.
-
-> 📌 Esta rastreabilidade demonstra que o Capítulo 12 estabelece a fundação da **segurança contínua e operacional**, com visibilidade, correlação e resposta integradas em todo o ciclo de vida.
+- **Cap. 01** — classificação de risco determina âmbito e profundidade da monitorização
+- **Cap. 02 / 03** — requisitos e ameaças que devem ser detetáveis via logging
+- **Cap. 07** — geração de logs e rastreabilidade nos pipelines CI/CD
+- **Cap. 09** — observabilidade e execução segura em ambientes containerizados
+- **Cap. 14** — suporte à auditoria e validação contínua de exceções operacionais

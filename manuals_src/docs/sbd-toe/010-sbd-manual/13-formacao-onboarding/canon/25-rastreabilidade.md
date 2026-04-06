@@ -1,111 +1,61 @@
 ---
-id: Rastreabilidade
-title: Rastreabilidade contra Frameworks
-sidebar_label: Checklist de Revisão
-description: Lista de verificação binária e rastreável da adoção das práticas do Capítulo 13.
-tags: [checklist, formacao, onboarding, controlo, validacao, auditoria]
-sidebar_position: 20
----
-
-
-# 📎 Rastreabilidade contra Frameworks - Capítulo 13: Formação e Onboarding Seguro
-
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas internacionais associados à qualificação de acesso, cultura de segurança e educação contínua.
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e de maturidade técnica associados à formação, onboarding e segurança comportamental - incluindo domínios como **Education & Training do OWASP DSOMM** e controlos organizacionais de ISO 27001, SSDF e CIS.
+id: rastreabilidade
+title: "Rastreabilidade — Capítulo 13: Formação e Onboarding"
+description: Rastreabilidade das práticas de formação e onboarding face a frameworks normativos com pilot formal
+tags: [rastreabilidade, formacao, onboarding, ssdf, cis, nis2]
+sidebar_position: 25
 
 ---
 
-## 📌 Tabela de Rastreabilidade
 
-| Requisito / Domínio (Framework)                          | Prática do Capítulo 13 que responde                            | Nível de Cobertura |
-|----------------------------------------------------------|----------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PO.2.1 / PO.2.2                          | Formação mínima por função, validação de conhecimento          | ✅ Completo         |
-| **NIST SSDF** - PW.1 / RV.1                              | Formação ligada à definição e validação de requisitos          | ✅ Parcial          |
-| **OWASP SAMM v2.1** - Governance → Education & Guidance  | Programas de formação contínua, champions, onboarding seguro   | ✅ Nível 3          |
-| **OWASP DSOMM** - Education & Training                   | Formação adaptativa, rastreável, com feedback e KPIs           | ✅ Nível 3          |
-| **BSIMM13** - Training & Culture (T1–T3)                 | Formação estruturada, gamificação, rastreabilidade             | ✅ Práticas-chave   |
-| **ISO/IEC 27001** - A.7.2.x / A.8.2.2 / A.13.2.4          | Qualificação para acesso, onboarding de terceiros              | ✅ Completo         |
-| **CIS Controls v8** - Control 14.1 / 14.2 / 14.3          | Formação proporcional ao risco, validação de acesso            | ✅ Completo         |
-| **ENISA DevSecOps** - Awareness & Security Culture        | Programas formais, integração com ciclo de vida, educação por papel | ✅ Completo    |
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+
+# Rastreabilidade — Capítulo 13: Formação e Onboarding Seguro
+
+Este capítulo define **programas de formação por papel** — contínuos, rastreáveis, com validação de conhecimento — como componente crítica da adoção do SbD-ToE.
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Camada AppSec Core
 
-### 🛠️ NIST SSDF
-
-Cobertura direta de:
-- **PO.2.1**: formação obrigatória por função com rastreabilidade (Addon 01, 02);
-- **PO.2.2**: validação de conhecimento antes de acesso (Addon 10, 11, 20);
-- Ligação parcial a PW.1 / RV.1 quando a formação reforça definição de requisitos e identificação de falhas.
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Formação como componente do ciclo de vida organizacional de segurança; rastreabilidade e audit trail de capacitação |
 
 ---
 
-### 🧱 OWASP SAMM v2.1
+## Frameworks normativos — cobertura verificada
 
-Atinge **nível 3** em *Education & Guidance*:
-- Programas estruturados (Addon 01, 02);
-- Formação contínua com Security Champions (Addon 03);
-- Integração com práticas organizacionais por capítulo (Addon 05, 06).
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.2 | Implement Roles and Responsibilities | ✅ Semântico | PO.2.1/PO.2.2 cobertos via formação por função; conteúdo primário de PO.2 está em Cap. 00 | addon (medium): Manual de Formação por Perfil |
+| SSDF PO.2.1 | Each role receives security training | ✅ Explícito | Formação obrigatória por papel com rastreabilidade | aplicacao_lifecycle (strong): US-02 - Formação contínua e atualização + US-01 - Onboarding seguro |
+| SSDF PO.2.2 | Validate security knowledge before access | ✅ Explícito | Validação de conhecimento antes de atribuição de privilégios | aplicacao_lifecycle (strong): US-11 - Validação Formal de Conclusão + US-12 - Validação de Conhecimento |
+| CIS-14 | Security Awareness and Skills Training | ✅ Explícito | 14.1/14.2/14.3 — formação proporcional ao risco, validação, formação contínua | aplicacao_lifecycle (strong): US-01 a US-05 + addon (medium): Trilhos Formativos por Função e Risco |
+| ASVS authentication_lifecycle | Auth lifecycle & recovery | ⚠️ Parcial | Onboarding semântico; sem unit dedicado | addon (medium): Checklist de Onboarding Técnico Seguro |
+| NIS2 | Capacitação e onboarding de segurança | ✅ Explícito | Overlay regulatório publicado | intro (strong): Formação e Capacitação |
 
-### 🧱 OWASP DSOMM
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
-Cobertura completa do domínio **Education & Training**:
-- Formação estruturada por perfil técnico e nível de risco (Addon 01, 02);
-- Validação formal com quizzes e permissões condicionadas (Addon 10, 11);
-- Feedback contínuo com KPIs, atualização pós-incidente, integração com ciclos DevSecOps (Addon 90);
-- Cultura de champions e curadoria contínua como reforço organizacional (Addon 03).
+> **Nota SSDF PO.2:** O conteúdo primário de PO.2 (definição formal de papéis e responsabilidades) reside em `00-fundamentos/roles-responsabilidades/`. Cap. 13 cobre os sub-requisitos de formação e validação (PO.2.1, PO.2.2). A rastreabilidade completa de PO.2 requer leitura conjunta de Cap. 00 + Cap. 13 + Cap. 14.
 
-> ✅ Atinge **nível 3** no domínio DSOMM - Education & Training.
-
----
-
-### 📊 BSIMM13
-
-Cobertura dos domínios de *Training & Culture*:
-- **T1–T3**: formação adaptada ao papel, quizzes e validação de onboarding;
-- CTFs, labs e técnicas imersivas (Addon 04) reforçam maturidade.
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
-### 🏛️ ISO/IEC 27001
+## Maturidade — referência separada
 
-Cobertura direta de:
-- **A.7.2.2**: formação de segurança antes de atribuição de funções;
-- **A.8.2.2**: onboarding seguro e proporcional;
-- **A.13.2.4**: políticas de formação para terceiros (Addon 20, 21).
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
----
-
-### 📐 CIS Controls v8
-
-Controlos cobertos:
-- **14.1**: políticas formais de formação baseadas em risco;
-- **14.2**: validação antes de atribuir privilégios;
-- **14.3**: formação contínua, gamificação, champions.
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 
-### 🔄 ENISA DevSecOps
+## Ligações com outros capítulos
 
-Cobertura completa dos domínios:
-- Security culture transversal a SDLC;
-- Formação como parte do backlog e do ciclo de desenvolvimento (Addon 05);
-- Rastreabilidade e reforço contínuo via KPIs e planos por capítulo.
-
----
-
-## 🔗 Ligações com outros capítulos
-
-As práticas descritas neste capítulo são complementares e estruturantes para:
-
-- Capítulo 01 - Formação obrigatória com base na classificação de risco;
-- Capítulo 02 - Formação sobre requisitos, ameaças e validação;
-- Capítulo 03 - Formação sobre threat modeling e artefactos críticos;
-- Capítulo 05 / 07 / 09 - Integração com práticas técnicas de dependências, CI/CD e containers;
-- Todos os capítulos - formação por capítulo via Addon 06 e indicadores do Addon 90.
-
-> 📌 Esta rastreabilidade comprova que a formação prescrita no SbD-ToE **não é genérica nem informal**, mas uma componente crítica de segurança organizacional, rastreável e verificável por projeto, pessoa e função.
+- **Cap. 00** — papéis definidos aqui recebem a formação prescrita em Cap. 13
+- **Cap. 01** — formação obrigatória com base na classificação de risco da aplicação
+- **Cap. 14** — controlo de formação aplicado a terceiros e fornecedores
+- **Cap. 02–12** — cada capítulo tem trilha de formação correspondente

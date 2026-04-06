@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 08
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Infraestrutura como Código (IaC)
 
 Este documento estabelece o **alinhamento entre as práticas descritas no Capítulo 08** do manual SbD-ToE e os domínios equivalentes nos principais frameworks de segurança e maturidade de software:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 As práticas visam garantir que projetos IaC sejam tratados como **produtos de software seguros**, com requisitos, validações, rastreabilidade e governação - totalmente integrados no ciclo de desenvolvimento e operação.
 
@@ -21,17 +21,13 @@ As práticas visam garantir que projetos IaC sejam tratados como **produtos de s
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-O objetivo deste mapeamento é demonstrar **completude e maturidade das práticas prescritas no capítulo**, e não avaliar a organização em si. Cada framework é interpretado segundo o seu modelo nativo:
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Níveis por domínio (modelo prescritivo)          |
-| OWASP DSOMM      | `n / m`                             | Níveis formais por domínio técnico               |
-| NIST SSDF        | Lista de controlos cobertos         | Controlo binário (não gradativo)                 |
-| BSIMM            | Lista de práticas observadas        | Framework observacional, não prescritivo         |
-| SLSA             | Nível acumulativo (1–4)             | Modelo progressivo por artefacto                 |
-
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
@@ -39,8 +35,6 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 |------------------|----------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------|
 | OWASP SAMM v2.1  | Implementation → Secure Build                      | Controlo de pipelines IaC, linting, enforcement                                | **2 / 3**                      |
 | OWASP DSOMM      | Design & Development, Build & Test, Tooling        | Validação, segregação de ambientes, controlo de estado                          | **3 / 4**                      |
-| NIST SSDF v1.1   | PW.5, CM.1, PS.2, PW.6                              | Configuração segura, validação, rastreabilidade e enforcement                   | **✔️ PW.5, CM.1, PS.2, PW.6** |
-| BSIMM13          | Configuration Management, Compliance               | Versionamento, gestão de ambientes, controlo de exceções                       | Contributo relevante           |
 | SLSA v1.0        | Source L2, Build L2, Provenance, Policy Enforcement| Validação de planos, proveniência, segregação, controlo de builds               | **Nível 2 / 4**                |
 
 ---
@@ -67,27 +61,6 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ---
 
-## 🧱 NIST SSDF - Validação e Governação de IaC
-
-| Controlos NIST SSDF | Descrição                                         | Alinhamento com Cap. 08         |
-|---------------------|---------------------------------------------------|----------------------------------|
-| PW.5                | Gestão segura de ficheiros e versões IaC          | ✅ Repositórios versionados      |
-| PW.6                | Definição de configurações seguras                | ✅ Separação de ambientes         |
-| CM.1                | Controlo e revisão de alterações                  | ✅ Validação de planos e deltas   |
-| PS.2                | Práticas seguras de escrita de código             | ✅ Enforcement e linting          |
-
----
-
-## 🧱 BSIMM - Gestão de Configuração e Compliance
-
-| Prática BSIMM   | Alinhamento com Cap. 08                                      |
-|-----------------|--------------------------------------------------------------|
-| CMVM1.1         | Versionamento e gestão formal de ficheiros IaC               |
-| CMVM2.3         | Validação automática de alterações de infraestrutura         |
-| CP1.2           | Rastreabilidade e controlo de exceções em ambientes          |
-
----
-
 ## 🧱 SLSA - Fonte, Build e Proveniência
 
 | Nível | Requisitos principais                                      | Cobertura pelo Cap. 08                              |
@@ -103,7 +76,7 @@ O objetivo deste mapeamento é demonstrar **completude e maturidade das prática
 
 ## ✅ Conclusão
 
-- Este capítulo posiciona os projetos IaC como objetos de segurança equivalentes a software;
-- Cobre integralmente práticas de versionamento, validação, segregação e enforcement;
-- Alinha-se com maturidade **2/3 (SAMM)**, **3/4 (DSOMM)** e **2/4 (SLSA)**;
-- As práticas são compatíveis com pipelines modernos de DevOps e compliance regulatório (SSDF).
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+

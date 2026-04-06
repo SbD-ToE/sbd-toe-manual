@@ -8,12 +8,14 @@ genia: us-format-normalization
 
 # 🛠️ Aplicação de Requisitos de Segurança no Ciclo de Vida
 
-Este documento prescreve **como aplicar sistematicamente os requisitos definidos no Capítulo 2** ao longo do ciclo de desenvolvimento, garantindo **rastreabilidade**, **proporcionalidade ao risco** e **validação contínua**.
+Este documento prescreve **como aplicar sistematicamente os requisitos definidos no Capítulo 2** ao longo do ciclo de desenvolvimento, garantindo **rastreabilidade**, **proporcionalidade ao risco**, **validação contínua** e **disciplina explícita de revisão/versionamento**.
 
 Inclui modelos reutilizáveis de *user stories*, ações por papel, artefactos esperados e quadros de aplicação por nível de criticidade (L1–L3).
 
 > **Nota de enquadramento:** L1–L3 classificam o **risco da aplicação** (impacto e exposição).  
 > As características do processo (ex.: elevado grau de automação, geração de artefactos, dependência de terceiros) **não alteram a classificação**, mas podem exigir maior rigor de validação, evidência e controlo operacional.
+
+> **Princípio de governação do requisito:** um requisito de segurança não deve ser tratado como declaração estática. Sempre que ocorram mudanças materiais no risco, nos dados tratados, na superfície exposta, na arquitetura ou nas integrações, a equipa deve reavaliar o conjunto de requisitos aplicáveis, registar a decisão de revisão e atualizar a cadeia de rastreabilidade para *Threat Modeling*, validação e exceções, quando existam.
 
 ---
 
@@ -23,10 +25,30 @@ Inclui modelos reutilizáveis de *user stories*, ações por papel, artefactos e
 | -------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
 | Início de projeto                | Seleção proporcional de requisitos com base na criticidade                    | `matriz-controlos-por-risco.md`          |
 | Grooming / Planeamento           | Transformar requisitos em cartões rastreáveis                                 | Backlog (cards + tags `SEC-...`)         |
-| Nova funcionalidade / refactor   | Revalidar requisitos aplicáveis à alteração (e, se aplicável, atualizar REQ)  | Story/tarefa técnica atualizada          |
-| Integração ou exposição externa  | Rever requisitos de autenticação, logging, controlo de acesso e APIs          | Issue/checklist de integração            |
+| Nova funcionalidade / refactor   | Revalidar requisitos aplicáveis, registar decisão de revisão e atualizar ligações a risco, ameaça e validação | Story/tarefa técnica + registo de revisão |
+| Integração ou exposição externa  | Rever requisitos de autenticação, logging, controlo de acesso e APIs, atualizando baseline e tags operacionais quando aplicável | Issue/checklist de integração + baseline atualizada |
 | Sprint review / Testes           | Verificar critérios de aceitação de segurança e recolher evidência            | Critérios + testes + evidências          |
 | Preparação para go-live / release| Validar requisitos aplicados, exceções aprovadas, cobertura e evidência       | Checklist de release + evidência anexada |
+
+---
+
+## 🔁 Regra de re-trigger e versionamento
+
+O conjunto de requisitos de segurança aplicáveis deve ser **revisto explicitamente** sempre que exista mudança material em pelo menos um dos seguintes eixos:
+
+- classificação ou exposição da aplicação;
+- arquitetura, fronteiras de confiança ou integrações externas;
+- dados tratados, sensibilidade ou obrigações específicas;
+- mecanismo técnico de implementação ou validação de um controlo;
+- exceções aprovadas que alterem a forma como o requisito é satisfeito ou verificado.
+
+Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verbalmente” a continuidade do requisito. Deve existir pelo menos:
+
+- atualização ou confirmação do baseline de requisitos aplicáveis;
+- registo da decisão de revisão e do respetivo *owner*;
+- manutenção da ligação ao *Threat Modeling*, quando o requisito decorre de risco ou ameaça específica;
+- manutenção da ligação à validação e à evidência esperada;
+- atualização de exceções e respetivo prazo de revalidação, quando existam.
 
 ---
 
@@ -124,6 +146,7 @@ Como **Arquitetura/Tech Lead** e **Scrum Master/Team Lead**, quero rever requisi
 
 **Ligações úteis.**
 - 🔗 [Validação e revisão de requisitos](./addon/validacao-requisitos)
+- 🔗 [Taxonomia de rastreabilidade](./addon/rastreabilidade-controlo)
 
 ---
 

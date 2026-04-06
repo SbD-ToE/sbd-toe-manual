@@ -4,7 +4,11 @@ title: Ameaças Mitigadas
 description: Ameaças mitigadas pelas práticas prescritas neste capítulo de arquitetura segura
 tags: [ameaças, arquitetura, risco, stride, oscar, dsomm]
 sidebar_position: 50
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 04: Arquitetura Segura
 
@@ -12,6 +16,14 @@ Este capítulo define práticas formais de **design, validação e documentaçã
 As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras técnicas, decisões de design e validação formal do modelo da arquitetura**.
 
 > 📌 Arquitetura segura é o ponto de articulação entre **risco, ameaça, requisitos e execução segura** - e um dos principais fundamentos do SbD-ToE.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

@@ -1,125 +1,73 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade - Infraestrutura como Código (IaC)
+title: "Rastreabilidade — Capítulo 08: IaC e Infraestrutura como Código"
+description: Rastreabilidade das práticas de IaC face a frameworks normativos com pilot formal
+tags: [rastreabilidade, iac, infraestrutura, ssdf, slsa, capec, asvs, cis, nis2]
 sidebar_position: 25
-description: Mapeamento entre as práticas de segurança prescritas no capítulo e os requisitos de frameworks e normas reconhecidas.
-tags: [rastreabilidade, normas, frameworks, iac, infraestrutura como código]
----
-
-# 📎 Rastreabilidade contra Frameworks - Capítulo 08: IaC e Infraestrutura como Código
-
-Este ficheiro estabelece a **rastreabilidade entre as práticas prescritas neste capítulo** e os requisitos dos principais frameworks e normas de segurança associados à definição, controlo e governação segura de infraestrutura como código (IaC).
-
-> A rastreabilidade é feita de forma **top-down**, demonstrando como o SbD-ToE cobre sistematicamente os requisitos normativos e técnicos exigidos à IaC, com ênfase em **proporcionalidade, enforcement e validação automatizada**.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
 
-| Requisito / Domínio (Framework)                             | Prática do Capítulo 08 que responde                              | Nível de Cobertura |
-|-------------------------------------------------------------|------------------------------------------------------------------|--------------------|
-| **NIST SSDF** - PW.3 / PW.6 / RV.3                          | Validação IaC, controlo de risco, rastreabilidade e exceções     | ✅ Completo         |
-| **OWASP SAMM v2.1** - Implementation → Environment Hardening | Templates validados, segregação de ambientes, enforcement político | ✅ Nível 3          |
-| **BSIMM13** - Configuration & Deployment (CD1–CD3)          | IaC versionado, revisão formal, tagging e rastreabilidade         | ✅ Nível 2          |
-| **SLSA v1.0** - Provenance, Build Policies                  | IaC auditável, tagging de versões, enforcement e controlo         | ✅ Completo         |
-| **ISO/IEC 27001** - A.12.1.2 / A.14.2.5 / A.14.2.7           | Validação técnica da infraestrutura e gestão de ambientes         | ✅ Completo         |
-| **CIS Controls v8** - Control 4.4 / 11.1 / 16.11             | Gestão segura de configuração e validação automatizada            | ✅ Completo         |
-| **ENISA DevSecOps** - IaC Security & Governance              | Rastreabilidade, requisitos IaC, segregação de ambientes, automação | ✅ Completo         |
-| **OWASP DSOMM** - Design & Development / Build & Test       | Política como código, enforcement, validação, gestão de segredos | ✅ Nível 2 / 3      |
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+
+# Rastreabilidade — Capítulo 08: IaC e Infraestrutura como Código
+
+Este capítulo define práticas de **infraestrutura definida como código** — validação, enforcement de políticas, gestão de segredos e segregação de ambientes — como camada de enforcement contínuo.
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Camada AppSec Core
 
-### 🛠️ NIST SSDF
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SCBI — Supply Chain & Build Integrity | IaC como código sujeito às mesmas práticas de revisão, validação e controlo de origem de módulos |
+| ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Policy-as-code, OPA/Conftest, gestão de segredos em IaC, enforcement de políticas de segurança |
 
-Cobre integralmente:
-- **PW.3**: definição e documentação de requisitos de segurança para componentes IaC (`addon/08`);
-- **PW.6**: execução de validações automáticas antes do `apply`, com PR reviews (`addon/02`, `addon/06`);
-- **RV.3**: tratamento formal de exceções técnicas (`addon/09`).
-
----
-
-### 🧱 OWASP SAMM v2.1
-
-Atinge **nível 3** em *Environment Hardening*:
-- Templates reutilizáveis com segurança por design (`addon/04`);
-- Enforcement político automatizado com OPA/Conftest (`addon/06`);
-- Validação e segregação de ambientes (`addon/03`, `addon/07`).
+> **Nota adjunct:** CIS-4 e ASVS `secure_configuration_baseline_gap` têm pressão significativa aqui. IaC tem semantics de configuração segura mas sem secção dedicada a baseline integrity. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
 ---
 
-### 📊 BSIMM13
+## Frameworks normativos — cobertura verificada
 
-Cobertura sólida dos domínios **CD1–CD3**:
-- IaC tratado como artefacto auditável;
-- Versionamento com tagging explícito (`addon/01`, `addon/07`);
-- Revisão de alterações à infraestrutura por PR (`addon/06`).
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.3 | Implement Supporting Toolchains | ✅ Explícito | IaC como toolchain formal e controlado | requirements_catalog (strong): Catálogo IAC — Infraestrutura como Código |
+| SSDF PW.3 | Verify Third-Party Software | ✅ Explícito | Módulos IaC externos validados | addon (medium): Governação de Módulos Reutilizáveis em IaC |
+| SSDF PW.6 | Configure the Build and Test Environments | ✅ Explícito | Ambientes definidos e validados via IaC | aplicacao_lifecycle (strong): US-02 — Segregação de ambientes, tagging e permissões mínimas |
+| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Análise de vulnerabilidades em IaC; validações automáticas | addon (medium): Validações Automáticas e Controlo de Qualidade no Projeto IaC |
+| SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | IaC e pipeline integrados | aplicacao_lifecycle (strong): US-09 — Assinatura e Proveniência de artefactos IaC |
+| SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | IaC e runners controlados | addon (medium): Planeamento de Execução e Controlo de Estado |
+| SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | IaC segmentation semântica | aplicacao_lifecycle (strong): US-02 — Segregação de ambientes |
+| CAPEC-511 | Infiltration of Software Development Environment | ⚠️ Parcial | IaC infrastructure compromise | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
+| CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | IaC hardening; enterprise config além do âmbito AppSec | addon (medium): Enforcement Contínuo de Políticas e Regras de Segurança em IaC |
+| ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | IaC e gestão de cofres | aplicacao_lifecycle (strong): US-10 — Gestão de segredos e identidades para IaC |
+| ASVS secret_leak_prevention | Secret leak prevention | ⚠️ Parcial | IaC e prevenção de exposição | addon (medium): Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC |
+| ASVS secret_usage_isolation | Secret usage isolation | ⚠️ Parcial | IaC e isolamento de segredos | aplicacao_lifecycle (strong): US-10 — Gestão de segredos e identidades para IaC |
+| ASVS secure_transport | Secure transport | ⚠️ Parcial | IaC e deploy | addon (medium): Exemplos de Estrutura e Práticas Seguras em Projetos IaC |
+| ASVS service_to_service_auth | Service-to-service auth | ⚠️ Parcial | IaC | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
+| ASVS secure_configuration_baseline_gap | Secure configuration baseline | ✅ Semântico | Privilégio mínimo, separação de ambientes, immutability, OPA enforcement confirmados em unit `📌 Princípios essenciais aplicáveis a projetos IaC`; sem secção de baseline no catálogo de requisitos mas conteúdo substancial confirmado | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
+| NIS2 | Infraestrutura como código governada | ✅ Explícito | Overlay regulatório publicado | aplicacao_lifecycle (strong): US-08 — Enforcement automático de políticas |
 
-### 🔐 SLSA v1.0
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
-Capítulo suporta:
-- Proveniência de planos e artefactos (`addon/07`);
-- Controlo de alterações com assinatura e enforcement (`addon/06`);
-- Modularização e controlo por políticas internas (`60`).
-
----
-
-### 🏛️ ISO/IEC 27001
-
-Controlos abordados:
-- **A.12.1.2**: separação lógica de ambientes (`addon/03`);
-- **A.14.2.5**: validação técnica de configuração e deployment (`addon/02`);
-- **A.14.2.7**: controlo de alterações rastreável e com aceitação formal (`addon/06`, `addon/09`).
-
----
-
-### 📐 CIS Controls v8
-
-Cobertura completa de:
-- **4.4**: infraestrutura definida como código e validada (`addon/01`);
-- **11.1**: aprovação de configurações e ambientes (`addon/06`);
-- **16.11**: monitorização e validação contínua (`addon/02`, `addon/30`).
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
-### 🔄 ENISA DevSecOps
+## Maturidade — referência separada
 
-Capítulo responde a:
-- Validação contínua de configurações (`addon/02`);
-- Rastreabilidade entre risco, requisitos e configuração (`addon/08`);
-- Gestão formal de exceções e governação de ambientes (`addon/09`).
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
----
-
-### 🧬 OWASP DSOMM
-
-O Capítulo 08 cobre diretamente os subdomínios de **Design & Development** e **Build & Test**:
-
-| Subdomínio DSOMM                | Prática no Capítulo 08 que responde                     | Cobertura |
-|--------------------------------|----------------------------------------------------------|-----------|
-| **IaC Practices**              | Estrutura modular, pipelines IaC, requisitos `IAC-XXX`   | ✅ Completo |
-| **Control Mapping**           | Enforcement com OPA/Conftest + políticas (`60`)    | ✅ Completo |
-| **Secrets Management**        | Segregação e injeção de segredos (`addon/06`)            | ✅ Completo |
-| **Validation & Linting**      | Linters e enforcement automático (`addon/02`, `addon/06`) | ✅ Completo |
-| **Threat Modeling Integration**| Menção implícita à análise de risco (`addon/08`)          | ⚠️ Parcial |
-| **Infrastructure Testing**    | Sugerido no `30`, mas não obrigatório                    | ⚠️ Parcial |
-| **Drift Detection**           | Não abordado diretamente                                 | ❌        |
-
-> ⚠️ A cobertura DSOMM é elevada, mas recomenda-se reforço formal na integração com threat modeling e testes automáticos da infraestrutura para atingir o **nível 3 de maturidade**.
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 
-## 🔗 Ligações com outros capítulos
+## Ligações com outros capítulos
 
-Este capítulo complementa e depende de:
-
-- **Capítulo 01 - Classificação de Risco**: define a exigência proporcional de validação para ambientes e infraestrutura;
-- **Capítulo 02 - Requisitos de Segurança**: define os requisitos `IAC-XXX`, validados pelas práticas deste capítulo;
-- **Capítulo 07 - Pipelines CI/CD**: onde os controlos deste capítulo são aplicados e orquestrados;
-- **Capítulo 09 - Containers**: que dependem diretamente da infraestrutura provisionada para garantir isolamento e segurança;
-- **Capítulo 14 - Governação e Exceções Técnicas**: que legitima as práticas de aceitação e rastreabilidade descritas em `addon/09`.
-
-> 📌 Esta rastreabilidade comprova que o Capítulo 08 **opera como camada crítica de enforcement de segurança no ciclo de vida da infraestrutura**, garantindo que ambientes são definidos, auditados, testados e aplicados com controlo técnico e organizacional.
+- **Cap. 01** — proporcionalidade de validação por risco de ambiente
+- **Cap. 02** — requisitos IAC-XXX definidos e validados aqui
+- **Cap. 07** — controlos IaC aplicados e orquestrados no pipeline
+- **Cap. 09** — containers dependem da infraestrutura provisionada aqui
+- **Cap. 14** — exceções técnicas de IaC legitimadas pelo processo de governação

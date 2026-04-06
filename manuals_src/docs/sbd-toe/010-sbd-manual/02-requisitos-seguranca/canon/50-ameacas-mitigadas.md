@@ -4,8 +4,12 @@ title: Ameaças Mitigadas
 description: Ameaças mitigadas pela definição e validação estruturada de requisitos de segurança
 tags: [ameaças, mitigação, requisitos, rastreabilidade, exceções, validação, SSDF, DSOMM, OSC&R, CAPEC]
 sidebar_position: 50
+
 ---
 
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 02: Requisitos de Segurança
 
@@ -13,6 +17,14 @@ Este capítulo define o **catálogo base de requisitos de segurança aplicaciona
 As ameaças mitigadas estão diretamente ligadas à **ausência, má definição, aplicação inconsistente ou aceitação informal de requisitos de segurança.**
 
 > 📌 Este capítulo é **um dos principais pilares de controlo técnico do modelo SbD-ToE**, sendo aplicado a todos os projetos conforme o seu nível de risco.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 
@@ -70,4 +82,4 @@ Este capítulo mitiga um conjunto vasto de ameaças estruturais associadas à **
 
 > Mitiga de forma **exclusiva pelo menos 10 ameaças críticas**, com destaque para a ausência, ambiguidade e não testabilidade de requisitos - pontos não tratados nos restantes capítulos.
 
-> As práticas aqui descritas são indispensáveis para atingir conformidade com modelos como **SSDF, ASVS, OWASP SAMM, ISO 27034 e SLSA**.
+> As práticas aqui descritas fornecem mitigação relevante para categorias de ameaça que também aparecem refletidas em modelos e standards como **SSDF, ASVS, OWASP SAMM, ISO 27034** e **SLSA**.

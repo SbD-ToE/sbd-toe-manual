@@ -2,7 +2,11 @@
 id: ameacas-mitigadas
 title: Ameaças Mitigadas
 sidebar_position: 50
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 03: Threat Modeling
 
@@ -10,6 +14,14 @@ Este capítulo define práticas formais para **identificar, modelar, documentar 
 As ameaças mitigadas por este capítulo são maioritariamente de natureza **estrutural, de antecipação, visibilidade e cobertura** - e muitas não podem ser mitigadas sem threat modeling formal.
 
 > ✅ O Threat Modeling atua como **mecanismo de antecipação e ativação de requisitos e controlos**, sendo essencial no SbD-ToE para quebrar o ciclo reativo de segurança.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

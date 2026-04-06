@@ -2,18 +2,18 @@
 id: achievable-maturity
 title: Mapeamento de Maturidade - Capítulo 04
 sidebar_position: 10
-tags: [canon, maturidade, SAMM, SSDF, SLSA, DSOMM]
+tags: [canon, maturidade, SAMM, SLSA, DSOMM]
 ---
+
+> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 📈 Maturidade - Arquitetura Segura
 
 Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 04** do manual SbD-ToE e os requisitos das principais frameworks de segurança e maturidade:
 
 - **OWASP SAMM**
-- **BSIMM**
-- **NIST SSDF**
-- **SLSA**
 - **OWASP DSOMM**
+- **SLSA**
 
 O capítulo propõe uma abordagem prescritiva à definição e validação de arquiteturas seguras, com base em requisitos formais (`ARC-001` a `ARC-011`), segmentação por zonas de confiança, princípios de defesa em profundidade e critérios de rastreabilidade e exceção.
 
@@ -21,19 +21,13 @@ O capítulo propõe uma abordagem prescritiva à definição e validação de ar
 
 ## 🎯 Como interpretar este mapeamento de maturidade
 
-Este documento **não mede a maturidade de uma organização**, mas sim o **grau de cobertura que as práticas deste capítulo oferecem relativamente às frameworks de referência**.
+Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
 
-### Tipos de Avaliação Utilizados
-
-| Framework        | Avaliação usada                     | Justificação                                      |
-|------------------|-------------------------------------|--------------------------------------------------|
-| OWASP SAMM       | `n / 3`                             | Framework prescritiva com 3 níveis por domínio   |
-| OWASP DSOMM      | `n / m` (até 4)                     | Domínios com níveis formais                      |
-| NIST SSDF        | Lista de controlos cobertos         | Modelo binário, sem níveis formais               |
-| BSIMM            | Lista de práticas cobertas          | Modelo observacional, não prescritivo            |
-| SLSA             | Nível máximo suportado (ex: 2 de 4) | Modelo acumulativo, não gradual por domínio      |
-
----
+| Framework   | Avaliação usada                 | Justificação                                      |
+|-------------|----------------------------------|---------------------------------------------------|
+| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
+| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
+| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
 
 ## 🧭 Visão Geral de Alinhamento
 
@@ -41,8 +35,6 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 |------------------|-----------------------------------------|--------------------------------------------------------------------|----------------------------------|
 | OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação da arquitetura          | **2 / 3**                        |
 | OWASP DSOMM      | Architecture, Risk, Requirements         | Requisitos `ARC-XXX`, rastreabilidade, zonas de confiança          | **3 / 4** (média dos domínios)   |
-| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão da arquitetura formal, validação de segurança                | **✔️ PW.4, PW.7**                |
-| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação da arquitetura, gestão de exceções                         | Contributo relevante             |
 | SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento da arquitetura                              | **Nível 2 / 4**                  |
 
 ---
@@ -71,27 +63,6 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ---
 
-## 🧱 NIST SSDF - Design Review and Architecture
-
-| Controlos NIST SSDF | Descrição                                         | Alinhamento com Cap. 04 |
-|---------------------|---------------------------------------------------|--------------------------|
-| PW.4                | Rever design quanto à segurança                   | ✅ Com base nos requisitos `ARC` |
-| PW.7                | Avaliar riscos associados à arquitetura           | ✅ Via threat modeling + zonas de confiança |
-
----
-
-## 🧱 BSIMM - Architecture & CMVM
-
-| Prática BSIMM   | Alinhamento com Cap. 04                                         |
-|-----------------|-----------------------------------------------------------------|
-| AA1.2           | Técnicas de arquitetura para reduzir risco                       |
-| AA2.1           | Avaliação formal da arquitetura                                 |
-| CMVM1.1         | Definição de zonas de confiança e exceções                      |
-
-> O capítulo fornece práticas que contribuem diretamente para análise da arquitetura e gestão de exceções.
-
----
-
 ## 🧱 SLSA - Provenance & Isolation
 
 | Nível | Requisitos principais                          | Cobertura pelo Cap. 04                  |
@@ -106,19 +77,7 @@ Este documento **não mede a maturidade de uma organização**, mas sim o **grau
 
 ## ✅ Conclusão
 
-- O Capítulo 04 estabelece uma base sólida para a arquitetura segura, com requisitos formais, rastreabilidade e validação;
-- Alinha-se fortemente com **SAMM (2/3)**, **DSOMM (3/4)**, **SSDF (PW.4, PW.7)** e **BSIMM (AA, CMVM)**;
-- Permite decisões justificadas com base em princípios de arquitetura reconhecidos e aplicáveis a diferentes domínios de risco;
-- Suporta práticas modernas de segurança por design com aplicabilidade direta a ambientes regulados ou críticos.
+- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
+- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
+- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
 
----
-
-## 📊 Sumário Consolidado de Alinhamento por Framework
-
-| Framework         | Domínios Relevantes                    | Práticas ou Objetos Cobertos                                       | Avaliação de Maturidade          |
-|------------------|-----------------------------------------|--------------------------------------------------------------------|----------------------------------|
-| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação da arquitetura          | **2 / 3**                        |
-| OWASP DSOMM      | Architecture, Risk, Requirements         | Requisitos `ARC-XXX`, rastreabilidade, zonas de confiança          | **3 / 4** (média dos domínios)   |
-| NIST SSDF v1.1   | PW.4, PW.7                              | Revisão da arquitetura formal, validação de segurança                | **✔️ PW.4, PW.7**                |
-| BSIMM13          | Architecture Analysis (AA1, AA2), CMVM  | Validação da arquitetura, gestão de exceções                         | Contributo relevante             |
-| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento da arquitetura                              | **Nível 2 / 4**                  |

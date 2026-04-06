@@ -5,7 +5,11 @@ description: Análise das ameaças mitigadas pelas práticas deste capítulo, co
 tags: [ameaças, mitigação, sbom, sca, supply-chain, dsomm, capec, oscar, ]
 sidebar_position: 50
 
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 05: Dependências, SBOM e SCA
 
@@ -14,6 +18,14 @@ Este capítulo estabelece práticas de **inventário, validação, rastreabilida
 > ⚠️ A ausência destas práticas representa risco direto e crítico - evidenciado por falhas de cadeia de fornecimento como SolarWinds, log4j e event-stream.
 
 As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **BSIMM**, **OWASP Top 10**, **SSDF**, **SLSA** e **OWASP DSOMM**, com foco em práticas de mitigação concretas e controlos auditáveis.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 
@@ -90,5 +102,5 @@ A sua aplicação permite:
 
 > ✅ Pelo menos **12 ameaças mapeadas são mitigadas exclusivamente por este capítulo**, e **todas as restantes dependem dele para rastreabilidade e governação efetiva**.
 
-> 📌 Este capítulo é **obrigatório para conformidade com SLSA, SSDF, OWASP SAMM, ISO 27034, CIS Controls v8 e DSOMM**, cobrindo os domínios de `Build & Deploy`, `Policy`, `Verification` e `Governance`.
+> 📌 Este capítulo fornece mitigação técnica material para ameaças de **supply chain**, proveniência e governação de componentes, devendo ser lido em conjunto com os canons de rastreabilidade e com os capítulos que completam enforcement e validação.
 

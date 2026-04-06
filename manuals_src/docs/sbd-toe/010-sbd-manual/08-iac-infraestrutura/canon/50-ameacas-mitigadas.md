@@ -4,13 +4,25 @@ title: Ameaças Mitigadas - Infraestrutura como Código (IaC)
 sidebar_position: 50
 description: Ameaças específicas mitigadas pelas práticas prescritas no capítulo, com base em fontes como OSC&R, CAPEC e SSDF.
 tags: [ameaças, mitigação, segurança, iac, osc&r, capec, ssdf]
+
 ---
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # 🔐 Ameaças Mitigadas - Capítulo 08: IaC e Infraestrutura como Código
 
 Este capítulo define práticas seguras para projetos de **Infraestrutura como Código (IaC)**, incluindo: controlo de módulos, validações de segurança, enforcement em CI/CD, rastreabilidade de alterações e gestão de exceções.
 
 > As ameaças mitigadas são especialmente críticas por se tratarem de **artefactos que gerem ambientes de produção** - a sua falha representa risco direto à confidencialidade, integridade e disponibilidade do sistema.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

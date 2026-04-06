@@ -72,4 +72,4 @@ Requisitos que garantem que cada aplicação tem uma classificação de criticid
 > Para critérios de aceitação de risco por nível, consultar [Critérios de Aceitação de Risco](./criterios-aceitacao-risco).
 > Para gestão de risco residual, consultar [Risco Residual](./risco-residual).
 > Para activação de controlos base por nível de risco, consultar [Matriz de Controlos por Risco](./matriz-controlos-por-risco).
-> Para KPIs e métricas de classificação, consultar [KPIs e Métricas de Classificação](./kpis-metricas).
+> Para KPIs e métricas de classificação, consultar [KPIs e Métricas de Classificação](./12-kpis-metricas.md).

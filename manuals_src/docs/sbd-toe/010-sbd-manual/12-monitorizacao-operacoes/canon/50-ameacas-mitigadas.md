@@ -4,8 +4,12 @@ title: Ameaças Mitigadas pelas Práticas de Monitorização e Operações
 sidebar_position: 50
 description: Tabela de ameaças mitigadas pelas práticas de logging, correlação e resposta descritas neste capítulo.
 tags: [ameacas, deteccao, resposta, logging, osc&r, ameaças, mitigação, visibilidade]
+
 ---
 
+
+
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
 
 # ⚡️ Ameaças Mitigadas pelas Práticas de Monitorização e Operações
 
@@ -14,6 +18,14 @@ Este documento apresenta uma visão consolidada das **ameaças técnicas e opera
 A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain Attack Reference), complementado com taxonomias como **MITRE ATT&CK**, **STRIDE**, **CAPEC**, **SSDF**, **BSIMM**, **CIS Controls** e o **OWASP DSOMM** (*Operations*).
 
 > ⚠️ Este capítulo não mitiga vulnerabilidades diretamente, mas **é essencial para detetar falhas, reagir a eventos de segurança e garantir visibilidade runtime**, funcionando como **segunda linha de defesa ativa**.
+
+---
+
+## 🎯 Como interpretar este documento
+
+Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+
+As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
 
 ---
 

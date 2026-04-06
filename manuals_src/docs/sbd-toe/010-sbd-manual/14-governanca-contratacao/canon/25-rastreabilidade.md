@@ -1,109 +1,68 @@
 ---
 id: rastreabilidade
-title: Rastreabilidade Top-Down - Capítulo 14
+title: "Rastreabilidade — Capítulo 14: Governança e Contratação"
+description: Rastreabilidade das práticas de governança e contratação face a frameworks normativos com pilot formal
+tags: [rastreabilidade, governanca, contratos, fornecedores, ssdf, cis, asvs, dora, nis2]
 sidebar_position: 25
-description: Evidência de conformidade entre as práticas de governança e os requisitos dos principais frameworks de segurança
-tags: [rastreabilidade, frameworks, conformidade, exceções, contratos, fornecedores]
-draft: true
----
-
-
-# 📎 Rastreabilidade contra Frameworks - Capítulo 14: Governança e Contratação Segura
-
-Este documento estabelece a **rastreabilidade top-down entre os requisitos dos principais frameworks e normas de segurança** e as práticas prescritas no Capítulo 14 - Governança e Contratação.
-
-> 📌 Esta rastreabilidade permite demonstrar que as práticas de validação de exceções, cláusulas contratuais, ownership formal, onboarding de terceiros e rastreabilidade organizacional descritas neste capítulo **respondem de forma sistemática e completa às exigências técnicas e normativas reconhecidas**.
 
 ---
 
-## 📌 Tabela de Rastreabilidade
 
-| Framework           | Requisito / Domínio                           | Prática do Cap. 14 que responde                             | Cobertura |
-|---------------------|-----------------------------------------------|-------------------------------------------------------------|-----------|
-| **NIST SSDF**       | PO.1 / PO.3 / RV.2                            | Governação sobre risco, exceções, métricas, validação       | ✅ Completo |
-| **OWASP SAMM v2.1** | Strategy & Metrics / Supplier Management      | Modelo de rastreabilidade, KPIs, revalidação de fornecedores| ✅ Nível 3 |
-| **BSIMM13**         | SM1–SM3 / CP1                                 | Governação, exceções, ações corretivas                      | ✅ Nível 2 |
-| **ISO/IEC 27001**   | A.5.1 / A.15.1–15.2                           | Cláusulas contratuais, políticas de segurança               | ✅ Completo |
-| **CIS v8**          | 15.1 / 15.6 / 17.1                            | Política de terceiros, rastreabilidade, auditoria           | ✅ Completo |
-| **ENISA**           | Supply Chain / DevSecOps - Governance Layer  | Validação de fornecedores, exceções auditáveis              | ✅ Completo |
-| **OWASP DSOMM**     | Governance / Third-Party / Verification / Policies & Standards | Owners, onboarding, auditoria contínua, exceções formalizadas | ✅ 4–5/5   |
+> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+
+# Rastreabilidade — Capítulo 14: Governança e Contratação Segura
+
+Este capítulo define práticas de **governação formal** — exceções, cláusulas contratuais, ownership, onboarding de terceiros — como mecanismo transversal de enforcement e conformidade do modelo SbD-ToE.
 
 ---
 
-## 🧠 Notas explicativas por framework
+## Camada AppSec Core
 
-### 🛠️ NIST SSDF
-
-O capítulo cobre integralmente:
-- **PO.1 / PO.3**: governação de exceções, processos formais, ciclos de revalidação (`addon/01`, `06`);
-- **RV.2**: ações corretivas, auditoria, revisão de métricas por domínio (`addon/04`, `07`).
-
----
-
-### 🧱 OWASP SAMM v2.1
-
-Atinge **nível 3** em:
-- *Strategy & Metrics*: governação formal, KPIs, modelo de maturidade;
-- *Supplier Management*: controlo contratual, checklist de validação, revalidação contínua de fornecedores (`addon/02`, `03`, `06`).
+| Slice AppSec Core | Relevância |
+|-------------------|-----------|
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Governance formal, KPIs, audit trail de conformidade, ciclo de vida de exceções |
+| ACO-SCBI — Supply Chain & Build Integrity | Gestão de fornecedores, cláusulas contratuais de supply chain, validação de terceiros |
 
 ---
 
-### 📊 BSIMM13
+## Frameworks normativos — cobertura verificada
 
-Cobertura sólida em:
-- **SM1–SM3**: governação formal, owners de segurança, rastreabilidade;
-- **CP1**: gestão de terceiros com cláusulas contratuais e reavaliação periódica.
+> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
 
----
+| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
+|-----------|--------------------|-----------|----|-----------------|
+| SSDF PO.1 | Define Security Requirements | ✅ Explícito | Governação de requisitos e exceções formalizadas | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
+| SSDF PO.2 | Implement Roles and Responsibilities | 🔧 Reparação | Ownership forte; sem row explícita PO.2 publicada — rastreabilidade distribuída por Cap. 00 + 13 + 14 | addon (medium): Modelo de Governação para Security by Design |
+| SSDF PO.3 | Implement Supporting Toolchains | ✅ Explícito | Toolchain de governação publicada | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
+| SSDF RV.2 | Assess, Prioritize, and Remediate Vulnerabilities | ⚠️ Parcial | Ações corretivas e auditoria; RV.2 mais técnico que governação | addon (medium): Validação Continuada e Revisões |
+| CIS-5 | Account Management | ⚠️ Parcial | Governance semântico; offboarding e gestão de acessos | addon (medium): Checklist de Offboarding Seguro |
+| CIS-15 | Service Provider Management | ✅ Semântico | Gestão e validação contínua de fornecedores (15.1, 15.6) | addon (medium): Modelo de Validação de Fornecedores e Terceiros |
+| CIS-17 | Incident Response Management | ✅ Semântico | Auditoria e governação de exceções e conformidade (17.1) | addon (medium): Processo Canónico de Gestão de Excepções |
+| ASVS authorization_and_least_privilege | Authorization | ⚠️ Parcial | Governance semântico; sem unit dedicado | sem unit dedicado no capítulo |
+| ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | Governance adjacente; sem unit dedicado | sem unit dedicado no capítulo |
+| DORA | Governança e contratação | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV + addon (medium): Cláusulas Contratuais de Segurança |
+| NIS2 | Governança de fornecedores | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
 
-### 🏛️ ISO/IEC 27001
+**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 
-Cobertura direta de:
-- **A.15.1.1–A.15.2.1**: segurança na contratação e relacionamento com fornecedores;
-- **A.5.1.1**: definição clara de política de segurança aplicável a contratos.
+> **Nota SSDF PO.2:** A rastreabilidade completa de PO.2 distribui-se por Cap. 00 (definição de papéis), Cap. 13 (formação e validação) e este capítulo (ownership formal e governação). A ausência de uma row PO.2 explícita publicada é o único item de reparação activo neste capítulo.
 
----
-
-### 📐 CIS Controls v8
-
-Controlos contemplados:
-- **15.1 / 15.6**: validação e gestão contínua de fornecedores;
-- **17.1**: auditoria interna da função de segurança e conformidade de controlos.
-
----
-
-### 🔄 ENISA Supply Chain / DevSecOps
-
-Cobertura integral dos domínios:
-- Política formal de relacionamento com fornecedores;
-- Governação estruturada sobre risco e decisões de exceção;
-- Verificação periódica e rastreável do cumprimento dos controlos.
+> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
 
 ---
 
-### 🧮 OWASP DSOMM
+## Maturidade — referência separada
 
-O Capítulo 14 responde aos seguintes domínios do OWASP DSOMM:
+A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
 
-| Domínio DSOMM         | Práticas SbD-ToE (Cap. 14)                                              | Nível |
-|------------------------|------------------------------------------------------------------------|--------|
-| **Governance**          | Modelo formal de decisões, owners, exceções auditáveis (`addon/01`, `07`) | 5 / 5  |
-| **Third-Party Management** | Onboarding seguro, contratos com cláusulas, revalidação de fornecedores (`02`, `03`, `06`) | 5 / 5  |
-| **Verification**         | Revalidações, métricas de conformidade, KPIs (`addon/06`, `90`)      | 4 / 5  |
-| **Policies & Standards** | Políticas formais aplicáveis a terceiros e fornecedores (`60`, `addon/02`) | 5 / 5  |
-
-> ✅ O modelo prescrito neste capítulo permite alcançar **nível elevado de maturidade organizacional segundo o DSOMM**, com rastreabilidade total entre controlo, execução e evidência de conformidade.
+Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
 
 ---
 
-## 🔗 Ligações com outros capítulos
+## Ligações com outros capítulos
 
-Este capítulo é transversal e complementa todos os outros:
-
-- **Capítulo 01** - aplica critérios de risco para decisões de exceção;
-- **Capítulo 02** - rastreabilidade e validação de requisitos implementados;
-- **Capítulo 05** - aplica cláusulas de dependências e gestão SCA;
-- **Capítulo 07 e 09** - contratualiza práticas seguras de CI/CD e execução;
-- **Capítulo 13** - aplica controlo de formação a terceiros e fornecedores.
-
-> 📌 Esta rastreabilidade comprova que o modelo de governação e contratação descrito neste capítulo funciona como **mecanismo organizacional de enforcement, controlo e maturidade da adoção do SbD-ToE**.
+- **Cap. 00** — papéis e responsabilidades formalizados aqui via ownership
+- **Cap. 01** — critérios de risco aplicados a decisões de exceção
+- **Cap. 05** — cláusulas de supply chain e gestão SCA com fornecedores
+- **Cap. 07 / 09** — contratualização de práticas CI/CD e execução segura
+- **Cap. 13** — controlo de formação estendido a terceiros e fornecedores

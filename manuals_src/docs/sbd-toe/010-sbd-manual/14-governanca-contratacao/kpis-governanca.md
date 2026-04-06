@@ -332,5 +332,5 @@ O dashboard executivo é uma vista condensada das seis dimensões, orientada à 
 | Cap. 10 `addon/15-kpis-metricas.md` | Indicadores TST → T-01, T-03 |
 | Cap. 11 `addon/10-kpis-metricas.md` | Indicadores DPL → T-01, T-02 |
 | Cap. 12 `addon/07-metricas-indicadores.md` | Indicadores OPS → T-03 |
-| Cap. 13 `addon/91-kpis-metricas.md` | Indicadores TRN → T-04 |
+| Cap. 13 `addon/11-kpis-metricas.md` | Indicadores TRN → T-04 |
 | `addon/00-catalogo-requisitos.md` | Requisitos GOV-011 (KPIs definidos e reportados) |

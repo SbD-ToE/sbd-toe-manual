@@ -24,9 +24,12 @@ Este capítulo define o **quadro normativo de requisitos de segurança aplicacio
 O foco central incide sobre:
 - **proporcionalidade ao risco**, determinada pela classificação da aplicação (L1–L3);
 - **verificabilidade prática**, assegurando que cada requisito pode ser validado de forma objetiva;
-- **rastreabilidade completa**, ligando risco, requisito, controlo e evidência.
+- **rastreabilidade completa**, ligando risco, requisito, controlo e evidência;
+- **governação do ciclo de vida do requisito**, assegurando revisão, versionamento e atualização explícita sempre que ocorram mudanças materiais no risco, arquitetura, exposição ou integrações.
 
 O capítulo aborda igualmente boas práticas de **gestão de requisitos**, definição de **critérios de aceitação**, utilização de **catálogos reutilizáveis** e integração dos requisitos de segurança em processos de desenvolvimento ágeis (ex.: backlog, histórias de utilizador, critérios de aceitação).
+
+Neste sentido, o capítulo funciona não apenas como **catálogo normativo**, mas também como **centro de governação de requisitos de segurança**: daqui derivam as regras mínimas para seleção proporcional ao risco, revisão e versionamento, ligação ao *Threat Modeling*, ligação à validação e tratamento formal de exceções.
 
 Inclui, em particular:
 
@@ -85,7 +88,8 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 3. Integrar requisitos de segurança no **backlog funcional** da aplicação
 4. Garantir **rastreabilidade sistemática** entre risco, requisito, controlo e evidência, utilizando a taxonomia definida
 5. Estabelecer **critérios de aceitação claros** para cada requisito
-6. Rever, manter e justificar exceções com base em critérios formais de aceitação de risco
+6. Rever e versionar requisitos sempre que existam alterações materiais de risco, arquitetura, exposição, integrações ou dados tratados
+7. Rever, manter e justificar exceções com base em critérios formais de aceitação de risco
 
 ### ⚙️ Como deve ser feito
 
@@ -94,6 +98,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 - Manter os requisitos em formato **versionado e auditável** (ex.: Markdown, Excel, Jira)
 - Associar requisitos a **critérios de aceitação claros** (ex.: Gherkin, checklists)
 - Identificar requisitos com **tags normalizadas** da taxonomia `SEC-Lx-XXX`
+- Registar decisões de revisão, alterações e *re-trigger* de análise sempre que o contexto da aplicação mude materialmente
 - Validar os requisitos com base nos critérios definidos na secção de validação
 
 > 🧩 Utilizar matrizes de rastreabilidade (risco → requisito → controlo → validação)  

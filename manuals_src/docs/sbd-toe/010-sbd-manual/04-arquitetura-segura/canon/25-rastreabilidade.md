@@ -206,6 +206,7 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | HIPAA | HIPAA-164-312d — Person or Entity Authentication | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autenticação de utilizadores e serviços é tratada como fronteira de confiança |
 | MCP Official | MCP-AUTH-SCOPE-NEGOTIATION | ✅ Semântico | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2) > 🔑 Ameaças mitigadas | Scopes negociados com step-up seguem privilégio mínimo por serviço |
 | MCP Official | MCP-SCOPE-MINIMIZATION | ⚠️ Parcial | maturity (weak): 📈 Maturidade - Arquitetura Segura > ✅ Conclusão | Minimização progressiva de scopes é coerente, mas não aparece como padrão isolado |
+| OWASP MCP 3P | OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION | ✅ Semântico | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2) > 🔑 Ameaças mitigadas | Registo protegido e autorização por ação seguem o modelo de confiança entre serviços |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap

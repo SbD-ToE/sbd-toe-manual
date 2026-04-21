@@ -71,6 +71,129 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | ASVS v4 | ASVS4-REQ-V10.2.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Funcionalidade oculta e debug inseguro excluídos do baseline |
 | ASVS v4 | ASVS4-REQ-V12.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Ficheiros não confiáveis isolados fora da raiz pública |
 | ASVS v4 | ASVS4-REQ-V13.4.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autorização aplicada na lógica de negócio e não na camada GraphQL |
+| ASVS v5 | ASVS-REQ-V6.1.1 — V6.1.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Defesa adaptativa contra brute force documentada na arquitetura de autenticação |
+| ASVS v5 | ASVS-REQ-V6.1.2 — V6.1.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vocabulário proibido contextual ainda sem regra explícita no catálogo |
+| ASVS v5 | ASVS-REQ-V6.1.3 — V6.1.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Múltiplos caminhos de autenticação revistos sob a mesma baseline |
+| ASVS v5 | ASVS-REQ-V6.2.1 — V6.2.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Comprimento mínimo de password tratado como política e não como estrutura |
+| ASVS v5 | ASVS-REQ-V6.2.2 — V6.2.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Mudança voluntária de password fica fora do detalhe arquitetural publicado |
+| ASVS v5 | ASVS-REQ-V6.2.3 — V6.2.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Troca de password com prova do segredo atual não está embalada |
+| ASVS v5 | ASVS-REQ-V6.2.4 — V6.2.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Bloqueio das passwords mais comuns requer regra operacional adicional |
+| ASVS v5 | ASVS-REQ-V6.2.5 — V6.2.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Liberdade de composição da password não aparece como decisão de arquitetura |
+| ASVS v5 | ASVS-REQ-V6.2.6 — V6.2.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Mascaramento do campo pertence mais à interface do que ao capítulo |
+| ASVS v5 | ASVS-REQ-V6.2.7 — V6.2.7 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Compatibilidade com gestores de passwords não surge como decisão estrutural |
+| ASVS v5 | ASVS-REQ-V6.2.8 — V6.2.8 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Verificação sem truncar ou normalizar não está explicitada no catálogo |
+| ASVS v5 | ASVS-REQ-V6.2.9 — V6.2.9 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Suporte a passwords longas carece de requisito publicado próprio |
+| ASVS v5 | ASVS-REQ-V6.2.10 — V6.2.10 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Sem rotação periódica obrigatória continua fora da superfície publicada |
+| ASVS v5 | ASVS-REQ-V6.2.11 — V6.2.11 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Lista contextual de palavras proibidas pede regra operacional dedicada |
+| ASVS v5 | ASVS-REQ-V6.2.12 — V6.2.12 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Verificação contra passwords comprometidas ainda não tem row própria |
+| ASVS v5 | ASVS-REQ-V6.3.1 — V6.3.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Travões a credential stuffing e brute force entram na arquitetura de acesso |
+| ASVS v5 | ASVS-REQ-V6.3.2 — V6.3.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Contas por defeito desativadas dependem mais do baseline operacional |
+| ASVS v5 | ASVS-REQ-V6.3.3 — V6.3.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | MFA proporcional ao risco já é pressuposto da confiança de autenticação |
+| ASVS v5 | ASVS-REQ-V6.3.4 — V6.3.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Canais de autenticação documentados e consistentes com a mesma confiança |
+| ASVS v5 | ASVS-REQ-V6.3.5 — V6.3.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Alerta de tentativas suspeitas cruza autenticação e logging, não só arquitetura |
+| ASVS v5 | ASVS-REQ-V6.3.6 — V6.3.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Email como fator de autenticação não está tratado de forma explícita |
+| ASVS v5 | ASVS-REQ-V6.3.7 — V6.3.7 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Notificação de mudanças credenciais depende de fluxo operacional complementar |
+| ASVS v5 | ASVS-REQ-V6.3.8 — V6.3.8 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Proteção contra enumeração de utilizadores não está publicada por si só |
+| ASVS v5 | ASVS-REQ-V6.4.1 — V6.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Segredos iniciais efémeros ainda não têm regra canónica própria |
+| ASVS v5 | ASVS-REQ-V6.4.2 — V6.4.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Perguntas secretas ausentes do modelo, mas sem declaração formal dedicada |
+| ASVS v5 | ASVS-REQ-V6.4.3 — V6.4.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Recuperação de password sem contornar MFA pede publicação específica |
+| ASVS v5 | ASVS-REQ-V6.4.4 — V6.4.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Perda de fator exige prova de identidade acima do que o canon mostra |
+| ASVS v5 | ASVS-REQ-V6.4.5 — V6.4.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Renovação atempada de autenticadores expirados continua implícita apenas |
+| ASVS v5 | ASVS-REQ-V6.4.6 — V6.4.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Admin pode iniciar reset sem escolher segredo ainda não está descrito |
+| ASVS v5 | ASVS-REQ-V6.5.1 — V6.5.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | OTP e códigos descartáveis pedem semântica de uso único mais explícita |
+| ASVS v5 | ASVS-REQ-V6.5.2 — V6.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Hash de segredos fracos não surge como requisito estrutural publicado |
+| ASVS v5 | ASVS-REQ-V6.5.3 — V6.5.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Geração CSPRNG de seeds e códigos ainda não está visível no canon |
+| ASVS v5 | ASVS-REQ-V6.5.4 — V6.5.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Entropia mínima de códigos fora de banda requer regra mais específica |
+| ASVS v5 | ASVS-REQ-V6.5.5 — V6.5.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vida útil curta de TOTP e códigos não aparece isolada |
+| ASVS v5 | ASVS-REQ-V6.5.6 — V6.5.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Revogação de fatores perdidos fica mais operacional do que arquitetural |
+| ASVS v5 | ASVS-REQ-V6.5.7 — V6.5.7 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Biometria como fator secundário continua implícita e não nomeada |
+| ASVS v5 | ASVS-REQ-V6.5.8 — V6.5.8 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Fonte temporal confiável para TOTP ainda não tem ligação explícita |
+| ASVS v5 | ASVS-REQ-V6.6.1 — V6.6.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | OTP por PSTN só com salvaguardas não está publicado como decisão |
+| ASVS v5 | ASVS-REQ-V6.6.2 — V6.6.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vinculação do código fora de banda ao pedido original carece de row |
+| ASVS v5 | ASVS-REQ-V6.6.3 — V6.6.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Rate limiting para códigos externos não está separado no canon |
+| ASVS v5 | ASVS-REQ-V6.6.4 — V6.6.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Proteção contra push bombing ainda não foi embalada no capítulo |
+| ASVS v5 | ASVS-REQ-V6.7.1 — V6.7.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Certificados de verificação protegidos como material crítico de confiança |
+| ASVS v5 | ASVS-REQ-V6.7.2 — V6.7.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Nonce criptográfico robusto continua implícito e não publicado isoladamente |
+| ASVS v5 | ASVS-REQ-V6.8.1 — V6.8.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Namespace por IdP evita colisões e spoofing entre provedores |
+| ASVS v5 | ASVS-REQ-V6.8.2 — V6.8.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Assinaturas de assertions validadas antes de aceitar identidade federada |
+| ASVS v5 | ASVS-REQ-V6.8.3 — V6.8.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Replay de assertions SAML ainda precisa de regra dedicada |
+| ASVS v5 | ASVS-REQ-V6.8.4 — V6.8.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Força e recenticidade devolvidas pelo IdP não estão publicadas por critério |
+| ASVS v5 | ASVS-REQ-V7.1.1 — V7.1.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Limites de sessão documentados e justificados ainda não têm row própria |
+| ASVS v5 | ASVS-REQ-V7.1.2 — V7.1.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Número de sessões paralelas não aparece como decisão publicada |
+| ASVS v5 | ASVS-REQ-V7.1.3 — V7.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Ecossistema SSO e coordenação de sessão exigem detalhe adicional |
+| ASVS v5 | ASVS-REQ-V7.2.1 — V7.2.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Verificação de sessão concentrada em serviço backend confiável |
+| ASVS v5 | ASVS-REQ-V7.2.2 — V7.2.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Sessões emitidas por tokens dinâmicos, nunca por segredos estáticos |
+| ASVS v5 | ASVS-REQ-V7.2.3 — V7.2.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Entropia forte do token de referência ainda não está publicada isolada |
+| ASVS v5 | ASVS-REQ-V7.2.4 — V7.2.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Rotação do token na autenticação pede regra de sessão mais precisa |
+| ASVS v5 | ASVS-REQ-V7.3.1 — V7.3.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Inatividade e reautenticação seguem decisão de risco documentada |
+| ASVS v5 | ASVS-REQ-V7.3.2 — V7.3.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vida máxima da sessão alinhada com decisão formal de risco |
+| ASVS v5 | ASVS-REQ-V7.4.1 — V7.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Logout e expiração sem reutilização da sessão não estão explicitados |
+| ASVS v5 | ASVS-REQ-V7.4.2 — V7.4.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Desativação de conta com fecho global de sessões carece de row |
+| ASVS v5 | ASVS-REQ-V7.4.3 — V7.4.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Encerrar outras sessões após mudar fatores ainda não está publicado |
+| ASVS v5 | ASVS-REQ-V7.4.4 — V7.4.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Logout visível em páginas autenticadas pertence mais à superfície UX |
+| ASVS v5 | ASVS-REQ-V7.4.5 — V7.4.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Administração de sessões ativas ainda não é controlo exposto no canon |
+| ASVS v5 | ASVS-REQ-V7.5.1 — V7.5.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Reautenticação forte antes de mudar atributos sensíveis não está isolada |
+| ASVS v5 | ASVS-REQ-V7.5.2 — V7.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Utilizador ver e terminar sessões atuais pede publicação operacional |
+| ASVS v5 | ASVS-REQ-V7.5.3 — V7.5.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Step-up para operações críticas ainda não está explicitado |
+| ASVS v5 | ASVS-REQ-V7.6.1 — V7.6.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vida de sessão entre RP e IdP precisa de alinhamento mais visível |
+| ASVS v5 | ASVS-REQ-V7.6.2 — V7.6.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Criação de sessão por ação explícita do utilizador não está nomeada |
+| ASVS v5 | ASVS-REQ-V8.1.1 — V8.1.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Regras de acesso por função e dado assentam em permissões explícitas |
+| ASVS v5 | ASVS-REQ-V8.1.2 — V8.1.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Leitura e escrita por campo dependem de autorização específica |
+| ASVS v5 | ASVS-REQ-V8.1.3 — V8.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Atributos contextuais ainda não aparecem inventariados no canon |
+| ASVS v5 | ASVS-REQ-V8.1.4 — V8.1.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Uso combinado de contexto e autorização precisa publicação dedicada |
+| ASVS v5 | ASVS-REQ-V8.2.1 — V8.2.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Permissões explícitas barram acesso funcional indevido |
+| ASVS v5 | ASVS-REQ-V8.2.2 — V8.2.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Permissões por objeto mitigam IDOR e BOLA |
+| ASVS v5 | ASVS-REQ-V8.2.3 — V8.2.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Restrições por campo ainda não estão nomeadas ao nível de propriedade |
+| ASVS v5 | ASVS-REQ-V8.2.4 — V8.2.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Controlo adaptativo contínuo durante a sessão ainda não está exposto |
+| ASVS v5 | ASVS-REQ-V8.3.1 — V8.3.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Decisão de autorização fica na camada confiável de serviço |
+| ASVS v5 | ASVS-REQ-V8.3.2 — V8.3.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Revogação imediata após mudança de atributos não está detalhada |
+| ASVS v5 | ASVS-REQ-V8.3.3 — V8.3.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autorização preserva a identidade de origem e não a do intermediário |
+| ASVS v5 | ASVS-REQ-V8.4.1 — V8.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Isolamento entre tenants requer row própria de multi-tenancy |
+| ASVS v5 | ASVS-REQ-V8.4.2 — V8.4.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Interfaces admin com verificação contínua pedem publicação específica |
+| ASVS v5 | ASVS-REQ-V9.1.1 — V9.1.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Tokens autocontidos validados antes de confiar no conteúdo |
+| ASVS v5 | ASVS-REQ-V9.1.2 — V9.1.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Allowlist de algoritmos ainda não surge como regra editorial isolada |
+| ASVS v5 | ASVS-REQ-V9.1.3 — V9.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Chaves de validação a partir de fontes confiáveis pedem detalhe extra |
+| ASVS v5 | ASVS-REQ-V9.2.1 — V9.2.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Janela temporal do token validada continua implícita apenas |
+| ASVS v5 | ASVS-REQ-V9.2.2 — V9.2.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Cada token só serve o propósito de autenticação para que foi emitido |
+| ASVS v5 | ASVS-REQ-V9.2.3 — V9.2.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Audiência do token limitada ao serviço destinatário |
+| ASVS v5 | ASVS-REQ-V9.2.4 — V9.2.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Restrição inequívoca de audiência ainda não está publicada em detalhe |
+| ASVS v5 | ASVS-REQ-V10.1.1 — V10.1.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Tokens ficam apenas nos componentes que realmente os consomem |
+| ASVS v5 | ASVS-REQ-V10.1.2 — V10.1.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Fluxo OAuth ligado à mesma sessão do agente utilizador ainda não é explícito |
+| ASVS v5 | ASVS-REQ-V10.2.1 — V10.2.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | CSRF no code flow pede controlo publicado para PKCE ou state |
+| ASVS v5 | ASVS-REQ-V10.2.2 — V10.2.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Defesa contra mix-up entre authorization servers não está isolada |
+| ASVS v5 | ASVS-REQ-V10.2.3 — V10.2.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Scopes pedidos limitados ao mínimo necessário pelo cliente |
+| ASVS v5 | ASVS-REQ-V10.3.1 — V10.3.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Audience do access token no resource server ainda carece de row |
+| ASVS v5 | ASVS-REQ-V10.3.2 — V10.3.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Claims delegadas participam na decisão mas não estão publicadas por nome |
+| ASVS v5 | ASVS-REQ-V10.3.3 — V10.3.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Identidade única por issuer e subject não está descrita explicitamente |
+| ASVS v5 | ASVS-REQ-V10.3.4 — V10.3.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Exigir força de autenticação do token requer detalhe adicional |
+| ASVS v5 | ASVS-REQ-V10.3.5 — V10.3.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Sender-constrained access tokens ainda não aparecem como padrão publicado |
+| ASVS v5 | ASVS-REQ-V10.4.1 — V10.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Redirect URIs em allowlist exata não estão declaradas no capítulo |
+| ASVS v5 | ASVS-REQ-V10.4.2 — V10.4.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Código de autorização de uso único requer regra operacional própria |
+| ASVS v5 | ASVS-REQ-V10.4.3 — V10.4.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Vida curta do authorization code não está embalada no surface atual |
+| ASVS v5 | ASVS-REQ-V10.4.4 — V10.4.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Grants permitidos por cliente ainda não têm row editorial dedicada |
+| ASVS v5 | ASVS-REQ-V10.4.5 — V10.4.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Replay de refresh token precisa de tratamento mais específico |
+| ASVS v5 | ASVS-REQ-V10.4.6 — V10.4.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | PKCE obrigatório ainda não está nomeado na arquitetura reutilizável |
+| ASVS v5 | ASVS-REQ-V10.4.7 — V10.4.7 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Dynamic client registration maliciosa continua fora da superfície publicada |
+| ASVS v5 | ASVS-REQ-V10.4.8 — V10.4.8 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Expiração absoluta de refresh token pede regra independente |
+| ASVS v5 | ASVS-REQ-V10.4.9 — V10.4.9 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Revogação de refresh tokens via UI ainda não está documentada |
+| ASVS v5 | ASVS-REQ-V10.4.10 — V10.4.10 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autenticação forte do cliente em backchannel não é row publicada |
+| ASVS v5 | ASVS-REQ-V10.4.11 — V10.4.11 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Scoping por cliente segue princípio do menor privilégio |
+| ASVS v5 | ASVS-REQ-V10.4.12 — V10.4.12 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Response modes autorizados por cliente ainda não são decisão exposta |
+| ASVS v5 | ASVS-REQ-V10.4.13 — V10.4.13 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Code flow com PAR continua sem publicação específica no capítulo |
+| ASVS v5 | ASVS-REQ-V10.4.14 — V10.4.14 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Access tokens proof-of-possession ainda não estão nomeados explicitamente |
+| ASVS v5 | ASVS-REQ-V10.4.15 — V10.4.15 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Integridade do authorization_details vindo do backend pede detalhe extra |
+| ASVS v5 | ASVS-REQ-V10.4.16 — V10.4.16 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Métodos fortes de client authentication não surgem isolados no canon |
+| ASVS v5 | ASVS-REQ-V10.5.1 — V10.5.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Mitigação de replay de ID Token com nonce ainda não está detalhada |
+| ASVS v5 | ASVS-REQ-V10.5.2 — V10.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Identidade única a partir de claims do ID Token pede row dedicada |
+| ASVS v5 | ASVS-REQ-V10.5.3 — V10.5.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Metadados de authorization server maliciosos não estão cobertos explicitamente |
+| ASVS v5 | ASVS-REQ-V10.5.4 — V10.5.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Audience do ID Token igual ao client_id não aparece por si só |
+| ASVS v5 | ASVS-REQ-V10.5.5 — V10.5.5 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Logout back-channel resistente a abuso continua fora da superfície atual |
+| ASVS v5 | ASVS-REQ-V10.6.1 — V10.6.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Response modes do OpenID Provider ainda não estão publicados em detalhe |
+| ASVS v5 | ASVS-REQ-V10.6.2 — V10.6.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Logout forçado no OpenID Provider não tem controlo canónico próprio |
+| ASVS v5 | ASVS-REQ-V10.7.1 — V10.7.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Consentimento por pedido de autorização ainda não está exposto no capítulo |
+| ASVS v5 | ASVS-REQ-V10.7.2 — V10.7.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Clareza do ecrã de consentimento precisa de superfície editorial própria |
+| ASVS v5 | ASVS-REQ-V10.7.3 — V10.7.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Revisão e revogação de consentimentos carecem de publicação específica |
+| ASVS v5 | ASVS-REQ-V13.2.2 — V13.2.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Contas técnicas entre componentes operam com privilégio mínimo |
 | CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | addon (medium): Plano de Validação Arquitetural | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 

@@ -79,6 +79,9 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | CWE | CWE-804 — The product uses a CAPTCHA challenge, but the challenge can be guessed or automatically recognized by a non-human actor | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Há mitigação adjacente contra abuso automatizado, mas CAPTCHA robusto não é um padrão canónico deste capítulo |
 | HIPAA | HIPAA-164-312c1 — Integrity | ⚠️ Parcial | legacy_canon (historical): Rastreabilidade — Capítulo 06: Desenvolvimento Seguro > Camada AppSec Core | Integridade lógica é reforçada por validação e revisão, mas o controlo HIPAA cobre alterações indevidas num âmbito mais largo do que este capítulo |
 | MCP Official | MCP-AUTH-ERROR-HANDLING — Authorization errors and insufficient-scope responses map to controlled failure and bounded client-visible error behavior | ✅ Semântico | maturity (weak): 📈 Maturidade - Desenvolvimento Seguro > ✅ Conclusão | Erros de autorização e scope insuficiente já seguem o padrão de falha segura e resposta não reveladora deste capítulo |
+| NIST SP800-53 | SP800-53-SI-9 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Restrições de input seguem contracts, allow-lists e validação antes de uso interno |
+| NIST SP800-53 | SP800-53-SI-16 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Proteções contra execução não autorizada em memória aparecem por secure coding e hardening adjacente, sem controlo dedicado neste capítulo |
+| NIST SP800-53 | SP800-53-SI-17 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Procedimentos de fail-safe já se alinham com degradação segura e handlers de último recurso |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

@@ -42,6 +42,7 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 | ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | Governance adjacente; sem unit dedicado | sem unit dedicado no capítulo |
 | DORA | Governança e contratação | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV + addon (medium): Cláusulas Contratuais de Segurança |
 | NIS2 | Governança de fornecedores | ✅ Explícito | Overlay regulatório publicado | requirements_catalog (strong): Catálogo GOV - Governação e Contratação |
+| NIST SP800-53 | SP800-53-SI-1 — SP800-53-SI-1 | ✅ Semântico | Política e procedimentos de integridade sistémica ficam ancorados na governação formal do catálogo GOV | requirements_catalog (strong): Catálogo de Requisitos de Governação e Contratação |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

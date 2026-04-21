@@ -69,6 +69,7 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ASVS v5 | ASVS-REQ-V16.5.2 — V16.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Degradação segura perante falha externa é adjacente, mas não um padrão publicado aqui |
 | ASVS v5 | ASVS-REQ-V16.5.3 — V16.5.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Exceções não devem abrir caminho nem contornar validações de segurança |
 | ASVS v5 | ASVS-REQ-V16.5.4 — V16.5.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Handler de último recurso preserva disponibilidade e evidência de erro útil |
+| CIS v8.1.2 | CIS-16.9 — Train Developers in Application Security Concepts and Secure Coding | ⚠️ Parcial | addon (medium): 🤖 Uso de GenIA no Desenvolvimento Seguro > 🌐 Para além do desenvolvimento: o papel da IA no Security by Design | Guidelines e curadoria de práticas apoiam treino contínuo, mas a formação estruturada fica mais explícita no Cap. 13 |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

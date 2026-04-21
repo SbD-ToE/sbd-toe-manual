@@ -59,6 +59,16 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ASVS v4 | ASVS4-REQ-V12.6.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
 | ASVS v4 | ASVS4-REQ-V13.2.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
 | ASVS v4 | ASVS4-REQ-V13.3.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.1 — V15.3.1 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.2 — V15.3.2 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.3 — V15.3.3 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.4 — V15.3.4 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.5 — V15.3.5 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.6 — V15.3.6 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.7 — V15.3.7 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| ASVS v5 | ASVS-REQ-V16.5.2 — V16.5.2 | 🔧 Reparação | requirements_catalog (strong): ERR-005–007 via ACO-IVF-006 | Error-handling hygiene, logging restraint e centralização de erro já explícitas na família ERR-005–007 do capítulo |
+| ASVS v5 | ASVS-REQ-V16.5.3 — V16.5.3 | 🔧 Reparação | requirements_catalog (strong): ERR-005–007 via ACO-IVF-006 | Error-handling hygiene, logging restraint e centralização de erro já explícitas na família ERR-005–007 do capítulo |
+| ASVS v5 | ASVS-REQ-V16.5.4 — V16.5.4 | 🔧 Reparação | requirements_catalog (strong): ERR-005–007 via ACO-IVF-006 | Error-handling hygiene, logging restraint e centralização de erro já explícitas na família ERR-005–007 do capítulo |
 | CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
 | NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
 

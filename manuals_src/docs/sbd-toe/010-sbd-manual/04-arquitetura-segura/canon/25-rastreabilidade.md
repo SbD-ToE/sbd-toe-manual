@@ -213,7 +213,6 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | NIST SP800-53 | SP800-53-SA-21 | 🔧 Reparação | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Authorization-policy, least-privilege e access-rule semantics já presentes no catálogo ARC; cross-ref específico agora exposto |
 | NIST SP800-53 | SP800-53-SA-21.1 | 🔧 Reparação | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Authorization-policy, least-privilege e access-rule semantics já presentes no catálogo ARC; cross-ref específico agora exposto |
 | NIST SP800-53 | SP800-53-SC-41 | 🔧 Reparação | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Authorization-policy, least-privilege e access-rule semantics já presentes no catálogo ARC; cross-ref específico agora exposto |
-| OWASP MCP 3P | OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION | 🔧 Reparação | aplicacao_lifecycle (strong): US-05 — Revisão de fronteiras de confiança e integrações | Identity, authentication and access-boundary semantics já revistos nas trust boundaries e integrações do capítulo |
 | CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | addon (medium): Plano de Validação Arquitetural | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 

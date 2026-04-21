@@ -59,6 +59,16 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ASVS v4 | ASVS4-REQ-V12.3.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Código ou bibliotecas de origem não confiável ficam mais cobertos em dependências |
 | ASVS v4 | ASVS4-REQ-V12.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Conteúdo carregado não deveria executar no cliente, mas falta controlo dedicado |
 | ASVS v4 | ASVS4-REQ-V12.6.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Allow-lists de destinos e recursos aparecem por adjacência, não por regra própria |
+| ASVS v5 | ASVS-REQ-V15.3.1 — V15.3.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Redução do objeto devolvido pede controlo mais fino do que o chapter surface atual |
+| ASVS v5 | ASVS-REQ-V15.3.2 — V15.3.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Redirects em chamadas backend ainda não têm regra canónica publicada |
+| ASVS v5 | ASVS-REQ-V15.3.3 — V15.3.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Campos permitidos por ação bloqueiam mass assignment indesejado |
+| ASVS v5 | ASVS-REQ-V15.3.4 — V15.3.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | IP de origem confiável para logging e rate limiting não está isolado no capítulo |
+| ASVS v5 | ASVS-REQ-V15.3.5 — V15.3.5 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Tipos e comparações estritas seguem a disciplina de validação por schema |
+| ASVS v5 | ASVS-REQ-V15.3.6 — V15.3.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Prototype pollution continua implícita nas práticas seguras, sem guidance próprio |
+| ASVS v5 | ASVS-REQ-V15.3.7 — V15.3.7 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Poluição de parâmetros é reduzida por validação forte e origem tratada como input |
+| ASVS v5 | ASVS-REQ-V16.5.2 — V16.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Degradação segura perante falha externa é adjacente, mas não um padrão publicado aqui |
+| ASVS v5 | ASVS-REQ-V16.5.3 — V16.5.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Exceções não devem abrir caminho nem contornar validações de segurança |
+| ASVS v5 | ASVS-REQ-V16.5.4 — V16.5.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Handler de último recurso preserva disponibilidade e evidência de erro útil |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

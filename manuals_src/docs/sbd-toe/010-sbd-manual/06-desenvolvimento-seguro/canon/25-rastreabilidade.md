@@ -47,6 +47,18 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ASVS secure_coding_architecture_documentation | Secure coding documentation | ✅ Semântico | addon (medium): Anotações e Evidência + Guidelines de Equipa | Documentação de validações e práticas de equipa |
 | CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
 | NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
+| ASVS v4 | ASVS4-REQ-V5.1.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Atribuição massiva de parâmetros é travada por contracts e campos permitidos |
+| ASVS v4 | ASVS4-REQ-V5.1.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Dados estruturados são validados por schema, tipo, tamanho e padrão |
+| ASVS v4 | ASVS4-REQ-V5.2.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Input livre passa por sanitização antes de chegar a funções críticas |
+| ASVS v4 | ASVS4-REQ-V5.3.9 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Inclusão de ficheiros inseguros é mitigada por validação, sem secção dedicada |
+| ASVS v4 | ASVS4-REQ-V5.4.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Funções perigosas não devem receber input hostil nem format strings dinâmicas |
+| ASVS v4 | ASVS4-REQ-V5.5.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Parsing JSON seguro exclui `eval` e privilegia APIs de parsing dedicadas |
+| ASVS v4 | ASVS4-REQ-V11.1.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Anti-automation existe por adjacência, sem surface específico de abuso lógico |
+| ASVS v4 | ASVS4-REQ-V12.2.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Tipo real de ficheiros não confiáveis é validado, mas o capítulo não isola uploads |
+| ASVS v4 | ASVS4-REQ-V12.3.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Nomes de ficheiro controlados pelo utilizador ainda pedem guidance mais explícita |
+| ASVS v4 | ASVS4-REQ-V12.3.6 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Código ou bibliotecas de origem não confiável ficam mais cobertos em dependências |
+| ASVS v4 | ASVS4-REQ-V12.5.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Conteúdo carregado não deveria executar no cliente, mas falta controlo dedicado |
+| ASVS v4 | ASVS4-REQ-V12.6.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Allow-lists de destinos e recursos aparecem por adjacência, não por regra própria |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

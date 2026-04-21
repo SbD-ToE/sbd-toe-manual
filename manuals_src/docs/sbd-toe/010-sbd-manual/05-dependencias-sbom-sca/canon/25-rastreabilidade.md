@@ -92,6 +92,7 @@ Este capítulo define práticas de **gestão segura de dependências** — inven
 | NIST SP800-53 | SP800-53-SC-43 | 🔧 Reparação | Approval, controlo de componentes de terceiros e deteção de dependências emergentes já estão explícitos em DEP-006/009 e na governança do capítulo | requirements_catalog (strong): DEP-006/009 via ACO-SCBI-003; addon (medium): Governança de Bibliotecas e Componentes de Terceiros |
 | NIST SP800-53 | SP800-53-SR-1 | 🔧 Reparação | Supply-chain governance, criteria e organizational policy packaging já estão explícitos nas políticas organizacionais relevantes do capítulo | intro (strong): 📜 Políticas Organizacionais Relevantes |
 | NIST SP800-53 | SP800-53-SR-12 | 🔧 Reparação | Inventário por build, pinning e origem controlada já estão explícitos em DEP-001/003/005 e em US-06 do capítulo | requirements_catalog (strong): DEP-001/003/005 via ACO-SCBI-001; aplicacao_lifecycle (strong): US-06 — Repositórios internos como fonte única |
+| DSOMM | DSOMM-SUBDIMENSION-IMPLEMENTATION-DEVELOPMENT_AND_SOURCE_CONTROL | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

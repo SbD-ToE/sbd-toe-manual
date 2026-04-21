@@ -208,6 +208,7 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | MCP Official | MCP-SCOPE-MINIMIZATION | ⚠️ Parcial | maturity (weak): 📈 Maturidade - Arquitetura Segura > ✅ Conclusão | Minimização progressiva de scopes é coerente, mas não aparece como padrão isolado |
 | OWASP MCP 3P | OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION | ✅ Semântico | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2) > 🔑 Ameaças mitigadas | Registo protegido e autorização por ação seguem o modelo de confiança entre serviços |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
+| SSDF | SSDF-PRACTICE-PS.1 | ⚠️ Parcial | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > 🧱 Modelo 1 - Monólito Web com Backend Interno (Risco L1) > 🔑 Ameaças mitigadas | Integridade do código é favorecida pelo desenho restritivo, sem controlo dedicado publicado |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

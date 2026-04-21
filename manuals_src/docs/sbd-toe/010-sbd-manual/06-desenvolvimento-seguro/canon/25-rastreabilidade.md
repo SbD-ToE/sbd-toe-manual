@@ -81,14 +81,6 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | CWE | CWE-804 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
 | HIPAA | HIPAA-164-312c1 — Integrity | 🔧 Reparação | addon (medium): Boas Práticas + Guidelines de Equipa + Linters | Compliance/regulatory packaging de secure-coding discipline e governance de validação já está suportado nos addons operacionais do capítulo |
 | MCP Official | MCP-AUTH-ERROR-HANDLING | 🔧 Reparação | requirements_catalog (strong): ERR-001–004 via ACO-IVF-005; addon (medium): Boas Práticas | Controlled failure e non-revealing error semantics já explícitas na família ERR-001–004 do capítulo |
-| NIST SP800-53 | SP800-53-SI-1 | 🔧 Reparação | addon (medium): Boas Práticas + Guidelines de Equipa + Linters | Secure-coding discipline, guidelines de equipa e governance de validação já cobertas nos addons operacionais do capítulo |
-| NIST SP800-53 | SP800-53-SI-8 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-8.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-8.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-8.3 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-9 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-16 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
-| NIST SP800-53 | SP800-53-SI-17 | 🔧 Reparação | requirements_catalog (strong): ERR-001–004 via ACO-IVF-005; addon (medium): Boas Práticas | Controlled failure e non-revealing error semantics já explícitas na família ERR-001–004 do capítulo |
 | CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
 | NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
 

@@ -1,5 +1,13 @@
 # Phase C Execution Log
 
+## Phase C — PAUSED 2026-04-21
+
+Rolled back commit `0df17205` per programme-lead direction (quality gap vs P2 v1 baseline).
+Awaiting revised Cartographer + Manual agent methodology.
+
+Previous state: `ACO-IAT / asvs_v4_0_2` batch (25 items) added to `04-arquitetura-segura`.
+Rollback: revert commit `5a0d355d`.
+
 ## Slice ACO-IAT — completed 2026-04-21T09:20:20+0100
 
 - Items closed: 235

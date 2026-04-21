@@ -67,6 +67,7 @@ Este capítulo define práticas de **gestão segura de dependências** — inven
 | CIS v8.1.2 | CIS-2.3 — Address Unauthorized Software | 🔧 Reparação | Scanning contínuo, suporte de versões e remediação automatizada já estão explícitos em DEP-002/007/008 e em US-03 do capítulo | requirements_catalog (strong): DEP-002/007/008 via ACO-SCBI-002; aplicacao_lifecycle (strong): US-03 — SCA automático com gates |
 | CIS v8.1.2 | CIS-2.4 — Utilize Automated Software Inventory Tools | 🔧 Reparação | Inventário por build, pinning e origem controlada já estão explícitos em DEP-001/003/005 e em US-06 do capítulo | requirements_catalog (strong): DEP-001/003/005 via ACO-SCBI-001; aplicacao_lifecycle (strong): US-06 — Repositórios internos como fonte única |
 | CIS v8.1.2 | CIS-10.4 — Configure Automatic Anti-Malware Scanning of Removable Media | 🔧 Reparação | Scanning contínuo, suporte de versões e remediação automatizada já estão explícitos em DEP-002/007/008 e em US-03 do capítulo | requirements_catalog (strong): DEP-002/007/008 via ACO-SCBI-002; aplicacao_lifecycle (strong): US-03 — SCA automático com gates |
+| CWE | CWE-1104 | 🔧 Reparação | Approval, controlo de componentes de terceiros e deteção de dependências emergentes já estão explícitos em DEP-006/009 e na governança do capítulo | requirements_catalog (strong): DEP-006/009 via ACO-SCBI-003; addon (medium): Governança de Bibliotecas e Componentes de Terceiros |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

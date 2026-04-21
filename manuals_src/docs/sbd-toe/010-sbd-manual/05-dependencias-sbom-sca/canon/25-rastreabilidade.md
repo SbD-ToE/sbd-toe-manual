@@ -111,8 +111,6 @@ Este capítulo define práticas de **gestão segura de dependências** — inven
 | SLSA | SLSA-BUILD-L3 | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
 | SLSA | SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
 | SLSA | SLSA-BUILD-PLATFORM-ISOLATION | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
-| SSDF | SSDF-PRACTICE-PO.3 — Implement Supporting Toolchains | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
-| SSDF | SSDF-PRACTICE-PO.5 — Implement and Maintain Secure Environments for Software Development | 🔧 Reparação | Build-traceability, provenance-attestation e controlo de toolchain já estão explícitos em US-10 e na integração CI/CD do capítulo | aplicacao_lifecycle (strong): US-10 — Inventário e SBOM por Build; addon (medium): Integração com Pipelines CI/CD |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

@@ -46,6 +46,31 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | ASVS session_and_token_trust | Session & token trust | ⚠️ Parcial | addon (medium): Rastreabilidade Arquitetural | Architecture e deploy |
 | ASVS frontend_browser_security | Frontend/browser security | ⚠️ Parcial | addon (medium): Modelos de Arquitetura Segura Reutilizáveis | Requirements e architecture |
 | ASVS api_protocol_specific | API protocol specifics | ⚠️ Parcial | requirements_catalog (strong): Catálogo ARC — Arquitectura Segura | Architecture e deploy |
+| ASVS v4 | ASVS4-REQ-V1.4.1 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Enforcement de acesso concentrado no servidor e fora do cliente |
+| ASVS v4 | ASVS4-REQ-V1.4.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Modelo de acesso ajustável aos fluxos, papéis e contextos do sistema |
+| ASVS v4 | ASVS4-REQ-V1.4.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Privilégio mínimo aplicado por função, recurso e serviço |
+| ASVS v4 | ASVS4-REQ-V1.4.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Canal único de autorização para recursos protegidos |
+| ASVS v4 | ASVS4-REQ-V1.10.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Versionamento e revisão formal deixam trilho das mudanças estruturais |
+| ASVS v4 | ASVS4-REQ-V2.3.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Renovação de autenticadores temporários tratada como política de sessão |
+| ASVS v4 | ASVS4-REQ-V2.7.4 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Canal fora de banda segregado nas fronteiras de confiança |
+| ASVS v4 | ASVS4-REQ-V2.8.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Validade de OTP definida no desenho do fator de autenticação |
+| ASVS v4 | ASVS4-REQ-V2.8.4 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | OTP de uso único alinhado com proteção contra replay |
+| ASVS v4 | ASVS4-REQ-V2.8.7 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Biometria restringida a MFA real e não a fator isolado |
+| ASVS v4 | ASVS4-REQ-V2.9.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Nonce desafiante com unicidade e robustez criptográfica |
+| ASVS v4 | ASVS4-REQ-V4.2.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Funções autenticadas protegidas contra pedidos forjados |
+| ASVS v4 | ASVS4-REQ-V4.3.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Exposição de diretórios e metadados reduzida por design |
+| ASVS v4 | ASVS4-REQ-V5.1.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Entradas de múltiplas origens tratadas como uma só fronteira |
+| ASVS v4 | ASVS4-REQ-V5.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Allow-lists aplicadas na fronteira de entrada do sistema |
+| ASVS v4 | ASVS4-REQ-V6.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Dados financeiros tratados como domínio sensível protegido |
+| ASVS v4 | ASVS4-REQ-V7.2.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Decisões de acesso com evidência útil para investigação |
+| ASVS v4 | ASVS4-REQ-V7.4.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Falha controlada prevista na arquitetura de tratamento de erro |
+| ASVS v4 | ASVS4-REQ-V8.1.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Superfície de pedido minimizada em parâmetros, headers e cookies |
+| ASVS v4 | ASVS4-REQ-V8.2.3 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Dados autenticados removidos do lado cliente no fim da sessão |
+| ASVS v4 | ASVS4-REQ-V10.2.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Capacidades de recolha remota sujeitas a controlo e consentimento |
+| ASVS v4 | ASVS4-REQ-V10.2.2 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Permissões invasivas reduzidas ao mínimo justificável |
+| ASVS v4 | ASVS4-REQ-V10.2.3 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Funcionalidade oculta e debug inseguro excluídos do baseline |
+| ASVS v4 | ASVS4-REQ-V12.4.1 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Ficheiros não confiáveis isolados fora da raiz pública |
+| ASVS v4 | ASVS4-REQ-V13.4.2 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autorização aplicada na lógica de negócio e não na camada GraphQL |
 | CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | addon (medium): Plano de Validação Arquitetural | Semantics presentes; CIS inclui hardening empresarial além do âmbito |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 

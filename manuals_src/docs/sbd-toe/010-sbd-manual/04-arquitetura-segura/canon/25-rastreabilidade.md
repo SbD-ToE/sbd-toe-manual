@@ -204,6 +204,8 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | HIPAA | HIPAA-164-308a4 — Information Access Management | ⚠️ Parcial | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > 🧱 Modelo 1 - Monólito Web com Backend Interno (Risco L1) > 🔑 Ameaças mitigadas | Controlo de acesso entra no modelo, sem política HIPAA isolada |
 | HIPAA | HIPAA-164-312a1 — Access Control | ✅ Semântico | aplicacao_lifecycle (strong): 🏛️ Aplicação de Arquitetura Segura no Ciclo de Vida > 📝 User Stories reutilizáveis > US-02 - Ficha de solução com controlos e rastreabilidade arquitetural | Controlos de acesso ficam explícitos na ficha de solução arquitetural |
 | HIPAA | HIPAA-164-312d — Person or Entity Authentication | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura | Autenticação de utilizadores e serviços é tratada como fronteira de confiança |
+| MCP Official | MCP-AUTH-SCOPE-NEGOTIATION | ✅ Semântico | addon (medium): 🧹 Modelos de Arquitetura Segura Reutilizáveis > ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2) > 🔑 Ameaças mitigadas | Scopes negociados com step-up seguem privilégio mínimo por serviço |
+| MCP Official | MCP-SCOPE-MINIMIZATION | ⚠️ Parcial | maturity (weak): 📈 Maturidade - Arquitetura Segura > ✅ Conclusão | Minimização progressiva de scopes é coerente, mas não aparece como padrão isolado |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | aplicacao_lifecycle (strong): US-07 — Validação arquitetural automatizável no CI/CD | Isolation semantics de arquitetura |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap

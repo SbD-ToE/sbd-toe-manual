@@ -45,6 +45,20 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ASVS encoding_architecture | Encoding architecture | ⚠️ Parcial | addon (medium): Boas Práticas (cobertura implícita) | Sem secção dedicada a encoding; coberto parcialmente |
 | ASVS file_download_content_serving | File download & content serving | ⚠️ Parcial | Sem unit dedicado em Cap. 06 | Mais relevante em Cap. 10 (testes) |
 | ASVS secure_coding_architecture_documentation | Secure coding documentation | ✅ Semântico | addon (medium): Anotações e Evidência + Guidelines de Equipa | Documentação de validações e práticas de equipa |
+| ASVS v4 | ASVS4-REQ-V5.1.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V5.1.4 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V5.2.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V5.3.9 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V5.4.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V5.5.4 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V11.1.4 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V12.2.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V12.3.4 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V12.3.6 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V12.5.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V12.6.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V13.2.2 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
+| ASVS v4 | ASVS4-REQ-V13.3.1 | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
 | CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
 | NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
 

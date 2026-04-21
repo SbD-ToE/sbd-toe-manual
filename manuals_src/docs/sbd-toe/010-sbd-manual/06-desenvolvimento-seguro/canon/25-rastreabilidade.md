@@ -83,6 +83,7 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | NIST SP800-53 | SP800-53-SI-16 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Proteções contra execução não autorizada em memória aparecem por secure coding e hardening adjacente, sem controlo dedicado neste capítulo |
 | NIST SP800-53 | SP800-53-SI-17 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Procedimentos de fail-safe já se alinham com degradação segura e handlers de último recurso |
 | OWASP MCP Secure Server | OWASP-MCP-DATA-VALIDATION — Strict schema validation, sanitization and safe handling have a clear landing in the validation and parsing controls of this chapter | ✅ Semântico | maturity (weak): 📈 Maturidade - Desenvolvimento Seguro > 🧱 SLSA - Build Validation & Provenance | Validação estrita por schema, sanitização e uso seguro de input já estão cobertos pelo catálogo VAL deste capítulo |
+| OWASP MCP Top 10 | MCP10-2025 — Context injection/over-sharing → secret usage isolation | ⚠️ Parcial | aplicacao_lifecycle (strong): ⚙️ Aplicação no Ciclo de Vida - Desenvolvimento Seguro > 📖 User Stories reutilizáveis > US-07 - Governação e Curadoria de Guidelines | Curadoria de guidelines e constrangimentos para GenIA reduzem over-sharing, mas isolamento de segredos ainda não está isolado como regra canónica |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

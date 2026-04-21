@@ -72,6 +72,13 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | CIS v8.1.2 | CIS-9.2 — Use DNS Filtering Services | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
 | CIS v8.1.2 | CIS-9.5 — Implement DMARC | 🔧 Reparação | requirements_catalog (strong): VAL-001–003 via ACO-IVF-001/002 | Whitelist, schema e input-contract validation semantics já explícitas no catálogo VAL do capítulo |
 | CIS v8.1.2 | CIS-16.9 — Train Developers in Application Security Concepts and Secure Coding | 🔧 Reparação | addon (medium): Boas Práticas + Guidelines de Equipa + Linters | Secure-coding discipline, guidelines de equipa e governance de validação já cobertas nos addons operacionais do capítulo |
+| CWE | CWE-212 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-22 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-41 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-59 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-66 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-73 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
+| CWE | CWE-804 | 🔧 Reparação | requirements_catalog (strong): VAL-005 via ACO-IVF-004 | Validation-before-internal-use semantics já explícitas em VAL-005 do capítulo |
 | CIS-16 | Application Software Security | ✅ Explícito | addon (medium): Linters; aplicacao_lifecycle (strong): US-04 CI/CD, US-12 pre-commit | Linters, SAST, validações locais obrigatórias |
 | NIS2 | Práticas seguras de desenvolvimento | ✅ Explícito | overlay regulatório publicado | — |
 

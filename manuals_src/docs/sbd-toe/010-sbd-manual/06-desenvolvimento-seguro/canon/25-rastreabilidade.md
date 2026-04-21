@@ -82,6 +82,7 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | NIST SP800-53 | SP800-53-SI-9 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Restrições de input seguem contracts, allow-lists e validação antes de uso interno |
 | NIST SP800-53 | SP800-53-SI-16 | ⚠️ Parcial | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Proteções contra execução não autorizada em memória aparecem por secure coding e hardening adjacente, sem controlo dedicado neste capítulo |
 | NIST SP800-53 | SP800-53-SI-17 | ✅ Semântico | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro | Procedimentos de fail-safe já se alinham com degradação segura e handlers de último recurso |
+| OWASP MCP Secure Server | OWASP-MCP-DATA-VALIDATION — Strict schema validation, sanitization and safe handling have a clear landing in the validation and parsing controls of this chapter | ✅ Semântico | maturity (weak): 📈 Maturidade - Desenvolvimento Seguro > 🧱 SLSA - Build Validation & Provenance | Validação estrita por schema, sanitização e uso seguro de input já estão cobertos pelo catálogo VAL deste capítulo |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
 

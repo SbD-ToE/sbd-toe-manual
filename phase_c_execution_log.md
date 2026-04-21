@@ -41,3 +41,13 @@ Rollback: revert commit `5a0d355d`.
 - Pilots processed: asvs_v4_0_2, asvs_v5_0_0, cis_controls_v8_1_2, hipaa_security_rule, mcp_official_security_foundations_2025, nist_sp800_53_rev5 (held), owasp_mcp_third_party_servers_v1_0, pci_dss_v4_0_1, ssdf_sp800_218_v1_1
 - Commits: a7434c99, ca37d9b0, 08577623, 7f4cff06, 6ad84a7c, 03769851, f30b8671, a8b1ded7
 - Anomalies: `nist_sp800_53_rev5` triggered quality-gate §8 / escalation §11.4: all 31 manual_agent items were routed to `04-arquitetura-segura`, but semantic review showed chapter-fit failure at scale across policy-layer (`AC-1`, `IA-1`), device governance (`AC-19*`), UX/logon notices (`AC-8`, `AC-9*`), and personnel screening (`SA-21*`) controls; batch left untouched and held for Cartographer v2.1 supplier re-work. `CIS-14.2` and `CIS-14.3` were skipped because the training semantics are already published in `13-formacao-onboarding/canon/25-rastreabilidade.md`.
+
+## Slice ACO-IVF v2.1 — completed 2026-04-21T23:59:00+0100
+
+- Items closed: 61 of 62 manual_agent
+- Upgrades (Cobertura calibration): 22 (`Reparação → ✅ Semântico`)
+- Items skipped: 1 (`SSDF-PRACTICE-PW.5` — duplicate of the existing explicit SSDF PW.5 row already published in Cap. 06)
+- Items held: 0
+- Pilots processed: asvs_v4_0_2, asvs_v5_0_0, cis_controls_v8_1_2, cwe_software_development_view_v4_19_1, hipaa_security_rule, mcp_official_security_foundations_2025, nist_sp800_53_rev5, owasp_mcp_secure_server_development_v1_0, owasp_mcp_third_party_servers_v1_0, owasp_mcp_top_10_v0_1_2025_beta, pci_dss_v4_0_1, ssdf_sp800_218_v1_1
+- Commits: df59bd9d, 71a98fbe, 1cb54cd8, 4ead4881, eb93f236, 5c8c9ab6, 5a2c36b8, 5ce475c7, f2402b57, 15b607e6, b7e7a6bc
+- Anomalies: NIST 800-53 v2.1 re-routing was applied successfully inside the slice, distributing `SI-1` to Cap. 14, `SI-8*` to Cap. 12, and `SI-9`/`SI-16`/`SI-17` to Cap. 06 without triggering a new chapter-fit escalation. `SSDF-PRACTICE-PW.5` was skipped to avoid duplicating the already published explicit row `SSDF PW.5 | Create Source Code with Secure Coding Techniques` in `06-desenvolvimento-seguro/canon/25-rastreabilidade.md`. Surface-2 items `CIS-9.2`, `CIS-9.5`, and `OWASP-MCP-3P-MEMORY-POISONING` remained out of scope for the manual agent per brief.

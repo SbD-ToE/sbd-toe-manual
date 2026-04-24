@@ -21,11 +21,14 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
 | ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Gestão de release, gates de promoção, rollback, readiness checks |
+| ACO-ATB — Architecture & Trust Boundaries | Diversificação caveated para isolamento de deploy, heterogeneidade de runtime, concealment/misdirection e distributed-processing boundary sem promover o capítulo a âncora primária |
 | ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Políticas de autorização de execução, separação de ambientes |
 
 > **Nota adjunct:** `SSDF PW.9` e `ASVS secure_configuration_baseline_gap` são CLAIM GAPSs — o conteúdo existe em `addon/04-validacoes-pre-deploy.md` (misconfig check) e `addon/08-segregacao-e-validacao-operacional.md` (config auditing), mas sem row explícita publicada. Candidatos a reparação no próximo ciclo.
 
 > **Nota Wave 3 ACO-RPR:** esta leitura funciona como âncora bounded para os rows autorizados de release promotion, rollback/readiness, hardening de configuração e defaults em produção, minimização de superfície runtime e clusters NIST de failover / non-persistence que o freeze de Wave 3 reteve em `ACO-RPR`. A leitura permanece **bounded**, mantém o Cap. `04` apenas para a diversificação arquitetural autorizada, mantém o Cap. `02` apenas como scaffold de requisitos e rastreabilidade, não reabre a visibilidade legada do Cap. `06`, e não converte `ASVS v4`, `CIS`, `NIST`, `DSOMM` ou `SAMM` em autoridade family-blind de deploy.
+
+> **Nota Wave 3 ACO-ATB:** esta superfície é limitada aos rows autorizados de deployment isolation, network change/review, dual-homed devices, heterogeneity / concealment, distributed processing e information diversity quando a evidência já aponta para suporte de deploy/runtime em `ACO-ATB`. A leitura permanece **bounded** a diversificação operacional; a âncora primária de `ACO-ATB` continua em Cap. `04`, a diversificação infra-like mais restrita continua em Cap. `08`, o scaffold de requisitos continua em Cap. `02`, o Cap. `06` não entra como superfície implícita, e este capítulo não ganha autoridade autónoma de arquitetura ou release.
 
 ---
 

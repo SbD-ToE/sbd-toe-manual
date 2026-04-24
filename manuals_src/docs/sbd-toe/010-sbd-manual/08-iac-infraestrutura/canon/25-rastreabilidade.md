@@ -21,10 +21,13 @@ Este capítulo define práticas de **infraestrutura definida como código** — 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
 | ACO-SCBI — Supply Chain & Build Integrity | IaC como código sujeito às mesmas práticas de revisão, validação e controlo de origem de módulos |
+| ACO-IAT — Identity, Access & Session Trust | Diversificação caveated para acesso e proteção de dispositivos móveis sob controlo organizacional (`AC-19`, `AC-19.5`) sem promover o capítulo a âncora primária |
 | ACO-ITS — Integration Trust & Service-to-Service Security | Diversificação caveated para canais wireless, autenticação/cifragem do meio e autorização de configuração (`AC-18`, `AC-18.1`, `AC-18.4`) sem promover o capítulo a âncora primária |
 | ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Policy-as-code, OPA/Conftest, gestão de segredos em IaC, enforcement de políticas de segurança |
 
 > **Nota adjunct:** CIS-4 e ASVS `secure_configuration_baseline_gap` têm pressão significativa aqui. IaC tem semantics de configuração segura mas sem secção dedicada a baseline integrity. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
+
+> **Nota Wave 2 ACO-IAT:** esta superfície é limitada aos rows autorizados `nist_sp800_53_rev5::SP800-53-AC-19` e `nist_sp800_53_rev5::SP800-53-AC-19.5`. A leitura permanece **bounded** ao cluster mobile-device access boundary; a âncora primária de `ACO-IAT` continua em Cap. `04`, o scaffold de requisitos continua em Cap. `02`, e os wrappers de política / procedimento continuam apenas como suporte em Cap. `14`.
 
 > **Nota Wave 2 ACO-ITS:** esta superfície é limitada aos rows autorizados `nist_sp800_53_rev5::SP800-53-AC-18`, `nist_sp800_53_rev5::SP800-53-AC-18.1` e `nist_sp800_53_rev5::SP800-53-AC-18.4`. A leitura permanece **bounded** a pressão infra-channel / wireless boundary; a âncora primária de `ACO-ITS` continua em Cap. `04` e o scaffold de requisitos continua em Cap. `02`.
 

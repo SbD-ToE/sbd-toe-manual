@@ -27,6 +27,8 @@ Este capítulo define **requisitos de segurança proporcionais ao risco**, rastr
 
 > **Nota adjunct:** A família ASVS `secure_configuration_baseline_gap` e SSDF PW.9 apontam para pressão de configuração segura por omissão — tema coberto parcialmente aqui mas sem secção dedicada. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
 
+> **Nota Wave 2 ACO-IAT:** neste capítulo, `ACO-IAT` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a âncora bounded em Cap. `04`, a diversificação autorizada em Cap. `08` e os wrappers support-only em Cap. `14`. O Cap. 02 não substitui a âncora primária de `ACO-IAT`, não promove o boundary cluster excluído `CIS-5`, `CIS-5.1`, `CIS-5.5`, `CIS-6.6` e `PCI-7.2.1` para execução, e não reabre qualquer lane fora do freeze de Wave 2.
+
 > **Nota Wave 2 ACO-ITS:** neste capítulo, `ACO-ITS` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a execução bounded em Cap. `04` e a diversificação autorizada em Cap. `08`. O Cap. 02 não substitui a âncora primária de `ACO-ITS`, não ganha autoridade autónoma para rows de wireless/channel boundary e não reabre qualquer lane fora do freeze de Wave 2.
 
 > **Nota Wave 1 ACO-SPC:** neste capítulo, `ACO-SPC` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a execução bounded em Cap. 06 e as diversificações autorizadas em `04`, `08`, `11`, `12` e `14`. O Cap. 02 não substitui a âncora primária de `ACO-SPC` nem passa a landing surface principal.

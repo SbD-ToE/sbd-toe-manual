@@ -23,6 +23,8 @@ Este capítulo define **metodologias de análise de ameaças** sistemáticas (ST
 | ACO-TMR — Threat Modeling, Risk Disposition & Mitigation Traceability | Processo formal de modelação de ameaças como prática central (primário) |
 | ACO-ATB — Architecture & Trust Boundaries | Identificação e delimitação de superfícies de ataque e fronteiras de confiança |
 
+> **Nota Wave 1 ACO-SPC (traceability-only):** rows caveated de `asvs_v4_0_2` (`V8.3.2`, `V8.3.3`) e `nist_sp800_53_rev5` (`RA-6`, `SI-12*`, `SI-18*`, `SI-19*`, `SI-21`) mantêm-se aqui apenas como rastreabilidade non-core de privacidade, surveillance e revisão de risco. Não transformam o Cap. 03 em superfície positiva de `ACO-SPC`.
+
 ---
 
 ## Frameworks normativos — cobertura verificada

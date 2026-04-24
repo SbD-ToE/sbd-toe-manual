@@ -23,6 +23,9 @@ Este capítulo define **padrões de arquitetura segura** — zonas de confiança
 | ACO-ATB — Architecture & Trust Boundaries | Zonas de confiança, fronteiras e superfícies de ataque por design (primário) |
 | ACO-ITS — Integration Trust & Service-to-Service Security | Integrações entre serviços e padrões de confiança inter-serviço (secundário) |
 | ACO-IAT — Identity, Access & Session Trust | Autenticação e autorização por design; princípio do menor privilégio |
+| ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Diversificação caveated para limites de configuração protegida, dados sensíveis e tratamento de informação operacional sensível (`SC-31*`, `SC-38`); não constitui âncora primária do slice |
+
+> **Nota Wave 1 ACO-SPC:** esta leitura vale apenas como diversificação bounded para o cluster NIST `SC-31`, `SC-31.1`, `SC-31.2`, `SC-31.3` e `SC-38`. Não converte o Cap. 04 em destino family-blind de `ACO-SPC` nem reabre autoridade de outros slices.
 
 ---
 

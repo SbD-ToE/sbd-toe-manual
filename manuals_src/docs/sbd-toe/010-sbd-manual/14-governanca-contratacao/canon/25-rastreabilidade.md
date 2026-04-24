@@ -22,6 +22,9 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 |-------------------|-----------|
 | ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Governance formal, KPIs, audit trail de conformidade, ciclo de vida de exceções |
 | ACO-SCBI — Supply Chain & Build Integrity | Gestão de fornecedores, cláusulas contratuais de supply chain, validação de terceiros |
+| ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Suporte de rastreabilidade para ownership, políticas, exceções e headers normativos ligados a configuração protegida, transporte de dados sensíveis e identidades operacionais; não constitui âncora primária |
+
+> **Nota Wave 1 ACO-SPC:** a leitura autorizada aqui é **support-only** e cobre `nist_sp800_53_rev5::SP800-53-SC-1` e wrappers caveated de `pci_dss_v4_0_1`, `hipaa_security_rule`, `asvs_v4_0_2` e `cis_controls_v8_1_2` quando a evidência é de governação, papel ou obrigação formal. O capítulo não ganha autoridade core de `ACO-SPC`.
 
 ---
 

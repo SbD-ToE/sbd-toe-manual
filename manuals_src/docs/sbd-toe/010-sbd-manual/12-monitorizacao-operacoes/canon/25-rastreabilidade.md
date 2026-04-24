@@ -22,6 +22,9 @@ Este capítulo define práticas de **logging estruturado, deteção de ameaças 
 |-------------------|-----------|
 | ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Logging estruturado, eventos de segurança, audit trail, centralização |
 | ACO-ITS — Integration Trust & Service-to-Service Security | Deteção de incidentes, resposta, integração com SIEM/SOAR |
+| ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Diversificação caveated para proteção de configuração e telemetria de informação sensível (`CIS-3.6`, `CIS-3.13`, `SC-42.1`) sem promover o capítulo a âncora principal |
+
+> **Nota Wave 1 ACO-SPC:** esta superfície é limitada aos rows autorizados `cis_controls_v8_1_2::CIS-3.6`, `cis_controls_v8_1_2::CIS-3.13` e `nist_sp800_53_rev5::SP800-53-SC-42.1`. As variantes `SC-42`, `SC-42.2`, `SC-42.4` e `SC-42.5` permanecem fora da execução por serem non-core / privacy-only e não constituírem autoridade positiva de `ACO-SPC`.
 
 ---
 

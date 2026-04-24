@@ -29,6 +29,8 @@ A evidência empírica é clara. Relatórios como o **Verizon DBIR**, bem como m
 A boa notícia é que estas falhas são, em grande medida, **preveníveis**.  
 Através de práticas sistemáticas e auditáveis - como guidelines claras, validações automatizadas, revisões formais, governação de exceções e o uso responsável de ferramentas de apoio ao desenvolvimento - é possível reduzir drasticamente a superfície de erro introduzida nesta fase.
 
+Neste âmbito, o capítulo cobre também a disciplina de **segredos, parâmetros sensíveis, material criptográfico e configuração protegida** sempre que esses elementos são introduzidos, revistos ou validados em código, PRs, pipelines e artefactos de build. Esta autoridade mantém-se **bounded ao que é decidido e evidenciado no desenvolvimento** e não substitui os capítulos de arquitetura, IaC, deploy, monitorização ou governação.
+
 Num contexto de utilização crescente de ferramentas avançadas de apoio ao desenvolvimento, este capítulo assume explicitamente que **a origem do código - humana ou automatizada - é irrelevante do ponto de vista do risco**, sendo sempre necessária validação técnica adequada, evidência verificável e responsabilização clara pelas decisões de incorporação.
 
 O objetivo deste capítulo não é acrescentar burocracia, mas **estabelecer um ambiente onde cada decisão de desenvolvimento deixa evidência objetiva de segurança aplicada**, proporcional ao risco e rastreável ao longo do tempo.

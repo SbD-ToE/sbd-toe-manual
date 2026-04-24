@@ -25,6 +25,8 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 
 > **Nota adjunct:** `SSDF PW.9` e `ASVS secure_configuration_baseline_gap` são CLAIM GAPSs — o conteúdo existe em `addon/04-validacoes-pre-deploy.md` (misconfig check) e `addon/08-segregacao-e-validacao-operacional.md` (config auditing), mas sem row explícita publicada. Candidatos a reparação no próximo ciclo.
 
+> **Nota Wave 3 ACO-RPR:** esta leitura funciona como âncora bounded para os rows autorizados de release promotion, rollback/readiness, hardening de configuração e defaults em produção, minimização de superfície runtime e clusters NIST de failover / non-persistence que o freeze de Wave 3 reteve em `ACO-RPR`. A leitura permanece **bounded**, mantém o Cap. `04` apenas para a diversificação arquitetural autorizada, mantém o Cap. `02` apenas como scaffold de requisitos e rastreabilidade, não reabre a visibilidade legada do Cap. `06`, e não converte `ASVS v4`, `CIS`, `NIST`, `DSOMM` ou `SAMM` em autoridade family-blind de deploy.
+
 ---
 
 ## Frameworks normativos — cobertura verificada

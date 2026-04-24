@@ -23,6 +23,7 @@ Este capítulo define **requisitos de segurança proporcionais ao risco**, rastr
 | ACO-IVF — Input Validation, Safe Parsing & Controlled Failure | Requisitos de validação de input, parsing seguro e gestão de erros (primário — VAL/ERR) |
 | ACO-IAT — Identity, Access & Session Trust | Requisitos de autenticação, autorização e gestão de sessões (secundário — AUT/ACC/SES) |
 | ACO-ITS — Integration Trust & Service-to-Service Security | Requisitos de confiança inter-serviço, trusted transport e boundaries de integração como scaffold secundário de rastreabilidade (INT/ARC) |
+| ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Scaffold secundário de requisitos e rastreabilidade para defaults seguros, hardening de runtime / cabeçalhos, tratamento de erros e deploy controlado; não constitui âncora primária |
 | ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Requisitos de configuração segura e protecção de dados sensíveis como scaffold secundário de rastreabilidade (CFG/ENC) |
 
 > **Nota adjunct:** A família ASVS `secure_configuration_baseline_gap` e SSDF PW.9 apontam para pressão de configuração segura por omissão — tema coberto parcialmente aqui mas sem secção dedicada. Candidato ao adjunct `secure_configuration_baseline_integrity` (pendente de promoção).
@@ -30,6 +31,8 @@ Este capítulo define **requisitos de segurança proporcionais ao risco**, rastr
 > **Nota Wave 2 ACO-IAT:** neste capítulo, `ACO-IAT` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a âncora bounded em Cap. `04`, a diversificação autorizada em Cap. `08` e os wrappers support-only em Cap. `14`. O Cap. 02 não substitui a âncora primária de `ACO-IAT`, não promove o boundary cluster excluído `CIS-5`, `CIS-5.1`, `CIS-5.5`, `CIS-6.6` e `PCI-7.2.1` para execução, e não reabre qualquer lane fora do freeze de Wave 2.
 
 > **Nota Wave 2 ACO-ITS:** neste capítulo, `ACO-ITS` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a execução bounded em Cap. `04` e a diversificação autorizada em Cap. `08`. O Cap. 02 não substitui a âncora primária de `ACO-ITS`, não ganha autoridade autónoma para rows de wireless/channel boundary e não reabre qualquer lane fora do freeze de Wave 2.
+
+> **Nota Wave 3 ACO-RPR:** neste capítulo, `ACO-RPR` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a âncora bounded em Cap. `11` e a diversificação autorizada em Cap. `04` para defaults seguros, debug desativado em produção, mensagens de erro controladas, headers / transporte seguros e deploy apenas via pipeline validado já cobertos em `CFG`, `ERR`, `ENC`, `API`, `INT` e `DST`. O Cap. 02 não substitui a âncora primária de `ACO-RPR`, não ganha autoridade autónoma de release, não força qualquer uso de Cap. `14`, e não reabre qualquer lane fora do freeze de Wave 3.
 
 > **Nota Wave 1 ACO-SPC:** neste capítulo, `ACO-SPC` funciona apenas como **scaffold de requisitos e rastreabilidade**, suportando a execução bounded em Cap. 06 e as diversificações autorizadas em `04`, `08`, `11`, `12` e `14`. O Cap. 02 não substitui a âncora primária de `ACO-SPC` nem passa a landing surface principal.
 

@@ -21,6 +21,7 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
 | ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Governance formal, KPIs, audit trail de conformidade, ciclo de vida de exceções |
+| ACO-TSV — Testing, Security Validation & Empirical Assurance | Suporte de rastreabilidade support-only para avaliação periódica, requirement headers e wrappers normativos de testing / assurance; não constitui âncora primária |
 | ACO-SCBI — Supply Chain & Build Integrity | Gestão de fornecedores, cláusulas contratuais de supply chain, validação de terceiros |
 | ACO-IAT — Identity, Access & Session Trust | Suporte de rastreabilidade para políticas, procedimentos, ownership e gestão administrativa de acessos ligados a identidade, autenticação e controlo de acesso; não constitui âncora primária |
 | ACO-IVF — Input Validation, Safe Parsing & Controlled Failure | Suporte de rastreabilidade para políticas, procedimentos e wrappers normativos de integridade sistémica (`SP800-53-SI-1`); não constitui âncora primária |
@@ -31,6 +32,8 @@ Este capítulo define práticas de **governação formal** — exceções, cláu
 > **Nota Wave 2 ACO-IVF:** a leitura autorizada aqui é **support-only** e limita-se a `nist_sp800_53_rev5::SP800-53-SI-1` e wrappers caveated equivalentes quando a evidência é de política, procedimento ou ownership formal para integridade sistémica. A âncora primária de `ACO-IVF` permanece em Cap. `06`, a diversificação bounded permanece em Cap. `12`, e este capítulo não ganha autoridade core de `ACO-IVF`.
 
 > **Nota Wave 3 ACO-SLG:** a leitura autorizada aqui é **support-only** e limita-se a `hipaa_security_rule::HIPAA-164-308a6` e aos wrappers equivalentes já retidos para `cis_controls_v8_1_2::CIS-17.9`, `pci_dss_v4_0_1::PCI-10.7.1`, `pci_dss_v4_0_1::PCI-10.7.2`, `pci_dss_v4_0_1::PCI-10.7.3` e `pci_dss_v4_0_1::PCI-REQ-10` quando a evidência é de procedimentos de incident response, thresholds formais, failure-response governance, service-provider monitoring responsibility ou requirement headers de programa. A âncora primária de `ACO-SLG` permanece em Cap. `12`, o scaffold de requisitos permanece em Cap. `02`, este capítulo não ganha autoridade core de `ACO-SLG`, e o uso non-core de Cap. `13` permanece fora da execução porque o freeze atual mantém `0` rows in-scope ali.
+
+> **Nota Wave 3 ACO-TSV:** a leitura autorizada aqui é **support-only** e limita-se a `hipaa_security_rule::HIPAA-164-308a8` e a `pci_dss_v4_0_1::PCI-REQ-11` quando a evidência é de periodic security evaluation, testing-governance packaging ou requirement headers de programa. A âncora primária de `ACO-TSV` permanece em Cap. `10`, o scaffold de requisitos permanece em Cap. `02`, a diversificação arquitetural permanece em Cap. `04`, este capítulo não ganha autoridade core de `ACO-TSV`, e os usos non-core de Cap. `06` e `13` permanecem fora da execução porque o freeze atual mantém `0` rows in-scope ali.
 
 > **Nota Wave 1 ACO-SPC:** a leitura autorizada aqui é **support-only** e cobre `nist_sp800_53_rev5::SP800-53-SC-1` e wrappers caveated de `pci_dss_v4_0_1`, `hipaa_security_rule`, `asvs_v4_0_2` e `cis_controls_v8_1_2` quando a evidência é de governação, papel ou obrigação formal. O capítulo não ganha autoridade core de `ACO-SPC`.
 

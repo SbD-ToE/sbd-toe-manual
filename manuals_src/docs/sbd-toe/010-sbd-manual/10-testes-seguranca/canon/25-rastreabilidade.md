@@ -23,6 +23,8 @@ Este capítulo define uma **estratégia de testes de segurança proporcional ao 
 | ACO-TSV — Testing, Security Validation & Empirical Assurance | Estratégia de testes, execução, gestão de findings e rastreabilidade |
 | ACO-ATB — Architecture & Trust Boundaries | Cobertura de testes baseada em vetores de ataque identificados |
 
+> **Nota Wave 3 ACO-TSV:** esta leitura funciona como âncora bounded para os rows autorizados de vulnerability scanning, penetration testing, retesting, methodology wrappers, lifecycle / strategy testing e requirement-header packaging que o freeze de Wave 3 reteve em `ACO-TSV`. A leitura permanece **bounded**, mantém o Cap. `04` apenas para os edges de empirical assurance architecture-heavy e wireless / segmentation support, mantém o Cap. `02` apenas como scaffold de requisitos e rastreabilidade para TLS / configuration verification e requirement support, mantém o Cap. `14` apenas como suporte de governação / periodic evaluation wrappers, não força qualquer uso de Cap. `06` ou `13`, e não converte `ASVS v4`, `CIS`, `HIPAA`, `NIST`, `DSOMM` ou `PCI` em autoridade family-blind de testing.
+
 ---
 
 ## Frameworks normativos — cobertura verificada

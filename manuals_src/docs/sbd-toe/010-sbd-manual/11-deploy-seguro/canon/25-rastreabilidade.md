@@ -22,6 +22,7 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 |-------------------|-----------|
 | ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Gestão de release, gates de promoção, rollback, readiness checks |
 | ACO-ATB — Architecture & Trust Boundaries | Diversificação caveated para isolamento de deploy, heterogeneidade de runtime, concealment/misdirection e distributed-processing boundary sem promover o capítulo a âncora primária |
+| ACO-SCBI — Supply Chain & Build Integrity | Diversificação caveated para build-platform execution control, artifact activation safety e runtime handoff de supply chain; não constitui âncora primária |
 | ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Políticas de autorização de execução, separação de ambientes |
 
 > **Nota adjunct:** `SSDF PW.9` e `ASVS secure_configuration_baseline_gap` são CLAIM GAPSs — o conteúdo existe em `addon/04-validacoes-pre-deploy.md` (misconfig check) e `addon/08-segregacao-e-validacao-operacional.md` (config auditing), mas sem row explícita publicada. Candidatos a reparação no próximo ciclo.
@@ -29,6 +30,8 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 > **Nota Wave 3 ACO-RPR:** esta leitura funciona como âncora bounded para os rows autorizados de release promotion, rollback/readiness, hardening de configuração e defaults em produção, minimização de superfície runtime e clusters NIST de failover / non-persistence que o freeze de Wave 3 reteve em `ACO-RPR`. A leitura permanece **bounded**, mantém o Cap. `04` apenas para a diversificação arquitetural autorizada, mantém o Cap. `02` apenas como scaffold de requisitos e rastreabilidade, não reabre a visibilidade legada do Cap. `06`, e não converte `ASVS v4`, `CIS`, `NIST`, `DSOMM` ou `SAMM` em autoridade family-blind de deploy.
 
 > **Nota Wave 3 ACO-ATB:** esta superfície é limitada aos rows autorizados de deployment isolation, network change/review, dual-homed devices, heterogeneity / concealment, distributed processing e information diversity quando a evidência já aponta para suporte de deploy/runtime em `ACO-ATB`. A leitura permanece **bounded** a diversificação operacional; a âncora primária de `ACO-ATB` continua em Cap. `04`, a diversificação infra-like mais restrita continua em Cap. `08`, o scaffold de requisitos continua em Cap. `02`, o Cap. `06` não entra como superfície implícita, e este capítulo não ganha autoridade autónoma de arquitetura ou release.
+
+> **Nota Wave 4 ACO-SCBI:** esta superfície é limitada aos rows autorizados `asvs_v4_0_2::ASVS4-REQ-V14.1.5`, `asvs_v4_0_2::ASVS4-REQ-V14.3.3` e `asvs_v4_0_2::ASVS4-REQ-V14.4.7`, mais o suporte already-evidenced de `slsa_spec_v1_0_build_track::SLSA-BUILD-PLATFORM-ISOLATION` e `ssdf_sp800_218_v1_1::SSDF-PRACTICE-PO.5`. A leitura permanece **bounded** a diversificação de deploy / execution-control; as âncoras de `ACO-SCBI` continuam em Cap. `04` e `05`, o suporte governativo continua em Cap. `14`, o scaffold de rastreabilidade continua em Cap. `02`, não se reabrem Cap. `08` ou `09`, e este capítulo não ganha autoridade autónoma de `ACO-SCBI`.
 
 ---
 

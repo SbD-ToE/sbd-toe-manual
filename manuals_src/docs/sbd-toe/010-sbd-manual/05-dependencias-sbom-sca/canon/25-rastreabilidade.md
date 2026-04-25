@@ -20,7 +20,9 @@ Este capítulo define práticas de **gestão segura de dependências** — inven
 
 | Slice AppSec Core | Relevância |
 |-------------------|-----------|
-| ACO-SCBI — Supply Chain & Build Integrity | SBOM, inventário de dependências, controlo de origem, supply chain threats |
+| ACO-SCBI — Supply Chain & Build Integrity | Âncora partilhada para dependências verificadas, inventário, controlo de origem e verification semantics de supply chain; não esgota a leitura do slice |
+
+> **Nota Wave 4 ACO-SCBI:** esta leitura funciona como **âncora bounded** de `ACO-SCBI` para os rows autorizados de dependency verification, update-channel trust e traceability fits já retidos em `05`. A leitura permanece **dual-anchor** com o Cap. `04`, mantém o Cap. `07` e `11` apenas como diversificação operacional já evidenciada, mantém o Cap. `14` apenas como suporte governativo `SR-*`, mantém o Cap. `02` apenas como scaffold de rastreabilidade, não reabre Cap. `08` ou `09`, não promove `SP800-53-SA-20`, mantém `slsa_spec_v1_0_build_track` como família de confirmação mais limpa e não fabrica rows `pci_dss_v4_0_1` fora da evidência congelada.
 
 ---
 

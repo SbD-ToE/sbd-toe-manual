@@ -29,6 +29,8 @@ Este capítulo define práticas de **logging estruturado, deteção de ameaças 
 
 > **Nota Wave 1 ACO-SPC:** esta superfície é limitada aos rows autorizados `cis_controls_v8_1_2::CIS-3.6`, `cis_controls_v8_1_2::CIS-3.13` e `nist_sp800_53_rev5::SP800-53-SC-42.1`. As variantes `SC-42`, `SC-42.2`, `SC-42.4` e `SC-42.5` permanecem fora da execução por serem non-core / privacy-only e não constituírem autoridade positiva de `ACO-SPC`.
 
+> **Nota Wave 3 ACO-SLG:** esta leitura funciona como âncora bounded para os rows autorizados de alerting, audit trail, log generation/collection, integrity, retention, review cadence e monitoring core que o freeze de Wave 3 reteve em `ACO-SLG`. A leitura permanece **bounded**, mantém o Cap. `04` apenas para a diversificação de time-source / decoy / sensor-relocation edges, mantém o Cap. `06` apenas para a diversificação de tainting-exfiltration detection (`SI-20`), mantém o Cap. `02` apenas como scaffold de requisitos e rastreabilidade, mantém o Cap. `14` apenas como suporte de governação / procedimentos para incident handling e failure-response wrappers, não força qualquer uso de Cap. `13`, e não converte `ASVS v4`, `CIS`, `HIPAA`, `NIST` ou `PCI` em autoridade family-blind de secure logging.
+
 ---
 
 ## Frameworks normativos — cobertura verificada

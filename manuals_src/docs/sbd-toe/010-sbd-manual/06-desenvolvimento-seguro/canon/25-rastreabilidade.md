@@ -23,8 +23,11 @@ Este capítulo define práticas de **codificação segura** — guidelines, lint
 | ACO-IVF — Input Validation, Safe Parsing & Controlled Failure | Primária | Validação de entrada, injeção, falha segura, gestão de erros — VAL + ERR requirements |
 | ACO-SPC — Secret Handling, Protected Configuration & Operational Identities | Primária (bounded) | Segredos, parâmetros sensíveis, material criptográfico e configuração protegida quando esses controlos são implementados, revistos e evidenciados no ciclo de desenvolvimento |
 | ACO-SCBI — Supply Chain & Build Integrity | Secundária | Segurança de dependências, proveniência do código |
+| ACO-SLG — Security Event Logging, Audit Trail & Centralized Logging | Secundária (bounded) | Diversificação caveated para deteção instrumentada de exfiltração / tainting (`SI-20`) sem promover o capítulo a âncora primária |
 
 > **Nota de mapeamento:** ACO-IVF continua a ser o principal espaço de normalização deste capítulo via `CTRL-code-integrity-desenvolvimento-seguro-e-validacao-de-codigo` para VAL + ERR. Na Wave 1 autorizada, `ACO-SPC` é ativado de forma **bounded** para `asvs_v5_0_0` e `pci_dss_v4_0_1`, com carry-forward caveated para `asvs_v4_0_2`, `hipaa_security_rule` e `nist_sp800_53_rev5`, apenas em temas de segredos, configuração protegida, transporte de dados sensíveis e identidades operacionais tratadas no desenvolvimento. `ACO-SCBI` permanece restrito a dependências e proveniência. Rows corrigidas para outros slices, `SP800-53-SC-42.3`, sinais candidate-only e material non-core fora de `03` e `13` não ganham autoridade adicional neste capítulo.
+
+> **Nota Wave 3 ACO-SLG:** esta superfície é limitada ao row autorizado `nist_sp800_53_rev5::SP800-53-SI-20`. A leitura permanece **bounded** a diversificação de desenvolvimento / instrumentação para deteção de exfiltração; a âncora primária de `ACO-SLG` continua em Cap. `12`, o scaffold de requisitos continua em Cap. `02`, as diversificações de arquitetura / telemetria continuam em Cap. `04`, e este capítulo não ganha autoridade autónoma de logging ou governação.
 
 ---
 

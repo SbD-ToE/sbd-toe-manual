@@ -142,3 +142,6 @@ pnpm-debug.log*
 # Independent projects (manual-rag, etc.)
 
 work-documents/
+
+# Local Codex session-resume pointer; not a programme artefact.
+resume

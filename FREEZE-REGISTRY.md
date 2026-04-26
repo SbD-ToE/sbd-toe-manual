@@ -96,6 +96,17 @@ Per `PROGRAMME-PRESERVATION-PROTOCOL.md` §3.2 and §10.3 backward compatibility
 
 ---
 
+## Phase C Step 1 Ship Records
+
+Phase C Step 1 was authorized by Orchestrator dispatcher `2026-04-26-orchestrator-manual-agent-phase-c-step-1-governance-plus-revert.md` under programme-lead authority dated 2026-04-26.
+
+| Commit | Bundle | Description |
+|---|---|---|
+| `d1f694f8` | Bundle A - governance scaffolding | Authored `AGENTS.md`, authored this `FREEZE-REGISTRY.md`, tracked `PROGRAMME-PRESERVATION-PROTOCOL.md`, and ignored local `resume` pointer |
+| `fd8577f0` | Bundle B - REVERT cleanup | Removed 21 canon entries classified `REVERT` by v3.2 measure-sync; wave-notes and Pedro's two UPDATE commits preserved |
+
+---
+
 ## Cross-references
 
 This repository is referenced by:
@@ -118,3 +129,4 @@ This repository depends on:
 | Date | Change | Author |
 |---|---|---|
 | 2026-04-26 | `FREEZE-REGISTRY.md` created at root per Programme Preservation Protocol §5; 24 pre-protocol tags inventoried; Lab Track B wave-note commit chain documented | Manual agent under Orchestrator dispatcher |
+| 2026-04-26 | Phase C Step 1 Bundle A and Bundle B commits recorded in registry | Manual agent under Orchestrator dispatcher |

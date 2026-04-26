@@ -37,8 +37,6 @@ Este capítulo define práticas de **segurança operacional para pipelines CI/CD
 | SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação obrigatória antes de promoção | addon (medium): Segurança do código dentro do pipeline |
 | SSDF PS.3 | Archive and Protect Each Release | ✅ Explícito | Assinatura e proveniência end-to-end | addon (medium): Integridade e proveniência de artefactos |
 | SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Análise pós-build; rastreabilidade de findings | addon (medium): Validações de segurança integradas no pipeline |
-| SSDF GV.2 | Perform Security Checkpoints | ✅ Explícito | Governação e rastreabilidade de execuções | aplicacao_lifecycle (strong): US-09 — Rastreabilidade ponta-a-ponta |
-| SSDF GV.3 | Implement Vulnerability Response Processes | ✅ Explícito | Logs, segregação rastreável | addon (medium): Rastreabilidade de assinaturas e deploys |
 | SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados e com proveniência | addon (medium): Integridade e proveniência de artefactos |
 | SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | Plataforma de build controlada e auditada | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
 | SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico | addon (medium): Isolamento e proteção de runners |
@@ -49,8 +47,6 @@ Este capítulo define práticas de **segurança operacional para pipelines CI/CD
 | SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | Runners e plataformas controladas | addon (medium): Isolamento e proteção de runners |
 | SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | Runner isolation presente; L3 mais específico | addon (medium): Isolamento e proteção de runners |
 | SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Critérios de verificação presentes | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
-| CAPEC-445 | Replication Through Removable Media / Config Manipulation | ⚠️ Parcial | Pipeline integrity | addon (medium): Design seguro dos pipelines |
-| CAPEC-511 | Infiltration of Software Development Environment | ⚠️ Parcial | CI/CD infrastructure compromise | addon (medium): Gestão segura de código fonte |
 | CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software authorization e CI/CD toolchain | addon (medium): Políticas e gates por nível de aplicação |
 | ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Rastreabilidade de deploys e integridade de logs | addon (medium): Rastreabilidade de assinaturas e deploys |
 | ASVS security_event_logging_coverage | Security logging | ⚠️ Parcial | CI/CD logging adjacent | addon (medium): Excepções e Visibilidade em CI/CD |

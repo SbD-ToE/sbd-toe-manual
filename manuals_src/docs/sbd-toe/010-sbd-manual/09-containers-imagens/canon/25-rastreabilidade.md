@@ -44,8 +44,6 @@ Este capítulo define práticas de **construção, assinatura, proveniência, ha
 | SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | Container provenance gerada no build | aplicacao_lifecycle (strong): US-12 — Builders e Runners Ephemerais, Assinados e com Auditoria |
 | SLSA-BUILD-PLATFORM-ISOLATION | Isolation | ⚠️ Parcial | Container isolation semântica | addon (medium): Runners, Execução Isolada e Ambientes Controlados |
 | SLSA-VERIFY-DEPENDENCIES | Check dependencies | ⚠️ Parcial | Container deps e SBOM presentes | addon (medium): SBOM de Containers e Rastreabilidade de Runtime |
-| CAPEC-206 | Signing Malicious Code | ✅ Semântico | Artefactos assinados com verificação | addon (medium): Assinatura de Imagens e Cadeia de Confiança |
-| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada via digest pinning | aplicacao_lifecycle (strong): US-01 — Imagens base pinned por digest |
 | ASVS secure_configuration_baseline_gap | Secure configuration baseline | ✅ Semântico | securityContext (runAsNonRoot, allowPrivilegeEscalation:false), OPA/Gatekeeper, Kyverno e admission controllers confirmados em units dedicadas; conteúdo substancial em dois addons distintos | addon (medium): Enforcement Técnico de Políticas no Runtime com OPA e Kyverno; addon (medium): Execução Segura de Containers em Clusters Kubernetes |
 
 **Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap

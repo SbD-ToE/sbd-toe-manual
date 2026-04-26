@@ -50,8 +50,6 @@ Este capítulo define práticas de **entrega, ativação e execução segura** d
 | SLSA-PRINCIPLE-TRUST-PLATFORMS | Trust platforms | ✅ Semântico | Verificação antes de deploy | addon (medium): Validações de Segurança antes de Deploy |
 | SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build | ✅ Semântico | Deployment controlado e reprodutível | addon (medium): Controlo de Versão e Rollback Seguro |
 | SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Proveniência verificada antes de promoção | addon (medium): Validações de Segurança antes de Deploy |
-| CAPEC-186 | Malicious Software Update | ✅ Semântico | Promoção verificada, rollback estruturado | aplicacao_lifecycle (strong): US-04 - Rollback rápido e testado |
-| CAPEC-669 | Alteration of Software Update | ✅ Semântico | Promoção verificada, rastreabilidade end-to-end | aplicacao_lifecycle (strong): US-05 - Rastreabilidade end-to-end |
 | CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | Deploy config semântico; enterprise config além do âmbito | addon (medium): Segregação de Ambientes e Validação Operacional |
 | CIS-6 | Access Control Management | ✅ Explícito | Controlo de execução e gates de aprovação | aplicacao_lifecycle (strong): US-07 - Controlo de execução com aprovação |
 | ASVS authentication_lifecycle | Auth lifecycle | ⚠️ Parcial | Deploy semântico; sem unit dedicado | addon (medium): Modelo de Controlo de Execução em Runtime |

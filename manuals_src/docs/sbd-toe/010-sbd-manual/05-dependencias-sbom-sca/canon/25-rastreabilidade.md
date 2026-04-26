@@ -35,9 +35,6 @@ Este capítulo define práticas de **gestão segura de dependências** — inven
 | SSDF PW.3 | Verify Third-Party Software | ✅ Explícito | Inventário sistemático (SBOM), critérios de aceitação SCA | requirements_catalog (strong): Catálogo DEP — Dependências, SBOM e SCA |
 | SSDF PW.4 | Reuse Well-Secured Software | ✅ Semântico | Componentes controlados e com proveniência verificada | addon (medium): Controlo de Registos e Origem de Pacotes |
 | SSDF RV.1 | Identify and Confirm Vulnerabilities | ✅ Explícito | Análise SCA contínua, rastreabilidade de vulnerabilidades | aplicacao_lifecycle (strong): US-03 — SCA automático com gates |
-| CAPEC-185 | Malicious Software Download | ✅ Semântico | Controlo de origem, allowlist de componentes | addon (medium): Ameaças à Cadeia de Fornecimento (Supply Chain) |
-| CAPEC-446 | Malicious Logic via Third-Party Component | ✅ Semântico | SBOM, dependency risk, controlo de origem | addon (medium): Ameaças à Cadeia de Fornecimento (Supply Chain) |
-| CAPEC-691 | Spoof Open-Source Metadata | ⚠️ Parcial | Dependency confusion adjacent; metadata verification | addon (medium): Controlo de Registos e Origem de Pacotes |
 | CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software inventory presente; CIS abrange âmbito mais largo | addon (medium): Inventário de Dependências e SBOM |
 | CIS-7 | Continuous Vulnerability Management | ⚠️ Parcial | Dependency scanning adjacent | addon (medium): Análise de Vulnerabilidades em Dependências (SCA) |
 | ASVS architecture_and_dependency_hardening | Architecture & dependency hardening | ⚠️ Parcial | Dependências presente; hardening framing | addon (medium): Governança de Bibliotecas e Componentes de Terceiros |

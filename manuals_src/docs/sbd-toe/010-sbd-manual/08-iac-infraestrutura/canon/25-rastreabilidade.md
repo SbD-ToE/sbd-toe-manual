@@ -49,7 +49,6 @@ Este capítulo define práticas de **infraestrutura definida como código** — 
 | SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | IaC e pipeline integrados | aplicacao_lifecycle (strong): US-09 — Assinatura e Proveniência de artefactos IaC |
 | SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | IaC e runners controlados | addon (medium): Planeamento de Execução e Controlo de Estado |
 | SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | IaC segmentation semântica | aplicacao_lifecycle (strong): US-02 — Segregação de ambientes |
-| CAPEC-511 | Infiltration of Software Development Environment | ⚠️ Parcial | IaC infrastructure compromise | addon (medium): Princípios de Security by Design aplicados a Projetos IaC |
 | CIS-4 | Secure Configuration of Enterprise Assets | ⚠️ Parcial | IaC hardening; enterprise config além do âmbito AppSec | addon (medium): Enforcement Contínuo de Políticas e Regras de Segurança em IaC |
 | ASVS protected_secret_storage | Secret storage | ⚠️ Parcial | IaC e gestão de cofres | aplicacao_lifecycle (strong): US-10 — Gestão de segredos e identidades para IaC |
 | ASVS secret_leak_prevention | Secret leak prevention | ⚠️ Parcial | IaC e prevenção de exposição | addon (medium): Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC |

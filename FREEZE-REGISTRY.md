@@ -3,7 +3,7 @@
 **Repository:** `SbD-ToE-Manual` - `git@github.com:SbD-ToE/sbd-toe-manual.git`
 **Part of programme:** SbD-ToE / AppSec Core (P0 DOI 10.17605/OSF.IO/7T849)
 **Governed by:** `PROGRAMME-PRESERVATION-PROTOCOL.md` v1.0
-**Last updated:** 2026-04-26
+**Last updated:** 2026-04-28
 
 **Role in programme:** authoritative SbD-ToE Manual content; primary substrate for Knowledge Graph generation, Curator paper authoring, and canonical evidence base.
 
@@ -82,6 +82,10 @@ These wave-notes are contractual constraints for subsequent Manual agent edits. 
 
 Per `PROGRAMME-PRESERVATION-PROTOCOL.md` §3.2 and §10.3 backward compatibility, all tags listed under "Pre-protocol tags" are permanently immutable.
 
+Bundle F internal milestone tags are also immutable once created:
+
+- `p7-v2-bundle-f-canon-substitution-shipped`
+
 ---
 
 ## Current working state
@@ -104,6 +108,21 @@ Phase C Step 1 was authorized by Orchestrator dispatcher `2026-04-26-orchestrato
 |---|---|---|
 | `d1f694f8` | Bundle A - governance scaffolding | Authored `AGENTS.md`, authored this `FREEZE-REGISTRY.md`, tracked `PROGRAMME-PRESERVATION-PROTOCOL.md`, and ignored local `resume` pointer |
 | `fd8577f0` | Bundle B - REVERT cleanup | Removed 21 canon entries classified `REVERT` by v3.2 measure-sync; wave-notes and Pedro's two UPDATE commits preserved |
+
+---
+
+## Bundle F Canon Substitution Ship Record
+
+Bundle F was authorized by Orchestrator dispatcher `2026-04-28-orchestrator-manual-agent-bundle-f-canon-substitution.md` under programme-lead Gate E approval dated 2026-04-28.
+
+| Field | Value |
+|---|---|
+| Upstream staging tag | `p7-v2-bundle-e-canon-generator-v4-2-shipped` |
+| Upstream staging commit | `3d0424ed` |
+| Manual substitution commit | `a23c1dbb` |
+| Ship tag | `p7-v2-bundle-f-canon-substitution-shipped` |
+| Scope | 15 × `manuals_src/docs/sbd-toe/010-sbd-manual/<chapter>/canon/25-rastreabilidade.md` substituted from Bundle E v4.2 staging |
+| Verification | 15/15 byte-equivalent to staging; 37 wave-notes preserved as `<!-- WAVE-NOTE: ... -->`; all other `manuals_src` files preserved |
 
 ---
 
@@ -130,3 +149,4 @@ This repository depends on:
 |---|---|---|
 | 2026-04-26 | `FREEZE-REGISTRY.md` created at root per Programme Preservation Protocol §5; 24 pre-protocol tags inventoried; Lab Track B wave-note commit chain documented | Manual agent under Orchestrator dispatcher |
 | 2026-04-26 | Phase C Step 1 Bundle A and Bundle B commits recorded in registry | Manual agent under Orchestrator dispatcher |
+| 2026-04-28 | Bundle F canon substitution milestone recorded; protected tag `p7-v2-bundle-f-canon-substitution-shipped` declared | Manual agent under Orchestrator dispatcher |

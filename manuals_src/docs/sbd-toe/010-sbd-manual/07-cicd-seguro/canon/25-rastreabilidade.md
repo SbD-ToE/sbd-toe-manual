@@ -1,75 +1,10 @@
----
-id: rastreabilidade
-title: "Rastreabilidade — Capítulo 07: CI/CD Seguro"
-description: Rastreabilidade das práticas de segurança de pipeline face a frameworks normativos com pilot formal
-tags: [rastreabilidade, cicd, supply-chain, ssdf, slsa, capec, asvs, cis]
-sidebar_position: 25
+# 25. Rastreabilidade — CI/CD Seguro
+
+## Sumário
+
+Nenhuma fonte externa do v3.2 supplier ancora primariamente este capítulo. As referências externas relevantes para este domínio encontram-se nos capítulos onde a respectiva slice AppSec Core ancora primariamente.
 
 ---
 
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# Rastreabilidade — Capítulo 07: CI/CD Seguro
-
-Este capítulo define práticas de **segurança operacional para pipelines CI/CD** — o pipeline como ativo crítico da cadeia de fornecimento de software. É o capítulo com maior pressão de supply chain e SLSA.
-
----
-
-## Camada AppSec Core
-
-| Slice AppSec Core | Relevância |
-|-------------------|-----------|
-| ACO-SCBI — Supply Chain & Build Integrity | Diversificação caveated para gates de pipeline, trusted update channels e secure build environments; não constitui âncora primária |
-| ACO-RPR — Release Promotion, Controlled Rollout & Rollback Readiness | Proveniência, trusted builders, gates de promoção, rollout controlado |
-
-> **Nota Wave 4 ACO-SCBI:** esta superfície é limitada aos rows autorizados `asvs_v4_0_2::ASVS4-REQ-V10.3.1`, `asvs_v4_0_2::ASVS4-REQ-V14.1.2` e `ssdf_sp800_218_v1_1::SSDF-PRACTICE-PO.5`, mais o suporte already-evidenced de `asvs_v4_0_2::ASVS4-REQ-V14.2.3`. A leitura permanece **bounded** a diversificação de pipeline / ambiente de build; as âncoras de `ACO-SCBI` continuam em Cap. `04` e `05`, o suporte governativo continua em Cap. `14`, o scaffold de rastreabilidade continua em Cap. `02`, o Cap. `10` não entra porque o freeze mantém `0` rows executáveis ali, não se reabrem Cap. `08` ou `09`, e este capítulo não ganha autoridade autónoma de `ACO-SCBI`.
-
----
-
-## Frameworks normativos — cobertura verificada
-
-> Inclui apenas frameworks com pilot formal publicado no ExternalSourcesInventory.
-
-| Framework | Requisito / Prática | Cobertura | Nota | Fonte verificada |
-|-----------|--------------------|-----------|----|-----------------|
-| SSDF PW.4 | Establish Security Criteria | ✅ Explícito | Gates de segurança por risco (L1–L3) | aplicacao_lifecycle (strong): US-07 — Gates por risco |
-| SSDF PW.7 | Review and/or Analyze Code | ✅ Explícito | Validação obrigatória antes de promoção | addon (medium): Segurança do código dentro do pipeline |
-| SSDF PS.3 | Archive and Protect Each Release | ✅ Explícito | Assinatura e proveniência end-to-end | addon (medium): Integridade e proveniência de artefactos |
-| SSDF RV.3 | Analyze Vulnerabilities to Root Causes | ✅ Explícito | Análise pós-build; rastreabilidade de findings | addon (medium): Validações de segurança integradas no pipeline |
-| SLSA-BUILD-L1 | Provenance exists | ✅ Explícito | Artefactos assinados e com proveniência | addon (medium): Integridade e proveniência de artefactos |
-| SLSA-BUILD-L2 | Hosted build platform | ✅ Explícito | Plataforma de build controlada e auditada | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
-| SLSA-BUILD-L3 | Hardened builds | ⚠️ Parcial | Hardening presente; L3 exige isolamento mais específico | addon (medium): Isolamento e proteção de runners |
-| SLSA-PRINCIPLE-PREFER-ATTESTATIONS | Prefer attestations | ✅ Explícito | Assinatura e attestation de artefactos | addon (medium): Integridade e proveniência de artefactos |
-| SLSA-PRODUCER-DISTRIBUTE-PROVENANCE | Distribute provenance | ✅ Explícito | Proveniência distribuída com artefactos | addon (medium): Rastreabilidade de assinaturas e deploys |
-| SLSA-BUILD-PLATFORM-PROVENANCE-GENERATION | Provenance generation | ✅ Explícito | CI/CD provenance gerada no pipeline | aplicacao_lifecycle (strong): US-06 — Assinatura e proveniência |
-| SLSA-PRODUCER-CONSISTENT-BUILD | Consistent build process | ✅ Semântico | Pipeline-as-code versionado e determinístico | aplicacao_lifecycle (strong): US-14 — Reprodutibilidade e determinismo |
-| SLSA-PRODUCER-CHOOSE-BUILD-PLATFORM | Choose build platform | ⚠️ Parcial | Runners e plataformas controladas | addon (medium): Isolamento e proteção de runners |
-| SLSA-BUILD-PLATFORM-ISOLATION | Isolation strength | ⚠️ Parcial | Runner isolation presente; L3 mais específico | addon (medium): Isolamento e proteção de runners |
-| SLSA-VERIFY-BUILD-LEVEL | Check SLSA Build level | ⚠️ Parcial | Critérios de verificação presentes | requirements_catalog (strong): Catálogo CIC — CI/CD Seguro |
-| CIS-2 | Inventory and Control of Software Assets | ⚠️ Parcial | Software authorization e CI/CD toolchain | addon (medium): Políticas e gates por nível de aplicação |
-| ASVS log_integrity_and_protection | Log integrity | ✅ Explícito | Rastreabilidade de deploys e integridade de logs | addon (medium): Rastreabilidade de assinaturas e deploys |
-| ASVS security_event_logging_coverage | Security logging | ⚠️ Parcial | CI/CD logging adjacent | addon (medium): Excepções e Visibilidade em CI/CD |
-| SSDF PO.5 | Implement and Maintain Secure Environments for Software Development | 🔧 Reparação | Ambientes de CI/CD segregados e runners isolados cobertos semanticamente; sem row SSDF PO.5 explícita publicada | addon (medium): Isolamento e proteção de runners |
-
-**Legenda:** ✅ Explícito · ✅ Semântico · ⚠️ Parcial · 🔧 Reparação · 🔴 Gap
-
-> **Metodologia:** Cobertura verificada contra `ontology_discovery_units.jsonl` (4139 units, manual completo). "Explícito" = unit normative_weight strong/medium com heading directo. "Semântico" = conteúdo confirmado em addon ou via mapeamento canónico. "Parcial" = sem unit dedicado no capítulo.
-
----
-
-## Maturidade — referência separada
-
-A leitura de maturidade deste capítulo é tratada em [achievable-maturity.md](../achievable-maturity.md).
-
-Neste documento, os modelos de maturidade surgem apenas como contexto editorial complementar. A sua normalização formal é apresentada no documento dedicado do capítulo.
-
----
-
-## Ligações com outros capítulos
-
-- **Cap. 05** — SBOM e SCA integrados como gates no pipeline
-- **Cap. 06** — práticas de codificação aplicadas como passos automatizados
-- **Cap. 08** — IaC como base de configuração dos ambientes de build
-- **Cap. 09** — imagens produzidas e assinadas por este pipeline
-- **Cap. 10** — testes de segurança integrados como gates obrigatórios
+<!-- WAVE-NOTE: **Nota Wave 4 ACO-SCBI:** esta superfície é limitada aos rows autorizados `asvs_v4_0_2::ASVS4-REQ-V10.3.1`, `asvs_v4_0_2::ASVS4-REQ-V14.1.2` e `ssdf_sp800_218_v1_1::SSDF-PRACTICE-PO.5`, mais o suporte already-evidenced de `asvs_v4_0_2::ASVS4-REQ-V14.2.3`. A leitura permanece **bounded** a diversificação de pipeline / ambiente de build; as âncoras de `ACO-SCBI` continuam em Cap. `04` e `05`, o suporte governativo continua em Cap. `14`, o scaffold de rastreabilidade continua em Cap. `02`, o Cap. `10` não entra porque o freeze mantém `0` rows executáveis ali, não se reabrem Cap. `08` ou `09`, e este capítulo não ganha autoridade autónoma de `ACO-SCBI`. -->

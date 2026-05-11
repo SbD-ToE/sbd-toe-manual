@@ -164,6 +164,7 @@ Requisitos que garantem que apenas dados bem formados e esperados são processad
 | VAL-005 | Validação antes do uso interno | ✔ | ✔ | ✔ | Dados são validados antes de uso em lógica de negócio ou persistência; não há caminhos não validados. |
 | VAL-006 | Mensagens de erro seguras na validação | ✔ | ✔ | ✔ | Erros de validação não expõem lógica interna nem dados sensíveis ao cliente. |
 | VAL-007 | Testes automáticos contra entradas maliciosas | - | ✔ | ✔ | Testes automatizados cobrem XSS, SQLi e outras injecções relevantes; resultados registados. |
+| VAL-008 | Codificação/escaping de output em renderização (anti-XSS) | ✔ | ✔ | ✔ | Output é codificado de forma contextual ao destino de renderização (HTML/atributo/JavaScript, queries via prepared statements, comandos shell, logs anti-injection); ausência de concatenação directa em superfícies sensíveis. |
 
 ---
 

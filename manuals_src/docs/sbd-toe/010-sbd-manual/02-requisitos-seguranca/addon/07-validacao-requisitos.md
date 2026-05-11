@@ -164,9 +164,12 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | VAL-002 | SEC-Lx-VAL-WLIST | L1+ | Tentar enviar valores fora da lista permitida. Confirmar rejeição e ausência de tratamento implícito. | Código com whitelist explícita. Testes com valores não previstos. |
 | VAL-003 | SEC-Lx-VAL-SCHEMA | L2+ | Enviar payloads malformados ou com campos em falta. Confirmar rejeição automática. | Rejeições consistentes. Testes de contrato. |
 | VAL-004 | SEC-Lx-VAL-SQLI | L1+ | Rever uso de prepared statements. Executar SAST e testes de injecção SQL. | Relatórios de scanner. Ausência de concatenação em queries. |
-| VAL-005 | SEC-Lx-VAL-XSS | L1+ | Testar output em campos renderizados no browser. Confirmar escaping correcto. | Testes com payloads XSS. Sanitização de output observável. |
+| VAL-005 | SEC-Lx-VAL-PREUSE | L1+ | Rastrear caminhos entre input layer e lógica de negócio/persistência. Confirmar que validação precede uso interno; identificar caminhos não validados. | Análise de fluxo de dados com pontos de validação evidenciados. Code review confirma ausência de caminhos não validados. |
 | VAL-006 | SEC-Lx-VAL-SAFE | L1+ | Forçar erro de validação. Confirmar que mensagem ao cliente não expõe lógica interna. | Mensagens de erro genéricas. Ausência de detalhe técnico no cliente. |
 | VAL-007 | SEC-Lx-VAL-AUTO | L2+ | Executar testes automatizados com payloads maliciosos (XSS, SQLi, path traversal). | Relatórios de execução. Cobertura de casos documentada. |
+| VAL-008 | SEC-Lx-VAL-XSS | L1+ | Testar output em superfícies renderizadas (HTML, atributo, JS, SQL via prepared statements, shell, logs). Confirmar encoding contextual correcto. | Testes com payloads XSS/SQLi/log injection. Encoding observável conforme contexto de renderização. |
+
+> Nota editorial: VAL-005 cobre validação **pré-uso** de dados (caminho input → lógica/persistência; anchor ACO-IVF-004); VAL-008 cobre **codificação de output** em renderização (anchor ACO-IVF-008). Os controlos são complementares — entrada e saída.
 
 ---
 

@@ -37,6 +37,7 @@ Este capítulo cobre:
 - Derivação explícita de requisitos e controlos a partir das ameaças identificadas
 - Rastreabilidade entre ameaça → requisito → mitigação → validação
 - Reutilização controlada de modelos em arquiteturas padronizadas
+- **Extensão a sistemas AI/ML** — sistemas com componentes de inteligência artificial (LLMs, modelos preditivos, RAG, agentes autónomos) requerem threat modeling estendido com ameaças adversariais específicas (model poisoning, prompt injection, data exfiltration, AI supply chain compromise) catalogadas em MITRE ATLAS e NIST AI 100-2; ver [Metodologias — §AI/ML](./addon/metodologias-e-ferramentas#ai-ml) e requisito [THR-008](./addon/catalogo-requisitos-threat-modeling)
 
 ---
 

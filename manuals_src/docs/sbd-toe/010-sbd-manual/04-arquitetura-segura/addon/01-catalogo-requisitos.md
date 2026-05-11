@@ -55,6 +55,7 @@ Requisitos que garantem que o sistema é concebido, documentado e revisto com co
 | ARC-011 | Segmentação lógica e física entre ambientes | - | - | ✔ | Evidência de segregação de rede, permissões e identidade entre dev, staging e prod; documentada e verificável. |
 | ARC-012 | Critérios formais de aprovação para aplicações de risco elevado | - | - | ✔ | Checklist formal de aprovação preenchido e assinado por responsável de segurança; registo de aprovação anterior ao deploy em produção. |
 | ARC-013 | Validação automática de topologia em CI/CD ou como código | - | - | ✔ | Job de CI com output de validação de topologia (ex: Cartography, diagramas-como-código, checkov para topologia); logs de execução disponíveis. |
+| ARC-014 | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | - | ✔ | ✔ | Sistemas que integram componentes AI/ML (LLMs, modelos preditivos, RAG, agentes autónomos) têm padrões arquitetónicos dedicados: trust boundaries explícitas entre training data / model artifacts / inference endpoints / tool invocations agenticas; controlos de input sanitization e output filtering específicos para prompt injection directa e indirecta (LLM01-2025, `AML.T0051.001`); rate limiting e isolamento de chamadas a LLM; aprovação de tool invocations agenticas com escopo limitado (`AML.T0086`); proveniência de modelos e datasets documentada (`AML.T0010`, LLM03-2025); arquitectura considera scenarios de model theft (ML05-2023) e training data poisoning (`AML.T0020`); zonas de confiança incluem componentes AI como participantes distintos (não como bibliotecas opacas). |
 
 ---
 
@@ -65,6 +66,7 @@ Requisitos que garantem que o sistema é concebido, documentado e revisto com co
 - **ARC-009**: Define-se "alteração significativa" como qualquer mudança que afecte fronteiras de confiança, fluxos de dados críticos, exposição externa ou decisões de isolamento documentadas.
 - **ARC-011**: Aplica-se tanto a isolamento de rede (VLANs, namespaces, peering policies) como a isolamento de identidade (IAM policies, service accounts distintas, sem cross-env credentials).
 - **ARC-013**: Ferramentas de exemplo: validação de diagramas `.drawio` como código, Cartography para análise de grafo de infra, ou verificações de topologia em pipelines Terraform/Pulumi.
+- **ARC-014**: Componentes AI/ML introduzem três classes de trust boundaries que não existem em arquitecturas tradicionais — (1) **training-time boundary** entre datasets externos e pipeline de treino (alvo de data poisoning); (2) **inference-time boundary** entre input do utilizador e contexto do modelo (alvo de prompt injection directa e indirecta); (3) **agentic boundary** entre output do modelo e tool invocations executadas (alvo de exfiltration via AI agent tools, `AML.T0086`). A arquitectura deve marcar estas boundaries explicitamente em DFDs e definir controlos de fronteira proporcionais ao risco. A análise de threat modeling associada usa MITRE ATLAS como catálogo complementar a STRIDE (ver Cap. 03 — [Metodologias AI/ML](../../03-threat-modeling/addon/metodologias-e-ferramentas#ai-ml)).
 
 ---
 

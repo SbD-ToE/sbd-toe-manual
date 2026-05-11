@@ -48,6 +48,8 @@ Estes componentes **não são tratados como exceções**, mas como **elementos a
 
 Este enquadramento aplica-se independentemente da tecnologia concreta utilizada. O foco do capítulo mantém-se na **governação arquitetural do risco**, assegurando que decisões não determinísticas permanecem controláveis, auditáveis e proporcionais ao nível de criticidade da aplicação.
 
+A operacionalização deste enquadramento para sistemas com componentes AI/ML — LLMs, modelos preditivos, RAG, agentes autónomos — está definida em [Recomendações Avançadas — §AI/ML](./recomendacoes-avancadas#ai-ml) e no requisito [ARC-014](./addon/catalogo-requisitos#arc-014). Inclui trust boundaries específicas (training-time / inference-time / agentic), controlos arquitectónicos contra prompt injection (LLM01-2025), e isolamento de tool invocations agenticas (`AML.T0086`).
+
 ---
 
 ## 🧪 2. Prescrição prática: o quê, quem, como, quando, porquê e para quê

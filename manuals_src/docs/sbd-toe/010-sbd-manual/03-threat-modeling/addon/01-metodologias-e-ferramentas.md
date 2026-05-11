@@ -21,13 +21,14 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ### ✅ Comparação de metodologias
 
-| Modelo      | Foco Principal             | Quando usar                                      | Complexidade | Output típico                          |
-| ----------- | -------------------------- | ------------------------------------------------ | ------------ | -------------------------------------- |
-| **STRIDE**  | Ameaças técnicas           | Qualquer aplicação exposta ou com lógica crítica | Média        | Lista de ameaças por componente        |
-| **LINDDUN** | Ameaças à privacidade      | Sistemas com dados pessoais, RGPD, consentimento | Média        | Avaliação de privacidade por fluxo     |
-| **PASTA**   | Modelação baseada em risco | Sistemas regulados, críticos, exigência formal   | Alta         | Ameaças mapeadas para risco e controlo |
+| Modelo          | Foco Principal              | Quando usar                                      | Complexidade | Output típico                          |
+| --------------- | --------------------------- | ------------------------------------------------ | ------------ | -------------------------------------- |
+| **STRIDE**      | Ameaças técnicas            | Qualquer aplicação exposta ou com lógica crítica | Média        | Lista de ameaças por componente        |
+| **LINDDUN**     | Ameaças à privacidade       | Sistemas com dados pessoais, RGPD, consentimento | Média        | Avaliação de privacidade por fluxo     |
+| **PASTA**       | Modelação baseada em risco  | Sistemas regulados, críticos, exigência formal   | Alta         | Ameaças mapeadas para risco e controlo |
+| **MITRE ATLAS** | Ameaças adversariais a AI/ML | Sistemas com componentes ML/LLM/agentic         | Média        | Mapping tactics/techniques específicas AI |
 
-> 💡 STRIDE é versátil e o mais amplamente usado. LINDDUN complementa com foco em privacidade. PASTA é adequado para equipas maduras ou contextos regulatórios.
+> 💡 STRIDE é versátil e o mais amplamente usado. LINDDUN complementa com foco em privacidade. PASTA é adequado para equipas maduras ou contextos regulatórios. MITRE ATLAS é mandatório como complemento (não substituto) em sistemas com componentes AI/ML — ver [§AI/ML](#ai-ml).
 
 ---
 
@@ -36,6 +37,7 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 - **STRIDE**: ideal como base para qualquer aplicação com interface exposta ou lógica sensível.
 - **LINDDUN**: aplicar quando há dados pessoais, preocupações de privacidade ou requisitos legais (ex: RGPD).
 - **PASTA**: usar em sistemas com requisitos regulatórios (ex: PCI-DSS, NIS2), ou onde se exige rastreio formal entre risco, ameaça e controlo.
+- **MITRE ATLAS**: aplicar como complemento (não substituto) quando o sistema integra componentes AI/ML — modelos preditivos, LLMs em interface conversacional, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation. Introduz tactics/techniques específicas de ataque a AI systems que STRIDE não cobre nativamente.
 
 ---
 
@@ -89,6 +91,43 @@ Sugestão de estrutura para manter os modelos reutilizáveis e versionados:
 ```
 
 Sempre que possível, os requisitos derivados das ameaças devem ser rastreáveis ao catálogo definido no Capítulo 2 - Requisitos de Segurança.
+
+---
+
+## 🤖 Threat modeling para sistemas AI/ML {#ai-ml}
+
+Sistemas que incorporam componentes de inteligência artificial — modelos preditivos, LLMs em interface conversacional, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation — introduzem **superfícies de ataque qualitativamente distintas** das aplicações tradicionais. As ameaças adversariais a estes componentes não se reduzem ao STRIDE clássico: alvos como training data, model weights e prompt context, e mecanismos como adversarial examples, prompt injection (directa e indirecta) ou data poisoning, exigem framing dedicado.
+
+### Catálogos de referência
+
+| Catálogo | Foco | Quando consultar |
+|---|---|---|
+| **MITRE ATLAS** (Adversarial Threat Landscape for AI Systems) | Tactics/techniques específicas de ataque a AI systems, em formato análogo a MITRE ATT&CK | Identificação inicial e cobertura sistemática de ameaças adversariais |
+| **NIST AI 100-2 e2025** — Adversarial Machine Learning Taxonomy | Taxonomia formal: model poisoning, evasion, availability, integrity, privacy attacks por capacidade do atacante | Classificação rigorosa de attack vectors; mapping para risk register |
+| **NIST AI RMF 1.0** | Risk Management Framework para AI: GOVERN / MAP / MEASURE / MANAGE | Estruturação de risco AI ao nível organizacional |
+| **OWASP LLM Top 10 (2025)** | Top-10 vulnerabilidades em aplicações LLM (prompt injection, sensitive information disclosure, supply chain, etc.) | Triagem rápida em aplicações com LLMs |
+| **OWASP ML Top 10 (2023)** | Top-10 vulnerabilidades em aplicações ML (input manipulation, model theft, model poisoning, etc.) | Triagem rápida em aplicações com modelos preditivos |
+
+### Adversarial threats catalog primer (MITRE ATLAS)
+
+MITRE ATLAS organiza ameaças adversariais a AI systems em **tactics** (objectivos do atacante: Reconnaissance, Resource Development, Initial Access, AI Model Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Collection, AI Attack Staging, Command & Control, Exfiltration, Impact) e **techniques** (procedimentos concretos para cumprir cada tactic). Exemplos relevantes para threat modeling de aplicações:
+
+- **Prompt Injection** (`AML.T0051.001` Indirect / `AML.T0093` via Public-Facing App) — adversário injecta prompts via canais de dados ingeridos pelo LLM (websites, databases, ficheiros) para manipular comportamento do modelo
+- **AI Model Manipulation** (`AML.T0018` Manipulate AI Model / `AML.T0018.000` Poison AI Model) — modificação directa de pesos ou arquitectura do modelo
+- **Training Data Poisoning** (`AML.T0019` Publish Poisoned Datasets / `AML.T0020` Poison Training Data) — corromper dados de treino para induzir comportamento malicioso ou degradar precisão
+- **AI Supply Chain Compromise** (`AML.T0109` AI Supply Chain Rug Pull / `AML.T0110` AI Agent Tool Poisoning) — distribuir artefactos AI maliciosos via canais legítimos (model registries, MCP tools)
+- **Exfiltration via AI Agent Tool Invocation** (`AML.T0086`) — usar capacidades de write do agente AI para exfiltrar dados
+
+Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos navegáveis para análise técnica; cada um corresponde a um item rastreável no [Capítulo 25 — Rastreabilidade](../canon/25-rastreabilidade) deste capítulo.
+
+### Boas práticas para threat modeling AI/ML
+
+- **Aplicar STRIDE ou LINDDUN como baseline**; adicionar análise ATLAS-driven para componentes AI/ML específicos — não substituir, complementar.
+- **Identificar trust boundaries adicionais**: training data → modelo (training-time boundary), prompt input → modelo (inference-time boundary), modelo → tool invocations (agentic boundary), modelo → output rendering (output boundary).
+- **Mapear adversary capabilities** via NIST AI 100-2 (model access: black-box / grey-box / white-box; query access; training data control) antes de seleccionar mitigações.
+- **Documentar dependências AI específicas** no SBOM (modelo base, datasets, MCP tools, embedded prompts) — ver [Cap. 5 — Dependências e SBOM](../../05-dependencias-sbom-sca/intro) para framing supply chain AI.
+
+> A extensão MITRE ATLAS não substitui a análise STRIDE — alguns adversários combinam técnicas AI-specific com ataques clássicos (e.g., exfiltração tradicional via prompt injection-induced behavior). O threat model deve cobrir ambas as superfícies coerentemente.
 
 ---
 

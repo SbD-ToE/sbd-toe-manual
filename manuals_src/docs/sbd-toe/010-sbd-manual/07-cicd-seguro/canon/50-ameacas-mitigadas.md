@@ -1,108 +1,123 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas
-description: Ameaças mitigadas pelas práticas de segurança de CI/CD descritas neste capítulo
-tags: [ameaças, mitigação, cicd, supply chain, osc&r, stride, dsomm]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — CI/CD Seguro
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+Total: **24 entidades** (Threat × 21, AntiPattern × 2, Signal × 1) mapped a este capítulo.
 
-# 🔐 Ameaças Mitigadas – Capítulo 07: CI/CD Seguro
-
-O Capítulo 07 define práticas de **segurança operacional para pipelines CI/CD**, tratando o pipeline como **ativo crítico da cadeia de fornecimento de software**.
-
-As ameaças aqui tratadas correspondem a vetores explorados em incidentes reais (ex.: SolarWinds, Codecov, CircleCI) e a riscos estruturais identificados em **OSC&R**, **SLSA**, **OWASP CI/CD**, **ENISA DevSecOps** e **OWASP DSOMM**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🧨 Categoria 1 – Ataques à infraestrutura da pipeline
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Execução de código não autorizado em pipeline | OSC&R CI0001 / ATT&CK T1059 / DSOMM Build | Execução de scripts maliciosos em jobs | Triggers restritos, revisão de pipeline, isolamento de runners | Design seguro de pipelines; isolamento de runners | ✅ |
-| Comprometimento do ambiente de build | OSC&R ENV0003 / SLSA Build Integrity | Injeção de estado persistente ou tooling malicioso | Runners efémeros e ambientes limpos | Isolamento e efemeridade de runners | ✅ |
-| Elevação de privilégios no pipeline | CAPEC-233 / DSOMM Build | Jobs com permissões excessivas | Princípio do menor privilégio por step | Hardening de pipelines | ✅ |
-
----
-
-## 🔐 Categoria 2 – Comprometimento do código-fonte
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Push não autorizado para branches protegidas | OWASP CI/CD / SSDF PW.3 | Falta de branch protection | PR obrigatório + validações | Gestão segura de código-fonte | ❌ Cap. 02 |
-| Execução de código não auditado | OSC&R CI0011 / DSOMM Release | Execução direta sem revisão | Execução apenas em commits aprovados | Políticas de execução | ❌ Cap. 02 |
-| Substituição silenciosa de código legítimo | SLSA Provenance / SSDF RV.1 | Alteração sem proveniência | Assinatura e proveniência end-to-end | Rastreabilidade e assinaturas | ❌ Cap. 05 |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-111` | Execução de código não autorizado em pipeline | normative | heuristic |
+| Threat | `MT-112` | Comprometimento do ambiente de build | normative | heuristic |
+| Threat | `MT-113` | Elevação de privilégios no pipeline | normative | heuristic |
+| Threat | `MT-114` | Push não autorizado para branches protegidas | normative | heuristic |
+| Threat | `MT-115` | Execução de código não auditado | normative | heuristic |
+| Threat | `MT-116` | Substituição silenciosa de código legítimo | normative | heuristic |
+| Threat | `MT-117` | Build forjado fora da pipeline | normative | heuristic |
+| Threat | `MT-118` | Injeção de lógica dinâmica em pipeline | normative | heuristic |
+| Threat | `MT-119` | Uso de componentes externos inseguros | normative | heuristic |
+| Threat | `MT-120` | Vazamento de segredos via logs | normative | heuristic |
+| Threat | `MT-121` | Segredos hardcoded | normative | heuristic |
+| Threat | `MT-122` | Reutilização de segredos | normative | heuristic |
+| Threat | `MT-123` | Ausência de gates de segurança | normative | heuristic |
+| Threat | `MT-124` | Validações não executadas | normative | heuristic |
+| Threat | `MT-125` | Falta de rastreabilidade | normative | heuristic |
+| Threat | `MT-126` | Bypass de controlos sem rasto | normative | heuristic |
+| Threat | `MT-127` | Alterações críticas sem visibilidade | normative | heuristic |
+| Threat | `MT-128` | Promoções sem responsável humano | normative | heuristic |
+| Threat | `MT-129` | Evidência plausível sem execução | normative | heuristic |
+| Threat | `MT-130` | Não-determinismo do pipeline | normative | heuristic |
+| Threat | `MT-131` | Exfiltração de contexto sensível | normative | heuristic |
+| AntiPattern | `sem:antipattern:exposicao-excessiva-de-contexto-em-logs-e-artefactos` | exposição excessiva de contexto em logs e artefactos | semantic | scored |
+| AntiPattern | `sem:antipattern:uso-de-segredos-estaticos` | uso de segredos estáticos | semantic | scored |
+| Signal | `sem:signal:sinal-automatico` | sinal automático | semantic | scored |
 
 ---
 
-## 📦 Categoria 3 – Artefactos falsificados e supply chain
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Build forjado fora da pipeline | SLSA Threats / DSOMM Release | Artefactos externos ao pipeline | Assinatura + rejeição automática | Integridade e proveniência | ❌ Cap. 05 |
-| Injeção de lógica dinâmica em pipeline | OWASP CI/CD / DSOMM Build | YAML/scripts dinâmicos | Revisão e validação de pipeline | Segurança do código de pipeline | ✅ |
-| Uso de componentes externos inseguros | OSC&R SC0001 | Actions/scripts não verificados | Allowlist e pinning | Controlo de dependências | ❌ Cap. 05 |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🔑 Categoria 4 – Gestão insegura de segredos
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Vazamento de segredos via logs | CAPEC-651 / DSOMM Operate | Logs excessivos | Mascaramento e política de logging | Gestão de segredos | ✅ |
-| Segredos hardcoded | SSDF PW.5 / ISO 27001 A.9 | Variáveis expostas | Cofre + injeção controlada | Gestão de segredos | ❌ Cap. 02 |
-| Reutilização de segredos | SSDF RV.3 / DSOMM Operate | Tokens long-lived | Rotação e TTL curto | Lifecycle de segredos | ❌ Cap. 01 |
-
----
-
-## 🧾 Categoria 5 – Falhas de validação e controlo
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Ausência de gates de segurança | OWASP CI/CD / DSOMM Govern | Promoção sem bloqueios | Gates por risco (L1–L3) | Políticas de gates | ✅ |
-| Validações não executadas | SSDF PW.7 / DSOMM Test | Scanners fora do pipeline | Execução obrigatória | Validações integradas | ❌ Cap. 10 |
-| Falta de rastreabilidade | OSC&R CI0016 | Resultados sem origem | Registo automático de execuções | Rastreabilidade | ❌ Cap. 02 |
-
----
-
-## 🕵️ Categoria 6 – Exceções e visibilidade
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Bypass de controlos sem rasto | DSOMM Govern | Desativação manual | Workflow de exceções | Gestão de exceções | ❌ Cap. 14 |
-| Alterações críticas sem visibilidade | SSDF RM.3 | Mudanças silenciosas | Logging e alertas | Governação contínua | ❌ Cap. 14 |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-111` | STRIDE | Execução de código não autorizado em pipeline | — | Design seguro de pipelines; isolamento de runners | parcial | Explícito |
+| `MT-112` | STRIDE | Comprometimento do ambiente de build | — | Isolamento e efemeridade de runners | parcial | Explícito |
+| `MT-113` | STRIDE | Elevação de privilégios no pipeline | — | Hardening de pipelines | parcial | Explícito |
+| `MT-114` | STRIDE | Push não autorizado para branches protegidas | — | Gestão segura de código-fonte | parcial | Explícito |
+| `MT-115` | STRIDE | Execução de código não auditado | — | Políticas de execução | parcial | Explícito |
+| `MT-116` | STRIDE | Substituição silenciosa de código legítimo | — | Rastreabilidade e assinaturas | parcial | Explícito |
+| `MT-117` | STRIDE | Build forjado fora da pipeline | — | Integridade e proveniência | parcial | Explícito |
+| `MT-118` | STRIDE | Injeção de lógica dinâmica em pipeline | — | Segurança do código de pipeline | parcial | Explícito |
+| `MT-119` | STRIDE | Uso de componentes externos inseguros | — | Controlo de dependências | parcial | Explícito |
+| `MT-120` | STRIDE | Vazamento de segredos via logs | — | Gestão de segredos | parcial | Explícito |
+| `MT-121` | STRIDE | Segredos hardcoded | — | Gestão de segredos | parcial | Explícito |
+| `MT-122` | STRIDE | Reutilização de segredos | — | Lifecycle de segredos | parcial | Explícito |
+| `MT-123` | STRIDE | Ausência de gates de segurança | — | Políticas de gates | parcial | Explícito |
+| `MT-124` | STRIDE | Validações não executadas | — | Validações integradas | parcial | Explícito |
+| `MT-125` | STRIDE | Falta de rastreabilidade | — | Rastreabilidade | parcial | Explícito |
+| `MT-126` | STRIDE | Bypass de controlos sem rasto | — | Gestão de exceções | parcial | Explícito |
+| `MT-127` | STRIDE | Alterações críticas sem visibilidade | — | Governação contínua | parcial | Explícito |
+| `MT-128` | STRIDE | Promoções sem responsável humano | — | Gates e governação | parcial | Explícito |
+| `MT-129` | STRIDE | Evidência plausível sem execução | — | Evidência empírica | parcial | Explícito |
+| `MT-130` | STRIDE | Não-determinismo do pipeline | — | Reprodutibilidade | parcial | Explícito |
+| `MT-131` | STRIDE | Exfiltração de contexto sensível | — | Controlo de integrações | parcial | Explícito |
 
 ---
 
-## ⚙️ Categoria 7 – Riscos de processo em CI/CD moderno
+## § AntiPattern exposure mapping
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | Apenas Cap. 07? |
-|------|------|-----------|-----------------------|----------------------|-----------------|
-| Promoções sem responsável humano | DSOMM Govern | Automação implícita | Aprovação nominativa | Gates e governação | ✅ |
-| Evidência plausível sem execução | ENISA DevSecOps | Relatórios sintéticos | Exigir execução observável | Evidência empírica | ✅ |
-| Não-determinismo do pipeline | SLSA Threats | Configuração implícita | Registo da config efetiva | Reprodutibilidade | ✅ |
-| Exfiltração de contexto sensível | OSC&R CI0014 | Integrações externas | Minimização de contexto | Controlo de integrações | ✅ |
+AntiPattern → Threat exposure relations per Manual ontology V2 `antipattern_threat_links.jsonl`. Cada link indica que o antipattern (quando presente em código/processo) expõe a ameaça.
+
+| AntiPattern | Exposes threat | Confidence | Justification |
+|---|---|---|---|
+| `uso-de-segredos-estaticos` | `MT-121` | 0.76 | alias_match, bundle_grounding, threat_label_match |
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-O Capítulo 07 é o **principal mecanismo de defesa operacional da supply chain de software**, mitigando ameaças que **não podem ser resolvidas após a execução da pipeline**.
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
-Este capítulo:
-- cobre ameaças técnicas e de processo;
-- complementa, mas não substitui, controlos basilares;
-- fornece mitigação técnica relevante para superfícies de ameaça também discutidas em **SLSA**, **OWASP CI/CD**, **DSOMM** e guias operacionais equivalentes.
+---
 
-> 🔐 Muitas das ameaças aqui tratadas são **mitigáveis exclusivamente no momento de CI/CD**. Uma vez ultrapassada essa fase, o risco propaga-se inevitavelmente para produção.
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

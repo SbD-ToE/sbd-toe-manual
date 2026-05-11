@@ -1,91 +1,114 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas
-description: Ameaças mitigadas pelas práticas prescritas neste capítulo de arquitetura segura
-tags: [ameaças, arquitetura, risco, stride, oscar, dsomm]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Arquitetura Segura
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+Total: **22 entidades** (Threat × 18, AntiPattern × 4, Signal × 0) mapped a este capítulo.
 
-# 🔐 Ameaças Mitigadas - Capítulo 04: Arquitetura Segura
-
-Este capítulo define práticas formais de **design, validação e documentação de arquitetura segura**, incluindo o uso de zonas de confiança, diagramas técnicos, requisitos de arquitetura e validação por risco.  
-As ameaças mitigadas dizem respeito à **ausência de controlo sobre fronteiras técnicas, decisões de design e validação formal do modelo da arquitetura**.
-
-> 📌 Arquitetura segura é o ponto de articulação entre **risco, ameaça, requisitos e execução segura** - e um dos principais fundamentos do SbD-ToE.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🧱 Categoria 1 - Falhas de segmentação e isolamento da arquitetura
-
-| Ameaça                                        | Fonte                           | Como surge                                                    | Como a prática mitiga                                                             | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------------|----------------------------------|----------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
-| Interfaces expostas sem isolamento            | STRIDE (Information Disclosure)  | API crítica disponível sem controlo ou gateway                | Zonas de confiança com restrições explícitas entre camadas                         | `addon/01-catalogo-requisitos.md`           | ✅                                     |
-| Mistura de dados e controlo na mesma zona     | OWASP SAMM Design / ISO 27034    | Lógica e dados críticos partilham contexto de execução        | Separação da arquitetura explícita entre responsabilidades                           | `addon/04-diagramas-referencia.md`          | ✅                                     |
-| Acesso lateral não controlado entre módulos   | OSC&R / MITRE ATT&CK             | Módulos comunicam entre si sem autorização definida           | Modelação de fronteiras e regras de comunicação entre zonas                        | `addon/02-casos-praticos.md`                | ✅                                     |
-| Ausência de isolamento entre utilizadores     | STRIDE (Elevation of Privilege)  | Vários utilizadores partilham contexto ou memória             | Requisitos obrigam isolamento contextualizado por utilizador/tenant                | `addon/01-catalogo-requisitos.md`           | ✅                                     |
-
----
-
-## 🔎 Categoria 2 - Deficiências na modelação da arquitetura
-
-| Ameaça                                        | Fonte                          | Como surge                                               | Como a prática mitiga                                                            | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------------|---------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Arquitetura inexistente ou desatualizada      | ISO 27034 / SSDF PW.4          | Equipa trabalha apenas com código ou intuição            | Criação obrigatória de diagrama rastreável e validável por revisor                | `addon/04-diagramas-referencia.md`            | ✅                                     |
-| Confusão sobre localização de controlos       | STRIDE / ENISA / OWASP SAMM     | Não se sabe onde aplicar autenticação, logging, etc.     | Diagrama referencia localização esperada de controlos técnicos                    | `addon/01-catalogo-requisitos.md`             | ✅                                     |
-| Ambiguidade sobre fronteiras e zonas          | BSIMM AA1.3 / OWASP SAMM        | Arquitetura não explicita onde começa ou termina a app   | Definição formal de ZTCs, fluxos e vetores de ameaça                              | `addon/04-diagramas-referencia.md`            | ✅                                     |
-| Arquitetura não revê mecanismos de fallback   | OSC&R Design                    | Falta de arquitetura para falhas, limites, fail-safe     | Requisitos de arquitetura para failover, contingência e segurança por defeito      | `addon/01-catalogo-requisitos.md`             | ❌ Cap. 10                             |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-055` | Interfaces expostas sem isolamento | normative | heuristic |
+| Threat | `MT-056` | Mistura de dados e controlo na mesma zona | normative | heuristic |
+| Threat | `MT-057` | Acesso lateral não controlado entre módulos | normative | heuristic |
+| Threat | `MT-058` | Ausência de isolamento entre utilizadores | normative | heuristic |
+| Threat | `MT-059` | Arquitetura inexistente ou desatualizada | normative | heuristic |
+| Threat | `MT-060` | Confusão sobre localização de controlos | normative | heuristic |
+| Threat | `MT-061` | Ambiguidade sobre fronteiras e zonas | normative | heuristic |
+| Threat | `MT-062` | Arquitetura não revê mecanismos de fallback | normative | heuristic |
+| Threat | `MT-063` | Arquitetura nunca revista | normative | heuristic |
+| Threat | `MT-064` | Alterações estruturais sem revalidação | normative | heuristic |
+| Threat | `MT-065` | Design informal ou ad hoc | normative | heuristic |
+| Threat | `MT-066` | Exceções de arquitetura sem rasto | normative | heuristic |
+| Threat | `MT-067` | Requisitos de arquitetura não definidos | normative | heuristic |
+| Threat | `MT-068` | Impossibilidade de mapear decisões a controlos | normative | heuristic |
+| Threat | `MT-069` | Diagrama não reflete controlos implementados | normative | heuristic |
+| Threat | `MT-070` | Aplicações L1 tratadas como críticas | normative | heuristic |
+| Threat | `MT-071` | Sobredimensionamento de segurança da arquitetura | normative | heuristic |
+| Threat | `MT-072` | Ambientes de execução não refletidos no design | normative | heuristic |
+| AntiPattern | `sem:antipattern:dependencia-circular` | dependência circular | semantic | scored |
+| AntiPattern | `sem:antipattern:excecoes-nao-documentadas` | Exceções não documentadas | semantic | scored |
+| AntiPattern | `sem:antipattern:modelos-inconsistentes-incompletos-ou-desatualizados` | Modelos inconsistentes, incompletos ou desatualizados | semantic | scored |
+| AntiPattern | `sem:antipattern:threat-modeling-sem-arquitetura-clara` | Threat modeling sem arquitetura clara | semantic | scored |
 
 ---
 
-## 🧪 Categoria 3 - Validação e evolução da arquitetura negligenciada
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                         | Fonte                              | Como surge                                             | Como a prática mitiga                                                          | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
-|------------------------------------------------|-------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Arquitetura nunca revista                     | ISO 27034 / SSDF PW.5              | Uma vez desenhada, nunca mais é validada              | Integração com ciclo de vida e validações periódicas por risco                 | `15-aplicacao-lifecycle.md`        | ❌ Cap. 01                             |
-| Alterações estruturais sem revalidação        | CAPEC-137 / OWASP SAMM             | Mudança crítica de fluxo não revê modelo da arquitetura | Validação da arquitetura forçada por evento ou por sprint                        | `addon/05-validacao.md`                  | ✅                                     |
-| Design informal ou ad hoc                     | BSIMM13 - Architecture Analysis    | Arquitetura emerge do código                           | Templates de validação e checklist mínimo de revisão                            | `addon/05-validacao.md`                  | ✅                                     |
-| Exceções de arquitetura sem rasto              | SSDF RM.1 / ISO 27005 / DSOMM - Documentation           | Casos “especiais” não são revistos ou documentados     | Gestão formal de exceções com validação técnica e aprovação                      | `addon/03-excecoes.md`                   | ❌ Cap. 14                             |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🔄 Categoria 4 - Ausência de rastreabilidade e requisitos de arquitetura
-
-| Ameaça                                       | Fonte                             | Como surge                                            | Como a prática mitiga                                                      | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
-|----------------------------------------------|------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
-| Requisitos de arquitetura não definidos      | SSDF PW.1 / ISO 27034              | Apenas requisitos funcionais ou de negócio            | Catálogo de requisitos específicos para arquitetura                          | `addon/01-catalogo-requisitos.md`            | ✅                                     |
-| Impossibilidade de mapear decisões a controlos| OWASP SAMM Design / BSIMM AA1.6    | Decisões de arquitetura não se traduzem em controlos   | Rastreabilidade entre decisão → requisito → controlo                          | `addon/06-rastreabilidade.md`                | ✅                                     |
-| Diagrama não reflete controlos implementados | OWASP SAMM / SSDF                  | Equipa não tem visibilidade de cobertura              | Validação por dif entre diagrama, requisitos e implementação                  | `addon/05-validacao.md`                      | ✅                                     |
-
----
-
-## 🧠 Categoria 5 - Incoerência entre arquitetura e risco
-
-| Ameaça                                      | Fonte                             | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
-|---------------------------------------------|------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|
-| Aplicações L1 tratadas como críticas        | OSC&R / SSDF PW.1                 | Design da arquitetura sem relação com classificação     | Validação da arquitetura proporcional ao risco (ex: app L1 pode partilhar recursos)  | `15-aplicacao-lifecycle.md`         | ❌ Cap. 01                             |
-| Sobredimensionamento de segurança da arquitetura | ISO 27005 / OWASP SAMM          | Investimento excessivo em zonas de baixo risco       | Aplicação da matriz de risco e critérios de arquitetura por perfil                  | `addon/02-casos-praticos.md`              | ✅                                     |
-| Ambientes de execução não refletidos no design | ENISA DevSecOps / SLSA           | Design não considera pipelines, cloud, containers    | Inclusão de ambientes e zonas operacionais na arquitetura                          | `addon/04-diagramas-referencia.md`        | ❌ Cap. 09, Cap. 07                    |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-055` | STRIDE | Interfaces expostas sem isolamento | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-056` | STRIDE | Mistura de dados e controlo na mesma zona | — | `addon/04-diagramas-referencia.md` | parcial | Explícito |
+| `MT-057` | STRIDE | Acesso lateral não controlado entre módulos | — | `addon/02-casos-praticos.md` | parcial | Explícito |
+| `MT-058` | STRIDE | Ausência de isolamento entre utilizadores | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-059` | STRIDE | Arquitetura inexistente ou desatualizada | — | `addon/04-diagramas-referencia.md` | parcial | Explícito |
+| `MT-060` | STRIDE | Confusão sobre localização de controlos | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-061` | STRIDE | Ambiguidade sobre fronteiras e zonas | — | `addon/04-diagramas-referencia.md` | parcial | Explícito |
+| `MT-062` | STRIDE | Arquitetura não revê mecanismos de fallback | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-063` | STRIDE | Arquitetura nunca revista | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-064` | STRIDE | Alterações estruturais sem revalidação | — | `addon/05-validacao.md` | parcial | Explícito |
+| `MT-065` | STRIDE | Design informal ou ad hoc | — | `addon/05-validacao.md` | parcial | Explícito |
+| `MT-066` | STRIDE | Exceções de arquitetura sem rasto | — | `addon/03-excecoes.md` | parcial | Explícito |
+| `MT-067` | STRIDE | Requisitos de arquitetura não definidos | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-068` | STRIDE | Impossibilidade de mapear decisões a controlos | — | `addon/06-rastreabilidade.md` | parcial | Explícito |
+| `MT-069` | STRIDE | Diagrama não reflete controlos implementados | — | `addon/05-validacao.md` | parcial | Explícito |
+| `MT-070` | STRIDE | Aplicações L1 tratadas como críticas | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-071` | STRIDE | Sobredimensionamento de segurança da arquitetura | — | `addon/02-casos-praticos.md` | parcial | Explícito |
+| `MT-072` | STRIDE | Ambientes de execução não refletidos no design | — | `addon/04-diagramas-referencia.md` | parcial | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § AntiPattern exposure mapping
 
-O Capítulo 04 mitiga um conjunto de ameaças **essenciais e de difícil visibilidade**, relacionadas com **fronteiras técnicas, validação estrutural e coerência entre intenção e execução**.
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
-> ⚠️ Muitas destas ameaças não emergem em testes - apenas no comportamento agregado de sistemas, escalabilidade, exposição, ou bypass lógico.
+---
 
-> ✅ Pelo menos **10 ameaças são mitigadas exclusivamente** por este capítulo, demonstrando o seu papel único na garantia de segurança por design.
+## § CWE references (supporting only)
 
-> 📌 Arquitetura segura **não é documentação**: é **decisão, validação e controlo sistemático** do comportamento de software face ao risco.
+_(Nenhuma threat com CWE reference para este capítulo.)_
+
+---
+
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

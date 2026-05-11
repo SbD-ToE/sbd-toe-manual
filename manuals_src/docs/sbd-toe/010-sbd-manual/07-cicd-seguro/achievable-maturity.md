@@ -1,83 +1,95 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 07
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — CI/CD Seguro
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - CI/CD Seguro
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 07 do SbD-ToE - *CI/CD Seguro* - e os principais frameworks de segurança e maturidade:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-O capítulo define práticas para proteger pipelines CI/CD contra execução não autorizada, adulteração, perda de proveniência e outras ameaças à cadeia de fornecimento de software.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework         | Domínios Relevantes                              | Práticas ou Objetos Cobertos                                                  | Avaliação de Maturidade        |
-|------------------|---------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------|
-| OWASP SAMM v2.1  | Implementation → Build & Deployment Automation    | Segurança integrada no pipeline, segregação de ambientes                      | **2 / 3**                      |
-| OWASP DSOMM      | Build, Test, Release, Operate                     | Execução segura, validação de artefactos, assinaturas, rastreabilidade        | **3 / 4**                      |
-| SLSA v1.0        | Levels 1–3: Provenance, Policy, Isolation         | Proveniência, trusted builders, controlo de execução, hardening de pipelines  | **Nível 3 / 4**                |
-
----
-
-## 🧱 OWASP SAMM - Build & Deployment Automation
-
-| Nível | Descrição SAMM                                                  | Cobertura pelo Cap. 07                                  |
-|-------|------------------------------------------------------------------|----------------------------------------------------------|
-| 1     | Processos de build manuais e não auditáveis                     | ✅ Formalização mínima exigida                           |
-| 2     | Pipelines automatizadas com validações e autenticação           | ✅ Execução autenticada e validada                       |
-| 3     | Ambientes segregados com integração de controlos contínuos      | ❌ Parcial - depende de controlo externo à pipeline      |
-
-**🧮 Maturidade atingida: 2 / 3**
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:build` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:operate` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:release` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:test` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Execução segura, validação de artefactos, assinaturas, rastr | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:1` | OWASP SAMM | Build & Deployment Automation | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:2` | OWASP SAMM | Build & Deployment Automation | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:3` | OWASP SAMM | Build & Deployment Automation | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Segurança integrada no pipeline, segregação de ambientes | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:1` | SLSA | Provenance & CI/CD Control | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:2` | SLSA | Provenance & CI/CD Control | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:3` | SLSA | Provenance & CI/CD Control | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:4` | SLSA | Provenance & CI/CD Control | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Proveniência, trusted builders, controlo de execução, harden | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM - Build, Test, Release, Operate
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio  | Nível | Justificação técnica                                              |
-|----------|-------|-------------------------------------------------------------------|
-| Build    | 3 / 4 | Execução autenticada, trusted runners, proveniência               |
-| Test     | 3 / 4 | Validação e rastreabilidade contínua dos resultados               |
-| Release  | 3 / 4 | Assinatura e integridade do artefacto                             |
-| Operate  | 3 / 4 | Logs, auditoria e controlo de fluxo CI/CD                         |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
----
-
-## 🧱 SLSA - Provenance & CI/CD Control
-
-| Nível | Requisitos principais                                  | Cobertura pelo Cap. 07                              |
-|-------|---------------------------------------------------------|-----------------------------------------------------|
-| 1     | Build controlado e rastreável                           | ✅ Execução autenticada com logs                    |
-| 2     | Proveniência e controlo de configuração                 | ✅ Validação e assinatura de artefactos             |
-| 3     | Builds reprodutíveis e trusted builders                 | ✅ Trusted environments e runners                   |
-| 4     | Isolamento hermético e verificações externas            | ❌ Fora do âmbito do capítulo (ver Cap. 08 e 09)    |
-
-**🔐 Nível máximo suportado por este capítulo: SLSA 3 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Build, Test, Release, Operate | Execução autenticada, trusted runners, proveniência | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Build, Test, Release, Operate | Logs, auditoria e controlo de fluxo CI/CD | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Build, Test, Release, Operate | Assinatura e integridade do artefacto | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Build, Test, Release, Operate | Validação e rastreabilidade contínua dos resultados | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Execução segura, validação de artefactos, assinaturas, rastreabilidade | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Build & Deployment Automation | Formalização mínima exigida | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Build & Deployment Automation | Execução autenticada e validada | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Build & Deployment Automation | Parcial - depende de controlo externo à pipeline | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Segurança integrada no pipeline, segregação de ambientes | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Provenance & CI/CD Control | — | Execução autenticada com logs | `achievable-maturity.md` | Explícito |
+| Provenance & CI/CD Control | — | Validação e assinatura de artefactos | `achievable-maturity.md` | Explícito |
+| Provenance & CI/CD Control | — | Trusted environments e runners | `achievable-maturity.md` | Explícito |
+| Provenance & CI/CD Control | — | Fora do âmbito do capítulo (ver Cap. 08 e 09) | `achievable-maturity.md` | Explícito |
+| — | — | Proveniência, trusted builders, controlo de execução, hardening de pipelines | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

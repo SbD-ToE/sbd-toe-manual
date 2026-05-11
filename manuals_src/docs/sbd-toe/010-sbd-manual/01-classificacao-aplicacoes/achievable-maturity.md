@@ -1,80 +1,95 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 01
-tags: [canon, maturidade, SAMM, DSOMM]
----
+# Achievable Maturity — Classificação de Aplicações
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Classificação da Criticidade Aplicacional
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 01** do manual SbD-ToE e os requisitos de frameworks reconhecidas: **OWASP SAMM**, **OWASP DSOMM** e **SLSA**.
+Cinco secções:
 
-A prática de classificação da criticidade aplicacional é **fundacional para o modelo SbD-ToE**. Ela define **quando e com que intensidade os controlos de segurança devem ser aplicados**, suportando uma abordagem proporcional, rastreável e auditável.
-
----
-
-## 🎯 Como interpretar este mapeamento de maturidade
-
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
-
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework         | Domínios Relevantes                         | Práticas ou Objetos Cobertos                                  | Avaliação de Maturidade             |
-|------------------|----------------------------------------------|----------------------------------------------------------------|-------------------------------------|
-| OWASP SAMM v2.1  | Governance → Risk Management                 | Classificação de risco por eixos, integração no SDLC           | **2 / 3**                           |
-| OWASP DSOMM      | Risk, Security Requirements, Compliance      | Derivação de requisitos, rastreabilidade, decisão proporcional | **2 / 3** (média dos domínios)      |
-| SLSA v1.0        | Supply Chain Risk Awareness                  | Definição proporcional de requisitos à criticidade             | **Nível 1 / 4**                     |
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🧱 OWASP SAMM - Governance → Risk Management
+## § Manual ontology V2 — entities relevantes para maturity
 
-| Nível | Descrição SAMM                                                           | Cobertura pelo Cap. 01                  |
-|-------|--------------------------------------------------------------------------|------------------------------------------|
-| 1     | Realiza-se classificação básica dos riscos das aplicações                | ✅ Modelo de eixos aplicável             |
-| 2     | Integração com processos organizacionais e rastreabilidade               | ✅ Com suporte a versão e auditoria      |
-| 3     | Análise quantitativa e retroalimentação contínua                         | ❌ Fora do âmbito do capítulo            |
+Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-**🧮 Maturidade atingida: 2 / 3**
-
----
-
-## 🧱 OWASP DSOMM - Governance, Risk Management, Requirements
-
-| Domínio                  | Níveis cobertos | Justificação técnica                                                   |
-|--------------------------|----------------|------------------------------------------------------------------------|
-| Risk Management          | 2 / 3          | Modelo de classificação estruturado e aplicado sistematicamente       |
-| Security Requirements    | 2 / 3          | Permite derivação proporcional baseada em risco                       |
-| Compliance Mapping       | 2 / 3          | Rastreabilidade a frameworks de referência presente                    |
-| Governance & Metrics     | 1 / 3          | Não define KPIs quantitativos nem reporting formal                     |
-
-> A estrutura proposta é compatível com práticas DevSecOps guiadas por risco.
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:compliance-mapping` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:governance-metrics` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:risk-management` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:security-requirements` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Derivação de requisitos, rastreabilidade, decisão proporcion | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:1` | OWASP SAMM | Governance → Risk Management | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:2` | OWASP SAMM | Governance → Risk Management | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:3` | OWASP SAMM | Governance → Risk Management | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Classificação de risco por eixos, integração no SDLC | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:slsa:slsa-supply-chain-levels-for-software-artifacts:1` | SLSA | Supply Chain Levels for Software Artifacts | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:slsa:slsa-supply-chain-levels-for-software-artifacts:2` | SLSA | Supply Chain Levels for Software Artifacts | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:slsa:slsa-supply-chain-levels-for-software-artifacts:3` | SLSA | Supply Chain Levels for Software Artifacts | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:slsa:slsa-supply-chain-levels-for-software-artifacts:4` | SLSA | Supply Chain Levels for Software Artifacts | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Definição proporcional de requisitos à criticidade | external | derived |
 
 ---
 
-## 🧱 SLSA - Supply Chain Levels for Software Artifacts
+## § SAMM v2 / DSOMM maturity progression
 
-| Nível | Requisitos principais                   | Cobertura pelo Cap. 01         |
-|-------|------------------------------------------|--------------------------------|
-| 1     | Consciência de risco                     | ✅ Classificação por eixos      |
-| 2     | Proveniência do software                 | ❌ Fora do âmbito               |
-| 3     | Build controlado                         | ❌ Coberto noutros capítulos    |
-| 4     | Cadeia totalmente verificável            | ❌ Coberto noutros capítulos    |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
-**🔐 Nível máximo suportado por este capítulo: SLSA 1 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Governance, Risk Management, Requirements | Rastreabilidade a frameworks de referência presente | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Governance, Risk Management, Requirements | Não define KPIs quantitativos nem reporting formal | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Governance, Risk Management, Requirements | Modelo de classificação estruturado e aplicado sistematicamente | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Governance, Risk Management, Requirements | Permite derivação proporcional baseada em risco | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Derivação de requisitos, rastreabilidade, decisão proporcional | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance → Risk Management | Realiza-se classificação básica dos riscos das aplicações | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance → Risk Management | Integração com processos organizacionais e rastreabilidade | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance → Risk Management | Análise quantitativa e retroalimentação contínua | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Classificação de risco por eixos, integração no SDLC | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Supply Chain Levels for Software Artifacts | — | Classificação por eixos | `achievable-maturity.md` | Explícito |
+| Supply Chain Levels for Software Artifacts | — | Fora do âmbito | `achievable-maturity.md` | Explícito |
+| Supply Chain Levels for Software Artifacts | — | Coberto noutros capítulos | `achievable-maturity.md` | Explícito |
+| Supply Chain Levels for Software Artifacts | — | Coberto noutros capítulos | `achievable-maturity.md` | Explícito |
+| — | — | Definição proporcional de requisitos à criticidade | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

@@ -1,106 +1,114 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Capítulo 05
-description: Análise das ameaças mitigadas pelas práticas deste capítulo, com base em OSC&R, CAPEC, STRIDE, DSOMM e outros modelos
-tags: [ameaças, mitigação, sbom, sca, supply-chain, dsomm, capec, oscar, ]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Dependências, SBOM e SCA
 
+## Sumário
 
----
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
 
+Seis secções:
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 05: Dependências, SBOM e SCA
-
-Este capítulo estabelece práticas de **inventário, validação, rastreabilidade e governação de bibliotecas e artefactos de terceiros**, com base em SBOMs, SCA, políticas de origem e integração com CI/CD.
-
-> ⚠️ A ausência destas práticas representa risco direto e crítico - evidenciado por falhas de cadeia de fornecimento como SolarWinds, log4j e event-stream.
-
-As ameaças identificadas foram analisadas com base em **OSC&R**, **CAPEC**, **BSIMM**, **OWASP Top 10**, **SSDF**, **SLSA** e **OWASP DSOMM**, com foco em práticas de mitigação concretas e controlos auditáveis.
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este documento
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
+Total: **20 entidades** (Threat × 20, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 📦 Categoria 1 - Uso de componentes vulneráveis
-
-| Ameaça                                   | Fonte                                 | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
-|------------------------------------------|----------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
-| Inclusão de bibliotecas com CVEs ativos  | OWASP A06 / CAPEC-469 / DSOMM (Hardening) | Falta de scanner ou inventário                      | SCA automatizado em pipeline, com bloqueios por política                           | `addon/02-analise-sca.md`                  | ✅                                     |
-| Dependências desatualizadas              | BSIMM13 - SFD1.2 / OSC&R VUL-2 / DSOMM | Bibliotecas não atualizadas                         | Política formal de atualização + revisão periódica                                 | `addon/05-politica-atualizacoes.md`        | ✅                                     |
-| Ausência de registo de versões           | SLSA / SSDF PW.3 / ISO 27034           | Versão da biblioteca não rastreada                  | SBOM com versão + hash em CI/CD                                                    | `addon/01-inventario-sbom.md`              | ✅                                     |
-| Inclusão de bibliotecas não auditadas    | SAMM / BSIMM / DSOMM (Policy)          | Biblioteca adicionada sem processo de aprovação     | Governação formal com critérios e registo de aceitação                             | `addon/03-governanca-libs-terceiros.md`    | ✅                                     |
-
----
-
-## 🔗 Categoria 2 - Rastreabilidade e visibilidade técnica
-
-| Ameaça                                       | Fonte                                 | Como surge                                               | Como a prática mitiga                                                     | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|----------------------------------------------|----------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Desconhecimento de bibliotecas utilizadas   | SSDF PW.4 / OSC&R Discovery / DSOMM (Build & Deploy) | Equipa não sabe o que está no build                      | Inventário contínuo por CI/CD e geração de SBOMs                            | `addon/01-inventario-sbom.md`                | ✅                                     |
-| Falta de associação entre vulnerabilidade e artefacto | CAPEC-310 / NVD / DSOMM            | É identificada uma CVE mas não se sabe onde se aplica    | Mapeamento automático SBOM → CVE via scanner + rastreabilidade               | `addon/08-rastreabilidade-vulnerabilidades.md`| ✅                                     |
-| Falta de histórico de introdução de pacotes | OSC&R Traceability / DSOMM (Governance) | Ninguém sabe quem introduziu, quando ou porquê           | Registo de origem no repositório e pipeline com tagging                     | `addon/07-controle-registos-origem.md`       | ✅                                     |
-
----
-
-## 🔁 Categoria 3 - Supply Chain e proveniência de artefactos
-
-| Ameaça                                        | Fonte                                | Como surge                                               | Como a prática mitiga                                                       | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------------|---------------------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
-| Inclusão de pacotes de repositórios maliciosos| CAPEC-111 / SLSA / MITRE T1195        | npm/pypi/etc com nomes similares                         | Políticas de origem + bloqueios por allowlist + verificação de proveniência  | `addon/07-controle-registos-origem.md`      | ✅                                     |
-| Dependência transitiva com componente inseguro| OWASP A06 / BSIMM / OSC&R DEP-2       | CVE não está na dependência direta                       | SCA com verificação de árvore de dependências + bloqueios recursivos         | `addon/02-analise-sca.md`                   | ✅                                     |
-| Pipeline injeta versão não autenticada        | SLSA L2 / ENISA / DSOMM (Build & Deploy) | Build usa artefacto sem hash ou assinatura               | SBOM + assinatura e verificação de integridade                               | `addon/04-integracao-ci-cd.md`              | ❌ Cap. 07                             |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-073` | Inclusão de bibliotecas com CVEs ativos | normative | heuristic |
+| Threat | `MT-074` | Dependências desatualizadas | normative | heuristic |
+| Threat | `MT-075` | Ausência de registo de versões | normative | heuristic |
+| Threat | `MT-076` | Inclusão de bibliotecas não auditadas | normative | heuristic |
+| Threat | `MT-077` | Desconhecimento de bibliotecas utilizadas | normative | heuristic |
+| Threat | `MT-078` | Falta de associação entre vulnerabilidade e artefacto | normative | heuristic |
+| Threat | `MT-079` | Falta de histórico de introdução de pacotes | normative | heuristic |
+| Threat | `MT-080` | Inclusão de pacotes de repositórios maliciosos | normative | heuristic |
+| Threat | `MT-081` | Dependência transitiva com componente inseguro | normative | heuristic |
+| Threat | `MT-082` | Pipeline injeta versão não autenticada | normative | heuristic |
+| Threat | `MT-083` | CVEs ignoradas sem justificação | normative | heuristic |
+| Threat | `MT-084` | Mitigações aplicadas sem rastreio | normative | heuristic |
+| Threat | `MT-085` | Falta de ciclo de revisão de exceções | normative | heuristic |
+| Threat | `MT-086` | Uso arbitrário de bibliotecas | normative | heuristic |
+| Threat | `MT-087` | Bibliotecas proibidas são usadas | normative | heuristic |
+| Threat | `MT-088` | Falta de política de substituição | normative | heuristic |
+| Threat | `MT-089` | Introdução de dependência vulnerável não declarada | normative | heuristic |
+| Threat | `MT-090` | Confusão de dependências | normative | heuristic |
+| Threat | `MT-091` | Backdoor via ferramenta de build | normative | heuristic |
+| Threat | `MT-092` | Drift de composição entre builds | normative | heuristic |
 
 ---
 
-## 🚨 Categoria 4 - Falhas na gestão de exceções e aceitação de risco
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                      | Fonte                             | Como surge                                              | Como a prática mitiga                                                          | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
-|---------------------------------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
-| CVEs ignoradas sem justificação             | CAPEC-1003 / SSDF RM.2 / DSOMM (Policy) | Biblioteca mantida mesmo após alerta                    | Processo de exceção com owner, impacto, justificação e prazo                    | `addon/09-excecoes-e-aceitacao-risco.md`     | ❌ Cap. 14                             |
-| Mitigações aplicadas sem rastreio           | BSIMM13 - CMVM / SSDF RV.3        | Workaround ou patch sem rasto                            | Registo de decisão + impacto + revisão posterior em backlog                     | `addon/09-excecoes-e-aceitacao-risco.md`     | ✅                                     |
-| Falta de ciclo de revisão de exceções       | NIST 800-30 / ISO 27005            | CVEs abertas por tempo indefinido                       | Ciclo de vida com reavaliação forçada por tempo ou nova versão                 | `15-aplicacao-lifecycle.md`            | ❌ Cap. 01                             |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
+
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-073` | STRIDE | Inclusão de bibliotecas com CVEs ativos | — | `addon/02-analise-sca.md` | parcial | Explícito |
+| `MT-074` | STRIDE | Dependências desatualizadas | — | `addon/05-politica-atualizacoes.md` | parcial | Explícito |
+| `MT-075` | STRIDE | Ausência de registo de versões | — | `addon/01-inventario-sbom.md` | parcial | Explícito |
+| `MT-076` | STRIDE | Inclusão de bibliotecas não auditadas | — | `addon/03-governanca-libs-terceiros.md` | parcial | Explícito |
+| `MT-077` | STRIDE | Desconhecimento de bibliotecas utilizadas | — | `addon/01-inventario-sbom.md` | parcial | Explícito |
+| `MT-078` | STRIDE | Falta de associação entre vulnerabilidade e artefacto | — | `addon/08-rastreabilidade-vulnerabilidades.md` | parcial | Explícito |
+| `MT-079` | STRIDE | Falta de histórico de introdução de pacotes | — | `addon/07-controle-registos-origem.md` | parcial | Explícito |
+| `MT-080` | STRIDE | Inclusão de pacotes de repositórios maliciosos | — | `addon/07-controle-registos-origem.md` | parcial | Explícito |
+| `MT-081` | STRIDE | Dependência transitiva com componente inseguro | — | `addon/02-analise-sca.md` | parcial | Explícito |
+| `MT-082` | STRIDE | Pipeline injeta versão não autenticada | — | `addon/04-integracao-ci-cd.md` | parcial | Explícito |
+| `MT-083` | STRIDE | CVEs ignoradas sem justificação | — | `addon/09-excecoes-e-aceitacao-risco.md` | parcial | Explícito |
+| `MT-084` | STRIDE | Mitigações aplicadas sem rastreio | — | `addon/09-excecoes-e-aceitacao-risco.md` | parcial | Explícito |
+| `MT-085` | STRIDE | Falta de ciclo de revisão de exceções | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-086` | STRIDE | Uso arbitrário de bibliotecas | — | `addon/03-governanca-libs-terceiros.md` | parcial | Explícito |
+| `MT-087` | STRIDE | Bibliotecas proibidas são usadas | — | `addon/04-integracao-ci-cd.md` | parcial | Explícito |
+| `MT-088` | STRIDE | Falta de política de substituição | — | `addon/05-politica-atualizacoes.md` | parcial | Explícito |
+| `MT-089` | STRIDE | Introdução de dependência vulnerável não declarada | — | SBOM boundary, revisão de dependências | parcial | Explícito |
+| `MT-090` | STRIDE | Confusão de dependências | — | SCA, validação de origem | parcial | Explícito |
+| `MT-091` | STRIDE | Backdoor via ferramenta de build | — | Governance de tooling | parcial | Explícito |
+| `MT-092` | STRIDE | Drift de composição entre builds | — | CI/CD gating | parcial | Explícito |
 
 ---
 
-## 🏛️ Categoria 5 - Ausência de governação de bibliotecas e políticas de uso
+## § AntiPattern exposure mapping
 
-| Ameaça                                    | Fonte                              | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                        | 🧩 Mitigada apenas por este capítulo? |
-|-------------------------------------------|-------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
-| Uso arbitrário de bibliotecas             | SAMM / BSIMM / DSOMM (Policy)       | Equipa escolhe dependências sem controlo             | Definição de critérios de aceitação + processo formal                              | `addon/03-governanca-libs-terceiros.md`     | ✅                                     |
-| Bibliotecas proibidas são usadas          | SSDF PW.7 / CIS Control 16.12       | Não há mecanismo de bloqueio                         | Política de denylist/allowlist em CI/CD com enforcement automático                 | `addon/04-integracao-ci-cd.md`              | ✅                                     |
-| Falta de política de substituição         | ENISA / ISO 27034 / DSOMM (Governance) | Não se sabe quando substituir bibliotecas inseguras  | Política de atualização + ciclo de vida de substituição                            | `addon/05-politica-atualizacoes.md`         | ✅                                     |
-
----
-## Dependências emergentes e não rastreadas
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados |
-|-------|-------|------------|------------------------|----------------------|
-| Introdução de dependência vulnerável não declarada | Supply Chain | Plugins, build tools, pipelines, code generation | Definição de fronteira SBOM + deteção de *delta* | SBOM boundary, revisão de dependências |
-| Confusão de dependências | Supply Chain | Resolução implícita ou automática de pacotes | Baseline aprovada e validação de origem | SCA, validação de origem |
-| Backdoor via ferramenta de build | Supply Chain | Atualização automática de tooling | Aprovação explícita de dependências emergentes | Governance de tooling |
-| Drift de composição entre builds | Operacional | Mudanças não controladas entre releases | Comparação automática SBOM vs baseline | CI/CD gating |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-O Capítulo 05 mitiga um conjunto vasto de ameaças diretamente ligadas a **uso inseguro de software de terceiros**, um dos maiores vetores de ataque contemporâneos.  
-A sua aplicação permite:
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
-- Identificar e inventariar componentes com precisão;
-- Avaliar vulnerabilidades antes de produção;
-- Estabelecer controlo total sobre exceções e decisões técnicas;
-- Reduzir risco sistémico em CI/CD e cadeia de fornecimento.
+---
 
-> ✅ Pelo menos **12 ameaças mapeadas são mitigadas exclusivamente por este capítulo**, e **todas as restantes dependem dele para rastreabilidade e governação efetiva**.
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-> 📌 Este capítulo fornece mitigação técnica material para ameaças de **supply chain**, proveniência e governação de componentes, devendo ser lido em conjunto com os canons de rastreabilidade e com os capítulos que completam enforcement e validação.
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

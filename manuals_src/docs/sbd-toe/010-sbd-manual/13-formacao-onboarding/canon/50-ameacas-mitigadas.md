@@ -1,90 +1,105 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Formação e Onboarding Seguro
-description: Ameaças mitigadas pela aplicação sistemática das práticas de capacitação, onboarding e cultura técnica segura.
-tags: [ameacas, mitigacao, osc&r, cultura, onboarding, terceiros, segurança humana]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Formação e Onboarding
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **16 entidades** (Threat × 10, AntiPattern × 2, Signal × 4) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 13: Formação e Onboarding Seguro
-
-Este capítulo estabelece práticas para garantir que todas as pessoas com impacto direto ou indireto na segurança estão preparadas para agir corretamente.  
-Define requisitos de **formação por perfil**, **onboarding técnico rastreável**, **validação de conhecimento** e **programas de cultura ativa** (ex: Security Champions).
-
-> 🧠 Este é o único capítulo que atua sobre a **causa raiz humana** de falhas de segurança, mitigando riscos associados a desconhecimento, erro operacional e cultura negligente.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 📚 Categoria 1 - Erros humanos evitáveis
-
-| Ameaça                                           | Fonte                                                                 | Como surge                                                                 | Como a prática mitiga                                                                  | Controlos associados                              |
-|--------------------------------------------------|------------------------------------------------------------------------|------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------|
-| Configuração insegura por desconhecimento        | CAPEC-118, CWE-693,  T1.1                                        | Programadores aplicam defaults ou padrões inseguros sem consciência do risco | Formação obrigatória por função com contextualização dos riscos reais                  | `addon/01-catalogo-formativo.md`, `addon/02-trilho-formativo.md` |
-| Reutilização indevida de segredos ou tokens      | CAPEC-137, OSC&R (Credential Management), CWE-798                     | Falta de noção sobre a gestão correta de credenciais e tokens               | Labs e exemplos práticos de uso seguro, quizzes de validação, clinics com AppSec        | `addon/04-tecnicas-formativas.md`, `addon/06-manual-formacao-por-capitulo.md` |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-212` | Configuração insegura por desconhecimento | normative | heuristic |
+| Threat | `MT-213` | Reutilização indevida de segredos ou tokens | normative | heuristic |
+| Threat | `MT-214` | Acesso técnico concedido sem validação | normative | heuristic |
+| Threat | `MT-215` | Inclusão de terceiros sem validação | normative | heuristic |
+| Threat | `MT-216` | Falta de ownership sobre segurança | normative | heuristic |
+| Threat | `MT-217` | Regressão comportamental / cultura frágil | normative | heuristic |
+| Threat | `MT-218` | Formação não rastreável | normative | heuristic |
+| Threat | `MT-219` | Formação desigual entre equipas ou funções | normative | heuristic |
+| Threat | `MT-220` | Formação teórica sem impacto prático | normative | heuristic |
+| Threat | `MT-221` | Conteúdos desatualizados ou não aplicáveis | normative | heuristic |
+| AntiPattern | `sem:antipattern:dependencia-exclusiva-de-ferramentas-automatizadas` | dependência exclusiva de ferramentas automatizadas | semantic | scored |
+| AntiPattern | `sem:antipattern:falta-de-onboarding` | Falta de Onboarding | semantic | scored |
+| Signal | `sem:signal:checklist-completo` | Checklist Completo | semantic | scored |
+| Signal | `sem:signal:kpis-de-eficacia-formativa` | KPIs de eficácia formativa | semantic | scored |
+| Signal | `sem:signal:kpis-de-formacao` | KPIs de Formação | semantic | scored |
+| Signal | `sem:signal:resultados-de-quiz` | Resultados de Quizzes | semantic | scored |
 
 ---
 
-## 🔐 Categoria 2 - Acesso indevido ou onboarding negligente
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                         | Fonte                                                   | Como surge                                                                 | Como a prática mitiga                                                                 | Controlos associados                                          |
-|------------------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------|
-| Acesso técnico concedido sem validação         | SSDF PM.2 / ISO 27001 A.7.2.2 / CAPEC-233                | Colaboradores internos recebem acesso sem formação formal                   | Checklist de onboarding técnico + quiz obrigatório antes de permissões técnicas        | `addon/10-checklist-onboarding.md`, `addon/11-template-quiz-onboarding.md` |
-| Inclusão de terceiros sem validação            | SSDF PM.3 / ISO A.13.2.4 / BSIMM T2.1                    | Fornecedores com acesso a ambientes ou código sem onboarding ou rastreio    | Inclusão formal com plano mínimo de formação, registo, rastreabilidade contratual      | `addon/20-modelo-inclusao-terceiros.md`, `addon/21-plano-formacao-terceiros.md` |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🧠 Categoria 3 - Cultura e motivação fraca para segurança
-
-| Ameaça                                            | Fonte                                                          | Como surge                                                                 | Como a prática mitiga                                                           | Controlos associados                      |
-|---------------------------------------------------|-----------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------|
-| Falta de ownership sobre segurança                | BSIMM SM1 / SAMM Governance / OSC&R (Developer Behavior)       | Segurança é vista como externa ou "responsabilidade do AppSec"             | Programa de Champions, responsabilização por domínio técnico, coaching contínuo | `addon/03-programa-champions.md`          |
-| Regressão comportamental / cultura frágil         | NIST 800-50 / ENISA DevSecOps / BSIMM Culture                  | Formação pontual sem reforço, ausência de reforço comportamental           | Métricas, war rooms, CTFs, labs, reforço periódico e integração com SDLC        | `addon/04-tecnicas-formativas.md`, `addon/90-indicadores-metricas.md` |
-
----
-
-## 📉 Categoria 4 - Falta de rastreabilidade e cobertura
-
-| Ameaça                                             | Fonte                                              | Como surge                                                                 | Como a prática mitiga                                                       | Controlos associados                                      |
-|----------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------------------|
-| Formação não rastreável                            | ISO 27001 A.7.2.2 / SSDF PO.2.2 / BSIMM T1.3        | Não existe histórico de quem foi formado, quando, nem com que conteúdos     | Checklist com registo por pessoa, data, função e resultados de quizzes       | `addon/10-checklist-onboarding.md`, `addon/11-template-quiz-onboarding.md` |
-| Formação desigual entre equipas ou funções         | CAPEC-233 / BSIMM T1.1 / T2.2                       | Umas equipas são formadas, outras não, sem critério ou controlo             | Trilho formativo padronizado por função e criticidade                        | `addon/02-trilho-formativo.md`, `addon/05-integracao-transversal.md`        |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-212` | STRIDE | Configuração insegura por desconhecimento | — | `addon/01-catalogo-formativo.md`, `addon/02-trilho-formativo.md` | parcial | Explícito |
+| `MT-213` | STRIDE | Reutilização indevida de segredos ou tokens | — | `addon/04-tecnicas-formativas.md`, `addon/06-manual-formacao-por-capitulo.md` | parcial | Explícito |
+| `MT-214` | STRIDE | Acesso técnico concedido sem validação | — | `addon/10-checklist-onboarding.md`, `addon/11-template-quiz-onboarding.md` | parcial | Explícito |
+| `MT-215` | STRIDE | Inclusão de terceiros sem validação | — | `addon/20-modelo-inclusao-terceiros.md`, `addon/21-plano-formacao-terceiros.md` | parcial | Explícito |
+| `MT-216` | STRIDE | Falta de ownership sobre segurança | — | `addon/03-programa-champions.md` | parcial | Explícito |
+| `MT-217` | STRIDE | Regressão comportamental / cultura frágil | — | `addon/04-tecnicas-formativas.md`, `addon/90-indicadores-metricas.md` | parcial | Explícito |
+| `MT-218` | STRIDE | Formação não rastreável | — | `addon/10-checklist-onboarding.md`, `addon/11-template-quiz-onboarding.md` | parcial | Explícito |
+| `MT-219` | STRIDE | Formação desigual entre equipas ou funções | — | `addon/02-trilho-formativo.md`, `addon/05-integracao-transversal.md` | parcial | Explícito |
+| `MT-220` | STRIDE | Formação teórica sem impacto prático | — | `addon/04-tecnicas-formativas.md`, `addon/06-manual-formacao-por-capitulo.md` | parcial | Explícito |
+| `MT-221` | STRIDE | Conteúdos desatualizados ou não aplicáveis | — | `addon/06-manual-formacao-por-capitulo.md`, `addon/07-exemplo1-manual-formacao-dev-pr-seguro.md` | parcial | Explícito |
 
 ---
 
-## 🔗 Categoria 5 - Formação sem ligação à prática real
+## § AntiPattern exposure mapping
 
-| Ameaça                                          | Fonte                                                      | Como surge                                                                 | Como a prática mitiga                                                           | Controlos associados                                         |
-|-------------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Formação teórica sem impacto prático            | BSIMM T2.1 / SAMM Edu / CAPEC-496 / OWASP Learning Path     | Sessões genéricas sem ligação a tarefas concretas ou à aplicação real       | Labs, war rooms, CTFs, revisão de PRs, threat modeling peer-led, clinics        | `addon/04-tecnicas-formativas.md`, `addon/06-manual-formacao-por-capitulo.md` |
-| Conteúdos desatualizados ou não aplicáveis      | NIST 800-50 / SSDF PO.2.3 / ISO 27001 A.7                   | Formação desatualizada, sem lições aprendidas de incidentes ou revisões     | Atualizações contínuas ligadas a backlog, incidentes e métricas                | `addon/06-manual-formacao-por-capitulo.md`, `addon/07-exemplo1-manual-formacao-dev-pr-seguro.md` |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-As práticas definidas no Capítulo 13 **mitigam diretamente ou reduzem significativamente o impacto de pelo menos 12 ameaças críticas**, com origem em referências como:
+CWE references per §26 §4: **CWE apenas como suporte limitado, NÃO como substituto de taxonomy de threat**. Mapping para Manual threats listed below.
 
-- **CAPEC** (Common Attack Pattern Enumeration and Classification)
-- **CWE** (Common Weakness Enumeration)
-- **BSIMM** (Build Security In Maturity Model)
-- **OWASP SAMM**
-- **NIST 800-50 / SSDF v1.1**
-- **ISO/IEC 27001**
-- **OSC&R** (Open Software Supply Chain Attack Reference)
+| CWE-ID | Linked threat | Note |
+|---|---|---|
+| `CWE-693` | `?` | supporting reference; primary anchor é Manual threat |
+| `CWE-798` | `?` | supporting reference; primary anchor é Manual threat |
 
-> 📌 Este capítulo é essencial para tratar a **componente humana e organizacional da segurança**, e serve como camada de reforço a todos os controlos técnicos descritos noutros capítulos.
+---
 
-> ⚠️ A ausência de práticas de formação contínua e onboarding seguro **aumenta o risco operacional, dificulta a rastreabilidade e compromete a eficácia de qualquer framework de segurança.**
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

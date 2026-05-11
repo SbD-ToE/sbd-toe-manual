@@ -1,82 +1,93 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 08
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — IaC e Infraestrutura
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Infraestrutura como Código (IaC)
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento estabelece o **alinhamento entre as práticas descritas no Capítulo 08** do manual SbD-ToE e os domínios equivalentes nos principais frameworks de segurança e maturidade de software:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-As práticas visam garantir que projetos IaC sejam tratados como **produtos de software seguros**, com requisitos, validações, rastreabilidade e governação - totalmente integrados no ciclo de desenvolvimento e operação.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **13 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework         | Domínios Relevantes                               | Práticas ou Objetos Cobertos                                                    | Avaliação de Maturidade        |
-|------------------|----------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------|
-| OWASP SAMM v2.1  | Implementation → Secure Build                      | Controlo de pipelines IaC, linting, enforcement                                | **2 / 3**                      |
-| OWASP DSOMM      | Design & Development, Build & Test, Tooling        | Validação, segregação de ambientes, controlo de estado                          | **3 / 4**                      |
-| SLSA v1.0        | Source L2, Build L2, Provenance, Policy Enforcement| Validação de planos, proveniência, segregação, controlo de builds               | **Nível 2 / 4**                |
-
----
-
-## 🧱 OWASP SAMM - Secure Build para IaC
-
-| Nível | Descrição SAMM                                       | Cobertura pelo Cap. 08                              |
-|-------|-------------------------------------------------------|-----------------------------------------------------|
-| 1     | Configuração manual, sem rastreabilidade              | ❌ Fora do âmbito - prática não recomendada         |
-| 2     | Uso de linters, controlo automatizado e pipelines     | ✅ Validadores de IaC e enforcement automatizado    |
-| 3     | Integração contínua com artefactos rastreáveis        | ❌ Parcial - depende do ecossistema DevOps          |
-
-**🧮 Maturidade atingida: 2 / 3**
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-dsomm:owasp-dsomm-aplicacao-a-projetos-iac:build-test` | OWASP DSOMM | Aplicação a Projetos IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-dsomm:owasp-dsomm-aplicacao-a-projetos-iac:design-dev` | OWASP DSOMM | Aplicação a Projetos IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-dsomm:owasp-dsomm-aplicacao-a-projetos-iac:tooling` | OWASP DSOMM | Aplicação a Projetos IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Validação, segregação de ambientes, controlo de estado | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-samm:owasp-samm-secure-build-para-iac:1` | OWASP SAMM | Secure Build para IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-samm:owasp-samm-secure-build-para-iac:2` | OWASP SAMM | Secure Build para IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-samm:owasp-samm-secure-build-para-iac:3` | OWASP SAMM | Secure Build para IaC | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Controlo de pipelines IaC, linting, enforcement | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:1` | SLSA | Fonte, Build e Proveniência | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:2` | SLSA | Fonte, Build e Proveniência | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:3` | SLSA | Fonte, Build e Proveniência | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:4` | SLSA | Fonte, Build e Proveniência | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Validação de planos, proveniência, segregação, controlo de b | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM - Aplicação a Projetos IaC
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio             | Nível | Justificação técnica                                               |
-|---------------------|-------|--------------------------------------------------------------------|
-| Design & Dev        | 3 / 4 | Requisitos IaC, separação de ambientes, arquitetura segura         |
-| Build & Test        | 3 / 4 | Linting, validação de planos, pipelines de teste                   |
-| Tooling             | 3 / 4 | Ferramentas de análise estática e validação automatizada           |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
----
-
-## 🧱 SLSA - Fonte, Build e Proveniência
-
-| Nível | Requisitos principais                                      | Cobertura pelo Cap. 08                              |
-|-------|-------------------------------------------------------------|-----------------------------------------------------|
-| 1     | Proveniência básica e controle manual                      | ✅ Validadores e aprovação manual formal             |
-| 2     | Proveniência verificável e trusted source control          | ✅ Controlo de planos e ambientes                    |
-| 3     | Build reprodutível, assinaturas, isolamento de ambiente    | ❌ Fora do âmbito deste capítulo                     |
-| 4     | Reprovação por auditor externo e sandboxing total          | ❌ Fora do âmbito deste capítulo                     |
-
-**🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Aplicação a Projetos IaC | Linting, validação de planos, pipelines de teste | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Aplicação a Projetos IaC | Requisitos IaC, separação de ambientes, arquitetura segura | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Aplicação a Projetos IaC | Ferramentas de análise estática e validação automatizada | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Validação, segregação de ambientes, controlo de estado | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Secure Build para IaC | Configuração manual, sem rastreabilidade | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Secure Build para IaC | Uso de linters, controlo automatizado e pipelines | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Secure Build para IaC | Integração contínua com artefactos rastreáveis | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Controlo de pipelines IaC, linting, enforcement | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Fonte, Build e Proveniência | — | Validadores e aprovação manual formal | `achievable-maturity.md` | Explícito |
+| Fonte, Build e Proveniência | — | Controlo de planos e ambientes | `achievable-maturity.md` | Explícito |
+| Fonte, Build e Proveniência | — | Fora do âmbito deste capítulo | `achievable-maturity.md` | Explícito |
+| Fonte, Build e Proveniência | — | Fora do âmbito deste capítulo | `achievable-maturity.md` | Explícito |
+| — | — | Validação de planos, proveniência, segregação, controlo de builds | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

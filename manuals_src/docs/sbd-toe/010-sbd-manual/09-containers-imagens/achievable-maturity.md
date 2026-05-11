@@ -1,90 +1,93 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 09
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — Containers e Imagens
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Containers e Imagens
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento apresenta o **grau de alinhamento entre as práticas descritas no Capítulo 09 do SbD-ToE - *Containers e Imagens*** e os principais frameworks de segurança e maturidade de software:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-O capítulo aborda **segurança de imagens e containers ao longo de todo o ciclo de vida**, incluindo:
-- Construção segura e reprodutível de imagens;
-- Assinatura, proveniência e rastreabilidade de artefactos;
-- Governação de registos e pipelines;
-- Hardening de *runtime* (Docker, Kubernetes, etc.);
-- Validação de manifestos e observabilidade de execução.
-
-Estas práticas integram-se diretamente com os capítulos **05 (Dependências e SBOM)** e **08 (IaC)**, reforçando a segurança da *supply chain*.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **13 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework        | Domínios Relevantes | Práticas ou Objetos Cobertos | Avaliação de Maturidade |
-|------------------|--------------------|------------------------------|--------------------------|
-| **OWASP SAMM v2.1** | Deployment (DEP 1.2), Verification (2.A/2.B), Governance (GOV 1.2) | Build seguro, _policy-as-code_, assinatura, controlo de registos e validação de manifestos | **3 / 3** |
-| **OWASP DSOMM** | Build & Deploy, Supply Chain, Ops Monitoring | Construção determinística, proveniência, hardening e observabilidade de _runtime_ | **3 / 4** |
-| **SLSA v1.0** | Build Integrity, Provenance, Source Verification | Assinaturas, _attestations_, pipelines confiáveis e _digest pinning_ | **Nível 3 / 4** |
-
----
-
-## 🧱 OWASP SAMM - Deployment, Verification e Governance
-
-| Nível | Descrição SAMM | Cobertura pelo Cap. 09 |
-|-------|----------------|------------------------|
-| 1 | *Deploys* manuais e controlo básico | ✅ Governação mínima de imagens e registos |
-| 2 | Pipelines automatizadas e validação de imagens | ✅ _Scanning_ e assinatura no CI/CD |
-| 3 | Governação formal e políticas de aprovação automatizadas | ✅ _Policy-as-code_, _admission controllers_, rastreabilidade auditável |
-
-**🧮 Maturidade atingida: 3 / 3**
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:build-deploy` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:ops-monitoring` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:supply-chain` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Construção determinística, proveniência, hardening e observa | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:1` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:2` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:3` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Build seguro, policy-as-code, assinatura, controlo de regist | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:1` | SLSA | Build Integrity & Provenance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:2` | SLSA | Build Integrity & Provenance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:3` | SLSA | Build Integrity & Provenance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:4` | SLSA | Build Integrity & Provenance | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Assinaturas, attestations, pipelines confiáveis e digest pin | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM - Build & Deploy / Supply Chain / Ops Monitoring
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio | Nível | Justificação técnica |
-|----------|-------|----------------------|
-| **Build & Deploy** | 3 / 4 | Pipelines determinísticos, verificação de proveniência e _attestation_. |
-| **Supply Chain** | 3 / 4 | Assinatura, rastreabilidade e governação de registos e dependências. |
-| **Ops Monitoring** | 3 / 4 | Observabilidade, deteção de _drift_ e _shadow containers_. |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
----
-
-## 🧱 SLSA v1.0 - Build Integrity & Provenance
-
-| Nível | Requisitos | Cobertura pelo Cap. 09 |
-|-------|-------------|-------------------------|
-| 1 | Builds rastreáveis e controlados | ✅ Dockerfiles versionados e CI/CD auditável |
-| 2 | Proveniência autenticada | ✅ _Digest pinning_ e _attestation_ de origem |
-| 3 | Build isolado e reproduzível | ✅ Assinaturas, _attestations_ e verificação automática |
-| 4 | Cadeia totalmente verificada e hermética | ❌ Fora do âmbito (nível de integração infraestrutural) |
-
-**🔐 Nível atingido: SLSA 3 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | Pipelines determinísticos, verificação de proveniência e attestation. | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | Observabilidade, deteção de drift e shadow containers. | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | Assinatura, rastreabilidade e governação de registos e dependências. | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Construção determinística, proveniência, hardening e observabilidade de runtime | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Deployment, Verification e Governance | Governação mínima de imagens e registos | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Deployment, Verification e Governance | Scanning e assinatura no CI/CD | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Deployment, Verification e Governance | Policy-as-code, admission controllers, rastreabilidade auditável | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Build seguro, policy-as-code, assinatura, controlo de registos e validação de ma | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
+## § SLSA build/integrity progression
 
-## ✅ Conclusão
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Build Integrity & Provenance | — | Dockerfiles versionados e CI/CD auditável | `achievable-maturity.md` | Explícito |
+| Build Integrity & Provenance | — | Digest pinning e attestation de origem | `achievable-maturity.md` | Explícito |
+| Build Integrity & Provenance | — | Assinaturas, attestations e verificação automática | `achievable-maturity.md` | Explícito |
+| Build Integrity & Provenance | — | Fora do âmbito (nível de integração infraestrutural) | `achievable-maturity.md` | Explícito |
+| — | — | Assinaturas, attestations, pipelines confiáveis e digest pinning | `achievable-maturity.md` | Explícito |
 
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

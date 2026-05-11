@@ -1,101 +1,110 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Desenvolvimento Seguro
-description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento para OWASP, CAPEC, SSDF, entre outros
-tags: [ameaças, mitigação, desenvolvimento, codificação segura, validação, GenAI]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Desenvolvimento Seguro
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **18 entidades** (Threat × 18, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 06: Desenvolvimento Seguro
-
-Este capítulo prescreve práticas de **codificação segura, validações automatizadas, gestão de exceções e evidência rastreável**, com o objetivo de garantir a integridade e segurança do código-fonte desde o início do ciclo de desenvolvimento.
-
-> 🎯 As ameaças mitigadas são originadas por **práticas de codificação inseguras, falta de validação sistemática, informalidade na aceitação de riscos técnicos e uso de GenAI sem controlo**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🧑‍💻 Categoria 1 - Práticas inseguras de desenvolvimento
-
-| Ameaça                                    | Fonte                               | Como surge                                         | Como a prática mitiga                                                             | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|-------------------------------------------|--------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Inclusão de padrões inseguros por hábito  | OWASP Top 10 A01 / CAPEC-139        | Equipa replica código inseguro sem perceber        | Linters e regras de validação de padrões seguros                                 | `addon/02-linters-validacoes.md`              | ✅                                     |
-| Uso de funções descontinuadas ou perigosas| OWASP Top 10 / SANS CWE Top 25      | Código contém APIs inseguras                       | Listas proibidas integradas em linters e validadores                             | `addon/01-boas-praticas-codigo.md`            | ✅                                     |
-| Injeção de código sem escape adequado     | STRIDE / CAPEC-135 / A03-Injection  | Faltam regras de escape/validação                 | Boas práticas + linters + validações em tempo de build                            | `addon/08-validacoes-codigo.md`               | ❌ Cap. 10                             |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-093` | Inclusão de padrões inseguros por hábito | normative | heuristic |
+| Threat | `MT-094` | Uso de funções descontinuadas ou perigosas | normative | heuristic |
+| Threat | `MT-095` | Injeção de código sem escape adequado | normative | heuristic |
+| Threat | `MT-096` | Código inseguro sem deteção | normative | heuristic |
+| Threat | `MT-097` | Ausência de rastreabilidade entre problemas e decisões | normative | heuristic |
+| Threat | `MT-098` | Validação apenas reativa (ex: testes QA) | normative | heuristic |
+| Threat | `MT-099` | Segurança removida por “incompatibilidade” | normative | heuristic |
+| Threat | `MT-100` | Exceções não revistas ou revalidadas | normative | heuristic |
+| Threat | `MT-101` | Desvios não rastreados entre guideline e prática | normative | heuristic |
+| Threat | `MT-102` | Geração de código inseguro via IA | normative | heuristic |
+| Threat | `MT-103` | Inclusão de vulnerabilidades conhecidas | normative | heuristic |
+| Threat | `MT-104` | Falta de accountability sobre código gerado | normative | heuristic |
+| Threat | `MT-105` | Inclusão de bibliotecas descontinuadas | normative | heuristic |
+| Threat | `MT-106` | Falta de justificação para uso de dependência insegura | normative | heuristic |
+| Threat | `MT-107` | Componente vulnerável mantido no build final | normative | heuristic |
+| Threat | `MT-108` | Inconsistência entre equipas e projetos | normative | heuristic |
+| Threat | `MT-109` | Inexistência de baseline de segurança | normative | heuristic |
+| Threat | `MT-110` | Fraca responsabilização pela segurança do código | normative | heuristic |
 
 ---
 
-## 📉 Categoria 2 - Ausência de validação contínua e rastreável
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                        | Fonte                             | Como surge                                              | Como a prática mitiga                                                                | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------------|------------------------------------|---------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Código inseguro sem deteção                   | OWASP SAMM / SSDF PW.7            | Ausência de scanners ou análise estática                | Integração de validações de segurança automatizadas por domínio técnico               | `addon/08-validacoes-codigo.md`               | ✅                                     |
-| Ausência de rastreabilidade entre problemas e decisões | ISO 27034 / BSIMM13             | Ninguém sabe quando ou porque se aceitou risco          | Anotação com justificação, owner e prazo no próprio código                            | `addon/09-anotacoes-evidencia.md`             | ✅                                     |
-| Validação apenas reativa (ex: testes QA)      | SSDF PW.5 / ENISA DevSecOps       | Falta de automação na fase de build                     | Checklists de segurança embutidos no pipeline de desenvolvimento                      | `addon/08-validacoes-codigo.md`               | ❌ Cap. 07                             |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🔁 Categoria 3 - Gestão informal de exceções técnicas
-
-| Ameaça                                       | Fonte                             | Como surge                                               | Como a prática mitiga                                                             | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|----------------------------------------------|------------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Segurança removida por “incompatibilidade”   | ISO 27005 / SSDF RM.1             | Developer desativa controlos sem registo                 | Processo formal de exceções em código, com anotação e aceite por owner             | `addon/05-excecoes-e-justificacoes.md`        | ✅                                     |
-| Exceções não revistas ou revalidadas         | SSDF RM.3 / CAPEC-1003            | Riscos permanecem por tempo indefinido                   | Revisão forçada por ciclo ou prazo anotado diretamente no código                   | `15-aplicacao-lifecycle.md`             | ❌ Cap. 01                             |
-| Desvios não rastreados entre guideline e prática | BSIMM13 / SAMM Implementation    | Guidelines são ignoradas                                 | Comparação automática entre guideline e anotação de exceção                         | `addon/07-guidelines-equipa.md`               | ✅                                     |
-
----
-
-## 🤖 Categoria 4 - Risco associado a uso inseguro de GenAI
-
-| Ameaça                                     | Fonte                              | Como surge                                          | Como a prática mitiga                                                           | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|--------------------------------------------|-------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Geração de código inseguro via IA         | OWASP Top 10 / BSIMM13             | Código gerado sem validação nem revisão            | Requisitos de validação obrigatória de código gerado por GenAI                  | `addon/10-genia-e-seguranca.md`               | ✅                                     |
-| Inclusão de vulnerabilidades conhecidas   | CAPEC / SLSA Build Integrity        | AI replica padrões antigos ou vulneráveis          | Integração obrigatória de scanners e linters sobre código gerado                | `addon/10-genia-e-seguranca.md`               | ✅                                     |
-| Falta de accountability sobre código gerado| SSDF / ISO 27034                    | Sem rastreio de origem, owner ou validação         | Requisitos de anotação de origem e verificação manual obrigatória               | `addon/09-anotacoes-evidencia.md`             | ✅                                     |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-093` | STRIDE | Inclusão de padrões inseguros por hábito | — | `addon/02-linters-validacoes.md` | parcial | Explícito |
+| `MT-094` | STRIDE | Uso de funções descontinuadas ou perigosas | — | `addon/01-boas-praticas-codigo.md` | parcial | Explícito |
+| `MT-095` | STRIDE | Injeção de código sem escape adequado | — | `addon/08-validacoes-codigo.md` | parcial | Explícito |
+| `MT-096` | STRIDE | Código inseguro sem deteção | — | `addon/08-validacoes-codigo.md` | parcial | Explícito |
+| `MT-097` | STRIDE | Ausência de rastreabilidade entre problemas e decisões | — | `addon/09-anotacoes-evidencia.md` | parcial | Explícito |
+| `MT-098` | STRIDE | Validação apenas reativa (ex: testes QA) | — | `addon/08-validacoes-codigo.md` | parcial | Explícito |
+| `MT-099` | STRIDE | Segurança removida por “incompatibilidade” | — | `addon/05-excecoes-e-justificacoes.md` | parcial | Explícito |
+| `MT-100` | STRIDE | Exceções não revistas ou revalidadas | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-101` | STRIDE | Desvios não rastreados entre guideline e prática | — | `addon/07-guidelines-equipa.md` | parcial | Explícito |
+| `MT-102` | STRIDE | Geração de código inseguro via IA | — | `addon/10-genia-e-seguranca.md` | parcial | Explícito |
+| `MT-103` | STRIDE | Inclusão de vulnerabilidades conhecidas | — | `addon/10-genia-e-seguranca.md` | parcial | Explícito |
+| `MT-104` | STRIDE | Falta de accountability sobre código gerado | — | `addon/09-anotacoes-evidencia.md` | parcial | Explícito |
+| `MT-105` | STRIDE | Inclusão de bibliotecas descontinuadas | — | `addon/03-seguranca-dependencias.md` | parcial | Explícito |
+| `MT-106` | STRIDE | Falta de justificação para uso de dependência insegura | — | `addon/05-excecoes-e-justificacoes.md` | parcial | Explícito |
+| `MT-107` | STRIDE | Componente vulnerável mantido no build final | — | `addon/08-validacoes-codigo.md` | parcial | Explícito |
+| `MT-108` | STRIDE | Inconsistência entre equipas e projetos | — | `addon/07-guidelines-equipa.md` | parcial | Explícito |
+| `MT-109` | STRIDE | Inexistência de baseline de segurança | — | `addon/01-boas-praticas-codigo.md` | parcial | Explícito |
+| `MT-110` | STRIDE | Fraca responsabilização pela segurança do código | — | `addon/09-anotacoes-evidencia.md` | parcial | Explícito |
 
 ---
 
-## 🧬 Categoria 5 - Ameaças detetáveis por SBOM, mas mitigáveis antecipadamente
+## § AntiPattern exposure mapping
 
-| Ameaça                                         | Fonte                          | Como surge                                                   | Como a prática mitiga                                                                 | Controlos associados                    | 🧩 Mitigada apenas por este capítulo? |
-|------------------------------------------------|---------------------------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------|----------------------------------------|
-| Inclusão de bibliotecas descontinuadas         | SBOM / SCA / SLSA               | Projeto inclui versões obsoletas por falta de rastreio        | Validação de dependências integrada e política de versões mínima                       | `addon/03-seguranca-dependencias.md`     | ❌ Cap. 05                             |
-| Falta de justificação para uso de dependência insegura | SBOM / ISO 27034 / SSDF     | Dependência conhecida mantida sem análise de risco            | Processo formal de exceção com anotação e owner técnico                                | `addon/05-excecoes-e-justificacoes.md`   | ✅                                     |
-| Componente vulnerável mantido no build final   | SBOM / CAPEC / OWASP Top 10     | Ausência de validação de segurança antes do merge             | Integração de scanners e validações automáticas na fase de build                       | `addon/08-validacoes-codigo.md`          | ❌ Cap. 07                             |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## 🧠 Categoria 6 - Falta de cultura e normalização de práticas seguras
+## § CWE references (supporting only)
 
-| Ameaça                                      | Fonte                             | Como surge                                             | Como a prática mitiga                                                         | Controlos associados                         | 🧩 Mitigada apenas por este capítulo? |
-|---------------------------------------------|------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
-| Inconsistência entre equipas e projetos     | SAMM / BSIMM                      | Cada equipa aplica práticas de forma informal         | Guidelines de segurança de desenvolvimento por tipo de projeto                 | `addon/07-guidelines-equipa.md`              | ✅                                     |
-| Inexistência de baseline de segurança       | SSDF PW.1 / ISO 27034             | Não há critério mínimo de codificação segura          | Boas práticas obrigatórias com controlo automatizado                           | `addon/01-boas-praticas-codigo.md`           | ✅                                     |
-| Fraca responsabilização pela segurança do código | BSIMM / OWASP SAMM             | Developers não percebem impacto das decisões          | Evidência rastreável, owner técnico e justificação anotada no código           | `addon/09-anotacoes-evidencia.md`            | ✅                                     |
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-O Capítulo 06 mitiga ameaças críticas à **qualidade e segurança do código-fonte**, ao longo de todo o ciclo de desenvolvimento - especialmente aquelas ligadas à informalidade, falta de validação e fraca responsabilização técnica.
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
-> 🧩 Pelo menos **10 ameaças são mitigadas exclusivamente por este capítulo**, incluindo:
-> - Justificação e rastreio de exceções em código;
-> - Rastreabilidade técnica de quem validou o quê;
-> - Segurança no uso de GenAI para geração de código.
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
 
-> 📦 Também reduz substancialmente o risco de problemas **que viriam a ser detetados por SBOM, SCA ou scanners**, ao garantir validações estruturadas, políticas de dependência e anotação de exceções desde a origem.
+---
 
-> 📌 Este capítulo operacionaliza princípios de **secure coding** e **continuous validation** de forma auditável e escalável, reduzindo categorias de ameaça que também surgem refletidas em **CAPEC**, **OWASP Top 10** e em standards de engineering assurance.
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

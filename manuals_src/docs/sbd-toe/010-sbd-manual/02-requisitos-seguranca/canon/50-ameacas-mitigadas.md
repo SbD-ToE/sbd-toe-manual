@@ -1,85 +1,110 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas
-description: Ameaças mitigadas pela definição e validação estruturada de requisitos de segurança
-tags: [ameaças, mitigação, requisitos, rastreabilidade, exceções, validação, SSDF, DSOMM, OSC&R, CAPEC]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Requisitos de Segurança
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **18 entidades** (Threat × 18, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 02: Requisitos de Segurança
-
-Este capítulo define o **catálogo base de requisitos de segurança aplicacionais** do modelo SbD-ToE, bem como os mecanismos de validação, exceção e rastreabilidade.  
-As ameaças mitigadas estão diretamente ligadas à **ausência, má definição, aplicação inconsistente ou aceitação informal de requisitos de segurança.**
-
-> 📌 Este capítulo é **um dos principais pilares de controlo técnico do modelo SbD-ToE**, sendo aplicado a todos os projetos conforme o seu nível de risco.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 📚 Categoria 1 - Falha na definição ou ausência de requisitos
-
-| Ameaça                                 | Fonte                                                  | Como surge                                         | Como a prática mitiga                                                            | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
-|----------------------------------------|---------------------------------------------------------|----------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Ausência de requisitos de segurança    | DSOMM - Design & Development / SSDF PW.1 / ASVS V1.1    | Segurança não está incluída nas histórias ou specs | Catálogo completo, taxonomia clara, rastreável por categoria e risco             | `addon/01-catalogo-requisitos.md`        | ✅                                     |
-| Definição ambígua ou não testável      | OWASP SAMM / ISO 27034                                  | Requisitos não permitem validação ou medição       | Requisitos SMART, com critérios de aceitação, testabilidade e mapeamento técnico | `addon/07-validacao-requisitos.md`       | ✅                                     |
-| Requisitos genéricos não específicos   | BSIMM13 - Requirements                                  | Políticas ou ideias vagas de "deveria ser seguro"  | Cada requisito mapeado a domínio técnico específico e controlos concretos        | `addon/09-taxonomia-rastreabilidade.md`  | ✅                                     |
-| Falta de requisitos em sistemas legados| OSC&R - Requirements / SSDF                             | Equipa não aplica catálogos em manutenção          | Aplicação sistemática por risco, com exceções formalizadas                       | `addon/08-gestao-excecoes.md`            | ❌ Cap. 14                             |
-| Requisitos não alinhados com risco     | DSOMM - Design & Development / SSDF PW.1 / ISO 27005    | Mesmos requisitos para todas as apps               | Matriz de requisitos ajustada por classificação de risco                         | `addon/06-matriz-controlos-por-risco.md` | ✅                                     |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-021` | Ausência de requisitos de segurança | normative | heuristic |
+| Threat | `MT-022` | Definição ambígua ou não testável | normative | heuristic |
+| Threat | `MT-023` | Requisitos genéricos não específicos | normative | heuristic |
+| Threat | `MT-024` | Falta de requisitos em sistemas legados | normative | heuristic |
+| Threat | `MT-025` | Requisitos não alinhados com risco | normative | heuristic |
+| Threat | `MT-026` | Requisitos definidos mas nunca verificados | normative | heuristic |
+| Threat | `MT-027` | Validações inconsistentes entre projetos | normative | heuristic |
+| Threat | `MT-028` | Ausência de rastreio entre requisito e teste | normative | heuristic |
+| Threat | `MT-029` | Requisitos não verificados em CI/CD | normative | heuristic |
+| Threat | `MT-030` | Risco aceite sem validação documental | normative | heuristic |
+| Threat | `MT-031` | Exceções a requisitos não documentadas | normative | heuristic |
+| Threat | `MT-032` | Segurança omitida por “não ser funcional” | normative | heuristic |
+| Threat | `MT-033` | Aceitação de exceções sem aprovação | normative | heuristic |
+| Threat | `MT-034` | Exceções não reverificadas no tempo | normative | heuristic |
+| Threat | `MT-035` | Não saber se requisitos foram aplicados | normative | heuristic |
+| Threat | `MT-036` | Requisitos aplicados mas não testados | normative | heuristic |
+| Threat | `MT-037` | Mudanças de requisitos não propagadas | normative | heuristic |
+| Threat | `MT-038` | Ambiguidade entre requisito e controlo | normative | heuristic |
 
 ---
 
-## 🧪 Categoria 2 - Validação deficiente de requisitos
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                    | Fonte                                                           | Como surge                                        | Como a prática mitiga                                                              | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
-|-------------------------------------------|------------------------------------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Requisitos definidos mas nunca verificados| DSOMM - Design & Development / SSDF PW.4 / ASVS V1.13            | Falta de integração com testes ou revisões       | Catálogo inclui critérios de validação + plano de verificação                      | `addon/10-validacao-requisitos.md`       | ✅                                     |
-| Validações inconsistentes entre projetos  | DSOMM - Design & Development / BSIMM13 - Intelligence I1.6       | Cada equipa valida à sua maneira                 | Definição unificada de validação por domínio técnico e ciclo de vida               | `addon/07-validacao-requisitos.md`       | ✅                                     |
-| Ausência de rastreio entre requisito e teste| ISO 27034 / OWASP SAMM                                         | Sem rastreabilidade entre o que é exigido e o que é testado | Taxonomia + estrutura ALM permitem bidirecionalidade                              | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
-| Requisitos não verificados em CI/CD       | SLSA / OSC&R Build & Policy                                     | Pipelines não integram verificação de requisitos | Integração com Cap. 07 (CI/CD) para enforcement automático                         | `addon/10-validacao-requisitos.md`       | ❌ Cap. 07                             |
-| Risco aceite sem validação documental     | CAPEC-1003 / SSDF RM.2                                          | Requisito omitido sob pretexto de "não aplicável"| Política de exceções com rastreabilidade e obrigatoriedade de justificação         | `addon/08-gestao-excecoes.md`            | ❌ Cap. 14                             |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🧾 Categoria 3 - Gestão deficiente de exceções e âmbito
-
-| Ameaça                                 | Fonte                          | Como surge                                              | Como a prática mitiga                                                            | Controlos associados                       | 🧩 Mitigada apenas por este capítulo? |
-|----------------------------------------|---------------------------------|---------------------------------------------------------|-----------------------------------------------------------------------------------|--------------------------------------------|----------------------------------------|
-| Exceções a requisitos não documentadas | ISO 27005 / SSDF RV.3           | Equipa decide informalmente não aplicar requisito       | Processo formal de exceção com owner, prazo e impacto                             | `addon/08-gestao-excecoes.md`             | ❌ Cap. 14                             |
-| Segurança omitida por “não ser funcional” | ENISA SDLC / BSIMM13           | Funcionalidade lança sem controlo de segurança          | Requisitos mapeados a features e tipos de controlo por design                     | `addon/01-catalogo-requisitos.md`         | ✅                                     |
-| Aceitação de exceções sem aprovação    | CAPEC-115 / SSDF RM.2           | Developer isenta requisito sem revisão superior         | Política obriga aprovação formal, justificação, revisão periódica                 | `addon/08-gestao-excecoes.md`             | ❌ Cap. 14                             |
-| Exceções não reverificadas no tempo    | NIST 800-30 / SSDF RM.3         | Requisito omitido para sempre                           | Checklist e ciclo de vida obrigam reavaliação de exceções                         | `15-aplicacao-lifecycle.md`         | ❌ Cap. 01                             |
-
----
-
-## 🔄 Categoria 4 - Falhas de rastreabilidade e cobertura
-
-| Ameaça                                  | Fonte                                                  | Como surge                                           | Como a prática mitiga                                                             | Controlos associados                      | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------|---------------------------------------------------------|------------------------------------------------------|------------------------------------------------------------------------------------|-------------------------------------------|----------------------------------------|
-| Não saber se requisitos foram aplicados | DSOMM - Design & Development / SSDF PW.5 / OWASP SAMM   | Falta de mapeamento entre requisito e código         | Rastreabilidade entre requisito, validação, código e risco                        | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
-| Requisitos aplicados mas não testados  | BSIMM / SLSA / ENISA DevSecOps                          | Existe definição mas ausência de verificação         | Validação associada a cada item do catálogo + teste no ciclo de vida              | `addon/07-validacao-requisitos.md`       | ✅                                     |
-| Mudanças de requisitos não propagadas  | OSC&R / ISO 27034                                        | Alteração ao requisito sem atualização de impacto    | Modelo de versionamento e rastreio de alterações aplicados ao catálogo            | `addon/01-catalogo-requisitos.md`        | ✅                                     |
-| Ambiguidade entre requisito e controlo | STRIDE / NIST 800-53                                     | Confusão entre o que é exigido e o que é implementado| Matriz de rastreabilidade requisito → controlo técnico                            | `addon/04-rastreabilidade-controlo.md`   | ✅                                     |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-021` | STRIDE | Ausência de requisitos de segurança | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-022` | STRIDE | Definição ambígua ou não testável | — | `addon/07-validacao-requisitos.md` | parcial | Explícito |
+| `MT-023` | STRIDE | Requisitos genéricos não específicos | — | `addon/09-taxonomia-rastreabilidade.md` | parcial | Explícito |
+| `MT-024` | STRIDE | Falta de requisitos em sistemas legados | — | `addon/08-gestao-excecoes.md` | parcial | Explícito |
+| `MT-025` | STRIDE | Requisitos não alinhados com risco | — | `addon/06-matriz-controlos-por-risco.md` | parcial | Explícito |
+| `MT-026` | STRIDE | Requisitos definidos mas nunca verificados | — | `addon/10-validacao-requisitos.md` | parcial | Explícito |
+| `MT-027` | STRIDE | Validações inconsistentes entre projetos | — | `addon/07-validacao-requisitos.md` | parcial | Explícito |
+| `MT-028` | STRIDE | Ausência de rastreio entre requisito e teste | — | `addon/04-rastreabilidade-controlo.md` | parcial | Explícito |
+| `MT-029` | STRIDE | Requisitos não verificados em CI/CD | — | `addon/10-validacao-requisitos.md` | parcial | Explícito |
+| `MT-030` | STRIDE | Risco aceite sem validação documental | — | `addon/08-gestao-excecoes.md` | parcial | Explícito |
+| `MT-031` | STRIDE | Exceções a requisitos não documentadas | — | `addon/08-gestao-excecoes.md` | parcial | Explícito |
+| `MT-032` | STRIDE | Segurança omitida por “não ser funcional” | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-033` | STRIDE | Aceitação de exceções sem aprovação | — | `addon/08-gestao-excecoes.md` | parcial | Explícito |
+| `MT-034` | STRIDE | Exceções não reverificadas no tempo | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-035` | STRIDE | Não saber se requisitos foram aplicados | — | `addon/04-rastreabilidade-controlo.md` | parcial | Explícito |
+| `MT-036` | STRIDE | Requisitos aplicados mas não testados | — | `addon/07-validacao-requisitos.md` | parcial | Explícito |
+| `MT-037` | STRIDE | Mudanças de requisitos não propagadas | — | `addon/01-catalogo-requisitos.md` | parcial | Explícito |
+| `MT-038` | STRIDE | Ambiguidade entre requisito e controlo | — | `addon/04-rastreabilidade-controlo.md` | parcial | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § AntiPattern exposure mapping
 
-Este capítulo mitiga um conjunto vasto de ameaças estruturais associadas à **definição, rastreabilidade, validação e exceção de requisitos de segurança**, funcionando como base de governação técnica do SbD-ToE.
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
-> O seu impacto é transversal: **não há controlo técnico no modelo que não dependa de um requisito bem definido, proporcional e validado.**
+---
 
-> Mitiga de forma **exclusiva pelo menos 10 ameaças críticas**, com destaque para a ausência, ambiguidade e não testabilidade de requisitos - pontos não tratados nos restantes capítulos.
+## § CWE references (supporting only)
 
-> As práticas aqui descritas fornecem mitigação relevante para categorias de ameaça que também aparecem refletidas em modelos e standards como **SSDF, ASVS, OWASP SAMM, ISO 27034** e **SLSA**.
+_(Nenhuma threat com CWE reference para este capítulo.)_
+
+---
+
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

@@ -1,83 +1,91 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 04
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — Arquitetura Segura
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Arquitetura Segura
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento estabelece o **grau de alinhamento entre as práticas descritas no Capítulo 04** do manual SbD-ToE e os requisitos das principais frameworks de segurança e maturidade:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-O capítulo propõe uma abordagem prescritiva à definição e validação de arquiteturas seguras, com base em requisitos formais (`ARC-001` a `ARC-011`), segmentação por zonas de confiança, princípios de defesa em profundidade e critérios de rastreabilidade e exceção.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework         | Domínios Relevantes                    | Práticas ou Objetos Cobertos                                       | Avaliação de Maturidade          |
-|------------------|-----------------------------------------|--------------------------------------------------------------------|----------------------------------|
-| OWASP SAMM v2.1  | Design → Architecture & Design          | Princípios formais, validação e documentação da arquitetura          | **2 / 3**                        |
-| OWASP DSOMM      | Architecture, Risk, Requirements         | Requisitos `ARC-XXX`, rastreabilidade, zonas de confiança          | **3 / 4** (média dos domínios)   |
-| SLSA v1.0        | Build System, Provenance                | Segmentação e isolamento da arquitetura                              | **Nível 2 / 4**                  |
-
----
-
-## 🧱 OWASP SAMM - Design → Architecture & Design
-
-| Nível | Descrição SAMM                                             | Cobertura pelo Cap. 04                              |
-|-------|------------------------------------------------------------|-----------------------------------------------------|
-| 1     | Arquitetura definida informalmente                         | ✅ Requisitos mínimos `ARC-001` a `ARC-004`         |
-| 2     | Documentação com validação proporcional                    | ✅ Validação rastreável, zonas de confiança         |
-| 3     | Integração contínua e revisão automatizada                 | ❌ Fora do âmbito (requer automação e pipelines)    |
-
-**🧮 Maturidade atingida: 2 / 3**
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:architecture` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:requirements` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:risk-analysis` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Requisitos ARC-XXX, rastreabilidade, zonas de confiança | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:1` | OWASP SAMM | Design → Architecture & Design | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:2` | OWASP SAMM | Design → Architecture & Design | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:3` | OWASP SAMM | Design → Architecture & Design | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Princípios formais, validação e documentação da arquitetura | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:slsa:slsa-provenance-isolation:1` | SLSA | Provenance & Isolation | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:slsa:slsa-provenance-isolation:2` | SLSA | Provenance & Isolation | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:slsa:slsa-provenance-isolation:34` | SLSA | Provenance & Isolation | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Segmentação e isolamento da arquitetura | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM - Architecture, Requirements, Risk
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio       | Níveis cobertos | Justificação técnica                                               |
-|---------------|----------------|----------------------------------------------------------------------|
-| Architecture  | 3 / 4          | Segmentação, zonas de confiança, tratamento explícito               |
-| Requirements  | 3 / 4          | Requisitos formais por tipo de componente (`ARC-XXX`)               |
-| Risk Analysis | 3 / 4          | Integração com threat modeling e aceitação de risco por exceção     |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
-> O capítulo cobre a maioria dos aspetos de arquitetura relevantes à segurança em ambientes modernos.
-
----
-
-## 🧱 SLSA - Provenance & Isolation
-
-| Nível | Requisitos principais                          | Cobertura pelo Cap. 04                  |
-|-------|-------------------------------------------------|-----------------------------------------|
-| 1     | Princípios básicos de isolamento                | ✅ Segmentação e zonas de confiança      |
-| 2     | Arquitetura formal com proveniência             | ✅ Requisitos documentados               |
-| 3–4   | Cadeias verificáveis, builds isolados           | ❌ Fora do âmbito (ver Cap. 06 e 08)     |
-
-**🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Architecture, Requirements, Risk | Segmentação, zonas de confiança, tratamento explícito | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Architecture, Requirements, Risk | Requisitos formais por tipo de componente (ARC-XXX) | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Architecture, Requirements, Risk | Integração com threat modeling e aceitação de risco por exceção | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Requisitos ARC-XXX, rastreabilidade, zonas de confiança | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Design → Architecture & Design | Arquitetura definida informalmente | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Design → Architecture & Design | Documentação com validação proporcional | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Design → Architecture & Design | Integração contínua e revisão automatizada | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Princípios formais, validação e documentação da arquitetura | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Provenance & Isolation | — | Segmentação e zonas de confiança | `achievable-maturity.md` | Explícito |
+| Provenance & Isolation | — | Requisitos documentados | `achievable-maturity.md` | Explícito |
+| Provenance & Isolation | — | Fora do âmbito (ver Cap. 06 e 08) | `achievable-maturity.md` | Explícito |
+| — | — | Segmentação e isolamento da arquitetura | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

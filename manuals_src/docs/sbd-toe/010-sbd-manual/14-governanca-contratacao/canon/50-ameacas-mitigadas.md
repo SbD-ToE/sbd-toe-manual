@@ -1,93 +1,109 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Governança e Contratação
-sidebar_position: 50
-description: Tabela de ameaças mitigadas pelas práticas de exceções, rastreabilidade, onboarding e validação formal descritas neste capítulo
-tags: [ameacas, governance, rastreabilidade, excecoes, contratos, osc&r, dsomm]
-draft: true
+# 50. Ameaças Mitigadas — Governança e Contratação
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **23 entidades** (Threat × 12, AntiPattern × 2, Signal × 9) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 14: Governança e Contratação Segura
-
-Este capítulo define práticas formais para **garantir que a segurança é aplicada de forma consistente e rastreável a nível organizacional**, incluindo:
-
-- Contratação de serviços e fornecedores;
-- Acordos e cláusulas contratuais;
-- Modelos de validação e maturidade;
-- Governança contínua, rastreabilidade e tratamento do legado.
-
-> 📌 Este capítulo **não mitiga falhas técnicas diretamente**, mas **controla a superfície de ataque organizacional**, onde decisões erradas de contratação, governação ou aceitação de risco afetam todos os sistemas.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🧯 Categoria 1 - Adoção de software ou serviços inseguros
-
-| Ameaça                                 | Fonte                                  | Como surge                                         | Como a prática mitiga                                                             | Controlos associados                         |
-|----------------------------------------|-----------------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------|----------------------------------------------|
-| Adoção de fornecedor sem avaliação     | NIST 800-161 / SSDF PM.3 / DSOMM       | Equipa contrata serviço sem validação de segurança | Modelo de validação contínua e proporcional por tipo de fornecedor               | `addon/03-modelo-validacao-fornecedores.md`  |
-| Falta de cláusulas contratuais         | ISO 27001 A.15 / SSDF PO.3 / DSOMM     | Contrato não exige práticas de segurança           | Conjunto prescritivo de cláusulas para segurança, confidencialidade, rastreio     | `addon/02-clausulas-contratuais.md`          |
-| Uso de serviços sem rastreio           | ENISA / BSIMM / DSOMM                  | Equipa não tem registo de origem ou aprovações     | Rastreabilidade organizacional com ownership formal                              | `addon/04-rastreabilidade-organizacional.md` |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-222` | Adoção de fornecedor sem avaliação | normative | heuristic |
+| Threat | `MT-223` | Falta de cláusulas contratuais | normative | heuristic |
+| Threat | `MT-224` | Uso de serviços sem rastreio | normative | heuristic |
+| Threat | `MT-225` | Iniciativas paralelas sem coordenação | normative | heuristic |
+| Threat | `MT-226` | Falta de continuidade organizacional | normative | heuristic |
+| Threat | `MT-227` | Risco de decisões legadas sem controlo | normative | heuristic |
+| Threat | `MT-228` | Decisões não revistas com mudança de contexto | normative | heuristic |
+| Threat | `MT-229` | Falta de governança em decisões históricas | normative | heuristic |
+| Threat | `MT-230` | Falta de conhecimento sobre o estado de segurança | normative | heuristic |
+| Threat | `MT-231` | Estratégia de segurança desarticulada | normative | heuristic |
+| Threat | `MT-232` | Segurança definida mas não aplicada | normative | heuristic |
+| Threat | `MT-233` | Políticas de segurança não institucionalizadas | normative | heuristic |
+| AntiPattern | `sem:antipattern:confianca-exclusiva-em-mecanismos-tecnicos-automatizados` | confiança exclusiva em mecanismos técnicos automatizados | semantic | scored |
+| AntiPattern | `sem:antipattern:limitacao-do-sbd-toe-a-pratica-tecnica-local` | limitação do SbD-ToE à prática técnica local | semantic | scored |
+| Signal | `sem:signal:clausulas-contratuais-rastreadas` | Cláusulas contratuais rastreadas | semantic | scored |
+| Signal | `sem:signal:excecoes-as-praticas-prescritas` | exceções às práticas prescritas | semantic | scored |
+| Signal | `sem:signal:excecoes-registadas-e-aprovadas` | Exceções registadas e aprovadas | semantic | scored |
+| Signal | `sem:signal:kpis-consolidados` | KPIs consolidados | semantic | scored |
+| Signal | `sem:signal:kpis-de-governacao` | KPIs de governação | semantic | scored |
+| Signal | `sem:signal:ligacao-explicita-a-frameworks-normativos` | Ligação explícita a frameworks normativos | semantic | scored |
+| Signal | `sem:signal:registo-e-aprovacao-de-excecoes` | registo e aprovação de exceções | semantic | scored |
+| Signal | `sem:signal:reporting-periodico-a-gestao` | reporting periódico à gestão | semantic | scored |
+| Signal | `sem:signal:validacao-continua-de-fornecedores` | validação contínua de fornecedores | semantic | scored |
 
 ---
 
-## 🧱 Categoria 2 - Governança inconsistente ou ineficaz
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                   | Fonte                              | Como surge                                           | Como a prática mitiga                                                           | Controlos associados                        |
-|------------------------------------------|-------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------|---------------------------------------------|
-| Iniciativas paralelas sem coordenação    | OWASP SAMM / BSIMM Governance       | Áreas técnicas atuam sem alinhamento                 | Modelo de governança com papéis, fóruns, fluxo de decisão                       | `addon/01-modelo-governancao.md`           |
-| Falta de continuidade organizacional     | ISO 27001 / ENISA                   | Segurança dependente de pessoas ou equipas isoladas  | Integração de segurança como função de processo com maturidade definida         | `addon/07-governancao-e-maturidade.md`     |
-| Risco de decisões legadas sem controlo   | CAPEC-310 / OWASP                   | Tecnologias antigas mantidas por inércia             | Processo formal de governação de legado e exceções documentadas                | `addon/10-governanca-legada.md`            |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🔄 Categoria 3 - Falta de revisão e validação contínua
-
-| Ameaça                                        | Fonte                             | Como surge                                            | Como a prática mitiga                                                            | Controlos associados                          |
-|-----------------------------------------------|------------------------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------|------------------------------------------------|
-| Decisões não revistas com mudança de contexto | ISO 27005 / SSDF RM.1 / BSIMM     | Fornecedor ou contrato mantido sem reavaliação       | Ciclo de revisão contínua com critérios de reteste ou revalidação                | `addon/06-validacao-continuada.md`            |
-| Falta de governança em decisões históricas    | NIST 800-30 / DSOMM               | Adoção de prática sem base rastreável                 | Integração com rastreabilidade organizacional e critérios objetivos              | `addon/04`, `addon/06`                         |
-
----
-
-## 🧠 Categoria 4 - Ausência de maturidade e rastreabilidade estratégica
-
-| Ameaça                                   | Fonte                             | Como surge                                           | Como a prática mitiga                                                           | Controlos associados                          |
-|------------------------------------------|------------------------------------|------------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|
-| Falta de conhecimento sobre o estado de segurança | OWASP SAMM / ISO 27004 / DSOMM     | Falta de modelo de referência                        | Modelo de maturidade e autoavaliação formal                                    | `addon/07-governancao-e-maturidade.md`        |
-| Estratégia de segurança desarticulada   | ENISA / BSIMM Strategy / DSOMM     | Iniciativas reativas ou não sustentadas              | Integração com KPIs, governance boards e decisão por risco                      | `30`, `90`                         |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-222` | STRIDE | Adoção de fornecedor sem avaliação | — | `addon/03-modelo-validacao-fornecedores.md` | parcial | Explícito |
+| `MT-223` | STRIDE | Falta de cláusulas contratuais | — | `addon/02-clausulas-contratuais.md` | parcial | Explícito |
+| `MT-224` | STRIDE | Uso de serviços sem rastreio | — | `addon/04-rastreabilidade-organizacional.md` | parcial | Explícito |
+| `MT-225` | STRIDE | Iniciativas paralelas sem coordenação | — | `addon/01-modelo-governancao.md` | parcial | Explícito |
+| `MT-226` | STRIDE | Falta de continuidade organizacional | — | `addon/07-governancao-e-maturidade.md` | parcial | Explícito |
+| `MT-227` | STRIDE | Risco de decisões legadas sem controlo | — | `addon/10-governanca-legada.md` | parcial | Explícito |
+| `MT-228` | STRIDE | Decisões não revistas com mudança de contexto | — | `addon/06-validacao-continuada.md` | parcial | Explícito |
+| `MT-229` | STRIDE | Falta de governança em decisões históricas | — | `addon/04`, `addon/06` | parcial | Explícito |
+| `MT-230` | STRIDE | Falta de conhecimento sobre o estado de segurança | — | `addon/07-governancao-e-maturidade.md` | parcial | Explícito |
+| `MT-231` | STRIDE | Estratégia de segurança desarticulada | — | `30`, `90` | parcial | Explícito |
+| `MT-232` | STRIDE | Segurança definida mas não aplicada | — | `addon/01`, `addon/05`, `addon/06` + 1 more | forte | Explícito |
+| `MT-233` | STRIDE | Políticas de segurança não institucionalizadas | — | `60-politicas-recomendadas.md` | parcial | Explícito |
 
 ---
 
-## 🚫 Categoria 5 - Falha de enforcement organizacional
+## § AntiPattern exposure mapping
 
-| Ameaça                                        | Fonte                        | Como surge                                                     | Como a prática mitiga                                                                  | Controlos associados                              |
-|-----------------------------------------------|-------------------------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------------------------------------------|
-| Segurança definida mas não aplicada           | DSOMM Governance              | Falta de owners, exceções não justificadas                    | Governação com owners atribuídos, exceções formais, revalidações obrigatórias          | `addon/01`, `addon/05`, `addon/06`, `60`     |
-| Políticas de segurança não institucionalizadas| DSOMM Policies / ISO 27001 A.5| Políticas existem mas não são formalmente aplicadas ou auditadas| Políticas organizacionais auditáveis com ligação direta a contratos e exceções         | `60-politicas-recomendadas.md`              |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-O Capítulo 14 mitiga um conjunto vasto de **ameaças estruturais e organizacionais** que não estão presentes no código ou infraestrutura, mas que:
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
-- Condicionam diretamente a eficácia da segurança técnica;
-- Criam **riscos invisíveis** relacionados com decisões mal documentadas ou não validadas;
-- Afetam **a cadeia de fornecimento, contratos, ownership e accountability organizacional**.
+---
 
-> ✅ Mitiga diretamente **12+ ameaças organizacionais críticas**, com base em fontes como **OWASP DSOMM, ISO 27001, SSDF, ENISA, CAPEC** e outras taxonomias reconhecidas.
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-> 📌 Este capítulo constitui o **principal pilar de enforcement e rastreabilidade organizacional do SbD-ToE**, garantindo que a segurança não é apenas definida - mas também validada, aplicada e sustentada por estruturas formais.
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

@@ -1,94 +1,104 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Deploy Seguro
-description: Visão bottom-up das ameaças mitigadas pelas práticas de deploy seguro descritas neste capítulo.
-tags: [ameaças, mitigação, deploy, execução, rollback, toggle, runtime, ssdf, stride, capec, osc&r]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Deploy Seguro
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **15 entidades** (Threat × 15, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 11: Deploy e Controlo de Execução
-
-Este capítulo define práticas para **entrega segura, validação formal, ativação controlada e execução reversível** de funcionalidades em produção.  
-As ameaças mitigadas surgem no momento mais sensível do SDLC: **a passagem real para runtime**.
-
-> ✅ As práticas deste capítulo são cruciais para garantir que o código entregue é **validado, rastreável, reversível e controlado em ambiente de produção**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🚨 Categoria 1 - Execução de código não validado
-
-| Ameaça                                  | Fonte                           | Como surge                                              | Como a prática mitiga                                                                 | Controlos associados                          |
-|-----------------------------------------|----------------------------------|----------------------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------------|
-| Código em produção sem validação        | SSDF PW.6 / CAPEC-137           | Ausência de testes ou aprovação antes do deploy         | Validações formais + gates automatizados no pipeline                                   | `addon/04-validacoes-pre-deploy.md`           |
-| Ativação funcional sem controlo         | STRIDE / OWASP Feature Toggles  | Feature toggles ativados sem validação ou aprovação     | Integração com fluxo de aprovação + rastreabilidade de toggles                         | `addon/03-feature-flags-e-toggle.md`          |
-| Promoção manual fora do CI/CD           | OWASP CI/CD / SLSA              | Bypass do pipeline ou acesso direto ao ambiente         | Modelo de controlo de execução com obrigatoriedade de pipeline                         | `addon/01-modelo-controle-execucao.md`        |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-182` | Código em produção sem validação | normative | heuristic |
+| Threat | `MT-183` | Ativação funcional sem controlo | normative | heuristic |
+| Threat | `MT-184` | Promoção manual fora do CI/CD | normative | heuristic |
+| Threat | `MT-185` | Deploy falhado sem rollback | normative | heuristic |
+| Threat | `MT-186` | Feature irreversível | normative | heuristic |
+| Threat | `MT-187` | Falha sem reação | normative | heuristic |
+| Threat | `MT-188` | Release conjunta sem segmentação | normative | heuristic |
+| Threat | `MT-189` | Feature exposta a todos os utilizadores | normative | heuristic |
+| Threat | `MT-190` | Falta de validação operacional | normative | heuristic |
+| Threat | `MT-191` | Falhas pós-deploy não detetadas | normative | heuristic |
+| Threat | `MT-192` | Reação tardia a problemas críticos | normative | heuristic |
+| Threat | `MT-193` | Eventos críticos ignorados | normative | heuristic |
+| Threat | `MT-194` | Toggle ativado inadvertidamente | normative | heuristic |
+| Threat | `MT-195` | Release sem segmentação geográfica ou lógica | normative | heuristic |
+| Threat | `MT-196` | Execução de função crítica não validada | normative | heuristic |
 
 ---
 
-## 🔁 Categoria 2 - Ausência de rollback e reversibilidade
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                            | Fonte                             | Como surge                                      | Como a prática mitiga                                                           | Controlos associados                       |
-|-----------------------------------|------------------------------------|------------------------------------------------|----------------------------------------------------------------------------------|--------------------------------------------|
-| Deploy falhado sem rollback       | SSDF PW.5 / ISO 27034             | Falha crítica bloqueia sistema                  | Rollback automático + versionamento e reversibilidade                            | `addon/06-controle-versao-e-rollback.md`   |
-| Feature irreversível              | OWASP Feature Toggle               | Toggle ativado sem fallback seguro              | Design de toggles com reversão e estado "off-by-default"                         | `addon/03-feature-flags-e-toggle.md`       |
-| Falha sem reação                  | CAPEC-173 / OSC&R Runtime Tamper  | Problemas em produção sem rollback estruturado  | Trigger automático de rollback com base em métricas e alertas                    | `addon/05-monitorizacao-e-reacao.md`       |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🧪 Categoria 3 - Validação deficiente em produção
-
-| Ameaça                                   | Fonte                              | Como surge                                         | Como a prática mitiga                                                              | Controlos associados                          |
-|------------------------------------------|-------------------------------------|---------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|
-| Release conjunta sem segmentação         | OWASP SAMM / BSIMM DR1             | Múltiplas features ativadas em simultâneo         | Práticas de release progressivo com rollout segmentado                             | `addon/02-praticas-release-management.md`      |
-| Feature exposta a todos os utilizadores  | CAPEC-112 / STRIDE (Elevation)     | Toggle sem âmbito por grupo, região ou perfil     | Segmentação por utilizador, tempo, localização ou perfil                           | `addon/03-feature-flags-e-toggle.md`           |
-| Falta de validação operacional           | ISO 27001 A.14.2.4 / DSOMM Runtime | Código testado apenas em ambientes não representativos | Validação final em ambiente de staging espelho antes da promoção                  | `addon/08-segregacao-e-validacao-operacional.md` |
-
----
-
-## 📉 Categoria 4 - Falta de monitorização e resposta a falhas
-
-| Ameaça                                  | Fonte                              | Como surge                                       | Como a prática mitiga                                                            | Controlos associados                      |
-|-----------------------------------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------------------------------|-------------------------------------------|
-| Falhas pós-deploy não detetadas         | SSDF RV.3 / BSIMM Deployment       | Sem métricas ou alertas após deploy              | Observabilidade com métricas definidas, logs e alertas de erro                    | `addon/05-monitorizacao-e-reacao.md`      |
-| Reação tardia a problemas críticos      | STRIDE / ENISA DevSecOps           | Equipa não notificada ou sem visibilidade        | Integração com incident response, notificações e ownership definido               | `addon/05-monitorizacao-e-reacao.md`      |
-| Eventos críticos ignorados              | CAPEC-310 / DSOMM                  | Sem plano para lidar com falhas runtime          | Critérios definidos para rollback manual/automático e plano de ação               | `addon/06-controle-versao-e-rollback.md`  |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-182` | STRIDE | Código em produção sem validação | — | `addon/04-validacoes-pre-deploy.md` | parcial | Explícito |
+| `MT-183` | STRIDE | Ativação funcional sem controlo | — | `addon/03-feature-flags-e-toggle.md` | parcial | Explícito |
+| `MT-184` | STRIDE | Promoção manual fora do CI/CD | — | `addon/01-modelo-controle-execucao.md` | parcial | Explícito |
+| `MT-185` | STRIDE | Deploy falhado sem rollback | — | `addon/06-controle-versao-e-rollback.md` | parcial | Explícito |
+| `MT-186` | STRIDE | Feature irreversível | — | `addon/03-feature-flags-e-toggle.md` | parcial | Explícito |
+| `MT-187` | STRIDE | Falha sem reação | — | `addon/05-monitorizacao-e-reacao.md` | parcial | Explícito |
+| `MT-188` | STRIDE | Release conjunta sem segmentação | — | `addon/02-praticas-release-management.md` | parcial | Explícito |
+| `MT-189` | STRIDE | Feature exposta a todos os utilizadores | — | `addon/03-feature-flags-e-toggle.md` | parcial | Explícito |
+| `MT-190` | STRIDE | Falta de validação operacional | — | `addon/08-segregacao-e-validacao-operacional.md` | parcial | Explícito |
+| `MT-191` | STRIDE | Falhas pós-deploy não detetadas | — | `addon/05-monitorizacao-e-reacao.md` | parcial | Explícito |
+| `MT-192` | STRIDE | Reação tardia a problemas críticos | — | `addon/05-monitorizacao-e-reacao.md` | parcial | Explícito |
+| `MT-193` | STRIDE | Eventos críticos ignorados | — | `addon/06-controle-versao-e-rollback.md` | parcial | Explícito |
+| `MT-194` | STRIDE | Toggle ativado inadvertidamente | — | `addon/03-feature-flags-e-toggle.md` | parcial | Explícito |
+| `MT-195` | STRIDE | Release sem segmentação geográfica ou lógica | — | `addon/07-deploy-progressivo-e-risco.md` | parcial | Explícito |
+| `MT-196` | STRIDE | Execução de função crítica não validada | — | `addon/08-segregacao-e-validacao-operacional.md` | parcial | Explícito |
 
 ---
 
-## 🔒 Categoria 5 - Exposição acidental de funcionalidades
+## § AntiPattern exposure mapping
 
-| Ameaça                                    | Fonte                              | Como surge                                       | Como a prática mitiga                                                              | Controlos associados                          |
-|-------------------------------------------|-------------------------------------|--------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|
-| Toggle ativado inadvertidamente           | OWASP Feature Toggle / STRIDE      | Flag com valor default ativado                   | Estado "off-by-default", require de aprovação e revisão formal                     | `addon/03-feature-flags-e-toggle.md`           |
-| Release sem segmentação geográfica ou lógica | BSIMM13 / OWASP SAMM            | Mudança aplica-se a toda a base de utilizadores | Rollout progressivo: canário, blue-green, scoped deployment                        | `addon/07-deploy-progressivo-e-risco.md`       |
-| Execução de função crítica não validada   | STRIDE (Availability) / ISO 27034 | Falta de readiness gates operacionais            | Validação final de readiness com rollback validado e dupla aprovação               | `addon/08-segregacao-e-validacao-operacional.md` |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-O Capítulo 11 mitiga ameaças diretamente associadas ao **momento mais sensível do ciclo de vida: o deploy e execução real do software em produção**, incluindo:
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
-- Falhas de validação pré-execução;
-- Ativações acidentais e inseguras;
-- Ausência de rollback;
-- Falta de segmentação e readiness;
-- Visibilidade e resposta runtime insuficientes.
+---
 
-> 🎯 Pelo menos **12 ameaças são mitigadas exclusivamente por este capítulo**, o que o torna **essencial para runtime seguro e controlado**.
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-> 🔐 Integra práticas obrigatórias para cumprir **SSDF**, **SLSA**, **OWASP SAMM**, **BSIMM13**, **ENISA DevSecOps**, **CIS Controls**, **ISO 27001**, e domínios do **DSOMM - Design & Development**.
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

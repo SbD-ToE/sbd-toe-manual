@@ -1,81 +1,95 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 14
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — Governança e Contratação
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Governança e Contratação
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento apresenta o **mapeamento de maturidade das práticas descritas no Capítulo 14 - Governança e Contratação**, com base nos principais frameworks de referência:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-As práticas cobrem papéis críticos, exceções, contratos, rastreabilidade organizacional, onboarding e validação de fornecedores, métricas e integração com modelos de maturidade.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework     | Domínios Relevantes                      | Práticas Cobertas                                          | Avaliação de Maturidade                          |
-|---------------|-------------------------------------------|-------------------------------------------------------------|--------------------------------------------------|
-| **SAMM v2.1** | Governance, Education, Incident Management | Ownership, exceções, rastreabilidade, formação             | **2 / 3**                                        |
-| **SLSA v1.0** | Supply Chain Governance                   | Requisitos contratuais, aceitação de risco, rastreabilidade| **Contributo indireto - Nível 2 / 4**            |
-| **DSOMM**     | Governance, 3rd Party, Tooling, Training, Metrics | Exceções, KPIs, onboarding, validação, maturidade       | **4 / 5**                                        |
-
----
-
-## 🧱 OWASP SAMM - Governance e Education
-
-| Domínio               | Nível | Implementação no Cap. 14                                 |
-|-----------------------|-------|----------------------------------------------------------|
-| Governance            | 2 / 3 | Papéis definidos, exceções formais, contratos seguros    |
-| Education & Guidance  | 2 / 3 | Formação de fornecedores e rastreio organizacional       |
-| Incident Management   | 1 / 3 | Parciais - rastreabilidade e canais de reporte definidos |
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Validação de fornecedores, requisitos contratuais, rastreabi | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:governance` | OWASP DSOMM | Definição clara de ownership, políticas, controlo contínuo | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:tooling-metrics` | OWASP DSOMM | KPIs de governação e feedback contínuo | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:training` | OWASP DSOMM | Onboarding formal de stakeholders | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Exceções, KPIs, onboarding, validação, maturidade | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-samm:owasp-samm-governance-e-education:education-guidance` | OWASP SAMM | Governance e Education | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-samm:owasp-samm-governance-e-education:governance` | OWASP SAMM | Governance e Education | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-samm:owasp-samm-governance-e-education:incident-management` | OWASP SAMM | Governance e Education | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-samm:visao-geral-de-alinhamento:samm-v2-1` | OWASP SAMM | Ownership, exceções, rastreabilidade, formação | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:slsa:slsa-supply-chain:1` | SLSA | Supply Chain | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:slsa:slsa-supply-chain:2` | SLSA | Supply Chain | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:slsa:slsa-supply-chain:3` | SLSA | Supply Chain | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:slsa:slsa-supply-chain:4` | SLSA | Supply Chain | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Requisitos contratuais, aceitação de risco, rastreabilidade | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio         | Nível | Justificação técnica                                               |
-|------------------|-------|--------------------------------------------------------------------|
-| Governance       | 3 / 3 | Definição clara de ownership, políticas, controlo contínuo         |
-| 3rd Party        | 4 / 4 | Validação de fornecedores, requisitos contratuais, rastreabilidade |
-| Tooling & Metrics| 4 / 5 | KPIs de governação e feedback contínuo                             |
-| Training         | 3 / 3 | Onboarding formal de stakeholders                                 |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
----
-
-## 🧱 SLSA - Supply Chain
-
-| Nível | Requisitos principais                            | Cobertura pelo Cap. 14                       |
-|-------|--------------------------------------------------|----------------------------------------------|
-| 1     | Cadeia de fornecimento minimamente identificada  | ✅ Papéis e terceiros registados              |
-| 2     | Requisitos contratuais definidos                 | ✅ Cláusulas de segurança formais             |
-| 3     | Verificação independente                         | ❌ Parcial - validações sem atestado externo |
-| 4     | Governação contínua e auditável                  | ❌ Não aplicável                             |
-
-**🔐 Nível suportado por este capítulo: SLSA 2 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | — | Validação de fornecedores, requisitos contratuais, rastreabilidade | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Definição clara de ownership, políticas, controlo contínuo | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | KPIs de governação e feedback contínuo | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Onboarding formal de stakeholders | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Exceções, KPIs, onboarding, validação, maturidade | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance e Education | — | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance e Education | — | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Governance e Education | — | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Ownership, exceções, rastreabilidade, formação | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Supply Chain | — | Papéis e terceiros registados | `achievable-maturity.md` | Explícito |
+| Supply Chain | — | Cláusulas de segurança formais | `achievable-maturity.md` | Explícito |
+| Supply Chain | — | Parcial - validações sem atestado externo | `achievable-maturity.md` | Explícito |
+| Supply Chain | — | Não aplicável | `achievable-maturity.md` | Explícito |
+| — | — | Requisitos contratuais, aceitação de risco, rastreabilidade | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

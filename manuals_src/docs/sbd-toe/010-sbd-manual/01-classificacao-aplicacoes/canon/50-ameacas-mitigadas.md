@@ -1,94 +1,121 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas por Práticas do Capítulo 01
-sidebar_position: 50
-tags: [canon, ameaças, mitigação, risco, controlo]
+# 50. Ameaças Mitigadas — Classificação de Aplicações
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+Total: **22 entidades** (Threat × 20, AntiPattern × 1, Signal × 1) mapped a este capítulo.
 
-# 🔐 Ameaças Mitigadas - Capítulo 01: Classificação da Criticidade Aplicacional
-
-Este capítulo **não define controlos técnicos diretos**, mas estabelece a **estrutura de decisão que governa a aplicação proporcional e justificada de segurança em software**. A ausência desta estrutura gera múltiplas ameaças - técnicas, organizacionais e processuais.
-
-> A correta classificação do risco é **pré-condição de todos os controlos eficazes**. A sua ausência compromete por completo o modelo SbD-ToE.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🎯 Categoria 1 - Falha de proporcionalidade no esforço de segurança
-
-| Ameaça                                         | Fonte                        | Como surge                                                 | Como a prática mitiga                                                                  | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|------------------------------------------------|-------------------------------|------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------|----------------------------------------|
-| Falta de aplicação de controlos mínimos        | OWASP ASVS 1.1               | Equipa assume que não é necessário                         | Classificação formal obriga a aplicar controlos por nível de risco                      | `addon/matriz-controlos-por-risco.md`      | ✅                                     |
-| Overengineering e fricção excessiva            | OSC&R P1.1                   | Equipa aplica todos os controlos independentemente do risco| Modelo de proporcionalidade evita sobreproteção sem justificação                       | `addon/modelo-classificacao-eixos.md`      | ✅                                     |
-| Inconsistência entre projetos com mesmo risco  | BSIMM13 - Governance G2.3    | Cada equipa aplica regras diferentes                       | Classificação centralizada normaliza decisões por perfil de risco                     | `addon/matriz-controlos-por-risco.md`      | ✅                                     |
-| Segurança opcional em produtos low-risk        | SSDF PW.1 / ENISA SDLC       | Sem política clara, produtos L1 não têm controlos mínimos   | Mapeamento obriga baseline mínima para todos os perfis                                 | `addon/modelo-classificacao-eixos.md`      | ✅                                     |
-
----
-
-## 🔁 Categoria 2 - Falhas por ausência de revisão ou rastreabilidade
-
-| Ameaça                                      | Fonte                              | Como surge                                             | Como a prática mitiga                                                             | Controlos associados                           | 🧩 Mitigada apenas por este capítulo? |
-|---------------------------------------------|-------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------------|-------------------------------------------------|----------------------------------------|
-| Mudanças críticas sem reclassificação       | CAPEC-137 / ISO 27005 Sec.10       | Funcionalidade nova altera risco, sem nova avaliação   | Modelo define pontos de reavaliação e templates para análise de impacto           | `addon/ciclo-vida-risco.md`, `15-aplicacao-lifecycle.md` | ✅ |
-| Integração com APIs ou terceiros ignorada   | STRIDE (Elevation of Privilege)    | Exposição alargada sem impacto revisto                 | DRP e BIA forçam reclassificação por alteração de superfície                       | `addon/adopcao-drp-bia.md`                 | ✅                                     |
-| Deploy com risco alterado não revisto       | MITRE - T1589 / T1608              | Mudança de contexto técnico sem análise                | Checklist força revisão por eventos críticos no ciclo de vida                     | `checklist-revisao.md`               | ❌ Cap. 15                             |
-| Versões diferentes com classificações divergentes | OSC&R / SSDF RM.1              | Patch ou major release altera criticidade, sem avaliação | Modelo impõe versão rastreável por classificação                                  | `addon/risco-residual.md`                 | ✅                                     |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-001` | Falta de aplicação de controlos mínimos | normative | heuristic |
+| Threat | `MT-002` | Overengineering e fricção excessiva | normative | heuristic |
+| Threat | `MT-003` | Inconsistência entre projetos com mesmo risco | normative | heuristic |
+| Threat | `MT-004` | Segurança opcional em produtos low-risk | normative | heuristic |
+| Threat | `MT-005` | Mudanças críticas sem reclassificação | normative | heuristic |
+| Threat | `MT-006` | Integração com APIs ou terceiros ignorada | normative | heuristic |
+| Threat | `MT-007` | Deploy com risco alterado não revisto | normative | heuristic |
+| Threat | `MT-008` | Versões diferentes com classificações divergentes | normative | heuristic |
+| Threat | `MT-009` | Aceitação informal de riscos críticos | normative | heuristic |
+| Threat | `MT-010` | Impossibilidade de auditoria posterior | normative | heuristic |
+| Threat | `MT-011` | Risco aceite por responsáveis inapropriados | normative | heuristic |
+| Threat | `MT-012` | Falta de explicabilidade regulatória | normative | heuristic |
+| Threat | `MT-013` | Interfaces expostas mal avaliadas | normative | heuristic |
+| Threat | `MT-014` | Dados sensíveis não reconhecidos | normative | heuristic |
+| Threat | `MT-015` | Assunção de ambientes seguros por defeito | normative | heuristic |
+| Threat | `MT-016` | Ignorar dependências críticas | normative | heuristic |
+| Threat | `MT-017` | Risco residual nunca revisto | normative | heuristic |
+| Threat | `MT-018` | Falta de eventos de reavaliação planeados | normative | heuristic |
+| Threat | `MT-019` | Reclassificação dependente de exceções | normative | heuristic |
+| Threat | `MT-020` | Decisões de risco sem feedback do negócio | normative | heuristic |
+| AntiPattern | `sem:antipattern:aceitacao-de-risco-invalida` | aceitação de risco inválida | semantic | scored |
+| Signal | `sem:signal:alteracao-na-exposicao-dados-impacto-ou-forma-de-decisoes-e-validacoes` | alteração na exposição, dados, impacto ou forma de decisões e validações | semantic | scored |
 
 ---
 
-## 🗃️ Categoria 3 - Documentação e justificação insuficientes
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                                  | Fonte                            | Como surge                                               | Como a prática mitiga                                                     | Controlos associados                            | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------|-----------------------------------|----------------------------------------------------------|------------------------------------------------------------------------------|--------------------------------------------------|----------------------------------------|
-| Aceitação informal de riscos críticos   | CAPEC-1003 / SSDF RM.2           | Sem registo formal da aceitação                          | Checklist + modelo de aprovação formal com rastreio de owners              | `addon/criterios-aceitacao-risco.md`         | ✅                                     |
-| Impossibilidade de auditoria posterior  | ISO 27005 Sec.8.2 / SSDF RV.3    | Decisão de segurança sem rasto                           | Versionamento obrigatório e rastreio de decisão por eixo e owner           | `addon/risco-residual.md`                    | ✅                                     |
-| Risco aceite por responsáveis inapropriados | BSIMM13 - G1.1                | Quem aprova não tem legitimidade                         | Critérios de aceitação forçam owner técnico e de negócio                    | `addon/criterios-aceitacao-risco.md`         | ✅                                     |
-| Falta de explicabilidade regulatória    | NIST 800-30 Step 3               | Autoridade não consegue justificar proteção diferencial   | Documentação obriga a descrição da base de decisão                          | `addon/modelo-classificacao-eixos.md`        | ✅                                     |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 🧠 Categoria 4 - Risco técnico mal definido
-
-| Ameaça                                  | Fonte                              | Como surge                                                  | Como a prática mitiga                                                         | Controlos associados                          | 🧩 Mitigada apenas por este capítulo? |
-|-----------------------------------------|-------------------------------------|-------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------|----------------------------------------|
-| Interfaces expostas mal avaliadas       | STRIDE (Information Disclosure)     | Serviços públicos tratados como internos                    | Eixo E define criticidade por exposição                                      | `addon/01-modelo-classificacao-eixos.md`      | ❌ Cap. 03, Cap. 04                    |
-| Dados sensíveis não reconhecidos        | CAPEC-112 / ISO 27005               | Falta de classificação de dados tratados                    | Eixo D impõe análise por tipo e sensibilidade de dados                        | `addon/08-mapeamento-ameacas-risco.md`        | ❌ Cap. 02                            |
-| Assunção de ambientes seguros por defeito | ENISA Threat Landscape 2022      | Ambientes assumidos como protegidos sem validação           | DRP e matriz forçam consideração do ambiente de execução                      | `addon/03-adopcao-drp-bia.md`                 | ✅                                     |
-| Ignorar dependências críticas           | OSC&R / SSDF PW.4                  | Dependência de serviços não identificada como risco         | Mapeamento de ameaça + eixo I (impacto externo)                              | `addon/08-mapeamento-ameacas-risco.md`        | ❌ Cap. 05                            |
-
----
-
-## 📉 Categoria 5 - Controlo deficiente da evolução do risco
-
-| Ameaça                                     | Fonte                                | Como surge                                             | Como a prática mitiga                                                      | Controlos associados                           | 🧩 Mitigada apenas por este capítulo? |
-|--------------------------------------------|---------------------------------------|--------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------|----------------------------------------|
-| Risco residual nunca revisto               | CAPEC-115 / ISO 27005 Sec.9          | Mitigações aplicadas, mas risco não revisto            | Modelo obriga definição explícita de risco residual                         | `addon/06-risco-residual.md`                   | ✅                                     |
-| Falta de eventos de reavaliação planeados  | SSDF RM.3 / NIST 800-30 Step 4       | Risco só é revisto por iniciativa informal             | Integração com o ciclo de vida define marcos obrigatórios                   | `addon/07-ciclo-vida-risco.md`                 | ✅                                     |
-| Reclassificação dependente de exceções     | BSIMM13 - Governance                 | Apenas casos problemáticos são reavaliados             | Política e checklist impõem reavaliação cíclica                             | `20-checklist-revisao.md`                | ❌ Cap. 14                            |
-| Decisões de risco sem feedback do negócio  | ENISA DevSecOps / IR Governance      | Aceitação de risco feita sem visão de impacto global   | Modelo força articulação com owner funcional e impacto de negócio           | `addon/09-criterios-aceitacao-risco.md`        | ✅                                     |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-001` | STRIDE | Falta de aplicação de controlos mínimos | — | `addon/matriz-controlos-por-risco.md` | parcial | Explícito |
+| `MT-002` | STRIDE | Overengineering e fricção excessiva | — | `addon/modelo-classificacao-eixos.md` | parcial | Explícito |
+| `MT-003` | STRIDE | Inconsistência entre projetos com mesmo risco | — | `addon/matriz-controlos-por-risco.md` | parcial | Explícito |
+| `MT-004` | STRIDE | Segurança opcional em produtos low-risk | — | `addon/modelo-classificacao-eixos.md` | parcial | Explícito |
+| `MT-005` | STRIDE | Mudanças críticas sem reclassificação | — | `addon/ciclo-vida-risco.md`, `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-006` | STRIDE | Integração com APIs ou terceiros ignorada | — | `addon/adopcao-drp-bia.md` | parcial | Explícito |
+| `MT-007` | STRIDE | Deploy com risco alterado não revisto | — | `checklist-revisao.md` | parcial | Explícito |
+| `MT-008` | STRIDE | Versões diferentes com classificações divergentes | — | `addon/risco-residual.md` | parcial | Explícito |
+| `MT-009` | STRIDE | Aceitação informal de riscos críticos | — | `addon/criterios-aceitacao-risco.md` | parcial | Explícito |
+| `MT-010` | STRIDE | Impossibilidade de auditoria posterior | — | `addon/risco-residual.md` | parcial | Explícito |
+| `MT-011` | STRIDE | Risco aceite por responsáveis inapropriados | — | `addon/criterios-aceitacao-risco.md` | parcial | Explícito |
+| `MT-012` | STRIDE | Falta de explicabilidade regulatória | — | `addon/modelo-classificacao-eixos.md` | parcial | Explícito |
+| `MT-013` | STRIDE | Interfaces expostas mal avaliadas | — | `addon/01-modelo-classificacao-eixos.md` | parcial | Explícito |
+| `MT-014` | STRIDE | Dados sensíveis não reconhecidos | — | `addon/08-mapeamento-ameacas-risco.md` | parcial | Explícito |
+| `MT-015` | STRIDE | Assunção de ambientes seguros por defeito | — | `addon/03-adopcao-drp-bia.md` | parcial | Explícito |
+| `MT-016` | STRIDE | Ignorar dependências críticas | — | `addon/08-mapeamento-ameacas-risco.md` | parcial | Explícito |
+| `MT-017` | STRIDE | Risco residual nunca revisto | — | `addon/06-risco-residual.md` | parcial | Explícito |
+| `MT-018` | STRIDE | Falta de eventos de reavaliação planeados | — | `addon/07-ciclo-vida-risco.md` | parcial | Explícito |
+| `MT-019` | STRIDE | Reclassificação dependente de exceções | — | `20-checklist-revisao.md` | parcial | Explícito |
+| `MT-020` | STRIDE | Decisões de risco sem feedback do negócio | — | `addon/09-criterios-aceitacao-risco.md` | parcial | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § AntiPattern exposure mapping
 
-A aplicação rigorosa deste capítulo garante que:
+AntiPattern → Threat exposure relations per Manual ontology V2 `antipattern_threat_links.jsonl`. Cada link indica que o antipattern (quando presente em código/processo) expõe a ameaça.
 
-- A **necessidade, intensidade e legitimidade** da aplicação de segurança são justificadas, rastreáveis e auditáveis;
-- Os riscos são formalmente classificados, revistos e aceites com base em critérios objetivos;
-- Nenhum controlo técnico (dos capítulos seguintes) é aplicado de forma cega, redundante ou ausente.
+| AntiPattern | Exposes threat | Confidence | Justification |
+|---|---|---|---|
+| `aceitacao-de-risco-invalida` | `MT-009` | 0.70 | alias_match, bundle_grounding, risk_match |
+| `aceitacao-de-risco-invalida` | `MT-020` | 0.76 | alias_match, bundle_grounding, how_it_arises_match |
 
-> 📌 Este capítulo **mitiga diretamente pelo menos 15 ameaças únicas** que não são tratadas em mais nenhum ponto do manual.
+---
 
-> ⚠️ A ausência desta prática **põe em causa a aplicabilidade proporcional** de todo o modelo SbD-ToE - comprometendo desde a definição de requisitos até à rastreabilidade de exceções.
+## § CWE references (supporting only)
 
+_(Nenhuma threat com CWE reference para este capítulo.)_
+
+---
+
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

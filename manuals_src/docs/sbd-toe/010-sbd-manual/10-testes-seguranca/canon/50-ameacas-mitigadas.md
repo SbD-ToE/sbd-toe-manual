@@ -1,90 +1,104 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Testes de Segurança
-description: Visão bottom-up das ameaças mitigadas pelas práticas de testes de segurança deste capítulo.
-tags: [ameaças, mitigação, segurança, testes, osc&r, stride, capec, ssdf]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Testes de Segurança
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **15 entidades** (Threat × 15, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# 🔐 Ameaças Mitigadas - Capítulo 10: Testes de Segurança
-
-Este capítulo define a estratégia, técnicas e ferramentas de **validação contínua da segurança da aplicação**, incluindo testes estáticos, dinâmicos, interativos, fuzzing, validação de regressão e pentesting.
-
-> ⚠️ As ameaças mitigadas por este capítulo são **técnicas e contextuais**, surgem na implementação e execução do software - e requerem **validação ativa e contínua para serem detetadas e corrigidas**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🧪 Categoria 1 - Vulnerabilidades no código ou lógica de aplicação
-
-| Ameaça                            | Fonte                              | Como surge                                            | Como a prática mitiga                                                  | Controlos associados                        | 🧹 Mitigada apenas por este capítulo? |
-|-----------------------------------|-------------------------------------|-------------------------------------------------------|-------------------------------------------------------------------------|---------------------------------------------|----------------------------------------|
-| Injeções (SQLi, OS Command, etc.) | OWASP Top 10 A01 / CAPEC-66        | Falta de sanitização ou validação                     | Detetadas por SAST + DAST com testes parametrizados                     | `addon/01-sast.md`, `addon/02-dast.md`      | ✅                                     |
-| Falhas de controlo de acesso      | OWASP Top 10 A01 / ASVS V4 / STRIDE| Controlo de permissões mal implementado               | Validadas por DAST + IAST + testes manuais                              | `addon/02-dast.md`, `addon/03-iast.md`      | ✅                                     |
-| Lógicas de negócio exploráveis    | OWASP Top 10 A04 / BSIMM           | Fluxos lógicos que permitem bypass ou fraude          | Requerem fuzzing, IAST e pentesting com contexto                        | `addon/04-fuzzing.md`, `addon/11-pen-testing.md` | ✅                              |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-167` | Injeções (SQLi, OS Command, etc.) | normative | heuristic |
+| Threat | `MT-168` | Falhas de controlo de acesso | normative | heuristic |
+| Threat | `MT-169` | Lógicas de negócio exploráveis | normative | heuristic |
+| Threat | `MT-170` | Regressão de segurança | normative | heuristic |
+| Threat | `MT-171` | Baixa cobertura dos testes | normative | heuristic |
+| Threat | `MT-172` | Falhas conhecidas não testadas | normative | heuristic |
+| Threat | `MT-173` | Falhas detetadas mas não resolvidas | normative | heuristic |
+| Threat | `MT-174` | Equipa sem feedback técnico | normative | heuristic |
+| Threat | `MT-175` | Validações não repetíveis | normative | heuristic |
+| Threat | `MT-176` | Testes manuais não escaláveis | normative | heuristic |
+| Threat | `MT-177` | Falta de testes antes de go-live | normative | heuristic |
+| Threat | `MT-178` | Decisão de qualidade feita sem base | normative | heuristic |
+| Threat | `MT-179` | Classes novas não detetadas por SAST/DAST | normative | heuristic |
+| Threat | `MT-180` | Testes superficiais sem contexto técnico | normative | heuristic |
+| Threat | `MT-181` | Ferramentas não calibradas por contexto | normative | heuristic |
 
 ---
 
-## 🔍 Categoria 2 - Defeitos regressivos e falhas reintroduzidas
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                            | Fonte                              | Como surge                                         | Como a prática mitiga                                                    | Controlos associados                         | 🧹 Mitigada apenas por este capítulo? |
-|-----------------------------------|-------------------------------------|----------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------|----------------------------------------|
-| Regressão de segurança            | OWASP SAMM / SSDF PW.8 / DSOMM     | Código novo reintroduz falha previamente corrigida | Testes de regressão com critérios de cobertura e automação                | `addon/05-validacao-regressao.md`            | ✅                                     |
-| Baixa cobertura dos testes        | OWASP SAMM / CAPEC / DSOMM         | Testes ignoram áreas críticas                      | Estratégia de cobertura baseada em risco + matriz de priorização          | `addon/06-cobertura-e-priorizacao.md`        | ✅                                     |
-| Falhas conhecidas não testadas    | BSIMM / ISO 27034 / DSOMM          | Ausência de ligação entre findings e testes         | Integração com findings e feedback das equipas para aprendizagem contínua | `addon/08-gestao-findings.md`, `addon/09-feedback-equipa.md` | ✅                    |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## ⚠️ Categoria 3 - Falta de visibilidade sobre falhas de segurança
-
-| Ameaça                               | Fonte                                | Como surge                                      | Como a prática mitiga                                                       | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
-|--------------------------------------|---------------------------------------|-------------------------------------------------|--------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Falhas detetadas mas não resolvidas | SSDF RV.1 / BSIMM / OSC&R / DSOMM    | Findings ignorados ou mal atribuídos            | Processo de gestão de findings com owner, risco e rastreio                    | `addon/08-gestao-findings.md`                 | ✅                                     |
-| Equipa sem feedback técnico          | BSIMM Intelligence / SAMM / DSOMM    | Falhas reportadas não chegam aos developers     | Integração sistemática de findings nos ciclos de feedback                     | `addon/09-feedback-equipa.md`                 | ✅                                     |
-| Validações não repetíveis           | ISO 27034 / SSDF PW.7 / DSOMM        | Testes manuais sem base reutilizável            | Estratégia formal e automatização de testes                                  | `addon/00-estrategia-testes.md`, `addon/07-integracao-pipeline.md` | ✅                |
-
----
-
-## 🛠️ Categoria 4 - Falta de integração no ciclo de vida
-
-| Ameaça                                     | Fonte                             | Como surge                                          | Como a prática mitiga                                                           | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
-|--------------------------------------------|------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Testes manuais não escaláveis              | SSDF PW.5 / SLSA Build / DSOMM     | Não se testa a cada alteração                       | Integração em CI/CD com execução automática por tipo de alteração              | `addon/07-integracao-pipeline.md`             | ✅                                     |
-| Falta de testes antes de go-live           | ISO 27034 / SSDF PW.7              | Deploy feito sem cobertura mínima validada         | Checklist com critérios de testes mínimos e rastreio de resultados             | `20-checklist-revisao.md`               | ❌ Cap. 01                             |
-| Decisão de qualidade feita sem base        | BSIMM QA / SAMM / DSOMM            | Go/no-go baseado em perceção                        | Métricas de cobertura, findings, risco e histórico                              | `addon/06-cobertura-e-priorizacao.md`         | ✅                                     |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-167` | STRIDE | Injeções (SQLi, OS Command, etc.) | — | `addon/01-sast.md`, `addon/02-dast.md` | parcial | Explícito |
+| `MT-168` | STRIDE | Falhas de controlo de acesso | — | `addon/02-dast.md`, `addon/03-iast.md` | parcial | Explícito |
+| `MT-169` | STRIDE | Lógicas de negócio exploráveis | — | `addon/04-fuzzing.md`, `addon/11-pen-testing.md` | parcial | Explícito |
+| `MT-170` | STRIDE | Regressão de segurança | — | `addon/05-validacao-regressao.md` | parcial | Explícito |
+| `MT-171` | STRIDE | Baixa cobertura dos testes | — | `addon/06-cobertura-e-priorizacao.md` | parcial | Explícito |
+| `MT-172` | STRIDE | Falhas conhecidas não testadas | — | `addon/08-gestao-findings.md`, `addon/09-feedback-equipa.md` | parcial | Explícito |
+| `MT-173` | STRIDE | Falhas detetadas mas não resolvidas | — | `addon/08-gestao-findings.md` | parcial | Explícito |
+| `MT-174` | STRIDE | Equipa sem feedback técnico | — | `addon/09-feedback-equipa.md` | parcial | Explícito |
+| `MT-175` | STRIDE | Validações não repetíveis | — | `addon/00-estrategia-testes.md`, `addon/07-integracao-pipeline.md` | parcial | Explícito |
+| `MT-176` | STRIDE | Testes manuais não escaláveis | — | `addon/07-integracao-pipeline.md` | parcial | Explícito |
+| `MT-177` | STRIDE | Falta de testes antes de go-live | — | `20-checklist-revisao.md` | parcial | Explícito |
+| `MT-178` | STRIDE | Decisão de qualidade feita sem base | — | `addon/06-cobertura-e-priorizacao.md` | parcial | Explícito |
+| `MT-179` | STRIDE | Classes novas não detetadas por SAST/DAST | — | `addon/11-pen-testing.md` | parcial | Explícito |
+| `MT-180` | STRIDE | Testes superficiais sem contexto técnico | — | `addon/00-estrategia-testes.md` | parcial | Explícito |
+| `MT-181` | STRIDE | Ferramentas não calibradas por contexto | — | `addon/00-estrategia-testes.md`, `addon/09-feedback-equipa.md` | parcial | Explícito |
 
 ---
 
-## 🧐 Categoria 5 - Incapacidade de detetar novas classes de vulnerabilidades
+## § AntiPattern exposure mapping
 
-| Ameaça                                     | Fonte                              | Como surge                                           | Como a prática mitiga                                                              | Controlos associados                          | 🧹 Mitigada apenas por este capítulo? |
-|--------------------------------------------|-------------------------------------|------------------------------------------------------|-------------------------------------------------------------------------------------|------------------------------------------------|----------------------------------------|
-| Classes novas não detetadas por SAST/DAST  | ENISA DevSecOps / BSIMM PenTest    | Ferramentas automatizadas com dicionário fixo       | Pentesting com foco em comportamentos, fluxos e padrões anómalos                   | `addon/11-pen-testing.md`                     | ✅                                     |
-| Testes superficiais sem contexto técnico   | STRIDE / CAPEC / ASVS              | Falta de compreensão da arquitetura ou risco         | Alinhamento dos testes com criticidade, arquitetura e ameaça                       | `addon/00-estrategia-testes.md`               | ✅                                     |
-| Ferramentas não calibradas por contexto    | OWASP SAMM / OWASP Testing Guide / DSOMM | Testes genéricos sem adaptação                       | Estratégia por risco + integração de feedback de contexto                          | `addon/00-estrategia-testes.md`, `addon/09-feedback-equipa.md` | ✅               |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## ✅ Conclusão
+## § CWE references (supporting only)
 
-O Capítulo 10 fornece a **última linha de defesa prática antes do go-live**, sendo o único capaz de:
+_(Nenhuma threat com CWE reference para este capítulo.)_
 
-- Detetar vulnerabilidades ativas e exploráveis;
-- Prevenir regressões e assegurar a repetibilidade de validações;
-- Garantir que findings se traduzem em melhoria real da aplicação.
+---
 
-> ✅ Este capítulo **mitiga pelo menos 12 ameaças que não são cobertas por nenhum outro**, com foco na **detecção ativa de falhas no código, arquitetura e execução da aplicação**.
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-> 📌 As práticas descritas respondem diretamente a requisitos de frameworks como **SSDF**, **OWASP SAMM**, **BSIMM**, **ISO 27034**, **CAPEC**, **ENISA DevSecOps** e **DSOMM**, integrando validação ativa, feedback, gates, cobertura proporcional ao risco e rastreabilidade objetiva.
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

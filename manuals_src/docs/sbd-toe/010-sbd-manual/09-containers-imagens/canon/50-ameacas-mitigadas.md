@@ -1,106 +1,114 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas - Containers e Imagens
-description: Ameaças mitigadas pelas práticas deste capítulo, com mapeamento a OWASP/OSC&R, CAPEC, SSDF, SLSA, CIS e outras referências
-tags: [ameaças, containers, imagens, supply chain, kubernetes, proveniência, hardening]
-sidebar_position: 50
+# 50. Ameaças Mitigadas — Containers e Imagens
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+Total: **18 entidades** (Threat × 18, AntiPattern × 0, Signal × 0) mapped a este capítulo.
 
-# 🔐 Ameaças Mitigadas - Capítulo 09: Containers e Imagens
-
-Este capítulo prescreve práticas de **construção segura de imagens, assinatura e proveniência, governação de registos, validação de manifestos e hardening do runtime**, garantindo integridade, rastreabilidade e segurança desde o _build_ até à execução.
-
-> 🎯 As ameaças aqui tratadas decorrem de **imagens vulneráveis ou não confiáveis, pipelines sem garantias de integridade, registos desprotegidos, configurações inseguras de runtime e falta de observabilidade/rastreabilidade**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 📦 Categoria 1 - Cadeia de fornecimento de imagens (build & base images)
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Imagens base vulneráveis/obsoletas | OWASP Top 10 A06, CAPEC-310, CWE-1104 | Uso de _base images_ com CVEs não corrigidas | _Image scanning_ no CI/CD, políticas de bloqueio por severidade, renovação periódica de _base images_ | *Checklist 3–4*, *Policies: Gestão de Vulnerabilidades*, *Rastreabilidade: SSDF RV.1* | ✅ |
-| Inclusão de dependências inseguras no build | OSC&R **E.4/T.3**,  ST 1.x | Injeção de libs ou pacotes sem validação | Inventário de componentes na imagem, _scan_ de licenças e CVEs; falha bloqueia _merge/deploy_ | Cap. 05 (SBOM/SCA), *Checklist 3–4* | ❌ (Cap. 05) |
-| Conteúdo inesperado no _context_ de build | CAPEC-649 | Ficheiros sensíveis entram no _build context_ | `.dockerignore` rigoroso; _lint_ de Dockerfile; _build_ hermético | *Policies: Construção Segura de Imagens* | ✅ |
-| Configurações inseguras no Dockerfile | CIS Docker 2.x | Uso de `ADD` indevido, `latest`, _layering_ frágil | Linters (Hadolint/Regole), _policy-as-code_ para Dockerfile | *Checklist 6*, *Policies: Construção Segura* | ✅ |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-149` | Imagens base vulneráveis/obsoletas | normative | heuristic |
+| Threat | `MT-150` | Inclusão de dependências inseguras no build | normative | heuristic |
+| Threat | `MT-151` | Conteúdo inesperado no _context_ de build | normative | heuristic |
+| Threat | `MT-152` | Configurações inseguras no Dockerfile | normative | heuristic |
+| Threat | `MT-153` | Imagens não assinadas / sem verificação | normative | heuristic |
+| Threat | `MT-154` | Substituição maliciosa em registo | normative | heuristic |
+| Threat | `MT-155` | Falta de trilho de auditoria (quem construiu o quê) | normative | heuristic |
+| Threat | `MT-156` | Execução como root / capabilities excessivas | normative | heuristic |
+| Threat | `MT-157` | Montagens e volumes inseguros | normative | heuristic |
+| Threat | `MT-158` | Falta de políticas de rede | normative | heuristic |
+| Threat | `MT-159` | _Admission_ permissivo | normative | heuristic |
+| Threat | `MT-160` | Segredos embebidos em imagem | normative | heuristic |
+| Threat | `MT-161` | Exposição em variáveis de ambiente | normative | heuristic |
+| Threat | `MT-162` | Manifestos inseguros aprovados | normative | heuristic |
+| Threat | `MT-163` | Desalinhamento imagem↔manifesto | normative | heuristic |
+| Threat | `MT-164` | Falta de rastreabilidade de deploys | normative | heuristic |
+| Threat | `MT-165` | _Shadow containers_ fora do pipeline | normative | heuristic |
+| Threat | `MT-166` | _Drift_ de configuração | normative | heuristic |
 
 ---
 
-## 🔏 Categoria 2 - Integridade, assinatura e proveniência
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Imagens não assinadas / sem verificação | SLSA L2–L3, SSDF PW.5 | Execução de imagens sem verificar origem | Assinatura (ex.: Sigstore/Cosign), verificação de _digest_ e _attestation_ no _admission_ | *Checklist 5 & 10–11*, *Policies: Assinatura e Proveniência* | ✅ |
-| Substituição maliciosa em registo | OSC&R **T.3**, ENISA Cloud | _Pull_ de imagem com _tag_ trocada | _Digest pinning_, registos privados, _provenance attestation_ no _deploy_ | *Rastreabilidade: SLSA/SSDF*, *Policies: Repositórios* | ✅ |
-| Falta de trilho de auditoria (quem construiu o quê) | BSIMM CMVM 1.3 | Ausência de registo entre commit → build → imagem → deploy | CI/CD com evidência imutável; correlação commit/SHA/pipeline/deploy | *Checklist 14–15*, *Rastreabilidade: DSOMM Ops* | ✅ |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-## 🧰 Categoria 3 - Registos e Repositórios de Containers
-
-| Ameaça                               | Como surge                               | Como a prática mitiga                                                                 | Controlos associados                                         | 🧩 Mitigada apenas por este capítulo? |
-|-------------------------------------|-------------------------------------------|----------------------------------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------|
-| Acesso indevido a registos          | Controlo de acesso frouxo, credenciais partilhadas | Registos privados, RBAC, _scopes_ mínimos, _audit logs_                               | *Policies: Governação de Repositórios*, *Checklist 9*        | ✅ |
-| Proliferação de imagens obsoletas   | Ausência de retenção/limpeza              | Políticas de retenção e _garbage collection_; _rebuild_ periódico                      | *Policies: Limpeza/Obsolescência*, *Checklist 12*            | ✅ |
-| Upload de imagens sem controlo      | Qualquer equipa publica artefactos        | _Ownership_ formal, _review_ e aprovação de publicação                                 | *Policies: Governação de Repositórios*                      | ✅ |
-
-
-## 🖧 Categoria 4 - Configuração insegura de runtime (Docker/Kubernetes)
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Execução como root / capabilities excessivas | CIS Docker/K8s, STRIDE (EoP) | `USER root`, `CAP_SYS_ADMIN`, `privileged: true` | *Least privilege*, `securityContext`, _drop capabilities_, _PSP/PSA_ equivalentes | *Checklist 7–9*, *Policies: Hardening de Runtime* | ✅ |
-| Montagens e volumes inseguros | CIS, CAPEC-15 | `:rw` em `/var/run/docker.sock`, partilhas amplas | Regras de _mounts_, _read-only rootfs_, _tmpfs_ controlado | *Policies: Hardening de Runtime* | ✅ |
-| Falta de políticas de rede | CIS K8s, ENISA | _Pods_ sem _NetworkPolicy_ | _Network policies_ obrigatórias por namespace/serviço | *Policies: Runtime*, *Checklist 8* | ✅ |
-| _Admission_ permissivo | OPA/Gatekeeper, SAMM DEP 1.2 | Qualquer manifesto é aceite | _Admission controllers_ com _policy-as-code_ (Conftest/OPA) | *Checklist 11*, *Policies: Validação de Manifestos* | ✅ |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-149` | STRIDE | Imagens base vulneráveis/obsoletas | — | *Checklist 3–4*, *Policies: Gestão de Vulnerabilidades*, *Rastreabilidade: SSDF RV.1* | forte | Explícito |
+| `MT-150` | STRIDE | Inclusão de dependências inseguras no build | — | Cap. 05 (SBOM/SCA), *Checklist 3–4* | parcial | Explícito |
+| `MT-151` | STRIDE | Conteúdo inesperado no _context_ de build | — | *Policies: Construção Segura de Imagens* | parcial | Explícito |
+| `MT-152` | STRIDE | Configurações inseguras no Dockerfile | — | *Checklist 6*, *Policies: Construção Segura* | parcial | Explícito |
+| `MT-153` | STRIDE | Imagens não assinadas / sem verificação | — | *Checklist 5 & 10–11*, *Policies: Assinatura e Proveniência* | parcial | Explícito |
+| `MT-154` | STRIDE | Substituição maliciosa em registo | — | *Rastreabilidade: SLSA/SSDF*, *Policies: Repositórios* | parcial | Explícito |
+| `MT-155` | STRIDE | Falta de trilho de auditoria (quem construiu o quê) | — | *Checklist 14–15*, *Rastreabilidade: DSOMM Ops* | parcial | Explícito |
+| `MT-156` | STRIDE | Execução como root / capabilities excessivas | — | *Checklist 7–9*, *Policies: Hardening de Runtime* | parcial | Explícito |
+| `MT-157` | STRIDE | Montagens e volumes inseguros | — | *Policies: Hardening de Runtime* | parcial | Explícito |
+| `MT-158` | STRIDE | Falta de políticas de rede | — | *Policies: Runtime*, *Checklist 8* | parcial | Explícito |
+| `MT-159` | STRIDE | _Admission_ permissivo | — | *Checklist 11*, *Policies: Validação de Manifestos* | parcial | Explícito |
+| `MT-160` | STRIDE | Segredos embebidos em imagem | — | *Policies: Segredos*, *Checklist 3 & 5* | parcial | Explícito |
+| `MT-161` | STRIDE | Exposição em variáveis de ambiente | — | *Policies: Segredos* | parcial | Explícito |
+| `MT-162` | STRIDE | Manifestos inseguros aprovados | — | *Checklist 11*, *Policies: Validação de Manifestos* | parcial | Explícito |
+| `MT-163` | STRIDE | Desalinhamento imagem↔manifesto | — | *Rastreabilidade: SLSA*, *Checklist 2 & 10–11* | parcial | Explícito |
+| `MT-164` | STRIDE | Falta de rastreabilidade de deploys | — | *Checklist 14–15*, *DSOMM Ops Monitoring* | parcial | Explícito |
+| `MT-165` | STRIDE | _Shadow containers_ fora do pipeline | — | *Policies: Runtime/Registos*, *Rastreabilidade: DSOMM* | parcial | Explícito |
+| `MT-166` | STRIDE | _Drift_ de configuração | — | *Policies: Runtime*, Cap. 08 (IaC) | parcial | Explícito |
 
 ---
 
-## 🔐 Categoria 5 - Segredos e informação sensível
+## § AntiPattern exposure mapping
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Segredos embebidos em imagem | CAPEC-118, SSDF PS.1 | `ENV`/`ARG` com chaves; ficheiros copiados para _layers_ | *Secrets scanning*, _build args_ efémeros, uso de _vault/secret manager_ | *Policies: Segredos*, *Checklist 3 & 5* | ❌ (Cap. 08) |
-| Exposição em variáveis de ambiente | CIS, DSOMM | Injeção de segredos por ENV | *Mounts* seguros, *sealed secrets*, RBAC por namespace | *Policies: Segredos* | ❌ (Cap. 08) |
+_(Nenhuma antipattern→threat relation mapped a este capítulo.)_
 
 ---
 
-## 📜 Categoria 6 - Manifestos e _policy-as-code_ (deploy seguro)
+## § CWE references (supporting only)
 
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Manifestos inseguros aprovados | SSDF RV.1, SAMM 2.B | Falta de validação pré-deploy | _Policy-as-code_ (OPA/Conftest), _schema validation_, _review_ obrigatório | *Checklist 11*, *Policies: Validação de Manifestos* | ✅ |
-| Desalinhamento imagem↔manifesto | SLSA | _Tag drift_ entre o aprovado e o executado | _Digest pinning_ e verificação no _admission_ | *Rastreabilidade: SLSA*, *Checklist 2 & 10–11* | ✅ |
+CWE references per §26 §4: **CWE apenas como suporte limitado, NÃO como substituto de taxonomy de threat**. Mapping para Manual threats listed below.
 
----
-
-## 📡 Categoria 7 - Observabilidade, _drift_ e *shadow containers*
-
-| Ameaça | Fonte | Como surge | Como a prática mitiga | Controlos associados | 🧩 Mitigada apenas por este capítulo? |
-|---|---|---|---|---|---|
-| Falta de rastreabilidade de deploys | BSIMM CMVM 1.3 | Deploy sem trilho de auditoria | Correlação **commit → pipeline → digest → deploy** | *Checklist 14–15*, *DSOMM Ops Monitoring* | ✅ |
-| _Shadow containers_ fora do pipeline | OSC&R **M.4** | Execução ad-hoc por terceiros | Inventário/monitorização de runtime; _admission_ restritivo | *Policies: Runtime/Registos*, *Rastreabilidade: DSOMM* | ✅ |
-| _Drift_ de configuração | ENISA, CIS | Diferenças entre definido e executado | _Drift detection_ e reconciliação; alerta/bloqueio | *Policies: Runtime*, Cap. 08 (IaC) | ❌ (Cap. 08) |
+| CWE-ID | Linked threat | Note |
+|---|---|---|
+| `CWE-1104` | `?` | supporting reference; primary anchor é Manual threat |
 
 ---
 
-## ✅ Conclusão
+## § V1 overlay — mitigation pathway (where Core-mapped)
 
-As práticas deste capítulo reduzem **risco sistémico na cadeia de fornecimento de software** ao:
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
-- Garantirem **integridade e proveniência** (assinatura, _attestations_, _digest pinning_);
-- Imporem **construção e execução seguras** (hardening de Docker/Kubernetes, *least privilege*, *admission controllers*);
-- Assegurarem **rastreabilidade auditável** de ponta a ponta (commit → imagem → deploy);
-- Reforçarem a **governação de registos** (acesso, retenção, limpeza e _ownership_ claros).
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
 
-> 📌 O capítulo reduz materialmente ameaças ligadas a integridade de imagens, proveniência, hardening e rastreabilidade operacional. Leituras cruzadas com **SLSA**, **CIS**, **ENISA** e superfícies equivalentes pertencem melhor ao canon de rastreabilidade, não a este documento de ameaças mitigadas.
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

@@ -1,93 +1,118 @@
----
-id: ameacas-mitigadas
-title: Ameaças Mitigadas pelas Práticas de Monitorização e Operações
-sidebar_position: 50
-description: Tabela de ameaças mitigadas pelas práticas de logging, correlação e resposta descritas neste capítulo.
-tags: [ameacas, deteccao, resposta, logging, osc&r, ameaças, mitigação, visibilidade]
+# 50. Ameaças Mitigadas — Monitorização e Operações
+
+## Sumário
+
+Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
+
+Seis secções:
+
+- **§ Manual ontology V2 entities** — Threat + AntiPattern + Signal canonical
+- **§ Threat surfaces** — Manual + CAPEC primary surfaces
+- **§ AntiPattern exposure mapping** — antipattern → threat exposure relations
+- **§ CWE references** — supporting only (per §26 §4 discipline)
+- **§ V1 overlay** — mitigation pathway where Core-mapped
+- **§ Future-work register** — threat gaps registered para P8 §10
 
 ---
 
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
 
+Total: **25 entidades** (Threat × 15, AntiPattern × 7, Signal × 3) mapped a este capítulo.
 
-> **Método:** Ver [Metodologia de Validação de Claims](../../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
-
-# ⚡️ Ameaças Mitigadas pelas Práticas de Monitorização e Operações
-
-Este documento apresenta uma visão consolidada das **ameaças técnicas e operacionais mitigadas pelas práticas descritas no Capítulo 12 - Monitorização, Logging e Resposta a Incidentes**.
-
-A referência principal é o modelo **OWASP OSC&R** (Open Software Supply Chain Attack Reference), complementado com taxonomias como **MITRE ATT&CK**, **STRIDE**, **CAPEC**, **SSDF**, **BSIMM**, **CIS Controls** e o **OWASP DSOMM** (*Operations*).
-
-> ⚠️ Este capítulo não mitiga vulnerabilidades diretamente, mas **é essencial para detetar falhas, reagir a eventos de segurança e garantir visibilidade runtime**, funcionando como **segunda linha de defesa ativa**.
-
----
-
-## 🎯 Como interpretar este documento
-
-Este documento não mede coverage por framework nem maturidade organizacional. Mede apenas a mitigação *chapter-scoped* de categorias de ameaça ou padrões de ataque relevantes para o âmbito do capítulo.
-
-As fontes primárias de ameaça deste documento são **CAPEC** e superfícies de ameaça nativas do manual. Referências como **CWE** podem surgir de forma *bounded* para clarificar a *weakness* subjacente; outras frameworks podem aparecer apenas como contexto técnico complementar e não devem ser lidas como catálogo primário de ameaças.
-
----
-
-## 🔍 Categoria 1 - Ausência de logging e visibilidade operacional
-
-| Ameaça                            | Fonte                        | Como surge                                    | Como a prática mitiga                                                | Controlos associados                       |
-|----------------------------------|-------------------------------|-----------------------------------------------|------------------------------------------------------------------------|--------------------------------------------|
-| Eventos críticos não registados  | SSDF PW.8 / ISO 27001 A.12   | Logging desestruturado ou ausente             | Logging estruturado, obrigatório e centralizado                        | `addon/02-controles-logging-centralizado.md` |
-| Logs voláteis ou truncados       | STRIDE (Repudiation) / CAPEC-233 | Logs locais não persistidos ou sem ACL       | Retenção ≥30 dias, envio seguro, controle de formato e destino        | `addon/02-controles-logging-centralizado.md` |
-| Falta de rastreabilidade de execução | DSOMM → Operations / MITRE T1562 | Ausência de contexto e origem em logs     | Tagging e correlação por aplicação, domínio e pipeline                | `addon/06-correlacao-anomalias.md`         |
-
----
-
-## 🚨 Categoria 2 - Alertas inexistentes ou ineficazes
-
-| Ameaça                         | Fonte                           | Como surge                                  | Como a prática mitiga                                                   | Controlos associados                    |
-|--------------------------------|----------------------------------|---------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
-| Incidentes sem alerta          | MITRE T1609 / SSDF RV.1         | Falta de alertas automáticos                | Alertas baseados em eventos críticos, integração com SIEM                | `addon/03-alertas-eventos-criticos.md` |
-| Alertas ignorados por ruído    | OWASP Logging / BSIMM           | Volume elevado sem priorização              | Filtros por criticidade, canais apropriados, tuning contínuo            | `addon/03-alertas-eventos-criticos.md`, `addon/07-metricas-indicadores.md` |
-| Falta de correlação de alertas | CAPEC-310 / STRIDE              | Alertas isolados, sem contexto de origem    | Correlação entre fontes com perfil comportamental e deduplicação        | `addon/06-correlacao-anomalias.md`     |
+| Entity type | ID | Label | Authority class | Source mode |
+|---|---|---|---|---|
+| Threat | `MT-197` | Eventos críticos não registados | normative | heuristic |
+| Threat | `MT-198` | Logs voláteis ou truncados | normative | heuristic |
+| Threat | `MT-199` | Falta de rastreabilidade de execução | normative | heuristic |
+| Threat | `MT-200` | Incidentes sem alerta | normative | heuristic |
+| Threat | `MT-201` | Alertas ignorados por ruído | normative | heuristic |
+| Threat | `MT-202` | Falta de correlação de alertas | normative | heuristic |
+| Threat | `MT-203` | Incidentes sem owner definido | normative | heuristic |
+| Threat | `MT-204` | Reação ad-hoc ou tardia | normative | heuristic |
+| Threat | `MT-205` | Eventos sem acionamento de ação | normative | heuristic |
+| Threat | `MT-206` | Ausência de métricas de postura | normative | heuristic |
+| Threat | `MT-207` | Impossibilidade de priorizar riscos | normative | heuristic |
+| Threat | `MT-208` | Dados sem granularidade ou visão | normative | heuristic |
+| Threat | `MT-209` | Novos sistemas sem monitorização | normative | heuristic |
+| Threat | `MT-210` | Equipas ignoram alertas operacionais | normative | heuristic |
+| Threat | `MT-211` | Dados não usados para melhoria contínua | normative | heuristic |
+| AntiPattern | `sem:antipattern:alertas-nao-acionaveis` | Alertas não acionáveis | semantic | scored |
+| AntiPattern | `sem:antipattern:demasiados-alertas` | Demasiados alertas | semantic | scored |
+| AntiPattern | `sem:antipattern:detecao-sem-resposta` | Deteção sem resposta | semantic | scored |
+| AntiPattern | `sem:antipattern:falta-de-integracao-com-irp` | Falta de integração com IRP | semantic | scored |
+| AntiPattern | `sem:antipattern:logs-incompletos-ou-ignorados` | Logs incompletos ou ignorados | semantic | scored |
+| AntiPattern | `sem:antipattern:logs-nao-estruturados` | Logs não estruturados | semantic | scored |
+| AntiPattern | `sem:antipattern:retencao-insuficiente` | Retenção insuficiente | semantic | scored |
+| Signal | `sem:signal:falhas-de-login` | Falhas de login | semantic | scored |
+| Signal | `sem:signal:logs` | Logs | semantic | scored |
+| Signal | `sem:signal:metricas-mttd-mttr` | Métricas MTTD/MTTR | semantic | scored |
 
 ---
 
-## 🧯 Categoria 3 - Resposta ineficaz ou descoordenada
+## § Threat surfaces — Manual + CAPEC primary
 
-| Ameaça                         | Fonte                              | Como surge                                | Como a prática mitiga                                                   | Controlos associados                    |
-|--------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
-| Incidentes sem owner definido  | SSDF RM.3 / ISO 27001 A.16         | Sem responsáveis definidos                | Tabelas de owners e canais de escalamento automatizado                   | `addon/05-monitorizacao-operacoes.md`   |
-| Reação ad-hoc ou tardia        | ENISA DevSecOps / BSIMM Ops        | Falta de processo de resposta             | Integração com IRP, uso de playbooks e simulações regulares              | `addon/05-monitorizacao-operacoes.md`   |
-| Eventos sem acionamento de ação| MITRE / OSC&R                      | Logs ignorados após deteção               | Integração com workflows e mecanismos de correção (chatops, SOAR)        | `addon/05-monitorizacao-operacoes.md`   |
+Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
----
-
-## 📊 Categoria 4 - Falta de métricas e capacidade de medição
-
-| Ameaça                             | Fonte                              | Como surge                                | Como a prática mitiga                                                   | Controlos associados                    |
-|------------------------------------|-------------------------------------|-------------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
-| Ausência de métricas de postura    | SSDF PW.5 / ISO 27034              | Sem indicadores de cobertura ou impacto   | KPIs de segurança: MTTD, MTTR, % de logs, alertas por severidade        | `addon/07-metricas-indicadores.md`     |
-| Impossibilidade de priorizar riscos| NIST 800-137 / ISO 27005           | Sem visão integrada de exposição          | Matriz de controlos por risco, dashboards operacionais                   | `addon/08-matriz-controles-por-risco.md`|
-| Dados sem granularidade ou visão   | BSIMM / OWASP                      | Visão agregada e não segmentada           | Visualização por aplicação, domínio, origem de evento                    | `addon/07-metricas-indicadores.md`     |
-
----
-
-## 🔄 Categoria 5 - Integração deficiente no ciclo de vida
-
-| Ameaça                                  | Fonte                            | Como surge                              | Como a prática mitiga                                                   | Controlos associados                    |
-|-----------------------------------------|-----------------------------------|-----------------------------------------|--------------------------------------------------------------------------|-----------------------------------------|
-| Novos sistemas sem monitorização        | SSDF PW.1 / ISO 27001 A.14       | Ciclo de vida sem requisitos de logging | Inclusão formal nos critérios de aceitação e Definition of Done          | `15-aplicacao-lifecycle.md`      |
-| Equipas ignoram alertas operacionais    | OWASP / BSIMM Ops                | Alertas fora dos canais de decisão      | Integração com ferramentas operacionais e turnos on-call                 | `addon/05-monitorizacao-operacoes.md`   |
-| Dados não usados para melhoria contínua | DSOMM / SSDF RM.2                | Logs não geram ações corretivas         | Integração com KPIs, backlog de segurança, validação contínua           | `addon/07-metricas-indicadores.md`, `20-checklist-revisao.md` |
+| Threat ID | Category | Essence | CAPEC anchor | Associated controls | Mitigation strength | §26 label |
+|---|---|---|---|---|---|---|
+| `MT-197` | STRIDE | Eventos críticos não registados | — | `addon/02-controles-logging-centralizado.md` | parcial | Explícito |
+| `MT-198` | STRIDE | Logs voláteis ou truncados | — | `addon/02-controles-logging-centralizado.md` | parcial | Explícito |
+| `MT-199` | STRIDE | Falta de rastreabilidade de execução | — | `addon/06-correlacao-anomalias.md` | parcial | Explícito |
+| `MT-200` | STRIDE | Incidentes sem alerta | — | `addon/03-alertas-eventos-criticos.md` | parcial | Explícito |
+| `MT-201` | STRIDE | Alertas ignorados por ruído | — | `addon/03-alertas-eventos-criticos.md`, `addon/07-metricas-indicadores.md` | parcial | Explícito |
+| `MT-202` | STRIDE | Falta de correlação de alertas | — | `addon/06-correlacao-anomalias.md` | parcial | Explícito |
+| `MT-203` | STRIDE | Incidentes sem owner definido | — | `addon/05-monitorizacao-operacoes.md` | parcial | Explícito |
+| `MT-204` | STRIDE | Reação ad-hoc ou tardia | — | `addon/05-monitorizacao-operacoes.md` | parcial | Explícito |
+| `MT-205` | STRIDE | Eventos sem acionamento de ação | — | `addon/05-monitorizacao-operacoes.md` | parcial | Explícito |
+| `MT-206` | STRIDE | Ausência de métricas de postura | — | `addon/07-metricas-indicadores.md` | parcial | Explícito |
+| `MT-207` | STRIDE | Impossibilidade de priorizar riscos | — | `addon/08-matriz-controles-por-risco.md` | parcial | Explícito |
+| `MT-208` | STRIDE | Dados sem granularidade ou visão | — | `addon/07-metricas-indicadores.md` | parcial | Explícito |
+| `MT-209` | STRIDE | Novos sistemas sem monitorização | — | `15-aplicacao-lifecycle.md` | parcial | Explícito |
+| `MT-210` | STRIDE | Equipas ignoram alertas operacionais | — | `addon/05-monitorizacao-operacoes.md` | parcial | Explícito |
+| `MT-211` | STRIDE | Dados não usados para melhoria contínua | — | `addon/07-metricas-indicadores.md`, `20-checklist-revisao.md` | parcial | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § AntiPattern exposure mapping
 
-O Capítulo 12 constitui o **eixo central da visibilidade runtime**, permitindo:
+AntiPattern → Threat exposure relations per Manual ontology V2 `antipattern_threat_links.jsonl`. Cada link indica que o antipattern (quando presente em código/processo) expõe a ameaça.
 
-- Detetar falhas e abusos em tempo útil;
-- Reduzir o tempo de exposição (MTTD/MTTR);
-- Correlacionar sinais dispersos em eventos acionáveis;
-- Reagir com coordenação e eficácia operacional.
+| AntiPattern | Exposes threat | Confidence | Justification |
+|---|---|---|---|
+| `alertas-nao-acionaveis` | `MT-200` | 0.70 | alias_match, bundle_grounding, risk_match |
 
-> 📌 Estas práticas mitigam **mais de 15 ameaças operacionais conhecidas** e são pré-requisito para modelos de resposta modernos como SOAR, IRP e auditoria contínua.
+---
 
-> ⚙️ São exigidas direta ou indiretamente por **SSDF**, **BSIMM**, **ISO 27001**, **CIS v8**, **ENISA**, **MITRE ATT&CK**, **OSC&R** e **DSOMM** (domínio *Operations*), sendo a fundação da **segurança como sistema vivo**.
+## § CWE references (supporting only)
+
+_(Nenhuma threat com CWE reference para este capítulo.)_
+
+---
+
+## § V1 overlay — mitigation pathway (where Core-mapped)
+
+V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
+
+_(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / control_mitigates_threat relations não totalmente extracted em este KG state; deferred a Codex post-Run-2 delta evaluation. Consult `25-rastreabilidade.md` for V1 entity → ES grounding per chapter; mitigation pathway inferable from existing Iter 4 + Run 1 layered output.)_
+
+---
+
+## § Future-work register (threat gaps)
+
+_(Nenhum threat em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Threats canonical:** `data/entities/mitigated_threats.json` (233 items)
+- **AntiPatterns canonical:** `data/publish/semantic/antipatterns.jsonl` (26 items)
+- **Signals canonical:** `data/publish/semantic/signals.jsonl` (23 items)
+- **AntiPattern→Threat relations:** `data/publish/semantic/antipattern_threat_links.jsonl`
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 §4 discipline applied:** Manual + CAPEC primary; CWE supporting only
+- **Mitigation strength rule:** deterministic per `associated_controls` count + cross_chapter flag + confidence
+- **Generated by:** Manual Agent Run 2 (50-ameacas-mitigadas enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

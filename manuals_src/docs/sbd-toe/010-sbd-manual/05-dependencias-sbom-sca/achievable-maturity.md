@@ -1,81 +1,91 @@
----
-id: achievable-maturity
-title: Mapeamento de Maturidade - Capítulo 05
-sidebar_position: 10
-tags: [canon, maturidade, SAMM, SLSA, DSOMM]
----
+# Achievable Maturity — Dependências, SBOM e SCA
 
-> **Método:** Ver [Metodologia de Validação de Claims](../00-fundamentos/canon/26-metodologia-validacao-claims.md) para a baseline empírica dos autores, validação por índices semânticos, ontology backtrace e comparação com fontes externas.
+## Sumário
 
-# 📈 Maturidade - Dependências, SBOM e SCA
+Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
-Este documento apresenta o mapeamento entre as práticas descritas no Capítulo 05 do SbD-ToE - *Gestão de Dependências, SBOM e SCA* - e os principais frameworks de segurança e maturidade:
+Cinco secções:
 
-- **OWASP SAMM**
-- **OWASP DSOMM**
-- **SLSA**
-
-O capítulo prescreve práticas formais para identificação, validação e governação contínua de dependências externas e componentes de terceiros, com integração de SBOM, políticas e SCA.
+- **§ Manual ontology V2 entities** — MaturityMapping + Practice + Control entities relevantes
+- **§ SAMM v2 / DSOMM maturity progression** — primary maturity sources per §26 §4
+- **§ SLSA build/integrity progression** — onde aplicável a este capítulo
+- **§ Out-of-Maturity scope** — regulatory alignment (NÃO maturity score)
+- **§ Future-work register** — maturity gaps registered para P8 §10
 
 ---
 
-## 🎯 Como interpretar este mapeamento de maturidade
+## § Manual ontology V2 — entities relevantes para maturity
 
-Este documento não mede a maturidade global de uma organização. Mede apenas o contributo deste capítulo para domínios de maturidade reconhecidos nas frameworks selecionadas.
+Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
-| Framework   | Avaliação usada                 | Justificação                                      |
-|-------------|----------------------------------|---------------------------------------------------|
-| OWASP SAMM  | `n / 3`                          | Modelo prescritivo com progressão explícita       |
-| OWASP DSOMM | `n / m`                          | Níveis formais por domínio técnico                |
-| SLSA        | Nível máximo suportado (1–4)     | Leitura bounded de supply chain / build / release |
-
-## 🧭 Visão Geral de Alinhamento
-
-| Framework         | Domínios Relevantes                              | Práticas ou Objetos Cobertos                                              | Avaliação de Maturidade        |
-|------------------|---------------------------------------------------|---------------------------------------------------------------------------|--------------------------------|
-| OWASP SAMM v2.1  | Construction → Dependency Management              | SBOM, políticas de aceitação, exceções, validação e bloqueio              | **2 / 3**                      |
-| OWASP DSOMM      | Policy, Build & Deploy, Tooling                   | Políticas de risco, hardening, bloqueios CI/CD, rastreabilidade SCA       | **2 / 3** (média dos domínios) |
-| SLSA v1.0        | Provenance, Build Integrity, Dependency Control   | SBOM, pinning, proveniência de dependências                               | **Nível 2 / 4**                |
-
----
-
-## 🧱 OWASP SAMM - Construction → Dependency Management
-
-| Nível | Descrição SAMM                                                     | Cobertura pelo Cap. 05                                |
-|-------|--------------------------------------------------------------------|--------------------------------------------------------|
-| 1     | Identificação e listagem manual de dependências                    | ✅ SBOM obrigatória por build                          |
-| 2     | Processo formal de aceitação, rastreio e controlo de risco         | ✅ Políticas, exceções e integração com SCA            |
-| 3     | Automação e integração contínua                                    | ❌ Parcial - ferramentas integráveis, mas não automatizado no core |
-
-**🧮 Maturidade atingida: 2 / 3**
+| Entity type | ID | Framework | Framework area | Authority class | Source mode |
+|---|---|---|---|---|---|
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:build-deploy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:policy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:tooling` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Políticas de risco, hardening, bloqueios CI/CD, rastreabilid | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:1` | OWASP SAMM | Construction → Dependency Management | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:2` | OWASP SAMM | Construction → Dependency Management | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:3` | OWASP SAMM | Construction → Dependency Management | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | SBOM, políticas de aceitação, exceções, validação e bloqueio | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:slsa:slsa-provenance-dependency-control:1` | SLSA | Provenance & Dependency Control | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:slsa:slsa-provenance-dependency-control:2` | SLSA | Provenance & Dependency Control | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:slsa:slsa-provenance-dependency-control:3` | SLSA | Provenance & Dependency Control | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | SBOM, pinning, proveniência de dependências | external | derived |
 
 ---
 
-## 🧱 OWASP DSOMM - Policy, Build & Deploy, Tooling
+## § SAMM v2 / DSOMM maturity progression
 
-| Domínio        | Nível | Justificação técnica                                               |
-|----------------|-------|--------------------------------------------------------------------|
-| Policy         | 2 / 3 | Definição formal de critérios de aceitação e exceções              |
-| Build & Deploy | 2 / 3 | Geração e publicação de SBOM com integração na pipeline            |
-| Tooling        | 2 / 3 | Ferramentas recomendadas para SCA, validação de findings           |
+Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
----
-
-## 🧱 SLSA - Provenance & Dependency Control
-
-| Nível | Requisitos principais                                  | Cobertura pelo Cap. 05                    |
-|-------|---------------------------------------------------------|-------------------------------------------|
-| 1     | Listagem e rastreio básico de dependências              | ✅ SBOM gerado por build                   |
-| 2     | Proveniência e pinning de versões                       | ✅ Critérios de controlo formal            |
-| 3+    | Builds verificáveis e reprodutibilidade                 | ❌ Fora do âmbito (ver Cap. 06 e 08)       |
-
-**🔐 Nível máximo suportado por este capítulo: SLSA 2 / 4**
+| Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
+|---|---|---|---|---|---|
+| OWASP DSOMM | Policy, Build & Deploy, Tooling | Geração e publicação de SBOM com integração na pipeline | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Policy, Build & Deploy, Tooling | Definição formal de critérios de aceitação e exceções | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Policy, Build & Deploy, Tooling | Ferramentas recomendadas para SCA, validação de findings | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Políticas de risco, hardening, bloqueios CI/CD, rastreabilidade SCA | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Construction → Dependency Management | Identificação e listagem manual de dependências | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Construction → Dependency Management | Processo formal de aceitação, rastreio e controlo de risco | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | Construction → Dependency Management | Automação e integração contínua | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | SBOM, políticas de aceitação, exceções, validação e bloqueio | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 
-## ✅ Conclusão
+## § SLSA build/integrity progression
 
-- Este capítulo sustenta uma leitura de maturidade principalmente ancorada em **OWASP SAMM** e **OWASP DSOMM**;
-- Quando aplicável, também suporta uma leitura bounded em **SLSA**, sem pretender medir a maturidade global da organização;
-- A avaliação apresentada é **chapter-scoped** e contributiva, não substituindo uma avaliação formal framework-native.
+SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
+| SLSA level | Framework area | Coverage summary | Manual section anchor | §26 label |
+|---|---|---|---|---|
+| Provenance & Dependency Control | — | SBOM gerado por build | `achievable-maturity.md` | Explícito |
+| Provenance & Dependency Control | — | Critérios de controlo formal | `achievable-maturity.md` | Explícito |
+| Provenance & Dependency Control | — | Fora do âmbito (ver Cap. 06 e 08) | `achievable-maturity.md` | Explícito |
+| — | — | SBOM, pinning, proveniência de dependências | `achievable-maturity.md` | Explícito |
+
+---
+
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+
+Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
+
+_(Regulatory alignment para este capítulo é tratado via Manual ontology V2 ExternalObligation entities + capítulos de governança (Cap. 14); não enumerado aqui para evitar conflation com maturity claim.)_
+
+---
+
+## § Future-work register (maturity gaps)
+
+_(Nenhuma maturity claim em gap state para este capítulo.)_
+
+---
+
+## Generation provenance
+
+- **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
+- **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`
+- **Maturity mappings:** `data/entities/maturity_mappings.json` (168 items)
+- **§26 methodology layer:** `00-fundamentos/canon/26-metodologia-validacao-claims.md` (Run 1 state @ a9e70c98)
+- **§26 label rule:** deterministic per `confidence` field (≥0.85 Explícito; ≥0.65 Semântico; ≥0.4 Parcial; <0.4 Gap)
+- **§26 §4 discipline applied:** SAMM/DSOMM primary; SLSA conditional; regulatory ≠ maturity
+- **Generated by:** Manual Agent Run 2 (achievable-maturity enrichment)
+- **Cycle:** Cycle B Run 2 — last content work pre frozen ceremony

@@ -25,6 +25,8 @@ externas seguintes contribuem para esta área:
 - **EU NIS2 Directive** — 1 referência(s)
 - **SAFECode — Software Integrity Controls (2010)** — 1 referência(s)
 
+**Anchor canónico (ratificado 2026-05-11 — programme-lead Pedro Farinha):** OWASP ASVS v5.0.0. Esta decisão fecha a deferral do ACR-004 sprint (V3.5.x vs V4.2.x) por leapfrog — ambas as edições anteriores são consideradas superseded para efeito de anchor primário neste capítulo. Referências bounded a `asvs_v4_0_2::ASVS4-REQ-V…` em outros capítulos permanecem como substrate freezes Wave-N (não afectadas).
+
 ---
 
 ## NIST SP 800-53 Rev. 5

@@ -2,836 +2,680 @@
 
 ## Sumário
 
-Este capítulo trata de **desenvolvimento seguro** — validação de input,
-parsing seguro, gestão de erros, secret handling no ciclo de
-desenvolvimento, e configuração protegida implementada e evidenciada no
-código. As fontes externas seguintes contribuem para esta área:
+Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-IVF` (Validação de input, parsing seguro e tratamento controlado de erros), `ACO-SPC` (Gestão de segredos, configuração protegida e identidades operacionais).
 
-- **NIST SP 800-53 Rev. 5** — 138 referência(s)
-- **MITRE CAPEC v3.9** — 130 referência(s)
-- **OWASP ASVS v5.0.0** — 89 referência(s)
-- **MITRE CWE — Software Development View (v4.19.1)** — 72 referência(s)
-- **MITRE ATLAS — Adversarial Threat Landscape for AI Systems** — 50 referência(s)
-- **OWASP DSOMM** — 18 referência(s)
-- **CIS Controls v8.1.2** — 16 referência(s)
-- **PCI DSS v4.0.1** — 11 referência(s)
-- **NIST SSDF (SP 800-218 v1.1)** — 9 referência(s)
-- **OWASP SAMM v2.1** — 7 referência(s)
-- **NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy** — 6 referência(s)
-- **NIST AI RMF 1.0** — 6 referência(s)
-- **OWASP MCP — Secure Server Development v1.0** — 6 referência(s)
-- **OWASP MCP Top 10 (v0.1, 2025 beta)** — 4 referência(s)
-- **SAFECode — Fundamental Practices for Secure Software Development (2018)** — 4 referência(s)
-- **OWASP Proactive Controls (2018)** — 3 referência(s)
-- **OWASP Top 10 (2021)** — 3 referência(s)
-- **PCI Secure SLC v1.1** — 3 referência(s)
-- **SAFECode — Practical Security Stories and Tasks for Agile Development (2012)** — 3 referência(s)
-- **OWASP LLM Top 10 (2025)** — 2 referência(s)
-- **OWASP MCP — Third-Party Servers v1.0** — 2 referência(s)
-- **SAFECode — Software Integrity Controls (2010)** — 2 referência(s)
-- **EU GDPR (RGPD)** — 1 referência(s)
-- **Anthropic MCP — Official Security Foundations (2025)** — 1 referência(s)
+Cobertura V1 entity-level: **37 entidades** primárias (15 ControlObjectives + 13 Practices + 9 Mechanisms). Cada entidade é listada abaixo com cobertura no Manual (prose anchor) e fontes externas substrate v7 que contribuem para a sua substantive coverage.
 
 ---
 
-## NIST SP 800-53 Rev. 5
+## Slice `ACO-IVF` — Validação de input, parsing seguro e tratamento controlado de erros
 
-**O que esta ES traz para este capítulo:** contribui 138 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### ControlObjectives (8)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SP800-53-AC-11` | Device Lock. Prevent further access to the system by; and Retain the device lock until the user reestablishes access using established identification and authentication procedures. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-11.1` | Pattern-hiding Displays. Conceal, via the device lock, information previously visible on the display with a publicly viewable image. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-16.5` | Attribute Displays on Objects to Be Output. Display security and privacy attributes in human-readable form on each object that the system transmits to output devices to identify [instructions] using [ | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-19.1` | Use of Writable and Portable Storage Devices | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-19.2` | Use of Personally Owned Portable Storage Devices | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-19.3` | Use of Portable Storage Devices with No Identifiable Owner | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-19.5` | Full Device or Container-based Encryption. Employ to protect the confidentiality and integrity of information on [mobile devices]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-2.8` | Dynamic Account Management. Create, activate, manage, and deactivate [system accounts] dynamically. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-20.4` | Network Accessible Storage Devices — Prohibited Use. Prohibit the use of [network-accessible storage devices] in external systems. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-20.5` | Portable Storage Devices — Prohibited Use. Prohibit the use of organization-controlled portable storage devices by authorized individuals on external systems. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-3.11` | Restrict Access to Specific Information Types. Restrict access to data repositories containing [information types]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-4.24` | Internal Normalized Format. When transferring information between different security domains, parse incoming data into an internal normalized format and regenerate the data to be consistent with its i | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.5` | Embedded Data Types. Enforce [limitations] on embedding data types within other data types. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AT-2` | Literacy Training and Awareness. Provide security and privacy literacy training to system users (including managers, senior executives, and contractors): As part of initial training for new users and | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-AT-3.5` | Processing Personally Identifiable Information. Provide [personnel or roles] with initial and [frequency] training in the employment and operation of personally identifiable information processing and | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-AU-16.1` | Identity Preservation. Preserve the identity of individuals in cross-organizational audit trails. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-16.2` | Sharing of Audit Information. Provide cross-organizational audit information to [organizations] based on [cross-organizational sharing agreements]. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-CA-7.5` | Consistency Analysis. Employ the following actions to validate that policies are established and implemented controls are operating in a consistent manner: [organization-defined actions]. | conceito: Risk-Based Security Test Planning (practice `ACP-TSV-001`) |
-| `SP800-53-CM-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: configuration management policy that: Addresses purpose, scope, roles, responsibilities, managem | conceito: Accountable Release Approval (practice `ACP-RPR-001`) |
-| `SP800-53-CM-3.6` | Cryptography Management. Ensure that cryptographic mechanisms used to provide the following controls are under configuration management: [controls]. | conceito: Accountable Release Approval (practice `ACP-RPR-001`) |
-| `SP800-53-CM-7` | Least Functionality. Configure the system to provide only [mission-essential capabilities]; and Prohibit or restrict the use of the following functions, ports, protocols, software, and/or services: [o | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-CM-8.2` | Automated Maintenance. Maintain the currency, completeness, accuracy, and availability of the inventory of system components using [organization-defined automated mechanisms]. | conceito: Build-Linked SBOM Generation (practice `ACP-SCBI-001`) |
-| `SP800-53-CM-8.7` | Centralized Repository. Provide a centralized repository for the inventory of system components. | conceito: Build-Linked SBOM Generation (practice `ACP-SCBI-001`) |
-| `SP800-53-CM-9` | Configuration Management Plan. Develop, document, and implement a configuration management plan for the system that: Addresses roles, responsibilities, and configuration management processes and proce | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-CM-9.1` | Assignment of Responsibility. Assign responsibility for developing the configuration management process to organizational personnel that are not directly involved in system development. | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-CP-7.4` | Preparation for Use. Prepare the alternate processing site so that the site can serve as the operational site supporting essential mission and business functions. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `SP800-53-CP-9` | System Backup. Conduct backups of user-level information contained in [system components] [frequency]; Conduct backups of system-level information contained in the system [frequency]; Conduct backups | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-CP-9.3` | Separate Storage for Critical Information. Store backup copies of [critical system software and other security-related information] in a separate facility or in a fire rated container that is not coll | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-CP-9.8` | Cryptographic Protection. Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of [backup information]. | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `SP800-53-IA-12.2` | Identity Evidence. Require evidence of individual identification be presented to the registration authority. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-13.1` | Protection of Cryptographic Keys. Cryptographic keys that protect access tokens are generated, managed, and protected from disclosure and misuse. | conceito: Authenticated API Boundary Enforcement (practice `ACP-IAT-005`) |
-| `SP800-53-IA-4` | Identifier Management. Manage system identifiers by: Receiving authorization from [personnel or roles] to assign an individual, group, role, service, or device identifier; Selecting an identifier that | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.5` | Dynamic Management. Manage individual identifiers dynamically in accordance with [dynamic identifier policy]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.6` | Cross-organization Management. Coordinate with the following external organizations for cross-organization management of identifiers: [external organizations]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.8` | Pairwise Pseudonymous Identifiers. Generate pairwise pseudonymous identifiers. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.9` | Attribute Maintenance and Protection. Maintain the attributes for each uniquely identified individual, device, or service in [protected central storage]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-5.10` | Dynamic Credential Binding. Bind identities and authenticators dynamically using the following rules: [binding rules]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.14` | Managing Content of PKI Trust Stores. For PKI-based authentication, employ an organization-wide methodology for managing the content of PKI trust stores installed across all platforms, including netwo | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.18` | Password Managers. Employ [password managers] to generate and manage passwords; and Protect the passwords using [controls]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.9` | Federated Credential Management. Use the following external organizations to federate credentials: [external organizations]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-8` | Identification and Authentication (Non-organizational Users). Uniquely identify and authenticate non-organizational users or processes acting on behalf of non-organizational users. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-8.4` | Use of Defined Profiles. Conform to the following profiles for identity management [identity management profiles]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-MP-2.2` | Cryptographic Protection | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-4` | Media Storage. Physically control and securely store [organization-defined types of digital and/or non-digital media] within [organization-defined controlled areas]; and Protect system media types def | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-4.1` | Cryptographic Protection | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-5.4` | Cryptographic Protection | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-6` | Media Sanitization. Sanitize [organization-defined system media] prior to disposal, release out of organizational control, or release for reuse using [organization-defined sanitization techniques and | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-MP-6.3` | Nondestructive Techniques. Apply nondestructive sanitization techniques to portable storage devices prior to connecting such devices to the system under the following circumstances: [circumstances]. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-6.4` | Controlled Unclassified Information | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-8.4` | Classified Information. Downgrade system media containing classified information prior to release to individuals without required access authorizations. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-19` | Information Leakage. Protect the system from information leakage due to electromagnetic signals emanations. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PE-2.3` | Restrict Unescorted Access. Restrict unescorted access to the facility where the system resides to personnel with. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-PE-3.2` | Facility and Systems. Perform security checks [frequency] at the physical perimeter of the facility or system for exfiltration of information or removal of system components. | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-PE-5` | Access Control for Output Devices. Control physical access to output from [output devices] to prevent unauthorized individuals from obtaining the output. | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `SP800-53-PL-9` | Central Management. Centrally manage [controls and related processes]. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `SP800-53-PM-15` | Security and Privacy Groups and Associations. Establish and institutionalize contact with selected groups and associations within the security and privacy communities: To facilitate ongoing security a | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PM-16` | Threat Awareness Program. Implement a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PM-20` | Dissemination of Privacy Program Information. Maintain a central resource webpage on the organization’s principal public website that serves as a central source of information about the organization’s | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PM-5.1` | Establish, maintain | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `SP800-53-PS-3.1` | Classified Information. Verify that individuals accessing a system processing, storing, or transmitting classified information are cleared and indoctrinated to the highest classification level of the | conceito: Threat modeling, gestão de risco e rastreabilidade de mitigações (slice `ACO-TMR`) |
-| `SP800-53-PS-9` | Position Descriptions. Incorporate security and privacy roles and responsibilities into organizational position descriptions. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PT-7` | Specific Categories of Personally Identifiable Information. Apply [processing conditions] for specific categories of personally identifiable information. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-SA-10.6` | Trusted Distribution. Require the developer of the system, system component, or system service to execute procedures for ensuring that security-relevant hardware, software, and firmware updates distri | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-11.4` | Manual Code Reviews. Require the developer of the system, system component, or system service to perform a manual code review of [specific code] using the following processes, procedures, and/or techn | conceito: Governed Static Analysis Execution (practice `ACP-TSV-002`) |
-| `SP800-53-SA-12.10` | Validate as Genuine and Not Altered | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-15.11` | Archive System or Component. Require the developer of the system or system component to archive the system or component to be released or delivered together with the corresponding evidence supporting | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-15.5` | Attack Surface Reduction. Require the developer of the system, system component, or system service to reduce attack surfaces to [thresholds]. | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-3.2` | Approve, document | conceito: DFD And Trust-Boundary Grounding (practice `ACP-TMR-002`) |
-| `SP800-53-SA-4.12` | Data Ownership. Include organizational data ownership requirements in the acquisition contract; and Require all data to be removed from the contractor’s system and returned to the organization within | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-8.20` | Secure Metadata Management. Implement the security design principle of secure metadata management in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.23` | Secure Defaults. Implement the security design principle of secure defaults in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.6` | Minimized Sharing. Implement the security design principle of minimized sharing in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-9.6` | Organization-controlled Cryptographic Keys. Maintain exclusive control of cryptographic keys for encrypted material stored or transmitted through an external system. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-12` | Cryptographic Key Establishment and Management. Establish and manage cryptographic keys when cryptography is employed within the system in accordance with the following key management requirements: [r | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-12.1` | Availability. Maintain availability of information in the event of the loss of cryptographic keys by users. | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-12.2` | Symmetric Keys. Produce, control, and distribute symmetric cryptographic keys using key management technology and processes. | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-12.6` | Physical Control of Keys. Maintain physical control of cryptographic keys when stored information is encrypted by external service providers. | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-13.2` | NSA-approved Cryptography | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-15` | Collaborative Computing Devices and Applications. Prohibit remote activation of collaborative computing devices and applications with the following exceptions: [exceptions where remote activation is t | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-15.3` | Disabling and Removal in Secure Work Areas. Disable or remove collaborative computing devices and applications from [systems or system components] in [secure work areas]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-18.1` | Identify Unacceptable Code and Take Corrective Actions. Identify [unacceptable mobile code] and take [corrective actions]. | conceito: Dangerous Pattern Exclusion (practice `ACP-IVF-003`) |
-| `SP800-53-SC-18.3` | Prevent Downloading and Execution. Prevent the download and execution of [unacceptable mobile code]. | conceito: Dangerous Pattern Exclusion (practice `ACP-IVF-003`) |
-| `SP800-53-SC-2` | Separation of System and User Functionality. Separate user functionality, including user interface services, from system management functionality. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-2.1` | Interfaces for Non-privileged Users. Prevent the presentation of system management functionality at interfaces to non-privileged users. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-24` | Fail in Known State. Fail to a [known system state] for the following failures on the indicated components while preserving [system state information] in failure: [types of system failures on system c | conceito: Non-Revealing Error Surface Control (practice `ACP-IVF-005`) |
-| `SP800-53-SC-26` | Decoys. Include components within organizational systems specifically designed to be the target of malicious attacks for detecting, deflecting, and analyzing such attacks. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SC-28.1` | Cryptographic Protection. Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of the following information at rest on [system components or media]: [information]. | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-28.2` | Offline Storage. Remove the following information from online storage and store offline in a secure location: [information]. | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-28.3` | Cryptographic Keys. Provide protected storage for cryptographic keys. | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-3` | Security Function Isolation. Isolate security functions from nonsecurity functions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-3.1` | Hardware Separation. Employ hardware separation mechanisms to implement security function isolation. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-3.3` | Minimize Nonsecurity Functionality. Minimize the number of nonsecurity functions included within the isolation boundary containing security functions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-30` | Concealment and Misdirection. Employ the following concealment and misdirection techniques for [systems] at [time periods] to confuse and mislead adversaries: [concealment and misdirection techniques] | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-30.2` | Randomness. Employ [techniques] to introduce randomness into organizational operations and assets. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-30.4` | Misleading Information. Employ realistic, but misleading information in [system components] about its security state or posture. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-30.5` | Concealment of System Components. Employ the following techniques to hide or conceal [system components]: [techniques]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-34.1` | No Writable Storage. Employ [system components] with no writeable storage that is persistent across component restart or power on/off. | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SC-36.1` | Polling Techniques. Employ polling techniques to identify potential faults, errors, or compromises to the following processing and storage components: [distributed processing and storage components]; | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-41` | Port and I/O Device Access. disable or remove [connection ports or input/output devices] on the following systems or system components: [systems or system components]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-SC-5.2` | Capacity, Bandwidth, and Redundancy. Manage capacity, bandwidth, or other redundancy to limit the effects of information flooding denial-of-service attacks. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-7` | Boundary Protection. Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.13` | Isolation of Security Tools, Mechanisms, and Support Components. Isolate [information security tools, mechanisms, and support components] from other internal system components by implementing physical | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.23` | Disable Sender Feedback on Protocol Validation Failure. Disable feedback to senders on protocol format validation failure. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.24` | Personally Identifiable Information. For systems that process personally identifiable information: Apply the following processing rules to data elements of personally identifiable information: [proces | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.6` | Response to Recognized Failures | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.7` | Split Tunneling for Remote Devices. Prevent split tunneling for remote devices connecting to organizational systems unless the split tunnel is securely provisioned using [safeguards]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SI-10` | Information Input Validation. Check the validity of the following information inputs: [information inputs]. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-10.2` | Review and Resolve Errors. Review and resolve input validation errors within [organization-defined time period]. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-10.3` | Predictable Behavior. Verify that the system behaves in a predictable and documented manner when invalid inputs are received. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-10.4` | Timing Interactions. Account for timing interactions among system components in determining appropriate responses for invalid inputs. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-10.5` | Restrict Inputs to Trusted Sources and Approved Formats. Restrict the use of information inputs to [trusted sources] and/or [formats]. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-11` | Error Handling. Generate error messages that provide information necessary for corrective actions without revealing information that could be exploited; and Reveal error messages only to [personnel or | conceito: Non-Revealing Error Surface Control (practice `ACP-IVF-005`) |
-| `SP800-53-SI-12.2` | Minimize Personally Identifiable Information in Testing, Training, and Research. Use the following techniques to minimize the use of personally identifiable information for research, testing, or train | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-13` | Predictable Failure Prevention. Determine mean time to failure (MTTF) for the following system components in specific environments of operation: [system components]; and Provide substitute system comp | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-13.1` | Transferring Component Responsibilities. Take system components out of service by transferring component responsibilities to substitute components no later than [fraction or percentage] of mean time t | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-13.2` | Time Limit on Process Execution Without Supervision | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-13.3` | Manual Transfer Between Components. Manually initiate transfers between active and standby system components when the use of the active component reaches [percentage] of the mean time to failure. | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-14` | Non-persistence. Implement non-persistent [system components and services] that are initiated in a known state and terminated. | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-16` | Memory Protection. Implement the following controls to protect the system memory from unauthorized code execution: [controls]. | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro |
-| `SP800-53-SI-17` | Fail-safe Procedures. Implement the indicated fail-safe procedures when the indicated failures occur: [organization-defined list of failure conditions and associated fail-safe procedures]. | requirements_catalog (strong): Catálogo de Requisitos de Desenvolvimento Seguro |
-| `SP800-53-SI-18.2` | Data Tags. Employ data tags to automate the correction or deletion of personally identifiable information across the information life cycle within organizational systems. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-19.2` | Archiving. Prohibit archiving of personally identifiable information elements if those elements in a dataset will not be needed after the dataset is archived. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-19.4` | Removal, Masking, Encryption, Hashing, or Replacement of Direct Identifiers. Remove, mask, encrypt, hash, or replace direct identifiers in a dataset. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-2.1` | Central Management | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-2.4` | Automated Patch Management Tools. Employ automated patch management tools to facilitate flaw remediation to the following system components: [components]. | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-2.7` | Conduct root cause analysis to identify underlying causes of issues | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3` | Malicious Code Protection. Implement malicious code protection mechanisms at system entry and exit points to detect and eradicate malicious code; Automatically update malicious code protection mechani | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.1` | Central Management | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.5` | Portable Storage Devices | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.6` | Testing and Verification. Test malicious code protection mechanisms [frequency] by introducing known benign code into the system; and Verify that the detection of the code and the associated incident | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-7.16` | Time Limit on Process Execution Without Supervision. Prohibit processes from executing without supervision for more than [time period]. | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SI-8` | Spam Protection. Employ spam protection mechanisms at system entry and exit points to detect and act on unsolicited messages; and Update spam protection mechanisms when new releases are available in a | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-8.1` | Central Management | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SR-11.1` | Anti-counterfeit Training. Train [personnel or roles] to detect counterfeit system components (including hardware, software, and firmware). | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SR-4.1` | Identity. Establish and maintain unique identification of the following supply chain elements, processes, and personnel associated with the identified system and critical system components: [supply ch | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SR-4.3` | Validate as Genuine and Not Altered. Employ the following controls to validate that the system or system component received is genuine and has not been altered: [organization-defined controls]. | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SR-5.2` | Assessments Prior to Selection, Acceptance, Modification, or Update. Assess the system, system component, or system service prior to selection, acceptance, modification, or update. | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SR-6` | Supplier Assessments and Reviews. Assess and review the supply chain-related risks associated with suppliers or contractors and the system, system component, or system service they provide [frequency] | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
+#### `ACO-IVF-001` — External Input Contract Validation
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (22 grounded claims em 8 fontes):
+  - NIST SP 800-53 Rev. 5 — 9 refs (`SP800-53-AC-20`, `SP800-53-AC-20.1`, `SP800-53-CA-3.5` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V2.1.1`, `ASVS-REQ-V2.2.1`, `ASVS-REQ-V2.2.2` + 1 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-1284`, `CWE-1286`, `CWE-1287`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM02-2025`, `LLM10-2025`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-15.4`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-11.4.3`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-SOURCING-CONTRACT`)
 
-## MITRE CAPEC v3.9
+#### `ACO-IVF-002` — Schema, Type And Allowlist Discipline
 
-**O que esta ES traz para este capítulo:** contribui 130 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (30 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 10 refs (`SP800-53-AC-3.11`, `SP800-53-AC-4.1`, `SP800-53-AC-4.5` + 2 more)
+  - MITRE CAPEC v3.9 — 8 refs (`CAPEC-13`, `CAPEC-80`, `CAPEC-95` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-1056`, `CWE-1070`, `CWE-1117` + 1 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-2.5`, `CIS-2.6`, `CIS-3.3`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V9.1.2`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0054`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-6DF508EF86FC4C22BD9F646C3127CE7D`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-PROMPT-INJECTION`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-D_SA_2_B`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CAPEC-100` | Overflow Buffers. Overflow Buffers. Buffer Overflow attacks target improper or missing bounds checking on buffer operations, typically triggered by input injected by an adversary. As a consequence, an | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-101` | Server Side Include (SSI) Injection. Server Side Include (SSI) Injection. An attacker can use Server Side Include (SSI) Injection to send code to a web application that then gets executed by the web s | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-104` | Cross Zone Scripting. Cross Zone Scripting. An attacker is able to cause a victim to load content into their web-browser that bypasses security zone controls and gain access to increased privileges to | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-107` | Cross Site Tracing. Cross Site Tracing. Cross Site Tracing (XST) enables an adversary to steal the victim's session cookie and possibly other authentication credentials transmitted in the header of th | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CAPEC-108` | Command Line Execution through SQL Injection. Command Line Execution through SQL Injection. An attacker uses standard SQL injection methods to inject data into the command line for execution. This cou | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-109` | Object Relational Mapping Injection. Object Relational Mapping Injection. An attacker leverages a weakness present in the database access layer code generated with an Object Relational Mapping (ORM) t | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-110` | SQL Injection through SOAP Parameter Tampering. SQL Injection through SOAP Parameter Tampering. An attacker modifies the parameters of the SOAP message that is sent from the service consumer to the se | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-111` | JSON Hijacking (aka JavaScript Hijacking). JSON Hijacking (aka JavaScript Hijacking). An attacker targets a system that uses JavaScript Object Notation (JSON) as a transport mechanism between the clie | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-120` | Double Encoding. Double Encoding. The adversary utilizes a repeating of the encoding process for a set of characters (that is, character encoding a character encoding of a character) to obfuscate the | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-123` | Buffer Manipulation. Buffer Manipulation. An adversary manipulates an application's interaction with a buffer in an attempt to read or modify data they shouldn't have access to. Buffer attacks are dis | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-124` | Shared Resource Manipulation. Shared Resource Manipulation. An adversary exploits a resource shared between multiple applications, an application pool or hardware pin multiplexing to affect behavior. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-126` | Path Traversal. Path Traversal. An adversary uses path manipulation methods to exploit insufficient input validation of a target to obtain access to data that should be not be retrievable by ordinary | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-131` | Resource Leak Exposure. Resource Leak Exposure. An adversary utilizes a resource leak on the target to deplete the quantity of the resource available to service legitimate requests.. Prerequisites: Th | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-134` | Email Injection. Email Injection. An adversary manipulates the headers and content of an email message by injecting data via the use of delimiter characters native to the protocol.. Prerequisites: The | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-135` | Format String Injection. Format String Injection. An adversary includes formatting characters in a string input field on the target application. Most applications assume that users will provide static | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-136` | LDAP Injection. LDAP Injection. An attacker manipulates or crafts an LDAP query for the purpose of undermining the security of the target. Some applications use user input to create LDAP queries that | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-137` | Parameter Injection. Parameter Injection. An adversary manipulates the content of request parameters for the purpose of undermining the security of the target. Some parameter encodings use text charac | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-138` | Reflection Injection. Reflection Injection. An adversary supplies a value to the target application which is then used by reflection methods to identify a class, method, or field. For example, in the | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-139` | Relative Path Traversal. Relative Path Traversal. An attacker exploits a weakness in input validation on the target by supplying a specially constructed path utilizing dot and slash characters for the | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-14` | Client-side Injection-induced Buffer Overflow. Client-side Injection-induced Buffer Overflow. This type of attack exploits a buffer overflow vulnerability in targeted client software through injection | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-140` | Bypassing of Intermediate Forms in Multiple-Form Sets. Bypassing of Intermediate Forms in Multiple-Form Sets. Some web applications require users to submit information through an ordered sequence of w | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-146` | XML Schema Poisoning. XML Schema Poisoning. An adversary corrupts or modifies the content of XML schema information passed between a client and server for the purpose of undermining the security of th | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `CAPEC-147` | XML Ping of the Death. XML Ping of the Death. An attacker initiates a resource depletion attack where a large number of small XML messages are delivered at a sufficiently rapid rate to cause a denial | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-15` | Command Delimiters. Command Delimiters. An attack of this type exploits a programs' vulnerabilities that allows an attacker's commands to be concatenated onto a legitimate command with the intent of t | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-153` | Input Data Manipulation. Input Data Manipulation. An attacker exploits a weakness in input validation by controlling the format, structure, and composition of data to an input-processing interface. By | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-161` | Infrastructure Manipulation. Infrastructure Manipulation. An attacker exploits characteristics of the infrastructure of a network entity in order to perpetrate attacks or information gathering on netw | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CAPEC-174` | Flash Parameter Injection. Flash Parameter Injection. An adversary takes advantage of improper data validation to inject malicious global parameters into a Flash file embedded within an HTML document. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-175` | Code Inclusion. Code Inclusion. An adversary exploits a weakness on the target to force arbitrary code to be retrieved locally or from a remote location and executed. This differs from code injection | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-18` | XSS Targeting Non-Script Elements. XSS Targeting Non-Script Elements. This attack is a form of Cross-Site Scripting (XSS) where malicious scripts are embedded in elements that are not expected to host | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-182` | Flash Injection. Flash Injection. An attacker tricks a victim to execute malicious flash content that executes commands or makes flash calls specified by the attacker. One example of this attack is cr | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-183` | IMAP/SMTP Command Injection. IMAP/SMTP Command Injection. An adversary exploits weaknesses in input validation on web-mail servers to execute commands on the IMAP/SMTP server. Web-mail servers often s | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-187` | Malicious Automated Software Update via Redirection. Malicious Automated Software Update via Redirection. An attacker exploits two layers of weaknesses in server or client software for automated updat | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `CAPEC-19` | Embedding Scripts within Scripts. Embedding Scripts within Scripts. An adversary leverages the capability to execute their own script by embedding it within other scripts that the target software is l | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-191` | Read Sensitive Constants Within an Executable. Read Sensitive Constants Within an Executable. An adversary engages in activities to discover any sensitive constants present within the compiled code of | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-197` | Exponential Data Expansion. Exponential Data Expansion. An adversary submits data to a target application which contains nested exponential data expansion to produce excessively large output. Many dat | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-198` | XSS Targeting Error Pages. XSS Targeting Error Pages. An adversary distributes a link (or possibly some other query structure) with a request to a third party web server that is malformed and also con | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-199` | XSS Using Alternate Syntax. XSS Using Alternate Syntax. An adversary uses alternate forms of keywords or commands that result in the same action as the primary form but which may not be caught by filt | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-200` | Removal of filters: Input filters, output filters, data masking. Removal of filters: Input filters, output filters, data masking. An attacker removes or disables filtering mechanisms on the target app | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-204` | Lifting Sensitive Data Embedded in Cache. Lifting Sensitive Data Embedded in Cache. An adversary examines a target application's cache, or a browser cache, for sensitive information. Many applications | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-207` | Removing Important Client Functionality. Removing Important Client Functionality. An adversary removes or disables functionality on the client that the server assumes to be present and trustworthy.. P | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-209` | XSS Using MIME Type Mismatch. XSS Using MIME Type Mismatch. An adversary creates a file with scripting content but where the specified MIME type of the file is such that scripting is not expected. The | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-215` | Fuzzing for application mapping. Fuzzing for application mapping. An attacker sends random, malformed, or otherwise unexpected messages to a target application and observes the application's log or er | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `CAPEC-22` | Exploiting Trust in Client. Exploiting Trust in Client. An attack of this type exploits vulnerabilities in client/server communication channel authentication and data integrity. It leverages the impli | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-220` | Client-Server Protocol Manipulation. Client-Server Protocol Manipulation. An adversary takes advantage of weaknesses in the protocol by which a client and server are communicating to perform unexpecte | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-227` | Sustained Client Engagement. Sustained Client Engagement. An adversary attempts to deny legitimate users access to a resource by continually engaging a specific resource in an attempt to keep the reso | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-229` | Serialized Data Parameter Blowup. Serialized Data Parameter Blowup. This attack exploits certain serialized data parsers (e.g., XML, YAML, etc.) which manage data in an inefficient manner. The attacke | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-23` | File Content Injection. File Content Injection. An adversary poisons files with a malicious payload (targeting the file systems accessible by the target software), which may be passed through by stand | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-230` | sanitize all user-controllable data prior to passing it to the data parser routine | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-231` | sanitize all user-controllable serialized data prior to passing it to the parser routine | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-237` | Escaping a Sandbox by Calling Code in Another Language. Escaping a Sandbox by Calling Code in Another Language. The attacker may submit malicious code of another language to obtain access to privilege | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-24` | Filter Failure through Buffer Overflow. Filter Failure through Buffer Overflow. In this attack, the idea is to cause an active filter to fail by causing an oversized transaction. An attacker may try t | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-240` | Resource Injection. Resource Injection. An adversary exploits weaknesses in input validation by manipulating resource identifiers enabling the unintended modification or specification of a resource.. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-242` | Code Injection. Code Injection. An adversary exploits a weakness in input validation on the target to inject new code into that which is currently executing. This differs from code inclusion in that c | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-243` | XSS Targeting HTML Attributes. XSS Targeting HTML Attributes. An adversary inserts commands to perform cross-site scripting (XSS) actions in HTML attributes. Many filters do not adequately sanitize at | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-244` | XSS Targeting URI Placeholders. XSS Targeting URI Placeholders. An attack of this type exploits the ability of most browsers to interpret "data", "javascript" or other URI schemes as client-side execu | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-245` | XSS Using Doubled Characters. XSS Using Doubled Characters. The adversary bypasses input validation by using doubled characters in order to perform a cross-site scripting attack. Some filters fail to | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-247` | XSS Using Invalid Characters. XSS Using Invalid Characters. An adversary inserts invalid characters in identifiers to bypass application filtering of input. Filters may not scan beyond invalid charact | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-248` | Command Injection. Command Injection. An adversary looking to execute a command of their choosing, injects new items into an existing command thus modifying interpretation away from what was intended. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-25` | Forced Deadlock. Forced Deadlock. The adversary triggers and exploits a deadlock condition in the target software to cause a denial of service. A deadlock can occur when two or more competing actions | conceito: Threat modeling, gestão de risco e rastreabilidade de mitigações (slice `ACO-TMR`) |
-| `CAPEC-250` | XML Injection. XML Injection. An attacker utilizes crafted XML user-controllable input to probe, attack, and inject data into the XML database, using techniques similar to SQL injection. The user-cont | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-263` | Force Use of Corrupted Files. Force Use of Corrupted Files. This describes an attack where an application is forced to use a file that an attacker has corrupted. The result is often a denial of servic | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-271` | Schema Poisoning. Schema Poisoning. An adversary corrupts or modifies the content of a schema for the purpose of undermining the security of the target. Schemas provide the structure and content defin | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `CAPEC-277` | Data Interchange Protocol Manipulation. Data Interchange Protocol Manipulation. Data Interchange Protocols are used to transmit structured data between entities. These protocols are often specific to | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-278` | Web Services Protocol Manipulation. Web Services Protocol Manipulation. An adversary manipulates a web service related protocol to cause a web application or service to react differently than intended | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-279` | SOAP Manipulation. SOAP Manipulation. Simple Object Access Protocol (SOAP) is used as a communication protocol between a client and server to invoke web services on the server. It is an XML-based prot | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-3` | Using Leading 'Ghost' Character Sequences to Bypass Input Filters. Using Leading 'Ghost' Character Sequences to Bypass Input Filters. Some APIs will strip certain leading characters from a string of p | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-312` | Active OS Fingerprinting. Active OS Fingerprinting. An adversary engages in activity to detect the operating system or firmware version of a remote target by interrogating a device, server, or platfor | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-32` | XSS Through HTTP Query Strings. XSS Through HTTP Query Strings. An adversary embeds malicious script code in the parameters of an HTTP query string and convinces a victim to submit the HTTP request th | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-329` | ICMP Error Message Quoting Probe. ICMP Error Message Quoting Probe. An adversary uses a technique to generate an ICMP Error message (Port Unreachable, Destination Unreachable, Redirect, Source Quench, | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-37` | Retrieve Embedded Sensitive Data. Retrieve Embedded Sensitive Data. An attacker examines a target system to find sensitive data that has been embedded within it. This information can reveal confidenti | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-386` | Application API Navigation Remapping. Application API Navigation Remapping. An attacker manipulates either egress or ingress data from a client within an application framework in order to change the d | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-390` | Bypassing Physical Security. Bypassing Physical Security. Facilities often used layered models for physical security such as traditional locks, Electronic-based card entry systems, coupled with physic | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CAPEC-391` | Bypassing Physical Locks. Bypassing Physical Locks. An attacker uses techniques and methods to bypass physical security measures of a building or facility. Physical locks may range from traditional lo | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CAPEC-401` | Physically Hacking Hardware. Physically Hacking Hardware. An adversary exploits a weakness in access control to gain access to currently installed hardware and precedes to implement changes or secretl | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CAPEC-41` | Using Meta-characters in E-mail Headers to Inject Malicious Payloads. Using Meta-characters in E-mail Headers to Inject Malicious Payloads. This type of attack involves an attacker leveraging meta-cha | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-416` | Manipulate Human Behavior. Manipulate Human Behavior. An adversary exploits inherent human psychological predisposition to influence a targeted individual or group to solicit information or manipulate | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-426` | Influence via Incentives. Influence via Incentives. The adversary incites a behavior from the target by manipulating something of influence. This is commonly associated with financial, social, or ideo | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-43` | Exploiting Multiple Input Interpretation Layers. Exploiting Multiple Input Interpretation Layers. An attacker supplies the target software with input data that contains sequences of special characters | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-44` | Overflow Binary Resource File. Overflow Binary Resource File. An attack of this type exploits a buffer overflow vulnerability in the handling of binary resources. Binary resources may include music fi | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-46` | Overflow Variables and Tags. Overflow Variables and Tags. This type of attack leverages the use of tags or variables from a formatted configuration data to cause buffer overflow. The adversary crafts | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-468` | Generic Cross-Browser Cross-Domain Theft. Generic Cross-Browser Cross-Domain Theft. An attacker makes use of Cascading Style Sheets (CSS) injection to steal data cross domain from the victim's browser | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-472` | Browser Fingerprinting. Browser Fingerprinting. An attacker carefully crafts small snippets of Java Script to efficiently detect the type of browser the potential victim is using. Many web-based attac | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-48` | Passing Local Filenames to Functions That Expect a URL. Passing Local Filenames to Functions That Expect a URL. This attack relies on client side code to access local files and resources instead of UR | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-480` | Escaping Virtualization. Escaping Virtualization. An adversary gains access to an application, service, or device with the privileges of an authorized or privileged user by escaping the confines of a | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-482` | TCP Flood. TCP Flood. An adversary may execute a flooding attack using the TCP protocol with the intent to deny legitimate users access to a service. These attacks exploit the weakness within the TCP | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-491` | Quadratic Data Expansion. Quadratic Data Expansion. An adversary exploits macro-like substitution to cause a denial of service situation due to excessive memory being allocated to fully expand the dat | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-492` | Regular Expression Exponential Blowup. Regular Expression Exponential Blowup. An adversary may execute an attack on a program that uses a poor Regular Expression(Regex) implementation by choosing inpu | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-500` | WebView Injection. WebView Injection. An adversary, through a previously installed malicious application, injects code into the context of a web page displayed by a WebView component. Through the inje | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-528` | XML Flood. XML Flood. An adversary may execute a flooding attack using XML messages with the intent to deny legitimate users access to a web service. These attacks are accomplished by sending a large | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-544` | Counterfeit Organizations. Counterfeit Organizations. An adversary creates a false front organizations with the appearance of a legitimate supplier in the critical life cycle path that then injects co | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-554` | Functionality Bypass. Functionality Bypass. An adversary attacks a system by bypassing some or all functionality intended to protect it. Often, a system user will think that protection is in place, bu | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-564` | Run Software at Logon. Run Software at Logon. Operating system allows logon scripts to be run whenever a specific user or users logon to a system. If adversaries can access these scripts, they may ins | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-586` | Object Injection. Object Injection. An adversary attempts to exploit an application by injecting additional, malicious content during its processing of serialized objects. Developers leverage serializ | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-587` | Cross Frame Scripting (XFS). Cross Frame Scripting (XFS). This attack pattern combines malicious Javascript and a legitimate webpage loaded into a concealed iframe. The malicious Javascript is then ab | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-588` | DOM-Based XSS. DOM-Based XSS. This type of attack is a form of Cross-Site Scripting (XSS) where a malicious script is inserted into the client-side HTML being parsed by a web browser. Content served b | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-591` | Reflected XSS. Reflected XSS. This type of attack is a form of Cross-Site Scripting (XSS) where a malicious script is "reflected" off a vulnerable web application and then executed by a victim's brows | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-592` | Stored XSS. Stored XSS. An adversary utilizes a form of Cross-site Scripting (XSS) where a malicious script is persistently "stored" within the data storage of a vulnerable web application as valid in | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-6` | Argument Injection. Argument Injection. An attacker changes the behavior or state of a targeted application through injecting data or command syntax through the targets use of non-validated and non-fi | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-608` | decrypt mobile phone conversations in real-time | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-620` | Drop Encryption Level. Drop Encryption Level. An attacker forces the encryption level to be lowered, thus enabling a successful attack against the encrypted data | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CAPEC-624` | Hardware Fault Injection. Hardware Fault Injection. The adversary uses disruptive signals or events, or alters the physical environment a device operates in, to cause faulty behavior in electronic dev | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CAPEC-63` | Cross-Site Scripting (XSS). Cross-Site Scripting (XSS). An adversary embeds malicious scripts in content that will be served to web browsers. The goal of the attack is for the target software, the cli | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-636` | Hiding Malicious Data or Code within Files. Hiding Malicious Data or Code within Files. Files on various operating systems can have a complex format which allows for the storage of other data, in addi | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-64` | Using Slashes and URL Encoding Combined to Bypass Validation Logic. Using Slashes and URL Encoding Combined to Bypass Validation Logic. This attack targets the encoding of the URL combined with the en | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-65` | Sniff Application Code. Sniff Application Code. An adversary passively sniffs network communications and captures application code bound for an authorized client. Once obtained, they can use it as-is, | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-654` | Credential Prompt Impersonation. Credential Prompt Impersonation. An adversary, through a previously installed malicious application, impersonates a credential prompt in an attempt to steal a user's c | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CAPEC-66` | SQL Injection. SQL Injection. This attack exploits target software that constructs SQL statements based on user input. An attacker crafts input strings so that when the target software constructs SQL | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-663` | Exploitation of Transient Instruction Execution. Exploitation of Transient Instruction Execution. An adversary exploits a hardware design flaw in a CPU implementation of transient instruction executio | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CAPEC-676` | NoSQL Injection. NoSQL Injection. An adversary targets software that constructs NoSQL statements based on user input or with parameters vulnerable to operator replacement in order to achieve a variety | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-680` | Exploitation of Improperly Controlled Registers. Exploitation of Improperly Controlled Registers. An adversary exploits missing or incorrectly configured access control within registers to read/write | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-682` | Exploitation of Firmware or ROM Code with Unpatchable Vulnerabilities. Exploitation of Firmware or ROM Code with Unpatchable Vulnerabilities. An adversary may exploit vulnerable code (i.e., firmware o | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-693` | StarJacking. StarJacking. An adversary spoofs software popularity metadata to deceive users into believing that a maliciously provided package is widely used and originates from a trusted source.. Pre | conceito: Artifact Signing And Attestation (mechanism `ACM-SCBI-004`) |
-| `CAPEC-695` | Repo Jacking. Repo Jacking. An adversary takes advantage of the redirect property of directly linked Version Control System (VCS) repositories to trick users into incorporating malicious code into the | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `CAPEC-698` | Install Malicious Extension | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-7` | Blind SQL Injection. Blind SQL Injection. Blind SQL Injection results from an insufficient mitigation for SQL Injection. Although suppressing database error messages are considered best practice, the | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-71` | Using Unicode Encoding to Bypass Validation Logic. Using Unicode Encoding to Bypass Validation Logic. An attacker may provide a Unicode string to a system component that is not Unicode aware and use t | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-72` | URL Encoding. URL Encoding. This attack targets the encoding of the URL. An adversary can take advantage of the multiple way of encoding an URL and abuse the interpretation of the URL.. Prerequisites: | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-73` | User-Controlled Filename. User-Controlled Filename. An attack of this type involves an adversary inserting malicious characters (such as a XSS redirection) into a filename, directly or indirectly that | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CAPEC-74` | Manipulating State. Manipulating State. The adversary modifies state information maintained by the target software or causes a state transition in hardware. If successful, the target will use this tai | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-76` | Manipulating Web Input to File System Calls. Manipulating Web Input to File System Calls. An attacker manipulates inputs to the target software which the target software passes to file system calls in | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-78` | Using Escaped Slashes in Alternate Encoding. Using Escaped Slashes in Alternate Encoding. This attack targets the use of the backslash in alternate encoding. An adversary can provide a backslash as a | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-79` | Using Slashes in Alternate Encoding. Using Slashes in Alternate Encoding. This attack targets the encoding of the Slash characters. An adversary would try to exploit common filtering problems related | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-80` | Verify that your application conform to the latest UTF-8 encoding specification | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-83` | XPath Injection. XPath Injection. An attacker can craft special user-controllable input consisting of XPath expressions to inject the XML database and bypass authentication or glean information that t | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-84` | XQuery Injection. XQuery Injection. This attack utilizes XQuery to probe and attack server systems; in a similar manner that SQL Injection allows an attacker to exploit SQL calls to RDBMS, XQuery Inje | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-85` | AJAX Footprinting. AJAX Footprinting. This attack utilizes the frequent client-server roundtrips in Ajax conversation to scan a system. While Ajax does not open up new vulnerabilities per se, it does | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-86` | XSS Through HTTP Headers. XSS Through HTTP Headers. An adversary exploits web applications that generate web content, such as links in a HTML page, based on unvalidated or improperly validated data su | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-88` | OS Command Injection. OS Command Injection. In this type of an attack, an adversary injects operating system commands into existing application functions. An application that uses untrusted input to b | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-95` | Review the functions exposed by the WSDL interface (especially if you have used a tool to generate it) | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-97` | Cryptanalysis. Cryptanalysis. Cryptanalysis is a process of finding weaknesses in cryptographic algorithms and using these weaknesses to decipher the ciphertext without knowing the secret key (instanc | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
+#### `ACO-IVF-003` — Injection-Resistant Input Handling And Dangerous Pattern Exclusion
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (75 grounded claims em 10 fontes):
+  - MITRE CAPEC v3.9 — 42 refs (`CAPEC-3`, `CAPEC-6`, `CAPEC-7` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 12 refs (`CWE-115`, `CWE-186`, `CWE-242` + 2 more)
+  - OWASP ASVS v5.0.0 — 5 refs (`ASVS-REQ-V1.2.4`, `ASVS-REQ-V1.2.7`, `ASVS-REQ-V1.2.8` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0051`, `AML.T0051.000`, `AML.T0051.001` + 2 more)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 4 refs (`NIST-AI-100-2-E2025-3.1.3`, `NIST-AI-100-2-E2025-3.3`, `NIST-AI-100-2-E2025-3.4` + 1 more)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-00E91A8A397246928679674AB8547486`, `DSOMM-ACTIVITY-5E0FF85BEC894EF096B15695FA0025DC`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP05-2025`, `MCP06-2025`)
+  - NIST SP 800-53 Rev. 5 — 1 refs (`SP800-53-SC-41`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM02-2025`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A03-2021`)
 
-## OWASP ASVS v5.0.0
+#### `ACO-IVF-004` — Validation Before Internal Use And Trust Crossing
 
-**O que esta ES traz para este capítulo:** contribui 89 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (14 grounded claims em 5 fontes):
+  - NIST SP 800-53 Rev. 5 — 5 refs (`SP800-53-AC-4.19`, `SP800-53-CA-3.6`, `SP800-53-CA-3.7` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V2.3.1`, `ASVS-REQ-V2.3.3`, `ASVS-REQ-V2.3.5` + 1 more)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-3.4`, `CIS-18.4`)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-346`, `CWE-349`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-1.4.2`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `ASVS-REQ-V1.1.1` | Verify that input is decoded or unescaped into a canonical form only once, it is only decoded when encoded data in that form is expected, and that this is done before processing the input further, for | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `ASVS-REQ-V1.1.2` | Verify that the application performs output encoding and escaping either as a final step before being used by the interpreter for which it is intended or by the interpreter itself. | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `ASVS-REQ-V1.2.1` | Verify that output encoding for an HTTP response, HTML document, or XML document is relevant for the context required, such as encoding the relevant characters for HTML elements, HTML attributes, HTML | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.2` | Verify that when dynamically building URLs, untrusted data is encoded according to its context (e.g., URL encoding or base64url encoding for query or path parameters). Ensure that only safe URL protoc | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.3` | Verify that output encoding or escaping is used when dynamically building JavaScript content (including JSON), to avoid changing the message or document structure (to avoid JavaScript and JSON injecti | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.4` | Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database inje | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.5` | Verify that the application protects against OS command injection and that operating system calls use parameterized OS queries or use contextual command line output encoding. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.6` | Verify that the application protects against LDAP injection vulnerabilities, or that specific security controls to prevent LDAP injection have been implemented. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.7` | Verify that the application is protected against XPath injection attacks by using query parameterization or precompiled queries. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.8` | Verify that LaTeX processors are configured securely (such as not using the "--shell-escape" flag) and an allowlist of commands is used to prevent LaTeX injection attacks. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.2.9` | Verify that the application escapes special characters in regular expressions (typically using a backslash) to prevent them from being misinterpreted as metacharacters. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.1` | Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.10` | Verify that format strings which might resolve in an unexpected or malicious way when used are sanitized before being processed. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.11` | Verify that the application sanitizes user input before passing to mail systems to protect against SMTP or IMAP injection. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.12` | Verify that regular expressions are free from elements causing exponential backtracking, and ensure untrusted input is sanitized to mitigate ReDoS or Runaway Regex attacks. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.2` | Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included mu | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.5` | Verify that the application sanitizes or disables user-supplied scriptable or expression template language content, such as Markdown, CSS or XSL stylesheets, BBCode, or similar. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.6` | Verify that the application protects against Server-side Request Forgery (SSRF) attacks, by validating untrusted data against an allowlist of protocols, domains, paths and ports and sanitizing potenti | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.3.7` | Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being include | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.4.1` | Verify that the application uses memory-safe string, safer memory copy and pointer arithmetic to detect or prevent stack, buffer, or heap overflows. | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `ASVS-REQ-V1.4.3` | Verify that dynamically allocated memory and resources are released, and that references or pointers to freed memory are removed or set to null to prevent dangling pointers and use-after-free vulnerab | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `ASVS-REQ-V1.5.1` | Verify that the application configures XML parsers to use a restrictive configuration and that unsafe features such as resolving external entities are disabled to prevent XML eXternal Entity (XXE) att | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.5.2` | Verify that deserialization of untrusted data enforces safe input handling, such as using an allowlist of object types or restricting client-defined object types, to prevent deserialization attacks. D | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V1.5.3` | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mec | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V10.1.2` | Verify that the client only accepts values from the authorization server (such as the authorization code or ID Token) if these values result from an authorization flow that was initiated by the same u | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.7` | Verify that if the authorization server supports unauthenticated dynamic client registration, it mitigates the risk of malicious client applications. It must validate client metadata such as any regis | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.5.1` | Verify that the client (as the relying party) mitigates ID Token replay attacks. For example, by ensuring that the 'nonce' claim in the ID Token matches the 'nonce' value sent in the authentication re | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.5.2` | Verify that the client uniquely identifies the user from ID Token claims, usually the 'sub' claim, which cannot be reassigned to other users (for the scope of an identity provider). | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.5.3` | Verify that the client rejects attempts by a malicious authorization server to impersonate another authorization server through authorization server metadata. The client must reject authorization serv | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.5.4` | Verify that the client validates that the ID Token is intended to be used for that client (audience) by checking that the 'aud' claim from the token is equal to the 'client_id' value for the client. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.5.5` | Verify that, when using OIDC back-channel logout, the relying party mitigates denial of service through forced logout and cross-JWT confusion in the logout flow. The client must verify that the logout | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.6.1` | Verify that the OpenID Provider only allows values 'code', 'ciba', 'id_token', or 'id_token code' for response mode. Note that 'code' is preferred over 'id_token code' (the OIDC Hybrid flow), and 'tok | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V11.1.1` | Verify that there is a documented policy for management of cryptographic keys and a cryptographic key lifecycle that follows a key management standard such as NIST SP 800-57. This should include ensur | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.1.4` | Verify that a cryptographic inventory is maintained. This must include a documented plan that outlines the migration path to new cryptographic standards, such as post-quantum cryptography, in order to | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.2.2` | Verify that the application is designed with crypto agility such that random number, authenticated encryption, MAC, or hashing algorithms, key lengths, rounds, ciphers and modes can be reconfigured, u | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.7.1` | Verify that full memory encryption is in use that protects sensitive data while it is in use, preventing access by unauthorized users or processes. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.7.2` | Verify that data minimization ensures the minimal amount of data is exposed during processing, and ensure that data is encrypted immediately after use or as soon as feasible. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V13.1.3` | Verify that the application documentation defines resource‑management strategies for every external system or service it uses (e.g., databases, file handles, threads, HTTP connections). This should in | conceito: Configuration Baseline Enforcement Controls (mechanism `ACM-RPR-008`) |
-| `ASVS-REQ-V13.2.4` | Verify that an allowlist is used to define the external resources or systems with which the application is permitted to communicate (e.g., for outbound requests, data loads, or file access). This allo | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V13.3.1` | Verify that a secrets management solution, such as a key vault, is used to securely create, store, control access to | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `ASVS-REQ-V13.3.3` | Verify that all cryptographic operations are performed using an isolated security module (such as a vault or hardware security module) to securely manage and protect key material from exposure outside | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `ASVS-REQ-V13.3.4` | Verify that secrets are configured to expire and be rotated based on the application's documentation. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `ASVS-REQ-V14.1.1` | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V14.2.7` | Verify that sensitive information is subject to data retention classification, ensuring that outdated or unnecessary data is deleted automatically, on a defined schedule, or as the situation requires. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V15.1.3` | Verify that the application documentation identifies functionality which is time-consuming or resource-demanding. This must include how to prevent a loss of availability due to overusing this function | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `ASVS-REQ-V15.2.2` | Verify that the application has implemented defenses against loss of availability due to functionality which is time-consuming or resource-demanding, based on the documented security decisions and str | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `ASVS-REQ-V15.2.4` | Verify that third-party components and all of their transitive dependencies are included from the expected repository, whether internally owned or an external source, and that there is no risk of a de | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `ASVS-REQ-V15.3.1` | Verify that the application only returns the required subset of fields from a data object. For example, it should not return an entire data object, as some individual fields should not be accessible t | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V15.3.3` | Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field va | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V15.3.5` | Verify that the application explicitly ensures that variables are of the correct type and performs strict equality and comparator operations. This is to avoid type juggling or type confusion vulnerabi | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V15.3.6` | Verify that JavaScript code is written in a way that prevents prototype pollution, for example, by using Set() or Map() instead of object literals. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V15.3.7` | Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V15.4.4` | Verify that resource allocation policies prevent thread starvation by ensuring fair access to resources, such as by leveraging thread pools, allowing lower-priority threads to proceed within a reasona | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `ASVS-REQ-V16.2.4` | Verify that logs can be read and correlated by the log processor that is in use, preferably by using a common logging format. | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `ASVS-REQ-V16.5.1` | Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, s | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V16.5.3` | Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V17.3.2` | Verify that the signaling server is able to continue processing legitimate signaling messages when encountering malformed signaling message that could cause a denial of service condition. This could i | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `ASVS-REQ-V2.1.1` | Verify that the application's documentation defines input validation rules for how to check the validity of data items against an expected structure. This could be common data formats such as credit c | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.1.2` | Verify that the application's documentation defines how to validate the logical and contextual consistency of combined data items, such as checking that suburb and ZIP code match. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.1.3` | Verify that expectations for business logic limits and validations are documented, including both per-user and globally across the application. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.2.1` | Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allow list of values, patterns, and ranges, or be ba | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.2.2` | Verify that the application is designed to enforce input validation at a trusted service layer. While client-side validation improves usability and should be encouraged, it must not be relied upon as | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.2.3` | Verify that the application ensures that combinations of related data items are reasonable according to the pre-defined rules. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V2.3.1` | Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V2.3.2` | Verify that business logic limits are implemented per the application's documentation to avoid business logic flaws being exploited. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V2.3.3` | Verify that transactions are being used at the business logic level such that either a business logic operation succeeds in its entirety or it is rolled back to the previous correct state. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V2.3.5` | Verify that high-value business logic flows require multi-user approval to prevent unauthorized or accidental actions. This could include but is not limited to large monetary transfers, contract appro | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V2.4.2` | Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V3.2.1` | Verify that security controls are in place to prevent browsers from rendering content or functionality in HTTP responses in an incorrect context (e.g., when an API, a user-uploaded file or other resou | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.2.2` | Verify that content intended to be displayed as text, rather than rendered as HTML, is handled using safe rendering functions (such as createTextNode or textContent) to prevent unintended execution of | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.2.3` | Verify that the application avoids DOM clobbering when using client-side JavaScript by employing explicit variable declarations, performing strict type checking, avoiding storing global variables on t | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.4.3` | Verify that HTTP responses include a Content-Security-Policy response header field which defines directives to ensure the browser only loads and executes trusted content or resources, in order to limi | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.4.4` | Verify that all HTTP responses contain an 'X-Content-Type-Options: nosniff' header field. This instructs browsers not to use content sniffing and MIME type guessing for the given response, and to requ | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.4.6` | Verify that the web application uses the frame-ancestors directive of the Content-Security-Policy header field for every HTTP response to ensure that it cannot be embedded by default and that embeddin | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.4.8` | Verify that all HTTP responses that initiate a document rendering (such as responses with Content-Type text/html), include the Cross‑Origin‑Opener‑Policy header field with the same-origin directive or | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.5.1` | Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they or | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.5.7` | Verify that data requiring authorization is not included in script resource responses, like JavaScript files, to prevent Cross-Site Script Inclusion (XSSI) attacks. | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V4.1.1` | Verify that every HTTP response with a message body contains a Content-Type header field that matches the actual content of the response, including the charset parameter to specify safe character enco | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `ASVS-REQ-V4.2.1` | Verify that all application components (including load balancers, firewalls, and application servers) determine boundaries of incoming HTTP messages using the appropriate mechanism for the HTTP versio | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V4.2.2` | Verify that when generating HTTP messages, the Content-Length header field does not conflict with the length of the content as determined by the framing of the HTTP protocol, in order to prevent reque | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V4.2.3` | Verify that the application does not send nor accept HTTP/2 or HTTP/3 messages with connection-specific header fields such as Transfer-Encoding to prevent response splitting and header injection attac | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V4.2.4` | Verify that the application only accepts HTTP/2 and HTTP/3 requests where the header fields and values do not contain any CR (\r), LF (\n), or CRLF (\r\n) sequences, to prevent header injection attack | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V4.2.5` | Verify that, if the application (backend or frontend) builds and sends requests, it uses validation, sanitization, or other mechanisms to avoid creating URIs (such as for API calls) or HTTP request he | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `ASVS-REQ-V4.3.1` | Verify that a query allowlist, depth limiting, amount limiting, or query cost analysis is used to prevent GraphQL or data layer expression Denial of Service (DoS) as a result of expensive, nested quer | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V6.1.2` | Verify that a list of context-specific words is documented in order to prevent their use in passwords. The list could include permutations of organization names, product names, system identifiers, pro | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.2.10` | Verify that a user's password stays valid until it is discovered to be compromised or the user rotates it. The application must not require periodic credential rotation. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.2` | Verify that, when being stored in the application's backend, lookup secrets with less than 112 bits of entropy (19 random alphanumeric characters or 34 random digits) are hashed with an approved passw | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.8.4` | Verify that, if an application uses a separate Identity Provider (IdP) and expects specific authentication strength, methods, or recentness for specific functions, the application verifies this using | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V9.1.2` | Verify that only algorithms on an allowlist can be used to create and verify self-contained tokens, for a given context. The allowlist must include the permitted algorithms, ideally only either symmet | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
+#### `ACO-IVF-005` — Controlled Failure And Non-Revealing Client Error Surface
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (198 grounded claims em 21 fontes):
+  - NIST SP 800-53 Rev. 5 — 45 refs (`SP800-53-AC-3.5`, `SP800-53-AC-3.6`, `SP800-53-AC-3.9` + 2 more)
+  - MITRE CAPEC v3.9 — 39 refs (`CAPEC-2`, `CAPEC-8`, `CAPEC-14` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 26 refs (`CWE-1058`, `CWE-1073`, `CWE-1118` + 2 more)
+  - PCI DSS v4.0.1 — 17 refs (`PCI-1.2.2`, `PCI-1.2.3`, `PCI-2.2.5` + 2 more)
+  - OWASP ASVS v5.0.0 — 16 refs (`ASVS-REQ-V1.4.3`, `ASVS-REQ-V4.2.5`, `ASVS-REQ-V6.1.1` + 2 more)
+  - OWASP DSOMM — 12 refs (`DSOMM-ACTIVITY-760F1056B0EE4F22A35BF65446F944CA`, `DSOMM-ACTIVITY-E5386ABF91544752A1A8C3A8900F732D`, `DSOMM-ACTIVITY-ED715B38C34B40CD83FDCE807F306FC1` + 2 more)
+  - PCI Secure SLC v1.1 — 7 refs (`PCISSLC-2.6`, `PCISSLC-3.2`, `PCISSLC-3.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0049`, `AML.T0080.001`, `AML.T0094` + 2 more)
+  - OWASP SAMM v2.1 — 5 refs (`SAMM-ACTIVITY-I_DM_1_A`, `SAMM-ACTIVITY-I_SB_3_B`, `SAMM-ACTIVITY-V_RT_1_A` + 2 more)
+  - OWASP Top 10 (2021) — 4 refs (`TOP10-A01-2021`, `TOP10-A07-2021`, `TOP10-A08-2021` + 1 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-3.13`, `CIS-9.1`, `CIS-16`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 3 refs (`NIST-AI-100-2-E2025-2.1.2`, `NIST-AI-100-2-E2025-3.4.1`, `NIST-AI-100-2-E2025-4.1.3`)
+  - OWASP MCP — Third-Party Servers v1.0 — 3 refs (`OWASP-MCP-3P-TOOL-POISONING`, `OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION`, `OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - NIST SSDF (SP 800-218 v1.1) — 3 refs (`SSDF-PRACTICE-RV.2`, `SSDF-TASK-PW.1.2`, `SSDF-TASK-RV.1.2`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM07-2025`, `LLM10-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP02-2025`, `MCP07-2025`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 2 refs (`SCAGILE-OPS-7`, `SCAGILE-OPS-12`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-AUTH-ERROR-HANDLING`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DATA-VALIDATION`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-VULN-RESPONSE`)
+
+#### `ACO-IVF-006` — Centralized Error Handling And Sensitive Error Logging Hygiene
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (120 grounded claims em 16 fontes):
+  - NIST SP 800-53 Rev. 5 — 55 refs (`SP800-53-AC-4.24`, `SP800-53-AU-1`, `SP800-53-AU-2` + 2 more)
+  - CIS Controls v8.1.2 — 13 refs (`CIS-3.14`, `CIS-4.9`, `CIS-7` + 2 more)
+  - OWASP SAMM v2.1 — 11 refs (`SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-G_EG_2_B`, `SAMM-ACTIVITY-G_PC_3_A` + 2 more)
+  - OWASP ASVS v5.0.0 — 10 refs (`ASVS-REQ-V16.1.1`, `ASVS-REQ-V16.2.1`, `ASVS-REQ-V16.2.2` + 2 more)
+  - OWASP DSOMM — 8 refs (`DSOMM-ACTIVITY-95CAEF9636ED458CA0875C35D4F9DEC2`, `DSOMM-ACTIVITY-8B994601575E4EA5B228ACCB18C8E514`, `DSOMM-ACTIVITY-4ECED38A79044C45ADB050B663065540` + 2 more)
+  - PCI DSS v4.0.1 — 8 refs (`PCI-1.2.4`, `PCI-2.2.3`, `PCI-5.3.4` + 2 more)
+  - MITRE CAPEC v3.9 — 4 refs (`CAPEC-81`, `CAPEC-93`, `CAPEC-268` + 1 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-IAM`, `SCFPSSD-LOGGING`, `SCFPSSD-CODING-STANDARDS`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-779`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.M0024`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-1`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PW.1.3`)
+
+#### `ACO-IVF-007` — Input Validation And Safe Failure Integrity
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (19 grounded claims em 10 fontes):
+  - NIST SP 800-53 Rev. 5 — 6 refs (`SP800-53-PE-5`, `SP800-53-SC-7`, `SP800-53-SC-7.24` + 2 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-16.1`, `CIS-16.8`, `CIS-16.9`)
+  - MITRE CAPEC v3.9 — 2 refs (`CAPEC-522`, `CAPEC-624`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML02-2023`, `ML09-2023`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-1289`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0011.000`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-3.6`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-MEASURE-2.6`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-0DE465A655A74343AF79948BB5FF10BA`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-TOOL-DESIGN`)
+
+#### `ACO-IVF-008` — Context-Aware Output Encoding And Rendering Safety
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (56 grounded claims em 7 fontes):
+  - MITRE CAPEC v3.9 — 28 refs (`CAPEC-18`, `CAPEC-19`, `CAPEC-32` + 2 more)
+  - OWASP ASVS v5.0.0 — 18 refs (`ASVS-REQ-V1.2.1`, `ASVS-REQ-V1.2.2`, `ASVS-REQ-V1.2.3` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-1021`, `CWE-79`, `CWE-838`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0054`, `AML.T0077`, `AML.CS0029`)
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-AC-4.29`, `SP800-53-AC-16.5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-E1F37ABBD8484A3AB3DF65E91A89DCB7`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C4`)
+
+
+### Practices (7)
+
+#### `ACP-IVF-001` — Boundary Input Validation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (16 grounded claims em 6 fontes):
+  - MITRE CWE — Software Development View (v4.19.1) — 6 refs (`CWE-1173`, `CWE-1284`, `CWE-1285` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V1.1.1`, `ASVS-REQ-V2.2.2`, `ASVS-REQ-V4.2.3` + 1 more)
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-SI-10`, `SP800-53-SI-10.2`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM02-2025`, `LLM10-2025`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.M0033`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+
+#### `ACP-IVF-002` — Schema And Allowlist Enforcement
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 4 keywords × 13 ocorrências; principais: accepted, allowlist, enforcement, validation)
+- **Substrate v7 contributing sources** (125 grounded claims em 18 fontes):
+  - NIST SP 800-53 Rev. 5 — 34 refs (`SP800-53-AC-3`, `SP800-53-AC-3.8`, `SP800-53-AC-3.11` + 2 more)
+  - OWASP ASVS v5.0.0 — 21 refs (`ASVS-REQ-V1.2.6`, `ASVS-REQ-V1.5.1`, `ASVS-REQ-V1.5.2` + 2 more)
+  - PCI DSS v4.0.1 — 19 refs (`PCI-REQ-8`, `PCI-REQ-9`, `PCI-1.2.5` + 2 more)
+  - MITRE CAPEC v3.9 — 12 refs (`CAPEC-13`, `CAPEC-58`, `CAPEC-80` + 2 more)
+  - OWASP SAMM v2.1 — 10 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_2_B`, `SAMM-ACTIVITY-D_SA_3_B` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 8 refs (`CWE-1070`, `CWE-112`, `CWE-1230` + 2 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-2.5`, `CIS-2.6`, `CIS-2.7`)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-CF81922530CB47028E3260225EEDC33D`, `DSOMM-ACTIVITY-6DF508EF86FC4C22BD9F646C3127CE7D`, `DSOMM-ACTIVITY-070BB14BE04A4F3D896AA08EBA7A35F9`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-6.1`, `PCISSLC-6.2`, `PCISSLC-8.1`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0054`, `AML.T0079`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM01-2025`, `LLM06-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 2 refs (`OWASP-MCP-TOOL-DESIGN`, `OWASP-MCP-PROMPT-INJECTION`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-5`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312c1`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-3.1.2`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-BUILD-L1`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-PRACTICE-PW.7`)
+
+#### `ACP-IVF-003` — Dangerous Pattern Exclusion
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (63 grounded claims em 11 fontes):
+  - MITRE CAPEC v3.9 — 29 refs (`CAPEC-6`, `CAPEC-7`, `CAPEC-28` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 9 refs (`CWE-115`, `CWE-184`, `CWE-186` + 2 more)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 7 refs (`NIST-AI-100-2-E2025-2.3.3`, `NIST-AI-100-2-E2025-3.2.2`, `NIST-AI-100-2-E2025-3.3` + 2 more)
+  - OWASP ASVS v5.0.0 — 6 refs (`ASVS-REQ-V1.2.8`, `ASVS-REQ-V1.2.9`, `ASVS-REQ-V1.3.2` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0011`, `AML.T0068`, `AML.T0107` + 2 more)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-D918CD44A97243E9A974EFF3F4A5DCFE`, `DSOMM-ACTIVITY-D17DBFF01F10492AB4C717BB59A0A711`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM02-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP06-2025`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-D_TA_2_A`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A03-2021`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-THREAT-MODELING`)
+
+#### `ACP-IVF-004` — Pre-Use Data Validation Discipline
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (77 grounded claims em 14 fontes):
+  - NIST SP 800-53 Rev. 5 — 27 refs (`SP800-53-CA-3.6`, `SP800-53-CA-7.4`, `SP800-53-CP-7.4` + 2 more)
+  - CIS Controls v8.1.2 — 18 refs (`CIS-1.1`, `CIS-3`, `CIS-3.1` + 2 more)
+  - OWASP ASVS v5.0.0 — 7 refs (`ASVS-REQ-V2.2.3`, `ASVS-REQ-V2.3.1`, `ASVS-REQ-V2.3.3` + 2 more)
+  - OWASP SAMM v2.1 — 7 refs (`SAMM-ACTIVITY-D_TA_1_A`, `SAMM-ACTIVITY-D_TA_3_A`, `SAMM-ACTIVITY-I_DM_3_B` + 2 more)
+  - EU GDPR (RGPD) — 3 refs (`GDPR-ART-5`, `GDPR-ART-32`, `GDPR-ART-35`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0010.002`, `AML.T0111`, `AML.M0008`)
+  - OWASP LLM Top 10 (2025) — 3 refs (`LLM02-2025`, `LLM04-2025`, `LLM08-2025`)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-348`, `CWE-454`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-PRACTICE-RV.1`, `SSDF-PRACTICE-RV.2`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DATA-VALIDATION`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML02-2023`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A02-2021`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-6.5.3`)
+
+#### `ACP-IVF-005` — Non-Revealing Error Surface Control
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (237 grounded claims em 22 fontes):
+  - NIST SP 800-53 Rev. 5 — 123 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-3.5` + 2 more)
+  - PCI DSS v4.0.1 — 21 refs (`PCI-REQ-1`, `PCI-1.1.1`, `PCI-1.2.2` + 2 more)
+  - MITRE CAPEC v3.9 — 20 refs (`CAPEC-12`, `CAPEC-22`, `CAPEC-36` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 20 refs (`CWE-1073`, `CWE-1084`, `CWE-1118` + 2 more)
+  - OWASP ASVS v5.0.0 — 6 refs (`ASVS-REQ-V6.1.1`, `ASVS-REQ-V8.2.4`, `ASVS-REQ-V15.3.4` + 2 more)
+  - CIS Controls v8.1.2 — 6 refs (`CIS-4.11`, `CIS-6.8`, `CIS-13.5` + 2 more)
+  - HIPAA Security Rule — 5 refs (`HIPAA-164-308a6`, `HIPAA-164-310a1`, `HIPAA-164-310b` + 2 more)
+  - OWASP DSOMM — 5 refs (`DSOMM-ACTIVITY-82E499D1F4634A4BBE9068812A874AF6`, `DSOMM-ACTIVITY-E5386ABF91544752A1A8C3A8900F732D`, `DSOMM-ACTIVITY-ED715B38C34B40CD83FDCE807F306FC1` + 2 more)
+  - PCI Secure SLC v1.1 — 5 refs (`PCISSLC-2.6`, `PCISSLC-3.2`, `PCISSLC-3.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 4 refs (`AML.TA0014`, `AML.T0049`, `AML.T0094` + 1 more)
+  - OWASP LLM Top 10 (2025) — 4 refs (`LLM01-2025`, `LLM03-2025`, `LLM07-2025` + 1 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-I_DM_1_A`, `SAMM-ACTIVITY-I_SD_2_A`, `SAMM-ACTIVITY-O_IM_2_B` + 1 more)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP01-2025`, `MCP02-2025`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-SECURITY-CONTROLS`, `SCFPSSD-VULN-RESPONSE`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-TASK-PO.5.2`, `SSDF-TASK-PW.1.2`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-5`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A01-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-EXP-8`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEVELOPMENT`)
+
+#### `ACP-IVF-006` — Centralized Error Governance
+
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 00 (`00-fundamentos`), Cap. 07 (`07-cicd-seguro`), Cap. 10 (`10-testes-seguranca`), Cap. 12 (`12-monitorizacao-operacoes`), Cap. 13 (`13-formacao-onboarding`), Cap. 14 (`14-governanca-contratacao`). Cap. expected (06-desenvolvimento-seguro) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (54 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 28 refs (`SP800-53-AU-1`, `SP800-53-AU-2`, `SP800-53-AU-2.3` + 2 more)
+  - OWASP SAMM v2.1 — 10 refs (`SAMM-ACTIVITY-G_EG_2_B`, `SAMM-ACTIVITY-G_EG_3_A`, `SAMM-ACTIVITY-G_PC_1_B` + 2 more)
+  - OWASP DSOMM — 5 refs (`DSOMM-ACTIVITY-95CAEF9636ED458CA0875C35D4F9DEC2`, `DSOMM-ACTIVITY-8B994601575E4EA5B228ACCB18C8E514`, `DSOMM-ACTIVITY-4ECED38A79044C45ADB050B663065540` + 2 more)
+  - CIS Controls v8.1.2 — 4 refs (`CIS-8.1`, `CIS-8.3`, `CIS-8.9` + 1 more)
+  - NIST AI RMF 1.0 — 3 refs (`NIST-AI-RMF-GOVERN-4`, `NIST-AI-RMF-GOVERN-4.3`, `NIST-AI-RMF-MEASURE-1.3`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-GOVERNANCE`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-10.4.1`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-LOGGING`)
+
+#### `ACP-IVF-007` — Context-Aware Output Encoding At Rendering Boundaries
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 4 keywords × 14 ocorrências; principais: encoding, escaping, html, output)
+- **Substrate v7 contributing sources** (30 grounded claims em 7 fontes):
+  - OWASP ASVS v5.0.0 — 12 refs (`ASVS-REQ-V1.1.2`, `ASVS-REQ-V1.2.1`, `ASVS-REQ-V1.2.2` + 2 more)
+  - MITRE CAPEC v3.9 — 12 refs (`CAPEC-19`, `CAPEC-32`, `CAPEC-64` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0054`, `AML.T0077`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-838`)
+  - NIST SP 800-53 Rev. 5 — 1 refs (`SP800-53-AC-16.5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-E1F37ABBD8484A3AB3DF65E91A89DCB7`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C4`)
+
+
+### Mechanisms (5)
+
+#### `ACM-IVF-001` — Code Review For Input And Error Discipline
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (127 grounded claims em 19 fontes):
+  - NIST SP 800-53 Rev. 5 — 35 refs (`SP800-53-AC-4.9`, `SP800-53-AC-13`, `SP800-53-AU-2.3` + 2 more)
+  - OWASP ASVS v5.0.0 — 15 refs (`ASVS-REQ-V1.2.5`, `ASVS-REQ-V1.2.6`, `ASVS-REQ-V1.3.6` + 2 more)
+  - MITRE CAPEC v3.9 — 14 refs (`CAPEC-14`, `CAPEC-24`, `CAPEC-54` + 2 more)
+  - OWASP SAMM v2.1 — 14 refs (`SAMM-ACTIVITY-D_SR_1_B`, `SAMM-ACTIVITY-D_TA_3_A`, `SAMM-ACTIVITY-G_EG_3_A` + 2 more)
+  - CIS Controls v8.1.2 — 12 refs (`CIS-3.1`, `CIS-3.2`, `CIS-3.7` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 10 refs (`SSDF-PRACTICE-PO.4`, `SSDF-PRACTICE-PW.5`, `SSDF-PRACTICE-PW.7` + 2 more)
+  - OWASP DSOMM — 6 refs (`DSOMM-ACTIVITY-7121B0C76ACE4D6B95D094535DBCCB57`, `DSOMM-ACTIVITY-95CAEF9636ED458CA0875C35D4F9DEC2`, `DSOMM-ACTIVITY-55F4C9163A34474DAD969A9F7A4F6A83` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-1085`, `CWE-115`, `CWE-391` + 1 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-CODING-STANDARDS`, `SCFPSSD-DATA-HANDLING`, `SCFPSSD-TESTING`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM09-2025`, `LLM10-2025`)
+  - OWASP Proactive Controls (2018) — 2 refs (`OPC-C9`, `OPC-C10`)
+  - PCI DSS v4.0.1 — 2 refs (`PCI-6.2.3`, `PCI-10.4.1`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 2 refs (`SCAGILE-OPS-2`, `SCAGILE-OPS-7`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a1`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-CONTINUOUS-VALIDATION`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML02-2023`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-TESTING`)
+
+#### `ACM-IVF-002` — Static Rulepacks And Security Linters
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (90 grounded claims em 14 fontes):
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 17 refs (`AML.T0010.001`, `AML.T0020`, `AML.T0054` + 2 more)
+  - MITRE CAPEC v3.9 — 13 refs (`CAPEC-15`, `CAPEC-35`, `CAPEC-38` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 10 refs (`CWE-183`, `CWE-184`, `CWE-186` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 10 refs (`SP800-53-AC-4.1`, `SP800-53-AC-4.6`, `SP800-53-AC-4.14` + 2 more)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 9 refs (`NIST-AI-100-2-E2025-2.1.3`, `NIST-AI-100-2-E2025-2.3.1`, `NIST-AI-100-2-E2025-3.2` + 2 more)
+  - OWASP SAMM v2.1 — 7 refs (`SAMM-ACTIVITY-I_SB_1_A`, `SAMM-ACTIVITY-I_SB_2_B`, `SAMM-ACTIVITY-I_SB_3_A` + 2 more)
+  - OWASP ASVS v5.0.0 — 5 refs (`ASVS-REQ-V1.3.7`, `ASVS-REQ-V1.3.12`, `ASVS-REQ-V9.1.2` + 2 more)
+  - OWASP DSOMM — 5 refs (`DSOMM-ACTIVITY-B597928E54D648A5A8068003DCD56AAB`, `DSOMM-ACTIVITY-CF81922530CB47028E3260225EEDC33D`, `DSOMM-ACTIVITY-F0E018143B884BD0A3A9F91DB001D20BADVANCED` + 2 more)
+  - PCI DSS v4.0.1 — 5 refs (`PCI-2.2.6`, `PCI-6.3.3`, `PCI-7.3.3` + 2 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-2.6`, `CIS-3.7`, `CIS-10`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-8.1`, `PCISSLC-8.2`, `PCISSLC-8.3`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM03-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-TOOL-DESIGN`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PO.3.3`)
+
+#### `ACM-IVF-003` — Schema And Contract Validators
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (36 grounded claims em 11 fontes):
+  - OWASP ASVS v5.0.0 — 10 refs (`ASVS-REQ-V2.1.1`, `ASVS-REQ-V2.1.2`, `ASVS-REQ-V2.1.3` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 7 refs (`SP800-53-SA-9.3`, `SP800-53-SA-10.1`, `SP800-53-SA-12.10` + 2 more)
+  - MITRE CAPEC v3.9 — 6 refs (`CAPEC-95`, `CAPEC-146`, `CAPEC-218` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-112`, `CWE-353`, `CWE-354` + 1 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.M0008`, `AML.M0019`, `AML.M0033`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-3.4`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312c1`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM04-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+
+#### `ACM-IVF-004` — Centralized Error Translation And Redaction
+
+- **Manual prose:** ⚠️ **content gap confirmado** — Phase 2/3 kw-match não encontrou cobertura substantive. Registado como future-work P8 §10 limitations (decisão programme-lead 2026-05-11).
+- **Substrate v7 contributing sources** (158 grounded claims em 15 fontes):
+  - NIST SP 800-53 Rev. 5 — 69 refs (`SP800-53-AC-1`, `SP800-53-AC-2.4`, `SP800-53-AC-4.24` + 2 more)
+  - PCI DSS v4.0.1 — 20 refs (`PCI-REQ-1`, `PCI-1.1.1`, `PCI-1.1.2` + 2 more)
+  - CIS Controls v8.1.2 — 19 refs (`CIS-2`, `CIS-4.9`, `CIS-6.7` + 2 more)
+  - OWASP DSOMM — 12 refs (`DSOMM-ACTIVITY-994151396B50441B89E10AA59ACCD43D`, `DSOMM-ACTIVITY-8AE0B92C10E04602BA227524D6AED488`, `DSOMM-ACTIVITY-F2594F8F1CD645F9AF29EAF3315698EB` + 2 more)
+  - OWASP SAMM v2.1 — 12 refs (`SAMM-ACTIVITY-G_EG_2_B`, `SAMM-ACTIVITY-I_DM_1_A`, `SAMM-ACTIVITY-I_SD_1_A` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-12`, `CAPEC-61`, `CAPEC-187` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 5 refs (`SSDF-PRACTICE-PS.3`, `SSDF-TASK-PO.1.3`, `SSDF-TASK-PO.3.2` + 2 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 3 refs (`SCAGILE-OPS-1`, `SCAGILE-OPS-5`, `SCAGILE-OPS-6`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-VULN-RESPONSE`, `SCFPSSD-MITIGATIONS`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - EU Digital Operational Resilience Act (DORA) — 1 refs (`DORA-ART-9`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0104`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-5.2`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-SOURCING-TRANSFER`)
+
+#### `ACM-IVF-005` — Context-Aware Encoder Selection And Application
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 3 keywords × 19 ocorrências; principais: html, json, output)
+- **Substrate v7 contributing sources** (46 grounded claims em 7 fontes):
+  - MITRE CAPEC v3.9 — 26 refs (`CAPEC-18`, `CAPEC-19`, `CAPEC-32` + 2 more)
+  - OWASP ASVS v5.0.0 — 13 refs (`ASVS-REQ-V1.1.2`, `ASVS-REQ-V1.2.1`, `ASVS-REQ-V1.2.2` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-1021`, `CWE-838`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0054`, `AML.T0077`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-E1F37ABBD8484A3AB3DF65E91A89DCB7`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C4`)
+
 
 ---
 
-## MITRE CWE — Software Development View (v4.19.1)
+## Slice `ACO-SPC` — Gestão de segredos, configuração protegida e identidades operacionais
 
-**O que esta ES traz para este capítulo:** contribui 72 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### ControlObjectives (7)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CWE-1021` | Improper Restriction of Rendered UI Layers or Frames. The web application does not restrict or incorrectly restricts frame objects or UI layers that belong to another application or domain, which can | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1056` | Invokable Control Element with Variadic Parameters. A named-callable or method control element has a signature that supports a variable (variadic) number of parameters or arguments. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1058` | Invokable Control Element in Multi-Thread Context with non-Final Static Storable or Member Element. The code contains a function or method that operates in a multi-threaded environment but owns an uns | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1070` | Serializable Data Element Containing non-Serializable Item Elements. The product contains a serializable, storable data element such as a field or member, but the data element contains member elements | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1073` | Non-SQL Invokable Control Element with Excessive Number of Data Resource Accesses. The product contains a client with a function or method that contains a large number of data accesses/queries that ar | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1084` | Invokable Control Element with Excessive File or Data Access Operations. A function or method contains too many operations that utilize a data manager or file resource. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1085` | Invokable Control Element with Excessive Volume of Commented-out Code. A function, method, procedure, etc. contains an excessive amount of code that has been commented out within its body. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1117` | Callable with Insufficient Behavioral Summary. The code contains a function or method whose signature and/or associated inline documentation does not sufficiently describe the callable's inputs, outpu | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1118` | Insufficient Documentation of Error Handling Techniques. The documentation does not sufficiently describe the techniques that are used for error handling, exception processing, or similar mechanisms. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-112` | Missing XML Validation. The product accepts XML from an untrusted source but does not validate the XML against the proper schema. | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CWE-1127` | Compilation with Insufficient Warnings or Errors. The code is compiled without sufficient warnings enabled, which may prevent the detection of subtle bugs or quality issues. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-115` | Misinterpretation of Input. The product misinterprets an input, whether from an attacker or another product, in a security-relevant fashion. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-1173` | Improper Use of Validation Framework. The product does not use, or incorrectly uses, an input validation framework that is provided by the source language or an independent library. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1284` | Improper Validation of Specified Quantity in Input. The product receives input that is expected to specify a quantity (such as size or length), but it does not validate or incorrectly validates that t | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1285` | Improper Validation of Specified Index, Position, or Offset in Input. The product receives input that is expected to specify an index, position, or offset into an indexable resource such as a buffer o | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1286` | Improper Validation of Syntactic Correctness of Input. The product receives input that is expected to be well-formed - i.e., to comply with a certain syntax - but it does not validate or incorrectly v | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1287` | Improper Validation of Specified Type of Input. The product receives input that is expected to be of a certain type, but it does not validate or incorrectly validates that the input is actually of the | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1288` | Improper Validation of Consistency within Input. The product receives a complex input with multiple elements or fields that must be consistent with each other, but it does not validate or incorrectly | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-1289` | Improper Validation of Unsafe Equivalence in Input. The product receives an input value that is used as a resource identifier or other type of reference, but it does not validate or incorrectly valida | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-1392` | Use of Default Credentials. The product uses default credentials (such as passwords or cryptographic keys) for potentially critical functionality. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-183` | Permissive List of Allowed Inputs. The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are explicitly allowed by policy because the inputs are | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CWE-184` | Incomplete List of Disallowed Inputs. The product implements a protection mechanism that relies on a list of inputs (or properties of inputs) that are not allowed by policy or otherwise require other | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CWE-186` | Overly Restrictive Regular Expression. A regular expression is overly restrictive, which prevents dangerous values from being detected. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-193` | Off-by-one Error. A product calculates or uses an incorrect maximum or minimum value that is 1 more, or 1 less, than the correct value. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-201` | Insertion of Sensitive Information Into Sent Data. The code transmits data to another actor, but a portion of the data includes sensitive information that should not be accessible to that actor. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-209` | Generation of Error Message Containing Sensitive Information. The product generates an error message that includes sensitive information about its environment, users, or associated data. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-213` | Exposure of Sensitive Information Due to Incompatible Policies. The product's intended functionality exposes information to certain actors in accordance with the developer's security policy, but this | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-214` | Invocation of Process Using Visible Sensitive Information. A process is invoked with sensitive command-line arguments, environment variables, or other elements that can be seen by other processes on t | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-215` | Insertion of Sensitive Information Into Debugging Code. The product inserts sensitive information into debugging code, which could expose this information if the debugging code is not disabled in prod | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-242` | Use of Inherently Dangerous Function. The product calls a function that can never be guaranteed to work safely. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-256` | Plaintext Storage of a Password. The product stores a password in plaintext within resources such as memory or files. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-257` | Storing Passwords in a Recoverable Format. The storage of passwords in a recoverable format makes them subject to password reuse attacks by malicious users. In fact, it should be noted that recoverabl | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-260` | Password in Configuration File. The product stores a password in a configuration file that might be accessible to actors who do not know the password. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-262` | Not Using Password Aging. The product does not have a mechanism in place for managing password aging. | conceito: Short-Lived Credential Controls (mechanism `ACM-SPC-003`) |
-| `CWE-263` | Password Aging with Long Expiration. The product supports password aging, but the expiration period is too long. | conceito: Short-Lived Credential Controls (mechanism `ACM-SPC-003`) |
-| `CWE-274` | Improper Handling of Insufficient Privileges. The product does not handle or incorrectly handles when it has insufficient privileges to perform an operation, leading to resultant weaknesses. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-280` | Improper Handling of Insufficient Permissions or Privileges. The product does not handle or incorrectly handles when it has insufficient privileges to access resources or functionality as specified by | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-312` | Cleartext Storage of Sensitive Information. The product stores sensitive information in cleartext within a resource that might be accessible to another control sphere. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-324` | Use of a Key Past its Expiration Date. The product uses a cryptographic key or password past its expiration date, which diminishes its safety significantly by increasing the timing window for cracking | conceito: Short-Lived Credential Controls (mechanism `ACM-SPC-003`) |
-| `CWE-346` | Origin Validation Error. The product does not properly verify that the source of data or communication is valid. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CWE-366` | Race Condition within a Thread. If two threads of execution use a resource simultaneously, there exists the possibility that resources may be used while invalid, in turn making the state of execution | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-385` | Covert Timing Channel. Covert timing channels convey information by modulating some aspect of system behavior over time, so that the program receiving the information can observe system behavior and i | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-390` | Detection of Error Condition Without Action. The product detects a specific error, but takes no actions to handle the error. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-391` | Unchecked Error Condition. [PLANNED FOR DEPRECATION. SEE MAINTENANCE NOTES AND CONSIDER CWE-252, CWE-248, OR CWE-1069.] Ignoring exceptions and other error conditions may allow an attacker to induce u | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-412` | Unrestricted Externally Accessible Lock. The product properly checks for the existence of a lock, but the lock can be externally controlled or influenced by an actor that is outside of the intended sp | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-434` | Unrestricted Upload of File with Dangerous Type. The product allows the upload or transfer of dangerous file types that are automatically processed within its environment. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-455` | Non-exit on Failed Initialization. The product does not exit or otherwise modify its operation when security-relevant errors occur during initialization, such as when a configuration file has a format | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-470` | Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection'). The product uses external input with reflection to select which classes or code to use, but it does not sufficiently | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-497` | Exposure of Sensitive System Information to an Unauthorized Control Sphere. The product does not properly prevent sensitive system-level information from being accessed by unauthorized actors who do n | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `CWE-502` | Deserialization of Untrusted Data. The product deserializes untrusted data without sufficiently ensuring that the resulting data will be valid. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-515` | Covert Storage Channel. A covert storage channel transfers information through the setting of bits by one program and the reading of those bits by another. What distinguishes this case from that of or | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `CWE-549` | Missing Password Field Masking. The product does not mask passwords during entry, increasing the potential for attackers to observe and capture passwords. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-617` | Reachable Assertion. The product contains an assert() or similar statement that can be triggered by an attacker, which leads to an application exit or other behavior that is more severe than necessary | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-624` | Executable Regular Expression Error. The product uses a regular expression that either | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-625` | Permissive Regular Expression. The product uses a regular expression that does not sufficiently restrict the set of allowed values. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-653` | Improper Isolation or Compartmentalization. The product does not properly compartmentalize or isolate functionality, processes, or resources that require different privilege levels, rights, or permiss | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-656` | Reliance on Security Through Obscurity. The product uses a protection mechanism whose strength depends heavily on its obscurity, such that knowledge of its algorithms or key data is sufficient to defe | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-676` | Use of Potentially Dangerous Function. The product invokes a potentially dangerous function that could introduce a vulnerability if it is used incorrectly, but the function can also be used safely. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-695` | Use of Low-Level Functionality. The product uses low-level functionality that is explicitly prohibited by the framework or specification under which the product is supposed to operate. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-749` | Exposed Dangerous Method or Function. The product provides an Applications Programming Interface (API) or similar interface for interaction with external actors, but the interface includes a dangerous | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CWE-763` | Release of Invalid Pointer or Reference. The product attempts to return a memory resource to the system, but it calls the wrong release function or calls the appropriate release function incorrectly. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-79` | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'). The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output t | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-807` | Reliance on Untrusted Inputs in a Security Decision. The product uses a protection mechanism that relies on the existence or values of an input, but the input can be modified by an untrusted actor in | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-832` | Unlock of a Resource that is not Locked. The product attempts to unlock a resource that is not locked. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-836` | Use of Password Hash Instead of Password for Authentication. The product records password hashes in a data store, receives a hash of a password from a client, and compares the supplied hash to the has | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CWE-838` | Inappropriate Encoding for Output Context. The product uses or specifies an encoding when generating output to a downstream component, but the specified encoding is not the same as the encoding that i | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-89` | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'). The product constructs all or part of an SQL command using externally-influenced input from an upstream component, | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-91` | XML Injection (aka Blind XPath Injection). The product does not properly neutralize special elements that are used in XML, allowing attackers to modify the syntax, content, or commands of the XML befo | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-915` | Improperly Controlled Modification of Dynamically-Determined Object Attributes. The product receives input from an upstream component that specifies multiple attributes, properties, or fields that are | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `CWE-917` | Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection'). The product constructs all or part of an expression language (EL) statement in a | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-921` | Storage of Sensitive Data in a Mechanism without Access Control. The product stores sensitive information in a file system or device that does not have built-in access control. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-94` | Improper Control of Generation of Code ('Code Injection'). The product constructs all or part of a code segment using externally-influenced input from an upstream component, but it does not neutralize | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
+#### `ACO-SPC-001` — Secret Leak Prevention And Hardcoded-Secret Exclusion
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (17 grounded claims em 10 fontes):
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-215`, `CWE-348`, `CWE-434`)
+  - NIST SP 800-53 Rev. 5 — 3 refs (`SP800-53-AC-4.31`, `SP800-53-PE-19`, `SP800-53-SR-2`)
+  - MITRE CAPEC v3.9 — 2 refs (`CAPEC-65`, `CAPEC-242`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0057`, `AML.T0068`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-PRACTICE-PS.1`, `SSDF-PRACTICE-PW.5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-D17DBFF01F10492AB4C717BB59A0A711`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM09-2025`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-I_DM_1_A`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-9.3`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-REPO`)
 
-## MITRE ATLAS — Adversarial Threat Landscape for AI Systems
+#### `ACO-SPC-002` — Protected Secret Storage And Controlled Retrieval
 
-**O que esta ES traz para este capítulo:** contribui 50 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (70 grounded claims em 11 fontes):
+  - NIST SP 800-53 Rev. 5 — 38 refs (`SP800-53-AC-3.6`, `SP800-53-AC-3.9`, `SP800-53-AC-11.1` + 2 more)
+  - CIS Controls v8.1.2 — 10 refs (`CIS-3`, `CIS-3.1`, `CIS-3.2` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 10 refs (`CWE-256`, `CWE-257`, `CWE-260` + 2 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-37`, `CAPEC-204`, `CAPEC-636`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0037`, `AML.M0012`)
+  - PCI DSS v4.0.1 — 2 refs (`PCI-3.3.2`, `PCI-9.4.6`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-5`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C3`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-O_OM_2_A`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-7.2`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PS.1.1`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `AML.CS0022` | ChatGPT Package Hallucination. Researchers identified that large language models such as ChatGPT can hallucinate fake software package names that are not published to a package repository. An attacker | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.CS0027` | Organization Confusion on Hugging Face. [threlfall_hax](https://5stars217.github.io/), a security researcher, created organization accounts on Hugging Face, a public model repository, that impersonate | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.CS0029` | Google Bard Conversation Exfiltration. [Embrace the Red](https://embracethered.com/blog/) demonstrated that Bard users' conversations could be exfiltrated via an indirect prompt injection. To execute | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.CS0031` | Malicious Models on Hugging Face. Researchers at ReversingLabs have identified malicious models containing embedded malware hosted on the Hugging Face model repository. The models were found to execut | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.CS0040` | Hacking ChatGPT’s Memories with Prompt Injection. [Embrace the Red](https://embracethered.com/blog/) demonstrated that ChatGPT’s memory feature is vulnerable to manipulation via prompt injections. To | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.CS0041` | Rules File Backdoor: Supply Chain Attack on AI Coding Assistants. Pillar Security researchers demonstrated how adversaries can compromise AI-generated code by injecting malicious instructions into rul | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.CS0046` | Data Destruction via Indirect Prompt Injection Targeting Claude Computer-Use. Security researchers at HiddenLayer demonstrated that an indirect prompt injection targeting Claude’s Computer Use AI can | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0002` | Passive AI Output Obfuscation. Decreasing the fidelity of model outputs provided to the end user can reduce an adversary's ability to extract information about the model and optimize attacks for the m | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.M0008` | Validate AI Model. Validate that AI models perform as intended by testing for backdoor triggers, potential for data leakage, or adversarial influence. Monitor AI model for concept drift and training d | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0011` | Restrict Library Loading. Prevent abuse of library loading mechanisms in the operating system and software to load untrusted code by configuring appropriate library loading mechanisms and investigatin | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0012` | Encrypt Sensitive Information. Encrypt sensitive data such as AI models to protect against adversaries attempting to access sensitive data. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.M0015` | Adversarial Input Detection. Detect and block adversarial inputs or atypical queries that deviate from known benign behavior, exhibit behavior patterns observed in previous attacks or that come from p | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0020` | Generative AI Guardrails. Guardrails are safety controls that are placed between a generative AI model and the output shared with the user to prevent undesired inputs and outputs. Guardrails can take | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0021` | Generative AI Guidelines. Guidelines are safety controls that are placed between user-provided input and a generative AI model to help direct the model to produce desired outputs and prevent undesired | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.M0033` | Input and Output Validation for AI Agent Components. Implement validation on inputs and outputs for the tools and data sources used by AI agents. Validation includes enforcing a common data format, sc | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0007` | Discover AI Artifacts. Adversaries may search private sources to identify AI learning artifacts that exist on the system and gather information about them. These artifacts can include the software sta | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0008.000` | AI Development Workspaces. Developing and staging AI attacks often requires expensive compute resources. Adversaries may need access to one or many GPUs in order to develop an attack. They may try to | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0008.001` | Consumer Hardware. Adversaries may acquire consumer hardware to conduct their attacks. Owning the hardware provides the adversary with complete control of the environment. These devices can be hard to | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0010.001` | AI Software. Adversaries may target software packages that are commonly used in AI-enabled systems or are part of the AI DevOps lifecycle. This can include deep learning frameworks used to build AI mo | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0010.002` | Data. Data is a key vector of supply chain compromise for adversaries. Every AI project will require some form of data. Many rely on large open source datasets that are publicly available. An adversar | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0011` | User Execution. An adversary may rely upon specific actions by a user in order to gain execution. Users may inadvertently execute unsafe code introduced via [AI Supply Chain Compromise](/techniques/AM | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0011.000` | Unsafe AI Artifacts. Adversaries may develop unsafe AI artifacts that when executed have a deleterious effect. The adversary can use this technique to establish persistent access to systems. These mod | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0011.001` | Malicious Package. Adversaries may develop malicious software packages that when imported by a user have a deleterious effect. Malicious packages may behave as expected to the user. They may be introd | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0012` | Valid Accounts. Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access. Credentials may take the form of usernames and passwords of individual user acco | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0018.002` | Embed Malware. Adversaries may embed malicious code into AI Model files. AI models may be packaged as a combination of instructions and weights. Some formats such as pickle files are unsafe to deseria | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0021` | Establish Accounts. Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in [AI Attack Staging](/tactics/AML.TA0001), or for victim impersonat | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0024` | Exfiltration via AI Inference API. Adversaries may exfiltrate private information via [AI Model Inference API Access](/techniques/AML.T0040). AI Models have been shown leak private information about t | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0025` | Exfiltration via Cyber Means. Adversaries may exfiltrate AI artifacts or other information relevant to their goals via traditional cyber means. See the ATT&CK [Exfiltration](https://attack.mitre.org/ | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0037` | Data from Local System. Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0049` | Exploit Public-Facing Application. Adversaries may attempt to take advantage of a weakness in an Internet-facing computer or program using software, data, or commands in order to cause unintended or u | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0051` | LLM Prompt Injection. An adversary may craft malicious prompts as inputs to an LLM that cause the LLM to act in unintended ways. These "prompt injections" are often designed to cause the model to igno | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0051.000` | Direct. An adversary may inject prompts directly as a user of the LLM. This type of injection may be used by the adversary to gain a foothold in the system or to misuse the LLM itself, as for example | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0054` | LLM Jailbreak. Adversaries may induce a large language model (LLM) to ignore, circumvent, or override its safety/alignment behaviors and/or guardails to elicit outputs the model is intended to withhol | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0057` | LLM Data Leakage. Adversaries may craft prompts that induce the LLM to leak sensitive information. This can include private user data or proprietary information. The leaked information may come from p | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0068` | LLM Prompt Obfuscation. Adversaries may hide or otherwise obfuscate prompt injections or retrieval content to avoid detection from humans, large language model (LLM) guardrails, or other detection mec | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0069.001` | System Instruction Keywords. Adversaries may discover keywords that have special meaning to the large language model (LLM), such as function names or object names. These can later be exploited to conf | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0073` | Impersonation. Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicat | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0077` | LLM Response Rendering. An adversary may get a large language model (LLM) to respond with private information that is hidden from the user when the response is rendered by the user's client. The priva | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0080.001` | Thread. Adversaries may introduce malicious instructions into a chat thread of a large language model (LLM) to cause behavior changes which persist for the remainder of the thread. A chat thread may c | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0083` | Credentials from AI Agent Configuration. Adversaries may access the credentials of other tools or services on a system from the configuration of an AI agent. AI Agents often utilize external tools or | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0090` | OS Credential Dumping. Adversaries may extract credentials from OS caches, application memory, or other sources on a compromised system. Credentials are often in the form of a hash or clear text, and | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0094` | Delay Execution of LLM Instructions. Adversaries may include instructions to be followed by the AI system in response to a future event, such as a specific keyword or the next interaction, in order to | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0095.000` | Code Repositories. Adversaries may search public code repositories for information about a victim or victim system that can be used during targeting. Victims may store code or artifacts related to the | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0098` | AI Agent Tool Credential Harvesting. Adversaries may attempt to use their access to an AI agent on the victim's system to retrieve data from available agent tools to collect credentials. Agent tools m | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0105` | Escape to Host. Adversaries may break out of a container or virtualized environment to gain access to the underlying host. This can allow an adversary access to other containerized or virtualized reso | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.T0107` | Exploitation for Defense Evasion. Adversaries may exploit a system or application vulnerability to bypass security features. Exploitation of a vulnerability occurs when an adversary takes advantage of | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `AML.T0112` | Machine Compromise. Adversaries may compromise a machine by exploiting or manipulating AI-enabled components on the system. Compromising a victim system allows the adversary to execute arbitrary code, | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.TA0010` | Exfiltration. The adversary is trying to steal AI artifacts or other information about the AI system. Exfiltration consists of techniques that adversaries may use to steal data from your network. Dat | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.TA0013` | Credential Access. The adversary is trying to steal account names and passwords. Credential Access consists of techniques for stealing credentials like account names and passwords. Techniques used to | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `AML.TA0014` | Command and Control. The adversary is trying to communicate with compromised AI systems to control them. Command and Control consists of techniques that adversaries may use to communicate with system | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
+#### `ACO-SPC-003` — Secret Rotation And Expiry Discipline
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (7 grounded claims em 2 fontes):
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V6.2.10`, `ASVS-REQ-V6.4.1`, `ASVS-REQ-V13.1.4` + 1 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-262`, `CWE-263`, `CWE-324`)
 
-## OWASP DSOMM
+#### `ACO-SPC-004` — Operational Identity Binding And Short-Lived Credentials
 
-**O que esta ES traz para este capítulo:** contribui 18 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (53 grounded claims em 13 fontes):
+  - NIST SP 800-53 Rev. 5 — 23 refs (`SP800-53-AC-2`, `SP800-53-IA-2`, `SP800-53-IA-2.1` + 2 more)
+  - MITRE CAPEC v3.9 — 6 refs (`CAPEC-21`, `CAPEC-59`, `CAPEC-196` + 2 more)
+  - OWASP ASVS v5.0.0 — 5 refs (`ASVS-REQ-V6.3.4`, `ASVS-REQ-V6.8.4`, `ASVS-REQ-V7.1.3` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 5 refs (`CWE-1392`, `CWE-289`, `CWE-306` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.TA0013`, `AML.T0021`, `AML.T0012` + 2 more)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-I_SD_1_A`, `SAMM-ACTIVITY-V_ST_3_A`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-65A2D7D9544146BFA4E3F76919857750`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-AUTH`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A07-2021`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-IAM`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `DSOMM-ACTIVITY-00E91A8A397246928679674AB8547486` | Parametrization. Parametrization By concatenating strings from user input to build SQL queries, an attacker can manipulate the query to do other unintentional SQL commands as well. This is called *SQL | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99` | API design validation. API design validation Creation of insecure or non-compliant API. Design contract-first APIs using an interface description language such as OpenAPI, AsyncAPI or SOAP and validat | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `DSOMM-ACTIVITY-07FE8C4FAE334409B1B2CF64CFCCEA86` | Software Composition Analysis (client side). Software Composition Analysis (client side) Client side components might have vulnerabilities. Tests for known vulnerabilities in components via Software C | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `DSOMM-ACTIVITY-0FF45FB87EEF46ED9B3A84C955CD7060` | Usage of encryption at rest. Usage of encryption at rest Evil actors might be able to access data and read information, e.g. from physical hard disks. By using encryption at rest, it is impossible or | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `DSOMM-ACTIVITY-27337442E4B14E878DC9CE86FBB79A39` | Reproducible defect tickets. Reproducible defect tickets Vulnerability descriptions are hard to understand by staff from operations and development. Vulnerabilities include the test procedure to give | conceito: Findings Workflow And Exception Governance (mechanism `ACM-TSV-004`) |
-| `DSOMM-ACTIVITY-363A3EEABAF9401088CABB8186A2989D` | .gitignore. .gitignore Unintended leakage of secrets, debug, or workstation specific data .gitignore files help prevent accidental commits of secrets, debug, or workstation specific data | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `DSOMM-ACTIVITY-4CE24ABD8BA6494C828D4D193E28E4A1` | Isolated networks for virtual environments. Isolated networks for virtual environments Virtual environments in default settings are able to access other virtual environments on the network stack. By u | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `DSOMM-ACTIVITY-6DF508EF86FC4C22BD9F646C3127CE7D` | Filter outgoing traffic. Filter outgoing traffic A compromised infrastructure component might try to send out stolen data. Having a whitelist and explicitly allowing egress traffic provides the abilit | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `DSOMM-ACTIVITY-7121B0C76ACE4D6B95D094535DBCCB57` | Security code review. Security code review ### Benefits - New vulnerabilities may be found before reaching production. - Old vulnerabilities are found and fixed. Understanding security is hard. The fo | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `DSOMM-ACTIVITY-760F1056B0EE4F22A35BF65446F944CA` | Virtual environments are limited. Virtual environments are limited Denial of service (internally by an attacker or unintentionally by a bug) on one service effects other services All virtual environme | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `DSOMM-ACTIVITY-B2F776063E6C41E9B72D7C0B1D3D581D` | Treatment of all defects. Treatment of all defects Vulnerabilities with severity low are not visible. All vulnerabilities are added to the quality gate. | conceito: Findings Workflow And Exception Governance (mechanism `ACM-TSV-004`) |
-| `DSOMM-ACTIVITY-C7D99B18C3E14D22B2E39AA9146C0B17` | Block force pushes. Block force pushes Misuse of force push can lead to loss of work. It may overwrite remote branches without warning, potentially erasing valuable contributions from team members. Th | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `DSOMM-ACTIVITY-CF0D600E114D48879059D81C53805F0D` | Fix rate per repo/product. Fix rate per repo/product Not communicating how many applications are adhering to SLAs based on the criticality of vulnerabilities can lead to delayed remediation of critica | conceito: Findings Workflow And Exception Governance (mechanism `ACM-TSV-004`) |
-| `DSOMM-ACTIVITY-D17DBFF01F10492AB4C717BB59A0A711` | Exclusion of source code duplicates. Exclusion of source code duplicates Duplicates in source code might influence the stability of the application. Automatic Detection and manual removal of duplicate | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `DSOMM-ACTIVITY-D5E6303CD5C64D59B258A3B9DE38A07F` | Test for stored secrets in build artifacts. Test for stored secrets in build artifacts Stored secrets in container images or other build artifacts shouldn't exists because they might be exposed to una | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `DSOMM-ACTIVITY-E14DE74194B3447C8B07EEA947D82E61` | Production near environments are used by developers. Production near environments are used by developers In case an errors occurs in production, the developer need to be able to create a production ne | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `DSOMM-ACTIVITY-E1F37ABBD8484A3AB3DF65E91A89DCB7` | Context-aware output encoding. Context-aware output encoding **Input validation** stops malicious data from entering your system. \ **Output encoding** neutralizes malicious data before rendering to u | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `DSOMM-ACTIVITY-F2594F8F1CD645F9AF29EAF3315698EB` | Automated merge of automated PRs. Automated merge of automated PRs Automated merges of automated created PRs for outdated dependencies. Vulnerabilities in running artifacts stay for too long and might | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
+#### `ACO-SPC-005` — Secret Usage Isolation Across Pipeline, Workload And Deploy Surfaces
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (18 grounded claims em 8 fontes):
+  - OWASP DSOMM — 6 refs (`DSOMM-ACTIVITY-DA4FF665DCB94E939D2048CDEDC50FC2`, `DSOMM-ACTIVITY-DF428C9DEFA042269F47A15BB53F822B`, `DSOMM-ACTIVITY-3A94D55EFD8249969EB320D23FF2A873` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0008.000`, `AML.T0024`, `AML.T0105`)
+  - NIST SP 800-53 Rev. 5 — 3 refs (`SP800-53-SC-7.20`, `SP800-53-SC-39`, `SP800-53-SC-39.1`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-4.12`, `CIS-16.8`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-574`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-214`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-BUILD-PLATFORM-ISOLATION`)
 
-## CIS Controls v8.1.2
+#### `ACO-SPC-006` — Secret Change Auditability And Governance
 
-**O que esta ES traz para este capítulo:** contribui 16 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (53 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 44 refs (`SP800-53-AC-2.7`, `SP800-53-AC-3.10`, `SP800-53-AC-4.23` + 2 more)
+  - PCI DSS v4.0.1 — 2 refs (`PCI-10.3.2`, `PCI-11.5.2`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V11.1.4`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-678`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312b`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-3F63BDBCC75F4780A941E6AD42E894E1`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-5.1`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-LOGGING`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CIS-10.6` | Centrally Manage Anti-Malware Software. Centrally manage anti-malware software. | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `CIS-11` | Data Recovery. Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets to a pre-incident and trusted state. | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-11.3` | Protect Recovery Data. Protect recovery data with equivalent controls to the original data. Reference encryption or data separation, based on requirements. | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-14.4` | Train Workforce on Data Handling Best Practices. Train workforce members on how to identify and properly store, transfer, archive, and destroy sensitive data. This also includes training workforce mem | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `CIS-14.8` | Train Workforce on the Dangers of Connecting to and Transmitting Enterprise Data Over Insecure Networks. Train workforce members on the dangers of connecting to, and transmitting data over, insecure n | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CIS-15.7` | Securely Decommission Service Providers. Securely decommission service providers. Example considerations include user and service account deactivation, termination of data flows, and secure disposal o | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CIS-16.8` | Separate Production and Non-Production Systems. Maintain separate environments for production and non-production systems. | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CIS-17.1` | Designate Personnel to Manage Incident Handling. Designate one key person, and at least one backup, who will manage the enterprise’s incident handling process. Management personnel are responsible for | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `CIS-3.11` | Encrypt Sensitive Data at Rest. Encrypt sensitive data at rest on servers, applications, and databases. Storage-layer encryption, also known as server-side encryption, meets the minimum requirement of | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CIS-3.13` | Deploy a Data Loss Prevention Solution | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CIS-3.2` | Establish | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CIS-3.4` | Enforce Data Retention. Retain data according to the enterprise’s documented data management process. Data retention must include both minimum and maximum timelines. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CIS-3.6` | Encrypt Data on End-User Devices. Encrypt data on end-user devices containing sensitive data. Example implementations can include: Windows BitLocker®, Apple FileVault®, Linux® dm-crypt. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CIS-3.9` | Encrypt Data on Removable Media. Encrypt data on removable media. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CIS-4.12` | Separate Enterprise Workspaces on Mobile End-User Devices. Ensure separate enterprise workspaces are used on mobile end-user devices, where supported. Example implementations include using an Apple® C | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-9.1` | Ensure Use of Only Fully Supported Browsers and Email Clients. Ensure only fully supported browsers and email clients are allowed to execute in the enterprise, only using the latest version of browser | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
+#### `ACO-SPC-007` — Secret Handling And Operational Identity Integrity
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (169 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 85 refs (`SP800-53-AC-1`, `SP800-53-AC-3`, `SP800-53-AC-3.5` + 2 more)
+  - PCI DSS v4.0.1 — 16 refs (`PCI-REQ-2`, `PCI-REQ-7`, `PCI-1.2.6` + 2 more)
+  - CIS Controls v8.1.2 — 11 refs (`CIS-3.5`, `CIS-4`, `CIS-4.1` + 2 more)
+  - OWASP SAMM v2.1 — 9 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_2_B` + 2 more)
+  - MITRE CAPEC v3.9 — 8 refs (`CAPEC-122`, `CAPEC-212`, `CAPEC-511` + 2 more)
+  - PCI Secure SLC v1.1 — 5 refs (`PCISSLC-1.2`, `PCISSLC-2.3`, `PCISSLC-8.1` + 2 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 5 refs (`SCAGILE-OPS-8`, `SCAGILE-OPS-12`, `SCAGILE-OPS-14` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V13.3.3`, `ASVS-REQ-V15.1.5`, `ASVS-REQ-V15.4.2` + 1 more)
+  - HIPAA Security Rule — 4 refs (`HIPAA-164-308a1`, `HIPAA-164-308a2`, `HIPAA-164-308a5` + 1 more)
+  - NIST SSDF (SP 800-218 v1.1) — 4 refs (`SSDF-PRACTICE-PO.5`, `SSDF-TASK-PO.1.1`, `SSDF-TASK-PO.1.2` + 1 more)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-AE22DAFDBCD641EEBA018B7FE6FC1AD9`, `DSOMM-ACTIVITY-82E499D1F4634A4BBE9068812A874AF6`, `DSOMM-ACTIVITY-070BB14BE04A4F3D896AA08EBA7A35F9`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-SECURITY-CONTROLS`, `SCFPSSD-DESIGN-PRINCIPLES`, `SCFPSSD-CODING-STANDARDS`)
+  - SAFECode — Software Integrity Controls (2010) — 3 refs (`SCSIC-SOURCING`, `SCSIC-SOURCING-TRANSFER`, `SCSIC-DELIVERY-SIGNING`)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-358`, `CWE-649`)
+  - EU GDPR (RGPD) — 2 refs (`GDPR-ART-5`, `GDPR-ART-32`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0054`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM03-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-TOOL-DESIGN`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C2`)
 
-## PCI DSS v4.0.1
 
-**O que esta ES traz para este capítulo:** contribui 11 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### Practices (6)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `PCI-1.4.5` | The disclosure of internal IP addresses and 1.4.5.a Examine configurations of NSCs to verify. The disclosure of internal IP addresses and 1.4.5.a Examine configurations of NSCs to verify loc | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `PCI-11.4.3` | External penetration testing is performed: 11.4.3.a Examine the scope of work and results. External penetration testing is performed: 11.4.3.a Examine the scope of work and results | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `PCI-3.7.1` | Key-management policies and procedures are 3.7.1.a Examine the documented key-management. Key-management policies and procedures are 3.7.1.a Examine the documented key-management t | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-3.7.2` | Key-management policies and procedures are 3.7.2.a Examine the documented key-management. Key-management policies and procedures are 3.7.2.a Examine the documented key-management c | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-3.7.3` | Key-management policies and procedures are 3.7.3.a Examine the documented key-management. Key-management policies and procedures are 3.7.3.a Examine the documented key-management acces | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-3.7.4` | Key management policies and procedures are 3.7.4.a Examine the documented key-management. Key management policies and procedures are 3.7.4.a Examine the documented key-management | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-3.7.6` | Where manual cleartext cryptographic key- 3.7.6.a Examine the documented key-management. Where manual cleartext cryptographic key- 3.7.6.a Examine the documented key-management | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-5.1.2` | Roles and responsibilities for performing 5.1.2.a Examine documentation to verify that. Roles and responsibilities for performing 5.1.2.a Examine documentation to verify that | conceito: Build And Image Inventory Generation (mechanism `ACM-SCBI-005`) |
-| `PCI-6.2.3` | Bespoke and custom software is reviewed 6.2.3.a Examine documented software. Bespoke and custom software is reviewed 6.2.3.a Examine documented software software ar | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `PCI-7.3.2` | The access control system | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-02 - Ficha de solução com controlos e rastreabilidade arquitetural |
-| `PCI-8.3.3` | User identity is verified before modifying any 8.3.3 Examine procedures for modifying. User identity is verified before modifying any 8.3.3 Examine procedures for modifying techni | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
+#### `ACP-SPC-001` — Secret Leak Prevention In Source And Pipeline
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (141 grounded claims em 18 fontes):
+  - OWASP DSOMM — 24 refs (`DSOMM-ACTIVITY-F3C4971E9F4D4E598ED0F0BDB6262477`, `DSOMM-ACTIVITY-8AE0B92C10E04602BA227524D6AED488`, `DSOMM-ACTIVITY-12C90CC63D584D9B82FFD469D2A0C298` + 2 more)
+  - MITRE CAPEC v3.9 — 18 refs (`CAPEC-38`, `CAPEC-44`, `CAPEC-131` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 18 refs (`SSDF-PRACTICE-PO.1`, `SSDF-PRACTICE-PS.2`, `SSDF-PRACTICE-PW.2` + 2 more)
+  - OWASP SAMM v2.1 — 12 refs (`SAMM-ACTIVITY-I_DM_1_A`, `SAMM-ACTIVITY-I_DM_2_A`, `SAMM-ACTIVITY-I_SB_1_A` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 10 refs (`AML.TA0009`, `AML.T0007`, `AML.T0104` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 10 refs (`SP800-53-AC-4.28`, `SP800-53-RA-5.11`, `SP800-53-SA-10` + 2 more)
+  - CIS Controls v8.1.2 — 9 refs (`CIS-3.8`, `CIS-3.13`, `CIS-16.1` + 2 more)
+  - OWASP ASVS v5.0.0 — 6 refs (`ASVS-REQ-V15.1.1`, `ASVS-REQ-V15.1.4`, `ASVS-REQ-V15.1.5` + 2 more)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 5 refs (`NIST-AI-100-2-E2025-3.2`, `NIST-AI-100-2-E2025-3.2.3`, `NIST-AI-100-2-E2025-3.3.2` + 2 more)
+  - PCI DSS v4.0.1 — 5 refs (`PCI-1.2.4`, `PCI-5.2.1`, `PCI-5.2.3` + 2 more)
+  - SLSA Specification v1.0 — Build Track — 5 refs (`SLSA-BUILD-L1`, `SLSA-BUILD-L2`, `SLSA-BUILD-L3` + 2 more)
+  - OWASP LLM Top 10 (2025) — 4 refs (`LLM03-2025`, `LLM04-2025`, `LLM08-2025` + 1 more)
+  - PCI Secure SLC v1.1 — 4 refs (`PCISSLC-4.1`, `PCISSLC-4.2`, `PCISSLC-6.1` + 1 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 4 refs (`SCAGILE-OPS-2`, `SCAGILE-OPS-7`, `SCAGILE-OPS-14` + 1 more)
+  - SAFECode — Software Integrity Controls (2010) — 3 refs (`SCSIC-SOURCING-OSS`, `SCSIC-DEV-REPO`, `SCSIC-DELIVERY`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-CODING-STANDARDS`, `SCFPSSD-LIFECYCLE-FEEDBACK`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-494`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-TOOL-DESIGN`)
 
-## NIST SSDF (SP 800-218 v1.1)
+#### `ACP-SPC-002` — Vault-Backed Secret Storage
 
-**O que esta ES traz para este capítulo:** contribui 9 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (166 grounded claims em 18 fontes):
+  - NIST SP 800-53 Rev. 5 — 81 refs (`SP800-53-AC-3.13`, `SP800-53-AC-4.4`, `SP800-53-AC-4.25` + 2 more)
+  - PCI DSS v4.0.1 — 17 refs (`PCI-REQ-3`, `PCI-REQ-4`, `PCI-REQ-6` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 14 refs (`CWE-256`, `CWE-257`, `CWE-278` + 2 more)
+  - CIS Controls v8.1.2 — 13 refs (`CIS-3`, `CIS-3.1`, `CIS-3.2` + 2 more)
+  - OWASP ASVS v5.0.0 — 12 refs (`ASVS-REQ-V6.5.2`, `ASVS-REQ-V6.5.3`, `ASVS-REQ-V11.1.2` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-24`, `CAPEC-37`, `CAPEC-204` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 4 refs (`AML.TA0006`, `AML.TA0012`, `AML.T0037` + 1 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_2_B`, `SAMM-ACTIVITY-I_SD_2_B` + 1 more)
+  - EU GDPR (RGPD) — 2 refs (`GDPR-ART-5`, `GDPR-ART-32`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312d`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-0FF45FB87EEF46ED9B3A84C955CD7060`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DEPLOYMENT`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML05-2023`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C3`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-7.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-ENCRYPTION`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PS.1.1`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SSDF-PRACTICE-PS.1` | Protect All Forms of Code from Unauthorized Access and Tampering. Help prevent unauthorized changes to code, both inadvertent and intentional, which could circumvent or negate the intended security ch | addon (medium): Modelos de Arquitetura Segura Reutilizáveis > Modelo 1 - Monólito Web com Backend Interno (Risco L1) > Ameaças mitigadas |
-| `SSDF-PRACTICE-PW.5` | Create Source Code by Adhering to Secure Coding Practices. Decrease the number of security vulnerabilities in the software, and reduce costs by minimiz ing vulnerabilities introduced during source cod | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `SSDF-PRACTICE-PW.7` | Review and/or Analyze Human-Readable Code to Identify Vulnerabilities | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `SSDF-TASK-PO.3.3` | Configure tools to generate artifacts of their support of secure software development practices as defined by the organization. | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `SSDF-TASK-PS.1.1` | Store all forms of code – including source code, executable code, and configuration- as-code – based on the principle of least privilege so that only authorized personnel, tools, services, etc. have a | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `SSDF-TASK-PW.5.1` | Follow all secure coding practices that are appropriate to the development languages and environment to meet the or ganization’s requirements. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `SSDF-TASK-PW.7.1` | Determine whether code review (a person looks directly at the code to find issues) and/or code analysis (tools are used to find issues in code, either in a fully automated way or in conjunction with a | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `SSDF-TASK-PW.7.2` | Perform the code review and/or code analysis based on the organization’s secure coding standards | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `SSDF-TASK-RV.1.2` | Review, analyze, and/or test the software’s code to identify or confirm the presence of previously undetected vulnerabilities. | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
+#### `ACP-SPC-003` — Secret Rotation And Renewal Discipline
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (10 grounded claims em 7 fontes):
+  - NIST SP 800-53 Rev. 5 — 3 refs (`SP800-53-IA-5.13`, `SP800-53-PS-1`, `SP800-53-PS-6`)
+  - OWASP ASVS v5.0.0 — 2 refs (`ASVS-REQ-V6.4.5`, `ASVS-REQ-V13.3.4`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-14.1`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a6`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0054`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-G_SM_3_A`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-5.1`)
 
-## OWASP SAMM v2.1
+#### `ACP-SPC-004` — Operational Identity Binding And OIDC Use
 
-**O que esta ES traz para este capítulo:** contribui 7 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (81 grounded claims em 12 fontes):
+  - NIST SP 800-53 Rev. 5 — 44 refs (`SP800-53-AC-2`, `SP800-53-AC-4.12`, `SP800-53-AC-4.18` + 2 more)
+  - OWASP ASVS v5.0.0 — 20 refs (`ASVS-REQ-V6.8.1`, `ASVS-REQ-V6.8.2`, `ASVS-REQ-V6.8.4` + 2 more)
+  - PCI DSS v4.0.1 — 6 refs (`PCI-1.1.1`, `PCI-4.1.1`, `PCI-8.1.1` + 2 more)
+  - MITRE CAPEC v3.9 — 2 refs (`CAPEC-21`, `CAPEC-196`)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-289`, `CWE-322`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0021`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-65A2D7D9544146BFA4E3F76919857750`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM06-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-AUTH`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-IAM`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SAMM-ACTIVITY-I_DM_1_A` | Track security defects centrally | conceito: Findings Workflow And Exception Governance (mechanism `ACM-TSV-004`) |
-| `SAMM-ACTIVITY-I_SD_1_B` | Protect application secrets in configuration and code. Protect application secrets in configuration and code. Developers should not have access to secrets or credentials for production environments. H | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `SAMM-ACTIVITY-I_SD_2_B` | Implement checks that detect the presence of secrets in code repositories | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `SAMM-ACTIVITY-I_SD_3_B` | Enforce lifecycle management of application secrets | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `SAMM-ACTIVITY-O_OM_1_A` | maintain awareness of the fate of processed data (e.g., backups, sharing with external partners) | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `SAMM-ACTIVITY-O_OM_2_A` | Establish a data catalog. Establish a data catalog. At this maturity level, Data Protection activities focus on actively managing your stewardship of data. Establish technical and administrative contr | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `SAMM-ACTIVITY-O_OM_3_A` | Respond to data breaches | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
+#### `ACP-SPC-005` — Secret Isolation Across Technical Surfaces
 
----
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 07 (`07-cicd-seguro`), Cap. 08 (`08-iac-infraestrutura`), Cap. 11 (`11-deploy-seguro`). Cap. expected (06-desenvolvimento-seguro) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (142 grounded claims em 14 fontes):
+  - NIST SP 800-53 Rev. 5 — 53 refs (`SP800-53-AC-17.6`, `SP800-53-AC-20`, `SP800-53-CM-4.1` + 2 more)
+  - MITRE CAPEC v3.9 — 24 refs (`CAPEC-22`, `CAPEC-36`, `CAPEC-113` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 23 refs (`AML.TA0013`, `AML.TA0010`, `AML.T0008` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 16 refs (`CWE-1104`, `CWE-1220`, `CWE-213` + 2 more)
+  - OWASP DSOMM — 10 refs (`DSOMM-ACTIVITY-31833D5635AF4EF39300F23D27646CE7`, `DSOMM-ACTIVITY-82E499D1F4634A4BBE9068812A874AF6`, `DSOMM-ACTIVITY-AD23BE9C56614F1F81A35A5DC7061629` + 2 more)
+  - CIS Controls v8.1.2 — 5 refs (`CIS-1`, `CIS-4.12`, `CIS-14.8` + 2 more)
+  - OWASP SAMM v2.1 — 3 refs (`SAMM-ACTIVITY-D_SA_1_B`, `SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-O_OM_1_A`)
+  - SLSA Specification v1.0 — Build Track — 2 refs (`SLSA-PRINCIPLE-TRUST-CODE`, `SLSA-BUILD-PLATFORM-ISOLATION`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-310c`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.1`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP01-2025`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-8.2.7`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-BUILD`)
 
-## NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy
+#### `ACP-SPC-006` — Secret Configuration Governance
 
-**O que esta ES traz para este capítulo:** contribui 6 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 00 (`00-fundamentos`), Cap. 05 (`05-dependencias-sbom-sca`), Cap. 07 (`07-cicd-seguro`), Cap. 13 (`13-formacao-onboarding`), Cap. 14 (`14-governanca-contratacao`). Cap. expected (06-desenvolvimento-seguro) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (64 grounded claims em 13 fontes):
+  - NIST SP 800-53 Rev. 5 — 34 refs (`SP800-53-AC-1`, `SP800-53-AC-4.20`, `SP800-53-AC-13` + 2 more)
+  - NIST AI RMF 1.0 — 9 refs (`NIST-AI-RMF-GOVERN-1`, `NIST-AI-RMF-GOVERN-1.3`, `NIST-AI-RMF-GOVERN-1.6` + 2 more)
+  - OWASP SAMM v2.1 — 8 refs (`SAMM-ACTIVITY-G_EG_2_A`, `SAMM-ACTIVITY-G_EG_3_A`, `SAMM-ACTIVITY-G_PC_1_A` + 2 more)
+  - PCI DSS v4.0.1 — 3 refs (`PCI-REQ-2`, `PCI-2.2.1`, `PCI-6.5.4`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-2.1`, `PCISSLC-8.2`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V13.3.2`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-678`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-20`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-GOVERNANCE`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-PLANNING`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-DEFAULTS`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `NIST-AI-100-2-E2025-2.1.2` | Attacker Goals and Objectives. The attacker’s objectives are classified along three dimensions according to the three main types of security violations considered when analyzing the security of a syst | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `NIST-AI-100-2-E2025-3.3` | Direct Prompting Attacks and Mitigations. [NISTAML.018] [Back to Index] DIRECT PROMPTING ATTACK attacks arise when the attacker is the primary user of the system, interacting with the model through qu | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `NIST-AI-100-2-E2025-3.3.2` | Information Extraction. [NISTAML.038] [Back to Index] Both during training and at run-time, GenAI models are ex- posed to a range of information which may be of interest to attackers, like personally | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-100-2-E2025-3.4` | Indirect Prompt Injection Attacks and Mitigations. [NISTAML.015] [Back to Index] Many use cases for GenAI models involve models interact- ing with additional resources, from an internet-connected AGEN | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `NIST-AI-100-2-E2025-3.4.1` | Availability Attacks. [NISTAML.016] [Back to Index] Attackers can manipulate resources to inject prompts into GenAI models that are designed to disrupt the availability of the model for legitimate use | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `NIST-AI-100-2-E2025-3.4.4` | Mitigations. Various techniques (see Sec. 3.3. | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
 
----
+### Mechanisms (4)
 
-## NIST AI RMF 1.0
+#### `ACM-SPC-001` — Secret Management Systems
 
-**O que esta ES traz para este capítulo:** contribui 6 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (317 grounded claims em 23 fontes):
+  - NIST SP 800-53 Rev. 5 — 169 refs (`SP800-53-AC-3.5`, `SP800-53-AC-3.6`, `SP800-53-AC-4.4` + 2 more)
+  - MITRE CAPEC v3.9 — 27 refs (`CAPEC-24`, `CAPEC-39`, `CAPEC-97` + 2 more)
+  - OWASP ASVS v5.0.0 — 18 refs (`ASVS-REQ-V6.1.2`, `ASVS-REQ-V6.5.2`, `ASVS-REQ-V6.5.3` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 17 refs (`SSDF-PRACTICE-PO.1`, `SSDF-PRACTICE-PO.4`, `SSDF-PRACTICE-PO.5` + 2 more)
+  - PCI DSS v4.0.1 — 13 refs (`PCI-REQ-5`, `PCI-REQ-6`, `PCI-1.2.3` + 2 more)
+  - OWASP DSOMM — 10 refs (`DSOMM-ACTIVITY-1B9281B948E24C019AC69DB9931C4885`, `DSOMM-ACTIVITY-12C90CC63D584D9B82FFD469D2A0C298`, `DSOMM-ACTIVITY-F88D1B173D7D4C3D8139AD44FC4942D4` + 2 more)
+  - OWASP SAMM v2.1 — 10 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-D_SA_2_B`, `SAMM-ACTIVITY-D_SA_3_B` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 9 refs (`CWE-1230`, `CWE-309`, `CWE-312` + 2 more)
+  - CIS Controls v8.1.2 — 8 refs (`CIS-3`, `CIS-3.1`, `CIS-3.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 7 refs (`AML.T0037`, `AML.T0057`, `AML.T0068` + 2 more)
+  - HIPAA Security Rule — 5 refs (`HIPAA-164-308a4`, `HIPAA-164-308a5`, `HIPAA-164-310a1` + 2 more)
+  - OWASP LLM Top 10 (2025) — 4 refs (`LLM04-2025`, `LLM07-2025`, `LLM08-2025` + 1 more)
+  - OWASP Proactive Controls (2018) — 3 refs (`OPC-C1`, `OPC-C3`, `OPC-C8`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-2.3`, `PCISSLC-6.1`, `PCISSLC-6.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-DESIGN-PRINCIPLES`, `SCFPSSD-ENCRYPTION`, `SCFPSSD-CODING-STANDARDS`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML05-2023`, `ML07-2023`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 2 refs (`SCAGILE-EXP-1`, `SCAGILE-EXP-12`)
+  - SLSA Specification v1.0 — Build Track — 2 refs (`SLSA-PRINCIPLE-TRUST-PLATFORMS`, `SLSA-PRINCIPLE-TRUST-CODE`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.1`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DEPLOYMENT`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-REPO`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `NIST-AI-RMF-GOVERN-1.6` | Mechanisms are in place to inventory AI systems. and are resourced according to organizational risk priorities. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-RMF-GOVERN-1.7` | Processes and procedures are in place for decom-. missioning and phasing out AI systems safely and in a man- ner that does not increase risks or decrease the organization’s trustworthiness. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-RMF-GOVERN-4.3` | Organizational practices are in place to enable AI. testing, identification of incidents, and information sharing. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-RMF-GOVERN-5` | GOVERN 5.1: Organizational policies and practices are in place. Processes are in to collect, consider, prioritize, and integrate feedback from those place for robust external to the team that develope | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-RMF-GOVERN-6` | Policies GOVERN 6.1: Policies and procedures are in place that address. and procedures are AI risks associated with third-party entities, including risks of in- in place to address fringement of | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `NIST-AI-RMF-MEASURE-1.3` | Internal experts who did not serve as front-line. developers for the system and/or independent assessors are in- volved in regular assessments and updates. Domain experts, users, AI actors external to | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
+#### `ACM-SPC-002` — OIDC-Based Operational Identity
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (75 grounded claims em 11 fontes):
+  - NIST SP 800-53 Rev. 5 — 45 refs (`SP800-53-AC-4.12`, `SP800-53-AC-14`, `SP800-53-AC-16.1` + 2 more)
+  - OWASP ASVS v5.0.0 — 17 refs (`ASVS-REQ-V6.8.4`, `ASVS-REQ-V7.5.3`, `ASVS-REQ-V8.4.2` + 2 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-21`, `CAPEC-151`, `CAPEC-681`)
+  - PCI DSS v4.0.1 — 3 refs (`PCI-8.2.1`, `PCI-8.2.2`, `PCI-8.3.3`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-322`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0087`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-65A2D7D9544146BFA4E3F76919857750`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-AUTH`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-IAM`)
 
-## OWASP MCP — Secure Server Development v1.0
+#### `ACM-SPC-003` — Short-Lived Credential Controls
 
-**O que esta ES traz para este capítulo:** contribui 6 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (9 grounded claims em 5 fontes):
+  - OWASP ASVS v5.0.0 — 2 refs (`ASVS-REQ-V6.1.1`, `ASVS-REQ-V6.2.10`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-5`, `CIS-6.8`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.TA0013`, `AML.T0098`)
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-AC-2.4`, `SP800-53-AC-2.8`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-226`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OWASP-MCP-AUTH` | Authentication & Authorization. 5. Authentication & Authorization • Enforce OAuth 2.1 / OIDC: Treat authentication as mandatory for all remote MCP servers. Use OAuth 2.1/OIDC for client and user ident | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `OWASP-MCP-DATA-VALIDATION` | Data Validation & Resource Management. 3. Data Validation & Resource Management • Resource Usage Limits: Impose quotas and rate limits on tool invocations and data fetches per session. Use timeouts an | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `OWASP-MCP-DEPLOYMENT` | Secure Deployment & Updates. 6. Secure Deployment & Updates • Secrets Storage and Management: Utilize secrets storage vaults for client credentials and API keys. Do not store secrets in environment va | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `OWASP-MCP-GOVERNANCE` | Governance. 7. Governance • Cryptographic Integrity: Use cryptographic signing and version pinning for all tools, dependencies, and registry manifests to ensure their integrity and prevent tampering. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `OWASP-MCP-PROMPT-INJECTION` | Prompt Injection Controls. 4. Prompt Injection Controls • Structured Tool Invocation: Favor structured JSON tool calls over having the model generate free-form text commands. This funnels the model's | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `OWASP-MCP-TOOL-DESIGN` | Safe Tool Design. 2. Safe Tool Design • Cryptographic Tool Manifests: Require every tool to have a signed manifest that includes its description, schema, version, and required permissions. Verify this | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
+#### `ACM-SPC-004` — Secret Scope And Binding Controls
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (111 grounded claims em 17 fontes):
+  - NIST SP 800-53 Rev. 5 — 56 refs (`SP800-53-AC-1`, `SP800-53-AC-2.7`, `SP800-53-AC-3.1` + 2 more)
+  - MITRE CAPEC v3.9 — 9 refs (`CAPEC-13`, `CAPEC-35`, `CAPEC-38` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 9 refs (`AML.T0109`, `AML.T0002.002`, `AML.M0005` + 2 more)
+  - NIST AI RMF 1.0 — 7 refs (`NIST-AI-RMF-GOVERN-1`, `NIST-AI-RMF-GOVERN-1.6`, `NIST-AI-RMF-GOVERN-2` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-I_SB_1_A`, `SAMM-ACTIVITY-I_SB_2_B`, `SAMM-ACTIVITY-I_SB_3_A` + 2 more)
+  - PCI DSS v4.0.1 — 6 refs (`PCI-5.2.3`, `PCI-6.5.3`, `PCI-6.5.4` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-1220`, `CWE-268`, `CWE-829`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-5.1`, `PCISSLC-8.1`, `PCISSLC-8.3`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-2.2`, `CIS-2.6`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-CF81922530CB47028E3260225EEDC33D`, `DSOMM-ACTIVITY-E5386ABF91544752A1A8C3A8900F732D`)
+  - OWASP LLM Top 10 (2025) — 2 refs (`LLM01-2025`, `LLM06-2025`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-5`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-SCOPE-MINIMIZATION`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP02-2025`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-VULN-RESPONSE`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PO.3.2`)
 
-## OWASP MCP Top 10 (v0.1, 2025 beta)
-
-**O que esta ES traz para este capítulo:** contribui 4 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `MCP01-2025` | Token Mismanagement & Secret Exposure. Hard-coded credentials, long-lived tokens, and secrets stored in model memory or protocol logs can expose sensitive environments to unauthorized access.Attackers | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `MCP02-2025` | Privilege Escalation via Scope Creep. Temporary or loosely defined permissions within MCP servers often expand over time, granting agents excessive capabilities. An attacker exploiting weak scope enfo | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `MCP05-2025` | Command Injection & Execution. Command injection in MCP environments occurs when an AI agent constructs and executes system commands, shell scripts, API calls, or code snippets using untrusted input—w | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `MCP06-2025` | Prompt Injection via Contextual Payloads. This risk is analogous to classic injection attacks (e.g., XSS, SQLi), but in the MCP world the “interpreter” is the model and the “payload” is text (or any c | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-
----
-
-## SAFECode — Fundamental Practices for Secure Software Development (2018)
-
-**O que esta ES traz para este capítulo:** contribui 4 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCFPSSD-CODING-STANDARDS` | Establish Coding Standards and Conventions. Coding standards, safe functions, code analysis tools for finding security issues early | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `SCFPSSD-DATA-HANDLING` | Handle Data Safely. Safe data handling practices including input validation, output encoding, parameterized queries | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `SCFPSSD-ENCRYPTION` | Develop an Encryption Strategy. Strategy for cryptographic protection of data at rest and in transit | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `SCFPSSD-VULN-RESPONSE` | Vulnerability Response and Disclosure. Internal/external policies, roles, reporter management, fix process, disclosure, lifecycle feedback | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
 
 ---
 
-## OWASP Proactive Controls (2018)
+## Generation provenance
 
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OPC-C10` | Handle All Errors and Exceptions. Exception handling is a programming concept that allows an application to respond to different error states (like network down, or database connection failed, etc) in | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `OPC-C4` | Encode and Escape Data. Encoding and escaping are defensive techniques meant to stop injection attacks. Encoding (commonly called output encoding) involves translating special characters into some dif | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `OPC-C5` | Validate All Inputs. Input validation is a programming technique that ensures only properly formatted data may enter a software system component. Syntactic validation should enforce correct syntax of | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-
----
-
-## OWASP Top 10 (2021)
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `TOP10-A03-2021` | Injection. An application is vulnerable to attack when user-supplied data is not validated, filtered, or sanitized by the application; dynamic queries or non-parameterized calls without context-aware | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `TOP10-A08-2021` | Software and Data Integrity Failures. Software and data integrity failures relate to code and infrastructure that does not protect against integrity violations. An example of this is where an applicat | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-| `TOP10-A10-2021` | Server-Side Request Forgery (SSRF). SSRF flaws occur whenever a web application is fetching a remote resource without validating the user-supplied URL. It allows an attacker to coerce the application | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-
----
-
-## PCI Secure SLC v1.1
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `PCISSLC-2.6` | Failures in software security assurance processes detected and updated. Mature process to detect weak or ineffective assurance processes; criteria for determining weakness defined; processes updated w | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `PCISSLC-3.4` | Failures in software security controls detected; weak controls updated or replaced. Mature process to identify weak or ineffective controls; criteria defined; monitoring throughout lifecycle; controls | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
-| `PCISSLC-7.2` | Sensitive production data protected when retained and securely deleted when not needed. Data protected when retained; securely deleted when no longer needed; deletion processes render data irretrievab | conceito: Secret Scope And Binding Controls (mechanism `ACM-SPC-004`) |
-
----
-
-## SAFECode — Practical Security Stories and Tasks for Agile Development (2012)
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCAGILE-EXP-1` | Software security training (secure coding and secure testing). Software security training covering secure coding and secure testing techniques | conceito: Threat Traceability Into Requirements And Validation (practice `ACP-TMR-005`) |
-| `SCAGILE-OPS-5` | Keep track of patches/fixes to third party dependencies. Keep track of patches/fixes to third party dependencies for new and existing code | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `SCAGILE-OPS-7` | Perform stricter code review of risky code. Perform stricter code review of risky code categories (network listeners, privileged code, input validation, etc.) | conceito: Test Execution Surfaces (mechanism `ACM-TSV-002`) |
-
----
-
-## OWASP LLM Top 10 (2025)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `LLM07-2025` | LLM07:2025 System Prompt Leakage. The system prompt leakage vulnerability in LLMs refers to the risk that the system prompts or instructions used to steer the behavior of the model can also contain se | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `LLM09-2025` | Implement human oversight and fact-checking processes, especially for critical | conceito: Validação de input, parsing seguro e tratamento controlado de erros (slice `ACO-IVF`) |
-
----
-
-## OWASP MCP — Third-Party Servers v1.0
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY` | Client security, server discovery and verification. • Validate Untrusted Data: Sanitize and validate all external data, such as tool descriptions and server responses, and user inputs before passing i | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `OWASP-MCP-3P-TOOL-POISONING` | Tool poisoning and rug pull attacks. Use Cases A downloadable MCP server that runs locally, using native tools and system-level permissions to perform tasks independently of external infrastructure. T | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-
----
-
-## SAFECode — Software Integrity Controls (2010)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCSIC-DEV-REPO` | Code Repository Security. All code assets in source code repositories with access control; separation of duties; change logs; SCAP compliance; branch access by least privilege | conceito: Artifact Signing And Attestation (mechanism `ACM-SCBI-004`) |
-| `SCSIC-SOURCING-TRANSFER` | Secure Transfer and Code Exchange Controls. Authenticated endpoints, encrypted sessions, digitally signed packages with verifiable checksums/hashes | conceito: Build And Image Inventory Generation (mechanism `ACM-SCBI-005`) |
-
----
-
-## EU GDPR (RGPD)
-
-**O que esta ES traz para este capítulo:** contribui 1 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `GDPR-ART-35` | GDPR Article 35. Article 35 (Data protection impact assessment) requires that where a type of processing in particular using new technologies, and taking into account the nature, scope, context and pu | conceito: Threat Representation Models (mechanism `ACM-TMR-001`) |
-
----
-
-## Anthropic MCP — Official Security Foundations (2025)
-
-**O que esta ES traz para este capítulo:** contribui 1 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `MCP-AUTH-ERROR-HANDLING` | Authorization error handling and insufficient-scope behavior. Servers MUST return appropriate HTTP status codes for authorization errors: Status Code Description Usage 401 Unauthorized Authorization r | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-
----
+- **Substrate version:** v7 (SUPPLIER sha256 `596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04`)
+- **V1 entity index:** `ontology-v1.1-fair-baseline` @ `84fe8bf` em sbd-toe-ontology
+- **Per-entity source map:** `data/p8_inputs/per_entity_source_map.json` @ ESI commit `aa3c13c`
+- **Phase 2/3 gap analysis:** `data/p8_gap_analysis/phase2_3/phase2_3_per_entity_classification.json` @ ESI commit `b8cd401`
+- **Slice → chapter map:** `data/p7_olir_audit/p7_v2_corrected/canon_rewrite/slice_to_chapter_map.yaml`
+- **Generated by:** Manual Agent Iter 3 Path D (recreate; Bundle G2 deprecated)
+- **Format:** entity-first (per V1 entity → Manual prose anchor + substrate v7 contributing sources)
+- **Cycle:** Cycle B Iteration 3 (Stage 5 Editorial Feedback applied)

@@ -2,1228 +2,963 @@
 
 ## Sumário
 
-Este capítulo trata de **padrões de arquitetura segura** — zonas de
-confiança, separação de funções, controlo de acesso por design. As fontes
-externas seguintes contribuem para esta área:
+Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-ATB` (Arquitetura segura e fronteiras de confiança), `ACO-IAT` (Identidade, autenticação e gestão de sessões), `ACO-ITS` (Integração e segurança service-to-service).
 
-- **NIST SP 800-53 Rev. 5** — 425 referência(s)
-- **OWASP ASVS v5.0.0** — 118 referência(s)
-- **MITRE CAPEC v3.9** — 102 referência(s)
-- **PCI DSS v4.0.1** — 59 referência(s)
-- **MITRE CWE — Software Development View (v4.19.1)** — 53 referência(s)
-- **MITRE ATLAS — Adversarial Threat Landscape for AI Systems** — 42 referência(s)
-- **CIS Controls v8.1.2** — 40 referência(s)
-- **OWASP DSOMM** — 20 referência(s)
-- **OWASP SAMM v2.1** — 13 referência(s)
-- **HIPAA Security Rule** — 9 referência(s)
-- **Anthropic MCP — Official Security Foundations (2025)** — 7 referência(s)
-- **OWASP LLM Top 10 (2025)** — 4 referência(s)
-- **PCI Secure SLC v1.1** — 4 referência(s)
-- **OWASP MCP Top 10 (v0.1, 2025 beta)** — 3 referência(s)
-- **OWASP Machine Learning Top 10** — 3 referência(s)
-- **OWASP Top 10 (2021)** — 3 referência(s)
-- **SAFECode — Software Integrity Controls (2010)** — 3 referência(s)
-- **EU Cyber Resilience Act (CRA)** — 2 referência(s)
-- **EU Digital Operational Resilience Act (DORA)** — 2 referência(s)
-- **NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy** — 2 referência(s)
-- **NIST AI RMF 1.0** — 2 referência(s)
-- **OWASP MCP — Secure Server Development v1.0** — 2 referência(s)
-- **OWASP MCP — Third-Party Servers v1.0** — 2 referência(s)
-- **OWASP Proactive Controls (2018)** — 2 referência(s)
-- **SAFECode — Fundamental Practices for Secure Software Development (2018)** — 2 referência(s)
-- **NIST SSDF (SP 800-218 v1.1)** — 2 referência(s)
-- **ENISA — Multilayer AI Cybersecurity Practices (2023)** — 1 referência(s)
-- **EU GDPR (RGPD)** — 1 referência(s)
-- **SAFECode — Practical Security Stories and Tasks for Agile Development (2012)** — 1 referência(s)
+Cobertura V1 entity-level: **56 entidades** primárias (21 ControlObjectives + 19 Practices + 16 Mechanisms). Cada entidade é listada abaixo com cobertura no Manual (prose anchor) e fontes externas substrate v7 que contribuem para a sua substantive coverage.
 
 ---
 
-## NIST SP 800-53 Rev. 5
+## Slice `ACO-ATB` — Arquitetura segura e fronteiras de confiança
 
-**O que esta ES traz para este capítulo:** contribui 425 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### ControlObjectives (7)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SP800-53-AC-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: access control policy that: Addresses purpose, scope, roles, responsibilities, management commit | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-10` | Concurrent Session Control. Limit the number of concurrent sessions for each [account and/or account types] to [number]. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-12` | Session Termination. Automatically terminate a user session after [conditions or trigger events]. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-12.1` | User-initiated Logouts. Provide a logout capability for user-initiated communications sessions whenever authentication is used to gain access to [information resources]. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-12.2` | Termination Message. Display an explicit logout message to users indicating the termination of authenticated communications sessions. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-AC-14` | Permitted Actions Without Identification or Authentication. Identify [user actions] that can be performed on the system without identification or authentication consistent with organizational mission | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-14.1` | Necessary Uses | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-15` | Automated Marking | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16` | Security and Privacy Attributes. Provide the means to associate [organization-defined types of security and privacy attributes] with [organization-defined security and privacy attribute values] for in | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.1` | Dynamic Attribute Association. Dynamically associate security and privacy attributes with [organization-defined subjects and objects] in accordance with the following security and privacy policies as | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.10` | Attribute Configuration by Authorized Individuals. Provide authorized individuals the capability to define or change the type and value of security and privacy attributes available for association wit | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.2` | Attribute Value Changes by Authorized Individuals. Provide authorized individuals (or processes acting on behalf of individuals) the capability to define or change the value of associated security and | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.3` | Maintenance of Attribute Associations by System. Maintain the association and integrity of [organization-defined security and privacy attributes] to [organization-defined subjects and objects]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.4` | Association of Attributes by Authorized Individuals. Provide the capability to associate [organization-defined security and privacy attributes] with [organization-defined subjects and objects] by auth | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.6` | Maintenance of Attribute Association. Require personnel to associate and maintain the association of [organization-defined security and privacy attributes] with [organization-defined subjects and obje | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.7` | Consistent Attribute Interpretation. Provide a consistent interpretation of security and privacy attributes transmitted between distributed system components. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-16.8` | Association Techniques and Technologies. Implement [organization-defined techniques and technologies] in associating security and privacy attributes to information. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-17` | Establish | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.1` | Monitoring and Control. Employ automated mechanisms to monitor and control remote access methods. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.10` | Authenticate Remote Commands. Implement [mechanisms] to authenticate [remote commands]. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.4` | Privileged Commands and Access. Authorize the execution of privileged commands and access to security-relevant information via remote access only in a format that provides assessable evidence and for | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.5` | Monitoring for Unauthorized Connections | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.7` | Additional Protection for Security Function Access | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.8` | Disable Nonsecure Network Protocols | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-17.9` | Disconnect or Disable Access. Provide the capability to disconnect or disable remote access to the system within [time period]. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-18` | Wireless Access. Establish configuration requirements, connection requirements, and implementation guidance for each type of wireless access; and Authorize each type of wireless access to the system p | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-18.1` | Authentication and Encryption. Protect wireless access to the system using authentication of and encryption. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-18.2` | Monitoring Unauthorized Connections | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-18.4` | Restrict Configurations by Users. Identify and explicitly authorize users allowed to independently configure wireless networking capabilities. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-AC-19` | Access Control for Mobile Devices. Establish configuration requirements, connection requirements, and implementation guidance for organization-controlled mobile devices, to include when such devices a | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-19.4` | Restrictions for Classified Information. Prohibit the use of unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information unless specificall | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-2` | Account Management. Define and document the types of accounts allowed and specifically prohibited for use within the system | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.1` | Automated System Account Management. Support the management of system accounts using [automated mechanisms]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.11` | Usage Conditions. Enforce [circumstances and/or usage conditions] for [system accounts]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.12` | Account Monitoring for Atypical Usage. Monitor system accounts for [atypical usage]; and Report atypical usage of system accounts to [personnel or roles]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.3` | Disable Accounts. Disable accounts within [time period] when the accounts: Have expired; Are no longer associated with a user or individual; Are in violation of organizational policy; or Have been ina | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.4` | Automated Audit Actions. Automatically audit account creation, modification, enabling, disabling, and removal actions. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.6` | Dynamic Privilege Management. Implement [dynamic privilege management capabilities]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.7` | Privileged User Accounts. Establish and administer privileged user accounts in accordance with | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-2.9` | Restrictions on Use of Shared and Group Accounts. Only permit the use of shared and group accounts that meet [conditions]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-AC-20` | Use of External Systems. , consistent with the trust relationships established with other organizations owning, operating, and/or maintaining external systems, allowing authorized individuals to: Acce | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-20.1` | Limits on Authorized Use. Permit authorized individuals to use an external system to access the system or to process, store, or transmit organization-controlled information only after: Verification of | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-20.2` | Portable Storage Devices — Restricted Use. Restrict the use of organization-controlled portable storage devices by authorized individuals on external systems using [restrictions]. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-20.3` | Restrict the use of non-organizationally owned systems | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-AC-21` | Information Sharing. Enable authorized users to determine whether access authorizations assigned to a sharing partner match the information’s access and use restrictions for [information-sharing circu | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-21.1` | Automated Decision Support. Employ [automated mechanisms] to enforce information-sharing decisions by authorized users based on access authorizations of sharing partners and access restrictions on inf | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-21.2` | Information Search and Retrieval. Implement information search and retrieval services that enforce [information-sharing restrictions]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-22` | Publicly Accessible Content. Designate individuals authorized to make information publicly accessible; Train authorized individuals to ensure that publicly accessible information does not contain nonp | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-AC-24` | Access Control Decisions. to ensure [access control decisions] are applied to each access request prior to access enforcement. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-24.1` | Transmit Access Authorization Information. Transmit [access authorization information] using [controls] to [systems] that enforce access control decisions. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-24.2` | No User or Process Identity. Enforce access control decisions based on [organization-defined security or privacy attributes] that do not include the identity of the user or process acting on behalf of | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3` | Access Enforcement. Enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.1` | Restricted Access to Privileged Functions | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.12` | Assert and Enforce Application Access. Require applications to assert, as part of the installation process, the access needed to the following system applications and functions: [system applications a | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.13` | Attribute-based Access Control. Enforce attribute-based access control policy over defined subjects and objects and control access based upon [attributes]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.14` | Individual Access. Provide [mechanisms] to enable individuals to have access to the following elements of their personally identifiable information: [elements]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.15` | Discretionary and Mandatory Access Control. Enforce [organization-defined mandatory access control policy] over the set of covered subjects and objects specified in the policy; and Enforce [organizati | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.2` | Dual Authorization. Enforce dual authorization for [privileged commands and/or other actions]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.3` | Mandatory Access Control. Enforce [organization-defined mandatory access control policy] over the set of covered subjects and objects specified in the policy, and where the policy: Is uniformly enforc | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.4` | Discretionary Access Control. Enforce [organization-defined discretionary access control policy] over the set of covered subjects and objects specified in the policy, and where the policy specifies th | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.6` | Protection of User and System Information | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.7` | Role-based Access Control. Enforce a role-based access control policy over defined subjects and objects and control access based upon [organization-defined roles and users authorized to assume such ro | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-3.8` | Revocation of Access Authorizations. Enforce the revocation of access authorizations resulting from changes to the security attributes of subjects and objects based on [rules]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-4` | Information Flow Enforcement. Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on [information flow control policies]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.1` | Object Security and Privacy Attributes. Use [organization-defined security and privacy attributes] associated with [organization-defined information, source, and destination objects] to enforce [infor | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.10` | Enable and Disable Security or Privacy Policy Filters. Provide the capability for privileged administrators to enable and disable [organization-defined security or privacy policy filters] under the fo | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.11` | Configuration of Security or Privacy Policy Filters. Provide the capability for privileged administrators to configure [organization-defined security or privacy policy filters] to support different se | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.12` | Data Type Identifiers. When transferring information between different security domains, use [data type identifiers] to validate data essential for information flow decisions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.13` | Decomposition into Policy-relevant Subcomponents. When transferring information between different security domains, decompose information into [policy-relevant subcomponents] for submission to policy | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.14` | Security or Privacy Policy Filter Constraints. When transferring information between different security domains, implement [organization-defined security or privacy policy filters] requiring fully enu | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.17` | Domain Authentication. Uniquely identify and authenticate source and destination points by for information transfer. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.18` | Security Attribute Binding | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.19` | Validation of Metadata. When transferring information between different security domains, implement [organization-defined security or privacy policy filters] on metadata. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.2` | Processing Domains. Use protected processing domains to enforce [information flow control policies] as a basis for flow control decisions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.20` | Approved Solutions. Employ [solutions in approved configurations] to control the flow of [information] across security domains. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.21` | Physical or Logical Separation of Information Flows. Separate information flows logically or physically using [organization-defined mechanisms and/or techniques] to accomplish [required separations]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.22` | Access Only. Provide access from a single device to computing platforms, applications, or data residing in multiple different security domains, while preventing information flow between the different | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.27` | Redundant/Independent Filtering Mechanisms. When transferring information between different security domains, implement content filtering solutions that provide redundant and independent filtering mec | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.28` | Linear Filter Pipelines. When transferring information between different security domains, implement a linear content filter pipeline that is enforced with discretionary and mandatory access controls. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.29` | Filter Orchestration Engines. When transferring information between different security domains, employ content filter orchestration engines to ensure that: Content filtering mechanisms successfully co | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.3` | Dynamic Information Flow Control. Enforce [information flow control policies]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.30` | Filter Mechanisms Using Multiple Processes. When transferring information between different security domains, implement content filtering mechanisms using multiple processes. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.31` | Failed Content Transfer Prevention. When transferring information between different security domains, prevent the transfer of failed content to the receiving domain. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.32` | Process Requirements for Information Transfer. When transferring information between different security domains, the process that transfers information between filter pipelines: Does not filter messag | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.4` | Flow Control of Encrypted Information. Prevent encrypted information from bypassing [information flow control mechanisms] by. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.6` | Metadata. Enforce information flow control based on [metadata]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.7` | One-way Flow Mechanisms. Enforce one-way information flows through hardware-based flow control mechanisms. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.8` | Security and Privacy Policy Filters. Enforce information flow control using [organization-defined security or privacy policy filters] as a basis for flow control decisions for [organization-defined in | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-4.9` | Human Reviews. Enforce the use of human reviews for [information flows] under the following conditions: [conditions]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-AC-5` | Identify | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6` | Least Privilege. Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.1` | Authorize Access to Security Functions. Authorize access for [individuals and roles] to: [organization-defined security functions (deployed in hardware, software, and firmware)]; and [security-relevan | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.10` | Prohibit Non-privileged Users from Executing Privileged Functions. Prevent non-privileged users from executing privileged functions. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.2` | Non-privileged Access for Nonsecurity Functions. Require that users of system accounts (or roles) with access to [security functions or security-relevant information] use non-privileged accounts or ro | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.3` | Network Access to Privileged Commands. Authorize network access to [privileged commands] only for [compelling operational needs] and document the rationale for such access in the security plan for the | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.4` | Separate Processing Domains. Provide separate processing domains to enable finer-grained allocation of user privileges. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.5` | Privileged Accounts. Restrict privileged accounts on the system to [personnel or roles]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.6` | Privileged Access by Non-organizational Users. Prohibit privileged access to the system by non-organizational users. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.7` | Review of User Privileges. Review [frequency] the privileges assigned to [roles and classes] to validate the need for such privileges; and Reassign or remove privileges, if necessary, to correctly ref | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-6.8` | Privilege Levels for Code Execution. Prevent the following software from executing at higher privilege levels than users executing the software: [software]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-AC-7` | Unsuccessful Logon Attempts. Enforce a limit of [number] consecutive invalid logon attempts by a user during a [time period]; and Automatically when the maximum number of unsuccessful attempts is exce | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-AC-7.3` | Biometric Attempt Limiting. Limit the number of unsuccessful biometric logon attempts to [number]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-AC-7.4` | Use of Alternate Authentication Factor. Allow the use of [authentication factors] that are different from the primary authentication factors after the number of organization-defined consecutive invali | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-AC-8` | System Use Notification. Display [system use notification] to users before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, d | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-AT-3` | Role-based Training. Provide role-based security and privacy training to personnel with the following roles and responsibilities: [organization-defined roles and responsibilities]: Before authorizing | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-AT-3.1` | Environmental Controls. Provide [personnel or roles] with initial and [frequency] training in the employment and operation of environmental controls. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-AT-3.2` | Physical Security Controls. Provide [personnel or roles] with initial and [frequency] training in the employment and operation of physical security controls. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-AU-10.1` | Association of Identities. Bind the identity of the information producer with the information to [strength of binding]; and Provide the means for authorized individuals to determine the identity of th | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-10.2` | Validate Binding of Information Producer Identity. Validate the binding of the information producer identity to the information at [frequency]; and Perform [actions] in the event of a validation error | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-12.2` | Standardized Formats. Produce a system-wide (logical or physical) audit trail composed of audit records in a standardized format. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-12.4` | Query Parameter Audits of Personally Identifiable Information. Provide and implement the capability for auditing the parameters of user query events for data sets containing personally identifiable in | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-13` | Monitoring for Information Disclosure. Monitor [open-source information and/or information sites] [frequency] for evidence of unauthorized disclosure of organizational information; and If an informati | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-13.1` | Use of Automated Tools. Monitor open-source information and information sites using [automated mechanisms]. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-13.2` | Review of Monitored Sites. Review the list of open-source information sites being monitored [frequency]. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-13.3` | Unauthorized Replication of Information. Employ discovery techniques, processes, and tools to determine if external entities are replicating organizational information in an unauthorized manner. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-14` | Session Audit. Provide and implement the capability for [users or roles] to the content of a user session under [circumstances]; and Develop, integrate, and use session auditing activities in consulta | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-14.1` | System Start-up. Initiate session audits automatically at system start-up. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-14.2` | Capture and Record Content | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-14.3` | Remote Viewing and Listening. Provide and implement the capability for authorized users to remotely view and hear content related to an established user session in real time. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-16` | Cross-organizational Audit Logging. Employ [methods] for coordinating [audit information] among external organizations when audit information is transmitted across organizational boundaries. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-16.3` | Disassociability. Implement [measures] to disassociate individuals from audit information transmitted across organizational boundaries. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-2.1` | Compilation of Audit Records from Multiple Sources | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-2.4` | Privileged Functions | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-3.1` | Additional Audit Information. Generate audit records containing the following additional information: [additional information]. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-3.2` | Centralized Management of Planned Audit Record Content | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-4.1` | Transfer to Alternate Storage. Transfer audit logs [frequency] to a different system, system component, or media other than the system or system component conducting the logging. | conceito: Log Retention And Lifecycle Governance (practice `ACP-SLG-004`) |
-| `SP800-53-AU-6.1` | Automated Process Integration. Integrate audit record review, analysis, and reporting processes using [automated mechanisms]. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-6.4` | Central Review and Analysis. Provide and implement the capability to centrally review and analyze audit records from multiple components within the system. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-6.5` | Integrated Analysis of Audit Records. Integrate analysis of audit records with analysis of to further enhance the ability to identify inappropriate or unusual activity. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-6.6` | Correlation with Physical Monitoring. Correlate information from audit records with information obtained from monitoring physical access to further enhance the ability to identify suspicious, inapprop | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-6.7` | Permitted Actions. Specify the permitted actions for each associated with the review, analysis, and reporting of audit record information. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-AU-7` | Audit Record Reduction | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-7.1` | Automatic Processing. Provide and implement the capability to process, sort, and search audit records for events of interest based on the following content: [fields within audit records]. | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-7.2` | Automatic Sort and Search | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-8.1` | Synchronization with Authoritative Time Source | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-8.2` | Secondary Authoritative Time Source | conceito: Structured And Centralized Security Logging (practice `ACP-SLG-002`) |
-| `SP800-53-AU-9.5` | Dual Authorization. Enforce dual authorization for of [audit information]. | conceito: Log Integrity And Protected Access (practice `ACP-SLG-003`) |
-| `SP800-53-AU-9.6` | Read-only Access. Authorize read-only access to audit information to [subset of privileged users or roles]. | conceito: Log Integrity And Protected Access (practice `ACP-SLG-003`) |
-| `SP800-53-AU-9.7` | Store on Component with Different Operating System. Store audit information on a component running a different operating system than the system or component being audited. | conceito: Log Integrity And Protected Access (practice `ACP-SLG-003`) |
-| `SP800-53-CA-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: assessment, authorization, and monitoring policy that: Addresses purpose, scope, roles, responsi | conceito: Governed Static Analysis Execution (practice `ACP-TSV-002`) |
-| `SP800-53-CA-2.3` | Leveraging Results from External Organizations. Leverage the results of control assessments performed by [external organization(s)] on [system] when the assessment meets [requirements]. | conceito: Risk-Based Security Test Planning (practice `ACP-TSV-001`) |
-| `SP800-53-CA-3` | Information Exchange. Approve and manage the exchange of information between the system and other systems using | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-3.4` | Connections to Public Networks | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-3.5` | Restrictions on External System Connections | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-3.6` | Transfer Authorizations. Verify that individuals or systems transferring data between interconnecting systems have the requisite authorizations (i.e., write permissions or privileges) prior to accepti | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-3.7` | Transitive Information Exchanges. Identify transitive (downstream) information exchanges with other systems through the systems identified in [CA-3a](#ca-3_smt.a); and Take measures to ensure that tra | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-6` | Authorization. Assign a senior official as the authorizing official for the system; Assign a senior official as the authorizing official for common controls available for inheritance by organizational | conceito: DFD And Trust-Boundary Grounding (practice `ACP-TMR-002`) |
-| `SP800-53-CA-6.1` | Joint Authorization — Intra-organization. Employ a joint authorization process for the system that includes multiple authorizing officials from the same organization conducting the authorization. | conceito: DFD And Trust-Boundary Grounding (practice `ACP-TMR-002`) |
-| `SP800-53-CA-6.2` | Joint Authorization — Inter-organization. Employ a joint authorization process for the system that includes multiple authorizing officials with at least one authorizing official from an organization e | conceito: DFD And Trust-Boundary Grounding (practice `ACP-TMR-002`) |
-| `SP800-53-CA-7.1` | Independent Assessment. Employ independent assessors or assessment teams to monitor the controls in the system on an ongoing basis. | conceito: Risk-Based Security Test Planning (practice `ACP-TSV-001`) |
-| `SP800-53-CA-7.2` | Types of Assessments | conceito: Risk-Based Security Test Planning (practice `ACP-TSV-001`) |
-| `SP800-53-CA-9` | Internal System Connections. Authorize internal connections of [system components] to the system | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CA-9.1` | Compliance Checks. Perform security and privacy compliance checks on constituent system components prior to the establishment of the internal connection. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-CM-10` | Software Usage Restrictions. Use software and associated documentation in accordance with contract agreements and copyright laws | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-CM-11.2` | Software Installation with Privileged Status. Allow user installation of software only with explicit privileged status. | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-CM-12.1` | Automated Tools to Support Information Location. Use automated tools to identify [information by information type] on [system components] to ensure controls are in place to protect organizational info | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-CM-13` | Data Action Mapping. Develop and document a map of system data actions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-CM-2.2` | Automation Support for Accuracy and Currency. Maintain the currency, completeness, accuracy, and availability of the baseline configuration of the system using [automated mechanisms]. | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-CM-3.2` | Test, validate | conceito: Accountable Release Approval (practice `ACP-RPR-001`) |
-| `SP800-53-CM-5.1` | Automated Access Enforcement and Audit Records. Enforce access restrictions using [automated mechanisms]; and Automatically generate audit records of the enforcement actions. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-CM-5.4` | Dual Authorization. Enforce dual authorization for implementing changes to [organization-defined system components and system-level information]. | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-CM-7.1` | Periodic Review. Review the system [frequency] to identify unnecessary and/or nonsecure functions, ports, protocols, software, and services; and Disable or remove [organization-defined functions, port | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-CM-8.8` | Automated Location Tracking. Support the tracking of system components by geographic location using [automated mechanisms]. | conceito: Build-Linked SBOM Generation (practice `ACP-SCBI-001`) |
-| `SP800-53-CP-11` | Alternate Communications Protocols. Provide the capability to employ [alternative communications protocols] in support of maintaining continuity of operations. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-CP-9.7` | Dual Authorization for Deletion or Destruction. Enforce dual authorization for the deletion or destruction of [backup information]. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-IA-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: identification and authentication policy that: Addresses purpose, scope, roles, responsibilities | conceito: Least-Privilege Authorization Governance (practice `ACP-IAT-002`) |
-| `SP800-53-IA-10` | Adaptive Authentication. Require individuals accessing the system to employ [supplemental authentication techniques or mechanisms] under specific [circumstances or situations]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-11` | Re-authentication. Require users to re-authenticate when [circumstances or situations]. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-IA-12` | Identity Proofing. Identity proof users that require accounts for logical access to systems based on appropriate identity assurance level requirements as specified in applicable standards and guidelin | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-12.1` | Supervisor Authorization. Require that the registration process to receive an account for logical access includes supervisor or sponsor authorization. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-12.4` | In-person Validation and Verification. Require that the validation and verification of identity evidence be conducted in person before a designated registration authority. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-12.5` | Address Confirmation. Require that a be delivered through an out-of-band channel to verify the users address (physical or digital) of record. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-12.6` | Accept Externally-proofed Identities. Accept externally-proofed identities at [identity assurance level]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-13` | Identity Providers and Authorization Servers. Employ identity providers and authorization servers to manage user, device, and non-person entity (NPE) identities, attributes, and access rights supporti | conceito: Authenticated API Boundary Enforcement (practice `ACP-IAT-005`) |
-| `SP800-53-IA-13.2` | Verification of Identity Assertions and Access Tokens. The source and integrity of identity assertions and access tokens are verified before granting access to system and information resources. | conceito: Authenticated API Boundary Enforcement (practice `ACP-IAT-005`) |
-| `SP800-53-IA-13.3` | Token Management. In accordance with [policy], assertions and access tokens are: generated; issued; refreshed; revoked; time-restricted; and audience-restricted. | conceito: Authenticated API Boundary Enforcement (practice `ACP-IAT-005`) |
-| `SP800-53-IA-2` | Identification and Authentication (Organizational Users). Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those user | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.1` | Multi-factor Authentication to Privileged Accounts. Implement multi-factor authentication for access to privileged accounts. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.10` | Single Sign-on. Provide a single sign-on capability for [system accounts and services]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.11` | Remote Access — Separate Device | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.12` | Acceptance of PIV Credentials. Accept and electronically verify Personal Identity Verification-compliant credentials. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.13` | Out-of-band Authentication. Implement the following out-of-band authentication mechanisms under [conditions]: [out-of-band authentication]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.2` | Multi-factor Authentication to Non-privileged Accounts. Implement multi-factor authentication for access to non-privileged accounts. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.3` | Local Access to Privileged Accounts | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.4` | Local Access to Non-privileged Accounts | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.5` | Individual Authentication with Group Authentication. When shared accounts or authenticators are employed, require users to be individually authenticated before granting access to the shared accounts o | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.6` | Access to Accounts —separate Device. Implement multi-factor authentication for access to such that: One of the factors is provided by a device separate from the system gaining access; and The device m | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.7` | Network Access to Non-privileged Accounts — Separate Device | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-2.8` | Access to Accounts — Replay Resistant. Implement replay-resistant authentication mechanisms for access to. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-3` | Device Identification and Authentication. Uniquely identify and authenticate [devices and/or types of devices] before establishing a connection. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-3.1` | Cryptographic Bidirectional Authentication. Authenticate [devices and/or types of devices] before establishing connection using bidirectional authentication that is cryptographically based. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-3.2` | Cryptographic Bidirectional Network Authentication | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-4.1` | Prohibit Account Identifiers as Public Identifiers. Prohibit the use of system account identifiers that are the same as public identifiers for individual accounts. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.2` | Supervisor Authorization | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.3` | Multiple Forms of Certification | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-4.4` | Identify User Status. Manage individual identifiers by uniquely identifying each individual as [characteristics]. | conceito: Access Review And Timely Revocation (practice `ACP-IAT-003`) |
-| `SP800-53-IA-5` | Authenticator Management. Manage system authenticators by: Verifying, as part of the initial authenticator distribution, the identity of the individual, group, role, service, or device receiving the a | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.1` | Password-based Authentication. For password-based authentication: Maintain a list of commonly-used, expected, or compromised passwords and update the list [frequency] and when organizational passwords | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.11` | Hardware Token-based Authentication | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.12` | Biometric Authentication Performance. For biometric-based authentication, employ mechanisms that satisfy the following biometric quality requirements [biometric quality requirements]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.13` | Expiration of Cached Authenticators. Prohibit the use of cached authenticators after [time period]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.15` | GSA-approved Products and Services. Use only General Services Administration-approved products and services for identity, credential, and access management. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.16` | In-person or Trusted External Party Authenticator Issuance. Require that the issuance of [types of and/or specific authenticators] be conducted before [registration authority] with authorization by [p | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.17` | Presentation Attack Detection for Biometric Authenticators. Employ presentation attack detection mechanisms for biometric-based authentication. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.2` | Public Key-based Authentication. For public key-based authentication: Enforce authorized access to the corresponding private key; and Map the authenticated identity to the account of the individual or | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.3` | In-person or Trusted External Party Registration | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.4` | Automated Support for Password Strength Determination | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.5` | Change Authenticators Prior to Delivery. Require developers and installers of system components to provide unique authenticators or change default authenticators prior to delivery and installation. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.6` | Protection of Authenticators. Protect authenticators commensurate with the security category of the information to which use of the authenticator permits access. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.7` | No Embedded Unencrypted Static Authenticators. Ensure that unencrypted static authenticators are not embedded in applications or other forms of static storage. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-5.8` | Multiple System Accounts. Implement [security controls] to manage the risk of compromise due to individuals having accounts on multiple systems. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-6` | Authentication Feedback. Obscure feedback of authentication information during the authentication process to protect the information from possible exploitation and use by unauthorized individuals. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-7` | Cryptographic Module Authentication. Implement mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulation | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-IA-8.1` | Acceptance of PIV Credentials from Other Agencies. Accept and electronically verify Personal Identity Verification-compliant credentials from other federal agencies. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-8.2` | Acceptance of External Authenticators. Accept only external authenticators that are NIST-compliant; and Document and maintain a list of accepted external authenticators. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-8.5` | Acceptance of PIV-I Credentials. Accept and verify federated or PKI credentials that meet [policy]. | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-8.6` | Disassociability. Implement the following measures to disassociate user attributes or identifier assertion relationships among individuals, credential service providers, and relying parties: [measures | conceito: Strong Authentication And Step-Up Enforcement (practice `ACP-IAT-001`) |
-| `SP800-53-IA-9` | Service Identification and Authentication. Uniquely identify and authenticate [system services and applications] before establishing communications with devices, users, or other services or applicatio | conceito: Machine Identity And Mutual Authentication Discipline (practice `ACP-ITS-002`) |
-| `SP800-53-IA-9.1` | Information Exchange | conceito: Machine Identity And Mutual Authentication Discipline (practice `ACP-ITS-002`) |
-| `SP800-53-IR-7.2` | Coordination with External Providers. Establish a direct, cooperative relationship between its incident response capability and external providers of system protection capability; and Identify organiz | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-IR-9.4` | Exposure to Unauthorized Personnel. Employ the following controls for personnel exposed to information not within assigned access authorizations: [controls]. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MA-2.1` | Record Content | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MA-2.2` | Automated Maintenance Activities. Schedule, conduct, and document maintenance, repair, and replacement actions for the system using [organization-defined automated mechanisms]; and Produce up-to date, | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `SP800-53-MA-3.1` | Inspect Tools. Inspect the maintenance tools used by maintenance personnel for improper or unauthorized modifications. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MA-3.3` | Prevent Unauthorized Removal. Prevent the removal of maintenance equipment containing organizational information by: Verifying that there is no organizational information contained on the equipment; S | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `SP800-53-MA-3.4` | Restricted Tool Use. Restrict the use of maintenance tools to authorized personnel only. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-MA-4` | Nonlocal Maintenance. Approve and monitor nonlocal maintenance and diagnostic activities | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MA-4.4` | Authentication and Separation of Maintenance Sessions. Protect nonlocal maintenance sessions by: Employing [authenticators that are replay resistant]; and Separating the maintenance sessions from othe | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MA-4.6` | Cryptographic Protection. Implement the following cryptographic mechanisms to protect the integrity and confidentiality of nonlocal maintenance and diagnostic communications: [cryptographic mechanisms | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-MA-5` | Maintenance Personnel. Establish a process for maintenance personnel authorization and maintain a list of authorized maintenance organizations or personnel | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MP-2` | Media Access. Restrict access to [organization-defined types of digital and/or non-digital media] to [organization-defined personnel or roles]. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-MP-2.1` | Automated Restricted Access | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-MP-4.2` | Automated Restricted Access. Restrict access to media storage areas and log access attempts and access granted using [organization-defined automated mechanisms]. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-MP-5` | Media Transport. Protect and control [types of system media] during transport outside of controlled areas using [organization-defined controls] | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-MP-5.1` | Protection Outside of Controlled Areas | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `SP800-53-MP-5.3` | Custodians. Employ an identified custodian during transport of system media outside of controlled areas. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-MP-6.7` | Dual Authorization. Enforce dual authorization for the sanitization of [system media]. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-14` | Environmental Controls. Maintain levels within the facility where the system resides at [acceptable levels]; and Monitor environmental control levels [frequency]. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PE-16` | Authorize | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-PE-19.1` | National Emissions Policies and Procedures. Protect system components, associated data communications, and networks in accordance with national Emissions Security policies and procedures based on the | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-PE-2` | Physical Access Authorizations. Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-2.1` | Access by Position or Role. Authorize physical access to the facility where the system resides based on position or role. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-3` | Physical Access Control. Enforce physical access authorizations at [entry and exit points] by: Verifying individual access authorizations before granting access to the facility | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `SP800-53-PE-3.1` | System Access. Enforce physical access authorizations to the system in addition to the physical access controls for the facility at [physical spaces]. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-3.7` | Physical Barriers. Limit access using physical barriers. | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `SP800-53-PE-3.8` | Access Control Vestibules. Employ access control vestibules at [locations]. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-4` | Access Control for Transmission. Control physical access to [system distribution and transmission lines] within organizational facilities using [security controls]. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-PE-5.1` | Access to Output by Authorized Individuals | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-6` | Monitoring Physical Access. Monitor physical access to the facility where the system resides to detect and respond to physical security incidents | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PE-6.1` | Intrusion Alarms and Surveillance Equipment. Monitor physical access to the facility where the system resides using physical intrusion alarms and surveillance equipment. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PE-6.3` | Video Surveillance. Employ video surveillance of [operational areas]; Review video recordings [frequency]; and Retain video recordings for [time period]. | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PE-6.4` | Monitoring Physical Access to Systems. Monitor physical access to the system in addition to the physical access monitoring of the facility at [physical spaces]. | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `SP800-53-PE-7` | Visitor Control | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `SP800-53-PE-8` | Visitor Access Records. Maintain visitor access records to the facility where the system resides for [time period] | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PE-8.1` | Automated Records Maintenance and Review. Maintain and review visitor access records using [organization-defined automated mechanisms]. | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PL-10` | Baseline Selection. Select a control baseline for the system. | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `SP800-53-PL-2.2` | Functional Architecture | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `SP800-53-PL-4` | Rules of Behavior. Establish and provide to individuals requiring access to the system, the rules that describe their responsibilities and expected behavior for information and system usage, security, | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PL-8` | Security and Privacy Architectures. Develop security and privacy architectures for the system that: Describe the requirements and approach to be taken for protecting the confidentiality, integrity, an | conceito: Integridade da supply chain de software e do build (slice `ACO-SCBI`) |
-| `SP800-53-PM-10` | Authorization Process. Manage the security and privacy state of organizational systems and the environments in which those systems operate through authorization processes; Designate individuals to ful | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PM-18` | Privacy Program Plan. Develop and disseminate an organization-wide privacy program plan that provides an overview of the agency’s privacy program, and: Includes a description of the structure of the p | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PM-19` | Privacy Program Leadership Role. Appoint a senior agency official for privacy with the authority, mission, accountability, and resources to coordinate, develop, and implement, applicable privacy requi | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PM-20.1` | Privacy Policies on Websites, Applications, and Digital Services. Develop and post privacy policies on all external-facing websites, mobile applications, and other digital services, that: Are written | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PM-23` | Data Governance Body. Establish a Data Governance Body consisting of [roles] with [responsibilities]. | conceito: Threat modeling, gestão de risco e rastreabilidade de mitigações (slice `ACO-TMR`) |
-| `SP800-53-PM-27` | Privacy Reporting. Develop [privacy reports] and disseminate to: [oversight bodies] to demonstrate accountability with statutory, regulatory, and policy privacy mandates; and [officials] and other per | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PM-6` | Measures of Performance. Develop, monitor, and report on the results of information security and privacy measures of performance. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PM-7` | Enterprise Architecture. Develop and maintain an enterprise architecture with consideration for information security, privacy, and the resulting risk to organizational operations and assets, individua | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `SP800-53-PM-8` | Critical Infrastructure Plan. Address information security and privacy issues in the development, documentation, and updating of a critical infrastructure and key resources protection plan. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PS-4` | Personnel Termination. Upon termination of individual employment: Disable system access within [time period]; Terminate or revoke any authenticators and credentials associated with the individual; Con | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PS-5` | Personnel Transfer. Review and confirm ongoing operational need for current logical and physical access authorizations to systems and facilities when individuals are reassigned or transferred to other | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PS-6` | Access Agreements. Develop and document access agreements for organizational systems | conceito: Testes de segurança e validação empírica (slice `ACO-TSV`) |
-| `SP800-53-PS-6.2` | Classified Information Requiring Special Protection. Verify that access to classified information requiring special protection is granted only to individuals who: Have a valid access authorization tha | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `SP800-53-PT-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: personally identifiable information processing and transparency policy that: Addresses purpose, | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PT-4.1` | Tailored Consent. Provide [mechanisms] to allow individuals to tailor processing permissions to selected elements of personally identifiable information. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PT-4.3` | Revocation. Implement [tools or mechanisms] for individuals to revoke consent to the processing of their personally identifiable information. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-PT-7.2` | First Amendment Information. Prohibit the processing of information describing how any individual exercises rights guaranteed by the First Amendment unless expressly authorized by statute or by the in | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `SP800-53-RA-5.5` | Privileged Access. Implement privileged access authorization to [system components] for [vulnerability scanning activities]. | conceito: Staged Dynamic Testing And Gate Enforcement (practice `ACP-TSV-005`) |
-| `SP800-53-RA-8` | Privacy Impact Assessments. Conduct privacy impact assessments for systems, programs, or other activities before: Developing or procuring information technology that processes personally identifiable | conceito: Threat Disposition And Accepted Risk Governance (practice `ACP-TMR-004`) |
-| `SP800-53-SA-10.2` | Alternative Configuration Management Processes. Provide an alternate configuration management process using organizational personnel in the absence of a dedicated developer configuration management te | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-10.5` | Mapping Integrity for Version Control. Require the developer of the system, system component, or system service to maintain the integrity of the mapping between the master build data describing the cu | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-11.6` | Attack Surface Reviews. Require the developer of the system, system component, or system service to perform attack surface reviews. | conceito: Governed Static Analysis Execution (practice `ACP-TSV-002`) |
-| `SP800-53-SA-12.1` | Acquisition Strategies / Tools / Methods | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-12.11` | Penetration Testing / Analysis of Elements, Processes, and Actors | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-12.12` | Inter-organizational Agreements | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-12.15` | Processes to Address Weaknesses or Deficiencies | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-13` | Trustworthiness | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-15.12` | Minimize Personally Identifiable Information. Require the developer of the system or system component to minimize the use of personally identifiable information in development and test environments. | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-15.9` | Use of Live Data | conceito: Pipeline Definition As Reviewed Code (practice `ACP-SCBI-004`) |
-| `SP800-53-SA-17` | Developer Security and Privacy Architecture and Design. Require the developer of the system, system component, or system service to produce a design specification and security and privacy architecture | conceito: Architecture Review And Approval Governance (practice `ACP-ATB-005`) |
-| `SP800-53-SA-17.1` | Formal Policy Model. Require the developer of the system, system component, or system service to: Produce, as an integral part of the development process, a formal policy model describing the [organiz | conceito: Architecture Review And Approval Governance (practice `ACP-ATB-005`) |
-| `SP800-53-SA-17.7` | Structure for Least Privilege. Require the developer of the system, system component, or system service to structure security-relevant hardware, software, and firmware to facilitate controlling access | conceito: Architecture Review And Approval Governance (practice `ACP-ATB-005`) |
-| `SP800-53-SA-22.1` | Alternative Sources for Continued Support | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SA-4.1` | Functional Properties of Controls. Require the developer of the system, system component, or system service to provide a description of the functional properties of the controls to be implemented. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-4.2` | Design and Implementation Information for Controls. Require the developer of the system, system component, or system service to provide design and implementation information for the controls that incl | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-5.1` | Functional Properties of Security Controls | conceito: Architecture Baseline Definition (practice `ACP-ATB-001`) |
-| `SP800-53-SA-5.2` | Security-relevant External System Interfaces | conceito: Architecture Baseline Definition (practice `ACP-ATB-001`) |
-| `SP800-53-SA-5.3` | High-level Design | conceito: Architecture Baseline Definition (practice `ACP-ATB-001`) |
-| `SP800-53-SA-5.4` | Low-level Design | conceito: Architecture Baseline Definition (practice `ACP-ATB-001`) |
-| `SP800-53-SA-5.5` | Source Code | conceito: Architecture Baseline Definition (practice `ACP-ATB-001`) |
-| `SP800-53-SA-6` | Software Usage Restrictions | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-SA-7` | User-installed Software | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-SA-8.1` | Clear Abstractions. Implement the security design principle of clear abstractions. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.10` | Hierarchical Trust. Implement the security design principle of hierarchical trust in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.14` | Least Privilege. Implement the security design principle of least privilege in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.15` | Predicate Permission. Implement the security design principle of predicate permission in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.16` | Self-reliant Trustworthiness. Implement the security design principle of self-reliant trustworthiness in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.17` | Secure Distributed Composition. Implement the security design principle of secure distributed composition in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.18` | Trusted Communications Channels. Implement the security design principle of trusted communications channels in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.2` | Least Common Mechanism. Implement the security design principle of least common mechanism in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.22` | Accountability and Traceability. Implement the security design principle of accountability and traceability in [organization-defined systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.29` | Repeatable and Documented Procedures. Implement the security design principle of repeatable and documented procedures in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.5` | Efficiently Mediated Access. Implement the security design principle of efficiently mediated access in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.8` | Secure Evolvability. Implement the security design principle of secure evolvability in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-8.9` | Trusted Components. Implement the security design principle of trusted components in [systems or system components]. | conceito: Architectural Decision And Solution Traceability (practice `ACP-ATB-002`) |
-| `SP800-53-SA-9` | External System Services. Require that providers of external system services comply with organizational security and privacy requirements and employ the following controls: [controls]; Define and docu | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-9.3` | Establish | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-9.4` | Consistent Interests of Consumers and Providers. Take the following actions to verify that the interests of [external service providers] are consistent with and reflect organizational interests: [acti | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SA-9.5` | Processing, Storage, and Service Location. Restrict the location of to [locations] based on [requirements]. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-1` | Policy and Procedures. Develop, document, and disseminate to [organization-defined personnel or roles]: system and communications protection policy that: Addresses purpose, scope, roles, responsibilit | conceito: Secret Leak Prevention In Source And Pipeline (practice `ACP-SPC-001`) |
-| `SP800-53-SC-11` | Trusted Path. Provide a isolated trusted communications path for communications between the user and the trusted components of the system; and Permit users to invoke the trusted communications path fo | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-12.3` | Asymmetric Keys. Produce, control, and distribute asymmetric cryptographic keys using. | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-12.4` | PKI Certificates | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-12.5` | PKI Certificates / Hardware Tokens | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-13` | Cryptographic Protection. Determine the [cryptographic uses]; and Implement the following types of cryptography required for each specified cryptographic use: [types of cryptography]. | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-13.1` | FIPS-validated Cryptography | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-13.3` | Individuals Without Formal Access Approvals | conceito: Vault-Backed Secret Storage (practice `ACP-SPC-002`) |
-| `SP800-53-SC-13.4` | Digital Signatures | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SC-15.2` | Blocking Inbound and Outbound Communications Traffic | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-15.4` | Explicitly Indicate Current Participants. Provide an explicit indication of current participants in [online meetings and teleconferences]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-16.1` | Integrity Verification. Verify the integrity of transmitted security and privacy attributes. | conceito: Message Integrity And Authorized Peer Validation (practice `ACP-ITS-004`) |
-| `SP800-53-SC-16.3` | Cryptographic Binding. Implement [mechanisms or techniques] to bind security and privacy attributes to transmitted information. | conceito: Message Integrity And Authorized Peer Validation (practice `ACP-ITS-004`) |
-| `SP800-53-SC-17` | Public Key Infrastructure Certificates. Issue public key certificates under an [certificate policy] or obtain public key certificates from an approved service provider; and Include only approved trust | conceito: Secret Rotation And Renewal Discipline (practice `ACP-SPC-003`) |
-| `SP800-53-SC-18` | Define acceptable | conceito: Dangerous Pattern Exclusion (practice `ACP-IVF-003`) |
-| `SP800-53-SC-18.2` | Acquisition, Development, and Use. Verify that the acquisition, development, and use of mobile code to be deployed in the system meets [mobile code requirements]. | conceito: Dangerous Pattern Exclusion (practice `ACP-IVF-003`) |
-| `SP800-53-SC-18.4` | Prevent Automatic Execution. Prevent the automatic execution of mobile code in [software applications] and enforce [actions] prior to executing the code. | conceito: Dangerous Pattern Exclusion (practice `ACP-IVF-003`) |
-| `SP800-53-SC-2.2` | Disassociability. Store state information from applications and software separately. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-21` | Secure Name/Address Resolution Service (Recursive or Caching Resolver). Request and perform data origin authentication and data integrity verification on the name/address resolution responses the syst | conceito: Message Integrity And Authorized Peer Validation (practice `ACP-ITS-004`) |
-| `SP800-53-SC-22` | Architecture and Provisioning for Name/Address Resolution Service. Ensure the systems that collectively provide name/address resolution service for an organization are fault-tolerant and implement int | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-23` | Session Authenticity. Protect the authenticity of communications sessions. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-23.1` | Invalidate Session Identifiers at Logout. Invalidate session identifiers upon user logout or other session termination. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-23.2` | User-initiated Logouts and Message Displays | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-23.3` | Unique System-generated Session Identifiers. Generate a unique session identifier for each session with [randomness requirements] and recognize only session identifiers that are system-generated. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-23.4` | Unique Session Identifiers with Randomization | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-23.5` | Allowed Certificate Authorities. Only allow the use of [certificated authorities] for verification of the establishment of protected sessions. | conceito: Bounded Session And Token Management (practice `ACP-IAT-004`) |
-| `SP800-53-SC-3.2` | Access and Flow Control Functions. Isolate security functions enforcing access and information flow control from nonsecurity functions and from other security functions. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-3.4` | Module Coupling and Cohesiveness. Implement security functions as largely independent modules that maximize internal cohesiveness within modules and minimize coupling between modules. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-3.5` | Layered Structures. Implement security functions as a layered structure minimizing interactions between layers of the design and avoiding any dependence by lower layers on the functionality or correct | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-32` | System Partitioning. Partition the system into [system components] residing in separate domains or environments based on [circumstances for the physical or logical separation of components]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-32.1` | Separate Physical Domains for Privileged Functions. Partition privileged functions into separate physical domains. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-33` | Transmission Preparation Integrity | conceito: Message Integrity And Authorized Peer Validation (practice `ACP-ITS-004`) |
-| `SP800-53-SC-37.1` | Ensure Delivery and Transmission. Employ [controls] to ensure that only [individuals or systems] receive the following information, system components, or devices: [information, system components, or d | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-38` | Operations Security. Employ the following operations security controls to protect key organizational information throughout the system development life cycle: [operations security controls]. | conceito: Secret Leak Prevention In Source And Pipeline (practice `ACP-SPC-001`) |
-| `SP800-53-SC-39` | Process Isolation. Maintain a separate execution domain for each executing system process. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-39.1` | Hardware Separation. Implement hardware separation mechanisms to facilitate process isolation. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-39.2` | Separate Execution Domain Per Thread. Maintain a separate execution domain for each thread in [multi-threaded processing]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-4` | Information in Shared System Resources. Prevent unauthorized and unintended information transfer via shared system resources. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-4.1` | Security Levels | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-40.1` | Electromagnetic Interference. Implement cryptographic mechanisms that achieve [level of protection] against the effects of intentional electromagnetic interference. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-40.2` | Reduce Detection Potential. Implement cryptographic mechanisms to reduce the detection potential of wireless links to [level of reduction]. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-42` | Sensor Capability and Data. Prohibit; and Provide an explicit indication of sensor use to [group of users]. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-42.1` | Reporting to Authorized Individuals or Roles. Verify that the system is configured so that data or information collected by the [sensors] is only reported to authorized individuals or roles. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-42.2` | Authorized Use. Employ the following measures so that data or information collected by is only used for authorized purposes: [measures]. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-42.3` | Prohibit Use of Devices | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SC-43` | Establish usage restrictions | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-SC-46` | Cross Domain Policy Enforcement. Implement a policy enforcement mechanism between the physical and/or network interfaces for the connecting security domains. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-47` | Alternate Communications Paths. Establish [alternate communication paths] for system operations organizational command and control. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-49` | Hardware-enforced Separation and Policy Enforcement. Implement hardware-enforced separation and policy enforcement mechanisms between [security domains]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-5` | Denial-of-service Protection. the effects of the following types of denial-of-service events: [types of denial-of-service events]; and Employ the following controls to achieve the denial-of-service ob | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-5.1` | Restrict Ability to Attack Other Systems. Restrict the ability of individuals to launch the following denial-of-service attacks against other systems: [denial-of-service attacks]. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-5.3` | Detection and Monitoring. Employ the following monitoring tools to detect indicators of denial-of-service attacks against, or launched from, the system: [monitoring tools]; and Monitor the following s | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-50` | Software-enforced Separation and Policy Enforcement. Implement software-enforced separation and policy enforcement mechanisms between [security domains]. | conceito: Trust-Boundary And Flow Review (practice `ACP-ATB-003`) |
-| `SP800-53-SC-6` | Resource Availability. Protect the availability of resources by allocating [resources] by. | conceito: Trust Boundary And Integration Review (practice `ACP-ITS-001`) |
-| `SP800-53-SC-7.1` | Physically Separated Subnetworks | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.10` | Prevent Exfiltration. Prevent the exfiltration of information; and Conduct exfiltration tests [frequency]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.11` | Restrict Incoming Communications Traffic. Only allow incoming communications from [authorized sources] to be routed to [authorized destinations]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.12` | Host-based Protection. Implement [host-based boundary protection mechanisms] at [system components]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.14` | Protect Against Unauthorized Physical Connections. Protect against unauthorized physical connections at [managed interfaces]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.15` | Networked Privileged Accesses. Route networked, privileged accesses through a dedicated, managed interface for purposes of access control and auditing. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.17` | Automated Enforcement of Protocol Formats. Enforce adherence to protocol formats. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.18` | Fail Secure. Prevent systems from entering unsecure states in the event of an operational failure of a boundary protection device. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.19` | Block Communication from Non-organizationally Configured Hosts. Block inbound and outbound communications traffic between [communication clients] that are independently configured by end users and ext | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.2` | Public Access | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.20` | Dynamic Isolation and Segregation. Provide the capability to dynamically isolate [system components] from other system components. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.21` | Isolation of System Components. Employ boundary protection mechanisms to isolate [system components] supporting [missions and/or business functions]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.22` | Separate Subnets for Connecting to Different Security Domains. Implement separate network addresses to connect to systems in different security domains. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.25` | Unclassified National Security System Connections. Prohibit the direct connection of [unclassified national security system] to an external network without the use of [boundary protection device]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.26` | Classified National Security System Connections. Prohibit the direct connection of a classified national security system to an external network without the use of [boundary protection device]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.27` | Unclassified Non-national Security System Connections. Prohibit the direct connection of [unclassified, non-national security system] to an external network without the use of [boundary protection dev | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.28` | Connections to Public Networks. Prohibit the direct connection of [system] to a public network. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.29` | Separate Subnets to Isolate Functions. Implement separate subnetworks to isolate the following critical system components and functions: [critical system components and functions]. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.3` | Access Points. Limit the number of external network connections to the system. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.4` | External Telecommunications Services. Implement a managed interface for each external telecommunication service | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.5` | Deny by Default — Allow by Exception. Deny network communications traffic by default and allow network communications traffic by exception. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.8` | Route Traffic to Authenticated Proxy Servers. Route [internal communications traffic] to [external networks] through authenticated proxy servers at managed interfaces. | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-7.9` | Restrict Threatening Outgoing Communications Traffic | conceito: External Exposure And Boundary Mediation Design (practice `ACP-ATB-004`) |
-| `SP800-53-SC-8.1` | Cryptographic Protection. Implement cryptographic mechanisms to during transmission. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-8.3` | Cryptographic Protection for Message Externals. Implement cryptographic mechanisms to protect message externals unless otherwise protected by [alternative physical controls]. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-8.4` | Conceal or Randomize Communications. Implement cryptographic mechanisms to conceal or randomize communication patterns unless otherwise protected by [alternative physical controls]. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-8.5` | Protected Distribution System. Implement [protected distribution system] to during transmission. | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SC-9` | Transmission Confidentiality | conceito: Transport And Protocol Hardening (practice `ACP-ITS-003`) |
-| `SP800-53-SI-10.1` | Manual Override Capability. Provide a manual override capability for input validation of the following information inputs: [information inputs]; Restrict the use of the manual override capability to o | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SI-14.3` | Non-persistent Connectivity. Establish connections to the system on demand and terminate connections after. | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `SP800-53-SI-18.4` | Individual Requests. Correct or delete personally identifiable information upon request by individuals or their designated representatives. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-19.7` | Validated Algorithms and Software. Perform de-identification using validated algorithms and software that is validated to implement the algorithms. | conceito: Operational Identity Binding And OIDC Use (practice `ACP-SPC-004`) |
-| `SP800-53-SI-2.6` | Removal of Previous Versions of Software and Firmware. Remove previous versions of [software and firmware components] after updated versions have been installed. | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.3` | Non-privileged Users | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.8` | Detect Unauthorized Commands. Detect the following unauthorized operating system commands through the kernel application programming interface on [system hardware components]: [unauthorized operating | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-3.9` | Authenticate Remote Commands | conceito: Automated Dependency And Image Risk Gating (practice `ACP-SCBI-002`) |
-| `SP800-53-SI-4.11` | Analyze Communications Traffic Anomalies. Analyze outbound communications traffic at the external interfaces to the system and selected [interior points] to discover anomalies. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.18` | Analyze Traffic and Covert Exfiltration. Analyze outbound communications traffic at external interfaces to the system and at the following interior points to detect covert exfiltration of information: | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.2` | Automated Tools and Mechanisms for Real-time Analysis. Employ automated tools and mechanisms to support near real-time analysis of events. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.20` | Privileged Users. Implement the following additional monitoring of privileged users: [additional monitoring]. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.22` | Unauthorized Network Services. Detect network services that have not been authorized or approved by [authorization or approval processes]; and when detected. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.23` | Host-based Devices. Implement the following host-based monitoring mechanisms at [system components]: [host-based monitoring mechanisms]. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.25` | Optimize Network Traffic Analysis. Provide visibility into network traffic at external and key internal system interfaces to optimize the effectiveness of monitoring devices. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.4` | Inbound and Outbound Communications Traffic. Determine criteria for unusual or unauthorized activities or conditions for inbound and outbound communications traffic; Monitor inbound and outbound commu | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-4.6` | Restrict Non-privileged Users | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `SP800-53-SI-6` | Security and Privacy Function Verification. Verify the correct operation of [organization-defined security and privacy functions]; Perform the verification of the functions specified in SI-6a; Alert [ | conceito: Reproducible Test Evidence Management (practice `ACP-TSV-004`) |
-| `SP800-53-SI-6.3` | Report Verification Results. Report the results of security and privacy function verification to [personnel or roles]. | conceito: Reproducible Test Evidence Management (practice `ACP-TSV-004`) |
-| `SP800-53-SI-7.11` | Confined Environments with Limited Privileges | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SI-7.12` | Integrity Verification. Require that the integrity of the following user-installed software be verified prior to execution: [user-installed software]. | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SI-7.8` | Auditing Capability for Significant Events. Upon detection of a potential integrity violation, provide the capability to audit the event and initiate the following actions:. | conceito: Artifact Signature And Provenance Validation (practice `ACP-SCBI-006`) |
-| `SP800-53-SI-8.3` | Continuous Learning Capability. Implement spam protection mechanisms with a learning capability to more effectively identify legitimate communications traffic. | conceito: Boundary Input Validation (practice `ACP-IVF-001`) |
-| `SP800-53-SR-3` | Supply Chain Controls and Processes. Establish a process or processes to identify and address weaknesses or deficiencies in the supply chain elements and processes of [system or system component] in c | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `SP800-53-SR-7` | Supply Chain Operations Security. Employ the following Operations Security (OPSEC) controls to protect supply chain-related information for the system, system component, or system service: [OPSEC cont | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
+#### `ACO-ATB-001` — Architecture Baseline And Decision Traceability
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (3 grounded claims em 2 fontes):
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-V_AA_1_A`, `SAMM-ACTIVITY-V_AA_1_B`)
+  - NIST SP 800-53 Rev. 5 — 1 refs (`SP800-53-SA-5.3`)
+
+#### `ACO-ATB-002` — Trust Boundary Clarity And Protected Data Flows
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (200 grounded claims em 22 fontes):
+  - NIST SP 800-53 Rev. 5 — 91 refs (`SP800-53-AC-1`, `SP800-53-AC-3`, `SP800-53-AC-3.5` + 2 more)
+  - PCI DSS v4.0.1 — 32 refs (`PCI-REQ-3`, `PCI-1.2.2`, `PCI-1.2.3` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 19 refs (`CWE-1220`, `CWE-182`, `CWE-183` + 2 more)
+  - CIS Controls v8.1.2 — 13 refs (`CIS-3`, `CIS-3.1`, `CIS-3.2` + 2 more)
+  - OWASP ASVS v5.0.0 — 10 refs (`ASVS-REQ-V1.3.6`, `ASVS-REQ-V1.5.2`, `ASVS-REQ-V2.3.5` + 2 more)
+  - MITRE CAPEC v3.9 — 7 refs (`CAPEC-10`, `CAPEC-39`, `CAPEC-69` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0041`, `AML.T0054`, `AML.T0111` + 2 more)
+  - NIST AI RMF 1.0 — 4 refs (`NIST-AI-RMF-GOVERN-1`, `NIST-AI-RMF-GOVERN-1.3`, `NIST-AI-RMF-GOVERN-2` + 1 more)
+  - EU GDPR (RGPD) — 3 refs (`GDPR-ART-5`, `GDPR-ART-32`, `GDPR-ART-35`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`, `DSOMM-ACTIVITY-6DF508EF86FC4C22BD9F646C3127CE7D`)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-O_OM_2_A`, `SAMM-ACTIVITY-O_OM_3_A`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-3.2`, `PCISSLC-7.2`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a1`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.1`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM08-2025`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C8`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A08-2021`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-SOURCING-TRANSFER`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-PRINCIPLE-TRUST-CODE`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-PRACTICE-PS.2`)
+
+#### `ACO-ATB-003` — External Exposure Justification And Boundary Mediation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (5 grounded claims em 2 fontes):
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0048`, `AML.T0048.002`, `AML.T0051.001`)
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-IR-9.4`, `SP800-53-MP-5.1`)
+
+#### `ACO-ATB-004` — Technical Segmentation And Sensitive Domain Isolation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (42 grounded claims em 8 fontes):
+  - NIST SP 800-53 Rev. 5 — 32 refs (`SP800-53-AC-4.23`, `SP800-53-AC-6.4`, `SP800-53-CM-7.9` + 2 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-390`, `CAPEC-516`, `CAPEC-646`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-3.12`, `CIS-16.8`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-653`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-E14DE74194B3447C8B07EEA947D82E61`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-O_OM_1_A`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-11.4.5`)
+
+#### `ACO-ATB-005` — Architecture Review And Change Trigger Discipline
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (17 grounded claims em 5 fontes):
+  - NIST SP 800-53 Rev. 5 — 12 refs (`SP800-53-AU-1`, `SP800-53-AU-2.3`, `SP800-53-CA-1` + 2 more)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-D_TA_3_A`, `SAMM-ACTIVITY-V_AA_3_B`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-17.8`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-GOVERN-1.5`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-5.1`)
+
+#### `ACO-ATB-006` — Architectural Topology Validation And Pattern Conformance
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (31 grounded claims em 11 fontes):
+  - NIST SP 800-53 Rev. 5 — 11 refs (`SP800-53-CM-3.2`, `SP800-53-CM-6.1`, `SP800-53-CM-6.4` + 2 more)
+  - OWASP SAMM v2.1 — 5 refs (`SAMM-ACTIVITY-V_AA_2_A`, `SAMM-ACTIVITY-V_RT_1_A`, `SAMM-ACTIVITY-V_RT_2_A` + 2 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-80`, `CAPEC-231`, `CAPEC-678`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0042`, `AML.M0008`, `AML.M0033`)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-48E92BB1FDBA40E8B6C235DE0D431833`, `DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`, `DSOMM-ACTIVITY-13367D8FE37F4197A6109FFCA4FDE261`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V2.1.2`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-12.1`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM02-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-CONTINUOUS-VALIDATION`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+
+#### `ACO-ATB-007` — Secure Architecture Governance And Boundary Integrity
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (113 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 25 refs (`SP800-53-PL-2`, `SP800-53-PL-8`, `SP800-53-PL-8.1` + 2 more)
+  - OWASP SAMM v2.1 — 25 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-D_SA_1_B`, `SAMM-ACTIVITY-D_SA_2_A` + 2 more)
+  - CIS Controls v8.1.2 — 10 refs (`CIS-4`, `CIS-4.1`, `CIS-4.2` + 2 more)
+  - MITRE CAPEC v3.9 — 9 refs (`CAPEC-184`, `CAPEC-440`, `CAPEC-523` + 2 more)
+  - OWASP DSOMM — 8 refs (`DSOMM-ACTIVITY-6217FE115ED74CF49DE4555BCFA6FE87`, `DSOMM-ACTIVITY-7121B0C76ACE4D6B95D094535DBCCB57`, `DSOMM-ACTIVITY-F994A55D71BB45A4A8870A213D72C504` + 2 more)
+  - OWASP ASVS v5.0.0 — 6 refs (`ASVS-REQ-V15.1.4`, `ASVS-REQ-V15.1.5`, `ASVS-REQ-V15.2.1` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 6 refs (`AML.T0008.001`, `AML.T0011.000`, `AML.M0013` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 4 refs (`SSDF-PRACTICE-PO.5`, `SSDF-PRACTICE-PW.1`, `SSDF-PRACTICE-PW.4` + 1 more)
+  - PCI DSS v4.0.1 — 3 refs (`PCI-REQ-1`, `PCI-REQ-2`, `PCI-REQ-6`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-2.3`, `PCISSLC-2.4`, `PCISSLC-8.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-SECURITY-CONTROLS`, `SCFPSSD-DESIGN-PRINCIPLES`, `SCFPSSD-THREAT-MODELING`)
+  - OWASP MCP — Secure Server Development v1.0 — 2 refs (`OWASP-MCP-TOOL-DESIGN`, `OWASP-MCP-GOVERNANCE`)
+  - OWASP Proactive Controls (2018) — 2 refs (`OPC-C1`, `OPC-C2`)
+  - ENISA — Multilayer AI Cybersecurity Practices (2023) — 1 refs (`ENISA-AI-FAICP-LAYER-II`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a2`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.6`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM03-2025`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEVELOPMENT`)
+
+
+### Practices (7)
+
+#### `ACP-ATB-001` — Architecture Baseline Definition
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (11 grounded claims em 6 fontes):
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-D_SA_3_A`, `SAMM-ACTIVITY-I_SB_3_A`, `SAMM-ACTIVITY-O_EM_2_A` + 1 more)
+  - NIST SP 800-53 Rev. 5 — 3 refs (`SP800-53-CM-2`, `SP800-53-PL-2`, `SP800-53-PL-10`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-12.2`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-5992C38C8597403589DBD15820D81C3A`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-8.3`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PW.9.1`)
+
+#### `ACP-ATB-002` — Architectural Decision And Solution Traceability
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (34 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 19 refs (`SP800-53-AU-12.1`, `SP800-53-CM-8`, `SP800-53-CM-8.4` + 2 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-I_DM_3_A`, `SAMM-ACTIVITY-O_EM_1_A`, `SAMM-ACTIVITY-V_AA_1_A` + 1 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-580`, `CAPEC-581`, `CAPEC-702`)
+  - PCI DSS v4.0.1 — 2 refs (`PCI-REQ-8`, `PCI-10.4.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-LOGGING`, `SCFPSSD-MITIGATIONS`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-2`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-1092`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-GOVERN-1.6`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PO.3.1`)
+
+#### `ACP-ATB-003` — Trust-Boundary And Flow Review
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (70 grounded claims em 14 fontes):
+  - NIST SP 800-53 Rev. 5 — 32 refs (`SP800-53-AC-4`, `SP800-53-AC-4.1`, `SP800-53-AC-4.2` + 2 more)
+  - OWASP DSOMM — 6 refs (`DSOMM-ACTIVITY-0DE465A655A74343AF79948BB5FF10BA`, `DSOMM-ACTIVITY-AE22DAFDBCD641EEBA018B7FE6FC1AD9`, `DSOMM-ACTIVITY-7121B0C76ACE4D6B95D094535DBCCB57` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-D_SR_1_A` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 6 refs (`SSDF-PRACTICE-PO.4`, `SSDF-PRACTICE-PO.5`, `SSDF-PRACTICE-PW.2` + 2 more)
+  - PCI DSS v4.0.1 — 4 refs (`PCI-1.2.4`, `PCI-1.4.1`, `PCI-1.4.2` + 1 more)
+  - OWASP ASVS v5.0.0 — 3 refs (`ASVS-REQ-V8.4.2`, `ASVS-REQ-V15.1.4`, `ASVS-REQ-V15.2.4`)
+  - SAFECode — Software Integrity Controls (2010) — 3 refs (`SCSIC-SOURCING-CONTRACT`, `SCSIC-SOURCING-TRANSFER`, `SCSIC-DEVELOPMENT`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-4.1`, `CIS-4.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-THREAT-MODELING`, `SCFPSSD-PLANNING`)
+  - SLSA Specification v1.0 — Build Track — 2 refs (`SLSA-PRINCIPLE-TRUST-PLATFORMS`, `SLSA-PRINCIPLE-TRUST-CODE`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-501`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM04-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-GOVERNANCE`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+
+#### `ACP-ATB-004` — External Exposure And Boundary Mediation Design
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (10 grounded claims em 4 fontes):
+  - NIST SP 800-53 Rev. 5 — 6 refs (`SP800-53-IR-9.4`, `SP800-53-MP-5.1`, `SP800-53-PE-3.7` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-1230`, `CWE-497`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a6`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0048`)
+
+#### `ACP-ATB-005` — Architecture Review And Approval Governance
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (6 grounded claims em 2 fontes):
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-G_PC_1_B`, `SAMM-ACTIVITY-G_SM_1_A`, `SAMM-ACTIVITY-V_AA_1_A` + 1 more)
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-MA-3`, `SP800-53-PL-2.2`)
+
+#### `ACP-ATB-006` — Architecture Change Trigger Discipline
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 5 keywords × 76 ocorrências; principais: architecture, governance, review, thresholds, trigger)
+- **Substrate v7 contributing sources** (11 grounded claims em 2 fontes):
+  - NIST SP 800-53 Rev. 5 — 10 refs (`SP800-53-AU-1`, `SP800-53-AU-6`, `SP800-53-CM-1` + 2 more)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-D_TA_3_A`)
+
+#### `ACP-ATB-007` — Automatable Topology And Pattern Validation
+
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 03 (`03-threat-modeling`), Cap. 08 (`08-iac-infraestrutura`), Cap. 13 (`13-formacao-onboarding`). Cap. expected (04-arquitetura-segura) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (20 grounded claims em 7 fontes):
+  - NIST SP 800-53 Rev. 5 — 10 refs (`SP800-53-CM-2.2`, `SP800-53-CM-3.2`, `SP800-53-CM-5.7` + 2 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-V_AA_2_A`, `SAMM-ACTIVITY-V_RT_1_A`, `SAMM-ACTIVITY-V_RT_2_A` + 1 more)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-48E92BB1FDBA40E8B6C235DE0D431833`, `DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-80`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.M0033`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-EXP-2`)
+
+
+### Mechanisms (5)
+
+#### `ACM-ATB-001` — Versioned Diagrams And ADR Records
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (295 grounded claims em 18 fontes):
+  - NIST SP 800-53 Rev. 5 — 119 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-3.6` + 2 more)
+  - PCI DSS v4.0.1 — 62 refs (`PCI-REQ-1`, `PCI-REQ-2`, `PCI-REQ-7` + 2 more)
+  - CIS Controls v8.1.2 — 21 refs (`CIS-2`, `CIS-2.2`, `CIS-2.5` + 2 more)
+  - OWASP SAMM v2.1 — 17 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SR_2_A`, `SAMM-ACTIVITY-G_PC_1_A` + 2 more)
+  - MITRE CAPEC v3.9 — 16 refs (`CAPEC-75`, `CAPEC-445`, `CAPEC-518` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 16 refs (`SSDF-PRACTICE-PS.2`, `SSDF-PRACTICE-PS.3`, `SSDF-TASK-PO.1.1` + 2 more)
+  - PCI Secure SLC v1.1 — 9 refs (`PCISSLC-2.3`, `PCISSLC-3.3`, `PCISSLC-5.1` + 2 more)
+  - OWASP ASVS v5.0.0 — 8 refs (`ASVS-REQ-V14.2.4`, `ASVS-REQ-V15.1.1`, `ASVS-REQ-V15.1.2` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 6 refs (`AML.T0002.001`, `AML.T0011.000`, `AML.T0079` + 2 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 6 refs (`SCAGILE-OPS-1`, `SCAGILE-OPS-2`, `SCAGILE-OPS-5` + 2 more)
+  - OWASP DSOMM — 5 refs (`DSOMM-ACTIVITY-47419324E263415B815DE7161B6B905E`, `DSOMM-ACTIVITY-B597928E54D648A5A8068003DCD56AAB`, `DSOMM-ACTIVITY-CF81922530CB47028E3260225EEDC33D` + 2 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-SECURITY-CONTROLS`, `SCFPSSD-LOGGING`, `SCFPSSD-CODING-STANDARDS`)
+  - SAFECode — Software Integrity Controls (2010) — 2 refs (`SCSIC-SOURCING-TRANSFER`, `SCSIC-DELIVERY-SIGNING`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-215`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-13`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-316b1`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-MAP-2.3`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-BUILD-L1`)
+
+#### `ACM-ATB-002` — Trust-Boundary And DFD Modeling
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (38 grounded claims em 10 fontes):
+  - NIST SP 800-53 Rev. 5 — 16 refs (`SP800-53-AC-4.19`, `SP800-53-CP-7.5`, `SP800-53-PL-2` + 2 more)
+  - OWASP DSOMM — 6 refs (`DSOMM-ACTIVITY-0DE465A655A74343AF79948BB5FF10BA`, `DSOMM-ACTIVITY-48F97F31931C46EB9B3EE2FEC0CD0426`, `DSOMM-ACTIVITY-DD5ED7C1BDBF400FB75F6D3953A1A04E` + 2 more)
+  - OWASP SAMM v2.1 — 5 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-D_TA_2_A` + 2 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 3 refs (`SCFPSSD-DESIGN-PRINCIPLES`, `SCFPSSD-THREAT-MODELING`, `SCFPSSD-PLANNING`)
+  - SLSA Specification v1.0 — Build Track — 2 refs (`SLSA-PRINCIPLE-TRUST-PLATFORMS`, `SLSA-PRINCIPLE-TRUST-CODE`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-PRACTICE-PO.5`, `SSDF-PRACTICE-PW.1`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-16.14`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-501`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-MEASURE-4`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+
+#### `ACM-ATB-003` — Boundary Mediation Controls
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (11 grounded claims em 2 fontes):
+  - NIST SP 800-53 Rev. 5 — 9 refs (`SP800-53-AT-3.1`, `SP800-53-CP-10.3`, `SP800-53-IR-9.4` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-497`, `CWE-654`)
+
+#### `ACM-ATB-004` — Architecture Review Gates
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (14 grounded claims em 4 fontes):
+  - NIST SP 800-53 Rev. 5 — 6 refs (`SP800-53-AU-2.3`, `SP800-53-CM-2.1`, `SP800-53-CM-3` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SA_2_B`, `SAMM-ACTIVITY-O_OM_3_B`, `SAMM-ACTIVITY-V_AA_1_A` + 2 more)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-GOVERN-1.5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-3F63BDBCC75F4780A941E6AD42E894E1`)
+
+#### `ACM-ATB-005` — Automated Topology Validation Jobs
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (22 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 7 refs (`SP800-53-CA-5.1`, `SP800-53-CM-2.2`, `SP800-53-CM-3.2` + 2 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-I_SB_2_A`, `SAMM-ACTIVITY-V_RT_2_A`, `SAMM-ACTIVITY-V_RT_2_B` + 1 more)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-67E1A9AA9FBF4EC5A2DE400F01960C51`, `DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`, `DSOMM-ACTIVITY-598897A2358E441F984CE12EC4F6110A`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.M0008`, `AML.M0033`)
+  - OWASP MCP — Secure Server Development v1.0 — 2 refs (`OWASP-MCP-DATA-VALIDATION`, `OWASP-MCP-CONTINUOUS-VALIDATION`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-309`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-18.4`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C5`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-TESTING`)
+
 
 ---
 
-## OWASP ASVS v5.0.0
+## Slice `ACO-IAT` — Identidade, autenticação e gestão de sessões
 
-**O que esta ES traz para este capítulo:** contribui 118 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### ControlObjectives (7)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `ASVS-REQ-V10.1.1` | Verify that tokens are only sent to components that strictly need them. For example, when using a backend-for-frontend pattern for browser-based JavaScript applications, access and refresh tokens shal | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.2.1` | Verify that, if the code flow is used, the OAuth client has protection against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF), which trigger token requests, | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.2.2` | Verify that, if the OAuth client can interact with more than one authorization server, it has a defense against mix-up attacks. For example, it could require that the authorization server return the ' | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.3.2` | Verify that the resource server enforces authorization decisions based on claims from the access token that define delegated authorization. If claims such as 'sub', 'scope', and 'authorization_details | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.3.3` | Verify that if an access control decision requires identifying a unique user from an access token (JWT or related token introspection response), the resource server identifies the user from claims tha | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.3.4` | Verify that, if the resource server requires specific authentication strength, methods, or recentness, it verifies that the presented access token satisfies these constraints. For example, if present, | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.3.5` | Verify that the resource server prevents the use of stolen access tokens or replay of access tokens (from unauthorized parties) by requiring sender-constrained access tokens, either Mutual TLS for OAu | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.10` | Verify that confidential client is authenticated for client-to-authorized server backchannel requests such as token requests, pushed authorization requests (PAR), and token revocation requests. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.12` | Verify that for a given client, the authorization server only allows the 'response_mode' value that this client needs to use. For example, by having the authorization server validate this value agains | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.14` | Verify that the authorization server issues only sender-constrained (Proof-of-Possession) access tokens, either with certificate-bound access tokens using mutual TLS (mTLS) or DPoP-bound access tokens | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.15` | Verify that, for a server-side client (which is not executed on the end-user device), the authorization server ensures that the 'authorization_details' parameter value is from the client backend and t | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.16` | Verify that the client is confidential and the authorization server requires the use of strong client authentication methods (based on public-key cryptography and resistant to replay attacks), such as | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.2` | Verify that, if the authorization server returns the authorization code in the authorization response, it can be used only once for a token request. For the second valid request with an authorization | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.3` | Verify that the authorization code is short-lived. The maximum lifetime can be up to 10 minutes for L1 and L2 applications and up to 1 minute for L3 applications. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.5` | Verify that the authorization server mitigates refresh token replay attacks for public clients, preferably using sender-constrained refresh tokens, i.e., Demonstrating Proof of Possession (DPoP) or Ce | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.6` | Verify that, if the code grant is used, the authorization server mitigates authorization code interception attacks by requiring proof key for code exchange (PKCE). For authorization requests, the auth | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.4.9` | Verify that refresh tokens and reference access tokens can be revoked by an authorized user using the authorization server user interface, to mitigate the risk of malicious clients or stolen tokens. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V10.7.1` | Verify that the authorization server ensures that the user consents to each authorization request. If the identity of the client cannot be assured, the authorization server must always explicitly prom | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V11.2.5` | Verify that all cryptographic modules fail securely, and errors are handled in a way that does not enable vulnerabilities, such as Padding Oracle attacks. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.3.2` | Verify that only approved ciphers and modes such as AES with GCM are used. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.4.2` | Verify that passwords are stored using an approved, computationally intensive, key derivation function (also known as a "password hashing function"), with parameter settings configured based on curren | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.4.4` | Verify that the application uses approved key derivation functions with key stretching parameters when deriving secret keys from passwords. The parameters in use must balance security and performance | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.6.1` | Verify that only approved cryptographic algorithms and modes of operation are used for key generation and seeding, and digital signature generation and verification. Key generation algorithms must not | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V11.6.2` | Verify that approved cryptographic algorithms are used for key exchange (such as Diffie-Hellman) with a focus on ensuring that key exchange mechanisms use secure parameters. This will prevent attacks | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V12.1.2` | Verify that only recommended cipher suites are enabled, with the strongest cipher suites set as preferred. L3 applications must only support cipher suites which provide forward secrecy. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.1.3` | Verify that the application validates that mTLS client certificates are trusted before using the certificate identity for authentication or authorization. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.1.4` | Verify that proper certification revocation, such as Online Certificate Status Protocol (OCSP) Stapling, is enabled and configured. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.1.5` | Verify that Encrypted Client Hello (ECH) is enabled in the application's TLS settings to prevent exposure of sensitive metadata, such as the Server Name Indication (SNI), during TLS handshake processe | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.2.1` | Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.2.2` | Verify that external facing services use publicly trusted TLS certificates. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.3.1` | Verify that an encrypted protocol such as TLS is used for all inbound and outbound connections to and from the application, including monitoring systems, management tools, remote access and SSH, middl | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.3.2` | Verify that TLS clients validate certificates received before communicating with a TLS server. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.3.3` | Verify that TLS or another appropriate transport encryption mechanism used for all connectivity between internal, HTTP-based services within the application, and does not fall back to insecure or unen | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.3.4` | Verify that TLS connections between internal services use trusted certificates. Where internally generated or self-signed certificates are used, the consuming service must be configured to only trust | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V12.3.5` | Verify that services communicating internally within a system (intra-service communications) use strong authentication to ensure that each endpoint is verified. Strong authentication methods, such as | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V13.2.1` | Verify that communications between backend application components that don't support the application's standard user session mechanism, including APIs, middleware, and data layers, are authenticated. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V13.2.2` | Verify that communications between backend application components, including local or operating system services, APIs, middleware, and data layers, are performed with accounts assigned the least neces | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V13.3.2` | Verify that access to secret assets adheres to the principle of least privilege. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `ASVS-REQ-V14.2.3` | Verify that defined sensitive data is not sent to untrusted parties (e.g., user trackers) to prevent unwanted collection of data outside of the application's control. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V14.3.3` | Verify that data stored in browser storage (such as localStorage, sessionStorage, IndexedDB, or cookies) does not contain sensitive data, with the exception of session tokens. | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `ASVS-REQ-V15.3.4` | Verify that all proxying and middleware components transfer the user's original IP address correctly using trusted data fields that cannot be manipulated by the end user, and the application and web s | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V16.3.2` | Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive da | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `ASVS-REQ-V16.5.2` | Verify that the application continues to operate securely when external resource access fails, for example, by using patterns such as circuit breakers or graceful degradation. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `ASVS-REQ-V17.2.1` | Verify that the key for the Datagram Transport Layer Security (DTLS) certificate is managed and protected based on the documented policy for management of cryptographic keys. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `ASVS-REQ-V17.2.5` | Verify that the media server is able to continue processing incoming media traffic during a flood of Secure Real-time Transport Protocol (SRTP) packets from legitimate users. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `ASVS-REQ-V17.2.7` | Verify that any audio or video recording mechanisms associated with the media server are able to continue processing incoming media traffic during a flood of Secure Real-time Transport Protocol (SRTP) | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `ASVS-REQ-V3.4.1` | Verify that a Strict-Transport-Security header field is included on all responses to enforce an HTTP Strict Transport Security (HSTS) policy. A maximum age of at least 1 year must be defined, and for | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.5.3` | Verify that HTTP requests to sensitive functionality use appropriate HTTP methods such as POST, PUT, PATCH | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.5.5` | Verify that messages received by the postMessage interface are discarded if the origin of the message is not trusted, or if the syntax of the message is invalid. | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V3.5.8` | Verify that authenticated resources (such as images, videos, scripts, and other documents) can be loaded or embedded on behalf of the user only when intended. This can be accomplished by strict valida | conceito: Boundary Mediation Controls (mechanism `ACM-ATB-003`) |
-| `ASVS-REQ-V4.1.2` | Verify that only user-facing endpoints (intended for manual web-browser access) automatically redirect from HTTP to HTTPS, while other services or endpoints do not implement transparent redirects. Thi | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `ASVS-REQ-V4.1.3` | Verify that any HTTP header field used by the application and set by an intermediary layer, such as a load balancer, a web proxy, or a backend-for-frontend service, cannot be overridden by the end-use | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `ASVS-REQ-V4.1.4` | Verify that only HTTP methods that are explicitly supported by the application or its API (including OPTIONS during preflight requests) can be used and that unused methods are blocked. | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `ASVS-REQ-V4.1.5` | Verify that per-message digital signatures are used to provide additional assurance on top of transport protections for requests or transactions which are highly sensitive or which traverse a number o | conceito: Trust Boundary Models (mechanism `ACM-ITS-002`) |
-| `ASVS-REQ-V4.4.3` | Verify that, if the application's standard session management cannot be used, dedicated tokens are being used for this, which comply with the relevant Session Management security requirements. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V4.4.4` | Verify that dedicated WebSocket session management tokens are initially obtained or validated through the previously authenticated HTTPS session when transitioning an existing HTTPS session to a WebSo | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `ASVS-REQ-V6.1.1` | Verify that application documentation defines how controls such as rate limiting, anti-automation, and adaptive response, are used to defend against attacks such as credential stuffing and password br | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.1.3` | Verify that, if the application includes multiple authentication pathways, these are all documented together with the security controls and authentication strength which must be consistently enforced | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.1` | Verify that controls to prevent attacks such as credential stuffing and password brute force are implemented according to the application's security documentation. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.3` | Verify that either a multi-factor authentication mechanism or a combination of single-factor authentication mechanisms, must be used in order to access the application. For L3, one of the factors must | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.4` | Verify that, if the application includes multiple authentication pathways, there are no undocumented pathways and that security controls and authentication strength are enforced consistently. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.5` | Verify that users are notified of suspicious authentication attempts (successful or unsuccessful). This may include authentication attempts from an unusual location or client, partially successful aut | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.6` | Verify that email is not used as either a single-factor or multi-factor authentication mechanism. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.7` | Verify that users are notified after updates to authentication details, such as credential resets or modification of the username or email address. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.3.8` | Verify that valid users cannot be deduced from failed authentication challenges, such as by basing on error messages, HTTP response codes, or different response times. Registration and forgot password | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.4.1` | Verify that system generated initial passwords or activation codes are securely randomly generated, follow the existing password policy, and expire after a short period of time or after they are initi | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `ASVS-REQ-V6.4.2` | Verify that password hints or knowledge-based authentication (so-called "secret questions") are not present. | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `ASVS-REQ-V6.4.3` | Verify that a secure process for resetting a forgotten password is implemented, that does not bypass any enabled multi-factor authentication mechanisms. | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `ASVS-REQ-V6.4.4` | Verify that if a multi-factor authentication factor is lost, evidence of identity proofing is performed at the same level as during enrollment. | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `ASVS-REQ-V6.4.5` | Verify that renewal instructions for authentication mechanisms which expire are sent with enough time to be carried out before the old authentication mechanism expires, configuring automated reminders | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `ASVS-REQ-V6.5.1` | Verify that lookup secrets, out-of-band authentication requests or codes, and time-based one-time passwords (TOTPs) are only successfully usable once. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.3` | Verify that lookup secrets, out-of-band authentication code, and time-based one-time password seeds, are generated using a Cryptographically Secure Pseudorandom Number Generator (CSPRNG) to avoid pred | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.4` | Verify that lookup secrets and out-of-band authentication codes have a minimum of 20 bits of entropy (typically 4 random alphanumeric characters or 6 random digits is sufficient). | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.5` | Verify that out-of-band authentication requests, codes, or tokens, as well as time-based one-time passwords (TOTPs) have a defined lifetime. Out of band requests must have a maximum lifetime of 10 min | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.6` | Verify that any authentication factor (including physical devices) can be revoked in case of theft or other loss. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.7` | Verify that biometric authentication mechanisms are only used as secondary factors together with either something you have or something you know. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.5.8` | Verify that time-based one-time passwords (TOTPs) are checked based on a time source from a trusted service and not from an untrusted or client provided time. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.6.1` | Verify that authentication mechanisms using the Public Switched Telephone Network (PSTN) to deliver One-time Passwords (OTPs) via phone or SMS are offered only when the phone number has previously bee | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.6.2` | Verify that out-of-band authentication requests, codes, or tokens are bound to the original authentication request for which they were generated and are not usable for a previous or subsequent one. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.6.3` | Verify that a code based out-of-band authentication mechanism is protected against brute force attacks by using rate limiting. Consider also using a code with at least 64 bits of entropy. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.6.4` | Verify that, where push notifications are used for multi-factor authentication, rate limiting is used to prevent push bombing attacks. Number matching may also mitigate this risk. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.7.1` | Verify that the certificates used to verify cryptographic authentication assertions are stored in a way protects them from modification. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.7.2` | Verify that the challenge nonce is at least 64 bits in length, and statistically unique or unique over the lifetime of the cryptographic device. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.8.1` | Verify that, if the application supports multiple identity providers (IdPs), the user's identity cannot be spoofed via another supported identity provider (eg. by using the same user identifier). The | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.8.2` | Verify that the presence and integrity of digital signatures on authentication assertions (for example on JWTs or SAML assertions) are always validated, rejecting any assertions that are unsigned or h | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V6.8.3` | Verify that SAML assertions are uniquely processed and used only once within the validity period to prevent replay attacks. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `ASVS-REQ-V7.1.1` | Verify that the user's session inactivity timeout and absolute maximum session lifetime are documented, are appropriate in combination with other controls, and that the documentation includes justific | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.1.3` | Verify that all systems that create and manage user sessions as part of a federated identity management ecosystem (such as SSO systems) are documented along with controls to coordinate session lifetim | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.2.1` | Verify that the application performs all session token verification using a trusted, backend service. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.2.2` | Verify that the application uses either self-contained or reference tokens that are dynamically generated for session management, i.e. not using static API secrets and keys. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.2.3` | Verify that if reference tokens are used to represent user sessions, they are unique and generated using a cryptographically secure pseudo-random number generator (CSPRNG) and possess at least 128 bit | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.2.4` | Verify that the application generates a new session token on user authentication, including re-authentication, and terminates the current session token. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.3.1` | Verify that there is an inactivity timeout such that re-authentication is enforced according to risk analysis and documented security decisions. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.3.2` | Verify that there is an absolute maximum session lifetime such that re-authentication is enforced according to risk analysis and documented security decisions. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.4.1` | Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invali | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.4.5` | Verify that application administrators are able to terminate active sessions for an individual user or for all users. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.5.1` | Verify that the application requires full re-authentication before allowing modifications to sensitive account attributes which may affect authentication such as email address, phone number, MFA confi | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.5.2` | Verify that users are able to view and (having authenticated again with at least one factor) terminate any or all currently active sessions. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.5.3` | Verify that the application requires further authentication with at least one factor or secondary verification before performing highly sensitive transactions or operations. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.6.1` | Verify that session lifetime and termination between Relying Parties (RPs) and Identity Providers (IdPs) behave as documented, requiring re-authentication as necessary such as when the maximum time be | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V7.6.2` | Verify that creation of a session requires either the user's consent or an explicit action, preventing the creation of new application sessions without user interaction. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V8.1.1` | Verify that authorization documentation defines rules for restricting function-level and data-specific access based on consumer permissions and resource attributes. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.1.2` | Verify that authorization documentation defines rules for field-level access restrictions (both read and write) based on consumer permissions and resource attributes. Note that these rules might depen | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.1.3` | Verify that the application's documentation defines the environmental and contextual attributes (including but not limited to, time of day, user location, IP address, or device) that are used in the a | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.1.4` | Verify that authentication and authorization documentation defines how environmental and contextual factors are used in decision-making, in addition to function-level, data-specific, and field-level a | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.2.1` | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.2.2` | Verify that the application ensures that data-specific access is restricted to consumers with explicit permissions to specific data items to mitigate insecure direct object reference (IDOR) and broken | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.2.3` | Verify that the application ensures that field-level access is restricted to consumers with explicit permissions to specific fields to mitigate broken object property level authorization (BOPLA). | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.2.4` | Verify that adaptive security controls based on a consumer's environmental and contextual attributes (such as time of day, location, IP address, or device) are implemented for authentication and autho | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.3.1` | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.3.3` | Verify that access to an object is based on the originating subject's (e.g. consumer's) permissions, not on the permissions of any intermediary or service acting on their behalf. For example, if a con | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V8.4.2` | Verify that access to administrative interfaces incorporates multiple layers of security, including continuous consumer identity verification, device security posture assessment, and contextual risk a | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `ASVS-REQ-V9.1.1` | Verify that self-contained tokens are validated using their digital signature or MAC to protect against tampering before accepting the token's contents. | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V9.1.3` | Verify that key material that is used to validate self-contained tokens is from trusted pre-configured sources for the token issuer, preventing attackers from specifying untrusted sources and keys. Fo | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V9.2.1` | Verify that, if a validity time span is present in the token data, the token and its content are accepted only if the verification time is within this validity time span. For example, for JWTs, the cl | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V9.2.2` | Verify that the service receiving a token validates the token to be the correct type and is meant for the intended purpose before accepting the token's contents. For example, only access tokens can be | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V9.2.3` | Verify that the service only accepts tokens which are intended for use with that service (audience). For JWTs, this can be achieved by validating the 'aud' claim against an allowlist defined in the se | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `ASVS-REQ-V9.2.4` | Verify that, if a token issuer uses the same private key for issuing tokens to different audiences, the issued tokens contain an audience restriction that uniquely identifies the intended audiences. T | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
+#### `ACO-IAT-001` — Authentication Strength And Identity Assurance
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (99 grounded claims em 15 fontes):
+  - OWASP ASVS v5.0.0 — 22 refs (`ASVS-REQ-V6.1.1`, `ASVS-REQ-V6.3.1`, `ASVS-REQ-V6.3.3` + 2 more)
+  - PCI DSS v4.0.1 — 16 refs (`PCI-REQ-4`, `PCI-REQ-8`, `PCI-4.2.1` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 12 refs (`SP800-53-AC-7`, `SP800-53-AC-7.4`, `SP800-53-IA-5.1` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 11 refs (`CWE-290`, `CWE-305`, `CWE-306` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-2`, `CAPEC-16`, `CAPEC-36` + 2 more)
+  - OWASP DSOMM — 9 refs (`DSOMM-ACTIVITY-03643CA203C2472B8E19956BF02FE9B7`, `DSOMM-ACTIVITY-FFE86CAF2FEC4630B5142DB83983984D`, `DSOMM-ACTIVITY-4CAE98C2416344EDBB883C67C569533A` + 2 more)
+  - CIS Controls v8.1.2 — 6 refs (`CIS-4.1`, `CIS-5.2`, `CIS-6.3` + 2 more)
+  - OWASP SAMM v2.1 — 3 refs (`SAMM-ACTIVITY-D_SR_1_A`, `SAMM-ACTIVITY-V_RT_1_A`, `SAMM-ACTIVITY-V_RT_3_B`)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308a5`, `HIPAA-164-312d`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0087`, `AML.CS0033`)
+  - OWASP Top 10 (2021) — 2 refs (`TOP10-A02-2021`, `TOP10-A07-2021`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.1`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C1`)
 
-## MITRE CAPEC v3.9
+#### `ACO-IAT-002` — Authorization Policy Integrity And Least Privilege
 
-**O que esta ES traz para este capítulo:** contribui 102 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (224 grounded claims em 19 fontes):
+  - NIST SP 800-53 Rev. 5 — 122 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-2.6` + 2 more)
+  - PCI DSS v4.0.1 — 25 refs (`PCI-REQ-7`, `PCI-REQ-9`, `PCI-REQ-12` + 2 more)
+  - MITRE CAPEC v3.9 — 15 refs (`CAPEC-1`, `CAPEC-13`, `CAPEC-17` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 12 refs (`CWE-1220`, `CWE-183`, `CWE-213` + 2 more)
+  - CIS Controls v8.1.2 — 10 refs (`CIS-2.2`, `CIS-2.5`, `CIS-2.6` + 2 more)
+  - OWASP ASVS v5.0.0 — 9 refs (`ASVS-REQ-V8.1.1`, `ASVS-REQ-V8.1.2`, `ASVS-REQ-V8.1.4` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 6 refs (`AML.TA0012`, `AML.T0054`, `AML.M0005` + 2 more)
+  - OWASP LLM Top 10 (2025) — 4 refs (`LLM01-2025`, `LLM02-2025`, `LLM06-2025` + 1 more)
+  - OWASP SAMM v2.1 — 3 refs (`SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-I_SD_1_A`, `SAMM-ACTIVITY-V_RT_3_B`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-1.2`, `PCISSLC-2.2`, `PCISSLC-8.3`)
+  - NIST SSDF (SP 800-218 v1.1) — 3 refs (`SSDF-PRACTICE-PO.4`, `SSDF-TASK-PS.1.1`, `SSDF-TASK-PW.1.2`)
+  - Anthropic MCP — Official Security Foundations (2025) — 2 refs (`MCP-AUTH-DISCOVERY-METADATA`, `MCP-AUTH-SCOPE-NEGOTIATION`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-82E499D1F4634A4BBE9068812A874AF6`, `DSOMM-ACTIVITY-070BB14BE04A4F3D896AA08EBA7A35F9`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - SAFECode — Software Integrity Controls (2010) — 2 refs (`SCSIC-DEV-REPO`, `SCSIC-DEV-DEFAULTS`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a3`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C7`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-PRINCIPLE-PREFER-ATTESTATIONS`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CAPEC-1` | Accessing Functionality Not Properly Constrained by ACLs. Accessing Functionality Not Properly Constrained by ACLs. In applications, particularly web applications, access to functionality is mitigated | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-10` | Buffer Overflow via Environment Variables. Buffer Overflow via Environment Variables. This attack pattern involves causing a buffer overflow through manipulation of environment variables. Once the adv | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-102` | Session Sidejacking. Session Sidejacking. Session sidejacking takes advantage of an unencrypted communication channel between a victim and target system. The attacker sniffs traffic on a network looki | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-113` | Interface Manipulation. Interface Manipulation. An adversary manipulates the use or processing of an interface (e.g. Application Programming Interface (API) or System-on-Chip (SoC)) resulting in an ad | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-114` | Authentication Abuse. Authentication Abuse. An attacker obtains unauthorized access to an application, service or device either through knowledge of the inherent weaknesses of an authentication mechan | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-115` | Authentication Bypass. Authentication Bypass. An attacker gains access to application, service, or device with the privileges of an authorized or privileged user by evading or circumventing an authent | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-117` | Interception. Interception. An adversary monitors data streams to or from the target for information gathering purposes. This attack may be undertaken to solely gather sensitive information or to supp | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-12` | Choosing Message Identifier. Choosing Message Identifier. This pattern of attack is defined by the selection of messages distributed via multicast or public information channels that are intended for | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-122` | Privilege Abuse. Privilege Abuse. An adversary is able to exploit features of the target that should be reserved for privileged users or administrators but are exposed to use by lower or non-privilege | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-13` | Protect the configuration files which contain environment variables against illegitimate read | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-145` | Checksum Spoofing. Checksum Spoofing. An adversary spoofs a checksum message for the purpose of making a payload appear to have a valid corresponding checksum. Checksums are used to verify message int | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-148` | Content Spoofing. Content Spoofing. An adversary modifies content to make it contain something other than what the original content producer intended while keeping the apparent source of the content u | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-151` | Identity Spoofing. Identity Spoofing. Identity Spoofing refers to the action of assuming (i.e., taking on) the identity of some other entity (human or non-human) and then using that identity to accomp | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-157` | Sniffing Attacks. Sniffing Attacks. In this attack pattern, the adversary intercepts information transmitted between two third parties. The adversary must be able to observe, read, and/or hear the com | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-159` | Redirect Access to Libraries. Redirect Access to Libraries. An adversary exploits a weakness in the way an application searches for external libraries to manipulate the execution flow to point to an a | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `CAPEC-16` | Dictionary-based Password Attack. Dictionary-based Password Attack. An attacker tries each of the words in a dictionary as passwords to gain access to the system via some user's account. If the passwo | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-17` | Using Malicious Files. Using Malicious Files. An attack of this type exploits a system's configuration that allows an adversary to either directly access an executable file, for example through shell | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-195` | Principal Spoof. Principal Spoof. A Principal Spoof is a form of Identity Spoofing where an adversary pretends to be some other person in an interaction. This is often accomplished by crafting a messa | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-196` | Session Credential Falsification through Forging. Session Credential Falsification through Forging. An attacker creates a false but functional session credential in order to gain or usurp access to a | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-2` | Inducing Account Lockout. Inducing Account Lockout. An attacker leverages the security functionality of the system aimed at thwarting potential attacks to launch a denial of service attack against a l | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-202` | Create Malicious Client. Create Malicious Client. An adversary creates a client application to interface with a target service where the client violates assumptions the service makes about clients. Se | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-203` | Manipulate Registry Information. Manipulate Registry Information. An adversary exploits a weakness in authorization in order to modify content within a registry (e.g., Windows Registry, Mac plist, app | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-21` | Exploitation of Trusted Identifiers. Exploitation of Trusted Identifiers. An adversary guesses, obtains, or "rides" a trusted identifier (e.g. session ID, resource ID, cookie, etc.) to perform authori | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-216` | Communication Channel Manipulation. Communication Channel Manipulation. An adversary manipulates a setting or parameter on communications channel in order to compromise its security. This can result i | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CAPEC-218` | Spoofing of UDDI/ebXML Messages. Spoofing of UDDI/ebXML Messages. An attacker spoofs a UDDI, ebXML, or similar message in order to impersonate a service provider in an e-business transaction. UDDI, eb | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-226` | Session Credential Falsification through Manipulation. Session Credential Falsification through Manipulation. An attacker manipulates an existing credential in order to gain access to a target applica | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-233` | Privilege Escalation. Privilege Escalation. An adversary exploits a weakness enabling them to elevate their privilege and perform an action that they are not supposed to be authorized to perform | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-234` | Hijacking a privileged process. Hijacking a privileged process. An adversary gains control of a process that is assigned elevated privileges in order to execute arbitrary code with those privileges. S | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-26` | Leveraging Race Conditions. Leveraging Race Conditions. The adversary targets a race condition occurring when multiple processes access and manipulate the same resource concurrently, and the outcome o | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-272` | Protocol Manipulation. Protocol Manipulation. An adversary subverts a communications protocol to perform an attack. This type of attack can allow an adversary to impersonate others, discover sensitive | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-274` | HTTP Verb Tampering. HTTP Verb Tampering. An attacker modifies the HTTP Verb (e.g. GET, PUT, TRACE, etc.) in order to bypass access restrictions. Some web environments allow administrators to restrict | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-276` | Inter-component Protocol Manipulation. Inter-component Protocol Manipulation. Inter-component protocols are used to communicate between different software and hardware modules within a single computer | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-309` | Network Topology Mapping. Network Topology Mapping. An adversary engages in scanning activities to map network nodes, hosts, devices, and routes. Adversaries usually perform this type of network recon | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-31` | Accessing/Intercepting/Modifying HTTP Cookies. Accessing/Intercepting/Modifying HTTP Cookies. This attack relies on the use of HTTP Cookies to store credentials, state information and other critical d | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-330` | ICMP Error Message Echoing Integrity Probe. ICMP Error Message Echoing Integrity Probe. An adversary uses a technique to generate an ICMP Error message (Port Unreachable, Destination Unreachable, Redi | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-36` | Using Unpublished Interfaces or Functionality. Using Unpublished Interfaces or Functionality. An adversary searches for and invokes interfaces or functionality that the target system designers did not | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-383` | Harvesting Information via API Event Monitoring. Harvesting Information via API Event Monitoring. An adversary hosts an event within an application framework and then monitors the data exchanged durin | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-384` | Application API Message Manipulation via Man-in-the-Middle. Application API Message Manipulation via Man-in-the-Middle. An attacker manipulates either egress or ingress data from a client within an ap | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-385` | Transaction or Event Tampering via Application API Manipulation. Transaction or Event Tampering via Application API Manipulation. An attacker hosts or joins an event or transaction within an applicati | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-388` | Application API Button Hijacking. Application API Button Hijacking. An attacker manipulates either egress or ingress data from a client within an application framework in order to change the destinati | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-389` | Content Spoofing Via Application API Manipulation. Content Spoofing Via Application API Manipulation. An attacker manipulates either egress or ingress data from a client within an application framewor | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-39` | Manipulating Opaque Client-based Data Tokens. Manipulating Opaque Client-based Data Tokens. In circumstances where an application holds important data client-side in tokens (cookies, URLs, data files, | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-395` | Bypassing Electronic Locks and Access Controls. Bypassing Electronic Locks and Access Controls. An attacker exploits security assumptions to bypass electronic locks or other forms of access controls. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-40` | Manipulating Writeable Terminal Devices. Manipulating Writeable Terminal Devices. This attack exploits terminal devices that allow themselves to be written to by other users. The attacker sends comman | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-402` | Bypassing ATA Password Security. Bypassing ATA Password Security. An adversary exploits a weakness in ATA security on a drive to gain access to the information the drive contains without supplying the | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-422` | Influence Perception of Commitment and Consistency. Influence Perception of Commitment and Consistency. An adversary uses social engineering to convince the target to do minor tasks as opposed to larg | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-424` | Influence Perception of Consensus or Social Proof. Influence Perception of Consensus or Social Proof. The adversary influences the target's actions by leveraging the inherent human nature to assume be | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-433` | Target Influence via The Human Buffer Overflow. Target Influence via The Human Buffer Overflow. An attacker utilizes a technique to insinuate commands to the subconscious mind of the target via commun | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CAPEC-440` | Hardware Integrity Attack. Hardware Integrity Attack. An adversary exploits a weakness in the system maintenance process and causes a change to be made to a technology, product, component, or sub-comp | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CAPEC-461` | Web Services API Signature Forgery Leveraging Hash Function Extension Weakness. Web Services API Signature Forgery Leveraging Hash Function Extension Weakness. An adversary utilizes a hash function ex | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-466` | Leveraging Active Adversary in the Middle Attacks to Bypass Same Origin Policy. Leveraging Active Adversary in the Middle Attacks to Bypass Same Origin Policy. An attacker leverages an adversary in th | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-470` | Authenticate | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-474` | Signature Spoofing by Key Theft. Signature Spoofing by Key Theft. An attacker obtains an authoritative or reputable signer's private signature key by theft and then uses this key to forge signatures f | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-475` | Signature Spoofing by Improper Validation. Signature Spoofing by Improper Validation. An adversary exploits a cryptographic weakness in the signature verification algorithm implementation to generate | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CAPEC-485` | Signature Spoofing by Key Recreation. Signature Spoofing by Key Recreation. An attacker obtains an authoritative or reputable signer's private signature key by exploiting a cryptographic weakness in t | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-488` | HTTP Flood. HTTP Flood. An adversary may execute a flooding attack using the HTTP protocol with the intent to deny legitimate users access to a service by consuming resources at the application layer | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-49` | Password Brute Forcing. Password Brute Forcing. An adversary tries every possible value for a password until they succeed. A brute force attack, if feasible computationally, will always be successful | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-499` | Android Intent Intercept. Android Intent Intercept. An adversary, through a previously installed malicious application, intercepts messages from a trusted Android-based application in an attempt to ac | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-5` | Blue Boxing. Blue Boxing. This type of attack against older telephone switches and trunks has been around for decades. A tone is sent by an adversary to impersonate a supervisor signal which has the e | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-| `CAPEC-507` | Physical Theft. Physical Theft. An adversary gains physical access to a system or device through theft of the item. Possession of a system or device enables a number of unique attacks to be executed a | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-509` | Kerberoasting. Kerberoasting. Through the exploitation of how service accounts leverage Kerberos authentication with Service Principal Names (SPNs), the adversary obtains and subsequently cracks the h | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-510` | SaaS User Request Forgery. SaaS User Request Forgery. An adversary, through a previously installed malicious application, performs malicious actions against a third-party Software as a Service (SaaS) | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-518` | Documentation Alteration to Produce Under-performing Systems. Documentation Alteration to Produce Under-performing Systems. An attacker with access to a manufacturer's documentation alters the descrip | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `CAPEC-523` | remediate suspicious activities | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CAPEC-524` | remediate suspicious activities | conceito: Artifact Signing And Attestation (mechanism `ACM-SCBI-004`) |
-| `CAPEC-532` | update system software sends a maliciously altered BIOS to the victim | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `CAPEC-555` | Remote Services with Stolen Credentials. Remote Services with Stolen Credentials. This pattern of attack involves an adversary that uses stolen credentials to leverage remote services such as RDP, tel | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-560` | Create a strong password policy | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-565` | Password Spraying. Password Spraying. In a Password Spraying attack, an adversary tries a small list (e.g. 3-5) of common or expected passwords, often matching the target's complexity policy, against | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-569` | Collect Data as Provided by Users. Collect Data as Provided by Users. An attacker leverages a tool, device, or program to obtain specific information as provided by a user of the target system. This i | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-57` | Utilizing REST's Trust in the System Resource to Obtain Sensitive Data. Utilizing REST's Trust in the System Resource to Obtain Sensitive Data. This attack utilizes a REST(REpresentational State Trans | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-574` | Services Footprinting. Services Footprinting. An adversary exploits functionality meant to identify information about the services on the target system to an authorized user. By knowing what services | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-576` | Group Permission Footprinting. Group Permission Footprinting. An adversary exploits functionality meant to identify information about user groups and their permissions on the target system to an autho | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-58` | Restful Privilege Elevation. Restful Privilege Elevation. An adversary identifies a Rest HTTP (Get, Put, Delete) style permission method allowing them to perform various malicious actions upon server | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CAPEC-582` | Route Disabling. Route Disabling. An adversary disables the network route between two targets. The goal is to completely sever the communications channel between two entities. This is often the result | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-584` | BGP Route Disabling. BGP Route Disabling. An adversary suppresses the Border Gateway Protocol (BGP) advertisement for a route so as to render the underlying network inaccessible. The BGP protocol help | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-59` | Session Credential Falsification through Prediction. Session Credential Falsification through Prediction. This attack targets predictable session ID in order to gain privileges. The attacker can predi | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-593` | Session Hijacking. Session Hijacking. This type of attack involves an adversary that exploits weaknesses in an application's use of sessions in performing authentication. The adversary is able to stea | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-597` | Absolute Path Traversal. Absolute Path Traversal. An adversary with access to file system resources, either directly or via application logic, will use various file absolute paths and navigation mecha | conceito: Static Rulepacks And Security Linters (mechanism `ACM-IVF-002`) |
-| `CAPEC-60` | Reusing Session IDs (aka Session Replay). Reusing Session IDs (aka Session Replay). This attack targets the reuse of valid session ID to spoof the target system in order to gain privileges. The attack | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-600` | Create a strong password policy | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-61` | Session Fixation. Session Fixation. The attacker induces a client to establish a session with the target software using a session identifier provided by the attacker. Once the user successfully authen | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-62` | Cross Site Request Forgery. Cross Site Request Forgery. An attacker crafts malicious web links and distributes them (via web pages, email, etc.), typically in a targeted manner, hoping to induce users | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CAPEC-621` | Analysis of Packet Timing and Sizes. Analysis of Packet Timing and Sizes. An attacker may intercept and log encrypted transmissions for the purpose of analyzing metadata such as packet timing and size | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-633` | Token Impersonation. Token Impersonation. An adversary exploits a weakness in authentication to create an access token (or equivalent) that impersonates a different entity, and then associates a proce | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CAPEC-634` | Probe Audio and Video Peripherals. Probe Audio and Video Peripherals. The adversary exploits the target system's audio and video functionalities through malware or scheduled tasks. The goal is to capt | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-644` | apply patch KB2871997 to Windows 7 | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-648` | Collect Data from Screen Capture. Collect Data from Screen Capture. An adversary gathers sensitive information by exploiting the system's screen capture functionality. Through screenshots, the adversa | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CAPEC-652` | Use of Known Kerberos Credentials. Use of Known Kerberos Credentials. An adversary obtains (i.e. steals or purchases) legitimate Kerberos credentials (e.g. Kerberos service account userID/password or | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-653` | Create a strong password policy | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CAPEC-660` | Root/Jailbreak Detection Evasion via Hooking. Root/Jailbreak Detection Evasion via Hooking. An adversary forces a non-restricted mobile application to load arbitrary code or code files, via Hooking, w | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CAPEC-661` | Root/Jailbreak Detection Evasion via Debugging. Root/Jailbreak Detection Evasion via Debugging. An adversary inserts a debugger into the program entry point of a mobile application to modify the appli | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-70` | Try Common or Default Usernames and Passwords. Try Common or Default Usernames and Passwords. An adversary may try certain common or default usernames and passwords to gain access into the system and | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-700` | restrict administrative duties to as few accounts as possible | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CAPEC-701` | Browser in the Middle (BiTM). Browser in the Middle (BiTM). An adversary exploits the inherent functionalities of a web browser, in order to establish an unnoticed remote desktop connection in the vic | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-8` | Buffer Overflow in an API Call. Buffer Overflow in an API Call. This attack targets libraries or shared code modules which are vulnerable to buffer overflow attacks. An adversary who has knowledge of | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-87` | Forceful Browsing. Forceful Browsing. An attacker employs forceful browsing (direct URL entry) to access portions of a website that are otherwise unreachable. Usually, a front controller or similar de | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-89` | Pharming. Pharming. A pharming attack occurs when the victim is fooled into entering sensitive data into supposedly trusted locations, such as an online bank site or a trading platform. An attacker ca | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-9` | Buffer Overflow in Local Command-Line Utilities. Buffer Overflow in Local Command-Line Utilities. This attack targets command-line utilities available in a number of shells. An adversary can leverage | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CAPEC-90` | Reflection Attack in Authentication Protocol. Reflection Attack in Authentication Protocol. An adversary can abuse an authentication protocol susceptible to reflection attack in order to defeat it. Do | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CAPEC-94` | Adversary in the Middle (AiTM). Adversary in the Middle (AiTM). An adversary targets the communication between two components (typically client and server), in order to alter or obtain data from trans | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CAPEC-96` | Block Access to Libraries. Block Access to Libraries. An application typically makes calls to functions that are a part of libraries external to the application. These libraries may be part of the ope | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
+#### `ACO-IAT-003` — Access Revocation And Privilege Lifecycle Integrity
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (24 grounded claims em 7 fontes):
+  - NIST SP 800-53 Rev. 5 — 16 refs (`SP800-53-AC-2`, `SP800-53-AC-2.3`, `SP800-53-AC-2.4` + 2 more)
+  - MITRE CAPEC v3.9 — 2 refs (`CAPEC-447`, `CAPEC-675`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-6`, `CIS-6.2`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V10.4.9`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a4`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-6.5.6`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-6.1`)
 
-## PCI DSS v4.0.1
+#### `ACO-IAT-004` — Session And Token Trust Boundaries
 
-**O que esta ES traz para este capítulo:** contribui 59 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (47 grounded claims em 8 fontes):
+  - OWASP ASVS v5.0.0 — 21 refs (`ASVS-REQ-V4.4.3`, `ASVS-REQ-V4.4.4`, `ASVS-REQ-V7.1.1` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-31`, `CAPEC-39`, `CAPEC-59` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 6 refs (`SP800-53-IA-13.3`, `SP800-53-SC-12.5`, `SP800-53-SC-23` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-488`, `CWE-565`, `CWE-613`)
+  - Anthropic MCP — Official Security Foundations (2025) — 2 refs (`MCP-TOKEN-PASSTHROUGH`, `MCP-SESSION-HIJACKING`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0080.000`, `AML.CS0040`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP01-2025`, `MCP10-2025`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-4.3`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `PCI-1.2.2` | All changes to network connections and to 1.2.2.a Examine documented procedures to verify. All changes to network connections and to 1.2.2.a Examine documented procedures to verify all | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-| `PCI-1.2.3` | An accurate network diagram | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `PCI-1.2.4` | An accurate data-flow diagram | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `PCI-1.2.5` | All services, protocols, and ports allowed are 1.2.5.a Examine documentation to verify that a lis. All services, protocols, and ports allowed are 1.2.5.a Examine documentation to verify that a l | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `PCI-1.4.1` | NSCs are implemented between trusted and 1.4.1.a Examine configuration standards and int. NSCs are implemented between trusted and 1.4.1.a Examine configuration standards and i | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `PCI-1.4.2` | Inbound traffic from untrusted networks to 1.4.2 Examine vendor documentation and. Inbound traffic from untrusted networks to 1.4.2 Examine vendor documentation and | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `PCI-1.4.4` | System components that store cardholder 1.4.4.a Examine the data-flow diagram and. System components that store cardholder 1.4.4.a Examine the data-flow diagram and un | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `PCI-10.1.2` | Roles and responsibilities for performing 10.1.2.a Examine documentation to verify that. Roles and responsibilities for performing 10.1.2.a Examine documentation to verify that assign | conceito: Log Retention And Lifecycle Governance (practice `ACP-SLG-004`) |
-| `PCI-10.2.1` | Audit logs are enabled and active for all 10.2.1 Interview the system administrator and. Audit logs are enabled and active for all 10.2.1 Interview the system administrator and Audit | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `PCI-10.2.2` | Audit logs record the following details for 10.2.2 Interview personnel and examine audit log. Audit logs record the following details for 10.2.2 Interview personnel and examine audit log | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `PCI-10.3.3` | Audit log files, including those for external- 10.3.3 Examine backup configurations or log files. Audit log files, including those for external- 10.3.3 Examine backup configurations or log files | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `PCI-10.4.2` | Logs of all other system components (those 10.4.2.a Examine security policies and procedures. Logs of all other system components (those 10.4.2.a Examine security policies and procedures | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `PCI-11.2.1` | Authorized and unauthorized wireless access 11.2.1.a Examine policies and procedures to verify. Authorized and unauthorized wireless access 11.2.1.a Examine policies and procedures to verify | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
-| `PCI-11.2.2` | An inventory of authorized wireless access 11.2.2 Examine documentation to verify that an can. An inventory of authorized wireless access 11.2.2 Examine documentation to verify that an c | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
-| `PCI-12.3.3` | Cryptographic cipher suites and protocols in 12.3.3 Examine documentation for cryptographic. Cryptographic cipher suites and protocols in 12.3.3 Examine documentation for cryptographic chan | conceito: Threat Model Versioning Controls (mechanism `ACM-TMR-003`) |
-| `PCI-12.8.2` | Written agreements with TPSPs are 12.8.2.a Examine policies and procedures to verif. Written agreements with TPSPs are 12.8.2.a Examine policies and procedures to ver | conceito: Threat Model Versioning Controls (mechanism `ACM-TMR-003`) |
-| `PCI-2.2.5` | If any insecure services, protocols, or 2.2.5.a If any insecure services, protocols, or. If any insecure services, protocols, or 2.2.5.a If any insecure services, protocols, or | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `PCI-2.3.2` | For wireless environments connected to the 2.3.2 Interview responsible personnel and examine s. For wireless environments connected to the 2.3.2 Interview responsible personnel and examine | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `PCI-3.1.1` | All security policies and operational procedures 3.1.1 Examine documentation and interview. All security policies and operational procedures 3.1.1 Examine documentation and interview | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `PCI-3.1.2` | Roles and responsibilities for performing activities 3.1.2.a Examine documentation to verify that. Roles and responsibilities for performing activities 3.1.2.a Examine documentation to verify that | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-3.7.8` | Key management policies and procedures are 3.7.8.a Examine the documented key-management. Key management policies and procedures are 3.7.8.a Examine the documented key-management c | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-4.1.1` | All security policies and operational 4.1.1 Examine documentation and interview. All security policies and operational 4.1.1 Examine documentation and interview and ma | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `PCI-4.2.1` | Strong cryptography and security protocols 4.2.1.a Examine documented policies and. Strong cryptography and security protocols 4.2.1.a Examine documented policies and t | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-| `PCI-4.2.2` | PAN is secured with strong cryptography 4.2.2.a Examine documented policies and. PAN is secured with strong cryptography 4.2.2.a Examine documented policies and ea | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-6.5.6` | Test data and test accounts are removed from 6.5.6.a Examine policies and procedures to verify. Test data and test accounts are removed from 6.5.6.a Examine policies and procedures to verify | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `PCI-7.1.2` | Roles and responsibilities for performing 7.1.2.a Examine documentation to verify that. Roles and responsibilities for performing 7.1.2.a Examine documentation to verify that | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-7.2.1` | An access control model is defined and 7.2.1.a Examine documented policies and. An access control model is defined and 7.2.1.a Examine documented policies and approp | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-09 - Sincronização Threat Modeling ↔ Arquitetura |
-| `PCI-7.2.2` | Access is assigned to users, including 7.2.2.a Examine policies and procedures to verify. Access is assigned to users, including 7.2.2.a Examine policies and procedures to verify w | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-01 - Definição de princípios e baseline de arquitetura segura |
-| `PCI-7.2.3` | Required privileges are approved by 7.2.3.a Examine policies and procedures to verify. Required privileges are approved by 7.2.3.a Examine policies and procedures to verify el | intro (strong): Arquitetura Segura > Políticas Organizacionais Relevantes |
-| `PCI-7.2.4` | All user accounts and related access 7.2.4.a Examine policies and procedures to verify. All user accounts and related access 7.2.4.a Examine policies and procedures to veri | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
-| `PCI-7.3.1` | An access control system | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-02 - Ficha de solução com controlos e rastreabilidade arquitetural |
-| `PCI-7.3.3` | The access control system | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-02 - Ficha de solução com controlos e rastreabilidade arquitetural |
-| `PCI-8.1.2` | Roles and responsibilities for performing 8.1.2.a Examine documentation to verify that. Roles and responsibilities for performing 8.1.2.a Examine documentation to verify that | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-8.2.2` | Group, shared, or generic IDs, or other shared 8.2.2.a Examine user account lists on system. Group, shared, or generic IDs, or other shared 8.2.2.a Examine user account lists on system | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
-| `PCI-8.2.4` | Addition, deletion, and modification of user 8.2.4 Examine documented authorizations across. Addition, deletion, and modification of user 8.2.4 Examine documented authorizations across (add | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
-| `PCI-8.2.6` | Inactive user accounts are removed or 8.2.6 Examine user accounts and last logon. Inactive user accounts are removed or 8.2.6 Examine user accounts and last logon targets | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
-| `PCI-8.2.7` | Accounts used by third parties to access, 8.2.7 Interview personnel, examine documentation. Accounts used by third parties to access, 8.2.7 Interview personnel, examine documentation en | legacy_canon (historical): Rastreabilidade — Capítulo 04: Arquitetura Segura > Camada AppSec Core |
-| `PCI-8.3.1` | All user access to system components for 8.3.1.a Examine documentation describing the. All user access to system components for 8.3.1.a Examine documentation describing the | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis |
-| `PCI-8.3.10` | Additional requirement for service 8.3.10 Additional testing procedure for service. Additional requirement for service 8.3.10 Additional testing procedure for service a | maturity (weak): Maturidade - Arquitetura Segura > OWASP DSOMM - Architecture, Requirements, Risk |
-| `PCI-8.3.11` | Where authentication factors such as 8.3.11.a Examine authentication policies and. Where authentication factors such as 8.3.11.a Examine authentication policies and s | intro (strong): Arquitetura Segura > Políticas Organizacionais Relevantes |
-| `PCI-8.3.2` | Strong cryptography is used to render all 8.3.2.a Examine vendor documentation and. Strong cryptography is used to render all 8.3.2.a Examine vendor documentation and known to | legacy_canon (historical): Rastreabilidade — Capítulo 04: Arquitetura Segura > Frameworks normativos — cobertura verificada |
-| `PCI-8.3.4` | Invalid authentication attempts are limited by: 8.3.4.a Examine system configuration settings to. Invalid authentication attempts are limited by: 8.3.4.a Examine system configuration settings to | addon (medium): Decisão e Evidência Arquitetural > 5. Invalidação e revisão de decisões |
-| `PCI-8.3.8` | Authentication policies and procedures are 8.3.8.a Examine procedures and interview. Authentication policies and procedures are 8.3.8.a Examine procedures and interview procedu | intro (strong): Arquitetura Segura > Políticas Organizacionais Relevantes |
-| `PCI-8.4.1` | MFA is implemented for all non-console 8.4.1.a Examine network and/or system. MFA is implemented for all non-console 8.4.1.a Examine network and/or system fac | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-8.4.2` | MFA is implemented for all non-console 8.4.2.a Examine network and/or system. MFA is implemented for all non-console 8.4.2.a Examine network and/or system factor reduces | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-8.4.3` | MFA is implemented for all remote access 8.4.3.a Examine network and/or system. MFA is implemented for all remote access 8.4.3.a Examine network and/or system factor reduc | legacy_canon (historical): Rastreabilidade — Capítulo 04: Arquitetura Segura > Camada AppSec Core |
-| `PCI-8.5.1` | MFA systems are implemented as follows: 8.5.1.a Examine vendor system documentation to. MFA systems are implemented as follows: 8.5.1.a Examine vendor system documentation to | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-8.6.2` | Passwords/passphrases for any application 8.6.2.a Interview personnel and examine system. Passwords/passphrases for any application 8.6.2.a Interview personnel and examine system | requirements_catalog (strong): Catálogo de Requisitos de Arquitectura Segura |
-| `PCI-8.6.3` | Passwords/passphrases for any application 8.6.3.a Examine policies and procedures to verify. Passwords/passphrases for any application 8.6.3.a Examine policies and procedures to verify | intro (strong): Arquitetura Segura > Políticas Organizacionais Relevantes |
-| `PCI-9.2.2` | Physical and/or logical controls are 9.2.2 Interview responsible personnel and observe. Physical and/or logical controls are 9.2.2 Interview responsible personnel and observe | conceito: Log Integrity And Access Controls (mechanism `ACM-SLG-003`) |
-| `PCI-9.2.3` | Physical access to wireless access points, 9.2.3 Interview responsible personnel and observe. Physical access to wireless access points, 9.2.3 Interview responsible personnel and observe | conceito: Build And Image Inventory Generation (mechanism `ACM-SCBI-005`) |
-| `PCI-9.2.4` | Access to consoles in sensitive areas is 9.2.4 Observe a system administrator’s attempt to. Access to consoles in sensitive areas is 9.2.4 Observe a system administrator’s attempt to | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `PCI-9.3.1` | Procedures are implemented for authorizing 9.3.1.a Examine documented procedures to verify. Procedures are implemented for authorizing 9.3.1.a Examine documented procedures to verify | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `PCI-9.3.2` | Procedures are implemented for authorizing 9.3.2.a Examine documented procedures and. Procedures are implemented for authorizing 9.3.2.a Examine documented procedures and of | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `PCI-9.4.1` | All media with cardholder data is physically 9.4.1. Examine documentation to verify that the. All media with cardholder data is physically 9.4.1. Examine documentation to verify that the int | conceito: Log Integrity And Access Controls (mechanism `ACM-SLG-003`) |
-| `PCI-9.5.1` | POI devices that capture payment card data 9.5.1 Examine documented policies and. POI devices that capture payment card data 9.5.1 Examine documented policies and stealing an | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `PCI-REQ-4` | Protect Cardholder Data with Strong Cryptography During Transmission. Requirement 4: Protect Cardholder Data with Strong Cryptography During Transmission. Goal: Protect Account Data. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `PCI-REQ-8` | Identify Users and Authenticate Access to System Components. Requirement 8: Identify Users and Authenticate Access to System Components. Goal: Implement Strong Access Control Measures. | aplicacao_lifecycle (strong): Aplicação de Arquitetura Segura no Ciclo de Vida > User Stories reutilizáveis > US-01 - Definição de princípios e baseline de arquitetura segura |
-| `PCI-REQ-9` | Restrict Physical Access to Cardholder Data. Requirement 9: Restrict Physical Access to Cardholder Data. Goal: Implement Strong Access Control Measures. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
+#### `ACO-IAT-005` — API Caller Trust And Service Boundary Enforcement
 
----
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (19 grounded claims em 4 fontes):
+  - OWASP ASVS v5.0.0 — 10 refs (`ASVS-REQ-V2.2.2`, `ASVS-REQ-V3.5.1`, `ASVS-REQ-V4.1.2` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 7 refs (`SP800-53-SA-8.10`, `SP800-53-SA-9.3`, `SP800-53-SA-10.4` + 2 more)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-461`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`)
 
-## MITRE CWE — Software Development View (v4.19.1)
+#### `ACO-IAT-006` — Access Abuse Detection And Auditability
 
-**O que esta ES traz para este capítulo:** contribui 53 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (167 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 81 refs (`SP800-53-AC-1`, `SP800-53-AC-2.12`, `SP800-53-AC-8` + 2 more)
+  - PCI DSS v4.0.1 — 22 refs (`PCI-2.3.2`, `PCI-8.2.7`, `PCI-9.2.2` + 2 more)
+  - MITRE CAPEC v3.9 — 11 refs (`CAPEC-5`, `CAPEC-54`, `CAPEC-69` + 2 more)
+  - OWASP DSOMM — 10 refs (`DSOMM-ACTIVITY-BACF85B65BC0405DB5BAA5D971467CC1`, `DSOMM-ACTIVITY-0A929C3EAB9A42068761ADF84B74622E`, `DSOMM-ACTIVITY-6DF508EF86FC4C22BD9F646C3127CE7D` + 2 more)
+  - CIS Controls v8.1.2 — 8 refs (`CIS-8`, `CIS-8.1`, `CIS-8.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 7 refs (`AML.TA0011`, `AML.T0006`, `AML.T0049` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-O_IM_1_A`, `SAMM-ACTIVITY-O_IM_1_B`, `SAMM-ACTIVITY-O_IM_2_A` + 2 more)
+  - OWASP ASVS v5.0.0 — 3 refs (`ASVS-REQ-V2.4.1`, `ASVS-REQ-V16.3.3`, `ASVS-REQ-V16.4.3`)
+  - OWASP Machine Learning Top 10 — 3 refs (`ML02-2023`, `ML07-2023`, `ML08-2023`)
+  - EU Digital Operational Resilience Act (DORA) — 2 refs (`DORA-ART-5`, `DORA-ART-10`)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308a1`, `HIPAA-164-308a6`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 2 refs (`NIST-AI-100-2-E2025-3.3.3`, `NIST-AI-100-2-E2025-3.4.1`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-2.1`, `PCISSLC-3.2`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-LOGGING`, `SCFPSSD-FINDINGS`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-779`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DATA-VALIDATION`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CWE-1092` | Use of Same Invokable Control Element in Multiple Architectural Layers. The product uses the same control element across multiple architectural layers. | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CWE-1220` | Insufficient Granularity of Access Control. The product implements access controls via a policy or other feature with the intention to disable or restrict accesses (reads and/or writes) to assets in a | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-182` | Collapse of Data into Unsafe Value. The product filters data in a way that causes it to be reduced or "collapsed" into an unsafe value that violates an expected security property. | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CWE-204` | Observable Response Discrepancy. The product provides different responses to incoming requests in a way that reveals internal state information to an unauthorized actor outside of the intended control | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-250` | Execution with Unnecessary Privileges. The product performs an operation at a privilege level that is higher than the minimum level required, which creates new weaknesses or amplifies the consequences | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-266` | Incorrect Privilege Assignment. A product incorrectly assigns a privilege to a particular actor, creating an unintended sphere of control for that actor. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-267` | Privilege Defined With Unsafe Actions. A particular privilege, role, capability, or right can be used to perform unsafe actions that were not intended, even when it is assigned to the correct entity. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-268` | Privilege Chaining. Two distinct privileges, roles, capabilities, or rights can be combined in a way that allows an entity to perform unsafe actions that would not be allowed without that combination. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-277` | Insecure Inherited Permissions. A product defines a set of insecure permissions that are inherited by objects that are created by the program. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-278` | Insecure Preserved Inherited Permissions. A product inherits a set of insecure permissions for an object, e.g. when copying from an archive file, without user awareness or involvement. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-281` | Improper Preservation of Permissions. The product does not preserve permissions or incorrectly preserves permissions when copying, restoring, or sharing objects, which can cause them to have less rest | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-289` | Authentication Bypass by Alternate Name. The product performs authentication based on the name of a resource being accessed, or the name of the actor performing the access, but it does not properly ch | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-290` | Authentication Bypass by Spoofing. This attack-focused weakness is caused by incorrectly implemented authentication schemes that are subject to spoofing attacks. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-294` | Authentication Bypass by Capture-replay. A capture-replay flaw exists when the design of the product makes it possible for a malicious user to sniff network traffic and bypass authentication by replay | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-301` | Reflection Attack in an Authentication Protocol. Simple authentication protocols are subject to reflection attacks if a malicious user can use the target machine to impersonate a trusted user. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-303` | Incorrect Implementation of Authentication Algorithm. The requirements for the product dictate the use of an established authentication algorithm, but the implementation of the algorithm is incorrect. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-305` | Authentication Bypass by Primary Weakness. The authentication algorithm is sound, but the implemented mechanism can be bypassed as the result of a separate weakness that is primary to the authenticati | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-306` | Missing Authentication for Critical Function. The product does not perform any authentication for functionality that requires a provable user identity or consumes a significant amount of resources. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-307` | Improper Restriction of Excessive Authentication Attempts. The product does not implement sufficient measures to prevent multiple failed authentication attempts within a short time frame. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-308` | Use of Single-factor Authentication. The product uses an authentication algorithm that uses a single factor (e.g., a password) in a security context that should require more than one factor. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-309` | Use of Password System for Primary Authentication. The use of password systems as the primary means of authentication may be subject to several flaws or shortcomings, each reducing the effectiveness o | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-319` | Cleartext Transmission of Sensitive Information. The product transmits sensitive or security-critical data in cleartext in a communication channel that can be sniffed by unauthorized actors. | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CWE-322` | Key Exchange without Entity Authentication. The product performs a key exchange with an actor without verifying the identity of that actor. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-348` | Use of Less Trusted Source. The product has two different sources of the same data or information, but it uses the source that has less support for verification, is less trusted, or is less resistant | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-349` | Acceptance of Extraneous Untrusted Data With Trusted Data. The product, when processing trusted data, accepts any untrusted data that is also included with the trusted data, treating the untrusted dat | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CWE-353` | Missing Support for Integrity Check. The product uses a transmission protocol that does not include a mechanism for verifying the integrity of the data during transmission, such as a checksum. | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-354` | Improper Validation of Integrity Check Value. The product does not validate or incorrectly validates the integrity check values or "checksums" of a message. This may prevent it from detecting if the d | conceito: Schema And Contract Validators (mechanism `ACM-IVF-003`) |
-| `CWE-358` | Improperly Implemented Security Check for Standard. The product does not implement or incorrectly implements one or more security-relevant checks as specified by the design of a standardized algorithm | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-359` | Exposure of Private Personal Information to an Unauthorized Actor. The product does not properly prevent a person's private, personal information from being accessed by actors who either | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-408` | Incorrect Behavior Order: Early Amplification. The product allows an entity to perform a legitimate but expensive operation before authentication or authorization has taken place. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-420` | Unprotected Alternate Channel. The product protects a primary channel, but it does not use the same level of protection for an alternate channel. | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-425` | Direct Request ('Forced Browsing'). The web application does not adequately enforce appropriate authorization on all restricted URLs, scripts, or files. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-426` | Untrusted Search Path. The product searches for critical resources using an externally-supplied search path that can point to resources that are not under the product's direct control. | conceito: Configuration Baseline Enforcement Controls (mechanism `ACM-RPR-008`) |
-| `CWE-454` | External Initialization of Trusted Variables or Data Stores. The product initializes critical internal variables or data stores using inputs that can be modified by untrusted actors. | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CWE-488` | Exposure of Data Element to Wrong Session. The product does not sufficiently enforce boundaries between the states of different sessions, causing data to be provided to, or used by, the wrong session. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-494` | Download of Code Without Integrity Check. The product downloads source code or an executable from a remote location and executes the code without sufficiently verifying the origin and integrity of the | conceito: Release Promotion Controls (mechanism `ACM-RPR-001`) |
-| `CWE-501` | Trust Boundary Violation. The product mixes trusted and untrusted data in the same data structure or structured message. | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CWE-521` | Weak Password Requirements. The product does not require that users should have strong passwords. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-551` | Incorrect Behavior Order: Authorization Before Parsing and Canonicalization. If a web server does not fully parse requested URLs before it examines them for authorization, it may be possible for an at | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-565` | Reliance on Cookies without Validation and Integrity Checking. The product relies on the existence or values of cookies when performing security-critical operations, but it does not properly ensure th | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-603` | Use of Client-Side Authentication. A client/server product performs authentication within client code but not in server code, allowing server-side authentication to be bypassed via a modified client t | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-613` | Insufficient Session Expiration. According to WASC, "Insufficient Session Expiration is when a web site permits an attacker to reuse old session credentials or session IDs for authorization." | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-639` | Authorization Bypass Through User-Controlled Key. The system's authorization functionality does not prevent one user from gaining access to another user's data or record by modifying the key value ide | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-640` | Weak Password Recovery Mechanism for Forgotten Password. The product contains a mechanism for users to recover or change their passwords without knowing the original password, but the mechanism is wea | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `CWE-645` | Overly Restrictive Account Lockout Mechanism. The product contains an account lockout protection mechanism, but the mechanism is too restrictive and can be triggered too easily, which allows attackers | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CWE-648` | Incorrect Use of Privileged APIs. The product does not conform to the API requirements for a function call that requires extra privileges. This could allow attackers to gain privileges by causing the | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CWE-654` | Reliance on a Single Factor in a Security Decision. A protection mechanism relies exclusively, or to a large extent, on the evaluation of a single condition or the integrity of a single object or enti | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-73` | External Control of File Name or Path. The product allows user input to control or influence paths or file names that are used in filesystem operations. | conceito: Code Review For Input And Error Discipline (mechanism `ACM-IVF-001`) |
-| `CWE-798` | Use of Hard-coded Credentials. The product contains hard-coded credentials, such as a password or cryptographic key. | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `CWE-829` | Inclusion of Functionality from Untrusted Control Sphere. The product imports, requires, or includes executable functionality (such as a library) from a source that is outside of the intended control | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-924` | Improper Enforcement of Message Integrity During Transmission in a Communication Channel. The product establishes a communication channel with an endpoint and receives a message from that endpoint, bu | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CWE-939` | Improper Authorization in Handler for Custom URL Scheme. The product uses a handler for a custom URL scheme, but it does not properly restrict which actors can invoke the handler using the scheme. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CWE-940` | Improper Verification of Source of a Communication Channel. The product establishes a communication channel to handle an incoming request that has been initiated by an actor, but it does not properly | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
+#### `ACO-IAT-007` — Identity And Access Control Integrity
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (57 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 28 refs (`SP800-53-AC-4.17`, `SP800-53-AC-17.2`, `SP800-53-AC-19.5` + 2 more)
+  - OWASP ASVS v5.0.0 — 11 refs (`ASVS-REQ-V6.8.1`, `ASVS-REQ-V8.4.2`, `ASVS-REQ-V10.1.2` + 2 more)
+  - MITRE CAPEC v3.9 — 7 refs (`CAPEC-113`, `CAPEC-277`, `CAPEC-523` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 4 refs (`AML.T0021`, `AML.T0073`, `AML.T0083` + 1 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-289`, `CWE-322`, `CWE-649`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-IAM`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-SOURCING-TRANSFER`)
+
+
+### Practices (6)
+
+#### `ACP-IAT-001` — Strong Authentication And Step-Up Enforcement
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (178 grounded claims em 17 fontes):
+  - NIST SP 800-53 Rev. 5 — 64 refs (`SP800-53-AC-7`, `SP800-53-AC-7.3`, `SP800-53-AC-7.4` + 2 more)
+  - OWASP ASVS v5.0.0 — 29 refs (`ASVS-REQ-V6.1.1`, `ASVS-REQ-V6.1.3`, `ASVS-REQ-V6.2.10` + 2 more)
+  - MITRE CAPEC v3.9 — 26 refs (`CAPEC-2`, `CAPEC-16`, `CAPEC-36` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 16 refs (`CWE-1392`, `CWE-290`, `CWE-303` + 2 more)
+  - PCI DSS v4.0.1 — 16 refs (`PCI-REQ-4`, `PCI-REQ-8`, `PCI-4.2.1` + 2 more)
+  - CIS Controls v8.1.2 — 7 refs (`CIS-4.1`, `CIS-5.2`, `CIS-6.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 4 refs (`AML.TA0012`, `AML.TA0013`, `AML.T0087` + 1 more)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-8098E416E1ED4AE4A56183EFBE76BF57`, `DSOMM-ACTIVITY-598E9F131AC84A01B85E8FAB93EE81DE`, `DSOMM-ACTIVITY-61E10F9CE1264FFAAF12FDBE0D0A831F`)
+  - OWASP SAMM v2.1 — 3 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-I_SD_3_B`, `SAMM-ACTIVITY-V_RT_3_B`)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-312c1`, `HIPAA-164-312d`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-PRACTICE-PS.1`, `SSDF-TASK-PW.9.1`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-4.2.1`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-MINIMUM-BAR`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A07-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-16`)
+
+#### `ACP-IAT-002` — Least-Privilege Authorization Governance
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (162 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 98 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-2.1` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 11 refs (`CWE-1220`, `CWE-183`, `CWE-250` + 2 more)
+  - CIS Controls v8.1.2 — 10 refs (`CIS-2.2`, `CIS-2.6`, `CIS-2.7` + 2 more)
+  - MITRE CAPEC v3.9 — 8 refs (`CAPEC-1`, `CAPEC-13`, `CAPEC-69` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 8 refs (`AML.TA0012`, `AML.T0017`, `AML.T0054` + 2 more)
+  - OWASP LLM Top 10 (2025) — 4 refs (`LLM01-2025`, `LLM02-2025`, `LLM06-2025` + 1 more)
+  - OWASP ASVS v5.0.0 — 3 refs (`ASVS-REQ-V8.1.2`, `ASVS-REQ-V8.2.3`, `ASVS-REQ-V13.3.2`)
+  - PCI DSS v4.0.1 — 3 refs (`PCI-6.5.4`, `PCI-7.2.1`, `PCI-8.2.2`)
+  - PCI Secure SLC v1.1 — 3 refs (`PCISSLC-1.1`, `PCISSLC-1.2`, `PCISSLC-3.2`)
+  - NIST AI RMF 1.0 — 2 refs (`NIST-AI-RMF-GOVERN-1`, `NIST-AI-RMF-GOVERN-2`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-G_EG_2_A`, `SAMM-ACTIVITY-I_SD_1_A`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-308a2`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-070BB14BE04A4F3D896AA08EBA7A35F9`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-GOVERNANCE`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP02-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C7`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-REPO`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-TASK-PS.1.1`)
+
+#### `ACP-IAT-003` — Access Review And Timely Revocation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (16 grounded claims em 5 fontes):
+  - NIST SP 800-53 Rev. 5 — 9 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-3.8` + 2 more)
+  - OWASP ASVS v5.0.0 — 2 refs (`ASVS-REQ-V10.4.9`, `ASVS-REQ-V12.1.4`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-5.5`, `CIS-6.6`)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308a4`, `HIPAA-164-312a1`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-359`)
+
+#### `ACP-IAT-004` — Bounded Session And Token Management
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (46 grounded claims em 9 fontes):
+  - OWASP ASVS v5.0.0 — 14 refs (`ASVS-REQ-V4.4.3`, `ASVS-REQ-V4.4.4`, `ASVS-REQ-V7.1.3` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 11 refs (`SP800-53-AC-10`, `SP800-53-AC-12`, `SP800-53-AC-12.1` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-21`, `CAPEC-39`, `CAPEC-59` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-312`, `CWE-488`, `CWE-613`)
+  - Anthropic MCP — Official Security Foundations (2025) — 2 refs (`MCP-SESSION-HIJACKING`, `MCP-SCOPE-MINIMIZATION`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0080.000`, `AML.CS0036`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP01-2025`, `MCP10-2025`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-4.3`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM02-2025`)
+
+#### `ACP-IAT-005` — Authenticated API Boundary Enforcement
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (93 grounded claims em 10 fontes):
+  - OWASP ASVS v5.0.0 — 35 refs (`ASVS-REQ-V1.3.6`, `ASVS-REQ-V2.2.2`, `ASVS-REQ-V3.5.1` + 2 more)
+  - MITRE CAPEC v3.9 — 17 refs (`CAPEC-8`, `CAPEC-14`, `CAPEC-36` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 17 refs (`SP800-53-AC-4.7`, `SP800-53-AC-4.29`, `SP800-53-SA-5.2` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 10 refs (`AML.T0040`, `AML.T0011.000`, `AML.T0008.004` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-204`, `CWE-551`, `CWE-648` + 1 more)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-29318D6018CE452680EAF5928E49F639`, `DSOMM-ACTIVITY-65A2D7D9544146BFA4E3F76919857750`, `DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99`)
+  - Anthropic MCP — Official Security Foundations (2025) — 2 refs (`MCP-AUTH-ERROR-HANDLING`, `MCP-CONFUSED-DEPUTY`)
+  - OWASP MCP — Third-Party Servers v1.0 — 2 refs (`OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY`, `OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-V_AA_2_A`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-1.4.2`)
+
+#### `ACP-IAT-006` — Access Abuse Monitoring And Audit Trail
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (333 grounded claims em 24 fontes):
+  - NIST SP 800-53 Rev. 5 — 136 refs (`SP800-53-AC-2`, `SP800-53-AC-2.4`, `SP800-53-AC-2.12` + 2 more)
+  - PCI DSS v4.0.1 — 41 refs (`PCI-REQ-11`, `PCI-1.1.1`, `PCI-1.2.4` + 2 more)
+  - CIS Controls v8.1.2 — 38 refs (`CIS-1`, `CIS-2.3`, `CIS-3` + 2 more)
+  - OWASP SAMM v2.1 — 31 refs (`SAMM-ACTIVITY-D_SA_1_B`, `SAMM-ACTIVITY-D_SR_1_B`, `SAMM-ACTIVITY-D_TA_1_A` + 2 more)
+  - OWASP DSOMM — 16 refs (`DSOMM-ACTIVITY-BACF85B65BC0405DB5BAA5D971467CC1`, `DSOMM-ACTIVITY-0A929C3EAB9A42068761ADF84B74622E`, `DSOMM-ACTIVITY-535F301AE8E84EDAAD77A08B035C92DE` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 12 refs (`SSDF-PRACTICE-PO.4`, `SSDF-PRACTICE-PW.1`, `SSDF-PRACTICE-PW.2` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-54`, `CAPEC-69`, `CAPEC-93` + 2 more)
+  - OWASP ASVS v5.0.0 — 9 refs (`ASVS-REQ-V14.2.7`, `ASVS-REQ-V16.1.1`, `ASVS-REQ-V16.2.1` + 2 more)
+  - PCI Secure SLC v1.1 — 7 refs (`PCISSLC-2.1`, `PCISSLC-2.4`, `PCISSLC-2.5` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 6 refs (`AML.TA0011`, `AML.T0003`, `AML.T0006` + 2 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 5 refs (`SCAGILE-OPS-1`, `SCAGILE-OPS-2`, `SCAGILE-OPS-7` + 2 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 4 refs (`SCFPSSD-LOGGING`, `SCFPSSD-CODING-STANDARDS`, `SCFPSSD-FINDINGS` + 1 more)
+  - EU Digital Operational Resilience Act (DORA) — 3 refs (`DORA-ART-5`, `DORA-ART-9`, `DORA-ART-10`)
+  - HIPAA Security Rule — 3 refs (`HIPAA-164-308a1`, `HIPAA-164-308a6`, `HIPAA-164-312b`)
+  - OWASP Machine Learning Top 10 — 3 refs (`ML02-2023`, `ML07-2023`, `ML08-2023`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-779`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-3.3.3`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM08-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-TESTING`)
+
+
+### Mechanisms (6)
+
+#### `ACM-IAT-001` — Authentication And Federation Protocols
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (90 grounded claims em 14 fontes):
+  - NIST SP 800-53 Rev. 5 — 41 refs (`SP800-53-AC-7.4`, `SP800-53-CP-13`, `SP800-53-IA-1` + 2 more)
+  - OWASP ASVS v5.0.0 — 16 refs (`ASVS-REQ-V6.3.3`, `ASVS-REQ-V6.3.5`, `ASVS-REQ-V6.3.7` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 10 refs (`CWE-1392`, `CWE-294`, `CWE-301` + 2 more)
+  - MITRE CAPEC v3.9 — 5 refs (`CAPEC-90`, `CAPEC-151`, `CAPEC-220` + 2 more)
+  - CIS Controls v8.1.2 — 5 refs (`CIS-3.1`, `CIS-4.9`, `CIS-12.6` + 2 more)
+  - OWASP DSOMM — 3 refs (`DSOMM-ACTIVITY-8098E416E1ED4AE4A56183EFBE76BF57`, `DSOMM-ACTIVITY-AD23BE9C56614F1F81A35A5DC7061629`, `DSOMM-ACTIVITY-598E9F131AC84A01B85E8FAB93EE81DE`)
+  - PCI DSS v4.0.1 — 3 refs (`PCI-REQ-4`, `PCI-4.2.1`, `PCI-8.3.11`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312d`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0091`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-AUTH`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A07-2021`)
+
+#### `ACM-IAT-002` — Access Policy Enforcement
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (422 grounded claims em 24 fontes):
+  - NIST SP 800-53 Rev. 5 — 198 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-2.1` + 2 more)
+  - MITRE CAPEC v3.9 — 44 refs (`CAPEC-1`, `CAPEC-8`, `CAPEC-9` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 34 refs (`AML.TA0000`, `AML.TA0012`, `AML.T0016` + 2 more)
+  - PCI DSS v4.0.1 — 34 refs (`PCI-REQ-7`, `PCI-REQ-9`, `PCI-1.5.1` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 19 refs (`CWE-1220`, `CWE-1230`, `CWE-183` + 2 more)
+  - CIS Controls v8.1.2 — 17 refs (`CIS-2.2`, `CIS-2.5`, `CIS-2.6` + 2 more)
+  - OWASP ASVS v5.0.0 — 16 refs (`ASVS-REQ-V1.5.2`, `ASVS-REQ-V2.3.5`, `ASVS-REQ-V2.4.1` + 2 more)
+  - OWASP DSOMM — 12 refs (`DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`, `DSOMM-ACTIVITY-B597928E54D648A5A8068003DCD56AAB`, `DSOMM-ACTIVITY-CF81922530CB47028E3260225EEDC33D` + 2 more)
+  - HIPAA Security Rule — 8 refs (`HIPAA-164-308a2`, `HIPAA-164-308a3`, `HIPAA-164-308a4` + 2 more)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 7 refs (`NIST-AI-100-2-E2025-2.1`, `NIST-AI-100-2-E2025-3.1.2`, `NIST-AI-100-2-E2025-3.1.3` + 2 more)
+  - OWASP Machine Learning Top 10 — 6 refs (`ML02-2023`, `ML03-2023`, `ML05-2023` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_3_B` + 2 more)
+  - OWASP LLM Top 10 (2025) — 5 refs (`LLM01-2025`, `LLM02-2025`, `LLM03-2025` + 2 more)
+  - PCI Secure SLC v1.1 — 5 refs (`PCISSLC-1.2`, `PCISSLC-2.2`, `PCISSLC-3.3` + 2 more)
+  - OWASP Proactive Controls (2018) — 2 refs (`OPC-C2`, `OPC-C7`)
+  - EU Digital Operational Resilience Act (DORA) — 1 refs (`DORA-ART-9`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-AUTH-ERROR-HANDLING`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-GOVERN-1`)
+  - OWASP MCP — Third-Party Servers v1.0 — 1 refs (`OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP02-2025`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A01-2021`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-REPO`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-PRACTICE-PS.1`)
+
+#### `ACM-IAT-003` — Periodic Review And Access Audit
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (54 grounded claims em 9 fontes):
+  - NIST SP 800-53 Rev. 5 — 38 refs (`SP800-53-AC-2`, `SP800-53-AC-2.4`, `SP800-53-AC-4.9` + 2 more)
+  - OWASP SAMM v2.1 — 5 refs (`SAMM-ACTIVITY-D_SA_2_B`, `SAMM-ACTIVITY-G_EG_3_A`, `SAMM-ACTIVITY-G_PC_2_B` + 2 more)
+  - CIS Controls v8.1.2 — 4 refs (`CIS-5.5`, `CIS-6.2`, `CIS-6.8` + 1 more)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308a8`, `HIPAA-164-312b`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-GOVERN-1.5`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-3F63BDBCC75F4780A941E6AD42E894E1`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-12.10.2`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-2.1`)
+
+#### `ACM-IAT-004` — Short-Lived Token Controls
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (25 grounded claims em 7 fontes):
+  - MITRE CAPEC v3.9 — 9 refs (`CAPEC-39`, `CAPEC-59`, `CAPEC-60` + 2 more)
+  - OWASP ASVS v5.0.0 — 6 refs (`ASVS-REQ-V7.2.3`, `ASVS-REQ-V7.2.4`, `ASVS-REQ-V7.4.1` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 5 refs (`SP800-53-AC-12`, `SP800-53-AC-12.1`, `SP800-53-SC-23.1` + 2 more)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 2 refs (`MCP01-2025`, `MCP10-2025`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-565`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-SESSION-HIJACKING`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM02-2025`)
+
+#### `ACM-IAT-005` — API Gateway Mutual Authentication
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 4 keywords × 35 ocorrências; principais: boundaries, gateway, identity, service)
+- **Substrate v7 contributing sources** (31 grounded claims em 6 fontes):
+  - OWASP ASVS v5.0.0 — 23 refs (`ASVS-REQ-V4.1.2`, `ASVS-REQ-V4.1.3`, `ASVS-REQ-V4.1.4` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 3 refs (`SP800-53-IA-2.11`, `SP800-53-SA-9.3`, `SP800-53-SC-7.8`)
+  - MITRE CAPEC v3.9 — 2 refs (`CAPEC-384`, `CAPEC-461`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-CONFUSED-DEPUTY`)
+  - OWASP SAMM v2.1 — 1 refs (`SAMM-ACTIVITY-D_SA_2_A`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-1.4.2`)
+
+#### `ACM-IAT-006` — Structured Logging And Effective Configuration Recording
+
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 03 (`03-threat-modeling`), Cap. 12 (`12-monitorizacao-operacoes`), Cap. 14 (`14-governanca-contratacao`). Cap. expected (04-arquitetura-segura) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (316 grounded claims em 22 fontes):
+  - NIST SP 800-53 Rev. 5 — 130 refs (`SP800-53-AU-2`, `SP800-53-AU-4.1`, `SP800-53-AU-5.4` + 2 more)
+  - OWASP SAMM v2.1 — 34 refs (`SAMM-ACTIVITY-D_SA_1_B`, `SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-D_SR_1_B` + 2 more)
+  - PCI DSS v4.0.1 — 34 refs (`PCI-REQ-10`, `PCI-1.1.1`, `PCI-1.1.2` + 2 more)
+  - CIS Controls v8.1.2 — 28 refs (`CIS-1`, `CIS-3.1`, `CIS-3.13` + 2 more)
+  - OWASP DSOMM — 19 refs (`DSOMM-ACTIVITY-67E1A9AA9FBF4EC5A2DE400F01960C51`, `DSOMM-ACTIVITY-994151396B50441B89E10AA59ACCD43D`, `DSOMM-ACTIVITY-C72DA77986CC45B1A339190CE5093171` + 2 more)
+  - MITRE CAPEC v3.9 — 18 refs (`CAPEC-75`, `CAPEC-81`, `CAPEC-93` + 2 more)
+  - OWASP ASVS v5.0.0 — 16 refs (`ASVS-REQ-V15.1.2`, `ASVS-REQ-V15.1.5`, `ASVS-REQ-V16.1.1` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 12 refs (`SSDF-PRACTICE-PO.3`, `SSDF-PRACTICE-PS.2`, `SSDF-TASK-PO.1.2` + 2 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 6 refs (`SCAGILE-OPS-2`, `SCAGILE-OPS-5`, `SCAGILE-OPS-6` + 2 more)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 4 refs (`SCFPSSD-LOGGING`, `SCFPSSD-CODING-STANDARDS`, `SCFPSSD-VULN-RESPONSE` + 1 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.T0037`, `AML.T0049`, `AML.M0024`)
+  - EU Digital Operational Resilience Act (DORA) — 2 refs (`DORA-ART-5`, `DORA-ART-12`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-779`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-316b1`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-BUILD`)
+
 
 ---
 
-## MITRE ATLAS — Adversarial Threat Landscape for AI Systems
+## Slice `ACO-ITS` — Integração e segurança service-to-service
 
-**O que esta ES traz para este capítulo:** contribui 42 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
+### ControlObjectives (7)
 
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `AML.CS0033` | Live Deepfake Image Injection to Evade Mobile KYC Verification. Facial biometric authentication services are commonly used by mobile applications for user onboarding, authentication, and identity veri | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.CS0036` | AIKatz: Attacking LLM Desktop Applications. Researchers at Lumia have demonstrated that it is possible to extract authentication tokens from the memory of LLM Desktop Applications. An attacker could t | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.CS0039` | Living Off AI: Prompt Injection via Jira Service Management. Researchers from Cato Networks demonstrated how adversaries can exploit AI-powered systems embedded in enterprise workflows to execute mali | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.CS0048` | Exposed ClawdBot Control Interfaces Leads to Credential Access and Execution. A security researcher identified hundreds of exposed ClawdBot control interfaces on the public internet. ClawdBot (now Ope | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0005` | Control Access to AI Models | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0013` | Code Signing. Enforce binary and application integrity with digital signature verification to prevent untrusted code from executing. Adversaries can embed malicious code in AI software or models. Deve | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `AML.M0019` | Control Access to AI Models and Data in Production. Require users to verify their identities before accessing a production model. Require authentication for API endpoints and monitor production model | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0026` | Privileged AI Agent Permissions Configuration. AI agents may be granted elevated privileges above that of a normal user to enable desired workflows. When deploying a privileged AI agent, or an agent t | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0027` | Single-User AI Agent Permissions Configuration. When deploying an AI agent that acts as a representative of a user and performs actions on their behalf, it is important to implement robust policies an | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0028` | AI Agent Tools Permissions Configuration. When deploying tools that will be shared across multiple AI agents, it is important to implement robust policies and controls on permissions for the tools. Th | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.M0031` | Memory Hardening. Memory Hardening involves developing trust boundaries and secure processes for how an AI agent stores and accesses memory and context. This may be implemented using a combination of | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.M0032` | Define security boundaries around agentic tools | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.T0002.001` | Models. Adversaries may acquire public models to use in their operations. Adversaries may seek models used by the victim organization or models that are representative of those used by the victim orga | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.T0005` | Create Proxy AI Model. Adversaries may obtain models to serve as proxies for the target model in use at the victim organization. Proxy models are used to simulate complete access to the target model i | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0005.000` | Train Proxy via Gathered AI Artifacts. Proxy models may be trained from AI artifacts (such as data, model architectures, and pre-trained models) that are representative of the target model gathered by | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0008.004` | Serverless. Adversaries may purchase and configure serverless cloud infrastructure, such as Cloudflare Workers, AWS Lambda functions, or Google Apps Scripts, that can be used during targeting. By util | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0008.005` | AI Service Proxies. Adversaries may utilize commercial proxy services that resell access to AI services such as frontier model APIs. This infrastructure can be used to conduct large-scale campaigns t | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0016` | Obtain Capabilities. Adversaries may search for and obtain software capabilities for use in their operations. Capabilities may be specific to AI-based attacks [Adversarial AI Attack Implementations](/ | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0017` | Develop Capabilities. Adversaries may develop their own capabilities to support operations. This process encompasses identifying requirements, building solutions, and deploying capabilities. Capabilit | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0024.002` | Extract AI Model. Adversaries may extract a functional copy of a private model. By repeatedly querying the victim's [AI Model Inference API Access](/techniques/AML.T0040), the adversary can collect th | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0040` | AI Model Inference API Access. Adversaries may gain access to a model via legitimate access to the inference API. Inference API access can be a source of information to the adversary ([Discover AI Mod | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0041` | Physical Environment Access. In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks. If the model is interacti | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0043.002` | Black-Box Transfer. In Black-Box Transfer attacks, the adversary uses one or more proxy models (trained via [Create Proxy AI Model](/techniques/AML.T0005) or [Train Proxy via Replication](/techniques/ | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0044` | Full AI Model Access. Adversaries may gain full "white-box" access to an AI model. This means the adversary has complete knowledge of the model architecture, its parameters, and class ontology. They m | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0047` | AI-Enabled Product or Service. Adversaries may use a product or service that uses artificial intelligence under the hood to gain access to the underlying AI model. This type of indirect model access m | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0048` | External Harms. Adversaries may abuse their access to a victim system and use its resources or capabilities to further their goals by causing harms external to that system. These harms could affect th | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.T0048.002` | Societal Harm. Societal harms might generate harmful outcomes that reach either the general public or specific vulnerable groups such as the exposure of children to vulgar content. | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.T0051.001` | Indirect. An adversary may inject prompts indirectly via separate data channel ingested by the LLM such as include text or multimedia pulled from databases or websites. These malicious prompts may be | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `AML.T0053` | AI Agent Tool Invocation. Adversaries may use their access to an AI agent to invoke tools the agent has access to. LLMs are often connected to other services or resources via tools to increase their c | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0080.000` | Memory. Adversaries may manipulate the memory of a large language model (LLM) in order to persist changes to the LLM to future chat sessions. Memory is a common feature in LLMs that allows them to r | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0085` | Data from AI Services. Adversaries may use their access to a victim organization's AI-enabled services to collect proprietary or otherwise sensitive information. As organizations adopt generative AI i | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0085.001` | AI Agent Tools. Adversaries may prompt the AI service to invoke various tools the agent has access to. Tools may retrieve data from different APIs or services in an organization. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0087` | Gather Victim Identity Information. Adversaries may gather information about the victim's identity that can be used during targeting. Information about identities may include a variety of details, inc | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0091` | Use Alternate Authentication Material. Adversaries may use alternate authentication material, such as password hashes, Kerberos tickets, and application access tokens, in order to move laterally withi | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0091.000` | Application Access Token. Adversaries may use stolen application access tokens to bypass the typical authentication process and access restricted accounts, information, or services on remote systems. | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0095` | Search Open Websites/Domains. Adversaries may search public websites and/or domains for information about victims that can be used during targeting. Information about victims may be available in vario | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0096` | AI Service API. Adversaries may communicate using the API of an AI service on the victim's system. The adversary's commands to the victim system, and often the results, are embedded in the normal traf | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0103` | Deploy AI Agent. Adversaries may launch AI agents in the victim's environment to execute actions on their behalf. AI agents may have access to a wide range of tools and data sources, as well as permis | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0108` | AI Agent. Adversaries may abuse AI agents present on the victim's system for command and control. AI agents are often granted access to tools that can execute shell commands, reach out to the internet | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.T0112.000` | Local AI Agent. Adversaries may achieve full system compromise by abusing AI agents running locally on a host, such as computer-use agents or AI-driven browsers. These agents are designed to autonomou | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.TA0000` | AI Model Access. The adversary is attempting to gain some level of access to an AI model. AI Model Access enables techniques that use various types of access to the AI model that can be used by the a | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `AML.TA0012` | Privilege Escalation. The adversary is trying to gain higher-level permissions. Privilege Escalation consists of techniques that adversaries use to gain higher-level permissions on a system or networ | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
+#### `ACO-ITS-001` — Authenticated Service Interaction And Machine Identity Binding
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (76 grounded claims em 11 fontes):
+  - NIST SP 800-53 Rev. 5 — 37 refs (`SP800-53-AC-2`, `SP800-53-AC-4.17`, `SP800-53-AC-17.10` + 2 more)
+  - OWASP ASVS v5.0.0 — 8 refs (`ASVS-REQ-V6.3.3`, `ASVS-REQ-V6.6.1`, `ASVS-REQ-V7.1.3` + 2 more)
+  - MITRE CAPEC v3.9 — 8 refs (`CAPEC-21`, `CAPEC-36`, `CAPEC-196` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 7 refs (`CWE-1392`, `CWE-289`, `CWE-301` + 2 more)
+  - CIS Controls v8.1.2 — 5 refs (`CIS-6.4`, `CIS-6.6`, `CIS-12.5` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0090`, `AML.T0091`, `AML.T0091.000` + 2 more)
+  - OWASP MCP — Third-Party Servers v1.0 — 2 refs (`OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION`, `OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-CONFUSED-DEPUTY`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-AUTH`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+
+#### `ACO-ITS-002` — Secure Transport And Insecure Protocol Exclusion
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (140 grounded claims em 12 fontes):
+  - NIST SP 800-53 Rev. 5 — 96 refs (`SP800-53-AC-3.3`, `SP800-53-AC-3.5`, `SP800-53-AC-4.1` + 2 more)
+  - PCI DSS v4.0.1 — 18 refs (`PCI-REQ-2`, `PCI-REQ-4`, `PCI-1.2.3` + 2 more)
+  - OWASP DSOMM — 5 refs (`DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`, `DSOMM-ACTIVITY-29318D6018CE452680EAF5928E49F639`, `DSOMM-ACTIVITY-AD23BE9C56614F1F81A35A5DC7061629` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V3.4.1`, `ASVS-REQ-V12.1.2`, `ASVS-REQ-V12.2.1` + 1 more)
+  - MITRE CAPEC v3.9 — 4 refs (`CAPEC-157`, `CAPEC-390`, `CAPEC-582` + 1 more)
+  - CIS Controls v8.1.2 — 4 refs (`CIS-3.1`, `CIS-4.6`, `CIS-12.3` + 1 more)
+  - HIPAA Security Rule — 3 refs (`HIPAA-164-310a1`, `HIPAA-164-310c`, `HIPAA-164-312e1`)
+  - MITRE CWE — Software Development View (v4.19.1) — 2 refs (`CWE-420`, `CWE-654`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-ARCH`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C1`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A02-2021`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-ENCRYPTION`)
+
+#### `ACO-ITS-003` — Message Integrity And Authorized Peer Validation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (142 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 52 refs (`SP800-53-AC-3.12`, `SP800-53-AC-4.19`, `SP800-53-AC-17.6` + 2 more)
+  - OWASP ASVS v5.0.0 — 25 refs (`ASVS-REQ-V1.5.2`, `ASVS-REQ-V2.3.5`, `ASVS-REQ-V3.5.5` + 2 more)
+  - MITRE CAPEC v3.9 — 19 refs (`CAPEC-12`, `CAPEC-22`, `CAPEC-145` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 16 refs (`CWE-179`, `CWE-209`, `CWE-212` + 2 more)
+  - PCI DSS v4.0.1 — 7 refs (`PCI-1.2.2`, `PCI-7.2.2`, `PCI-7.2.3` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 5 refs (`AML.T0042`, `AML.T0067`, `AML.M0013` + 2 more)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-6.1`, `PCISSLC-6.2`)
+  - SAFECode — Software Integrity Controls (2010) — 2 refs (`SCSIC-DEV-TESTING`, `SCSIC-DELIVERY`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-PRACTICE-PS.2`, `SSDF-TASK-PS.2.1`)
+  - CIS Controls v8.1.2 — 1 refs (`CIS-18.4`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312c1`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 1 refs (`NIST-AI-100-2-E2025-3.4.2`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-3F63BDBCC75F4780A941E6AD42E894E1`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM04-2025`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-GOVERNANCE`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A08-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-7`)
+  - SLSA Specification v1.0 — Build Track — 1 refs (`SLSA-PRINCIPLE-TRUST-CODE`)
+
+#### `ACO-ITS-004` — Boundary-Mediated External Exposure And Integration Path Control
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (4 grounded claims em 3 fontes):
+  - NIST SP 800-53 Rev. 5 — 2 refs (`SP800-53-MP-5.1`, `SP800-53-PE-3`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-433`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-73`)
+
+#### `ACO-ITS-005` — Integration Security Review And Contract Assurance
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (33 grounded claims em 13 fontes):
+  - CIS Controls v8.1.2 — 7 refs (`CIS-4`, `CIS-4.1`, `CIS-4.2` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 6 refs (`SP800-53-CA-3`, `SP800-53-CA-4`, `SP800-53-CM-5.7` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SR_1_B`, `SAMM-ACTIVITY-D_SR_2_B`, `SAMM-ACTIVITY-G_PC_3_B` + 2 more)
+  - HIPAA Security Rule — 3 refs (`HIPAA-164-308a1`, `HIPAA-164-308b1`, `HIPAA-164-314a1`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-F57D55F2DC054B349D1FF8CE5BFB0715`, `DSOMM-ACTIVITY-AAFFA73F59F64267B0AB732F3D13E90D`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 2 refs (`SCAGILE-EXP-2`, `SCAGILE-EXP-8`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V15.1.2`)
+  - EU Cyber Resilience Act (CRA) — 1 refs (`CRA-ART-18`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-22`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-TOOL-DESIGN`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-8.1`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-FINDINGS`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-SOURCING-CONTRACT`)
+
+#### `ACO-ITS-006` — External Interaction Auditability
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (48 grounded claims em 8 fontes):
+  - NIST SP 800-53 Rev. 5 — 29 refs (`SP800-53-AU-2`, `SP800-53-AU-2.2`, `SP800-53-AU-2.3` + 2 more)
+  - OWASP ASVS v5.0.0 — 5 refs (`ASVS-REQ-V13.4.5`, `ASVS-REQ-V16.1.1`, `ASVS-REQ-V16.2.3` + 2 more)
+  - OWASP DSOMM — 4 refs (`DSOMM-ACTIVITY-E9A6D403A467445EB98A74F0C29DA0B1`, `DSOMM-ACTIVITY-1CD5E4B8BE364726ADC7D8F843F47AC8`, `DSOMM-ACTIVITY-D03BC41074A74E9282CBD01A020CB6BF` + 1 more)
+  - PCI DSS v4.0.1 — 4 refs (`PCI-10.3.3`, `PCI-10.4.2`, `PCI-11.3.2` + 1 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-1`, `CIS-8.1`, `CIS-8.7`)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-749`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-LOGGING`)
+
+#### `ACO-ITS-007` — Integration Trust And Service Interaction Assurance
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (18 grounded claims em 6 fontes):
+  - NIST SP 800-53 Rev. 5 — 11 refs (`SP800-53-CA-6.1`, `SP800-53-CA-6.2`, `SP800-53-CA-9` + 2 more)
+  - OWASP ASVS v5.0.0 — 3 refs (`ASVS-REQ-V8.4.2`, `ASVS-REQ-V12.2.2`, `ASVS-REQ-V12.3.4`)
+  - MITRE CAPEC v3.9 — 1 refs (`CAPEC-677`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-MEASURE-4`)
+  - PCI DSS v4.0.1 — 1 refs (`PCI-12.8.1`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+
+
+### Practices (6)
+
+#### `ACP-ITS-001` — Trust Boundary And Integration Review
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (6 grounded claims em 5 fontes):
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-G_EG_2_A`, `SAMM-ACTIVITY-G_SM_1_A`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0054`)
+  - NIST AI RMF 1.0 — 1 refs (`NIST-AI-RMF-MEASURE-4`)
+  - NIST SP 800-53 Rev. 5 — 1 refs (`SP800-53-SA-13`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-3.2`)
+
+#### `ACP-ITS-002` — Machine Identity And Mutual Authentication Discipline
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (69 grounded claims em 10 fontes):
+  - NIST SP 800-53 Rev. 5 — 32 refs (`SP800-53-AC-3.2`, `SP800-53-AC-17.10`, `SP800-53-AU-10.1` + 2 more)
+  - OWASP ASVS v5.0.0 — 10 refs (`ASVS-REQ-V6.3.3`, `ASVS-REQ-V6.5.3`, `ASVS-REQ-V6.8.4` + 2 more)
+  - MITRE CAPEC v3.9 — 10 refs (`CAPEC-21`, `CAPEC-36`, `CAPEC-59` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 7 refs (`AML.T0012`, `AML.T0083`, `AML.T0090` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-289`, `CWE-306`, `CWE-308` + 1 more)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-8098E416E1ED4AE4A56183EFBE76BF57`, `DSOMM-ACTIVITY-598E9F131AC84A01B85E8FAB93EE81DE`)
+  - Anthropic MCP — Official Security Foundations (2025) — 1 refs (`MCP-CONFUSED-DEPUTY`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP07-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C6`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A07-2021`)
+
+#### `ACP-ITS-003` — Transport And Protocol Hardening
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (224 grounded claims em 19 fontes):
+  - NIST SP 800-53 Rev. 5 — 118 refs (`SP800-53-AC-3.5`, `SP800-53-AC-3.6`, `SP800-53-AC-4.1` + 2 more)
+  - PCI DSS v4.0.1 — 25 refs (`PCI-REQ-2`, `PCI-1.1.1`, `PCI-1.2.5` + 2 more)
+  - MITRE CAPEC v3.9 — 17 refs (`CAPEC-36`, `CAPEC-57`, `CAPEC-89` + 2 more)
+  - CIS Controls v8.1.2 — 12 refs (`CIS-3.1`, `CIS-4`, `CIS-4.1` + 2 more)
+  - OWASP SAMM v2.1 — 11 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-I_DM_1_A` + 2 more)
+  - OWASP DSOMM — 10 refs (`DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`, `DSOMM-ACTIVITY-03643CA203C2472B8E19956BF02FE9B7`, `DSOMM-ACTIVITY-FFE86CAF2FEC4630B5142DB83983984D` + 2 more)
+  - PCI Secure SLC v1.1 — 6 refs (`PCISSLC-2.3`, `PCISSLC-5.1`, `PCISSLC-8.1` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 5 refs (`SSDF-PRACTICE-PO.5`, `SSDF-PRACTICE-PW.4`, `SSDF-PRACTICE-PW.9` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 4 refs (`CWE-1220`, `CWE-212`, `CWE-213` + 1 more)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 3 refs (`SCAGILE-EXP-8`, `SCAGILE-EXP-11`, `SCAGILE-EXP-12`)
+  - OWASP ASVS v5.0.0 — 2 refs (`ASVS-REQ-V3.4.1`, `ASVS-REQ-V17.2.1`)
+  - EU Cyber Resilience Act (CRA) — 2 refs (`CRA-ART-18`, `CRA-ART-19`)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308a6`, `HIPAA-164-312e1`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-DESIGN-PRINCIPLES`, `SCFPSSD-ENCRYPTION`)
+  - EU Digital Operational Resilience Act (DORA) — 1 refs (`DORA-ART-9`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - OWASP MCP — Secure Server Development v1.0 — 1 refs (`OWASP-MCP-DEPLOYMENT`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - SAFECode — Software Integrity Controls (2010) — 1 refs (`SCSIC-DEV-DEFAULTS`)
+
+#### `ACP-ITS-004` — Message Integrity And Authorized Peer Validation
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (129 grounded claims em 14 fontes):
+  - NIST SP 800-53 Rev. 5 — 62 refs (`SP800-53-AC-4.19`, `SP800-53-AC-22`, `SP800-53-AU-5.3` + 2 more)
+  - OWASP ASVS v5.0.0 — 29 refs (`ASVS-REQ-V2.2.2`, `ASVS-REQ-V2.3.3`, `ASVS-REQ-V2.3.5` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 10 refs (`CWE-209`, `CWE-294`, `CWE-346` + 2 more)
+  - PCI DSS v4.0.1 — 6 refs (`PCI-1.1.2`, `PCI-1.2.4`, `PCI-2.1.2` + 2 more)
+  - OWASP SAMM v2.1 — 4 refs (`SAMM-ACTIVITY-I_SD_3_A`, `SAMM-ACTIVITY-V_AA_2_A`, `SAMM-ACTIVITY-V_RT_3_B` + 1 more)
+  - NIST SSDF (SP 800-218 v1.1) — 4 refs (`SSDF-PRACTICE-PS.2`, `SSDF-PRACTICE-PW.2`, `SSDF-PRACTICE-PW.7` + 1 more)
+  - MITRE CAPEC v3.9 — 3 refs (`CAPEC-69`, `CAPEC-330`, `CAPEC-475`)
+  - SAFECode — Software Integrity Controls (2010) — 3 refs (`SCSIC-DEVELOPMENT`, `SCSIC-DEV-TESTING`, `SCSIC-DELIVERY-SIGNING`)
+  - CIS Controls v8.1.2 — 2 refs (`CIS-12.1`, `CIS-18.4`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312c1`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.M0013`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A08-2021`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-6.1`)
+
+#### `ACP-ITS-005` — Integration Contract And Change Assurance
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 4 keywords × 49 ocorrências; principais: integration, interface, review, trust)
+- **Substrate v7 contributing sources** (8 grounded claims em 3 fontes):
+  - NIST SP 800-53 Rev. 5 — 5 refs (`SP800-53-CA-3`, `SP800-53-CM-1`, `SP800-53-SA-10` + 2 more)
+  - HIPAA Security Rule — 2 refs (`HIPAA-164-308b1`, `HIPAA-164-314a1`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-5.1`)
+
+#### `ACP-ITS-006` — External Interaction Audit Logging
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 5 keywords × 33 ocorrências; principais: calls, context, logging, record, review)
+- **Substrate v7 contributing sources** (185 grounded claims em 20 fontes):
+  - NIST SP 800-53 Rev. 5 — 87 refs (`SP800-53-AC-2.4`, `SP800-53-AC-3.10`, `SP800-53-AC-4.26` + 2 more)
+  - PCI DSS v4.0.1 — 17 refs (`PCI-REQ-10`, `PCI-5.3.4`, `PCI-8.2.7` + 2 more)
+  - OWASP ASVS v5.0.0 — 16 refs (`ASVS-REQ-V13.4.5`, `ASVS-REQ-V16.1.1`, `ASVS-REQ-V16.2.1` + 2 more)
+  - CIS Controls v8.1.2 — 16 refs (`CIS-3.1`, `CIS-8`, `CIS-8.1` + 2 more)
+  - OWASP SAMM v2.1 — 12 refs (`SAMM-ACTIVITY-I_SB_3_A`, `SAMM-ACTIVITY-O_EM_3_A`, `SAMM-ACTIVITY-O_EM_3_B` + 2 more)
+  - MITRE CAPEC v3.9 — 9 refs (`CAPEC-54`, `CAPEC-93`, `CAPEC-268` + 2 more)
+  - OWASP DSOMM — 9 refs (`DSOMM-ACTIVITY-4ECED38A79044C45ADB050B663065540`, `DSOMM-ACTIVITY-FE875E17AE4A45F8A359244AA4FCBC04`, `DSOMM-ACTIVITY-CCFDD0A8991E4269AD77C0A54CA655CB` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 3 refs (`CWE-749`, `CWE-778`, `CWE-779`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.TA0011`, `AML.T0006`, `AML.M0024`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 2 refs (`SCFPSSD-LOGGING`, `SCFPSSD-VULN-RESPONSE`)
+  - NIST SSDF (SP 800-218 v1.1) — 2 refs (`SSDF-TASK-PW.2.1`, `SSDF-TASK-RV.1.1`)
+  - EU Digital Operational Resilience Act (DORA) — 1 refs (`DORA-ART-5`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312b`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML07-2023`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-5`)
+
+
+### Mechanisms (5)
+
+#### `ACM-ITS-001` — API Gateway With Mutual Authentication
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (146 grounded claims em 16 fontes):
+  - OWASP ASVS v5.0.0 — 55 refs (`ASVS-REQ-V2.2.2`, `ASVS-REQ-V4.1.2`, `ASVS-REQ-V4.1.3` + 2 more)
+  - NIST SP 800-53 Rev. 5 — 33 refs (`SP800-53-CA-3.5`, `SP800-53-CM-3.5`, `SP800-53-IA-2.1` + 2 more)
+  - MITRE CAPEC v3.9 — 15 refs (`CAPEC-14`, `CAPEC-21`, `CAPEC-22` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 8 refs (`AML.T0012`, `AML.T0075`, `AML.T0083` + 2 more)
+  - OWASP DSOMM — 6 refs (`DSOMM-ACTIVITY-8098E416E1ED4AE4A56183EFBE76BF57`, `DSOMM-ACTIVITY-598E9F131AC84A01B85E8FAB93EE81DE`, `DSOMM-ACTIVITY-F57D55F2DC054B349D1FF8CE5BFB0715` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-I_SB_2_B`, `SAMM-ACTIVITY-I_SD_2_B` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 5 refs (`CWE-1392`, `CWE-289`, `CWE-290` + 2 more)
+  - CIS Controls v8.1.2 — 3 refs (`CIS-6.4`, `CIS-12.5`, `CIS-16.11`)
+  - Anthropic MCP — Official Security Foundations (2025) — 3 refs (`MCP-AUTH-TOKEN-VALIDATION`, `MCP-CONFUSED-DEPUTY`, `MCP-TOKEN-PASSTHROUGH`)
+  - OWASP MCP — Secure Server Development v1.0 — 3 refs (`OWASP-MCP-RISK-LANDSCAPE`, `OWASP-MCP-AUTH`, `OWASP-MCP-DEPLOYMENT`)
+  - OWASP MCP — Third-Party Servers v1.0 — 3 refs (`OWASP-MCP-3P-CLIENT-SECURITY-DISCOVERY`, `OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION`, `OWASP-MCP-3P-TOOLS-UTILITIES`)
+  - NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy — 2 refs (`NIST-AI-100-2-E2025-3.2`, `NIST-AI-100-2-E2025-3.4.3`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP01-2025`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A07-2021`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-IAM`)
+
+#### `ACM-ITS-002` — Trust Boundary Models
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (20 grounded claims em 7 fontes):
+  - NIST SP 800-53 Rev. 5 — 7 refs (`SP800-53-AU-2.3`, `SP800-53-AU-10.3`, `SP800-53-RA-7` + 2 more)
+  - OWASP SAMM v2.1 — 7 refs (`SAMM-ACTIVITY-D_SA_3_B`, `SAMM-ACTIVITY-G_EG_3_A`, `SAMM-ACTIVITY-G_PC_1_B` + 2 more)
+  - NIST AI RMF 1.0 — 2 refs (`NIST-AI-RMF-GOVERN-3`, `NIST-AI-RMF-MEASURE-4`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.T0054`)
+  - OWASP DSOMM — 1 refs (`DSOMM-ACTIVITY-0DE465A655A74343AF79948BB5FF10BA`)
+  - PCI Secure SLC v1.1 — 1 refs (`PCISSLC-2.5`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-FINDINGS`)
+
+#### `ACM-ITS-003` — Transport Security Controls
+
+- **Manual prose:** cobertura **cross-chapter** — content encontrado em Cap. 14 (`14-governanca-contratacao`). Cap. expected (04-arquitetura-segura) tem cobertura fraca; ler em chapter(s) listada(s).
+- **Substrate v7 contributing sources** (207 grounded claims em 18 fontes):
+  - NIST SP 800-53 Rev. 5 — 137 refs (`SP800-53-AC-1`, `SP800-53-AC-2`, `SP800-53-AC-2.1` + 2 more)
+  - CIS Controls v8.1.2 — 15 refs (`CIS-3`, `CIS-3.1`, `CIS-3.3` + 2 more)
+  - PCI DSS v4.0.1 — 14 refs (`PCI-REQ-3`, `PCI-REQ-7`, `PCI-REQ-9` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 7 refs (`CWE-1220`, `CWE-312`, `CWE-654` + 2 more)
+  - HIPAA Security Rule — 6 refs (`HIPAA-164-308a2`, `HIPAA-164-308a4`, `HIPAA-164-308a5` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-D_SA_1_A`, `SAMM-ACTIVITY-D_SA_2_A`, `SAMM-ACTIVITY-D_SA_2_B` + 2 more)
+  - MITRE CAPEC v3.9 — 5 refs (`CAPEC-146`, `CAPEC-200`, `CAPEC-439` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 3 refs (`AML.TA0014`, `AML.M0020`, `AML.M0032`)
+  - NIST SSDF (SP 800-218 v1.1) — 3 refs (`SSDF-PRACTICE-PW.1`, `SSDF-TASK-PW.1.3`, `SSDF-TASK-PW.9.1`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-AE22DAFDBCD641EEBA018B7FE6FC1AD9`, `DSOMM-ACTIVITY-72737130472C498480F89AB2F1C2ED5D`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-3.3`, `PCISSLC-9.3`)
+  - OWASP ASVS v5.0.0 — 1 refs (`ASVS-REQ-V17.2.1`)
+  - EU NIS2 Directive — 1 refs (`NIS2-ART-21`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP Machine Learning Top 10 — 1 refs (`ML06-2023`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C7`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-SECURITY-CONTROLS`)
+
+#### `ACM-ITS-004` — Message Integrity And Authorized Peer Policies
+
+- **Manual prose:** coberto na anchor canon/addon/intro deste capítulo (Phase 1 baseline classification).
+- **Substrate v7 contributing sources** (183 grounded claims em 18 fontes):
+  - NIST SP 800-53 Rev. 5 — 96 refs (`SP800-53-AC-3.12`, `SP800-53-AC-8`, `SP800-53-AC-14` + 2 more)
+  - PCI DSS v4.0.1 — 25 refs (`PCI-1.2.2`, `PCI-1.2.3`, `PCI-1.4.3` + 2 more)
+  - OWASP ASVS v5.0.0 — 13 refs (`ASVS-REQ-V2.3.5`, `ASVS-REQ-V4.1.5`, `ASVS-REQ-V9.1.2` + 2 more)
+  - MITRE CAPEC v3.9 — 13 refs (`CAPEC-330`, `CAPEC-418`, `CAPEC-422` + 2 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 8 refs (`CWE-209`, `CWE-348`, `CWE-349` + 2 more)
+  - CIS Controls v8.1.2 — 5 refs (`CIS-2.2`, `CIS-2.5`, `CIS-2.7` + 2 more)
+  - NIST SSDF (SP 800-218 v1.1) — 5 refs (`SSDF-PRACTICE-PS.2`, `SSDF-PRACTICE-PW.2`, `SSDF-PRACTICE-PW.7` + 2 more)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 2 refs (`AML.T0054`, `AML.M0013`)
+  - OWASP DSOMM — 2 refs (`DSOMM-ACTIVITY-FFE86CAF2FEC4630B5142DB83983984D`, `DSOMM-ACTIVITY-AC8730A2CCC0465C9550D91EDAE9D5EE`)
+  - OWASP MCP — Secure Server Development v1.0 — 2 refs (`OWASP-MCP-GOVERNANCE`, `OWASP-MCP-MINIMUM-BAR`)
+  - OWASP Machine Learning Top 10 — 2 refs (`ML06-2023`, `ML08-2023`)
+  - OWASP SAMM v2.1 — 2 refs (`SAMM-ACTIVITY-I_SB_3_B`, `SAMM-ACTIVITY-V_RT_3_B`)
+  - PCI Secure SLC v1.1 — 2 refs (`PCISSLC-6.1`, `PCISSLC-6.2`)
+  - SAFECode — Software Integrity Controls (2010) — 2 refs (`SCSIC-DELIVERY`, `SCSIC-DELIVERY-SIGNING`)
+  - EU GDPR (RGPD) — 1 refs (`GDPR-ART-32`)
+  - HIPAA Security Rule — 1 refs (`HIPAA-164-312c1`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A08-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-16`)
+
+#### `ACM-ITS-005` — Structured External Call Logging
+
+- **Manual prose:** coberto neste capítulo (verificação Phase 2/3 deterministic kw-match: 5 keywords × 33 ocorrências; principais: calls, context, logging, record, review)
+- **Substrate v7 contributing sources** (87 grounded claims em 16 fontes):
+  - NIST SP 800-53 Rev. 5 — 35 refs (`SP800-53-AU-2`, `SP800-53-AU-4`, `SP800-53-AU-4.1` + 2 more)
+  - CIS Controls v8.1.2 — 12 refs (`CIS-8`, `CIS-8.1`, `CIS-8.2` + 2 more)
+  - PCI DSS v4.0.1 — 8 refs (`PCI-REQ-10`, `PCI-5.3.4`, `PCI-9.3.4` + 2 more)
+  - OWASP DSOMM — 7 refs (`DSOMM-ACTIVITY-4ECED38A79044C45ADB050B663065540`, `DSOMM-ACTIVITY-FE875E17AE4A45F8A359244AA4FCBC04`, `DSOMM-ACTIVITY-CCFDD0A8991E4269AD77C0A54CA655CB` + 2 more)
+  - MITRE CAPEC v3.9 — 6 refs (`CAPEC-54`, `CAPEC-93`, `CAPEC-268` + 2 more)
+  - OWASP SAMM v2.1 — 6 refs (`SAMM-ACTIVITY-I_SB_3_A`, `SAMM-ACTIVITY-I_SB_3_B`, `SAMM-ACTIVITY-O_IM_1_A` + 2 more)
+  - OWASP ASVS v5.0.0 — 4 refs (`ASVS-REQ-V16.1.1`, `ASVS-REQ-V16.2.1`, `ASVS-REQ-V16.2.3` + 1 more)
+  - MITRE CWE — Software Development View (v4.19.1) — 1 refs (`CWE-779`)
+  - MITRE ATLAS — Adversarial Threat Landscape for AI Systems — 1 refs (`AML.M0024`)
+  - OWASP LLM Top 10 (2025) — 1 refs (`LLM10-2025`)
+  - OWASP MCP Top 10 (v0.1, 2025 beta) — 1 refs (`MCP08-2025`)
+  - OWASP Proactive Controls (2018) — 1 refs (`OPC-C9`)
+  - OWASP Top 10 (2021) — 1 refs (`TOP10-A09-2021`)
+  - SAFECode — Practical Security Stories and Tasks for Agile Development (2012) — 1 refs (`SCAGILE-OPS-5`)
+  - SAFECode — Fundamental Practices for Secure Software Development (2018) — 1 refs (`SCFPSSD-LOGGING`)
+  - NIST SSDF (SP 800-218 v1.1) — 1 refs (`SSDF-PRACTICE-PO.3`)
+
 
 ---
 
-## CIS Controls v8.1.2
-
-**O que esta ES traz para este capítulo:** contribui 40 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CIS-11.1` | Establish | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-12.2` | Establish and Maintain a Secure Network Architecture. Design and maintain a secure network architecture. A secure network architecture must address segmentation, least privilege, and availability, at | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `CIS-12.3` | Securely Manage Network Infrastructure. Securely manage network infrastructure. Example implementations include version-controlled Infrastructure-as-Code (IaC), and the use of secure network protocols | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CIS-12.4` | Establish | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `CIS-12.6` | Use of Secure Network Management and Communication Protocols. Adopt secure network management protocols (e.g., 802.1X) and secure communication protocols (e.g., Wi-Fi Protected Access 2 (WPA2) Enterpr | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `CIS-12.7` | Ensure Remote Devices Utilize a VPN and are Connecting to an Enterprise’s AAA Infrastructure. Require users to authenticate to enterprise-managed VPN and authentication services prior to accessing ent | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-| `CIS-13` | Network Monitoring and Defense. Operate processes and tooling to establish and maintain comprehensive network monitoring and defense against security threats across the enterprise’s network infrastruc | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `CIS-13.4` | Perform Traffic Filtering Between Network Segments. Perform traffic filtering between network segments, where appropriate. | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CIS-13.9` | Deploy Port-Level Access Control. Deploy port-level access control. Port-level access control utilizes 802.1x, or similar network access control protocols, such as certificates, and may incorporate us | conceito: Logging de eventos de segurança e audit trail (slice `ACO-SLG`) |
-| `CIS-14.3` | Train Workforce Members on Authentication Best Practices. Train workforce members on authentication best practices. Example topics include MFA, password composition, and credential management. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CIS-15` | Service Provider Management. Develop a process to evaluate service providers who hold sensitive data, or are responsible for an enterprise’s critical IT platforms or processes, to ensure these provide | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `CIS-2.3` | Address Unauthorized Software. Ensure that unauthorized software is either removed from use on enterprise assets or receives a documented exception. Review monthly, or more frequently. | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `CIS-2.6` | Allowlist Authorized Libraries. Use technical controls to ensure that only authorized software libraries, such as specific .dll, .ocx, and .so files, are allowed to load into a system process. Block u | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `CIS-2.7` | Allowlist Authorized Scripts. Use technical controls, such as digital signatures and version control, to ensure that only authorized scripts, such as specific .ps1 and .py files, are allowed to execut | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-| `CIS-3.1` | Establish | conceito: Gestão de segredos, configuração protegida e identidades operacionais (slice `ACO-SPC`) |
-| `CIS-3.12` | Segment Data Processing and Storage Based on Sensitivity. Segment data processing and storage based on the sensitivity of the data. Do not process sensitive data on enterprise assets intended for lowe | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CIS-3.3` | Configure Data Access Control Lists. Configure data access control lists based on a user’s need to know. Apply data access control lists, also known as access permissions, to local and remote file sys | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CIS-3.8` | Document Data Flows | conceito: Trust-Boundary And DFD Modeling (mechanism `ACM-ATB-002`) |
-| `CIS-4` | Secure Configuration of Enterprise Assets and Software. Establish and maintain the secure configuration of enterprise assets (end-user devices, including portable and mobile | conceito: Configuration Baseline Enforcement Controls (mechanism `ACM-RPR-008`) |
-| `CIS-4.3` | Configure Automatic Session Locking on Enterprise Assets. Configure automatic session locking on enterprise assets after a defined period of inactivity. For general purpose operating systems, the peri | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `CIS-4.5` | Implement and Manage a Firewall on End-User Devices. Implement and manage a host-based firewall or port-filtering tool on end-user devices, with a default-deny rule that drops all traffic except those | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-4.6` | Securely Manage Enterprise Assets and Software. Securely manage enterprise assets and software. Example implementations include managing configuration through version-controlled Infrastructure-as-Code | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `CIS-4.7` | Manage Default Accounts on Enterprise Assets and Software. Manage default accounts on enterprise assets and software, such as root, administrator, and other pre-configured vendor accounts. Example imp | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-4.9` | Configure Trusted DNS Servers on Enterprise Assets. Configure trusted DNS servers on network infrastructure. Example implementations include configuring network devices to use enterprise-controlled DN | conceito: Release promotion, rollout controlado e readiness para rollback (slice `ACO-RPR`) |
-| `CIS-5` | Account Management. Use processes and tools to assign and manage authorization to credentials for user accounts, including administrator accounts, as well as service accounts, to enterprise assets and | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-5.2` | Use Unique Passwords. Use unique passwords for all enterprise assets. Best practice implementation includes, at a minimum, an 8-character password for accounts using Multi-Factor Authentication (MFA) | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CIS-5.4` | Restrict Administrator Privileges to Dedicated Administrator Accounts. Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Conduct general computing activities, | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CIS-5.5` | Establish | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-6` | Access Control Management. Use processes and tools to create, assign, manage, and revoke access credentials and privileges for user, administrator, and service accounts for enterprise assets and softw | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-6.1` | Establish an Access Granting Process. Establish and follow a documented process, preferably automated, for granting access to enterprise assets upon new hire or role change of a user. | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-6.2` | Establish an Access Revoking Process. Establish and follow a process, preferably automated, for revoking access to enterprise assets, through disabling accounts immediately upon termination, rights re | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-6.3` | Require MFA for Externally-Exposed Applications. Require all externally-exposed enterprise or third-party applications to enforce MFA, where supported. Enforcing MFA through a directory service or SSO | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CIS-6.4` | Require MFA for Remote Network Access. Require MFA for remote network access. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CIS-6.5` | Require MFA for Administrative Access. Require MFA for all administrative access accounts, where supported, on all enterprise assets, whether managed on-site or through a service provider. | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `CIS-6.6` | Establish | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `CIS-6.7` | Centralize Access Control. Centralize access control for all enterprise assets through a directory service or SSO provider, where supported. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CIS-6.8` | Define | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `CIS-8.2` | Collect Audit Logs. Collect audit logs. Ensure that logging, per the enterprise’s audit log management process, has been enabled across enterprise assets. | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `CIS-8.7` | Collect URL Request Audit Logs. Collect URL request audit logs on enterprise assets, where appropriate and supported. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `CIS-8.8` | Collect Command-Line Audit Logs. Collect command-line audit logs. Example implementations include collecting audit logs from PowerShell®, BASH™, and remote administrative terminals. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-
----
-
-## OWASP DSOMM
-
-**O que esta ES traz para este capítulo:** contribui 20 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `DSOMM-ACTIVITY-070BB14BE04A4F3D896AA08EBA7A35F9` | Role based authentication and authorization. Role based authentication and authorization Everyone is able to get unauthorized access to information on systems or to modify information unauthorized on | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `DSOMM-ACTIVITY-3D1F4C3BF71346D9933A54A014A26C03` | Simple system metrics. Simple system metrics Monitoring basic system performance data, such as CPU, memory, and disk usage, will help identify performance bottlenecks and potential security incidents. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `DSOMM-ACTIVITY-48E92BB1FDBA40E8B6C235DE0D431833` | Immutable infrastructure. Immutable infrastructure The availability of IT systems might be disturbed due to components failures Redundancies in the IT systems | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `DSOMM-ACTIVITY-598E9F131AC84A01B85E8FAB93EE81DE` | MFA. MFA One factor authentication is more vulnerable to brute force attacks and is considered less secure. Two ore more factor authentication for all accounts on all (important) systems and applicati | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `DSOMM-ACTIVITY-61E10F9CE1264FFAAF12FDBE0D0A831F` | Weak password test. Weak password test Weak passwords in components like applications or systems, specially for privileged accounts, lead to take over of that account. Automatic brute force attacks ar | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `DSOMM-ACTIVITY-65A2D7D9544146BFA4E3F76919857750` | Usage of different roles. Usage of different roles Parts of the service are not covered during the scan, because a login is not performed. Integration of authentication with all roles used in the serv | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-| `DSOMM-ACTIVITY-8098E416E1ED4AE4A56183EFBE76BF57` | MFA for admins. MFA for admins One factor authentication is more vulnerable to brute force attacks and is considered less secure. Two ore more factor authentication for all privileged accounts on syst | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `DSOMM-ACTIVITY-82E499D1F4634A4BBE9068812A874AF6` | Simple access control for systems. Simple access control for systems Basic access control for internal systems is implemented. Attackers a gaining access to other internal systems and application inte | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `DSOMM-ACTIVITY-8746647C638C473F8E1782C068E4C311` | Screens with metric visualization. Screens with metric visualization Security related information is discovered too late during an incident. By having an internal accessible screen with a security rel | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `DSOMM-ACTIVITY-AD23BE9C56614F1F81A35A5DC7061629` | Usage of edge encryption at transit. Usage of edge encryption at transit Evil actors might be able to perform a man in the middle attack and sniff confidential information (e.g. authentication factors | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `DSOMM-ACTIVITY-AE22DAFDBCD641EEBA018B7FE6FC1AD9` | Conduction of advanced threat modeling. Conduction of advanced threat modeling **Example High Maturity Scenario:** Based on a detailed threat model defined and updated through code, the team decides t | conceito: Structured Threat Analysis Frameworks (mechanism `ACM-TMR-002`) |
-| `DSOMM-ACTIVITY-B217C8BB5D614B41A6751083993F83B1` | Analyze logs. Analyze logs Not aware of attacks happening. Check logs for keywords. | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `DSOMM-ACTIVITY-BACF85B65BC0405DB5BAA5D971467CC1` | Creation of simple abuse stories. Creation of simple abuse stories User stories mostly don't consider security implications. Security flaws are discovered too late in the development and deployment pr | conceito: Structured Threat Analysis Frameworks (mechanism `ACM-TMR-002`) |
-| `DSOMM-ACTIVITY-DD5ED7C1BDBF400FB75F6D3953A1A04E` | Creation of threat modeling processes and standards. Creation of threat modeling processes and standards Inadequate identification of business and technical risks. Creation of threat modeling processe | conceito: Structured Threat Analysis Frameworks (mechanism `ACM-TMR-002`) |
-| `DSOMM-ACTIVITY-E5386ABF91544752A1A8C3A8900F732D` | Limitation of system events. Limitation of system events System events (system calls) can lead to privilege escalation. System calls are limited. | conceito: Access Policy Enforcement (mechanism `ACM-IAT-002`) |
-| `DSOMM-ACTIVITY-E808028C351C42F1BCD9FBA738D1FC55` | Defense metrics. Defense metrics IDS/IPS systems like packet- or application-firewalls detect and prevent attacks. It is not known how many attacks has been detected and blocked. Gathering of defense | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `DSOMM-ACTIVITY-E9A6D403A467445EB98A74F0C29DA0B1` | Simple application metrics. Simple application metrics Collecting basic operational data from applications, such as authentication attempts, transaction volumes, and resource usage, will help detect a | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `DSOMM-ACTIVITY-ECB0184C6BC945DABBBBA983797FFC93` | Usage of internal encryption at transit. Usage of internal encryption at transit Evil actors within the organization of traffic in transit might be able to perform a man in the middle attack and sniff | conceito: API Gateway With Mutual Authentication (mechanism `ACM-ITS-001`) |
-| `DSOMM-ACTIVITY-ED715B38C34B40CD83FDCE807F306FC1` | Advanced availability and stability metrics. Advanced availability and stability metrics Trends and advanced attacks are not detected. Advanced metrics are gathered in relation to availability and sta | conceito: Critical Event Catalog Governance (practice `ACP-SLG-001`) |
-| `DSOMM-ACTIVITY-F57D55F2DC054B349D1FF8CE5BFB0715` | Security integration tests for important components. Security integration tests for important components Vulnerabilities are rising due to code changes in a complex microservice environment. Implement | conceito: Integrated Security Scanners (mechanism `ACM-TSV-001`) |
-
----
-
-## OWASP SAMM v2.1
-
-**O que esta ES traz para este capítulo:** contribui 13 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SAMM-ACTIVITY-D_SA_2_A` | Identify shared infrastructure | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `SAMM-ACTIVITY-D_SA_2_B` | Identify commonly used technologies, frameworks | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `SAMM-ACTIVITY-D_SA_3_A` | Build reference architectures. Build reference architectures. Build a set of reference architectures that select and combine a verified set of security components to ensure a proper design of security | conceito: Versioned Diagrams And ADR Records (mechanism `ACM-ATB-001`) |
-| `SAMM-ACTIVITY-D_SA_3_B` | Enforce the use of recommended technologies | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-| `SAMM-ACTIVITY-G_EG_2_A` | Conduct instructor-led | conceito: Threat Mitigation Linkage Controls (mechanism `ACM-TMR-005`) |
-| `SAMM-ACTIVITY-O_EM_1_A` | Identify key elements of common technology stacks | conceito: Configuration Baseline Enforcement Controls (mechanism `ACM-RPR-008`) |
-| `SAMM-ACTIVITY-O_EM_3_A` | Perform continuous configuration monitoring | conceito: Gate Or Policy Check For Prohibited Or Unsafe Overrides (mechanism `ACM-RPR-009`) |
-| `SAMM-ACTIVITY-O_IM_1_B` | Create an incident response plan | conceito: Threat Model Versioning Controls (mechanism `ACM-TMR-003`) |
-| `SAMM-ACTIVITY-O_OM_1_B` | Identify unused applications | conceito: Automated Security Scanners (mechanism `ACM-SCBI-002`) |
-| `SAMM-ACTIVITY-V_AA_1_A` | Assess application architecture | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-| `SAMM-ACTIVITY-V_AA_2_A` | Verify the application architecture for security methodically | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-| `SAMM-ACTIVITY-V_AA_3_A` | Verify the effectiveness of security components | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-| `SAMM-ACTIVITY-V_AA_3_B` | Feed review results back to improve reference architectures. Feed review results back to improve reference architectures. As an organization, you can further improve your software security posture by | conceito: Architecture Review Gates (mechanism `ACM-ATB-004`) |
-
----
-
-## HIPAA Security Rule
-
-**O que esta ES traz para este capítulo:** contribui 9 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `HIPAA-164-308a3` | Workforce Security. Workforce Security — Administrative Safeguard. Implement policies and procedures to ensure that all members of the workforce have appropriate access to ePHI, and to prevent those w | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `HIPAA-164-308a4` | Information Access Management. Information Access Management — Administrative Safeguard. Implement policies and procedures for authorising access to ePHI consistent with the applicable requirements of | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `HIPAA-164-308b1` | Business Associate Contracts and Other Arrangements. Business Associate Contracts and Other Arrangements — Administrative Safeguard. A covered entity, in accordance with §164.306, may permit a busines | conceito: Artifact Signing And Attestation (mechanism `ACM-SCBI-004`) |
-| `HIPAA-164-310a1` | Facility Access Controls. Facility Access Controls — Physical Safeguard. Implement policies and procedures to limit physical access to electronic information systems and the facility or facilities in | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `HIPAA-164-312a1` | Access Control. Access Control — Technical Safeguard. Implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to those persons or softwar | conceito: Periodic Review And Access Audit (mechanism `ACM-IAT-003`) |
-| `HIPAA-164-312d` | Person or Entity Authentication. Person or Entity Authentication — Technical Safeguard. Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed. Authentication | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `HIPAA-164-312e1` | Transmission Security. Transmission Security — Technical Safeguard. Implement technical security measures to guard against unauthorised access to ePHI that is being transmitted over an electronic comm | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-| `HIPAA-164-314a1` | Business Associate Contracts or Other Arrangements. Business Associate Contracts or Other Arrangements — Organizational Requirement. The contract or other arrangement required by §164.308 | conceito: Artifact Signing And Attestation (mechanism `ACM-SCBI-004`) |
-| `HIPAA-164-316b1` | Documentation. Documentation — Standard. (i) Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form; and (ii) if an action, activity, or | conceito: Threat Model Versioning Controls (mechanism `ACM-TMR-003`) |
-
----
-
-## Anthropic MCP — Official Security Foundations (2025)
-
-**O que esta ES traz para este capítulo:** contribui 7 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `MCP-AUTH-DISCOVERY-METADATA` | Authorization server discovery and protected resource metadata. This section describes the mechanisms by which MCP servers advertise their associated authorization servers to MCP clients, as well as t | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `MCP-AUTH-SCOPE-NEGOTIATION` | Scope selection and step-up authorization. When implementing authorization flows, MCP clients SHOULD follow the principle of least privilege by requesting only the scopes necessary for their intended | addon (medium): Modelos de Arquitetura Segura Reutilizáveis > Modelo 2 - Microserviços com APIs Externas (Risco L2) > Ameaças mitigadas |
-| `MCP-AUTH-TOKEN-VALIDATION` | Inbound token handling and validation. Access token handling when making requests to MCP servers MUST conform to the requirements defined in OAuth 2.1 Section 5 “Resource Requests” . Specifically: MCP | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `MCP-CONFUSED-DEPUTY` | Confused deputy and proxy-consent failure. Attackers can exploit MCP servers acting as intermediaries to third-party APIs, leading to confused deputy vulnerabilities . By using stolen authorization co | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `MCP-SCOPE-MINIMIZATION` | Scope minimization and progressive least privilege. Poor scope design increases token compromise impact, elevates user friction, and obscures audit trails. ​ Attack Description An attacker obtains (vi | maturity (weak): Maturidade - Arquitetura Segura > Conclusão |
-| `MCP-SESSION-HIJACKING` | Session hijacking and event injection. Session hijacking is an attack vector where a client is provided a session ID by the server, and an unauthorized party is able to obtain and use that same sessio | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-| `MCP-TOKEN-PASSTHROUGH` | Token passthrough anti-pattern. “Token passthrough” is an anti-pattern where an MCP server accepts tokens from an MCP client without validating that the tokens were properly issued to the MCP server a | conceito: Short-Lived Token Controls (mechanism `ACM-IAT-004`) |
-
----
-
-## OWASP LLM Top 10 (2025)
-
-**O que esta ES traz para este capítulo:** contribui 4 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `LLM01-2025` | mitigate with current techniques | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `LLM02-2025` | Implement data sanitization to prevent user data from entering the training model | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `LLM06-2025` | LLM06:2025 Excessive Agency. An LLM-based system is often granted a degree of agency by its developer – the ability to call functions or interface with other systems via extensions (sometimes referred | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `LLM10-2025` | create a shadow model | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## PCI Secure SLC v1.1
-
-**O que esta ES traz para este capítulo:** contribui 4 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `PCISSLC-1.1` | Overall responsibility for software security assigned to senior leadership. Senior leadership team establishes formal responsibility and authority for security of vendor's products and services | conceito: Threat Disposition And Accepted Risk Governance (practice `ACP-TMR-004`) |
-| `PCISSLC-3.2` | Threats to software and weaknesses continuously identified and assessed. Process to identify, assess, and monitor software threats and design weaknesses | conceito: Structured Threat Analysis Frameworks (mechanism `ACM-TMR-002`) |
-| `PCISSLC-5.2` | All software versions uniquely identified and tracked throughout lifecycle. Formal versioning system; unique identifiers in sequential manner; all changes associated with unique version | conceito: End-to-End Deploy Traceability (practice `ACP-RPR-004`) |
-| `PCISSLC-8.3` | Secure implementation guidance aligned with software updates. Guidance updated when new software updates released or security-related options modified; reviewed at least annually | conceito: Rollback And Containment Controls (mechanism `ACM-RPR-004`) |
-
----
-
-## OWASP MCP Top 10 (v0.1, 2025 beta)
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `MCP07-2025` | Insufficient Authentication & Authorization. Inadequate authentication and authorization occur when MCP servers, tools, or agents fail to properly verify identities or enforce access controls during i | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-| `MCP08-2025` | Lack of Audit and Telemetry. Without comprehensive activity logging and real-time alerting, unauthorized actions or data access may go undetected. Limited telemetry from MCP servers and agents impedes | conceito: Machine-Readable Structured Logging (mechanism `ACM-SLG-001`) |
-| `MCP10-2025` | Context Injection & Over-Sharing. In the Model Context Protocol (MCP), “context” represents the working memory that stores prompts, retrieved data, and intermediate outputs across agents or sessions. | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-
----
-
-## OWASP Machine Learning Top 10
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `ML06-2023` | deploy software | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `ML07-2023` | update the training datasets: Regularly monitoring | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `ML08-2023` | Implement robust access controls: Ensure that only authorized personnel have access to the MLOps system | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## OWASP Top 10 (2021)
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `TOP10-A01-2021` | Broken Access Control. Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `TOP10-A02-2021` | Cryptographic Failures. The first thing is to determine the protection needs of data in transit and at rest. Passwords, credit card numbers, health records, personal information, and business secrets | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `TOP10-A07-2021` | Identification and Authentication Failures. Confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. There may be auth | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## SAFECode — Software Integrity Controls (2010)
-
-**O que esta ES traz para este capítulo:** contribui 3 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCSIC-DELIVERY` | Vendor Software Delivery Integrity Controls. Controls for delivery phase: publishing and dissemination, malware scanning, code signing, secure delivery, transfer authenticity, hash verification | conceito: Build And Image Inventory Generation (mechanism `ACM-SCBI-005`) |
-| `SCSIC-DEV-DEFAULTS` | Secure Defaults Configuration. Out of the box defaults must be examined and configured to be secure by default; least necessary privileges; disabled unnecessary services | conceito: Rollback And Containment Controls (mechanism `ACM-RPR-004`) |
-| `SCSIC-SOURCING-CONTRACT` | Vendor Contractual Integrity Controls. Written agreements with explicit expectations, security requirements, ownership responsibilities, vulnerability response commitments | conceito: Message Integrity And Authorized Peer Policies (mechanism `ACM-ITS-004`) |
-
----
-
-## EU Cyber Resilience Act (CRA)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `CRA-ART-13` | CRA Article 13. Article 13 (Obligations of manufacturers) requires manufacturers to design, develop and produce products with digital elements in accordance with the essential cybersecurity requiremen | conceito: Build And Image Inventory Generation (mechanism `ACM-SCBI-005`) |
-| `CRA-ART-18` | CRA Article 18. Article 18 (Obligations of importers) requires importers to place on the Union market only products with digital elements that comply with the essential cybersecurity requirements and | conceito: CI/CD Gate And Release Promotion (mechanism `ACM-TSV-003`) |
-
----
-
-## EU Digital Operational Resilience Act (DORA)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `DORA-ART-5` | DORA Article 5. Article 5 (Governance and organisation) places ultimate responsibility for managing ICT risk on the management body of the financial entity. The management body shall define, approve, | conceito: Threat Representation Models (mechanism `ACM-TMR-001`) |
-| `DORA-ART-9` | implement ICT security policies, procedures, protocols | conceito: OIDC-Based Operational Identity (mechanism `ACM-SPC-002`) |
-
----
-
-## NIST AI 100-2 e2025 — Adversarial Machine Learning Taxonomy
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `NIST-AI-100-2-E2025-3.1.3` | Attacker Capabilities. AML attacks can be taxonomized with respect to the capabilities that an attacker has in controlling inputs to the GenAI model or system. These capabilities include: • TRAINING D | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `NIST-AI-100-2-E2025-4.2.6` | AML and Other AI System Characteristics. A final consideration with respect to adversarial machine learning, and one closely related to questions of risk management, is how to relate and integrate con | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-
----
-
-## NIST AI RMF 1.0
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `NIST-AI-RMF-GOVERN-3` | GOVERN 3.1: Decision-making related to mapping, measuring,. Workforce diversity, and managing AI risks throughout the lifecycle is informed by a equity, inclusion, diverse team (e.g., diversity of dem | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `NIST-AI-RMF-MEASURE-4` | MEASURE 4.1: Measurement approaches for identifying AI risks. Feedback about are connected to deployment context | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-
----
-
-## OWASP MCP — Secure Server Development v1.0
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OWASP-MCP-ARCH` | Secure MCP Architecture. 1. Secure MCP Architecture • Local vs Remote Connections: MCP exposes two communication channels, STDIO or Unix sockets for local network communications, and Streamable HTTP f | conceito: Integração e segurança service-to-service (slice `ACO-ITS`) |
-| `OWASP-MCP-MINIMUM-BAR` | MCP Security Minimum Bar (Review Checklist). MCP Security Minimum Bar (Review Checklist) 1. Strong Identity, Auth & Policy Enforcement • All remote MCP servers use OAuth 2.1/OIDC. • Tokens are short-l | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## OWASP MCP — Third-Party Servers v1.0
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OWASP-MCP-3P-AUTH-AUTHZ-REGISTRATION` | Authentication, authorization and protected registration. Client Security and Server Discovery Understanding the distinct security responsibilities and attack surfaces of MCP clients and servers is cr | addon (medium): Modelos de Arquitetura Segura Reutilizáveis > Modelo 2 - Microserviços com APIs Externas (Risco L2) > Ameaças mitigadas |
-| `OWASP-MCP-3P-TOOLS-UTILITIES` | Tools, utilities and sandboxed execution references. o Where OAuth cannot be implemented, use narrowly scoped and short-lived Personal Access Tokens to identify and restrict user access. • Protected R | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## OWASP Proactive Controls (2018)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `OPC-C6` | Implement Digital Identity. Digital Identity is the unique representation of a user (or other subject) as they engage in an online transaction. Authentication is the process of verifying that an indiv | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-| `OPC-C7` | Enforce Access Controls. Access Control (or Authorization) is the process of granting or denying specific requests from a user, program, or process. Access control also involves the act of granting an | conceito: Identidade, autenticação e gestão de sessões (slice `ACO-IAT`) |
-
----
-
-## SAFECode — Fundamental Practices for Secure Software Development (2018)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCFPSSD-DESIGN-PRINCIPLES` | Secure Design Principles. Foundational secure design principles for software architecture | conceito: Architecture Review And Approval Governance (practice `ACP-ATB-005`) |
-| `SCFPSSD-IAM` | Standardize Identity and Access Management. Standardized IAM integration using existing log management, identity management, access control systems | conceito: Authentication And Federation Protocols (mechanism `ACM-IAT-001`) |
-
----
-
-## NIST SSDF (SP 800-218 v1.1)
-
-**O que esta ES traz para este capítulo:** contribui 2 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SSDF-TASK-PO.3.1` | Specify which tools or tool types must or should be included in each toolchain to mitigate identified risks, as well as how the toolchain components are t o be integrated with each other. | conceito: Versioned Pipelines (mechanism `ACM-SCBI-001`) |
-| `SSDF-TASK-RV.1.1` | Gather information from software acquirers , users , and public sources on potential vulnerabilities in the software and third- party components that the software uses, and investigate all credible re | conceito: Findings Workflow And Exception Governance (mechanism `ACM-TSV-004`) |
-
----
-
-## ENISA — Multilayer AI Cybersecurity Practices (2023)
-
-**O que esta ES traz para este capítulo:** contribui 1 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `ENISA-AI-FAICP-LAYER-II` | Layer II - AI-specific cybersecurity practices and controls. A multilayer framework for good cybersecurity practices for AI June 2023 14 • AI assets and p rocedures • AI threat assessment • AI securit | conceito: Arquitetura segura e fronteiras de confiança (slice `ACO-ATB`) |
-
----
-
-## EU GDPR (RGPD)
-
-**O que esta ES traz para este capítulo:** contribui 1 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `GDPR-ART-32` | GDPR Article 32. Article 32 (Security of processing) requires the controller and the processor to implement appropriate technical and organisational measures to ensure a level of security appropriate | conceito: Secret Management Systems (mechanism `ACM-SPC-001`) |
-
----
-
-## SAFECode — Practical Security Stories and Tasks for Agile Development (2012)
-
-**O que esta ES traz para este capítulo:** contribui 1 referência(s) que apoiam o domínio coberto neste capítulo. Cada linha da tabela abaixo identifica a referência externa, descreve-a sucintamente e aponta para o doc ou conceito do manual onde o tema é tratado.
-
-| Referência externa | Descrição | Doc/conceito do manual |
-|---|---|---|
-| `SCAGILE-EXP-8` | Third-party security assurance (module/library). Third-party security assurance for modules and libraries | conceito: Approved Source And Registry Governance (practice `ACP-SCBI-003`) |
-
----
+## Generation provenance
+
+- **Substrate version:** v7 (SUPPLIER sha256 `596783ed984d9c0e8c8ef6439a0eaee8fbaf2d863af37138cde8fad55d62be04`)
+- **V1 entity index:** `ontology-v1.1-fair-baseline` @ `84fe8bf` em sbd-toe-ontology
+- **Per-entity source map:** `data/p8_inputs/per_entity_source_map.json` @ ESI commit `aa3c13c`
+- **Phase 2/3 gap analysis:** `data/p8_gap_analysis/phase2_3/phase2_3_per_entity_classification.json` @ ESI commit `b8cd401`
+- **Slice → chapter map:** `data/p7_olir_audit/p7_v2_corrected/canon_rewrite/slice_to_chapter_map.yaml`
+- **Generated by:** Manual Agent Iter 3 Path D (recreate; Bundle G2 deprecated)
+- **Format:** entity-first (per V1 entity → Manual prose anchor + substrate v7 contributing sources)
+- **Cycle:** Cycle B Iteration 3 (Stage 5 Editorial Feedback applied)

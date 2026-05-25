@@ -2,7 +2,7 @@
 id: intro
 title: Introdução - Cross-Check Normativo
 description: Enquadramento do capítulo de análise normativa, que demonstra como o SbD-ToE se cruza com diferentes normativos e regulações
-tags: [cross-check, normativos, compliance, dora, nis2, hipaa, iso27001, pci-dss, gdpr, soc2]
+tags: [cross-check, normativos, compliance, dora, nis2, ai-act, cra, hipaa, iso27001, pci-dss, gdpr, soc2]
 sidebar_position: 0
 ---
 
@@ -118,6 +118,11 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 - 📂 `gdpr/`
   - [Enquadramento do regulamento](gdpr/intro)
   - [Playbook de implementação prática](gdpr/playbook)
+
+#### **[AI Act](ai-act/intro)** (Regulamento de Inteligência Artificial)
+- 📂 `ai-act/`
+  - [Enquadramento do regulamento](ai-act/intro)
+  - [Playbook de implementação prática](ai-act/playbook)
 
 #### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
 - 📂 `enisa-csa/`

@@ -123,6 +123,7 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 - 📂 `ai-act/`
   - [Enquadramento do regulamento](ai-act/intro)
   - [Playbook de implementação prática](ai-act/playbook)
+  - [Análise de convergência com o CRA](ai-act/convergencia-cra)
 
 #### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
 - 📂 `enisa-csa/`

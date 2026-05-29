@@ -153,7 +153,51 @@ Segredos recebidos de terceiros (ex: chaves de API de fornecedores) devem ser:
 
 ---
 
-## 9. Revisão e auditoria desta política
+## 9. Agentes AI como *principals* não-humanos
+
+O capítulo anterior descreve segredos para identidades CI tradicionais (*runners*, *workloads*). Quando um agente AI passa a operar o pipeline ou recursos da organização — `Claude Code` a executar *tool calls*, `Copilot Workspace` a actuar em PRs, agentes próprios via SDK — esse agente é **mais um *principal* não-humano** sujeito aos mesmos princípios desta política, com três especializações.
+
+### 9.1 Identidade dedicada por agente e por ambiente
+
+- Cada agente AI tem **identidade *workload* efémera** (OIDC) distinta — sem reuso de credenciais humanas, sem reuso entre ambientes (dev / staging / prod) nem entre agentes.
+- TTL ≤ 1h (mesma regra das outras *workload identities*).
+- A identidade está declarada no *mandate* do agente (campo `identity_ref` — ver [Policy 38 — Mandates de Agentes AI](./policy-mandates-agentes)).
+
+### 9.2 *Scoping* per-tool
+
+A identidade do agente recebe **apenas os *scopes* necessários para as *tools* declaradas na `tools_allowlist`** do *mandate* — não os *scopes* máximos suportados pelo runtime. Exemplos práticos:
+
+- Agente que abre PRs: `gh:pr:write`, `gh:repo:read`. **Não** `gh:repo:write` nem `gh:repo:delete`.
+- Agente que aplica manifests Kubernetes em *staging*: `k8s:deploy:staging:apply`. **Não** `cluster-admin`.
+- Agente que publica pacotes: `npm:publish:scoped-package`. **Não** `npm:publish:*`.
+
+Alterar `tools_allowlist` ou *scopes* é uma alteração estruturalmente equivalente a alterar uma IAM policy — exige novo ciclo de aprovação do *mandate* (ver Policy 38 §5).
+
+### 9.3 *Kill-switch* operacional
+
+Para agentes em nível A2+, o procedimento de **revogação imediata** (`REQ-AGN-003`) tem de ser exercitado periodicamente:
+
+| Nível de autonomia | Cadência mínima de exercício |
+|---|---|
+| A2 | Anual (em sandbox/staging) |
+| A3 | Trimestral (em sandbox/staging) |
+| A4 | Mensal (em sandbox/staging) |
+
+O exercício mede tempo total entre accionamento e revogação efectiva (revogação OIDC + terminação de runtime + isolamento de namespace). Resultado registado; falha no exercício é tratada como degradação operacional e bloqueia novas activações de agentes A3/A4 até estar resolvido.
+
+### 9.4 Proibições específicas
+
+- ❌ **Reutilizar credenciais humanas** para autenticar o agente — viola o princípio fundamental desta política aplicado a *principals* AI.
+- ❌ **Token *long-lived* (>1h)** em qualquer identidade de agente AI — mesma regra que se aplica a runners CI.
+- ❌ **`scope` que excede a `tools_allowlist`** do *mandate* — *over-privilege* silencioso é incidente operacional.
+- ❌ **Partilha de identidade** entre dois agentes ou entre agente e humano — quebra o *audit trail*.
+- ❌ **Operação em A3/A4 sem *kill-switch* exercitado** dentro da cadência exigida — o *kill-switch* é decorativo se nunca foi medido.
+
+> 📌 Tudo o resto desta política (proibições absolutas §3, armazenamento centralizado §4, injeção em runtime §5, TTL/rotação §6) aplica-se sem reformulação ao caso dos agentes AI.
+
+---
+
+## 10. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -163,14 +207,18 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 10. Referências normativas e técnicas
+## 11. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 07 - CI/CD Seguro | Gestão e injeção de segredos em pipeline |
+| SbD-ToE Cap. 07 - CI/CD Seguro | Gestão e injeção de segredos em pipeline; **US-19 — Agentes AI como principals na pipeline** |
 | SbD-ToE Cap. 09 - Containers e Imagens | Segredos fora de imagens; workload identity |
 | SbD-ToE Cap. 11 - Deploy Seguro | Segredos em runtime de deploy |
+| SbD-ToE Cap. 04 — Arquitetura Segura (`ARC-015`) | Agente como *principal* isolado; least privilege per-tool |
 | Política de CI/CD Seguro (`17_policy-cicd-seguro.md`) | Secret detection no pipeline; masking de logs |
+| Policy 38 — Mandates de Agentes AI | Operacionaliza `REQ-AGN-001`: mandate, ownership, kill-switch |
+| Policy 16 — Uso de Ferramentas de Apoio | Regras operacionais A2+ para agentes |
+| NIST SP 800-207 — Zero Trust Architecture | Princípios aplicados a *principals* não-humanos (incluindo agentes AI) |
 | OWASP Secrets Management Cheat Sheet | Referência de boas práticas de gestão de segredos |
 | HashiCorp Vault Documentation | Cofre de referência; dynamic secrets; OIDC |
 | NIST SP 800-57 | Key Management Guidelines |

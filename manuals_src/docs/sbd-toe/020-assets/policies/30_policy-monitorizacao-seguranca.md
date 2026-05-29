@@ -143,7 +143,60 @@ A revisão deve cobrir:
 
 ---
 
-## 9. Responsabilidades
+## 9. Sinais agentic em produção {#sinais-agentic}
+
+Quando o sistema inclui agentes AI a operar em nível A1 ou superior (Policy 38), três classes de sinais entram no escopo desta política — para além dos sinais clássicos descritos nas secções 3 e 6. Não substituem os existentes; complementam-nos para a fatia agentic.
+
+### 9.1 *Audit events* de *tool invocation*
+
+Cada invocação de *tool* por um agente AI emite *audit event* estruturado com:
+
+- `timestamp` · `agent_id` · `session_id` · `mandate_ref` (Policy 38) · `autonomy_level`
+- `tool` · `tool_version` · `args` (PII redactada)
+- `intent_event_ref` (obrigatório em A2+; declarado pelo agente antes da acção — `REQ-AGN-004`)
+- `outcome` (success / failure / timeout / rejected_by_gate)
+- `external_effect` (URL, recurso, mudança de estado em sistema externo)
+
+Estes eventos integram-se no SIEM como qualquer outro *audit log* — não vivem num *silo* separado. Cobertura operacional: ver `OPS-012`.
+
+### 9.2 *Token spend* / *runaway* detection
+
+Por agente e por *mandate*, define-se *budget* de consumo do modelo (tokens, chamadas, custo) por janela temporal. Cada inferência conta para o orçamento:
+
+- **Threshold de aviso** → alerta ao *owner*
+- **Threshold máximo** → sessão pausa ou *kill-switch* dispara, conforme nível de autonomia
+
+Detecta *loops* descontrolados, abuso, regressões de eficiência do modelo após *upgrade*. Cobertura operacional: ver `OPS-013`.
+
+### 9.3 Detecção de *jailbreak* / *off-policy actions*
+
+Para agentes A2+, mecanismo activo que cruza sinais para detectar comportamento adversarial ou fora do *mandate*:
+
+- **Divergência `intent` ↔ acção real** (cruzando 9.1) — o agente declarou ir fazer X, fez Y
+- **Padrões adversariais conhecidos** no input do utilizador (LLM01-2025 prompt injection patterns)
+- **Argumentos materialmente diferentes do esperado** na *tool call*
+- **Recusas seguidas de re-tentativa diferente** — sinal de pressão multi-turn
+
+Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e a *eval suite* offline (Cap. 10 §C5). Cobertura operacional: ver `OPS-014`.
+
+### 9.4 Proporcionalidade
+
+| Nível de risco | Sinais 9.1 | Sinais 9.2 | Sinais 9.3 |
+|---|:--:|:--:|:--:|
+| L1 | Recomendado para A1+ | Recomendado | — |
+| L2 | Obrigatório para A1+ | Obrigatório | Recomendado |
+| L3 | Obrigatório para A1+ | Obrigatório | Obrigatório (corpus actualizado conforme cadência do *mandate*) |
+
+### 9.5 Anti-padrões
+
+- ❌ *Tool invocation log* genérico (sem `agent_id`/`session_id`/`mandate_ref`) — perde-se a capacidade de auditar o *mandate*.
+- ❌ *Budget* sem *kill-switch* operacional — alerta sem acção é teatro.
+- ❌ Detector de *jailbreak* não actualizado — adversários adaptam-se; corpus tem de evoluir.
+- ❌ Sinais 9.3 que ficam apenas em dashboards sem aterrar em IR — incidente não é dashboard.
+
+---
+
+## 10. Responsabilidades
 
 | Role | Responsabilidade |
 |---|---|
@@ -155,7 +208,7 @@ A revisão deve cobrir:
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -165,12 +218,19 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 12. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 12 - Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning |
+| SbD-ToE Cap. 12 - Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning; **US-13 — telemetria agentic** |
+| SbD-ToE Cap. 12 — Catálogo (`OPS-012`, `OPS-013`, `OPS-014`) | Requisitos operacionais agentic |
+| SbD-ToE Cap. 04 — Arquitetura Segura (`ARC-015`) | Audit completo por *tool invocation* — origem dos sinais agentic |
+| SbD-ToE Cap. 02 — Requisitos (`REQ-AGN-004`) | *Intent declaration* — origem do sinal 9.3 |
 | Política de Logging Estruturado (`29_policy-logging-estruturado.md`) | Base de eventos para monitorização |
+| Policy 38 — Mandates de Agentes AI | `mandate_ref` em audit events |
+| MITRE ATLAS | `AML.M0024` AI Telemetry Logging |
+| OWASP Top 10 for LLM Applications (2025) | LLM01 Prompt Injection — corpus de detecção 9.3 |
+| NIST AI RMF 1.0 — MANAGE-4.x | Revisão e revogação operacional |
 | Política de Gestão de Alertas (`31_policy-gestao-alertas.md`) | SLAs e processo de resposta a alertas |
 | Política de IRP (`32_policy-irp.md`) | Integração da monitorização com resposta a incidentes |
 | MITRE ATT&CK | Framework de táticas e técnicas para definição de regras de detecção |

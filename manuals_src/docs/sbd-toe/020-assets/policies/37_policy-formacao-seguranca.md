@@ -181,28 +181,74 @@ Em L3, a participação activa no programa de segurança deve ser reconhecida fo
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Formação em agentes AI e tooling pervasivo (módulo obrigatório)
+
+Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), todos os *roles* directamente envolvidos passam a ter formação mínima obrigatória sobre o tema. Não é formação optativa — é parte do *baseline* de competências, ao nível do que exigimos sobre OWASP Top 10 ou *secure coding* básico.
+
+### 11.1 Cobertura mínima por *role*
+
+| Role | Conteúdos mínimos | Cadência |
+|---|---|---|
+| **Developer** | Uso assistido seguro (revisão obrigatória do output, *secret scanning*, licenças); prompts e *skill files* como código; anti-padrões; quando escalar para `appsec` | Onboarding + actualização anual |
+| **AppSec Engineer** | Modelo A0–A4 + `REQ-AGN-*`; threat modeling agentic (playbook Cap. 03); MITRE ATLAS + OWASP LLM Top 10; eval suites; resposta a *off-policy actions* e *intent-action divergence* | Onboarding + actualização semestral |
+| **DevOps / SRE** | Identidade *workload* para agentes (OIDC); *scoping* per-tool; *kill-switch* operacional + exercícios; telemetria agentic (OPS-012/013/014) | Onboarding + actualização semestral |
+| **GRC / Compliance** | Policy 38 (mandates); cláusulas contratuais AI (Policy 33 §10); AI Act Art. 14 + 26 + 53 + 55; revisão organizacional de mandates | Onboarding + actualização semestral |
+| **Tech Lead / Software Architect** | Padrões `ARC-015`; arquitetura agentic (intent declaration, out-of-band approval, kill-switch); supply chain AI (`DEP-011..014`) | Onboarding + actualização anual |
+| **Product Owner / Scrum Master** | Implicações dos níveis A0–A4 nos requisitos e *acceptance criteria*; quando uma feature exige *mandate* novo | Onboarding + actualização anual |
+| **CISO / Executive Management** | Risco operacional e regulatório de agentes; aprovação A4; revisão periódica do registo de mandates | Anual |
+
+### 11.2 Exercícios práticos recomendados
+
+- **Tabletop**: simulação de *off-policy action* em produção — quem dispara *kill-switch*, quem comunica, quem escala (cross-link Cap. 12 IRP).
+- **Hands-on**: exercício de revisão de PR com output GenAI — identificar padrões problemáticos.
+- **Red team**: tentar *prompt injection* contra um agente em sandbox; observar deteção em OPS-014.
+- **Exercício de mandate**: receber escopo realista, classificar nível A0–A4, escrever mandate.
+
+### 11.3 Onde aterra
+
+Esta formação é parte do trilho do Cap. 13 ([addon 12 — Formação em Uso Seguro de IA e Tooling Pervasivo](/sbd-toe/sbd-manual/formacao-onboarding/addon/formacao-uso-seguro-ia-tooling)). Esta política torna-a **obrigatória** (em vez de recomendada) quando há agentes AI em A1+ no SDLC da organização.
+
+### 11.4 Proporcionalidade
+
+| Nível de risco organizacional | Cobertura obrigatória |
+|---|---|
+| L1 | Developer + AppSec + DevOps (essenciais) |
+| L2 | + GRC + Tech Lead/SWA + PO/SM |
+| L3 | Todos os *roles* da tabela 11.1 + exercícios práticos semestrais |
+
+---
+
+## 12. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
 - Incidente de segurança em que uma causa raiz foi lacuna de conhecimento ou prática inadequada de um colaborador
 - Alteração significativa do portfólio tecnológico que introduza novos requisitos de competência
-- Alteração regulatória que imponha novos requisitos de formação (ex: DORA, NIS2)
+- Alteração regulatória que imponha novos requisitos de formação (ex: DORA, NIS2, AI Act Art. 4)
 - KPI de eficácia formativa que indique degradação sistemática
+- Adopção operacional de agentes AI em A1+ que active a secção 11
 
 ---
 
-## 12. Referências normativas e técnicas
+## 13. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
 | SbD-ToE Cap. 13 - Formação e Capacitação | US-03: Security Champions; US-04: exercícios práticos; US-09: actualização de trilhos; US-10: trilhos proporcionais por risco; US-14: KPIs de capacitação |
+| SbD-ToE Cap. 13 (addon 12) — Formação em Uso Seguro de IA e Tooling Pervasivo | Conteúdo detalhado do módulo agentic |
+| Política de Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Activação da secção 11 |
+| Política de Uso de Ferramentas de Apoio (`16_policy-uso-ferramentas-apoio.md`) | Regras de uso A0–A4 |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Designação formal de Security Champions |
 | Política de Contratação Segura (`33_policy-contratacao-segura.md`) | Formação mínima para contractors e fornecedores |
 | Política de IRP (`32_policy-irp.md`) | Tabletops e simulações de resposta a incidentes |
 | NIST SSDF - PO.3, PO.7 | Training requirements for secure software development |
+| NIST AI RMF 1.0 — GOVERN-3.x | AI workforce education |
 | OWASP SAMM - Education and Guidance | Security training and awareness practices |
+| OWASP Top 10 for LLM Applications (2025) | Conteúdo programático para AppSec |
+| MITRE ATLAS | Catálogo de tactics/techniques adversariais para AppSec / red team |
 | OWASP WebGoat / Juice Shop / DVWA | Plataformas de referência para labs em aplicações vulneráveis |
 | DORA - Art. 15 | ICT-related training requirements for financial entities |
 | NIS2 - Art. 21 | Cybersecurity training obligations |
 | ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |
+| ISO/IEC 42001:2023 | AI Management System — workforce competence |
+| EU AI Act (Reg. (UE) 2024/1689) - Art. 4 (AI literacy) | Obrigação geral de literacia em AI |

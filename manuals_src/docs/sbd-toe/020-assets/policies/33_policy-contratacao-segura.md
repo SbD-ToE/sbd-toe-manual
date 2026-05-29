@@ -199,7 +199,63 @@ Para cada fornecedor e contractor, a organização deve manter um registo actual
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Anexo — Cláusulas específicas para provedores de modelos AI {#anexo-ai-providers}
+
+Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace ou *self-hosted* equivalente), o conjunto de cláusulas contratuais previstas na secção 4 é estendido com seis cláusulas específicas. Não substituem nenhuma das anteriores — adicionam disciplina à fatia AI.
+
+### 10.1 *Data retention* e *training opt-out*
+
+- Política de retenção do *provider* explicitada: durante quanto tempo dados enviados são retidos; em que sistemas; com que controlos de acesso.
+- *Training opt-out* contratualizado quando aplicável — preferência por **zero retention** para dados sensíveis (PII, código proprietário, segredos potencialmente expostos em prompts).
+- Quando o *provider* tem *training* "opt-out por defeito", essa garantia é declarada na ficha de aprovação (cross-link `DEP-014`).
+
+### 10.2 Localização de processamento
+
+- Documentar onde os dados são processados (região, centro de dados, jurisdição).
+- Conformidade com **RGPD Art. 44–49** quando há dados pessoais — *Standard Contractual Clauses* (SCCs), *Adequacy Decision*, ou outro mecanismo válido.
+- Cláusulas específicas para *international transfers* quando os dados saem do EEA.
+
+### 10.3 *Audit rights*
+
+- Direito contratual a aceder a *logs* de inferência ou equivalente quando exigido (típico em L3 e em sistemas regulados — DORA Art. 28, AI Act Art. 26).
+- Em alternativa, *audit reports* periódicos (SOC 2 Type II, ISO/IEC 42001 certification, AI Act Art. 47 declaration of conformity para GPAI).
+
+### 10.4 SLA de notificação prévia
+
+- Notificação **antes** de mudanças que alterem comportamento: versão maior do modelo, política de dados, descontinuação, mudança de localização.
+- SLA mínimo expectável: ≥ 30 dias para mudanças não-emergência; o que for tecnicamente possível para emergências.
+- Sem notificação adequada → dispara revisão proactiva e potencial accionamento do *fallback* arquitectónico (Cap. 04 §AI/ML).
+
+### 10.5 SLA de disponibilidade e *fallback*
+
+- SLA de disponibilidade declarado; mecanismo de comunicação em caso de *outage*.
+- A arquitectura do nosso sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link `ARC-014`/`ARC-015`).
+
+### 10.6 Conformidade regulatória declarada
+
+- **AI Act Art. 53** (obrigações de *providers* de GPAI): documentação técnica do modelo, *summary of training data* publicado, *copyright compliance policy*.
+- **AI Act Art. 55** (cibersegurança de GPAI com risco sistémico): *AI red teaming* contínuo, hardening de infraestrutura, *post-market monitoring*.
+- **RGPD Art. 28** (sub-processadores): contratos com sub-processadores, notificação prévia de mudanças.
+- **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável quando o *provider* é tratado como *ICT third-party* crítico.
+
+### 10.7 Operacionalização
+
+- O provedor entra na **lista aprovada `DEP-014`** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
+- Cláusulas críticas registadas na ficha do provedor; revisão calendarizada conforme nível de risco (L1 anual; L2 semestral; L3 trimestral).
+- Detalhe operacional completo em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain) e no Cap. 14 US "Contratação de provedores AI".
+
+| Cláusula | L1 | L2 | L3 |
+|---|:--:|:--:|:--:|
+| 10.1 Retention + opt-out | Recomendado | Obrigatório | Obrigatório (zero retention para PII) |
+| 10.2 Localização | Recomendado | Obrigatório | Obrigatório + SCCs/Adequacy |
+| 10.3 Audit rights | — | Recomendado | Obrigatório |
+| 10.4 SLA notificação | Recomendado | Obrigatório | Obrigatório (≥30d) |
+| 10.5 SLA disponibilidade + fallback | Recomendado | Obrigatório | Obrigatório |
+| 10.6 Conformidade regulatória declarada | — | Aplicável quando relevante | Obrigatório quando GPAI ou dados pessoais |
+
+---
+
+## 11. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -209,16 +265,21 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 12. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 14 - Governança & Contratação | US-02: cláusulas contratuais; US-14: reavaliação de fornecedores; US-15: onboarding de contractors; US-17: offboarding |
+| SbD-ToE Cap. 14 - Governança & Contratação | US-02: cláusulas; US-14: reavaliação; US-15: onboarding contractors; US-17: offboarding; **US-21 — Contratação de providers AI** |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Registo e evidência de conformidade |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Credenciais de contractors e revogação |
+| Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Operacionalização do ciclo de vida de providers AI |
+| Política de Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Quando o provider fornece agentes / runtimes |
 | ISO/IEC 27001 - A.15 | Supplier relationships |
 | ISO/IEC 27036 | Information security for supplier relationships |
+| ISO/IEC 42001:2023 | AI Management System — relações com fornecedores AI |
 | NIST SP 800-161 | Cybersecurity Supply Chain Risk Management |
-| RGPD - Art. 28 | Subprocessadores de dados pessoais |
+| NIST AI RMF 1.0 — MAP-4.x | Third-party AI risk |
+| RGPD - Art. 28, 44–49 | Subprocessadores; transferências internacionais |
 | DORA - Art. 28-30 | ICT third-party risk management |
 | NIS2 - Art. 21 | Supply chain security measures |
+| EU AI Act (Reg. (UE) 2024/1689) - Art. 25, 26, 47, 53, 55 | Cadeia de fornecimento AI; obrigações de provider de GPAI |

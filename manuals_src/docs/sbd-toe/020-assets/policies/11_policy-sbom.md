@@ -171,25 +171,63 @@ A organização pode adotar ferramentas alternativas desde que suportem os forma
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Anexo — AI BOM (Bill of Materials para componentes AI)
+
+Quando o sistema inclui componentes AI — modelos, datasets, MCP servers/tools, prompts embebidos — geramos um **AI BOM** em formato standardizado por *build*, ligado ao SBOM principal. Não é um inventário separado em paralelo; é uma extensão do SBOM principal com campos próprios para componentes opacos da supply chain AI.
+
+### 11.1 Formato preferido
+
+**CycloneDX 1.6 com extensão `ml-bom`** (publicada em 2024 pela OWASP). Alternativas reconhecidas: SPDX 3.0 AI Profile; formatos proprietários do *provider* quando consumíveis pelo *pipeline* de governança da organização.
+
+### 11.2 Conteúdo mínimo
+
+Para além dos campos comuns a todos os componentes:
+
+- **Modelos**: `model_id`, `version` (fixa), `sha256`, `provider`, `capabilities`, `license`, `provenance`
+- **Datasets**: `dataset_id`, `version`, `source`, `hash`, `curation_process`
+- **MCP servers/tools**: `server_id`, `version`, `scopes`, `source`, `audit_log_sink`
+- **Prompts embebidos**: `prompt_id`, `version` (commit SHA), `owner`, tipo (`system|rag|skill`)
+- **Providers**: lista com `name`, `risk_classification`, `contract_ref`, cláusulas críticas
+
+### 11.3 Obrigatoriedade
+
+| Nível | Geração do AI BOM | Notas |
+|---|---|---|
+| L1 | Recomendado | Formato simples aceitável |
+| L2 | Obrigatório | Formato standard (CycloneDX 1.6 `ml-bom` preferido) |
+| L3 | Obrigatório + revisão GRC | Cláusulas contratuais detalhadas no campo `providers`; cross-link com cross-check AI Act quando aplicável |
+
+### 11.4 Operação detalhada
+
+A operação completa do AI BOM — geração, *pinning*, lista de *providers* aprovados, resposta a incidentes *upstream* — vive em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain). Esta política mantém-se como referência da disciplina SBOM em geral; Policy 39 especializa-se na fatia AI.
+
+> 📌 Em curto: SBOM cobre o que vem do *package manager*; AI BOM cobre o que vem de *model registries*, *dataset hubs* e MCP servers. Disciplina equivalente, formato compatível, processo coerente.
+
+---
+
+## 12. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
 - Publicação de nova versão major do formato CycloneDX ou SPDX
-- Alteração regulatória que imponha requisitos adicionais de SBOM (ex: EU Cyber Resilience Act)
-- Incidente com origem em componente não inventariado
+- Publicação de nova versão da especificação CycloneDX `ml-bom` ou SPDX AI Profile
+- Alteração regulatória que imponha requisitos adicionais de SBOM (ex: EU Cyber Resilience Act, EU AI Act Art. 25)
+- Incidente com origem em componente não inventariado (SBOM ou AI BOM)
 
 ---
 
-## 12. Referências normativas e técnicas
+## 13. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime; **DEP-012 AI BOM**; **US-14** |
 | SbD-ToE Cap. 07 - CI/CD Seguro | Integração SBOM no pipeline de build e release |
 | SbD-ToE Cap. 09 - Containers e Imagens | SBOM por camada de imagem |
-| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes |
+| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes; anexo Providers AI |
+| Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Tratamento específico de modelos, datasets, MCP, prompts |
 | Política de Rastreabilidade (`06_policy-rastreabilidade.md`) | Arquivo e retenção de artefactos de build |
+| CycloneDX 1.6 `ml-bom` (OWASP, 2024) | Formato preferido para AI BOM |
+| SPDX 3.0 AI Profile | Formato alternativo para AI BOM |
 | CycloneDX Specification | Formato SBOM preferido |
 | SPDX Specification (SPDX 2.3) | Formato SBOM alternativo aceite |
 | SLSA Framework | Proveniência e integridade de build |

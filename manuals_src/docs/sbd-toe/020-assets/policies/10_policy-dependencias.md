@@ -202,27 +202,46 @@ A auditoria deve cobrir:
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Anexo — Provedores AI como dependência de fornecimento
+
+Modelos AI consumidos via *provider* externo (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) ou *self-hosted* (HuggingFace, vLLM, Ollama) são **dependências de fornecimento** com particularidades — versão pode mudar comportamento sem mudar tag visível, artefacto é opaco, ataque típico tem nome próprio (`AML.T0109` Supply Chain Rug Pull). Aplicam-se aqui:
+
+- **Critérios de aprovação** (secção 3 alargada): adicionalmente avaliamos *data retention*, *training opt-out*, localização de processamento (RGPD Art. 44–49 quando aplicável), AI Act Art. 53/55 (quando GPAI), SLA de notificação de mudanças de versão, *audit rights* contratualizados.
+- **Pinning de versões** (secção 4 alargada): proibido `latest`/range/alias dinâmico em modelos AI; cross-link `DEP-013`.
+- **SCA estendido** (secção 7 alargada): para componentes AI usamos AI BOM (CycloneDX 1.6 `ml-bom`) gerado por *build* — ver [Policy 11 §AI BOM](./policy-sbom) e [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain).
+- **Resposta a incidentes *upstream***: mesma triagem da secção 8 alargada com classes `AML.T0010` / `AML.T0019` / `AML.T0109` / `AML.T0110` e LLM03-2025.
+
+A operacionalização detalhada destes pontos vive em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain). Esta política mantém-se como referência para o caso geral; Policy 39 especializa-se na fatia AI.
+
+---
+
+## 13. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
 - Incidente com origem em dependência vulnerável não detetada
 - Alteração significativa no ecossistema de package managers utilizado
 - Alteração regulatória com impacto na gestão de supply chain de software
+- Incidente *upstream* em supply chain AI com impacto operacional (qualquer classe da secção 12)
 
 ---
 
-## 13. Referências normativas e técnicas
+## 14. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Inventário, SCA, alertas, artefactos, user stories |
+| SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Inventário, SCA, alertas, artefactos, user stories; **US-14 AI BOM**; `DEP-011..014` |
 | SbD-ToE Cap. 07 - CI/CD Seguro | Integração SCA no pipeline e gates |
 | SbD-ToE Cap. 09 - Containers e Imagens | Dependências em imagens base |
-| Política de SBOM (`11_policy-sbom.md`) | Geração e retenção de SBOM por build |
+| Política de SBOM (`11_policy-sbom.md`) | Geração e retenção de SBOM por build; **anexo AI BOM** |
+| Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Tratamento específico de modelos, datasets, MCP, prompts |
 | Política de Exceções a CVEs (`12_policy-excecoes-cve.md`) | Gestão de CVEs sem fix disponível |
 | OWASP Dependency-Check | Ferramenta SCA de referência |
-| CycloneDX / SPDX | Formatos de SBOM |
+| CycloneDX / SPDX | Formatos de SBOM (incluindo CycloneDX 1.6 `ml-bom` para AI) |
+| MITRE ATLAS | Tactics/techniques adversariais para supply chain AI |
+| OWASP Top 10 for LLM Applications (2025) — LLM03 Supply Chain | Vector dedicado |
 | NIST SP 800-161 | Cybersecurity Supply Chain Risk Management |
+| NIST AI RMF 1.0 — MAP-4.x (third-party AI) | Mapping de risco de terceiros AI |
 | SSDF PW.4 | Reuse of existing, well-secured software |
 | SLSA (Supply chain Levels for Software Artifacts) | Framework de integridade de supply chain |
+| EU AI Act (Reg. (UE) 2024/1689) — Art. 25, 53, 55 | Quando aplicável a providers AI / GPAI |

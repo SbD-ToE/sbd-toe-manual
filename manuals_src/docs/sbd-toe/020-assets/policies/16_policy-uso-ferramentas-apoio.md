@@ -1,8 +1,8 @@
 ---
 id: policy-uso-ferramentas-apoio
 title: Política de Uso de Ferramentas de Apoio ao Desenvolvimento
-description: Política organizacional que define os requisitos para o uso controlado de ferramentas de apoio ao desenvolvimento, incluindo assistentes de IA generativa (GenAI/Copilot), com foco em revisão obrigatória de output, rastreabilidade, validação de licenças e manutenção da responsabilidade humana, proporcional ao nível de criticidade (L1, L2, L3).
-tags: [policy, GenAI, Copilot, ferramentas, assistentes IA, revisão, licenças, rastreabilidade, desenvolvimento seguro, cap06, L1, L2, L3, governance]
+description: Política organizacional que define os requisitos para o uso controlado de ferramentas de apoio ao desenvolvimento, incluindo assistentes de IA generativa (GenAI/Copilot) e agentes autónomos com tool-use (A0–A4), com foco em revisão obrigatória de output, rastreabilidade, validação de licenças, mandates de autonomia e manutenção da responsabilidade humana, proporcional ao nível de criticidade (L1, L2, L3).
+tags: [policy, GenAI, Copilot, ferramentas, assistentes IA, revisão, licenças, rastreabilidade, desenvolvimento seguro, cap06, L1, L2, L3, governance, agentic, autonomy]
 grupo: desenvolvimento
 sidebar_position: 16
 ---
@@ -139,7 +139,55 @@ Em L3, antes de usar qualquer ferramenta GenAI em contexto do projeto, deve ser 
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Agentes autónomos (A2+) com tool-use
+
+As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer **decide**. Quando o que a ferramenta faz passa a ser **executar acções com efeito real** — abrir PRs, ler segredos, fazer deploys, escrever em sistemas externos — entramos em território de **agentes autónomos**, com graus variáveis de supervisão humana. O modelo de cinco níveis de autonomia (A0–A4) está definido no [Cap. 02 — Modelo de níveis de autonomia](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia); aplicam-se aqui sem reformulação.
+
+### 11.1 Onde esta política se aplica vs. Policy 38
+
+| Cenário | Coberto por |
+|---|---|
+| Uso assistido (A0–A1) — ferramenta sugere, developer decide | Secções 1–10 desta política |
+| Uso autónomo (A2–A4) — agente executa acções reais | **Esta secção 11** (regras operacionais) + [Policy 38 — Mandates de agentes AI](./policy-mandates-agentes) (mandate, ownership, revisão) |
+
+> 📌 **A separação importa.** As secções 1–10 são suficientes para Copilot/Cursor em modo *sugere*. A partir do momento em que o agente executa (`gh pr create`, `kubectl apply`, `terraform apply`, `npm publish`, qualquer ação fora do IDE), passa a aplicar-se a Policy 38 *além desta*.
+
+### 11.2 Regras operacionais para A2+
+
+| Regra | A2 | A3 | A4 |
+|---|:--:|:--:|:--:|
+| **Mandate registado e versionado em VCS** (Policy 38) | ✔ | ✔ | ✔ |
+| **Identidade dedicada** com workload identity efémera (OIDC, TTL ≤ 1h) — ver `ARC-015` | ✔ | ✔ | ✔ |
+| **Scope mínimo por tool** declarado no mandate | ✔ | ✔ | ✔ |
+| **Intent declaration** antes de tool call destrutivo (`REQ-AGN-004`) | ✔ | ✔ | ✔ |
+| **Aprovação humana out-of-band** por acção destrutiva | ✔ | (substituída por revert auto + notificação) | (apenas auditoria periódica) |
+| **Revert automático** demonstrado em testes | — | ✔ | ✔ |
+| **Kill-switch** documentado e operacional (`REQ-AGN-003`) | ✔ | ✔ | ✔ |
+| **Kill-switch exercitado** com cadência registada | Anual | Trimestral | Mensal |
+| **Mandate assinado por `CISO`** (não apenas registado) | — | — | ✔ |
+| **Auditoria periódica do mandate** | Anual | Semestral | Trimestral |
+
+### 11.3 Proibições específicas em A2+
+
+- ❌ **Reutilizar credenciais humanas** para autenticar o agente. Cada agente é um *principal* distinto.
+- ❌ **Aprovar acções destrutivas dentro do canal do agente** (e.g. pedir confirmação no chat onde o agente opera) — viola o princípio out-of-band; resposta a prompt injection torna-se trivialmente aprovável.
+- ❌ **Subir nível de autonomia (A1 → A2, A2 → A3, …) sem revisão e actualização do mandate.** Subida exige evidência operacional dos pré-requisitos.
+- ❌ **Operar em produção em A3/A4 sem revert automático demonstrado em ambiente de teste.** Se não foi exercitado, é decorativo.
+- ❌ **A4 em qualquer projecto sem mandate assinado pelo `CISO`.** Sem excepções.
+
+### 11.4 Reporte de incidentes específicos a agentes
+
+Constituem incidentes de segurança que devem ser reportados via processo IR (Cap. 12):
+
+- *Off-policy action*: agente executou acção fora do scope declarado no mandate.
+- *Intent-action divergence*: acção real difere materialmente do `intent` declarado.
+- *Prompt injection bem-sucedida* que resultou em tool call não autorizada.
+- *Kill-switch falhou* ou demorou > tempo acordado a fazer efeito.
+- *Credential exposure*: identidade do agente reutilizada ou exposta fora do âmbito.
+
+---
+
+## 12. Revisão e auditoria desta política
 
 Esta política deve ser **revista semestralmente** dada a rápida evolução das ferramentas GenAI, ou após qualquer um dos seguintes eventos:
 
@@ -149,15 +197,23 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 
 ---
 
-## 12. Referências normativas e técnicas
+## 13. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
 | SbD-ToE Cap. 06 - Desenvolvimento Seguro | Uso controlado de GenAI, rastreabilidade, constrangimentos |
-| SbD-ToE Cap. 02 - Requisitos de Segurança | US-14: uso controlado de assistentes automatizados |
+| SbD-ToE Cap. 02 - Requisitos de Segurança (addon `09-governaca-automatismos`) | Modelo de níveis de autonomia A0–A4; `REQ-AGN-001..004` |
+| SbD-ToE Cap. 04 - Arquitetura Segura (`ARC-015`) | Agente como *principal* com workload identity efémera e least privilege |
+| SbD-ToE Cap. 03 - Threat Modeling (playbook agentic) | Threat library para agentes com tool-use (MITRE ATLAS `AML.T*`, OWASP LLM Top 10) |
+| Política 38 — Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Operacionalização de `REQ-AGN-001`: mandate, ownership, revisão |
 | Política de Revisão de Código (`15_policy-revisao-codigo.md`) | Revisão de PRs com output GenAI |
 | Política de Guidelines de Desenvolvimento (`14_policy-guidelines-desenvolvimento.md`) | Constrangimentos técnicos derivados de guidelines |
-| OWASP Top 10 LLM Application Security Risks | Riscos de segurança em aplicações baseadas em LLM |
-| EU AI Act | Requisitos regulatórios para sistemas de IA em contextos de alto risco |
+| MITRE ATLAS | Catálogo canónico de tactics/techniques adversariais para AI systems |
+| OWASP Top 10 for LLM Applications (2025) | Riscos de segurança em aplicações baseadas em LLM (LLM01–LLM10 2025) |
+| NIST AI RMF 1.0 (2023) + Generative AI Profile (2024) | Risk Management Framework para AI: GOVERN / MAP / MEASURE / MANAGE |
+| NIST SP 800-218A | Secure Software Development Framework Profile for GenAI |
+| NIST SP 800-207 | Zero Trust Architecture — princípios aplicáveis a agentes como *principals* não-humanos |
+| ISO/IEC 42001:2023 | AI Management System (alinha com `REQ-AGN-001` e revisão periódica) |
+| EU AI Act (Reg. (UE) 2024/1689) | Requisitos regulatórios para sistemas de IA — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |
 | ENISA - Cybersecurity of AI | Orientações de segurança para uso de IA em desenvolvimento |
 | GitHub Copilot Trust Center | Modelo de dados e privacidade de ferramenta de referência |

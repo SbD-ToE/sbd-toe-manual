@@ -1,0 +1,8 @@
+{
+  "label": "MCP Server (SbD-ToE)",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "assets/mcp/intro"
+  }
+}

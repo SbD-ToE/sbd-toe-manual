@@ -446,6 +446,65 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero controlar acesso e reten
 | L3 | Sim | Controlo reforçado + segregação e auditoria |
 
 ---
+
+### US-11 - Threat modeling para sistema com agente AI (tool-use)
+
+**Contexto.**
+Quando o sistema integra **agentes autónomos** com *tool-use* — modelos que invocam *tools* reais para criar PRs, ler segredos, executar *deploys* ou contactar APIs — a superfície de ataque deixa de ser só o modelo e passa a incluir o conjunto fechado de *tools* invocáveis, a identidade com que o agente opera e a fronteira `agentic → tool` em que o efeito real se materializa. Aplicamos o playbook agentic do Cap. 03 antes da operação e em cada subida de nível de autonomia, para que as ameaças MITRE ATLAS aplicáveis estejam identificadas e ancoradas em controlos citáveis.
+
+:::userstory
+**História.**
+Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook agentic](./addon/metodologias-e-ferramentas#playbook-agentic) sempre que um agente A1+ é introduzido no sistema ou sobe de nível de autonomia, para que as ameaças aplicáveis sejam catalogadas com IDs reais (MITRE ATLAS `AML.T*` e OWASP LLM Top 10 2025) e cada uma fique ligada a controlos concretos em Caps. 04, 07, 10 ou 12 antes do *go-live*.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um agente AI vai operar em A1+ no projecto
+  **Quando** o seu *mandate* (`REQ-AGN-001`) é proposto
+  **Então** existe DFD agentic com cinco participantes (humano → cliente → modelo → *tool runtime* → sistema externo) e quatro fronteiras (input · inference · agentic · tool) explícitas
+- **Dado** o DFD agentic
+  **Quando** se executa o exercício do playbook
+  **Então** as *tools* destrutivas/*side-effectful* estão marcadas, as ameaças aplicáveis vêm citadas por ID canónico (`AML.T0051.001`, `AML.T0086`, `AML.T0110`, `LLM06-2025`, etc.) e cada uma tem mitigação ancorada em capítulo do manual
+- **Dado** uma subida de nível de autonomia (A1→A2, A2→A3, …) ou alteração da `tools_allowlist`
+  **Quando** se pretende activar
+  **Então** o exercício é repetido e o registo do *mandate* referencia o novo *threat model*
+
+**Critérios de aceitação (DoD).**
+- [ ] DFD agentic versionado em repositório, com fronteiras de confiança marcadas
+- [ ] Lista de *tools* invocáveis pelo agente, etiquetadas `read` / `write` / `destructive` / `external`
+- [ ] *Threats* aplicáveis identificadas com **IDs canónicos** (MITRE ATLAS `AML.T*` ou OWASP LLM Top 10 2025); ameaças eliminadas vêm com justificação curta
+- [ ] Cada *threat* não eliminada tem entrada de controlo a aterrar em Cap. 04 (`ARC-014`/`ARC-015`), Cap. 07, Cap. 10 ou Cap. 12
+- [ ] *Mitigation confidence* (`derived` vs `heuristic`) rotulada em cada ligação *threat*↔controlo
+- [ ] Cruzamento com o registo organizacional: se uma mitigação não está implementada, o agente não opera no nível pedido
+
+:::
+
+**Artefactos & evidências.**
+- DFD agentic versionado (Mermaid, drawio ou equivalente)
+- *Threat model document* com tabela `threat_id` × `boundary` × `mitigations` × `confidence`
+- Referência cruzada `mandate_ref` ↔ `threat_model_ref` no registo do *mandate*
+- Histórico de revisões do *threat model* ligado às subidas de nível
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado para A1; obrigatório para A2+ | DFD simplificado + *threat library* curta (Top 3–5 *threats*) |
+| L2 | Obrigatório para A1+ | DFD completo + *threat library* completa do playbook + *mitigations* ancoradas |
+| L3 | Obrigatório para A1+ | DFD completo + *threat library* + revisão `appsec` independente + cruzamento com cross-check AI Act quando aplicável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design | Introdução do agente no sistema | `software_architect` + `appsec` | Antes da activação do *mandate* |
+| Subida de nível | Promoção A1→A2 ou superior | `appsec` | Antes da nova activação |
+| Alteração de *tools* | Adição/remoção em `tools_allowlist` | `appsec` | Antes de a *tool* entrar em uso |
+| Mudança de modelo | Versão maior do *provider* | `appsec` | Antes do *cutover* |
+
+**Ligações úteis.**
+- 🔗 [Playbook agentic completo (Cap. 03)](./addon/metodologias-e-ferramentas#playbook-agentic)
+- 🔗 [Catálogo `REQ-AGN-*` (Cap. 02)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)
+- 🔗 [`ARC-015` — agente como *principal* (Cap. 04)](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
+- 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
+
+---
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática / Atividade              | L1 (baixo risco)                         | L2 (médio risco)                                | L3 (alto risco)                                                  |

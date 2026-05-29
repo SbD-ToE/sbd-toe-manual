@@ -708,6 +708,67 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
 
 ---
 
+### US-16 - Revisão de arquitectura para agente AI em A2+
+
+**Contexto.**
+A US-15 cobre *componentes não determinísticos* em geral (modelos preditivos, RAG, LLMs em interface). Quando o componente é um **agente autónomo** que executa acções com efeito real em sistemas externos via *tool-use* — e opera em nível A2 ou superior — exigimos uma camada adicional de validação arquitectónica: confirmar que a arquitectura cumpre [`ARC-015`](./addon/catalogo-requisitos-arquitetura#arc-015) antes da activação, para que falhas estruturais não fiquem apenas detectadas no incidente.
+
+:::userstory
+**História.**
+Como **Software Architect** e **AppSec Engineer**, quero validar que a arquitectura do sistema cumpre integralmente `ARC-015` (identidade dedicada, *least privilege* per-tool, *intent declaration*, aprovação humana *out-of-band*, *kill-switch* exercitado, audit completo por *tool invocation*) **antes** de aprovar a operação de um agente AI em A2 ou superior, para evitar que problemas estruturais sejam descobertos só quando já tiveram efeito em produção.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um agente AI vai operar em A2+
+  **Quando** se executa a revisão de arquitectura prévia à activação do *mandate*
+  **Então** existe checklist `ARC-015` preenchida, com evidência de cada item, ligada ao `mandate_ref`
+- **Dado** que um item da checklist falha
+  **Quando** a revisão é concluída
+  **Então** o agente **não** opera no nível pedido; opera-se em nível inferior até o item estar resolvido (descida é sempre legítima; subida exige nova revisão)
+- **Dado** que o *kill-switch* nunca foi exercitado nesta arquitectura
+  **Quando** se pretende activar A3 ou A4
+  **Então** o exercício é executado em sandbox/staging com cronómetro e *log* arquivado antes da activação
+
+**Critérios de aceitação (DoD).**
+- [ ] **Identidade dedicada** — agente tem *workload identity* efémera (OIDC) por ambiente; sem reuso de credenciais humanas; TTL ≤ 1h
+- [ ] **Scope mínimo per-tool** — cada *tool* na *allowlist* com argumentos limitados ao necessário; etiquetada `read`/`write`/`destructive`/`external`
+- [ ] **Intent declaration** — mecanismo (`REQ-AGN-004`) emite *intent event* estruturado antes de cada *tool call* destrutivo, com schema mínimo: `agent_id`, `mandate_ref`, `tool`, `args`, `intent`, `expected_outcome`, `risk_self_assessment`
+- [ ] **Aprovação out-of-band** — canal independente do canal do agente (Slack approval com 2FA, GitHub review, webhook assinado, *push notification*); ataques de *prompt injection* no canal principal não conseguem aprovar
+- [ ] **Kill-switch operacional** — revogação de credenciais + terminação de *runtime* + isolamento de *namespace* + alerta on-call; exercitado em sandbox/staging com cadência registada (trimestral A3; mensal A4)
+- [ ] **Audit completo per-tool** — *event* estruturado com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII e segredos redactados), `intent_event_ref`, `outcome`, `external_effect`; integrado com observabilidade do Cap. 12
+- [ ] *Threat model* do agente (US-11 do Cap. 03) referenciado e *mitigations* mapeadas a este checklist
+
+:::
+
+**Artefactos & evidências.**
+- `arc-015-review.md` — checklist preenchida com referência a `mandate_ref` e `threat_model_ref`
+- *Log* de exercício de *kill-switch* (data inicial + cadência registada)
+- Diagrama de arquitectura agentic versionado (DFD com cinco participantes — humano · cliente · modelo · *tool runtime* · sistema externo — e quatro fronteiras)
+- Configuração da *workload identity* (referência IaC) e evidência de TTL ≤ 1h
+- Exemplo redactado de *intent event* + *tool invocation audit event* (uma sessão real)
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | A2+ tipicamente fora de produção; revisão simplificada quando aplicável | Checklist `ARC-015` essencial; *kill-switch* exercitado anualmente |
+| L2 | Obrigatório para A2+ | Checklist `ARC-015` completa; *kill-switch* exercitado trimestralmente (A3) |
+| L3 | Obrigatório para A2+; A3/A4 com revisão `appsec` independente | Checklist `ARC-015` completa + revisão independente; A4 com assinatura formal do `CISO` no *mandate*; *kill-switch* exercitado mensalmente (A4) |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Revisão | Activação de agente em A2+ | `software_architect` + `appsec` | Antes da activação do *mandate* |
+| Subida de nível | Promoção A2→A3 ou A3→A4 | `appsec` (+ `grc` em A3; + `CISO` em A4) | Antes da nova activação |
+| Revisão periódica | `review_cadence` do *mandate* | `appsec` | Conforme cadência (anual A2; semestral A3; trimestral A4) |
+
+**Ligações úteis.**
+- 🔗 [`ARC-015` — agente como *principal* isolado](./addon/catalogo-requisitos-arquitetura#arc-015)
+- 🔗 [Padrões arquitectónicos para agentes (recomendações avançadas)](./recomendacoes-avancadas#agentes-principals)
+- 🔗 [Catálogo `REQ-AGN-*` (Cap. 02)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)
+- 🔗 [Playbook agentic de Threat Modeling (Cap. 03)](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic)
+- 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
+
+---
+
 ## 📑 Artefactos esperados
 
 | Artefacto | Origem / US | Evidência associada |

@@ -367,6 +367,7 @@ const sidebars: SidebarsConfig = {
                 { type: 'doc', id: 'assets/policies/policy-kpis-governacao' },
                 { type: 'doc', id: 'assets/policies/policy-contratacao-segura' },
                 { type: 'doc', id: 'assets/policies/policy-formacao-seguranca' },
+                { type: 'doc', id: 'assets/policies/policy-mandates-agentes' },
               ],
             },
           ],

@@ -812,6 +812,71 @@ Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado p�
 
 ---
 
+### US-21 - Contratação de provedores de modelos AI
+
+**Contexto.**
+A US-14 cobre reavaliação contínua de fornecedores em geral. Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace, providers próprios *self-hosted*), surgem cláusulas que os contratos tradicionais não cobriam: *data retention*, *training opt-out*, localização de processamento (RGPD), audit rights sobre logs de inferência, SLA de notificação de mudanças de versão, conformidade declarada com AI Act Art. 53/55 quando o provedor fornece GPAI. Esta US operacionaliza esses requisitos contratuais antes de o provedor entrar na lista aprovada (cross-link `DEP-014`).
+
+:::userstory
+**História.**
+Como **GRC / Compliance / Procurement** com apoio de **Legal**, quero que cada contrato com provedor de modelos AI inclua cláusulas mínimas que cubram tratamento de dados, localização, *audit rights*, notificação de mudanças e conformidade regulatória aplicável, para que o uso operacional do provedor seja sustentável jurídica e tecnicamente.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que se pretende adoptar um novo provedor AI para uso operacional
+  **Quando** se iniciam as diligências contratuais
+  **Então** a *due diligence* (cross-link Policy 33 §3) é estendida com os critérios específicos AI: data retention, training opt-out, localização (RGPD Art. 44–49), audit rights, SLA de notificação, AI Act Art. 53/55 quando GPAI
+- **Dado** que o contrato é finalizado
+  **Quando** o provedor é adicionado à lista aprovada (`DEP-014`)
+  **Então** o `contract_ref` referencia o contrato vigente e regista cláusulas críticas
+- **Dado** que o provedor altera modelo de dados (e.g. nova política de training) ou versão maior do modelo
+  **Quando** é notificado conforme SLA contratual
+  **Então** corre revisão (`appsec` + `grc`) antes do *cutover*; sem notificação adequada, dispara revisão proactiva
+
+**Checklist.**
+- [ ] *Data retention*: declarada (preferência zero retention para dados sensíveis); compatível com a classificação de dados que o sistema envia
+- [ ] *Training opt-out*: contratualizado quando aplicável; declarado quando "opt-out por defeito"
+- [ ] **Localização de processamento**: documentada; conforme RGPD Art. 44–49 quando há dados pessoais; cláusulas para *international transfers* quando aplicável
+- [ ] **Audit rights**: acesso contratualizado a logs de inferência ou equivalente quando exigido (típico em L3)
+- [ ] **SLA de notificação prévia** de mudanças que alterem comportamento (versão maior do modelo, política de dados, descontinuação)
+- [ ] **SLA de disponibilidade** declarado; *fallback* arquitectónico em caso de *outage* (cross-link Cap. 04 §AI/ML)
+- [ ] **Conformidade declarada com AI Act Art. 53/55** quando o provedor fornece GPAI
+- [ ] **Conformidade declarada com RGPD Art. 28** (sub-processadores) quando há dados pessoais
+- [ ] Provedor incluído na lista aprovada (`DEP-014`) com `risk_classification`
+- [ ] Cláusulas críticas registadas na ficha do provedor; revisão calendarizada
+
+:::
+
+**🧾 Artefactos & evidências.**
+- Contrato assinado com cláusulas explícitas (referenciado em `contract_ref` da lista aprovada)
+- Ficha do provedor no repositório de governança (`governance/ai-providers/<provider>.md`) com cláusulas críticas
+- Registo de notificações recebidas do provedor + acções tomadas
+- Revisão periódica documentada conforme nível de risco
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | Cláusulas mínimas: localização + zero retention para dados sensíveis |
+| L2 | Sim | Cláusulas detalhadas: retention, opt-out, localização, SLA, audit rights básico |
+| L3 | Sim | Cláusulas detalhadas + audit rights operacionais + AI Act Art. 53/55 quando GPAI; revisão Legal obrigatória |
+
+**🔗 Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré-onboarding | Adopção de novo provedor AI | GRC + Procurement + Legal | Antes do uso operacional |
+| Operação | Notificação de mudança pelo provedor | AppSec + GRC | Conforme SLA contratual; pré-*cutover* |
+| Revisão periódica | Cadência por nível de risco | GRC | L1 anual / L2 semestral / L3 trimestral |
+| Descontinuação | Provider removido da lista | GRC + DevOps | Plano de migração antes da remoção operacional |
+
+**Ligações úteis.**
+- 🔗 [`DEP-014` — Lista de providers AI aprovados](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)
+- 🔗 [US-14 do Cap. 05 — AI BOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle)
+- 🔗 [Policy 33 — Contratação Segura (anexo AI providers)](/sbd-toe/assets/policies/policy-contratacao-segura)
+- 🔗 [Policy 39 — AI BOM e Supply Chain](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
+- 🔗 [Cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro)
+- 🔗 [Cross-check RGPD](/sbd-toe/cross-check-normativo/gdpr/intro)
+
+---
+
 ## 📦 Artefactos esperados
 
 | Artefacto | Evidência |

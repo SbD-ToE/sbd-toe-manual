@@ -3,7 +3,7 @@
 **Repository:** `SbD-ToE-Manual` - `git@github.com:SbD-ToE/sbd-toe-manual.git`
 **Part of programme:** SbD-ToE / AppSec Core (P0 DOI 10.17605/OSF.IO/7T849)
 **Governed by:** `PROGRAMME-PRESERVATION-PROTOCOL.md` v1.0
-**Last updated:** 2026-05-25
+**Last updated:** 2026-05-29
 
 **Role in programme:** authoritative SbD-ToE Manual content; primary substrate for Knowledge Graph generation, Curator paper authoring, and canonical evidence base.
 
@@ -16,6 +16,7 @@ Public release tags under `PROGRAMME-PRESERVATION-PROTOCOL.md` v1.0:
 | Tag | Date | Description |
 |---|---|---|
 | `v1.3.0` | 2026-05-25 | AI Act cross-check (Reg. (UE) 2024/1689) added under `002-cross-check-normativo/ai-act/` - article-by-article analysis, implementation playbook, and AI Act / CRA convergence note. Docusaurus upgraded 3.9.2 -> 3.10.1; transitive dependency hardening (npm audit 46 -> 18). Authorized by programme lead; shipped via PR #43; additive only, canon chapters 01-14 untouched. |
+| `v1.4.0` | 2026-05-29 | MCP server mini-site added under `020-assets/mcp/` - 12 pages covering install per client, skills/agents configuration, tools reference, resources & prompts, six use-case recipes (PR audit, grounded codegen, threat modeling, governance bootstrap, role-based onboarding, normative cross-check), advanced patterns, epistemic discipline, troubleshooting/FAQ and versioning/roadmap. Adds reusable `UseCaseCard` / `UseCaseGrid` components and sidebar + footer integration. Content grounded in canonical MCP sources (`sbd://toe/agent-guide`, `sbd://toe/grounded-codegen-guide`); KG coverage verified directly via `inspect_sbd_toe_retrieval`. Authorized by programme lead; shipped via PR #44; additive only, canon chapters 01-14 untouched. |
 
 Manual content also has historical release tags that predate the protocol. They are retained under "Pre-protocol tags" for continuity.
 
@@ -155,3 +156,4 @@ This repository depends on:
 | 2026-04-26 | Phase C Step 1 Bundle A and Bundle B commits recorded in registry | Manual agent under Orchestrator dispatcher |
 | 2026-04-28 | Bundle F canon substitution milestone recorded; protected tag `p7-v2-bundle-f-canon-substitution-shipped` declared | Manual agent under Orchestrator dispatcher |
 | 2026-05-25 | Public release `v1.3.0` recorded: AI Act cross-check section (analysis + playbook + CRA convergence), Docusaurus 3.10.1 upgrade, dependency hardening; shipped via PR #43 (commits `bbdae891`, `5cc6ceb6`, `5cc547bc`) | Manual agent under programme-lead authorization (Pedro Farinha) |
+| 2026-05-29 | Public release `v1.4.0` recorded: MCP server mini-site under `020-assets/mcp/` (12 pages + 6 use cases + 2 React components), sidebar + footer integration; shipped via PR #44 (commits `ca05f0ed`, `facc3ef4`, `2f83b83d`) | Manual agent under programme-lead authorization (Pedro Farinha) |

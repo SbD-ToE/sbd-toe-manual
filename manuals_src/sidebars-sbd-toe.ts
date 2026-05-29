@@ -305,6 +305,7 @@ const sidebars: SidebarsConfig = {
                 { type: 'doc', id: 'assets/policies/policy-dependencias' },
                 { type: 'doc', id: 'assets/policies/policy-sbom' },
                 { type: 'doc', id: 'assets/policies/policy-atualizacao-automatica' },
+                { type: 'doc', id: 'assets/policies/policy-ai-bom-supply-chain' },
               ],
             },
             {

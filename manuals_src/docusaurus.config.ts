@@ -148,6 +148,7 @@ const config: Config = {
           title: 'Assets',
           items: [
             {label: 'Políticas Organizacionais', to: '/sbd-toe/assets/intro'},
+            {label: 'MCP Server (SbD-ToE)', to: '/sbd-toe/assets/mcp/intro'},
           ],
         },
         {

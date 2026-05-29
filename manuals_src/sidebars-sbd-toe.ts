@@ -247,6 +247,35 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
+          label: '🔌 MCP Server (SbD-ToE)',
+          link: { type: 'doc', id: 'assets/mcp/intro' },
+          items: [
+            { type: 'doc', id: 'assets/mcp/quickstart' },
+            { type: 'doc', id: 'assets/mcp/instalacao' },
+            { type: 'doc', id: 'assets/mcp/skills-agentes' },
+            { type: 'doc', id: 'assets/mcp/tools-reference' },
+            { type: 'doc', id: 'assets/mcp/resources-prompts' },
+            {
+              type: 'category',
+              label: 'Casos de uso',
+              link: { type: 'doc', id: 'assets/mcp/casos-uso/index' },
+              items: [
+                { type: 'doc', id: 'assets/mcp/casos-uso/auditoria-pr' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/codegen-grounded' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/threat-modeling' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/governance-bootstrap' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/onboarding-formacao' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/cross-check-conformidade' },
+              ],
+            },
+            { type: 'doc', id: 'assets/mcp/padroes-avancados' },
+            { type: 'doc', id: 'assets/mcp/epistemica-anti-patterns' },
+            { type: 'doc', id: 'assets/mcp/troubleshooting-faq' },
+            { type: 'doc', id: 'assets/mcp/versionamento-roadmap' },
+          ],
+        },
+        {
+          type: 'category',
           label: 'Políticas Recomendadas',
           items: [
             {

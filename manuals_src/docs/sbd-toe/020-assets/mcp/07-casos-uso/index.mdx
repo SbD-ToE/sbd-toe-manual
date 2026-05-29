@@ -1,0 +1,104 @@
+---
+id: index
+title: Casos de uso — receitas com o SbD-ToE MCP
+description: Receitas prontas combinando tools, resources e prompts do SbD-ToE MCP — auditoria de PR, codegen grounded, threat modeling, bootstrap de governança, onboarding e cross-check normativo.
+sidebar_label: Casos de uso
+sidebar_position: 0
+tags:
+  - mcp
+  - casos-uso
+  - skills
+  - exemplos
+---
+
+import UseCaseCard from '@site/src/components/UseCaseCard';
+import UseCaseGrid from '@site/src/components/UseCaseGrid';
+
+# Casos de uso
+
+A maior parte dos workflows de equipa de software acaba por cair em meia dúzia de padrões — alguém faz um PR e precisa de o auditar; alguém vai escrever código sensível e quer fazê-lo *grounded* num manual; alguém arranca um repo novo e quer alinhamento desde o início. Em vez de reinventar o uso do MCP a cada vez, esta secção junta seis receitas testadas, cada uma já pensada em torno do que tipicamente se quer.
+
+Cada receita tem o mesmo esqueleto:
+
+- **Quando aplicar** — sinal de gatilho para o agente
+- **Sequência de chamadas MCP** — tools, resources, prompts na ordem correcta
+- **Disciplina de output** — formato, IDs a citar, anti-patterns a evitar
+- **Skill / subagent file** — *snippet* pronto a guardar no cliente
+
+Escolhe pelo caso que mais se parece com o que tens em mãos hoje:
+
+<UseCaseGrid>
+  <UseCaseCard
+    icon="🔍"
+    title="Auditoria de PR"
+    summary="Review automatizada de Pull Requests contra os controlos activos do risk_level do projecto — findings citáveis por CTRL-*."
+    to="./auditoria-pr"
+    tags={['review', 'PR', 'CTRL-*']}
+  />
+  <UseCaseCard
+    icon="⚙️"
+    title="Codegen grounded"
+    summary="Gerar código com prepare_sbd_toe_codegen_context — 4 status (ready / clarification / decomposition / unsupported) e disciplina de citation_map."
+    to="./codegen-grounded"
+    tags={['codegen', 'citation_map', 'security_rationale']}
+  />
+  <UseCaseCard
+    icon="🎯"
+    title="Threat modeling"
+    summary="Combinar get_threat_landscape + consult_security_requirements por concern (auth, api, encryption…) para gerar threat models grounded."
+    to="./threat-modeling"
+    tags={['threats', 'STRIDE', 'concerns']}
+  />
+  <UseCaseCard
+    icon="🏗️"
+    title="Bootstrap de governança"
+    summary="Aplicar plan_sbd_toe_repo_governance num repo novo — lista de artefactos por capítulo e scaffold automático."
+    to="./governance-bootstrap"
+    tags={['governance', 'artefactos', 'bootstrap']}
+  />
+  <UseCaseCard
+    icon="🎓"
+    title="Onboarding por role"
+    summary="get_guide_by_role(risk_level, role) para gerar guia de onboarding personalizado — práticas por fase do SDLC, user stories joined."
+    to="./onboarding-formacao"
+    tags={['onboarding', 'roles', 'training']}
+  />
+  <UseCaseCard
+    icon="📋"
+    title="Cross-check normativo"
+    summary="Cruzar SbD-ToE com CRA, DORA, NIS2, GDPR e ENISA/CSA via MCP (indexados no KG); AI Act via manual web (ainda fora do snapshot 0.9.0)."
+    to="./cross-check-conformidade"
+    tags={['compliance', 'AI Act', 'CRA', 'DORA']}
+  />
+</UseCaseGrid>
+
+---
+
+## Como ler cada receita
+
+Cada página segue a mesma estrutura:
+
+1. **Cenário** — uma situação concreta em prosa.
+2. **Pré-requisitos** — *risk level* + *role* + skill instalada.
+3. **Fluxo** — sequência de chamadas MCP (com input/output esperado).
+4. **Disciplina de output** — formato do relatório final + rótulos epistémicos.
+5. **Skill / subagent snippet** — texto pronto a guardar (`.claude/skills/...`, `.github/copilot-instructions.md`, …).
+6. **Anti-patterns** — o que **não** fazer.
+
+## Atalhos por *risk level*
+
+| Risk level | Casos típicos prioritários |
+|---|---|
+| **L1** | [Bootstrap de governança](./04-governance-bootstrap.md) · [Onboarding](./05-onboarding-formacao.md) |
+| **L2** | [Auditoria de PR](./01-auditoria-pr.md) · [Codegen grounded](./02-codegen-grounded.md) · [Threat modeling](./03-threat-modeling.md) |
+| **L3** | Todos os anteriores + [Cross-check normativo](./06-cross-check-conformidade.md) |
+
+## Atalhos por *role*
+
+| Role | Caso de uso prioritário |
+|---|---|
+| `developer` | [Codegen grounded](./02-codegen-grounded.md) |
+| `appsec` | [Auditoria de PR](./01-auditoria-pr.md) · [Threat modeling](./03-threat-modeling.md) |
+| `software_architect` | [Threat modeling](./03-threat-modeling.md) |
+| `grc` / `compliance` / `auditor` | [Cross-check normativo](./06-cross-check-conformidade.md) · [Bootstrap de governança](./04-governance-bootstrap.md) |
+| `team_lead` / `scrum_master` | [Onboarding](./05-onboarding-formacao.md) |

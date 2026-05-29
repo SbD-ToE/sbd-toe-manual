@@ -735,6 +735,70 @@ Registo de aprovação; logs do pipeline; evidência associada; trilho de audito
 
 ---
 
+### US-19 - Agentes AI como *principals* na pipeline
+
+**Contexto.**
+A US-04 estabelece o padrão para segredos no pipeline: OIDC, TTL curto, sem credenciais *long-lived*. Quando o pipeline passa a ser **operado por agentes AI** — `Claude Code` a criar PRs e accionar *workflows*, `Copilot Workspace` a fazer *merges*, agentes próprios construídos sobre SDKs a executar *deploys* — esses agentes tornam-se **novos *principals* não-humanos** com acesso a recursos sensíveis. O princípio é o mesmo da US-04; o que muda é que o *principal* já não é um *runner* CI tradicional, e os requisitos de auditoria e *scoping* têm de ser ajustados à nova realidade.
+
+:::userstory
+**História.**
+Como **DevOps / SRE** e **AppSec**, quero que os agentes AI que operam o pipeline recebam credenciais via *workload identity* efémera (OIDC) com *scopes* per-tool e TTL ≤ 1h, e que cada *tool invocation* gere *audit event* estruturado, para garantir auditabilidade, revogabilidade e *least privilege* equivalentes aos runners CI clássicos.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um agente AI vai operar no pipeline em nível A1+
+  **Quando** se autentica para invocar uma *tool* (ex.: `gh pr create`, `kubectl apply`, `npm publish`)
+  **Então** recebe credenciais via OIDC com `scope` mínimo declarado no *mandate* (`REQ-AGN-001`), TTL ≤ 1h, sem reuso de identidade humana
+- **Dado** que o agente invoca uma *tool* destrutiva (`destructive`/`external` na *allowlist*)
+  **Quando** opera em nível A2+
+  **Então** emite *intent event* (`REQ-AGN-004`) antes da invocação, e a *tool call* gera *audit event* completo
+- **Dado** que o *kill-switch* (`REQ-AGN-003`) é accionado
+  **Quando** ocorre revogação de credenciais
+  **Então** as credenciais do agente ficam inválidas em segundos e a sessão é terminada
+- **Dado** que existe divergência entre `intent` declarado e acção real
+  **Quando** a divergência é detectada
+  **Então** o sinal aterra como incidente IR (Cap. 12) e o *mandate* é revisto
+
+**Checklist.**
+- [ ] Identidade *workload* dedicada por agente e por ambiente (sem reuso de credenciais humanas nem cross-env)
+- [ ] *Scopes* declarados no *mandate* aplicados na infra (não apenas no documento) — ex.: `gh:pr:write` mas não `gh:repo:delete`
+- [ ] TTL das credenciais ≤ 1h; sem chaves *long-lived* (cross-link com US-04)
+- [ ] *Audit event* por *tool invocation* com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`
+- [ ] *Kill-switch* operacional: revogação de credenciais + terminação de runtime + isolamento de namespace + alerta on-call
+- [ ] *Kill-switch* exercitado em sandbox/staging com cadência conforme nível de autonomia (trimestral A3, mensal A4)
+- [ ] *Secret scanning* + *diff review* sobre *skill files* / *agent files* / *rules* que dirigem o agente (cross-link Policy 15 §2)
+
+:::
+
+**🧾 Artefactos & evidências.**
+- Configuração OIDC / *workload identity* (IaC) por agente e ambiente
+- Registo de `mandate_ref` em audit *trail* de cada *tool invocation*
+- *Logs* estruturados de *intent events* + *tool invocation audit events*
+- *Log* do exercício do *kill-switch* (timestamp + cronómetro + outcome)
+- Evidência de *secret scanning* sobre prompts/skills (cross-link Policy 15)
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Sim para A1+ | OIDC obrigatório; A2+ tipicamente fora de produção |
+| L2 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+; *kill-switch* exercitado trimestralmente em A3 |
+| L3 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+ + *kill-switch* exercitado mensalmente em A4; revisão `appsec` independente |
+
+**🔗 Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Onboarding do agente | Activação do *mandate* (Policy 38) | `devops` + `appsec` | Antes do primeiro *tool call* |
+| Operação | Cada *tool invocation* | Agente (com audit automático) | *Real-time* |
+| Revisão | `review_cadence` do *mandate* | `appsec` | Conforme cadência |
+
+**Ligações úteis.**
+- 🔗 [Catálogo `REQ-AGN-*` (Cap. 02)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)
+- 🔗 [`ARC-015` — agente como *principal* (Cap. 04)](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
+- 🔗 [US-04 — Gestão de segredos (padrão herdado)](#us-04---gestão-de-segredos)
+- 🔗 [Policy 18 — Gestão de Segredos (anexo agentes)](/sbd-toe/assets/policies/policy-gestao-segredos)
+- 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:

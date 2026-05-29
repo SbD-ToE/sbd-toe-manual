@@ -546,6 +546,72 @@ Matriz de rastreabilidade (controlo → regulação), evidência técnica por co
 
 ---
 
+### US-13 - Telemetria de agentes AI em produção
+
+**Contexto.**
+A US-01 a US-12 deste capítulo cobrem o programa operacional clássico — logs, alertas, SIEM, IRP, MTTD/MTTR. Quando o sistema inclui **agentes AI em operação** (agentes que executam *tool calls* reais com efeito em sistemas externos), surgem três sinais que a observabilidade tradicional não vê e que precisam de instrumentação dedicada: *tool invocations* (quem fez o quê, sob que *mandate*), *token spend* (consumo do modelo, *runaway* protection), e *off-policy actions* / *jailbreak* (divergência entre o que o agente declara querer fazer e o que faz). Operacionalizamos os requisitos `OPS-012`, `OPS-013` e `OPS-014`.
+
+:::userstory
+**História.**
+Como **Ops / AppSec**, quero recolher telemetria dedicada de operação de agentes AI em produção — *tool invocations* com audit completo, *token spend* com budget enforcement, deteção de *jailbreak* e *off-policy actions* — para detectar abuso, *runaway loops* e acções fora do *mandate* em tempo útil, antes de impacto material.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um agente AI opera no sistema em nível A1+
+  **Quando** invoca uma *tool*
+  **Então** é emitido *audit event* estruturado com `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `args` (PII redactada), `intent_event_ref` (A2+), `outcome`, `external_effect` (cross-link `OPS-012`)
+- **Dado** que o *token spend* do agente atinge o threshold de aviso definido no *mandate*
+  **Quando** o sistema observa
+  **Então** alerta vai ao *owner* humano; no threshold máximo a sessão pausa ou *kill-switch* é accionado conforme nível de autonomia (cross-link `OPS-013`)
+- **Dado** que existe divergência material entre `intent_event` declarado e *tool invocation audit event* real
+  **Quando** o detector funciona
+  **Então** o sinal é tratado como incidente IR (Cap. 12 US-04) com escalation imediata ao *owner* (cross-link `OPS-014`)
+- **Dado** que se detecta padrão de *jailbreak* ou *off-policy action*
+  **Quando** ocorre em A2+
+  **Então** o sinal alimenta a *eval suite* offline (Cap. 10 §C5) para regressão futura
+
+**Checklist.**
+- [ ] *Tool invocation audit events* a fluir para o SIEM (OPS-004) com schema mínimo de OPS-012
+- [ ] *Budget* de *token spend* declarado por *mandate*, com thresholds de aviso e máximo
+- [ ] Detector de divergência `intent` ↔ acção configurado para todos os agentes A2+
+- [ ] Corpus de detecção de *jailbreak* (LLM01-2025) actualizado conforme cadência do *mandate*
+- [ ] Sinais OPS-012/013/014 ligados a *runbooks* IR (US-04 deste capítulo)
+- [ ] *Drift detection* da *eval suite* (Cap. 10 §C5) realimentada por incidentes detectados em produção
+
+:::
+
+**Artefactos & evidências.**
+- *Audit events* estruturados de *tool invocation* (OPS-012)
+- Configuração de *budget* + métricas de *token spend* por agente / mandate (OPS-013)
+- Regras / modelos de detecção activos para *jailbreak* / *off-policy* (OPS-014)
+- *Runbooks* IR específicos para incidentes agentic
+- Dashboards de SIEM com sinais agentic; relatórios periódicos por *mandate_ref*
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado para A1+; obrigatório se agente em produção | OPS-012 essencial; OPS-013 com budget simples; OPS-014 não-obrigatório |
+| L2 | Sim para A1+ | OPS-012 + OPS-013 obrigatórios; OPS-014 recomendado |
+| L3 | Sim para A1+ | OPS-012 + OPS-013 + OPS-014 obrigatórios; A4 com revisão trimestral do corpus de detecção |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Onboarding do agente | Activação do *mandate* (Policy 38) | `devops` + `appsec` | Antes da operação em produção |
+| Operação | Cada *tool invocation* | Agente (audit automático) + `appsec` (revisão de sinais) | *Real-time* |
+| Incidente | OPS-014 dispara | `appsec` + `ops` | Conforme severidade (US-04 deste capítulo) |
+| Revisão | `review_cadence` do *mandate* | `appsec` + *owner* | Conforme cadência |
+
+**Ligações úteis.**
+- 🔗 [`OPS-012` — Audit completo por *tool invocation*](./addon/catalogo-requisitos-operacoes#ops-012)
+- 🔗 [`OPS-013` — Budget e *runaway* detection](./addon/catalogo-requisitos-operacoes#ops-013)
+- 🔗 [`OPS-014` — Detecção de *jailbreak* / *off-policy*](./addon/catalogo-requisitos-operacoes#ops-014)
+- 🔗 [Catálogo `REQ-AGN-*` (Cap. 02)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)
+- 🔗 [Eval suites contínuas (Cap. 10 §C5)](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites)
+- 🔗 [Policy 30 — Monitorização de Segurança (anexo agentic)](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)
+- 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa rastos verificáveis.  

@@ -191,6 +191,50 @@ Qualquer patch gerado com IA:
 - requer testes (incluindo regressão de segurança),
 - nunca pode bypassar gates.
 
+### C5 - *Eval suites* contínuas para agentes em desenvolvimento e produção {#c5-eval-suites}
+
+Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o sistema **inclui um agente AI em produção** (ou quando o agente é parte do nosso processo de teste, e.g. um auditor de PR automatizado), precisamos de testar **o agente em si** — o mesmo princípio que aplicamos a qualquer outro componente crítico. A esta classe de testes chamamos *eval suites*; não substituem SAST/DAST/SCA, complementam-nos para a fatia agentic.
+
+#### Princípios das *eval suites*
+
+1. **Regressão de prompt como regressão de funcionalidade.** Cada mudança ao *system prompt*, *skill file*, *agent file* ou versão do modelo é tratada como mudança que pode degradar o comportamento; corre-se a *eval suite* antes do *merge* — exactamente como corremos testes de regressão antes de mudanças de código.
+2. **Determinismo aproximado em ambiente de teste.** Modelos LLM não são determinísticos, mas em *eval* usamos `temperature=0` ou parametrização equivalente, e medimos com tolerância explícita (e.g. *exact match* vs *semantic match* vs *embedding similarity > k*). A tolerância é declarada por teste.
+3. **Avaliação por domínio.** Cobrimos três classes mínimas: (a) **utilidade** — o agente cumpre a tarefa em casos esperados; (b) **segurança** — o agente recusa ou escala em casos hostis (prompt injection, jailbreak, off-policy); (c) **estabilidade** — o agente não degrada entre versões do modelo / prompt.
+4. **Suite versionada e mantida.** A *eval suite* tem o mesmo estatuto que a suite de testes do sistema — vive em VCS, evolui com o produto, é revista periodicamente.
+
+#### Composição mínima por nível
+
+| Componente | A1 (assistente) | A2 (executa com confirmação) | A3 (autónomo + revert) | A4 (autónomo em prod) |
+|---|---|---|---|---|
+| **Regression tests de prompt** | Recomendado | Obrigatório | Obrigatório | Obrigatório (corrido a cada mudança) |
+| **Abuse / red-team corpus** (*prompt injection*, *jailbreak*, *off-policy*) | — | Recomendado | Obrigatório | Obrigatório (com red-team manual periódico) |
+| **Drift detection** entre versões (modelo, prompt, skill) | — | Recomendado | Obrigatório | Obrigatório (janelas curtas) |
+| **A/B testing** antes de promoção de skill | — | Recomendado | Obrigatório | Obrigatório (com critérios pré-acordados) |
+| **Test telemetry em produção** (correlacionar evals offline com sinais reais) | — | — | Recomendado | Obrigatório (cross-link Cap. 12) |
+
+#### Aterragem operacional
+
+- **Eval suite vive em VCS** ao lado do código que opera o agente. Mudanças à suite seguem o mesmo *code review* que mudanças ao código.
+- **Corre em CI** antes do *merge* de mudanças a *system prompts*, *skill files*, *agent files*, ou após *bump* da versão do modelo. Falha bloqueia o *merge* (ou descida de nível de autonomia até estar resolvido).
+- **Resultados arquivados** com `eval_run_id` ligado a `mandate_ref` — auditoria pode reconstruir que versão da suite confirmou que nível de autonomia.
+- **Cobertura proporcional ao nível de autonomia** declarado no *mandate*. Subir nível sem *eval suite* à medida é proibido (cross-link Policy 38 §5.4).
+
+#### Anti-padrões
+
+- ❌ "*Vibe checks*" como única validação — corre alguns prompts manuais e dá-se por suficiente. Não fica registo, não detecta regressão.
+- ❌ *Eval suite* que nunca falha — sinal de cobertura insuficiente, não de excelência. Adicionamos casos adversariais conhecidos para garantir cobertura útil.
+- ❌ Métricas agregadas sem inspecção do corpus — *score* alto pode esconder falhas catastróficas em sub-categorias críticas.
+- ❌ *Eval suite* num repositório separado da skill/prompt — abre porta a *drift* silencioso.
+
+#### Onde aterra no resto do manual
+
+- **Cap. 02** — `REQ-AGN-002` exige nível de autonomia justificado; a *eval suite* é a evidência de que o nível é defensável.
+- **Cap. 07** — *eval run* obrigatório como *gate* antes de *merge* de mudanças a skill/prompt (cross-link US-19).
+- **Cap. 12** — sinais agentic em produção (jailbreaks reais, off-policy actions) realimentam a *eval suite* offline.
+- **Policy 19 — Estratégia de Testes** acrescenta o capítulo `eval suites` ao escopo de testes obrigatórios.
+
+> 🧭 Em curto: testar o agente é testar um componente do sistema. A *eval suite* não é trabalho extra — é o trabalho de teste normal aplicado à fatia que opera por linguagem. Sem ela, não temos como sustentar uma classificação A2+ ao longo do tempo.
+
 ---
 
 ## 4) Integração explícita com este capítulo

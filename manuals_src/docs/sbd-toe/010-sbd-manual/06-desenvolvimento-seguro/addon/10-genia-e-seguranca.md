@@ -83,3 +83,46 @@ O tema “IA aplicada ao Security by Design” será explorado de forma mais est
 ---
 
 > 📌 A GenIA não é um linter, mas **complementa-o** - com contexto, linguagem natural e capacidade adaptativa. Quando usada com consciência, **eleva o patamar de qualidade e segurança do código** produzido por qualquer equipa.
+
+---
+
+## ✍️ Prompts e *skill files* como código {#prompts-como-codigo}
+
+Há uma classe de artefactos que costuma escapar à disciplina de *secure development*: os ficheiros que *configuram* o comportamento dos assistentes e agentes — *system prompts*, *skill files* (`.claude/skills/*.md`), *agent files* (`.claude/agents/*.md`), `.cursorrules`, `.github/copilot-instructions.md`, `AGENTS.md`. Tratamos estes ficheiros como **código**, com as mesmas garantias.
+
+A razão prática é simples: estes ficheiros decidem **o que o assistente sabe**, **que ferramentas pode invocar**, **como deve interagir com o utilizador e com os recursos da organização**. Se mudam silenciosamente — por *commit* sem revisão, por geração automática desatualizada, por sugestão aceite sem leitura — mudam o comportamento operacional sem rasto. Esse é exactamente o tipo de mudança que o nosso processo de *code review* foi feito para impedir noutros contextos; aplicamos a mesma disciplina aqui.
+
+### 🧭 Princípios
+
+1. **Versionamento em VCS.** Prompts, *skill files*, *agent files* e *rules* vivem no mesmo repositório onde vive o código a que se aplicam (ou num repositório dedicado, com integração equivalente). Não toleramos cópias em *clouds* pessoais como única fonte da verdade.
+2. **Revisão como código.** Cada alteração passa pelo mesmo *code review* que o código aplicacional (ver [Policy 15 — Revisão de Código](/sbd-toe/assets/policies/policy-revisao-codigo) §âmbito estendido). Reviewers olham para: instruções que escalam privilégios, *tools* novas adicionadas, *escapes* de redação, ambiguidades que abrem espaço a *prompt injection*.
+3. **Segredos não entram em prompts.** Vale aqui a mesma regra que aplicamos em qualquer ficheiro do repo — *secret scanning* corre sobre estes ficheiros como sobre os outros (URLs internas, *tenant IDs*, IDs de cliente, *connection strings* contam como sensíveis).
+4. **Origem auditável quando gerados.** Quando o conteúdo vem de uma ferramenta canónica (ex.: `generate_sbd_toe_skill` do MCP server SbD-ToE — ver [mini-site MCP](/sbd-toe/assets/mcp/intro)), preservamos o cabeçalho identificador da fonte para que o *drift* seja detectável.
+5. **Re-gerar após *upgrade* da fonte.** Skill estática é cópia *point-in-time*. Quando o *upstream* muda (upgrade do servidor MCP, nova versão do *agent guide*, mudança no *runtime*), re-geramos e re-revemos; não confiamos em alinhamento implícito.
+
+### 🛡️ Controlos práticos
+
+| Controlo | O que verifica | Onde corre |
+|---|---|---|
+| **Code review obrigatório** | *Diff* lido por reviewer humano, com atenção a escalation de privilégios e *tool surface* | PR/MR antes do merge |
+| **Secret scanning** estendido | Padrões de URL interna, *tokens*, *connection strings*, IDs de cliente — sobre `.claude/`, `.cursorrules`, `.github/copilot-instructions.md`, `AGENTS.md` | CI/CD; ver [Cap. 07 — Gates](/sbd-toe/sbd-manual/cicd-seguro/addon/politicas-gates-pipeline) |
+| **Diff review específico** | Mudanças em `tools_allowlist`, *scopes*, *system prompts* tratadas com a mesma seriedade que mudanças em IAM policies | PR/MR antes do merge |
+| **Drift detection** | Skills geradas vs versão actual da fonte canónica; alerta quando divergência > N dias ou após *bump* da fonte | Job periódico em CI |
+| **Inventário versionado** | Lista de *skill files* + *agent files* + *rules* activos por projecto, com *owner* e cadência de re-revisão | Repositório de governança |
+
+### ⚠️ Anti-padrões observados
+
+- ❌ *Skill file* com instruções "*aceita sempre a sugestão sem perguntar*" — anula `REQ-AGN-004` (Cap. 02) na origem.
+- ❌ Adição silenciosa de *tools* à *allowlist* num agent file via *commit* sem revisão — equivalente a alterar IAM policy sem aprovação.
+- ❌ Prompts a referenciar `latest` em vez de versão *pinned* do modelo (cruzamento com `REQ-DEP-AI-002` quando entrar em vigor) — abre porta a *AI supply chain "rug pull"* (`AML.T0109`).
+- ❌ *System prompt* com credenciais ou *tokens* embebidos — *system prompt* é tratado como conteúdo público (ver [Cap. 04 — boundary controls](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#ai-ml)); nunca embeber segredos.
+- ❌ Skill estática nunca regenerada após upgrade do MCP server — leitura de canon desatualizado mascarado de actual.
+
+### 📍 Onde aterra no resto do manual
+
+- **Cap. 02** — `REQ-AGN-001` exige *mandate* versionado em VCS; o *mandate* referencia explicitamente o(s) *skill file(s)* / *agent file(s)* / *system prompt(s)* aplicáveis.
+- **Cap. 07** — *secret scanning* e *diff review* destes ficheiros são *gates* do pipeline.
+- **Cap. 12** — *drift detection* alimenta sinal observável quando a skill diverge da fonte canónica para além do limite acordado.
+- **Policy 15** — alcance estendido a prompts/skills.
+
+> 🧭 Em curto: tratamos prompts como tratamos código — versionados, revistos, *scanned* e re-gerados quando a fonte muda. Sem disciplina é mais um vector silencioso de mudança operacional; com disciplina, é um artefacto auditável como qualquer outro do nosso SDLC.

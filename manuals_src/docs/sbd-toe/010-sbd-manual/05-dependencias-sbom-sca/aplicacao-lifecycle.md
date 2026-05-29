@@ -671,6 +671,70 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e controlar
 - 🔗 Cap. 07 - CI/CD Seguro: `/sbd-manual/cicd-seguro/intro`
 
 ---
+
+### US-14 - AI BOM e gestão de *providers* de modelos AI
+
+**Contexto.**
+A US-10 cobre SBOM clássico — pacotes via *package manager*, dependências directas e transitivas. Quando o sistema inclui **componentes AI** (modelos, datasets, MCP servers/tools, prompts embebidos), há uma classe de "dependências" que escapa ao *package manager* tradicional: artefactos opacos com versão própria, *providers* externos (Anthropic, OpenAI, HuggingFace), e mecanismos de actualização que podem mudar comportamento sem mudar versão visível. Operacionalizamos `DEP-011`, `DEP-012`, `DEP-013` e `DEP-014` para que essas dependências fiquem tão auditáveis como o resto do *stack*.
+
+:::userstory
+**História.**
+Como **AppSec / DevOps**, quero que cada *release* do sistema gere um **AI BOM em formato standardizado** (preferencialmente CycloneDX 1.6 `ml-bom`) com modelos, datasets, MCP servers/tools e prompts embebidos *pinned* a versões específicas, alinhado com a lista de *providers* aprovados, para garantir rastreabilidade equivalente à do SBOM clássico e detecção rápida de incidentes *upstream* em qualquer das classes.
+
+**Critérios de aceitação (BDD).**
+- **Dado** um *build* de sistema com componentes AI
+  **Quando** o pipeline gera o SBOM
+  **Então** é também gerado o **AI BOM** em formato `ml-bom` (CycloneDX 1.6) ou equivalente, integrado com o SBOM principal
+- **Dado** um modelo AI em uso operacional
+  **Quando** declarado no AI BOM
+  **Então** vem **com versão fixa explícita** (ex.: `claude-opus-4-7@sha:…`) — sem `latest`, sem ranges, sem aliases dinâmicos
+- **Dado** que um *provider* AI muda versão maior do modelo
+  **Quando** o *pinning* é actualizado
+  **Então** corre nova *eval suite* (Cap. 10 §C5) e *threat model* é revisto (Cap. 03 US-11) antes do *cutover*
+- **Dado** que um *provider* AI **não** está na lista aprovada
+  **Quando** se tenta usar em código de produção
+  **Então** o *gate* de CI bloqueia (cross-link Cap. 07 US-19) ou exige excepção formal
+
+**Checklist.**
+- [ ] AI BOM gerado por *build* em formato standardizado (preferência: CycloneDX 1.6 `ml-bom`)
+- [ ] Modelos, datasets, MCP servers/tools, prompts com versão *pinned* + hash + *provider*
+- [ ] Lista de *providers* AI aprovados versionada em VCS, com classificação de risco
+- [ ] Cláusulas contratuais aplicáveis registadas por *provider* (cross-link Cap. 14, Policy 33)
+- [ ] *Gate* de CI que falha se: (a) AI BOM não foi gerado, (b) componente usa `latest`/range, (c) *provider* não está na lista aprovada
+- [ ] Processo de triagem `DEP-007` estendido a incidentes em modelos/datasets/MCP/prompts (`AML.T0010`, `AML.T0019`, `AML.T0109`, `AML.T0110`, LLM03-2025)
+- [ ] *Eval suite* + *threat model* corridos em cada mudança de versão maior
+
+**Artefactos & evidências.**
+- `ai-bom.cdx.json` (CycloneDX 1.6) ou equivalente por *release*, arquivado e ligado ao SBOM principal
+- Lista de *providers* aprovados em VCS (`governance/ai-providers.yaml` ou equivalente)
+- *Logs* do *gate* CI a confirmar conformidade do AI BOM
+- Registo de eval/threat-review por mudança de versão (referencia `eval_run_id` e `threat_model_ref`)
+- Histórico de versões pinned por modelo, com data e SHA
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | AI BOM em formato simples; lista de providers conhecida |
+| L2 | Sim | AI BOM em formato standard; *providers* aprovados; *gate* de CI |
+| L3 | Sim | AI BOM standard + revisão GRC dos *providers*; cláusulas contratuais detalhadas (data retention, audit rights, localização); cross-link com cross-check AI Act |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Build | Cada *build* | DevOps (gera AI BOM) + AppSec (revê) | Por *build* |
+| Aprovação de provider | Adição de novo *provider* AI | AppSec + GRC (+ Legal se necessário) | Antes do uso operacional |
+| Mudança de versão | *Bump* de modelo / MCP server / dataset | AppSec + DevOps | Antes do *cutover* — com *eval* e *threat review* concluídos |
+
+**Ligações úteis.**
+- 🔗 [`DEP-011..014` — Inventário e supply chain AI](./addon/catalogo-requisitos-dependencias#dep-011)
+- 🔗 [Policy 39 — AI BOM e Supply Chain](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
+- 🔗 [Policy 10 — Dependências (anexo provedores AI)](/sbd-toe/assets/policies/policy-dependencias)
+- 🔗 [Policy 11 — SBOM (anexo AI BOM)](/sbd-toe/assets/policies/policy-sbom)
+- 🔗 [Cap. 14 — Contratação de AI providers](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle)
+- 🔗 [Cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro)
+
+---
+
 ## 🧩 Nota complementar - Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  

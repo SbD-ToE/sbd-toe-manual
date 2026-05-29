@@ -52,7 +52,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 
 ## 🤖 Padrões arquitetónicos para sistemas AI/ML {#ai-ml}
 
-Sistemas que integram componentes de inteligência artificial — LLMs em interface conversacional, modelos preditivos, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation — introduzem padrões arquitetónicos com superfícies de ataque qualitativamente distintas das aplicações tradicionais. As recomendações nesta secção complementam (não substituem) ARC-001..ARC-013 e operacionalizam o requisito [ARC-014](./addon/catalogo-requisitos#arc-014).
+Sistemas que integram componentes de inteligência artificial — LLMs em interface conversacional, modelos preditivos, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation — introduzem padrões arquitetónicos com superfícies de ataque qualitativamente distintas das aplicações tradicionais. As recomendações nesta secção complementam (não substituem) ARC-001..ARC-013 e operacionalizam o requisito [ARC-014](./addon/catalogo-requisitos-arquitetura#arc-014).
 
 ### Trust zones em arquitecturas AI/ML
 
@@ -88,7 +88,65 @@ Agentes AI com capacidade de invocar tools backend (APIs, file systems, database
 - **Cross-zone propagation** — outputs de modelos AI podem propagar-se a zonas de confiança elevada (ex: model output usado para tomar decisões automáticas em sistemas críticos); aplicar mesma análise de propagation que aplicaria a inputs externos não confiáveis
 - **Resiliência a model degradation** — design considera fallback para quando o modelo está indisponível, retorna outputs degradados, ou foi comprometido (`AML.T0031` Erode AI Model Integrity)
 
-> A análise de threat modeling para arquitecturas AI/ML usa MITRE ATLAS como complemento a STRIDE — ver [Cap. 03 — Metodologias AI/ML](../03-threat-modeling/addon/metodologias-e-ferramentas#ai-ml).
+> A análise de threat modeling para arquitecturas AI/ML usa MITRE ATLAS como complemento a STRIDE — ver [Cap. 03 — Metodologias AI/ML](../threat-modeling/addon/metodologias-e-ferramentas#ai-ml).
+
+### Padrões para agentes AI como *principals* (ARC-015) {#agentes-principals}
+
+Os padrões acima cobrem *componentes AI/ML* em geral. Quando o sistema tem **agentes autónomos** que executam acções com efeito real — invocar tools, criar PRs, ler segredos, fazer deploy, escrever em sistemas externos — adoptamos uma postura arquitectónica diferente: tratamos o agente como **mais um *principal* não-humano**, sujeito aos mesmos princípios que aplicamos a *workload identities* tradicionais, especializados para o caso em que quem decide a próxima acção é um modelo.
+
+Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-arquitetura#arc-015) e cruza com os requisitos `REQ-AGN-001..004` definidos no [Cap. 02 — Modelo de níveis de autonomia](../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia).
+
+#### Identidade do agente — workload identity efémera
+
+- **Identidade dedicada por agente** (e por ambiente). O agente recebe credenciais via **OIDC / workload identity**, com TTL ≤ 1h, sem reutilização de identidade humana. Princípio idêntico ao US-04 do Cap. 07 e ao US-10 do Cap. 08 — aplicado a um novo tipo de *principal*.
+- **Scope mínimo por tool** (e por ambiente, ver `ARC-011`). Um agente que precisa de abrir PRs **não recebe** *scope* para apagar o repositório; um agente que opera em *staging* **não vê** credenciais de *production*. Sem excepções tácitas.
+- **Revogação por *kill-switch*** (ver `REQ-AGN-003`) tem de ser arquitectonicamente possível em segundos — i.e. a revogação de credenciais não pode depender de redeploy ou de propagação eventual.
+
+> A regra que aplicamos para *workload identity* humana — *"se temos de partilhar a credencial, o desenho está errado"* — vale literalmente para agentes. Se dois agentes partilham a mesma identidade, o *audit trail* deixa de ser útil.
+
+#### Intent declaration antes de tool calls destrutivos
+
+Em níveis A2+, antes de cada *tool call* com efeito destrutivo, *side-effectful* ou em sistemas externos críticos, o agente declara à infraestrutura **o que vai fazer e porquê**. O *intent* é um evento estruturado, registado em audit, com (no mínimo): identidade do agente, *tool* a invocar, argumentos materiais, *intent* humano-legível, *expected outcome*, *risco residual* na perspectiva do agente. O *gate* operacional valida *intent* declarado vs *acção real executada* a posteriori — divergência é sinal de incidente.
+
+| Campo do *intent event* | Propósito |
+|---|---|
+| `agent_id` | Identidade do *principal* (ARC-015) |
+| `mandate_ref` | Versão do *mandate* sob o qual o agente opera (`REQ-AGN-001`) |
+| `tool` + `args` | O que vai ser invocado e com que argumentos materiais |
+| `intent` | Frase humano-legível: "vou fazer X para resolver Y" |
+| `expected_outcome` | Estado pós-acção esperado |
+| `risk_self_assessment` | O que o agente considera como risco residual da acção |
+
+Este desenho não pede que o agente *peça permissão* a cada passo — pede que **deixe rasto** do que tencionava fazer antes de o fazer. A diferença é operacional: permite-nos comparar intenção e acção, e detectar comportamento off-policy mesmo quando a acção isolada parece legítima.
+
+#### Aprovação humana out-of-band
+
+Para acções com efeito crítico (delete, transfer, send, deploy, rotate-secrets, contactar sistemas externos sensíveis), exigimos aprovação **fora do canal do agente** — Slack approval, GitHub review com 2FA, webhook assinado, *push notification* a humano de plantão. A razão é simples: se o canal de aprovação é o mesmo onde o agente actua, a aprovação está sujeita ao mesmo conjunto de adversários do canal principal (prompt injection inclusive). Out-of-band força um *humano real, num canal independente*, a confirmar.
+
+#### Kill-switch operacional
+
+O *kill-switch* (`REQ-AGN-003`) é um mecanismo arquitectónico, não um botão simbólico. Compõe-se de:
+
+- **Revogação imediata de credenciais** (revogação do token OIDC; *workload identity* binding invalidado em segundos).
+- **Terminação do *runtime*** do agente (sessão MCP encerrada; *worker* terminado).
+- **Isolamento do *namespace*** onde o agente operava (impedir reanimação até diagnóstico).
+- **Sinal operacional** (alerta on-call) para garantir que humano sabe que disparou.
+
+Em A3/A4 exercitamos o *kill-switch* em sandbox/staging com cadência registada (≥ 1×/trimestre para A3, ≥ 1×/mês para A4). Sem este exercício, o *kill-switch* é decorativo.
+
+#### Audit completo por tool invocation
+
+Cada *tool call* gera um *audit event* estruturado — não basta logar "agente fez algo". Sugerimos como mínimo:
+
+- `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level` (A0–A4)
+- `tool`, `tool_version`, `args` (com redação de PII e segredos)
+- `intent_event_ref` (referência ao *intent* declarado, se A2+)
+- `outcome`: success / failure / timeout / rejected_by_gate; payload de retorno (resumido)
+- `external_effect`: se o tool afectou sistema externo, qual e como (URL, recurso, mudança de estado)
+
+Estes eventos alimentam directamente a observabilidade do Cap. 12 (a aterrar na v1.6.0 — `REQ-MON-AI-*`) e a evidência de auditoria operacional periódica (Cap. 14).
+
+> 🧭 Tudo o que descrevemos nesta secção é especialização do que já praticamos para identidades não-humanas tradicionais. Se a equipa já tem maturidade em OIDC + scope mínimo + audit por invocação, falta-lhe apenas reconhecer o agente como mais um *principal* a passar pelo mesmo crivo — e adicionar *intent declaration* e *kill-switch* exercitado, que são as duas peças genuinamente novas.
 
 ---
 

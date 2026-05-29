@@ -129,6 +129,65 @@ Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos naveg
 
 > A extensão MITRE ATLAS não substitui a análise STRIDE — alguns adversários combinam técnicas AI-specific com ataques clássicos (e.g., exfiltração tradicional via prompt injection-induced behavior). O threat model deve cobrir ambas as superfícies coerentemente.
 
+### Playbook concreto para agentes com tool-use {#playbook-agentic}
+
+A subsecção anterior cobre threat modeling de **componentes AI/ML em geral**. Quando o sistema em análise inclui **agentes autónomos** — ou seja, modelos que invocam *tools* reais (criar PRs, ler segredos, deploy, escrever em sistemas externos, contactar APIs) — adicionamos um passo dedicado, porque o que define a superfície de ataque deixa de ser apenas o modelo e passa a incluir **o conjunto fechado de *tools* que o agente pode invocar e as fronteiras entre o agente e os recursos externos**.
+
+#### DFD canónico para um flow agentic
+
+Em qualquer arquitectura com agente + tool-use, identificamos pelo menos cinco participantes distintos e quatro fronteiras de confiança. O modelo abaixo é deliberadamente minimalista — adicionamos detalhe consoante o caso, sem nunca remover destas peças.
+
+```mermaid
+flowchart LR
+    H["👤 Humano<br/>(operador)"] -->|"objectivo / prompt"| C["🖥️ Cliente AI<br/>(Claude Code, Cursor, IDE)"]
+    C -->|"context + history"| M["🧠 Modelo LLM<br/>(provider externo)"]
+    M -->|"tool call request"| MS["🔌 MCP Server / Tool Runtime"]
+    MS -->|"executa"| T["🛠️ Tool<br/>(gh, kubectl, fs, db, …)"]
+    T -->|"side effect"| EXT["🌐 Sistema externo<br/>(repo, cluster, FS, API)"]
+
+    H -.input boundary.-> C
+    C -.inference boundary.-> M
+    M -.agentic boundary.-> MS
+    MS -.tool boundary.-> EXT
+```
+
+| Fronteira | Adversários típicos | O que controlar nesta fronteira |
+|---|---|---|
+| **Input** (humano → cliente) | Operador legítimo enganado por terceiro; prompt injection via canais de chat ou ficheiros abertos no IDE | Validação de intent; consciência operacional ("o agente vai fazer X — confirmas?") |
+| **Inference** (cliente → modelo) | Provider comprometido; sequestro do canal; *side-channels* de prompt | TLS, atestação, separação canónica `system`/`user`/`assistant`, redação de PII |
+| **Agentic** (modelo → tool runtime) | Tool poisoning; *function call* manipulada; *meta prompt extraction* | Validação de schema das *tool calls*, allowlist de *tools*, scoping; rate-limits |
+| **Tool** (runtime → sistema externo) | Credentials abusivos; *agent excessive agency*; exfiltração via tool destrutivo | Workload identity efémera (OIDC), least privilege por *tool*, audit completo por invocação |
+
+> A "agentic boundary" já estava marcada na nossa cobertura de Cap. 04 (ARC-014). Aqui especializamo-la com a separação **modelo → tool runtime → sistema externo**, que é onde o efeito concreto se materializa.
+
+#### Threat library agentic — IDs reais
+
+Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`); não inventamos códigos paralelos. As ameaças abaixo são as que costumamos encontrar em flows com agentes + tool-use; cada uma vem com fronteira-alvo e mitigações que apontam para capítulos do manual.
+
+| Threat | ID canónico | Fronteira-alvo | Mitigações primárias (cross-chapter) |
+|---|---|---|---|
+| Indirect prompt injection via repo content / RAG | `AML.T0051.001` · LLM01-2025 | Input · Inference | Cap. 04 — *boundary controls for prompt injection*; tratar conteúdo retrieval como user-untrusted |
+| Tool poisoning (servidor MCP malicioso ou comprometido) | `AML.T0110` | Agentic | Cap. 04 — validação de MCP servers como dependência; Cap. 05 — supply chain de *tools* |
+| AI agent excessive agency | LLM06-2025 | Agentic · Tool | Cap. 02 — `REQ-AGN-002` (nível classificado); Cap. 04 — `ARC-015` (least privilege per-tool) |
+| Exfiltration via AI agent tool invocation | `AML.T0086` | Tool | Cap. 04 — `ARC-015` (audit completo por tool call); Cap. 12 — telemetria agentic |
+| Data destruction via AI agent | `AML.T0101` | Tool | Cap. 02 — `REQ-AGN-003` (kill-switch) e `REQ-AGN-004` (intent declaration); Cap. 04 — aprovação out-of-band em A2+ |
+| LLM meta-prompt extraction | `AML.T0061` · LLM07-2025 | Inference | Cap. 04 — output filtering anti-exfiltração de system prompt; assumir system prompt como público |
+| LLM jailbreak (multi-turn social) | `AML.T0054` | Inference | Cap. 10 — eval suites de regressão; red-team contínuo |
+| AI supply chain "rug pull" (modelo/tool muda silenciosamente) | `AML.T0109` | Agentic · (Tool) | Cap. 05 — provider pinning + AI BOM; Cap. 12 — drift detection |
+
+> 💡 Quando o agente é parte do produto que enviamos para o cliente (e não apenas operador interno), aplicam-se adicionalmente os requisitos do AI Act — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) e a [convergência com o CRA](/sbd-toe/cross-check-normativo/ai-act/convergencia-cra).
+
+#### Passos do exercício de threat modeling agentic
+
+1. **Inventário do agente**: qual o cliente AI, qual o modelo, qual o nível A0–A4 declarado no *mandate* (`REQ-AGN-001/002`), que *tools* estão na allowlist.
+2. **Desenhar o DFD agentic**: marcar os cinco participantes e as quatro fronteiras; identificar onde está cada *tool* e o sistema externo associado.
+3. **Marcar acções destrutivas**: que *tool calls* podem apagar, escrever externo, rotacionar segredos, *deploy*. Estas são as que pedem `REQ-AGN-004` (intent declaration) e aprovação out-of-band.
+4. **Aplicar threat library**: para cada fronteira, percorrer a tabela acima; eliminar as não aplicáveis com justificação curta.
+5. **Mapear para controlos**: cada *threat* não eliminada gera uma entrada de controlo a aterrar em Cap. 04 (arquitetura), Cap. 07 (CI/CD), Cap. 10 (testes) ou Cap. 12 (monitorização).
+6. **Acoplar ao registo organizacional**: cruzar com o *mandate* do agente (Policy 38) — se uma mitigação não estiver implementada, o agente não opera nesse nível até estar.
+
+> 🧭 Repetimos o exercício sempre que o nível A muda, sempre que uma *tool* é adicionada à allowlist, e sempre que o provider de modelo muda de versão maior (ver `REQ-DEP-AI-002` quando v1.7.0 entrar em vigor).
+
 ---
 
 ## ✅ Boas práticas

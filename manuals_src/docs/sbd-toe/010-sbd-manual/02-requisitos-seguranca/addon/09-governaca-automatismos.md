@@ -2,7 +2,7 @@
 id: governanca-automatismos
 title: Governação do Uso de Automatismos e Assistentes no SSDLC
 description: Prescrição para o uso controlado de ferramentas de geração automatizada (incluindo IA) no desenvolvimento, sem alteração dos requisitos aplicacionais
-tags: [governanca, automatizacao, ia, sdlc, requisitos, validacao, rastreabilidade]
+tags: [governanca, automatizacao, ia, sdlc, requisitos, validacao, rastreabilidade, agentic, mandates]
 ---
 
 # 🛠️ Governação do Uso de Automatismos no Desenvolvimento
@@ -91,6 +91,75 @@ O uso de automatismos **reforça** (não substitui) as obrigações nos seguinte
 
 ### 5. Gestão de exceções
 - Qualquer atalho ou não aplicação de controlo segue o **processo formal de exceções** do Capítulo 14, com TTL.
+
+---
+
+---
+
+## 🤖 Modelo de níveis de autonomia para agentes AI {#niveis-autonomia}
+
+Até aqui falámos de **automatismos assistidos** — ferramentas que sugerem, mas onde a decisão e a execução são humanas. Nos últimos meses passámos a viver com uma classe diferente de ferramenta: **agentes** que recebem um objectivo, decidem por que passos avançar, invocam *tools* reais (criar PR, correr testes, ler segredos, fazer deploy), e podem fazê-lo com graus variáveis de supervisão humana. *Copilot Workspace*, *Claude Code*, *Cursor agent mode*, *Devin*, agentes construídos sobre SDKs próprios — todos cabem aqui.
+
+Quando passamos de "ferramenta que sugere" para "agente que executa", a pergunta deixa de ser *"foi revisto?"* e passa a ser *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Adoptamos por isso um **modelo de cinco níveis de autonomia (A0–A4)** que torna essa autorização explícita, classificável e auditável.
+
+> 📌 Os níveis A0–A4 **não substituem** os princípios fundamentais (responsabilidade humana, output não é evidência, código gerado é código de terceiros). Especializam-nos para o caso em que o agente *executa* e não apenas *sugere*.
+
+### Níveis A0–A4
+
+| Nível | Designação | O que o agente pode fazer | Aprovação humana exigida | Onde aplica tipicamente |
+|---|---|---|---|---|
+| **A0** | *Read-only / consulta* | Lê código, docs, logs; responde perguntas; sugere em janela de chat | Não exigida; output não é actuado | Sessões exploratórias, debug assistido, perguntas sobre o manual |
+| **A1** | *Propõe alterações* | Gera *patches*, abre PRs em estado *draft*, escreve testes, propõe configurações | Sim, **no momento de merge / aplicar**; revisão humana clássica do output | Uso quotidiano de *Copilot* / *Claude Code* em modo "propõe-só" |
+| **A2** | *Executa com confirmação por acção destrutiva* | Executa acções idempotentes/leves sem confirmar (correr testes, listar recursos, ler config); pede confirmação explícita antes de cada acção destrutiva ou *side-effectful* (apagar, escrever em sistemas externos, rodar segredos, fazer *commit/push*, abrir PR fora de *draft*) | Sim, **por acção** destrutiva ou de impacto | Workflows automatizados com humano de plantão (auditoria de PR, *codegen grounded*, *threat modeling* assistido) |
+| **A3** | *Executa autonomamente com revert automático* | Executa cadeias completas sem confirmação intermédia, dentro de um *scope* previamente acordado, com mecanismo de *revert* automático em falha detectada (testes, *health checks*, *anomaly detection*) | **Pós-facto**: notificação obrigatória ao humano responsável; revisão periódica obrigatória do log de sessões | Automações de manutenção (*dependabot* AI-driven, *autofix* de *findings* SAST de baixa criticidade, geração e merge de testes de regressão) |
+| **A4** | *Autónomo total em produção* | Opera continuamente em produção, dentro de mandate registado, sem aprovação por acção; *kill-switch* operacional disponível 24/7 | Auditoria periódica obrigatória (cadência ≤ trimestral); *kill-switch* exercitado pelo menos uma vez por trimestre | *SRE* assistido, agentes de remediação de alertas, *moderation* automatizada — apenas com *mandate* formal e *guardrails* multi-camada |
+
+> 🧭 **Como ler a tabela.** A classificação é feita **por agente e por contexto** (não por organização). O mesmo agente pode ser A1 num projecto L1 interno e A2 num L2 público; nunca A4 em qualquer projecto sem *mandate* formal (ver `REQ-AGN-001`).
+
+### Critérios para escolher o nível certo
+
+Subir de nível **adiciona** obrigações, nunca as remove. A regra prática é a mais conservadora compatível com o trabalho real:
+
+1. Começamos em **A1** sempre que o agente ainda é novo ao projecto ou à equipa.
+2. Subimos a **A2** quando temos auditoria operacional fiável das *tool invocations* e *guardrails* per-tool.
+3. **A3** exige *revert automático* demonstrado em ambiente de teste e cobertura de testes que detecta o tipo de falha que o agente pode introduzir.
+4. **A4** exige *mandate* assinado pelo `CISO` (ou equivalente), *kill-switch* exercitado, e auditoria periódica calendarizada.
+
+Descida de nível (e.g. A2 → A1) é sempre legítima e não exige justificação formal. Subida exige *mandate* (ver `REQ-AGN-001`) e evidência operacional dos pré-requisitos.
+
+---
+
+## 📋 Requisitos REQ-AGN — agentes AI no SDLC
+
+Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (Arquitetura), 06 (Desenvolvimento), 07 (CI/CD), 10 (Testes), 12 (Monitorização) e 14 (Governança). Não substituem requisitos existentes — adicionam a camada agentic específica.
+
+| ID | Requisito | L1 | L2 | L3 | Descrição |
+|---|---|:--:|:--:|:--:|---|
+| **REQ-AGN-001** | *Mandate registado e versionado* | ✔ | ✔ | ✔ | Cada agente em uso operacional (A1+) tem *mandate* documentado e versionado em VCS contendo: identidade, nível de autonomia, escopo de *tools* permitidas, ambientes onde opera, *owner* humano, periodicidade de revisão. Sem *mandate* válido o agente não opera além de A0. Operacionalizado por [Policy 38 — Mandates de agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes). |
+| **REQ-AGN-002** | *Nível de autonomia classificado por contexto* | ✔ | ✔ | ✔ | Cada uso de agente declara o nível A0–A4 aplicável ao contexto específico (projecto × ambiente × tarefa). Mudança de contexto re-avalia o nível. A4 só com *mandate* assinado pelo `CISO` e auditoria calendarizada. |
+| **REQ-AGN-003** | *Kill-switch operacional documentado e testado* | — | ✔ | ✔ | Para agentes A2+, existe mecanismo documentado para interromper a operação imediatamente (revogar credenciais, terminar sessão, isolar runtime). O *kill-switch* é exercitado em sandbox/staging pelo menos uma vez por trimestre (A3) ou por mês (A4); resultado registado. |
+| **REQ-AGN-004** | *Intent declaration antes de tool-call destrutivo* | — | ✔ | ✔ | Em agentes A2+, antes de cada *tool call* com efeito destrutivo ou *side-effectful* (apagar, escrever externo, rotacionar segredos, *commit/push*, *deploy*), o agente declara à infraestrutura (log estruturado, *audit event*) **o que vai fazer e porquê**, antes de o fazer. O gate audita *intent* vs *acção real* a posteriori. |
+
+> 💡 **Onde aterram estes requisitos.** `REQ-AGN-001` é instrumentado pela Policy 38 e referenciado em Cap. 14. `REQ-AGN-002` é declarado no *mandate* (Policy 38) e validado por *guardrails* em Cap. 04 (`ARC-015`). `REQ-AGN-003` aterra no Cap. 04 (arquitetura do *kill-switch*) e Cap. 12 (telemetria que o dispara). `REQ-AGN-004` aterra no Cap. 04 (mecanismo) e Cap. 12 (sinal audit).
+
+### Proporcionalidade por criticidade
+
+| Nível de risco | Requisitos mínimos | Notas operacionais |
+|---|---|---|
+| **L1** | `REQ-AGN-001`, `REQ-AGN-002` | A2+ permitido apenas em ambientes não-produtivos; em produção limitar a A0/A1 |
+| **L2** | `REQ-AGN-001`, `REQ-AGN-002`, `REQ-AGN-003`, `REQ-AGN-004` | A3 em produção apenas para tarefas com *revert* demonstrado; A4 fora de scope típico |
+| **L3** | Todos + auditoria trimestral do registo de *mandates* | A4 apenas com *mandate* assinado pelo `CISO` e revisão GRC; preferência por A2 mesmo em automações maduras |
+
+### Como classificar um uso concreto — fluxo decisório
+
+1. **Identificar o uso**: que agente, em que projecto/ambiente, para que tarefa.
+2. **Mapear *tools* invocadas** e marcar as destrutivas/*side-effectful*.
+3. **Mapear o efeito da pior acção** que o agente pode tomar nesse escopo.
+4. **Escolher o nível mais baixo** compatível com o trabalho real.
+5. **Registar o *mandate*** (Policy 38) com nível, *tools*, *owner*, revisão.
+6. **Operacionalizar `REQ-AGN-003/004`** se A2+, antes de o agente operar.
+
+> 🛑 Quando ficamos em dúvida entre dois níveis, escolhemos sempre o mais baixo. Subir é sempre mais fácil que reparar consequências de ter subido cedo demais.
 
 ---
 

@@ -71,3 +71,19 @@ Cada role tem o seu próprio documento detalhado com:
 - Métricas de cobertura
 
 ---
+
+## Nota: funções compostas (operacionais, não canónicas)
+
+Em organizações com **adopção significativa de agentes AI** com tool-use no SDLC (níveis de autonomia A2+, ver [Cap. 02](../../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia)), surge naturalmente a necessidade de operar o risco específico desses agentes — *mandates*, *intent events*, *kill-switches*, telemetria agentic, *prompt injection* em produção, *drift* de provider.
+
+Não criamos um papel canónico novo para isto. Em vez disso, reconhecemos uma **função composta** — informalmente chamada **"AI Reliability Engineer"** — que combina, com proporções variáveis consoante a organização, três dos 13 papéis já definidos:
+
+- **`AppSec Engineer`** — *threat modeling* agentic, validação de *mandates*, revisão de *intent events*, resposta a *off-policy actions*
+- **`DevOps / SRE`** — provisionamento de *workload identity* para agentes, *kill-switch* operacional, *sinks* de telemetria, exercício do *kill-switch*
+- **`GRC / Compliance`** — conformidade regulatória dos *mandates* (AI Act, RGPD), aprovação A3/A4, auditoria periódica do registo
+
+A função opera sob **mandate explícito do `CISO`** (ou equivalente) que delimita o que esta função pode decidir sem escalar, e mantém os 13 papéis canónicos inalterados — preserva a estabilidade da ontologia SbD-ToE e a sua compatibilidade com o que já foi escrito no manual e nos artigos académicos que citam estes papéis.
+
+> 🧭 **Em uma frase:** organizações maduras em agentes precisam desta função; o manual não precisa de a tipificar como papel novo. Combina-se a partir dos 13.
+
+---

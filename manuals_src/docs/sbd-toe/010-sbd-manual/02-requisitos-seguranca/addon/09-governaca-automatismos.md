@@ -129,7 +129,7 @@ Descida de nível (e.g. A2 → A1) é sempre legítima e não exige justificaç�
 
 ---
 
-## 📋 Requisitos REQ-AGN — agentes AI no SDLC
+## 📋 Requisitos REQ-AGN — agentes AI no SDLC {#req-agn}
 
 Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (Arquitetura), 06 (Desenvolvimento), 07 (CI/CD), 10 (Testes), 12 (Monitorização) e 14 (Governança). Não substituem requisitos existentes — adicionam a camada agentic específica.
 

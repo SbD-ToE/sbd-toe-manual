@@ -648,6 +648,63 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 
 ---
 
+### US-15 – Classificação e registo do *mandate* de agente AI
+
+**Contexto.**
+Quando passamos de **assistentes que sugerem** para **agentes que executam** (criar PRs, ler segredos, *deploy*, escrever em sistemas externos), deixa de ser suficiente saber *"foi revisto?"* — temos de saber *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Operacionalizamos essa autorização através do modelo de cinco níveis de autonomia (A0–A4) e do *mandate* — documento versionado em VCS que regista quem decidiu, com que autoridade, durante quanto tempo, e com que *kill-switch*.
+
+:::userstory
+**História.**
+Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que um agente AI vai operar no projecto em A1 ou superior
+  **Quando** é proposta a sua activação operacional
+  **Então** existe *mandate* registado em VCS com `agent_id`, *runtime* + modelo *pinned*, `autonomy_level`, `scope`, `tools_allowlist`, `identity_ref`, `owner`, `approver`, `kill_switch`, `intent_audit_sink`, `review_cadence`, `effective_window` e `risk_residual`
+- **Dado** que muda o nível de autonomia, o *scope* ou a `tools_allowlist`
+  **Quando** se pretende continuar a operar
+  **Então** é executado novo ciclo Proposta → Aprovação; *amendments* informais são proibidos
+
+**Critérios de aceitação (DoD).**
+- [ ] *Mandate* presente em VCS, validado contra esquema mínimo (campos obrigatórios) e referenciado por `mandate_ref` em audit
+- [ ] `autonomy_level` classificado de acordo com [níveis A0–A4](./addon/governanca-automatismos#niveis-autonomia) e justificado por escrito
+- [ ] *Approver* adequado ao nível (A1: `tech lead`; A2: `tech lead`+`appsec`; A3: `tech lead`+`appsec`+`grc`; A4: `CISO` em assinatura formal)
+- [ ] *Identity* efémera configurada (sem reuso de credenciais humanas)
+- [ ] *Kill-switch* exercitado em sandbox/staging com cronómetro registado antes da activação
+- [ ] `effective_until` definido — sem *mandates* sem janela de validade
+- [ ] *Mandate* indexado no registo organizacional de *mandates* activos
+
+:::
+
+**Artefactos & evidências.**
+- Ficheiro de *mandate* em VCS (Markdown ou YAML) com histórico de versões
+- Registo de aprovação (commit assinado + identificação do *approver*)
+- *Log* do exercício do *kill-switch* (entrada inicial + cadência)
+- Inventário organizacional de *mandates* activos
+- Audit *trail* com `mandate_ref` em cada *tool invocation*
+
+**Proporcionalidade por risco.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | A1+ | *Mandate* simples; aprovação por `tech lead`; A2+ permitido apenas fora de produção |
+| L2 | A1+ | *Mandate* completo; *kill-switch* exercitado trimestralmente em A3 |
+| L3 | A1+ | *Mandate* completo + revisão organizacional trimestral; A4 exige assinatura formal do `CISO` |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Activação | Pedido para operar agente em A1+ | *Owner* + `appsec` | Antes do primeiro *tool call* |
+| Revisão | `review_cadence` ou alteração material | *Owner* + `appsec` | Conforme cadência declarada |
+| Revogação | *Off-policy action*, *credential exposure*, falha de *kill-switch* | *Owner* + `appsec` | Imediata via *kill-switch* |
+
+**Ligações úteis.**
+- 🔗 [Níveis de autonomia A0–A4](./addon/governanca-automatismos#niveis-autonomia)
+- 🔗 [Catálogo `REQ-AGN-*`](./addon/governanca-automatismos#req-agn)
+- 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
+- 🔗 [Policy 16 — Uso de Ferramentas de Apoio (secção 11)](/sbd-toe/assets/policies/policy-uso-ferramentas-apoio)
+
+---
+
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática                    | L1 (baixo risco)               | L2 (médio risco)                          | L3 (alto risco)                                      |

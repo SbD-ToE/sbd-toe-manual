@@ -139,7 +139,41 @@ Métricas de FP por ferramenta devem ser acompanhadas para calibrar as configura
 
 ---
 
-## 7. Responsabilidades
+## 7. *Eval suites* para agentes AI {#eval-suites-agentes}
+
+Quando o sistema inclui um agente AI em operação (ou quando um agente é parte do nosso processo de teste — e.g. auditor de PR automatizado), incluímos **eval suites** entre as técnicas de teste obrigatórias. Não substituem SAST/DAST/SCA — cobrem a fatia agentic, que essas ferramentas não vêem.
+
+### 7.1 Composição mínima
+
+Por cada agente AI em nível A1+ no projecto:
+
+| Componente | A1 | A2 | A3 | A4 |
+|---|:--:|:--:|:--:|:--:|
+| **Regression tests de prompt / skill** | Recomendado | Obrigatório | Obrigatório | Obrigatório |
+| **Abuse / red-team corpus** (*prompt injection*, *jailbreak*) | — | Recomendado | Obrigatório | Obrigatório |
+| **Drift detection** entre versões de modelo / prompt | — | Recomendado | Obrigatório | Obrigatório (janela curta) |
+| **A/B testing** antes de promover skill / system prompt | — | Recomendado | Obrigatório | Obrigatório |
+| **Test telemetry** correlacionada com sinais reais em produção (Cap. 12) | — | — | Recomendado | Obrigatório |
+
+### 7.2 Operação
+
+- *Eval suite* versionada em VCS, com `eval_run_id` arquivado em cada release e ligado a `mandate_ref` (Policy 38).
+- Corre em CI antes do *merge* de mudanças a *system prompts* / *skill files* / *agent files*, e após *bump* da versão do modelo (cross-link Cap. 07 US-19 e Cap. 06 §prompts-como-codigo).
+- *Eval failure* bloqueia *merge* ou força descida de nível de autonomia até estar resolvido.
+- Cobertura tem de ser proporcional ao nível de autonomia declarado — subir nível sem suite à medida é proibido.
+
+### 7.3 Anti-padrões
+
+- ❌ "*Vibe checks*" como única validação.
+- ❌ Suite que nunca falha — falta cobertura adversarial.
+- ❌ Métricas agregadas sem inspecção dos casos críticos.
+- ❌ Suite num repositório separado da skill/prompt — *drift* silencioso.
+
+> 📌 Detalhe operacional em [Cap. 10 — IA nos testes §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites).
+
+---
+
+## 8. Responsabilidades
 
 | Role | Responsabilidade |
 |---|---|
@@ -151,7 +185,7 @@ Métricas de FP por ferramenta devem ser acompanhadas para calibrar as configura
 
 ---
 
-## 8. Revisão e auditoria desta política
+## 9. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -161,16 +195,20 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 9. Referências normativas e técnicas
+## 10. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|
-| SbD-ToE Cap. 10 - Testes de Segurança | Estratégia, gates, findings, triagem, SLA |
-| SbD-ToE Cap. 07 - CI/CD Seguro | SAST, DAST e SCA integrados no pipeline |
+| SbD-ToE Cap. 10 - Testes de Segurança | Estratégia, gates, findings, triagem, SLA; **C5 — eval suites para agentes** |
+| SbD-ToE Cap. 07 - CI/CD Seguro | SAST, DAST e SCA integrados no pipeline; US-19 eval gates |
+| SbD-ToE Cap. 02 — Requisitos (`REQ-AGN-002`) | Justificação do nível de autonomia evidenciada por eval suite |
 | Política de DAST e Fuzzing (`01_policy-dast-fuzzing.md`) | Requisitos específicos de DAST e Fuzzing |
 | Política de Release Seguro (`20_policy-release-seguro.md`) | Checklist de release e aprovação com base nos testes |
+| Policy 38 — Mandates de Agentes AI | Eval suite ligada a `mandate_ref` |
 | OWASP Testing Guide (v4.2) | Metodologia de referência para testes de segurança |
 | OWASP DAST Guide | Boas práticas de análise dinâmica |
+| OWASP Top 10 for LLM Applications (2025) | LLM01 prompt injection; LLM06 excessive agency — corpus de red-team |
 | NIST SP 800-115 | Technical Guide to Information Security Testing |
+| NIST AI RMF 1.0 (MEASURE-2.x) | Avaliação contínua de sistemas AI em produção |
 | SSDF PW.8.2 | Test, evaluate, and remediate the software |
 | DefectDojo | Plataforma de referência para gestão centralizada de findings |

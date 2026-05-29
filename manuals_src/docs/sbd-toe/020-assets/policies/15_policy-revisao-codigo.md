@@ -35,6 +35,11 @@ O objetivo desta política é garantir que:
 | IaC com impacto em segurança | Recomendado | Obrigatório + DevOps | Obrigatório + DevOps + AppSec |
 | Integração externa nova | Recomendado | Obrigatório | Obrigatório + AppSec |
 | Alteração de pipeline CI/CD | Recomendado | Obrigatório | Obrigatório + AppSec |
+| **Prompts, *skill files*, *agent files* e *rules*** (`.claude/skills/*`, `.claude/agents/*`, `.cursorrules`, `.github/copilot-instructions.md`, `AGENTS.md`) | Recomendado | Obrigatório | Obrigatório + AppSec |
+| **Alteração de `tools_allowlist` ou *scopes* de agente AI** | Obrigatório + AppSec | Obrigatório + AppSec | Obrigatório + AppSec + GRC |
+| **Mandate de agente AI** (Policy 38) | Aprovação Tech Lead | Aprovação Tech Lead + AppSec | Aprovação Tech Lead + AppSec + GRC; A4 com `CISO` |
+
+> 📌 **Sobre prompts e *skill files* como código.** Estes artefactos decidem o que o assistente sabe, que *tools* pode invocar e como interage com a organização. Tratamo-los com a mesma disciplina de revisão que aplicamos a código — incluindo *secret scanning* e atenção redobrada a mudanças em `tools_allowlist`/*scopes*. Ver detalhe operacional em [Cap. 06 — Prompts como código](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) e em [Policy 38 — Mandates de Agentes AI](./policy-mandates-agentes).
 
 ---
 

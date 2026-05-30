@@ -266,6 +266,7 @@ const sidebars: SidebarsConfig = {
                 { type: 'doc', id: 'assets/mcp/casos-uso/governance-bootstrap' },
                 { type: 'doc', id: 'assets/mcp/casos-uso/onboarding-formacao' },
                 { type: 'doc', id: 'assets/mcp/casos-uso/cross-check-conformidade' },
+                { type: 'doc', id: 'assets/mcp/casos-uso/agentic-sdlc' },
               ],
             },
             { type: 'doc', id: 'assets/mcp/padroes-avancados' },

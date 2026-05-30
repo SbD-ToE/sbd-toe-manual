@@ -5,7 +5,7 @@ description: Práticas de atualização proativa, TTL, locking e gestão de vers
 tags: [dependencias, sbom, sca, supply-chain, policies]
 ---
 
-# ♻️ Políticas de Atualização de Dependências
+# Políticas de Atualização de Dependências
 
 ## 🌟 Objetivo
 

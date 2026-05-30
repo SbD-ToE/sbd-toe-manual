@@ -7,7 +7,7 @@ tags: [eventos, logging, segurança, observabilidade, catálogo]
 ---
 
 
-# 🪨 Ameaças Mitigadas por Monitorização e Operações
+# Ameaças Mitigadas por Monitorização e Operações
 
 ## 🌟 Objetivo
 

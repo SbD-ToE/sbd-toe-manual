@@ -7,7 +7,7 @@ tags: [formacao, terceiros, quiz, validacao, onboarding, contratados, segurança
 ---
 
 
-# ✅ Quiz de Validação - Formação para Terceiros
+# Quiz de Validação - Formação para Terceiros
 
 Este questionário destina-se a validar se os terceiros (fornecedores, contractors ou equipas externas) **compreenderam os conteúdos mínimos obrigatórios** antes de receberem permissões técnicas.
 

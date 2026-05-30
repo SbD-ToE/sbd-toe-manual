@@ -7,7 +7,7 @@ tags: [proveniência, artefactos, cicd, assinatura, rastreabilidade, build]
 ---
 
 
-# 📦 Integridade e proveniência de artefactos
+# Integridade e proveniência de artefactos
 
 A segurança de uma aplicação depende da **confiança nos artefactos** que são produzidos e distribuídos. Se um artefacto (ex: binário, imagem, pacote) for manipulado em qualquer fase - build, armazenamento ou publicação - o software resultante deixa de ser fiável.
 

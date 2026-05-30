@@ -7,7 +7,7 @@ tags: [cicd, pipelines, yaml, triggers, revisão, automação]
 ---
 
 
-# 🧱 Design seguro dos pipelines
+# Design seguro dos pipelines
 
 O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que apenas alterações **legítimas, autorizadas e rastreáveis** são processadas automaticamente. O pipeline deve ser tratado como **infraestrutura sensível**, com as mesmas precauções de segurança aplicáveis a código fonte, scripts de infraestrutura ou configurações privilegiadas.
 

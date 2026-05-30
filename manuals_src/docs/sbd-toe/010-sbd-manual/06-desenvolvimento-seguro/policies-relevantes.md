@@ -7,7 +7,7 @@ sidebar_position: 60
 ---
 
 
-# 🏠 Políticas Organizacionais - Desenvolvimento Seguro
+# Políticas Organizacionais - Desenvolvimento Seguro
 
 A aplicação eficaz do Capítulo 06 - Desenvolvimento Seguro - requer a existência de **políticas organizacionais formais** que enquadrem, reforcem e legitimem as práticas de codificação segura, revisão de código e validação.
 

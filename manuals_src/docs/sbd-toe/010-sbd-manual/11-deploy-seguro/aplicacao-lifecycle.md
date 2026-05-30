@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, deploy, release, rollback, gates, producao]
 genia: us-format-normalization
 ---
 
-# 🚀 Aplicação de Deploy Seguro no Ciclo de Vida
+# Aplicação de Deploy Seguro no Ciclo de Vida
 
 ## 🧭 Quando aplicar
 
@@ -723,7 +723,7 @@ Operação contínua | Evento | Ops/GRC | Imediato
 
 ---
 
-### US-18 - Release gates específicos para sistemas com agentes AI
+### US-18 - Release gates específicos para sistemas com agentes AI {#us-18}
 
 **Contexto.**
 Quando o sistema inclui **agentes AI** ou um **modelo AI como dependência *load-bearing***, o *release* deixa de ser apenas "novo binário aplicacional → produção". Há três artefactos novos no caminho crítico que podem mudar comportamento sem o binário aplicacional mudar: **versão do modelo**, ***skill files* / *system prompts*** que dirigem o agente, e ***eval suite*** que sustenta a classificação de autonomia A0–A4. O *release* tem de tratar estes três como dimensões próprias, com *gates*, *rollback* independente e estratégia de *canary*.
@@ -736,7 +736,7 @@ Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agente
 - **Dado** uma promoção para produção que altera modelo, *skill files* ou *system prompts*
   **Quando** o pipeline de *release* corre
   **Então** a *eval suite* (Cap. 10 §C5) corre como *gate* obrigatório; *fail* bloqueia a promoção
-- **Dado** que uma versão de modelo em produção apresenta degradação (`OPS-011` *drift*, `OPS-014` *off-policy actions* aumentaram, `OPS-013` *budget overrun*)
+- **Dado** que uma versão de modelo em produção apresenta degradação ([`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) *drift*, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) *off-policy actions* aumentaram, [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013) *budget overrun*)
   **Quando** se decide reverter
   **Então** existe procedimento de *rollback* da versão do modelo **sem** reverter o binário aplicacional (e vice-versa)
 - **Dado** uma mudança de versão maior do modelo (provider muda, novo *fine-tune*, ou novo *system prompt* com impacto material)

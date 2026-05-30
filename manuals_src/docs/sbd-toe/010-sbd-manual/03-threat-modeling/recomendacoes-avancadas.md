@@ -6,7 +6,7 @@ tags: [avançado, threat-modeling, baseline, sincronizacao, governação, métri
 sidebar_position: 30
 ---
 
-# 🧩 Práticas Avançadas em Threat Modeling
+# Práticas Avançadas em Threat Modeling
 
 Este anexo apresenta práticas **facultativas** destinadas a organizações com maior maturidade, obrigações normativas exigentes (ex.: NIS2, DORA, ISO 27034, IEC 62443) ou equipas com processos de engenharia de segurança já consolidados.
 

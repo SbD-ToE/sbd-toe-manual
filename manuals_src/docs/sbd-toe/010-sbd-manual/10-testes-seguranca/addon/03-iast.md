@@ -7,7 +7,7 @@ sidebar_position: 4
 ---
 
 
-# 🔬 Testes Interativos de Segurança (IAST)
+# Testes Interativos de Segurança (IAST)
 
 ## 🌟 Objetivo
 

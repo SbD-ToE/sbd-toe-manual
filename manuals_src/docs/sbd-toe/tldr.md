@@ -5,7 +5,7 @@ description: "Resumo global e sínteses por capítulo do manual Security by Desi
 sidebar_position: 0
 ---
 
-# 🚀 TL;DR - Resumo Executivo do SbD-ToE {#tldr-sbdtoe}
+# TL;DR - Resumo Executivo do SbD-ToE {#tldr-sbdtoe}
 
 <!--web-only-->
 > Esta página fornece uma visão executiva do manual **Security by Design - Theory of Everything (SbD-ToE)** e uma síntese objetiva de cada capítulo.  
@@ -14,7 +14,7 @@ sidebar_position: 0
 
 ---
 
-# 📘 1. O que é o SbD-ToE? {#o-que-e}
+# 1. O que é o SbD-ToE? {#o-que-e}
 O *Security by Design - Theory of Everything (SbD-ToE)* é um modelo **prescritivo, proporcional e verificável** para construir, validar e operar software seguro em qualquer organização.
 
 Integra princípios de **engenharia segura**, governação, práticas de SDLC, threat modeling, requisitos, arquitetura, dependências, pipelines, IaC, containers, operações e controlo contínuo - tudo com **evidência auditável**, **rastreabilidade global**, **mapeamento a frameworks** (SAMM, SSDF, SLSA, DSOMM) e **checklists canónicos**.
@@ -29,7 +29,7 @@ O SbD-ToE funciona como:
 
 ---
 
-# 🧭 2. Como usar o manual (versão curta) {#como-usar}
+# 2. Como usar o manual (versão curta) {#como-usar}
 
 1. **Classificar a aplicação**  
    Determinar L1/L2/L3 com base em Exposição, Dados e Impacto.
@@ -54,7 +54,7 @@ O SbD-ToE funciona como:
 
 ---
 
-# 🧱 3. Pilares Fundamentais do SbD-ToE {#pilares}
+# 3. Pilares Fundamentais do SbD-ToE {#pilares}
 
 - Classificação proporcional (L1–L3)  
 - Requisitos de segurança testáveis  
@@ -70,7 +70,7 @@ O SbD-ToE funciona como:
 
 ---
 
-# 🗺️ 4. TL;DR por capítulo {#tldr-capitulos}
+# 4. TL;DR por capítulo {#tldr-capitulos}
 
 > Cada síntese aponta para o capítulo correspondente com ligações absolutas.
 
@@ -213,7 +213,7 @@ O SbD-ToE funciona como:
 
 ---
 
-# 🧭 5. Fluxo Operativo (SbD-ToE em 1 página) {#fluxo-operativo}
+# 5. Fluxo Operativo (SbD-ToE em 1 página) {#fluxo-operativo}
 
 ```mermaid
 flowchart LR
@@ -229,7 +229,7 @@ flowchart LR
 
 ---
 
-# 📊 6. Maturidade (visão resumida) {#maturidade}
+# 6. Maturidade (visão resumida) {#maturidade}
 
 - **SAMM** - coberturas relevantes em design, implementação, verificação e operações.  
 - **SSDF** - práticas alinhadas em governança, proteção, análise e verificação.  
@@ -240,7 +240,7 @@ Quando aplicado de forma consistente, o SbD-ToE coloca a organização num patam
 
 ---
 
-# 🔗 7. Ligações úteis {#links}
+# 7. Ligações úteis {#links}
 
 - /cap00/intro - Theory of Everything (quando disponível)  
 - /cap15/ - Cross-check Normativo (quando aplicável)  
@@ -248,7 +248,7 @@ Quando aplicado de forma consistente, o SbD-ToE coloca a organização num patam
 
 ---
 
-# 🏁 8. Conclusão Executiva {#conclusao}
+# 8. Conclusão Executiva {#conclusao}
 
 O SbD-ToE fornece uma arquitetura completa para transformar segurança de software numa prática **sistemática, mensurável e auditável**, transversal a toda a organização.
 

@@ -5,7 +5,7 @@ description: Prescrição para o uso controlado de ferramentas de geração auto
 tags: [governanca, automatizacao, ia, sdlc, requisitos, validacao, rastreabilidade, agentic, mandates]
 ---
 
-# 🛠️ Governação do Uso de Automatismos no Desenvolvimento
+# Governação do Uso de Automatismos no Desenvolvimento
 
 Este anexo define **princípios, regras e obrigações mínimas** para o uso de **ferramentas de automatização e geração assistida** (incluindo assistentes baseados em IA, low-code/no-code e geração automática de código) no contexto do *Secure Software Development Lifecycle* (SSDLC).
 
@@ -114,7 +114,7 @@ Quando passamos de "ferramenta que sugere" para "agente que executa", a pergunta
 | **A3** | *Executa autonomamente com revert automático* | Executa cadeias completas sem confirmação intermédia, dentro de um *scope* previamente acordado, com mecanismo de *revert* automático em falha detectada (testes, *health checks*, *anomaly detection*) | **Pós-facto**: notificação obrigatória ao humano responsável; revisão periódica obrigatória do log de sessões | Automações de manutenção (*dependabot* AI-driven, *autofix* de *findings* SAST de baixa criticidade, geração e merge de testes de regressão) |
 | **A4** | *Autónomo total em produção* | Opera continuamente em produção, dentro de mandate registado, sem aprovação por acção; *kill-switch* operacional disponível 24/7 | Auditoria periódica obrigatória (cadência ≤ trimestral); *kill-switch* exercitado pelo menos uma vez por trimestre | *SRE* assistido, agentes de remediação de alertas, *moderation* automatizada — apenas com *mandate* formal e *guardrails* multi-camada |
 
-> 🧭 **Como ler a tabela.** A classificação é feita **por agente e por contexto** (não por organização). O mesmo agente pode ser A1 num projecto L1 interno e A2 num L2 público; nunca A4 em qualquer projecto sem *mandate* formal (ver `REQ-AGN-001`).
+> 🧭 **Como ler a tabela.** A classificação é feita **por agente e por contexto** (não por organização). O mesmo agente pode ser A1 num projecto L1 interno e A2 num L2 público; nunca A4 em qualquer projecto sem *mandate* formal (ver [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)).
 
 ### Critérios para escolher o nível certo
 
@@ -125,7 +125,7 @@ Subir de nível **adiciona** obrigações, nunca as remove. A regra prática é 
 3. **A3** exige *revert automático* demonstrado em ambiente de teste e cobertura de testes que detecta o tipo de falha que o agente pode introduzir.
 4. **A4** exige *mandate* assinado pelo `CISO` (ou equivalente), *kill-switch* exercitado, e auditoria periódica calendarizada.
 
-Descida de nível (e.g. A2 → A1) é sempre legítima e não exige justificação formal. Subida exige *mandate* (ver `REQ-AGN-001`) e evidência operacional dos pré-requisitos.
+Descida de nível (e.g. A2 → A1) é sempre legítima e não exige justificação formal. Subida exige *mandate* (ver [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) e evidência operacional dos pré-requisitos.
 
 ---
 
@@ -140,14 +140,14 @@ Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (
 | **REQ-AGN-003** | *Kill-switch operacional documentado e testado* | — | ✔ | ✔ | Para agentes A2+, existe mecanismo documentado para interromper a operação imediatamente (revogar credenciais, terminar sessão, isolar runtime). O *kill-switch* é exercitado em sandbox/staging pelo menos uma vez por trimestre (A3) ou por mês (A4); resultado registado. |
 | **REQ-AGN-004** | *Intent declaration antes de tool-call destrutivo* | — | ✔ | ✔ | Em agentes A2+, antes de cada *tool call* com efeito destrutivo ou *side-effectful* (apagar, escrever externo, rotacionar segredos, *commit/push*, *deploy*), o agente declara à infraestrutura (log estruturado, *audit event*) **o que vai fazer e porquê**, antes de o fazer. O gate audita *intent* vs *acção real* a posteriori. |
 
-> 💡 **Onde aterram estes requisitos.** `REQ-AGN-001` é instrumentado pela Policy 38 e referenciado em Cap. 14. `REQ-AGN-002` é declarado no *mandate* (Policy 38) e validado por *guardrails* em Cap. 04 (`ARC-015`). `REQ-AGN-003` aterra no Cap. 04 (arquitetura do *kill-switch*) e Cap. 12 (telemetria que o dispara). `REQ-AGN-004` aterra no Cap. 04 (mecanismo) e Cap. 12 (sinal audit).
+> 💡 **Onde aterram estes requisitos.** [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) é instrumentado pela Policy 38 e referenciado em Cap. 14. [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) é declarado no *mandate* (Policy 38) e validado por *guardrails* em Cap. 04 ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)). [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) aterra no Cap. 04 (arquitetura do *kill-switch*) e Cap. 12 (telemetria que o dispara). [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) aterra no Cap. 04 (mecanismo) e Cap. 12 (sinal audit).
 
 ### Proporcionalidade por criticidade
 
 | Nível de risco | Requisitos mínimos | Notas operacionais |
 |---|---|---|
-| **L1** | `REQ-AGN-001`, `REQ-AGN-002` | A2+ permitido apenas em ambientes não-produtivos; em produção limitar a A0/A1 |
-| **L2** | `REQ-AGN-001`, `REQ-AGN-002`, `REQ-AGN-003`, `REQ-AGN-004` | A3 em produção apenas para tarefas com *revert* demonstrado; A4 fora de scope típico |
+| **L1** | [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | A2+ permitido apenas em ambientes não-produtivos; em produção limitar a A0/A1 |
+| **L2** | [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | A3 em produção apenas para tarefas com *revert* demonstrado; A4 fora de scope típico |
 | **L3** | Todos + auditoria trimestral do registo de *mandates* | A4 apenas com *mandate* assinado pelo `CISO` e revisão GRC; preferência por A2 mesmo em automações maduras |
 
 ### Como classificar um uso concreto — fluxo decisório

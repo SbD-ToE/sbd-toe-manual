@@ -7,7 +7,7 @@ tags: [tipo:ciclo, tema:revisao, classificacao, eventos]
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Ciclo de Vida da Classificação de Risco
+# Ciclo de Vida da Classificação de Risco
 
 A gestão de risco em software não deve ser encarada como um evento pontual, mas sim como um **processo iterativo e evolutivo** ao longo do ciclo de vida da aplicação.
 

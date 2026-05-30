@@ -7,7 +7,7 @@ tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
 ---
 
 
-# 🧪 Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CD
+# Estudo de Caso - Aplicar o SbD-ToE ao Próprio Pipeline CI/CD
 
 Este estudo de caso descreve a aplicação transversal e rigorosa do manual **Security by Design - Theory of Everything (SbD-ToE)** ao **próprio sistema de pipelines CI/CD** de uma organização. 
 

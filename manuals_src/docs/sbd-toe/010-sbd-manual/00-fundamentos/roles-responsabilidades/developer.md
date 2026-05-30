@@ -7,7 +7,7 @@ tags: [developer, dev, codigo, responsabilidades]
 sidebar_position: 2
 ---
 
-# 👨‍💻 Developer
+# Developer
 
 ## Visão Geral
 

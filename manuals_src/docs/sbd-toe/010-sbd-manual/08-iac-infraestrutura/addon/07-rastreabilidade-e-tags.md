@@ -7,7 +7,7 @@ tags: [rastreabilidade, versionamento, tags, iac, git, segurança]
 ---
 
 
-# 🔍 Rastreabilidade e Uso de Tags em Projetos IaC
+# Rastreabilidade e Uso de Tags em Projetos IaC
 
 ## 🌟 Objetivo
 

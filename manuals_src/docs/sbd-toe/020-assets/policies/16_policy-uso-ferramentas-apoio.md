@@ -157,12 +157,12 @@ As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer *
 | Regra | A2 | A3 | A4 |
 |---|:--:|:--:|:--:|
 | **Mandate registado e versionado em VCS** (Policy 38) | ✔ | ✔ | ✔ |
-| **Identidade dedicada** com workload identity efémera (OIDC, TTL ≤ 1h) — ver `ARC-015` | ✔ | ✔ | ✔ |
+| **Identidade dedicada** com workload identity efémera (OIDC, TTL ≤ 1h) — ver [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) | ✔ | ✔ | ✔ |
 | **Scope mínimo por tool** declarado no mandate | ✔ | ✔ | ✔ |
-| **Intent declaration** antes de tool call destrutivo (`REQ-AGN-004`) | ✔ | ✔ | ✔ |
+| **Intent declaration** antes de tool call destrutivo ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | ✔ | ✔ | ✔ |
 | **Aprovação humana out-of-band** por acção destrutiva | ✔ | (substituída por revert auto + notificação) | (apenas auditoria periódica) |
 | **Revert automático** demonstrado em testes | — | ✔ | ✔ |
-| **Kill-switch** documentado e operacional (`REQ-AGN-003`) | ✔ | ✔ | ✔ |
+| **Kill-switch** documentado e operacional ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | ✔ | ✔ | ✔ |
 | **Kill-switch exercitado** com cadência registada | Anual | Trimestral | Mensal |
 | **Mandate assinado por `CISO`** (não apenas registado) | — | — | ✔ |
 | **Auditoria periódica do mandate** | Anual | Semestral | Trimestral |
@@ -203,9 +203,9 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 |---|---|
 | SbD-ToE Cap. 06 - Desenvolvimento Seguro | Uso controlado de GenAI, rastreabilidade, constrangimentos |
 | SbD-ToE Cap. 02 - Requisitos de Segurança (addon `09-governaca-automatismos`) | Modelo de níveis de autonomia A0–A4; `REQ-AGN-001..004` |
-| SbD-ToE Cap. 04 - Arquitetura Segura (`ARC-015`) | Agente como *principal* com workload identity efémera e least privilege |
+| SbD-ToE Cap. 04 - Arquitetura Segura ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Agente como *principal* com workload identity efémera e least privilege |
 | SbD-ToE Cap. 03 - Threat Modeling (playbook agentic) | Threat library para agentes com tool-use (MITRE ATLAS `AML.T*`, OWASP LLM Top 10) |
-| Política 38 — Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Operacionalização de `REQ-AGN-001`: mandate, ownership, revisão |
+| Política 38 — Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Operacionalização de [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn): mandate, ownership, revisão |
 | Política de Revisão de Código (`15_policy-revisao-codigo.md`) | Revisão de PRs com output GenAI |
 | Política de Guidelines de Desenvolvimento (`14_policy-guidelines-desenvolvimento.md`) | Constrangimentos técnicos derivados de guidelines |
 | MITRE ATLAS | Catálogo canónico de tactics/techniques adversariais para AI systems |
@@ -213,7 +213,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 | NIST AI RMF 1.0 (2023) + Generative AI Profile (2024) | Risk Management Framework para AI: GOVERN / MAP / MEASURE / MANAGE |
 | NIST SP 800-218A | Secure Software Development Framework Profile for GenAI |
 | NIST SP 800-207 | Zero Trust Architecture — princípios aplicáveis a agentes como *principals* não-humanos |
-| ISO/IEC 42001:2023 | AI Management System (alinha com `REQ-AGN-001` e revisão periódica) |
+| ISO/IEC 42001:2023 | AI Management System (alinha com [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) e revisão periódica) |
 | EU AI Act (Reg. (UE) 2024/1689) | Requisitos regulatórios para sistemas de IA — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |
 | ENISA - Cybersecurity of AI | Orientações de segurança para uso de IA em desenvolvimento |
 | GitHub Copilot Trust Center | Modelo de dados e privacidade de ferramenta de referência |

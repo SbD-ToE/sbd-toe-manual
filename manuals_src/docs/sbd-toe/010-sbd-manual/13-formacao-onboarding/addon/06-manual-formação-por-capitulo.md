@@ -6,7 +6,7 @@ tags: [formacao, manual, por capitulo, sbdtoe, referencia cruzada]
 ---
 
 
-# 👥 Manual de Formação por Perfil
+# Manual de Formação por Perfil
 
 ## 🌟 Objetivo
 

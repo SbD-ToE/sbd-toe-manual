@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, desenvolvimento, codificacao-segura, validaca
 genia: us-format-normalization
 ---
 
-# ⚙️ Aplicação no Ciclo de Vida - Desenvolvimento Seguro
+# Aplicação no Ciclo de Vida - Desenvolvimento Seguro
 
 O desenvolvimento seguro não é um exercício teórico nem uma “boa prática” vaga: exige aplicação consistente em cada fase do ciclo de vida do software.  
 Neste documento mostramos **como transformar as prescrições do capítulo em prática diária**, detalhando quando aplicar, quem executa, que user stories devem entrar no backlog e quais as evidências que permitem auditoria e governação.  

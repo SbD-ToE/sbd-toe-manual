@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:feature-flags, toggles, deploy, rastreab
 ---
 
 
-# 🌺 Utilização Segura de Feature Flags e Toggles
+# Utilização Segura de Feature Flags e Toggles
 
 ## 🌟 Objetivo
 

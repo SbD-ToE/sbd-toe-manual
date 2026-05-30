@@ -6,7 +6,7 @@ tags: [formacao, integracao, capitulos, cultura, aprendizagem continua]
 ---
 
 
-# 🔄 Integração Transversal com os Capítulos Técnicos
+# Integração Transversal com os Capítulos Técnicos
 
 ## 🌟 Objetivo
 

@@ -1,6 +1,6 @@
 ---
 id: atributos-risco
-title: 🛠️ Atributos do Risco
+title: Atributos do Risco
 description: Modelo unificado de caracterização do risco no SbD-ToE, aplicável a riscos técnicos e processuais
 ---
 

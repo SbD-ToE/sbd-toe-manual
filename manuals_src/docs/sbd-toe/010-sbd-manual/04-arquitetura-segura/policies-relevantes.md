@@ -6,7 +6,7 @@ tags: [politicas, arquitetura, governanca]
 sidebar_position: 60
 ---
 
-# 🏛️ Políticas Organizacionais - Arquitetura Segura
+# Políticas Organizacionais - Arquitetura Segura
 
 A adoção eficaz do Capítulo 04 - Arquitetura Segura - exige a existência de **políticas organizacionais formais** que sustentem, legitimem e tornem auditável a aplicação das práticas aqui descritas.
 

@@ -7,7 +7,7 @@ tags: [cicd, código-fonte, scm, revisão, branches, pipelines]
 ---
 
 
-# 📁 Gestão segura de código fonte
+# Gestão segura de código fonte
 
 A segurança do pipeline começa **antes da execução automatizada** - começa no repositório. A gestão segura de código fonte é o **primeiro elo da cadeia CI/CD**, e garante que só código legítimo, revisto e rastreável chega à build.
 

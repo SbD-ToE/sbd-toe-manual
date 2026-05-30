@@ -6,7 +6,7 @@ tags: [iac, rationale, requisitos, catálogo, segurança, pipelines, terraform, 
 sidebar_position: -1
 ---
 
-# 📑 Rationale - Catálogo de Requisitos de IaC
+# Rationale - Catálogo de Requisitos de IaC
 
 ## 🧠 Porque este capítulo é **excecional**
 

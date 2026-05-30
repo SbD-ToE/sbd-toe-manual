@@ -193,7 +193,7 @@ Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), tod
 | **AppSec Engineer** | Modelo A0–A4 + `REQ-AGN-*`; threat modeling agentic (playbook Cap. 03); MITRE ATLAS + OWASP LLM Top 10; eval suites; resposta a *off-policy actions* e *intent-action divergence* | Onboarding + actualização semestral |
 | **DevOps / SRE** | Identidade *workload* para agentes (OIDC); *scoping* per-tool; *kill-switch* operacional + exercícios; telemetria agentic (OPS-012/013/014) | Onboarding + actualização semestral |
 | **GRC / Compliance** | Policy 38 (mandates); cláusulas contratuais AI (Policy 33 §10); AI Act Art. 14 + 26 + 53 + 55; revisão organizacional de mandates | Onboarding + actualização semestral |
-| **Tech Lead / Software Architect** | Padrões `ARC-015`; arquitetura agentic (intent declaration, out-of-band approval, kill-switch); supply chain AI (`DEP-011..014`) | Onboarding + actualização anual |
+| **Tech Lead / Software Architect** | Padrões [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015); arquitetura agentic (intent declaration, out-of-band approval, kill-switch); supply chain AI (`DEP-011..014`) | Onboarding + actualização anual |
 | **Product Owner / Scrum Master** | Implicações dos níveis A0–A4 nos requisitos e *acceptance criteria*; quando uma feature exige *mandate* novo | Onboarding + actualização anual |
 | **CISO / Executive Management** | Risco operacional e regulatório de agentes; aprovação A4; revisão periódica do registo de mandates | Anual |
 

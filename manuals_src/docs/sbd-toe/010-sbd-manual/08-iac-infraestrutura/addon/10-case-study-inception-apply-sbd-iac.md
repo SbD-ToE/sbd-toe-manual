@@ -6,7 +6,7 @@ description: Estudo de caso demonstrando a aplicação integrada, independente d
 tags: [caso-de-estudo, iac, sbd-toe, aplicacao-pratica, seguranca]
 ---
 
-# 🧪 Caso de Estudo – Aplicar o SbD-ToE a um Projeto de Infraestrutura como Código (IaC)
+# Caso de Estudo – Aplicar o SbD-ToE a um Projeto de Infraestrutura como Código (IaC)
 
 Este estudo de caso descreve a **aplicação prática, integrada e rastreável** do manual **Security by Design – Theory of Everything (SbD-ToE)** a um projeto real de **Infraestrutura como Código (IaC)**.
 

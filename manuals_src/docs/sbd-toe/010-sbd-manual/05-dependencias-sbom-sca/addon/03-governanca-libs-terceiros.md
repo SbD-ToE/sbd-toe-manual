@@ -5,7 +5,7 @@ description: Práticas de controlo, aprovação e rastreabilidade de bibliotecas
 tags: [dependencias, sbom, sca, supply-chain, governance]
 ---
 
-# 📄 Governaça de Bibliotecas e Componentes de Terceiros
+# Governaça de Bibliotecas e Componentes de Terceiros
 
 ## 🌟 Objetivo
 

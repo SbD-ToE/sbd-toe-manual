@@ -6,7 +6,7 @@ tags: [policy, organizacional, monitorizacao, deteccao, resposta, operacoes]
 ---
 
 
-# 🏛️ Políticas Organizacionais - Monitorização e Operações
+# Políticas Organizacionais - Monitorização e Operações
 
 A adoção eficaz do **Capítulo 12 - Monitorização e Operações** exige a existência de **políticas organizacionais formais** que regulem e sustentem a **deteção, correlação e resposta a eventos de segurança em tempo real**.
 

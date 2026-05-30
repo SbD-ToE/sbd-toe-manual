@@ -1,6 +1,6 @@
 ---
 id: checklist-revisao
-title: ✅ Checklist SbD-ToE - Governança e Contratação
+title: Checklist SbD-ToE - Governança e Contratação
 sidebar_position: 20
 description: Checklist binário de controlo da aplicação das práticas de governação por projeto
 tags: [checklist, revisao, controlo, projeto, excecoes, aprovacao, contratacao]
@@ -8,7 +8,7 @@ draft: true
 ---
 
 
-# ✅ Checklist de Revisão Periódica - Governança e Contratação
+# Checklist de Revisão Periódica - Governança e Contratação
 
 Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto técnico e visa validar a aplicação prática das práticas prescritas no Capítulo 14 - Governança e Contratação.
 

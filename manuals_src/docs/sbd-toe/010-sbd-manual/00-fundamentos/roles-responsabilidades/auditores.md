@@ -7,7 +7,7 @@ tags: [auditores, auditoria, compliance, responsabilidades]
 sidebar_position: 14
 ---
 
-# 📋 Auditores Internos e Externos
+# Auditores Internos e Externos
 
 ## Visão Geral
 

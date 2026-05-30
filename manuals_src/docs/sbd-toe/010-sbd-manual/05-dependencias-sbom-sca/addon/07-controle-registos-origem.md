@@ -5,7 +5,7 @@ description: Políticas para repositórios internos, proxies, mirrors e validaç
 tags: [dependencias, sbom, sca, supply-chai, invetario]
 ---
 
-# 📂 Controlo de Registos e Origem de Pacotes
+# Controlo de Registos e Origem de Pacotes
 
 ## 🌟 Objetivo
 

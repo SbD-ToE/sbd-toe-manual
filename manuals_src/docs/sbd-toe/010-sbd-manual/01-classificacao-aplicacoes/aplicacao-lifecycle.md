@@ -5,7 +5,7 @@ description: Aplicação da classificação de criticidade ao longo do ciclo de 
 tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-format-normalization]
 ---
 
-# 🛠️ Aplicação da Classificação de Criticidade ao Longo do Ciclo de Vida
+# Aplicação da Classificação de Criticidade ao Longo do Ciclo de Vida
 
 A correta aplicação da classificação de criticidade (L1–L3) ao longo de todo o ciclo de desenvolvimento é essencial para garantir que os controlos de segurança são sempre proporcionais ao risco real, efetivamente rastreáveis e revistos de acordo com os eventos e alterações relevantes.
 

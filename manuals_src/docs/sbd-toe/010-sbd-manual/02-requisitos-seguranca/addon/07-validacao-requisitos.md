@@ -6,7 +6,7 @@ tags: [validação, requisitos, segurança-aplicacional, evidência, SAST, DAST,
 sidebar_position: 7
 ---
 
-# ✅ Validação de Requisitos de Segurança
+# Validação de Requisitos de Segurança
 
 A validação é o mecanismo que converte requisitos definidos em garantia observável. Não basta que um requisito exista no catálogo - é necessário confirmar que foi implementado, que funciona conforme esperado e que existe evidência auditável disso. Este documento prescreve como fazê-lo de forma sistemática, proporcional ao risco e integrada no ciclo de desenvolvimento.
 

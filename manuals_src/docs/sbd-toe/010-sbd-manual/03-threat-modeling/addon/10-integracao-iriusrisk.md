@@ -5,7 +5,7 @@ description: Como substituir o mapeamento manual threat → requisito usando pla
 tags: [iriusrisk, integração, ameaças, requisitos, rastreabilidade, capitulo2]
 ---
 
-# 🧠 Integração com IriusRisk e Ferramentas Automatizadas
+# Integração com IriusRisk e Ferramentas Automatizadas
 
 ## 🌟 Objetivo
 

@@ -6,7 +6,7 @@ tags: [sast, validação, segurança, código, análise estática]
 sidebar_position: 2
 ---
 
-# 🛠️ Testes Estáticos de Segurança (SAST)
+# Testes Estáticos de Segurança (SAST)
 
 ## 🌟 Objetivo
 

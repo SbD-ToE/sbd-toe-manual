@@ -5,7 +5,7 @@ description: Identificação e tratamento dos riscos inerentes ao processo de Th
 tags: [threat-modeling, risco-processo, decisao, validacao]
 ---
 
-# 🛠️ Riscos de Processo no Threat Modeling
+# Riscos de Processo no Threat Modeling
 
 O Threat Modeling é um **processo de decisão estruturada** que visa identificar, analisar e priorizar ameaças relevantes para um sistema concreto, num determinado contexto.
 

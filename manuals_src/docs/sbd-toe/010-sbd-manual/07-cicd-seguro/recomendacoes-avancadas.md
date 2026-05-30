@@ -6,7 +6,7 @@ tags: [avançado, cicd, pipelines, devsecops, zero trust, deteção, simulação
 sidebar_position: 30
 ---
 
-# 🧠 Recomendações Avançadas para Segurança de CI/CD
+# Recomendações Avançadas para Segurança de CI/CD
 
 Este ficheiro complementa os controlos principais definidos neste capítulo com **práticas avançadas**, voltadas para organizações com maior maturidade, ambientes regulados ou necessidades críticas de rastreabilidade, auditabilidade e resistência a ataques sofisticados.
 

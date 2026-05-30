@@ -7,7 +7,7 @@ tags: [tipo:modelo, tema:rastreabilidade, requisitos, controlos, evidencia, ALM,
 
 <!--template: sbdtoe-addon -->
 
-# 🔗 Modelo de Rastreabilidade entre Riscos, Requisitos e Controlos
+# Modelo de Rastreabilidade entre Riscos, Requisitos e Controlos
 
 ## Objetivo
 

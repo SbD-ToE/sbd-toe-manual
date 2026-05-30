@@ -7,7 +7,7 @@ tags: [tipo:analise, risco-residual, aceitacao, excecao]
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Análise de Risco Residual
+# Análise de Risco Residual
 
 O **risco residual** representa o risco que **permanece após a aplicação efetiva dos controlos definidos**, e constitui a base factual para qualquer decisão consciente de aceitação, mitigação adicional ou rejeição.
 

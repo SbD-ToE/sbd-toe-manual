@@ -8,7 +8,7 @@ tags: [governanca, ownership, excecoes, validacao]
 
 
 
-# 🧱 Modelo de Governação para Security by Design
+# Modelo de Governação para Security by Design
 
 ## 🌟 Objetivo
 

@@ -7,7 +7,7 @@ tags: [tipo:mapeamento, ameacas, risco, validacao, controlo]
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Mapeamento de Ameaças para Validação do Risco
+# Mapeamento de Ameaças para Validação do Risco
 
 O mapeamento de ameaças conhecidas é um **mecanismo essencial de validação da análise de risco**, garantindo que os riscos identificados refletem **vetores de ataque reais, plausíveis e documentados**.
 

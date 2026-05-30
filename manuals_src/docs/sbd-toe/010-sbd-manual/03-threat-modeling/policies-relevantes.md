@@ -4,7 +4,7 @@ title: Policies
 sidebar_position: 60
 ---
 
-# 🏛️ Políticas Organizacionais - Threat Modeling
+# Políticas Organizacionais - Threat Modeling
 
 A adoção eficaz do Capítulo 03 - Threat Modeling - depende da existência de **políticas organizacionais formais** que sustentem:
 

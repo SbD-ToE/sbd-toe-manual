@@ -207,7 +207,7 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 - Política de retenção do *provider* explicitada: durante quanto tempo dados enviados são retidos; em que sistemas; com que controlos de acesso.
 - *Training opt-out* contratualizado quando aplicável — preferência por **zero retention** para dados sensíveis (PII, código proprietário, segredos potencialmente expostos em prompts).
-- Quando o *provider* tem *training* "opt-out por defeito", essa garantia é declarada na ficha de aprovação (cross-link `DEP-014`).
+- Quando o *provider* tem *training* "opt-out por defeito", essa garantia é declarada na ficha de aprovação (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 ### 10.2 Localização de processamento
 
@@ -229,7 +229,7 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 ### 10.5 SLA de disponibilidade e *fallback*
 
 - SLA de disponibilidade declarado; mecanismo de comunicação em caso de *outage*.
-- A arquitectura do nosso sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link `ARC-014`/`ARC-015`).
+- A arquitectura do nosso sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
 
 ### 10.6 Conformidade regulatória declarada
 
@@ -240,7 +240,7 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 ### 10.7 Operacionalização
 
-- O provedor entra na **lista aprovada `DEP-014`** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
+- O provedor entra na **lista aprovada [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
 - Cláusulas críticas registadas na ficha do provedor; revisão calendarizada conforme nível de risco (L1 anual; L2 semestral; L3 trimestral).
 - Detalhe operacional completo em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain) e no Cap. 14 US "Contratação de provedores AI".
 

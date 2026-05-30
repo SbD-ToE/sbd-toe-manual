@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, testes, seguranca, integracao, validacao]
 genia: us-format-normalization
 ---
 
-# 🧪 Aplicação de Testes de Segurança ao Longo do Ciclo de Vida
+# Aplicação de Testes de Segurança ao Longo do Ciclo de Vida
 
 ## 🧭 Quando aplicar
 

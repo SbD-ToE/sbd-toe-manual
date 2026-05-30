@@ -5,7 +5,7 @@ description: Pré-condições técnicas e de governança para Threat-Led Penetra
 tags: [tlpt, dora, pentest, threat-intelligence, resiliência, regulatório, attestation, tiber-eu]
 ---
 
-# 🎯 TLPT - Readiness e Enquadramento Regulatório (DORA)
+# TLPT - Readiness e Enquadramento Regulatório (DORA)
 
 O **Threat-Led Penetration Testing (TLPT)** é o nível mais exigente de validação ofensiva previsto no quadro regulatório europeu. Ao contrário do PenTest convencional - descrito no [addon 11](./pen-testing) -, o TLPT não é uma prática opcional de maturidade: é uma **obrigação regulatória** para entidades identificadas pela autoridade competente, com requisitos específicos de âmbito, metodologia, qualificação de executores e attestation formal pela autoridade TLPT designada.
 

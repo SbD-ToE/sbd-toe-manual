@@ -6,7 +6,7 @@ tags: [terceiros, onboarding, formacao, rastreabilidade, inclusao]
 ---
 
 
-# 🤝 Inclusão de Terceiros em Programas de Formação
+# Inclusão de Terceiros em Programas de Formação
 
 Este documento define uma abordagem prática e verificável para garantir que **fornecedores externos, contractors e outsourcing** estão devidamente integrados nos programas de formação em segurança, antes de obterem acesso técnico a projetos, sistemas ou dados sensíveis.
 

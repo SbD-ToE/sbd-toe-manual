@@ -7,7 +7,7 @@ tags: [exceções, visibilidade, cicd, governação, auditoria, segurança]
 ---
 
 
-# 📎 Anexo Técnico - Aplicação do SbD-ToE ao Pipeline CI/CD
+# Anexo Técnico - Aplicação do SbD-ToE ao Pipeline CI/CD
 
 Este anexo complementa o estudo de caso de aplicação do manual SbD-ToE ao pipeline CI/CD como projeto L3, fornecendo artefactos técnicos e operacionais reutilizáveis para equipas de engenharia, segurança e governance.
 

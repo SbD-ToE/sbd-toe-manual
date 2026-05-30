@@ -5,7 +5,7 @@ description: Comparação prática de abordagens e ferramentas recomendadas
 tags: [stride, pasta, linddun, ferramentas, tooling, metodologias]
 ---
 
-# 🛡️ Metodologias e Ferramentas de Threat Modeling
+# Metodologias e Ferramentas de Threat Modeling
 
 ## 🌟 Objetivo
 
@@ -168,9 +168,9 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 |---|---|---|---|
 | Indirect prompt injection via repo content / RAG | `AML.T0051.001` · LLM01-2025 | Input · Inference | Cap. 04 — *boundary controls for prompt injection*; tratar conteúdo retrieval como user-untrusted |
 | Tool poisoning (servidor MCP malicioso ou comprometido) | `AML.T0110` | Agentic | Cap. 04 — validação de MCP servers como dependência; Cap. 05 — supply chain de *tools* |
-| AI agent excessive agency | LLM06-2025 | Agentic · Tool | Cap. 02 — `REQ-AGN-002` (nível classificado); Cap. 04 — `ARC-015` (least privilege per-tool) |
-| Exfiltration via AI agent tool invocation | `AML.T0086` | Tool | Cap. 04 — `ARC-015` (audit completo por tool call); Cap. 12 — telemetria agentic |
-| Data destruction via AI agent | `AML.T0101` | Tool | Cap. 02 — `REQ-AGN-003` (kill-switch) e `REQ-AGN-004` (intent declaration); Cap. 04 — aprovação out-of-band em A2+ |
+| AI agent excessive agency | LLM06-2025 | Agentic · Tool | Cap. 02 — [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (nível classificado); Cap. 04 — [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (least privilege per-tool) |
+| Exfiltration via AI agent tool invocation | `AML.T0086` | Tool | Cap. 04 — [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (audit completo por tool call); Cap. 12 — telemetria agentic |
+| Data destruction via AI agent | `AML.T0101` | Tool | Cap. 02 — [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (kill-switch) e [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (intent declaration); Cap. 04 — aprovação out-of-band em A2+ |
 | LLM meta-prompt extraction | `AML.T0061` · LLM07-2025 | Inference | Cap. 04 — output filtering anti-exfiltração de system prompt; assumir system prompt como público |
 | LLM jailbreak (multi-turn social) | `AML.T0054` | Inference | Cap. 10 — eval suites de regressão; red-team contínuo |
 | AI supply chain "rug pull" (modelo/tool muda silenciosamente) | `AML.T0109` | Agentic · (Tool) | Cap. 05 — provider pinning + AI BOM; Cap. 12 — drift detection |
@@ -181,7 +181,7 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 
 1. **Inventário do agente**: qual o cliente AI, qual o modelo, qual o nível A0–A4 declarado no *mandate* (`REQ-AGN-001/002`), que *tools* estão na allowlist.
 2. **Desenhar o DFD agentic**: marcar os cinco participantes e as quatro fronteiras; identificar onde está cada *tool* e o sistema externo associado.
-3. **Marcar acções destrutivas**: que *tool calls* podem apagar, escrever externo, rotacionar segredos, *deploy*. Estas são as que pedem `REQ-AGN-004` (intent declaration) e aprovação out-of-band.
+3. **Marcar acções destrutivas**: que *tool calls* podem apagar, escrever externo, rotacionar segredos, *deploy*. Estas são as que pedem [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (intent declaration) e aprovação out-of-band.
 4. **Aplicar threat library**: para cada fronteira, percorrer a tabela acima; eliminar as não aplicáveis com justificação curta.
 5. **Mapear para controlos**: cada *threat* não eliminada gera uma entrada de controlo a aterrar em Cap. 04 (arquitetura), Cap. 07 (CI/CD), Cap. 10 (testes) ou Cap. 12 (monitorização).
 6. **Acoplar ao registo organizacional**: cruzar com o *mandate* do agente (Policy 38) — se uma mitigação não estiver implementada, o agente não opera nesse nível até estar.

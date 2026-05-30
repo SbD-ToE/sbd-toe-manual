@@ -1,11 +1,11 @@
 ---
 id: diagramas-referencia
-title: 🧹 Modelos de Arquitetura Segura Reutilizáveis
+title: Modelos de Arquitetura Segura Reutilizáveis
 description: Modelos prescritivos com ligação a requisitos (ARC), risco e ameaças mitigadas
 sidebar_position: 4
 ---
 
-# 🧹 Modelos de Arquitetura Segura Reutilizáveis
+# Modelos de Arquitetura Segura Reutilizáveis
 
 Este documento apresenta modelos de referência que podem ser usados como base segura para novos projetos.  
 Cada modelo está associado a:

@@ -6,7 +6,7 @@ description: Regras, thresholds e melhores práticas para alertas eficazes basea
 tags: [alertas, eventos críticos, deteção, thresholds, severidade]
 ---
 
-# 🚨 Alertas baseados em Eventos Críticos
+# Alertas baseados em Eventos Críticos
 
 ## 🌟 Objetivo
 

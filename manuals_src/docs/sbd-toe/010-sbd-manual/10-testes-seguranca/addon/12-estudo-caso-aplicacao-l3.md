@@ -6,7 +6,7 @@ tags: [estudo de caso, testes, segurança, integração, devsecops, aplicação 
 sidebar_position: 12
 ---
 
-# 🔪  Aplicacao Prática das Prescrições SbD-ToE numa Aplicação L3
+# Aplicacao Prática das Prescrições SbD-ToE numa Aplicação L3
 
 O exemplo refere-se a um sistema de pagamento online para retalho e serviços públicos. 
 A aplicação foi classificada como **nível L3** no Capítulo 01 - Gestão de Risco, devido à sua criticidade funcional e exposição a dados financeiros e pessoais. O processo de desenvolvimento e entrega segue integralmente o modelo prescrito no manual SbD-ToE, e aqui focamos como os processos de teste em particular, e outras areas do SbD-ToE são orquestradas.

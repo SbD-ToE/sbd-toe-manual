@@ -6,7 +6,7 @@ description: Regras e ferramentas para validação de segurança diretamente no 
 tags: [linters, validação, IDE, pre-commit, segurança, automação]
 ---
 
-# 🧪 Linters e Validações Locais de Segurança
+# Linters e Validações Locais de Segurança
 
 > 💡 **Nota prática**:  
 > A maior parte das linguagens e frameworks modernas já possui **linters e validadores configuráveis** (como ESLint, Pylint, RuboCop, etc.), muitos dos quais incluem **regras básicas de segurança por omissão**.  

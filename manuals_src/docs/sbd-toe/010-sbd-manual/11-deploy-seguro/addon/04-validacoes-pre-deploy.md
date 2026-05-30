@@ -5,7 +5,7 @@ description: Verificações obrigatórias antes da promoção de código para pr
 tags: [tipo:anexo, grupo:execucao, tema:validacao, pre-deploy, segurança]
 ---
 
-# 🔧 Validações de Segurança antes de Deploy
+# Validações de Segurança antes de Deploy
 
 Este documento define as **validações técnicas e de segurança obrigatórias antes da aprovação de um deploy**, com base no risco da aplicação, criticidade da release e contexto de execução.
 

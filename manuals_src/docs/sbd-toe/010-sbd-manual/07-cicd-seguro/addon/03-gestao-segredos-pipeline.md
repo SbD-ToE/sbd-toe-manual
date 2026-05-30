@@ -7,7 +7,7 @@ tags: [segredos, cicd, vault, pipelines, segurança, variáveis]
 ---
 
 
-# 🔐 Gestão e injeção segura de segredos
+# Gestão e injeção segura de segredos
 
 A gestão de segredos nos pipelines CI/CD é um dos vetores de ataque mais críticos da cadeia de desenvolvimento. Tokens de acesso, chaves API, credenciais de deploy e outros segredos são frequentemente expostos acidentalmente em variáveis, logs ou ficheiros versionados.
 

@@ -7,7 +7,7 @@ tags: [gestao-executiva, ciso, governance, responsabilidades]
 sidebar_position: 10
 ---
 
-# 🏛️ Gestão Executiva / CISO
+# Gestão Executiva / CISO
 
 ## Visão Geral
 

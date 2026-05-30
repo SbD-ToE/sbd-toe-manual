@@ -5,7 +5,7 @@ sidebar_position: 20
 tags: [canon, checklist, controlo, projeto, aplicacao]
 ---
 
-# ✅ Checklist de Revisão - Classificação da Criticidade Aplicacional
+# Checklist de Revisão - Classificação da Criticidade Aplicacional
 
 Este checklist aplica-se a todas as aplicações classificadas segundo os critérios definidos no **Capítulo 01 - Classificação da Criticidade Aplicacional**.  
 Serve como **instrumento de verificação periódica, auditoria interna e KPI operativo de maturidade**, permitindo confirmar se:

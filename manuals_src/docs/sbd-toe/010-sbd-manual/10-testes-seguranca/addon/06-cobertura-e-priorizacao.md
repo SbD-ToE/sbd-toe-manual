@@ -7,7 +7,7 @@ sidebar_position: 7
 ---
 
 
-# 🎯 Cobertura e Priorização dos Testes de Segurança
+# Cobertura e Priorização dos Testes de Segurança
 
 ## 🌟 Objetivo
 

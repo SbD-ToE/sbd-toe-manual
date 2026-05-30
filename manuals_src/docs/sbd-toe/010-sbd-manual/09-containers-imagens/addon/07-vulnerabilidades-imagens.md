@@ -5,7 +5,7 @@ description: Identificação e análise técnica de vulnerabilidades em containe
 tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 ---
 
-# 🧨 Deteção e Tratamento de Vulnerabilidades em Imagens
+# Deteção e Tratamento de Vulnerabilidades em Imagens
 
 ## 🌟 Objetivo
 

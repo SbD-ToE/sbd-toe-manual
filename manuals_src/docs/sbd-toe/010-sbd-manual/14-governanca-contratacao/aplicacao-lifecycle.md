@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, governanca, contratacao, excecoes, rastreabil
 genia: us-format-normalization
 ---
 
-# 🏛️ Aplicação de Governança & Contratação no Ciclo de Vida
+# Aplicação de Governança & Contratação no Ciclo de Vida
 
 ## 🧭 Quando aplicar
 
@@ -812,10 +812,10 @@ Como **Security Champion + Tech Lead**, quero **recolher feedback estruturado p�
 
 ---
 
-### US-21 - Contratação de provedores de modelos AI
+### US-21 - Contratação de provedores de modelos AI {#us-21}
 
 **Contexto.**
-A US-14 cobre reavaliação contínua de fornecedores em geral. Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace, providers próprios *self-hosted*), surgem cláusulas que os contratos tradicionais não cobriam: *data retention*, *training opt-out*, localização de processamento (RGPD), audit rights sobre logs de inferência, SLA de notificação de mudanças de versão, conformidade declarada com AI Act Art. 53/55 quando o provedor fornece GPAI. Esta US operacionaliza esses requisitos contratuais antes de o provedor entrar na lista aprovada (cross-link `DEP-014`).
+A US-14 cobre reavaliação contínua de fornecedores em geral. Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace, providers próprios *self-hosted*), surgem cláusulas que os contratos tradicionais não cobriam: *data retention*, *training opt-out*, localização de processamento (RGPD), audit rights sobre logs de inferência, SLA de notificação de mudanças de versão, conformidade declarada com AI Act Art. 53/55 quando o provedor fornece GPAI. Esta US operacionaliza esses requisitos contratuais antes de o provedor entrar na lista aprovada (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 :::userstory
 **História.**
@@ -826,7 +826,7 @@ Como **GRC / Compliance / Procurement** com apoio de **Legal**, quero que cada c
   **Quando** se iniciam as diligências contratuais
   **Então** a *due diligence* (cross-link Policy 33 §3) é estendida com os critérios específicos AI: data retention, training opt-out, localização (RGPD Art. 44–49), audit rights, SLA de notificação, AI Act Art. 53/55 quando GPAI
 - **Dado** que o contrato é finalizado
-  **Quando** o provedor é adicionado à lista aprovada (`DEP-014`)
+  **Quando** o provedor é adicionado à lista aprovada ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014))
   **Então** o `contract_ref` referencia o contrato vigente e regista cláusulas críticas
 - **Dado** que o provedor altera modelo de dados (e.g. nova política de training) ou versão maior do modelo
   **Quando** é notificado conforme SLA contratual
@@ -841,7 +841,7 @@ Como **GRC / Compliance / Procurement** com apoio de **Legal**, quero que cada c
 - [ ] **SLA de disponibilidade** declarado; *fallback* arquitectónico em caso de *outage* (cross-link Cap. 04 §AI/ML)
 - [ ] **Conformidade declarada com AI Act Art. 53/55** quando o provedor fornece GPAI
 - [ ] **Conformidade declarada com RGPD Art. 28** (sub-processadores) quando há dados pessoais
-- [ ] Provedor incluído na lista aprovada (`DEP-014`) com `risk_classification`
+- [ ] Provedor incluído na lista aprovada ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)) com `risk_classification`
 - [ ] Cláusulas críticas registadas na ficha do provedor; revisão calendarizada
 
 :::

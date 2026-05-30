@@ -6,7 +6,7 @@ description: Estratégias de planeamento e controlo para garantir uma adoção e
 tags: [planeamento, controlo, iac, segurança, adoção, governação]
 ---
 
-# 🧭 Planeamento de Execução e Controlo de Estado
+# Planeamento de Execução e Controlo de Estado
 
 ## 🌟 Objetivo
 

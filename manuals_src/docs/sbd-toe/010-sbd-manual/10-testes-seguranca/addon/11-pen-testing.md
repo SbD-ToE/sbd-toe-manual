@@ -7,7 +7,7 @@ sidebar_position: 12
 ---
 
 
-# 🕵️ PenTesting - Validação de Segurança Ofensiva
+# PenTesting - Validação de Segurança Ofensiva
 
 Este documento estabelece o enquadramento técnico e processual para a realização de **testes de penetração (PenTesting)**, como prática complementar à validação contínua descrita no Capítulo 10.
 

@@ -4,7 +4,7 @@ title: Origem e Proveniência do Código
 description: Tratamento do código como artefacto de proveniência controlada no desenvolvimento seguro
 ---
 
-# 🧬 Origem e Proveniência do Código
+# Origem e Proveniência do Código
 
 Durante muitos anos, o desenvolvimento seguro partiu de um pressuposto implícito:  
 o código era escrito maioritariamente pela própria equipa, de forma deliberada e compreendida.

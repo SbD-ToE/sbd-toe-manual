@@ -5,7 +5,7 @@ description: Métricas operacionais e institucionais que permitem avaliar a efic
 tags: [kpi, metricas, formacao, onboarding, dashboards, rastreabilidade]
 ---
 
-# 📊 Indicadores e Métricas de Formação
+# Indicadores e Métricas de Formação
 
 Estes indicadores ajudam a avaliar se o programa de formação está a ser eficaz, abrangente e atualizado.
 

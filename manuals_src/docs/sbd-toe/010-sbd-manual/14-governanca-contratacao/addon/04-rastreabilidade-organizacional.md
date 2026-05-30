@@ -8,7 +8,7 @@ tags: [rastreabilidade, evidencias, compliance, auditoria]
 
 
 
-# 🔗 Modelo de Rastreabilidade Organizacional
+# Modelo de Rastreabilidade Organizacional
 
 ## 🌟 Objetivo
 

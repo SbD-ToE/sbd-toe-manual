@@ -7,7 +7,7 @@ tags: [tipo:risco-processo, tema:automacao, validacao, decisao, rastreabilidade]
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Validação Assistida por Ferramentas - Risco de Processo
+# Validação Assistida por Ferramentas - Risco de Processo
 
 ## 🎯 Objetivo
 

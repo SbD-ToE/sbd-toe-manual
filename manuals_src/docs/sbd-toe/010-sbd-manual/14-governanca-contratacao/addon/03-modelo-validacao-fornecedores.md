@@ -8,7 +8,7 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 
 
 
-# 🛠️ Modelo de Validação de Fornecedores e Terceiros
+# Modelo de Validação de Fornecedores e Terceiros
 
 ## 🌟 Objetivo
 

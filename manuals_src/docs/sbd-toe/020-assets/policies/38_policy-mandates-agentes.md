@@ -51,12 +51,12 @@ Cada *mandate* é um documento versionado em VCS (formato Markdown ou YAML, à e
 | `autonomy_level` | A0 / A1 / A2 / A3 / A4 | Conforme [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia) |
 | `scope` | Repositórios, *namespaces*, sistemas, dados sobre os quais opera | Lista positiva; sem wildcards desnecessários |
 | `tools_allowlist` | Tools permitidas com argumentos máximos e *destrutividade* | Cada *tool* etiquetada como `read` / `write` / `destructive` / `external` |
-| `environments` | Onde opera (`dev`, `staging`, `prod`, …) | Identidade dedicada por ambiente (Cap. 04 `ARC-011` + `ARC-015`) |
+| `environments` | Onde opera (`dev`, `staging`, `prod`, …) | Identidade dedicada por ambiente (Cap. 04 `ARC-011` + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) |
 | `identity_ref` | Workload identity / *service account* / OIDC subject | Sem reuso de credenciais humanas |
 | `owner` | Humano responsável pela operação | Necessariamente humano; com *backup* nomeado |
 | `approver` | Quem aprovou o mandate | `tech lead` (L1), `appsec + tech lead` (L2), `CISO + appsec + grc` (L3 ou A4) |
-| `kill_switch` | Procedimento + responsável + tempo máximo de efeito | Documentado e exercitável (`REQ-AGN-003`) |
-| `intent_audit_sink` | Onde aterram os *intent events* (`REQ-AGN-004`) | Sistema observável (Cap. 12) |
+| `kill_switch` | Procedimento + responsável + tempo máximo de efeito | Documentado e exercitável ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) |
+| `intent_audit_sink` | Onde aterram os *intent events* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | Sistema observável (Cap. 12) |
 | `review_cadence` | Quando voltamos a perguntar | A1: anual · A2: anual · A3: semestral · A4: trimestral |
 | `effective_from` / `effective_until` | Janela de validade do mandate | `effective_until` obrigatório; sem mandates "para sempre" |
 | `risk_residual` | O que esta autorização não cobre / aceita | Honesto sobre limites |
@@ -192,7 +192,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 |---|---|
 | SbD-ToE Cap. 02 (addon `09-governaca-automatismos`) | Modelo A0–A4 e requisitos `REQ-AGN-001..004` |
 | SbD-ToE Cap. 03 (playbook agentic) | Threat library para agentes com tool-use |
-| SbD-ToE Cap. 04 (`ARC-015`) | Padrões arquitectónicos: agente como *principal* isolado |
+| SbD-ToE Cap. 04 ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Padrões arquitectónicos: agente como *principal* isolado |
 | SbD-ToE Cap. 14 — Governança e Contratação | Excepções, contratação, auditoria |
 | [Policy 16 — Uso de Ferramentas de Apoio ao Desenvolvimento](./policy-uso-ferramentas-apoio) | Regras operacionais A2+ |
 | [Policy 05 — Gestão de Excepções](./policy-gestao-excecoes) | Processo formal de excepções |

@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:pipeline, segurança, deploy]
 ---
 
 
-# 🧠 Modelo de Controlo de Execução em Runtime
+# Modelo de Controlo de Execução em Runtime
 
 ## 🌟 Objetivo
 

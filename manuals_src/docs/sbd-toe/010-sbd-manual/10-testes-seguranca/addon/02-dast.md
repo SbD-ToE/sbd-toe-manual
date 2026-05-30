@@ -7,7 +7,7 @@ sidebar_position: 3
 ---
 
 
-# 🌐 Testes Dinâmicos de Segurança (DAST)
+# Testes Dinâmicos de Segurança (DAST)
 
 ## 🌟 Objetivo
 

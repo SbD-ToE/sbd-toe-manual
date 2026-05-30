@@ -5,7 +5,7 @@ description: Minimização, reforço e verificação efetiva de permissões em i
 tags: [containers, hardening, permissoes, runtime, isolamento, seguranca]
 ---
 
-# 🛡️ Hardening e Restrições de Execução em Containers
+# Hardening e Restrições de Execução em Containers
 
 ## 🌟 Objetivo
 

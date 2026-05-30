@@ -7,7 +7,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 ---
 
 
-# 🔍 Validações de Segurança no Código
+# Validações de Segurança no Código
 
 > 💡 **Nota prática**:  
 > Ferramentas como **SonarQube**, **Checkmarx**, **Kiuwan**, **Semgrep**, **Xygeni**, **Fortify** e outras permitem executar validações de segurança diretamente no código, durante o desenvolvimento, nos PRs ou em pipelines CI/CD.  

@@ -8,7 +8,7 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 
 
 
-# 📜 Cláusulas Contratuais de Segurança
+# Cláusulas Contratuais de Segurança
 
 ## 🌟 Objetivo
 

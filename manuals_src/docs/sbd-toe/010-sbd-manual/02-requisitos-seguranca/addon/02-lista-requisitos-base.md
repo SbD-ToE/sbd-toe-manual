@@ -7,7 +7,7 @@ tags: [tipo:catalogo, classe:aplicacional, requisitos, segurança-aplicacional, 
 sidebar_position: 2
 ---
 
-# 📋 Catálogo Base de Requisitos de Segurança
+# Catálogo Base de Requisitos de Segurança
 
 Este catálogo constitui a **referência canónica de requisitos de segurança aplicacional** do SbD-ToE. Cada requisito é identificado por um **ID canónico estável** (`CATEGORIA-NNN`), tem aplicabilidade definida por nível de risco (L1–L3) e um critério de aceitação mínimo que permite validação objectiva e integração directa em backlogs, definições de pronto e processos de auditoria.
 

@@ -201,7 +201,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 |---|---|
 | SbD-ToE Cap. 10 - Testes de Segurança | Estratégia, gates, findings, triagem, SLA; **C5 — eval suites para agentes** |
 | SbD-ToE Cap. 07 - CI/CD Seguro | SAST, DAST e SCA integrados no pipeline; US-19 eval gates |
-| SbD-ToE Cap. 02 — Requisitos (`REQ-AGN-002`) | Justificação do nível de autonomia evidenciada por eval suite |
+| SbD-ToE Cap. 02 — Requisitos ([`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | Justificação do nível de autonomia evidenciada por eval suite |
 | Política de DAST e Fuzzing (`01_policy-dast-fuzzing.md`) | Requisitos específicos de DAST e Fuzzing |
 | Política de Release Seguro (`20_policy-release-seguro.md`) | Checklist de release e aprovação com base nos testes |
 | Policy 38 — Mandates de Agentes AI | Eval suite ligada a `mandate_ref` |

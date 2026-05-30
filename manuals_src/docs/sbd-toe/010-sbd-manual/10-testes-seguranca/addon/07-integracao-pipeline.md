@@ -7,7 +7,7 @@ sidebar_position: 8
 ---
 
 
-# 🛠️ Integração dos Testes de Segurança no Pipeline CI/CD
+# Integração dos Testes de Segurança no Pipeline CI/CD
 
 ## 🌟 Objetivo
 

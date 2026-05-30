@@ -5,7 +5,7 @@ description: Como ligar ameaças identificadas a requisitos formais definidos no
 tags: [mapeamento, requisitos, threats, stride, capitulo2, rastreabilidade]
 ---
 
-# 🧩 Mapeamento de Ameaças para Requisitos de Segurança
+# Mapeamento de Ameaças para Requisitos de Segurança
 
 ## 🌟 Objetivo
 

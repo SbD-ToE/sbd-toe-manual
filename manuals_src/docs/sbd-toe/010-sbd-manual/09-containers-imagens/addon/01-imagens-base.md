@@ -5,7 +5,7 @@ description: Seleção, reforço e validação de imagens base seguras para cont
 tags: [containers, imagens base, hardening, runtime, supply chain]
 ---
 
-# 🧱 Imagens Base Seguras e Minimalistas
+# Imagens Base Seguras e Minimalistas
 
 ## 🌟 Objetivo
 

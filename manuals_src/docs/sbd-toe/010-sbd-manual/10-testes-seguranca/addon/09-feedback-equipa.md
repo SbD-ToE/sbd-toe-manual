@@ -7,7 +7,7 @@ sidebar_position: 10
 ---
 
 
-# 🤝 Feedback à Equipa sobre Resultados de Segurança
+# Feedback à Equipa sobre Resultados de Segurança
 
 ## 🌟 Objetivo
 

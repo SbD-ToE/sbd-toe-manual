@@ -8,7 +8,7 @@ tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta]
 ---
 
 
-# ✅ Checklist de Revisão - Capítulo 12: Monitorização e Operações
+# Checklist de Revisão - Capítulo 12: Monitorização e Operações
 
 Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos e resposta a incidentes**.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12**, permitindo:

@@ -7,7 +7,7 @@ sidebar_position: 6
 ---
 
 
-# 🔁 Validação de Regressões de Segurança
+# Validação de Regressões de Segurança
 
 ## 🌟 Objetivo
 

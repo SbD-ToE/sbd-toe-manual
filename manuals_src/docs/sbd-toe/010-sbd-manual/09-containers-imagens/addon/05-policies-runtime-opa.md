@@ -5,7 +5,7 @@ description: Aplicação automática de políticas formais para bloquear execuç
 tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
 ---
 
-# 📜 Enforcement Técnico de Políticas no Runtime com OPA e Kyverno
+# Enforcement Técnico de Políticas no Runtime com OPA e Kyverno
 
 ## 🌟 Objetivo
 

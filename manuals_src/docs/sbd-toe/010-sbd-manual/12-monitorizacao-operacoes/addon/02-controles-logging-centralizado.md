@@ -7,7 +7,7 @@ tags: [logging, estruturação, centralização, ECS, transporte seguro]
 ---
 
 
-# 🗃️ Logging Estruturado e Centralizado
+# Logging Estruturado e Centralizado
 
 ## 🌟 Objetivo
 

@@ -6,7 +6,7 @@ tags: [champions, cultura, formacao, responsabilidade, apoio]
 ---
 
 
-# 🛡️ Programa de Security Champions
+# Programa de Security Champions
 
 ## 🌟 Objetivo
 

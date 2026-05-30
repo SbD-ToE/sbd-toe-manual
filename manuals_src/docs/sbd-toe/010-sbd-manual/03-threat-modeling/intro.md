@@ -1,6 +1,6 @@
 ---
 id: intro
-title: 📘 Capítulo 3 - Threat Modeling
+title: Capítulo 3 - Threat Modeling
 description: Identificação, análise e mitigação estruturada de ameaças durante o ciclo de desenvolvimento
 tags: [threat-modeling, stride, linddun, requisitos, mitigacao, risco, arquitetura, SAMM, SSDF, SLSA, DSOMM]
 ---

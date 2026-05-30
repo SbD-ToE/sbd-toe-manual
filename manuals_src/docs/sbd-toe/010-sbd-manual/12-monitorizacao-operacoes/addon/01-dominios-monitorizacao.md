@@ -6,7 +6,7 @@ description: Identificação e definição dos domínios técnicos e operacionai
 tags: [monitorização, observabilidade, logging, segurança, runtime, infraestrutura]
 ---
 
-# 🧭 Domínios e Abrangência da Monitorização
+# Domínios e Abrangência da Monitorização
 
 ## 🌟 Objetivo
 

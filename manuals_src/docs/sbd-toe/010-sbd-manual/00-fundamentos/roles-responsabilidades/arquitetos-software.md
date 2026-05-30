@@ -7,7 +7,7 @@ tags: [arquitetura, design, seguranca, responsabilidades]
 sidebar_position: 6
 ---
 
-# 🏗️ Arquitetos de Software
+# Arquitetos de Software
 
 ## Visão Geral
 

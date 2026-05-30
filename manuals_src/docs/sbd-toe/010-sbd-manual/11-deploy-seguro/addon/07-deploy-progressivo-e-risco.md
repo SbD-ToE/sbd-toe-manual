@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:deploy-progressivo, risco, staging]
 ---
 
 
-# 🚀 Deploy Progressivo e Avaliação de Risco
+# Deploy Progressivo e Avaliação de Risco
 
 O deploy progressivo é uma prática essencial para mitigar riscos durante a entrega de novas versões de software. Permite uma **exposição gradual e controlada** de funcionalidades, com a capacidade de **medir impacto, recolher feedback e interromper rapidamente** em caso de erro.
 

@@ -5,7 +5,7 @@ description: Práticas de observabilidade, métricas de runtime e mecanismos aut
 tags: [tipo:anexo, grupo:execucao, tema:monitorizacao, rollback, observabilidade]
 ---
 
-# 📊 Monitorização e Reação a Incidentes de Runtime
+# Monitorização e Reação a Incidentes de Runtime
 
 A fase de execução de uma aplicação em produção exige **observabilidade adequada e capacidade de reação rápida** a falhas ou anomalias. Este documento define os mecanismos essenciais para detetar, analisar e responder a problemas de segurança ou estabilidade em runtime.
 

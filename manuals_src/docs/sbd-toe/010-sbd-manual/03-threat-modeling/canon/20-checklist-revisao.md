@@ -1,10 +1,10 @@
 ---
 id: checklist-revisao
-title: ✅ Checklist SbD-ToE - Threat Modeling
+title: Checklist SbD-ToE - Threat Modeling
 sidebar_label: Checklist de Revisão
 ---
 
-# ✅ Checklist de Revisão Periódica - Threat Modeling
+# Checklist de Revisão Periódica - Threat Modeling
 
 Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações de arquitetura relevantes.
 

@@ -6,7 +6,7 @@ tags: [formacao, tecnicas, pedagogia, segurança aplicada, exemplos]
 ---
 
 
-# 🧪 Técnicas Formativas Avançadas
+# Técnicas Formativas Avançadas
 
 ## 🌟 Objetivo
 

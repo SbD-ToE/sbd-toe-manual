@@ -7,7 +7,7 @@ tags: [devops, sre, cicd, responsabilidades]
 sidebar_position: 4
 ---
 
-# ⚙️ DevOps / SRE
+# DevOps / SRE
 
 ## Visão Geral
 

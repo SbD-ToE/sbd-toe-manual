@@ -60,22 +60,26 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 
 ## Estratégia de Implementação Única (SbD-ToE)
 
-1. **Evidência de cibersegurança única** ([Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [10](/sbd-toe/sbd-manual/testes-seguranca/intro), [12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) - serve simultaneamente o Art. 15 do AI Act e o Anexo I (Parte I) do CRA.
-2. **Processo único de tratamento de vulnerabilidades** ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) conforme o Anexo I (Parte II) do CRA - cobre também a robustez exigida pelo Art. 15.
-3. **SBOM/AI-BOM único** ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)) a alimentar ambos os regulamentos.
-4. **Declaração UE de conformidade** que demonstra o nível de cibersegurança do Art. 15, acionando a presunção do Art. 12 do CRA.
+> ✏️ **Refresh 2026-05-30.** Estratégia actualizada após o *release agentic* — várias peças que eram "a implementar" estão agora dentro do canon (`ARC-015`, `DEP-012`, `OPS-012..014`, Policy 38, Policy 39).
+
+1. **Evidência de cibersegurança única** ([Cap. 03 playbook agentic](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic), [Cap. 04 `ARC-014`/`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Cap. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Cap. 12 + `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)) — serve simultaneamente o Art. 15 do AI Act e o Anexo I (Parte I) do CRA.
+2. **Processo único de tratamento de vulnerabilidades** ([Cap. 05 `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Policy 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) conforme o Anexo I (Parte II) do CRA — cobre também a robustez exigida pelo Art. 15, incluindo a resposta a incidentes *upstream* em supply chain AI (`AML.T0019`, `AML.T0109`, `AML.T0110`).
+3. **SBOM + AI BOM único** ([Cap. 05 `DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) em formato CycloneDX 1.6 *ml-bom*, [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) a alimentar ambos os regulamentos — satisfaz CRA Art. 13(1)(b) (SBOM) **e** AI Act Art. 10 (dados/proveniência) **e** Art. 11/Anexo IV (lista de componentes).
+4. **Declaração UE de conformidade** que demonstra o nível de cibersegurança do Art. 15, acionando a presunção do Art. 12 do CRA. Cláusulas contratuais com *providers* AI (Cap. 14 US-21 + Policy 33 §10) declaram conformidade Art. 53/55 quando GPAI.
 5. **Avaliação de conformidade única** pelo organismo notificado AI Act (Art. 43), estendida ao Anexo I do CRA.
-6. **Matriz de origem regulatória** - no catálogo do [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), coluna `Fonte` com enum `AI Act`, `CRA`, `Ambos`, `Outras`.
+6. **Matriz de origem regulatória** — no catálogo do [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), coluna `Fonte` com enum `AI Act`, `CRA`, `Ambos`, `Outras`.
+7. ⚡ **Camada agentic transversal** — `ARC-015` (agente como *principal*), `REQ-AGN-001..004` (mandate, *kill-switch*, *intent*), `OPS-012..014` (audit per *tool*, *budget*, *jailbreak detection*) e Policy 38 (*mandates lifecycle*) cobrem **simultaneamente** o Art. 14 + Art. 15 + Art. 26 do AI Act **e** o Anexo I (Parte I) do CRA (cybersec by design). Uma única arquitectura, duas presunções de conformidade.
 
 ## Checklist de Convergência (SIM = pronto)
 
-- [ ] Evidência de cibersegurança mapeada simultaneamente ao Art. 15 (AI Act) e ao Anexo I, Parte I (CRA).
-- [ ] Processo de *vulnerability handling* conforme o Anexo I, Parte II (CRA) documentado.
+- [ ] Evidência de cibersegurança mapeada simultaneamente ao Art. 15 (AI Act) e ao Anexo I, Parte I (CRA) — incluindo `ARC-015` e *eval suites* (Cap. 10 §C5).
+- [ ] Processo de *vulnerability handling* conforme o Anexo I, Parte II (CRA) documentado, com extensão para *upstream* AI supply chain (Policy 39 §7).
 - [ ] Declaração UE de conformidade demonstra o nível de cibersegurança do Art. 15 (CRA Art. 12).
 - [ ] Avaliação de conformidade única (Art. 43 AI Act) acordada com o organismo notificado.
-- [ ] SBOM/AI-BOM único cobre ambos os regulamentos.
-- [ ] Circuitos de reporte distintos (AI Act Art. 73 / CRA Art. 14) com base de deteção técnica partilhada.
+- [ ] SBOM + AI BOM único (CycloneDX 1.6 `ml-bom` para a parte AI) cobre ambos os regulamentos.
+- [ ] Circuitos de reporte distintos (AI Act Art. 73 / CRA Art. 14) com base de deteção técnica partilhada (`OPS-014` + Policy 30 §9.3).
 - [ ] Catálogo do Cap. 02 com coluna `Fonte` preenchida (AI Act / CRA / Ambos).
+- [ ] *Mandates* (Policy 38) declaram simultaneamente nível A0–A4 (AI Act Art. 14) e *cybersec measures* (CRA Anexo I Parte I).
 - [ ] Não existem processos paralelos divergentes de cibersegurança.
 
 ## Perguntas Frequentes

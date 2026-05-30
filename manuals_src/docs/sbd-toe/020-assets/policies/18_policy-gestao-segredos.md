@@ -197,7 +197,70 @@ O exercício mede tempo total entre accionamento e revogação efectiva (revoga�
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. PII e dados sensíveis em *prompts* (cross-link RGPD)
+
+Os capítulos anteriores cobrem segredos clássicos — *tokens*, chaves, credenciais. Quando um agente AI recebe input de utilizador (chat, *document upload*, *form*), os **dados pessoais** entram no *prompt* e, por arrastamento, podem viajar até ao *provider* do modelo. A categoria do problema é parecida — informação sensível a fluir por canal não controlado — mas o regime jurídico aplicável é o do **RGPD**, não o desta política. Esta secção articula explicitamente os dois para que a coerência operacional não se perca na fronteira.
+
+### 10.1 Princípio de minimização
+
+- O *prompt* enviado ao modelo deve conter **apenas os dados pessoais estritamente necessários** para a tarefa. Aplica-se directamente o princípio da minimização do RGPD Art. 5.º, n.º 1, al. c).
+- **Redacção / pseudonimização antes do envio** quando viável — substituir nomes, e-mails, IDs por *placeholders* (`<USER_X>`, `<EMAIL_REDACTED>`) e remapear no output.
+- Quando a redacção não é viável (ex.: tarefas que exigem o conteúdo literal), a decisão é registada e revista com cadência do *mandate* (Policy 38).
+
+### 10.2 Base legal explícita
+
+Cada uso operacional em que o agente vê PII tem **base legal RGPD declarada** — Art. 6.º (consentimento, contrato, obrigação legal, interesse legítimo, etc.) e, quando categorias especiais (Art. 9.º), base legal reforçada. A base legal é parte do *mandate* do agente (Policy 38 — adicionar campo `legal_basis` quando aplicável) ou da ficha de tratamento do projecto, e é revisitada nas revisões periódicas.
+
+### 10.3 Sub-processadores
+
+O *provider* do modelo é um **sub-processador** quando trata dados pessoais em nome da organização (RGPD Art. 28.º). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
+
+- Contrato de sub-processador com cláusulas explícitas (retention, *training opt-out*, audit rights).
+- Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o *provider* processa fora do EEA.
+- **Sem PII para *providers* fora da lista aprovada** (`DEP-014`).
+
+### 10.4 *Training opt-out* obrigatório para PII
+
+Quando o conteúdo do *prompt* inclui dados pessoais, é exigido contratualmente que o *provider* **não use esse conteúdo para treino futuro do modelo**. Preferência por **zero retention** para PII; quando o *provider* mantém logs operacionais, com retenção minimizada e propósito declarado.
+
+### 10.5 Telemetria sob controlo do *deployer*
+
+Os logs de inferência sob controlo da organização (Art. 19.º AI Act / RGPD Art. 5.º) cumprem [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retenção) e [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) com **redacção de PII nos `args`** — o *audit trail* preserva o suficiente para responder a auditoria sem replicar os dados pessoais.
+
+### 10.6 Direitos do titular dos dados
+
+Quando a interacção do utilizador com o agente gera dados pessoais, aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º). Em particular:
+
+- **Apagamento dos *audit events*** sob controlo do *deployer* quando o titular exerce direito ao esquecimento (sujeito a obrigações legais de retenção concorrentes).
+- **Não-retenção pelo *provider*** — verificado contratualmente. Quando a retenção pelo *provider* existe, o titular tem de poder accionar o direito também aí.
+
+### 10.7 Proporcionalidade
+
+| Requisito | L1 | L2 | L3 |
+|---|:--:|:--:|:--:|
+| Minimização / redacção antes do envio | Recomendado | Obrigatório quando viável | Obrigatório (categorias especiais sempre redactadas) |
+| Base legal declarada | Recomendado | Obrigatório | Obrigatório (revisão GRC) |
+| Sub-processador com cláusulas Art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
+| *Training opt-out* contratualizado | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório |
+| Localização EEA / SCCs quando aplicável | Obrigatório (quando há PII e processamento fora EEA) | Obrigatório | Obrigatório (preferência por processamento EEA) |
+| Redacção de PII nos `audit events` (`OPS-012`) | Recomendado | Obrigatório | Obrigatório |
+| Procedimento para direitos do titular | Recomendado | Obrigatório | Obrigatório (incl. apagamento sob controlo do *deployer*) |
+
+### 10.8 Anti-padrões
+
+- ❌ Enviar PII a *provider* fora da lista aprovada — *shadow AI* com risco RGPD.
+- ❌ Logar *prompts* com PII sem redacção em `OPS-012` — `audit trail` torna-se ele próprio repositório de dados pessoais sem base legal específica.
+- ❌ Confiar que o *provider* "não usa para treino" sem cláusula contratual — declarações operacionais não substituem o Art. 28.º.
+- ❌ Ignorar categorias especiais (Art. 9.º RGPD) no prompt — saúde, biometria, dados de menores, etc. exigem base legal reforçada que muitos casos de uso de chatbots não satisfazem.
+- ❌ Tratar redacção como ofuscação suficiente — *pseudonimização* (RGPD) não é anonimização; PII pseudonimizada continua a ser dado pessoal.
+
+### 10.9 Cruzamento com cross-check RGPD
+
+Para alinhamento detalhado com o regulamento, ver o [cross-check RGPD](/sbd-toe/cross-check-normativo/gdpr/intro). Esta secção mantém a coerência operacional na fronteira AppSec ↔ RGPD; o cross-check trata as obrigações jurídicas em detalhe.
+
+---
+
+## 11. Revisão e auditoria desta política
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -207,7 +270,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 12. Referências normativas e técnicas
 
 | Referência | Relevância |
 |---|---|

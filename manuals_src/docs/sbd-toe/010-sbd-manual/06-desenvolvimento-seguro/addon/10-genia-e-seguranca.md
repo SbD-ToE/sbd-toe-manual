@@ -126,3 +126,41 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 - **Policy 15** — alcance estendido a prompts/skills.
 
 > 🧭 Em curto: tratamos prompts como tratamos código — versionados, revistos, *scanned* e re-gerados quando a fonte muda. Sem disciplina é mais um vector silencioso de mudança operacional; com disciplina, é um artefacto auditável como qualquer outro do nosso SDLC.
+
+---
+
+## 🧱 *Structured outputs* — validação do que o modelo devolve {#structured-outputs}
+
+Quando o output do modelo alimenta lógica aplicacional — *tool call* com argumentos, registo numa BD, decisão automatizada — o seu *formato* importa tanto como o seu *conteúdo*. Em 2026 os principais *providers* expõem mecanismos nativos para forçar o modelo a devolver output que adere a um *schema* declarado (Anthropic *tool use* + *structured outputs*, OpenAI *Structured Outputs* / *function calling*, Google *constrained generation*). Adoptamos estes mecanismos sempre que viável e, em qualquer caso, **validamos o output no servidor antes de o consumir**.
+
+### 🧭 Princípios
+
+1. **Schema declarado lado-servidor.** Não confiamos no modelo para "lembrar" o formato; declaramos o *schema* (JSON Schema, *Pydantic*, *Zod*, equivalente) no servidor que faz a chamada. O *schema* é parte do código revisto — versionado, testado, *type-checked*.
+2. **Mecanismos nativos do *provider* quando existem.** Anthropic *tool use* + *structured outputs* e OpenAI *Structured Outputs* garantem (com restrições) aderência sintática ao *schema* declarado. Preferimos isto a *parsing* permissivo do texto bruto.
+3. **Validação dupla — sintáctica e semântica.** Aderir ao *schema* não basta. Tipos correctos, *ranges* dentro do esperado, IDs que existem na base, *side effects* dentro do *scope* do *mandate* (Policy 38). O modelo pode obedecer ao *schema* e ainda assim devolver `{"action": "delete_database"}` num contexto em que isso é proibido.
+4. **Falha aberta, com *fallback* declarado.** Quando o output não valida, o sistema **não consome o output** e segue *fallback* declarado (perguntar ao utilizador, escalar para humano, retornar erro tratado). Nunca *"try to parse anyway"*.
+
+### 🛡️ Padrões
+
+| Padrão | Detalhe |
+|---|---|
+| **Schema versionado no repositório** | JSON Schema / Pydantic / Zod definido em código; versão referenciada no log para reconstrução *post-mortem* |
+| ***Tool definitions* canónicas** | Quando usamos *tool use* dos *providers*, as definições das *tools* vivem no mesmo repositório que o código que as implementa — não em prompt embebido |
+| **Validação de schema obrigatória pré-execução** | Output passa por validador antes de qualquer acção; falha bloqueia execução |
+| **Validação semântica per-action** | Para acções destrutivas, validação adicional que verifica `args` contra o *scope* declarado no *mandate* — cross-link [`REQ-AGN-004`](../../requisitos-seguranca/addon/governanca-automatismos#req-agn) |
+| ***Tool call replay protection*** | Identificador único por *tool call* + verificação de idempotência quando aplicável; evita re-execução acidental |
+| **Telemetria do esquema** | Quando o output falha validação, `eval_run_id` + *schema version* + *output bruto redactado* entram em `OPS-014` para diagnóstico |
+
+### ⚠️ Anti-padrões
+
+- ❌ ***Parsing* permissivo do texto bruto** — `re.search(r'\{.*\}', output)` é um *anti-pattern* notório; modelos com *tool use* nativo eliminam-no.
+- ❌ **Validação só do *schema*, sem validação semântica** — `{"action": "transfer_all_funds"}` aderente ao *schema* não é menos perigoso por o ser.
+- ❌ **Confiar no *system prompt* para forçar formato** ("*sempre devolve JSON*") em vez de mecanismos nativos do *provider* — funciona maior parte das vezes, falha exactamente quando importa.
+- ❌ **Output do modelo a alimentar `eval()` ou equivalente** — se o output do modelo se torna código executado, qualquer compromisso do modelo torna-se RCE. Tratar como input *user-untrusted* literalmente.
+
+### 📍 Onde aterra no resto do manual
+
+- **Cap. 02** — `REQ-AGN-004` (*intent declaration*) é a contraparte semântica do *structured output* — declarar o *intent* antes da acção e validar o *output* antes da execução são dois lados do mesmo princípio.
+- **Cap. 04** — [boundary controls para prompt injection](../../arquitetura-segura/recomendacoes-avancadas#boundary-controls-para-prompt-injection) reforça que o output do modelo é *user-untrusted*; *structured outputs* dá a forma operacional dessa atitude.
+- **Cap. 10 §C5** — *eval suite* inclui *adherence rate* ao *schema* como métrica observável.
+- **Cap. 12 — `OPS-014`** — falhas de validação semântica (acção fora do *scope*) caem em *off-policy actions*.

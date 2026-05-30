@@ -723,6 +723,74 @@ Operação contínua | Evento | Ops/GRC | Imediato
 
 ---
 
+### US-18 - Release gates específicos para sistemas com agentes AI
+
+**Contexto.**
+Quando o sistema inclui **agentes AI** ou um **modelo AI como dependência *load-bearing***, o *release* deixa de ser apenas "novo binário aplicacional → produção". Há três artefactos novos no caminho crítico que podem mudar comportamento sem o binário aplicacional mudar: **versão do modelo**, ***skill files* / *system prompts*** que dirigem o agente, e ***eval suite*** que sustenta a classificação de autonomia A0–A4. O *release* tem de tratar estes três como dimensões próprias, com *gates*, *rollback* independente e estratégia de *canary*.
+
+:::userstory
+**História.**
+Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agentes AI tenha *gates* específicos — *eval suite* como gate; *rollback* de modelo independente do *rollback* aplicacional; *canary release* de versão de modelo — para garantir que mudanças que afectam o comportamento agentic são tão controláveis e reversíveis quanto mudanças de código.
+
+**Critérios de aceitação (BDD).**
+- **Dado** uma promoção para produção que altera modelo, *skill files* ou *system prompts*
+  **Quando** o pipeline de *release* corre
+  **Então** a *eval suite* (Cap. 10 §C5) corre como *gate* obrigatório; *fail* bloqueia a promoção
+- **Dado** que uma versão de modelo em produção apresenta degradação (`OPS-011` *drift*, `OPS-014` *off-policy actions* aumentaram, `OPS-013` *budget overrun*)
+  **Quando** se decide reverter
+  **Então** existe procedimento de *rollback* da versão do modelo **sem** reverter o binário aplicacional (e vice-versa)
+- **Dado** uma mudança de versão maior do modelo (provider muda, novo *fine-tune*, ou novo *system prompt* com impacto material)
+  **Quando** se promove para produção
+  **Então** a estratégia é *canary* — fracção controlada de tráfego direccionada à nova versão durante janela observável, com critérios objectivos de promoção ou rollback
+- **Dado** um *mandate* de agente (Policy 38) com `autonomy_level` declarado
+  **Quando** a *eval suite* falha ou o `m_recall` da cobertura desce abaixo do limiar
+  **Então** o agente desce automaticamente para o nível inferior (e.g. A3 → A2) até resolução; não opera no nível pedido
+
+**Critérios de aceitação (DoD).**
+- [ ] *Eval suite* registada como *gate* obrigatório no pipeline (cross-link Cap. 07 [US-19](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle))
+- [ ] `eval_run_id` ligado ao *release* e arquivado como evidência
+- [ ] Procedimento de *rollback* de modelo independente documentado (revogar *deployment* do modelo no *artifact registry* / *model registry*, sem tocar no binário aplicacional)
+- [ ] Procedimento de *rollback* de *system prompt* / *skill file* independente (revert do *commit* dos *skill files* não obriga a redeploy aplicacional se o *runtime* lê dinamicamente do *registry*)
+- [ ] Estratégia *canary* configurada para promoções de modelo: fracção inicial (tipicamente 5–10%), critérios de promoção (taxa de erro, *off-policy events*, latência, *user satisfaction* quando disponível), critérios de *rollback* automático
+- [ ] *Gate* automático que desce o `autonomy_level` quando a *eval suite* não confirma o nível pretendido (cross-link [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) §5.4)
+- [ ] *Release notes* incluem versão de modelo, versão de *skill files*, *eval suite* version, `mandate_ref`
+
+:::
+
+**🧾 Artefactos & evidências.**
+- *Pipeline manifest* com *eval gate* configurado
+- `eval_run_id` por *release* arquivado e correlacionado com `mandate_ref`
+- *Runbook* de *model rollback* (separado do *rollback* aplicacional)
+- *Runbook* de *prompt/skill rollback*
+- *Canary release plan* por mudança de versão maior de modelo, com critérios objectivos
+- *Logs* de *autonomy demotion* automático quando *eval* falha
+- *Release notes* alargadas com versões agentic
+
+**⚖️ Proporcionalidade.**
+| Nível | Obrigatório? | Ajustes |
+|---|---|---|
+| L1 | Recomendado | *Eval gate* simples; *rollback* de modelo pode partilhar pipeline com aplicação |
+| L2 | Sim para A1+ | *Eval gate* completo; *rollback* de modelo independente documentado; *canary* recomendado |
+| L3 | Sim para A1+ | *Eval gate* completo + *canary* obrigatório em mudança de versão maior + auditoria do `eval_run_id` |
+
+**🔗 Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré-promoção | *Eval gate* falha | DevOps + AppSec | Bloqueio imediato |
+| Promoção | Mudança de versão maior de modelo / prompt | DevOps + AppSec + *owner* do agente (Policy 38) | Janela *canary* declarada |
+| Degradação em produção | `OPS-011/013/014` dispara | Ops + AppSec | *Rollback* conforme nível de severidade |
+| Auditoria | `review_cadence` do *mandate* | AppSec | Conforme cadência |
+
+**Ligações úteis.**
+- 🔗 [Cap. 07 US-19 — Agentes na pipeline](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle)
+- 🔗 [Cap. 10 §C5 — Eval suites](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites)
+- 🔗 [Cap. 12 — `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
+- 🔗 [Cap. 12 US-13 — Telemetria agentic](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
+- 🔗 [Policy 38 §5.4 — Activação do mandate](/sbd-toe/assets/policies/policy-mandates-agentes)
+- 🔗 [Policy 39 §5 — Version pinning](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
+
+---
+
 ## ⚖️ Matriz de proporcionalidade L1–L3
 
 Nem todas as aplicações exigem o mesmo nível de controlo.  

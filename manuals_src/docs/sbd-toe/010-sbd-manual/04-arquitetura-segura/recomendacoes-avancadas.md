@@ -148,6 +148,67 @@ Estes eventos alimentam directamente a observabilidade do Cap. 12 (a aterrar na 
 
 > 🧭 Tudo o que descrevemos nesta secção é especialização do que já praticamos para identidades não-humanas tradicionais. Se a equipa já tem maturidade em OIDC + scope mínimo + audit por invocação, falta-lhe apenas reconhecer o agente como mais um *principal* a passar pelo mesmo crivo — e adicionar *intent declaration* e *kill-switch* exercitado, que são as duas peças genuinamente novas.
 
+### Padrões para sistemas RAG (*Retrieval-Augmented Generation*) {#rag-patterns}
+
+RAG é hoje a arquitectura dominante em aplicações LLM em produção — o modelo recebe, além do *prompt* do utilizador, conteúdo recuperado de uma fonte externa (base de documentos, vector DB, *knowledge base* corporativa) que enriquece o contexto. A vantagem operacional é clara: respostas baseadas em informação actual da organização sem re-treinar o modelo. O preço é que **a fronteira `inference-time` deixa de ser uma só** — passam a existir duas entradas distintas no contexto do modelo, com graus de confiança muito diferentes, e ambas merecem tratamento como *user-untrusted*.
+
+Esta secção complementa o que já dissemos sobre [trust zones em arquitecturas AI/ML](#ai-ml) e [boundary controls para prompt injection](#boundary-controls-para-prompt-injection), com a especialização operacional para RAG.
+
+#### O que muda em RAG
+
+| Componente novo | O que introduz | Porque importa para segurança |
+|---|---|---|
+| **Vector DB / *index store*** | Armazena *embeddings* + chunks de documentos | Novo activo da supply chain; controlo de acesso e integridade dedicados |
+| ***Embedding model*** | Converte query e documentos em vectores | Dependência adicional na cadeia (model registry); *pinning* obrigatório |
+| ***Retriever*** | Selecciona top-k chunks por similaridade vectorial | Determina o que entra no contexto do LLM; *attack surface* nova |
+| ***Re-ranker*** (opcional) | Re-ordena chunks recuperados | Ponto adicional de manipulação se baseado em modelo |
+| ***Document corpus*** | Fonte de conteúdo a ingerir | Vector primário de *indirect prompt injection* (`AML.T0051.001`) |
+
+#### Padrões arquitectónicos para RAG seguro
+
+- **Tratar *retrieved content* como *user-untrusted* por desenho** — em RAG, o documento recuperado entra no contexto do modelo como se fosse texto do utilizador. Aplica-se literalmente o controlo da secção [boundary controls para prompt injection](#boundary-controls-para-prompt-injection): separação canónica `system` / `user` / `retrieved_context` quando o modelo suporta (Anthropic *documents* parameter, OpenAI *tool messages*) — não fazer *string concatenation*. Onde o modelo não distingue estruturalmente, isolar com *delimiters* + *prompt hardening* no *system prompt*.
+- **Curadoria da ingestão** — documentos ingeridos no corpus passam por um *pipeline* de curadoria: validação de origem, *content scanning* para padrões adversariais conhecidos (LLM01-2025 *indirect prompt injection* patterns), classificação de sensibilidade. Não tratar a ingestão como *trusted by default*.
+- **Vector DB como activo crítico** — controlo de acesso (autenticação + autorização per-namespace), *audit log* de leituras e escritas, encriptação *at-rest* e *in-transit*, integridade dos *embeddings* (hash sobre o conteúdo original que originou cada *embedding*).
+- ***Embedding model* pinned** — versão fixa explícita (cross-link [`DEP-013`](../dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)). Mudança de versão maior do *embedding model* obriga a re-indexar o corpus inteiro e a re-correr *eval suite* RAG (ver abaixo) — *embedding spaces* não são compatíveis entre versões maiores.
+- ***Retriever* com filtros de autorização** — top-k retrieval respeita *row-level security* / *namespace boundary* do utilizador que faz a query. Falha clássica em RAG corporativo: utilizador A consegue ver chunks que pertencem ao perímetro do utilizador B porque o retriever não filtra. Tratamos como *access control* normal.
+- ***Output filtering* anti-extracção de corpus** — detectar padrões em que o modelo está a regurgitar conteúdo do corpus sem o tratar (potencial *membership inference* sobre que documentos estão no índice, ou *exfiltration* dirigida).
+- ***Provenance* no output** — quando o modelo cita documentos do corpus, expor *provenance* (que documento, que chunk) ao utilizador. Tem dupla função: auditabilidade e dificultar exfiltração silenciosa.
+
+#### Threats específicas a RAG
+
+Adicionamos à [threat library agentic do Cap. 03](../threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) os seguintes vectores RAG-específicos:
+
+| Threat | ID | Fronteira-alvo | Mitigação primária |
+|---|---|---|---|
+| ***Indirect prompt injection* via documento ingerido** | `AML.T0051.001` · LLM01-2025 | Inference (via retrieval) | Curadoria da ingestão; tratar *retrieved content* como *user-untrusted*; *output filtering* |
+| ***Embedding poisoning*** (training-time do *embedding model* ou ingestion-time do corpus) | `AML.T0020` (adaptado) | Training-time / Ingestion-time | *Embedding model* de fonte aprovada (`DEP-014`); validação da ingestão |
+| ***Vector DB exfiltration*** | `AML.T0086` (adaptado) | Vector DB | Controlo de acesso + audit; *row-level security* no retriever |
+| ***Membership inference* sobre o corpus** | LLM02-2025 (*sensitive info disclosure*) | Inference | *Output filtering*; rate-limiting; detecção de *probing queries* |
+| ***Cross-namespace contamination*** | LLM06-2025 (*excessive agency*, em variante RAG) | Retriever | Filtro de autorização no top-k retrieval |
+
+#### Eval suite para RAG
+
+A *eval suite* (Cap. 10 §C5) ganha em RAG uma camada própria:
+
+- ***Retrieval relevance*** — top-k contém chunks relevantes para a query?
+- ***Citation faithfulness*** — o output cita correctamente os chunks recuperados, sem inventar conteúdo?
+- ***Adversarial documents corpus*** — documentos com tentativas conhecidas de *indirect prompt injection* devem ser detectados ou neutralizados sem alterar o comportamento do modelo.
+- ***Cross-namespace isolation*** — query do utilizador A nunca retorna chunks do namespace de B.
+
+Para sistemas A2+ que invocam *tools* a partir de contexto RAG, esta camada da *eval suite* é obrigatória — porque o vector de ataque mais comum em produção é precisamente *"documento envenenado leva o agente a invocar tool destrutiva"*.
+
+> 🧭 RAG vê-se frequentemente como "apenas adicionar contexto ao prompt". Tecnicamente é mais do que isso: introduz uma nova fronteira de confiança (`retrieved_context`) que tem o mesmo poder de manipular o modelo que o input do utilizador, mas chega por um canal que parece interno. É essa assimetria que torna RAG seguro um problema arquitectónico distinto.
+
+### Nota sobre sistemas multi-agente
+
+*Frameworks* de orquestração multi-agente (*LangGraph*, *CrewAI*, *AutoGen*, *orchestrator → executor → reviewer* construídos sobre SDKs próprios) tornaram-se comuns durante 2024–2025 e continuam em evolução rápida. Não escrevemos uma secção dedicada porque o espaço de soluções **ainda não estabilizou** — convenções de *agent-to-agent communication*, *trust delegation* entre agentes e supervisão hierárquica variam significativamente entre *frameworks*. O nosso princípio operacional é, no entanto, estável:
+
+- **Cada agente no sistema é um *principal* distinto** ([`ARC-015`](./addon/catalogo-requisitos-arquitetura#arc-015)) com identidade, *mandate* (Policy 38) e nível A0–A4 próprios. Um orquestrador não "empresta" as suas credenciais a um sub-agente.
+- ***Trust delegation* explícita** — quando um agente invoca outro, a chamada é tratada como *tool call* (auditada por [`OPS-012`](../monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)), com `intent` declarado quando destrutiva.
+- ***Out-of-band approval* no agente que executa**, não no orquestrador — a aprovação humana é exigida no ponto onde a acção destrutiva acontece, não no ponto onde foi decidida.
+
+Quando os padrões multi-agente estabilizarem (provavelmente 2026–2027), revisitaremos para extrair uma secção dedicada com base na prática operacional acumulada.
+
 ---
 
 ## 📌 Consideração Final

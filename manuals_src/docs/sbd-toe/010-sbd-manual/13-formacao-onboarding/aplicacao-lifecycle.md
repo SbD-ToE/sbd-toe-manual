@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, formacao, capacitacao, onboarding, seguranca]
 genia: us-format-normalization
 ---
 
-# 🎓 Aplicação de Formação e Capacitação no Ciclo de Vida
+# Aplicação de Formação e Capacitação no Ciclo de Vida
 
 ## 🧭 Quando aplicar
 

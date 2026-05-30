@@ -5,7 +5,7 @@ description: Modelo de ligação entre findings SCA, SBOM, backlog e releases
 tags: [dependencias, sbom, sca, supply-chain, rastreabilidade]
 ---
 
-# 🔍 Rastreabilidade entre Vulnerabilidades, Componentes e Ações
+# Rastreabilidade entre Vulnerabilidades, Componentes e Ações
 
 ## 🌟 Objetivo
 

@@ -7,7 +7,7 @@ tags: [operacoes, ops, runtime, incident-response, responsabilidades]
 sidebar_position: 7
 ---
 
-# 🔧 Operações (Ops)
+# Operações (Ops)
 
 ## Visão Geral
 

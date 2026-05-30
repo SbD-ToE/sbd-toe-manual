@@ -7,7 +7,7 @@ tags: [product-owner, po, produto, responsabilidades]
 sidebar_position: 8
 ---
 
-# 📋 Product Owner (PO)
+# Product Owner (PO)
 
 ## Visão Geral
 

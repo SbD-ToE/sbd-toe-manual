@@ -7,7 +7,7 @@ tags: [cicd, validações, sast, segurança, scanner, automação]
 ---
 
 
-# 🧪 Validações de segurança integradas no pipeline
+# Validações de segurança integradas no pipeline
 
 A integração de validações de segurança diretamente nos pipelines permite **detetar vulnerabilidades precocemente**, automatizar controlos e garantir que a entrega contínua respeita os requisitos de segurança definidos.
 

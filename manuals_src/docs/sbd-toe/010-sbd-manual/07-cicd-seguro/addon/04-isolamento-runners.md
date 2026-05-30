@@ -6,7 +6,7 @@ description: Medidas para segregar runners por aplicação, evitar persistência
 tags: [cicd, runners, isolamento, segurança, execução, infraestrutura]
 ---
 
-# 🖥️ Isolamento e proteção de runners
+# Isolamento e proteção de runners
 
 Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD são realmente processados. Se um runner for comprometido, toda a cadeia de build e entrega pode ser manipulada - desde a introdução de backdoors, à exfiltração de segredos ou sabotagem de artefactos.
 

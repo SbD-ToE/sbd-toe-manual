@@ -7,7 +7,7 @@ sidebar_position: 30
 ---
 
 
-# 🚀 Recomendações Avançadas para Deploy Seguro
+# Recomendações Avançadas para Deploy Seguro
 
 Este documento complementa as práticas base do Capítulo 11 - Deploy Seguro, com **recomendações técnicas e organizacionais para contextos de maior maturidade**, aumentando a resiliência, rastreabilidade e auditabilidade das entregas em produção.
 

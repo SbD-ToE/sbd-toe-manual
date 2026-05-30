@@ -1,11 +1,11 @@
 ---
 id: uso-ferramentas-automatizadas-iac
-title: 🛠️ Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC
+title: Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC
 description: Regras prescritivas para uso seguro de automação/assistência na escrita e alteração de IaC, com validações e evidência por nível de risco
 tags: [tipo:addon, iac, automacao, assistencia, validacao, evidencias, supply-chain]
 ---
 
-# 🛠️ Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC
+# Uso de Ferramentas Automatizadas e Assistidas na Autoria de IaC
 
 A escrita e alteração de Infraestrutura como Código é frequentemente suportada por **automação** (templates, geradores, normalizadores, snippets, scripts) e por **mecanismos assistidos** (sugestões e composição).  
 Estas ferramentas aumentam produtividade, mas introduzem riscos específicos: alterações de baixa explicabilidade, defaults inseguros, permissões excessivas, recursos inesperados e exposição involuntária de informação sensível.

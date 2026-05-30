@@ -6,7 +6,7 @@ description: Estratégias para anotar decisões e evidências de validação de 
 tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 ---
 
-# 🏷️ Anotações e Evidência de Validações
+# Anotações e Evidência de Validações
 
 > 💡 **Nota prática**:  
 > Ferramentas como **GitHub**, **GitLab**, **Xygeni**, **SonarQube**, **Semgrep**, ou até simples editores como **VSCode** permitem o uso de **comentários estruturados, etiquetas e marcações especiais** que indicam que uma validação de segurança foi feita - ou que uma exceção foi aceite.  

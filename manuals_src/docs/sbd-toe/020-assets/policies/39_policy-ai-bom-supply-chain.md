@@ -13,7 +13,7 @@ sidebar_position: 39
 
 Esta política define como **modelos AI**, **datasets**, **MCP servers/tools** e **prompts embebidos** são tratados como cadeia de fornecimento auditável — com inventário versionado, formato standardizado (preferencialmente CycloneDX 1.6 `ml-bom`), versão fixa por *build*, lista de *providers* aprovados, e processo de resposta a incidentes *upstream*.
 
-Operacionaliza os requisitos `DEP-011`, `DEP-012`, `DEP-013` e `DEP-014` do Cap. 05 e complementa a [Policy 10 — Dependências](./policy-dependencias) (anexo *Provedores AI*) e a [Policy 11 — SBOM](./policy-sbom) (anexo *AI BOM*). Existe como política autónoma — em vez de secção de uma das anteriores — porque o ciclo de vida e os riscos são suficientemente distintos para justificar tratamento próprio, à imagem do que o NIST faz separando o AI RMF do CSF.
+Operacionaliza os requisitos [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) e [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) do Cap. 05 e complementa a [Policy 10 — Dependências](./policy-dependencias) (anexo *Provedores AI*) e a [Policy 11 — SBOM](./policy-sbom) (anexo *AI BOM*). Existe como política autónoma — em vez de secção de uma das anteriores — porque o ciclo de vida e os riscos são suficientemente distintos para justificar tratamento próprio, à imagem do que o NIST faz separando o AI RMF do CSF.
 
 ## 2. Âmbito
 
@@ -51,7 +51,7 @@ Operar em produção com modelo AI referenciado por `latest` (ou range, ou alias
 
 ## 5. Version *pinning* — regras operacionais
 
-- **Modelos AI**: versão fixa explícita com hash quando o provider o exponha — ex.: `claude-opus-4-7@2026-05-20#sha:…`. Ranges semver, *aliases* dinâmicos (`latest`, `stable`, `production`) e referências sem versão são **proibidos** em qualquer ambiente além de exploratório (`DEP-013`).
+- **Modelos AI**: versão fixa explícita com hash quando o provider o exponha — ex.: `claude-opus-4-7@2026-05-20#sha:…`. Ranges semver, *aliases* dinâmicos (`latest`, `stable`, `production`) e referências sem versão são **proibidos** em qualquer ambiente além de exploratório ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)).
 - **Datasets**: versão imutável, ou snapshot referenciado por hash. Datasets que evoluem continuamente exigem snapshot por *release*.
 - **MCP servers/tools**: versão fixa do pacote npm/pip/binary. Tools dinamicamente descobertas em runtime só são aceites em A0-A1 e fora de produção.
 - **Prompts**: versão = commit SHA do repositório onde vivem.
@@ -139,7 +139,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução do 
 | SbD-ToE Cap. 05 (`DEP-011..014`) | Requisitos de inventário AI + AI BOM + pinning + providers |
 | SbD-ToE Cap. 05 — US-14 (AI BOM) | Operacionalização |
 | SbD-ToE Cap. 03 §AI/ML | Threat library aplicável a supply chain AI (`AML.T0010`, `AML.T0019`, `AML.T0109`, `AML.T0110`) |
-| SbD-ToE Cap. 04 (`ARC-014`) | Patterns arquitectónicos AI/ML (origem dos componentes inventariados) |
+| SbD-ToE Cap. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)) | Patterns arquitectónicos AI/ML (origem dos componentes inventariados) |
 | SbD-ToE Cap. 14 — Contratação de AI providers | Cláusulas contratuais detalhadas |
 | Policy 10 — Dependências (anexo AI providers) | Acoplamento operacional |
 | Policy 11 — SBOM (anexo AI BOM) | Coerência de formato |

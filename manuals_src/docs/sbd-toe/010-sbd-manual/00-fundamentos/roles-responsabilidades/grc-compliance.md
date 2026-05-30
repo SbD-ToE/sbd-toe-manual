@@ -7,7 +7,7 @@ tags: [grc, compliance, governance, responsabilidades]
 sidebar_position: 11
 ---
 
-# 📑 GRC / Compliance
+# GRC / Compliance
 
 ## Visão Geral
 

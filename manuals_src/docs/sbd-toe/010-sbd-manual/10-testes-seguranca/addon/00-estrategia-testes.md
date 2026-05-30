@@ -7,7 +7,7 @@ sidebar_position: 0
 ---
 
 
-# 🧭 Estratégia de Testes de Segurança no Ciclo de Vida
+# Estratégia de Testes de Segurança no Ciclo de Vida
 
 ## 🌟 Objetivo
 

@@ -7,7 +7,7 @@ tags: [appsec, seguranca, vulnerabilidades, responsabilidades]
 sidebar_position: 5
 ---
 
-# 🔐 AppSec Engineer
+# AppSec Engineer
 
 ## Visão Geral
 

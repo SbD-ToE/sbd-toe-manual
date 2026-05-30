@@ -6,7 +6,7 @@ tags: [tipo:modelo, tema:criticidade, eixo, risco]
 ---
 <!--template: sbdtoe-core -->
 
-# 📎 Modelo de Classificação por Eixos de Risco
+# Modelo de Classificação por Eixos de Risco
 
 ## 🎯 Objetivo
 

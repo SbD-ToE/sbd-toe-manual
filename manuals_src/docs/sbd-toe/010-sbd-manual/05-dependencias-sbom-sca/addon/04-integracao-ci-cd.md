@@ -5,7 +5,7 @@ description: Integração automatizada de SBOM, SCA e controlo de exceções no 
 tags: [dependencias, sbom, sca, supply-chain, ci-cd]
 ---
 
-# ⚙️ Integração com Pipelines CI/CD
+# Integração com Pipelines CI/CD
 
 ## 🌟 Objetivo
 

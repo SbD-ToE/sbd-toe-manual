@@ -7,7 +7,7 @@ sidebar_position: 9
 ---
 
 
-# 🗂️ Gestão de Findings de Segurança
+# Gestão de Findings de Segurança
 
 ## 🌟 Objetivo
 

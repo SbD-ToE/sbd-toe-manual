@@ -5,7 +5,7 @@ description: Critérios de aceitação, validação humana e evidência mínima 
 tags: [threat-modeling, validacao, evidencia, decisao]
 ---
 
-# 🛠️ Validação e Evidência no Threat Modeling
+# Validação e Evidência no Threat Modeling
 
 Um modelo de ameaças só é operacionalmente válido quando:
 - foi explicitamente validado;

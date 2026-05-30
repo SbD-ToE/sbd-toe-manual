@@ -7,7 +7,7 @@ sidebar_position: 60
 ---
 
 
-# 🏛️ Políticas Organizacionais - Requisitos de Segurança
+# Políticas Organizacionais - Requisitos de Segurança
 
 A adoção eficaz do Capítulo 02 - Requisitos de Segurança - exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
 

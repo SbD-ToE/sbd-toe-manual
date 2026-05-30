@@ -6,7 +6,7 @@ tags: [testes, evidência, reprodutibilidade, auditabilidade, validação, rastr
 sidebar_position: 10
 ---
 
-# 🛠️ Evidência, Reprodutibilidade e Auditabilidade em Testes de Segurança
+# Evidência, Reprodutibilidade e Auditabilidade em Testes de Segurança
 
 Este anexo define regras **prescritivas** para garantir que os testes de segurança produzem **evidência verificável**, permitem **reprodução independente** e suportam **auditoria** - mesmo quando a execução é altamente automatizada.
 

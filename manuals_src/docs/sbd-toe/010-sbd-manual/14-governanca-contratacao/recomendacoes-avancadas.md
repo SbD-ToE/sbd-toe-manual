@@ -7,7 +7,7 @@ tags: [avancado, governance, excecoes, contratos, auditoria, rastreabilidade]
 ---
 
 
-# 🧭 Recomendações Avançadas - Governança e Contratação
+# Recomendações Avançadas - Governança e Contratação
 
 Este ficheiro inclui práticas que reforçam a governança da segurança aplicacional em contextos organizacionais com maior maturidade, complexidade contratual ou exigência regulatória.
 

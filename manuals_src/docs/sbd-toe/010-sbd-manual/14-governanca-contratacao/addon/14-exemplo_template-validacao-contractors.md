@@ -5,7 +5,7 @@ description: Checklist e modelo de validação estruturado para triagem, aprova�
 tags: [governanca, contractors, validacao, triagem, checklist, onboarding]
 ---
 
-# 📋 Template de Validação de Contractors
+# Template de Validação de Contractors
 
 **Versão:** 1.0  
 **Última atualização:** Novembro 2025  

@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, requisitos, validacao, rastreabilidade, excec
 genia: us-format-normalization
 ---
 
-# 🛠️ Aplicação de Requisitos de Segurança no Ciclo de Vida
+# Aplicação de Requisitos de Segurança no Ciclo de Vida
 
 Este documento prescreve **como aplicar sistematicamente os requisitos definidos no Capítulo 2** ao longo do ciclo de desenvolvimento, garantindo **rastreabilidade**, **proporcionalidade ao risco**, **validação contínua** e **disciplina explícita de revisão/versionamento**.
 
@@ -648,7 +648,7 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 
 ---
 
-### US-15 – Classificação e registo do *mandate* de agente AI
+### US-15 – Classificação e registo do *mandate* de agente AI {#us-15}
 
 **Contexto.**
 Quando passamos de **assistentes que sugerem** para **agentes que executam** (criar PRs, ler segredos, *deploy*, escrever em sistemas externos), deixa de ser suficiente saber *"foi revisto?"* — temos de saber *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Operacionalizamos essa autorização através do modelo de cinco níveis de autonomia (A0–A4) e do *mandate* — documento versionado em VCS que regista quem decidiu, com que autoridade, durante quanto tempo, e com que *kill-switch*.

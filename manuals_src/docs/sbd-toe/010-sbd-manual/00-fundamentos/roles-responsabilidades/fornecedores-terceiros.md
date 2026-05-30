@@ -7,7 +7,7 @@ tags: [fornecedores, terceiros, supply-chain, responsabilidades]
 sidebar_position: 13
 ---
 
-# 🤝 Fornecedores / Terceiros
+# Fornecedores / Terceiros
 
 ## Visão Geral
 

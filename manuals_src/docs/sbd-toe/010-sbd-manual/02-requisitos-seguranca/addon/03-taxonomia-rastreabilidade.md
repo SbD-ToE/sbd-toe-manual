@@ -5,7 +5,7 @@ description: Dois sistemas de identificação complementares - o catálogo canó
 tags: [taxonomia, rastreabilidade, requisitos, domínios, ALM]
 ---
 
-# 🏷️ Taxonomia e Rastreabilidade de Requisitos de Segurança
+# Taxonomia e Rastreabilidade de Requisitos de Segurança
 
 O SbD-ToE opera com **dois sistemas de identificação complementares**, cada um com propósito distinto. Compreender a diferença e a relação entre ambos é condição para implementar rastreabilidade efectiva - sem ela, o catálogo de requisitos fica desligado do trabalho real de desenvolvimento.
 

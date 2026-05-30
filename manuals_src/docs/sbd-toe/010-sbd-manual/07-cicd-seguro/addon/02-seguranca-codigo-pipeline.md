@@ -7,7 +7,7 @@ tags: [cicd, pipeline, scripts, linters, validação, segurança]
 ---
 
 
-# 🔒 Segurança do código dentro do pipeline
+# Segurança do código dentro do pipeline
 
 A segurança da entrega contínua depende da capacidade de **detetar automaticamente código inseguro, práticas deficientes ou vulnerabilidades conhecidas** antes da build ou do deploy. Esta prática define os **controlos técnicos de validação de segurança a aplicar diretamente dentro dos pipelines CI/CD**, de forma rastreável e proporcional ao risco.
 

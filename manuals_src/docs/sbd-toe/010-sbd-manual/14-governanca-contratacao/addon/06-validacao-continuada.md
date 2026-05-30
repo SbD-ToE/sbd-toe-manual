@@ -6,7 +6,7 @@ description: Estratégias e ciclos para manter validações, KPIs e exceções a
 tags: [validacao, excecoes, auditoria, ciclo-continuo]
 ---
 
-# 🔄 Validação Continuada e Revisões
+# Validação Continuada e Revisões
 
 Este anexo descreve os mecanismos de validação recorrente das aplicações, fornecedores e contratos, de forma a assegurar que os requisitos continuam aplicados, eficazes e corretamente governados ao longo do tempo.
 

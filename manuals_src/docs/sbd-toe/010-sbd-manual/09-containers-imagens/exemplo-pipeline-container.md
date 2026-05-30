@@ -5,7 +5,7 @@ description: Exemplo completo de pipeline CI/CD com execução de *containers* e
 tags: [exemplo, pipeline, containers, cicd, segurança, execucao]
 ---
 
-# 💪 Caso Prático - Pipeline Containerizado com Execução Segura
+# Caso Prático - Pipeline Containerizado com Execução Segura
 
 Este exemplo ilustra a aplicação prática das prescrições do Capítulo 09 - desde a construção segura da imagem base, até à sua execução controlada num pipeline CI/CD e em Kubernetes.
 

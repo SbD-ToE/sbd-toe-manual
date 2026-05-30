@@ -9,7 +9,7 @@ sidebar_label: Checklist de Revisão
 ---
 
 
-# ✅ Checklist de Revisão Periódica - Dependências, SBOM e SCA
+# Checklist de Revisão Periódica - Dependências, SBOM e SCA
 
 Este checklist aplica-se a todas as aplicações que utilizem bibliotecas de terceiros, SDKs, pacotes open-source ou artefactos binários.
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 05**, permitindo:

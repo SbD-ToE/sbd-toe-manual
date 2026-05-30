@@ -7,7 +7,7 @@ sidebar_position: 20
 ---
 
 
-# ✅ Checklist de Revisão Periódica - Testes de Segurança
+# Checklist de Revisão Periódica - Testes de Segurança
 
 Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 - Testes de Segurança**, permitindo:
 

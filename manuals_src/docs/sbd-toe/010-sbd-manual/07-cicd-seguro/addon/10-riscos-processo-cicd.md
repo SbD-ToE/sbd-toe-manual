@@ -6,7 +6,7 @@ tags: [cicd, processo, automacao, risco, evidencias]
 genia: process-risk-normalization
 ---
 
-# 🛠️ Riscos de Processo no CI/CD Moderno
+# Riscos de Processo no CI/CD Moderno
 
 O pipeline de CI/CD é hoje um dos **ativos mais críticos** de qualquer organização que desenvolva software de forma contínua.  
 Tudo o que chega a produção - código, configuração, infraestrutura, artefactos - passa inevitavelmente por este mecanismo.

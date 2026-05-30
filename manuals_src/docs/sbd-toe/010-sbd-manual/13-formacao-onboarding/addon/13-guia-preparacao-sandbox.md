@@ -5,7 +5,7 @@ description: Setup e utilização de ambiente isolado para formação prática d
 tags: [governanca, contractors, sandbox, formacao, onboarding, pratica]
 ---
 
-# 🏜️ Guia de Preparação Sandbox para Contractors
+# Guia de Preparação Sandbox para Contractors
 
 **Versão:** 1.0  
 **Última atualização:** Novembro 2025  

@@ -7,7 +7,7 @@ tags: [legado, governanca, excecoes, migração]
 ---
 
 
-# 🛠️ Governação de Sistemas Legados e Contextos Não Conformes
+# Governação de Sistemas Legados e Contextos Não Conformes
 
 Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a **sistemas legados, pipelines antigos, contratos pré-existentes ou contextos organizacionais onde o controlo total não é imediato ou viável**.
 

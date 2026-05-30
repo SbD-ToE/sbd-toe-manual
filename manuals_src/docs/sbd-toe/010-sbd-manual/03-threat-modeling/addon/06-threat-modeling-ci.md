@@ -5,7 +5,7 @@ description: Requisitos e validações práticas para garantir a existência, in
 tags: [ci, cd, devsecops, threat modeling, automação, validação, iriusrisk]
 ---
 
-# ⚙️ Threat Modeling em CI/CD
+# Threat Modeling em CI/CD
 
 ## 🌟 Objetivo
 

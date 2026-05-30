@@ -7,7 +7,7 @@ sidebar_position: 5
 ---
 
 
-# 🌀 Fuzzing de Segurança
+# Fuzzing de Segurança
 
 ## 🌟 Objetivo
 

@@ -6,7 +6,7 @@ tags: [formacao, perfis, conteudos, catalogo, onboarding]
 ---
 
 
-# 🗺️ Catálogo de Conteúdos Formativos SbD-ToE
+# Catálogo de Conteúdos Formativos SbD-ToE
 
 ## 🌟 Objetivo
 

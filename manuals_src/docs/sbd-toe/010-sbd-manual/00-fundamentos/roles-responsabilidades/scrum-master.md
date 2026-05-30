@@ -7,7 +7,7 @@ tags: [scrum-master, team-lead, agile, responsabilidades]
 sidebar_position: 9
 ---
 
-# 🧭 Scrum Master / Team Lead
+# Scrum Master / Team Lead
 
 ## Visão Geral
 

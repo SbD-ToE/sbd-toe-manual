@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:validacao, staging, segregacao, readines
 ---
 
 
-# 🏢 Segregação de Ambientes e Validação Operacional
+# Segregação de Ambientes e Validação Operacional
 
 A separação clara entre ambientes (desenvolvimento, QA, staging, produção) é uma prática essencial para mitigar riscos e evitar que código não validado seja executado em contextos sensíveis. Este documento define práticas de **segregação segura e validação antes da promoção para produção**.
 

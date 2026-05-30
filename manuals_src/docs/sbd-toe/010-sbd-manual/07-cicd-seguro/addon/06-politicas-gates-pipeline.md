@@ -7,7 +7,7 @@ tags: [cicd, gates, políticas, risco, segurança, validações]
 ---
 
 
-# 🛂 Políticas e gates por nível de aplicação
+# Políticas e gates por nível de aplicação
 
 Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas devem obedecer a políticas claras**, proporcionais ao seu risco. Esta prática define a aplicação automatizada de **políticas, gates e controlos por nível de aplicação**, garantindo que:
 

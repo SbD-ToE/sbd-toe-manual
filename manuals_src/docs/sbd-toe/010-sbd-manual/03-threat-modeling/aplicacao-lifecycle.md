@@ -7,7 +7,7 @@ genia: us-format-normalization
 ---
 
 
-# 🔄 Aplicação de Threat Modeling no Ciclo de Vida
+# Aplicação de Threat Modeling no Ciclo de Vida
 
 Este anexo prescreve **como aplicar sistematicamente as práticas de Threat Modeling definidas no Capítulo 3** ao longo do ciclo de desenvolvimento, garantindo rastreabilidade, proporcionalidade ao risco e integração com os requisitos de segurança.
 
@@ -447,7 +447,7 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero controlar acesso e reten
 
 ---
 
-### US-11 - Threat modeling para sistema com agente AI (tool-use)
+### US-11 - Threat modeling para sistema com agente AI (tool-use) {#us-11}
 
 **Contexto.**
 Quando o sistema integra **agentes autónomos** com *tool-use* — modelos que invocam *tools* reais para criar PRs, ler segredos, executar *deploys* ou contactar APIs — a superfície de ataque deixa de ser só o modelo e passa a incluir o conjunto fechado de *tools* invocáveis, a identidade com que o agente opera e a fronteira `agentic → tool` em que o efeito real se materializa. Aplicamos o playbook agentic do Cap. 03 antes da operação e em cada subida de nível de autonomia, para que as ameaças MITRE ATLAS aplicáveis estejam identificadas e ancoradas em controlos citáveis.
@@ -458,7 +458,7 @@ Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook ag
 
 **Critérios de aceitação (BDD).**
 - **Dado** que um agente AI vai operar em A1+ no projecto
-  **Quando** o seu *mandate* (`REQ-AGN-001`) é proposto
+  **Quando** o seu *mandate* ([`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) é proposto
   **Então** existe DFD agentic com cinco participantes (humano → cliente → modelo → *tool runtime* → sistema externo) e quatro fronteiras (input · inference · agentic · tool) explícitas
 - **Dado** o DFD agentic
   **Quando** se executa o exercício do playbook
@@ -471,7 +471,7 @@ Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook ag
 - [ ] DFD agentic versionado em repositório, com fronteiras de confiança marcadas
 - [ ] Lista de *tools* invocáveis pelo agente, etiquetadas `read` / `write` / `destructive` / `external`
 - [ ] *Threats* aplicáveis identificadas com **IDs canónicos** (MITRE ATLAS `AML.T*` ou OWASP LLM Top 10 2025); ameaças eliminadas vêm com justificação curta
-- [ ] Cada *threat* não eliminada tem entrada de controlo a aterrar em Cap. 04 (`ARC-014`/`ARC-015`), Cap. 07, Cap. 10 ou Cap. 12
+- [ ] Cada *threat* não eliminada tem entrada de controlo a aterrar em Cap. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Cap. 07, Cap. 10 ou Cap. 12
 - [ ] *Mitigation confidence* (`derived` vs `heuristic`) rotulada em cada ligação *threat*↔controlo
 - [ ] Cruzamento com o registo organizacional: se uma mitigação não está implementada, o agente não opera no nível pedido
 

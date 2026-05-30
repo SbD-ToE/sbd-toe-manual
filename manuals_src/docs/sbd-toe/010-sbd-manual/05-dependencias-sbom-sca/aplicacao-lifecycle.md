@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, dependencias, sbom, sca, supply-chain, govern
 genia: us-format-normalization
 ---
 
-# 🔄 Aplicação no Ciclo de Vida - Dependências, SBOM e SCA
+# Aplicação no Ciclo de Vida - Dependências, SBOM e SCA
 
 ## 🧭 Quando aplicar
 
@@ -672,10 +672,10 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e controlar
 
 ---
 
-### US-14 - AI BOM e gestão de *providers* de modelos AI
+### US-14 - AI BOM e gestão de *providers* de modelos AI {#us-14}
 
 **Contexto.**
-A US-10 cobre SBOM clássico — pacotes via *package manager*, dependências directas e transitivas. Quando o sistema inclui **componentes AI** (modelos, datasets, MCP servers/tools, prompts embebidos), há uma classe de "dependências" que escapa ao *package manager* tradicional: artefactos opacos com versão própria, *providers* externos (Anthropic, OpenAI, HuggingFace), e mecanismos de actualização que podem mudar comportamento sem mudar versão visível. Operacionalizamos `DEP-011`, `DEP-012`, `DEP-013` e `DEP-014` para que essas dependências fiquem tão auditáveis como o resto do *stack*.
+A US-10 cobre SBOM clássico — pacotes via *package manager*, dependências directas e transitivas. Quando o sistema inclui **componentes AI** (modelos, datasets, MCP servers/tools, prompts embebidos), há uma classe de "dependências" que escapa ao *package manager* tradicional: artefactos opacos com versão própria, *providers* externos (Anthropic, OpenAI, HuggingFace), e mecanismos de actualização que podem mudar comportamento sem mudar versão visível. Operacionalizamos [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) e [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) para que essas dependências fiquem tão auditáveis como o resto do *stack*.
 
 :::userstory
 **História.**

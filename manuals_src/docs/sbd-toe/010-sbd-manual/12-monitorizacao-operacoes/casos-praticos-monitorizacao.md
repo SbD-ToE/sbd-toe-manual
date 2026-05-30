@@ -5,7 +5,7 @@ description: Exemplos aplicados de logging, alertas e correlação em contextos 
 tags: [caso de estudo, exemplos, logging, alertas, deteção, correlação, telemetria, sbd-toe]
 ---
 
-# 📊 Casos Práticos de Monitorização e Deteção
+# Casos Práticos de Monitorização e Deteção
 
 Este anexo apresenta **exemplos práticos** de aplicação das recomendações de monitorização, logging, alertas e correlação. Os cenários aqui descritos ajudam a compreender como aplicar as prescrições deste capítulo a casos concretos.
 

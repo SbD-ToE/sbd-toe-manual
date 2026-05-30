@@ -5,7 +5,7 @@ description: Geração e gestão de Software Bill of Materials (SBOM) com rastre
 tags: [dependencias, sbom, sca, supply-chain]
 ---
 
-# 📦 Inventário de Dependências e SBOM
+# Inventário de Dependências e SBOM
 
 ## 🌟 Objetivo
 

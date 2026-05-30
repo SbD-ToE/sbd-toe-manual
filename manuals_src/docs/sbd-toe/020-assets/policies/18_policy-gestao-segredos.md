@@ -175,7 +175,7 @@ Alterar `tools_allowlist` ou *scopes* é uma alteração estruturalmente equival
 
 ### 9.3 *Kill-switch* operacional
 
-Para agentes em nível A2+, o procedimento de **revogação imediata** (`REQ-AGN-003`) tem de ser exercitado periodicamente:
+Para agentes em nível A2+, o procedimento de **revogação imediata** ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) tem de ser exercitado periodicamente:
 
 | Nível de autonomia | Cadência mínima de exercício |
 |---|---|
@@ -217,7 +217,7 @@ O *provider* do modelo é um **sub-processador** quando trata dados pessoais em 
 
 - Contrato de sub-processador com cláusulas explícitas (retention, *training opt-out*, audit rights).
 - Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o *provider* processa fora do EEA.
-- **Sem PII para *providers* fora da lista aprovada** (`DEP-014`).
+- **Sem PII para *providers* fora da lista aprovada** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 ### 10.4 *Training opt-out* obrigatório para PII
 
@@ -243,13 +243,13 @@ Quando a interacção do utilizador com o agente gera dados pessoais, aplicam-se
 | Sub-processador com cláusulas Art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
 | *Training opt-out* contratualizado | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório |
 | Localização EEA / SCCs quando aplicável | Obrigatório (quando há PII e processamento fora EEA) | Obrigatório | Obrigatório (preferência por processamento EEA) |
-| Redacção de PII nos `audit events` (`OPS-012`) | Recomendado | Obrigatório | Obrigatório |
+| Redacção de PII nos `audit events` ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) | Recomendado | Obrigatório | Obrigatório |
 | Procedimento para direitos do titular | Recomendado | Obrigatório | Obrigatório (incl. apagamento sob controlo do *deployer*) |
 
 ### 10.8 Anti-padrões
 
 - ❌ Enviar PII a *provider* fora da lista aprovada — *shadow AI* com risco RGPD.
-- ❌ Logar *prompts* com PII sem redacção em `OPS-012` — `audit trail` torna-se ele próprio repositório de dados pessoais sem base legal específica.
+- ❌ Logar *prompts* com PII sem redacção em [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) — `audit trail` torna-se ele próprio repositório de dados pessoais sem base legal específica.
 - ❌ Confiar que o *provider* "não usa para treino" sem cláusula contratual — declarações operacionais não substituem o Art. 28.º.
 - ❌ Ignorar categorias especiais (Art. 9.º RGPD) no prompt — saúde, biometria, dados de menores, etc. exigem base legal reforçada que muitos casos de uso de chatbots não satisfazem.
 - ❌ Tratar redacção como ofuscação suficiente — *pseudonimização* (RGPD) não é anonimização; PII pseudonimizada continua a ser dado pessoal.
@@ -277,9 +277,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | SbD-ToE Cap. 07 - CI/CD Seguro | Gestão e injeção de segredos em pipeline; **US-19 — Agentes AI como principals na pipeline** |
 | SbD-ToE Cap. 09 - Containers e Imagens | Segredos fora de imagens; workload identity |
 | SbD-ToE Cap. 11 - Deploy Seguro | Segredos em runtime de deploy |
-| SbD-ToE Cap. 04 — Arquitetura Segura (`ARC-015`) | Agente como *principal* isolado; least privilege per-tool |
+| SbD-ToE Cap. 04 — Arquitetura Segura ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Agente como *principal* isolado; least privilege per-tool |
 | Política de CI/CD Seguro (`17_policy-cicd-seguro.md`) | Secret detection no pipeline; masking de logs |
-| Policy 38 — Mandates de Agentes AI | Operacionaliza `REQ-AGN-001`: mandate, ownership, kill-switch |
+| Policy 38 — Mandates de Agentes AI | Operacionaliza [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn): mandate, ownership, kill-switch |
 | Policy 16 — Uso de Ferramentas de Apoio | Regras operacionais A2+ para agentes |
 | NIST SP 800-207 — Zero Trust Architecture | Princípios aplicados a *principals* não-humanos (incluindo agentes AI) |
 | OWASP Secrets Management Cheat Sheet | Referência de boas práticas de gestão de segredos |

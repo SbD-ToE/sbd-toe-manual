@@ -5,7 +5,7 @@ description: Práticas de Software Composition Analysis para detetar, priorizar 
 tags: [dependencias, sbom, sca, supply-chain]
 ---
 
-# ⚠️ Análise de Vulnerabilidades em Dependências (SCA)
+# Análise de Vulnerabilidades em Dependências (SCA)
 
 ## 🌟 Objetivo
 

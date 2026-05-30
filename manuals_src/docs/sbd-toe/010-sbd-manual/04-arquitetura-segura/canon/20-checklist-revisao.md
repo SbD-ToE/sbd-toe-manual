@@ -6,7 +6,7 @@ tags: [checklist, arquitetura, validação, requisitos]
 sidebar_position: 20
 ---
 
-# ✅ Checklist de Revisão - Arquitetura Segura
+# Checklist de Revisão - Arquitetura Segura
 
 Este checklist aplica-se a todas as aplicações avaliadas segundo os critérios definidos neste capítulo.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições de arquitetura segura**, permitindo:

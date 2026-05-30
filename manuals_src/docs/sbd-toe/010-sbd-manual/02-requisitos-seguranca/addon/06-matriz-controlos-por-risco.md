@@ -5,7 +5,7 @@ description: Requisitos mínimos obrigatórios por classificação de criticidad
 tags: [proporcionalidade, risco, requisitos, matriz, controlo]
 ---
 
-# 🧩 Matriz de Aplicação de Requisitos por Nível de Risco
+# Matriz de Aplicação de Requisitos por Nível de Risco
 
 Esta matriz resume, por **tema técnico de segurança**, quais os domínios onde existem **requisitos obrigatórios** para cada nível de risco (L1, L2, L3).
 

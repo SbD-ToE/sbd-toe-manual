@@ -8,7 +8,7 @@ tags: [exemplos, excecoes, onboarding, governance]
 
 
 
-# 🧪 Exemplos de Aplicação no Ciclo de Governaça
+# Exemplos de Aplicação no Ciclo de Governaça
 
 Este anexo fornece **exemplos práticos e reutilizáveis** para aplicar os conceitos de governança e contratação de forma operativa, alinhada com os restantes elementos do modelo SbD-ToE.  
 Inclui também a verificação de **formação obrigatória** para funções críticas (owners, aprovadores, validadores), em conformidade com o Cap. 13.

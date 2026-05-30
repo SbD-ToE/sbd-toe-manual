@@ -7,7 +7,7 @@ tags: [governanca, controlo, validacao, enforcement]
 ---
 
 
-# 🧮 Controlo Sistemático das Práticas do SbD-ToE
+# Controlo Sistemático das Práticas do SbD-ToE
 
 Este documento define o modelo de **controlo sistemático e contínuo** da aplicação das práticas prescritas ao longo de todos os capítulos do manual *Security by Design - Theory of Everything (SbD-ToE)*.
 

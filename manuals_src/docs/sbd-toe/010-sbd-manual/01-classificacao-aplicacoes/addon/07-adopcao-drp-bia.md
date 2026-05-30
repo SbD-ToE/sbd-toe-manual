@@ -6,7 +6,7 @@ tags: [tipo:ligacao, tema:drp, bia, classificacao, risco]
 ---
 <!--template: sbdtoe-addon -->
 
-# 📎 Modelo alternativo via Adoção de Classificações Existentes (e.g. DRP/BIA)
+# Modelo alternativo via Adoção de Classificações Existentes (e.g. DRP/BIA)
 
 
 ## 🎯 Objetivo

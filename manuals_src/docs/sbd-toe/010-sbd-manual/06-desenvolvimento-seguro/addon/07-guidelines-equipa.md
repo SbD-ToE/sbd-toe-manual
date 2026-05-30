@@ -7,7 +7,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 ---
 
 
-# 🤝 Guidelines de Equipa e Práticas Partilhadas
+# Guidelines de Equipa e Práticas Partilhadas
 
 > 💡 **Nota prática**:  
 > A disseminação de práticas seguras de desenvolvimento depende não só de regras técnicas, mas também de **cultura, exemplos práticos e partilha ativa entre elementos da equipa**.  

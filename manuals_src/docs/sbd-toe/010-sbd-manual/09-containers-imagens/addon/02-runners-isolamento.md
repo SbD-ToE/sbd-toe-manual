@@ -5,7 +5,7 @@ description: Garantia de execução segura e controlada de containers em pipelin
 tags: [runners, isolamento, pipelines, execucao, seguranca, cicd]
 ---
 
-# 🏃‍♂️ Runners, Execução Isolada e Ambientes Controlados
+# Runners, Execução Isolada e Ambientes Controlados
 
 ## 🌟 Objetivo
 

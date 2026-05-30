@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:rollback, versionamento, reversibilidade
 ---
 
 
-# 🔄 Controlo de Versão e Rollback Seguro
+# Controlo de Versão e Rollback Seguro
 
 Garantir reversibilidade e rastreabilidade é essencial para reduzir o impacto de falhas em produção. Este documento define as práticas recomendadas para controlo de versão, rollback confiável e preparação de releases seguras.
 

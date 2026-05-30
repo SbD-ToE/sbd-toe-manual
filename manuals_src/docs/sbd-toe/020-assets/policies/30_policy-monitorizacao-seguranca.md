@@ -153,11 +153,11 @@ Cada invocação de *tool* por um agente AI emite *audit event* estruturado com:
 
 - `timestamp` · `agent_id` · `session_id` · `mandate_ref` (Policy 38) · `autonomy_level`
 - `tool` · `tool_version` · `args` (PII redactada)
-- `intent_event_ref` (obrigatório em A2+; declarado pelo agente antes da acção — `REQ-AGN-004`)
+- `intent_event_ref` (obrigatório em A2+; declarado pelo agente antes da acção — [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn))
 - `outcome` (success / failure / timeout / rejected_by_gate)
 - `external_effect` (URL, recurso, mudança de estado em sistema externo)
 
-Estes eventos integram-se no SIEM como qualquer outro *audit log* — não vivem num *silo* separado. Cobertura operacional: ver `OPS-012`.
+Estes eventos integram-se no SIEM como qualquer outro *audit log* — não vivem num *silo* separado. Cobertura operacional: ver [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012).
 
 ### 9.2 *Token spend* / *runaway* detection
 
@@ -166,7 +166,7 @@ Por agente e por *mandate*, define-se *budget* de consumo do modelo (tokens, cha
 - **Threshold de aviso** → alerta ao *owner*
 - **Threshold máximo** → sessão pausa ou *kill-switch* dispara, conforme nível de autonomia
 
-Detecta *loops* descontrolados, abuso, regressões de eficiência do modelo após *upgrade*. Cobertura operacional: ver `OPS-013`.
+Detecta *loops* descontrolados, abuso, regressões de eficiência do modelo após *upgrade*. Cobertura operacional: ver [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013).
 
 ### 9.3 Detecção de *jailbreak* / *off-policy actions*
 
@@ -177,7 +177,7 @@ Para agentes A2+, mecanismo activo que cruza sinais para detectar comportamento 
 - **Argumentos materialmente diferentes do esperado** na *tool call*
 - **Recusas seguidas de re-tentativa diferente** — sinal de pressão multi-turn
 
-Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e a *eval suite* offline (Cap. 10 §C5). Cobertura operacional: ver `OPS-014`.
+Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e a *eval suite* offline (Cap. 10 §C5). Cobertura operacional: ver [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
 
 ### 9.4 Proporcionalidade
 
@@ -223,9 +223,9 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | Referência | Relevância |
 |---|---|
 | SbD-ToE Cap. 12 - Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning; **US-13 — telemetria agentic** |
-| SbD-ToE Cap. 12 — Catálogo (`OPS-012`, `OPS-013`, `OPS-014`) | Requisitos operacionais agentic |
-| SbD-ToE Cap. 04 — Arquitetura Segura (`ARC-015`) | Audit completo por *tool invocation* — origem dos sinais agentic |
-| SbD-ToE Cap. 02 — Requisitos (`REQ-AGN-004`) | *Intent declaration* — origem do sinal 9.3 |
+| SbD-ToE Cap. 12 — Catálogo ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012), [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013), [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)) | Requisitos operacionais agentic |
+| SbD-ToE Cap. 04 — Arquitetura Segura ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Audit completo por *tool invocation* — origem dos sinais agentic |
+| SbD-ToE Cap. 02 — Requisitos ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | *Intent declaration* — origem do sinal 9.3 |
 | Política de Logging Estruturado (`29_policy-logging-estruturado.md`) | Base de eventos para monitorização |
 | Policy 38 — Mandates de Agentes AI | `mandate_ref` em audit events |
 | MITRE ATLAS | `AML.M0024` AI Telemetry Logging |

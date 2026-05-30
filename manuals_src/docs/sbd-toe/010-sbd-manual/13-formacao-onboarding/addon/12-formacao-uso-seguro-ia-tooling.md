@@ -5,7 +5,7 @@ description: Conteúdos formativos para assegurar uso responsável e seguro de f
 tags: [formacao, ia, tooling, copilot, code-generation, llm, automacao, guardrails]
 ---
 
-# 📚 Addon-12 - Formação em Uso Seguro de IA e Tooling Pervasivo
+# Addon-12 - Formação em Uso Seguro de IA e Tooling Pervasivo
 
 ## 🎯 Objetivo
 

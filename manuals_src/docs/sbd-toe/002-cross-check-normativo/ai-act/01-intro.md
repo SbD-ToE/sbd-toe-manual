@@ -63,25 +63,25 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 
 ## Matriz de Cross-Check (resumo)
 
-> ✏️ **Refresh 2026-05-30.** Esta matriz foi actualizada na sequência do *release agentic* (Cap. 02 §A0–A4, Cap. 03 playbook agentic, `ARC-015`, `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39, US-13/14/15/16/19/21). Várias lacunas que estavam classificadas como "intencionais" (por desenho fora de AppSec) ficaram **parcial ou totalmente colmatadas** — assinalamos onde.
+> ✏️ **Refresh 2026-05-30.** Esta matriz foi actualizada na sequência do *release agentic* (Cap. 02 §A0–A4, Cap. 03 playbook agentic, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39, US-13/14/15/16/19/21). Várias lacunas que estavam classificadas como "intencionais" (por desenho fora de AppSec) ficaram **parcial ou totalmente colmatadas** — assinalamos onde.
 
 | Domínio AI Act | Referência (artigo) | Cobertura SbD-ToE | Lacuna residual | Ação de adaptação |
 |---|---|---|---|---|
 | Literacia em IA | Art. 4 | Cap. 13 (formação), Policy 37 §11 (matriz por *role*) | Avaliação formal de literacia | Documentar conclusões dos trilhos formativos como evidência |
-| Sistema de gestão de risco | Art. 9 | Cap. 01 (classificação), Cap. 02 (requisitos), Cap. 02 §A0–A4 + `REQ-AGN-002` (níveis de autonomia), Cap. 03 (threat modeling + playbook agentic), Cap. 12 (monitorização) | Risco para saúde, segurança e direitos fundamentais ao longo do uso previsto | Estender threat model com taxonomia de risco de IA (ATLAS — já incluída) e impacto societal |
-| Dados e governação de dados | Art. 10 | Cap. 05 (proveniência), `DEP-011` (inventário AI), `DEP-012` (AI BOM CycloneDX 1.6 ml-bom), Policy 39, Cap. 02 (requisitos de dados) | Representatividade, enviesamento, qualidade estatística (domínio IA) | Processo de *data governance* de ciência de dados; *datasheets*/*data cards* |
-| Documentação técnica | Art. 11, Anexo IV | Cap. 02, Cap. 04 (arquitetura + `ARC-015`), Cap. 05 (`DEP-012` AI BOM), Cap. 06, Policy 38 (mandate) | Estrutura formal do Anexo IV; *model cards* | Mapear artefactos SbD-ToE (incluindo mandate + AI BOM) para o índice do Anexo IV |
-| Registo de eventos (logging) | Art. 12, Art. 19 | Cap. 12 (observabilidade), `OPS-011` (AI/ML), `OPS-012` (audit per *tool invocation* com `mandate_ref`), Cap. 12 US-13 (telemetria agentic), Policy 30 §9 | Esquema de campos específico do *model output* fica configurável | Documentar esquema de inferência por sistema |
+| Sistema de gestão de risco | Art. 9 | Cap. 01 (classificação), Cap. 02 (requisitos), Cap. 02 §A0–A4 + [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (níveis de autonomia), Cap. 03 (threat modeling + playbook agentic), Cap. 12 (monitorização) | Risco para saúde, segurança e direitos fundamentais ao longo do uso previsto | Estender threat model com taxonomia de risco de IA (ATLAS — já incluída) e impacto societal |
+| Dados e governação de dados | Art. 10 | Cap. 05 (proveniência), [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) (inventário AI), [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) (AI BOM CycloneDX 1.6 ml-bom), Policy 39, Cap. 02 (requisitos de dados) | Representatividade, enviesamento, qualidade estatística (domínio IA) | Processo de *data governance* de ciência de dados; *datasheets*/*data cards* |
+| Documentação técnica | Art. 11, Anexo IV | Cap. 02, Cap. 04 (arquitetura + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Cap. 05 ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM), Cap. 06, Policy 38 (mandate) | Estrutura formal do Anexo IV; *model cards* | Mapear artefactos SbD-ToE (incluindo mandate + AI BOM) para o índice do Anexo IV |
+| Registo de eventos (logging) | Art. 12, Art. 19 | Cap. 12 (observabilidade), [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (AI/ML), [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation* com `mandate_ref`), Cap. 12 US-13 (telemetria agentic), Policy 30 §9 | Esquema de campos específico do *model output* fica configurável | Documentar esquema de inferência por sistema |
 | Transparência aos deployers | Art. 13 | Cap. 02, Cap. 04 (parcial), Policy 38 (mandate como fonte estruturada de *capabilities*, limitações e supervisão) | Métricas de desempenho específicas do modelo | Derivar "instruções de utilização" a partir do mandate + artefactos Cap. 04/06 |
-| Supervisão humana | Art. 14 ⚡ | Cap. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, classificação de nível, *kill-switch*, *intent declaration*), Cap. 04 `ARC-015` (OOB approval + *kill-switch* arquitectónico), Policy 38 (ciclo de vida do mandate) | UX/fluxo de intervenção humano (domínio IA/produto) | Desenho da UX continua na equipa de IA; controlo técnico e governação operacional já dentro |
-| Exatidão, robustez e cibersegurança | Art. 15 | Cap. 03 playbook agentic + MITRE ATLAS, Cap. 04 (`ARC-014`+`ARC-015`), Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites*), Cap. 12 + `OPS-014` (*jailbreak* / *off-policy*) | Métricas de exatidão declaradas; limiares regulamentares | Declarar métricas em articulação com equipa de IA |
+| Supervisão humana | Art. 14 ⚡ | Cap. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, classificação de nível, *kill-switch*, *intent declaration*), Cap. 04 [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval + *kill-switch* arquitectónico), Policy 38 (ciclo de vida do mandate) | UX/fluxo de intervenção humano (domínio IA/produto) | Desenho da UX continua na equipa de IA; controlo técnico e governação operacional já dentro |
+| Exatidão, robustez e cibersegurança | Art. 15 | Cap. 03 playbook agentic + MITRE ATLAS, Cap. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)+[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites*), Cap. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak* / *off-policy*) | Métricas de exatidão declaradas; limiares regulamentares | Declarar métricas em articulação com equipa de IA |
 | Sistema de gestão da qualidade | Art. 17 | Cap. 07 (CI/CD), Cap. 11 (release), Cap. 06, Cap. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Manual da qualidade formal | Mapear gates SbD-ToE + ciclos Policy 38/39 para os elementos do QMS |
-| Cadeia de fornecimento | Art. 25 | `DEP-013` (*pinning*), `DEP-014` (lista de *providers* aprovados), Policy 39, Cap. 14 US-21 | — | — |
+| Cadeia de fornecimento | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de *providers* aprovados), Policy 39, Cap. 14 US-21 | — | — |
 | Obrigações do *deployer* | Art. 26 | Policy 38 (mandate + ownership), Cap. 02 §A0–A4, Cap. 12 US-13 (logs sob controlo do *deployer*) | Documentação operacional do *deployer* | Estender mandate com obrigações específicas quando organização é *deployer* |
-| Conformidade e marcação CE | Art. 43, 47–49 | Cap. 14 US-21 (contratação) + `DEP-014` (declaração contratual de conformidade do *provider*) | Avaliação de conformidade técnica do sistema | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
-| GPAI e risco sistémico | Art. 53, Art. 55 | Cap. 03 playbook + Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites* + *red teaming*), Cap. 12 US-13 + `OPS-014`, Policy 19 §7, Policy 30 §9 | Documentação técnica GPAI (Anexo XI/XII); política de *copyright* | Documentação delegada à equipa de IA; *cybersecurity* já dentro |
+| Conformidade e marcação CE | Art. 43, 47–49 | Cap. 14 US-21 (contratação) + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (declaração contratual de conformidade do *provider*) | Avaliação de conformidade técnica do sistema | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
+| GPAI e risco sistémico | Art. 53, Art. 55 | Cap. 03 playbook + Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites* + *red teaming*), Cap. 12 US-13 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014), Policy 19 §7, Policy 30 §9 | Documentação técnica GPAI (Anexo XI/XII); política de *copyright* | Documentação delegada à equipa de IA; *cybersecurity* já dentro |
 | Monitorização pós-comercialização | Art. 72 | Cap. 12 (monitorização, *drift*), `OPS-011..014`, Cap. 12 US-13 | Plano formal de monitorização pós-mercado por sistema | Formalizar plano por sistema com base nos sinais já disponíveis |
-| Incidentes graves | Art. 73 | Cap. 12, Cap. 14, `OPS-014` (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (incidentes agentic-específicos) | Definição regulamentar de "incidente grave"; prazos (2/10/15 dias) e *templates* | Parametrizar *runbook* e exportadores SIEM/ITSM |
+| Incidentes graves | Art. 73 | Cap. 12, Cap. 14, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (incidentes agentic-específicos) | Definição regulamentar de "incidente grave"; prazos (2/10/15 dias) e *templates* | Parametrizar *runbook* e exportadores SIEM/ITSM |
 
 ---
 
@@ -129,14 +129,14 @@ O Art. 9 exige um sistema de gestão de risco **contínuo e iterativo** ao longo
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Identificação e análise de riscos | Cap. 03 | Threat modeling (STRIDE, MITRE ATT&CK) + [playbook agentic](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) com MITRE ATLAS já incluído |
-| Proporcionalidade ao risco | Cap. 01 + Cap. 02 §A0–A4 | Classificação L1–L3 + níveis de autonomia agentic A0–A4 (`REQ-AGN-002`) |
+| Proporcionalidade ao risco | Cap. 01 + Cap. 02 §A0–A4 | Classificação L1–L3 + níveis de autonomia agentic A0–A4 ([`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) |
 | Medidas de gestão de risco | Cap. 02 | Catálogo de requisitos por nível + `REQ-AGN-001..004` |
 | Avaliação iterativa e contínua | Cap. 12 | Monitorização contínua, melhoria + `OPS-011..014` |
 
 **O que o SbD-ToE cobre**
 
 - Identificação estruturada de ameaças via threat modeling (Cap. 03), com o **playbook agentic** já incorporado e MITRE ATLAS como catálogo activo (não apenas extensível).
-- Classificação de criticidade aplicacional (Cap. 01), base para proporcionalidade de controlos, **complementada pelos níveis de autonomia A0–A4** para sistemas que incluem agentes AI com *tool-use* (`REQ-AGN-002`).
+- Classificação de criticidade aplicacional (Cap. 01), base para proporcionalidade de controlos, **complementada pelos níveis de autonomia A0–A4** para sistemas que incluem agentes AI com *tool-use* ([`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)).
 - Catálogo de requisitos de segurança e respetivas medidas (Cap. 02), incluindo o subconjunto agentic `REQ-AGN-001..004`.
 - Reavaliação contínua, em ciclo, com métricas operacionais (Cap. 12), incluindo sinais agentic-específicos (`OPS-011..014`).
 
@@ -160,7 +160,7 @@ O Art. 10 exige que os conjuntos de dados de treino, validação e teste obedeç
 
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Proveniência e integridade de dados | Cap. 05 + `DEP-011` (inventário AI) + `DEP-012` (AI BOM CycloneDX 1.6 *ml-bom*) | Proveniência, integridade e *pinning* de *datasets* e modelos |
+| Proveniência e integridade de dados | Cap. 05 + [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) (inventário AI) + [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) (AI BOM CycloneDX 1.6 *ml-bom*) | Proveniência, integridade e *pinning* de *datasets* e modelos |
 | Requisitos de tratamento de dados | Cap. 02 | Requisitos de segurança de dados |
 | Controlo de acesso e proteção | Cap. 04 | Arquitetura segura, classificação de dados |
 | *Pinning* + lista de *providers* aprovados | `DEP-013/014` + Policy 39 | Versão fixa explícita; *providers* aprovados com cláusulas contratuais |
@@ -177,7 +177,7 @@ A **qualidade estatística, representatividade e deteção/mitigação de envies
 
 **Como cumprir**
 
-A *AI-BOM* que estava sugerida em versões anteriores deste documento **já está implementada** (`DEP-012`, Policy 39, Cap. 05 US-14). Resta complementar o SbD-ToE com um processo de *data governance* de ciência de dados — linhagem de dados, *datasheets for datasets*, *data cards*, avaliação de enviesamento — articulado com a equipa de IA.
+A *AI-BOM* que estava sugerida em versões anteriores deste documento **já está implementada** ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), Policy 39, Cap. 05 US-14). Resta complementar o SbD-ToE com um processo de *data governance* de ciência de dados — linhagem de dados, *datasheets for datasets*, *data cards*, avaliação de enviesamento — articulado com a equipa de IA.
 
 ---
 
@@ -195,15 +195,15 @@ O Art. 11 exige documentação técnica elaborada **antes** da colocação no me
 | Requisitos e medidas de segurança | Cap. 02 + `REQ-AGN-001..004` | Catálogo de requisitos (incluindo subconjunto agentic) |
 | Processo de desenvolvimento | Cap. 06, Cap. 07 | Desenvolvimento seguro, CI/CD com gates |
 | Gestão de risco e alterações | Cap. 03, Cap. 12 | Threat model + playbook agentic; monitorização e melhoria |
-| Inventário de componentes e modelos | Cap. 05 + `DEP-012` AI BOM + Policy 39 | Lista de componentes (Anexo IV §2(a)) incluindo modelos, datasets, *tools* e prompts |
+| Inventário de componentes e modelos | Cap. 05 + [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM + Policy 39 | Lista de componentes (Anexo IV §2(a)) incluindo modelos, datasets, *tools* e prompts |
 | Operação sob mandate | Policy 38 | *Mandate* documentado e versionado por agente AI |
 
 **O que o SbD-ToE cobre**
 
-- Documentação de arquitetura e decisões de segurança (Cap. 04), incluindo padrões agentic `ARC-014` e `ARC-015`.
+- Documentação de arquitetura e decisões de segurança (Cap. 04), incluindo padrões agentic [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014) e [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015).
 - Requisitos e medidas por nível de criticidade (Cap. 02), incluindo os requisitos `REQ-AGN-*` para agentes AI.
 - Evidência de processo de desenvolvimento e pipeline (Cap. 06, Cap. 07).
-- **AI BOM** como artefacto auditável que materializa parte da lista de componentes exigida pelo Anexo IV §2(a) (`DEP-012`, Policy 39).
+- **AI BOM** como artefacto auditável que materializa parte da lista de componentes exigida pelo Anexo IV §2(a) ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), Policy 39).
 - ***Mandate*** de cada agente AI como artefacto operacional rastreável (Policy 38) — entra no índice Anexo IV §2(b) (elementos de desenvolvimento e conceção) sempre que o sistema inclui agentes.
 
 **Lacunas intencionais**
@@ -227,15 +227,15 @@ O Art. 12 exige capacidade de **registo automático de eventos** (logs) ao longo
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Logging "by design" | Cap. 12 | Observabilidade, logging estruturado |
-| Rastreabilidade de eventos | Cap. 12 + `OPS-011` (AI/ML) + `OPS-012` (audit per *tool invocation*) | Trilho auditável e correlação, com agente identificado por `agent_id` + `session_id` + `mandate_ref` |
-| *Tool invocation audit* | `OPS-012` + Cap. 12 US-13 | Cada *tool call* gera *audit event* estruturado (com `intent_event_ref` em A2+) |
-| Detecção de *off-policy* e *jailbreak* | `OPS-014` + Policy 30 §9.3 | Sinais accionáveis ligados a IR |
+| Rastreabilidade de eventos | Cap. 12 + [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (AI/ML) + [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) | Trilho auditável e correlação, com agente identificado por `agent_id` + `session_id` + `mandate_ref` |
+| *Tool invocation audit* | [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) + Cap. 12 US-13 | Cada *tool call* gera *audit event* estruturado (com `intent_event_ref` em A2+) |
+| Detecção de *off-policy* e *jailbreak* | [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9.3 | Sinais accionáveis ligados a IR |
 | Conservação e retenção | Cap. 12 + `OPS-003` | Políticas de retenção e imutabilidade |
 
 **O que o SbD-ToE cobre**
 
 - Logging estruturado e observabilidade "by design" (Cap. 12).
-- **Audit completo por *tool invocation*** quando há agentes AI (`OPS-012`) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Mais granular do que o típico log de inferência exigido pelo Art. 12.
+- **Audit completo por *tool invocation*** quando há agentes AI ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Mais granular do que o típico log de inferência exigido pelo Art. 12.
 - Trilho auditável e correlação de eventos, com orientação para retenção e imutabilidade (Cap. 12).
 - **Telemetria operacional agentic** (Cap. 12 US-13) que sustenta a base evidencial para Art. 72 (monitorização pós-mercado) e Art. 73 (incidentes graves).
 
@@ -260,7 +260,7 @@ O Art. 13 exige que os sistemas de alto risco sejam suficientemente transparente
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Documentação de capacidades e limitações | Cap. 02, Cap. 04, Policy 38 (mandate) | Requisitos, arquitetura e *mandate* com `capabilities` + `scope` + `risk_residual` |
-| Identidade do *provider* e *runtime* | Policy 38 (`agent_runtime` no mandate) + `DEP-014` (lista de *providers*) | Identidade do *provider* AI + versão *pinned* do modelo |
+| Identidade do *provider* e *runtime* | Policy 38 (`agent_runtime` no mandate) + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de *providers*) | Identidade do *provider* AI + versão *pinned* do modelo |
 | Supervisão humana exigida | Cap. 02 §A0–A4 + Policy 38 | Nível de autonomia A0–A4 declarado por uso/contexto |
 
 **O que o SbD-ToE cobre**
@@ -280,7 +280,7 @@ Sugere-se derivar um documento de "instruções de utilização" a partir do ***
 
 ### Artigo 14 - Supervisão humana
 
-> ⚡ **Refresh 2026-05-30.** A primeira versão deste cross-check tratava o Art. 14 como largamente fora de AppSec ("desenho de mecanismos de supervisão é problema de IA/produto"). Com a camada agentic introduzida em 2026 — A0–A4, `REQ-AGN-*`, `ARC-015`, Policy 38 — a cobertura técnica e operacional ficou substancialmente preenchida. A UX de intervenção continua na equipa de IA/produto, mas o *como* arquitectónico e o *quando* governativo já vivem no manual.
+> ⚡ **Refresh 2026-05-30.** A primeira versão deste cross-check tratava o Art. 14 como largamente fora de AppSec ("desenho de mecanismos de supervisão é problema de IA/produto"). Com a camada agentic introduzida em 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — a cobertura técnica e operacional ficou substancialmente preenchida. A UX de intervenção continua na equipa de IA/produto, mas o *como* arquitectónico e o *quando* governativo já vivem no manual.
 
 **Conteúdo normativo**
 
@@ -290,19 +290,19 @@ O Art. 14 exige que os sistemas de alto risco sejam concebidos para permitir **s
 
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Definir nível de supervisão proporcional | Cap. 02 §A0–A4 + `REQ-AGN-002` | Cinco níveis de autonomia (A0 leitura → A4 autónomo); classificação por contexto |
-| Mandate operacional com supervisão declarada | Policy 38 (mandate) + `REQ-AGN-001` | *Owner*, *approver*, `review_cadence`, *kill-switch*, *intent audit sink* |
-| Capacidade arquitectónica de interrupção (*stop*) | `ARC-015` + `REQ-AGN-003` (*kill-switch*) | Revogação de credenciais + terminação de *runtime* + isolamento de *namespace* + alerta on-call, em segundos |
-| Anulação consciente de acção destrutiva | `REQ-AGN-004` (*intent declaration*) + `ARC-015` (OOB approval) | Agente declara intenção antes de *tool call* destrutivo; aprovação humana *out-of-band* exigida em A2+ |
+| Definir nível de supervisão proporcional | Cap. 02 §A0–A4 + [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | Cinco níveis de autonomia (A0 leitura → A4 autónomo); classificação por contexto |
+| Mandate operacional com supervisão declarada | Policy 38 (mandate) + [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | *Owner*, *approver*, `review_cadence`, *kill-switch*, *intent audit sink* |
+| Capacidade arquitectónica de interrupção (*stop*) | [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) + [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*kill-switch*) | Revogação de credenciais + terminação de *runtime* + isolamento de *namespace* + alerta on-call, em segundos |
+| Anulação consciente de acção destrutiva | [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*intent declaration*) + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval) | Agente declara intenção antes de *tool call* destrutivo; aprovação humana *out-of-band* exigida em A2+ |
 | Exercício periódico do *stop* | Policy 38 + Policy 18 §9.3 | *Kill-switch* exercitado em sandbox/staging (anual A2, trimestral A3, mensal A4) com cronómetro registado |
-| Auditoria de *off-policy actions* | `OPS-014` + Policy 30 §9.3 + Policy 16 §11.4 | Divergência entre `intent` declarado e acção real gera alerta accionável + entra em IR |
+| Auditoria de *off-policy actions* | [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9.3 + Policy 16 §11.4 | Divergência entre `intent` declarado e acção real gera alerta accionável + entra em IR |
 
 **O que o SbD-ToE cobre**
 
 - **Modelo normativo de níveis de supervisão** (Cap. 02 §A0–A4). A escolha *human-in-the-loop* / *human-on-the-loop* / *autonomous* é declarada explicitamente por contexto, com critérios de promoção e descida; subir nível exige evidência operacional dos pré-requisitos.
 - ***Mandate*** (Policy 38) — operacionaliza Art. 14 declarando, para cada agente em uso, **quem supervisiona**, **com que cadência**, **com que *kill-switch*** e **sob que mandato assinado**.
-- ***Kill-switch* arquitectónico** (`ARC-015` + `REQ-AGN-003`) — não é um botão simbólico: revoga credenciais OIDC + termina sessões + isola *namespace* + alerta on-call, com tempo medido. Exercitado periodicamente conforme nível de autonomia.
-- ***Intent declaration*** (`REQ-AGN-004`) — em A2+, antes de cada *tool call* destrutivo o agente declara à infraestrutura *o que vai fazer e porquê*; o gate cruza intent vs acção real a posteriori (`OPS-014`).
+- ***Kill-switch* arquitectónico** ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) + [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) — não é um botão simbólico: revoga credenciais OIDC + termina sessões + isola *namespace* + alerta on-call, com tempo medido. Exercitado periodicamente conforme nível de autonomia.
+- ***Intent declaration*** ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) — em A2+, antes de cada *tool call* destrutivo o agente declara à infraestrutura *o que vai fazer e porquê*; o gate cruza intent vs acção real a posteriori ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)).
 - **Aprovação humana *out-of-band*** — fora do canal do agente (Slack, GitHub review, webhook assinado), para que *prompt injection* no canal principal não consiga "auto-aprovar".
 
 **Lacunas residuais**
@@ -311,7 +311,7 @@ A **UX da decisão humana** (como o utilizador interpreta o output e decide inte
 
 **Como cumprir**
 
-A maior parte do trabalho técnico está agora dentro do manual: declarar o nível A0–A4 no *mandate* (Policy 38), instrumentar *kill-switch* exercitado (`REQ-AGN-003`) e *intent declaration* (`REQ-AGN-004`) conforme `ARC-015`, e configurar `OPS-014` para detectar divergência. A equipa de IA/produto complementa com a UX da intervenção e os pontos cognitivos de supervisão. Para sistemas de alto risco com componente agentic, a US-15 (Cap. 02) + US-16 (Cap. 04) constituem o checklist operacional.
+A maior parte do trabalho técnico está agora dentro do manual: declarar o nível A0–A4 no *mandate* (Policy 38), instrumentar *kill-switch* exercitado ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) e *intent declaration* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) conforme [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), e configurar [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) para detectar divergência. A equipa de IA/produto complementa com a UX da intervenção e os pontos cognitivos de supervisão. Para sistemas de alto risco com componente agentic, a US-15 (Cap. 02) + US-16 (Cap. 04) constituem o checklist operacional.
 
 ---
 
@@ -328,20 +328,20 @@ O Art. 15 exige que os sistemas de alto risco atinjam um nível adequado de **ex
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Identificação de ameaças adversariais | Cap. 03 + [playbook agentic](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) | MITRE ATLAS + OWASP LLM Top 10 2025 já incorporados como catálogos activos |
-| Defesa em profundidade e isolamento | Cap. 04 (`ARC-014`/`ARC-015`) | Trust boundaries (incl. *agentic boundary*); agente como *principal* isolado |
+| Defesa em profundidade e isolamento | Cap. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Trust boundaries (incl. *agentic boundary*); agente como *principal* isolado |
 | Integridade da cadeia (dados/modelos) | Cap. 05 (`DEP-011..014`) + Policy 39 | Proveniência + AI BOM + *pinning* + *providers* aprovados |
 | Testes de robustez e *red teaming* | Cap. 10 §C5 + Policy 19 §7 | *Eval suites* contínuas (regression de prompt, abuse corpus, *A/B*, drift) |
-| Deteção e resposta em *runtime* | Cap. 12 + `OPS-014` + Policy 30 §9 | Detecção de *jailbreak* / *off-policy*; *audit per tool invocation* |
-| Hardening do serviço de inferência | Cap. 04, Cap. 09 + `ARC-015` | Arquitetura, containers/runtime, identidade efémera |
+| Deteção e resposta em *runtime* | Cap. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9 | Detecção de *jailbreak* / *off-policy*; *audit per tool invocation* |
+| Hardening do serviço de inferência | Cap. 04, Cap. 09 + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) | Arquitetura, containers/runtime, identidade efémera |
 
 **O que o SbD-ToE cobre**
 
 - **Modelação de ameaças** (Cap. 03), com o **playbook agentic** (DFD + threat library MITRE ATLAS + OWASP LLM Top 10 2025) já incluído como catálogo activo — não apenas extensível.
-- **Arquitetura defensiva** (Cap. 04): fronteiras de confiança (incluindo a *agentic boundary* em `ARC-014` e o agente como *principal* em `ARC-015`), segregação, validação de input, limitação de exposição do serviço de inferência.
-- **Integridade da cadeia de fornecimento** (Cap. 05 `DEP-011..014`): proveniência, AI BOM (`DEP-012` CycloneDX 1.6 *ml-bom*), *pinning* de versão (`DEP-013` — mitiga `AML.T0109` *Supply Chain Rug Pull*), lista de *providers* aprovados (`DEP-014`).
+- **Arquitetura defensiva** (Cap. 04): fronteiras de confiança (incluindo a *agentic boundary* em [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014) e o agente como *principal* em [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), segregação, validação de input, limitação de exposição do serviço de inferência.
+- **Integridade da cadeia de fornecimento** (Cap. 05 `DEP-011..014`): proveniência, AI BOM ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) CycloneDX 1.6 *ml-bom*), *pinning* de versão ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) — mitiga `AML.T0109` *Supply Chain Rug Pull*), lista de *providers* aprovados ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 - **Testes de segurança** (Cap. 10 §C5 *eval suites*): regression tests de prompt/skill, *abuse* / *red-team corpus* (LLM01-2025 prompt injection, LLM06-2025 excessive agency), *drift detection*, *A/B testing*.
-- **Monitorização em runtime** (Cap. 12 + `OPS-011..014`): deteção de anomalias, *model drift*, *audit per tool invocation* (`OPS-012`), *budget / runaway* (`OPS-013`), *jailbreak* / *off-policy actions* (`OPS-014`).
-- **Hardening de runtime** (Cap. 09 + `ARC-015`): isolamento do serviço de inferência em containers; agente AI com *workload identity* efémera OIDC + *scope* mínimo por *tool*.
+- **Monitorização em runtime** (Cap. 12 + `OPS-011..014`): deteção de anomalias, *model drift*, *audit per tool invocation* ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)), *budget / runaway* ([`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013)), *jailbreak* / *off-policy actions* ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)).
+- **Hardening de runtime** (Cap. 09 + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)): isolamento do serviço de inferência em containers; agente AI com *workload identity* efémera OIDC + *scope* mínimo por *tool*.
 
 **Lacunas intencionais**
 
@@ -397,9 +397,9 @@ O Art. 25 trata da distribuição de responsabilidades quando vários intervenie
 
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Versão *pinned* de modelos e componentes AI | `DEP-013` | Versão fixa explícita; sem `latest` / ranges / aliases dinâmicos |
-| Lista de *providers* AI aprovados | `DEP-014` + Policy 39 | Lista versionada com `risk_classification`, `contract_ref`, cláusulas críticas |
-| AI BOM por *build* | `DEP-012` + Policy 39 | CycloneDX 1.6 *ml-bom* gerado por *release* |
+| Versão *pinned* de modelos e componentes AI | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) | Versão fixa explícita; sem `latest` / ranges / aliases dinâmicos |
+| Lista de *providers* AI aprovados | [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) + Policy 39 | Lista versionada com `risk_classification`, `contract_ref`, cláusulas críticas |
+| AI BOM por *build* | [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) + Policy 39 | CycloneDX 1.6 *ml-bom* gerado por *release* |
 | Cláusulas contratuais com *providers* | Cap. 14 US-21 + Policy 33 §10 | Cláusulas de retention, localização, audit, notificação, conformidade |
 | Resposta a incidentes *upstream* | Policy 39 §7 | Triagem por classe (`AML.T0019` *data poisoning*, `AML.T0109` *rug pull*, `AML.T0110` *tool poisoning*, *provider outage*) |
 
@@ -433,7 +433,7 @@ O Art. 26 define obrigações específicas dos *deployers* de sistemas de IA de 
 | Uso conforme instruções; supervisão atribuída | Policy 38 (mandate com `owner`, `approver`, `autonomy_level`) | *Mandate* declara *quem supervisiona*, *com que cadência*, *sob que mandato* |
 | Atribuição de supervisão qualificada | Cap. 00 (nota AI Reliability Engineer) + Policy 37 §11 | Função composta + literacia obrigatória por *role* |
 | Monitorização do funcionamento | Cap. 12 US-13 + `OPS-011..014` | Telemetria agentic em produção |
-| Conservação de logs (Art. 19) | Cap. 12 + `OPS-003` (retention) + `OPS-012` (audit per tool) | *Audit trail* completo sob controlo do *deployer* |
+| Conservação de logs (Art. 19) | Cap. 12 + `OPS-003` (retention) + [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per tool) | *Audit trail* completo sob controlo do *deployer* |
 | Comunicação a autoridades | Cap. 12 + Cap. 14 + Policy 30 §9.3 + Policy 32 (IRP) | IR alimenta notificação a autoridades |
 
 **O que o SbD-ToE cobre**
@@ -449,7 +449,7 @@ Quando a organização é simultaneamente *provider* e *deployer* (caso comum em
 
 **Como cumprir**
 
-Para usos em que a organização é *deployer*, o *mandate* (Policy 38) é o artefacto central. Sugere-se um *template* específico para *deployer mandate* que documente explicitamente a referência ao *provider* (`contract_ref` + `DEP-014`), as instruções de utilização recebidas, e o alinhamento com os requisitos do Art. 26.
+Para usos em que a organização é *deployer*, o *mandate* (Policy 38) é o artefacto central. Sugere-se um *template* específico para *deployer mandate* que documente explicitamente a referência ao *provider* (`contract_ref` + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)), as instruções de utilização recebidas, e o alinhamento com os requisitos do Art. 26.
 
 ---
 
@@ -464,17 +464,17 @@ O Art. 72 exige um sistema de monitorização pós-comercialização proporciona
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Recolha contínua de telemetria | Cap. 12 + `OPS-011..014` + Cap. 12 US-13 | Observabilidade AI/ML + sinais agentic-específicos |
-| Análise de desempenho e degradação | Cap. 12 + `OPS-011` | Deteção de *drift*, anomalias, degradação de precisão |
-| *Audit per tool invocation* | `OPS-012` | Reconstrução *post-mortem* de qualquer sessão agentic |
-| *Token budget* e *runaway* | `OPS-013` | Detecção de consumo descontrolado e mudanças de eficiência |
-| *Off-policy actions* e *jailbreak* | `OPS-014` + Policy 30 §9.3 | Sinais accionáveis ligados a IR |
+| Análise de desempenho e degradação | Cap. 12 + [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) | Deteção de *drift*, anomalias, degradação de precisão |
+| *Audit per tool invocation* | [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) | Reconstrução *post-mortem* de qualquer sessão agentic |
+| *Token budget* e *runaway* | [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013) | Detecção de consumo descontrolado e mudanças de eficiência |
+| *Off-policy actions* e *jailbreak* | [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9.3 | Sinais accionáveis ligados a IR |
 | Melhoria contínua | Cap. 12 + Cap. 10 §C5 (*eval suites*) | Ciclo pós-incidente realimenta *eval suite* offline |
 
 **O que o SbD-ToE cobre**
 
 - Recolha e análise contínua de telemetria operacional (Cap. 12), com sinais agentic-específicos completos (`OPS-011..014`).
 - **Telemetria agentic** (Cap. 12 US-13) que materializa a base evidencial para o plano de monitorização pós-mercado: *tool invocation audit events*, *intent events*, *budget metrics*, *off-policy / jailbreak detection*.
-- Deteção de degradação de desempenho e *model drift* (Cap. 12, `OPS-011`).
+- Deteção de degradação de desempenho e *model drift* (Cap. 12, [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)).
 - **Ciclo de realimentação para *eval suites*** (Cap. 10 §C5) — incidentes detectados em produção alimentam a suite offline, fortalecendo a regressão futura.
 
 **Lacunas intencionais**
@@ -497,7 +497,7 @@ O Art. 73 obriga os fornecedores a comunicar **incidentes graves** às autoridad
 
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Deteção e resposta a incidentes | Cap. 12 + `OPS-014` (*jailbreak* / *off-policy*) + Policy 30 §9.3 | Processo de deteção, resposta, pós-incidente; sinais agentic accionáveis |
+| Deteção e resposta a incidentes | Cap. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak* / *off-policy*) + Policy 30 §9.3 | Processo de deteção, resposta, pós-incidente; sinais agentic accionáveis |
 | Classes de incidente agentic-específicas | Policy 16 §11.4 | *Off-policy action*, *intent-action divergence*, *prompt injection* bem-sucedida, falha de *kill-switch*, *credential exposure* |
 | Resposta a incidentes *upstream* | Policy 39 §7 | *Rug pull*, *dataset poisoning*, *tool poisoning*, *provider outage* |
 | Escalonamento e responsabilidades | Cap. 14 + Policy 38 | Papéis e responsabilidades; *owner* + *approver* declarados no *mandate* |
@@ -532,18 +532,18 @@ O Art. 53 impõe aos fornecedores de **GPAI** documentação técnica do modelo,
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Avaliação adversarial / *red teaming* | Cap. 10 §C5 + Policy 19 §7 + Cap. 03 playbook agentic | *Eval suites* contínuas (regression de prompt, *abuse corpus*, *A/B*, *drift*) + threat library MITRE ATLAS |
-| Cibersegurança do modelo e infraestrutura | Cap. 04 (`ARC-014`/`ARC-015`), Cap. 08, Cap. 09 | Arquitetura agentic, IaC, containers/runtime |
+| Cibersegurança do modelo e infraestrutura | Cap. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Cap. 08, Cap. 09 | Arquitetura agentic, IaC, containers/runtime |
 | Proteção de pesos e artefactos | Cap. 05 (`DEP-011..014`) + Policy 39 + Cap. 04 | Integridade, proveniência, AI BOM, *pinning*, controlo de acesso |
 | Monitorização e incidentes | Cap. 12 + `OPS-011..014` + Policy 30 §9 | Detecção de *off-policy* / *jailbreak* / *exfiltration* via tool |
-| Cláusulas contratuais para GPAI | Cap. 14 US-21 + Policy 33 §10 + `DEP-014` | Declaração contratual de conformidade Art. 53/55 dos *providers* |
+| Cláusulas contratuais para GPAI | Cap. 14 US-21 + Policy 33 §10 + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) | Declaração contratual de conformidade Art. 53/55 dos *providers* |
 
 **O que o SbD-ToE cobre**
 
 - **AI red teaming contínuo** materializado (Cap. 10 §C5 + Policy 19 §7) — não apenas como recomendação. *Eval suites* incluem *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*) com cadência exigida em A4 (mensal).
-- **Cibersegurança da infraestrutura** que serve o modelo (Cap. 04 incl. `ARC-015`, Cap. 08, Cap. 09).
+- **Cibersegurança da infraestrutura** que serve o modelo (Cap. 04 incl. [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Cap. 08, Cap. 09).
 - **Proteção de integridade e acesso** a pesos, *checkpoints* e *datasets* — agora com AI BOM auditável e *pinning* exigido (`DEP-012/013`, Policy 39). Resposta a `AML.T0109` *Supply Chain Rug Pull* documentada em Policy 39 §7.
-- **Monitorização e resposta** (Cap. 12 + `OPS-014`) — detecção activa de *jailbreak* (LLM01-2025) e *off-policy actions* em produção; corpus de detecção actualizado conforme cadência do *mandate*.
-- **Conformidade contratual declarada pelos *providers* GPAI** (`DEP-014`, Cap. 14 US-21, Policy 33 §10) — exigida no processo de aprovação do *provider*.
+- **Monitorização e resposta** (Cap. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)) — detecção activa de *jailbreak* (LLM01-2025) e *off-policy actions* em produção; corpus de detecção actualizado conforme cadência do *mandate*.
+- **Conformidade contratual declarada pelos *providers* GPAI** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014), Cap. 14 US-21, Policy 33 §10) — exigida no processo de aprovação do *provider*.
 
 **Lacunas intencionais**
 

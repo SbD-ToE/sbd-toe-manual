@@ -6,7 +6,7 @@ tags: [tipo:anexo, grupo:execucao, tema:release, segurança, staging]
 ---
 
 
-# 🚀 Práticas de Release Management com Foco em Segurança
+# Práticas de Release Management com Foco em Segurança
 
 ## 🌟 Objetivo
 

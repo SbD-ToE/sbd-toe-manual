@@ -8,7 +8,7 @@ sidebar_position: 9
 
 <!--template: sbdtoe-addon -->
 
-# 🛠️ Decisão e Evidência Arquitetural
+# Decisão e Evidência Arquitetural
 
 Uma arquitetura só é operacionalmente válida quando as suas decisões:
 - são explícitas;

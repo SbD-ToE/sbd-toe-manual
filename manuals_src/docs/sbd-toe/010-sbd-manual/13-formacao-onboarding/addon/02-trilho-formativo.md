@@ -6,7 +6,7 @@ tags: [formacao, trilho, risco, perfis, onboarding]
 ---
 
 
-# 🎓 Trilhos Formativos por Função e Risco
+# Trilhos Formativos por Função e Risco
 
 ## 🌟 Objetivo
 

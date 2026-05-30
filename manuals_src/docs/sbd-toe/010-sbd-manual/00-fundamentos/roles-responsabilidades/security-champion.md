@@ -7,7 +7,7 @@ tags: [security-champion, seguranca, advocacy, responsabilidades]
 sidebar_position: 12
 ---
 
-# 🏅 Security Champion
+# Security Champion
 
 ## Visão Geral
 

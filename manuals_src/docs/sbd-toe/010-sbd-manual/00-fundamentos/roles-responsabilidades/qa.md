@@ -7,7 +7,7 @@ tags: [qa, quality-assurance, testes, responsabilidades]
 sidebar_position: 3
 ---
 
-# 🧪 Quality Assurance (QA)
+# Quality Assurance (QA)
 
 ## Visão Geral
 

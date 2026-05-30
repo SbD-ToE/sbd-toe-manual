@@ -6,7 +6,7 @@ tags: [avancado, arquitetura, maturidade, zero-trust, sbomm]
 sidebar_position: 30
 ---
 
-# 🧠 Recomendações Avançadas - Arquitetura Segura
+# Recomendações Avançadas - Arquitetura Segura
 
 Este documento complementa as práticas fundamentais do capítulo com recomendações orientadas a contextos de **elevada maturidade organizacional**, sistemas críticos ou ambientes regulamentados.
 
@@ -100,7 +100,7 @@ Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-a
 
 - **Identidade dedicada por agente** (e por ambiente). O agente recebe credenciais via **OIDC / workload identity**, com TTL ≤ 1h, sem reutilização de identidade humana. Princípio idêntico ao US-04 do Cap. 07 e ao US-10 do Cap. 08 — aplicado a um novo tipo de *principal*.
 - **Scope mínimo por tool** (e por ambiente, ver `ARC-011`). Um agente que precisa de abrir PRs **não recebe** *scope* para apagar o repositório; um agente que opera em *staging* **não vê** credenciais de *production*. Sem excepções tácitas.
-- **Revogação por *kill-switch*** (ver `REQ-AGN-003`) tem de ser arquitectonicamente possível em segundos — i.e. a revogação de credenciais não pode depender de redeploy ou de propagação eventual.
+- **Revogação por *kill-switch*** (ver [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) tem de ser arquitectonicamente possível em segundos — i.e. a revogação de credenciais não pode depender de redeploy ou de propagação eventual.
 
 > A regra que aplicamos para *workload identity* humana — *"se temos de partilhar a credencial, o desenho está errado"* — vale literalmente para agentes. Se dois agentes partilham a mesma identidade, o *audit trail* deixa de ser útil.
 
@@ -111,7 +111,7 @@ Em níveis A2+, antes de cada *tool call* com efeito destrutivo, *side-effectful
 | Campo do *intent event* | Propósito |
 |---|---|
 | `agent_id` | Identidade do *principal* (ARC-015) |
-| `mandate_ref` | Versão do *mandate* sob o qual o agente opera (`REQ-AGN-001`) |
+| `mandate_ref` | Versão do *mandate* sob o qual o agente opera ([`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) |
 | `tool` + `args` | O que vai ser invocado e com que argumentos materiais |
 | `intent` | Frase humano-legível: "vou fazer X para resolver Y" |
 | `expected_outcome` | Estado pós-acção esperado |
@@ -125,7 +125,7 @@ Para acções com efeito crítico (delete, transfer, send, deploy, rotate-secret
 
 #### Kill-switch operacional
 
-O *kill-switch* (`REQ-AGN-003`) é um mecanismo arquitectónico, não um botão simbólico. Compõe-se de:
+O *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) é um mecanismo arquitectónico, não um botão simbólico. Compõe-se de:
 
 - **Revogação imediata de credenciais** (revogação do token OIDC; *workload identity* binding invalidado em segundos).
 - **Terminação do *runtime*** do agente (sessão MCP encerrada; *worker* terminado).
@@ -181,7 +181,7 @@ Adicionamos à [threat library agentic do Cap. 03](../threat-modeling/addon/meto
 | Threat | ID | Fronteira-alvo | Mitigação primária |
 |---|---|---|---|
 | ***Indirect prompt injection* via documento ingerido** | `AML.T0051.001` · LLM01-2025 | Inference (via retrieval) | Curadoria da ingestão; tratar *retrieved content* como *user-untrusted*; *output filtering* |
-| ***Embedding poisoning*** (training-time do *embedding model* ou ingestion-time do corpus) | `AML.T0020` (adaptado) | Training-time / Ingestion-time | *Embedding model* de fonte aprovada (`DEP-014`); validação da ingestão |
+| ***Embedding poisoning*** (training-time do *embedding model* ou ingestion-time do corpus) | `AML.T0020` (adaptado) | Training-time / Ingestion-time | *Embedding model* de fonte aprovada ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); validação da ingestão |
 | ***Vector DB exfiltration*** | `AML.T0086` (adaptado) | Vector DB | Controlo de acesso + audit; *row-level security* no retriever |
 | ***Membership inference* sobre o corpus** | LLM02-2025 (*sensitive info disclosure*) | Inference | *Output filtering*; rate-limiting; detecção de *probing queries* |
 | ***Cross-namespace contamination*** | LLM06-2025 (*excessive agency*, em variante RAG) | Retriever | Filtro de autorização no top-k retrieval |

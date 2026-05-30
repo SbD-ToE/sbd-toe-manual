@@ -7,7 +7,7 @@ sidebar_position: 60
 ---
 
 
-# 🏛️ Políticas Organizacionais - Segurança em Pipelines CI/CD
+# Políticas Organizacionais - Segurança em Pipelines CI/CD
 
 A adoção eficaz do Capítulo 07 - CI/CD Seguro - exige a existência de **políticas organizacionais formais** que **regulem, legitimem e sustentem as práticas de segurança aplicáveis à cadeia de integração e entrega contínua**.
 

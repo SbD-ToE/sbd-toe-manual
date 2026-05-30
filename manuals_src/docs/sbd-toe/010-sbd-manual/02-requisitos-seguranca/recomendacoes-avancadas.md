@@ -6,7 +6,7 @@ tags: [avançado, requisitos, rastreabilidade, validação, políticas]
 sidebar_position: 30
 ---
 
-# 🧐 Práticas Avançadas em Requisitos de Segurança
+# Práticas Avançadas em Requisitos de Segurança
 
 Este anexo apresenta **práticas avançadas não obrigatórias** que podem ser adotadas por organizações com maior maturidade, exigência normativa (ex: PCI-DSS, ISO 26262, IEC 62443), ou necessidade de rastreabilidade e auditoria formal.
 

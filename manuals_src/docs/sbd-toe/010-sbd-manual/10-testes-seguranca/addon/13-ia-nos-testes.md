@@ -5,7 +5,7 @@ description: Como usar IA/GenAI para acelerar testes de segurança (planeamento,
 tags: [genai, ia, testes, seguranca, triagem, regressao, fuzzing, evidencias, governanca]
 ---
 
-# 🤖 IA no Processo de Testes de Segurança (GenAI)
+# IA no Processo de Testes de Segurança (GenAI)
 
 A adoção pervasiva de IA/GenAI no SSDLC altera profundamente **como produzimos e interpretamos evidência**.  
 No domínio de testes de segurança isto é especialmente crítico, porque:
@@ -228,7 +228,7 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 
 #### Onde aterra no resto do manual
 
-- **Cap. 02** — `REQ-AGN-002` exige nível de autonomia justificado; a *eval suite* é a evidência de que o nível é defensável.
+- **Cap. 02** — [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) exige nível de autonomia justificado; a *eval suite* é a evidência de que o nível é defensável.
 - **Cap. 07** — *eval run* obrigatório como *gate* antes de *merge* de mudanças a skill/prompt (cross-link US-19).
 - **Cap. 12** — sinais agentic em produção (jailbreaks reais, off-policy actions) realimentam a *eval suite* offline.
 - **Policy 19 — Estratégia de Testes** acrescenta o capítulo `eval suites` ao escopo de testes obrigatórios.

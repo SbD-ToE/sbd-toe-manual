@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, iac, infraestrutura, seguranca, pipelines]
 genia: us-format-normalization
 ---
 
-# 📅 Aplicação no Ciclo de Vida - Infraestrutura como Código (IaC)
+# Aplicação no Ciclo de Vida - Infraestrutura como Código (IaC)
 
 Este documento operacionaliza as práticas prescritas para **Infraestrutura como Código (IaC)**.  
 Enquanto o `intro.md` define o “quê” e o “porquê”, aqui mostramos o “como”: em que fases do ciclo de vida cada requisito se aplica, quem é responsável por executá-lo, como traduzi-lo em user stories reutilizáveis e quais as evidências que asseguram rastreabilidade e auditabilidade.  

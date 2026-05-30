@@ -7,7 +7,7 @@ tags: [siem, integração, parsing, dashboards, correlação]
 ---
 
 
-# 📉 Integração com Sistemas de Deteção (SIEM)
+# Integração com Sistemas de Deteção (SIEM)
 
 ## 🌟 Objetivo
 

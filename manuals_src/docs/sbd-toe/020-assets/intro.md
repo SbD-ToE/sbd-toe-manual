@@ -4,7 +4,7 @@ title: Assets Organizacionais
 description: Políticas, templates e guias para implementação do framework SbD-ToE
 ---
 
-# 🏛️ Assets Organizacionais
+# Assets Organizacionais
 
 Bem-vindo ao repositório centralizado de **políticas organizacionais** e **templates de implementação** do framework **Security by Design – Theory of Everything (SbD-ToE)**.
 

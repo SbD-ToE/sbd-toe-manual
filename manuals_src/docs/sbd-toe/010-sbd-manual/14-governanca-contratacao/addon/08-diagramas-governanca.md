@@ -7,7 +7,7 @@ tags: [diagramas, excecoes, fluxo, validacao]
 ---
 
 
-# 🗾️ Diagramas de Apoio à Governança
+# Diagramas de Apoio à Governança
 
 Este anexo inclui diagramas que representam os principais fluxos de decisão, rastreabilidade e validação descritos no Capítulo 14 - Governança e Contratação.
 

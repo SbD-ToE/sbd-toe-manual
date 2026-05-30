@@ -6,7 +6,7 @@ sidebar_position: 12
 tags: [ai, ml, inference, runtime, vllm, ollama, tgi, triton, gpu, hardening, self-hosted, weights]
 ---
 
-# 🧠 Inferência AI Self-Hosted — Runtimes, Isolamento e Pesos
+# Inferência AI Self-Hosted — Runtimes, Isolamento e Pesos
 
 ## Porque tratamos a inferência *self-hosted* como caso próprio
 
@@ -114,7 +114,7 @@ O runtime (vLLM, TGI, etc.) é uma dependência de cadeia como qualquer outra �
 - ❌ **Runtime exposto sem autenticação porque "é rede interna"** — em arquitecturas modernas a "rede interna" inclui demasiados *principals* para se confiar nessa fronteira como única defesa.
 - ❌ **Pesos no repositório Git** — `.safetensors` de 70 GB em LFS resolve um problema mas cria outro; preferir *artifact registry* dedicado com controlo de acesso e auditoria.
 - ❌ **GPU partilhada entre *tenants* sem isolamento configurado** — *side-channels* em research activa; mesmo que improváveis na prática, a ausência de configuração explícita é gap de postura.
-- ❌ **Imagem `latest` do runtime** — viola `DEP-013` (cross-link com [`ARC-015`](../../arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)); inferência fica vulnerável a *upgrade* não anunciado.
+- ❌ **Imagem `latest` do runtime** — viola [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (cross-link com [`ARC-015`](../../arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)); inferência fica vulnerável a *upgrade* não anunciado.
 - ❌ **`max_tokens` confiado apenas ao cliente** — servidor sem limite operacional é DoS pronto a explorar.
 - ❌ ***Streaming endpoints* sem *timeout* máximo** — conexões longas consomem recursos GPU em modelos que mantêm KV cache; sem limite, atacante mantém canal aberto e bloqueia capacidade.
 

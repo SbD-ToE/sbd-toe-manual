@@ -5,7 +5,7 @@ sidebar_position: 9
 tags: [tipo:exemplo, tema:classificacao, risco, aplicacao]
 ---
 
-# 🧪 Casos Práticos de Classificação de Risco
+# Casos Práticos de Classificação de Risco
 
 Os exemplos seguintes ilustram **diferentes formas legítimas de classificar aplicações** no SbD-ToE, demonstrando:
 

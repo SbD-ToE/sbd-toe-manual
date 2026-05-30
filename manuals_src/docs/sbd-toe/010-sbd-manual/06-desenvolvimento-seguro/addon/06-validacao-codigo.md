@@ -4,7 +4,7 @@ title: Validação de Código como Controlo de Risco de Processo
 description: Porque a validação de código é um mecanismo central de controlo de risco no desenvolvimento moderno
 ---
 
-# 🛠️ Validação de Código como Controlo de Risco de Processo
+# Validação de Código como Controlo de Risco de Processo
 
 No desenvolvimento moderno, o principal risco já não reside apenas na **complexidade do código**, mas na **forma como esse código é introduzido no sistema**.
 

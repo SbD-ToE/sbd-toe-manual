@@ -8,7 +8,7 @@ sidebar_position: 8
 
 <!--template: sbdtoe-addon -->
 
-# 🛠️ Riscos de Processo na Arquitetura de Software
+# Riscos de Processo na Arquitetura de Software
 
 A arquitetura de um sistema é o resultado de um **conjunto de decisões técnicas** que determinam a sua estrutura, propriedades de segurança, capacidade de evolução e impacto operacional.
 

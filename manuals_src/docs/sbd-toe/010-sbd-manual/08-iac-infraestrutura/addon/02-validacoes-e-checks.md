@@ -6,7 +6,7 @@ description: Estratégias prescritivas de validação, evidência e controlo par
 tags: [planeamento, controlo, iac, segurança, validação, governação]
 ---
 
-# 🧪 Validações Automáticas e Controlo de Qualidade no Projeto IaC
+# Validações Automáticas e Controlo de Qualidade no Projeto IaC
 
 ## 🌟 Objetivo
 

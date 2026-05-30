@@ -6,7 +6,7 @@ description: Definição e cálculo de indicadores como MTTD e MTTR, e sua aplic
 tags: [métricas, indicadores, mttd, mttr, dashboards, kpi]
 ---
 
-# 📈 Métricas, Indicadores e Cobertura
+# Métricas, Indicadores e Cobertura
 
 ## 🌟 Objetivo
 

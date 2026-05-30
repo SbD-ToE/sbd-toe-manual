@@ -5,7 +5,7 @@ description: Procedimento formalizado e executável para rescisão segura de con
 tags: [governanca, contractors, offboarding, rescisao, seguranca, auditoria]
 ---
 
-# ✅ Checklist de Offboarding Seguro
+# Checklist de Offboarding Seguro
 
 **Versão:** 1.0  
 **Última atualização:** Novembro 2025  

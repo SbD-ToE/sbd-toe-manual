@@ -7,7 +7,7 @@ tags: [rastreabilidade, cicd, execuções, deploy, logs, auditoria]
 ---
 
 
-# 🧾 Rastreabilidade de assinaturas e deploys
+# Rastreabilidade de assinaturas e deploys
 
 Rastreabilidade é a capacidade de **comprovar o que foi feito, por quem, com que artefactos e em que contexto**. No contexto de pipelines CI/CD, esta capacidade é essencial para garantir responsabilização, suporte a auditorias e possibilidade de reversão segura.
 

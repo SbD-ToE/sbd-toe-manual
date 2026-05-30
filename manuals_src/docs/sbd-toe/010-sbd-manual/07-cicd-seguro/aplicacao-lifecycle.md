@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, cicd, devsecops, pipelines, seguranca, rastre
 genia: us-format-normalization
 ---
 
-# 📅 Aplicação no Ciclo de Vida - CI/CD Seguro
+# Aplicação no Ciclo de Vida - CI/CD Seguro
 
 Enquanto o `intro.md` explica **porque os pipelines são críticos** e que práticas devem ser aplicadas, este documento mostra **como transformar essas prescrições em ações concretas** ao longo do ciclo de vida de desenvolvimento e entrega.
 
@@ -735,7 +735,7 @@ Registo de aprovação; logs do pipeline; evidência associada; trilho de audito
 
 ---
 
-### US-19 - Agentes AI como *principals* na pipeline
+### US-19 - Agentes AI como *principals* na pipeline {#us-19}
 
 **Contexto.**
 A US-04 estabelece o padrão para segredos no pipeline: OIDC, TTL curto, sem credenciais *long-lived*. Quando o pipeline passa a ser **operado por agentes AI** — `Claude Code` a criar PRs e accionar *workflows*, `Copilot Workspace` a fazer *merges*, agentes próprios construídos sobre SDKs a executar *deploys* — esses agentes tornam-se **novos *principals* não-humanos** com acesso a recursos sensíveis. O princípio é o mesmo da US-04; o que muda é que o *principal* já não é um *runner* CI tradicional, e os requisitos de auditoria e *scoping* têm de ser ajustados à nova realidade.
@@ -747,11 +747,11 @@ Como **DevOps / SRE** e **AppSec**, quero que os agentes AI que operam o pipelin
 **Critérios de aceitação (BDD).**
 - **Dado** que um agente AI vai operar no pipeline em nível A1+
   **Quando** se autentica para invocar uma *tool* (ex.: `gh pr create`, `kubectl apply`, `npm publish`)
-  **Então** recebe credenciais via OIDC com `scope` mínimo declarado no *mandate* (`REQ-AGN-001`), TTL ≤ 1h, sem reuso de identidade humana
+  **Então** recebe credenciais via OIDC com `scope` mínimo declarado no *mandate* ([`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)), TTL ≤ 1h, sem reuso de identidade humana
 - **Dado** que o agente invoca uma *tool* destrutiva (`destructive`/`external` na *allowlist*)
   **Quando** opera em nível A2+
-  **Então** emite *intent event* (`REQ-AGN-004`) antes da invocação, e a *tool call* gera *audit event* completo
-- **Dado** que o *kill-switch* (`REQ-AGN-003`) é accionado
+  **Então** emite *intent event* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) antes da invocação, e a *tool call* gera *audit event* completo
+- **Dado** que o *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) é accionado
   **Quando** ocorre revogação de credenciais
   **Então** as credenciais do agente ficam inválidas em segundos e a sessão é terminada
 - **Dado** que existe divergência entre `intent` declarado e acção real

@@ -6,7 +6,7 @@ description: Práticas de gestão e validação de dependências externas para g
 tags: [dependências, segurança, sbom, gestão, validação]
 ---
 
-# 📦 Segurança de Dependências
+# Segurança de Dependências
 
 > 💡 **Nota prática**:  
 > Ferramentas como **Snyk**, **OWASP Dependency-Check**, **Sonatype**, **Xygeni**, entre outras, já permitem detetar **vulnerabilidades conhecidas (CVEs)** em bibliotecas e pacotes usados em tempo de build, execução ou testes.  

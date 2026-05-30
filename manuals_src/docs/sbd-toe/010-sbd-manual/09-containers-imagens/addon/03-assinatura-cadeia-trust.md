@@ -5,7 +5,7 @@ description: Validação da proveniência e integridade de imagens de containers
 tags: [containers, assinatura, trust, notary, cosign, rekor, supply-chain]
 ---
 
-# 🔏 Assinatura de Imagens e Cadeia de Confiança
+# Assinatura de Imagens e Cadeia de Confiança
 
 ## 🌟 Objetivo
 

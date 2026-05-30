@@ -6,7 +6,7 @@ tags: [tipo:aplicacao, ciclo-vida, containers, imagens, seguranca, isolamento, s
 genia: us-format-normalization
 ---
 
-# ⚙️ Aplicação ao Ciclo de Vida - Containers e Execução Isolada
+# Aplicação ao Ciclo de Vida - Containers e Execução Isolada
 
 Garantir a segurança de *containers* não é apenas uma preocupação de runtime: envolve decisões desde a seleção da imagem base até ao modo como estas imagens são executadas, monitorizadas e auditadas.  
 Este capítulo mostra, de forma prescritiva e integrada, como aplicar controlos técnicos e de governação em cada fase do ciclo de vida.

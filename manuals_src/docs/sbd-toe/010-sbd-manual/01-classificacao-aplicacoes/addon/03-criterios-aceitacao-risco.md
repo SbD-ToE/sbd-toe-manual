@@ -7,7 +7,7 @@ tags: [tipo:criterios, aceitacao, excecao, rastreabilidade]
 
 <!--template: sbdtoe-core -->
 
-# 🛠️ Critérios para Aceitação de Risco
+# Critérios para Aceitação de Risco
 
 A aceitação formal de risco é uma etapa fundamental no processo de gestão de risco e deve ser suportada por **critérios claros, objetivos e documentados**.
 

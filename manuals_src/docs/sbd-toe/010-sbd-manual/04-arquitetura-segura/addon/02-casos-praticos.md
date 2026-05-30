@@ -1,10 +1,10 @@
 ---
 id: casos-praticos
-title: 🧪 Casos Práticos de Aplicação de Arquitetura Segura
+title: Casos Práticos de Aplicação de Arquitetura Segura
 sidebar_label: Casos Práticos
 ---
 
-# 🧪 Casos Práticos de Aplicação de Arquitetura Segura
+# Casos Práticos de Aplicação de Arquitetura Segura
 
 Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em contextos reais, consoante o nível de risco da aplicação (ver Capítulo 1).
 

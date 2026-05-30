@@ -7,7 +7,7 @@ tags: [tipo:anexo, grupo:avancado, tema:iac, maturidade, reforço]
 ---
 
 
-# 🔐 Recomendações Avançadas para IaC Seguro
+# Recomendações Avançadas para IaC Seguro
 
 Este anexo apresenta **práticas reforçadas** para segurança em projetos de **Infraestrutura como Código (IaC)**. As recomendações aqui descritas **não são obrigatórias**, mas devem ser consideradas em:
 

@@ -8,7 +8,7 @@ tags: [checklist, validação, revisão, iac, infraestrutura como código, contr
 ---
 
 
-# ✅ Checklist de Revisão Periódica de Práticas de IaC
+# Checklist de Revisão Periódica de Práticas de IaC
 
 Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (IaC)** desenvolvidos ou mantidos internamente. Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 08**, permitindo:
 

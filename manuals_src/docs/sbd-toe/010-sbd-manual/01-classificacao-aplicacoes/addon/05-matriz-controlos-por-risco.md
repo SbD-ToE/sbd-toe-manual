@@ -7,7 +7,7 @@ tags: [tipo:matriz, risco, controlos, proporcionalidade]
 
 <!--template: sbdtoe-core -->
 
-# 📊 Matriz de Controlos Mínimos por Nível de Risco
+# Matriz de Controlos Mínimos por Nível de Risco
 
 Esta matriz define o **patamar mínimo de controlos de segurança esperados**, por domínio técnico, em função do **nível de risco da aplicação (L1–L3)**, conforme determinado no Capítulo 01.
 

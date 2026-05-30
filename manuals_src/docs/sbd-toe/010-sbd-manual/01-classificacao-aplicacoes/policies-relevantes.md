@@ -4,7 +4,7 @@ title: Policies Relevantes
 tags: [canon, politicas, risco, classificacao, excecao]
 ---
 
-# 🏛️ Políticas Organizacionais - Gestão de Risco
+# Políticas Organizacionais - Gestão de Risco
 
 A adoção eficaz do Capítulo 01 - Gestão de Risco - exige a existência de **políticas organizacionais formais** que **enquadrem, legitimem e sustentem a aplicação das práticas descritas neste capítulo**.
 

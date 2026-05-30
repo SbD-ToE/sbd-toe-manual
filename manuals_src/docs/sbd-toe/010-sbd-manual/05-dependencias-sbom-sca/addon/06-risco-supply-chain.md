@@ -5,7 +5,7 @@ description: Tipos de ataque via dependências e práticas para deteção e miti
 tags: [dependencias, sbom, sca, supply-chain, risks]
 ---
 
-# 🚨 Ameaças à Cadeia de Fornecimento (Supply Chain)
+# Ameaças à Cadeia de Fornecimento (Supply Chain)
 
 ## 🌟 Objetivo
 

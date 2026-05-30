@@ -5,7 +5,7 @@ description: Geração, versionamento e utilização de SBOMs como evidência de
 tags: [sbom, containers, rastreabilidade, supply-chain, assinatura]
 ---
 
-# 🧬 SBOM de Containers e Rastreabilidade de Runtime
+# SBOM de Containers e Rastreabilidade de Runtime
 
 ## 🌟 Objetivo
 

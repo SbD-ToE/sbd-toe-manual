@@ -7,7 +7,7 @@ tags: [genia, ai, código gerado, validação, segurança, revisão]
 ---
 
 
-# 🤖 Uso de GenIA no Desenvolvimento Seguro
+# Uso de GenIA no Desenvolvimento Seguro
 
 A integração de ferramentas de inteligência artificial generativa (GenIA) como **GitHub Copilot**, **ChatGPT**, **Claude**, **CodeWhisperer**, entre outras, tornou-se uma realidade no dia a dia do desenvolvimento - independentemente da existência de políticas formais.
 
@@ -112,7 +112,7 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 
 ### ⚠️ Anti-padrões observados
 
-- ❌ *Skill file* com instruções "*aceita sempre a sugestão sem perguntar*" — anula `REQ-AGN-004` (Cap. 02) na origem.
+- ❌ *Skill file* com instruções "*aceita sempre a sugestão sem perguntar*" — anula [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (Cap. 02) na origem.
 - ❌ Adição silenciosa de *tools* à *allowlist* num agent file via *commit* sem revisão — equivalente a alterar IAM policy sem aprovação.
 - ❌ Prompts a referenciar `latest` em vez de versão *pinned* do modelo (cruzamento com `REQ-DEP-AI-002` quando entrar em vigor) — abre porta a *AI supply chain "rug pull"* (`AML.T0109`).
 - ❌ *System prompt* com credenciais ou *tokens* embebidos — *system prompt* é tratado como conteúdo público (ver [Cap. 04 — boundary controls](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#ai-ml)); nunca embeber segredos.
@@ -120,7 +120,7 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 
 ### 📍 Onde aterra no resto do manual
 
-- **Cap. 02** — `REQ-AGN-001` exige *mandate* versionado em VCS; o *mandate* referencia explicitamente o(s) *skill file(s)* / *agent file(s)* / *system prompt(s)* aplicáveis.
+- **Cap. 02** — [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) exige *mandate* versionado em VCS; o *mandate* referencia explicitamente o(s) *skill file(s)* / *agent file(s)* / *system prompt(s)* aplicáveis.
 - **Cap. 07** — *secret scanning* e *diff review* destes ficheiros são *gates* do pipeline.
 - **Cap. 12** — *drift detection* alimenta sinal observável quando a skill diverge da fonte canónica para além do limite acordado.
 - **Policy 15** — alcance estendido a prompts/skills.
@@ -149,7 +149,7 @@ Quando o output do modelo alimenta lógica aplicacional — *tool call* com argu
 | **Validação de schema obrigatória pré-execução** | Output passa por validador antes de qualquer acção; falha bloqueia execução |
 | **Validação semântica per-action** | Para acções destrutivas, validação adicional que verifica `args` contra o *scope* declarado no *mandate* — cross-link [`REQ-AGN-004`](../../requisitos-seguranca/addon/governanca-automatismos#req-agn) |
 | ***Tool call replay protection*** | Identificador único por *tool call* + verificação de idempotência quando aplicável; evita re-execução acidental |
-| **Telemetria do esquema** | Quando o output falha validação, `eval_run_id` + *schema version* + *output bruto redactado* entram em `OPS-014` para diagnóstico |
+| **Telemetria do esquema** | Quando o output falha validação, `eval_run_id` + *schema version* + *output bruto redactado* entram em [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) para diagnóstico |
 
 ### ⚠️ Anti-padrões
 
@@ -160,7 +160,7 @@ Quando o output do modelo alimenta lógica aplicacional — *tool call* com argu
 
 ### 📍 Onde aterra no resto do manual
 
-- **Cap. 02** — `REQ-AGN-004` (*intent declaration*) é a contraparte semântica do *structured output* — declarar o *intent* antes da acção e validar o *output* antes da execução são dois lados do mesmo princípio.
+- **Cap. 02** — [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*intent declaration*) é a contraparte semântica do *structured output* — declarar o *intent* antes da acção e validar o *output* antes da execução são dois lados do mesmo princípio.
 - **Cap. 04** — [boundary controls para prompt injection](../../arquitetura-segura/recomendacoes-avancadas#boundary-controls-para-prompt-injection) reforça que o output do modelo é *user-untrusted*; *structured outputs* dá a forma operacional dessa atitude.
 - **Cap. 10 §C5** — *eval suite* inclui *adherence rate* ao *schema* como métrica observável.
-- **Cap. 12 — `OPS-014`** — falhas de validação semântica (acção fora do *scope*) caem em *off-policy actions*.
+- **Cap. 12 — [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)** — falhas de validação semântica (acção fora do *scope*) caem em *off-policy actions*.

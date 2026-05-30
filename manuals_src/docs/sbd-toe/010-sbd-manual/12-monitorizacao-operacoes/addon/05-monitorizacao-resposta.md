@@ -6,7 +6,7 @@ description: Ligação entre mecanismos de deteção e os processos de resposta 
 tags: [resposta a incidentes, IRP, SOAR, integração, playbooks]
 ---
 
-# 🛡️ Monitorização como Suporte à Resposta
+# Monitorização como Suporte à Resposta
 
 ## 🌟 Objetivo
 

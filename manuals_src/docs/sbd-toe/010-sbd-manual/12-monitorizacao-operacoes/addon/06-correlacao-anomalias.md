@@ -7,7 +7,7 @@ tags: [correlação, anomalias, eventos, deteção, multi-sistema]
 ---
 
 
-# 🧬 Correlação e Deteção de Anomalias
+# Correlação e Deteção de Anomalias
 
 ## 🌟 Objetivo
 

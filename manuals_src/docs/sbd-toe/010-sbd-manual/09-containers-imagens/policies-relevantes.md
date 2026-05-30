@@ -6,7 +6,7 @@ tags: [políticas, containers, imagens, supply chain, kubernetes, devsecops, clo
 sidebar_position: 60
 ---
 
-# 🏠 Políticas Organizacionais - Containers e Imagens
+# Políticas Organizacionais - Containers e Imagens
 
 A aplicação eficaz do **Capítulo 09 - Containers e Imagens** requer a existência de **políticas organizacionais formais** que enquadrem e reforcem as práticas de construção, validação, assinatura, governação e execução de containers e imagens.
 

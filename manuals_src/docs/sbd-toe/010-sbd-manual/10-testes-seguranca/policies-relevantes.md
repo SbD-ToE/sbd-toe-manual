@@ -7,7 +7,7 @@ sidebar_position: 60
 ---
 
 
-# 🏛️ Políticas Organizacionais - Testes de Segurança
+# Políticas Organizacionais - Testes de Segurança
 
 A aplicação eficaz do **Capítulo 10 - Testes de Segurança** exige que existam **políticas organizacionais formais** que definam:
 

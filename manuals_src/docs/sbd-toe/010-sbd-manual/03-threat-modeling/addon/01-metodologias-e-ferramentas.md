@@ -131,11 +131,11 @@ Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos naveg
 
 ### Playbook concreto para agentes com tool-use {#playbook-agentic}
 
-A subsecção anterior cobre threat modeling de **componentes AI/ML em geral**. Quando o sistema em análise inclui **agentes autónomos** — ou seja, modelos que invocam *tools* reais (criar PRs, ler segredos, deploy, escrever em sistemas externos, contactar APIs) — adicionamos um passo dedicado, porque o que define a superfície de ataque deixa de ser apenas o modelo e passa a incluir **o conjunto fechado de *tools* que o agente pode invocar e as fronteiras entre o agente e os recursos externos**.
+A subsecção anterior cobre threat modeling de **componentes AI/ML em geral**. Quando o sistema em análise inclui **agentes autónomos** — ou seja, modelos que invocam *tools* reais (criar PRs, ler segredos, deploy, escrever em sistemas externos, contactar APIs) — adiciona-se um passo dedicado, porque o que define a superfície de ataque deixa de ser apenas o modelo e passa a incluir **o conjunto fechado de *tools* que o agente pode invocar e as fronteiras entre o agente e os recursos externos**.
 
 #### DFD canónico para um flow agentic
 
-Em qualquer arquitectura com agente + tool-use, identificamos pelo menos cinco participantes distintos e quatro fronteiras de confiança. O modelo abaixo é deliberadamente minimalista — adicionamos detalhe consoante o caso, sem nunca remover destas peças.
+Em qualquer arquitectura com agente + tool-use, identifica-se pelo menos cinco participantes distintos e quatro fronteiras de confiança. O modelo abaixo é deliberadamente minimalista — adiciona-se detalhe consoante o caso, sem nunca remover destas peças.
 
 ```mermaid
 flowchart LR
@@ -158,7 +158,7 @@ flowchart LR
 | **Agentic** (modelo → tool runtime) | Tool poisoning; *function call* manipulada; *meta prompt extraction* | Validação de schema das *tool calls*, allowlist de *tools*, scoping; rate-limits |
 | **Tool** (runtime → sistema externo) | Credentials abusivos; *agent excessive agency*; exfiltração via tool destrutivo | Workload identity efémera (OIDC), least privilege por *tool*, audit completo por invocação |
 
-> A "agentic boundary" já estava marcada na nossa cobertura de Cap. 04 (ARC-014). Aqui especializamo-la com a separação **modelo → tool runtime → sistema externo**, que é onde o efeito concreto se materializa.
+> A "agentic boundary" já estava marcada na cobertura de Cap. 04 (ARC-014). Aqui especializamo-la com a separação **modelo → tool runtime → sistema externo**, que é onde o efeito concreto se materializa.
 
 #### Threat library agentic — IDs reais
 

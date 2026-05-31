@@ -100,7 +100,7 @@ O uso de automatismos **reforça** (não substitui) as obrigações nos seguinte
 
 Até aqui falámos de **automatismos assistidos** — ferramentas que sugerem, mas onde a decisão e a execução são humanas. Nos últimos meses passámos a viver com uma classe diferente de ferramenta: **agentes** que recebem um objectivo, decidem por que passos avançar, invocam *tools* reais (criar PR, correr testes, ler segredos, fazer deploy), e podem fazê-lo com graus variáveis de supervisão humana. *Copilot Workspace*, *Claude Code*, *Cursor agent mode*, *Devin*, agentes construídos sobre SDKs próprios — todos cabem aqui.
 
-Quando passamos de "ferramenta que sugere" para "agente que executa", a pergunta deixa de ser *"foi revisto?"* e passa a ser *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Adoptamos por isso um **modelo de cinco níveis de autonomia (A0–A4)** que torna essa autorização explícita, classificável e auditável.
+Quando passa-se de "ferramenta que sugere" para "agente que executa", a pergunta deixa de ser *"foi revisto?"* e passa a ser *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Adopta-se por isso um **modelo de cinco níveis de autonomia (A0–A4)** que torna essa autorização explícita, classificável e auditável.
 
 > 📌 Os níveis A0–A4 **não substituem** os princípios fundamentais (responsabilidade humana, output não é evidência, código gerado é código de terceiros). Especializam-nos para o caso em que o agente *executa* e não apenas *sugere*.
 
@@ -120,8 +120,8 @@ Quando passamos de "ferramenta que sugere" para "agente que executa", a pergunta
 
 Subir de nível **adiciona** obrigações, nunca as remove. A regra prática é a mais conservadora compatível com o trabalho real:
 
-1. Começamos em **A1** sempre que o agente ainda é novo ao projecto ou à equipa.
-2. Subimos a **A2** quando temos auditoria operacional fiável das *tool invocations* e *guardrails* per-tool.
+1. Começa-se em **A1** sempre que o agente ainda é novo ao projecto ou à equipa.
+2. Sobe-se a **A2** quando há auditoria operacional fiável das *tool invocations* e *guardrails* per-tool.
 3. **A3** exige *revert automático* demonstrado em ambiente de teste e cobertura de testes que detecta o tipo de falha que o agente pode introduzir.
 4. **A4** exige *mandate* assinado pelo `CISO` (ou equivalente), *kill-switch* exercitado, e auditoria periódica calendarizada.
 
@@ -159,7 +159,7 @@ Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (
 5. **Registar o *mandate*** (Policy 38) com nível, *tools*, *owner*, revisão.
 6. **Operacionalizar `REQ-AGN-003/004`** se A2+, antes de o agente operar.
 
-> 🛑 Quando ficamos em dúvida entre dois níveis, escolhemos sempre o mais baixo. Subir é sempre mais fácil que reparar consequências de ter subido cedo demais.
+> 🛑 Quando ficamos em dúvida entre dois níveis, escolhe-se sempre o mais baixo. Subir é sempre mais fácil que reparar consequências de ter subido cedo demais.
 
 ---
 

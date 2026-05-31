@@ -39,7 +39,7 @@ O objetivo desta política é garantir que:
 | **Alteração de `tools_allowlist` ou *scopes* de agente AI** | Obrigatório + AppSec | Obrigatório + AppSec | Obrigatório + AppSec + GRC |
 | **Mandate de agente AI** (Policy 38) | Aprovação Tech Lead | Aprovação Tech Lead + AppSec | Aprovação Tech Lead + AppSec + GRC; A4 com `CISO` |
 
-> 📌 **Sobre prompts e *skill files* como código.** Estes artefactos decidem o que o assistente sabe, que *tools* pode invocar e como interage com a organização. Tratamo-los com a mesma disciplina de revisão que aplicamos a código — incluindo *secret scanning* e atenção redobrada a mudanças em `tools_allowlist`/*scopes*. Ver detalhe operacional em [Cap. 06 — Prompts como código](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) e em [Policy 38 — Mandates de Agentes AI](./policy-mandates-agentes).
+> 📌 **Sobre prompts e *skill files* como código.** Estes artefactos decidem o que o assistente sabe, que *tools* pode invocar e como interage com a organização. Tratamo-los com a mesma disciplina de revisão que aplica-se a código — incluindo *secret scanning* e atenção redobrada a mudanças em `tools_allowlist`/*scopes*. Ver detalhe operacional em [Cap. 06 — Prompts como código](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) e em [Policy 38 — Mandates de Agentes AI](./policy-mandates-agentes).
 
 ---
 

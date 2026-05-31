@@ -15,7 +15,7 @@ tags:
 
 # Caso de uso — Agentic SDLC via MCP
 
-Há uma simetria útil neste caso de uso: estamos a usar o MCP para que **o próprio agente que opera o nosso processo agentic** consulte o manual antes de cada decisão. O agente que classifica o nível A0–A4 de outro agente; o agente que produz o *threat model* de outro agente; o agente que regista o *mandate*; o agente que gera a *eval suite*. Em cada paragem do [processo agentic transversal](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc), o MCP serve como fonte canónica do que o manual diz — para que a decisão fique *grounded*, não improvisada.
+Há uma simetria útil neste caso de uso: o MCP serve para que **o próprio agente que opera o processo agentic** consulte o manual antes de cada decisão. O agente que classifica o nível A0–A4 de outro agente; o agente que produz o *threat model* de outro agente; o agente que regista o *mandate*; o agente que gera a *eval suite*. Em cada paragem do [processo agentic transversal](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc), o MCP serve como fonte canónica do que o manual diz — para que a decisão fique *grounded*, não improvisada.
 
 O exemplo de cross-check (`exemplo-playbook/exemplo-agentic-sdlc`) descreve **o que** acontece em cada paragem do processo; este caso de uso descreve **como** o MCP é invocado em cada uma. Os dois são deliberadamente acoplados mas separados — a vista regulatória vive no cross-check, a vista operacional via MCP vive aqui.
 

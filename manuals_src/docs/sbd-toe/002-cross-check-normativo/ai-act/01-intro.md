@@ -438,7 +438,7 @@ O Art. 26 define obrigações específicas dos *deployers* de sistemas de IA de 
 
 **O que o SbD-ToE cobre**
 
-- **Mandate como artefacto de *deployer*** (Policy 38) — quando a organização opera (e não fornece) um sistema de IA de alto risco, o *mandate* é a evidência formal de "como usamos este sistema, sob que supervisão, com que *kill-switch*". Directamente extractável para auditoria do Art. 26.
+- **Mandate como artefacto de *deployer*** (Policy 38) — quando a organização opera (e não fornece) um sistema de IA de alto risco, o *mandate* é a evidência formal de "como usa-se este sistema, sob que supervisão, com que *kill-switch*". Directamente extractável para auditoria do Art. 26.
 - **Função composta para supervisão qualificada** (Cap. 00 nota *AI Reliability Engineer*) — `appsec` + `devops` + `grc` sob mandate do `CISO`, com literacia obrigatória (Policy 37 §11).
 - **Monitorização operacional** (Cap. 12 US-13, `OPS-011..014`) — logs e sinais sob controlo do *deployer*, conservados conforme política (`OPS-003`).
 - **Resposta a incidentes** ligada à notificação a autoridades (Cap. 12 + Policy 30 §9.3 + Policy 32) — *off-policy actions* e *jailbreak* em produção entram no fluxo IR que alimenta Art. 73.

@@ -76,7 +76,7 @@ Cada role tem o seu próprio documento detalhado com:
 
 Em organizações com **adopção significativa de agentes AI** com tool-use no SDLC (níveis de autonomia A2+, ver [Cap. 02](../../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia)), surge naturalmente a necessidade de operar o risco específico desses agentes — *mandates*, *intent events*, *kill-switches*, telemetria agentic, *prompt injection* em produção, *drift* de provider.
 
-Não criamos um papel canónico novo para isto. Em vez disso, reconhecemos uma **função composta** — informalmente chamada **"AI Reliability Engineer"** — que combina, com proporções variáveis consoante a organização, três dos 13 papéis já definidos:
+Não se cria um papel canónico novo para isto. Em vez disso, reconhece-se uma **função composta** — informalmente chamada **"AI Reliability Engineer"** — que combina, com proporções variáveis consoante a organização, três dos 13 papéis já definidos:
 
 - **`AppSec Engineer`** — *threat modeling* agentic, validação de *mandates*, revisão de *intent events*, resposta a *off-policy actions*
 - **`DevOps / SRE`** — provisionamento de *workload identity* para agentes, *kill-switch* operacional, *sinks* de telemetria, exercício do *kill-switch*

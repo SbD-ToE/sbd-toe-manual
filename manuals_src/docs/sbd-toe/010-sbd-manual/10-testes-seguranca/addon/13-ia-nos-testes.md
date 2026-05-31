@@ -193,13 +193,13 @@ Qualquer patch gerado com IA:
 
 ### C5 - *Eval suites* contínuas para agentes em desenvolvimento e produção {#c5-eval-suites}
 
-Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o sistema **inclui um agente AI em produção** (ou quando o agente é parte do nosso processo de teste, e.g. um auditor de PR automatizado), precisamos de testar **o agente em si** — o mesmo princípio que aplicamos a qualquer outro componente crítico. A esta classe de testes chamamos *eval suites*; não substituem SAST/DAST/SCA, complementam-nos para a fatia agentic.
+Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o sistema **inclui um agente AI em produção** (ou quando o agente é parte do processo de teste, e.g. um auditor de PR automatizado), precisamos de testar **o agente em si** — o mesmo princípio que aplica-se a qualquer outro componente crítico. A esta classe de testes chama-se *eval suites*; não substituem SAST/DAST/SCA, complementam-nos para a fatia agentic.
 
 #### Princípios das *eval suites*
 
 1. **Regressão de prompt como regressão de funcionalidade.** Cada mudança ao *system prompt*, *skill file*, *agent file* ou versão do modelo é tratada como mudança que pode degradar o comportamento; corre-se a *eval suite* antes do *merge* — exactamente como corremos testes de regressão antes de mudanças de código.
-2. **Determinismo aproximado em ambiente de teste.** Modelos LLM não são determinísticos, mas em *eval* usamos `temperature=0` ou parametrização equivalente, e medimos com tolerância explícita (e.g. *exact match* vs *semantic match* vs *embedding similarity > k*). A tolerância é declarada por teste.
-3. **Avaliação por domínio.** Cobrimos três classes mínimas: (a) **utilidade** — o agente cumpre a tarefa em casos esperados; (b) **segurança** — o agente recusa ou escala em casos hostis (prompt injection, jailbreak, off-policy); (c) **estabilidade** — o agente não degrada entre versões do modelo / prompt.
+2. **Determinismo aproximado em ambiente de teste.** Modelos LLM não são determinísticos, mas em *eval* usa-se `temperature=0` ou parametrização equivalente, e medimos com tolerância explícita (e.g. *exact match* vs *semantic match* vs *embedding similarity > k*). A tolerância é declarada por teste.
+3. **Avaliação por domínio.** Cobre-se três classes mínimas: (a) **utilidade** — o agente cumpre a tarefa em casos esperados; (b) **segurança** — o agente recusa ou escala em casos hostis (prompt injection, jailbreak, off-policy); (c) **estabilidade** — o agente não degrada entre versões do modelo / prompt.
 4. **Suite versionada e mantida.** A *eval suite* tem o mesmo estatuto que a suite de testes do sistema — vive em VCS, evolui com o produto, é revista periodicamente.
 
 #### Composição mínima por nível
@@ -222,7 +222,7 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 #### Anti-padrões
 
 - ❌ "*Vibe checks*" como única validação — corre alguns prompts manuais e dá-se por suficiente. Não fica registo, não detecta regressão.
-- ❌ *Eval suite* que nunca falha — sinal de cobertura insuficiente, não de excelência. Adicionamos casos adversariais conhecidos para garantir cobertura útil.
+- ❌ *Eval suite* que nunca falha — sinal de cobertura insuficiente, não de excelência. Adiciona-se casos adversariais conhecidos para garantir cobertura útil.
 - ❌ Métricas agregadas sem inspecção do corpus — *score* alto pode esconder falhas catastróficas em sub-categorias críticas.
 - ❌ *Eval suite* num repositório separado da skill/prompt — abre porta a *drift* silencioso.
 
@@ -233,7 +233,7 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 - **Cap. 12** — sinais agentic em produção (jailbreaks reais, off-policy actions) realimentam a *eval suite* offline.
 - **Policy 19 — Estratégia de Testes** acrescenta o capítulo `eval suites` ao escopo de testes obrigatórios.
 
-> 🧭 Em curto: testar o agente é testar um componente do sistema. A *eval suite* não é trabalho extra — é o trabalho de teste normal aplicado à fatia que opera por linguagem. Sem ela, não temos como sustentar uma classificação A2+ ao longo do tempo.
+> 🧭 Em curto: testar o agente é testar um componente do sistema. A *eval suite* não é trabalho extra — é o trabalho de teste normal aplicado à fatia que opera por linguagem. Sem ela, não há como sustentar uma classificação A2+ ao longo do tempo.
 
 ---
 

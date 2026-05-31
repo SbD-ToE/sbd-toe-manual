@@ -711,7 +711,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
 ### US-16 - Revisão de arquitectura para agente AI em A2+ {#us-16}
 
 **Contexto.**
-A US-15 cobre *componentes não determinísticos* em geral (modelos preditivos, RAG, LLMs em interface). Quando o componente é um **agente autónomo** que executa acções com efeito real em sistemas externos via *tool-use* — e opera em nível A2 ou superior — exigimos uma camada adicional de validação arquitectónica: confirmar que a arquitectura cumpre [`ARC-015`](./addon/catalogo-requisitos-arquitetura#arc-015) antes da activação, para que falhas estruturais não fiquem apenas detectadas no incidente.
+A US-15 cobre *componentes não determinísticos* em geral (modelos preditivos, RAG, LLMs em interface). Quando o componente é um **agente autónomo** que executa acções com efeito real em sistemas externos via *tool-use* — e opera em nível A2 ou superior — exige-se uma camada adicional de validação arquitectónica: confirmar que a arquitectura cumpre [`ARC-015`](./addon/catalogo-requisitos-arquitetura#arc-015) antes da activação, para que falhas estruturais não fiquem apenas detectadas no incidente.
 
 :::userstory
 **História.**

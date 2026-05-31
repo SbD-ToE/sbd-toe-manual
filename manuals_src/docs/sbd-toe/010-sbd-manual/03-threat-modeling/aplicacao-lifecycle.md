@@ -450,7 +450,7 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero controlar acesso e reten
 ### US-11 - Threat modeling para sistema com agente AI (tool-use) {#us-11}
 
 **Contexto.**
-Quando o sistema integra **agentes autónomos** com *tool-use* — modelos que invocam *tools* reais para criar PRs, ler segredos, executar *deploys* ou contactar APIs — a superfície de ataque deixa de ser só o modelo e passa a incluir o conjunto fechado de *tools* invocáveis, a identidade com que o agente opera e a fronteira `agentic → tool` em que o efeito real se materializa. Aplicamos o playbook agentic do Cap. 03 antes da operação e em cada subida de nível de autonomia, para que as ameaças MITRE ATLAS aplicáveis estejam identificadas e ancoradas em controlos citáveis.
+Quando o sistema integra **agentes autónomos** com *tool-use* — modelos que invocam *tools* reais para criar PRs, ler segredos, executar *deploys* ou contactar APIs — a superfície de ataque deixa de ser só o modelo e passa a incluir o conjunto fechado de *tools* invocáveis, a identidade com que o agente opera e a fronteira `agentic → tool` em que o efeito real se materializa. Aplica-se o playbook agentic do Cap. 03 antes da operação e em cada subida de nível de autonomia, para que as ameaças MITRE ATLAS aplicáveis estejam identificadas e ancoradas em controlos citáveis.
 
 :::userstory
 **História.**

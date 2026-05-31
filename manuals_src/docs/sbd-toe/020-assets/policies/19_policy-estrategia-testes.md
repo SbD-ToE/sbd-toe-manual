@@ -141,7 +141,7 @@ Métricas de FP por ferramenta devem ser acompanhadas para calibrar as configura
 
 ## 7. *Eval suites* para agentes AI {#eval-suites-agentes}
 
-Quando o sistema inclui um agente AI em operação (ou quando um agente é parte do nosso processo de teste — e.g. auditor de PR automatizado), incluímos **eval suites** entre as técnicas de teste obrigatórias. Não substituem SAST/DAST/SCA — cobrem a fatia agentic, que essas ferramentas não vêem.
+Quando o sistema inclui um agente AI em operação (ou quando um agente é parte do processo de teste — e.g. auditor de PR automatizado), incluímos **eval suites** entre as técnicas de teste obrigatórias. Não substituem SAST/DAST/SCA — cobrem a fatia agentic, que essas ferramentas não vêem.
 
 ### 7.1 Composição mínima
 

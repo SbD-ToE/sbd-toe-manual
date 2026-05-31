@@ -92,7 +92,7 @@ Agentes AI com capacidade de invocar tools backend (APIs, file systems, database
 
 ### Padrões para agentes AI como *principals* (ARC-015) {#agentes-principals}
 
-Os padrões acima cobrem *componentes AI/ML* em geral. Quando o sistema tem **agentes autónomos** que executam acções com efeito real — invocar tools, criar PRs, ler segredos, fazer deploy, escrever em sistemas externos — adoptamos uma postura arquitectónica diferente: tratamos o agente como **mais um *principal* não-humano**, sujeito aos mesmos princípios que aplicamos a *workload identities* tradicionais, especializados para o caso em que quem decide a próxima acção é um modelo.
+Os padrões acima cobrem *componentes AI/ML* em geral. Quando o sistema tem **agentes autónomos** que executam acções com efeito real — invocar tools, criar PRs, ler segredos, fazer deploy, escrever em sistemas externos — adopta-se uma postura arquitectónica diferente: trata-se o agente como **mais um *principal* não-humano**, sujeito aos mesmos princípios que aplica-se a *workload identities* tradicionais, especializados para o caso em que quem decide a próxima acção é um modelo.
 
 Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-arquitetura#arc-015) e cruza com os requisitos `REQ-AGN-001..004` definidos no [Cap. 02 — Modelo de níveis de autonomia](../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia).
 
@@ -102,7 +102,7 @@ Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-a
 - **Scope mínimo por tool** (e por ambiente, ver `ARC-011`). Um agente que precisa de abrir PRs **não recebe** *scope* para apagar o repositório; um agente que opera em *staging* **não vê** credenciais de *production*. Sem excepções tácitas.
 - **Revogação por *kill-switch*** (ver [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) tem de ser arquitectonicamente possível em segundos — i.e. a revogação de credenciais não pode depender de redeploy ou de propagação eventual.
 
-> A regra que aplicamos para *workload identity* humana — *"se temos de partilhar a credencial, o desenho está errado"* — vale literalmente para agentes. Se dois agentes partilham a mesma identidade, o *audit trail* deixa de ser útil.
+> A regra que aplica-se para *workload identity* humana — *"se há que partilhar a credencial, o desenho está errado"* — vale literalmente para agentes. Se dois agentes partilham a mesma identidade, o *audit trail* deixa de ser útil.
 
 #### Intent declaration antes de tool calls destrutivos
 
@@ -121,7 +121,7 @@ Este desenho não pede que o agente *peça permissão* a cada passo — pede que
 
 #### Aprovação humana out-of-band
 
-Para acções com efeito crítico (delete, transfer, send, deploy, rotate-secrets, contactar sistemas externos sensíveis), exigimos aprovação **fora do canal do agente** — Slack approval, GitHub review com 2FA, webhook assinado, *push notification* a humano de plantão. A razão é simples: se o canal de aprovação é o mesmo onde o agente actua, a aprovação está sujeita ao mesmo conjunto de adversários do canal principal (prompt injection inclusive). Out-of-band força um *humano real, num canal independente*, a confirmar.
+Para acções com efeito crítico (delete, transfer, send, deploy, rotate-secrets, contactar sistemas externos sensíveis), exige-se aprovação **fora do canal do agente** — Slack approval, GitHub review com 2FA, webhook assinado, *push notification* a humano de plantão. A razão é simples: se o canal de aprovação é o mesmo onde o agente actua, a aprovação está sujeita ao mesmo conjunto de adversários do canal principal (prompt injection inclusive). Out-of-band força um *humano real, num canal independente*, a confirmar.
 
 #### Kill-switch operacional
 
@@ -136,7 +136,7 @@ Em A3/A4 exercitamos o *kill-switch* em sandbox/staging com cadência registada 
 
 #### Audit completo por tool invocation
 
-Cada *tool call* gera um *audit event* estruturado — não basta logar "agente fez algo". Sugerimos como mínimo:
+Cada *tool call* gera um *audit event* estruturado — não basta logar "agente fez algo". Sugere-se como mínimo:
 
 - `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level` (A0–A4)
 - `tool`, `tool_version`, `args` (com redação de PII e segredos)
@@ -170,13 +170,13 @@ Esta secção complementa o que já dissemos sobre [trust zones em arquitecturas
 - **Curadoria da ingestão** — documentos ingeridos no corpus passam por um *pipeline* de curadoria: validação de origem, *content scanning* para padrões adversariais conhecidos (LLM01-2025 *indirect prompt injection* patterns), classificação de sensibilidade. Não tratar a ingestão como *trusted by default*.
 - **Vector DB como activo crítico** — controlo de acesso (autenticação + autorização per-namespace), *audit log* de leituras e escritas, encriptação *at-rest* e *in-transit*, integridade dos *embeddings* (hash sobre o conteúdo original que originou cada *embedding*).
 - ***Embedding model* pinned** — versão fixa explícita (cross-link [`DEP-013`](../dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)). Mudança de versão maior do *embedding model* obriga a re-indexar o corpus inteiro e a re-correr *eval suite* RAG (ver abaixo) — *embedding spaces* não são compatíveis entre versões maiores.
-- ***Retriever* com filtros de autorização** — top-k retrieval respeita *row-level security* / *namespace boundary* do utilizador que faz a query. Falha clássica em RAG corporativo: utilizador A consegue ver chunks que pertencem ao perímetro do utilizador B porque o retriever não filtra. Tratamos como *access control* normal.
+- ***Retriever* com filtros de autorização** — top-k retrieval respeita *row-level security* / *namespace boundary* do utilizador que faz a query. Falha clássica em RAG corporativo: utilizador A consegue ver chunks que pertencem ao perímetro do utilizador B porque o retriever não filtra. Trata-se como *access control* normal.
 - ***Output filtering* anti-extracção de corpus** — detectar padrões em que o modelo está a regurgitar conteúdo do corpus sem o tratar (potencial *membership inference* sobre que documentos estão no índice, ou *exfiltration* dirigida).
 - ***Provenance* no output** — quando o modelo cita documentos do corpus, expor *provenance* (que documento, que chunk) ao utilizador. Tem dupla função: auditabilidade e dificultar exfiltração silenciosa.
 
 #### Threats específicas a RAG
 
-Adicionamos à [threat library agentic do Cap. 03](../threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) os seguintes vectores RAG-específicos:
+Adiciona-se à [threat library agentic do Cap. 03](../threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) os seguintes vectores RAG-específicos:
 
 | Threat | ID | Fronteira-alvo | Mitigação primária |
 |---|---|---|---|
@@ -201,13 +201,13 @@ Para sistemas A2+ que invocam *tools* a partir de contexto RAG, esta camada da *
 
 ### Nota sobre sistemas multi-agente
 
-*Frameworks* de orquestração multi-agente (*LangGraph*, *CrewAI*, *AutoGen*, *orchestrator → executor → reviewer* construídos sobre SDKs próprios) tornaram-se comuns durante 2024–2025 e continuam em evolução rápida. Não escrevemos uma secção dedicada porque o espaço de soluções **ainda não estabilizou** — convenções de *agent-to-agent communication*, *trust delegation* entre agentes e supervisão hierárquica variam significativamente entre *frameworks*. O nosso princípio operacional é, no entanto, estável:
+*Frameworks* de orquestração multi-agente (*LangGraph*, *CrewAI*, *AutoGen*, *orchestrator → executor → reviewer* construídos sobre SDKs próprios) tornaram-se comuns durante 2024–2025 e continuam em evolução rápida. Não se escreve uma secção dedicada porque o espaço de soluções **ainda não estabilizou** — convenções de *agent-to-agent communication*, *trust delegation* entre agentes e supervisão hierárquica variam significativamente entre *frameworks*. O princípio operacional é, no entanto, estável:
 
 - **Cada agente no sistema é um *principal* distinto** ([`ARC-015`](./addon/catalogo-requisitos-arquitetura#arc-015)) com identidade, *mandate* (Policy 38) e nível A0–A4 próprios. Um orquestrador não "empresta" as suas credenciais a um sub-agente.
 - ***Trust delegation* explícita** — quando um agente invoca outro, a chamada é tratada como *tool call* (auditada por [`OPS-012`](../monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)), com `intent` declarado quando destrutiva.
 - ***Out-of-band approval* no agente que executa**, não no orquestrador — a aprovação humana é exigida no ponto onde a acção destrutiva acontece, não no ponto onde foi decidida.
 
-Quando os padrões multi-agente estabilizarem (provavelmente 2026–2027), revisitaremos para extrair uma secção dedicada com base na prática operacional acumulada.
+Quando os padrões multi-agente estabilizarem (provavelmente 2026–2027), será revisitado para extrair uma secção dedicada com base na prática operacional acumulada.
 
 ---
 

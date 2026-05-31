@@ -183,7 +183,7 @@ Em L3, a participação activa no programa de segurança deve ser reconhecida fo
 
 ## 11. Formação em agentes AI e tooling pervasivo (módulo obrigatório)
 
-Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), todos os *roles* directamente envolvidos passam a ter formação mínima obrigatória sobre o tema. Não é formação optativa — é parte do *baseline* de competências, ao nível do que exigimos sobre OWASP Top 10 ou *secure coding* básico.
+Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), todos os *roles* directamente envolvidos passam a ter formação mínima obrigatória sobre o tema. Não é formação optativa — é parte do *baseline* de competências, ao nível do que exige-se sobre OWASP Top 10 ou *secure coding* básico.
 
 ### 11.1 Cobertura mínima por *role*
 

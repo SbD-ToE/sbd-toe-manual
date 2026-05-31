@@ -88,17 +88,17 @@ O tema “IA aplicada ao Security by Design” será explorado de forma mais est
 
 ## ✍️ Prompts e *skill files* como código {#prompts-como-codigo}
 
-Há uma classe de artefactos que costuma escapar à disciplina de *secure development*: os ficheiros que *configuram* o comportamento dos assistentes e agentes — *system prompts*, *skill files* (`.claude/skills/*.md`), *agent files* (`.claude/agents/*.md`), `.cursorrules`, `.github/copilot-instructions.md`, `AGENTS.md`. Tratamos estes ficheiros como **código**, com as mesmas garantias.
+Há uma classe de artefactos que costuma escapar à disciplina de *secure development*: os ficheiros que *configuram* o comportamento dos assistentes e agentes — *system prompts*, *skill files* (`.claude/skills/*.md`), *agent files* (`.claude/agents/*.md`), `.cursorrules`, `.github/copilot-instructions.md`, `AGENTS.md`. Trata-se estes ficheiros como **código**, com as mesmas garantias.
 
-A razão prática é simples: estes ficheiros decidem **o que o assistente sabe**, **que ferramentas pode invocar**, **como deve interagir com o utilizador e com os recursos da organização**. Se mudam silenciosamente — por *commit* sem revisão, por geração automática desatualizada, por sugestão aceite sem leitura — mudam o comportamento operacional sem rasto. Esse é exactamente o tipo de mudança que o nosso processo de *code review* foi feito para impedir noutros contextos; aplicamos a mesma disciplina aqui.
+A razão prática é simples: estes ficheiros decidem **o que o assistente sabe**, **que ferramentas pode invocar**, **como deve interagir com o utilizador e com os recursos da organização**. Se mudam silenciosamente — por *commit* sem revisão, por geração automática desatualizada, por sugestão aceite sem leitura — mudam o comportamento operacional sem rasto. Esse é exactamente o tipo de mudança que o processo de *code review* foi feito para impedir noutros contextos; aplica-se a mesma disciplina aqui.
 
 ### 🧭 Princípios
 
-1. **Versionamento em VCS.** Prompts, *skill files*, *agent files* e *rules* vivem no mesmo repositório onde vive o código a que se aplicam (ou num repositório dedicado, com integração equivalente). Não toleramos cópias em *clouds* pessoais como única fonte da verdade.
+1. **Versionamento em VCS.** Prompts, *skill files*, *agent files* e *rules* vivem no mesmo repositório onde vive o código a que se aplicam (ou num repositório dedicado, com integração equivalente). Não se tolera cópias em *clouds* pessoais como única fonte da verdade.
 2. **Revisão como código.** Cada alteração passa pelo mesmo *code review* que o código aplicacional (ver [Policy 15 — Revisão de Código](/sbd-toe/assets/policies/policy-revisao-codigo) §âmbito estendido). Reviewers olham para: instruções que escalam privilégios, *tools* novas adicionadas, *escapes* de redação, ambiguidades que abrem espaço a *prompt injection*.
-3. **Segredos não entram em prompts.** Vale aqui a mesma regra que aplicamos em qualquer ficheiro do repo — *secret scanning* corre sobre estes ficheiros como sobre os outros (URLs internas, *tenant IDs*, IDs de cliente, *connection strings* contam como sensíveis).
+3. **Segredos não entram em prompts.** Vale aqui a mesma regra que aplica-se em qualquer ficheiro do repo — *secret scanning* corre sobre estes ficheiros como sobre os outros (URLs internas, *tenant IDs*, IDs de cliente, *connection strings* contam como sensíveis).
 4. **Origem auditável quando gerados.** Quando o conteúdo vem de uma ferramenta canónica (ex.: `generate_sbd_toe_skill` do MCP server SbD-ToE — ver [mini-site MCP](/sbd-toe/assets/mcp/intro)), preservamos o cabeçalho identificador da fonte para que o *drift* seja detectável.
-5. **Re-gerar após *upgrade* da fonte.** Skill estática é cópia *point-in-time*. Quando o *upstream* muda (upgrade do servidor MCP, nova versão do *agent guide*, mudança no *runtime*), re-geramos e re-revemos; não confiamos em alinhamento implícito.
+5. **Re-gerar após *upgrade* da fonte.** Skill estática é cópia *point-in-time*. Quando o *upstream* muda (upgrade do servidor MCP, nova versão do *agent guide*, mudança no *runtime*), re-gera-se e re-revê-se; não se confia em alinhamento implícito.
 
 ### 🛡️ Controlos práticos
 
@@ -125,18 +125,18 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 - **Cap. 12** — *drift detection* alimenta sinal observável quando a skill diverge da fonte canónica para além do limite acordado.
 - **Policy 15** — alcance estendido a prompts/skills.
 
-> 🧭 Em curto: tratamos prompts como tratamos código — versionados, revistos, *scanned* e re-gerados quando a fonte muda. Sem disciplina é mais um vector silencioso de mudança operacional; com disciplina, é um artefacto auditável como qualquer outro do nosso SDLC.
+> 🧭 Em curto: trata-se prompts como trata-se código — versionados, revistos, *scanned* e re-gerados quando a fonte muda. Sem disciplina é mais um vector silencioso de mudança operacional; com disciplina, é um artefacto auditável como qualquer outro do SDLC.
 
 ---
 
 ## 🧱 *Structured outputs* — validação do que o modelo devolve {#structured-outputs}
 
-Quando o output do modelo alimenta lógica aplicacional — *tool call* com argumentos, registo numa BD, decisão automatizada — o seu *formato* importa tanto como o seu *conteúdo*. Em 2026 os principais *providers* expõem mecanismos nativos para forçar o modelo a devolver output que adere a um *schema* declarado (Anthropic *tool use* + *structured outputs*, OpenAI *Structured Outputs* / *function calling*, Google *constrained generation*). Adoptamos estes mecanismos sempre que viável e, em qualquer caso, **validamos o output no servidor antes de o consumir**.
+Quando o output do modelo alimenta lógica aplicacional — *tool call* com argumentos, registo numa BD, decisão automatizada — o seu *formato* importa tanto como o seu *conteúdo*. Em 2026 os principais *providers* expõem mecanismos nativos para forçar o modelo a devolver output que adere a um *schema* declarado (Anthropic *tool use* + *structured outputs*, OpenAI *Structured Outputs* / *function calling*, Google *constrained generation*). Adopta-se estes mecanismos sempre que viável e, em qualquer caso, **validamos o output no servidor antes de o consumir**.
 
 ### 🧭 Princípios
 
-1. **Schema declarado lado-servidor.** Não confiamos no modelo para "lembrar" o formato; declaramos o *schema* (JSON Schema, *Pydantic*, *Zod*, equivalente) no servidor que faz a chamada. O *schema* é parte do código revisto — versionado, testado, *type-checked*.
-2. **Mecanismos nativos do *provider* quando existem.** Anthropic *tool use* + *structured outputs* e OpenAI *Structured Outputs* garantem (com restrições) aderência sintática ao *schema* declarado. Preferimos isto a *parsing* permissivo do texto bruto.
+1. **Schema declarado lado-servidor.** Não se confia no modelo para "lembrar" o formato; declaramos o *schema* (JSON Schema, *Pydantic*, *Zod*, equivalente) no servidor que faz a chamada. O *schema* é parte do código revisto — versionado, testado, *type-checked*.
+2. **Mecanismos nativos do *provider* quando existem.** Anthropic *tool use* + *structured outputs* e OpenAI *Structured Outputs* garantem (com restrições) aderência sintática ao *schema* declarado. Prefere-se isto a *parsing* permissivo do texto bruto.
 3. **Validação dupla — sintáctica e semântica.** Aderir ao *schema* não basta. Tipos correctos, *ranges* dentro do esperado, IDs que existem na base, *side effects* dentro do *scope* do *mandate* (Policy 38). O modelo pode obedecer ao *schema* e ainda assim devolver `{"action": "delete_database"}` num contexto em que isso é proibido.
 4. **Falha aberta, com *fallback* declarado.** Quando o output não valida, o sistema **não consome o output** e segue *fallback* declarado (perguntar ao utilizador, escalar para humano, retornar erro tratado). Nunca *"try to parse anyway"*.
 
@@ -145,7 +145,7 @@ Quando o output do modelo alimenta lógica aplicacional — *tool call* com argu
 | Padrão | Detalhe |
 |---|---|
 | **Schema versionado no repositório** | JSON Schema / Pydantic / Zod definido em código; versão referenciada no log para reconstrução *post-mortem* |
-| ***Tool definitions* canónicas** | Quando usamos *tool use* dos *providers*, as definições das *tools* vivem no mesmo repositório que o código que as implementa — não em prompt embebido |
+| ***Tool definitions* canónicas** | Quando usa-se *tool use* dos *providers*, as definições das *tools* vivem no mesmo repositório que o código que as implementa — não em prompt embebido |
 | **Validação de schema obrigatória pré-execução** | Output passa por validador antes de qualquer acção; falha bloqueia execução |
 | **Validação semântica per-action** | Para acções destrutivas, validação adicional que verifica `args` contra o *scope* declarado no *mandate* — cross-link [`REQ-AGN-004`](../../requisitos-seguranca/addon/governanca-automatismos#req-agn) |
 | ***Tool call replay protection*** | Identificador único por *tool call* + verificação de idempotência quando aplicável; evita re-execução acidental |

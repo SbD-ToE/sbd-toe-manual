@@ -229,7 +229,7 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 ### 10.5 SLA de disponibilidade e *fallback*
 
 - SLA de disponibilidade declarado; mecanismo de comunicação em caso de *outage*.
-- A arquitectura do nosso sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
+- A arquitectura do sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
 
 ### 10.6 Conformidade regulatória declarada
 

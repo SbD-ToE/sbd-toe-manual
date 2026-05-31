@@ -30,7 +30,7 @@ Não está no âmbito:
 
 ## 3. Princípio fundamental: AI é supply chain
 
-Tudo o que aprendemos nos últimos quinze anos sobre cadeia de fornecimento de software aplica-se às dependências AI — com especialização. Versão *pinned*, hash auditável, *provider* aprovado, mecanismo de actualização visível, plano de resposta a incidentes *upstream*. A diferença é que os *attack vectors* têm nomes distintos (`AML.T0019` Publish Poisoned Datasets, `AML.T0109` Supply Chain Rug Pull, `AML.T0110` AI Agent Tool Poisoning) e os artefactos são opacos (não conseguimos `npm audit` sobre um modelo).
+Tudo o que aprende-se nos últimos quinze anos sobre cadeia de fornecimento de software aplica-se às dependências AI — com especialização. Versão *pinned*, hash auditável, *provider* aprovado, mecanismo de actualização visível, plano de resposta a incidentes *upstream*. A diferença é que os *attack vectors* têm nomes distintos (`AML.T0019` Publish Poisoned Datasets, `AML.T0109` Supply Chain Rug Pull, `AML.T0110` AI Agent Tool Poisoning) e os artefactos são opacos (não conseguimos `npm audit` sobre um modelo).
 
 :::warning
 Operar em produção com modelo AI referenciado por `latest` (ou range, ou alias dinâmico) é o equivalente a operar com `npm install` sem *lockfile* — apenas com superfície de impacto maior e janela de detecção menor. Esta prática é proibida em qualquer nível de criticidade.
@@ -40,7 +40,7 @@ Operar em produção com modelo AI referenciado por `latest` (ou range, ou alias
 
 | Campo | Descrição | Notas |
 |---|---|---|
-| `format` | Formato de serialização | Preferimos CycloneDX 1.6 com extensão `ml-bom` (publicada em 2024). Alternativas: SPDX 3.0 AI extension; formatos proprietários do *provider* quando consumíveis pelo *pipeline* de governança |
+| `format` | Formato de serialização | Prefere-se CycloneDX 1.6 com extensão `ml-bom` (publicada em 2024). Alternativas: SPDX 3.0 AI extension; formatos proprietários do *provider* quando consumíveis pelo *pipeline* de governança |
 | `components` | Lista de componentes AI | Cada componente com `type`, `name`, `version` (fixa), `hash`, `provider`, `license`, `provenance` |
 | `models` | Subconjunto modelos AI | Inclui `model_id` (ex.: `claude-opus-4-7`), `version` (ex.: `@2026-05-20`), `sha256`, `provider`, `capabilities` |
 | `datasets` | Subconjunto datasets | Inclui `dataset_id`, `version`, `source`, `hash`, `curation_process` |
@@ -76,7 +76,7 @@ Adicionar um *provider* exige: avaliação técnica (`appsec`) + revisão contra
 
 ## 7. Resposta a incidentes *upstream*
 
-Os mesmos *runbooks* IR que usamos para CVE em dependências aplicam-se a incidentes em supply chain AI — com adaptações por classe:
+Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incidentes em supply chain AI — com adaptações por classe:
 
 | Classe de incidente | Exemplos | Acção mínima |
 |---|---|---|

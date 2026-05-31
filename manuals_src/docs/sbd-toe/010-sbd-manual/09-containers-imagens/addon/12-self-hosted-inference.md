@@ -8,7 +8,7 @@ tags: [ai, ml, inference, runtime, vllm, ollama, tgi, triton, gpu, hardening, se
 
 # Inferência AI Self-Hosted — Runtimes, Isolamento e Pesos
 
-## Porque tratamos a inferência *self-hosted* como caso próprio
+## Porque trata-se a inferência *self-hosted* como caso próprio
 
 Em 2026 muitas equipas operam misturas saudáveis de **modelos consumidos via *provider* externo** (Anthropic, OpenAI, Google) com **modelos servidos internamente** — seja porque os dados são sensíveis e não podem sair do perímetro, seja porque a economia muda quando o uso é elevado, seja porque a equipa quer controlo total sobre o ciclo de vida do modelo. *vLLM*, *Ollama*, *Text Generation Inference (TGI)*, *llama.cpp*, *NVIDIA Triton Inference Server* tornaram-se *runtimes* mainstream para esse uso.
 
@@ -33,7 +33,7 @@ Esta secção complementa [`ARC-014`](../../arquitetura-segura/addon/catalogo-re
 | **NVIDIA Triton Inference Server** | gRPC/HTTP; multi-framework (TF, PyTorch, ONNX, TensorRT) | Inferência multi-modelo de classe enterprise |
 | ***Custom* serving** (FastAPI + transformers) | API à medida | Casos com requisitos específicos não cobertos pelos acima |
 
-Não fazemos prescrição entre runtimes — escolhem-se com base em escala, *hardware* disponível, requisitos de licença do modelo, e maturidade operacional da equipa. Os padrões abaixo aplicam-se a todos.
+Não se faz prescrição entre runtimes — escolhem-se com base em escala, *hardware* disponível, requisitos de licença do modelo, e maturidade operacional da equipa. Os padrões abaixo aplicam-se a todos.
 
 ---
 
@@ -54,13 +54,13 @@ Os pesos do modelo — `.safetensors`, `.gguf`, `.bin`, `.onnx`, *checkpoints* �
 A inferência corre tipicamente em GPU, e GPUs partilhadas têm uma postura de isolamento que vale a pena considerar com cuidado:
 
 - ***Hard isolation*** quando possível — pod com GPU dedicada via *NVIDIA GPU Operator* + *MIG (Multi-Instance GPU)* ou equivalente em hardware AMD/Intel. Dois *tenants* diferentes não partilham o mesmo SM/CU.
-- ***Process-level isolation* quando *hard isolation* não é viável** — *MPS (Multi-Process Service)* + cgroup limits + namespaces. A defesa em profundidade aqui é importante, dado que *side-channels* em GPU partilhada são área de research activa (ex.: trabalhos sobre *cross-tenant timing* desde 2023). Não exigimos paranóia academica em produção, mas exigimos consciência operacional do risco.
+- ***Process-level isolation* quando *hard isolation* não é viável** — *MPS (Multi-Process Service)* + cgroup limits + namespaces. A defesa em profundidade aqui é importante, dado que *side-channels* em GPU partilhada são área de research activa (ex.: trabalhos sobre *cross-tenant timing* desde 2023). Não se exige paranóia academica em produção, mas exige-se consciência operacional do risco.
 - **Não misturar inferência sensível com workloads de utilizador no mesmo nó** — se o utilizador final consegue executar código no mesmo *host* onde corre a inferência (caso comum em plataformas de *notebooks* tipo *JupyterHub*), trata-se de adversário co-localizado. Separar.
 - **Limites de recursos explícitos** — `--gpu-memory-utilization`, *quota* de VRAM, *quota* de batch size. Sem limites, um *prompt* malicioso com `max_tokens` extremo pode degradar o serviço (categoria DoS clássica especializada).
 
 ### 3. Hardening do container de inferência
 
-Aplicamos os princípios do [§4 — *Hardening* de Containers](./hardening-containers) com as seguintes especializações:
+Aplica-se os princípios do [§4 — *Hardening* de Containers](./hardening-containers) com as seguintes especializações:
 
 - ***Read-only* filesystem** excepto para *paths* explicitamente exigidos pelo runtime (cache, profiling). vLLM e TGI suportam *read-only root*.
 - ***Drop capabilities*** — `cap_drop: ALL`; adicionar **apenas** o necessário (nenhuma capability privilegiada deve ser exigida por um *inference runtime* moderno).
@@ -70,7 +70,7 @@ Aplicamos os princípios do [§4 — *Hardening* de Containers](./hardening-cont
 
 ### 4. APIs de inferência — *hardening* específico
 
-O *runtime* expõe APIs com superficie nova. Para além do *hardening* HTTP convencional (TLS, *rate limiting*, *auth*), aplicamos:
+O *runtime* expõe APIs com superficie nova. Para além do *hardening* HTTP convencional (TLS, *rate limiting*, *auth*), aplica-se:
 
 - **Autenticação obrigatória** em todos os *endpoints*, mesmo em ambientes "internos". Vários runtimes (Ollama clássico, *llama.cpp server*) iniciam **sem autenticação** por defeito — uma escolha defensável para *workstation* mas catastrófica em rede partilhada. Configurar antes de expor.
 - ***Rate limiting* baseado em consumo** — não apenas pedidos por segundo; também tokens por janela, tempo de inferência total. Cruzar com [`OPS-013`](../../monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013) (*token budget*).

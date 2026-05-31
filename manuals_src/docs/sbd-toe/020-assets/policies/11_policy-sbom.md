@@ -173,7 +173,7 @@ A organização pode adotar ferramentas alternativas desde que suportem os forma
 
 ## 11. Anexo — AI BOM (Bill of Materials para componentes AI)
 
-Quando o sistema inclui componentes AI — modelos, datasets, MCP servers/tools, prompts embebidos — geramos um **AI BOM** em formato standardizado por *build*, ligado ao SBOM principal. Não é um inventário separado em paralelo; é uma extensão do SBOM principal com campos próprios para componentes opacos da supply chain AI.
+Quando o sistema inclui componentes AI — modelos, datasets, MCP servers/tools, prompts embebidos — gera-se um **AI BOM** em formato standardizado por *build*, ligado ao SBOM principal. Não é um inventário separado em paralelo; é uma extensão do SBOM principal com campos próprios para componentes opacos da supply chain AI.
 
 ### 11.1 Formato preferido
 

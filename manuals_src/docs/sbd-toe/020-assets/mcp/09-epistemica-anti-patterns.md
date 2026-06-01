@@ -139,6 +139,13 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 ❌ Chamar `generate_sbd_toe_skill()` cada vez.
 ✅ Gerar uma vez, guardar no caminho canónico (`.claude/skills/sbd-toe.md`, etc.), re-gerar **apenas após upgrade do MCP**.
 
+### 11. Confundir "consumir MCP" com "expor MCP server" (escopo de segurança distinto)
+
+Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organização passa a **expor um MCP server próprio** (não consumir), entra num escopo de segurança adicional que **não é coberto** por este mini-site nem pelo SbD-ToE manual em geral.
+
+❌ Assumir que ler este mini-site cobre a segurança de um MCP server que vais publicar.
+✅ Para MCP servers expostos, consultar o **OWASP MCP Top 10 (2025)** — catálogo dedicado que cobre prompt injection em contexto MCP, *tool poisoning*, *excessive permissions*, autenticação/autorização inadequadas, transporte inseguro, validação de input, *output handling*, monitorização insuficiente, defaults inseguros. Os controlos SbD-ToE relevantes (`ARC-015`, `REQ-AGN-001..004`, `OPS-011..014`, Policy 38, Policy 39) aplicam-se directamente — o OWASP MCP Top 10 funciona como *checklist de cobertura específica*, complementar ao threat modeling do [Cap. 03 §playbook-agentic](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic).
+
 ---
 
 ## Checklist de rigor antes de submeter qualquer output

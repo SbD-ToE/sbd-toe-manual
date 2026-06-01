@@ -199,6 +199,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 | [Policy 18 — Gestão de Segredos](./policy-gestao-segredos) | Identidade efémera (OIDC) — padrão herdado |
 | MITRE ATLAS | Catálogo de tactics/techniques adversariais (Threats `AML.T*` referenciadas em Cap. 03 playbook agentic) |
 | OWASP Top 10 for LLM Applications (2025) | LLM06-2025 Excessive Agency, LLM01-2025 Prompt Injection |
+| OWASP MCP Top 10 (2025) | Aplicável quando o agente expõe ou opera um MCP server próprio — *tool poisoning*, *excessive permissions*, autenticação/autorização, monitorização |
 | NIST AI RMF 1.0 (2023) + Generative AI Profile (2024) | GOVERN-1.x (políticas e ownership); MANAGE-4.x (revisão e revogação) |
 | NIST SP 800-207 | Zero Trust — agente como *principal* não-humano |
 | NIST SP 800-218A | SSDF Profile for GenAI |

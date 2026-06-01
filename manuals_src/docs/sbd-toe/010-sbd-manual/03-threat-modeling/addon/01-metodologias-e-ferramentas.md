@@ -107,6 +107,7 @@ Sistemas que incorporam componentes de inteligência artificial — modelos pred
 | **NIST AI RMF 1.0** | Risk Management Framework para AI: GOVERN / MAP / MEASURE / MANAGE | Estruturação de risco AI ao nível organizacional |
 | **OWASP LLM Top 10 (2025)** | Top-10 vulnerabilidades em aplicações LLM (prompt injection, sensitive information disclosure, supply chain, etc.) | Triagem rápida em aplicações com LLMs |
 | **OWASP ML Top 10 (2023)** | Top-10 vulnerabilidades em aplicações ML (input manipulation, model theft, model poisoning, etc.) | Triagem rápida em aplicações com modelos preditivos |
+| **OWASP MCP Top 10 (2025)** | Top-10 vulnerabilidades específicas a *MCP servers* (Model Context Protocol) — prompt injection em contexto MCP, tool poisoning, excessive permissions, autenticação/autorização inadequadas, transporte inseguro, validação de input, output handling, monitorização insuficiente, defaults inseguros | Triagem rápida quando se **expõe** ou **opera** um MCP server (distinto de consumir um — ver [mini-site MCP §troubleshooting](/sbd-toe/assets/mcp/troubleshooting-faq) para a distinção) |
 
 ### Adversarial threats catalog primer (MITRE ATLAS)
 

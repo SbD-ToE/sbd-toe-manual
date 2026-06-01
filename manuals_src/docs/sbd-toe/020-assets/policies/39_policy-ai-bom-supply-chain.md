@@ -149,6 +149,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução do 
 | SPDX 3.0 AI Profile | Formato alternativo |
 | MITRE ATLAS | Catálogo de tactics/techniques adversariais para AI supply chain |
 | OWASP Top 10 for LLM Applications (2025) — LLM03 Supply Chain | Vector dedicado |
+| OWASP MCP Top 10 (2025) | Aplicável quando MCP servers/tools entram no AI BOM como dependência — *tool poisoning* tem catálogo dedicado |
 | NIST AI RMF 1.0 — MAP-4.x (third-party AI) | Mapping de risco de terceiros |
 | NIST SP 800-218A | SSDF Profile for GenAI |
 | EU AI Act (Reg. (UE) 2024/1689) — Art. 53/55 (GPAI), Art. 25 (cadeia de fornecimento) | Quando aplicável |

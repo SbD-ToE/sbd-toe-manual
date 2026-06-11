@@ -2,13 +2,16 @@
 id: checklist-revisao
 title: Checklist SbD-ToE - Threat Modeling
 sidebar_label: Checklist de Revisão
+sidebar_position: 20
+description: Checklist binário e auditável da adoção das práticas de threat modeling do Capítulo 03
+tags: [checklist, threat-modeling, validação, auditoria, rastreabilidade]
 ---
 
 # Checklist de Revisão Periódica - Threat Modeling
 
 Este checklist aplica-se a todas as aplicações com criticidade L2 ou L3, ou que envolvam fluxos sensíveis, exposições externas ou alterações de arquitetura relevantes.
 
-Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 3 - Threat Modeling**, permitindo:
+Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 3 - Threat Modeling** (`THR-001` a `THR-008`), permitindo:
 
 - Verificação formal em revisões técnicas e auditorias;
 - Controlo da rastreabilidade entre ameaças, requisitos e controlos;
@@ -22,17 +25,21 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 | Item                                                                                                  | Verificado? |
 |-------------------------------------------------------------------------------------------------------|-------------|
-| Foi realizada uma sessão de threat modeling para esta aplicação ou componente?                       | ☐           |
-| Estão identificados os fluxos de dados, activos e trust boundaries?                                  | ☐           |
-| Foram aplicadas metodologias estruturadas (ex: STRIDE, LINDDUN, PASTA)?                              | ☐           |
-| As ameaças identificadas estão documentadas e priorizadas?                                           | ☐           |
-| Existe plano de mitigação para cada ameaça relevante?                                                | ☐           |
-| A equipa multidisciplinar participou e validou os resultados?                                        | ☐           |
-| O modelo de ameaças está versionado e atualizado conforme alterações ao sistema?                     | ☐           |
-| Foi considerada (e validada) a reutilização de modelo anterior (se aplicável)?                       | ☐           |
-| As ameaças foram convertidas em requisitos rastreáveis ou exceções justificadas com prazo definido? | ☐           |
-| Existe rastreabilidade entre ameaça, requisito e controlo aplicado?                                 | ☐           |
-| O modelo de ameaça está documentado no repositório ou plataforma usada pela equipa?                  | ☐           |
+| Existe threat model formal documentado para a aplicação (L2+), rastreável à versão de arquitetura avaliada? | ☐           |
+| O modelo inclui DFDs atualizados com trust boundaries explícitas e justificadas?                      | ☐           |
+| Foi aplicada uma metodologia estruturada com STRIDE como baseline?                                    | ☐           |
+| Os sistemas que tratam dados pessoais aplicam LINDDUN sobre o mesmo DFD?                               | ☐           |
+| Cada ameaça tem disposição formal explícita (mitigado, aceite, transferido ou excluído) com owner nomeado? | ☐           |
+| Cada risco aceite tem justificação documentada, aprovação formal e prazo de reavaliação?              | ☐           |
+| Existe rastreabilidade verificável ameaça → requisito → backlog → validação com threat ID referenciado? | ☐           |
+| O threat model está versionado e foi atualizado no prazo definido (≤30 dias após trigger ou por release), com gate de frescura no CI/CD? | ☐           |
+| O threat model foi revisto por AppSec independente antes do go-live (L2+), com evidência?             | ☐           |
+| Os sistemas com componentes AI/ML têm threat model estendido (prompt injection, model poisoning) referenciado a MITRE ATLAS ou NIST AI 100-2? | ☐           |
+| Os agentes de IA com uso de tools têm DFD agentic e threat library citada por ID canónico ancorada a controlos? | ☐           |
+| Foram derivados abuse/misuse cases e integrados no backlog como requisitos rastreáveis?               | ☐           |
+| O threat model foi validado e aprovado por um responsável explícito, distinto dos artefactos de apoio? | ☐           |
+| Os artefactos de threat modeling têm controlo de acesso, classificação e retenção definidos?          | ☐           |
+| As ameaças foram priorizadas por impacto de negócio e essa priorização reflete-se no backlog?         | ☐           |
 
 ---
 

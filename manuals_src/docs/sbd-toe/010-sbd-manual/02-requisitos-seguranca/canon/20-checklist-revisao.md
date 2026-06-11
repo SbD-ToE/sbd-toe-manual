@@ -4,6 +4,7 @@ title: Checklist de Revisão - Requisitos de Segurança
 description: Verificações obrigatórias por projeto para garantir a aplicação dos requisitos definidos
 tags: [checklist, validação, requisitos, auditoria, rastreabilidade]
 sidebar_position: 20
+sidebar_label: Checklist de Revisão
 ---
 
 # Checklist de Verificação - Requisitos de Segurança
@@ -14,21 +15,28 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 
 ---
 
-## 📋 Estrutura da Checklist
+## 📋 Itens de Verificação
 
-| Nº | Verificação                                                                 | Risco | Referência                                | Aplicado? (✔/✘) |
-|----|------------------------------------------------------------------------------|-------|-------------------------------------------|-----------------|
-| 1  | Existe **catálogo de requisitos de segurança** adaptado à organização?      | L1    | `addon/01-catalogo-requisitos.md`         |                 |
-| 2  | Foram atribuídas **tags de rastreabilidade normalizadas** (SEC-Lx-TEMA-XXX) aos requisitos definidos? | L1–L3 | `addon/09-taxonomia-rastreabilidade.md`    |                 |
-| 3  | A seleção de requisitos por projeto é feita com base na **classificação de risco**? | L1–L3 | `addon/06-matriz-controlos-por-risco.md`  |                 |
-| 4  | Foram identificados e registados os requisitos aplicáveis ao projeto?       | L1–L3 | `addon/01`, `addon/06`                     |                 |
-| 5  | Os requisitos estão **integrados no backlog ou artefactos de arquitetura**? | L1–L3 | `15-aplicacao-lifecycle.md`          |                 |
-| 6  | Existem **user stories ou tasks** que implementam requisitos de segurança?  | L2    | `15-aplicacao-lifecycle.md`          |                 |
-| 7  | Os requisitos estão **rastreáveis a controlos técnicos ou processuais**?    | L2/L3 | `addon/06`, `25-rastreabilidade.md`  |                 |
-| 8  | Existem **critérios de aceitação de segurança** definidos por requisito?    | L2/L3 | `15-aplicacao-lifecycle.md`          |                 |
-| 9  | Os requisitos são **validados em testes ou revisões de código**?            | L2/L3 | `achievable-maturity`, `15`       |                 |
-| 10 | Foram consideradas **restrições legais, normativas ou contratuais**?        | L1–L3 | `25-rastreabilidade.md`              |                 |
-| 11 | Existe processo para **atualização de requisitos em função de alterações**? | L1–L3 | `addon/06`, `15-aplicacao-lifecycle.md` |             |
+| Item                                                                                                       | Verificado? |
+|------------------------------------------------------------------------------------------------------------|-------------|
+| Existe um catálogo de requisitos de segurança aplicacional adaptado à organização e derivado do catálogo canónico SbD-ToE? | ☐           |
+| A seleção dos requisitos aplicáveis ao projeto foi feita com base na classificação de risco (L1–L3) e na matriz por nível? | ☐           |
+| Cada requisito selecionado tem um critério de aceitação explícito, verificável e testável?                | ☐           |
+| O catálogo de requisitos do projeto está versionado, com histórico de alterações e owner identificado?    | ☐           |
+| Foram atribuídas tags de rastreabilidade normalizadas (`SEC-Lx-DOMINIO-CODIGO`) ligadas ao ID canónico aos requisitos definidos? | ☐           |
+| Existe uma matriz de rastreabilidade que liga risco → requisito → tag → controlo → validação → evidência, com o tipo de controlo (Preventivo, Detetivo ou Corretivo) classificado? | ☐           |
+| Foram consideradas as restrições legais, normativas e contratuais aplicáveis na definição dos requisitos? | ☐           |
+| Os requisitos de segurança estão integrados no backlog ou nos artefactos de arquitetura como trabalho rastreável? | ☐           |
+| Existe um processo de revisão e re-versionamento dos requisitos disparado por alterações materiais, com nova análise de Threat Modeling registada? | ☐           |
+| Cada requisito aplicável foi validado por método adequado (SAST, DAST, teste, revisão ou gate de CI/CD), com validação independente ou gate de bloqueio para requisitos críticos e evidência ligada ao ID? | ☐           |
+| Existe um processo formal de exceções com ID, justificação, aprovação, TTL e revalidação obrigatória antes da expiração? | ☐           |
+| O uso de ferramentas de automatização ou IA assistida está autorizado, conhecido e coberto por política interna? | ☐           |
+| Todo o código, configuração ou teste gerado por automatismos é sujeito a revisão humana e validação técnica independente antes da integração? | ☐           |
+| Cada agente de IA em uso operacional (A1+) tem um mandate documentado e versionado em VCS? (`REQ-AGN-001`) | ☐           |
+| O nível de autonomia (A0–A4) de cada agente está classificado por contexto e reavaliado em mudança de contexto? (`REQ-AGN-002`) | ☐           |
+| Os agentes de IA A2+ têm kill-switch operacional documentado e exercitado na cadência definida? (`REQ-AGN-003`) | ☐           |
+| Os agentes de IA A2+ declaram a intenção (audit event) antes de cada tool-call destrutivo ou com efeito externo? (`REQ-AGN-004`) | ☐           |
+| Os indicadores RQS de cobertura, rastreabilidade e validação de requisitos são recolhidos e cumprem os thresholds do nível? | ☐           |
 
 ---
 
@@ -36,6 +44,5 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 
 - Esta checklist pode ser utilizada como instrumento de verificação por projeto, sprint ou release.
 - Os resultados podem servir como **indicador de controlo operacional** e **KPI de maturidade de aplicação do modelo SbD-ToE**.
-- A existência de um catálogo de requisitos (`item 1`) e a sua seleção proporcional (`item 3`) devem ser consideradas **pré-condições obrigatórias** para a adoção das restantes práticas.
+- A existência de um catálogo de requisitos e a sua seleção proporcional ao risco devem ser consideradas **pré-condições obrigatórias** para a adoção das restantes práticas.
 - O alinhamento com frameworks como OWASP SAMM, SSDF e DSOMM reforça o valor destas verificações, especialmente nos domínios de **Security Requirements** e **Reusable Controls** (ver `achievable-maturity`).
-

@@ -12,7 +12,7 @@ tags: [checklist, validação, revisão, iac, infraestrutura como código, contr
 
 Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (IaC)** desenvolvidos ou mantidos internamente. Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 08**, permitindo:
 
-* Controlo objetivo da aplicação dos requisitos `IAC-001` a `IAC-010`;
+* Controlo objetivo da aplicação dos requisitos `IAC-001` a `IAC-013`;
 * Integração com processos de PR, release, auditoria e onboarding;
 * Geração de indicadores operacionais e de conformidade.
 
@@ -24,16 +24,21 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 | Item                                                                             | Verificado? |
 | -------------------------------------------------------------------------------- | ----------- |
-| O backend remoto está configurado com locking e encriptação (`IAC-001`)          | ☐           |
-| Os ambientes são segregados e versionados (`IAC-002`)                            | ☐           |
-| Existe validação automática no CI/CD (lint, policy, tfsec, etc.) (`IAC-003`)     | ☐           |
-| Todos os módulos são confiáveis, pinados ou revistos manualmente (`IAC-004`)     | ☐           |
-| Existe histórico de alterações, tagging e releases (`IAC-005`)                   | ☐           |
-| As convenções de naming e diretórios são aplicadas e documentadas (`IAC-006`)    | ☐           |
-| Cada `plan` é revisto e aprovado antes de `apply` (`IAC-007`)                    | ☐           |
-| Existe rastreabilidade entre ficheiros e recursos/ambientes afetados (`IAC-008`) | ☐           |
-| O pipeline aplica enforcement automático de políticas (`IAC-009`)                | ☐           |
-| Os artefactos `plan`, `apply`, manifests são versionados com hash (`IAC-010`)    | ☐           |
+| O backend remoto está configurado com autenticação e locking, com logs de lock disponíveis? (`IAC-001`) | ☐           |
+| Os ambientes dev/staging/prod estão segregados e versionados em diretórios ou workspaces distintos? (`IAC-002`) | ☐           |
+| O pipeline executa validações bloqueantes (lint/sintaxe, scanner de segurança e policy) cujo insucesso impede o `apply`? (`IAC-003`) | ☐           |
+| Os módulos usam versão fixa ou hash (sem `latest`/`main`), de fontes em allowlist, com proveniência/integridade verificada? (`IAC-004`) | ☐           |
+| Existe histórico versionado com tags semânticas e notas por release? (`IAC-005`) | ☐           |
+| As convenções de naming/tagging/layout são validadas automaticamente e os recursos sem tags obrigatórias são rejeitados? (`IAC-006`) | ☐           |
+| Cada `apply` ocorre apenas após aprovação humana registada sobre o `plan` anexado ao PR, sem `apply` manual fora do pipeline? (`IAC-007`) | ☐           |
+| É possível rastrear, para qualquer recurso, o ficheiro IaC, o ambiente e o pipeline de origem? (`IAC-008`) | ☐           |
+| O enforcement de policy-as-code é bloqueante em pre-merge e pre-apply, com policy versionada e logs de bloqueio? (`IAC-009`) | ☐           |
+| Os artefactos `plan`/manifests são versionados com hash, com integridade confirmada antes do `apply` e sem reutilização entre ambientes? (`IAC-010`) | ☐           |
+| Existe secret scanning automatizado e proibição de segredos em código, com integração a cofre (Vault/KMS/OIDC) e credenciais efémeras de curta duração? (`IAC-011`) | ☐           |
+| Existe deteção automatizada de drift entre o IaC e o estado real, com alertas, tratada como falha de segurança corrigida via PR? (`IAC-012`) | ☐           |
+| Existe revisão periódica formal de módulos/templates com registos (data, responsável, findings) e remoção de obsoletos ou vulneráveis? (`IAC-013`) | ☐           |
+| Todo o IaC proposto é tratado como entrada não confiável por origem (humana, template, gerador ou ferramenta assistida)? | ☐           |
+| As exceções são geridas em formato versionado com TTL bloqueante, e existe procedimento de rollback/kill-switch para `destroy` em produção? | ☐           |
 
 ---
 

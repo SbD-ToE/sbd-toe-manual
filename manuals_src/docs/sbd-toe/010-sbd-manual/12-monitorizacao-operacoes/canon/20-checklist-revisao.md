@@ -10,8 +10,8 @@ tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta]
 
 # Checklist de Revisão - Capítulo 12: Monitorização e Operações
 
-Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos e resposta a incidentes**.  
-Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12**, permitindo:
+Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos e resposta a incidentes**.
+Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12** (`OPS-001` a `OPS-014`), permitindo:
 
 - Controlo contínuo da aplicação proporcional das práticas de monitorização;
 - Verificação sistemática por projeto ou aplicação;
@@ -23,23 +23,26 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ## 📋 Itens de Verificação
 
-| Item de controlo                                                                 | Verificado? |
-|----------------------------------------------------------------------------------|-------------|
-| Foram definidos os eventos críticos a monitorizar                               | ☑           |
-| Existe logging estruturado com formato consistente (ex: JSON, ECS)              | ☑           |
-| Os eventos críticos são emitidos e contêm os campos mínimos (timestamp, user)   | ☑           |
-| Os logs são transmitidos por forwarder seguro para sistema centralizado (SIEM)  | ☑           |
-| A configuração de envio garante segurança (TLS, autenticação, buffer local)     | ☑           |
-| Existem regras de alerta automáticas para eventos críticos                      | ☑           |
-| As regras de alerta foram testadas com eventos simulados                        | ☑           |
-| Os alertas são correlacionados entre múltiplas fontes (app, infra, CI/CD)       | ☑           |
-| Existe integração com sistema de resposta (IRP, SOAR, tickets automáticos)      | ☑           |
-| Estão definidas e monitorizadas métricas de MTTD e MTTR                         | ☑           |
-| Existem dashboards operacionais atualizados e acessíveis                        | ☑           |
-| A cobertura de logging é validada periodicamente (amostragem ou rastreio)       | ☑           |
-| As exceções à monitorização são justificadas, aprovadas e documentadas          | ☑           |
-| As práticas estão ajustadas ao nível de risco da aplicação (L1–L3)              | ☑           |
-| As práticas estão integradas no ciclo de vida (pipeline, PR, release)           | ☑           |
+| Item                                                                                                            | Verificado? |
+|-----------------------------------------------------------------------------------------------------------------|-------------|
+| Todos os componentes em produção emitem logs estruturados (JSON/CEF/ECS) persistidos fora da instância, com os campos mínimos normalizados e sem dados sensíveis em claro? (`OPS-001`) | ☐           |
+| Existe catálogo de eventos críticos de segurança por aplicação, com evidência de que são gerados e retidos, e os domínios de monitorização mapeados? (`OPS-002`) | ☐           |
+| A integridade dos logs está protegida (retenção WORM, acesso restrito e auditado, assinatura/hash, função de logging isolada)? | ☐           |
+| Existe política de retenção de logs por tipo e contexto regulatório, com retenção mínima cumprida e arquivo/purga auditável? (`OPS-003`) | ☐           |
+| Os logs são centralizados num SIEM com ingestão verificável, transporte TLS+autenticação, buffering no forwarder e deteção/alerta de falhas de ingestão? (`OPS-004`) | ☐           |
+| Os eventos são normalizados para esquema comum com tagging por aplicação/ambiente e timestamps UTC sincronizados por NTP? | ☐           |
+| Existem regras de alerta automáticas para os eventos críticos, com thresholds documentados e testadas antes de ativação? (`OPS-005`) | ☐           |
+| Os falsos positivos são documentados com causa e as condições revistas periodicamente, e cada alerta crítico tem runbook associado? | ☐           |
+| Existe SLA de resposta a alertas (time-to-acknowledge e time-to-resolve) definido por severidade? (`OPS-006`) | ☐           |
+| Existe integração com o processo de gestão de incidentes (IRP/SOAR), com evidência de ativação de playbooks num incidente ou exercício? (`OPS-007`) | ☐           |
+| Os alertas são correlacionados entre múltiplas fontes por regras ativas no SIEM, com deteção comportamental e baseline para as fontes críticas? (`OPS-008`/`OPS-009`) | ☐           |
+| As regras de deteção declaram as técnicas MITRE ATT&CK que cobrem, com a versão ATT&CK em uso registada? | ☐           |
+| As métricas de MTTD e MTTR são medidas e reportadas, com dashboards atualizados e evidência de melhoria contínua? (`OPS-010`) | ☐           |
+| A priorização de remediação aplica EPSS e KEV sobre os SLAs por severidade, mantendo o SLA por severidade como piso? | ☐           |
+| Os controlos estão ajustados ao nível de risco (L1–L3) com rastreabilidade, e as exceções à monitorização têm justificação, data de fim e controlo compensatório de visibilidade? | ☐           |
+| As ações irreversíveis (purga de logs, desativação de alertas, alteração de baselines) exigem aprovação humana, e o kill-switch de alertas tem limite temporal, notificação obrigatória e RCA antes de reativar? | ☐           |
+| Os sistemas com componentes AI/ML registam inputs/outputs do modelo (com sanitização de PII), drift, anomalias de prompt input e versões de modelo/dataset; cada tool invocation de agente (A1+) gera audit event estruturado no SIEM; existe budget de token spend com kill-switch; e existe deteção de jailbreak/off-policy para A2+? (`OPS-011` a `OPS-014`) | ☐           |
+| As práticas estão integradas no ciclo de vida (pipeline, PR, release)? | ☐           |
 
 ---
 
@@ -59,4 +62,4 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 - Pode ser integrado em **ciclos de revisão regulares ou como KPI organizacional**;
 - A evolução das métricas (ex: % com alertas testados, cobertura de logs, MTTD médio) reflete a **maturidade da equipa**.
 
-> 📅 Este checklist é parte integrante do modelo canónico de controlo SbD-ToE, e suporta a governaça por evidência.
+> 📅 Este checklist é parte integrante do modelo canónico de controlo SbD-ToE, e suporta a governança por evidência.

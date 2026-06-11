@@ -10,8 +10,8 @@ sidebar_position: 20
 
 # Checklist de Revisão Periódica - Formação e Onboarding Seguro
 
-Este checklist aplica-se a todos os **colaboradores técnicos, internos ou externos**, com impacto direto no desenvolvimento, operação ou manutenção de software.  
-Permite avaliar de forma **binária, objetiva e rastreável** a adoção prática das prescrições do **Capítulo 13 - Formação e Onboarding Seguro**.
+Este checklist aplica-se a todos os **colaboradores técnicos, internos ou externos**, com impacto direto no desenvolvimento, operação ou manutenção de software.
+Permite avaliar de forma **binária, objetiva e rastreável** a adoção prática das prescrições do **Capítulo 13 - Formação e Onboarding Seguro** (`TRN-001` a `TRN-009`).
 
 > 🛠️ Este mecanismo de controlo é essencial para validar a **formação proporcional ao risco**, a **validação técnica antes de permissões**, a **gestão de terceiros** e a **existência de cultura ativa de segurança**.
 
@@ -21,23 +21,22 @@ Permite avaliar de forma **binária, objetiva e rastreável** a adoção prátic
 
 | Item                                                                                                              | Verificado? |
 |-------------------------------------------------------------------------------------------------------------------|-------------|
-| Existe um **trilho formativo definido por perfil funcional e criticidade da aplicação (L1–L2–L3)**               | ☐           |
-| O trilho foi atribuído ao colaborador antes de iniciar atividades técnicas                                       | ☐           |
-| O colaborador completou o onboarding técnico antes de obter permissões em ambientes críticos                     | ☐           |
-| Existe **validação formal da formação**: quiz, checklist de PR ou revisão supervisionada                         | ☐           |
-| Os critérios de validação incluem limiares objetivos (ex: 80% no quiz, PR com tags de segurança, etc.)           | ☐           |
-| O registo do onboarding técnico está arquivado em repositório institucional (Git, LMS, SharePoint, etc.)         | ☐           |
-| Acesso técnico está condicionado à conclusão do processo de onboarding validado                                  | ☐           |
-| Existe processo formal e equivalente de onboarding para **terceiros, fornecedores e contractors**                | ☐           |
-| Os terceiros assinam termo de responsabilidade e recebem formação mínima antes de permissões                     | ☐           |
-| A rastreabilidade da formação de terceiros inclui nome, entidade, data e validação                               | ☐           |
-| Existe mecanismo de **formação contínua e reforço técnico** (ex: PR Clinics, war rooms, sessões técnicas)        | ☐           |
-| Existe **repositório de boas práticas** de revisão de PR e exemplos de código seguro                             | ☐           |
-| A equipa tem acesso a um **manual de formação por capítulo do SbD-ToE**, com exemplos e artefactos               | ☐           |
-| Existe **canal formal de apoio e esclarecimento** durante o processo de onboarding                               | ☐           |
-| Os materiais de formação são versionados, atualizados e integrados com lessons learned de incidentes             | ☐           |
-| A organização monitoriza **KPIs de formação e onboarding** por equipa, função ou fornecedor                      | ☐           |
-| Incidentes de segurança relevantes resultam em atualização dos conteúdos formativos                              | ☐           |
+| Existem trilhos formativos definidos por perfil funcional e nível de criticidade (L1–L3), com módulos obrigatórios, duração e periodicidade? (`TRN-001`) | ☐           |
+| O trilho é atribuído ao colaborador antes do início de atividade técnica autónoma? (`TRN-002`)                    | ☐           |
+| O onboarding de segurança (políticas, manuseamento de segredos, processo de incidentes, controlos do papel) é concluído antes de trabalho autónomo? (`TRN-002`) | ☐           |
+| Existe validação objetiva da conclusão com limiar mínimo definido e caminho de remediação para resultados abaixo? (`TRN-003`) | ☐           |
+| O resultado da validação é rastreável ao colaborador e à versão do conteúdo, arquivado em repositório institucional? (`TRN-003`) | ☐           |
+| O acesso a repositórios, pipelines ou ambientes L2+ está condicionado a evidência de onboarding válido? (`TRN-004`) | ☐           |
+| Existe formação contínua diferenciada por nível (L2 ≥ semestral, L3 ≥ trimestral), com participação registada? (`TRN-005`) | ☐           |
+| O conteúdo formativo está sob controlo de versão e é revisto após triggers (incidentes, alterações de política, novas classes de vulnerabilidade)? (`TRN-006`) | ☐           |
+| Existe processo de onboarding equivalente para terceiros, com termo de responsabilidade e registo (nome, entidade, data, validador)? (`TRN-007`) | ☐           |
+| Existe programa formal de Security Champions em equipas L3 (papel documentado, tempo alocado, designação rastreável)? (`TRN-008`) | ☐           |
+| Existem KPIs de eficácia formativa definidos e recolhidos, com desvios a gerar ação corretiva (owner e prazo)? (`TRN-009`) | ☐           |
+| Existe mecanismo ativo de reforço prático (PR clinics, war rooms, CTFs ou labs) e repositório de boas práticas de PR? | ☐           |
+| Existe formação obrigatória em uso seguro de IA e tooling (quando confiar vs. validar outputs, guardrails, validação de código e testes gerados)? | ☐           |
+| As equipas têm acesso ao manual de formação por capítulo do SbD-ToE e a um canal formal de apoio (SPOC/Champion) durante o onboarding? | ☐           |
+| Existe ambiente sandbox isolado para prática de contractors antes do acesso a sistemas reais? | ☐           |
+| Os incidentes com causa-raiz de formação resultam em atualização dos conteúdos formativos? | ☐           |
 
 ---
 

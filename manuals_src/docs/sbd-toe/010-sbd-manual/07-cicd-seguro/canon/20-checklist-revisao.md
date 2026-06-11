@@ -9,7 +9,7 @@ sidebar_position: 20
 
 # Checklist de Revisão Periódica de CI/CD Seguro
 
-Este checklist aplica-se a todas as aplicações com pipelines de integração e entrega contínua, avaliadas segundo os critérios do **Capítulo 07 - CI/CD Seguro**.  
+Este checklist aplica-se a todas as aplicações com pipelines de integração e entrega contínua, avaliadas segundo os critérios do **Capítulo 07 - CI/CD Seguro** (`CIC-001` a `CIC-010`).
 Serve como instrumento de verificação e auditoria da **conformidade com os controlos mínimos prescritos para segurança de pipelines, artefactos, segredos e ambientes de execução**.
 
 Este ficheiro funciona como:
@@ -23,25 +23,26 @@ Este ficheiro funciona como:
 
 ---
 
-## 📋 Itens de verificação
+## 📋 Itens de Verificação
 
 | Item                                                                                                               | Verificado? |
 |--------------------------------------------------------------------------------------------------------------------|-------------|
-| O pipeline está definido como código, versionado e sujeito a revisão por *pull request*?                           | ☐           |
-| A configuração efetiva do pipeline executado (excluindo segredos) é rastreável e preservada para auditoria?       | ☐           |
-| Os *triggers* do pipeline são restritos e controlados (ex: PRs autorizados, tags protegidas)?                     | ☐           |
-| Existem validações de segurança integradas com execução observável (SAST, secrets, IaC, containers, etc.)?       | ☐           |
-| Os resultados dos scanners correspondem a execução real (logs, *run id*, *exit code*) e não apenas a relatórios? | ☐           |
-| Os segredos são injetados de forma segura, temporária e sem exposição em logs ou artefactos?                      | ☐           |
-| O pipeline utiliza runners dedicados, isolados e descartáveis (obrigatório para L2/L3)?                           | ☐           |
-| Os artefactos são gerados com proveniência verificável e, quando aplicável, assinados antes de promoção?          | ☐           |
-| Existem políticas CI/CD formalizadas e aplicadas por nível de risco (L1–L3)?                                      | ☐           |
-| Os *gates* de segurança são explícitos, binários e aplicados antes de qualquer ação irreversível (deploy)?        | ☐           |
-| As decisões de promoção ou bypass de *gates* têm responsável humano identificado e registado?                    | ☐           |
-| O deploy é rastreável até ao pipeline e *commit* de origem (commit → pipeline → artefacto → release)?             | ☐           |
-| As exceções a políticas CI/CD estão registadas, aprovadas, temporárias e com compensações definidas?              | ☐           |
-| Integrações externas do pipeline são conhecidas, aprovadas e tratadas como dependências de supply chain?          | ☐           |
-| Existe retenção adequada de logs, metadados e evidências para investigação e auditoria?                           | ☐           |
+| O pipeline está definido como código e versionado, com alterações sujeitas a PR e branches principais protegidas (sem push direto nem force push)? (`CIC-001`) | ☐           |
+| O acesso de escrita é granular por branch/projeto com identidade empresarial (SSO/RBAC), e as aplicações L3 exigem assinatura de commits ou tags? | ☐           |
+| Os triggers estão restritos a fontes autorizadas, com execuções originadas em forks externos desativadas ou mediadas por aprovação? (`CIC-002`) | ☐           |
+| O CI e o CD estão separados por função, com templates reutilizáveis versionados, e a configuração efetiva de execução é registada para auditoria? | ☐           |
+| Os segredos são injetados via cofre ou variáveis protegidas, fora de YAML/logs/artefactos, mascarados nos logs e eliminados após uso? (`CIC-003`) | ☐           |
+| Os segredos têm âmbito mínimo, segregados por ambiente e aplicação, com rotação periódica e revogação imediata de comprometidos? (`CIC-009`) | ☐           |
+| O pipeline usa OIDC ou tokens de curta duração em vez de segredos estáticos long-lived, sem credenciais partilhadas entre aplicações distintas? (`CIC-009`) | ☐           |
+| O pipeline executa as validações de segurança aplicáveis (SAST, secrets scanning, IaC scanning, container scanning, SBOM/SCA e DAST em staging para L2/L3)? (`CIC-004`) | ☐           |
+| Os resultados dos scanners correspondem a execução observável (logs, run id, exit code) e a build falha automaticamente em findings críticos não justificados? | ☐           |
+| O nível de risco (L1–L3) está declarado e condiciona o pipeline, com políticas aplicadas como policy-as-code versionada? | ☐           |
+| Os gates de segurança são explícitos, binários e bloqueantes antes de ações irreversíveis, com aprovação humana nominal e separação entre sinal automático e decisão? (`CIC-004`) | ☐           |
+| Os runners são efémeros e segregados por projeto/risco, com hardening e integridade de imagens base verificada, sem execução privilegiada, acesso ao Docker socket ou a produção? (`CIC-006`/`CIC-010`) | ☐           |
+| As fases de build, test e deploy estão separadas, sem permissões cruzadas e com âmbito de credenciais por stage? (`CIC-008`) | ☐           |
+| Os artefactos são assinados com proveniência automática (modelo SLSA), verificada antes da promoção, com armazenamento/transporte seguros e deteção de manipulação? (`CIC-007`) | ☐           |
+| Existe rastreabilidade ponta-a-ponta (commit → pipeline → artefacto → release → deploy) com ID único por execução e retenção de logs/evidências conforme política? (`CIC-005`) | ☐           |
+| As exceções a controlos CI/CD estão registadas, aprovadas, temporárias e sinalizadas no pipeline, e os agentes de IA que o operam recebem credenciais OIDC efémeras com audit por tool invocation e kill-switch? | ☐           |
 
 ---
 

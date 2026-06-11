@@ -5,48 +5,45 @@ description: Verificação binária da aplicação das práticas prescritas no C
 tags: [checklist, controlo, dependencias, sbom, sca, supply-chain]
 sidebar_position: 20
 sidebar_label: Checklist de Revisão
-
 ---
 
 
 # Checklist de Revisão Periódica - Dependências, SBOM e SCA
 
 Este checklist aplica-se a todas as aplicações que utilizem bibliotecas de terceiros, SDKs, pacotes open-source ou artefactos binários.
-Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 05**, permitindo:
+Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 05** (`DEP-001` a `DEP-014`), permitindo:
 
 * Controlo contínuo da aplicação de práticas de SCA e SBOM
 * Verificação por projeto em momentos-chave do ciclo de vida
 * Geração de indicadores operacionais agregáveis por equipa ou organização
 
-> 🗓️ **Recomenda-se a sua revisão a cada release, alteração de dependência ou exceção de segurança**, conforme indicado no `15-aplicacao-lifecycle.md`.
+> 🗓️ **Recomenda-se a sua revisão a cada release, alteração de dependência ou exceção de segurança**, conforme indicado no `aplicacao-lifecycle`.
 
 ---
 
 ## 📋 Itens de Verificação
 
-Todos os itens abaixo devem ser verificados com base em **evidência objetiva** de aplicação prática das práticas do Capítulo 05.
-
 | Item                                                                                               | Verificado? |
 | -------------------------------------------------------------------------------------------------- | ----------- |
-| Existe um SBOM gerado automaticamente por build                                                    | ☐           |
-| O SBOM está versionado e ligado ao artefacto correspondente                                        | ☐           |
-| O SBOM inclui dependências transitivas e está em formato normativo (ex: CycloneDX)                 | ☐           |
-| Existe scanner SCA integrado no pipeline CI/CD                                                     | ☐           |
-| O pipeline bloqueia a entrega se existirem findings críticos não justificados                      | ☐           |
-| Relatórios SCA estão acessíveis e associados a versões/releases                                    | ☐           |
-| Existe uma política formal de uso e aprovação de bibliotecas                                       | ☐           |
-| As exceções a vulnerabilidades conhecidas são justificadas com prazo e impacto documentado         | ☐           |
-| As exceções vencidas são periodicamente revistas e renovadas ou eliminadas                         | ☐           |
-| Existe política de atualização de bibliotecas com TTL definido                                     | ☐           |
-| Há mecanismo para identificar e notificar bibliotecas desatualizadas (ex: bot, CI, tarefa)         | ☐           |
-| As atualizações passam por validação (scanner + CI) antes de serem aplicadas                       | ☐           |
-| Apenas repositórios autorizados são usados no build (ex: proxy interno, repositório privado)       | ☐           |
-| O fallback para registries externos está controlado e auditado                                     | ☐           |
-| Existe rastreabilidade entre findings, exceções e artefactos entregues (ex: ligação CVE → release) | ☐           |
-| Todas as práticas estão documentadas e rastreáveis no repositório ou pipeline                      | ☐           |
-| Foi definida a fronteira de inventário (SBOM boundary) com exclusões justificadas e documentadas?  | ☐           |
-| Existem controlos para deteção de dependências emergentes (*delta* inesperado) e respetivo processo de aprovação? | ☐           |
-
+| Existe SBOM gerado automaticamente por build (CycloneDX ou SPDX), incluindo dependências transitivas, versionado e ligado ao artefacto? (`DEP-001`) | ☐           |
+| O SBOM é arquivado e acessível para auditoria, e assinado com integridade verificada (L3)? (`DEP-001`) | ☐           |
+| Existe scanner SCA integrado no pipeline CI/CD? (`DEP-002`)                                         | ☐           |
+| Existe política de severidade documentada que distingue findings que bloqueiam dos que apenas alertam? (`DEP-002`) | ☐           |
+| O pipeline bloqueia a promoção perante findings críticos/elevados não justificados, conforme o limiar do nível? (`DEP-002`) | ☐           |
+| Os relatórios SCA estão acessíveis e associados a cada versão/release, com findings triados por severidade, exposição e correção? (`DEP-002`) | ☐           |
+| Existe lockfile versionado sem referências `latest`/`*`/ranges não limitados, com integridade verificável por hash? (`DEP-003`) | ☐           |
+| Não existem bibliotecas copiadas manualmente fora do package manager, com auditoria periódica e enforcement em CI/CD (L2–L3)? (`DEP-004`) | ☐           |
+| Apenas registries aprovados são usados no build (allowlist enforced), com fallback para registries externos controlado e auditado? (`DEP-005`) | ☐           |
+| Existe processo formal de aprovação de novas dependências (manutenção, licença, CVEs, popularidade), com registo rastreável (versão, hash, responsável, data)? (`DEP-006`) | ☐           |
+| Existe validação automática de compatibilidade de licenças contra allowlist organizacional?        | ☐           |
+| Existe política de atualização com SLA/TTL por severidade de CVE e bot ativo que gera PRs com análise de impacto, exigindo intervenção humana para breaking changes? (`DEP-007`/`DEP-008`) | ☐           |
+| Existe rastreabilidade entre findings, CVE, exceções e artefactos entregues (CVE → release)? (`DEP-010`) | ☐           |
+| As exceções a vulnerabilidades são formalizadas (justificação, contexto de uso, prazo, aprovador, compensação) e as vencidas revistas? | ☐           |
+| A fronteira de inventário (SBOM boundary) está definida e documentada, com deteção de dependências emergentes (delta inesperado) e processo de aprovação? (`DEP-009`) | ☐           |
+| Existe deteção de drift de composição entre o SBOM e o runtime, com abertura de incidente perante divergência (L3)? | ☐           |
+| Os sistemas com componentes AI/ML têm inventário de dependências AI (modelos, datasets, MCP servers/tools, prompts) e AI BOM por build (CycloneDX 1.6 `ml-bom`) ligado ao SBOM? (`DEP-011`/`DEP-012`) | ☐           |
+| Os modelos AI têm versão pinned (sem `latest`/aliases), constam de lista de providers aprovados com classificação de risco, e a mudança de versão maior aciona nova eval suite e revisão do threat model? (`DEP-013`/`DEP-014`) | ☐           |
+| As práticas estão documentadas e rastreáveis no repositório ou pipeline? | ☐           |
 
 ---
 

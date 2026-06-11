@@ -10,7 +10,7 @@ sidebar_label: Checklist de Revisão
 
 # Checklist de Revisão Periódica - Testes de Segurança
 
-Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 - Testes de Segurança**, permitindo:
+Este checklist aplica-se a todas as aplicações que exigem validação de segurança no seu ciclo de vida, e serve como instrumento de verificação **binária e auditável** da **adoção prática das prescrições do Capítulo 10 - Testes de Segurança** (`TST-001` a `TST-010`), permitindo:
 
 - Controlo da aplicação proporcional de testes (por nível L1–L3);
 - Verificação objetiva da presença, execução e tratamento dos testes;
@@ -24,29 +24,22 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 
 | Item                                                                                                      | Verificado? |
 |-----------------------------------------------------------------------------------------------------------|-------------|
-| Existe uma estratégia de testes documentada, proporcional ao risco da aplicação (L1–L3)                   | ☐           |
-| A estratégia de testes considera a arquitetura da aplicação e os vetores de ameaça mais críticos          | ☐           |
-| Foram aplicados testes mínimos obrigatórios conforme o tipo de aplicação (ex: APIs, serviços, UI, mobile) | ☐           |
-| O pipeline executa SAST de forma automática e rastreável                                                  | ☐           |
-| O pipeline executa DAST com âmbito, cobertura e autenticação definidos (quando aplicável)                | ☐           |
-| A aplicação foi submetida a fuzzing ou testes dinâmicos aleatórios                                        | ☐           |
-| Foram realizados testes manuais exploratórios dirigidos por threat modeling (quando aplicável)           | ☐           |
-| Existem testes de regressão de segurança para vulnerabilidades previamente resolvidas                     | ☐           |
-| Os resultados dos testes estão ligados ao commit, branch ou release correspondente                        | ☐           |
-| Os findings gerados são triados, classificados e rastreados com ciclo de vida definido                    | ☐           |
-| Existem critérios de aceitação de segurança por release, com thresholds mínimos                           | ☐           |
-| Existem *test gates* que impedem releases quando os critérios mínimos de segurança não são atingidos      | ☐           |
-| O pipeline bloqueia builds com findings críticos não justificados                                         | ☐           |
-| As exceções de segurança são aprovadas formalmente, com prazo e justificação                              | ☐           |
-| As exceções vencidas são revistas periodicamente e revalidadas                                            | ☐           |
-| Os resultados de SAST e DAST são comunicados automaticamente à equipa (ex: comentários no PR)             | ☐           |
-| As equipas de desenvolvimento têm visibilidade dos findings e participam na triagem                       | ☐           |
-| Existe rastreabilidade entre testes realizados e requisitos de segurança definidos (ex: `TST-XXX`)        | ☐           |
-| O plano de testes de segurança está versionado no repositório ou documentado como artefacto de release    | ☐           |
-| As práticas de validação estão integradas no ciclo de vida da aplicação (build, test, release, operação)  | ☐           |
-| Foi realizado PenTesting com âmbito definido e rastreabilidade dos findings (quando aplicável)            | ☐           |
-| Os resultados do PenTesting foram integrados com os restantes findings e tratados formalmente             | ☐           |
-| A eficácia dos testes é medida com métricas (ex: taxa de deteção, regressão, cobertura funcional)         | ☐           |
+| Existe estratégia de testes documentada e versionada, proporcional ao risco (L1–L3), mapeada aos requisitos do Cap. 02 e revista no último ano ou após alteração de risco/arquitetura? (`TST-001`) | ☐           |
+| O pipeline executa SAST automático e rastreável, com perfil de regras versionado e baseline de falsos positivos aprovada por AppSec? (`TST-002`) | ☐           |
+| O DAST é executado em staging com âmbito, autenticação e política de findings definidos, sem dados reais (quando aplicável)? (`TST-005`) | ☐           |
+| As aplicações L3 têm IAST instrumentado em staging com cobertura de fluxos críticos verificada? (`TST-010`) | ☐           |
+| Foi aplicado fuzzing aos componentes de processamento de input complexo, com corpus gerido (quando aplicável)? (`TST-009`) | ☐           |
+| Cada vulnerabilidade corrigida tem teste de regressão de segurança integrado no pipeline e ligado ao finding original? (`TST-006`) | ☐           |
+| Estão definidos e medidos thresholds mínimos de cobertura de testes por nível de risco? (`TST-007`)        | ☐           |
+| Os testes estão integrados no pipeline com gates que bloqueiam a promoção quando os critérios mínimos não são atingidos, e a build bloqueia findings críticos não justificados? | ☐           |
+| Os findings são triados, classificados e geridos com ciclo de vida e SLA de correção por severidade, centralizados numa plataforma de gestão? (`TST-003`) | ☐           |
+| As exceções de segurança são aprovadas formalmente, com justificação, prazo e plano de reteste, e as vencidas são revalidadas? | ☐           |
+| A evidência de testes é reproduzível e auditável a partir do mesmo estado do código, ligada ao commit ou release? (`TST-004`) | ☐           |
+| Cada decisão pass/fail e cada override têm responsável humano explícito registado?                        | ☐           |
+| Os ativos do processo de teste são protegidos (dados reais proibidos por omissão, credenciais segregadas e de privilégio mínimo, masking de segredos nos logs)? | ☐           |
+| Foi realizado PenTesting com âmbito, metodologia documentada e rules of engagement, com reteste de correções e integração dos findings (quando aplicável)? (`TST-008`) | ☐           |
+| A eficácia do programa é medida com KPIs (cobertura, SLA de resolução, regressão, ruído) e os findings são comunicados automaticamente às equipas? | ☐           |
+| O uso de IA em testes está coberto por política (minimização, masking, sem auto-merge de patches), com eval suites versionadas como gate para agentes de IA, e a TLPT readiness preparada para entidades sujeitas a DORA (quando aplicável)? | ☐           |
 
 ---
 

@@ -10,7 +10,7 @@ sidebar_label: Checklist de Revisão
 
 # Checklist de Revisão Periódica - Governança e Contratação
 
-Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto técnico e visa validar a aplicação prática das práticas prescritas no Capítulo 14 - Governança e Contratação.
+Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto técnico e visa validar a aplicação prática das práticas prescritas no Capítulo 14 - Governança e Contratação (`GOV-001` a `GOV-012`).
 
 > 📌 Deve ser usado em revisões formais, auditorias internas, milestones de projeto ou ciclos de revalidação técnica.
 
@@ -20,18 +20,22 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 | Item                                                                                                                   | Verificado? |
 |------------------------------------------------------------------------------------------------------------------------|-------------|
-| Existe owner de segurança formalmente designado para o projeto ou aplicação?                                          | ☐           |
+| Existe modelo formal de governação de segurança aprovado pela direção e revisto há ≤12 meses? (`GOV-001`)             | ☐           |
+| A aplicação ou projeto tem owner de segurança formalmente designado e registado? (`GOV-002`)                          | ☐           |
 | O nível de criticidade (L1–L3) está documentado e justificado?                                                         | ☐           |
+| As alçadas de aprovação por nível de risco estão documentadas e conhecidas pelos decisores, com escalonamento rastreável? (`GOV-003`) | ☐           |
 | Os requisitos mínimos proporcionais ao risco estão identificados e aplicados?                                         | ☐           |
-| Existem exceções aprovadas com owner, validade, compensação e rastreabilidade formal (registo de exceções e contratos, conforme `addon/12-processo-excecoes`)? | ☐           |
-| Foram incluídas cláusulas de segurança nos contratos ou acordos com terceiros?                                         | ☐           |
-| Os fornecedores com acesso técnico foram validados com base em checklist/questionário definidos?                      | ☐           |
-| A aplicação ou sistema está incluída na matriz de controlo das práticas SbD-ToE (ver `addon/11-controlos-praticas-sbd`)?  | ☐           |
-| Existe evidência formal (ficheiros, issues, wiki) de revisão da conformidade técnica e contratual?                    | ☐           |
-| As políticas organizacionais relacionadas com segurança, contratação e exceções estão formalmente aprovadas e auditadas (ver `policies-relevantes`)? | ☐           |
-| Existem KPIs definidos e reportados relacionados com exceções, cobertura de práticas e conformidade?                  | ☐           |
-| Está definida uma revisão programada (libertação, recontratação, auditoria) com base nestes dados?                    | ☐           |
-| Todos os decisores (owners, aprovadores, reviewers) têm formação SbD válida nos últimos 12 meses (Cap. 13)?           | ☐           |
+| Existe processo formal de gestão de exceções, registando cada exceção com owner, medida compensatória, evidência referenciável, data de expiração e alerta de revalidação (máx. 90 dias)? (`GOV-004`/`GOV-005`) | ☐           |
+| Os contratos com terceiros incluem cláusulas de segurança proporcionais ao risco? (`GOV-006`)                         | ☐           |
+| Os fornecedores com acesso técnico foram validados (questionário/checklist; L3: SBOM, SLA de incidentes, direito de auditoria) antes de onboarding? (`GOV-007`) | ☐           |
+| Existe rastreabilidade organizacional por aplicação ligando risco → requisitos → exceções → fornecedores → owner? (`GOV-008`) | ☐           |
+| A cadeia de autoridade de cada decisão de risco (quem pediu, avaliou, aprovou) é verificável, com evidência referenciável e retida? (`GOV-009`) | ☐           |
+| Existe ciclo de revisão periódica de conformidade por tipo de ativo (L3 trimestral, L2 semestral, fornecedores anual), com ações corretivas (owner e prazo)? (`GOV-010`) | ☐           |
+| Existem KPIs de governação definidos, recolhidos e reportados à gestão, com thresholds que despoletam ação corretiva? (`GOV-011`) | ☐           |
+| Existe avaliação de maturidade ativa (SAMM/DSOMM ou equivalente) há ≤12 meses, com plano de evolução (L3)? (`GOV-012`) | ☐           |
+| A aplicação consta da matriz de controlo das práticas SbD-ToE e as políticas organizacionais relevantes estão formalmente aprovadas e auditadas? | ☐           |
+| Os contratos com provedores de modelos de IA incluem data retention, training opt-out, localização RGPD (Art. 44–49), audit rights, SLA de notificação de mudanças e conformidade AI Act (Art. 53/55 GPAI), constando o provedor da lista aprovada (`DEP-014`)? | ☐           |
+| Existe processo formal de offboarding seguro (revogação de acesso, recuperação de ativos, rotação de segredos) e os decisores têm formação SbD válida nos últimos 12 meses (Cap. 13)? | ☐           |
 
 ---
 

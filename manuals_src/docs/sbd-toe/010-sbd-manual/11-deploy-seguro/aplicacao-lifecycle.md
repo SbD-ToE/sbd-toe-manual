@@ -788,6 +788,7 @@ Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agente
 - 🔗 [Cap. 12 US-13 — Telemetria agentic](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
 - 🔗 [Policy 38 §5.4 — Activação do mandate](/sbd-toe/assets/policies/policy-mandates-agentes)
 - 🔗 [Policy 39 §5 — Version pinning](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
+- 🔗 Grounding canónico: [`DPL-010` / `DPL-011`](./addon/catalogo-requisitos-deploy)
 
 ---
 

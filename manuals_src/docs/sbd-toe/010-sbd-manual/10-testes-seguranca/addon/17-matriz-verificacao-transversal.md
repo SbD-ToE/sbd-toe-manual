@@ -72,17 +72,19 @@ Cada linha é uma atividade de verificação prescrita num capítulo. As colunas
 | Fuzzing de componentes de processamento de input complexo | Teste | Comportamental (input adversarial) | [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro) | — | — | ✔ | `TST-009` |
 | PenTesting periódico com escopo e metodologia definidos | Teste | Comportamental (exploração real) | [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro) | — | ✔ | ✔ | `TST-008` |
 | Testes de regressão de segurança para vulnerabilidades corrigidas | Validação funcional | Critério de aceitação | [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro) | — | ✔ | ✔ | `TST-006` |
+| *Eval suite* como gate de release de sistemas agentic | Teste | Comportamental (*eval* offline) | [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | — | ✔ | ✔ | `DPL-010` |
 | Deteção de eventos críticos de segurança em runtime | Deteção em runtime | Sinal (catálogo de eventos) | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | ✔ | ✔ | ✔ | `OPS-002`, `OPS-005` |
 | Correlação de eventos entre múltiplas fontes (SIEM) | Deteção em runtime | Sinal correlacionado | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | — | — | ✔ | `OPS-008` |
 | Deteção comportamental contra *baseline* de atividade normal (UEBA) | Deteção em runtime | Sinal vs. *baseline* | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | — | — | ✔ | `OPS-009` |
 | Observabilidade e audit de sistemas AI/agentic em runtime (*tool-call audit*, *token runaway*) | Deteção em runtime | Sinal vs. *baseline* / *mandate* | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | — | ✔ | ✔ | `OPS-011`, `OPS-012`, `OPS-013` |
 | Deteção de *jailbreak* e *off-policy actions* em agentes AI | Deteção em runtime | Sinal vs. *mandate* / padrão adversarial | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | — | — | ✔ | `OPS-014` |
+| Revisão periódica de acesso de terceiros (*least privilege*) | Análise (policy) | Política (*least privilege*) | [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | ✔ | ✔ | ✔ | `GOV-014` |
 
 ## Leitura por oráculo
 
 ### Comportamental — os testes propriamente ditos
 
-Confrontam comportamento observado com comportamento esperado. SAST (`DEV-003`/`TST-002`) sobre o código estático; DAST (`TST-005`) sobre a aplicação em execução; IAST (`TST-010`) instrumentado em runtime; fuzzing (`TST-009`) com input adversarial; PenTesting (`TST-008`) com exploração real. É a fatia que vive em Cap. 10 — e a única que aí vive.
+Confrontam comportamento observado com comportamento esperado. SAST (`DEV-003`/`TST-002`) sobre o código estático; DAST (`TST-005`) sobre a aplicação em execução; IAST (`TST-010`) instrumentado em runtime; fuzzing (`TST-009`) com input adversarial; PenTesting (`TST-008`) com exploração real. É a fatia que vive em Cap. 10 — e quase a única que aí vive: a *eval suite* como gate de release de sistemas agentic (`DPL-010`) é também oráculo comportamental, mas executa-se no *deploy* (Cap. 11), porque é aí que a mudança de modelo/*prompt* entra em produção.
 
 ### Lookup — confronto com base de CVE
 
@@ -90,7 +92,7 @@ Confrontam um inventário com vulnerabilidades conhecidas. O *vulnerability verd
 
 ### Política — confronto com regra ou *baseline*
 
-Confrontam uma configuração com uma regra prescrita. Secrets scanning (`IAC-011`/`CIC-003`), IaC scanning (`IAC-003`), *policy-as-code* (`IAC-009`, `CNT-009`), verificação de assinatura e proveniência (`CIC-007`, `CNT-007`), *hardening* de container (`CNT-004`/`CNT-005`/`CNT-006`), *gates* de pipeline (`CIC-004`) e linters (`DEV-002`). O oráculo é a regra ou *baseline*, não o comportamento.
+Confrontam uma configuração com uma regra prescrita. Secrets scanning (`IAC-011`/`CIC-003`), IaC scanning (`IAC-003`), *policy-as-code* (`IAC-009`, `CNT-009`), verificação de assinatura e proveniência (`CIC-007`, `CNT-007`), *hardening* de container (`CNT-004`/`CNT-005`/`CNT-006`), *gates* de pipeline (`CIC-004`), linters (`DEV-002`) e a revisão periódica de acesso de terceiros (`GOV-014`), que confronta o acesso concedido com a regra de *least privilege*. O oráculo é a regra ou *baseline*, não o comportamento.
 
 ### Critério de aceitação — confronto com o requisito funcional
 

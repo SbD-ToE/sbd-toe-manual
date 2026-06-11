@@ -1,7 +1,7 @@
 ---
 id: catalogo-requisitos-governanca
 title: Catálogo de Requisitos de Governação e Contratação
-description: Catálogo canónico de requisitos de governação organizacional de segurança (GOV-001 a GOV-012), com aplicabilidade por nível de risco e critérios de aceitação para ownership, excepções, contratação, rastreabilidade, validação contínua e maturidade.
+description: Catálogo canónico de requisitos de governação organizacional de segurança (GOV-001 a GOV-014), com aplicabilidade por nível de risco e critérios de aceitação para ownership, excepções, contratação, rastreabilidade, validação contínua, maturidade, onboarding técnico de terceiros e revisão de acesso.
 requirement_class: dominio
 tags: [tipo:catalogo, classe:dominio, tema:governanca, GOV, ownership, excecoes, contratacao, rastreabilidade, maturidade, L1, L2, L3, auditoria]
 sidebar_position: 0
@@ -56,6 +56,8 @@ Requisitos que garantem que a segurança é aplicada com autoridade formal, rast
 | GOV-010 | Ciclo de validação contínua e revisão periódica de conformidade | - | ✔ | ✔ | Ciclo de revisão periódica definido por tipo de activo (aplicações L3: trimestral; L2: semestral; fornecedores críticos: anual); revisões produzem evidência rastreável; desvios identificados geram acções correctivas com owner e prazo definidos. |
 | GOV-011 | KPIs de governação definidos, recolhidos e reportados | - | ✔ | ✔ | KPIs de governação estão definidos, são recolhidos periodicamente e reportados à gestão; desvios face a thresholds definidos geram acção correctiva; KPIs incluem pelo menos: excepções activas por domínio, % aplicações com owner atribuído, % contratos com cláusulas de segurança. |
 | GOV-012 | Modelo de maturidade activo com evolução medida e planeada | - | - | ✔ | Avaliação de maturidade de segurança activa (SAMM, DSOMM ou equivalente); realizada pelo menos anualmente; resultados documentados com plano de evolução e metas definidas; evolução comparada com ciclo anterior e reportada à gestão. |
+| GOV-013 | Onboarding técnico e formação obrigatória pré-acesso de terceiros | rec. | ✔ | ✔ | Contractors e terceiros completam preparação técnica estruturada **antes de acesso real** a sistemas: formação de segurança por perfil (Dev, DevOps, QA, Arquitetura), quiz de compreensão com score mínimo (tipicamente 80%), ambiente sandbox para prática e NDA/confidentiality agreement assinados; o acesso só é concedido após *sign-off* de conclusão validado (Security Champion/AppSec + Tech Lead); o registo é rastreável (GRC/LMS) com datas, scores e validador, e mantido conforme retenção regulatória aplicável (DORA, NIS2). Em L1 é recomendado; em L2/L3 é obrigatório, com quiz validado em L3. |
+| GOV-014 | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | O acesso de contractors activos a sistemas (repositórios, CI/CD, bases de dados, cloud IAM, VPN) é revisto periodicamente — semestral em L1, trimestral em L2/L3 — validando, por terceiro, que cada acesso permanece necessário ao projeto; acesso excessivo ou obsoleto é removido no próprio dia; a revisão é assinada (Tech Lead + Security Champion), as mudanças ficam em *audit trail* e um relatório consolidado (% mantido / % removido) é entregue. Triggers adicionais: mudança de projeto, incidente. |
 
 ---
 
@@ -69,6 +71,8 @@ Requisitos que garantem que a segurança é aplicada com autoridade formal, rast
 - **GOV-008**: A rastreabilidade organizacional não é um spreadsheet estático - é um registo vivo que reflecte o estado de segurança de cada aplicação num dado momento. O seu valor para auditoria depende directamente da sua actualidade.
 - **GOV-011**: KPIs sem thresholds e sem acção correctiva são apenas métricas decorativas. O critério não exige um dashboard sofisticado - exige que os números produzam decisões.
 - **GOV-012**: A avaliação de maturidade só tem valor se comparada com ciclos anteriores e se gerar um plano com metas concretas. Uma avaliação que não muda nada não é um controlo - é um exercício.
+- **GOV-013**: O risco de um terceiro não preparado não é má-fé - é erro involuntário: credenciais expostas, acesso a dados não autorizados, práticas inseguras por desconhecimento. O *sign-off* antes do acesso é o ponto onde a preparação se torna pré-condição e não formalidade posterior. Liga o Cap. 13 (Formação) ao Cap. 14 (Governação): a formação fornece o conteúdo, a governação fornece o *gate* de acesso e a rastreabilidade.
+- **GOV-014**: O *access creep* é silencioso - permissões acumulam-se ao longo do tempo e ninguém as remove sem um ciclo que o force. A revisão periódica é o mecanismo que mantém o *least privilege* vivo em vez de declarado. A diferença face à revisão de acesso interno é o perfil de risco do terceiro e a frequência: para um contractor de L3, o trimestre é o limite aceitável entre o fim de uma necessidade e a remoção do acesso correspondente.
 
 ---
 

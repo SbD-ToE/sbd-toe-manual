@@ -36,6 +36,8 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 | A aplicação consta da matriz de controlo das práticas SbD-ToE e as políticas organizacionais relevantes estão formalmente aprovadas e auditadas? | ☐           |
 | Os contratos com provedores de modelos de IA incluem data retention, training opt-out, localização RGPD (Art. 44–49), audit rights, SLA de notificação de mudanças e conformidade AI Act (Art. 53/55 GPAI), constando o provedor da lista aprovada (`DEP-014`)? | ☐           |
 | Existe processo formal de offboarding seguro (revogação de acesso, recuperação de ativos, rotação de segredos) e os decisores têm formação SbD válida nos últimos 12 meses (Cap. 13)? | ☐           |
+| Os terceiros completam onboarding técnico e formação obrigatória (por perfil, com quiz e sandbox) com *sign-off* registado **antes** de acesso a sistemas, sendo o registo rastreável e retido conforme regulação (`GOV-013`)? | ☐           |
+| O acesso de contractors ativos é revisto periodicamente (semestral L1 / trimestral L2–L3) com validação de necessidade, remoção de acesso excessivo no próprio dia, revisão assinada e mudanças em *audit trail* (`GOV-014`)? | ☐           |
 
 ---
 

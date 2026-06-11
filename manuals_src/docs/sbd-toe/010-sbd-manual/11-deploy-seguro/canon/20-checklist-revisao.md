@@ -40,6 +40,8 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 | As feature flags têm metadata obrigatória (owner, âmbito, ativação, expiração), são versionadas como código, auditáveis, avaliadas no backend e revistas periodicamente? | ☐           |
 | A release segue versionamento semântico com changelog técnico e de segurança (CVEs corrigidas, breaking changes)? | ☐           |
 | As exceções a gates seguem template versionado (aprovador por severidade, validade máx. 6 meses), e as ações irreversíveis e decisões de go/no-go exigem registo humano (quem, quando, porquê, evidência)? | ☐           |
+| Em sistemas com agente AI ou modelo *load-bearing*, a *eval suite* corre como gate obrigatório quando muda modelo/*skill files*/*system prompts*, o *rollback* de modelo e de *prompt/skill* é independente do aplicacional, e as *release notes* registam versão de modelo/skill/eval + `mandate_ref` (`DPL-010`)? | ☐           |
+| Em sistemas agentic L3, a mudança de versão maior de modelo é promovida via *canary* com critérios objetivos, e existe gate automático que desce o `autonomy_level` quando a *eval suite* não confirma o nível (`DPL-011`)? | ☐           |
 
 ---
 

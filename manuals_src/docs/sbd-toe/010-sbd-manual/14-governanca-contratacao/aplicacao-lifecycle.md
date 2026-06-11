@@ -581,6 +581,7 @@ Como **Security Champion + HR/Recruiter**, quero **executar processo estruturado
 - [Validação de Fornecedores - US-06](#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores)  
 - [Template de Validação de Contractors](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
 - [Guia de Preparação Sandbox](/sbd-toe/sbd-manual/formacao-onboarding/addon/guia-preparacao-sandbox)  
+- Grounding canónico: [`GOV-013`](./addon/catalogo-requisitos-governanca)  
 
 ---
 
@@ -627,6 +628,7 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
 - [Designação de Owners de Segurança - US-09](#us-09---designação-formal-de-owners-de-segurança-por-aplicação)  
 - [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
+- Grounding canónico: [`GOV-013`](./addon/catalogo-requisitos-governanca)  
 
 ---
 
@@ -766,6 +768,7 @@ Como **Security Champion + Infrastructure/Tech Lead**, quero **revisar trimestra
 - [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
 - [Offboarding - US-17](#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)  
 - [Requisitos de Autenticação e Acesso - Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle)  
+- Grounding canónico: [`GOV-014`](./addon/catalogo-requisitos-governanca)  
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: catalogo-requisitos-deploy
 title: Catálogo de Requisitos de Deploy Seguro
-description: Catálogo canónico de requisitos de segurança para o processo de deploy (DPL-001 a DPL-009), com aplicabilidade por nível de risco e critérios de aceitação para aprovação formal, proveniência de artefactos, gates automáticos, rollback, credenciais de deploy, staging, monitorização pós-deploy e rastreabilidade end-to-end.
+description: Catálogo canónico de requisitos de segurança para o processo de deploy (DPL-001 a DPL-011), com aplicabilidade por nível de risco e critérios de aceitação para aprovação formal, proveniência de artefactos, gates automáticos, rollback, credenciais de deploy, staging, monitorização pós-deploy, release gates de sistemas agentic e rastreabilidade end-to-end.
 requirement_class: dominio
 tags: [tipo:catalogo, classe:dominio, tema:deploy, DPL, deploy-seguro, rollback, proveniencia, gates, aprovacao, rastreabilidade, L1, L2, L3, auditoria]
 sidebar_position: 0
@@ -51,6 +51,8 @@ Requisitos que garantem que cada promoção a produção é aprovada, rastreáve
 | DPL-007 | Validação em staging antes de promoção a produção | - | ✔ | ✔ | Ambiente de staging com validação funcional e de segurança antes de promoção; critérios de aceitação de staging documentados e evidenciados; staging suficientemente representativo de produção para os fins de validação. |
 | DPL-008 | Monitorização activa durante e após deploy | - | ✔ | ✔ | Métricas de saúde e alertas activos durante a janela de deploy e no período de observação pós-deploy; período de observação definido por nível de risco; anomalias nesse período disparam rollback automático ou alerta urgente com SLA de resposta. |
 | DPL-009 | Deploy progressivo com contenção de impacto para aplicações críticas | - | - | ✔ | Deploy progressivo implementado para releases de componentes críticos (canary, blue-green, feature flags); thresholds de promoção automática e critérios de rollback definidos; capacidade de contenção sem rollback completo verificável. |
+| DPL-010 | Release gates para sistemas com agentes AI | - | ✔ | ✔ | Aplicável quando o sistema inclui agente AI ou modelo AI como dependência *load-bearing*. Quando uma promoção altera versão de modelo, *skill files* ou *system prompts*, a *eval suite* (Cap. 10 §C5) corre como **gate obrigatório** e o *fail* bloqueia a promoção; existem procedimentos de *rollback* da versão do modelo e do *system prompt*/*skill file* **independentes** do *rollback* aplicacional; as *release notes* registam versão de modelo, versão de *skill files*, versão da *eval suite* e `mandate_ref` como evidência arquivada (`eval_run_id` ligado ao release). |
+| DPL-011 | Canary e demoção de autonomia no release de modelos | - | - | ✔ | Aplicável a sistemas com agentes AI. Mudança de versão maior de modelo (provider, novo *fine-tune* ou *system prompt* com impacto material) é promovida via **canary** — fracção controlada de tráfego durante janela observável, com critérios objetivos de promoção e de rollback automático (taxa de erro, *off-policy events*, latência); um **gate automático** desce o `autonomy_level` do agente (ex.: A3 → A2) quando a *eval suite* não confirma o nível pretendido, até resolução. |
 
 ---
 
@@ -61,6 +63,8 @@ Requisitos que garantem que cada promoção a produção é aprovada, rastreáve
 - **DPL-005**: O rollback não testado é um plano teórico, não um controlo de segurança. Incidentes reais mostram regularmente que procedimentos de rollback que nunca foram exercitados falham ou são mais lentos do que esperado quando mais necessários.
 - **DPL-006**: O uso de OIDC/workload identity federation para eliminar credenciais de deploy de longa duração é a prática recomendada para L2/L3 - tokens efémeros por execução de pipeline eliminam o risco de credenciais comprometidas por exfiltração.
 - **DPL-009**: O deploy progressivo é simultaneamente um controlo de segurança e de resiliência operacional. Para aplicações L3 com impacto regulatório ou de continuidade de negócio, a capacidade de conter um deploy problemático a uma fracção do tráfego é parte integrante da gestão de risco operacional.
+- **DPL-010**: Num sistema agentic, o binário aplicacional deixa de ser o único artefacto que muda comportamento em produção. Versão de modelo, *skill files*/*system prompts* e *eval suite* são três dimensões próprias no caminho crítico do release — uma mudança de modelo sem mudança de código pode alterar materialmente o comportamento. Tratar o *rollback* destas dimensões como independente do *rollback* aplicacional é o que torna o release tão reversível quanto uma mudança de código. A contraparte de runtime é `OPS-011`/`OPS-014` (observabilidade e deteção de *off-policy actions*).
+- **DPL-011**: A demoção automática de autonomia fecha o ciclo entre a evidência (eval suite, Policy 38 §5.4) e a operação: um agente só opera no nível que a *eval suite* confirma. O *canary* de modelo é o análogo agentic do DPL-009 — a diferença é que o sinal de promoção/rollback inclui *off-policy events* e não apenas métricas aplicacionais.
 
 ---
 

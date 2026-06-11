@@ -735,6 +735,96 @@ Como **AppSec / DevOps**, quero que cada *release* do sistema gere um **AI BOM e
 
 ---
 
+### US-15 - Pinning de versões e integridade por hash
+
+Uma dependência sem versão fixa e sem hash verificável é uma porta aberta a substituição silenciosa na cadeia de fornecimento.  
+
+**Contexto.** `DEP-003` exige *lockfile* versionado, sem referências `latest`/`*`/ranges não limitados, e integridade verificável por hash (`integrity` em npm, `--hash` em pip). Nenhuma US operacionaliza este controlo de forma direta — US-01 trata aprovação e US-13 trata *delta* de inventário, mas o *pinning* e a verificação de hash ficavam sem backlog próprio. Sem versão fixa, o mesmo manifesto resolve artefactos diferentes entre builds; sem hash, um artefacto adulterado *upstream* (typosquatting, *registry* comprometido) passa despercebido.  
+
+:::userstory
+**História.**   
+Como **Developer/Lead**, quero **fixar todas as dependências a versões exactas e verificar a sua integridade por hash em cada resolução**, para **garantir builds reprodutíveis e bloquear substituição não autorizada de artefactos**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um manifesto de dependências  
+  **Quando** o build resolve as dependências  
+  **Então** existe um *lockfile* versionado em VCS sem `latest`/`*`/ranges não limitados, e o build falha se o *lockfile* estiver ausente ou desactualizado  
+- **Dado** um *lockfile* com hashes de integridade  
+  **Quando** o *package manager* descarrega um artefacto  
+  **Então** o hash descarregado é comparado com o hash *pinned* e a resolução aborta em caso de divergência  
+
+**Checklist.**  
+- [ ] *Lockfile* presente e versionado, regenerado de forma determinística  
+- [ ] Ausência de `latest`/`*`/ranges não limitados (verificável por *linter* em CI)  
+- [ ] Campo de integridade por hash presente e validado na resolução  
+- [ ] *Gate* de CI que falha perante *lockfile* ausente/desactualizado ou divergência de hash  
+
+:::
+
+**Artefactos & evidências.** `package-lock.json`/`poetry.lock`/`Gemfile.lock`/`go.sum` (versionado); relatório do *linter* de *pinning*; logs de CI com verificação de hash.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| *Lockfile* presente; *pinning* recomendado | *Lockfile* obrigatório + verificação de hash | *Lockfile* + hash + proveniência verificada (*attestation*) e *gate* bloqueante |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Dev | Inclusão/alteração de dependência | Developer/Lead | Na alteração do manifesto |
+| Build | Resolução de dependências | DevOps/CI | Durante o build (bloqueio imediato) |
+
+**Ligações úteis.** [DEP-003 — Versões fixas e auditáveis](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos)
+
+---
+
+### US-16 - Governação documentada de política de severidade, registries e registo de aprovação
+
+Controlos de supply chain só são auditáveis quando a regra que distingue bloquear-de-alertar, a origem permitida e o registo de quem aprovou o quê estão escritos e versionados.  
+
+**Contexto.** Três prescrições do catálogo ficavam só parcialmente operacionalizadas. `DEP-002` exige **política de severidade documentada** que distinga findings que bloqueiam dos que apenas alertam (US-03 aplica *gates* mas não exige a política escrita). `DEP-005` exige *allowlist* de *registries* enforced **com fallback para fontes externas controlado e auditado** (US-06 enforça a *allowlist* mas não trata o *fallback*). `DEP-006` exige registo de aprovação rastreável **com versão, hash, responsável e data** (US-01 aprova mas não fixa os campos do registo). Consolidam-se por serem todos artefactos de governação documentada que tornam os *gates* já existentes auditáveis.  
+
+:::userstory
+**História.**   
+Como **AppSec**, quero **manter versionada a política de severidade, a *allowlist* de *registries* com regra de *fallback* auditada e o registo de aprovação com campos obrigatórios**, para **tornar as decisões de supply chain explícitas, rastreáveis e auditáveis**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** o pipeline de SCA  
+  **Quando** um finding é avaliado  
+  **Então** a decisão bloquear-vs-alertar segue uma política de severidade documentada e versionada, e não critérios *ad hoc* do scanner  
+- **Dado** que o build resolve dependências de uma fonte fora da *allowlist*  
+  **Quando** ocorre *fallback* para um *registry* externo  
+  **Então** o evento é registado, auditado e sujeito a aprovação conforme a política, ou bloqueado  
+- **Dado** a aprovação de uma nova dependência  
+  **Quando** é registada  
+  **Então** o registo inclui versão, hash, responsável e data, e é rastreável por dependência  
+
+**Checklist.**  
+- [ ] Política de severidade documentada e versionada (limiares de bloqueio/alerta por Lx)  
+- [ ] *Allowlist* de *registries* enforced com regra de *fallback* explícita e auditada  
+- [ ] Registo de aprovação com versão, hash, responsável e data por dependência  
+- [ ] Evidência de auditoria dos eventos de *fallback* (logs retidos)  
+
+:::
+
+**Artefactos & evidências.** `severity-policy.yaml`; `repo-config.yaml` com regra de *fallback*; `dependencies-approval.md` com campos versão/hash/responsável/data; logs de *fallback* auditados.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Política de severidade mínima documentada; *registries* recomendados; aprovação simples | Política versionada; *allowlist* enforced + *fallback* auditado; registo com campos obrigatórios | Idem + revisão AppSec/GRC do *fallback* e do registo; *fallback* requer aprovação formal por evento |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Início de projeto | Publicação/revisão de política | AppSec + GRC | Na adoção e em revisão periódica |
+| Build | *Fallback* para *registry* externo | AppSec + DevOps | No evento (registo/auditoria imediatos) |
+| Dev | Aprovação de nova dependência | AppSec + Developer | Na aprovação da dependência |
+
+**Ligações úteis.** [DEP-002/005/006 — Catálogo de Requisitos](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos) · [Controlo de registos de origem](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/controle-registos-origem)
+
+---
+
 ## 🧩 Nota complementar - Inventário contínuo de componentes e alertas em produção
 
 A gestão de dependências não termina no build.  

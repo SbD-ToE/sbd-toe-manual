@@ -791,6 +791,96 @@ Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agente
 
 ---
 
+### US-19 - Credenciais de *deploy* isoladas por aplicação e efémeras
+
+Uma credencial de *deploy* partilhada transforma o compromisso de um pipeline no compromisso de todos os que ela alcança.  
+
+**Contexto.** As credenciais usadas no momento do *deploy* combinam acesso privilegiado a ambientes de produção com automação não-supervisionada. Quando são permanentes ou partilhadas entre aplicações, um único *token* exfiltrado dá movimento lateral a todo o portfólio e torna impossível atribuir uso indevido a uma aplicação concreta. A US-08 cobre segredos *aplicacionais* injetados em *runtime*; esta US trata as credenciais *do pipeline de deploy* — âmbito mínimo, vida curta e isolamento por aplicação (`DPL-006`).  
+
+:::userstory
+**História.**   
+Como **DevOps/SRE**, quero **que cada aplicação use credenciais de *deploy* próprias, de âmbito mínimo e curta duração, nunca partilhadas entre aplicações**, para **conter o raio de impacto de uma credencial comprometida e tornar o uso atribuível e auditável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um pipeline de *deploy* de uma aplicação  
+  **Quando** o pipeline se autentica para promover a produção  
+  **Então** usa uma identidade efémera por execução (OIDC / *workload identity*), sem chaves persistentes  
+- **Dado** o conjunto de credenciais de *deploy* do portfólio  
+  **Quando** se audita o seu âmbito  
+  **Então** nenhuma credencial de *deploy* é partilhada entre aplicações e cada uma tem apenas as permissões necessárias ao seu alvo  
+- **Dado** uma promoção a produção  
+  **Quando** a credencial é usada  
+  **Então** o uso fica registado (identidade, aplicação, timestamp, ambiente) e correlacionável com o *deploy*  
+
+**Checklist.**  
+- [ ] OIDC / *workload identity* configurado (sem chaves de longa duração no *deploy*)  
+- [ ] Credenciais de *deploy* distintas por aplicação (sem partilha entre apps)  
+- [ ] Âmbito mínimo por credencial (permissões limitadas ao alvo)  
+- [ ] Logs de uso de credenciais centralizados e correlacionáveis com o *deploy*  
+
+:::
+
+**Artefactos & evidências.** Configuração de *workload identity*/OIDC por pipeline, inventário de credenciais de *deploy* por aplicação, logs de uso de credenciais.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Âmbito mínimo documentado; sem partilha entre apps | OIDC/*workload identity* (tokens efémeros); isolamento por app | OIDC obrigatório + auditoria periódica de âmbito e logs de uso |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Build/Deploy | Autenticação do pipeline | DevOps/SRE | Cada deploy |
+
+**Ligações úteis.** [Catálogo DPL-006](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos) · [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+
+---
+
+### US-20 - *Feature flags* avaliadas no *backend* como fronteira de confiança
+
+Um *toggle* avaliado no cliente não controla nada: protege apenas o que o utilizador escolhe não contornar.  
+
+**Contexto.** *Feature flags* que decidem exposição de funcionalidades sensíveis têm de ser avaliadas no *backend*. A avaliação *client-side* é manipulável pela UI e permite *bypass* trivial; e um *toggle* nunca substitui controlo de acesso. A US-07 cobre o ciclo de vida da *flag* (metadata, *owner*, expiração, versionamento como código); esta US trata a propriedade de segurança da avaliação — onde a decisão é tomada e como o *fallback* é validado.  
+
+:::userstory
+**História.**   
+Como **Dev/AppSec**, quero **que toggles que controlam lógica sensível sejam avaliados no *backend*, nunca apenas no *frontend*, e nunca como substituto de controlo de acesso**, para **impedir *bypass* via manipulação da UI e garantir que a fronteira de confiança é o servidor**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um *toggle* que controla uma funcionalidade ou fluxo sensível  
+  **Quando** a funcionalidade é solicitada  
+  **Então** a decisão de ativação é avaliada e imposta no *backend* (a UI não é a fronteira de decisão)  
+- **Dado** um *toggle* manipulado no cliente (UI/parâmetro)  
+  **Quando** o pedido chega ao servidor  
+  **Então** o *backend* impõe o estado correto e o *bypass* não tem efeito  
+- **Dado** um *toggle* crítico  
+  **Quando** está ativo e quando está desligado  
+  **Então** ambos os caminhos lógicos (com e sem *toggle*) são testáveis e têm *fallback* definido  
+
+**Checklist.**  
+- [ ] *Toggles* de lógica sensível avaliados no *backend* (não apenas *frontend*)  
+- [ ] *Toggle* não usado como substituto de controlo de acesso (autorização independente)  
+- [ ] Caminhos com e sem *toggle* testáveis, com *fallback* definido  
+- [ ] Avaliação/alteração de *toggle* registada em logs (não silenciosa)  
+
+:::
+
+**Artefactos & evidências.** Evidência de avaliação *server-side* (código/configuração), testes dos caminhos com e sem *toggle*, logs de avaliação de *toggle*.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| *Backend* para *toggles* sensíveis; *fallback* documentado | *Backend* para todos os *toggles* de lógica; ambos os caminhos testados | *Backend* + autorização independente + logs auditáveis de avaliação |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Desenvolvimento/Deploy | Introdução ou alteração de *toggle* sensível | Dev + AppSec | Cada PR de *toggle* |
+
+**Ligações úteis.** [Feature Flags e Toggles](/sbd-toe/sbd-manual/deploy-seguro/addon/feature-flags-e-toggle) · [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+
+---
+
 ## ⚖️ Matriz de proporcionalidade L1–L3
 
 Nem todas as aplicações exigem o mesmo nível de controlo.  

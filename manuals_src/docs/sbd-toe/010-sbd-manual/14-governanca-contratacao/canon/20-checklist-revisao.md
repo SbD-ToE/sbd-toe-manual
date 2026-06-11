@@ -4,7 +4,7 @@ title: Checklist SbD-ToE - Governança e Contratação
 sidebar_position: 20
 description: Checklist binário de controlo da aplicação das práticas de governação por projeto
 tags: [checklist, revisao, controlo, projeto, excecoes, aprovacao, contratacao]
-draft: true
+sidebar_label: Checklist de Revisão
 ---
 
 
@@ -23,12 +23,12 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 | Existe owner de segurança formalmente designado para o projeto ou aplicação?                                          | ☐           |
 | O nível de criticidade (L1–L3) está documentado e justificado?                                                         | ☐           |
 | Os requisitos mínimos proporcionais ao risco estão identificados e aplicados?                                         | ☐           |
-| Existem exceções aprovadas com owner, validade, compensação e rastreabilidade formal (`excecoes.yaml`, contratos)?    | ☐           |
+| Existem exceções aprovadas com owner, validade, compensação e rastreabilidade formal (registo de exceções e contratos, conforme `addon/12-processo-excecoes`)? | ☐           |
 | Foram incluídas cláusulas de segurança nos contratos ou acordos com terceiros?                                         | ☐           |
 | Os fornecedores com acesso técnico foram validados com base em checklist/questionário definidos?                      | ☐           |
-| A aplicação ou sistema está incluída na matriz de controlo das práticas SbD-ToE (ex: `09-controle-praticas-sbd.md`)?  | ☐           |
+| A aplicação ou sistema está incluída na matriz de controlo das práticas SbD-ToE (ver `addon/11-controlos-praticas-sbd`)?  | ☐           |
 | Existe evidência formal (ficheiros, issues, wiki) de revisão da conformidade técnica e contratual?                    | ☐           |
-| As políticas organizacionais relacionadas com segurança, contratação e exceções estão formalmente aprovadas e auditadas (`60`)? | ☐           |
+| As políticas organizacionais relacionadas com segurança, contratação e exceções estão formalmente aprovadas e auditadas (ver `policies-relevantes`)? | ☐           |
 | Existem KPIs definidos e reportados relacionados com exceções, cobertura de práticas e conformidade?                  | ☐           |
 | Está definida uma revisão programada (libertação, recontratação, auditoria) com base nestes dados?                    | ☐           |
 | Todos os decisores (owners, aprovadores, reviewers) têm formação SbD válida nos últimos 12 meses (Cap. 13)?           | ☐           |
@@ -62,7 +62,6 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 - **Cap. 05** - Dependências e SBOM (cláusulas e validações contratuais)
 - **Cap. 10** - Testes de segurança (validação prática de controlos)
 - **Cap. 13** - Formação (validação obrigatória de funções críticas)
-- **Cap. 14.08** - Governação Integral
-- **Cap. 14.09** - Controlo Consolidado das Práticas SbD-ToE
+- **Cap. 14** `addon/11-controlos-praticas-sbd` - Controlo consolidado das práticas SbD-ToE
 
 > ✅ Este checklist é um mecanismo central de controlo contínuo, proporcional e rastreável da adoção do modelo SbD-ToE em contextos reais de governação e contratação.

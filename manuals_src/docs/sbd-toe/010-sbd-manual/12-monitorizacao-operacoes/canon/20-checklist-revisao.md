@@ -25,21 +25,21 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 | Item de controlo                                                                 | Verificado? |
 |----------------------------------------------------------------------------------|-------------|
-| Foram definidos os eventos críticos a monitorizar                               | ☑           |
-| Existe logging estruturado com formato consistente (ex: JSON, ECS)              | ☑           |
-| Os eventos críticos são emitidos e contêm os campos mínimos (timestamp, user)   | ☑           |
-| Os logs são transmitidos por forwarder seguro para sistema centralizado (SIEM)  | ☑           |
-| A configuração de envio garante segurança (TLS, autenticação, buffer local)     | ☑           |
-| Existem regras de alerta automáticas para eventos críticos                      | ☑           |
-| As regras de alerta foram testadas com eventos simulados                        | ☑           |
-| Os alertas são correlacionados entre múltiplas fontes (app, infra, CI/CD)       | ☑           |
-| Existe integração com sistema de resposta (IRP, SOAR, tickets automáticos)      | ☑           |
-| Estão definidas e monitorizadas métricas de MTTD e MTTR                         | ☑           |
-| Existem dashboards operacionais atualizados e acessíveis                        | ☑           |
-| A cobertura de logging é validada periodicamente (amostragem ou rastreio)       | ☑           |
-| As exceções à monitorização são justificadas, aprovadas e documentadas          | ☑           |
-| As práticas estão ajustadas ao nível de risco da aplicação (L1–L3)              | ☑           |
-| As práticas estão integradas no ciclo de vida (pipeline, PR, release)           | ☑           |
+| Foram definidos os eventos críticos a monitorizar                               | ☐           |
+| Existe logging estruturado com formato consistente (ex: JSON, ECS)              | ☐           |
+| Os eventos críticos são emitidos e contêm os campos mínimos (timestamp, user)   | ☐           |
+| Os logs são transmitidos por forwarder seguro para sistema centralizado (SIEM)  | ☐           |
+| A configuração de envio garante segurança (TLS, autenticação, buffer local)     | ☐           |
+| Existem regras de alerta automáticas para eventos críticos                      | ☐           |
+| As regras de alerta foram testadas com eventos simulados                        | ☐           |
+| Os alertas são correlacionados entre múltiplas fontes (app, infra, CI/CD)       | ☐           |
+| Existe integração com sistema de resposta (IRP, SOAR, tickets automáticos)      | ☐           |
+| Estão definidas e monitorizadas métricas de MTTD e MTTR                         | ☐           |
+| Existem dashboards operacionais atualizados e acessíveis                        | ☐           |
+| A cobertura de logging é validada periodicamente (amostragem ou rastreio)       | ☐           |
+| As exceções à monitorização são justificadas, aprovadas e documentadas          | ☐           |
+| As práticas estão ajustadas ao nível de risco da aplicação (L1–L3)              | ☐           |
+| As práticas estão integradas no ciclo de vida (pipeline, PR, release)           | ☐           |
 
 ---
 

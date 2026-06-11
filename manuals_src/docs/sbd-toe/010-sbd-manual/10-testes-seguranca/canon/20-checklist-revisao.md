@@ -4,6 +4,7 @@ title: Checklist - Testes de Segurança
 description: Instrumento de verificação binária e auditável da adoção prática das práticas de validação contínua de segurança.
 tags: [checklist, revisão, testes, segurança, conformidade, rastreabilidade]
 sidebar_position: 20
+sidebar_label: Checklist de Revisão
 ---
 
 
@@ -15,7 +16,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 - Verificação objetiva da presença, execução e tratamento dos testes;
 - Geração de indicadores operacionais agregáveis por projeto, equipa ou organização.
 
-> 🗓️ **Recomenda-se a sua revisão a cada release, mudança de arquitetura, ou regressão relevante**, conforme indicado no `15-aplicacao-lifecycle.md`.
+> 🗓️ **Recomenda-se a sua revisão a cada release, mudança de arquitetura, ou regressão relevante**, conforme indicado na `aplicacao-lifecycle`.
 
 ---
 
@@ -40,7 +41,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 | As exceções vencidas são revistas periodicamente e revalidadas                                            | ☐           |
 | Os resultados de SAST e DAST são comunicados automaticamente à equipa (ex: comentários no PR)             | ☐           |
 | As equipas de desenvolvimento têm visibilidade dos findings e participam na triagem                       | ☐           |
-| Existe rastreabilidade entre testes realizados e requisitos de segurança definidos (ex: REQ-XXX)          | ☐           |
+| Existe rastreabilidade entre testes realizados e requisitos de segurança definidos (ex: `TST-XXX`)        | ☐           |
 | O plano de testes de segurança está versionado no repositório ou documentado como artefacto de release    | ☐           |
 | As práticas de validação estão integradas no ciclo de vida da aplicação (build, test, release, operação)  | ☐           |
 | Foi realizado PenTesting com âmbito definido e rastreabilidade dos findings (quando aplicável)            | ☐           |

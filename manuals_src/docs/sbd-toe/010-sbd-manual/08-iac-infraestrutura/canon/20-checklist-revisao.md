@@ -12,7 +12,7 @@ tags: [checklist, validação, revisão, iac, infraestrutura como código, contr
 
 Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (IaC)** desenvolvidos ou mantidos internamente. Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 08**, permitindo:
 
-* Controlo objetivo da aplicação dos requisitos `IAC-001` a `IAC-010`;
+* Controlo objetivo da aplicação dos requisitos `IAC-001` a `IAC-013`;
 * Integração com processos de PR, release, auditoria e onboarding;
 * Geração de indicadores operacionais e de conformidade.
 
@@ -24,7 +24,7 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 | Item                                                                             | Verificado? |
 | -------------------------------------------------------------------------------- | ----------- |
-| O backend remoto está configurado com locking e encriptação (`IAC-001`)          | ☐           |
+| O backend remoto está configurado com autenticação e locking (`IAC-001`)         | ☐           |
 | Os ambientes são segregados e versionados (`IAC-002`)                            | ☐           |
 | Existe validação automática no CI/CD (lint, policy, tfsec, etc.) (`IAC-003`)     | ☐           |
 | Todos os módulos são confiáveis, pinados ou revistos manualmente (`IAC-004`)     | ☐           |

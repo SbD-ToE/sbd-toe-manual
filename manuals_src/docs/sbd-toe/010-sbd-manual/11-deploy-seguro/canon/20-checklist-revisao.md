@@ -16,7 +16,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 - Verificação da existência de rollback testado
 - Confirmação da validação operacional antes do deploy
 
-> 🗓️ **Recomenda-se a sua revisão antes de qualquer release, rollback ou alteração de configuração relevante**, conforme indicado no `15-aplicacao-lifecycle.md`.
+> 🗓️ **Recomenda-se a sua revisão antes de qualquer release, rollback ou alteração de configuração relevante**, conforme indicado na `aplicacao-lifecycle`.
 
 ---
 

@@ -4,6 +4,7 @@ title: Checklist de Revisão - Arquitetura Segura
 description: Lista de verificação binária e auditável para controlo da aplicação dos requisitos de arquitetura segura
 tags: [checklist, arquitetura, validação, requisitos]
 sidebar_position: 20
+sidebar_label: Checklist de Revisão
 ---
 
 # Checklist de Revisão - Arquitetura Segura
@@ -11,11 +12,11 @@ sidebar_position: 20
 Este checklist aplica-se a todas as aplicações avaliadas segundo os critérios definidos neste capítulo.  
 Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições de arquitetura segura**, permitindo:
 
-- Controlo contínuo da aplicação dos requisitos `ARC-001` a `ARC-011`
+- Controlo contínuo da aplicação dos requisitos `ARC-001` a `ARC-015`
 - Verificação por projeto em momentos-chave do ciclo de vida
 - Geração de indicadores operacionais agregáveis por equipa ou organização
 
-> 🗓️ **Deve ser revisto a cada release ou alteração arquitetónica significativa**, conforme indicado no `15-aplicacao-lifecycle.md`.
+> 🗓️ **Deve ser revisto a cada release ou alteração arquitetónica significativa**, conforme indicado na `aplicacao-lifecycle`.
 
 ---
 

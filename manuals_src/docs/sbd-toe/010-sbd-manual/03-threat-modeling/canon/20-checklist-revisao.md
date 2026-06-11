@@ -2,6 +2,9 @@
 id: checklist-revisao
 title: Checklist SbD-ToE - Threat Modeling
 sidebar_label: Checklist de Revisão
+sidebar_position: 20
+description: Checklist binário e auditável da adoção das práticas de threat modeling do Capítulo 03
+tags: [checklist, threat-modeling, validação, auditoria, rastreabilidade]
 ---
 
 # Checklist de Revisão Periódica - Threat Modeling

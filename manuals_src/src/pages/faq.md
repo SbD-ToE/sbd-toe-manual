@@ -196,7 +196,7 @@ Ver: Cap. 02 addon 08, Cap. 05 addon 09, Cap. 14.
 
 **Regra:** Se o regulador ou a criticidade não o permite, não é exceção - é **não-conformidade**.
 
-Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#gestão-de-exceções-e-desvios-artigos-5-18-1920-2628-dora)
+Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#gestão-de-exceções-e-desvios-artigos-5-1723-2427-2830-dora)
 
 ---
 

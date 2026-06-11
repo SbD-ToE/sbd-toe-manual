@@ -1,7 +1,7 @@
 ---
 id: intro
 title: CRA - Cross-Check Normativo
-description: Análise de como o SbD-ToE cobre requisitos técnicos do Cyber Resilience Act (Produtos com Elementos Digitais)
+description: Análise de como o SbD-ToE suporta o núcleo técnico do Cyber Resilience Act em contexto de produtos com elementos digitais, com fronteiras explícitas de conformidade
 tags: [cross-check, cra, regulamentacao, produtos-digitais, sbom, vulnerabilidades]
 sidebar_position: 5
 ---
@@ -18,6 +18,13 @@ sidebar_position: 5
 
 O **Cyber Resilience Act (CRA)** é o **Regulamento (UE) 2024/2847** (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847)), que estabelece requisitos horizontais para a conceção, desenvolvimento, produção e suporte de produtos com elementos digitais.
 
+Nesta leitura, o `CRA` deve ser entendido antes de mais como enquadramento de:
+
+- produto com elementos digitais
+- fabricante e outros operadores económicos
+- obrigações técnicas suportadas por evidência
+- e rota formal de conformidade separada
+
 O CRA impõe obrigações aos fabricantes, importadores e distribuidores, incluindo:
 
 - requisitos essenciais de **segurança por conceção e por defeito** durante todo o ciclo de vida;
@@ -25,6 +32,16 @@ O CRA impõe obrigações aos fabricantes, importadores e distribuidores, inclui
 - **monitorização pós-comercialização** e correção atempada de vulnerabilidades;
 - requisitos de **documentação técnica**, instruções e informação ao utilizador;
 - obrigações de **notificação de vulnerabilidades exploradas ativamente e incidentes graves**.
+
+### Gate de âmbito
+
+Esta leitura local do `CRA` é mais defensável quando aplicada a:
+
+- fabricantes de software ou produtos com elementos digitais
+- fornecedores que precisam de evidência técnica para uma superfície de conformidade de produto
+- contextos onde exista um produto, uma versão, um período de suporte e uma cadeia de responsabilidades de operador económico
+
+Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura deixa de ser uma leitura `CRA` plena e passa a ser apenas suporte parcial.
 
 No contexto do SbD-ToE, o CRA é operacionalizado através de:
 
@@ -38,11 +55,16 @@ No contexto do SbD-ToE, o CRA é operacionalizado através de:
 > No entanto, padrões como **CycloneDX**, **SPDX**, **ISO/IEC 29147 (Vulnerability Disclosure)** e **ISO/IEC 30111 (Vulnerability Handling)** são amplamente reconhecidos e fornecem uma base sólida para cumprir os requisitos técnicos e processuais do regulamento.  
 > O SbD-ToE assume estes padrões como **boas práticas recomendadas**, não como requisitos legais em si mesmos.
 
-O SbD-ToE foi desenhado para aplicações e pipelines software; grande parte dos controlos técnicos e processuais **alinha com o núcleo de obrigações CRA**. Este documento identifica cobertura, lacunas intencionais e ações de adaptação.
+O SbD-ToE foi desenhado para aplicações e pipelines software; grande parte dos controlos técnicos e processuais **alinha com o núcleo de obrigações CRA**. Este documento identifica cobertura, lacunas intencionais e ações de adaptação, sem fingir que a conformidade de produto fica exausta no manual base.
 
 ## Aviso Regulatório
 
 O CRA introduz obrigações de: classificação crítica, marcação CE, declaração de conformidade, avaliação de conformidade (inclui módulos com envolvimento de organismos notificados em certas categorias), obrigações pós-comercialização (vulnerability handling), e comunicação rápida a ENISA (ou ponto único) de vulnerabilidades ativamente exploradas.
+
+Também convém fixar duas datas operacionais do regulamento:
+
+- `Article 14` aplica-se a partir de `11 September 2026`
+- a aplicação geral do regulamento arranca a `11 December 2027`
 
 O SbD-ToE cobre o "como" técnico, mas **não substitui**:
 - Procedimentos formais de avaliação de conformidade (módulos A, B, C, D, etc.)
@@ -54,22 +76,28 @@ O SbD-ToE cobre o "como" técnico, mas **não substitui**:
 
 | Domínio CRA | Referência Regulamentar (Resumo) | Cobertura SbD-ToE | Lacuna Intencional | Ação de Adaptação |
 |-------------|----------------------------------|-------------------|--------------------|-------------------|
-| Gestão do Ciclo de Vida Seguro | Requisitos de segurança aplicável durante todo o ciclo (design → desenvolvimento → distribuição → manutenção) | Cap. 02 (requisitos), Cap. 06 (desenvolvimento), Cap. 07 (CI/CD), Cap. 11 (pré-deploy) | Não distingue papéis fabricante/importador/distribuidor | Mapear roles SbD-ToE → papéis CRA em política interna |
+| Gestão do Ciclo de Vida Seguro | Requisitos de segurança aplicável durante todo o ciclo (design → desenvolvimento → distribuição → manutenção) | Cap. 02 (requisitos), Cap. 06 (desenvolvimento), Cap. 07 (CI/CD), Cap. 11 (pré-deploy) | Não distingue bem papéis fabricante/importador/distribuidor nem a determinação formal do support period | Mapear roles SbD-ToE → papéis CRA e registar policy de support period |
 | Identificação e Gestão de Vulnerabilidades | Processos para receber, avaliar, priorizar e corrigir vulnerabilidades | Cap. 05 (SBOM/SCA), Cap. 10 (testes), Cap. 12 (monitorização), Addons exceções | Mecanismo formal de receção externa (coordinated disclosure portal) | Implementar canal público + política ADVD (coordinated disclosure) |
 | SBOM / Transparência | Disponibilização de informação de componentes e dependências críticas | Cap. 05 (SBOM contínuo) | Formato exato de disponibilização externa (ex: CycloneDX export público) | Criar rotina de export SBOM sanitizada para stakeholders |
 | Correções e Patches Rápidos | Aplicar correções de segurança sem demora injustificada | Cap. 05 (gestão CVE), Cap. 07 (automação CI/CD), Cap. 12 (deteção de exploração) | Critérios de severidade CRA (prazos regulamentares) | Definir SLA de patch CRA: Crítico ≤15d, Alto ≤30d, Médio ≤90d |
-| Reporte de Vulnerabilidades Exploited | Notificar autoridade (ex: ENISA/ponto único) sobre vulnerabilidades exploradas ativamente | Cap. 12 (deteção, métricas exploração) | Template de notificação e trigger formal | Adicionar runbook: "Vuln Explorada" + export JSON com campos mínimos |
+| Reporte de Vulnerabilidades Exploited | Notificar autoridade (ex: ENISA/ponto único) sobre vulnerabilidades exploradas ativamente | Cap. 12 (deteção, métricas exploração), Cap. 14 (governança) | Não separa suficientemente reporting obrigatório, comunicação a utilizadores e plataforma/regime oficial | Adicionar runbook técnico + interface formal de notificação e comunicação |
 | Medidas para Prevenção de Vulnerabilidades | Controlo de qualidade e testes de segurança antes de release | Cap. 10 (SAST/DAST/fuzzing), Cap. 11 (gate de release) | Critérios formais de rejeição/liberação por criticidade | Adicionar matriz: nível criticidade → bloqueio automático release |
-| Documentação de Segurança | Instruções e info de segurança para utilizadores/admins | Cap. 02 (requisitos), Cap. 04 (arquitetura) | Manual não gera "security usage guide" para produto | Criar artifact "Guia de Segurança do Produto" a partir de Cap. 04/06 |
+| Documentação de Segurança | Instruções e info de segurança para utilizadores/admins | Cap. 04 (arquitetura), Cap. 11 (deploy seguro) | Manual não gera sozinho a totalidade da surface `Annex II` (support period, contact point, end-of-support wording) | Criar artifact "Guia de Segurança do Produto" + tabela de support period e ponto de contacto |
 | Monitorização Pós-Comercialização | Observação contínua de exploração e falhas | Cap. 12 (monitorização, alertas) | Integração com canal de feedback utilizador | Criar backlog específico "Feedback Segurança" + triagem semanal |
 | Gestão de Exceções | Justificação de desvios temporários | Cap. 02 addon 08, Cap. 05 addon 09, Cap. 14 governance | Não mapeia limites CRA de aceitabilidade | Introduzir lista de vulnerabilidades "não-exceptuáveis" (ex: RCE crítico) |
-| Segurança na Cadeia | Componentes de terceiros seguros, verificação de integridade | Cap. 05 (SCA), Cap. 07 (pipeline), Cap. 09 (runtime containers) | Processo de verificação de firmware/hardware | Adicionar checklist supply chain físico (hash, secure boot se aplicável) |
+| Segurança na Cadeia | Componentes de terceiros seguros, verificação de integridade | Cap. 05 (SCA), Cap. 07 (pipeline), Cap. 09 (runtime containers) | Processo de verificação de firmware/hardware e boundary de operador económico ainda pouco explícitos | Adicionar checklist supply chain físico (hash, secure boot se aplicável) e registo por papel |
 | Conformidade e CE Mark | Declaração e marcação de conformidade | (Não coberto) | Avaliação técnica/legal formal | Estabelecer processo paralelo GRC + jurídico |
 
 ## PARTE II: Cobertura Detalhada
 
 ### 1. Ciclo de Vida Seguro
 O SbD-ToE define gates de segurança desde a classificação até ao deploy. Isto suporta a obrigação CRA de garantir segurança "by design" e durante a manutenção.
+
+O que ainda fica fora desta base técnica é a formalização explícita de:
+
+- papel do operador económico
+- support period
+- e comunicação do fim de suporte ao utilizador
 
 **Ação:** Consolidar num documento único: "Matriz de Controle CRA" listando controlos por fase (design, build, test, release, manutenção).
 
@@ -91,6 +119,8 @@ Definir SLA CRA diferenciado por severidade e criticidade do produto. Integrar n
 ### 5. Reporte de Vulnerabilidade Explorada
 Quando exploração confirmada (telemetria, IOC, prova), gerar relatório mínimo: ID vulnerabilidade, componente, versão afetada, impacto, mitigação temporária, prazo patch.
 
+Isto deve ser lido como base técnica para cumprir a obrigação de reporte, não como substituto da surface regulatória completa de `Articles 14-16`, que inclui notificação formal, coordenação institucional e comunicação a utilizadores quando aplicável.
+
 **Ação:** Script de extração (ex: export do SIEM + SBOM) → JSON pronto.
 
 ### 6. Qualidade e Testes de Segurança
@@ -100,6 +130,12 @@ SbD-ToE cobre variedade de testes. Alinhar com exigência CRA de evitar lançame
 
 ### 7. Documentação de Segurança do Produto
 Gerar guia para administradores/utilizadores: configurações seguras, atualização, contacto de segurança, políticas de logging.
+
+Para leitura `CRA`, este guia também deve deixar explícito:
+
+- ponto de contacto de segurança
+- tipo e duração do support period
+- data de fim de suporte comunicada ao utilizador
 
 **Ação:** Template derivado de Cap. 04 (arquitetura) + Cap. 11 (deploy seguro).
 
@@ -147,16 +183,16 @@ Responda SIM aos seguintes pontos:
 9. Guia de Segurança do Produto publicado? ✓
 10. Processo de reporte de exploração ativa documentado? ✓
 
-≥8/10 → Boa maturidade CRA técnica. `<`6 → Priorizar SBOM, patching, disclosure, gating crítico.
+≥8/10 → Boa base técnica CRA. `<`6 → Priorizar SBOM, patching, disclosure, gating crítico.
 
 ## Ações Prioritárias (Roadmap Inicial)
 
-1. Formalizar política ciclo de vida seguro (integrar CRA requisitos) 
+1. Formalizar política ciclo de vida seguro (integrar CRA requisitos e support period) 
 2. Implementar canal disclosure externo (security.txt + página) 
 3. Ajustar pipeline com gate "no critical known" 
 4. Definir SLA patch CRA e métricas de acompanhamento 
 5. Gerar SBOM e export CycloneDX por release 
-6. Criar guia de segurança do produto 
+6. Criar guia de segurança do produto + contact point + fim de suporte 
 7. Criar runbook de reporte exploração ativa 
 8. Adicionar dashboard pós-comercialização 
 9. Checklist supply chain físico (se aplicável) 

@@ -30,7 +30,7 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 
 > ⚖️ **Nota editorial.**  
 > Esta secção é uma **síntese operacional** dos artigos relevantes do DORA, não uma citação literal do regulamento.  
-> Baseia-se, em particular, nos Artigos 4.º–7.º (governação e gestão de risco TIC), 11.º–12.º (classificação de incidentes), 15.º, 18.º–20.º (incidentes e testes), 26.º–28.º (fornecedores TIC).
+> Baseia-se, em particular, nos Artigos 5.º–6.º (governação e gestão de risco TIC), 8.º–15.º (proteção, prevenção, deteção, resposta e recuperação), 17.º–23.º (incidentes e reporte), 24.º–27.º (testes de resiliência) e 28.º–30.º (fornecedores TIC). A partilha de informação sobre ameaças (Art. 45.º) e o regime simplificado de gestão de risco (Art. 16.º) funcionam como enquadramento complementar, não como blocos principais de aterragem.
 
 De forma prática, o DORA traduz-se em obrigações que impactam diretamente as práticas do SbD-ToE:
 
@@ -38,19 +38,19 @@ De forma prática, o DORA traduz-se em obrigações que impactam diretamente as 
   - O órgão de gestão aprova a estratégia de gestão de risco TIC, acompanha a sua execução e é responsável por garantir que existem políticas, procedimentos, documentação e evidência.  
   - No SbD-ToE isto liga-se à governação global, políticas e à exigência de _accountability_ sobre decisões de risco.
 
-- **Gestão de risco TIC estruturada e documentada (Art. 6.º–7.º).**  
+- **Gestão de risco TIC estruturada e documentada (Art. 6.º).**  
   - O regulamento exige identificação de ativos críticos, avaliação de impacto, definição de controlos e monitorização contínua.  
   - O SbD-ToE fornece os blocos técnicos (capítulos 01–14) que podem ser usados como catálogo de controlos para cumprir esta obrigação.
 
-- **Gestão de incidentes e reporte estruturado (Art. 18.º–20.º).**  
+- **Gestão de incidentes, classificação e reporte estruturado (Art. 17.º–23.º).**  
   - DORA define requisitos mínimos para classificação, registo, escalonamento e reporte de incidentes de TIC a autoridades competentes, em prazos definidos.  
   - O manual fornece práticas para deteção, _logging_, evidência técnica e _runbooks_ que suportam estes fluxos.
 
-- **Testes de resiliência operacional digital (Art. 19.º–20.º).**  
+- **Testes de resiliência operacional digital (Art. 24.º–27.º).**  
   - Exige um programa de testes regulares, proporcional ao risco (incluindo _threat-led penetration testing_ para entidades mais críticas).  
   - No SbD-ToE isto cruza diretamente com capítulos de testes de segurança, _red teaming_, _chaos engineering_ e validação contínua de pipelines.
 
-- **Gestão de risco de terceiros TIC (Art. 26.º–28.º).**  
+- **Gestão de risco de terceiros TIC (Art. 28.º–30.º).**  
   - Impõe inventário de fornecedores TIC críticos, avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
   - O manual cobre estes aspetos nos capítulos de dependências, SBOM/SCA, supply chain, _outsourcing_ e governação/contratação.
 
@@ -66,7 +66,7 @@ Na prática, o DORA fornece o "chapéu regulatório" e os critérios de responsa
 
 ---
 
-### Gestão de Risco TIC (Artigo 5 DORA)
+### Governação e Gestão de Risco TIC (Artigos 5–6 DORA)
 
 **Cobertura SbD-ToE:**
 - **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro):** Classificação de criticidade aplicacional (L1–L3)
@@ -79,9 +79,9 @@ Na prática, o DORA fornece o "chapéu regulatório" e os critérios de responsa
 
 ---
 
-### Incidentes e Reporte (Artigo 18 DORA)
+### Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
 
-Exige processo ponta-a-ponta: deteção, registo, classificação, reporte formal com templates normalizados.
+Exige processo ponta-a-ponta: deteção, registo, classificação, reporte formal e integração com templates/campos harmonizados.
 
 **Cobertura SbD-ToE:**
 - **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Processos de deteção e resposta de incidentes
@@ -91,7 +91,7 @@ Exige processo ponta-a-ponta: deteção, registo, classificação, reporte forma
 
 ---
 
-### Testes de Resiliência (Artigos 19–20 DORA)
+### Testes de Resiliência (Artigos 24–27 DORA)
 
 Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing (TLPT) para entidades elegíveis.
 
@@ -104,9 +104,9 @@ Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing
 
 ---
 
-### Gestão de Fornecedores Críticos (Artigos 26–28 DORA)
+### Gestão de Fornecedores Críticos (Artigos 28–30 DORA)
 
-Os Artigos 26–28 estabelecem requisitos para inventário formal, avaliação de risco, cláusulas contratuais obrigatórias, supervisão contínua e planos de saída testados.
+Os Artigos 28–30 estabelecem requisitos para inventário formal, avaliação de risco, cláusulas contratuais obrigatórias, supervisão contínua e planos de saída testados.
 
 **Cobertura SbD-ToE (Duas categorias de fornecedores, uma estratégia):**
 
@@ -128,7 +128,7 @@ Os Artigos 26–28 estabelecem requisitos para inventário formal, avaliação d
 - Guia de preparação técnica de sandbox
 - Checklist de offboarding seguro
 
-**Conformidade DORA (Art. 26–28):**
+**Conformidade DORA (Art. 28–30):**
 - Ambas as categorias exigem inventário e supervisão - não existe opcionalidade
 - SBOM alimenta o inventário de risco técnico de componentes
 - Fornecedores contratuais alimentam o inventário de risco organizacional
@@ -136,9 +136,9 @@ Os Artigos 26–28 estabelecem requisitos para inventário formal, avaliação d
 
 ---
 
-### Partilha de Informação sobre Ameaças (Artigo 16 DORA)
+### Partilha de Informação sobre Ameaças (Artigo 45 DORA, contexto complementar)
 
-O Artigo 16 DORA exige mecanismos de recolha e disseminação de informação sobre incidentes e ameaças TIC, promovendo a cooperação entre entidades financeiras e autoridades.
+O Artigo 45 DORA estabelece arranjos de partilha de informação sobre ciberameaças e inteligência de ameaças, promovendo a cooperação entre entidades financeiras e com as autoridades competentes.
 
 **Cobertura SbD-ToE:**
 - **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Integração de indicadores de threat intelligence em processos de monitorização
@@ -148,7 +148,7 @@ O Artigo 16 DORA exige mecanismos de recolha e disseminação de informação so
 
 ---
 
-### Gestão de Exceções e Desvios (Artigos 5, 18, 19–20, 26–28 DORA)
+### Gestão de Exceções e Desvios (Artigos 5, 17–23, 24–27, 28–30 DORA)
 
 DORA não menciona explicitamente "exceções", porém em **conformidade regulatória**, exceções constituem **desvios formais de requisitos** que exigem:
 - Aprovação documentada com autoridade formal designada
@@ -175,7 +175,7 @@ DORA não menciona explicitamente "exceções", porém em **conformidade regulat
 
 ---
 
-### Exceções Formais e Desvios de Conformidade (Artigos 5, 18, 19–20, 26–28 DORA)
+### Exceções Formais e Desvios de Conformidade (Artigos 5, 17–23, 24–27, 28–30 DORA)
 
 #### O Problema: Exceções Informais = Incoerência com DORA
 
@@ -188,8 +188,8 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 **Cenário crítico (incoerência com DORA):**
 | Situação | Risco | Impacto | Posição DORA |
 |----------|-------|--------|-------------|
-| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** - Violação Art. 5 (sem supervisão) + Art. 18 (sem rastreamento) |
-| **CVE crítico ignorado sem justificação** | Exposição contínua, compliance gap | Falha de gestão de risco TIC | ❌ **GRAVE** - Violação Art. 19–20 (teste de resiliência inadequado) |
+| **SQLi em produção (L3) sem exceção documentada** | Exploração, violação de dados, incident notificável | Responsabilidade não-atribuída, trilho perdido | ❌ **GRAVE** - Violação de supervisão e rastreamento num cenário DORA defensável |
+| **CVE crítico ignorado sem justificação** | Exposição contínua, compliance gap | Falha de gestão de risco TIC | ❌ **GRAVE** - Pode contrariar deveres de gestão de risco, validação e remediação contínua em DORA |
 | **Exceção aprovada verbalmente (no Teams/email informal)** | Perda de trilho, falta de autoridade formal, re-negociação ad-hoc | Impossível auditar decisões | ❌ **CRÍTICO** - Sem evidência de governance; regulador questiona: "quem aprovou?" |
 | **Exceção expirada sem reavaliação** | Risco aceito torna-se risco não-aceito (drift), violação técnica silenciosa | Aplicação continua com risco acima de limite | ❌ **CRÍTICO** - Violação Art. 5 (falta de supervisão contínua) |
 
@@ -205,14 +205,14 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 - O regulador interpreta conhecimento prévio de vulnerabilidade explorada sem aprovação documentada como negligência de supervisão
 - Exceções requerem reavaliação periódica - a ausência de reavaliação constitui aprovação tácita indefinida, configurando falha de supervisão
 
-**Art. 18 (Incidentes):**
-> "Exceções a testes de resiliência ou vulnerabilidades não-remediadas devem ser reportadas com contexto."
+**Art. 17–23 (Incidentes e reporte):**
+> Exceções com impacto em incident management, classificação ou reporte devem ser contextualizadas e tratadas com trilho documental compatível com o regime regulatório aplicável.
 
-**Art. 19–20 (Testes):**
-> "Programa contínuo de testes deve cobrir cenários realistas. Exceções (ex: componente legado não-testável) requerem compensação documentada."
+**Art. 24–27 (Testes):**
+> O programa contínuo de testes deve cobrir cenários realistas. Exceções (ex: componente legado não-testável) exigem compensação documentada e leitura bounded face ao regime TLPT.
 
-**Art. 26–28 (Fornecedores):**
-> "Exceções a SLAs de fornecedores ou CVEs não-mitigados devem ser escalados conforme plano de risco."
+**Art. 28–30 (Fornecedores):**
+> Exceções a SLAs de fornecedores, dependências críticas ou CVEs não mitigados devem ser escaladas conforme o modelo de risco e governação aplicável.
 
 ---
 
@@ -251,9 +251,9 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 | Exceção | SbD-ToE | DORA |
 |---------|---------|------|
-| "Não implementar MFA porque é complexo" | Tecnicamente aceitável com TTL em L1 | ❌ **Pode violar DORA** (MFA é obrigatório em Art. 19) |
+| "Não implementar MFA porque é complexo" | Tecnicamente aceitável com TTL em L1 | ❌ **Pode contrariar medidas mínimas de autenticação forte e gestão de risco TIC em DORA** |
 | "SQLi em endpoint legado, mantém-se" | Aceitável com compensação (ex: WAF) em L1/L2 | ❌ **Pode violar DORA** (SQLi é nunca aceitável em qualquer L) |
-| "CVE P0 em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Violação DORA** (Art. 19 requer plano de remediação) |
+| "CVE P0 em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
 
 **Como manifesta:** Organização registra exceção no SbD-ToE formalmente; regulador rejeita: "esta exceção não é admissível em DORA" → perda de tempo, revisão forçada.
 
@@ -276,7 +276,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 O SbD-ToE descreve **como** gerir exceções, mas não estabelece **quais categorias são inaceitáveis em DORA**:
 
-- **Nunca aceitável (violação Art. 5):**
+- **Nunca aceitável numa leitura DORA defensável:**
   - Exceções sem aprovação documentada
   - Exceções expiradas sem reavaliação
   - Violações de conformidade regulatória (ex: SQLi, injeção de comando)
@@ -301,7 +301,7 @@ Objetivo: Garantir que todas as exceções a requisitos de segurança são aprov
 
 Categorias de exceção:
 
-A. Exceções INACEITÁVEIS (violação de DORA Art. 5/19):
+A. Exceções INACEITÁVEIS (incompatíveis com uma leitura DORA defensável):
    - Exceções sem aprovação documentada
    - Exceções expiradas sem reavaliação
    - Vulnerabilidades exploráveis sem compensação (ex: SQLi, injeção)
@@ -384,7 +384,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 3. ✅ Definir categorias de inaceitabilidade (política organizacional)
 4. ✅ Implementar rastreamento centralizado com audit trail (ferramenta GRC)
 5. ✅ Estabelecer reporte trimestral a estruturas de governance (exigência DORA Art. 5)
-6. ✅ Definir protocolo de escalada ao regulador em contexto de incidente (Art. 18)
+6. ✅ Definir protocolo de escalada ao regulador em contexto de incidente (Art. 17–23)
 
 ---
 

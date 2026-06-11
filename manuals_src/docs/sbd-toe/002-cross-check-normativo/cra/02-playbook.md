@@ -1,7 +1,7 @@
 ---
 id: playbook
 title: "SbD-ToE 4 CRA: Playbook de Implementação"
-description: Roadmap prático para alinhar o programa SbD-ToE aos requisitos técnicos do Cyber Resilience Act
+description: Roadmap prático para usar SbD-ToE como base técnica do CRA em contexto de produto, com formalização regulatória complementar
 tags: [playbook, cra, implementacao, roadmap, produtos-digitais]
 sidebar_position: 6
 ---
@@ -12,7 +12,15 @@ sidebar_position: 6
 
 Objetivo: Transformar requisitos CRA em ações concretas usando controlos existentes do SbD-ToE.
 
-Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já existem - ajusta-se formato, rigor e evidência.
+Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) já existem, mas a conformidade `CRA` exige também contexto de produto, papel de operador económico, support period, reporting formal e rota documental própria.
+
+Este playbook é mais defensável quando aplicado a:
+
+- fabricante de produto com elementos digitais
+- fornecedor que precisa de organizar evidência técnica para uma leitura `CRA`
+- contextos com produto versionado, contacto de segurança, período de suporte e responsabilidades de operador económico
+
+Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura já não é uma leitura `CRA` completa.
 
 > 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e processos de vulnerability handling reutilizáveis.
 
@@ -20,12 +28,12 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 
 | Área CRA | SbD-ToE | Ação | Evidência |
 |----------|---------|------|----------|
-| Ciclo de Vida Seguro | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Política ciclo de vida + gates | Política aprovada; pipeline YAML |
+| Ciclo de Vida Seguro | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Política ciclo de vida, support period e gates | Política aprovada; pipeline YAML; registo de support period |
 | Vulnerability Handling | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Processo triagem + SLA | Registos triagem; métricas SLA |
 | SBOM | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) | Geração contínua + export | Ficheiros CycloneDX por release |
 | Patching Rápido | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro) | Workflow patch automático | Pull requests patch + tempos |
-| Reporte Exploração | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbook exploração ativa | Runbook + JSON exemplo |
-| Documentação Segurança | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Guia de segurança do produto | PDF/Markdown guia publicado |
+| Reporte Exploração | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Runbook técnico + interface de notificação regulatória | Runbook; matriz de comunicação; JSON exemplo |
+| Documentação Segurança | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Guia de segurança do produto + contact point + fim de suporte | PDF/Markdown guia publicado; tabela de suporte |
 | Exceções | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) addon 08, [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Política exceções CRA | Registos exceções + aprovadores |
 | Cadeia Fornecimento | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 09](/sbd-toe/sbd-manual/containers-imagens/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Checklist supply chain físico | Checklist preenchida |
 
@@ -33,12 +41,13 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 
 ## Fases de Implementação (≈ 6–9 meses)
 
-### Fase 1 (M0–M1): Fundamentos & Governance
+### Fase 1 (M0–M1): Fundamentos, Scope Gate & Governance
 1. Designar Owner CRA (GRC + AppSec)  
 2. Criar Política "Segurança de Produto & CRA" (aprovada por gestão)  
-3. Mapear roles SbD-ToE → papéis CRA (fabricante, importador - se aplicável)  
+3. Mapear roles SbD-ToE → papéis CRA (fabricante, importador, distribuidor, substantial modification quando aplicável)  
 4. Definir matriz criticidade produto (base L1–L3 adaptada)  
-**Evidências:** Ata aprovação; matriz criticidade; política versão 1.0
+5. Registar support period e regra de comunicação de fim de suporte por linha de produto  
+**Evidências:** Ata aprovação; matriz criticidade; política versão 1.0; registo de papéis e suporte
 
 ### Fase 2 (M1–M2): SBOM & Inventário
 1. Ativar geração automática SBOM (build pipeline)  
@@ -66,17 +75,18 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 2. Página "Vulnerability Disclosure Policy"  
 3. Runbook triagem reporte externo  
 4. Canal email/portal dedicado  
-**Evidências:** Página pública; registo primeiro teste reporte
+5. Identificar ponto de contacto de segurança para utilizadores e investigadores  
+**Evidências:** Página pública; registo primeiro teste reporte; contacto publicado
 
 ### Fase 6 (M5–M6): Reporte de Exploração Ativa
 1. Definir critérios de "explorada ativamente" (IOC, telemetria confirmada)  
 2. Criar script export JSON incidente + SBOM componente afetado  
-3. Runbook notificação autoridade (ENISA/ponto nacional)  
+3. Runbook notificação autoridade / CSIRT coordenador e matriz de comunicação a utilizadores  
 4. Simulação exercício interno  
-**Evidências:** Script; runbook; relatório exercício
+**Evidências:** Script; runbook; relatório exercício; matriz de comunicação
 
 ### Fase 7 (M6–M7): Documentação de Segurança do Produto
-1. Escrever Guia Segurança (instalação segura, atualização, contacto)  
+1. Escrever Guia Segurança (instalação segura, atualização, contacto, support period, fim de suporte)  
 2. Validar com AppSec + engenharia  
 3. Publicar versão 1.0 (Markdown/PDF)  
 4. Processo atualização por release  
@@ -130,12 +140,14 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 - [ ] Página política disclosure publicada
 - [ ] Canal reporte funcional (email/portal)
 - [ ] Runbook triagem interna
+- [ ] Ponto de contacto de segurança identificado
 - [ ] Tempo resposta médio `<`5 dias úteis
 
 ### Checklist Reporte Exploração
 - [ ] Critérios "explorada ativamente" definidos
 - [ ] Script export JSON pronto
 - [ ] Runbook notificação autoridade
+- [ ] Matriz de comunicação a utilizadores
 - [ ] Simulação concluída
 - [ ] Evidência testes arquivada
 
@@ -143,6 +155,8 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 - [ ] Guia instalação segura
 - [ ] Guia atualização + rollback
 - [ ] Contacto segurança (security@)
+- [ ] Support period documentado
+- [ ] Data de fim de suporte comunicável
 - [ ] Recomendações configuração endurecida
 - [ ] Secção gestão de vulnerabilidades
 - [ ] Versão e data
@@ -172,6 +186,7 @@ Princípio: Reutilizar > Inventar. Muitas capacidades (SBOM, patching, testes) j
 | Artefacto | Tipo | Frequência Atualização |
 |-----------|------|------------------------|
 | Política Segurança Produto & CRA | Documento | Anual / quando requisito muda |
+| Registo de Papéis CRA & Support Period | Documento | Por linha de produto / revisão de release |
 | SBOM Releases | Ficheiros | Cada release major/minor |
 | Dashboard Vulnerabilidades | Painel | Contínuo (live) |
 | Relatórios Qualidade Release | Documento | Cada release |
@@ -225,4 +240,4 @@ Estes recursos demonstram implementações práticas das abstenções deliberada
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
-**Nota:** Este playbook complementa a análise normativa CRA com abordagem sequencial prática
+**Nota:** Este playbook complementa a análise normativa CRA com abordagem sequencial prática e não substitui a rota formal de conformidade do regulamento.

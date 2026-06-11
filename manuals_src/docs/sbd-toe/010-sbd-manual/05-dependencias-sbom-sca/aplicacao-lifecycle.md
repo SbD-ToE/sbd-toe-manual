@@ -774,7 +774,7 @@ Como **Developer/Lead**, quero **fixar todas as dependências a versões exactas
 | Dev | Inclusão/alteração de dependência | Developer/Lead | Na alteração do manifesto |
 | Build | Resolução de dependências | DevOps/CI | Durante o build (bloqueio imediato) |
 
-**Ligações úteis.** [DEP-003 — Versões fixas e auditáveis](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos)
+**Ligações úteis.** [DEP-003 — Versões fixas e auditáveis](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias)
 
 ---
 
@@ -821,7 +821,7 @@ Como **AppSec**, quero **manter versionada a política de severidade, a *allowli
 | Build | *Fallback* para *registry* externo | AppSec + DevOps | No evento (registo/auditoria imediatos) |
 | Dev | Aprovação de nova dependência | AppSec + Developer | Na aprovação da dependência |
 
-**Ligações úteis.** [DEP-002/005/006 — Catálogo de Requisitos](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos) · [Controlo de registos de origem](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/controle-registos-origem)
+**Ligações úteis.** [DEP-002/005/006 — Catálogo de Requisitos](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias) · [Controlo de registos de origem](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/controle-registos-origem)
 
 ---
 

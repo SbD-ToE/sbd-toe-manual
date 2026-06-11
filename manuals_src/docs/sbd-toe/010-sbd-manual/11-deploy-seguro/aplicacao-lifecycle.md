@@ -832,7 +832,7 @@ Como **DevOps/SRE**, quero **que cada aplicação use credenciais de *deploy* pr
 |------|---------|-------------|-----|
 | Build/Deploy | Autenticação do pipeline | DevOps/SRE | Cada deploy |
 
-**Ligações úteis.** [Catálogo DPL-006](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos) · [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+**Ligações úteis.** [Catálogo DPL-006](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy) · [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
 ---
 
@@ -877,7 +877,7 @@ Como **Dev/AppSec**, quero **que toggles que controlam lógica sensível sejam a
 |------|---------|-------------|-----|
 | Desenvolvimento/Deploy | Introdução ou alteração de *toggle* sensível | Dev + AppSec | Cada PR de *toggle* |
 
-**Ligações úteis.** [Feature Flags e Toggles](/sbd-toe/sbd-manual/deploy-seguro/addon/feature-flags-e-toggle) · [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
+**Ligações úteis.** [Feature Flags e Toggles](/sbd-toe/sbd-manual/deploy-seguro/addon/03-feature-flags-e-toggle) · [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 

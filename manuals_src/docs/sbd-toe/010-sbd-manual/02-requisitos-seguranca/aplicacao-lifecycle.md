@@ -598,7 +598,7 @@ Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política
 
 ---
 
-### US-14 – Uso controlado de assistentes automatizados (incluindo IA) no desenvolvimento
+### US-14 - Uso controlado de assistentes automatizados (incluindo IA) no desenvolvimento
 
 **Contexto.**  
 O uso de assistentes automatizados e ferramentas baseadas em IA pode acelerar o desenvolvimento, mas **não altera nem substitui** os requisitos de segurança aplicacionais. Todo o output gerado deve ser tratado como código de terceiros e sujeito a governação, validação e rastreabilidade explícitas.
@@ -648,7 +648,7 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 
 ---
 
-### US-15 – Classificação e registo do *mandate* de agente AI {#us-15}
+### US-15 - Classificação e registo do *mandate* de agente AI {#us-15}
 
 **Contexto.**
 Quando passa-se de **assistentes que sugerem** para **agentes que executam** (criar PRs, ler segredos, *deploy*, escrever em sistemas externos), deixa de ser suficiente saber *"foi revisto?"* — há que saber *"foi autorizado a fazer isto, neste contexto, com este alcance?"*. Operacionalizamos essa autorização através do modelo de cinco níveis de autonomia (A0–A4) e do *mandate* — documento versionado em VCS que regista quem decidiu, com que autoridade, durante quanto tempo, e com que *kill-switch*.

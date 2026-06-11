@@ -43,7 +43,7 @@ Assegurar **resiliência em deploys**, coordenar rollback quando necessário, va
 Configurar **alertas críticos com SLAs**, integrar alertas com playbooks de incident response, correlacionar eventos multi-fonte, afinar alertas para reduzir falsos positivos, coordenar resposta a incidentes, trabalhar com métricas e manter disponibilidade.
 
 **User Stories:**
-- [US-03: Alertas críticos com SLAs](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-03---alertas-com-slas-definidosum-alerta-sem-prazo-de-resposta-é-apenas-ruído) - Resposta atempada a incidentes
+- [US-03: Alertas críticos com SLAs](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-03---alertas-com-slas-definidos) - Resposta atempada a incidentes
 - [US-10: Playbooks de resposta a incidentes](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-10---validação-e-tuning-de-alertas) - Ação rápida e coordenada
 - [US-05: Correlação de eventos](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-05---métricas-de-eficácia-mttdmttr) - Deteção de padrões suspeitos (com AppSec)
 - [US-06: Validação e afinação de alertas](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---classificação-e-cobertura-de-domínios-de-monitorização) - Reduzir falsos positivos (com AppSec)

@@ -50,7 +50,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 
 ---
 
-### US-01 - Definição de princípios e baseline de arquitetura segura 
+### US-01 - Definição de princípios e baseline de arquitetura segura
 
 **Contexto.**  
 No arranque de um projeto (ou épico significativo), é obrigatório estabelecer **princípios** e uma **baseline inicial**, para orientar decisões e evitar deriva arquitetural.
@@ -93,7 +93,7 @@ Como **Arquitetos de Software**, quero definir e versionar princípios de arquit
 
 ---
 
-### US-02 - Ficha de solução com controlos e rastreabilidade arquitetural 
+### US-02 - Ficha de solução com controlos e rastreabilidade arquitetural
 
 **Contexto.**  
 Durante o design, a solução deve ser descrita com **controlos arquiteturais explícitos**, minimização de exposição e ligação a requisitos/ameaças.

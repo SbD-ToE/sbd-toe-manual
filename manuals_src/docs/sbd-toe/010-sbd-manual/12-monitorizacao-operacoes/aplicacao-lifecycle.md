@@ -125,7 +125,9 @@ Como **AppSec**, quero **definir eventos e métricas críticas de segurança**, 
 
 ---
 
-### US-03 - Alertas com SLAs definidosUm alerta sem prazo de resposta é apenas ruído.  
+### US-03 - Alertas com SLAs definidos
+
+Um alerta sem prazo de resposta é apenas ruído.  
 Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **compromisso temporal**.  
 
 **Contexto.** Sem SLAs, incidentes críticos não têm resposta garantida.  

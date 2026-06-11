@@ -625,7 +625,7 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 
 ---
 
-### US-13 - Inventário e controlo de dependências emergentes 
+### US-13 - Inventário e controlo de dependências emergentes
 
 **Contexto.**  
 Em arquiteturas modernas, nem todas as dependências entram por declaração explícita em manifests ou lockfiles. Ferramentas de build, pipelines, code generation, plugins e carregamento em runtime podem introduzir **dependências emergentes** que não são imediatamente visíveis.

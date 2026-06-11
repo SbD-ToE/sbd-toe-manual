@@ -1,7 +1,7 @@
 # Guia de Contribuição - Manual SbD-ToE
 
 Este guia define as regras a colaboração Git adotado no repositório. 
-Para além destas regras, a criação de conteudo deverá seguir a linha editorial definida em `guia-editorial.md`.
+Para além destas regras, a criação de conteudo deverá seguir a linha editorial definida em `guia-editorial.md` e a norma de voz e prosa definida em `guia-voz.md`.
 
 ---
 

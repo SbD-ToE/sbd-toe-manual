@@ -40,6 +40,7 @@
   Makefile                   ← Build automation (copy, install, build)
 
 guia-editorial.md           ← Editorial guidelines & style rules
+guia-voz.md                 ← Prose voice norm (tone, person, anti-AI-tells)
 CONTRIB.md                  ← Git workflow & validation requirements
 ```
 
@@ -130,6 +131,7 @@ tags:
 | File | Purpose | Notes |
 |------|---------|-------|
 | `guia-editorial.md` | Editorial guidelines & style rules | **Read before creating new content** |
+| `guia-voz.md` | Prose voice norm — tone, person discipline, anti-AI-tells | **Read before writing/editing prose** |
 | `CONTRIB.md` | Git workflow & validation setup | Requirements for PRs |
 | `docusaurus.config.ts` | Docusaurus configuration | `numberPrefixParser: true` is critical |
 | `sidebars-sbd-toe.ts` | Sidebar structure & navigation | Maps filesystem paths to URL routes |

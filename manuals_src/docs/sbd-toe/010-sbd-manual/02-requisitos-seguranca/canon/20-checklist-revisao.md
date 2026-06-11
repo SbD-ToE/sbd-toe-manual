@@ -28,7 +28,7 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 | Foram consideradas as restrições legais, normativas e contratuais aplicáveis na definição dos requisitos? | ☐           |
 | Os requisitos de segurança estão integrados no backlog ou nos artefactos de arquitetura como trabalho rastreável? | ☐           |
 | Existe um processo de revisão e re-versionamento dos requisitos disparado por alterações materiais, com nova análise de Threat Modeling registada? | ☐           |
-| Cada requisito aplicável foi validado por método adequado (SAST, DAST, teste, revisão ou gate de CI/CD), com validação independente ou gate de bloqueio para requisitos críticos e evidência ligada ao ID? | ☐           |
+| Cada requisito aplicável foi validado por método adequado (SAST, DAST, testes funcionais de segurança, revisão ou gate de CI/CD), com validação independente ou gate de bloqueio para requisitos críticos e evidência ligada ao ID? | ☐           |
 | Existe um processo formal de exceções com ID, justificação, aprovação, TTL e revalidação obrigatória antes da expiração? | ☐           |
 | O uso de ferramentas de automatização ou IA assistida está autorizado, conhecido e coberto por política interna? | ☐           |
 | Todo o código, configuração ou teste gerado por automatismos é sujeito a revisão humana e validação técnica independente antes da integração? | ☐           |

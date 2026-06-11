@@ -63,7 +63,7 @@ O indicador `OPS-K06` (cobertura de correlação entre fontes) ganha precisão q
 | [Cap. 12 — Correlação e anomalias](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/correlacao-anomalias) | Onde o mapeamento a técnicas estrutura as regras de correlação |
 | [Cap. 12 — Exemplos de eventos](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/exemplos-eventos) | Eventos já relacionados com OSC&R / ATT&CK |
 | [Cap. 12 — Integração com SIEM](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/integracao-siem) | Plataforma onde as deteções mapeadas são operacionalizadas |
-| [Cap. 12 — KPIs e Métricas](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/kpis-metricas) | OPS-K06, cobertura de correlação |
+| [Cap. 12 — KPIs e Métricas](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/kpis-metricas-operacoes) | OPS-K06, cobertura de correlação |
 | [Cap. 03 — Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro) | Fonte da priorização threat-informed das técnicas a cobrir |
 
 > **Sobre a curadoria:** Consolidado a partir de MITRE ATT&CK Enterprise (attack.mitre.org) e da prática de detection engineering threat-informed. O ATT&CK é uma referência externa versionada; a versão em uso deve ser registada nas medições de cobertura. Esta integração é metodológica — não substitui a deteção baseada no threat model próprio do sistema.

@@ -14,7 +14,7 @@ sidebar_position: 13
 
 O threat modeling de segurança (STRIDE) protege o sistema contra um adversário. O threat modeling de **privacidade** protege a pessoa cujos dados o sistema processa — um problema distinto, com ameaças que o STRIDE não captura. O LINDDUN, desenvolvido na KU Leuven, é a metodologia de referência para esse problema.
 
-O manual já inclui um [exemplo aplicado de LINDDUN](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade). Este addon fornece o **método** que o sustenta, para que possa ser aplicado a qualquer sistema, e não apenas seguido como exemplo.
+O manual já inclui um [exemplo aplicado de LINDDUN](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade-lindunn). Este addon fornece o **método** que o sustenta, para que possa ser aplicado a qualquer sistema, e não apenas seguido como exemplo.
 
 Aplicabilidade: **L3**, e qualquer sistema que processe **dados pessoais ou regulados**, independentemente do nível. Onde existe obrigação de *Data Protection Impact Assessment* (DPIA) sob o RGPD, o LINDDUN é o instrumento que estrutura a sua componente técnica.
 
@@ -62,7 +62,7 @@ LINDDUN e STRIDE são complementares e não intermutáveis. Um sistema pode ser 
 
 | Documento | Relação |
 |-----------|---------|
-| [Cap. 03 — Exemplo de privacidade (LINDDUN)](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade) | Aplicação concreta deste método |
+| [Cap. 03 — Exemplo de privacidade (LINDDUN)](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade-lindunn) | Aplicação concreta deste método |
 | [Cap. 03 — Metodologias e ferramentas](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas) | Threat modeling de segurança (STRIDE), complementar |
 | [Cap. 01 — Classificação de aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro) | Sensibilidade de dados como base de priorização |
 

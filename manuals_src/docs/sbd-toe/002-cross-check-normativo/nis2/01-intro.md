@@ -33,23 +33,23 @@ O Art. 20 coloca o órgão de gestão no centro: ele aprova as medidas de gestã
 
 | Requisito NIS2 | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Aprovação de medidas pelo órgão de gestão | Cap. 02, Cap. 14 | Prescreve políticas e papéis, ciclos de aprovação |
-| Supervisão da execução | Cap. 12 | Métricas e evidências operacionais, monitorização contínua |
+| Aprovação de medidas pelo órgão de gestão | Cap. 14, Cap. 02 | Governança, cadeia de aprovação e base técnica de suporte |
+| Supervisão da execução | Cap. 12, Cap. 14 | Métricas, evidências operacionais, monitorização e escalonamento |
 | Formação regular da gestão | Cap. 13 | Programa de formação e onboarding |
 
 **O que o SbD-ToE cobre**
 
-- Define políticas e papéis (Cap. 02 - Requisitos; Cap. 14 - Governança e Contratação).
-- Estabelece ciclos de aprovação e monitorização com métricas e evidências operacionais (Cap. 12).
+- Define base técnica de requisitos e políticas (Cap. 02) e a cadeia de governança/aprovação aplicável (Cap. 14).
+- Estabelece ciclos de supervisão, monitorização e evidência operacional (Cap. 12), articuláveis com a accountability de gestão.
 - Prescreve programa de formação e onboarding (Cap. 13).
 
 **Lacunas intencionais**
 
-Quem assina as políticas: o manual exige aprovação formal, mas não fixa se é equipa técnica, CISO ou board. Isto é propositado: em contextos puramente técnicos, aprovação operacional basta; para conformidade NIS2, a aprovação deve ser do órgão de gestão.
+Quem assina as políticas: o manual exige aprovação formal, mas não fixa ex ante a forma jurídica exata da cadeia de aprovação. Isto é propositado: em contextos puramente técnicos, aprovação operacional pode bastar; para leitura NIS2, a accountability do órgão de gestão tem de ficar explicitamente formalizada.
 
 **Como cumprir**
 
-Sugere-se registar, no Cap. 14, que as políticas do SbD-ToE foram aprovadas pelo board, com evidência de formação periódica à gestão (conforme Art. 20). A integração resume-se a formalizar a cadeia de aprovação e documentar a formação.
+Sugere-se registar, no Cap. 14, como a cadeia de aprovação e supervisão da gestão foi formalizada, usando o catálogo do Cap. 02 como base técnica e guardando evidência de formação periódica à gestão (conforme Art. 20).
 
 ---
 
@@ -93,7 +93,7 @@ Taxonomias/formatos "fechados": a NIS2 detalha tópicos, mas o detalhe (p. ex., 
 
 **Como cumprir**
 
-Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica e alinhar as evidências com o guia técnico da ENISA (exemplos de evidência e mapeamentos). Declarar, no Cap. 01, que a proporcionalidade segue as classes NIS2 (essencial/importante) e o impacto nos serviços.
+Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado por `01/03/05/10/12/14`, e alinhar as evidências com o guia técnico da ENISA (exemplos de evidência e mapeamentos). Declarar, no Cap. 01, que a proporcionalidade segue as classes NIS2 (essencial/importante) e o impacto nos serviços.
 
 ---
 
@@ -183,7 +183,7 @@ A NIS2 pede continuidade de negócio, gestão de crise, backups e DR testados, e
 
 **Lacunas intencionais**
 
-Períodos de retenção e campos exactos de logs: variam entre NIS2, DORA e regimes setoriais; o manual define "logs com campos obrigatórios" e deixa os campos finais para serem plugados segundo o normativo aplicável (NIS2 aqui).
+Períodos de retenção e campos exactos de logs: variam entre NIS2, DORA e regimes setoriais; o manual define "logs com campos obrigatórios" e deixa os campos finais para serem plugados segundo o normativo aplicável (NIS2 aqui). Continuidade empresarial ampla, BCM corporativo e gestão de crise institucional também podem exigir artefactos fora do manual base.
 
 **Como cumprir**
 
@@ -199,12 +199,12 @@ A NIS2 pede gestão com responsabilidade, medidas com substância e reportes com
 
 As aparentes lacunas do manual - quem aprova políticas, campos rígidos de logs/incidentes, templates e formatos de submissão, pormenores jurídicos de contratos - são lacunas deliberadas: detalhes específicos que mudam entre normas e países e que, por isso, o SbD-ToE deixa configuráveis.
 
-O resultado é elegante:
+O resultado é estável:
 
-- **Hoje**, o SbD-ToE permite a qualquer equipa praticar segurança por desenho com qualidade.
-- **Amanhã**, quando a organização quiser cumprir NIS2, basta ligar os detalhes - aprovação pelo board (Art. 20), campos e prazos de incidente (Art. 23), mapeamento das medidas (Art. 21) e, quando necessário, requisitos nacionais.
+- **Hoje**, o SbD-ToE oferece uma base técnico-operacional forte para práticas compatíveis com NIS2.
+- **Depois**, quando a organização quiser defender conformidade NIS2, o trabalho incremental principal passa por formalizar aprovação e supervisão da gestão, esquemas de reporte externo e requisitos nacionais ou setoriais sobre essa base já existente.
 
-Assim, o SbD-ToE mantém-se universal e quente na prática diária, e a NIS2 acrescenta a camada de formalidade e supervisão. Juntos, constroem uma conformidade sustentável - não por check-box, mas por construção.
+Assim, o SbD-ToE mantém-se útil na prática diária, e a NIS2 acrescenta a camada de formalidade regulatória e supervisão. Juntos, oferecem um percurso de conformidade mais sustentável do que uma leitura puramente checklist.
 
 ### Setor, âmbito e sanções
 

@@ -1,7 +1,7 @@
 ---
 id: playbook
 title: "SbD-ToE 4 NIS2: Playbook de Implementação"
-description: Roadmap prático para implementar SbD-ToE conforme requisitos NIS2 - mapeamento direto de artigos para ações
+description: Roadmap prático para usar SbD-ToE como base de implementação NIS2, com formalização regulatória adicional quando aplicável
 tags: [playbook, nis2, implementacao, roadmap]
 sidebar_position: 3
 ---
@@ -12,13 +12,17 @@ sidebar_position: 3
 
 Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-ToE práticas**.
 
-**Princípio:** Implementar SbD-ToE = Cumprir NIS2. Não é complementar, é direto.
+**Princípio:** Implementar SbD-ToE cria uma base forte para cumprir NIS2, mas a conformidade plena também exige formalização regulatória, responsabilização explícita da gestão e parametrização nacional ou setorial quando aplicável.
 
 **Estrutura:** Cada seção mostra:
 - NIS2 requisito (artigo)
 - SbD-ToE capítulo/addon aplicável
 - O que fazer (ação concreta)
 - Evidência regulatória
+
+Onde necessário, o texto distingue explicitamente:
+- o que o manual base já sustenta bem
+- e o que deve ser formalizado fora do manual para leitura regulatória completa
 
 > 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para NIS2 e outros frameworks.
 
@@ -28,31 +32,32 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 
 | NIS2 Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
 |----------|-----------|-----------------|----------------|
-| **20** | Governação e Responsabilização | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Aprovar políticas (board); formação gestão |
-| **21** | Medidas de Gestão de Risco | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implementar controlos técnicos; evidências |
-| **23** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, reporte 24h/72h/1M; schema |
-| **Cadeia Fornecimento** | Segurança de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM; avaliação terceiros; registos |
-| **Continuidade** | Continuidade e Crise | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Backups testados; DR; logging |
+| **20** | Governação e Responsabilização | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Formalizar aprovação, supervisão e formação da gestão; usar o catálogo técnico como base de suporte |
+| **21** | Medidas de Gestão de Risco | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implementar controlos técnicos, evidência e revisão contínua |
+| **23** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, escalonamento interno e preparação de reporte externo |
+| **Cadeia Fornecimento** | Segurança de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM, due diligence técnica e supplier governance complementar (`Art. 21(2)(d)`, `21(3)`, `22`) |
+| **Continuidade** | Continuidade e Crise | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Backups, runbooks e exercícios (`Art. 21(2)(c)`); BCM corporativo amplo fica fora |
 
 ---
 
 ## Como Implementar (Ordem Lógica)
 
 ### Fase 1: Governação (M0–M2)
-**NIS2 Art. 20** - Estabelecer responsabilização da board
+**NIS2 Art. 20** - Estabelecer responsabilização da gestão
 
 1. **Criar Comissão de Cibersegurança**
-   - Membros: Board member, CISO, CTO, GRC Manager, General Counsel
+   - Membros: Sponsor do órgão de gestão, CISO, CTO, GRC Manager, General Counsel
    - Frequência: Trimestral (mínimo)
-   - **Evidência:** Ata de reuniões assinadas pelo board
+   - **Evidência:** Ata de reuniões e decisões formais do órgão de gestão
 
 2. **Aprovar Política de Gestão de Risco de Cibersegurança**
-   - Referência: [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
-   - **Aprovação:** Board signature (NIS2 Art. 20)
-   - **Conteúdo:** Requisitos L1–L3, ciclo de vida, responsabilidades, medidas Art. 21
+   - Referência principal: [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
+   - Base técnica de suporte: [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
+   - **Aprovação:** Órgão de gestão ou cadeia formal equivalente prevista no modelo de governação aplicável
+   - **Conteúdo:** Requisitos L1–L3, ciclo de vida, responsabilidades, medidas Art. 21 e modelo de supervisão
 
 3. **Definir RACI**
-   - Quem aprova o quê (aprovações formais)
+   - Quem aprova o quê (aprovações formais e supervisão)
    - Escalations (quando elevar)
    - Referência: [Cap. 07 - Roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
@@ -222,7 +227,7 @@ Este playbook mapeia **requisitos NIS2 (Diretiva UE 2022/2555) para ações SbD-
 
 A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisitos NIS2. Sugere-se a revisão periódica destes pontos para garantir conformidade contínua:
 
-- [ ] **Governação:** Política assinada por board; RACI mapeado; formação anual à gestão
+- [ ] **Governação:** Cadeia formal de aprovação e supervisão documentada; RACI mapeado; formação anual à gestão
 - [ ] **Classificação:** Todas apps classificadas L1–L3; tipo de entidade (essencial/importante) definido
 - [ ] **Políticas de Risco:** Threat modeling implementado (L2–L3)
 - [ ] **Vulnerabilidades:** SBOM gerado e atualizado; SCA contínuo
@@ -232,8 +237,8 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 - [ ] **Formação:** Programa de formação contínua operacional
 - [ ] **Fornecedores:** Inventário de fornecedores críticos; ciclo de vida operacional
 - [ ] **Monitorização:** Logs centralizados, retenção adequada
-- [ ] **Incidentes:** Processo de deteção e reporte 24h/72h/1M ativo
-- [ ] **Continuidade:** Backups testados; plano de DR operacional
+- [ ] **Incidentes:** Processo de deteção, escalonamento e preparação de reporte 24h/72h/1M ativo
+- [ ] **Continuidade:** Backups testados; runbooks e recuperação operacional validados
 - [ ] **Testes:** SAST/DAST integrados; avaliação da eficácia periódica
 - [ ] **Evidência:** Data room com documentação (políticas, testes, logs, formações)
 
@@ -244,7 +249,7 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 | Capítulo | NIS2 Artigos | O Que Faz |
 |----------|-------------|----------|
 | **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)** | Art. 21 | Classificação de apps por risco (L1–L3) |
-| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)** | Art. 20, 21 | Requisitos de segurança mínimos por nível |
+| **[Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)** | Art. 21 (primário), Art. 20 (suporte) | Base técnica de requisitos de segurança mínimos por nível |
 | **[Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)** | Art. 21 | Threat modeling para identificar ameaças realistas |
 | **[Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro)** | Art. 21 | Arquitetura segura, IAM, criptografia |
 | **[Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)** | Art. 21 | SBOM, SCA, gestão de vulnerabilidades |
@@ -254,17 +259,17 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 | **[Cap. 09](/sbd-toe/sbd-manual/containers-imagens/intro)** | Art. 21 | Containers/runtime seguros |
 | **[Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 21 | Testes contínuos (SAST/DAST/penetração) |
 | **[Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 21 | Validação pré-deploy, conformidade requisitos |
-| **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 21, 23 | Monitorização, deteção/reporte de incidentes, continuidade |
+| **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 20 (supervisão), Art. 21, 23 | Monitorização, incidentes, runbooks, continuidade operacional e evidência |
 | **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 20, 21 | Formação de staff e gestão em cibersegurança |
-| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 20, 21 | Governança, RACI, ciclo de vida fornecedores |
+| **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 20 (primário), Art. 21, 23 | Governança, cadeia de aprovação, escalonamento e ciclo de vida fornecedores |
 
 ---
 
 ## Métrica Simples: Estou Compliant?
 
-Se consegues responder SIM a isto, estás alinhado com NIS2:
+Se consegues responder SIM a isto, tens uma base forte para uma leitura NIS2 defensável:
 
-1. **Governance:** Tenho política assinada pelo board? ✓
+1. **Governance:** Tenho cadeia formal de aprovação e supervisão da gestão? ✓
 2. **Board Training:** A gestão tem formação anual em cibersegurança? ✓
 3. **Risk Management:** Todas as apps estão classificadas? ✓
 4. **Policies:** Tenho políticas de análise de risco e segurança? ✓
@@ -274,12 +279,12 @@ Se consegues responder SIM a isto, estás alinhado com NIS2:
 8. **Training:** Programa de formação contínua ativo? ✓
 9. **Supply Chain:** Inventário de fornecedores críticos e ciclo de vida operacional? ✓
 10. **Operations:** Monitorização centralizada com retenção adequada? ✓
-11. **Incident Response:** Consigo detetar e reportar incidentes 24h/72h/1M? ✓
-12. **Continuity:** Backups testados e plano de DR operacional? ✓
+11. **Incident Response:** Consigo detetar, escalar internamente e preparar reporte 24h/72h/1M? ✓
+12. **Continuity:** Backups testados, runbooks e recuperação operacional validados? ✓
 13. **Testing:** Faço SAST/DAST e avaliação da eficácia? ✓
 14. **Evidence:** Consigo demonstrar tudo isto em auditoria? ✓
 
-**Se 12/14:** Estás pronto para autoridade nacional.  
+**Se 12/14:** Tens uma base forte para auditoria NIS2, mas ainda deves confirmar requisitos nacionais e setoriais aplicáveis.  
 **Se `<`7/14:** Prioriza governação + classificação + monitorização + incidentes.
 
 ---
@@ -296,7 +301,7 @@ O que caracteriza uma exceção em SbD-ToE/NIS2:
 Quem aprova (conforme NIS2 Art. 20):
 - L1 (baixo risco): Tech lead / AppSec Engineer
 - L2 (médio risco): CISO
-- L3 (crítico): Board / CRO (Board é accountable, não é delegável)
+- L3 (crítico): Board / CRO / órgão de gestão equivalente, conforme o modelo de governação aplicável
 
 Implicação regulatória:
 - Exceções sem aprovação formal podem comprometer a supervisão (Art. 20)
@@ -312,7 +317,7 @@ Sugere-se:
 
 A ausência de formalização pode comprometer a conformidade regulatória e expor a organização a riscos desnecessários.
 
-**Referência:** [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro) (addon 08) e [Cap. 14 - Governança](/sbd-toe/sbd-manual/governanca-contratacao/intro) (exceções formalizadas)
+**Referência:** [Cap. 02 - Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro) como base técnica e [Cap. 14 - Governança](/sbd-toe/sbd-manual/governanca-contratacao/intro) para formalização das exceções
 
 ---
 

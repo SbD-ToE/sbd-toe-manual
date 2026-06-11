@@ -505,6 +505,181 @@ Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook ag
 - 🔗 [Policy 38 — Mandates de Agentes AI](/sbd-toe/assets/policies/policy-mandates-agentes)
 
 ---
+
+### US-12 - Threat modeling estendido para componentes AI/ML não-agentic
+
+Sistemas com modelos preditivos, LLMs conversacionais ou RAG têm ameaças adversariais que o STRIDE clássico não cobre, mesmo sem agente tool-use.  
+
+**Contexto.** O [`THR-008`](./addon/catalogo-requisitos-threat-modeling) exige threat model estendido para todos os componentes AI/ML, mas a US-11 só cobre o caso agentic (tool-use). Um modelo preditivo, um classificador, um LLM em interface conversacional ou um pipeline RAG têm superfícies adversariais próprias — model poisoning, training data poisoning, evasion, model theft, prompt injection directa/indirecta — que ficam por modelar quando não há agente. Esta lacuna deixa sistemas AI sem tool-use sem cobertura formal.  
+
+:::userstory
+**História.**   
+Como **Software Architect** e **AppSec Engineer**, quero estender o threat model com ameaças adversariais AI/ML sempre que o sistema integra componentes de inteligência artificial sem tool-use (modelos preditivos, LLMs conversacionais, RAG), para que as ameaças específicas fiquem catalogadas por ID canónico e ancoradas em controlos antes do go-live.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um sistema que integra um componente AI/ML sem agente tool-use  
+  **Quando** se executa o threat modeling  
+  **Então** o STRIDE/LINDDUN baseline é complementado (não substituído) com framing AI/ML, e são identificadas as trust boundaries adicionais (training data → modelo, prompt input → modelo, modelo → output)  
+- **Dado** o framing AI/ML aplicado  
+  **Quando** se cataloga cada ameaça  
+  **Então** vem citada por ID canónico (MITRE ATLAS `AML.T*`, NIST AI 100-2 e2025, ou OWASP LLM/ML Top 10) e tem mitigação ancorada em capítulo do manual  
+
+**Checklist.**  
+- [ ] Trust boundaries AI/ML adicionais marcadas no DFD (training-time, inference-time, output)  
+- [ ] Ameaças adversariais catalogadas por ID canónico (ATLAS `AML.T*` / NIST AI 100-2 / OWASP LLM/ML Top 10)  
+- [ ] STRIDE/LINDDUN baseline complementado, não substituído  
+- [ ] Cada ameaça não eliminada ligada a controlo em capítulo do manual  
+
+:::
+
+**Artefactos & evidências.** DFD com trust boundaries AI/ML; tabela `threat_id` × `boundary` × `mitigations` referenciada a ATLAS/NIST/OWASP; ligação a `REQ-*` derivados.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Recomendado: triagem por OWASP LLM/ML Top 10 | Obrigatório: framing AI/ML completo + boundaries + mitigações ancoradas | Obrigatório: framing completo + adversary capabilities (NIST AI 100-2) + revisão `appsec` independente |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Design | Introdução de componente AI/ML sem tool-use | `software_architect` + `appsec` | Antes do go-live |
+| Alteração | Troca de modelo base, dataset ou pipeline RAG | `appsec` | Antes do cutover |
+
+**Ligações úteis.** [Metodologias — §AI/ML](./addon/metodologias-e-ferramentas#ai-ml) · [`THR-008`](./addon/catalogo-requisitos-threat-modeling)
+
+---
+
+### US-13 - Derivação de abuse/misuse cases para o backlog
+
+A análise centrada no utilizador legítimo deixa escapar caminhos de abuso que só uma perspetiva adversarial revela.  
+
+**Contexto.** O [método de abuse/misuse cases](./addon/abuse-misuse-cases) prescreve um workshop cross-functional que torna adversarial a elicitação de requisitos, mas nenhuma user story o operacionaliza. Sem isso, os abuse cases ficam como exercício pontual cujas conclusões se perdem entre sprints. O método só altera o produto quando cada abuso priorizado se materializa em item rastreável no backlog, com owner e critério de aceitação adversarial, alimentando threat model e testes.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer** e **Product Owner**, quero derivar abuse/misuse cases num workshop cross-functional e integrá-los no backlog como requisitos rastreáveis, para que os caminhos de abuso identificados se traduzam em controlos verificáveis e não se percam.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um fluxo funcional relevante de um sistema L2+  
+  **Quando** se conduz o workshop de abuse cases (produto + dev + segurança + QA)  
+  **Então** cada fluxo gera o seu contraponto adversarial ("como atacante, quero ⟨objetivo⟩ explorando ⟨fraqueza⟩"), priorizado por risco (Cap. 01)  
+- **Dado** os abuse cases priorizados  
+  **Quando** se fecha o exercício  
+  **Então** cada um entra no backlog como requisito com owner, critério de aceitação adversarial e estado, e alimenta threat model e casos de teste (Cap. 10)  
+
+**Checklist.**  
+- [ ] Workshop cross-functional realizado (produto, dev, segurança, QA)  
+- [ ] Abuse cases derivados por fluxo e priorizados por risco  
+- [ ] Cada abuse case priorizado no backlog com owner e critério de aceitação adversarial  
+- [ ] Abuse cases ligados a threat model e a casos de teste  
+
+:::
+
+**Artefactos & evidências.** Registo do workshop; lista de abuse/misuse cases priorizados; itens de backlog com critério de aceitação adversarial; ligação a `THREAT-*` e a testes.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não aplicável | Obrigatório: workshop em fluxos críticos + integração no backlog | Obrigatório: workshop sistemático + cobertura por fluxo + rastreabilidade a testes |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Requisitos / Threat Modeling | Início de épico ou fluxo funcional relevante | `appsec` + `product_owner` | Antes da derivação de requisitos |
+
+**Ligações úteis.** [Método de Abuse e Misuse Cases](./addon/abuse-misuse-cases) · [Estratégia de testes (Cap. 10)](/sbd-toe/sbd-manual/testes-seguranca/addon/estrategia-testes)
+
+---
+
+### US-14 - Revisão independente em L2 e PASTA em alto risco
+
+A revisão independente cobre os pontos cegos da equipa; em alto risco, o método deve escalar para análise baseada em risco.  
+
+**Contexto.** O [`THR-007`](./addon/catalogo-requisitos-threat-modeling) exige revisão independente por AppSec antes de go-live já em **L2** (não só L3), mas a US-09 só explicita a revisão independente em L3 — deixando L2 sem operacionalização. Paralelamente, o [`THR-003`](./addon/catalogo-requisitos-threat-modeling) prescreve **PASTA ou equivalente** em contextos de alto risco (sistemas regulados, exigência formal de rastreio ameaça → risco → controlo), prescrição que nenhuma US operacionaliza. Esta US fecha ambas as lacunas: revisão independente desde L2 e escalonamento metodológico para PASTA em L3.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer** e **Team Lead / Tech Lead**, quero que o threat model seja revisto por elemento independente da equipa de entrega antes do go-live a partir de L2, e que sistemas de alto risco apliquem PASTA como metodologia, para garantir cobertura de pontos cegos e rastreio formal ameaça → risco → controlo.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um sistema L2+ a entrar em go-live ou com alteração arquitetural material  
+  **Quando** o threat model é finalizado  
+  **Então** é revisto por AppSec ou elemento com competência equivalente, independente da equipa de entrega, com evidência (registo, aprovação ou lista de desvios com plano)  
+- **Dado** a ausência dessa revisão  
+  **Quando** se tenta avançar para go-live  
+  **Então** o go-live é bloqueado  
+- **Dado** um sistema de alto risco (regulado ou L3)  
+  **Quando** se seleciona a metodologia  
+  **Então** aplica-se PASTA ou equivalente, com rastreio ameaça → risco → controlo declarado no artefacto  
+
+**Checklist.**  
+- [ ] Revisor independente da equipa de entrega identificado (L2+)  
+- [ ] Evidência da revisão produzida (registo/aprovação/lista de desvios)  
+- [ ] Go-live bloqueado na ausência de revisão  
+- [ ] PASTA (ou equivalente) aplicado e declarado em sistemas de alto risco  
+
+:::
+
+**Artefactos & evidências.** Registo de revisão independente com responsável nomeado; lista de desvios com plano (quando aplicável); artefacto PASTA com mapeamento ameaça → risco → controlo (alto risco).  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não aplicável | Revisão independente obrigatória antes de go-live; PASTA opcional | Revisão independente obrigatória + PASTA (ou equivalente) com rastreio formal |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Pré go-live | Go-live de aplicação L2+ ou alteração arquitetural material | `appsec` (independente) | Antes do go-live (bloqueante) |
+| Design | Sistema regulado / alto risco | `software_architect` + `appsec` | Na seleção de metodologia |
+
+**Ligações úteis.** [`THR-007`](./addon/catalogo-requisitos-threat-modeling) · [`THR-003`](./addon/catalogo-requisitos-threat-modeling) · [Metodologias — comparação PASTA](./addon/metodologias-e-ferramentas)
+
+---
+
+### US-15 - Tratamento explícito dos riscos de processo do threat modeling
+
+Um threat model plausível mas incompleto dá falsa confiança — pior do que a ausência do artefacto.  
+
+**Contexto.** Os [riscos de processo do threat modeling](./addon/riscos-processo-threat-modeling) — omissão estrutural, enviesamento de perspetiva, confusão entre análise intermédia e decisão formal, dependência acrítica de modelos prévios, resultados plausíveis mas incorretos — são falíveis por natureza e independentes do método. O manual assume-os explicitamente, mas nenhuma user story obriga ao seu reconhecimento e mitigação no artefacto. Sem isso, a equipa trata o threat model como verdade validada em vez de hipótese sujeita a erro.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar explicitamente os riscos de processo do threat modeling em cada modelo produzido, para que omissões, enviesamentos e plausibilidade enganosa sejam assumidos como risco inerente e não confundidos com cobertura real.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um threat model é produzido  
+  **Quando** se finaliza o artefacto  
+  **Então** distingue-se claramente material de apoio (notas, listas exploratórias, hipóteses) de decisão validada e aprovada  
+- **Dado** a reutilização de um modelo prévio  
+  **Quando** se adota como base  
+  **Então** é tratado como hipótese de partida, com revalidação explícita das mudanças de contexto (cruzar com US-07)  
+- **Dado** o artefacto finalizado  
+  **Então** regista-se que a ausência de uma ameaça não é prova da sua inexistência, e os riscos de omissão/enviesamento ficam assumidos  
+
+**Checklist.**  
+- [ ] Material de apoio distinguido de decisão formal aprovada  
+- [ ] Modelos reutilizados tratados como hipótese, com revalidação de contexto  
+- [ ] Risco de omissão/enviesamento assumido explicitamente no artefacto  
+- [ ] Plausibilidade não tratada como substituto de validação e evidência  
+
+:::
+
+**Artefactos & evidências.** Secção de assunções/limites no threat model; separação versionada entre notas exploratórias e decisão aprovada; nota de risco de omissão no artefacto.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Nota informal de assunções | Assunções e limites documentados; separação apoio/decisão | Tratamento formal dos riscos de processo + revisão independente da cobertura |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Threat Modeling | Finalização ou reutilização de threat model | `appsec` + `software_architect` | Antes da aprovação do baseline |
+
+**Ligações úteis.** [Riscos de Processo no Threat Modeling](./addon/riscos-processo-threat-modeling) · [Validação e Evidência](./addon/validacao-evidencia-threat-modeling)
+
+---
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática / Atividade              | L1 (baixo risco)                         | L2 (médio risco)                                | L3 (alto risco)                                                  |

@@ -799,6 +799,208 @@ Como **DevOps / SRE** e **AppSec**, quero que os agentes AI que operam o pipelin
 
 ---
 
+### US-20 - Identidade empresarial no SCM e assinatura de commits/tags {#us-20}
+
+Quem escreve no repositório tem de ser identificável, autorizado e não-repudiável.  
+
+**Contexto.** O `CIC-001` exige pipelines como código sujeitos a revisão e o `CIC-002` restringe os *triggers* a fontes autorizadas (*branches* protegidas, *tags* assinadas, *merges* aprovados). Sem acesso de escrita granular ancorado em identidade empresarial (SSO/RBAC) e sem assinatura criptográfica de *commits*/*tags*, a proteção de *branch* da US-01 protege o fluxo mas não garante **quem** o originou — e a autorização de *trigger* por *tag* perde valor se a *tag* não for verificável.  
+
+:::userstory
+**História.**   
+Como **DevOps / SRE** e **AppSec Engineers**, quero que o acesso de escrita ao SCM seja granular por *branch*/projeto através de identidade empresarial (SSO/RBAC) e que aplicações L3 exijam assinatura verificada de *commits* e *tags*, para garantir autorização mínima e não-repúdio na origem do pipeline.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um colaborador necessita de escrever num *branch* protegido  
+  **Quando** o acesso é concedido  
+  **Então** é mediado por SSO/RBAC com âmbito mínimo por *branch*/projeto, sem contas partilhadas nem permissões herdadas em excesso.  
+- **Dado** que uma aplicação é L3  
+  **Quando** um *commit* ou *tag* entra no fluxo de promoção  
+  **Então** a assinatura é verificada e, em falha, o *trigger* é recusado e registado.  
+- **Dado** que um *trigger* é desencadeado por uma *tag*  
+  **Quando** a *tag* não está assinada por identidade autorizada  
+  **Então** a execução é bloqueada como fonte não confiável.  
+
+**Checklist.**  
+- [ ] Acesso de escrita granular por *branch*/projeto via SSO/RBAC  
+- [ ] Sem contas partilhadas nem *tokens* pessoais *long-lived* para escrita  
+- [ ] Assinatura de *commits*/*tags* verificada em L3  
+- [ ] Falha de assinatura recusa o *trigger* e gera registo  
+
+:::
+
+**🧾 Artefactos & evidências.** Matriz de RBAC do SCM; configuração SSO; política de *branch protection*; registos de verificação de assinatura; logs de *triggers* recusados.  
+
+**⚖️ Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Identidade empresarial no SCM; RBAC básico por projeto | RBAC granular por *branch*; assinatura de *tags* recomendada | RBAC granular + assinatura de *commits* **e** *tags* obrigatória e verificada no pipeline |
+
+**🔗 Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding/offboarding | Concessão ou revogação de acesso ao SCM | `devops` + `appsec` | Na alteração de acesso |
+| Promoção | Cada *trigger* por *commit*/*tag* | Pipeline (verificação automática) | *Real-time* |
+| Revisão | Auditoria periódica de acessos | `grc` | Semestral |
+
+**Ligações úteis.**  
+- 🔗 [Catálogo `CIC-001`/`CIC-002` (Cap. 07)](/sbd-toe/sbd-manual/cicd-seguro/addon/catalogo-requisitos-cicd)  
+- 🔗 [Design Seguro dos Pipelines](/sbd-toe/sbd-manual/cicd-seguro/addon/design-seguro-pipelines)  
+- 🔗 [US-01 — Gestão segura de código fonte](#us-01---gestão-segura-de-código-fonte)
+
+---
+
+### US-21 - Separação CI/CD, build/test/deploy e templates versionados {#us-21}
+
+Cada fase do pipeline tem privilégios próprios; cruzá-los é convidar o escalonamento.  
+
+**Contexto.** O `CIC-008` exige *jobs* distintos para *build*, *test* e *deploy*, sem permissões cruzadas e com âmbito de credenciais por *stage*. O checklist acrescenta a separação funcional entre **CI** e **CD** e a reutilização de **templates de pipeline versionados**. A US-02 garante o pipeline como código versionado, mas não impõe a fronteira de privilégios entre fases — um *job* de *test* com credenciais de *deploy* anula a separação na prática.  
+
+:::userstory
+**História.**   
+Como **DevOps / SRE**, quero pipelines com CI e CD separados por função, fases *build*/*test*/*deploy* em *jobs* distintos sem permissões cruzadas, e *templates* reutilizáveis versionados, para limitar o *blast radius* de cada fase e tornar a configuração efetiva auditável.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um *job* de *build* ou *test* é executado  
+  **Quando** requer credenciais  
+  **Então** recebe apenas o âmbito da sua fase, sem acesso a credenciais de *deploy*/produção.  
+- **Dado** que o pipeline reutiliza lógica comum  
+  **Quando** essa lógica é alterada  
+  **Então** vive num *template* versionado sob PR, e a configuração efetiva da execução é registada como evidência.  
+- **Dado** que existe uma fase de promoção (CD)  
+  **Quando** é acionada  
+  **Então** está separada do fluxo de integração (CI) por função e identidade, sem permissões herdadas entre ambos.  
+
+**Checklist.**  
+- [ ] CI e CD separados por função e identidade  
+- [ ] *Jobs* distintos para *build*, *test* e *deploy*  
+- [ ] Âmbito de credenciais por *stage* documentado e *enforced*  
+- [ ] *Templates* de pipeline reutilizáveis e versionados sob PR  
+
+:::
+
+**🧾 Artefactos & evidências.** Definição do pipeline com *stages* separados; *templates* versionados; matriz de credenciais por *stage*; registo da configuração efetiva; logs de execução por fase.  
+
+**⚖️ Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Fases logicamente distintas; *templates* versionados | CI/CD separados + âmbito de credenciais por *stage* | Separação reforçada com identidades dedicadas por *stage* e ausência verificada de permissões cruzadas |
+
+**🔗 Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Criação/refactor | Alteração da estrutura do pipeline | `devops` | No PR |
+| Revisão | Alteração de *templates* ou credenciais de *stage* | `appsec` + `devops` | No PR |
+| Auditoria | Revisão periódica de permissões por *stage* | `grc` | Semestral |
+
+**Ligações úteis.**  
+- 🔗 [Catálogo `CIC-008` (Cap. 07)](/sbd-toe/sbd-manual/cicd-seguro/addon/catalogo-requisitos-cicd)  
+- 🔗 [Design Seguro dos Pipelines](/sbd-toe/sbd-manual/cicd-seguro/addon/design-seguro-pipelines)  
+- 🔗 [US-02 — Design seguro dos pipelines](#us-02---design-seguro-dos-pipelines-versionamento-determinismo-e-revisão)
+
+---
+
+### US-22 - Proteção contra escalonamento de privilégios em runners {#us-22}
+
+Um *job* com acesso ao Docker socket tem controlo efetivo do *host*.  
+
+**Contexto.** O `CIC-010` (L3) exige isolamento forte de *runners* — *containers* efémeros ou VMs descartáveis — **sem acesso ao Docker socket** por *jobs* não privilegiados, sem capacidades de escalonamento de privilégios e com logs de tentativas bloqueadas. A US-05 (isolamento de *runners*) cobre efemeridade e segmentação, mas não explicita a interdição de *privesc* nem a evidência de bloqueio, que o checklist trata como controlo próprio.  
+
+:::userstory
+**História.**   
+Como **DevOps / SRE**, quero que os *runners* não exponham o Docker socket a *jobs* não privilegiados nem permitam escalonamento de privilégios, com registo das tentativas bloqueadas, para impedir comprometimento do *host* a partir de um *job* do pipeline.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um *job* não privilegiado é executado  
+  **Quando** tenta aceder ao Docker socket ou a capacidades privilegiadas  
+  **Então** o acesso é negado e a tentativa é registada.  
+- **Dado** que uma aplicação é L3  
+  **Quando** o *runner* é provisionado  
+  **Então** corre em isolamento forte (*container* efémero ou VM descartável) sem capacidades de *privesc*.  
+- **Dado** que ocorre uma tentativa de escalonamento  
+  **Quando** é detetada  
+  **Então** gera evidência auditável e alerta para resposta.  
+
+**Checklist.**  
+- [ ] Sem acesso ao Docker socket por *jobs* não privilegiados  
+- [ ] Sem capacidades de escalonamento de privilégios nos *runners*  
+- [ ] Isolamento forte (efémero/descartável) em L3  
+- [ ] Logs de tentativas bloqueadas disponíveis  
+
+:::
+
+**🧾 Artefactos & evidências.** Configuração de *runners* (sem socket exposto); políticas de capacidades/`securityContext`; logs de tentativas bloqueadas; evidência de efemeridade.  
+
+**⚖️ Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| *Hardening* base; sem privilégios desnecessários | *Runners* segregados sem socket exposto a *jobs* não privilegiados | Isolamento forte (efémero/descartável) + interdição de *privesc* + logs de bloqueio verificados |
+
+**🔗 Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Provisionamento | Criação/alteração de *runners* | `devops` | No PR de infra |
+| Operação | Tentativa de acesso privilegiado | *Runner* (deteção automática) | *Real-time* |
+| Revisão | Auditoria de configuração de *runners* | `appsec` | Semestral |
+
+**Ligações úteis.**  
+- 🔗 [Catálogo `CIC-006`/`CIC-010` (Cap. 07)](/sbd-toe/sbd-manual/cicd-seguro/addon/catalogo-requisitos-cicd)  
+- 🔗 [Isolamento e Proteção de Runners](/sbd-toe/sbd-manual/cicd-seguro/addon/isolamento-runners)  
+- 🔗 [US-05 — Isolamento de runners](#us-05---isolamento-de-runners)
+
+---
+
+### US-23 - Custódia de artefactos, visibilidade de exceção e integrações externas {#us-23}
+
+O que se guarda, por onde transita e o que se liga ao pipeline é tudo superfície de ataque.  
+
+**Contexto.** Três prescrições convergem na fronteira do pipeline: o `CIC-007` exige armazenamento e transporte seguros de artefactos com proveniência verificável e deteção de manipulação; o checklist exige que as **exceções** a controlos sejam **sinalizadas visivelmente** no pipeline (não apenas registadas — US-10); e o `intro` trata qualquer sistema externo (scanners, *registries*, serviços) como **dependência de supply chain** e potencial canal de exfiltração. A US-06 cobre assinatura/proveniência, mas não a custódia segura nem a integração externa minimizada.  
+
+:::userstory
+**História.**   
+Como **DevOps / SRE** e **AppSec Engineers**, quero artefactos armazenados e transportados de forma segura com deteção de manipulação, exceções sinalizadas visivelmente no pipeline, e integrações externas tratadas como dependências de supply chain com contexto minimizado, para preservar integridade na cadeia de entrega e impedir exfiltração silenciosa.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que um artefacto assinado é armazenado ou transportado  
+  **Quando** é consumido a jusante  
+  **Então** a integridade é verificada e a manipulação é detetada antes da promoção.  
+- **Dado** que um *gate* é alvo de exceção (bypass)  
+  **Quando** o pipeline executa  
+  **Então** a exceção é sinalizada de forma visível na execução, além de registada formalmente.  
+- **Dado** que o pipeline integra um serviço externo  
+  **Quando** é configurado  
+  **Então** é tratado como dependência (proveniência/confiança avaliada) e recebe apenas o contexto mínimo necessário.  
+
+**Checklist.**  
+- [ ] Armazenamento/transporte de artefactos seguros com deteção de manipulação  
+- [ ] Verificação de integridade/proveniência antes da promoção  
+- [ ] Exceções a *gates* sinalizadas visivelmente na execução do pipeline  
+- [ ] Integrações externas tratadas como dependências com contexto mínimo  
+
+:::
+
+**🧾 Artefactos & evidências.** Configuração de *artifact store* (controlo de acesso/transporte); registos de verificação de integridade; sinalização de exceção nos logs/UI da execução; inventário de integrações externas e respetivo âmbito de contexto.  
+
+**⚖️ Proporcionalidade.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Armazenamento controlado; exceção registada | Transporte seguro + deteção de manipulação + exceção sinalizada na execução | Custódia reforçada + verificação obrigatória downstream + integrações externas auditadas e contexto minimizado |
+
+**🔗 Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Build/Promoção | Produção e consumo de artefactos | `devops` | A cada promoção |
+| Operação | Registo/aplicação de exceção a *gate* | `appsec` + `grc` | No pedido de exceção |
+| Integração | Adição/alteração de serviço externo | `devops` + `appsec` | No PR de integração |
+
+**Ligações úteis.**  
+- 🔗 [Catálogo `CIC-007` (Cap. 07)](/sbd-toe/sbd-manual/cicd-seguro/addon/catalogo-requisitos-cicd)  
+- 🔗 [Integridade e Proveniência de Artefactos](/sbd-toe/sbd-manual/cicd-seguro/addon/integridade-proveniencia)  
+- 🔗 [Excepções e Visibilidade em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/controle-excecoes-visibilidade)  
+- 🔗 [US-06 — Assinatura e proveniência](#us-06---assinatura-e-proveniência)  
+- 🔗 [US-10 — Gestão de exceções (bypass controlado)](#us-10---gestão-de-exceções-bypass-controlado)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:

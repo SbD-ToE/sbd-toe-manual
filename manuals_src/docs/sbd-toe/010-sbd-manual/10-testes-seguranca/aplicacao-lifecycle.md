@@ -870,6 +870,209 @@ Como **AppSec Lead**, quero **avaliar criticamente a cobertura real dos testes d
 
 ---
 
+### US-18 - Perfil de regras SAST versionado com baseline de falsos positivos
+
+O SAST só é gate fiável quando o seu próprio ruído está sob controlo.  
+
+**Contexto.**  
+Um scanner SAST com perfil de regras ad-hoc e sem baseline de falsos positivos (FP) produz ruído que erode a confiança no gate: ou se ignora o output, ou se faz bypass. `TST-002` exige perfil de regras documentado e versionado e uma baseline de FP aprovada por AppSec, com taxa de FP revista periodicamente. Sem isto, o SAST deixa de ser oráculo e passa a ser fonte de alerta-fatigue.  
+
+:::userstory
+**História.**   
+Como **AppSec**, quero **versionar o perfil de regras SAST e manter uma baseline de falsos positivos aprovada**, para **garantir um gate estável, com ruído controlado e cobertura de componentes críticos auditável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um scanner SAST integrado no pipeline  
+  **Quando** o perfil de regras é alterado ou um FP é suprimido  
+  **Então** a mudança fica versionada em VCS, com aprovação registada de AppSec e ligação ao finding suprimido  
+
+**Checklist.**  
+- [ ] Perfil de regras (ruleset/flags) versionado em VCS  
+- [ ] Baseline de FP aprovada por AppSec, com rationale por supressão  
+- [ ] Taxa de FP medida e revista periodicamente (alinhada a TST-K07)  
+
+:::
+
+**Artefactos & evidências.** Ruleset versionado, registo de supressões aprovadas (Finding ID + aprovador), série temporal da taxa de FP.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Perfil versionado; baseline para CRITICAL | + baseline para CRITICAL/HIGH; revisão trimestral da taxa de FP | + revisão mensal; supressões com dupla validação e expiração |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Alteração de ruleset ou supressão de FP | AppSec + DevOps | No PR que altera o perfil |
+| Revisão | Periódica (taxa de FP) | AppSec | Trimestral (L2) / mensal (L3) |
+
+**Ligações úteis.** [Validação Estática de Código (SAST)](/sbd-toe/sbd-manual/testes-seguranca/addon/sast) · [Catálogo de Requisitos (TST-002)](/sbd-toe/sbd-manual/testes-seguranca/addon/catalogo-requisitos-testes)
+
+---
+
+### US-19 - Proteção dos ativos do processo de teste
+
+Testar não pode tornar-se, ele próprio, um vetor de exposição.  
+
+**Contexto.**  
+O processo de teste manipula dados, credenciais e telemetria — e cada um é um ativo que pode vazar. `addon/10` prescreve dados reais proibidos por omissão em ambientes de teste, contas técnicas dedicadas de privilégio mínimo com rotação, masking de segredos nos logs e controlo de egress dos ambientes de DAST/IAST/fuzzing. Sem estes controlos, o teste introduz o risco que pretende mitigar.  
+
+:::userstory
+**História.**   
+Como **DevOps + AppSec**, quero **proteger os ativos do processo de teste (dados, credenciais, egress, logs)**, para **impedir que a própria execução de testes exponha dados reais, segredos ou superfícies de rede não controladas**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um ambiente de DAST/IAST/fuzzing  
+  **Quando** o teste é executado  
+  **Então** não há dados reais (por omissão), as credenciais são de conta técnica dedicada de privilégio mínimo, os segredos aparecem mascarados nos logs e o egress está restrito ao âmbito do teste  
+
+**Checklist.**  
+- [ ] Dados reais proibidos por omissão; uso excecional com aprovação e justificação  
+- [ ] Contas técnicas dedicadas, privilégio mínimo, com rotação de credenciais  
+- [ ] Masking de segredos nos logs e artefactos de teste; egress restrito  
+
+:::
+
+**Artefactos & evidências.** Política de dados de teste, registo de contas técnicas e rotação, configuração de masking, regras de network policy/egress do ambiente de teste.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Sem dados reais; masking básico de segredos | + contas técnicas dedicadas com rotação; egress restrito | + segregação completa de ambiente, exceções de dados reais com dupla aprovação e auditoria |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Staging | Provisionamento do ambiente de teste | DevOps + AppSec | Antes da 1.ª execução |
+| Contínua | Rotação de credenciais técnicas | DevOps | Conforme política de rotação |
+
+**Ligações úteis.** [Evidência e Reprodutibilidade](/sbd-toe/sbd-manual/testes-seguranca/addon/evidencia-reprodutibilidade) · [Catálogo de Requisitos (TST-005)](/sbd-toe/sbd-manual/testes-seguranca/addon/catalogo-requisitos-testes)
+
+---
+
+### US-20 - KPIs de eficácia do programa de testes
+
+O que não se mede não se governa — e um programa de testes sem indicadores é uma intuição.  
+
+**Contexto.**  
+`addon/15` define indicadores TST-K01..K07 (cobertura SAST/DAST, % findings resolvidos dentro de SLA, taxa de regressão, centralização, ruído/FP, pentest externo) com thresholds por L1–L3, ligados às dimensões transversais T-01 e T-03. Sem recolha periódica e denominador consistente (F-02, aplicações com classificação de risco formal), não há base objetiva para avaliar a maturidade do programa nem para o reporte agregado.  
+
+:::userstory
+**História.**   
+Como **AppSec Lead**, quero **recolher e reportar os KPIs do programa de testes (TST-K01..K07) com thresholds por nível de risco**, para **medir cobertura, velocidade de resolução e ruído, e sustentar decisões de melhoria com evidência agregável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** o conjunto de aplicações classificadas (denominador F-02)  
+  **Quando** o período de recolha fecha  
+  **Então** os indicadores TST-K01..K07 são calculados, comparados ao threshold do nível e os desvios geram ação documentada  
+
+**Checklist.**  
+- [ ] Indicadores TST-K01..K07 instrumentados sobre o denominador F-02  
+- [ ] Thresholds por L1–L3 publicados e desvios com plano de ação  
+- [ ] Reporte periódico agregável (cross-link T-01/T-03)  
+
+:::
+
+**Artefactos & evidências.** Dashboard de KPIs, série temporal por indicador, registo de desvios e ações corretivas, mapeamento para T-01/T-03.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| TST-K01/K03/K05 com thresholds L1 | + TST-K02/K04/K07; revisão trimestral | + TST-K06; revisão mensal e reporte à governação |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Contínua | Produção/triagem de findings | AppSec + DevOps | Tempo real (recolha) |
+| Revisão | Fecho de período | AppSec Lead + GRC | Mensal (L3) / trimestral (L2) |
+
+**Ligações úteis.** [KPIs e Métricas de Testes](/sbd-toe/sbd-manual/testes-seguranca/addon/kpis-metricas-testes) · [Gestão de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/gestao-findings)
+
+---
+
+### US-21 - Governação do uso de IA em testes e eval suites para agentes
+
+Quando a IA assiste o teste, é acelerador; quando o agente é o sistema sob teste, é alvo.  
+
+**Contexto.**  
+`addon/13` distingue dois usos: IA que **assiste** quem testa (controlos C1–C4: minimização e masking de prompts, proteção contra prompt injection em artefactos, segregação de ambientes/credenciais, proibição de auto-merge de patches) e IA que é **componente em produção**, exigindo eval suites versionadas (C5) — regressão de prompt, corpus de red-team, drift detection — corridas como gate antes de merge de mudanças a system prompts, skill files, agent files ou versão do modelo, proporcionais ao nível de autonomia. Sem esta governação, decisões de segurança apoiam-se em output de IA sem evidência determinística, e agentes promovem sem validação.  
+
+:::userstory
+**História.**   
+Como **AppSec + DevOps**, quero **enquadrar o uso de IA em testes por política (C1–C4) e exigir eval suites versionadas como gate para agentes de IA (C5)**, para **manter decisão humana rastreável, confidencialidade dos dados e validação do comportamento agentic antes de promoção**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que a IA assiste a triagem ou geração de testes  
+  **Quando** uma decisão de severidade ≥ HIGH é tomada  
+  **Então** existe registo C1, sem segredos/PII no prompt, sem auto-merge de patch, e a confirmação assenta em artefacto determinístico (PoC/teste/log)  
+- **Dado** um agente de IA em produção ou no processo de teste  
+  **Quando** muda o system prompt, skill file, agent file ou a versão do modelo  
+  **Então** a eval suite corre em CI como gate e o resultado fica arquivado com `eval_run_id` ligado ao `mandate_ref`  
+
+**Checklist.**  
+- [ ] Política de uso de IA em testes (minimização, masking, sem auto-merge) aplicada — controlos C1–C4  
+- [ ] Eval suite versionada em VCS, corrida em CI antes de merge de prompt/skill/modelo (C5)  
+- [ ] Resultados de eval arquivados (`eval_run_id` ⇄ `mandate_ref`), cobertura proporcional ao nível de autonomia  
+
+:::
+
+**Artefactos & evidências.** Política de IA em testes, registos C1 de decisão, eval suite versionada, logs de eval run com `eval_run_id`, corpus de red-team, relatórios de drift.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Política C1–C4; eval suite recomendada (A1) | C1–C4 obrigatórios; eval suite como gate para agentes A2+ | + red-team manual periódico, drift em janelas curtas e telemetria de produção (A4) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Mudança a system prompt / skill / agent file / versão do modelo | DevOps + AppSec | Gate antes do merge |
+| Revisão | Periódica | AppSec | Trimestral (corpus e drift) |
+
+**Ligações úteis.** [IA no Processo de Testes — Eval suites (C5)](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) · [Decisão Assistida (US-12)](#us-12---decisão-assistida-para-findings-de-testes-de-segurança)
+
+---
+
+### US-22 - Preparação de readiness para TLPT (DORA)
+
+Quando a obrigação chega da autoridade, a base técnica já tem de estar construída.  
+
+**Contexto.**  
+`addon/14` enquadra o Threat-Led Penetration Testing como obrigação regulatória (DORA, Art. 26/27; Reg. Delegado (UE) 2025/1190) para entidades identificadas pela autoridade competente. A identificação de sujeição, qualificação de testers/providers e attestation estão fora do âmbito do manual; o que cabe ao SbD-ToE é a **readiness técnica e documental**: threat model baseline com crown jewels (Cap. 03), maturidade do programa de testes documentada (Cap. 10), monitorização e IR em produção (Cap. 12) e evidências organizadas como suporte ao processo de attestation. Para entidades sujeitas a DORA, esta preparação é o que torna o exercício com substância e a remediação credível.  
+
+:::userstory
+**História.**   
+Como **CISO + AppSec**, quero **manter a readiness técnica para TLPT documentada e organizada**, para **suportar um exercício threat-led com substância e fornecer base de contexto ao processo de attestation, quando a entidade for sujeita a DORA**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que a entidade pode ser sujeita a TLPT  
+  **Quando** se avalia a readiness  
+  **Então** existe threat model baseline com crown jewels identificados, maturidade do programa de testes documentada, monitorização/IR em produção testada e evidências SbD-ToE organizadas como suporte documental ao attestation  
+
+**Checklist.**  
+- [ ] Threat model baseline aprovado com funções críticas e crown jewels (Cap. 03)  
+- [ ] Nível de maturidade do programa de testes documentado (Cap. 10)  
+- [ ] Monitorização e IR em produção com playbooks testados (Cap. 12); evidências organizadas para attestation  
+
+:::
+
+**Artefactos & evidências.** Threat model baseline, inventário de crown jewels, sumário de maturidade do programa de testes, playbooks de IR testados, dossiê de evidências de suporte ao attestation.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| N/A (fora de âmbito regulatório típico) | Readiness documental básica se houver exposição DORA | Readiness completa para entidades sujeitas a DORA — threat model, maturidade, IR e dossiê de attestation |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Auditoria | Notificação de sujeição ou ciclo regulatório (mín. 3 em 3 anos) | CISO + GRC | Antes do planeamento do exercício |
+| Revisão | Periódica | AppSec + CISO | Anual (manutenção da readiness) |
+
+**Ligações úteis.** [TLPT — Readiness e DORA](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness) · [PenTesting (US-08)](#us-08---pentesting-ofensivo-baseado-em-risco)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada teste deixa um rasto tangível.  

@@ -671,6 +671,222 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 
 ---
 
+### US-16 - Caminho de Remediação Abaixo do Limiar
+
+Um resultado abaixo do limiar mínimo não pode deixar o onboarding num estado indefinido.  
+
+**Contexto.** `TRN-003` exige que resultados abaixo do limiar de aceitação tenham um caminho de remediação definido. Sem esse trilho, um colaborador que reprova a validação fica num limbo: nem tem acesso bloqueado de forma rastreável, nem tem um percurso claro para recuperar a competência. Operacionalizar a remediação fecha o ciclo entre validação objetiva e desbloqueio de acesso.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer / RH**, quero **definir e executar um caminho de remediação para quem fica abaixo do limiar de validação**, para **garantir que a reprovação tem consequência operacional e percurso de recuperação rastreável, sem acesso técnico até aprovação**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um colaborador que obtém resultado abaixo do limiar mínimo na validação de onboarding  
+  **Quando** o resultado é registado  
+  **Então** é acionado automaticamente um plano de remediação (reformação dirigida + nova validação) e o acesso técnico permanece bloqueado até aprovação  
+
+**Checklist.**  
+- [ ] Limiar mínimo de aprovação documentado e versionado junto ao conteúdo  
+- [ ] Plano de remediação definido por trilho (reformação dirigida aos tópicos falhados)  
+- [ ] Número máximo de tentativas e escalonamento a AppSec/gestão após esgotamento  
+- [ ] Acesso técnico bloqueado até nova validação aprovada (enforcement de `TRN-004`)  
+- [ ] Registo da reprovação, da remediação e da reavaliação rastreável ao colaborador e à versão do conteúdo  
+
+:::
+
+**Artefactos & evidências.** Registo de resultados (pontuação, data, validador, versão do conteúdo); plano de remediação por tópico falhado; registo de bloqueio de acesso até reaprovação; trilha de tentativas e escalonamentos.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Reformação informal + nova tentativa | Plano de remediação documentado + bloqueio de acesso | Plano formal + limite de tentativas + escalonamento a AppSec e auditoria |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding | Resultado abaixo do limiar | AppSec Engineer + RH | Remediação iniciada antes de qualquer concessão de acesso |
+
+**Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-003)](./addon/catalogo-requisitos-formacao)  
+[Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### US-17 - Termo de Responsabilidade de Terceiros
+
+O onboarding de um terceiro só fica completo quando a responsabilidade está formalmente aceite e registada.  
+
+**Contexto.** `TRN-007` exige que o onboarding de terceiros e contratados tenha um termo de responsabilidade e registo formal (nome, entidade, data, validador). A formação por si só não vincula: sem aceitação explícita das obrigações de segurança e sem registo auditável, falta a evidência de que o terceiro assumiu o compromisso proporcional ao seu perfil de acesso. Este termo é a peça que torna o onboarding de terceiros equivalente — e não apenas semelhante — ao dos internos.  
+
+:::userstory
+**História.**   
+Como **GRC / Gestão Executiva**, quero **registar um termo de responsabilidade assinado por cada terceiro com acesso técnico**, para **vincular formalmente o terceiro às obrigações de segurança e criar evidência auditável que condiciona o acesso (NIS2, DORA)**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um terceiro ou contratado com acesso a código, pipelines ou dados sensíveis  
+  **Quando** conclui o onboarding de segurança  
+  **Então** assina um termo de responsabilidade e o registo (nome, entidade, data, validador, perfil de acesso) é arquivado antes da concessão de acesso  
+
+**Checklist.**  
+- [ ] Termo de responsabilidade definido por perfil de acesso (proporcional)  
+- [ ] Campos mínimos do registo: nome, entidade, data, validador, âmbito de acesso  
+- [ ] Assinatura (digital ou contratual) recolhida antes da concessão de acesso  
+- [ ] Registo arquivado em repositório institucional rastreável  
+- [ ] Vinculação ao contrato/conformidade GRC (NIS2, DORA)  
+- [ ] Acesso bloqueado na ausência de termo válido  
+
+:::
+
+**Artefactos & evidências.** Termo de responsabilidade assinado por terceiro; registo formal com campos mínimos (nome, entidade, data, validador); ligação contratual em GRC; evidência de bloqueio de acesso sem termo.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Termo simples + registo | Termo por perfil + arquivo rastreável | Termo por perfil + vinculação contratual + auditoria periódica |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding | Contrato de terceiro com acesso técnico | GRC + RH + AppSec Engineer | Termo registado antes de acesso |
+
+**Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-007)](./addon/catalogo-requisitos-formacao)  
+[Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
+[Plano de Formação de Terceiros](./addon/plano-formacao-terceiros)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### US-18 - Ação Corretiva sobre Desvios de KPIs
+
+KPIs sem ação corretiva são métricas decorativas.  
+
+**Contexto.** `TRN-009` exige que desvios de KPIs de formação face a thresholds definidos gerem ação corretiva com owner e prazo. US-14 define e recolhe os KPIs, mas a recolha não fecha o ciclo: falta o mecanismo que transforma um desvio (ex.: cobertura de onboarding abaixo da meta, taxa de aprovação em queda) numa decisão acionável e rastreável. Esta US operacionaliza o accionamento, não a definição dos indicadores.  
+
+:::userstory
+**História.**   
+Como **GRC / Gestão Executiva**, quero **acionar uma ação corretiva sempre que um KPI de formação desvia do threshold**, para **garantir que os indicadores produzem decisões com owner e prazo, e não apenas relatórios**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um KPI de formação com threshold definido  
+  **Quando** a recolha periódica revela desvio face ao threshold  
+  **Então** é aberta uma ação corretiva com owner e prazo, registada e seguida até fecho  
+
+**Checklist.**  
+- [ ] Threshold explícito por KPI (cobertura de onboarding, taxa de aprovação, tempo médio, atualização de conteúdo)  
+- [ ] Regra de acionamento documentada (desvio → ação corretiva)  
+- [ ] Ação corretiva com owner nomeado e prazo definido  
+- [ ] Seguimento até fecho registado (estado, evidência de resolução)  
+- [ ] Desvios e ações reportados a Gestão Executiva no ciclo de reporte  
+
+:::
+
+**Artefactos & evidências.** Registo de desvios face a thresholds; ações corretivas com owner e prazo; trilha de seguimento até fecho; secção de desvios no relatório trimestral a Gestão Executiva.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Revisão informal de desvios | Ação corretiva com owner e prazo registados | Ação corretiva + seguimento até fecho + reporte e auditoria |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Auditoria/Formação | Desvio de KPI face ao threshold | GRC owner + AppSec Engineer | Ação aberta no ciclo de recolha; fecho dentro do prazo definido |
+
+**Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-009)](./addon/catalogo-requisitos-formacao)  
+[KPIs e Métricas de Formação](./addon/kpis-metricas-formacao)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### US-19 - Formação em Uso Seguro de IA e Tooling
+
+Ferramentas assistem; humanos decidem. A formação tem de ensinar a fronteira.  
+
+**Contexto.** Com a adoção pervasiva de code assistants, geradores de código/testes, SAST/DAST/SCA e SOAR, é crítico que a formação cubra **quando confiar vs. quando validar** os outputs. O addon/12 define os conteúdos por capítulo técnico — antipadrões (aceitar código gerado sem ler, testes que apenas "provam" a implementação, confiança cega em alertas), os limites de automação (guardrails) e o princípio de que automação não-determinística requer sempre validação. Falta uma US que torne esta formação obrigatória e verificável.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer / RH**, quero **tornar obrigatória e verificável a formação em uso seguro de IA e tooling**, para **prevenir vulnerabilidades de código gerado não-revisto, testes tautológicos e decisões automatizadas sem governação em contextos não-determinísticos**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um colaborador com acesso a code assistants, geradores ou automação de pipeline/SOAR  
+  **Quando** completa o trilho formativo do seu perfil  
+  **Então** inclui o módulo de uso seguro de IA/tooling (quando confiar vs. validar, guardrails, validação de código e testes gerados) com validação objetiva aprovada  
+
+**Checklist.**  
+- [ ] Módulo de uso seguro de IA/tooling incluído no trilho por perfil (Developer, QA, DevOps, AppSec, IR/Ops, Gestão)  
+- [ ] Conteúdo cobre antipadrões, guardrails e validação de outputs (código e testes) do addon/12  
+- [ ] Labs práticos: identificar vulnerabilidades em código gerado e testes tautológicos  
+- [ ] Validação objetiva (quiz ≥ limiar) específica do módulo  
+- [ ] Prompt engineering seguro (requisitos de segurança explícitos) abordado  
+- [ ] Revisão do conteúdo anual ou por trigger de novo risco  
+
+:::
+
+**Artefactos & evidências.** Módulos de IA/tooling por perfil; registos de conclusão e validação no LMS; outputs de labs (vulnerabilidades e testes tautológicos identificados); versão do conteúdo formativo.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Microlearning de princípios (assistir vs. decidir) | Módulo por perfil + labs + quiz (≥ semestral) | Módulo por perfil + labs avançados + validação adaptativa (≥ trimestral) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding / Ciclo contínuo | Acesso a tooling de IA/automação ou novo risco | AppSec Engineer + RH | Antes de uso autónomo de tooling de IA |
+
+**Ligações úteis.** [Formação em Uso Seguro de IA e Tooling](./addon/formacao-uso-seguro-ia-tooling)  
+[Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### US-20 - Sandbox Isolado para Prática de Contractors
+
+Contractors praticam num ambiente isolado antes de tocar em sistemas reais.  
+
+**Contexto.** O guia de preparação de sandbox (addon/13) define um ambiente isolado, controlado e efémero onde contractors praticam ferramentas e procedimentos de segurança antes de acesso a produção — com permissões iniciais read-only, isolamento de rede face a produção, logging de toda a atividade, validação por exercícios (≥70%) e quiz (≥80%), e destruição pós-onboarding. Falta uma US que torne este sandbox um passo verificável do trilho de contractors, com sign-off que condiciona o acesso real.  
+
+:::userstory
+**História.**   
+Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isolado para prática de contractors antes do acesso a sistemas reais**, para **reduzir o risco de erro em produção e validar empiricamente a compreensão de políticas antes de conceder acesso**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um contractor em onboarding técnico  
+  **Quando** o sandbox é provisionado  
+  **Então** o contractor pratica num ambiente isolado de produção (read-only inicial, logging ativo) e o acesso real só é concedido após exercícios (≥70%), quiz (≥80%) e sign-off  
+
+**Checklist.**  
+- [ ] Sandbox provisionado por perfil (Developer, DevOps, QA) com app de demonstração  
+- [ ] Isolamento de rede face a produção e resource limits aplicados  
+- [ ] Permissões iniciais read-only, evoluindo só após validação  
+- [ ] Logging de toda a atividade (logins, commits, acessos a secrets) ativado  
+- [ ] Exercícios práticos (≥70%) e quiz de compreensão (≥80%) concluídos  
+- [ ] Sign-off de conclusão (Tech Lead + AppSec) condiciona o acesso real  
+- [ ] Destruição do sandbox e revogação de credenciais pós-onboarding; logs arquivados  
+
+:::
+
+**Artefactos & evidências.** Definição de infraestrutura do sandbox (repos, namespace, IaC); registos de logging de atividade; resultados de exercícios e quiz; sign-off de conclusão assinado; evidência de destruição e revogação pós-onboarding.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Sandbox simples opcional | Sandbox isolado por perfil + exercícios + quiz | Sandbox isolado + logging auditado + sign-off formal + destruição rastreável |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Onboarding | Onboarding técnico de contractor | DevOps + AppSec Engineer + Training Manager | Provisão T-5 dias; sign-off antes de acesso real (T+7) |
+
+**Ligações úteis.** [Guia de Preparação Sandbox para Contractors](./addon/guia-preparacao-sandbox)  
+[Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
+[Governança e Contratação - Capítulo 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)  
+[Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
 ## 📦 Artefactos esperados
 
 | Artefacto | Evidência |

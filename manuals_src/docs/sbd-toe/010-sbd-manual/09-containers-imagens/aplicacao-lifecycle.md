@@ -958,6 +958,239 @@ Como **AppSec + GRC**, quero gerir exceções a findings/policies como decisões
 
 
 ---
+
+### US-18 - Pesos de modelo AI self-hosted tratados como ativo crítico
+
+Os pesos de um modelo servido internamente são o núcleo do produto materializado em bytes, não configuração.  
+
+**Contexto.** Em inferência AI *self-hosted* (vLLM, TGI, Ollama, Triton, llama.cpp), os ficheiros de pesos (`.safetensors`, `.gguf`, `.onnx`, *checkpoints*) vivem *at-rest* na infraestrutura e recebem o mesmo tratamento que segredos em runtime. Sem encriptação, verificação de integridade e controlo de acesso, um modelo trocado no *storage* compromete a inferência silenciosamente (`AML.T0109` *Supply Chain Rug Pull* local).  
+
+:::userstory
+**História.**   
+Como **Plataforma + AppSec**, quero que os pesos de modelos *self-hosted* sejam encriptados *at-rest*, verificados por hash no *startup* e servidos por um *artifact registry* com acesso restrito e auditado, para garantir confidencialidade, integridade e rastreabilidade do ativo central do produto.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um ficheiro de pesos no *volume* ou *object store*  
+  **Quando** é armazenado  
+  **Então** está encriptado *at-rest* com chave gerida no cofre da organização  
+- **Dado** o arranque de um *inference runtime*  
+  **Quando** carrega os pesos  
+  **Então** valida o hash SHA-256 declarado no AI BOM e recusa carregar se divergir  
+- **Dado** um *download* de pesos do *artifact registry*  
+  **Quando** ocorre  
+  **Então** é limitado a *service accounts* dos runtimes e operadores autorizados, com registo de quem/quando/ambiente  
+
+**Checklist.**  
+- [ ] Pesos encriptados *at-rest* com chave no cofre (não em claro no *volume*)  
+- [ ] Hash SHA-256 declarado no AI BOM (`DEP-012`) e validado no *startup* do runtime  
+- [ ] Acesso ao *artifact registry* de pesos restrito a *service accounts* + operadores (não toda a equipa)  
+- [ ] Auditoria de *download* (quem, quando, que ambiente) — obrigatória em L3 e para modelos sob licença com restrições  
+
+:::
+
+**Artefactos & evidências.** AI BOM com hash/provider/licença/versão *pinned*; logs de validação de integridade no *startup*; política de acesso do *artifact registry*; trilho de auditoria de *downloads*.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Encriptação e hash recomendados; acesso restrito básico | Encriptação *at-rest* + hash no *startup* obrigatórios; acesso por *service account* | Tudo de L2 + auditoria de *download* obrigatória + revogação rápida de acesso |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Build/Provisionamento | Publicação/atualização de pesos no registry | Plataforma + AppSec | Antes de servir |
+| Produção | *Startup* do runtime | Runtime (automático) | Bloqueante se hash divergir |
+
+**Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)
+
+---
+
+### US-19 - Isolamento de GPU e separação de workloads de inferência sensíveis
+
+Uma GPU partilhada sem isolamento explícito é um gap de postura, não uma otimização de custo neutra.  
+
+**Contexto.** A inferência corre tipicamente em GPU, e GPUs partilhadas têm uma postura de isolamento ainda em maturação (*side-channels cross-tenant* são área de research ativa desde 2023). Misturar inferência sensível com workloads de utilizador no mesmo nó cria adversário co-localizado; ausência de limites de recursos permite DoS por `max_tokens` extremo.  
+
+:::userstory
+**História.**   
+Como **Infraestrutura + AppSec**, quero isolar o workload de inferência ao nível da GPU e separar inferência sensível de workloads de utilizador, para impedir interferência *cross-tenant* e degradação de serviço.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um pod de inferência sensível  
+  **Quando** é agendado  
+  **Então** recebe GPU dedicada via *MIG* (ou equivalente AMD/Intel) ou, quando inviável, isolamento *process-level* (*MPS* + cgroup limits + namespaces)  
+- **Dado** um nó que corre inferência sensível  
+  **Quando** se agendam workloads  
+  **Então** não partilha o nó com workloads onde o utilizador final executa código (ex.: *JupyterHub*)  
+- **Dado** um *prompt* com consumo extremo  
+  **Quando** é processado  
+  **Então** limites explícitos (`--gpu-memory-utilization`, *quota* de VRAM e de *batch size*) impedem degradação do serviço  
+
+**Checklist.**  
+- [ ] *Hard isolation* (GPU dedicada via MIG/equivalente) para workloads sensíveis quando viável  
+- [ ] *Process-level isolation* (MPS + cgroup + namespaces) como defesa em profundidade quando *hard isolation* não é possível  
+- [ ] Inferência sensível separada de nós com workloads de utilizador co-localizados  
+- [ ] Limites explícitos de VRAM, *batch size* e *GPU memory utilization* configurados  
+
+:::
+
+**Artefactos & evidências.** Manifests com `RuntimeClass`/GPU Operator e *resource limits*; configuração de MIG/MPS; política de *node affinity*/*taints* que separa inferência sensível; documentação dos limites operacionais por modelo.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Isolamento não exigido; limites de recursos recomendados | *Hard* ou *process-level isolation* recomendado; separação de nós + limites obrigatórios | *Hard isolation* obrigatório quando workloads sensíveis partilham hardware; separação total |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Design/Plataforma | Provisionamento do cluster de inferência | Infraestrutura + AppSec | Antes do go-live |
+| Produção | Agendamento de pod sensível | Plataforma (automático) | Imediato |
+
+**Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)
+
+---
+
+### US-20 - Hardening da API e do container de inferência AI
+
+A "rede interna" inclui demasiados *principals* para ser a única fronteira de defesa de um *inference runtime*.  
+
+**Contexto.** Vários runtimes (Ollama clássico, *llama.cpp server*) iniciam **sem autenticação** por defeito, e várias imagens *upstream* correm como root. As APIs de inferência expõem semântica de consumo nova (*chat completions*, *embeddings*, *streaming* SSE/WebSocket) que o *rate-limiting* HTTP convencional não cobre — um `max_tokens` confiado apenas ao cliente é DoS pronto a usar.  
+
+:::userstory
+**História.**   
+Como **DevOps + AppSec**, quero que o container e a API de inferência apliquem *hardening* específico — *non-root*, *read-only FS*, *drop capabilities*, *network policy* restritiva, autenticação obrigatória, *rate limiting* por consumo e limites servidor de `max_tokens`/prompt/timeout — para reduzir a superfície de ataque e impedir abuso de consumo.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** o container do runtime  
+  **Quando** é executado  
+  **Então** corre *non-root*, com *read-only root filesystem* (exceto *paths* exigidos), `cap_drop: ALL` e *network policy* que só aceita o *gateway* consumidor e só faz egress para *artifact registry*, telemetria e cofre (sem *registries* públicos em runtime)  
+- **Dado** qualquer *endpoint* da API de inferência  
+  **Quando** recebe um pedido  
+  **Então** exige autenticação (mesmo em rede "interna") e aplica *rate limiting* por tokens/janela e tempo de inferência, cruzado com *token budget* (`OPS-013`)  
+- **Dado** um pedido com `max_tokens` ou *prompt* excessivo, ou conexão *streaming* longa  
+  **Quando** é processado  
+  **Então** o servidor impõe limite de `max_tokens`, limite de tamanho de *prompt* e *timeout*/limite de conexões concorrentes por *principal*  
+
+**Checklist.**  
+- [ ] Container *non-root* + *read-only FS* + `cap_drop: ALL` (override de imagens *upstream* root quando necessário)  
+- [ ] *Network policy* restritiva: ingress só do *gateway*; egress só para *artifact registry*/telemetria/cofre  
+- [ ] Autenticação obrigatória em todos os *endpoints* (configurada antes de expor)  
+- [ ] *Rate limiting* por consumo (tokens/janela, tempo de inferência) + limite servidor de `max_tokens` e *prompt size*  
+- [ ] *Streaming endpoints* com *timeout* máximo e limite de conexões concorrentes por *principal*  
+- [ ] Auditoria de consumo por *principal* (quem, tamanho de prompt, `max_tokens`, modelo/versão) → `OPS-011..014`  
+- [ ] Versão do runtime *pinned* (`DEP-003`) com SCA ativo nas imagens base  
+
+:::
+
+**Artefactos & evidências.** `securityContext` e *network policy* versionados; configuração de auth e *rate limiting* do runtime; logs de auditoria de consumo por *principal*; manifest do runtime com versão *pinned* por digest e relatório SCA.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Autenticação **sempre** obrigatória; container *hardening* e limites recomendados | Container *hardening* + *network policy* + *rate limit*/`max_tokens` + *pinning*/SCA obrigatórios | Tudo de L2 + auditoria por *principal* reforçada e revisão periódica |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Build/Deploy | Construção e deploy do runtime | DevOps + AppSec | Antes de expor |
+| Produção | Invocação da API | Runtime (automático) | Contínuo |
+
+**Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference), [Hardening de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/hardening-containers)
+
+---
+
+### US-21 - Perfis seccomp/AppArmor e verificação de drift de hardening
+
+Um *baseline* de hardening declarado mas não verificado em execução é confiança implícita, não controlo.  
+
+**Contexto.** O `CNT-006` exige `drop: ALL` mais um perfil seccomp/AppArmor ativo e o bloqueio de `--privileged`/`hostPID`/`hostNetwork`. Sem confinamento de syscalls, capabilities mínimas são insuficientes contra escape; e sem verificação de *drift*, o estado efetivo de runtime pode divergir silenciosamente do declarado após alterações manuais ou *upgrades*.  
+
+:::userstory
+**História.**   
+Como **DevOps + AppSec**, quero impor perfis seccomp/AppArmor em todos os workloads e verificar periodicamente o estado efetivo de hardening contra o declarado (drift), para garantir confinamento de syscalls e detetar divergências antes de serem exploradas.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um pod em L2/L3  
+  **Quando** é criado  
+  **Então** tem perfil seccomp ativo (runtime default ou personalizado) e/ou AppArmor, com `cap_drop: ALL` e adições justificadas  
+- **Dado** uma tentativa de `--privileged`, `hostPID` ou `hostNetwork` não justificada  
+  **Quando** é submetida  
+  **Então** o admission controller rejeita e audita  
+- **Dado** o estado efetivo de hardening em runtime  
+  **Quando** a verificação periódica de *drift* corre  
+  **Então** compara com o *baseline* declarado e sinaliza qualquer divergência para revisão  
+
+**Checklist.**  
+- [ ] Perfil seccomp ativo (default ou custom) por workload em L2/L3  
+- [ ] AppArmor/SELinux configurado quando aplicável ao runtime/distro  
+- [ ] `--privileged`, `hostPID`, `hostNetwork` e Docker socket bloqueados por admission  
+- [ ] Verificação periódica de *drift* do estado efetivo vs. *baseline* declarado, com sinalização  
+
+:::
+
+**Artefactos & evidências.** Perfis seccomp/AppArmor versionados; políticas de admission que exigem o perfil e bloqueiam privilégio; relatório periódico de *drift* (efetivo vs. declarado) com divergências e ações.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Seccomp default recomendado; *drift* ad-hoc | Seccomp obrigatório + bloqueio de privilégio + verificação de *drift* | Tudo de L2 + perfis personalizados + verificação de *drift* contínua/automatizada |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Produção | Criação de pod | DevOps + Admission Controller | Imediato |
+| Ops | Verificação de *drift* | AppSec + Plataforma | Periódica (L3: contínua) |
+
+**Ligações úteis.** [Hardening de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/hardening-containers), [Policies de Runtime OPA](/sbd-toe/sbd-manual/containers-imagens/addon/policies-runtime-opa)
+
+---
+
+### US-22 - Retenção e limpeza de imagens com renovação periódica por SLA
+
+Imagens obsoletas acumuladas no registry são superfície de ataque latente e custo de auditoria.  
+
+**Contexto.** O `CNT-010` exige rebuild periódico (ou trigger por atualização da base) para incorporar patches, com sinalização de imagens sem rebuild há mais de X dias. Sem política de retenção/limpeza, o registry acumula tags vulneráveis reutilizáveis e dilui a rastreabilidade da cadeia commit → pipeline → imagem → execução.  
+
+:::userstory
+**História.**   
+Como **Plataforma + DevOps**, quero uma política de retenção/limpeza de imagens com renovação periódica por SLA de patching e sinalização de imagens estagnadas, para evitar acumulação de artefactos vulneráveis e manter o registry auditável.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma imagem base com patch de segurança disponível  
+  **Quando** o SLA de renovação se aplica  
+  **Então** ocorre rebuild (ou trigger automático) dentro do prazo (L3: ≤30 dias; L1: ≤90 dias)  
+- **Dado** uma imagem sem rebuild há mais do que o limite definido  
+  **Quando** a verificação periódica corre  
+  **Então** é sinalizada e sujeita a renovação ou depreciação  
+- **Dado** uma tag obsoleta ou superada no registry  
+  **Quando** a política de retenção é aplicada  
+  **Então** é removida/arquivada preservando a rastreabilidade (digest → build → decisão)  
+
+**Checklist.**  
+- [ ] SLA de renovação por nível de risco documentado e cumprido (`CNT-010`)  
+- [ ] Sinalização automática de imagens sem rebuild além do limite  
+- [ ] Política de retenção/limpeza de tags obsoletas no registry (com critério e arquivo)  
+- [ ] Rastreabilidade preservada após limpeza (digest → pipeline → decisão de promoção)  
+
+:::
+
+**Artefactos & evidências.** Política de retenção/renovação versionada; relatório de imagens estagnadas sinalizadas; logs de limpeza/arquivo do registry; matriz de rastreabilidade preservada por digest.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Renovação ≤90 dias recomendada; limpeza ad-hoc | Renovação obrigatória + sinalização + retenção definida | Renovação ≤30 dias + limpeza automatizada + rastreabilidade preservada e auditada |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Ops | Patch de base / janela de renovação | Plataforma + DevOps | Per SLA (L3: ≤30d) |
+| GRC | Auditoria de retenção | GRC | Periódica |
+
+**Ligações úteis.** [Imagens Base Seguras](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base), [Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers)
+
+---
 ## 📦 Artefactos esperados
 
 Cada prática deixa uma pegada verificável - os artefactos.  

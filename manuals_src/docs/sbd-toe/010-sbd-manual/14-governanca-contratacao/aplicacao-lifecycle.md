@@ -877,6 +877,55 @@ Como **GRC / Compliance / Procurement** com apoio de **Legal**, quero que cada c
 
 ---
 
+### US-22 - Aprovação formal e auditoria periódica das políticas organizacionais {#us-22}
+
+Uma política não aprovada pela direção não tem autoridade; uma política não auditada perde aderência ao longo do tempo.  
+
+**Contexto.** O capítulo prescreve um conjunto de políticas organizacionais relevantes (gestão de exceções, contratação segura, rastreabilidade organizacional, auditoria de fornecedores, KPIs de governação — ver intro §Políticas Organizacionais Relevantes) e o checklist canónico exige que estas estejam *formalmente aprovadas e auditadas*. A US-12 formaliza a política do **modelo de governação**, mas o restante corpo de políticas fica sem uma user story que operacionalize o seu ciclo de aprovação pela direção e de auditoria periódica. Sem este ciclo, as políticas existem como documento mas não como controlo vivo: ninguém confirma que continuam aprovadas, atualizadas e cumpridas.  
+
+:::userstory
+**História.**   
+Como **GRC / Compliance** com apoio de **CISO + Direção**, quero **manter cada política organizacional do capítulo num ciclo formal de aprovação pela direção e de auditoria periódica de aderência**, para **garantir que o corpo de políticas tem autoridade, está atualizado e é efetivamente cumprido e auditável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma política organizacional relevante (exceções, contratação segura, rastreabilidade, auditoria de fornecedores, KPIs de governação)  
+  **Quando** é criada ou revista  
+  **Então** é submetida a aprovação formal da direção, com versão, data e aprovador registados antes de entrar em vigor  
+- **Dado** uma política em vigor  
+  **Quando** chega o ciclo de auditoria definido (no máximo anual)  
+  **Então** é auditada a aderência prática, registam-se desvios e gera-se ação corretiva com owner e prazo  
+
+**Checklist.**  
+- [ ] Inventário das políticas organizacionais relevantes do capítulo mantido e versionado, com estado (Obrigatória/Recomendado), owner e data da última aprovação  
+- [ ] Cada política tem aprovação formal da direção registada (versão, data, aprovador) antes de entrar em vigor; revisão pelo menos anual ou após mudança organizacional significativa  
+- [ ] Auditoria periódica de aderência executada por ciclo definido, com desvios registados e ações corretivas (owner + prazo) acompanhadas até fecho  
+
+:::
+
+**Artefactos & evidências.** Inventário versionado de políticas com estado e owner; registo de aprovação formal pela direção (versão/data/aprovador); relatório de auditoria de aderência por ciclo; plano de ações corretivas para desvios.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Políticas obrigatórias aprovadas; auditoria informal anual | Conjunto completo aprovado; auditoria formal anual com registo de desvios | Conjunto completo aprovado; auditoria formal ≤ anual + revisão por mudança organizacional; ações corretivas rastreadas até fecho |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Planeamento | Criação ou revisão de política | GRC + CISO + Direção (aprovação) | Aprovação antes da entrada em vigor |
+| Auditoria | Ciclo periódico (≤ anual) ou mudança organizacional | GRC + AppSec | Auditoria concluída no ciclo; ações corretivas com prazo definido |
+
+**Ligações úteis.**  
+- [Checklist de Revisão Periódica — Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/canon/checklist-revisao)
+- [Modelo formal de governação — US-12](#us-12---formalização-de-modelo-de-governação-por-nível-de-risco)
+- [Processo Canónico de Gestão de Exceções](./addon/processo-excecoes)
+- [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes)
+- [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura)
+- [Política de Rastreabilidade Organizacional](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional)
+- [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao)
+
+---
+
 ## 📦 Artefactos esperados
 
 | Artefacto | Evidência |

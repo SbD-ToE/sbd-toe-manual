@@ -664,6 +664,90 @@ Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero **visualizar dash
 
 ---
 
+### US-15 - Prompts e Outputs de GenAI sob Disciplina de Código
+
+Os ficheiros que configuram assistentes e os outputs que estes devolvem são tratados como código: versionados, revistos e validados.  
+
+**Contexto.** Os *system prompts*, *skill files* (`.claude/skills/*.md`), *agent files*, `.cursorrules` e `.github/copilot-instructions.md` decidem o que o assistente sabe e que *tools* pode invocar; se mudam sem revisão, mudam o comportamento operacional sem rasto. De forma simétrica, quando o output estruturado de um modelo alimenta uma *tool call*, um registo ou uma decisão automatizada, o seu formato e semântica têm de ser validados lado-servidor antes de serem consumidos. Ambos os artefactos escapam frequentemente à disciplina de *secure development*.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer**, quero que os *prompts*, *skill files*, *agent files* e *rules* sejam geridos como código e que os *structured outputs* de modelos sejam validados lado-servidor, para impedir mudança operacional silenciosa e consumo de output não confiável.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que existe um *skill file*, *agent file*, *prompt* ou *rules* no projeto  
+  **Quando** é alterado ou gerado por ferramenta canónica  
+  **Então** passa por *code review*, *secret scanning* e *drift detection*, e consta de inventário versionado com *owner*  
+- **Dado** que um output de modelo alimenta lógica aplicacional  
+  **Quando** é recebido pelo servidor  
+  **Então** é validado contra *schema* versionado (sintática e semanticamente) antes de qualquer ação, e em caso de falha o sistema não consome o output e segue *fallback* declarado  
+
+**Checklist.**  
+- [ ] *Prompts*, *skill files*, *agent files* e *rules* versionados em VCS, com *code review*, *secret scanning* estendido e *drift detection* configurados  
+- [ ] Inventário versionado de *skill files*/*agent files*/*rules* ativos por projeto, com *owner* e cadência de re-revisão  
+- [ ] *Schema* (JSON Schema/Pydantic/Zod) declarado lado-servidor, versionado e referenciado no log; validação sintática e semântica obrigatória pré-execução  
+- [ ] Mecanismos nativos de *structured outputs* do *provider* adotados quando viáveis; sem *parsing* permissivo de texto bruto nem output a alimentar `eval()`  
+
+:::
+
+**Artefactos & evidências.** Inventário de *skill files*/*agent files*/*rules*; *schemas* versionados no repositório; relatórios de *code review*, *secret scanning* e *drift detection*; logs com *schema version* das validações falhadas.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| *Prompts*/*rules* versionados + *code review*; *schema* declarado e validado lado-servidor | + *secret scanning* estendido, inventário com *owner*, validação semântica per-action | + *drift detection* automático, *tool definitions* canónicas e telemetria de schema para *post-mortem* |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Revisão de Código | Alteração de *prompt*/*skill*/*agent*/*rules* ou consumo de output de modelo | **AppSec Engineer** + **Developer** | Antes do merge |
+
+**Ligações úteis.** [Prompts e skill files como código](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) · [Structured outputs](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs)
+
+---
+
+### US-16 - Proveniência e Quality Gate com Baseline Aprovada
+
+A proveniência de todo o código incorporado é identificada e a integração é regida por um *quality gate* com *baseline* e *thresholds* aprovados.  
+
+**Contexto.** O risco de uma contribuição não depende da sua origem (humana, reutilizada ou gerada por GenAI), mas da sua compreensão, validação e responsabilização. Código reutilizado ou adaptado de origem externa não interna exige a mesma identificação de proveniência e revisão humana que o código gerado por GenAI. Em paralelo, o gate de SAST só é operacionalizável com uma *baseline* de falsos positivos aprovada por AppSec — sem ela o ruído de findings cria pressão para o desativar — e a integração deve ser regida por perfis de qualidade com *thresholds* de segurança versionados por nível de risco.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer**, quero que a proveniência de todo o código incorporado seja identificada e que a integração passe um *quality gate* com *baseline* de falsos positivos e *thresholds* aprovados, para responsabilizar a incorporação e garantir um gate operável e não contornável.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que código de origem externa (reutilizado, adaptado ou gerado por GenAI) é proposto  
+  **Quando** é incorporado  
+  **Então** a sua proveniência é identificada antes da incorporação e existe evidência de revisão humana por PR para proveniência não interna  
+- **Dado** que o SAST corre no pipeline  
+  **Quando** produz findings  
+  **Então** aplica a *baseline* de falsos positivos aprovada por AppSec e os perfis de qualidade com *thresholds* por nível de risco, bloqueando o pipeline ou exigindo aprovação documentada em caso de desvio  
+
+**Checklist.**  
+- [ ] Proveniência do código incorporado (interno, reutilizado, adaptado ou GenAI) identificada antes da incorporação, com política de proveniência documentada  
+- [ ] Revisão humana por PR registada para código de proveniência não interna  
+- [ ] *Baseline* de falsos positivos do SAST versionada e aprovada por **AppSec Engineer**  
+- [ ] Perfis de qualidade com *thresholds* de segurança por nível de risco versionados; desvios bloqueiam o pipeline ou exigem aprovação explícita documentada  
+
+:::
+
+**Artefactos & evidências.** Política de proveniência; registo de proveniência por componente; *baseline* de falsos positivos versionada; perfis de qualidade (ex.: *Quality Gates*) versionados; relatórios de SAST e aprovações de desvio.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Proveniência sinalizada; SAST com baseline básica | Proveniência identificada + revisão humana para origem não interna; baseline aprovada por AppSec + thresholds por perfil | + *policy-as-code* do gate, auditoria periódica da baseline e dos perfis, retenção auditável dos desvios |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Incorporação de código de origem não interna / execução do SAST | **Developer** + **AppSec Engineer** | Antes do merge |
+
+**Ligações úteis.** [Proveniência do Código](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/proveniencia-codigo) · [Catálogo de Requisitos (DEV-003/006/008)](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/catalogo-requisitos-desenvolvimento)
+
+---
+
 ## 📦 Artefactos Esperados
 
 | Artefacto                  | Evidência auditável                                      |

@@ -705,6 +705,158 @@ Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomi
 
 ---
 
+### US-16 - Classificação do tipo de controlo na matriz de rastreabilidade
+
+Cada requisito rastreado deve declarar a natureza do controlo — Preventivo, Detetivo ou Corretivo.  
+
+**Contexto.** A matriz de rastreabilidade liga risco → requisito → controlo → validação → evidência, mas sem classificar o **tipo de controlo** a cobertura fica cega ao equilíbrio defensivo: uma aplicação pode acumular controlos preventivos e não ter qualquer capacidade de deteção ou correção. Tornar o tipo explícito permite auditar esse equilíbrio por linha da matriz.  
+
+:::userstory
+**História.**   
+Como **Arquitetura/DevSecOps**, quero classificar cada controlo da matriz de rastreabilidade como Preventivo, Detetivo ou Corretivo, para garantir cobertura defensiva equilibrada e auditável por requisito.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma linha da matriz que liga risco a requisito  
+  **Quando** o controlo associado é registado  
+  **Então** o campo `Tipo de Controlo` assume um de `Preventivo`/`Detetivo`/`Corretivo` e fica preenchido em todas as linhas ativas  
+
+**Checklist.**  
+- [ ] Coluna `Tipo de Controlo` presente e preenchida em todas as linhas da matriz  
+- [ ] Valor restrito ao vocabulário `Preventivo`/`Detetivo`/`Corretivo`  
+- [ ] Revisão de equilíbrio defensivo registada (ausência de deteção/correção sinalizada)  
+
+:::
+
+**Artefactos & evidências.** Matriz de rastreabilidade versionada com a coluna `Tipo de Controlo` preenchida; nota de revisão de equilíbrio defensivo.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Tipo declarado nos controlos críticos | Tipo declarado em todos os requisitos selecionados | Tipo declarado + revisão formal do equilíbrio Prev/Det/Cor por release |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Design/Grooming | Registo do controlo na matriz | Arquitetura/DevSecOps | Antes da validação do requisito |
+
+**Ligações úteis.** [Modelo de rastreabilidade entre riscos, requisitos e controlos](./addon/rastreabilidade-controlo)
+
+---
+
+### US-17 - Incorporação de restrições legais, normativas e contratuais
+
+A seleção de requisitos deve absorver as obrigações legais, normativas e contratuais aplicáveis ao contexto.  
+
+**Contexto.** A proporcionalidade ao risco determina o essencial, mas não captura obrigações externas: legislação (ex.: proteção de dados), normas setoriais e cláusulas contratuais com clientes ou terceiros podem impor requisitos adicionais ou critérios de aceitação mais estritos. Sem um passo explícito de incorporação, estas obrigações ficam por mapear até serem descobertas tardiamente em auditoria.  
+
+:::userstory
+**História.**   
+Como **GRC/Compliance** e **Arquitetura**, quero incorporar as restrições legais, normativas e contratuais aplicáveis na seleção de requisitos, para garantir que o catálogo do projeto reflete obrigações externas e não apenas o risco técnico.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que o projeto tem obrigações legais, normativas ou contratuais identificadas  
+  **Quando** o catálogo de requisitos do projeto é estabelecido ou revisto  
+  **Então** cada obrigação aplicável está mapeada a um requisito (ou exceção registada) e ligada à sua fonte normativa  
+
+**Checklist.**  
+- [ ] Levantamento das obrigações legais/normativas/contratuais aplicáveis documentado  
+- [ ] Cada obrigação mapeada a um requisito do catálogo ou a uma exceção formal  
+- [ ] Fonte normativa referenciada e owner de conformidade definido  
+
+:::
+
+**Artefactos & evidências.** Registo de obrigações aplicáveis com mapeamento requisito↔fonte; catálogo de requisitos do projeto atualizado; aprovação GRC.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Obrigações legais essenciais identificadas | Levantamento documentado e mapeado | Levantamento formal + validação GRC e revisão por alteração de contexto contratual |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Início/Revisão | Kick-off ou nova obrigação legal/contratual | GRC + Arquitetura | Antes de fechar o catálogo do projeto |
+
+**Ligações úteis.** [Catálogo de requisitos](./addon/catalogo-requisitos)
+
+---
+
+### US-18 - Intent declaration por tool-call destrutivo de agente AI
+
+Antes de cada ação destrutiva ou com efeito externo, o agente AI declara intenção auditável.  
+
+**Contexto.** O *mandate* (US-15) autoriza o agente e configura o *intent_audit_sink*, mas não impõe verificação por ação: falta um Definition of Done que confirme, por *tool-call* destrutivo (apagar, escrever em sistema externo, rotacionar segredos, *commit/push*, *deploy*), que o agente A2+ declara **o que vai fazer e porquê** antes de o fazer, e que o gate audita *intent* vs. ação real a posteriori. Sem este controlo por ação, a autorização global não se traduz em rasto verificável de cada operação de risco. Operacionaliza `REQ-AGN-004`.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer** e **Tech Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um agente AI A2+ a operar sob *mandate* ativo  
+  **Quando** vai invocar um *tool-call* destrutivo ou com efeito externo  
+  **Então** emite um *audit event* estruturado (o quê + porquê + `mandate_ref`) antes da execução, e o gate reconcilia *intent* declarado vs. ação real a posteriori  
+
+**Checklist.**  
+- [ ] *Intent audit event* emitido antes de cada *tool-call* destrutivo (apagar/escrever externo/rotacionar segredos/commit-push/deploy)  
+- [ ] Evento estruturado contém ação pretendida, justificação e `mandate_ref`  
+- [ ] Reconciliação *intent* vs. ação real executada e divergências sinalizadas  
+
+:::
+
+**Artefactos & evidências.** *Audit trail* com *intent events* por *tool-call*; relatório de reconciliação *intent* vs. ação real; ligação ao *mandate_ref* do agente.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não obrigatório (A2+ apenas fora de produção) | Intent declaration obrigatória em A2+ | Intent declaration obrigatória + reconciliação auditada por release |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Runtime | *Tool-call* destrutivo de agente A2+ | Owner + AppSec | Antes de cada execução; reconciliação a posteriori |
+
+**Ligações úteis.** [Catálogo `REQ-AGN-*` (REQ-AGN-004)](./addon/governanca-automatismos#req-agn)
+
+---
+
+### US-19 - Recolha e thresholds dos indicadores RQS
+
+Os indicadores RQS de cobertura, rastreabilidade e validação são recolhidos e comparados aos thresholds do nível.  
+
+**Contexto.** O catálogo RQS define indicadores que medem não a declaração mas a evidência de aplicação efetiva dos requisitos. Sem um passo explícito de recolha e comparação aos thresholds por nível, o risco de conformidade declarativa mantém-se: uma aplicação pode listar requisitos aplicados sem que estejam validados. Operacionalizar a recolha torna a maturidade RQS visível e acionável.  
+
+:::userstory
+**História.**   
+Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compará-los aos thresholds do nível de risco, para tornar visível a cobertura, rastreabilidade e validação efetiva dos requisitos e acionar lacunas não governadas.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma aplicação com requisitos mapeados e nível de risco definido  
+  **Quando** o ciclo de recolha RQS é executado (por release/semestral conforme indicador)  
+  **Então** cada indicador RQS é calculado, comparado ao threshold do nível e os desvios (incl. RQS-K06 = 0) são registados e acionados  
+
+**Checklist.**  
+- [ ] Indicadores RQS-K01..K06 calculados na periodicidade definida  
+- [ ] Comparação ao threshold do nível (L1/L2/L3) registada  
+- [ ] Lacunas não governadas (RQS-K06) tratadas com SLA de finding crítico  
+
+:::
+
+**Artefactos & evidências.** Relatório RQS por aplicação com valores vs. thresholds; registo de desvios e plano de remediação; evidência de tratamento de RQS-K06.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| RQS-K01/K02/K06 nos thresholds L1 | RQS-K01–K06 nos thresholds L2 | RQS-K01–K06 nos thresholds L3 + revisão formal de desvios |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Governança/Release | Ciclo de recolha (por release/semestral) | GRC + AppSec | Conforme período do indicador |
+
+**Ligações úteis.** [KPIs e métricas — indicadores RQS](./addon/kpis-metricas-requisitos)
+
+---
+
 ## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
 
 | Prática                    | L1 (baixo risco)               | L2 (médio risco)                          | L3 (alto risco)                                      |

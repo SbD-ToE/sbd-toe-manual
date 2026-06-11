@@ -614,6 +614,211 @@ Como **Ops / AppSec**, quero recolher telemetria dedicada de operação de agent
 
 ---
 
+### US-14 - Não-logging de secrets e gestão de exceções operacionais
+
+Um log que captura uma password é uma fuga de credenciais à espera de acontecer.  
+
+**Contexto.** A centralização de logs (US-01, US-08) amplifica um risco silencioso: secrets, tokens e PII em claro nos próprios eventos transformam o SIEM num repositório de credenciais expostas. O `OPS-001` exige campos normalizados **sem dados sensíveis em claro**; quando um padrão legítimo aciona alertas indevidamente, a supressão tem de seguir um processo formal de exceção, não um silenciamento ad hoc.  
+
+:::userstory
+**História.**   
+Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado em claro e que qualquer exceção a alertas segue processo formal**, para **impedir fuga de credenciais via logs e manter a supressão de alertas auditável e temporária**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um componente em produção que emite logs  
+  **Quando** um campo contém credencial, token ou PII  
+  **Então** o valor é redactado/mascarado antes da persistência e a redacção é verificável por amostragem  
+- **Dado** um padrão legítimo que dispara um alerta indevido  
+  **Quando** se pretende suprimi-lo  
+  **Então** é criada uma exceção versionada com justificação, aprovador por severidade e data de expiração (máx 6 meses L2, 3 meses L3)  
+
+**Checklist.**  
+- [ ] Redacção/masking de secrets e PII aplicada antes da persistência  
+- [ ] Verificação por amostragem de ausência de dados sensíveis em claro  
+- [ ] Template de exceção versionado (justificação, aprovador, expiração, evidência)  
+
+:::
+
+**Artefactos & evidências.** Regras de redacção/masking, relatório de amostragem de logs, registo de exceções com validade temporal e aprovação por severidade.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Redacção básica de credenciais | Redacção + exceções formais (máx 6 meses) | Redacção verificada por amostragem + exceções (máx 3 meses) + reavaliação pré-expiração |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Desenvolvimento/Operações | Emissão de log / criação de exceção | DevOps + AppSec | Antes de persistência / antes de supressão |
+
+**Ligações úteis.** [Controlos de Logging Centralizado](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/controles-logging-centralizado); [Exceções em Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/excecoes-operacoes)
+
+---
+
+### US-15 - Deteção de falha de ingestão e dashboards operacionais
+
+O silêncio de uma fonte de logs pode ser tão grave como um alerta explícito.  
+
+**Contexto.** O `OPS-004` exige que a centralização de logs tenha **ingestão verificável** e que **falhas de envio sejam detectadas e alertadas** — uma fonte que deixa de reportar cria um *blind spot* que nenhum alerta de conteúdo deteta. Esta visibilidade do próprio pipeline materializa-se em dashboards operacionais que tornam a cobertura, o volume e a latência observáveis de forma contínua.  
+
+:::userstory
+**História.**   
+Como **DevOps/SRE**, quero **detetar e alertar falhas de ingestão de logs e expor o estado do pipeline em dashboards**, para **eliminar blind spots causados por fontes silenciosas e tornar a cobertura de monitorização observável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma fonte de logs esperada no SIEM  
+  **Quando** o volume cai abaixo do baseline ou a fonte fica silenciosa além da janela esperada  
+  **Então** é gerado alerta de falha de ingestão acionável para a equipa responsável  
+- **Dado** o pipeline de monitorização em operação  
+  **Quando** se observa o estado  
+  **Então** dashboards refletem cobertura por fonte, volume, latência e falhas de ingestão  
+
+**Checklist.**  
+- [ ] Alerta de falha/ausência de ingestão por fonte configurado  
+- [ ] Baseline de volume/latência por fonte estabelecido  
+- [ ] Dashboards de cobertura, volume e latência do pipeline disponíveis  
+
+:::
+
+**Artefactos & evidências.** Regras de deteção de falha de ingestão, baselines de volume por fonte, dashboards operacionais do pipeline de logging.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Verificação manual de fontes | Alerta de falha de ingestão + dashboard básico | Deteção por baseline + dashboards completos de cobertura/latência |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Deploy/Operações | Construção do pipeline / fonte silenciosa | DevOps + SRE | Contínuo |
+
+**Ligações úteis.** [Integração SIEM](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/integracao-siem); [Métricas e Indicadores](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/metricas-indicadores)
+
+---
+
+### US-16 - Cobertura ATT&CK e priorização EPSS/KEV
+
+Detetar sem mapear cobertura é confiar na sorte; remediar sem priorizar é desperdiçar esforço.  
+
+**Contexto.** As regras de deteção devem declarar as técnicas **MITRE ATT&CK** que cobrem (com a versão ATT&CK em uso registada), tornando explícitas as lacunas de cobertura. Em paralelo, a priorização de remediação deve aplicar **EPSS** (probabilidade de exploração) e **KEV** (exploração confirmada) sobre os SLAs por severidade, mantendo o SLA por severidade como piso.  
+
+:::userstory
+**História.**   
+Como **AppSec/IR**, quero **mapear as regras de deteção a técnicas MITRE ATT&CK e priorizar a remediação com EPSS e KEV**, para **expor lacunas de cobertura de deteção e concentrar o esforço de remediação no risco realmente explorável**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** o conjunto de regras de deteção ativas  
+  **Quando** se mapeia a cobertura  
+  **Então** cada regra declara as técnicas ATT&CK que cobre e a versão ATT&CK em uso está registada  
+- **Dado** uma vulnerabilidade a remediar  
+  **Quando** se define a prioridade  
+  **Então** EPSS e KEV ajustam a ordem sobre o SLA por severidade, que se mantém como piso  
+
+**Checklist.**  
+- [ ] Regras de deteção mapeadas a técnicas ATT&CK com versão registada  
+- [ ] Lacunas de cobertura ATT&CK identificadas e priorizadas  
+- [ ] EPSS e KEV aplicados na priorização, com SLA por severidade como piso  
+
+:::
+
+**Artefactos & evidências.** Matriz de cobertura ATT&CK por regra com versão, registo de lacunas, política de priorização com EPSS/KEV e SLA por severidade.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não aplicável | Mapeamento ATT&CK das regras críticas + KEV na priorização | Cobertura ATT&CK completa + EPSS/KEV com revisão contínua |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Operações | Criação/revisão de regra / triagem de vulnerabilidade | AppSec + IR | Por release / por triagem |
+
+**Ligações úteis.** [MITRE ATT&CK como Vocabulário de Detection Engineering](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/attack-detection-engineering); [Priorização com EPSS e KEV](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/epss-kev-priorizacao)
+
+---
+
+### US-17 - Exercícios de resposta a incidentes end-to-end
+
+Um playbook que nunca foi executado é uma hipótese, não uma capacidade.  
+
+**Contexto.** O `OPS-007` exige integração com o processo formal de resposta a incidentes e **evidência de ativação de playbooks num incidente real ou exercício documentado no último ciclo**. Sem exercícios end-to-end — do alerta à resolução — a cadeia deteção→escalada→resposta permanece não validada e o MTTR real é desconhecido.  
+
+:::userstory
+**História.**   
+Como **IR/AppSec**, quero **executar exercícios de resposta a incidentes end-to-end com periodicidade definida**, para **validar a cadeia alerta→playbook→resolução e confirmar que os tempos de resposta cumprem o SLA antes de um incidente real**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um cenário de incidente representativo  
+  **Quando** o exercício é executado  
+  **Então** o playbook associado é ativado de ponta a ponta e os tempos (acknowledge/resolve) são medidos contra o SLA  
+- **Dado** a conclusão do exercício  
+  **Quando** se faz o balanço  
+  **Então** lacunas são registadas e geram ações corretivas rastreáveis  
+
+**Checklist.**  
+- [ ] Cenário de exercício representativo definido  
+- [ ] Playbook ativado end-to-end com tempos medidos contra SLA  
+- [ ] Lacunas e ações corretivas registadas no último ciclo  
+
+:::
+
+**Artefactos & evidências.** Plano e relatório de exercício, registo de tempos vs SLA, lista de lacunas e ações corretivas.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Walkthrough manual ocasional | Exercício anual de playbooks críticos | Exercícios periódicos end-to-end + medição de MTTR e melhoria contínua |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Operações | Ciclo de exercício / revisão de playbook | IR + AppSec | No último ciclo (anual mínimo) |
+
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Catálogo de Requisitos de Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
+
+---
+
+### US-18 - Governação de automação SOAR e kill-switch de alertas
+
+Automação que executa ações irreversíveis sem aprovação humana é um risco operacional, não um controlo.  
+
+**Contexto.** A automação em SOAR combina decisões determinísticas (que podem operar sem aprovação) com decisões não-determinísticas (que exigem validação humana), e tem guardrails explícitos: ações irreversíveis — purga de logs, desativação de alertas, alteração de baselines — **nunca** são automáticas. Quando um alerta mal calibrado provoca uma *alert storm*, o kill-switch permite desativação temporária com limite temporal, notificação obrigatória e RCA antes de reativar.  
+
+:::userstory
+**História.**   
+Como **IR/AppSec**, quero **governar a automação SOAR com guardrails explícitos e um kill-switch controlado de alertas**, para **impedir que automação execute ações irreversíveis sem aprovação humana e travar alert storms sem criar blind spots permanentes**.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma ação automatizada em SOAR  
+  **Quando** a ação é irreversível ou de alto impacto (purga de logs, desativação de alertas, alteração de baselines, isolamento massivo)  
+  **Então** exige aprovação humana e respeita os limites de guardrail definidos  
+- **Dado** uma *alert storm* causada por alerta mal calibrado  
+  **Quando** o kill-switch é acionado  
+  **Então** a desativação tem limite temporal (máx 2h), notifica o AppSec Lead automaticamente e exige RCA documentado antes de reativar  
+
+**Checklist.**  
+- [ ] Guardrails de SOAR documentados (ação, limite, razão) com aprovação humana para ações irreversíveis  
+- [ ] Kill-switch com limite temporal, notificação automática e RCA obrigatório antes de reativar  
+- [ ] Distinção determinístico/não-determinístico aplicada na decisão de automatizar  
+
+:::
+
+**Artefactos & evidências.** Tabela de guardrails SOAR versionada, registos de aprovação de ações de alto impacto, registos de kill-switch com RCA associado.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Automação determinística simples; ações irreversíveis manuais | Guardrails documentados + kill-switch com RCA | Guardrails + kill-switch + auditoria de aprovações e revisão de limites |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Operações | Ação SOAR de alto impacto / alert storm | IR + AppSec | Conforme severidade (kill-switch ≤ 2h) |
+
+**Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Exceções em Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/excecoes-operacoes)
+
+---
+
 ## 📦 Artefactos esperados
 
 Cada prática deixa rastos verificáveis.  

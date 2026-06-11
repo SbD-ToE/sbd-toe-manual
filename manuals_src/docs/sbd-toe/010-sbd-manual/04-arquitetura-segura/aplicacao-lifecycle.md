@@ -769,6 +769,93 @@ Como **Software Architect** e **AppSec Engineer**, quero validar que a arquitect
 
 ---
 
+### US-17 - Segmentação de ambientes e validação de topologia como código (L3)
+
+Em L3 a separação entre `dev`, `staging` e `prod` deixa de ser convenção e passa a ser invariante verificável no pipeline.  
+
+**Contexto.** A `ARC-011` exige segregação de rede, permissões e identidade entre ambientes; a `ARC-013` exige que a topologia seja validada automaticamente em CI/CD, com bloqueio de promoção em falha. Sem operacionalização, a segmentação fica como intenção em diagrama — sem garantia de que o estado real dos ambientes a respeita, nem deteção de *drift* quando alguém reutiliza credenciais ou abre *peering* indevido entre `staging` e `prod`. A US-07 cobre validação automatizável genérica; esta US prescreve a verificação específica da segmentação e da topologia como código para aplicações de risco elevado.  
+
+:::userstory
+**História.**   
+Como **DevOps/SRE** e **AppSec Engineer**, quero validar automaticamente, em CI/CD, a segregação de rede, permissões e identidade entre `dev`/`staging`/`prod` e a conformidade da topologia com o baseline aprovado, para que uma promoção que viole a segmentação seja bloqueada antes de chegar a produção.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que uma aplicação L3 possui ambientes `dev`, `staging` e `prod`  
+  **Quando** o pipeline executa a validação de topologia  
+  **Então** é produzido um output verificável que confirma segregação de rede, permissões e identidade entre ambientes (sem credenciais *cross-env*), com logs de execução arquivados  
+- **Dado** que uma alteração introduz *peering*, partilha de identidade ou exposição entre ambientes não previstos no baseline  
+  **Quando** a validação corre na promoção  
+  **Então** a promoção é bloqueada e o desvio é registado para remediação ou exceção formal  
+
+**Checklist.**  
+- [ ] Segregação de rede entre `dev`/`staging`/`prod` evidenciada (VLANs, *namespaces*, *peering policies*)  
+- [ ] Segregação de identidade e permissões evidenciada (IAM/*service accounts* distintas, sem credenciais *cross-env*)  
+- [ ] Job de CI valida topologia como código (ex.: diagramas-como-código, Cartography, verificação `checkov`/Terraform) com logs disponíveis  
+- [ ] Falha de validação bloqueia a promoção; desvio gera registo de remediação ou exceção aprovada  
+
+:::
+
+**Artefactos & evidências.** Configuração do job de validação de topologia (`ci-pipeline.*`); `ci-architecture-report.*` com output de segregação e topologia; evidência IaC de segregação de rede/identidade; registo de bloqueio/remediação (PR/issue).  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Não obrigatório | Recomendado: segregação documentada de ambientes | Obrigatório: segregação de rede/permissões/identidade verificável + validação de topologia como código em CI/CD com bloqueio de promoção (`ARC-011`, `ARC-013`) |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| CI/CD | Promoção entre ambientes (L3) | DevOps/SRE + AppSec Engineer | Em cada promoção; bloqueio imediato em falha |
+
+**Ligações úteis.** [Catálogo de requisitos arquiteturais (ARC-011, ARC-013)](./addon/catalogo-requisitos-arquitetura) · [Cap. 7 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
+
+---
+
+### US-18 - Padrões arquitetónicos para sistemas AI/ML não-agentic
+
+Sistemas que integram LLMs, modelos preditivos ou RAG sem *tool-use* exigem trust boundaries e controlos próprios, distintos do caso agentic.  
+
+**Contexto.** A US-15 trata componentes não determinísticos em geral e a US-16 cobre o agente autónomo com *tool-use* (`ARC-015`). Falta operacionalizar a `ARC-014` para o caso **não-agentic** — LLMs em interface conversacional, modelos preditivos e RAG que produzem *output* mas não executam ações em sistemas externos. Aqui a superfície de ataque é o próprio modelo e os seus dados: prompt injection direta e indireta (LLM01-2025, `AML.T0051.001`), *training data poisoning* (`AML.T0020`), *model theft* (ML05-2023) e ausência de proveniência de modelos/datasets (LLM03-2025). A arquitetura tem de marcar as trust boundaries de *training-time* e *inference-time* explicitamente e tratar a IA como participante distinto no DFD, não como biblioteca opaca.  
+
+:::userstory
+**História.**   
+Como **Arquitetos de Software** e **AppSec Engineer**, quero aplicar padrões arquitetónicos dedicados a sistemas AI/ML não-agentic, com trust boundaries explícitas, controlos anti-prompt-injection e proveniência de modelos/datasets, para que o risco específico de IA fique contido e auditável ao nível da arquitetura.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que a solução integra um componente AI/ML que produz *output* sem invocar *tools* (LLM conversacional, modelo preditivo, RAG)  
+  **Quando** desenho ou revejo a arquitetura  
+  **Então** o DFD marca as trust boundaries de *training-time* e *inference-time*, com a IA como participante distinto, e os controlos de fronteira ficam documentados  
+- **Dado** que existe entrada de utilizador ou conteúdo externo no contexto do modelo  
+  **Quando** especifico os controlos arquitetónicos  
+  **Então** há *input sanitization* e *output filtering* contra prompt injection direta e indireta, *rate limiting* e isolamento das chamadas ao modelo  
+- **Dado** que o sistema usa modelos e datasets  
+  **Quando** registo a proveniência  
+  **Então** origem e versão de modelos e datasets ficam documentadas, com consideração explícita de *model theft* e *training data poisoning*  
+
+**Checklist.**  
+- [ ] Trust boundaries *training-time* e *inference-time* marcadas no DFD, com a IA como participante distinto  
+- [ ] Controlos anti-prompt-injection (input/output) para injeção direta e indireta (LLM01-2025, `AML.T0051.001`)  
+- [ ] *Rate limiting* e isolamento das chamadas ao modelo de inferência  
+- [ ] Proveniência de modelos e datasets documentada (`AML.T0010`, LLM03-2025); cenários de *model theft* (ML05-2023) e *data poisoning* (`AML.T0020`) considerados  
+
+:::
+
+**Artefactos & evidências.** Atualização da `solution-architecture.md` com trust boundaries AI/ML; DFD versionado com a IA como participante distinto; registo de proveniência de modelos/datasets; ligação ao modelo de ameaças AI/ML (Cap. 3).  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Identificação simples do componente AI/ML e nota de impacto | Obrigatório: trust boundaries, controlos anti-prompt-injection e proveniência documentados (`ARC-014`) | Obrigatório + isolamento reforçado das chamadas ao modelo e revisão independente da arquitetura AI/ML |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Design / Revisão | Introdução ou alteração de componente AI/ML não-agentic | Arquitetos de Software + AppSec Engineer | Antes da aprovação do design |
+
+**Ligações úteis.** [`ARC-014` — padrões arquitetónicos AI/ML](./addon/catalogo-requisitos-arquitetura#arc-014) · [Recomendações Avançadas — §AI/ML](./recomendacoes-avancadas#ai-ml) · [Cap. 3 - Metodologias AI/ML](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#ai-ml)
+
+---
+
 ## 📑 Artefactos esperados
 
 | Artefacto | Origem / US | Evidência associada |

@@ -713,6 +713,163 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 
 ---
 
+### US-07 - Reforço de controlos por atributos do risco
+
+A classificação L1–L3 é uma projeção simplificada (E/D/I); certos atributos internos do risco exigem controlos do nível imediatamente superior, independentemente do nível atribuído.  
+
+**Contexto.** Uma aplicação L1 ou L2 com baixa detetabilidade, baixa evidenciabilidade, comportamento não-determinístico ou delegação/execução automática com impacto real fica subprotegida se os controlos seguirem apenas o nível nominal.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineer**, quero **avaliar os atributos do risco (detetabilidade, evidenciabilidade, reprodutibilidade, delegação/execução automática) e escalar os controlos para o nível imediatamente superior quando indicado**, para garantir proporcionalidade real e não meramente nominal dos controlos.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** uma aplicação classificada L1 ou L2 cujos atributos do risco indiquem baixa detetabilidade, baixa evidenciabilidade, não-determinismo ou execução automática com impacto real  
+  **Quando** avalio os atributos do risco face à matriz de controlos  
+  **Então** aplico os controlos equivalentes ao nível imediatamente superior e registo o racional do reforço de forma rastreável  
+
+**Checklist.**  
+- [ ] Atributos do risco avaliados explicitamente para a aplicação (detetabilidade, evidenciabilidade, reprodutibilidade, delegação/execução automática)  
+- [ ] Decisão de reforço (sim/não) documentada com racional técnico por atributo desencadeador  
+- [ ] Quando reforço aplicado: controlos do nível superior associados à aplicação e rastreáveis ao pipeline/backlog  
+- [ ] Reforço aplicado independentemente da presença explícita de IA (regra tecnologicamente neutra)  
+
+:::
+
+**Artefactos & evidências.** Registo de avaliação de atributos do risco anexo à classificação (`classificacao-aplicacao.yaml` ou ata); tabela `atributo | valor | desencadeia reforço? | controlos do nível superior aplicados`.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Obrigatório avaliar; reforça para L2 quando atributo desencadeia | Obrigatório avaliar; reforça para L3 quando atributo desencadeia | Já no topo; atributos exigem controlos mais fortes a montante e evidência reforçada |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Classificação / Design | Após classificação inicial ou quando se introduz automação/assistência com impacto nos atributos | AppSec Engineer + Arquitetura | Antes da aprovação de arquitetura |
+
+**Ligações úteis.** [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco) · [Atributos do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/atributos-risco)
+
+---
+
+### US-08 - Interdições de aceitação de risco em automação e apoio à decisão
+
+Há situações em que a aceitação de risco (e de risco residual) é categoricamente proibida, independentemente da urgência, custo ou nível da aplicação.  
+
+**Contexto.** Sem um gate explícito de interdição, decisões/ações automatizadas com impacto real podem ser aceites sem revisão humana efetiva, ou com resultados não reproduzíveis, contornando os critérios formais de aceitação.  
+
+:::userstory
+**História.**   
+Como **GRC/Compliance**, quero **bloquear qualquer aceitação de risco que recaia numa das situações interditas de automação/apoio à decisão**, para garantir que nenhum risco com impacto real é aceite sem revisão humana efetiva, reprodutibilidade e evidência.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um pedido de aceitação de risco (ou de risco residual) que envolva automação ou apoio à decisão  
+  **Quando** verifico as condições de interdição  
+  **Então** a aceitação é recusada se: ação automatizada com impacto real sem revisão humana efetiva; resultados não reprodutíveis/não validáveis de forma independente; ausência de evidência do funcionamento dos controlos; impacto legal/regulatório/reputacional significativo; ou aplicação L3 dependente exclusivamente de confiança implícita no mecanismo automatizado  
+
+**Checklist.**  
+- [ ] Lista de condições de interdição verificada para cada decisão de aceitação que envolva automação/IA  
+- [ ] Aceitação recusada (e registada como recusada) quando qualquer condição interdita se verifica  
+- [ ] Evidência do funcionamento correto dos controlos exigida antes de qualquer aceitação válida  
+- [ ] Em L3: confirmado que a decisão não depende exclusivamente de confiança implícita em automação/tooling não-determinístico  
+
+:::
+
+**Artefactos & evidências.** Registo da decisão de aceitação/recusa com a checklist de interdições preenchida; entrada em ferramenta GRC com racional e aprovadores.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Aplicar interdições; aceitação informal só fora das condições interditas | Interdições obrigatórias; aceitação com validação formal e registo | Interdições obrigatórias; recusa automática se dependente de mecanismo não-determinístico ou sem revisão humana |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Validação / Aceitação de risco | Pedido de aceitação de risco ou risco residual envolvendo automação/IA | GRC/Compliance + AppSec Engineer | Antes do registo da aceitação |
+
+**Ligações úteis.** [Critérios para Aceitação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/criterios-aceitacao-risco) · [Análise de Risco Residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/risco-residual)
+
+---
+
+### US-09 - Adoção de modelo de classificação alternativo (DRP/BIA) mapeado para E/D/I
+
+A organização pode reutilizar uma classificação de impacto já existente (DRP/BIA ou outro método formal) desde que mapeie os seus resultados para o contexto de desenvolvimento aplicacional.  
+
+**Contexto.** Reutilizar uma classificação DRP/BIA sem mapeamento confirmado por análise de segurança pode importar uma criticidade desalinhada da exposição e da natureza dos dados da aplicação.  
+
+:::userstory
+**História.**   
+Como **GRC/Compliance**, quero **adotar a classificação DRP/BIA existente como input e mapeá-la para o nível de risco L1–L3, confirmando o resultado por análise de segurança**, para evitar duplicação de esforço sem perder rigor na criticidade aplicacional.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que existe uma classificação DRP/BIA atualizada para a aplicação  
+  **Quando** a importo e mapeio (Crítico→Elevado, Importante/Médio→Médio, Não essencial/Baixo→Baixo)  
+  **Então** o nível L1–L3 resultante é confirmado por análise de segurança considerando exposição e natureza dos dados, e divergências são registadas com ambos os racionais  
+
+**Checklist.**  
+- [ ] Classificação DRP/BIA verificada como atualizada e correspondente ao âmbito da aplicação atual  
+- [ ] Mapeamento DRP/BIA → L1–L3 aplicado e confirmado por análise de segurança (exposição + dados)  
+- [ ] Aplicações multi-módulo classificadas por componente quando aplicável, não só globalmente  
+- [ ] Divergência DRP vs. segurança registada com ambos os racionais e discutida com as equipas envolvidas  
+- [ ] Classificação de impacto anexada/referenciada (link cruzado) no registo de risco versionado  
+
+:::
+
+**Artefactos & evidências.** Registo de risco com importação/ligação cruzada à ficha DRP/BIA; tabela `componente | classe DRP/BIA | nível L1–L3 | confirmação segurança | divergência/racional`.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Mapeamento direto admissível; confirmação leve | Mapeamento confirmado por análise de segurança e registado | Confirmação formal por segurança; classificação por componente quando multi-módulo |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Classificação inicial | Existência de DRP/BIA aplicável à aplicação | GRC/Compliance + AppSec Engineer | Antes da primeira release |
+
+**Ligações úteis.** [Adoção de DRP/BIA](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia) · [Modelo de Classificação por Eixos](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos)
+
+---
+
+### US-10 - Produção e manutenção do inventário central com autoridade de aprovação proporcional
+
+O inventário central/GRC (CLA-008) é o artefacto de evidência primário em auditoria; tem de ser produzido e mantido atualizado, com a autoridade de aprovação proporcional ao nível (CLA-002) registada por aplicação.  
+
+**Contexto.** As US existentes consomem o inventário central mas nenhuma o produz; sem registo atualizado de nível, owner, data de revisão e autoridade aprovadora, a evidência de conformidade não é defensável em auditoria.  
+
+:::userstory
+**História.**   
+Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualizado com nível de classificação, data de última revisão, owner de segurança, estado de conformidade e autoridade de aprovação proporcional ao nível**, para que a evidência de classificação esteja acessível para auditoria sem preparação manual.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** que uma aplicação é classificada, reclassificada ou muda de responsável  
+  **Quando** atualizo o inventário central  
+  **Então** cada aplicação consta com nível atual, data de última revisão, owner, estado de conformidade e autoridade aprovadora (L1 tech lead, L2 AppSec, L3 CISO), acessível para auditoria sem preparação manual  
+
+**Checklist.**  
+- [ ] Inventário central ou GRC existe e regista todas as aplicações com nível, data de revisão, owner e estado de conformidade  
+- [ ] Aprovação registada pela autoridade proporcional ao nível: L1 tech lead, L2 AppSec, L3 CISO — datada e atribuída ao responsável  
+- [ ] Inventário atualizado após cada alteração de classificação ou transferência de responsabilidade  
+- [ ] Inventário acessível para auditoria sem preparação manual  
+
+:::
+
+**Artefactos & evidências.** Inventário central/GRC; registo por aplicação `id | nível | data revisão | owner | estado conformidade | autoridade aprovadora | data aprovação`.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Entrada no inventário; aprovação por tech lead | Inventário com audit trail; aprovação por AppSec | Inventário com rastreamento granular; aprovação por CISO/equivalente |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Governação | Classificação inicial, reclassificação ou transferência de responsabilidade | GRC/Compliance (mantém) + autoridade de aprovação por nível | Atualização ≤ 5 dias úteis após o evento |
+
+**Ligações úteis.** [Catálogo de Requisitos de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/catalogo-requisitos-classificacao) · [Checklist de Revisão](/sbd-toe/sbd-manual/classificacao-aplicacoes/canon/checklist-revisao)
+
+---
+
 ## 📑 Artefactos esperados (por fase)
 
 | Fase         | Artefacto                          | Quem produz         | Onde fica                  | Evidência mínima                              |

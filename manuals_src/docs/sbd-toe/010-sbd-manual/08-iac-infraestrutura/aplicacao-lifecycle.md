@@ -846,3 +846,96 @@ Lockfiles, manifests de versões, logs de execução, registo de diffs justifica
 | L1 | Sim | Pinning básico |
 | L2 | Sim | Pinning + registo de versões efetivas |
 | L3 | Sim | Pinning + reexecução/verificação + revisão reforçada de upgrades |
+
+---
+
+### US-18 - Proibição de `apply` manual/local fora do pipeline
+
+Só o pipeline autorizado pode tocar em infraestrutura real; a estação de trabalho não é um plano de execução.  
+
+**Contexto.** Um `apply` executado localmente ou fora do pipeline contorna validações bloqueantes, enforcement de policy, assinatura de artefactos e a trilha de aprovação. Mesmo com SoD e RBAC definidos (US-15), persiste o risco de alguém com credenciais de provider correr `terraform apply` a partir da estação de trabalho, deixando o estado real divergente do baseline aprovado e sem evidência auditável. A prescrição é explícita no addon/01 ("Proibir execuções locais manuais fora de contexto validado"; "Nunca executar `terraform apply` localmente") e no item `IAC-007` do checklist ("sem `apply` manual fora do pipeline").  
+
+:::userstory
+**História.**   
+Como **DevOps / SRE** e **AppSec Engineers**, quero **garantir que todo o `apply` ocorre exclusivamente no pipeline autorizado, com bloqueio técnico de execução local/manual**, para que nenhuma alteração chegue a ambientes reais sem passar por validações, enforcement e aprovação rastreável.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** as credenciais/identidade de execução do provider  
+  **Quando** são emitidas  
+  **Então** só são obteníveis pelo runner do pipeline (OIDC/workload identity), não por utilizadores em estações de trabalho  
+- **Dado** uma tentativa de `apply` fora do pipeline autorizado  
+  **Quando** é acionada  
+  **Então** é bloqueada por ausência de credenciais válidas e/ou por environment protection, e o evento é registado  
+- **Dado** um `apply` legítimo  
+  **Quando** é executado  
+  **Então** corre no pipeline sobre um `plan` aprovado, deixando log de execução associado ao PR/aprovação  
+
+**Checklist.**  
+- [ ] Credenciais de provider para `apply` indisponíveis a utilizadores fora do runner (OIDC/JIT)  
+- [ ] Environment protection / branch protection impede `apply` fora do pipeline  
+- [ ] Política organizacional que proíbe explicitamente `apply` manual/local em ambientes reais  
+- [ ] Logs de execução de `apply` sempre rastreáveis ao pipeline e à aprovação  
+
+:::
+
+**Artefactos & evidências.** Configuração OIDC/environment protection, política de execução controlada, logs de `apply` com origem (pipeline run ID), evidência de bloqueio de tentativas fora do pipeline.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Política documentada + `apply` via pipeline em prod | Bloqueio técnico (sem credenciais locais) em staging/prod | Bloqueio técnico em todos os ambientes + auditoria de tentativas e break-glass registado |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Deploy / Operação | Pedido de `apply` | DevOps / SRE | Execução só em pipeline; bloqueio imediato fora dele |
+| Governação | Auditoria periódica | GRC / Compliance | Revisão trimestral de tentativas e exceções |
+
+**Ligações úteis.** [Planeamento e Controlo da Aplicação de IaC](/sbd-toe/sbd-manual/iac-infraestrutura/addon/planeamento-e-controle) · [Catálogo IAC-007](/sbd-toe/sbd-manual/iac-infraestrutura/addon/catalogo-requisitos-iac)
+
+---
+
+### US-19 - Reabertura da revisão de hardening por integridade do baseline
+
+Mexer no que define a baseline reabre a revisão da postura de segurança antes do próximo `apply`.  
+
+**Contexto.** Em IaC o objeto a proteger não é só o recurso final, mas o **baseline versionado** que define como esse recurso nasce e pode mudar. Quando um módulo, provider, política bloqueante ou template é alterado — ou quando o *drift detection* revela divergência — a postura de hardening aprovada pode ter sido erodida silenciosamente sem que qualquer validação por recurso o detete. A prescrição vive no princípio "Integridade do baseline" (addon/04), na Nota Operacional e na "Regra de integridade do baseline" do próprio lifecycle, e no intro ("qualquer desvio material deve ser bloqueado, revisto ou explicitamente aceite"). Falta uma US que torne a reabertura desta revisão um evento operacional com gate, owner e registo.  
+
+:::userstory
+**História.**   
+Como **AppSec Engineers** e **DevOps / SRE**, quero **tratar a alteração de módulos, providers, políticas ou templates (e o drift confirmado) como evento que reabre obrigatoriamente a revisão de hardening antes do próximo `apply`**, para impedir erosão silenciosa do baseline aprovado.  
+
+**Critérios de aceitação (BDD).**  
+- **Dado** um PR que altera módulo, provider, política bloqueante ou template base  
+  **Quando** é submetido  
+  **Então** o pipeline marca-o como **evento de revisão de baseline** e exige confirmação registada de que a postura de hardening continua segura antes de permitir `apply`  
+- **Dado** um resultado de *drift detection* que revela divergência face ao baseline  
+  **Quando** é confirmado  
+  **Então** é aberta revisão com *owner* atribuído, e o `apply` de reconciliação só prossegue após decisão registada  
+- **Dado** uma revisão de baseline concluída  
+  **Quando** é aprovada  
+  **Então** mantém-se rastreabilidade entre módulo/template alterado, `plan`, evidência de validação e exceções aplicáveis  
+
+**Checklist.**  
+- [ ] Pipeline deteta alterações a módulos/providers/políticas/templates e marca-as como evento de baseline  
+- [ ] Gate que exige revisão de hardening registada antes do `apply` nesses eventos  
+- [ ] *Owner* atribuído e decisão de revisão registada (incl. drift confirmado)  
+- [ ] Rastreabilidade módulo/template → `plan` → evidência de validação → exceções  
+
+:::
+
+**Artefactos & evidências.** Registo de revisão de baseline (data, *owner*, findings), output de `plan` associado, relatórios de validação/policy pós-alteração, relatórios de drift e respetivas decisões, registo de exceções aplicáveis.  
+
+**Proporcionalidade L1–L3.**  
+| L1 | L2 | L3 |
+|----|----|----|
+| Revisão manual registada quando módulo/policy/template muda | Gate no pipeline marca eventos de baseline + revisão obrigatória antes de `apply` | Revisão formal com owner + revisão periódica de templates/módulos + drift confirmado como falha de segurança bloqueante |
+
+**Integração no SDLC.**  
+| Fase | Trigger | Responsável | SLA |
+|------|---------|-------------|-----|
+| Desenvolvimento / Revisão | PR altera módulo/provider/policy/template | AppSec Engineers | Revisão antes do merge/`apply` |
+| Operação | Drift confirmado | DevOps / SRE | Abertura de revisão e correção via PR |
+| Governação | Revisão periódica de baseline | GRC / Compliance | Cadência L3 (semanal/trimestral conforme criticidade) |
+
+**Ligações úteis.** [Princípios SbD para IaC — Integridade do baseline](/sbd-toe/sbd-manual/iac-infraestrutura/addon/principios-sbd-iac) · [Catálogo IAC-013](/sbd-toe/sbd-manual/iac-infraestrutura/addon/catalogo-requisitos-iac)

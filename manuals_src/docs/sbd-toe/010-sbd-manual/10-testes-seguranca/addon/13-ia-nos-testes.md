@@ -22,7 +22,7 @@ Este addon prescreve como usar IA para acelerar e aumentar cobertura **sem subst
 
 ### P1 - IA é “assistente”, não “decisor”
 A IA pode propor: triagens, hipóteses, priorização, caminhos de reprodução, patch candidates, testes.  
-A decisão final (corrigir/aceitar/suprimir/defer) é sempre humana e rastreável - ver **US-21** e **US-22** no lifecycle.
+A decisão final (corrigir/aceitar/suprimir/defer) é sempre humana e rastreável - ver **US-12** e **US-13** no lifecycle.
 
 ### P2 - Evidência tem de ser reprodutível sem IA
 Qualquer finding confirmado tem de poder ser reproduzido por:
@@ -67,8 +67,8 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 **Anti-padrão:** “IA disse que é falso positivo” sem prova.
 
 **Evidência esperada:**
-- decisão documentada via template (US-21 / T1),
-- ligação a validação empírica (US-22 / T1–T5),
+- decisão documentada via template (US-12 / T1),
+- ligação a validação empírica (US-13 / T1–T5),
 - registo de supressão com rationale e aprovador (se FP).
 
 ---
@@ -242,8 +242,8 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 Este addon reforça diretamente:
 
 - **US-10/US-11** (centralização e feedback) - IA pode acelerar triagem e reduzir ruído, sem perder rastreabilidade.
-- **US-21** (decisão assistida) - IA alimenta hipótese; decisão é humana, documentada.
-- **US-22** (validação empírica) - IA sugere como validar; confirmação é sempre por PoC/teste.
+- **US-12** (decisão assistida) - IA alimenta hipótese; decisão é humana, documentada.
+- **US-13** (validação empírica) - IA sugere como validar; confirmação é sempre por PoC/teste.
 
 ---
 

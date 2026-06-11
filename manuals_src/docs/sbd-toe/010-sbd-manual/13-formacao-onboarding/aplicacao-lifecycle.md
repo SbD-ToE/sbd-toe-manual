@@ -88,14 +88,14 @@ Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em
 Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevOps, Gestão)**, para **garantir atualização com práticas mais recentes**.  
 
 **Critérios de aceitação (BDD).**  
-- **Dado** ciclo trimestral (L3), anual (L1–L2)  
+- **Dado** ciclo trimestral (L3), semestral (L2), anual (L1)  
   **Quando** LMS disponibiliza cursos  
   **Então** cada perfil completa trilha específica  
 
 **Checklist.**  
 - [ ] Cursos definidos por perfil  
 - [ ] Registo no LMS  
-- [ ] Ciclo definido: trimestral para L3, anual para L1/L2  
+- [ ] Ciclo definido: trimestral para L3, semestral para L2, anual para L1 (TRN-005)  
 - [ ] Triggers adicionais: novo capítulo técnico, novo risco, incidente  
 - [ ] Comunicação a equipas (anúncio, deadline, critério de conclusão)  
 - [ ] Integração em OKRs individuais ou avaliações de performance  
@@ -108,12 +108,12 @@ Como **AppSec**, quero **fornecer formação contínua por perfil (Dev, QA, DevO
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Obrigatório anual | Obrigatório trimestral |
+| Recomendado anual | Obrigatório semestral | Obrigatório trimestral |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Ciclo contínuo | Trimestral (L3) / Anual (L1–L2) | AppSec Engineer + RH | Deadline comunicado com 2 semanas |
+| Ciclo contínuo | Trimestral (L3) / Semestral (L2) / Anual (L1) | AppSec Engineer + RH | Deadline comunicado com 2 semanas |
 
 **Ligações úteis.**  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  

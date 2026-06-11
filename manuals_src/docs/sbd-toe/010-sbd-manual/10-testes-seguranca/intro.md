@@ -69,6 +69,10 @@ A aplicação prática deve ser entendida como um **ciclo contínuo**, não como
   Porque a validação é a única forma de garantir que segurança não é promessa, mas **realidade comprovada**.  
   Os testes sustentam decisões críticas e reduzem o tempo de exposição a vulnerabilidades.
 
+:::note[Teste e análise — uma distinção que decide onde cada controlo vive]
+Nem toda a verificação de segurança é um *teste*. Um teste confronta comportamento observado com comportamento esperado: tem um **oráculo comportamental** — é o caso do SAST, DAST, IAST, fuzzing e PenTesting, que vivem neste capítulo. A *análise de composição* (SCA, Cap. 05), o *scanning* de secrets, IaC e imagens de container (Caps. 06 a 09) e a *validação funcional de requisitos de segurança* (Cap. 02) operam sobre um **oráculo de lookup ou de política**: confrontam um inventário com uma base de CVE, com uma regra ou com um critério de aceitação. A distinção não é académica — é o que justifica o SCA viver no capítulo de dependências, e não aqui. Este capítulo cobre o oráculo comportamental; a verificação completa do sistema distribui-se pelos capítulos próprios e consolida-se na [matriz transversal de verificação](./addon/matriz-verificacao-transversal).
+:::
+
 ---
 
 ## 👥 Papéis envolvidos

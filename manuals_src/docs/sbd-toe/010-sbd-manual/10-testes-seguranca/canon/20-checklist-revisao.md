@@ -40,6 +40,11 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 | Foi realizado PenTesting com âmbito, metodologia documentada e rules of engagement, com reteste de correções e integração dos findings (quando aplicável)? (`TST-008`) | ☐           |
 | A eficácia do programa é medida com KPIs (cobertura, SLA de resolução, regressão, ruído) e os findings são comunicados automaticamente às equipas? | ☐           |
 | O uso de IA em testes está coberto por política (minimização, masking, sem auto-merge de patches), com eval suites versionadas como gate para agentes de IA, e a TLPT readiness preparada para entidades sujeitas a DORA (quando aplicável)? | ☐           |
+| **Item de fronteira** — a verificação complementar coberta noutros capítulos foi confirmada como executada: análise de composição/SCA (Cap. 05), scanning de secrets, IaC e imagens de container (Caps. 06 a 09) e validação funcional de requisitos de segurança (Cap. 02), sem duplicar os respetivos controlos? | ☐           |
+
+---
+
+> 📐 O **item de fronteira** acima é uma exceção deliberada e localizada à derivação top-down deste checklist: o capítulo de testes é a lente natural onde o auditor pergunta *"está tudo verificado?"*, mas a verificação de segurança real está distribuída por vários capítulos. O item confirma a sua execução sem reabrir os controlos, que permanecem na competência dos capítulos próprios. O mapa completo está na [matriz transversal de verificação](../addon/matriz-verificacao-transversal).
 
 ---
 

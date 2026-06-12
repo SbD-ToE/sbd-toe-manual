@@ -69,7 +69,7 @@ Modelo recomendado:
 > **Role:** developer
 > **Gerado a partir de:** SbD-ToE MCP v<versão>
 
-## Como o teu role contribui em cada fase
+## Como o role contribui em cada fase
 
 ### Fase: requirements
 - Practice <ID>: <texto> (cap. <chapterId>)

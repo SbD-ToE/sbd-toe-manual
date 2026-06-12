@@ -11,7 +11,7 @@ tags:
 
 # Quickstart — 60 segundos
 
-A forma mais rápida de saber se o MCP é para ti é experimentá-lo durante um minuto e ver o teu cliente AI a citar o manual com IDs em vez de o parafrasear. Não precisas de clonar nada nem de configurar credenciais — o servidor está publicado no npm e arranca via `npx`.
+A forma mais rápida de avaliar o MCP é experimentá-lo durante um minuto e ver o cliente AI a citar o manual com IDs em vez de o parafrasear. Não é preciso clonar nada nem configurar credenciais — o servidor está publicado no npm e arranca via `npx`.
 
 ## Pré-requisito
 
@@ -23,11 +23,11 @@ A forma mais rápida de saber se o MCP é para ti é experimentá-lo durante um 
 claude mcp add sbd-toe -- npx -y @shiftleftpt/sbd-toe-mcp
 ```
 
-E pronto. Numa nova sessão do Claude Code, pergunta:
+E pronto. Numa nova sessão do Claude Code, basta perguntar:
 
 > *"Lista os capítulos do manual SbD-ToE."*
 
-Deves ver a sessão arrancar com a tool `list_sbd_toe_chapters` a devolver os 15 capítulos.
+A sessão deve arrancar com a tool `list_sbd_toe_chapters` a devolver os 15 capítulos.
 
 ## Opção 2 — Cursor / Claude Desktop / Windsurf
 
@@ -44,7 +44,7 @@ Adicionar ao ficheiro de configuração MCP do cliente:
 }
 ```
 
-Reinicia o cliente. Tools `sbd-toe.*` ficam disponíveis automaticamente.
+Após reiniciar o cliente, as tools `sbd-toe.*` ficam disponíveis automaticamente.
 
 ## Opção 3 — VS Code + GitHub Copilot
 
@@ -64,16 +64,16 @@ Reinicia o cliente. Tools `sbd-toe.*` ficam disponíveis automaticamente.
 
 ## Validar a ligação
 
-Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), começa qualquer conversa com:
+Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), basta começar qualquer conversa com:
 
 ```
 setup_sbd_toe_agent(riskLevel="L2", projectRole="appsec-engineer")
 ```
 
-A resposta deve enumerar os capítulos activos para esse *risk level* e as regras específicas do papel. Se vires uma lista coerente — capítulos numerados, *concerns*, regras — está ligado. Se vires algo vago ou sem IDs, o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.
+A resposta deve enumerar os capítulos activos para esse *risk level* e as regras específicas do papel. Uma lista coerente — capítulos numerados, *concerns*, regras — confirma a ligação. Uma resposta vaga ou sem IDs indica que o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.
 
 ## E a seguir
 
-- Não sabes que *risk level* aplicar? Vê [Instalação por cliente](./03-instalacao.md) → secção "Determinar *risk level* do projecto".
-- Queres que o cliente AI consulte o manual **automaticamente** sem ter de pedir? Configura uma [skill / agent file](./04-skills-agentes.md).
-- Procuras receitas prontas (auditoria, *codegen*, *threat model*)? [Casos de uso](./casos-uso/).
+- Em dúvida sobre que *risk level* aplicar? Ver [Instalação por cliente](./03-instalacao.md) → secção "Determinar *risk level* do projecto".
+- Para que o cliente AI consulte o manual **automaticamente** sem ter de pedir: configurar uma [skill / agent file](./04-skills-agentes.md).
+- Receitas prontas (auditoria, *codegen*, *threat model*): [Casos de uso](./casos-uso/).

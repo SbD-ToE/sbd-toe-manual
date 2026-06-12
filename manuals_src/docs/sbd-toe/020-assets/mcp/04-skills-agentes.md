@@ -13,7 +13,7 @@ tags:
 
 # Skills e agentes
 
-Há um efeito subtil no uso diário do MCP: as tools ficam disponíveis assim que o servidor liga, mas o cliente AI não as começa a usar espontaneamente. Falta-lhe o *quando*. Por isso, cada cliente moderno permite injectar instruções persistentes no início da conversa — chamem-lhe *skill*, *agent file*, *rules* ou *system prompt*. É aí que se ensina o cliente a procurar o manual antes de improvisar.
+Há um efeito subtil no uso diário do MCP: as tools ficam disponíveis assim que o servidor liga, mas o cliente AI não as começa a usar espontaneamente. Falta-lhe o *quando*. Por isso, cada cliente moderno permite injectar instruções persistentes no início da conversa — *skill*, *agent file*, *rules* ou *system prompt*, conforme o cliente. É aí que se ensina o cliente a procurar o manual antes de improvisar.
 
 Em vez de te pedir para escreveres essas instruções do zero (e ficarem desactualizadas no dia seguinte), o servidor publica-as via `generate_sbd_toe_skill`. Geras uma vez, guardas no caminho canónico do cliente, e re-geras só depois de um *upgrade* do MCP. Curto, e sempre alinhado com a fonte.
 
@@ -91,7 +91,7 @@ Aceitam *aliases* — o servidor resolve automaticamente.
 
 ### Claude Code
 
-Para além do `.claude/skills/sbd-toe.md`, podes criar um *subagent* dedicado:
+Para além do `.claude/skills/sbd-toe.md`, é possível criar um *subagent* dedicado:
 
 ```markdown
 ---

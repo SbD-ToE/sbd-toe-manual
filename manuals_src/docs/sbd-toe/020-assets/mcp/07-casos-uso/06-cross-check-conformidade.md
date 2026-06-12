@@ -23,7 +23,7 @@ Esta receita serve para a segunda. Combina o MCP (onde estão indexados a maior 
 
 ## Cobertura actual no MCP — o que está dentro e fora
 
-O *snapshot* publicado em **`@shiftleftpt/sbd-toe-mcp@0.9.0`** já inclui canon (capítulos 00–14), ontologia *AppSec Core v1* **e** os cross-checks **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** indexados no KG. Para esses, podes (e deves) usar o MCP — `search_sbd_toe_manual` devolve os intros, playbooks e notas de convergência directamente.
+O *snapshot* publicado em **`@shiftleftpt/sbd-toe-mcp@0.9.0`** já inclui canon (capítulos 00–14), ontologia *AppSec Core v1* **e** os cross-checks **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** indexados no KG. Para esses, o MCP é a fonte recomendada — `search_sbd_toe_manual` devolve os intros, playbooks e notas de convergência directamente.
 
 A **excepção** é o cross-check do **AI Act** (Reg. (UE) 2024/1689), adicionado ao manual web na release **v1.3.0** posterior à publicação do servidor. Para perguntas sobre AI Act, consultar **directamente o manual web** até nova publicação do MCP (ver [content lag](../10-troubleshooting-faq.md#content-lag)).
 

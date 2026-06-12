@@ -12,9 +12,9 @@ tags:
 
 # Padrões avançados
 
-À medida que vais usando o MCP em projectos reais, vais notar que algumas tarefas precisam de várias chamadas encadeadas para dar uma resposta defensável — um *security plan* não nasce de uma só *tool*, nem uma auditoria periódica. Esta secção junta esses encadeamentos como **padrões** com nome e propósito, para que não tenhas de os redescobrir cada vez.
+Com o uso do MCP em projectos reais, torna-se evidente que algumas tarefas precisam de várias chamadas encadeadas para dar uma resposta defensável — um *security plan* não nasce de uma só *tool*, nem uma auditoria periódica. Esta secção junta esses encadeamentos como **padrões** com nome e propósito, para evitar redescobri-los cada vez.
 
-Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_requirements`, `get_threat_landscape`, `get_guide_by_role`, `prepare_sbd_toe_codegen_context`) onde precisas de respostas estáveis e citáveis; as de pesquisa (`search_sbd_toe_manual`, `query_sbd_toe_entities`) quando o que falta é descobrir o que existe no manual.
+Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_requirements`, `get_threat_landscape`, `get_guide_by_role`, `prepare_sbd_toe_codegen_context`) onde são precisas respostas estáveis e citáveis; as de pesquisa (`search_sbd_toe_manual`, `query_sbd_toe_entities`) quando o que falta é descobrir o que existe no manual.
 
 ---
 

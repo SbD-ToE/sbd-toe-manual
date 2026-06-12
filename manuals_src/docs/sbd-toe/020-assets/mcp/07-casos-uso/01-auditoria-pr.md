@@ -13,7 +13,7 @@ tags:
 
 # Caso de uso — Auditoria de PR
 
-Imagina um PR aberto a meio da tarde de sexta. Toca autenticação, logging e um ficheiro de configuração — exactamente o tipo de mistura que o reviewer humano tem dificuldade em rever em profundidade quando há outras seis revisões na fila. O objectivo deste caso de uso é darem ao agente uma rotina disciplinada para essa revisão: que examine o diff *contra os controlos activos do projecto*, devolva *findings* com `CTRL-*` reais do manual, e nunca declare conformidade só por o código existir.
+Considere-se um PR aberto a meio da tarde de sexta. Toca autenticação, logging e um ficheiro de configuração — exactamente o tipo de mistura que o reviewer humano tem dificuldade em rever em profundidade quando há outras seis revisões na fila. O objectivo deste caso de uso é dar ao agente uma rotina disciplinada para essa revisão: que examine o diff *contra os controlos activos do projecto*, devolva *findings* com `CTRL-*` reais do manual, e nunca declare conformidade só por o código existir.
 
 ## Pré-requisitos
 

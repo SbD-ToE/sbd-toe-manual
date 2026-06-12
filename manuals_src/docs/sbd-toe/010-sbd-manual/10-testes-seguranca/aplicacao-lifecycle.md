@@ -33,12 +33,12 @@ Cada papel contribui com uma perspetiva única, mas só em conjunto se obtém um
 
 | Papel | Responsabilidade |
 |-------|------------------|
-| **Dev** | Corrigir findings, criar regressões automatizadas |
-| **QA/Testes** | Executar DAST, fuzzing, validar critérios |
-| **AppSec** | Definir estratégia, *tuning* de regras, gerir findings e exceções |
-| **DevOps** | Integrar scanners, gates e evidências no CI/CD |
-| **Gestão de Produto** | Aprovar risco residual e decidir *go/no-go* |
-| **PenTester** | Validar ofensivamente controlos e relatar impacto |
+| **Developer** | Corrigir findings, criar regressões automatizadas |
+| **QA** | Executar DAST, fuzzing, validar critérios |
+| **AppSec Engineer** | Definir estratégia, *tuning* de regras, gerir findings e exceções |
+| **DevOps / SRE** | Integrar scanners, gates e evidências no CI/CD |
+| **Product Owner** | Aprovar risco residual e decidir *go/no-go* |
+| **AppSec Engineer** | Validar ofensivamente controlos e relatar impacto |
 
 ---
 
@@ -59,7 +59,7 @@ Sem estratégia, a cobertura é desigual e difícil de auditar.
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **definir uma estratégia de testes de segurança por aplicação**, para **assegurar cobertura proporcional ao risco e rastreabilidade com requisitos do Cap. 02**.
+Como **AppSec Engineer**, quero **definir uma estratégia de testes de segurança por aplicação**, para **assegurar cobertura proporcional ao risco e rastreabilidade com requisitos do Cap. 02**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que a aplicação tem criticidade Lx  
@@ -85,7 +85,7 @@ Como **AppSec**, quero **definir uma estratégia de testes de segurança por apl
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Planeamento | Classificação Lx / kick-off | AppSec | Até ao fim do 1.º sprint |
+| Planeamento | Classificação Lx / kick-off | AppSec Engineer | Até ao fim do 1.º sprint |
 
 ---
 
@@ -99,7 +99,7 @@ PRs sem SAST permitem que vulnerabilidades entrem cedo no código base.
 
 :::userstory
 **História.**   
-Como **Dev**, quero **executar SAST automático no PR com comentários inline**, para **corrigir vulnerabilidades antes do merge**.
+Como **Developer**, quero **executar SAST automático no PR com comentários inline**, para **corrigir vulnerabilidades antes do merge**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que abro um PR  
@@ -125,7 +125,7 @@ Como **Dev**, quero **executar SAST automático no PR com comentários inline**,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Revisão de código | Abertura de PR | Dev + DevOps | Antes do merge |
+| Revisão de código | Abertura de PR | Developer + DevOps / SRE | Antes do merge |
 
 ---
 
@@ -179,7 +179,7 @@ Sem gates, findings não impedem regressões.
 
 :::userstory
 **História.**   
-Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST) com thresholds por Lx**, para **evitar builds inseguros**.
+Como **DevOps / SRE**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST) com thresholds por Lx**, para **evitar builds inseguros**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um pipeline em execução  
@@ -206,7 +206,7 @@ Como **DevOps**, quero **integrar gates automáticos no pipeline (SAST/SCA/IAST)
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Execução pipeline | DevOps + AppSec | Em cada build |
+| CI/CD | Execução pipeline | DevOps / SRE + AppSec Engineer | Em cada build |
 
 **Detalhes de rastreabilidade (expandido):**  
 - Logs de cada execução com timestamp, commit, branch, ferramentas executadas, thresholds aplicados  
@@ -227,7 +227,7 @@ Falhas corrigidas voltam sem regressão automatizada.
 
 :::userstory
 **História.**   
-Como **Dev**, quero **criar testes de regressão para findings corrigidos**, para **evitar reintrodução futura**.
+Como **Developer**, quero **criar testes de regressão para findings corrigidos**, para **evitar reintrodução futura**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um finding resolvido  
@@ -253,7 +253,7 @@ Como **Dev**, quero **criar testes de regressão para findings corrigidos**, par
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Dev/CI | Fecho de finding | Dev | No PR de correção |
+| Dev/CI | Fecho de finding | Developer | No PR de correção |
 
 ---
 
@@ -307,7 +307,7 @@ Lançamentos sem critérios claros diluem responsabilidade.
 
 :::userstory
 **História.**   
-Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de segurança por release e um processo de aceitação de risco residual**, para **decisões go/no-go informadas**.
+Como **Product Owner**, quero **estabelecer critérios de aceitação de segurança por release e um processo de aceitação de risco residual**, para **decisões go/no-go informadas**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma release pronta  
@@ -333,7 +333,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Pré-release | Release candidate | Gestão + AppSec | Até D-1 do go-live |
+| Pré-release | Release candidate | Gestão Executiva + AppSec Engineer | Até D-1 do go-live |
 
 **Template de Checklist de Release (L3):**  
 
@@ -342,7 +342,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 
 **Release:** v2.3.0  
 **Data planeada:** YYYY-MM-DD  
-**Owner:** Product Manager X, AppSec Lead Y  
+**Owner:** Product Manager X, AppSec Engineer Y  
 
 | Critério | Status | Evidência | Observação |
 |---|---|---|---|
@@ -361,7 +361,7 @@ Como **Gestão de Produto**, quero **estabelecer critérios de aceitação de se
 - [X] Endpoint POST /admin/users sem DAST (acesso VPN, compensado por network policy)  
 
 **Aprovações:**  
-- AppSec Lead Y - aprovado em YYYY-MM-DD  
+- AppSec Engineer Y - aprovado em YYYY-MM-DD  
 - Product Manager X - aprovado em YYYY-MM-DD  
 ```
 
@@ -377,7 +377,7 @@ Validação humana complementa automação.
 
 :::userstory
 **História.**   
-Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, para **detetar falhas exploráveis antes da produção**.
+Como **AppSec Engineer**, quero **validar ofensivamente a eficácia dos controlos**, para **detetar falhas exploráveis antes da produção**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** âmbito baseado em risco  
@@ -403,7 +403,7 @@ Como **PenTester**, quero **validar ofensivamente a eficácia dos controlos**, p
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Auditoria / Pré-produção | Janela de auditoria ou L3 crítico | PenTester + AppSec | Relatório antes do go-live |
+| Auditoria / Pré-produção | Janela de auditoria ou L3 crítico | AppSec Engineer | Relatório antes do go-live |
 
 ---
 
@@ -417,7 +417,7 @@ DAST valida externamente, mas IAST oferece visibilidade interna.
 
 :::userstory
 **História.**   
-Como **QA + AppSec**, quero **instrumentar a aplicação em staging com IAST para observar chamadas inseguras em tempo real durante testes**, para **correlacionar findings com contexto de execução real e reduzir falsos positivos**.
+Como **QA + AppSec Engineer**, quero **instrumentar a aplicação em staging com IAST para observar chamadas inseguras em tempo real durante testes**, para **correlacionar findings com contexto de execução real e reduzir falsos positivos**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma aplicação é instrumentada com agent IAST em staging  
@@ -451,7 +451,7 @@ Como **QA + AppSec**, quero **instrumentar a aplicação em staging com IAST par
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Staging | Deploy de candidato a release | QA + AppSec | Antes de aprovação formal |
+| Staging | Deploy de candidato a release | QA + AppSec Engineer | Antes de aprovação formal |
 
 ---
 
@@ -465,7 +465,7 @@ Findings dispersos criam ruído e falta de visibilidade.
 
 :::userstory
 **História.**   
-Como **AppSec + DevOps**, quero **centralizar todos os findings de SAST, DAST, IAST, SCA, fuzzing e testes manuais numa plataforma unificada com triagem por criticidade, estado e SLA**, para **garantir rastreabilidade completa e priorização eficaz**.
+Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings de SAST, DAST, IAST, SCA, fuzzing e testes manuais numa plataforma unificada com triagem por criticidade, estado e SLA**, para **garantir rastreabilidade completa e priorização eficaz**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que findings são produzidos por múltiplas ferramentas  
@@ -504,7 +504,7 @@ Como **AppSec + DevOps**, quero **centralizar todos os findings de SAST, DAST, I
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Contínua | Produção de findings | AppSec + DevOps | Em tempo real |
+| Contínua | Produção de findings | AppSec Engineer + DevOps / SRE | Em tempo real |
 
 ---
 
@@ -518,7 +518,7 @@ Findings não comunicados são ignorados.
 
 :::userstory
 **História.**   
-Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de contacto das equipas (comentários em PR, notificações Slack, dashboards IDE)**, para **assegurar visibilidade e acelerar remediação**.
+Como **AppSec Engineer + DevOps / SRE**, quero **automatizar delivery de findings nos pontos de contacto das equipas (comentários em PR, notificações Slack, dashboards IDE)**, para **assegurar visibilidade e acelerar remediação**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que SAST detecta uma vulnerabilidade num PR  
@@ -556,7 +556,7 @@ Como **AppSec + DevOps**, quero **automatizar delivery de findings nos pontos de
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Contínua | Geração/triagem de findings | AppSec + DevOps | `<15min` para críticos |
+| Contínua | Geração/triagem de findings | AppSec Engineer + DevOps / SRE | `<15min` para críticos |
 
 ---
 
@@ -567,7 +567,7 @@ Ferramentas de teste (SAST, DAST, IAST, fuzzing) reportam centenas de findings p
 
 :::userstory
 **História.**   
-Como **AppSec + DevOps**, quero **framework de decisão estruturado para findings de testes de segurança**, para separar sugestão (ferramenta) de decisão (humano), documentar rationale com checklist C1 e escalar conflitos entre timeline e segurança.
+Como **AppSec Engineer + DevOps / SRE**, quero **framework de decisão estruturado para findings de testes de segurança**, para separar sugestão (ferramenta) de decisão (humano), documentar rationale com checklist C1 e escalar conflitos entre timeline e segurança.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que SAST reporta finding CRITICAL (SQL injection)  
@@ -575,7 +575,7 @@ Como **AppSec + DevOps**, quero **framework de decisão estruturado para finding
   **Então** decisão é documentada em template T1 (CORRIGIR/ACEITAR/SUPRIMIR/DEFER) com justificação rastreável
 - **Dado** finding HIGH em L3  
   **Quando** DevOps propõe ACEITAR-risco mas AppSec discorda  
-  **Então** conflito é escalado com template T2 para CISO/Tech Lead, com resolução em SLA 4h
+  **Então** conflito é escalado com template T2 para CISO/Scrum Master / Team Lead, com resolução em SLA 4h
 - **Dado** decisão de CORRIGIR-IMEDIATO  
   **Quando** correção é aplicada em PR  
   **Então** revalidação confirma que finding desapareceu e nenhum novo finding CRITICAL foi introduzido
@@ -614,9 +614,9 @@ Como **AppSec + DevOps**, quero **framework de decisão estruturado para finding
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Ferramenta reporta finding | DevOps + AppSec | 2h CRITICAL, 4h HIGH, 8h MEDIUM |
-| Deploy | Gate bloqueado por finding | DevOps | Decisão com C1 antes de override |
-| Revisão | Trimestral | GRC + AppSec | Análise KPIs (cobertura, tempo-decisão) |
+| CI/CD | Ferramenta reporta finding | DevOps / SRE + AppSec Engineer | 2h CRITICAL, 4h HIGH, 8h MEDIUM |
+| Deploy | Gate bloqueado por finding | DevOps / SRE | Decisão com C1 antes de override |
+| Revisão | Trimestral | GRC / Compliance + AppSec Engineer | Análise KPIs (cobertura, tempo-decisão) |
 
 **Ligações úteis.**  
 [Addon 08 - Gestão de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/gestao-findings)
@@ -631,7 +631,7 @@ Ferramentas reportam findings baseados em heurísticas, não em exploração emp
 
 :::userstory
 **História.**   
-Como **AppSec + DevOps**, quero **framework de validação empírica de findings**, para testar exploitabilidade real com PoC reproduzível, documentar falsos positivos/negativos com evidência técnica, e otimizar configuração de ferramentas.
+Como **AppSec Engineer + DevOps / SRE**, quero **framework de validação empírica de findings**, para testar exploitabilidade real com PoC reproduzível, documentar falsos positivos/negativos com evidência técnica, e otimizar configuração de ferramentas.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que SAST reporta SQL injection CRITICAL  
@@ -681,10 +681,10 @@ Como **AppSec + DevOps**, quero **framework de validação empírica de findings
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Ferramenta reporta finding | AppSec + DevOps | 4h HIGH (L2), 2h CRITICAL (L3) |
-| Staging | Deploy de nova versão | AppSec | Testes T1-T5 antes de produção |
-| Revisão | Mensal | AppSec + GRC | Análise métricas (FP, FN, cobertura) |
-| Incidente | Vulnerabilidade explorada | AppSec + CISO | RCA obrigatório com Template S2 |
+| CI/CD | Ferramenta reporta finding | AppSec Engineer + DevOps / SRE | 4h HIGH (L2), 2h CRITICAL (L3) |
+| Staging | Deploy de nova versão | AppSec Engineer | Testes T1-T5 antes de produção |
+| Revisão | Mensal | AppSec Engineer + GRC / Compliance | Análise métricas (FP, FN, cobertura) |
+| Incidente | Vulnerabilidade explorada | AppSec Engineer + CISO | RCA obrigatório com Template S2 |
 
 **Ligações úteis.**  
 [Addon 10 - Evidência e Reprodutibilidade](/sbd-toe/sbd-manual/testes-seguranca/addon/evidencia-reprodutibilidade)
@@ -704,7 +704,7 @@ Resultados “plausíveis” ou bem priorizados podem estar errados, incompletos
 
 :::userstory
 **História.**  
-Como **AppSec**, quero **validar a interpretação final dos resultados de testes (severidade, exploitabilidade, prioridade e ação recomendada)**, para **garantir que decisões de engenharia e governação se baseiam em evidência e contexto, e não apenas em correlação automática**.
+Como **AppSec Engineer**, quero **validar a interpretação final dos resultados de testes (severidade, exploitabilidade, prioridade e ação recomendada)**, para **garantir que decisões de engenharia e governação se baseiam em evidência e contexto, e não apenas em correlação automática**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um conjunto de testes (SAST/DAST/SCA/IAST/fuzzing) produziu findings  
@@ -736,7 +736,7 @@ Como **AppSec**, quero **validar a interpretação final dos resultados de teste
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD / Staging | Geração de findings | AppSec + QA | Antes de merge/release |
+| CI/CD / Staging | Geração de findings | AppSec Engineer + QA | Antes de merge/release |
 
 ---
 
@@ -750,7 +750,7 @@ Testes podem depender de configuração, seeds, estados de ambiente, versões de
 
 :::userstory
 **História.**  
-Como **QA/Testes**, quero **garantir que resultados críticos/altos de testes de segurança são reprodutíveis**, para **permitir validação independente, auditoria e correção eficaz sem ambiguidade**.
+Como **QA**, quero **garantir que resultados críticos/altos de testes de segurança são reprodutíveis**, para **permitir validação independente, auditoria e correção eficaz sem ambiguidade**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um finding Critical/High é detetado  
@@ -783,7 +783,7 @@ Como **QA/Testes**, quero **garantir que resultados críticos/altos de testes de
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Staging / Pré-release | Finding ≥ threshold | QA + AppSec | Antes de decisão go/no-go |
+| Staging / Pré-release | Finding ≥ threshold | QA + AppSec Engineer | Antes de decisão go/no-go |
 
 ---
 
@@ -797,7 +797,7 @@ Sem separação clara, pipelines tornam-se “autoridade” e decisões de risco
 
 :::userstory
 **História.**  
-Como **DevOps**, quero **separar formalmente o sinal automático (resultado de ferramentas) da decisão de bloqueio/override**, para **garantir que ações irreversíveis são controladas e auditáveis, com responsabilidade humana explícita**.
+Como **DevOps / SRE**, quero **separar formalmente o sinal automático (resultado de ferramentas) da decisão de bloqueio/override**, para **garantir que ações irreversíveis são controladas e auditáveis, com responsabilidade humana explícita**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um gate falha por finding acima do threshold  
@@ -824,13 +824,13 @@ Como **DevOps**, quero **separar formalmente o sinal automático (resultado de f
 | Nível | Exigência |
 |---|---|
 | L1 | Overrides permitidos com registo simples |
-| L2 | Override exige aprovação AppSec + expiração |
-| L3 | Override exige dupla aprovação (AppSec + Produto/Tech Lead) + expiração + retest obrigatório |
+| L2 | Override exige aprovação AppSec Engineer + expiração |
+| L3 | Override exige dupla aprovação (AppSec Engineer + Product Owner / Scrum Master / Team Lead) + expiração + retest obrigatório |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD / Pré-release | Gate falhou ou exceção proposta | DevOps + AppSec | Antes do merge/release |
+| CI/CD / Pré-release | Gate falhou ou exceção proposta | DevOps / SRE + AppSec Engineer | Antes do merge/release |
 
 ---
 
@@ -844,7 +844,7 @@ Métricas automáticas (percentagens, checks verdes, contagem de testes) podem m
 
 :::userstory
 **História.**  
-Como **AppSec Lead**, quero **avaliar criticamente a cobertura real dos testes de segurança e documentar limitações**, para **evitar falsas garantias e assegurar que lacunas relevantes são conhecidas e tratadas**.
+Como **AppSec Engineer**, quero **avaliar criticamente a cobertura real dos testes de segurança e documentar limitações**, para **evitar falsas garantias e assegurar que lacunas relevantes são conhecidas e tratadas**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um conjunto de testes executado para uma release  
@@ -879,7 +879,7 @@ Um scanner SAST com perfil de regras ad-hoc e sem baseline de falsos positivos (
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **versionar o perfil de regras SAST e manter uma baseline de falsos positivos aprovada**, para **garantir um gate estável, com ruído controlado e cobertura de componentes críticos auditável**.  
+Como **AppSec Engineer**, quero **versionar o perfil de regras SAST e manter uma baseline de falsos positivos aprovada**, para **garantir um gate estável, com ruído controlado e cobertura de componentes críticos auditável**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um scanner SAST integrado no pipeline  
@@ -903,8 +903,8 @@ Como **AppSec**, quero **versionar o perfil de regras SAST e manter uma baseline
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Alteração de ruleset ou supressão de FP | AppSec + DevOps | No PR que altera o perfil |
-| Revisão | Periódica (taxa de FP) | AppSec | Trimestral (L2) / mensal (L3) |
+| CI/CD | Alteração de ruleset ou supressão de FP | AppSec Engineer + DevOps / SRE | No PR que altera o perfil |
+| Revisão | Periódica (taxa de FP) | AppSec Engineer | Trimestral (L2) / mensal (L3) |
 
 **Ligações úteis.** [Validação Estática de Código (SAST)](/sbd-toe/sbd-manual/testes-seguranca/addon/sast) · [Catálogo de Requisitos (TST-002)](/sbd-toe/sbd-manual/testes-seguranca/addon/catalogo-requisitos-testes)
 
@@ -919,7 +919,7 @@ O processo de teste manipula dados, credenciais e telemetria — e cada um é um
 
 :::userstory
 **História.**   
-Como **DevOps + AppSec**, quero **proteger os ativos do processo de teste (dados, credenciais, egress, logs)**, para **impedir que a própria execução de testes exponha dados reais, segredos ou superfícies de rede não controladas**.  
+Como **DevOps / SRE + AppSec Engineer**, quero **proteger os ativos do processo de teste (dados, credenciais, egress, logs)**, para **impedir que a própria execução de testes exponha dados reais, segredos ou superfícies de rede não controladas**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um ambiente de DAST/IAST/fuzzing  
@@ -943,8 +943,8 @@ Como **DevOps + AppSec**, quero **proteger os ativos do processo de teste (dados
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Staging | Provisionamento do ambiente de teste | DevOps + AppSec | Antes da 1.ª execução |
-| Contínua | Rotação de credenciais técnicas | DevOps | Conforme política de rotação |
+| Staging | Provisionamento do ambiente de teste | DevOps / SRE + AppSec Engineer | Antes da 1.ª execução |
+| Contínua | Rotação de credenciais técnicas | DevOps / SRE | Conforme política de rotação |
 
 **Ligações úteis.** [Evidência e Reprodutibilidade](/sbd-toe/sbd-manual/testes-seguranca/addon/evidencia-reprodutibilidade) · [Catálogo de Requisitos (TST-005)](/sbd-toe/sbd-manual/testes-seguranca/addon/catalogo-requisitos-testes)
 
@@ -959,7 +959,7 @@ O que não se mede não se governa — e um programa de testes sem indicadores �
 
 :::userstory
 **História.**   
-Como **AppSec Lead**, quero **recolher e reportar os KPIs do programa de testes (TST-K01..K07) com thresholds por nível de risco**, para **medir cobertura, velocidade de resolução e ruído, e sustentar decisões de melhoria com evidência agregável**.  
+Como **AppSec Engineer**, quero **recolher e reportar os KPIs do programa de testes (TST-K01..K07) com thresholds por nível de risco**, para **medir cobertura, velocidade de resolução e ruído, e sustentar decisões de melhoria com evidência agregável**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** o conjunto de aplicações classificadas (denominador F-02)  
@@ -983,8 +983,8 @@ Como **AppSec Lead**, quero **recolher e reportar os KPIs do programa de testes 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Contínua | Produção/triagem de findings | AppSec + DevOps | Tempo real (recolha) |
-| Revisão | Fecho de período | AppSec Lead + GRC | Mensal (L3) / trimestral (L2) |
+| Contínua | Produção/triagem de findings | AppSec Engineer + DevOps / SRE | Tempo real (recolha) |
+| Revisão | Fecho de período | AppSec Engineer + GRC / Compliance | Mensal (L3) / trimestral (L2) |
 
 **Ligações úteis.** [KPIs e Métricas de Testes](/sbd-toe/sbd-manual/testes-seguranca/addon/kpis-metricas-testes) · [Gestão de Findings](/sbd-toe/sbd-manual/testes-seguranca/addon/gestao-findings)
 
@@ -999,7 +999,7 @@ Quando a IA assiste o teste, é acelerador; quando o agente é o sistema sob tes
 
 :::userstory
 **História.**   
-Como **AppSec + DevOps**, quero **enquadrar o uso de IA em testes por política (C1–C4) e exigir eval suites versionadas como gate para agentes de IA (C5)**, para **manter decisão humana rastreável, confidencialidade dos dados e validação do comportamento agentic antes de promoção**.  
+Como **AppSec Engineer + DevOps / SRE**, quero **enquadrar o uso de IA em testes por política (C1–C4) e exigir eval suites versionadas como gate para agentes de IA (C5)**, para **manter decisão humana rastreável, confidencialidade dos dados e validação do comportamento agentic antes de promoção**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que a IA assiste a triagem ou geração de testes  
@@ -1026,8 +1026,8 @@ Como **AppSec + DevOps**, quero **enquadrar o uso de IA em testes por política 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Mudança a system prompt / skill / agent file / versão do modelo | DevOps + AppSec | Gate antes do merge |
-| Revisão | Periódica | AppSec | Trimestral (corpus e drift) |
+| CI/CD | Mudança a system prompt / skill / agent file / versão do modelo | DevOps / SRE + AppSec Engineer | Gate antes do merge |
+| Revisão | Periódica | AppSec Engineer | Trimestral (corpus e drift) |
 
 **Ligações úteis.** [IA no Processo de Testes — Eval suites (C5)](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) · [Decisão Assistida (US-12)](#us-12---decisão-assistida-para-findings-de-testes-de-segurança)
 
@@ -1042,7 +1042,7 @@ Quando a obrigação chega da autoridade, a base técnica já tem de estar const
 
 :::userstory
 **História.**   
-Como **CISO + AppSec**, quero **manter a readiness técnica para TLPT documentada e organizada**, para **suportar um exercício threat-led com substância e fornecer base de contexto ao processo de attestation, quando a entidade for sujeita a DORA**.  
+Como **CISO + AppSec Engineer**, quero **manter a readiness técnica para TLPT documentada e organizada**, para **suportar um exercício threat-led com substância e fornecer base de contexto ao processo de attestation, quando a entidade for sujeita a DORA**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que a entidade pode ser sujeita a TLPT  
@@ -1066,8 +1066,8 @@ Como **CISO + AppSec**, quero **manter a readiness técnica para TLPT documentad
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Auditoria | Notificação de sujeição ou ciclo regulatório (mín. 3 em 3 anos) | CISO + GRC | Antes do planeamento do exercício |
-| Revisão | Periódica | AppSec + CISO | Anual (manutenção da readiness) |
+| Auditoria | Notificação de sujeição ou ciclo regulatório (mín. 3 em 3 anos) | CISO + GRC / Compliance | Antes do planeamento do exercício |
+| Revisão | Periódica | AppSec Engineer + CISO | Anual (manutenção da readiness) |
 
 **Ligações úteis.** [TLPT — Readiness e DORA](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness) · [PenTesting (US-08)](#us-08---pentesting-ofensivo-baseado-em-risco)
 

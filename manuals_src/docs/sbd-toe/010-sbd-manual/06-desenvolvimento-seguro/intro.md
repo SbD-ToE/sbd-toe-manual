@@ -51,7 +51,7 @@ Este capítulo abrange todas as práticas que tornam o desenvolvimento **seguro,
 - Uso responsável de ferramentas avançadas de apoio ao desenvolvimento, **sob constrangimentos técnicos explícitos**, sempre sujeito a validação técnica, revisão humana e responsabilização formal
 
 > ℹ️ **Delegação controlada para linters e analisadores**  
-> As guidelines podem ser **derivadas, codificadas e aplicadas através de linters automáticos** (ex.: ESLint, Semgrep, Sonar, PSScriptAnalyzer), desde que as regras estejam **versionadas**, o *tailoring* seja explicitamente documentado e exista **aprovação formal por Gestor Técnico e AppSec**.  
+> As guidelines podem ser **derivadas, codificadas e aplicadas através de linters automáticos** (ex.: ESLint, Semgrep, Sonar, PSScriptAnalyzer), desde que as regras estejam **versionadas**, o *tailoring* seja explicitamente documentado e exista **aprovação formal por Arquitetos de Software e AppSec Engineer**.  
 > A automação reforça a consistência, mas não substitui responsabilidade.
 
 ---
@@ -78,13 +78,13 @@ Estas práticas não são opcionais. Constituem o **alicerce de confiança** que
 
 ## 👥 Quem está envolvido
 
-| Papel / Função              | Responsabilidades principais |
-|----------------------------|------------------------------|
-| **Gestor Técnico / Lead**  | Curar guidelines, aprovar *rulesets* e rever periodicamente a sua adequação |
-| **Equipa AppSec**          | Definir critérios mínimos, co-aprovar guidelines, validar exceções e mapear CWE/ASVS |
-| **DevSecOps / CI/CD**      | Integrar validações no pipeline, versionar configurações e aplicar *enforcement* |
-| **Revisor Técnico**        | Aplicar checklists de segurança nos PRs e garantir conformidade |
-| **Desenvolvedor**          | Aplicar guidelines, executar validações locais e propor melhorias |
+| Papel / Função                  | Responsabilidades principais |
+|--------------------------------|------------------------------|
+| **Arquitetos de Software**     | Curar guidelines, aprovar *rulesets* e rever periodicamente a sua adequação |
+| **AppSec Engineer**            | Definir critérios mínimos, co-aprovar guidelines, validar exceções e mapear CWE/ASVS |
+| **DevOps / SRE**               | Integrar validações no pipeline, versionar configurações e aplicar *enforcement* |
+| **QA**                         | Aplicar checklists de segurança nos PRs e garantir conformidade |
+| **Developer**                  | Aplicar guidelines, executar validações locais e propor melhorias |
 
 ---
 

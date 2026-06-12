@@ -124,7 +124,7 @@ Participar em **programas de capacitação contínua** e, como Security Champion
 - [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças
 
 ### Cap. 14 - Governança e Contratação
-Submeter **exceções de segurança** em fluxo formal com roteamento automático por nível de risco. Manter repositório estruturado de conformidade para cada aplicação (com Dev Lead).
+Submeter **exceções de segurança** em fluxo formal com roteamento automático por nível de risco. Manter repositório estruturado de conformidade para cada aplicação (com Scrum Master / Team Lead).
 
 **User Stories:**
 - [US-03: Exceções de segurança + workflow de aprovação](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---validação-contínua-de-fornecedores) - Gestão formal de exceções

@@ -26,7 +26,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 | Alteração arquitetural significativa | Atualizar baseline e invalidar/atualizar decisões afetadas | Developer, Arquitetos de Software, AppSec Engineer | `architecture-update.md` |
 | Exceção arquitetural | Solicitar/avaliar/aprovar exceção com controlos compensatórios e *sunset* | Product Owner, AppSec Engineer, Arquitetos de Software | `excecao-arquitetura.md` |
 | Triggers “arquitetura viva” | Reavaliar docs/ADR/TM quando ocorrerem eventos definidos | Arquitetos de Software, DevOps/SRE, AppSec Engineer | `arquitetura-triggers.md` |
-| Release / Go-live | Gate arquitetural: verificar controlos e exceções | QA/Test Engineer, AppSec Engineer, Arquitetos de Software | `checklist-arquitetura.md` |
+| Release / Go-live | Gate arquitetural: verificar controlos e exceções | QA, AppSec Engineer, Arquitetos de Software | `checklist-arquitetura.md` |
 | CI/CD pipeline | Validar automaticamente controlos arquiteturais automatizáveis (quando aplicável) | DevOps/SRE, AppSec Engineer | `ci-architecture-report.*` |
 
 ---
@@ -37,7 +37,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 |---|---|
 | Arquitetos de Software | Definir princípios, criar fichas de solução, manter baseline e ADR, rever designs e integrações |
 | Developer | Implementar decisões arquiteturais e controlos especificados, sinalizar alterações significativas |
-| QA / Test Engineer | Garantir que requisitos arquiteturais e controlos estão refletidos em testes e evidência de release |
+| QA | Garantir que requisitos arquiteturais e controlos estão refletidos em testes e evidência de release |
 | AppSec Engineer | Definir/rever controlos, validar decisões e exceções, assegurar ligação a ameaças (Cap. 3) e requisitos (Cap. 2) |
 | Product Owner | Priorizar investimento/mitigação, aprovar trade-offs de negócio e exceções com impacto em scope/prazos |
 | DevOps/SRE | Integrar validações automatizáveis no pipeline, garantir evidência reprodutível, suportar “arquitetura viva” |
@@ -531,7 +531,7 @@ Antes de produção, deve existir um **gate arquitetural** que confirme: control
 
 :::userstory
 **História.**  
-Como **QA/Test Engineer + AppSec Engineer + Arquitetos de Software**, quero executar um gate arquitetural antes do go-live, para garantir que a arquitetura implementada corresponde à baseline aprovada e que controlos/exceções estão verificados.
+Como **QA + AppSec Engineer + Arquitetos de Software**, quero executar um gate arquitetural antes do go-live, para garantir que a arquitetura implementada corresponde à baseline aprovada e que controlos/exceções estão verificados.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que a aplicação está pronta para release  
@@ -561,7 +561,7 @@ Como **QA/Test Engineer + AppSec Engineer + Arquitetos de Software**, quero exec
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Release / Go-live | Preparação de release | QA/Test Engineer + AppSec + Arquitetura | Antes da entrada em produção |
+| Release / Go-live | Preparação de release | QA + AppSec + Arquitetura | Antes da entrada em produção |
 
 **Ligações úteis.**
 - 🔗 Critérios e evidência arquitetural (addon): `addon/decisao-evidencia-arquitetural`

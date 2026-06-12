@@ -115,10 +115,10 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 | Papel/Função             | Contributo principal                                                  |
 |--------------------------|------------------------------------------------------------------------|
-| Arquitetura / DevSecOps  | Tradução de riscos em requisitos técnicos concretos                    |
-| Product Owner / BA       | Integração no backlog e histórias de utilizador                        |
-| Equipa de Segurança      | Definição de modelos, validação e alinhamento                          |
-| QA / Testes              | Definição de critérios de aceitação e validação prática                |
+| Arquitetos de Software / DevOps / SRE | Tradução de riscos em requisitos técnicos concretos          |
+| Product Owner       | Integração no backlog e histórias de utilizador                        |
+| AppSec Engineer          | Definição de modelos, validação e alinhamento                          |
+| QA                       | Definição de critérios de aceitação e validação prática                |
 
 > ✅ A rastreabilidade e a testabilidade são responsabilidades partilhadas.
 

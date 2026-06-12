@@ -123,11 +123,11 @@ A segurança de containers é transversal:
 
 | Papel                   | Responsabilidade principal |
 |-------------------------|----------------------------|
-| **DevOps / Plataforma** | Definir imagens aprovadas, runners seguros e enforcement |
-| **Equipa de Dev**       | Usar imagens validadas e integrar controlos nos manifests |
-| **AppSec / Segurança**  | Validar cadeia de confiança e analisar sinais técnicos |
-| **Infraestrutura**     | Garantir isolamento e políticas no cluster |
-| **GRC / Conformidade** | Manter evidência, rastreabilidade e políticas |
+| **DevOps / SRE** | Definir imagens aprovadas, runners seguros e enforcement |
+| **Developer**       | Usar imagens validadas e integrar controlos nos manifests |
+| **AppSec Engineer**  | Validar cadeia de confiança e analisar sinais técnicos |
+| **DevOps / SRE**     | Garantir isolamento e políticas no cluster |
+| **GRC / Compliance** | Manter evidência, rastreabilidade e políticas |
 
 A ausência de um destes papéis compromete toda a cadeia.
 
@@ -176,9 +176,9 @@ Elas garantem que não dependemos apenas da disciplina individual, mas de regras
 | Política organizacional         | Obrigatória | Aplicação | Conteúdo mínimo |
 |---------------------------------|-------------|-----------|-----------------|
 | [Política de Containers Seguros](/sbd-toe/assets/policies/policy-containers-seguros)  | Sim         | Todos os projetos | Allowlist + digest-only, scanners, assinatura/proveniência, RBAC/SA, NetworkPolicy |
-| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos na imagem, rotação |
-| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC/Auditoria | Logs commit→pipeline→deploy, retenção, export imutável |
-| [Política de Golden Base Images](/sbd-toe/assets/policies/policy-golden-base-images)  | Sim         | Plataforma, AppSec | Catálogo, SLA de patching, depreciação |
-| [Política de CI/CD Seguro — Builders/Runners](/sbd-toe/assets/policies/policy-cicd-seguro)    | Recomendado | DevOps | Ephemerais, mínimos, assinados, cache controlada |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps / SRE, AppSec Engineer | OIDC/TTL curto, proibição de segredos na imagem, rotação |
+| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC / Compliance | Logs commit→pipeline→deploy, retenção, export imutável |
+| [Política de Golden Base Images](/sbd-toe/assets/policies/policy-golden-base-images)  | Sim         | DevOps / SRE, AppSec Engineer | Catálogo, SLA de patching, depreciação |
+| [Política de CI/CD Seguro — Builders/Runners](/sbd-toe/assets/policies/policy-cicd-seguro)    | Recomendado | DevOps / SRE | Ephemerais, mínimos, assinados, cache controlada |
 
 ---

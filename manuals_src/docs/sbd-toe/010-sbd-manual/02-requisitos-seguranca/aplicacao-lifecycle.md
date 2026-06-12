@@ -56,12 +56,12 @@ Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verba
 
 | Papel / Função                      | Responsabilidades-chave                                                                 |
 | ----------------------------------- | ---------------------------------------------------------------------------------------- |
-| Product Owner / BA                  | Assegurar integração no backlog; garantir que requisitos relevantes existem como trabalho rastreável |
+| Product Owner                  | Assegurar integração no backlog; garantir que requisitos relevantes existem como trabalho rastreável |
 | Developer                           | Implementar controlos; aplicar tags; ligar mudanças a `SEC-Lx-*` e/ou `REQ-XXX`; propor exceções quando necessário |
-| QA / Test Engineer                  | Definir critérios de aceitação e validação; garantir cobertura de testes e evidência     |
-| Arquitetura / Tech Lead / DevSecOps | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
-| Equipa de Segurança / AppSec        | Validar aplicação; aprovar exceções; garantir alinhamento e consistência global          |
-| GRC/Compliance (quando aplicável)   | Registar exceções e decisões; apoiar auditoria e rastreabilidade organizacional          |
+| QA                                  | Definir critérios de aceitação e validação; garantir cobertura de testes e evidência     |
+| Arquitetos de Software / Scrum Master / Team Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
+| AppSec Engineer                     | Validar aplicação; aprovar exceções; garantir alinhamento e consistência global          |
+| GRC / Compliance (quando aplicável) | Registar exceções e decisões; apoiar auditoria e rastreabilidade organizacional          |
 
 > ✅ A rastreabilidade e a verificabilidade são responsabilidades partilhadas;  
 > **a responsabilidade final sobre decisões de risco e exceções deve ser sempre explícita.**
@@ -117,7 +117,7 @@ Requisitos aplicáveis devem ser revistos sempre que exista alteração material
 
 :::userstory
 **História.**  
-Como **Arquitetura/Tech Lead** e **Scrum Master/Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
+Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que ocorre uma alteração significativa (integração externa, mudança de dados, exposição, arquitetura)
@@ -142,7 +142,7 @@ Como **Arquitetura/Tech Lead** e **Scrum Master/Team Lead**, quero rever requisi
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetura + Tech Lead | Antes da release |
+| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetos de Software + Scrum Master / Team Lead | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [Validação e revisão de requisitos](./addon/validacao-requisitos)
@@ -185,7 +185,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento/Release | Identificação da exceção | Developer + AppSec + GRC | Antes da release |
+| Planeamento/Release | Identificação da exceção | Developer + AppSec Engineer + GRC / Compliance | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [Gestão de exceções](./addon/gestao-excecoes)
@@ -199,7 +199,7 @@ Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
 
 :::userstory
 **História.**  
-Como **QA / Test Engineer**, quero garantir que todos os requisitos aplicados têm rastreabilidade no backlog, para suportar auditoria e verificação.
+Como **QA**, quero garantir que todos os requisitos aplicados têm rastreabilidade no backlog, para suportar auditoria e verificação.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que os requisitos aplicáveis foram selecionados  
@@ -271,7 +271,7 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento | Criação de cartões | PO + QA | Antes da sprint |
+| Planeamento | Criação de cartões | Product Owner + QA | Antes da sprint |
 
 **Ligações úteis.**
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)
@@ -285,7 +285,7 @@ Requisitos devem ter validação associada para prevenir regressões e garantir 
 
 :::userstory
 **História.**  
-Como **QA / Test Engineer**, quero garantir que os requisitos aplicáveis têm validação associada, para prevenir ausência de controlo e suportar evidência auditável.
+Como **QA**, quero garantir que os requisitos aplicáveis têm validação associada, para prevenir ausência de controlo e suportar evidência auditável.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que requisitos foram aplicados  
@@ -357,7 +357,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Release | Aprovação final | AppSec | Antes do go-live |
+| Release | Aprovação final | AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
 - 🔗 [Gestão de exceções](./addon/gestao-excecoes)
@@ -400,7 +400,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Início | Kick-off / release major | AppSec + PO + TL | Antes do backlog inicial / antes da release |
+| Início | Kick-off / release major | AppSec Engineer + Product Owner + Scrum Master / Team Lead | Antes do backlog inicial / antes da release |
 
 **Ligações úteis.**
 - 🔗 [Catálogo de requisitos](./addon/catalogo-requisitos)  
@@ -444,7 +444,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critério
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Testes/Review | Pipelines e checkpoints | QA + AppSec + TL | Por sprint e antes de release |
+| Testes/Review | Pipelines e checkpoints | QA + AppSec Engineer + Scrum Master / Team Lead | Por sprint e antes de release |
 
 **Ligações úteis.**
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)  
@@ -490,7 +490,7 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD execute verifica
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Merge/Release | PR/MR targeting main/release | DevOps/SRE + AppSec | Bloqueio automático até resolução |
+| Merge/Release | PR/MR targeting main/release | DevOps / SRE + AppSec Engineer | Bloqueio automático até resolução |
 
 **Ligações úteis.**
 - 🔗 [Gates de segurança em CI/CD](/sbd-toe/sbd-manual/cicd-seguro/addon/politicas-gates-pipeline)  
@@ -529,7 +529,7 @@ Como **Developer** e **DevOps/SRE**, quero que a pipeline gere um SBOM e assine 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Build | Build de release | Developer + DevOps/SRE | Sempre na pipeline de release |
+| Build | Build de release | Developer + DevOps / SRE | Sempre na pipeline de release |
 
 ---
 
@@ -561,7 +561,7 @@ Como **Developer** e **QA**, quero que o pipeline valide a presença e conformid
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| PR/MR | Criação de PR | Developer + DevOps | Antes de merge |
+| PR/MR | Criação de PR | Developer + DevOps / SRE | Antes de merge |
 
 ---
 
@@ -594,7 +594,7 @@ Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Governança | Publicação de política/mudança de práticas | CISO + GRC | Política e formação em prazo definido |
+| Governança | Publicação de política/mudança de práticas | CISO + GRC / Compliance | Política e formação em prazo definido |
 
 ---
 
@@ -605,7 +605,7 @@ O uso de assistentes automatizados e ferramentas baseadas em IA pode acelerar o 
 
 :::userstory
 **História.**  
-Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
+Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que é utilizado um assistente automatizado para gerar código, configuração ou testes  
@@ -638,8 +638,8 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| PR/MR | Introdução de código/configuração gerada | Developer + Tech Lead | Antes do merge |
-| Release | Gate final de segurança | AppSec | Antes do go-live |
+| PR/MR | Introdução de código/configuração gerada | Developer + Scrum Master / Team Lead | Antes do merge |
+| Release | Gate final de segurança | AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
 - 🔗 [Governação do uso de automatismos](./addon/governanca-automatismos)
@@ -655,7 +655,7 @@ Quando passa-se de **assistentes que sugerem** para **agentes que executam** (cr
 
 :::userstory
 **História.**
-Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
+Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que um agente AI vai operar no projecto em A1 ou superior
@@ -668,7 +668,7 @@ Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomi
 **Critérios de aceitação (DoD).**
 - [ ] *Mandate* presente em VCS, validado contra esquema mínimo (campos obrigatórios) e referenciado por `mandate_ref` em audit
 - [ ] `autonomy_level` classificado de acordo com [níveis A0–A4](./addon/governanca-automatismos#niveis-autonomia) e justificado por escrito
-- [ ] *Approver* adequado ao nível (A1: `tech lead`; A2: `tech lead`+`appsec`; A3: `tech lead`+`appsec`+`grc`; A4: `CISO` em assinatura formal)
+- [ ] *Approver* adequado ao nível (A1: Scrum Master / Team Lead; A2: Scrum Master / Team Lead + AppSec Engineer; A3: Scrum Master / Team Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` em assinatura formal)
 - [ ] *Identity* efémera configurada (sem reuso de credenciais humanas)
 - [ ] *Kill-switch* exercitado em sandbox/staging com cronómetro registado antes da activação
 - [ ] `effective_until` definido — sem *mandates* sem janela de validade
@@ -686,16 +686,16 @@ Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomi
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | A1+ | *Mandate* simples; aprovação por `tech lead`; A2+ permitido apenas fora de produção |
+| L1 | A1+ | *Mandate* simples; aprovação por Scrum Master / Team Lead; A2+ permitido apenas fora de produção |
 | L2 | A1+ | *Mandate* completo; *kill-switch* exercitado trimestralmente em A3 |
 | L3 | A1+ | *Mandate* completo + revisão organizacional trimestral; A4 exige assinatura formal do `CISO` |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Activação | Pedido para operar agente em A1+ | *Owner* + `appsec` | Antes do primeiro *tool call* |
-| Revisão | `review_cadence` ou alteração material | *Owner* + `appsec` | Conforme cadência declarada |
-| Revogação | *Off-policy action*, *credential exposure*, falha de *kill-switch* | *Owner* + `appsec` | Imediata via *kill-switch* |
+| Activação | Pedido para operar agente em A1+ | *Owner* + AppSec Engineer | Antes do primeiro *tool call* |
+| Revisão | `review_cadence` ou alteração material | *Owner* + AppSec Engineer | Conforme cadência declarada |
+| Revogação | *Off-policy action*, *credential exposure*, falha de *kill-switch* | *Owner* + AppSec Engineer | Imediata via *kill-switch* |
 
 **Ligações úteis.**
 - 🔗 [Níveis de autonomia A0–A4](./addon/governanca-automatismos#niveis-autonomia)
@@ -713,7 +713,7 @@ Cada requisito rastreado deve declarar a natureza do controlo — Preventivo, De
 
 :::userstory
 **História.**   
-Como **Arquitetura/DevSecOps**, quero classificar cada controlo da matriz de rastreabilidade como Preventivo, Detetivo ou Corretivo, para garantir cobertura defensiva equilibrada e auditável por requisito.  
+Como **Arquitetos de Software / DevOps / SRE**, quero classificar cada controlo da matriz de rastreabilidade como Preventivo, Detetivo ou Corretivo, para garantir cobertura defensiva equilibrada e auditável por requisito.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma linha da matriz que liga risco a requisito  
@@ -737,7 +737,7 @@ Como **Arquitetura/DevSecOps**, quero classificar cada controlo da matriz de ras
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design/Grooming | Registo do controlo na matriz | Arquitetura/DevSecOps | Antes da validação do requisito |
+| Design/Grooming | Registo do controlo na matriz | Arquitetos de Software / DevOps / SRE | Antes da validação do requisito |
 
 **Ligações úteis.** [Modelo de rastreabilidade entre riscos, requisitos e controlos](./addon/rastreabilidade-controlo)
 
@@ -775,7 +775,7 @@ Como **GRC/Compliance** e **Arquitetura**, quero incorporar as restrições lega
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Início/Revisão | Kick-off ou nova obrigação legal/contratual | GRC + Arquitetura | Antes de fechar o catálogo do projeto |
+| Início/Revisão | Kick-off ou nova obrigação legal/contratual | GRC / Compliance + Arquitetos de Software | Antes de fechar o catálogo do projeto |
 
 **Ligações úteis.** [Catálogo de requisitos](./addon/catalogo-requisitos)
 
@@ -789,7 +789,7 @@ Antes de cada ação destrutiva ou com efeito externo, o agente AI declara inten
 
 :::userstory
 **História.**   
-Como **AppSec Engineer** e **Tech Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
+Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um agente AI A2+ a operar sob *mandate* ativo  
@@ -813,7 +813,7 @@ Como **AppSec Engineer** e **Tech Lead**, quero que cada agente AI A2+ declare a
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Runtime | *Tool-call* destrutivo de agente A2+ | Owner + AppSec | Antes de cada execução; reconciliação a posteriori |
+| Runtime | *Tool-call* destrutivo de agente A2+ | Owner + AppSec Engineer | Antes de cada execução; reconciliação a posteriori |
 
 **Ligações úteis.** [Catálogo `REQ-AGN-*` (REQ-AGN-004)](./addon/governanca-automatismos#req-agn)
 
@@ -851,7 +851,7 @@ Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compar
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Governança/Release | Ciclo de recolha (por release/semestral) | GRC + AppSec | Conforme período do indicador |
+| Governança/Release | Ciclo de recolha (por release/semestral) | GRC / Compliance + AppSec Engineer | Conforme período do indicador |
 
 **Ligações úteis.** [KPIs e métricas — indicadores RQS](./addon/kpis-metricas-requisitos)
 

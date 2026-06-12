@@ -72,7 +72,7 @@ Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a au
 Quando decisões envolvem **contexto, trade-offs ou heurísticas**, exigem validação humana e rastreabilidade:
 
 - **Exceções a findings**: CVE não-aplicável → AppSec aprova + justificativa + validade temporal
-- **Aprovação de go/no-go**: Risco residual aceite → Gestão de Produto aprova + evidência
+- **Aprovação de go/no-go**: Risco residual aceite → Product Owner aprova + evidência
 - **Rollback de BD**: Migração reversível mas com perda de dados → SRE + Gestão decidem
 
 **Princípio**: Toda decisão não-determinística exige:
@@ -107,16 +107,16 @@ Exceções a gates automáticos (ex: CVE não-aplicável, falso positivo SAST) s
    exception_id: EX-2026-001
    finding_id: SAST-SQL-001
    justification: "Query parametrizada, não-vulnerável"
-   approved_by: "AppSec Lead (email@example.com)"
+   approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
    expiration_date: "2026-07-04"  # Máximo 6 meses
    evidence: "link/to/code-review-PR-123"
    ```
 
 2. **Aprovador por severidade**:
-   - CRITICAL: AppSec Lead + CTO
-   - HIGH: AppSec Lead
-   - MEDIUM: Tech Lead
+   - CRITICAL: AppSec Engineer + Gestão Executiva
+   - HIGH: AppSec Engineer
+   - MEDIUM: Scrum Master / Team Lead
 
 3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
 
@@ -150,7 +150,7 @@ Nenhum *deploy* seguro é responsabilidade de um só perfil. A prática exige co
 - **QA/Testes** → executa validações funcionais e de segurança em *staging*.  
 - **AppSec** → define *gates*, critérios e processo de exceções com rastreabilidade e validade temporal.  
 - **DevOps/SRE** → executa pipelines, prepara *rollback* e assegura rastreabilidade técnica e evidência.  
-- **Gestão de Produto** → toma a decisão final de *go/no-go* e documenta aceitação de risco residual.
+- **Product Owner** → toma a decisão final de *go/no-go* e documenta aceitação de risco residual.
 
 Esta matriz não é opcional: é o que garante que cada *deploy* é simultaneamente **técnico e governado**, capaz de resistir a falhas operacionais e a escrutínio regulatório.
 
@@ -161,7 +161,7 @@ Esta matriz não é opcional: é o que garante que cada *deploy* é simultaneame
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
 | [Política de Deploy Seguro](/sbd-toe/assets/policies/policy-deploy-seguro) | Sim | DevOps/SRE + AppSec | Promoção apenas de artefactos assinados e rastreáveis; validações mínimas; evidência |
-| [Política de Aprovação de Release](/sbd-toe/assets/policies/policy-aprovacao-release) | Sim | Gestão de Produto + AppSec | *Gates* formais; critérios por criticidade; exceções registadas e temporais |
+| [Política de Aprovação de Release](/sbd-toe/assets/policies/policy-aprovacao-release) | Sim | Product Owner + AppSec | *Gates* formais; critérios por criticidade; exceções registadas e temporais |
 | [Política de Rollback](/sbd-toe/assets/policies/policy-rollback) | Sim | DevOps/SRE | *Rollback* definido por tipo, testado periodicamente, com evidência |
 | [Política de Deploy Seguro — Validação em Staging](/sbd-toe/assets/policies/policy-deploy-seguro) | Recomendado | QA/Testes | Validação funcional + segurança antes de promoção; dados controlados |
 | [Política de Monitorização Pós-Deploy](/sbd-toe/assets/policies/policy-monitorizacao-pos-deploy) | Sim | DevOps/SRE | Métricas/alertas; correlação com eventos de *deploy*; processo de resposta |

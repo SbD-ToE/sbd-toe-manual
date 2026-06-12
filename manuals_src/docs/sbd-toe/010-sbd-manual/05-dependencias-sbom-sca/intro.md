@@ -107,9 +107,9 @@ Ligação a outros capítulos:
 | Papel/Função       | Contributo principal |
 |--------------------|----------------------|
 | **Developer / Lead** | Incluir dependências, triagem inicial, *pinning*, correções |
-| **AppSec**           | Políticas, *tuning*, *gates*, exceções e revisão de risco |
+| **AppSec Engineer**           | Políticas, *tuning*, *gates*, exceções e revisão de risco |
 | **DevOps / CI/CD**   | SBOM, SCA, repositórios internos, bots de atualização |
-| **QA / Test Engineer** | Evidências, testes de regressão, validação de PRs de bots |
+| **QA** | Evidências, testes de regressão, validação de PRs de bots |
 | **Product Owner**    | Decisão *go/no-go* perante findings/risco residual |
 | **GRC / Gestão**     | Auditoria, conformidade, retenção de evidências |
 

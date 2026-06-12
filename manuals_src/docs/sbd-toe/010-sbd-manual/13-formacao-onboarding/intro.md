@@ -57,14 +57,14 @@ independentemente do grau de automação existente.
 
 ## 👥 Papéis envolvidos
 
-- **Dev** → receber formação prática em SAST, dependências, IaC.  
-- **QA/Testes** → capacitação em fuzzing, regressões, validação.  
-- **AppSec** → produzir conteúdos, ministrar formação, gerir champions.  
-- **DevOps/SRE** → capacitação em pipelines seguros e monitorização.  
-- **Gestão/PMO** → formação em aceitação de risco e governação.  
-- **RH/PeopleOps** → gerir LMS, onboarding e planos individuais.  
-- **Champions** → evangelizar e suportar equipas.  
-- **Terceiros** → fornecedores com acesso devem receber formação mínima.  
+- **Developer** → receber formação prática em SAST, dependências, IaC.  
+- **QA** → capacitação em fuzzing, regressões, validação.  
+- **AppSec Engineer** → produzir conteúdos, ministrar formação, gerir champions.  
+- **DevOps / SRE** → capacitação em pipelines seguros e monitorização.  
+- **Gestão Executiva** → formação em aceitação de risco e governação.  
+- **Security Champion (RH)** → gerir LMS, onboarding e planos individuais.  
+- **Security Champion** → evangelizar e suportar equipas.  
+- **Fornecedores / Terceiros** → fornecedores com acesso devem receber formação mínima.  
 
 ---
 
@@ -106,11 +106,11 @@ A formação é o que **transforma processos em cultura**.
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| [Política de Formação e Capacitação em Segurança](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | RH + AppSec | Plano anual, LMS, revisão periódica |
-| [Política de Formação e Capacitação em Segurança — Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | RH + Gestão | Formação obrigatória no início |
-| [Política de Formação e Capacitação — Security Champions](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec + Dev | Programa formal com papéis claros |
-| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC | KPIs, eficácia, relatórios de auditoria |
-| [Política de Formação e Capacitação — Exercícios Práticos](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec + QA/Dev | Labs, CTFs, simulações |
+| [Política de Formação e Capacitação em Segurança](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | Security Champion (RH) + AppSec Engineer | Plano anual, LMS, revisão periódica |
+| [Política de Formação e Capacitação em Segurança — Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca) | Sim | Security Champion (RH) + Gestão Executiva | Formação obrigatória no início |
+| [Política de Formação e Capacitação — Security Champions](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec Engineer + Developer | Programa formal com papéis claros |
+| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC / Compliance | KPIs, eficácia, relatórios de auditoria |
+| [Política de Formação e Capacitação — Exercícios Práticos](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recomendado | AppSec Engineer + QA + Developer | Labs, CTFs, simulações |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.
 

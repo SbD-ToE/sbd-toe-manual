@@ -96,12 +96,12 @@ Deve ser aplicada:
 
 A segurança de CI/CD depende de papéis distintos, mas complementares:
 
-| Papel/Função     | Contributo principal |
-|------------------|----------------------|
-| **Dev Team**     | Desenvolver pipelines, reagir a findings e manter qualidade do código |
-| **DevOps**       | Endurecer runners, gerir automação e aplicar controlos operacionais |
-| **AppSec**       | Definir políticas, thresholds de scanners e gates por risco |
-| **GRC/Auditoria**| Verificar rastreabilidade, exceções e conformidade organizacional |
+| Papel/Função              | Contributo principal |
+|---------------------------|----------------------|
+| **Developer**             | Desenvolver pipelines, reagir a findings e manter qualidade do código |
+| **DevOps / SRE**          | Endurecer runners, gerir automação e aplicar controlos operacionais |
+| **AppSec Engineer**       | Definir políticas, thresholds de scanners e gates por risco |
+| **GRC / Compliance** + **Auditores** | Verificar rastreabilidade, exceções e conformidade organizacional |
 
 ---
 
@@ -119,9 +119,9 @@ A segurança de CI/CD depende de papéis distintos, mas complementares:
 | Política organizacional         | Obrigatória | Aplicação | Conteúdo mínimo |
 |---------------------------------|-------------|-----------|-----------------|
 | [Política de CI/CD Seguro](/sbd-toe/assets/policies/policy-cicd-seguro)        | Sim         | Todos os projetos | Revisão por PR, runners seguros, scanners obrigatórios, gestão de segredos, assinatura/proveniência |
-| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps, AppSec | OIDC/TTL curto, proibição de segredos estáticos, rotação periódica |
-| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC/Auditoria | Logs correlacionados commit→pipeline→release, retenção mínima, export imutável |
-| [Política de Gestão de Exceções CI/CD](/sbd-toe/assets/policies/policy-gestao-excecoes)      | Sim         | AppSec, GRC | Registo formal, aprovações, prazo e compensações |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos)  | Sim         | DevOps / SRE, AppSec Engineer | OIDC/TTL curto, proibição de segredos estáticos, rotação periódica |
+| [Política de Rastreabilidade](/sbd-toe/assets/policies/policy-rastreabilidade)     | Recomendado | GRC / Compliance, Auditores | Logs correlacionados commit→pipeline→release, retenção mínima, export imutável |
+| [Política de Gestão de Exceções CI/CD](/sbd-toe/assets/policies/policy-gestao-excecoes)      | Sim         | AppSec Engineer, GRC / Compliance | Registo formal, aprovações, prazo e compensações |
 | [Política de Aplicação Proporcional por Risco](/sbd-toe/assets/policies/policy-classificacao-risco) | ⚠️ Opcional | Organizações com classificação formal | Mapeamento entre nível de risco e controlos mínimos exigidos no pipeline |
 
 As políticas organizacionais relevantes encontram-se descritas no **Anexo de Políticas do Manual**, incluindo: CI/CD Seguro, Gestão de Segredos, Rastreabilidade e Exceções.

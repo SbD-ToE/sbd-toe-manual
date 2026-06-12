@@ -41,13 +41,13 @@ Publicar **políticas organizacionais formais** (Classificação de Risco, Aceit
 Aprovar **modelos de requisitos mínimos** e publicar política de aplicação com formação para equipas técnicas.
 
 **User Stories:**
-- [US-07: Publicação de política de aplicação](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-07---validação-e-aprovação-final) - Procedimentos e SLAs claros (com GRC)
+- [US-07: Publicação de política de aplicação](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-07---validação-e-aprovação-final) - Procedimentos e SLAs claros (com GRC / Compliance)
 
 ### Cap. 04 - Arquitetura Segura
 Estabelecer **processo formal de aprovação de arquitetura para L3**, com comité técnico ou governance review.
 
 **User Stories:**
-- [US-14: Revisão formal de arquitetura para L3](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14---revisão-formal-de-arquitetura-para-l3-governação-reforçada) - Mitigar riscos estruturais antes do go-live (com Arquitetos)
+- [US-14: Revisão formal de arquitetura para L3](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-14---revisão-formal-de-arquitetura-para-l3-governação-reforçada) - Mitigar riscos estruturais antes do go-live (com Arquitetos de Software)
 
 ### Cap. 05-09 - Tooling e Infraestrutura
 Apoiar **investimento em ferramentas** (SCA, SAST, DAST, SBOM, policy engines) e processos automatizados.
@@ -74,10 +74,10 @@ Decidir sobre **riscos elevados em produção**, garantir rastreabilidade commit
 Executar **simulações de incidentes** (war room) regularmente, definir KPIs de capacitação, garantir formação mínima para terceiros, definir trilho obrigatório por perfil de contractor.
 
 **User Stories:**
-- [US-04: Simulações de incidentes (war room)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---exercícios-práticos-e-simulações) - Validar processos de resposta (com GRC)
-- [US-11: KPIs de capacitação](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---validação-formal-de-onboarding-via-checklist) - Avaliar impacto real (com GRC)
-- [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Cumprir NIS2/DORA (com GRC)
-- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (com Training Manager)
+- [US-04: Simulações de incidentes (war room)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---exercícios-práticos-e-simulações) - Validar processos de resposta (com GRC / Compliance)
+- [US-11: KPIs de capacitação](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---validação-formal-de-onboarding-via-checklist) - Avaliar impacto real (com GRC / Compliance)
+- [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Cumprir NIS2/DORA (com GRC / Compliance)
+- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (com Security Champion (formação))
 
 ### Cap. 14 - Governança e Contratação
 Definir e monitorizar **KPIs de governação**, designar Security Champion por aplicação crítica, consolidar e reportar KPIs, formalizar modelo de governação com alçadas.
@@ -86,7 +86,7 @@ Definir e monitorizar **KPIs de governação**, designar Security Champion por a
 - [US-01: KPIs de governação](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---processo-formal-de-exceções-com-alçadas-por-nível-de-risco) - Avaliar eficácia SbD-ToE
 - [US-05: Designação de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Responsabilização clara
 - [US-08: Consolidação e reporte de KPIs](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-08---repositório-de-conformidade-por-aplicação-controlo-sistemático) - Avaliar maturidade organizacional
-- [US-09: Modelo de governação formal](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-09---designação-formal-de-owners-de-segurança-por-aplicação) - Autoridade apropriada (com AppSec)
+- [US-09: Modelo de governação formal](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-09---designação-formal-de-owners-de-segurança-por-aplicação) - Autoridade apropriada (com AppSec Engineer)
 
 ---
 

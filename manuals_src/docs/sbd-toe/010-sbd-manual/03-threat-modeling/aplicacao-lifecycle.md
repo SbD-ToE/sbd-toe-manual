@@ -19,12 +19,12 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 | Fase / Evento                    | Ação esperada                                                                 | Quem participa                                                     | Evidência mínima (artefacto principal) |
 |----------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------|----------------------------------------|
-| Início de projeto / épico        | Criar baseline do Threat Model e definir âmbito/assunções                     | DevOps/SRE, Product Owner, Arquitetos, AppSec, Team Lead           | DFD + lista inicial de ameaças + registo de decisão (*baseline*) |
-| Grooming / Planeamento           | Rever impacto de novas user stories no Threat Model (delta)                   | Developer, Arquiteto (quando aplicável), AppSec                    | Atualização versionada + ligação a backlog (`THREAT-*`)          |
-| Revisão de Arquitetura / ADR     | Validar ameaças antes de decisões arquiteturais irreversíveis                 | Arquitetos, AppSec, Team Lead                                      | ADR + Threat Model revisto + decisões por ameaça                 |
-| Alterações críticas / refactors  | Revalidar o modelo quando há mudança estrutural (fluxos, trust boundaries, deps) | Developer, QA/Test, Arquiteto, AppSec                              | Modelo atualizado + diffs + justificações                         |
-| Release / Go-live                | Confirmar ameaças abertas, exceções, risco residual e compensações            | QA/Test, AppSec, Product Owner (impacto), Team Lead                | Decisões (mitigar/aceitar) + evidência de aprovação              |
-| CI/CD (gate de controlo)         | Verificar “frescura” do Threat Model face a mudanças relevantes (determinístico) | DevOps/SRE, AppSec                                                 | Resultado de verificação + link para versão do modelo             |
+| Início de projeto / épico        | Criar baseline do Threat Model e definir âmbito/assunções                     | DevOps / SRE, Product Owner, Arquitetos de Software, AppSec Engineer, Scrum Master / Team Lead           | DFD + lista inicial de ameaças + registo de decisão (*baseline*) |
+| Grooming / Planeamento           | Rever impacto de novas user stories no Threat Model (delta)                   | Developer, Arquitetos de Software (quando aplicável), AppSec Engineer                    | Atualização versionada + ligação a backlog (`THREAT-*`)          |
+| Revisão de Arquitetura / ADR     | Validar ameaças antes de decisões arquiteturais irreversíveis                 | Arquitetos de Software, AppSec Engineer, Scrum Master / Team Lead                                      | ADR + Threat Model revisto + decisões por ameaça                 |
+| Alterações críticas / refactors  | Revalidar o modelo quando há mudança estrutural (fluxos, trust boundaries, deps) | Developer, QA, Arquitetos de Software, AppSec Engineer                              | Modelo atualizado + diffs + justificações                         |
+| Release / Go-live                | Confirmar ameaças abertas, exceções, risco residual e compensações            | QA, AppSec Engineer, Product Owner (impacto), Scrum Master / Team Lead                | Decisões (mitigar/aceitar) + evidência de aprovação              |
+| CI/CD (gate de controlo)         | Verificar “frescura” do Threat Model face a mudanças relevantes (determinístico) | DevOps / SRE, AppSec Engineer                                                 | Resultado de verificação + link para versão do modelo             |
 
 ---
 
@@ -33,12 +33,12 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 | Papel / Função             | Responsabilidades-chave |
 |----------------------------|--------------------------|
 | Arquitetos de Software     | Facilitar sessões, manter modelos atualizados e garantir consistência arquitetural |
-| Team Lead / Tech Lead      | **Responsável pela decisão final do modelo** no contexto da equipa/projeto (aprovação do baseline e revisões) |
+| Scrum Master / Team Lead   | **Responsável pela decisão final do modelo** no contexto da equipa/projeto (aprovação do baseline e revisões) |
 | Developer                  | Identificar fluxos, pontos de entrada, regras de negócio e mudanças técnicas relevantes |
-| QA / Test Engineer         | Traduzir ameaças em critérios de aceitação e validar evidência de mitigação/testes |
+| QA                         | Traduzir ameaças em critérios de aceitação e validar evidência de mitigação/testes |
 | AppSec Engineer            | Identificar ameaças técnicas, rever mitigação, validar risco residual e apoiar decisões de exceção |
 | Product Owner              | Priorizar mitigação pelo impacto no negócio e aceitar trade-offs explícitos |
-| DevOps/SRE                 | Implementar gates determinísticos, assegurar rastreabilidade e retenção de evidência |
+| DevOps / SRE               | Implementar gates determinísticos, assegurar rastreabilidade e retenção de evidência |
 
 ---
 
@@ -50,7 +50,7 @@ No início do projeto, deve ser criado um modelo de ameaça proporcional ao risc
 
 :::userstory
 **História.**   
-Como **Arquitetos de Software** e **Team Lead / Scrum Master**, quero criar um modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, para que os riscos de arquitetura sejam visíveis e tratados desde o início.
+Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero criar um modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, para que os riscos de arquitetura sejam visíveis e tratados desde o início.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que o projeto inicia  
@@ -166,7 +166,7 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero atualizar o modelo de am
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Refactor / Alteração | Alteração significativa | Arquitetos de Software + Team Lead / Scrum Master | Antes da release |
+| Refactor / Alteração | Alteração significativa | Arquitetos de Software + Scrum Master / Team Lead | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [SSDF Practices](https://csrc.nist.gov/publications/detail/sp/800-218/final)  
@@ -361,12 +361,12 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 |:---|:---|:---|
 | L1 | Opcional | Checklist simplificada |
 | L2 | Sim | Análise formal de privacidade |
-| L3 | Sim | LINDDUN completo + validação independente (DPO) |
+| L3 | Sim | LINDDUN completo + validação independente (GRC / Compliance (DPO)) |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |:---|:---|:---|:---|
-| Design / Revisão | Presença de dados pessoais | Arquitetos de Software + GRC/Compliance | Antes da aprovação de design |
+| Design / Revisão | Presença de dados pessoais | Arquitetos de Software + GRC / Compliance | Antes da aprovação de design |
 
 **Ligações úteis.**
 - 🔗 [LINDDUN Framework](https://www.linddun.org/)  
@@ -380,7 +380,7 @@ O Threat Modeling só é controlo de segurança quando existe um modelo aprovado
 
 :::userstory
 **História.**  
-Como **Team Lead / Tech Lead** e **AppSec Engineer**, quero aprovar formalmente o Threat Model (baseline e revisões), para garantir decisão explícita, rastreabilidade e auditabilidade.
+Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero aprovar formalmente o Threat Model (baseline e revisões), para garantir decisão explícita, rastreabilidade e auditabilidade.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que o Threat Model foi atualizado  
@@ -405,7 +405,7 @@ Como **Team Lead / Tech Lead** e **AppSec Engineer**, quero aprovar formalmente 
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Opcional | Aprovação leve (registo simples) |
-| L2 | Sim | Aprovação formal por TL + AppSec |
+| L2 | Sim | Aprovação formal por Scrum Master / Team Lead + AppSec Engineer |
 | L3 | Sim | Aprovação formal + revisão independente (segregação) |
 
 ---
@@ -599,7 +599,7 @@ A revisão independente cobre os pontos cegos da equipa; em alto risco, o métod
 
 :::userstory
 **História.**   
-Como **AppSec Engineer** e **Team Lead / Tech Lead**, quero que o threat model seja revisto por elemento independente da equipa de entrega antes do go-live a partir de L2, e que sistemas de alto risco apliquem PASTA como metodologia, para garantir cobertura de pontos cegos e rastreio formal ameaça → risco → controlo.  
+Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que o threat model seja revisto por elemento independente da equipa de entrega antes do go-live a partir de L2, e que sistemas de alto risco apliquem PASTA como metodologia, para garantir cobertura de pontos cegos e rastreio formal ameaça → risco → controlo.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um sistema L2+ a entrar em go-live ou com alteração arquitetural material  
@@ -687,9 +687,9 @@ Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar
 | Sessões de Threat Modeling       | Básicas (checklist STRIDE simplificada)  | Modelos formais com STRIDE                     | Modelos completos com STRIDE **e LINDDUN** (quando aplicável) + PASTA + automação |
 | Revisão de arquitetura           | Opcional                                 | Inclusão obrigatória                           | Sempre obrigatória com revisão independente                      |
 | Integração em CI/CD              | Não aplicável                            | Revisão periódica                              | Automação integrada e bloqueante                                 |
-| Risco aceite                     | Informal                                 | Documentado                                    | Formal, aprovado por AppSec e com sunset definido                |
+| Risco aceite                     | Informal                                 | Documentado                                    | Formal, aprovado por AppSec Engineer e com sunset definido       |
 | Automação / Reutilização         | Não aplicável                            | Recomendado (ferramenta ou script)             | Obrigatório (ferramenta centralizada, integração contínua)       |
-| **Análise LINDDUN (privacidade)**| Não aplicável                            | Obrigatória se houver dados pessoais           | Sempre obrigatória, com revisão por DPO                          |
+| **Análise LINDDUN (privacidade)**| Não aplicável                            | Obrigatória se houver dados pessoais           | Sempre obrigatória, com revisão por GRC / Compliance (DPO)       |
 
 ---
 

@@ -83,7 +83,7 @@ Este capítulo cobre:
 
 | Papel/Função              | Responsabilidades principais                                   |
 |---------------------------|----------------------------------------------------------------|
-| Arquitetura / DevSecOps   | Facilitar o processo e manter os modelos atualizados           |
+| Arquitetos de Software / DevOps / SRE   | Facilitar o processo e manter os modelos atualizados           |
 | Equipa de Desenvolvimento | Explicar fluxos, lógica e superfícies de ataque                |
 | Segurança / AppSec        | Identificar ameaças, vetores e técnicas de ataque relevantes   |
 | Product Owner / Negócio   | Validar impacto, prioridade e aceitabilidade do risco          |

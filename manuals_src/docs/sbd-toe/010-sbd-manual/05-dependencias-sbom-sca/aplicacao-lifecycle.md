@@ -31,9 +31,9 @@ A governação é **coletiva** - papéis e responsabilidades consistentes com o 
 | Papel | Responsabilidade |
 |------|-------------------|
 | **Developer / Lead** | Incluir dependências, triagem inicial, *pinning*, correções |
-| **AppSec** | Políticas, *tuning* de *gates*, gestão de exceções e risco |
+| **AppSec Engineer** | Políticas, *tuning* de *gates*, gestão de exceções e risco |
 | **DevOps / CI/CD** | SBOM, SCA, repositórios internos, bots de atualização e *impact analysis* |
-| **QA / Test Engineer** | Evidências, testes de regressão, validação de PRs de bots |
+| **QA** | Evidências, testes de regressão, validação de PRs de bots |
 | **Product Owner** | Decisão *go/no-go* e aceitação de risco residual |
 | **GRC / Gestão** | Auditoria, conformidade, retenção de evidências |
 
@@ -95,7 +95,7 @@ Sem SBOM atualizado não é possível determinar rapidamente exposição a CVEs 
 
 :::userstory
 **História.**   
-Como **DevOps**, quero **gerar SBOM em cada build**, para **rastreabilidade completa de componentes**.
+Como **DevOps / SRE**, quero **gerar SBOM em cada build**, para **rastreabilidade completa de componentes**.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que um build é acionado
@@ -141,7 +141,7 @@ SCA identifica vulnerabilidades conhecidas em dependências (diretas e transitiv
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **executar SCA automático nos pipelines**, para **detetar CVEs antes de produção**.
+Como **AppSec Engineer**, quero **executar SCA automático nos pipelines**, para **detetar CVEs antes de produção**.
 
 **Critérios de aceitação (BDD).**
 - **Dado** um build
@@ -183,7 +183,7 @@ Nem todos os findings podem ser resolvidos de imediato; exceções devem ser **f
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **formalizar exceções a CVEs**, para **manter governação e justificar risco residual**.
+Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter governação e justificar risco residual**.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que existe um CVE não resolvido
@@ -275,7 +275,7 @@ Sem repositórios internos, dependências podem ser resolvidas de fontes não co
 
 :::userstory
 **História.**   
-Como **DevOps**, quero ***enforce* repositórios internos aprovados**, para **garantir proveniência e consistência**.
+Como **DevOps / SRE**, quero ***enforce* repositórios internos aprovados**, para **garantir proveniência e consistência**.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que o *package manager* resolve dependências
@@ -460,7 +460,7 @@ Esta SBOM deve poder ser **correlacionada com o artefacto implantado** e servir 
 
 :::userstory
 **História.**  
-Como **DevOps Engineer**, quero gerar automaticamente um **SBOM assinado por build**, que se mantenha associado a cada imagem, pacote ou artefacto implantado, permitindo identificar todos os componentes e as suas versões.
+Como **DevOps / SRE**, quero gerar automaticamente um **SBOM assinado por build**, que se mantenha associado a cada imagem, pacote ou artefacto implantado, permitindo identificar todos os componentes e as suas versões.
 
 **Critérios de aceitação (BDD).**
 - **Dado** um pipeline de build  
@@ -502,8 +502,8 @@ Como **DevOps Engineer**, quero gerar automaticamente um **SBOM assinado por bui
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| CI | Execução de build | DevOps Engineer | No build (geração automática) |
-| Deploy | Implantação em ambiente | DevOps Engineer | Imediato (associação com metadados) |
+| CI | Execução de build | DevOps / SRE | No build (geração automática) |
+| Deploy | Implantação em ambiente | DevOps / SRE | Imediato (associação com metadados) |
 | Operação | Monitorização contínua | DevOps + AppSec | Contínuo (deteção de drift) |
 
 **Ligações úteis.**
@@ -786,7 +786,7 @@ Controlos de supply chain só são auditáveis quando a regra que distingue bloq
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **manter versionada a política de severidade, a *allowlist* de *registries* com regra de *fallback* auditada e o registo de aprovação com campos obrigatórios**, para **tornar as decisões de supply chain explícitas, rastreáveis e auditáveis**.  
+Como **AppSec Engineer**, quero **manter versionada a política de severidade, a *allowlist* de *registries* com regra de *fallback* auditada e o registo de aprovação com campos obrigatórios**, para **tornar as decisões de supply chain explícitas, rastreáveis e auditáveis**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** o pipeline de SCA  

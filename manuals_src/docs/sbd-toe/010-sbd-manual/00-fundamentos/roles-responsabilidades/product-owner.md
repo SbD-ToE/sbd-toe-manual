@@ -54,7 +54,7 @@ Validar **impacto de requisitos de arquitetura** para priorizar mitigação. Ger
 
 **User Stories:**
 - [US-06: Validação de impacto de requisitos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-06---atualização-da-baseline-após-alteração-arquitetural-significativa) - Priorizar mitigação
-- [US-10: Gestão de exceções de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios) - Equilibrar risco e entrega (com AppSec)
+- [US-10: Gestão de exceções de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios) - Equilibrar risco e entrega (com AppSec Engineer)
 
 ### Cap. 05 - Dependências e SBOM
 Validar **findings e exceções antes do go-live**, tomando decisão informada de go/no-go baseada em análise de risco.

@@ -43,18 +43,18 @@ Assegurar **segurança em módulos IaC e imagens** fornecidas, com validação d
 Receber **formação mínima obrigatória** antes de acesso a sistemas ou dados (NIS2/DORA compliance).
 
 **Requisitos associados:**
-- [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Receber formação obrigatória (GRC/Gestão responsável por garantir)
-- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (CISO/Training Manager responsável por executar)
+- [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Receber formação obrigatória (GRC / Compliance / Gestão Executiva responsável por garantir)
+- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (CISO / Security Champion (formação) responsável por executar)
 
 ### Cap. 14 - Governança e Contratação
 Cumprir **cláusulas contratuais de segurança**, submeter-se a validação periódica de conformidade, permitir monitorização contínua, executar processo de onboarding e offboarding formal.
 
 **Requisitos associados:**
 - [US-01: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---processo-formal-de-exceções-com-alçadas-por-nível-de-risco) - GRC valida conformidade
-- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Security Champion/HR executam preparação
-- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Security Champion/HR/DevOps executam offboarding
+- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Security Champion (RH) executam preparação
+- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Security Champion (RH) / DevOps / SRE executam offboarding
 - [US-13: Reavaliação periódica de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-13---controlo-sistemático-e-periódico-por-capítulo-sbd-toe) - Submeter-se a reavaliação
-- [US-14: Monitorização contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Permitir monitorização (AppSec/Security Monitoring executam)
+- [US-14: Monitorização contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Permitir monitorização (AppSec Engineer / Operações (Ops) executam)
 
 ---
 

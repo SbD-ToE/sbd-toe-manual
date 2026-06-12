@@ -35,10 +35,10 @@ Cada papel contribui com uma parte da cadeia de confiança, e apenas a colabora�
 
 | Papel | Responsabilidades principais |
 |-------|-------------------------------|
-| **Dev Team** | Especificar dependências, construir imagens seguras, corrigir vulnerabilidades identificadas |
-| **DevOps / Plataforma** | Manter repositórios de imagens confiáveis, configurar pipelines, *enforcing* Admission Control |
-| **AppSec** | Definir políticas, rever alertas críticos, validar conformidade com baseline de segurança |
-| **GRC / Auditoria** | Validar registos de conformidade, exceções e governação sobre imagens e runtime |
+| **Developer** | Especificar dependências, construir imagens seguras, corrigir vulnerabilidades identificadas |
+| **DevOps / SRE** | Manter repositórios de imagens confiáveis, configurar pipelines, *enforcing* Admission Control |
+| **AppSec Engineer** | Definir políticas, rever alertas críticos, validar conformidade com baseline de segurança |
+| **GRC / Compliance** | Validar registos de conformidade, exceções e governação sobre imagens e runtime |
 
 ---
 
@@ -105,7 +105,7 @@ Como **Dev Team**, quero construir imagens a partir de bases confiáveis, versio
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Desenvolvimento | Construção inicial da imagem | Dev Team | Imediato |
+| Desenvolvimento | Construção inicial da imagem | Developer | Imediato |
 
 **Ligações úteis.**  
 [Imagens Base Seguras](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base)  
@@ -119,7 +119,7 @@ Vulnerabilidades descobertas tarde no ciclo têm custo exponencial. Shift-left �
 
 :::userstory
 **História.**   
-Como **DevOps**, quero que o pipeline execute scanners de vulnerabilidades (SCA) em cada build de imagem e bloqueie automaticamente se o risco exceder o threshold definido, para reduzir risco de supply chain.
+Como **DevOps / SRE**, quero que o pipeline execute scanners de vulnerabilidades (SCA) em cada build de imagem e bloqueie automaticamente se o risco exceder o threshold definido, para reduzir risco de supply chain.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma imagem é construída no pipeline  
@@ -156,7 +156,7 @@ Como **DevOps**, quero que o pipeline execute scanners de vulnerabilidades (SCA)
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Build da imagem | DevOps | Automático |
+| CI/CD | Build da imagem | DevOps / SRE | Automático |
 
 **Ligações úteis.**  
 [Vulnerabilidades em Imagens](/sbd-toe/sbd-manual/containers-imagens/addon/vulnerabilidades-imagens)  
@@ -170,7 +170,7 @@ Sem proveniência verificável, imagens podem ser adulteradas ou substituídas. 
 
 :::userstory
 **História.**   
-Como **AppSec**, quero que todas as imagens produzidas sejam assinadas digitalmente e tenham proveniência verificável registada em transparency log, para garantir integridade e origem em todo o deploy.
+Como **AppSec Engineer**, quero que todas as imagens produzidas sejam assinadas digitalmente e tenham proveniência verificável registada em transparency log, para garantir integridade e origem em todo o deploy.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma imagem foi construída e publicada  
@@ -207,7 +207,7 @@ Como **AppSec**, quero que todas as imagens produzidas sejam assinadas digitalme
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Pré-produção | Publicação em registry | AppSec + DevOps | Antes do deploy |
+| Pré-produção | Publicação em registry | AppSec Engineer + DevOps / SRE | Antes do deploy |
 
 **Ligações úteis.**  
 [Assinatura e Cadeia de Trust](/sbd-toe/sbd-manual/containers-imagens/addon/assinatura-cadeia-trust)  
@@ -226,7 +226,7 @@ Um container sem restrições de execução expande a superfície de ataque expo
 
 :::userstory
 **História.**   
-Como **DevOps**, quero que todas as execuções de containers em Kubernetes sejam validadas por políticas formais (OPA/Kyverno), para garantir que apenas workloads conformes com baseline de segurança são permitidos.
+Como **DevOps / SRE**, quero que todas as execuções de containers em Kubernetes sejam validadas por políticas formais (OPA/Kyverno), para garantir que apenas workloads conformes com baseline de segurança são permitidos.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um pod é criado no cluster  
@@ -263,7 +263,7 @@ Como **DevOps**, quero que todas as execuções de containers em Kubernetes seja
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Criação de pod | DevOps | Imediato |
+| Produção | Criação de pod | DevOps / SRE | Imediato |
 
 **Ligações úteis.**  
 [Hardening de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/hardening-containers), [Policies de Runtime OPA](/sbd-toe/sbd-manual/containers-imagens/addon/policies-runtime-opa)  
@@ -318,7 +318,7 @@ Como **AppSec + GRC**, quero monitorizar comportamento de containers em execuç�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Execução de containers | AppSec + GRC | Contínuo, resposta em minutos |
+| Produção | Execução de containers | AppSec Engineer + GRC / Compliance | Contínuo, resposta em minutos |
 
 **Ligações úteis.**  
 [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
@@ -332,7 +332,7 @@ Sem SBOM, não há visibilidade sobre componentes presentes nem análise rápida
 
 :::userstory
 **História.**   
-Como **DevOps**, quero gerar SBOM (Software Bill of Materials) automaticamente a cada build de imagem e armazená-lo versionado, para permitir rastreabilidade de componentes, análise de vulnerabilidades e compliance auditável.
+Como **DevOps / SRE**, quero gerar SBOM (Software Bill of Materials) automaticamente a cada build de imagem e armazená-lo versionado, para permitir rastreabilidade de componentes, análise de vulnerabilidades e compliance auditável.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma imagem é construída no pipeline  
@@ -374,7 +374,7 @@ Como **DevOps**, quero gerar SBOM (Software Bill of Materials) automaticamente a
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD | Build de imagem | DevOps | Em cada build |
+| CI/CD | Build de imagem | DevOps / SRE | Em cada build |
 
 **Ligações úteis.**  
 [Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers),[Dependências, SBOM e SCA](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)  
@@ -428,7 +428,7 @@ Como **DevOps + AppSec**, quero impor allowlist de registries confiáveis e ***e
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Deploy | Definição de workload | DevOps + AppSec | Antes do go-live |
+| Deploy | Definição de workload | DevOps / SRE + AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**  
 [Assinatura e Cadeia de Trust](/sbd-toe/sbd-manual/containers-imagens/addon/assinatura-cadeia-trust), [Policies de Runtime OPA](/sbd-toe/sbd-manual/containers-imagens/addon/policies-runtime-opa)
@@ -442,7 +442,7 @@ Segredos embebidos em imagens criam exposição difícil de revogar. Credenciais
 
 :::userstory
 **História.**   
-Como **DevOps**, quero proibir credenciais estáticas em imagens e usar identidades efémeras via OIDC/Workload Identity, para eliminar exposição de segredos de longa duração.
+Como **DevOps / SRE**, quero proibir credenciais estáticas em imagens e usar identidades efémeras via OIDC/Workload Identity, para eliminar exposição de segredos de longa duração.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma imagem é construída  
@@ -483,7 +483,7 @@ Como **DevOps**, quero proibir credenciais estáticas em imagens e usar identida
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Build/Deploy | Build e deploy | DevOps | Em cada execução |
+| Build/Deploy | Build e deploy | DevOps / SRE | Em cada execução |
 
 **Ligações úteis.**  
 [Runners e Isolamento](/sbd-toe/sbd-manual/containers-imagens/addon/runners-isolamento)
@@ -537,7 +537,7 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Deploy | Definição de workload | Plataforma | Antes do go-live |
+| Deploy | Definição de workload | DevOps / SRE | Antes do go-live |
 
 **Ligações úteis.**  
 [Kubernetes e Execução](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
@@ -551,7 +551,7 @@ Sem segmentação de rede, workloads comprometidos exfiltram dados e propagam at
 
 :::userstory
 **História.**   
-Como **DevOps + Infraestrutura**, quero aplicar NetworkPolicy com ingress/egress explícito em cada namespace, para limitar comunicações ao estritamente necessário e detetar anomalias.
+Como **DevOps / SRE**, quero aplicar NetworkPolicy com ingress/egress explícito em cada namespace, para limitar comunicações ao estritamente necessário e detetar anomalias.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um workload tenta contactar um serviço não-autorizado **Quando** o fluxo não está em NetworkPolicy **Então** a conexão é bloqueada e registada em logs de auditoria
@@ -586,10 +586,10 @@ Como **DevOps + Infraestrutura**, quero aplicar NetworkPolicy com ingress/egress
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design | Levantamento de dependências | Dev Team | Antes de especificar pods |
-| Deploy | Aplicação de manifesto | DevOps + Admission Controller | Antes de workload scheduling |
-| Ops | Auditoria de fluxos | Plataforma + AppSec | 30d audit log retention |
-| GRC | Exceções vs conformidade | GRC | Revisão trimestral |
+| Design | Levantamento de dependências | Developer | Antes de especificar pods |
+| Deploy | Aplicação de manifesto | DevOps / SRE + Admission Controller | Antes de workload scheduling |
+| Ops | Auditoria de fluxos | DevOps / SRE + AppSec Engineer | 30d audit log retention |
+| GRC | Exceções vs conformidade | GRC / Compliance | Revisão trimestral |
 
 **Ligações úteis.**  
 [Kubernetes e Execução](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
@@ -638,10 +638,10 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Catalogação | Submissão de base | AppSec | Revisão em 5d |
-| Patching | CVE publicado | DevOps (automático se via Dependabot) | Per SLA |
+| Catalogação | Submissão de base | AppSec Engineer | Revisão em 5d |
+| Patching | CVE publicado | DevOps / SRE (automático se via Dependabot) | Per SLA |
 | Validação | Nova tag | Pipeline CI/CD | `<2h` para aprovação |
-| Sunsetting | EOL atingido | Plataforma + GRC | Notificação 90d antes |
+| Sunsetting | EOL atingido | DevOps / SRE + GRC / Compliance | Notificação 90d antes |
 
 **Ligações úteis.**  
 [Imagens Base Seguras](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base)
@@ -695,10 +695,10 @@ Como **DevOps/AppSec**, quero que builders e runners sejam mínimos, ephemerais 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Definição | Criação de pipeline | Dev Team | Antes do go-live |
-| Implementação | Configuração de runners | DevOps | Validação por AppSec |
+| Definição | Criação de pipeline | Developer | Antes do go-live |
+| Implementação | Configuração de runners | DevOps / SRE | Validação por AppSec |
 | Execução | Cada job do pipeline | Runner (automático) | `<2h` para destruction cleanup |
-| Auditoria | Revisão periódica | Plataforma + GRC | Trimestral; alertas imediatos para violações |
+| Auditoria | Revisão periódica | DevOps / SRE + GRC / Compliance | Trimestral; alertas imediatos para violações |
 
 **Ligações úteis.**  
 [Runners e Isolamento](/sbd-toe/sbd-manual/containers-imagens/addon/runners-isolamento)
@@ -752,7 +752,7 @@ Como **DevOps/AppSec**, quero que o enforcement de políticas de segurança seja
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Deploy/Produção | Criação de workload | DevOps/AppSec + GRC | Contínuo |
+| Deploy/Produção | Criação de workload | DevOps / SRE + AppSec Engineer + GRC / Compliance | Contínuo |
 
 **Ligações úteis.**  
 [Policies de Runtime OPA](/sbd-toe/sbd-manual/containers-imagens/addon/policies-runtime-opa), [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
@@ -767,7 +767,7 @@ Aplicações que processam dados críticos (pagamentos, dados pessoais) exigem i
 
 :::userstory
 **História.**  
-Como **Infraestrutura + AppSec**, quero configurar sandboxes avançados (gVisor, Kata Containers, Firecracker) via RuntimeClass em workloads sensíveis, para garantir isolamento reforçado de syscalls e proteção contra escalada de privilégios.
+Como **DevOps / SRE + AppSec Engineer**, quero configurar sandboxes avançados (gVisor, Kata Containers, Firecracker) via RuntimeClass em workloads sensíveis, para garantir isolamento reforçado de syscalls e proteção contra escalada de privilégios.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um pod sensível é criado (ex: com label `sandbox=required`)  
@@ -806,7 +806,7 @@ Como **Infraestrutura + AppSec**, quero configurar sandboxes avançados (gVisor,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Deploy | Criação de pod sensível | Infraestrutura + AppSec | Antes do deploy em produção |
+| Deploy | Criação de pod sensível | DevOps / SRE + AppSec Engineer | Antes do deploy em produção |
 
 **Ligações úteis.**  
 [Kubernetes e Execução](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
@@ -820,7 +820,7 @@ Imagens base aprovadas são **ativos de confiança organizacional**. A aprovaç�
 
 :::userstory
 **História.**  
-Como **Plataforma + AppSec**, quero gerir um catálogo de Golden Base Images com processo formal de **aprovação**, **revisão periódica**, **depreciação** e **revogação**, para garantir que a organização só constrói sobre bases com risco conhecido e governado.
+Como **DevOps / SRE + AppSec Engineer**, quero gerir um catálogo de Golden Base Images com processo formal de **aprovação**, **revisão periódica**, **depreciação** e **revogação**, para garantir que a organização só constrói sobre bases com risco conhecido e governado.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma nova imagem base é proposta  
@@ -857,8 +857,8 @@ Como **Plataforma + AppSec**, quero gerir um catálogo de Golden Base Images com
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design/Plataforma | Proposta de nova base | Plataforma + AppSec | 5 dias úteis |
-| Operação | CVE/EOL/incidente | Plataforma + AppSec + GRC | conforme severidade |
+| Design/Plataforma | Proposta de nova base | DevOps / SRE + AppSec Engineer | 5 dias úteis |
+| Operação | CVE/EOL/incidente | DevOps / SRE + AppSec Engineer + GRC / Compliance | conforme severidade |
 
 ---
 
@@ -906,7 +906,7 @@ Como **Release Manager/DevOps + AppSec**, quero que a promoção de uma imagem e
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Pré-prod/Release | Pedido de promoção | DevOps + AppSec | Antes do go-live |
+| Pré-prod/Release | Pedido de promoção | DevOps / SRE + AppSec Engineer | Antes do go-live |
 
 ---
 
@@ -954,7 +954,7 @@ Como **AppSec + GRC**, quero gerir exceções a findings/policies como decisões
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| CI/CD/Release | Bloqueio por finding/policy | AppSec + GRC + DevOps | Antes do go-live |
+| CI/CD/Release | Bloqueio por finding/policy | AppSec Engineer + GRC / Compliance + DevOps / SRE | Antes do go-live |
 
 
 ---
@@ -967,7 +967,7 @@ Os pesos de um modelo servido internamente são o núcleo do produto materializa
 
 :::userstory
 **História.**   
-Como **Plataforma + AppSec**, quero que os pesos de modelos *self-hosted* sejam encriptados *at-rest*, verificados por hash no *startup* e servidos por um *artifact registry* com acesso restrito e auditado, para garantir confidencialidade, integridade e rastreabilidade do ativo central do produto.  
+Como **DevOps / SRE + AppSec Engineer**, quero que os pesos de modelos *self-hosted* sejam encriptados *at-rest*, verificados por hash no *startup* e servidos por um *artifact registry* com acesso restrito e auditado, para garantir confidencialidade, integridade e rastreabilidade do ativo central do produto.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um ficheiro de pesos no *volume* ou *object store*  
@@ -998,7 +998,7 @@ Como **Plataforma + AppSec**, quero que os pesos de modelos *self-hosted* sejam 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Build/Provisionamento | Publicação/atualização de pesos no registry | Plataforma + AppSec | Antes de servir |
+| Build/Provisionamento | Publicação/atualização de pesos no registry | DevOps / SRE + AppSec Engineer | Antes de servir |
 | Produção | *Startup* do runtime | Runtime (automático) | Bloqueante se hash divergir |
 
 **Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)
@@ -1013,7 +1013,7 @@ Uma GPU partilhada sem isolamento explícito é um gap de postura, não uma otim
 
 :::userstory
 **História.**   
-Como **Infraestrutura + AppSec**, quero isolar o workload de inferência ao nível da GPU e separar inferência sensível de workloads de utilizador, para impedir interferência *cross-tenant* e degradação de serviço.  
+Como **DevOps / SRE + AppSec Engineer**, quero isolar o workload de inferência ao nível da GPU e separar inferência sensível de workloads de utilizador, para impedir interferência *cross-tenant* e degradação de serviço.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um pod de inferência sensível  
@@ -1044,8 +1044,8 @@ Como **Infraestrutura + AppSec**, quero isolar o workload de inferência ao nív
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design/Plataforma | Provisionamento do cluster de inferência | Infraestrutura + AppSec | Antes do go-live |
-| Produção | Agendamento de pod sensível | Plataforma (automático) | Imediato |
+| Design/Plataforma | Provisionamento do cluster de inferência | DevOps / SRE + AppSec Engineer | Antes do go-live |
+| Produção | Agendamento de pod sensível | DevOps / SRE (automático) | Imediato |
 
 **Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)
 
@@ -1093,7 +1093,7 @@ Como **DevOps + AppSec**, quero que o container e a API de inferência apliquem 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Build/Deploy | Construção e deploy do runtime | DevOps + AppSec | Antes de expor |
+| Build/Deploy | Construção e deploy do runtime | DevOps / SRE + AppSec Engineer | Antes de expor |
 | Produção | Invocação da API | Runtime (automático) | Contínuo |
 
 **Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference), [Hardening de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/hardening-containers)
@@ -1139,8 +1139,8 @@ Como **DevOps + AppSec**, quero impor perfis seccomp/AppArmor em todos os worklo
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Criação de pod | DevOps + Admission Controller | Imediato |
-| Ops | Verificação de *drift* | AppSec + Plataforma | Periódica (L3: contínua) |
+| Produção | Criação de pod | DevOps / SRE + Admission Controller | Imediato |
+| Ops | Verificação de *drift* | AppSec Engineer + DevOps / SRE | Periódica (L3: contínua) |
 
 **Ligações úteis.** [Hardening de Containers](/sbd-toe/sbd-manual/containers-imagens/addon/hardening-containers), [Policies de Runtime OPA](/sbd-toe/sbd-manual/containers-imagens/addon/policies-runtime-opa)
 
@@ -1154,7 +1154,7 @@ Imagens obsoletas acumuladas no registry são superfície de ataque latente e cu
 
 :::userstory
 **História.**   
-Como **Plataforma + DevOps**, quero uma política de retenção/limpeza de imagens com renovação periódica por SLA de patching e sinalização de imagens estagnadas, para evitar acumulação de artefactos vulneráveis e manter o registry auditável.  
+Como **DevOps / SRE**, quero uma política de retenção/limpeza de imagens com renovação periódica por SLA de patching e sinalização de imagens estagnadas, para evitar acumulação de artefactos vulneráveis e manter o registry auditável.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma imagem base com patch de segurança disponível  
@@ -1185,8 +1185,8 @@ Como **Plataforma + DevOps**, quero uma política de retenção/limpeza de image
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Ops | Patch de base / janela de renovação | Plataforma + DevOps | Per SLA (L3: ≤30d) |
-| GRC | Auditoria de retenção | GRC | Periódica |
+| Ops | Patch de base / janela de renovação | DevOps / SRE | Per SLA (L3: ≤30d) |
+| GRC | Auditoria de retenção | GRC / Compliance | Periódica |
 
 **Ligações úteis.** [Imagens Base Seguras](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base), [Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers)
 
@@ -1199,22 +1199,22 @@ A tabela seguinte consolida os principais outputs que devem estar presentes em q
 
 | Artefacto | Responsável | Evidência |
 |-----------|-------------|-----------|
-| `Dockerfile` com digest fixo | Dev Team | Repo Git |
-| Relatórios de scanner SCA | DevOps | Pipeline logs |
-| Proveniência + assinatura Cosign | AppSec | Metadata em registry, entrada Rekor |
-| Policies OPA/Kyverno versionadas | DevOps | Repositório Git, manifests validados |
-| Logs de Admission Controller | GRC | Relatórios de rejeições e aceitações |
-| **SBOM da imagem (CycloneDX/SPDX)** | DevOps | Ficheiro anexo ao artefacto |
-| **registry-allowlist.yaml** | DevOps | Policy de admissão aplicada |
-| **Relatórios de secret scan** | DevOps | CI logs + bloqueios de secrets |
-| **RBAC/SA manifests** | Plataforma | Auditoria de permissões |
-| **networkpolicy/*.yaml** | Plataforma | Auditoria de fluxos intra-cluster |
-| **golden-images-catalog.md** | Plataforma/AppSec | SLA de patching + changelog |
-| **Config de runners/builders** | DevOps | Assinatura + ephemeral logs |
-| **Dashboard de enforcement** | DevOps/AppSec | Prometheus/Grafana com métricas |
-| **Relatório mensal de conformidade** | GRC | Tentativas bloqueadas, taxa de conformidade |
-| **Manifests RuntimeClass (gVisor/Kata)** | Plataforma | Pod specs com sandbox configurado |
-| **Auditoria de workloads sensíveis** | Plataforma/GRC | Relatório de pods em sandbox |
+| `Dockerfile` com digest fixo | Developer | Repo Git |
+| Relatórios de scanner SCA | DevOps / SRE | Pipeline logs |
+| Proveniência + assinatura Cosign | AppSec Engineer | Metadata em registry, entrada Rekor |
+| Policies OPA/Kyverno versionadas | DevOps / SRE | Repositório Git, manifests validados |
+| Logs de Admission Controller | GRC / Compliance | Relatórios de rejeições e aceitações |
+| **SBOM da imagem (CycloneDX/SPDX)** | DevOps / SRE | Ficheiro anexo ao artefacto |
+| **registry-allowlist.yaml** | DevOps / SRE | Policy de admissão aplicada |
+| **Relatórios de secret scan** | DevOps / SRE | CI logs + bloqueios de secrets |
+| **RBAC/SA manifests** | DevOps / SRE | Auditoria de permissões |
+| **networkpolicy/*.yaml** | DevOps / SRE | Auditoria de fluxos intra-cluster |
+| **golden-images-catalog.md** | DevOps / SRE / AppSec Engineer | SLA de patching + changelog |
+| **Config de runners/builders** | DevOps / SRE | Assinatura + ephemeral logs |
+| **Dashboard de enforcement** | DevOps / SRE / AppSec Engineer | Prometheus/Grafana com métricas |
+| **Relatório mensal de conformidade** | GRC / Compliance | Tentativas bloqueadas, taxa de conformidade |
+| **Manifests RuntimeClass (gVisor/Kata)** | DevOps / SRE | Pod specs com sandbox configurado |
+| **Auditoria de workloads sensíveis** | DevOps / SRE / GRC / Compliance | Relatório de pods em sandbox |
 
 ---
 

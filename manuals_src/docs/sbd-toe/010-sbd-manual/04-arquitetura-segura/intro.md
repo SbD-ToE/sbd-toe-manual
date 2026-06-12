@@ -86,12 +86,12 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 
 | Papel/Função               | Responsabilidades técnicas                                         |
 |----------------------------|--------------------------------------------------------------------|
-| **Arquiteto / DevSecOps**  | Definir modelos, diagramas e decisões                               |
+| **Arquitetos de Software** | Definir modelos, diagramas e decisões                               |
 | **Developer**              | Implementar e manter os controlos definidos                         |
-| **QA / Test Engineer**     | Validar requisitos de arquitetura em testes                          |
-| **AppSec / Segurança**     | Participar em threat modeling e revisões de arquitetura              |
-| **Product Owner / Negócio**| Avaliar impacto em prazos e custo                                   |
-| **Eng. CI/CD**             | Automatizar verificações de controlos de arquitetura                 |
+| **QA**                     | Validar requisitos de arquitetura em testes                          |
+| **AppSec Engineer**        | Participar em threat modeling e revisões de arquitetura              |
+| **Product Owner**          | Avaliar impacto em prazos e custo                                   |
+| **DevOps / SRE**           | Automatizar verificações de controlos de arquitetura                 |
 
 > ✅ Toda exceção da arquitetura deve ser **registada, justificada e validada** com plano compensatório.
 

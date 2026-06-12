@@ -37,13 +37,13 @@ Operacionaliza:
 Facilitar **discussões sobre criticidade e requisitos**, garantindo que toda a equipa compreende o contexto de risco. Rever classificação em integrações críticas ou mudanças relevantes.
 
 **User Stories:**
-- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade (com Arquitetos)
+- [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade (com Arquitetos de Software)
 
 ### Cap. 03 - Threat Modeling
 **Moderar sessões de threat modeling**, criar modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, garantir participação de toda a equipa.
 
 **User Stories:**
-- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - Riscos visíveis desde o início (com Arquitetos)
+- [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - Riscos visíveis desde o início (com Arquitetos de Software)
 
 ### Cap. 06 - Desenvolvimento Seguro
 Garantir que **cada PR é revisto com checklist de segurança obrigatória**, prevenindo vulnerabilidades e mantendo registo de conformidade.

@@ -112,10 +112,10 @@ A proteção de IaC é uma responsabilidade partilhada, exigindo coordenação e
 
 | Papel/Função      | Contributo principal |
 |-------------------|----------------------|
-| **DevOps / Infra** | Escrita, revisão e manutenção de templates IaC; gestão de pipelines |
-| **AppSec**         | Definição de políticas, scanners obrigatórios e critérios de bloqueio |
-| **Arquitetura**    | Validação de padrões técnicos e desenho seguro de ambientes |
-| **Produto / GRC**  | Aprovação de riscos, exceções e validação de rastreabilidade |
+| **DevOps / SRE**  | Escrita, revisão e manutenção de templates IaC; gestão de pipelines |
+| **AppSec Engineer** | Definição de políticas, scanners obrigatórios e critérios de bloqueio |
+| **Arquitetos de Software** | Validação de padrões técnicos e desenho seguro de ambientes |
+| **Product Owner** + **GRC / Compliance** | Aprovação de riscos, exceções e validação de rastreabilidade |
 
 ---
 
@@ -138,10 +138,10 @@ Políticas formais garantem que as práticas não dependem apenas da disciplina 
 | Política organizacional           | Obrigatória | Aplicação                     | Conteúdo mínimo |
 |----------------------------------|-------------|-------------------------------|-----------------|
 | [Política de IaC Seguro](/sbd-toe/assets/policies/policy-iac-seguro)            | Sim         | Todos os projetos IaC         | Padrões técnicos, segregação de ambientes, pipelines obrigatórios, enforcement de policies |
-| [Política de Gestão de Módulos IaC](/sbd-toe/assets/policies/policy-iac-seguro) | Recomendado | DevOps/Infra, Arquitetura     | Uso de módulos verificados, pinagem de versão, auditoria de origem |
-| [Política de Rastreabilidade IaC](/sbd-toe/assets/policies/policy-rastreabilidade)   | Sim         | DevOps, GRC                   | Mapeamento ficheiro → recurso → ambiente, histórico auditável |
-| [Política de Aprovação de `plan` IaC](/sbd-toe/assets/policies/policy-aprovacao-plan-iac)   | Sim         | DevOps, AppSec                | Revisão humana obrigatória, critérios de impacto, rollback e SoD |
-| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos) | Sim | DevOps, AppSec | OIDC/TTL curto, proibição de segredos em código IaC, rotação periódica |
+| [Política de Gestão de Módulos IaC](/sbd-toe/assets/policies/policy-iac-seguro) | Recomendado | DevOps / SRE, Arquitetos de Software     | Uso de módulos verificados, pinagem de versão, auditoria de origem |
+| [Política de Rastreabilidade IaC](/sbd-toe/assets/policies/policy-rastreabilidade)   | Sim         | DevOps / SRE, GRC / Compliance                   | Mapeamento ficheiro → recurso → ambiente, histórico auditável |
+| [Política de Aprovação de `plan` IaC](/sbd-toe/assets/policies/policy-aprovacao-plan-iac)   | Sim         | DevOps / SRE, AppSec Engineer                | Revisão humana obrigatória, critérios de impacto, rollback e SoD |
+| [Política de Gestão de Segredos](/sbd-toe/assets/policies/policy-gestao-segredos) | Sim | DevOps / SRE, AppSec Engineer | OIDC/TTL curto, proibição de segredos em código IaC, rotação periódica |
 | [Política de Rollback e Recuperação](/sbd-toe/assets/policies/policy-rollback) | ⚠️ Reforçada | Ambientes críticos | Reversão automatizada, testes periódicos de restauração de estado |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do Manual**, onde estas políticas estão consolidadas transversalmente.

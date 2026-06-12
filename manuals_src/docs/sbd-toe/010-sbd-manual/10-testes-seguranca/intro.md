@@ -79,12 +79,12 @@ Nem toda a verificação de segurança é um *teste*. Um teste confronta comport
 
 A responsabilidade pelos testes é **coletiva**, mas cada papel tem responsabilidades explícitas:
 
-- **Dev** → corrige findings e cria regressões automáticas verificáveis.  
-- **QA/Testes** → executa DAST, fuzzing e valida critérios de aceitação.  
-- **AppSec** → define estratégia, afina regras e gere exceções e evidência.  
-- **DevOps** → integra scanners, *gates* e preservação de artefactos no CI/CD.  
-- **Gestão de Produto** → decide *go/no-go* e aprova risco residual documentado.  
-- **PenTester** → conduz validações ofensivas e fornece evidência técnica independente.
+- **Developer** → corrige findings e cria regressões automáticas verificáveis.  
+- **QA** → executa DAST, fuzzing e valida critérios de aceitação.  
+- **AppSec Engineer** → define estratégia, afina regras e gere exceções e evidência.  
+- **DevOps / SRE** → integra scanners, *gates* e preservação de artefactos no CI/CD.  
+- **Product Owner** → decide *go/no-go* e aprova risco residual documentado.  
+- **AppSec Engineer** → conduz validações ofensivas e fornece evidência técnica independente.
 
 👉 Estas responsabilidades são operacionalizadas através de histórias de utilizador no `aplicacao-lifecycle.md`.
 
@@ -94,12 +94,12 @@ A responsabilidade pelos testes é **coletiva**, mas cada papel tem responsabili
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |--------|--------------|-----------|-----------------|
-| [Política de Estratégia de Testes](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | AppSec | Documento versionado com mapeamento Cap. 2 ⇄ testes |
-| [Política de SAST em PR](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | Dev + DevOps | Execução automática em PRs, thresholds L1–L3 |
-| [Política de DAST e Fuzzing](/sbd-toe/assets/policies/policy-dast-fuzzing) | Recomendado | QA/Testes | DAST autenticado, fuzzing em endpoints críticos |
-| [Política de Gates CI/CD](/sbd-toe/assets/policies/policy-cicd-seguro) | Sim | DevOps + AppSec | Critérios formais, logs preservados, exceções registadas |
-| [Política de Release Seguro](/sbd-toe/assets/policies/policy-release-seguro) | Sim | Gestão + AppSec | Checklist de release e aceitação de risco documentada |
-| [Política de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting) | Recomendado (L2), Obrigatório (L3) | AppSec | Âmbito por risco, relatórios técnicos e retests |
+| [Política de Estratégia de Testes](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | AppSec Engineer | Documento versionado com mapeamento Cap. 2 ⇄ testes |
+| [Política de SAST em PR](/sbd-toe/assets/policies/policy-estrategia-testes) | Sim | Developer + DevOps / SRE | Execução automática em PRs, thresholds L1–L3 |
+| [Política de DAST e Fuzzing](/sbd-toe/assets/policies/policy-dast-fuzzing) | Recomendado | QA | DAST autenticado, fuzzing em endpoints críticos |
+| [Política de Gates CI/CD](/sbd-toe/assets/policies/policy-cicd-seguro) | Sim | DevOps / SRE + AppSec Engineer | Critérios formais, logs preservados, exceções registadas |
+| [Política de Release Seguro](/sbd-toe/assets/policies/policy-release-seguro) | Sim | Gestão Executiva + AppSec Engineer | Checklist de release e aceitação de risco documentada |
+| [Política de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting) | Recomendado (L2), Obrigatório (L3) | AppSec Engineer | Âmbito por risco, relatórios técnicos e retests |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**.
 

@@ -33,12 +33,12 @@ Não basta que uma equipa “tenha logs”: cada papel deve assumir uma função
 
 | Papel | Responsabilidade |
 |-------|------------------|
-| **Dev** | Expor métricas e logs estruturados |
-| **QA/Testes** | Validar geração de eventos e thresholds |
-| **AppSec** | Definir eventos críticos e monitorizar alertas |
-| **DevOps/SRE** | Configurar pipelines e dashboards |
-| **Resposta a Incidentes (IR)** | Analisar alertas e executar playbooks |
-| **GRC** | Rever métricas e garantir conformidade |
+| **Developer** | Expor métricas e logs estruturados |
+| **QA** | Validar geração de eventos e thresholds |
+| **AppSec Engineer** | Definir eventos críticos e monitorizar alertas |
+| **DevOps / SRE** | Configurar pipelines e dashboards |
+| **Operações (Ops)** | Analisar alertas e executar playbooks |
+| **GRC / Compliance** | Rever métricas e garantir conformidade |
 
 ---
 
@@ -56,7 +56,7 @@ Sem logs consistentes e centralizados, qualquer investigação começa às cegas
 
 :::userstory
 **História.**   
-Como **Dev**, quero **gerar logs estruturados e centralizados**, para **assegurar visibilidade completa em incidentes**.  
+Como **Developer**, quero **gerar logs estruturados e centralizados**, para **assegurar visibilidade completa em incidentes**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** código em execução  
@@ -95,7 +95,7 @@ Visibilidade sem contexto gera apenas ruído.
 
 :::userstory
 **História.**   
-Como **AppSec**, quero **definir eventos e métricas críticas de segurança**, para **assegurar que a monitorização cobre riscos relevantes**.  
+Como **AppSec Engineer**, quero **definir eventos e métricas críticas de segurança**, para **assegurar que a monitorização cobre riscos relevantes**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** sistema em produção  
@@ -197,7 +197,7 @@ Como **Ops**, quero **integrar alertas com playbooks de resposta a incidentes**,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Alerta confirmado | IR | ≤ 30 min |
+| Operações | Alerta confirmado | Operações (Ops) | ≤ 30 min |
 
 **Ligações úteis.** [Formação & Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
@@ -212,7 +212,7 @@ Sem métricas de eficácia, qualquer esforço de monitorização corre o risco d
 
 :::userstory
 **História.**   
-Como **GRC**, quero **medir MTTD e MTTR de incidentes**, para **avaliar eficácia da monitorização e resposta**.  
+Como **GRC / Compliance**, quero **medir MTTD e MTTR de incidentes**, para **avaliar eficácia da monitorização e resposta**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** incidentes registados  
@@ -406,7 +406,7 @@ Como **AppSec/IR**, quero **correlacionar eventos entre múltiplas fontes** (apl
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Após 1 mês de dados em produção | AppSec + IR | Implementação contínua |
+| Operações | Após 1 mês de dados em produção | AppSec + Operações (Ops) | Implementação contínua |
 
 **Ligações úteis.** [Correlação de Anomalias](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/correlacao-anomalias)
 
@@ -451,7 +451,7 @@ Como **AppSec/IR**, quero **validar e afinar alertas** (teste de *trigger*, simu
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Criação/revisão de alerta | AppSec + IR | Antes de ativação em produção |
+| Operações | Criação/revisão de alerta | AppSec + Operações (Ops) | Antes de ativação em produção |
 
 **Ligações úteis.** [Alertas e Eventos Críticos](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/alertas-eventos-criticos)
 
@@ -731,7 +731,7 @@ Como **AppSec/IR**, quero **mapear as regras de deteção a técnicas MITRE ATT&
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Criação/revisão de regra / triagem de vulnerabilidade | AppSec + IR | Por release / por triagem |
+| Operações | Criação/revisão de regra / triagem de vulnerabilidade | AppSec + Operações (Ops) | Por release / por triagem |
 
 **Ligações úteis.** [MITRE ATT&CK como Vocabulário de Detection Engineering](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/attack-detection-engineering); [Priorização com EPSS e KEV](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/epss-kev-priorizacao)
 
@@ -772,7 +772,7 @@ Como **IR/AppSec**, quero **executar exercícios de resposta a incidentes end-to
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Ciclo de exercício / revisão de playbook | IR + AppSec | No último ciclo (anual mínimo) |
+| Operações | Ciclo de exercício / revisão de playbook | Operações (Ops) + AppSec | No último ciclo (anual mínimo) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Catálogo de Requisitos de Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
 
@@ -794,7 +794,7 @@ Como **IR/AppSec**, quero **governar a automação SOAR com guardrails explícit
   **Então** exige aprovação humana e respeita os limites de guardrail definidos  
 - **Dado** uma *alert storm* causada por alerta mal calibrado  
   **Quando** o kill-switch é acionado  
-  **Então** a desativação tem limite temporal (máx 2h), notifica o AppSec Lead automaticamente e exige RCA documentado antes de reativar  
+  **Então** a desativação tem limite temporal (máx 2h), notifica o AppSec Engineer automaticamente e exige RCA documentado antes de reativar  
 
 **Checklist.**  
 - [ ] Guardrails de SOAR documentados (ação, limite, razão) com aprovação humana para ações irreversíveis  
@@ -813,7 +813,7 @@ Como **IR/AppSec**, quero **governar a automação SOAR com guardrails explícit
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Ação SOAR de alto impacto / alert storm | IR + AppSec | Conforme severidade (kill-switch ≤ 2h) |
+| Operações | Ação SOAR de alto impacto / alert storm | Operações (Ops) + AppSec | Conforme severidade (kill-switch ≤ 2h) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Exceções em Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/excecoes-operacoes)
 

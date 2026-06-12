@@ -32,15 +32,15 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 | Papel Formal (07-roles) | Responsabilidades em Cap. 01 |
 |---|---|
 | **Developer** | Propor classificação inicial; registar alterações E/D/I; atualizar documentação em commits |
-| **Team Lead / Scrum Master** | Facilitar integração da classificação no backlog; remover bloqueios operacionais |
+| **Scrum Master / Team Lead** | Facilitar integração da classificação no backlog; remover bloqueios operacionais |
 | **AppSec Engineer** | Validar modelo aplicado; ajustar nível (especialmente em L2/L3); mapear ameaças; parametrizar cadência; aprovar classificações |
 | **Arquitetos de Software** | Rever implicações técnicas de risco, cenários de exposição, impacto em arquitetura |
 | **Product Owner** | Notificado de alterações de nível (especialmente L1→L3); aprovar impacto de negócio de exceções |
 | **GRC/Compliance** | Rastreabilidade normativa; definir TTL/expiração de exceções; consolidar KPIs; auditar decisões |
 | **QA** | Validar cumprimento de requisitos por nível antes do go-live; documentar evidências |
-| **DevOps/SRE** | Aplicar classificação a artefactos técnicos (pipeline/IaC/imagens) nos capítulos 07/08/09 |
+| **DevOps / SRE** | Aplicar classificação a artefactos técnicos (pipeline/IaC/imagens) nos capítulos 07/08/09 |
 | **Gestão Executiva / CISO** | Aprovar políticas de classificação e aceitação de risco; supervisionar exceções em L3 |
-| **Auditores Internos** | Validar aplicação efetiva de classificações; auditar rastreabilidade; produzir achados |
+| **Auditores** | Validar aplicação efetiva de classificações; auditar rastreabilidade; produzir achados |
 
 ---
 
@@ -53,7 +53,7 @@ A classificação inicial da aplicação é o ponto de entrada para a aplicaçã
 
 :::userstory
 **História.**  
-Como **Developer / Team Lead**, quero **classificar a aplicação com base nos eixos Exposição, Dados e Impacto (E+D+I)**, para garantir a aplicação proporcional de controlos de segurança ao longo de todos os capítulos.
+Como **Developer / Scrum Master / Team Lead**, quero **classificar a aplicação com base nos eixos Exposição, Dados e Impacto (E+D+I)**, para garantir a aplicação proporcional de controlos de segurança ao longo de todos os capítulos.
 
 **Critérios de aceitação (BDD).**
 - **Dado** uma aplicação nova ou em início de projeto  
@@ -92,8 +92,8 @@ Como **Developer / Team Lead**, quero **classificar a aplicação com base nos e
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
 |---|---|---|---|
-| Início | Kick-off / Definição de projeto | **Developer + Team Lead + AppSec Engineer** | Antes da primeira release |
-| Arquitetura | Revisão de design inicial | **Developer + Arquitetura + AppSec Engineer** | Antes da aprovação de arquitetura |
+| Início | Kick-off / Definição de projeto | **Developer + Scrum Master / Team Lead + AppSec Engineer** | Antes da primeira release |
+| Arquitetura | Revisão de design inicial | **Developer + Arquitetos de Software + AppSec Engineer** | Antes da aprovação de arquitetura |
 
 **Ligações úteis.**
 - [Modelo de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos)  
@@ -109,7 +109,7 @@ A matriz de controlo define quais os requisitos de segurança aplicáveis em fun
 
 :::userstory
 **História.**  
-Como **Developer / Team Lead**, quero **aplicar a matriz de controlos e mapear cada requisito para REQ-XXX do Capítulo 02**, para garantir que apenas os requisitos necessários são exigidos e rastreáveis.
+Como **Developer / Scrum Master / Team Lead**, quero **aplicar a matriz de controlos e mapear cada requisito para REQ-XXX do Capítulo 02**, para garantir que apenas os requisitos necessários são exigidos e rastreáveis.
 
 **Critérios de aceitação (BDD).**
 - **Dado** uma aplicação já classificada (L1, L2 ou L3)  
@@ -140,7 +140,7 @@ Como **Developer / Team Lead**, quero **aplicar a matriz de controlos e mapear c
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
 |---|---|---|---|
-| Planeamento | Após classificação | **Developer + Team Lead + AppSec Engineer** | Antes de implementação |
+| Planeamento | Após classificação | **Developer + Scrum Master / Team Lead + AppSec Engineer** | Antes de implementação |
 
 **Ligações úteis.**
 - [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco)  
@@ -375,7 +375,7 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 - [ ] Checklist de controlos revista completa (baseada em matriz aplicada)  
 - [ ] Evidências documentadas (testes, relatórios, scans, revisões)  
 - [ ] **Aprovação formal de AppSec Engineer registada**  
-- [ ] **Em L3: aprovação adicional por Gestão/PMO ou CISO**  
+- [ ] **Em L3: aprovação adicional por Gestão Executiva ou CISO**  
 - [ ] Nenhuma exceção não-aprovada pendente  
 - [ ] Rastreamento: cada controlo ↔ evidência documentado  
 
@@ -394,7 +394,7 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
 |---|---|---|---|
-| Pré-Release | Aplicação pronta para go-live | **QA + AppSec Engineer + Gestão/PMO (L3)** | 2 dias úteis antes de deploy |
+| Pré-Release | Aplicação pronta para go-live | **QA + AppSec Engineer + Gestão Executiva (L3)** | 2 dias úteis antes de deploy |
 
 **Ligações úteis.**
 - [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco)  
@@ -746,7 +746,7 @@ Como **AppSec Engineer**, quero **avaliar os atributos do risco (detetabilidade,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Classificação / Design | Após classificação inicial ou quando se introduz automação/assistência com impacto nos atributos | AppSec Engineer + Arquitetura | Antes da aprovação de arquitetura |
+| Classificação / Design | Após classificação inicial ou quando se introduz automação/assistência com impacto nos atributos | AppSec Engineer + Arquitetos de Software | Antes da aprovação de arquitetura |
 
 **Ligações úteis.** [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco) · [Atributos do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/atributos-risco)
 
@@ -848,7 +848,7 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 
 **Checklist.**  
 - [ ] Inventário central ou GRC existe e regista todas as aplicações com nível, data de revisão, owner e estado de conformidade  
-- [ ] Aprovação registada pela autoridade proporcional ao nível: L1 tech lead, L2 AppSec, L3 CISO — datada e atribuída ao responsável  
+- [ ] Aprovação registada pela autoridade proporcional ao nível: L1 Scrum Master / Team Lead, L2 AppSec Engineer, L3 CISO — datada e atribuída ao responsável  
 - [ ] Inventário atualizado após cada alteração de classificação ou transferência de responsabilidade  
 - [ ] Inventário acessível para auditoria sem preparação manual  
 
@@ -859,7 +859,7 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Entrada no inventário; aprovação por tech lead | Inventário com audit trail; aprovação por AppSec | Inventário com rastreamento granular; aprovação por CISO/equivalente |
+| Entrada no inventário; aprovação por Scrum Master / Team Lead | Inventário com audit trail; aprovação por AppSec Engineer | Inventário com rastreamento granular; aprovação por CISO/equivalente |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -874,8 +874,8 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 
 | Fase         | Artefacto                          | Quem produz         | Onde fica                  | Evidência mínima                              |
 |--------------|------------------------------------|---------------------|----------------------------|-----------------------------------------------|
-| Início       | `classificacao-aplicacao.yaml`     | Developer / Team Lead     | Repo `security/`           | Commit + revisão AppSec Engineer |
-| Planeamento  | `matriz-controlos.md`              | Developer / Team Lead     | Backlog / wiki             | REQ-XXX referenciados (Cap. 02); aprovado AppSec |
+| Início       | `classificacao-aplicacao.yaml`     | Developer / Scrum Master / Team Lead     | Repo `security/`           | Commit + revisão AppSec Engineer |
+| Planeamento  | `matriz-controlos.md`              | Developer / Scrum Master / Team Lead     | Backlog / wiki             | REQ-XXX referenciados (Cap. 02); aprovado AppSec |
 | Revisão      | `classificacao-revisao.md`         | AppSec Engineer      | Repo `docs/`               | Issue/ata datada; decisão justificada |
 | Release      | `checklist-go-live.md`             | QA                  | Pipeline CI/CD             | Aprovação formal AppSec Engineer + Gestão (L3) |
 | Operação     | `risco-residual.md`                | GRC/Compliance    | Ferramenta GRC / repo      | Owner + TTL + critérios encerramento; aprovação |

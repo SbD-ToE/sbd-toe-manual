@@ -104,7 +104,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
    alert_id: CORR-BEHAVIOR-001
    pattern: "User X downloads 10GB/dia (backup legítimo)"
    justification: "Processo de backup automático, validado com Dev"
-   approved_by: "AppSec Lead (email@example.com)"
+   approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
    expiration_date: "2026-07-04"  # Máximo 6 meses
    evidence: "link/to/ticket-JIRA-123"
@@ -112,7 +112,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
 
 2. **Aprovador por severidade de alerta**:
    - CRITICAL: AppSec + IR Lead
-   - HIGH: AppSec Lead
+   - HIGH: AppSec Engineer
    - MEDIUM: IR Analyst
 
 3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
@@ -126,7 +126,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
 Em caso de "alert storm" ou alerta mal calibrado:
 
 1. **Kill switch temporário**: IR pode desativar alerta por máx 2 horas
-2. **Notificação obrigatória**: Desativação notifica AppSec Lead automaticamente
+2. **Notificação obrigatória**: Desativação notifica AppSec Engineer automaticamente
 3. **Root cause analysis**: Obrigatória antes de reativar
 4. **Documentação**: Template de RCA + correção aplicada
 
@@ -164,7 +164,7 @@ A monitorização é um esforço coletivo:
 - **QA/Testes** → garante que os eventos gerados são válidos e acionáveis.  
 - **AppSec** → define quais os eventos críticos de segurança a seguir.  
 - **DevOps/SRE** → mantém pipelines e dashboards operacionais.  
-- **Resposta a Incidentes (IR)** → analisa alertas e executa playbooks.  
+- **Operações (Ops)** → analisa alertas e executa playbooks.  
 - **GRC** → mede eficácia e assegura conformidade regulatória.  
 
 Sem esta matriz de responsabilidades, os controlos técnicos tornam-se invisíveis ou ineficazes.
@@ -238,8 +238,8 @@ Este capítulo é **basilar** porque traduz segurança em capacidade de **deteta
 |----------|--------------|-----------|-----------------|
 | [Política de Logging Estruturado](/sbd-toe/assets/policies/policy-logging-estruturado) | Sim | Dev + DevOps | Logs normalizados e centralizados |
 | [Política de Monitorização de Segurança](/sbd-toe/assets/policies/policy-monitorizacao-seguranca) | Sim | AppSec + SRE | Métricas críticas, dashboards e thresholds |
-| [Política de Gestão de Alertas](/sbd-toe/assets/policies/policy-gestao-alertas) | Sim | IR + AppSec | Alertas críticos com SLA definido |
-| [Política de Integração com IRP](/sbd-toe/assets/policies/policy-irp) | Sim | IR + GRC | Playbooks documentados e rastreabilidade |
+| [Política de Gestão de Alertas](/sbd-toe/assets/policies/policy-gestao-alertas) | Sim | Operações (Ops) + AppSec | Alertas críticos com SLA definido |
+| [Política de Integração com IRP](/sbd-toe/assets/policies/policy-irp) | Sim | Operações (Ops) + GRC | Playbooks documentados e rastreabilidade |
 | [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Recomendado | GRC | Revisão periódica de MTTD e MTTR |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**, onde estas políticas estão consolidadas transversalmente.

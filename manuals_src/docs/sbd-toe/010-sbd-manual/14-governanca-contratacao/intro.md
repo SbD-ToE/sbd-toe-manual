@@ -80,12 +80,12 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 A governação eficaz exige papéis claramente definidos, com autoridade proporcional e responsabilidades explícitas.
 
-- **Dev** → regista exceções e aplica práticas acordadas.  
-- **AppSec** → valida exceções e supervisiona a rastreabilidade.  
-- **DevOps/SRE** → garante aplicação prática em pipelines e deploy.  
-- **Gestão / PMO** → aprova risco residual e governa a adoção organizacional.  
-- **Jurídico / Procurement** → integra cláusulas de segurança em contratos.  
-- **GRC / Conformidade** → recolhe evidências, gere métricas e auditorias.  
+- **Developer** → regista exceções e aplica práticas acordadas.  
+- **AppSec Engineer** → valida exceções e supervisiona a rastreabilidade.  
+- **DevOps / SRE** → garante aplicação prática em pipelines e deploy.  
+- **Gestão Executiva** → aprova risco residual e governa a adoção organizacional.  
+- **GRC / Compliance (Jurídico + Procurement)** → integra cláusulas de segurança em contratos.  
+- **GRC / Compliance** → recolhe evidências, gere métricas e auditorias.  
 
 👉 Cada papel exerce autoridade **derivada do modelo de governação definido**
 e tem **user stories associadas** no `aplicacao-lifecycle.md`.
@@ -138,11 +138,11 @@ defensável e sustentável**.
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
-| [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes) | Sim | AppSec + Gestão | Fluxo formal de pedido, aprovação e prazo |
-| [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura) | Sim | Jurídico / Procurement | Cláusulas SbD-ToE, validação contínua |
-| [Política de Rastreabilidade Organizacional](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional) | Sim | GRC | Registo centralizado, dashboards |
-| [Política de Contratação Segura — Auditoria de Fornecedores](/sbd-toe/assets/policies/policy-contratacao-segura) | Recomendado | Procurement + AppSec | Auditorias periódicas de segurança |
-| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC + Direção | Métricas, relatórios, objetivos |
+| [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes) | Sim | AppSec Engineer + Gestão Executiva | Fluxo formal de pedido, aprovação e prazo |
+| [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura) | Sim | GRC / Compliance (Jurídico + Procurement) | Cláusulas SbD-ToE, validação contínua |
+| [Política de Rastreabilidade Organizacional](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional) | Sim | GRC / Compliance | Registo centralizado, dashboards |
+| [Política de Contratação Segura — Auditoria de Fornecedores](/sbd-toe/assets/policies/policy-contratacao-segura) | Recomendado | AppSec Engineer + GRC / Compliance (Procurement) | Auditorias periódicas de segurança |
+| [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC / Compliance + Gestão Executiva | Métricas, relatórios, objetivos |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**,
 onde estas políticas estão consolidadas transversalmente.

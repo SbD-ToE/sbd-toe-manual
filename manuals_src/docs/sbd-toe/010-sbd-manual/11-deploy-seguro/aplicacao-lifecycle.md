@@ -33,11 +33,11 @@ O quadro seguinte clarifica esta divisão:
 
 | Papel | Responsabilidade |
 |-------|------------------|
-| **Dev** | Produzir artefactos prontos a *deploy* |
-| **QA/Testes** | Validar *staging*, critérios de aceitação |
-| **AppSec** | Aprovar *gates* e gerir exceções |
-| **DevOps/SRE** | Executar pipelines, *rollback* e monitorização |
-| **Gestão de Produto** | Decidir *go/no-go*, aceitar risco residual |
+| **Developer** | Produzir artefactos prontos a *deploy* |
+| **QA** | Validar *staging*, critérios de aceitação |
+| **AppSec Engineer** | Aprovar *gates* e gerir exceções |
+| **DevOps / SRE** | Executar pipelines, *rollback* e monitorização |
+| **Product Owner** | Decidir *go/no-go*, aceitar risco residual |
 
 ---
 
@@ -96,7 +96,7 @@ Como **DevOps/SRE**, quero **executar *deploy* apenas de artefactos assinados e 
 
 :::userstory
 **História.**  
-Como **QA/Testes**, quero **validar *releases* em *staging* com ambiente segregado, dados controlados e testes funcionais + segurança**, para **garantir *readiness* sem expor dados reais**.
+Como **QA**, quero **validar *releases* em *staging* com ambiente segregado, dados controlados e testes funcionais + segurança**, para **garantir *readiness* sem expor dados reais**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um ambiente de *staging* equivalente a produção (mesmas versões e configuração)  
@@ -146,7 +146,7 @@ Sem *gates*, a promoção a produção torna-se uma aposta - e a segurança não
 
 :::userstory
 **História.**  
-Como **AppSec**, quero **definir *gates* automáticos e *thresholds* no *deploy***, para **bloquear *releases* inseguras**.
+Como **AppSec Engineer**, quero **definir *gates* automáticos e *thresholds* no *deploy***, para **bloquear *releases* inseguras**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma *release* candidata  
@@ -220,7 +220,7 @@ Se não for possível reconstituir o caminho desde o *commit* até ao *deploy*, 
 
 :::userstory
 **História.**  
-Como **Gestão de Produto**, quero **garantir rastreabilidade entre *commit* → build → release → deploy**, para **auditar e justificar decisões de risco**.
+Como **Product Owner**, quero **garantir rastreabilidade entre *commit* → build → release → deploy**, para **auditar e justificar decisões de risco**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um incidente pós-release  
@@ -243,7 +243,7 @@ Como **Gestão de Produto**, quero **garantir rastreabilidade entre *commit* →
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Auditoria | Incidente ou revisão periódica | Gestão + AppSec | Anual |
+| Auditoria | Incidente ou revisão periódica | Gestão Executiva + AppSec | Anual |
 
 **Ligações úteis.** [Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro) ; [CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro)
 
@@ -390,7 +390,7 @@ A comunicação clara das alterações em cada *release* é essencial para decis
 
 :::userstory
 **História.**  
-Como **Dev/Gestão**, quero **manter versionamento semântico com *changelog* técnico e de segurança**, para **comunicar claramente alterações, riscos e compatibilidade de cada *release***.
+Como **Developer/Gestão Executiva**, quero **manter versionamento semântico com *changelog* técnico e de segurança**, para **comunicar claramente alterações, riscos e compatibilidade de cada *release***.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma *release* nova  
@@ -420,7 +420,7 @@ Como **Dev/Gestão**, quero **manter versionamento semântico com *changelog* t�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Release | Criação de *release* | Dev + Gestão | Cada versão |
+| Release | Criação de *release* | Developer + Gestão Executiva | Cada versão |
 
 **Ligações úteis.** [Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
@@ -434,7 +434,7 @@ Promover para 100% dos utilizadores simultaneamente amplifica o impacto de qualq
 
 :::userstory
 **História.**  
-Como **DevOps/Gestão**, quero **implementar *deploy* progressivo (*canary*, *blue/green*, regras por etapas)**, para **mitigar risco e permitir *rollback* rápido com impacto minimizado**.
+Como **DevOps / SRE / Gestão Executiva**, quero **implementar *deploy* progressivo (*canary*, *blue/green*, regras por etapas)**, para **mitigar risco e permitir *rollback* rápido com impacto minimizado**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** uma *release* candidata com plano de *rollout*  

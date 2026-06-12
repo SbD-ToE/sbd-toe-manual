@@ -73,7 +73,7 @@ O resultado é o **estado inicial** da sessão:
 - Capítulos activos para o `riskLevel`
 - Capítulos excluídos / condicionais
 - *Domains* activos da ontologia
-- Regras específicas do *role* (ex.: para `appsec`, ênfase em capítulos 03/06/10)
+- Regras específicas do *role* (ex.: para `appsec-engineer`, ênfase em capítulos 03/06/10)
 
 Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão em que o tema seja segurança no projecto.
 
@@ -81,7 +81,9 @@ Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão e
 
 Aceitam *aliases* — o servidor resolve automaticamente.
 
-`developer` · `appsec` · `devops` · `grc` · `qa` · `security_champion` · `software_architect` · `product_owner` · `scrum_master` · `team_lead` · `ciso` · `executive_management` · `ops` · `pentester` · `compliance` · `auditor` · `ir` · `sre`
+`developer` · `appsec-engineer` · `arquitetos-software` · `devops-sre` · `qa` · `security-champion` · `product-owner` · `scrum-master` · `operacoes` · `grc-compliance` · `gestao-executiva` · `auditores` · `fornecedores-terceiros`
+
+> São os **13 papéis canónicos** do manual ([Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)). O servidor aceita *aliases* comuns (ex.: `appsec`→`appsec-engineer`, `devops`/`sre`→`devops-sre`, `ciso`→`gestao-executiva`, `compliance`→`grc-compliance`) e resolve-os sempre para um destes 13.
 
 ---
 

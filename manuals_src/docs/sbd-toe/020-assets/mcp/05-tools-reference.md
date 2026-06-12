@@ -124,7 +124,7 @@ Filtro de baixo nível sobre a ontologia — *dot-notation* nos `filters`.
 
 ```json
 resolve_entities({"record_type": "role"})
-// → lista os 18 roles canónicos
+// → lista os 13 roles canónicos
 
 resolve_entities({"record_type": "control", "filters": {"domain": "architecture"}})
 // → controlos do domínio architecture

@@ -16,13 +16,13 @@ tags:
 
 Pedir a um *developer* recém-chegado para ler os 15 capítulos do manual antes de fazer o primeiro commit é, na prática, pedir que não os leia. Onboarding eficaz é o oposto: começa pequeno, no que esse papel faz nas próximas duas semanas, e cresce com o trabalho.
 
-O `get_guide_by_role` foi pensado precisamente para isso. Recebe o *risk level* e o papel — `developer`, `appsec`, `devops`, `qa`, qualquer um dos 18 canónicos — e devolve apenas as práticas que o manual atribui a essa pessoa, organizadas por fase do SDLC. O agente compõe um guia personalizado a partir daí: o que se espera deste papel em *requirements*, *design*, *implement*, *test*, *operate* — com *user stories* já ligadas, prontas a virar *acceptance criteria*.
+O `get_guide_by_role` foi pensado precisamente para isso. Recebe o *risk level* e o papel — `developer`, `appsec-engineer`, `devops-sre`, `qa`, qualquer um dos 13 canónicos — e devolve apenas as práticas que o manual atribui a essa pessoa, organizadas por fase do SDLC. O agente compõe um guia personalizado a partir daí: o que se espera deste papel em *requirements*, *design*, *implement*, *test*, *operate* — com *user stories* já ligadas, prontas a virar *acceptance criteria*.
 
 ## Pré-requisitos
 
 - MCP instalado, skill carregada.
 - *Risk level* do projecto conhecido.
-- *Role* do novo membro definido (um dos 18 *roles* canónicos).
+- *Role* do novo membro definido (um dos 13 *roles* canónicos).
 
 ## Fluxo
 
@@ -136,7 +136,7 @@ tools: Read, Write, mcp__sbd-toe__*
 
 ## Combinatória útil
 
-Para um *role* que faz muitas fases (`developer`, `software_architect`), iterar fase a fase para manter o output dentro do contexto:
+Para um *role* que faz muitas fases (`developer`, `arquitetos-software`), iterar fase a fase para manter o output dentro do contexto:
 
 ```
 get_guide_by_role(L2, "developer", "requirements")

@@ -67,7 +67,7 @@ Reinicia o cliente. Tools `sbd-toe.*` ficam disponíveis automaticamente.
 Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), começa qualquer conversa com:
 
 ```
-setup_sbd_toe_agent(riskLevel="L2", projectRole="appsec")
+setup_sbd_toe_agent(riskLevel="L2", projectRole="appsec-engineer")
 ```
 
 A resposta deve enumerar os capítulos activos para esse *risk level* e as regras específicas do papel. Se vires uma lista coerente — capítulos numerados, *concerns*, regras — está ligado. Se vires algo vago ou sem IDs, o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.

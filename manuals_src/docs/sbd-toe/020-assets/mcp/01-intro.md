@@ -61,7 +61,7 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `list_sbd_toe_chapters` | CONSULT | Índice dos capítulos com aplicabilidade |
 | `query_sbd_toe_entities` | CONSULT | Procurar controlos (`CTRL-*`), artefactos (`ART-*`), práticas |
 | `resolve_entities` | CONSULT | Filtro de baixo nível sobre a ontologia |
-| `get_guide_by_role` | GUIDE | Práticas por *role* (developer, appsec, devops, …) e fase do SDLC |
+| `get_guide_by_role` | GUIDE | Práticas por *role* (developer, appsec-engineer, devops-sre, …) e fase do SDLC |
 | `get_threat_landscape` | GUIDE | *Threats* relevantes por *risk level* e *concern* (com confiança de mitigação) |
 | `plan_sbd_toe_repo_governance` | GUIDE | Lista artefactos requeridos pelo manual, agrupados por capítulo |
 | `map_sbd_toe_review_scope` | GUIDE | Bundles a rever dado um conjunto de ficheiros alterados |
@@ -107,7 +107,9 @@ O servidor expõe valores **fechados** para parâmetros — usar fora destes val
 
 **Roles canónicos** (aceitam aliases):
 
-`developer` · `appsec` · `devops` · `grc` · `qa` · `security_champion` · `software_architect` · `product_owner` · `scrum_master` · `team_lead` · `ciso` · `executive_management` · `ops` · `pentester` · `compliance` · `auditor` · `ir` · `sre`
+`developer` · `appsec-engineer` · `arquitetos-software` · `devops-sre` · `qa` · `security-champion` · `product-owner` · `scrum-master` · `operacoes` · `grc-compliance` · `gestao-executiva` · `auditores` · `fornecedores-terceiros`
+
+> São os **13 papéis canónicos** do manual ([Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)). O servidor aceita *aliases* comuns (ex.: `appsec`→`appsec-engineer`, `devops`/`sre`→`devops-sre`, `ciso`→`gestao-executiva`, `compliance`→`grc-compliance`) e resolve-os sempre para um destes 13.
 
 ---
 

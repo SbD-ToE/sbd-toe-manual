@@ -110,9 +110,9 @@ Inicializa a sessão.
 
 **Parâmetros:**
 - `riskLevel`: `L1` | `L2` | `L3`
-- `projectRole`: um dos 18 *roles* canónicos
+- `projectRole`: um dos 13 *roles* canónicos
 
-**Resultado:** mensagem do utilizador equivalente a "Estou a trabalhar num projecto `riskLevel=L2`, role `appsec`. Carrega as regras e capítulos activos." — o agente executa imediatamente as chamadas adequadas para inicializar o contexto.
+**Resultado:** mensagem do utilizador equivalente a "Estou a trabalhar num projecto `riskLevel=L2`, role `appsec-engineer`. Carrega as regras e capítulos activos." — o agente executa imediatamente as chamadas adequadas para inicializar o contexto.
 
 ### `ask_sbd_toe_manual(question)`
 

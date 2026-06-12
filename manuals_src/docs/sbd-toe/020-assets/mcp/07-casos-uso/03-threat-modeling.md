@@ -72,10 +72,10 @@ get_threat_landscape({
 
 ### 3. Práticas por *role* (opcional, mas útil)
 
-Para o *role* que vai mitigar (ex.: `software_architect` no design, `developer` no implement):
+Para o *role* que vai mitigar (ex.: `arquitetos-software` no design, `developer` no implement):
 
 ```json
-get_guide_by_role({"risk_level": "L2", "role": "software_architect", "phase": "design"})
+get_guide_by_role({"risk_level": "L2", "role": "arquitetos-software", "phase": "design"})
 ```
 
 → devolve *practice assignments* + *user stories* a usar como *acceptance criteria*.

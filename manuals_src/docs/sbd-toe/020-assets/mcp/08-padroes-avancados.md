@@ -29,7 +29,7 @@ Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_require
 2. get_threat_landscape(risk_level, concerns)
    ↳ threats relevantes + mitigações estruturais
 
-3. get_guide_by_role(risk_level, "software_architect", "design")
+3. get_guide_by_role(risk_level, "arquitetos-software", "design")
    ↳ práticas de design + user stories
 
 4. get_guide_by_role(risk_level, "developer", "implement")

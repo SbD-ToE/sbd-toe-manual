@@ -119,14 +119,14 @@ MITRE ATLAS organiza ameaças adversariais a AI systems em **tactics** (objectiv
 - **AI Supply Chain Compromise** (`AML.T0109` AI Supply Chain Rug Pull / `AML.T0110` AI Agent Tool Poisoning) — distribuir artefactos AI maliciosos via canais legítimos (model registries, MCP tools)
 - **Exfiltration via AI Agent Tool Invocation** (`AML.T0086`) — usar capacidades de write do agente AI para exfiltrar dados
 
-Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos navegáveis para análise técnica; cada um corresponde a um item rastreável no [Capítulo 25 — Rastreabilidade](../canon/25-rastreabilidade) deste capítulo.
+Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos navegáveis para análise técnica; cada um corresponde a um item rastreável no [Capítulo 25 — Rastreabilidade](../canon/25-rastreabilidade.md) deste capítulo.
 
 ### Boas práticas para threat modeling AI/ML
 
 - **Aplicar STRIDE ou LINDDUN como baseline**; adicionar análise ATLAS-driven para componentes AI/ML específicos — não substituir, complementar.
 - **Identificar trust boundaries adicionais**: training data → modelo (training-time boundary), prompt input → modelo (inference-time boundary), modelo → tool invocations (agentic boundary), modelo → output rendering (output boundary).
 - **Mapear adversary capabilities** via NIST AI 100-2 (model access: black-box / grey-box / white-box; query access; training data control) antes de seleccionar mitigações.
-- **Documentar dependências AI específicas** no SBOM (modelo base, datasets, MCP tools, embedded prompts) — ver [Cap. 5 — Dependências e SBOM](../../05-dependencias-sbom-sca/intro) para framing supply chain AI.
+- **Documentar dependências AI específicas** no SBOM (modelo base, datasets, MCP tools, embedded prompts) — ver [Cap. 5 — Dependências e SBOM](../../05-dependencias-sbom-sca/intro.md) para framing supply chain AI.
 
 > A extensão MITRE ATLAS não substitui a análise STRIDE — alguns adversários combinam técnicas AI-specific com ataques clássicos (e.g., exfiltração tradicional via prompt injection-induced behavior). O threat model deve cobrir ambas as superfícies coerentemente.
 

@@ -13,9 +13,9 @@ tags:
 
 # MCP Server (SbD-ToE)
 
-Quando um agente de código quer aplicar o SbD-ToE, tem duas opções: ou *adivinha* o manual a partir do que treinou, ou *consulta-o* numa fonte que devolve respostas estruturadas com identificadores citáveis. O **`@shiftleftpt/sbd-toe-mcp`** existe para tornar a segunda opção trivial.
+Quando se pede a um agente que escreva código seguro, ele tem duas opções: ou recorre ao que reteve do treino — uma aproximação plausível, mas sem âncora nem fonte —, ou consulta o manual numa fonte que devolve requisitos e controlos com identificadores citáveis. O **`@shiftleftpt/sbd-toe-mcp`** existe para tornar a segunda opção trivial.
 
-É o servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) oficial do SbD-ToE. Expõe o manual (capítulos 00–14), a ontologia *AppSec Core v1* e os cross-checks normativos publicados através de **tools, resources e prompts MCP** — para que o Claude, o GitHub Copilot, o Cursor, o Windsurf, o Zed (ou qualquer outro cliente MCP) parem de citar o manual de memória e passem a pedir-lho à fonte, com IDs reais. Em prática: cada `CTRL-*`, `REQ-*`, `THR-*` ou `ART-*` que o agente refere passa a ser verificável.
+É o servidor [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) oficial do SbD-ToE. Expõe o manual (capítulos 00–14), a ontologia *AppSec Core v1* e os cross-checks normativos publicados através de **tools, resources e prompts MCP** — para que o Claude, o GitHub Copilot, o Cursor, o Windsurf, o Zed (ou qualquer outro cliente MCP) deixem de responder a partir do que treinaram e passem a perguntar à fonte, no momento em que escrevem, com IDs reais. Em prática: cada `CTRL-*`, `REQ-*`, `THR-*` ou `ART-*` que o agente refere passa a ser verificável.
 
 | Atributo | Valor |
 |---|---|

@@ -29,33 +29,32 @@ Em vez de te pedir para escreveres essas instruções do zero (e ficarem desactu
 
 ## Gerar a skill
 
-Após instalado o MCP (ver [Instalação](./03-instalacao.md)), executar no cliente:
+Após instalado o MCP (ver [Instalação](./03-instalacao.md)), executar no cliente. A tool tem três formas:
+
+| Chamada | Devolve |
+|---|---|
+| `generate_sbd_toe_skill()` | o *agent guide* canónico completo (sem especialização de papel) |
+| `generate_sbd_toe_skill(role="appsec-engineer", format="skill")` | uma *skill* especializada no *slice* desse papel |
+| `generate_sbd_toe_skill(role="devops-sre", format="subagent", flavour="harnessed")` | uma definição de *subagent* instalável |
+
+**Parâmetros:**
+- `role` — uma das 13 personas canónicas (aliases resolvem; papel desconhecido → erro com a lista das 13). Sem `role`, devolve o *agent guide*.
+- `format` — `skill` (ficheiro de orientação) ou `subagent` (definição de agente, `.claude/agents/…`).
+- `flavour` — `harnessed` (embebe as tools `mcp__sbd-toe__*`; consulta o manual ao vivo) ou `skilled` (*slice* congelado, sem tools live, offline).
+- `risk_level` (default `L2`), `phase`, `include_detail` — opcionais.
+
+A tool devolve `content` + `suggested_path` + `meta.coverage` (capítulos, *user stories*, *checklist items* — cobertura **declarada**, nada truncado em silêncio). Guardar **bytewise** no `suggested_path` (ou no caminho equivalente da tabela cliente→ficheiro acima). O conteúdo começa com um cabeçalho identificador:
 
 ```
-generate_sbd_toe_skill()
+---
+name: sbd-appsec-engineer
+description: SbD-ToE appsec-engineer (L2) — … Queries the SbD-ToE MCP live.
+tools: …, mcp__sbd-toe__get_guide_by_role, mcp__sbd-toe__consult_security_requirements, …
+---
 ```
-
-A tool devolve o conteúdo a guardar — começa com um cabeçalho identificador:
-
-```
-<!-- SbD-ToE skill content — source: sbd://toe/agent-guide (@shiftleftpt/sbd-toe-mcp) -->
-<!-- Re-run generate_sbd_toe_skill to refresh. -->
-
-# SbD-ToE — Agent Guide
-...
-```
-
-Guardar **bytewise** no caminho da tabela acima. A skill cobre:
-
-- Identidade (SbD-ToE = Security by Design — Theory of Everything)
-- Modos operacionais (CONSULT / GUIDE / SETUP)
-- Roteamento por fase do SDLC e por domínio
-- Padrões epistémicos (`manual-grounded` / `observed` / `inferred` / `not verified`)
-- Vocabulário controlado (*concerns*, *roles*, *risk levels*)
-- Mapa dos 15 capítulos
 
 :::tip Refrescar
-A skill é uma cópia estática do *agent guide* na altura da geração. Re-correr `generate_sbd_toe_skill()` após cada *upgrade* do MCP para sincronizar.
+Uma skill `skilled` (ou o *agent guide* sem `role`) é uma cópia **estática** na altura da geração — re-gerar após cada *upgrade* do MCP. Uma skill/subagent `harnessed` consulta o manual **ao vivo**, por isso reflecte sempre a versão corrente sem re-gerar.
 :::
 
 ---
@@ -91,7 +90,7 @@ Aceitam *aliases* — o servidor resolve automaticamente.
 
 ### Claude Code
 
-Para além do `.claude/skills/sbd-toe.md`, é possível criar um *subagent* dedicado:
+Para além do `.claude/skills/sbd-toe.md`, é possível criar um *subagent* dedicado — gerável directamente com `generate_sbd_toe_skill(role="auditores", format="subagent")`, ou escrito à mão:
 
 ```markdown
 ---
@@ -143,8 +142,8 @@ Três níveis de integração — escolher consoante a maturidade da equipa:
 | Nível | Quando | Como |
 |---|---|---|
 | **Prompt directo** | Adoção experimental, sessões pontuais | Chamar tools manualmente: "Usa `consult_security_requirements(L2)` antes de propor código." |
-| **Skill estática** | Adopção em projecto fixo | Guardar a skill no caminho canónico — auto-carregada |
-| **Subagent / persona** | Workflows recorrentes (auditoria de PR, *codegen*, *threat model*) | Subagent dedicado com tools restritas e *prompt* especializado |
+| **Skill estática** | Adopção em projecto fixo | `generate_sbd_toe_skill(role, format="skill")` → guardar no caminho canónico (auto-carregada) |
+| **Subagent / persona** | Workflows recorrentes (auditoria de PR, *codegen*, *threat model*) | `generate_sbd_toe_skill(role, format="subagent", flavour="harnessed")` → `.claude/agents/sbd-<role>.md` |
 
 A receita completa para cada nível está em [Casos de uso](./casos-uso/) — 6 cenários com exemplos *runnable*.
 

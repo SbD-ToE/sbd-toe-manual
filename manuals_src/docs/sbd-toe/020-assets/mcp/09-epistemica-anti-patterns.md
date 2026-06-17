@@ -19,9 +19,9 @@ O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir d
 
 | Rótulo | Definição | Sinal verde para o utilizador |
 |---|---|---|
-| **manual-grounded** | Recuperado via MCP — citar `chapterId` ou ID (`CTRL-*`, `REQ-*`, `THR-*`, `ART-*`) | "O manual diz: `CTRL-04-1`. `<texto verbatim ou parafraseado fielmente>`." |
+| **manual-grounded** | Recuperado via MCP — citar `chapterId` ou ID (`CTRL-*`, `<CAT>-NNN`, `MT-*`, `ART-*`) | "O manual diz: `AUT-001` (MFA obrigatório). `<texto verbatim ou parafraseado fielmente>`." |
 | **observed** | Visível directamente no repositório / codebase | "No ficheiro `src/auth/login.ts:42`, observo: `<…>`." |
-| **inferred** | Conclusão lógica a partir de *grounded* + *observed* — marcar explicitamente | "Inferência: dado que CTRL-04-1 exige X, e o código faz Y, X parece coberto — falta evidência de Z." |
+| **inferred** | Conclusão lógica a partir de *grounded* + *observed* — marcar explicitamente | "Inferência: dado que `AUT-001` exige MFA, e o código só valida password, falta o segundo factor." |
 | **not verified** | Não confirmado | "Não verificado: `<…>`. Recomenda-se inspeção humana / teste / log." |
 
 ### Regra de ouro
@@ -43,7 +43,7 @@ Permitido apenas quando:
 
 ❌ **Não** marcar como *grounded*:
 - Resultados de `search_sbd_toe_manual` que **não foram lidos** (apenas vistos como *snippet*) — esses são pista, não evidência
-- Síntese cross-tool (ex.: "CTRL-04-1 + CTRL-06-3 implicam X") — isso é `inferred`
+- Síntese cross-tool (ex.: "`AUT-001` + `LOG-003` implicam X") — isso é `inferred`
 
 ### `observed`
 
@@ -83,6 +83,7 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 | `mitigation_confidence: "derived"` | `manual-grounded` (ligação estrutural) |
 | `mitigation_confidence: "heuristic"` | `inferred` — flag explicitamente |
 | `completeness_report.m_recall < 1.0` | sinalizar **cobertura parcial** — o que falta é `not verified` |
+| `coverage.hasMore: true` / `coverage_gaps` | resultado **paginado / com lacunas declaradas** — continuar via `nextOffset`; o servidor é *coverage-preserving* (nada truncado em silêncio), mas "página 1" ≠ "tudo" |
 | `rule_trace` sem `CONCERNS_FILTER_*` quando concerns foram passadas | sinal de problema — pode estar a devolver mais do que se filtrou |
 
 ---
@@ -107,7 +108,7 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 ### 4. Fundir manual-grounded com inferred
 
 ❌ "O manual diz que rate limiting + monitoring previnem credential stuffing."
-✅ "Manual-grounded: CTRL-06-3 (rate limiting) e CTRL-12-1 (anomaly logging) mitigam THR-AUTH-001 (credential stuffing). Inferência: aplicados juntos cobrem o threat — confidence: `derived` (ligação estrutural do MCP)."
+✅ "Manual-grounded: o output liga `MT-NNN` (credential stuffing) a `CTRL-<domain>-<slug>-<hash>` com `mitigation_confidence: derived`. Inferência (minha): aplicados juntos cobrem o threat — marcado como inferência, não como facto do manual."
 
 ### 5. Saltar gate `needs_clarification` / `needs_decomposition`
 
@@ -116,13 +117,13 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 
 ### 6. Mostrar `mitigation_confidence: "heuristic"` como certeza
 
-❌ "CTRL-06-7 mitiga THR-AUTH-007."
-✅ "CTRL-06-7 mitiga THR-AUTH-007 — *confidence:* `heuristic` (ligação inferida; validar com teste/revisão humana)."
+❌ "`CTRL-…` mitiga `MT-NNN`."
+✅ "`CTRL-…` mitiga `MT-NNN` — ligação **inferida** (*fallback* sem confidence `derived`); validar com teste / revisão humana."
 
 ### 7. Confiar no MCP para o **AI Act** (não indexado na versão actual)
 
 ❌ `search_sbd_toe_manual("AI Act Art 15")` → resposta directa via MCP.
-✅ Reconhecer que o MCP `@0.9.0` foi publicado antes da v1.3.0 do manual — **CRA / DORA / NIS2 / GDPR / ENISA-CSA estão indexados** e podem ser consultados via MCP, mas o cross-check do **AI Act** vive **apenas** no manual web. Consultar [`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro) directamente. Quando em dúvida, validar com `inspect_sbd_toe_retrieval` se o framework aparece nos top-ranked records.
+✅ Reconhecer que o MCP `@0.10.0` foi publicado antes da v1.3.0 do manual — **CRA / DORA / NIS2 / GDPR / ENISA-CSA estão indexados** e podem ser consultados via MCP, mas o cross-check do **AI Act** vive **apenas** no manual web. Consultar [`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro) directamente. Quando em dúvida, validar com `inspect_sbd_toe_retrieval` se o framework aparece nos top-ranked records.
 
 ### 8. Confundir *concerns* (ontológicos) com domínios STRIDE
 
@@ -156,7 +157,7 @@ Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organiz
 4. `m_recall < 1.0` foi sinalizado?
 5. Não há declaração de conformidade?
 6. Código não foi apresentado como evidência?
-7. Para perguntas sobre **AI Act** (fora do índice MCP na v0.9.0) — o cross-check web foi consultado?
+7. Para perguntas sobre **AI Act** (fora do índice MCP na v0.10.0) — o cross-check web foi consultado?
 
 Se algum check falha → **rever antes de entregar**.
 

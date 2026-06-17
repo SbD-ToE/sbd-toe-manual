@@ -75,7 +75,7 @@ Estrutura obrigatória:
 ```markdown
 ## Findings (manual-grounded)
 
-### CTRL-06-X — <título>
+### `<requisito ou CTRL-…>` — <título>
 - **Capítulo:** 06-desenvolvimento-seguro
 - **Ficheiro:hunk:** src/auth/login.ts:42-58
 - **Status:** ⚠️ partial / ❌ missing / ✅ covered

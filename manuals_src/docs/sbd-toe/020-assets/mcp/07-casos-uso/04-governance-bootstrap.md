@@ -148,7 +148,7 @@ tools: Read, Write, Edit, Bash, mcp__sbd-toe__*
 |---|---|
 | *Risk level* sobe (L1→L2 ou L2→L3) | Re-correr — adiciona artefactos dos capítulos novos. Não apagar nada. |
 | Upgrade do MCP server | Re-correr `generate_sbd_toe_skill()` para refrescar a skill. |
-| Adição de cross-check normativo posterior ao *snapshot* do MCP (ex.: AI Act em v1.3.0) | Adicionar manualmente — o MCP `0.9.0` só indexa CRA, DORA, NIS2, GDPR, ENISA/CSA (ver [content lag](../10-troubleshooting-faq.md)). |
+| Adição de cross-check normativo posterior ao *snapshot* do MCP (ex.: AI Act em v1.3.0) | Adicionar manualmente — o MCP `0.10.0` só indexa CRA, DORA, NIS2, GDPR, ENISA/CSA (ver [content lag](../10-troubleshooting-faq.md)). |
 
 ## Anti-patterns
 

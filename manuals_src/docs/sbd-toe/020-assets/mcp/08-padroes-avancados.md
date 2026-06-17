@@ -16,6 +16,10 @@ Com o uso do MCP em projectos reais, torna-se evidente que algumas tarefas preci
 
 Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_requirements`, `get_threat_landscape`, `get_guide_by_role`, `prepare_sbd_toe_codegen_context`) onde são precisas respostas estáveis e citáveis; as de pesquisa (`search_sbd_toe_manual`, `query_sbd_toe_entities`) quando o que falta é descobrir o que existe no manual.
 
+## A banda `next` — encadeamento sugerido
+
+Muitas tools devolvem, além do `data` determinístico, uma banda **`next`** (até 3 afordances, *structural* + *semantic*): o passo seguinte sugerido para encadear, já com a *tool* e os argumentos. É o fio que liga os padrões abaixo — em vez de adivinhar o próximo passo, seguir o `next` da resposta anterior. As tools paginadas trazem ainda `coverage.hasMore` / `nextOffset` para continuar sem truncar.
+
 ---
 
 ## Padrão 1 — Security plan de uma feature
@@ -71,18 +75,16 @@ Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_require
 
 ```
 1. get_sbd_toe_chapter_brief("11-deploy-seguro")
-   ↳ phases, artifact_ids, topics do capítulo 11
+   ↳ phases, artifact_ids, topics e controls[] do capítulo 11
 
-2. query_sbd_toe_entities({query: "CTRL-11", entity_type: "control"})
-   ↳ todos os controlos do capítulo 11
+2. consult_security_requirements(risk_level, ["distribution", "integrity"])
+   ↳ requisitos + controlos cross-chapter relevantes ao deploy
+     (ids reais CTRL-<domain>-<slug>-<hash>)
 
-3. consult_security_requirements(risk_level, ["distribution", "integrity"])
-   ↳ requisitos cross-chapter relevantes ao deploy
-
-4. resolve_entities({record_type: "artifact", filters: {chapter: "11-deploy-seguro"}})
+3. resolve_entities({record_type: "artifact", filters: {chapter: "11-deploy-seguro"}})
    ↳ artefactos de deploy (release notes, attestations, …)
 
-5. → consolidar como checklist
+4. → consolidar como checklist
 ```
 
 **Output:** `CHECKLIST-release-v<X>.md` com gates marcáveis (`[ ]`) e referência aos `CTRL-*` / `ART-*` que cada gate satisfaz.
@@ -177,7 +179,7 @@ Para perguntas que envolvem regulamentos UE:
 2. Verificar se o framework está indexado no MCP:
    inspect_sbd_toe_retrieval({question: "<framework>", topK: 5})
 
-   Indexados em 0.9.0: CRA, DORA, NIS2, GDPR, ENISA-CSA
+   Indexados em 0.10.0: CRA, DORA, NIS2, GDPR, ENISA-CSA
    NÃO indexado:      AI Act (v1.3.0 posterior ao snapshot)
 
 3. Se indexado:
@@ -186,8 +188,8 @@ Para perguntas que envolvem regulamentos UE:
    Se NÃO indexado (AI Act):
    consultar /sbd-toe/cross-check-normativo/ai-act/ no manual web
 
-4. Validar cada CTRL-* referido via MCP:
-   query_sbd_toe_entities({query: "CTRL-XX", entity_type: "control"})
+4. Validar cada CTRL-* referido via MCP (resolução por id exato):
+   query_sbd_toe_entities({query: "<CTRL-id exato>"})
 
 5. Estruturar relatório com 4 rótulos epistémicos
    (ver disciplina-epistemica)

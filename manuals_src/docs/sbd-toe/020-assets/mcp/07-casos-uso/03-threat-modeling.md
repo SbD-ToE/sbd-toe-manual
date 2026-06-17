@@ -49,26 +49,26 @@ get_threat_landscape({
 })
 ```
 
-**Output esperado** (forma):
+**Output esperado** (forma real — ameaças `MT-NNN`; cada ligação cita o `control_id`):
 
 ```json
 {
   "threats": [
     {
-      "id": "THR-...",
-      "description": "Credential stuffing contra endpoint /login",
-      "mitigated_by": ["CTRL-06-3", "CTRL-12-1"],
-      "mitigation_confidence": "derived"
-    },
-    {
-      "id": "THR-...",
-      "description": "Timing attack na resposta de credentials inválidas",
-      "mitigated_by": ["CTRL-06-7"],
-      "mitigation_confidence": "heuristic"
+      "id": "MT-055", "name": "Interfaces expostas sem isolamento",
+      "chapter_id": "04-arquitetura-segura", "threat_category": "STRIDE",
+      "mitigation_confidence": "derived", "mitigation_strength": "parcial",
+      "mitigated_by": [
+        {"control_id": "CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b", "domain": "infrastructure"}
+      ]
     }
   ]
 }
 ```
+
+:::warning Routing dos *concerns*
+À data desta versão, os *concerns* de **base** (`auth`, `validation`, `api`) roteiam para o **cap. 02** e devolvem meta-ameaças de **processo** (`MT-021..038`), não as ameaças técnicas do domínio. Para ameaças técnicas, incluir um *concern* de **domínio** (ex.: `architecture` → cap. 04, `MT-055..072`) e cruzar com os requisitos de `consult_security_requirements`. *(Verificar o comportamento ao vivo — há fix em curso no servidor.)*
+:::
 
 ### 3. Práticas por *role* (opcional, mas útil)
 
@@ -97,19 +97,19 @@ Modelo recomendado (STRIDE adaptado ao output):
 
 ### Threats (manual-grounded)
 
-#### THR-AUTH-001 — Credential stuffing
-- **Descrição:** <do output do MCP>
-- **STRIDE:** Spoofing
-- **Mitigated by:** CTRL-06-3 (rate limiting), CTRL-12-1 (anomaly logging)
-- **Mitigation confidence:** derived ✅
+#### MT-NNN — <título da ameaça do output>
+- **Descrição:** <`name` do output do MCP>
+- **STRIDE:** <`threat_category`>
+- **Mitigated by:** `CTRL-<domain>-<slug>-<hash>` (do `mitigated_by`)
+- **Mitigation confidence:** derived · strength parcial ✅
 - **Acceptance criteria:** <user stories de get_guide_by_role>
 
-#### THR-AUTH-007 — Timing attack
-- **Mitigation confidence:** heuristic ⚠️
-- **Nota:** ligação inferida — validar com revisão humana / testes.
+#### MT-NNN — <outra ameaça, ligação fraca>
+- **Mitigation confidence:** *fallback* sem ligação estrutural → rotular como **inferido** ⚠️
+- **Nota:** validar com revisão humana / testes.
 
 ### Threats sem mitigação no manual
-- <THR-* devolvidos sem mitigated_by> — flag para revisão humana
+- <`MT-*` devolvidos sem `mitigated_by`> — flag para revisão humana
 
 ### Resíduo
 <o que não foi endereçado>
@@ -117,10 +117,10 @@ Modelo recomendado (STRIDE adaptado ao output):
 
 ## Disciplina de output
 
-- **`mitigation_confidence: "derived"`** → ligação estrutural, segura. Apresentar como ligação fiável.
-- **`mitigation_confidence: "heuristic"`** → ligação inferida. **Rotular explicitamente** como tal — não tratar como certeza.
+- **`mitigation_confidence: "derived"`** (strength tipicamente `"parcial"`) → ligação estrutural. Apresentar como ligação fiável.
+- *Fallback* sem ligação estrutural → tratar como **inferido**; rotular explicitamente, não como certeza.
 - Se `threats: []` → escrever *"Sem threats catalogados no manual para este escopo — não confundir com ausência de risco"*. Não inventar.
-- Citar IDs `THR-*` e `CTRL-*` exactamente como devolvidos.
+- Citar IDs `MT-*` e `CTRL-*` exactamente como devolvidos.
 
 ## Skill / subagent — Cursor
 
@@ -134,16 +134,16 @@ Quando for pedido threat model ou análise de ameaças:
 1. Identificar concerns aplicáveis a partir do escopo do sistema.
 2. Chamar mcp__sbd-toe__get_threat_landscape(risk_level, concerns).
 3. Chamar mcp__sbd-toe__get_guide_by_role(risk_level, role, phase) para acceptance criteria.
-4. Estruturar relatório STRIDE-adaptado citando THR-* e CTRL-* exactos.
-5. Rotular mitigation_confidence: heuristic vs derived.
+4. Estruturar relatório STRIDE-adaptado citando MT-* e CTRL-* exactos.
+5. Rotular mitigation_confidence (derived/parcial); ligação fraca → inferido.
 6. Não inventar threats nem ligações. Threats vazios → flag para revisão humana.
 ```
 
 ## Anti-patterns
 
 - ❌ Chamar `consult_security_requirements` **antes** de `get_threat_landscape` — duplicação desnecessária; a *tool* já corre `consult` internamente.
-- ❌ Apresentar `mitigation_confidence: "heuristic"` como certeza.
-- ❌ Inventar `THR-CUSTOM-001` para encaixar uma ameaça que conheces mas não está no output — escrever em secção separada como *threat observada* e marcar `not verified` no manual.
+- ❌ Apresentar uma ligação inferida (sem `mitigation_confidence: "derived"`) como certeza.
+- ❌ Inventar `MT-CUSTOM-001` para encaixar uma ameaça que conheces mas não está no output — escrever em secção separada como *threat observada* e marcar `not verified` no manual.
 - ❌ Confundir `concerns` técnicos (`auth`) com domínios STRIDE (`Spoofing`).
 
 ## Relacionado

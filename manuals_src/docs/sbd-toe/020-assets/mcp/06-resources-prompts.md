@@ -85,20 +85,30 @@ Devolve algo como:
 
 **Quando ler:** sempre antes de qualquer trabalho de *codegen* ou *review* via `prepare_sbd_toe_codegen_context`.
 
+### `sbd://toe/skill/{role}` · `sbd://toe/subagent/{role}`
+
+**MIME:** `text/markdown`
+**Parâmetro:** `{role}` = um dos 13 *roles* canónicos (aliases resolvem)
+**Conteúdo:** o mesmo que `generate_sbd_toe_skill(role, format=skill)` (skill) e `…(role, format=subagent)` (definição de *subagent*, *flavour* `harnessed` por omissão — concede as tools `mcp__sbd-toe__*`). Risco `L2` por omissão.
+
+**Quando usar:** instalar a configuração de um papel sem chamar a tool — ler o resource e guardar no caminho do cliente.
+
 ### `sbd://toe/version`
 
 **MIME:** `application/json`
-**Conteúdo:** identidade do servidor que está a correr.
+**Conteúdo:** identidade do servidor + *provenance* do conhecimento servido (manual, KG, ontologia), lido do *pin* do bundle consumido.
 
 ```json
 {
   "name": "@shiftleftpt/sbd-toe-mcp",
-  "version": "0.9.0",
-  "description": "..."
+  "version": "0.10.0",
+  "manual":   { "tag": "v1.6.4", "version": "1.6.4", "commit": "…" },
+  "kg":       { "release_tag": "kg-v1-manual-v1.6.4-aligned-…", "consumer_contract_version": "v1.7" },
+  "ontology": { "tag": "ontology-v1.1-fair-baseline", "commit": "…" }
 }
 ```
 
-**Quando usar:** *troubleshooting* — confirmar que versão está activa, e se cobre o conteúdo esperado (ver [troubleshooting / FAQ](./10-troubleshooting-faq.md) sobre *content lag*).
+**Quando usar:** *troubleshooting* — confirmar a versão activa e a *provenance* (que manual/KG/ontologia o servidor serve), e se cobre o conteúdo esperado (ver [troubleshooting / FAQ](./10-troubleshooting-faq.md) sobre *content lag*).
 
 ---
 

@@ -27,7 +27,7 @@ Quando se pede a um agente que escreva código seguro, ele tem duas opções: ou
 | **Transporte** | `stdio` (compatível com todos os clientes MCP padrão) |
 
 :::info Versão actual e *content lag*
-A versão actualmente publicada (**`@shiftleftpt/sbd-toe-mcp@0.9.0`**) inclui o **canon (capítulos 00–14)**, a **ontologia AppSec Core v1** e os cross-checks normativos **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** — todos indexados no KG e citáveis via `search_sbd_toe_manual`.
+A versão actualmente publicada (**`@shiftleftpt/sbd-toe-mcp@0.10.0`**) inclui o **canon (capítulos 00–14)**, a **ontologia AppSec Core v1** e os cross-checks normativos **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** — todos indexados no KG e citáveis via `search_sbd_toe_manual`.
 
 **Excepção:** o cross-check do **AI Act** (Regulamento (UE) 2024/1689), adicionado ao manual web na release **v1.3.0** posterior ao *snapshot* do servidor, ainda **não está indexado**. Para perguntas sobre AI Act, consultar directamente o manual web em [`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro) até nova publicação do MCP.
 :::
@@ -43,6 +43,9 @@ Há três tipos de momento em que um agente recorre ao SbD-ToE — perceber **o 
 | **CONSULT** | "O que o manual diz?", "O que se aplica a este projecto?", "Que controlos estão activos?" | `consult_security_requirements`, `search_sbd_toe_manual`, `map_sbd_toe_applicability`, `query_sbd_toe_entities` |
 | **GUIDE** | "Como implemento isto?", "Como reviso este PR?", "Que threats aplicam aqui?" | `get_guide_by_role`, `get_threat_landscape`, `plan_sbd_toe_repo_governance`, `map_sbd_toe_review_scope`, `prepare_sbd_toe_codegen_context` |
 | **SETUP** | "Configurar o meu cliente AI para usar o SbD-ToE" | `generate_sbd_toe_skill`, `setup_sbd_toe_agent` |
+| **IMPL** (vista de implementação) | "Como pôr de pé e governar o SbD?" — checklist por capítulo, operating model, rollout, verificação, KPIs | `get_sbd_toe_chapter_implementation_checklist`, `get_sbd_toe_operating_model`, `plan_sbd_toe_rollout`, `get_sbd_toe_verification_matrix`, `assess_sbd_toe_implementation` |
+
+A vista de implementação (IMPL) responde a *como pôr de pé e governar* o SbD numa organização — distinta da vista operacional (GUIDE), que diz *o que fazer em cada fase do SDLC*.
 
 A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual diz; o LLM gera o conteúdo final**. Isso obriga a uma disciplina de rotulagem — cada afirmação na resposta vem marcada como `manual-grounded`, `observed`, `inferred` ou `not verified`. É a forma de manter visível o que veio da fonte, o que veio da observação directa, o que foi inferido pelo modelo e o que ainda está por confirmar.
 
@@ -66,8 +69,15 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `plan_sbd_toe_repo_governance` | GUIDE | Lista artefactos requeridos pelo manual, agrupados por capítulo |
 | `map_sbd_toe_review_scope` | GUIDE | Bundles a rever dado um conjunto de ficheiros alterados |
 | `prepare_sbd_toe_codegen_context` | GUIDE | Contexto determinístico para *codegen* / *review* / *test-plan* (com `citation_map` fechado) |
+| `answer_sbd_toe_manual` | CONSULT | Q&A *grounded* (degrada para retrieval sem *MCP sampling*) |
+| `map_sbd_toe_regulatory_activation` | CONSULT | Framework (DORA/NIS2/CRA/RGPD) → capítulos do manual que activa |
+| `get_sbd_toe_chapter_implementation_checklist` | IMPL | "Como implementar o cap. NN" — narrativa canon/20 |
+| `get_sbd_toe_operating_model` | IMPL | RACI / governança / cadências (do *rollout playbook*) |
+| `plan_sbd_toe_rollout` | IMPL | Roadmap por fases — ordem de implementação |
+| `get_sbd_toe_verification_matrix` | IMPL | Lado EXPECTED: validação + evidência esperada por requisito |
+| `assess_sbd_toe_implementation` | IMPL | Postura de KPIs vs *thresholds* por nível |
 | `inspect_sbd_toe_retrieval` | DIAG | Diagnóstico do retriever |
-| `generate_sbd_toe_skill` | SETUP | Devolve o conteúdo canónico da *skill* a guardar no cliente |
+| `generate_sbd_toe_skill` | SETUP | Skill/subagent por *role* (`format`, `flavour`) — ou o *agent guide* sem `role` |
 
 ### Resources (URIs `sbd://toe/*`)
 
@@ -78,7 +88,9 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `sbd://toe/chapter-applicability/{riskLevel}` | Capítulos activos/condicionais/excluídos por *risk level* |
 | `sbd://toe/ontology` | Ontologia YAML — `domain_mapping`, regras de inferência, *concerns* |
 | `sbd://toe/grounded-codegen-guide` | Guia agente para `prepare_sbd_toe_codegen_context` (workflow + disciplina de output) |
-| `sbd://toe/version` | Nome / versão / descrição do servidor a correr |
+| `sbd://toe/skill/{role}` | *Skill* de um *role* canónico (= `generate_sbd_toe_skill(role, format=skill)`) |
+| `sbd://toe/subagent/{role}` | Definição de *subagent* de um *role* (= `format=subagent`, *harnessed*) |
+| `sbd://toe/version` | Nome / versão / *provenance* (manual, KG, ontologia) do servidor a correr |
 
 ### Prompts
 
@@ -115,8 +127,9 @@ O servidor expõe valores **fechados** para parâmetros — usar fora destes val
 
 ## Convenções de identificadores
 
-- **Artefactos**: `ART-<chapterId>-<name>` — listar via `get_sbd_toe_chapter_brief`
-- **Controlos**: `CTRL-<chapter>-<number>` — pesquisar via `query_sbd_toe_entities`
+- **Requisitos**: `<CAT>-NNN` (ex.: `AUT-001`, `LOG-003`) — resolver por id exato via `query_sbd_toe_entities`
+- **Controlos**: `CTRL-<domain>-<slug>-<hash>` (ex.: `CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af`). **Não** existe a forma `CTRL-<capítulo>-<número>`.
+- **Ameaças**: `MT-NNN` · **Artefactos**: `ART-<slug>-<hash>` — listar via `get_sbd_toe_chapter_brief`
 - Em modo `prepare_sbd_toe_codegen_context`, o `citation_map` devolvido é o **mundo fechado** de IDs válidos para a tarefa — IDs fora do `citation_map` **não existem** para efeitos de *grounding*.
 
 ---

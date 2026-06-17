@@ -36,22 +36,48 @@ Pesquisa narrativa com citações — quando o utilizador faz perguntas conceptu
 
 ---
 
+### `answer_sbd_toe_manual`
+
+Q&A em linguagem natural — recupera contexto do manual e pede a síntese da resposta ao modelo do cliente via *MCP sampling*.
+
+**Parâmetros:** `question` (string); `topK`, `useVectorRecall`, `debug` (opcionais)
+
+:::info Degradação honesta sem *sampling*
+Em clientes **sem suporte de MCP sampling** (ex.: Claude Code), a tool **não inventa** uma síntese: devolve o retrieval formatado com a nota *"MCP sampling not available… use `search_sbd_toe_manual` directly"* e encaminha para `search_sbd_toe_manual`. Nesses clientes, preferir `search_sbd_toe_manual` desde o início.
+:::
+
+---
+
 ### `consult_security_requirements`
 
 **Determinístico**. Devolve o conjunto de requisitos + controlos activos para um *risk level*, opcionalmente filtrado por *concerns*.
 
 **Parâmetros:**
 - `risk_level` (`L1` | `L2` | `L3`) — obrigatório
-- `concerns` (string[]) — opcional, *lowercase* da tabela de vocabulário
+- `concerns` (string[]) — opcional, valores do **enum fechado** abaixo
 
-**Output:**
+**Enum de `concerns` (fechado — 12 valores exatos):**
+`auth` · `logging` · `validation` · `api` · `config` · `integrity` · `distribution` · `ide` · `requirements` · `architecture` · `iac` · `encryption`.
+
+Valores fora deste enum **não resolvem** (não há *fuzzy match*): usar `logging` para monitorização, `distribution` para *supply-chain* / terceiros.
+
+**Output:** (formatos de id reais — requisitos `<CAT>-NNN`, controlos `CTRL-<domain>-<slug>-<hash>`)
 ```json
 {
-  "requirements": [{"id": "REQ-...", "category": "AUT", "text": "..."}],
-  "controls": [{"id": "CTRL-04-1", "domain": "architecture", "description": "..."}],
-  "active_domains": ["architecture", "development", ...],
-  "active_categories": ["AUT", "ACC", ...],
-  "rule_trace": ["L2_RULESET_LOADED", "CONCERNS_FILTER_REQUIREMENTS", ...]
+  "requirements": [{"requirement_id": "AUT-001", "name": "MFA obrigatório", "category": "AUT", "type": "base"}],
+  "controls": [{
+    "control_id": "CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af",
+    "name": "Gestão de identidades, acessos e ownership",
+    "domain": "identity", "control_type": "preventive",
+    "chapter_ids": ["08-iac-infraestrutura", "14-governanca-contratacao"],
+    "_confidence": "direct"
+  }],
+  "active_domains": ["identity", "governance", "infrastructure"],
+  "active_categories": ["ACC", "ARC", "AUT", "SES"],
+  "rule_trace": [
+    "REQUIREMENT_APPLIES_BY_RISK(risk_level=L2): 39 requirements active",
+    "CONCERNS_FILTER_REQUIREMENTS(concerns=[auth])"
+  ]
 }
 ```
 
@@ -100,17 +126,30 @@ Resumo estruturado de um capítulo — fases, artefactos (`ART-*`), tópicos.
 
 ### `query_sbd_toe_entities`
 
-Procura controlos, artefactos, práticas por padrão textual ou prefixo.
+Resolve uma entidade por **id exato** ou, se o token não for um id, faz *fallback* para busca semântica.
 
-**Parâmetros:** `query` (string), `entity_type` (`control` | `artifact` | `practice`)
+**Parâmetros:** `query` (string, obrigatório); `entityType`, `chapterId`, `riskLevel`, `topK` (opcionais)
 
-**Exemplo:**
+**Exemplo (id exato):**
 
 ```json
-query_sbd_toe_entities({"query": "CTRL-06", "entity_type": "control"})
+query_sbd_toe_entities({"query": "AUT-001"})
+```
+```json
+{
+  "entities": [{
+    "entity_type": "requirement", "requirement_id": "AUT-001",
+    "category": "AUT", "name": "MFA obrigatório",
+    "applicable_levels": {"L1": false, "L2": true, "L3": true},
+    "source_bundle": "02-requisitos-seguranca"
+  }],
+  "total": 1, "match": "exact_id"
+}
 ```
 
-Devolve todos os controlos do capítulo 06.
+:::warning Erro de categoria comum
+Um token como `"CTRL-06"` **não é um id** — não existe a forma `CTRL-<capítulo>-<número>`. Passá-lo **não** devolve "os controlos do capítulo 06"; cai em *fallback* semântico (`match` ≠ `"exact_id"`). Os ids reais são `AUT-001`, `LOG-003` (requisitos), `CTRL-<domain>-<slug>-<hash>` (controlos), `MT-NNN` (ameaças), `ART-…` (artefactos). Para **filtrar por tipo/domínio** (em vez de resolver um id), usar `resolve_entities`.
+:::
 
 ---
 
@@ -158,24 +197,29 @@ resolve_entities({"record_type": "control", "filters": {"domain": "architecture"
 - `risk_level` (`L1` | `L2` | `L3`) — obrigatório
 - `concerns` (string[]) — opcional
 
-**Output:**
+**Output:** (ameaças `MT-NNN`; cada ligação cita o `control_id` real)
 ```json
 {
   "threats": [
     {
-      "id": "THR-...",
-      "description": "...",
-      "mitigated_by": ["CTRL-04-1", "CTRL-06-3"],
-      "mitigation_confidence": "derived" | "heuristic"
+      "id": "MT-055", "name": "Interfaces expostas sem isolamento",
+      "chapter_id": "04-arquitetura-segura", "threat_category": "STRIDE",
+      "mitigation_confidence": "derived", "mitigation_strength": "parcial",
+      "mitigated_by": [
+        {"control_id": "CTRL-infrastructure-segmentacao-e-controlo-arquitetural-dceb3c1f0b", "domain": "infrastructure"}
+      ]
     }
   ]
 }
 ```
 
 **Importante:**
-- `mitigation_confidence: "derived"` → ligação estrutural (chapter-match), fiável.
-- `mitigation_confidence: "heuristic"` → ligação inferida, **rotular como tal** na resposta ao utilizador.
+- `mitigation_confidence: "derived"` → ligação estrutural (chapter/bundle-match), fiável; `mitigation_strength` é tipicamente `"parcial"`. (Não há valor `"heuristic"` nas ligações estruturais — se aparecer um *fallback* heurístico, rotular como inferido.)
 - A tool **corre `consult` internamente** — não chamar `consult_security_requirements` antes.
+
+:::warning Limitação de *routing* conhecida (à data desta versão)
+Os *concerns* de **base** (`auth`, `validation`, `api`, …) roteiam para o **cap. 02** e devolvem as meta-ameaças de processo `MT-021..038` (ausência/ambiguidade de requisitos), **não** as ameaças técnicas do domínio. Os *concerns* de **domínio** roteiam bem: `architecture`→cap. 04 (`MT-055..072`), `iac`→cap. 08, `logging`→cap. 12. Para ameaças técnicas de auth/validação, ancorar antes nos **requisitos** (`consult_security_requirements`) e cruzar. *(Fix em curso no servidor — verificar o comportamento ao vivo.)*
+:::
 
 ---
 
@@ -235,9 +279,17 @@ Ver guia detalhado em [Caso de uso — codegen grounded](./casos-uso/codegen-gro
 
 ### `generate_sbd_toe_skill`
 
-Devolve conteúdo canónico da *skill* para guardar no cliente. Sem parâmetros.
+Gera conteúdo de configuração para o cliente. **Sem `role`** devolve o *agent guide* canónico (`sbd://toe/agent-guide`); **com `role`** devolve uma *skill* ou *subagent* especializado no *slice* desse papel.
 
-**Output:** Markdown completo do *agent guide*, com cabeçalho identificador.
+**Parâmetros:**
+- `role` (opcional) — uma das **13 personas canónicas** (aliases resolvem; papel desconhecido → erro com a lista das 13).
+- `format` (`skill` | `subagent`) — `skill` = ficheiro de orientação (`.claude/skills/…`); `subagent` = definição de agente instalável (`.claude/agents/…`).
+- `flavour` (`harnessed` | `skilled`) — `harnessed` (default) embebe as tools `mcp__sbd-toe__*` (consulta o manual ao vivo); `skilled` embebe o *slice* congelado, **sem** tools live (offline).
+- `risk_level` (default `L2`), `phase`, `include_detail`, `clientType` — opcionais.
+
+**Output:** `content` (markdown) + `suggested_path` + `meta.coverage{chapters, of_total_chapters, assignments, user_stories, checklist_items}` — a cobertura é **declarada** ("nothing silently truncated").
+
+Resources paralelos: `sbd://toe/skill/{role}` e `sbd://toe/subagent/{role}` devolvem o mesmo conteúdo.
 
 Ver [Skills e agentes](./04-skills-agentes.md).
 
@@ -250,6 +302,58 @@ Tecnicamente um *prompt*, não uma *tool* — mas funciona como inicializador da
 **Parâmetros:** `riskLevel`, `projectRole`
 
 **Output:** capítulos activos + regras específicas.
+
+---
+
+## Implementation view (V5)
+
+Estas tools respondem a **"como pôr de pé e governar o SbD"** — distinta da vista operacional ("o que fazer em cada fase do SDLC"). Todas são *coverage-preserving* (paginação com `coverage.hasMore`/`nextOffset`; nada truncado em silêncio) e devolvem uma banda `next` com os próximos passos sugeridos.
+
+### `get_sbd_toe_chapter_implementation_checklist`
+
+A narrativa de implementação canon/20 de um capítulo (o "como implementar"), distinta do DoD estruturado de *user story* (esse está em `get_guide_by_role(include_detail=true)`).
+
+**Parâmetros:** `chapter` (id ou número), `risk_level?`, `limit?`, `offset?`
+**Output:** `data.items[]` (prosa com `chunk_id` rastreável) + `next`.
+
+### `get_sbd_toe_operating_model`
+
+RACI, *decision-rights*, cadências de governança e modelos de organização, promovidos do *rollout playbook*.
+
+**Parâmetros:** `orgScope?`, `limit?`, `offset?`
+**Output:** `data.sections[]` (prosa, paginado). Declara a fronteira: **não prescreve organigrama** (varia por setor/dimensão).
+
+### `plan_sbd_toe_rollout`
+
+Roadmap por fases — as fases canónicas do ciclo de vida mapeadas a capítulos.
+
+**Parâmetros:** `orgProfile?`, `horizon?`, `limit?`, `offset?`
+**Output:** `data.phases[]` (`order`, `phase_id`, `label`, `chapter`), `model: "phase-ordered-mvp"`. O DAG de dependências é **deferido** (declarado, não fingido).
+
+### `get_sbd_toe_verification_matrix`
+
+O lado **EXPECTED** da verificação: por requisito/controlo, o método de validação + evidência esperada + referência a *EvidencePattern*. Complemento determinístico do auditor e do plano de testes.
+
+**Parâmetros:** `risk_level` (obrigatório), `limit?`, `offset?`
+**Output:** `data.rows[]` (`evidence_pattern_id` `EP-*`, `requirement_id`, `control_id`, `validation_method`, `expected_evidence`, `evidence_type`, `expected_artifact_type_ids[]`, `source`) + `coverage_gaps` (requisitos sem padrão — declarados).
+
+### `assess_sbd_toe_implementation`
+
+Auto-relato de postura: compara valores de KPI submetidos contra os *thresholds* por nível.
+
+**Parâmetros:** `kpi_values` (mapa `metric_id`→número), `risk_level`
+**Output:** `posture` (`below`/`at`/`above`) + `totals{applicable, meets, gaps, not_reported}` + `per_kpi` + `unknown_metrics`. **Stateless** (nada é guardado); um KPI aplicável sem valor é `not_reported`, **nunca** *pass*.
+
+:::note Payload
+Devolve os KPIs aplicáveis **todos** (sem paginação) — em L2 são ~92, o que torna o output grande. Submeter os `kpi_values` que se tem; os em falta vêm marcados `not_reported`.
+:::
+
+### `map_sbd_toe_regulatory_activation`
+
+Lente regulatória (o inverso da *provenance*): dado um *framework*, que áreas/capítulos do manual ele activa.
+
+**Parâmetros:** `framework` (`DORA` | `NIS2` | `CRA` | `RGPD`; ou `EXT-DORA`…), `limit?`, `offset?`
+**Output:** `data.activated[]` por capítulo (`mapping_count`, `obligation_count`, `by_target_type`, `example_citation`) + `totals`. *Framework* desconhecido → erro `-32602`. Provenance declara: **cross-check ≠ atestação de conformidade**.
 
 ---
 

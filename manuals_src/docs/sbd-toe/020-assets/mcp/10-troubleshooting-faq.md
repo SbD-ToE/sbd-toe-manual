@@ -54,9 +54,9 @@ npm view @shiftleftpt/sbd-toe-mcp version
 
 ### Causa
 
-A versão actual do servidor (**`@shiftleftpt/sbd-toe-mcp@0.9.0`**) foi publicada **antes** da release **v1.3.0** do manual, que adicionou o cross-check do AI Act. O KG e o índice MCP foram congelados na altura da publicação no npm; conteúdo adicionado ao manual web **depois** dessa data não aparece em consultas MCP até nova publicação do servidor.
+O *snapshot* do manual que o servidor (**`@shiftleftpt/sbd-toe-mcp@0.10.0`**) serve já inclui o cross-check do AI Act (manual `v1.6.4`, posterior à v1.3.0 onde foi adicionado). No entanto, o **índice KG** construído a partir desse *snapshot* **ainda não cobre** o bundle `ai-act/` — é uma lacuna de **indexação**, não de versão do manual. Por isso o AI Act não aparece em consultas MCP até nova indexação.
 
-Os restantes cross-checks (**CRA**, **DORA**, **NIS2**, **GDPR**, **ENISA/CSA**) já estavam no manual no momento do *snapshot* — esses **estão indexados** e funcionam normalmente.
+Os restantes cross-checks (**CRA**, **DORA**, **NIS2**, **GDPR**, **ENISA/CSA**) **estão indexados** e funcionam normalmente.
 
 ### Como confirmar o que está indexado
 
@@ -76,7 +76,7 @@ Para CRA / DORA / NIS2 / GDPR / ENISA-CSA e canon 00–14, usar o MCP normalment
 
 ### Quando será resolvido
 
-Quando o servidor MCP fizer nova publicação no npm com *snapshot* do manual ≥ v1.3.0. Não há ETA público.
+Quando o KG for re-indexado a incluir o bundle `ai-act/` e o servidor fizer nova publicação. Não há ETA público.
 
 ---
 

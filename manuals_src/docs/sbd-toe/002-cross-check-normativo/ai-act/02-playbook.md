@@ -191,9 +191,9 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-## Checklist de Conformidade
+## Checklist de Alinhamento Técnico (AI Act)
 
-A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisitos técnicos do AI Act. Recomenda-se revisão periódica:
+A lista abaixo permite validar o **alinhamento técnico** do programa SbD-ToE com os requisitos do AI Act — não emite o juízo de conformidade legal. Recomenda-se revisão periódica:
 
 - [ ] **Enquadramento:** Papel e categoria de risco determinados (jurídico)
 - [ ] **Literacia (Art. 4):** Trilho formativo activado conforme [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) (obrigatório com agentes A1+)
@@ -239,20 +239,20 @@ A lista abaixo permite validar o alinhamento do programa SbD-ToE com os requisit
 
 ## Métrica Simples: Estou Alinhado?
 
-Se consegues responder SIM a isto, estás alinhado com o núcleo técnico do AI Act:
+Estas perguntas são um auto-diagnóstico **técnico** — respondê-las não emite o juízo de conformidade legal. Se consegues responder SIM a todas, o núcleo técnico está alinhado:
 
-1. **Enquadramento:** Conheço o meu papel e a categoria de risco? ✓
-2. **Risk Management:** Tenho threat model que cobre o vetor adversarial (ATLAS)? ✓
-3. **Robustez (Art. 15):** Faço testes adversariais / AI red teaming? ✓
-4. **Cadeia:** Tenho proveniência e integridade de datasets e modelos? ✓
-5. **Logging:** Registo eventos de inferência com retenção adequada? ✓
-6. **Monitorização:** Tenho plano pós-mercado com deteção de drift? ✓
-7. **Incidentes:** Conseguo comunicar um incidente grave nos prazos do Art. 73? ✓
-8. **QMS:** Os meus gates mapeiam para os elementos do Art. 17? ✓
-9. **Documentação:** Tenho índice Anexo IV + model card? ✓
-10. **Evidência:** Consigo demonstrar tudo isto numa auditoria? ✓
+1. **Enquadramento:** Conheço o meu papel e a categoria de risco?
+2. **Risk Management:** Tenho threat model que cobre o vetor adversarial (ATLAS)?
+3. **Robustez (Art. 15):** Faço testes adversariais / AI red teaming?
+4. **Cadeia:** Tenho proveniência e integridade de datasets e modelos?
+5. **Logging:** Registo eventos de inferência com retenção adequada?
+6. **Monitorização:** Tenho plano pós-mercado com deteção de drift?
+7. **Incidentes:** Consigo comunicar um incidente grave nos prazos do Art. 73?
+8. **QMS:** Os meus gates mapeiam para os elementos do Art. 17?
+9. **Documentação:** Tenho índice Anexo IV + model card?
+10. **Evidência:** Consigo demonstrar tudo isto numa auditoria?
 
-≥8/10 → Boa maturidade técnica face ao AI Act. `<`6 → Priorizar Art. 15 (robustez), logging (Art. 12) e gestão de risco (Art. 9).
+≥8/10 → Boa maturidade técnica face ao AI Act (maturidade técnica, **não conformidade legal**). `<`6 → Priorizar Art. 15 (robustez), logging (Art. 12) e gestão de risco (Art. 9).
 
 > ⚠️ **Nota:** esta métrica cobre o **núcleo técnico**. A conformidade plena exige ainda governação de dados (Art. 10), supervisão humana (Art. 14), transparência (Art. 13/50) e avaliação de conformidade / marcação CE (Art. 43, 47–49) - dimensões fora do âmbito SbD-ToE.
 
@@ -260,7 +260,7 @@ Se consegues responder SIM a isto, estás alinhado com o núcleo técnico do AI 
 
 ## Nota Crítica: Gestão de Exceções no AI Act
 
-O AI Act exige conformidade com os requisitos de alto risco. Exceções (desvios) devem ser formais e auditadas, com trilho documental e aprovação adequada.
+O AI Act exige conformidade com os requisitos de alto risco. Exceções (desvios) devem ser formais e auditadas, com trilho documental e aprovação adequada. Uma exceção **interna** não altera a obrigação legal do AI Act — apenas documenta um risco técnico aceite para o dossiê de evidência; a obrigação legal subsiste.
 
 O que caracteriza uma exceção em SbD-ToE/AI Act:
 - Desvio formal de um requisito (ex.: vetor adversarial mitigado por compensação enquanto se prepara *retraining*)
@@ -283,10 +283,10 @@ Implicação regulatória:
 ## Próximos Passos
 
 1. **Enquadramento jurídico:** Determinar papel e categoria de risco (jurídico/compliance)
-2. **Audit de conformidade atual:** Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) contra os requisitos técnicos do AI Act
+2. **Auditoria técnica atual:** Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) contra os requisitos técnicos do AI Act
 3. **Definir roadmap:** Sequenciar fases conforme contexto e categoria de risco
 4. **Articular com domínio:** Coordenar com ciência de dados, produto e jurídico as dimensões fora do âmbito AppSec
-5. **Implementar e validar:** Iterar e demonstrar conformidade em auditoria
+5. **Implementar e validar:** Iterar e demonstrar a **evidência técnica** em auditoria
 
 Documentação completa: ver capítulos SbD-ToE 01–14 para detalhe técnico e operacional.
 

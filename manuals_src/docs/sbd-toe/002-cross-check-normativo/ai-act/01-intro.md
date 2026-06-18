@@ -23,6 +23,8 @@ O **AI Act** é o **Regulamento (UE) 2024/1689** (CELEX: [32024R1689](https://eu
 - **2 de agosto de 2026** - generalidade das obrigações para sistemas de IA de **alto risco** do Anexo III.
 - **2 de agosto de 2027** - sistemas de alto risco abrangidos pela legislação de produto do Anexo I.
 
+> ℹ️ **Nota (2026):** o acordo político **Digital Omnibus** (2026) prevê **diferir** as obrigações de alto risco — Anexo III para **2 de dezembro de 2027** e Anexo I para **2 de agosto de 2028**. As datas acima são as **promulgadas**; o diferimento só produz efeitos com a publicação no Jornal Oficial.
+
 O AI Act adota uma **abordagem baseada no risco**, com quatro patamares: risco **inaceitável** (proibido, Art. 5), **alto risco** (Art. 6 e Anexos I/III, sujeito ao grosso das obrigações técnicas), risco **limitado** (deveres de transparência, Art. 50) e risco **mínimo** (sem obrigações específicas). Sobre estes patamares incidem ainda regras próprias para **GPAI** (Art. 53) e GPAI com **risco sistémico** (Art. 55).
 
 É essencial enquadrar a natureza do regulamento: o AI Act é, antes de tudo, **legislação de segurança de produto e de proteção de direitos fundamentais** aplicada a sistemas de IA, não uma norma de segurança aplicacional (AppSec). Contudo, as obrigações para sistemas de alto risco incorporam **requisitos técnicos substanciais** que cruzam diretamente com o SbD-ToE - em particular:
@@ -52,7 +54,7 @@ O SbD-ToE cobre o **"como" técnico** dos requisitos de alto risco, mas **não s
 - **Classificação de risco** (Art. 6 e Anexos I/III) - determinação jurídica de se um sistema é de alto risco.
 - **Governação de dados de treino, validação e teste** (Art. 10) - representatividade, deteção e mitigação de enviesamento (*bias*), qualidade estatística dos conjuntos de dados. Estas são questões de **domínio de IA/ciência de dados**, não de AppSec.
 - **Transparência e informação ao utilizador implementador** (Art. 13) e a pessoas singulares (Art. 50).
-- **Supervisão humana** (Art. 14) - conceção de mecanismos de *human-in-the-loop* / *human-on-the-loop*.
+- **Supervisão humana** (Art. 14) - a **conceção/UX** dos mecanismos de *human-in-the-loop* / *human-on-the-loop* e o juízo humano (supervisão-como-compreensão). A faceta de **interrupção (*stop/override*) e governação** está coberta tecnicamente (ver matriz, Art. 14).
 - **Avaliação de impacto sobre os direitos fundamentais (FRIA)** (Art. 27) - obrigação dos utilizadores implementadores (*deployers*).
 - **Avaliação de conformidade** (Art. 43), envolvimento de **organismos notificados**, **declaração UE de conformidade** (Art. 47), **marcação CE** (Art. 48) e **registo na base de dados da UE** (Art. 49/71).
 - **Determinação de práticas proibidas** (Art. 5) e qualificação jurídica de papéis (provider, deployer, importador, distribuidor).
@@ -78,7 +80,7 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 | Sistema de gestão da qualidade | Art. 17 | Cap. 07 (CI/CD), Cap. 11 (release), Cap. 06, Cap. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Manual da qualidade formal | Mapear gates SbD-ToE + ciclos Policy 38/39 para os elementos do QMS |
 | Cadeia de fornecimento | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de *providers* aprovados), Policy 39, Cap. 14 US-21 | — | — |
 | Obrigações do *deployer* | Art. 26 | Policy 38 (mandate + ownership), Cap. 02 §A0–A4, Cap. 12 US-13 (logs sob controlo do *deployer*) | Documentação operacional do *deployer* | Estender mandate com obrigações específicas quando organização é *deployer* |
-| Conformidade e marcação CE | Art. 43, 47–49 | Cap. 14 US-21 (contratação) + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (declaração contratual de conformidade do *provider*) | Avaliação de conformidade técnica do sistema | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
+| Conformidade e marcação CE | Art. 43, 47–49 | — ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) é a declaração de conformidade do *provider*, não a marcação CE da própria organização) | Avaliação de conformidade do sistema + marcação CE da organização | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
 | GPAI e risco sistémico | Art. 53, Art. 55 | Cap. 03 playbook + Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites* + *red teaming*), Cap. 12 US-13 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014), Policy 19 §7, Policy 30 §9 | Documentação técnica GPAI (Anexo XI/XII); política de *copyright* | Documentação delegada à equipa de IA; *cybersecurity* já dentro |
 | Monitorização pós-comercialização | Art. 72 | Cap. 12 (monitorização, *drift*), `OPS-011..014`, Cap. 12 US-13 | Plano formal de monitorização pós-mercado por sistema | Formalizar plano por sistema com base nos sinais já disponíveis |
 | Incidentes graves | Art. 73 | Cap. 12, Cap. 14, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (incidentes agentic-específicos) | Definição regulamentar de "incidente grave"; prazos (2/10/15 dias) e *templates* | Parametrizar *runbook* e exportadores SIEM/ITSM |
@@ -235,7 +237,7 @@ O Art. 12 exige capacidade de **registo automático de eventos** (logs) ao longo
 **O que o SbD-ToE cobre**
 
 - Logging estruturado e observabilidade "by design" (Cap. 12).
-- **Audit completo por *tool invocation*** quando há agentes AI ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Mais granular do que o típico log de inferência exigido pelo Art. 12.
+- **Audit completo por *tool invocation*** quando há agentes AI ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Granular numa dimensão **complementar** (operacional) à do log epistémico de inferência exigido pelo Art. 12 — não o substitui.
 - Trilho auditável e correlação de eventos, com orientação para retenção e imutabilidade (Cap. 12).
 - **Telemetria operacional agentic** (Cap. 12 US-13) que sustenta a base evidencial para Art. 72 (monitorização pós-mercado) e Art. 73 (incidentes graves).
 
@@ -280,7 +282,7 @@ Sugere-se derivar um documento de "instruções de utilização" a partir do ***
 
 ### Artigo 14 - Supervisão humana
 
-> ⚡ **Refresh 2026-05-30.** A primeira versão deste cross-check tratava o Art. 14 como largamente fora de AppSec ("desenho de mecanismos de supervisão é problema de IA/produto"). Com a camada agentic introduzida em 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — a cobertura técnica e operacional ficou substancialmente preenchida. A UX de intervenção continua na equipa de IA/produto, mas o *como* arquitectónico e o *quando* governativo já vivem no manual.
+> ⚡ **Refresh 2026-05-30.** A primeira versão deste cross-check tratava o Art. 14 como largamente fora de AppSec ("desenho de mecanismos de supervisão é problema de IA/produto"). Com a camada agentic introduzida em 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — a **faceta de interrupção (*stop/override*) e de governação** ficou coberta. A **supervisão-como-compreensão** (o juízo humano e a UX de intervenção) permanece domínio da equipa de IA/produto; o *como* arquitectónico e o *quando* governativo já vivem no manual.
 
 **Conteúdo normativo**
 

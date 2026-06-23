@@ -3,15 +3,15 @@ id: checklist-revisao
 title: Checklist - Monitorização e Operações
 sidebar_label: Checklist de Revisão
 sidebar_position: 20
-description: Checklist de controlo binário da adoção das práticas de monitorização, alerta e resposta a incidentes.
-tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta]
+description: Checklist de controlo binário da adoção das práticas de monitorização, alerta, resposta a incidentes e sinais contínuos de saúde operacional.
+tags: [checklist, controlo, validacao, monitorizacao, deteccao, resposta, health, readiness, disponibilidade]
 ---
 
 
 # Checklist de Revisão - Capítulo 12: Monitorização e Operações
 
-Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos e resposta a incidentes**.
-Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12** (`OPS-001` a `OPS-014`), permitindo:
+Este checklist aplica-se a todas as aplicações que requeiram capacidade de **logging estruturado, alertas automáticos, correlação de eventos, sinais de saúde operacional e resposta a incidentes**.
+Serve como instrumento de verificação binária e auditável da **adoção prática das prescrições do Capítulo 12** (`OPS-001` a `OPS-015`), permitindo:
 
 - Controlo contínuo da aplicação proporcional das práticas de monitorização;
 - Verificação sistemática por projeto ou aplicação;
@@ -41,6 +41,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 | A priorização de remediação aplica EPSS e KEV sobre os SLAs por severidade, mantendo o SLA por severidade como piso? | ☐           |
 | Os controlos estão ajustados ao nível de risco (L1–L3) com rastreabilidade, e as exceções à monitorização têm justificação, data de fim e controlo compensatório de visibilidade? | ☐           |
 | As ações irreversíveis (purga de logs, desativação de alertas, alteração de baselines) exigem aprovação humana, e o kill-switch de alertas tem limite temporal, notificação obrigatória e RCA antes de reativar? | ☐           |
+| Para serviços críticos L2/L3, existe inventário de serviços com sinal monitorizado de saúde/prontidão/disponibilidade (endpoint de saúde, heartbeat, readiness/liveness probe ou equivalente), alerta accionável e integração com incidente ou rollback quando aplicável? (`OPS-015`) | ☐           |
 | Os sistemas com componentes AI/ML registam inputs/outputs do modelo (com sanitização de PII), drift, anomalias de prompt input e versões de modelo/dataset; cada tool invocation de agente (A1+) gera audit event estruturado no SIEM; existe budget de token spend com kill-switch; e existe deteção de jailbreak/off-policy para A2+? (`OPS-011` a `OPS-014`) | ☐           |
 | As práticas estão integradas no ciclo de vida (pipeline, PR, release)? | ☐           |
 

@@ -14,7 +14,7 @@ tags: [exceções, operacoes, monitorizacao, alertas, retencao, DORA, NIS2, SIEM
 
 ## Âmbito
 
-Excepções a requisitos do catálogo de monitorização e operações: `OPS-001` a `OPS-010`. Dois cenários têm especificidades relevantes: alert silencing (OPS-005) e retenção de logs abaixo do mínimo regulatório (OPS-003).
+Excepções a requisitos do catálogo de monitorização e operações: `OPS-001` a `OPS-015`. Dois cenários têm especificidades relevantes: alert silencing (OPS-005) e retenção de logs abaixo do mínimo regulatório (OPS-003).
 
 ---
 
@@ -67,7 +67,7 @@ Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2,
 
 | Documento | Relação |
 |---|---|
-| `00-catalogo-requisitos.md` | Catálogo OPS-001..010 - requisitos que podem ter excepções |
+| `00-catalogo-requisitos.md` | Catálogo OPS-001..015 - requisitos que podem ter excepções |
 | `03-alertas-eventos-criticos.md` | Alertas que podem ser objecto de silenciamento com excepção |
 | `08-matriz-controles-por-risco.md` | Matriz de controlos por nível de risco |
 | Cap. 14 - `addon/12-processo-excecoes.md` | Processo canónico de gestão de excepções |

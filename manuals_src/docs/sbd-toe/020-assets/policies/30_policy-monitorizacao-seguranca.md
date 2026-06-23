@@ -73,6 +73,8 @@ A lista de eventos críticos de segurança a monitorizar deve ser definida forma
 
 A cobertura de monitorização deve abranger os seguintes domínios, de forma proporcional ao nível:
 
+Quando o domínio técnico inclui sinais de saúde, heartbeat, readiness/liveness probes ou mecanismo equivalente de disponibilidade operacional para serviços críticos, a obrigação canónica aplicável é [`OPS-015`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-015). Esta política mantém o foco em monitorização de segurança e correlação operacional.
+
 | Domínio | L1 | L2 | L3 |
 |---|---|---|---|
 | Técnico (erros, latência, health) | Básico | Completo | Completo |
@@ -224,6 +226,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 |---|---|
 | SbD-ToE Cap. 12 - Monitorização & Operações | US-02, US-08, US-09, US-10: eventos, SIEM, correlação, tuning; **US-13 — telemetria agentic** |
 | SbD-ToE Cap. 12 — Catálogo ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012), [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013), [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)) | Requisitos operacionais agentic |
+| SbD-ToE Cap. 12 — [`OPS-015`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-015) | Sinais contínuos de saúde/prontidão/disponibilidade para serviços críticos |
 | SbD-ToE Cap. 04 — Arquitetura Segura ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)) | Audit completo por *tool invocation* — origem dos sinais agentic |
 | SbD-ToE Cap. 02 — Requisitos ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) | *Intent declaration* — origem do sinal 9.3 |
 | Política de Logging Estruturado (`29_policy-logging-estruturado.md`) | Base de eventos para monitorização |

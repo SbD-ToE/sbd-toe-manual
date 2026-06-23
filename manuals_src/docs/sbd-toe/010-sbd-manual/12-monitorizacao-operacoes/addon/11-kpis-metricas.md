@@ -115,7 +115,7 @@ Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Pa
 
 | Documento | Relação |
 |-----------|---------|
-| `addon/00-catalogo-requisitos.md` | Requisitos OPS-001..010 que fundamentam os indicadores |
+| `addon/00-catalogo-requisitos.md` | Catálogo OPS-001..015 que enquadra os indicadores operacionais |
 | `addon/07-metricas-indicadores.md` | Síntese operacional de MTTD/MTTR para uso quotidiano das equipas |
 | `addon/10-excecoes-operacoes.md` | Excepções a alertas e retenção (OPS-K02, OPS-K08) |
 | Cap. 14 `addon/kpis-governanca.md` | Dimensão transversal T-03 (velocidade de resolução) |

@@ -13,6 +13,8 @@ sidebar_position: 28
 
 Esta política define os requisitos de **monitorização activa após cada deploy em produção**, cobrindo a janela de observação obrigatória, as métricas e alertas mínimos, a validação humana e os critérios de activação automática de rollback.
 
+Esta política usa, durante a janela pós-deploy, os sinais contínuos de saúde/prontidão/disponibilidade definidos em [`OPS-015`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-015); não substitui a obrigação de monitorização contínua em produção fora da janela de deploy.
+
 Um deploy não termina com a promoção bem-sucedida do artefacto - termina quando a versão está estável em produção e o seu comportamento foi verificado. Sem monitorização activa pós-deploy, anomalias podem desenvolver-se silenciosamente durante horas antes de serem detectadas por utilizadores ou por sistemas externos. A janela pós-deploy é o período de maior risco de uma release: é quando comportamentos inesperados sob carga real de produção se manifestam.
 
 O objetivo desta política é garantir que:
@@ -168,6 +170,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | Referência | Relevância |
 |---|---|
 | SbD-ToE Cap. 11 - Deploy Seguro | US-06 (monitorização pós-deploy), US-13 (validação humana) |
+| SbD-ToE Cap. 12 - [`OPS-015`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-015) | Sinal contínuo de saúde/prontidão/disponibilidade consumido durante a janela pós-deploy |
 | Política de Deploy Seguro (`25_policy-deploy-seguro.md`) | Estratégias de rollout e critérios de promoção |
 | Política de Rollback (`27_policy-rollback.md`) | Processo de rollback activado pela monitorização |
 | Política de Monitorização de Segurança (`30_policy-monitorizacao-seguranca.md`) | Monitorização de segurança em produção |

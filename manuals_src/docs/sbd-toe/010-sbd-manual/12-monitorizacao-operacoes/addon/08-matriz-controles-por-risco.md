@@ -28,6 +28,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 | Deteção comportamental / perfis adaptativos    |     |     |  ✔️ |
 | Integração com resposta a incidentes (IRP)     |     |  ✔️ |  ✔️ |
 | Métricas de MTTD / MTTR monitorizadas          |     |     |  ✔️ |
+| Sinal contínuo de saúde/prontidão operacional para serviços críticos |     |  ✔️ |  ✔️ |
 
 ---
 
@@ -35,8 +36,8 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 * ✔️ = obrigatório para esse nível
 * **L1**: logging local e básico para rastreabilidade
-* **L2**: centralização de eventos e alertas operacionais fundamentais
-* **L3**: deteção contextual, correlação, resposta integrada
+* **L2**: centralização de eventos, alertas operacionais fundamentais e sinal contínuo de saúde para serviços críticos
+* **L3**: deteção contextual, correlação, resposta integrada e cobertura completa de sinais de saúde/prontidão operacional
 
 > 🥉 Esta matriz deve ser cruzada com o catálogo de requisitos (Cap. 2) e os critérios de maturidade (`addon/achievable-maturity`).
 

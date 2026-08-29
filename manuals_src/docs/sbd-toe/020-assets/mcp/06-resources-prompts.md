@@ -101,9 +101,9 @@ Devolve algo como:
 ```json
 {
   "name": "@shiftleftpt/sbd-toe-mcp",
-  "version": "0.10.0",
-  "manual":   { "tag": "v1.6.4", "version": "1.6.4", "commit": "…" },
-  "kg":       { "release_tag": "kg-v1-manual-v1.6.4-aligned-…", "consumer_contract_version": "v1.7" },
+  "version": "0.10.2",
+  "manual":   { "tag": "v1.7.0", "version": "1.7.0", "commit": "d5c2586a…" },
+  "kg":       { "release_tag": "v1.6.0", "sha256": "baf5913b…", "source": "release", "consumer_contract_version": "v1.11" },
   "ontology": { "tag": "ontology-v1.1-fair-baseline", "commit": "…" }
 }
 ```

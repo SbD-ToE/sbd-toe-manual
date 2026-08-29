@@ -27,9 +27,9 @@ Quando se pede a um agente que escreva código seguro, ele tem duas opções: ou
 | **Transporte** | `stdio` (compatível com todos os clientes MCP padrão) |
 
 :::info Versão actual e *content lag*
-A versão actualmente publicada (**`@shiftleftpt/sbd-toe-mcp@0.10.0`**) inclui o **canon (capítulos 00–14)**, a **ontologia AppSec Core v1** e os cross-checks normativos **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** — todos indexados no KG e citáveis via `search_sbd_toe_manual`.
+A versão publicada (**`@shiftleftpt/sbd-toe-mcp@0.10.2`**) serve o *snapshot* do manual **`v1.7.0`** sobre o KG formal **`v1.6.0`** (contrato de consumo v1.11): o **canon (capítulos 00–14)** e os fundamentos (incluindo os [cinco macro-processos](/sbd-toe/sbd-manual/fundamentos/macro-processos)), a **ontologia AppSec Core v1** e os seis cross-checks normativos — **CRA**, **DORA**, **NIS2**, **GDPR**, **AI Act** e **ENISA/CSA** — todos indexados e citáveis.
 
-**Excepção:** o cross-check do **AI Act** (Regulamento (UE) 2024/1689), adicionado ao manual web na release **v1.3.0** posterior ao *snapshot* do servidor, ainda **não está indexado**. Para perguntas sobre AI Act, consultar directamente o manual web em [`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro) até nova publicação do MCP.
+O servidor serve sempre o *snapshot* do manual da altura da publicação; a versão exacta (manual, KG, ontologia) está em `sbd://toe/version`. Se o manual web tiver conteúdo posterior ao *snapshot*, ver [content lag](./10-troubleshooting-faq.md#content-lag).
 :::
 
 ---
@@ -130,6 +130,7 @@ O servidor expõe valores **fechados** para parâmetros — usar fora destes val
 - **Requisitos**: `<CAT>-NNN` (ex.: `AUT-001`, `LOG-003`) — resolver por id exato via `query_sbd_toe_entities`
 - **Controlos**: `CTRL-<domain>-<slug>-<hash>` (ex.: `CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af`). **Não** existe a forma `CTRL-<capítulo>-<número>`.
 - **Ameaças**: `MT-NNN` · **Artefactos**: `ART-<slug>-<hash>` — listar via `get_sbd_toe_chapter_brief`
+- **Gramática de IDs** (*fullmatch*): `^(?:REQ-[A-Z]{3}-\d{3}|[A-Z]{3}-\d{3})$`. Identificadores **`EX-…`** (ex.: `EX-AUT-003`, `EX-REQ-010`) são **ilustrativos** e nunca resolvem; um `REQ-NNN` fora do catálogo devolve uma `citation_note` informativa (`status: "informative"`), não um requisito — ver [`query_sbd_toe_entities`](./05-tools-reference.md#query_sbd_toe_entities)
 - Em modo `prepare_sbd_toe_codegen_context`, o `citation_map` devolvido é o **mundo fechado** de IDs válidos para a tarefa — IDs fora do `citation_map` **não existem** para efeitos de *grounding*.
 
 ---

@@ -50,33 +50,29 @@ npm view @shiftleftpt/sbd-toe-mcp version
 
 ### Sintoma
 
-`search_sbd_toe_manual` não devolve conteúdo do **AI Act**, embora a página exista no manual web (`/sbd-toe/cross-check-normativo/ai-act/...`).
+Uma página existe no manual web, mas o MCP não a devolve (`search_sbd_toe_manual`, `query_sbd_toe_entities` ou `inspect_sbd_toe_retrieval` sem *hits* nesse documento).
 
 ### Causa
 
-O *snapshot* do manual que o servidor (**`@shiftleftpt/sbd-toe-mcp@0.10.0`**) serve já inclui o cross-check do AI Act (manual `v1.6.4`, posterior à v1.3.0 onde foi adicionado). No entanto, o **índice KG** construído a partir desse *snapshot* **ainda não cobre** o bundle `ai-act/` — é uma lacuna de **indexação**, não de versão do manual. Por isso o AI Act não aparece em consultas MCP até nova indexação.
+O servidor serve um *snapshot* do manual e o índice KG construído a partir dele; a versão do manual, do KG e da ontologia está em `sbd://toe/version`. Conteúdo adicionado ao manual web **depois** desse *snapshot* só entra no MCP na publicação seguinte.
 
-Os restantes cross-checks (**CRA**, **DORA**, **NIS2**, **GDPR**, **ENISA/CSA**) **estão indexados** e funcionam normalmente.
+**Estado corrente:** `@shiftleftpt/sbd-toe-mcp@0.10.2` serve o manual `v1.7.0` sobre o KG formal `v1.6.0`, com os seis cross-checks (**CRA**, **DORA**, **NIS2**, **GDPR**, **AI Act**, **ENISA/CSA**) indexados — **sem lag conhecido**.
 
 ### Como confirmar o que está indexado
 
 ```
-inspect_sbd_toe_retrieval({"question": "<nome do regulamento>", "topK": 5})
+inspect_sbd_toe_retrieval({"question": "<nome do regulamento ou da página>", "topK": 5})
 ```
 
-Se os top-ranked records apontam a `002-cross-check-normativo/<framework>/...` → indexado. Se apontam apenas a documentos do `010-sbd-manual/...` (sem hit em `002-cross-check-normativo/<framework>`) → fora do índice (caso actual do AI Act).
+Se os *top-ranked records* apontam a `002-cross-check-normativo/<framework>/...` (ou ao documento esperado) → indexado. Se apontam apenas a outros documentos, a página pode estar fora do índice — confirmar a versão em `sbd://toe/version` antes de concluir; uma pergunta mais específica (artigo, título da secção) melhora o *ranking*.
 
 ### Solução
 
-Para perguntas sobre **AI Act**, consultar directamente o manual web:
+Ler `sbd://toe/version`. Se o conteúdo procurado é posterior ao *snapshot* indicado, consultar o manual web (por exemplo, [cross-check normativo](/sbd-toe/cross-check-normativo/intro)) até nova publicação do MCP. Para tudo o que está no *snapshot*, usar o MCP normalmente.
 
-- [Cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro)
+### Quando ocorre
 
-Para CRA / DORA / NIS2 / GDPR / ENISA-CSA e canon 00–14, usar o MCP normalmente.
-
-### Quando será resolvido
-
-Quando o KG for re-indexado a incluir o bundle `ai-act/` e o servidor fizer nova publicação. Não há ETA público.
+A cada publicação npm o *snapshot* avança. A diferença entre a tag do manual e a versão do servidor é esperada e está documentada em [versionamento & roadmap](./11-versionamento-roadmap.md#relação-com-versões-do-manual).
 
 ---
 

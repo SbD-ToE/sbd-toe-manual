@@ -56,10 +56,10 @@ Em clientes **sem suporte de MCP sampling** (ex.: Claude Code), a tool **não in
 - `risk_level` (`L1` | `L2` | `L3`) — obrigatório
 - `concerns` (string[]) — opcional, valores do **enum fechado** abaixo
 
-**Enum de `concerns` (fechado — 12 valores exatos):**
-`auth` · `logging` · `validation` · `api` · `config` · `integrity` · `distribution` · `ide` · `requirements` · `architecture` · `iac` · `encryption`.
+**Enum de `concerns` (fechado — 13 valores exatos):**
+`auth` · `logging` · `validation` · `api` · `config` · `integrity` · `distribution` · `ide` · `requirements` · `architecture` · `iac` · `encryption` · `agents`.
 
-Valores fora deste enum **não resolvem** (não há *fuzzy match*): usar `logging` para monitorização, `distribution` para *supply-chain* / terceiros.
+Valores fora deste enum **não resolvem** (não há *fuzzy match*): usar `logging` para monitorização, `distribution` para *supply-chain* / terceiros, `agents` para os requisitos de agentes AI (`REQ-AGN-001…004`).
 
 **Output:** (formatos de id reais — requisitos `<CAT>-NNN`, controlos `CTRL-<domain>-<slug>-<hash>`)
 ```json
@@ -77,9 +77,14 @@ Valores fora deste enum **não resolvem** (não há *fuzzy match*): usar `loggin
   "rule_trace": [
     "REQUIREMENT_APPLIES_BY_RISK(risk_level=L2): 39 requirements active",
     "CONCERNS_FILTER_REQUIREMENTS(concerns=[auth])"
-  ]
+  ],
+  "coverage_gaps": {
+    "requirements_without_control_link": {"count": 0, "requirement_ids": [], "note": "…"}
+  }
 }
 ```
+
+`coverage_gaps.requirements_without_control_link` é **sempre devolvido** (hoje `count: 0` em L1, L2 e L3): declara os requisitos activos sem entrada em `requirement_control_links` — uma lacuna declarada, não uma ausência de obrigação (o requisito é servido; os controlos são, no máximo, derivados por domínio, `_confidence: "derived"`).
 
 **Tamanhos típicos:** L1 ≈ 22k chars · L2 ≈ 36k chars · L3 ≈ 36k chars.
 **Regra prática:** **sempre** passar `concerns` em L2/L3 (reduz para ~9k por *concern set*).
@@ -151,6 +156,17 @@ query_sbd_toe_entities({"query": "AUT-001"})
 Um token como `"CTRL-06"` **não é um id** — não existe a forma `CTRL-<capítulo>-<número>`. Passá-lo **não** devolve "os controlos do capítulo 06"; cai em *fallback* semântico (`match` ≠ `"exact_id"`). Os ids reais são `AUT-001`, `LOG-003` (requisitos), `CTRL-<domain>-<slug>-<hash>` (controlos), `MT-NNN` (ameaças), `ART-…` (artefactos). Para **filtrar por tipo/domínio** (em vez de resolver um id), usar `resolve_entities`.
 :::
 
+**`citation_note` e `declared_gap`.** A gramática de IDs de requisito é *fullmatch* — `^(?:REQ-[A-Z]{3}-\d{3}|[A-Z]{3}-\d{3})$`; identificadores `EX-…` são ilustrativos e nunca resolvem. Um `REQ-NNN` que o manual cita como exemplo mas não existe no catálogo (ex.: `REQ-010`, num exemplo do Cap. 02) devolve `entities` por *fallback* semântico **e** uma `citation_note` com `status: "informative"` e `cited_in` (onde é citado) — informativo, não é *gap*, e nunca é resolvido por aproximação a outro requisito. Citações legadas com a forma `REQ-<CAT>-NNN` devolvem `declared_gap`; hoje não existem no manual e o campo não aparece.
+
+```json
+query_sbd_toe_entities({"query": "REQ-010"})
+// → "citation_note": {
+//      "requirement_id": "REQ-010", "status": "informative",
+//      "note": "`REQ-010` não é um requisito publicado: o Manual cita-o como identificador ilustrativo de exemplo ou é um token não-requisito com a forma <CAT>-NNN (CWE-, SHA-, …). Informativo, não é um gap; nunca resolvido por aproximação a outro requisito.",
+//      "cited_in": {"mention_count": 2, "document_ids": ["010-sbd-manual-02-requisitos-seguranca-addon-15-exemplos-aplicacao"]}
+//    }
+```
+
 ---
 
 ### `resolve_entities`
@@ -167,6 +183,9 @@ resolve_entities({"record_type": "role"})
 
 resolve_entities({"record_type": "control", "filters": {"domain": "architecture"}})
 // → controlos do domínio architecture
+
+resolve_entities({"record_type": "requirement", "filters": {"requirement_id": "REQ-010"}})
+// → total: 0, com meta.note idêntica à citation_note (identificador ilustrativo; não é gap)
 ```
 
 ---

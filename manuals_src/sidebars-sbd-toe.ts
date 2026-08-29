@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
               link: { type: 'doc', id: 'sbd-manual/fundamentos/roles-responsabilidades/intro' },
             },
             'sbd-manual/fundamentos/baseline',
+            'sbd-manual/fundamentos/macro-processos',
           ],
         },
         {

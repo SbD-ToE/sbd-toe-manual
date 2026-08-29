@@ -166,7 +166,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 
 **Critérios de aceitação (DoD).**
 - [ ] Exceção com ID e ligação ao requisito (`SEC-Lx-...` e/ou `REQ-XXX`) registada
-- [ ] TTL definido consoante nível (L1=12m recomendado; L2=6m; L3=3m)
+- [ ] TTL definido conforme a política master de exceções ([Processo Canónico de Gestão de Exceções](/sbd-toe/sbd-manual/governanca-contratacao/addon/processo-excecoes), Cap. 14): prazo máximo por defeito, extensão só com reavaliação
 - [ ] Owner designado e destinatários de alertas definidos
 - [ ] Aprovação técnica por AppSec documentada; aprovação executiva quando aplicável em L3
 - [ ] Alertas automáticos configurados (ex.: 15 dias antes de expiração)

@@ -158,6 +158,24 @@ Os invariantes **não constituem um vetor autónomo**. São **propriedades emerg
 
 ---
 
+## 🔗 Os cinco macro-processos: invariantes em forma de processo
+
+Os capítulos 01–14 do Manual organizam a engenharia segura por **áreas de capacidade**: dizem *o que* tem de existir e *como* se faz, com proporcionalidade L1–L3. Uma organização que os aplique tem os mecanismos. A falha sistémica que os macro-processos endereçam não é a ausência de um mecanismo; é a **ausência de uma camada de ligação governada** entre mecanismos que existem — a classificação que não seleciona os requisitos, o *threat model* que os testes não fecham, o SBOM que descreve outro *build*, a exceção aprovada sem alçada, o indicador que mede atividade em vez de estado.
+
+Os invariantes descritos acima têm, por isso, uma forma processual. O SbD–ToE nomeia **cinco macro-processos**, cada um preservando uma **continuidade** — uma relação que tem de permanecer intacta entre atividades que os capítulos prescrevem separadamente. São ortogonais aos capítulos: cada macro-processo é um **percurso** por vários deles, e nenhum capítulo é dono de um macro-processo. Não são fases do ciclo de vida nem capítulos novos; são invariantes no sentido definido acima, e em conjunto constituem a **camada de ligação governada** (*governed linkage layer*) do modelo.
+
+| Macro-processo | Continuidade | Invariante | Pergunta que responde |
+|---|---|---|---|
+| MP1 **Classificar → Selecionar** | Aplicabilidade | Um perfil de segurança registado seleciona requisitos, gates, profundidade de revisão, evidência e formação. | "O que se aplica aqui?" |
+| MP2 **Desenhar → Assegurar** | Intenção | Ameaças, decisões de arquitetura e testes fecham sobre o mesmo resultado declarado. | "O que foi desenhado e implementado satisfaz a intenção de segurança?" |
+| MP3 **Construir → Executar** | Proveniência / execução | A evidência de dependências, *pipeline*, artefacto, *deployment* e *runtime* descreve a mesma versão lançada. | "O que está a correr ou a agir é o que foi governado, verificado e autorizado?" |
+| MP4 **Autorizar → Agir / Excecionar** | Autoridade e agência | Papéis, deveres de fornecedor, automatismos e exceções exigem autoridade explícita e evidência retida. Capacidade não implica autoridade. | "Quem ou o quê pode decidir ou executar isto, em nome de quem, em que âmbito, e quando é obrigatória exceção ou escalada?" |
+| MP5 **Medir → Melhorar** | Asseguramento e aprendizagem | Cada capítulo precisa de população elegível, contrato de evidência, dono e medida de estado resultante. | "O sistema funcionou, e o que tem de mudar?" |
+
+Cada macro-processo é definido como processo — finalidade, percurso de capítulos, gatilhos, entradas, atividades ancoradas em requisitos existentes, saídas, papéis, pontos de controlo, evidência e indicadores — e de forma **mensurável**, reutilizando os KPIs dos capítulos, para que possa servir de base a uma medição de maturidade futura sem que esta seja aqui definida. Sistemas AI e agentic entram como extensão de cada macro-processo, não como universo separado. O Manual passa a responder, além de "o que tem de ser feito aqui?", à pergunta: **"o que tem de permanecer ligado antes, durante e depois — e como se sabe que ainda está?"** A definição processual completa está na [vista processual em Fundamentos](/sbd-toe/sbd-manual/fundamentos/macro-processos).
+
+---
+
 ## 📚 *Security by Design* nos referenciais normativos e regulatórios
 
 O princípio de *Security by Design* encontra-se hoje amplamente consagrado nos principais referenciais normativos, técnicos e regulatórios, ainda que com diferentes graus de explicitação, prescrição e detalhe operacional. Existe uma convergência clara na premissa de que a segurança deve ser integrada desde a conceção e mantida ao longo de todo o ciclo de vida, mas essa convergência ocorre sobretudo ao nível do **princípio normativo**, deixando em aberto a sua **operacionalização sistemática**.

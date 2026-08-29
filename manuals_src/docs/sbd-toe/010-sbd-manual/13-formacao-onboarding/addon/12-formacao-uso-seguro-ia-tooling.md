@@ -67,11 +67,12 @@ validation_date: "2026-01-04"
 
 **Exemplo prático**:
 ```markdown
+<!-- Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02. -->
 ❌ MAU: Requisito genérico gerado
-REQ-AUTH-001: "A aplicação deve implementar autenticação segura"
+EX-AUTH-001: "A aplicação deve implementar autenticação segura"
 
 ✅ BOM: Requisito específico e validado
-REQ-AUTH-001: "Autenticação via OAuth 2.0 + PKCE com MFA obrigatório para roles admin"
+EX-AUTH-001: "Autenticação via OAuth 2.0 + PKCE com MFA obrigatório para roles admin"
 - Aplicável: ✓ (aplicação web com dados GDPR)
 - Mensurável: ✓ (teste automatizado valida PKCE + MFA)
 - Rastreável: ✓ (ligado a THR-001 threat model)
@@ -178,6 +179,7 @@ Evidência: "PR-123 com testes + validação staging"
 
 **Exemplo prático**:
 ```python
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 # ❌ MAU: Código gerado por Copilot aceito sem revisão
 def authenticate_user(username, password):
     # Copilot gerou isto:
@@ -191,7 +193,7 @@ def authenticate_user(username, password):
     cursor.execute(query, (username, hash_password(password)))
     # ✅ Parametrized query + password hashing
     # ✅ Teste unitário criado: test_sql_injection_blocked()
-    # ✅ Validado contra REQ-AUTH-001
+    # ✅ Validado contra EX-AUTH-001
 ```
 
 **Práticas de prompt engineering seguro**:
@@ -254,6 +256,7 @@ Aprovação: "AppSec valida contexto, aprova exceção com validade 6 meses"
 
 **Exemplo prático**:
 ```hcl
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 # ❌ MAU: Template gerado com permissões excessivas
 resource "aws_iam_role" "app_role" {
   # Copilot gerou isto:
@@ -272,7 +275,7 @@ resource "aws_iam_role" "app_role" {
       Resource = "arn:aws:s3:::my-app-bucket/*"  # ✅ Scope específico
     }]
   })
-  # ✅ Validado contra REQ-IAM-001 (mínimo privilégio)
+  # ✅ Validado contra EX-IAM-001 (mínimo privilégio)
   # ✅ Teste: terraform plan + checkov scan
 }
 ```
@@ -322,6 +325,7 @@ USER nonroot:nonroot  # ✅ Non-root user
 **Exemplo prático - O PROBLEMA DA TAUTOLOGIA**:
 
 ```python
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 # ❌ MAU: Teste gerado por IA que apenas "prova" o código implementado
 # Código implementado (com bug!)
 def calculate_discount(price, user_role):
@@ -340,10 +344,10 @@ def test_calculate_discount():
     assert calculate_discount(100, "guest") == 100
 
 # ✅ BOM: Teste baseado em REQUISITOS, não implementação
-# REQ-DISC-001: "Descontos: premium=20%, guest=0%. Admin não tem desconto especial"
+# EX-DISC-001: "Descontos: premium=20%, guest=0%. Admin não tem desconto especial"
 
 def test_calculate_discount_against_requirements():
-    # ✅ Testa contra requisito REQ-DISC-001
+    # ✅ Testa contra requisito EX-DISC-001
     assert calculate_discount(100, "admin") == 100  # ❌ FALHA! Bug detectado
     assert calculate_discount(100, "premium") == 80  # ✓
     assert calculate_discount(100, "guest") == 100   # ✓
@@ -363,13 +367,14 @@ def test_calculate_discount_against_requirements():
 
 **Outro exemplo - Testes de segurança**:
 ```python
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 # ❌ MAU: Teste gerado que não testa segurança real
 def test_authentication():
     # Copilot gerou:
     response = login("user", "password")
     assert response.status_code == 200  # ❌ Só testa se funciona, não se é seguro!
 
-# ✅ BOM: Teste valida requisito de segurança REQ-AUTH-001
+# ✅ BOM: Teste valida requisito de segurança EX-AUTH-001
 def test_authentication_security():
     # ✅ Testa SQL injection
     response = login("admin' OR '1'='1", "anything")
@@ -482,6 +487,7 @@ Ao usar ferramentas de geração/assistência:
 ### Prompt Engineering Seguro
 
 ```markdown
+<!-- Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02. -->
 ❌ MAU: Prompt vago
 "Generate code for user authentication"
 
@@ -494,7 +500,7 @@ Ao usar ferramentas de geração/assistência:
 - Returns generic error messages (no user enumeration)
 - Logs failed attempts with IP and timestamp
 - Includes unit tests for SQL injection and brute force
-- References REQ-AUTH-001 and REQ-AUTH-002"
+- References EX-AUTH-001 and EX-AUTH-002"
 ```
 
 ---

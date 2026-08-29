@@ -119,7 +119,7 @@ Como **Developer / Scrum Master / Team Lead**, quero **aplicar a matriz de contr
 **Critérios de aceitação (DoD).**
 - [ ] Matriz consultada para o nível da aplicação  
 - [ ] Requisitos transformados em cartões/histórias de backlog  
-- [ ] **Cada requisito mapeado explicitamente para REQ-XXX do Cap. 02** (ex: REQ-LOG-001, REQ-ARC-003)  
+- [ ] **Cada requisito mapeado explicitamente para o ID de catálogo `XXX-NNN`** (ex.: `LOG-001` do Cap. 02, `ARC-003` do Cap. 04)  
 - [ ] Tabela de rastreamento: `controlo | L1/L2/L3 | REQ-XXX | responsável`  
 - [ ] Exceções documentadas, aprovadas por AppSec Engineer com justificação técnica  
 - [ ] **AppSec Engineer valida mapeamento antes de entrada em backlog**  

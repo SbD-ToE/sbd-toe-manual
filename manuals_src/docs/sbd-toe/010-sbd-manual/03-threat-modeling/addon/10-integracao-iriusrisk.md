@@ -35,7 +35,7 @@ Esta integração visa:
 
 Para manter consistência e rastreabilidade, os requisitos definidos no IriusRisk devem:
 
-- Referenciar os **mesmos códigos de requisito do Cap. 2**, ex: `REQ-AUT-003`, `REQ-AC-010`;
+- Referenciar os **mesmos códigos de requisito do Cap. 2**, ex: `AUT-003`, `ACC-010`;
 - Ser classificados na mesma **categoria funcional** (autenticação, controlo de acesso, privacidade);
 - Ter criticidade associada (baixa / média / alta) conforme contexto do risco;
 - Indicar o **estado atual** da implementação.
@@ -44,9 +44,11 @@ Para manter consistência e rastreabilidade, os requisitos definidos no IriusRis
 
 | Ameaça (IriusRisk)               | Requisito derivado (Cap. 2)           | Estado       |
 | -------------------------------- | ------------------------------------- | ------------ |
-| JWT token não assinado           | `REQ-AUT-003`: Assinatura obrigatória | Implementado |
-| Endpoint `/admin/config` exposto | `REQ-AC-010`: RBAC obrigatório        | Em curso     |
-| Claims excessivos no JWT         | `REQ-DAT-005`: Claims mínimos         | Justificado  |
+| JWT token não assinado           | `EX-AUT-003`: Assinatura obrigatória | Implementado |
+| Endpoint `/admin/config` exposto | `EX-AC-010`: RBAC obrigatório        | Em curso     |
+| Claims excessivos no JWT         | `EX-DAT-005`: Claims mínimos         | Justificado  |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

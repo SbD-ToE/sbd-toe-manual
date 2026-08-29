@@ -28,7 +28,7 @@ A presença de threat modeling não pode ser apenas simbólica: deve resultar em
 | Modelo de ameaça versionado                    | Diagrama DFD (`dfd.drawio`, `dfd.mmd`), lista de ameaças (`threats.yaml`) |
 | Mapeamento threat → requisito → controlo       | Ficheiro `mitigations.md` com status e referência cruzada                 |
 | Justificações documentadas para riscos aceites | Ficheiro `decisions.md` com data, autor, razão de aceitação               |
-| Rastreabilidade no backlog ou código           | Identificadores como `TM-001` ou `REQ-AC-003` referenciados em PRs/issues |
+| Rastreabilidade no backlog ou código           | Identificadores como `TM-001` ou `ACC-003` referenciados em PRs/issues |
 | Data da última revisão                         | Campo `last_reviewed` num ficheiro `threat-model.yml`                     |
 
 ---

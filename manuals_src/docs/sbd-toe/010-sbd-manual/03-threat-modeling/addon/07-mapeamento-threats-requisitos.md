@@ -23,10 +23,12 @@ O mapeamento deve ser feito com base em identificadores únicos e formatos consi
 
 | Threat ID | Descrição da Ameaça                                | Requisito Gerado                             | Categoria Cap. 2       | Estado       |
 | --------- | -------------------------------------------------- | -------------------------------------------- | ---------------------- | ------------ |
-| TM-001    | JWT com `alg: none` permite falsificação de sessão | REQ-AUT-003: Assinatura JWT obrigatória      | Autenticação e Sessões | Mitigado     |
-| TM-002    | Endpoint `/admin/config` acessível a todos         | REQ-AC-010: RBAC obrigatório por endpoint    | Controlo de Acesso     | Em validação |
-| TM-003    | Claims excessivos no JWT expõem dados sensíveis    | REQ-DAT-005: Minimizar claims por contexto   | Privacidade e Dados    | Justificado  |
-| TM-004    | Falta de logging de ações administrativas          | REQ-LOG-001: Logging estruturado obrigatório | Logging e Auditoria    | Em curso     |
+| TM-001    | JWT com `alg: none` permite falsificação de sessão | EX-AUT-003: Assinatura JWT obrigatória      | Autenticação e Sessões | Mitigado     |
+| TM-002    | Endpoint `/admin/config` acessível a todos         | EX-AC-010: RBAC obrigatório por endpoint    | Controlo de Acesso     | Em validação |
+| TM-003    | Claims excessivos no JWT expõem dados sensíveis    | EX-DAT-005: Minimizar claims por contexto   | Privacidade e Dados    | Justificado  |
+| TM-004    | Falta de logging de ações administrativas          | EX-LOG-001: Logging estruturado obrigatório | Logging e Auditoria    | Em curso     |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 > ⚠️ Cada linha do mapeamento deve estar documentada no repositório ou no ficheiro `mitigations.md`.
 
@@ -36,11 +38,13 @@ O mapeamento deve ser feito com base em identificadores únicos e formatos consi
 
 | Categoria de Requisito (Cap. 2) | Tipo de ameaça típica                           | Exemplo de requisito derivado                                      |
 | ------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------ |
-| Autenticação e Sessões          | Reutilização de JWTs não expirados              | REQ-AUT-004: TTL máximo de 15min nos tokens                        |
-| Controlo de Acesso              | Acesso não controlado a funções administrativas | REQ-AC-012: Verificação explícita de `role` no backend             |
-| Privacidade e Dados             | Claims desnecessários em tokens                 | REQ-DAT-006: Scoping dinâmico de claims por operação               |
-| Logging e Auditoria             | Ações sem registo estruturado                   | REQ-LOG-002: Registo de todas ações sensíveis com ID de utilizador |
-| Proteção contra DoS             | Abuse de endpoints públicos (ex: `/login`)      | REQ-DOS-001: Rate limiting + CAPTCHA                               |
+| Autenticação e Sessões          | Reutilização de JWTs não expirados              | EX-AUT-004: TTL máximo de 15min nos tokens                        |
+| Controlo de Acesso              | Acesso não controlado a funções administrativas | EX-AC-012: Verificação explícita de `role` no backend             |
+| Privacidade e Dados             | Claims desnecessários em tokens                 | EX-DAT-006: Scoping dinâmico de claims por operação               |
+| Logging e Auditoria             | Ações sem registo estruturado                   | EX-LOG-002: Registo de todas ações sensíveis com ID de utilizador |
+| Proteção contra DoS             | Abuse de endpoints públicos (ex: `/login`)      | EX-DOS-001: Rate limiting + CAPTCHA                               |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 
@@ -67,7 +71,7 @@ Durante a fase de validação de segurança de cada projeto, este mapeamento dev
 
 ## ✅ Boas práticas
 
-- Utilizar sempre identificadores únicos e rastreáveis (ex: `TM-001`, `REQ-AC-010`);
+- Utilizar sempre identificadores únicos e rastreáveis (ex: `TM-001`, `EX-AC-010` — identificadores ilustrativos; não correspondem ao Catálogo de Requisitos do Cap. 02);
 - Garantir consistência entre os ficheiros `threats.yaml`, `requisitos.yaml` e `mitigations.md`;
 - Atualizar o mapeamento sempre que novas ameaças forem introduzidas ou requisitos alterados;
 - Usar o mapeamento como input obrigatório em validações de segurança e auditorias técnicas;

@@ -47,11 +47,13 @@ flowchart LR
 
 | Categoria       | Ameaça identificada                                         | Impacto | Requisito associado (Cap. 2)                             |
 | --------------- | ----------------------------------------------------------- | ------- | -------------------------------------------------------- |
-| Linkability     | JWT permite rastrear utilizadores entre sessões e apps      | Alta    | REQ-DAT-008: JWT não deve conter IDs rastreáveis         |
-| Identifiability | Endpoint `/me` expõe `email` e `role` diretamente           | Média   | REQ-DAT-002: Minimizar exposição de dados identificáveis |
-| Unawareness     | Utilizador não informado sobre uso dos dados                | Alta    | REQ-PRI-001: Política de privacidade obrigatória         |
-| Non-compliance  | Sem registo de consentimento ou base legal                  | Alta    | REQ-PRI-004: Consentimento explícito e auditável         |
-| Disclosure      | Logs acessíveis via `/admin/audits` contêm emails completos | Alta    | REQ-LOG-004: Pseudonimização de dados em logs            |
+| Linkability     | JWT permite rastrear utilizadores entre sessões e apps      | Alta    | EX-DAT-008: JWT não deve conter IDs rastreáveis         |
+| Identifiability | Endpoint `/me` expõe `email` e `role` diretamente           | Média   | EX-DAT-002: Minimizar exposição de dados identificáveis |
+| Unawareness     | Utilizador não informado sobre uso dos dados                | Alta    | EX-PRI-001: Política de privacidade obrigatória         |
+| Non-compliance  | Sem registo de consentimento ou base legal                  | Alta    | EX-PRI-004: Consentimento explícito e auditável         |
+| Disclosure      | Logs acessíveis via `/admin/audits` contêm emails completos | Alta    | EX-LOG-004: Pseudonimização de dados em logs            |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

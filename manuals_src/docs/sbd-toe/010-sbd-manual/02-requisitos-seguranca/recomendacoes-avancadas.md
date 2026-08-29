@@ -58,7 +58,7 @@ Feature: Autenticação multifator
 
 > **Objetivo**: Alinhar os requisitos com ameaças reais modeladas.
 
-- Ligar REQ-IDs a threats (ex: REQ-VAL-002 mitiga [STRIDE] Input Validation)
+- Ligar REQ-IDs a threats (ex: `VAL-002` mitiga [STRIDE] Input Validation)
 - Justificar requisitos com outputs de modelos (ex: DFDs, IriusRisk)
 - Usar marcações automatizadas com ferramentas como ThreatSpec ou Diagrams as Code
 
@@ -125,12 +125,13 @@ Estas práticas **não são obrigatórias**, mas recomendadas quando:
 - Exemplo em Rego:
 
 ```rego
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 package security.requisitos
 
 default permitir = false
 
 permitir {
-  input.req_id == "REQ-AUT-001"
+  input.req_id == "EX-AUT-001"
   input.mfa_ativo == true
 }
 ```

@@ -44,7 +44,7 @@ Pode ser realizado por:
 5. **Manter baseline de findings aceite vs findings novos**;
 6. **Documentar exceções e justificar false positives**, com acompanhamento AppSec.
 
-> 💡 Sugestão: usar tags nos findings para associar requisitos (ex: `REQ-205`) e mitigações.
+> 💡 Sugestão: usar tags nos findings para associar requisitos (ex: `EX-REQ-205` — identificador ilustrativo; não corresponde ao Catálogo de Requisitos do Cap. 02) e mitigações.
 
 ---
 
@@ -63,12 +63,14 @@ Pode ser realizado por:
 
 | Documento                       | Relação com o SAST                            |
 |--------------------------------|-----------------------------------------------|
-| Capítulo 02 - Requisitos       | Valida `REQ-203`, `REQ-205`, `REQ-303`        |
+| Capítulo 02 - Requisitos       | Valida `EX-REQ-203`, `EX-REQ-205`, `EX-REQ-303`        |
 | Capítulo 06 - Desenvolvimento  | Reforça práticas de secure coding             |
 | Capítulo 07 - CI/CD Seguro     | Ver `07-integracao-validacoes.md`             |
 | `06-cobertura-e-priorizacao.md`| Define targets e prioridades de análise       |
 | `08-gestao-findings.md`        | Garante tratamento eficaz dos resultados      |
 | `09-feedback-equipa.md`        | Envolvimento das equipas na validação         |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

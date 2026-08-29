@@ -31,7 +31,9 @@ A existência de evidência técnica não substitui a necessidade de decisão co
 
 | Aplicativo / Projeto | Risco (L1-L3) | Requisitos aplicados | Exceções aprovadas  | Fornecedor / Serviço | Evidência existente | Owner de segurança  |
 | -------------------- | ------------- | -------------------- | ------------------- | -------------------- | ------------------- | ------------------- |
-| Ex: Portal RH        | L3            | REQ-001, REQ-002...  | REQ-017 justificada | Fornecedor ABC       | Teste CI + cláusula | joao.silva\@empresa |
+| Ex: Portal RH        | L3            | REQ-001, REQ-002...  | EX-REQ-017 justificada | Fornecedor ABC       | Teste CI + cláusula | joao.silva\@empresa |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 > 🔹 Esta estrutura pode ser mantida em Excel, SharePoint, Jira ou outra ferramenta ALM com suporte a traçabilidade.
 

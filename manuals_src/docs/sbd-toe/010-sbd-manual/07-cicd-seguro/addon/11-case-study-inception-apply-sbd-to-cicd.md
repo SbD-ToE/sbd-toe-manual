@@ -61,7 +61,7 @@ Aplicando o Cap. 06:
 - Todo o código de pipeline é versionado, com revisão obrigatória;
 - Linters e scanners analisam `.yaml`, scripts embutidos, módulos reutilizados;
 - Tasks, Actions e extensões são incluídas num **SBOM próprio**, com validação contínua (Cap. 05);
-- Foram definidos requisitos não funcionais específicos, ex. `CI-CD-004`, `CI-CD-006`, `REQ-014`, `REQ-024`.
+- Foram definidos requisitos não funcionais específicos, ex. `CI-CD-004`, `CI-CD-006`, `EX-REQ-014`, `EX-REQ-024` — identificadores ilustrativos; não correspondem ao Catálogo de Requisitos do Cap. 02.
 
 ---
 

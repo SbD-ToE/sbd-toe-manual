@@ -64,12 +64,14 @@ Permite:
 
 | Documento                       | Relevância estratégica                      |
 |--------------------------------|---------------------------------------------|
-| Capítulo 02 - Requisitos       | Valida `REQ-203`, `REQ-307`, `REQ-404`      |
+| Capítulo 02 - Requisitos       | Valida `EX-REQ-203`, `EX-REQ-307`, `EX-REQ-404`      |
 | Capítulo 06 - Desenvolvimento  | Observa violações em tempo real             |
 | `01-sast.md`                   | IAST observa falhas que SAST só deteta estaticamente |
 | `02-dast.md`                   | Complementa o DAST com visibilidade no backend |
 | `06-cobertura-e-priorizacao.md`| Mede cobertura por execução real            |
 | `08-gestao-findings.md`        | Findings do IAST são altamente rastreáveis  |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

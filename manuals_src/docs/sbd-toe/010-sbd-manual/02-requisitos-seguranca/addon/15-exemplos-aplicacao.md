@@ -47,10 +47,12 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 | ID       | Descrição                                                                 | Tema                            |
 |----------|---------------------------------------------------------------------------|---------------------------------|
 | REQ-003  | Sessões com timeout de 15 minutos de inatividade                          | Sessões e Estado                |
-| REQ-010  | Validação de tipo, extensão e tamanho no upload de ficheiros             | Validação de Input e Output     |
-| REQ-011  | Análise de malware antes do armazenamento de ficheiros                   | Antivírus e Malware             |
-| REQ-015  | Logging de tentativas de upload e erros associados                        | Registo e Auditoria             |
-| REQ-018  | Criação de testes automáticos para inputs malformados no endpoint de API | Testes de Segurança             |
+| EX-REQ-010  | Validação de tipo, extensão e tamanho no upload de ficheiros             | Validação de Input e Output     |
+| EX-REQ-011  | Análise de malware antes do armazenamento de ficheiros                   | Antivírus e Malware             |
+| EX-REQ-015  | Logging de tentativas de upload e erros associados                        | Registo e Auditoria             |
+| EX-REQ-018  | Criação de testes automáticos para inputs malformados no endpoint de API | Testes de Segurança             |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 
@@ -58,10 +60,12 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 
 | Risco identificado                          | Requisito | Controlo implementado                       | Validação                     |
 |--------------------------------------------|-----------|----------------------------------------------|-------------------------------|
-| Upload de ficheiros maliciosos             | REQ-011   | Integração com antivírus no pipeline         | CI/CD com scan automático     |
-| Abuso do endpoint com ficheiros grandes    | REQ-010   | Limite de 10 MB + verificação de MIME type   | Teste funcional + logs        |
+| Upload de ficheiros maliciosos             | EX-REQ-011   | Integração com antivírus no pipeline         | CI/CD com scan automático     |
+| Abuso do endpoint com ficheiros grandes    | EX-REQ-010   | Limite de 10 MB + verificação de MIME type   | Teste funcional + logs        |
 | Sessões abusivamente longas                | REQ-003   | Timeout de 15 min com reautenticação         | Teste de UI + script Selenium |
-| Falta de visibilidade sobre ações críticas | REQ-015   | Logging com nível de alerta e centralização  | Revisão de logs + alertas     |
+| Falta de visibilidade sobre ações críticas | EX-REQ-015   | Logging com nível de alerta e centralização  | Revisão de logs + alertas     |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

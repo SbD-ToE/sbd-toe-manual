@@ -62,9 +62,11 @@ Capacitar developers para:
 
 | Capítulo                    | Relevância                                   |
 |-----------------------------|----------------------------------------------|
-| Capítulo 6 - Desenvolvimento Seguro | Aplicação direta de requisitos REQ-114, REQ-115 e REQ-118 |
+| Capítulo 6 - Desenvolvimento Seguro | Aplicação direta de requisitos EX-REQ-114, EX-REQ-115 e EX-REQ-118 |
 | Capítulo 2 - Requisitos de Segurança | Integração com user stories com critérios de segurança     |
 | Capítulo 13 - Formação e Onboarding | Pode integrar trilho formativo do perfil Developer         |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

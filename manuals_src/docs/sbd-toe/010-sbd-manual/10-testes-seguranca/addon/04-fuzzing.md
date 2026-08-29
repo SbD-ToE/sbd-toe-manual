@@ -64,11 +64,13 @@ Tipos comuns:
 
 | Documento                       | Relevância estratégica                       |
 |--------------------------------|----------------------------------------------|
-| Capítulo 02 - Requisitos       | Relacionado com `REQ-309`, `REQ-406`         |
+| Capítulo 02 - Requisitos       | Relacionado com `EX-REQ-309`, `EX-REQ-406`         |
 | `02-dast.md`                   | Complementa com entradas mais imprevisíveis  |
 | `06-cobertura-e-priorizacao.md`| Usado em zonas com menos testes manuais      |
 | Capítulo 07 - CI/CD Seguro     | Aplicação em jobs dedicados ou ambientes paralelos |
 | `08-gestao-findings.md`        | Findings do fuzzing podem requerer triagem especializada |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

@@ -120,10 +120,10 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 ❌ "`CTRL-…` mitiga `MT-NNN`."
 ✅ "`CTRL-…` mitiga `MT-NNN` — ligação **inferida** (*fallback* sem confidence `derived`); validar com teste / revisão humana."
 
-### 7. Confiar no MCP para o **AI Act** (não indexado na versão actual)
+### 7. Assumir a cobertura do *snapshot* sem a confirmar
 
-❌ `search_sbd_toe_manual("AI Act Art 15")` → resposta directa via MCP.
-✅ Reconhecer que o MCP `@0.10.0` foi publicado antes da v1.3.0 do manual — **CRA / DORA / NIS2 / GDPR / ENISA-CSA estão indexados** e podem ser consultados via MCP, mas o cross-check do **AI Act** vive **apenas** no manual web. Consultar [`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro) directamente. Quando em dúvida, validar com `inspect_sbd_toe_retrieval` se o framework aparece nos top-ranked records.
+❌ Responder sobre um cross-check normativo (ou qualquer página) assumindo que o MCP a serve — ou que não a serve.
+✅ Ler `sbd://toe/version` (manual, KG, ontologia) e, em dúvida, validar com `inspect_sbd_toe_retrieval` se o documento aparece nos *top-ranked records*. Em `0.10.2` os seis cross-checks — **CRA / DORA / NIS2 / GDPR / AI Act / ENISA-CSA** — estão indexados; conteúdo posterior ao *snapshot* vive só no manual web até nova publicação (ver [content lag](./10-troubleshooting-faq.md#content-lag)).
 
 ### 8. Confundir *concerns* (ontológicos) com domínios STRIDE
 
@@ -157,7 +157,7 @@ Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organiz
 4. `m_recall < 1.0` foi sinalizado?
 5. Não há declaração de conformidade?
 6. Código não foi apresentado como evidência?
-7. Para perguntas sobre **AI Act** (fora do índice MCP na v0.10.0) — o cross-check web foi consultado?
+7. Para perguntas regulatórias — a cobertura do *snapshot* foi confirmada em `sbd://toe/version` (e o manual web consultado para conteúdo posterior)?
 
 Se algum check falha → **rever antes de entregar**.
 

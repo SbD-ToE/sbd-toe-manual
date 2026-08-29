@@ -179,13 +179,13 @@ Para perguntas que envolvem regulamentos UE:
 2. Verificar se o framework está indexado no MCP:
    inspect_sbd_toe_retrieval({question: "<framework>", topK: 5})
 
-   Indexados em 0.10.0: CRA, DORA, NIS2, GDPR, ENISA-CSA
-   NÃO indexado:      AI Act (v1.3.0 posterior ao snapshot)
+   Indexados em 0.10.2: CRA, DORA, NIS2, GDPR, AI Act, ENISA-CSA (os seis)
+   Fora do índice:    só conteúdo posterior ao snapshot (ver sbd://toe/version)
 
 3. Se indexado:
    search_sbd_toe_manual({question: "<artigo + tópico>"})
 
-   Se NÃO indexado (AI Act):
+   Se NÃO indexado (conteúdo posterior ao snapshot):
    consultar /sbd-toe/cross-check-normativo/ai-act/ no manual web
 
 4. Validar cada CTRL-* referido via MCP (resolução por id exato):

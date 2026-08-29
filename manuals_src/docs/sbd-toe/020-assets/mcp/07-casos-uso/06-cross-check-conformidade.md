@@ -19,13 +19,13 @@ tags:
 
 Mais cedo ou mais tarde, alguém na empresa — *legal*, auditoria interna, um cliente B2B no contrato — vai querer ver, em papel, como é que as práticas de engenharia respondem a um regulamento específico. AI Act, CRA, DORA, NIS2, RGPD. A pergunta não é "estamos compliant?" (essa é jurídica) — é "como é que o SbD-ToE responde a este artigo?" (essa é técnica).
 
-Esta receita serve para a segunda. Combina o MCP (onde estão indexados a maior parte dos cross-checks normativos do manual) com a leitura directa do manual web (necessária para o **AI Act**, ainda fora do *snapshot* `0.10.0`). O resultado é um relatório técnico que cita o regulamento *verbatim*, os capítulos e controlos do SbD-ToE com IDs reais, e marca explicitamente o que não está coberto — sem nunca derrapar para uma declaração de conformidade.
+Esta receita serve para a segunda. Combina o MCP (onde estão indexados a maior parte dos cross-checks normativos do manual) com a leitura directa do manual web (necessária para conteúdo posterior ao *snapshot* publicado). O resultado é um relatório técnico que cita o regulamento *verbatim*, os capítulos e controlos do SbD-ToE com IDs reais, e marca explicitamente o que não está coberto — sem nunca derrapar para uma declaração de conformidade.
 
 ## Cobertura actual no MCP — o que está dentro e fora
 
-O *snapshot* publicado em **`@shiftleftpt/sbd-toe-mcp@0.10.0`** já inclui canon (capítulos 00–14), ontologia *AppSec Core v1* **e** os cross-checks **CRA**, **DORA**, **NIS2**, **GDPR** e **ENISA/CSA** indexados no KG. Para esses, o MCP é a fonte recomendada — `search_sbd_toe_manual` devolve os intros, playbooks e notas de convergência directamente.
+O *snapshot* publicado em **`@shiftleftpt/sbd-toe-mcp@0.10.2`** (manual `v1.7.0`, KG formal `v1.6.0`) inclui canon (capítulos 00–14), ontologia *AppSec Core v1* **e** os seis cross-checks — **CRA**, **DORA**, **NIS2**, **GDPR**, **AI Act** e **ENISA/CSA** — indexados no KG. Para esses, o MCP é a fonte recomendada: `search_sbd_toe_manual` devolve os intros, playbooks e notas de convergência com citações, e `map_sbd_toe_regulatory_activation` / `resolve_entities` expõem o overlay regulatório (frameworks, obrigações, mapeamentos).
 
-A **excepção** é o cross-check do **AI Act** (Reg. (UE) 2024/1689), adicionado ao manual web na release **v1.3.0** posterior à publicação do servidor. Para perguntas sobre AI Act, consultar **directamente o manual web** até nova publicação do MCP (ver [content lag](../10-troubleshooting-faq.md#content-lag)).
+A fronteira é o *snapshot*: conteúdo adicionado ao manual web **depois** dele vive só no manual web até nova publicação. A versão servida está em `sbd://toe/version` (ver [content lag](../10-troubleshooting-faq.md#content-lag)).
 
 | Pergunta | Fonte recomendada |
 |---|---|
@@ -34,7 +34,7 @@ A **excepção** é o cross-check do **AI Act** (Reg. (UE) 2024/1689), adicionad
 | "Como o SbD-ToE responde ao CRA Art. 12?" | **MCP** (`search_sbd_toe_manual`) — cross-check **CRA** indexado |
 | "Como o SbD-ToE mapeia o NIS2 Art. 21?" | **MCP** (`search_sbd_toe_manual`) — cross-check **NIS2** indexado |
 | "Que obrigações DORA / GDPR aplicam ao meu projecto?" | **MCP** — cross-checks **DORA** e **GDPR** indexados |
-| "Como o SbD-ToE responde ao Art. 15 do AI Act?" | **Manual web** ([cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro)) — **ainda fora do MCP `0.10.0`** |
+| "Como o SbD-ToE responde ao Art. 15 do AI Act?" | **MCP** (`search_sbd_toe_manual`) — cross-check **AI Act** indexado; o [cross-check web](/sbd-toe/cross-check-normativo/ai-act/intro) para leitura integral |
 
 ### Como confirmar antes de responder
 
@@ -149,7 +149,7 @@ tools: WebFetch, Read, mcp__sbd-toe__*
 1. Identificar regulamento + artigo alvo. Validar contra EUR-Lex se possível.
 2. Validar indexação no MCP com inspect_sbd_toe_retrieval(question="<framework>", topK=5).
 3. Se indexado: usar search_sbd_toe_manual para extrair excertos do cross-check.
-4. Se NÃO indexado (AI Act actualmente): WebFetch a /sbd-toe/cross-check-normativo/<framework>/.
+4. Se NÃO indexado (conteúdo posterior ao snapshot): WebFetch a /sbd-toe/cross-check-normativo/<framework>/.
 5. Para cada CTRL-* / capítulo referido, validar via MCP (query_sbd_toe_entities).
 6. Estruturar relatório com 4 rótulos: manual-grounded, cross-check-web-grounded, inferred, not verified.
 7. Marcar como "cross-check técnico — não declaração de conformidade".
@@ -160,8 +160,8 @@ tools: WebFetch, Read, mcp__sbd-toe__*
 
 - ❌ Inventar ligações SbD-ToE ↔ regulamento que não estejam no cross-check publicado.
 - ❌ Declarar "compliant with X" — o cross-check **demonstra cobertura técnica**, não conformidade jurídica.
-- ❌ Confiar **apenas** no MCP para o **AI Act** — não está indexado em `0.10.0`; consultar o manual web.
-- ❌ Esquecer-se de procurar via MCP os cross-checks que **estão** indexados (CRA, DORA, NIS2, GDPR, ENISA/CSA) — duplica trabalho desnecessariamente.
+- ❌ Confiar **apenas** no MCP para conteúdo posterior ao *snapshot* — confirmar em `sbd://toe/version`; consultar o manual web para o que ainda não foi publicado.
+- ❌ Esquecer-se de procurar via MCP os cross-checks que **estão** indexados (CRA, DORA, NIS2, GDPR, AI Act, ENISA/CSA) — duplica trabalho desnecessariamente.
 - ❌ Esquecer convergências (AI Act ↔ CRA, NIS2 ↔ DORA) — duplicação de trabalho e *gaps* invisíveis.
 
 ## Relacionado

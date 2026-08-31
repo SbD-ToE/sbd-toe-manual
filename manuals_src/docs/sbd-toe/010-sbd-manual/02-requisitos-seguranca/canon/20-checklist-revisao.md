@@ -36,6 +36,9 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 | O nível de autonomia (A0–A4) de cada agente está classificado por contexto e reavaliado em mudança de contexto? (`REQ-AGN-002`) | ☐           |
 | Os agentes de IA A2+ têm kill-switch operacional documentado e exercitado na cadência definida? (`REQ-AGN-003`) | ☐           |
 | Os agentes de IA A2+ declaram a intenção (audit event) antes de cada tool-call destrutivo ou com efeito externo? (`REQ-AGN-004`) | ☐           |
+| O tratamento de ficheiros (upload, conteúdo, arquivos comprimidos, quota, armazenamento e serving) cumpre os requisitos `FIL-*` aplicáveis ao nível? | ☐           |
+| Os dados pessoais têm minimização, retenção com prazo, capacidade de apagamento/exportação e finalidade registada, conforme os requisitos `PRI-*` aplicáveis? | ☐           |
+| As integrações por mensagens têm consumidores idempotentes, DLQ com tratamento e alarme, protecção contra replay e ordem onde exigida (`INT-009`…`INT-012`)? | ☐           |
 | Os indicadores RQS de cobertura, rastreabilidade e validação de requisitos são recolhidos e cumprem os thresholds do nível? | ☐           |
 
 ---

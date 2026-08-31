@@ -74,7 +74,7 @@ Aplica-se à **aplicação** (unidade de `CLA-001` e do inventário `CLA-008`), 
 ### Atividades
 
 1. **Classificar** a aplicação pelos três eixos e obter o nível L1–L3 — Classificação, `CLA-001`, US-01.
-2. **Aprovar proporcionalmente** e registar no inventário: L1 pelo responsável técnico, L2 por AppSec Engineer, L3 por Gestão Executiva / CISO — Classificação, `CLA-002`, `CLA-008`, US-10.
+2. **Aprovar proporcionalmente** e registar no inventário: L1 pelo responsável técnico, L2 por AppSec Engineer, L3 por Gestão Executiva / CISO — Classificação, `CLA-002`, `CLA-008`, US-15.
 3. **Aplicar a matriz de controlos** ao nível obtido — Classificação, `CLA-003`, US-02.
 4. **Selecionar requisitos** no *backlog* com `SEC-Lx-*` e registar a evidência da decisão — Requisitos de Segurança, `REQ-003`, US-01.
 5. **Propagar a aplicabilidade** aos capítulos técnicos: as linhas com ✔ na coluna do nível passam a exigir evidência — a [matriz transversal](/sbd-toe/sbd-manual/testes-seguranca/addon/matriz-verificacao-transversal) formula a regra de *roll-up* ("para um sistema L2, todas as linhas com ✔ na coluna L2 têm de ter evidência") — Classificação, `CLA-003`; Testes de Segurança, [Matriz Transversal de Verificação](/sbd-toe/sbd-manual/testes-seguranca/addon/matriz-verificacao-transversal).
@@ -89,7 +89,7 @@ Aplica-se à **aplicação** (unidade de `CLA-001` e do inventário `CLA-008`), 
 ### Papéis
 
 - **Dono do processo:** AppSec Engineer — valida o modelo aplicado, ajusta o nível e aplica a matriz (Classificação, "Quem está envolvido").
-- **Participantes:** Developer e Scrum Master / Team Lead (propõem a classificação; aprovação L1); Arquitetos de Software (revêem exposição e fluxos); Product Owner (seleciona requisitos no *backlog*; aprova aceitação de risco); Gestão Executiva / CISO (aprovação L3); GRC / Compliance (inventário e rastreabilidade — Classificação, US-10); Quality Assurance (QA) (valida cumprimento por nível antes do *go-live* — Classificação, US-05).
+- **Participantes:** Developer e Scrum Master / Team Lead (propõem a classificação; aprovação L1); Arquitetos de Software (revêem exposição e fluxos); Product Owner (seleciona requisitos no *backlog*; aprova aceitação de risco); Gestão Executiva / CISO (aprovação L3); GRC / Compliance (inventário e rastreabilidade — Classificação, US-15); Quality Assurance (QA) (valida cumprimento por nível antes do *go-live* — Classificação, US-05).
 
 ### Pontos de controlo
 

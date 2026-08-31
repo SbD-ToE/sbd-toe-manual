@@ -39,7 +39,7 @@ Registar **risco residual** após aplicar controlos, registar aceitações com T
 
 **User Stories:**
 - [US-04: Registro de risco residual](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-04---an%C3%A1lise-de-risco-residual) - Fundamentar decisões de aceitação
-- [US-05: Aceitações com TTL e re-aprovação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-05---validação-antes-do-go-live) - Evitar exceções permanentes
+- [US-08: Aceitação de Risco com TTL](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-08---aceitação-de-risco-com-ttl-e-revalidação-obrigatória) - Evitar exceções permanentes
 - [KPIs de governação da classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - Demonstrar maturidade
 
 ### Cap. 02 - Requisitos de Segurança

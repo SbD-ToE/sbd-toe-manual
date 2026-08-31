@@ -24,7 +24,7 @@ O SbD-ToE organiza os requisitos de segurança em **catálogos canónicos por do
 | Cap. | Prefixo(s) | Domínio | Objecto | Responsável típico |
 |------|-----------|---------|---------|-------------------|
 | 01 | `CLA` | Classificação de aplicações | Classificação formal de criticidade, reclassificação, risco residual e proporcionalidade de controlos | Product Owner, Tech Lead, AppSec, GRC |
-| 02 | `AUT` `ACC` `LOG` `SES` `VAL` `ERR` `CFG` `ENC` `API` `INT` `REQ` `DST` `IDE` | Requisitos aplicacionais | Propriedades de segurança do software em runtime | Equipa de desenvolvimento |
+| 02 | `AUT` `ACC` `LOG` `SES` `VAL` `FIL` `ERR` `CFG` `ENC` `PRI` `API` `INT` `REQ` `DST` `IDE` | Requisitos aplicacionais | Propriedades de segurança do software em runtime | Equipa de desenvolvimento |
 | 03 | `THR` | Threat modeling | Identificação de ameaças, disposição formal, derivação de requisitos e rastreabilidade | Arquitecto técnico, AppSec |
 | 04 | `ARC` | Arquitectura segura | Design, estrutura e decisões do sistema | Arquitecto técnico, AppSec |
 | 05 | `DEP` | Dependências, SBOM e SCA | Componentes de terceiros incorporados | Equipa de desenvolvimento, AppSec |
@@ -66,9 +66,11 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 - [LOG - Registo e Monitorização](#log)
 - [SES - Sessões e Estado](#ses)
 - [VAL - Validação de Dados](#val)
+- [FIL - Tratamento de Ficheiros](#fil)
 - [ERR - Gestão de Erros](#err)
 - [CFG - Configuração Segura](#cfg)
 - [ENC - Dados Sensíveis e Criptografia](#enc)
+- [PRI - Dados Pessoais (engenharia)](#pri)
 - [API - Segurança de APIs](#api)
 - [INT - Mensagens e Integrações](#int)
 - [REQ - Definição de Requisitos](#req)
@@ -168,6 +170,27 @@ Requisitos que garantem que apenas dados bem formados e esperados são processad
 
 ---
 
+## FIL - Tratamento de Ficheiros {#fil}
+
+Um ficheiro é input — a forma de o validar é que difere: além do valor, contam o tipo real do conteúdo, o custo de o processar e o sítio onde fica armazenado e de onde é servido. Os requisitos `VAL-*` cobrem a validação de dados; os `FIL-*` cobrem o que é específico de ficheiros — aceitação, conteúdo, arquivos comprimidos, quota, armazenamento e serving — sem duplicar a validação genérica.
+
+| ID | Nome | L1 | L2 | L3 | Critério de aceitação |
+|----|------|:--:|:--:|:--:|----------------------|
+| FIL-001 | Limite de tamanho processável por upload | ✔ | ✔ | ✔ | Ficheiros acima do limite definido por funcionalidade são rejeitados antes de qualquer processamento; o limite está documentado. |
+| FIL-002 | Validação de tipo por conteúdo, não só por extensão | ✔ | ✔ | ✔ | A extensão confere com o tipo esperado e o conteúdo corresponde ao tipo (verificação de *magic bytes*, *re-writing* de imagens ou biblioteca de validação de conteúdo); ficheiros não conformes são rejeitados. |
+| FIL-003 | Tratamento seguro de arquivos comprimidos | - | ✔ | ✔ | Antes de descomprimir: tamanho máximo descomprimido e número máximo de ficheiros verificados; *symlinks* rejeitados salvo allowlist explícita; a descompressão ignora caminhos fornecidos pelo utilizador (*zip slip*). |
+| FIL-004 | Quota de armazenamento por utilizador | - | ✔ | ✔ | Quota de espaço e número máximo de ficheiros por utilizador activos; tentativa de exceder é rejeitada com registo. |
+| FIL-005 | Armazenamento fora da árvore servida, com nomes gerados | ✔ | ✔ | ✔ | Ficheiros de origem não confiável não são executáveis como código do servidor quando acedidos por HTTP; caminhos de operações de ficheiro usam nomes gerados internamente, ou validação estrita quando o nome do utilizador é inevitável. |
+| FIL-006 | Serving de ficheiros em contexto inerte | - | ✔ | ✔ | Nomes de ficheiro servidos são validados ou sanitizados e declarados em `Content-Disposition` (RFC 6266); conteúdo de utilizador é servido de forma não interpretável como HTML ou script no domínio da aplicação. |
+| FIL-007 | Rastreio anti-malware de ficheiros de origem não confiável | - | ✔ | ✔ | Ficheiros recebidos de fontes não confiáveis passam por rastreio anti-malware antes de serem disponibilizados; detecção bloqueia a disponibilização e gera registo. |
+| FIL-008 | Limite de dimensão de imagens (pixel flood) | - | ✔ | ✔ | Imagens com dimensão em píxeis acima do máximo definido são rejeitadas onde a aplicação processa imagens. |
+
+> **Proporcionalidade de FIL-002 em L1** (da fonte de derivação, ASVS v5 `UNIT-V5.2.2`): "For L1, this can focus just on files which are used to make specific business or security decisions. For L2 and up, this must apply to all files being accepted." — em L1 a validação de conteúdo pode limitar-se aos ficheiros que sustentam decisões de negócio ou segurança; em L2+ aplica-se a todos os ficheiros aceites.
+
+**Fontes.** Derivação por linha: FIL-001 — `UNIT-V5.2.1`, `UNIT-V5.1.1`; FIL-002 — `UNIT-V5.2.2`, `UNIT-V5.1.1`, CWE-434; FIL-003 — `UNIT-V5.2.3`, `UNIT-V5.2.5`, `UNIT-V5.3.3`; FIL-004 — `UNIT-V5.2.4`; FIL-005 — `UNIT-V5.3.1`, `UNIT-V5.3.2`, CWE-434; FIL-006 — `UNIT-V5.4.1`, `UNIT-V5.4.2` (a cláusula de conteúdo não interpretável no domínio da aplicação é prescrição editorial do SbD-ToE); FIL-007 — `UNIT-V5.4.3` (a cláusula "e gera registo" é prescrição editorial); FIL-008 — `UNIT-V5.2.6`. As fontes ancoram a derivação; a prescrição, a redação e o escalamento L1–L3 são editoriais do SbD-ToE.
+
+---
+
 ## ERR - Gestão de Erros {#err}
 
 Requisitos que asseguram que erros e excepções são tratados de forma controlada, sem exposição de informação sensível ou lógica interna.
@@ -218,6 +241,24 @@ Requisitos que garantem a protecção de dados sensíveis em trânsito e em repo
 
 ---
 
+## PRI - Dados Pessoais (engenharia) {#pri}
+
+Requisitos de engenharia sobre dados pessoais: o que se recolhe, por quanto tempo fica, e o que o sistema é capaz de fazer com esses dados. O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo: é matéria do cross-check normativo e do overlay regulatório.
+
+| ID | Nome | L1 | L2 | L3 | Critério de aceitação |
+|----|------|:--:|:--:|:--:|----------------------|
+| PRI-001 | Minimização dos dados pessoais recolhidos | - | ✔ | ✔ | Cada campo de dados pessoais recolhido está associado a uma finalidade registada; campos sem finalidade são removidos do fluxo de recolha. |
+| PRI-002 | Retenção de dados pessoais com prazo e apagamento efectivo | - | ✔ | ✔ | Conjuntos de dados pessoais têm prazo de retenção definido; o apagamento no fim do prazo é executado e verificável por amostragem ou evidência automática. |
+| PRI-003 | Capacidade técnica de apagamento e exportação a pedido | - | ✔ | ✔ | Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados. |
+| PRI-004 | Registo de finalidade por conjunto de dados pessoais | - | ✔ | ✔ | Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas. |
+| PRI-005 | Conceito documentado e aplicado de PII em registos | - | ✔ | ✔ | Existe um conceito documentado de tratamento de PII em registos (o que se regista, mascarado como, por quanto tempo) e a sua aplicação é verificada. |
+
+Os vizinhos existentes mantêm o seu objecto: `ENC-005` proíbe dados sensíveis em claro em logs, outputs e respostas API; `ERR-007` exige contexto pseudonimizado nos logs de erro (L2+); `LOG-005` fixa a retenção **mínima** dos logs. `PRI-002` fixa a retenção **máxima** dos dados pessoais de negócio, e `PRI-005` acrescenta o que nenhum deles prescreve: o conceito documentado e verificado — não repete a proibição, exige o conceito.
+
+**Fontes.** PRI-001…004 — [autoria] SbD-ToE (ameaça de referência: CWE-359); PRI-005 — actividade DSOMM "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") e CWE-359. As fontes ancoram a derivação; a prescrição é editorial do SbD-ToE.
+
+---
+
 ## API - Segurança de APIs {#api}
 
 Requisitos específicos para superfícies de API, que constituem o vector de exposição mais frequente em aplicações modernas.
@@ -248,6 +289,12 @@ Requisitos que asseguram a segurança nas comunicações entre sistemas, preveni
 | INT-006 | Validação cruzada de origem e destino | - | ✔ | ✔ | Apenas origens e destinos autorizados aceites; logs de rejeição mantidos. |
 | INT-007 | Monitorização e detecção de padrões anómalos | - | - | ✔ | Comportamento anómalo nos canais de integração dispara alertas; logs analisados periodicamente. |
 | INT-008 | Revisão de segurança e contrato em integrações | - | - | ✔ | Integrações documentadas com cláusulas de segurança; checklist de revisão executada. |
+| INT-009 | Consumidores idempotentes | - | ✔ | ✔ | Reprocessar a mesma mensagem não produz efeitos duplicados; a idempotência é testada. |
+| INT-010 | Fila de mensagens mortas com tratamento e alarme | - | ✔ | ✔ | Mensagens não processáveis vão para DLQ; a DLQ tem tratamento definido e alarme activo — nunca cresce em silêncio. |
+| INT-011 | Protecção contra replay de mensagens | - | ✔ | ✔ | Mensagens têm identificador único e janela de validade; a reinjeção fora da janela ou duplicada é rejeitada com registo. |
+| INT-012 | Ordem de processamento onde semanticamente exigida | - | - | ✔ | Onde a semântica do negócio exige ordem, o processamento garante-a (chave de partição, sequenciação) e a violação é detectável. |
+
+**Fontes (INT-009…012).** [autoria] SbD-ToE — ciclo de vida de mensagens (idempotência, DLQ, replay, ordem); sem âncora externa no corpus à data. `INT-011` trata replay de **mensagens**, objecto distinto do replay de tokens (`SES-008`).
 
 ---
 

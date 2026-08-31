@@ -51,11 +51,13 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 | ------------------------ | ---------------------------------------------------- |
 | Sistema                  | DataBroker interno                                   |
 | Nível de risco           | L3                                                   |
-| Requisitos não cumpridos | AUD-002, LOG-003                                     |
+| Requisitos não cumpridos | EX-AUD-002, LOG-003                                  |
 | Justificação             | Sistema core dependente de arquitetura pré-existente |
 | Compensações             | Monitorização por SIEM externo + controlo de acesso  |
 | Owner                    | joana.sousa\@empresa                                 |
 | Reavaliação agendada     | 6 meses (integração futura com novo projeto)         |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 

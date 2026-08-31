@@ -25,20 +25,23 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 | **Scanner / Relatório**  | `grype`, `snyk`, `OWASP DC`, etc.            |
 | **Artefacto afetado**    | `app-backend-1.2.5.jar`                      |
 | **Commit de origem**     | `abc123` (pull request onde a dep foi usada) |
-| **Tarefa associada**     | `SEC-456` (issue, PR ou tarefa de correção)  |
+| **Tarefa associada**     | `EX-SEC-456` (issue, PR ou tarefa de correção)  |
 | **Estado final**         | Corrigido / Aceite com justificativo         |
+
+*Identificadores ilustrativos (`EX-…`); não correspondem ao Catálogo de Requisitos do Cap. 02.*
 
 ---
 
 ## 📄 Template de registo
 
 ```yaml
+# Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
 - cve: CVE-2021-44228
   componente: log4j-core@2.14.1
   purl: pkg:maven/log4j/log4j-core@2.14.1
   artefacto: app-v1.2.5.jar
   introduzido_por: commit abc123
-  tarefa: SEC-456
+  tarefa: EX-SEC-456
   decisao: corrigido
   evidencias:
     - commit: def789

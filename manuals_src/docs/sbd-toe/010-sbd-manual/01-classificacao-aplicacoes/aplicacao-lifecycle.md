@@ -203,60 +203,6 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 
 ---
 
-### **US-07 - Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)**
-
-**Contexto.**  
-Para além dos triggers por alteração, a classificação deve ter **cadência periódica fixa**. Sem calendário, mudanças lentas (ex: crescimento de dados críticos) ficam não-detetadas.
-
-:::userstory
-**História.**  
-Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1 anual, L2 semestral, L3 trimestral)**, para garantir que o nível de criticidade e os controlos continuam adequados ao contexto actual.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que existe uma classificação ativa com data de próxima revisão definida  
-  **Quando** a data de revisão chega  
-  **Então** executo reavaliação dos eixos E/D/I, documento decisão (manter/alterar) e **agenço próxima revisão**
-
-**Critérios de aceitação (DoD).**
-- [ ] Calendário de revisões definido por nível (L1=12m, L2=6m, L3=3m)  
-- [ ] Ata ou issue de revisão criada, datada e documentada com evidência técnica  
-- [ ] Justificação: "Alterado" (com novo nível e drivers) ou "Mantém-se" (com observações)  
-- [ ] Próxima data de revisão agendada e alertas configurados (em ferramenta GRC se possível)  
-- [ ] **Se nível alterado: dispara US-02 (matriz) e US-06 (ameaças)**  
-- [ ] **Product Owner notificado se houver impacto de negócio** (especialmente L1→L3)  
-- [ ] **GRC/Compliance registra em audit trail**  
-- [ ] **Se assistida por ferramenta de análise:**
-  - [ ] Ferramenta forneceu re-scoring de E/D/I?
-  - [ ] Comparação: score anterior vs. score novo documentada
-  - [ ] Se discordância (máquina vs. AppSec): trilho de resolução registado
-  - [ ] Validação temporal: revisão de dados, dependências, impacto esperado para próximos 12m
-  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/validacao-assistida-ferramentas)
-:::
-
-**Artefactos & evidências.**
-- Ficheiro: `classificacao-revisoes.md` ou entrada em ferramenta GRC  
-- Tabela: `data_revisao | nível_anterior | nível_novo | justificação | próxima_data | responsável`  
-- Evidência: issue rastreável datada, commit versionado, ou registo auditable
-
-**Proporcionalidade (cadência típica).**
-| Nível | Frequência sugerida | Obrigatório? |
-|---|---|---|
-| L1 | 12 meses | Recomendado |
-| L2 | 6 meses | Obrigatório |
-| L3 | 3 meses (ou por sprint) | Obrigatório |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsáveis | SLA |
-|---|---|---|---|
-| Operações + Governação | Calendário time-based + Eventos críticos | **AppSec Engineer + GRC/Compliance + Product Owner** | Conclusão em 5 dias úteis da data de revisão |
-
-**Ligações úteis.**
-- [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)  
-- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/criterios-aceitacao-risco)  
-- [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
-
----
-
 ### US-04 - Análise de risco residual
 
 **Contexto.**  
@@ -306,57 +252,6 @@ Como **GRC/Compliance**, quero **registar o risco residual após aplicar os cont
 
 ---
 
-### **US-08 - Aceitação de Risco com TTL e Revalidação Obrigatória**
-
-**Contexto.**  
-Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) limitado**, o risco pode expirar. Sem revalidação automática, excepções "dormem" indefinidamente.
-
-:::userstory
-**História.**  
-Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e alerta de re-aprovação**, para garantir que excepções não se tornam permanentes por esquecimento.
-
-**Critérios de aceitação (BDD).**
-- **Dado** que existe uma decisão de aceitar risco residual  
-  **Quando** defino **TTL em função do nível** (L1=12m, L2=6m, L3=3m)  
-  **Então** configuro alerta de **revalidação 15 dias antes da expiração**  
-- E documento que **sem re-aprovação explícita, a excepção expira automaticamente**
-
-**Critérios de aceitação (DoD).**
-- [ ] Owner da excepção designado e contactível  
-- [ ] **TTL definido por nível** (L1: 12 meses | L2: 6 meses | L3: 3 meses)  
-- [ ] Critérios de encerramento claros (ex: "após implementação mitigação X" ou "até data Y")  
-- [ ] **Alertas configurados 15 dias antes da expiração** (email ou issue automática)  
-- [ ] Registo rastreável em ferramenta GRC ou repositório (com data e decisor)  
-- [ ] **Re-aprovação explícita exigida para prorrogação** (mesmo critério de aprovação original)  
-- [ ] **Em L3: aprovação adicional por Gestão Executiva/CISO antes de renovação**  
-- [ ] **Se biz impact relevante: Product Owner notificado e de acordo**  
-
-:::
-
-**Artefactos & evidências.**
-- Ficheiro: `aceitacoes-risco.md` ou entrada em ferramenta GRC/JIRA  
-- Tabela: `excepção_id | L1/L2/L3 | data_aceitação | TTL | data_expiração | owner | critério_encerramento | status`  
-- Evidência: aprovação datada, alerta de expiração, re-aprovação documentada ou registo de encerramento
-
-**Proporcionalidade (TTL por nível).**
-| Nível | TTL Recomendado | Revalidação | Obrigatório? |
-|---|---|---|---|
-| L1 | 12 meses | Anual | Recomendado |
-| L2 | 6 meses | Semestral | Obrigatório |
-| L3 | 3 meses | Trimestral | **Obrigatório + Gestão Executiva** |
-
-**Integração no SDLC.**
-| Fase | Trigger | Responsáveis | SLA |
-|---|---|---|---|
-| Governação + Segurança | Decisão de aceitar risco; alerta 15d antes expiração | **GRC/Compliance (cria, registra) + AppSec Engineer (revalida, aprova) + Gestão Executiva/CISO (aprova L3) + Product Owner (notificado se impacto negócio)** | Criação: 2 dias úteis; Re-aprovação: 5 dias úteis antes da expiração |
-
-**Ligações úteis.**
-- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/criterios-aceitacao-risco)  
-- [Análise de Risco Residual](#us-04---análise-de-risco-residual)
-- [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
-
----
-
 ### US-05 - Validação antes do go-live
 
 **Contexto.**  
@@ -399,96 +294,6 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 **Ligações úteis.**
 - [Matriz de Controlos por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/matriz-controlos-por-risco)  
 - [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
-
-## 🚧 Cascata de Gates de Validação (US-05 em Contexto)
-
-A validação antes do go-live é implementada através de uma **cascata de gates sequenciais**, cada um verificando dimensões específicas de segurança em capítulos distintos. A falha em qualquer gate bloqueia promoção a produção.
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                                                                                 │
-│  APLICAÇÃO PRONTA PARA RELEASE                                                  │
-│  └─ Trigger: Pipeline de promoção a staging/produção                            │
-│                                                                                 │
-│                                       ▼                                         │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 1: Requisitos & Risco (Cap 01)                                      │  │
-│  │ Responsável: QA + AppSec Engineer                                        │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ Classificação de risco atribuída (L1/L2/L3)                          │  │
-│  │   ✓ Matriz de controlos aplicáveis extraída                             │  │
-│  │   ✓ Ameaças esperadas mapeadas (STRIDE, MITRE ATT&CK)                   │  │
-│  │   ✓ Nenhuma exceção de risco residual não-aprovada pendente             │  │
-│  │ Bloqueio se: Risco residual > threshold aprovado ou exceções pendentes   │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 2: Requisitos de Segurança (Cap 02)                                 │  │
-│  │ Responsável: AppSec Engineer                                             │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ Requisitos funcionalidade + segurança completos                      │  │
-│  │   ✓ Gestão de exceções: todas as exceções têm aprovação + SLA            │  │
-│  │   ✓ Rastreamento requisito ↔ teste ↔ evidência completo                 │  │
-│  │ Bloqueio se: Requisitos incompletos ou exceções sem aprovação            │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 3: Dependências & SBOM (Cap 05)                                     │  │
-│  │ Responsável: DevOps + AppSec Engineer                                    │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ SBOM completo em CycloneDX/SPDX (todas as dependências listadas)     │  │
-│  │   ✓ Scan de vulnerabilidades: nenhuma crítica não-mitigada em L2/L3      │  │
-│  │   ✓ CVEs com risco > threshold têm mitigação/exceção documentada         │  │
-│  │   ✓ Dependências verificadas em repositórios de reputação                │  │
-│  │ Bloqueio se: CVE crítico não-mitigado ou SBOM incompleto                 │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 4: Artefactos CI/CD (Cap 07)                                        │  │
-│  │ Responsável: DevOps + AppSec Engineer                                    │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ Pipeline CI/CD: versionado, auditado, secrets em manager            │  │
-│  │   ✓ Assinatura & proveniência de artefactos (in-toto, Cosign)            │  │
-│  │   ✓ Testes de segurança integrados (SAST, dependency scanning, SBOM)     │  │
-│  │   ✓ Logs de auditoria de cada deploy recolhidos e retidos                │  │
-│  │ Bloqueio se: Pipeline não-auditado ou artefactos não-assinados           │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 5: Infraestrutura & Containers (Cap 08/09)                          │  │
-│  │ Responsável: DevOps + Arquitetos                                         │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ IaC versionado, aprovado, testado (Terraform, Helm, CloudFormation) │  │
-│  │   ✓ Imagens container: base segura, SBOM, scanning, assinadas           │  │
-│  │   ✓ Policies de runtime (OPA/Kyverno) ativas e bloqueantes em L2/L3     │  │
-│  │   ✓ Network policies e RBAC configurados                                 │  │
-│  │ Bloqueio se: Imagem não-assinada ou policies não-ativas                  │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ┌───────────────────────────────────────────────────────────────────────────┐  │
-│  │ GATE 6: Deploy & Monitorização (Cap 11/12)                               │  │
-│  │ Responsável: DevOps + AppSec Engineer + SRE                              │  │
-│  │ Validação:                                                               │  │
-│  │   ✓ Apenas artefactos assinados são promovidos                           │  │
-│  │   ✓ Ambiente staging validado (testes + aprovações concluídas)           │  │
-│  │   ✓ Monitorização + alertas ativados pré-deploy (logs, métricas, eventos)│  │
-│  │   ✓ Playbook de incidentes documentado e testado                         │  │
-│  │   ✓ Aprovação formal registada (assinatura, timestamp, audit trail)      │  │
-│  │ Bloqueio se: Monitorização não-ativa ou aprovação não-documentada        │  │
-│  └─────────────┬──────────────────────────────────────────────────────────┘   │
-│               ▼                                                                │
-│  ✅ DEPLOY EM PRODUÇÃO AUTORIZADO                                             │
-│     └─ Timestamp de aprovação registado em audit trail central (Cap 14)       │
-│                                                                                │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
-
-**Características Críticas da Cascata:**
-- **Sequencial:** Cada gate é pré-requisito para o próximo (falha em gate N bloqueia gate N+1)
-- **Distribuído:** Cada gate é propriedade de capítulo específico, mas supervisionado por AppSec centralizado (Cap 14)
-- **Auditável:** Todas as decisões e aprovações são registadas com timestamp e responsável
-- **Proporcional:** L1 pode ter gates mais leves (audit mode), L2/L3 são bloqueantes (enforce mode)
-- **Rastreável:** Gate 6 (Cap 11/12) alimenta matriz de rastreamento em Cap 14 para evidência de conformidade
 
 ---
 
@@ -544,6 +349,111 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 **Ligações úteis.**
 - [Mapeamento de Ameaças por Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/mapeamento-ameacas-risco)  
 - [Capítulo 03 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro)  
+- [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### **US-07 - Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)**
+
+**Contexto.**  
+Para além dos triggers por alteração, a classificação deve ter **cadência periódica fixa**. Sem calendário, mudanças lentas (ex: crescimento de dados críticos) ficam não-detetadas.
+
+:::userstory
+**História.**  
+Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1 anual, L2 semestral, L3 trimestral)**, para garantir que o nível de criticidade e os controlos continuam adequados ao contexto actual.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existe uma classificação ativa com data de próxima revisão definida  
+  **Quando** a data de revisão chega  
+  **Então** executo reavaliação dos eixos E/D/I, documento decisão (manter/alterar) e **agenço próxima revisão**
+
+**Critérios de aceitação (DoD).**
+- [ ] Calendário de revisões definido por nível (L1=12m, L2=6m, L3=3m)  
+- [ ] Ata ou issue de revisão criada, datada e documentada com evidência técnica  
+- [ ] Justificação: "Alterado" (com novo nível e drivers) ou "Mantém-se" (com observações)  
+- [ ] Próxima data de revisão agendada e alertas configurados (em ferramenta GRC se possível)  
+- [ ] **Se nível alterado: dispara US-02 (matriz) e US-06 (ameaças)**  
+- [ ] **Product Owner notificado se houver impacto de negócio** (especialmente L1→L3)  
+- [ ] **GRC/Compliance registra em audit trail**  
+- [ ] **Se assistida por ferramenta de análise:**
+  - [ ] Ferramenta forneceu re-scoring de E/D/I?
+  - [ ] Comparação: score anterior vs. score novo documentada
+  - [ ] Se discordância (máquina vs. AppSec): trilho de resolução registado
+  - [ ] Validação temporal: revisão de dados, dependências, impacto esperado para próximos 12m
+  - [ ] Referência: [addon-11: Validação Assistida por Ferramentas](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/validacao-assistida-ferramentas)
+:::
+
+**Artefactos & evidências.**
+- Ficheiro: `classificacao-revisoes.md` ou entrada em ferramenta GRC  
+- Tabela: `data_revisao | nível_anterior | nível_novo | justificação | próxima_data | responsável`  
+- Evidência: issue rastreável datada, commit versionado, ou registo auditable
+
+**Proporcionalidade (cadência típica).**
+| Nível | Frequência sugerida | Obrigatório? |
+|---|---|---|
+| L1 | 12 meses | Recomendado |
+| L2 | 6 meses | Obrigatório |
+| L3 | 3 meses (ou por sprint) | Obrigatório |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsáveis | SLA |
+|---|---|---|---|
+| Operações + Governação | Calendário time-based + Eventos críticos | **AppSec Engineer + GRC/Compliance + Product Owner** | Conclusão em 5 dias úteis da data de revisão |
+
+**Ligações úteis.**
+- [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)  
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/criterios-aceitacao-risco)  
+- [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+
+---
+
+### **US-08 - Aceitação de Risco com TTL e Revalidação Obrigatória**
+
+**Contexto.**  
+Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) limitado**, o risco pode expirar. Sem revalidação automática, excepções "dormem" indefinidamente.
+
+:::userstory
+**História.**  
+Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e alerta de re-aprovação**, para garantir que excepções não se tornam permanentes por esquecimento.
+
+**Critérios de aceitação (BDD).**
+- **Dado** que existe uma decisão de aceitar risco residual  
+  **Quando** defino o TTL da aceitação conforme a política master de exceções e aceitação de risco ([Processo Canónico de Gestão de Exceções](/sbd-toe/sbd-manual/governanca-contratacao/addon/processo-excecoes), Cap. 14)  
+  **Então** configuro alerta de **revalidação 15 dias antes da expiração**  
+- E documento que **sem re-aprovação explícita, a excepção expira automaticamente**
+
+**Critérios de aceitação (DoD).**
+- [ ] Owner da excepção designado e contactível  
+- [ ] TTL definido conforme a política master de exceções e aceitação de risco ([Processo Canónico de Gestão de Exceções](/sbd-toe/sbd-manual/governanca-contratacao/addon/processo-excecoes), Cap. 14): prazo máximo por defeito, extensão só com reavaliação  
+- [ ] Critérios de encerramento claros (ex: "após implementação mitigação X" ou "até data Y")  
+- [ ] **Alertas configurados 15 dias antes da expiração** (email ou issue automática)  
+- [ ] Registo rastreável em ferramenta GRC ou repositório (com data e decisor)  
+- [ ] **Re-aprovação explícita exigida para prorrogação** (mesmo critério de aprovação original)  
+- [ ] **Em L3: aprovação adicional por Gestão Executiva/CISO antes de renovação**  
+- [ ] **Se biz impact relevante: Product Owner notificado e de acordo**  
+
+:::
+
+**Artefactos & evidências.**
+- Ficheiro: `aceitacoes-risco.md` ou entrada em ferramenta GRC/JIRA  
+- Tabela: `excepção_id | L1/L2/L3 | data_aceitação | TTL | data_expiração | owner | critério_encerramento | status`  
+- Evidência: aprovação datada, alerta de expiração, re-aprovação documentada ou registo de encerramento
+
+**Proporcionalidade (TTL por nível).**
+| Nível | TTL | Revalidação | Obrigatório? |
+|---|---|---|---|
+| L1 | conforme política master (Cap. 14) | Anual | Recomendado |
+| L2 | conforme política master (Cap. 14) | Semestral | Obrigatório |
+| L3 | conforme política master (Cap. 14) | Trimestral | **Obrigatório + Gestão Executiva** |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsáveis | SLA |
+|---|---|---|---|
+| Governação + Segurança | Decisão de aceitar risco; alerta 15d antes expiração | **GRC/Compliance (cria, registra) + AppSec Engineer (revalida, aprova) + Gestão Executiva/CISO (aprova L3) + Product Owner (notificado se impacto negócio)** | Criação: 2 dias úteis; Re-aprovação: 5 dias úteis antes da expiração |
+
+**Ligações úteis.**
+- [Critérios Aceitação Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/criterios-aceitacao-risco)  
+- [Análise de Risco Residual](#us-04---análise-de-risco-residual)
 - [07-roles.md](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 ---
@@ -661,7 +571,7 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 ### **US-11 - Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)**
 
 **Contexto.**  
-As user stories US-01 a US-10 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA,).
+As user stories US-01 a US-15 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA,).
 
 :::userstory
 **História.**  
@@ -713,7 +623,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 
 ---
 
-### US-07 - Reforço de controlos por atributos do risco
+### US-12 - Reforço de controlos por atributos do risco
 
 A classificação L1–L3 é uma projeção simplificada (E/D/I); certos atributos internos do risco exigem controlos do nível imediatamente superior, independentemente do nível atribuído.  
 
@@ -752,7 +662,7 @@ Como **AppSec Engineer**, quero **avaliar os atributos do risco (detetabilidade,
 
 ---
 
-### US-08 - Interdições de aceitação de risco em automação e apoio à decisão
+### US-13 - Interdições de aceitação de risco em automação e apoio à decisão
 
 Há situações em que a aceitação de risco (e de risco residual) é categoricamente proibida, independentemente da urgência, custo ou nível da aplicação.  
 
@@ -791,7 +701,7 @@ Como **GRC/Compliance**, quero **bloquear qualquer aceitação de risco que reca
 
 ---
 
-### US-09 - Adoção de modelo de classificação alternativo (DRP/BIA) mapeado para E/D/I
+### US-14 - Adoção de modelo de classificação alternativo (DRP/BIA) mapeado para E/D/I
 
 A organização pode reutilizar uma classificação de impacto já existente (DRP/BIA ou outro método formal) desde que mapeie os seus resultados para o contexto de desenvolvimento aplicacional.  
 
@@ -831,7 +741,7 @@ Como **GRC/Compliance**, quero **adotar a classificação DRP/BIA existente como
 
 ---
 
-### US-10 - Produção e manutenção do inventário central com autoridade de aprovação proporcional
+### US-15 - Produção e manutenção do inventário central com autoridade de aprovação proporcional
 
 O inventário central/GRC (CLA-008) é o artefacto de evidência primário em auditoria; tem de ser produzido e mantido atualizado, com a autoridade de aprovação proporcional ao nível (CLA-002) registada por aplicação.  
 
@@ -870,6 +780,39 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 
 ---
 
+## 🚧 Cascata de Gates de Validação (US-05 em Contexto)
+
+A validação antes do go-live é implementada através de uma **cascata de gates sequenciais**, cada um verificando dimensões específicas de segurança em capítulos distintos. A falha em qualquer gate bloqueia promoção a produção.
+
+```mermaid
+flowchart TB
+  R["Aplicação pronta para release<br/>Trigger: pipeline de promoção a staging/produção"] --> G1["Gate 1 · Requisitos & Risco (Cap 01)"]
+  G1 --> G2["Gate 2 · Requisitos de Segurança (Cap 02)"]
+  G2 --> G3["Gate 3 · Dependências & SBOM (Cap 05)"]
+  G3 --> G4["Gate 4 · Artefactos CI/CD (Cap 07)"]
+  G4 --> G5["Gate 5 · Infraestrutura & Containers (Cap 08/09)"]
+  G5 --> G6["Gate 6 · Deploy & Monitorização (Cap 11/12)"]
+  G6 --> OK["✅ Deploy em produção autorizado<br/>Timestamp de aprovação registado em audit trail central (Cap 14)"]
+```
+
+| Gate | Responsável | Valida | Bloqueia se |
+|---|---|---|---|
+| Gate 1 · Requisitos & Risco (Cap 01) | QA + AppSec Engineer | ✓ Classificação de risco atribuída (L1/L2/L3)<br/>✓ Matriz de controlos aplicáveis extraída<br/>✓ Ameaças esperadas mapeadas (STRIDE, MITRE ATT&CK)<br/>✓ Nenhuma exceção de risco residual não-aprovada pendente | Risco residual > threshold aprovado ou exceções pendentes |
+| Gate 2 · Requisitos de Segurança (Cap 02) | AppSec Engineer | ✓ Requisitos funcionalidade + segurança completos<br/>✓ Gestão de exceções: todas as exceções têm aprovação + SLA<br/>✓ Rastreamento requisito ↔ teste ↔ evidência completo | Requisitos incompletos ou exceções sem aprovação |
+| Gate 3 · Dependências & SBOM (Cap 05) | DevOps + AppSec Engineer | ✓ SBOM completo em CycloneDX/SPDX (todas as dependências listadas)<br/>✓ Scan de vulnerabilidades: nenhuma crítica não-mitigada em L2/L3<br/>✓ CVEs com risco > threshold têm mitigação/exceção documentada<br/>✓ Dependências verificadas em repositórios de reputação | CVE crítico não-mitigado ou SBOM incompleto |
+| Gate 4 · Artefactos CI/CD (Cap 07) | DevOps + AppSec Engineer | ✓ Pipeline CI/CD: versionado, auditado, secrets em manager<br/>✓ Assinatura & proveniência de artefactos (in-toto, Cosign)<br/>✓ Testes de segurança integrados (SAST, dependency scanning, SBOM)<br/>✓ Logs de auditoria de cada deploy recolhidos e retidos | Pipeline não-auditado ou artefactos não-assinados |
+| Gate 5 · Infraestrutura & Containers (Cap 08/09) | DevOps + Arquitetos | ✓ IaC versionado, aprovado, testado (Terraform, Helm, CloudFormation)<br/>✓ Imagens container: base segura, SBOM, scanning, assinadas<br/>✓ Policies de runtime (OPA/Kyverno) ativas e bloqueantes em L2/L3<br/>✓ Network policies e RBAC configurados | Imagem não-assinada ou policies não-ativas |
+| Gate 6 · Deploy & Monitorização (Cap 11/12) | DevOps + AppSec Engineer + SRE | ✓ Apenas artefactos assinados são promovidos<br/>✓ Ambiente staging validado (testes + aprovações concluídas)<br/>✓ Monitorização + alertas ativados pré-deploy (logs, métricas, eventos)<br/>✓ Playbook de incidentes documentado e testado<br/>✓ Aprovação formal registada (assinatura, timestamp, audit trail) | Monitorização não-ativa ou aprovação não-documentada |
+
+**Características Críticas da Cascata:**
+- **Sequencial:** Cada gate é pré-requisito para o próximo (falha em gate N bloqueia gate N+1)
+- **Distribuído:** Cada gate é propriedade de capítulo específico, mas supervisionado por AppSec centralizado (Cap 14)
+- **Auditável:** Todas as decisões e aprovações são registadas com timestamp e responsável
+- **Proporcional:** L1 pode ter gates mais leves (audit mode), L2/L3 são bloqueantes (enforce mode)
+- **Rastreável:** Gate 6 (Cap 11/12) alimenta matriz de rastreamento em Cap 14 para evidência de conformidade
+
+---
+
 ## 📑 Artefactos esperados (por fase)
 
 | Fase         | Artefacto                          | Quem produz         | Onde fica                  | Evidência mínima                              |
@@ -896,9 +839,9 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 | US-01 - Classificação inicial                    | ✔  | ✔  | ✔  | Validação AppSec obrigatória em L2/L3 |
 | US-02 - Aplicação da matriz (c/ REQ-XXX)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
 | US-03 - Revisão por alteração relevante          | ✔  | ✔  | ✔  | Event-based, cascata a US-02/US-06 |
-| **US-07-rev - Revisão periódica time-based**    | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
+| **US-07 - Revisão periódica time-based**        | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
 | US-04 - Risco residual                           | (opcional) | ✔ | ✔  | Aprovações formais em L3 |
-| **US-08-rev - Aceitação com TTL**                | (Rec.) | ✔ | ✔  | TTL 12m/6m/3m; re-aprovação obrigatória em L2/L3 |
+| **US-08 - Aceitação com TTL**                    | (Rec.) | ✔ | ✔  | TTL conforme política master (Cap. 14); re-aprovação obrigatória em L2/L3 |
 | US-05 - Validação go-live                        | (Rec.) | ✔ | ✔  | Aprovação AppSec + Gestão em L3 |
 | US-06 - Mapeamento de ameaças                    | (opcional) | ✔ | ✔  | Validação Arquitetos; escala de risco crítico |
 | US-09 - Classificação de artefactos técnicos    | ✔ (Rec.) | ✔ | ✔  | Aplica controlos Cap. 07/08/09; Arquitetos valida |

@@ -133,6 +133,18 @@ Q&A directo *grounded* no manual.
 
 **Resultado:** o agente é instruído a usar `search_sbd_toe_manual` ou `consult_security_requirements` consoante o tipo de pergunta, e a responder com IDs citáveis.
 
+### `prepare_grounded_codegen(task, mode?, riskLevel?, concerns?, stack?, regulatoryFrameworks?, includeRegulatoryOverlay?)`
+
+*Codegen grounded* de ponta a ponta: embute o guia `sbd://toe/grounded-codegen-guide` (acima) e a tarefa numa única mensagem, e instrui o agente a chamar `prepare_sbd_toe_codegen_context` **antes** de produzir código.
+
+**Parâmetros:**
+- `task`: tarefa concreta de código (obrigatório; ex.: "Add payload validation to PATCH /users/:id/email")
+- `mode`: `codegen` | `review` | `test-plan` (por omissão `codegen`)
+- `riskLevel`: `L1` | `L2` | `L3` · `concerns`: lista explícita (senão inferidos pelo motor de activação) · `stack`: informativo
+- `regulatoryFrameworks` (ex.: `GDPR`, `EXT-DORA`) · `includeRegulatoryOverlay`: quando verdadeiro, expõe o contexto do overlay regulatório
+
+**Resultado:** o agente é obrigado a citar IDs do `citation_map`, preencher o `security_rationale_template`, distinguir código, testes e evidência, não fazer afirmações de conformidade, e encaminhar `needs_clarification` / `needs_decomposition` / `unsupported_scope` para diálogo com o utilizador em vez de adivinhar em silêncio.
+
 ---
 
 ## Boa prática — *bootstrap* mínimo de sessão

@@ -585,7 +585,7 @@ Os *thresholds* de cada indicador são definidos por nível nos catálogos e sã
 
 - **Maturidade.** Os indicadores de cada macro-processo estão declarados com a estrutura de medição de MP5 para que possam, no futuro, servir de base a uma medição de maturidade SbD. Esta página não define esse modelo. A dimensão T-06 de Governança e Contratação e o requisito `GOV-012` já medem maturidade por domínio numa escala 1–3, e a página **Achievable Maturity** de cada capítulo alinha com SAMM e DSOMM; os macro-processos limitam-se a nomear, sobre esses instrumentos, o que tem de permanecer ligado.
 - ***Operating model*.** RACI, *decision rights* e cadências definem *quem* e *quando*, e vivem noutra superfície do programa. Os macro-processos definem *o que tem de permanecer ligado*; os papéis nomeados aqui são os que os capítulos já atribuem.
-- **Ontologia e grafo de conhecimento.** Os rótulos MP1–MP5 são editoriais. Não são entidades, não são IDs de requisito e não devem ser lidos como tal por quem indexe o Manual.
+- **Ontologia e grafo de conhecimento.** Os rótulos MP1–MP5 não são IDs de requisito; a vista processual é modelada na ontologia como `MacroProcess` desde v2.5.
 
 ## Referências cruzadas
 

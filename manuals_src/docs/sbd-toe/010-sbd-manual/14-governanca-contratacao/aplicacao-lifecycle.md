@@ -65,7 +65,10 @@ Como **Developer + AppSec Engineer**, quero **submeter exceções de segurança 
 |----|----|----|
 | Opcional | Recomendado | Obrigatório |
 
-**Integração.** Execução contínua; Resp: Developer (submissão) + AppSec Engineer (validação) + Gestão Executiva / CISO (aprovação conforme nível); Triggers: Sempre que há desvio; SLA: Aprovação em 5 dias (L1–L2), 3 dias (L3); Notificação de revalidação 30 dias antes do vencimento  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Execução | Sempre que há desvio | Developer (submissão) + AppSec Engineer (validação) + Gestão Executiva / CISO (aprovação conforme nível) | Aprovação em 5 dias (L1–L2), 3 dias (L3); Notificação de revalidação 30 dias antes do vencimento |
 
 ---
 
@@ -95,7 +98,10 @@ Como **GRC / Compliance (Jurídico + Procurement)**, quero **incluir cláusulas 
 |----|----|----|
 | Recomendado | Obrigatório | Obrigatório + auditorias |
 
-**Integração.** Planeamento; Resp: GRC / Compliance (Jurídico + Procurement)  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Contrato novo | GRC / Compliance (Jurídico + Procurement) | Conforme ciclo da US |
 
 ---
 
@@ -125,7 +131,10 @@ Como **GRC / Compliance**, quero **validar fornecedores de forma contínua**, pa
 |----|----|----|
 | Opcional | Recomendado | Obrigatório |
 
-**Integração.** Validação; Resp: GRC / Compliance  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Validação | Auditoria de fornecedor ativo | GRC / Compliance | Auditoria anual |
 
 ---
 
@@ -155,7 +164,10 @@ Como **AppSec Engineer**, quero **agregar práticas de segurança por projeto em
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Operações; Resp: AppSec Engineer + GRC / Compliance  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Recolha de métricas de projetos ativos | AppSec Engineer + GRC / Compliance | Conforme ciclo da US |
 
 ---
 
@@ -207,7 +219,10 @@ Como **Gestão Executiva**, quero **definir e monitorizar KPIs de governação**
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Auditoria; Resp: Gestão Executiva + GRC / Compliance  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Auditoria | Ciclo trimestral de medição de KPIs | Gestão Executiva + GRC / Compliance | Conforme ciclo da US |
 
 ---
 
@@ -238,7 +253,10 @@ Como **GRC / Compliance (Procurement Officer)**, quero **executar o fluxo formal
 |----|----|----|
 | Opcional | Recomendado | Obrigatório |
 
-**Integração.** Planeamento; Resp: AppSec Engineer + GRC / Compliance (Procurement Officer); SLA: 2 semanas (L2), 1 semana (L3)  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Novo fornecedor L2/L3; início do fluxo de validação | AppSec Engineer + GRC / Compliance (Procurement Officer) | 2 semanas (L2), 1 semana (L3) |
 
 **Ligações úteis.**  
 - [Modelo de Validação de Fornecedores](./addon/modelo-validacao-fornecedores)
@@ -273,7 +291,11 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Operações + Validação; Resp: AppSec Engineer + GRC / Compliance; Triggers: Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura; SLA: Reavaliação em 5 dias úteis  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura | AppSec Engineer + GRC / Compliance | Reavaliação em 5 dias úteis |
+| Validação | Calendário (trimestral/semestral), Incidente crítico, Mudança arquitetura | AppSec Engineer + GRC / Compliance | Reavaliação em 5 dias úteis |
 
 **Ligações úteis.**  
 - [Validação Continuada](./addon/validacao-continuada)
@@ -308,7 +330,12 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um repositó
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Planeamento + Execução + Validação; Resp: AppSec Engineer + Scrum Master / Team Lead + GRC / Compliance; SLA: Atualização por release ou 5 dias após evento crítico  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Criação ou atualização do repositório; release relevante ou evento crítico | AppSec Engineer + Scrum Master / Team Lead + GRC / Compliance | Atualização por release ou 5 dias após evento crítico |
+| Execução | Criação ou atualização do repositório; release relevante ou evento crítico | AppSec Engineer + Scrum Master / Team Lead + GRC / Compliance | Atualização por release ou 5 dias após evento crítico |
+| Validação | Criação ou atualização do repositório; release relevante ou evento crítico | AppSec Engineer + Scrum Master / Team Lead + GRC / Compliance | Atualização por release ou 5 dias após evento crítico |
 
 **Ligações úteis.**  
 - [Controlo Sistemático das Práticas SbD-ToE](./addon/controlos-praticas-sbd)
@@ -344,7 +371,10 @@ Como **Gestão Executiva**, quero **designar formalmente um owner de segurança 
 |----|----|----|
 | Recomendado | Obrigatório | Obrigatório |
 
-**Integração.** Planeamento; Resp: Gestão Executiva + Security Champion + AppSec Engineer; SLA: Designação no arranque do projeto ou mudança de owner  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Aplicação L2/L3; arranque do projeto ou rotação de owner | Gestão Executiva + Security Champion + AppSec Engineer | Designação no arranque do projeto ou mudança de owner |
 
 **Ligações úteis.**  
 - [Modelo de Governação](./addon/modelo-governancao)
@@ -381,7 +411,11 @@ Como **AppSec Engineer + GRC / Compliance**, quero **executar validações peri�
 |----|----|----|
 | Anual | Semestral | Trimestral |
 
-**Integração.** Validação + Auditoria; Resp: AppSec Engineer + GRC / Compliance + Scrum Master / Team Lead; Triggers: Calendário cíclico, Release relevante, Incidente crítico; SLA: Ciclo completado em 2 semanas desde trigger  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Validação | Calendário cíclico, Release relevante, Incidente crítico | AppSec Engineer + GRC / Compliance + Scrum Master / Team Lead | Ciclo completado em 2 semanas desde trigger |
+| Auditoria | Calendário cíclico, Release relevante, Incidente crítico | AppSec Engineer + GRC / Compliance + Scrum Master / Team Lead | Ciclo completado em 2 semanas desde trigger |
 
 **Ligações úteis.**  
 - [Validação Continuada](./addon/validacao-continuada)
@@ -418,7 +452,11 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Auditoria + Operações; Resp: GRC / Compliance + AppSec Engineer + CISO; Triggers: Trimestral (mínimo), Semestral (recomendado); SLA: Relatório publicado 5 dias após fim do período  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Auditoria | Trimestral (mínimo), Semestral (recomendado) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
+| Operação | Trimestral (mínimo), Semestral (recomendado) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
 
 **Ligações úteis.**  
 - [Governação e Maturidade](./addon/governancao-maturidade)
@@ -456,7 +494,11 @@ Como **CISO + AppSec Engineer**, quero **formalizar e documentar o modelo de gov
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Planeamento + Execução contínua; Resp: CISO + AppSec Engineer + GRC / Compliance (Jurídico); Triggers: Arranque SbD-ToE, revisão anual, mudança organizacional; SLA: Publicação em 2 semanas  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Arranque SbD-ToE, revisão anual, mudança organizacional | CISO + AppSec Engineer + GRC / Compliance (Jurídico) | Publicação em 2 semanas |
+| Execução | Arranque SbD-ToE, revisão anual, mudança organizacional | CISO + AppSec Engineer + GRC / Compliance (Jurídico) | Publicação em 2 semanas |
 
 **Ligações úteis.**  
 - [Modelo de Governação](./addon/modelo-governancao)
@@ -495,7 +537,13 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um checklist
 |----|----|----|
 | Básico | Recomendado | Obrigatório |
 
-**Integração.** Planeamento + Execução + Validação + Auditoria; Resp: AppSec Engineer (validação) + Scrum Master / Team Lead (preenchimento) + GRC / Compliance (consolidação); Triggers: Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual); SLA: Atualização em 5 dias úteis após trigger  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual) | AppSec Engineer (validação) + Scrum Master / Team Lead (preenchimento) + GRC / Compliance (consolidação) | Atualização em 5 dias úteis após trigger |
+| Execução | Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual) | AppSec Engineer (validação) + Scrum Master / Team Lead (preenchimento) + GRC / Compliance (consolidação) | Atualização em 5 dias úteis após trigger |
+| Validação | Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual) | AppSec Engineer (validação) + Scrum Master / Team Lead (preenchimento) + GRC / Compliance (consolidação) | Atualização em 5 dias úteis após trigger |
+| Auditoria | Release relevante, evento crítico, ciclo programado (trimestral/semestral/anual) | AppSec Engineer (validação) + Scrum Master / Team Lead (preenchimento) + GRC / Compliance (consolidação) | Atualização em 5 dias úteis após trigger |
 
 **Ligações úteis.**  
 - [Controlo Sistemático das Práticas SbD-ToE](./addon/controlos-praticas-sbd)
@@ -534,7 +582,11 @@ Como **AppSec Engineer + GRC / Compliance (Procurement Officer)**, quero **reava
 |----|----|----|
 | Anual | Semestral | Trimestral / evento crítico |
 
-**Integração.** Validação + Operações; Resp: AppSec Engineer (análise técnica) + GRC / Compliance (Procurement Officer — coordenação; decisão e registo); Triggers: Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA; SLA: Reavaliação completada em 2 semanas desde trigger  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Validação | Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA | AppSec Engineer (análise técnica) + GRC / Compliance (Procurement Officer — coordenação; decisão e registo) | Reavaliação completada em 2 semanas desde trigger |
+| Operação | Calendário programado (anual/semestral), Incidente crítico, CVE crítico não mitigado, Mudança de contrato/propriedade/SLA | AppSec Engineer (análise técnica) + GRC / Compliance (Procurement Officer — coordenação; decisão e registo) | Reavaliação completada em 2 semanas desde trigger |
 
 **Ligações úteis.**  
 - [Modelo de Validação de Fornecedores](./addon/modelo-validacao-fornecedores)
@@ -574,7 +626,10 @@ Como **Security Champion (HR/Recruiter)**, quero **executar processo estruturado
 |----|----|----|
 | Básico | Recomendado | Obrigatório + quiz validado |
 
-**Integração.** Planeamento; Resp: Security Champion (coordenação HR) + AppSec Engineer (validação) + Scrum Master / Team Lead (sandbox setup); Triggers: Contrato assinado, data de início do projeto; SLA: Conclusão em 2–3 dias úteis antes de data de início; Notificação: Contractor informado via email sobre trilho  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Contrato assinado, data de início do projeto | Security Champion (coordenação HR) + AppSec Engineer (validação) + Scrum Master / Team Lead (sandbox setup) | Conclusão em 2–3 dias úteis antes de data de início; Notificação: Contractor informado via email sobre trilho |
 
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
@@ -622,7 +677,11 @@ Como **CISO + Security Champion (Training Manager)**, quero **definir e executar
 |----|----|----|
 | Básico | Obrigatório | Obrigatório + 80% score requerido |
 
-**Integração.** Planeamento + Execução; Resp: AppSec Engineer (validação de conclusão) + Security Champion (Training Manager — coordenação trilho; rastreabilidade HR); Triggers: Contractor aprovado (fim US-06/US-15); SLA: Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se `<`3 dias  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Contractor aprovado (fim US-06/US-15) | AppSec Engineer (validação de conclusão) + Security Champion (Training Manager — coordenação trilho; rastreabilidade HR) | Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se `<`3 dias |
+| Execução | Contractor aprovado (fim US-06/US-15) | AppSec Engineer (validação de conclusão) + Security Champion (Training Manager — coordenação trilho; rastreabilidade HR) | Formação completa antes de acesso real; Notificação: Semanais se em risco, daily se `<`3 dias |
 
 **Ligações úteis.**  
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
@@ -672,7 +731,11 @@ Como **Security Champion (HR) + DevOps / SRE**, quero **executar processo formal
 |----|----|----|
 | Básico | Obrigatório | Obrigatório + audit trail |
 
-**Integração.** Operações + Validação; Resp: DevOps / SRE (acesso técnico) + AppSec Engineer (validação) + Security Champion (coordenação timeline HR; checkpoints); Triggers: Data de término conhecida (programado), Rescisão imediata (unscheduled); SLA: Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Data de término conhecida (programado), Rescisão imediata (unscheduled) | DevOps / SRE (acesso técnico) + AppSec Engineer (validação) + Security Champion (coordenação timeline HR; checkpoints) | Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes |
+| Validação | Data de término conhecida (programado), Rescisão imediata (unscheduled) | DevOps / SRE (acesso técnico) + AppSec Engineer (validação) + Security Champion (coordenação timeline HR; checkpoints) | Offboarding completo em **`<`24h** da data de termo; Notificação: HR envia aviso 2 semanas antes |
 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
@@ -718,7 +781,10 @@ Como **AppSec Engineer + Operações (Ops)**, quero **monitorizar continuamente 
 |----|----|----|
 | Não | Recomendado | Obrigatório |
 
-**Integração.** Operações contínuo; Resp: AppSec Engineer (setup inicial) + Operações (Ops) (operação 24x7); Triggers: Incidente, CVE crítico, SLA breach, mudança contratual; SLA: Alerta em **`<`1h** de deteção, escalonamento em `<`15 min  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Incidente, CVE crítico, SLA breach, mudança contratual | AppSec Engineer (setup inicial) + Operações (Ops) (operação 24x7) | Alerta em **`<`1h** de deteção, escalonamento em `<`15 min |
 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
@@ -762,7 +828,10 @@ Como **Security Champion + DevOps / SRE + Scrum Master / Team Lead**, quero **re
 |----|----|----|
 | Semestral | Trimestral | Trimestral |
 
-**Integração.** Validação; Resp: Security Champion (coordenação) + Scrum Master / Team Lead (validação de necessidade) + DevOps / SRE (mudanças técnicas); Triggers: Calendário (trimestral), Mudança de projeto, Incidente; SLA: Revisão iniciada e completada em **1 semana**  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Validação | Calendário (trimestral), Mudança de projeto, Incidente | Security Champion (coordenação) + Scrum Master / Team Lead (validação de necessidade) + DevOps / SRE (mudanças técnicas) | Revisão iniciada e completada em **1 semana** |
 
 **Ligações úteis.**  
 - [Preparação Técnica - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
@@ -806,7 +875,10 @@ Como **Security Champion + Scrum Master / Team Lead**, quero **recolher feedback
 |----|----|----|
 | Opcional | Recomendado | Obrigatório |
 
-**Integração.** Operações pós-projeto; Resp: Security Champion (coordenação) + Scrum Master / Team Lead + AppSec Engineer (preenchimento); Triggers: Offboarding iniciado (US-17); SLA: Feedback completado em **3 dias úteis** após fim do contrato  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Offboarding iniciado (US-17) | Security Champion (coordenação) + Scrum Master / Team Lead + AppSec Engineer (preenchimento) | Feedback completado em **3 dias úteis** após fim do contrato |
 
 **Ligações úteis.**  
 - [Offboarding - US-17](#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)  

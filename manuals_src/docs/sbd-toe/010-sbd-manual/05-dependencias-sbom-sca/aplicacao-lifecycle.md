@@ -124,9 +124,9 @@ Como **DevOps / SRE**, quero **gerar SBOM em cada build**, para **rastreabilidad
 | L3 | Sim | SBOM assinado + verificação de integridade
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| CI | Execução de build | DevOps
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI | Execução de build | DevOps | Conforme ciclo da US |
 
 **Ligações úteis.**  
 - [SBOM - Normas CycloneDX e SPDX](https://www.cyclonedx.org)
@@ -217,9 +217,9 @@ Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter 
 | L3 | Sim | Validação executiva + métricas de risco
 
 **Integração no SDLC.**
-| Fase | Trigger | Responsável |
-|---|---|---|
-| Release | Findings pendentes | AppSec + Product Owner
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Release | Findings pendentes | AppSec + Product Owner | Conforme prazo definido na exceção |
 
 **Ligações úteis.**  
 - [Exceções e Aceitação de Risco em Vulnerabilidades](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco)

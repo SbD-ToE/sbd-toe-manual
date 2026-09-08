@@ -219,7 +219,7 @@ Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Release | Findings pendentes | AppSec + Product Owner | Conforme ciclo da US |
+| Release | Findings pendentes | AppSec + Product Owner | Conforme prazo definido na exceção |
 
 **Ligações úteis.**  
 - [Exceções e Aceitação de Risco em Vulnerabilidades](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco)

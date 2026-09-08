@@ -862,7 +862,7 @@ Como **GRC / Compliance (Procurement + Legal)**, quero que cada contrato com pro
 | L2 | Sim | Cláusulas detalhadas: retention, opt-out, localização, SLA, audit rights básico |
 | L3 | Sim | Cláusulas detalhadas + audit rights operacionais + AI Act Art. 53/55 quando GPAI; revisão Legal obrigatória |
 
-**🔗 Integração no SDLC.**
+**Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Pré-onboarding | Adopção de novo provedor AI | GRC / Compliance (Procurement + Legal) | Antes do uso operacional |

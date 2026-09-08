@@ -594,7 +594,9 @@ L2: validação obrigatória
 L3: validação + aprovação dupla
 
 **Integração no SDLC.**  
-Produção | Pós-deploy | Ops/AppSec | `<`24h
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Produção | Pós-deploy | Ops/AppSec | `<`24h |
 
 ---
 
@@ -620,7 +622,9 @@ L2: validação obrigatória
 L3: bloqueio até validação
 
 **Integração no SDLC.**  
-Operação contínua | Deteção de drift | Ops | `<48h`
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação contínua | Deteção de drift | Ops | `<48h` |
 
 ---
 
@@ -646,7 +650,9 @@ L2: reprodutibilidade documentada
 L3: reprodutibilidade completa e auditável
 
 **Integração no SDLC.**  
-Produção | Incidente | Ops/AppSec | SLA definido
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Produção | Incidente | Ops/AppSec | SLA definido |
 
 ---
 ## 📦 Artefactos esperados
@@ -693,7 +699,9 @@ L2: autorização formal
 L3: dupla aprovação
 
 **Integração no SDLC.**  
-Produção | Ação crítica | Ops | Antes da execução
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Produção | Ação crítica | Ops | Antes da execução |
 
 ---
 
@@ -719,7 +727,9 @@ L2: retenção definida
 L3: retenção + revisão periódica
 
 **Integração no SDLC.**  
-Operação contínua | Evento | Ops/GRC | Imediato
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação contínua | Evento | Ops/GRC | Imediato |
 
 ---
 
@@ -773,7 +783,7 @@ Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agente
 | L2 | Sim para A1+ | *Eval gate* completo; *rollback* de modelo independente documentado; *canary* recomendado |
 | L3 | Sim para A1+ | *Eval gate* completo + *canary* obrigatório em mudança de versão maior + auditoria do `eval_run_id` |
 
-**🔗 Integração no SDLC.**
+**Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Pré-promoção | *Eval gate* falha | DevOps + AppSec | Bloqueio imediato |

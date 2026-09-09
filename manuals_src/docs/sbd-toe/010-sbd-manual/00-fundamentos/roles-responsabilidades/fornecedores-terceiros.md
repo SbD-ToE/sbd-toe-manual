@@ -35,21 +35,23 @@ Gestão da cadeia de fornecimento é exigência explícita em:
 
 ## Atividades por Capítulo
 
+O que a organização exige, verifica e regista, por capítulo:
+
 ### Cap. 05 - Dependências e SBOM
-Fornecer **SBOM atualizado** de todos os componentes entregues, garantindo rastreabilidade completa.
+A organização exige **SBOM atualizado** dos componentes entregues e verifica-o na aceitação, para manter rastreabilidade completa da cadeia.
 
 ### Cap. 08-09 - IaC e Containers
-Assegurar **segurança em módulos IaC e imagens** fornecidas, com validação de vulnerabilidades e assinatura digital.
+A organização exige **validação de vulnerabilidades e assinatura digital** nos módulos IaC e imagens fornecidos, e verifica-as antes da promoção.
 
 ### Cap. 13 - Formação e Onboarding
-Receber **formação mínima obrigatória** antes de acesso a sistemas ou dados (NIS2/DORA compliance).
+A organização exige e regista a **formação mínima obrigatória** antes de conceder acesso a sistemas ou dados (NIS2/DORA compliance).
 
 **Requisitos associados:**
 - [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Receber formação obrigatória (GRC / Compliance / Gestão Executiva responsável por garantir)
 - [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (CISO / Security Champion (formação) responsável por executar)
 
 ### Cap. 14 - Governança e Contratação
-Cumprir **cláusulas contratuais de segurança**, submeter-se a validação periódica de conformidade, permitir monitorização contínua, executar processo de onboarding e offboarding formal.
+A organização fixa as **cláusulas contratuais de segurança**, valida o fornecedor antes do onboarding, monitoriza a conformidade ao longo do contrato e executa o offboarding formal no fim.
 
 **Requisitos associados:**
 - [US-03: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---validação-contínua-de-fornecedores) - GRC valida conformidade

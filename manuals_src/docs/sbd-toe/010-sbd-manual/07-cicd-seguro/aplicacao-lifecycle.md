@@ -783,7 +783,7 @@ Como **DevOps / SRE** e **AppSec**, quero que os agentes AI que operam o pipelin
 | L2 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+; *kill-switch* exercitado trimestralmente em A3 |
 | L3 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+ + *kill-switch* exercitado mensalmente em A4; revisão `appsec` independente |
 
-**🔗 Integração no SDLC.**
+**Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Onboarding do agente | Activação do *mandate* (Policy 38) | `devops` + `appsec` | Antes do primeiro *tool call* |
@@ -835,7 +835,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero que o acesso de escrita ao S
 |----|----|----|
 | Identidade empresarial no SCM; RBAC básico por projeto | RBAC granular por *branch*; assinatura de *tags* recomendada | RBAC granular + assinatura de *commits* **e** *tags* obrigatória e verificada no pipeline |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Onboarding/offboarding | Concessão ou revogação de acesso ao SCM | `devops` + `appsec` | Na alteração de acesso |
@@ -885,7 +885,7 @@ Como **DevOps / SRE**, quero pipelines com CI e CD separados por função, fases
 |----|----|----|
 | Fases logicamente distintas; *templates* versionados | CI/CD separados + âmbito de credenciais por *stage* | Separação reforçada com identidades dedicadas por *stage* e ausência verificada de permissões cruzadas |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Criação/refactor | Alteração da estrutura do pipeline | `devops` | No PR |
@@ -935,7 +935,7 @@ Como **DevOps / SRE**, quero que os *runners* não exponham o Docker socket a *j
 |----|----|----|
 | *Hardening* base; sem privilégios desnecessários | *Runners* segregados sem socket exposto a *jobs* não privilegiados | Isolamento forte (efémero/descartável) + interdição de *privesc* + logs de bloqueio verificados |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Provisionamento | Criação/alteração de *runners* | `devops` | No PR de infra |
@@ -985,7 +985,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero artefactos armazenados e tra
 |----|----|----|
 | Armazenamento controlado; exceção registada | Transporte seguro + deteção de manipulação + exceção sinalizada na execução | Custódia reforçada + verificação obrigatória downstream + integrações externas auditadas e contexto minimizado |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Build/Promoção | Produção e consumo de artefactos | `devops` | A cada promoção |

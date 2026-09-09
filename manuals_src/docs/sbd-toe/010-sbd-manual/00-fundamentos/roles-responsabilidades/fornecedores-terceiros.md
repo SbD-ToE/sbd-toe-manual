@@ -11,8 +11,10 @@ sidebar_position: 13
 
 ## Visão Geral
 
-Fornecedores são **parte da cadeia de responsabilidade**.  
-Devem cumprir os mesmos padrões de segurança que equipas internas, garantindo rastreabilidade, formação e conformidade contratual.
+Fornecedores e terceiros são **parte da cadeia de responsabilidade e estão fora do domínio de prescrição do manual**.  
+O manual diz à organização o que tem de exigir, verificar e registar; não diz ao fornecedor como trabalhar — o que se exige dele vive no contrato. Um fornecedor que adote o SbD-ToE passa a encontrar aqui as suas próprias práticas.
+
+A fronteira desloca-se com o processo, não com o contrato: quem é contratado para trabalhar dentro dos repositórios, pipelines e ambientes da organização opera dentro do processo dela, e as práticas aplicam-se-lhe como a qualquer equipa (Cap. 14, US-15 a US-20).
 
 ### Responsabilidades Principais
 - Cumprem cláusulas contratuais de segurança (Cap. 14)
@@ -50,11 +52,11 @@ Receber **formação mínima obrigatória** antes de acesso a sistemas ou dados 
 Cumprir **cláusulas contratuais de segurança**, submeter-se a validação periódica de conformidade, permitir monitorização contínua, executar processo de onboarding e offboarding formal.
 
 **Requisitos associados:**
-- [US-01: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---processo-formal-de-exceções-com-alçadas-por-nível-de-risco) - GRC valida conformidade
-- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Security Champion (RH) executam preparação
-- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Security Champion (RH) / DevOps / SRE executam offboarding
-- [US-13: Reavaliação periódica de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-13---controlo-sistemático-e-periódico-por-capítulo-sbd-toe) - Submeter-se a reavaliação
-- [US-14: Monitorização contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Permitir monitorização (AppSec Engineer / Operações (Ops) executam)
+- [US-03: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---validação-contínua-de-fornecedores) - GRC valida conformidade
+- [US-15: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Security Champion (RH) executam preparação
+- [US-17: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Security Champion (RH) / DevOps / SRE executam offboarding
+- [US-14: Reavaliação periódica de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Submeter-se a reavaliação
+- [US-18: Monitorização contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-18---monitorização-contínua-de-conformidade-de-fornecedores-alertas-e-escalação) - Permitir monitorização (AppSec Engineer / Operações (Ops) executam)
 
 ---
 

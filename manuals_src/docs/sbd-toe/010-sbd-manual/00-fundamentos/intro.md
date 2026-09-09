@@ -22,7 +22,7 @@ O SbD-ToE **não é um catálogo de boas práticas** nem um guia opcional.
 **O SbD-ToE é:**
 - Um sistema integrado para desenhar, desenvolver, operar e governar software seguro;
 - Um modelo onde práticas técnicas, pessoas e decisões organizacionais estão ligadas;
-- Um manual aplicável a aplicações, pipelines, infraestrutura, fornecedores e equipas.
+- Um manual aplicável a aplicações, pipelines, infraestrutura, equipas e à relação com fornecedores.
 
 **O SbD-ToE não é:**
 - Um conjunto de recomendações facultativas;
@@ -54,6 +54,7 @@ Ao longo de todo o manual, aplicam-se os seguintes princípios:
 - **A automação executa, a governação autoriza**: pipelines, ferramentas e processos não substituem responsabilidade organizacional.
 - **Toda a exceção é explícita, temporária e rastreável**.
 - **O ciclo de vida é completo**: formação, onboarding, execução, validação contínua e offboarding fazem parte do modelo.
+- **O manual prescreve a quem opera dentro do seu processo**: no seu domínio diz como fazer; noutros domínios da organização diz o que tem de existir, não como trabalham; a quem entrega de fora pede alinhamento demonstrável — a obrigação de um fornecedor nasce do contrato, não deste manual.
 
 Estes princípios são operacionalizados nos capítulos organizacionais e técnicos do manual.
 

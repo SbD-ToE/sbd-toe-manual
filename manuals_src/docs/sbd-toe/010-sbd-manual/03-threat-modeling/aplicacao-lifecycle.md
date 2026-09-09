@@ -250,6 +250,11 @@ Como **DevOps/SRE** e **AppSec Engineer**, quero aplicar um **gate determinísti
 | L2 | Sim | Gate não-bloqueante com alerta e obrigação de revisão |
 | L3 | Sim | Gate bloqueante com exceções formais e prazo |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Alteração relevante (novo fluxo, nova dependência, nova *trust boundary*) | DevOps/SRE + AppSec Engineer | Gate não-bloqueante com alerta (L2); bloqueante com exceção formal e prazo (L3) |
+
 ---
 
 ### US-06 - Validação de impacto no negócio
@@ -325,6 +330,11 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero reutilizar modelos 
 | L2 | Sim | Revisão formal com diffs |
 | L3 | Sim | Revisão formal + revisão independente |
 
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Design / Revisão | Reutilização de um modelo anterior como base | Arquitetos de Software + AppSec Engineer | Antes de o modelo reutilizado ser considerado válido |
 
 ---
 
@@ -408,6 +418,11 @@ Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero aprovar formalmen
 | L2 | Sim | Aprovação formal por Scrum Master / Team Lead + AppSec Engineer |
 | L3 | Sim | Aprovação formal + revisão independente (segregação) |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Aprovação | Conclusão da revisão de um Threat Model atualizado | Scrum Master / Team Lead + AppSec Engineer | Aprovação leve por registo simples (L1); formal (L2); formal + revisão independente (L3) |
+
 ---
 
 ### US-10 - Controlo de acesso, classificação e retenção dos artefactos de Threat Modeling
@@ -444,6 +459,11 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero controlar acesso e reten
 | L1 | Sim | Controlo básico e armazenamento interno |
 | L2 | Sim | Controlo formal + rastreio de alterações |
 | L3 | Sim | Controlo reforçado + segregação e auditoria |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Contínuo | Armazenamento ou partilha de artefactos de Threat Modeling | Arquitetos de Software + DevOps/SRE | Controlo básico com armazenamento interno (L1); formal com rastreio de alterações (L2); reforçado com segregação e auditoria (L3) |
 
 ---
 

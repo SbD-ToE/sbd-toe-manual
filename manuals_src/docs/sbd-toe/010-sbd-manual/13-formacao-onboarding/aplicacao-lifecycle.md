@@ -189,7 +189,10 @@ Como **QA**, quero **realizar exercícios práticos (labs, CTFs, simulações)**
 |----|----|----|
 | Opcional | Recomendado | Obrigatório |
 
-**Integração.** Ciclo de formação; Resp: QA + AppSec Engineer  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Ciclo de formação | Execução de um exercício previsto no plano de formação | QA + AppSec Engineer | Resultado e métricas de desempenho registados na execução |
 
 ---
 
@@ -219,7 +222,10 @@ Como **GRC / Compliance**, quero **medir KPIs de capacitação (taxa de conclus�
 |----|----|----|
 | Básico | KPIs anuais | KPIs trimestrais com metas |
 
-**Integração.** Auditoria; Resp: GRC / Compliance  
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Auditoria | Recolha de métricas no ciclo de formação | GRC / Compliance | KPIs anuais (L2); KPIs trimestrais com metas (L3) |
 
 ---
 
@@ -668,6 +674,11 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 | L1 | L2 | L3 |
 |----|----|----|
 | Formatos básicos (microlearning) | Labs e quizzes estructurados | Labs com scoring + simulações + auditoria |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Planeamento | Planeamento de uma sessão num formato escolhido | AppSec Engineer / RH | DoD mínimo e artefactos associados definidos no planeamento |
 
 ---
 

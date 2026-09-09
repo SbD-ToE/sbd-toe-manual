@@ -868,6 +868,12 @@ Como **AppSec Engineer**, quero **avaliar criticamente a cobertura real dos test
 **Artefactos & evidências.** Relatório de cobertura comentado, list
 
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré-release | Produção do sumário de validação de uma release | AppSec Engineer | Métricas interpretadas por humano e limitações registadas no sumário |
+| Pré-release | Aprovação de release com áreas fora de cobertura | AppSec Engineer | Plano de mitigação por lacuna, com owner e prazo, antes da aprovação |
+
 ---
 
 ### US-18 - Perfil de regras SAST versionado com baseline de falsos positivos

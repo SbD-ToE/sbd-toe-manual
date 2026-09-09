@@ -450,6 +450,11 @@ Como **DevOps / SRE**, quero executar um **gate de segurança pré-release** que
 | L2 | Sim | Gate reforçado com política de exceções |
 | L3 | Sim | *Policy-as-code* e dupla aprovação formal |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré-release | Execução do *security gate* sobre uma release candidata | **DevOps / SRE** | Resultado binário registado como artefacto da release, com bloqueio automático em falha |
+
 ---
 
 ### US-10 - Perfis de Validação por Nível de Risco (L1–L3)
@@ -483,6 +488,11 @@ Como **AppSec Engineer**, quero definir e aplicar **perfis de validação L1–L
 | L1 | Sim | Perfil com linters + SAST leve + checklist básica |
 | L2 | Sim | Perfil com SAST completo + thresholds + dupla revisão quando aplicável |
 | L3 | Sim | Perfil com *policy-as-code* + gates reforçados + retenção auditável |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Execução do pipeline sobre aplicação classificada L1–L3 | **AppSec Engineer** | A cada execução, com as regras e limiares do perfil correspondente |
 
 ---
 
@@ -518,6 +528,11 @@ diretório `evidencias/`, `evidencias-index.json`, registos de acesso
 | L1 | Sim | Retenção mínima e export básico |
 | L2 | Sim | Export assinado + índice por componente |
 | L3 | Sim | Armazenamento imutável e verificação periódica de integridade |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Conclusão da execução de validações no pipeline | **Quality Assurance (QA)** + **DevOps / SRE** | Export por *build*/*release*; retenção ≥ 2 anos (≥ 5 anos em L3) |
 
 ---
 

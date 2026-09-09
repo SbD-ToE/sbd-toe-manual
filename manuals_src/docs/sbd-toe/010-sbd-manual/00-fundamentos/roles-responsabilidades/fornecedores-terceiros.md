@@ -11,8 +11,10 @@ sidebar_position: 13
 
 ## Visão Geral
 
-Fornecedores são **parte da cadeia de responsabilidade**.  
-Devem cumprir os mesmos padrões de segurança que equipas internas, garantindo rastreabilidade, formação e conformidade contratual.
+Fornecedores e terceiros são **parte da cadeia de responsabilidade e estão fora do domínio de prescrição do manual**.  
+O manual diz à organização o que tem de exigir, verificar e registar; não diz ao fornecedor como trabalhar — o que se exige dele vive no contrato. Um fornecedor que adote o SbD-ToE passa a encontrar aqui as suas próprias práticas.
+
+A fronteira desloca-se com o processo, não com o contrato: quem é contratado para trabalhar dentro dos repositórios, pipelines e ambientes da organização opera dentro do processo dela, e as práticas aplicam-se-lhe como a qualquer equipa (Cap. 14, US-15 a US-20).
 
 ### Responsabilidades Principais
 - Cumprem cláusulas contratuais de segurança (Cap. 14)

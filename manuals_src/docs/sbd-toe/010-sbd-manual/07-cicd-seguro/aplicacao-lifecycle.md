@@ -101,6 +101,12 @@ Políticas de branch protection; logs de revisão; histórico Git; auditoria de 
 | L2 | Sim | Revisor técnico + validação de segurança ativa |
 | L3 | Sim | Revisão dupla (code owner + AppSec) e bloqueio em falhas High |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| PR/MR | Submissão de PR para `main` | Developers | Antes do *merge* |
+| Revisão | Conflito ou alteração relevante da superfície de ataque num *merge* | Developers | Antes do *merge* |
+
 ---
 
 ### US-02 - Design seguro dos pipelines (versionamento, determinismo e revisão)
@@ -140,6 +146,13 @@ Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revis
 | L1 | Sim | Versão única do pipeline com aprovação manual |
 | L2 | Sim | Versionamento e revisão obrigatória |
 | L3 | Sim | Controlo de alterações assinado e validação reforçada de proveniência |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Criação/refactor | Alteração da definição do pipeline submetida em PR | DevOps / SRE | No PR |
+| Execução | Execução do pipeline com configuração ou parâmetros | DevOps / SRE | A cada execução (configuração efetiva registada) |
+| Revisão | Alteração de ferramentas, etapas ou regras de execução | DevOps / SRE | No PR (commit/hash + *changelog*) |
 
 ---
 
@@ -181,6 +194,13 @@ Relatórios de scanners; logs CI/CD; *exit codes*; registos de bloqueio; dashboa
 | L2 | Sim | Inclusão de IaC e análise de dependências |
 | L3 | Sim | Validação completa incluindo containers e SBOM |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Submissão de código e execução do pipeline | Developers | A cada execução do pipeline |
+| Pré-promoção | Avaliação de resultados com falhas críticas | Developers | Bloqueio do *merge*/promoção no *gate* |
+| Revisão | Novo tipo de artefacto não coberto pela validação atual | AppSec | Na aprovação da regra adicional versionada |
+
 ---
 
 ### US-04 - Gestão de segredos
@@ -217,6 +237,12 @@ Políticas de segredos; logs de acesso; configuração OIDC; evidência de TTL/r
 | L2 | Sim | OIDC implementado com TTL controlado |
 | L3 | Sim | Tokens efémeros automáticos e rotação frequente |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Arranque do pipeline com necessidade de credenciais | DevOps / SRE | *Just-in-time*, no arranque do *job* |
+| Operação | Expiração do token e necessidade de novo acesso | DevOps / SRE | Na expiração, sem reutilização |
+
 ---
 
 ### US-05 - Isolamento de runners
@@ -252,6 +278,12 @@ Configuração de runners; logs de execução; registos de isolamento; scripts d
 | L1 | Opcional | Runners partilhados com limites e hardening |
 | L2 | Sim | Segregação de runners por projeto |
 | L3 | Sim | Runners efémeros + rede isolada + destruição automática |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Provisionamento | Execução de *pipelines* paralelos | DevOps / SRE | A cada execução |
+| Operação | Fim do *job* e encerramento do *runner* | DevOps / SRE | No encerramento do *job* |
 
 ---
 
@@ -290,6 +322,12 @@ Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria 
 | L1 | Sim | Assinatura recomendada + verificação manual em releases |
 | L2 | Sim | Assinatura automática + verificação obrigatória |
 | L3 | Sim | Bloqueio automático + validações reforçadas de proveniência |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Build/Promoção | Produção de artefacto e pedido de promoção | DevOps / SRE | Verificação antes da promoção |
+| Promoção | Assinatura ou proveniência inválida | DevOps / SRE | Rejeição e alerta na verificação |
 
 ---
 
@@ -330,6 +368,13 @@ Políticas de gates; logs de bloqueio; registos de alteração de thresholds; ev
 | L2 | Sim | Bloqueio High/Critical + aprovação AppSec para exceções |
 | L3 | Sim | Bloqueio automático + governança reforçada (incl. GRC em exceções) |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Pré-promoção | Falha High ou Critical em aplicação L3 | AppSec Engineers | Bloqueio no *gate*, antes da promoção |
+| Pré-promoção | Falha Medium em aplicação L1 | AppSec Engineers | Alerta no *gate*, sem bloqueio |
+| Promoção | Apresentação de *score*/recomendação automática | AppSec Engineers | Na decisão de promoção |
+
 ---
 
 ### US-08 - Cobertura ampliada (containers e SBOM)
@@ -366,6 +411,12 @@ Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 | L2 | Sim | SBOM obrigatório + validação de base images |
 | L3 | Sim | Scans contínuos + correlação de CVEs + bloqueios em risco crítico |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Build | Construção de imagem | AppSec Engineers | A cada *build*, com SBOM anexado ao artefacto |
+| Operação | Vulnerabilidade detetada em imagem base em uso | AppSec Engineers | Na deteção, com rastreio ao *release* afetado |
+
 ---
 
 ### US-09 - Rastreabilidade ponta-a-ponta (commit→pipeline→release)
@@ -401,6 +452,12 @@ Logs de pipelines; dashboards; registos de auditoria; exports (imutáveis quando
 | L1 | Sim | Logs básicos armazenados 30 dias |
 | L2 | Sim | Retenção 90 dias + correlação commit-build |
 | L3 | Sim | Retenção ≥1 ano + exportação imutável + auditoria reforçada |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Incidente | Análise de um *release* na sequência de um incidente | GRC / Compliance | Dentro da retenção: 30 dias (L1), 90 dias (L2), ≥1 ano (L3) |
+| Auditoria | Pedido de evidências por auditor | GRC / Compliance | Export correlacionado dentro da retenção do nível |
 
 ---
 
@@ -439,6 +496,12 @@ Registo de exceções; logs de aprovação; relatórios de revisão; prazos auto
 | L2 | Sim | Aprovação dupla e prazo máximo (ex.: 60 dias) |
 | L3 | Sim | Revisão frequente + auditoria obrigatória |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Exceção | Pedido de exceção submetido a análise | GRC / Compliance | Aprovação só com prazo, *owner* e compensações; prazo máximo definido em L2 (ex.: 60 dias) |
+| Exceção | Expiração do prazo sem renovação formal | GRC / Compliance | Reversão automática no fim do prazo |
+
 ---
 
 ### US-11 - Testes de segurança dinâmicos (DAST)
@@ -474,6 +537,12 @@ Relatórios DAST; logs de execução; evidências de correção; rastreabilidade
 | L1 | Opcional | DAST manual periódico |
 | L2 | Sim | DAST em staging pré-release |
 | L3 | Sim | DAST contínuo + bloqueio automático + revalidação pós-correção |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Staging | Promoção de *build* para *staging* | AppSec Engineers | A cada promoção para *staging* |
+| Pré-promoção | Falha High reportada pelo DAST | AppSec Engineers | Bloqueio da promoção a produção até correção validada |
 
 ---
 
@@ -511,6 +580,12 @@ Dashboard; logs centralizados; relatórios; alertas; evidência de retenção.
 | L2 | Sim | Dashboard com KPIs principais, atualizado diariamente |
 | L3 | Sim | Dashboard quase em tempo real + alertas automáticos |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Evento no pipeline (*merge*, bloqueio, exceção, promoção) | Gestão Executiva / CISO | Registo com *timestamp*, contexto e atores no momento do evento |
+| Auditoria | Consulta ao *dashboard* por projeto, período ou risco | Gestão Executiva / CISO | Atualização diária (L2); quase em tempo real (L3) |
+
 ---
 
 ### US-13 - Validação de integridade de imagens base
@@ -546,6 +621,12 @@ Registos de hashes/assinaturas; logs de validação; relatórios de drift; açõ
 | L1 | Opcional | Validação manual periódica |
 | L2 | Sim | Validação automática no pull com logs |
 | L3 | Sim | Validação + assinatura + alertas automáticos em drift/vulnerabilidade |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Arranque do pipeline com imagem base | DevOps / SRE | Validação no *pull*, antes do *build* |
+| Operação | Vulnerabilidade relevante que afeta imagens em uso | DevOps / SRE | Alerta e ação de mitigação na deteção |
 
 ---
 
@@ -589,6 +670,12 @@ Execução rastreável (logs + config efetiva); ligação a commit; registos de 
 | L2 | Sim | Reprodutibilidade como requisito; validação periódica |
 | L3 | Sim | Reprodutibilidade obrigatória + auditoria reforçada e retenção prolongada |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Execução | Reexecução do mesmo pipeline sobre o mesmo *commit* | DevOps / SRE | Resultado equivalente, ou divergência justificada e registada |
+| Execução | Execução com parâmetros ou configuração | DevOps / SRE | Configuração efetiva registada a cada execução |
+
 ---
 
 ### US-15 - Separação formal entre sinal automático e decisão de promoção
@@ -624,6 +711,12 @@ Registo de aprovação; evidência associada; logs de bloqueio; política public
 | L1 | Sim | Aprovação nominal para produção |
 | L2 | Sim | Aprovação nominal + regra de separação de funções |
 | L3 | Sim | Aprovação nominal + auditoria reforçada + regra estrACI (approval control integrity) |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Promoção | Promoção considerada a partir de sinais (*scores*, recomendações) | AppSec Engineers | Decisão nominal registada antes da promoção |
+| Promoção | Tentativa de promoção sem decisão formal | AppSec Engineers | Bloqueio até registo nominal de aprovação |
 
 ---
 
@@ -661,6 +754,12 @@ Run IDs; logs; *exit codes*; artefactos; política de evidência.
 | L2 | Sim | Evidência obrigatória + retenção reforçada |
 | L3 | Sim | Evidência obrigatória + export imutável e auditoria |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Auditoria | Uso de um relatório de validação como evidência | GRC / Compliance | Referência verificável à execução (*run id*, logs, artefactos) no registo |
+| Auditoria | Registo de resultado sem execução observável | GRC / Compliance | Rejeição imediata como «não verificável» |
+
 ---
 
 ### US-17 - Contenção de contexto e higiene de logs/outputs
@@ -697,6 +796,12 @@ Configuração de logging; evidência de masking; registos de ativação/desativ
 | L2 | Sim | Masking + controlo formal de debug |
 | L3 | Sim | Controlo formal + auditoria + retenção e export conforme exigência |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Geração de logs pelo pipeline | DevOps / SRE | *Masking*/redação por defeito, a cada execução |
+| Operação | Ativação temporária de *debug* | DevOps / SRE | Aprovação prévia, janela limitada no tempo e evidência de desativação |
+
 ---
 
 ### US-18 - Não-repúdio e ownership de promoções (ações irreversíveis)
@@ -732,6 +837,12 @@ Registo de aprovação; logs do pipeline; evidência associada; trilho de audito
 | L1 | Sim | Aprovação nominal para produção |
 | L2 | Sim | Aprovação nominal + separação de funções |
 | L3 | Sim | Aprovação nominal + auditoria reforçada e retenção prolongada |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Produção | Promoção para produção executada | DevOps / SRE | Registo nominal e *timestamp* no momento da promoção |
+| Produção | Tentativa de promoção sem *owner* humano | DevOps / SRE | Bloqueio imediato da ação |
 
 ---
 
@@ -783,7 +894,7 @@ Como **DevOps / SRE** e **AppSec**, quero que os agentes AI que operam o pipelin
 | L2 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+; *kill-switch* exercitado trimestralmente em A3 |
 | L3 | Sim para A1+ | OIDC + audit completo + *intent events* em A2+ + *kill-switch* exercitado mensalmente em A4; revisão `appsec` independente |
 
-**🔗 Integração no SDLC.**
+**Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Onboarding do agente | Activação do *mandate* (Policy 38) | `devops` + `appsec` | Antes do primeiro *tool call* |
@@ -835,7 +946,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero que o acesso de escrita ao S
 |----|----|----|
 | Identidade empresarial no SCM; RBAC básico por projeto | RBAC granular por *branch*; assinatura de *tags* recomendada | RBAC granular + assinatura de *commits* **e** *tags* obrigatória e verificada no pipeline |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Onboarding/offboarding | Concessão ou revogação de acesso ao SCM | `devops` + `appsec` | Na alteração de acesso |
@@ -885,7 +996,7 @@ Como **DevOps / SRE**, quero pipelines com CI e CD separados por função, fases
 |----|----|----|
 | Fases logicamente distintas; *templates* versionados | CI/CD separados + âmbito de credenciais por *stage* | Separação reforçada com identidades dedicadas por *stage* e ausência verificada de permissões cruzadas |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Criação/refactor | Alteração da estrutura do pipeline | `devops` | No PR |
@@ -935,7 +1046,7 @@ Como **DevOps / SRE**, quero que os *runners* não exponham o Docker socket a *j
 |----|----|----|
 | *Hardening* base; sem privilégios desnecessários | *Runners* segregados sem socket exposto a *jobs* não privilegiados | Isolamento forte (efémero/descartável) + interdição de *privesc* + logs de bloqueio verificados |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Provisionamento | Criação/alteração de *runners* | `devops` | No PR de infra |
@@ -985,7 +1096,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero artefactos armazenados e tra
 |----|----|----|
 | Armazenamento controlado; exceção registada | Transporte seguro + deteção de manipulação + exceção sinalizada na execução | Custódia reforçada + verificação obrigatória downstream + integrações externas auditadas e contexto minimizado |
 
-**🔗 Integração no SDLC.**  
+**Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Build/Promoção | Produção e consumo de artefactos | `devops` | A cada promoção |

@@ -44,7 +44,7 @@ genia: us-format-normalization
 
 :::userstory
 **História.**   
-Como **RH/PeopleOps**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
+Como **Security Champion (RH)**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** novo colaborador  

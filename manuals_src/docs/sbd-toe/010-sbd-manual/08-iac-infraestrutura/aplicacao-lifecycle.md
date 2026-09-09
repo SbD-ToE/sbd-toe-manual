@@ -118,6 +118,13 @@ Como **DevOps / SRE**, quero **armazenar o estado em backend remoto com locking 
 | L2 | Sim | Backend + locking + encriptação KMS |
 | L3 | Sim | Backend + locking + encriptação + MFA + auditoria |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Início de projeto | Inicialização de um projeto IaC novo | DevOps / SRE | Backend remoto, locking e encriptação KMS na inicialização |
+| Operação | Tentativa de execução concorrente durante um `apply` | DevOps / SRE | Bloqueio até release do lock |
+| Desenvolvimento / Revisão | Geração de um plano de execução | DevOps / SRE | Plano versionado com metadados (timestamp, autor, PR/MR ID) |
+
 ---
 
 ### US-02 - Segregação de ambientes, tagging e permissões mínimas
@@ -157,6 +164,13 @@ Estrutura de repositório (`envs/`), código de módulo com `tags` obrigatórias
 | L2 | Sim | Segregação + tags completas + validação de permissões |
 | L3 | Sim | Segregação + tags + permissões mínimas + enforcement em OPA |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Início de projeto | Inicialização de um projeto IaC novo | DevOps / SRE + Arquitetos de Software | Diretórios de ambiente segregados e `variable "environment"` obrigatória |
+| Provisionamento | Provisionamento de um recurso | DevOps / SRE + Arquitetos de Software | Tags obrigatórias: Environment, Owner, Application, Criticality, ManagedBy |
+| Desenvolvimento / Revisão | Criação de uma role ou permissão | DevOps / SRE + Arquitetos de Software | Scope mínimo na criação |
+
 ---
 
 ### US-03 - Validações automáticas integradas
@@ -195,6 +209,13 @@ Relatórios de lint, outputs de scanners, logs de pipeline, badges de conformida
 | L1 | Sim | Linters + aviso |
 | L2 | Sim | Linters + scanners + bloqueio severo |
 | L3 | Sim | Linters + scanners + policies + cobertura 100% |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Push de commit com IaC | Developers + AppSec Engineers | Linters e scanners de segurança a cada push |
+| PR/MR | Violação de política crítica detetada | Developers + AppSec Engineers | Bloqueio do merge, reportado em PR |
+| Deploy / Operação | `plan` que não passa validação mínima | Developers + AppSec Engineers | `apply` impedido |
 
 ---
 
@@ -251,6 +272,16 @@ Registry de módulos, policy de whitelist, SBOM, registos de aprovação, histó
 | L2 | Sim | Whitelist + validação automática + SBOM + digest verificado |
 | L3 | Sim | Whitelist + validação + SBOM + attestation e revisão AppSec; denylist ativa |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Governação | Referência a módulo externo novo | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Em allowlist e pinned a versão exata, sem `main` nem `latest` |
+| Governação | Publicação de módulo interno | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Testes automatizados, linting e revisão explícita antes da publicação |
+| Governação | Vulnerabilidade reportada numa atualização de módulo | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Marcação e revisão de uso obrigatória |
+| CI/CD | Referência a módulo novo no repositório | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Em allowlist, versionado sem ranges e com digest verificado |
+| CI/CD | Execução do pipeline sobre atualização de módulo | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Validação de attestation; recusa se a origem não cumprir a política |
+| CI/CD | Consumo de módulo private | AppSec Engineers + Arquitetos de Software + DevOps / SRE | Assinatura do produtor interno e revisão por AppSec |
+
 ---
 
 ### US-05 - Rastreabilidade, versionamento e naming
@@ -289,6 +320,13 @@ Ficheiro `NAMING.md`, logs de Git com commits estruturados, tags e releases no r
 | L1 | Recomendado | Naming simples + git básico |
 | L2 | Sim | Naming + convenções commit + tagging |
 | L3 | Sim | Naming + convenções + tagging semântico + CHANGELOG |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Desenvolvimento / Revisão | Commit de uma alteração de infraestrutura | DevOps / SRE + GRC / Compliance | Padrão de mensagem e ligação a ticket no commit |
+| Release | Promoção de uma release para produção | DevOps / SRE + GRC / Compliance | Tag git semântica com hash e timestamp na promoção |
+| CI/CD | Violação de convenção de naming | DevOps / SRE + GRC / Compliance | Rejeição por pre-commit hook ou linter |
 
 ---
 
@@ -329,6 +367,13 @@ PR com plan anexado, comentários de aprovação, logs de gate em pipeline, tril
 | L2 | Sim | Plan + aprovação simples |
 | L3 | Sim | Plan + dupla aprovação + janela de mudança |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| PR/MR | Submissão de PR com mudança de IaC | DevOps / SRE + AppSec Engineers | `terraform plan` executado e anexado ao PR na submissão |
+| Desenvolvimento / Revisão | `plan` revisto sem alterações inesperadas | DevOps / SRE + AppSec Engineers | Aprovação explícita com co-sign de pelo menos dois papéis |
+| Deploy / Operação | `apply` agendado para ambiente crítico (staging/prod) | DevOps / SRE + AppSec Engineers | Dupla aprovação e janela de mudança antes do `apply` |
+
 ---
 
 ### US-07 - Rastreabilidade ficheiro → recurso → ambiente
@@ -367,6 +412,13 @@ Metadata em código, tags em recursos, dashboard de rastreabilidade, script de m
 | L1 | Recomendado | Metadata em locals |
 | L2 | Sim | Metadata + tags + documentação |
 | L3 | Sim | Metadata + tags + dashboard automático de rastreabilidade |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Necessidade de identificar a origem de um recurso em produção | GRC / Compliance + Auditores Internos | Mapeamento ficheiro `.tf` (branch + commit) → recurso → ambiente disponível |
+| Auditoria | Execução de auditoria de conformidade | GRC / Compliance + Auditores Internos | Relatório de recurso, ambiente, autor, data e código |
+| Desenvolvimento / Revisão | Preservação de metadata em código | GRC / Compliance + Auditores Internos | Metadata em `locals` e tags mantidas na alteração |
 
 ---
 
@@ -407,6 +459,13 @@ Regras OPA em repositório, output de execução, logs de bloqueios, exceções 
 | L2 | Sim | OPA/Rego com enforcement, logs de bloqueios |
 | L3 | Sim | OPA/Rego + exceções formais + métricas + revisão trimestral |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Recurso com permissões amplas validado em OPA ou `conftest` | AppSec Engineers + DevOps / SRE | Rejeição automática com mensagem clara |
+| Deploy / Operação | Execução de política no pipeline | AppSec Engineers + DevOps / SRE | Bloqueio do `apply` se a política não for cumprida |
+| Governação | Registo de exceção justificada | AppSec Engineers + DevOps / SRE | Auditada e contabilizada em métricas; revisão trimestral em L3 |
+
 ---
 
 ### US-09 - Assinatura e Proveniência de artefactos IaC
@@ -441,6 +500,12 @@ Ficheiros de assinatura; `attestation.json`; *logs* de *gate*; trilha de aprova�
 | L1 | Recomendado | Assinatura de `plan` |
 | L2 | Sim | Assinatura + verificação automática |
 | L3 | Sim | Assinatura + **attestation** e *gate* bloqueante |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Desenvolvimento / Revisão | Submissão de `terraform plan` a revisão | DevOps / SRE + AppSec Engineers | `plan` assinado e com attestation do pipeline |
+| Deploy / Operação | Promoção para `prod` avaliada pelo gate | DevOps / SRE + AppSec Engineers | Rejeição de `plan`/`apply` sem assinatura válida ou attestation, antes da promoção |
 
 > **Padrão Comum:** Assinatura e verificação de proveniência ocorrem em **múltiplos contextos** (CI/CD, IaC, imagens, deploy).
 > Este US foca o contexto de **módulos e *plans* de IaC**; ver também **Cap 07-US-06** (CI/CD),
@@ -481,6 +546,12 @@ Política de segredos; configuração OIDC; *logs* de emissão/expiração.
 | L2 | Sim | OIDC obrigatório com TTL curto |
 | L3 | Sim | OIDC + *Just-In-Time* + *break-glass* auditado |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Pipeline de IaC que necessita aceder ao provider | DevOps / SRE + AppSec Engineers | Token efémero via OIDC com scope mínimo e TTL ≤ 1h |
+| Operação | Expiração do token | DevOps / SRE + AppSec Engineers | Sem reutilização nem escalada após a expiração |
+
 ---
 
 ### US-11 - Deteção e correção de *drift*
@@ -515,6 +586,12 @@ Relatórios de *drift*; PRs de correção; aprovações.
 | L1 | Sim | Auditoria mensal |
 | L2 | Sim | Quinzenal + alertas |
 | L3 | Sim | Semanal + *gate* para *drift* crítico |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Governação | Ciclo agendado de `terraform plan -refresh-only` | AppSec Engineers + DevOps / SRE | Mensal (L1), quinzenal (L2), semanal (L3) |
+| Operação | Drift crítico confirmado em `prod` | AppSec Engineers + DevOps / SRE | Tarefa de correção com aprovação antes do `apply` |
 
 ---
 
@@ -551,6 +628,12 @@ Procedimento `rollback.md`; *snapshots*; *logs* de confirmação dupla.
 | L2 | Sim | *Snapshots* automáticos |
 | L3 | Sim | *Rollback* automatizado e *kill-switch* |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Operação | Rollback acionado após um `apply` falhado | DevOps / SRE | Recursos críticos repostos no estado anterior |
+| Deploy / Operação | Operação `destroy` em `prod` | DevOps / SRE | Dupla confirmação e janela de mudança antes da execução |
+
 ---
 
 ### US-13 - Janela de mudança e aprovações por papel
@@ -582,6 +665,11 @@ Calendário de mudança; registos de aprovação; *logs* de *apply*.
 | L1 | Opcional | Aprovação simples |
 | L2 | Sim | Aprov. PO + AppSec |
 | L3 | Sim | Aprov. PO + AppSec + GRC |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Deploy / Operação | `plan` aprovado para uma alteração em `prod` | GRC / Compliance + AppSec Engineers + Auditores Internos | `apply` só na janela autorizada, com aprovações PO/AppSec/GRC |
 
 ---
 
@@ -616,6 +704,12 @@ Como **GRC / Compliance** e **AppSec Engineers**, quero **exceções registadas*
 | L1 | Sim | Aprovação única |
 | L2 | Sim | Aprovação dupla (AppSec+PO) |
 | L3 | Sim | Aprovação AppSec+GRC e *review* por sprint |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Governação | Pedido de exceção submetido a análise | GRC / Compliance + AppSec Engineers | Aprovação só com prazo e compensações; review por sprint em L3 |
+| Exceção | Exceção expirada | GRC / Compliance + AppSec Engineers | Revogação e restauro da política na expiração |
 
 ---
 
@@ -769,6 +863,13 @@ Políticas de environment protection, logs de aprovações, registos de execuç�
 | L2 | Sim | Aprovação 2nd reviewer + RBAC |
 | L3 | Sim | SoD + dupla aprovação + janela de mudança + auditoria reforçada |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| Deploy / Operação | `apply` solicitado para ambiente `prod` | GRC / Compliance + DevOps / SRE | Aprovação de pelo menos dois papéis e execução em janela de mudança |
+| Deploy / Operação | `apply` solicitado para ambiente `staging` | GRC / Compliance + DevOps / SRE | Aprovação de um segundo revisor independente |
+| Operação | Tentativa de `apply` por utilizador sem permissão | GRC / Compliance + DevOps / SRE | Bloqueio pelo pipeline (RBAC / environment protection) |
+
 ---
 
 ### US-16 - Minimização de contexto e proteção de informação sensível em IaC
@@ -808,6 +909,13 @@ Config de redaction, relatórios de secret scanning, evidência de bloqueios, re
 | L2 | Sim | Redaction automática + políticas de publicação |
 | L3 | Sim | Redaction + classificação de outputs + controlos reforçados em integrações |
 
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Publicação de `plan` e logs em PR, storage ou observabilidade | AppSec Engineers + DevOps / SRE | Redaction de segredos e campos sensíveis na publicação |
+| PR/MR | PR com outputs sensíveis analisado pelo pipeline | AppSec Engineers + DevOps / SRE | Bloqueio por secret scanning e política de exposição mínima |
+| Operação | Exportação de logs ou `plan` para sistemas externos | AppSec Engineers + DevOps / SRE | Apenas o mínimo necessário, sem topologia detalhada nem segredos |
+
 ---
 
 ### US-17 - Determinismo e reprodutibilidade do `plan`
@@ -846,6 +954,13 @@ Lockfiles, manifests de versões, logs de execução, registo de diffs justifica
 | L1 | Sim | Pinning básico |
 | L2 | Sim | Pinning + registo de versões efetivas |
 | L3 | Sim | Pinning + reexecução/verificação + revisão reforçada de upgrades |
+
+**Integração no SDLC.**
+| Fase | Trigger | Responsável | SLA |
+|---|---|---|---|
+| CI/CD | Execução de `plan` em CI | DevOps / SRE + AppSec Engineers | Providers e módulos pinados; ambiente de execução conhecido e versionado |
+| Desenvolvimento / Revisão | Reexecução de um `plan` aprovado para validação | DevOps / SRE + AppSec Engineers | Resultado funcionalmente equivalente, ou diferenças justificadas e registadas |
+| PR/MR | Proposta de alteração de versão de provider ou módulo | DevOps / SRE + AppSec Engineers | Tratada como mudança de risco: revisão reforçada e evidência adicional |
 
 ---
 

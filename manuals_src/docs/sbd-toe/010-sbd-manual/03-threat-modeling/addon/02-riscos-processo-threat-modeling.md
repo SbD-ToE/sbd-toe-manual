@@ -30,6 +30,8 @@ As omissões podem resultar de:
 
 A ausência de uma ameaça num modelo **não constitui evidência da sua inexistência**.
 
+**Relaciona.** Viola `THR-003`; materializa `MT-039`.
+
 ---
 
 ## 2. Enviesamento de perspetiva
@@ -42,6 +44,8 @@ Riscos comuns incluem:
 - sobrevalorização de cenários improváveis em detrimento de falhas sistémicas.
 
 Este enviesamento deve ser assumido como **risco inerente**, não como falha excecional.
+
+**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-043`.
 
 ---
 
@@ -61,6 +65,8 @@ A ausência de distinção clara entre:
 
 introduz ambiguidade e fragiliza a governação do risco.
 
+**Relaciona.** Viola `THR-004`; sem ameaça ligável no catálogo actual.
+
 ---
 
 ## 4. Dependência acrítica de modelos prévios
@@ -73,6 +79,8 @@ A reutilização de modelos anteriores é prática comum e legítima, mas introd
 
 Modelos herdados devem ser tratados como **hipóteses de partida**, nunca como verdade validada.
 
+**Relaciona.** Viola `THR-006`; materializa `MT-049`.
+
 ---
 
 ## 5. Uso não controlado de informação sensível
@@ -83,6 +91,8 @@ O processo de Threat Modeling envolve frequentemente:
 - decisões de mitigação críticas.
 
 Estes artefactos constituem **ativos de alto valor**, sujeitos a requisitos de confidencialidade, controlo de acesso e retenção.
+
+**Relaciona.** Sem requisito nem ameaça ligáveis no catálogo actual.
 
 ---
 
@@ -96,6 +106,8 @@ Um modelo de ameaças pode parecer:
 e ainda assim estar incorreto ou incompleto.
 
 A plausibilidade não substitui validação, revisão e evidência.
+
+**Relaciona.** Viola `THR-007`; materializa `MT-045`.
 
 ---
 

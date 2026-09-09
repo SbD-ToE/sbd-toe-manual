@@ -107,9 +107,9 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 ## ⚠️ 3. Caveats ou limitações da prescrição
 
 - Nem todos os controlos podem ser aplicados a todas as arquiteturas - o modelo deve ser adaptado.
-- Modelos inconsistentes, incompletos ou desatualizados **geram risco não rastreável**.
-- Threat modeling sem arquitetura clara **é ineficaz**.
-- Exceções não documentadas **invalidam a rastreabilidade e o controlo de risco residual**.
+- Modelos inconsistentes, incompletos ou desatualizados **geram risco não rastreável**. **Relaciona.** Viola `ARC-010`; materializa `MT-059`.
+- Threat modeling sem arquitetura clara **é ineficaz**. **Relaciona.** Viola `ARC-005`; materializa `MT-046`.
+- Exceções não documentadas **invalidam a rastreabilidade e o controlo de risco residual**. **Relaciona.** Viola `CLA-007`; materializa `MT-066`.
 
 ---
 

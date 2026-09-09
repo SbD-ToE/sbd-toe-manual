@@ -105,6 +105,8 @@ e passa a depender de **contexto implícito**, muitas vezes não versionado nem 
 - Logs completos de execução;
 - Associação clara a commit/hash.
 
+**Relaciona.** Viola `CIC-001`; materializa `MT-130`.
+
 ---
 
 ## ⚠️ Risco R2 - Confusão entre sugestão automática e decisão efetiva
@@ -143,6 +145,8 @@ um *soft gate* mal definido transforma-se num *hard bypass*.
 - Timestamp e contexto da aprovação;
 - Referência à evidência considerada.
 
+**Relaciona.** Viola `CIC-004`; materializa `MT-126`.
+
 ---
 
 ## ⚠️ Risco R3 - Evidência plausível sem execução empírica
@@ -180,6 +184,8 @@ No CI/CD moderno, a aparência de rigor pode mascarar a ausência de validação
 - Artefactos produzidos;
 - Códigos de retorno;
 - Referência explícita à ação executada.
+
+**Relaciona.** Viola `CIC-005`; materializa `MT-129`.
 
 ---
 
@@ -224,6 +230,8 @@ Qualquer dependência externa ou mecanismo de exportação implícita constitui 
 - Revisões documentadas;
 - Evidência de controlo de logs.
 
+**Relaciona.** Viola `CIC-003`; materializa `MT-120`, `MT-131`.
+
 ---
 
 ## ⚠️ Risco R5 - Diluição de responsabilidade operacional
@@ -257,6 +265,8 @@ A ausência de um responsável humano explícito destrói a noção de não-rep�
 - Mapping papel → ação;
 - Registos de promoção;
 - Histórico completo de decisões.
+
+**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-128`.
 
 ---
 

@@ -72,6 +72,8 @@ Este ficheiro identifica onde esse modelo falha.
 * Registo versionado da decisão.
 * Ligação clara entre sinal técnico e decisão tomada.
 
+**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-128`.
+
 ---
 
 ### 2️⃣ Ilusão de segurança por automação bem-sucedida
@@ -98,6 +100,8 @@ Este ficheiro identifica onde esse modelo falha.
 * Justificação documentada para aceitação ou mitigação.
 * Ligação a critérios de risco organizacionais.
 
+**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-149`.
+
 ---
 
 ### 3️⃣ Promoção automática entre ambientes
@@ -123,6 +127,8 @@ Este ficheiro identifica onde esse modelo falha.
 * Registos de promoção com responsável identificado.
 * Evidência de validação por ambiente.
 
+**Relaciona.** Viola `CIC-004`; sem ameaça ligável no catálogo actual.
+
 ---
 
 ### 4️⃣ Proveniência verificada ≠ confiança concedida
@@ -146,6 +152,8 @@ Este ficheiro identifica onde esse modelo falha.
 
 * Política explícita de aceitação de imagens.
 * Registos de decisão associados à proveniência.
+
+**Relaciona.** Viola `CNT-009`; materializa `MT-162`.
 
 ---
 
@@ -171,6 +179,8 @@ Este ficheiro identifica onde esse modelo falha.
 
 * Identificadores correlacionáveis.
 * Retenção adequada de registos.
+
+**Relaciona.** Viola `CIC-005`; materializa `MT-155`, `MT-164`.
 
 ---
 

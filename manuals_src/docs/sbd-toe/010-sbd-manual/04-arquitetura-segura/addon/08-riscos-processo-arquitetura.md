@@ -27,6 +27,8 @@ Consequências típicas:
 
 No SbD-ToE, **arquitetura é decisão**, e deve ser tratada como tal.
 
+**Relaciona.** Viola `ARC-004`; materializa `MT-065`.
+
 ---
 
 ## 2. Decisões arquiteturais sem responsável explícito
@@ -37,6 +39,8 @@ Decisões arquiteturais sem *owner* claro introduzem:
 - risco de deriva arquitetural ao longo do tempo.
 
 Toda a decisão arquitetural relevante deve ter um responsável identificado e uma data/contexto de aprovação.
+
+**Relaciona.** Viola `ARC-004`; sem ameaça ligável no catálogo actual.
 
 ---
 
@@ -50,6 +54,8 @@ Riscos associados:
 - limitações de controlo, auditoria e saída (*exit strategy*).
 
 A aceitação de uma dependência externa deve ser tratada como **decisão arquitetural explícita**.
+
+**Relaciona.** Viola `ARC-004`; sem ameaça ligável no catálogo actual.
 
 ---
 
@@ -68,6 +74,8 @@ Ignorar estes fluxos conduz a:
 
 Estes fluxos fazem parte da arquitetura e devem ser tratados como tal.
 
+**Relaciona.** Viola `ARC-008`; sem ameaça ligável no catálogo actual.
+
 ---
 
 ## 5. Componentes opacos ou não determinísticos
@@ -85,6 +93,8 @@ A arquitetura deve prever:
 - mecanismos de degradação segura;
 - observabilidade suficiente para detetar desvios.
 
+**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-062`.
+
 ---
 
 ## 6. Reutilização acrítica de arquiteturas anteriores
@@ -96,6 +106,8 @@ Reutilizar arquiteturas existentes é prática comum, mas torna-se arriscado qua
 
 Arquiteturas herdadas devem ser tratadas como **hipóteses iniciais**, não como verdades validadas.
 
+**Relaciona.** Viola `ARC-007`; materializa `MT-064`.
+
 ---
 
 ## 7. Divergência entre arquitetura documentada e arquitetura real
@@ -106,6 +118,8 @@ Quando a arquitetura documentada não reflete o sistema efetivamente implementad
 - a evidência perde valor.
 
 Este risco exige mecanismos de revisão periódica e *gates* arquiteturais explícitos.
+
+**Relaciona.** Viola `ARC-013`; materializa `MT-069`.
 
 ---
 

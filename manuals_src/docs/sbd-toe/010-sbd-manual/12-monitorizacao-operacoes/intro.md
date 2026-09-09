@@ -175,10 +175,10 @@ Sem esta matriz de responsabilidades, os controlos técnicos tornam-se invisíve
 
 É frequente cair em erros como:  
 
-- **Demasiados alertas** → sem tuning, gera-se *alert fatigue*.  
-- **Logs não estruturados** → impedem correlação e atrasam investigações.  
-- **Falta de integração com IRP** → deteção que não conduz a resposta.  
-- **Retenção insuficiente** → sem histórico, não há auditoria nem forense.  
+- **Demasiados alertas** → sem tuning, gera-se *alert fatigue*. **Relaciona.** Viola `OPS-005`; materializa `MT-201`.  
+- **Logs não estruturados** → impedem correlação e atrasam investigações. **Relaciona.** Viola `OPS-001`; materializa `MT-202`.  
+- **Falta de integração com IRP** → deteção que não conduz a resposta. **Relaciona.** Viola `OPS-007`; materializa `MT-205`.  
+- **Retenção insuficiente** → sem histórico, não há auditoria nem forense. **Relaciona.** Viola `OPS-003`; materializa `MT-198`.  
 
 Reconhecer estes riscos desde início ajuda a construir sistemas mais robustos.
 

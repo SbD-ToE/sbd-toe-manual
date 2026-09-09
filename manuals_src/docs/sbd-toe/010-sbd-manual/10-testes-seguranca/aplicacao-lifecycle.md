@@ -865,7 +865,7 @@ Como **AppSec Engineer**, quero **avaliar criticamente a cobertura real dos test
 
 :::
 
-**Artefactos & evidências.** Relatório de cobertura comentado, list
+**Artefactos & evidências.** Relatório de cobertura comentado, lista de limitações e áreas não testadas, registo de ameaças não cobertas, plano de mitigação por lacuna com owner e prazo, e registo de revisão e aprovação por AppSec/QA.  
 
 
 **Integração no SDLC.**

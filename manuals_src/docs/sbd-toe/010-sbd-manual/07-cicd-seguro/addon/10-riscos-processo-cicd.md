@@ -266,7 +266,7 @@ A ausência de um responsável humano explícito destrói a noção de não-rep�
 - Registos de promoção;
 - Histórico completo de decisões.
 
-**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-128`.
+**Relaciona.** Viola `CIC-011`; materializa `MT-128`.
 
 ---
 

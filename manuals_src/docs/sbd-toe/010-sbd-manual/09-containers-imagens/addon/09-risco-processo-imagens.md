@@ -72,7 +72,7 @@ Este ficheiro identifica onde esse modelo falha.
 * Registo versionado da decisão.
 * Ligação clara entre sinal técnico e decisão tomada.
 
-**Relaciona.** Sem requisito ligável no catálogo actual; materializa `MT-128`.
+**Relaciona.** Viola `CIC-011`; materializa `MT-128`.
 
 ---
 

@@ -359,7 +359,7 @@ def test_calculate_discount_against_requirements():
 ```
 
 **Checklist de validação de testes gerados**:
-- [ ] Teste valida **requisito** (REQ-XXX), não implementação?
+- [ ] Teste valida **requisito**, não implementação?
 - [ ] Teste cobre **casos negativos** (inputs inválidos, falhas)?
 - [ ] Teste é **independente** de detalhes de implementação?
 - [ ] Teste **falharia** se implementação violar requisito?

@@ -43,7 +43,7 @@ Rever **classificação de criticidade** sempre que houver alterações técnica
 - [US-06: Verificação de cobertura de ameaças](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-06---mapeamento-de-ameaças-por-nível-de-risco) - Validar adequação de controlos
 
 ### Cap. 02 - Requisitos de Segurança
-Estabelecer e manter **catálogo de requisitos de segurança** (REQ-XXX) versionado e auditável ao longo do SDLC.
+Estabelecer e manter **catálogo de requisitos de segurança** versionado e auditável ao longo do SDLC.
 
 **User Stories:**
 - [US-04: Catálogo de Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-04---rastreabilidade-de-requisitos) - Aplicação consistente e rastreável

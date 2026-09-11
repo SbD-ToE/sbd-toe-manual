@@ -670,7 +670,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
   **Então** o componente é explicitamente identificado e classificado  
 - **E** o impacto em segurança, auditoria e controlo é documentado  
 - **E** são definidos controlos arquiteturais adequados (isolamento, supervisão, *fallback*, logging)  
-- **E** existe rastreabilidade entre o componente, ameaças relevantes e requisitos ARC-XXX aplicáveis
+- **E** existe rastreabilidade entre o componente, ameaças relevantes e requisitos de arquitectura aplicáveis
 
 **Checklist.**
 - [ ] Componentes não determinísticos identificados na ficha de arquitetura
@@ -681,7 +681,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
   - [ ] Controlo operacional e mecanismos de *fallback*
 - [ ] Fronteiras de confiança e isolamento revistos (quando aplicável)
 - [ ] Logging e evidência definidos para decisões relevantes
-- [ ] Rastreabilidade documentada (componente ↔ ameaça ↔ controlo ↔ requisito ARC-XXX)
+- [ ] Rastreabilidade documentada (componente ↔ ameaça ↔ controlo ↔ requisito de arquitectura)
 - [ ] Evidência arquivada em repositório de arquitetura
 :::
 
@@ -704,7 +704,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero identificar e governar 
 
 **Ligações úteis.**
 - 🔗 Cap. 3 - Threat Modeling  
-- 🔗 Requisitos ARC-XXX aplicáveis à arquitetura
+- 🔗 Requisitos de arquitectura aplicáveis à arquitetura
 
 ---
 

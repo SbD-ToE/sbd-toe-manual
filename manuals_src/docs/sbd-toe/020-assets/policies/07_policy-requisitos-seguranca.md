@@ -33,12 +33,12 @@ O catálogo baseline é versionado, mantido por AppSec e revisto pelo menos anua
 
 ### 3.2 Catálogo do projeto
 
-No arranque de cada projeto (ou na integração de uma aplicação existente no modelo SbD-ToE), deve ser criado um **catálogo de requisitos do projeto** (`REQ-XXX`), derivado da baseline organizacional e filtrado pelo nível de criticidade da aplicação.
+No arranque de cada projeto (ou na integração de uma aplicação existente no modelo SbD-ToE), deve ser criado um **catálogo de requisitos do projeto**, derivado da baseline organizacional e filtrado pelo nível de criticidade da aplicação.
 
 **Requisitos do catálogo do projeto:**
 
 - [ ] Derivado da baseline organizacional com filtro explícito pelo nível L1/L2/L3
-- [ ] Identificadores únicos por requisito (`REQ-XXX`)
+- [ ] Identificadores únicos por requisito
 - [ ] Owner definido e periodicidade de revisão estabelecida
 - [ ] Mapeamento para critérios de validação associados
 - [ ] Versionado no repositório do projeto ou plataforma de gestão de requisitos
@@ -154,7 +154,7 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
-| Catálogo de requisitos do projeto (`REQ-XXX`) | `docs/req/` ou plataforma de gestão | Enquanto a aplicação estiver ativa |
+| Catálogo de requisitos do projeto | `docs/req/` ou plataforma de gestão | Enquanto a aplicação estiver ativa |
 | Matriz de controlos por nível | `docs/security/` | Enquanto a aplicação estiver ativa |
 | Backlog com tags `SEC-Lx-*` | Ferramenta de gestão de projetos | Histórico preservado |
 | Evidências de validação por requisito | Repositório de evidências / CI/CD | Conforme Política de Rastreabilidade |

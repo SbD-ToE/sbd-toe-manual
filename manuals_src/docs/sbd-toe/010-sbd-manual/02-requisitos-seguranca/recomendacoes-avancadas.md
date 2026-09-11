@@ -21,7 +21,7 @@ Este anexo apresenta **práticas avançadas não obrigatórias** que podem ser a
 
 - Usar ALM com suporte a rastreabilidade (ex: Codebeamer, Jama, Polarion, Jira + plugins)
 - Criar **ligações bidirecionais** entre requisitos e artefactos
-- Automatizar extração de coverage por requisito (ex: CI valida que REQ-XXX está coberto)
+- Automatizar extração de coverage por requisito (ex: CI valida que cada requisito está coberto)
 
 ---
 

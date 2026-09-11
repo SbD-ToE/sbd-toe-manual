@@ -57,7 +57,7 @@ Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verba
 | Papel / Função                      | Responsabilidades-chave                                                                 |
 | ----------------------------------- | ---------------------------------------------------------------------------------------- |
 | Product Owner                  | Assegurar integração no backlog; garantir que requisitos relevantes existem como trabalho rastreável |
-| Developer                           | Implementar controlos; aplicar tags; ligar mudanças a `SEC-Lx-*` e/ou `REQ-XXX`; propor exceções quando necessário |
+| Developer                           | Implementar controlos; aplicar tags; ligar mudanças a `SEC-Lx-*` e/ou ao requisito do catálogo; propor exceções quando necessário |
 | QA                                  | Definir critérios de aceitação e validação; garantir cobertura de testes e evidência     |
 | Arquitetos de Software / Scrum Master / Team Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
 | AppSec Engineer                     | Validar aplicação; aprovar exceções; garantir alinhamento e consistência global          |
@@ -165,7 +165,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
   **Então** a exceção fica com owner definido, alerta configurado antes da expiração e reaprovação exigida para renovação
 
 **Critérios de aceitação (DoD).**
-- [ ] Exceção com ID e ligação ao requisito (`SEC-Lx-...` e/ou `REQ-XXX`) registada
+- [ ] Exceção com ID e ligação ao requisito (`SEC-Lx-...` e/ou ID do requisito) registada
 - [ ] TTL definido conforme a política master de exceções ([Processo Canónico de Gestão de Exceções](/sbd-toe/sbd-manual/governanca-contratacao/addon/processo-excecoes), Cap. 14): prazo máximo por defeito, extensão só com reavaliação
 - [ ] Owner designado e destinatários de alertas definidos
 - [ ] Aprovação técnica por AppSec documentada; aprovação executiva quando aplicável em L3
@@ -371,7 +371,7 @@ No arranque do projeto e sempre que existam alterações de âmbito, deve existi
 
 :::userstory
 **História.**  
-Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de segurança do projeto (REQ-XXX), para assegurar aplicação consistente, versionada e auditável ao longo do SDLC.
+Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de segurança do projeto, para assegurar aplicação consistente, versionada e auditável ao longo do SDLC.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que a aplicação tem criticidade L1–L3 definida  
@@ -379,7 +379,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
   **Então** o catálogo fica versionado, com owner definido e ligação a critérios de validação
 
 **Checklist.**
-- [ ] Catálogo `REQ-XXX` criado/atualizado e versionado  
+- [ ] Catálogo de requisitos do projeto criado/atualizado e versionado  
 - [ ] Owner e periodicidade de revisão definidos  
 - [ ] Mapeamento para critérios de validação e tags de backlog  
 - [ ] Localização e link persistentes no repositório
@@ -415,17 +415,17 @@ Cada requisito ativo deve ter validação e evidência associadas.
 
 :::userstory
 **História.**  
-Como **QA/AppSec/TL**, quero validar cada requisito REQ-XXX segundo os critérios definidos, para assegurar evidência objetiva e rastreável do seu cumprimento.
+Como **QA/AppSec/TL**, quero validar cada requisito do catálogo segundo os critérios definidos, para assegurar evidência objetiva e rastreável do seu cumprimento.
 
 **Critérios de aceitação (BDD).**
-- **Dado** um requisito REQ-XXX com critérios definidos  
+- **Dado** um requisito do catálogo com critérios definidos  
   **Quando** executo a validação associada  
   **Então** registo o resultado e anexo evidência ao requisito
 
 **Checklist.**
 - [ ] Método de validação definido por requisito  
 - [ ] Execução registada por sprint/release  
-- [ ] Resultado e evidência ligados ao REQ-XXX  
+- [ ] Resultado e evidência ligados ao requisito  
 - [ ] Revisão e aprovação por AppSec quando aplicável
 
 :::
@@ -472,7 +472,7 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD execute verifica
 - [ ] DAST em staging quando aplicável (L2/L3 e alterações de exposição)
 - [ ] Geração de SBOM (CycloneDX ou SPDX) anexada ao artefacto
 - [ ] Assinatura do artefacto e armazenamento de assinatura/proveniência
-- [ ] `policy-check` valida tags `SEC-Lx-*` e links `REQ-XXX` no PR
+- [ ] `policy-check` valida tags `SEC-Lx-*` e links ao requisito no PR
 - [ ] Sumário do gate ligado ao PR/issue
 
 :::
@@ -540,7 +540,7 @@ Tags e referências devem estar presentes para garantir rastreabilidade.
 
 :::userstory
 **História.**  
-Como **Developer** e **QA**, quero que o pipeline valide a presença e conformidade de tags `SEC-Lx-*` e referências a `REQ-XXX`, para garantir rastreabilidade e acionamento correto de checks automáticas.
+Como **Developer** e **QA**, quero que o pipeline valide a presença e conformidade de tags `SEC-Lx-*` e referências ao requisito do catálogo, para garantir rastreabilidade e acionamento correto de checks automáticas.
 
 **Critérios de aceitação (BDD).**
 - **Dado** um PR com mudança funcional
@@ -550,7 +550,7 @@ Como **Developer** e **QA**, quero que o pipeline valide a presença e conformid
 **Critérios de aceitação (DoD).**
 - [ ] Job `tag-check` presente e executável
 - [ ] Validação de formato conforme taxonomia do capítulo
-- [ ] Verificação de referência/ligação a `REQ-XXX` quando aplicável
+- [ ] Verificação de referência/ligação ao requisito quando aplicável
 - [ ] Comentário automático no PR com instruções quando falhar
 
 :::
@@ -610,20 +610,20 @@ Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero ga
 **Critérios de aceitação (BDD).**
 - **Dado** que é utilizado um assistente automatizado para gerar código, configuração ou testes  
   **Quando** o output é integrado no repositório  
-  **Então** o artefacto é sujeito a revisão humana, validação automática em CI/CD e ligado a requisitos `REQ-XXX` aplicáveis
+  **Então** o artefacto é sujeito a revisão humana, validação automática em CI/CD e ligado aos requisitos do catálogo aplicáveis
 
 **Critérios de aceitação (DoD).**
 - [ ] Código/configuração gerada identificada no PR/MR (nota ou template de PR)
 - [ ] Revisão humana efetuada e aprovada (code review formal)
 - [ ] Gates de segurança em CI/CD executados (SAST, SCA e outros aplicáveis)
-- [ ] Requisitos `REQ-XXX` e tags `SEC-Lx-*` referenciados no PR/MR
+- [ ] Requisitos do catálogo e tags `SEC-Lx-*` referenciados no PR/MR
 - [ ] Evidência de validação arquivada (logs de pipeline, relatórios, approvals)
 - [ ] Nenhum segredo, credencial ou dado sensível incluído em prompts ou artefactos gerados
 
 :::
 
 **Artefactos & evidências.**
-- PR/MR com referência a `REQ-XXX` e tags `SEC-Lx-*`
+- PR/MR com referência ao requisito e tags `SEC-Lx-*`
 - Logs de CI/CD (SAST, SCA, testes)
 - Aprovação de code review
 - Relatório de gates de segurança
@@ -875,7 +875,7 @@ Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compar
 | ------------------------------- | -------------------------- | ------------------------------------- |
 | Matriz de requisitos por risco  | Markdown / tabela          | `docs/` ou Wiki de produto            |
 | Cartões com tags `SEC-*`        | Board / GitHub / Jira      | Backlog da equipa                     |
-| Catálogo do projeto (`REQ-XXX`) | Markdown / ficheiros       | `docs/req/` (ou equivalente)          |
+| Catálogo de requisitos do projeto | Markdown / ficheiros       | `docs/req/` (ou equivalente)          |
 | Justificação de exceções        | Markdown / issue template  | `excecoes/` ou ferramenta GRC         |
 | Relatórios de rastreabilidade   | Export de board / CSV      | Arquivo de auditoria                  |
 | Planos de teste e evidências    | YAML / Markdown / CI logs  | Repositório QA e/ou CI/CD             |

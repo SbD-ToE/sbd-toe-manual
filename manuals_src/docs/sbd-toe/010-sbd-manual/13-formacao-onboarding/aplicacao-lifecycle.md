@@ -301,7 +301,7 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 **Artefactos & evidências.**  
 - Diagramas (draw.io, Lucidchart)  
 - Atas de sessão  
-- Matriz de riscos com rastreabilidade a REQ-XXX  
+- Matriz de riscos com rastreabilidade aos requisitos do Cap. 02  
 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |

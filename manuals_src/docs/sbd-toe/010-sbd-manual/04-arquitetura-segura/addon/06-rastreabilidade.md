@@ -21,13 +21,13 @@ Sem rastreabilidade, uma arquitectura pode estar correcta mas não ser *demonstr
 O modelo liga cinco elementos em cadeia:
 
 ```
-Ameaça (Cap. 03)  →  Requisito ARC-XXX  →  Decisão (ADR)  →  Controlo implementado  →  Evidência
+Ameaça (Cap. 03)  →  Requisito de arquitectura  →  Decisão (ADR)  →  Controlo implementado  →  Evidência
 ```
 
 | Elemento | Descrição | Artefacto típico |
 |----------|-----------|-----------------|
 | **Ameaça** | Ameaça identificada no threat modeling (Cap. 03) - STRIDE, PASTA ou equivalente | Registo de TM, DFD anotado |
-| **Requisito ARC-XXX** | Requisito canónico do catálogo deste capítulo que mitiga a ameaça | `01-catalogo-requisitos.md` |
+| **Requisito de arquitectura** | Requisito canónico do catálogo deste capítulo que mitiga a ameaça | `01-catalogo-requisitos.md` |
 | **Decisão (ADR)** | Architecture Decision Record que documenta como o requisito é satisfeito no contexto do projecto | `adr/ADR-xxxx.md`, secção de decisões em `solution-architecture.md` |
 | **Controlo implementado** | A medida técnica ou processual em vigor que concretiza a decisão | Configuração de rede, política de admissão, processo de revisão |
 | **Evidência** | Artefacto verificável que comprova o controlo - versionado, reproduzível e auditável | Diagrama versionado, log de CI/CD, ata de revisão, checklist preenchido |

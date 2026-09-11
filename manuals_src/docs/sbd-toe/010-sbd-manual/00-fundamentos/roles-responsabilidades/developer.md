@@ -40,7 +40,7 @@ Fornecer informação técnica sobre **dependências, integrações e impacto op
 
 **User Stories:**
 - [US-01: Classificação inicial da aplicação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-01---classificação-inicial-da-aplicação) - Aplicar modelo E+D+I para determinar nível L1–L3
-- [US-02: Aplicação da matriz de controlo](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-02---aplicação-da-matriz-de-controlo) - Mapear requisitos para REQ-XXX do Cap. 02
+- [US-02: Aplicação da matriz de controlo](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-02---aplicação-da-matriz-de-controlo) - Mapear requisitos para os requisitos do Cap. 02 do Cap. 02
 
 ### Cap. 02 - Requisitos de Segurança
 Implementar **requisitos mínimos de segurança** derivados da classificação, integrando-os no *definition of done* e garantindo conformidade em cada entrega.

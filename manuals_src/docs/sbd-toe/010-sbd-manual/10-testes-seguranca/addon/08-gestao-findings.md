@@ -47,7 +47,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 1. **Centralizar todos os findings num sistema consolidado** (ex: DefectDojo, Jira com plugins, Vulcan, Security Hub);
 2. **Criar critérios objetivos de triagem** (ex: CWE, OWASP Top 10, risco organizacional);
-3. **Associar cada finding a metadados rastreáveis**: commit, versão, módulo, requisito (REQ-XXX);
+3. **Associar cada finding a metadados rastreáveis**: commit, versão, módulo, requisito;
 4. **Integrar findings no backlog da equipa com estado e SLA definidos**;
 5. **Estabelecer fluxo formal: triado → aceite → corrigido → validado**;
 6. **Consolidar dados de múltiplas ferramentas com correlação de duplicados e false positives**.
@@ -73,7 +73,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 | Documento                       | Relevância estratégica                        |
 |--------------------------------|------------------------------------------------|
-| Capítulo 02 - Requisitos       | Valida requisitos e permite rastreabilidade (REQ-XXX) |
+| Capítulo 02 - Requisitos       | Valida requisitos e permite rastreabilidade ao requisito |
 | Capítulo 06 - Desenvolvimento  | Findings evidenciam falhas recorrentes ou violação de padrões seguros |
 | Capítulo 07 - CI/CD Seguro     | Findings originados em jobs de validação contínua |
 | `01-sast.md`, `02-dast.md`     | Produzem findings que devem ser triados       |

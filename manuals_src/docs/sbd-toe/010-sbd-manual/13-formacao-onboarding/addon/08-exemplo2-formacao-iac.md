@@ -34,7 +34,7 @@ Capacitar as equipas técnicas para:
 | Bloco                     | Duração | Objetivo                                                              |
 |--------------------------|---------|-----------------------------------------------------------------------|
 | Introdução               | 10 min  | Contexto e importância de segurança em IaC                            |
-| Requisitos `IAC-XXX`     | 20 min  | Apresentação dos requisitos normativos e ligação a más práticas reais|
+| Requisitos de IaC        | 20 min  | Apresentação dos requisitos normativos e ligação a más práticas reais|
 | Revisão de PR inseguro   | 20 min  | Exercício prático com deteção de falhas e discussão em grupo         |
 | Integração com CI/CD     | 15 min  | Demonstração de pipelines com validações automáticas (tfsec, OPA, etc.) |
 | Quiz + validação         | 10 min  | Questionário com feedback imediato                                    |
@@ -67,7 +67,7 @@ Capacitar as equipas técnicas para:
 - Tarefas de backlog técnico: `[SEC] Validar plano Terraform com tfsec` / `[SEC] Adicionar tagging obrigatório`
 - Associar ao **processo de exceções formais** descrito no capítulo
 - Criar cartão ou história do tipo:  
-  `Como DevOps quero validar todos os PRs de IaC com tfsec e driftctl, para garantir conformidade com os requisitos IAC-XXX.`
+  `Como DevOps quero validar todos os PRs de IaC com tfsec e driftctl, para garantir conformidade com os requisitos de IaC.`
 
 ---
 
@@ -78,7 +78,7 @@ Capacitar as equipas técnicas para:
 | Capítulo 08 - IaC Seguro       | Fonte principal de requisitos e práticas (IAC-001 a IAC-013) |
 | Capítulo 07 - CI/CD Seguro     | Integração com pipelines e execuções isoladas             |
 | Capítulo 04 - Arquitetura      | Impacto estrutural das configurações e módulos reutilizáveis|
-| Capítulo 02 - Requisitos       | Correspondência com REQ-XXX relacionados com segredos, permissões, segregação |
+| Capítulo 02 - Requisitos       | Correspondência com os requisitos do Cap. 02 relacionados com segredos, permissões, segregação |
 
 ---
 

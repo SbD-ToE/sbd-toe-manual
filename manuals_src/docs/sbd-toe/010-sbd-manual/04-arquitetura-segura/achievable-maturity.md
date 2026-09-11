@@ -23,7 +23,7 @@ Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:architecture` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:requirements` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:owasp-dsomm-architecture-requirements-risk:risk-analysis` | OWASP DSOMM | Architecture, Requirements, Risk | external | derived |
-| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Requisitos ARC-XXX, rastreabilidade, zonas de confiança | external | derived |
+| MaturityMapping | `04-arquitetura-segura:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Requisitos de arquitectura, rastreabilidade, zonas de confiança | external | derived |
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:1` | OWASP SAMM | Design → Architecture & Design | external | derived |
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:2` | OWASP SAMM | Design → Architecture & Design | external | derived |
 | MaturityMapping | `04-arquitetura-segura:maturity:owasp-samm:owasp-samm-design-architecture-design:3` | OWASP SAMM | Design → Architecture & Design | external | derived |
@@ -42,9 +42,9 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 | Framework | Framework area | Coverage summary | Manual section anchor | Confidence | §26 label |
 |---|---|---|---|---|---|
 | OWASP DSOMM | Architecture, Requirements, Risk | Segmentação, zonas de confiança, tratamento explícito | `achievable-maturity.md` | 0.90 | Explícito |
-| OWASP DSOMM | Architecture, Requirements, Risk | Requisitos formais por tipo de componente (ARC-XXX) | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | Architecture, Requirements, Risk | Requisitos formais por tipo de componente | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP DSOMM | Architecture, Requirements, Risk | Integração com threat modeling e aceitação de risco por exceção | `achievable-maturity.md` | 0.90 | Explícito |
-| OWASP DSOMM | — | Requisitos ARC-XXX, rastreabilidade, zonas de confiança | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP DSOMM | — | Requisitos de arquitectura, rastreabilidade, zonas de confiança | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP SAMM | Design → Architecture & Design | Arquitetura definida informalmente | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP SAMM | Design → Architecture & Design | Documentação com validação proporcional | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP SAMM | Design → Architecture & Design | Integração contínua e revisão automatizada | `achievable-maturity.md` | 0.90 | Explícito |

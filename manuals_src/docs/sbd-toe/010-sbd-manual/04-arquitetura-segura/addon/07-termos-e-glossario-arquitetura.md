@@ -41,7 +41,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 
 
 ## 📘 Convenções Gerais {#convencoes-gerais}
-- **ARC-XXX**: identificador de requisito arquitetural definido no *catálogo* do capítulo.  
+- **Requisito de arquitectura**: identificador do catálogo do capítulo, na forma `ARC-001` a `ARC-015`.  
 - **AuthN / AuthZ**: Autenticação / Autorização.  
 - **L1–L3**: níveis de **criticidade da aplicação** (não maturidade organizacional).  
 - **Artefacto**: documento ou evidência versionada (Markdown, issue, ticket, export CI/CD).  
@@ -55,9 +55,9 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | **Fronteira de Confiança (*Trust Boundary*)** | Delimitação explícita onde muda o nível de confiança entre componentes/serviços, equipas ou terceiros. | Integrações internas/externas, multitenancy, interfaces expostas. | `trust-boundaries.md`, `integration-review.md`, diagramas C4/DFD anotados. |
 | **Arquitetura Viva** | Conjunto de *trigger* e rotinas que mantêm a documentação e controlos sincronizados com a realidade (evitar *drift*). | Após eventos definidos (ver “Triggers”). | `arquitetura-triggers.md`, commits/PRs de atualização, notas de *review*. |
 | **Drift Arquitetural** | Divergência entre o desenho documentado e a implementação real em runtime/pipeline. | Mudanças rápidas, *hotfixes*, alterações infra, *feature flags*. | Issues de desalinhamento, diffs nos diagramas, *logs* de validação CI/CD. |
-| **Exceção Arquitetural** | Desvio aprovado a um requisito ARC-XXX com controlo compensatório e prazo. | Quando o custo/tempo inviabiliza cumprimento imediato sem comprometer segurança de base. | `excecao-arquitetural.md`, decisão e prazo, *owner* do risco, *review* periódico. |
+| **Exceção Arquitetural** | Desvio aprovado a um requisito de arquitectura com controlo compensatório e prazo. | Quando o custo/tempo inviabiliza cumprimento imediato sem comprometer segurança de base. | `excecao-arquitetural.md`, decisão e prazo, *owner* do risco, *review* periódico. |
 | **Controlo Compensatório** | Medida alternativa que reduz risco quando o controlo primário não é possível. | Em exceções, *workarounds*, fases transitórias. | Plano de compensação, *evidence logs*, monitorização. |
-| **Sincronização TM ↔ Arquitetura** | Atualização consistente entre o **modelo de ameaças** (Cap. 03) e as decisões/diagramas de arquitetura. | Antes de *builds* significativos, depois de ADR/integração nova. | `tm-sync-arquitetura.md`, ligações ameaça → controlo → ARC-XXX. |
+| **Sincronização TM ↔ Arquitetura** | Atualização consistente entre o **modelo de ameaças** (Cap. 03) e as decisões/diagramas de arquitetura. | Antes de *builds* significativos, depois de ADR/integração nova. | `tm-sync-arquitetura.md`, ligações ameaça → controlo → requisito de arquitectura. |
 | **Ficha de Arquitetura** | Documento de solução com decisões, *rationale* e controlos de segurança aplicados. | Em cada projeto/épico/macro-funcionalidade com impacto estrutural. | `solution-architecture.md`, anexos com controlos, ligações a ADR/diagramas. |
 | **Checklist de Arquitetura (Go-live)** | Lista de verificação final dos controlos e exceções aprovadas. | *Gate* de release. | `checklist-arquitetura.md`, assinaturas QA/AppSec/Arquiteto. |
 | ***Triggers** | Eventos que obrigam a revisão arquitetural. | Ver tabela “Triggers de revisão de Arquitetura”. | `arquitetura-triggers.md`, *tasks* de atualização, PRs. |
@@ -73,7 +73,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | Incidente ou *near-miss* | Retroalimentar controlos, ajustar desenho | RCA, *post-mortem*, atualização de controlos |
 | Ameaça emergente (*threat intel*) | Rever cobertura e priorização | `tm-sync-arquitetura.md` |
 
-## 🧩 Mapa rápido: ARC-XXX → Prática/Artefacto
+## 🧩 Mapa rápido: requisito de arquitectura → Prática/Artefacto
 
 | ARC-ID | Prática associada | Artefacto esperado |
 |---|---|---|
@@ -83,9 +83,9 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | **ARC-008 - Fluxos de dados entre zonas protegidos** | DFD com controlos explícitos em cada fronteira de confiança | `trust-boundaries.md`, DFD versionado em repositório |
 
 ## 🔄 Como usar este jargão nas User Stories 
-- **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (ARC-XXX).  
+- **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (requisito de arquitectura).  
 - **US-09 (Trust Boundaries)**: exigir *inventário de integrações* e matriz de confiança; apontar AuthN/AuthZ/TLS/segregação.  
-- **US-10 (TM ↔ Arquitetura)**: garantir ligação ameaça → controlo → ARC-XXX nos artefactos.  
+- **US-10 (TM ↔ Arquitetura)**: garantir ligação ameaça → controlo → requisito de arquitectura nos artefactos.  
 - **US-11 (Exceções)**: incluir prazo, controlo compensatório, *owner* e *review* periódico.  
 - **US-12 (Arquitetura Viva)**: publicar a lista de trigger e evidenciar execução quando ocorrem.
 

@@ -69,7 +69,7 @@ As ameaças identificadas incluíram:
 * **Repudiation**: alterações sem evidência ou responsabilização clara;
 * **Elevation of Privilege**: permissões IAM excessivas introduzidas por erro humano ou automatização.
 
-Cada ameaça foi mapeada para requisitos `IAC-XXX` e respetivos controlos técnicos no pipeline.
+Cada ameaça foi mapeada para requisitos de IaC e respetivos controlos técnicos no pipeline.
 
 ---
 
@@ -118,7 +118,7 @@ Os pipelines CI/CD foram desenhados como **mecanismos de controlo e decisão**, 
 
 Reconhecendo que IaC seguro exige competências específicas, foi criado um **programa de formação dedicado**, cobrindo:
 
-* Requisitos `REQ-XXX` e `IAC-XXX`;
+* Requisitos do Cap. 02 e de IaC;
 * Interpretação de *findings* e impactos reais;
 * Validação de alterações independentemente da autoria;
 * Gestão de segredos e identidade;

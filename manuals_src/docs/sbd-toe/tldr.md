@@ -109,7 +109,7 @@ O SbD-ToE funciona como:
 
 ## 📘 Capítulo 04 - Arquitetura Segura {#tldr-cap04}
 - Zonas de confiança, fronteiras, fluxos, identidades e segredos.  
-- Requisitos ARC-XXX específicos por domínio.  
+- Requisitos de arquitectura específicos por domínio.  
 - Mapeamento de ameaças e controlos nativos.  
 - Evidências: diagramas, ADRs, controlo de segredos e fluxos.
 

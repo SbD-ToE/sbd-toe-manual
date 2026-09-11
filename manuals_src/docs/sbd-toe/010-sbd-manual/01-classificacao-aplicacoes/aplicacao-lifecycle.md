@@ -109,25 +109,25 @@ A matriz de controlo define quais os requisitos de segurança aplicáveis em fun
 
 :::userstory
 **História.**  
-Como **Developer / Scrum Master / Team Lead**, quero **aplicar a matriz de controlos e mapear cada requisito para REQ-XXX do Capítulo 02**, para garantir que apenas os requisitos necessários são exigidos e rastreáveis.
+Como **Developer / Scrum Master / Team Lead**, quero **aplicar a matriz de controlos e mapear cada requisito para o do Capítulo 02**, para garantir que apenas os requisitos necessários são exigidos e rastreáveis.
 
 **Critérios de aceitação (BDD).**
 - **Dado** uma aplicação já classificada (L1, L2 ou L3)  
   **Quando** consulto a matriz de controlos  
-  **Então** extraio apenas os requisitos correspondentes ao nível atribuído **e mapeio cada um para REQ-XXX específico**
+  **Então** extraio apenas os requisitos correspondentes ao nível atribuído **e mapeio cada um para o requisito específico do Cap. 02**
 
 **Critérios de aceitação (DoD).**
 - [ ] Matriz consultada para o nível da aplicação  
 - [ ] Requisitos transformados em cartões/histórias de backlog  
-- [ ] **Cada requisito mapeado explicitamente para o ID de catálogo `XXX-NNN`** (ex.: `LOG-001` do Cap. 02, `ARC-003` do Cap. 04)  
-- [ ] Tabela de rastreamento: `controlo | L1/L2/L3 | REQ-XXX | responsável`  
+- [ ] **Cada requisito mapeado explicitamente para o ID de catálogo do requisito** (ex.: `LOG-001` do Cap. 02, `ARC-003` do Cap. 04)  
+- [ ] Tabela de rastreamento: `controlo | L1/L2/L3 | requisito | responsável`  
 - [ ] Exceções documentadas, aprovadas por AppSec Engineer com justificação técnica  
 - [ ] **AppSec Engineer valida mapeamento antes de entrada em backlog**  
 
 :::
 
 **Artefactos & evidências.**
-- Ficheiro: `matriz-controlos-aplicada.md` com rastreamento REQ-XXX  
+- Ficheiro: `matriz-controlos-aplicada.md` com rastreamento ao requisito do Cap. 02  
 - Localização: Backlog / Wiki / Repositório de documentação
 
 **Proporcionalidade por risco.**
@@ -471,7 +471,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 - **Dado** que uma aplicação tem uma classificação L1/L2/L3  
   **Quando** crio/reviso artefactos de entrega (Dockerfile, script CI/CD, manifesto IaC, imagem)  
   **Então** aplico os **controlos de capítulos 07/08/09 equivalentes ao nível**  
-- E documento **rastreabilidade: aplicação → artefacto → capítulo 07/08/09 → REQ-XXX**
+- E documento **rastreabilidade: aplicação → artefacto → capítulo 07/08/09 → requisito**
 
 **Critérios de aceitação (DoD).**
 - [ ] Artefactos técnicos identificados (Dockerfile, pipeline/GitHub Actions/GitLab CI, Terraform/Helm, imagem registada)  
@@ -479,7 +479,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 - [ ] **Controlos cap. 07 (CI/CD) aplicados se pipeline** (secrets manager, assinatura, scanning, audit log)  
 - [ ] **Controlos cap. 08 (IaC) aplicados se infraestrutura-as-code** (versionamento, revisão rigorosa, scanning, tags)  
 - [ ] **Controlos cap. 09 (Containers) aplicados se imagem Docker** (base image segura, scanning vulnerabilidades, runtime policy, registry autenticação)  
-- [ ] **Tabela de rastreamento: artefacto | nível | capítulo | REQ-XXX | responsável | status**  
+- [ ] **Tabela de rastreamento: artefacto | nível | capítulo | requisito | responsável | status**  
 - [ ] **Arquitetos valida alinhamento entre controlos do artefacto e necessidades da aplicação**  
 - [ ] **AppSec Engineer aprova antes do deploy**  
 
@@ -487,7 +487,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 
 **Artefactos & evidências.**
 - Ficheiro: `artefactos-tecnicos.md` ou tabela em repositório  
-- Tabela: `artefacto | nível | tipo (Dockerfile/pipeline/IaC) | capítulo | REQ-XXX | status | owner`  
+- Tabela: `artefacto | nível | tipo (Dockerfile/pipeline/IaC) | capítulo | requisito | status | owner`  
 - Evidência: commit com tags de classificação, issue rastreável, scan report, approval email
 
 **Proporcionalidade (por tipo de artefacto).**
@@ -532,7 +532,7 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 - [ ] **KPI 3: Lead time para classificação inicial** (dias desde criação até L1/L2/L3 atribuído)  
 - [ ] **KPI 4: Lead time para revisão** (dias desde trigger até decisão final)  
 - [ ] **KPI 5: Conformidade a cadência de revisão** (% de app L2/L3 revistos no prazo 6m/3m)  
-- [ ] **KPI 6: % de controlos mapeados** (aplicações com todos os REQ-XXX do nível implementados ou com excepção TTL válida)  
+- [ ] **KPI 6: % de controlos mapeados** (aplicações com todos os requisitos do nível implementados ou com excepção TTL válida)  
 - [ ] **KPI 7: Ameaças críticas não cobertas** (número e lista de aplicações com risco crítico residual)  
 - [ ] **Série temporal (trend)**: Gráficos de KPI 1–7 dos últimos 6 meses  
 - [ ] **Alertas automáticos**: Notificação se KPI 2 (exceções expiradas) > 5%, KPI 5 (conformidade) < 90%  
@@ -818,7 +818,7 @@ flowchart TB
 | Fase         | Artefacto                          | Quem produz         | Onde fica                  | Evidência mínima                              |
 |--------------|------------------------------------|---------------------|----------------------------|-----------------------------------------------|
 | Início       | `classificacao-aplicacao.yaml`     | Developer / Scrum Master / Team Lead     | Repo `security/`           | Commit + revisão AppSec Engineer |
-| Planeamento  | `matriz-controlos.md`              | Developer / Scrum Master / Team Lead     | Backlog / wiki             | REQ-XXX referenciados (Cap. 02); aprovado AppSec |
+| Planeamento  | `matriz-controlos.md`              | Developer / Scrum Master / Team Lead     | Backlog / wiki             | requisitos referenciados (Cap. 02); aprovado AppSec |
 | Revisão      | `classificacao-revisao.md`         | AppSec Engineer      | Repo `docs/`               | Issue/ata datada; decisão justificada |
 | Release      | `checklist-go-live.md`             | QA                  | Pipeline CI/CD             | Aprovação formal AppSec Engineer + Gestão (L3) |
 | Operação     | `risco-residual.md`                | GRC/Compliance    | Ferramenta GRC / repo      | Owner + TTL + critérios encerramento; aprovação |
@@ -837,7 +837,7 @@ flowchart TB
 | Prática / Story                                 | L1 | L2 | L3 | Observações |
 |-------------------------------------------------|----|----|----|-------------|
 | US-01 - Classificação inicial                    | ✔  | ✔  | ✔  | Validação AppSec obrigatória em L2/L3 |
-| US-02 - Aplicação da matriz (c/ REQ-XXX)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
+| US-02 - Aplicação da matriz (c/ requisitos do Cap. 02)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
 | US-03 - Revisão por alteração relevante          | ✔  | ✔  | ✔  | Event-based, cascata a US-02/US-06 |
 | **US-07 - Revisão periódica time-based**        | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
 | US-04 - Risco residual                           | (opcional) | ✔ | ✔  | Aprovações formais em L3 |
@@ -855,7 +855,7 @@ flowchart TB
 - Integrar a classificação de risco desde o **kick-off** do projeto.  
 - Reavaliar a classificação **por alteração** e **por calendário** (time-based).  
 - Manter a documentação **versionada e rastreável** em repositório controlado.  
-- Mapear requisitos diretamente para **REQ-XXX (Cap. 02)** no backlog.  
+- Mapear requisitos diretamente para **os requisitos do Cap. 02** no backlog.  
 - Exigir **TTL/expiração** em todas as aceitações de risco.  
 - Validar proporcionalidade no go-live e documentar evidências.  
 - Consolidar **KPIs** organizacionais para *compliance* e melhoria contínua.  

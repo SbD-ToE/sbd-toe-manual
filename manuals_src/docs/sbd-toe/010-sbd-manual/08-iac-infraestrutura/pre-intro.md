@@ -1,7 +1,7 @@
 ---
 id: pre-intro
 title: Fundamentação
-description: Porque este capítulo é excecional, que fontes suportam o catálogo IAC-XXX e como criar/adaptar o catálogo organizacional
+description: Porque este capítulo é excecional, que fontes suportam o catálogo de requisitos de IaC e como criar/adaptar o catálogo organizacional
 tags: [iac, rationale, requisitos, catálogo, segurança, pipelines, terraform, kubernetes, cloud]
 sidebar_position: -1
 ---
@@ -11,7 +11,7 @@ sidebar_position: -1
 ## 🧠 Porque este capítulo é **excecional**
 
 Este capítulo é diferente dos restantes.  
-Enquanto o **Cap. 02 - Requisitos de Segurança** define uma base comum aplicável a qualquer software, aqui apresentamos um **catálogo técnico especializado (`IAC-XXX`)** que cobre riscos e controlos específicos da **Infraestrutura como Código (IaC)**.  
+Enquanto o **Cap. 02 - Requisitos de Segurança** define uma base comum aplicável a qualquer software, aqui apresentamos um **catálogo técnico especializado (requisitos de IaC`)** que cobre riscos e controlos específicos da **Infraestrutura como Código (IaC)**.  
 
 Falamos de aspetos como:  
 - integridade do estado,  
@@ -20,7 +20,7 @@ Falamos de aspetos como:
 - rastreabilidade ficheiro→recurso→ambiente,  
 - enforcement no pipeline.  
 
-👉 Cada requisito `IAC-XXX` dá origem a uma **user story própria**, permitindo uma cobertura exaustiva e auditável, sem lacunas nem ambiguidades.
+👉 Cada requisito de IaC dá origem a uma **user story própria**, permitindo uma cobertura exaustiva e auditável, sem lacunas nem ambiguidades.
 
 ---
 
@@ -55,7 +55,7 @@ Daí o rigor: IaC deve ser tratado com a mesma disciplina científica aplicada a
 
 ## 📚 Fontes técnicas que fundamentam o catálogo
 
-O catálogo `IAC-XXX` não é arbitrário: resulta da síntese de **fontes normativas e de mercado**.  
+O catálogo de requisitos de IaC não é arbitrário: resulta da síntese de **fontes normativas e de mercado**.  
 Entre elas:
 
 - **CIS Benchmarks** (AWS, Azure, GCP, Kubernetes, Docker, Terraform)  
@@ -70,7 +70,7 @@ Entre elas:
 
 ## 🧩 Relação com o Cap. 02 - Requisitos de Segurança
 
-- Os requisitos `IAC-XXX` **complementam** os `SEC-XXX` do Cap. 02.  
+- Os requisitos de IaC **complementam** os requisitos de segurança do Cap. 02.  
 - Sempre que possível, estabelecemos rastreabilidade direta:  
 
 | Requisito IaC | Objetivo | Mapeamento Cap. 02 | Nota |
@@ -101,7 +101,7 @@ Cada organização deve adaptá-lo à sua realidade, seguindo uma metodologia cl
 ## 🧾 Porquê user stories por requisito
 
 Ao contrário de outros capítulos, aqui não trabalhamos apenas com práticas macro.  
-Cada `IAC-XXX` transforma-se numa **user story própria**, porque isso:
+Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
 
 - Garante que nenhum requisito fica esquecido  
 - Permite integração direta em backlog (cartões reutilizáveis)  
@@ -155,7 +155,7 @@ Um catálogo só é eficaz se for governado e medido.
 Recomendamos:
 
 - **Ownership**: Arquitetura/Plataforma + AppSec  
-- **Revisão periódica**: trimestral do catálogo `IAC-XXX`  
+- **Revisão periódica**: trimestral do catálogo de requisitos de IaC  
 - **KPIs/KRIs**:  
   - % de PRs com `plan` aprovado antes de `apply`  
   - Cobertura de scanners em IaC  

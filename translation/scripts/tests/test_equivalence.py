@@ -41,6 +41,25 @@ class HashingTests(unittest.TestCase):
         self.assertEqual(common.content_sha256(raw), common.content_sha256("a\nb\n"))
         self.assertEqual(common.content_sha256(""), common.content_sha256("\n\n"))
 
+    def test_glossary_sha256_is_canonical_over_the_applied_fields(self):
+        base = {"key": "slice", "species": 1, "state": "in-record", "owner": "manual-agent", "en": "slice", "en_variants": ["slices", "per-slice"], "pt": "fatia", "pt_variants": ["fatias"], "blocks_translation": True, "notes": "", "sense": "a", "evidence": {"paper": "P1"}, "counts": {"P1": 3}}
+        other = {"key": "coverage", "state": "pending", "en": "coverage", "en_variants": [], "pt": "cobertura", "pt_variants": [], "blocks_translation": True, "notes": ""}
+        reg = {"terms": [base, other]}
+        h = common.glossary_sha256(reg, ["slice"])
+        self.assertEqual(len(h), 64)
+        self.assertEqual(h, common.glossary_sha256(reg, ("slice", "slice")))  # keys are a set
+        self.assertEqual(common.glossary_sha256(reg, ["coverage", "slice"]), common.glossary_sha256(reg, ["slice", "coverage"]))  # and sorted
+        # Fields outside GLOSSARY_HASH_FIELDS never move the hash; entry order in the registry does not either.
+        self.assertEqual(h, common.glossary_sha256({"terms": [other, dict(base, notes="n", sense="s", evidence=None, counts={}, owner="lead")]}, ["slice"]))
+        # Variant order does not matter; every hashed field does.
+        self.assertEqual(h, common.glossary_sha256({"terms": [dict(base, en_variants=["per-slice", "slices"])]}, ["slice"]))
+        for change in ({"en": "partition"}, {"state": "changed"}, {"pt": "partição"}, {"pt_variants": []}, {"en_variants": ["slices"]}, {"blocks_translation": False}):
+            self.assertNotEqual(h, common.glossary_sha256({"terms": [dict(base, **change)]}, ["slice"]), change)
+        # A key that left the registry counts as a change (and differs from an all-null entry).
+        self.assertNotEqual(h, common.glossary_sha256({"terms": [other]}, ["slice"]))
+        self.assertNotEqual(common.glossary_sha256({"terms": [other]}, ["slice"]), common.glossary_sha256({"terms": [{"key": "slice"}]}, ["slice"]))
+        self.assertEqual(common.glossary_sha256(None, []), common.glossary_sha256({"terms": []}, []))
+
     def test_strip_translation_block_only_removes_that_mapping(self):
         text = common.read_text(EQUIV_TARGET)
         stripped = common.strip_translation_block(text)
@@ -246,9 +265,11 @@ class EquivalenceCliTests(TreeTestCase):
 
 
 class SyncStateTests(TreeTestCase):
-    def write_target(self, rel, *, source_hash, target_hash=None, terms_hash="null", pending=0, body="# Example\n\nText.\n"):
+    def write_target(self, rel, *, source_hash, target_hash=None, terms_hash="null", pending=0, body="# Example\n\nText.\n", glossary_keys=None, glossary_hash=None):
         """Write a mirror file whose translation block records the given hashes.
-        ``target_hash=None`` records the hash of the body actually written."""
+        ``target_hash=None`` records the hash of the body actually written.
+        ``glossary_keys``/``glossary_hash`` add the applied-glossary provenance;
+        left ``None`` the block is a legacy one (whole-registry ``terms_sha256``)."""
         fm_head = "---\nid: a\n"
         fm_tail = "---\n\n"
         content = fm_head + fm_tail + body + ("<!-- i18n:pending key=x -->\n" * pending)
@@ -256,8 +277,10 @@ class SyncStateTests(TreeTestCase):
             target_hash = common.content_sha256(content)
         block = (
             "translation:\n  source_locale: pt\n  source_path: {rel}\n  source_sha256: {sh}\n  source_commit: abc\n"
-            "  target_sha256: {th}\n  engine: test\n  prompt_sha256: p\n  terms_sha256: {terms}\n  translated_at: 2026-09-25T10:00:00Z\n  reviewed_by: null\n"
-        ).format(rel=rel, sh=source_hash, th=target_hash, terms=terms_hash)
+            "  target_sha256: {th}\n  engine: test\n  prompt_sha256: p\n  terms_sha256: {terms}\n{glossary}  translated_at: 2026-09-25T10:00:00Z\n  reviewed_by: null\n"
+        ).format(rel=rel, sh=source_hash, th=target_hash, terms=terms_hash, glossary=(
+            "" if glossary_hash is None else "  glossary_keys: [{keys}]\n  glossary_sha256: {gh}\n".format(keys=", ".join(glossary_keys or []), gh=glossary_hash)
+        ))
         dest = common.mirror_path(rel, self.i18n, "en")
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(fm_head + block + fm_tail + body + ("<!-- i18n:pending key=x -->\n" * pending), encoding="utf-8")
@@ -272,7 +295,7 @@ class SyncStateTests(TreeTestCase):
         entry, state, warnings = self.state_of("cap/a.md")
         self.assertEqual(warnings, [])
         self.assertEqual(entry["state"], "untranslated")
-        self.assertEqual(list(entry), ["state", "source_sha256", "translated_source_sha256", "target_sha256", "terms_sha256_at_translation", "translated_at", "pending_blocks"])
+        self.assertEqual(list(entry), ["state", "source_sha256", "translated_source_sha256", "target_sha256", "terms_sha256_at_translation", "glossary_sha256_at_translation", "translated_at", "pending_blocks"])
         self.assertEqual(list(state), ["generated_at", "source_locale", "target_locale", "terms_sha256", "files", "totals"])
         self.assertEqual(state["terms_sha256"], None)
         self.assertEqual(state["totals"], {"untranslated": 1, "synced": 0, "partial": 0, "pt-ahead": 0, "en-ahead": 0, "drift": 0, "stale-terms": 0})
@@ -311,6 +334,79 @@ class SyncStateTests(TreeTestCase):
         self.assertEqual(state["terms_sha256"], common.file_sha256(registry))
         self.write_target("cap/a.md", source_hash=sh, terms_hash=common.file_sha256(registry), pending=1)
         self.assertEqual(self.state_of("cap/a.md")[0]["state"], "partial")
+
+    def write_registry(self, terms):
+        registry = self.root / common.TERMS_REGISTRY_RELPATH
+        registry.parent.mkdir(parents=True, exist_ok=True)
+        registry.write_text(json.dumps({"meta": {"version": 1}, "terms": terms}, ensure_ascii=False) + "\n", encoding="utf-8")  # JSON is YAML
+        return registry
+
+    @staticmethod
+    def term(key, **overrides):
+        t = {"key": key, "species": 1, "state": "in-record", "owner": "manual-agent", "en": key, "en_variants": [], "pt": key + "_pt", "pt_variants": [], "blocks_translation": True, "notes": "", "counts": {}}
+        t.update(overrides)
+        return t
+
+    def test_stale_terms_is_decided_by_the_applied_glossary(self):
+        src = self.put_source("cap/a.md")
+        sh = common.file_sha256(src)
+        applied, unrelated = self.term("slice"), self.term("threat")
+        registry = self.write_registry([applied, unrelated])
+        reg = {"terms": [applied, unrelated]}
+        gh = common.glossary_sha256(reg, ["slice"])
+        self.write_target("cap/a.md", source_hash=sh, terms_hash=common.file_sha256(registry), glossary_keys=["slice"], glossary_hash=gh)
+        entry, state, warnings = self.state_of("cap/a.md")
+        self.assertEqual(warnings, [])
+        self.assertEqual(entry["state"], "synced")
+        self.assertEqual(entry["glossary_sha256_at_translation"], gh)
+        self.assertEqual(entry["terms_sha256_at_translation"], state["terms_sha256"])
+
+        # Only notes/counts of the applied entry changed: whole-registry hash moves, the file stays synced.
+        self.write_registry([dict(applied, notes="revised", counts={"P1": 7}), unrelated])
+        entry, state, warnings = self.state_of("cap/a.md")
+        self.assertEqual(warnings, [])
+        self.assertEqual(entry["state"], "synced")
+        self.assertNotEqual(entry["terms_sha256_at_translation"], state["terms_sha256"])
+
+        # An entry the file does not use changed its translation: still synced.
+        self.write_registry([applied, dict(unrelated, en="menace")])
+        self.assertEqual(self.state_of("cap/a.md")[0]["state"], "synced")
+
+        # The applied entry's `en` changed: stale-terms.
+        self.write_registry([dict(applied, en="partition"), unrelated])
+        self.assertEqual(self.state_of("cap/a.md")[0]["state"], "stale-terms")
+
+        # The applied entry left the registry: stale-terms.
+        self.write_registry([unrelated])
+        self.assertEqual(self.state_of("cap/a.md")[0]["state"], "stale-terms")
+
+        # Precedence unchanged: source change beats stale-terms; pending loses to it.
+        self.write_target("cap/a.md", source_hash=sh, terms_hash="x", glossary_keys=["slice"], glossary_hash=gh, pending=1)
+        self.assertEqual(self.state_of("cap/a.md")[0]["state"], "stale-terms")
+        src.write_text(src.read_text(encoding="utf-8") + "\nMais texto.\n", encoding="utf-8")
+        self.assertEqual(self.state_of("cap/a.md")[0]["state"], "pt-ahead")
+
+    def test_legacy_mirror_without_glossary_hash_keeps_the_old_rule_and_warns(self):
+        src = self.put_source("cap/a.md")
+        sh = common.file_sha256(src)
+        registry = self.write_registry([self.term("slice")])
+        self.write_target("cap/a.md", source_hash=sh, terms_hash=common.file_sha256(registry))
+        entry, _state, warnings = self.state_of("cap/a.md")
+        self.assertEqual(entry["state"], "synced")
+        self.assertIsNone(entry["glossary_sha256_at_translation"])
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("legacy provenance: re-stamp with assemble", warnings[0])
+        # Any registry byte change (even notes) makes a legacy mirror stale-terms, as before.
+        self.write_registry([self.term("slice", notes="revised")])
+        entry, _state, warnings = self.state_of("cap/a.md")
+        self.assertEqual(entry["state"], "stale-terms")
+        self.assertEqual(len(warnings), 1)
+        # A glossary hash without its key list is treated as legacy too (and warned about).
+        dest = common.mirror_path("cap/a.md", self.i18n, "en")
+        dest.write_text(dest.read_text(encoding="utf-8").replace("  terms_sha256:", "  glossary_sha256: abc\n  terms_sha256:"), encoding="utf-8")
+        entry, _state, warnings = self.state_of("cap/a.md")
+        self.assertEqual(entry["state"], "stale-terms")
+        self.assertTrue(any("glossary_keys is not a list" in w for w in warnings))
 
     def test_missing_translation_block_is_reported(self):
         self.put_source("cap/a.md")

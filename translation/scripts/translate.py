@@ -17,7 +17,9 @@ paragraphs, list items, table rows, admonitions, code blocks, comments, MDX
 statements, blank lines), the protected tokens replaced by ``⟦Pn⟧`` markers in
 the translatable text, the applicable glossary (registry entries whose
 source-locale forms occur in the file) and the provenance hashes
-(``source_sha256``, ``source_commit``, ``terms_sha256``, ``prompt_sha256``).
+(``source_sha256``, ``source_commit``, ``terms_sha256``, ``prompt_sha256``,
+plus ``glossary_keys`` / ``glossary_sha256`` — the hash of the applied
+glossary, ``common.glossary_sha256``, which is what decides ``stale-terms``).
 Blocks that contain a ``pending`` term with ``blocks_translation: true`` are
 marked ``translate: false`` with ``blocked_by``.
 
@@ -779,6 +781,12 @@ def build_glossary(registry: Optional[dict], segments: List[Segment], source_loc
     return glossary
 
 
+def glossary_key_list(glossary: dict) -> List[str]:
+    """Sorted, unique keys of every entry in the applicable glossary (terms,
+    do-not-translate and pending) — the set ``glossary_sha256`` is taken over."""
+    return sorted({e["key"] for section in ("terms", "do_not_translate", "pending") for e in glossary.get(section, [])})
+
+
 def word_count(text: str) -> int:
     return len(_WORD_RE.findall(MARKER_RE.sub(" ", text)))
 
@@ -823,6 +831,7 @@ def build_job(
     needles = terms_lint.pending_needles(registry, source_locale) if registry else {}
     blocked_by_key = apply_blocking(seg.segments, needles)
     glossary = build_glossary(registry, seg.segments, source_locale, target_locale)
+    glossary_keys = glossary_key_list(glossary)
     units = [unit.id for _s, unit in iter_units(seg.segments) if unit.translate]
     words = sum(word_count(unit.text) for _s, unit in iter_units(seg.segments) if unit.translate)
     markers = sum(len(unit.protected) for _s, unit in iter_units(seg.segments) if unit.translate)
@@ -836,6 +845,8 @@ def build_job(
         "source_commit": source_commit,
         "source_dirty": source_dirty,
         "terms_sha256": terms_sha256,
+        "glossary_keys": glossary_keys,
+        "glossary_sha256": common.glossary_sha256(registry, glossary_keys),
         "prompt_sha256": prompt_sha256,
         "prompt_path": PROMPT_RELPATH,
         "frontmatter_present": seg.frontmatter_present,
@@ -919,7 +930,7 @@ def cmd_prepare(args) -> int:
         source = common.source_path(rel, docs_dir)
         target = common.mirror_path(rel, i18n_dir, args.target_locale)
         if eligible_states is not None:
-            entry = sync_state.file_entry(rel, source, target, terms_sha, args.source_locale, warnings)
+            entry = sync_state.file_entry(rel, source, target, terms_sha, args.source_locale, warnings, registry=registry)
             if entry["state"] not in eligible_states:
                 summary["skipped"][rel] = entry["state"]
                 continue
@@ -1011,10 +1022,24 @@ def yaml_scalar(value) -> str:
     return json.dumps(text, ensure_ascii=False) if needs_quotes else text
 
 
+TRANSLATION_BLOCK_KEYS = (
+    "source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256",
+    "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "reviewed_by",
+)
+
+
+def yaml_flow_list(values) -> str:
+    if values is None:
+        return "null"
+    return "[" + ", ".join(yaml_scalar(v) for v in values) + "]"
+
+
 def translation_block_lines(meta: dict) -> List[str]:
     lines = [f"{common.TRANSLATION_BLOCK_KEY}:"]
-    for key in ("source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256", "terms_sha256", "translated_at", "reviewed_by"):
-        lines.append(f"  {key}: {yaml_scalar(meta.get(key))}")
+    for key in TRANSLATION_BLOCK_KEYS:
+        value = meta.get(key)
+        rendered = yaml_flow_list(value) if key == "glossary_keys" else yaml_scalar(value)
+        lines.append(f"  {key}: {rendered}")
     return lines
 
 
@@ -1195,6 +1220,8 @@ def cmd_assemble(args) -> int:
         common.warn(message)
     if terms_sha != job.get("terms_sha256"):
         common.warn(f"{rel}: the terms registry changed since the job was prepared; the front matter records the job's terms_sha256")
+    if not isinstance(job.get("glossary_keys"), list) or not isinstance(job.get("glossary_sha256"), str):
+        raise TranslateError(f"{job_file}: job has no glossary_keys/glossary_sha256 (prepared before applied-glossary provenance); re-run prepare")
     out_file = Path(args.out_json) if args.out_json else out_path_for(job_file)
     if not out_file.is_file():
         raise TranslateError(f"out file not found: {out_file}")
@@ -1208,6 +1235,8 @@ def cmd_assemble(args) -> int:
         "engine": args.engine,
         "prompt_sha256": job.get("prompt_sha256"),
         "terms_sha256": job.get("terms_sha256"),
+        "glossary_keys": list(job["glossary_keys"]),
+        "glossary_sha256": job["glossary_sha256"],
         "translated_at": translated_at,
         "reviewed_by": None,
     }
@@ -1236,7 +1265,7 @@ def cmd_assemble(args) -> int:
         with open(mirror, "w", encoding="utf-8", newline="") as handle:
             handle.write(final_text)
         warnings: List[str] = []
-        entry = sync_state.file_entry(rel, source, mirror, terms_sha, source_locale, warnings)
+        entry = sync_state.file_entry(rel, source, mirror, terms_sha, source_locale, warnings, registry=registry)
         for message in warnings:
             common.warn(message)
         print(f"wrote {mirror}")

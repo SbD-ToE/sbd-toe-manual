@@ -15,7 +15,7 @@ sobre a forma NFC, por isso as chaves do `sync-state.json` são idênticas em ma
 
 | script | função |
 |---|---|
-| `common.py` | hash de conteúdo do contrato (`content_sha256`), raiz do repo, frontmatter, mapeamento fonte↔espelho, iteração do corpus, parser markdown mínimo, slugger do Docusaurus |
+| `common.py` | hash de conteúdo do contrato (`content_sha256`), hash do glossário aplicado (`glossary_sha256`), raiz do repo, frontmatter, mapeamento fonte↔espelho, iteração do corpus, parser markdown mínimo, slugger do Docusaurus |
 | `protected_tokens.py` | lista única de prefixos de identificadores e siglas `do-not-translate` |
 | `fingerprint.py` | impressão digital estrutural de uma página, independente da língua |
 | `equivalence.py` | compara a impressão digital da fonte com a da tradução; falha em qualquer divergência não-textual |
@@ -74,8 +74,21 @@ Estados derivados só de hashes (contrato em `translation/README.md`): `untransl
 `target_sha256` no ficheiro de estado é o hash **actual** do corpo traduzido (ficheiro sem o bloco `translation`);
 o valor gravado no momento da tradução vive no frontmatter do espelho. `terms_sha256` é o hash do registo dado por
 `--registry` (omissão: `translation/terms/registry.yaml` na raiz do repo); enquanto esse ficheiro não existir é
-`null` e `stale-terms` nunca ocorre. Um ficheiro no espelho sem bloco `translation`
-(feito à mão) gera aviso e exit 2.
+`null` e `stale-terms` nunca ocorre.
+
+**`stale-terms` é preciso, não byte a byte.** O frontmatter do espelho grava `glossary_keys` (chaves do registo que o
+`prepare` aplicou ao ficheiro) e `glossary_sha256` = `common.glossary_sha256(registo, glossary_keys)` — SHA-256 da
+serialização canónica (JSON, chaves ordenadas, `ensure_ascii=False`, sem espaços) da lista, por ordem de chave, de
+`{key, state, en, en_variants, pt, pt_variants, blocks_translation}` dessas entradas (variantes como conjunto ordenado;
+chave ausente do registo serializa como `{"key": …, "missing": true}`). O `sync_state.py` recalcula esse hash com o
+**registo actual** e as `glossary_keys` gravadas: diferente → `stale-terms`. Só esses campos contam — `notes`,
+`evidence`, `counts`, `sense`, `proposal`, … nunca tornam uma tradução stale; uma entrada que o ficheiro não usou também
+não; uma chave aplicada que saiu do registo conta como mudança. `terms_sha256` (registo inteiro) fica como proveniência.
+O estado por ficheiro ganha `glossary_sha256_at_translation` (`null` quando ausente). Um espelho **sem**
+`glossary_sha256` (gerado antes deste campo) mantém a regra antiga — `terms_sha256` gravado ≠ hash actual do registo — e
+gera o aviso «legacy provenance: re-stamp with assemble» (exit 2, como qualquer aviso) enquanto houver registo; um
+`glossary_sha256` sem `glossary_keys` em lista é tratado como legado, com aviso. Um ficheiro no espelho sem bloco
+`translation` (feito à mão) gera aviso e exit 2.
 
 ## `terms_import.py`
 
@@ -172,8 +185,10 @@ python translation/scripts/translate.py check    --path 010-sbd-manual/00-fundam
 são saltados com aviso) escreve `<out>/<caminho>.job.json`:
 
 - proveniência: `source_path`, `source_sha256`, `source_commit` (último commit que tocou o ficheiro; `source_dirty`
-  se há alterações por commitar; `--source-commit` fixa-o), `terms_sha256`, `prompt_sha256` (de
-  `translation/prompts/translate-v1.md`), `direction`;
+  se há alterações por commitar; `--source-commit` fixa-o), `terms_sha256` (registo inteiro), `glossary_keys` (chaves
+  do glossário aplicável — termos, do-not-translate e pending — ordenadas) e `glossary_sha256`
+  (`common.glossary_sha256(registo, glossary_keys)`, o hash que decide `stale-terms`; ver `sync_state.py`),
+  `prompt_sha256` (de `translation/prompts/translate-v1.md`), `direction`;
 - **esqueleto**: a sequência de segmentos do ficheiro na ordem original, cada um com `id`, `kind`, `line`, `raw`
   (linhas verbatim) e, quando traduzível, `text` (com marcadores), `protected`, `translate`, `blocked_by`, `prefix`/
   `suffix` (o que o script repõe à volta do texto: `## `, ` {#id}`, marcador e indentação de item, `:::note `).
@@ -213,9 +228,12 @@ imediatamente antes — na linha anterior para parágrafos, cabeçalhos e admoni
 primeira linha do corpo para `title`/`description`. Gera o frontmatter do contrato (`translation/README.md`): cópia
 estrutural, `title`/`description` traduzidos (aspas mantidas se a fonte as tinha), bloco `translation:` com
 `source_locale`, `source_path`, `source_sha256`, `source_commit`, `target_sha256` (hash do ficheiro sem o bloco, via
-`common.strip_translation_block`), `engine` (`--engine`, obrigatório), `prompt_sha256`, `terms_sha256`, `translated_at`
-(`--translated-at` para testes), `reviewed_by: null`. Fonte sem frontmatter → mínimo (`id` efectivo + bloco). Recusa
-montar se a fonte mudou desde o `prepare` (`--ignore-source-change` para forçar). Corre `equivalence` (em memória) e o
+`common.strip_translation_block`), `engine` (`--engine`, obrigatório), `prompt_sha256`, `terms_sha256`, `glossary_keys`
+(lista em fluxo, `[a, b]`) e `glossary_sha256` copiados do job, `translated_at` (`--translated-at` para testes),
+`reviewed_by: null`. Fonte sem frontmatter → mínimo (`id` efectivo + bloco). Recusa montar se a fonte mudou desde o
+`prepare` (`--ignore-source-change` para forçar) e recusa um job sem `glossary_keys`/`glossary_sha256` (preparado antes
+desta proveniência): re-correr o `prepare` (`--force`) dá o mesmo job com os mesmos ids, e o `.out.json` reutiliza-se —
+é assim que se re-estampa um espelho legado. Corre `equivalence` (em memória) e o
 `terms_lint spelling` sobre o resultado e **não grava se falhar** (`--allow-spelling-errors` deixa passar a ortografia);
 com `--write` grava no caminho espelho e imprime o estado derivado por `sync_state` para o ficheiro; job de symlink com
 `--write` cria o mesmo symlink relativo no espelho (nunca uma cópia).
@@ -240,12 +258,17 @@ desdobramento, idempotência com edição manual preservada, registo commitado i
 `export-pending` (determinista) e o `hash` (igual ao de `sync_state.py`).
 
 `test_translate.py` verifica o `prepare` sobre a fixture `tests/fixtures/translate/source/04-pagina-traducao.md`
-(esqueleto, marcadores, glossário, `blocked_by`, determinismo byte a byte, elegibilidade por `sync_state`), o
-`assemble` com uma tradução mecânica (ficheiro EN passa `equivalence`, comentários `pending` no sítio certo, frontmatter
-conforme o contrato, `sync_state` deriva `partial`, `check` verde), as falhas sem gravar (marcador em falta, quebra de
-linha literal, id desconhecido, ortografia, fonte alterada), fonte sem frontmatter → mínimo, symlink → symlink, o
-`terms_lint` a ignorar ESM e `<style>`, e um smoke test sobre o capítulo piloto real (segmentação coerente com o parser
-+ montagem de identidade equivalente).
+(esqueleto, marcadores, glossário, `blocked_by`, determinismo byte a byte, elegibilidade por `sync_state`,
+`glossary_keys`/`glossary_sha256` — insensível a `notes`/`sense`/`counts` e a entradas não aplicadas, sensível a `en`,
+`en_variants`, `state`, `blocks_translation` de uma entrada aplicada), o `assemble` com uma tradução mecânica (ficheiro
+EN passa `equivalence`, comentários `pending` no sítio certo, frontmatter conforme o contrato com os dois campos do
+glossário, `sync_state` deriva `partial`, `check` verde), as falhas sem gravar (marcador em falta, quebra de linha
+literal, id desconhecido, ortografia, fonte alterada, job sem proveniência de glossário), fonte sem frontmatter →
+mínimo, symlink → symlink, o `terms_lint` a ignorar ESM e `<style>`, e um smoke test sobre o capítulo piloto real
+(segmentação coerente com o parser + montagem de identidade equivalente). `test_equivalence.py` cobre
+`common.glossary_sha256` (canónico; chave ausente; variantes como conjunto) e a derivação de `stale-terms` pelo
+glossário aplicado (`synced` quando só `notes` mudou ou mudou uma entrada não aplicada; `stale-terms` quando o `en`
+de uma chave aplicada mudou ou a chave saiu do registo; precedência intacta; espelho legado → regra antiga + aviso).
 
 ## CI
 

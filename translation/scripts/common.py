@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import hashlib
 import html
+import json
 import os
 import re
 import sys
@@ -212,6 +213,47 @@ def read_text(path: Path) -> str:
 
 def file_sha256(path: Path) -> str:
     return content_sha256(read_text(path))
+
+
+# --------------------------------------------------------------------------- #
+# Applied-glossary hash (README, "Contrato do frontmatter"; sync_state `stale-terms`)
+# --------------------------------------------------------------------------- #
+
+# The only registry fields that can change what a translation *did* with a
+# term. `notes`, `evidence`, `counts`, `sense`, `proposal`, … never enter the
+# hash: editing them never makes a translation stale.
+GLOSSARY_HASH_FIELDS = ("key", "state", "en", "en_variants", "pt", "pt_variants", "blocks_translation")
+
+
+def _glossary_row(key: str, entry: Optional[dict]) -> dict:
+    if entry is None:
+        # A key that has left the registry can never hash like a present one.
+        return {"key": key, "missing": True}
+    row = {}
+    for name in GLOSSARY_HASH_FIELDS:
+        value = entry.get(name)
+        if name.endswith("_variants"):
+            value = sorted({str(v) for v in (value or ()) if v is not None and str(v) != ""})
+        row[name] = value
+    row["key"] = key
+    return row
+
+
+def glossary_sha256(registry: Optional[dict], keys: Iterable[str]) -> str:
+    """SHA-256 of the glossary a translation applied: the registry entries named
+    by ``keys`` (sorted, unique), reduced to ``GLOSSARY_HASH_FIELDS`` and
+    serialised canonically (JSON, sorted keys, ``ensure_ascii=False``, no
+    whitespace). A key missing from ``registry`` is serialised as
+    ``{"key": …, "missing": true}`` so that its removal counts as a change.
+    Variants are compared as sorted sets: reordering them is not a change.
+    """
+    by_key = {}
+    for entry in (registry or {}).get("terms", []) or []:
+        if isinstance(entry, dict) and entry.get("key") is not None:
+            by_key[str(entry["key"])] = entry
+    rows = [_glossary_row(key, by_key.get(key)) for key in sorted({str(k) for k in keys})]
+    canonical = json.dumps(rows, sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
 # --------------------------------------------------------------------------- #

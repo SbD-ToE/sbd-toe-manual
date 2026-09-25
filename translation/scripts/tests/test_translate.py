@@ -14,7 +14,7 @@ import shutil
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 import yaml
@@ -83,6 +83,18 @@ MECHANICAL = {
 }
 
 
+def registry_with(**changes) -> dict:
+    """Copy of REGISTRY with per-key field overrides (``key={field: value}``) and,
+    under ``extra``, additional entries."""
+    import copy
+
+    reg = copy.deepcopy(REGISTRY)
+    for entry_ in reg["terms"]:
+        entry_.update(changes.get(entry_["key"], {}))
+    reg["terms"].extend(changes.get("extra", []))
+    return reg
+
+
 def units_of(job: dict):
     for seg in job["segments"]:
         for unit in [seg, *seg.get("cells", []), *seg.get("fields", [])]:
@@ -102,7 +114,7 @@ def mechanical_out(job: dict) -> dict:
 class Workspace:
     """Temporary docs/i18n/registry/jobs layout for the CLI."""
 
-    def __init__(self) -> None:
+    def __init__(self, registry: dict = REGISTRY) -> None:
         self.tmp = tempfile.TemporaryDirectory()
         root = Path(self.tmp.name)
         self.docs = root / "docs"
@@ -111,7 +123,7 @@ class Workspace:
         self.docs.mkdir()
         shutil.copy(SOURCE, self.docs / REL)
         self.registry = root / "registry.yaml"
-        self.registry.write_text(yaml.safe_dump(REGISTRY, allow_unicode=True, sort_keys=False), encoding="utf-8")
+        self.registry.write_text(yaml.safe_dump(registry, allow_unicode=True, sort_keys=False), encoding="utf-8")
 
     def args(self):
         return ["--docs-dir", str(self.docs), "--i18n-dir", str(self.i18n), "--registry", str(self.registry)]
@@ -248,6 +260,40 @@ class PrepareTests(unittest.TestCase):
         self.assertGreater(self.job["stats"]["words"], 50)
         self.assertIn("21 units", self.output)
 
+    def test_applied_glossary_keys_and_hash(self):
+        keys = self.job["glossary_keys"]
+        self.assertEqual(keys, ["appsec_core", "coverage", "requirement", "slice"])  # terms + do-not-translate + pending
+        self.assertEqual(self.job["glossary_sha256"], common.glossary_sha256(REGISTRY, keys))
+        self.assertEqual(list(self.job)[7:11], ["terms_sha256", "glossary_keys", "glossary_sha256", "prompt_sha256"])
+
+    def _hash_with_registry(self, registry: dict) -> tuple:
+        ws = Workspace(registry)
+        try:
+            code, out = ws.prepare()
+            self.assertEqual(code, 0, out)
+            job = ws.job()
+            return job["glossary_sha256"], job["terms_sha256"], job["glossary_keys"]
+        finally:
+            ws.cleanup()
+
+    def test_glossary_hash_ignores_notes_but_not_the_translation(self):
+        base = self.job["glossary_sha256"]
+        # notes/evidence/counts/sense of an applied entry: whole-registry hash moves, applied-glossary hash does not.
+        h, terms, keys = self._hash_with_registry(registry_with(slice={"notes": "revised 2026-09-25", "sense": "other", "counts": {"P1": 9}}))
+        self.assertEqual(h, base)
+        self.assertNotEqual(terms, self.job["terms_sha256"])
+        self.assertEqual(keys, self.job["glossary_keys"])
+        # `en` of an applied entry changes the hash; so do state, variants and blocks_translation.
+        self.assertNotEqual(self._hash_with_registry(registry_with(slice={"en": "partition"}))[0], base)
+        self.assertNotEqual(self._hash_with_registry(registry_with(coverage={"blocks_translation": False}))[0], base)
+        self.assertNotEqual(self._hash_with_registry(registry_with(requirement={"en_variants": ["requirements", "reqs"]}))[0], base)
+        # An entry whose forms do not occur in the file is not applied: changing it never touches the hash.
+        extra = entry("threat", en="threat", en_variants=["threats"], pt="ameaça", pt_variants=["ameaças"])
+        h, _terms, keys = self._hash_with_registry(registry_with(extra=[extra]))
+        self.assertEqual(keys, self.job["glossary_keys"])
+        self.assertEqual(h, base)
+        self.assertEqual(self._hash_with_registry(registry_with(extra=[dict(extra, en="menace", notes="x")]))[0], base)
+
     def test_prepare_is_deterministic(self):
         first = (self.ws.jobs / (REL + ".job.json")).read_bytes()
         other = Workspace()
@@ -303,7 +349,11 @@ class AssembleTests(unittest.TestCase):
         self.assertEqual(fm["title"], "Página de tradução com cobertura")
         self.assertEqual(fm["description"], "Fixture for translate.py — slice ACO-TSV, requirement CIC-003.")
         block = fm["translation"]
-        self.assertEqual(list(block), ["source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256", "terms_sha256", "translated_at", "reviewed_by"])
+        self.assertEqual(list(block), ["source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256", "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "reviewed_by"])
+        self.assertEqual(block["glossary_keys"], ["appsec_core", "coverage", "requirement", "slice"])
+        self.assertEqual(block["glossary_sha256"], self.job["glossary_sha256"])
+        self.assertEqual(block["glossary_sha256"], common.glossary_sha256(REGISTRY, block["glossary_keys"]))
+        self.assertIn("  glossary_keys: [appsec_core, coverage, requirement, slice]\n  glossary_sha256: ", text)
         self.assertEqual(block["source_locale"], "pt")
         self.assertEqual(block["source_path"], REL)
         self.assertEqual(block["source_sha256"], common.file_sha256(SOURCE))
@@ -334,16 +384,29 @@ class AssembleTests(unittest.TestCase):
         self.assertIn("<!--template: sbdtoe-addon -->", text)
         # sync_state derives `partial` for the pair.
         warnings = []
-        entry_ = sync_state.file_entry(REL, self.ws.docs / REL, mirror, terms_lint.registry_sha256(self.ws.registry), "pt", warnings)
+        entry_ = sync_state.file_entry(REL, self.ws.docs / REL, mirror, terms_lint.registry_sha256(self.ws.registry), "pt", warnings, registry=REGISTRY)
         self.assertEqual(warnings, [])
         self.assertEqual(entry_["state"], "partial")
         self.assertEqual(entry_["pending_blocks"], 4)
+        self.assertEqual(entry_["glossary_sha256_at_translation"], block["glossary_sha256"])
         self.assertIn("sync state: partial", out)
         # check: equivalence + spelling + consistency over the written file.
         buf = io.StringIO()
         with redirect_stdout(buf):
             code = translate.main(["check", "--path", REL, *self.ws.args()])
         self.assertEqual(code, 0, buf.getvalue())
+
+    def test_job_without_glossary_provenance_is_refused(self):
+        self.ws.write_out(REL, mechanical_out(self.job))
+        job_file = self.ws.jobs / (REL + ".job.json")
+        legacy = {k: v for k, v in self.job.items() if k not in ("glossary_keys", "glossary_sha256")}
+        job_file.write_text(json.dumps(legacy, ensure_ascii=False), encoding="utf-8")
+        err = io.StringIO()
+        with redirect_stderr(err):
+            code, _ = self.ws.assemble(REL, "--write")
+        self.assertEqual(code, 2)
+        self.assertIn("re-run prepare", err.getvalue())
+        self.assertFalse(self.ws.mirror().exists())
 
     def test_missing_marker_fails_without_writing(self):
         out = mechanical_out(self.job)

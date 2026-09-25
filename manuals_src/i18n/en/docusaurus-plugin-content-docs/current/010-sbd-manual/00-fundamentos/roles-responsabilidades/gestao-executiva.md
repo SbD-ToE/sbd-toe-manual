@@ -13,8 +13,10 @@ translation:
   target_sha256: b3c6e117ad1af86802dcf99418c09f8783d16ccc8b919829d50b498dfdc71e85
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 779fcd2406a1a730ed65de83e52df7743a50456cc35d31f9ce5b9d1c8073cd3d
-  translated_at: 2026-09-25T16:51:51Z
+  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
+  glossary_keys: [audit_trail, capacitacao, chapter_role, maturity, sbdtoe_sbd, traceability, trilho_formativo]
+  glossary_sha256: 2d6d943485e1307fba1710a7d4c56e9ad6d1702753e7d55d818c609439718a85
+  translated_at: 2026-09-25T17:10:41Z
   reviewed_by: null
 ---
 

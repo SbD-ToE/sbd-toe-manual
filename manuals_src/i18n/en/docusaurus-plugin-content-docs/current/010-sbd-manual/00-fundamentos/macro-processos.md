@@ -13,8 +13,10 @@ translation:
   target_sha256: 3fc5865f694249226ecac3227fd0869c5eb370dac92f10f988bf80ed5ea14b0b
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 779fcd2406a1a730ed65de83e52df7743a50456cc35d31f9ce5b9d1c8073cd3d
-  translated_at: 2026-09-25T16:51:46Z
+  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, oracle, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 3dafabc346d97d70e778370eaf95ecf0909e28c2e2978f5c13e28e9b93b8fc92
+  translated_at: 2026-09-25T17:10:36Z
   reviewed_by: null
 ---
 

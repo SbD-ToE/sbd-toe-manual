@@ -54,8 +54,10 @@ def _as_str(value) -> Optional[str]:
     return str(value)
 
 
-def terms_registry_sha256(root: Path) -> Optional[str]:
-    registry = root / common.TERMS_REGISTRY_RELPATH
+def terms_registry_sha256(root: Path, registry: Optional[Path] = None) -> Optional[str]:
+    """Hash of the terms registry (``--registry``, default ``<root>/translation/terms/registry.yaml``);
+    ``None`` while the file does not exist."""
+    registry = Path(registry) if registry is not None else root / common.TERMS_REGISTRY_RELPATH
     if registry.is_file():
         return common.file_sha256(registry)
     return None
@@ -148,9 +150,9 @@ def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], 
     return entry
 
 
-def build_state(root: Path, docs_dir: Path, i18n_dir: Path, source_locale: str, target_locale: str, *, generated_at: Optional[str] = None) -> Tuple[Dict, List[str]]:
+def build_state(root: Path, docs_dir: Path, i18n_dir: Path, source_locale: str, target_locale: str, *, generated_at: Optional[str] = None, registry: Optional[Path] = None) -> Tuple[Dict, List[str]]:
     warnings: List[str] = []
-    terms_hash = terms_registry_sha256(root)
+    terms_hash = terms_registry_sha256(root, registry)
     files: Dict[str, Dict] = {}
     for rel in common.iter_corpus(docs_dir):
         files[rel] = file_entry(
@@ -216,6 +218,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--docs-dir", type=Path, default=None, help="source corpus root (default: <repo>/manuals_src/docs/sbd-toe)")
     parser.add_argument("--i18n-dir", type=Path, default=None, help="i18n root (default: <repo>/manuals_src/i18n)")
     parser.add_argument("--state-file", type=Path, default=None, help=f"state file (default: <repo>/{common.SYNC_STATE_RELPATH})")
+    parser.add_argument("--registry", type=Path, default=None, help=f"terms registry hashed as terms_sha256 (default: <repo>/{common.TERMS_REGISTRY_RELPATH}; null while absent)")
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--write", action="store_true", help="write the derived state to the state file")
     mode.add_argument("--check", action="store_true", help="fail if the committed state file is not reproducible")
@@ -229,7 +232,8 @@ def main(argv=None) -> int:
         docs_dir = args.docs_dir or common.default_docs_dir(root)
         i18n_dir = args.i18n_dir or common.default_i18n_dir(root)
         state_file = args.state_file or (root / common.SYNC_STATE_RELPATH)
-        state, warnings = build_state(root, docs_dir, i18n_dir, args.source_locale, args.target_locale)
+        registry = args.registry or (root / common.TERMS_REGISTRY_RELPATH)
+        state, warnings = build_state(root, docs_dir, i18n_dir, args.source_locale, args.target_locale, registry=registry)
     except common.TranslationToolError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2

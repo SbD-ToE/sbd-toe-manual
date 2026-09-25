@@ -42,6 +42,34 @@ jobs:
       - name: Unit tests
         run: python -m unittest discover -s translation/scripts/tests -p 'test_*.py'
 
+      - name: Terms registry schema
+        run: python translation/scripts/terms_lint.py validate --registry translation/terms/registry.yaml
+
+      - name: Locate the translated mirror
+        id: mirror
+        run: |
+          mirror="manuals_src/i18n/${TARGET_LOCALE}/docusaurus-plugin-content-docs/current"
+          echo "path=${mirror}" >> "$GITHUB_OUTPUT"
+          if [ -d "$mirror" ] && find "$mirror" \( -name '*.md' -o -name '*.mdx' \) -print -quit | grep -q .; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::no translated files under ${mirror}; spelling and consistency lint skipped"
+            echo "present=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Terms lint — en-GB spelling (translated prose)
+        if: steps.mirror.outputs.present == 'true'
+        run: >
+          python translation/scripts/terms_lint.py spelling
+          --path "${{ steps.mirror.outputs.path }}" --registry translation/terms/registry.yaml
+
+      - name: Terms lint — source/target consistency
+        if: steps.mirror.outputs.present == 'true'
+        run: >
+          python translation/scripts/terms_lint.py consistency
+          --path "${{ steps.mirror.outputs.path }}" --registry translation/terms/registry.yaml
+          --source-locale "$SOURCE_LOCALE" --target-locale "$TARGET_LOCALE"
+
       - name: Extraction equivalence (every translated file)
         run: >
           python translation/scripts/equivalence.py --all

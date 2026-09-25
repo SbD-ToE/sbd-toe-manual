@@ -324,7 +324,8 @@ class SyncStateTests(TreeTestCase):
         self.put_source("cap/b.md", NOFM_SOURCE)
         self.write_target("cap/a.md", source_hash=common.file_sha256(src))
         state_file = self.root / "translation" / "state" / "sync-state.json"
-        argv = self.args("--state-file", str(state_file))
+        # The throw-away tree has no terms registry, so terms_sha256 is null (never stale-terms).
+        argv = self.args("--state-file", str(state_file), "--registry", str(self.root / common.TERMS_REGISTRY_RELPATH))
         self.assertEqual(sync_state.main(argv + ["--write"]), 0)
         written = json.loads(state_file.read_text(encoding="utf-8"))
         self.assertEqual(written["totals"]["synced"], 1)

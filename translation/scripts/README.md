@@ -71,8 +71,9 @@ python translation/scripts/sync_state.py           # imprime o estado derivado
 Estados derivados só de hashes (contrato em `translation/README.md`): `untranslated`, `synced`, `partial`,
 `pt-ahead`, `en-ahead`, `drift`, `stale-terms`; precedência `drift > en-ahead > pt-ahead > stale-terms > partial > synced`.
 `target_sha256` no ficheiro de estado é o hash **actual** do corpo traduzido (ficheiro sem o bloco `translation`);
-o valor gravado no momento da tradução vive no frontmatter do espelho. Enquanto `translation/terms/registry.yaml`
-não existir, `terms_sha256` é `null` e `stale-terms` nunca ocorre. Um ficheiro no espelho sem bloco `translation`
+o valor gravado no momento da tradução vive no frontmatter do espelho. `terms_sha256` é o hash do registo dado por
+`--registry` (omissão: `translation/terms/registry.yaml` na raiz do repo); enquanto esse ficheiro não existir é
+`null` e `stale-terms` nunca ocorre. Um ficheiro no espelho sem bloco `translation`
 (feito à mão) gera aviso e exit 2.
 
 ## `terms_import.py`

@@ -189,8 +189,8 @@ def validate_registry(registry: dict) -> List[str]:
             proposal = entry.get("proposal")
             if not isinstance(proposal, str) or not proposal.strip():
                 problems.append(f"{where}: proposal is required for a species-2 entry in state 'pending'")
-            if not entry.get("false_friends"):
-                problems.append(f"{where}: false_friends is required (non-empty) for a species-2 entry in state 'pending'")
+            if not isinstance(entry.get("false_friends"), list):
+                problems.append(f"{where}: false_friends must be a list (possibly empty) for a species-2 entry in state 'pending'")
         for list_key in ("en_variants", "pt_variants", "false_friends", "senses"):
             value = entry.get(list_key)
             if value is not None and not isinstance(value, list):

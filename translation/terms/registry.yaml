@@ -146,6 +146,34 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: alcance_da_prescricao
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: alcance da prescrição
+  pt_variants: [alcances da prescrição, requer-que-exista, requer-alinhamento-demonstrável]
+  ontology_id: null
+  sense: 'Terceiro princípio nomeado (v2.10): o Manual prescreve com três alcances — dentro do domínio
+    PRESCREVE; dentro da organização noutro domínio REQUER-QUE-EXISTA; fora da organização REQUER-ALINHAMENTO-DEMONSTRÁVEL.'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#prescription_reach_principle
+    note: chave EN `prescription_reach_principle` já existe na ontologia; 0 nos papers (Curator A18)
+  counts: {manual_files: 0, manual_occurrences: 0}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: 'prescription reach (princípio: prescription reach principle) · os três alcances: prescribes
+    · requires existence · requires demonstrable alignment'
+  false_friends: [scope_non_goals]
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'false friend: «scope/out of scope» dos papers é fronteira editorial; o alcance é posição do
+    actor face ao domínio, não fronteira do documento. Os três verbos também precisam de forma EN fixada
+    porque aparecerão em tabelas de rastreabilidade. [MA 2026-09-25] verbo «prescreve» retirado de pt_variants:
+    é prosa corrente do Manual (53 blocos); só as formas nomeadas do princípio bloqueiam.'
 - key: anchor
   species: 1
   state: in-record
@@ -427,6 +455,34 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: ausencia_tipada
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: ausência tipada
+  pt_variants: [ausências tipadas, ausência declarada, ausências declaradas]
+  ontology_id: null
+  sense: 'Vocabulário tipado para ausências declaradas (epistemic_model.absence_model, v2.6): cascata
+    gap → out_of_scope → deferred → elsewhere; distingue lacuna (erro/omissão, com dono) de fronteira
+    (decisão do lead).'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#absence_model
+    note: 0 ocorrências nos papers P0–P7 (Curator A18); 0 ocorrências na prosa do Manual
+  counts: {manual_files: 0, manual_occurrences: 0}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: typed absence (modelo) · declared absence (instância) — a v2.6 já usa em EN a chave `declared_absences`
+    e o ficheiro `declared-absences-ledger.yaml`, o que fixa «declared absence» de facto; falta ratificar
+    «typed absence» para o modelo.
+  false_friends: [absence]
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'false friend: `absence` nos papers é uso genérico (Curator: «absence of partition-level pressure»),
+    não o conceito tipado.'
 - key: baseline
   species: 1
   state: pending
@@ -869,8 +925,8 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: '[MA 2026-09-25] conformidade → compliance nos dois sentidos; idem (549 blocos).'
 - key: consumer_contract
   species: 1
   state: in-record
@@ -930,8 +986,10 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: '[MA 2026-09-25] controlo → control nos dois sentidos (segurança / factor controlado); a polissemia
+    é do registo, não da tradução. Desbloqueado pelo Manual agent 2026-09-25; sobe ao lead como «bloquearia»
+    (682 blocos).'
 - key: control_objective
   species: 1
   state: do-not-translate
@@ -1059,8 +1117,8 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: '[MA 2026-09-25] cobertura → coverage nos três sentidos; idem (479 blocos).'
 - key: coverage_adequacy
   species: 1
   state: in-record
@@ -1247,6 +1305,34 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: dependencia_relacao
+  species: 2
+  state: pending
+  owner: archon
+  en: null
+  en_variants: []
+  pt: dependência (espécie de relação)
+  pt_variants: []
+  ontology_id: null
+  sense: 'Espécie de relação (v2.6): consumo tipado entre instâncias da MESMA segmentação (ex.: arestas
+    inter-macro-processo dependency|feedback, regra do template).'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#segmentation_principle.relation_species.dependencia
+    note: «dependência» tem 685 ocorrências em 187 ficheiros do Manual, quase todas no sentido de dependência
+      de software (SBOM/SCA) — o sentido de relação vive nos dados da ontologia
+  counts: {manual_files: 187, manual_occurrences: 685}
+  change_cost: null
+  curator: {finding: A15}
+  previous: null
+  proposal: typed dependency (relation kind) — a v2.6 já usa `dependency|feedback` como kinds de aresta
+    inter-MP em EN; ratificar se «dependency» fica (com qualificador «intra-segmentation») ou se se distingue
+    de software dependency por outro termo
+  false_friends: [floor_closure_dependency]
+  pending_reason: unborn
+  blocks_translation: false
+  notes: 'blocks_translation=false: bloquear «dependência» pararia 187 ficheiros por um sentido que não
+    aparece na prosa. O sentido software traduz como «dependency» (Espécie 3, consistente com SBOM/SCA).'
 - key: design_science
   species: 1
   state: in-record
@@ -1823,8 +1909,8 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: '[MA 2026-09-25] governação → governance nos dois sentidos; idem (451 blocos).'
 - key: grounded_ungrounded
   species: 1
   state: in-record
@@ -1860,8 +1946,8 @@ terms:
   owner: manual-agent
   en: grounding
   en_variants: []
-  pt: null
-  pt_variants: []
+  pt: grounding
+  pt_variants: [groundings]
   ontology_id: null
   sense: Fornecimento de contexto de segurança a um LLM via retrieval (sentido LLM/RAG); o programa distingue
     graus (G0/G1/G2) e reivindica grounding «auditável».
@@ -1897,8 +1983,10 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: |-
+    [MA 2026-09-25] o Manual já usa «grounding» em inglês (30 ficheiros, tabelas de rastreabilidade — sentido substrate/ES grounding); traduz-se por identidade. Polissemia fica pending para o registo.
+    [MA 2026-09-25] o Manual usa «grounding» sem tradução (30 ficheiros).
 - key: hallucination
   species: 1
   state: in-record
@@ -2339,6 +2427,61 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: macro_processo
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: macro-processo
+  pt_variants: [macro-processos, macroprocesso, macroprocessos]
+  ontology_id: MP
+  sense: 'Entidade MacroProcess (v2.5): vista processual do Manual — macro-processo que preserva uma continuidade
+    entre capacidades; instâncias MP-01..MP-05; travessias para capítulos publicadas na fonte (00-fundamentos/macro-processos.md).'
+  senses: []
+  evidence:
+    source: 'sbdtoe-ontology.yaml#entities.MacroProcess + #macro_processes'
+    note: entidade já nomeada em EN (`MacroProcess`, `macro_processes`); 42 ocorrências em 5 ficheiros
+      do Manual, incluindo 00-fundamentos/macro-processos.md e como-usar.mdx (capítulo PILOTO)
+  counts: {manual_files: 5, manual_occurrences: 42}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: macro-process (plural macro-processes; entity `MacroProcess` do-not-translate; ids MP-01..05
+    do-not-translate)
+  false_friends: []
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'PRIORIDADE: bloqueia 2 ficheiros do capítulo 00 (piloto da frente 6). A entidade já existe em
+    EN nos dados; a decisão é quase formal, mas é do lead.'
+- key: mandato_operacional
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: mandato operacional
+  pt_variants: [mandatos operacionais]
+  ontology_id: null
+  sense: Conceito listado pelo Orchestrator como Espécie 2; NÃO localizado por chave na v2.6 (`operational_mandate`/`mandato
+    operacional` = 0 em sbdtoe-ontology.yaml) nem na prosa do Manual. Sentido a confirmar pelo lead antes
+    de coinar.
+  senses: []
+  evidence:
+    source: null
+    note: '0 nos papers (Curator A18: «operational mandate» = 0); 0 na ontologia; 0 no Manual — fonte
+      do conceito por identificar'
+  counts: {manual_files: 0, manual_occurrences: 0}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: operational mandate — SÓ depois de o lead confirmar onde o conceito vive e o que distingue
+    de `mandatory` (força normativa de requisito, Curator `mandatory`)
+  false_friends: [mandatory]
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'false friend: `mandatory` nos papers = força normativa (obrigatório vs informativo); v2.6 mantém
+    `mandatory` como constante legacy em ArtifactRequirement (Q-T1 aposentado em v2.9).'
 - key: mandatory
   species: 1
   state: in-record
@@ -3060,6 +3203,34 @@ terms:
   pending_reason: polysemy
   blocks_translation: true
   notes: ''
+- key: piso_relacao
+  species: 2
+  state: pending
+  owner: archon
+  en: null
+  en_variants: []
+  pt: piso
+  pt_variants: []
+  ontology_id: null
+  sense: 'Espécie de relação entre segmentações (segmentation_principle.relation_species.piso, v2.6):
+    relação transversal de fundação — aplica-se a tudo, independentemente do eixo da segmentação (ex.:
+    cap. 00-fundamentos como piso de todos os capítulos).'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#segmentation_principle.relation_species.piso
+    note: '1 ocorrência de «piso» na prosa do Manual (12-monitorizacao/addon/12-epss-kev: «piso obrigatório»),
+      em sentido GENÉRICO de mínimo — não é a relação'
+  counts: {manual_files: 1, manual_occurrences: 1}
+  change_cost: null
+  curator: {finding: A15}
+  previous: null
+  proposal: 'foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`.'
+  false_friends: [floor_closure_dependency]
+  pending_reason: unborn
+  blocks_translation: false
+  notes: 'blocks_translation=false porque a única ocorrência em prosa é o sentido genérico («piso obrigatório»
+    = limiar mínimo), que traduz como «minimum floor» sem conflito; a relação só existe em dados da ontologia.
+    false friend: «admissibility floor» (P7 §12) = limiar mínimo de similaridade.'
 - key: plain_rag
   species: 1
   state: in-record
@@ -3250,6 +3421,33 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: precedencia_do_ledger
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: precedência do ledger
+  pt_variants: [o ledger prevalece]
+  ontology_id: null
+  sense: 'Regra (v2.9, status_ledger): as transições de estado das ausências registam-se em declared-absences-ledger.yaml
+    (append-only); em divergência entre índice e ledger, o ledger prevalece para status; o ledger é do
+    índice, a superfície nunca fecha nada.'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#absence_model.status_ledger + declared-absences-ledger.yaml
+    note: 36 ocorrências de `ledger` na ontologia; 1 na prosa do Manual; «ledger» = 0 nos papers (Curator
+      A18)
+  counts: {manual_files: 1, manual_occurrences: 1}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: ledger precedence (the ledger prevails) — «ledger» fica em inglês nas duas línguas (já é o
+    nome do artefacto)
+  false_friends: []
+  pending_reason: unborn
+  blocks_translation: true
+  notes: ''
 - key: prescriptive
   species: 1
   state: in-record
@@ -3303,6 +3501,34 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: principio_de_segmentacao
+  species: 2
+  state: pending
+  owner: archon
+  en: null
+  en_variants: []
+  pt: princípio de segmentação
+  pt_variants: [segmentações paralelas]
+  ontology_id: null
+  sense: 'Princípio nomeado (v2.6): MacroProcess, KnowledgeBundle (capítulo) e SDLCPhase são segmentações
+    PARALELAS do mesmo substrato; relações entre segmentações nunca se tipam como contenção.'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#segmentation_principle
+    note: 'chave EN `segmentation_principle` já existe; 0 nos papers (Curator A18: «segmentation principle»
+      = 0)'
+  counts: {manual_files: 0, manual_occurrences: 0}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: segmentation principle · segmentation (axis) · parallel segmentations
+  false_friends: [two_view]
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'false friend/colisão: «view» nos papers (engagement view vs organizational view, P6/P7) ≠ «vista»
+    da v2.6 (eixo de segmentação; Curator A13). A escolha de «segmentation» vs «view» para o eixo é a
+    decisão que importa. [MA 2026-09-25] «segmentação» isolada retirada de pt_variants: no Manual é segmentação
+    de rede/ambientes (41 blocos genéricos).'
 - key: programme_line
   species: 1
   state: in-record
@@ -3424,6 +3650,32 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: regra_de_fecho
+  species: 2
+  state: pending
+  owner: lead
+  en: null
+  en_variants: []
+  pt: regra de fecho
+  pt_variants: [fecho de uma ausência, fechar uma ausência]
+  ontology_id: null
+  sense: 'Regra (v2.8): fechar uma ausência é REGISTO NO ÍNDICE — com evidência verificável, quem verificou
+    e onde — nunca declaração da superfície («o registo é do índice, nunca da superfície»).'
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#absence_model.closure_rule
+    note: chave EN `closure_rule` já existe; 1 ocorrência de «regra de fecho» na prosa do Manual
+  counts: {manual_files: 1, manual_occurrences: 1}
+  change_cost: null
+  curator: {finding: A15}
+  previous: null
+  proposal: closure rule (close an absence · closed) — apesar do false friend, a chave `closure_rule`
+    já fixa o termo em dados
+  false_friends: [floor_closure_dependency]
+  pending_reason: unborn
+  blocks_translation: true
+  notes: 'false friend: «closure» nos papers (Curator A15) tem sentido genérico/outro; verificar se colide
+    com «closure» de P2 (compilação).'
 - key: relations
   species: 1
   state: do-not-translate
@@ -3844,8 +4096,8 @@ terms:
   en: slice
   en_variants: [slices, per-slice, cross-slice, ten-slice, domain slices, 10-slice, sibling-slice, sibling
       slices]
-  pt: null
-  pt_variants: []
+  pt: slice
+  pt_variants: [slices]
   ontology_id: null
   sense: Partição de domínio da ontologia AppSec Core (10 «domain slices», ASC-01..10), unidade de âmbito
     governada por contrato; um só sentido nos papers.
@@ -3863,7 +4115,8 @@ terms:
   false_friends: []
   pending_reason: null
   blocks_translation: true
-  notes: ''
+  notes: '[MA 2026-09-25] o Manual usa «slice» sem tradução (17 ficheiros) e «fatia» só em sentido genérico
+    (Curator); pt = slice.'
 - key: slice_activation
   species: 1
   state: in-record
@@ -4089,8 +4342,9 @@ terms:
   proposal: null
   false_friends: []
   pending_reason: polysemy
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: '[MA 2026-09-25] invariante → invariant; «structural invariance» só aparece como termo composto;
+    idem (12 blocos).'
 - key: structural_unit
   species: 1
   state: in-record
@@ -4393,6 +4647,34 @@ terms:
   previous: null
   proposal: null
   false_friends: []
+  pending_reason: en-vs-en-collision
+  blocks_translation: true
+  notes: ''
+- key: travessia_relacao
+  species: 2
+  state: pending
+  owner: archon
+  en: null
+  en_variants: []
+  pt: travessia
+  pt_variants: [travessias]
+  ontology_id: null
+  sense: 'Espécie de relação (v2.6): N:M entre segmentações, publicada na fonte (ex.: MP → capítulos)
+    ou derivada de dados autorados com regra declarada (segmentation_traversals; traversal_assertion_rule).'
+  senses: []
+  evidence:
+    source: 'sbdtoe-ontology.yaml#segmentation_principle.relation_species.travessia + #segmentation_traversals'
+    note: 'colisão EN-vs-EN: papers usam «traversal» para o ALGORITMO de retrieval (P3/P4/P5); a v2.6
+      já usa `segmentation_traversals`/`sdlc_phase_traversal` para a RELAÇÃO — ver entrada Espécie 1 `traversal`
+      (pending, en-vs-en-collision)'
+  counts: {manual_files: 1, manual_occurrences: 1}
+  change_cost: null
+  curator: {finding: A1}
+  previous: null
+  proposal: 'manter «traversal» para a relação (já fixado nas chaves da v2.6) e qualificar o algoritmo
+    como «graph traversal» na prosa — OU renomear a relação (ex.: «crossing»). Decisão conjunta Archon
+    + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo.'
+  false_friends: [traversal]
   pending_reason: en-vs-en-collision
   blocks_translation: true
   notes: ''

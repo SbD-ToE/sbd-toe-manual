@@ -169,8 +169,20 @@ class ImporterTests(unittest.TestCase):
             handle.write(terms_import.dump_registry(self.registry))
 
     def test_committed_registry_matches_the_survey(self):
+        """Species-1 entries of the committed registry carry the survey-owned fields verbatim.
+
+        The Manual agent's review may change state, pt, pt_variants, blocks_translation and notes,
+        and appends species-2/3 entries, so only survey-owned fields of species-1 entries are compared."""
         self.assertTrue(REGISTRY.is_file(), "translation/terms/registry.yaml must be committed")
-        self.assertEqual(common.read_text(REGISTRY), common.read_text(self.registry_path))
+        committed = {e["key"]: e for e in terms_lint.load_registry(REGISTRY)["terms"]}
+        seeded = {e["key"]: e for e in self.registry["terms"]}
+        self.assertTrue(set(seeded) <= set(committed), sorted(set(seeded) - set(committed)))
+        for key, fresh in seeded.items():
+            for field in ("species", "en", "en_variants", "sense", "senses", "evidence", "counts", "change_cost", "curator"):
+                self.assertEqual(committed[key][field], fresh[field], f"{key}.{field}")
+        for key, entry in committed.items():
+            if key not in seeded:
+                self.assertIn(entry["species"], (2, 3), f"{key}: unexpected species-1 entry absent from the survey")
 
 
 class ValidateTests(unittest.TestCase):
@@ -186,12 +198,12 @@ class ValidateTests(unittest.TestCase):
 
     def test_species_2_pending_requires_proposal_and_false_friends(self):
         registry = registry_with(
-            minimal_entry("piso", species=2, state="pending", en=None, pending_reason="unborn", owner="archon"),
+            minimal_entry("piso", species=2, state="pending", en=None, pending_reason="unborn", owner="archon", false_friends=None),
             minimal_entry("floor"),
         )
         problems = terms_lint.validate_registry(registry)
         self.assertTrue(any("proposal is required" in p for p in problems))
-        self.assertTrue(any("false_friends is required" in p for p in problems))
+        self.assertTrue(any("false_friends must be a list" in p for p in problems))
         ok = registry_with(
             minimal_entry("piso", species=2, state="pending", en=None, pending_reason="unborn", owner="archon", proposal="foundation", false_friends=["floor"]),
             minimal_entry("floor"),

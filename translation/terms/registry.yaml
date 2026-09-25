@@ -4863,9 +4863,9 @@ terms:
   state: coined
   owner: archon
   en: segmentation traversal
-  en_variants: [a traversal, traverses, phase traversal, chapter traversal]
+  en_variants: [Chapter traversal, a traversal, chapter traversal, phase traversal, traverses]
   pt: travessia
-  pt_variants: [travessias]
+  pt_variants: [percurso de capítulos, travessias]
   ontology_id: null
   sense: 'Espécie de relação (v2.6): N:M entre segmentações, publicada na fonte (ex.: MP → capítulos)
     ou derivada de dados autorados com regra declarada (segmentation_traversals; traversal_assertion_rule).'
@@ -4889,6 +4889,7 @@ terms:
 
     [MA 2026-09-25] blocks_translation=false: nenhum bloco em prosa usa o sentido de relação.
     [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Forma curta «a traversal» só quando o contexto é o princípio de segmentação. O algoritmo escreve-se SEMPRE «graph traversal». Colisão assumida e declarada; chaves YAML/KG/MCP mantidas.
+    [MA 2026-09-25] Uso em prosa fixado no piloto do cap. 00: o rótulo de secção/coluna «Percurso de capítulos» (template dos macro-processos) traduz-se «Chapter traversal» — é a RELAÇÃO (o percurso de um macro-processo atravessa a segmentação de capítulos, v2.5), não o algoritmo. Passa o lint por ter qualificador. Nota do Orchestrator: a confirmar pelo Archon na emissão @en.
 - key: trilho_formativo
   species: 3
   state: in-record

@@ -11,10 +11,10 @@ translation:
   target_sha256: 57f7e324a0c856b3ad7af04a1bd947ec88d95b0de17dec057f3732fd3e841050
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, normative_empirical, prescriptive, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 810520c14b1b36fe29cd04aa4ceae969711bb8ff2349bea38075782e3be447c6
-  translated_at: 2026-09-25T17:59:11Z
+  glossary_sha256: e02cfe1e5174ff3545197e7bfecf9fb29a851997fca908e9b10de5fe219a73d9
+  translated_at: 2026-09-25T20:18:44Z
   reviewed_by: null
 ---
 <!--template: sbdtoe-core -->

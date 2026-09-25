@@ -12,10 +12,10 @@ translation:
   target_sha256: 53562c351c5fe046b3d9c19654f801d7daae84ccab5d014bd433b6f2a7098cf6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, deterministic, instrument, maturity, sbdtoe_sbd, threat, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 66c24c2c24ff0cdc40e251c03583d31e247c986b34255a457d37f63e584e05b6
-  translated_at: 2026-09-25T17:59:19Z
+  glossary_sha256: c617520c89fb0b849770232d02987e305a2b859d5a0b9d1c12e006b0ccee6508
+  translated_at: 2026-09-25T20:18:52Z
   reviewed_by: null
 ---
 

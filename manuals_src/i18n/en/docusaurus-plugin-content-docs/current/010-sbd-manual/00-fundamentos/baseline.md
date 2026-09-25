@@ -13,10 +13,10 @@ translation:
   target_sha256: 5802edc4c4a33561cdceaa32b5e762f19cb4dd976982e3a6d659ef94e15fd046
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, layer, lifecycle_phase, mapping, maturity, piso_limiar, piso_relacao, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 9d11d434b18c216d89b400ba7f0eca5fed53c0065573143f38f5b88ac70d02c8
-  translated_at: 2026-09-25T17:57:13Z
+  glossary_sha256: 9cf7a95e7e92c29c8de85d2c5a3defe33cca28ae1f051d106f160b58afbd14b2
+  translated_at: 2026-09-25T20:19:51Z
   reviewed_by: null
 ---
 

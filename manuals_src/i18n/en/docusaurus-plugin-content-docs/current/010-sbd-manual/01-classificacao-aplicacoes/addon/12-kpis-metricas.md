@@ -12,10 +12,10 @@ translation:
   target_sha256: 461b335f94e5ef03d5f3f35f7d9e3e40e39958ba28120509e136ecc5b19ef20e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [alcada, avaliacao, cycle_iteration, framework_source_corpus, mapping, maturity, programme_line, risk_level, sbdtoe_sbd, transversal, validation_evaluation]
-  glossary_sha256: 981f40adcad361fe105468dc7b3b2592ed43ab1c0ed9d8aa26949087ef52d02f
-  translated_at: 2026-09-25T17:59:17Z
+  glossary_sha256: 7e949b678f0f1294401594e5b96bbdf77262fb43b3b3ce769164e7b215c2dee2
+  translated_at: 2026-09-25T20:18:50Z
   reviewed_by: null
 ---
 

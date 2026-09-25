@@ -13,10 +13,10 @@ translation:
   target_sha256: 401cb37ed23c3fc63fbd80d6e9749b5c325013407859e5cda496d9eafebbec06
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [alcada, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, practitioner_manual, prescriptive, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 278074840ab77d9ce2bc9ecd3f3a9fa2a6ab111f69e98760a44369d82dff9cec
-  translated_at: 2026-09-25T17:57:15Z
+  glossary_sha256: a511a80eed522fb543c6ca091d2af2b011a3169c3e82908cb73278bcd80d732b
+  translated_at: 2026-09-25T20:19:53Z
   reviewed_by: null
 ---
 

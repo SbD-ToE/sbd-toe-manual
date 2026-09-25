@@ -396,6 +396,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: atlas_defense_evasion
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Defense Evasion
+  en_variants: []
+  pt: Defense Evasion
+  pt_variants: []
+  ontology_id: null
+  sense: Táctica MITRE ATT&CK/ATLAS (nome oficial AmE).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Nomes de tácticas/técnicas MITRE mantêm a grafia original.'
 - key: atomic_composite
   species: 1
   state: in-record
@@ -1408,8 +1429,8 @@ terms:
   state: in-record
   owner: manual-agent
   en: cycle
-  en_variants: [iteration, iterations, design science cycle, cycles, DSR cycle, design-science cycle,
-    design-science cycles]
+  en_variants: [DSR cycle, cycles, design science cycle, design-science cycle, design-science cycles,
+    development cycle, iteration, iterations, lifecycle]
   pt: ciclo
   pt_variants: [iteração]
   ontology_id: null
@@ -1430,7 +1451,9 @@ terms:
   false_friends: []
   pending_reason: null
   blocks_translation: true
-  notes: ''
+  notes: |2-
+
+    [MA 2026-09-25] «lifecycle»/«development cycle» aceites: «ciclo de vida» traduz como lifecycle (lifecycle_phase) e o detector por palavra apanhava «ciclo» nesse composto.
 - key: declarative_class
   species: 1
   state: in-record
@@ -2883,6 +2906,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: microsoft_threat_modeling_tool
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Microsoft Threat Modeling Tool
+  en_variants: [Microsoft TMT]
+  pt: Microsoft Threat Modeling Tool
+  pt_variants: []
+  ontology_id: null
+  sense: Nome de produto (grafia oficial AmE).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Nomes de produtos/ferramentas mantêm a grafia original; isento do lint en-GB.'
 - key: mirror_osf
   species: 1
   state: do-not-translate
@@ -3243,6 +3287,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: owasp_threat_modeling_cheat_sheet
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: OWASP Threat Modeling Cheat Sheet
+  en_variants: []
+  pt: OWASP Threat Modeling Cheat Sheet
+  pt_variants: []
+  ontology_id: null
+  sense: Título de documento externo (grafia oficial).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Nomes/títulos de fontes externas mantêm a grafia original.'
 - key: partition
   species: 1
   state: in-record
@@ -5128,6 +5193,70 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: v1_entity_tmr_peer_review
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Threat Modeling Peer Review
+  en_variants: [Threat Modeling Peer]
+  pt: Threat Modeling Peer Review
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-TMR-*) — forma exacta a confirmar na fonte.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Idem.'
+- key: v1_entity_tmr_risk_governance
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Threat Modeling And Risk Governance Integrity
+  en_variants: []
+  pt: Threat Modeling And Risk Governance Integrity
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-TMR-*).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Idem.'
+- key: v1_entity_tmr_scope_trigger
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Threat Modeling Scope And Trigger Discipline
+  en_variants: []
+  pt: Threat Modeling Scope And Trigger Discipline
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-TMR-*) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir nem reescrever.'
 - key: validation_evaluation
   species: 1
   state: in-record

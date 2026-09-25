@@ -11,10 +11,10 @@ translation:
   target_sha256: 4ec4a3da3716d3b172c8571537575b69610ea7b2d6303e84902883a608799eae
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [alcada, framework_source_corpus, requirement_runtime, traceability, validation_evaluation]
   glossary_sha256: 2e47d4b9b6f8d8080beea290d7d4f9a9e515bf57e810e8e369482ed4787227f6
-  translated_at: 2026-09-25T19:37:43Z
+  translated_at: 2026-09-25T20:20:11Z
   reviewed_by: null
 ---
 

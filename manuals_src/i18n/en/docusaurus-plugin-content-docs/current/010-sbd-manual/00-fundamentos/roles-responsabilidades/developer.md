@@ -13,10 +13,10 @@ translation:
   target_sha256: e4a10f34913ba0bfee9a9e23c55f60431000712dad8a1bd9ec110630e9ccfd18
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, framework_source_corpus, practitioner_manual, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation]
   glossary_sha256: 638119d33cbd1dfb38bd989ad118e09333fc58f7bda1740c7ea23dbfc112280e
-  translated_at: 2026-09-25T17:57:18Z
+  translated_at: 2026-09-25T20:22:02Z
   reviewed_by: null
 ---
 

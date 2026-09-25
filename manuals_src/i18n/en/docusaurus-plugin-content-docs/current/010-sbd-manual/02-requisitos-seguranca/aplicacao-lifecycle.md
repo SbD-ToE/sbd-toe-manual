@@ -12,10 +12,10 @@ translation:
   target_sha256: a5d36774e31e9d771ec42c85b2d7cc0d5d4f0af70ff475bd2268f310e2b848c3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, framework_source_corpus, lifecycle_phase, mapping, maturity, provenance, requirement_runtime, risk_level, schema, threat, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 1e5d41a6cc3f7f17cd730fb1fe7b3d4302cfe95160e51ffea7dce91a7b9e9153
-  translated_at: 2026-09-25T19:37:47Z
+  glossary_sha256: bfbb178fff4eef60ed7c47ebdb0cbf0b49345d64847e912678d9212d62490971
+  translated_at: 2026-09-25T20:22:04Z
   reviewed_by: null
 ---
 

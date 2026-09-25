@@ -11,10 +11,10 @@ translation:
   target_sha256: 6f2501aa07c9c6da52476dd474ad881e448f84ac43d6ed0c490352463759a207
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [avaliacao, deterministic, evidenciabilidade, maturity, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: 73b81807767f3a5ed8990e59f8173e55eebed9c6870a118a01ff33a4c6cee8ce
-  translated_at: 2026-09-25T17:59:12Z
+  translated_at: 2026-09-25T20:18:45Z
   reviewed_by: null
 ---
 

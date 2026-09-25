@@ -13,10 +13,10 @@ translation:
   target_sha256: 9444c34abce82c31cc1704aa0be939d1a93fed6f21fa3ed5a37b12510cdce1f2
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [avaliacao, chapter_role, practitioner_manual, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
   glossary_sha256: 6ada444a55b2b5e511c0e24c81d5881ea88dcef597cf613e60a518281766f35d
-  translated_at: 2026-09-25T17:57:20Z
+  translated_at: 2026-09-25T20:19:58Z
   reviewed_by: null
 ---
 

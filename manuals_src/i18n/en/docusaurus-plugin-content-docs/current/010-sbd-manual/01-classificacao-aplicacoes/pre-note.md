@@ -12,10 +12,10 @@ translation:
   target_sha256: db99375169926d279b60e161d33d87ea31add040d9d9b3fddb54b3d7da552226
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [chapter_role, cycle_iteration, gap_family, lifecycle_phase, maturity, normative_empirical, practitioner_manual, risk_level, traceability]
-  glossary_sha256: 8430814a5bf3a5b07ecdaa5e69c9512f9cb407414f5d9da0318879386c60409e
-  translated_at: 2026-09-25T17:59:21Z
+  glossary_sha256: 811335bc2d50c72f55ad3f68e21f301c93d9ec0fd83591d07c0dba0cbe8da238
+  translated_at: 2026-09-25T20:18:55Z
   reviewed_by: null
 ---
 

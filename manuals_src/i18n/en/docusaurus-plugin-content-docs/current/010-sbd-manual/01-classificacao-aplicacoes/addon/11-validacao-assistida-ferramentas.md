@@ -11,10 +11,10 @@ translation:
   target_sha256: a7e54fff6e13ca08a867aad2bf7db326f53a4c165e13b79b405154e74d377e1f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, practitioner_manual, risk_level, threat, traceability, validation_evaluation]
-  glossary_sha256: 0f9ea9f102dc99e99b6c3b26684b206d76e17e0db9a588c6c79e62d96ffb3e99
-  translated_at: 2026-09-25T17:59:17Z
+  glossary_sha256: f58df24b0ddfdbd97d5d3b0b8d1510caac0d7b14e355283917ada18a21f1f5ef
+  translated_at: 2026-09-25T20:18:49Z
   reviewed_by: null
 ---
 

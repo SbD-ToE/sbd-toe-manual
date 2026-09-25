@@ -11,10 +11,10 @@ translation:
   target_sha256: b8161697d13cfbbf2b2953d308be010b2cf10f322243070df334b522498a2b02
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [basilar, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, risk_level, sbdtoe_sbd, traceability]
-  glossary_sha256: f03bb8edde826fa47a8385cc7d1ad55a7ba699178cd7c6fe04d817a367dad52b
-  translated_at: 2026-09-25T17:59:20Z
+  glossary_sha256: 383d6ef46debdc37cd8236321c0a133e51352f416d3687fc65b4811e4eba561c
+  translated_at: 2026-09-25T20:18:54Z
   reviewed_by: null
 ---
 

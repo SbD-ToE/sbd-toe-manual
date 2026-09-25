@@ -8,10 +8,10 @@ translation:
   target_sha256: 022d2e3a638a94a09b059d52c3cfc1d577e0afd262244e8463a23c3683a893e6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
+  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability]
   glossary_sha256: 0cd1e6309433d4e75cb1b588a32a8a222349580641d4ab09d983b24c6528e57c
-  translated_at: 2026-09-25T17:59:10Z
+  translated_at: 2026-09-25T20:18:42Z
   reviewed_by: null
 ---
 

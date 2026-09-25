@@ -1,0 +1,78 @@
+name: i18n equivalence
+
+# Extraction-equivalence test, sync-state reproducibility and a Docusaurus build
+# of the target locale. Direction is a parameter: swap the two locales below in
+# Phase 2 and nothing else changes.
+
+on:
+  pull_request:
+    paths:
+      - 'manuals_src/**'
+      - 'translation/**'
+      - '.github/workflows/i18n-equivalence.yml'
+  workflow_dispatch:
+
+env:
+  SOURCE_LOCALE: pt
+  TARGET_LOCALE: en
+
+permissions:
+  contents: read
+
+concurrency:
+  group: i18n-equivalence-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  equivalence:
+    name: Equivalence, sync state and build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Unit tests
+        run: python -m unittest discover -s translation/scripts/tests -p 'test_*.py'
+
+      - name: Extraction equivalence (every translated file)
+        run: >
+          python translation/scripts/equivalence.py --all
+          --source-locale "$SOURCE_LOCALE" --target-locale "$TARGET_LOCALE"
+
+      - name: Sync state is reproducible
+        run: >
+          python translation/scripts/sync_state.py --check
+          --source-locale "$SOURCE_LOCALE" --target-locale "$TARGET_LOCALE"
+
+      - name: Use Node 20
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      - name: Install deps (clean)
+        working-directory: manuals_src
+        run: npm ci
+
+      - name: Choose the locale to build
+        id: locale
+        run: |
+          # Build the target locale once it is declared in docusaurus.config.ts;
+          # until then build the source locale so the job stays meaningful.
+          if grep -qE "locales:[^]]*['\"]${TARGET_LOCALE}['\"]" manuals_src/docusaurus.config.ts; then
+            echo "locale=${TARGET_LOCALE}" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::locale '${TARGET_LOCALE}' is not declared in manuals_src/docusaurus.config.ts; building '${SOURCE_LOCALE}' instead"
+            echo "locale=${SOURCE_LOCALE}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build Docusaurus (${{ steps.locale.outputs.locale }})
+        working-directory: manuals_src
+        run: npm run build -- --locale "${{ steps.locale.outputs.locale }}"

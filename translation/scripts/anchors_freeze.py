@@ -321,7 +321,7 @@ def rewrite_file_text(text: str) -> tuple[str, list[Heading], list[Heading]]:
             continue
         raw = lines[h.lineno]
         cr = '\r' if raw.endswith('\r') else ''
-        lines[h.lineno] = raw.rstrip() + ' {#' + h.slug + '}' + cr
+        lines[h.lineno] = raw + ' {#' + h.slug + '}' + cr  # never rstrip: trailing whitespace belongs to the source line
         written.append(h)
     return '\n'.join(lines), written, skipped
 
@@ -515,7 +515,7 @@ def cmd_verify(args) -> int:
                 continue
             cr = '\r' if x.endswith('\r') else ''
             m = re.match(r'^[ \t]{0,3}#{2,6}[ \t]', x)
-            m2 = re.fullmatch(re.escape(x.rstrip()) + r' \{#(?P<id>[^}]*)\}' + re.escape(cr), y)
+            m2 = re.fullmatch(re.escape(x) + r' \{#(?P<id>[^}]*)\}' + re.escape(cr), y)
             if not m or not m2:
                 non_heading_pairs.append(f'{rel}: {x[:80]!r} → {y[:80]!r}')
             else:

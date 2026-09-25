@@ -1,13 +1,13 @@
 # Fila de termos `pending` — export para o hub
 
 Gerado por `translation/scripts/terms_lint.py export-pending` a partir de `translation/terms/registry.yaml`.
-`terms_sha256` do registo: `699f5cefb78febfd3bdf3a6bc1325f1ba050258f2e9955525c7e6f0628186db1`.
+`terms_sha256` do registo: `17585ab1c3441219e8d709dc6c9f5a051d229ecf51a190c65c0c58fd187f3c40`.
 
 **Como responder:** no hub (`sbd-ai-runtime/handover/em-curso/`), por chave → EN decidido (e, se aplicável, PT).
 O Manual agent regista a decisão no registo: espécie 2 passa a `coined` (com `ratified_by` e `date`); espécie 1 passa a
 `in-record` ou `changed` (com `previous`). Enquanto `pending`, os blocos da fonte que contêm o termo não são traduzidos.
 
-Total pendente: 28.
+Total pendente: 27.
 
 ## `owner: archon` (4)
 
@@ -18,13 +18,12 @@ Total pendente: 28.
 | `principio_de_segmentacao` | 2 | unborn | princípio de segmentação (segmentações paralelas) |  | segmentation principle · segmentation (axis) · parallel segmentations | `two_view` (Duas lentes sobre o mesmo programa: vista de engagement (táctica: o que fazer n…) |  |
 | `travessia_relacao` | 2 | en-vs-en-collision | travessia (travessias) |  | manter «traversal» para a relação (já fixado nas chaves da v2.6) e qualificar o algoritmo como «graph traversal» na prosa — OU renomear a relação (ex.: «crossing»). Decisão conjunta Archon + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo. | `traversal` (ALGORITMO de retrieval: enumeração determinística de ControlObjectives por trav…) |  |
 
-## `owner: lead` (5)
+## `owner: lead` (4)
 
 | chave | espécie | razão | PT | EN actual | proposal | false_friends | senses |
 |---|---|---|---|---|---|---|---|
 | `alcance_da_prescricao` | 2 | unborn | alcance da prescrição (alcances da prescrição; requer-que-exista; requer-alinhamento-demonstrável) |  | prescription reach (princípio: prescription reach principle) · os três alcances: prescribes · requires existence · requires demonstrable alignment | `scope_non_goals` (Componentes de um slice contract e declaração de fronteira de cada paper; «out…) |  |
 | `ausencia_tipada` | 2 | unborn | ausência tipada (ausências tipadas; ausência declarada; ausências declaradas) |  | typed absence (modelo) · declared absence (instância) — a v2.6 já usa em EN a chave `declared_absences` e o ficheiro `declared-absences-ledger.yaml`, o que fixa «declared absence» de facto; falta ratificar «typed absence» para o modelo. | `absence` (Uso genérico (ausência de documentação ≠ ausência de prática; «absence of parti…) |  |
-| `macro_processo` | 2 | unborn | macro-processo (macro-processos; macroprocesso; macroprocessos) |  | macro-process (plural macro-processes; entity `MacroProcess` do-not-translate; ids MP-01..05 do-not-translate) |  |  |
 | `precedencia_do_ledger` | 2 | unborn | precedência do ledger (o ledger prevalece) |  | ledger precedence (the ledger prevails) — «ledger» fica em inglês nas duas línguas (já é o nome do artefacto) |  |  |
 | `regra_de_fecho` | 2 | unborn | regra de fecho (fecho de uma ausência; fechar uma ausência) |  | closure rule (close an absence · closed) — apesar do false friend, a chave `closure_rule` já fixa o termo em dados | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
 

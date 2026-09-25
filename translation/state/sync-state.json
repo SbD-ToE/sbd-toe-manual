@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T16:06:15Z",
+  "generated_at": "2026-09-25T16:12:03Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "699f5cefb78febfd3bdf3a6bc1325f1ba050258f2e9955525c7e6f0628186db1",
+  "terms_sha256": "17585ab1c3441219e8d709dc6c9f5a051d229ecf51a190c65c0c58fd187f3c40",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "untranslated",
@@ -1023,7 +1023,7 @@
     },
     "010-sbd-manual/04-arquitetura-segura/addon/07-termos-e-glossario-arquitetura.md": {
       "state": "untranslated",
-      "source_sha256": "76cf6b8e7ae84faee05dc04a8e9d9cdfd7a7b53486ce2c2ff5d148defbdd0f66",
+      "source_sha256": "f68bd7fd80799477d19475e486a063189bc392ff1182ff01afd65341d05ab67c",
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,

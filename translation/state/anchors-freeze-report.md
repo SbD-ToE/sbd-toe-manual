@@ -105,3 +105,7 @@ python3 translation/scripts/anchors_freeze.py diff before.json after.json
 python3 translation/scripts/anchors_freeze.py verify --docs-dir manuals_src/i18n/en/docusaurus-plugin-content-docs/current --base <sha>
 ```
 (Na Fase 1 a tradução copia os `{#id}` PT; o `apply` sobre EN só faria falta se um ficheiro EN chegasse sem ids.)
+
+## Adenda 2026-09-25 — espaço final preservado
+
+Achado do Codex: `apply` fazia `rstrip()` à linha do cabeçalho antes de acrescentar ` {#id}`; 4 linhas em `010-sbd-manual/04-arquitetura-segura/addon/07-termos-e-glossario-arquitetura.md` (66, 85, 92, 97), as únicas H2–H6 do corpus com espaço final, perderam-no. Corrigido: `apply` acrescenta ` {#id}` à linha original sem `rstrip`; `verify` exige `antes + ' {#id}' == depois`; as 4 linhas foram repostas a partir de `7521f679`. Efeito nas âncoras renderizadas: nenhum (o slugger ignora espaço final). Política do KG ratificada pelo lead: PREFER_EXPLICIT — o `{#id}` congelado passa a ser o id de secção no KG.

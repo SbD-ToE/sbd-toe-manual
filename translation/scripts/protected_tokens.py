@@ -27,6 +27,7 @@ ID_PREFIXES: Tuple[str, ...] = (
     "VAL",
     "ACA",
     "ACR",
+    "MP",  # MacroProcess instance ids MP-01..05 (lead, 2026-09-25)
 )
 
 # Acronyms and fixed spellings that are never translated.

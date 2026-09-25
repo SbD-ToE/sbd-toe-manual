@@ -926,7 +926,9 @@ terms:
   false_friends: []
   pending_reason: polysemy
   blocks_translation: false
-  notes: '[MA 2026-09-25] conformidade → compliance nos dois sentidos; idem (549 blocos).'
+  notes: |-
+    [MA 2026-09-25] conformidade → compliance nos dois sentidos; idem (549 blocos).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: consumer_contract
   species: 1
   state: in-record
@@ -987,9 +989,9 @@ terms:
   false_friends: []
   pending_reason: polysemy
   blocks_translation: false
-  notes: '[MA 2026-09-25] controlo → control nos dois sentidos (segurança / factor controlado); a polissemia
-    é do registo, não da tradução. Desbloqueado pelo Manual agent 2026-09-25; sobe ao lead como «bloquearia»
-    (682 blocos).'
+  notes: |-
+    [MA 2026-09-25] controlo → control nos dois sentidos (segurança / factor controlado); a polissemia é do registo, não da tradução. Desbloqueado pelo Manual agent 2026-09-25; sobe ao lead como «bloquearia» (682 blocos).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: control_objective
   species: 1
   state: do-not-translate
@@ -1118,7 +1120,9 @@ terms:
   false_friends: []
   pending_reason: polysemy
   blocks_translation: false
-  notes: '[MA 2026-09-25] cobertura → coverage nos três sentidos; idem (479 blocos).'
+  notes: |-
+    [MA 2026-09-25] cobertura → coverage nos três sentidos; idem (479 blocos).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: coverage_adequacy
   species: 1
   state: in-record
@@ -1910,7 +1914,9 @@ terms:
   false_friends: []
   pending_reason: polysemy
   blocks_translation: false
-  notes: '[MA 2026-09-25] governação → governance nos dois sentidos; idem (451 blocos).'
+  notes: |-
+    [MA 2026-09-25] governação → governance nos dois sentidos; idem (451 blocos).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: grounded_ungrounded
   species: 1
   state: in-record
@@ -1987,6 +1993,7 @@ terms:
   notes: |-
     [MA 2026-09-25] o Manual já usa «grounding» em inglês (30 ficheiros, tabelas de rastreabilidade — sentido substrate/ES grounding); traduz-se por identidade. Polissemia fica pending para o registo.
     [MA 2026-09-25] o Manual usa «grounding» sem tradução (30 ficheiros).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: hallucination
   species: 1
   state: in-record
@@ -2429,10 +2436,10 @@ terms:
   notes: ''
 - key: macro_processo
   species: 2
-  state: pending
+  state: coined
   owner: lead
-  en: null
-  en_variants: []
+  en: macro-process
+  en_variants: [macro-processes]
   pt: macro-processo
   pt_variants: [macro-processos, macroprocesso, macroprocessos]
   ontology_id: MP
@@ -2447,13 +2454,36 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: macro-process (plural macro-processes; entity `MacroProcess` do-not-translate; ids MP-01..05
-    do-not-translate)
+  proposal: null
   false_friends: []
-  pending_reason: unborn
+  pending_reason: null
   blocks_translation: true
-  notes: 'PRIORIDADE: bloqueia 2 ficheiros do capítulo 00 (piloto da frente 6). A entidade já existe em
-    EN nos dados; a decisão é quase formal, mas é do lead.'
+  notes: |-
+    PRIORIDADE: bloqueia 2 ficheiros do capítulo 00 (piloto da frente 6). A entidade já existe em EN nos dados; a decisão é quase formal, mas é do lead.
+    [lead 2026-09-25] COINED: «macro-process» na prosa (com hífen); `MacroProcess` como id não traduz (entrada macroprocess_entity); ids MP-01..05 protegidos. ratified_by: lead · date: 2026-09-25.
+- key: macroprocess_entity
+  species: 2
+  state: do-not-translate
+  owner: lead
+  en: MacroProcess
+  en_variants: [MP-01, MP-02, MP-03, MP-04, MP-05]
+  pt: MacroProcess
+  pt_variants: []
+  ontology_id: MP
+  sense: Nome da entidade da ontologia (v2.5) e ids das instâncias; identificadores, não prosa.
+  senses: []
+  evidence:
+    source: sbdtoe-ontology.yaml#entities.MacroProcess
+    note: decisão do lead 2026-09-25 (com macro_processo)
+  counts: {}
+  change_cost: null
+  curator: {finding: A18}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[lead 2026-09-25] do-not-translate por ratificação.'
 - key: mandato_operacional
   species: 2
   state: withdrawn
@@ -4341,8 +4371,9 @@ terms:
   false_friends: []
   pending_reason: polysemy
   blocks_translation: false
-  notes: '[MA 2026-09-25] invariante → invariant; «structural invariance» só aparece como termo composto;
-    idem (12 blocos).'
+  notes: |-
+    [MA 2026-09-25] invariante → invariant; «structural invariance» só aparece como termo composto; idem (12 blocos).
+    [lead 2026-09-25] RATIFICADO: desbloqueio mantido, com esta razão.
 - key: structural_unit
   species: 1
   state: in-record

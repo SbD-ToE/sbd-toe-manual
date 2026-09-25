@@ -222,6 +222,8 @@ _URL_RE = re.compile(r"(?:https?://|www\.)\S+")
 _HEADING_ID_RE = re.compile(r"\{#[^}]*\}")
 _INLINE_COMMENT_RE = re.compile(r"<!--.*?-->")
 _FM_LINE_RE = re.compile(r"^(?P<key>title|description)\s*:\s*(?P<value>.*)$")
+_STYLE_OPEN_RE = re.compile(r"^\s*<(style|script)\b", re.I)
+_STYLE_CLOSE_RE = re.compile(r"</(style|script)\s*>", re.I)
 
 
 def _blank(match: re.Match) -> str:
@@ -305,6 +307,7 @@ def extract_prose(text: str, *, where: str = "<text>") -> Tuple[List[ProseLine],
             table_lines[table.line + 2 + i] = "row"
 
     current: Optional[Block] = None
+    skip: Optional[str] = None  # "esm" until a blank line · "style" until </style> or </script>
 
     def close() -> None:
         nonlocal current
@@ -317,8 +320,24 @@ def extract_prose(text: str, *, where: str = "<text>") -> Tuple[List[ProseLine],
         masked = mask_line(raw)
         if lineno in table_lines and table_lines[lineno] == "delimiter":
             continue
+        # MDX statements (import/export … up to the next blank line) and
+        # <style>/<script> blocks are not prose.
+        if skip == "esm":
+            if raw.strip() == "":
+                skip = None
+            else:
+                continue
+        elif skip == "style":
+            if _STYLE_CLOSE_RE.search(raw):
+                skip = None
+            continue
         if common._ESM_RE.match(masked.lstrip()):
             close()
+            skip = "esm"
+            continue
+        if _STYLE_OPEN_RE.match(raw):
+            close()
+            skip = None if _STYLE_CLOSE_RE.search(raw) else "style"
             continue
         lines.append(ProseLine(lineno, masked, "body"))
         if lineno in heading_lines:

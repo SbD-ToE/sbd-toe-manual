@@ -3231,6 +3231,29 @@ terms:
   pending_reason: polysemy
   blocks_translation: true
   notes: ''
+- key: piso_limiar
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: floor
+  en_variants: [minimum floor, as a floor]
+  pt: piso
+  pt_variants: [pisos]
+  ontology_id: null
+  sense: 'Sentido genérico de limiar mínimo (ex.: «SLA por severidade como piso»; EPSS/KEV nunca abaixo
+    do piso) — cap. 12.'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Partilha a palavra com piso_relacao (espécie 2, pending); enquanto essa estiver
+    pending o detector bloqueia ambas. Em prosa: «floor»/«minimum floor»; nunca «foundation».'
 - key: piso_relacao
   species: 2
   state: pending
@@ -3238,7 +3261,7 @@ terms:
   en: null
   en_variants: []
   pt: piso
-  pt_variants: []
+  pt_variants: [piso independente, piso independente do nível]
   ontology_id: null
   sense: 'Espécie de relação entre segmentações (segmentation_principle.relation_species.piso, v2.6):
     relação transversal de fundação — aplica-se a tudo, independentemente do eixo da segmentação (ex.:
@@ -3246,19 +3269,21 @@ terms:
   senses: []
   evidence:
     source: sbdtoe-ontology.yaml#segmentation_principle.relation_species.piso
-    note: '1 ocorrência de «piso» na prosa do Manual (12-monitorizacao/addon/12-epss-kev: «piso obrigatório»),
-      em sentido GENÉRICO de mínimo — não é a relação'
-  counts: {manual_files: 1, manual_occurrences: 1}
+    note: 'CORRIGIDO 2026-09-25 (Archon): 13 ocorrências de «piso» em 7f7eb0cf — 5 no cap. 00 no sentido
+      da RELAÇÃO (macro-processos.md:44/52/129/597, baseline.md:12: «piso independente do nível») e 7
+      no cap. 12 no sentido GENÉRICO de limiar (SLA por severidade como piso) → entrada piso_limiar (espécie
+      3).'
+  counts: {manual_files: 2, manual_occurrences: 5}
   change_cost: null
   curator: {finding: A15}
   previous: null
   proposal: 'foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`.'
   false_friends: [floor_closure_dependency]
   pending_reason: unborn
-  blocks_translation: false
-  notes: 'blocks_translation=false porque a única ocorrência em prosa é o sentido genérico («piso obrigatório»
-    = limiar mínimo), que traduz como «minimum floor» sem conflito; a relação só existe em dados da ontologia.
-    false friend: «admissibility floor» (P7 §12) = limiar mínimo de similaridade.'
+  blocks_translation: true
+  notes: |-
+    blocks_translation=false porque a única ocorrência em prosa é o sentido genérico («piso obrigatório» = limiar mínimo), que traduz como «minimum floor» sem conflito; a relação só existe em dados da ontologia. false friend: «admissibility floor» (P7 §12) = limiar mínimo de similaridade.
+    [MA 2026-09-25] Correcção: a contagem anterior (1) estava errada. blocks_translation=true porque o cap. 00 (piloto) usa o sentido de relação; o detector bloqueia pela palavra, logo as 7 ocorrências genéricas do cap. 12 ficam bloqueadas colateralmente até à coinagem («foundation», no gate do lead). O tradutor escolhe o sentido pelo contexto: relação → coinagem; limiar → piso_limiar.
 - key: plain_rag
   species: 1
   state: in-record
@@ -4679,6 +4704,28 @@ terms:
   pending_reason: en-vs-en-collision
   blocks_translation: true
   notes: ''
+- key: travessia_generica
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: crossing
+  en_variants: [zone crossing, crossings]
+  pt: travessia
+  pt_variants: [travessias]
+  ontology_id: null
+  sense: 'Sentido genérico: travessia de zona/fronteira de rede (zero-trust por zona) — cap. 04.'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Partilha a palavra com travessia_relacao (espécie 2); a relação não ocorre em
+    prosa. Não usar «traversal» (algoritmo, espécie 1 pending).'
 - key: travessia_relacao
   species: 2
   state: pending
@@ -4695,8 +4742,10 @@ terms:
     source: 'sbdtoe-ontology.yaml#segmentation_principle.relation_species.travessia + #segmentation_traversals'
     note: 'colisão EN-vs-EN: papers usam «traversal» para o ALGORITMO de retrieval (P3/P4/P5); a v2.6
       já usa `segmentation_traversals`/`sdlc_phase_traversal` para a RELAÇÃO — ver entrada Espécie 1 `traversal`
-      (pending, en-vs-en-collision)'
-  counts: {manual_files: 1, manual_occurrences: 1}
+      (pending, en-vs-en-collision) CORRIGIDO 2026-09-25 (Archon): a única ocorrência em prosa (04-arquitetura-segura/addon/10-kpis-metricas.md:74,
+      «travessia de zona») é sentido GENÉRICO → crossing (travessia_generica, espécie 3); a relação só
+      existe nos dados.'
+  counts: {manual_files: 0, manual_occurrences: 0}
   change_cost: null
   curator: {finding: A1}
   previous: null
@@ -4705,8 +4754,10 @@ terms:
     + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo.'
   false_friends: [traversal]
   pending_reason: en-vs-en-collision
-  blocks_translation: true
-  notes: ''
+  blocks_translation: false
+  notes: |2-
+
+    [MA 2026-09-25] blocks_translation=false: nenhum bloco em prosa usa o sentido de relação.
 - key: trust_boundary_rollout
   species: 1
   state: in-record

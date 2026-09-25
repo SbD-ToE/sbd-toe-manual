@@ -1,7 +1,7 @@
 # Fila de termos `pending` — export para o hub
 
 Gerado por `translation/scripts/terms_lint.py export-pending` a partir de `translation/terms/registry.yaml`.
-`terms_sha256` do registo: `17585ab1c3441219e8d709dc6c9f5a051d229ecf51a190c65c0c58fd187f3c40`.
+`terms_sha256` do registo: `4837e3b1c08670aab5b7f4a377c13773f9fe85f738c05afc35e4cbac4097b00e`.
 
 **Como responder:** no hub (`sbd-ai-runtime/handover/em-curso/`), por chave → EN decidido (e, se aplicável, PT).
 O Manual agent regista a decisão no registo: espécie 2 passa a `coined` (com `ratified_by` e `date`); espécie 1 passa a
@@ -14,7 +14,7 @@ Total pendente: 27.
 | chave | espécie | razão | PT | EN actual | proposal | false_friends | senses |
 |---|---|---|---|---|---|---|---|
 | `dependencia_relacao` | 2 | unborn | dependência (espécie de relação) |  | typed dependency (relation kind) — a v2.6 já usa `dependency\|feedback` como kinds de aresta inter-MP em EN; ratificar se «dependency» fica (com qualificador «intra-segmentation») ou se se distingue de software dependency por outro termo | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
-| `piso_relacao` | 2 | unborn | piso |  | foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`. | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
+| `piso_relacao` | 2 | unborn | piso (piso independente; piso independente do nível) |  | foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`. | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
 | `principio_de_segmentacao` | 2 | unborn | princípio de segmentação (segmentações paralelas) |  | segmentation principle · segmentation (axis) · parallel segmentations | `two_view` (Duas lentes sobre o mesmo programa: vista de engagement (táctica: o que fazer n…) |  |
 | `travessia_relacao` | 2 | en-vs-en-collision | travessia (travessias) |  | manter «traversal» para a relação (já fixado nas chaves da v2.6) e qualificar o algoritmo como «graph traversal» na prosa — OU renomear a relação (ex.: «crossing»). Decisão conjunta Archon + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo. | `traversal` (ALGORITMO de retrieval: enumeração determinística de ControlObjectives por trav…) |  |
 

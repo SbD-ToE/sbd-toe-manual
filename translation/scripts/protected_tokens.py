@@ -28,6 +28,8 @@ ID_PREFIXES: Tuple[str, ...] = (
     "ACA",
     "ACR",
     "MP",  # MacroProcess instance ids MP-01..05 (lead, 2026-09-25)
+    # requirement-domain ids of the base catalogue (chapter 02): AUT-001, LOG-003, SEC-L2-AUT-MFA …
+    "AUT", "LOG", "SES", "FIL", "ERR", "CFG", "ENC", "PRI", "API", "INT", "REQ", "DST", "IDE", "SEC", "GOV", "ARC", "DEP", "MT",
 )
 
 # Acronyms and fixed spellings that are never translated.

@@ -635,10 +635,37 @@ class ExemptionIndex:
         return out
 
 
+# Terminology rule ratified by the lead (2026-09-25, Archon reconciliation): in EN prose "traversal"
+# must carry a qualifier — "graph traversal" (the retrieval algorithm, Papers 3-5) or "segmentation /
+# phase / chapter traversal" (the relation kind, Manual ontology v2.6+). It runs BEFORE the registry
+# exemptions, because "traversal" itself is an in-record term and would otherwise be exempt.
+_TRAVERSAL_RE = re.compile(r"(?<![A-Za-z0-9_-])([Tt]raversals?)(?![A-Za-z0-9_])")
+_TRAVERSAL_QUALIFIERS = ("graph", "segmentation", "phase", "chapter", "mp", "macro-process", "process", "bundle")
+
+
+def traversal_qualifier_findings(prose_text: str, path: str, line: int) -> List[Finding]:
+    findings: List[Finding] = []
+    for match in _TRAVERSAL_RE.finditer(prose_text):
+        start, end = match.span(1)
+        before = prose_text[:start].rstrip()
+        prev = re.split(r"[\s(\[\"'«]+", before)[-1].lower() if before else ""
+        prev = prev.strip("*_`")
+        if prev in _TRAVERSAL_QUALIFIERS:
+            continue
+        # "a traversal" is admissible only right after the principle is named on the same line
+        if prev == "a" and "segmentation" in prose_text.lower():
+            continue
+        findings.append(Finding(path, line, start + 1, "traversal_qualifier", match.group(1),
+                                "graph traversal | segmentation traversal", "error",
+                                "traversal needs a qualifier: graph (algorithm) or segmentation/phase/chapter (relation)"))
+    return findings
+
+
 def spelling_findings_for_text(text: str, path: str, exemptions: ExemptionIndex, *, where: str = "<text>") -> List[Finding]:
     lines, _blocks = extract_prose(text, where=where)
     findings: List[Finding] = []
     for prose in lines:
+        findings.extend(traversal_qualifier_findings(prose.text, path, prose.line))
         exempt = exemptions.spans(prose.text)
         for match in _TOKEN_RE.finditer(prose.text):
             token = match.group(1)
@@ -666,7 +693,7 @@ def apply_fixes(text: str, findings: List[Finding]) -> str:
     lines = text.split("\n")
     by_line: Dict[int, List[Finding]] = {}
     for f in findings:
-        if f.severity != "error" or not SPELLING_RULES[f.rule]["fixable"]:
+        if f.severity != "error" or not SPELLING_RULES.get(f.rule, {}).get("fixable", False):
             continue
         by_line.setdefault(f.line, []).append(f)
     for lineno, items in by_line.items():

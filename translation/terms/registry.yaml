@@ -1311,10 +1311,10 @@ terms:
   notes: ''
 - key: dependencia_relacao
   species: 2
-  state: pending
+  state: coined
   owner: archon
-  en: null
-  en_variants: []
+  en: typed consumption
+  en_variants: [consumes, consumption, dependency, feedback]
   pt: dependência (espécie de relação)
   pt_variants: []
   ontology_id: null
@@ -1329,14 +1329,13 @@ terms:
   change_cost: null
   curator: {finding: A15}
   previous: null
-  proposal: typed dependency (relation kind) — a v2.6 já usa `dependency|feedback` como kinds de aresta
-    inter-MP em EN; ratificar se «dependency» fica (com qualificador «intra-segmentation») ou se se distingue
-    de software dependency por outro termo
+  proposal: null
   false_friends: [floor_closure_dependency]
-  pending_reason: unborn
+  pending_reason: null
   blocks_translation: false
-  notes: 'blocks_translation=false: bloquear «dependência» pararia 187 ficheiros por um sentido que não
-    aparece na prosa. O sentido software traduz como «dependency» (Espécie 3, consistente com SBOM/SCA).'
+  notes: |-
+    blocks_translation=false: bloquear «dependência» pararia 187 ficheiros por um sentido que não aparece na prosa. O sentido software traduz como «dependency» (Espécie 3, consistente com SBOM/SCA).
+    [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Espécie de relação; tipos `dependency` e `feedback` (já EN nos dados); verbo consumes. `dependency` é tipo, nunca género. ≠ software dependency (SBOM/SCA).
 - key: design_science
   species: 1
   state: in-record
@@ -3256,10 +3255,10 @@ terms:
     pending o detector bloqueia ambas. Em prosa: «floor»/«minimum floor»; nunca «foundation».'
 - key: piso_relacao
   species: 2
-  state: pending
+  state: coined
   owner: archon
-  en: null
-  en_variants: []
+  en: foundation
+  en_variants: [foundation relation, underlies, underlying]
   pt: piso
   pt_variants: [piso independente, piso independente do nível]
   ontology_id: null
@@ -3277,13 +3276,14 @@ terms:
   change_cost: null
   curator: {finding: A15}
   previous: null
-  proposal: 'foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`.'
+  proposal: null
   false_friends: [floor_closure_dependency]
-  pending_reason: unborn
-  blocks_translation: true
+  pending_reason: null
+  blocks_translation: false
   notes: |-
     blocks_translation=false porque a única ocorrência em prosa é o sentido genérico («piso obrigatório» = limiar mínimo), que traduz como «minimum floor» sem conflito; a relação só existe em dados da ontologia. false friend: «admissibility floor» (P7 §12) = limiar mínimo de similaridade.
     [MA 2026-09-25] Correcção: a contagem anterior (1) estava errada. blocks_translation=true porque o cap. 00 (piloto) usa o sentido de relação; o detector bloqueia pela palavra, logo as 7 ocorrências genéricas do cap. 12 ficam bloqueadas colateralmente até à coinagem («foundation», no gate do lead). O tradutor escolhe o sentido pelo contexto: relação → coinagem; limiar → piso_limiar.
+    [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Verbo: underlies. NUNCA «floor» (piso_limiar, espécie 3, cobre o sentido de limiar do cap. 12) nem «baseline».
 - key: plain_rag
   species: 1
   state: in-record
@@ -3556,10 +3556,11 @@ terms:
   notes: ''
 - key: principio_de_segmentacao
   species: 2
-  state: pending
+  state: coined
   owner: archon
-  en: null
-  en_variants: []
+  en: segmentation principle
+  en_variants: [segmentation, segmentations, parallel segmentations, process segmentation, chapter segmentation,
+    phase segmentation]
   pt: princípio de segmentação
   pt_variants: [segmentações paralelas]
   ontology_id: null
@@ -3574,14 +3575,13 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: segmentation principle · segmentation (axis) · parallel segmentations
+  proposal: null
   false_friends: [two_view]
-  pending_reason: unborn
-  blocks_translation: true
-  notes: 'false friend/colisão: «view» nos papers (engagement view vs organizational view, P6/P7) ≠ «vista»
-    da v2.6 (eixo de segmentação; Curator A13). A escolha de «segmentation» vs «view» para o eixo é a
-    decisão que importa. [MA 2026-09-25] «segmentação» isolada retirada de pt_variants: no Manual é segmentação
-    de rede/ambientes (41 blocos genéricos).'
+  pending_reason: null
+  blocks_translation: false
+  notes: |-
+    false friend/colisão: «view» nos papers (engagement view vs organizational view, P6/P7) ≠ «vista» da v2.6 (eixo de segmentação; Curator A13). A escolha de «segmentation» vs «view» para o eixo é a decisão que importa. [MA 2026-09-25] «segmentação» isolada retirada de pt_variants: no Manual é segmentação de rede/ambientes (41 blocos genéricos).
+    [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Eixo = «a segmentation», NUNCA «view» (two_view é lente táctica/estratégica) nem «partition» (P6: exclusiva e exaustiva).
 - key: programme_line
   species: 1
   state: in-record
@@ -4664,10 +4664,10 @@ terms:
   notes: ''
 - key: traversal
   species: 1
-  state: pending
+  state: in-record
   owner: manual-agent
   en: traversal
-  en_variants: [traverse, traverses]
+  en_variants: [graph traversal, ontology graph traversal, traverse, traverses]
   pt: null
   pt_variants: []
   ontology_id: null
@@ -4701,9 +4701,11 @@ terms:
   previous: null
   proposal: null
   false_friends: []
-  pending_reason: en-vs-en-collision
-  blocks_translation: true
-  notes: ''
+  pending_reason: null
+  blocks_translation: false
+  notes: |2-
+
+    [lead 2026-09-25] IN-RECORD (papers não mudam; nada changed). Frase de reconciliação (Archon): In Papers 3–5, «traversal» names the retrieval algorithm («ontology graph traversal»). From Manual ontology v2.6 onwards, a «segmentation traversal» — or simply «a traversal» when the context is the segmentation principle — names a relation between parallel segmentations of the Manual (N:M, published in the source or derived from authored data under a declared rule; never containment). The algorithm is always written «graph traversal». A segmentation traversal is data that a graph traversal may walk; the two are never interchangeable. Regra de lint: «traversal» sem qualificador (graph / segmentation / phase / chapter) na prosa EN é achado.
 - key: travessia_generica
   species: 3
   state: in-record
@@ -4728,10 +4730,10 @@ terms:
     prosa. Não usar «traversal» (algoritmo, espécie 1 pending).'
 - key: travessia_relacao
   species: 2
-  state: pending
+  state: coined
   owner: archon
-  en: null
-  en_variants: []
+  en: segmentation traversal
+  en_variants: [a traversal, traverses, phase traversal, chapter traversal]
   pt: travessia
   pt_variants: [travessias]
   ontology_id: null
@@ -4749,15 +4751,14 @@ terms:
   change_cost: null
   curator: {finding: A1}
   previous: null
-  proposal: 'manter «traversal» para a relação (já fixado nas chaves da v2.6) e qualificar o algoritmo
-    como «graph traversal» na prosa — OU renomear a relação (ex.: «crossing»). Decisão conjunta Archon
-    + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo.'
+  proposal: null
   false_friends: [traversal]
-  pending_reason: en-vs-en-collision
+  pending_reason: null
   blocks_translation: false
   notes: |2-
 
     [MA 2026-09-25] blocks_translation=false: nenhum bloco em prosa usa o sentido de relação.
+    [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Forma curta «a traversal» só quando o contexto é o princípio de segmentação. O algoritmo escreve-se SEMPRE «graph traversal». Colisão assumida e declarada; chaves YAML/KG/MCP mantidas.
 - key: trust_boundary_rollout
   species: 1
   state: in-record

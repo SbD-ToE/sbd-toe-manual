@@ -178,8 +178,10 @@ class ImporterTests(unittest.TestCase):
         seeded = {e["key"]: e for e in self.registry["terms"]}
         self.assertTrue(set(seeded) <= set(committed), sorted(set(seeded) - set(committed)))
         for key, fresh in seeded.items():
-            for field in ("species", "en", "en_variants", "sense", "senses", "evidence", "counts", "change_cost", "curator"):
+            for field in ("species", "en", "sense", "senses", "evidence", "counts", "change_cost", "curator"):
                 self.assertEqual(committed[key][field], fresh[field], f"{key}.{field}")
+            # the review may ADD accepted EN forms, never drop the survey's
+            self.assertTrue(set(fresh["en_variants"]) <= set(committed[key]["en_variants"]), f"{key}.en_variants")
         for key, entry in committed.items():
             if key not in seeded:
                 self.assertIn(entry["species"], (2, 3), f"{key}: unexpected species-1 entry absent from the survey")
@@ -355,3 +357,18 @@ class Species3Tests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TraversalQualifierTests(unittest.TestCase):
+    def test_traversal_without_qualifier_is_a_finding(self):
+        text = "The retrieval uses a traversal of the ontology.\n\nA graph traversal walks the data; a segmentation traversal is data.\n\nEach phase traversal is derived. Traversals must be declared.\n"
+        findings = terms_lint.spelling_findings_for_text(text, "x.md", terms_lint.ExemptionIndex(None))
+        rules = [(f.line, f.rule) for f in findings if f.rule == "traversal_qualifier"]
+        self.assertEqual(rules, [(1, "traversal_qualifier"), (5, "traversal_qualifier")])
+
+    def test_traversal_rule_is_not_exempted_by_registry(self):
+        registry = registry_with(minimal_entry("traversal", en="traversal", en_variants=["graph traversal"]))
+        text = "Run the traversal now.\n"
+        findings = terms_lint.spelling_findings_for_text(text, "x.md", terms_lint.ExemptionIndex(registry))
+        self.assertTrue(any(f.rule == "traversal_qualifier" for f in findings))
+

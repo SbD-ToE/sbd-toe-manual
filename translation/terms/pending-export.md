@@ -1,22 +1,17 @@
 # Fila de termos `pending` — export para o hub
 
 Gerado por `translation/scripts/terms_lint.py export-pending` a partir de `translation/terms/registry.yaml`.
-`terms_sha256` do registo: `4837e3b1c08670aab5b7f4a377c13773f9fe85f738c05afc35e4cbac4097b00e`.
+`terms_sha256` do registo: `ddcb77e9101fb7af20c26d2cd8287a5f115c7e84aa68a6aa62e4327323a50aad`.
 
 **Como responder:** no hub (`sbd-ai-runtime/handover/em-curso/`), por chave → EN decidido (e, se aplicável, PT).
 O Manual agent regista a decisão no registo: espécie 2 passa a `coined` (com `ratified_by` e `date`); espécie 1 passa a
 `in-record` ou `changed` (com `previous`). Enquanto `pending`, os blocos da fonte que contêm o termo não são traduzidos.
 
-Total pendente: 27.
+Total pendente: 22.
 
-## `owner: archon` (4)
+## `owner: archon` (0)
 
-| chave | espécie | razão | PT | EN actual | proposal | false_friends | senses |
-|---|---|---|---|---|---|---|---|
-| `dependencia_relacao` | 2 | unborn | dependência (espécie de relação) |  | typed dependency (relation kind) — a v2.6 já usa `dependency\|feedback` como kinds de aresta inter-MP em EN; ratificar se «dependency» fica (com qualificador «intra-segmentation») ou se se distingue de software dependency por outro termo | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
-| `piso_relacao` | 2 | unborn | piso (piso independente; piso independente do nível) |  | foundation (relation kind: `foundation`) — alt.: `underpins`. NÃO `floor`. | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
-| `principio_de_segmentacao` | 2 | unborn | princípio de segmentação (segmentações paralelas) |  | segmentation principle · segmentation (axis) · parallel segmentations | `two_view` (Duas lentes sobre o mesmo programa: vista de engagement (táctica: o que fazer n…) |  |
-| `travessia_relacao` | 2 | en-vs-en-collision | travessia (travessias) |  | manter «traversal» para a relação (já fixado nas chaves da v2.6) e qualificar o algoritmo como «graph traversal» na prosa — OU renomear a relação (ex.: «crossing»). Decisão conjunta Archon + lead; a entrada Espécie 1 `traversal` fecha ao mesmo tempo. | `traversal` (ALGORITMO de retrieval: enumeração determinística de ControlObjectives por trav…) |  |
+_Sem entradas._
 
 ## `owner: lead` (4)
 
@@ -27,7 +22,7 @@ Total pendente: 27.
 | `precedencia_do_ledger` | 2 | unborn | precedência do ledger (o ledger prevalece) |  | ledger precedence (the ledger prevails) — «ledger» fica em inglês nas duas línguas (já é o nome do artefacto) |  |  |
 | `regra_de_fecho` | 2 | unborn | regra de fecho (fecho de uma ausência; fechar uma ausência) |  | closure rule (close an absence · closed) — apesar do false friend, a chave `closure_rule` já fixa o termo em dados | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
 
-## `owner: manual-agent` (19)
+## `owner: manual-agent` (18)
 
 | chave | espécie | razão | PT | EN actual | proposal | false_friends | senses |
 |---|---|---|---|---|---|---|---|
@@ -49,4 +44,3 @@ Total pendente: 27.
 | `promotion` | 1 | polysemy |  | promotion |  |  | promoção ACR (admissão à ontologia) · Release Promotion (slice ASC-09, sentido de release engineering) · promoção de ficheiro no mirror público (P5:17) |
 | `structural_invariance` | 1 | polysemy | invariante | structural invariance |  |  | invariância estrutural entre slices (P1/P6) · invariante formal do contrato de retrieval (P3/P4/P5) |
 | `tier` | 1 | polysemy |  | tier |  |  | tier de curadoria por fonte (P7) · Tier A–E de ferramentas do oráculo (P4) |
-| `traversal` | 1 | en-vs-en-collision |  | traversal |  |  | algoritmo de retrieval por grafo (P3/P4/P5) · travessia de uma rede de mapeamentos fonte-a-fonte (custo do consumidor, P7 §12.3) |

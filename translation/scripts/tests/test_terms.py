@@ -229,19 +229,39 @@ class SpellingTests(unittest.TestCase):
 
     def test_exceptions_and_registry_exemptions(self):
         self.assertEqual(self.findings("Size, prize, seize and capsize are fine; normalise too.\n"), [])
-        registry = registry_with(minimal_entry("normalization", en="normalization", en_variants=["normalized"]))
-        self.assertEqual(self.findings("The normalization is normalized.\n", registry), [])
-        pending = registry_with(minimal_entry("normalization", state="pending", pending_reason="unborn", en="normalization"))
-        self.assertEqual(len(self.findings("The normalization.\n", pending)), 1)  # pending has no authority
-        self.assertTrue(terms_lint.registry_form_warnings(registry))
+        registry = registry_with(
+            minimal_entry("normalization", en="normalization", en_variants=["normalized ontology", "Organizational view", "Centralized Logging", "program"]),
+            minimal_entry("centre", en="center", en_variants=["colored", "labeled"]),
+        )
+        # Registry forms exempt only their en-GB spelling: spelling is style, not terminology.
+        self.assertEqual(self.findings("The normalisation of the normalised ontology; organisational view; centralised logging; the centre is coloured and labelled; a programme.\n", registry), [])
+        found = self.findings("The normalization of the normalized ontology; Organizational view; the center is colored; a program.\n", registry)
+        self.assertEqual([f.token for f in found], ["normalization", "normalized", "Organizational", "center", "colored", "program"])
+        self.assertEqual(
+            terms_lint.ame_registry_forms(registry),
+            [
+                ("centre", "center", "centre"), ("centre", "colored", "coloured"), ("centre", "labeled", "labelled"),
+                ("normalization", "Centralized Logging", "Centralised Logging"), ("normalization", "Organizational view", "Organisational view"),
+                ("normalization", "normalization", "normalisation"), ("normalization", "normalized ontology", "normalised ontology"),
+                ("normalization", "program", "programme"),
+            ],
+        )
+        self.assertEqual(terms_lint.normalise_form_en_gb("ControlObjective"), "ControlObjective")  # identifiers untouched
+        pending = registry_with(minimal_entry("normalization", state="pending", pending_reason="unborn", en="normalisation"))
+        self.assertEqual(len(self.findings("The normalisation.\n", pending)), 0)
+        self.assertEqual(len(self.findings("The normalization.\n", pending)), 1)  # pending has no authority either way
 
-    def test_warnings_and_licence(self):
+    def test_programme_and_licence(self):
         found = self.findings("A program under the license; we license it. Colors.\n")
         by_token = {f.token: f for f in found}
-        self.assertEqual(by_token["program"].severity, "warning")
+        self.assertEqual(by_token["program"].severity, "error")  # not a software context
+        self.assertEqual(by_token["program"].suggestion, "programme")
         self.assertEqual(by_token["Colors"].severity, "error")
         licences = [f for f in found if f.token == "license"]
         self.assertEqual([f.severity for f in licences], ["error", "warning"])
+        # Software contexts are accepted.
+        self.assertEqual(self.findings("The program code; the program runs; a Python program; the programs crashed.\n"), [])
+        self.assertEqual([f.token for f in self.findings("The research programs of the programme.\n")], ["programs"])
 
     def test_fix_applies_only_unambiguous_errors(self):
         text = "The color program.\n"

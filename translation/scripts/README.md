@@ -113,14 +113,18 @@ python translation/scripts/terms_lint.py hash --registry …
   `false_friends` a apontar para chaves existentes). Exit 1 em falha.
 - `spelling` — regra en-GB sobre a prosa EN (fora de código, comentários, frontmatter estrutural — só `title` e
   `description` contam —, destinos de ligações, tags HTML, ids `{#…}`). Isento: tokens protegidos
-  (`protected_tokens.py`), `en`/`en_variants` de entradas `do-not-translate` (sensível a maiúsculas) e de entradas
-  `in-record`/`coined`/`changed` (insensível). Entradas `pending` **não** isentam nada — não têm autoridade sobre a
-  prosa. As regras vivem num único dicionário `SPELLING_RULES` (-ise/-isation com excepções `size`/`prize`/`seize`/
-  `capsize`; -yse; -our; -re; -ll-; `programme` só aviso; `licence` substantivo por contexto; `artefact` só em
-  minúsculas — `Artifact`, `ArtifactRequirement`, `artifact_types` são identificadores; diversos). Palavras
-  `CamelCase`/`ALLCAPS` não são prosa. Formas do próprio registo que violem a regra (ex.: `normalization`) saem como
-  aviso «registry form is not en-GB» — o lint não briga com o registo; o Manual agent decide `changed`. Exit 1 com
-  erros; `--fix` aplica só substituições inequívocas (erros de regras `fixable`, nunca avisos).
+  (`protected_tokens.py`), `en`/`en_variants` de entradas `do-not-translate` (sensível a maiúsculas, verbatim) e de
+  entradas `in-record`/`coined`/`changed` (insensível) **na sua grafia en-GB**: a ortografia é estilo, regra do lint,
+  nunca `changed` — o registo guarda a forma dos papers (`normalization`, `normalized ontology`, `Organizational
+  view`, `Centralized Logging`) e a prosa EN tem de escrever `normalisation`, `normalised ontology`,
+  `organisational view`, `centralised logging`. O lint imprime uma linha única «N registry forms are AmE-spelled;
+  en-GB expected in prose». Entradas `pending` **não** isentam nada — não têm autoridade sobre a prosa. As regras
+  vivem num único dicionário `SPELLING_RULES` (-ise/-isation com excepções `size`/`prize`/`seize`/`capsize`; -yse;
+  -our; -re; -ll-; `programme` — `program` só é aceite em contexto de software: `program code`, `the program runs`,
+  `a Python program`; `licence` substantivo por contexto; `artefact` só em minúsculas — `Artifact`,
+  `ArtifactRequirement`, `artifact_types` são identificadores; diversos). Palavras `CamelCase`/`ALLCAPS` não são
+  prosa. Exit 1 com erros; `--fix` aplica só substituições inequívocas (erros de regras `fixable`, nunca avisos nem
+  `programme`).
 - `pending-blocks` — para cada bloco da fonte (parágrafo, item de lista, célula de tabela, cabeçalho, título de
   admonition, `title`/`description` do frontmatter; fora de código) que contenha, por palavra inteira sem distinção
   de maiúsculas e em NFC, `pt` ou `pt_variants` de uma entrada `pending` com `blocks_translation: true`, imprime

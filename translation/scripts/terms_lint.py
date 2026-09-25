@@ -17,11 +17,13 @@ conditional fields, unique keys, ``false_friends`` references).
 EN prose: outside code, comments, structural front matter, protected tokens
 (``protected_tokens.py``) and every ``en``/``en_variants`` form of a
 ``do-not-translate`` entry (matched case-sensitively) or of an ``in-record`` /
-``coined`` / ``changed`` entry (case-insensitively). ``pending`` entries have no
-authority over the prose, so their forms are not exempt. The rules live in the
-single ``SPELLING_RULES`` mapping so the Manual agent can extend them. Registry
-forms that themselves break a rule are reported as warnings ("registry form is
-not en-GB") so the conflict is visible without the lint fighting the registry.
+``coined`` / ``changed`` entry (case-insensitively, **in its en-GB spelling**:
+spelling is style, so a registry form recorded as the papers wrote it —
+``normalization`` — exempts ``normalisation`` in the prose, never
+``normalization``; the registry entry is not ``changed`` for that). ``pending``
+entries have no authority over the prose, so their forms are not exempt. The
+rules live in the single ``SPELLING_RULES`` mapping so the Manual agent can
+extend them. A single summary line counts the AmE-spelled registry forms.
 
 ``pending-blocks`` finds, in the source-locale text, every block (paragraph,
 list item, table cell, heading, admonition title, front-matter title /
@@ -477,10 +479,28 @@ def _rule_ll(token: str, lower: str, before: str, after: str):
     return None
 
 
+_PROGRAM_SOFTWARE_NEXT = {
+    "code", "runs", "run", "running", "ran", "executes", "executed", "execution", "file", "files", "binary",
+    "binaries", "source", "crashes", "crashed", "exits", "exited", "starts", "started", "terminates", "terminated",
+    "counter", "listing", "output", "loads", "loaded", "compiles", "compiled", "text", "memory", "logic", "flow",
+}
+_PROGRAM_SOFTWARE_PREV = {
+    "computer", "software", "executable", "compiled", "running", "python", "javascript", "typescript", "java",
+    "source", "sample", "example", "test", "main", "host", "target", "user", "client", "server", "calling",
+    "malicious", "untrusted", "compiler", "interpreter", "console", "command-line", "cli",
+}
+
+
 def _rule_programme(token: str, lower: str, before: str, after: str):
-    if lower in ("program", "programs"):
-        return "warning", _match_first_case("programme" + ("s" if lower.endswith("s") else ""), token)
-    return None
+    """``programme`` unless the word is used in a software context (``program
+    code``, ``the program runs``, ``a Python program``); then it is accepted."""
+    if lower not in ("program", "programs"):
+        return None
+    previous = re.findall(r"[A-Za-z][A-Za-z-]*", before)
+    following = re.findall(r"[A-Za-z][A-Za-z-]*", after)
+    if (following and following[0].lower() in _PROGRAM_SOFTWARE_NEXT) or (previous and previous[-1].lower() in _PROGRAM_SOFTWARE_PREV):
+        return None
+    return "error", _match_first_case("programme" + ("s" if lower.endswith("s") else ""), token)
 
 
 def _rule_licence(token: str, lower: str, before: str, after: str):
@@ -522,7 +542,7 @@ SPELLING_RULES: Dict[str, Dict[str, object]] = {
     "our": {"rule": _rule_our, "message": "-our (colour, behaviour, flavour, honour, labour, favour, neighbour)", "fixable": True},
     "re": {"rule": _rule_re, "message": "-re (centre, litre, fibre, kilometre)", "fixable": True},
     "ll": {"rule": _rule_ll, "message": "-ll- before a suffix (modelling, labelled, travelled, cancelled); single l in enrol, fulfil", "fixable": True},
-    "programme": {"rule": _rule_programme, "message": "programme — unless a computer program (ambiguous, so a warning)", "fixable": False},
+    "programme": {"rule": _rule_programme, "message": "programme — 'program' only in a software context (program code, the program runs)", "fixable": False},
     "licence": {"rule": _rule_licence, "message": "licence is the noun in en-GB; license is the verb", "fixable": True},
     "artefact": {"rule": _rule_artefact, "message": "artefact in prose (Artifact / ArtifactRequirement / artifact_types are identifiers)", "fixable": True},
     "misc": {"rule": _rule_misc, "message": "miscellaneous en-GB spellings", "fixable": True},
@@ -552,9 +572,44 @@ class Finding:
         return f"{self.path}:{self.line}:{self.col}  {self.rule}  {self.token!r} -> {self.suggestion!r}{flag}"
 
 
+def normalise_form_en_gb(form: str) -> str:
+    """The en-GB spelling of a registry form: every prose-cased word that a rule
+    flags as an error with a one-word suggestion is replaced (``normalized
+    ontology`` -> ``normalised ontology``). Spelling is style, never terminology,
+    so the registry keeps the papers' form and the prose must use this one."""
+    out = form
+    for match in reversed(list(_TOKEN_RE.finditer(form))):
+        token = match.group(1)
+        if not _prose_cased(token):
+            continue
+        start, end = match.span(1)
+        for spec in SPELLING_RULES.values():
+            result = spec["rule"](token, token.lower(), form[:start], form[end:])  # type: ignore[operator]
+            if result and result[0] == "error" and " " not in result[1]:
+                out = out[:start] + result[1] + out[end:]
+                break
+    return out
+
+
+def ame_registry_forms(registry: Optional[dict]) -> List[Tuple[str, str, str]]:
+    """(key, form, en-GB form) for every authoritative registry form whose
+    spelling is not en-GB. Sorted; informative only."""
+    found: Set[Tuple[str, str, str]] = set()
+    for entry in (registry or {}).get("terms", []):
+        if not isinstance(entry, dict) or entry.get("state") not in AUTHORITATIVE_STATES:
+            continue
+        for form in _forms(entry, "en"):
+            normalised = normalise_form_en_gb(form)
+            if normalised != form:
+                found.add((str(entry.get("key")), form, normalised))
+    return sorted(found)
+
+
 class ExemptionIndex:
-    """Spans of a line that spelling must not touch: protected tokens and
-    authoritative registry forms."""
+    """Spans of a line that spelling must not touch: protected tokens,
+    ``do-not-translate`` forms verbatim, and authoritative registry forms in
+    their en-GB spelling (an AmE-spelled registry form exempts nothing as
+    written: the prose has to use the en-GB spelling)."""
 
     def __init__(self, registry: Optional[dict]) -> None:
         dnt: List[str] = []
@@ -566,7 +621,8 @@ class ExemptionIndex:
             if state == "do-not-translate":
                 dnt.extend(_forms(entry, "en"))
             elif state in AUTHORITATIVE_STATES:
-                auth.extend(_forms(entry, "en"))
+                auth.extend(normalise_form_en_gb(f) for f in _forms(entry, "en"))
+        self.ame_forms = ame_registry_forms(registry)
         self.patterns: List[re.Pattern] = [protected_tokens.ID_PATTERN, protected_tokens.ACRONYM_PATTERN]
         for pattern in (_word_regex(dnt, ignore_case=False), _word_regex(auth, ignore_case=True)):
             if pattern is not None:
@@ -602,25 +658,6 @@ def spelling_findings_for_text(text: str, path: str, exemptions: ExemptionIndex,
                 findings.append(Finding(path, prose.line, start + 1, name, token, suggestion, severity, str(spec["message"])))
                 break
     return findings
-
-
-def registry_form_warnings(registry: Optional[dict]) -> List[str]:
-    """Authoritative registry forms that break an en-GB rule (visibility only)."""
-    warnings: List[str] = []
-    for entry in (registry or {}).get("terms", []):
-        if not isinstance(entry, dict) or entry.get("state") not in AUTHORITATIVE_STATES:
-            continue
-        for form in _forms(entry, "en"):
-            for match in _TOKEN_RE.finditer(form):
-                token = match.group(1)
-                if not _prose_cased(token):
-                    continue
-                for name, spec in SPELLING_RULES.items():
-                    result = spec["rule"](token, token.lower(), form[: match.start()], form[match.end():])  # type: ignore[operator]
-                    if result and result[0] == "error":
-                        warnings.append(f"registry form {form!r} of key {entry.get('key')!r} ({entry.get('state')}) is not en-GB: {name} -> {result[1]!r}; decide `changed` or keep")
-                        break
-    return sorted(set(warnings))
 
 
 def apply_fixes(text: str, findings: List[Finding]) -> str:
@@ -665,8 +702,8 @@ def cmd_spelling(args) -> int:
         print(f.format())
     errors = sum(1 for f in all_findings if f.severity == "error")
     warnings = len(all_findings) - errors
-    for note in registry_form_warnings(registry):
-        common.warn(note)
+    if exemptions.ame_forms:
+        print(f"note: {len(exemptions.ame_forms)} registry forms are AmE-spelled; en-GB expected in prose")
     print(f"spelling: {len(files)} file(s), {errors} error(s), {warnings} warning(s)" + (" — fixes applied" if args.fix else ""))
     return 1 if errors and not args.fix else 0
 

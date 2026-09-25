@@ -1,26 +1,21 @@
 # Fila de termos `pending` — export para o hub
 
 Gerado por `translation/scripts/terms_lint.py export-pending` a partir de `translation/terms/registry.yaml`.
-`terms_sha256` do registo: `ddcb77e9101fb7af20c26d2cd8287a5f115c7e84aa68a6aa62e4327323a50aad`.
+`terms_sha256` do registo: `5ed937d9521dfd61742b4d17069578eb457f8da824ed4711e640936aef21b704`.
 
 **Como responder:** no hub (`sbd-ai-runtime/handover/em-curso/`), por chave → EN decidido (e, se aplicável, PT).
 O Manual agent regista a decisão no registo: espécie 2 passa a `coined` (com `ratified_by` e `date`); espécie 1 passa a
 `in-record` ou `changed` (com `previous`). Enquanto `pending`, os blocos da fonte que contêm o termo não são traduzidos.
 
-Total pendente: 22.
+Total pendente: 18.
 
 ## `owner: archon` (0)
 
 _Sem entradas._
 
-## `owner: lead` (4)
+## `owner: lead` (0)
 
-| chave | espécie | razão | PT | EN actual | proposal | false_friends | senses |
-|---|---|---|---|---|---|---|---|
-| `alcance_da_prescricao` | 2 | unborn | alcance da prescrição (alcances da prescrição; requer-que-exista; requer-alinhamento-demonstrável) |  | prescription reach (princípio: prescription reach principle) · os três alcances: prescribes · requires existence · requires demonstrable alignment | `scope_non_goals` (Componentes de um slice contract e declaração de fronteira de cada paper; «out…) |  |
-| `ausencia_tipada` | 2 | unborn | ausência tipada (ausências tipadas; ausência declarada; ausências declaradas) |  | typed absence (modelo) · declared absence (instância) — a v2.6 já usa em EN a chave `declared_absences` e o ficheiro `declared-absences-ledger.yaml`, o que fixa «declared absence» de facto; falta ratificar «typed absence» para o modelo. | `absence` (Uso genérico (ausência de documentação ≠ ausência de prática; «absence of parti…) |  |
-| `precedencia_do_ledger` | 2 | unborn | precedência do ledger (o ledger prevalece) |  | ledger precedence (the ledger prevails) — «ledger» fica em inglês nas duas línguas (já é o nome do artefacto) |  |  |
-| `regra_de_fecho` | 2 | unborn | regra de fecho (fecho de uma ausência; fechar uma ausência) |  | closure rule (close an absence · closed) — apesar do false friend, a chave `closure_rule` já fixa o termo em dados | `floor_closure_dependency` (Nos papers: «admissibility floor» = limiar mínimo de similaridade (P7 §12); «de…) |  |
+_Sem entradas._
 
 ## `owner: manual-agent` (18)
 

@@ -148,10 +148,11 @@ terms:
   notes: ''
 - key: alcance_da_prescricao
   species: 2
-  state: pending
+  state: coined
   owner: lead
-  en: null
-  en_variants: []
+  en: prescription reach
+  en_variants: [prescription reach principle, prescribes, requires existence, requires demonstrable alignment,
+    reach, reaches]
   pt: alcance da prescrição
   pt_variants: [alcances da prescrição, requer-que-exista, requer-alinhamento-demonstrável]
   ontology_id: null
@@ -165,15 +166,13 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: 'prescription reach (princípio: prescription reach principle) · os três alcances: prescribes
-    · requires existence · requires demonstrable alignment'
+  proposal: null
   false_friends: [scope_non_goals]
-  pending_reason: unborn
-  blocks_translation: true
-  notes: 'false friend: «scope/out of scope» dos papers é fronteira editorial; o alcance é posição do
-    actor face ao domínio, não fronteira do documento. Os três verbos também precisam de forma EN fixada
-    porque aparecerão em tabelas de rastreabilidade. [MA 2026-09-25] verbo «prescreve» retirado de pt_variants:
-    é prosa corrente do Manual (53 blocos); só as formas nomeadas do princípio bloqueiam.'
+  pending_reason: null
+  blocks_translation: false
+  notes: |-
+    false friend: «scope/out of scope» dos papers é fronteira editorial; o alcance é posição do actor face ao domínio, não fronteira do documento. Os três verbos também precisam de forma EN fixada porque aparecerão em tabelas de rastreabilidade. [MA 2026-09-25] verbo «prescreve» retirado de pt_variants: é prosa corrente do Manual (53 blocos); só as formas nomeadas do princípio bloqueiam.
+    [lead 2026-09-25] COINED (proposta do Manual agent ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Os três alcances: prescribes (dentro do domínio) · requires existence (dentro da organização, outro domínio) · requires demonstrable alignment (fora da organização). Falso amigo: scope/out of scope (fronteira editorial).
 - key: anchor
   species: 1
   state: in-record
@@ -457,10 +456,10 @@ terms:
   notes: ''
 - key: ausencia_tipada
   species: 2
-  state: pending
+  state: coined
   owner: lead
-  en: null
-  en_variants: []
+  en: typed absence
+  en_variants: [typed absences, declared absence, declared absences, absence model]
   pt: ausência tipada
   pt_variants: [ausências tipadas, ausência declarada, ausências declaradas]
   ontology_id: null
@@ -475,14 +474,13 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: typed absence (modelo) · declared absence (instância) — a v2.6 já usa em EN a chave `declared_absences`
-    e o ficheiro `declared-absences-ledger.yaml`, o que fixa «declared absence» de facto; falta ratificar
-    «typed absence» para o modelo.
+  proposal: null
   false_friends: [absence]
-  pending_reason: unborn
-  blocks_translation: true
-  notes: 'false friend: `absence` nos papers é uso genérico (Curator: «absence of partition-level pressure»),
-    não o conceito tipado.'
+  pending_reason: null
+  blocks_translation: false
+  notes: |-
+    false friend: `absence` nos papers é uso genérico (Curator: «absence of partition-level pressure»), não o conceito tipado.
+    [lead 2026-09-25] COINED (proposta do Manual agent ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. «typed absence» = modelo (absence_model); «declared absence» = instância (chave `declared_absences`, ficheiro declared-absences-ledger.yaml). Falso amigo: «absence» genérico nos papers.
 - key: baseline
   species: 1
   state: pending
@@ -3476,10 +3474,10 @@ terms:
   notes: ''
 - key: precedencia_do_ledger
   species: 2
-  state: pending
+  state: coined
   owner: lead
-  en: null
-  en_variants: []
+  en: ledger precedence
+  en_variants: [the ledger prevails, ledger]
   pt: precedência do ledger
   pt_variants: [o ledger prevalece]
   ontology_id: null
@@ -3495,12 +3493,13 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: ledger precedence (the ledger prevails) — «ledger» fica em inglês nas duas línguas (já é o
-    nome do artefacto)
+  proposal: null
   false_friends: []
-  pending_reason: unborn
-  blocks_translation: true
-  notes: ''
+  pending_reason: null
+  blocks_translation: false
+  notes: |2-
+
+    [lead 2026-09-25] COINED (proposta do Manual agent ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. «ledger» fica em inglês nas duas línguas (nome do artefacto declared-absences-ledger.yaml).
 - key: prescriptive
   species: 1
   state: in-record
@@ -3705,10 +3704,10 @@ terms:
   notes: ''
 - key: regra_de_fecho
   species: 2
-  state: pending
+  state: coined
   owner: lead
-  en: null
-  en_variants: []
+  en: closure rule
+  en_variants: [close an absence, closed, closure]
   pt: regra de fecho
   pt_variants: [fecho de uma ausência, fechar uma ausência]
   ontology_id: null
@@ -3722,13 +3721,13 @@ terms:
   change_cost: null
   curator: {finding: A15}
   previous: null
-  proposal: closure rule (close an absence · closed) — apesar do false friend, a chave `closure_rule`
-    já fixa o termo em dados
+  proposal: null
   false_friends: [floor_closure_dependency]
-  pending_reason: unborn
-  blocks_translation: true
-  notes: 'false friend: «closure» nos papers (Curator A15) tem sentido genérico/outro; verificar se colide
-    com «closure» de P2 (compilação).'
+  pending_reason: null
+  blocks_translation: false
+  notes: |-
+    false friend: «closure» nos papers (Curator A15) tem sentido genérico/outro; verificar se colide com «closure» de P2 (compilação).
+    [lead 2026-09-25] COINED (proposta do Manual agent ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Fechar uma ausência = registo no índice com evidência verificável e verificador; nunca declaração da superfície. Falso amigo declarado: «closure» dos papers (sentido genérico/outro) — em prosa EN, «closure» sem «rule»/«of an absence» é achado de revisão.
 - key: relations
   species: 1
   state: do-not-translate

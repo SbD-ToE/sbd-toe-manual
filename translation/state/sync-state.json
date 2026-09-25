@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T16:23:07Z",
+  "generated_at": "2026-09-25T16:26:02Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "ddcb77e9101fb7af20c26d2cd8287a5f115c7e84aa68a6aa62e4327323a50aad",
+  "terms_sha256": "5ed937d9521dfd61742b4d17069578eb457f8da824ed4711e640936aef21b704",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "untranslated",

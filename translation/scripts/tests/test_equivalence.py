@@ -322,7 +322,10 @@ class SyncStateTests(TreeTestCase):
     def test_write_then_check_roundtrip(self):
         src = self.put_source("cap/a.md")
         self.put_source("cap/b.md", NOFM_SOURCE)
-        self.write_target("cap/a.md", source_hash=common.file_sha256(src))
+        # sync_state.main reads the terms registry from the real repository root; record its
+        # current hash (or "null" while none exists) so the file counts as synced.
+        registry_hash = sync_state.terms_registry_sha256(common.repo_root()) or "null"
+        self.write_target("cap/a.md", source_hash=common.file_sha256(src), terms_hash=registry_hash)
         state_file = self.root / "translation" / "state" / "sync-state.json"
         argv = self.args("--state-file", str(state_file))
         self.assertEqual(sync_state.main(argv + ["--write"]), 0)

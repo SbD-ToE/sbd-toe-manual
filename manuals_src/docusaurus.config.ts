@@ -17,7 +17,11 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'pt',
-    locales: ['pt'],
+    locales: ['pt', 'en'],
+    localeConfigs: {
+      pt: {label: 'Português', htmlLang: 'pt-PT'},
+      en: {label: 'English', htmlLang: 'en-GB'},
+    },
   },
 
   markdown: {
@@ -134,6 +138,7 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {type: 'localeDropdown', position: 'right'},
       ],
     },
 
@@ -155,6 +160,7 @@ const config: Config = {
           title: 'Mais',
           items: [
             {label: 'GitHub', href: 'https://github.com/Shiftleftpt/SbD-ToE-Manual'},
+            {label: 'Estado da tradução', to: '/translation-status'},
           ],
         },
       ],

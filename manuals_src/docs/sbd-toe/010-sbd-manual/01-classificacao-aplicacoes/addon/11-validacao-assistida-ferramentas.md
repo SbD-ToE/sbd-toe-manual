@@ -9,7 +9,7 @@ tags: [tipo:risco-processo, tema:automacao, validacao, decisao, rastreabilidade]
 
 # Validação Assistida por Ferramentas - Risco de Processo
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Este documento prescreve como gerir **riscos de processo** quando ferramentas automatizadas (algoritmos de scoring, sistemas de análise, ou outras formas de assistência) participam na **classificação de aplicações, deteção de alterações, ou mapeamento de ameaças**.
 
@@ -23,17 +23,17 @@ O objetivo **não é proibir ferramentas**, mas sim:
 
 ---
 
-## 📋 Invariantes Fundamentais (do agent.md)
+## 📋 Invariantes Fundamentais (do agent.md) {#-invariantes-fundamentais-do-agentmd}
 
 Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso de automação na classificação deve respeitar**:
 
-### I1 - Separação entre Sugestão e Decisão
+### I1 - Separação entre Sugestão e Decisão {#i1---separação-entre-sugestão-e-decisão}
 
 - Ferramentas **sugerem, analisam, ou correlacionam**.
 - A **decisão final é sempre humana**, atribuída a um role explícito (Developer, AppSec Engineer, GRC/Compliance).
 - A sugestão pode ser ignorada, modificada, ou aceite - mas a responsabilidade é sempre do decisor humano.
 
-### I2 - Evidência Acima de Plausibilidade
+### I2 - Evidência Acima de Plausibilidade {#i2---evidência-acima-de-plausibilidade}
 
 - Um resultado **plausível** (ex: "L2 porque E=2, D=2, I=1") não substitui **evidência verificável**.
 - Exemplos de evidência:
@@ -42,7 +42,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
   - Ameaças validadas por especialistas de domínio.
   - Exceções aprovadas formalmente.
 
-### I3 - Reprodutibilidade e Auditabilidade
+### I3 - Reprodutibilidade e Auditabilidade {#i3---reprodutibilidade-e-auditabilidade}
 
 - Toda a sugestão deve ser **reproduzível** e **rastreável**:
   - Que ferramenta foi usada? (nome, versão, data)
@@ -50,13 +50,13 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
   - Que output gerou? (score, pontuação E/D/I, nível proposto)
   - Que critério de decisão foi aplicado? (threshold, regras, ponderação)
 
-### I4 - Proteção de Ativos Críticos
+### I4 - Proteção de Ativos Críticos {#i4---proteção-de-ativos-críticos}
 
 - Qualquer ferramenta externa (SaaS, cloud, ou terceiros) é um **risco de supply chain**:
   - Dados sensíveis da aplicação (dados tratados, arquitetura, clientes) não devem ser enviados para sistemas desconhecidos.
   - Aprovação explícita requerida antes de usar qualquer ferramenta em L2/L3.
 
-### I5 - Rastreabilidade de Decisão e Execução
+### I5 - Rastreabilidade de Decisão e Execução {#i5---rastreabilidade-de-decisão-e-execução}
 
 - Toda a decisão de classificação deve responder:
   - **Quem decidiu?** (Developer, AppSec Engineer, Product Owner, etc.)
@@ -66,9 +66,9 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 🚨 Erros Plausíveis - Por Tipo de Assistência
+## 🚨 Erros Plausíveis - Por Tipo de Assistência {#-erros-plausíveis---por-tipo-de-assistência}
 
-### A. Scoring Automático de E/D/I
+### A. Scoring Automático de E/D/I {#a-scoring-automático-de-edi}
 
 **Como funciona**: Ferramenta analisa descrição de projeto, endpoints, tipos de dados, e propõe scores para E, D, I.
 
@@ -84,7 +84,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### B. Deteção Automática de Alterações (Event-Based Triggers)
+### B. Deteção Automática de Alterações (Event-Based Triggers) {#b-deteção-automática-de-alterações-event-based-triggers}
 
 **Como funciona**: Ferramenta analisa commits, PRs, configurações, e propõe reclassificação (ex: "Nova dependência crítica detectada").
 
@@ -99,7 +99,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### C. Mapeamento Automático de Ameaças
+### C. Mapeamento Automático de Ameaças {#c-mapeamento-automático-de-ameaças}
 
 **Como funciona**: Ferramenta gera STRIDE ou MITRE ATT&CK mapping baseado em tipo de aplicação.
 
@@ -114,9 +114,9 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## ✅ Checklist de Validação - Por Prática
+## ✅ Checklist de Validação - Por Prática {#-checklist-de-validação---por-prática}
 
-### Checklist 1: US-01 (Classificação Inicial - Assistida)
+### Checklist 1: US-01 (Classificação Inicial - Assistida) {#checklist-1-us-01-classificação-inicial---assistida}
 
 **Quando**: Ferramenta propõe E/D/I ou nível L1/L2/L3.
 
@@ -140,7 +140,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### Checklist 2: US-03 & US-07 (Revisão - Assistida por Deteção de Alteração)
+### Checklist 2: US-03 & US-07 (Revisão - Assistida por Deteção de Alteração) {#checklist-2-us-03--us-07-revisão---assistida-por-deteção-de-alteração}
 
 **Quando**: Ferramenta detecta mudança e propõe reclassificação.
 
@@ -159,7 +159,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-### Checklist 3: US-06 (Mapeamento de Ameaças - Assistido)
+### Checklist 3: US-06 (Mapeamento de Ameaças - Assistido) {#checklist-3-us-06-mapeamento-de-ameaças---assistido}
 
 **Quando**: Ferramenta gera STRIDE/MITRE ATT&CK mapping.
 
@@ -180,9 +180,9 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 🔀 Trilho de Escalação - Discordância Humano ↔ Máquina
+## 🔀 Trilho de Escalação - Discordância Humano ↔ Máquina {#-trilho-de-escalação---discordância-humano--máquina}
 
-### Cenário 1: Developer propõe L1, Ferramenta propõe L2
+### Cenário 1: Developer propõe L1, Ferramenta propõe L2 {#cenário-1-developer-propõe-l1-ferramenta-propõe-l2}
 
 ```
 ┌─────────────────────────────────────────────────────┐
@@ -209,7 +209,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
         └──────────────────────────────┘
 ```
 
-### Cenário 2: AppSec propõe L3, Ferramenta propõe L1 (Subdeteção)
+### Cenário 2: AppSec propõe L3, Ferramenta propõe L1 (Subdeteção) {#cenário-2-appsec-propõe-l3-ferramenta-propõe-l1-subdeteção}
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -238,7 +238,7 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
         └──────────────────────────────┘
 ```
 
-### Cenário 3: Discordância não resolvida no SLA
+### Cenário 3: Discordância não resolvida no SLA {#cenário-3-discordância-não-resolvida-no-sla}
 
 ```
 ┌────────────────────────────────────────────┐
@@ -266,9 +266,9 @@ Independentemente do tipo de ferramenta ou fase do ciclo de vida, **todo o uso d
 
 ---
 
-## 📝 Exemplos - Boas e Más Práticas
+## 📝 Exemplos - Boas e Más Práticas {#-exemplos---boas-e-más-práticas}
 
-### ❌ Má Prática 1: Aceitar Sugestão sem Validação
+### ❌ Má Prática 1: Aceitar Sugestão sem Validação {#-má-prática-1-aceitar-sugestão-sem-validação}
 
 ```
 Ferramenta: "L2" (score: E=2, D=2, I=1)
@@ -283,7 +283,7 @@ PROBLEMA:
 - Reclassificação futura sem baseline
 ```
 
-### ✅ Boa Prática 1: Validação com Rastreabilidade
+### ✅ Boa Prática 1: Validação com Rastreabilidade {#-boa-prática-1-validação-com-rastreabilidade}
 
 ```
 Ferramenta: "L2" (E=2, D=2, I=1)
@@ -327,7 +327,7 @@ VANTAGENS:
 
 ---
 
-### ❌ Má Prática 2: Ferramenta Detecta Alteração, Ninguém Valida
+### ❌ Má Prática 2: Ferramenta Detecta Alteração, Ninguém Valida {#-má-prática-2-ferramenta-detecta-alteração-ninguém-valida}
 
 ```
 Commit: "Add dependency on critical-auth v2.0"
@@ -340,7 +340,7 @@ Resultado: Ninguém reviu, classificação não foi atualizada
 RISCO: Controlo de segurança insuficiente, gap de conformidade
 ```
 
-### ✅ Boa Prática 2: Deteção com Validação Explícita
+### ✅ Boa Prática 2: Deteção com Validação Explícita {#-boa-prática-2-deteção-com-validação-explícita}
 
 ```
 Commit: "Add dependency on critical-auth v2.0"
@@ -371,9 +371,9 @@ GRC/Compliance: Registra em audit trail
 
 ---
 
-## 🔗 Integração com User Stories
+## 🔗 Integração com User Stories {#-integração-com-user-stories}
 
-### Para US-01 (Classificação Inicial)
+### Para US-01 (Classificação Inicial) {#para-us-01-classificação-inicial}
 
 Adicionar ao DoD:
 
@@ -386,7 +386,7 @@ Adicionar ao DoD:
   - [ ] Ferramenta, versão, data documentados
 ```
 
-### Para US-03 (Revisão Event-Based)
+### Para US-03 (Revisão Event-Based) {#para-us-03-revisão-event-based}
 
 Adicionar ao DoD:
 
@@ -399,7 +399,7 @@ Adicionar ao DoD:
   - [ ] Se nível alterou: trilho de escalação documentado
 ```
 
-### Para US-07 (Revisão Time-Based)
+### Para US-07 (Revisão Time-Based) {#para-us-07-revisão-time-based}
 
 Adicionar ao DoD:
 
@@ -410,7 +410,7 @@ Adicionar ao DoD:
   - [ ] Se discordância (máquina vs. AppSec): trilho de resolução registado
 ```
 
-### Para US-06 (Mapeamento de Ameaças)
+### Para US-06 (Mapeamento de Ameaças) {#para-us-06-mapeamento-de-ameaças}
 
 Adicionar ao DoD:
 
@@ -425,7 +425,7 @@ Adicionar ao DoD:
 
 ---
 
-## 📊 Matriz de Proporcionalidade - Esforço de Validação
+## 📊 Matriz de Proporcionalidade - Esforço de Validação {#-matriz-de-proporcionalidade---esforço-de-validação}
 
 | Prática | L1 | L2 | L3 |
 |---|---|---|---|
@@ -437,7 +437,7 @@ Adicionar ao DoD:
 
 ---
 
-## 🎯 Resumo & Recomendações Operacionais
+## 🎯 Resumo & Recomendações Operacionais {#-resumo--recomendações-operacionais}
 
 1. **Ferramentas são auxiliares, não autoridades**: Sugestões são valiosas, decisões são humanas.
 2. **Rastreabilidade é não-negociável**: Todo o uso de automação deve deixar pista auditável.
@@ -449,7 +449,7 @@ Adicionar ao DoD:
 
 ---
 
-## 🔗 Referências Internas
+## 🔗 Referências Internas {#-referências-internas}
 
 - [Theory of Everything - Introdução](/sbd-toe/teory-of-everything/intro)
 - [US-01 - Classificação Inicial](../aplicacao-lifecycle#us-01---classificação-inicial-da-aplicação)

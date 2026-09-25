@@ -8,7 +8,7 @@ sidebar_position: -1
 
 # Rationale - Catálogo de Requisitos de IaC
 
-## 🧠 Porque este capítulo é **excecional**
+## 🧠 Porque este capítulo é **excecional** {#-porque-este-capítulo-é-excecional}
 
 Este capítulo é diferente dos restantes.  
 Enquanto o **Cap. 02 - Requisitos de Segurança** define uma base comum aplicável a qualquer software, aqui apresentamos um **catálogo técnico especializado (requisitos de IaC`)** que cobre riscos e controlos específicos da **Infraestrutura como Código (IaC)**.  
@@ -24,9 +24,9 @@ Falamos de aspetos como:
 
 ---
 
-## 🔑 Pontos fundamentais da excecionalidade
+## 🔑 Pontos fundamentais da excecionalidade {#-pontos-fundamentais-da-excecionalidade}
 
-### a) Ciclo de vida e equipas diferentes
+### a) Ciclo de vida e equipas diferentes {#a-ciclo-de-vida-e-equipas-diferentes}
 
 Projetos de **IaC têm um ciclo de vida distinto** dos projetos aplicacionais.  
 Normalmente:
@@ -36,7 +36,7 @@ Normalmente:
 
 👉 Esta separação significa que os leitores deste capítulo podem ser diferentes dos de outros: aqui o foco está em quem constrói e governa a infraestrutura, não apenas em quem desenvolve aplicações.
 
-### b) IaC também é software
+### b) IaC também é software {#b-iac-também-é-software}
 
 Apesar de peculiar, um projeto de IaC **é, no fundo, um projeto de software**.  
 Logo, deve cumprir os controlos transversais já definidos no SbD-ToE:
@@ -53,7 +53,7 @@ Daí o rigor: IaC deve ser tratado com a mesma disciplina científica aplicada a
 
 ---
 
-## 📚 Fontes técnicas que fundamentam o catálogo
+## 📚 Fontes técnicas que fundamentam o catálogo {#-fontes-técnicas-que-fundamentam-o-catálogo}
 
 O catálogo de requisitos de IaC não é arbitrário: resulta da síntese de **fontes normativas e de mercado**.  
 Entre elas:
@@ -68,7 +68,7 @@ Entre elas:
 
 ---
 
-## 🧩 Relação com o Cap. 02 - Requisitos de Segurança
+## 🧩 Relação com o Cap. 02 - Requisitos de Segurança {#-relação-com-o-cap-02---requisitos-de-segurança}
 
 - Os requisitos de IaC **complementam** os requisitos de segurança do Cap. 02.  
 - Sempre que possível, estabelecemos rastreabilidade direta:  
@@ -82,7 +82,7 @@ Entre elas:
 
 ---
 
-## 🧱 Como adaptar o catálogo organizacional
+## 🧱 Como adaptar o catálogo organizacional {#-como-adaptar-o-catálogo-organizacional}
 
 O catálogo aqui publicado (`IAC-001` a `IAC-010`) é um **baseline prescritivo**.  
 Cada organização deve adaptá-lo à sua realidade, seguindo uma metodologia clara:
@@ -98,7 +98,7 @@ Cada organização deve adaptá-lo à sua realidade, seguindo uma metodologia cl
 
 ---
 
-## 🧾 Porquê user stories por requisito
+## 🧾 Porquê user stories por requisito {#-porquê-user-stories-por-requisito}
 
 Ao contrário de outros capítulos, aqui não trabalhamos apenas com práticas macro.  
 Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
@@ -110,7 +110,7 @@ Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
 
 ---
 
-## ⚖️ Proporcionalidade L1–L3 (princípios aplicados a IaC)
+## ⚖️ Proporcionalidade L1–L3 (princípios aplicados a IaC) {#️-proporcionalidade-l1l3-princípios-aplicados-a-iac}
 
 | Domínio | L1 (baixo) | L2 (médio) | L3 (crítico) |
 |---------|------------|------------|--------------|
@@ -122,7 +122,7 @@ Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
 
 ---
 
-## 📦 Evidências esperadas
+## 📦 Evidências esperadas {#-evidências-esperadas}
 
 - Estrutura de repo por ambiente; `backend.tf`  
 - Pipelines com lint/security/policies em PR e main  
@@ -135,7 +135,7 @@ Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
 
 ---
 
-## 🚫 Anti-padrões frequentes em IaC
+## 🚫 Anti-padrões frequentes em IaC {#-anti-padrões-frequentes-em-iac}
 
 Aprender com erros recorrentes é essencial.  
 Entre os anti-padrões mais perigosos, destacam-se:
@@ -149,7 +149,7 @@ Entre os anti-padrões mais perigosos, destacam-se:
 
 ---
 
-## 🏛️ Governação e métricas
+## 🏛️ Governação e métricas {#️-governação-e-métricas}
 
 Um catálogo só é eficaz se for governado e medido.  
 Recomendamos:
@@ -165,7 +165,7 @@ Recomendamos:
 
 ---
 
-## 📌 Como ler este capítulo
+## 📌 Como ler este capítulo {#-como-ler-este-capítulo}
 
 1. Ler este **Rationale** para compreender a excecionalidade e metodologia.  
 2. Seguir para o **intro.md** para o enquadramento, papéis e políticas.  

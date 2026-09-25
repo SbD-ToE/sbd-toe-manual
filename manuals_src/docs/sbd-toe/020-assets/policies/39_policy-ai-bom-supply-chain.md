@@ -9,13 +9,13 @@ sidebar_position: 39
 
 # Política de AI BOM e Supply Chain de Modelos
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define como **modelos AI**, **datasets**, **MCP servers/tools** e **prompts embebidos** são tratados como cadeia de fornecimento auditável — com inventário versionado, formato standardizado (preferencialmente CycloneDX 1.6 `ml-bom`), versão fixa por *build*, lista de *providers* aprovados, e processo de resposta a incidentes *upstream*.
 
 Operacionaliza os requisitos [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) e [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) do Cap. 05 e complementa a [Policy 10 — Dependências](./policy-dependencias) (anexo *Provedores AI*) e a [Policy 11 — SBOM](./policy-sbom) (anexo *AI BOM*). Existe como política autónoma — em vez de secção de uma das anteriores — porque o ciclo de vida e os riscos são suficientemente distintos para justificar tratamento próprio, à imagem do que o NIST faz separando o AI RMF do CSF.
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a **qualquer sistema** que use componentes AI em desenvolvimento, *staging* ou produção, incluindo:
 
@@ -28,7 +28,7 @@ Não está no âmbito:
 - Modelos AI usados em modo puramente exploratório, fora de qualquer pipeline de release (estes seguem Policy 16)
 - Bibliotecas tradicionais de *machine learning* sem modelo treinado embebido (caem em Policy 10 / Policy 11)
 
-## 3. Princípio fundamental: AI é supply chain
+## 3. Princípio fundamental: AI é supply chain {#3-princípio-fundamental-ai-é-supply-chain}
 
 Tudo o que aprende-se nos últimos quinze anos sobre cadeia de fornecimento de software aplica-se às dependências AI — com especialização. Versão *pinned*, hash auditável, *provider* aprovado, mecanismo de actualização visível, plano de resposta a incidentes *upstream*. A diferença é que os *attack vectors* têm nomes distintos (`AML.T0019` Publish Poisoned Datasets, `AML.T0109` Supply Chain Rug Pull, `AML.T0110` AI Agent Tool Poisoning) e os artefactos são opacos (não conseguimos `npm audit` sobre um modelo).
 
@@ -36,7 +36,7 @@ Tudo o que aprende-se nos últimos quinze anos sobre cadeia de fornecimento de s
 Operar em produção com modelo AI referenciado por `latest` (ou range, ou alias dinâmico) é o equivalente a operar com `npm install` sem *lockfile* — apenas com superfície de impacto maior e janela de detecção menor. Esta prática é proibida em qualquer nível de criticidade.
 :::
 
-## 4. AI BOM — formato e conteúdo mínimo
+## 4. AI BOM — formato e conteúdo mínimo {#4-ai-bom--formato-e-conteúdo-mínimo}
 
 | Campo | Descrição | Notas |
 |---|---|---|
@@ -49,7 +49,7 @@ Operar em produção com modelo AI referenciado por `latest` (ou range, ou alias
 | `providers` | Providers utilizados | Cada um com `name`, `risk_classification` (L1/L2/L3), `contract_ref` |
 | `build_ref` | Referência ao *build* | Ligação ao SBOM principal e ao *release* |
 
-## 5. Version *pinning* — regras operacionais
+## 5. Version *pinning* — regras operacionais {#5-version-pinning--regras-operacionais}
 
 - **Modelos AI**: versão fixa explícita com hash quando o provider o exponha — ex.: `claude-opus-4-7@2026-05-20#sha:…`. Ranges semver, *aliases* dinâmicos (`latest`, `stable`, `production`) e referências sem versão são **proibidos** em qualquer ambiente além de exploratório ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)).
 - **Datasets**: versão imutável, ou snapshot referenciado por hash. Datasets que evoluem continuamente exigem snapshot por *release*.
@@ -61,7 +61,7 @@ Mudança de versão maior em qualquer destes obriga a:
 2. *Threat model* revisto (Cap. 03 US-11)
 3. Aprovação por `appsec` (L2) ou `appsec` + `grc` (L3) antes do *cutover*
 
-## 6. Lista de *providers* AI aprovados
+## 6. Lista de *providers* AI aprovados {#6-lista-de-providers-ai-aprovados}
 
 A organização mantém em VCS uma **lista versionada de *providers* AI aprovados** com, no mínimo:
 
@@ -74,7 +74,7 @@ A organização mantém em VCS uma **lista versionada de *providers* AI aprovado
 
 Adicionar um *provider* exige: avaliação técnica (`appsec`) + revisão contratual (`grc` + Legal) + aprovação proporcional ao nível de risco. Remover um *provider* da lista exige plano de migração documentado quando o *provider* está em uso operacional.
 
-## 7. Resposta a incidentes *upstream*
+## 7. Resposta a incidentes *upstream* {#7-resposta-a-incidentes-upstream}
 
 Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incidentes em supply chain AI — com adaptações por classe:
 
@@ -85,7 +85,7 @@ Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incide
 | **MCP server / tool comprometido** (`AML.T0110`) | Tool legítima injecta contexto malicioso quando invocada | Remover *tool* da `tools_allowlist` dos *mandates* afectados (Policy 38); revisão do *audit trail* de *tool invocations* (Cap. 12 OPS-012) do período suspeito; *kill-switch* dos agentes que a usaram |
 | ***Provider*** *outage / breaking change* | Provider deprecia versão sem aviso; SLA violado | Activar *fallback* declarado na arquitectura (Cap. 04 §AI/ML); avaliar mudança de *provider* via excepção formal (Policy 05) |
 
-## 8. Proporcionalidade por nível de criticidade
+## 8. Proporcionalidade por nível de criticidade {#8-proporcionalidade-por-nível-de-criticidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -96,7 +96,7 @@ Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incide
 | *Eval suite* obrigatória em mudança de versão maior | Recomendado | Obrigatório | Obrigatório |
 | Revisão periódica da lista de providers | Anual | Semestral | Trimestral |
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -106,7 +106,7 @@ Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incide
 | **Tech Lead / Software Architect** | Identificar quais componentes AI são *load-bearing* no sistema; declarar dependências AI no design |
 | **Auditores** | Verificar conformidade da lista de providers com cláusulas contratuais reais; rastrear incidentes *upstream* nas BOMs publicadas |
 
-## 10. Anti-padrões
+## 10. Anti-padrões {#10-anti-padrões}
 
 - ❌ `model: latest` em qualquer ambiente não-exploratório — viola DEP-013 e abre porta a `AML.T0109`.
 - ❌ AI BOM em formato proprietário ilegível para o *pipeline* de governança — perde-se a portabilidade que é o valor do BOM.
@@ -115,7 +115,7 @@ Os mesmos *runbooks* IR que usa-se para CVE em dependências aplicam-se a incide
 - ❌ Dataset "público" usado sem snapshot — ataque típico `AML.T0019` (dataset alterado entre uso e auditoria).
 - ❌ Lista de providers que cresce mas nunca encolhe — providers descontinuados acumulam-se como *cruft* contratual.
 
-## 11. Gestão de excepções
+## 11. Gestão de excepções {#11-gestão-de-excepções}
 
 Excepções a esta política seguem o processo formal do Cap. 14 e da [Policy 05 — Gestão de Excepções](./policy-gestao-excecoes):
 
@@ -123,7 +123,7 @@ Excepções a esta política seguem o processo formal do Cap. 14 e da [Policy 05
 - Uso de provider fora da lista aprovada exige excepção com TTL ≤ 14 dias e aprovação `appsec` + `grc`.
 - Excepções recorrentes (>2 sobre o mesmo provider em 12 meses) obrigam à inclusão formal do provider na lista ou à sua substituição.
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista semestralmente** dada a rápida evolução do ecossistema de modelos e providers AI, ou após qualquer um dos seguintes eventos:
 
@@ -132,7 +132,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução do 
 - Alteração regulatória aplicável (AI Act, NIS2, DORA) com impacto em supply chain AI
 - Mudança nas cláusulas contratuais de provider em uso operacional
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

@@ -16,7 +16,7 @@ Sem rastreabilidade, uma arquitectura pode estar correcta mas não ser *demonstr
 
 ---
 
-## Modelo de rastreabilidade
+## Modelo de rastreabilidade {#modelo-de-rastreabilidade}
 
 O modelo liga cinco elementos em cadeia:
 
@@ -34,7 +34,7 @@ Ameaça (Cap. 03)  →  Requisito de arquitectura  →  Decisão (ADR)  →  Con
 
 ---
 
-## Template de matriz de rastreabilidade
+## Template de matriz de rastreabilidade {#template-de-matriz-de-rastreabilidade}
 
 A matriz pode ser mantida como tabela Markdown no repositório, backlog items com labels, ou secção na `solution-architecture.md`. O formato é secundário; a substância - ligação verificável entre requisito, decisão e evidência - é o critério determinante.
 
@@ -49,7 +49,7 @@ A matriz pode ser mantida como tabela Markdown no repositório, backlog items co
 
 ---
 
-## Critérios de actualização
+## Critérios de actualização {#critérios-de-actualização}
 
 A matriz de rastreabilidade deve ser actualizada quando:
 
@@ -63,7 +63,7 @@ Rastreabilidade desactualizada equivale a ausência de rastreabilidade para efei
 
 ---
 
-## Instanciação operacional
+## Instanciação operacional {#instanciação-operacional}
 
 Para instanciação em projecto, cada requisito ARC é identificado com a tag operacional `SEC-Lx-ARC-CODIGO` (ex: `SEC-L2-ARC-005`), conforme descrito em [Taxonomia e Rastreabilidade](/sbd-toe/sbd-manual/requisitos-seguranca/addon/taxonomia-rastreabilidade).
 

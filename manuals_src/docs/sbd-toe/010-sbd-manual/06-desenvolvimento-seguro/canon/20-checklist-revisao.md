@@ -20,7 +20,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                   | Verificado? |
 |--------------------------------------------------------------------------------------------------------|-------------|
@@ -42,7 +42,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 🔄 Notas de aplicação prática
+## 🔄 Notas de aplicação prática {#-notas-de-aplicação-prática}
 
 - Este checklist pode ser transformado em **formulário digital, step de CI/CD ou dashboard de conformidade técnica**.
 - Cada item pode ser convertido em KPI binário (sim/não) por projeto, equipa ou stack tecnológica.

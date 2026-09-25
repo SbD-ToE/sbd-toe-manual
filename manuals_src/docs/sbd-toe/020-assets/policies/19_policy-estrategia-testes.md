@@ -9,7 +9,7 @@ sidebar_position: 19
 
 # Política de Estratégia de Testes de Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **estratégia de testes de segurança** ao longo do ciclo de vida de aplicações classificadas como L1, L2 ou L3.
 
@@ -24,9 +24,9 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Técnicas de teste e obrigatoriedade
+## 2. Técnicas de teste e obrigatoriedade {#2-técnicas-de-teste-e-obrigatoriedade}
 
-### 2.1 Matriz de obrigatoriedade por nível
+### 2.1 Matriz de obrigatoriedade por nível {#21-matriz-de-obrigatoriedade-por-nível}
 
 | Técnica | L1 | L2 | L3 |
 |---|---|---|---|
@@ -39,21 +39,21 @@ O objetivo desta política é garantir que:
 | **Testes manuais de segurança** | Não obrigatório | Recomendado por release | Obrigatório por release major |
 | **PenTesting** | Não obrigatório | Recomendado anual | Obrigatório (ver Política de PenTesting) |
 
-### 2.2 SAST
+### 2.2 SAST {#22-sast}
 
 - Executado em cada PR e em cada build de integração
 - Configurado com rulesets derivados das guidelines de desenvolvimento por stack
 - Findings classificados por severidade (Critical, High, Medium, Low, Informational)
 - Supressões inline requerem comentário de justificação e são reportadas como métrica
 
-### 2.3 DAST
+### 2.3 DAST {#23-dast}
 
 - Executado em ambiente de staging após cada promoção bem-sucedida
 - Requer ambiente com autenticação configurada para cobertura de endpoints protegidos
 - Âmbito definido para evitar teste em sistemas externos reais (mocks ou sandbox para integrações)
 - Cobertura mínima de endpoints por release documentada e medida
 
-### 2.4 Fuzzing
+### 2.4 Fuzzing {#24-fuzzing}
 
 - Focado em parsers de input, endpoints de upload, APIs que aceitem estruturas complexas
 - Executado como job noturno ou por release, não necessariamente em cada PR
@@ -61,7 +61,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Gates de segurança por nível
+## 3. Gates de segurança por nível {#3-gates-de-segurança-por-nível}
 
 Os thresholds de bloqueio devem ser documentados e versionados em `gates-config.yaml` ou equivalente:
 
@@ -81,9 +81,9 @@ Um gate configurado em modo apenas-alerta em L2/L3 deve ser registado como exce�
 
 ---
 
-## 4. Gestão centralizada de findings
+## 4. Gestão centralizada de findings {#4-gestão-centralizada-de-findings}
 
-### 4.1 Plataforma unificada
+### 4.1 Plataforma unificada {#41-plataforma-unificada}
 
 Todos os findings de SAST, DAST, IAST, SCA e fuzzing devem ser consolidados numa plataforma centralizada (ex: DefectDojo, SonarQube Security Dashboard, GitHub Security, GitLab Security Dashboard), com:
 
@@ -92,7 +92,7 @@ Todos os findings de SAST, DAST, IAST, SCA e fuzzing devem ser consolidados numa
 - [ ] Histórico de estado (aberto, em progresso, resolvido, aceite, suprimido)
 - [ ] Rastreabilidade entre finding e PR/commit de resolução
 
-### 4.2 Triagem formal
+### 4.2 Triagem formal {#42-triagem-formal}
 
 Cada finding bloqueante deve ser triado com decisão documentada:
 
@@ -103,7 +103,7 @@ Cada finding bloqueante deve ser triado com decisão documentada:
 | **SUPRIMIR (FP)** | Falso positivo demonstrado | Evidência técnica; aprovação de AppSec |
 | **DIFERIR** | Resolução adiada com justificação | Prazo definido; aceitação de risco temporária |
 
-### 4.3 SLAs de triagem e resolução
+### 4.3 SLAs de triagem e resolução {#43-slas-de-triagem-e-resolução}
 
 | Severidade | SLA de triagem | SLA de resolução (L2) | SLA de resolução (L3) |
 |---|---|---|---|
@@ -114,7 +114,7 @@ Cada finding bloqueante deve ser triado com decisão documentada:
 
 ---
 
-## 5. Rastreabilidade e evidência por release
+## 5. Rastreabilidade e evidência por release {#5-rastreabilidade-e-evidência-por-release}
 
 Para cada release, deve existir evidência dos testes realizados:
 
@@ -126,7 +126,7 @@ Para cada release, deve existir evidência dos testes realizados:
 
 ---
 
-## 6. Tratamento de falsos positivos
+## 6. Tratamento de falsos positivos {#6-tratamento-de-falsos-positivos}
 
 Falsos positivos (FP) são inevitáveis em qualquer ferramenta de análise estática ou dinâmica. O processo para suprimir um finding como FP deve ser formal:
 
@@ -143,7 +143,7 @@ Métricas de FP por ferramenta devem ser acompanhadas para calibrar as configura
 
 Quando o sistema inclui um agente AI em operação (ou quando um agente é parte do processo de teste — e.g. auditor de PR automatizado), incluímos **eval suites** entre as técnicas de teste obrigatórias. Não substituem SAST/DAST/SCA — cobrem a fatia agentic, que essas ferramentas não vêem.
 
-### 7.1 Composição mínima
+### 7.1 Composição mínima {#71-composição-mínima}
 
 Por cada agente AI em nível A1+ no projecto:
 
@@ -155,14 +155,14 @@ Por cada agente AI em nível A1+ no projecto:
 | **A/B testing** antes de promover skill / system prompt | — | Recomendado | Obrigatório | Obrigatório |
 | **Test telemetry** correlacionada com sinais reais em produção (Cap. 12) | — | — | Recomendado | Obrigatório |
 
-### 7.2 Operação
+### 7.2 Operação {#72-operação}
 
 - *Eval suite* versionada em VCS, com `eval_run_id` arquivado em cada release e ligado a `mandate_ref` (Policy 38).
 - Corre em CI antes do *merge* de mudanças a *system prompts* / *skill files* / *agent files*, e após *bump* da versão do modelo (cross-link Cap. 07 US-19 e Cap. 06 §prompts-como-codigo).
 - *Eval failure* bloqueia *merge* ou força descida de nível de autonomia até estar resolvido.
 - Cobertura tem de ser proporcional ao nível de autonomia declarado — subir nível sem suite à medida é proibido.
 
-### 7.3 Anti-padrões
+### 7.3 Anti-padrões {#73-anti-padrões}
 
 - ❌ "*Vibe checks*" como única validação.
 - ❌ Suite que nunca falha — falta cobertura adversarial.
@@ -173,7 +173,7 @@ Por cada agente AI em nível A1+ no projecto:
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -185,7 +185,7 @@ Por cada agente AI em nível A1+ no projecto:
 
 ---
 
-## 9. Revisão e auditoria desta política
+## 9. Revisão e auditoria desta política {#9-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -195,7 +195,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 10. Referências normativas e técnicas
+## 10. Referências normativas e técnicas {#10-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

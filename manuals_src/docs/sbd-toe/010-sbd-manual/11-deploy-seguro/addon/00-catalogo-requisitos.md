@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Deploy Seguro
 
-## Âmbito: o processo de deploy como fronteira de segurança
+## Âmbito: o processo de deploy como fronteira de segurança {#âmbito-o-processo-de-deploy-como-fronteira-de-segurança}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao processo de deploy** - a fase de promoção de artefactos de software entre ambientes, e em particular para produção. O processo de deploy é uma fronteira crítica: é o momento em que código, credenciais, configuração e artefactos se combinam para modificar estado em sistemas activos.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-DPL-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo DPL - Deploy Seguro
+## Catálogo DPL - Deploy Seguro {#catálogo-dpl---deploy-seguro}
 
 Requisitos que garantem que cada promoção a produção é aprovada, rastreável, reversível e proporcional ao risco da aplicação.
 
@@ -56,7 +56,7 @@ Requisitos que garantem que cada promoção a produção é aprovada, rastreáve
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **DPL-001**: "Aprovação humana" não é burocracia - é o mecanismo que garante que uma decisão irreversível (modificar estado em produção) tem um responsável identificável. Em contextos de alta frequência de deploy (múltiplos deploys diários), a aprovação pode ser implementada como gate de release, não necessariamente por deploy individual, desde que o escopo e os critérios estejam documentados.
 - **DPL-002**: A verificação de proveniência no momento do deploy é distinta da geração de proveniência no build (CIC-007). É possível gerar uma assinatura válida e nunca a verificar - o controlo efectivo requer verificação downstream, na promoção.

@@ -45,7 +45,7 @@ Inclui, em particular:
 
 ---
 
-## 📊 Tabela-Resumo dos Temas de Requisitos
+## 📊 Tabela-Resumo dos Temas de Requisitos {#-tabela-resumo-dos-temas-de-requisitos}
 
 O catálogo de requisitos está organizado em **20 temas técnicos**, identificados pelos códigos **T01–T20**.  
 Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicável de forma proporcional ao **nível de risco da aplicação**.
@@ -78,9 +78,9 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 ---
 
-## 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê
+## 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê {#-prescrição-prática-o-quê-quem-como-quando-porquê-e-para-quê}
 
-### 📌 O que deve ser feito
+### 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. Identificar e documentar requisitos de segurança com base no risco  
    (ver [Capítulo 1 - Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro))
@@ -91,7 +91,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 6. Rever e versionar requisitos sempre que existam alterações materiais de risco, arquitetura, exposição, integrações ou dados tratados
 7. Rever, manter e justificar exceções com base em critérios formais de aceitação de risco
 
-### ⚙️ Como deve ser feito
+### ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 - Utilizar catálogos como o proposto neste manual ou referências consolidadas como o **OWASP ASVS**
 - Adaptar os requisitos ao **nível de risco e tipo de aplicação**
@@ -104,14 +104,14 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 > 🧩 Utilizar matrizes de rastreabilidade (risco → requisito → controlo → validação)  
 > 🎯 Definir regras objetivas para a testabilidade de cada requisito
 
-### 📆 Quando aplicar
+### 📆 Quando aplicar {#-quando-aplicar}
 
 - Na fase de definição de requisitos e/ou arquitetura
 - Após a conclusão de **Threat Modeling** (Cap. 3)
 - Sempre que o risco, exposição ou contexto da aplicação se alterem
 - Em revisões de segurança, *design reviews*, *sprint planning* ou *milestones*
 
-### 👥 Quem está envolvido
+### 👥 Quem está envolvido {#-quem-está-envolvido}
 
 | Papel/Função             | Contributo principal                                                  |
 |--------------------------|------------------------------------------------------------------------|
@@ -122,7 +122,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 > ✅ A rastreabilidade e a testabilidade são responsabilidades partilhadas.
 
-### 🎯 Porquê / Para quê
+### 🎯 Porquê / Para quê {#-porquê--para-quê}
 
 - Reduzir o risco desde as fases iniciais
 - Evitar retrabalho e custos de correção tardios
@@ -132,7 +132,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 ---
 
-## ⚠️ Caveats e limitações
+## ⚠️ Caveats e limitações {#️-caveats-e-limitações}
 
 - Requisitos genéricos ou não testáveis não acrescentam valor
 - A aplicação acrítica de checklists pode gerar falsa sensação de segurança
@@ -141,7 +141,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 ---
 
-## 🔍 O que pode ser feito mais (e porquê)
+## 🔍 O que pode ser feito mais (e porquê) {#-o-que-pode-ser-feito-mais-e-porquê}
 
 - Criar catálogos internos reutilizáveis, tomando como base o catálogo deste manual
 - Adotar linguagens formais ou semi-formais para critérios de aceitação
@@ -150,7 +150,7 @@ Cada tema agrupa requisitos com afinidade técnica e operacional, sendo aplicáv
 
 ---
 
-## 📌 Nota sobre âmbito, processo e extensibilidade
+## 📌 Nota sobre âmbito, processo e extensibilidade {#-nota-sobre-âmbito-processo-e-extensibilidade}
 
 Este capítulo define um conjunto **essencial e transversal de requisitos de segurança aplicacionais**, aplicáveis à maioria dos sistemas empresariais, web e *cloud-native*.
 
@@ -169,7 +169,7 @@ Aplicações com perfis técnicos específicos (ex.: sistemas embebidos, IoT, SC
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política                           | Obrigatória | Aplicação           | Conteúdo mínimo esperado                                 |
 |------------------------------------|:-----------:|---------------------|----------------------------------------------------------|

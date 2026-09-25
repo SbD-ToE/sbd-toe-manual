@@ -26,7 +26,7 @@ Esta classificação inicial permite aplicar práticas de segurança com **propo
 
 Quando existam **artefactos organizacionais previamente definidos** - como BIA (Business Impact Analysis), DRP (Disaster Recovery Plan), BCP (Business Continuity Plan) ou outras formas de categorização - **estes podem (e devem) ser aproveitados como base factual para a classificação**. Mesmo que não sejam exatos, oferecem uma referência válida e suficiente, conforme descrito no [Alternativa - adoção de DRP, BIA ou outras Classificações Existentes](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia).
 
-## 🎯 Modelo proposto: simples, participativo e pragmático
+## 🎯 Modelo proposto: simples, participativo e pragmático {#-modelo-proposto-simples-participativo-e-pragmático}
 
 Este manual propõe um modelo de classificação **empírico e simplificado**, inspirado na **OWASP Risk Rating**, mas adaptado a contextos práticos onde a decisão rápida é essencial. O modelo assenta em três eixos principais:
 

@@ -11,9 +11,9 @@ O SbD-ToE opera com **dois sistemas de identificação complementares**, cada um
 
 ---
 
-## 1) Dois sistemas, dois propósitos
+## 1) Dois sistemas, dois propósitos {#1-dois-sistemas-dois-propósitos}
 
-### ID canónico (catálogo SbD-ToE)
+### ID canónico (catálogo SbD-ToE) {#id-canónico-catálogo-sbd-toe}
 
 O catálogo de requisitos do Cap. 02 atribui a cada requisito um **identificador canónico estável**:
 
@@ -32,7 +32,7 @@ Este ID é a **referência normativa permanente** - identifica o requisito no ma
 
 ---
 
-### Tag operacional (instanciação por projecto)
+### Tag operacional (instanciação por projecto) {#tag-operacional-instanciação-por-projecto}
 
 Quando um requisito canónico é adoptado por um projecto concreto, é **instanciado** com o contexto desse projecto - nomeadamente o nível de risco - originando uma tag operacional rastreável:
 
@@ -53,7 +53,7 @@ Esta tag é o identificador usado nos artefactos de ciclo de vida do projecto - 
 
 ---
 
-## 2) A relação entre os dois sistemas
+## 2) A relação entre os dois sistemas {#2-a-relação-entre-os-dois-sistemas}
 
 O ID canónico é a **fonte**; a tag operacional é a **instância contextualizada**. O fluxo é sempre descendente:
 
@@ -79,7 +79,7 @@ Sem esta cadeia, o requisito fica “presente” no projecto mas deixa de ser go
 
 ---
 
-## 3) Domínios técnicos suportados
+## 3) Domínios técnicos suportados {#3-domínios-técnicos-suportados}
 
 | Domínio | Categoria canónica associada |
 |---------|------------------------------|
@@ -99,7 +99,7 @@ Sem esta cadeia, o requisito fica “presente” no projecto mas deixa de ser go
 
 ---
 
-## 4) Onde aplicar cada sistema
+## 4) Onde aplicar cada sistema {#4-onde-aplicar-cada-sistema}
 
 | Contexto | Sistema a usar | Exemplo |
 |----------|---------------|---------|
@@ -114,7 +114,7 @@ A presença do ID canónico em relatórios e evidências é o que permite ligar 
 
 ---
 
-## 5) Verificação e manutenção
+## 5) Verificação e manutenção {#5-verificação-e-manutenção}
 
 As tags operacionais devem ser **validadas periodicamente** contra:
 - O [catálogo canónico](./catalogo-requisitos) - para garantir que os IDs referenciados existem e estão actualizados;

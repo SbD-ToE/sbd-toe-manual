@@ -15,73 +15,73 @@ As práticas aqui descritas não são obrigatórias, mas **altamente recomendada
 
 ---
 
-## 1. Deploy Validado com Base em Observabilidade
+## 1. Deploy Validado com Base em Observabilidade {#1-deploy-validado-com-base-em-observabilidade}
 
 - Uso de *dashboards* com métricas de readiness para gating automático;
 - Configuração de *canary release* com *automatic promotion* e rollback.
 
-## 2. Reversibilidade Validada em Pipeline
+## 2. Reversibilidade Validada em Pipeline {#2-reversibilidade-validada-em-pipeline}
 
 - Execução de rollback em staging antes de cada release;
 - Scripts testados e documentados como parte da build.
 
-## 3. Contrato de Release Assinado
+## 3. Contrato de Release Assinado {#3-contrato-de-release-assinado}
 
 - Ficheiro `release-contract.yaml` contendo:
   - Versões, owners, validações, exceções, rollback;
 - Assinatura digital ou hash para validação posterior.
 
-## 4. Deploy com Verificação de Proveniência
+## 4. Deploy com Verificação de Proveniência {#4-deploy-com-verificação-de-proveniência}
 
 - Validação de SBOM, assinatura, proveniência e agente de build;
 - Exigência de pipelines autorizados.
 
-## 5. Política de "Break-Glass" Formalizada
+## 5. Política de "Break-Glass" Formalizada {#5-política-de-break-glass-formalizada}
 
 - Processo aprovado para deploys de emergência:
   - Auditoria obrigatória;
   - Aprovação dupla (produto + segurança);
   - Reversão planeada pós-evento.
 
-## 6. Verificação de Segurança Pós-produção
+## 6. Verificação de Segurança Pós-produção {#6-verificação-de-segurança-pós-produção}
 
 - Execução de testes runtime-aware:
   - Headers HTTP, ports, endpoints;
   - Validação de hardening.
 
-## 7. Dashboards com Rastreabilidade de Deploy
+## 7. Dashboards com Rastreabilidade de Deploy {#7-dashboards-com-rastreabilidade-de-deploy}
 
 - Visualização por release:
   - Data, owners, validações, findings, rollback e SLOs.
 
-## 8. Aprovação Multi-fatorial de Deploys Críticos
+## 8. Aprovação Multi-fatorial de Deploys Críticos {#8-aprovação-multi-fatorial-de-deploys-críticos}
 
 - Aprovação por segurança + produto + operações;
 - Baseada em checklist e evidências técnicas.
 
-## 9. Reforço de Imutabilidade no Runtime
+## 9. Reforço de Imutabilidade no Runtime {#9-reforço-de-imutabilidade-no-runtime}
 
 - Proibição de modificações pós-deploy;
 - Rejeição de patches manuais ou “hotfixes” fora do ciclo de build.
 
-## 10. Verificação de Integridade do Ambiente
+## 10. Verificação de Integridade do Ambiente {#10-verificação-de-integridade-do-ambiente}
 
 - Checksum, versões, permissões, configurações e variáveis de ambiente;
 - Validação antes e depois do deploy.
 
-## 11. *Release Freezing* com Revalidação Temporal
+## 11. *Release Freezing* com Revalidação Temporal {#11-release-freezing-com-revalidação-temporal}
 
 - Congelamento automático de releases que fiquem mais de `X` dias sem promoção;
 - Reexecução obrigatória de validações de segurança antes do deploy;
 - Evita a promoção de artefactos obsoletos sem revalidação.
 
-## 12. Gestão de Configuração Segura no Deploy
+## 12. Gestão de Configuração Segura no Deploy {#12-gestão-de-configuração-segura-no-deploy}
 
 - Validação da integridade de `secrets`, feature toggles e `config maps`;
 - Enforcement de políticas via OPA/Rego ou Kyverno;
 - Aprovação de alterações sensíveis via PRs controlados.
 
-## 13. Lockdown Automático após Deploy Crítico
+## 13. Lockdown Automático após Deploy Crítico {#13-lockdown-automático-após-deploy-crítico}
 
 - Aplicação de *lockdown* temporário após deploys críticos:
   - Desativação de toggles experimentais;
@@ -90,7 +90,7 @@ As práticas aqui descritas não são obrigatórias, mas **altamente recomendada
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Estas práticas avançadas estendem o modelo base do capítulo, cobrindo cenários de **elevada exigência operacional**, incluindo:
 

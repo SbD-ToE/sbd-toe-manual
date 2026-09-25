@@ -7,7 +7,7 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 
 # Exemplo: KPIs e Targets
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Métricas de segurança
@@ -18,7 +18,7 @@ O SbD-ToE **NÃO prescreve** targets específicos porque contextos variam. Este 
 
 ---
 
-## Dimensões de KPIs (Todas as Organizações)
+## Dimensões de KPIs (Todas as Organizações) {#dimensões-de-kpis-todas-as-organizações}
 
 O manual define estas dimensões ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 
@@ -32,15 +32,15 @@ Para cada dimensão, apresentamos targets exemplares.
 
 ---
 
-## Cenário 1: Fintech de Pagamentos (Startup, `<`50 devs)
+## Cenário 1: Fintech de Pagamentos (Startup, `<`50 devs) {#cenário-1-fintech-de-pagamentos-startup-50-devs}
 
-### Contexto
+### Contexto {#contexto}
 - Serviço crítico: Processamento de pagamentos
 - Deadline DORA: Janeiro 2025 (curto)
 - Budget: Limitado
 - Risk appetite: Baixo (pagamentos = PCI-DSS + DORA)
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -62,7 +62,7 @@ Para cada dimensão, apresentamos targets exemplares.
 | | Staff SbD trainning | 100% devs | M4 | Ramp-up rápido |
 | | Readiness inspeção | 95% | M12 | Antes inspeção supervisor |
 
-### Dashboard (Exemplo visual)
+### Dashboard (Exemplo visual) {#dashboard-exemplo-visual}
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize':'13px'}}}%%
@@ -123,16 +123,16 @@ graph TB
 
 ---
 
-## Cenário 2: Banco Tradicional (Regional, `>`200 devs)
+## Cenário 2: Banco Tradicional (Regional, `>`200 devs) {#cenário-2-banco-tradicional-regional-200-devs}
 
-### Contexto
+### Contexto {#contexto-1}
 - Apps críticas: `>`30 (múltiplas linhas de negócio)
 - Deadline DORA: Janeiro 2025
 - Budget: Adequado
 - Risk appetite: Muito baixo (conformidade histórica)
 - Compliance adicional: GDPR, NIS2, regulação local
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets-1}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -162,7 +162,7 @@ graph TB
 | | Attestation TLPT | ✓ | M13 | Evidência board |
 | | Readiness inspeção supervisor | 100% | M18 | Completa preparação |
 
-### Novidade: Timeline Diferente
+### Novidade: Timeline Diferente {#novidade-timeline-diferente}
 
 ```mermaid
 gantt
@@ -191,16 +191,16 @@ gantt
 
 ---
 
-## Cenário 3: Segurador Digital (PME, 20-50 devs)
+## Cenário 3: Segurador Digital (PME, 20-50 devs) {#cenário-3-segurador-digital-pme-20-50-devs}
 
-### Contexto
+### Contexto {#contexto-2}
 - Apps: Subsistemas críticos (10-15 L3)
 - Deadline DORA: Janeiro 2025
 - Budget: Moderado
 - Risk appetite: Baixo (seguros = dados sensíveis + GDPR)
 - Compliance adicional: GDPR, regulação de seguros local
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets-2}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -225,16 +225,16 @@ gantt
 
 ---
 
-## Cenário 4: Empresa de Outsourcing/Serviços Financeiros
+## Cenário 4: Empresa de Outsourcing/Serviços Financeiros {#cenário-4-empresa-de-outsourcingserviços-financeiros}
 
-### Contexto
+### Contexto {#contexto-3}
 - Apps: Múltiplas soluções SaaS/On-prem
 - Clientes: Diferentes perfis de risco
 - Deadline DORA: Depende cliente
 - Budget: Variável (por cliente)
 - Desafio: Diferentes níveis de maturidade por cliente
 
-### Approach: Targets por Tier
+### Approach: Targets por Tier {#approach-targets-por-tier}
 
 | Tier | Cliente | RTO | Vulns Altas SLA | TLPT | Training |
 |------|---------|-----|-----------------|------|----------|
@@ -242,7 +242,7 @@ gantt
 | **Padrão** | PME financeira | `<`8h | `<`45d | Sim | 80% |
 | **Básico** | Startup fintech | `<`24h | `<`60d | Piloto | 60% |
 
-### Gestão de Clientes
+### Gestão de Clientes {#gestão-de-clientes}
 
 **👤 Cada cliente tem:**
 - Classificação apps (L1-L3)
@@ -260,11 +260,11 @@ gantt
 
 ---
 
-## Componentes de Qualquer Dashboard
+## Componentes de Qualquer Dashboard {#componentes-de-qualquer-dashboard}
 
 Independentemente do cenário, o dashboard deve ter:
 
-### 📊 Dashboard Unificado
+### 📊 Dashboard Unificado {#-dashboard-unificado}
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize':'14px'}}}%%
@@ -312,27 +312,27 @@ graph TB
 
 ---
 
-## Cadência de Revisão
+## Cadência de Revisão {#cadência-de-revisão}
 
-### Mensal (Quick-check)
+### Mensal (Quick-check) {#mensal-quick-check}
 - Critical/High vulns
 - Incidentes abertos
 - Fornecedores sem onboarding
 
-### Trimestral (Formal Review)
+### Trimestral (Formal Review) {#trimestral-formal-review}
 - KPIs contra targets
 - Trends últimos 3 meses
 - Ajustes de targets se needed
 - Board reporting
 
-### Anual (Strategic)
+### Anual (Strategic) {#anual-strategic}
 - Revisão de targets conforme DORA evolução
 - Lições aprendidas vs. targets
 - Projeção para próximo ano
 
 ---
 
-## Processo de Definição de Targets (Por Fazer)
+## Processo de Definição de Targets (Por Fazer) {#processo-de-definição-de-targets-por-fazer}
 
 1. **Baseline:** Auditar estado atual
 2. **Benchmarking:** Comparar com indústria (cuidado: contextos variam)
@@ -345,7 +345,7 @@ graph TB
 
 ---
 
-## Importante
+## Importante {#importante}
 
 **Não existem "targets certos"** - cada organização deve:
 

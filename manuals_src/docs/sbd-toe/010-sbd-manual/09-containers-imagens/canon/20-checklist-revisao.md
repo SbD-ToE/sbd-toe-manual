@@ -20,7 +20,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                           | Verificado? |
 |----------------------------------------------------------------------------------------------------------------|-------------|
@@ -46,7 +46,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 🔄 Notas de aplicação prática
+## 🔄 Notas de aplicação prática {#-notas-de-aplicação-prática}
 
 - Este checklist pode ser convertido em **etapa automatizada de CI/CD**, formulário digital de validação ou dashboard de conformidade de containers.
 - Cada item deve ser tratado como **indicador binário (sim/não)**, permitindo cálculo de KPIs de adoção por projeto, pipeline ou equipa.

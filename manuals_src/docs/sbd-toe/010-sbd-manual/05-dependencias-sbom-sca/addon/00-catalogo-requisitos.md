@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Dependências, SBOM e SCA
 
-## Âmbito: gestão da cadeia de fornecimento de software
+## Âmbito: gestão da cadeia de fornecimento de software {#âmbito-gestão-da-cadeia-de-fornecimento-de-software}
 
 Este catálogo cobre **requisitos de segurança aplicáveis à gestão de dependências de terceiros** ao longo do ciclo de vida do software - desde a selecção e aprovação de bibliotecas, passando pela geração de SBOM e scanning de vulnerabilidades, até às políticas de actualização e rastreabilidade de correcções.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-DEP-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo DEP - Dependências, SBOM e SCA
+## Catálogo DEP - Dependências, SBOM e SCA {#catálogo-dep---dependências-sbom-e-sca}
 
 Requisitos que garantem que todas as dependências de terceiros são conhecidas, analisadas, governadas e actualizadas de forma proporcional ao risco.
 
@@ -59,7 +59,7 @@ Requisitos que garantem que todas as dependências de terceiros são conhecidas,
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **DEP-001**: O SBOM deve ser gerado como artefacto do próprio processo de build, não como análise separada. Ferramentas de referência: Syft, Trivy, CycloneDX Maven Plugin, OWASP Dependency Track.
 - **DEP-002**: A política de severidade deve ser explícita quanto ao que bloqueia vs. o que apenas alerta. Para L1, o mínimo aceitável é bloqueio em severidade crítica; para L2/L3, severidade elevada ou superior.

@@ -12,13 +12,13 @@ tags: [exceções, operacoes, monitorizacao, alertas, retencao, DORA, NIS2, SIEM
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a requisitos do catálogo de monitorização e operações: `OPS-001` a `OPS-015`. Dois cenários têm especificidades relevantes: alert silencing (OPS-005) e retenção de logs abaixo do mínimo regulatório (OPS-003).
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - alerta silenciado temporariamente por manutenção programada, ruído excessivo de falsos positivos, ou incapacidade técnica de resposta num período definido (OPS-005);
 - retenção de logs abaixo do mínimo definido na política ou exigido por regulação - por constrangimento de armazenamento, custo ou conflito com outra obrigação legal (OPS-003);
@@ -27,7 +27,7 @@ Excepções a requisitos do catálogo de monitorização e operações: `OPS-001
 
 ---
 
-## Alert silencing - requisitos específicos
+## Alert silencing - requisitos específicos {#alert-silencing---requisitos-específicos}
 
 O silenciamento de alertas é o cenário de maior risco neste domínio: elimina visibilidade activa sem deixar evidência automática. Toda a excepção de silenciamento exige:
 
@@ -41,7 +41,7 @@ Alertas silenciados sem data de fim ou sem controlo compensatório são tratados
 
 ---
 
-## Retenção de logs - implicações regulatórias
+## Retenção de logs - implicações regulatórias {#retenção-de-logs---implicações-regulatórias}
 
 Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2, ou política interna) têm implicações que excedem a aprovação técnica:
 
@@ -51,7 +51,7 @@ Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2,
 
 ---
 
-## Campos adicionais obrigatórios (operações)
+## Campos adicionais obrigatórios (operações) {#campos-adicionais-obrigatórios-operações}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -63,7 +63,7 @@ Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2,
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

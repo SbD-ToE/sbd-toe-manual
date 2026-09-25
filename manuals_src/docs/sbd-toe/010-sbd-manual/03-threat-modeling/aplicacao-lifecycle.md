@@ -15,7 +15,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ---
 
-## 📅 Quando aplicar Threat Modeling
+## 📅 Quando aplicar Threat Modeling {#-quando-aplicar-threat-modeling}
 
 | Fase / Evento                    | Ação esperada                                                                 | Quem participa                                                     | Evidência mínima (artefacto principal) |
 |----------------------------------|------------------------------------------------------------------------------|--------------------------------------------------------------------|----------------------------------------|
@@ -28,7 +28,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ---
 
-## 👥 Quem faz o quê
+## 👥 Quem faz o quê {#-quem-faz-o-quê}
 
 | Papel / Função             | Responsabilidades-chave |
 |----------------------------|--------------------------|
@@ -42,8 +42,8 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 
 ---
 
-## 📝 User Stories e Cartões Reutilizáveis
-### US-01 - Criação do modelo de ameaça
+## 📝 User Stories e Cartões Reutilizáveis {#-user-stories-e-cartões-reutilizáveis}
+### US-01 - Criação do modelo de ameaça {#us-01---criação-do-modelo-de-ameaça}
 
 **Contexto.**  
 No início do projeto, deve ser criado um modelo de ameaça proporcional ao risco da aplicação.
@@ -90,7 +90,7 @@ Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero criar um m
 
 ---
 
-### US-02 - Validação de arquitetura com threat modeling
+### US-02 - Validação de arquitetura com threat modeling {#us-02---validação-de-arquitetura-com-threat-modeling}
 
 **Contexto.**  
 As revisões de arquitetura devem incluir threat modeling para identificar ameaças estruturais.
@@ -130,7 +130,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero validar a arquitetu
 
 ---
 
-### US-03 - Atualização do modelo após alteração técnica
+### US-03 - Atualização do modelo após alteração técnica {#us-03---atualização-do-modelo-após-alteração-técnica}
 
 **Contexto.**  
 Sempre que ocorrer uma alteração significativa (nova feature, integração ou refactor), o modelo de ameaça deve ser atualizado.
@@ -172,7 +172,7 @@ Como **Arquitetos de Software** e **DevOps/SRE**, quero atualizar o modelo de am
 - 🔗 [SSDF Practices](https://csrc.nist.gov/publications/detail/sp/800-218/final)  
 
 ---
-### US-04 - Justificação formal de risco aceite
+### US-04 - Justificação formal de risco aceite {#us-04---justificação-formal-de-risco-aceite}
 
 **Contexto.**  
 Nem todas as ameaças podem ser mitigadas; riscos residuais devem ser formalmente documentados, aprovados e revistos.
@@ -216,7 +216,7 @@ Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formal
 
 ---
 
-### US-05 - Gate de controlo de consistência no CI/CD
+### US-05 - Gate de controlo de consistência no CI/CD {#us-05---gate-de-controlo-de-consistência-no-cicd}
 
 **Contexto.**  
 O pipeline deve garantir que mudanças relevantes não passam sem atualização/revisão do Threat Model, mantendo rastreabilidade e evidência.
@@ -257,7 +257,7 @@ Como **DevOps/SRE** e **AppSec Engineer**, quero aplicar um **gate determinísti
 
 ---
 
-### US-06 - Validação de impacto no negócio
+### US-06 - Validação de impacto no negócio {#us-06---validação-de-impacto-no-negócio}
 
 **Contexto.**  
 As ameaças identificadas devem ser priorizadas com base no impacto para o negócio, e não apenas em métricas técnicas.
@@ -296,7 +296,7 @@ Como **Product Owner**, quero priorizar as ameaças identificadas no modelo de a
 | Planeamento / Grooming | Avaliação de impacto | Product Owner + Gestão Executiva/CISO | Antes de priorização de sprint |
 
 ---
-### US-07 - Reutilização controlada e revisão de modelos anteriores
+### US-07 - Reutilização controlada e revisão de modelos anteriores {#us-07---reutilização-controlada-e-revisão-de-modelos-anteriores}
 
 **Contexto.**  
 A reutilização de modelos anteriores é útil, mas introduz risco quando o contexto mudou. Deve existir revisão explícita antes de considerar um modelo como válido.
@@ -338,7 +338,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero reutilizar modelos 
 
 ---
 
-### US-08 - Aplicação LINDDUN quando existir tratamento de dados pessoais  *(novo)*
+### US-08 - Aplicação LINDDUN quando existir tratamento de dados pessoais  *(novo)* {#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo}
 
 **Contexto.**  
 Quando o sistema trata dados pessoais, a análise de privacidade deve complementar a análise de segurança.
@@ -383,7 +383,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 - 🔗 [ENISA - Privacy by Design Guidelines](https://www.enisa.europa.eu/)  
 
 ---
-### US-09 - Aprovação formal do Threat Model (baseline e revisões)
+### US-09 - Aprovação formal do Threat Model (baseline e revisões) {#us-09---aprovação-formal-do-threat-model-baseline-e-revisões}
 
 **Contexto.**  
 O Threat Modeling só é controlo de segurança quando existe um modelo aprovado, com responsável e evidência mínima.
@@ -425,7 +425,7 @@ Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero aprovar formalmen
 
 ---
 
-### US-10 - Controlo de acesso, classificação e retenção dos artefactos de Threat Modeling
+### US-10 - Controlo de acesso, classificação e retenção dos artefactos de Threat Modeling {#us-10---controlo-de-acesso-classificação-e-retenção-dos-artefactos-de-threat-modeling}
 
 **Contexto.**  
 Diagramas e decisões de threat modeling são ativos sensíveis e devem ter proteção proporcional ao risco.
@@ -526,7 +526,7 @@ Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook ag
 
 ---
 
-### US-12 - Threat modeling estendido para componentes AI/ML não-agentic
+### US-12 - Threat modeling estendido para componentes AI/ML não-agentic {#us-12---threat-modeling-estendido-para-componentes-aiml-não-agentic}
 
 Sistemas com modelos preditivos, LLMs conversacionais ou RAG têm ameaças adversariais que o STRIDE clássico não cobre, mesmo sem agente tool-use.  
 
@@ -569,7 +569,7 @@ Como **Software Architect** e **AppSec Engineer**, quero estender o threat model
 
 ---
 
-### US-13 - Derivação de abuse/misuse cases para o backlog
+### US-13 - Derivação de abuse/misuse cases para o backlog {#us-13---derivação-de-abusemisuse-cases-para-o-backlog}
 
 A análise centrada no utilizador legítimo deixa escapar caminhos de abuso que só uma perspetiva adversarial revela.  
 
@@ -611,7 +611,7 @@ Como **AppSec Engineer** e **Product Owner**, quero derivar abuse/misuse cases n
 
 ---
 
-### US-14 - Revisão independente em L2 e PASTA em alto risco
+### US-14 - Revisão independente em L2 e PASTA em alto risco {#us-14---revisão-independente-em-l2-e-pasta-em-alto-risco}
 
 A revisão independente cobre os pontos cegos da equipa; em alto risco, o método deve escalar para análise baseada em risco.  
 
@@ -657,7 +657,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que o threat mode
 
 ---
 
-### US-15 - Tratamento explícito dos riscos de processo do threat modeling
+### US-15 - Tratamento explícito dos riscos de processo do threat modeling {#us-15---tratamento-explícito-dos-riscos-de-processo-do-threat-modeling}
 
 Um threat model plausível mas incompleto dá falsa confiança — pior do que a ausência do artefacto.  
 
@@ -700,7 +700,7 @@ Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar
 **Ligações úteis.** [Riscos de Processo no Threat Modeling](./addon/riscos-processo-threat-modeling) · [Validação e Evidência](./addon/validacao-evidencia-threat-modeling)
 
 ---
-## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
+## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3) {#️-aplicação-proporcional-por-nível-de-risco-l1l2l3}
 
 | Prática / Atividade              | L1 (baixo risco)                         | L2 (médio risco)                                | L3 (alto risco)                                                  |
 |----------------------------------|------------------------------------------|-------------------------------------------------|------------------------------------------------------------------|
@@ -713,7 +713,7 @@ Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar
 
 ---
 
-## 📄 Templates e artefactos esperados
+## 📄 Templates e artefactos esperados {#-templates-e-artefactos-esperados}
 
 | Artefacto                          | Formato sugerido     | Onde guardar / referenciar                |
 |-----------------------------------|----------------------|-------------------------------------------|

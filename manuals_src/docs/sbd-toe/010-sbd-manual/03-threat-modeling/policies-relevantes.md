@@ -15,7 +15,7 @@ A adoção eficaz do Capítulo 03 - Threat Modeling - depende da existência de 
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ✅ A modelação de ameaças deve ser tratada como uma **atividade obrigatória em aplicações L2 e L3**, com critérios formais definidos por política organizacional.
 
@@ -29,7 +29,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                               | Obrigatória | Aplicação                                             | Conteúdo mínimo esperado                                                                 |
 |------------------------------------------------|-------------|--------------------------------------------------------|------------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -54,7 +54,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **formais, aprovadas e divulgadas** a todas as equipas técnicas;
 - Devem estar **alinhadas com o Catálogo de Requisitos do Capítulo 2** e com os critérios de risco definidos no Capítulo 1;

@@ -18,7 +18,7 @@ O objetivo não é substituir o juízo técnico dos autores, mas tornar **explí
 
 ---
 
-## 1. Baseline empírica dos autores
+## 1. Baseline empírica dos autores {#1-baseline-empírica-dos-autores}
 
 O ponto de partida do manual é uma baseline **empírica e construída pelos autores**.
 
@@ -32,7 +32,7 @@ Por isso, os documentos canónicos não devem ser lidos como mera conversão mec
 
 ---
 
-## 2. Validação por chunking semântico e backtrace ontológico
+## 2. Validação por chunking semântico e backtrace ontológico {#2-validação-por-chunking-semântico-e-backtrace-ontológico}
 
 Depois da baseline empírica, as claims foram revistas com apoio do `knowledge-graph` V2.
 
@@ -54,7 +54,7 @@ Na prática, isto permite:
 
 ---
 
-## 3. Comparação com fontes externas mapeadas
+## 3. Comparação com fontes externas mapeadas {#3-comparação-com-fontes-externas-mapeadas}
 
 As claims do manual foram ainda confrontadas com pilotos e artefactos do repositório `external-sources-inventory`.
 
@@ -78,9 +78,9 @@ Este passo não serve para "fazer o manual igual às fontes", mas para:
 
 ---
 
-## 4. Regra de leitura por tipo de documento
+## 4. Regra de leitura por tipo de documento {#4-regra-de-leitura-por-tipo-de-documento}
 
-### `25-rastreabilidade`
+### `25-rastreabilidade` {#25-rastreabilidade}
 
 Aqui a pergunta principal é:
 
@@ -96,7 +96,7 @@ As claims devem ser classificadas explicitamente, por exemplo como:
 - `Gap`
 - `Scope boundary`, quando aplicável
 
-### `achievable-maturity`
+### `achievable-maturity` {#achievable-maturity}
 
 Aqui a pergunta principal é:
 
@@ -108,7 +108,7 @@ A leitura deve ser limitada e explícita. Em particular:
 - `SLSA` só deve ser usado onde fizer sentido como progressão de build/integridade
 - alinhamento regulatório não deve ser tratado como score de maturidade
 
-### `50-ameacas-mitigadas`
+### `50-ameacas-mitigadas` {#50-ameacas-mitigadas}
 
 Aqui a pergunta principal é:
 
@@ -123,7 +123,7 @@ A leitura deve ser feita sobretudo com base em:
 
 ---
 
-## 5. O que o método evita
+## 5. O que o método evita {#5-o-que-o-método-evita}
 
 Este método existe precisamente para evitar quatro erros editoriais frequentes:
 
@@ -134,7 +134,7 @@ Este método existe precisamente para evitar quatro erros editoriais frequentes:
 
 ---
 
-## 6. Fórmula editorial resumida
+## 6. Fórmula editorial resumida {#6-fórmula-editorial-resumida}
 
 A regra usada deve ser lida assim:
 
@@ -145,7 +145,7 @@ A regra usada deve ser lida assim:
 
 ---
 
-## 7. Regra curta para usar nos documentos canónicos
+## 7. Regra curta para usar nos documentos canónicos {#7-regra-curta-para-usar-nos-documentos-canónicos}
 
 Sempre que um documento `25-rastreabilidade`, `achievable-maturity` ou
 `50-ameacas-mitigadas` fizer uma claim material, a leitura correta deve ser:
@@ -157,7 +157,7 @@ Sempre que um documento `25-rastreabilidade`, `achievable-maturity` ou
 
 ---
 
-## 8. Conclusão
+## 8. Conclusão {#8-conclusão}
 
 Os documentos `25-rastreabilidade`, `achievable-maturity` e `50-ameacas-mitigadas` devem ser lidos como **artefactos editoriais validados**, não como tabelas geradas automaticamente.
 

@@ -9,21 +9,21 @@ sidebar_position: 4
 
 # DevOps / SRE
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 DevOps/SRE são os **artesãos da automação e da infraestrutura**.  
 Garantem que segurança está embutida nos pipelines e no runtime, não aplicada como adereço posterior. Constroem **autopistas de segurança** que verificam, validam e bloqueiam código inseguro.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Integram verificações de segurança em pipelines (Cap. 07)
 - Automatizam criação de SBOM e scans de dependências (Cap. 05)
 - Garantem execução segura de IaC e containers (Cap. 08-09)
 - Mantêm monitorização contínua em produção (Cap. 12)
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 Respondem diretamente a requisitos de **DORA** (resiliência operacional digital) e **NIS2** (medidas técnicas adequadas). São a ponte entre desenvolvimento e operações seguras.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Essenciais para:
 - **DORA**: Resiliência operacional digital
@@ -31,22 +31,22 @@ Essenciais para:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Classificar **artefactos técnicos** (Dockerfile, pipeline, IaC, imagens) com a mesma criticidade da aplicação, garantindo que controlos de segurança acompanham a integridade da entrega.
 
 **User Stories:**
 - [Classificação de artefactos técnicos](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - Rastreabilidade de segurança em artefactos
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Garantir que **pipeline CI/CD verifica automaticamente** requisitos de segurança (SAST, SCA, DAST, SBOM, assinaturas), bloqueando merges e releases não conformes.
 
 **User Stories:**
 - [US-10: Gates automáticos em CI/CD](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-10---gates-automáticos-em-cicd-para-requisitos-de-segurança) - Verificação automática de requisitos
 - [US-11: Geração de SBOM e assinatura](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-11---geração-de-sbom-e-assinatura-de-artefactos-de-build) - SBOM e assinaturas no pipeline
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Atualizar **modelo de ameaça** em alterações significativas e integrar validações no pipeline para revisão automática.
 
 **User Stories:**
@@ -54,14 +54,14 @@ Atualizar **modelo de ameaça** em alterações significativas e integrar valida
 - [US-05: Integração com CI/CD](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05---gate-de-controlo-de-consistência-no-cicd) - Validações automáticas
 - [US-07: Automação e reutilização de modelos](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-07---reutilização-controlada-e-revisão-de-modelos-anteriores) - Ferramentas para consistência
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Validar **controlos de arquitetura no pipeline** (topologia, IaC, policies). Implementar **segregação de ambientes** (dev, QA, stage, prod) com isolamento lógico e físico.
 
 **User Stories:**
 - [US-05: Validação da arquitetura em CI/CD](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-05---revisão-de-fronteiras-de-confiança-e-integrações) - Garantir conformidade automática
 - [US-13: Segregação de ambientes](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-13---catálogo-de-padrões-de-arquitetura-segura-reutilização-governada) - Isolamento com permissões mínimas
 
-### Cap. 05 - Dependências e SBOM
+### Cap. 05 - Dependências e SBOM {#cap-05---dependências-e-sbom}
 Automatizar **geração e gestão de SBOM**, integrando análise de vulnerabilidades em dependências no pipeline.
 
 **User Stories:**
@@ -71,7 +71,7 @@ Automatizar **geração e gestão de SBOM**, integrando análise de vulnerabilid
 - [US-10: Inventário e SBOM por Build](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-10---inventário-e-sbom-por-build) - SBOM assinado por artefacto
 - [US-11: Alertas sobre vulnerabilidades](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados) - Notificações proativas
 
-### Cap. 06 - Desenvolvimento Seguro
+### Cap. 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 Integrar **linters e SAST no pipeline** para detetar falhas precocemente e gerar evidência contínua de conformidade.
 
 **User Stories:**
@@ -79,7 +79,7 @@ Integrar **linters e SAST no pipeline** para detetar falhas precocemente e gerar
 - [US-09: Gate de segurança pré-release](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-09---gate-de-segurança-pré-release) - Consolidação de evidências
 - [US-12: Validações locais obrigatórias](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-12---validações-locais-obrigatórias-pre-commit) - Pre-commit hooks
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Desenhar **pipelines com scanners, gates e assinaturas** de release, garantindo que apenas artefactos validados avançam entre fases.
 
 **User Stories:**
@@ -89,7 +89,7 @@ Desenhar **pipelines com scanners, gates e assinaturas** de release, garantindo 
 - [US-06: Assinatura e proveniência](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-06---assinatura-e-proveniência) - Confiança em artefactos
 - [US-13: Validação de integridade de imagens base](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-13---validação-de-integridade-de-imagens-base) - Proteção contra supply chain
 
-### Cap. 08 - IaC
+### Cap. 08 - IaC {#cap-08---iac}
 Aplicar **enforcement de políticas** em IaC com *policy-as-code*, validando conformidade antes do deployment.
 
 **User Stories:**
@@ -101,7 +101,7 @@ Aplicar **enforcement de políticas** em IaC com *policy-as-code*, validando con
 - [US-10: Gestão de segredos e identidades para IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-10---gestão-de-segredos-e-identidades-para-iac) - OIDC com permissões mínimas
 - [US-12: Rollback e salvaguarda de destroy](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-12---rollback-e-salvaguarda-de-destroy) - Pontos de restauração
 
-### Cap. 09 - Containers e Imagens
+### Cap. 09 - Containers e Imagens {#cap-09---containers-e-imagens}
 Executar scanners de vulnerabilidades em cada build, validar execuções com políticas formais (OPA/Kyverno), gerar SBOM automaticamente, impor allowlist de registries e digest SHA256, proibir credenciais estáticas, aplicar RBAC mínimo e NetworkPolicy, manter catálogo de Golden Images.
 
 **User Stories:**
@@ -115,7 +115,7 @@ Executar scanners de vulnerabilidades em cada build, validar execuções com pol
 - [US-11: Golden Base Images](/sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-11---golden-base-images-com-patching-automático) - Catálogo padronizado com SLA
 - [US-12: Builders e Runners Seguros](/sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-12---builders-e-runners-ephemerais-assinados-e-com-auditoria) - Proteção do pipeline CI/CD
 
-### Cap. 10 - Testes de Segurança
+### Cap. 10 - Testes de Segurança {#cap-10---testes-de-segurança}
 Integrar **gates automáticos no pipeline** (SAST/SCA/IAST) com thresholds por Lx. Centralizar findings numa plataforma unificada e automatizar delivery às equipas.
 
 **User Stories:**
@@ -123,7 +123,7 @@ Integrar **gates automáticos no pipeline** (SAST/SCA/IAST) com thresholds por L
 - [US-10: Gestão Centralizada de Findings](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-10---gestão-centralizada-de-findings-com-triagem-e-sla) - Plataforma unificada
 - [US-11: Feedback Automático de Findings](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-11---feedback-automático-de-findings-às-equipas) - Delivery contextualizado
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Executar deploy **apenas de artefactos assinados e versionados**. Implementar rollback rápido testado periodicamente, ativar monitorização pós-deploy, implementar feature flags com metadados, garantir que segredos nunca são embebidos, implementar deploy progressivo (canary/blue-green).
 
 **User Stories:**
@@ -135,7 +135,7 @@ Executar deploy **apenas de artefactos assinados e versionados**. Implementar ro
 - [US-10: Deploy Progressivo](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-10---deploy-progressivo-com-estratégias-canaryblue-green) - Canary/Blue-Green
 - [US-11: Rollback documentado por tipo](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-11---validações-técnicas-pré-deploy-com-gates-condicionais) - Procedimentos de rollback testados
 
-### Cap. 12 - Monitorização e Operações
+### Cap. 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 Configurar ambientes de produção com **monitorização contínua** e coordenar resposta a alertas. Garantir segurança e integridade de logs (retenção WORM), integrar com SIEM.
 
 **User Stories:**
@@ -145,7 +145,7 @@ Configurar ambientes de produção com **monitorização contínua** e coordenar
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

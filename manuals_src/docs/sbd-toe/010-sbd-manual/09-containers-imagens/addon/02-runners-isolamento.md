@@ -7,7 +7,7 @@ tags: [runners, isolamento, pipelines, execucao, seguranca, cicd]
 
 # Runners, Execução Isolada e Ambientes Controlados
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todos os containers são executados em **ambientes isolados, controlados e auditáveis**, em especial no contexto de **pipelines CI/CD e execução automatizada**, mitigando riscos de processo e de compromisso técnico, nomeadamente:
 
@@ -22,7 +22,7 @@ são **pontos de materialização de confiança**, onde artefactos passam de “
 
 ---
 
-## 🧬 O que são runners e ambientes de execução
+## 🧬 O que são runners e ambientes de execução {#-o-que-são-runners-e-ambientes-de-execução}
 
 **Runners** são agentes de execução responsáveis por correr tarefas de CI/CD ou workloads de containers, tipicamente em plataformas como:
 
@@ -47,7 +47,7 @@ Um **ambiente de execução isolado** deve garantir, no mínimo:
 
 ---
 
-## 📘 Tipos de runners e níveis de risco
+## 📘 Tipos de runners e níveis de risco {#-tipos-de-runners-e-níveis-de-risco}
 
 | Tipo                     | Exemplos                               | Risco associado                       | Notas operacionais                                  |
 |--------------------------|----------------------------------------|---------------------------------------|-----------------------------------------------------|
@@ -59,7 +59,7 @@ A escolha do tipo de runner **é uma decisão de risco**, não apenas de conveni
 
 ---
 
-## 🛠️ Como aplicar execução isolada
+## 🛠️ Como aplicar execução isolada {#️-como-aplicar-execução-isolada}
 
 A execução segura exige que o runner **não introduza confiança implícita** nem amplifique erros a montante:
 
@@ -77,7 +77,7 @@ Estes controlos não substituem decisão humana, mas **reduzem o impacto de deci
 
 ---
 
-## 📂 Onde e como configurar
+## 📂 Onde e como configurar {#-onde-e-como-configurar}
 
 | Plataforma       | Prática recomendada de isolamento                                  |
 |------------------|---------------------------------------------------------------------|
@@ -92,7 +92,7 @@ Independentemente da plataforma, a regra é invariável:
 
 ---
 
-## 🔍 Runners como ponto de decisão implícita
+## 🔍 Runners como ponto de decisão implícita {#-runners-como-ponto-de-decisão-implícita}
 
 Sempre que um runner executa um container:
 
@@ -109,7 +109,7 @@ Sem estes elementos, a automação transforma-se em risco sistémico.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Isolar runners por projeto, domínio ou namespace;
 - Recriar runners a cada execução (sem cache persistente);
@@ -120,7 +120,7 @@ Sem estes elementos, a automação transforma-se em risco sistémico.
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com runners e execução                  |
 |----------------------------------|-------------------------------------------------|

@@ -9,7 +9,7 @@ sidebar_position: 3
 
 # Política de Aceitação de Risco Residual
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o processo formal para a **aceitação de risco residual** em aplicações desenvolvidas ou operadas pela organização.
 
@@ -19,7 +19,7 @@ A ausência de um processo formal de aceitação de risco leva a que decisões d
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todas as situações em que exista risco residual identificado e aceite, incluindo:
 
@@ -31,7 +31,7 @@ Esta política aplica-se a todas as situações em que exista risco residual ide
 
 ---
 
-## 3. Tipos de risco residual
+## 3. Tipos de risco residual {#3-tipos-de-risco-residual}
 
 | Tipo | Origem | Exemplos |
 |---|---|---|
@@ -43,7 +43,7 @@ Esta política aplica-se a todas as situações em que exista risco residual ide
 
 ---
 
-## 4. Critérios para aceitação de risco
+## 4. Critérios para aceitação de risco {#4-critérios-para-aceitação-de-risco}
 
 Um risco residual só pode ser aceite formalmente se cumprir **todos** os seguintes critérios:
 
@@ -60,7 +60,7 @@ A aceitação de risco não substitui a correção. É uma decisão temporária 
 
 ---
 
-## 5. Limiares de aceitação por nível
+## 5. Limiares de aceitação por nível {#5-limiares-de-aceitação-por-nível}
 
 | Nível | Severidade máxima aceitável sem escalada | Prazo máximo de aceitação |
 |---|---|---|
@@ -74,9 +74,9 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 
 ---
 
-## 6. Processo de aceitação
+## 6. Processo de aceitação {#6-processo-de-aceitação}
 
-### 6.1 Passos obrigatórios
+### 6.1 Passos obrigatórios {#61-passos-obrigatórios}
 
 1. **Identificar o risco residual** - origem, tipo, severidade e contexto técnico
 2. **Avaliar o impacto** - consequência real no contexto da aplicação e do negócio
@@ -86,7 +86,7 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 6. **Obter aprovação formal** - pela alçada adequada ao nível de risco (ver secção 7)
 7. **Registar** - no repositório de exceções da aplicação ou plataforma GRC
 
-### 6.2 Checklist por registo de risco aceite
+### 6.2 Checklist por registo de risco aceite {#62-checklist-por-registo-de-risco-aceite}
 
 - [ ] Identificador único do registo
 - [ ] Tipo de risco (controlo não aplicado / finding / ameaça / exceção arquitetural / dependência)
@@ -103,7 +103,7 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 
 ---
 
-## 7. Alçadas de aprovação
+## 7. Alçadas de aprovação {#7-alçadas-de-aprovação}
 
 | Severidade | L1 | L2 | L3 |
 |---|---|---|---|
@@ -114,7 +114,7 @@ Findings de severidade **Critical** não podem ser aceites como risco residual e
 
 ---
 
-## 8. Reavaliação e expiração
+## 8. Reavaliação e expiração {#8-reavaliação-e-expiração}
 
 Todo o registo de risco aceite tem **data de expiração**. Na data de expiração, a equipa deve:
 
@@ -127,7 +127,7 @@ Registos expirados sem reavaliação documentada são tratados como **risco não
 
 ---
 
-## 9. Integração com o ciclo de desenvolvimento
+## 9. Integração com o ciclo de desenvolvimento {#9-integração-com-o-ciclo-de-desenvolvimento}
 
 | Momento | Ação esperada |
 |---|---|
@@ -138,7 +138,7 @@ Registos expirados sem reavaliação documentada são tratados como **risco não
 
 ---
 
-## 10. Artefactos
+## 10. Artefactos {#10-artefactos}
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
@@ -148,7 +148,7 @@ Registos expirados sem reavaliação documentada são tratados como **risco não
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -160,7 +160,7 @@ Registos expirados sem reavaliação documentada são tratados como **risco não
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -172,7 +172,7 @@ O registo de riscos aceites deve ser disponibilizado integralmente em auditorias
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

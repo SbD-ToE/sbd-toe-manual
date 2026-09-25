@@ -8,7 +8,7 @@ tags: [formacao, trilho, risco, perfis, onboarding]
 
 # Trilhos Formativos por Função e Risco
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir os **conteúdos mínimos obrigatórios** a incluir na formação inicial (onboarding) e contínua, por perfil funcional e **nível de risco da aplicação**, em alinhamento com o Capítulo 01 - Gestão de Risco.
 
@@ -16,13 +16,13 @@ Definir os **conteúdos mínimos obrigatórios** a incluir na formação inicial
 
 ---
 
-## 🧬 O que é um Trilho Formativo
+## 🧬 O que é um Trilho Formativo {#-o-que-é-um-trilho-formativo}
 
 Um **trilho formativo** é um conjunto de conteúdos obrigatórios ou recomendados atribuídos a um colaborador ou função, com base no seu papel técnico e no risco da aplicação em que participa. Estes trilhos permitem alinhar o conhecimento com as exigências de segurança específicas do projeto.
 
 ---
 
-## 📋 Matriz Base por Perfil e Nível de Risco
+## 📋 Matriz Base por Perfil e Nível de Risco {#-matriz-base-por-perfil-e-nível-de-risco}
 
 | Função / Risco | L1 (baixo)                                    | L2 (médio)                                                  | L3 (elevado)                                                          |
 |----------------|-----------------------------------------------|-------------------------------------------------------------|------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ Um **trilho formativo** é um conjunto de conteúdos obrigatórios ou recomendad
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
 - Instanciar a matriz em:
   - 🎓 Trilhos no sistema de gestão de aprendizagem (LMS)
@@ -48,7 +48,7 @@ Um **trilho formativo** é um conjunto de conteúdos obrigatórios ou recomendad
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Incorporar os trilhos formativos no plano de formação anual da organização
 - Rever os conteúdos com base em lições aprendidas de incidentes
@@ -57,7 +57,7 @@ Um **trilho formativo** é um conjunto de conteúdos obrigatórios ou recomendad
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relevância                                       |
 |-----------------------------------|--------------------------------------------------|

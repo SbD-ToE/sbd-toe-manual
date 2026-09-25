@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Arquitetura Segura
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-ATB` (Arquitetura segura e fronteiras de confiança), `ACO-IAT` (Identidade, autenticação e gestão de sessões), `ACO-ITS` (Integração e segurança service-to-service).
 
@@ -14,7 +14,7 @@ Cobertura V1 entity-level: **56 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
 Total: **83 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
@@ -91,11 +91,11 @@ Total: **83 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-ATB` — Arquitetura segura e fronteiras de confiança
+### Slice `ACO-ATB` — Arquitetura segura e fronteiras de confiança {#slice-aco-atb--arquitetura-segura-e-fronteiras-de-confiança}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -119,7 +119,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 | `ACP-ATB-006` — Architecture Change Trigger Discipline | P | Practice | chapter prose (architecture, governance, review kws verified) | normative | explicit | Semântico | SP 800-53 r5: SP800-53-AU-1, SP800-53-AU-6; SAMM v2.1: SAMM-ACTIVITY-D_TA_3_A |
 | `ACP-ATB-007` — Automatable Topology And Pattern Validation | P | Practice | cross-chapter → Cap. 03, Cap. 08, Cap. 13 | normative | explicit | Parcial | SP 800-53 r5: SP800-53-CM-2.2, SP800-53-CM-3.2; SAMM v2.1: SAMM-ACTIVITY-V_AA_2_A, SAMM-ACTIVITY-V_RT_1_A; DSOMM: DSOMM-ACTIVITY-48E92BB1FDBA40E8B6C235DE0D431833, DSOMM-ACTIVITY-017D9E2642B549A4B9459F59B308FB99; CAPEC v3.9: CAPEC-80; + 3 more sources |
 
-### Slice `ACO-IAT` — Identidade, autenticação e gestão de sessões
+### Slice `ACO-IAT` — Identidade, autenticação e gestão de sessões {#slice-aco-iat--identidade-autenticação-e-gestão-de-sessões}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -143,7 +143,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 | `ACP-IAT-005` — Authenticated API Boundary Enforcement | P | Practice | addon/00-catalogo-requisitos.md | normative | explicit | Explícito | ASVS v5: ASVS-REQ-V1.3.6, ASVS-REQ-V2.2.2; CAPEC v3.9: CAPEC-8, CAPEC-14; SP 800-53 r5: SP800-53-AC-4.7, SP800-53-AC-4.29; MITRE ATLAS: AML.T0040, AML.T0011.000; + 6 more sources |
 | `ACP-IAT-006` — Access Abuse Monitoring And Audit Trail | P | Practice | addon/00-catalogo-requisitos.md | normative | explicit | Explícito | SP 800-53 r5: SP800-53-AC-2, SP800-53-AC-2.4; PCI DSS v4.0.1: PCI-REQ-11, PCI-1.1.1; CIS Controls v8.1.2: CIS-1, CIS-2.3; SAMM v2.1: SAMM-ACTIVITY-D_SA_1_B, SAMM-ACTIVITY-D_SR_1_B; + 20 more sources |
 
-### Slice `ACO-ITS` — Integração e segurança service-to-service
+### Slice `ACO-ITS` — Integração e segurança service-to-service {#slice-aco-its--integração-e-segurança-service-to-service}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -168,7 +168,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -181,7 +181,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -194,13 +194,13 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(Sem entradas no future-work register para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

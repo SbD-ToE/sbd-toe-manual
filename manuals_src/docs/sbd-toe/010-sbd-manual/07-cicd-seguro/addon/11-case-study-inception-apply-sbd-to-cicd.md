@@ -17,7 +17,7 @@ A abordagem seguiu todas as fases do ciclo de vida descritas no manual - desde o
 
 ---
 
-## 🧭 Contexto e decisão
+## 🧭 Contexto e decisão {#-contexto-e-decisão}
 
 A organização opera múltiplas aplicações em ambientes regulados. Após uma avaliação baseada no Capítulo 01 - Gestão de Risco, foi identificado que:
 
@@ -29,7 +29,7 @@ A organização opera múltiplas aplicações em ambientes regulados. Após uma 
 
 ---
 
-## 📐 Arquitetura desenhada
+## 📐 Arquitetura desenhada {#-arquitetura-desenhada}
 
 Foi adotada uma arquitetura modular e segura (Cap. 04):
 
@@ -43,7 +43,7 @@ Foi adotada uma arquitetura modular e segura (Cap. 04):
 
 ---
 
-## 🔍 Threat modeling
+## 🔍 Threat modeling {#-threat-modeling}
 
 O exercício de threat modeling (Cap. 03) identificou riscos como:
 
@@ -54,7 +54,7 @@ O exercício de threat modeling (Cap. 03) identificou riscos como:
 
 ---
 
-## 🛠️ Desenvolvimento seguro dos próprios pipelines
+## 🛠️ Desenvolvimento seguro dos próprios pipelines {#️-desenvolvimento-seguro-dos-próprios-pipelines}
 
 Aplicando o Cap. 06:
 
@@ -65,7 +65,7 @@ Aplicando o Cap. 06:
 
 ---
 
-## 🧪 Testes aplicados ao pipeline
+## 🧪 Testes aplicados ao pipeline {#-testes-aplicados-ao-pipeline}
 
 Com base no Cap. 10:
 
@@ -76,7 +76,7 @@ Com base no Cap. 10:
 
 ---
 
-## 🔐 Gestão de dependências, imagens e SBOM
+## 🔐 Gestão de dependências, imagens e SBOM {#-gestão-de-dependências-imagens-e-sbom}
 
 - SBOM do pipeline gerado com `syft` + `trivy`;
 - Dependências externas (ex: Actions, plugins) auditadas e versionadas;
@@ -85,7 +85,7 @@ Com base no Cap. 10:
 
 ---
 
-## 📦 Deploy e execução
+## 📦 Deploy e execução {#-deploy-e-execução}
 
 - O próprio pipeline é deployed com rastreabilidade total;
 - Logs são enviados para sistema central com alertas de anomalias;
@@ -93,7 +93,7 @@ Com base no Cap. 10:
 
 ---
 
-## 🎓 Formação e onboarding
+## 🎓 Formação e onboarding {#-formação-e-onboarding}
 
 - Criado um módulo de formação (Cap. 13) para equipas Dev e DevOps:
   - Boas práticas de alteração de pipelines;
@@ -103,7 +103,7 @@ Com base no Cap. 10:
 
 ---
 
-## 📊 Governação e visibilidade
+## 📊 Governação e visibilidade {#-governação-e-visibilidade}
 
 - Scorecard de conformidade CI/CD atualizado trimestralmente;
 - Exceções auditáveis e aprovadas por segurança (Cap. 14);
@@ -111,7 +111,7 @@ Com base no Cap. 10:
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Este caso demonstra a **aplicação transversal e coerente do manual SbD-ToE a um sistema crítico de CI/CD**. 
 

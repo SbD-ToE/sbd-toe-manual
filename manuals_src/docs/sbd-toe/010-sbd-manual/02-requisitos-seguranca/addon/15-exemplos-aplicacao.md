@@ -14,9 +14,9 @@ Este anexo ilustra, de forma prática, como aplicar os requisitos de segurança 
 > **classificação → seleção → rastreabilidade → validação**.  
 > Pode ser adaptado e replicado noutros contextos, mantendo os princípios da proporcionalidade e da rastreabilidade.
 
-## Cenário: Nova funcionalidade de upload de documentos numa aplicação web B2B
+## Cenário: Nova funcionalidade de upload de documentos numa aplicação web B2B {#cenário-nova-funcionalidade-de-upload-de-documentos-numa-aplicação-web-b2b}
 
-### 🧩 1. Contexto
+### 🧩 1. Contexto {#-1-contexto}
 
 - Aplicação: Portal web de gestão de contratos
 - Tipo: Aplicação web com autenticação federada
@@ -26,7 +26,7 @@ Este anexo ilustra, de forma prática, como aplicar os requisitos de segurança 
 
 ---
 
-### 🔎 2. Revisão da classificação de risco
+### 🔎 2. Revisão da classificação de risco {#-2-revisão-da-classificação-de-risco}
 
 Antes de definir requisitos, a equipa revê a classificação da aplicação à luz da nova funcionalidade:
 
@@ -40,7 +40,7 @@ Antes de definir requisitos, a equipa revê a classificação da aplicação à 
 
 ---
 
-### 📝 3. Identificação dos requisitos relevantes
+### 📝 3. Identificação dos requisitos relevantes {#-3-identificação-dos-requisitos-relevantes}
 
 Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature (input, ficheiros, autenticação, registos), são selecionados os seguintes requisitos:
 
@@ -56,7 +56,7 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 
 ---
 
-### 🔗 4. Rastreabilidade (risco → requisito → controlo → validação)
+### 🔗 4. Rastreabilidade (risco → requisito → controlo → validação) {#-4-rastreabilidade-risco--requisito--controlo--validação}
 
 | Risco identificado                          | Requisito | Controlo implementado                       | Validação                     |
 |--------------------------------------------|-----------|----------------------------------------------|-------------------------------|
@@ -69,7 +69,7 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 
 ---
 
-### 👥 5. Papéis envolvidos
+### 👥 5. Papéis envolvidos {#-5-papéis-envolvidos}
 
 | Papel                 | Contributo                                  |
 |----------------------|---------------------------------------------|
@@ -80,7 +80,7 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 
 ---
 
-### 📆 6. Ponto de verificação no ciclo de vida
+### 📆 6. Ponto de verificação no ciclo de vida {#-6-ponto-de-verificação-no-ciclo-de-vida}
 
 - Os requisitos foram incluídos nas **histórias de utilizador**
 - Os critérios de aceitação foram definidos em Gherkin
@@ -89,7 +89,7 @@ Com base nos temas do catálogo (Cap. 2) e nos domínios impactados pela feature
 
 ---
 
-## Conclusão
+## Conclusão {#conclusão}
 
 Este exemplo demonstra a aplicação prática dos requisitos de segurança desde a identificação do risco até à validação técnica, garantindo rastreabilidade, proporcionalidade e integração com os processos de desenvolvimento ágil.
 

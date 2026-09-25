@@ -13,7 +13,7 @@ A adoção eficaz do Capítulo 02 - Requisitos de Segurança - exige a existênc
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas operacionais prescritas neste capítulo (catálogo, seleção por risco, rastreabilidade, critérios de aceitação) **devem ser legitimadas formalmente por políticas organizacionais aprovadas**.
 
@@ -29,7 +29,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                        | Obrigatória? | Aplicação                                | Resumo do conteúdo necessário |
 |---------------------------------------------------------|--------------|-------------------------------------------|-------------------------------|
@@ -41,7 +41,7 @@ Estas políticas:
 
 ---
 
-## 🧩 Estrutura sugerida de cada política
+## 🧩 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -54,7 +54,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - As políticas devem ser **aprovadas pela liderança de segurança** e comunicação transversal à organização;
 - Devem estar **documentadas, acessíveis e versionadas**;

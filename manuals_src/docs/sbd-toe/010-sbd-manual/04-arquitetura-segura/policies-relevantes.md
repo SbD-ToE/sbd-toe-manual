@@ -12,7 +12,7 @@ A adoção eficaz do Capítulo 04 - Arquitetura Segura - exige a existência de 
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas técnicas de definição de zonas de confiança, validação da arquitetura, exceções justificadas e rastreabilidade **devem estar suportadas por políticas organizacionais aprovadas e divulgadas**.
 
@@ -27,7 +27,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Conteúdo mínimo esperado                                                                 |
 |--------------------------------------------------|--------------|--------------------------------------------|--------------------------------------------------------------------------------------------|
@@ -39,7 +39,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -52,7 +52,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **formais, acessíveis e aprovadas pelas áreas de arquitetura e segurança**;
 - A sua aplicação deve estar **integrada no ciclo de vida** via templates, gates e práticas de CI/CD;

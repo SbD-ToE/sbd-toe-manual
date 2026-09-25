@@ -18,7 +18,7 @@ Este ficheiro descreve as **práticas mínimas** para integrar a classificação
 
 ---
 
-## 📅 Integração por Fase do Ciclo de Vida
+## 📅 Integração por Fase do Ciclo de Vida {#-integração-por-fase-do-ciclo-de-vida}
 
 | Fase                     | Ações de Gestão de Risco                                                                 |
 | ------------------------ | ---------------------------------------------------------------------------------------- |
@@ -32,7 +32,7 @@ Este ficheiro descreve as **práticas mínimas** para integrar a classificação
 
 ---
 
-## 📅 Triggers para Reavaliação de Risco
+## 📅 Triggers para Reavaliação de Risco {#-triggers-para-reavaliação-de-risco}
 
 O risco deve ser reavaliado sempre que ocorra qualquer evento que altere o seu **perfil ou atributos**, nomeadamente:
 
@@ -45,7 +45,7 @@ O risco deve ser reavaliado sempre que ocorra qualquer evento que altere o seu *
 
 ---
 
-## 👥 Responsabilidades ao Longo do Ciclo
+## 👥 Responsabilidades ao Longo do Ciclo {#-responsabilidades-ao-longo-do-ciclo}
 
 | Papel                  | Responsabilidades na gestão de risco                                                |
 | ---------------------- | ----------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ O risco deve ser reavaliado sempre que ocorra qualquer evento que altere o seu *
 
 ---
 
-## 🛠️ Mecanismos de Suporte
+## 🛠️ Mecanismos de Suporte {#️-mecanismos-de-suporte}
 
 A operacionalização do ciclo de vida do risco pode ser suportada por:
 
@@ -69,7 +69,7 @@ A operacionalização do ciclo de vida do risco pode ser suportada por:
 
 ---
 
-## ⚖️ Ligação com os Limiares L1–L3
+## ⚖️ Ligação com os Limiares L1–L3 {#️-ligação-com-os-limiares-l1l3}
 
 O ciclo de vida da classificação de risco deve ser aplicado de forma proporcional ao **nível de criticidade da aplicação**:
 
@@ -81,7 +81,7 @@ Esta proporcionalidade permite equilíbrio entre rigor, custo operacional e efic
 
 ---
 
-## 🚀 Recomendações para Maturidade
+## 🚀 Recomendações para Maturidade {#-recomendações-para-maturidade}
 
 - Formalizar a reavaliação cíclica de risco através de checklist, workflow ou policy;
 - Monitorizar explicitamente o risco residual ao longo do tempo;

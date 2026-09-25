@@ -17,7 +17,7 @@ Este ficheiro tem natureza **ilustrativa e operacional**: não introduz novos re
 
 ---
 
-## 📁 Estrutura recomendada de repositório
+## 📁 Estrutura recomendada de repositório {#-estrutura-recomendada-de-repositório}
 
 ```text
 iac/
@@ -52,7 +52,7 @@ iac/
 
 ---
 
-## 🏷️ Exemplo de tagging obrigatório
+## 🏷️ Exemplo de tagging obrigatório {#️-exemplo-de-tagging-obrigatório}
 
 ```hcl
 tags = {
@@ -69,7 +69,7 @@ tags = {
 
 ---
 
-## 🔐 Exemplo de controlo de permissões (privilégio mínimo)
+## 🔐 Exemplo de controlo de permissões (privilégio mínimo) {#-exemplo-de-controlo-de-permissões-privilégio-mínimo}
 
 ```hcl
 resource "aws_iam_role" "example" {
@@ -100,7 +100,7 @@ resource "aws_iam_role" "example" {
 
 ---
 
-## 🔄 Exemplo de uso seguro de módulos externos
+## 🔄 Exemplo de uso seguro de módulos externos {#-exemplo-de-uso-seguro-de-módulos-externos}
 
 ```hcl
 module "vpc" {
@@ -119,7 +119,7 @@ module "vpc" {
 
 ---
 
-## 💪 Exemplo de workflow CI para validação IaC
+## 💪 Exemplo de workflow CI para validação IaC {#-exemplo-de-workflow-ci-para-validação-iac}
 
 ```yaml
 name: Validate IaC
@@ -160,7 +160,7 @@ jobs:
 
 ---
 
-## 🧷 Template de *pre-commit hooks*
+## 🧷 Template de *pre-commit hooks* {#-template-de-pre-commit-hooks}
 
 ```yaml
 repos:
@@ -181,7 +181,7 @@ repos:
 
 ---
 
-## 🔗 Ligação a requisitos
+## 🔗 Ligação a requisitos {#-ligação-a-requisitos}
 
 | Exemplo aplicado                 | Requisitos relacionados   |
 | -------------------------------- | ------------------------- |
@@ -193,7 +193,7 @@ repos:
 
 ---
 
-## ✅ Benefícios diretos
+## ✅ Benefícios diretos {#-benefícios-diretos}
 
 * Acelera a adoção consistente de IaC seguro;
 * Reduz variação entre projetos e equipas;

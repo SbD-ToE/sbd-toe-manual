@@ -8,7 +8,7 @@ sidebar_position: 2
 
 # SbD-ToE 4 AI Act: Playbook de Implementação
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Este playbook mapeia **requisitos do AI Act (Regulamento UE 2024/1689) para ações SbD-ToE práticas**, focando-se nas obrigações técnicas dos sistemas de IA de **alto risco** e dos modelos de **finalidade geral (GPAI)**.
 
@@ -24,7 +24,7 @@ Este playbook mapeia **requisitos do AI Act (Regulamento UE 2024/1689) para aç�
 
 ---
 
-## Passo 0: Determinar papel e categoria de risco (pré-requisito)
+## Passo 0: Determinar papel e categoria de risco (pré-requisito) {#passo-0-determinar-papel-e-categoria-de-risco-pré-requisito}
 
 Antes de qualquer ação técnica, é necessário estabelecer o enquadramento jurídico - **trabalho de compliance/jurídico, não de AppSec**, mas que condiciona todo o playbook:
 
@@ -40,7 +40,7 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-## Mapa Rápido: AI Act Art. → SbD-ToE
+## Mapa Rápido: AI Act Art. → SbD-ToE {#mapa-rápido-ai-act-art--sbd-toe}
 
 > ✏️ **Refresh 2026-05-30.** Mapa actualizado com a camada agentic — `REQ-AGN-*` (Cap. 02), [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (Cap. 04), `DEP-012..014` (Cap. 05), `OPS-012..014` (Cap. 12), Policy 38 (*mandates*), Policy 39 (AI BOM).
 
@@ -63,9 +63,9 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-## Como Implementar (Ordem Lógica)
+## Como Implementar (Ordem Lógica) {#como-implementar-ordem-lógica}
 
-### Fase 1: Governação e QMS (M0–M3)
+### Fase 1: Governação e QMS (M0–M3) {#fase-1-governação-e-qms-m0m3}
 **AI Act Art. 17** - Estabelecer sistema de gestão da qualidade
 
 1. **Definir governação de IA**
@@ -84,7 +84,7 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-### Fase 2: Classificação e gestão de risco (M2–M5)
+### Fase 2: Classificação e gestão de risco (M2–M5) {#fase-2-classificação-e-gestão-de-risco-m2m5}
 **AI Act Art. 9** - Sistema de gestão de risco contínuo
 
 1. **Inventariar sistemas de IA**
@@ -103,7 +103,7 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-### Fase 3: Dados e documentação (M3–M6)
+### Fase 3: Dados e documentação (M3–M6) {#fase-3-dados-e-documentação-m3m6}
 **AI Act Art. 10, 11, Anexo IV**
 
 1. **Proveniência e integridade de dados e modelos (AI-BOM)**
@@ -121,44 +121,44 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-### Fase 4: Segurança técnica e robustez (M5–M10) — NÚCLEO
+### Fase 4: Segurança técnica e robustez (M5–M10) — NÚCLEO {#fase-4-segurança-técnica-e-robustez-m5m10--núcleo}
 **AI Act Art. 15** - Exatidão, robustez e cibersegurança
 
-#### 4.1 Arquitetura defensiva
+#### 4.1 Arquitetura defensiva {#41-arquitetura-defensiva}
 - **O que:** Fronteiras de confiança (incluindo *agentic boundary* — [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)), validação de input, isolamento do serviço de inferência, redução de superfície. Quando há agentes AI com *tool-use*, aplicar [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (agente como *principal* isolado): identidade dedicada via OIDC, *scope* mínimo por *tool*, *intent declaration*, OOB approval, *kill-switch* exercitado.
 - **Referência:** [Cap. 04 — `ARC-014`/`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Cap. 09 — Containers/Runtime](/sbd-toe/sbd-manual/containers-imagens/intro)
 
-#### 4.2 Threat modeling + *eval suites* + *red teaming* (CRÍTICO PARA Art. 15)
+#### 4.2 Threat modeling + *eval suites* + *red teaming* (CRÍTICO PARA Art. 15) {#42-threat-modeling--eval-suites--red-teaming-crítico-para-art-15}
 - **O que:** O catálogo de testes inclui agora *eval suites* contínuas (Cap. 10 §C5) — regression de prompt/skill, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B testing*. Para sistemas com agentes A2+, suite obrigatória; para A4 em GPAI com risco sistémico, cadência mensal.
 - **Threat model:** [Cap. 03 playbook agentic](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) com threat library MITRE ATLAS já incluída — DFD canónico (5 participantes / 4 *trust boundaries*) + *threats* por fronteira (`AML.T0051.001`, `T0086`, `T0101`, `T0109`, `T0110`, LLM01/06/07).
 - **Referência:** [Cap. 10 §C5 — *Eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Policy 19 §7](/sbd-toe/assets/policies/policy-estrategia-testes)
 - 📄 **Template:** [Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options)
 
-#### 4.3 Pipeline seguro de ML + agentes como *principals*
+#### 4.3 Pipeline seguro de ML + agentes como *principals* {#43-pipeline-seguro-de-ml--agentes-como-principals}
 - **O que:** Gates de segurança no pipeline (SAST/SCA, *secrets*, integridade de artefactos) + agentes AI que operam a pipeline com *workload identity* efémera OIDC, *scope* per-*tool*, *audit per tool invocation* (Cap. 07 US-19).
 - **Referência:** [Cap. 07 — US-19](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle), [Cap. 08 — IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Policy 18 §9](/sbd-toe/assets/policies/policy-gestao-segredos)
 
-#### 4.4 Exatidão (delegado à equipa de IA)
+#### 4.4 Exatidão (delegado à equipa de IA) {#44-exatidão-delegado-à-equipa-de-ia}
 - Declarar métricas de exatidão e limiares aceitáveis — **conteúdo de domínio de IA**, suportado pela evidência de *eval suite* (Cap. 10 §C5) e telemetria operacional (Cap. 12 US-13).
 
 ---
 
-### Fase 5: Logging e monitorização pós-mercado (M8–M12)
+### Fase 5: Logging e monitorização pós-mercado (M8–M12) {#fase-5-logging-e-monitorização-pós-mercado-m8m12}
 **AI Act Art. 12, 19, 72**
 
-#### 5.1 Logging de inferência + audit per *tool invocation*
+#### 5.1 Logging de inferência + audit per *tool invocation* {#51-logging-de-inferência--audit-per-tool-invocation}
 - **O que:** Esquema de logs estendido com metadados de inferência (id/versão do modelo, *features* relevantes, decisão e confiança, *correlation id*) + **audit per *tool invocation*** ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) quando há agentes AI: `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`.
 - **Retenção:** Alinhada com a vida útil do sistema e com o RGPD; imutabilidade.
 - **Referência:** [Cap. 12 — `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) + [Cap. 12 US-13](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
 
-#### 5.2 Plano de monitorização pós-mercado (Art. 72)
+#### 5.2 Plano de monitorização pós-mercado (Art. 72) {#52-plano-de-monitorização-pós-mercado-art-72}
 - **O que:** *Dashboards* de desempenho, *model drift*, *token budget* ([`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013)) e detecção de *jailbreak* / *off-policy actions* ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)). Para sistemas com agentes em A2+, telemetria agentic (Cap. 12 US-13) é a base evidencial.
 - **Gatilhos:** Degradação, *drift*, *budget overrun* ou *off-policy* alimentam a reavaliação do Art. 9.
 - **Referência:** [Cap. 12 US-13](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle), [Policy 30 §9](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)
 
 ---
 
-### Fase 6: Incidentes graves (M10–M12)
+### Fase 6: Incidentes graves (M10–M12) {#fase-6-incidentes-graves-m10m12}
 **AI Act Art. 73**
 
 - **O que:** Parametrizar o *runbook* e o esquema de incidente com a tipologia e prazos do Art. 73 (≤15 dias em regra; ≤10 dias em caso de morte; ≤2 dias em caso de infração generalizada ou perturbação grave e irreversível de infraestrutura crítica). **Classes de incidente agentic-específicas** (Policy 16 §11.4): *off-policy action*, *intent-action divergence*, *prompt injection* bem-sucedida, falha de *kill-switch*, *credential exposure*. **Incidentes *upstream*** (Policy 39 §7): *rug pull*, *dataset poisoning*, *MCP tool poisoning*, *provider outage*.
@@ -168,30 +168,30 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 ---
 
-### Fase 7: GPAI (quando aplicável)
+### Fase 7: GPAI (quando aplicável) {#fase-7-gpai-quando-aplicável}
 **AI Act Art. 53, 55**
 
-#### 7.1 Proteção do modelo (Art. 55 — cibersegurança)
+#### 7.1 Proteção do modelo (Art. 55 — cibersegurança) {#71-proteção-do-modelo-art-55--cibersegurança}
 - **O que:** Tratar pesos, *checkpoints*, *datasets*, MCP *tools* e prompts embebidos como ativos críticos de *supply chain*: proveniência, integridade, *pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)), *providers* aprovados ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)), AI BOM por *release* ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012)), controlo de acesso.
 - **Referência:** [Cap. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Cap. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
 
-#### 7.2 AI red teaming contínuo (Art. 55)
+#### 7.2 AI red teaming contínuo (Art. 55) {#72-ai-red-teaming-contínuo-art-55}
 - **O que:** Programa contínuo de avaliação adversarial materializado em [Cap. 10 §C5 — *eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites): regression de prompt/skill, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B*. Para A4 (GPAI com risco sistémico), cadência mensal de *kill-switch* e actualização do corpus de detecção [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
 - **Referência:** [Cap. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Policy 19 §7](/sbd-toe/assets/policies/policy-estrategia-testes)
 
-#### 7.3 Hardening de infraestrutura física e lógica (Art. 55)
+#### 7.3 Hardening de infraestrutura física e lógica (Art. 55) {#73-hardening-de-infraestrutura-física-e-lógica-art-55}
 - **Referência:** [Cap. 08 — IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 09 — Containers/Runtime](/sbd-toe/sbd-manual/containers-imagens/intro), [Cap. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
 
-#### 7.4 Conformidade contratual declarada (Art. 53/55 *providers*)
+#### 7.4 Conformidade contratual declarada (Art. 53/55 *providers*) {#74-conformidade-contratual-declarada-art-5355-providers}
 - **O que:** Quando consumimos GPAI de um *provider*, o contrato declara conformidade Art. 53 (documentação técnica, *summary of training data*, política de *copyright*) e — quando aplicável — Art. 55 (*AI red teaming* contínuo, hardening, *post-market monitoring*).
 - **Referência:** [Cap. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle), [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura)
 
-#### 7.5 Documentação GPAI, copyright e resumo de dados (delegado)
+#### 7.5 Documentação GPAI, copyright e resumo de dados (delegado) {#75-documentação-gpai-copyright-e-resumo-de-dados-delegado}
 - **Fora do âmbito AppSec** — obrigações de domínio e jurídicas (Art. 53). Aplica-se quando a organização é *provider* de GPAI.
 
 ---
 
-## Checklist de Alinhamento Técnico (AI Act)
+## Checklist de Alinhamento Técnico (AI Act) {#checklist-de-alinhamento-técnico-ai-act}
 
 A lista abaixo permite validar o **alinhamento técnico** do programa SbD-ToE com os requisitos do AI Act — não emite o juízo de conformidade legal. Recomenda-se revisão periódica:
 
@@ -214,7 +214,7 @@ A lista abaixo permite validar o **alinhamento técnico** do programa SbD-ToE co
 
 ---
 
-## O Que Cada Capítulo SbD-ToE Cobre (Referência Rápida)
+## O Que Cada Capítulo SbD-ToE Cobre (Referência Rápida) {#o-que-cada-capítulo-sbd-toe-cobre-referência-rápida}
 
 > ✏️ **Refresh 2026-05-30.** Tabela actualizada para reflectir a camada agentic. Onde diz "extensível a", agora diz "incorpora" — várias extensões propostas em 2026-05 já estão dentro do canon.
 
@@ -237,7 +237,7 @@ A lista abaixo permite validar o **alinhamento técnico** do programa SbD-ToE co
 
 ---
 
-## Métrica Simples: Estou Alinhado?
+## Métrica Simples: Estou Alinhado? {#métrica-simples-estou-alinhado}
 
 Estas perguntas são um auto-diagnóstico **técnico** — respondê-las não emite o juízo de conformidade legal. Se consegues responder SIM a todas, o núcleo técnico está alinhado:
 
@@ -258,7 +258,7 @@ Estas perguntas são um auto-diagnóstico **técnico** — respondê-las não em
 
 ---
 
-## Nota Crítica: Gestão de Exceções no AI Act
+## Nota Crítica: Gestão de Exceções no AI Act {#nota-crítica-gestão-de-exceções-no-ai-act}
 
 O AI Act exige conformidade com os requisitos de alto risco. Exceções (desvios) devem ser formais e auditadas, com trilho documental e aprovação adequada. Uma exceção **interna** não altera a obrigação legal do AI Act — apenas documenta um risco técnico aceite para o dossiê de evidência; a obrigação legal subsiste.
 
@@ -280,7 +280,7 @@ Implicação regulatória:
 
 ---
 
-## Próximos Passos
+## Próximos Passos {#próximos-passos}
 
 1. **Enquadramento jurídico:** Determinar papel e categoria de risco (jurídico/compliance)
 2. **Auditoria técnica atual:** Verificar [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) contra os requisitos técnicos do AI Act
@@ -292,7 +292,7 @@ Documentação completa: ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 ---
 
-## Referências
+## Referências {#referências}
 
 - **SbD-ToE Manual:** Capítulos 01–14 (detalhe técnico por domínio)
 - **Cross-Check AI Act:** [Análise normativa completa](/sbd-toe/cross-check-normativo/ai-act/intro)

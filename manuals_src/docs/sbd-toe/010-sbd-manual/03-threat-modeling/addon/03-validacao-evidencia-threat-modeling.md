@@ -16,7 +16,7 @@ Sem estes elementos, o Threat Modeling permanece uma atividade exploratória, n�
 
 ---
 
-## 1. Validação humana obrigatória
+## 1. Validação humana obrigatória {#1-validação-humana-obrigatória}
 
 Todo o modelo de ameaças deve ser:
 - revisto criticamente;
@@ -26,7 +26,7 @@ Ferramentas, métodos ou suportes analíticos **não substituem esta decisão**.
 
 ---
 
-## 2. Critérios mínimos de aceitação
+## 2. Critérios mínimos de aceitação {#2-critérios-mínimos-de-aceitação}
 
 Um Threat Model é considerado aceite quando, no mínimo:
 
@@ -41,7 +41,7 @@ Um Threat Model é considerado aceite quando, no mínimo:
 
 ---
 
-## 3. Evidência mínima obrigatória
+## 3. Evidência mínima obrigatória {#3-evidência-mínima-obrigatória}
 
 A evidência associada a um Threat Model deve incluir, no mínimo:
 
@@ -58,7 +58,7 @@ A evidência deve ser:
 
 ---
 
-## 4. Distinção entre apoio e decisão
+## 4. Distinção entre apoio e decisão {#4-distinção-entre-apoio-e-decisão}
 
 É obrigatório distinguir explicitamente entre:
 - artefactos de apoio à análise;
@@ -71,7 +71,7 @@ Apenas o segundo constitui base para:
 
 ---
 
-## 5. Revisão e invalidação
+## 5. Revisão e invalidação {#5-revisão-e-invalidação}
 
 Um modelo de ameaças deve ser revisto sempre que ocorra:
 
@@ -84,7 +84,7 @@ Modelos não revistos devem ser considerados **potencialmente inválidos**.
 
 ---
 
-## 6. Integração com outros capítulos
+## 6. Integração com outros capítulos {#6-integração-com-outros-capítulos}
 
 O Threat Modeling validado constitui:
 - input direto para o Capítulo 02 - Requisitos de Segurança;

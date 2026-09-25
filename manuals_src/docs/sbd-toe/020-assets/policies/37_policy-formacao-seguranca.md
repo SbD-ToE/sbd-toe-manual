@@ -9,7 +9,7 @@ sidebar_position: 37
 
 # Política de Formação e Capacitação em Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para o **programa de formação e capacitação em segurança** da organização, cobrindo o onboarding de novos colaboradores, os trilhos formativos contínuos por perfil e nível de risco, o programa de Security Champions, os exercícios práticos e os mecanismos de avaliação de eficácia.
 
@@ -26,7 +26,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 Esta política aplica-se a todos os colaboradores com funções técnicas que participam no desenvolvimento, operação, teste, arquitectura ou governação de sistemas da organização. Inclui colaboradores internos, contractors e fornecedores com acesso técnico continuado.
 
@@ -38,11 +38,11 @@ Esta política aplica-se a todos os colaboradores com funções técnicas que pa
 
 ---
 
-## 3. Onboarding de novos colaboradores
+## 3. Onboarding de novos colaboradores {#3-onboarding-de-novos-colaboradores}
 
 Todo o novo colaborador com funções técnicas deve completar o processo de onboarding de segurança antes de receber acesso técnico pleno:
 
-### 3.1 Conteúdos mínimos de onboarding
+### 3.1 Conteúdos mínimos de onboarding {#31-conteúdos-mínimos-de-onboarding}
 
 | Tópico | Descrição | Obrigatoriedade |
 |---|---|---|
@@ -53,7 +53,7 @@ Todo o novo colaborador com funções técnicas deve completar o processo de onb
 | Práticas de desenvolvimento seguro (baseline) | Fundamentos relevantes para a função | L2/L3 |
 | Ferramentas e processo de segurança da organização | SAST, SCA, gestão de segredos, pipeline de segurança | L2/L3 |
 
-### 3.2 Validação de onboarding
+### 3.2 Validação de onboarding {#32-validação-de-onboarding}
 
 - [ ] Conclusão documentada no LMS ou sistema de RH
 - [ ] Quiz ou avaliação com nota mínima de 80%
@@ -62,11 +62,11 @@ Todo o novo colaborador com funções técnicas deve completar o processo de onb
 
 ---
 
-## 4. Trilhos formativos por perfil e nível de risco
+## 4. Trilhos formativos por perfil e nível de risco {#4-trilhos-formativos-por-perfil-e-nível-de-risco}
 
 Os trilhos formativos são o conjunto de módulos obrigatórios e opcionais recomendados para cada perfil técnico, calibrados pelo nível de risco da aplicação em que o colaborador trabalha.
 
-### 4.1 Matriz de trilhos por perfil e nível de risco
+### 4.1 Matriz de trilhos por perfil e nível de risco {#41-matriz-de-trilhos-por-perfil-e-nível-de-risco}
 
 | Função | L1 | L2 | L3 |
 |---|---|---|---|
@@ -78,7 +78,7 @@ Os trilhos formativos são o conjunto de módulos obrigatórios e opcionais reco
 | **Security Champion** | Awareness geral | Políticas e práticas SbD-ToE; mentoria básica | Trilho avançado; threat modeling; liderança de CTFs; participação em war rooms |
 | **Gestão / Tech Lead** | Awareness executivo | Classificação de risco; exceções e aprovações | Métricas de maturidade; reporting executivo; pós-mortems |
 
-### 4.2 Módulos obrigatórios vs. opcionais
+### 4.2 Módulos obrigatórios vs. opcionais {#42-módulos-obrigatórios-vs-opcionais}
 
 Cada trilho formativo deve identificar explicitamente:
 
@@ -88,11 +88,11 @@ Cada trilho formativo deve identificar explicitamente:
 
 ---
 
-## 5. Programa de Security Champions
+## 5. Programa de Security Champions {#5-programa-de-security-champions}
 
 O programa de Security Champions tem como objectivo distribuir competências de segurança pelas equipas de desenvolvimento, criando pontos de responsabilização e disseminação que não dependem de centralização no AppSec Engineer.
 
-### 5.1 Requisitos do programa
+### 5.1 Requisitos do programa {#51-requisitos-do-programa}
 
 | Requisito | Descrição |
 |---|---|
@@ -102,13 +102,13 @@ O programa de Security Champions tem como objectivo distribuir competências de 
 | Comunidade de Champions | Reuniões regulares entre todos os Champions activos (mínimo mensal em L3); canal de comunicação dedicado; partilha de boas práticas e antipadrões |
 | Reconhecimento institucional | A função de Security Champion deve ter visibilidade e reconhecimento formal (ex: referência em avaliações de desempenho, participação em conferências de segurança) |
 
-### 5.2 Renovação e actualização
+### 5.2 Renovação e actualização {#52-renovação-e-actualização}
 
 A formação do Security Champion deve ser renovada anualmente. Um Security Champion com formação expirada deve concluir a renovação no prazo de 60 dias, durante o qual as responsabilidades podem ser partilhadas com o AppSec Engineer enquanto a actualização é concluída.
 
 ---
 
-## 6. Exercícios práticos e simulações
+## 6. Exercícios práticos e simulações {#6-exercícios-práticos-e-simulações}
 
 A formação exclusivamente teórica tem baixa taxa de retenção e não desenvolve capacidade de resposta em cenários reais. Os exercícios práticos são componente obrigatória dos trilhos L3 e recomendada em L2:
 
@@ -124,7 +124,7 @@ Os resultados dos exercícios devem ser registados com data, participantes, tipo
 
 ---
 
-## 7. Actualização de conteúdos formativos
+## 7. Actualização de conteúdos formativos {#7-actualização-de-conteúdos-formativos}
 
 Os trilhos formativos reflectem o estado da arte em determinado momento - sem actualização, tornam-se obsoletos e criam falsa confiança. Os conteúdos devem ser revistos:
 
@@ -139,7 +139,7 @@ A revisão de conteúdos deve ser coordenada pelo AppSec Engineer com input dos 
 
 ---
 
-## 8. KPIs de eficácia formativa
+## 8. KPIs de eficácia formativa {#8-kpis-de-eficácia-formativa}
 
 A eficácia da formação deve ser medida com base em indicadores que vão além da taxa de conclusão:
 
@@ -157,7 +157,7 @@ Os KPIs de formação devem ser reportados trimestralmente ao GRC e integrados n
 
 ---
 
-## 9. Integração com objectivos de performance individuais
+## 9. Integração com objectivos de performance individuais {#9-integração-com-objectivos-de-performance-individuais}
 
 Em L3, a participação activa no programa de segurança deve ser reconhecida formalmente:
 
@@ -168,7 +168,7 @@ Em L3, a participação activa no programa de segurança deve ser reconhecida fo
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -181,11 +181,11 @@ Em L3, a participação activa no programa de segurança deve ser reconhecida fo
 
 ---
 
-## 11. Formação em agentes AI e tooling pervasivo (módulo obrigatório)
+## 11. Formação em agentes AI e tooling pervasivo (módulo obrigatório) {#11-formação-em-agentes-ai-e-tooling-pervasivo-módulo-obrigatório}
 
 Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), todos os *roles* directamente envolvidos passam a ter formação mínima obrigatória sobre o tema. Não é formação optativa — é parte do *baseline* de competências, ao nível do que exige-se sobre OWASP Top 10 ou *secure coding* básico.
 
-### 11.1 Cobertura mínima por *role*
+### 11.1 Cobertura mínima por *role* {#111-cobertura-mínima-por-role}
 
 | Role | Conteúdos mínimos | Cadência |
 |---|---|---|
@@ -197,18 +197,18 @@ Quando a organização adopta agentes AI com *tool-use* no SDLC (Policy 38), tod
 | **Product Owner / Scrum Master** | Implicações dos níveis A0–A4 nos requisitos e *acceptance criteria*; quando uma feature exige *mandate* novo | Onboarding + actualização anual |
 | **CISO / Executive Management** | Risco operacional e regulatório de agentes; aprovação A4; revisão periódica do registo de mandates | Anual |
 
-### 11.2 Exercícios práticos recomendados
+### 11.2 Exercícios práticos recomendados {#112-exercícios-práticos-recomendados}
 
 - **Tabletop**: simulação de *off-policy action* em produção — quem dispara *kill-switch*, quem comunica, quem escala (cross-link Cap. 12 IRP).
 - **Hands-on**: exercício de revisão de PR com output GenAI — identificar padrões problemáticos.
 - **Red team**: tentar *prompt injection* contra um agente em sandbox; observar deteção em OPS-014.
 - **Exercício de mandate**: receber escopo realista, classificar nível A0–A4, escrever mandate.
 
-### 11.3 Onde aterra
+### 11.3 Onde aterra {#113-onde-aterra}
 
 Esta formação é parte do trilho do Cap. 13 ([addon 12 — Formação em Uso Seguro de IA e Tooling Pervasivo](/sbd-toe/sbd-manual/formacao-onboarding/addon/formacao-uso-seguro-ia-tooling)). Esta política torna-a **obrigatória** (em vez de recomendada) quando há agentes AI em A1+ no SDLC da organização.
 
-### 11.4 Proporcionalidade
+### 11.4 Proporcionalidade {#114-proporcionalidade}
 
 | Nível de risco organizacional | Cobertura obrigatória |
 |---|---|
@@ -218,7 +218,7 @@ Esta formação é parte do trilho do Cap. 13 ([addon 12 — Formação em Uso S
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -230,7 +230,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

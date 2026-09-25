@@ -9,21 +9,21 @@ sidebar_position: 3
 
 # Quality Assurance (QA)
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 QA **valida requisitos de segurança transformando-os em critérios de aceitação** claros e testáveis.  
 Já não basta validar que o software "funciona": é necessário comprovar que funciona de forma resiliente e protegida contra ameaças.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Validam requisitos de segurança (Cap. 02)
 - Executam testes funcionais e de segurança em paralelo
 - Confirmam que correções não introduzem regressões
 - Asseguram que controlos de segurança funcionam como esperado
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 QA é a primeira linha de defesa contra vulnerabilidades que escapam ao desenvolvimento. Sem testes de segurança robustos, o código inseguro chega a produção.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 QA materializa exigências de:
 - **NIS2**: Verificação de medidas técnicas
@@ -31,15 +31,15 @@ QA materializa exigências de:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Validar que **requisitos aplicáveis por nível de risco estão cumpridos** antes da entrada em produção, garantindo conformidade com a classificação atribuída.
 
 **User Stories:**
 - [US-05: Validação antes do go-live](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-05---validação-antes-do-go-live) - Verificar cumprimento de requisitos por nível
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Garantir que todos os **requisitos têm rastreabilidade no backlog** e validação associada, prevenindo falsos positivos ou ausência de controlo.
 
 **User Stories:**
@@ -48,25 +48,25 @@ Garantir que todos os **requisitos têm rastreabilidade no backlog** e validaç�
 - [US-09: Validação por requisito/domínio](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-09---validação-por-requisitodomínio-req-xxx--evidência) - Evidência objetiva e rastreável de cumprimento
 - [US-12: Validação de tags SEC-Lx-* no pipeline](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-12---validação-de-tags-sec-lx--e-requisitos-no-pipeline) - Rastreabilidade automática
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Traduzir **cenários de threat modeling em testes objetivos**, garantindo que ameaças identificadas têm correspondência em validações práticas.
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Validar a **arquitetura antes do go-live**, garantindo que todos os controlos definidos estão aplicados e exceções documentadas.
 
 **User Stories:**
 - [US-08: Validação de arquitetura antes de go-live](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-08---avaliação-de-impacto-no-negócio-e-priorização-de-trade-offs) - Verificar controlos e exceções documentadas
 
-### Cap. 06 - Desenvolvimento Seguro
+### Cap. 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 Conduzir **testes estáticos e dinâmicos** em colaboração com AppSec, validando que código cumpre standards de segurança.
 
 **User Stories:**
 - [US-11: Arquivo Central de Evidências de Validação](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-11---arquivo-central-de-evidências-de-validação) - Rastreabilidade e auditoria centralizada
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Assegurar que **pipelines incorporam verificações automáticas de segurança**, validando que gates funcionam corretamente.
 
-### Cap. 10 - Testes de Segurança
+### Cap. 10 - Testes de Segurança {#cap-10---testes-de-segurança}
 Executar testes dinâmicos autenticados, fuzzing em endpoints críticos e instrumentação IAST em staging para detetar vulnerabilidades exploráveis em runtime.
 
 **User Stories:**
@@ -74,17 +74,17 @@ Executar testes dinâmicos autenticados, fuzzing em endpoints críticos e instru
 - [US-06: Fuzzing dirigido a APIs críticas](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-06---fuzzing-dirigido-a-apis-críticas) - Detetar falhas invisíveis em testes convencionais
 - [US-09: IAST com Instrumentação em Staging](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-09---iast-com-instrumentação-em-staging) - Observar chamadas inseguras em runtime
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Validar releases em **staging com ambiente segregado**, dados controlados e testes funcionais + segurança. Executar validações técnicas com gates condicionais por risco.
 
 **User Stories:**
 - [US-03: Validação em staging pré-produção](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-03---gates-de-aprovação-no-deploy) - Ambiente segregado com testes completos
 - [US-04: Gates de deploy condicionais por risco](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-04---rollback-r%C3%A1pido-e-testado) - Validações técnicas proporcionais
 
-### Cap. 12 - Monitorização
+### Cap. 12 - Monitorização {#cap-12---monitorização}
 Validar que **alertas e métricas de runtime** estão configurados corretamente, confirmando que eventos críticos são detetados.
 
-### Cap. 13 - Formação
+### Cap. 13 - Formação {#cap-13---formação}
 Participar em **exercícios práticos estruturados** (labs, CTFs, simulações) para garantir conhecimento aplicável em contexto real.
 
 **User Stories:**
@@ -92,7 +92,7 @@ Participar em **exercícios práticos estruturados** (labs, CTFs, simulações) 
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

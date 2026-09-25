@@ -8,7 +8,7 @@ sidebar_position: 8
 
 # SbD-ToE 4 GDPR: Playbook de Implementação
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Objetivo: operacionalizar GDPR Art. 25/30/32/33–34/35 com base nas capacidades técnicas do SbD-ToE e integrar com jurídico/DPO.
 
@@ -18,7 +18,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ---
 
-## Mapa Rápido: GDPR Art. → SbD-ToE
+## Mapa Rápido: GDPR Art. → SbD-ToE {#mapa-rápido-gdpr-art--sbd-toe}
 
 | Artigo GDPR | Requisito | Capítulo SbD-ToE | Ação Principal |
 |-------------|-----------|------------------|----------------|
@@ -31,53 +31,53 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ---
 
-## Fases de Implementação (≈ 4–6 meses)
+## Fases de Implementação (≈ 4–6 meses) {#fases-de-implementação--46-meses}
 
-### Fase 1 (M0–M1): Governação e Enquadramento
+### Fase 1 (M0–M1): Governação e Enquadramento {#fase-1-m0m1-governação-e-enquadramento}
 1. Nomear DPO (se aplicável) e alinhar RACI ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro))  
 2. Política "Privacidade by Design & por Defeito" aprovada  
 3. Definir classificação de dados pessoais por aplicação  
 **Evidências:** Ata aprovação; RACI; matriz dados/aplicações
 
-### Fase 2 (M1–M2): Inventário & ROPA
+### Fase 2 (M1–M2): Inventário & ROPA {#fase-2-m1m2-inventário--ropa}
 1. Atualizar inventário SbD-ToE (apps, dados, finalidades em alto nível)  
 2. Registar ROPA em ferramenta GRC (campos Art. 30)  
 3. Ligar IDs de apps SbD-ToE ao ROPA  
 **Evidências:** ROPA export; mapeamento IDs
 
-### Fase 3 (M2–M3): Privacy by Design/Default (Art. 25)
+### Fase 3 (M2–M3): Privacy by Design/Default (Art. 25) {#fase-3-m2m3-privacy-by-designdefault-art-25}
 1. Catálogo de padrões: pseudonimização, data minimization, retenção, logging proporcional  
 2. Configs por defeito: coleta mínima, encryption at rest/in transit  
 3. Gate de pipeline: bloqueio se coleta excessiva (linting de schemas, por ex.)  
 **Evidências:** Catálogo PbD; pipelines; exemplos de bloqueio
 
-### Fase 4 (M2–M3): Segurança do Tratamento (Art. 32)
+### Fase 4 (M2–M3): Segurança do Tratamento (Art. 32) {#fase-4-m2m3-segurança-do-tratamento-art-32}
 1. Cifragem: TLS 1.2+; at rest com gestão de chaves  
 2. IAM: MFA, least privilege, revisão periódica de acessos  
 3. Testes: SAST/DAST/fuzzing; validação de eficácia  
 4. Resiliência: backups, DR testado, monitorização  
 **Evidências:** Registos de chaves, relatórios de testes, logs DR
 
-### Fase 5 (M3–M4): DPIA (Art. 35)
+### Fase 5 (M3–M4): DPIA (Art. 35) {#fase-5-m3m4-dpia-art-35}
 1. Critérios de gatilho DPIA definidos  
 2. Reutilizar Threat Modeling ([Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)) como anexo técnico  
 3. Adicionar Privacy TM (LINDDUN) quando alto risco  
 4. Aprovação DPO e registo  
 **Evidências:** DPIA #1; anexos TM; aprovação DPO
 
-### Fase 6 (M3–M4): Processors (Art. 28)
+### Fase 6 (M3–M4): Processors (Art. 28) {#fase-6-m3m4-processors-art-28}
 1. Checklist de segurança para processadores  
 2. Cláusulas técnicas padrão (encriptação, logs, sub-processors)  
 3. Monitorização e revisão anual  
 **Evidências:** Checklist; contratos; relatórios de revisão
 
-### Fase 7 (M4–M5): Incidentes e Notificação 72h (Art. 33/34)
+### Fase 7 (M4–M5): Incidentes e Notificação 72h (Art. 33/34) {#fase-7-m4m5-incidentes-e-notificação-72h-art-3334}
 1. Runbook com cronómetro 72h e campos mínimos (o quê, quando, dados, medidas)  
 2. Critérios de risco para comunicação a titulares  
 3. Exercício anual de simulação  
 **Evidências:** Runbook; registos exercício; relatório pós‑ação
 
-### Fase 8 (M5–M6): Retenção & Eliminação Segura
+### Fase 8 (M5–M6): Retenção & Eliminação Segura {#fase-8-m5m6-retenção--eliminação-segura}
 1. Tabelas de retenção formalizadas (com Jurídico)  
 2. Jobs de eliminação/pseudonimização agendada  
 3. Provas de execução (logs, relatórios)  
@@ -85,46 +85,46 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ---
 
-## Checklists
+## Checklists {#checklists}
 
-### PbD/PbDf
+### PbD/PbDf {#pbdpbdf}
 - [ ] Catálogo de padrões de privacidade publicado
 - [ ] Defaults seguros aplicados (coleta mínima, cifragem)
 - [ ] Gate de pipeline para schemas/dados
 - [ ] Revisão periódica de configurações
 
-### Art. 32
+### Art. 32 {#art-32}
 - [ ] TLS 1.2+/1.3 e at rest encryption
 - [ ] Gestão de chaves com rotação
 - [ ] MFA e revisão de privilégios
 - [ ] SAST/DAST/fuzzing integrados
 - [ ] Backups testados; DR exercitado
 
-### DPIA
+### DPIA {#dpia}
 - [ ] Critérios de gatilho definidos
 - [ ] Threat Modeling anexado
 - [ ] Privacy TM (se alto risco)
 - [ ] Aprovação DPO
 
-### Incidentes 72h
+### Incidentes 72h {#incidentes-72h}
 - [ ] Runbook com campos GDPR
 - [ ] Cronómetro 72h visível
 - [ ] Exercício anual concluído
 - [ ] Templates de comunicação prontos
 
-### Processors
+### Processors {#processors}
 - [ ] Checklist de segurança aplicada
 - [ ] Cláusulas técnicas padrão
 - [ ] Revisão anual e registos
 
-### Retenção
+### Retenção {#retenção}
 - [ ] Tabela aprovada
 - [ ] Jobs automáticos configurados
 - [ ] Evidência de execução
 
 ---
 
-## Métricas-Chave
+## Métricas-Chave {#métricas-chave}
 | Métrica | Definição | Objetivo |
 |---------|-----------|---------|
 | % apps com Art. 32 completo | Apps com cifragem+IAM+testes | ≥95% |
@@ -134,7 +134,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ---
 
-## Artefactos a Manter
+## Artefactos a Manter {#artefactos-a-manter}
 - Política PbD/PbDf
 - ROPA export (GRC)
 - Relatórios de testes e gates
@@ -145,13 +145,13 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ---
 
-## Notas
+## Notas {#notas}
 - Incidentes podem acionar também NIS2/DORA. Recomenda-se runbook único com canais de reporte diferenciados.
 - LINDDUN é recomendado para Privacy TM; manter como add‑on do [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro).
 
 ---
 
-## Recursos Práticos de Implementação
+## Recursos Práticos de Implementação {#recursos-práticos-de-implementação}
 
 Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
 
@@ -164,7 +164,7 @@ Estes recursos demonstram implementações práticas alinhadas com GDPR.
 
 ---
 
-## Referências
+## Referências {#referências}
 - [Análise normativa GDPR](intro)
 - EDPB - Guidelines DPIA, Breach Notification
 - ENISA - Security of Personal Data Processing

@@ -10,7 +10,7 @@ tags: [kpi, metricas, GOV, governanca, excecoes, ownership, contratos, fornecedo
 
 # KPIs de Domínio - Governação e Contratação
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **saúde e eficácia da estrutura de governação organizacional de segurança**: a cobertura de ownership por aplicação, a qualidade e validade das excepções activas, a conformidade contratual com fornecedores, e a completude da rastreabilidade organizacional.
 
@@ -20,7 +20,7 @@ Estes indicadores complementam os KPIs transversais definidos em `kpis-governanc
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -63,7 +63,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **GOV-K01 - Owner com formação válida:** considera-se formação válida a conclusão de programa de formação em SbD-ToE (ou equivalente organizacional) nos últimos 12 meses. Owners com designação sem formação válida contam para o denominador mas não para o numerador. Rotatividade de equipa é o principal trigger de invalidade.
 
@@ -81,7 +81,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Suporte de instrumentação | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -96,7 +96,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

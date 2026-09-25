@@ -11,7 +11,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🚀 Caso 1 - API Gateway com logging estruturado e alertas
+## 🚀 Caso 1 - API Gateway com logging estruturado e alertas {#-caso-1---api-gateway-com-logging-estruturado-e-alertas}
 
 > 🛡️ **Classificação de risco: L3 - Aplicação com exposição pública e operações críticas**
 
@@ -31,7 +31,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 💰 Caso 2 - Monitorização de uploads em aplicação de gestão documental
+## 💰 Caso 2 - Monitorização de uploads em aplicação de gestão documental {#-caso-2---monitorização-de-uploads-em-aplicação-de-gestão-documental}
 
 > 🛡️ **Classificação de risco: L3 - Aplicação com dados sensíveis e risco de exfiltração**
 
@@ -49,7 +49,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 👨‍💼 Caso 3 - Monitorização de pipelines CI/CD e deteção de execução invulgar
+## 👨‍💼 Caso 3 - Monitorização de pipelines CI/CD e deteção de execução invulgar {#-caso-3---monitorização-de-pipelines-cicd-e-deteção-de-execução-invulgar}
 
 > 🛡️ **Classificação de risco: L2 - Pipeline interno com impacto em cadeia de fornecimento**
 
@@ -69,7 +69,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🔎 Caso 4 - Correlação de logs de autenticação com movimentos de sessão
+## 🔎 Caso 4 - Correlação de logs de autenticação com movimentos de sessão {#-caso-4---correlação-de-logs-de-autenticação-com-movimentos-de-sessão}
 
 > 🛡️ **Classificação de risco: L3 - Aplicação multiuser com perfis sensíveis e risco de hijack**
 
@@ -89,7 +89,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 🧪 Caso 5 - Aplicação interna de baixa criticidade com logging local e validação manual
+## 🧪 Caso 5 - Aplicação interna de baixa criticidade com logging local e validação manual {#-caso-5---aplicação-interna-de-baixa-criticidade-com-logging-local-e-validação-manual}
 
 > 🛡️ **Classificação de risco: L1 - Aplicação de suporte técnico, uso limitado**
 
@@ -109,7 +109,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 ---
 
-## 📊 Tabela Resumo dos Casos
+## 📊 Tabela Resumo dos Casos {#-tabela-resumo-dos-casos}
 
 | Caso | Risco | Contexto Principal                      | Controlos-chave aplicados                           |
 |------|-------|------------------------------------------|-----------------------------------------------------|

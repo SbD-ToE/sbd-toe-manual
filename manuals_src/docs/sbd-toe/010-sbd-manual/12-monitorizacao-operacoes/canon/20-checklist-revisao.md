@@ -21,7 +21,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                            | Verificado? |
 |-----------------------------------------------------------------------------------------------------------------|-------------|
@@ -47,7 +47,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Este checklist pode ser usado em **auditorias técnicas, gates de release ou revisões de segurança**;
 - Cada resposta afirmativa deve ser suportada por **evidência objetiva**: regras, dashboards, tickets, configs, capturas de teste;
@@ -57,7 +57,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📊 Conformidade e Governação
+## 📊 Conformidade e Governação {#-conformidade-e-governação}
 
 - Este instrumento valida a **conformidade com o Capítulo 12 - Monitorização e Operações**;
 - Pode ser integrado em **ciclos de revisão regulares ou como KPI organizacional**;

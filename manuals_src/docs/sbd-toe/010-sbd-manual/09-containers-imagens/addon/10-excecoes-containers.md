@@ -12,13 +12,13 @@ tags: [exceções, containers, imagens, admission-control, signing, scanning, op
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a requisitos do catálogo de containers e imagens: `CNT-001` a `CNT-012`.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - imagem base legacy sem substituto imediato que cumpra os requisitos de origem aprovada (CNT-001);
 - CVE crítico em imagem base sem patch disponível para a versão em uso - distinto das excepções SCA do Cap. 05 por actuar ao nível da imagem e ser verificado por admission controller (CNT-002);
@@ -28,7 +28,7 @@ Excepções a requisitos do catálogo de containers e imagens: `CNT-001` a `CNT-
 
 ---
 
-## Campos adicionais obrigatórios (containers)
+## Campos adicionais obrigatórios (containers) {#campos-adicionais-obrigatórios-containers}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -40,7 +40,7 @@ Excepções a requisitos do catálogo de containers e imagens: `CNT-001` a `CNT-
 
 ---
 
-## Excepções no admission controller
+## Excepções no admission controller {#excepções-no-admission-controller}
 
 Excepções a políticas de admission controller devem ser implementadas como objectos formais no próprio sistema (ex: `PolicyException` em Kyverno, `constraint` com exclusão em OPA/Gatekeeper), não como desactivação da policy. O objecto de excepção no admission controller é um artefacto de evidência obrigatório e deve ser referenciado na cadeia de autoridade.
 
@@ -48,7 +48,7 @@ Excepções implementadas por desactivação global de uma policy são sempre n�
 
 ---
 
-## Excepções de image signing (migração)
+## Excepções de image signing (migração) {#excepções-de-image-signing-migração}
 
 Excepções a CNT-007 por infraestrutura de assinatura ainda não disponível devem incluir:
 
@@ -58,7 +58,7 @@ Excepções a CNT-007 por infraestrutura de assinatura ainda não disponível de
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

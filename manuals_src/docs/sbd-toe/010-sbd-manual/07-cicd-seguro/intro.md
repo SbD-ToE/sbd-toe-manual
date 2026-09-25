@@ -34,7 +34,7 @@ Por isso, o SbD-ToE estabelece aqui um corpo prescritivo para pipelines: **como 
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 A segurança de CI/CD abrange um conjunto vasto de domínios técnicos e organizacionais:
 
@@ -49,7 +49,7 @@ A segurança de CI/CD abrange um conjunto vasto de domínios técnicos e organiz
 
 ---
 
-## 📌 O que deve ser feito
+## 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 Para que os pipelines CI/CD sejam confiáveis e auditáveis, a organização deve:
 
@@ -64,7 +64,7 @@ Para que os pipelines CI/CD sejam confiáveis e auditáveis, a organização dev
 
 ---
 
-## ⚙️ Como deve ser feito
+## ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 Os mecanismos técnicos que permitem implementar estas práticas incluem:
 
@@ -79,7 +79,7 @@ Os mecanismos técnicos que permitem implementar estas práticas incluem:
 
 ---
 
-## 📆 Quando aplicar
+## 📆 Quando aplicar {#-quando-aplicar}
 
 A disciplina de CI/CD Seguro não se ativa pontualmente: acompanha toda a vida do projeto.  
 Deve ser aplicada:
@@ -92,7 +92,7 @@ Deve ser aplicada:
 
 ---
 
-## 👥 Quem está envolvido
+## 👥 Quem está envolvido {#-quem-está-envolvido}
 
 A segurança de CI/CD depende de papéis distintos, mas complementares:
 
@@ -105,7 +105,7 @@ A segurança de CI/CD depende de papéis distintos, mas complementares:
 
 ---
 
-## 🎯 Para quê
+## 🎯 Para quê {#-para-quê}
 
 - **Prevenir ataques à supply chain** explorando pipelines ou runners inseguros  
 - **Proteger artefactos críticos**, garantindo que apenas código confiável é promovido  
@@ -114,7 +114,7 @@ A segurança de CI/CD depende de papéis distintos, mas complementares:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política organizacional         | Obrigatória | Aplicação | Conteúdo mínimo |
 |---------------------------------|-------------|-----------|-----------------|

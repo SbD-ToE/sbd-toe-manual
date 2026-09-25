@@ -29,7 +29,7 @@ Inclui técnicas automatizadas (SAST, DAST, fuzzing, IAST) e validações manuai
 
 ---
 
-## ⚖️ Princípios canónicos aplicáveis a testes de segurança
+## ⚖️ Princípios canónicos aplicáveis a testes de segurança {#️-princípios-canónicos-aplicáveis-a-testes-de-segurança}
 
 No contexto de testes de segurança, o SbD-ToE assume explicitamente que:
 
@@ -45,7 +45,7 @@ As regras prescritivas que operacionalizam estes princípios estão definidas no
 
 ---
 
-## 🧪 Prescrição prática
+## 🧪 Prescrição prática {#-prescrição-prática}
 
 A aplicação prática deve ser entendida como um **ciclo contínuo**, não como uma lista isolada de ferramentas:
 
@@ -75,7 +75,7 @@ Nem toda a verificação de segurança é um *teste*. Um teste confronta comport
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 A responsabilidade pelos testes é **coletiva**, mas cada papel tem responsabilidades explícitas:
 
@@ -90,7 +90,7 @@ A responsabilidade pelos testes é **coletiva**, mas cada papel tem responsabili
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |--------|--------------|-----------|-----------------|
@@ -105,7 +105,7 @@ Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 Testar é o que transforma intenções de segurança em **evidência real**.  
 É o mecanismo que confirma se requisitos foram implementados, se *gates* funcionam e se a aplicação resiste a ataques credíveis.

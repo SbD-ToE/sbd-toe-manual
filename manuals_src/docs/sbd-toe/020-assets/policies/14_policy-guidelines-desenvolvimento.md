@@ -9,7 +9,7 @@ sidebar_position: 14
 
 # Política de Curadoria de Guidelines de Desenvolvimento Seguro
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **seleção, curadoria, versionamento e revisão periódica de guidelines de desenvolvimento seguro** aplicáveis às stacks tecnológicas utilizadas pela organização.
 
@@ -24,13 +24,13 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todas as stacks tecnológicas utilizadas no desenvolvimento de software na organização. Por "stack" entende-se o conjunto linguagem + runtime + frameworks principais (ex: Python/FastAPI, Java/Spring, TypeScript/Node, Go, Terraform/AWS).
 
 ---
 
-## 3. Fontes de referência para guidelines
+## 3. Fontes de referência para guidelines {#3-fontes-de-referência-para-guidelines}
 
 As guidelines organizacionais devem ser derivadas de fontes técnicas reconhecidas, que incluem (sem carácter exclusivo):
 
@@ -47,7 +47,7 @@ O tailoring organizacional a partir destas fontes deve ser explicitamente docume
 
 ---
 
-## 4. Estrutura de uma guideline por stack
+## 4. Estrutura de uma guideline por stack {#4-estrutura-de-uma-guideline-por-stack}
 
 Cada guideline publicada deve ter, no mínimo:
 
@@ -62,7 +62,7 @@ Cada guideline publicada deve ter, no mínimo:
 
 ---
 
-## 5. Operacionalização como configurações de ferramentas
+## 5. Operacionalização como configurações de ferramentas {#5-operacionalização-como-configurações-de-ferramentas}
 
 As guidelines devem ser convertidas em configurações de ferramentas sempre que o ecossistema o permita:
 
@@ -79,7 +79,7 @@ As configurações resultantes devem ser:
 - [ ] Reutilizáveis por projetos (por referência, não por cópia)
 - [ ] Aplicadas automaticamente pelo pipeline CI - não dependentes de configuração local do developer
 
-### 5.1 Proporcionalidade
+### 5.1 Proporcionalidade {#51-proporcionalidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -90,7 +90,7 @@ As configurações resultantes devem ser:
 
 ---
 
-## 6. Cadência de revisão e publicação
+## 6. Cadência de revisão e publicação {#6-cadência-de-revisão-e-publicação}
 
 | Nível | Cadência de revisão mínima |
 |---|---|
@@ -98,7 +98,7 @@ As configurações resultantes devem ser:
 | L2 | Trimestral ou por alteração major de stack |
 | L3 | Contínua; revisão formal trimestral; alertas automáticos para novas regras upstream |
 
-### 6.1 Triggers de revisão extraordinária
+### 6.1 Triggers de revisão extraordinária {#61-triggers-de-revisão-extraordinária}
 
 Para além da cadência regular, a guideline de uma stack deve ser revista sempre que:
 
@@ -107,7 +107,7 @@ Para além da cadência regular, a guideline de uma stack deve ser revista sempr
 - Uma ferramenta SAST utilizada publica rulesets com alterações materiais
 - É identificado um padrão de vulnerabilidade recorrente em code reviews que não estava coberto
 
-### 6.2 Processo de publicação
+### 6.2 Processo de publicação {#62-processo-de-publicação}
 
 Cada nova versão de uma guideline deve seguir o processo:
 
@@ -119,7 +119,7 @@ Cada nova versão de uma guideline deve seguir o processo:
 
 ---
 
-## 7. Desvios a nível de projeto
+## 7. Desvios a nível de projeto {#7-desvios-a-nível-de-projeto}
 
 Projetos individuais podem desativar regras recomendadas, mas não regras obrigatórias. Todo o desvio deve ser registado:
 
@@ -134,7 +134,7 @@ Supressões inline sem referência a registo de desvio aprovado (ex: `# noqa`, `
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -146,7 +146,7 @@ Supressões inline sem referência a registo de desvio aprovado (ex: `# noqa`, `
 
 ---
 
-## 9. Revisão e auditoria desta política
+## 9. Revisão e auditoria desta política {#9-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -156,7 +156,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 10. Referências normativas e técnicas
+## 10. Referências normativas e técnicas {#10-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

@@ -49,7 +49,7 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 ---
 
-## 🧪 2. Prescrição prática
+## 🧪 2. Prescrição prática {#-2-prescrição-prática}
 
 - **O que fazer:**  
   - Criar um **modelo formal e aprovado** de governação de segurança.  
@@ -76,7 +76,7 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 A governação eficaz exige papéis claramente definidos, com autoridade proporcional e responsabilidades explícitas.
 
@@ -92,7 +92,7 @@ e tem **user stories associadas** no `aplicacao-lifecycle.md`.
 
 ---
 
-## 🔗 Integração no ciclo
+## 🔗 Integração no ciclo {#-integração-no-ciclo}
 
 A governação atua como camada **horizontal e transversal** em todo o ciclo SbD-ToE:
 
@@ -106,7 +106,7 @@ A existência de mecanismos técnicos automatizados não cria, por si só, autor
 
 ---
 
-## 📊 Rastreabilidade organizacional
+## 📊 Rastreabilidade organizacional {#-rastreabilidade-organizacional}
 
 A governação eficaz exige rastreabilidade completa e consistente:
 
@@ -119,7 +119,7 @@ A governação eficaz exige rastreabilidade completa e consistente:
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 Este capítulo é o que **fecha e legitima o ciclo do SbD-ToE**:
 
@@ -134,7 +134,7 @@ defensável e sustentável**.
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|

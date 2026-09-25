@@ -21,7 +21,7 @@ Mais cedo ou mais tarde, alguém na empresa — *legal*, auditoria interna, um c
 
 Esta receita serve para a segunda. Combina o MCP (onde estão indexados a maior parte dos cross-checks normativos do manual) com a leitura directa do manual web (necessária para conteúdo posterior ao *snapshot* publicado). O resultado é um relatório técnico que cita o regulamento *verbatim*, os capítulos e controlos do SbD-ToE com IDs reais, e marca explicitamente o que não está coberto — sem nunca derrapar para uma declaração de conformidade.
 
-## Cobertura actual no MCP — o que está dentro e fora
+## Cobertura actual no MCP — o que está dentro e fora {#cobertura-actual-no-mcp--o-que-está-dentro-e-fora}
 
 O *snapshot* publicado em **`@shiftleftpt/sbd-toe-mcp@0.10.2`** (manual `v1.7.0`, KG formal `v1.6.0`) inclui canon (capítulos 00–14), ontologia *AppSec Core v1* **e** os seis cross-checks — **CRA**, **DORA**, **NIS2**, **GDPR**, **AI Act** e **ENISA/CSA** — indexados no KG. Para esses, o MCP é a fonte recomendada: `search_sbd_toe_manual` devolve os intros, playbooks e notas de convergência com citações, e `map_sbd_toe_regulatory_activation` / `resolve_entities` expõem o overlay regulatório (frameworks, obrigações, mapeamentos).
 
@@ -36,7 +36,7 @@ A fronteira é o *snapshot*: conteúdo adicionado ao manual web **depois** dele 
 | "Que obrigações DORA / GDPR aplicam ao meu projecto?" | **MCP** — cross-checks **DORA** e **GDPR** indexados |
 | "Como o SbD-ToE responde ao Art. 15 do AI Act?" | **MCP** (`search_sbd_toe_manual`) — cross-check **AI Act** indexado; o [cross-check web](/sbd-toe/cross-check-normativo/ai-act/intro) para leitura integral |
 
-### Como confirmar antes de responder
+### Como confirmar antes de responder {#como-confirmar-antes-de-responder}
 
 Em caso de dúvida sobre se um framework está no KG, correr:
 
@@ -46,15 +46,15 @@ inspect_sbd_toe_retrieval({"question": "<framework>", "topK": 5})
 
 Se os top-ranked records apontam a `002-cross-check-normativo/<framework>/...` → indexado. Caso contrário → consultar o manual web.
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Identificar a obrigação regulatória
+### 1. Identificar a obrigação regulatória {#1-identificar-a-obrigação-regulatória}
 
 Da fonte primária (EUR-Lex / texto do regulamento), extrair:
 - Artigo (ex.: AI Act Art. 15 — *accuracy, robustness and cybersecurity*)
 - Conceitos-chave (ex.: *adversarial examples*, *model evasion*, *data poisoning*)
 
-### 2. Localizar a resposta
+### 2. Localizar a resposta {#2-localizar-a-resposta}
 
 Duas vias consoante o framework:
 
@@ -75,7 +75,7 @@ Devolve os excertos relevantes do cross-check com `chapter_id`, `Document path`,
 - [GDPR](/sbd-toe/cross-check-normativo/gdpr/intro)
 - [ENISA & CSA](/sbd-toe/cross-check-normativo/enisa-csa/intro)
 
-### 3. Anchorar nos controlos do canon (via MCP)
+### 3. Anchorar nos controlos do canon (via MCP) {#3-anchorar-nos-controlos-do-canon-via-mcp}
 
 Para os controlos que o cross-check refere:
 
@@ -85,7 +85,7 @@ query_sbd_toe_entities({"query": "ARC-001"})
 
 → resolve o id exacto (requisito/controlo) e extrai nome + domínio + capítulo. Para os controlos derivados, usar `consult_security_requirements(risk_level, concerns)`.
 
-### 4. Estruturar o relatório
+### 4. Estruturar o relatório {#4-estruturar-o-relatório}
 
 ```markdown
 # Cross-check SbD-ToE × <Regulamento> Art. <N>
@@ -113,7 +113,7 @@ query_sbd_toe_entities({"query": "ARC-001"})
 <o que o SbD-ToE não cobre directamente>
 ```
 
-### 5. **Não declarar conformidade**
+### 5. **Não declarar conformidade** {#5-não-declarar-conformidade}
 
 O cross-check **mostra como o manual responde** ao regulamento — **não** declara conformidade jurídica. Conformidade requer:
 
@@ -123,7 +123,7 @@ O cross-check **mostra como o manual responde** ao regulamento — **não** decl
 
 Marcar **sempre** o relatório como *"cross-check técnico — não declaração de conformidade"*.
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 - IDs `CTRL-*` apenas se devolvidos por `query_sbd_toe_entities` ou `consult_security_requirements`.
 - Citações do regulamento **verbatim** com referência precisa (artigo, número, alínea).
@@ -133,7 +133,7 @@ Marcar **sempre** o relatório como *"cross-check técnico — não declaração
   - **inferred** (deduzido — marcar)
   - **not verified** (não confirmado — não usar como facto)
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-compliance.md`:
 
@@ -156,7 +156,7 @@ tools: WebFetch, Read, mcp__sbd-toe__*
 8. Em dúvida: preferir "not verified" a inventar uma ligação.
 ```
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Inventar ligações SbD-ToE ↔ regulamento que não estejam no cross-check publicado.
 - ❌ Declarar "compliant with X" — o cross-check **demonstra cobertura técnica**, não conformidade jurídica.
@@ -164,7 +164,7 @@ tools: WebFetch, Read, mcp__sbd-toe__*
 - ❌ Esquecer-se de procurar via MCP os cross-checks que **estão** indexados (CRA, DORA, NIS2, GDPR, AI Act, ENISA/CSA) — duplica trabalho desnecessariamente.
 - ❌ Esquecer convergências (AI Act ↔ CRA, NIS2 ↔ DORA) — duplicação de trabalho e *gaps* invisíveis.
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Casos de uso — Bootstrap de governança](./governance-bootstrap) — para criar o repo já com placeholders dos artefactos regulatórios.
 - [Troubleshooting / FAQ](../10-troubleshooting-faq.md#content-lag) — sobre o *content lag* do MCP.

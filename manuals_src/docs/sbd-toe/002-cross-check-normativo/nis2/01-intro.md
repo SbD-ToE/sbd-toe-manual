@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # Cross-check normativo - NIS2
 
-## Âmbito
+## Âmbito {#âmbito}
 
 A **Diretiva (UE) 2022/2555 (NIS2)** (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555)) atualiza o quadro europeu de cibersegurança para entidades essenciais e importantes em 18 setores, reforçando governação, medidas de gestão de risco e obrigação de reporte de incidentes. Os Estados-Membros tinham até 17 de outubro de 2024 para transpor a NIS2; a NIS1 foi revogada a 18 de outubro de 2024.
 
@@ -21,9 +21,9 @@ Este documento apresenta:
 
 ---
 
-## PARTE I: ANÁLISE NORMATIVA
+## PARTE I: ANÁLISE NORMATIVA {#parte-i-análise-normativa}
 
-### Artigo 20 - Governação e responsabilização
+### Artigo 20 - Governação e responsabilização {#artigo-20---governação-e-responsabilização}
 
 **Conteúdo normativo**
 
@@ -53,7 +53,7 @@ Sugere-se registar, no Cap. 14, como a cadeia de aprovação e supervisão da ge
 
 ---
 
-### Artigo 21 - Medidas de gestão de risco de cibersegurança
+### Artigo 21 - Medidas de gestão de risco de cibersegurança {#artigo-21---medidas-de-gestão-de-risco-de-cibersegurança}
 
 **Conteúdo normativo**
 
@@ -97,7 +97,7 @@ Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado p
 
 ---
 
-### Artigo 23 - Reporte de incidentes
+### Artigo 23 - Reporte de incidentes {#artigo-23---reporte-de-incidentes}
 
 **Conteúdo normativo**
 
@@ -131,7 +131,7 @@ Sugere-se, no Cap. 12, adotar um schema mínimo (`incident.json/csv`) e parametr
 
 ---
 
-### Segurança da cadeia de fornecimento e terceiros
+### Segurança da cadeia de fornecimento e terceiros {#segurança-da-cadeia-de-fornecimento-e-terceiros}
 
 **Conteúdo normativo**
 
@@ -161,7 +161,7 @@ Sugere-se estender o registo de fornecedores do Cap. 05 com os campos exigidos p
 
 ---
 
-### Continuidade, crise e operação
+### Continuidade, crise e operação {#continuidade-crise-e-operação}
 
 **Conteúdo normativo**
 
@@ -191,9 +191,9 @@ Sugere-se alinhar a matriz de fontes (app, IAM, rede, cloud audit, EDR) e reten�
 
 ---
 
-## PARTE II: SÍNTESE E REFERÊNCIAS
+## PARTE II: SÍNTESE E REFERÊNCIAS {#parte-ii-síntese-e-referências}
 
-### Síntese da cobertura NIS2/SbD-ToE
+### Síntese da cobertura NIS2/SbD-ToE {#síntese-da-cobertura-nis2sbd-toe}
 
 A NIS2 pede gestão com responsabilidade, medidas com substância e reportes com prazos. O SbD-ToE oferece o coração técnico-operacional: políticas, processos, testes, inventários, automação e evidências.
 
@@ -206,13 +206,13 @@ O resultado é estável:
 
 Assim, o SbD-ToE mantém-se útil na prática diária, e a NIS2 acrescenta a camada de formalidade regulatória e supervisão. Juntos, oferecem um percurso de conformidade mais sustentável do que uma leitura puramente checklist.
 
-### Setor, âmbito e sanções
+### Setor, âmbito e sanções {#setor-âmbito-e-sanções}
 
 A NIS2 alarga o âmbito para 18 setores (Anexos I/II) e reforça a distinção entre essenciais e importantes. Em muitos países, há registos nacionais e prazos de autoregisto para entidades abrangidas; acompanhar trackers oficiais ajuda a implementar as especificidades locais.
 
 Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membros transpõem: até 10M€ ou 2% do volume de negócios mundial para essenciais e até 7M€ ou 1,4% para importantes (o que for mais elevado).
 
-### Referências
+### Referências {#referências}
 
 - **Diretiva NIS2**: Diretiva (UE) 2022/2555 (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555))
 - **Art. 20** - Responsabilidade do órgão de gestão e obrigação de formação.

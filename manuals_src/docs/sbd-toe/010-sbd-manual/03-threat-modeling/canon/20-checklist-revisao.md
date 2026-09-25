@@ -21,7 +21,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                  | Verificado? |
 |-------------------------------------------------------------------------------------------------------|-------------|
@@ -43,7 +43,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Este checklist pode ser integrado em **revisões de arquitetura, gates de release, pipelines CI/CD ou sessões de planeamento de sprint.**
 - Cada item deve ser validado com **evidência objetiva**: modelos DFD, ficheiros STRIDE, comentários em PRs, links para requisitos no backlog, registos de sessões, etc.
@@ -52,7 +52,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## ✅ Conformidade e KPI
+## ✅ Conformidade e KPI {#-conformidade-e-kpi}
 
 - A validação deste checklist permite declarar **conformidade com o Capítulo 3 - Threat Modeling**.
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**.

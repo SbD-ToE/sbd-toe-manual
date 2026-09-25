@@ -18,7 +18,7 @@ Garantir que todos os projetos IaC são desenhados e mantidos com base em princ�
 
 ---
 
-## 📌 Princípios essenciais aplicáveis a projetos IaC
+## 📌 Princípios essenciais aplicáveis a projetos IaC {#-princípios-essenciais-aplicáveis-a-projetos-iac}
 
 | Princípio                   | Aplicação prática no contexto IaC                                                                             |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ Garantir que todos os projetos IaC são desenhados e mantidos com base em princ�
 
 ---
 
-## ⚠️ Código não confiável por origem
+## ⚠️ Código não confiável por origem {#️-código-não-confiável-por-origem}
 
 Qualquer código IaC que seja:
 
@@ -56,7 +56,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 
 ---
 
-## 📋 O que deve ser feito
+## 📋 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. Definir e aplicar um layout estruturado para o repositório, com separação lógica de ambientes;
 2. Usar tags obrigatórias (ambiente, owner, tipo, criticidade) em todos os recursos provisionados;
@@ -70,7 +70,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 
 ---
 
-## ⚙️ Técnicas e ferramentas
+## ⚙️ Técnicas e ferramentas {#️-técnicas-e-ferramentas}
 
 | Técnica / Ferramenta      | Aplicação prática                                                          |
 | ------------------------- | -------------------------------------------------------------------------- |
@@ -84,7 +84,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 
 ---
 
-## 🕒 Quando aplicar
+## 🕒 Quando aplicar {#-quando-aplicar}
 
 | Fase do ciclo de vida   | Ação esperada                                                 |
 | ----------------------- | ------------------------------------------------------------- |
@@ -96,7 +96,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 
 ---
 
-## 👥 Perfis envolvidos
+## 👥 Perfis envolvidos {#-perfis-envolvidos}
 
 | Perfil             | Responsabilidades                                                  |
 | ------------------ | ------------------------------------------------------------------ |
@@ -107,7 +107,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 
 ---
 
-## 🧪 Exemplos práticos
+## 🧪 Exemplos práticos {#-exemplos-práticos}
 
 * Diretório `envs/prod/` com ficheiro `main.tf`, onde `variable "environment"` é obrigatória;
 * Tagging obrigatório em recursos como `aws_instance`, `aws_s3_bucket`, validado por OPA;
@@ -123,7 +123,7 @@ deny[msg] {
 
 ---
 
-## ✅ Benefícios diretos
+## ✅ Benefícios diretos {#-benefícios-diretos}
 
 * Redução do risco estrutural nos ambientes geridos por IaC;
 * Prevenção de exposição involuntária de topologia e permissões;
@@ -132,7 +132,7 @@ deny[msg] {
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                                       | Relação                                      |
 | ----------------------------------------------- | -------------------------------------------- |

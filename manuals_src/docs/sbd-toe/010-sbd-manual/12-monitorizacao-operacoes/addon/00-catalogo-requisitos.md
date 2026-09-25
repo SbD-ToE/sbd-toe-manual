@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Monitorização e Operações
 
-## Âmbito: o programa de monitorização como controlo operacional
+## Âmbito: o programa de monitorização como controlo operacional {#âmbito-o-programa-de-monitorização-como-controlo-operacional}
 
 Este catálogo cobre **requisitos do programa de monitorização e operações de segurança** - os controlos que garantem visibilidade contínua sobre o estado de segurança em produção, capacidade de deteção de eventos anómalos e integração com processos formais de resposta a incidentes.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-OPS-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo OPS - Monitorização e Operações
+## Catálogo OPS - Monitorização e Operações {#catálogo-ops---monitorização-e-operações}
 
 Requisitos que garantem que a organização tem visibilidade operacional efectiva sobre os seus sistemas em produção, com capacidade de deteção, correlação e resposta proporcionais ao risco.
 
@@ -62,7 +62,7 @@ Requisitos que garantem que a organização tem visibilidade operacional efectiv
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **OPS-001 vs LOG- (Cap. 02)**: LOG- define o que a aplicação deve registar e como proteger a integridade dos logs - são requisitos do software. OPS-001 define que esses logs devem ser persistidos e acessíveis na infraestrutura de monitorização - é um requisito do programa operacional. Ambos são necessários e complementares.
 - **OPS-002**: O catálogo de eventos críticos deve ser definido em colaboração com as equipas de desenvolvimento e AppSec - são elas que sabem quais os eventos de negócio com implicações de segurança relevantes. Um SIEM a receber logs sem um catálogo de eventos críticos é observabilidade sem deteção.

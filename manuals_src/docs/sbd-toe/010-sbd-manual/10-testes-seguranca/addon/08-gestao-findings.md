@@ -9,7 +9,7 @@ sidebar_position: 9
 
 # Gestão de Findings de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer um processo eficaz e contínuo para gerir findings de segurança - isto é, **resultados de testes que indicam potenciais vulnerabilidades ou más práticas**, assegurando:
 
@@ -23,7 +23,7 @@ Estabelecer um processo eficaz e contínuo para gerir findings de segurança - i
 
 ---
 
-## 🔍 O que são findings de segurança
+## 🔍 O que são findings de segurança {#-o-que-são-findings-de-segurança}
 
 Findings podem resultar de:
 
@@ -43,7 +43,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Centralizar todos os findings num sistema consolidado** (ex: DefectDojo, Jira com plugins, Vulcan, Security Hub);
 2. **Criar critérios objetivos de triagem** (ex: CWE, OWASP Top 10, risco organizacional);
@@ -56,7 +56,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Usar plataformas como **DefectDojo**, **Vulcan**, **Security Hub** ou soluções integradas para centralização;
 - Classificar findings por risco (L1–L3) e ajustar processo:
@@ -69,7 +69,7 @@ Cada finding representa uma **observação de risco** que requer decisão:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                        |
 |--------------------------------|------------------------------------------------|

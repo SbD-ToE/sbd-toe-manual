@@ -9,7 +9,7 @@ sidebar_position: 31
 
 # Política de Gestão de Alertas
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **gestão do ciclo de vida completo de alertas** - desde a configuração e classificação, passando pelo SLA de resposta e escalonamento, até à calibração e eliminação de alertas que não cumprem o seu propósito.
 
@@ -25,13 +25,13 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todos os alertas de segurança e operacionais configurados nos sistemas de monitorização, SIEM, APM e plataformas de on-call da organização.
 
 ---
 
-## 3. Classificação de alertas
+## 3. Classificação de alertas {#3-classificação-de-alertas}
 
 Todos os alertas devem ser classificados por severidade, que determina o SLA de resposta e o canal de notificação:
 
@@ -44,7 +44,7 @@ Todos os alertas devem ser classificados por severidade, que determina o SLA de 
 
 ---
 
-## 4. Runbooks obrigatórios
+## 4. Runbooks obrigatórios {#4-runbooks-obrigatórios}
 
 Cada alerta configurado deve ter um **runbook** associado que guia a resposta:
 
@@ -61,7 +61,7 @@ Runbooks sem os campos mínimos ou com mais de 6 meses sem revisão são tratado
 
 ---
 
-## 5. Escalonamento automático
+## 5. Escalonamento automático {#5-escalonamento-automático}
 
 Quando o SLA de primeira resposta é excedido sem acção registada, o alerta deve ser escalado automaticamente:
 
@@ -74,11 +74,11 @@ A cadeia de escalonamento deve ser documentada e testada periodicamente (pelo me
 
 ---
 
-## 6. Prevenção de fadiga de alertas
+## 6. Prevenção de fadiga de alertas {#6-prevenção-de-fadiga-de-alertas}
 
 A fadiga de alertas é um risco operacional que deve ser monitorizado e gerido activamente:
 
-### 6.1 Métricas de qualidade de alertas
+### 6.1 Métricas de qualidade de alertas {#61-métricas-de-qualidade-de-alertas}
 
 As seguintes métricas devem ser acompanhadas mensalmente:
 
@@ -90,7 +90,7 @@ As seguintes métricas devem ser acompanhadas mensalmente:
 | Alertas sem acção em 24h | Número de alertas P3/P4 sem acção em 24h | &lt; 10% |
 | Volume total de alertas por dia | Indicador de ruído sistémico | Trend descendente ou estável |
 
-### 6.2 Critérios de intervenção
+### 6.2 Critérios de intervenção {#62-critérios-de-intervenção}
 
 Se as métricas de qualidade piorarem sistematicamente:
 
@@ -101,7 +101,7 @@ Se as métricas de qualidade piorarem sistematicamente:
 
 ---
 
-## 7. Alertas P1 em horas não laborais (on-call)
+## 7. Alertas P1 em horas não laborais (on-call) {#7-alertas-p1-em-horas-não-laborais-on-call}
 
 Para sistemas L2/L3, deve existir rotação de on-call que garante disponibilidade de resposta 24/7 para alertas P1:
 
@@ -112,7 +112,7 @@ Para sistemas L2/L3, deve existir rotação de on-call que garante disponibilida
 
 ---
 
-## 8. Revisão periódica do inventário de alertas
+## 8. Revisão periódica do inventário de alertas {#8-revisão-periódica-do-inventário-de-alertas}
 
 | Nível | Cadência | Âmbito |
 |---|---|---|
@@ -127,7 +127,7 @@ A revisão deve resultar em:
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -139,7 +139,7 @@ A revisão deve resultar em:
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -149,7 +149,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

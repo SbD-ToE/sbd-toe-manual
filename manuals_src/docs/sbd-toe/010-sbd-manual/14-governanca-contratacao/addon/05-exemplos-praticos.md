@@ -15,7 +15,7 @@ Inclui também a verificação de **formação obrigatória** para funções cr�
 
 ---
 
-## 📜 1. Exemplo de aprovação de exceção
+## 📜 1. Exemplo de aprovação de exceção {#-1-exemplo-de-aprovação-de-exceção}
 
 **Título:** [SEC] Aprovação de exceção de controlo de validação de entrada para app "GestDoc"
 
@@ -36,7 +36,7 @@ A aplicação utiliza uma framework legada sem suporte nativo a validação auto
 
 ---
 
-## 📄 2. Exemplo de onboarding de fornecedor
+## 📄 2. Exemplo de onboarding de fornecedor {#-2-exemplo-de-onboarding-de-fornecedor}
 
 **Título:** [ONB] Validação de fornecedor para integração de pagamento externo (serviço "XPay")
 
@@ -56,7 +56,7 @@ A aplicação utiliza uma framework legada sem suporte nativo a validação auto
 
 ---
 
-## 🔄 4. Exemplo de renovação contratual com revisão de requisitos
+## 🔄 4. Exemplo de renovação contratual com revisão de requisitos {#-4-exemplo-de-renovação-contratual-com-revisão-de-requisitos}
 
 **Título:** [REV] Revisão de cláusulas e requisitos na renovação do contrato com fornecedor “DataStore”
 
@@ -77,7 +77,7 @@ Contrato de licenciamento de software de armazenamento em cloud, utilizado por s
 
 ---
 
-## 🧪 5. Exemplo de exceção temporária com reavaliação planeada
+## 🧪 5. Exemplo de exceção temporária com reavaliação planeada {#-5-exemplo-de-exceção-temporária-com-reavaliação-planeada}
 
 **Título:** [SEC] Aprovação excecional para ausência de MFA na ferramenta de gestão de builds
 
@@ -97,7 +97,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 
 ---
 
-## 🛠️ 6. Exemplo de fornecedor rejeitado após onboarding incompleto
+## 🛠️ 6. Exemplo de fornecedor rejeitado após onboarding incompleto {#️-6-exemplo-de-fornecedor-rejeitado-após-onboarding-incompleto}
 
 **Título:** [ONB] Rejeição de fornecedor “CloudParser” para pipeline de transformação de dados
 
@@ -115,7 +115,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 
 ---
 
-## 📆 3. Template de registo de decisão de risco
+## 📆 3. Template de registo de decisão de risco {#-3-template-de-registo-de-decisão-de-risco}
 
 **Formato sugerido:** Jira / SharePoint / Excel rastreável
 
@@ -134,7 +134,7 @@ A ferramenta usada (BuilderX) não suporta autenticação multifator. O risco fo
 
 ---
 
-## ✅ Recomendações
+## ✅ Recomendações {#-recomendações}
 
 - Estes modelos devem ser **normalizados e reutilizados** entre projetos
 - Podem ser disponibilizados via templates em Confluence, Git ou ALM

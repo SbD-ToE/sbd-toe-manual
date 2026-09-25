@@ -18,26 +18,26 @@ Este addon prescreve como usar IA para acelerar e aumentar cobertura **sem subst
 
 ---
 
-## 1) Princípios canónicos
+## 1) Princípios canónicos {#1-princípios-canónicos}
 
-### P1 - IA é “assistente”, não “decisor”
+### P1 - IA é “assistente”, não “decisor” {#p1---ia-é-assistente-não-decisor}
 A IA pode propor: triagens, hipóteses, priorização, caminhos de reprodução, patch candidates, testes.  
 A decisão final (corrigir/aceitar/suprimir/defer) é sempre humana e rastreável - ver **US-12** e **US-13** no lifecycle.
 
-### P2 - Evidência tem de ser reprodutível sem IA
+### P2 - Evidência tem de ser reprodutível sem IA {#p2---evidência-tem-de-ser-reprodutível-sem-ia}
 Qualquer finding confirmado tem de poder ser reproduzido por:
 - teste automatizado (regressão),
 - PoC mínima,
 - log/artefacto determinístico (SARIF, HTTP transcript, crash dump, etc.).
 
-### P3 - Dados sensíveis nunca entram “às cegas” num modelo
+### P3 - Dados sensíveis nunca entram “às cegas” num modelo {#p3---dados-sensíveis-nunca-entram-às-cegas-num-modelo}
 Prompts e contextos devem respeitar:
 - minimização (apenas o necessário),
 - redacção/masking,
 - segregação de segredos (nunca colar tokens/headers reais),
 - política organizacional de uso de IA (ver anexo transversal de políticas).
 
-### P4 - Risco “modelo/supply chain” também é risco de segurança
+### P4 - Risco “modelo/supply chain” também é risco de segurança {#p4---risco-modelosupply-chain-também-é-risco-de-segurança}
 Ferramentas de IA (cloud ou local) fazem parte da cadeia de confiança.
 Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 - versionamento do modelo/config,
@@ -47,9 +47,9 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-## 2) Casos de uso recomendados (e como fazer com segurança)
+## 2) Casos de uso recomendados (e como fazer com segurança) {#2-casos-de-uso-recomendados-e-como-fazer-com-segurança}
 
-### 2.1 Triagem assistida (SAST/DAST/IAST/SCA/Fuzzing)
+### 2.1 Triagem assistida (SAST/DAST/IAST/SCA/Fuzzing) {#21-triagem-assistida-sastdastiastscafuzzing}
 **Objetivo:** reduzir tempo de análise e melhorar consistência da decisão.
 
 **Prática:**
@@ -73,7 +73,7 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-### 2.2 Geração assistida de testes de regressão de segurança
+### 2.2 Geração assistida de testes de regressão de segurança {#22-geração-assistida-de-testes-de-regressão-de-segurança}
 **Objetivo:** transformar findings corrigidos em proteção futura.
 
 **Prática:**
@@ -100,7 +100,7 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-### 2.3 Assistência para autenticação em DAST (scripts/flows)
+### 2.3 Assistência para autenticação em DAST (scripts/flows) {#23-assistência-para-autenticação-em-dast-scriptsflows}
 **Objetivo:** reduzir fricção em DAST autenticado e aumentar cobertura real.
 
 **Prática:**
@@ -116,7 +116,7 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-### 2.4 Fuzzing assistido por IA (corpora, mutações e priorização)
+### 2.4 Fuzzing assistido por IA (corpora, mutações e priorização) {#24-fuzzing-assistido-por-ia-corpora-mutações-e-priorização}
 **Objetivo:** aumentar capacidade de encontrar edge cases e crashes úteis.
 
 **Prática:**
@@ -136,7 +136,7 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-### 2.5 Consolidação e deduplicação de findings multi-ferramenta
+### 2.5 Consolidação e deduplicação de findings multi-ferramenta {#25-consolidação-e-deduplicação-de-findings-multi-ferramenta}
 **Objetivo:** reduzir ruído e melhorar rastreabilidade.
 
 **Prática:**
@@ -154,9 +154,9 @@ Devem existir controlos equivalentes aos aplicados a dependências e CI/CD:
 
 ---
 
-## 3) Controlos obrigatórios quando se usa IA em testes
+## 3) Controlos obrigatórios quando se usa IA em testes {#3-controlos-obrigatórios-quando-se-usa-ia-em-testes}
 
-### C1 - Registo mínimo de “interação com IA” (quando permitido)
+### C1 - Registo mínimo de “interação com IA” (quando permitido) {#c1---registo-mínimo-de-interação-com-ia-quando-permitido}
 Para decisões de severidade ≥ HIGH (L2/L3), registar:
 - objetivo do pedido,
 - contexto fornecido (redigido),
@@ -165,7 +165,7 @@ Para decisões de severidade ≥ HIGH (L2/L3), registar:
 
 > Se a política de privacidade impedir logging, registar pelo menos: “IA usada” + tipo de apoio + evidência determinística sem prompt.
 
-### C2 - Proteção contra prompt injection / conteúdo malicioso em artefactos
+### C2 - Proteção contra prompt injection / conteúdo malicioso em artefactos {#c2---proteção-contra-prompt-injection--conteúdo-malicioso-em-artefactos}
 Quando a IA é alimentada com:
 - logs,
 - outputs de scanners,
@@ -179,13 +179,13 @@ Mitigação:
 - execução em contexto “no tools / no network” sempre que possível,
 - validação humana.
 
-### C3 - Separação de ambientes e credenciais
+### C3 - Separação de ambientes e credenciais {#c3---separação-de-ambientes-e-credenciais}
 IA usada para testes que interagem com runtime:
 - só em staging isolado,
 - com contas técnicas dedicadas,
 - com segredos geridos por vault e nunca copiados.
 
-### C4 - Proibição de “auto-merge” de correções de segurança
+### C4 - Proibição de “auto-merge” de correções de segurança {#c4---proibição-de-auto-merge-de-correções-de-segurança}
 Qualquer patch gerado com IA:
 - requer revisão humana,
 - requer testes (incluindo regressão de segurança),
@@ -195,14 +195,14 @@ Qualquer patch gerado com IA:
 
 Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o sistema **inclui um agente AI em produção** (ou quando o agente é parte do processo de teste, e.g. um auditor de PR automatizado), precisamos de testar **o agente em si** — o mesmo princípio que aplica-se a qualquer outro componente crítico. A esta classe de testes chama-se *eval suites*; não substituem SAST/DAST/SCA, complementam-nos para a fatia agentic.
 
-#### Princípios das *eval suites*
+#### Princípios das *eval suites* {#princípios-das-eval-suites}
 
 1. **Regressão de prompt como regressão de funcionalidade.** Cada mudança ao *system prompt*, *skill file*, *agent file* ou versão do modelo é tratada como mudança que pode degradar o comportamento; corre-se a *eval suite* antes do *merge* — exactamente como corremos testes de regressão antes de mudanças de código.
 2. **Determinismo aproximado em ambiente de teste.** Modelos LLM não são determinísticos, mas em *eval* usa-se `temperature=0` ou parametrização equivalente, e medimos com tolerância explícita (e.g. *exact match* vs *semantic match* vs *embedding similarity > k*). A tolerância é declarada por teste.
 3. **Avaliação por domínio.** Cobre-se três classes mínimas: (a) **utilidade** — o agente cumpre a tarefa em casos esperados; (b) **segurança** — o agente recusa ou escala em casos hostis (prompt injection, jailbreak, off-policy); (c) **estabilidade** — o agente não degrada entre versões do modelo / prompt.
 4. **Suite versionada e mantida.** A *eval suite* tem o mesmo estatuto que a suite de testes do sistema — vive em VCS, evolui com o produto, é revista periodicamente.
 
-#### Composição mínima por nível
+#### Composição mínima por nível {#composição-mínima-por-nível}
 
 | Componente | A1 (assistente) | A2 (executa com confirmação) | A3 (autónomo + revert) | A4 (autónomo em prod) |
 |---|---|---|---|---|
@@ -212,21 +212,21 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 | **A/B testing** antes de promoção de skill | — | Recomendado | Obrigatório | Obrigatório (com critérios pré-acordados) |
 | **Test telemetry em produção** (correlacionar evals offline com sinais reais) | — | — | Recomendado | Obrigatório (cross-link Cap. 12) |
 
-#### Aterragem operacional
+#### Aterragem operacional {#aterragem-operacional}
 
 - **Eval suite vive em VCS** ao lado do código que opera o agente. Mudanças à suite seguem o mesmo *code review* que mudanças ao código.
 - **Corre em CI** antes do *merge* de mudanças a *system prompts*, *skill files*, *agent files*, ou após *bump* da versão do modelo. Falha bloqueia o *merge* (ou descida de nível de autonomia até estar resolvido).
 - **Resultados arquivados** com `eval_run_id` ligado a `mandate_ref` — auditoria pode reconstruir que versão da suite confirmou que nível de autonomia.
 - **Cobertura proporcional ao nível de autonomia** declarado no *mandate*. Subir nível sem *eval suite* à medida é proibido (cross-link Policy 38 §5.4).
 
-#### Anti-padrões
+#### Anti-padrões {#anti-padrões}
 
 - ❌ "*Vibe checks*" como única validação — corre alguns prompts manuais e dá-se por suficiente. Não fica registo, não detecta regressão.
 - ❌ *Eval suite* que nunca falha — sinal de cobertura insuficiente, não de excelência. Adiciona-se casos adversariais conhecidos para garantir cobertura útil.
 - ❌ Métricas agregadas sem inspecção do corpus — *score* alto pode esconder falhas catastróficas em sub-categorias críticas.
 - ❌ *Eval suite* num repositório separado da skill/prompt — abre porta a *drift* silencioso.
 
-#### Onde aterra no resto do manual
+#### Onde aterra no resto do manual {#onde-aterra-no-resto-do-manual}
 
 - **Cap. 02** — [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) exige nível de autonomia justificado; a *eval suite* é a evidência de que o nível é defensável.
 - **Cap. 07** — *eval run* obrigatório como *gate* antes de *merge* de mudanças a skill/prompt (cross-link US-19).
@@ -237,7 +237,7 @@ Os controlos C1–C4 cobrem o caso em que **a IA assiste** quem testa. Quando o 
 
 ---
 
-## 4) Integração explícita com este capítulo
+## 4) Integração explícita com este capítulo {#4-integração-explícita-com-este-capítulo}
 
 Este addon reforça diretamente:
 
@@ -247,7 +247,7 @@ Este addon reforça diretamente:
 
 ---
 
-## 5) Checklist de adoção (binário)
+## 5) Checklist de adoção (binário) {#5-checklist-de-adoção-binário}
 
 | Item | Sim/Não |
 |------|:------:|
@@ -262,7 +262,7 @@ Este addon reforça diretamente:
 
 ---
 
-## 6) Notas finais
+## 6) Notas finais {#6-notas-finais}
 
 A IA pode ser um multiplicador brutal de produtividade em testes de segurança - **se** for usada como acelerador de análise e geração de artefactos, e não como substituto de evidência e responsabilidade.
 

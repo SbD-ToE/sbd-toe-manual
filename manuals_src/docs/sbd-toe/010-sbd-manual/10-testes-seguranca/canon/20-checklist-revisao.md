@@ -20,7 +20,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                      | Verificado? |
 |-----------------------------------------------------------------------------------------------------------|-------------|
@@ -48,7 +48,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Este checklist pode ser integrado em **pipelines, revisões de release, auditorias internas ou gates de produção**;
 - Os resultados podem ser rastreados por **commit, release, aplicação ou equipa**;
@@ -58,7 +58,7 @@ Este checklist aplica-se a todas as aplicações que exigem validação de segur
 
 ---
 
-## ✅ Conformidade e KPI
+## ✅ Conformidade e KPI {#-conformidade-e-kpi}
 
 - A validação deste checklist permite declarar **conformidade com o Capítulo 10 - Testes de Segurança**;
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**;

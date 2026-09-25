@@ -26,7 +26,7 @@ Em concreto, este ficheiro estabelece como garantir que os módulos são:
 
 ---
 
-## 🧩 Princípio base: módulos como código não confiável por origem
+## 🧩 Princípio base: módulos como código não confiável por origem {#-princípio-base-módulos-como-código-não-confiável-por-origem}
 
 Independentemente de serem:
 
@@ -47,7 +47,7 @@ Este princípio alinha a governação de módulos IaC com práticas modernas de 
 
 ---
 
-## 📌 O que deve ser feito (prescrição mínima)
+## 📌 O que deve ser feito (prescrição mínima) {#-o-que-deve-ser-feito-prescrição-mínima}
 
 A organização **deve garantir**, no mínimo:
 
@@ -67,7 +67,7 @@ A organização **deve garantir**, no mínimo:
 
 ---
 
-## ⚙️ Como aplicar (mecanismos técnicos)
+## ⚙️ Como aplicar (mecanismos técnicos) {#️-como-aplicar-mecanismos-técnicos}
 
 | Dimensão                 | Prescrição                                                                 |
 | ------------------------ | -------------------------------------------------------------------------- |
@@ -82,7 +82,7 @@ A organização **deve garantir**, no mínimo:
 
 ---
 
-## 🔍 Validação e controlo reforçado para automação/assistência
+## 🔍 Validação e controlo reforçado para automação/assistência {#-validação-e-controlo-reforçado-para-automaçãoassistência}
 
 Quando módulos são:
 
@@ -100,7 +100,7 @@ devem aplicar-se **regras reforçadas**:
 
 ---
 
-## 🕒 Quando aplicar
+## 🕒 Quando aplicar {#-quando-aplicar}
 
 | Momento                             | Ação esperada                                         |
 | ----------------------------------- | ----------------------------------------------------- |
@@ -112,7 +112,7 @@ devem aplicar-se **regras reforçadas**:
 
 ---
 
-## 👥 Perfis envolvidos
+## 👥 Perfis envolvidos {#-perfis-envolvidos}
 
 | Papel              | Responsabilidade                                    |
 | ------------------ | --------------------------------------------------- |
@@ -124,7 +124,7 @@ devem aplicar-se **regras reforçadas**:
 
 ---
 
-## 🧪 Exemplos práticos
+## 🧪 Exemplos práticos {#-exemplos-práticos}
 
 **Referência segura a módulo externo**
 
@@ -158,7 +158,7 @@ ALLOW_MODULE_SOURCES = [
 
 ---
 
-## ⚖️ Proporcionalidade L1–L3
+## ⚖️ Proporcionalidade L1–L3 {#️-proporcionalidade-l1l3}
 
 | Controlo              | L1          | L2          | L3                             |
 | --------------------- | ----------- | ----------- | ------------------------------ |
@@ -171,7 +171,7 @@ ALLOW_MODULE_SOURCES = [
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                                       | Relação                                    |
 | ----------------------------------------------- | ------------------------------------------ |

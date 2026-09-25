@@ -8,7 +8,7 @@ tags: [planeamento, controlo, iac, segurança, validação, governação]
 
 # Validações Automáticas e Controlo de Qualidade no Projeto IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que **todas as alterações em projetos de Infraestrutura como Código (IaC)** são tratadas como **entrada não confiável**, sujeitas a **validações automáticas bloqueantes**, e acompanhadas de **evidência auditável** antes de qualquer aplicação em ambiente real.
 
@@ -25,7 +25,7 @@ Este ficheiro estabelece o **mínimo técnico obrigatório** para assegurar que 
 
 ---
 
-## 🧩 Princípio base: entrada não confiável por origem
+## 🧩 Princípio base: entrada não confiável por origem {#-princípio-base-entrada-não-confiável-por-origem}
 
 Em contexto moderno de engenharia, alterações de IaC podem ser produzidas por:
 - humanos,
@@ -48,7 +48,7 @@ Este princípio é operacionalizado por validações técnicas e gates definidos
 
 ---
 
-## 📌 O que deve ser feito (prescrição mínima)
+## 📌 O que deve ser feito (prescrição mínima) {#-o-que-deve-ser-feito-prescrição-mínima}
 
 A organização **deve garantir**, no mínimo:
 
@@ -63,7 +63,7 @@ A organização **deve garantir**, no mínimo:
 
 ---
 
-## ⚙️ Como aplicar (tipos de validação)
+## ⚙️ Como aplicar (tipos de validação) {#️-como-aplicar-tipos-de-validação}
 
 | Tipo de Validação | Finalidade técnica |
 |------------------|-------------------|
@@ -75,7 +75,7 @@ A organização **deve garantir**, no mínimo:
 | **Controlo de execução** | Impedir `apply` sem validação e aprovação |
 | **Evidência** | Garantir rastreabilidade decisão → execução |
 
-### Ferramentas e técnicas exemplificativas
+### Ferramentas e técnicas exemplificativas {#ferramentas-e-técnicas-exemplificativas}
 
 | Categoria | Exemplos |
 |---------|----------|
@@ -90,7 +90,7 @@ A organização **deve garantir**, no mínimo:
 
 ---
 
-## 🔍 Validação semântica do `plan` (obrigatória quando aplicável)
+## 🔍 Validação semântica do `plan` (obrigatória quando aplicável) {#-validação-semântica-do-plan-obrigatória-quando-aplicável}
 
 Para além da sintaxe, deve ser avaliado o **impacto real do `plan`**, incluindo:
 
@@ -106,7 +106,7 @@ Para além da sintaxe, deve ser avaliado o **impacto real do `plan`**, incluindo
 
 ---
 
-## 🧾 Evidência mínima obrigatória
+## 🧾 Evidência mínima obrigatória {#-evidência-mínima-obrigatória}
 
 Para que a validação seja auditável, a organização deve garantir:
 
@@ -122,7 +122,7 @@ Sem esta evidência, **não existe prova de controlo**, apenas execução técni
 
 ---
 
-## 🕒 Quando aplicar
+## 🕒 Quando aplicar {#-quando-aplicar}
 
 | Momento | Validações esperadas |
 |-------|----------------------|
@@ -134,7 +134,7 @@ Sem esta evidência, **não existe prova de controlo**, apenas execução técni
 
 ---
 
-## 👥 Perfis envolvidos
+## 👥 Perfis envolvidos {#-perfis-envolvidos}
 
 | Papel | Responsabilidade |
 |-----|------------------|
@@ -145,7 +145,7 @@ Sem esta evidência, **não existe prova de controlo**, apenas execução técni
 
 ---
 
-## 🧪 Exemplos práticos
+## 🧪 Exemplos práticos {#-exemplos-práticos}
 
 - Pipeline bloqueado por `tfsec` em permissões IAM demasiado amplas;
 - `checkov` a impedir merge por bucket sem cifragem;
@@ -155,7 +155,7 @@ Sem esta evidência, **não existe prova de controlo**, apenas execução técni
 
 ---
 
-## ✅ Checklist de controlo (por projeto)
+## ✅ Checklist de controlo (por projeto) {#-checklist-de-controlo-por-projeto}
 
 - [ ] Todas as alterações são tratadas como entrada não confiável
 - [ ] Validações automáticas são bloqueantes
@@ -166,7 +166,7 @@ Sem esta evidência, **não existe prova de controlo**, apenas execução técni
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento | Relação |
 |---------|---------|

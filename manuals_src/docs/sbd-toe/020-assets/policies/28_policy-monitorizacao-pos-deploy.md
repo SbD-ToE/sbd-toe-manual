@@ -9,7 +9,7 @@ sidebar_position: 28
 
 # Política de Monitorização Pós-Deploy
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos de **monitorização activa após cada deploy em produção**, cobrindo a janela de observação obrigatória, as métricas e alertas mínimos, a validação humana e os critérios de activação automática de rollback.
 
@@ -26,7 +26,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -36,7 +36,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Janela de observação pós-deploy
+## 3. Janela de observação pós-deploy {#3-janela-de-observação-pós-deploy}
 
 Após cada deploy em produção, deve existir uma janela de observação activa durante a qual a equipa de operações monitoriza activamente o comportamento da nova versão:
 
@@ -50,7 +50,7 @@ Durante deploys com rollout progressivo (canary, blue-green), a janela de observ
 
 ---
 
-## 4. Métricas de saúde mínimas
+## 4. Métricas de saúde mínimas {#4-métricas-de-saúde-mínimas}
 
 As seguintes métricas devem estar configuradas e a ser monitorizadas durante a janela de observação pós-deploy:
 
@@ -67,7 +67,7 @@ Os thresholds específicos devem ser calibrados por serviço com base no comport
 
 ---
 
-## 5. Alertas e encaminhamento
+## 5. Alertas e encaminhamento {#5-alertas-e-encaminhamento}
 
 Os alertas de pós-deploy devem estar configurados antes de qualquer deploy em produção - não configurados após deteção de problema:
 
@@ -81,7 +81,7 @@ Os alertas de pós-deploy devem estar configurados antes de qualquer deploy em p
 
 ---
 
-## 6. Critérios de activação de rollback pós-deploy
+## 6. Critérios de activação de rollback pós-deploy {#6-critérios-de-activação-de-rollback-pós-deploy}
 
 Os critérios de rollback automático devem estar pré-definidos e configurados para a janela de observação:
 
@@ -97,7 +97,7 @@ O rollback automático deve ser acompanhado de notificação imediata ao on-call
 
 ---
 
-## 7. Validação humana pós-deploy
+## 7. Validação humana pós-deploy {#7-validação-humana-pós-deploy}
 
 Em L2/L3, o deploy só é considerado concluído após validação humana explícita do estado de saúde:
 
@@ -108,7 +108,7 @@ Em L2/L3, o deploy só é considerado concluído após validação humana explí
 
 ---
 
-## 8. Dashboards de monitorização pós-deploy
+## 8. Dashboards de monitorização pós-deploy {#8-dashboards-de-monitorização-pós-deploy}
 
 Os dashboards de monitorização devem estar configurados e actualizados antes de cada deploy:
 
@@ -119,7 +119,7 @@ Os dashboards de monitorização devem estar configurados e actualizados antes d
 
 ---
 
-## 9. Extensão da janela de observação
+## 9. Extensão da janela de observação {#9-extensão-da-janela-de-observação}
 
 Se durante a janela de observação forem detectadas anomalias que não atingem o threshold de rollback mas causam incerteza, a janela deve ser estendida:
 
@@ -129,7 +129,7 @@ Se durante a janela de observação forem detectadas anomalias que não atingem 
 
 ---
 
-## 10. Rastreabilidade
+## 10. Rastreabilidade {#10-rastreabilidade}
 
 Cada evento relevante durante a janela de observação deve ser registado:
 
@@ -143,7 +143,7 @@ Cada evento relevante durante a janela de observação deve ser registado:
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -155,7 +155,7 @@ Cada evento relevante durante a janela de observação deve ser registado:
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -165,7 +165,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

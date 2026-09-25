@@ -10,7 +10,7 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 
 # Cláusulas Contratuais de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Fornecer um conjunto de **cláusulas contratuais reutilizáveis e proporcionais ao risco**, adaptáveis ao tipo de contratação, para garantir que os requisitos de segurança são **formalmente exigidos, rastreáveis e auditáveis**.
 
@@ -23,7 +23,7 @@ Estas cláusulas devem:
 
 ---
 
-## 📘 O que são cláusulas contratuais de segurança
+## 📘 O que são cláusulas contratuais de segurança {#-o-que-são-cláusulas-contratuais-de-segurança}
 
 São disposições formais incorporadas nos contratos com fornecedores, parceiros ou contratados, que visam garantir a **conformidade com requisitos técnicos, legais e organizacionais de segurança**, incluindo:
 
@@ -41,11 +41,11 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
-### 🧩 Por tipo de contrato
+### 🧩 Por tipo de contrato {#-por-tipo-de-contrato}
 
-#### 🏷️ SaaS / Serviços geridos
+#### 🏷️ SaaS / Serviços geridos {#️-saas--serviços-geridos}
 
 | Tema                    | Cláusula sugerida                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 | Incidentes              | Notificação de incidentes de segurança no prazo máximo de 24h após deteção.                      |
 | Auditoria / evidência   | Direito da organização a solicitar evidência de controlos ou realizar auditorias formais.         |
 
-#### 🛠️ Outsourcing de desenvolvimento
+#### 🛠️ Outsourcing de desenvolvimento {#️-outsourcing-de-desenvolvimento}
 
 | Tema                    | Cláusula sugerida                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------|
@@ -64,7 +64,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 | Revisões de segurança   | Aceitação de revisões de código e arquitetura pela equipa de segurança da organização.            |
 | Propriedade intelectual | Código-fonte e documentação de segurança são propriedade da organização contratante.             |
 
-#### 👥 Desenvolvimento interno (contratados ou equipas mistas)
+#### 👥 Desenvolvimento interno (contratados ou equipas mistas) {#-desenvolvimento-interno-contratados-ou-equipas-mistas}
 
 | Tema                    | Cláusula sugerida                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------|
@@ -73,7 +73,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 | Responsabilidades       | Aplicação dos requisitos de segurança atribuídos via tickets documentados.                       |
 | Rastreabilidade         | Registo completo do trabalho ligado a tarefas e validações de segurança.                         |
 
-#### 💽 Contratos de licenciamento (software externo)
+#### 💽 Contratos de licenciamento (software externo) {#-contratos-de-licenciamento-software-externo}
 
 | Tema                    | Cláusula sugerida                                                                                 |
 |-------------------------|--------------------------------------------------------------------------------------------------|
@@ -84,7 +84,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 
 ---
 
-## 📊 Cláusulas adicionais por nível de risco
+## 📊 Cláusulas adicionais por nível de risco {#-cláusulas-adicionais-por-nível-de-risco}
 
 | Nível de Risco | Cláusulas adicionais recomendadas                                                                      |
 |----------------|--------------------------------------------------------------------------------------------------------|
@@ -96,7 +96,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 
 ---
 
-## 📋 Campos recomendados por cláusula
+## 📋 Campos recomendados por cláusula {#-campos-recomendados-por-cláusula}
 
 Cada cláusula deve incluir:
 
@@ -110,7 +110,7 @@ Cada cláusula deve incluir:
 
 ---
 
-## 📂 Integração com procurement e jurídico
+## 📂 Integração com procurement e jurídico {#-integração-com-procurement-e-jurídico}
 
 - Disponibilizar cláusulas em **formato modular** (blocos por tipo e por risco);
 - Manter repositório de versões validadas (ex: Git, Confluence, SharePoint);
@@ -119,7 +119,7 @@ Cada cláusula deve incluir:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Preferir cláusulas **objetivas, auditáveis e proporcionais ao risco**;
 - Evitar linguagem vaga ou genérica sem critérios de validação;
@@ -129,7 +129,7 @@ Cada cláusula deve incluir:
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo                 | Relação com cláusulas contratuais                   |
 |--------------------------------------|-----------------------------------------------------|

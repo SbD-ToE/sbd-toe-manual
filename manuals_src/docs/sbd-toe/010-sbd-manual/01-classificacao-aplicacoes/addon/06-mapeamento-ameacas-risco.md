@@ -20,7 +20,7 @@ No *Security by Design – Theory of Everything (SbD-ToE)*, as ameaças **não d
 
 ---
 
-## 🧠 Enquadramento no modelo SbD-ToE
+## 🧠 Enquadramento no modelo SbD-ToE {#-enquadramento-no-modelo-sbd-toe}
 
 O papel do mapeamento de ameaças no SbD-ToE é **complementar e validatório**:
 
@@ -35,7 +35,7 @@ O papel do mapeamento de ameaças no SbD-ToE é **complementar e validatório**:
 
 ---
 
-## 🛡️ Porque mapear ameaças
+## 🛡️ Porque mapear ameaças {#️-porque-mapear-ameaças}
 
 O mapeamento sistemático de ameaças permite:
 
@@ -46,7 +46,7 @@ O mapeamento sistemático de ameaças permite:
 
 ---
 
-## 🧩 Catálogos de ameaças relevantes
+## 🧩 Catálogos de ameaças relevantes {#-catálogos-de-ameaças-relevantes}
 
 Os seguintes modelos são reconhecidos no SbD-ToE como fontes válidas de ameaça:
 
@@ -62,7 +62,7 @@ Os seguintes modelos são reconhecidos no SbD-ToE como fontes válidas de ameaç
 
 ---
 
-## 🧩 Exemplo: STRIDE como validação de risco
+## 🧩 Exemplo: STRIDE como validação de risco {#-exemplo-stride-como-validação-de-risco}
 
 | Categoria STRIDE       | Ameaça típica                    | Risco validado                       | Controlos associados                |
 |------------------------|----------------------------------|--------------------------------------|------------------------------------|
@@ -75,7 +75,7 @@ Este mapeamento confirma que os riscos identificados **têm correspondência dir
 
 ---
 
-## 🧩 Uso de ATT&CK para validação de exposição
+## 🧩 Uso de ATT&CK para validação de exposição {#-uso-de-attck-para-validação-de-exposição}
 
 | Técnica ATT&CK            | Vetor de ataque                | Risco associado                 | Controlos típicos                 |
 |---------------------------|-------------------------------|----------------------------------|----------------------------------|
@@ -88,7 +88,7 @@ ATT&CK é particularmente útil para validar se **a exposição assumida no mode
 
 ---
 
-## 🔐 Ligação com controlos e risco residual
+## 🔐 Ligação com controlos e risco residual {#-ligação-com-controlos-e-risco-residual}
 
 Cada ameaça mapeada deve resultar em:
 
@@ -102,7 +102,7 @@ Quando uma ameaça relevante **não tem controlo eficaz**, o risco residual:
 
 ---
 
-## ⚠️ Regras normativas
+## ⚠️ Regras normativas {#️-regras-normativas}
 
 - Todo o risco identificado **deve ser validável** por pelo menos uma ameaça conhecida.
 - A aceitação de risco **não é válida** se ameaças plausíveis permanecerem sem controlo eficaz.
@@ -110,7 +110,7 @@ Quando uma ameaça relevante **não tem controlo eficaz**, o risco residual:
 
 ---
 
-## 🔄 Integração no ciclo de vida
+## 🔄 Integração no ciclo de vida {#-integração-no-ciclo-de-vida}
 
 O mapeamento de ameaças deve ser revisto:
 
@@ -121,7 +121,7 @@ O mapeamento de ameaças deve ser revisto:
 
 ---
 
-## 📌 Nota final
+## 📌 Nota final {#-nota-final}
 
 O mapeamento de ameaças não serve para “listar ataques”,  
 serve para **ancorar a análise de risco na realidade técnica**.

@@ -12,13 +12,13 @@ tags: [excecoes, governacao, iac, controlo, opa, enforcement]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a políticas e controlos de segurança aplicados por policy engines (OPA, Sentinel, Rego) sobre módulos, recursos e pipelines IaC - requisitos `IAC-001` a `IAC-013`.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - ferramenta de validação IaC indisponível com necessidade de deploy documentada como urgente;
 - requisito tecnicamente impossível de aplicar ao módulo ou recurso em causa, com justificação de arquitectura;
@@ -27,7 +27,7 @@ Excepções a políticas e controlos de segurança aplicados por policy engines 
 
 ---
 
-## Campos adicionais obrigatórios (IaC)
+## Campos adicionais obrigatórios (IaC) {#campos-adicionais-obrigatórios-iac}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -37,7 +37,7 @@ Excepções a políticas e controlos de segurança aplicados por policy engines 
 
 ---
 
-## Registo no repositório
+## Registo no repositório {#registo-no-repositório}
 
 **Ficheiro:** directório `exceptions/` no repositório IaC, ou repositório central dedicado com equivalência rastreável.
 
@@ -63,7 +63,7 @@ validade: "2025-07-20"
 
 ---
 
-## Integração com policy engines
+## Integração com policy engines {#integração-com-policy-engines}
 
 - Excepções são avaliadas **por regra e por contexto** - não desactivam regras globalmente;
 - Policy engines (OPA/Sentinel/Rego) devem ser configurados para interpretar excepções activas como contexto de avaliação;
@@ -71,7 +71,7 @@ validade: "2025-07-20"
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

@@ -13,7 +13,7 @@ Este capítulo mostra, de forma prescritiva e integrada, como aplicar controlos 
 
 ---
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 Os riscos associados a containers surgem em diferentes momentos: na escolha da imagem base, na forma como é construída, nas políticas aplicadas em produção e até na reação a incidentes.  
 A tabela seguinte sintetiza **quando cada prática deve ser aplicada** e qual a justificação que suporta a sua necessidade.
@@ -28,7 +28,7 @@ A tabela seguinte sintetiza **quando cada prática deve ser aplicada** e qual a 
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A segurança em containers exige uma **responsabilidade partilhada**.  
 Cada papel contribui com uma parte da cadeia de confiança, e apenas a colaboração entre equipas garante que o ciclo de vida se mantém íntegro.
@@ -42,7 +42,7 @@ Cada papel contribui com uma parte da cadeia de confiança, e apenas a colabora�
 
 ---
 
-## ✅ Gates de decisão humana e evidência mínima
+## ✅ Gates de decisão humana e evidência mínima {#-gates-de-decisão-humana-e-evidência-mínima}
 
 Neste capítulo, os mecanismos automáticos (scanners, linters, policies, assinaturas, SBOM) produzem **sinais técnicos**.  
 A **autorização de uso**, a **promoção entre ambientes** e a **concessão de exceções** são sempre decisões humanas explícitas, rastreáveis e limitadas no tempo.
@@ -58,9 +58,9 @@ Os user stories US-15 a US-17 operacionalizam estes gates.
 
 ---
 
-## 📖 User Stories Reutilizáveis
+## 📖 User Stories Reutilizáveis {#-user-stories-reutilizáveis}
 
-### US-01 - Construção de imagens a partir de bases seguras, minimalistas e pinned por digest
+### US-01 - Construção de imagens a partir de bases seguras, minimalistas e pinned por digest {#us-01---construção-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest}
 
 **Contexto.**  
 Imagens construídas sobre bases não confiáveis ou com versões flutuantes herdam vulnerabilidades. O ponto de partida é crítico para toda a cadeia de confiança.
@@ -112,7 +112,7 @@ Como **Dev Team**, quero construir imagens a partir de bases confiáveis, versio
 
 ---
 
-### US-02 - Validação automática de vulnerabilidades em imagens no pipeline CI/CD
+### US-02 - Validação automática de vulnerabilidades em imagens no pipeline CI/CD {#us-02---validação-automática-de-vulnerabilidades-em-imagens-no-pipeline-cicd}
 
 **Contexto.**  
 Vulnerabilidades descobertas tarde no ciclo têm custo exponencial. Shift-left é imperativo: identificar CVEs durante a build, não em produção.
@@ -163,7 +163,7 @@ Como **DevOps / SRE**, quero que o pipeline execute scanners de vulnerabilidades
 
 ---
 
-### US-03 - Assinatura e verificação de proveniência de imagens com Cosign e Rekor
+### US-03 - Assinatura e verificação de proveniência de imagens com Cosign e Rekor {#us-03---assinatura-e-verificação-de-proveniência-de-imagens-com-cosign-e-rekor}
 
 **Contexto.**  
 Sem proveniência verificável, imagens podem ser adulteradas ou substituídas. A assinatura é o segundo pilar da confiança (após a construção segura).
@@ -219,7 +219,7 @@ Como **AppSec Engineer**, quero que todas as imagens produzidas sejam assinadas 
 
 ---
 
-### US-04 - Aplicação de políticas formais de segurança no runtime com OPA/Kyverno
+### US-04 - Aplicação de políticas formais de segurança no runtime com OPA/Kyverno {#us-04---aplicação-de-políticas-formais-de-segurança-no-runtime-com-opakyverno}
 
 **Contexto.**  
 Um container sem restrições de execução expande a superfície de ataque exponencialmente. Políticas formais garantem conformidade automática com baseline de segurança.
@@ -270,7 +270,7 @@ Como **DevOps / SRE**, quero que todas as execuções de containers em Kubernete
 
 ---
 
-### US-05 - Monitorização e Resposta a Incidentes em Runtime
+### US-05 - Monitorização e Resposta a Incidentes em Runtime {#us-05---monitorização-e-resposta-a-incidentes-em-runtime}
 
 **Contexto.**  
 Ataques de runtime só são detetados com monitorização ativa contínua. Ausência de alertas permite persistência silenciosa de comprometimentos.
@@ -325,7 +325,7 @@ Como **AppSec + GRC**, quero monitorizar comportamento de containers em execuç�
 
 ---
 
-### US-06 - Geração e Rastreabilidade de SBOM em Imagens
+### US-06 - Geração e Rastreabilidade de SBOM em Imagens {#us-06---geração-e-rastreabilidade-de-sbom-em-imagens}
 
 **Contexto.**  
 Sem SBOM, não há visibilidade sobre componentes presentes nem análise rápida de impacto de CVEs. SBOM é prerequisito para supply chain integrity.
@@ -381,7 +381,7 @@ Como **DevOps / SRE**, quero gerar SBOM (Software Bill of Materials) automaticam
 
 ---
 
-### US-07 - Governação de Registries com Allowlist e Digest-Only
+### US-07 - Governação de Registries com Allowlist e Digest-Only {#us-07---governação-de-registries-com-allowlist-e-digest-only}
 
 **Contexto.**  
 Pulls de registries não confiáveis ou com tags mutáveis expõem a cadeia de fornecimento a ataques de typosquatting e image tampering. Governance forma é imperativa.
@@ -435,7 +435,7 @@ Como **DevOps + AppSec**, quero impor allowlist de registries confiáveis e ***e
 
 ---
 
-### US-08 - Gestão de Segredos Fora da Imagem com OIDC e Workload Identity
+### US-08 - Gestão de Segredos Fora da Imagem com OIDC e Workload Identity {#us-08---gestão-de-segredos-fora-da-imagem-com-oidc-e-workload-identity}
 
 **Contexto.**  
 Segredos embebidos em imagens criam exposição difícil de revogar. Credenciais long-lived em pipelines são vulneráveis a comprometimento. Workload identity efémera é o padrão moderno.
@@ -490,7 +490,7 @@ Como **DevOps / SRE**, quero proibir credenciais estáticas em imagens e usar id
 
 ---
 
-### US-09 - RBAC Mínimo e ServiceAccounts Dedicadas
+### US-09 - RBAC Mínimo e ServiceAccounts Dedicadas {#us-09---rbac-mínimo-e-serviceaccounts-dedicadas}
 
 **Contexto.**  
 Workloads com permissões excessivas ou usando default ServiceAccount ampliam impacto de compromisso. RBAC mínimo reduz "blast radius" de falhas de segurança.
@@ -544,7 +544,7 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 
 ---
 
-### US-10 - Segmentação de Rede e NetworkPolicy
+### US-10 - Segmentação de Rede e NetworkPolicy {#us-10---segmentação-de-rede-e-networkpolicy}
 
 **Contexto.**  
 Sem segmentação de rede, workloads comprometidos exfiltram dados e propagam ataques lateralmente. NetworkPolicy implementa zero-trust de rede, bloqueando fluxos não-autorizados.
@@ -596,7 +596,7 @@ Como **DevOps / SRE**, quero aplicar NetworkPolicy com ingress/egress explícito
 
 ---
 
-### US-11 - Golden Base Images com Patching Automático
+### US-11 - Golden Base Images com Patching Automático {#us-11---golden-base-images-com-patching-automático}
 
 **Contexto.**  
 Bases heterogéneas aumentam custo operacional e risco de configuração. SLA de patching assegura que vulnerabilidades não se propagam.
@@ -648,7 +648,7 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 
 ---
 
-### US-12 - Builders e Runners Ephemerais, Assinados e com Auditoria
+### US-12 - Builders e Runners Ephemerais, Assinados e com Auditoria {#us-12---builders-e-runners-ephemerais-assinados-e-com-auditoria}
 
 **Contexto.**  
 Builders comprometidos comprometem todas as releases. Runners partilhados ou persistentes são pontos críticos de ataque na supply chain. Rastreabilidade é essencial para investigação pós-incidente.
@@ -705,7 +705,7 @@ Como **DevOps/AppSec**, quero que builders e runners sejam mínimos, ephemerais 
 
 ---
 
-### US-13 - Enforcement Centralizado e Auditável de Políticas no Runtime
+### US-13 - Enforcement Centralizado e Auditável de Políticas no Runtime {#us-13---enforcement-centralizado-e-auditável-de-políticas-no-runtime}
 
 **Contexto.**  
 Para garantir que políticas são aplicadas de forma sistemática e que violações são rastreadas, é necessário enforcement formal com logs centralizados e revisão periódica.
@@ -760,7 +760,7 @@ Como **DevOps/AppSec**, quero que o enforcement de políticas de segurança seja
 
 ---
 
-### US-14 - Sandboxing Avançado com gVisor/Kata para Workloads Críticas
+### US-14 - Sandboxing Avançado com gVisor/Kata para Workloads Críticas {#us-14---sandboxing-avançado-com-gvisorkata-para-workloads-críticas}
 
 **Contexto.**  
 Aplicações que processam dados críticos (pagamentos, dados pessoais) exigem isolamento reforçado para proteção contra escalada de privilégios ou acesso ao host.
@@ -813,7 +813,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero configurar sandboxes avançados (
 
 ---
 
-### US-15 - Aprovação, depreciação e revogação de Golden Base Images (catálogo organizacional)
+### US-15 - Aprovação, depreciação e revogação de Golden Base Images (catálogo organizacional) {#us-15---aprovação-depreciação-e-revogação-de-golden-base-images-catálogo-organizacional}
 
 **Contexto.**  
 Imagens base aprovadas são **ativos de confiança organizacional**. A aprovação não é permanente: exige critérios, registo de decisão, cadência de revisão e mecanismo de revogação rápida.
@@ -862,7 +862,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero gerir um catálogo de Golden Base
 
 ---
 
-### US-16 - Promoção por estágios com aprovação explícita e revalidação por ambiente
+### US-16 - Promoção por estágios com aprovação explícita e revalidação por ambiente {#us-16---promoção-por-estágios-com-aprovação-explícita-e-revalidação-por-ambiente}
 
 **Contexto.**  
 Promoções automáticas DEV→QA→PROD criam aceitação implícita de risco. Em L2/L3, cada promoção é uma decisão humana suportada por evidência, e a validação deve considerar o **contexto do ambiente**.
@@ -910,7 +910,7 @@ Como **Release Manager/DevOps + AppSec**, quero que a promoção de uma imagem e
 
 ---
 
-### US-17 - Exceções temporárias a findings/policies com TTL, compensações e revalidação
+### US-17 - Exceções temporárias a findings/policies com TTL, compensações e revalidação {#us-17---exceções-temporárias-a-findingspolicies-com-ttl-compensações-e-revalidação}
 
 **Contexto.**  
 Exceções são inevitáveis (false positives, constraints operacionais, janela de patch), mas são também um dos maiores vetores de falha de governação. Exceção sem TTL e sem evidência é aceitação implícita de risco.
@@ -959,7 +959,7 @@ Como **AppSec + GRC**, quero gerir exceções a findings/policies como decisões
 
 ---
 
-### US-18 - Pesos de modelo AI self-hosted tratados como ativo crítico
+### US-18 - Pesos de modelo AI self-hosted tratados como ativo crítico {#us-18---pesos-de-modelo-ai-self-hosted-tratados-como-ativo-crítico}
 
 Os pesos de um modelo servido internamente são o núcleo do produto materializado em bytes, não configuração.  
 
@@ -1005,7 +1005,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero que os pesos de modelos *self-hos
 
 ---
 
-### US-19 - Isolamento de GPU e separação de workloads de inferência sensíveis
+### US-19 - Isolamento de GPU e separação de workloads de inferência sensíveis {#us-19---isolamento-de-gpu-e-separação-de-workloads-de-inferência-sensíveis}
 
 Uma GPU partilhada sem isolamento explícito é um gap de postura, não uma otimização de custo neutra.  
 
@@ -1051,7 +1051,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero isolar o workload de inferência 
 
 ---
 
-### US-20 - Hardening da API e do container de inferência AI
+### US-20 - Hardening da API e do container de inferência AI {#us-20---hardening-da-api-e-do-container-de-inferência-ai}
 
 A "rede interna" inclui demasiados *principals* para ser a única fronteira de defesa de um *inference runtime*.  
 
@@ -1100,7 +1100,7 @@ Como **DevOps + AppSec**, quero que o container e a API de inferência apliquem 
 
 ---
 
-### US-21 - Perfis seccomp/AppArmor e verificação de drift de hardening
+### US-21 - Perfis seccomp/AppArmor e verificação de drift de hardening {#us-21---perfis-seccompapparmor-e-verificação-de-drift-de-hardening}
 
 Um *baseline* de hardening declarado mas não verificado em execução é confiança implícita, não controlo.  
 
@@ -1146,7 +1146,7 @@ Como **DevOps + AppSec**, quero impor perfis seccomp/AppArmor em todos os worklo
 
 ---
 
-### US-22 - Retenção e limpeza de imagens com renovação periódica por SLA
+### US-22 - Retenção e limpeza de imagens com renovação periódica por SLA {#us-22---retenção-e-limpeza-de-imagens-com-renovação-periódica-por-sla}
 
 Imagens obsoletas acumuladas no registry são superfície de ataque latente e custo de auditoria.  
 
@@ -1191,7 +1191,7 @@ Como **DevOps / SRE**, quero uma política de retenção/limpeza de imagens com 
 **Ligações úteis.** [Imagens Base Seguras](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base), [Inventário e SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers)
 
 ---
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 Cada prática deixa uma pegada verificável - os artefactos.  
 Sem eles, não há como provar conformidade nem realizar auditorias eficazes.  
@@ -1218,7 +1218,7 @@ A tabela seguinte consolida os principais outputs que devem estar presentes em q
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 A proporcionalidade garante que os controlos não são uniformes, mas sim ajustados ao risco real de cada aplicação.  
 Uma aplicação L1 não exige o mesmo investimento que uma aplicação crítica (L3).  
@@ -1244,7 +1244,7 @@ A tabela seguinte mostra como escalar cada prática.
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 A segurança de containers deve ser entendida como um **ciclo contínuo** e não como uma lista de verificações isoladas.  
 Mais importante do que aplicar controlos dispersos é garantir que estão integrados entre si, desde a seleção da imagem base até à resposta a incidentes em produção.

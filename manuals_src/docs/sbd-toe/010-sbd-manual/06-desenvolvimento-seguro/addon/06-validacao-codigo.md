@@ -15,7 +15,7 @@ Neste contexto, a validação de código deixa de ser uma boa prática opcional 
 
 ---
 
-## Código não é confiança - é input
+## Código não é confiança - é input {#código-não-é-confiança---é-input}
 
 Um dos pressupostos fundamentais deste capítulo é simples, mas estrutural:
 
@@ -33,7 +33,7 @@ O desenvolvimento seguro estende essa lógica ao próprio código produzido inte
 
 ---
 
-## Validação como processo, não como evento
+## Validação como processo, não como evento {#validação-como-processo-não-como-evento}
 
 Outro erro comum é tratar a validação como um **evento pontual** - tipicamente uma revisão final antes do merge.
 
@@ -55,7 +55,7 @@ A ausência de qualquer uma destas transições **não é neutra**: representa r
 
 ---
 
-## Erro plausível: o maior inimigo do desenvolvimento seguro
+## Erro plausível: o maior inimigo do desenvolvimento seguro {#erro-plausível-o-maior-inimigo-do-desenvolvimento-seguro}
 
 Grande parte das vulnerabilidades modernas não resulta de código obviamente incorreto, mas de **erro plausível**:
 - lógica que “faz sentido” mas falha em casos limite;
@@ -72,7 +72,7 @@ Por isso, a validação no desenvolvimento seguro não procura apenas *bugs*, ma
 
 ---
 
-## Evidência como critério de aceitação
+## Evidência como critério de aceitação {#evidência-como-critério-de-aceitação}
 
 No SbD-ToE, nenhuma validação existe sem evidência.
 
@@ -87,7 +87,7 @@ existe para **disciplinar o processo presente** e reduzir erro sistémico.
 
 ---
 
-## Ligação ao ciclo de vida
+## Ligação ao ciclo de vida {#ligação-ao-ciclo-de-vida}
 
 Este addon define o **racional técnico** da validação de código.  
 A sua aplicação prática - gates, responsabilidades e artefactos - é descrita no `15-aplicacao-lifecycle.md` do capítulo.

@@ -15,15 +15,15 @@ tags:
 
 Considere-se um PR aberto a meio da tarde de sexta. Toca autenticação, logging e um ficheiro de configuração — exactamente o tipo de mistura que o reviewer humano tem dificuldade em rever em profundidade quando há outras seis revisões na fila. O objectivo deste caso de uso é dar ao agente uma rotina disciplinada para essa revisão: que examine o diff *contra os controlos activos do projecto*, devolva *findings* com `CTRL-*` reais do manual, e nunca declare conformidade só por o código existir.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado (ver [Instalação](../03-instalacao.md))
 - Skill canónica em `.claude/skills/sbd-toe.md` (ver [Skills](../04-skills-agentes.md))
 - *Risk level* do projecto conhecido — assumir `L2` no exemplo
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Identificar o escopo do PR
+### 1. Identificar o escopo do PR {#1-identificar-o-escopo-do-pr}
 
 ```
 git diff --name-only origin/main...HEAD
@@ -31,7 +31,7 @@ git diff --name-only origin/main...HEAD
 
 → ex.: `src/auth/login.ts`, `src/middleware/audit.ts`, `config/prod.yaml`
 
-### 2. Mapear ficheiros → capítulos
+### 2. Mapear ficheiros → capítulos {#2-mapear-ficheiros--capítulos}
 
 ```
 map_sbd_toe_review_scope({"changed_files": [
@@ -52,7 +52,7 @@ map_sbd_toe_review_scope({"changed_files": [
 }
 ```
 
-### 3. Listar controlos activos por *concern*
+### 3. Listar controlos activos por *concern* {#3-listar-controlos-activos-por-concern}
 
 ```
 consult_security_requirements({"risk_level": "L2", "concerns": ["auth", "logging", "config"]})
@@ -60,7 +60,7 @@ consult_security_requirements({"risk_level": "L2", "concerns": ["auth", "logging
 
 Devolve `controls[]` filtrados — usar **apenas estes IDs** no relatório.
 
-### 4. Cruzar diff ↔ controlos
+### 4. Cruzar diff ↔ controlos {#4-cruzar-diff--controlos}
 
 Para cada *hunk* relevante, identificar:
 
@@ -68,7 +68,7 @@ Para cada *hunk* relevante, identificar:
 - **`CTRL-*` em risco** — não-cobertos, mas no escopo
 - **`CTRL-*` neutros** — não aplicáveis a este *hunk*
 
-### 5. Gerar relatório
+### 5. Gerar relatório {#5-gerar-relatório}
 
 Estrutura obrigatória:
 
@@ -85,14 +85,14 @@ Estrutura obrigatória:
 ### ...
 ```
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 - **Citar `CTRL-*` exactos**, nunca aproximações textuais.
 - Marcar cada *finding* como `manual-grounded` ou `inferred` — nunca `verified` sem leitura humana.
 - Para *controlos ausentes do `controls[]`* devolvido, escrever: *"Sem cobertura normativa neste escopo — flag para human review."*
 - **Não declarar conformidade regulatória** com base em código.
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-pr-auditor.md`:
 
@@ -115,14 +115,14 @@ tools: Bash, Read, Grep, Glob, mcp__sbd-toe__*
 8. Não inventa IDs. Não declara conformidade. Não trata o próprio código como evidência.
 ```
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Inventar `CTRL-00-99` porque o controlo "encaixa".
 - ❌ "PR compliant with NIS2" baseado só em código.
 - ❌ Misturar `CTRL-*` de capítulos não devolvidos por `map_sbd_toe_review_scope`.
 - ❌ Saltar `consult_security_requirements` e ir directo a `search_sbd_toe_manual` (perde-se o filtro estrutural).
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Codegen grounded](./codegen-grounded) — o reverso: gerar código já cumprindo controlos.
 - [`map_sbd_toe_review_scope`](../05-tools-reference.md) na referência.

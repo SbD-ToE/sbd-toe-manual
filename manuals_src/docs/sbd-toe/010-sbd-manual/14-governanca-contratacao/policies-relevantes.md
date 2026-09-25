@@ -13,7 +13,7 @@ A adoção eficaz do Capítulo 14 - Governança e Contratação - exige a exist�
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ✅ Governança não é uma camada administrativa: é um **controlo estruturante** que assegura a aplicação de todos os outros.
 
@@ -28,7 +28,7 @@ Estas políticas:
 
 ---
 
-## 📎 Políticas recomendadas
+## 📎 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                     | Obrigatória? | Aplicação                                           | Resumo do conteúdo necessário                                                                    |
 | ---------------------------------------------------- | ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -41,7 +41,7 @@ Estas políticas:
 
 ---
 
-## 📄 Estrutura sugerida de cada política
+## 📄 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -56,7 +56,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * As políticas devem ser **formuladas em conjunto pelas equipas de segurança, desenvolvimento e legal**;
 * Devem ser **comunicadas, versionadas e acessíveis** a todas as partes envolvidas;

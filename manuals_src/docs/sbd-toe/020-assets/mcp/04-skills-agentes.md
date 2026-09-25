@@ -17,7 +17,7 @@ Há um efeito subtil no uso diário do MCP: as tools ficam disponíveis assim qu
 
 Em vez de te pedir para escreveres essas instruções do zero (e ficarem desactualizadas no dia seguinte), o servidor publica-as via `generate_sbd_toe_skill`. Geras uma vez, guardas no caminho canónico do cliente, e re-geras só depois de um *upgrade* do MCP. Curto, e sempre alinhado com a fonte.
 
-## Mapeamento canónico cliente → ficheiro
+## Mapeamento canónico cliente → ficheiro {#mapeamento-canónico-cliente--ficheiro}
 
 | Cliente | Caminho do ficheiro | Escopo |
 |---|---|---|
@@ -27,7 +27,7 @@ Em vez de te pedir para escreveres essas instruções do zero (e ficarem desactu
 | **Windsurf / Codeium** | `.codeium/instructions.md` (ou skill equivalente) | Por projecto |
 | **Genérico** | `AGENTS.md` na raiz | Por repositório |
 
-## Gerar a skill
+## Gerar a skill {#gerar-a-skill}
 
 Após instalado o MCP (ver [Instalação](./03-instalacao.md)), executar no cliente. A tool tem três formas:
 
@@ -59,7 +59,7 @@ Uma skill `skilled` (ou o *agent guide* sem `role`) é uma cópia **estática** 
 
 ---
 
-## Inicializar a sessão
+## Inicializar a sessão {#inicializar-a-sessão}
 
 Mesmo com a skill carregada, o cliente precisa de saber **risk level + role** do projecto. O *prompt* canónico é:
 
@@ -76,7 +76,7 @@ O resultado é o **estado inicial** da sessão:
 
 Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão em que o tema seja segurança no projecto.
 
-### Roles canónicos
+### Roles canónicos {#roles-canónicos}
 
 Aceitam *aliases* — o servidor resolve automaticamente.
 
@@ -86,9 +86,9 @@ Aceitam *aliases* — o servidor resolve automaticamente.
 
 ---
 
-## Padrões por cliente
+## Padrões por cliente {#padrões-por-cliente}
 
-### Claude Code
+### Claude Code {#claude-code}
 
 Para além do `.claude/skills/sbd-toe.md`, é possível criar um *subagent* dedicado — gerável directamente com `generate_sbd_toe_skill(role="auditores", format="subagent")`, ou escrito à mão:
 
@@ -109,7 +109,7 @@ Quando recebes um PR para auditar:
 
 Ver receita completa em [Caso de uso — auditoria de PR](./casos-uso/auditoria-pr).
 
-### GitHub Copilot
+### GitHub Copilot {#github-copilot}
 
 `.github/copilot-instructions.md` é carregado automaticamente em *Agent mode*. Adicionar uma secção dedicada após o conteúdo canónico:
 
@@ -121,7 +121,7 @@ gestão de segredos, IaC, containers, deploy, monitorização) — começar por
 chamar `consult_security_requirements` antes de propor código.
 ```
 
-### Cursor
+### Cursor {#cursor}
 
 `.cursorrules` é único — o conteúdo do MCP cohabita com regras de projecto. Manter um **separador** explícito:
 
@@ -135,7 +135,7 @@ chamar `consult_security_requirements` antes de propor código.
 
 ---
 
-## Skill *vs* agent file *vs* prompt directo
+## Skill *vs* agent file *vs* prompt directo {#skill-vs-agent-file-vs-prompt-directo}
 
 Três níveis de integração — escolher consoante a maturidade da equipa:
 
@@ -149,7 +149,7 @@ A receita completa para cada nível está em [Casos de uso](./casos-uso/) — 6 
 
 ---
 
-## A seguir
+## A seguir {#a-seguir}
 
 - Consultar a [referência completa de tools](./05-tools-reference.md) para saber o que cada uma faz e como combinar.
 - Os [casos de uso](./casos-uso/) mostram fluxos completos (input → tool calls → output → resultado final).

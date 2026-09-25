@@ -16,13 +16,13 @@ Com o uso do MCP em projectos reais, torna-se evidente que algumas tarefas preci
 
 Todos combinam o mesmo *toolkit*: as determinísticas (`consult_security_requirements`, `get_threat_landscape`, `get_guide_by_role`, `prepare_sbd_toe_codegen_context`) onde são precisas respostas estáveis e citáveis; as de pesquisa (`search_sbd_toe_manual`, `query_sbd_toe_entities`) quando o que falta é descobrir o que existe no manual.
 
-## A banda `next` — encadeamento sugerido
+## A banda `next` — encadeamento sugerido {#a-banda-next--encadeamento-sugerido}
 
 Muitas tools devolvem, além do `data` determinístico, uma banda **`next`** (até 3 afordances, *structural* + *semantic*): o passo seguinte sugerido para encadear, já com a *tool* e os argumentos. É o fio que liga os padrões abaixo — em vez de adivinhar o próximo passo, seguir o `next` da resposta anterior. As tools paginadas trazem ainda `coverage.hasMore` / `nextOffset` para continuar sem truncar.
 
 ---
 
-## Padrão 1 — Security plan de uma feature
+## Padrão 1 — Security plan de uma feature {#padrão-1--security-plan-de-uma-feature}
 
 **Objetivo:** documento de plano de segurança para uma feature nova, antes do desenvolvimento.
 
@@ -69,7 +69,7 @@ Muitas tools devolvem, além do `data` determinístico, uma banda **`next`** (at
 
 ---
 
-## Padrão 2 — Release checklist (deploy gate)
+## Padrão 2 — Release checklist (deploy gate) {#padrão-2--release-checklist-deploy-gate}
 
 **Objetivo:** checklist de pré-release alinhado com o capítulo 11 (Deploy Seguro) + concerns activos.
 
@@ -91,7 +91,7 @@ Muitas tools devolvem, além do `data` determinístico, uma banda **`next`** (at
 
 ---
 
-## Padrão 3 — Análise de change set (PR grande)
+## Padrão 3 — Análise de change set (PR grande) {#padrão-3--análise-de-change-set-pr-grande}
 
 Para PRs que tocam **múltiplos capítulos** simultaneamente. Versão expandida da [auditoria de PR](./casos-uso/auditoria-pr).
 
@@ -113,7 +113,7 @@ Para PRs que tocam **múltiplos capítulos** simultaneamente. Versão expandida 
 
 ---
 
-## Padrão 4 — Sweep de findings (auditoria periódica)
+## Padrão 4 — Sweep de findings (auditoria periódica) {#padrão-4--sweep-de-findings-auditoria-periódica}
 
 **Objetivo:** auditoria periódica do repo inteiro — não só do PR, mas do estado actual.
 
@@ -169,7 +169,7 @@ Quando `prepare_sbd_toe_codegen_context` devolve `needs_decomposition` repetidam
 
 ---
 
-## Padrão 6 — Cross-check normativo (via MCP ou manual web)
+## Padrão 6 — Cross-check normativo (via MCP ou manual web) {#padrão-6--cross-check-normativo-via-mcp-ou-manual-web}
 
 Para perguntas que envolvem regulamentos UE:
 
@@ -199,7 +199,7 @@ Detalhe completo em [Caso de uso — Cross-check normativo](./casos-uso/cross-ch
 
 ---
 
-## Padrão 7 — Discovery de roles para uma fase
+## Padrão 7 — Discovery de roles para uma fase {#padrão-7--discovery-de-roles-para-uma-fase}
 
 **Objetivo:** "Quem faz o quê na fase X?" — útil para *retrospectives*, RACI, mapeamento RACI por feature.
 
@@ -218,7 +218,7 @@ Detalhe completo em [Caso de uso — Cross-check normativo](./casos-uso/cross-ch
 
 ---
 
-## Quando usar `inspect_sbd_toe_retrieval`
+## Quando usar `inspect_sbd_toe_retrieval` {#quando-usar-inspect_sbd_toe_retrieval}
 
 Diagnóstico para queries que devolvem resultados inesperados:
 
@@ -235,7 +235,7 @@ Devolve ranking, *scores*, `rule_trace` completo. Útil para perceber se o probl
 - *Risk level* errado → re-classificar
 - *Content lag* (ver [troubleshooting](./10-troubleshooting-faq.md#content-lag)) → consultar manual web
 
-## A seguir
+## A seguir {#a-seguir}
 
 - [Disciplina epistémica e anti-patterns](./09-epistemica-anti-patterns.md) — o que **não** fazer com os outputs.
 - [Casos de uso](./casos-uso/) — para versões mais focadas destes padrões.

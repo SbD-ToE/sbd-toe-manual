@@ -9,21 +9,21 @@ sidebar_position: 2
 
 # Developer
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Developers são a **linha da frente da implementação prática de *security by design***.  
 É no ato de escrever código que se materializam grande parte das práticas de segurança prescritas no SbD-ToE.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Escrevem código em conformidade com guidelines de segurança (Cap. 06)
 - Corrigem vulnerabilidades identificadas em revisões e scans
 - Contribuem para o threat modeling e fornecem informação técnica sobre fluxos de dados (Cap. 03)
 - Garantem que o software cumpre requisitos funcionais **e de segurança** de forma robusta e rastreável
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 O papel do Developer é **transversal a quase todo o manual**. A responsabilidade é dupla: entregar funcionalidade e garantir segurança. Sem a colaboração ativa dos developers, nenhuma política de segurança se concretiza.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 O trabalho do Developer concretiza obrigações de:
 - **NIS2**: Práticas seguras de desenvolvimento e gestão de vulnerabilidades
@@ -33,16 +33,16 @@ O trabalho do Developer concretiza obrigações de:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação da Criticidade
+### Cap. 01 - Classificação da Criticidade {#cap-01---classificação-da-criticidade}
 Fornecer informação técnica sobre **dependências, integrações e impacto operacional** da aplicação, contribuindo para a avaliação de risco e determinação do nível de criticidade (L1/L2/L3).
 
 **User Stories:**
 - [US-01: Classificação inicial da aplicação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-01---classificação-inicial-da-aplicação) - Aplicar modelo E+D+I para determinar nível L1–L3
 - [US-02: Aplicação da matriz de controlo](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-02---aplicação-da-matriz-de-controlo) - Mapear requisitos para os requisitos do Cap. 02 do Cap. 02
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Implementar **requisitos mínimos de segurança** derivados da classificação, integrando-os no *definition of done* e garantindo conformidade em cada entrega.
 
 **User Stories:**
@@ -50,19 +50,19 @@ Implementar **requisitos mínimos de segurança** derivados da classificação, 
 - [US-11: Geração de SBOM e assinatura de artefactos](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-11---geração-de-sbom-e-assinatura-de-artefactos-de-build) - SBOM automático e assinatura de artefactos
 - [US-12: Validação de tags SEC-Lx-* no pipeline](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-12---validação-de-tags-sec-lx--e-requisitos-no-pipeline) - Rastreabilidade automática de requisitos
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Participar ativamente em **sessões de threat modeling**, traduzindo diagramas e cenários de ameaças em controlos práticos implementados no código.
 
 **User Stories:**
 - [US-01: Criação do modelo de ameaça](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - DFDs e STRIDE/LINDDUN no início do projeto
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Garantir que a implementação respeita os **padrões arquiteturais** definidos. Manter a ficha de arquitetura atualizada quando ocorrem alterações críticas.
 
 **User Stories:**
 - [US-04: Atualização de arquitetura em alterações críticas](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-04---gestão-de-decisões-arquiteturais-adr) - Atualizar ficha de arquitetura quando surgem mudanças estruturais
 
-### Cap. 05 - Dependências e SBOM
+### Cap. 05 - Dependências e SBOM {#cap-05---dependências-e-sbom}
 Declarar explicitamente todas as **bibliotecas e dependências** utilizadas, suportando a criação de inventários auditáveis (SBOM) essenciais para gestão de vulnerabilidades.
 
 **User Stories:**
@@ -70,7 +70,7 @@ Declarar explicitamente todas as **bibliotecas e dependências** utilizadas, sup
 - [US-07: Proibir bibliotecas copiadas manualmente](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-07---proibir-bibliotecas-copiadas-manualmente) - Usar package managers, nunca cópias manuais
 - [US-12: Validação automática de compatibilidade de licenças](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-12---validação-automática-de-compatibilidade-de-licenças) - Garantir conformidade legal
 
-### Cap. 06 - Desenvolvimento Seguro
+### Cap. 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 Seguir **guidelines de código seguro**, utilizar linters e validações automáticas, corrigir findings de SAST. Prevenir vulnerabilidades triviais através de ferramentas integradas no workflow de desenvolvimento.
 
 **User Stories:**
@@ -79,51 +79,51 @@ Seguir **guidelines de código seguro**, utilizar linters e validações automá
 - [US-08: Rastreabilidade com Anotações de Segurança](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-08---rastreabilidade-com-anotações-de-segurança) - Anotar validações com @sec:*
 - [US-12: Validações Locais Obrigatórias](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-12---validações-locais-obrigatórias-pre-commit) - Linters e validações pré-commit
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Colaborar com DevOps na **configuração de pipelines seguros**, garantindo que o código passa por gates de segurança (SAST, dependency check) antes de ser merged ou deployed.
 
 **User Stories:**
 - [US-01: Gestão segura de código fonte](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-01---gestão-segura-de-código-fonte) - PRs com revisão obrigatória e branch protection
 - [US-03: Scanners integrados](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-03---scanners-integrados-validação-empírica-obrigatória) - SAST, secrets scanning e bloqueio de falhas críticas
 
-### Cap. 08 - IaC (Infraestrutura como Código)
+### Cap. 08 - IaC (Infraestrutura como Código) {#cap-08---iac-infraestrutura-como-código}
 Colaborar na escrita e **validação de templates IaC seguros**, garantindo que infraestrutura é versionada e auditável.
 
 **User Stories:**
 - [US-03: Validações automáticas integradas](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-03---validações-automáticas-integradas) - Linters, scanners e policy-as-code obrigatórios
 
-### Cap. 09 - Containers e Imagens
+### Cap. 09 - Containers e Imagens {#cap-09---containers-e-imagens}
 Construir imagens a partir de **bases confiáveis e versionadas** (digest SHA256). Garantir que Dockerfiles seguem melhores práticas de segurança.
 
 **User Stories:**
 - [US-01: Imagens base confiáveis](/sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-01---construção-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest) - Usar apenas imagens oficiais com digest SHA256
 
-### Cap. 10 - Testes de Segurança
+### Cap. 10 - Testes de Segurança {#cap-10---testes-de-segurança}
 Executar **SAST automático no PR** com comentários inline, corrigindo vulnerabilidades antes do merge. Criar testes de regressão para findings corrigidos.
 
 **User Stories:**
 - [US-02: SAST automático no PR](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-02---sast-obrigatório-em-pull-request) - Análise estática com feedback contextual
 - [US-05: Testes de regressão de segurança](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-05---regressões-de-segurança-automatizadas) - Prevenir reintrodução de vulnerabilidades
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Manter **versionamento semântico** com changelog técnico e de segurança. Garantir que apenas artefactos validados são promovidos entre ambientes.
 
 **User Stories:**
 - [US-01: Versionamento semântico + changelog](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-01---deploy-apenas-de-artefactos-assinados) - Rastreabilidade completa de alterações
 
-### Cap. 12 - Monitorização e Operações
+### Cap. 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 Implementar **logging estruturado e centralizado**, gerando eventos com contexto suficiente para deteção e investigação de incidentes.
 
 **User Stories:**
 - [US-01: Logs estruturados + centralização](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-01---logging-estruturado-e-centralizado) - Assegurar visibilidade completa em incidentes
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 Participar em **programas de capacitação contínua** e, como Security Champion, liderar sessões de threat modeling por feature, épico ou refactor.
 
 **User Stories:**
 - [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Submeter **exceções de segurança** em fluxo formal com roteamento automático por nível de risco. Manter repositório estruturado de conformidade para cada aplicação (com Scrum Master / Team Lead).
 
 **User Stories:**
@@ -132,7 +132,7 @@ Submeter **exceções de segurança** em fluxo formal com roteamento automático
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

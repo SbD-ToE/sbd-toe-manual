@@ -13,7 +13,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🏢 1. Governaça distribuída com controlo central
+## 🏢 1. Governaça distribuída com controlo central {#-1-governaça-distribuída-com-controlo-central}
 
 * Definição de *owners* de segurança por domínio ou unidade organizacional;
 * Modelo federado de exceções, com revisão central (GRC ou AppSec board);
@@ -22,7 +22,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🤖 2. Automação de rastreabilidade e conformidade
+## 🤖 2. Automação de rastreabilidade e conformidade {#-2-automação-de-rastreabilidade-e-conformidade}
 
 * Ligação automática entre findings → exceções → owners → contratos;
 * Uso de sistemas GRC integrados com o pipeline (ex: Jira + GitHub + evidência);
@@ -30,7 +30,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🌐 3. Terceiros e cadeia contratual
+## 🌐 3. Terceiros e cadeia contratual {#-3-terceiros-e-cadeia-contratual}
 
 * Scorecard contínuo de fornecedores (rastreabilidade + findings + formação);
 * Cláusulas com obrigações explícitas de: SBOM, SCA, formação, ciclo de vida seguro;
@@ -38,7 +38,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🧾 4. Transparência e auditoria
+## 🧾 4. Transparência e auditoria {#-4-transparência-e-auditoria}
 
 * Publicação de relatórios de governança de segurança agregados por unidade ou projeto;
 * Revisões de governança com apoio de comités técnicos ou auditorias externas;
@@ -46,7 +46,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🎓 5. Formação e cultura organizacional
+## 🎓 5. Formação e cultura organizacional {#-5-formação-e-cultura-organizacional}
 
 * Formação de *owners* como embaixadores de segurança;
 * Trilhas específicas por função contratual: procurement, jurídico, gestão de produto;
@@ -62,7 +62,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 * Cap. 1 - Modelo de risco e ownership
 * Cap. 2 - Requisitos aplicacionais

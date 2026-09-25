@@ -4,7 +4,7 @@ title: Atributos do Risco
 description: Modelo unificado de caracterização do risco no SbD-ToE, aplicável a riscos técnicos e processuais
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Este documento define um **modelo unificado de caracterização do risco** no contexto do **Security by Design – Theory of Everything (SbD-ToE)**.
 
@@ -19,7 +19,7 @@ Este modelo aplica-se a **todo o ciclo de vida da aplicação** e a **todos os c
 
 ---
 
-## 🧠 Princípio fundamental
+## 🧠 Princípio fundamental {#-princípio-fundamental}
 
 No SbD-ToE, **o risco é tratado como um conceito único e indivisível**.
 
@@ -34,11 +34,11 @@ Essas variações são capturadas através de **atributos do risco**.
 
 ---
 
-## 🧩 Modelo de atributos do risco
+## 🧩 Modelo de atributos do risco {#-modelo-de-atributos-do-risco}
 
 Cada risco identificado no âmbito do SbD-ToE deve ser descrito, explícita ou implicitamente, através dos atributos abaixo.
 
-### 1️⃣ Origem do risco
+### 1️⃣ Origem do risco {#1️⃣-origem-do-risco}
 
 Identifica **onde o risco se introduz** no sistema ou no processo.
 
@@ -53,7 +53,7 @@ Valores típicos (não exclusivos):
 
 ---
 
-### 2️⃣ Mecanismo de introdução
+### 2️⃣ Mecanismo de introdução {#2️⃣-mecanismo-de-introdução}
 
 Descreve **como o risco é introduzido**.
 
@@ -69,7 +69,7 @@ Este atributo é crítico para definir **controlos preventivos vs. detetivos**.
 
 ---
 
-### 3️⃣ Superfície de materialização
+### 3️⃣ Superfície de materialização {#3️⃣-superfície-de-materialização}
 
 Indica **onde o impacto se manifesta** quando o risco se concretiza.
 
@@ -83,7 +83,7 @@ Um mesmo risco pode materializar-se em **mais do que uma superfície**.
 
 ---
 
-### 4️⃣ Detetabilidade
+### 4️⃣ Detetabilidade {#4️⃣-detetabilidade}
 
 Caracteriza **a facilidade com que o risco pode ser identificado** antes ou após a sua materialização.
 
@@ -95,7 +95,7 @@ Riscos de baixa detetabilidade exigem **controlos mais fortes a montante**.
 
 ---
 
-### 5️⃣ Reprodutibilidade
+### 5️⃣ Reprodutibilidade {#5️⃣-reprodutibilidade}
 
 Indica se o comportamento associado ao risco é:
 
@@ -112,7 +112,7 @@ Baixa reprodutibilidade **aumenta o risco operacional e de validação**.
 
 ---
 
-### 6️⃣ Evidenciabilidade
+### 6️⃣ Evidenciabilidade {#6️⃣-evidenciabilidade}
 
 Descreve **o grau em que o risco e a sua mitigação podem ser suportados por evidência verificável**.
 
@@ -124,7 +124,7 @@ No SbD-ToE, **risco sem evidência adequada não pode ser considerado mitigado**
 
 ---
 
-## 🧪 Exemplo ilustrativo (não normativo)
+## 🧪 Exemplo ilustrativo (não normativo) {#-exemplo-ilustrativo-não-normativo}
 
 Um risco identificado através de uma análise assistida por IA pode ser caracterizado como:
 
@@ -147,7 +147,7 @@ Este exemplo é equivalente, do ponto de vista do modelo, a:
 
 ---
 
-## 🔗 Relação com outros elementos do SbD-ToE
+## 🔗 Relação com outros elementos do SbD-ToE {#-relação-com-outros-elementos-do-sbd-toe}
 
 - A **classificação L1–L3** continua a refletir **impacto e criticidade do sistema**, não atributos internos do risco.
 - Os **atributos do risco** influenciam:
@@ -161,7 +161,7 @@ Este modelo permite que o manual evolua **sem necessidade de redefinir conceitos
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 O SbD-ToE trata o risco como um **conceito único**, rico em atributos, capaz de capturar tanto riscos técnicos clássicos como riscos introduzidos por práticas modernas de desenvolvimento.
 

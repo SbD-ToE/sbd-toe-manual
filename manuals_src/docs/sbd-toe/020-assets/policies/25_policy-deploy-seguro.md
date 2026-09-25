@@ -9,7 +9,7 @@ sidebar_position: 25
 
 # Política de Deploy Seguro
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos de segurança para o **processo de deploy de software em ambientes de produção**, cobrindo desde a verificação de integridade do artefacto até à monitorização pós-deploy e capacidade de rollback.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,7 +35,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Verificação do artefacto antes do deploy
+## 3. Verificação do artefacto antes do deploy {#3-verificação-do-artefacto-antes-do-deploy}
 
 Antes de iniciar qualquer deploy em staging ou produção, o pipeline deve verificar:
 
@@ -53,7 +53,7 @@ Um artefacto reconstruído a partir do mesmo código não é equivalente ao arte
 
 ---
 
-## 4. Aprovação formal de deploy
+## 4. Aprovação formal de deploy {#4-aprovação-formal-de-deploy}
 
 O deploy em produção requer aprovação humana explícita, registada com identidade e timestamp:
 
@@ -68,7 +68,7 @@ A aprovação deve referenciar:
 - [ ] Resultado do gate de segurança pré-release
 - [ ] Ambiente destino
 
-### 4.1 Separação entre automação e autorização irreversível
+### 4.1 Separação entre automação e autorização irreversível {#41-separação-entre-automação-e-autorização-irreversível}
 
 Ferramentas de automação podem executar deploys, mas não podem autorizar acções irreversíveis sem aprovação humana prévia registada:
 
@@ -78,7 +78,7 @@ Ferramentas de automação podem executar deploys, mas não podem autorizar acç
 
 ---
 
-## 5. Estratégias de rollout progressivo (L2/L3)
+## 5. Estratégias de rollout progressivo (L2/L3) {#5-estratégias-de-rollout-progressivo-l2l3}
 
 Em L2/L3, o deploy em produção deve usar uma estratégia de rollout progressivo para limitar o raio de impacto de regressões não detetadas em testes:
 
@@ -88,7 +88,7 @@ Em L2/L3, o deploy em produção deve usar uma estratégia de rollout progressiv
 | **Blue-Green** | Dois ambientes equivalentes; mudança de routing após validação | L2/L3 |
 | **Rolling update** | Substituição gradual de instâncias/pods, com health checks em cada etapa | L1/L2/L3 |
 
-### 5.1 Critérios de promoção entre etapas
+### 5.1 Critérios de promoção entre etapas {#51-critérios-de-promoção-entre-etapas}
 
 A promoção de uma etapa de rollout para a seguinte deve ser condicionada a:
 
@@ -97,7 +97,7 @@ A promoção de uma etapa de rollout para a seguinte deve ser condicionada a:
 - [ ] Ausência de alertas de segurança activos
 - [ ] Ausência de crash loops ou restarts inesperados
 
-### 5.2 Rollback automático por falha de critério
+### 5.2 Rollback automático por falha de critério {#52-rollback-automático-por-falha-de-critério}
 
 Se um critério de promoção falhar durante o rollout:
 
@@ -107,7 +107,7 @@ Se um critério de promoção falhar durante o rollout:
 
 ---
 
-## 6. Separação de ambientes e dados
+## 6. Separação de ambientes e dados {#6-separação-de-ambientes-e-dados}
 
 O ambiente de produção deve estar estritamente separado dos ambientes de teste e staging:
 
@@ -118,7 +118,7 @@ O ambiente de produção deve estar estritamente separado dos ambientes de teste
 
 ---
 
-## 7. Gestão de segredos no deploy
+## 7. Gestão de segredos no deploy {#7-gestão-de-segredos-no-deploy}
 
 Os segredos necessários em runtime são injectados exclusivamente no momento do deploy, não embebidos no artefacto:
 
@@ -128,7 +128,7 @@ Os segredos necessários em runtime são injectados exclusivamente no momento do
 
 ---
 
-## 8. Rastreabilidade do deploy
+## 8. Rastreabilidade do deploy {#8-rastreabilidade-do-deploy}
 
 Cada operação de deploy deve produzir um registo rastreável que permita reconstruir a cadeia completa:
 
@@ -148,7 +148,7 @@ Artefactos de evidência:
 
 ---
 
-## 9. Feature flags e dark launches
+## 9. Feature flags e dark launches {#9-feature-flags-e-dark-launches}
 
 Em L2/L3, funcionalidades de risco podem ser activadas de forma controlada via feature flags:
 
@@ -159,7 +159,7 @@ Em L2/L3, funcionalidades de risco podem ser activadas de forma controlada via f
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -171,7 +171,7 @@ Em L2/L3, funcionalidades de risco podem ser activadas de forma controlada via f
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -181,7 +181,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

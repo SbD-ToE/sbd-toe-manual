@@ -17,7 +17,7 @@ Este ficheiro estabelece o enquadramento canónico para esses riscos no SbD-ToE.
 
 ---
 
-## 🎯 Âmbito e princípio fundamental
+## 🎯 Âmbito e princípio fundamental {#-âmbito-e-princípio-fundamental}
 
 Este documento **não trata vulnerabilidades de imagens** - essas são cobertas noutros ficheiros do capítulo.
 Aqui tratamos exclusivamente do **risco introduzido pela forma como as imagens são produzidas, avaliadas e aceites**.
@@ -30,7 +30,7 @@ Qualquer processo que viole esta separação é considerado **inseguro por desen
 
 ---
 
-## 🧩 Cadeia típica de risco em ambientes automatizados
+## 🧩 Cadeia típica de risco em ambientes automatizados {#-cadeia-típica-de-risco-em-ambientes-automatizados}
 
 Em ambientes modernos, a cadeia de eventos mais comum é:
 
@@ -46,9 +46,9 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-## 🚨 Categorias de risco de processo
+## 🚨 Categorias de risco de processo {#-categorias-de-risco-de-processo}
 
-### 1️⃣ Confusão entre sinal automático e decisão
+### 1️⃣ Confusão entre sinal automático e decisão {#1️⃣-confusão-entre-sinal-automático-e-decisão}
 
 **Como surge**
 
@@ -76,7 +76,7 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-### 2️⃣ Ilusão de segurança por automação bem-sucedida
+### 2️⃣ Ilusão de segurança por automação bem-sucedida {#2️⃣-ilusão-de-segurança-por-automação-bem-sucedida}
 
 **Como surge**
 
@@ -104,7 +104,7 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-### 3️⃣ Promoção automática entre ambientes
+### 3️⃣ Promoção automática entre ambientes {#3️⃣-promoção-automática-entre-ambientes}
 
 **Como surge**
 
@@ -131,7 +131,7 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-### 4️⃣ Proveniência verificada ≠ confiança concedida
+### 4️⃣ Proveniência verificada ≠ confiança concedida {#4️⃣-proveniência-verificada--confiança-concedida}
 
 **Como surge**
 
@@ -157,7 +157,7 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-### 5️⃣ Ausência de rastreabilidade decisional
+### 5️⃣ Ausência de rastreabilidade decisional {#5️⃣-ausência-de-rastreabilidade-decisional}
 
 **Como surge**
 
@@ -184,7 +184,7 @@ Este ficheiro identifica onde esse modelo falha.
 
 ---
 
-## 🧭 Regras canónicas SbD-ToE aplicáveis a imagens
+## 🧭 Regras canónicas SbD-ToE aplicáveis a imagens {#-regras-canónicas-sbd-toe-aplicáveis-a-imagens}
 
 Este capítulo herda e concretiza os seguintes invariantes globais do SbD-ToE:
 
@@ -198,7 +198,7 @@ Qualquer implementação que viole estes princípios deve ser considerada **não
 
 ---
 
-## 🔗 Ligação aos restantes ficheiros do capítulo
+## 🔗 Ligação aos restantes ficheiros do capítulo {#-ligação-aos-restantes-ficheiros-do-capítulo}
 
 Este ficheiro é **transversal** e deve ser lido em conjunto com:
 
@@ -212,7 +212,7 @@ Ele fornece o **enquadramento semântico** que dá sentido prescritivo aos contr
 
 ---
 
-## ✅ Critério de conformidade
+## ✅ Critério de conformidade {#-critério-de-conformidade}
 
 Uma organização só pode afirmar que aplica corretamente este capítulo se conseguir demonstrar, para qualquer imagem em execução:
 

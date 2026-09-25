@@ -9,7 +9,7 @@ sidebar_position: 3
 
 # Testes Dinâmicos de Segurança (DAST)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Detetar vulnerabilidades em aplicações **durante a sua execução**, simulando o comportamento de um utilizador ou atacante, com o objetivo de:
 
@@ -22,7 +22,7 @@ Detetar vulnerabilidades em aplicações **durante a sua execução**, simulando
 
 ---
 
-## 🔍 O que é DAST
+## 🔍 O que é DAST {#-o-que-é-dast}
 
 DAST (Dynamic Application Security Testing) consiste em executar testes automáticos de segurança **sobre uma aplicação em funcionamento** (geralmente em staging ou ambientes controlados), simulando comportamentos externos maliciosos ou errados.
 
@@ -38,7 +38,7 @@ Pode incluir:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Preparar ambiente isolado de staging ou pré-produção**, com dados controlados;
 2. **Selecionar scanner DAST adequado ao tipo de aplicação** (web, API, mobile);
@@ -51,7 +51,7 @@ Pode incluir:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Automatizar execução de DAST no pipeline, mas fora da linha crítica (ex: ambiente de validação);
 - Usar dados fictícios ou mascarados;
@@ -62,7 +62,7 @@ Pode incluir:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                     |
 |--------------------------------|--------------------------------------------|

@@ -12,7 +12,7 @@ A validação é o mecanismo que converte requisitos definidos em garantia obser
 
 ---
 
-## 1) Princípios orientadores
+## 1) Princípios orientadores {#1-princípios-orientadores}
 
 A validação de requisitos de segurança deve ser:
 
@@ -24,11 +24,11 @@ A validação de requisitos de segurança deve ser:
 
 ---
 
-## 2) Métodos de validação
+## 2) Métodos de validação {#2-métodos-de-validação}
 
 A escolha do método depende do tipo de requisito e da fase em que é aplicado. Os métodos não são mutuamente exclusivos - para requisitos críticos, a combinação de dois ou mais é a abordagem correcta.
 
-### Análise Estática (SAST)
+### Análise Estática (SAST) {#análise-estática-sast}
 
 Aplica-se a requisitos que se traduzem em padrões de código, configurações ou estruturas previsíveis. Deve ser executada durante o desenvolvimento e no pipeline de build, e deve verificar:
 
@@ -39,7 +39,7 @@ Aplica-se a requisitos que se traduzem em padrões de código, configurações o
 
 Os resultados devem ser correlacionados com os identificadores de requisitos do projecto (`SEC-Lx-*`).
 
-### Análise Dinâmica (DAST)
+### Análise Dinâmica (DAST) {#análise-dinâmica-dast}
 
 Aplica-se a requisitos que se manifestam no comportamento em execução. Deve ser usada em ambiente de teste ou pré-produção. Permite validar:
 
@@ -48,7 +48,7 @@ Aplica-se a requisitos que se manifestam no comportamento em execução. Deve se
 - Ausência de erros ou divulgações indevidas;
 - Resposta a falhas de autenticação ou autorização mal configurada.
 
-### Testes funcionais de segurança
+### Testes funcionais de segurança {#testes-funcionais-de-segurança}
 
 Complementam a análise dinâmica com verificação explícita dos critérios de aceitação de cada requisito. Devem incluir:
 
@@ -56,11 +56,11 @@ Complementam a análise dinâmica com verificação explícita dos critérios de
 - Tentativa de contornar o controlo (caso negativo);
 - Cobertura de casos-limite, restrições e falhas previstas.
 
-### Revisão técnica estruturada
+### Revisão técnica estruturada {#revisão-técnica-estruturada}
 
 Realizada por analistas, arquitectos ou elementos de segurança. Adequada para requisitos cujo controlo é distribuído ou implícito - segregação lógica, dependências externas, controlo de sessão transversal. Deve ocorrer após marcos relevantes: release candidate, pull request crítico, auditoria interna.
 
-### Validação contínua em CI/CD
+### Validação contínua em CI/CD {#validação-contínua-em-cicd}
 
 Requisitos críticos devem estar ligados a mecanismos de bloqueio no pipeline:
 
@@ -70,7 +70,7 @@ Requisitos críticos devem estar ligados a mecanismos de bloqueio no pipeline:
 
 ---
 
-## 3) Quando validar
+## 3) Quando validar {#3-quando-validar}
 
 | Fase SDLC | Objectivo da validação | Método primário |
 |-----------|------------------------|-----------------|
@@ -82,7 +82,7 @@ Requisitos críticos devem estar ligados a mecanismos de bloqueio no pipeline:
 
 ---
 
-## 4) Plano de validação por domínio
+## 4) Plano de validação por domínio {#4-plano-de-validação-por-domínio}
 
 Para cada requisito do catálogo canónico são indicados: a tag operacional de referência, o nível mínimo de aplicação, o método de validação recomendado e a evidência esperada.
 
@@ -90,7 +90,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### AUT - Autenticação e Identidade
+### AUT - Autenticação e Identidade {#aut---autenticação-e-identidade}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -107,7 +107,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### ACC - Controlo de Acesso
+### ACC - Controlo de Acesso {#acc---controlo-de-acesso}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -124,7 +124,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### LOG - Registo e Monitorização
+### LOG - Registo e Monitorização {#log---registo-e-monitorização}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -141,7 +141,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### SES - Sessões e Estado
+### SES - Sessões e Estado {#ses---sessões-e-estado}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -156,7 +156,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### VAL - Validação de Dados
+### VAL - Validação de Dados {#val---validação-de-dados}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -173,7 +173,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### ERR - Gestão de Erros
+### ERR - Gestão de Erros {#err---gestão-de-erros}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -187,7 +187,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### CFG - Configuração Segura
+### CFG - Configuração Segura {#cfg---configuração-segura}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -201,7 +201,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### API - Segurança de APIs
+### API - Segurança de APIs {#api---segurança-de-apis}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -215,7 +215,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### INT - Mensagens e Integrações
+### INT - Mensagens e Integrações {#int---mensagens-e-integrações}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -230,7 +230,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### REQ - Definição de Requisitos
+### REQ - Definição de Requisitos {#req---definição-de-requisitos}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -244,7 +244,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### DST - Distribuição de Artefactos
+### DST - Distribuição de Artefactos {#dst---distribuição-de-artefactos}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -258,7 +258,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-### IDE - Ferramentas de Desenvolvimento
+### IDE - Ferramentas de Desenvolvimento {#ide---ferramentas-de-desenvolvimento}
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
@@ -271,7 +271,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 ---
 
-## 5) Resultados esperados da validação
+## 5) Resultados esperados da validação {#5-resultados-esperados-da-validação}
 
 Cada requisito validado deve produzir:
 
@@ -282,7 +282,7 @@ Cada requisito validado deve produzir:
 
 ---
 
-## 6) Melhoria contínua
+## 6) Melhoria contínua {#6-melhoria-contínua}
 
 A validação deve ser incorporada num ciclo de melhoria contínua, com os métodos:
 
@@ -293,7 +293,7 @@ A validação deve ser incorporada num ciclo de melhoria contínua, com os méto
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

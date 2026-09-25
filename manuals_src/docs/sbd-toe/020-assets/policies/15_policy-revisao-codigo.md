@@ -9,7 +9,7 @@ sidebar_position: 15
 
 # Política de Revisão de Código
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **revisão de código como ponto de controlo de segurança formal**, aplicável a todos os pull requests (PRs) que introduzam alterações em código de produção, configuração de segurança ou infraestrutura como código.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Tipo de alteração | L1 | L2 | L3 |
 |---|---|---|---|
@@ -43,47 +43,47 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Checklist de segurança mínima
+## 3. Checklist de segurança mínima {#3-checklist-de-segurança-mínima}
 
 Cada PR deve ser avaliado com base nos seguintes pontos de controlo. A checklist deve estar incluída no template de PR do repositório e preenchida pelo reviewer antes da aprovação:
 
-### 3.1 Autenticação e autorização
+### 3.1 Autenticação e autorização {#31-autenticação-e-autorização}
 - [ ] Endpoints protegidos com autenticação adequada ao contexto
 - [ ] Lógica de autorização verificada - não apenas autenticação
 - [ ] Ausência de escalada de privilégios horizontal ou vertical
 - [ ] Tokens, sessões ou credenciais não expostos em logs ou respostas
 
-### 3.2 Validação de input e output
+### 3.2 Validação de input e output {#32-validação-de-input-e-output}
 - [ ] Inputs validados e sanitizados antes de processamento
 - [ ] Ausência de concatenação direta de input em queries, comandos ou templates (SQLi, CMDi, SSTI)
 - [ ] Output codificado adequadamente para o contexto (HTML, JSON, SQL) para prevenir XSS
 
-### 3.3 Gestão de segredos e dados sensíveis
+### 3.3 Gestão de segredos e dados sensíveis {#33-gestão-de-segredos-e-dados-sensíveis}
 - [ ] Nenhum segredo, password, chave ou token hardcoded no código ou configuração
 - [ ] Dados sensíveis ou PII não expostos em logs, traces ou respostas de erro
 - [ ] Dados classificados tratados conforme a classificação atribuída
 
-### 3.4 Dependências e imports
+### 3.4 Dependências e imports {#34-dependências-e-imports}
 - [ ] Novas dependências aprovadas conforme Política de Dependências
 - [ ] Imports de bibliotecas validados - sem copiagem de código externo sem proveniência
 
-### 3.5 Tratamento de erros e logging
+### 3.5 Tratamento de erros e logging {#35-tratamento-de-erros-e-logging}
 - [ ] Erros tratados sem exposição de informação técnica ao utilizador (stack traces, paths, versões)
 - [ ] Eventos relevantes de segurança registados (tentativas de acesso, erros de autorização)
 - [ ] Logging sem exposição de dados sensíveis
 
-### 3.6 Criptografia e comunicações
+### 3.6 Criptografia e comunicações {#36-criptografia-e-comunicações}
 - [ ] Algoritmos criptográficos aprovados pela organização (sem MD5, SHA-1, DES, RC4)
 - [ ] Comunicações externas sobre TLS; sem validação de certificado desativada
 
-### 3.7 Padrões e anti-patterns
+### 3.7 Padrões e anti-patterns {#37-padrões-e-anti-patterns}
 - [ ] Ausência de padrões perigosos detetados por SAST/linters
 - [ ] Sem supressões inline não justificadas (`# noqa`, `// nosec`, `// nolint`)
 - [ ] Lógica de concorrência ou estado partilhado sem race conditions óbvios
 
 ---
 
-## 4. Critérios de aprovação
+## 4. Critérios de aprovação {#4-critérios-de-aprovação}
 
 Um PR só pode ser aprovado e fundido quando:
 
@@ -98,9 +98,9 @@ A aprovação de um PR não é a confirmação de que o código está isento de 
 
 ---
 
-## 5. Reviewers e competência
+## 5. Reviewers e competência {#5-reviewers-e-competência}
 
-### 5.1 Requisitos de reviewer
+### 5.1 Requisitos de reviewer {#51-requisitos-de-reviewer}
 
 | Nível | Reviewer mínimo | Reviewer adicional quando aplicável |
 |---|---|---|
@@ -108,17 +108,17 @@ A aprovação de um PR não é a confirmação de que o código está isento de 
 | L2 | Developer sénior ou Tech Lead | AppSec Engineer para alterações de segurança |
 | L3 | Tech Lead | AppSec Engineer obrigatório para alterações de segurança |
 
-### 5.2 Self-review
+### 5.2 Self-review {#52-self-review}
 
 A self-review (aprovação do próprio autor) é proibida independentemente do nível. Em equipas de uma só pessoa, deve ser seguido o processo de peer review com um elemento externo ou com o AppSec Engineer.
 
-### 5.3 Reviewer rotation
+### 5.3 Reviewer rotation {#53-reviewer-rotation}
 
 Em L3, recomenda-se rotação de reviewers para evitar pontos cegos sistemáticos. A mesma combinação autor/reviewer não deve ser a única válida para o mesmo módulo de forma continuada.
 
 ---
 
-## 6. Integração com ferramentas automáticas
+## 6. Integração com ferramentas automáticas {#6-integração-com-ferramentas-automáticas}
 
 A revisão humana complementa - não substitui - a análise automática. O pipeline deve executar, antes ou durante o PR, as seguintes verificações automáticas:
 
@@ -133,7 +133,7 @@ Os resultados das verificações automáticas devem ser visíveis no PR (coment�
 
 ---
 
-## 7. Rastreabilidade e evidência
+## 7. Rastreabilidade e evidência {#7-rastreabilidade-e-evidência}
 
 Cada revisão deve produzir evidência rastreável:
 
@@ -144,7 +144,7 @@ Cada revisão deve produzir evidência rastreável:
 
 ---
 
-## 8. Dimensão educativa
+## 8. Dimensão educativa {#8-dimensão-educativa}
 
 A revisão de código é também um mecanismo de transferência de conhecimento. Os reviewers devem:
 
@@ -156,7 +156,7 @@ Padrões recorrentes de vulnerabilidades identificados em PRs devem ser reportad
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -168,7 +168,7 @@ Padrões recorrentes de vulnerabilidades identificados em PRs devem ser reportad
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -178,7 +178,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

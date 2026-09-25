@@ -9,7 +9,7 @@ sidebar_position: 20
 
 # Política de Release Seguro
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **aprovação formal de releases de software**, garantindo que nenhuma versão é promovida a produção sem evidência documentada de conformidade com os requisitos de segurança aplicáveis.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,7 +35,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Gate de segurança pré-release
+## 3. Gate de segurança pré-release {#3-gate-de-segurança-pré-release}
 
 O pipeline deve incluir um job `release-security-gate` executado antes de qualquer promoção a produção, que:
 
@@ -50,11 +50,11 @@ O gate não substitui a aprovação humana - bloqueia a promoção se os critér
 
 ---
 
-## 4. Checklist de segurança pré-release
+## 4. Checklist de segurança pré-release {#4-checklist-de-segurança-pré-release}
 
 Antes de cada release, a checklist seguinte deve ser preenchida e arquivada:
 
-### 4.1 Critérios obrigatórios
+### 4.1 Critérios obrigatórios {#41-critérios-obrigatórios}
 
 | Critério | L2 | L3 |
 |---|---|---|
@@ -72,7 +72,7 @@ Antes de cada release, a checklist seguinte deve ser preenchida e arquivada:
 | PenTest concluído (se obrigatório para este ciclo) | Não aplicável | Obrigatório (anual ou por release major) |
 | Documentação de segurança atualizada | Recomendado | Obrigatório |
 
-### 4.2 Aceitação de risco residual
+### 4.2 Aceitação de risco residual {#42-aceitação-de-risco-residual}
 
 Se a release for aprovada com findings em aberto (com exceção formal), deve existir um registo de aceitação de risco residual que inclua:
 
@@ -83,9 +83,9 @@ Se a release for aprovada com findings em aberto (com exceção formal), deve ex
 
 ---
 
-## 5. Decisão go/no-go
+## 5. Decisão go/no-go {#5-decisão-gono-go}
 
-### 5.1 Critérios de bloqueio automático (no-go)
+### 5.1 Critérios de bloqueio automático (no-go) {#51-critérios-de-bloqueio-automático-no-go}
 
 A promoção a produção é automaticamente bloqueada se:
 
@@ -95,7 +95,7 @@ A promoção a produção é automaticamente bloqueada se:
 - O SBOM não estiver gerado para esta versão (L2/L3)
 - O DAST não tiver sido executado em staging para esta release candidata (L2/L3)
 
-### 5.2 Aprovação humana
+### 5.2 Aprovação humana {#52-aprovação-humana}
 
 Mesmo quando o gate automático retorna APROVADO, a promoção a produção requer aprovação humana explícita:
 
@@ -115,7 +115,7 @@ A aprovação deve ser registada com:
 
 ---
 
-## 6. Imutabilidade do artefacto
+## 6. Imutabilidade do artefacto {#6-imutabilidade-do-artefacto}
 
 O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes - não uma nova build do mesmo código:
 
@@ -130,7 +130,7 @@ O artefacto promovido a produção deve ser exatamente o mesmo que passou por to
 
 ---
 
-## 7. Rastreabilidade ponta-a-ponta
+## 7. Rastreabilidade ponta-a-ponta {#7-rastreabilidade-ponta-a-ponta}
 
 Para qualquer release em produção deve ser possível, em qualquer momento futuro, reconstruir a cadeia:
 
@@ -147,7 +147,7 @@ Para garantir esta rastreabilidade:
 
 ---
 
-## 8. Registo histórico de releases
+## 8. Registo histórico de releases {#8-registo-histórico-de-releases}
 
 Para cada release, deve ser mantido um registo em `releases.md` (ou sistema equivalente) com:
 
@@ -164,7 +164,7 @@ Para cada release, deve ser mantido um registo em `releases.md` (ou sistema equi
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -177,7 +177,7 @@ Para cada release, deve ser mantido um registo em `releases.md` (ou sistema equi
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -187,7 +187,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

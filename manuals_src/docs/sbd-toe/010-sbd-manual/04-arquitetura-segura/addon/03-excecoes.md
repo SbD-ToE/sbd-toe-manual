@@ -12,13 +12,13 @@ tags: [exceções, arquitectura, risco, rastreabilidade, adr]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a requisitos do catálogo de arquitectura: `ARC-001` a `ARC-013`.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - migração faseada entre ambientes ou arquitecturas com janela de não-conformidade delimitada e plano de conclusão;
 - integração de componente herdado ou de terceiro sem possibilidade de modificação arquitectural no âmbito do projecto;
@@ -27,7 +27,7 @@ Excepções a requisitos do catálogo de arquitectura: `ARC-001` a `ARC-013`.
 
 ---
 
-## Identificação do requisito afectado
+## Identificação do requisito afectado {#identificação-do-requisito-afectado}
 
 - ID canónico do catálogo (ex: `ARC-003`, `ARC-008`);
 - tag operacional (ex: `SEC-L2-ARC-003`);
@@ -35,7 +35,7 @@ Excepções a requisitos do catálogo de arquitectura: `ARC-001` a `ARC-013`.
 
 ---
 
-## Integração com rastreabilidade arquitectural
+## Integração com rastreabilidade arquitectural {#integração-com-rastreabilidade-arquitectural}
 
 Excepções a requisitos ARC devem ser reflectidas na matriz de rastreabilidade (`06-rastreabilidade.md`), com:
 
@@ -47,7 +47,7 @@ Excepções não registadas na matriz de rastreabilidade são tratadas como lacu
 
 ---
 
-## Alinhamento normativo
+## Alinhamento normativo {#alinhamento-normativo}
 
 - ISO/IEC 27001 A.18.1.4 - aceitação formal de riscos residuais
 - SSDF GV.3 - aprovação de excepções e desvios de processos de segurança
@@ -55,7 +55,7 @@ Excepções não registadas na matriz de rastreabilidade são tratadas como lacu
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

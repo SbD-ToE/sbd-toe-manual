@@ -22,7 +22,7 @@ O resultado é que **o código passa a ter proveniência múltipla**, mesmo quan
 
 ---
 
-## Porque a proveniência importa
+## Porque a proveniência importa {#porque-a-proveniência-importa}
 
 A proveniência do código não é uma questão filosófica; é uma questão de risco.
 
@@ -37,7 +37,7 @@ Tratar código sem proveniência conhecida como “normal” é equivalente a ac
 
 ---
 
-## Código interno como supply chain interno
+## Código interno como supply chain interno {#código-interno-como-supply-chain-interno}
 
 Este addon introduz um conceito-chave:
 
@@ -55,7 +55,7 @@ Esta perspetiva cria coerência direta com o Capítulo 05 - Dependências e Supp
 
 ---
 
-## Proveniência não é autoria
+## Proveniência não é autoria {#proveniência-não-é-autoria}
 
 É importante distinguir:
 - **autoria**: quem escreveu o código;
@@ -70,7 +70,7 @@ O desenvolvimento seguro preocupa-se com **adequação**, não apenas com corre�
 
 ---
 
-## Implicações práticas no desenvolvimento
+## Implicações práticas no desenvolvimento {#implicações-práticas-no-desenvolvimento}
 
 Assumir proveniência implica que:
 - código incorporado deve ser compreendido, não apenas testado;
@@ -85,7 +85,7 @@ Estas implicações refletem-se diretamente:
 
 ---
 
-## Encerramento
+## Encerramento {#encerramento}
 
 Ao tratar o código como artefacto de proveniência controlada, o desenvolvimento seguro deixa de depender da “qualidade média” das contribuições e passa a depender de **processos robustos e verificáveis**.
 

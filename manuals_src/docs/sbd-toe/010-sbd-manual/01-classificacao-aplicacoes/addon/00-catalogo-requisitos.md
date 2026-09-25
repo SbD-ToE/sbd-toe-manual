@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Classificação de Aplicações
 
-## Âmbito: a classificação como controlo fundacional de proporcionalidade
+## Âmbito: a classificação como controlo fundacional de proporcionalidade {#âmbito-a-classificação-como-controlo-fundacional-de-proporcionalidade}
 
 Este catálogo cobre os **requisitos de classificação de criticidade aplicacional** — os controlos que determinam com que rigor, frequência e profundidade a segurança é aplicada em cada projecto ou aplicação.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-CLA-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo CLA - Classificação de Aplicações
+## Catálogo CLA - Classificação de Aplicações {#catálogo-cla---classificação-de-aplicações}
 
 Requisitos que garantem que cada aplicação tem uma classificação de criticidade formal, proporcional ao risco real, actualizada e utilizada como base de selecção de controlos.
 
@@ -55,7 +55,7 @@ Requisitos que garantem que cada aplicação tem uma classificação de criticid
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **CLA-001**: A classificação multi-eixo (exposição, dados, impacto) previne a subestimação de risco de aplicações que parecem simples à superfície mas têm dados sensíveis ou impacto crítico em caso de comprometimento. Um único eixo de classificação é invariavelmente incompleto.
 - **CLA-002**: A proporcionalidade na aprovação não é burocracia — é o mecanismo que confere autoridade à classificação. Uma classificação aprovada apenas pelo developer que a criou não tem força para impor controlos onerosos e não é defensável em auditoria.

@@ -9,13 +9,13 @@ sidebar_position: 0
 
 # Papéis e Responsabilidades Organizacionais
 
-## Estrutura e âmbito
+## Estrutura e âmbito {#estrutura-e-âmbito}
 
 O SbD-ToE define 13 papéis organizacionais com responsabilidades específicas ligadas aos capítulos técnicos e às obrigações regulatórias (NIS2, DORA, GDPR). Cada papel é documentado com User Stories mapeadas aos capítulos onde intervêm.
 
-## Princípios de Atribuição
+## Princípios de Atribuição {#princípios-de-atribuição}
 
-### Atividades Existentes, Formalizadas
+### Atividades Existentes, Formalizadas {#atividades-existentes-formalizadas}
 
 As atividades prescritas no SbD-ToE formalizam processos que já existem:
 
@@ -26,14 +26,14 @@ As atividades prescritas no SbD-ToE formalizam processos que já existem:
 
 O manual tipifica estas atividades para rastreabilidade e conformidade regulatória.
 
-### Flexibilidade Estrutural
+### Flexibilidade Estrutural {#flexibilidade-estrutural}
 
 A atribuição de papéis varia por organização. Múltiplos papéis podem concentrar-se numa pessoa, ou distribuir-se por equipas especializadas. O SbD-ToE exige execução das atividades; não prescreve estrutura organizacional.
 
 ---
 
-## Os 13 Roles
-## 📋 Roles Cobertos
+## Os 13 Roles {#os-13-roles}
+## 📋 Roles Cobertos {#-roles-cobertos}
 
 Cada role tem o seu próprio documento detalhado com:
 - Descrição do papel e responsabilidades gerais
@@ -62,7 +62,7 @@ Cada role tem o seu próprio documento detalhado com:
 - [Fornecedores / Terceiros](fornecedores-terceiros)
 - [Auditores](auditores)
 
-## Cada Papel Inclui
+## Cada Papel Inclui {#cada-papel-inclui}
 
 - Responsabilidade primária e âmbito de atuação
 - Enquadramento regulatório (NIS2, DORA, GDPR, ISO, NIST)
@@ -72,7 +72,7 @@ Cada role tem o seu próprio documento detalhado com:
 
 ---
 
-## Nota: funções compostas (operacionais, não canónicas)
+## Nota: funções compostas (operacionais, não canónicas) {#nota-funções-compostas-operacionais-não-canónicas}
 
 Em organizações com **adopção significativa de agentes AI** com tool-use no SDLC (níveis de autonomia A2+, ver [Cap. 02](../../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia)), surge naturalmente a necessidade de operar o risco específico desses agentes — *mandates*, *intent events*, *kill-switches*, telemetria agentic, *prompt injection* em produção, *drift* de provider.
 

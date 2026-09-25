@@ -9,7 +9,7 @@ sidebar_position: 7
 
 # Cobertura e Priorização dos Testes de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, **com que profundidade e frequência**, e **com que tipo de teste**, com base em:
 
@@ -22,7 +22,7 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 ---
 
-## 🔍 O que é cobertura e priorização em segurança
+## 🔍 O que é cobertura e priorização em segurança {#-o-que-é-cobertura-e-priorização-em-segurança}
 
 **Cobertura** refere-se à percentagem do sistema que é abrangida pelos testes de segurança - incluindo:
 
@@ -42,7 +42,7 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Mapear superfícies de ataque e interfaces expostas** (ex: APIs públicas, painéis de gestão);
 2. **Classificar áreas por criticidade funcional e impacto de segurança**;
@@ -53,7 +53,7 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Incluir cobertura de segurança nos critérios de qualidade;
 - Rastrear a cobertura real com métricas (ex: % de APIs testadas);
@@ -64,7 +64,7 @@ Definir **quais componentes, funcionalidades e interfaces devem ser testadas**, 
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                          |
 |--------------------------------|--------------------------------------------------|

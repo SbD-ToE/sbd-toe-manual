@@ -18,7 +18,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 📌 Enforcement político e semântico com OPA / Sentinel
+## 📌 Enforcement político e semântico com OPA / Sentinel {#-enforcement-político-e-semântico-com-opa--sentinel}
 
 | Tema                               | Descrição                                                            |
 | ---------------------------------- | -------------------------------------------------------------------- |
@@ -32,7 +32,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 📊 Proveniência e rastreabilidade reforçada
+## 📊 Proveniência e rastreabilidade reforçada {#-proveniência-e-rastreabilidade-reforçada}
 
 | Tema                                 | Descrição                                                                   |
 | ------------------------------------ | --------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 🔁 Integração com custo e “drift”
+## 🔁 Integração com custo e “drift” {#-integração-com-custo-e-drift}
 
 | Tema                                 | Descrição                                                            |
 | ------------------------------------ | -------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 🔐 Segurança na proveniência de módulos
+## 🔐 Segurança na proveniência de módulos {#-segurança-na-proveniência-de-módulos}
 
 | Tema                             | Descrição                                                                 |
 | -------------------------------- | ------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 🧪 Testes programáticos de infraestrutura
+## 🧪 Testes programáticos de infraestrutura {#-testes-programáticos-de-infraestrutura}
 
 | Tema                         | Descrição                                                                 |
 |------------------------------|---------------------------------------------------------------------------|
@@ -83,7 +83,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## 📋 Governação de exceções técnicas
+## 📋 Governação de exceções técnicas {#-governação-de-exceções-técnicas}
 
 | Tema                                | Descrição                                                                 |
 |-------------------------------------|---------------------------------------------------------------------------|
@@ -96,7 +96,7 @@ Este anexo apresenta **práticas reforçadas** para segurança em projetos de **
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Estas recomendações **não são obrigatórias**, mas constituem **reforços valiosos para equipas com maturidade elevada** ou que operam em contextos regulados.
 

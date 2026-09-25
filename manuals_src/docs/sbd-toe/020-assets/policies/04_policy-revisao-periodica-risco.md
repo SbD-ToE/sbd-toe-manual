@@ -9,7 +9,7 @@ sidebar_position: 4
 
 # Política de Revisão Periódica de Risco
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os mecanismos obrigatórios de revisão da classificação de risco aplicacional e dos controlos de segurança associados, ao longo de todo o ciclo de vida de cada aplicação.
 
@@ -22,7 +22,7 @@ Esta política estabelece dois mecanismos complementares de revisão:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a **todas as aplicações com classificação de risco ativa** (L1, L2 ou L3), independentemente do estado de desenvolvimento (em construção, em produção, em manutenção ou em descontinuação).
 
@@ -30,9 +30,9 @@ Aplicações em processo de descomissionamento mantêm a obrigação de revisão
 
 ---
 
-## 3. Revisão time-based - cadência periódica
+## 3. Revisão time-based - cadência periódica {#3-revisão-time-based---cadência-periódica}
 
-### 3.1 Cadências mínimas obrigatórias
+### 3.1 Cadências mínimas obrigatórias {#31-cadências-mínimas-obrigatórias}
 
 | Nível | Cadência mínima | Obrigatoriedade |
 |---|---|---|
@@ -42,7 +42,7 @@ Aplicações em processo de descomissionamento mantêm a obrigação de revisão
 
 A data da próxima revisão deve ser registada no documento de classificação no momento de cada revisão. A ausência de data de revisão agendada é tratada como incumprimento.
 
-### 3.2 O que avaliar em cada revisão periódica
+### 3.2 O que avaliar em cada revisão periódica {#32-o-que-avaliar-em-cada-revisão-periódica}
 
 - [ ] Reavaliação dos três eixos E, D e I com base no estado atual da aplicação
 - [ ] Verificação de alterações técnicas ocorridas desde a última revisão (novas integrações, mudanças de exposição, novos tipos de dados)
@@ -52,7 +52,7 @@ A data da próxima revisão deve ser registada no documento de classificação n
 - [ ] Decisão documentada: manter nível / alterar nível
 - [ ] Agendamento da próxima revisão
 
-### 3.3 Resultado da revisão periódica
+### 3.3 Resultado da revisão periódica {#33-resultado-da-revisão-periódica}
 
 | Decisão | Ação |
 |---|---|
@@ -66,9 +66,9 @@ A redução de nível de criticidade requer justificação técnica rigorosa e a
 
 ---
 
-## 4. Revisão event-based - triggers obrigatórios
+## 4. Revisão event-based - triggers obrigatórios {#4-revisão-event-based---triggers-obrigatórios}
 
-### 4.1 Triggers que obrigam a revisão imediata
+### 4.1 Triggers que obrigam a revisão imediata {#41-triggers-que-obrigam-a-revisão-imediata}
 
 A revisão da classificação deve ser despoletada **imediatamente** (no prazo máximo de 5 dias úteis) quando ocorra qualquer um dos seguintes eventos:
 
@@ -83,7 +83,7 @@ A revisão da classificação deve ser despoletada **imediatamente** (no prazo m
 | Alteração regulatória aplicável | Nova obrigação legal ou normativa com impacto na classificação |
 | Mudança de modelo de negócio | Alteração do público-alvo, jurisdição ou propósito da aplicação |
 
-### 4.2 Triggers que recomendam revisão
+### 4.2 Triggers que recomendam revisão {#42-triggers-que-recomendam-revisão}
 
 Os seguintes eventos não obrigam a revisão imediata, mas devem ser avaliados pela equipa como potenciais triggers:
 
@@ -92,7 +92,7 @@ Os seguintes eventos não obrigam a revisão imediata, mas devem ser avaliados p
 - Mudança de equipa responsável ou de owner de segurança
 - Resultados de pentest que evidenciem exposição não prevista na classificação
 
-### 4.3 Processo de revisão event-based
+### 4.3 Processo de revisão event-based {#43-processo-de-revisão-event-based}
 
 1. **Identificar o trigger** - documentar o evento que originou a revisão
 2. **Avaliar o impacto** nos eixos E, D e I
@@ -104,7 +104,7 @@ Os seguintes eventos não obrigam a revisão imediata, mas devem ser avaliados p
 
 ---
 
-## 5. Deteção assistida por ferramentas
+## 5. Deteção assistida por ferramentas {#5-deteção-assistida-por-ferramentas}
 
 A organização pode utilizar ferramentas automatizadas para deteção de eventos que possam constituir triggers de revisão (ex: análise de commits, PRs, alterações de configuração).
 
@@ -117,7 +117,7 @@ Quando uma ferramenta propõe reclassificação ou alerta para uma potencial alt
 
 ---
 
-## 6. Documentação obrigatória de cada revisão
+## 6. Documentação obrigatória de cada revisão {#6-documentação-obrigatória-de-cada-revisão}
 
 Cada revisão (periódica ou event-based) deve produzir um registo com:
 
@@ -135,7 +135,7 @@ Cada revisão (periódica ou event-based) deve produzir um registo com:
 
 ---
 
-## 7. Integração com o ciclo de desenvolvimento
+## 7. Integração com o ciclo de desenvolvimento {#7-integração-com-o-ciclo-de-desenvolvimento}
 
 | Momento | Ação esperada |
 |---|---|
@@ -146,7 +146,7 @@ Cada revisão (periódica ou event-based) deve produzir um registo com:
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -158,7 +158,7 @@ Cada revisão (periódica ou event-based) deve produzir um registo com:
 
 ---
 
-## 9. Incumprimento
+## 9. Incumprimento {#9-incumprimento}
 
 A ausência de revisão dentro da cadência definida para o nível constitui incumprimento desta política e deve ser:
 
@@ -168,7 +168,7 @@ A ausência de revisão dentro da cadência definida para o nível constitui inc
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -180,7 +180,7 @@ O histórico de revisões de todas as aplicações deve ser disponibilizado em a
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

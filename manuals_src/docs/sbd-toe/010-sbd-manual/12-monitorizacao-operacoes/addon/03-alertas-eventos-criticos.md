@@ -8,13 +8,13 @@ tags: [alertas, eventos críticos, deteção, thresholds, severidade]
 
 # Alertas baseados em Eventos Críticos
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Prescrever práticas para a definição, ativação e validação de **alertas automáticos baseados em eventos críticos**, com foco em deteção atempada, redução de falsos positivos e integração eficaz com as equipas de resposta.
 
 ---
 
-## 🧬 O que são alertas críticos
+## 🧬 O que são alertas críticos {#-o-que-são-alertas-críticos}
 
 Alertas críticos são **notificações geradas automaticamente** com base em padrões de eventos que indicam anomalias, falhas de segurança ou comportamentos indesejados - exigindo validação humana ou resposta imediata.
 
@@ -22,7 +22,7 @@ Alertas críticos são **notificações geradas automaticamente** com base em pa
 
 ---
 
-## 📌 Tipos de eventos que devem gerar alertas
+## 📌 Tipos de eventos que devem gerar alertas {#-tipos-de-eventos-que-devem-gerar-alertas}
 
 | Tipo de evento              | Exemplos práticos                                 | Severidade sugerida |
 | --------------------------- | ------------------------------------------------- | ------------------- |
@@ -37,7 +37,7 @@ Alertas críticos são **notificações geradas automaticamente** com base em pa
 
 ---
 
-## 🛠️ Como definir um alerta eficaz
+## 🛠️ Como definir um alerta eficaz {#️-como-definir-um-alerta-eficaz}
 
 Cada regra de alerta deve conter:
 
@@ -47,7 +47,7 @@ Cada regra de alerta deve conter:
 * **Canal de notificação**: e-mail, Slack, webhook, PagerDuty, etc.;
 * **Runbook (opcional)**: link para resposta padronizada.
 
-### Exemplo (YAML genérico):
+### Exemplo (YAML genérico): {#exemplo-yaml-genérico}
 
 ```yaml
 alert_name: login_failures_high
@@ -59,7 +59,7 @@ runbook: https://wiki.exemplo.org/runbooks/login-failures
 
 ---
 
-## 🧪 Validação de alertas
+## 🧪 Validação de alertas {#-validação-de-alertas}
 
 | Técnica                    | Descrição                                        |
 | -------------------------- | ------------------------------------------------ |
@@ -72,7 +72,7 @@ runbook: https://wiki.exemplo.org/runbooks/login-failures
 
 ---
 
-## 📊 Tuning e gestão de falsos positivos
+## 📊 Tuning e gestão de falsos positivos {#-tuning-e-gestão-de-falsos-positivos}
 
 Alertas mal calibrados causam ruído e descredibilizam o sistema. Práticas recomendadas:
 
@@ -85,7 +85,7 @@ Alertas mal calibrados causam ruído e descredibilizam o sistema. Práticas reco
 
 ---
 
-## 🧹 Integração com outros controlos
+## 🧹 Integração com outros controlos {#-integração-com-outros-controlos}
 
 | Documento                          | Ligação com este tópico                          |
 | ---------------------------------- | ------------------------------------------------ |
@@ -96,7 +96,7 @@ Alertas mal calibrados causam ruído e descredibilizam o sistema. Práticas reco
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Iniciar com 5 a 10 alertas de alto valor (impacto + frequência)
 * Priorizar alertas ligados a fluxos críticos ou dados sensíveis

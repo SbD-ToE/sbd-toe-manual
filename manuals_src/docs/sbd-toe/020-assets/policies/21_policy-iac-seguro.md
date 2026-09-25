@@ -9,7 +9,7 @@ sidebar_position: 21
 
 # Política de IaC Seguro
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos de segurança aplicáveis ao **design, validação, execução e manutenção de Infraestrutura como Código (IaC)** em todos os ambientes geridos pela organização.
 
@@ -25,13 +25,13 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a toda a infraestrutura definida como código, independentemente da ferramenta utilizada (Terraform, OpenTofu, Pulumi, CloudFormation, Bicep, Ansible, etc.) e do ambiente (cloud pública, privada ou híbrida, Kubernetes, etc.).
 
 ---
 
-## 3. Princípios de IaC seguro
+## 3. Princípios de IaC seguro {#3-princípios-de-iac-seguro}
 
 | Princípio | Aplicação prática |
 |---|---|
@@ -44,9 +44,9 @@ Esta política aplica-se a toda a infraestrutura definida como código, independ
 
 ---
 
-## 4. Validação automática obrigatória
+## 4. Validação automática obrigatória {#4-validação-automática-obrigatória}
 
-### 4.1 Linting e validação de sintaxe
+### 4.1 Linting e validação de sintaxe {#41-linting-e-validação-de-sintaxe}
 
 Executado em cada PR com alterações IaC, antes de qualquer plan ou apply:
 
@@ -54,7 +54,7 @@ Executado em cada PR com alterações IaC, antes de qualquer plan ou apply:
 - [ ] Sintaxe validada (`terraform validate`, equivalente)
 - [ ] Linter de boas práticas (`tflint`, equivalente)
 
-### 4.2 Scanning de segurança
+### 4.2 Scanning de segurança {#42-scanning-de-segurança}
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
@@ -63,7 +63,7 @@ Executado em cada PR com alterações IaC, antes de qualquer plan ou apply:
 | Validação de permissões IAM mínimas | Recomendado | Obrigatório | Obrigatório |
 | Deteção de segredos hardcoded | Obrigatório | Obrigatório | Obrigatório |
 
-### 4.3 Policy-as-code
+### 4.3 Policy-as-code {#43-policy-as-code}
 
 Em L2/L3, as políticas de segurança de infraestrutura devem ser codificadas em regras verificáveis automaticamente:
 
@@ -74,7 +74,7 @@ Em L2/L3, as políticas de segurança de infraestrutura devem ser codificadas em
 
 ---
 
-## 5. Separação de ambientes
+## 5. Separação de ambientes {#5-separação-de-ambientes}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -87,9 +87,9 @@ Em L2/L3, as políticas de segurança de infraestrutura devem ser codificadas em
 
 ---
 
-## 6. Módulos externos e catálogo interno
+## 6. Módulos externos e catálogo interno {#6-módulos-externos-e-catálogo-interno}
 
-### 6.1 Avaliação de módulos externos
+### 6.1 Avaliação de módulos externos {#61-avaliação-de-módulos-externos}
 
 Módulos IaC de fontes externas (ex: Terraform Registry, GitHub público) devem ser avaliados antes de adoção:
 
@@ -98,7 +98,7 @@ Módulos IaC de fontes externas (ex: Terraform Registry, GitHub público) devem 
 - [ ] Licença compatível
 - [ ] Versão fixada (pinning) - sem uso de `latest` ou ranges em prod
 
-### 6.2 Catálogo interno de módulos aprovados
+### 6.2 Catálogo interno de módulos aprovados {#62-catálogo-interno-de-módulos-aprovados}
 
 Em L2/L3, a organização deve manter um catálogo de módulos IaC internos aprovados:
 
@@ -110,7 +110,7 @@ Em L2/L3, a organização deve manter um catálogo de módulos IaC internos apro
 
 ---
 
-## 7. Revisão e aprovação de plan
+## 7. Revisão e aprovação de plan {#7-revisão-e-aprovação-de-plan}
 
 Antes de qualquer apply em ambientes de staging ou produção:
 
@@ -130,7 +130,7 @@ A revisão do plan deve validar:
 
 ---
 
-## 8. Deteção e correção de drift
+## 8. Deteção e correção de drift {#8-deteção-e-correção-de-drift}
 
 Alterações manuais à infraestrutura real criam divergência (drift) face ao estado definido em IaC. Este estado é inaceitável em L2/L3:
 
@@ -147,7 +147,7 @@ Alterações manuais directas a infraestrutura de produção, fora do pipeline I
 
 ---
 
-## 9. Tagging obrigatório de recursos
+## 9. Tagging obrigatório de recursos {#9-tagging-obrigatório-de-recursos}
 
 Todos os recursos criados por IaC devem ter tags obrigatórias que permitam rastreabilidade:
 
@@ -163,7 +163,7 @@ A conformidade de tagging deve ser verificada automaticamente por policy-as-code
 
 ---
 
-## 10. Artefactos esperados
+## 10. Artefactos esperados {#10-artefactos-esperados}
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
@@ -176,7 +176,7 @@ A conformidade de tagging deve ser verificada automaticamente por policy-as-code
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -187,7 +187,7 @@ A conformidade de tagging deve ser verificada automaticamente por policy-as-code
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -197,7 +197,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

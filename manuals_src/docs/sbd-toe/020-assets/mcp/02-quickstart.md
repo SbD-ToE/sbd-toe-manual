@@ -13,11 +13,11 @@ tags:
 
 A forma mais rápida de avaliar o MCP é experimentá-lo durante um minuto e ver o cliente AI a citar o manual com IDs em vez de o parafrasear. Não é preciso clonar nada nem configurar credenciais — o servidor está publicado no npm e arranca via `npx`.
 
-## Pré-requisito
+## Pré-requisito {#pré-requisito}
 
 - **Node.js ≥ 20.9.0** ([nodejs.org](https://nodejs.org/))
 
-## Opção 1 — Claude Code (CLI)
+## Opção 1 — Claude Code (CLI) {#opção-1--claude-code-cli}
 
 ```bash
 claude mcp add sbd-toe -- npx -y @shiftleftpt/sbd-toe-mcp
@@ -29,7 +29,7 @@ E pronto. Numa nova sessão do Claude Code, basta perguntar:
 
 A sessão deve arrancar com a tool `list_sbd_toe_chapters` a devolver os 15 capítulos.
 
-## Opção 2 — Cursor / Claude Desktop / Windsurf
+## Opção 2 — Cursor / Claude Desktop / Windsurf {#opção-2--cursor--claude-desktop--windsurf}
 
 Adicionar ao ficheiro de configuração MCP do cliente:
 
@@ -46,7 +46,7 @@ Adicionar ao ficheiro de configuração MCP do cliente:
 
 Após reiniciar o cliente, as tools `sbd-toe.*` ficam disponíveis automaticamente.
 
-## Opção 3 — VS Code + GitHub Copilot
+## Opção 3 — VS Code + GitHub Copilot {#opção-3--vs-code--github-copilot}
 
 `.vscode/mcp.json` no repositório:
 
@@ -62,7 +62,7 @@ Após reiniciar o cliente, as tools `sbd-toe.*` ficam disponíveis automaticamen
 }
 ```
 
-## Validar a ligação
+## Validar a ligação {#validar-a-ligação}
 
 Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), basta começar qualquer conversa com:
 
@@ -72,7 +72,7 @@ setup_sbd_toe_agent(riskLevel="L2", projectRole="appsec-engineer")
 
 A resposta deve enumerar os capítulos activos para esse *risk level* e as regras específicas do papel. Uma lista coerente — capítulos numerados, *concerns*, regras — confirma a ligação. Uma resposta vaga ou sem IDs indica que o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.
 
-## E a seguir
+## E a seguir {#e-a-seguir}
 
 - Em dúvida sobre que *risk level* aplicar? Ver [Instalação por cliente](./03-instalacao.md) → secção "Determinar *risk level* do projecto".
 - Para que o cliente AI consulte o manual **automaticamente** sem ter de pedir: configurar uma [skill / agent file](./04-skills-agentes.md).

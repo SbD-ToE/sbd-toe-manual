@@ -9,21 +9,21 @@ sidebar_position: 7
 
 # Operações (Ops)
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Ops mantém **integridade em runtime**, garantindo disponibilidade, aplicação de patches e resposta coordenada a incidentes.  
 Responsável por **monitorização contínua**, configuração de alertas e execução de playbooks de resposta.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Asseguram execução segura em runtime
 - Implementam patches e atualizações regulares
 - Coordenam resposta a incidentes (Cap. 12)
 - Mantêm disponibilidade e resiliência operacional
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 As Ops são **linha da frente no cumprimento de NIS2** (resposta a incidentes, notificação em 24h) e **DORA** (continuidade operacional e gestão de eventos críticos).
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Linha da frente em:
 - **NIS2**: Notificação de incidentes em 24h
@@ -31,15 +31,15 @@ Linha da frente em:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 09 - Containers e Imagens
+### Cap. 09 - Containers e Imagens {#cap-09---containers-e-imagens}
 Manter **baseline de containers** atualizado, aplicar patches de segurança em imagens base de forma sistemática.
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Assegurar **resiliência em deploys**, coordenar rollback quando necessário, validar procedimentos de recuperação.
 
-### Cap. 12 - Monitorização e Operações
+### Cap. 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 Configurar **alertas críticos com SLAs**, integrar alertas com playbooks de incident response, correlacionar eventos multi-fonte, afinar alertas para reduzir falsos positivos, coordenar resposta a incidentes, trabalhar com métricas e manter disponibilidade.
 
 **User Stories:**
@@ -48,15 +48,15 @@ Configurar **alertas críticos com SLAs**, integrar alertas com playbooks de inc
 - [US-05: Correlação de eventos](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-05---métricas-de-eficácia-mttdmttr) - Deteção de padrões suspeitos (com AppSec Engineer)
 - [US-06: Validação e afinação de alertas](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---classificação-e-cobertura-de-domínios-de-monitorização) - Reduzir falsos positivos (com AppSec Engineer)
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 Participar em **simulações de incidentes** (war room, tabletop exercises) para validar processos de resposta.
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Documentar **incidentes e lições aprendidas**, garantindo melhoria contínua dos processos de resposta.
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

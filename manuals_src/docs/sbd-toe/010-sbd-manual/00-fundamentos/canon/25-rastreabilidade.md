@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Fundamentos
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As referências externas relevantes para este domínio encontram-se nos capítulos onde cada slice ancora primariamente.
 
@@ -19,13 +19,13 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
 _(Nenhuma entidade Manual ontology V2 directamente mapped a este capítulo nos canonical files actuais.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

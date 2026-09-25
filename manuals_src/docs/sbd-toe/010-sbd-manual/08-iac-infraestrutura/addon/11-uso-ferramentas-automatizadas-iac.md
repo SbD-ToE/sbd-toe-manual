@@ -14,23 +14,23 @@ Este documento define **o que é aceitável**, **o que é proibido**, e **que va
 
 ---
 
-## 1) Princípio base: sugestão ≠ decisão
+## 1) Princípio base: sugestão ≠ decisão {#1-princípio-base-sugestão--decisão}
 
 Independentemente da origem, **o IaC proposto é sempre tratado como entrada não confiável**.  
 A decisão de executar (`apply`) é sempre humana e formalizada por gates e aprovações (proporcional ao risco).
 
 ---
 
-## 2) Padrões aceitáveis vs proibidos
+## 2) Padrões aceitáveis vs proibidos {#2-padrões-aceitáveis-vs-proibidos}
 
-### ✅ Aceitável (com controlo)
+### ✅ Aceitável (com controlo) {#-aceitável-com-controlo}
 
 - Gerar **rascunhos** de IaC (skeletons) para posterior revisão humana.
 - Normalizar formatação/estrutura (ex.: reorganização de ficheiros) desde que haja `plan` e validações.
 - Gerar documentação e comentários (não executáveis) a partir do código.
 - Criar propostas de mudança em branches/PRs com execução obrigatória de `plan` e scanners.
 
-### ❌ Proibido (por defeito)
+### ❌ Proibido (por defeito) {#-proibido-por-defeito}
 
 - Qualquer mecanismo que execute `apply` em produção sem gates e aprovação formal.
 - Alterações automáticas “em massa” sem explicabilidade e sem correlação com risco/impacto.
@@ -41,7 +41,7 @@ A decisão de executar (`apply`) é sempre humana e formalizada por gates e apro
 
 ---
 
-## 3) Classes de erro típicas em IaC automatizado/assistido
+## 3) Classes de erro típicas em IaC automatizado/assistido {#3-classes-de-erro-típicas-em-iac-automatizadoassistido}
 
 Estas classes devem ser assumidas como risco de base e cobertas por validação semântica:
 
@@ -55,16 +55,16 @@ Estas classes devem ser assumidas como risco de base e cobertas por validação 
 
 ---
 
-## 4) Validações obrigatórias (gates) e evidência mínima
+## 4) Validações obrigatórias (gates) e evidência mínima {#4-validações-obrigatórias-gates-e-evidência-mínima}
 
-### 4.1 Gates mínimos (sempre aplicáveis)
+### 4.1 Gates mínimos (sempre aplicáveis) {#41-gates-mínimos-sempre-aplicáveis}
 
 - **Lint/sintaxe**: validação de formato e consistência.
 - **Scanning de segurança**: misconfigurations, exposições e padrões perigosos.
 - **Policy-as-code**: bloqueio de violações críticas.
 - **Secret scanning**: impedir segredos em repo/logs/artefactos.
 
-### 4.2 Validação semântica do `plan` (obrigatória quando aplicável)
+### 4.2 Validação semântica do `plan` (obrigatória quando aplicável) {#42-validação-semântica-do-plan-obrigatória-quando-aplicável}
 
 - Impacto do `plan`: criação/alteração/destruição por recurso e ambiente.
 - Permissões efetivas: aumento de privileges, wildcards, admin roles.
@@ -72,7 +72,7 @@ Estas classes devem ser assumidas como risco de base e cobertas por validação 
 - Cifragem/logging: recursos críticos sem garantias mínimas.
 - Diffs inesperados: upgrades e mudanças indiretas.
 
-### 4.3 Evidência mínima (auditável)
+### 4.3 Evidência mínima (auditável) {#43-evidência-mínima-auditável}
 
 - `plan` associado ao PR/MR + commit + ambiente.
 - Relatórios de scanners/policies associados ao mesmo PR/MR.
@@ -81,7 +81,7 @@ Estas classes devem ser assumidas como risco de base e cobertas por validação 
 
 ---
 
-## 5) Tratamento de sistemas externos
+## 5) Tratamento de sistemas externos {#5-tratamento-de-sistemas-externos}
 
 Qualquer sistema externo que processe:
 - conteúdo do repositório,
@@ -99,7 +99,7 @@ deve ser tratado como **dependência de segurança**:
 
 ---
 
-## ⚖️ Proporcionalidade L1–L3
+## ⚖️ Proporcionalidade L1–L3 {#️-proporcionalidade-l1l3}
 
 | Dimensão | L1 | L2 | L3 |
 |---|---|---|---|
@@ -111,7 +111,7 @@ deve ser tratado como **dependência de segurança**:
 
 ---
 
-## ✅ Checklist de controlo por projeto
+## ✅ Checklist de controlo por projeto {#-checklist-de-controlo-por-projeto}
 
 - [ ] Automação/assistência é usada apenas para proposta (não para execução não controlada)
 - [ ] Gates mínimos ativos (lint, scanning, policies, secret scanning)

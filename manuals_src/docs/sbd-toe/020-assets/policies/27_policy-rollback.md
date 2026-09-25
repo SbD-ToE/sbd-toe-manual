@@ -9,7 +9,7 @@ sidebar_position: 27
 
 # Política de Rollback
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **capacidade de rollback de deploys em produção** - a capacidade de reverter, de forma controlada e verificável, uma versão de software ou de infraestrutura para o estado anterior em caso de incidente, regressão ou anomalia detectada pós-deploy.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -34,9 +34,9 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Tipos de rollback e requisitos específicos
+## 3. Tipos de rollback e requisitos específicos {#3-tipos-de-rollback-e-requisitos-específicos}
 
-### 3.1 Rollback de binário (aplicação/imagem)
+### 3.1 Rollback de binário (aplicação/imagem) {#31-rollback-de-binário-aplicaçãoimagem}
 
 O tipo mais frequente e geralmente o mais simples - reverter para a versão anterior do artefacto:
 
@@ -46,7 +46,7 @@ O tipo mais frequente e geralmente o mais simples - reverter para a versão ante
 | Rollback via pipeline (não manual) | Recomendado | Obrigatório | Obrigatório |
 | RTO | Sem definição | ≤ 30 minutos | ≤ 15 minutos |
 
-### 3.2 Rollback de configuração
+### 3.2 Rollback de configuração {#32-rollback-de-configuração}
 
 Alterações de configuração (variáveis de ambiente, feature flags, configurações de serviço) devem ser reversíveis:
 
@@ -55,7 +55,7 @@ Alterações de configuração (variáveis de ambiente, feature flags, configura
 - [ ] Rollback de configuração independente do rollback de binário (podem ser executados separadamente)
 - [ ] Feature flags como mecanismo de rollback funcional sem novo deploy
 
-### 3.3 Rollback de base de dados
+### 3.3 Rollback de base de dados {#33-rollback-de-base-de-dados}
 
 O rollback de alterações de base de dados é o mais complexo e o com maior risco de perda de dados:
 
@@ -70,7 +70,7 @@ O rollback de alterações de base de dados é o mais complexo e o com maior ris
 Alterações de BD destrutivas (remoção de colunas, tabelas, mudança de tipos) são irreversíveis sem perda de dados. Devem ser planeadas em múltiplas fases: primeiro deprecar/ignorar, depois remover em release posterior. A remoção directa sem fase de transição proíbe rollback sem perda de dados.
 :::
 
-### 3.4 Rollback de infraestrutura (IaC)
+### 3.4 Rollback de infraestrutura (IaC) {#34-rollback-de-infraestrutura-iac}
 
 A reversão de alterações de infraestrutura (IaC) deve seguir o mesmo processo de aprovação que o apply original:
 
@@ -81,7 +81,7 @@ A reversão de alterações de infraestrutura (IaC) deve seguir o mesmo processo
 
 ---
 
-## 4. Critérios de activação de rollback
+## 4. Critérios de activação de rollback {#4-critérios-de-activação-de-rollback}
 
 O rollback deve ser activado quando um dos seguintes critérios é verificado após o deploy:
 
@@ -98,9 +98,9 @@ Os thresholds devem ser documentados, versionados e revistos periodicamente.
 
 ---
 
-## 5. Processo de rollback
+## 5. Processo de rollback {#5-processo-de-rollback}
 
-### 5.1 Rollback automático
+### 5.1 Rollback automático {#51-rollback-automático}
 
 Em L2/L3, o rollback deve ser iniciado automaticamente quando os critérios de activação são atingidos durante uma janela de observação pós-deploy:
 
@@ -110,7 +110,7 @@ Em L2/L3, o rollback deve ser iniciado automaticamente quando os critérios de a
 4. Confirmação de estado de saúde após rollback
 5. Notificação à equipa com detalhes da reversão
 
-### 5.2 Rollback manual
+### 5.2 Rollback manual {#52-rollback-manual}
 
 Quando o rollback é iniciado por decisão humana (fora da janela automática ou para tipos não cobertos pelo rollback automático):
 
@@ -122,7 +122,7 @@ Quando o rollback é iniciado por decisão humana (fora da janela automática ou
 
 ---
 
-## 6. RTO de rollback por nível
+## 6. RTO de rollback por nível {#6-rto-de-rollback-por-nível}
 
 | Nível | RTO alvo (rollback de binário) | RTO alvo (rollback de BD simples) |
 |---|---|---|
@@ -134,7 +134,7 @@ O RTO deve ser medido a partir da detecção do problema até ao serviço estar 
 
 ---
 
-## 7. Teste periódico de rollback
+## 7. Teste periódico de rollback {#7-teste-periódico-de-rollback}
 
 A capacidade de rollback deve ser testada periodicamente - um rollback não testado é uma capacidade teórica, não operacional:
 
@@ -153,7 +153,7 @@ Os resultados dos testes devem ser documentados, incluindo:
 
 ---
 
-## 8. Rastreabilidade de rollbacks
+## 8. Rastreabilidade de rollbacks {#8-rastreabilidade-de-rollbacks}
 
 Cada rollback executado em produção deve produzir evidência auditável:
 
@@ -166,7 +166,7 @@ Cada rollback executado em produção deve produzir evidência auditável:
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -178,7 +178,7 @@ Cada rollback executado em produção deve produzir evidência auditável:
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -188,7 +188,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

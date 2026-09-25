@@ -10,7 +10,7 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 
 # KPIs e Métricas - Monitorização e Operações
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **eficácia operacional do programa de monitorização de segurança**: a cobertura de logging centralizado, a qualidade dos alertas, a velocidade de detecção e resposta, e a capacidade de correlação entre fontes. Este domínio opera sobre dados produzidos por todos os outros capítulos - os logs gerados pelo código (Cap. 06), pelo pipeline (Cap. 07), pelos containers (Cap. 09) e pela infraestrutura (Cap. 08) convergem aqui e são avaliados pela sua utilidade operacional.
 
@@ -22,7 +22,7 @@ Os indicadores OPS alimentam a dimensão transversal **T-03 (Velocidade de resol
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -30,7 +30,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -50,7 +50,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -65,7 +65,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **OPS-K01 - Logging centralizado:** considera-se centralizado o envio de eventos de segurança para um sistema de recolha central (SIEM, plataforma de log aggregation) com retenção, indexação e capacidade de consulta. Logging local sem forwarding não satisfaz este critério.
 
@@ -85,7 +85,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Thresholds de MTTD/MTTR por nível - resumo
+## Thresholds de MTTD/MTTR por nível - resumo {#thresholds-de-mttdmttr-por-nível---resumo}
 
 | Métrica | L1 | L2 | L3 |
 |---------|:--:|:--:|:--:|
@@ -96,7 +96,7 @@ Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Pa
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -111,7 +111,7 @@ Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Pa
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

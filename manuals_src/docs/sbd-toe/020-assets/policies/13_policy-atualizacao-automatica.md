@@ -9,7 +9,7 @@ sidebar_position: 13
 
 # Política de Atualização Automática de Dependências
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **operação controlada de bots de atualização automática de dependências** em repositórios de software classificados como L2 ou L3.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -34,7 +34,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Ferramentas aceites
+## 3. Ferramentas aceites {#3-ferramentas-aceites}
 
 A organização aceita as seguintes ferramentas para automação de atualização de dependências:
 
@@ -46,7 +46,7 @@ A organização aceita as seguintes ferramentas para automação de atualizaçã
 
 ---
 
-## 4. Critérios de auto-merge
+## 4. Critérios de auto-merge {#4-critérios-de-auto-merge}
 
 O auto-merge automático de PRs de atualização só é permitido quando **todos** os seguintes critérios são satisfeitos:
 
@@ -62,7 +62,7 @@ O auto-merge automático de PRs de atualização só é permitido quando **todos
 Auto-merge em L3 é restrito a atualizações patch. Atualizações minor em L3 requerem revisão humana, mesmo que o CI passe.
 :::
 
-### 4.1 Proporcionalidade do auto-merge
+### 4.1 Proporcionalidade do auto-merge {#41-proporcionalidade-do-auto-merge}
 
 | Tipo de atualização | L1 | L2 | L3 |
 |---|---|---|---|
@@ -73,7 +73,7 @@ Auto-merge em L3 é restrito a atualizações patch. Atualizações minor em L3 
 
 ---
 
-## 5. Handoff humano
+## 5. Handoff humano {#5-handoff-humano}
 
 Quando a análise de impacto determina que a atualização não é elegível para auto-merge, o bot deve:
 
@@ -93,9 +93,9 @@ PRs de atualização sem resposta dentro do prazo devem gerar alerta para o Tech
 
 ---
 
-## 6. Configuração obrigatória dos bots
+## 6. Configuração obrigatória dos bots {#6-configuração-obrigatória-dos-bots}
 
-### 6.1 Parâmetros mínimos de configuração
+### 6.1 Parâmetros mínimos de configuração {#61-parâmetros-mínimos-de-configuração}
 
 A configuração do bot (ex: `renovate.json`, `.github/dependabot.yml`) deve incluir:
 
@@ -106,13 +106,13 @@ A configuração do bot (ex: `renovate.json`, `.github/dependabot.yml`) deve inc
 - [ ] Regras de auto-merge explícitas no ficheiro de configuração (não assumidas por defeito)
 - [ ] Exclusão de dependências marcadas como geridas manualmente
 
-### 6.2 Repositórios internos como fonte
+### 6.2 Repositórios internos como fonte {#62-repositórios-internos-como-fonte}
 
 Em L2/L3, o bot deve resolver pacotes através do repositório interno (proxy/mirror), não diretamente da internet. A configuração do bot deve referenciar os registos internos da organização.
 
 ---
 
-## 7. Integração com SCA e gates
+## 7. Integração com SCA e gates {#7-integração-com-sca-e-gates}
 
 A atualização automática não dispensa a análise SCA:
 
@@ -122,7 +122,7 @@ A atualização automática não dispensa a análise SCA:
 
 ---
 
-## 8. Freeze periods e exceções
+## 8. Freeze periods e exceções {#8-freeze-periods-e-exceções}
 
 Durante períodos de freeze de releases (ex: pré-release, janelas de manutenção regulamentada), os bots devem:
 
@@ -133,7 +133,7 @@ A definição de freeze periods deve ser configurada no ficheiro de configuraç�
 
 ---
 
-## 9. Monitorização e métricas
+## 9. Monitorização e métricas {#9-monitorização-e-métricas}
 
 Os seguintes indicadores devem ser monitorizados para avaliar a saúde do processo de atualização:
 
@@ -146,7 +146,7 @@ Os seguintes indicadores devem ser monitorizados para avaliar a saúde do proces
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -157,7 +157,7 @@ Os seguintes indicadores devem ser monitorizados para avaliar a saúde do proces
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -167,7 +167,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

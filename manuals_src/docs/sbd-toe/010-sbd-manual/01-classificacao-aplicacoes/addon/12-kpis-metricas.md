@@ -10,7 +10,7 @@ tags: [kpi, metricas, CLA, classificacao, risco, L1, L2, L3]
 
 # KPIs e Métricas - Classificação de Aplicações
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **qualidade, cobertura e actualidade do processo de classificação de risco de aplicações**. A classificação é o ponto de partida de todo o modelo SbD-ToE: sem uma classificação correcta, os requisitos aplicados são os errados, as excepções têm alçadas inadequadas, e os controlos não são proporcionais ao risco real.
 
@@ -20,7 +20,7 @@ Os indicadores CLA alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores CLA são a **origem do denominador** de todos os KPIs de domínio do programa SbD-ToE. CLA-K01 estabelece F-02 - o inventário de aplicações classificadas por nível de risco que serve de denominador partilhado a todos os capítulos. Sem CLA-K01 completo e actualizado, as percentagens dos outros capítulos não têm base interpretável.
 
@@ -28,7 +28,7 @@ A relação é directa: F-01 (inventário total) e F-02 (classificadas por níve
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -49,7 +49,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **CLA-K01 - Classificação documentada:** considera-se documentada uma classificação que inclui: (a) nível de risco atribuído (L1/L2/L3); (b) critérios que determinaram o nível (tipo de dados, exposição, criticidade); (c) owner responsável pela classificação; (d) data de última revisão. Classificações informais ou verbais não satisfazem este critério.
 
@@ -81,7 +81,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Suporte de instrumentação | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -94,7 +94,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

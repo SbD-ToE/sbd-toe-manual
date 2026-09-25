@@ -8,7 +8,7 @@ tags: [planeamento, controlo, iac, segurança, adoção, governação]
 
 # Planeamento de Execução e Controlo de Estado
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todos os projetos de Infraestrutura como Código (IaC) mantêm um **controlo consistente, seguro e rastreável** do **estado da infraestrutura** e dos **planos de execução** (`plan`) gerados antes de qualquer alteração.
 
@@ -22,7 +22,7 @@ Esta prática permite:
 
 ---
 
-## 📌 O que deve ser feito
+## 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. **Configurar backend remoto autenticado** para armazenar o estado (`terraform.tfstate`, ou equivalente);
 2. **Ativar mecanismo de locking** para evitar concorrência durante o `apply`;
@@ -34,7 +34,7 @@ Esta prática permite:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 | Ação                | Prescrição                                                                 |
 |---------------------|----------------------------------------------------------------------------|
@@ -47,7 +47,7 @@ Esta prática permite:
 
 ---
 
-## 🕒 Quando aplicar
+## 🕒 Quando aplicar {#-quando-aplicar}
 
 | Momento                       | Ação esperada                                                        |
 |-------------------------------|-----------------------------------------------------------------------|
@@ -58,7 +58,7 @@ Esta prática permite:
 
 ---
 
-## 👥 Perfis envolvidos
+## 👥 Perfis envolvidos {#-perfis-envolvidos}
 
 | Papel            | Responsabilidade                                               |
 |------------------|---------------------------------------------------------------|
@@ -69,7 +69,7 @@ Esta prática permite:
 
 ---
 
-## 🧪 Exemplos práticos
+## 🧪 Exemplos práticos {#-exemplos-práticos}
 
 - `terraform backend "s3"` com `encrypt = true`, `lock_table` e versionamento;
 - Pipeline com job que faz `terraform plan`, armazena o `.plan` e aguarda aprovação para `apply`;
@@ -78,7 +78,7 @@ Esta prática permite:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Nunca executar `terraform apply` localmente em ambientes de produção;
 - Validar e registar `plan` antes de qualquer alteração significativa;
@@ -88,7 +88,7 @@ Esta prática permite:
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                      | Relação com esta prática                            |
 |--------------------------------|-----------------------------------------------------|

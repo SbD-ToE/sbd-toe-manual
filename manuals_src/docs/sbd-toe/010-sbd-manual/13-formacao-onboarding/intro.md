@@ -46,7 +46,7 @@ independentemente do grau de automação existente.
 
 ---
 
-## 🧪 2. Prescrição prática
+## 🧪 2. Prescrição prática {#-2-prescrição-prática}
 
 - **O que fazer:** plano formativo contínuo, onboarding com segurança, labs, métricas de eficácia.  
 - **Como:** LMS com trilhas por perfil, champions por equipa, revisões periódicas.  
@@ -55,7 +55,7 @@ independentemente do grau de automação existente.
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 - **Developer** → receber formação prática em SAST, dependências, IaC.  
 - **QA** → capacitação em fuzzing, regressões, validação.  
@@ -68,7 +68,7 @@ independentemente do grau de automação existente.
 
 ---
 
-## 🔗 Integração no ciclo
+## 🔗 Integração no ciclo {#-integração-no-ciclo}
 
 A capacitação deve estar presente em todo o ciclo:  
 - **Planeamento:** definição de requisitos de formação para cada perfil.  
@@ -81,7 +81,7 @@ A capacitação deve estar presente em todo o ciclo:
 
 ---
 
-## 📊 Rastreabilidade organizacional
+## 📊 Rastreabilidade organizacional {#-rastreabilidade-organizacional}
 
 - **KPIs de capacitação**: taxa de conclusão, retenção de conhecimento, aplicação prática em auditorias.  
 - **Métricas de eficácia**: redução de findings repetidos em código, diminuição de incidentes atribuídos a erro humano.  
@@ -90,7 +90,7 @@ A capacitação deve estar presente em todo o ciclo:
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 A formação é o que **transforma processos em cultura**.  
 - Sem onboarding seguro, a organização acumula falhas básicas.  
@@ -102,7 +102,7 @@ A formação é o que **transforma processos em cultura**.
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|

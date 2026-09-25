@@ -9,13 +9,13 @@ tags: [tipo:ligacao, tema:drp, bia, classificacao, risco]
 # Modelo alternativo via Adoção de Classificações Existentes (e.g. DRP/BIA)
 
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Orientar a reutilização de classificações já existentes - nomeadamente **DRP (Disaster Recovery Plan)** e **BIA (Business Impact Analysis)** - como base para a **classificação de risco aplicacional**, evitando duplicação de esforço e promovendo consistência na avaliação de criticidade.
 
 ---
 
-## 📘 Contexto
+## 📘 Contexto {#-contexto}
 
 Muitas organizações já realizam uma **classificação de impacto** com base na continuidade do negócio, no âmbito de processos como o DRP ou BIA, ou outras. Essas classificações incluem geralmente atributos como:
 
@@ -28,7 +28,7 @@ Embora não tenham foco direto na segurança, estes dados são **fortemente corr
 
 ---
 
-## 🔁 Mapeamento prático entre DRP/BIA e risco de segurança
+## 🔁 Mapeamento prático entre DRP/BIA e risco de segurança {#-mapeamento-prático-entre-drpbia-e-risco-de-segurança}
 
 | Classificação DRP/BIA     | Interpretação no contexto SbD-ToE |
 |---------------------------|------------------------------------|
@@ -40,7 +40,7 @@ Embora não tenham foco direto na segurança, estes dados são **fortemente corr
 
 ---
 
-## 📝 Exemplo prático
+## 📝 Exemplo prático {#-exemplo-prático}
 
 Um sistema classificado como **Crítico** no DRP, com os seguintes parâmetros:
 
@@ -59,7 +59,7 @@ Um sistema classificado como **Crítico** no DRP, com os seguintes parâmetros:
 
 ---
 
-## 📌 Recomendações
+## 📌 Recomendações {#-recomendações}
 
 - Validar se a classificação DRP/BIA está atualizada e corresponde ao âmbito da aplicação atual
 - Anexar ou referenciar a classificação de impacto no repositório onde for documentada a classificação de risco
@@ -68,7 +68,7 @@ Um sistema classificado como **Crítico** no DRP, com os seguintes parâmetros:
 
 ---
 
-## 🧩 Integração operacional
+## 🧩 Integração operacional {#-integração-operacional}
 
 Na prática, a reutilização destas classificações pode ser feita de três formas:
 

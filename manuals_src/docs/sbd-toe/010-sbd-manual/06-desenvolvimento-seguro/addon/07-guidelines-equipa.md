@@ -16,7 +16,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Consolidar e difundir as práticas seguras de desenvolvimento entre os elementos da equipa.
 - Reduzir a dependência de validações manuais repetitivas.
@@ -26,7 +26,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Toda a equipa de desenvolvimento**: contribui para a melhoria e adoção das guidelines.
 - **Responsáveis técnicos (tech leads, senior devs)**: curadoria, validação e atualização regular.
@@ -34,7 +34,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Durante o planeamento técnico inicial de um projeto ou componente.
 - Como parte do onboarding de novos elementos da equipa.
@@ -43,7 +43,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## 🧱 Requisitos recomendados
+## 🧱 Requisitos recomendados {#-requisitos-recomendados}
 
 1. **Documentar práticas seguras, exemplos e padrões aceites**
    - Por stack tecnológica ou tipo de aplicação (frontend, backend, API, etc.)
@@ -62,7 +62,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 - Referência explícita às guidelines nos templates de PR.
 - Inclusão de link para secção da guideline relevante em revisões técnicas.
@@ -71,7 +71,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 - Repositório de `guidelines/` versionado por projeto ou por stack.
 - Wiki ou documento partilhado com histórico de revisões.
@@ -80,7 +80,7 @@ tags: [equipa, guidelines, alinhamento, práticas seguras, segurança]
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                | Ficheiro associado               |
 |-------------------------------------|----------------------------------|

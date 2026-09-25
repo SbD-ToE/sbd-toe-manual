@@ -14,13 +14,13 @@ A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende 
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ✅ A formação deve ser tratada como um **controlo de segurança obrigatório**, não como uma opção ou formalidade.
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                           | Obrigatória | Aplicação                                               | Conteúdo mínimo esperado                                                                                           |
 |--------------------------------------------|-------------|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +33,7 @@ A aplicação eficaz do Capítulo 13 - Formação e Onboarding Seguro - depende 
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem estar **formalmente aprovadas pela liderança de segurança** e comunicadas às áreas de onboarding, formação e contratação.
 - Devem ser incluídas como **referência em contratos, SLAs, planos de onboarding e ciclos de avaliação contínua**.

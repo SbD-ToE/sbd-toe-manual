@@ -10,7 +10,7 @@ Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em co
 
 ---
 
-## 🏥 Caso 1 - Aplicação de Saúde com Exposição Pública (Risco Elevado - L3)
+## 🏥 Caso 1 - Aplicação de Saúde com Exposição Pública (Risco Elevado - L3) {#-caso-1---aplicação-de-saúde-com-exposição-pública-risco-elevado---l3}
 
 - Web app em cloud pública com APIs para clínicas e pacientes
 - Dados clínicos e pessoais tratados
@@ -28,7 +28,7 @@ Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em co
 
 ---
 
-## 🧾 Caso 2 - Sistema de Faturação B2B (Risco Médio - L2)
+## 🧾 Caso 2 - Sistema de Faturação B2B (Risco Médio - L2) {#-caso-2---sistema-de-faturação-b2b-risco-médio---l2}
 
 - App web interna com utilizadores autenticados
 - Dados financeiros e de clientes
@@ -44,7 +44,7 @@ Estes exemplos demonstram como aplicar os requisitos de arquitetura segura em co
 
 ---
 
-## 📝 Caso 3 - Plataforma de Gestão de Tarefas Internas (Risco Baixo - L1)
+## 📝 Caso 3 - Plataforma de Gestão de Tarefas Internas (Risco Baixo - L1) {#-caso-3---plataforma-de-gestão-de-tarefas-internas-risco-baixo---l1}
 
 - Aplicação web acessível apenas em rede interna
 - Sem dados sensíveis nem APIs externas

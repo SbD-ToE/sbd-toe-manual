@@ -17,7 +17,7 @@ tags:
 
 O servidor `@shiftleftpt/sbd-toe-mcp` é distribuído **exclusivamente via npm** (mais bundle GitHub Release alternativo) e corre como processo `stdio` — compatível com **qualquer cliente MCP padrão**.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 | Requisito | Detalhe |
 |---|---|
@@ -32,7 +32,7 @@ Para ambientes sem acesso npm, descarregar o bundle do [GitHub Release](https://
 
 ---
 
-## Claude Code (CLI)
+## Claude Code (CLI) {#claude-code-cli}
 
 Forma mais simples — um comando, *zero* edição de ficheiros:
 
@@ -56,7 +56,7 @@ A configuração fica guardada em `~/.claude.json` (escopo global) ou em `.mcp.j
 
 ---
 
-## Claude Desktop (macOS / Windows)
+## Claude Desktop (macOS / Windows) {#claude-desktop-macos--windows}
 
 Editar o ficheiro `claude_desktop_config.json`:
 
@@ -78,7 +78,7 @@ Reiniciar o Claude Desktop. As tools `sbd-toe.*` aparecem no painel de ferrament
 
 ---
 
-## Cursor
+## Cursor {#cursor}
 
 Editar `~/.cursor/mcp.json` (global) ou `.cursor/mcp.json` no repositório (por projecto):
 
@@ -97,7 +97,7 @@ Em **Settings → Features → MCP**, confirmar que `sbd-toe` aparece como *runn
 
 ---
 
-## VS Code + GitHub Copilot
+## VS Code + GitHub Copilot {#vs-code--github-copilot}
 
 Adicionar `.vscode/mcp.json` no repositório (auto-detectado pelo Copilot Chat em modo *Agent*):
 
@@ -117,7 +117,7 @@ Em alternativa, configuração global do utilizador via *Settings UI* → *Exten
 
 ---
 
-## Windsurf (Codeium)
+## Windsurf (Codeium) {#windsurf-codeium}
 
 Editar `~/.codeium/windsurf/mcp_config.json`:
 
@@ -134,7 +134,7 @@ Editar `~/.codeium/windsurf/mcp_config.json`:
 
 ---
 
-## Zed
+## Zed {#zed}
 
 Editar `~/.config/zed/settings.json`, secção `context_servers`:
 
@@ -153,13 +153,13 @@ Editar `~/.config/zed/settings.json`, secção `context_servers`:
 
 ---
 
-## Outros clientes MCP
+## Outros clientes MCP {#outros-clientes-mcp}
 
 Qualquer cliente que suporte o transporte `stdio` do MCP usa o mesmo padrão: `command: "npx"` + `args: ["-y", "@shiftleftpt/sbd-toe-mcp"]`. Consultar a documentação do cliente para localização do ficheiro de configuração.
 
 ---
 
-## GitHub Release Bundle
+## GitHub Release Bundle {#github-release-bundle}
 
 Para ambientes sem acesso a `npm` (ar-gapped, *air-gapped*, *self-hosted*) ou para *pinning* a uma versão específica:
 
@@ -180,7 +180,7 @@ Para ambientes sem acesso a `npm` (ar-gapped, *air-gapped*, *self-hosted*) ou pa
 
 ---
 
-## Determinar o *risk level* do projecto
+## Determinar o *risk level* do projecto {#determinar-o-risk-level-do-projecto}
 
 Sem `risk level` correcto, o MCP devolve um conjunto de controlos desnecessariamente amplo ou perigosamente reduzido. Para decidir:
 
@@ -194,7 +194,7 @@ Quando há dúvida, usar a tool `map_sbd_toe_applicability(projectAttributes)` o
 
 ---
 
-## Verificação final
+## Verificação final {#verificação-final}
 
 Independentemente do cliente, validar com:
 
@@ -204,6 +204,6 @@ list_sbd_toe_chapters()
 
 Deve devolver **15 capítulos** (`00-fundamentos` a `14-governanca-contratacao`). Se sim — está operacional.
 
-## A seguir
+## A seguir {#a-seguir}
 
 Configurar uma [skill / agent file](./04-skills-agentes.md) para que o cliente AI consulte o manual **automaticamente** em vez de exigir que o utilizador peça explicitamente.

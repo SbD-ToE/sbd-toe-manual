@@ -8,7 +8,7 @@ tags: [formacao, integracao, capitulos, cultura, aprendizagem continua]
 
 # Integração Transversal com os Capítulos Técnicos
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Descrever como a **formação contínua e aplicada** pode ser integrada nas atividades práticas de cada capítulo técnico do manual SbD-ToE.  
 O objetivo é garantir que a aprendizagem **não é paralela à execução real**, mas sim incorporada nos rituais, decisões e processos do ciclo de desenvolvimento.
@@ -19,7 +19,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-## 🧬 Princípios da aprendizagem transversal
+## 🧬 Princípios da aprendizagem transversal {#-princípios-da-aprendizagem-transversal}
 
 - Cada prática de segurança deve ser **ensinável e replicável**
 - O conhecimento deve circular através de **rotação de papéis e liderança**
@@ -28,9 +28,9 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-## 📘 Exemplos de integração por capítulo
+## 📘 Exemplos de integração por capítulo {#-exemplos-de-integração-por-capítulo}
 
-### 1. Gestão de Risco
+### 1. Gestão de Risco {#1-gestão-de-risco}
 
 - **Workshops periódicos** com equipas sobre classificação e impacto
 - Sessões de partilha entre equipas sobre decisões de risco (ex: exceções, racional)
@@ -38,7 +38,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 2. Requisitos de Segurança
+### 2. Requisitos de Segurança {#2-requisitos-de-segurança}
 
 - Labs com histórias de user stories mal escritas
 - Revisão cruzada mensal de requisitos entre equipas
@@ -46,7 +46,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 3. Threat Modeling
+### 3. Threat Modeling {#3-threat-modeling}
 
 - **Rotação de liderança** entre devs, QA e Champions
 - Sessões práticas com base em features reais
@@ -54,7 +54,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 4. Arquitetura Segura
+### 4. Arquitetura Segura {#4-arquitetura-segura}
 
 - Revisão coletiva de decisões de arquitetura (mensal ou por épico)
 - Oficinas comparativas entre abordagens (ex: API vs eventos)
@@ -62,7 +62,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 5. Controlo de Dependências
+### 5. Controlo de Dependências {#5-controlo-de-dependências}
 
 - Labs com cenários reais de dependências vulneráveis
 - **PR Clinics** com foco em SBOM, SCA, lockfiles e pinning
@@ -70,7 +70,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 6. Desenvolvimento Seguro
+### 6. Desenvolvimento Seguro {#6-desenvolvimento-seguro}
 
 - Revisões de PR públicas e educativas
 - Sessões entre pares sobre antipadrões recorrentes
@@ -78,7 +78,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 7. CI/CD Seguro
+### 7. CI/CD Seguro {#7-cicd-seguro}
 
 - Simulações de pipeline comprometido
 - Rotação de ownership em stages críticos (ex: secrets, deploy)
@@ -86,7 +86,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 8. IaC Seguro
+### 8. IaC Seguro {#8-iac-seguro}
 
 - Labs com código Terraform real e ferramentas como Checkov ou TFSec
 - Refactors colaborativos de IaC inseguro
@@ -94,7 +94,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 9. *containers* e Imagens
+### 9. *containers* e Imagens {#9-containers-e-imagens}
 
 - Oficinas de hardening de Dockerfiles reais
 - Análise rotativa de vulnerabilidades com ferramentas como Trivy
@@ -102,7 +102,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 10. Testes de Segurança
+### 10. Testes de Segurança {#10-testes-de-segurança}
 
 - Atividades gamificadas com fuzzing e exploração de APIs
 - Revisão coletiva de coverage SAST/DAST
@@ -110,7 +110,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 11. Deploy Seguro
+### 11. Deploy Seguro {#11-deploy-seguro}
 
 - Simulações de rollout com falhas induzidas (ex: feature flag errada)
 - Shadowing entre equipas durante deploys críticos
@@ -118,7 +118,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 12. Monitorização
+### 12. Monitorização {#12-monitorização}
 
 - Análise de alertas reais e falsos positivos
 - Mini war rooms com deteções via logs ou dashboards
@@ -126,7 +126,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 13. Formação e Onboarding
+### 13. Formação e Onboarding {#13-formação-e-onboarding}
 
 - Uso recorrente de PR Clinics, CTFs, shadowing entre pares
 - Champions como facilitadores da integração prática
@@ -134,7 +134,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-### 14. Governança e Contratação
+### 14. Governança e Contratação {#14-governança-e-contratação}
 
 - Sessões formativas para contratantes e fornecedores
 - Revisão de cláusulas contratuais com base em incidentes passados
@@ -142,7 +142,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Planear **1 ação de aprendizagem por sprint ou release**
 - Promover **rotatividade e co-liderança** entre funções
@@ -152,7 +152,7 @@ O objetivo é garantir que a aprendizagem **não é paralela à execução real*
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relevância                                         |
 |-----------------------------------|----------------------------------------------------|

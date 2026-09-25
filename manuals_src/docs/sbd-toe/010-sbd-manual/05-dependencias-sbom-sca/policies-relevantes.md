@@ -13,7 +13,7 @@ A adoção eficaz do Capítulo 05 - Dependências, SBOM e SCA - exige a existên
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas técnicas descritas neste capítulo (inventário, análise SCA, integração de SBOM, registos de origem, gestão de exceções) **devem estar legitimadas por políticas organizacionais aprovadas**.
 
@@ -29,7 +29,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                      | Obrigatória? | Aplicação                                   | Resumo do conteúdo necessário |
 |-------------------------------------------------------|--------------|----------------------------------------------|-------------------------------|
@@ -42,7 +42,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -56,7 +56,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **aprovadas pela área de segurança e desenvolvimento**;
 - Devem estar **documentadas, divulgadas e acessíveis** a todas as equipas técnicas;

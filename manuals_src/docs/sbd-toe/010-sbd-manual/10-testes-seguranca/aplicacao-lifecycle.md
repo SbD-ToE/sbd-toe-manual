@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação de Testes de Segurança ao Longo do Ciclo de Vida
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 Os testes de segurança acompanham a aplicação em todas as fases - não são uma etapa final, mas um **ritmo contínuo** de validação.  
 Desde a definição inicial de requisitos até à auditoria final, cada momento do ciclo de vida deve gerar **evidência objetiva** de que a aplicação está protegida contra falhas conhecidas e ameaças emergentes.  
@@ -26,7 +26,7 @@ Desde a definição inicial de requisitos até à auditoria final, cada momento 
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A responsabilidade pela qualidade dos testes é **coletiva**.  
 Cada papel contribui com uma perspetiva única, mas só em conjunto se obtém um processo de validação robusto e auditável.  
@@ -42,14 +42,14 @@ Cada papel contribui com uma perspetiva única, mas só em conjunto se obtém um
 
 ---
 
-## 📖 User Stories Reutilizáveis
+## 📖 User Stories Reutilizáveis {#-user-stories-reutilizáveis}
 
 As histórias seguintes transformam princípios em prática.  
 Cada US representa um **controlo essencial**, pensado para ser integrado diretamente no backlog da equipa e aplicado proporcionalmente ao risco da aplicação (L1–L3).  
 
 ---
 
-### US-01 - Estratégia formal de testes por aplicação
+### US-01 - Estratégia formal de testes por aplicação {#us-01---estratégia-formal-de-testes-por-aplicação}
 
 A validação começa com planeamento.  
 Sem uma estratégia clara, a cobertura torna-se desigual e impossível de auditar.  
@@ -89,7 +89,7 @@ Como **AppSec Engineer**, quero **definir uma estratégia de testes de seguranç
 
 ---
 
-### US-02 - SAST obrigatório em Pull Request
+### US-02 - SAST obrigatório em Pull Request {#us-02---sast-obrigatório-em-pull-request}
 
 Detetar cedo é sempre mais barato.  
 Executar SAST no momento do PR garante que vulnerabilidades nunca chegam à *branch* principal.  
@@ -129,7 +129,7 @@ Como **Developer**, quero **executar SAST automático no PR com comentários inl
 
 ---
 
-### US-03 - DAST autenticado em Staging
+### US-03 - DAST autenticado em Staging {#us-03---dast-autenticado-em-staging}
 
 Muitas falhas críticas só se revelam após login.  
 Executar DAST autenticado em staging é o passo natural antes de promover uma release.  
@@ -169,7 +169,7 @@ Como **QA**, quero **executar DAST autenticado em staging**, para **detetar vuln
 
 ---
 
-### US-04 - Gates de segurança no CI/CD
+### US-04 - Gates de segurança no CI/CD {#us-04---gates-de-segurança-no-cicd}
 
 Sem gates, findings tornam-se meros relatórios ignorados.  
 Gates automáticos são a barreira que impede regressões graves de avançar.  
@@ -217,7 +217,7 @@ Como **DevOps / SRE**, quero **integrar gates automáticos no pipeline (SAST/SCA
 
 ---
 
-### US-05 - Regressões de segurança automatizadas
+### US-05 - Regressões de segurança automatizadas {#us-05---regressões-de-segurança-automatizadas}
 
 Corrigir não chega - é preciso garantir que a mesma falha não regressa.  
 Testes de regressão automatizados transformam cada correção numa proteção futura.  
@@ -257,7 +257,7 @@ Como **Developer**, quero **criar testes de regressão para findings corrigidos*
 
 ---
 
-### US-06 - Fuzzing dirigido a APIs críticas
+### US-06 - Fuzzing dirigido a APIs críticas {#us-06---fuzzing-dirigido-a-apis-críticas}
 
 Testes convencionais não capturam todas as falhas.  
 O fuzzing, ao explorar entradas inesperadas, revela vulnerabilidades invisíveis a olho nu.  
@@ -297,7 +297,7 @@ Como **QA**, quero **aplicar fuzzing a endpoints críticos**, para **detectar fa
 
 ---
 
-### US-07 - Critérios de release e aceitação de risco
+### US-07 - Critérios de release e aceitação de risco {#us-07---critérios-de-release-e-aceitação-de-risco}
 
 Cada release é também uma decisão de risco.  
 Formalizar critérios e aceitar explicitamente o risco residual é parte da governação.  
@@ -367,7 +367,7 @@ Como **Product Owner**, quero **estabelecer critérios de aceitação de seguran
 
 ---
 
-### US-08 - PenTesting ofensivo baseado em risco
+### US-08 - PenTesting ofensivo baseado em risco {#us-08---pentesting-ofensivo-baseado-em-risco}
 
 Automação é fundamental, mas não suficiente.  
 O olhar humano ofensivo identifica cadeias de ataque que scanners nunca simulam.  
@@ -407,7 +407,7 @@ Como **AppSec Engineer**, quero **validar ofensivamente a eficácia dos controlo
 
 ---
 
-### US-09 - IAST com Instrumentação em Staging
+### US-09 - IAST com Instrumentação em Staging {#us-09---iast-com-instrumentação-em-staging}
 
 DAST valida externamente, mas IAST oferece visibilidade interna de fluxos não sanitizados, chamadas inseguras e uso indevido de bibliotecas.  
 Essencial para L2/L3 de criticidade elevada.  
@@ -455,7 +455,7 @@ Como **QA + AppSec Engineer**, quero **instrumentar a aplicação em staging com
 
 ---
 
-### US-10 - Gestão Centralizada de Findings com Triagem e SLA
+### US-10 - Gestão Centralizada de Findings com Triagem e SLA {#us-10---gestão-centralizada-de-findings-com-triagem-e-sla}
 
 Findings dispersos em ferramentas isoladas criam redundância, ruído e falta de visibilidade.  
 Centralização com triagem formal, SLA e rastreabilidade é imperativa para governação.  
@@ -508,7 +508,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings d
 
 ---
 
-### US-11 - Feedback Automático de Findings às Equipas
+### US-11 - Feedback Automático de Findings às Equipas {#us-11---feedback-automático-de-findings-às-equipas}
 
 Findings não comunicados eficazmente são ignorados.  
 Feedback automático em canais onde os developers trabalham reduz fricção e acelera correção.  
@@ -560,7 +560,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **automatizar delivery de finding
 
 ---
 
-### US-12 - Decisão Assistida para Findings de Testes de Segurança
+### US-12 - Decisão Assistida para Findings de Testes de Segurança {#us-12---decisão-assistida-para-findings-de-testes-de-segurança}
 
 **Contexto.**  
 Ferramentas de teste (SAST, DAST, IAST, fuzzing) reportam centenas de findings por build, bloqueando pipelines sem análise de contexto. Sem framework de decisão estruturado, equipas aceitam riscos "às cegas" ou fazem bypass de gates para cumprir deadlines, sem rastreabilidade.
@@ -624,7 +624,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **framework de decisão estrutura
 
 ---
 
-### US-13 - Validação Empírica de Exploitabilidade de Findings
+### US-13 - Validação Empírica de Exploitabilidade de Findings {#us-13---validação-empírica-de-exploitabilidade-de-findings}
 
 **Contexto.**  
 Ferramentas reportam findings baseados em heurísticas, não em exploração empírica. Falsos positivos bloqueiam pipelines desnecessariamente; falsos negativos deixam vulnerabilidades em produção. Sem validação empírica, decisões são baseadas em "achismo" ("parece seguro") sem evidência.
@@ -694,7 +694,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **framework de validação empír
 
 ---
 
-### US-14 - Validação humana da interpretação final dos resultados
+### US-14 - Validação humana da interpretação final dos resultados {#us-14---validação-humana-da-interpretação-final-dos-resultados}
 
 Ferramentas podem correlacionar, priorizar e sugerir severidade - mas **não substituem validação humana**.  
 Esta US garante que a equipa não toma decisões (merge/release/aceitação) com base apenas em scoring automático ou agregação de resultados.
@@ -740,7 +740,7 @@ Como **AppSec Engineer**, quero **validar a interpretação final dos resultados
 
 ---
 
-### US-15 - Reprodutibilidade de resultados críticos de testes de segurança
+### US-15 - Reprodutibilidade de resultados críticos de testes de segurança {#us-15---reprodutibilidade-de-resultados-críticos-de-testes-de-segurança}
 
 Sem reprodutibilidade não há auditoria fiável.  
 Esta US garante que qualquer finding relevante pode ser reexecutado de forma controlada, com contexto suficiente para validação independente.
@@ -787,7 +787,7 @@ Como **QA**, quero **garantir que resultados críticos/altos de testes de segura
 
 ---
 
-### US-16 - Separação formal entre sinal automático e decisão de bloqueio/override
+### US-16 - Separação formal entre sinal automático e decisão de bloqueio/override {#us-16---separação-formal-entre-sinal-automático-e-decisão-de-bloqueiooverride}
 
 Gates são necessários, mas não substituem governação.  
 Esta US garante que a decisão (bloquear, excecionar, promover) é sempre atribuída a um role humano e deixa evidência.
@@ -834,7 +834,7 @@ Como **DevOps / SRE**, quero **separar formalmente o sinal automático (resultad
 
 ---
 
-### US-17 - Avaliação crítica de cobertura real e limitações
+### US-17 - Avaliação crítica de cobertura real e limitações {#us-17---avaliação-crítica-de-cobertura-real-e-limitações}
 
 Cobertura “boa” em métricas não significa segurança real.  
 Esta US introduz o controlo de processo que previne over-confidence e força documentação de lacunas.
@@ -876,7 +876,7 @@ Como **AppSec Engineer**, quero **avaliar criticamente a cobertura real dos test
 
 ---
 
-### US-18 - Perfil de regras SAST versionado com baseline de falsos positivos
+### US-18 - Perfil de regras SAST versionado com baseline de falsos positivos {#us-18---perfil-de-regras-sast-versionado-com-baseline-de-falsos-positivos}
 
 O SAST só é gate fiável quando o seu próprio ruído está sob controlo.  
 
@@ -916,7 +916,7 @@ Como **AppSec Engineer**, quero **versionar o perfil de regras SAST e manter uma
 
 ---
 
-### US-19 - Proteção dos ativos do processo de teste
+### US-19 - Proteção dos ativos do processo de teste {#us-19---proteção-dos-ativos-do-processo-de-teste}
 
 Testar não pode tornar-se, ele próprio, um vetor de exposição.  
 
@@ -956,7 +956,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero **proteger os ativos do processo 
 
 ---
 
-### US-20 - KPIs de eficácia do programa de testes
+### US-20 - KPIs de eficácia do programa de testes {#us-20---kpis-de-eficácia-do-programa-de-testes}
 
 O que não se mede não se governa — e um programa de testes sem indicadores é uma intuição.  
 
@@ -996,7 +996,7 @@ Como **AppSec Engineer**, quero **recolher e reportar os KPIs do programa de tes
 
 ---
 
-### US-21 - Governação do uso de IA em testes e eval suites para agentes
+### US-21 - Governação do uso de IA em testes e eval suites para agentes {#us-21---governação-do-uso-de-ia-em-testes-e-eval-suites-para-agentes}
 
 Quando a IA assiste o teste, é acelerador; quando o agente é o sistema sob teste, é alvo.  
 
@@ -1039,7 +1039,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **enquadrar o uso de IA em testes
 
 ---
 
-### US-22 - Preparação de readiness para TLPT (DORA)
+### US-22 - Preparação de readiness para TLPT (DORA) {#us-22---preparação-de-readiness-para-tlpt-dora}
 
 Quando a obrigação chega da autoridade, a base técnica já tem de estar construída.  
 
@@ -1079,7 +1079,7 @@ Como **CISO + AppSec Engineer**, quero **manter a readiness técnica para TLPT d
 
 ---
 
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 Cada teste deixa um rasto tangível.  
 Estes artefactos são o que permite comprovar segurança perante auditorias ou clientes:  
@@ -1099,7 +1099,7 @@ Estes artefactos são o que permite comprovar segurança perante auditorias ou c
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 A proporcionalidade evita tanto excesso como insuficiência.  
 O objetivo é calibrar testes de acordo com a criticidade da aplicação:  
@@ -1117,7 +1117,7 @@ O objetivo é calibrar testes de acordo com a criticidade da aplicação:
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 - **Testar cedo e sempre**: integrar SAST no PR e regressões desde o 1.º sprint.  
 - **Validar runtime**: DAST autenticado e fuzzing em staging são essenciais.  

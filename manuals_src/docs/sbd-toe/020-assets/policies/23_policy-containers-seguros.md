@@ -9,7 +9,7 @@ sidebar_position: 23
 
 # Política de Containers Seguros
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos de segurança para o **ciclo de vida completo de containers**: desde a escolha da imagem base, passando pela construção, scanning e assinatura, até à configuração de runtime e monitorização em produção.
 
@@ -25,15 +25,15 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todos os containers utilizados em ambientes de desenvolvimento, integração, staging e produção, incluindo containers de aplicação, sidecar containers e containers de infraestrutura (ex: proxies, service mesh).
 
 ---
 
-## 3. Construção de imagens
+## 3. Construção de imagens {#3-construção-de-imagens}
 
-### 3.1 Imagem base
+### 3.1 Imagem base {#31-imagem-base}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -42,7 +42,7 @@ Esta política aplica-se a todos os containers utilizados em ambientes de desenv
 | Imagem base minimalista (distroless, alpine, slim) | Recomendado | Obrigatório | Obrigatório |
 | Sem ferramentas de debug desnecessárias na imagem final (curl, bash, wget) | Recomendado | Obrigatório | Obrigatório |
 
-### 3.2 Dockerfile seguro
+### 3.2 Dockerfile seguro {#32-dockerfile-seguro}
 
 O Dockerfile deve seguir as seguintes práticas obrigatórias:
 
@@ -53,7 +53,7 @@ O Dockerfile deve seguir as seguintes práticas obrigatórias:
 - [ ] Sem segredos em `ARG`, `ENV` ou `RUN` (incluindo variáveis exportadas)
 - [ ] Linter de Dockerfile (`hadolint` ou equivalente) sem findings bloqueantes
 
-### 3.3 Registos de imagens
+### 3.3 Registos de imagens {#33-registos-de-imagens}
 
 Em L2/L3, imagens devem ser produzidas e armazenadas em registos internos controlados:
 
@@ -63,7 +63,7 @@ Em L2/L3, imagens devem ser produzidas e armazenadas em registos internos contro
 
 ---
 
-## 4. Scanning de imagens
+## 4. Scanning de imagens {#4-scanning-de-imagens}
 
 O pipeline deve incluir scanning de vulnerabilidades da imagem produzida:
 
@@ -78,7 +78,7 @@ O relatório de scanning deve ser arquivado como artefacto do pipeline, associad
 
 ---
 
-## 5. Assinatura e proveniência
+## 5. Assinatura e proveniência {#5-assinatura-e-proveniência}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -91,9 +91,9 @@ Em L3, apenas imagens assinadas pelo pipeline da organização devem ser admitid
 
 ---
 
-## 6. Configuração de runtime (hardening)
+## 6. Configuração de runtime (hardening) {#6-configuração-de-runtime-hardening}
 
-### 6.1 securityContext obrigatório
+### 6.1 securityContext obrigatório {#61-securitycontext-obrigatório}
 
 Todos os containers em execução devem ter o seguinte `securityContext` configurado (Kubernetes) ou equivalente:
 
@@ -106,13 +106,13 @@ Todos os containers em execução devem ter o seguinte `securityContext` configu
 | `privileged: false` | Obrigatório | Obrigatório | Obrigatório |
 | `seccompProfile: RuntimeDefault` (ou mais restritivo) | Recomendado | Obrigatório | Obrigatório |
 
-### 6.2 Volumes e montagens
+### 6.2 Volumes e montagens {#62-volumes-e-montagens}
 
 - [ ] Sem montagem de `/var/run/docker.sock` (acesso ao socket Docker pelo container)
 - [ ] Volumes montados em modo read-only sempre que possível
 - [ ] Sem partilha de namespaces do host (`hostNetwork`, `hostPID`, `hostIPC`) sem justificação formal
 
-### 6.3 Policies de admissão (Kubernetes)
+### 6.3 Policies de admissão (Kubernetes) {#63-policies-de-admissão-kubernetes}
 
 Em L2/L3 com Kubernetes, políticas de admissão devem ser impostas por admission controller (OPA/Gatekeeper, Kyverno, ou PSA):
 
@@ -122,7 +122,7 @@ Em L2/L3 com Kubernetes, políticas de admissão devem ser impostas por admissio
 
 ---
 
-## 7. Isolamento de rede
+## 7. Isolamento de rede {#7-isolamento-de-rede}
 
 - [ ] NetworkPolicy definida para cada namespace/workload (deny-all por defeito, permit explícito)
 - [ ] Sem comunicação irrestrita entre namespaces ou entre pods sem política explícita
@@ -130,7 +130,7 @@ Em L2/L3 com Kubernetes, políticas de admissão devem ser impostas por admissio
 
 ---
 
-## 8. Gestão de segredos em containers
+## 8. Gestão de segredos em containers {#8-gestão-de-segredos-em-containers}
 
 Segredos não devem ser incluídos em imagens de container em nenhuma circunstância:
 
@@ -141,7 +141,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 
 ---
 
-## 9. Monitorização de runtime
+## 9. Monitorização de runtime {#9-monitorização-de-runtime}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -152,7 +152,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 
 ---
 
-## 10. Artefactos esperados
+## 10. Artefactos esperados {#10-artefactos-esperados}
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
@@ -164,7 +164,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -175,7 +175,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -185,7 +185,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

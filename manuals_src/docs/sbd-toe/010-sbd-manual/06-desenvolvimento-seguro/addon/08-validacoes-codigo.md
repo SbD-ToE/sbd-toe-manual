@@ -16,7 +16,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Identificar vulnerabilidades no código-fonte antes da entrega.
 - Automatizar verificações repetitivas e detetar falhas triviais de forma consistente.
@@ -25,7 +25,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Desenvolvedores**: ao escrever e validar código localmente.
 - **Revisores técnicos**: ao aprovar código e releases.
@@ -33,7 +33,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Durante o desenvolvimento (localmente ou via IDE)
 - Ao submeter um pull request
@@ -42,7 +42,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## 🧱 Requisitos obrigatórios
+## 🧱 Requisitos obrigatórios {#-requisitos-obrigatórios}
 
 1. **Validações automáticas obrigatórias com ferramentas SAST**
    - Devem executar em cada PR ou commit.
@@ -62,7 +62,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 - Relatórios gerados automaticamente no CI/CD ou nos PRs.
 - Checklists de revisão com referência a findings e sua resolução.
@@ -71,7 +71,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 - Logs arquivados das ferramentas de SAST/SCA.
 - Anotação no PR com findings + resolução.
@@ -80,7 +80,7 @@ tags: [validação, código, segurança, automação, integração contínua]
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                | Ficheiro associado               |
 |-------------------------------------|----------------------------------|

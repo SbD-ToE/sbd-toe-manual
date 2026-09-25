@@ -11,13 +11,13 @@ tags: [dependencias, sbom, sca, exceptions, cve]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a findings de análise de composição de software (SCA) - vulnerabilidades em dependências identificadas por scanner, referenciadas por CVE ou equivalente.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 Uma excepção SCA exige que **todos** os seguintes critérios sejam analisados e documentados:
 
@@ -30,7 +30,7 @@ A ausência de patch disponível é condição necessária mas não suficiente p
 
 ---
 
-## Campos adicionais obrigatórios (SCA)
+## Campos adicionais obrigatórios (SCA) {#campos-adicionais-obrigatórios-sca}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -41,7 +41,7 @@ A ausência de patch disponível é condição necessária mas não suficiente p
 
 ---
 
-## Template YAML
+## Template YAML {#template-yaml}
 
 ```yaml
 - cve: CVE-YYYY-NNNNN
@@ -58,7 +58,7 @@ Localização sugerida: `/security/excecoes-sca.yaml` no repositório, ou sistem
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

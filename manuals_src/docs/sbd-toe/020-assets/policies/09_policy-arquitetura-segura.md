@@ -9,7 +9,7 @@ sidebar_position: 9
 
 # Política de Arquitetura Segura
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a aplicação sistemática de **arquitetura segura** ao longo do ciclo de vida de aplicações classificadas como L2 ou L3.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,7 +35,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Princípios de arquitetura segura
+## 3. Princípios de arquitetura segura {#3-princípios-de-arquitetura-segura}
 
 A baseline organizacional de arquitetura segura deve incorporar os seguintes princípios fundamentais:
 
@@ -52,9 +52,9 @@ A baseline organizacional de arquitetura segura deve incorporar os seguintes pri
 
 ---
 
-## 4. Baseline e documentação obrigatória
+## 4. Baseline e documentação obrigatória {#4-baseline-e-documentação-obrigatória}
 
-### 4.1 Arranque de projeto ou épico significativo
+### 4.1 Arranque de projeto ou épico significativo {#41-arranque-de-projeto-ou-épico-significativo}
 
 No arranque de cada projeto L2/L3 (ou de um épico estrutural relevante), deve ser produzido e aprovado o seguinte conjunto mínimo de artefactos:
 
@@ -64,7 +64,7 @@ No arranque de cada projeto L2/L3 (ou de um épico estrutural relevante), deve s
 | `solution-architecture.md` | Trust boundaries, fluxos de dados, exposição externa, controlos arquiteturais, ligação a requisitos e ameaças | L2/L3 |
 | `trust-boundaries.md` | Inventário de trust boundaries, fluxos entre zonas, controlos por fronteira | L2/L3 |
 
-### 4.2 Conteúdo mínimo da ficha de solução
+### 4.2 Conteúdo mínimo da ficha de solução {#42-conteúdo-mínimo-da-ficha-de-solução}
 
 - [ ] Trust boundaries e fluxos de dados (incluindo telemetria, logs e métricas) identificados
 - [ ] Exposição externa justificada e minimizada
@@ -76,9 +76,9 @@ No arranque de cada projeto L2/L3 (ou de um épico estrutural relevante), deve s
 
 ---
 
-## 5. Gestão de decisões arquiteturais (ADR)
+## 5. Gestão de decisões arquiteturais (ADR) {#5-gestão-de-decisões-arquiteturais-adr}
 
-### 5.1 Quando registar uma ADR
+### 5.1 Quando registar uma ADR {#51-quando-registar-uma-adr}
 
 Deve ser criada uma ADR sempre que uma decisão arquitetural tenha impacto em segurança, incluindo:
 
@@ -90,7 +90,7 @@ Deve ser criada uma ADR sempre que uma decisão arquitetural tenha impacto em se
 | Adoção ou abandono de padrão de arquitetura | Migração de monolito para microsserviços, adoção de service mesh |
 | Desvio deliberado a um princípio da baseline | Aceitar exposição adicional por constrangimento técnico |
 
-### 5.2 Conteúdo mínimo de uma ADR
+### 5.2 Conteúdo mínimo de uma ADR {#52-conteúdo-mínimo-de-uma-adr}
 
 - [ ] Identificador único (`ADR-XXXX`)
 - [ ] Contexto e problema a resolver
@@ -102,7 +102,7 @@ Deve ser criada uma ADR sempre que uma decisão arquitetural tenha impacto em se
 - [ ] Revisão por AppSec Engineer (L2/L3)
 - [ ] Estado: Proposta / Aceite / Substituída / Revogada
 
-### 5.3 Proporcionalidade
+### 5.3 Proporcionalidade {#53-proporcionalidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -112,9 +112,9 @@ Deve ser criada uma ADR sempre que uma decisão arquitetural tenha impacto em se
 
 ---
 
-## 6. Trust boundaries e integrações
+## 6. Trust boundaries e integrações {#6-trust-boundaries-e-integrações}
 
-### 6.1 Inventário de trust boundaries
+### 6.1 Inventário de trust boundaries {#61-inventário-de-trust-boundaries}
 
 Cada aplicação L2/L3 deve manter um inventário atualizado das suas trust boundaries, incluindo:
 
@@ -124,7 +124,7 @@ Cada aplicação L2/L3 deve manter um inventário atualizado das suas trust boun
 - [ ] Nível de confiança de cada parte envolvida
 - [ ] Integração com o modelo de ameaças (trust boundaries mapeadas no DFD)
 
-### 6.2 Revisão por nova integração
+### 6.2 Revisão por nova integração {#62-revisão-por-nova-integração}
 
 Sempre que é adicionada uma nova integração externa ou uma nova fronteira de confiança, deve ser produzida uma `integration-review.md` com:
 
@@ -136,7 +136,7 @@ Sempre que é adicionada uma nova integração externa ou uma nova fronteira de 
 
 ---
 
-## 7. Atualização por alteração arquitetural
+## 7. Atualização por alteração arquitetural {#7-atualização-por-alteração-arquitetural}
 
 O documento de arquitetura deve ser atualizado **antes da promoção a produção** sempre que ocorra uma alteração significativa:
 
@@ -153,7 +153,7 @@ Alterações arquiteturais não refletidas na documentação e no modelo de amea
 
 ---
 
-## 8. Catálogo de padrões de arquitetura segura
+## 8. Catálogo de padrões de arquitetura segura {#8-catálogo-de-padrões-de-arquitetura-segura}
 
 A organização mantém um **catálogo versionado de padrões de arquitetura segura** (`modelos-referencia.md` ou equivalente), que serve como referência reutilizável para novos projetos e decisões de design.
 
@@ -171,7 +171,7 @@ A reutilização de um padrão sem verificação da sua adequação ao contexto 
 
 ---
 
-## 9. Aprovação formal
+## 9. Aprovação formal {#9-aprovação-formal}
 
 | Artefacto | Nível | Aprovação mínima requerida |
 |---|---|---|
@@ -184,7 +184,7 @@ A reutilização de um padrão sem verificação da sua adequação ao contexto 
 
 ---
 
-## 10. Integração com threat modeling
+## 10. Integração com threat modeling {#10-integração-com-threat-modeling}
 
 Arquitetura segura e threat modeling estão sincronizados de forma bidirecional:
 
@@ -195,7 +195,7 @@ Arquitetura segura e threat modeling estão sincronizados de forma bidirecional:
 
 ---
 
-## 11. Gate no pipeline CI/CD
+## 11. Gate no pipeline CI/CD {#11-gate-no-pipeline-cicd}
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
@@ -207,7 +207,7 @@ A configuração do gate deve ser feita pelo DevOps/SRE, em coordenação com Ap
 
 ---
 
-## 12. Proporcionalidade por nível
+## 12. Proporcionalidade por nível {#12-proporcionalidade-por-nível}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -222,7 +222,7 @@ A configuração do gate deve ser feita pelo DevOps/SRE, em coordenação com Ap
 
 ---
 
-## 13. Responsabilidades
+## 13. Responsabilidades {#13-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -234,7 +234,7 @@ A configuração do gate deve ser feita pelo DevOps/SRE, em coordenação com Ap
 
 ---
 
-## 14. Revisão e auditoria desta política
+## 14. Revisão e auditoria desta política {#14-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -244,7 +244,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 15. Referências normativas e técnicas
+## 15. Referências normativas e técnicas {#15-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

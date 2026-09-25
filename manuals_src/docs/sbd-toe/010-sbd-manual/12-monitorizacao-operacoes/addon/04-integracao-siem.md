@@ -9,13 +9,13 @@ tags: [siem, integração, parsing, dashboards, correlação]
 
 # Integração com Sistemas de Deteção (SIEM)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir uma **integração fiável, segura e auditável** entre as fontes de eventos (aplicações, infraestruturas, pipelines) e o sistema de análise e correlação (SIEM), assegurando suporte a deteção eficaz, resposta e rastreabilidade.
 
 ---
 
-## 🧬 O que é a integração com SIEM
+## 🧬 O que é a integração com SIEM {#-o-que-é-a-integração-com-siem}
 
 Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos eventos relevantes num SIEM, garantindo:
 
@@ -27,7 +27,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 📀 Arquitetura típica de integração
+## 📀 Arquitetura típica de integração {#-arquitetura-típica-de-integração}
 
 ```
 [Aplicação] → [Logger] → [Forwarder/Agent] → [Parser] → [SIEM]
@@ -42,7 +42,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 🛠️ Requisitos funcionais da integração
+## 🛠️ Requisitos funcionais da integração {#️-requisitos-funcionais-da-integração}
 
 | Requisito                            | Descrição                                      |
 | ------------------------------------ | ---------------------------------------------- |
@@ -54,7 +54,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 🔧 Ferramentas comuns
+## 🔧 Ferramentas comuns {#-ferramentas-comuns}
 
 | Categoria           | Exemplos                                            |
 | ------------------- | --------------------------------------------------- |
@@ -65,7 +65,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## ✅ Boas práticas de integração
+## ✅ Boas práticas de integração {#-boas-práticas-de-integração}
 
 * Validar logs com `tcpdump`, `wireshark` ou dashboards de ingesão;
 * Usar **filtros de enriquecimento** (ex: geolocalização, `user-agent`, `env`);
@@ -75,7 +75,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 🔍 Validação da integração
+## 🔍 Validação da integração {#-validação-da-integração}
 
 | Verificação                         | Método sugerido                               |
 | ----------------------------------- | --------------------------------------------- |
@@ -86,7 +86,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 🔒 Considerações de segurança
+## 🔒 Considerações de segurança {#-considerações-de-segurança}
 
 * Isolar rede de forwarders da rede do SIEM;
 * Monitorizar falhas de envio ou parsing com alertas;
@@ -95,7 +95,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 📂 Integrações avançadas
+## 📂 Integrações avançadas {#-integrações-avançadas}
 
 * Logging de execução de pipelines (CI/CD, DevOps);
 * Envio de eventos diretamente via API gateways e proxies;
@@ -104,7 +104,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ---
 
-## 🧹 Ligação com outros controlos
+## 🧹 Ligação com outros controlos {#-ligação-com-outros-controlos}
 
 | Documento                          | Relação com este tópico                        |
 | ---------------------------------- | ---------------------------------------------- |

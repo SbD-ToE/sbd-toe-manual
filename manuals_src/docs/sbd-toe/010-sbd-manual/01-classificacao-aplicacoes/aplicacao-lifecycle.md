@@ -13,7 +13,7 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 ---
 
-## 🧭 Abrangência e quando aplicar
+## 🧭 Abrangência e quando aplicar {#-abrangência-e-quando-aplicar}
 
 | Fase / Evento                          | Ação esperada                                                   | Documento de apoio                                                                 |
 |----------------------------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------|
@@ -27,7 +27,7 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 | Papel Formal (07-roles) | Responsabilidades em Cap. 01 |
 |---|---|
@@ -44,9 +44,9 @@ Este capítulo detalha, de forma operacional e prescritiva, **quando e como impl
 
 ---
 
-## 🛠️ User stories reutilizáveis
+## 🛠️ User stories reutilizáveis {#️-user-stories-reutilizáveis}
 
-### US-01 - Classificação inicial da aplicação
+### US-01 - Classificação inicial da aplicação {#us-01---classificação-inicial-da-aplicação}
 
 **Contexto.**  
 A classificação inicial da aplicação é o ponto de entrada para a aplicação proporcional de controlos de segurança (L1–L3). Sem este passo, não é possível garantir rastreabilidade nem proporcionalidade.
@@ -102,7 +102,7 @@ Como **Developer / Scrum Master / Team Lead**, quero **classificar a aplicação
 
 ---
 
-### US-02 - Aplicação da matriz de controlo
+### US-02 - Aplicação da matriz de controlo {#us-02---aplicação-da-matriz-de-controlo}
 
 **Contexto.**  
 A matriz de controlo define quais os requisitos de segurança aplicáveis em função do nível de risco. Sem mapeamento explícito, há risco de sobreproteção ou underprotection.
@@ -149,7 +149,7 @@ Como **Developer / Scrum Master / Team Lead**, quero **aplicar a matriz de contr
 
 ---
 
-### US-03 - Revisão por alteração relevante (event-based)
+### US-03 - Revisão por alteração relevante (event-based) {#us-03---revisão-por-alteração-relevante-event-based}
 
 **Contexto.**  
 A classificação deve ser revista quando existirem alterações significativas de arquitetura, dados ou exposição. Sem revisão, mudanças lentas podem gerar desalinhamento entre nível e controlos.
@@ -203,7 +203,7 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 
 ---
 
-### US-04 - Análise de risco residual
+### US-04 - Análise de risco residual {#us-04---análise-de-risco-residual}
 
 **Contexto.**  
 Mesmo após aplicação da matriz, podem permanecer riscos residuais que devem ser documentados, quantificados e aprovados formalmente. Sem análise residual, exceções ficam sem justificação técnica clara.
@@ -252,7 +252,7 @@ Como **GRC/Compliance**, quero **registar o risco residual após aplicar os cont
 
 ---
 
-### US-05 - Validação antes do go-live
+### US-05 - Validação antes do go-live {#us-05---validação-antes-do-go-live}
 
 **Contexto.**  
 Antes de entrar em produção é necessário validar se todos os requisitos aplicáveis foram cumpridos. Esta etapa impede deployes com cobertura de segurança incompleta.
@@ -297,7 +297,7 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 
 ---
 
-### US-06 - Mapeamento de ameaças por nível de risco
+### US-06 - Mapeamento de ameaças por nível de risco {#us-06---mapeamento-de-ameaças-por-nível-de-risco}
 
 
 **Contexto.**  
@@ -353,7 +353,7 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 
 ---
 
-### **US-07 - Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)**
+### **US-07 - Revisão Periódica Time-Based da Classificação (Cadência Obrigatória)** {#us-07---revisão-periódica-time-based-da-classificação-cadência-obrigatória}
 
 **Contexto.**  
 Para além dos triggers por alteração, a classificação deve ter **cadência periódica fixa**. Sem calendário, mudanças lentas (ex: crescimento de dados críticos) ficam não-detetadas.
@@ -407,7 +407,7 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 
 ---
 
-### **US-08 - Aceitação de Risco com TTL e Revalidação Obrigatória**
+### **US-08 - Aceitação de Risco com TTL e Revalidação Obrigatória** {#us-08---aceitação-de-risco-com-ttl-e-revalidação-obrigatória}
 
 **Contexto.**  
 Quando o nível de risco residual é aceitável mas com **Time-To-Live (TTL) limitado**, o risco pode expirar. Sem revalidação automática, excepções "dormem" indefinidamente.
@@ -458,7 +458,7 @@ Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e aler
 
 ---
 
-### **US-09 - Classificação de Artefactos Técnicos (Pipeline, IaC, Imagens)**
+### **US-09 - Classificação de Artefactos Técnicos (Pipeline, IaC, Imagens)** {#us-09---classificação-de-artefactos-técnicos-pipeline-iac-imagens}
 
 **Contexto.**  
 A classificação da aplicação não é suficiente; **artefactos de entrega** (Dockerfile, scripts CI/CD, IaC, imagens) herdam a criticidade e exigem controlos específicos descritos nos capítulos 07 (CI/CD Seguro), 08 (IaC), 09 (Containers).
@@ -511,7 +511,7 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 
 ---
 
-### **US-10 - KPIs, Métricas e Reporting de Classificação e Conformidade**
+### **US-10 - KPIs, Métricas e Reporting de Classificação e Conformidade** {#us-10---kpis-métricas-e-reporting-de-classificação-e-conformidade}
 
 **Contexto.**  
 Sem indicadores e visibilidade executiva, não há governança efetiva nem feedback loop para melhoria contínua. É necessário consolidar métricas operacionais e de conformidade sobre o ciclo de classificação.
@@ -568,7 +568,7 @@ Como **GRC/Compliance**, quero consolidar **KPIs mensais/trimestrais** sobre a c
 
 ---
 
-### **US-11 - Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)**
+### **US-11 - Políticas Organizacionais Formais (Classificação, Risco, Revisão Periódica, Rastreabilidade)** {#us-11---políticas-organizacionais-formais-classificação-risco-revisão-periódica-rastreabilidade}
 
 **Contexto.**  
 As user stories US-01 a US-15 definem o **como operacionalizar** a classificação. As políticas organizacionais definem o **por quê** (mandato), **quem aprova**, **qual o critério** e **como auditar**. Sem políticas, não há governança formal nem conformidade a regulamentos (NIS2, DORA,).
@@ -623,7 +623,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 
 ---
 
-### US-12 - Reforço de controlos por atributos do risco
+### US-12 - Reforço de controlos por atributos do risco {#us-12---reforço-de-controlos-por-atributos-do-risco}
 
 A classificação L1–L3 é uma projeção simplificada (E/D/I); certos atributos internos do risco exigem controlos do nível imediatamente superior, independentemente do nível atribuído.  
 
@@ -662,7 +662,7 @@ Como **AppSec Engineer**, quero **avaliar os atributos do risco (detetabilidade,
 
 ---
 
-### US-13 - Interdições de aceitação de risco em automação e apoio à decisão
+### US-13 - Interdições de aceitação de risco em automação e apoio à decisão {#us-13---interdições-de-aceitação-de-risco-em-automação-e-apoio-à-decisão}
 
 Há situações em que a aceitação de risco (e de risco residual) é categoricamente proibida, independentemente da urgência, custo ou nível da aplicação.  
 
@@ -701,7 +701,7 @@ Como **GRC/Compliance**, quero **bloquear qualquer aceitação de risco que reca
 
 ---
 
-### US-14 - Adoção de modelo de classificação alternativo (DRP/BIA) mapeado para E/D/I
+### US-14 - Adoção de modelo de classificação alternativo (DRP/BIA) mapeado para E/D/I {#us-14---adoção-de-modelo-de-classificação-alternativo-drpbia-mapeado-para-edi}
 
 A organização pode reutilizar uma classificação de impacto já existente (DRP/BIA ou outro método formal) desde que mapeie os seus resultados para o contexto de desenvolvimento aplicacional.  
 
@@ -741,7 +741,7 @@ Como **GRC/Compliance**, quero **adotar a classificação DRP/BIA existente como
 
 ---
 
-### US-15 - Produção e manutenção do inventário central com autoridade de aprovação proporcional
+### US-15 - Produção e manutenção do inventário central com autoridade de aprovação proporcional {#us-15---produção-e-manutenção-do-inventário-central-com-autoridade-de-aprovação-proporcional}
 
 O inventário central/GRC (CLA-008) é o artefacto de evidência primário em auditoria; tem de ser produzido e mantido atualizado, com a autoridade de aprovação proporcional ao nível (CLA-002) registada por aplicação.  
 
@@ -780,7 +780,7 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 
 ---
 
-## 🚧 Cascata de Gates de Validação (US-05 em Contexto)
+## 🚧 Cascata de Gates de Validação (US-05 em Contexto) {#-cascata-de-gates-de-validação-us-05-em-contexto}
 
 A validação antes do go-live é implementada através de uma **cascata de gates sequenciais**, cada um verificando dimensões específicas de segurança em capítulos distintos. A falha em qualquer gate bloqueia promoção a produção.
 
@@ -813,7 +813,7 @@ flowchart TB
 
 ---
 
-## 📑 Artefactos esperados (por fase)
+## 📑 Artefactos esperados (por fase) {#-artefactos-esperados-por-fase}
 
 | Fase         | Artefacto                          | Quem produz         | Onde fica                  | Evidência mínima                              |
 |--------------|------------------------------------|---------------------|----------------------------|-----------------------------------------------|
@@ -832,7 +832,7 @@ flowchart TB
 
 ---
 
-## 📊 Matriz de proporcionalidade L1–L3
+## 📊 Matriz de proporcionalidade L1–L3 {#-matriz-de-proporcionalidade-l1l3}
 
 | Prática / Story                                 | L1 | L2 | L3 | Observações |
 |-------------------------------------------------|----|----|----|-------------|
@@ -850,7 +850,7 @@ flowchart TB
 
 ---
 
-## 📝 Recomendações operacionais
+## 📝 Recomendações operacionais {#-recomendações-operacionais}
 
 - Integrar a classificação de risco desde o **kick-off** do projeto.  
 - Reavaliar a classificação **por alteração** e **por calendário** (time-based).  

@@ -12,9 +12,9 @@ sidebar_position: 6
 >
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 
-## Âmbito
+## Âmbito {#âmbito}
 
-### 🤖 AI Act - Regulamento de Inteligência Artificial
+### 🤖 AI Act - Regulamento de Inteligência Artificial {#-ai-act---regulamento-de-inteligência-artificial}
 
 O **AI Act** é o **Regulamento (UE) 2024/1689** (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1689)), o primeiro quadro jurídico horizontal do mundo dedicado à inteligência artificial. Entrou em vigor a 1 de agosto de 2024 e aplica-se de forma faseada:
 
@@ -47,7 +47,7 @@ No SbD-ToE, o AI Act é operacionalizado através das mesmas disciplinas técnic
 > Padrões como **ISO/IEC 42001** (sistema de gestão de IA), **ISO/IEC 23894** (gestão de risco de IA), **ISO/IEC 27090** (segurança de IA, em desenvolvimento), o **NIST AI Risk Management Framework (AI RMF 1.0)**, o **MITRE ATLAS** (táticas e técnicas adversariais contra ML), o **OWASP Machine Learning Security Top 10** e o **OWASP Top 10 for LLM Applications** são amplamente reconhecidos e fornecem base sólida para cumprir os requisitos técnicos e processuais.
 > O SbD-ToE assume estes padrões como **boas práticas recomendadas**, não como requisitos legais em si mesmos.
 
-## Aviso Regulatório
+## Aviso Regulatório {#aviso-regulatório}
 
 O SbD-ToE cobre o **"como" técnico** dos requisitos de alto risco, mas **não substitui** as dimensões jurídicas, de domínio de IA e de avaliação de conformidade do AI Act. Em concreto, ficam **fora do âmbito** do manual:
 
@@ -63,7 +63,7 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 
 ---
 
-## Matriz de Cross-Check (resumo)
+## Matriz de Cross-Check (resumo) {#matriz-de-cross-check-resumo}
 
 > ✏️ **Refresh 2026-05-30.** Esta matriz foi actualizada na sequência do *release agentic* (Cap. 02 §A0–A4, Cap. 03 playbook agentic, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39, US-13/14/15/16/19/21). Várias lacunas que estavam classificadas como "intencionais" (por desenho fora de AppSec) ficaram **parcial ou totalmente colmatadas** — assinalamos onde.
 
@@ -87,9 +87,9 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 
 ---
 
-## PARTE I: ANÁLISE NORMATIVA
+## PARTE I: ANÁLISE NORMATIVA {#parte-i-análise-normativa}
 
-### Artigo 4 - Literacia em IA
+### Artigo 4 - Literacia em IA {#artigo-4---literacia-em-ia}
 
 **Conteúdo normativo**
 
@@ -120,7 +120,7 @@ A Policy 37 §11 é directamente operacionalizável. Para organizações com ado
 
 ---
 
-### Artigo 9 - Sistema de gestão de risco
+### Artigo 9 - Sistema de gestão de risco {#artigo-9---sistema-de-gestão-de-risco}
 
 **Conteúdo normativo**
 
@@ -152,7 +152,7 @@ Sugere-se estender o threat model do Cap. 03 com uma taxonomia de risco de IA - 
 
 ---
 
-### Artigo 10 - Dados e governação de dados
+### Artigo 10 - Dados e governação de dados {#artigo-10---dados-e-governação-de-dados}
 
 **Conteúdo normativo**
 
@@ -183,7 +183,7 @@ A *AI-BOM* que estava sugerida em versões anteriores deste documento **já est�
 
 ---
 
-### Artigo 11 e Anexo IV - Documentação técnica
+### Artigo 11 e Anexo IV - Documentação técnica {#artigo-11-e-anexo-iv---documentação-técnica}
 
 **Conteúdo normativo**
 
@@ -218,7 +218,7 @@ Sugere-se construir um "índice Anexo IV" que aponte para os artefactos SbD-ToE 
 
 ---
 
-### Artigo 12 e Artigo 19 - Registo de eventos (logging) e conservação de logs
+### Artigo 12 e Artigo 19 - Registo de eventos (logging) e conservação de logs {#artigo-12-e-artigo-19---registo-de-eventos-logging-e-conservação-de-logs}
 
 **Conteúdo normativo**
 
@@ -251,7 +251,7 @@ A camada operacional já está implementada (`OPS-011..014` + Cap. 12 US-13). Re
 
 ---
 
-### Artigo 13 - Transparência e prestação de informação aos utilizadores implementadores
+### Artigo 13 - Transparência e prestação de informação aos utilizadores implementadores {#artigo-13---transparência-e-prestação-de-informação-aos-utilizadores-implementadores}
 
 **Conteúdo normativo**
 
@@ -280,7 +280,7 @@ Sugere-se derivar um documento de "instruções de utilização" a partir do ***
 
 ---
 
-### Artigo 14 - Supervisão humana
+### Artigo 14 - Supervisão humana {#artigo-14---supervisão-humana}
 
 > ⚡ **Refresh 2026-05-30.** A primeira versão deste cross-check tratava o Art. 14 como largamente fora de AppSec ("desenho de mecanismos de supervisão é problema de IA/produto"). Com a camada agentic introduzida em 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — a **faceta de interrupção (*stop/override*) e de governação** ficou coberta. A **supervisão-como-compreensão** (o juízo humano e a UX de intervenção) permanece domínio da equipa de IA/produto; o *como* arquitectónico e o *quando* governativo já vivem no manual.
 
@@ -317,7 +317,7 @@ A maior parte do trabalho técnico está agora dentro do manual: declarar o nív
 
 ---
 
-### Artigo 15 - Exatidão, robustez e cibersegurança
+### Artigo 15 - Exatidão, robustez e cibersegurança {#artigo-15---exatidão-robustez-e-cibersegurança}
 
 > 🎯 **Núcleo do cross-check.** É no Art. 15 que o SbD-ToE oferece a cobertura mais forte e direta. A cibersegurança de sistemas de IA é, em grande medida, a disciplina central do manual aplicada a um novo tipo de artefacto (modelos e pipelines de ML).
 
@@ -355,7 +355,7 @@ Sugere-se: (1) estender o threat model (Cap. 03) com o **MITRE ATLAS** e o **OWA
 
 ---
 
-### Artigo 17 - Sistema de gestão da qualidade (QMS)
+### Artigo 17 - Sistema de gestão da qualidade (QMS) {#artigo-17---sistema-de-gestão-da-qualidade-qms}
 
 **Conteúdo normativo**
 
@@ -389,7 +389,7 @@ Sugere-se mapear os gates e processos SbD-ToE (Cap. 06/07/10/11/14) para os elem
 
 ---
 
-### Artigo 25 - Cadeia de fornecimento e responsabilidades ao longo da cadeia
+### Artigo 25 - Cadeia de fornecimento e responsabilidades ao longo da cadeia {#artigo-25---cadeia-de-fornecimento-e-responsabilidades-ao-longo-da-cadeia}
 
 **Conteúdo normativo**
 
@@ -422,7 +422,7 @@ Operacionalmente já está implementado (Policy 39 + `DEP-013/014` + Cap. 14 US-
 
 ---
 
-### Artigo 26 - Obrigações dos *deployers*
+### Artigo 26 - Obrigações dos *deployers* {#artigo-26---obrigações-dos-deployers}
 
 **Conteúdo normativo**
 
@@ -455,7 +455,7 @@ Para usos em que a organização é *deployer*, o *mandate* (Policy 38) é o art
 
 ---
 
-### Artigo 72 - Monitorização pós-comercialização
+### Artigo 72 - Monitorização pós-comercialização {#artigo-72---monitorização-pós-comercialização}
 
 **Conteúdo normativo**
 
@@ -489,7 +489,7 @@ Sugere-se formalizar um plano de monitorização pós-mercado assente na observa
 
 ---
 
-### Artigo 73 - Comunicação de incidentes graves
+### Artigo 73 - Comunicação de incidentes graves {#artigo-73---comunicação-de-incidentes-graves}
 
 **Conteúdo normativo**
 
@@ -523,7 +523,7 @@ Sugere-se parametrizar o runbook e o esquema de incidente do Cap. 12 com a tipol
 
 ---
 
-### Modelos de IA de finalidade geral - Artigos 53 e 55 (GPAI)
+### Modelos de IA de finalidade geral - Artigos 53 e 55 (GPAI) {#modelos-de-ia-de-finalidade-geral---artigos-53-e-55-gpai}
 
 **Conteúdo normativo**
 
@@ -557,7 +557,7 @@ Sugere-se: tratar pesos, *checkpoints* e *datasets* como ativos de cadeia de for
 
 ---
 
-### Práticas proibidas e transparência (Artigos 5 e 50)
+### Práticas proibidas e transparência (Artigos 5 e 50) {#práticas-proibidas-e-transparência-artigos-5-e-50}
 
 **Conteúdo normativo**
 
@@ -577,9 +577,9 @@ A determinação de proibições e os deveres de transparência devem ser conduz
 
 ---
 
-## PARTE II: SÍNTESE E REFERÊNCIAS
+## PARTE II: SÍNTESE E REFERÊNCIAS {#parte-ii-síntese-e-referências}
 
-### Síntese da cobertura AI Act / SbD-ToE
+### Síntese da cobertura AI Act / SbD-ToE {#síntese-da-cobertura-ai-act--sbd-toe}
 
 O AI Act pede sistemas de IA **seguros, robustos, documentados e supervisionáveis**, com responsabilidade do fornecedor ao longo de todo o ciclo de vida. O SbD-ToE oferece o **coração técnico-operacional** desse esforço: gestão de risco técnico (Cap. 01, 03), arquitetura defensiva (Cap. 04), integridade da cadeia de dados e modelos (Cap. 05), pipelines e gates de qualidade (Cap. 06, 07, 11), testes e robustez adversarial (Cap. 10), logging e monitorização pós-mercado (Cap. 12) e governação (Cap. 14).
 
@@ -592,7 +592,7 @@ O resultado é coerente com a filosofia do manual:
 - **Hoje**, o SbD-ToE permite construir e operar o software de um sistema de IA com segurança por desenho.
 - **Amanhã**, quando a organização tiver de cumprir o AI Act, liga os detalhes - estende o threat model ao vetor adversarial (ATLAS), formaliza o QMS (Art. 17), parametriza incidentes (Art. 73) e a monitorização pós-mercado (Art. 72), e articula com as equipas de domínio as dimensões de dados, supervisão e transparência.
 
-### Âmbito, papéis e sanções
+### Âmbito, papéis e sanções {#âmbito-papéis-e-sanções}
 
 O AI Act distingue **fornecedores (providers)**, **utilizadores implementadores (deployers)**, importadores e distribuidores, com obrigações distintas. O grosso das obrigações técnicas (e da cobertura SbD-ToE) recai sobre o **fornecedor de sistema de alto risco**; o *deployer* tem obrigações próprias (uso conforme às instruções, supervisão humana, em certos casos FRIA - Art. 26, 27).
 
@@ -603,7 +603,7 @@ Em termos sancionatórios (Art. 99), o regulamento estabelece patamares máximos
 - **Informação incorreta, incompleta ou enganosa** a organismos notificados ou autoridades: até **7,5 M€** ou **1%**.
 - Para fornecedores de **GPAI** (Art. 101): até **15 M€** ou **3%**.
 
-### Referências
+### Referências {#referências}
 
 - **AI Act**: Regulamento (UE) 2024/1689 (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1689)).
 - **Art. 9** - Sistema de gestão de risco (ciclo de vida).

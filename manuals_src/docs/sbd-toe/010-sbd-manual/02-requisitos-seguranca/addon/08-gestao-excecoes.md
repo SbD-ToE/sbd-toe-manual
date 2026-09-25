@@ -11,13 +11,13 @@ tags: [exceções, requisitos, risco, validação, aplicacional]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a requisitos do catálogo aplicacional: `AUT`, `ACC`, `LOG`, `SES`, `VAL`, `ERR`, `CFG`, `ENC`, `API`, `INT`.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - framework ou biblioteca sem suporte nativo ao controlo (ex: ausência de MFA, limitação de validação de input);
 - componente de terceiro integrado sem possibilidade de modificação no âmbito do projecto;
@@ -27,7 +27,7 @@ Excepções a requisitos do catálogo aplicacional: `AUT`, `ACC`, `LOG`, `SES`, 
 
 ---
 
-## Identificação do requisito afectado
+## Identificação do requisito afectado {#identificação-do-requisito-afectado}
 
 O campo "Requisito afectado" deve identificar:
 
@@ -36,7 +36,7 @@ O campo "Requisito afectado" deve identificar:
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

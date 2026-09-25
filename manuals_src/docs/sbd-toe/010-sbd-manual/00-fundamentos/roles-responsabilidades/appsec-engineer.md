@@ -9,21 +9,21 @@ sidebar_position: 5
 
 # AppSec Engineer
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 AppSec é a **ponte entre normas abstratas e execução técnica**.  
 Transforma obrigações regulatórias em **controlos concretos, auditáveis e proporcionais ao risco**, garantindo que segurança é embutida no ciclo de vida completo.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Traduzem normas e regulamentos em requisitos técnicos
 - Facilitam sessões de threat modeling e revisão da arquitetura
 - Definem guidelines de desenvolvimento seguro
 - Acompanham auditorias e produzem evidência de segurança
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 Atuam como **ponto de ligação entre equipas técnicas e governação**, assegurando rastreabilidade exigida por **NIS2** e **DORA**. Sem AppSec, as políticas de segurança ficam desligadas da realidade técnica.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Essencial para:
 - **NIS2**: Rastreabilidade e gestão de vulnerabilidades
@@ -32,9 +32,9 @@ Essencial para:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Rever **classificação de criticidade** sempre que houver alterações técnicas relevantes ou com cadência fixa (L1 anual, L2 semestral, L3 trimestral). Verificar se ameaças esperadas estão cobertas por controlos aplicados.
 
 **User Stories:**
@@ -42,25 +42,25 @@ Rever **classificação de criticidade** sempre que houver alterações técnica
 - [US-03: Revisão periódica de criticidade](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-03---revisão-por-alteração-relevante-event-based) - Cadência fixa por nível
 - [US-06: Verificação de cobertura de ameaças](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-06---mapeamento-de-ameaças-por-nível-de-risco) - Validar adequação de controlos
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Estabelecer e manter **catálogo de requisitos de segurança** versionado e auditável ao longo do SDLC.
 
 **User Stories:**
 - [US-04: Catálogo de Requisitos de Segurança](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-04---rastreabilidade-de-requisitos) - Aplicação consistente e rastreável
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Documentar e **aprovar formalmente riscos residuais** identificados no threat modeling, garantindo decisões transparentes e auditáveis.
 
 **User Stories:**
 - [US-04: Documentação e aprovação de riscos residuais](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-04---justificação-formal-de-risco-aceite) - Decisões transparentes
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Rever **designs de arquitetura** para garantir conformidade com padrões de segurança estabelecidos.
 
 **User Stories:**
 - [US-03: Revisão de designs de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-03---revisão-formal-do-design-arquitetural) - Validar conformidade técnica
 
-### Cap. 05 - Dependências e SBOM
+### Cap. 05 - Dependências e SBOM {#cap-05---dependências-e-sbom}
 Executar **SCA automático em pipelines** e formalizar exceções a CVEs com governação explícita. Auditar bibliotecas copiadas manualmente.
 
 **User Stories:**
@@ -68,7 +68,7 @@ Executar **SCA automático em pipelines** e formalizar exceções a CVEs com gov
 - [US-04: Exceções a CVEs formais e temporárias](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-04---exceções-a-cves-formais-e-temporárias) - Governação de risco residual
 - [US-09: Auditoria de bibliotecas copiadas manualmente](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-09---auditoria-periódica-de-bibliotecas-copiadas-manualmente) - Bloqueio em CI/CD
 
-### Cap. 06 - Desenvolvimento Seguro
+### Cap. 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 Validar dependências externas, registar exceções técnicas, **rever guidelines** trimestralmente, definir perfis de validação L1-L3, detetar padrões perigosos automaticamente.
 
 **User Stories:**
@@ -78,7 +78,7 @@ Validar dependências externas, registar exceções técnicas, **rever guideline
 - [US-05: Perfis de validação L1-L3](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-05---gestão-de-exceções-técnicas) - Adequação ao risco
 - [US-06: Deteção automática de padrões perigosos](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-06---uso-validado-de-genia) - Bloqueio com feedback educativo
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Aplicar **gates distintos por L1-L3** e garantir scanners de containers/SBOM em pipelines. Executar DAST em staging.
 
 **User Stories:**
@@ -86,7 +86,7 @@ Aplicar **gates distintos por L1-L3** e garantir scanners de containers/SBOM em 
 - [US-08: Cobertura ampliada](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-08---cobertura-ampliada-containers-e-sbom) - Containers e SBOM
 - [US-11: DAST em staging](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-11---testes-de-segurança-dinâmicos-dast) - Validação comportamental
 
-### Cap. 08 - IaC e Infraestrutura
+### Cap. 08 - IaC e Infraestrutura {#cap-08---iac-e-infraestrutura}
 Governar **módulos IaC com origem confiável**, aplicar enforcement automático de políticas, auditar drift periodicamente.
 
 **User Stories:**
@@ -94,14 +94,14 @@ Governar **módulos IaC com origem confiável**, aplicar enforcement automático
 - [US-08: Enforcement automático de políticas](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-08---enforcement-automático-de-políticas) - Conformidade sistemática
 - [US-11: Auditoria periódica de drift](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-11---deteção-e-correção-de-drift) - Coerência IaC vs infraestrutura
 
-### Cap. 09 - Containers e Imagens
+### Cap. 09 - Containers e Imagens {#cap-09---containers-e-imagens}
 Assinar **todas as imagens digitalmente** com proveniência verificável. Monitorizar comportamento de containers em runtime.
 
 **User Stories:**
 - [US-03: Assinatura digital de imagens](/sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-03---assinatura-e-verificação-de-proveniência-de-imagens-com-cosign-e-rekor) - Integridade e origem
 - [US-05: Monitorização de comportamento em runtime](/sbd-toe/sbd-manual/containers-imagens/aplicacao-lifecycle#us-05---monitorização-e-resposta-a-incidentes-em-runtime) - Deteção de eventos suspeitos
 
-### Cap. 10 - Testes de Segurança
+### Cap. 10 - Testes de Segurança {#cap-10---testes-de-segurança}
 Definir **estratégia de testes por aplicação** proporcional ao risco. Centralizar findings numa plataforma unificada e automatizar delivery às equipas.
 
 **User Stories:**
@@ -109,14 +109,14 @@ Definir **estratégia de testes por aplicação** proporcional ao risco. Central
 - [US-10: Gestão centralizada de findings](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-10---gestão-centralizada-de-findings-com-triagem-e-sla) - Plataforma unificada
 - [US-11: Feedback automático de findings](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-11---feedback-automático-de-findings-às-equipas) - Delivery contextualizado
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Definir **gates automáticos e thresholds** no deploy. Executar validações técnicas com gates condicionais por risco.
 
 **User Stories:**
 - [US-01: Gates automáticos no deploy](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-01---deploy-apenas-de-artefactos-assinados) - Bloquear releases inseguras
 - [US-04: Gates condicionais por risco](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-04---rollback-r%C3%A1pido-e-testado) - Validações técnicas proporcionais
 
-### Cap. 12 - Monitorização e Operações
+### Cap. 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 Definir **eventos e métricas críticas** de segurança. Classificar domínios de monitorização, correlacionar eventos multi-fonte, afinar alertas, aplicar controlos proporcionais ao risco.
 
 **User Stories:**
@@ -126,7 +126,7 @@ Definir **eventos e métricas críticas** de segurança. Classificar domínios d
 - [US-06: Validação e afinação de alertas](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-06---classificação-e-cobertura-de-domínios-de-monitorização) - Reduzir falsos positivos
 - [US-09: Controlos proporcionais ao risco](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-09---correlação-de-eventos-e-deteção-comportamental) - Equilibrar custo e cobertura
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 Fornecer **formação contínua por perfil**, executar code clinics, manter trilhos formativos atualizados, aplicar formação proporcional ao risco, implementar quizzes de validação, definir DoD por formato.
 
 **User Stories:**
@@ -137,7 +137,7 @@ Fornecer **formação contínua por perfil**, executar code clinics, manter tril
 - [US-09: Quizzes de validação](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-09---manutenção-e-atualização-de-trilhos-formativos) - Registro auditável de competência
 - [US-10: Definição de DoD por formato](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-10---trilhos-formativos-proporcionais-por-risco-l1l3) - Consistência e qualidade
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Agregar práticas em **dashboard organizacional**, revisar exceções periodicamente, manter repositório de conformidade, executar validações periódicas, formalizar governação com alçadas, manter checklist centralizado, monitorizar fornecedores.
 
 **User Stories:**
@@ -150,7 +150,7 @@ Agregar práticas em **dashboard organizacional**, revisar exceções periodicam
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

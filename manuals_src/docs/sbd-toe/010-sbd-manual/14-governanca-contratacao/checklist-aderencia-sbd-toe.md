@@ -10,7 +10,7 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 
 # Checklist de Aderência ao Modelo SbD-ToE
 
-## Para que serve este documento
+## Para que serve este documento {#para-que-serve-este-documento}
 
 Este checklist responde a uma pergunta diferente dos KPIs e KRIs:
 
@@ -30,7 +30,7 @@ O checklist é um instrumento de **adopção** - avalia se os processos, control
 
 ---
 
-## Como usar
+## Como usar {#como-usar}
 
 **Aplicação:** O checklist é aplicado por aplicação (ou por portfolio para avaliação organizacional). Para cada item, regista-se:
 
@@ -56,7 +56,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 1 - Classificação e Gestão de Risco
+## 1 - Classificação e Gestão de Risco {#1---classificação-e-gestão-de-risco}
 
 *Políticas: classificacao-risco, aceitacao-risco, revisao-periodica-risco, gestao-excecoes*
 
@@ -72,7 +72,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 2 - Requisitos, Ameaças e Arquitectura
+## 2 - Requisitos, Ameaças e Arquitectura {#2---requisitos-ameaças-e-arquitectura}
 
 *Políticas: requisitos-seguranca, threat-modeling, arquitetura-segura, rastreabilidade*
 
@@ -92,7 +92,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 3 - Dependências e SBOM
+## 3 - Dependências e SBOM {#3---dependências-e-sbom}
 
 *Políticas: dependencias, sbom, excecoes-cve, atualizacao-automatica*
 
@@ -113,7 +113,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 4 - Desenvolvimento Seguro
+## 4 - Desenvolvimento Seguro {#4---desenvolvimento-seguro}
 
 *Políticas: guidelines-desenvolvimento, revisao-codigo, uso-ferramentas-apoio*
 
@@ -133,7 +133,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 5 - CI/CD e Pipeline
+## 5 - CI/CD e Pipeline {#5---cicd-e-pipeline}
 
 *Políticas: cicd-seguro, gestao-segredos*
 
@@ -153,7 +153,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 6 - IaC e Containers
+## 6 - IaC e Containers {#6---iac-e-containers}
 
 *Políticas: iac-seguro, aprovacao-plan-iac, containers-seguros, golden-base-images*
 
@@ -174,7 +174,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 7 - Testes de Segurança
+## 7 - Testes de Segurança {#7---testes-de-segurança}
 
 *Políticas: dast-fuzzing, estrategia-testes, release-seguro, aprovacao-release, pentesting*
 
@@ -194,7 +194,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 8 - Deploy e Operações
+## 8 - Deploy e Operações {#8---deploy-e-operações}
 
 *Políticas: deploy-seguro, rollback, monitorizacao-pos-deploy, logging-estruturado, monitorizacao-seguranca, gestao-alertas, irp*
 
@@ -218,7 +218,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 9 - Governação e Formação
+## 9 - Governação e Formação {#9---governação-e-formação}
 
 *Políticas: contratacao-segura, rastreabilidade-organizacional, kpis-governacao, formacao-seguranca*
 
@@ -239,7 +239,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## Resumo e scorecard
+## Resumo e scorecard {#resumo-e-scorecard}
 
 Use esta tabela para calcular a aderência por domínio após completar o checklist.
 
@@ -256,7 +256,7 @@ Use esta tabela para calcular a aderência por domínio após completar o checkl
 | 9 - Governação e Formação | 2 | 0 | 7 | 3 | 12 |
 | **Total** | **25** | **5** | **46** | **24** | **96** |
 
-### Leitura do score
+### Leitura do score {#leitura-do-score}
 
 | Score em items S | Interpretação |
 |-----------------|---------------|
@@ -274,7 +274,7 @@ Use esta tabela para calcular a aderência por domínio após completar o checkl
 
 ---
 
-## Referências
+## Referências {#referências}
 
 | Documento | Relação |
 |-----------|---------|

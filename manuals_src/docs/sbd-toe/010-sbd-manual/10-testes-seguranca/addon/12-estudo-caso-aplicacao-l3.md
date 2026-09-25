@@ -13,7 +13,7 @@ A aplicação foi classificada como **nível L3** no Capítulo 01 - Gestão de R
 
 ---
 
-## 👨‍💻 Desenvolvimento com qualidade embutida (Cap. 06)
+## 👨‍💻 Desenvolvimento com qualidade embutida (Cap. 06) {#-desenvolvimento-com-qualidade-embutida-cap-06}
 
 Durante o desenvolvimento, os programadores utilizaram:
 
@@ -26,7 +26,7 @@ Resultado: ao submeter um Pull Request, a maior parte dos problemas triviais já
 
 ---
 
-## 🔍 Validações automáticas no Pull Request (Cap. 10, Cap. 07)
+## 🔍 Validações automáticas no Pull Request (Cap. 10, Cap. 07) {#-validações-automáticas-no-pull-request-cap-10-cap-07}
 
 No momento do PR, são ativados:
 
@@ -43,7 +43,7 @@ Critérios de bloqueio configurados (Cap. 10 `addon/01`, `addon/02`, `addon/04`)
 
 ---
 
-## 🗒️ Gestão de Findings (Cap. 10, Cap. 05)
+## 🗒️ Gestão de Findings (Cap. 10, Cap. 05) {#️-gestão-de-findings-cap-10-cap-05}
 
 Findings são automaticamente registados no **DefectDojo**, com:
 
@@ -60,7 +60,7 @@ Exceções são submetidas com:
 
 ---
 
-## ⚠️ Ambiente de staging e testes ofensivos (Cap. 10, Cap. 11)
+## ⚠️ Ambiente de staging e testes ofensivos (Cap. 10, Cap. 11) {#️-ambiente-de-staging-e-testes-ofensivos-cap-10-cap-11}
 
 Após merge:
 
@@ -83,7 +83,7 @@ Resultados do PenTest são integrados no mesmo processo de findings (Cap. 10 `ad
 
 ---
 
-## 🛡️ Monitorização e resposta contínua (Cap. 12 + Cap. 05)
+## 🛡️ Monitorização e resposta contínua (Cap. 12 + Cap. 05) {#️-monitorização-e-resposta-contínua-cap-12--cap-05}
 
 Em produção:
 
@@ -104,7 +104,7 @@ Este processo fecha o ciclo, pois:
 
 ---
 
-## 📦 Validação final antes do release (Cap. 11)
+## 📦 Validação final antes do release (Cap. 11) {#-validação-final-antes-do-release-cap-11}
 
 Antes da entrada em produção:
 
@@ -115,7 +115,7 @@ Antes da entrada em produção:
 
 ---
 
-## 📈 Conclusão
+## 📈 Conclusão {#-conclusão}
 
 Esta narrativa demonstra a **aplicação prática do modelo SbD-ToE de forma integrada e realista**, com:
 

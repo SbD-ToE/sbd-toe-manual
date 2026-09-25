@@ -17,7 +17,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Garantir que cada artefacto foi produzido de forma segura e rastreável;
 - Permitir a verificação automática da proveniência e integridade dos artefactos;
@@ -25,7 +25,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Assinatura digital dos artefactos gerados**  
    - Cada build relevante deve produzir artefactos assinados digitalmente (ex: `cosign`, `GPG`);
@@ -49,7 +49,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                 |
 |-------|--------------------------------------------------------|--------------------------------------------------------|
@@ -59,7 +59,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions + Sigstore**  
   - Geração de `.intoto` provenance com `slsa-github-generator`;  
@@ -79,7 +79,7 @@ Esta prática define os controlos necessários para garantir a **integridade, au
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Manipulação ou substituição de artefactos (OSC&R: CI0011);
 - Injeção de código malicioso via build comprometido (OSC&R: CI0002);

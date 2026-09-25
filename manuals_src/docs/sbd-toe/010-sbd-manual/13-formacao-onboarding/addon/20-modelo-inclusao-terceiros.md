@@ -12,7 +12,7 @@ Este documento define uma abordagem prática e verificável para garantir que **
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 - **Uniformizar critérios de formação** para elementos externos com impacto técnico
 - Evitar disparidades de segurança entre equipas internas e externas
@@ -21,7 +21,7 @@ Este documento define uma abordagem prática e verificável para garantir que **
 
 ---
 
-## ✅ Requisitos mínimos aplicáveis
+## ✅ Requisitos mínimos aplicáveis {#-requisitos-mínimos-aplicáveis}
 
 Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **antes de obter permissões técnicas**:
 
@@ -35,7 +35,7 @@ Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **a
 
 ---
 
-## 🧩 Modalidades práticas por tipo de terceiro
+## 🧩 Modalidades práticas por tipo de terceiro {#-modalidades-práticas-por-tipo-de-terceiro}
 
 | Tipo de terceiro         | Modalidade formativa sugerida                                      | Registo esperado                        |
 |--------------------------|---------------------------------------------------------------------|------------------------------------------|
@@ -45,7 +45,7 @@ Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **a
 
 ---
 
-## 🧭 Boas práticas de implementação
+## 🧭 Boas práticas de implementação {#-boas-práticas-de-implementação}
 
 - Incluir referência ao **Capítulo 13 - Formação** no processo de contratação
 - Formalizar exigências via **Capítulo 14 - Governança e Contratação**
@@ -55,7 +55,7 @@ Cada terceiro (indivíduo ou organização) deve cumprir os seguintes pontos **a
 
 ---
 
-## 🔗 Ligações a outros documentos
+## 🔗 Ligações a outros documentos {#-ligações-a-outros-documentos}
 
 | Documento                         | Relevância                                   |
 |-----------------------------------|----------------------------------------------|

@@ -14,7 +14,7 @@ tags: [governanca, contractors, validacao, triagem, checklist, onboarding]
 
 ---
 
-## 📖 Uso deste Template
+## 📖 Uso deste Template {#-uso-deste-template}
 
 Este documento serve como **checklist estruturado de validação para novos contractors** antes de contratação formal ou acesso a sistemas. É utilizado em **US-06 (validação inicial de fornecedores)** e **US-15 (preparação técnica pré-acesso)**.
 
@@ -28,7 +28,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 1: Informações Básicas
+## ✅ PARTE 1: Informações Básicas {#-parte-1-informações-básicas}
 
 | Campo | Preenchimento | Observações |
 |-------|---------------|-------------|
@@ -47,9 +47,9 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 2: Verificação de Background e Documentação Legal
+## ✅ PARTE 2: Verificação de Background e Documentação Legal {#-parte-2-verificação-de-background-e-documentação-legal}
 
-### 2.1 Verificação de Referências
+### 2.1 Verificação de Referências {#21-verificação-de-referências}
 
 | Item | Sim | Não | N/A | Observações |
 |------|-----|-----|-----|-------------|
@@ -57,7 +57,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 | **Verificação de background check (polícia/criminal)** | [ ] | [ ] | [ ] | Status: [_____________] |
 | **Verificação de credenciais profissionais** | [ ] | [ ] | [ ] | Certificações validadas? [_________________] |
 
-### 2.2 Documentação Legal
+### 2.2 Documentação Legal {#22-documentação-legal}
 
 | Item | Submetido | Validado | Observações |
 |------|-----------|----------|-------------|
@@ -70,9 +70,9 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 3: Avaliação Técnica Inicial
+## ✅ PARTE 3: Avaliação Técnica Inicial {#-parte-3-avaliação-técnica-inicial}
 
-### 3.1 Skills e Background Técnico
+### 3.1 Skills e Background Técnico {#31-skills-e-background-técnico}
 
 | Questão | Resposta | Validado por | Observações |
 |---------|----------|--------------|-------------|
@@ -84,7 +84,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 | **CI/CD e Infra experiência** | [ ] Sim [ ] Não | DevOps | Ferramentas: [__________________] |
 | **Conhecimento de containers/Kubernetes** | [ ] Sim [ ] Não | DevOps | Nível: [ ] Básico [ ] Intermédio [ ] Avançado |
 
-### 3.2 Triagem de Segurança Inicial
+### 3.2 Triagem de Segurança Inicial {#32-triagem-de-segurança-inicial}
 
 | Questão | Resposta | Avaliação |
 |---------|----------|-----------|
@@ -99,9 +99,9 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 4: Validação de Segurança (AppSec Engineer)
+## ✅ PARTE 4: Validação de Segurança (AppSec Engineer) {#-parte-4-validação-de-segurança-appsec-engineer}
 
-### 4.1 Questões de Security Awareness (Nível Mínimo)
+### 4.1 Questões de Security Awareness (Nível Mínimo) {#41-questões-de-security-awareness-nível-mínimo}
 
 **Instruções:** Enviar este formulário ao contractor. Score mínimo requerido: **70%**
 
@@ -124,7 +124,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-### 4.2 Validação de Equipamentos
+### 4.2 Validação de Equipamentos {#42-validação-de-equipamentos}
 
 | Item | Status | Observações |
 |------|--------|-------------|
@@ -140,7 +140,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-### 4.3 Avaliação de Risco (AppSec Engineer)
+### 4.3 Avaliação de Risco (AppSec Engineer) {#43-avaliação-de-risco-appsec-engineer}
 
 | Dimensão | L1 | L2 | L3 | Observações |
 |----------|----|----|-----|-------------|
@@ -156,9 +156,9 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 5: Relatório de Decisão
+## ✅ PARTE 5: Relatório de Decisão {#-parte-5-relatório-de-decisão}
 
-### 5.1 Síntese de Validação
+### 5.1 Síntese de Validação {#51-síntese-de-validação}
 
 | Critério | Resultado | Responsável |
 |----------|-----------|-------------|
@@ -168,7 +168,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 | **Security Awareness** | [ ] ✅ Passed (>70%) [ ] ⚠️ Retry [ ] ❌ Failed | [__________] |
 | **Avaliação de Risco** | [ ] ✅ Approved [ ] ⚠️ Conditional [ ] ❌ Not recommended | [__________] |
 
-### 5.2 Decisão Final
+### 5.2 Decisão Final {#52-decisão-final}
 
 **Decisão Geral:**  
 [ ] ✅ **APROVADO** → Prosseguir para Preparação Técnica (US-15)  
@@ -182,7 +182,7 @@ Este documento serve como **checklist estruturado de validação para novos cont
 3. [_____________________________] → Prazo: [_____] → Owner: [_______] → Status: [ ]
 ```
 
-### 5.3 Aprovações Formais
+### 5.3 Aprovações Formais {#53-aprovações-formais}
 
 | Papel | Nome | Assinatura Digital | Data | Observações |
 |-------|------|-------------------|------|-------------|
@@ -193,11 +193,11 @@ Este documento serve como **checklist estruturado de validação para novos cont
 
 ---
 
-## ✅ PARTE 6: Próximos Passos (Pós-Aprovação)
+## ✅ PARTE 6: Próximos Passos (Pós-Aprovação) {#-parte-6-próximos-passos-pós-aprovação}
 
 Se APROVADO, as seguintes ações são acionadas automaticamente:
 
-### 6.1 Timeline de Preparação
+### 6.1 Timeline de Preparação {#61-timeline-de-preparação}
 
 | Data | Ação | Owner | Status |
 |------|------|-------|--------|
@@ -208,7 +208,7 @@ Se APROVADO, as seguintes ações são acionadas automaticamente:
 | T-1 dia | Confirmação de conclusão | Security Champion | [ ] Done |
 | T-0 (Dia 1) | Acesso concedido + Onboarding técnico | DevOps | [ ] Done |
 
-### 6.2 Checklists Subsequentes
+### 6.2 Checklists Subsequentes {#62-checklists-subsequentes}
 
 Após aprovação neste template, o contractor segue:
 1. **US-15:** Preparação Técnica (Sandbox, NDA, formação)
@@ -217,7 +217,7 @@ Após aprovação neste template, o contractor segue:
 
 ---
 
-## 📎 Anexos e Referências
+## 📎 Anexos e Referências {#-anexos-e-referências}
 
 - [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
 - [US-06: Fluxo de Validação de Fornecedores](../aplicacao-lifecycle#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores)
@@ -227,7 +227,7 @@ Após aprovação neste template, o contractor segue:
 
 ---
 
-## 🏁 Notas Finais
+## 🏁 Notas Finais {#-notas-finais}
 
 - **Este template é obrigatório para L2–L3** e recomendado para L1.
 - **Manter histórico de todas as validações** por 7 anos (DORA requirement).

@@ -8,7 +8,7 @@ tags: [tipo:anexo, grupo:execucao, tema:pipeline, segurança, deploy]
 
 # Modelo de Controlo de Execução em Runtime
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que a aplicação, após o deploy, **executa de forma segura, controlada e reversível**, através de mecanismos que permitem limitar impacto, reagir a falhas, ativar ou desativar funcionalidades e prevenir execuções perigosas em produção.
 
@@ -20,7 +20,7 @@ Estes controlos funcionam **durante a execução** da aplicação, complementand
 
 ---
 
-## 🧬 O que é controlo de execução
+## 🧬 O que é controlo de execução {#-o-que-é-controlo-de-execução}
 
 Controlo de execução refere-se a todos os mecanismos aplicáveis **em runtime** que permitem condicionar, bloquear, ajustar ou desligar funcionalidades da aplicação **sem novo deploy**.
 
@@ -36,7 +36,7 @@ São exemplos típicos:
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
 1. **Identificar pontos de risco ou controlo dinâmico** no código:
    - Chamadas externas, novas funcionalidades, operações críticas;
@@ -55,7 +55,7 @@ São exemplos típicos:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Usar **feature toggles com validade temporal** (ex: 30 dias);
 - Documentar a lógica de cada controlo e garantir reversibilidade;
@@ -67,7 +67,7 @@ São exemplos típicos:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo               | Relação com este tema                              |
 |------------------------------------|----------------------------------------------------|

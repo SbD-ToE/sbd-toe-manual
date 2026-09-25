@@ -9,7 +9,7 @@ sidebar_position: 8
 
 # Integração dos Testes de Segurança no Pipeline CI/CD
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que os testes de segurança são **executados automaticamente e com critérios bem definidos** em todos os pipelines de CI/CD relevantes, garantindo:
 
@@ -22,7 +22,7 @@ Assegurar que os testes de segurança são **executados automaticamente e com cr
 
 ---
 
-## 🔍 O que significa “integrar testes no pipeline”
+## 🔍 O que significa “integrar testes no pipeline” {#-o-que-significa-integrar-testes-no-pipeline}
 
 Integrar testes no pipeline significa **automatizar a execução dos testes de segurança como parte do processo de build, validação, release ou deploy**. Pode incluir:
 
@@ -33,7 +33,7 @@ Integrar testes no pipeline significa **automatizar a execução dos testes de s
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Mapear estágios do pipeline onde cada tipo de teste deve ocorrer**:
    - Pré-build (linters, SBOM);
@@ -50,7 +50,7 @@ Integrar testes no pipeline significa **automatizar a execução dos testes de s
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Criar pipelines dedicados a segurança, quando possível (ex: nightly ou pós-release);
 - Manter histórico de execuções e resultados por commit, branch e release;
@@ -61,7 +61,7 @@ Integrar testes no pipeline significa **automatizar a execução dos testes de s
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                          |
 |--------------------------------|--------------------------------------------------|

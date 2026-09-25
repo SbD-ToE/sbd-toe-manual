@@ -1,6 +1,6 @@
 # 50. Ameaças Mitigadas — Classificação de Aplicações
 
-## Sumário
+## Sumário {#sumário}
 
 Famílias de ameaça mitigadas neste capítulo + força da mitigação. Análise segue **§26 canon §4 discipline**: Manual surface + CAPEC primary; CWE supporting limited; mitigation strength explicitly labelled.
 
@@ -15,7 +15,7 @@ Seis secções:
 
 ---
 
-## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals)
+## § Manual ontology V2 — entities canónicas (threats + antipatterns + signals) {#-manual-ontology-v2--entities-canónicas-threats--antipatterns--signals}
 
 Total: **22 entidades** (Threat × 20, AntiPattern × 1, Signal × 1) mapped a este capítulo.
 
@@ -46,7 +46,7 @@ Total: **22 entidades** (Threat × 20, AntiPattern × 1, Signal × 1) mapped a e
 
 ---
 
-## § Threat surfaces — Manual + CAPEC primary
+## § Threat surfaces — Manual + CAPEC primary {#-threat-surfaces--manual--capec-primary}
 
 Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 discipline). Mitigation strength explicitly labelled (forte / parcial / dependente_de_outros_capitulos).
 
@@ -75,7 +75,7 @@ Threat surfaces canónicas per Manual + CAPEC primary anchor (per §26 §4 disci
 
 ---
 
-## § AntiPattern exposure mapping
+## § AntiPattern exposure mapping {#-antipattern-exposure-mapping}
 
 AntiPattern → Threat exposure relations per Manual ontology V2 `antipattern_threat_links.jsonl`. Cada link indica que o antipattern (quando presente em código/processo) expõe a ameaça.
 
@@ -86,13 +86,13 @@ AntiPattern → Threat exposure relations per Manual ontology V2 `antipattern_th
 
 ---
 
-## § CWE references (supporting only)
+## § CWE references (supporting only) {#-cwe-references-supporting-only}
 
 _(Nenhuma threat com CWE reference para este capítulo.)_
 
 ---
 
-## § V1 overlay — mitigation pathway (where Core-mapped)
+## § V1 overlay — mitigation pathway (where Core-mapped) {#-v1-overlay--mitigation-pathway-where-core-mapped}
 
 V1 controls/mechanisms anchored a este capítulo que mitigam threats listed above. V1 overlay preserva three-way routing visible per Manual ontology V2 + AppSec Core V1 + Substrate v7.
 
@@ -100,13 +100,13 @@ _(V1 overlay surfacing per Manual ontology V2 antipattern_exposes_threat / contr
 
 ---
 
-## § Future-work register (threat gaps)
+## § Future-work register (threat gaps) {#-future-work-register-threat-gaps}
 
 _(Nenhum threat em gap state para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`

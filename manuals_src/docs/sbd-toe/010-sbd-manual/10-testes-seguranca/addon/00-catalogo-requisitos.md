@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Testes de Segurança
 
-## Âmbito: o programa de testes como requisito de processo
+## Âmbito: o programa de testes como requisito de processo {#âmbito-o-programa-de-testes-como-requisito-de-processo}
 
 Este catálogo cobre **requisitos do programa de testes de segurança** - os controlos de processo que definem como os testes de segurança são planeados, executados, geridos e evidenciados ao longo do ciclo de vida. Distingue-se dos requisitos aplicacionais de validação de input (Cap. 02, VAL-) por se focar no *programa* de testes em si, não nas propriedades que o software deve ter.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-TST-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo TST - Testes de Segurança
+## Catálogo TST - Testes de Segurança {#catálogo-tst---testes-de-segurança}
 
 Requisitos que garantem que o programa de testes de segurança é planeado, executado, gerido e evidenciado de forma proporcional ao risco e auditável.
 
@@ -55,7 +55,7 @@ Requisitos que garantem que o programa de testes de segurança é planeado, exec
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **TST-001**: A estratégia de testes não é um documento único e estático - é um acordo operacional que deve ser actualizado quando muda o risco, a arquitectura ou a stack tecnológica. Uma estratégia não revista há dois anos é provavelmente inadequada.
 - **TST-002**: A distinção entre DEV-003 (SAST como gate de desenvolvimento) e TST-002 é de perspectiva: DEV-003 trata do gate no ciclo de coding/PR; TST-002 trata do programa de SAST como controlo de cobertura - quais componentes estão cobertos, qual a qualidade do perfil e como se gere o ruído.

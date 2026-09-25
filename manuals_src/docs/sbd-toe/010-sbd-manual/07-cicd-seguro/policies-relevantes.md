@@ -13,7 +13,7 @@ A adoção eficaz do Capítulo 07 - CI/CD Seguro - exige a existência de **pol�
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas técnicas prescritas neste capítulo (ex: controlo de execução, injeção de segredos, validação de artefactos, segregação de pipelines) **devem ser legitimadas formalmente por políticas organizacionais aprovadas e auditáveis**.
 
@@ -29,7 +29,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                              | Obrigatória? | Aplicação                                | Resumo do conteúdo necessário |
 |-----------------------------------------------|--------------|-------------------------------------------|-------------------------------|
@@ -42,7 +42,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -54,7 +54,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - As políticas devem ser **oficialmente aprovadas pela gestão técnica e de segurança**;
 - Devem estar **acessíveis a todas as equipas envolvidas nos pipelines e entregas**;

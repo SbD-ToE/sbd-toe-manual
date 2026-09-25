@@ -50,7 +50,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 - Gestão segura de dependências (OSS, comerciais, internas).
 - Geração e manutenção de **SBOM** (CycloneDX/SPDX).
@@ -76,7 +76,7 @@ Ligação a outros capítulos:
 
 ---
 
-## ⚙️ Como deve ser feito
+## ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 - Configurar *package managers* para usarem **apenas** repositórios internos.  
 - Gerar **SBOM** em cada build (CycloneDX/SPDX); arquivar.  
@@ -91,7 +91,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 📆 Quando aplicar
+## 📆 Quando aplicar {#-quando-aplicar}
 
 - **Início**: política e configuração de repositórios internos.  
 - **Nova dependência**: revisão de origem/licença/manutenção/CVEs.  
@@ -102,7 +102,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 👥 Quem está envolvido
+## 👥 Quem está envolvido {#-quem-está-envolvido}
 
 | Papel/Função       | Contributo principal |
 |--------------------|----------------------|
@@ -115,7 +115,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 🎯 Para quê
+## 🎯 Para quê {#-para-quê}
 
 - Reduzir risco de componentes vulneráveis/abandonados.  
 - Garantir rastreabilidade e resposta rápida a CVEs.  
@@ -125,7 +125,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 🧮 Aplicação proporcional L1–L3
+## 🧮 Aplicação proporcional L1–L3 {#-aplicação-proporcional-l1l3}
 
 | Prática                       | L1 (baixo)                 | L2 (médio)                                 | L3 (alto/crit.)                                  |
 |-------------------------------|----------------------------|--------------------------------------------|--------------------------------------------------|
@@ -139,7 +139,7 @@ Ligação a outros capítulos:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política                          | Obrigatória | Aplicação              | Conteúdo mínimo esperado                                  |
 |----------------------------------|-------------|------------------------|-----------------------------------------------------------|

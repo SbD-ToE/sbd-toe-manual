@@ -15,7 +15,7 @@ tags:
 
 O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir deles**. A junção dos dois cria uma tentação: apresentar *inferências do LLM* como se fossem *factos do manual*. Para que o output mereça a confiança dos auditores, *legal counsel*, *security champions* — toda afirmação deve ser **rotulável**.
 
-## Os 4 rótulos epistémicos
+## Os 4 rótulos epistémicos {#os-4-rótulos-epistémicos}
 
 | Rótulo | Definição | Sinal verde para o utilizador |
 |---|---|---|
@@ -24,7 +24,7 @@ O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir d
 | **inferred** | Conclusão lógica a partir de *grounded* + *observed* — marcar explicitamente | "Inferência: dado que `AUT-001` exige MFA, e o código só valida password, falta o segundo factor." |
 | **not verified** | Não confirmado | "Não verificado: `<…>`. Recomenda-se inspeção humana / teste / log." |
 
-### Regra de ouro
+### Regra de ouro {#regra-de-ouro}
 
 > **Em dúvida, preferir `not verified` a apresentar como facto.**
 >
@@ -32,9 +32,9 @@ O servidor MCP devolve **dados estruturados**; o LLM **gera conteúdo a partir d
 
 ---
 
-## Onde aplicar cada rótulo
+## Onde aplicar cada rótulo {#onde-aplicar-cada-rótulo}
 
-### `manual-grounded`
+### `manual-grounded` {#manual-grounded}
 
 Permitido apenas quando:
 - Devolvido por uma tool MCP (`consult_*`, `get_*`, `query_*`, `resolve_*`, `prepare_*`)
@@ -45,7 +45,7 @@ Permitido apenas quando:
 - Resultados de `search_sbd_toe_manual` que **não foram lidos** (apenas vistos como *snippet*) — esses são pista, não evidência
 - Síntese cross-tool (ex.: "`AUT-001` + `LOG-003` implicam X") — isso é `inferred`
 
-### `observed`
+### `observed` {#observed}
 
 Permitido apenas quando:
 - O ficheiro/linha foi lido (não inferido do nome do ficheiro)
@@ -55,7 +55,7 @@ Permitido apenas quando:
 - "Provavelmente o sistema faz X" — sem ter lido o código
 - Comportamento esperado por causa do *framework* — isso é `inferred`
 
-### `inferred`
+### `inferred` {#inferred}
 
 Sempre marcar explicitamente quando:
 - Combinas `manual-grounded` + `observed` para chegar a uma conclusão
@@ -64,7 +64,7 @@ Sempre marcar explicitamente quando:
 
 Forma recomendada: **"Inferência: `<conclusão>`. Baseado em: `<grounded ID>` + `<observação>`."**
 
-### `not verified`
+### `not verified` {#not-verified}
 
 Usar generosamente. Casos:
 - A tool devolveu lista vazia (`controls: []`, `threats: []`, `assignments: []`)
@@ -74,7 +74,7 @@ Usar generosamente. Casos:
 
 ---
 
-## Confidence flags específicos do MCP
+## Confidence flags específicos do MCP {#confidence-flags-específicos-do-mcp}
 
 Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos:
 
@@ -88,59 +88,59 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 
 ---
 
-## Anti-patterns gerais
+## Anti-patterns gerais {#anti-patterns-gerais}
 
-### 1. Inventar IDs
+### 1. Inventar IDs {#1-inventar-ids}
 
 ❌ "O controlo `CTRL-09-99` cobre isto."
 ✅ Verificar via `query_sbd_toe_entities({query: "CTRL-09-99"})` antes de citar. Se não existe, dizer: *"Nenhum controlo aplicável encontrado no manual para este caso — flag para revisão humana."*
 
-### 2. Declarar conformidade regulatória
+### 2. Declarar conformidade regulatória {#2-declarar-conformidade-regulatória}
 
 ❌ "Este código é compliant com NIS2 Art. 21."
 ✅ "O cross-check NIS2 do manual mapeia Art. 21 ↔ capítulos N e M. Não declaração de conformidade — requer avaliação de *legal counsel* + evidência operacional."
 
-### 3. Tratar código como evidência
+### 3. Tratar código como evidência {#3-tratar-código-como-evidência}
 
 ❌ "Implementei o lockout, logo o controlo está coberto."
 ✅ "Implementação proposta. **Evidência esperada:** teste em `test/auth/lockout.spec.ts` + log entry `auth.lockout.activated` com schema X."
 
-### 4. Fundir manual-grounded com inferred
+### 4. Fundir manual-grounded com inferred {#4-fundir-manual-grounded-com-inferred}
 
 ❌ "O manual diz que rate limiting + monitoring previnem credential stuffing."
 ✅ "Manual-grounded: o output liga `MT-NNN` (credential stuffing) a `CTRL-<domain>-<slug>-<hash>` com `mitigation_confidence: derived`. Inferência (minha): aplicados juntos cobrem o threat — marcado como inferência, não como facto do manual."
 
-### 5. Saltar gate `needs_clarification` / `needs_decomposition`
+### 5. Saltar gate `needs_clarification` / `needs_decomposition` {#5-saltar-gate-needs_clarification--needs_decomposition}
 
 ❌ Re-chamar `prepare_sbd_toe_codegen_context` com o mesmo payload para "tentar de novo".
 ✅ Parar, dialogar com o utilizador, **re-chamar só após inputs novos**.
 
-### 6. Mostrar `mitigation_confidence: "heuristic"` como certeza
+### 6. Mostrar `mitigation_confidence: "heuristic"` como certeza {#6-mostrar-mitigation_confidence-heuristic-como-certeza}
 
 ❌ "`CTRL-…` mitiga `MT-NNN`."
 ✅ "`CTRL-…` mitiga `MT-NNN` — ligação **inferida** (*fallback* sem confidence `derived`); validar com teste / revisão humana."
 
-### 7. Assumir a cobertura do *snapshot* sem a confirmar
+### 7. Assumir a cobertura do *snapshot* sem a confirmar {#7-assumir-a-cobertura-do-snapshot-sem-a-confirmar}
 
 ❌ Responder sobre um cross-check normativo (ou qualquer página) assumindo que o MCP a serve — ou que não a serve.
 ✅ Ler `sbd://toe/version` (manual, KG, ontologia) e, em dúvida, validar com `inspect_sbd_toe_retrieval` se o documento aparece nos *top-ranked records*. Em `0.10.2` os seis cross-checks — **CRA / DORA / NIS2 / GDPR / AI Act / ENISA-CSA** — estão indexados; conteúdo posterior ao *snapshot* vive só no manual web até nova publicação (ver [content lag](./10-troubleshooting-faq.md#content-lag)).
 
-### 8. Confundir *concerns* (ontológicos) com domínios STRIDE
+### 8. Confundir *concerns* (ontológicos) com domínios STRIDE {#8-confundir-concerns-ontológicos-com-domínios-stride}
 
 ❌ `concerns: ["spoofing", "tampering"]`
 ✅ `concerns: ["auth", "integrity"]` — o vocabulário ontológico é fechado e mapeia para domínios STRIDE indirectamente.
 
-### 9. Saltar `setup_sbd_toe_agent` no início da sessão
+### 9. Saltar `setup_sbd_toe_agent` no início da sessão {#9-saltar-setup_sbd_toe_agent-no-início-da-sessão}
 
 ❌ Começar a chamar tools sem inicializar.
 ✅ Primeira mensagem da sessão de segurança: `setup_sbd_toe_agent(riskLevel, projectRole)` — carrega os capítulos activos e as regras do *role*.
 
-### 10. Re-gerar a skill no início de cada sessão
+### 10. Re-gerar a skill no início de cada sessão {#10-re-gerar-a-skill-no-início-de-cada-sessão}
 
 ❌ Chamar `generate_sbd_toe_skill()` cada vez.
 ✅ Gerar uma vez, guardar no caminho canónico (`.claude/skills/sbd-toe.md`, etc.), re-gerar **apenas após upgrade do MCP**.
 
-### 11. Confundir "consumir MCP" com "expor MCP server" (escopo de segurança distinto)
+### 11. Confundir "consumir MCP" com "expor MCP server" (escopo de segurança distinto) {#11-confundir-consumir-mcp-com-expor-mcp-server-escopo-de-segurança-distinto}
 
 Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organização passa a **expor um MCP server próprio** (não consumir), entra num escopo de segurança adicional que **não é coberto** por este mini-site nem pelo SbD-ToE manual em geral.
 
@@ -149,7 +149,7 @@ Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organiz
 
 ---
 
-## Checklist de rigor antes de submeter qualquer output
+## Checklist de rigor antes de submeter qualquer output {#checklist-de-rigor-antes-de-submeter-qualquer-output}
 
 1. Cada afirmação tem um dos 4 rótulos?
 2. Todos os IDs citados existem em outputs MCP da sessão?
@@ -161,7 +161,7 @@ Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organiz
 
 Se algum check falha → **rever antes de entregar**.
 
-## A seguir
+## A seguir {#a-seguir}
 
 - [Troubleshooting / FAQ](./10-troubleshooting-faq.md) — sintomas vs soluções.
 - [Padrões avançados](./08-padroes-avancados.md) — para combinar tools sem perder rigor.

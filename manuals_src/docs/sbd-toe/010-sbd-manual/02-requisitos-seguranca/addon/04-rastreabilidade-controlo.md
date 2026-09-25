@@ -9,7 +9,7 @@ tags: [tipo:modelo, tema:rastreabilidade, requisitos, controlos, evidencia, ALM,
 
 # Modelo de Rastreabilidade entre Riscos, Requisitos e Controlos
 
-## Objetivo
+## Objetivo {#objetivo}
 
 Ao longo do ciclo de vida do software, garantir que um requisito de segurança foi efectivamente implementado exige mais do que a sua definição - exige que a ligação entre risco, requisito, controlo técnico e evidência seja explícita, rastreável e auditável.
 
@@ -28,11 +28,11 @@ Este modelo apoia:
 
 ---
 
-## Estrutura da Matriz de Rastreabilidade
+## Estrutura da Matriz de Rastreabilidade {#estrutura-da-matriz-de-rastreabilidade}
 
 Cada linha da matriz representa a ligação directa entre um risco identificado e o requisito de segurança que o endereça, com o respectivo controlo, método de validação e evidência esperada.
 
-### Colunas recomendadas
+### Colunas recomendadas {#colunas-recomendadas}
 
 | Coluna | Conteúdo | Exemplo |
 |--------|----------|---------|
@@ -45,7 +45,7 @@ Cada linha da matriz representa a ligação directa entre um risco identificado 
 
 ---
 
-## Exemplo de Matriz
+## Exemplo de Matriz {#exemplo-de-matriz}
 
 O seguinte é um exemplo de instanciação do catálogo de requisitos a um projecto concreto. O catálogo completo pode ser consultado em [Lista de Requisitos Base](./lista-requisitos-base).
 
@@ -58,7 +58,7 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 
 ---
 
-## Exemplos por Domínio Técnico
+## Exemplos por Domínio Técnico {#exemplos-por-domínio-técnico}
 
 | Domínio | ID Canónico | Tag Operacional (exemplo L2) | Tipo de Controlo | Validação | Evidência |
 |---------|-------------|------------------------------|------------------|-----------|-----------|
@@ -73,7 +73,7 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 
 ---
 
-## Como aplicar este modelo
+## Como aplicar este modelo {#como-aplicar-este-modelo}
 
 - Cada linha representa a ligação entre um **risco identificado** e o **requisito canónico** que o endereça;
 - A **tag operacional** é o identificador que transita para o backlog, o código e o pipeline - é ela que torna o requisito rastreável ao artefacto de ciclo de vida;
@@ -83,7 +83,7 @@ O seguinte é um exemplo de instanciação do catálogo de requisitos a um proje
 
 ---
 
-## Organização recomendada por projecto
+## Organização recomendada por projecto {#organização-recomendada-por-projecto}
 
 Cada projecto deve manter a sua própria matriz de rastreabilidade, organizada por:
 
@@ -101,7 +101,7 @@ Cada projecto deve manter a sua própria matriz de rastreabilidade, organizada p
 
 ---
 
-## Integração no ciclo de vida
+## Integração no ciclo de vida {#integração-no-ciclo-de-vida}
 
 A matriz deve ser revisitada:
 
@@ -112,7 +112,7 @@ A matriz deve ser revisitada:
 
 ---
 
-## Ferramentas de suporte
+## Ferramentas de suporte {#ferramentas-de-suporte}
 
 | Finalidade | Ferramenta sugerida |
 |------------|---------------------|
@@ -127,7 +127,7 @@ A matriz deve ser revisitada:
 
 ---
 
-## Boas práticas
+## Boas práticas {#boas-práticas}
 
 - Manter **uma matriz por aplicação ou sistema crítico**, não uma única matriz global;
 - Usar a matriz como **trilho de auditoria interno** - actualizá-la em cada release;

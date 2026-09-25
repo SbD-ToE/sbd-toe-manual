@@ -9,7 +9,7 @@ sidebar_position: 29
 
 # Política de Logging Estruturado
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **produção, formatação, centralização, retenção e protecção de logs** em aplicações e sistemas da organização.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 Esta política aplica-se a todos os sistemas em execução que produzam eventos relevantes para segurança, operação ou auditoria. Inclui aplicações web, APIs, workers, jobs, pipelines CI/CD, infraestrutura e sistemas de autenticação.
 
@@ -37,16 +37,16 @@ Esta política aplica-se a todos os sistemas em execução que produzam eventos 
 
 ---
 
-## 3. Formato de logging
+## 3. Formato de logging {#3-formato-de-logging}
 
-### 3.1 Formato obrigatório
+### 3.1 Formato obrigatório {#31-formato-obrigatório}
 
 Em L2/L3, todos os logs devem ser produzidos em formato **JSON** (ou compatível com Elastic Common Schema - ECS), legível por máquina e processável sem parsing personalizado:
 
 - Sem logs em texto livre não estruturado em componentes críticos
 - Sem múltiplos formatos de log no mesmo sistema sem normalização na ingestão
 
-### 3.2 Schema mínimo de evento
+### 3.2 Schema mínimo de evento {#32-schema-mínimo-de-evento}
 
 Cada evento de log deve conter, no mínimo, os seguintes campos:
 
@@ -65,7 +65,7 @@ Cada evento de log deve conter, no mínimo, os seguintes campos:
 
 ---
 
-## 4. Eventos de segurança obrigatórios
+## 4. Eventos de segurança obrigatórios {#4-eventos-de-segurança-obrigatórios}
 
 Os seguintes eventos de segurança devem ser sempre registados, independentemente do nível de criticidade da aplicação:
 
@@ -84,7 +84,7 @@ Os seguintes eventos de segurança devem ser sempre registados, independentement
 
 ---
 
-## 5. Proibições absolutas nos logs
+## 5. Proibições absolutas nos logs {#5-proibições-absolutas-nos-logs}
 
 Os seguintes dados nunca devem aparecer em logs, independentemente do nível:
 
@@ -103,7 +103,7 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 
 ---
 
-## 6. Centralização de logs
+## 6. Centralização de logs {#6-centralização-de-logs}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -115,7 +115,7 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 
 ---
 
-## 7. Retenção de logs
+## 7. Retenção de logs {#7-retenção-de-logs}
 
 | Tipo de log | L2 | L3 |
 |---|---|---|
@@ -130,7 +130,7 @@ Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulat
 
 ---
 
-## 8. Integridade e imutabilidade
+## 8. Integridade e imutabilidade {#8-integridade-e-imutabilidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -142,7 +142,7 @@ Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulat
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -153,7 +153,7 @@ Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulat
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -163,7 +163,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

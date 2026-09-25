@@ -20,7 +20,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                                        | Verificado? |
 |-----------------------------------------------------------------------------------------------------------------------------|-------------|
@@ -44,7 +44,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📌 Notas de Aplicação Prática
+## 📌 Notas de Aplicação Prática {#-notas-de-aplicação-prática}
 
 - Este checklist **deve ser integrado** em tarefas de sprint, gates de release ou revisões técnicas regulares.
 - Deve ser usado como **instrumento de controlo e reporting operacional** por equipas de arquitetura, segurança e auditoria.
@@ -54,7 +54,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📊 Conformidade e KPI
+## 📊 Conformidade e KPI {#-conformidade-e-kpi}
 
 - A validação deste checklist permite declarar **conformidade com o Capítulo 04 - Arquitetura Segura**.
 - Os resultados por projeto podem ser **agregados para efeitos de medição de maturidade e rastreabilidade organizacional**.

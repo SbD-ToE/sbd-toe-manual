@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Governação e Contratação
 
-## Âmbito: governação como requisito verificável
+## Âmbito: governação como requisito verificável {#âmbito-governação-como-requisito-verificável}
 
 Este catálogo cobre os **requisitos de governação organizacional de segurança** - os controlos que asseguram que as práticas prescritas nos capítulos técnicos do SbD-ToE são aplicadas, rastreadas, auditadas e evoluídas de forma sustentável.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-GOV-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo GOV - Governação e Contratação
+## Catálogo GOV - Governação e Contratação {#catálogo-gov---governação-e-contratação}
 
 Requisitos que garantem que a segurança é aplicada com autoridade formal, rastreabilidade completa e capacidade de evolução organizacional sustentada.
 
@@ -61,7 +61,7 @@ Requisitos que garantem que a segurança é aplicada com autoridade formal, rast
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **GOV-001**: A aprovação formal pela direcção não é formalismo - é o mecanismo que confere autoridade ao modelo. Um modelo de governação não aprovado pela direcção não tem força para exigir conformidade nem para sustentar auditorias externas.
 - **GOV-002**: O owner de segurança é o ponto de responsabilização de cada aplicação. Sem owner definido, excepções não têm aprovador, desvios não têm destinatário, e auditorias não têm interlocutor. A rotatividade de equipas é o principal trigger de ownership não actualizado.

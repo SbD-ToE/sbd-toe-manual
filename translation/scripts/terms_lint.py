@@ -659,7 +659,8 @@ class ExemptionIndex:
 # phase / chapter traversal" (the relation kind, Manual ontology v2.6+). It runs BEFORE the registry
 # exemptions, because "traversal" itself is an in-record term and would otherwise be exempt.
 _TRAVERSAL_RE = re.compile(r"(?<![A-Za-z0-9_-])([Tt]raversals?)(?![A-Za-z0-9_])")
-_TRAVERSAL_QUALIFIERS = ("graph", "segmentation", "phase", "chapter", "mp", "macro-process", "process", "bundle")
+_TRAVERSAL_QUALIFIERS = ("graph", "segmentation", "phase", "chapter", "mp", "macro-process", "process", "bundle",
+                         "path", "directory", "tree")  # path/directory traversal = attack names (CWE-22), not the programme term
 
 
 def traversal_qualifier_findings(prose_text: str, path: str, line: int) -> List[Finding]:

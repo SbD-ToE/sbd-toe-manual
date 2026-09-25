@@ -188,7 +188,7 @@ são saltados com aviso) escreve `<out>/<caminho>.job.json`:
   se há alterações por commitar; `--source-commit` fixa-o), `terms_sha256` (registo inteiro), `glossary_keys` (chaves
   do glossário aplicável — termos, do-not-translate e pending — ordenadas) e `glossary_sha256`
   (`common.glossary_sha256(registo, glossary_keys)`, o hash que decide `stale-terms`; ver `sync_state.py`),
-  `prompt_sha256` (de `translation/prompts/translate-v1.md`), `direction`;
+  `prompt_sha256` (de `translation/prompts/translate-v2.md`), `direction`;
 - **esqueleto**: a sequência de segmentos do ficheiro na ordem original, cada um com `id`, `kind`, `line`, `raw`
   (linhas verbatim) e, quando traduzível, `text` (com marcadores), `protected`, `translate`, `blocked_by`, `prefix`/
   `suffix` (o que o script repõe à volta do texto: `## `, ` {#id}`, marcador e indentação de item, `:::note `).
@@ -216,7 +216,7 @@ verbatim, e a contagem de cabeçalhos/tabelas/blocos de código/admonitions tem 
 (o mesmo parser do `fingerprint.py`) — senão falha em vez de produzir um job errado. Um symlink na fonte produz um job
 `{"kind": "symlink", "link_target": …}` sem nada a traduzir.
 
-**Passo externo** — o tradutor (agente) segue `translation/prompts/translate-v1.md` (só `text` das unidades
+**Passo externo** — o tradutor (agente) segue `translation/prompts/translate-v2.md` (só `text` das unidades
 `translate: true`; marcadores intactos e uma vez cada; glossário obrigatório; British English; registo do Manual) e
 escreve `<out>/<caminho>.out.json` = `{"segments": [{"id", "text"}, …]}`.
 

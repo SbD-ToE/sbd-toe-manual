@@ -13,10 +13,10 @@ translation:
   target_sha256: 860b311ba53eeaccffba6fe584fa802dc9dbe574f76acbadcf378a80f1b3e94f
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
+  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
   glossary_keys: [chapter_role, sbdtoe_sbd, threat, traceability, validation_evaluation]
   glossary_sha256: 89bc70ca88a6766daf94002ad9b4bfcbcabf87a26fd0d7b34333db240f4baae9
-  translated_at: 2026-09-25T17:10:38Z
+  translated_at: 2026-09-25T17:57:17Z
   reviewed_by: null
 ---
 

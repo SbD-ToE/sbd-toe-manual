@@ -13,10 +13,10 @@ translation:
   target_sha256: 035e878f41eac3c17c4087cded5d41d9468fac4cc10f9267119b45924aac7f62
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
+  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, discipline, sbdtoe_sbd, threat, traceability]
   glossary_sha256: b9429fe07fecd6b5e3e15da5591f2992106908ba95b15dd4ceb8eb7915373d48
-  translated_at: 2026-09-25T17:10:46Z
+  translated_at: 2026-09-25T17:57:24Z
   reviewed_by: null
 ---
 

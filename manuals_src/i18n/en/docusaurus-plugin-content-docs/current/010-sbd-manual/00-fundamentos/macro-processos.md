@@ -10,13 +10,13 @@ translation:
   source_path: 010-sbd-manual/00-fundamentos/macro-processos.md
   source_sha256: 2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3fc5865f694249226ecac3227fd0869c5eb370dac92f10f988bf80ed5ea14b0b
+  target_sha256: 2ffa70abfe58a88372be8532aa9356136794c1111a77e724f88e80d5ba921b95
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, oracle, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 3dafabc346d97d70e778370eaf95ecf0909e28c2e2978f5c13e28e9b93b8fc92
-  translated_at: 2026-09-25T17:10:36Z
+  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, oracle, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 9f15335e36c80158a89cbf0f98a770ae82c5371d030afe714450b117de482caf
+  translated_at: 2026-09-25T17:57:16Z
   reviewed_by: null
 ---
 
@@ -75,7 +75,7 @@ It applies to the **application** (the unit of `CLA-001` and of the `CLA-008` in
 - Significant change — new critical integration, change of exposure, security incident, regulatory change — with re-assessment within a maximum of 30 days (`CLA-006`; criteria documented in `CLA-004`; list of *triggers* in the [risk lifecycle](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)).
 - Periodic cycle by level: L1 annual, L2 half-yearly, L3 quarterly (`CLA-005`).
 - Relevant change of requirements, which reviews the selection and may trigger new *threat modelling* (Security Requirements, US-02; `REQ-005`).
-- Introduction or modification of automation or decision support, including AI, when it alters assumptions about validation, evidence or reproducibility (risk lifecycle, *triggers*); and the matrix's step-up rule: low detectability, low capacity to produce evidence, non-deterministic behaviour or high delegation with real-world impact require the controls of the level immediately above, regardless of the level assigned.
+- Introduction or modification of automation or decision support, including AI, when it alters assumptions about validation, evidence or reproducibility (risk lifecycle, *triggers*); and the matrix's step-up rule: low detectability, low evidentiability, non-deterministic behaviour or high delegation with real-world impact require the controls of the level immediately above, regardless of the level assigned.
 
 ### Inputs {#entradas}
 

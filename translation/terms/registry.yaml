@@ -146,6 +146,28 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: alcada
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: approval authority
+  en_variants: [approval authorities, delegated authority levels, authority, decision authority]
+  pt: alçada
+  pt_variants: [alçadas, alçada de aprovação, alçadas de decisão]
+  ontology_id: null
+  sense: Poder de aprovação/decisão atribuído a um papel ou nível.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Fixado nos caps. 00–01: «approval authority»; «beyond one''s authority» para
+    «fora de alçada».'
 - key: alcance_da_prescricao
   species: 2
   state: coined
@@ -1705,6 +1727,29 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: evidenciabilidade
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: evidentiability
+  en_variants: [evidentiable]
+  pt: evidenciabilidade
+  pt_variants: []
+  ontology_id: null
+  sense: 'Atributo de risco/qualidade cunhado pelo Manual: capacidade de um controlo produzir evidência
+    (par de detectability, reproducibility).'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Cunhagem espelhada (a fonte cunha «evidenciabilidade»); rótulo curto paralelo
+    a Detectability. Fixado no cap. 01; cap. 00 harmonizado.'
 - key: execution_fidelity
   species: 1
   state: in-record

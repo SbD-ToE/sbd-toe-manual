@@ -13,10 +13,10 @@ translation:
   target_sha256: b3c6e117ad1af86802dcf99418c09f8783d16ccc8b919829d50b498dfdc71e85
   engine: claude-fable-5-1
   prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520
-  glossary_keys: [audit_trail, capacitacao, chapter_role, maturity, sbdtoe_sbd, traceability, trilho_formativo]
-  glossary_sha256: 2d6d943485e1307fba1710a7d4c56e9ad6d1702753e7d55d818c609439718a85
-  translated_at: 2026-09-25T17:10:41Z
+  terms_sha256: a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417
+  glossary_keys: [alcada, audit_trail, capacitacao, chapter_role, maturity, sbdtoe_sbd, traceability, trilho_formativo]
+  glossary_sha256: a1b4ba2b6d8690591914dc59730fc6125e6a9e7d17caf85773958952ebe1299e
+  translated_at: 2026-09-25T17:57:20Z
   reviewed_by: null
 ---
 

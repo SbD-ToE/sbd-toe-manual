@@ -61,7 +61,7 @@ import sync_state  # noqa: E402
 import terms_lint  # noqa: E402
 
 JOB_SCHEMA = 1
-PROMPT_RELPATH = "translation/prompts/translate-v1.md"
+PROMPT_RELPATH = "translation/prompts/translate-v2.md"
 MARKER_RE = re.compile(r"⟦P(\d+)⟧")  # ⟦Pn⟧
 PENDING_COMMENT = "<!-- i18n:pending key={keys} -->"
 

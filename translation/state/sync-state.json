@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-25T17:11:05Z",
+  "generated_at": "2026-09-25T17:57:28Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+  "terms_sha256": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "untranslated",
@@ -229,9 +229,9 @@
       "source_sha256": "c1f95a1fcd348b88604ecd5ffc0f9b132e3f1175715fa1137ba48dc931795473",
       "translated_source_sha256": "c1f95a1fcd348b88604ecd5ffc0f9b132e3f1175715fa1137ba48dc931795473",
       "target_sha256": "5802edc4c4a33561cdceaa32b5e762f19cb4dd976982e3a6d659ef94e15fd046",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "9d11d434b18c216d89b400ba7f0eca5fed53c0065573143f38f5b88ac70d02c8",
-      "translated_at": "2026-09-25T17:10:33Z",
+      "translated_at": "2026-09-25T17:57:13Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/canon/25-rastreabilidade.md": {
@@ -239,9 +239,9 @@
       "source_sha256": "b310180f18639ed13cb0c4ce10db8758f0f7580b8389d1f8c2d4875998856548",
       "translated_source_sha256": "b310180f18639ed13cb0c4ce10db8758f0f7580b8389d1f8c2d4875998856548",
       "target_sha256": "774cdc476fca6a6cb4c18ac4a31621203eebd136993392d4fecfeaa7ef448195",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "70177b9908b109fffc3039b0eaf12a43ea8d740af5add754562426b625274f94",
-      "translated_at": "2026-09-25T17:10:33Z",
+      "translated_at": "2026-09-25T17:57:13Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/canon/26-metodologia-validacao-claims.md": {
@@ -249,9 +249,9 @@
       "source_sha256": "7681d08bed213e5403b087c69a93867d81c23fe1349204ce47bcee683ed6825e",
       "translated_source_sha256": "7681d08bed213e5403b087c69a93867d81c23fe1349204ce47bcee683ed6825e",
       "target_sha256": "3b616fba8b992f0a26a64319050f2a472326274b861f6618c96878049acebf7a",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "04f889d30fffdb538e93750add0e67c758a2e92e160b9501ce4e94f24be68779",
-      "translated_at": "2026-09-25T17:10:34Z",
+      "translated_at": "2026-09-25T17:57:14Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/como-usar.mdx": {
@@ -259,9 +259,9 @@
       "source_sha256": "99d2c4ef8776998927001871eefb5641106e6014260cab8c7adcf9c126ddae2d",
       "translated_source_sha256": "99d2c4ef8776998927001871eefb5641106e6014260cab8c7adcf9c126ddae2d",
       "target_sha256": "ea9906048253d7cb9ab7880ed1ba9477e1053c116acaaa272d2d840f357e21d8",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "6eb13290be621864b0c226e3e02b22b55910492d8a7bec8dbe15d2d935ecd9ea",
-      "translated_at": "2026-09-25T17:10:35Z",
+      "translated_at": "2026-09-25T17:57:14Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/intro.md": {
@@ -269,19 +269,19 @@
       "source_sha256": "e1826fb71469fa692b57f68e33536524d6ebeb8225521e9675f9824d3625de56",
       "translated_source_sha256": "e1826fb71469fa692b57f68e33536524d6ebeb8225521e9675f9824d3625de56",
       "target_sha256": "401cb37ed23c3fc63fbd80d6e9749b5c325013407859e5cda496d9eafebbec06",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
-      "glossary_sha256_at_translation": "211beada9808f776254c6b6397ce8823080721e2277ab956c53f3b295794acfc",
-      "translated_at": "2026-09-25T17:10:35Z",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
+      "glossary_sha256_at_translation": "278074840ab77d9ce2bc9ecd3f3a9fa2a6ab111f69e98760a44369d82dff9cec",
+      "translated_at": "2026-09-25T17:57:15Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/macro-processos.md": {
       "state": "synced",
       "source_sha256": "2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5",
       "translated_source_sha256": "2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5",
-      "target_sha256": "3fc5865f694249226ecac3227fd0869c5eb370dac92f10f988bf80ed5ea14b0b",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
-      "glossary_sha256_at_translation": "3dafabc346d97d70e778370eaf95ecf0909e28c2e2978f5c13e28e9b93b8fc92",
-      "translated_at": "2026-09-25T17:10:36Z",
+      "target_sha256": "2ffa70abfe58a88372be8532aa9356136794c1111a77e724f88e80d5ba921b95",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
+      "glossary_sha256_at_translation": "9f15335e36c80158a89cbf0f98a770ae82c5371d030afe714450b117de482caf",
+      "translated_at": "2026-09-25T17:57:16Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/appsec-engineer.md": {
@@ -289,9 +289,9 @@
       "source_sha256": "4755b6b7ebdabdc3b0f79c4dc2292f1ea6641ba9066ce749089372b8c03218e7",
       "translated_source_sha256": "4755b6b7ebdabdc3b0f79c4dc2292f1ea6641ba9066ce749089372b8c03218e7",
       "target_sha256": "526b46ba2a6385e7fd722eba309b108969893b7c5bd2b186e15f23216b0986e2",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
-      "glossary_sha256_at_translation": "261fd7b999b798ca73f99ce870da0ecb32c8cfe5176b89c7d5232cda7ab2c643",
-      "translated_at": "2026-09-25T17:10:37Z",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
+      "glossary_sha256_at_translation": "f7db9bf38b6dc8b7a9a3705194a5835f1b0d2b5ed6fff2d0a70dadc615fc23d3",
+      "translated_at": "2026-09-25T17:57:17Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md": {
@@ -299,9 +299,9 @@
       "source_sha256": "5b2064ecc713f3b0e70df23e02c24be0d2af2c68148396f23e733d0bd31a6b33",
       "translated_source_sha256": "5b2064ecc713f3b0e70df23e02c24be0d2af2c68148396f23e733d0bd31a6b33",
       "target_sha256": "860b311ba53eeaccffba6fe584fa802dc9dbe574f76acbadcf378a80f1b3e94f",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "89bc70ca88a6766daf94002ad9b4bfcbcabf87a26fd0d7b34333db240f4baae9",
-      "translated_at": "2026-09-25T17:10:38Z",
+      "translated_at": "2026-09-25T17:57:17Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md": {
@@ -309,9 +309,9 @@
       "source_sha256": "0a2295eee3eba0b97f889d7eeda4aea6e085a57bf510e591b504317a789f1fba",
       "translated_source_sha256": "0a2295eee3eba0b97f889d7eeda4aea6e085a57bf510e591b504317a789f1fba",
       "target_sha256": "c2751e73e92a07236440e3536492ecc2f5b83dc2ced2984085585d62f27ec7f9",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "047a347a495a1f2b62aae314e65227be0c474069e96ecb191a05ecea70d928c1",
-      "translated_at": "2026-09-25T17:10:39Z",
+      "translated_at": "2026-09-25T17:57:18Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/developer.md": {
@@ -319,9 +319,9 @@
       "source_sha256": "96c0fc5cf50a6f59032714ab1e6eabbbd90bf7a7172a7d267d89e0548688f779",
       "translated_source_sha256": "96c0fc5cf50a6f59032714ab1e6eabbbd90bf7a7172a7d267d89e0548688f779",
       "target_sha256": "e4a10f34913ba0bfee9a9e23c55f60431000712dad8a1bd9ec110630e9ccfd18",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "638119d33cbd1dfb38bd989ad118e09333fc58f7bda1740c7ea23dbfc112280e",
-      "translated_at": "2026-09-25T17:10:39Z",
+      "translated_at": "2026-09-25T17:57:18Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/devops-sre.md": {
@@ -329,9 +329,9 @@
       "source_sha256": "2a070503fbe14808260a06f8573f31e999b6832712f6cdc28a458a7414b09592",
       "translated_source_sha256": "2a070503fbe14808260a06f8573f31e999b6832712f6cdc28a458a7414b09592",
       "target_sha256": "c49f2e03d87dbf2ac894d33d5b9ca0a0399ea07d505a84d1bcbd8717b182c295",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "eba85d6ee3c1ca988b1ef8a34762596e4cdc881df22b0c47a4acafaf624e22bd",
-      "translated_at": "2026-09-25T17:10:40Z",
+      "translated_at": "2026-09-25T17:57:19Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/fornecedores-terceiros.md": {
@@ -339,9 +339,9 @@
       "source_sha256": "98f43e2c2dc3aed57c27dce2abe64641cda34ac35144d75eef3c71ea53dcef16",
       "translated_source_sha256": "98f43e2c2dc3aed57c27dce2abe64641cda34ac35144d75eef3c71ea53dcef16",
       "target_sha256": "9444c34abce82c31cc1704aa0be939d1a93fed6f21fa3ed5a37b12510cdce1f2",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "6ada444a55b2b5e511c0e24c81d5881ea88dcef597cf613e60a518281766f35d",
-      "translated_at": "2026-09-25T17:10:41Z",
+      "translated_at": "2026-09-25T17:57:20Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/gestao-executiva.md": {
@@ -349,9 +349,9 @@
       "source_sha256": "00f90a58b54480243afc99846123e7bb78112b72e3b7263d30c60646111754e2",
       "translated_source_sha256": "00f90a58b54480243afc99846123e7bb78112b72e3b7263d30c60646111754e2",
       "target_sha256": "b3c6e117ad1af86802dcf99418c09f8783d16ccc8b919829d50b498dfdc71e85",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
-      "glossary_sha256_at_translation": "2d6d943485e1307fba1710a7d4c56e9ad6d1702753e7d55d818c609439718a85",
-      "translated_at": "2026-09-25T17:10:41Z",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
+      "glossary_sha256_at_translation": "a1b4ba2b6d8690591914dc59730fc6125e6a9e7d17caf85773958952ebe1299e",
+      "translated_at": "2026-09-25T17:57:20Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/grc-compliance.md": {
@@ -359,9 +359,9 @@
       "source_sha256": "2bf41a1412be3ce1ae0f344b75f92938b213224f248980214af84fa9a0a3b16a",
       "translated_source_sha256": "2bf41a1412be3ce1ae0f344b75f92938b213224f248980214af84fa9a0a3b16a",
       "target_sha256": "122510d9bf7514a168c799f58b6af6d52d63c54d82abfb5a1d595275c2031dea",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "ff819aceba272daea94eb488db971d15151abd5adda27a41296d9c620259dc61",
-      "translated_at": "2026-09-25T17:10:42Z",
+      "translated_at": "2026-09-25T17:57:21Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/intro.md": {
@@ -369,9 +369,9 @@
       "source_sha256": "5edfe767c6f2d5168913d6347848018d9a455ad9232515c74e112b3cf473dbb0",
       "translated_source_sha256": "5edfe767c6f2d5168913d6347848018d9a455ad9232515c74e112b3cf473dbb0",
       "target_sha256": "2b19aa994a5be165721cffbb5639e92b137d114dda583535615d982629169b47",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "25c052d3617224355861221b7b5ee51ddc8746b32f9ba7319abf7efbb26779ff",
-      "translated_at": "2026-09-25T17:10:43Z",
+      "translated_at": "2026-09-25T17:57:22Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md": {
@@ -379,9 +379,9 @@
       "source_sha256": "f8af5c2ee7d4403761f19c67dfda2d0bafa8aa0bf945cb3b24ee7f6ffe753fa1",
       "translated_source_sha256": "f8af5c2ee7d4403761f19c67dfda2d0bafa8aa0bf945cb3b24ee7f6ffe753fa1",
       "target_sha256": "45091c5c915986e045d6229c5cc5c00f136a6fa3cff79b7bb5fb9f1ed8cc260f",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "f2fb12fcf56dd55200e4a32b9af4adf8b4af08fab225182d4f60e2e11e863a0f",
-      "translated_at": "2026-09-25T17:10:44Z",
+      "translated_at": "2026-09-25T17:57:22Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/product-owner.md": {
@@ -389,9 +389,9 @@
       "source_sha256": "7cc6750fe8004f53858b81ab38206bb1b59a674ceedf6ebae92f1f3875fe5843",
       "translated_source_sha256": "7cc6750fe8004f53858b81ab38206bb1b59a674ceedf6ebae92f1f3875fe5843",
       "target_sha256": "6e4349013fdea3128fca965f71561cbf3f1f157974ab90555cabb7d5b48b13f6",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "34126c30c0b34569425acc627e9a22fc5784981e35ca59233ad488a71967e5ae",
-      "translated_at": "2026-09-25T17:10:44Z",
+      "translated_at": "2026-09-25T17:57:23Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/qa.md": {
@@ -399,9 +399,9 @@
       "source_sha256": "615dbac3e0e85553424ec60d1a33acfe86f4b3ba2e4d5ad91132aa0de1478b32",
       "translated_source_sha256": "615dbac3e0e85553424ec60d1a33acfe86f4b3ba2e4d5ad91132aa0de1478b32",
       "target_sha256": "644d81983756a47493f531eff1c34d2d4278b0670f89d36065c4e544555ee00b",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "4cc8e063f31c47c86a3ce86b4586a79e8a367c66e949c0165a689914b8850404",
-      "translated_at": "2026-09-25T17:10:45Z",
+      "translated_at": "2026-09-25T17:57:23Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/scrum-master.md": {
@@ -409,9 +409,9 @@
       "source_sha256": "b67181e2c8f99ee9d27a2aa015c985b836a36ba6d931efe9bbbe2748ba5ed5d8",
       "translated_source_sha256": "b67181e2c8f99ee9d27a2aa015c985b836a36ba6d931efe9bbbe2748ba5ed5d8",
       "target_sha256": "035e878f41eac3c17c4087cded5d41d9468fac4cc10f9267119b45924aac7f62",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "b9429fe07fecd6b5e3e15da5591f2992106908ba95b15dd4ceb8eb7915373d48",
-      "translated_at": "2026-09-25T17:10:46Z",
+      "translated_at": "2026-09-25T17:57:24Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/security-champion.md": {
@@ -419,9 +419,9 @@
       "source_sha256": "447c8bf60929a581fda006d0a41942ecea4a89389c9034fc584712d973048533",
       "translated_source_sha256": "447c8bf60929a581fda006d0a41942ecea4a89389c9034fc584712d973048533",
       "target_sha256": "831e5af7fb8b10b156da60455f34b8a67e7602bc500753b497129d897dd9f5d1",
-      "terms_sha256_at_translation": "1bfef9a72816fbf492eb0960150a7457c7572375ed258eed99a7d94ef48cf520",
+      "terms_sha256_at_translation": "a23b4b0245c8f70929c4cf8742f32b3c89fb297f85b057d601b8189193ae0417",
       "glossary_sha256_at_translation": "cf11ce6eebc2e29aa62e7e2cd5c59de39a4c5881fc48b97780d4e7c519cd716d",
-      "translated_at": "2026-09-25T17:10:46Z",
+      "translated_at": "2026-09-25T17:57:25Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md": {

@@ -87,7 +87,10 @@ Aplica **mecanicamente** as regras de «Espécie 1 — como se semeia» de `tran
 autoritativo; o CSV só é hasheado). 157 linhas → 158 entradas (`contract_generic` desdobra em `manual_mapping_contract`
 e `consumer_contract`). `key` = `id` do Curator em snake_case ASCII (`ControlObjective` → `control_objective`; única
 excepção declarada `AppSecCore` → `appsec_core`, a grafia snake_case que o programa já usa); o id original fica em
-`curator.id`. Re-executar nunca sobrescreve `state`, `en`, `en_variants`, `pt`, `pt_variants`, `previous`, `proposal`,
+`curator.id`. `pt` = `pt_conceito` só quando `pt_status: inequivoco`; se o Curator listar alternativas («ciclo /
+iteração»), a primeira forma é `pt` e as restantes vão para `pt_variants` (`--split-pt-alternatives` aplica a mesma
+repartição a entradas já semeadas cujo `pt` ainda tenha « / »; idempotente, não toca em mais nada).
+Re-executar nunca sobrescreve `state`, `en`, `en_variants`, `pt`, `pt_variants`, `previous`, `proposal`,
 `false_friends`, `pending_reason`, `blocks_translation`, `notes` (nem `sense`/`senses`/`owner`/`species`); só
 `counts`, `evidence`, `curator`, `change_cost` são refrescados. Entradas do registo que não vêm do levantamento
 (espécies 2 e 3) ficam intactas. Saída determinista (ordem de chaves do esquema, entradas por `key`, largura 100,

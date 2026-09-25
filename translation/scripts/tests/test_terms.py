@@ -102,6 +102,40 @@ class ImporterTests(unittest.TestCase):
         self.assertEqual(self.by_key["slice"]["evidence"]["paper"], "P1")
         self.assertEqual(sorted(self.registry["meta"]["curator_input_sha256"]), ["csv", "yaml"])
 
+    def test_pt_alternatives_are_split(self):
+        self.assertEqual(self.by_key["cycle_iteration"]["pt"], "ciclo")
+        self.assertEqual(self.by_key["cycle_iteration"]["pt_variants"], ["iteração"])
+        self.assertEqual(self.by_key["lifecycle_phase"]["pt"], "ciclo de vida")
+        self.assertEqual(self.by_key["lifecycle_phase"]["pt_variants"], ["fase"])
+        self.assertEqual(self.by_key["mirror_osf"]["pt_variants"], ["OSF", "DOI"])
+        self.assertFalse(any(" / " in (e["pt"] or "") for e in self.registry["terms"]))
+        self.assertEqual(terms_import.split_pt_alternatives("a / b / a", ["b", "c"]), ("a", ["b", "c"]))
+        self.assertEqual(terms_import.split_pt_alternatives("simples", []), ("simples", []))
+        self.assertEqual(terms_import.split_pt_alternatives(None, []), (None, []))
+
+    def test_split_flag_migrates_only_unsplit_entries(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "registry.yaml"
+            old = copy.deepcopy(self.registry)
+            entry = next(e for e in old["terms"] if e["key"] == "cycle_iteration")
+            entry["pt"], entry["pt_variants"] = "ciclo / iteração", ["ciclos"]  # pre-split seed, plus a hand-added variant
+            other = next(e for e in old["terms"] if e["key"] == "coverage")
+            other["pt"], other["notes"] = "cobertura total", "kept"
+            with open(path, "w", encoding="utf-8") as handle:
+                handle.write(terms_import.dump_registry(old))
+            terms_import.main(["--input", str(SURVEY), "--registry", str(path), "--quiet"])
+            plain = {e["key"]: e for e in terms_lint.load_registry(path)["terms"]}
+            self.assertEqual(plain["cycle_iteration"]["pt"], "ciclo / iteração")  # preserved without the flag
+            terms_import.main(["--input", str(SURVEY), "--registry", str(path), "--quiet", "--split-pt-alternatives"])
+            first = path.read_bytes()
+            split = {e["key"]: e for e in terms_lint.load_registry(path)["terms"]}
+            self.assertEqual(split["cycle_iteration"]["pt"], "ciclo")
+            self.assertEqual(split["cycle_iteration"]["pt_variants"], ["ciclos", "iteração"])
+            self.assertEqual(split["coverage"]["pt"], "cobertura total")  # untouched: no separator
+            self.assertEqual(split["coverage"]["notes"], "kept")
+            terms_import.main(["--input", str(SURVEY), "--registry", str(path), "--quiet", "--split-pt-alternatives"])
+            self.assertEqual(first, path.read_bytes())  # idempotent
+
     def test_contract_generic_unfolds(self):
         self.assertNotIn("contract_generic", self.by_key)
         for key, en in (("manual_mapping_contract", "manual-mapping contract"), ("consumer_contract", "consumer contract")):

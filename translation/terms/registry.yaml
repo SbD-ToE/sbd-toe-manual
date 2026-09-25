@@ -353,8 +353,8 @@ terms:
   owner: manual-agent
   en: atomic
   en_variants: [composite]
-  pt: atómico / composto
-  pt_variants: []
+  pt: atómico
+  pt_variants: [composto]
   ontology_id: null
   sense: 'Espécies de ControlObjective: 6 atómicos + 1 composto por slice em v0 (escolha metodológica);
     «composite» também = tarefa composta em P4.'
@@ -379,8 +379,8 @@ terms:
   owner: manual-agent
   en: audit trail
   en_variants: [auditable, auditability, audit-trail, audit-traceable, audit trails]
-  pt: trilho de auditoria / auditável
-  pt_variants: []
+  pt: trilho de auditoria
+  pt_variants: [auditável]
   ontology_id: null
   sense: Ligação verificável de cada decisão de segurança no output a um requisito de política (P3/P4);
     «audit-trail surface» do bundle regista proveniência por identificador (P6).
@@ -712,8 +712,8 @@ terms:
   owner: manual-agent
   en: chapter
   en_variants: [role, chapters, roles]
-  pt: capítulo / papel
-  pt_variants: []
+  pt: capítulo
+  pt_variants: [papel]
   ontology_id: null
   sense: Capítulo do Manual (15; KnowledgeBundle na v2.6) e papel (document role; artifact canonical role;
     Role entidade v2.6).
@@ -1200,8 +1200,8 @@ terms:
   en: cycle
   en_variants: [iteration, iterations, design science cycle, cycles, DSR cycle, design-science cycle,
     design-science cycles]
-  pt: ciclo / iteração
-  pt_variants: []
+  pt: ciclo
+  pt_variants: [iteração]
   ontology_id: null
   sense: Ciclo DSR (Hevner/Wieringa) reportado em P7 com três iterações; «cycle» também ciclo de vida
     e «virtuous cycle».
@@ -1279,8 +1279,8 @@ terms:
   owner: manual-agent
   en: deterministic
   en_variants: [determinism, non-deterministic]
-  pt: determinístico / determinismo
-  pt_variants: []
+  pt: determinístico
+  pt_variants: [determinismo]
   ontology_id: null
   sense: 'Mesma entrada → mesma saída: retrieval G2 por construção; pipeline P7 encoder-only sem invocação
     de LLM; distinto de «reproducible grounding» (condicional à classificação).'
@@ -1630,8 +1630,8 @@ terms:
   owner: manual-agent
   en: framework
   en_variants: [source, corpus, sources, frameworks, corpora]
-  pt: framework / fonte / corpus
-  pt_variants: []
+  pt: framework
+  pt_variants: [fonte, corpus]
   ontology_id: null
   sense: Framework = norma externa (SSDF, ASVS…); source = qualquer documento de autoridade (31 em P7,
     mais lato que framework); corpus = conjunto de fontes ou o Manual (corpus empírico).
@@ -2294,8 +2294,8 @@ terms:
   owner: manual-agent
   en: lifecycle
   en_variants: [Phase, SDLC]
-  pt: ciclo de vida / fase
-  pt_variants: []
+  pt: ciclo de vida
+  pt_variants: [fase]
   ontology_id: null
   sense: Ciclo de vida do software (SDLC) e as suas fases; «Requirements Lifecycle Management» (ACR-002).
   senses: []
@@ -2548,8 +2548,8 @@ terms:
   owner: manual-agent
   en: mirror
   en_variants: [OSF, DOI, Zenodo, mirrors]
-  pt: espelho / OSF / DOI
-  pt_variants: []
+  pt: espelho
+  pt_variants: [OSF, DOI]
   ontology_id: null
   sense: 'Superfícies de publicação: espelho público congelado do registo OSF; DOIs por paper e por release.'
   senses: []
@@ -2714,8 +2714,8 @@ terms:
   owner: manual-agent
   en: normative knowledge
   en_variants: [normative, empirical knowledge, empirical security knowledge]
-  pt: normativo / empírico
-  pt_variants: []
+  pt: normativo
+  pt_variants: [empírico]
   ontology_id: null
   sense: 'Duas formas de conhecimento: normativo (o que frameworks prescrevem) e empírico (o que os praticantes
     aprenderam, o corpus do Manual).'
@@ -2798,8 +2798,8 @@ terms:
   owner: manual-agent
   en: closed-world
   en_variants: [open-world]
-  pt: mundo fechado / mundo aberto
-  pt_variants: []
+  pt: mundo fechado
+  pt_variants: [mundo aberto]
   ontology_id: null
   sense: 'Dupla camada: OWL (open-world) + SHACL como camada de constraints closed-world.'
   senses: []
@@ -2994,8 +2994,8 @@ terms:
   owner: manual-agent
   en: permutation-test null model
   en_variants: [null model, permutation-test]
-  pt: teste de permutação / modelo nulo
-  pt_variants: []
+  pt: teste de permutação
+  pt_variants: [modelo nulo]
   ontology_id: null
   sense: 'Pilar 4: rejeição de atribuição aleatória fonte-claim contra modelo nulo por permutação (1000
     ensaios, seed fixa).'
@@ -3309,8 +3309,8 @@ terms:
   owner: manual-agent
   en: programme
   en_variants: [research line, programmes, program, prospectus, release line, programs, release lines]
-  pt: programa / linha
-  pt_variants: []
+  pt: programa
+  pt_variants: [linha]
   ontology_id: null
   sense: A linha de investigação como um todo (P0 = prospecto); «line» = sequência cumulativa de camadas;
     «release line» = v1.x.
@@ -3593,8 +3593,8 @@ terms:
   owner: manual-agent
   en: SbD-ToE
   en_variants: [Security-by-Design, secure-by-design, Security by Design]
-  pt: SbD-ToE / segurança por desenho
-  pt_variants: []
+  pt: SbD-ToE
+  pt_variants: [segurança por desenho]
   ontology_id: null
   sense: Nome do programa/manual (Security by Design — Theory of Everything) e o princípio de área.
   senses: []
@@ -4552,8 +4552,8 @@ terms:
   owner: manual-agent
   en: validation
   en_variants: [evaluation]
-  pt: validação / avaliação
-  pt_variants: []
+  pt: validação
+  pt_variants: [avaliação]
   ontology_id: null
   sense: Validation = conformidade/fiabilidade de um artefacto (SHACL, instrument validation protocol,
     Manual validation); evaluation = estudo empírico controlado (P4) ou avaliação de ontologia (OOPS!/FOOPS!).

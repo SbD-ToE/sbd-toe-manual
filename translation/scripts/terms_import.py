@@ -26,9 +26,12 @@ Rules applied to every survey row (see ``seed_entry``):
   removed; ``en_variants``: the survey ``variantes`` without counts,
   de-duplicated case-insensitively (first spelling kept), minus the canonical
   form.
-* ``pt``: ``pt_conceito`` only when ``pt_status == inequivoco`` (verbatim, even
-  when it lists alternatives with `` / ``), otherwise ``null``;
-  ``pt_variants`` is always empty at seeding.
+* ``pt``: ``pt_conceito`` only when ``pt_status == inequivoco``, otherwise
+  ``null``. When the Curator lists alternatives (``"ciclo / iteração"``) the
+  first form is ``pt`` and the rest become ``pt_variants``; otherwise
+  ``pt_variants`` is empty at seeding. ``--split-pt-alternatives`` applies the
+  same split to already-seeded entries whose ``pt`` still carries `` / ``
+  (idempotent; nothing else is touched).
 * ``evidence`` from ``citacao``; ``counts`` from ``por_paper`` plus ``total``
   (= ``total_manuscritos_P0_P7``); ``change_cost`` from ``custo_de_mudanca``.
 
@@ -165,6 +168,27 @@ def en_variants_from(variantes, en: str) -> List[str]:
     return out
 
 
+PT_ALTERNATIVES_SEPARATOR = " / "
+
+
+def split_pt_alternatives(pt: Optional[str], pt_variants: Sequence[str]) -> Tuple[Optional[str], List[str]]:
+    """``"ciclo / iteração"`` -> (``"ciclo"``, ``["iteração"]``): the first form is
+    canonical, the rest become variants (appended to ``pt_variants``, de-duplicated,
+    order kept). A ``pt`` without the separator is returned unchanged."""
+    variants = [v for v in pt_variants if isinstance(v, str) and v.strip()]
+    if not isinstance(pt, str) or PT_ALTERNATIVES_SEPARATOR not in pt:
+        return pt, variants
+    forms = [f.strip() for f in pt.split(PT_ALTERNATIVES_SEPARATOR) if f.strip()]
+    if not forms:
+        return None, variants
+    seen = {forms[0].casefold()} | {v.casefold() for v in variants}
+    for form in forms[1:]:
+        if form.casefold() not in seen:
+            seen.add(form.casefold())
+            variants.append(form)
+    return forms[0], variants
+
+
 def evidence_from(citacao: Optional[dict]) -> Optional[dict]:
     if not citacao:
         return None
@@ -214,7 +238,7 @@ def seed_entry(row: dict, *, key: Optional[str] = None, form_index: int = 0, not
     else:
         state, reason = STATE_IN_RECORD, None
 
-    pt = row.get("pt_conceito") if pt_status == "inequivoco" else None
+    pt, pt_variants = split_pt_alternatives(row.get("pt_conceito") if pt_status == "inequivoco" else None, [])
 
     return {
         "key": key or normalise_key(curator_id),
@@ -224,7 +248,7 @@ def seed_entry(row: dict, *, key: Optional[str] = None, form_index: int = 0, not
         "en": en,
         "en_variants": en_variants_from(row.get("variantes"), en),
         "pt": pt,
-        "pt_variants": [],
+        "pt_variants": pt_variants,
         "ontology_id": None,
         "sense": row.get("sentido"),
         "senses": senses_from(row.get("sentidos")) if polysemous else [],
@@ -282,7 +306,7 @@ def raw_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def build_registry(rows: List[dict], existing: Optional[dict], input_hashes: Dict[str, str]) -> dict:
+def build_registry(rows: List[dict], existing: Optional[dict], input_hashes: Dict[str, str], *, split_pt: bool = False) -> dict:
     existing_terms = {e["key"]: e for e in (existing or {}).get("terms", []) if isinstance(e, dict) and "key" in e}
     fresh = seed_entries(rows)
     fresh_keys = {e["key"] for e in fresh}
@@ -291,6 +315,12 @@ def build_registry(rows: List[dict], existing: Optional[dict], input_hashes: Dic
     # authored by hand) are kept untouched.
     merged.extend(order_entry(e) for k, e in existing_terms.items() if k not in fresh_keys)
     merged.sort(key=lambda e: e["key"])
+    if split_pt:
+        # Opt-in migration of entries seeded before the split rule existed: only an
+        # entry whose ``pt`` still carries " / " is touched, so the flag is idempotent.
+        for entry in merged:
+            if isinstance(entry.get("pt"), str) and PT_ALTERNATIVES_SEPARATOR in entry["pt"]:
+                entry["pt"], entry["pt_variants"] = split_pt_alternatives(entry["pt"], entry.get("pt_variants") or [])
 
     meta = dict(META_DEFAULTS)
     if existing and isinstance(existing.get("meta"), dict):
@@ -391,6 +421,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--registry", type=Path, default=None, help=f"registry to seed/refresh (default: <repo>/{common.TERMS_REGISTRY_RELPATH})")
     parser.add_argument("--dry-run", action="store_true", help="print a summary and the diff status; write nothing")
     parser.add_argument("--quiet", action="store_true", help="print nothing on success")
+    parser.add_argument(
+        "--split-pt-alternatives",
+        action="store_true",
+        help='also split existing entries whose pt still reads "a / b" into pt="a", pt_variants=[…, "b"] (idempotent)',
+    )
     return parser
 
 
@@ -423,7 +458,7 @@ def main(argv=None) -> int:
         hashes = {"yaml": raw_sha256(args.input)}
         if csv_path is not None:
             hashes["csv"] = raw_sha256(csv_path)
-        registry = build_registry(rows, existing, hashes)
+        registry = build_registry(rows, existing, hashes, split_pt=args.split_pt_alternatives)
         text = dump_registry(registry)
     except common.TranslationToolError as exc:
         print(f"error: {exc}", file=sys.stderr)

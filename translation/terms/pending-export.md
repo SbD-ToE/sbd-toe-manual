@@ -1,7 +1,7 @@
 # Fila de termos `pending` — export para o hub
 
 Gerado por `translation/scripts/terms_lint.py export-pending` a partir de `translation/terms/registry.yaml`.
-`terms_sha256` do registo: `c069db4027d1da009208887a58c737daa2d252f0406175053a4fe87bb2e106e0`.
+`terms_sha256` do registo: `bcc7b253916992ead9d24e0e8e48571862a611d407089e3822ec1f6df3b5d6b7`.
 
 **Como responder:** no hub (`sbd-ai-runtime/handover/em-curso/`), por chave → EN decidido (e, se aplicável, PT).
 O Manual agent regista a decisão no registo: espécie 2 passa a `coined` (com `ratified_by` e `date`); espécie 1 passa a

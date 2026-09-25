@@ -63,6 +63,9 @@ prepare:
 	  rm -rf "$(WEB_DIR)"; mkdir -p "$(WEB_DIR)"; \
 	  cp -R "$(SRC_DIR)/." "$(WEB_DIR)/"; \
 	fi
+	@# i18n: o site importa ../translation/state/sync-state.json (relativo a manuals_src)
+	@mkdir -p "$(OUT_BASE)/translation/state"
+	@cp "$(REPO_ROOT)/translation/state/sync-state.json" "$(OUT_BASE)/translation/state/"
 
 # ---------------------------------------------------------------
 # Instalar dependências npm
@@ -143,6 +146,8 @@ sync:
 	  rsync -av --exclude '.git' --exclude '.docusaurus' \
 	    --exclude 'node_modules' --exclude 'build' --exclude '.DS_Store' \
 	    "$(SRC_DIR)/" "$(WEB_DIR)/"; \
+	  mkdir -p "$(OUT_BASE)/translation/state"; \
+	  cp "$(REPO_ROOT)/translation/state/sync-state.json" "$(OUT_BASE)/translation/state/"; \
 	  echo ">> Sincronização completa. O Docusaurus dev server deve recarregar automaticamente."; \
 	else \
 	  echo "!! rsync não encontrado"; exit 1; fi

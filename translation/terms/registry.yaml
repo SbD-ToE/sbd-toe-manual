@@ -481,6 +481,28 @@ terms:
   notes: |-
     false friend: `absence` nos papers é uso genérico (Curator: «absence of partition-level pressure»), não o conceito tipado.
     [lead 2026-09-25] COINED (proposta do Manual agent ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. «typed absence» = modelo (absence_model); «declared absence» = instância (chave `declared_absences`, ficheiro declared-absences-ledger.yaml). Falso amigo: «absence» genérico nos papers.
+- key: avaliacao
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: assessment
+  en_variants: [assessments, evaluation, evaluations, assess]
+  pt: avaliação
+  pt_variants: [avaliações]
+  ontology_id: null
+  sense: Avaliação de risco / de maturidade / de fornecedores no sentido operacional do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] «assessment» na prosa do Manual; «evaluation» reservado ao sentido de investigação
+    (validation_evaluation, papers) e aceite como variante para não invalidar o piloto.'
 - key: baseline
   species: 1
   state: pending
@@ -526,6 +548,27 @@ terms:
   pending_reason: polysemy
   blocks_translation: true
   notes: ''
+- key: basilar
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: foundational
+  en_variants: [foundation chapters]
+  pt: basilar
+  pt_variants: [basilares]
+  ontology_id: null
+  sense: Capítulos/práticas de base obrigatória em todos os níveis (⭐ Basilar).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Não «core» (colide com AppSec Core); não «foundation» sozinho (relação piso_relacao).'
 - key: bounded
   species: 1
   state: in-record
@@ -730,6 +773,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: capacitacao
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: upskilling
+  en_variants: [upskill, capability building]
+  pt: capacitação
+  pt_variants: [capacitações]
+  ontology_id: null
+  sense: Desenvolvimento de competências (formação, KPIs de capacitação).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Fixado no piloto do cap. 00: «upskilling» (variante aceite: capability building).'
 - key: carried_forward_deferred
   species: 1
   state: in-record
@@ -813,6 +877,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: como_fazer
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: How to Do It
+  en_variants: [How to]
+  pt: Como Fazer
+  pt_variants: []
+  ontology_id: null
+  sense: Secção padrão dos capítulos.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Fixado no piloto.'
 - key: companion_sibling
   species: 1
   state: in-record
@@ -840,6 +925,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: complemento_tecnico
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: Technical Supplement
+  en_variants: [Technical Supplements]
+  pt: Complemento Técnico
+  pt_variants: [complementos técnicos]
+  ontology_id: null
+  sense: Categoria de sidebar / secção de aprofundamento opcional.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Igual ao rótulo de sidebar traduzido na frente 1.'
 - key: completeness_invariant
   species: 1
   state: pending
@@ -4665,6 +4771,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: transversal
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: cross-cutting
+  en_variants: [cross-cutting obligations, transversal]
+  pt: transversal
+  pt_variants: [transversais]
+  ontology_id: null
+  sense: Que atravessa todos os capítulos/níveis (obrigações mínimas transversais).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] «cross-cutting» em prosa; «transversal» aceite em nomes já fixados.'
 - key: traversal
   species: 1
   state: in-record
@@ -4762,6 +4889,27 @@ terms:
 
     [MA 2026-09-25] blocks_translation=false: nenhum bloco em prosa usa o sentido de relação.
     [lead 2026-09-25] COINED (proposta do Archon ratificada; via Orchestrator). ratified_by: lead · date: 2026-09-25. Forma curta «a traversal» só quando o contexto é o princípio de segmentação. O algoritmo escreve-se SEMPRE «graph traversal». Colisão assumida e declarada; chaves YAML/KG/MCP mantidas.
+- key: trilho_formativo
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: training track
+  en_variants: [training tracks, learning track]
+  pt: trilho formativo
+  pt_variants: [trilhos formativos, trilho obrigatório]
+  ontology_id: null
+  sense: Percurso de formação por papel (cap. 13).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] ≠ audit trail (trilho de auditoria).'
 - key: trust_boundary_rollout
   species: 1
   state: in-record
@@ -4919,7 +5067,7 @@ terms:
   en: validation
   en_variants: [evaluation]
   pt: validação
-  pt_variants: [avaliação]
+  pt_variants: []
   ontology_id: null
   sense: Validation = conformidade/fiabilidade de um artefacto (SHACL, instrument validation protocol,
     Manual validation); evaluation = estudo empírico controlado (P4) ou avaliação de ontologia (OOPS!/FOOPS!).
@@ -4938,7 +5086,9 @@ terms:
   false_friends: []
   pending_reason: null
   blocks_translation: true
-  notes: ''
+  notes: |2-
+
+    [MA 2026-09-25] «avaliação» retirada de pt_variants: no Manual é assessment operacional (entrada avaliacao, espécie 3); «evaluation» fica para o sentido de investigação.
 - key: verification_taxonomy
   species: 1
   state: in-record

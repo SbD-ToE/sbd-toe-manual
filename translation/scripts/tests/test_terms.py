@@ -372,3 +372,13 @@ class TraversalQualifierTests(unittest.TestCase):
         findings = terms_lint.spelling_findings_for_text(text, "x.md", terms_lint.ExemptionIndex(registry))
         self.assertTrue(any(f.rule == "traversal_qualifier" for f in findings))
 
+
+class SlugExemptionTests(unittest.TestCase):
+    def test_directory_and_file_slugs_are_not_prose(self):
+        text = "See Ch. 03 (03-threat-modeling) and the file 25-rastreabilidade.md; threat modeling in prose is wrong.\n"
+        findings = terms_lint.spelling_findings_for_text(text, "x.md", terms_lint.ExemptionIndex(None))
+        tokens = [(f.token, f.col) for f in findings]
+        self.assertEqual(len(tokens), 1, tokens)
+        self.assertEqual(tokens[0][0], "modeling")
+        self.assertGreater(tokens[0][1], text.index("in prose") - 20)
+

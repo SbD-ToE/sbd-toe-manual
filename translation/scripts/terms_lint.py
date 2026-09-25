@@ -680,12 +680,21 @@ def traversal_qualifier_findings(prose_text: str, path: str, line: int) -> List[
     return findings
 
 
+# Directory / file slugs such as ``03-threat-modeling`` or ``25-rastreabilidade.md`` are paths, not
+# prose: their spelling is whatever the file system says. They are exempt from every spelling rule.
+_SLUG_RE = re.compile(r"(?<![A-Za-z0-9_/.-])\d{2,}[-_][a-z0-9]+(?:[-_][a-z0-9]+)*(?:\.mdx?|\.ya?ml|\.json)?(?![A-Za-z0-9_])|(?<![A-Za-z0-9_-])[a-z0-9]+(?:-[a-z0-9]+)+\.(?:mdx?|ya?ml|json|py|ts|tsx)(?![A-Za-z0-9_])")
+
+
+def slug_spans(prose_text: str) -> List[Tuple[int, int]]:
+    return [m.span() for m in _SLUG_RE.finditer(prose_text)]
+
+
 def spelling_findings_for_text(text: str, path: str, exemptions: ExemptionIndex, *, where: str = "<text>") -> List[Finding]:
     lines, _blocks = extract_prose(text, where=where)
     findings: List[Finding] = []
     for prose in lines:
         findings.extend(traversal_qualifier_findings(prose.text, path, prose.line))
-        exempt = exemptions.spans(prose.text)
+        exempt = exemptions.spans(prose.text) + slug_spans(prose.text)
         for match in _TOKEN_RE.finditer(prose.text):
             token = match.group(1)
             start, end = match.span(1)

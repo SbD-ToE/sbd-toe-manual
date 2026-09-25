@@ -10,7 +10,7 @@ sidebar_position: 13
 
 # LINDDUN — Threat Modeling de Privacidade
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 O threat modeling de segurança (STRIDE) protege o sistema contra um adversário. O threat modeling de **privacidade** protege a pessoa cujos dados o sistema processa — um problema distinto, com ameaças que o STRIDE não captura. O LINDDUN, desenvolvido na KU Leuven, é a metodologia de referência para esse problema.
 
@@ -22,7 +22,7 @@ Aplicabilidade: **L3**, e qualquer sistema que processe **dados pessoais ou regu
 
 ---
 
-## As sete categorias de ameaça
+## As sete categorias de ameaça {#as-sete-categorias-de-ameaça}
 
 O acrónimo nomeia sete tipos de ameaça à privacidade:
 
@@ -42,7 +42,7 @@ O acrónimo nomeia sete tipos de ameaça à privacidade:
 
 ---
 
-## O método
+## O método {#o-método}
 
 1. **Modelar o sistema num DFD.** Representar o sistema num *data flow diagram* — entidades externas, processos, data stores e fluxos de dados. O DFD é a base sobre a qual as ameaças são mapeadas; sem ele, a elicitação é difusa.
 2. **Mapear categorias aos elementos do DFD.** Cada tipo de elemento é suscetível a um subconjunto das sete categorias. O mapeamento elemento-categoria é o que torna a análise sistemática em vez de dependente da intuição.
@@ -52,13 +52,13 @@ O acrónimo nomeia sete tipos de ameaça à privacidade:
 
 ---
 
-## Relação com o threat modeling de segurança
+## Relação com o threat modeling de segurança {#relação-com-o-threat-modeling-de-segurança}
 
 LINDDUN e STRIDE são complementares e não intermutáveis. Um sistema pode ser seguro e, ao mesmo tempo, violar a privacidade — recolher dados em excesso, reter sem base legal, permitir reidentificação. A privacidade não é um subconjunto da segurança. Sistemas que processam dados pessoais devem aplicar ambos, sobre o mesmo DFD.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

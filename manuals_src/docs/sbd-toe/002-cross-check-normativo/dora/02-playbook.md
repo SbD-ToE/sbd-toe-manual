@@ -8,7 +8,7 @@ sidebar_position: 2
 
 # SbD-ToE 4 DORA: Playbook de Implementação
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações SbD-ToE práticas**.
 
@@ -24,7 +24,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-## Mapa Rápido: DORA Art. → SbD-ToE
+## Mapa Rápido: DORA Art. → SbD-ToE {#mapa-rápido-dora-art--sbd-toe}
 
 | DORA Artigo | Requisito | Capítulo SbD-ToE | Ação Principal |
 |----------|-----------|-----------------|----------------|
@@ -37,9 +37,9 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-## Como Implementar (Ordem Lógica)
+## Como Implementar (Ordem Lógica) {#como-implementar-ordem-lógica}
 
-### Fase 1: Governação (M0–M2)
+### Fase 1: Governação (M0–M2) {#fase-1-governação-m0m2}
 **DORA Art. 5** - Estabelecer supervisão do órgão de gestão
 
 1. **Criar fórum formal de governação de segurança digital**
@@ -60,7 +60,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-### Fase 2: Framework de risco TIC (M2–M4)
+### Fase 2: Framework de risco TIC (M2–M4) {#fase-2-framework-de-risco-tic-m2m4}
 **DORA Art. 6** - Estruturar a gestão de risco TIC
 
 1. **Inventariar aplicações e serviços**
@@ -86,23 +86,23 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-### Fase 3: Proteção, prevenção, deteção e recuperação (M4–M12)
+### Fase 3: Proteção, prevenção, deteção e recuperação (M4–M12) {#fase-3-proteção-prevenção-deteção-e-recuperação-m4m12}
 **DORA Art. 8–15** - Implementar controlos técnicos e operacionais
 
-#### 3.1 Threat modeling, requisitos e arquitetura
+#### 3.1 Threat modeling, requisitos e arquitetura {#31-threat-modeling-requisitos-e-arquitetura}
 - **O que:** ligar risco, ameaças, requisitos e decisões arquiteturais
 - **Como:** threat modeling proporcional; requisitos versionados; arquitetura segura
 - **Trilho:** risco → ameaça → requisito → controlo → evidência
 - **Referências:** [Cap. 02 - Requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 03 - Threat Modeling](/sbd-toe/sbd-manual/threat-modeling/intro), [Cap. 04 - Arquitetura Segura](/sbd-toe/sbd-manual/arquitetura-segura/intro)
 
-#### 3.2 Desenvolvimento, CI/CD, IaC e supply chain
+#### 3.2 Desenvolvimento, CI/CD, IaC e supply chain {#32-desenvolvimento-cicd-iac-e-supply-chain}
 - **O que:** endurecer a cadeia de entrega e a composição do software
 - **Como:** SAST/SCA; bloqueio de segredos; proveniência; validação pré-deploy; SBOM; scanning de IaC
 - **Trilho:** logs auditados, SBOM atualizado, findings, gates e exceções formais
 - **Referências:** [Cap. 05 - Dependências & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07 - CI/CD Seguro](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 08 - IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 11 - Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro)
 - 📄 **Template:** [Opções de Toolchain](../exemplo-playbook/exemplo-toolchain-options)
 
-#### 3.3 Monitorização, resposta, recuperação e aprendizagem
+#### 3.3 Monitorização, resposta, recuperação e aprendizagem {#33-monitorização-resposta-recuperação-e-aprendizagem}
 - **O que:** monitorizar, reagir, conter, recuperar e aprender com eventos e desvios
 - **Como:** logging estruturado; alertas com SLAs; rollback; runbooks; métricas; formação contínua
 - **Trilho:** evidência operacional, post-incident reviews, KPIs e reporting
@@ -110,23 +110,23 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-### Fase 4: Incidentes e reporte regulatório (M8–M12)
+### Fase 4: Incidentes e reporte regulatório (M8–M12) {#fase-4-incidentes-e-reporte-regulatório-m8m12}
 **DORA Art. 17–23** - Gerir, classificar e reportar incidentes TIC
 
-#### 4.1 Monitorização centralizada
+#### 4.1 Monitorização centralizada {#41-monitorização-centralizada}
 - **O que:** logs centralizados de aplicações, infraestrutura e acessos
 - **Retenção:** conforme política interna e enquadramento regulatório aplicável
 - **Proteção:** imutabilidade, integridade e rastreabilidade
 - **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
-#### 4.2 Deteção, triagem e resposta
+#### 4.2 Deteção, triagem e resposta {#42-deteção-triagem-e-resposta}
 - **O que:** identificar eventos, classificar por impacto e responder
 - **Escalação:** conforme criticidade e modelo de governação
 - **Documentação:** o quê, quando, ações, aprendizagem
 - **Referências:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 - 📄 **Template:** [Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes)
 
-#### 4.3 Parametrização de reporte externo
+#### 4.3 Parametrização de reporte externo {#43-parametrização-de-reporte-externo}
 - **O que:** traduzir o processo interno em `initial`, `intermediate` e `final report`
 - **Como:** parametrizar campos, templates e exportadores conforme RTS/ITS e autoridade competente
 - **Boundary:** esta parte já não fica toda no manual base; exige material regulatório complementar
@@ -134,22 +134,22 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-### Fase 5: Testes de resiliência (M12–M18)
+### Fase 5: Testes de resiliência (M12–M18) {#fase-5-testes-de-resiliência-m12m18}
 **DORA Art. 24–27** - Validar postura defensiva e preparar TLPT
 
-#### 5.1 Testes contínuos
+#### 5.1 Testes contínuos {#51-testes-contínuos}
 - **SAST:** análise estática integrada
 - **DAST:** análise dinâmica em staging
 - **PenTesting:** testes manuais guiados por threat model
 - **Referência:** [Cap. 10 - Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)
 
-#### 5.2 Validação pré-deploy
+#### 5.2 Validação pré-deploy {#52-validação-pré-deploy}
 - **O que:** checklist de segurança antes de produção
 - **Confirmação:** requisitos e evidência coerentes com o nível de risco
 - **Aprovação:** formal quando aplicável
 - **Referência:** [Cap. 11 - Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro)
 
-#### 5.3 TLPT readiness e boundary regulatório
+#### 5.3 TLPT readiness e boundary regulatório {#53-tlpt-readiness-e-boundary-regulatório}
 - **O que:** preparar a base técnica para exercícios TLPT em entidades elegíveis
 - **Base:** cenários de threat model, escopo, remediação e evidência
 - **Boundary:** elegibilidade, qualificação formal de testers e attestation pertencem à camada regulatória/compliance
@@ -157,16 +157,16 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-### Fase 6: Terceiros TIC e fornecedores críticos (M12–M18)
+### Fase 6: Terceiros TIC e fornecedores críticos (M12–M18) {#fase-6-terceiros-tic-e-fornecedores-críticos-m12m18}
 **DORA Art. 28–30** - Gerir risco de terceiros TIC
 
-#### 6.1 Fornecedores de componentes e supply chain de software
+#### 6.1 Fornecedores de componentes e supply chain de software {#61-fornecedores-de-componentes-e-supply-chain-de-software}
 - **O que:** SBOM + SCA
 - **Como:** gerar SBOM; scan contínuo; atualizar dependências
 - **Trilho:** inventário, findings, correções e exceções
 - **Referência:** [Cap. 05 - Dependências & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
 
-#### 6.2 Fornecedores contratuais
+#### 6.2 Fornecedores contratuais {#62-fornecedores-contratuais}
 - **O que:** contractors, outsourcing e parceiros com acesso ou responsabilidade técnica
 - **Ciclo de Vida:**
   - **Onboarding:** validação, formação SbD, sandbox
@@ -174,7 +174,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
   - **Offboarding:** revogação de acessos, auditoria de fecho
 - **Referência:** [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
-#### 6.3 Concentração e saída
+#### 6.3 Concentração e saída {#63-concentração-e-saída}
 - **O que:** avaliar concentração, dependências críticas e estratégia de saída
 - **Como:** inventário, revalidação periódica, cláusulas contratuais e planos de transição
 - **Boundary:** parte desta leitura é regulatória e portfolio-wide, não apenas AppSec
@@ -182,7 +182,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 ---
 
-## Checklist de Leitura DORA
+## Checklist de Leitura DORA {#checklist-de-leitura-dora}
 
 A lista abaixo permite validar a maturidade da **base AppSec e operacional** para uma leitura DORA defensável. A conformidade final continua a depender de parametrização regulatória e evidência institucional adicional:
 
@@ -199,7 +199,7 @@ A lista abaixo permite validar a maturidade da **base AppSec e operacional** par
 
 ---
 
-## O Que Cada Capítulo SbD-ToE Cobre (Referência Rápida)
+## O Que Cada Capítulo SbD-ToE Cobre (Referência Rápida) {#o-que-cada-capítulo-sbd-toe-cobre-referência-rápida}
 
 | Capítulo | DORA Artigos | O Que Faz |
 |----------|-------------|----------|
@@ -216,7 +216,7 @@ A lista abaixo permite validar a maturidade da **base AppSec e operacional** par
 
 ---
 
-## Métrica Simples: Estou Bem Preparado?
+## Métrica Simples: Estou Bem Preparado? {#métrica-simples-estou-bem-preparado}
 
 Se consegues responder SIM a isto, tens uma base AppSec forte para uma implementação DORA defensável:
 
@@ -234,7 +234,7 @@ Se consegues responder SIM a isto, tens uma base AppSec forte para uma implement
 
 ---
 
-## Nota Crítica: Gestão de Exceções em DORA
+## Nota Crítica: Gestão de Exceções em DORA {#nota-crítica-gestão-de-exceções-em-dora}
 
 DORA exige que desvios e exceções sejam formais, auditáveis e aprovados ao nível adequado.
 
@@ -256,7 +256,7 @@ Leitura prática:
 
 ---
 
-## Recursos Práticos de Implementação
+## Recursos Práticos de Implementação {#recursos-práticos-de-implementação}
 
 Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
 
@@ -269,7 +269,7 @@ Estes recursos são reutilizáveis para múltiplos frameworks e mostram como ope
 
 ---
 
-## Próximos Passos
+## Próximos Passos {#próximos-passos}
 
 1. Fazer um audit de conformidade atual contra a matriz acima
 2. Sequenciar o roadmap por criticidade, gap e dependência
@@ -281,7 +281,7 @@ Documentação completa: ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 ---
 
-## Referências
+## Referências {#referências}
 
 - **SbD-ToE Manual:** Capítulos 01–14
 - **Cross-Check DORA:** [Análise normativa completa](/sbd-toe/cross-check-normativo/dora/intro)

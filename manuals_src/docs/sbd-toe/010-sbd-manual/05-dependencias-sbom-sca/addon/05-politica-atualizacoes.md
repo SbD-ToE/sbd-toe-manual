@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain, policies]
 
 # Políticas de Atualização de Dependências
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer práticas sistemáticas para a **atualização proativa de bibliotecas e dependências de terceiros**, evitando acumulação de dívida técnica e exposição prolongada a riscos conhecidos.
 
@@ -15,7 +15,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## ⏲ Princípios de atualização segura
+## ⏲ Princípios de atualização segura {#-princípios-de-atualização-segura}
 
 1. Toda dependência deve ter um **TTL (Time To Live)** definido: prazo máximo até ser revista.
 2. Devem ser usados mecanismos de **locking explícito de versões**, para evitar atualizações não auditadas.
@@ -24,7 +24,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## 🛠️ Mecanismos de controlo por linguagem
+## 🛠️ Mecanismos de controlo por linguagem {#️-mecanismos-de-controlo-por-linguagem}
 
 | Stack       | Lockfile / Mecanismo           | Ferramentas de atualização         |
 |-------------|----------------------------------|------------------------------------|
@@ -38,7 +38,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## 🔧 Frequência recomendada de revisão
+## 🔧 Frequência recomendada de revisão {#-frequência-recomendada-de-revisão}
 
 | Tipo de projeto         | Frequência mínima de revisão de dependências |
 |--------------------------|------------------------------------------------|
@@ -50,7 +50,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## 📅 Estratégias de atualização
+## 📅 Estratégias de atualização {#-estratégias-de-atualização}
 
 - **Proativa automatizada**: bots que abrem PRs de atualização com testes
 - **Agrupada por sprint**: tarefa periódica de "atualização de libs"
@@ -59,7 +59,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## 📄 Checklist de aplicação de updates
+## 📄 Checklist de aplicação de updates {#-checklist-de-aplicação-de-updates}
 
 | Item                                                           | Verificado? |
 |----------------------------------------------------------------|-------------|
@@ -71,7 +71,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ---
 
-## 🔗 Ligações com outros ficheiros
+## 🔗 Ligações com outros ficheiros {#-ligações-com-outros-ficheiros}
 
 | Documento                   | Ligação com atualizações                            |
 |-----------------------------|-------------------------------------------------------------|

@@ -20,7 +20,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                              | Verificado? |
 |---------------------------------------------------------------------------------------------------|-------------|
@@ -45,7 +45,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Este checklist pode ser integrado em **pipelines, fluxos de aprovação de release, gates de produção ou auditorias técnicas**.
 - Cada item deve ser validado com **evidência objetiva** (ex: logs de aprovação, ficheiros SBOM, relatórios de rollback, prints do pipeline).
@@ -55,7 +55,7 @@ Serve como instrumento de verificação binária e auditável da **adoção prá
 
 ---
 
-## ✅ Conformidade e KPI
+## ✅ Conformidade e KPI {#-conformidade-e-kpi}
 
 - A validação deste checklist permite declarar **conformidade com o Capítulo 11 - Deploy Seguro**.
 - A contagem de respostas afirmativas pode ser usada para **medir o grau de adoção das práticas prescritas**.

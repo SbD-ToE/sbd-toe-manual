@@ -8,7 +8,7 @@ sidebar_position: 6
 
 # SbD-ToE 4 CRA: Playbook de Implementação
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Objetivo: Transformar requisitos CRA em ações concretas usando controlos existentes do SbD-ToE.
 
@@ -24,7 +24,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 > 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e processos de vulnerability handling reutilizáveis.
 
-## Mapa Rápido CRA → SbD-ToE
+## Mapa Rápido CRA → SbD-ToE {#mapa-rápido-cra--sbd-toe}
 
 | Área CRA | SbD-ToE | Ação | Evidência |
 |----------|---------|------|----------|
@@ -39,9 +39,9 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ---
 
-## Fases de Implementação (≈ 6–9 meses)
+## Fases de Implementação (≈ 6–9 meses) {#fases-de-implementação--69-meses}
 
-### Fase 1 (M0–M1): Fundamentos, Scope Gate & Governance
+### Fase 1 (M0–M1): Fundamentos, Scope Gate & Governance {#fase-1-m0m1-fundamentos-scope-gate--governance}
 1. Designar Owner CRA (GRC + AppSec)  
 2. Criar Política "Segurança de Produto & CRA" (aprovada por gestão)  
 3. Mapear roles SbD-ToE → papéis CRA (fabricante, importador, distribuidor, substantial modification quando aplicável)  
@@ -49,28 +49,28 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 5. Registar support period e regra de comunicação de fim de suporte por linha de produto  
 **Evidências:** Ata aprovação; matriz criticidade; política versão 1.0; registo de papéis e suporte
 
-### Fase 2 (M1–M2): SBOM & Inventário
+### Fase 2 (M1–M2): SBOM & Inventário {#fase-2-m1m2-sbom--inventário}
 1. Ativar geração automática SBOM (build pipeline)  
 2. Validar cobertura (≥95% componentes listados)  
 3. Criar export sanitized CycloneDX  
 4. Repositório "SBOM Releases" (controlado, versionado)  
 **Evidências:** SBOM v1; relatório cobertura; script export
 
-### Fase 3 (M2–M3): Vulnerability Handling & SLAs
+### Fase 3 (M2–M3): Vulnerability Handling & SLAs {#fase-3-m2m3-vulnerability-handling--slas}
 1. Definir severidade (Critical/High/Medium/Low)  
 2. Estabelecer SLA patch (Critical ≤15d, High ≤30d, Medium ≤90d)  
 3. Automatizar criação de issue para CVE crítico  
 4. Dashboard patch compliance  
 **Evidências:** Política SLA; dashboard inicial; issues exemplo
 
-### Fase 4 (M3–M4): Testes & Gate Release
+### Fase 4 (M3–M4): Testes & Gate Release {#fase-4-m3m4-testes--gate-release}
 1. Integrar SAST/DAST/fuzzing pipeline  
 2. Criar gate "no-critical-known" (release bloqueada)  
 3. Processo exceção crítica (board-level)  
 4. Template relatório qualidade release  
 **Evidências:** Logs pipeline; configuração gate; relatório release #1
 
-### Fase 5 (M4–M5): Disclosure & Comunicação Externa
+### Fase 5 (M4–M5): Disclosure & Comunicação Externa {#fase-5-m4m5-disclosure--comunicação-externa}
 1. Publicar security.txt + chave PGP  
 2. Página "Vulnerability Disclosure Policy"  
 3. Runbook triagem reporte externo  
@@ -78,28 +78,28 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 5. Identificar ponto de contacto de segurança para utilizadores e investigadores  
 **Evidências:** Página pública; registo primeiro teste reporte; contacto publicado
 
-### Fase 6 (M5–M6): Reporte de Exploração Ativa
+### Fase 6 (M5–M6): Reporte de Exploração Ativa {#fase-6-m5m6-reporte-de-exploração-ativa}
 1. Definir critérios de "explorada ativamente" (IOC, telemetria confirmada)  
 2. Criar script export JSON incidente + SBOM componente afetado  
 3. Runbook notificação autoridade / CSIRT coordenador e matriz de comunicação a utilizadores  
 4. Simulação exercício interno  
 **Evidências:** Script; runbook; relatório exercício; matriz de comunicação
 
-### Fase 7 (M6–M7): Documentação de Segurança do Produto
+### Fase 7 (M6–M7): Documentação de Segurança do Produto {#fase-7-m6m7-documentação-de-segurança-do-produto}
 1. Escrever Guia Segurança (instalação segura, atualização, contacto, support period, fim de suporte)  
 2. Validar com AppSec + engenharia  
 3. Publicar versão 1.0 (Markdown/PDF)  
 4. Processo atualização por release  
 **Evidências:** Guia v1; diff v1→v2 (exemplo)
 
-### Fase 8 (M7–M8): Cadeia Fornecimento Expandida
+### Fase 8 (M7–M8): Cadeia Fornecimento Expandida {#fase-8-m7m8-cadeia-fornecimento-expandida}
 1. Inventariar firmware/hardware (se aplicável)  
 2. Checklist integridade (hash, assinatura, origem)  
 3. Processo atualização segura (secure channel)  
 4. Métrica cobertura supply chain (≥90%)  
 **Evidências:** Checklist preenchida; métrica cobertura
 
-### Fase 9 (M8–M9): Métricas & Melhoria Contínua
+### Fase 9 (M8–M9): Métricas & Melhoria Contínua {#fase-9-m8m9-métricas--melhoria-contínua}
 1. Métricas: MTTP (Mean Time To Patch), % SLA cumprido, vulns abertas por severidade  
 2. Reunião retrospectiva trimestral  
 3. Plano melhoria (top 3 blockers)  
@@ -108,9 +108,9 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ---
 
-## Checklists
+## Checklists {#checklists}
 
-### Checklist SBOM
+### Checklist SBOM {#checklist-sbom}
 - [ ] Pipeline gera SBOM automaticamente
 - [ ] Formato CycloneDX/SPDX validado
 - [ ] Export sanitized criado
@@ -118,7 +118,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Cobertura ≥95% componentes
 - [ ] Processo atualização documentado
 
-### Checklist Vulnerability Handling
+### Checklist Vulnerability Handling {#checklist-vulnerability-handling}
 - [ ] Severidade definida (Critical/High/Medium/Low)
 - [ ] SLA patch documentado
 - [ ] Issues automáticas para críticos
@@ -126,7 +126,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Política exceções CRA publicada
 - [ ] Exceções críticas aprovadas board
 
-### Checklist Release Gate
+### Checklist Release Gate {#checklist-release-gate}
 - [ ] SAST integrado
 - [ ] DAST integrado
 - [ ] Fuzzing (se aplicável)
@@ -134,7 +134,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Relatório qualidade release arquivado
 - [ ] Processo override exceção formal
 
-### Checklist Disclosure
+### Checklist Disclosure {#checklist-disclosure}
 - [ ] security.txt publicado
 - [ ] Chave PGP acessível
 - [ ] Página política disclosure publicada
@@ -143,7 +143,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Ponto de contacto de segurança identificado
 - [ ] Tempo resposta médio `<`5 dias úteis
 
-### Checklist Reporte Exploração
+### Checklist Reporte Exploração {#checklist-reporte-exploração}
 - [ ] Critérios "explorada ativamente" definidos
 - [ ] Script export JSON pronto
 - [ ] Runbook notificação autoridade
@@ -151,7 +151,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Simulação concluída
 - [ ] Evidência testes arquivada
 
-### Checklist Documentação Segurança
+### Checklist Documentação Segurança {#checklist-documentação-segurança}
 - [ ] Guia instalação segura
 - [ ] Guia atualização + rollback
 - [ ] Contacto segurança (security@)
@@ -161,7 +161,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Secção gestão de vulnerabilidades
 - [ ] Versão e data
 
-### Checklist Supply Chain Física (se aplicável)
+### Checklist Supply Chain Física (se aplicável) {#checklist-supply-chain-física-se-aplicável}
 - [ ] Lista firmware/hardware
 - [ ] Hashes/assinaturas verificados
 - [ ] Canal atualização seguro
@@ -170,7 +170,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ---
 
-## Métricas-Chave
+## Métricas-Chave {#métricas-chave}
 | Métrica | Definição | Objetivo Inicial |
 |---------|-----------|------------------|
 | MTTP Crítico | Tempo médio até patch crítico | ≤15 dias |
@@ -182,7 +182,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ---
 
-## Artefactos a Manter (Data Room)
+## Artefactos a Manter (Data Room) {#artefactos-a-manter-data-room}
 | Artefacto | Tipo | Frequência Atualização |
 |-----------|------|------------------------|
 | Política Segurança Produto & CRA | Documento | Anual / quando requisito muda |
@@ -197,7 +197,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ---
 
-## Exceções (Política Resumida)
+## Exceções (Política Resumida) {#exceções-política-resumida}
 Categorias:
 - Inaceitáveis: RCE crítico, bypass autenticação, exposure credenciais em claro
 - Aceitáveis (TTL curto ≤30d): Crítico sem patch disponível + compensação robusta
@@ -209,7 +209,7 @@ Escalação: Crítico → Board; High → CISO/AppSec; Medium/Low → AppSec.
 
 ---
 
-## Próximos Passos Depois da Fase 9
+## Próximos Passos Depois da Fase 9 {#próximos-passos-depois-da-fase-9}
 1. Avaliação formal conformidade (legal + técnico)  
 2. Preparar documentação para eventual auditoria/regulador  
 3. Integração com outras normas (ex: DORA, NIS2) - evitar duplicação  
@@ -218,7 +218,7 @@ Escalação: Crítico → Board; High → CISO/AppSec; Medium/Low → AppSec.
 
 ---
 
-## Recursos Práticos de Implementação
+## Recursos Práticos de Implementação {#recursos-práticos-de-implementação}
 
 Para suporte concreto na implementação deste playbook, consultar os seguintes exemplos reutilizáveis:
 
@@ -231,7 +231,7 @@ Estes recursos demonstram implementações práticas das abstenções deliberada
 
 ---
 
-## Referências
+## Referências {#referências}
 - [Análise normativa CRA](intro)
 - SbD-ToE Capítulos 01–14
 - ENISA: Vulnerability Disclosure Guidelines

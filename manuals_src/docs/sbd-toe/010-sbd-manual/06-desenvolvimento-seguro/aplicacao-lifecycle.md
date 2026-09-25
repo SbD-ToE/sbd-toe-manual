@@ -14,7 +14,7 @@ O objetivo é simples mas ambicioso: fazer do desenvolvimento seguro um hábito 
 
 ---
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 A segurança acompanha o projeto desde o início e não pode ser relegada para fases finais.  
 O quadro seguinte mostra **em que momentos concretos do SDLC** cada prática deve ser aplicada e qual a ação esperada em cada um deles.
@@ -30,7 +30,7 @@ O quadro seguinte mostra **em que momentos concretos do SDLC** cada prática dev
 
 ---
 
-## 🧱 Gates de desenvolvimento seguro (proposto → revisto → validado → aceite)
+## 🧱 Gates de desenvolvimento seguro (proposto → revisto → validado → aceite) {#-gates-de-desenvolvimento-seguro-proposto--revisto--validado--aceite}
 
 Para escalar em frequência de entrega e diversidade de contribuições, o desenvolvimento seguro não pode depender de “confiança” na origem do código.  
 O SbD-ToE assume que **todo o código é entrada não confiável** até existir validação suficiente e evidência verificável.
@@ -55,7 +55,7 @@ Estes estados não são “burocracia”; são mecanismos práticos para reduzir
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A segurança no desenvolvimento é um **esforço coletivo**: diferentes papéis contribuem de forma complementar, formando uma cadeia de confiança.  
 A tabela seguinte explicita estas responsabilidades, usando **apenas os roles definidos no SbD-ToE**.
@@ -75,9 +75,9 @@ A tabela seguinte explicita estas responsabilidades, usando **apenas os roles de
 
 ---
 
-## 📖 User Stories reutilizáveis
+## 📖 User Stories reutilizáveis {#-user-stories-reutilizáveis}
 
-### US-01 - Guidelines de Desenvolvimento Seguro
+### US-01 - Guidelines de Desenvolvimento Seguro {#us-01---guidelines-de-desenvolvimento-seguro}
 
 **Contexto.**  
 Guidelines claras e versionadas por *stack* evitam decisões ad-hoc e asseguram consistência. Mais do que um documento estático, são um **mecanismo vivo** de governação: atualizadas, revistas e aplicadas diariamente. A existência de *rulesets* derivadas de linters e analisadores automáticos, com *tailoring* documentado, reduz significativamente riscos de interpretação subjetiva.
@@ -121,7 +121,7 @@ Como **Developer**, quero aplicar as guidelines de código seguro aprovadas, par
 
 ---
 
-### US-02 - Revisão de Código Segura
+### US-02 - Revisão de Código Segura {#us-02---revisão-de-código-segura}
 
 **Contexto.**  
 Revisões de código não são apenas uma prática de qualidade, mas um **ponto de controlo de segurança**. Quando sistematizadas com checklist, previnem vulnerabilidades, promovem partilha de conhecimento e criam registo formal de conformidade.
@@ -162,7 +162,7 @@ Como **Scrum Master / Team Lead**, quero garantir que cada PR é revisto com che
 
 ---
 
-### US-03 - Gestão de Dependências no Código
+### US-03 - Gestão de Dependências no Código {#us-03---gestão-de-dependências-no-código}
 
 **Contexto.**  
 Cada dependência externa adicionada ao projeto é uma potencial porta de entrada para riscos de cadeia de fornecimento. A gestão rigorosa destas dependências garante que não se introduz software obsoleto, vulnerável ou malicioso.
@@ -204,7 +204,7 @@ Esta user story cruza com práticas como [Dependências, SBOM e SCA](/sbd-toe/sb
 
 ---
 
-### US-04 - Automatização em CI/CD (Linters & SAST)
+### US-04 - Automatização em CI/CD (Linters & SAST) {#us-04---automatização-em-cicd-linters--sast}
 
 **Contexto.**  
 A automatização de validações em pipelines CI/CD garante consistência, acelera a deteção de falhas e cria evidência contínua. Automatizar significa **remover o fator humano de distração ou esquecimento** em controlos repetitivos.
@@ -247,7 +247,7 @@ Como **DevOps / SRE**, quero integrar linters e SAST no pipeline, para detetar f
 
 ---
 
-### US-05 - Gestão de Exceções Técnicas
+### US-05 - Gestão de Exceções Técnicas {#us-05---gestão-de-exceções-técnicas}
 
 **Contexto.**  
 Nem sempre todos os controlos podem ser aplicados em tempo útil. É inevitável lidar com exceções técnicas - mas se estas não forem **formalmente registadas, aprovadas e temporárias**, tornam-se dívida de risco e criam vulnerabilidades persistentes.
@@ -292,7 +292,7 @@ Como **AppSec Engineer**, quero registar e aprovar exceções técnicas, para ga
 
 ---
 
-### US-06 - Uso Validado de GenIA
+### US-06 - Uso Validado de GenIA {#us-06---uso-validado-de-genia}
 
 **Contexto.**  
 Ferramentas de IA generativa (GenIA) aceleram a escrita de código, mas podem introduzir **vulnerabilidades, violações de licença e desalinhamento com regras técnicas obrigatórias**.  
@@ -337,7 +337,7 @@ Como **Developer**, quero usar IA generativa com revisão obrigatória e constra
 
 ---
 
-### US-07 - Governação e Curadoria de Guidelines
+### US-07 - Governação e Curadoria de Guidelines {#us-07---governação-e-curadoria-de-guidelines}
 
 **Contexto.**  
 A governação ativa das guidelines assegura que estas evoluem com as tecnologias e com as vulnerabilidades emergentes.  
@@ -379,7 +379,7 @@ Como **AppSec Engineer**, quero rever e publicar guidelines curadas trimestralme
 
 ---
 
-### US-08 - Rastreabilidade com Anotações de Segurança
+### US-08 - Rastreabilidade com Anotações de Segurança {#us-08---rastreabilidade-com-anotações-de-segurança}
 
 **Contexto.**  
 Validações de segurança devem ser rastreáveis até aos requisitos originais. Anotações padronizadas (`@sec:*`) no código e nos testes permitem **ligar implementação, requisitos e evidência de auditoria** de forma inequívoca.
@@ -418,7 +418,7 @@ Como **Developer**, quero anotar validações de segurança com `@sec:*`, para g
 
 ---
 
-### US-09 - Gate de Segurança Pré-release
+### US-09 - Gate de Segurança Pré-release {#us-09---gate-de-segurança-pré-release}
 
 **Contexto.**  
 Antes de cada *release* deve existir um ponto de controlo objetivo que consolide todas as evidências de segurança - relatórios SAST, SBOM, exceções, checklists e aprovações.
@@ -457,7 +457,7 @@ Como **DevOps / SRE**, quero executar um **gate de segurança pré-release** que
 
 ---
 
-### US-10 - Perfis de Validação por Nível de Risco (L1–L3)
+### US-10 - Perfis de Validação por Nível de Risco (L1–L3) {#us-10---perfis-de-validação-por-nível-de-risco-l1l3}
 
 **Contexto.**  
 A aplicação proporcional dos controlos é essencial para garantir eficiência e consistência.  
@@ -496,7 +496,7 @@ Como **AppSec Engineer**, quero definir e aplicar **perfis de validação L1–L
 
 ---
 
-### US-11 - Arquivo Central de Evidências de Validação
+### US-11 - Arquivo Central de Evidências de Validação {#us-11---arquivo-central-de-evidências-de-validação}
 
 **Contexto.**  
 A retenção controlada de evidências é requisito de auditoria e conformidade.  
@@ -536,7 +536,7 @@ diretório `evidencias/`, `evidencias-index.json`, registos de acesso
 
 ---
 
-### US-12 - Validações Locais Obrigatórias (Pre-commit)
+### US-12 - Validações Locais Obrigatórias (Pre-commit) {#us-12---validações-locais-obrigatórias-pre-commit}
 
 **Contexto.**  
 Validações executadas localmente antes de qualquer push reduzem ciclos de feedback, aumentam consistência de código e diminuem carga no pipeline. Git hooks e linters locais são a primeira linha de defesa.
@@ -583,7 +583,7 @@ Como **Developer**, quero executar **linters e validações de segurança localm
 
 ---
 
-### US-13 - Validação de Padrões Perigosos e Anti-patterns
+### US-13 - Validação de Padrões Perigosos e Anti-patterns {#us-13---validação-de-padrões-perigosos-e-anti-patterns}
 
 **Contexto.**  
 Padrões de código inseguro (eval, concatenação SQL, *hardcoded secrets*, XSS, etc.) devem ser detetados automaticamente e bloqueados, com educação sobre alternativas seguras.
@@ -631,7 +631,7 @@ Como **AppSec Engineer**, quero que o pipeline **detete automaticamente padrões
 
 ---
 
-### US-14 - Monitorização de Conformidade e Métricas de Segurança
+### US-14 - Monitorização de Conformidade e Métricas de Segurança {#us-14---monitorização-de-conformidade-e-métricas-de-segurança}
 
 **Contexto.**  
 Métricas contínuas de segurança (cobertura de linters, exceções ativas, findings resolvidos, compliance L1–L3) permitem governação informada e identificação rápida de desvios.
@@ -679,7 +679,7 @@ Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero **visualizar dash
 
 ---
 
-### US-15 - Prompts e Outputs de GenAI sob Disciplina de Código
+### US-15 - Prompts e Outputs de GenAI sob Disciplina de Código {#us-15---prompts-e-outputs-de-genai-sob-disciplina-de-código}
 
 Os ficheiros que configuram assistentes e os outputs que estes devolvem são tratados como código: versionados, revistos e validados.  
 
@@ -721,7 +721,7 @@ Como **AppSec Engineer**, quero que os *prompts*, *skill files*, *agent files* e
 
 ---
 
-### US-16 - Proveniência e Quality Gate com Baseline Aprovada
+### US-16 - Proveniência e Quality Gate com Baseline Aprovada {#us-16---proveniência-e-quality-gate-com-baseline-aprovada}
 
 A proveniência de todo o código incorporado é identificada e a integração é regida por um *quality gate* com *baseline* e *thresholds* aprovados.  
 
@@ -763,7 +763,7 @@ Como **AppSec Engineer**, quero que a proveniência de todo o código incorporad
 
 ---
 
-## 📦 Artefactos Esperados
+## 📦 Artefactos Esperados {#-artefactos-esperados}
 
 | Artefacto                  | Evidência auditável                                      |
 |---------------------------|----------------------------------------------------------|
@@ -785,7 +785,7 @@ Como **AppSec Engineer**, quero que a proveniência de todo o código incorporad
 
 ---
 
-## ⚖️ Matriz de Proporcionalidade L1–L3
+## ⚖️ Matriz de Proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 | Prática / Controlo | L1 (baixo) | L2 (médio) | L3 (crítico) |
 |--------------------|------------|-------------|--------------|
@@ -804,7 +804,7 @@ Como **AppSec Engineer**, quero que a proveniência de todo o código incorporad
 
 ---
 
-## 🏁 Recomendações Finais
+## 🏁 Recomendações Finais {#-recomendações-finais}
 
 O desenvolvimento seguro deve ser tratado como um **processo contínuo e mensurável**.  
 As *user stories* deste capítulo operacionalizam as prescrições normativas, assegurando que cada prática deixa rasto verificável e que o grau de aplicação é proporcional ao risco.  

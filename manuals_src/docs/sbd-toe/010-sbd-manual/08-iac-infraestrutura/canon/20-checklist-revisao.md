@@ -20,7 +20,7 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                             | Verificado? |
 | -------------------------------------------------------------------------------- | ----------- |
@@ -42,7 +42,7 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 * Este checklist pode ser aplicado manualmente (ex: revisão de PR) ou integrado no CI/CD como gate.
 * Pode ser usado em revisões formais de arquitetura, releases ou onboarding de novos repositórios.
@@ -54,7 +54,7 @@ Este checklist aplica-se a todos os projetos de **Infraestrutura como Código (I
 
 ---
 
-## 📊 Conformidade e KPI
+## 📊 Conformidade e KPI {#-conformidade-e-kpi}
 
 * A validação deste checklist permite declarar **conformidade com o Capítulo 08 - Infraestrutura como Código**.
 * A contagem de itens verificados pode ser usada para **KPIs operacionais de adoção e maturidade**.

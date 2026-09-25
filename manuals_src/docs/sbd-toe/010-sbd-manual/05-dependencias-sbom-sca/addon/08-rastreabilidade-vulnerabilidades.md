@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain, rastreabilidade]
 
 # Rastreabilidade entre Vulnerabilidades, Componentes e Ações
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que cada vulnerabilidade identificada em componentes de terceiros tem uma **rastreabilidade completa** desde a origem (SBOM + SCA), passando por análise, até à correção ou aceitação documentada.
 
@@ -15,7 +15,7 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 
 ---
 
-## 🔢 Elementos da rastreabilidade
+## 🔢 Elementos da rastreabilidade {#-elementos-da-rastreabilidade}
 
 | Elemento                 | Exemplo                                      |
 |--------------------------|----------------------------------------------|
@@ -32,7 +32,7 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 
 ---
 
-## 📄 Template de registo
+## 📄 Template de registo {#-template-de-registo}
 
 ```yaml
 # Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02.
@@ -53,7 +53,7 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 
 ---
 
-## 🛠️ Integração com ALM / backlog
+## 🛠️ Integração com ALM / backlog {#️-integração-com-alm--backlog}
 
 - Findings SCA devem **criar automaticamente tarefas** de correção (via API ou webhook)
 - Os tickets devem conter:
@@ -66,7 +66,7 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 
 ---
 
-## ✅ Critérios de conclusão de finding
+## ✅ Critérios de conclusão de finding {#-critérios-de-conclusão-de-finding}
 
 | Estado final        | Requisitos obrigatórios                                  |
 |---------------------|-------------------------------------------------------------|
@@ -77,7 +77,7 @@ Garantir que cada vulnerabilidade identificada em componentes de terceiros tem u
 
 ---
 
-## 🔗 Ligações com outros ficheiros
+## 🔗 Ligações com outros ficheiros {#-ligações-com-outros-ficheiros}
 
 | Documento                   | Função na rastreabilidade                          |
 |-----------------------------|---------------------------------------------------------|

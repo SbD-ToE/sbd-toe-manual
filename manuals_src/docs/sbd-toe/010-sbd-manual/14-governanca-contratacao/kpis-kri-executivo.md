@@ -10,7 +10,7 @@ tags: [kri, executivo, ciso, board, dashboard, risco, governacao]
 
 # Indicadores de Risco - Visão Executiva
 
-## Para que serve este documento
+## Para que serve este documento {#para-que-serve-este-documento}
 
 O programa SbD-ToE produz dezenas de indicadores técnicos detalhados - um por domínio, por capítulo, por tipo de controlo. Esse detalhe é necessário para as equipas operacionais, mas não é a leitura certa para a direcção ou o board.
 
@@ -22,7 +22,7 @@ Os oito indicadores são um **subconjunto curado** dos indicadores técnicos - n
 
 ---
 
-## Os oito indicadores - visão rápida
+## Os oito indicadores - visão rápida {#os-oito-indicadores---visão-rápida}
 
 | # | Pergunta | L1 | L2 | L3 | Revisto |
 |---|----------|----|----|----|---------|
@@ -37,7 +37,7 @@ Os oito indicadores são um **subconjunto curado** dos indicadores técnicos - n
 
 ---
 
-## Como ler o semáforo
+## Como ler o semáforo {#como-ler-o-semáforo}
 
 | Cor | Significado |
 |-----|-------------|
@@ -49,11 +49,11 @@ Para os indicadores de tempo (5 e 6): amarelo = até ao dobro do objectivo; verm
 
 ---
 
-## Cada indicador em detalhe
+## Cada indicador em detalhe {#cada-indicador-em-detalhe}
 
 ---
 
-### 1 - Inventário e classificação do portfólio
+### 1 - Inventário e classificação do portfólio {#1---inventário-e-classificação-do-portfólio}
 
 **A pergunta:** sabemos quantas aplicações temos e qual o nível de risco de cada uma?
 
@@ -67,7 +67,7 @@ Sem um inventário completo e com níveis de risco atribuídos, todos os outros 
 
 ---
 
-### 2 - Responsabilidade por aplicação
+### 2 - Responsabilidade por aplicação {#2---responsabilidade-por-aplicação}
 
 **A pergunta:** para cada aplicação, existe um nome próprio responsável pela sua segurança?
 
@@ -81,7 +81,7 @@ Sem um responsável identificado, não existe ponto de escalada quando algo corr
 
 ---
 
-### 3 - Exposição a falhas críticas em produção
+### 3 - Exposição a falhas críticas em produção {#3---exposição-a-falhas-críticas-em-produção}
 
 **A pergunta:** quantas das nossas aplicações em produção têm falhas de segurança graves conhecidas que ainda não foram corrigidas?
 
@@ -95,7 +95,7 @@ Falhas críticas conhecidas - identificadas publicamente, com base de dados de v
 
 ---
 
-### 4 - Controlos que nunca podem falhar
+### 4 - Controlos que nunca podem falhar {#4---controlos-que-nunca-podem-falhar}
 
 **A pergunta:** existem credenciais de acesso expostas em código, ou autorizações de risco que já expiraram sem renovação?
 
@@ -112,7 +112,7 @@ Dois controlos cujo único valor aceitável é zero - não "poucos", não "em pr
 
 ---
 
-### 5 - Velocidade de detecção
+### 5 - Velocidade de detecção {#5---velocidade-de-detecção}
 
 **A pergunta:** quando ocorre um incidente ou ataque, quanto tempo passa até sabermos?
 
@@ -126,7 +126,7 @@ O tempo que decorre entre um ataque e a sua detecção determina o tamanho do da
 
 ---
 
-### 6 - Velocidade de resposta
+### 6 - Velocidade de resposta {#6---velocidade-de-resposta}
 
 **A pergunta:** depois de detectado o incidente, quanto tempo passa até a organização agir?
 
@@ -140,7 +140,7 @@ Detectar um incidente não resolve o problema - a resposta é que limita o dano.
 
 ---
 
-### 7 - Formação das equipas
+### 7 - Formação das equipas {#7---formação-das-equipas}
 
 **A pergunta:** as pessoas que desenvolvem e operam os sistemas têm conhecimentos de segurança actualizados?
 
@@ -154,7 +154,7 @@ A maioria dos incidentes de segurança tem origem em erro humano - uma configura
 
 ---
 
-### 8 - Validação independente
+### 8 - Validação independente {#8---validação-independente}
 
 **A pergunta:** as aplicações mais críticas foram testadas por alguém de fora da organização?
 
@@ -168,7 +168,7 @@ Os processos internos de segurança validam que os controlos existem - mas não 
 
 ---
 
-## Situações que requerem atenção imediata
+## Situações que requerem atenção imediata {#situações-que-requerem-atenção-imediata}
 
 As seguintes condições requerem atenção do CISO independentemente do período de revisão habitual:
 
@@ -182,7 +182,7 @@ As seguintes condições requerem atenção do CISO independentemente do períod
 
 ---
 
-## Quando um indicador está vermelho - onde analisar
+## Quando um indicador está vermelho - onde analisar {#quando-um-indicador-está-vermelho---onde-analisar}
 
 A visão executiva não inclui o detalhe de causa raiz - esse está nos indicadores técnicos de domínio. Quando um indicador está vermelho, a análise aprofundada faz-se aqui:
 

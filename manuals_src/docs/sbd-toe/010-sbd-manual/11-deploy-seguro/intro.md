@@ -19,7 +19,7 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 
 # Deploy Seguro
 
-## Contexto e objetivo
+## Contexto e objetivo {#contexto-e-objetivo}
 
 O momento de *deploy* é, por natureza, um dos mais delicados de todo o ciclo de vida. Até ao último instante, a aplicação pode estar íntegra, testada e auditada; mas se a passagem a produção for feita de forma insegura, o investimento anterior perde valor.
 
@@ -34,7 +34,7 @@ A segurança do *deploy* é também governação: traduz-se na capacidade de exp
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 O âmbito técnico do *deploy* seguro inclui, pelo menos, os seguintes eixos:
 
@@ -50,11 +50,11 @@ Estes elementos devem ser aplicados como um **conjunto coerente de controlos**: 
 
 ---
 
-## � Automação e Governação no Deploy
+## � Automação e Governação no Deploy {#-automação-e-governação-no-deploy}
 
 O deploy seguro combina **automação extensiva** com **governação explícita**, diferenciando:
 
-### Decisões Determinísticas (Automação Soberana)
+### Decisões Determinísticas (Automação Soberana) {#decisões-determinísticas-automação-soberana}
 
 Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a automação pode operar sem intervenção humana:
 
@@ -65,7 +65,7 @@ Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a au
 
 **Princípio**: Automação determinística **pode operar sem aprovação humana** se critérios estão formalmente definidos e versionados.
 
-### Decisões Não-Determinísticas (Governação Obrigatória)
+### Decisões Não-Determinísticas (Governação Obrigatória) {#decisões-não-determinísticas-governação-obrigatória}
 
 ⚠️ **CRÍTICO**: Automação não-determinística **NÃO PODE** operar sem governação humana.
 
@@ -83,7 +83,7 @@ Quando decisões envolvem **contexto, trade-offs ou heurísticas**, exigem valid
 
 **Princípio**: Decisões não-determinísticas **NÃO PODEM** ser automatizadas sem validação, aprovação e rastreabilidade humanas. A automação pode **assistir**, mas nunca **decidir sozinha**.
 
-### Guardrails de Automação
+### Guardrails de Automação {#guardrails-de-automação}
 
 Mesmo decisões automatizadas têm **limites explícitos** para ações irreversíveis:
 
@@ -98,7 +98,7 @@ Mesmo decisões automatizadas têm **limites explícitos** para ações irrevers
 
 ---
 
-## 🔐 Gestão de Exceções
+## 🔐 Gestão de Exceções {#-gestão-de-exceções}
 
 Exceções a gates automáticos (ex: CVE não-aplicável, falso positivo SAST) seguem processo formal:
 
@@ -124,7 +124,7 @@ Exceções a gates automáticos (ex: CVE não-aplicável, falso positivo SAST) s
 
 ---
 
-## �🧪 Prescrição prática
+## �🧪 Prescrição prática {#-prescrição-prática}
 
 O que distingue organizações maduras não é apenas *o que* fazem no *deploy*, mas **como operacionalizam o processo como um mecanismo repetível de validação e contenção de risco**, com evidência objetiva.
 
@@ -142,7 +142,7 @@ O que distingue organizações maduras não é apenas *o que* fazem no *deploy*,
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 Nenhum *deploy* seguro é responsabilidade de um só perfil. A prática exige coordenação transversal:
 
@@ -156,7 +156,7 @@ Esta matriz não é opcional: é o que garante que cada *deploy* é simultaneame
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|

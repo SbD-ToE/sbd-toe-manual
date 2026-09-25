@@ -18,7 +18,7 @@ A aplicação eficaz do **Capítulo 10 - Testes de Segurança** exige que exista
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ A validação de segurança eficaz não depende apenas de ferramentas - depende de **políticas claras que estabeleçam critérios, responsabilidades e controlo contínuo**.
 
@@ -34,7 +34,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                       | Obrigatória? | Aplicação                                 | Resumo do conteúdo necessário |
 |--------------------------------------------------------|--------------|--------------------------------------------|-------------------------------|
@@ -50,7 +50,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política deve incluir, pelo menos:
 
@@ -64,7 +64,7 @@ Cada política deve incluir, pelo menos:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **aprovadas em conjunto pelas áreas de Segurança, Qualidade e Desenvolvimento**;
 - Devem ser **documentadas, acessíveis e integradas no ciclo de vida de software**;

@@ -10,7 +10,7 @@ sidebar_position: 12
 
 # Priorização de Vulnerabilidades com EPSS e KEV
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 O CVSS mede a **severidade** de uma vulnerabilidade — o impacto potencial se for explorada — mas não mede a **probabilidade** de essa exploração ocorrer, nem se já está a acontecer. Um SLA de patching assente apenas em CVSS trata todas as vulnerabilidades de severidade igual como igualmente urgentes, quando a evidência de exploração as separa de forma decisiva.
 
@@ -27,7 +27,7 @@ Aplicabilidade: **L2 e L3**. Sistemas L1 mantêm a priorização por severidade;
 
 ---
 
-## EPSS — probabilidade de exploração
+## EPSS — probabilidade de exploração {#epss--probabilidade-de-exploração}
 
 O EPSS atribui a cada CVE um valor entre **0 e 1**, correspondente à probabilidade estimada de exploração nos 30 dias seguintes, e um **percentil** que posiciona esse CVE face a todos os outros. O modelo é atualizado **diariamente** a partir de dados de exploração observados e de características da própria vulnerabilidade.
 
@@ -41,7 +41,7 @@ O threshold de EPSS que aciona escalonamento deve ser definido pela organizaçã
 
 ---
 
-## KEV — exploração confirmada
+## KEV — exploração confirmada {#kev--exploração-confirmada}
 
 O catálogo KEV da CISA, estabelecido pela *Binding Operational Directive* 22-01, lista vulnerabilidades para as quais existe **evidência de exploração ativa**. Cada entrada inclui um prazo de remediação vinculativo para as agências federais norte-americanas, e funciona como sinal autoritativo de exploração real para qualquer organização.
 
@@ -52,7 +52,7 @@ A presença de um CVE no KEV altera a natureza da decisão:
 
 ---
 
-## Integração na priorização de remediação
+## Integração na priorização de remediação {#integração-na-priorização-de-remediação}
 
 A ordem de remediação resulta da composição de três sinais: severidade (CVSS), probabilidade (EPSS) e exploração confirmada (KEV). O SLA por severidade fixa o prazo máximo; EPSS e KEV determinam o que se remedia **primeiro** dentro e abaixo desse prazo.
 
@@ -68,7 +68,7 @@ A regra de fecho é a que protege o piso: **a camada EPSS/KEV nunca atrasa uma r
 
 ---
 
-## Disciplina epistémica
+## Disciplina epistémica {#disciplina-epistémica}
 
 - O EPSS é uma **estimativa**, não uma medição de certeza. Decisões de risco assentes nele devem registar que o valor é probabilístico e datado.
 - O KEV é um sinal **incompleto por construção** — cataloga exploração *confirmada*, não toda a exploração existente.
@@ -76,7 +76,7 @@ A regra de fecho é a que protege o piso: **a camada EPSS/KEV nunca atrasa uma r
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

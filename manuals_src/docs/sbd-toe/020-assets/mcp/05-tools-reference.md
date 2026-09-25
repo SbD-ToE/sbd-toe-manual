@@ -21,9 +21,9 @@ Cada tool abaixo lista parâmetros, *output* esperado, e padrão recomendado.
 
 ---
 
-## CONSULT mode
+## CONSULT mode {#consult-mode}
 
-### `search_sbd_toe_manual`
+### `search_sbd_toe_manual` {#search_sbd_toe_manual}
 
 Pesquisa narrativa com citações — quando o utilizador faz perguntas conceptuais ("o que é threat modeling?", "como funciona SBOM").
 
@@ -36,7 +36,7 @@ Pesquisa narrativa com citações — quando o utilizador faz perguntas conceptu
 
 ---
 
-### `answer_sbd_toe_manual`
+### `answer_sbd_toe_manual` {#answer_sbd_toe_manual}
 
 Q&A em linguagem natural — recupera contexto do manual e pede a síntese da resposta ao modelo do cliente via *MCP sampling*.
 
@@ -48,7 +48,7 @@ Em clientes **sem suporte de MCP sampling** (ex.: Claude Code), a tool **não in
 
 ---
 
-### `consult_security_requirements`
+### `consult_security_requirements` {#consult_security_requirements}
 
 **Determinístico**. Devolve o conjunto de requisitos + controlos activos para um *risk level*, opcionalmente filtrado por *concerns*.
 
@@ -89,7 +89,7 @@ Valores fora deste enum **não resolvem** (não há *fuzzy match*): usar `loggin
 **Tamanhos típicos:** L1 ≈ 22k chars · L2 ≈ 36k chars · L3 ≈ 36k chars.
 **Regra prática:** **sempre** passar `concerns` em L2/L3 (reduz para ~9k por *concern set*).
 
-#### Exemplo
+#### Exemplo {#exemplo}
 
 ```json
 consult_security_requirements({"risk_level": "L2", "concerns": ["auth", "logging"]})
@@ -99,7 +99,7 @@ Devolve apenas requisitos das categorias **AUT/ACC/SES** (auth) + **LOG** (loggi
 
 ---
 
-### `map_sbd_toe_applicability`
+### `map_sbd_toe_applicability` {#map_sbd_toe_applicability}
 
 Que capítulos / controlos se aplicam ao projecto dado o seu perfil.
 
@@ -111,7 +111,7 @@ Que capítulos / controlos se aplicam ao projecto dado o seu perfil.
 
 ---
 
-### `get_sbd_toe_chapter_brief`
+### `get_sbd_toe_chapter_brief` {#get_sbd_toe_chapter_brief}
 
 Resumo estruturado de um capítulo — fases, artefactos (`ART-*`), tópicos.
 
@@ -121,7 +121,7 @@ Resumo estruturado de um capítulo — fases, artefactos (`ART-*`), tópicos.
 
 ---
 
-### `list_sbd_toe_chapters`
+### `list_sbd_toe_chapters` {#list_sbd_toe_chapters}
 
 Índice — `chapter_id`, `title`, `min_level`, `domains`.
 
@@ -129,7 +129,7 @@ Resumo estruturado de um capítulo — fases, artefactos (`ART-*`), tópicos.
 
 ---
 
-### `query_sbd_toe_entities`
+### `query_sbd_toe_entities` {#query_sbd_toe_entities}
 
 Resolve uma entidade por **id exato** ou, se o token não for um id, faz *fallback* para busca semântica.
 
@@ -169,7 +169,7 @@ query_sbd_toe_entities({"query": "REQ-010"})
 
 ---
 
-### `resolve_entities`
+### `resolve_entities` {#resolve_entities}
 
 Filtro de baixo nível sobre a ontologia — *dot-notation* nos `filters`.
 
@@ -190,9 +190,9 @@ resolve_entities({"record_type": "requirement", "filters": {"requirement_id": "R
 
 ---
 
-## GUIDE mode
+## GUIDE mode {#guide-mode}
 
-### `get_guide_by_role`
+### `get_guide_by_role` {#get_guide_by_role}
 
 **Determinístico**. Práticas atribuídas por *role* e/ou fase do SDLC.
 
@@ -208,7 +208,7 @@ resolve_entities({"record_type": "requirement", "filters": {"requirement_id": "R
 
 ---
 
-### `get_threat_landscape`
+### `get_threat_landscape` {#get_threat_landscape}
 
 **Determinístico**. *Threats* relevantes para um *risk level* / *concern*, com mitigações.
 
@@ -242,7 +242,7 @@ Os *concerns* de **base** (`auth`, `validation`, `api`, …) roteiam para o **ca
 
 ---
 
-### `plan_sbd_toe_repo_governance`
+### `plan_sbd_toe_repo_governance` {#plan_sbd_toe_repo_governance}
 
 Lista os artefactos que o manual identifica para um repositório, agrupados por capítulo.
 
@@ -252,7 +252,7 @@ Lista os artefactos que o manual identifica para um repositório, agrupados por 
 
 ---
 
-### `map_sbd_toe_review_scope`
+### `map_sbd_toe_review_scope` {#map_sbd_toe_review_scope}
 
 Dado um conjunto de ficheiros alterados, devolve que **bundles do manual** rever.
 
@@ -264,7 +264,7 @@ Dado um conjunto de ficheiros alterados, devolve que **bundles do manual** rever
 
 ---
 
-### `prepare_sbd_toe_codegen_context`
+### `prepare_sbd_toe_codegen_context` {#prepare_sbd_toe_codegen_context}
 
 A tool **mais sofisticada** — devolve contexto determinístico para *codegen*, *review* ou *test-plan*.
 
@@ -294,9 +294,9 @@ Ver guia detalhado em [Caso de uso — codegen grounded](./casos-uso/codegen-gro
 
 ---
 
-## SETUP mode
+## SETUP mode {#setup-mode}
 
-### `generate_sbd_toe_skill`
+### `generate_sbd_toe_skill` {#generate_sbd_toe_skill}
 
 Gera conteúdo de configuração para o cliente. **Sem `role`** devolve o *agent guide* canónico (`sbd://toe/agent-guide`); **com `role`** devolve uma *skill* ou *subagent* especializado no *slice* desse papel.
 
@@ -314,7 +314,7 @@ Ver [Skills e agentes](./04-skills-agentes.md).
 
 ---
 
-### `setup_sbd_toe_agent` (prompt)
+### `setup_sbd_toe_agent` (prompt) {#setup_sbd_toe_agent-prompt}
 
 Tecnicamente um *prompt*, não uma *tool* — mas funciona como inicializador da sessão.
 
@@ -324,39 +324,39 @@ Tecnicamente um *prompt*, não uma *tool* — mas funciona como inicializador da
 
 ---
 
-## Implementation view (V5)
+## Implementation view (V5) {#implementation-view-v5}
 
 Estas tools respondem a **"como pôr de pé e governar o SbD"** — distinta da vista operacional ("o que fazer em cada fase do SDLC"). Todas são *coverage-preserving* (paginação com `coverage.hasMore`/`nextOffset`; nada truncado em silêncio) e devolvem uma banda `next` com os próximos passos sugeridos.
 
-### `get_sbd_toe_chapter_implementation_checklist`
+### `get_sbd_toe_chapter_implementation_checklist` {#get_sbd_toe_chapter_implementation_checklist}
 
 A narrativa de implementação canon/20 de um capítulo (o "como implementar"), distinta do DoD estruturado de *user story* (esse está em `get_guide_by_role(include_detail=true)`).
 
 **Parâmetros:** `chapter` (id ou número), `risk_level?`, `limit?`, `offset?`
 **Output:** `data.items[]` (prosa com `chunk_id` rastreável) + `next`.
 
-### `get_sbd_toe_operating_model`
+### `get_sbd_toe_operating_model` {#get_sbd_toe_operating_model}
 
 RACI, *decision-rights*, cadências de governança e modelos de organização, promovidos do *rollout playbook*.
 
 **Parâmetros:** `orgScope?`, `limit?`, `offset?`
 **Output:** `data.sections[]` (prosa, paginado). Declara a fronteira: **não prescreve organigrama** (varia por setor/dimensão).
 
-### `plan_sbd_toe_rollout`
+### `plan_sbd_toe_rollout` {#plan_sbd_toe_rollout}
 
 Roadmap por fases — as fases canónicas do ciclo de vida mapeadas a capítulos.
 
 **Parâmetros:** `orgProfile?`, `horizon?`, `limit?`, `offset?`
 **Output:** `data.phases[]` (`order`, `phase_id`, `label`, `chapter`), `model: "phase-ordered-mvp"`. O DAG de dependências é **deferido** (declarado, não fingido).
 
-### `get_sbd_toe_verification_matrix`
+### `get_sbd_toe_verification_matrix` {#get_sbd_toe_verification_matrix}
 
 O lado **EXPECTED** da verificação: por requisito/controlo, o método de validação + evidência esperada + referência a *EvidencePattern*. Complemento determinístico do auditor e do plano de testes.
 
 **Parâmetros:** `risk_level` (obrigatório), `limit?`, `offset?`
 **Output:** `data.rows[]` (`evidence_pattern_id` `EP-*`, `requirement_id`, `control_id`, `validation_method`, `expected_evidence`, `evidence_type`, `expected_artifact_type_ids[]`, `source`) + `coverage_gaps` (requisitos sem padrão — declarados).
 
-### `assess_sbd_toe_implementation`
+### `assess_sbd_toe_implementation` {#assess_sbd_toe_implementation}
 
 Auto-relato de postura: compara valores de KPI submetidos contra os *thresholds* por nível.
 
@@ -367,7 +367,7 @@ Auto-relato de postura: compara valores de KPI submetidos contra os *thresholds*
 Devolve os KPIs aplicáveis **todos** (sem paginação) — em L2 são ~92, o que torna o output grande. Submeter os `kpi_values` que se tem; os em falta vêm marcados `not_reported`.
 :::
 
-### `map_sbd_toe_regulatory_activation`
+### `map_sbd_toe_regulatory_activation` {#map_sbd_toe_regulatory_activation}
 
 Lente regulatória (o inverso da *provenance*): dado um *framework*, que áreas/capítulos do manual ele activa.
 
@@ -376,29 +376,29 @@ Lente regulatória (o inverso da *provenance*): dado um *framework*, que áreas/
 
 ---
 
-## Diagnóstico
+## Diagnóstico {#diagnóstico}
 
-### `inspect_sbd_toe_retrieval`
+### `inspect_sbd_toe_retrieval` {#inspect_sbd_toe_retrieval}
 
 Diagnóstico do retriever — útil quando uma query devolve resultados inesperados. Mostra ranking, scores, e *rule_trace* completo.
 
 ---
 
-## Combinatória — padrões recomendados
+## Combinatória — padrões recomendados {#combinatória--padrões-recomendados}
 
-### Pergunta estruturada
+### Pergunta estruturada {#pergunta-estruturada}
 
 ```
 consult_security_requirements(L2, ["auth"])
 ```
 
-### Pergunta narrativa
+### Pergunta narrativa {#pergunta-narrativa}
 
 ```
 search_sbd_toe_manual("threat modeling stride")
 ```
 
-### Resposta complexa (threat model / security plan)
+### Resposta complexa (threat model / security plan) {#resposta-complexa-threat-model--security-plan}
 
 ```
 1. consult_security_requirements(L2, concerns)   # requisitos + controlos
@@ -407,7 +407,7 @@ search_sbd_toe_manual("threat modeling stride")
 4. → gerar documento citando IDs dos 3 passos
 ```
 
-### PR review
+### PR review {#pr-review}
 
 ```
 1. map_sbd_toe_review_scope(changed_files)        # que capítulos
@@ -415,7 +415,7 @@ search_sbd_toe_manual("threat modeling stride")
 3. → enumerar findings citando CTRL-* + chapter_id
 ```
 
-### Codegen grounded
+### Codegen grounded {#codegen-grounded}
 
 ```
 1. prepare_sbd_toe_codegen_context(task, mode="codegen", ...)
@@ -423,6 +423,6 @@ search_sbd_toe_manual("threat modeling stride")
 3. se ready_for_codegen → gerar código + tests + security_rationale
 ```
 
-## A seguir
+## A seguir {#a-seguir}
 
 [Resources e prompts](./06-resources-prompts.md) — URIs `sbd://toe/*` para *grounding* estrutural e prompts pré-empacotados.

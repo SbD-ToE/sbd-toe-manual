@@ -10,7 +10,7 @@ tags: [governanca, ownership, excecoes, validacao]
 
 # Modelo de Governação para Security by Design
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer uma **estrutura formal de decisão, validação e responsabilização**, que permita aplicar de forma coerente e sustentada as práticas definidas no modelo SbD-ToE em toda a organização.
 
@@ -27,7 +27,7 @@ A execução técnica dessas decisões pode ser suportada por processos ou mecan
 
 ---
 
-## 👥 Papéis e responsabilidades
+## 👥 Papéis e responsabilidades {#-papéis-e-responsabilidades}
 
 A aplicação prática do SbD-ToE depende de papéis bem definidos, atribuídos formalmente e mantidos atualizados.
 
@@ -44,9 +44,9 @@ A aplicação prática do SbD-ToE depende de papéis bem definidos, atribuídos 
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
-### 📌 Decisões típicas com governação formal
+### 📌 Decisões típicas com governação formal {#-decisões-típicas-com-governação-formal}
 
 - Aceitação de risco quando controlos mínimos não são aplicados;
 - Aprovação de exceções a práticas dos capítulos técnicos;
@@ -54,7 +54,7 @@ A aplicação prática do SbD-ToE depende de papéis bem definidos, atribuídos 
 - Aprovação de fornecedores com desvios ou lacunas de segurança;
 - Escalonamento de desvios detetados em release ou produção.
 
-### 🗂️ Evidência e rastreabilidade
+### 🗂️ Evidência e rastreabilidade {#️-evidência-e-rastreabilidade}
 
 Cada decisão deve incluir:
 
@@ -69,7 +69,7 @@ Cada decisão deve incluir:
 
 ---
 
-## 🔁 Ciclo típico de governação
+## 🔁 Ciclo típico de governação {#-ciclo-típico-de-governação}
 
 1. Classificação de risco atribuída (Cap. 1);
 2. Seleção de requisitos mínimos aplicáveis (Cap. 2);
@@ -82,7 +82,7 @@ Cada decisão deve incluir:
 
 ---
 
-## 📄 Documentação recomendada
+## 📄 Documentação recomendada {#-documentação-recomendada}
 
 - **Política de Segurança by Design** (papéis, princípios e obrigações);
 - **Modelo de Decisão de Risco** (níveis de risco e alçada de aprovação);
@@ -91,7 +91,7 @@ Cada decisão deve incluir:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Formalizar o modelo por escrito e com validação executiva;
 - Exigir a justificação e aprovação formal de exceções;
@@ -101,7 +101,7 @@ Cada decisão deve incluir:
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo         | Relação com este modelo                             |
 |------------------------------|-----------------------------------------------------|

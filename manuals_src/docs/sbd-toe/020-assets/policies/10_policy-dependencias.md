@@ -9,7 +9,7 @@ sidebar_position: 10
 
 # Política de Gestão de Dependências
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **gestão segura de dependências externas** em projetos de software desenvolvidos ou operados pela organização.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todos os projetos com código de terceiros, independentemente da linguagem ou runtime, incluindo:
 
@@ -36,9 +36,9 @@ Esta política aplica-se a todos os projetos com código de terceiros, independe
 
 ---
 
-## 3. Critérios de aprovação de dependências
+## 3. Critérios de aprovação de dependências {#3-critérios-de-aprovação-de-dependências}
 
-### 3.1 Validação obrigatória por dependência nova
+### 3.1 Validação obrigatória por dependência nova {#31-validação-obrigatória-por-dependência-nova}
 
 Antes da inclusão de qualquer nova dependência num projeto L2/L3, deve ser realizada uma validação formal que cubra os seguintes critérios:
 
@@ -51,7 +51,7 @@ Antes da inclusão de qualquer nova dependência num projeto L2/L3, deve ser rea
 | **Popularidade e reputação** | Indícios de adoção ampla e historico de resposta a vulnerabilidades |
 | **Âmbito mínimo** | A dependência resolve o problema sem introduzir funcionalidades excessivas não necessárias |
 
-### 3.2 Registo de aprovação
+### 3.2 Registo de aprovação {#32-registo-de-aprovação}
 
 A aprovação de cada nova dependência deve ser registada em `dependencies-approval.md`, com:
 
@@ -61,7 +61,7 @@ A aprovação de cada nova dependência deve ser registada em `dependencies-appr
 - [ ] Resultado da verificação de CVEs à data de aprovação
 - [ ] Responsável pela aprovação e data
 
-### 3.3 Proporcionalidade
+### 3.3 Proporcionalidade {#33-proporcionalidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -72,9 +72,9 @@ A aprovação de cada nova dependência deve ser registada em `dependencies-appr
 
 ---
 
-## 4. Pinning de versões
+## 4. Pinning de versões {#4-pinning-de-versões}
 
-### 4.1 Obrigatoriedade
+### 4.1 Obrigatoriedade {#41-obrigatoriedade}
 
 Todas as dependências devem ser fixadas a versões específicas (pinning) de forma a garantir reprodutibilidade de build e evitar introdução involuntária de alterações:
 
@@ -84,14 +84,14 @@ Todas as dependências devem ser fixadas a versões específicas (pinning) de fo
 | L2 | Obrigatório; versão exata no manifesto ou lock file versionado no repositório |
 | L3 | Obrigatório; versão exata e hash de integridade sempre que o ecossistema suportar |
 
-### 4.2 Lock files
+### 4.2 Lock files {#42-lock-files}
 
 - O lock file (`package-lock.json`, `poetry.lock`, `Pipfile.lock`, `go.sum`, etc.) deve ser versionado no repositório e nunca gerado ad-hoc em ambientes CI
 - Alterações ao lock file devem ser revistas como parte da revisão de código
 
 ---
 
-## 5. Proibição de bibliotecas locais
+## 5. Proibição de bibliotecas locais {#5-proibição-de-bibliotecas-locais}
 
 A cópia de bibliotecas diretamente para o repositório (fora de package manager) é **proibida** sem exceção formal aprovada. Inclui:
 
@@ -112,7 +112,7 @@ Quando a inclusão local é tecnicamente inevitável, deve ser formalizada como 
 
 ---
 
-## 6. Bloqueio de fontes externas diretas
+## 6. Bloqueio de fontes externas diretas {#6-bloqueio-de-fontes-externas-diretas}
 
 Em L2/L3, dependências não devem ser resolvidas diretamente da internet em tempo de build. O pipeline deve:
 
@@ -124,9 +124,9 @@ A configuração do repositório interno deve ser registada em `repo-config.yaml
 
 ---
 
-## 7. SCA - Análise de composição de software
+## 7. SCA - Análise de composição de software {#7-sca---análise-de-composição-de-software}
 
-### 7.1 Integração no pipeline
+### 7.1 Integração no pipeline {#71-integração-no-pipeline}
 
 O pipeline CI/CD deve incluir análise SCA automática em cada build, cobrindo dependências diretas e transitivas:
 
@@ -136,17 +136,17 @@ O pipeline CI/CD deve incluir análise SCA automática em cada build, cobrindo d
 | L2 | Bloqueia findings High e Critical sem exceção aprovada |
 | L3 | Bloqueia findings Medium, High e Critical sem exceção aprovada |
 
-### 7.2 Ferramentas de referência
+### 7.2 Ferramentas de referência {#72-ferramentas-de-referência}
 
 Ferramentas aceites para SCA: OWASP Dependency-Check, Trivy, Grype, Snyk, ou equivalente com suporte a NVD/OSV.
 
-### 7.3 Artefacto de evidência
+### 7.3 Artefacto de evidência {#73-artefacto-de-evidência}
 
 O relatório SCA (`sca-report.html` ou JSON) deve ser arquivado como artefacto do pipeline com referência ao commit, nos termos da Política de Rastreabilidade.
 
 ---
 
-## 8. Alertas de vulnerabilidades em produção
+## 8. Alertas de vulnerabilidades em produção {#8-alertas-de-vulnerabilidades-em-produção}
 
 Para sistemas em produção, deve existir um mecanismo de correlação entre o SBOM da versão implantada e CVEs publicados após o deploy:
 
@@ -157,7 +157,7 @@ Para sistemas em produção, deve existir um mecanismo de correlação entre o S
 
 ---
 
-## 9. Auditoria periódica
+## 9. Auditoria periódica {#9-auditoria-periódica}
 
 Independentemente dos gates de build, as dependências devem ser auditadas periodicamente:
 
@@ -176,7 +176,7 @@ A auditoria deve cobrir:
 
 ---
 
-## 10. Artefactos
+## 10. Artefactos {#10-artefactos}
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
@@ -190,7 +190,7 @@ A auditoria deve cobrir:
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -202,7 +202,7 @@ A auditoria deve cobrir:
 
 ---
 
-## 12. Anexo — Provedores AI como dependência de fornecimento
+## 12. Anexo — Provedores AI como dependência de fornecimento {#12-anexo--provedores-ai-como-dependência-de-fornecimento}
 
 Modelos AI consumidos via *provider* externo (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) ou *self-hosted* (HuggingFace, vLLM, Ollama) são **dependências de fornecimento** com particularidades — versão pode mudar comportamento sem mudar tag visível, artefacto é opaco, ataque típico tem nome próprio (`AML.T0109` Supply Chain Rug Pull). Aplicam-se aqui:
 
@@ -215,7 +215,7 @@ A operacionalização detalhada destes pontos vive em [Policy 39 — AI BOM e Su
 
 ---
 
-## 13. Revisão e auditoria desta política
+## 13. Revisão e auditoria desta política {#13-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -226,7 +226,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 14. Referências normativas e técnicas
+## 14. Referências normativas e técnicas {#14-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

@@ -20,7 +20,7 @@ Diagramas ou descrições isoladas **não constituem decisão arquitetural**.
 
 ---
 
-## 1. O que constitui uma decisão arquitetural
+## 1. O que constitui uma decisão arquitetural {#1-o-que-constitui-uma-decisão-arquitetural}
 
 Uma decisão arquitetural é qualquer escolha técnica que:
 - afete propriedades de segurança, isolamento ou confiança;
@@ -32,7 +32,7 @@ Detalhes puramente locais de implementação não constituem, por si só, decis�
 
 ---
 
-## 2. Critérios mínimos de aceitação de uma decisão
+## 2. Critérios mínimos de aceitação de uma decisão {#2-critérios-mínimos-de-aceitação-de-uma-decisão}
 
 Uma decisão arquitetural é considerada válida quando, no mínimo:
 
@@ -45,7 +45,7 @@ Uma decisão arquitetural é considerada válida quando, no mínimo:
 
 ---
 
-## 3. Evidência mínima obrigatória
+## 3. Evidência mínima obrigatória {#3-evidência-mínima-obrigatória}
 
 A evidência associada a decisões arquiteturais deve incluir:
 
@@ -62,7 +62,7 @@ A evidência deve ser:
 
 ---
 
-## 4. Baseline arquitetural
+## 4. Baseline arquitetural {#4-baseline-arquitetural}
 
 O conjunto de decisões aprovadas constitui a **baseline arquitetural** do sistema.
 
@@ -73,7 +73,7 @@ A baseline:
 
 ---
 
-## 5. Invalidação e revisão de decisões
+## 5. Invalidação e revisão de decisões {#5-invalidação-e-revisão-de-decisões}
 
 Uma decisão arquitetural deve ser revista ou invalidada quando ocorre:
 
@@ -87,7 +87,7 @@ Decisões não revistas devem ser consideradas **potencialmente inválidas**.
 
 ---
 
-## 6. Integração com outros capítulos
+## 6. Integração com outros capítulos {#6-integração-com-outros-capítulos}
 
 As decisões arquiteturais:
 - materializam mitigação de ameaças identificadas no Cap. 3;

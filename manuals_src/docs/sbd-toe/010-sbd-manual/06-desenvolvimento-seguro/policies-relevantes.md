@@ -19,7 +19,7 @@ Estas políticas garantem que:
 
 ---
 
-## 📄 Políticas Organizacionais Relevantes
+## 📄 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Nome da Política                                  | Obrigatória? | Aplicação                            | Resumo do conteúdo necessário |
 |---------------------------------------------------|--------------|---------------------------------------|-------------------------------|
@@ -31,7 +31,7 @@ Estas políticas garantem que:
 
 ---
 
-## 📃 Estrutura mínima de cada política
+## 📃 Estrutura mínima de cada política {#-estrutura-mínima-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -44,7 +44,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - As políticas devem ser **oficialmente aprovadas e publicadas** pela gestão de segurança e engenharia;
 - Devem estar acessíveis, ser comunicadas de forma eficaz e integradas nos processos de onboarding e revisão técnica;

@@ -7,7 +7,7 @@ tags: [ci, cd, devsecops, threat modeling, automação, validação, iriusrisk]
 
 # Threat Modeling em CI/CD
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir como garantir - de forma testável e automatizável - que a atividade de *threat modeling*:
 
@@ -19,7 +19,7 @@ Definir como garantir - de forma testável e automatizável - que a atividade de
 
 ---
 
-## 📌 Requisitos mínimos por projeto
+## 📌 Requisitos mínimos por projeto {#-requisitos-mínimos-por-projeto}
 
 A presença de threat modeling não pode ser apenas simbólica: deve resultar em **artefactos rastreáveis, controlos efetivos e validações mensuráveis**.
 
@@ -33,7 +33,7 @@ A presença de threat modeling não pode ser apenas simbólica: deve resultar em
 
 ---
 
-## 🧲 Como validar no pipeline (CI/CD)
+## 🧲 Como validar no pipeline (CI/CD) {#-como-validar-no-pipeline-cicd}
 
 A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas também se:
 
@@ -50,7 +50,7 @@ A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas tam
 
 ---
 
-## ✅ Checklist CI/CD de conformidade mínima
+## ✅ Checklist CI/CD de conformidade mínima {#-checklist-cicd-de-conformidade-mínima}
 
 | Item                                                                | Verificado |
 | ------------------------------------------------------------------- | ---------- |
@@ -63,7 +63,7 @@ A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas tam
 
 ---
 
-## 📂 Estrutura sugerida do modelo
+## 📂 Estrutura sugerida do modelo {#-estrutura-sugerida-do-modelo}
 
 ```
 📁 threat-model/
@@ -77,16 +77,16 @@ A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas tam
 
 ---
 
-## 🛠️ Exemplos práticos e validações automatizadas
+## 🛠️ Exemplos práticos e validações automatizadas {#️-exemplos-práticos-e-validações-automatizadas}
 
-### Linting de artefactos:
+### Linting de artefactos: {#linting-de-artefactos}
 
 ```yaml
 - name: Verificar syntax YAML
   run: yamllint threat-model/threats.yaml
 ```
 
-### Validação de referências cruzadas:
+### Validação de referências cruzadas: {#validação-de-referências-cruzadas}
 
 ```bash
 grep -E 'TM-[0-9]{3}' threat-model/mitigations.md \
@@ -95,7 +95,7 @@ grep -E 'TM-[0-9]{3}' threat-model/mitigations.md \
   done
 ```
 
-### Verificar última revisão:
+### Verificar última revisão: {#verificar-última-revisão}
 
 ```bash
 REVIEWED=$(yq '.last_reviewed' threat-model/threat-model.yml)
@@ -106,9 +106,9 @@ fi
 
 ---
 
-## 🔄 Integração com IriusRisk
+## 🔄 Integração com IriusRisk {#-integração-com-iriusrisk}
 
-### 🧠 O que IriusRisk pode fazer automaticamente:
+### 🧠 O que IriusRisk pode fazer automaticamente: {#-o-que-iriusrisk-pode-fazer-automaticamente}
 
 | Capacidade                              | Detalhe                                               |
 | --------------------------------------- | ----------------------------------------------------- |
@@ -117,7 +117,7 @@ fi
 | Exportar dados via API                  | JSON/YAML para integração com CI/CD                   |
 | Criar tickets em Jira / ADO             | Integração com fluxos de backlog                      |
 
-### 🧲 O que ainda precisa ser verificado no CI/CD:
+### 🧲 O que ainda precisa ser verificado no CI/CD: {#-o-que-ainda-precisa-ser-verificado-no-cicd}
 
 | Validação necessária                         | Como fazer                                                 |
 | -------------------------------------------- | ---------------------------------------------------------- |
@@ -127,7 +127,7 @@ fi
 
 ---
 
-## ⚠️ Comportamento esperado da pipeline
+## ⚠️ Comportamento esperado da pipeline {#️-comportamento-esperado-da-pipeline}
 
 | Tipo de falha                                 | Reação recomendada da pipeline    |
 | --------------------------------------------- | --------------------------------- |
@@ -139,7 +139,7 @@ fi
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Tratar threat modeling como **artefacto obrigatório e verificável**;
 - Garantir rastreabilidade entre ameaça, controlo, requisito e backlog;
@@ -149,7 +149,7 @@ fi
 
 ---
 
-## 🛍️ Considerações finais
+## 🛍️ Considerações finais {#️-considerações-finais}
 
 O objetivo do CI/CD não é apenas **detetar a presença do modelo**, mas **confirmar o seu impacto real no projeto**.
 Este impacto manifesta-se em:

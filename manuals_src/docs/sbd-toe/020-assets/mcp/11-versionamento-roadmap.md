@@ -15,7 +15,7 @@ tags:
 
 O MCP server vive dois ritmos: o ritmo do *software* (releases no npm, *bugfixes*, novas tools) e o ritmo do *conteúdo* (cada *snapshot* traz consigo a versão do manual em que foi publicado). Os dois não andam sincronizados — e essa assimetria é a fonte da maior parte das perguntas de versionamento. Esta página explica como ler cada um, e o que está previsto a seguir.
 
-## Política de versionamento
+## Política de versionamento {#política-de-versionamento}
 
 O servidor segue **SemVer 2.0.0** com a seguinte semântica:
 
@@ -27,7 +27,7 @@ O servidor segue **SemVer 2.0.0** com a seguinte semântica:
 
 O servidor está actualmente em **0.x** — pré-estável; *breaking changes* podem ocorrer em *minor* até `1.0.0`.
 
-## Como saber a versão actual
+## Como saber a versão actual {#como-saber-a-versão-actual}
 
 Sempre via o resource:
 
@@ -44,7 +44,7 @@ npm view @shiftleftpt/sbd-toe-mcp versions  # histórico completo
 
 ---
 
-## Relação com versões do manual
+## Relação com versões do manual {#relação-com-versões-do-manual}
 
 | Componente | Versionamento | Onde |
 |---|---|---|
@@ -61,7 +61,7 @@ npm view @shiftleftpt/sbd-toe-mcp versions  # histórico completo
 
 ---
 
-## Release actual
+## Release actual {#release-actual}
 
 `@shiftleftpt/sbd-toe-mcp@0.10.2` (latest no npm) — *snapshot* do manual `v1.7.0`, KG formal `v1.6.0` (contrato de consumo v1.11).
 
@@ -82,11 +82,11 @@ Não inclui:
 
 ---
 
-## Roadmap (público)
+## Roadmap (público) {#roadmap-público}
 
 > Roadmap indicativo, sem datas duras. Prioridades podem mudar conforme feedback.
 
-### Entregue (`0.10.x`)
+### Entregue (`0.10.x`) {#entregue-010x}
 
 - **Vista de implementação (V5)** — checklist por capítulo, operating model, rollout, *verification matrix*, *assess* de KPIs.
 - **Role-skills** — `generate_sbd_toe_skill` com `role` / `format` / `flavour` + resources `sbd://toe/{skill,subagent}/{role}`.
@@ -95,17 +95,17 @@ Não inclui:
 - **`0.10.2` — alinhamento ao KG formal `v1.6.0` / manual `v1.7.0`** — AI Act e ENISA/CSA indexados; `REQ-AGN-001…004` e `OPS-015` servidos; `coverage_gaps` e concern `agents`; `declared_gap` / `citation_note`; gramática de IDs *fullmatch*.
 - **Policies e addons servidos** — `020-assets/policies/` e `addon/` dos capítulos (incluindo `macro-processos`) estão nos *chunks* consultáveis.
 
-### Curto prazo
+### Curto prazo {#curto-prazo}
 
 - **Estabilização para `1.0.0`** — fechar superfície de tools / resources, congelar *schemas*.
 - **Refinamento de `prepare_sbd_toe_codegen_context`** — mais *stacks* suportadas no `regulatory_overlay`.
 - **Documentação cliente-específica** — guias para Zed e Windsurf no GitHub do servidor.
 
-### Médio prazo
+### Médio prazo {#médio-prazo}
 
 - **Tools de comparação** — *diff* entre versões do canon, *diff* entre risk levels.
 
-### Longo prazo
+### Longo prazo {#longo-prazo}
 
 - **State layer / *stateful-assess*** (tier Premium) — verificação contra o estado real de CI / repo / runtime (o lado *observed* que hoje fica `not verified — runtime`).
 - **Protocolo de interação** — encadeamento dirigido pelo servidor para além da banda `next`.
@@ -115,32 +115,32 @@ Não inclui:
 
 ---
 
-## Changelog (resumo público)
+## Changelog (resumo público) {#changelog-resumo-público}
 
 Para o changelog detalhado por release, consultar:
 
 - [GitHub Releases](https://github.com/Shiftleftpt/sbd-toe-mcp-poc/releases)
 - npm: `npm view @shiftleftpt/sbd-toe-mcp time` (datas de cada versão)
 
-### `0.10.2` — actual
+### `0.10.2` — actual {#0102--actual}
 
 Alinhamento ao KG formal `v1.6.0` e ao manual `v1.7.0`: AI Act e ENISA/CSA indexados (os seis cross-checks), `REQ-AGN-001…004` e `OPS-015` servidos, ligações requisito→controlo completas com `coverage_gaps` declarado, concern `agents` (13 valores), `declared_gap` / `citation_note` em `query_sbd_toe_entities` / `resolve_entities`, gramática de IDs *fullmatch* (`EX-…` nunca resolve). 21 tools, 8 resources, 3 prompts. (`0.10.1`: re-*pin* intermédio ao mesmo bundle, sem alterações de superfície.)
 
-### `0.10.0`
+### `0.10.0` {#0100}
 
 Vista de implementação (checklist / operating model / rollout / verification matrix / assess de KPIs), role-skills (`role`/`format`/`flavour`), overlay regulatório como tool, banda `next` e outputs *coverage-preserving*. 21 tools, 8 resources, 2 prompts.
 
-### `0.9.x`
+### `0.9.x` {#09x}
 
 Estabilização do conjunto `consult` + `guide` + `codegen`. Refinamento da ontologia. Disciplina de *epistemic labels* documentada no *agent guide*.
 
-### `0.8.x` e anteriores
+### `0.8.x` e anteriores {#08x-e-anteriores}
 
 Iterações pré-publicação — adição progressiva de tools, refinamento de retrieval, primeiros clientes (Claude Code, Cursor).
 
 ---
 
-## Como acompanhar
+## Como acompanhar {#como-acompanhar}
 
 | Canal | Para |
 |---|---|
@@ -149,13 +149,13 @@ Iterações pré-publicação — adição progressiva de tools, refinamento de 
 | `sbd://toe/version` em sessão | Saber o que o cliente está realmente a usar |
 | [Manual web — Cross-check normativo](/sbd-toe/cross-check-normativo/intro) | Conteúdo regulatório actualizado |
 
-## Como contribuir
+## Como contribuir {#como-contribuir}
 
 Issues e PRs no repositório do servidor: [Shiftleftpt/sbd-toe-mcp-poc](https://github.com/Shiftleftpt/sbd-toe-mcp-poc).
 
 Para sugestões ao **conteúdo do manual** (capítulos 00–14, cross-checks, policies), o repositório alvo é [Shiftleftpt/SbD-ToE-Manual](https://github.com/Shiftleftpt/SbD-ToE-Manual). O MCP serve a *snapshot* do que está nesse repositório à data da publicação.
 
-## A seguir
+## A seguir {#a-seguir}
 
 - [Casos de uso](./casos-uso/) — quando precisares de receitas prontas.
 - [Troubleshooting / FAQ](./10-troubleshooting-faq.md) — quando algo não fizer sentido.

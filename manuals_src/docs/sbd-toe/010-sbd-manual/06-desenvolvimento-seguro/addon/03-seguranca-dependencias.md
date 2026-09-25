@@ -14,7 +14,7 @@ tags: [dependências, segurança, sbom, gestão, validação]
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Reduzir o risco de exploração via bibliotecas desatualizadas ou comprometidas.
 - Garantir que todas as dependências têm justificação técnica e validação de segurança.
@@ -32,7 +32,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Desenvolvedores**: ao adicionar ou atualizar pacotes.
 - **Tech leads / revisores técnicos**: ao aprovar PRs com alterações a `package.json`, `pom.xml`, `requirements.txt`, etc.
@@ -40,7 +40,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Sempre que for introduzida ou atualizada uma dependência.
 - Periodicamente, por via automatizada (ex: nightly scans).
@@ -49,7 +49,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## 🧱 Requisitos obrigatórios
+## 🧱 Requisitos obrigatórios {#-requisitos-obrigatórios}
 
 1. **Validação de CVEs por SCA (Software Composition Analysis)**
    - Scans automáticos com alertas e relatórios por PR ou build.
@@ -72,7 +72,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## 🚨 Sinais de risco
+## 🚨 Sinais de risco {#-sinais-de-risco}
 
 - Bibliotecas sem manutenção há mais de 1 ano.
 - Pacotes com menos de 10 estrelas e nenhum release oficial.
@@ -81,7 +81,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 - Scans automatizados em cada commit/PR (`dependency-check`, `snyk test`, etc.).
 - Aprovação manual de cada novo pacote.
@@ -90,7 +90,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 - Logs de execução dos scanners de dependências.
 - Ficheiro `.approved-deps.yml` ou equivalente, versionado.
@@ -99,7 +99,7 @@ Este documento define os critérios mínimos para a utilização segura de depen
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                    | Ficheiro associado               |
 |-----------------------------------------|----------------------------------|

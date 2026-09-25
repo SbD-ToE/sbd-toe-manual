@@ -15,7 +15,7 @@ Este documento define o modelo de **controlo sistemático e contínuo** da aplic
 
 ---
 
-## 🧭 Governação das práticas por domínio técnico
+## 🧭 Governação das práticas por domínio técnico {#-governação-das-práticas-por-domínio-técnico}
 
 | Capítulo / Domínio Técnico             | Mecanismos de Governação Esperados                                               | Exemplos de Evidência / KPI                         |
 |----------------------------------------|----------------------------------------------------------------------------------|-----------------------------------------------------|
@@ -31,7 +31,7 @@ Este documento define o modelo de **controlo sistemático e contínuo** da aplic
 
 ---
 
-## 🧩 Formato do controlo por aplicação
+## 🧩 Formato do controlo por aplicação {#-formato-do-controlo-por-aplicação}
 
 Cada aplicação deve ter um **repositório de conformidade**, com:
 
@@ -46,7 +46,7 @@ Cada aplicação deve ter um **repositório de conformidade**, com:
 
 ---
 
-## 🔁 Ciclo de validação contínua
+## 🔁 Ciclo de validação contínua {#-ciclo-de-validação-contínua}
 
 | Fase                      | Ação esperada                                    |
 |---------------------------|--------------------------------------------------|
@@ -57,7 +57,7 @@ Cada aplicação deve ter um **repositório de conformidade**, com:
 
 ---
 
-## 📡 Supervisão, KPIs e Escalonamento
+## 📡 Supervisão, KPIs e Escalonamento {#-supervisão-kpis-e-escalonamento}
 
 - O estado das práticas deve ser **consolidado em dashboards operacionais** com:
 
@@ -69,7 +69,7 @@ Cada aplicação deve ter um **repositório de conformidade**, com:
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Este modelo permite:
 

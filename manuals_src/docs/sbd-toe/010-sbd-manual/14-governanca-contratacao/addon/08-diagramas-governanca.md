@@ -13,7 +13,7 @@ Este anexo inclui diagramas que representam os principais fluxos de decisão, ra
 
 ---
 
-## 📌 1. Fluxo de aprovação de exceção
+## 📌 1. Fluxo de aprovação de exceção {#-1-fluxo-de-aprovação-de-exceção}
 
 ```mermaid
 flowchart TD
@@ -27,7 +27,7 @@ flowchart TD
 
 ---
 
-## 📅 2. Onboarding de fornecedor externo
+## 📅 2. Onboarding de fornecedor externo {#-2-onboarding-de-fornecedor-externo}
 
 ```mermaid
 flowchart TD
@@ -41,7 +41,7 @@ flowchart TD
 
 ---
 
-## 🔗 3. Rastreabilidade organizacional
+## 🔗 3. Rastreabilidade organizacional {#-3-rastreabilidade-organizacional}
 
 ```mermaid
 flowchart LR
@@ -54,7 +54,7 @@ flowchart LR
 
 ---
 
-## 🔄 4. Ciclo de revisão e validação continuada
+## 🔄 4. Ciclo de revisão e validação continuada {#-4-ciclo-de-revisão-e-validação-continuada}
 
 ```mermaid
 flowchart TD

@@ -9,7 +9,7 @@ sidebar_position: 22
 
 # Política de Aprovação de Plan IaC
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o processo formal de **revisão e aprovação de planos de execução de Infraestrutura como Código (IaC)** - `terraform plan`, `pulumi preview`, `cdk diff` ou equivalente - antes de qualquer operação de apply em ambientes de staging ou produção.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Ambiente | L1 | L2 | L3 |
 |---|---|---|---|
@@ -34,9 +34,9 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Geração do plan
+## 3. Geração do plan {#3-geração-do-plan}
 
-### 3.1 Origem do plan
+### 3.1 Origem do plan {#31-origem-do-plan}
 
 O plan deve ser gerado exclusivamente pelo pipeline CI/CD - não por execução manual local:
 
@@ -46,7 +46,7 @@ O plan deve ser gerado exclusivamente pelo pipeline CI/CD - não por execução 
 
 A geração local de plans para fins de revisão prévia é aceite durante o desenvolvimento, mas o plan que fundamenta a aprovação formal e o apply subsequente deve ser sempre gerado pelo pipeline.
 
-### 3.2 Conteúdo do output do plan
+### 3.2 Conteúdo do output do plan {#32-conteúdo-do-output-do-plan}
 
 O output do plan deve ser apresentado de forma legível no PR (comentário automático ou link para artefacto), incluindo:
 
@@ -57,9 +57,9 @@ O output do plan deve ser apresentado de forma legível no PR (comentário autom
 
 ---
 
-## 4. Revisão do plan
+## 4. Revisão do plan {#4-revisão-do-plan}
 
-### 4.1 Checklist de revisão
+### 4.1 Checklist de revisão {#41-checklist-de-revisão}
 
 Antes de aprovar um plan, o reviewer deve verificar:
 
@@ -71,7 +71,7 @@ Antes de aprovar um plan, o reviewer deve verificar:
 - [ ] Alterações de encriptação ou configurações de backup não removidas inadvertidamente
 - [ ] Tags obrigatórias presentes em novos recursos
 
-### 4.2 Reviewers obrigatórios
+### 4.2 Reviewers obrigatórios {#42-reviewers-obrigatórios}
 
 | Ambiente | L1 | L2 | L3 |
 |---|---|---|---|
@@ -82,7 +82,7 @@ A self-approval (o mesmo indivíduo que submeteu o PR aprova o plan) é proibida
 
 ---
 
-## 5. Separação de funções (SoD)
+## 5. Separação de funções (SoD) {#5-separação-de-funções-sod}
 
 Em L2/L3, o processo de apply deve implementar separação de funções:
 
@@ -96,7 +96,7 @@ Em L3, nenhuma pessoa individual deve ter permissão de executar unilateralmente
 
 ---
 
-## 6. Assinatura do plan (L3)
+## 6. Assinatura do plan (L3) {#6-assinatura-do-plan-l3}
 
 Em L3, o plan aprovado deve ser assinado antes de ser utilizado pelo job de apply:
 
@@ -107,7 +107,7 @@ Em L3, o plan aprovado deve ser assinado antes de ser utilizado pelo job de appl
 
 ---
 
-## 7. Janelas de execução de apply
+## 7. Janelas de execução de apply {#7-janelas-de-execução-de-apply}
 
 Em L3, o apply em produção deve ser executado dentro de uma janela de mudança definida:
 
@@ -117,7 +117,7 @@ Em L3, o apply em produção deve ser executado dentro de uma janela de mudança
 
 ---
 
-## 8. Rastreabilidade do apply
+## 8. Rastreabilidade do apply {#8-rastreabilidade-do-apply}
 
 Toda a operação de apply deve produzir evidência rastreável:
 
@@ -130,7 +130,7 @@ Em L3, os logs de apply devem ser imutáveis (WORM) e retidos conforme a Políti
 
 ---
 
-## 9. Apply de emergência
+## 9. Apply de emergência {#9-apply-de-emergência}
 
 Em situações de incidente com impacto em produção, pode ser necessário executar um apply fora do processo normal. Neste caso:
 
@@ -144,7 +144,7 @@ O apply manual directo ao provider (fora do pipeline) em produção é proibido 
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -155,7 +155,7 @@ O apply manual directo ao provider (fora do pipeline) em produção é proibido 
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -165,7 +165,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

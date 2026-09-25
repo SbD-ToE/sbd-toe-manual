@@ -15,7 +15,7 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 
 ---
 
-## ✅ Porque é relevante no contexto do SbD-ToE
+## ✅ Porque é relevante no contexto do SbD-ToE {#-porque-é-relevante-no-contexto-do-sbd-toe}
 
 - GenIA **sugere automaticamente práticas seguras**: escaping de input, separação de camadas, nomes significativos, modularidade.
 - Funciona como um **linter inteligente e adaptativo**, especialmente útil para perfis menos experientes.
@@ -26,7 +26,7 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 
 ---
 
-## 🔄 Onde reforça práticas do capítulo
+## 🔄 Onde reforça práticas do capítulo {#-onde-reforça-práticas-do-capítulo}
 
 | Prática SbD-ToE                     | Como GenIA contribui                                                  |
 |-------------------------------------|------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Estas ferramentas passaram a atuar como **assistentes contínuos**, não apenas 
 
 ---
 
-## 🔍 Pontos a observar com atenção crítica
+## 🔍 Pontos a observar com atenção crítica {#-pontos-a-observar-com-atenção-crítica}
 
 Sem ser uma ameaça, o uso de GenIA levanta pontos que devem ser acompanhados com discernimento técnico:
 
@@ -49,7 +49,7 @@ Sem ser uma ameaça, o uso de GenIA levanta pontos que devem ser acompanhados co
 
 ---
 
-## 📌 Considerações organizacionais
+## 📌 Considerações organizacionais {#-considerações-organizacionais}
 
 - O uso da GenIA pode ser benéfico **mesmo sem política formal**, mas deve ser **observado com maturidade técnica**.
 - Algumas organizações optam por definir guidelines leves: ex. marcar código assistido, não usar em módulos sensíveis, exigir revisão reforçada.
@@ -59,7 +59,7 @@ Sem ser uma ameaça, o uso de GenIA levanta pontos que devem ser acompanhados co
 
 ---
 
-## 🌐 Para além do desenvolvimento: o papel da IA no Security by Design
+## 🌐 Para além do desenvolvimento: o papel da IA no Security by Design {#-para-além-do-desenvolvimento-o-papel-da-ia-no-security-by-design}
 
 Embora este ficheiro foque o uso de GenIA durante a escrita e validação de código, existem **múltiplas aplicações emergentes de IA em todo o ciclo de vida do Security by Design**, incluindo:
 
@@ -71,7 +71,7 @@ Embora este ficheiro foque o uso de GenIA durante a escrita e validação de có
 
 > 💡 Estes casos reforçam a ideia de que **a IA pode e deve ser explorada como aliada do modelo SbD-ToE**, não apenas no desenvolvimento, mas em todo o ciclo de vida de segurança.
 
-### 🧭 Próximos passos sugeridos
+### 🧭 Próximos passos sugeridos {#-próximos-passos-sugeridos}
 
 O tema “IA aplicada ao Security by Design” será explorado de forma mais estruturada num **anexo futuro transversal** ou capítulo dedicado, cobrindo:
 
@@ -92,7 +92,7 @@ Há uma classe de artefactos que costuma escapar à disciplina de *secure develo
 
 A razão prática é simples: estes ficheiros decidem **o que o assistente sabe**, **que ferramentas pode invocar**, **como deve interagir com o utilizador e com os recursos da organização**. Se mudam silenciosamente — por *commit* sem revisão, por geração automática desatualizada, por sugestão aceite sem leitura — mudam o comportamento operacional sem rasto. Esse é exactamente o tipo de mudança que o processo de *code review* foi feito para impedir noutros contextos; aplica-se a mesma disciplina aqui.
 
-### 🧭 Princípios
+### 🧭 Princípios {#-princípios}
 
 1. **Versionamento em VCS.** Prompts, *skill files*, *agent files* e *rules* vivem no mesmo repositório onde vive o código a que se aplicam (ou num repositório dedicado, com integração equivalente). Não se tolera cópias em *clouds* pessoais como única fonte da verdade.
 2. **Revisão como código.** Cada alteração passa pelo mesmo *code review* que o código aplicacional (ver [Policy 15 — Revisão de Código](/sbd-toe/assets/policies/policy-revisao-codigo) §âmbito estendido). Reviewers olham para: instruções que escalam privilégios, *tools* novas adicionadas, *escapes* de redação, ambiguidades que abrem espaço a *prompt injection*.
@@ -100,7 +100,7 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 4. **Origem auditável quando gerados.** Quando o conteúdo vem de uma ferramenta canónica (ex.: `generate_sbd_toe_skill` do MCP server SbD-ToE — ver [mini-site MCP](/sbd-toe/assets/mcp/intro)), preservamos o cabeçalho identificador da fonte para que o *drift* seja detectável.
 5. **Re-gerar após *upgrade* da fonte.** Skill estática é cópia *point-in-time*. Quando o *upstream* muda (upgrade do servidor MCP, nova versão do *agent guide*, mudança no *runtime*), re-gera-se e re-revê-se; não se confia em alinhamento implícito.
 
-### 🛡️ Controlos práticos
+### 🛡️ Controlos práticos {#️-controlos-práticos}
 
 | Controlo | O que verifica | Onde corre |
 |---|---|---|
@@ -110,7 +110,7 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 | **Drift detection** | Skills geradas vs versão actual da fonte canónica; alerta quando divergência > N dias ou após *bump* da fonte | Job periódico em CI |
 | **Inventário versionado** | Lista de *skill files* + *agent files* + *rules* activos por projecto, com *owner* e cadência de re-revisão | Repositório de governança |
 
-### ⚠️ Anti-padrões observados
+### ⚠️ Anti-padrões observados {#️-anti-padrões-observados}
 
 - ❌ *Skill file* com instruções "*aceita sempre a sugestão sem perguntar*" — anula [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (Cap. 02) na origem.
 - ❌ Adição silenciosa de *tools* à *allowlist* num agent file via *commit* sem revisão — equivalente a alterar IAM policy sem aprovação.
@@ -118,7 +118,7 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 - ❌ *System prompt* com credenciais ou *tokens* embebidos — *system prompt* é tratado como conteúdo público (ver [Cap. 04 — boundary controls](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#ai-ml)); nunca embeber segredos.
 - ❌ Skill estática nunca regenerada após upgrade do MCP server — leitura de canon desatualizado mascarado de actual.
 
-### 📍 Onde aterra no resto do manual
+### 📍 Onde aterra no resto do manual {#-onde-aterra-no-resto-do-manual}
 
 - **Cap. 02** — [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) exige *mandate* versionado em VCS; o *mandate* referencia explicitamente o(s) *skill file(s)* / *agent file(s)* / *system prompt(s)* aplicáveis.
 - **Cap. 07** — *secret scanning* e *diff review* destes ficheiros são *gates* do pipeline.
@@ -133,14 +133,14 @@ A razão prática é simples: estes ficheiros decidem **o que o assistente sabe*
 
 Quando o output do modelo alimenta lógica aplicacional — *tool call* com argumentos, registo numa BD, decisão automatizada — o seu *formato* importa tanto como o seu *conteúdo*. Em 2026 os principais *providers* expõem mecanismos nativos para forçar o modelo a devolver output que adere a um *schema* declarado (Anthropic *tool use* + *structured outputs*, OpenAI *Structured Outputs* / *function calling*, Google *constrained generation*). Adopta-se estes mecanismos sempre que viável e, em qualquer caso, **validamos o output no servidor antes de o consumir**.
 
-### 🧭 Princípios
+### 🧭 Princípios {#-princípios-1}
 
 1. **Schema declarado lado-servidor.** Não se confia no modelo para "lembrar" o formato; declaramos o *schema* (JSON Schema, *Pydantic*, *Zod*, equivalente) no servidor que faz a chamada. O *schema* é parte do código revisto — versionado, testado, *type-checked*.
 2. **Mecanismos nativos do *provider* quando existem.** Anthropic *tool use* + *structured outputs* e OpenAI *Structured Outputs* garantem (com restrições) aderência sintática ao *schema* declarado. Prefere-se isto a *parsing* permissivo do texto bruto.
 3. **Validação dupla — sintáctica e semântica.** Aderir ao *schema* não basta. Tipos correctos, *ranges* dentro do esperado, IDs que existem na base, *side effects* dentro do *scope* do *mandate* (Policy 38). O modelo pode obedecer ao *schema* e ainda assim devolver `{"action": "delete_database"}` num contexto em que isso é proibido.
 4. **Falha aberta, com *fallback* declarado.** Quando o output não valida, o sistema **não consome o output** e segue *fallback* declarado (perguntar ao utilizador, escalar para humano, retornar erro tratado). Nunca *"try to parse anyway"*.
 
-### 🛡️ Padrões
+### 🛡️ Padrões {#️-padrões}
 
 | Padrão | Detalhe |
 |---|---|
@@ -151,14 +151,14 @@ Quando o output do modelo alimenta lógica aplicacional — *tool call* com argu
 | ***Tool call replay protection*** | Identificador único por *tool call* + verificação de idempotência quando aplicável; evita re-execução acidental |
 | **Telemetria do esquema** | Quando o output falha validação, `eval_run_id` + *schema version* + *output bruto redactado* entram em [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) para diagnóstico |
 
-### ⚠️ Anti-padrões
+### ⚠️ Anti-padrões {#️-anti-padrões}
 
 - ❌ ***Parsing* permissivo do texto bruto** — `re.search(r'\{.*\}', output)` é um *anti-pattern* notório; modelos com *tool use* nativo eliminam-no.
 - ❌ **Validação só do *schema*, sem validação semântica** — `{"action": "transfer_all_funds"}` aderente ao *schema* não é menos perigoso por o ser.
 - ❌ **Confiar no *system prompt* para forçar formato** ("*sempre devolve JSON*") em vez de mecanismos nativos do *provider* — funciona maior parte das vezes, falha exactamente quando importa.
 - ❌ **Output do modelo a alimentar `eval()` ou equivalente** — se o output do modelo se torna código executado, qualquer compromisso do modelo torna-se RCE. Tratar como input *user-untrusted* literalmente.
 
-### 📍 Onde aterra no resto do manual
+### 📍 Onde aterra no resto do manual {#-onde-aterra-no-resto-do-manual-1}
 
 - **Cap. 02** — [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*intent declaration*) é a contraparte semântica do *structured output* — declarar o *intent* antes da acção e validar o *output* antes da execução são dois lados do mesmo princípio.
 - **Cap. 04** — [boundary controls para prompt injection](../../arquitetura-segura/recomendacoes-avancadas#boundary-controls-para-prompt-injection) reforça que o output do modelo é *user-untrusted*; *structured outputs* dá a forma operacional dessa atitude.

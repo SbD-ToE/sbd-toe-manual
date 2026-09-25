@@ -20,7 +20,7 @@ Este documento operacionaliza essas preocupações sem “falar de tecnologia”
 
 ---
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 A segurança em pipelines não acontece apenas quando algo corre mal - ela é parte do seu ADN desde o primeiro commit.  
 Sempre que se cria, altera, executa ou promove um pipeline, existem *triggers* que exigem controlos específicos:
@@ -38,7 +38,7 @@ Sempre que se cria, altera, executa ou promove um pipeline, existem *triggers* q
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A responsabilidade em CI/CD é **partilhada**.  
 Um pipeline seguro resulta da soma de esforços: do programador que submete código com validações ativas, ao DevOps que endurece runners e segredos, até ao GRC que controla exceções e evidencia governação.
@@ -58,7 +58,7 @@ Um pipeline seguro resulta da soma de esforços: do programador que submete cód
 
 ---
 
-## 🧾 User Stories normalizadas
+## 🧾 User Stories normalizadas {#-user-stories-normalizadas}
 
 Cada prática é expressa como **user story reutilizável**, com critérios verificáveis, artefactos concretos e proporcionalidade por nível de risco.
 
@@ -67,7 +67,7 @@ Cada prática é expressa como **user story reutilizável**, com critérios veri
 
 ---
 
-### US-01 - Gestão segura de código fonte
+### US-01 - Gestão segura de código fonte {#us-01---gestão-segura-de-código-fonte}
 
 **Contexto.**  
 Sem controlo sobre o repositório, qualquer pipeline é vulnerável.
@@ -109,7 +109,7 @@ Políticas de branch protection; logs de revisão; histórico Git; auditoria de 
 
 ---
 
-### US-02 - Design seguro dos pipelines (versionamento, determinismo e revisão)
+### US-02 - Design seguro dos pipelines (versionamento, determinismo e revisão) {#us-02---design-seguro-dos-pipelines-versionamento-determinismo-e-revisão}
 
 **Contexto.**  
 Pipelines inseguros são alvos privilegiados de ataque - e pipelines não reprodutíveis destroem auditoria.
@@ -156,7 +156,7 @@ Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revis
 
 ---
 
-### US-03 - Scanners integrados (validação empírica obrigatória)
+### US-03 - Scanners integrados (validação empírica obrigatória) {#us-03---scanners-integrados-validação-empírica-obrigatória}
 
 **Contexto.**  
 Detetar cedo é mais barato e eficaz - mas só conta se houver execução real.
@@ -203,7 +203,7 @@ Relatórios de scanners; logs CI/CD; *exit codes*; registos de bloqueio; dashboa
 
 ---
 
-### US-04 - Gestão de segredos
+### US-04 - Gestão de segredos {#us-04---gestão-de-segredos}
 
 **Contexto.**  
 Segredos estáticos expõem a organização - e logs descuidados tornam-se um canal de fuga.
@@ -245,7 +245,7 @@ Políticas de segredos; logs de acesso; configuração OIDC; evidência de TTL/r
 
 ---
 
-### US-05 - Isolamento de runners
+### US-05 - Isolamento de runners {#us-05---isolamento-de-runners}
 
 **Contexto.**  
 Runners inseguros comprometem todo o ecossistema.
@@ -287,7 +287,7 @@ Configuração de runners; logs de execução; registos de isolamento; scripts d
 
 ---
 
-### US-06 - Assinatura e proveniência
+### US-06 - Assinatura e proveniência {#us-06---assinatura-e-proveniência}
 
 **Contexto.**  
 Artefactos não assinados perdem legitimidade - e artefactos sem proveniência enfraquecem auditoria e confiança.
@@ -331,7 +331,7 @@ Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria 
 
 ---
 
-### US-07 - Gates por risco (separação sinal/decisão)
+### US-07 - Gates por risco (separação sinal/decisão) {#us-07---gates-por-risco-separação-sinaldecisão}
 
 **Contexto.**  
 Nem todas as apps exigem o mesmo rigor - mas em nenhuma app um “sinal” substitui decisão.
@@ -377,7 +377,7 @@ Políticas de gates; logs de bloqueio; registos de alteração de thresholds; ev
 
 ---
 
-### US-08 - Cobertura ampliada (containers e SBOM)
+### US-08 - Cobertura ampliada (containers e SBOM) {#us-08---cobertura-ampliada-containers-e-sbom}
 
 **Contexto.**  
 Cobertura limitada cria pontos cegos e fragiliza supply chain.
@@ -419,7 +419,7 @@ Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 
 ---
 
-### US-09 - Rastreabilidade ponta-a-ponta (commit→pipeline→release)
+### US-09 - Rastreabilidade ponta-a-ponta (commit→pipeline→release) {#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease}
 
 **Contexto.**  
 Sem rastreio, auditoria é impossível - e investigação de incidentes torna-se especulativa.
@@ -461,7 +461,7 @@ Logs de pipelines; dashboards; registos de auditoria; exports (imutáveis quando
 
 ---
 
-### US-10 - Gestão de exceções (bypass controlado)
+### US-10 - Gestão de exceções (bypass controlado) {#us-10---gestão-de-exceções-bypass-controlado}
 
 **Contexto.**  
 Exceções mal geridas tornam-se risco estrutural e normalizam bypass.
@@ -504,7 +504,7 @@ Registo de exceções; logs de aprovação; relatórios de revisão; prazos auto
 
 ---
 
-### US-11 - Testes de segurança dinâmicos (DAST)
+### US-11 - Testes de segurança dinâmicos (DAST) {#us-11---testes-de-segurança-dinâmicos-dast}
 
 **Contexto.**  
 Testes estáticos apenas cobrem parcialmente; DAST em staging valida comportamento real.
@@ -546,7 +546,7 @@ Relatórios DAST; logs de execução; evidências de correção; rastreabilidade
 
 ---
 
-### US-12 - Métricas e conformidade organizacional
+### US-12 - Métricas e conformidade organizacional {#us-12---métricas-e-conformidade-organizacional}
 
 **Contexto.**  
 Sem visibilidade centralizada, risco acumula-se invisível.
@@ -588,7 +588,7 @@ Dashboard; logs centralizados; relatórios; alertas; evidência de retenção.
 
 ---
 
-### US-13 - Validação de integridade de imagens base
+### US-13 - Validação de integridade de imagens base {#us-13---validação-de-integridade-de-imagens-base}
 
 **Contexto.**  
 Imagens base comprometidas propagam risco a todo o ecossistema.
@@ -630,13 +630,13 @@ Registos de hashes/assinaturas; logs de validação; relatórios de drift; açõ
 
 ---
 
-## 🆕 User Stories adicionais (riscos de processo do CI/CD moderno)
+## 🆕 User Stories adicionais (riscos de processo do CI/CD moderno) {#-user-stories-adicionais-riscos-de-processo-do-cicd-moderno}
 
 As user stories seguintes tornam explícitas as preocupações de processo que, na prática, mais degradam a segurança quando a automação aumenta: **não-determinismo, confusão sinal/decisão, evidência fraca, fuga de contexto e diluição de responsabilidade**.
 
 ---
 
-### US-14 - Reprodutibilidade e determinismo do pipeline
+### US-14 - Reprodutibilidade e determinismo do pipeline {#us-14---reprodutibilidade-e-determinismo-do-pipeline}
 
 **Contexto.**  
 Sem reprodutibilidade, não há auditoria nem investigação de incidentes.
@@ -678,7 +678,7 @@ Execução rastreável (logs + config efetiva); ligação a commit; registos de 
 
 ---
 
-### US-15 - Separação formal entre sinal automático e decisão de promoção
+### US-15 - Separação formal entre sinal automático e decisão de promoção {#us-15---separação-formal-entre-sinal-automático-e-decisão-de-promoção}
 
 **Contexto.**  
 Um “score verde” não é uma decisão; uma decisão exige owner e evidência.
@@ -720,7 +720,7 @@ Registo de aprovação; evidência associada; logs de bloqueio; política public
 
 ---
 
-### US-16 - Evidência empírica obrigatória (anti-“relatórios sem execução”)
+### US-16 - Evidência empírica obrigatória (anti-“relatórios sem execução”) {#us-16---evidência-empírica-obrigatória-anti-relatórios-sem-execução}
 
 **Contexto.**  
 Resultados plausíveis não substituem execução real.
@@ -762,7 +762,7 @@ Run IDs; logs; *exit codes*; artefactos; política de evidência.
 
 ---
 
-### US-17 - Contenção de contexto e higiene de logs/outputs
+### US-17 - Contenção de contexto e higiene de logs/outputs {#us-17---contenção-de-contexto-e-higiene-de-logsoutputs}
 
 **Contexto.**  
 O pipeline “vê” tudo - logo, é onde a fuga de contexto é mais provável.
@@ -804,7 +804,7 @@ Configuração de logging; evidência de masking; registos de ativação/desativ
 
 ---
 
-### US-18 - Não-repúdio e ownership de promoções (ações irreversíveis)
+### US-18 - Não-repúdio e ownership de promoções (ações irreversíveis) {#us-18---não-repúdio-e-ownership-de-promoções-ações-irreversíveis}
 
 **Contexto.**  
 Se ninguém “assina” a promoção, ninguém responde pelo incidente.
@@ -1112,7 +1112,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero artefactos armazenados e tra
 
 ---
 
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:
 
@@ -1133,7 +1133,7 @@ Cada prática deixa pegadas técnicas. Sem elas, não há prova de conformidade:
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 Nem todas as apps exigem o mesmo nível de rigor.  
 A matriz assegura que o esforço é proporcional ao risco **sem nunca comprometer**: decisão humana, evidência empírica e rastreabilidade.
@@ -1155,7 +1155,7 @@ A matriz assegura que o esforço é proporcional ao risco **sem nunca compromete
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 A segurança de pipelines não é opcional: é o **mecanismo de confiança** de toda a entrega contínua.
 

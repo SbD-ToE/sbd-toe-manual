@@ -13,7 +13,7 @@ Estes indicadores ajudam a avaliar se o programa de formação está a ser efica
 
 ---
 
-## 🧮 KPIs operacionais
+## 🧮 KPIs operacionais {#-kpis-operacionais}
 
 | Métrica                                                      | Objetivo mínimo sugerido     |
 |--------------------------------------------------------------|------------------------------|
@@ -26,7 +26,7 @@ Estes indicadores ajudam a avaliar se o programa de formação está a ser efica
 
 ---
 
-## 🎯 Métricas qualitativas
+## 🎯 Métricas qualitativas {#-métricas-qualitativas}
 
 - Feedback dos participantes (pontuação ou NPS)
 - Pedidos de exceção ou dúvidas após formação

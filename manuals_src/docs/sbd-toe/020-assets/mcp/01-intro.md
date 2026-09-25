@@ -34,7 +34,7 @@ O servidor serve sempre o *snapshot* do manual da altura da publicação; a vers
 
 ---
 
-## Para que serve
+## Para que serve {#para-que-serve}
 
 Há três tipos de momento em que um agente recorre ao SbD-ToE — perceber **o que o manual diz**, perceber **como aplicar o que o manual diz**, e configurar-se a si próprio para o fazer bem. O MCP atende cada um com um conjunto distinto de *tools*:
 
@@ -51,9 +51,9 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 
 ---
 
-## Tools, resources e prompts disponíveis
+## Tools, resources e prompts disponíveis {#tools-resources-e-prompts-disponíveis}
 
-### Tools (operações)
+### Tools (operações) {#tools-operações}
 
 | Tool | Modo | Propósito |
 |---|---|---|
@@ -79,7 +79,7 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `inspect_sbd_toe_retrieval` | DIAG | Diagnóstico do retriever |
 | `generate_sbd_toe_skill` | SETUP | Skill/subagent por *role* (`format`, `flavour`) — ou o *agent guide* sem `role` |
 
-### Resources (URIs `sbd://toe/*`)
+### Resources (URIs `sbd://toe/*`) {#resources-uris-sbdtoe}
 
 | Resource URI | Conteúdo |
 |---|---|
@@ -92,7 +92,7 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `sbd://toe/subagent/{role}` | Definição de *subagent* de um *role* (= `format=subagent`, *harnessed*) |
 | `sbd://toe/version` | Nome / versão / *provenance* (manual, KG, ontologia) do servidor a correr |
 
-### Prompts
+### Prompts {#prompts}
 
 | Prompt | Quando |
 |---|---|
@@ -101,7 +101,7 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 
 ---
 
-## Vocabulário controlado
+## Vocabulário controlado {#vocabulário-controlado}
 
 O servidor expõe valores **fechados** para parâmetros — usar fora destes valores não devolve resultados.
 
@@ -125,7 +125,7 @@ O servidor expõe valores **fechados** para parâmetros — usar fora destes val
 
 ---
 
-## Convenções de identificadores
+## Convenções de identificadores {#convenções-de-identificadores}
 
 - **Requisitos**: `<CAT>-NNN` (ex.: `AUT-001`, `LOG-003`) — resolver por id exato via `query_sbd_toe_entities`
 - **Controlos**: `CTRL-<domain>-<slug>-<hash>` (ex.: `CTRL-identity-gestao-de-identidades-acessos-e-ownership-d0919c69af`). **Não** existe a forma `CTRL-<capítulo>-<número>`.
@@ -135,7 +135,7 @@ O servidor expõe valores **fechados** para parâmetros — usar fora destes val
 
 ---
 
-## Padrão epistémico exigido
+## Padrão epistémico exigido {#padrão-epistémico-exigido}
 
 Toda a resposta gerada com base no MCP deve rotular cada afirmação:
 
@@ -150,7 +150,7 @@ Em particular, o servidor **nunca** deve ser usado para declarar conformidade re
 
 ---
 
-## Próximos passos
+## Próximos passos {#próximos-passos}
 
 1. [Quickstart](./02-quickstart.md) — pôr a correr em 60 segundos (Claude Code, Cursor).
 2. [Instalação por cliente](./03-instalacao.md) — Claude Code, Claude Desktop, Cursor, VS Code (Copilot), Windsurf, Zed.

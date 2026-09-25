@@ -7,7 +7,7 @@ tags: [arquitetura, threat modeling, validação, revisão técnica, rastreabili
 
 # Integração do Threat Modeling na Validação de Arquitetura
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir como incorporar o *Threat Modeling* de forma estruturada no processo de **revisão técnica e validação de arquitetura**, garantindo que:
 
@@ -17,7 +17,7 @@ Definir como incorporar o *Threat Modeling* de forma estruturada no processo de 
 
 ---
 
-## 📁 Artefactos a validar
+## 📁 Artefactos a validar {#-artefactos-a-validar}
 
 Este processo está alinhado com as prescrições do **Capítulo 4 - Arquitetura Segura**, que define os artefactos mínimos exigidos para validação técnica:
 
@@ -30,7 +30,7 @@ Este processo está alinhado com as prescrições do **Capítulo 4 - Arquitetura
 
 ---
 
-## ✅ Critérios de aceitação para validação técnica
+## ✅ Critérios de aceitação para validação técnica {#-critérios-de-aceitação-para-validação-técnica}
 
 | Item obrigatório                           | Fonte                                | Verificado? |
 | ------------------------------------------ | ------------------------------------ | ----------- |
@@ -42,7 +42,7 @@ Este processo está alinhado com as prescrições do **Capítulo 4 - Arquitetura
 
 ---
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 | Situação                                  | Requisito de validação com threat modeling   |
 | ----------------------------------------- | -------------------------------------------- |
@@ -53,7 +53,7 @@ Este processo está alinhado com as prescrições do **Capítulo 4 - Arquitetura
 
 ---
 
-## 🔄 Integração com o ciclo de vida
+## 🔄 Integração com o ciclo de vida {#-integração-com-o-ciclo-de-vida}
 
 Este processo deve articular-se com o **Capítulo 6 - Desenvolvimento Seguro**, garantindo que:
 
@@ -64,7 +64,7 @@ Este processo deve articular-se com o **Capítulo 6 - Desenvolvimento Seguro**, 
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Tornar o threat model um entregável obrigatório nos projetos críticos;
 - Usar ferramentas que integrem threat modeling e documentação técnica (ex: IriusRisk, PlantUML, Draw.io);

@@ -10,7 +10,7 @@ A adoção eficaz do Capítulo 01 - Gestão de Risco - exige a existência de **
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas operacionais prescritas neste capítulo (classificação, revisão, aceitação, rastreabilidade) **devem ser legitimadas formalmente por políticas organizacionais aprovadas**.
 
@@ -26,7 +26,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                   | Obrigatória? | Aplicação                             | Conteúdo mínimo esperado                                                                                      |
 |----------------------------------------------------|--------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -37,7 +37,7 @@ Estas políticas:
 
 ---
 
-## 🧩 Correspondência com frameworks normativas
+## 🧩 Correspondência com frameworks normativas {#-correspondência-com-frameworks-normativas}
 
 | Framework              | Requisitos cobertos pelas políticas acima                                       |
 |------------------------|----------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ Estas políticas:
 
 ---
 
-## 🧱 Estrutura sugerida de cada política
+## 🧱 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -64,7 +64,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **oficialmente aprovadas** pela gestão de segurança e da organização;
 - Devem estar **publicadas e acessíveis** a todas as equipas;

@@ -10,7 +10,7 @@ sidebar_position: 13
 
 # MITRE ATT&CK como Vocabulário de Detection Engineering
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 O detection engineering precisa de um vocabulário comum para descrever **o que** se deteta. Sem ele, as deteções são descritas em linguagem ad-hoc por equipa, e a cobertura torna-se impossível de medir ou comparar. O MITRE ATT&CK fornece esse vocabulário: um catálogo estruturado do comportamento adversarial observado, organizado em táticas (o objetivo do adversário) e técnicas (a forma como o atinge).
 
@@ -22,7 +22,7 @@ Aplicabilidade: **L2 e L3**. O ATT&CK formaliza as menções já existentes no C
 
 ---
 
-## O que o ATT&CK fornece
+## O que o ATT&CK fornece {#o-que-o-attck-fornece}
 
 - **Táticas** — o objetivo do adversário num momento da intrusão. A matriz Enterprise tem 14 táticas de referência: Reconnaissance, Resource Development, Initial Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Lateral Movement, Collection, Command and Control, Exfiltration, Impact.
 - **Técnicas e sub-técnicas** — a forma concreta como cada tática é executada, com um identificador estável (por exemplo, `T1059` — *Command and Scripting Interpreter*).
@@ -32,7 +32,7 @@ Aplicabilidade: **L2 e L3**. O ATT&CK formaliza as menções já existentes no C
 
 ---
 
-## Integração no programa de deteção
+## Integração no programa de deteção {#integração-no-programa-de-deteção}
 
 A integração assenta em três passos:
 
@@ -42,7 +42,7 @@ A integração assenta em três passos:
 
 ---
 
-## Disciplina epistémica
+## Disciplina epistémica {#disciplina-epistémica}
 
 - **Mapeado não é detetado.** Uma regra associada a uma técnica só conta como cobertura quando foi validada — testada contra a execução real ou simulada da técnica. Sem validação, o mapeamento mede intenção, não capacidade.
 - **Uma deteção por técnica raramente é cobertura total.** Uma técnica tem múltiplos procedimentos; uma regra cobre tipicamente um subconjunto. A cobertura por contagem de técnicas sobrestima a deteção real.
@@ -50,13 +50,13 @@ A integração assenta em três passos:
 
 ---
 
-## Métricas associadas
+## Métricas associadas {#métricas-associadas}
 
 O indicador `OPS-K06` (cobertura de correlação entre fontes) ganha precisão quando expresso em termos de ATT&CK: a correlação entre fontes deve cobrir as técnicas priorizadas, não um número abstrato de regras. A cobertura de técnicas por tática revela lacunas estruturais — uma tática inteira sem deteção é um ponto cego.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

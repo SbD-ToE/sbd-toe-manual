@@ -16,7 +16,7 @@ Independentemente do estilo arquitetural, tecnologia ou domínio, o **processo d
 
 ---
 
-## 1. Arquitetura como desenho vs arquitetura como decisão
+## 1. Arquitetura como desenho vs arquitetura como decisão {#1-arquitetura-como-desenho-vs-arquitetura-como-decisão}
 
 Um risco recorrente é tratar a arquitetura como um exercício de desenho técnico (diagramas, caixas e setas), em vez de um processo decisional explícito.
 
@@ -31,7 +31,7 @@ No SbD-ToE, **arquitetura é decisão**, e deve ser tratada como tal.
 
 ---
 
-## 2. Decisões arquiteturais sem responsável explícito
+## 2. Decisões arquiteturais sem responsável explícito {#2-decisões-arquiteturais-sem-responsável-explícito}
 
 Decisões arquiteturais sem *owner* claro introduzem:
 - ambiguidade de responsabilidade;
@@ -44,7 +44,7 @@ Toda a decisão arquitetural relevante deve ter um responsável identificado e u
 
 ---
 
-## 3. Dependências externas tratadas como infraestrutura neutra
+## 3. Dependências externas tratadas como infraestrutura neutra {#3-dependências-externas-tratadas-como-infraestrutura-neutra}
 
 Serviços externos, plataformas geridas, APIs de terceiros ou componentes fora do controlo direto da organização **são decisões arquiteturais**, não meros detalhes de implementação.
 
@@ -59,7 +59,7 @@ A aceitação de uma dependência externa deve ser tratada como **decisão arqui
 
 ---
 
-## 4. Fluxos de dados implícitos não modelados
+## 4. Fluxos de dados implícitos não modelados {#4-fluxos-de-dados-implícitos-não-modelados}
 
 Além dos fluxos funcionais explícitos, arquiteturas modernas geram fluxos implícitos, tais como:
 - logs;
@@ -78,7 +78,7 @@ Estes fluxos fazem parte da arquitetura e devem ser tratados como tal.
 
 ---
 
-## 5. Componentes opacos ou não determinísticos
+## 5. Componentes opacos ou não determinísticos {#5-componentes-opacos-ou-não-determinísticos}
 
 Componentes cujo comportamento:
 - não é totalmente previsível,
@@ -97,7 +97,7 @@ A arquitetura deve prever:
 
 ---
 
-## 6. Reutilização acrítica de arquiteturas anteriores
+## 6. Reutilização acrítica de arquiteturas anteriores {#6-reutilização-acrítica-de-arquiteturas-anteriores}
 
 Reutilizar arquiteturas existentes é prática comum, mas torna-se arriscado quando:
 - o contexto mudou;
@@ -110,7 +110,7 @@ Arquiteturas herdadas devem ser tratadas como **hipóteses iniciais**, não como
 
 ---
 
-## 7. Divergência entre arquitetura documentada e arquitetura real
+## 7. Divergência entre arquitetura documentada e arquitetura real {#7-divergência-entre-arquitetura-documentada-e-arquitetura-real}
 
 Quando a arquitetura documentada não reflete o sistema efetivamente implementado:
 - decisões tornam-se inválidas;
@@ -123,7 +123,7 @@ Este risco exige mecanismos de revisão periódica e *gates* arquiteturais expl�
 
 ---
 
-## 8. Implicações para o SbD-ToE
+## 8. Implicações para o SbD-ToE {#8-implicações-para-o-sbd-toe}
 
 O SbD-ToE assume que:
 - decisões arquiteturais são falíveis;

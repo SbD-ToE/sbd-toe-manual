@@ -19,7 +19,7 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-## Validação por Requisito
+## Validação por Requisito {#validação-por-requisito}
 
 | Requisito | O que validar | Como validar | Quando | Responsável |
 |-----------|---------------|--------------|--------|-------------|
@@ -39,7 +39,7 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-## Aplicação por nível de risco
+## Aplicação por nível de risco {#aplicação-por-nível-de-risco}
 
 | Critério de validação | L1 | L2 | L3 |
 |-----------------------|:--:|:--:|:--:|
@@ -53,7 +53,7 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-## Notas
+## Notas {#notas}
 
 - A validação não é um acto pontual: acompanha a arquitectura ao longo do ciclo de vida. Cada *trigger* de revisão (nova integração, alteração de fluxo de dados, reclassificação de risco) deve desencadear a validação dos requisitos ARC afectados.
 - Para L1, uma checklist simples verificada pelo arquitecto ou lead técnico é suficiente para os requisitos marcados como obrigatórios (ARC-001, ARC-002, ARC-006, ARC-008, ARC-010).

@@ -14,7 +14,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Garantir que os pipelines são executados em ambientes **seguros, controlados e efémeros**;
 - Impedir que código malicioso comprometa o runner ou escape do contexto do pipeline;
@@ -22,7 +22,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Execução em runners efémeros ou reimagináveis**  
    - Cada job deve correr num ambiente isolado (ex: VM, container);
@@ -46,7 +46,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                                   | Requisitos reforçados                                       |
 |-------|------------------------------------------------------------|--------------------------------------------------------------|
@@ -56,7 +56,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Uso de `self-hosted runners` dedicados por projeto ou aplicação crítica;  
@@ -76,7 +76,7 @@ Os runners (ou agentes de execução) são os ambientes onde os pipelines CI/CD 
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Persistência de malware entre execuções (OSC&R: CI0009);
 - Exfiltração de segredos via runners contaminados (OSC&R: CI0003, CI0016);

@@ -40,7 +40,7 @@ Cobre diferentes estilos de arquitetura:
 
 ---
 
-## 🧭 Arquitetura segura e componentes não determinísticos
+## 🧭 Arquitetura segura e componentes não determinísticos {#-arquitetura-segura-e-componentes-não-determinísticos}
 
 A Arquitetura Segura, no contexto do SbD-ToE, **não assume que todos os componentes do sistema sejam determinísticos**. Arquiteturas modernas podem integrar componentes cujo comportamento depende de processos probabilísticos, heurísticos ou inferenciais, introduzindo variabilidade nos resultados e desafios adicionais em termos de segurança, auditoria e controlo.
 
@@ -52,9 +52,9 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 
 ---
 
-## 🧪 2. Prescrição prática: o quê, quem, como, quando, porquê e para quê
+## 🧪 2. Prescrição prática: o quê, quem, como, quando, porquê e para quê {#-2-prescrição-prática-o-quê-quem-como-quando-porquê-e-para-quê}
 
-### 📌 O que deve ser feito
+### 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. **Definir zonas de confiança** e fronteiras explícitas
 2. **Estabelecer padrões de arquitetura** proporcionais ao risco
@@ -62,7 +62,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 4. **Validar arquitetura antes de go-live** e em alterações significativas
 5. **Registar e gerir exceções** quando requisitos não possam ser cumpridos
 
-### ⚙️ Como deve ser feito
+### ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 - Aplicar técnicas de **Threat Modeling** (ex: DFD, STRIDE)
 - Utilizar **modelos de referência reutilizáveis** (`04-diagramas-referencia.md`)
@@ -72,7 +72,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
   - Mecanismos de contenção (rate limiting, circuit breakers)
 - Validar arquitetura com base nos critérios de `05-validacao.md`
 
-### 📆 Quando aplicar
+### 📆 Quando aplicar {#-quando-aplicar}
 
 | Momento                              | Ação esperada                                         |
 |--------------------------------------|-------------------------------------------------------|
@@ -82,7 +82,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 | Refactoring ou migração tecnológica  | Avaliar risco de exposição adicional                  |
 | Pré-produção                         | Validar arquitetura segundo requisitos e padrões      |
 
-### 👥 Quem está envolvido e como
+### 👥 Quem está envolvido e como {#-quem-está-envolvido-e-como}
 
 | Papel/Função               | Responsabilidades técnicas                                         |
 |----------------------------|--------------------------------------------------------------------|
@@ -95,7 +95,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 
 > ✅ Toda exceção da arquitetura deve ser **registada, justificada e validada** com plano compensatório.
 
-### 🎯 Porquê / Para quê
+### 🎯 Porquê / Para quê {#-porquê--para-quê}
 
 - Reduzir a superfície de ataque e limitar a propagação de falhas.
 - Estabelecer uma fundação técnica sólida para todos os restantes controlos de segurança.
@@ -104,7 +104,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 
 ---
 
-## ⚠️ 3. Caveats ou limitações da prescrição
+## ⚠️ 3. Caveats ou limitações da prescrição {#️-3-caveats-ou-limitações-da-prescrição}
 
 - Nem todos os controlos podem ser aplicados a todas as arquiteturas - o modelo deve ser adaptado.
 - Modelos inconsistentes, incompletos ou desatualizados **geram risco não rastreável**. **Relaciona.** Viola `ARC-010`; materializa `MT-059`.
@@ -113,7 +113,7 @@ A operacionalização deste enquadramento para sistemas com componentes AI/ML �
 
 ---
 
-## 💡 4. Exemplos de aplicação
+## 💡 4. Exemplos de aplicação {#-4-exemplos-de-aplicação}
 
 Num sistema L3 com microserviços e exposição a terceiros:
 
@@ -125,7 +125,7 @@ Num sistema L3 com microserviços e exposição a terceiros:
 
 ---
 
-## 🧩 Ligações a outros capítulos
+## 🧩 Ligações a outros capítulos {#-ligações-a-outros-capítulos}
 
 | Capítulo                      | Relação técnica e de processo                                       |
 |-------------------------------|---------------------------------------------------------------------|
@@ -137,7 +137,7 @@ Num sistema L3 com microserviços e exposição a terceiros:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória | Aplicação | Conteúdo mínimo |
 |----------|-------------|-----------|-----------------|

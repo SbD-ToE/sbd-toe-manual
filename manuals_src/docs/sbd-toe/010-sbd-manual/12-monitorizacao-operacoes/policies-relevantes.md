@@ -12,7 +12,7 @@ A adoção eficaz do **Capítulo 12 - Monitorização e Operações** exige a ex
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas descritas neste capítulo - logging estruturado, regras de alerta, correlação de eventos, integração com IRP, medição de MTTD/MTTR - **devem ser sustentadas por políticas organizacionais claras, auditáveis e aplicáveis a todos os ambientes operacionais**.
 
@@ -25,7 +25,7 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas Recomendadas
+## 🧾 Políticas Recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Resumo do Conteúdo Necessário                                                  |
 |--------------------------------------------------|--------------|--------------------------------------------|---------------------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Estas políticas:
 
 ---
 
-## 🧱 Estrutura Esperada de Cada Política
+## 🧱 Estrutura Esperada de Cada Política {#-estrutura-esperada-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -52,7 +52,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações Finais
+## ✅ Recomendações Finais {#-recomendações-finais}
 
 - As políticas devem ser **revistas regularmente** com base na evolução das ameaças e da arquitetura;
 - Devem estar **acessíveis e compreendidas por todas as equipas técnicas e operacionais**;

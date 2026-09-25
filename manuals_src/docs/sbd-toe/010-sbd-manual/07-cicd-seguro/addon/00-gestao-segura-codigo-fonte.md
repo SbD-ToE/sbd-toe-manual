@@ -15,7 +15,7 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Garantir que **todo o código incluído no pipeline é legítimo e autorizado**;
 - Prevenir alterações maliciosas ou acidentais aos branches de produção;
@@ -23,7 +23,7 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Proteção de branches principais (`main`, `release`, `prod`)**  
    - Impedir `push` direto: só permitir alterações via pull/merge request;
@@ -51,7 +51,7 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                     | Requisitos reforçados                             |
 |-------|----------------------------------------------|---------------------------------------------------|
@@ -61,7 +61,7 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub**  
   - Branch protection rules: impedir `force push`, exigir PR com aprovação;
@@ -80,7 +80,7 @@ A segurança do pipeline começa **antes da execução automatizada** - começa 
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Introdução de código malicioso diretamente no repositório (OSC&R: SC0001);
 - Substituição silenciosa de código (OSC&R: CI0004);

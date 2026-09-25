@@ -17,7 +17,7 @@ O SbD-ToE **não é um catálogo de boas práticas** nem um guia opcional.
 
 ---
 
-## 🧭 O que este manual é (e não é)
+## 🧭 O que este manual é (e não é) {#-o-que-este-manual-é-e-não-é}
 
 **O SbD-ToE é:**
 - Um sistema integrado para desenhar, desenvolver, operar e governar software seguro;
@@ -31,7 +31,7 @@ O SbD-ToE **não é um catálogo de boas práticas** nem um guia opcional.
 
 ---
 
-## 📚 Estrutura e navegação
+## 📚 Estrutura e navegação {#-estrutura-e-navegação}
 
 Este capítulo funciona como ponto de entrada para os fundamentos do manual:
 
@@ -46,7 +46,7 @@ Este capítulo funciona como ponto de entrada para os fundamentos do manual:
 
 ---
 
-## 🏛️ Princípios fundamentais
+## 🏛️ Princípios fundamentais {#️-princípios-fundamentais}
 
 Ao longo de todo o manual, aplicam-se os seguintes princípios:
 

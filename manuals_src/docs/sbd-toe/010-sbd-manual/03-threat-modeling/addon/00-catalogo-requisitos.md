@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Threat Modeling
 
-## Âmbito: o threat modeling como mecanismo formal de derivação de controlos
+## Âmbito: o threat modeling como mecanismo formal de derivação de controlos {#âmbito-o-threat-modeling-como-mecanismo-formal-de-derivação-de-controlos}
 
 Este catálogo cobre os **requisitos do processo de threat modeling** — os controlos que garantem que as ameaças relevantes a um sistema são identificadas com rigor metodológico, têm disposição documentada e geram requisitos rastreáveis de segurança.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-THR-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo THR - Threat Modeling
+## Catálogo THR - Threat Modeling {#catálogo-thr---threat-modeling}
 
 Requisitos que garantem que o processo de threat modeling é conduzido com rigor metodológico, produz disposição verificável para cada ameaça identificada e gera rastreabilidade de ponta a ponta para os controlos derivados.
 
@@ -55,7 +55,7 @@ Requisitos que garantem que o processo de threat modeling é conduzido com rigor
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **THR-001**: A aplicabilidade a partir de L2 é intencional — o threat modeling é um controlo com custo de execução que deve ser proporcional ao risco. Para L1, práticas de análise informal de risco são suficientes e recomendadas; para L2 e L3, a formalidade é necessária porque a complexidade dos sistemas e o impacto de comprometimento justificam o investimento.
 - **THR-002**: DFDs desactualizados são o vector mais comum de invalidação de threat models em produção. Um sistema que evoluiu sem actualização do DFD tem trust boundaries erradas, fluxos não mapeados e ameaças que o threat model não cobre porque simplesmente desconhece os componentes actuais.

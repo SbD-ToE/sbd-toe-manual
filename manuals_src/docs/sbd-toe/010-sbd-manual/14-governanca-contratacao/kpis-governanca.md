@@ -14,7 +14,7 @@ Para uma representação visual da arquitectura de medição, ver [`kpis-arquite
 
 ---
 
-## Propósito e arquitectura
+## Propósito e arquitectura {#propósito-e-arquitectura}
 
 Este ficheiro define a **estrutura de medição transversal** do programa SbD-ToE em três camadas:
 
@@ -34,11 +34,11 @@ Os KPIs transversais não substituem os indicadores de domínio - complementam-n
 
 ---
 
-## Fundação de portfólio
+## Fundação de portfólio {#fundação-de-portfólio}
 
 A Fundação de portfólio é a camada zero do dashboard - as métricas absolutas que tornam todas as percentagens de domínio interpretáveis. Sem esta camada, os percentuais dos capítulos de domínio carecem de denominador partilhado e não permitem responder à pergunta fundamental: *o SbD-ToE está a ser aplicado na organização?*
 
-### Funil de adoptabilidade SbD-ToE
+### Funil de adoptabilidade SbD-ToE {#funil-de-adoptabilidade-sbd-toe}
 
 ```
 F-01: Total de aplicações no portfólio
@@ -49,7 +49,7 @@ F-01: Total de aplicações no portfólio
 
 Cada camada do funil é o denominador da camada seguinte. A diferença entre camadas revela onde a adopção perde tração.
 
-### Métricas de fundação
+### Métricas de fundação {#métricas-de-fundação}
 
 | ID | Métrica | Tipo | Threshold | Período |
 |----|---------|:----:|-----------|---------|
@@ -60,7 +60,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 **Nota sobre o denominador dos KPIs de domínio:** cada capítulo (Cap. 01–13) define indicadores do tipo "% aplicações com X". O denominador dessas percentagens é sempre F-02 segmentado pelo nível de risco relevante. Os ficheiros `addon/XX-kpis-metricas.md` de cada capítulo assumem este denominador como base - a sua validade depende de F-01 e F-02 estarem completos e actualizados.
 
-### Interpretação do funil
+### Interpretação do funil {#interpretação-do-funil}
 
 | Situação | Diagnóstico | Acção |
 |----------|-------------|-------|
@@ -72,7 +72,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-## Convenções de tipo
+## Convenções de tipo {#convenções-de-tipo}
 
 | Código | Significado |
 |--------|-------------|
@@ -83,9 +83,9 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-## Dimensões transversais
+## Dimensões transversais {#dimensões-transversais}
 
-### T-01 - Cobertura de Controlos
+### T-01 - Cobertura de Controlos {#t-01---cobertura-de-controlos}
 
 **Definição:** percentagem de aplicações, por nível de risco (L1/L2/L3), que têm os controlos obrigatórios de cada domínio aplicados e verificados.
 
@@ -118,7 +118,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-### T-02 - Saúde de Excepções
+### T-02 - Saúde de Excepções {#t-02---saúde-de-excepções}
 
 **Definição:** estado qualitativo e quantitativo das excepções activas no programa - cobertura de cadeia de autoridade, validade temporal, e taxa de excepções em não conformidade (expiradas ou sem aprovação formal).
 
@@ -146,7 +146,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-### T-03 - Velocidade de Resolução
+### T-03 - Velocidade de Resolução {#t-03---velocidade-de-resolução}
 
 **Definição:** tempo médio de resolução (MTTR) de findings críticos e altos, agregado por origem (SAST, SCA, containers, testes, operações), ponderado pelo nível de risco das aplicações afectadas.
 
@@ -176,7 +176,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-### T-04 - Cobertura de Ownership
+### T-04 - Cobertura de Ownership {#t-04---cobertura-de-ownership}
 
 **Definição:** percentagem de aplicações, por nível de risco, com owner de segurança formalmente designado, activo e com formação válida. Inclui também a cobertura de aprovadores e revisores em processos críticos (excepções, releases, revisões de arquitectura).
 
@@ -202,7 +202,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-### T-05 - Cadeia de Fornecimento
+### T-05 - Cadeia de Fornecimento {#t-05---cadeia-de-fornecimento}
 
 **Definição:** estado de segurança da cadeia de fornecimento de software - cobertura de SBOM, conformidade contratual com fornecedores, validação de fornecedores L3, e cobertura de assinatura de artefactos.
 
@@ -228,7 +228,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-### T-06 - Maturidade SbD-ToE
+### T-06 - Maturidade SbD-ToE {#t-06---maturidade-sbd-toe}
 
 **Definição:** nível de maturidade por domínio (escala 1–3, alinhada com L1/L2/L3), derivado de avaliação estruturada anual. A evolução face ao ciclo anterior é componente obrigatória.
 
@@ -278,7 +278,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 ---
 
-## Dashboard executivo - síntese
+## Dashboard executivo - síntese {#dashboard-executivo---síntese}
 
 O dashboard executivo é uma vista condensada das seis dimensões, orientada à comunicação com gestão, GRC e CISO. Não introduz novos dados - resume os KPIs transversais num formato de síntese.
 
@@ -302,7 +302,7 @@ O dashboard executivo é uma vista condensada das seis dimensões, orientada à 
 
 ---
 
-## Recolha e responsabilidades
+## Recolha e responsabilidades {#recolha-e-responsabilidades}
 
 | Dimensão | Owner de recolha | Suporte de instrumentação |
 |----------|-----------------|--------------------------|
@@ -315,7 +315,7 @@ O dashboard executivo é uma vista condensada das seis dimensões, orientada à 
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

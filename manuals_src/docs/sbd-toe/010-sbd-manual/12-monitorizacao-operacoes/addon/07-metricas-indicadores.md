@@ -8,7 +8,7 @@ tags: [métricas, indicadores, mttd, mttr, dashboards, kpi]
 
 # Métricas, Indicadores e Cobertura
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturidade** dos controlos de monitorização, deteção e resposta, permitindo melhoria contínua com base em dados operacionais.
 
@@ -16,7 +16,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 
 ---
 
-## 📏 Indicadores de cobertura
+## 📏 Indicadores de cobertura {#-indicadores-de-cobertura}
 
 | Métrica                             | Objetivo                                              |
 | ----------------------------------- | ----------------------------------------------------- |
@@ -28,7 +28,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 
 ---
 
-## ⏱️ Indicadores operacionais
+## ⏱️ Indicadores operacionais {#️-indicadores-operacionais}
 
 | Métrica                        | Significado                                      | Exemplo de cálculo                   |
 | ------------------------------ | ------------------------------------------------ | ------------------------------------ |
@@ -42,7 +42,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 
 ---
 
-## 📊 Dashboards e relatórios sugeridos
+## 📊 Dashboards e relatórios sugeridos {#-dashboards-e-relatórios-sugeridos}
 
 | Tipo de painel           | Dados incluídos                                   |
 | ------------------------ | ------------------------------------------------- |
@@ -54,7 +54,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 
 ---
 
-## 🌄 Integração com maturidade
+## 🌄 Integração com maturidade {#-integração-com-maturidade}
 
 | Nível de maturidade | Indicadores esperados                                              |
 | ------------------- | ------------------------------------------------------------------ |
@@ -66,7 +66,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Medir e publicar métricas **pelo menos mensalmente**
 * Estabelecer metas de melhoria (ex: -20% MTTD em 3 meses)

@@ -13,7 +13,7 @@ sidebar_position: 7
 
 ---
 
-## 🧭 Contexto: Arquitetura como prática, não como cargo
+## 🧭 Contexto: Arquitetura como prática, não como cargo {#-contexto-arquitetura-como-prática-não-como-cargo}
 
 Nem todas as equipas que aplicam o SbD-ToE têm uma função formal de *Arquiteto*.  
 Em muitos projetos, **a arquitetura “acontece” naturalmente** - nas decisões tomadas durante o desenho e implementação do software.  
@@ -63,7 +63,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | ***Triggers** | Eventos que obrigam a revisão arquitetural. | Ver tabela “Triggers de revisão de Arquitetura”. | `arquitetura-triggers.md`, *tasks* de atualização, PRs. |
 | **Proveniência** | Capacidade de provar origem/integraidade de *artefactos* (código, *builds*), alinhada com boas práticas de *supply chain*. | Pipelines, dependências, imagens. | Registos CI/CD, SBOM, assinaturas, logs. |
 
-## 🗺️ Triggers de revisão de Arquitetura 
+## 🗺️ Triggers de revisão de Arquitetura {#️-triggers-de-revisão-de-arquitetura}
 | Trigger | Ação mínima | Evidência |
 |---|---|---|
 | Nova integração (interna/terceiro) | Rever *trust boundaries*, atualizar ficha e modelo de ameaças | `integration-review.md`, `tm-sync-arquitetura.md` |
@@ -73,7 +73,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | Incidente ou *near-miss* | Retroalimentar controlos, ajustar desenho | RCA, *post-mortem*, atualização de controlos |
 | Ameaça emergente (*threat intel*) | Rever cobertura e priorização | `tm-sync-arquitetura.md` |
 
-## 🧩 Mapa rápido: requisito de arquitectura → Prática/Artefacto
+## 🧩 Mapa rápido: requisito de arquitectura → Prática/Artefacto {#-mapa-rápido-requisito-de-arquitectura--práticaartefacto}
 
 | ARC-ID | Prática associada | Artefacto esperado |
 |---|---|---|
@@ -82,19 +82,19 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 | **ARC-006 - Isolamento entre domínios sensíveis** | Políticas de rede; segmentação lógica; ACLs; *admission control* | Diagrama C4 anotado, configuração de rede, *review* AppSec |
 | **ARC-008 - Fluxos de dados entre zonas protegidos** | DFD com controlos explícitos em cada fronteira de confiança | `trust-boundaries.md`, DFD versionado em repositório |
 
-## 🔄 Como usar este jargão nas User Stories 
+## 🔄 Como usar este jargão nas User Stories {#-como-usar-este-jargão-nas-user-stories}
 - **US-08 (ADR)**: aceitar como válido ADR em Markdown, *wiki* ou *issue*, desde que haja contexto → decisão → impacto → rastreabilidade (requisito de arquitectura).  
 - **US-09 (Trust Boundaries)**: exigir *inventário de integrações* e matriz de confiança; apontar AuthN/AuthZ/TLS/segregação.  
 - **US-10 (TM ↔ Arquitetura)**: garantir ligação ameaça → controlo → requisito de arquitectura nos artefactos.  
 - **US-11 (Exceções)**: incluir prazo, controlo compensatório, *owner* e *review* periódico.  
 - **US-12 (Arquitetura Viva)**: publicar a lista de trigger e evidenciar execução quando ocorrem.
 
-## 🧭 Proporcionalidade L1–L3 (aplicação do jargão) 
+## 🧭 Proporcionalidade L1–L3 (aplicação do jargão) {#-proporcionalidade-l1l3-aplicação-do-jargão}
 - **L1**: Registos simplificados (decisões chave, integrações críticas, *checklist* leve).  
 - **L2**: ADR para decisões significativas; *trust boundaries* completos; sincronização TM; exceções formais.  
 - **L3**: Cobertura integral, *reviews* independentes, validações em CI/CD, automação de trigger onde possível.
 
-## 🔗 Ligações Internas Úteis 
+## 🔗 Ligações Internas Úteis {#-ligações-internas-úteis}
 - Cap. 01 - Gestão de Risco: `/sbd-toe/sbd-manual/01-classificacao-aplicacoes/intro`  
 - Cap. 02 - Requisitos de Segurança: `/sbd-toe/sbd-manual/02-requisitos-seguranca/intro`  
 - Cap. 03 - Threat Modeling: `/sbd-toe/sbd-manual/03-threat-modeling/intro`  

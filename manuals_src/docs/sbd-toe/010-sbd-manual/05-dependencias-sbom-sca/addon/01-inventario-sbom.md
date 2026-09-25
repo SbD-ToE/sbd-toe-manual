@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain]
 
 # Inventário de Dependências e SBOM
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todas as aplicações têm um **inventário completo, rastreável e versionado** das bibliotecas e componentes utilizados - conhecido como **SBOM (Software Bill of Materials)** - como medida fundamental para:
 
@@ -18,7 +18,7 @@ Garantir que todas as aplicações têm um **inventário completo, rastreável e
 
 ---
 
-## 🧬 O que é um SBOM
+## 🧬 O que é um SBOM {#-o-que-é-um-sbom}
 
 Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de software de um sistema, incluindo:
 
@@ -33,7 +33,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## 📘 Formatos suportados
+## 📘 Formatos suportados {#-formatos-suportados}
 
 | Formato     | Descrição                                           | Ferramentas compatíveis                   |
 |-------------|-----------------------------------------------------|-------------------------------------------|
@@ -45,7 +45,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## 🛠️ Como gerar SBOMs
+## 🛠️ Como gerar SBOMs {#️-como-gerar-sboms}
 
 | Stack / Linguagem | Comando típico                              | Notas                                       |
 |-------------------|---------------------------------------------|---------------------------------------------|
@@ -59,7 +59,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## 📂 Onde armazenar SBOMs
+## 📂 Onde armazenar SBOMs {#-onde-armazenar-sboms}
 
 - Diretório dedicado no repositório: `/.sbom/`
 - Artefacto CI/CD associado à build (ex: Azure Artifacts, GitHub Releases)
@@ -67,7 +67,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## 🧬 Exemplos de campos num SBOM CycloneDX
+## 🧬 Exemplos de campos num SBOM CycloneDX {#-exemplos-de-campos-num-sbom-cyclonedx}
 
 ```json
 {
@@ -91,7 +91,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Gerar SBOM **em todos os builds de produção**
 - Incluir dependências **transitivas**, não apenas diretas
@@ -101,7 +101,7 @@ Um **SBOM** é um ficheiro estruturado que descreve todos os componentes de soft
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                   | Relação com SBOM                                 |
 |-----------------------------|--------------------------------------------------|

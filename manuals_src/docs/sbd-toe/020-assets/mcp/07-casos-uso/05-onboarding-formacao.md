@@ -18,15 +18,15 @@ Pedir a um *developer* recém-chegado para ler os 15 capítulos do manual antes 
 
 O `get_guide_by_role` foi pensado precisamente para isso. Recebe o *risk level* e o papel — `developer`, `appsec-engineer`, `devops-sre`, `qa`, qualquer um dos 13 canónicos — e devolve apenas as práticas que o manual atribui a essa pessoa, organizadas por fase do SDLC. O agente compõe um guia personalizado a partir daí: o que se espera deste papel em *requirements*, *design*, *implement*, *test*, *operate* — com *user stories* já ligadas, prontas a virar *acceptance criteria*.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado, skill carregada.
 - *Risk level* do projecto conhecido.
 - *Role* do novo membro definido (um dos 13 *roles* canónicos).
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Discovery — quantas atribuições existem?
+### 1. Discovery — quantas atribuições existem? {#1-discovery--quantas-atribuições-existem}
 
 Chamar sem `role`/`phase` para ver contagens:
 
@@ -36,7 +36,7 @@ get_guide_by_role({"risk_level": "L2"})
 
 Devolve `role_summary{}` + `phase_summary{}` — quantas *practice assignments* existem por *role* e por fase.
 
-### 2. Detalhe — atribuições do *role* alvo
+### 2. Detalhe — atribuições do *role* alvo {#2-detalhe--atribuições-do-role-alvo}
 
 ```json
 get_guide_by_role({"risk_level": "L2", "role": "developer"})
@@ -48,7 +48,7 @@ Cada `assignment` tem:
 - `practice_id`, `chapter_id`, `phase`
 - *user stories* associadas (texto + *acceptance criteria*)
 
-### 3. Detalhe por *fase*
+### 3. Detalhe por *fase* {#3-detalhe-por-fase}
 
 Para um guia "primeira sprint", filtrar pela primeira fase relevante:
 
@@ -58,7 +58,7 @@ get_guide_by_role({"risk_level": "L2", "role": "developer", "phase": "implement"
 
 → apenas atribuições da fase `implement`.
 
-### 4. Estruturar o guia
+### 4. Estruturar o guia {#4-estruturar-o-guia}
 
 Modelo recomendado:
 
@@ -100,20 +100,20 @@ Modelo recomendado:
 - Skill no cliente AI: ver [Skills e agentes](../04-skills-agentes.md)
 ```
 
-### 5. Customizar com o repo
+### 5. Customizar com o repo {#5-customizar-com-o-repo}
 
 Acrescentar:
 - Link directo para os artefactos do repo (criados via [governance bootstrap](./governance-bootstrap))
 - *Pointers* para `CLAUDE.md` / `AGENTS.md` do projecto
 - *Checklist* operacional dos primeiros 30 dias
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 - **Sempre passar `role` ou `phase`** — sem nenhum dos dois, o output é só contagens.
 - Citar `practice_id` e `chapter_id` exactos.
 - Se `assignments: []` para um `(role, phase)` → escrever *"Manual-grounded: este role não tem atribuições directas nesta fase"* — não inventar para "preencher".
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-onboarding.md`:
 
@@ -134,7 +134,7 @@ tools: Read, Write, mcp__sbd-toe__*
 6. Acrescentar pointers ao repo (governance/, CLAUDE.md, AGENTS.md) se existirem.
 ```
 
-## Combinatória útil
+## Combinatória útil {#combinatória-útil}
 
 Para um *role* que faz muitas fases (`developer`, `arquitetos-software`), iterar fase a fase para manter o output dentro do contexto:
 
@@ -148,13 +148,13 @@ get_guide_by_role(L2, "developer", "operate")
 
 Concatenar os outputs no guia.
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Chamar `get_guide_by_role(L2)` sem `role`/`phase` e tentar extrair detalhe — só vem contagem.
 - ❌ Aliasing manual de roles (ex.: "engineer" → "developer") em vez de deixar o servidor resolver — usar a forma canónica documentada.
 - ❌ Inventar *acceptance criteria* para *user stories* não retornadas.
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Bootstrap de governança](./governance-bootstrap) — antes do onboarding, ter o scaffold.
 - [`get_guide_by_role`](../05-tools-reference.md#get_guide_by_role) na referência.

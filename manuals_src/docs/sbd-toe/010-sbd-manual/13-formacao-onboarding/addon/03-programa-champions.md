@@ -8,7 +8,7 @@ tags: [champions, cultura, formacao, responsabilidade, apoio]
 
 # Programa de Security Champions
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer um programa estruturado de **Security Champions** para:
 
@@ -19,7 +19,7 @@ Estabelecer um programa estruturado de **Security Champions** para:
 
 ---
 
-## 🧬 O que é um Champion de Segurança
+## 🧬 O que é um Champion de Segurança {#-o-que-é-um-champion-de-segurança}
 
 Um **Security Champion** é um elemento técnico da equipa que atua como **multiplicador local da segurança**, com tempo alocado e apoio da liderança. É referência prática, facilitador de boas decisões e ligação entre o ideal e o contexto real.
 
@@ -29,7 +29,7 @@ Os champions desempenham um papel humano ativo na interpretação, aplicação e
 
 ---
 
-## 👤 Perfil de um Champion
+## 👤 Perfil de um Champion {#-perfil-de-um-champion}
 
 | Critério               | Descrição                                                                 |
 |------------------------|---------------------------------------------------------------------------|
@@ -40,9 +40,9 @@ Os champions desempenham um papel humano ativo na interpretação, aplicação e
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
-### 🏗 Estrutura do Programa
+### 🏗 Estrutura do Programa {#-estrutura-do-programa}
 
 | Componente                  | Descrição                                                                 |
 |----------------------------|----------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Os champions desempenham um papel humano ativo na interpretação, aplicação e
 
 ---
 
-### 📋 Cartão de backlog sugerido
+### 📋 Cartão de backlog sugerido {#-cartão-de-backlog-sugerido}
 
 **Título:** `[SEC] Nomear Champion para equipa "App XYZ"`
 
@@ -70,7 +70,7 @@ Este elemento apoiará revisões, onboarding, threat modeling e disseminação d
 
 ---
 
-## 🔄 Atividades típicas
+## 🔄 Atividades típicas {#-atividades-típicas}
 
 | Tipo de ação              | Exemplo                                                                 |
 |---------------------------|-------------------------------------------------------------------------|
@@ -81,7 +81,7 @@ Este elemento apoiará revisões, onboarding, threat modeling e disseminação d
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Garantir apoio explícito da liderança técnica (tempo e visibilidade)
 - Promover comunidades de prática ativas, não passivas
@@ -90,7 +90,7 @@ Este elemento apoiará revisões, onboarding, threat modeling e disseminação d
 
 ---
 
-## 📈 Indicadores de sucesso
+## 📈 Indicadores de sucesso {#-indicadores-de-sucesso}
 
 - ≥ 1 Champion ativo por equipa de produto ou aplicação crítica
 - Participação visível nos rituais técnicos (ex: planning, retro)
@@ -100,7 +100,7 @@ Este elemento apoiará revisões, onboarding, threat modeling e disseminação d
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relevância                                     |
 |-----------------------------------|------------------------------------------------|

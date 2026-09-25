@@ -8,7 +8,7 @@ sidebar_position: 5
 
 # Exemplo: Agentic SDLC ponta-a-ponta
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 Quando o sistema inclui **agentes AI** com *tool-use* — modelos que executam acções reais (criar PRs, aplicar manifests Kubernetes, contactar APIs externas) — o processo de desenvolvimento seguro ganha **paragens próprias** em cada fase do SDLC. O SbD-ToE distribuiu essas paragens pelos capítulos existentes (não criou capítulo novo), mas a **vista de processo ponta-a-ponta** vive aqui, neste exemplo.
 
@@ -18,7 +18,7 @@ O SbD-ToE **prescreve as paragens e a sua substância**; este exemplo demonstra 
 
 ---
 
-## Visão geral do fluxo
+## Visão geral do fluxo {#visão-geral-do-fluxo}
 
 ```mermaid
 flowchart LR
@@ -45,9 +45,9 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-## Paragens do processo agentic
+## Paragens do processo agentic {#paragens-do-processo-agentic}
 
-### Paragem 1 — Decisão de adopção e classificação do nível de autonomia
+### Paragem 1 — Decisão de adopção e classificação do nível de autonomia {#paragem-1--decisão-de-adopção-e-classificação-do-nível-de-autonomia}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -59,7 +59,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 2 — Threat modeling para o agente
+### Paragem 2 — Threat modeling para o agente {#paragem-2--threat-modeling-para-o-agente}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -71,7 +71,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 3 — Arquitectura: agente como *principal* isolado
+### Paragem 3 — Arquitectura: agente como *principal* isolado {#paragem-3--arquitectura-agente-como-principal-isolado}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -82,7 +82,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 4 — Mandate registado e versionado
+### Paragem 4 — Mandate registado e versionado {#paragem-4--mandate-registado-e-versionado}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -91,7 +91,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 5 — Identidade e segredos para o agente na pipeline
+### Paragem 5 — Identidade e segredos para o agente na pipeline {#paragem-5--identidade-e-segredos-para-o-agente-na-pipeline}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -101,7 +101,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 6 — Prompts e *skill files* como código
+### Paragem 6 — Prompts e *skill files* como código {#paragem-6--prompts-e-skill-files-como-código}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -111,7 +111,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 7 — AI BOM + supply chain de modelos
+### Paragem 7 — AI BOM + supply chain de modelos {#paragem-7--ai-bom--supply-chain-de-modelos}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -122,7 +122,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 8 — *Eval suite* contínua
+### Paragem 8 — *Eval suite* contínua {#paragem-8--eval-suite-contínua}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -133,7 +133,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 9 — Release gates
+### Paragem 9 — Release gates {#paragem-9--release-gates}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -141,7 +141,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 10 — Operação: telemetria agentic
+### Paragem 10 — Operação: telemetria agentic {#paragem-10--operação-telemetria-agentic}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -151,7 +151,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 11 — Revisão e renovação
+### Paragem 11 — Revisão e renovação {#paragem-11--revisão-e-renovação}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -162,7 +162,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-## Cruzamento com regulamento
+## Cruzamento com regulamento {#cruzamento-com-regulamento}
 
 O processo descrito serve em simultâneo várias obrigações regulatórias. Mapeamento sintético:
 
@@ -198,7 +198,7 @@ O processo descrito serve em simultâneo várias obrigações regulatórias. Map
 
 ---
 
-## Exemplo concreto: agente de auditoria de PR (nível A2)
+## Exemplo concreto: agente de auditoria de PR (nível A2) {#exemplo-concreto-agente-de-auditoria-de-pr-nível-a2}
 
 Cenário ilustrativo, baseado num caso operacional realista — implementável com o servidor MCP SbD-ToE.
 
@@ -218,7 +218,7 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Anti-padrões transversais
+## Anti-padrões transversais {#anti-padrões-transversais}
 
 - ❌ **Subir nível A1 → A2 sem novo *mandate* aprovado** — viola `REQ-AGN-001`/`REQ-AGN-002` e ignora todas as paragens 1–4.
 - ❌ **`tools_allowlist` alargada via *commit* sem revisão** — equivalente a alterar IAM policy sem aprovação; viola Policy 15 §2 + Policy 38 §5.5.
@@ -232,7 +232,7 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Como usar este exemplo
+## Como usar este exemplo {#como-usar-este-exemplo}
 
 1. **Para uma equipa que está a adoptar agentes pela primeira vez**: percorrer as paragens 1 → 11 antes da primeira activação operacional. Não é necessário implementar tudo em A1; o nível A1 cobre paragens 1–6 + 10 (sem *eval* nem *release gate* obrigatórios).
 2. **Para auditoria interna / externa**: usar a tabela de cruzamento com regulamento para reconstruir a árvore de evidência por artigo.
@@ -241,7 +241,7 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 - **Mini-site MCP** ([`/sbd-toe/assets/mcp/intro`](/sbd-toe/assets/mcp/intro)) — exemplos práticos de skills/agentes que materializam várias destas paragens
 - **AI Act cross-check** ([`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro)) — análise artigo-a-artigo

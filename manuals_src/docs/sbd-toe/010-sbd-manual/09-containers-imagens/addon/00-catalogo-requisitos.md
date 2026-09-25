@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Containers e Imagens
 
-## Âmbito: o container como artefacto de software sujeito a governação
+## Âmbito: o container como artefacto de software sujeito a governação {#âmbito-o-container-como-artefacto-de-software-sujeito-a-governação}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao ciclo de vida de containers e imagens** - desde a selecção da imagem base, passando pelo hardening e scanning, até à assinatura, verificação de proveniência, políticas de runtime e acesso a registries.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-CNT-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo CNT - Containers e Imagens
+## Catálogo CNT - Containers e Imagens {#catálogo-cnt---containers-e-imagens}
 
 Requisitos que garantem que containers são construídos, validados, promovidos e executados com controlos de segurança proporcionais ao risco dos workloads que encapsulam.
 
@@ -57,7 +57,7 @@ Requisitos que garantem que containers são construídos, validados, promovidos 
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **CNT-001**: A selecção da imagem base deve ser uma **decisão humana explícita e documentada** - não uma herança implícita de template ou gerador de código. Imagens de bases como `ubuntu:latest` ou imagens sem maintainer verificável são insuficientes para L2/L3.
 - **CNT-003**: A minimalidade da imagem reduz a superfície de ataque em caso de comprometimento de runtime. Ferramentas como `dive` ou análise de layers permitem verificar quais binários estão presentes e justificá-los.

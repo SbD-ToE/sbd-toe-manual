@@ -9,7 +9,7 @@ sidebar_position: 4
 
 # Testes Interativos de Segurança (IAST)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Aproveitar a execução normal da aplicação para realizar testes de segurança **com instrumentação ativa**, combinando:
 
@@ -22,7 +22,7 @@ Aproveitar a execução normal da aplicação para realizar testes de segurança
 
 ---
 
-## 🔍 O que é IAST
+## 🔍 O que é IAST {#-o-que-é-iast}
 
 IAST (Interactive Application Security Testing) é uma abordagem de testes de segurança que usa **instrumentação no servidor da aplicação** para observar chamadas, fluxos e execuções em tempo real - enquanto a aplicação é usada em testes funcionais, manuais ou automáticos.
 
@@ -37,7 +37,7 @@ Permite:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Selecionar ferramenta IAST compatível com o stack da aplicação**;
 2. **Instrumentar o servidor de staging com agentes IAST** (ou containers configurados);
@@ -50,7 +50,7 @@ Permite:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Usar IAST em ambientes de staging ou teste integrado;
 - Validar cobertura (ex: endpoints executados durante o teste);
@@ -60,7 +60,7 @@ Permite:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                      |
 |--------------------------------|---------------------------------------------|

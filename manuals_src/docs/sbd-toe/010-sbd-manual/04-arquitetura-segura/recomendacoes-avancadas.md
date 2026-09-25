@@ -14,7 +14,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 
 ---
 
-## 🧱 Recomendações Arquitetónicas Avançadas
+## 🧱 Recomendações Arquitetónicas Avançadas {#-recomendações-arquitetónicas-avançadas}
 
 | Prática / Recomendação                             | Benefício direto                             | Requisitos reforçados |
 |------------------------------------------------------|------------------------------------------------|------------------------|
@@ -28,7 +28,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 
 ---
 
-## 🧩 Modelos e Frameworks Recomendados
+## 🧩 Modelos e Frameworks Recomendados {#-modelos-e-frameworks-recomendados}
 
 - **Modelo de Confiança por Contexto** (Context-Aware Trust Models)
 - **Architecture Decision Records (ADRs)** com integração Git
@@ -39,7 +39,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 
 ---
 
-## ✅ Quando aplicar estas recomendações?
+## ✅ Quando aplicar estas recomendações? {#-quando-aplicar-estas-recomendações}
 
 - Ambientes regulamentados (financeiro, saúde, defesa)
 - Arquiteturas distribuídas de alta complexidade (ex: multicloud, event-driven)
@@ -54,7 +54,7 @@ Este documento complementa as práticas fundamentais do capítulo com recomenda�
 
 Sistemas que integram componentes de inteligência artificial — LLMs em interface conversacional, modelos preditivos, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation — introduzem padrões arquitetónicos com superfícies de ataque qualitativamente distintas das aplicações tradicionais. As recomendações nesta secção complementam (não substituem) ARC-001..ARC-013 e operacionalizam o requisito [ARC-014](./addon/catalogo-requisitos-arquitetura#arc-014).
 
-### Trust zones em arquitecturas AI/ML
+### Trust zones em arquitecturas AI/ML {#trust-zones-em-arquitecturas-aiml}
 
 Componentes AI/ML introduzem três classes de fronteira de confiança que devem ser explicitamente marcadas em DFDs:
 
@@ -64,7 +64,7 @@ Componentes AI/ML introduzem três classes de fronteira de confiança que devem 
 | **Inference-time** | Entre input externo (utilizador, RAG retrieval, file ingestion) e contexto do modelo | Prompt injection directa e indirecta (LLM01-2025; `AML.T0051.001`); `AML.T0093` Prompt Infiltration via Public-Facing App | Input sanitization específico para prompt context; separação clara entre system prompt e user input; output filtering anti-extracção de system prompt |
 | **Agentic** | Entre output do modelo e tool invocations executadas (functions, MCP servers, APIs) | Exfiltration via AI Agent Tool Invocation (`AML.T0086`); AI Agent Tool Poisoning (`AML.T0110`); Data Destruction via AI Agent (`AML.T0101`); LLM06-2025 Excessive Agency | Aprovação humana para acções write/mutativas; rate limiting por tool; allowlist de tool scopes; logging completo de tool calls (ver Cap. 12 — observabilidade AI) |
 
-### Boundary controls para prompt injection
+### Boundary controls para prompt injection {#boundary-controls-para-prompt-injection}
 
 Prompt injection é a vulnerabilidade arquitectónica mais comum em aplicações LLM. Controlos arquitectónicos relevantes:
 
@@ -73,7 +73,7 @@ Prompt injection é a vulnerabilidade arquitectónica mais comum em aplicações
 - **Output filtering** anti-extracção de system prompt (`AML.T0069.002`); detectar padrões de exfiltração de instruções
 - **Confidentialidade de system prompts** — não assumir que o conteúdo é secreto; arquitectar como se fosse público
 
-### LLM ↔ backend tool invocation security
+### LLM ↔ backend tool invocation security {#llm--backend-tool-invocation-security}
 
 Agentes AI com capacidade de invocar tools backend (APIs, file systems, databases via MCP, function calls) exigem isolamento arquitectónico análogo a controlo de privilégios em sistemas tradicionais:
 
@@ -82,7 +82,7 @@ Agentes AI com capacidade de invocar tools backend (APIs, file systems, database
 - **Auditoria completa de tool invocations** — cada chamada com timestamp, contexto, agent identity, scope; integrar com pipeline de observabilidade do Cap. 12 (`AML.M0024` AI Telemetry Logging)
 - **Validação de MCP servers e tools** como dependências de supply chain — ver Cap. 5 §AI/ML para framing supply chain (`AML.T0110` AI Agent Tool Poisoning)
 
-### Considerações de design
+### Considerações de design {#considerações-de-design}
 
 - **AI components NÃO são bibliotecas opacas** — devem aparecer como participantes distintos em DFDs de arquitectura, com inputs, outputs, dependências (modelos, datasets, prompts) e trust boundaries explicitamente modeladas
 - **Cross-zone propagation** — outputs de modelos AI podem propagar-se a zonas de confiança elevada (ex: model output usado para tomar decisões automáticas em sistemas críticos); aplicar mesma análise de propagation que aplicaria a inputs externos não confiáveis
@@ -96,7 +96,7 @@ Os padrões acima cobrem *componentes AI/ML* em geral. Quando o sistema tem **ag
 
 Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-arquitetura#arc-015) e cruza com os requisitos `REQ-AGN-001..004` definidos no [Cap. 02 — Modelo de níveis de autonomia](../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia).
 
-#### Identidade do agente — workload identity efémera
+#### Identidade do agente — workload identity efémera {#identidade-do-agente--workload-identity-efémera}
 
 - **Identidade dedicada por agente** (e por ambiente). O agente recebe credenciais via **OIDC / workload identity**, com TTL ≤ 1h, sem reutilização de identidade humana. Princípio idêntico ao US-04 do Cap. 07 e ao US-10 do Cap. 08 — aplicado a um novo tipo de *principal*.
 - **Scope mínimo por tool** (e por ambiente, ver `ARC-011`). Um agente que precisa de abrir PRs **não recebe** *scope* para apagar o repositório; um agente que opera em *staging* **não vê** credenciais de *production*. Sem excepções tácitas.
@@ -104,7 +104,7 @@ Esta secção operacionaliza o requisito [ARC-015](./addon/catalogo-requisitos-a
 
 > A regra que aplica-se para *workload identity* humana — *"se há que partilhar a credencial, o desenho está errado"* — vale literalmente para agentes. Se dois agentes partilham a mesma identidade, o *audit trail* deixa de ser útil.
 
-#### Intent declaration antes de tool calls destrutivos
+#### Intent declaration antes de tool calls destrutivos {#intent-declaration-antes-de-tool-calls-destrutivos}
 
 Em níveis A2+, antes de cada *tool call* com efeito destrutivo, *side-effectful* ou em sistemas externos críticos, o agente declara à infraestrutura **o que vai fazer e porquê**. O *intent* é um evento estruturado, registado em audit, com (no mínimo): identidade do agente, *tool* a invocar, argumentos materiais, *intent* humano-legível, *expected outcome*, *risco residual* na perspectiva do agente. O *gate* operacional valida *intent* declarado vs *acção real executada* a posteriori — divergência é sinal de incidente.
 
@@ -119,11 +119,11 @@ Em níveis A2+, antes de cada *tool call* com efeito destrutivo, *side-effectful
 
 Este desenho não pede que o agente *peça permissão* a cada passo — pede que **deixe rasto** do que tencionava fazer antes de o fazer. A diferença é operacional: permite-nos comparar intenção e acção, e detectar comportamento off-policy mesmo quando a acção isolada parece legítima.
 
-#### Aprovação humana out-of-band
+#### Aprovação humana out-of-band {#aprovação-humana-out-of-band}
 
 Para acções com efeito crítico (delete, transfer, send, deploy, rotate-secrets, contactar sistemas externos sensíveis), exige-se aprovação **fora do canal do agente** — Slack approval, GitHub review com 2FA, webhook assinado, *push notification* a humano de plantão. A razão é simples: se o canal de aprovação é o mesmo onde o agente actua, a aprovação está sujeita ao mesmo conjunto de adversários do canal principal (prompt injection inclusive). Out-of-band força um *humano real, num canal independente*, a confirmar.
 
-#### Kill-switch operacional
+#### Kill-switch operacional {#kill-switch-operacional}
 
 O *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) é um mecanismo arquitectónico, não um botão simbólico. Compõe-se de:
 
@@ -134,7 +134,7 @@ O *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/
 
 Em A3/A4 exercitamos o *kill-switch* em sandbox/staging com cadência registada (≥ 1×/trimestre para A3, ≥ 1×/mês para A4). Sem este exercício, o *kill-switch* é decorativo.
 
-#### Audit completo por tool invocation
+#### Audit completo por tool invocation {#audit-completo-por-tool-invocation}
 
 Cada *tool call* gera um *audit event* estruturado — não basta logar "agente fez algo". Sugere-se como mínimo:
 
@@ -154,7 +154,7 @@ RAG é hoje a arquitectura dominante em aplicações LLM em produção — o mod
 
 Esta secção complementa o que já dissemos sobre [trust zones em arquitecturas AI/ML](#ai-ml) e [boundary controls para prompt injection](#boundary-controls-para-prompt-injection), com a especialização operacional para RAG.
 
-#### O que muda em RAG
+#### O que muda em RAG {#o-que-muda-em-rag}
 
 | Componente novo | O que introduz | Porque importa para segurança |
 |---|---|---|
@@ -164,7 +164,7 @@ Esta secção complementa o que já dissemos sobre [trust zones em arquitecturas
 | ***Re-ranker*** (opcional) | Re-ordena chunks recuperados | Ponto adicional de manipulação se baseado em modelo |
 | ***Document corpus*** | Fonte de conteúdo a ingerir | Vector primário de *indirect prompt injection* (`AML.T0051.001`) |
 
-#### Padrões arquitectónicos para RAG seguro
+#### Padrões arquitectónicos para RAG seguro {#padrões-arquitectónicos-para-rag-seguro}
 
 - **Tratar *retrieved content* como *user-untrusted* por desenho** — em RAG, o documento recuperado entra no contexto do modelo como se fosse texto do utilizador. Aplica-se literalmente o controlo da secção [boundary controls para prompt injection](#boundary-controls-para-prompt-injection): separação canónica `system` / `user` / `retrieved_context` quando o modelo suporta (Anthropic *documents* parameter, OpenAI *tool messages*) — não fazer *string concatenation*. Onde o modelo não distingue estruturalmente, isolar com *delimiters* + *prompt hardening* no *system prompt*.
 - **Curadoria da ingestão** — documentos ingeridos no corpus passam por um *pipeline* de curadoria: validação de origem, *content scanning* para padrões adversariais conhecidos (LLM01-2025 *indirect prompt injection* patterns), classificação de sensibilidade. Não tratar a ingestão como *trusted by default*.
@@ -174,7 +174,7 @@ Esta secção complementa o que já dissemos sobre [trust zones em arquitecturas
 - ***Output filtering* anti-extracção de corpus** — detectar padrões em que o modelo está a regurgitar conteúdo do corpus sem o tratar (potencial *membership inference* sobre que documentos estão no índice, ou *exfiltration* dirigida).
 - ***Provenance* no output** — quando o modelo cita documentos do corpus, expor *provenance* (que documento, que chunk) ao utilizador. Tem dupla função: auditabilidade e dificultar exfiltração silenciosa.
 
-#### Threats específicas a RAG
+#### Threats específicas a RAG {#threats-específicas-a-rag}
 
 Adiciona-se à [threat library agentic do Cap. 03](../threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) os seguintes vectores RAG-específicos:
 
@@ -186,7 +186,7 @@ Adiciona-se à [threat library agentic do Cap. 03](../threat-modeling/addon/meto
 | ***Membership inference* sobre o corpus** | LLM02-2025 (*sensitive info disclosure*) | Inference | *Output filtering*; rate-limiting; detecção de *probing queries* |
 | ***Cross-namespace contamination*** | LLM06-2025 (*excessive agency*, em variante RAG) | Retriever | Filtro de autorização no top-k retrieval |
 
-#### Eval suite para RAG
+#### Eval suite para RAG {#eval-suite-para-rag}
 
 A *eval suite* (Cap. 10 §C5) ganha em RAG uma camada própria:
 
@@ -199,7 +199,7 @@ Para sistemas A2+ que invocam *tools* a partir de contexto RAG, esta camada da *
 
 > 🧭 RAG vê-se frequentemente como "apenas adicionar contexto ao prompt". Tecnicamente é mais do que isso: introduz uma nova fronteira de confiança (`retrieved_context`) que tem o mesmo poder de manipular o modelo que o input do utilizador, mas chega por um canal que parece interno. É essa assimetria que torna RAG seguro um problema arquitectónico distinto.
 
-### Nota sobre sistemas multi-agente
+### Nota sobre sistemas multi-agente {#nota-sobre-sistemas-multi-agente}
 
 *Frameworks* de orquestração multi-agente (*LangGraph*, *CrewAI*, *AutoGen*, *orchestrator → executor → reviewer* construídos sobre SDKs próprios) tornaram-se comuns durante 2024–2025 e continuam em evolução rápida. Não se escreve uma secção dedicada porque o espaço de soluções **ainda não estabilizou** — convenções de *agent-to-agent communication*, *trust delegation* entre agentes e supervisão hierárquica variam significativamente entre *frameworks*. O princípio operacional é, no entanto, estável:
 
@@ -211,7 +211,7 @@ Quando os padrões multi-agente estabilizarem (provavelmente 2026–2027), será
 
 ---
 
-## 📌 Consideração Final
+## 📌 Consideração Final {#-consideração-final}
 
 Estas práticas não substituem os requisitos normativos (ARC), mas representam **próximos passos naturais para equipas que já aplicam arquitetura segura de forma estruturada e consistente**.
 

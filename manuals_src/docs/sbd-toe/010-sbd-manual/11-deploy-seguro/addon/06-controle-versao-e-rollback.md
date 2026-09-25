@@ -12,7 +12,7 @@ Garantir reversibilidade e rastreabilidade é essencial para reduzir o impacto d
 
 ---
 
-## 📂 Versionamento como pilar de segurança
+## 📂 Versionamento como pilar de segurança {#-versionamento-como-pilar-de-segurança}
 
 - Utilizar **versionamento semântico** (`vX.Y.Z`) com significado claro:
   - `X` = quebra de compatibilidade
@@ -28,7 +28,7 @@ Garantir reversibilidade e rastreabilidade é essencial para reduzir o impacto d
 
 ---
 
-## 🔄 Rollback: não é exceção, é plano
+## 🔄 Rollback: não é exceção, é plano {#-rollback-não-é-exceção-é-plano}
 
 O rollback deve ser planeado como parte de cada release.
 
@@ -39,7 +39,7 @@ O rollback deve ser planeado como parte de cada release.
 | **Base de dados**       | Reverter migração ou usar rollback automático | Flyway, Liquibase                |
 | **Infraestrutura**      | Restaurar estado anterior de recursos         | Terraform rollback, snapshots    |
 
-### Requisitos:
+### Requisitos: {#requisitos}
 
 - Rollback deve ser **automático ou documentado**
 - Testado em staging antes do go-live
@@ -47,7 +47,7 @@ O rollback deve ser planeado como parte de cada release.
 
 ---
 
-## 🚫 Antipadrões a evitar
+## 🚫 Antipadrões a evitar {#-antipadrões-a-evitar}
 
 - Releases sem tag Git ou hash verificável
 - Múltiplos artefactos com o mesmo número de versão
@@ -57,7 +57,7 @@ O rollback deve ser planeado como parte de cada release.
 
 ---
 
-## 🌐 Ferramentas e boas práticas
+## 🌐 Ferramentas e boas práticas {#-ferramentas-e-boas-práticas}
 
 | Objetivo               | Ferramenta / Prática                                     |
 |------------------------|-----------------------------------------------------------|
@@ -69,7 +69,7 @@ O rollback deve ser planeado como parte de cada release.
 
 ---
 
-## 🔀 Integração com ciclo de vida da aplicação
+## 🔀 Integração com ciclo de vida da aplicação {#-integração-com-ciclo-de-vida-da-aplicação}
 
 - Definir rollback como etapa formal no planeamento de releases
 - Incluir testes de rollback nos ambientes de QA/staging
@@ -78,7 +78,7 @@ O rollback deve ser planeado como parte de cada release.
 
 ---
 
-## ✅ Checklist de controlo de versão e rollback
+## ✅ Checklist de controlo de versão e rollback {#-checklist-de-controlo-de-versão-e-rollback}
 
 - [ ] Existe uma tag Git para a versão publicada?
 - [ ] O artefacto está assinado e identificado de forma única?

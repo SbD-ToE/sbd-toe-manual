@@ -7,7 +7,7 @@ tags: [formacao, ia, tooling, copilot, code-generation, llm, automacao, guardrai
 
 # Addon-12 - Formação em Uso Seguro de IA e Tooling Pervasivo
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Com a adoção pervasiva de ferramentas automatizadas (SAST, DAST, SCA, GitHub Copilot, code generators, LLMs, SOAR, monitoring), é crítico que **a formação cubra quando confiar vs. quando validar**.
 
@@ -19,7 +19,7 @@ Este addon define conteúdos formativos essenciais para cada capítulo técnico 
 
 ---
 
-## 🧠 Princípio Fundamental
+## 🧠 Princípio Fundamental {#-princípio-fundamental}
 
 **Ferramentas são instrumentos técnicos, não decisores autónomos.**
 
@@ -29,9 +29,9 @@ Este addon define conteúdos formativos essenciais para cada capítulo técnico 
 
 ---
 
-## 📖 Conteúdos Formativos por Capítulo Técnico
+## 📖 Conteúdos Formativos por Capítulo Técnico {#-conteúdos-formativos-por-capítulo-técnico}
 
-### Cap 01 - Classificação de Aplicações
+### Cap 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 
 **Ferramentas**: Assistentes de classificação de risco, templates automatizados
 
@@ -55,7 +55,7 @@ validation_date: "2026-01-04"
 
 ---
 
-### Cap 02 - Requisitos de Segurança
+### Cap 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 
 **Ferramentas**: Geradores de requisitos (LLMs, templates automatizados)
 
@@ -80,7 +80,7 @@ EX-AUTH-001: "Autenticação via OAuth 2.0 + PKCE com MFA obrigatório para role
 
 ---
 
-### Cap 03 - Threat Modeling
+### Cap 03 - Threat Modeling {#cap-03---threat-modeling}
 
 **Ferramentas**: LLMs para threat analysis (ChatGPT, GitHub Copilot para threat lists)
 
@@ -106,7 +106,7 @@ Aprovação: "AppSec Lead validou arquitetura e controlo"
 
 ---
 
-### Cap 04 - Arquitetura Segura
+### Cap 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 
 **Ferramentas**: Geradores de diagramas (Mermaid, PlantUML), assistentes de ADR
 
@@ -136,7 +136,7 @@ Aprovação: "Arch Lead + AppSec + CTO"
 
 ---
 
-### Cap 05 - Dependências, SBOM, SCA
+### Cap 05 - Dependências, SBOM, SCA {#cap-05---dependências-sbom-sca}
 
 **Ferramentas**: SCA (Snyk, Dependabot, npm audit, safety)
 
@@ -166,7 +166,7 @@ Evidência: "PR-123 com testes + validação staging"
 
 ---
 
-### Cap 06 - Desenvolvimento Seguro
+### Cap 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 
 **Ferramentas**: GitHub Copilot, ChatGPT, code generators, Cursor, Tabnine
 
@@ -210,7 +210,7 @@ password strength validation."
 
 ---
 
-### Cap 07 - CI/CD Seguro
+### Cap 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 
 **Ferramentas**: Pipeline automation (GitHub Actions, GitLab CI, Jenkins)
 
@@ -244,7 +244,7 @@ Aprovação: "AppSec valida contexto, aprova exceção com validade 6 meses"
 
 ---
 
-### Cap 08 - IaC e Infraestrutura
+### Cap 08 - IaC e Infraestrutura {#cap-08---iac-e-infraestrutura}
 
 **Ferramentas**: Geradores de Terraform/CloudFormation, assistentes de IaC
 
@@ -282,7 +282,7 @@ resource "aws_iam_role" "app_role" {
 
 ---
 
-### Cap 09 - Containers e Imagens
+### Cap 09 - Containers e Imagens {#cap-09---containers-e-imagens}
 
 **Ferramentas**: Geradores de Dockerfile, assistentes de Kubernetes manifests
 
@@ -312,7 +312,7 @@ USER nonroot:nonroot  # ✅ Non-root user
 
 ---
 
-### Cap 10 - Testes de Segurança
+### Cap 10 - Testes de Segurança {#cap-10---testes-de-segurança}
 
 **Ferramentas**: Test generators (Copilot for tests, ChatGPT, test automation)
 
@@ -394,7 +394,7 @@ def test_authentication_security():
 
 ---
 
-### Cap 11 - Deploy Seguro
+### Cap 11 - Deploy Seguro {#cap-11---deploy-seguro}
 
 **Ferramentas**: Automação de deploy (Terraform, Helm, Spinnaker, Argo)
 
@@ -423,7 +423,7 @@ on_error:
 
 ---
 
-### Cap 12 - Monitorização e Operações
+### Cap 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 
 **Ferramentas**: SOAR, alertas automáticos, correlação comportamental
 
@@ -451,7 +451,7 @@ alert: "Padrão de comportamento suspeito: User X downloads 10GB em 1h"
 
 ---
 
-## 🚨 Limites de Automação (Guardrails) - Síntese
+## 🚨 Limites de Automação (Guardrails) - Síntese {#-limites-de-automação-guardrails---síntese}
 
 **O que ferramentas NÃO PODEM fazer sozinhas**:
 
@@ -470,9 +470,9 @@ alert: "Padrão de comportamento suspeito: User X downloads 10GB em 1h"
 
 ---
 
-## ✅ Práticas de Validação de Outputs de IA
+## ✅ Práticas de Validação de Outputs de IA {#-práticas-de-validação-de-outputs-de-ia}
 
-### Checklist Universal (Todos os Capítulos)
+### Checklist Universal (Todos os Capítulos) {#checklist-universal-todos-os-capítulos}
 
 Ao usar ferramentas de geração/assistência:
 
@@ -484,7 +484,7 @@ Ao usar ferramentas de geração/assistência:
 - [ ] **Rastrear decisões** (por que aceitar/rejeitar sugestão?)
 - [ ] **Escalar dúvidas** (não assumir correção se não compreender)
 
-### Prompt Engineering Seguro
+### Prompt Engineering Seguro {#prompt-engineering-seguro}
 
 ```markdown
 <!-- Identificadores ilustrativos (EX-…); não correspondem ao Catálogo de Requisitos do Cap. 02. -->
@@ -505,7 +505,7 @@ Ao usar ferramentas de geração/assistência:
 
 ---
 
-## 📊 Métricas de Eficácia da Formação
+## 📊 Métricas de Eficácia da Formação {#-métricas-de-eficácia-da-formação}
 
 A formação em uso seguro de IA é eficaz quando:
 
@@ -521,9 +521,9 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-## 🎓 Integração na Formação por Perfil
+## 🎓 Integração na Formação por Perfil {#-integração-na-formação-por-perfil}
 
-### Developer
+### Developer {#developer}
 
 **Módulos obrigatórios**:
 - ✅ Uso seguro de GitHub Copilot e code assistants
@@ -539,7 +539,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-### QA/Testes
+### QA/Testes {#qatestes}
 
 **Módulos obrigatórios**:
 - ✅ Limitações de test generators
@@ -554,7 +554,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-### DevOps/SRE
+### DevOps/SRE {#devopssre}
 
 **Módulos obrigatórios**:
 - ✅ Quando confiar em automação de deploy/rollback
@@ -569,7 +569,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-### AppSec
+### AppSec {#appsec}
 
 **Módulos obrigatórios**:
 - ✅ Falsos positivos/negativos de SAST/DAST
@@ -584,7 +584,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-### IR/Ops
+### IR/Ops {#irops}
 
 **Módulos obrigatórios**:
 - ✅ Limitações de SOAR
@@ -599,7 +599,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-### Gestão
+### Gestão {#gestão}
 
 **Módulos obrigatórios**:
 - ✅ Quando aceitar risco de automação
@@ -614,7 +614,7 @@ A formação em uso seguro de IA é eficaz quando:
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 **Formação em uso seguro de IA não é opcional**: é crítica para prevenir:
 - ❌ Vulnerabilidades introduzidas por código gerado não-revisado

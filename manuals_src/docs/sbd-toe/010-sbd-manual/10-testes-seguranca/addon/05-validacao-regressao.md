@@ -9,7 +9,7 @@ sidebar_position: 6
 
 # Validação de Regressões de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que **vulnerabilidades previamente corrigidas não voltam a ser introduzidas** no código ao longo da evolução da aplicação, através de mecanismos sistemáticos de **validação regressiva de segurança**, incluindo:
 
@@ -22,7 +22,7 @@ Assegurar que **vulnerabilidades previamente corrigidas não voltam a ser introd
 
 ---
 
-## 🔍 O que é validação de regressões
+## 🔍 O que é validação de regressões {#-o-que-é-validação-de-regressões}
 
 Validação regressiva de segurança consiste em **detetar reintroduções acidentais de vulnerabilidades conhecidas**, previamente corrigidas, mas que retornam ao código por refatoração, fusão de branches ou repetição de erros.
 
@@ -35,7 +35,7 @@ Formas comuns:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Manter histórico de findings resolvidos**, com detalhes técnicos e commit associado;
 2. **Automatizar verificação da sua ausência** em builds futuros (ex: via hash, regra SAST);
@@ -48,7 +48,7 @@ Formas comuns:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Reter todos os findings com status “Resolvido” e respetivo commit de correção;
 - Automatizar regressões como parte do pipeline de PR;
@@ -59,7 +59,7 @@ Formas comuns:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relevância estratégica                        |
 |----------------------------------|------------------------------------------------|

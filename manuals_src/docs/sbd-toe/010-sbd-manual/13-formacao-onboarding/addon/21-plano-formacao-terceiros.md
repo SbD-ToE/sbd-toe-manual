@@ -12,7 +12,7 @@ Este documento define os **conteúdos mínimos obrigatórios** de capacitação 
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 - Assegurar que **terceiros cumprem os mesmos critérios mínimos** de segurança que os colaboradores internos
 - **Garantir validação formal do conhecimento aplicado**
@@ -21,7 +21,7 @@ Este documento define os **conteúdos mínimos obrigatórios** de capacitação 
 
 ---
 
-## 🧭 âmbito de aplicação
+## 🧭 âmbito de aplicação {#-âmbito-de-aplicação}
 
 Este modelo aplica-se a:
 
@@ -32,7 +32,7 @@ Este modelo aplica-se a:
 
 ---
 
-## 📋 Conteúdos mínimos obrigatórios
+## 📋 Conteúdos mínimos obrigatórios {#-conteúdos-mínimos-obrigatórios}
 
 | Tema                           | Descrição                                                         | Formato sugerido     |
 |--------------------------------|---------------------------------------------------------------------|-----------------------|
@@ -44,7 +44,7 @@ Este modelo aplica-se a:
 
 ---
 
-## ✅ Validação obrigatória
+## ✅ Validação obrigatória {#-validação-obrigatória}
 
 Todos os terceiros com acesso técnico devem:
 
@@ -66,7 +66,7 @@ Todos os terceiros com acesso técnico devem:
 
 ---
 
-## 🔗 Integração com processos internos
+## 🔗 Integração com processos internos {#-integração-com-processos-internos}
 
 | Processo                         | Aplicação do modelo                                           |
 |----------------------------------|---------------------------------------------------------------|
@@ -77,7 +77,7 @@ Todos os terceiros com acesso técnico devem:
 
 ---
 
-## 🧩 Ligações a outros documentos
+## 🧩 Ligações a outros documentos {#-ligações-a-outros-documentos}
 
 | Documento                         | Relevância prática                             |
 |-----------------------------------|------------------------------------------------|

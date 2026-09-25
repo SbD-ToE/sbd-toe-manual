@@ -9,13 +9,13 @@ tags: [logging, estruturação, centralização, ECS, transporte seguro]
 
 # Logging Estruturado e Centralizado
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todas as aplicações registam eventos de forma estruturada, segura, rastreável e auditável, permitindo a deteção de anomalias, correlação entre sistemas e suporte à resposta a incidentes.
 
 ---
 
-## 🧬 O que é logging estruturado
+## 🧬 O que é logging estruturado {#-o-que-é-logging-estruturado}
 
 Logging estruturado consiste na **emissão de eventos com campos normalizados**, num formato legível por máquina (ex: JSON), transportado para um sistema centralizado e com garantias de integridade e retenção.
 
@@ -23,7 +23,7 @@ Logging estruturado consiste na **emissão de eventos com campos normalizados**,
 
 ---
 
-## 🧱 Estrutura recomendada dos eventos
+## 🧱 Estrutura recomendada dos eventos {#-estrutura-recomendada-dos-eventos}
 
 Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio baseado em JSON com campos mínimos comuns.
 
@@ -39,14 +39,14 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 
 ---
 
-## 📦 Transporte e centralização dos logs
+## 📦 Transporte e centralização dos logs {#-transporte-e-centralização-dos-logs}
 
 - Usar **agentes de forwarding** (ex: Filebeat, Fluentbit, Vector)
 - Garantir **transporte seguro (TLS)** e persistência temporária (buffers)
 - Preferir **streaming contínuo** (ex: TCP, gRPC) a batch ou UDP
 - Separar logging do processo principal (ex: sidecar container, logging driver)
 
-### Destinos típicos:
+### Destinos típicos: {#destinos-típicos}
 
 | Categoria       | Exemplos                              |
 |-----------------|----------------------------------------|
@@ -56,7 +56,7 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 
 ---
 
-## 🔒 Segurança e integridade dos logs
+## 🔒 Segurança e integridade dos logs {#-segurança-e-integridade-dos-logs}
 
 | Controlo                          | Descrição                                                        |
 |-----------------------------------|------------------------------------------------------------------|
@@ -69,7 +69,7 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 
 ---
 
-## 📌 Eventos mínimos obrigatórios
+## 📌 Eventos mínimos obrigatórios {#-eventos-mínimos-obrigatórios}
 
 | Tipo de evento        | Deve conter…                                    |
 |-----------------------|--------------------------------------------------|
@@ -81,7 +81,7 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Não registar dados sensíveis (ex: passwords, tokens), mesmo cifrados
 - Separar logs por contexto funcional (ex: `app.log`, `auth.log`, `db.log`)
@@ -91,7 +91,7 @@ Adotar uma convenção como o Elastic Common Schema (ECS) ou formato próprio ba
 
 ---
 
-## 🧩 Ligação com deteção e resposta
+## 🧩 Ligação com deteção e resposta {#-ligação-com-deteção-e-resposta}
 
 O logging estruturado serve como **base para os mecanismos de deteção** definidos noutros documentos:
 

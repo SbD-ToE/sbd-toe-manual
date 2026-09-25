@@ -9,39 +9,39 @@ sidebar_position: 12
 
 # Security Champion
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Security Champions são **catalisadores locais de segurança**.  
 Não substituem AppSec, mas tornam a segurança **próxima do quotidiano da equipa**, assegurando que boas práticas são seguidas e histórias de segurança não são ignoradas.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - São catalisadores de boas práticas em cada equipa
 - Reforçam a adoção das prescrições de forma próxima do quotidiano
 - Garantem que a segurança não é ignorada em sprint planning
 - Mentoram e evangelizam a equipa
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 Facilitam a criação de uma **cultura de segurança** - elemento previsto tanto em **NIS2** como em **DORA**, que pedem demonstração de formação e sensibilização.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Apoiam a criação de cultura de segurança exigida em:
 - **NIS2** e **DORA**: Awareness e capacitação técnica contínua
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Transversal - Todos os Capítulos
+### Transversal - Todos os Capítulos {#transversal---todos-os-capítulos}
 Ajudar **Developers e QA** no dia-a-dia, garantir que **checklists de segurança** são seguidos, assegurar que **histórias de segurança** (requisitos, threat modeling, correções) não são ignoradas no backlog.
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 **Mentorar e evangelizar** a equipa em práticas de segurança. Liderar sessões de threat modeling por feature, épico ou refactor.
 
 **User Stories:**
 - [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças (referenciada como Developer no lifecycle)
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, revisar trimestralmente acesso, recolher feedback pós-projeto.
 
 **User Stories:**
@@ -53,7 +53,7 @@ Ser **owner de segurança designado** para aplicações críticas. Executar proc
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

@@ -9,7 +9,7 @@ sidebar_position: 30
 
 # Política de Monitorização de Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **monitorização contínua de segurança em sistemas em produção**, cobrindo a definição de eventos críticos, a integração com SIEM, a correlação comportamental e a revisão periódica das regras de detecção.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,11 +35,11 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Definição de eventos críticos de segurança
+## 3. Definição de eventos críticos de segurança {#3-definição-de-eventos-críticos-de-segurança}
 
 A lista de eventos críticos de segurança a monitorizar deve ser definida formalmente, aprovada por AppSec Engineer e revisada periodicamente. Como mínimo, deve cobrir:
 
-### 3.1 Autenticação e acesso
+### 3.1 Autenticação e acesso {#31-autenticação-e-acesso}
 
 | Evento | Trigger de alerta |
 |---|---|
@@ -50,7 +50,7 @@ A lista de eventos críticos de segurança a monitorizar deve ser definida forma
 | Elevação de privilégios | Qualquer evento de alteração de role ou permissão |
 | Acesso a recursos com permissão negada (403) em volume | > threshold definido por serviço |
 
-### 3.2 Exfiltração e acesso a dados
+### 3.2 Exfiltração e acesso a dados {#32-exfiltração-e-acesso-a-dados}
 
 | Evento | Trigger de alerta |
 |---|---|
@@ -58,7 +58,7 @@ A lista de eventos críticos de segurança a monitorizar deve ser definida forma
 | Acesso a dados classificados fora do perfil normal | Primeiro acesso ou volume acima do habitual |
 | Exportação massiva de registos | Volume superior ao threshold definido por operação |
 
-### 3.3 Pipeline e infraestrutura
+### 3.3 Pipeline e infraestrutura {#33-pipeline-e-infraestrutura}
 
 | Evento | Trigger de alerta |
 |---|---|
@@ -69,7 +69,7 @@ A lista de eventos críticos de segurança a monitorizar deve ser definida forma
 
 ---
 
-## 4. Domínios de monitorização
+## 4. Domínios de monitorização {#4-domínios-de-monitorização}
 
 A cobertura de monitorização deve abranger os seguintes domínios, de forma proporcional ao nível:
 
@@ -85,7 +85,7 @@ Quando o domínio técnico inclui sinais de saúde, heartbeat, readiness/livenes
 
 ---
 
-## 5. Integração com SIEM
+## 5. Integração com SIEM {#5-integração-com-siem}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -98,7 +98,7 @@ Quando o domínio técnico inclui sinais de saúde, heartbeat, readiness/livenes
 
 ---
 
-## 6. Correlação comportamental
+## 6. Correlação comportamental {#6-correlação-comportamental}
 
 Em L3, o SIEM deve ser configurado com regras de correlação que detectem padrões comportamentais suspeitos impossíveis de detectar por evento isolado:
 
@@ -117,7 +117,7 @@ As regras de correlação devem ser:
 
 ---
 
-## 7. Validação e tuning de regras de detecção
+## 7. Validação e tuning de regras de detecção {#7-validação-e-tuning-de-regras-de-detecção}
 
 Alertas mal calibrados geram fadiga de alertas - que é o equivalente funcional a não ter alertas. A manutenção das regras de detecção é trabalho contínuo:
 
@@ -129,7 +129,7 @@ Alertas mal calibrados geram fadiga de alertas - que é o equivalente funcional 
 
 ---
 
-## 8. Revisão periódica de cobertura
+## 8. Revisão periódica de cobertura {#8-revisão-periódica-de-cobertura}
 
 | Nível | Cadência de revisão |
 |---|---|
@@ -149,7 +149,7 @@ A revisão deve cobrir:
 
 Quando o sistema inclui agentes AI a operar em nível A1 ou superior (Policy 38), três classes de sinais entram no escopo desta política — para além dos sinais clássicos descritos nas secções 3 e 6. Não substituem os existentes; complementam-nos para a fatia agentic.
 
-### 9.1 *Audit events* de *tool invocation*
+### 9.1 *Audit events* de *tool invocation* {#91-audit-events-de-tool-invocation}
 
 Cada invocação de *tool* por um agente AI emite *audit event* estruturado com:
 
@@ -161,7 +161,7 @@ Cada invocação de *tool* por um agente AI emite *audit event* estruturado com:
 
 Estes eventos integram-se no SIEM como qualquer outro *audit log* — não vivem num *silo* separado. Cobertura operacional: ver [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012).
 
-### 9.2 *Token spend* / *runaway* detection
+### 9.2 *Token spend* / *runaway* detection {#92-token-spend--runaway-detection}
 
 Por agente e por *mandate*, define-se *budget* de consumo do modelo (tokens, chamadas, custo) por janela temporal. Cada inferência conta para o orçamento:
 
@@ -170,7 +170,7 @@ Por agente e por *mandate*, define-se *budget* de consumo do modelo (tokens, cha
 
 Detecta *loops* descontrolados, abuso, regressões de eficiência do modelo após *upgrade*. Cobertura operacional: ver [`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013).
 
-### 9.3 Detecção de *jailbreak* / *off-policy actions*
+### 9.3 Detecção de *jailbreak* / *off-policy actions* {#93-detecção-de-jailbreak--off-policy-actions}
 
 Para agentes A2+, mecanismo activo que cruza sinais para detectar comportamento adversarial ou fora do *mandate*:
 
@@ -181,7 +181,7 @@ Para agentes A2+, mecanismo activo que cruza sinais para detectar comportamento 
 
 Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e a *eval suite* offline (Cap. 10 §C5). Cobertura operacional: ver [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
 
-### 9.4 Proporcionalidade
+### 9.4 Proporcionalidade {#94-proporcionalidade}
 
 | Nível de risco | Sinais 9.1 | Sinais 9.2 | Sinais 9.3 |
 |---|:--:|:--:|:--:|
@@ -189,7 +189,7 @@ Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e 
 | L2 | Obrigatório para A1+ | Obrigatório | Recomendado |
 | L3 | Obrigatório para A1+ | Obrigatório | Obrigatório (corpus actualizado conforme cadência do *mandate*) |
 
-### 9.5 Anti-padrões
+### 9.5 Anti-padrões {#95-anti-padrões}
 
 - ❌ *Tool invocation log* genérico (sem `agent_id`/`session_id`/`mandate_ref`) — perde-se a capacidade de auditar o *mandate*.
 - ❌ *Budget* sem *kill-switch* operacional — alerta sem acção é teatro.
@@ -198,7 +198,7 @@ Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e 
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -210,7 +210,7 @@ Sinais accionáveis alimentam IR (secção 4 desta política + Cap. 12 US-04) e 
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -220,7 +220,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

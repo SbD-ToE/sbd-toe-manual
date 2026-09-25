@@ -7,7 +7,7 @@ tags: [iriusrisk, integração, ameaças, requisitos, rastreabilidade, capitulo2
 
 # Integração com IriusRisk e Ferramentas Automatizadas
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Demonstrar como aplicar os princípios normativos deste capítulo utilizando **plataformas automatizadas de Threat Modeling**, como o **IriusRisk**, substituindo os ficheiros manuais e mantendo a rastreabilidade com os requisitos definidos no **Capítulo 2 - Requisitos de Segurança**.
 
@@ -19,7 +19,7 @@ Esta integração visa:
 
 ---
 
-## 🧭 O que é substituído pela ferramenta
+## 🧭 O que é substituído pela ferramenta {#-o-que-é-substituído-pela-ferramenta}
 
 | Ficheiro manual (modelo local) | Equivalente em IriusRisk                                    |
 | ------------------------------ | ----------------------------------------------------------- |
@@ -31,7 +31,7 @@ Esta integração visa:
 
 ---
 
-## 🔗 Ligação com o Capítulo 2 - Requisitos de Segurança
+## 🔗 Ligação com o Capítulo 2 - Requisitos de Segurança {#-ligação-com-o-capítulo-2---requisitos-de-segurança}
 
 Para manter consistência e rastreabilidade, os requisitos definidos no IriusRisk devem:
 
@@ -40,7 +40,7 @@ Para manter consistência e rastreabilidade, os requisitos definidos no IriusRis
 - Ter criticidade associada (baixa / média / alta) conforme contexto do risco;
 - Indicar o **estado atual** da implementação.
 
-### Exemplo de correspondência:
+### Exemplo de correspondência: {#exemplo-de-correspondência}
 
 | Ameaça (IriusRisk)               | Requisito derivado (Cap. 2)           | Estado       |
 | -------------------------------- | ------------------------------------- | ------------ |
@@ -52,7 +52,7 @@ Para manter consistência e rastreabilidade, os requisitos definidos no IriusRis
 
 ---
 
-## 📁 Estrutura de exportação no projeto
+## 📁 Estrutura de exportação no projeto {#-estrutura-de-exportação-no-projeto}
 
 ```
 📁 threat-model/
@@ -66,7 +66,7 @@ Para manter consistência e rastreabilidade, os requisitos definidos no IriusRis
 
 ---
 
-## 🛠️ Como aplicar com IriusRisk no CI/CD
+## 🛠️ Como aplicar com IriusRisk no CI/CD {#️-como-aplicar-com-iriusrisk-no-cicd}
 
 A pipeline pode incluir validações como:
 
@@ -76,7 +76,7 @@ A pipeline pode incluir validações como:
 - Confirmar que requisitos do Cap. 2 com `estado != implemented` têm ticket associado;
 - Exportar relatório resumido com percentagem de ameaças cobertas.
 
-### Exemplo (pseudocódigo bash):
+### Exemplo (pseudocódigo bash): {#exemplo-pseudocódigo-bash}
 
 ```bash
 # Verifica se há threats sem mitigação nem justificação
@@ -94,7 +94,7 @@ cat threats.json | jq '.[] | select(.criticality == "High")' |
 
 ---
 
-## ✅ Benefícios da Integração
+## ✅ Benefícios da Integração {#-benefícios-da-integração}
 
 | Benefício                          | Impacto                                                   |
 | ---------------------------------- | --------------------------------------------------------- |
@@ -105,7 +105,7 @@ cat threats.json | jq '.[] | select(.criticality == "High")' |
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Reutilizar templates de threats e requisitos oferecidos pela ferramenta;
 - Manter naming e códigos de requisito sincronizados com o Capítulo 2;
@@ -115,7 +115,7 @@ cat threats.json | jq '.[] | select(.criticality == "High")' |
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                        | Relação com este ficheiro                                 |
 |----------------------------------|-----------------------------------------------------------|

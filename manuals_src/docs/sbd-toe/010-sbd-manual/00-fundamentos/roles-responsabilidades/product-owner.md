@@ -9,21 +9,21 @@ sidebar_position: 8
 
 # Product Owner (PO)
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Product Owner **equilibra negócio e segurança**, garantindo que esta não é vista como custo, mas como **valor intrínseco ao produto**.  
 Responsável por priorizar requisitos de segurança, validar impacto de decisões arquiteturais e autorizar releases apenas quando critérios são cumpridos.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Equilibram prioridades de negócio com requisitos de segurança
 - Garantem que as histórias de segurança entram e permanecem no backlog
 - Aprovam critérios de aceitação que incluem segurança
 - Tomam decisões go/no-go informadas por análise de risco
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 O PO suporta obrigações de **DORA** (integração de segurança e continuidade digital em todos os produtos) e de **NIS2** (integração da gestão de risco nos processos de negócio).
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Apoia:
 - **DORA**: Integração da resiliência digital no ciclo de vida
@@ -31,49 +31,49 @@ Apoia:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Validar **classificações de risco** em função dos objetivos estratégicos do produto.
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Selecionar **requisitos aplicáveis ao projeto** proporcionais ao risco. Garantir que cada requisito no backlog contém critérios de aceitação de segurança claros e testáveis.
 
 **User Stories:**
 - [US-01: Seleção de requisitos aplicáveis](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-01---seleção-de-requisitos-por-criticidade) - Segurança proporcional ao risco
 - [US-03: Critérios de aceitação de segurança](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-03---gestão-de-exceções-com-ttl-e-revalidação-obrigatória) - Validação consistente
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Priorizar **ameaças identificadas** de acordo com impacto no negócio, otimizando mitigação e investimento.
 
 **User Stories:**
 - [US-05: Priorização de ameaças por impacto](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-05---gate-de-controlo-de-consistência-no-cicd) - Otimizar recursos de mitigação
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Validar **impacto de requisitos de arquitetura** para priorizar mitigação. Gerir exceções com aprovação e controlos compensatórios.
 
 **User Stories:**
 - [US-06: Validação de impacto de requisitos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-06---atualização-da-baseline-após-alteração-arquitetural-significativa) - Priorizar mitigação
 - [US-10: Gestão de exceções de arquitetura](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios) - Equilibrar risco e entrega (com AppSec Engineer)
 
-### Cap. 05 - Dependências e SBOM
+### Cap. 05 - Dependências e SBOM {#cap-05---dependências-e-sbom}
 Validar **findings e exceções antes do go-live**, tomando decisão informada de go/no-go baseada em análise de risco.
 
 **User Stories:**
 - [US-05: Validação de release (go/no-go)](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-05---validação-de-release-gono-go) - Decisão informada antes do go-live
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Definir **gates de release** que bloqueiam versões inseguras, garantindo conformidade com thresholds estabelecidos.
 
-### Cap. 11 - Deploy Seguro
+### Cap. 11 - Deploy Seguro {#cap-11---deploy-seguro}
 Autorizar apenas **releases com critérios de segurança cumpridos**, validando que controlos estão aplicados.
 
-### Cap. 13-14 - Formação e Governança
+### Cap. 13-14 - Formação e Governança {#cap-13-14---formação-e-governança}
 Assegurar que **formação e cláusulas contratuais** refletem práticas seguras e apoiam decisões de produto.
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

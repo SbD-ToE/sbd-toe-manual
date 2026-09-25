@@ -49,7 +49,7 @@ Este capítulo articula-se diretamente com:
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 A segurança de containers depende de uma **cadeia contínua de controlos**, desde o desenho da pipeline até à execução em produção.  
 Qualquer quebra nesta cadeia compromete a confiança global.
@@ -68,7 +68,7 @@ Estas práticas não substituem decisão humana; fornecem **evidência técnica*
 
 ---
 
-## 🧪 Pilares de governação
+## 🧪 Pilares de governação {#-pilares-de-governação}
 
 Sem governação explícita, a automação degrada-se rapidamente em confiança implícita.  
 Este capítulo define pilares mínimos que garantem **disciplina operacional contínua**:
@@ -84,7 +84,7 @@ Este capítulo define pilares mínimos que garantem **disciplina operacional con
 
 ---
 
-## ⚙️ Como deve ser feito
+## ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 A prática segura exige mecanismos **formais, repetíveis e auditáveis**.  
 Resultados “plausíveis” ou “verdes” não substituem validação empírica.
@@ -103,7 +103,7 @@ Estes passos são obrigatórios porque **reduzem incerteza**, não porque elimin
 
 ---
 
-## 📆 Quando aplicar
+## 📆 Quando aplicar {#-quando-aplicar}
 
 Os controlos devem existir desde o desenho da pipeline e manter-se ao longo do ciclo:
 
@@ -117,7 +117,7 @@ A aplicação contínua evita acumulação silenciosa de risco.
 
 ---
 
-## 👥 Quem está envolvido
+## 👥 Quem está envolvido {#-quem-está-envolvido}
 
 A segurança de containers é transversal:
 
@@ -133,7 +133,7 @@ A ausência de um destes papéis compromete toda a cadeia.
 
 ---
 
-## 🎯 Para quê
+## 🎯 Para quê {#-para-quê}
 
 Containers inseguros comprometem diretamente a integridade organizacional.
 
@@ -148,7 +148,7 @@ Agilidade só é vantagem quando acompanhada de **confiança operacional**.
 
 ---
 
-## 🧮 Aplicação proporcional L1–L3
+## 🧮 Aplicação proporcional L1–L3 {#-aplicação-proporcional-l1l3}
 
 Nem todas as aplicações precisam do mesmo nível de controlo, mas todas precisam de algum.  
 A proporcionalidade permite balancear custo, risco e complexidade:
@@ -168,7 +168,7 @@ A proporcionalidade permite balancear custo, risco e complexidade:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 Políticas formais dão sustentabilidade a estas práticas.  
 Elas garantem que não dependemos apenas da disciplina individual, mas de regras coletivas e auditáveis.

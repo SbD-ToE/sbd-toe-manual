@@ -7,7 +7,7 @@ tags: [mapeamento, requisitos, threats, stride, capitulo2, rastreabilidade]
 
 # Mapeamento de Ameaças para Requisitos de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer uma abordagem sistemática para mapear ameaças identificadas no *Threat Modeling* com os **requisitos de segurança** definidos no Capítulo 2 do manual SbD-ToE, assegurando que:
 
@@ -17,7 +17,7 @@ Estabelecer uma abordagem sistemática para mapear ameaças identificadas no *Th
 
 ---
 
-## 🧭 Como mapear ameaças a requisitos
+## 🧭 Como mapear ameaças a requisitos {#-como-mapear-ameaças-a-requisitos}
 
 O mapeamento deve ser feito com base em identificadores únicos e formatos consistentes:
 
@@ -34,7 +34,7 @@ O mapeamento deve ser feito com base em identificadores únicos e formatos consi
 
 ---
 
-## ✅ Exemplos de requisitos derivados
+## ✅ Exemplos de requisitos derivados {#-exemplos-de-requisitos-derivados}
 
 | Categoria de Requisito (Cap. 2) | Tipo de ameaça típica                           | Exemplo de requisito derivado                                      |
 | ------------------------------- | ----------------------------------------------- | ------------------------------------------------------------------ |
@@ -48,7 +48,7 @@ O mapeamento deve ser feito com base em identificadores únicos e formatos consi
 
 ---
 
-## 🔗 Integração com o processo de validação
+## 🔗 Integração com o processo de validação {#-integração-com-o-processo-de-validação}
 
 Durante a fase de validação de segurança de cada projeto, este mapeamento deve ser usado para:
 
@@ -58,7 +58,7 @@ Durante a fase de validação de segurança de cada projeto, este mapeamento dev
 
 ---
 
-## 📁 Organização sugerida
+## 📁 Organização sugerida {#-organização-sugerida}
 
 ```
 📁 threat-model/
@@ -69,7 +69,7 @@ Durante a fase de validação de segurança de cada projeto, este mapeamento dev
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Utilizar sempre identificadores únicos e rastreáveis (ex: `TM-001`, `EX-AC-010` — identificadores ilustrativos; não correspondem ao Catálogo de Requisitos do Cap. 02);
 - Garantir consistência entre os ficheiros `threats.yaml`, `requisitos.yaml` e `mitigations.md`;
@@ -79,7 +79,7 @@ Durante a fase de validação de segurança de cada projeto, este mapeamento dev
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                        | Relação com este ficheiro                            |
 |----------------------------------|------------------------------------------------------|

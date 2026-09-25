@@ -9,7 +9,7 @@ sidebar_position: 12
 
 # Política de Exceções a CVEs
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **formalização, aprovação, controlo e reavaliação de exceções a vulnerabilidades conhecidas (CVEs)** detetadas em dependências de software.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todas as vulnerabilidades conhecidas (CVEs, GHSA, OSV, ou equivalente) identificadas por ferramentas SCA em dependências de software, incluindo:
 
@@ -36,7 +36,7 @@ Não se aplica a vulnerabilidades de código próprio (SAST findings) - essas s�
 
 ---
 
-## 3. Definição de exceção a CVE
+## 3. Definição de exceção a CVE {#3-definição-de-exceção-a-cve}
 
 Uma **exceção a CVE** é o registo formal que documenta a decisão de manter um componente com uma vulnerabilidade conhecida em produção durante um período limitado, com base em:
 
@@ -52,7 +52,7 @@ Uma exceção não é uma dispensa permanente. É uma aceitação temporária de
 
 ---
 
-## 4. Tipos de exceção
+## 4. Tipos de exceção {#4-tipos-de-exceção}
 
 | Tipo | Situação | Requisito adicional |
 |---|---|---|
@@ -65,9 +65,9 @@ Cada tipo tem requisitos distintos de aprovação e prazo máximo (ver secções
 
 ---
 
-## 5. Processo formal de exceção
+## 5. Processo formal de exceção {#5-processo-formal-de-exceção}
 
-### 5.1 Etapas obrigatórias
+### 5.1 Etapas obrigatórias {#51-etapas-obrigatórias}
 
 | Etapa | Responsável | Artefacto |
 |---|---|---|
@@ -77,7 +77,7 @@ Cada tipo tem requisitos distintos de aprovação e prazo máximo (ver secções
 | Aprovação formal | Alçada conforme secção 5.2 | Registo em `excecoes.yaml` ou `vex.yaml` |
 | Agendamento de reavaliação | AppSec Engineer | Calendário de revisão com alertas |
 
-### 5.2 Alçadas de aprovação
+### 5.2 Alçadas de aprovação {#52-alçadas-de-aprovação}
 
 | Nível da aplicação | Severidade CVE | Aprovador mínimo |
 |---|---|---|
@@ -88,7 +88,7 @@ Cada tipo tem requisitos distintos de aprovação e prazo máximo (ver secções
 | L2 | Critical | AppSec Engineer + gestor de aplicação + Security Officer |
 | L3 | Qualquer | AppSec Engineer + Security Officer + CISO (ou delegado) |
 
-### 5.3 Conteúdo mínimo do registo de exceção
+### 5.3 Conteúdo mínimo do registo de exceção {#53-conteúdo-mínimo-do-registo-de-exceção}
 
 Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.yaml` em formato VEX) com os seguintes campos:
 
@@ -103,9 +103,9 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 
 ---
 
-## 6. Prazos máximos e reavaliação
+## 6. Prazos máximos e reavaliação {#6-prazos-máximos-e-reavaliação}
 
-### 6.1 TTL por severidade e tipo
+### 6.1 TTL por severidade e tipo {#61-ttl-por-severidade-e-tipo}
 
 | Severidade CVE | Tipo | L1 | L2 | L3 |
 |---|---|---|---|---|
@@ -118,7 +118,7 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 
 *Exceções do tipo "Not affected" devem ser reavaliadas sempre que o componente é atualizado ou quando é publicada nova informação sobre o CVE que altere o contexto de exploitabilidade.
 
-### 6.2 Reavaliação
+### 6.2 Reavaliação {#62-reavaliação}
 
 Antes da expiração de cada exceção, deve ser realizada uma reavaliação que determine:
 
@@ -132,7 +132,7 @@ Uma exceção expirada sem reavaliação documentada é tratada como não-confor
 
 ---
 
-## 7. Controlos compensatórios
+## 7. Controlos compensatórios {#7-controlos-compensatórios}
 
 Quando o tipo de exceção é "Risk accepted", deve ser definido e verificado um controlo compensatório que reduza a probabilidade ou o impacto de exploração. Exemplos de controlos compensatórios aceites:
 
@@ -148,7 +148,7 @@ Os controlos compensatórios devem ser verificáveis - a sua eficácia deve pode
 
 ---
 
-## 8. Integração no pipeline
+## 8. Integração no pipeline {#8-integração-no-pipeline}
 
 O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 
@@ -161,7 +161,7 @@ O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 
 ---
 
-## 9. Artefactos
+## 9. Artefactos {#9-artefactos}
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
@@ -171,7 +171,7 @@ O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -184,7 +184,7 @@ O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -194,7 +194,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

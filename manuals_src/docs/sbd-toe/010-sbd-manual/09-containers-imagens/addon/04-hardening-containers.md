@@ -7,7 +7,7 @@ tags: [containers, hardening, permissoes, runtime, isolamento, seguranca]
 
 # Hardening e Restrições de Execução em Containers
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Reforçar a segurança da execução em containers através da **redução da superfície de ataque**, **eliminação de componentes desnecessários** e **restrição explícita de permissões em runtime**, garantindo que cada container executa **apenas o necessário, com o mínimo de privilégios possível**.
 
@@ -18,7 +18,7 @@ Estas medidas complementam a escolha de imagens seguras e a validação da sua p
 
 ---
 
-## 🧬 O que significa fazer hardening de containers
+## 🧬 O que significa fazer hardening de containers {#-o-que-significa-fazer-hardening-de-containers}
 
 **Hardening de containers** consiste na aplicação sistemática de medidas que:
 
@@ -33,7 +33,7 @@ Estas medidas complementam a escolha de imagens seguras e a validação da sua p
 
 ---
 
-## ⚠️ Hardening configurado ≠ hardening efetivo
+## ⚠️ Hardening configurado ≠ hardening efetivo {#️-hardening-configurado--hardening-efetivo}
 
 Um dos erros mais comuns em ambientes automatizados é assumir que:
 
@@ -56,7 +56,7 @@ Este capítulo trata explicitamente o hardening como um **estado verificável**,
 
 ---
 
-## 📘 Exemplos de práticas de hardening
+## 📘 Exemplos de práticas de hardening {#-exemplos-de-práticas-de-hardening}
 
 | Prática                          | Técnica / Mecanismo                          | Observações operacionais                         |
 |---------------------------------|-----------------------------------------------|--------------------------------------------------|
@@ -69,9 +69,9 @@ Este capítulo trata explicitamente o hardening como um **estado verificável**,
 
 ---
 
-## 🛠️ Como aplicar e verificar no build e runtime
+## 🛠️ Como aplicar e verificar no build e runtime {#️-como-aplicar-e-verificar-no-build-e-runtime}
 
-### 1️⃣ No build (imagem)
+### 1️⃣ No build (imagem) {#1️⃣-no-build-imagem}
 
 - Definir utilizador não-root (`USER`);
 - Evitar instalação de ferramentas interativas;
@@ -83,7 +83,7 @@ Este capítulo trata explicitamente o hardening como um **estado verificável**,
 
 ---
 
-### 2️⃣ No deploy (orquestração / CI/CD)
+### 2️⃣ No deploy (orquestração / CI/CD) {#2️⃣-no-deploy-orquestração--cicd}
 
 - Definir `securityContext` explícito:
   - `runAsNonRoot: true`
@@ -97,7 +97,7 @@ Este capítulo trata explicitamente o hardening como um **estado verificável**,
 
 ---
 
-### 3️⃣ Em runtime (verificação efetiva)
+### 3️⃣ Em runtime (verificação efetiva) {#3️⃣-em-runtime-verificação-efetiva}
 
 - Verificar utilizador efetivo (`id`, `/proc/self/status`);
 - Validar mounts e permissões;
@@ -109,7 +109,7 @@ Sem esta verificação, o hardening é apenas **assumido**, não demonstrado.
 
 ---
 
-## 📂 Onde configurar e controlar
+## 📂 Onde configurar e controlar {#-onde-configurar-e-controlar}
 
 - **Dockerfile**: baseline mínima e reproduzível;
 - **Manifests / Helm charts**: definição declarativa de restrições;
@@ -121,7 +121,7 @@ Cada camada reduz a probabilidade de erro, mas **nenhuma é suficiente isoladame
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Definir perfis de hardening por tipo de workload;
 - Proibir por política containers privilegiados;
@@ -132,7 +132,7 @@ Cada camada reduz a probabilidade de erro, mas **nenhuma é suficiente isoladame
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com hardening                          |
 |----------------------------------|------------------------------------------------|

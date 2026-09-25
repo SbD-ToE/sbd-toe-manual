@@ -17,7 +17,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Impedir o acesso não autorizado a segredos utilizados por pipelines;
 - Prevenir a exposição acidental de segredos em logs, repositórios ou ficheiros temporários;
@@ -25,7 +25,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Separação completa entre código e segredos**  
    - Segredos nunca devem ser armazenados diretamente no código fonte ou ficheiros YAML de pipeline;
@@ -51,7 +51,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                  |
 |-------|--------------------------------------------------------|---------------------------------------------------------|
@@ -61,7 +61,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Uso de `secrets.*` com âmbito mínimo e proteção `masked: true`;  
@@ -81,7 +81,7 @@ Esta prática define os controlos obrigatórios para garantir a **confidencialid
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Vazamento de segredos via logs ou ficheiros temporários (OSC&R: CI0013);
 - Utilização indevida de tokens com permissões excessivas (OSC&R: CI0007, CI0012);

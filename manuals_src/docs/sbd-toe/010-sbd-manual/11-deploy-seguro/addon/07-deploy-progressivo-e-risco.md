@@ -12,7 +12,7 @@ O deploy progressivo é uma prática essencial para mitigar riscos durante a ent
 
 ---
 
-## 🔄 Modelos comuns de deploy progressivo
+## 🔄 Modelos comuns de deploy progressivo {#-modelos-comuns-de-deploy-progressivo}
 
 | Estratégia           | Descrição                                                                 | Vantagens                                  |
 |----------------------|---------------------------------------------------------------------------|--------------------------------------------|
@@ -23,7 +23,7 @@ O deploy progressivo é uma prática essencial para mitigar riscos durante a ent
 
 ---
 
-## 🚨 Avaliação de risco em releases progressivas
+## 🚨 Avaliação de risco em releases progressivas {#-avaliação-de-risco-em-releases-progressivas}
 
 Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal do risco da release**, com base em:
 
@@ -37,7 +37,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 
 ---
 
-## 🌐 Controlo do rollout
+## 🌐 Controlo do rollout {#-controlo-do-rollout}
 
 - **âmbitos comuns**:
   - Percentagem de utilizadores (ex: 1%, 5%, 20%)
@@ -51,7 +51,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 
 ---
 
-## 🔹 Integração com pipelines
+## 🔹 Integração com pipelines {#-integração-com-pipelines}
 
 - Definir gates por segmento de rollout (canary, general availability)
 - Monitorizar eventos por release hash e toggle ativo
@@ -60,7 +60,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 
 ---
 
-## 👨‍💻 Equipa responsável pelo rollout
+## 👨‍💻 Equipa responsável pelo rollout {#-equipa-responsável-pelo-rollout}
 
 | Papel          | Responsabilidades principais                              |
 |----------------|-----------------------------------------------------------|
@@ -71,7 +71,7 @@ Antes de iniciar um rollout progressivo, deve ser feita uma **avaliação formal
 
 ---
 
-## ✅ Checklist de rollout seguro
+## ✅ Checklist de rollout seguro {#-checklist-de-rollout-seguro}
 
 - [ ] A release tem plano de rollout definido?
 - [ ] Existem métricas de sucesso / erro para monitorização?

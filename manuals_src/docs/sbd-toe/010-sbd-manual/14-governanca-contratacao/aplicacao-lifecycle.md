@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação de Governança & Contratação no Ciclo de Vida
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 | Fase / Evento | Ação esperada | Evidência |
 |---------------|--------------|-----------|
@@ -20,7 +20,7 @@ genia: us-format-normalization
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 | Papel | Responsabilidade |
 |-------|------------------|
@@ -33,9 +33,9 @@ genia: us-format-normalization
 
 ---
 
-## 📖 User Stories normalizadas
+## 📖 User Stories normalizadas {#-user-stories-normalizadas}
 
-### US-01 - Processo formal de exceções com alçadas por nível de risco
+### US-01 - Processo formal de exceções com alçadas por nível de risco {#us-01---processo-formal-de-exceções-com-alçadas-por-nível-de-risco}
 **Contexto.** Sem exceções formais, práticas são ignoradas sem transparência. Sem alçadas claras por nível de risco, decisões são inconsistentes e responsabilidade dispersa.  
 
 :::userstory
@@ -72,7 +72,7 @@ Como **Developer + AppSec Engineer**, quero **submeter exceções de segurança 
 
 ---
 
-### US-02 - Cláusulas contratuais de segurança
+### US-02 - Cláusulas contratuais de segurança {#us-02---cláusulas-contratuais-de-segurança}
 **Contexto.** Fornecedores sem cláusulas podem comprometer toda a cadeia.  
 
 :::userstory
@@ -105,7 +105,7 @@ Como **GRC / Compliance (Jurídico + Procurement)**, quero **incluir cláusulas 
 
 ---
 
-### US-03 - Validação contínua de fornecedores
+### US-03 - Validação contínua de fornecedores {#us-03---validação-contínua-de-fornecedores}
 **Contexto.** Fornecedores comprometidos propagam risco.  
 
 :::userstory
@@ -138,7 +138,7 @@ Como **GRC / Compliance**, quero **validar fornecedores de forma contínua**, pa
 
 ---
 
-### US-04 - Rastreabilidade organizacional
+### US-04 - Rastreabilidade organizacional {#us-04---rastreabilidade-organizacional}
 **Contexto.** Sem rastreabilidade, a gestão não tem visibilidade real.  
 
 :::userstory
@@ -171,7 +171,7 @@ Como **AppSec Engineer**, quero **agregar práticas de segurança por projeto em
 
 ---
 
-## 📊 Matriz de Rastreabilidade Global
+## 📊 Matriz de Rastreabilidade Global {#-matriz-de-rastreabilidade-global}
 
 A tabela seguinte consolida as práticas de rastreabilidade aplicadas em cada capítulo, mostrando o ponto focal para auditoria e governação:
 
@@ -193,7 +193,7 @@ A tabela seguinte consolida as práticas de rastreabilidade aplicadas em cada ca
 
 ---
 
-### US-05 - KPIs de governação
+### US-05 - KPIs de governação {#us-05---kpis-de-governação}
 **Contexto.** Sem métricas, não há melhoria contínua.  
 
 :::userstory
@@ -226,7 +226,7 @@ Como **Gestão Executiva**, quero **definir e monitorizar KPIs de governação**
 
 ---
 
-### US-06 - Execução de fluxo formal de validação de fornecedores
+### US-06 - Execução de fluxo formal de validação de fornecedores {#us-06---execução-de-fluxo-formal-de-validação-de-fornecedores}
 **Contexto.** Fornecedores não validados introduzem risco não rastreável na cadeia de suprimentos.  
 
 :::userstory
@@ -264,7 +264,7 @@ Como **GRC / Compliance (Procurement Officer)**, quero **executar o fluxo formal
 
 ---
 
-### US-07 - Ciclo contínuo de revisão e reavaliação de exceções
+### US-07 - Ciclo contínuo de revisão e reavaliação de exceções {#us-07---ciclo-contínuo-de-revisão-e-reavaliação-de-exceções}
 **Contexto.** Exceções esquecidas tornam-se risco permanente não mitigado.  
 
 :::userstory
@@ -302,7 +302,7 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 
 ---
 
-### US-08 - Repositório de conformidade por aplicação (controlo sistemático)
+### US-08 - Repositório de conformidade por aplicação (controlo sistemático) {#us-08---repositório-de-conformidade-por-aplicação-controlo-sistemático}
 **Contexto.** Sem repositório centralizado, estado de segurança fica invisível para auditores e gestão.  
 
 :::userstory
@@ -343,7 +343,7 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um repositó
 
 ---
 
-### US-09 - Designação formal de owners de segurança por aplicação
+### US-09 - Designação formal de owners de segurança por aplicação {#us-09---designação-formal-de-owners-de-segurança-por-aplicação}
 **Contexto.** Sem owner claro, responsabilidade dispersa resulta em negligência de exceções e validações.  
 
 :::userstory
@@ -382,7 +382,7 @@ Como **Gestão Executiva**, quero **designar formalmente um owner de segurança 
 
 ---
 
-### US-10 - Validação periódica de aplicações (ciclo de conformidade)
+### US-10 - Validação periódica de aplicações (ciclo de conformidade) {#us-10---validação-periódica-de-aplicações-ciclo-de-conformidade}
 **Contexto.** Sem validações recorrentes, desvios não são detetados até auditoria ou incidente.  
 
 :::userstory
@@ -423,7 +423,7 @@ Como **AppSec Engineer + GRC / Compliance**, quero **executar validações peri�
 
 ---
 
-### US-11 - Consolidação de KPIs de governação e maturidade
+### US-11 - Consolidação de KPIs de governação e maturidade {#us-11---consolidação-de-kpis-de-governação-e-maturidade}
 **Contexto.** Sem métricas consolidadas, decisão executiva sobre eficácia do SbD-ToE fica sem base empírica.  
 
 :::userstory
@@ -464,7 +464,7 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 
 ---
 
-### US-12 - Formalização de modelo de governação por nível de risco
+### US-12 - Formalização de modelo de governação por nível de risco {#us-12---formalização-de-modelo-de-governação-por-nível-de-risco}
 **Contexto.** Sem modelo formal documentado, decisões de segurança ficam dispersas entre AppSec, Gestão e Jurídico. A falta de critérios explícitos para aprovação por nível resulta em inconsistência, risco não rastreável, e desconfiança dos stakeholders.
 
 :::userstory
@@ -507,7 +507,7 @@ Como **CISO + AppSec Engineer**, quero **formalizar e documentar o modelo de gov
 
 ---
 
-### US-13 - Controlo sistemático e periódico por capítulo SbD-ToE
+### US-13 - Controlo sistemático e periódico por capítulo SbD-ToE {#us-13---controlo-sistemático-e-periódico-por-capítulo-sbd-toe}
 **Contexto.** Sem checklist centralizado de conformidade, o estado de conformidade de uma aplicação com Cap. 2–13 fica invisível. Desvios não são detetados até auditoria ou incidente crítico. Gestão não tem visibilidade do progresso.
 
 :::userstory
@@ -552,7 +552,7 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um checklist
 
 ---
 
-### US-14 - Reavaliação contínua e rotação de fornecedores pós-onboarding
+### US-14 - Reavaliação contínua e rotação de fornecedores pós-onboarding {#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding}
 **Contexto.** Fornecedores são validados no onboarding, mas sem revisão periódica, desvios surgem ao longo do tempo (novos CVEs não mitigados, SLA não cumprido, mudanças de propriedade, evolução do risco). Risco residual acumula invisível. Contratos expiram sem renovação de validação.
 
 :::userstory
@@ -595,7 +595,7 @@ Como **AppSec Engineer + GRC / Compliance (Procurement Officer)**, quero **reava
 
 ---
 
-### US-15 - Preparação Técnica e Validação de Contractors pré-Acesso
+### US-15 - Preparação Técnica e Validação de Contractors pré-Acesso {#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso}
 **Contexto.** Contractors ganham acesso sem compreender políticas de segurança, ferramentas obrigatórias, ou procedimentos. Risco de erro involuntário (credenciais expostas, acesso a dados não autorizados, práticas inseguras).
 
 :::userstory
@@ -640,7 +640,7 @@ Como **Security Champion (HR/Recruiter)**, quero **executar processo estruturado
 
 ---
 
-### US-16 - Trilho de Formação Obrigatória pré-Acesso (Contractors)
+### US-16 - Trilho de Formação Obrigatória pré-Acesso (Contractors) {#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors}
 **Contexto.** Contractors iniciados sem completar formação de segurança obrigatória. Falta de integração clara entre Cap. 13 (Formação) e Cap. 14 (Governação): quem aprova, qual o SLA, como é tracked.
 
 :::userstory
@@ -691,7 +691,7 @@ Como **CISO + Security Champion (Training Manager)**, quero **definir e executar
 
 ---
 
-### US-17 - Offboarding Seguro de Contractors e Rescisão de Fornecedores
+### US-17 - Offboarding Seguro de Contractors e Rescisão de Fornecedores {#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores}
 **Contexto.** Contractors terminam projeto ou contrato sem processo formal: acesso mantém-se ativo, ativos (código, credenciais, documentos) não são recuperados. Risco de vazamento pós-rescisão, acesso residual, violação de confidencialidade.
 
 :::userstory
@@ -744,7 +744,7 @@ Como **Security Champion (HR) + DevOps / SRE**, quero **executar processo formal
 
 ---
 
-### US-18 - Monitorização Contínua de Conformidade de Fornecedores (Alertas e Escalação)
+### US-18 - Monitorização Contínua de Conformidade de Fornecedores (Alertas e Escalação) {#us-18---monitorização-contínua-de-conformidade-de-fornecedores-alertas-e-escalação}
 **Contexto.** Fornecedores são avaliados periodicamente (US-14), mas risco entre ciclos não é detetado. CVEs, incidentes críticos, mudanças de SLA, ou breaches não são monitorados em tempo real.
 
 :::userstory
@@ -793,7 +793,7 @@ Como **AppSec Engineer + Operações (Ops)**, quero **monitorizar continuamente 
 
 ---
 
-### US-19 - Revisão Trimestral de Acesso de Contractors (Least Privilege)
+### US-19 - Revisão Trimestral de Acesso de Contractors (Least Privilege) {#us-19---revisão-trimestral-de-acesso-de-contractors-least-privilege}
 **Contexto.** Contractors ganham acesso inicial, mas permissões acumulam ao longo do tempo ("acesso creep"). Sem revisão periódica, principle of least privilege é violado.
 
 :::userstory
@@ -841,7 +841,7 @@ Como **Security Champion + DevOps / SRE + Scrum Master / Team Lead**, quero **re
 
 ---
 
-### US-20 - Feedback Pós-Projeto e Rating de Contractors
+### US-20 - Feedback Pós-Projeto e Rating de Contractors {#us-20---feedback-pós-projeto-e-rating-de-contractors}
 **Contexto.** Contractors terminam projeto sem feedback sobre desempenho de segurança. Sem dados de avaliação, impossível tomar decisão informada sobre re-hire ou referência.
 
 :::userstory
@@ -1001,7 +1001,7 @@ Como **GRC / Compliance** com apoio de **CISO + Gestão Executiva**, quero **man
 
 ---
 
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 | Artefacto | Evidência |
 |-----------|-----------|
@@ -1022,7 +1022,7 @@ Como **GRC / Compliance** com apoio de **CISO + Gestão Executiva**, quero **man
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
@@ -1049,7 +1049,7 @@ Como **GRC / Compliance** com apoio de **CISO + Gestão Executiva**, quero **man
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 - **Exceções sem registo = risco invisível.** Operacionalize US-01 (com alçadas claras) e US-07 para garantir rastreabilidade contínua e revalidação automática.  
 - **Modelo formal é o alicerce.** US-12 documenta governação com critérios explícitos, alçadas por L1–L3, e formação obrigatória para approvers (Cap. 13).  

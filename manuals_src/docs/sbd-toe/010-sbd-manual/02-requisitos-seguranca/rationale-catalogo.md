@@ -6,7 +6,7 @@ tags: [estrutura, requisitos, temas, asvs, rastreabilidade, ia]
 sidebar_position: 2
 ---
 
-## Rationale para a Estrutura dos Requisitos Aplicacionais
+## Rationale para a Estrutura dos Requisitos Aplicacionais {#rationale-para-a-estrutura-dos-requisitos-aplicacionais}
 
 A definição dos requisitos aplicacionais neste manual segue uma estrutura em **20 temas principais**, criada com o objetivo de oferecer uma abordagem **abrangente, prática e proporcional ao risco**, adequada à aplicação dos princípios de *Security by Design* ao longo de todo o ciclo de vida do software.
 
@@ -14,7 +14,7 @@ Esta estrutura procura equilibrar **rigor normativo**, **aplicabilidade prática
 
 ---
 
-## 🧩 Origem e Fundamento
+## 🧩 Origem e Fundamento {#-origem-e-fundamento}
 
 A estrutura adotada tem como base principal a framework **OWASP ASVS v5.0 (Application Security Verification Standard)**, reconhecida como uma referência global para a definição e verificação de requisitos de segurança aplicacional.
 
@@ -36,7 +36,7 @@ Neste capítulo são tratados, de forma deliberada, os requisitos que podem ser 
 
 ---
 
-## 🧠 Motivações para Ajustes e Consolidação
+## 🧠 Motivações para Ajustes e Consolidação {#-motivações-para-ajustes-e-consolidação}
 
 A estrutura dos 20 temas foi desenvolvida com base nas seguintes motivações fundamentais:
 
@@ -54,7 +54,7 @@ A estrutura dos 20 temas foi desenvolvida com base nas seguintes motivações fu
 
 ---
 
-## 🤖 Nota sobre Automação e Uso de IA no Desenvolvimento
+## 🤖 Nota sobre Automação e Uso de IA no Desenvolvimento {#-nota-sobre-automação-e-uso-de-ia-no-desenvolvimento}
 
 A estrutura por temas **não assume um modelo de desenvolvimento manual**, nem ignora a adoção crescente de **automação, pipelines avançados ou assistentes baseados em IA** no processo de engenharia de software.
 
@@ -72,7 +72,7 @@ Esta decisão preserva a longevidade e a coerência do modelo, evitando dependê
 
 ---
 
-## 🧷 Ligação aos Capítulos do Manual
+## 🧷 Ligação aos Capítulos do Manual {#-ligação-aos-capítulos-do-manual}
 
 Os 20 temas de requisitos funcionam como **base comum** para a aplicação prática dos capítulos seguintes do manual, permitindo:
 

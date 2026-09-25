@@ -21,7 +21,7 @@ O projeto analisado define ambientes `dev`, `staging` e `prod` para um cluster K
 
 ---
 
-## 🧭 Classificação de risco
+## 🧭 Classificação de risco {#-classificação-de-risco}
 
 A classificação foi realizada segundo o **Capítulo 01 - Gestão de Risco**, tendo resultado em **L3**, com base nos seguintes fatores:
 
@@ -34,7 +34,7 @@ Esta classificação determinou a **aplicação integral dos requisitos, valida�
 
 ---
 
-## 📐 Arquitetura e modelo de repositório
+## 📐 Arquitetura e modelo de repositório {#-arquitetura-e-modelo-de-repositório}
 
 O desenho técnico do projeto seguiu princípios de desacoplamento, segregação e controlo explícito:
 
@@ -52,7 +52,7 @@ Esta estrutura assegura que **nenhuma alteração pode ser aplicada sem passar p
 
 ---
 
-## 🔍 Threat Modeling aplicado a IaC
+## 🔍 Threat Modeling aplicado a IaC {#-threat-modeling-aplicado-a-iac}
 
 O *threat modeling* foi conduzido de acordo com o **Capítulo 03 - Threat Modeling**, tratando o projeto IaC como um **ativo crítico**.
 
@@ -73,7 +73,7 @@ Cada ameaça foi mapeada para requisitos de IaC e respetivos controlos técnicos
 
 ---
 
-## 🧱 Aplicação dos requisitos de segurança
+## 🧱 Aplicação dos requisitos de segurança {#-aplicação-dos-requisitos-de-segurança}
 
 Todos os requisitos **IAC-001 a IAC-013** foram avaliados e aplicados segundo a matriz de proporcionalidade L3:
 
@@ -89,7 +89,7 @@ Em nenhum momento a aceitação de alterações dependeu da autoria do código, 
 
 ---
 
-## 📊 Validação, evidência e auditoria
+## 📊 Validação, evidência e auditoria {#-validação-evidência-e-auditoria}
 
 A estratégia de validação seguiu o modelo definido no **Capítulo 10 - Validação**:
 
@@ -102,7 +102,7 @@ Este modelo garante que **qualquer contribuição - humana ou automatizada - é 
 
 ---
 
-## 🔐 Integração com pipelines CI/CD
+## 🔐 Integração com pipelines CI/CD {#-integração-com-pipelines-cicd}
 
 Os pipelines CI/CD foram desenhados como **mecanismos de controlo e decisão**, não apenas de automação:
 
@@ -114,7 +114,7 @@ Os pipelines CI/CD foram desenhados como **mecanismos de controlo e decisão**, 
 
 ---
 
-## 🎓 Formação e capacitação da equipa
+## 🎓 Formação e capacitação da equipa {#-formação-e-capacitação-da-equipa}
 
 Reconhecendo que IaC seguro exige competências específicas, foi criado um **programa de formação dedicado**, cobrindo:
 
@@ -128,7 +128,7 @@ A formação tornou-se **pré-requisito para permissões de escrita**, reforçan
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Este caso de estudo demonstra que o **SbD-ToE aplica-se de forma uniforme e robusta a projetos IaC**, assumindo por defeito que **o código não é confiável até prova em contrário**.
 

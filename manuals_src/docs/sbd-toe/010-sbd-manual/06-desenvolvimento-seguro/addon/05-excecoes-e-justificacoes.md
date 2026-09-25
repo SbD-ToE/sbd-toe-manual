@@ -12,13 +12,13 @@ tags: [exceções, validação, rastreabilidade, segurança, desenvolvimento, sa
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a práticas e controlos identificados por ferramentas SAST, linters ou revisão de código durante o desenvolvimento.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - finding de ferramenta SAST classificado como falso positivo com evidência técnica demonstrável;
 - prática obrigatória incompatível com constraint de framework ou biblioteca externa sem alternativa viável;
@@ -27,7 +27,7 @@ Excepções a práticas e controlos identificados por ferramentas SAST, linters 
 
 ---
 
-## Mecanismos de registo em ferramentas SAST
+## Mecanismos de registo em ferramentas SAST {#mecanismos-de-registo-em-ferramentas-sast}
 
 As ferramentas SAST permitem marcar findings directamente no relatório - `mute`, `waive`, `false positive accepted`, anotação inline. Estas marcações são válidas como mecanismo de registo técnico, mas **não substituem a aprovação formal** nem a cadeia de autoridade exigida pelo processo canónico.
 
@@ -35,7 +35,7 @@ Ferramentas de referência: Kiuwan, SonarQube, Xygeni, Checkmarx, Semgrep.
 
 ---
 
-## Rastreabilidade no repositório
+## Rastreabilidade no repositório {#rastreabilidade-no-repositório}
 
 Além do registo no sistema de tracking, a excepção deve ser visível no repositório:
 
@@ -47,7 +47,7 @@ O registo no repositório complementa o registo no sistema de tracking e garante
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

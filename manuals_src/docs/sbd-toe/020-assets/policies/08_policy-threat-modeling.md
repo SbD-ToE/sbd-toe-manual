@@ -9,7 +9,7 @@ sidebar_position: 8
 
 # Política de Threat Modeling
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a realização de **threat modeling** - modelação sistemática de ameaças - em aplicações classificadas como L2 ou L3.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -34,7 +34,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Metodologias
+## 3. Metodologias {#3-metodologias}
 
 A organização adota as seguintes metodologias, selecionadas proporcionalmente ao contexto:
 
@@ -48,9 +48,9 @@ Em L2, STRIDE é suficiente como metodologia base. Em L3, LINDDUN deve ser aplic
 
 ---
 
-## 4. Quando realizar threat modeling
+## 4. Quando realizar threat modeling {#4-quando-realizar-threat-modeling}
 
-### 4.1 Triggers obrigatórios
+### 4.1 Triggers obrigatórios {#41-triggers-obrigatórios}
 
 | Evento | Obrigatoriedade |
 |---|:---:|
@@ -62,7 +62,7 @@ Em L2, STRIDE é suficiente como metodologia base. Em L3, LINDDUN deve ser aplic
 | Resultado de pentest que evidencie lacuna no modelo | Obrigatório |
 | Pós-incidente com origem em ameaça não modelada | Obrigatório |
 
-### 4.2 Cadência periódica
+### 4.2 Cadência periódica {#42-cadência-periódica}
 
 Em complemento aos triggers, o modelo de ameaças deve ser revisto com cadência mínima:
 
@@ -73,9 +73,9 @@ Em complemento aos triggers, o modelo de ameaças deve ser revisto com cadência
 
 ---
 
-## 5. Processo de threat modeling
+## 5. Processo de threat modeling {#5-processo-de-threat-modeling}
 
-### 5.1 Passos obrigatórios
+### 5.1 Passos obrigatórios {#51-passos-obrigatórios}
 
 1. **Definir âmbito e assunções** - fronteiras do sistema, componentes incluídos, assunções de confiança, perfis de atacante
 2. **Criar ou atualizar o diagrama de arquitetura** - DFD (Data Flow Diagram) ou equivalente, com trust boundaries explícitas
@@ -86,7 +86,7 @@ Em complemento aos triggers, o modelo de ameaças deve ser revisto com cadência
 7. **Aprovar formalmente** - pela alçada adequada ao nível de risco
 8. **Arquivar** - versão aprovada com metadados de rastreabilidade
 
-### 5.2 Checklist de conteúdo mínimo do modelo
+### 5.2 Checklist de conteúdo mínimo do modelo {#52-checklist-de-conteúdo-mínimo-do-modelo}
 
 - [ ] Âmbito, assunções e limites documentados
 - [ ] Diagrama de arquitetura com trust boundaries
@@ -99,7 +99,7 @@ Em complemento aos triggers, o modelo de ameaças deve ser revisto com cadência
 
 ---
 
-## 6. Aprovação formal
+## 6. Aprovação formal {#6-aprovação-formal}
 
 O modelo de ameaças só é válido como controlo de segurança quando existe **aprovação formal** documentada.
 
@@ -115,7 +115,7 @@ A aprovação deve incluir:
 
 ---
 
-## 7. Atualização por alteração técnica
+## 7. Atualização por alteração técnica {#7-atualização-por-alteração-técnica}
 
 Sempre que ocorra uma alteração significativa, o modelo de ameaças deve ser atualizado **antes da promoção a produção**:
 
@@ -129,7 +129,7 @@ O pipeline CI/CD deve incluir um gate que verifique se o modelo de ameaças est�
 
 ---
 
-## 8. Integração com arquitetura
+## 8. Integração com arquitetura {#8-integração-com-arquitetura}
 
 O threat modeling e a arquitetura segura devem estar sincronizados de forma bidirecional:
 
@@ -139,24 +139,24 @@ O threat modeling e a arquitetura segura devem estar sincronizados de forma bidi
 
 ---
 
-## 9. Proteção e retenção dos artefactos
+## 9. Proteção e retenção dos artefactos {#9-proteção-e-retenção-dos-artefactos}
 
 Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos sensíveis** - contêm informação sobre a arquitetura interna, fluxos de dados e vulnerabilidades identificadas.
 
-### 9.1 Controlo de acesso
+### 9.1 Controlo de acesso {#91-controlo-de-acesso}
 
 - Acesso restrito ao princípio do menor privilégio
 - Partilha apenas com funções que necessitem do acesso para exercer as suas responsabilidades
 - Não publicar em repositórios públicos ou sistemas sem controlo de acesso
 
-### 9.2 Classificação
+### 9.2 Classificação {#92-classificação}
 
 | Nível | Classificação mínima recomendada |
 |---|---|
 | L2 | Confidencial - interno à equipa de produto e segurança |
 | L3 | Confidencial / Restrito - acesso limitado a AppSec, arquitetura e gestão |
 
-### 9.3 Retenção
+### 9.3 Retenção {#93-retenção}
 
 | Artefacto | Retenção mínima |
 |---|---|
@@ -167,7 +167,7 @@ Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos s
 
 ---
 
-## 10. Reutilização de modelos anteriores
+## 10. Reutilização de modelos anteriores {#10-reutilização-de-modelos-anteriores}
 
 A reutilização de um modelo de ameaças anterior como base para um novo projeto ou revisão é permitida, desde que:
 
@@ -180,7 +180,7 @@ A reutilização sem revisão explícita é equivalente a não ter threat modeli
 
 ---
 
-## 11. Proporcionalidade por nível
+## 11. Proporcionalidade por nível {#11-proporcionalidade-por-nível}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -194,7 +194,7 @@ A reutilização sem revisão explícita é equivalente a não ter threat modeli
 
 ---
 
-## 12. Responsabilidades
+## 12. Responsabilidades {#12-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -206,7 +206,7 @@ A reutilização sem revisão explícita é equivalente a não ter threat modeli
 
 ---
 
-## 13. Revisão e auditoria desta política
+## 13. Revisão e auditoria desta política {#13-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -216,7 +216,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 14. Referências normativas e técnicas
+## 14. Referências normativas e técnicas {#14-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

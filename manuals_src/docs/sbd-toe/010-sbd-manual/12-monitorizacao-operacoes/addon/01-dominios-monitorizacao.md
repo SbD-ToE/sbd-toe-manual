@@ -8,19 +8,19 @@ tags: [monitorização, observabilidade, logging, segurança, runtime, infraestr
 
 # Domínios e Abrangência da Monitorização
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir uma taxonomia prática dos **domínios de monitorização** aplicáveis a aplicações e sistemas, permitindo estruturar controlos de deteção, operação, rastreabilidade e segurança, com proporcionalidade ao nível de risco e aos fluxos críticos.
 
 ---
 
-## 🧬 O que são domínios de monitorização
+## 🧬 O que são domínios de monitorização {#-o-que-são-domínios-de-monitorização}
 
 A monitorização aplicacional e infraestrutural pode ser classificada em domínios específicos consoante o tipo de dados observados e os objetivos de deteção, análise ou rastreabilidade. Cada domínio foca-se num subconjunto distinto do comportamento do sistema, e exige ferramentas e abordagens próprias.
 
 ---
 
-## 🗂️ Tipos de monitorização
+## 🗂️ Tipos de monitorização {#️-tipos-de-monitorização}
 
 | Tipo                        | Finalidade principal                                  | Exemplos práticos                                     |
 |-----------------------------|--------------------------------------------------------|--------------------------------------------------------|
@@ -34,7 +34,7 @@ A monitorização aplicacional e infraestrutural pode ser classificada em domín
 
 ---
 
-## 🔎 Como aplicar
+## 🔎 Como aplicar {#-como-aplicar}
 
 1. **Identificar fluxos críticos** da aplicação e do sistema;
 2. **Mapear domínios aplicáveis** a cada fluxo (ex: funcional, segurança, CI/CD);
@@ -44,7 +44,7 @@ A monitorização aplicacional e infraestrutural pode ser classificada em domín
 
 ---
 
-## 📘 Fontes típicas de dados para cada domínio
+## 📘 Fontes típicas de dados para cada domínio {#-fontes-típicas-de-dados-para-cada-domínio}
 
 | Origem              | Tipo de dados                         | Ferramentas comuns                    |
 |---------------------|----------------------------------------|----------------------------------------|
@@ -56,7 +56,7 @@ A monitorização aplicacional e infraestrutural pode ser classificada em domín
 
 ---
 
-## 📊 Proporcionalidade por nível de risco
+## 📊 Proporcionalidade por nível de risco {#-proporcionalidade-por-nível-de-risco}
 
 A seleção de domínios e profundidade de monitorização deve ser proporcional à criticidade da aplicação:
 
@@ -68,7 +68,7 @@ A seleção de domínios e profundidade de monitorização deve ser proporcional
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Aplicar logging estruturado (ex: JSON, ECS) com enriquecimento de contexto;
 - Priorizar domínios que suportam deteção ativa e resposta (ex: segurança, CI/CD);
@@ -78,7 +78,7 @@ A seleção de domínios e profundidade de monitorização deve ser proporcional
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                           | Relação com este tópico                         |
 |-------------------------------------|--------------------------------------------------|

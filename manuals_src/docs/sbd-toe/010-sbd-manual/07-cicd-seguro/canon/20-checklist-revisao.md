@@ -23,7 +23,7 @@ Este ficheiro funciona como:
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                               | Verificado? |
 |--------------------------------------------------------------------------------------------------------------------|-------------|
@@ -47,7 +47,7 @@ Este ficheiro funciona como:
 
 ---
 
-## 🔄 Notas finais
+## 🔄 Notas finais {#-notas-finais}
 
 - Este checklist deve ser aplicado **por pipeline e por aplicação**, não apenas de forma genérica.
 - O resultado pode ser usado diretamente como:

@@ -8,7 +8,7 @@ tags: [tipo:anexo, grupo:execucao, tema:feature-flags, toggles, deploy, rastreab
 
 # Utilização Segura de Feature Flags e Toggles
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer boas práticas para a utilização segura de **feature flags** (ou toggles), com foco em:
 
@@ -19,7 +19,7 @@ Estabelecer boas práticas para a utilização segura de **feature flags** (ou t
 
 ---
 
-## 🧬 O que são Feature Flags
+## 🧬 O que são Feature Flags {#-o-que-são-feature-flags}
 
 Feature flags são mecanismos que permitem ativar ou desativar funcionalidades **sem novo deploy**, com base em regras de configuração. São amplamente usados para:
 
@@ -29,7 +29,7 @@ Feature flags são mecanismos que permitem ativar ou desativar funcionalidades *
 - Contenção de falhas;
 - Gestão operacional de funcionalidades críticas.
 
-### Tipos comuns de toggles
+### Tipos comuns de toggles {#tipos-comuns-de-toggles}
 
 | Tipo                    | Descrição                                                    | Exemplo prático                                  |
 |-------------------------|--------------------------------------------------------------|--------------------------------------------------|
@@ -41,16 +41,16 @@ Feature flags são mecanismos que permitem ativar ou desativar funcionalidades *
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
-### 🔐 Segurança e isolamento
+### 🔐 Segurança e isolamento {#-segurança-e-isolamento}
 
 - Nunca usar toggles como substituto de controlo de acesso;
 - Avaliar toggles no **backend** - não apenas no frontend;
 - Evitar **toggles client-side** para lógica sensível;
 - Garantir que todos os caminhos lógicos associados são testáveis.
 
-### 🛡️ Rastreabilidade e metadata
+### 🛡️ Rastreabilidade e metadata {#️-rastreabilidade-e-metadata}
 
 Cada toggle deve ter:
 
@@ -60,7 +60,7 @@ Cada toggle deve ter:
 - Condição de ativação e de expiração;
 - Justificação funcional e de segurança.
 
-### 📜 Gestão como código
+### 📜 Gestão como código {#-gestão-como-código}
 
 - Gerir toggles como infraestrutura (ex: Feature Flags as Code);
 - Versionar configuração (YAML, JSON, etc.);
@@ -68,7 +68,7 @@ Cada toggle deve ter:
 
 ---
 
-## 🧪 Exemplo de metadata de toggle
+## 🧪 Exemplo de metadata de toggle {#-exemplo-de-metadata-de-toggle}
 
 ```yaml
 toggle: enable_enhanced_logging
@@ -82,7 +82,7 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-## ⚠️ Riscos e más práticas
+## ⚠️ Riscos e más práticas {#️-riscos-e-más-práticas}
 
 | Antipadrão                        | Consequência                                      |
 |----------------------------------|---------------------------------------------------|
@@ -94,7 +94,7 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Definir **SLA de revisão periódica** (ex: todos os toggles revistos mensalmente);
 - Alertar para toggles ativos há mais de 60 dias;
@@ -104,7 +104,7 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-## 🧰 Ferramentas de suporte
+## 🧰 Ferramentas de suporte {#-ferramentas-de-suporte}
 
 | Ferramenta         | Tipo                  | Notas                                     |
 |--------------------|-----------------------|-------------------------------------------|
@@ -115,7 +115,7 @@ justification: Necessário para investigação de comportamento anómalo
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo              | Relação com este tema                             |
 |-----------------------------------|---------------------------------------------------|

@@ -13,7 +13,7 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 - Validar de forma objetiva a assimilação de conteúdos essenciais de segurança
 - Fornecer registo auditável de conclusão de onboarding técnico
@@ -21,7 +21,7 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-## 📦 Contexto de uso
+## 📦 Contexto de uso {#-contexto-de-uso}
 
 | Situação                         | Aplicação recomendada                                 |
 |----------------------------------|--------------------------------------------------------|
@@ -34,7 +34,7 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-## 🧪 Exemplo de quiz: Dev em aplicação L2
+## 🧪 Exemplo de quiz: Dev em aplicação L2 {#-exemplo-de-quiz-dev-em-aplicação-l2}
 
 1. **Qual destas práticas é obrigatória ao fazer merge de uma PR?**  
    - a) Corrigir todos os conflitos automaticamente  
@@ -59,7 +59,7 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-## 📌 Boas práticas de utilização
+## 📌 Boas práticas de utilização {#-boas-práticas-de-utilização}
 
 - Adaptar perguntas ao conteúdo efetivamente ensinado no trilho
 - Incluir feedback imediato com explicação das respostas
@@ -68,7 +68,7 @@ Pode ser adaptado por perfil, nível de risco ou capítulo do manual SbD-ToE, se
 
 ---
 
-## 🔗 Ligações úteis
+## 🔗 Ligações úteis {#-ligações-úteis}
 
 | Documento                     | Relevância                                      |
 |-------------------------------|-------------------------------------------------|

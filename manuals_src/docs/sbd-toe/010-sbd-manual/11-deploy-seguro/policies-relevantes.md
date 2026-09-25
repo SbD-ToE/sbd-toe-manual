@@ -18,7 +18,7 @@ A aplicação consistente e eficaz do Capítulo 11 - **Deploy Seguro** - exige a
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ A execução segura de software em produção **depende de critérios técnicos e operacionais bem definidos e formalizados**.
 
@@ -33,7 +33,7 @@ Estas políticas devem:
 
 ---
 
-## 📓 Políticas recomendadas
+## 📓 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                  | Obrigatória? | Aplicação                                     | Resumo do conteúdo necessário                                             |
 |---------------------------------------------------|--------------|--------------------------------------------------|-------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ Estas políticas devem:
 
 ---
 
-## 📄 Estrutura sugerida de cada política
+## 📄 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -59,7 +59,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser aprovadas pelas áreas de **segurança, QA e produto**;
 - Devem estar **acessíveis, versionadas e conhecidas** por todas as equipas envolvidas em deploy;

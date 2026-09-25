@@ -9,21 +9,21 @@ sidebar_position: 9
 
 # Scrum Master / Team Lead
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Scrum Master/Team Lead é o **guardião da disciplina ágil**.  
 Assegura que segurança não é relegada para "quando houver tempo", mas **integrada no planeamento e execução diária** das equipas.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Facilitam a integração da segurança no ciclo ágil
 - Removem bloqueios que dificultem a implementação de práticas seguras
 - Promovem a disciplina de aplicação dos checklists de revisão
 - Moderam sessões de threat modeling
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 Ajudam a operacionalizar a exigência de **governação executiva sobre segurança digital** constante em NIS2 e DORA, garantindo que equipas atuam segundo processos definidos.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Operacionaliza:
 - **NIS2** e **DORA**: Implementação de governação executiva sobre práticas de segurança
@@ -31,35 +31,35 @@ Operacionaliza:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01-02 - Classificação e Requisitos
+### Cap. 01-02 - Classificação e Requisitos {#cap-01-02---classificação-e-requisitos}
 Facilitar **discussões sobre criticidade e requisitos**, garantindo que toda a equipa compreende o contexto de risco. Rever classificação em integrações críticas ou mudanças relevantes.
 
 **User Stories:**
 - [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade (com Arquitetos de Software)
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 **Moderar sessões de threat modeling**, criar modelo de ameaça inicial com DFDs e STRIDE/LINDDUN, garantir participação de toda a equipa.
 
 **User Stories:**
 - [US-01: Modelo de ameaça inicial](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-01---criação-do-modelo-de-ameaça) - Riscos visíveis desde o início (com Arquitetos de Software)
 
-### Cap. 06 - Desenvolvimento Seguro
+### Cap. 06 - Desenvolvimento Seguro {#cap-06---desenvolvimento-seguro}
 Garantir que **cada PR é revisto com checklist de segurança obrigatória**, prevenindo vulnerabilidades e mantendo registo de conformidade.
 
 **User Stories:**
 - [US-01: Checklist de segurança em PR](/sbd-toe/sbd-manual/desenvolvimento-seguro/aplicacao-lifecycle#us-01---guidelines-de-desenvolvimento-seguro) - Prevenir vulnerabilidades
 
-### Cap. 06-07 - Desenvolvimento e CI/CD
+### Cap. 06-07 - Desenvolvimento e CI/CD {#cap-06-07---desenvolvimento-e-cicd}
 Assegurar que **práticas seguras entram no sprint planning**, com DoD incluindo critérios de segurança validáveis.
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 Promover **capacitação e formação contínua**, apoiar cultura de segurança, remover impedimentos para learning time.
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain, governance]
 
 # Governaça de Bibliotecas e Componentes de Terceiros
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer regras claras e verificáveis para a **utilização, aprovação, substituição e rastreabilidade** de bibliotecas e componentes de terceiros em aplicações desenvolvidas internamente.
 
@@ -15,7 +15,7 @@ Estabelecer regras claras e verificáveis para a **utilização, aprovação, su
 
 ---
 
-## 🔢 Princípios de governaça
+## 🔢 Princípios de governaça {#-princípios-de-governaça}
 
 1. **Repositórios permitidos** devem ser explicitamente definidos e controlados.
 2. Toda biblioteca deve ter:
@@ -27,7 +27,7 @@ Estabelecer regras claras e verificáveis para a **utilização, aprovação, su
 
 ---
 
-## 🚀 Processo de aprovação
+## 🚀 Processo de aprovação {#-processo-de-aprovação}
 
 | Etapa                     | Ação                                                     | Artefacto                  |
 |--------------------------|-----------------------------------------------------------|-----------------------------|
@@ -40,7 +40,7 @@ Estabelecer regras claras e verificáveis para a **utilização, aprovação, su
 
 ---
 
-## 🔎 Critérios de aceitação
+## 🔎 Critérios de aceitação {#-critérios-de-aceitação}
 
 | Critério                         | Recomendado? | Justificativa                                   |
 |----------------------------------|--------------|--------------------------------------------------|
@@ -54,7 +54,7 @@ Estabelecer regras claras e verificáveis para a **utilização, aprovação, su
 
 ---
 
-## 📝 Registo de decisões
+## 📝 Registo de decisões {#-registo-de-decisões}
 
 Cada biblioteca deve poder ser rastreada até uma decisão de aprovação. Sugere-se registar:
 
@@ -68,7 +68,7 @@ Cada biblioteca deve poder ser rastreada até uma decisão de aprovação. Suger
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                   | Relação com a governaça                            |
 |-----------------------------|---------------------------------------------------------|

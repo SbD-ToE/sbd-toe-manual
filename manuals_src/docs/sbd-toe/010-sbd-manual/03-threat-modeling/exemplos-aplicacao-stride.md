@@ -7,7 +7,7 @@ tags: [exemplos, threat-modeling, stride, dfd, mitigação]
 
 # Exemplo prático - Threat Modeling de um serviço de autenticação com JWT
 
-## 🎯 Contexto técnico
+## 🎯 Contexto técnico {#-contexto-técnico}
 
 Durante a fase de concepção de um novo serviço de autenticação (`auth-service`), a equipa identificou os seguintes componentes e fluxos:
 
@@ -26,9 +26,9 @@ Durante a fase de concepção de um novo serviço de autenticação (`auth-servi
 
 ---
 
-## 🔁 Modelação com DFD (representação do sistema)
+## 🔁 Modelação com DFD (representação do sistema) {#-modelação-com-dfd-representação-do-sistema}
 
-### 🔷 Threat Model - auth-service (DFD em Mermaid)
+### 🔷 Threat Model - auth-service (DFD em Mermaid) {#-threat-model---auth-service-dfd-em-mermaid}
 
 ```mermaid
 flowchart TD
@@ -69,7 +69,7 @@ flowchart TD
 
 ---
 
-### 🧱 Elementos identificados
+### 🧱 Elementos identificados {#-elementos-identificados}
 
 | Elemento                | Tipo             | Descrição                                                         |
 |-------------------------|------------------|-------------------------------------------------------------------|
@@ -83,7 +83,7 @@ flowchart TD
 
 ---
 
-### 🔁 Fluxos de dados
+### 🔁 Fluxos de dados {#-fluxos-de-dados}
 
 | Fonte                   | Destino              | Dados Transmitidos                                  |
 |------------------------|----------------------|-----------------------------------------------------|
@@ -97,7 +97,7 @@ flowchart TD
 
 ---
 
-### 🔍 Ameaças STRIDE por elemento
+### 🔍 Ameaças STRIDE por elemento {#-ameaças-stride-por-elemento}
 
 | Elemento               | Categoria STRIDE         | Ameaça Identificada                                                                | Gravidade | Mitigação Recomendada                                                               |
 |------------------------|--------------------------|------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------------------------------|
@@ -110,7 +110,7 @@ flowchart TD
 
 ---
 
-### 🛡️ Mapa ameaça ↔ controlo
+### 🛡️ Mapa ameaça ↔ controlo {#️-mapa-ameaça--controlo}
 
 | Ameaça                      | Controlo Recomendado                                                                 |
 |----------------------------|----------------------------------------------------------------------------------------|
@@ -123,7 +123,7 @@ flowchart TD
 
 ---
 
-### ✅ Conclusão
+### ✅ Conclusão {#-conclusão}
 
 Este exemplo ilustra um caso típico de arquitectura moderna com:
 

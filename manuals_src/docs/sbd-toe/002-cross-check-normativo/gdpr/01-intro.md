@@ -12,7 +12,7 @@ sidebar_position: 7
 >
 > Para padrões aplicacionais universais, ver capítulos base do SbD-ToE (01–14).
 
-## Âmbito
+## Âmbito {#âmbito}
 
 O **Regulamento Geral sobre a Proteção de Dados (RGPD/GDPR)** - **Regulamento (UE) 2016/679** (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679)) - estabelece princípios e obrigações para o tratamento de dados pessoais. Este cross‑check foca a **dimensão técnica** alinhada ao SbD-ToE (segurança e engineering), reconhecendo que várias obrigações são **jurídico‑organizacionais** (base legal, direitos dos titulares, transferências internacionais).
 
@@ -20,9 +20,9 @@ Sugere-se usar o SbD-ToE como núcleo técnico para os artigos que exigem medida
 
 ---
 
-## PARTE I: ANÁLISE NORMATIVA (GDPR → SbD-ToE)
+## PARTE I: ANÁLISE NORMATIVA (GDPR → SbD-ToE) {#parte-i-análise-normativa-gdpr--sbd-toe}
 
-### Princípios (Art. 5)
+### Princípios (Art. 5) {#princípios-art-5}
 Exigem: minimização, limitação de finalidades, exatidão, limitação de conservação, integridade e confidencialidade, responsabilização.
 
 Cobertura SbD-ToE:
@@ -35,7 +35,7 @@ Lacuna intencional: Definição de bases legais, políticas de conservação e f
 
 ---
 
-### Privacy by Design/Default (Art. 25)
+### Privacy by Design/Default (Art. 25) {#privacy-by-designdefault-art-25}
 Exige que a privacidade esteja incorporada no design e que as configurações por defeito sejam as mais protetoras.
 
 Cobertura SbD-ToE:
@@ -47,7 +47,7 @@ Lacuna intencional: Catálogo de padrões de privacidade (e.g., LINDDUN) não in
 
 ---
 
-### Registos de Atividades (Art. 30)
+### Registos de Atividades (Art. 30) {#registos-de-atividades-art-30}
 Exige ROPA (Record of Processing Activities).
 
 Cobertura SbD-ToE (parcial):
@@ -58,7 +58,7 @@ Lacuna intencional: O SbD-ToE não fornece modelo ROPA. Ação: Manter ROPA em f
 
 ---
 
-### Segurança do Tratamento (Art. 32)
+### Segurança do Tratamento (Art. 32) {#segurança-do-tratamento-art-32}
 Exige medidas técnicas e organizativas adequadas: pseudonimização, cifragem, resiliência, testes periódicos da eficácia.
 
 Cobertura SbD-ToE:
@@ -72,7 +72,7 @@ Lacuna intencional: Critérios legais de “adequação” e análise de risco c
 
 ---
 
-### Notificação de Violação (Art. 33/34)
+### Notificação de Violação (Art. 33/34) {#notificação-de-violação-art-3334}
 Exige notificar a autoridade competente em até 72h (Art. 33) e, quando aplicável, comunicar aos titulares (Art. 34).
 
 Cobertura SbD-ToE:
@@ -83,7 +83,7 @@ Lacuna intencional: Templates formais de notificação e critérios legais de co
 
 ---
 
-### DPIA - Avaliação de Impacto (Art. 35)
+### DPIA - Avaliação de Impacto (Art. 35) {#dpia---avaliação-de-impacto-art-35}
 Exige DPIA quando o tratamento é suscetível de alto risco.
 
 Cobertura SbD-ToE (parcial):
@@ -94,7 +94,7 @@ Lacuna intencional: Metodologia DPIA completa (inclui análise de risco para tit
 
 ---
 
-### Subcontratantes (Art. 28) e Contratos
+### Subcontratantes (Art. 28) e Contratos {#subcontratantes-art-28-e-contratos}
 Exige contratos com processadores com cláusulas de proteção de dados.
 
 Cobertura SbD-ToE:
@@ -105,14 +105,14 @@ Lacuna intencional: Cláusulas específicas de proteção de dados (SCCs, anexos
 
 ---
 
-## PARTE II: Convergências/Interações
+## PARTE II: Convergências/Interações {#parte-ii-convergênciasinterações}
 
 - Incidentes com dados pessoais podem requerer dupla notificação: RGPD (72h) + regimes setoriais (p.ex., NIS2/DORA). Sugere-se runbook único com bifurcação de reporte.
 - Medidas Art. 32 complementam controlos NIS2/DORA (mesma base técnica; evidência reaproveitável).
 
 ---
 
-## Lacunas Intencionais (Resumo)
+## Lacunas Intencionais (Resumo) {#lacunas-intencionais-resumo}
 
 | Área | Porquê fica fora do SbD-ToE | Ação Recomendada |
 |------|------------------------------|------------------|
@@ -124,7 +124,7 @@ Lacuna intencional: Cláusulas específicas de proteção de dados (SCCs, anexos
 
 ---
 
-## Métrica Simples (Autoavaliação)
+## Métrica Simples (Autoavaliação) {#métrica-simples-autoavaliação}
 
 Responda SIM:
 1. As apps que tratam dados pessoais estão classificadas e têm requisitos de Art. 32 implementados? ✓
@@ -137,7 +137,7 @@ Responda SIM:
 
 ---
 
-## Referências
+## Referências {#referências}
 
 - **RGPD/GDPR**: Regulamento (UE) 2016/679 (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679))
 - ENISA - Guidelines on Security of Personal Data Processing

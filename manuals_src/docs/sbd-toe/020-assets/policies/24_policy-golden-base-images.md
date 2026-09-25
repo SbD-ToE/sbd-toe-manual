@@ -9,7 +9,7 @@ sidebar_position: 24
 
 # Política de Golden Base Images
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **gestão do ciclo de vida de imagens base de container aprovadas pela organização** - as designadas Golden Base Images (GBI).
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,9 +35,9 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Catálogo de Golden Base Images
+## 3. Catálogo de Golden Base Images {#3-catálogo-de-golden-base-images}
 
-### 3.1 Estrutura do catálogo
+### 3.1 Estrutura do catálogo {#31-estrutura-do-catálogo}
 
 O catálogo de GBIs (`golden-base-images.yaml` ou equivalente) é o inventário oficial de imagens base aprovadas para uso em builds da organização. Cada entrada deve conter:
 
@@ -51,7 +51,7 @@ O catálogo de GBIs (`golden-base-images.yaml` ou equivalente) é o inventário 
 - [ ] Data de End-of-Life (EOL) da upstream (quando aplicável)
 - [ ] Changelog das versões anteriores
 
-### 3.2 Localização
+### 3.2 Localização {#32-localização}
 
 As GBIs são armazenadas no registo interno de imagens da organização (Artifactory, Harbor, ECR, GCR ou equivalente), com:
 
@@ -61,7 +61,7 @@ As GBIs são armazenadas no registo interno de imagens da organização (Artifac
 
 ---
 
-## 4. Aprovação de novas GBIs
+## 4. Aprovação de novas GBIs {#4-aprovação-de-novas-gbis}
 
 Antes de uma nova imagem base ser adicionada ao catálogo, deve ser realizada uma avaliação formal:
 
@@ -82,7 +82,7 @@ O resultado da avaliação deve ser registado com:
 
 ---
 
-## 5. Versionamento semântico
+## 5. Versionamento semântico {#5-versionamento-semântico}
 
 As GBIs devem seguir versionamento semântico (`MAJOR.MINOR.PATCH`):
 
@@ -94,7 +94,7 @@ As GBIs devem seguir versionamento semântico (`MAJOR.MINOR.PATCH`):
 
 ---
 
-## 6. SLA de patching
+## 6. SLA de patching {#6-sla-de-patching}
 
 Quando é publicado um CVE que afecta uma GBI activa, o prazo para publicar uma nova versão corrigida é:
 
@@ -115,7 +115,7 @@ O patching consiste em:
 
 ---
 
-## 7. Depreciação
+## 7. Depreciação {#7-depreciação}
 
 Uma GBI deve ser marcada como `deprecated` quando:
 
@@ -132,7 +132,7 @@ Uma GBI deprecated:
 
 ---
 
-## 8. Revogação
+## 8. Revogação {#8-revogação}
 
 Uma GBI deve ser marcada como `revoked` e removida imediatamente quando:
 
@@ -153,7 +153,7 @@ A revogação de uma GBI é um evento de segurança que pode requerer activaçã
 
 ---
 
-## 9. Validação em pipeline
+## 9. Validação em pipeline {#9-validação-em-pipeline}
 
 O pipeline de build de qualquer serviço deve verificar a GBI utilizada:
 
@@ -166,7 +166,7 @@ O pipeline de build de qualquer serviço deve verificar a GBI utilizada:
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -177,7 +177,7 @@ O pipeline de build de qualquer serviço deve verificar a GBI utilizada:
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -187,7 +187,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

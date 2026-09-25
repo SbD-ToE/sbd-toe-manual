@@ -9,7 +9,7 @@ sidebar_position: 26
 
 # Política de Aprovação de Release
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o processo formal de **decisão de go/no-go para releases de software**, clarificando as alçadas de aprovação, os critérios de aceitação, a separação entre sinal automático e decisão humana, e o registo de evidências.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -34,7 +34,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Distinção entre sinal automático e decisão humana
+## 3. Distinção entre sinal automático e decisão humana {#3-distinção-entre-sinal-automático-e-decisão-humana}
 
 O pipeline produz **sinais** - resultados de gates automáticos que informam o estado de segurança da release. Estes sinais não são decisões:
 
@@ -48,9 +48,9 @@ A promoção a produção requer sempre uma decisão humana nominalmente regista
 
 ---
 
-## 4. Alçadas de aprovação por nível
+## 4. Alçadas de aprovação por nível {#4-alçadas-de-aprovação-por-nível}
 
-### 4.1 Aprovação de go
+### 4.1 Aprovação de go {#41-aprovação-de-go}
 
 | Nível | Aprovador(es) mínimo(s) | Condição |
 |---|---|---|
@@ -58,7 +58,7 @@ A promoção a produção requer sempre uma decisão humana nominalmente regista
 | L2 | Tech Lead + AppSec Engineer | Gate automático APROVADO + checklist verificada + risco residual avaliado |
 | L3 | Tech Lead + AppSec Engineer + Security Officer (ou CISO delegado) - dupla aprovação | Gate automático APROVADO + checklist verificada + aceitação formal de risco residual |
 
-### 4.2 Aprovação de no-go com exceção
+### 4.2 Aprovação de no-go com exceção {#42-aprovação-de-no-go-com-exceção}
 
 Quando o gate automático retorna REJEITADO mas existe justificação de negócio para avançar (ex: fix de produção urgente, deadline regulatório), o no-go pode ser ultrapassado com:
 
@@ -74,7 +74,7 @@ O override de um gate rejeitado não elimina o risco - adia a sua resolução. T
 
 ---
 
-## 5. Aceitação formal de risco residual
+## 5. Aceitação formal de risco residual {#5-aceitação-formal-de-risco-residual}
 
 Quando uma release é aprovada com findings em aberto (com exceções formais), o aprovador deve registar explicitamente a aceitação de risco residual:
 
@@ -89,7 +89,7 @@ A aceitação de risco residual é uma declaração formal - não um campo optat
 
 ---
 
-## 6. Registo de aprovação
+## 6. Registo de aprovação {#6-registo-de-aprovação}
 
 Cada decisão de go/no-go deve ser registada com os seguintes campos mínimos:
 
@@ -108,7 +108,7 @@ Em L3, o registo deve ser imutável (WORM ou equivalente) e retido conforme a Po
 
 ---
 
-## 7. Releases de emergência
+## 7. Releases de emergência {#7-releases-de-emergência}
 
 Situações de incidente activo em produção podem requerer uma release de correcção urgente fora do processo normal. Nestes casos:
 
@@ -119,7 +119,7 @@ Situações de incidente activo em produção podem requerer uma release de corr
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -132,7 +132,7 @@ Situações de incidente activo em produção podem requerer uma release de corr
 
 ---
 
-## 9. Revisão e auditoria desta política
+## 9. Revisão e auditoria desta política {#9-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -142,7 +142,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 10. Referências normativas e técnicas
+## 10. Referências normativas e técnicas {#10-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

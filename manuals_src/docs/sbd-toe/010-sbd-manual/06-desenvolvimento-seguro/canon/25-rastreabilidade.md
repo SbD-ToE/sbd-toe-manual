@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Desenvolvimento Seguro
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-IVF` (Validação de input, parsing seguro e tratamento controlado de erros), `ACO-SPC` (Gestão de segredos, configuração protegida e identidades operacionais).
 
@@ -14,7 +14,7 @@ Cobertura V1 entity-level: **37 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
 Total: **42 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
@@ -50,11 +50,11 @@ Total: **42 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-IVF` — Validação de input, parsing seguro e tratamento controlado de erros
+### Slice `ACO-IVF` — Validação de input, parsing seguro e tratamento controlado de erros {#slice-aco-ivf--validação-de-input-parsing-seguro-e-tratamento-controlado-de-erros}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -79,7 +79,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 | `ACP-IVF-006` — Centralized Error Governance | P | Practice | cross-chapter → Cap. 00, Cap. 07, Cap. 10, Cap. 12, Cap. 13, Cap. 14 | normative | explicit | Parcial | SP 800-53 r5: SP800-53-AU-1, SP800-53-AU-2; SAMM v2.1: SAMM-ACTIVITY-G_EG_2_B, SAMM-ACTIVITY-G_EG_3_A; DSOMM: DSOMM-ACTIVITY-95CAEF9636ED458CA0875C35D4F9DEC2, DSOMM-ACTIVITY-8B994601575E4EA5B228ACCB18C8E514; CIS Controls v8.1.2: CIS-8.1, CIS-8.3; + 5 more sources |
 | `ACP-IVF-007` — Context-Aware Output Encoding At Rendering Boundaries | P | Practice | chapter prose (encoding, escaping, html kws verified) | normative | explicit | Semântico | ASVS v5: ASVS-REQ-V1.1.2, ASVS-REQ-V1.2.1; CAPEC v3.9: CAPEC-19, CAPEC-32; MITRE ATLAS: AML.T0054, AML.T0077; CWE SDV v4.19.1: CWE-838; + 3 more sources |
 
-### Slice `ACO-SPC` — Gestão de segredos, configuração protegida e identidades operacionais
+### Slice `ACO-SPC` — Gestão de segredos, configuração protegida e identidades operacionais {#slice-aco-spc--gestão-de-segredos-configuração-protegida-e-identidades-operacionais}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -103,7 +103,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -115,7 +115,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -127,7 +127,7 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 Content gaps registered para future-cycle authoring; honest documentation per P8 §10 limitations.
 
@@ -137,7 +137,7 @@ Content gaps registered para future-cycle authoring; honest documentation per P8
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

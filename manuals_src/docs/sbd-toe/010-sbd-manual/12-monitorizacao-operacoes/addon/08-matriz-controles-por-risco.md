@@ -14,7 +14,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## 📊 Matriz de cobertura
+## 📊 Matriz de cobertura {#-matriz-de-cobertura}
 
 | Controlo / Requisito                           |  L1 |  L2 |  L3 |
 | ---------------------------------------------- | :-: | :-: | :-: |
@@ -32,7 +32,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## ✅ Interpretação
+## ✅ Interpretação {#-interpretação}
 
 * ✔️ = obrigatório para esse nível
 * **L1**: logging local e básico para rastreabilidade
@@ -43,7 +43,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## 📌 Recomendações adicionais
+## 📌 Recomendações adicionais {#-recomendações-adicionais}
 
 * Aplicações com exposição externa e dados sensíveis devem, mesmo sendo L1, cumprir requisitos de L2 ou L3;
 * Utilizar esta matriz como **base de revisão em arquitetura, design e readiness para produção**;

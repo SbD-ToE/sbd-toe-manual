@@ -27,11 +27,11 @@ A diferença prática:
 
 ---
 
-## Resources
+## Resources {#resources}
 
 Todos os resources usam o esquema `sbd://toe/*` e devolvem `text/markdown`, `application/json` ou `application/yaml` consoante o tipo.
 
-### `sbd://toe/agent-guide`
+### `sbd://toe/agent-guide` {#sbdtoeagent-guide}
 
 **MIME:** `text/markdown`
 **Conteúdo:** guia operacional completo do agente — modos (CONSULT / GUIDE / SETUP), roteamento por fase / domínio / tipo de pergunta, padrões epistémicos, vocabulário controlado, mapa dos 15 capítulos.
@@ -40,14 +40,14 @@ Todos os resources usam o esquema `sbd://toe/*` e devolvem `text/markdown`, `app
 
 > Este resource é a fonte do que `generate_sbd_toe_skill` devolve — guardar como *skill file* é exactamente injectá-lo permanentemente no contexto do cliente.
 
-### `sbd://toe/index-compact`
+### `sbd://toe/index-compact` {#sbdtoeindex-compact}
 
 **MIME:** `application/json`
 **Conteúdo:** mapa compacto do manual — JSON estruturado com `chapters[]`, `chapter_id`, `title`, `min_level`, `domains`, *topics* ⨯ contagens.
 
 **Quando ler:** *injectar no system prompt* para eliminar exploratory discovery — o agente já "sabe" o índice antes de fazer qualquer chamada.
 
-### `sbd://toe/chapter-applicability/{riskLevel}`
+### `sbd://toe/chapter-applicability/{riskLevel}` {#sbdtoechapter-applicabilityrisklevel}
 
 **MIME:** `application/json`
 **Parâmetro:** `{riskLevel}` = `L1` | `L2` | `L3` (interpolado no URI)
@@ -71,21 +71,21 @@ Devolve algo como:
 
 **Quando usar:** inicialização rápida sem chamar `consult_security_requirements` (que devolve muito mais conteúdo).
 
-### `sbd://toe/ontology`
+### `sbd://toe/ontology` {#sbdtoeontology}
 
 **MIME:** `application/yaml`
 **Conteúdo:** ontologia completa — `domain_mapping` (requirement category → control domains), regras de inferência com prioridades, *resolution pipelines* (consult / guide / threats / review), *concerns* lexicon, *role aliases*, schemas de entidade.
 
 **Quando ler:** **uma vez por sessão** para entender o modelo de resolução determinístico antes de combinar tools complexas.
 
-### `sbd://toe/grounded-codegen-guide`
+### `sbd://toe/grounded-codegen-guide` {#sbdtoegrounded-codegen-guide}
 
 **MIME:** `text/markdown`
 **Conteúdo:** guia agente para `prepare_sbd_toe_codegen_context` — *workflow*, ramificação por *status* (`ready_for_codegen` / `needs_clarification` / `needs_decomposition` / `unsupported_scope`), disciplina de *output* (citar `citation_map`, preencher `security_rationale`, distinguir code/tests/evidence), e **proibições explícitas** (não inventar IDs, não declarar conformidade, não poluir código com rastreabilidade-noise).
 
 **Quando ler:** sempre antes de qualquer trabalho de *codegen* ou *review* via `prepare_sbd_toe_codegen_context`.
 
-### `sbd://toe/skill/{role}` · `sbd://toe/subagent/{role}`
+### `sbd://toe/skill/{role}` · `sbd://toe/subagent/{role}` {#sbdtoeskillrole--sbdtoesubagentrole}
 
 **MIME:** `text/markdown`
 **Parâmetro:** `{role}` = um dos 13 *roles* canónicos (aliases resolvem)
@@ -93,7 +93,7 @@ Devolve algo como:
 
 **Quando usar:** instalar a configuração de um papel sem chamar a tool — ler o resource e guardar no caminho do cliente.
 
-### `sbd://toe/version`
+### `sbd://toe/version` {#sbdtoeversion}
 
 **MIME:** `application/json`
 **Conteúdo:** identidade do servidor + *provenance* do conhecimento servido (manual, KG, ontologia), lido do *pin* do bundle consumido.
@@ -112,9 +112,9 @@ Devolve algo como:
 
 ---
 
-## Prompts
+## Prompts {#prompts}
 
-### `setup_sbd_toe_agent(riskLevel, projectRole)`
+### `setup_sbd_toe_agent(riskLevel, projectRole)` {#setup_sbd_toe_agentrisklevel-projectrole}
 
 Inicializa a sessão.
 
@@ -124,7 +124,7 @@ Inicializa a sessão.
 
 **Resultado:** mensagem do utilizador equivalente a "Estou a trabalhar num projecto `riskLevel=L2`, role `appsec-engineer`. Carrega as regras e capítulos activos." — o agente executa imediatamente as chamadas adequadas para inicializar o contexto.
 
-### `ask_sbd_toe_manual(question)`
+### `ask_sbd_toe_manual(question)` {#ask_sbd_toe_manualquestion}
 
 Q&A directo *grounded* no manual.
 
@@ -133,7 +133,7 @@ Q&A directo *grounded* no manual.
 
 **Resultado:** o agente é instruído a usar `search_sbd_toe_manual` ou `consult_security_requirements` consoante o tipo de pergunta, e a responder com IDs citáveis.
 
-### `prepare_grounded_codegen(task, mode?, riskLevel?, concerns?, stack?, regulatoryFrameworks?, includeRegulatoryOverlay?)`
+### `prepare_grounded_codegen(task, mode?, riskLevel?, concerns?, stack?, regulatoryFrameworks?, includeRegulatoryOverlay?)` {#prepare_grounded_codegentask-mode-risklevel-concerns-stack-regulatoryframeworks-includeregulatoryoverlay}
 
 *Codegen grounded* de ponta a ponta: embute o guia `sbd://toe/grounded-codegen-guide` (acima) e a tarefa numa única mensagem, e instrui o agente a chamar `prepare_sbd_toe_codegen_context` **antes** de produzir código.
 
@@ -147,7 +147,7 @@ Q&A directo *grounded* no manual.
 
 ---
 
-## Boa prática — *bootstrap* mínimo de sessão
+## Boa prática — *bootstrap* mínimo de sessão {#boa-prática--bootstrap-mínimo-de-sessão}
 
 ```
 1. Ler sbd://toe/agent-guide  (ou ter skill instalada)
@@ -158,7 +158,7 @@ Q&A directo *grounded* no manual.
 
 Se a sessão for de *codegen* / *review*: acrescentar `sbd://toe/grounded-codegen-guide` antes de qualquer chamada a `prepare_sbd_toe_codegen_context`.
 
-## A seguir
+## A seguir {#a-seguir}
 
 - [Casos de uso](./casos-uso/) — 6 receitas prontas combinando estes resources, prompts e tools.
 - [Padrões avançados](./08-padroes-avancados.md) — sequências multi-tool para problemas complexos.

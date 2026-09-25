@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain]
 
 # Análise de Vulnerabilidades em Dependências (SCA)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todas as dependências externas (diretas e transitivas) são analisadas automaticamente e de forma recorrente quanto a **vulnerabilidades conhecidas**, com rastreabilidade entre:
 
@@ -20,7 +20,7 @@ Assegurar que todas as dependências externas (diretas e transitivas) são anali
 
 ---
 
-## 🚀 Como funciona o processo de SCA
+## 🚀 Como funciona o processo de SCA {#-como-funciona-o-processo-de-sca}
 
 1. O SBOM gerado é usado como input para o scanner.
 2. Cada componente é comparado com bases de dados de vulnerabilidades (NVD, GitHub Advisories, OSV, etc.).
@@ -32,7 +32,7 @@ Assegurar que todas as dependências externas (diretas e transitivas) são anali
 
 ---
 
-## 🤖 Ferramentas open source recomendadas
+## 🤖 Ferramentas open source recomendadas {#-ferramentas-open-source-recomendadas}
 
 | Ferramenta     | Linguagens / Suporte           | Observações                             |
 |----------------|-------------------------------|--------------------------------------------|
@@ -46,7 +46,7 @@ Assegurar que todas as dependências externas (diretas e transitivas) são anali
 
 ---
 
-## 💳 Ferramentas comerciais com cobertura alargada
+## 💳 Ferramentas comerciais com cobertura alargada {#-ferramentas-comerciais-com-cobertura-alargada}
 
 | Ferramenta       | Destaques relevantes para o SbD-ToE                               |
 |------------------|--------------------------------------------------------------------|
@@ -60,7 +60,7 @@ Assegurar que todas as dependências externas (diretas e transitivas) são anali
 
 ---
 
-## 🌐 Integração no ciclo de vida
+## 🌐 Integração no ciclo de vida {#-integração-no-ciclo-de-vida}
 
 | Momento                          | Ação esperada                            | Resultado                           |
 |----------------------------------|--------------------------------------|-------------------------------------|
@@ -71,7 +71,7 @@ Assegurar que todas as dependências externas (diretas e transitivas) são anali
 
 ---
 
-## ⚠️ Priorizando findings
+## ⚠️ Priorizando findings {#️-priorizando-findings}
 
 Os findings devem ser triados com base em:
 
@@ -85,7 +85,7 @@ Os findings devem ser triados com base em:
 
 ---
 
-## 🔗 Ligação com backlog e rastreabilidade
+## 🔗 Ligação com backlog e rastreabilidade {#-ligação-com-backlog-e-rastreabilidade}
 
 | Elemento                     | Forma recomendada                            |
 |-----------------------------|-----------------------------------------------|
@@ -98,7 +98,7 @@ Os findings devem ser triados com base em:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                   | Ligação com SCA                                |
 |-----------------------------|-----------------------------------------------|

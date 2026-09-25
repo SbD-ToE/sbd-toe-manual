@@ -20,7 +20,7 @@ O objetivo é evitar três falhas recorrentes em processos modernos de teste:
 
 ---
 
-## 1. Separação entre sinal automático e decisão humana
+## 1. Separação entre sinal automático e decisão humana {#1-separação-entre-sinal-automático-e-decisão-humana}
 
 Ferramentas podem:
 - detetar padrões;
@@ -34,7 +34,7 @@ Mas **não podem**:
 - autorizar exceções;
 - aceitar risco residual.
 
-### Prescrição
+### Prescrição {#prescrição}
 - Cada *gate* de segurança (pass/fail) deve ter um **responsável humano explícito** (ex.: Tech Lead, AppSec, QA Lead, Release Manager).
 - “Passou no scanner” **não é** um argumento aceite sem:
   - evidência de execução (logs/artefactos),
@@ -43,9 +43,9 @@ Mas **não podem**:
 
 ---
 
-## 2. Evidência mínima (o que deve existir para um resultado ser aceite)
+## 2. Evidência mínima (o que deve existir para um resultado ser aceite) {#2-evidência-mínima-o-que-deve-existir-para-um-resultado-ser-aceite}
 
-### 2.1 Evidência de execução (obrigatória)
+### 2.1 Evidência de execução (obrigatória) {#21-evidência-de-execução-obrigatória}
 Para cada execução relevante de testes de segurança, deve existir, no mínimo:
 
 - Identificador do commit / build / artefacto testado (hash, tag, digest).
@@ -57,7 +57,7 @@ Para cada execução relevante de testes de segurança, deve existir, no mínimo
 
 > Dashboards e PDFs são apenas “apresentação”. A evidência é o **output bruto + contexto de execução**.
 
-### 2.2 Evidência de validação (quando aplicável)
+### 2.2 Evidência de validação (quando aplicável) {#22-evidência-de-validação-quando-aplicável}
 Sempre que exista triagem, exceção, supressão, ou “compensação”:
 
 - Registo de quem validou e quando (autor/role).
@@ -67,9 +67,9 @@ Sempre que exista triagem, exceção, supressão, ou “compensação”:
 
 ---
 
-## 3. Reprodutibilidade: tornar resultados comparáveis no tempo
+## 3. Reprodutibilidade: tornar resultados comparáveis no tempo {#3-reprodutibilidade-tornar-resultados-comparáveis-no-tempo}
 
-### 3.1 Controlo de variáveis (obrigatório)
+### 3.1 Controlo de variáveis (obrigatório) {#31-controlo-de-variáveis-obrigatório}
 Resultados de teste só são comparáveis se as variáveis críticas forem controladas:
 
 - **Versão do motor e regras**: rulepacks, assinaturas, políticas.
@@ -78,13 +78,13 @@ Resultados de teste só são comparáveis se as variáveis críticas forem contr
 - **Configuração**: profiles, listas de exclusão, limites, thresholds.
 - **Dados e credenciais de teste**: dataset e permissões (ver Secção 4).
 
-### 3.2 Prescrições práticas
+### 3.2 Prescrições práticas {#32-prescrições-práticas}
 - Usar *pinning* de versões (motor + regras) por pipeline e por projeto.
 - Versionar (em repo) perfis e políticas de teste.
 - Preservar outputs brutos com retenção mínima definida (ex.: por release).
 - Garantir que cada execução pode ser reexecutada com “mesmo input” (replay).
 
-### 3.3 Testes intrinsecamente não determinísticos
+### 3.3 Testes intrinsecamente não determinísticos {#33-testes-intrinsecamente-não-determinísticos}
 Alguns testes podem produzir variação (ex.: fuzzing, DAST com temporizações, alvos distribuídos).
 
 **Nesses casos:**
@@ -94,7 +94,7 @@ Alguns testes podem produzir variação (ex.: fuzzing, DAST com temporizações,
 
 ---
 
-## 4. Proteção de ativos críticos no processo de teste
+## 4. Proteção de ativos críticos no processo de teste {#4-proteção-de-ativos-críticos-no-processo-de-teste}
 
 Testes de segurança frequentemente envolvem:
 - credenciais e tokens para testes autenticados;
@@ -102,7 +102,7 @@ Testes de segurança frequentemente envolvem:
 - telemetria, logs e tráfego contendo segredos;
 - artefactos de build e código.
 
-### 4.1 Prescrições obrigatórias
+### 4.1 Prescrições obrigatórias {#41-prescrições-obrigatórias}
 - **Dados reais**: proibidos por omissão em testes (salvo aprovação explícita e controlos compensatórios).
 - **Credenciais de teste**:
   - devem ser segregadas por ambiente,
@@ -115,7 +115,7 @@ Testes de segurança frequentemente envolvem:
   - aplicar regras de mascaramento;
   - garantir que outputs preservados não expõem segredos.
 
-### 4.2 Ambientes e alvos de teste
+### 4.2 Ambientes e alvos de teste {#42-ambientes-e-alvos-de-teste}
 - DAST/IAST/fuzzing devem usar ambientes com:
   - isolamento de rede,
   - limitação de impacto (rate limiting, quotas),
@@ -127,7 +127,7 @@ Testes de segurança frequentemente envolvem:
 
 ---
 
-## 5. Evidência mínima por tipo de teste (tabela operativa)
+## 5. Evidência mínima por tipo de teste (tabela operativa) {#5-evidência-mínima-por-tipo-de-teste-tabela-operativa}
 
 | Tipo de teste | Evidência mínima de execução | Reprodutibilidade mínima | Nota crítica |
 |---|---|---|---|
@@ -139,11 +139,11 @@ Testes de segurança frequentemente envolvem:
 
 ---
 
-## 6. Exceções, supressões e aceitação de risco (fecho de ciclo)
+## 6. Exceções, supressões e aceitação de risco (fecho de ciclo) {#6-exceções-supressões-e-aceitação-de-risco-fecho-de-ciclo}
 
 Supressões, “false positives”, exceções e aceitação de risco são **factos de governação**, não “opiniões” técnicas.
 
-### Prescrição
+### Prescrição {#prescrição-1}
 - Nenhuma exceção é válida sem:
   - responsável humano,
   - justificação objetiva,
@@ -153,7 +153,7 @@ Supressões, “false positives”, exceções e aceitação de risco são **fac
 
 ---
 
-## 7. Critérios de aceitação deste anexo
+## 7. Critérios de aceitação deste anexo {#7-critérios-de-aceitação-deste-anexo}
 
 Este anexo é considerado aplicado quando, no projeto:
 

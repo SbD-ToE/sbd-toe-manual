@@ -9,7 +9,7 @@ tags: [exemplo, formacao, pull request, dev, aplicacao]
 # Módulo Formativo - Pull Request Seguro
 Este exemplo assume um ambiente de desenvolvimento fortemente apoiado por ferramentas automatizadas, mantendo a responsabilidade final sobre decisões e práticas nas equipas envolvidas.
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Capacitar developers para:
 
@@ -19,7 +19,7 @@ Capacitar developers para:
 
 ---
 
-## 📋 Pré-requisitos
+## 📋 Pré-requisitos {#-pré-requisitos}
 
 - Experiência básica com Git e fluxo de Pull Request
 - Participação prévia em pelo menos 1 sprint ativa
@@ -27,7 +27,7 @@ Capacitar developers para:
 
 ---
 
-## 🧪 Formato da sessão
+## 🧪 Formato da sessão {#-formato-da-sessão}
 
 | Bloco              | Duração | Objetivo                                                                 |
 |-------------------|---------|--------------------------------------------------------------------------|
@@ -41,7 +41,7 @@ Capacitar developers para:
 
 ---
 
-## 📦 Materiais necessários
+## 📦 Materiais necessários {#-materiais-necessários}
 
 - Dois PRs reais ou simulados (um exemplar, um com falhas)
 - Guia interno de revisão segura (ex: `checklist-pr-seguro.md`)
@@ -50,7 +50,7 @@ Capacitar developers para:
 
 ---
 
-## ✅ Critérios de conclusão
+## ✅ Critérios de conclusão {#-critérios-de-conclusão}
 
 - Participação ativa na sessão ou entrega do exercício
 - Aprovação no quiz (mínimo 80%)
@@ -58,7 +58,7 @@ Capacitar developers para:
 
 ---
 
-## 🔗 Referências cruzadas no SbD-ToE
+## 🔗 Referências cruzadas no SbD-ToE {#-referências-cruzadas-no-sbd-toe}
 
 | Capítulo                    | Relevância                                   |
 |-----------------------------|----------------------------------------------|
@@ -70,7 +70,7 @@ Capacitar developers para:
 
 ---
 
-## 🧭 Recomendações operacionais
+## 🧭 Recomendações operacionais {#-recomendações-operacionais}
 
 - Repetir esta sessão quinzenalmente com novos exemplos
 - Partilhar internamente o “PR da semana” como modelo educativo

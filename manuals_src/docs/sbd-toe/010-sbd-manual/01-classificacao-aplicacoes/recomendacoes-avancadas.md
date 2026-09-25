@@ -18,7 +18,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 1. Integração com Ferramentas de GRC
+## 1. Integração com Ferramentas de GRC {#1-integração-com-ferramentas-de-grc}
 
 - Integrar o modelo de classificação e aceitação de risco com ferramentas corporativas de GRC (Governance, Risk & Compliance), como:
   - **ServiceNow Risk**
@@ -31,7 +31,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 2. Justificativas Estruturadas de Aceitação de Risco
+## 2. Justificativas Estruturadas de Aceitação de Risco {#2-justificativas-estruturadas-de-aceitação-de-risco}
 
 - Adotar um **modelo formal de aceitação de risco informada**, com os seguintes campos mínimos:
   - Descrição e impacto do risco;
@@ -43,7 +43,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 3. SLA para Revisão da Classificação de Risco
+## 3. SLA para Revisão da Classificação de Risco {#3-sla-para-revisão-da-classificação-de-risco}
 
 - Estabelecer **prazos máximos para revisão formal da classificação**, como:
   - L3: reavaliação a cada 90 dias;
@@ -53,7 +53,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 4. Suporte à Decisão com Visualização de Risco
+## 4. Suporte à Decisão com Visualização de Risco {#4-suporte-à-decisão-com-visualização-de-risco}
 
 - Usar ferramentas de visualização para:
   - Matrizes de calor (heatmaps) por aplicação ou equipa;
@@ -63,7 +63,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 5. Versionamento e Auditoria de Classificações
+## 5. Versionamento e Auditoria de Classificações {#5-versionamento-e-auditoria-de-classificações}
 
 - Manter registo histórico de todas as classificações com:
   - Timestamp e autor;
@@ -74,7 +74,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 6. Alinhamento com Apetite ao Risco da Organização
+## 6. Alinhamento com Apetite ao Risco da Organização {#6-alinhamento-com-apetite-ao-risco-da-organização}
 
 - Definir **níveis de risco (L1/L2/L3) alinhados com o apetite formal** da organização.
 - Permite:
@@ -84,7 +84,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 7. Revisão Cruzada entre Equipas (Peer Review)
+## 7. Revisão Cruzada entre Equipas (Peer Review) {#7-revisão-cruzada-entre-equipas-peer-review}
 
 - Estabelecer um processo de **validação cruzada de classificações** por outras equipas (ex: entre produtos, AppSec, arquitetura).
 - Benefícios:
@@ -94,7 +94,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 8. Formação Técnica Especializada
+## 8. Formação Técnica Especializada {#8-formação-técnica-especializada}
 
 - Incluir nos planos formativos:
   - Avaliação de risco técnico aplicada ao SDLC;
@@ -104,7 +104,7 @@ Estas recomendações **complementam as práticas obrigatórias do Capítulo 01*
 
 ---
 
-## 📌 Nota Final
+## 📌 Nota Final {#-nota-final}
 
 Estas práticas não são obrigatórias para cumprimento mínimo do modelo SbD-ToE, mas são **altamente recomendadas** para organizações que pretendam:
 

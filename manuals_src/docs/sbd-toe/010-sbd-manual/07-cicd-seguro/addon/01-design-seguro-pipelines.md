@@ -15,7 +15,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Garantir que **apenas alterações autorizadas** desencadeiam execuções;
 - Assegurar que o **fluxo de execução está controlado e é previsível**;
@@ -24,7 +24,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Pipelines como código (PaC)**  
    - Pipelines devem ser definidos como ficheiros versionados (ex: YAML, JSON, HCL), em repositórios controlados;
@@ -48,7 +48,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                         | Requisitos reforçados                                 |
 |-------|--------------------------------------------------|--------------------------------------------------------|
@@ -58,7 +58,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - `required reviewers` para `.github/workflows`;
@@ -78,7 +78,7 @@ O design seguro dos pipelines CI/CD é um controlo fundamental para garantir que
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Execuções não autorizadas (OSC&R: CI0001, CI0004);
 - Substituição maliciosa de scripts (OSC&R: CI0011);

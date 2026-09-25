@@ -16,7 +16,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                                   | Verificado? |
 |------------------------------------------------------------------------------------------------------------------------|-------------|
@@ -41,7 +41,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Pode ser usado como **template de revisão recorrente** em Jira, Confluence, SharePoint ou Forms;
 - Deve ter validação conjunta por **AppSec, GRC e gestão de produto**;
@@ -49,7 +49,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 🎯 Conformidade e Indicadores
+## 🎯 Conformidade e Indicadores {#-conformidade-e-indicadores}
 
 - A validação positiva deste checklist permite declarar **conformidade com o Capítulo 14 - Governança e Contratação**.
 - Os resultados podem ser integrados em **dashboards, ciclos de auditoria e métricas de maturidade**.
@@ -61,7 +61,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 - **Cap. 01** - Classificação de risco (base para aplicação proporcional)
 - **Cap. 02** - Requisitos de segurança (alvo de exceções, rastreabilidade)

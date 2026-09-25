@@ -15,7 +15,7 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                       | Verificado? |
 |------------------------------------------------------------------------------------------------------------|-------------|
@@ -43,7 +43,7 @@ Este ficheiro fornece uma lista objetiva e auditável para avaliar se os requisi
 
 ---
 
-## 📌 Utilização recomendada
+## 📌 Utilização recomendada {#-utilização-recomendada}
 
 - Esta checklist pode ser utilizada como instrumento de verificação por projeto, sprint ou release.
 - Os resultados podem servir como **indicador de controlo operacional** e **KPI de maturidade de aplicação do modelo SbD-ToE**.

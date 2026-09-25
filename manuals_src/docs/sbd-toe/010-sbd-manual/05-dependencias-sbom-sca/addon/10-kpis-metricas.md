@@ -10,7 +10,7 @@ tags: [kpi, metricas, DEP, sbom, sca, dependencias, cve, supply-chain, L1, L2, L
 
 # KPIs e Métricas - Dependências, SBOM e SCA
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **capacidade de uma organização conhecer, controlar e reagir ao risco introduzido pelas dependências de software**. A gestão de dependências é um domínio altamente quantificável: o SBOM é um artefacto estruturado, as CVEs têm pontuações CVSS normalizadas, e os prazos de remediação são rastreáveis com precisão temporal.
 
@@ -20,7 +20,7 @@ Os indicadores DEP alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **DEP-K02/K03 - SLA de mitigação:** o SLA conta a partir da data de publicação da CVE em NVD/OSV, ou da data de detecção pelo scanner SCA, consoante o que for mais tardio. Mitigação válida inclui: actualização da dependência, remoção da dependência, ou excepção formal documentada com compensação (que suspende o contador mas não fecha o indicador).
 
@@ -74,7 +74,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -87,7 +87,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Thresholds de SLA por nível - resumo
+## Thresholds de SLA por nível - resumo {#thresholds-de-sla-por-nível---resumo}
 
 | Severidade (CVSS) | L1 | L2 | L3 |
 |-------------------|:--:|:--:|:--:|
@@ -100,7 +100,7 @@ Estes thresholds são referência de base. Regulamentação sectorial (DORA, NIS
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

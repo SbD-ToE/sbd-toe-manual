@@ -9,7 +9,7 @@ sidebar_position: 2
 
 # Política de Classificação de Risco Aplicacional
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o modelo obrigatório de classificação de risco aplicacional adotado pela organização, com base no modelo SbD-ToE.
 
@@ -24,7 +24,7 @@ A política estabelece:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a **todas as aplicações desenvolvidas, operadas ou contratadas** pela organização, independentemente da sua natureza (interna, externa, pública, API, serviço de backend, produto), tecnologia ou modelo de entrega.
 
@@ -32,7 +32,7 @@ A classificação deve ser realizada **antes do início do desenvolvimento** ou,
 
 ---
 
-## 3. Modelo de classificação - Eixos E+D+I
+## 3. Modelo de classificação - Eixos E+D+I {#3-modelo-de-classificação---eixos-edi}
 
 A classificação de risco baseia-se na avaliação de três eixos independentes:
 
@@ -44,7 +44,7 @@ A classificação de risco baseia-se na avaliação de três eixos independentes
 
 A pontuação combinada dos três eixos determina o nível de criticidade global da aplicação.
 
-### 3.1 Escalões de risco
+### 3.1 Escalões de risco {#31-escalões-de-risco}
 
 | Nível | Descrição geral | Exemplos típicos |
 |---|---|---|
@@ -52,7 +52,7 @@ A pontuação combinada dos três eixos determina o nível de criticidade global
 | **L2** | Risco médio - exposição pública ou dados de utilizadores, impacto moderado | APIs públicas, aplicações com autenticação, portais de cliente |
 | **L3** | Risco elevado - sistemas regulados, PII, dados críticos, impacto severo | Sistemas financeiros, saúde, infraestrutura crítica, dados regulados |
 
-### 3.2 Critérios por eixo
+### 3.2 Critérios por eixo {#32-critérios-por-eixo}
 
 **Eixo E - Exposição:**
 
@@ -78,7 +78,7 @@ A pontuação combinada dos três eixos determina o nível de criticidade global
 | Médio | Impacto operacional significativo; possível dano reputacional |
 | Elevado | Impacto crítico no negócio; consequências regulatórias, legais ou para terceiros |
 
-### 3.3 Contextos de automação e apoio à decisão
+### 3.3 Contextos de automação e apoio à decisão {#33-contextos-de-automação-e-apoio-à-decisão}
 
 A utilização de mecanismos de automação ou apoio à decisão (incluindo sistemas de IA) **não cria novos eixos de risco**, mas deve ser considerada quando modifica atributos relevantes do risco existente, nomeadamente:
 
@@ -90,7 +90,7 @@ Sempre que qualquer uma destas condições se verifique, a equipa deve ajustar o
 
 ---
 
-## 4. Momentos obrigatórios de aplicação
+## 4. Momentos obrigatórios de aplicação {#4-momentos-obrigatórios-de-aplicação}
 
 | Momento | Obrigatoriedade |
 |---|:---:|
@@ -104,7 +104,7 @@ Sempre que qualquer uma destas condições se verifique, a equipa deve ajustar o
 
 ---
 
-## 5. Cadência de revisão periódica
+## 5. Cadência de revisão periódica {#5-cadência-de-revisão-periódica}
 
 A classificação deve ser reavaliada com cadência mínima definida por nível:
 
@@ -123,9 +123,9 @@ Cada reavaliação deve documentar:
 
 ---
 
-## 6. Processo de classificação
+## 6. Processo de classificação {#6-processo-de-classificação}
 
-### 6.1 Passos obrigatórios
+### 6.1 Passos obrigatórios {#61-passos-obrigatórios}
 
 1. **Aplicar o modelo E+D+I** - avaliar cada eixo com base nos critérios definidos na secção 3
 2. **Determinar o nível global** - L1, L2 ou L3, com base na pontuação combinada
@@ -134,7 +134,7 @@ Cada reavaliação deve documentar:
 5. **Registar formalmente** - documento de classificação versionado, com data e responsável
 6. **Comunicar às equipas** - o nível determina os controlos obrigatórios a aplicar em todos os capítulos SbD-ToE
 
-### 6.2 Aprovações por nível
+### 6.2 Aprovações por nível {#62-aprovações-por-nível}
 
 | Nível | Aprovação mínima requerida |
 |---|---|
@@ -144,7 +144,7 @@ Cada reavaliação deve documentar:
 
 ---
 
-## 7. Registo formal e rastreabilidade
+## 7. Registo formal e rastreabilidade {#7-registo-formal-e-rastreabilidade}
 
 Toda a classificação e respetiva reavaliação deve ser:
 
@@ -157,7 +157,7 @@ Toda a classificação e respetiva reavaliação deve ser:
 
 ---
 
-## 8. Implicações da classificação
+## 8. Implicações da classificação {#8-implicações-da-classificação}
 
 O nível de risco atribuído determina diretamente:
 
@@ -173,7 +173,7 @@ Uma classificação incorreta ou desatualizada invalida a proporcionalidade de t
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -186,7 +186,7 @@ Uma classificação incorreta ou desatualizada invalida a proporcionalidade de t
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -198,7 +198,7 @@ A evidência de aplicação desta política (documentos de classificação, hist
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

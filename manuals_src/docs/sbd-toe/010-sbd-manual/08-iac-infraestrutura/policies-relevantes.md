@@ -18,7 +18,7 @@ Estas políticas asseguram que:
 
 ---
 
-## 📄 Políticas Organizacionais Relevantes
+## 📄 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Nome da Política | Obrigatória? | Aplicação | Resumo do Conteúdo Necessário |
 |------------------|--------------|------------|--------------------------------|
@@ -33,7 +33,7 @@ Estas políticas asseguram que:
 
 ---
 
-## 📃 Estrutura mínima de cada política
+## 📃 Estrutura mínima de cada política {#-estrutura-mínima-de-cada-política}
 
 Cada política deve conter, no mínimo:
 
@@ -46,7 +46,7 @@ Cada política deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - As políticas devem ser **publicadas e geridas centralmente** no repositório de políticas técnicas da organização.  
 - Devem estar **integradas nos pipelines CI/CD** como mecanismos automáticos de conformidade (*policy enforcement*).  

@@ -19,7 +19,7 @@ Serve como **instrumento de verificação periódica, auditoria interna e KPI op
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                               | Verificado? |
 |----------------------------------------------------------------------------------------------------|-------------|
@@ -40,7 +40,7 @@ Serve como **instrumento de verificação periódica, auditoria interna e KPI op
 
 ---
 
-## 🔄 Notas Finais
+## 🔄 Notas Finais {#-notas-finais}
 
 - Este checklist pode ser usado como **formulário digital ou template de revisão**, e integrado em pipelines, dashboards ou ferramentas de backlog.
 - A validação completa permite afirmar conformidade com o Capítulo 01 - sendo uma **evidência objetiva de maturidade e controlo de segurança** no modelo SbD-ToE.

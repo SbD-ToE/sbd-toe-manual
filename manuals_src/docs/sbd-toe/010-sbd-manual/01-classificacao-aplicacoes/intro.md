@@ -41,7 +41,7 @@ O objetivo central do manual é:
 
 ---
 
-## 🧠 Nota conceptual: risco e atributos
+## 🧠 Nota conceptual: risco e atributos {#-nota-conceptual-risco-e-atributos}
 
 O SbD-ToE trata o **risco como um conceito único**, independentemente da sua origem técnica ou processual.  
 O que varia são os **atributos do risco** - como origem, mecanismo, detetabilidade, reprodutibilidade e evidenciabilidade - que influenciam diretamente os requisitos e controlos aplicáveis.
@@ -50,9 +50,9 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-## 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê
+## 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê {#-prescrição-prática-o-quê-quem-como-quando-porquê-e-para-quê}
 
-### 📌 O que deve ser feito
+### 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. Classificar a aplicação segundo **exposição, dados sensíveis e impacto**, conforme proposto no manual, ou adotar outro modelo equivalente;
 2. Considerar explicitamente como **automação e apoio à decisão (incl. IA)** influenciam os **atributos do risco** relevantes;
@@ -63,7 +63,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-### ⚙️ Como deve ser feito
+### ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 - Usar o [Modelo de Classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos);  
 - Ou um modelo alternativo adotado pela organização (ex.: [Adoção de DRP/BIA](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia));  
@@ -75,7 +75,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-### 📆 Quando aplicar
+### 📆 Quando aplicar {#-quando-aplicar}
 
 - Durante a fase inicial do projeto ou definição de arquitetura;
 - Sempre que houver alterações relevantes: novas funcionalidades, dados, exposição ou integrações;
@@ -88,7 +88,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-### 👥 Quem está envolvido e como
+### 👥 Quem está envolvido e como {#-quem-está-envolvido-e-como}
 
 | Papel                | Contributo                                                                 |
 | -------------------- | -------------------------------------------------------------------------- |
@@ -103,7 +103,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-### 🎯 Porquê / Para quê
+### 🎯 Porquê / Para quê {#-porquê--para-quê}
 
 - Garantir proporcionalidade nos controlos de segurança aplicados;
 - Reduzir custos evitando sobreproteção ou exposição desnecessária;
@@ -116,7 +116,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
-## 🧪 Ciclo de Vida da Classificação de Risco
+## 🧪 Ciclo de Vida da Classificação de Risco {#-ciclo-de-vida-da-classificação-de-risco}
 
 A classificação de risco **não é um evento único**, mas um processo contínuo. Deve ser revista:
 
@@ -131,7 +131,7 @@ Esta reavaliação contínua assegura que os controlos aplicados se mantêm prop
 
 ---
 
-## ✅ Critérios para Aceitação de Risco
+## ✅ Critérios para Aceitação de Risco {#-critérios-para-aceitação-de-risco}
 
 Nem todos os riscos identificados requerem mitigação adicional. Alguns podem ser **aceites formalmente**, desde que respeitem critérios claros:
 
@@ -144,7 +144,7 @@ Nem todos os riscos identificados requerem mitigação adicional. Alguns podem s
 
 ---
 
-## 🛡️ Mapeamento de Ameaças a Riscos
+## 🛡️ Mapeamento de Ameaças a Riscos {#️-mapeamento-de-ameaças-a-riscos}
 
 Para garantir que a classificação reflete a realidade técnica, é essencial mapear ameaças conhecidas (ex.: STRIDE, MITRE ATT&CK) ao modelo de risco adotado.
 
@@ -152,7 +152,7 @@ Para garantir que a classificação reflete a realidade técnica, é essencial m
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 A aplicação prática deste capítulo requer políticas formais que assegurem normalização, rastreabilidade e governação do risco:
 

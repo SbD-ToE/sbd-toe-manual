@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Formação e Onboarding
 
-## Âmbito: capacitação como controlo organizacional verificável
+## Âmbito: capacitação como controlo organizacional verificável {#âmbito-capacitação-como-controlo-organizacional-verificável}
 
 Este catálogo cobre os **requisitos de formação e onboarding de segurança** — os controlos que garantem que as pessoas que constroem, operam e mantêm sistemas têm a competência necessária para fazê-lo com segurança, e que essa competência é verificável.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-TRN-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo TRN - Formação e Onboarding
+## Catálogo TRN - Formação e Onboarding {#catálogo-trn---formação-e-onboarding}
 
 Requisitos que garantem que a competência de segurança das equipas é proporcional ao risco, verificável por evidência objectiva e mantida ao longo do ciclo de vida do projecto.
 
@@ -56,7 +56,7 @@ Requisitos que garantem que a competência de segurança das equipas é proporci
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **TRN-001**: A definição de trilhos por perfil é determinante — um onboarding genérico que cobre todos os papéis superficialmente é menos eficaz do que trilhos diferenciados com menos volume mas maior relevância contextual. Um PO não precisa de saber configurar SAST; precisa de entender threat modeling light e critérios de aceitação de risco.
 - **TRN-002 e TRN-003**: A distinção é operacionalmente importante: TRN-002 verifica se o onboarding acontece antes de trabalho autónomo (timing e cobertura); TRN-003 verifica se a conclusão tem evidência verificável (validade objectiva). É possível ter onboarding realizado (TRN-002 cumprido) sem validação rastreável (TRN-003 não cumprido).

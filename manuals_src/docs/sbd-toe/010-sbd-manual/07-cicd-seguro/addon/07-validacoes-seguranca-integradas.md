@@ -17,7 +17,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Integrar a segurança como parte natural e automatizada do ciclo de integração e entrega;
 - Garantir cobertura consistente de testes e scanners, proporcional ao tipo e criticidade da aplicação;
@@ -25,7 +25,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **SAST - Static Application Security Testing**  
    - Análise do código fonte para deteção de padrões inseguros, más práticas ou funções perigosas;
@@ -59,7 +59,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Validações obrigatórias             | Validações reforçadas                                |
 |-------|--------------------------------------|------------------------------------------------------|
@@ -69,7 +69,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Integração com `CodeQL`, `TruffleHog`, `checkov`, `grype`;  
@@ -89,7 +89,7 @@ Estas validações devem ser proporcionais ao nível de risco da aplicação, ma
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Inclusão de código vulnerável ou bibliotecas inseguras (OSC&R: CI0001, SC0007);
 - Deploy de aplicações sem validações mínimas (OSC&R: CI0014);

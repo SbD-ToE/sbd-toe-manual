@@ -7,7 +7,7 @@ tags: [exemplos, incidentes, reporte, dora, template]
 
 # Exemplo: Relatório de Incidentes
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Processos de deteção de incidentes
@@ -20,7 +20,7 @@ Este documento apresenta um **template exemplar** de como estruturar reporte de 
 
 ---
 
-## ⚠️ Aviso Importante
+## ⚠️ Aviso Importante {#️-aviso-importante}
 
 **Este é um exemplo** - não é o template oficial DORA.
 
@@ -31,9 +31,9 @@ Os reguladores (EBA, BCB, ESMA) publicarão templates ITS oficiais. Este exemplo
 
 ---
 
-## Estrutura de Incidente
+## Estrutura de Incidente {#estrutura-de-incidente}
 
-### 1. Identificação
+### 1. Identificação {#1-identificação}
 
 ```
 Incident ID: INC-2025-001234
@@ -42,7 +42,7 @@ Detection Channel: SIEM alert (WAF)
 Reporter: Security Team
 ```
 
-### 2. Classificação Inicial
+### 2. Classificação Inicial {#2-classificação-inicial}
 
 ```
 Severity (SbD-ToE):
@@ -62,7 +62,7 @@ Categorization:
 └─ Other
 ```
 
-### 3. Timeline
+### 3. Timeline {#3-timeline}
 
 ```
 Timeline (UTC):
@@ -76,7 +76,7 @@ Timeline (UTC):
 - 16:00 - Incident closed (provisional)
 ```
 
-### 4. Impacto
+### 4. Impacto {#4-impacto}
 
 ```
 Impact:
@@ -88,7 +88,7 @@ Impact:
 └─ Regulatory Impact: DORA Art. 18 reportable? No (within thresholds)
 ```
 
-### 5. Root Cause Analysis
+### 5. Root Cause Analysis {#5-root-cause-analysis}
 
 ```
 Root Cause:
@@ -99,7 +99,7 @@ Root Cause:
 - Success: 0 (credentials not compromised)
 ```
 
-### 6. Remediation
+### 6. Remediation {#6-remediation}
 
 ```
 Immediate Actions (done):
@@ -114,7 +114,7 @@ Follow-up Actions (planned):
 - [ ] Retest: Penetration testing (within 30 days)
 ```
 
-### 7. Lições Aprendidas
+### 7. Lições Aprendidas {#7-lições-aprendidas}
 
 ```
 What went well:
@@ -134,7 +134,7 @@ Action Items:
 3. Update threat model to include brute-force (Arch)
 ```
 
-### 8. Conformidade DORA (Informativo)
+### 8. Conformidade DORA (Informativo) {#8-conformidade-dora-informativo}
 
 ```
 DORA Art. 18 Threshold Analysis:
@@ -151,7 +151,7 @@ Decision: Not reportable to supervisor
 
 ---
 
-## Template Genérico (Excel/Jira/ServiceNow)
+## Template Genérico (Excel/Jira/ServiceNow) {#template-genérico-exceljiraservicenow}
 
 Este template estrutura sistemas de tickets de incidentes:
 
@@ -178,31 +178,31 @@ Este template estrutura sistemas de tickets de incidentes:
 
 ---
 
-## Cronograma de Reporte
+## Cronograma de Reporte {#cronograma-de-reporte}
 
-### Imediato (< 1 hora)
+### Imediato (< 1 hora) {#imediato--1-hora}
 - [ ] Detectar e confirmar
 - [ ] Criar ticket
 - [ ] Notificar on-call
 
-### Curto prazo (< 24 horas)
+### Curto prazo (< 24 horas) {#curto-prazo--24-horas}
 - [ ] Investigação completa
 - [ ] Root cause identificado
 - [ ] Remediation em progresso
 
-### Médio prazo (< 7 dias)
+### Médio prazo (< 7 dias) {#médio-prazo--7-dias}
 - [ ] Remediation completa
 - [ ] Testes validaram fix
 - [ ] Lições aprendidas documentadas
 
-### Compliance (conforme DORA)
+### Compliance (conforme DORA) {#compliance-conforme-dora}
 - [ ] Análise DORA (reportável?)
 - [ ] Notificação supervisor (se aplica)
 - [ ] Arquivo para 3+ anos (audit trail)
 
 ---
 
-## Retenção de Logs
+## Retenção de Logs {#retenção-de-logs}
 
 **Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + DORA Art. 18:**
 
@@ -216,7 +216,7 @@ Todos os incidentes + trilho auditoria devem ser retidos:
 
 ---
 
-## Integração com SIEM
+## Integração com SIEM {#integração-com-siem}
 
 Exemplo de envio automático de incidentes do SIEM para sistema de tickets:
 
@@ -242,7 +242,7 @@ Exemplo de envio automático de incidentes do SIEM para sistema de tickets:
 
 ---
 
-## Próximos Passos
+## Próximos Passos {#próximos-passos}
 
 Quando DORA RTS/ITS oficiais saírem:
 1. Comparar este template com oficial

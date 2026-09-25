@@ -37,7 +37,7 @@ O objetivo deste capítulo não é acrescentar burocracia, mas **estabelecer um 
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 Este capítulo abrange todas as práticas que tornam o desenvolvimento **seguro, rastreável e proporcional ao risco**, desde a definição de regras até à sua aplicação contínua:
 
@@ -56,7 +56,7 @@ Este capítulo abrange todas as práticas que tornam o desenvolvimento **seguro,
 
 ---
 
-## ⚙️ O que deve ser feito
+## ⚙️ O que deve ser feito {#️-o-que-deve-ser-feito}
 
 Na prática, o desenvolvimento seguro implica que as equipas:
 
@@ -76,7 +76,7 @@ Estas práticas não são opcionais. Constituem o **alicerce de confiança** que
 
 ---
 
-## 👥 Quem está envolvido
+## 👥 Quem está envolvido {#-quem-está-envolvido}
 
 | Papel / Função                  | Responsabilidades principais |
 |--------------------------------|------------------------------|
@@ -88,7 +88,7 @@ Estas práticas não são opcionais. Constituem o **alicerce de confiança** que
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 O desenvolvimento seguro não é uma atividade pontual nem confinada ao final do processo.  
 Aplica-se de forma contínua:
@@ -102,7 +102,7 @@ Aplica-se de forma contínua:
 
 ---
 
-## 🎯 Para quê
+## 🎯 Para quê {#-para-quê}
 
 - Prevenir vulnerabilidades na origem  
 - Reduzir drasticamente o custo de correção através da deteção precoce  
@@ -114,7 +114,7 @@ Em última análise, trata-se de transformar **cada linha de código** numa opor
 
 ---
 
-## ⚖️ Proporcionalidade L1–L3
+## ⚖️ Proporcionalidade L1–L3 {#️-proporcionalidade-l1l3}
 
 | Nível de risco | Exigência mínima |
 |----------------|------------------|
@@ -124,7 +124,7 @@ Em última análise, trata-se de transformar **cada linha de código** numa opor
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política                                   | Obrigatória | Aplicação             | Conteúdo mínimo |
 |-------------------------------------------|-------------|-----------------------|-----------------|

@@ -9,7 +9,7 @@ sidebar_position: 0
 
 # Estratégia de Testes de Segurança no Ciclo de Vida
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer uma **estratégia integrada e proporcional** para a aplicação de testes de segurança ao longo do ciclo de vida de desenvolvimento (SDLC), garantindo que:
 
@@ -22,7 +22,7 @@ Estabelecer uma **estratégia integrada e proporcional** para a aplicação de t
 
 ---
 
-## 🔍 O que é uma estratégia de testes de segurança
+## 🔍 O que é uma estratégia de testes de segurança {#-o-que-é-uma-estratégia-de-testes-de-segurança}
 
 Uma estratégia de testes de segurança define:
 
@@ -35,7 +35,7 @@ Uma estratégia de testes de segurança define:
 
 ---
 
-## 🧬 Mapeamento SDLC → Testes
+## 🧬 Mapeamento SDLC → Testes {#-mapeamento-sdlc--testes}
 
 | Fase do SDLC        | Tipos de testes recomendados                            | Objetivo principal                    |
 |---------------------|----------------------------------------------------------|----------------------------------------|
@@ -47,7 +47,7 @@ Uma estratégia de testes de segurança define:
 
 ---
 
-## 🛠️ Como aplicar na prática
+## 🛠️ Como aplicar na prática {#️-como-aplicar-na-prática}
 
 1. **Classifica o risco da aplicação (L1–L2–L3)** conforme o Capítulo 01;
 2. **Seleciona os tipos de teste apropriados** para o nível de risco:
@@ -60,7 +60,7 @@ Uma estratégia de testes de segurança define:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - **Aplica testes shift-left** sempre que possível (ex: SAST no PR);
 - Define **critérios claros de aprovação** (ex: cobertura mínima, 0 findings críticos);
@@ -70,7 +70,7 @@ Uma estratégia de testes de segurança define:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                         |
 |----------------------------------|------------------------------------------------|

@@ -9,7 +9,7 @@ sidebar_position: 17
 
 # Política de CI/CD Seguro
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos de segurança aplicáveis ao **design, configuração e operação de pipelines de integração e entrega contínua (CI/CD)** para aplicações classificadas como L1, L2 ou L3.
 
@@ -25,13 +25,13 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todos os pipelines CI/CD que produzam artefactos destinados a ambientes de teste, homologação ou produção, incluindo pipelines de build, teste, análise, empacotamento, containerização e deploy.
 
 ---
 
-## 3. Pipeline como código versionado
+## 3. Pipeline como código versionado {#3-pipeline-como-código-versionado}
 
 O pipeline deve ser definido como código, versionado no repositório da aplicação, sujeito a revisão de código e com alterações rastreáveis:
 
@@ -44,11 +44,11 @@ O pipeline deve ser definido como código, versionado no repositório da aplica�
 
 ---
 
-## 4. Gates de segurança obrigatórios
+## 4. Gates de segurança obrigatórios {#4-gates-de-segurança-obrigatórios}
 
 Os seguintes gates devem ser configurados no pipeline, com thresholds documentados e comportamento bloqueante conforme a tabela de proporcionalidade:
 
-### 4.1 Gates de análise de código e dependências
+### 4.1 Gates de análise de código e dependências {#41-gates-de-análise-de-código-e-dependências}
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
@@ -58,7 +58,7 @@ Os seguintes gates devem ser configurados no pipeline, com thresholds documentad
 | **SCA** (Dependency-Check, Trivy, Grype) | Alerta | Bloqueia High/Critical | Bloqueia Medium+ |
 | **Validação de licenças** | Recomendado | Obrigatório | Obrigatório |
 
-### 4.2 Gates de build e artefactos
+### 4.2 Gates de build e artefactos {#42-gates-de-build-e-artefactos}
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
@@ -67,7 +67,7 @@ Os seguintes gates devem ser configurados no pipeline, com thresholds documentad
 | **Verificação de assinatura** antes de promoção | Não aplicável | Obrigatório | Obrigatório |
 | **Scan de vulnerabilidades em imagens container** | Recomendado | Obrigatório | Obrigatório |
 
-### 4.3 Regras gerais de gates
+### 4.3 Regras gerais de gates {#43-regras-gerais-de-gates}
 
 - Os thresholds (severidade mínima de bloqueio) devem ser documentados e versionados (`gates-config.yaml` ou equivalente)
 - A alteração de um threshold requer aprovação de AppSec Engineer
@@ -79,7 +79,7 @@ Gates configurados em modo "warn-only" (sem bloqueio) em L2/L3 não cumprem esta
 
 ---
 
-## 5. Gestão de segredos no pipeline
+## 5. Gestão de segredos no pipeline {#5-gestão-de-segredos-no-pipeline}
 
 Segredos usados no pipeline (tokens de CI, chaves de deploy, credenciais de registo, etc.) devem ser geridos de acordo com a Política de Gestão de Segredos. Os princípios específicos para o contexto do pipeline são:
 
@@ -91,7 +91,7 @@ Segredos usados no pipeline (tokens de CI, chaves de deploy, credenciais de regi
 
 ---
 
-## 6. Separação de ambientes e promoção controlada
+## 6. Separação de ambientes e promoção controlada {#6-separação-de-ambientes-e-promoção-controlada}
 
 O pipeline deve implementar separação física ou lógica entre ambientes (desenvolvimento, integração, staging, produção), com promoção controlada:
 
@@ -107,7 +107,7 @@ A identidade que executa o deploy em produção deve ter permissões mínimas - 
 
 ---
 
-## 7. Identidade e permissões do pipeline
+## 7. Identidade e permissões do pipeline {#7-identidade-e-permissões-do-pipeline}
 
 O sistema de CI/CD opera com identidades próprias (service accounts, tokens de CI) que devem seguir o princípio do mínimo privilégio:
 
@@ -119,7 +119,7 @@ O sistema de CI/CD opera com identidades próprias (service accounts, tokens de 
 
 ---
 
-## 8. Reprodutibilidade e rastreabilidade
+## 8. Reprodutibilidade e rastreabilidade {#8-reprodutibilidade-e-rastreabilidade}
 
 Cada execução de pipeline deve ser rastreável:
 
@@ -131,7 +131,7 @@ Cada execução de pipeline deve ser rastreável:
 
 ---
 
-## 9. Integridade do pipeline
+## 9. Integridade do pipeline {#9-integridade-do-pipeline}
 
 O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor que o código de aplicação:
 
@@ -142,7 +142,7 @@ O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor 
 
 ---
 
-## 10. Artefactos esperados
+## 10. Artefactos esperados {#10-artefactos-esperados}
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
@@ -155,7 +155,7 @@ O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor 
 
 ---
 
-## 11. Responsabilidades
+## 11. Responsabilidades {#11-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -167,7 +167,7 @@ O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor 
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -177,7 +177,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

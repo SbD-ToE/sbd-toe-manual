@@ -17,14 +17,14 @@ Quando se pede a um agente para implementar algo sensível — um endpoint de lo
 
 O `prepare_sbd_toe_codegen_context` foi desenhado para inverter essa ordem. Antes de propor uma linha de código, o agente pede ao servidor o *contexto* que cobre a tarefa: requisitos activos, controlos aplicáveis, *threats* relevantes e — se o pedido for sobre um regulamento — a *overlay* normativa. Devolve um `citation_map` fechado de IDs válidos. A partir daí, o código gerado vem acompanhado de um `security_rationale` em que cada decisão referencia IDs reais ou diz explicitamente *"nenhum controlo coberto — flag para revisão humana"*.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado, skill carregada.
 - Ler [`sbd://toe/grounded-codegen-guide`](../06-resources-prompts.md#sbdtoegrounded-codegen-guide) **uma vez por sessão** antes de qualquer chamada.
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Decompor mentalmente — *bite-size*
+### 1. Decompor mentalmente — *bite-size* {#1-decompor-mentalmente--bite-size}
 
 Critérios:
 - **1 surface técnica** (1 endpoint, 1 módulo, 1 grupo de ficheiros)
@@ -33,7 +33,7 @@ Critérios:
 
 Se a tarefa exceder isto, o servidor devolve `needs_decomposition` — antecipar.
 
-### 2. Chamar a tool
+### 2. Chamar a tool {#2-chamar-a-tool}
 
 ```json
 prepare_sbd_toe_codegen_context({
@@ -49,9 +49,9 @@ prepare_sbd_toe_codegen_context({
 })
 ```
 
-### 3. Ramificar por `status`
+### 3. Ramificar por `status` {#3-ramificar-por-status}
 
-#### `ready_for_codegen`
+#### `ready_for_codegen` {#ready_for_codegen}
 
 Procede. Disciplina obrigatória:
 
@@ -64,7 +64,7 @@ Procede. Disciplina obrigatória:
 
 Se `completeness_report.m_recall < 1.0` → **sinalizar cobertura parcial ao utilizador**.
 
-#### `needs_clarification`
+#### `needs_clarification` {#needs_clarification}
 
 **STOP**. Não gerar nada. Responder:
 1. `reasons[]` em linguagem clara.
@@ -72,14 +72,14 @@ Se `completeness_report.m_recall < 1.0` → **sinalizar cobertura parcial ao uti
 
 Não re-chamar a tool até o utilizador responder.
 
-#### `needs_decomposition`
+#### `needs_decomposition` {#needs_decomposition}
 
 **STOP**. Não escolher um sub-task silenciosamente. Responder:
 1. `reasons[]`.
 2. 2–4 sub-tarefas, cada uma com surface/phase/concerns explícitos (derivados de `partial_activation_trace`).
 3. **Pergunta ao utilizador qual atacar primeiro.**
 
-#### `unsupported_scope`
+#### `unsupported_scope` {#unsupported_scope}
 
 **STOP**. Reportar o problema verbatim — não fabricar IDs para continuar:
 
@@ -89,9 +89,9 @@ Não re-chamar a tool até o utilizador responder.
 | `Overlay regulatório ausente` | "Remover `regulatory_frameworks` / `include_regulatory_overlay`, ou esperar publicação." |
 | `Framework regulatório desconhecida` | Listar os *short codes* suportados de `regulatory_overlay.frameworks`. |
 
-## Disciplina de output (`ready_for_codegen`)
+## Disciplina de output (`ready_for_codegen`) {#disciplina-de-output-ready_for_codegen}
 
-### Três classes de artefacto — distinguir sempre
+### Três classes de artefacto — distinguir sempre {#três-classes-de-artefacto--distinguir-sempre}
 
 | Classe | Definição | Exemplo |
 |---|---|---|
@@ -99,17 +99,17 @@ Não re-chamar a tool até o utilizador responder.
 | **Tests** | Verificações automatizadas que exercitam `security_rationale.validations[]` | `test/auth/lockout.spec.ts` |
 | **Evidence** | Artefactos que um *reviewer* inspecciona — log lines, SBOM, attestation, audit report, scan output. **Tests são evidência; código não é.** | Log: `auth.lockout.activated`, schema X |
 
-### Onde citar IDs
+### Onde citar IDs {#onde-citar-ids}
 
 - ✅ **PR description / commit message / `security_rationale`** — sempre.
 - ⚠️ **Source files** — só se o *WHY* não for óbvio do código. Evitar `// per ACO-IVF-001`.
 
-### Nomenclatura
+### Nomenclatura {#nomenclatura}
 
 - Entidades sem `name` retornado → referir por `entity_id` exacto.
 - Manter ordenação relativa dos `evidence_patterns` (já vem capada/ordenada).
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Inventar IDs `ACO-...`, `ACM-...`, `EXT-...`, `EP-...`, `CTRL-...` fora do `citation_map`.
 - ❌ Re-chamar a tool com o **mesmo payload** após `needs_*` para "tentar de novo" — *bypass* do *scope gate*.
@@ -117,7 +117,7 @@ Não re-chamar a tool até o utilizador responder.
 - ❌ Propor controlos `L3` numa tarefa `L1` — respeitar o *risk level*.
 - ❌ Copiar nomes de entidades não publicados pela rastreabilidade.
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-codegen.md`:
 
@@ -145,7 +145,7 @@ tools: Read, Write, Edit, Grep, Glob, mcp__sbd-toe__*
 - Em m_recall < 1.0, sinalizar cobertura parcial.
 ```
 
-## Modos `review` e `test-plan`
+## Modos `review` e `test-plan` {#modos-review-e-test-plan}
 
 A mesma tool serve `mode: "review"` e `mode: "test-plan"`:
 
@@ -155,7 +155,7 @@ A mesma tool serve `mode: "review"` e `mode: "test-plan"`:
 | `review` | findings por ficheiro alterado, cada um mapeado a 1+ IDs do `citation_map` |
 | `test-plan` | checklist agrupado por `validated_id`; cada teste: input → outcome → `evidence_patterns[].id` que satisfaz |
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Auditoria de PR](./auditoria-pr) — `mode: "review"` para PRs (alternativa mais simples sem `prepare_sbd_toe_codegen_context`).
 - [Threat modeling](./threat-modeling) — antes do *codegen*, perceber as ameaças.

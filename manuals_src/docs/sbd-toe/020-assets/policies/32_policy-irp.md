@@ -9,7 +9,7 @@ sidebar_position: 32
 
 # Política de Integração com IRP
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **integração entre os sistemas de monitorização de segurança e o processo formal de resposta a incidentes (IRP)** da organização.
 
@@ -26,7 +26,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -36,7 +36,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Critérios de activação do IRP
+## 3. Critérios de activação do IRP {#3-critérios-de-activação-do-irp}
 
 O IRP é activado formalmente quando um alerta ou evento de segurança é confirmado como incidente. Os critérios de activação incluem:
 
@@ -53,42 +53,42 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 
 ---
 
-## 4. Fases de resposta a incidentes
+## 4. Fases de resposta a incidentes {#4-fases-de-resposta-a-incidentes}
 
-### 4.1 Triagem (T0 - ≤ 15 minutos de detecção)
+### 4.1 Triagem (T0 - ≤ 15 minutos de detecção) {#41-triagem-t0----15-minutos-de-detecção}
 
 - [ ] Alerta classificado: verdadeiro positivo ou falso positivo
 - [ ] Severidade atribuída (P1/P2/P3)
 - [ ] Responsável pelo incidente designado (Incident Commander)
 - [ ] Canal de comunicação do incidente aberto (war room se P1)
 
-### 4.2 Contenção (T1 - início imediato após confirmação)
+### 4.2 Contenção (T1 - início imediato após confirmação) {#42-contenção-t1---início-imediato-após-confirmação}
 
 - [ ] Acções de contenção imediata executadas (isolamento de sistema, revogação de credencial, bloqueio de IP)
 - [ ] Contenção documentada com timestamp e identidade do executor
 - [ ] Sem destruição de evidências durante contenção (preserve first, contain second quando possível)
 - [ ] Comunicação interna ao Tech Lead, AppSec Engineer e GRC
 
-### 4.3 Investigação
+### 4.3 Investigação {#43-investigação}
 
 - [ ] Recolha de logs, traces e evidências relevantes
 - [ ] Timeline do incidente reconstruída
 - [ ] Causa raiz identificada ou hipótese de trabalho documentada
 - [ ] Âmbito do impacto determinado (sistemas, dados, utilizadores afectados)
 
-### 4.4 Erradicação
+### 4.4 Erradicação {#44-erradicação}
 
 - [ ] Causa raiz eliminada (patch, revogação de acesso, remoção de malware)
 - [ ] Sistemas afectados reconstruídos de zero quando há suspeita de persistência
 - [ ] Verificação de que o vector de entrada foi fechado
 
-### 4.5 Recuperação
+### 4.5 Recuperação {#45-recuperação}
 
 - [ ] Sistemas restaurados com versões limpas e verificadas
 - [ ] Monitorização reforçada no período pós-recuperação
 - [ ] Confirmação de estado normal de operação
 
-### 4.6 Post-mortem
+### 4.6 Post-mortem {#46-post-mortem}
 
 - [ ] Realizado no prazo máximo de 5 dias úteis após resolução
 - [ ] Participação de todas as funções envolvidas
@@ -98,7 +98,7 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 
 ---
 
-## 5. Playbooks de resposta
+## 5. Playbooks de resposta {#5-playbooks-de-resposta}
 
 Cada categoria de incidente deve ter um playbook que detalha as acções específicas por fase:
 
@@ -115,7 +115,7 @@ Em L3, os playbooks devem estar integrados com SOAR para automação das acçõe
 
 ---
 
-## 6. Notificação regulatória
+## 6. Notificação regulatória {#6-notificação-regulatória}
 
 Alguns incidentes requerem notificação a autoridades regulatórias dentro de prazos definidos:
 
@@ -131,7 +131,7 @@ A determinação de se um incidente é notificável deve ser feita pelo GRC/Comp
 
 ---
 
-## 7. Comunicação durante o incidente
+## 7. Comunicação durante o incidente {#7-comunicação-durante-o-incidente}
 
 - [ ] Canal dedicado ao incidente (sem ruído de outros canais)
 - [ ] Incident Commander responsável pela comunicação interna e externa
@@ -141,7 +141,7 @@ A determinação de se um incidente é notificável deve ser feita pelo GRC/Comp
 
 ---
 
-## 8. Testes periódicos do IRP
+## 8. Testes periódicos do IRP {#8-testes-periódicos-do-irp}
 
 | Nível | Cadência | Tipo de teste |
 |---|---|---|
@@ -153,7 +153,7 @@ Os resultados dos testes devem ser documentados e as lacunas identificadas devem
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -165,7 +165,7 @@ Os resultados dos testes devem ser documentados e as lacunas identificadas devem
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -175,7 +175,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chai, invetario]
 
 # Controlo de Registos e Origem de Pacotes
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todas as dependências de terceiros são obtidas a partir de **origens controladas, auditadas e confiáveis**, minimizando o risco de ataques via registos públicos ou fontes não verificadas.
 
@@ -15,7 +15,7 @@ Assegurar que todas as dependências de terceiros são obtidas a partir de **ori
 
 ---
 
-## 🔢 Conceito de repositório confiável
+## 🔢 Conceito de repositório confiável {#-conceito-de-repositório-confiável}
 
 Um repositório é considerado confiável quando:
 
@@ -26,7 +26,7 @@ Um repositório é considerado confiável quando:
 
 ---
 
-## 🏠 Opções técnicas para registo interno
+## 🏠 Opções técnicas para registo interno {#-opções-técnicas-para-registo-interno}
 
 | Tecnologia         | Linguagens / Formatos       | Características principais                         |
 |--------------------|------------------------------|-----------------------------------------------------|
@@ -37,7 +37,7 @@ Um repositório é considerado confiável quando:
 
 ---
 
-## 🚀 Estratégia de fallback controlado
+## 🚀 Estratégia de fallback controlado {#-estratégia-de-fallback-controlado}
 
 1. O repositório tenta obter o pacote **localmente**.
 2. Se não existir, tenta fonte externa **sob validação de política** (whitelist de domínios ou GPG keys).
@@ -48,7 +48,7 @@ Um repositório é considerado confiável quando:
 
 ---
 
-## 📝 Recomendações de configuração
+## 📝 Recomendações de configuração {#-recomendações-de-configuração}
 
 - Desativar `--registry` externo por defeito
 - Fornecer `.npmrc`, `.pip.conf`, `settings.xml` com origem predefinida
@@ -57,7 +57,7 @@ Um repositório é considerado confiável quando:
 
 ---
 
-## ✅ Benefícios adicionais
+## ✅ Benefícios adicionais {#-benefícios-adicionais}
 
 - Reprodutibilidade dos builds
 - Menor dependência de disponibilidade externa (resiliência)
@@ -66,7 +66,7 @@ Um repositório é considerado confiável quando:
 
 ---
 
-## 🔗 Ligações com outros ficheiros
+## 🔗 Ligações com outros ficheiros {#-ligações-com-outros-ficheiros}
 
 | Documento                   | Ligação com registos de origem                      |
 |-----------------------------|-----------------------------------------------------------|

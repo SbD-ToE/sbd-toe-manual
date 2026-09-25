@@ -21,11 +21,11 @@ A não aplicação de qualquer obrigação mínima **não é uma escolha técnic
 
 ---
 
-## 🎯 O Núcleo Duro: 8 Obrigações Transversais
+## 🎯 O Núcleo Duro: 8 Obrigações Transversais {#-o-núcleo-duro-8-obrigações-transversais}
 
 Independentemente do nível de risco, **todas as aplicações** devem implementar:
 
-### 1️⃣ **Classificação da Criticidade** (Cap. 01)
+### 1️⃣ **Classificação da Criticidade** (Cap. 01) {#1️⃣-classificação-da-criticidade-cap-01}
 **O que**: Antes de iniciar qualquer desenvolvimento, classificar o nível de risco da aplicação (L1, L2, L3).
 
 **Por quê**: Sem classificação, é impossível determinar que práticas aplicar. Torna a decisão de investimento em segurança arbitrária.
@@ -36,7 +36,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 2️⃣ **Requisitos Mínimos de Segurança** (Cap. 02)
+### 2️⃣ **Requisitos Mínimos de Segurança** (Cap. 02) {#2️⃣-requisitos-mínimos-de-segurança-cap-02}
 **O que**: Definir e rastrear um conjunto mínimo de requisitos de segurança que a aplicação deve cumprir.
 
 **Por quê**: Requisitos explícitos permitem que DevOps e QA validem implementação; sem eles, segurança fica vaga.
@@ -47,7 +47,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 3️⃣ **Gestão Explícita de Dependências** (Cap. 05)
+### 3️⃣ **Gestão Explícita de Dependências** (Cap. 05) {#3️⃣-gestão-explícita-de-dependências-cap-05}
 **O what**: Manter um inventário atualizado de todas as dependências críticas (frameworks, bibliotecas, sistemas). Incluir versões e alertas de vulnerabilidades.
 
 **Por quê**: A maioria das vulnerabilidades exploradas vêm de dependências não geridas ou desatualizadas. Um inventário é fundamental para incident response.
@@ -58,7 +58,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 4️⃣ **Coding Guidelines Básicas e Validação Automática** (Cap. 06)
+### 4️⃣ **Coding Guidelines Básicas e Validação Automática** (Cap. 06) {#4️⃣-coding-guidelines-básicas-e-validação-automática-cap-06}
 **O que**: Aplicar um conjunto mínimo de guidelines de código seguro (ex.: evitar injection, validar inputs, usar hashing seguro). Configurar SAST (Static Application Security Testing) automático em todas as builds.
 
 **Por quê**: Guidelines e SAST combinados eliminam a maioria das vulnerabilidades triviais com custo marginal quase nulo.
@@ -69,7 +69,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 5️⃣ **Pipelines CI/CD com Verificações Mínimas** (Cap. 07)
+### 5️⃣ **Pipelines CI/CD com Verificações Mínimas** (Cap. 07) {#5️⃣-pipelines-cicd-com-verificações-mínimas-cap-07}
 **O what**: Executar pipelines CI/CD com gates mínimos de segurança (SAST, dependency scanning, secret scanning). Nunca fazer deploy sem validações.
 
 **Por quê**: Pipelines automáticos garantem que nenhum código vulnerável chega a produção por lapso humano. Estas verificações podem ser totalmente automatizadas,desde que os critérios de execução e bloqueio sejam objetivos, determinísticos e auditáveis.
@@ -80,7 +80,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 6️⃣ **Registo e Monitorização Essencial** (Cap. 12)
+### 6️⃣ **Registo e Monitorização Essencial** (Cap. 12) {#6️⃣-registo-e-monitorização-essencial-cap-12}
 **O que**: Ativar logging mínimo em todos os serviços (eventos de autenticação, alterações críticas, erros). Correlacionar logs em ponto central e monitorizar anomalias.
 
 **Por quê**: Logs são o alicerce da deteção de incidentes e da accountability regulatória.
@@ -91,7 +91,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 7️⃣ **Formação Inicial em Segurança** (Cap. 13)
+### 7️⃣ **Formação Inicial em Segurança** (Cap. 13) {#7️⃣-formação-inicial-em-segurança-cap-13}
 **O que**: Garantir que todos os membros da equipa (Developers, QA, DevOps, etc.) recebem formação inicial obrigatória em segurança de software, alinhada aos papéis.
 
 **Por quê**: Equipas conscientes de riscos evitam erros. Formação é o investimento com maior ROI em segurança.
@@ -102,7 +102,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-### 8️⃣ **Cláusulas Mínimas de Segurança em Fornecedores** (Cap. 14)
+### 8️⃣ **Cláusulas Mínimas de Segurança em Fornecedores** (Cap. 14) {#8️⃣-cláusulas-mínimas-de-segurança-em-fornecedores-cap-14}
 **O que**: Incluir em contratos com fornecedores/terceiros cláusulas mínimas de segurança (compromisso com responsabilidade de dados, direito de auditoria, notificação de incidentes).
 
 **Por quê**: A cadeia de fornecimento é uma das maiores fontes de risco. Sem cláusulas contractuais, não há forma de exigir compliance.
@@ -113,7 +113,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-## 📊 Mapa de Cobertura
+## 📊 Mapa de Cobertura {#-mapa-de-cobertura}
 
 | Obrigação | Capítulo | Responsável | Validação |
 |-----------|----------|-------------|-----------|
@@ -128,15 +128,15 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 
 ---
 
-## 💡 Racional Técnico-Científico
+## 💡 Racional Técnico-Científico {#-racional-técnico-científico}
 
 A definição destas obrigações mínimas baseia-se em:
 
-### **Estudos de Incidentes Reais**
+### **Estudos de Incidentes Reais** {#estudos-de-incidentes-reais}
 - **Verizon DBIR** (Data Breach Investigations Report): A maioria dos breaches decorre de falhas básicas - credenciais fracas, patches não aplicadas, falta de logging.
 - **ENISA Threat Landscape**: Vulnerabilidades conhecidas (ex.: CVEs) são exploradas rotineiramente porque básicos não estão em lugar.
 
-### **OWASP Top 10**
+### **OWASP Top 10** {#owasp-top-10}
 As 10 vulnerabilidades mais comuns poderiam ser impedidas por:
 - **A01 Broken Access Control** → Requisitos claros (2)
 - **A02 Cryptographic Failures** → Guidelines de código (4)
@@ -149,13 +149,13 @@ As 10 vulnerabilidades mais comuns poderiam ser impedidas por:
 - **A09 Logging & Monitoring Failures** → Logging obrigatório (12)
 - **A10 SSRF** → Threat modeling (3)
 
-### **Modelos de Maturidade**
+### **Modelos de Maturidade** {#modelos-de-maturidade}
 Organizações avaliadas com OWASP SAMM mostram que **todas as maduras** partilham estas 8 práticas como base.  
 Ausência de qualquer uma cria gaps significativos.
 
 ---
 
-## ⚖️ Baseline vs. Proporcionalidade (L1–L3)
+## ⚖️ Baseline vs. Proporcionalidade (L1–L3) {#️-baseline-vs-proporcionalidade-l1l3}
 
 **Importante**: As obrigações mínimas **não substituem** a proporcionalidade L1–L3.
 
@@ -181,11 +181,11 @@ Mas o baseline é transversal e **nunca é negociável**.
 
 ---
 
-## 🔄 Pragmatismo e Aplicação Universal
+## 🔄 Pragmatismo e Aplicação Universal {#-pragmatismo-e-aplicação-universal}
 
 Um aspeto essencial é a eficiência: em muitos casos, aplicar **determinadas práticas a todas as aplicações** é mais prático do que discussões caso a caso.
 
-### Exemplos Práticos
+### Exemplos Práticos {#exemplos-práticos}
 
 **SAST em todos os repositórios**  
 → Mesmo com cost zero (ferramentas open source), elimina triviais.  
@@ -205,7 +205,7 @@ Um aspeto essencial é a eficiência: em muitos casos, aplicar **determinadas pr
 
 ---
 
-## 📋 Checklist de Implementação
+## 📋 Checklist de Implementação {#-checklist-de-implementação}
 
 Para cada aplicação, validar:
 
@@ -223,29 +223,29 @@ Para cada aplicação, validar:
 
 ---
 
-## 🔗 Alinhamento Regulatório
+## 🔗 Alinhamento Regulatório {#-alinhamento-regulatório}
 
-### **NIS2 (Directive on Network and Information Security)**
+### **NIS2 (Directive on Network and Information Security)** {#nis2-directive-on-network-and-information-security}
 - ✅ Cobre: Medidas técnicas, logging, monitorização, avaliação de risco
 - ✅ Todas as 8 obrigações contribuem para compliance NIS2
 
-### **DORA (Digital Operational Resilience Act)**
+### **DORA (Digital Operational Resilience Act)** {#dora-digital-operational-resilience-act}
 - ✅ Cobre: Testes periódicos, gestão de fornecedores, resiliência
 - ✅ Obrigações 5, 6, 7, 8 são essenciais para DORA
 
-### **GDPR (General Data Protection Regulation)**
+### **GDPR (General Data Protection Regulation)** {#gdpr-general-data-protection-regulation}
 - ✅ Cobre: Privacy by design, security by design, logging
 - ✅ Obrigações 2, 4, 6 são críticas para GDPR
 
-### **PCI-DSS (Payment Card Industry)**
+### **PCI-DSS (Payment Card Industry)** {#pci-dss-payment-card-industry}
 - ✅ Todas as 8 obrigações cobrem PCI-DSS mínimos
 
-### **ISO/IEC 27001**
+### **ISO/IEC 27001** {#isoiec-27001}
 - ✅ Mapeamento direto: cada obrigação corresponde a controlos ISO
 
 ---
 
-## 📈 Impacto Esperado
+## 📈 Impacto Esperado {#-impacto-esperado}
 
 Com as 8 obrigações implementadas:
 
@@ -260,7 +260,7 @@ Com as 8 obrigações implementadas:
 
 ---
 
-## 🎯 Próximos Passos
+## 🎯 Próximos Passos {#-próximos-passos}
 
 1. **Audita o estado atual**: Qual destas 8 obrigações estão já implementadas?
 2. **Prioriza gaps**: Qual é mais urgente? (Recomendação: começar com 1, 2, 5, 7)

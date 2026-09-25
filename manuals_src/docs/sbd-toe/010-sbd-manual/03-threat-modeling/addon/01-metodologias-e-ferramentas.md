@@ -7,7 +7,7 @@ tags: [stride, pasta, linddun, ferramentas, tooling, metodologias]
 
 # Metodologias e Ferramentas de Threat Modeling
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Fornecer uma visão comparativa e orientada à decisão sobre as principais **metodologias e ferramentas** de Threat Modeling, ajudando equipas a:
 
@@ -17,9 +17,9 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-## 🧠 Modelos existentes e quando aplicar
+## 🧠 Modelos existentes e quando aplicar {#-modelos-existentes-e-quando-aplicar}
 
-### ✅ Comparação de metodologias
+### ✅ Comparação de metodologias {#-comparação-de-metodologias}
 
 | Modelo          | Foco Principal              | Quando usar                                      | Complexidade | Output típico                          |
 | --------------- | --------------------------- | ------------------------------------------------ | ------------ | -------------------------------------- |
@@ -32,7 +32,7 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-### ♻️ Aplicação recomendada
+### ♻️ Aplicação recomendada {#️-aplicação-recomendada}
 
 - **STRIDE**: ideal como base para qualquer aplicação com interface exposta ou lógica sensível.
 - **LINDDUN**: aplicar quando há dados pessoais, preocupações de privacidade ou requisitos legais (ex: RGPD).
@@ -41,7 +41,7 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-### 🧮 Recomendação por tipo de sistema
+### 🧮 Recomendação por tipo de sistema {#-recomendação-por-tipo-de-sistema}
 
 | Tipo de sistema                | Modelo recomendado | Justificação técnica                                                               |
 | ------------------------------ | ------------------ | ---------------------------------------------------------------------------------- |
@@ -53,9 +53,9 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-## 🛠️ Ferramentas disponíveis
+## 🛠️ Ferramentas disponíveis {#️-ferramentas-disponíveis}
 
-### ✅ Comparação prática
+### ✅ Comparação prática {#-comparação-prática}
 
 | Ferramenta          | Modelos Suportados | Colaboração | Características chave                          | Recomendado para…                    |
 | ------------------- | ------------------ | ----------- | ---------------------------------------------- | ------------------------------------ |
@@ -67,7 +67,7 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-### 🧩 Recomendações por nível de maturidade
+### 🧩 Recomendações por nível de maturidade {#-recomendações-por-nível-de-maturidade}
 
 | Maturidade da equipa | Abordagem recomendada                           |
 | -------------------- | ----------------------------------------------- |
@@ -77,7 +77,7 @@ Fornecer uma visão comparativa e orientada à decisão sobre as principais **me
 
 ---
 
-## 📁 Organização de artefactos e templates
+## 📁 Organização de artefactos e templates {#-organização-de-artefactos-e-templates}
 
 Sugestão de estrutura para manter os modelos reutilizáveis e versionados:
 
@@ -98,7 +98,7 @@ Sempre que possível, os requisitos derivados das ameaças devem ser rastreávei
 
 Sistemas que incorporam componentes de inteligência artificial — modelos preditivos, LLMs em interface conversacional, sistemas de retrieval-augmented generation (RAG), agentes autónomos com tool invocation — introduzem **superfícies de ataque qualitativamente distintas** das aplicações tradicionais. As ameaças adversariais a estes componentes não se reduzem ao STRIDE clássico: alvos como training data, model weights e prompt context, e mecanismos como adversarial examples, prompt injection (directa e indirecta) ou data poisoning, exigem framing dedicado.
 
-### Catálogos de referência
+### Catálogos de referência {#catálogos-de-referência}
 
 | Catálogo | Foco | Quando consultar |
 |---|---|---|
@@ -109,7 +109,7 @@ Sistemas que incorporam componentes de inteligência artificial — modelos pred
 | **OWASP ML Top 10 (2023)** | Top-10 vulnerabilidades em aplicações ML (input manipulation, model theft, model poisoning, etc.) | Triagem rápida em aplicações com modelos preditivos |
 | **OWASP MCP Top 10 (2025)** | Top-10 vulnerabilidades específicas a *MCP servers* (Model Context Protocol) — prompt injection em contexto MCP, tool poisoning, excessive permissions, autenticação/autorização inadequadas, transporte inseguro, validação de input, output handling, monitorização insuficiente, defaults inseguros | Triagem rápida quando se **expõe** ou **opera** um MCP server (distinto de consumir um — ver [mini-site MCP §troubleshooting](/sbd-toe/assets/mcp/troubleshooting-faq) para a distinção) |
 
-### Adversarial threats catalog primer (MITRE ATLAS)
+### Adversarial threats catalog primer (MITRE ATLAS) {#adversarial-threats-catalog-primer-mitre-atlas}
 
 MITRE ATLAS organiza ameaças adversariais a AI systems em **tactics** (objectivos do atacante: Reconnaissance, Resource Development, Initial Access, AI Model Access, Execution, Persistence, Privilege Escalation, Defense Evasion, Credential Access, Discovery, Collection, AI Attack Staging, Command & Control, Exfiltration, Impact) e **techniques** (procedimentos concretos para cumprir cada tactic). Exemplos relevantes para threat modeling de aplicações:
 
@@ -121,7 +121,7 @@ MITRE ATLAS organiza ameaças adversariais a AI systems em **tactics** (objectiv
 
 Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos navegáveis para análise técnica; cada um corresponde a um item rastreável no [Capítulo 25 — Rastreabilidade](../canon/25-rastreabilidade.md) deste capítulo.
 
-### Boas práticas para threat modeling AI/ML
+### Boas práticas para threat modeling AI/ML {#boas-práticas-para-threat-modeling-aiml}
 
 - **Aplicar STRIDE ou LINDDUN como baseline**; adicionar análise ATLAS-driven para componentes AI/ML específicos — não substituir, complementar.
 - **Identificar trust boundaries adicionais**: training data → modelo (training-time boundary), prompt input → modelo (inference-time boundary), modelo → tool invocations (agentic boundary), modelo → output rendering (output boundary).
@@ -134,7 +134,7 @@ Os IDs ATLAS (`AML.*`) referenciados acima são identificadores canónicos naveg
 
 A subsecção anterior cobre threat modeling de **componentes AI/ML em geral**. Quando o sistema em análise inclui **agentes autónomos** — ou seja, modelos que invocam *tools* reais (criar PRs, ler segredos, deploy, escrever em sistemas externos, contactar APIs) — adiciona-se um passo dedicado, porque o que define a superfície de ataque deixa de ser apenas o modelo e passa a incluir **o conjunto fechado de *tools* que o agente pode invocar e as fronteiras entre o agente e os recursos externos**.
 
-#### DFD canónico para um flow agentic
+#### DFD canónico para um flow agentic {#dfd-canónico-para-um-flow-agentic}
 
 Em qualquer arquitectura com agente + tool-use, identifica-se pelo menos cinco participantes distintos e quatro fronteiras de confiança. O modelo abaixo é deliberadamente minimalista — adiciona-se detalhe consoante o caso, sem nunca remover destas peças.
 
@@ -161,7 +161,7 @@ flowchart LR
 
 > A "agentic boundary" já estava marcada na cobertura de Cap. 04 (ARC-014). Aqui especializamo-la com a separação **modelo → tool runtime → sistema externo**, que é onde o efeito concreto se materializa.
 
-#### Threat library agentic — IDs reais
+#### Threat library agentic — IDs reais {#threat-library-agentic--ids-reais}
 
 Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`); não inventamos códigos paralelos. As ameaças abaixo são as que costumamos encontrar em flows com agentes + tool-use; cada uma vem com fronteira-alvo e mitigações que apontam para capítulos do manual.
 
@@ -178,7 +178,7 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 
 > 💡 Quando o agente é parte do produto que enviamos para o cliente (e não apenas operador interno), aplicam-se adicionalmente os requisitos do AI Act — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) e a [convergência com o CRA](/sbd-toe/cross-check-normativo/ai-act/convergencia-cra).
 
-#### Passos do exercício de threat modeling agentic
+#### Passos do exercício de threat modeling agentic {#passos-do-exercício-de-threat-modeling-agentic}
 
 1. **Inventário do agente**: qual o cliente AI, qual o modelo, qual o nível A0–A4 declarado no *mandate* (`REQ-AGN-001/002`), que *tools* estão na allowlist.
 2. **Desenhar o DFD agentic**: marcar os cinco participantes e as quatro fronteiras; identificar onde está cada *tool* e o sistema externo associado.
@@ -191,7 +191,7 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Escolher o modelo de análise com base na sensibilidade do sistema;
 - Usar diagramas e artefactos versionáveis, legíveis e acessíveis à equipa;
@@ -200,7 +200,7 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                    | Relação com este ficheiro                         |
 |------------------------------|---------------------------------------------------|
@@ -210,7 +210,7 @@ Trabalhamos com IDs MITRE ATLAS (`AML.*`) e OWASP LLM Top 10 2025 (`LLM*-2025`);
 
 ---
 
-## 🔗 Recursos úteis
+## 🔗 Recursos úteis {#-recursos-úteis}
 
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
 - [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)

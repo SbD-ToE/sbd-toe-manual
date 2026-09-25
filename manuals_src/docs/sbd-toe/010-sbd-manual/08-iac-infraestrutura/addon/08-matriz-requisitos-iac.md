@@ -11,7 +11,7 @@ sidebar_position: 8
 
 # Catálogo de Requisitos de Infraestrutura como Código
 
-## Âmbito: o projecto IaC como produto de software
+## Âmbito: o projecto IaC como produto de software {#âmbito-o-projecto-iac-como-produto-de-software}
 
 Este catálogo define **requisitos de segurança aplicáveis ao projecto IaC em si** - tratando o código de infraestrutura como um produto de software com riscos próprios, que deve ser governado, validado e auditado com o mesmo rigor que qualquer aplicação.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-IAC-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo IAC - Infraestrutura como Código
+## Catálogo IAC - Infraestrutura como Código {#catálogo-iac---infraestrutura-como-código}
 
 Requisitos que garantem que o projecto IaC é desenvolvido, versionado, validado e operado com controlos de segurança proporcionais ao risco da infraestrutura que gere.
 
@@ -60,7 +60,7 @@ Requisitos que garantem que o projecto IaC é desenvolvido, versionado, validado
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **IAC-001**: Aplica-se sempre que exista colaboração entre múltiplos engenheiros, pipelines partilhados ou mais de um ambiente gerido pelo mesmo estado. Em contextos de operador único e pipeline isolado, o locking pode ser dispensado com justificação documentada.
 - **IAC-004**: Qualquer dependência de módulo externo deve ser tratada como código não confiável por origem até validação explícita. Módulos internos partilhados estão também sujeitos a este requisito.

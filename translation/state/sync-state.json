@@ -1,0 +1,3734 @@
+{
+  "generated_at": "2026-09-25T13:48:33Z",
+  "source_locale": "pt",
+  "target_locale": "en",
+  "terms_sha256": null,
+  "files": {
+    "000-teory-of-everything/intro.mdx": {
+      "state": "untranslated",
+      "source_sha256": "9d3297356ef381089b5b407d0b41b3c191bd455d664ab66dd1c8a43ebebd3f11",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "d623692f5bc713ea3b2e10250e650db9c43040643b4d253f3f55421002c0198f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/ai-act/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "3de0de6f9b893c4e1a28e2c01efb9143c40a9d63a2667c8e9d1ed31965809085",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/ai-act/02-playbook.md": {
+      "state": "untranslated",
+      "source_sha256": "e2dfaccadc64a2eea0ab0c88521746d0415ebf54b75d0bc4bb153390025b839a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/ai-act/03-convergencia-cra.md": {
+      "state": "untranslated",
+      "source_sha256": "a2f356f952a58aca681bbdf20d6a5981ff927a1173bbf43ac02ed181dbdeafff",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/cra/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "9decd05a436c5769f7eec09b6075c565e419bfbc5c6a853abdc436bd1efdd702",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/cra/02-playbook.md": {
+      "state": "untranslated",
+      "source_sha256": "55f2344efa475ed2c55e2e5a0d2c04a417f3a5cf80dff5a1e3838731c7674876",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/dora/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "ccef6ea2ef74302a65534b66b40c7dbbd87c85a5e45a6ff3c00468a274b420e8",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/dora/02-playbook.md": {
+      "state": "untranslated",
+      "source_sha256": "a58236c35097b6b5ecdee14d2d3f19488ef56377f1bc9682180b510227ee7444",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/dora/03-convergencia-nis2.md": {
+      "state": "untranslated",
+      "source_sha256": "d0dcefe79cc8bfb929aeb01dd8f47bb06b89bb7598417982c16d26bf635c2764",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/enisa-csa/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "8de3855ce8b3adce375e04cc329aae333fb2100d8550958ffa2dcf52c2552b4c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/01-exemplo-toolchain-options.md": {
+      "state": "untranslated",
+      "source_sha256": "5d5ce8c94e32c30a43f76fb659a210f107e7ac165b3e0f4bcfe1c367afb5e21f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/02-exemplo-kpis-targets.md": {
+      "state": "untranslated",
+      "source_sha256": "d090b169718994f101c02a705d8a559a2d90d14a2f4cf1a1afc21ee88ee50518",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/03-exemplo-raci-governance.md": {
+      "state": "untranslated",
+      "source_sha256": "f9b52b533349ec0b6dd7afb7880c41156d10e24ec81cb580bcea542b38d3ae3a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md": {
+      "state": "untranslated",
+      "source_sha256": "d4c43bf502522a0c818942b855eadc6d5270d1454a995fca7c6c70da498bd852",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/05-exemplo-agentic-sdlc.md": {
+      "state": "untranslated",
+      "source_sha256": "642d82c21d323b020bbb3a69fe49819b81b841fa253e22b7cb0514056e7bbfd0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/exemplo-playbook/README.md": {
+      "state": "untranslated",
+      "source_sha256": "8511c6a1cfcf1817720c73ada4119b4f40afb7175a25b94e7fe470846faa3678",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/gdpr/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "b3575ff4c82abb5f3937e17db2db74aab962db5d6042d94ab0b794f155d84e99",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/gdpr/02-playbook.md": {
+      "state": "untranslated",
+      "source_sha256": "0ce4f9a62ea0449e27eb29f65f2c72262c1630dfff850be651fa770b90ac9825",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/nis2/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "b08da2f0813f3e770e7167349294e5ca3cdf5c3763423d93b35272fb42817b94",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/nis2/02-playbook.md": {
+      "state": "untranslated",
+      "source_sha256": "cb4a139abf353cf01145884cf852ff0c5033e100afaf05be56a3069540b4947a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/nis2/03-convergencia-dora.md": {
+      "state": "untranslated",
+      "source_sha256": "d0dcefe79cc8bfb929aeb01dd8f47bb06b89bb7598417982c16d26bf635c2764",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/baseline.md": {
+      "state": "untranslated",
+      "source_sha256": "5552b325cd72c36913036a85971852e5facd12cef952d2c2c12d0049e43492a3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "2c7e1e2795ad776857cd3399895f3dfdb00c9e5a7e61bd165b8e7ed0c92eef74",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/canon/26-metodologia-validacao-claims.md": {
+      "state": "untranslated",
+      "source_sha256": "04cc8983eed2f310955ffe9cd13498a7e721adfc51a3dea9fec4c0eae58a85ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/como-usar.mdx": {
+      "state": "untranslated",
+      "source_sha256": "a52db4d4116ef40344cc4a390f1ddb55a8dbd4c643c976af05959eb113d6a142",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "2f98a5a17262e593051dd99f1df936b9e87c823d742024b22fe6e25402b625ab",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/macro-processos.md": {
+      "state": "untranslated",
+      "source_sha256": "e2d2cb714dd9763ae86783f24ce4cf79d09a29ea886c5f06571c7d7867801308",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/appsec-engineer.md": {
+      "state": "untranslated",
+      "source_sha256": "2ff754b716f30f5aa2bbb63bca7686a96a5257c58733b93f9c380d41126d7dee",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md": {
+      "state": "untranslated",
+      "source_sha256": "97d7407bbd5e1157eba642867481a56bd96f542415b7c9d0a89b1cbe2e244d3c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md": {
+      "state": "untranslated",
+      "source_sha256": "082a6025461cef7530272470e119a36907e76565d97d8e5ed864ede52467f386",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/developer.md": {
+      "state": "untranslated",
+      "source_sha256": "2cf568523484f178dc7e09eab421f2a6e31d7dafbb5a4b7dfaff07319a3a2e19",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/devops-sre.md": {
+      "state": "untranslated",
+      "source_sha256": "87dd80fbc1ac3f40224c921e89b3620569b2a10eb4e6099b0b6f706e2812f10a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/fornecedores-terceiros.md": {
+      "state": "untranslated",
+      "source_sha256": "37ace634864476b031acbbc163eb8c919e46d95b22198e87b6b4db23ca060e3e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/gestao-executiva.md": {
+      "state": "untranslated",
+      "source_sha256": "b1962d32267d8d96b5db860ab68c94b84bba7e3fe8d32e72a5958f1861d3ad4b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/grc-compliance.md": {
+      "state": "untranslated",
+      "source_sha256": "89ed23a10b25603c10990688168656f883ede23f9267504422f6d0bdec0bf40a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "7b358ec89fe83da4445f86cc6f9409edb90d05b2eed6fe82bdd4934abb7466d7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md": {
+      "state": "untranslated",
+      "source_sha256": "e6d5ea582a712b01f20334733d452750557c9754688558b1f4236f27583a16d6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/product-owner.md": {
+      "state": "untranslated",
+      "source_sha256": "a1ee30ae9026cea203c5f01bfa64ac0dd628106eae5c373a2020ff8289c8b21c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/qa.md": {
+      "state": "untranslated",
+      "source_sha256": "aa63de528b8d292009b9da8e2833db9bebc1e78047cdcf5e2d34b833375dc082",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/scrum-master.md": {
+      "state": "untranslated",
+      "source_sha256": "84a785a2213b05de5a8ac28d904a9ed81155573438abdb3236c34e036c26225e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/security-champion.md": {
+      "state": "untranslated",
+      "source_sha256": "d35d6317dd058e3f2d857aff68abf6574e0490429b20fdfc4320246673179c70",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "f03ad98398f934d36a947d1de2925207c8c53d3eb8322ffb9cf7372b769a93d1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "97fc131d766eb161d5df7e399b0910b70895c52a2652e8034705f2a9f23fffcd",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/01-modelo-classificacao-eixos.md": {
+      "state": "untranslated",
+      "source_sha256": "a38c1289494f1369bc654a54e7469bb96e32712f0478f54e5c054aa09a1dd71c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/02-ciclo-vida-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "4d05dee9c6c0590b1e57eaecb8bd1dc286a6e2f7631e2148fe096a9e3e121eb4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/03-criterios-aceitacao-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "95995f35c2a955d4acb94485aa90f86e6f441a79435342ab8581111f74e723bf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/04-risco-residual.md": {
+      "state": "untranslated",
+      "source_sha256": "3daeb9c77823c585e81f4cc9cfa0199656790c861a50b3884e0a8c514f384205",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/05-matriz-controlos-por-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "0817803f483541c386805fb8968882659ebaa22cfb4362cbeba1d8066232586d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "28c42a7b74c96546f66069a655b7dcf18d3d1ad2e72d4876d4c919c3cd985245",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/07-adopcao-drp-bia.md": {
+      "state": "untranslated",
+      "source_sha256": "b31a80b1b68928edf584551cc54dd81fbd474fb20d72517c7c38dc97ff31ca69",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/09-casos-praticos.md": {
+      "state": "untranslated",
+      "source_sha256": "25bd46058fdef5c3c1b753e078f162e7522e0115953df0eab01878b4c2eb5729",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/10-atributos-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "c4bbd1682edb8278549abdf18f4c19104cac4de8b1200fe1f0aadcc866240484",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas.md": {
+      "state": "untranslated",
+      "source_sha256": "896066ec27cb057ba24df74af811751770b8b6402986855d411d6856fc8ed722",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/addon/12-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "0d01f95c00d77f203a1ad28258ca7a78da3e8a6cb05608d9fbd2058c821b13e2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "4e099bf5a479c85f1639f4bb4adc5f50d45d1c5c993b58e94d322ed5f7b4b875",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "27bdea0cfc3fc9192a438f4876561e09d473d20bc4f40b510ef0bac62a35d8aa",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "730f6fd696d170fdf3af05a125b3225a5ba1634fde35f2a107887d314bdc629a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "79bbaceab6d6fa96074bdee26126d4e1147808591a019a0ac23bd180bbd9e6f8",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "88845c1459ecf08324df1e5dfdbba72d2c3a963d18e2618a686200da1c8daaa1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "81535ae048d2f360fa6b873228e68f8b833a5fcbdcb46c197f351b8104f24904",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/pre-note.md": {
+      "state": "untranslated",
+      "source_sha256": "08bc7a181879000a0de6888e299707f2f5c239aec7709406585fa07e442e9860",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/01-classificacao-aplicacoes/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "26758241e2cc3096f89265a6ebabdc120e3d3a34f8bd82e4d614952644984813",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "dee6d41e92ba50da5bf37105a5a79992ca03be17d2a80fe9fc256f8aeff3ef98",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/01-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "d62b775e07b2eedf6b98050f453713ac2a9415a0232c896b2be272b0eddc4966",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md": {
+      "state": "untranslated",
+      "source_sha256": "a7dabc4a0e0a92e55126a691909f4d0b209c19c343d1129af9786890d6ae9d87",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/03-taxonomia-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "0adcb7dfd4c513c9bc935443abd04745ceb282b1d8099cf008b4d507ce50dc14",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/04-rastreabilidade-controlo.md": {
+      "state": "untranslated",
+      "source_sha256": "d72cca6b02700148e35b70b7cf42ac0bbfe18e02531385e18269dd611dd3ff74",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/05-criterios-aceitacao.md": {
+      "state": "untranslated",
+      "source_sha256": "5685d5408cebc2ca17952c0c7537aa15d113ef9c9729869a5db0f5593f3be1cf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/06-matriz-controlos-por-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "13338c9020122670444c665ed0f926d3b9c843cc950ca7602d1fa88c780d06fe",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/07-validacao-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "0d7b1e72a60cac9a7ef50454d1db788c9bd05a5d7a6c4b0ddcf9c1f37f21305d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/08-gestao-excecoes.md": {
+      "state": "untranslated",
+      "source_sha256": "504611fe374e5cfa9bde30789077d5b2a1dbdde9276e590477175ad44fb9983d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md": {
+      "state": "untranslated",
+      "source_sha256": "a1399f96113f9836cf153b98476288534cea9b587570454409c6df3552c7ad1a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/10-validacao-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "1a9f078e896b59d86a59015b87f498b7a710df40e355072d581ef6a0cad972e7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/12-controlos-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "d2bc876906db1498b63010b5179ca983b13f8424c0c060da65dc095f852f1dc3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/15-exemplos-aplicacao.md": {
+      "state": "untranslated",
+      "source_sha256": "849ee71c53034a59fc804ff75b2749b9e5a1d8a9b57a05f51fe3f79db62644ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/addon/16-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "3a94191c2e95aa53dbb93aad743c5de90b2ad2050be45c8c2e5fe42b53923851",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "c7d2aea60d4a0edc89a3df94d97b393c024693a0d253d50d310ef611df034cdb",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "d8f8544f0e1ec03c8848c6f1e4120b940f569f10b2ed26737aec87482979ac60",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "d8fc1110005b602b4b4be38b107f722a852ddab5bbec22eb0f2eabb997a74d1d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "612f0d51e5335e9a4eebfaf6867c26cbdbed90f40ebad3df627375f4d5bb1d34",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "6b9019054385dd6c667d3514bd14f4bd2967b44dd9b3dc784392f8a791c9016d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "9d8e3f2a7a2e0ac003484ccb4497e04a222b3663647d8229001988d3d1d116b0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/rationale-catalogo.md": {
+      "state": "untranslated",
+      "source_sha256": "f23a88ef83a540f969952c261fa75fd6fe23575c226f2e8263ca798ed6529dfa",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/02-requisitos-seguranca/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "24deb44c81c121927f04e84b18518416a87a2a44ace75d8caf7d991dae5fa52d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "6ef783e0e1033b2208aa62f8e76ba66b09ef736b09e76986b844e9ffe2bbf1e1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "30cbb052c4cda10e23a65ece90ba5335a58fe1ee67a89129f028563004b4ab09",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/01-metodologias-e-ferramentas.md": {
+      "state": "untranslated",
+      "source_sha256": "c629ca1496cf2d2c14ae8412f1ceb882dfdc3ae216920ee1b9380f6ded6d2c9d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/02-riscos-processo-threat-modeling.md": {
+      "state": "untranslated",
+      "source_sha256": "907f6b987a2ca5937b0555cab65e9eb8a890104ae60f52feaa66b73c8ceea50c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/03-validacao-evidencia-threat-modeling.md": {
+      "state": "untranslated",
+      "source_sha256": "8e403f8fb577ff5944e0a6b81752d592983cd2b76d195becc5f68a8821ddf346",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/06-threat-modeling-ci.md": {
+      "state": "untranslated",
+      "source_sha256": "23290313f8346c9821dc9fd7ea7b6884b08529d7d86d7b93b8b8c738b37b386e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/07-mapeamento-threats-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "b303e0a063358a6b3d8b1bbcf4c1fa3d49484b8781c023b816f02c7270b873ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/09-validacao-arquitetura.md": {
+      "state": "untranslated",
+      "source_sha256": "0ab76ab053d84e14c1894ba3251006ebc98ea45dc714d6a30a6f2357b7ee6c33",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/10-integracao-iriusrisk.md": {
+      "state": "untranslated",
+      "source_sha256": "8c45366484bd0afb7d8a694912e589d32d828bb01e1071c3b95b68a2a0a6f695",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/11-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "b6a26ed61108a375bbff0aac6710ef48dc2f4975feead27dfc4dd2c110200c9c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/12-abuse-misuse-cases.md": {
+      "state": "untranslated",
+      "source_sha256": "74323ca788f799f9a2ca4ec003d0564a3416e2d9d3bfa8587b8e93ca5dc816fb",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md": {
+      "state": "untranslated",
+      "source_sha256": "3069e53a5f3593aee554663caf3b1d0cd1e30e50f433e7c77db2f2a76b4728d4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "7cdf65e4736028fce0aee33ec2535e36aebcfee2fa1b6dfe78e88752bc9da242",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "97659902efaa72b91f2beef1b2ee1cc635b8064cf679d33a287d73b8ce8091ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "95c68288cb4b6d23b3eae56ff9909b0e8bd5197765ea969e660eb13354347b0e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "96345910ee10e016f717348995146109c166a0897f8954f685912d4fe0315897",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/exemplo-privacidade.md": {
+      "state": "untranslated",
+      "source_sha256": "a99ef355b9899d32d82b529ca1c2540ab2f1cadd928957a4bc516d8bd0f70d61",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/exemplos-aplicacao-stride.md": {
+      "state": "untranslated",
+      "source_sha256": "80ea204969a8e78778f3f9d87bbf7cf33666442627c4893044440da91ea13d35",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "38dd901e357ce0688e16a9c23eaf97551fb08dd2780d4ab9f0b58b281ba67462",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "9b0c5b6021a08d1ba9343d8fd1aa7709f76afd652df9cee24899bca3da5c1319",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/03-threat-modeling/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "ef945e1cb513bcd1e54b29ad6d3ed4130c2c1953b4edc960138d52d4b53ad8a5",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "0b7f0eca6573e5bb9dc5d7fb05e45daa43e4b651eb0ac754300a53b2ef37e046",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "42be3a93cc54490da0f6d3f6a191cbe51463012e1ced0d2b1df5c5e4ad37d58a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/02-casos-praticos.md": {
+      "state": "untranslated",
+      "source_sha256": "78ecd548e3421a30b8af69441be6130b5e52170fce5e202a2e651b754ccfc349",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/03-excecoes.md": {
+      "state": "untranslated",
+      "source_sha256": "b265a8aaf12c9bc898d61ecc253c97e414a8e296ec57ab346e25985287049b01",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/04-diagramas-referencia.md": {
+      "state": "untranslated",
+      "source_sha256": "a2567e6f3554ae18d33ad56ad64b2c9914909bbb45e24cfd5c7820e36be27458",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/05-validacao.md": {
+      "state": "untranslated",
+      "source_sha256": "12983c1bd9c86c9421c10b8c175536ec6c62d0405401ab70c156498ba8995846",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/06-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "45f9fe6a795510b47eb0f008d28c901dfde93e61251e652a55bdf1986dc531a3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/07-termos-e-glossario-arquitetura.md": {
+      "state": "untranslated",
+      "source_sha256": "fc0a8a3ab4ac45402967059ba009fab76463e43aacc3785e359db06501a9f1c1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/08-riscos-processo-arquitetura.md": {
+      "state": "untranslated",
+      "source_sha256": "05eebc0bcadca181aa2ef1ac07f19967f43b127878e6330d320044ea4d63d95d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/09-decisao-evidencia-arquitetural.md": {
+      "state": "untranslated",
+      "source_sha256": "468ed470f945d957601f79bd72120333fd850f24278fea46559def32b319aeb2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/addon/10-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "7cb91a7d98301fc8893411ab39d0f4987c71b4cc0b63aadd05de247d4c0ae699",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "10eaac5b4f1f019e517801abf38ec247c3ac27b3fcb0137e9ec70f6dd87fc100",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "b91dcfaead26c7c5a5d2d9ebab84760c1933c8957721acdf5d518fe50f4d816c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "ee3671e27b1b75ca68f8e04eac7057568fa51475be6b4b80376579984fb86aae",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "a80c8835bdd493395688869cebaebd298e8d69ed59ce1e06c3778670d22bfefb",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "60c35ee9c85e0409e63570df58777a0336b9991a2b97e08b931e2a1d31e0d9dc",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "b853b35d396bd0a3e7c8bd5206751058f5e06f3270cd751b3fad030cbfd5a976",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/04-arquitetura-segura/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "d2e22d99b7609a07c71977e1219046e113f59c67e2a94550c07cd8f9345cca09",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "41b231a6c519bb073f9f963e6666d5f5562a92788fdc7ad4db8683aa46254dda",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "b4eb9d7c2917c65552649bf9dfd27acde40524a57e553f2ea6118b0b3d40d0e0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/01-inventario-sbom.md": {
+      "state": "untranslated",
+      "source_sha256": "db610384a166a5fec96a4027d273e059a6bd02099cc014d21cf5cfdd39a28fad",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/02-analise-sca.md": {
+      "state": "untranslated",
+      "source_sha256": "e108d1423ec3e622cb21c660c14c6ceb04f50e1444a0e17bd5ea0c9286ca23d1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/03-governanca-libs-terceiros.md": {
+      "state": "untranslated",
+      "source_sha256": "39a76513b5aa54bbf231fe2fcb70dde958b8db2e3b5e9349d0eb9d2b5c07b475",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/04-integracao-ci-cd.md": {
+      "state": "untranslated",
+      "source_sha256": "14e9db68719933abe08497e682131ecb98d29f40f18103f3755492391e7c4a7d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/05-politica-atualizacoes.md": {
+      "state": "untranslated",
+      "source_sha256": "d373713a95f294efcca1032628bab46dd9aace0e2232cc5f8a2da130c64d7a02",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/06-risco-supply-chain.md": {
+      "state": "untranslated",
+      "source_sha256": "5eb095f40674d71793af5b4b24c0f37a703fe2b1f65b00f1a3b3f611455172ce",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/07-controle-registos-origem.md": {
+      "state": "untranslated",
+      "source_sha256": "243b86a79b87360a35a097f49f826ae43af4453a2e9e484303fc6f9efe446d35",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/08-rastreabilidade-vulnerabilidades.md": {
+      "state": "untranslated",
+      "source_sha256": "a782d3b97af51b3bcfd9970f09e9281ff6730bd124ab6b4bc72e491ec8eff0da",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/09-excecoes-e-aceitacao-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "f52319109f8d34b7c23a47cfe4c9ad9ff2a81c7fc4634e634fb20a02cb771113",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/addon/10-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "8261e9f610e88e6b394eec45b2e0b2b0986ea9d1b9751dc6655216a2efcdcea2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "2b80b7659bf5036e1a571157ed0d873a585a70b4131b8464dbdc2db04d4308fa",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "44680aef8687cc0cba40fec71abf071dec99f250aabce4f4a29a8dc02bd54106",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "03d1ca6db1a776009183ff180933267caa0124dc103c66b3d0eb33f498376f22",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "e9dcaa4b871449be7e6cb475c696555ac311305eea18d9e73c2e2e0092c68075",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "b10a252ee447618fc71701bee5da06ab59bf78ccd3dd0253a00c7daa1d6a48d0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "169261b44d68fa35b72abc18dce4fdec6a03fd3ea418e3768f0d679695313aa7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/05-dependencias-sbom-sca/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "7359bff3a69a8610c28706a4bd7e433058ee8f3ebccaccf48e28a76dcf5abf27",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "5eb8af3380f1c87862d7ba57585331fb209e3064583bf7c38fa58fc84a3a6f30",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "d3c1c9b6eb6c6948faee06508be58ef68b999beb0835c1fff04d9135fade689b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/01-boas-praticas-codigo.md": {
+      "state": "untranslated",
+      "source_sha256": "99dffbe27895f7b1745303f0ad4b9064639d0f2e98c0373c7c742817853e9baf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/02-linters-validacoes.md": {
+      "state": "untranslated",
+      "source_sha256": "93b01226235b5420913891d9bce0608312c0d9b2b85061313d1f14beec59c2cf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/03-seguranca-dependencias.md": {
+      "state": "untranslated",
+      "source_sha256": "4e8a528ba582c28a8454c5ff2a2e2d2065c3dc94211e2df12c5dd344278d134a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/04-proveniencia-codigo.md": {
+      "state": "untranslated",
+      "source_sha256": "b41d20c87783f7ce61b0cf5693d18ff829bf208752d54dcc21407c71f4fe2b1a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/05-excecoes-e-justificacoes.md": {
+      "state": "untranslated",
+      "source_sha256": "4678b79dfb502b374de59b7618f46a31b3f72be9a505766c07ece9d595ab5cb9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/06-validacao-codigo.md": {
+      "state": "untranslated",
+      "source_sha256": "5b176db38f90e1384e6ca7dd3f353bdd07fa2d28ab40bb37cb5b0b47bd5c33b2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/07-guidelines-equipa.md": {
+      "state": "untranslated",
+      "source_sha256": "055952efd3803b83d3d6c8a0c53633294c7518db4860693c0074ee5018db1595",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/08-validacoes-codigo.md": {
+      "state": "untranslated",
+      "source_sha256": "baf2ee8f25c171d9a1a151d0ad4b1d8b546b7c843713737f443a96fd4ecd6448",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/09-anotacoes-evidencia.md": {
+      "state": "untranslated",
+      "source_sha256": "a9cf68dd41820889a4207b10d432c418faf44feae577f1e7136def26288221f0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/10-genia-e-seguranca.md": {
+      "state": "untranslated",
+      "source_sha256": "6a5e41ab7a69bf033c10c84ad72f2043f008647b6dfa052f146373f274b2bea9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/addon/11-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "4d72ca4365779cd3181be1332a7aed907be624e8b941435ab4fd2f1528ce7b66",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "d8106889d9cb771c47484770a4b1d05b0a5463344ee29bcb75e361ea8e8ec4ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "55b78a403a9687db7fbdeb03e4dd09c517afd519db341cdb369ddbfb21fff6ac",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "17d77abbe25cafe3b45ef71b5847e4461a4631dea0b75c9d38d42bdc73e2c0b7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "147a70e1841d1b9e2244540da69dd29555c5020b6ea83e5278269b61f857eb34",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "b3a65b96e4c667757da2873894c2ff51ee058cef889f5b0149b7d633f4a08b35",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "587423f1738d907c60e55cfbb26af719465f127ea5ae068babc07686754b86a5",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/06-desenvolvimento-seguro/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "b98e91eadc17c955bf53be70f8faa4cd67e34ab4c0cff7b7e23b9dcc1b8f4ea7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "6ab3fc800ec8420c2bcfb217db30f12f5bbc24be0faa8371bae4306e809fba6d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "2dd3c2a1c063ceda53c6942aa475060d8bab2350faea3edd38c196918179c511",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/00-gestao-segura-codigo-fonte.md": {
+      "state": "untranslated",
+      "source_sha256": "11ac5ea90209dca478ca44bae31757459c658d573ffb98f3655b0893c7c0b086",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/01-design-seguro-pipelines.md": {
+      "state": "untranslated",
+      "source_sha256": "9d8ca0e8b3af67b25689d597199209d184079cfc75212aec925872a07f33f3a8",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/02-seguranca-codigo-pipeline.md": {
+      "state": "untranslated",
+      "source_sha256": "0430504a9aa0c2ca38b6cd11d67ccce01075f8acbce9ac23114d5b38d8b32e2b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/03-gestao-segredos-pipeline.md": {
+      "state": "untranslated",
+      "source_sha256": "5be71e0d7e566b928eec70b85c5f309ae35b80e271946e814f3fc3db09e3ca47",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/04-isolamento-runners.md": {
+      "state": "untranslated",
+      "source_sha256": "eeb5448b5bfb70da41593698cfc8ff69f634ad56d02dabe6e539e6d4f0910bdf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/05-integridade-proveniencia.md": {
+      "state": "untranslated",
+      "source_sha256": "0d82ad9f362a9b720e8c050c385d382cfe712b74c3824c64dde758c1994b3e16",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/06-politicas-gates-pipeline.md": {
+      "state": "untranslated",
+      "source_sha256": "9ffe68b7e6aaeb0f1ebdd43905e61f7b908670ffb2205a2979bcfd1bebd7056b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/07-validacoes-seguranca-integradas.md": {
+      "state": "untranslated",
+      "source_sha256": "18978737e27e9118d5c04cc67970fbe6ead27ca55d65eeb38f0ad04b9c575537",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/08-rastreabilidade-assinaturas.md": {
+      "state": "untranslated",
+      "source_sha256": "e6a19d2a2b0c20aae653fdc7c86c133b06d3d6f14a37db5a9ec93afe149e827c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/09-controle-excecoes-visibilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "d735ba92e43f44bc534f7f923a6c5aec33b8d96f9989642cf63e0917f4e80fd5",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/10-riscos-processo-cicd.md": {
+      "state": "untranslated",
+      "source_sha256": "d8d11d7a073fd09eb817e1926f0da2be5be5fa29d802dfc8e20ee85eab0fbb7a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/11-case-study-inception-apply-sbd-to-cicd.md": {
+      "state": "untranslated",
+      "source_sha256": "227499fd9c9b8b7fe1c2392f8315e95acb9491fc900f7681de445c2b034f0696",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/12-case-study-anexo-tecnico.md": {
+      "state": "untranslated",
+      "source_sha256": "92c0a6e4dd4860653d295a89a7a8c60f5bcb58295fe466f92f9a0b12c4356e1b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/addon/13-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "0ab65dc46ddcd807fd7922da2b256645b402b650542f524cc1676f5147bea96e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "b5615d59fec9c8371d819c6542f0f66b81b435057e671cf7f7e4a7e815ce41de",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "f4fa6afe057a7a3dbc4243afb0f77971b5c111c0cf32e7a50bb945d59133a41c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "5291592cdd7b7227b93c231109362e2396051f6b168679e3510f57fa64b0e1fb",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "20047a1346232a7258b6c18ac072addd40ec609a40370ccc7bfc584359ce5f1c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "7785b88e9dea9934c2b3058dfd78c2cd171a4b52ca16a05e84841b34e12cc635",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "35d39e3086b7f6daebbbf984e9c3268ff2ad6c08ae3d5e965fa4f04836e2c4cc",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/07-cicd-seguro/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "90eea8787c9e2b3ff668831db089bf1517384e025ed31b10ec833031292e7ae9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/README.md": {
+      "state": "untranslated",
+      "source_sha256": "b84b338ad47f3b38bdc085a555f2059b05ca2fdbaa29c40abf098319b06eeaab",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "0ec83ec1148b391fe1be855803f79a8688c6f61620c7a4b74d6c7956e14ccc19",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/01-planeamento-e-controle.md": {
+      "state": "untranslated",
+      "source_sha256": "c50cab212f4f4c4b026f5aa684b61a6d0e55374bc62c4436b7ee6e18a8ccd61a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/02-validacoes-e-checks.md": {
+      "state": "untranslated",
+      "source_sha256": "a201b6daa72e8c25363787627a88c13a7d2d17cd6b40a0445d05961edc7acbdf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md": {
+      "state": "untranslated",
+      "source_sha256": "ac8fac87e3c53429546e1877c0ec66ee0445f7c2b80342f17b18d748ab60b0ed",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "b919dbcecb61ec5f045e6459263f9319b84832939d85e3bea3ee8b05475ec044",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/05-exemplos-praticas-boas.md": {
+      "state": "untranslated",
+      "source_sha256": "d4dbf91ab53745915c1a6e6859f96d087c4164e687a953e5aeb9f64b20c4edf3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/06-controle-enforcement.md": {
+      "state": "untranslated",
+      "source_sha256": "eb9eae802f030d21258a3c0be7726f6b9e6b0bbdbbc253fdb3604d535315b3fe",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/07-rastreabilidade-e-tags.md": {
+      "state": "untranslated",
+      "source_sha256": "801ece0be3e96d359ce863713332deeec32dfa4b27e0610a9f5d2d6c04a91fc2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/08-matriz-requisitos-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "ad4de8005710074e0d2d3d1ece9d027feee3d1862d8ec646779a04ca6e642182",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/09-gestao-excecoes.md": {
+      "state": "untranslated",
+      "source_sha256": "b914b765a36d1daeb9332b19f4a5a1c573f6db5f1b3565e66d54ddde23cd6521",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/10-case-study-inception-apply-sbd-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "594ac43fc69dc14af12316789e1496e74f294c4cc34a57a61debd71e68ce1f2b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/11-uso-ferramentas-automatizadas-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "b40812fcb2fbdb7a89ad331c41e34f4056cc636c20cbeafc34cff025c2c915f0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/addon/12-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "7b63892c0bfc7ff4931fe1b34b8902cd295aafd49be9a5160957f6dc4e1ebcbf",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "77281c182049a41734ee9a18369b862d781774fe77596b8e3d0f292bdf1569a1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "a489b1a6dfea2161067f6dd984afe7bdc812ff1c319c6ace3a50ebb9c394ad43",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "1f3737ef356d23c43a7b31405cb9619be4c8674a1c8abd40cdec7326038101d9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "82c53708ff1b35637a6ec86f0c17f34d6908136e3d3ab3518ac113249fe5036c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "25a461b264cd5e9f64287d3e1c89e7ddf3cd4f8e161054b7b6769c283cb24fb6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "5fe4dfe0ec2e62aab67f3265d791a57c488979598f854e26468dbf2f5e5a7d97",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/pre-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "c265658452e025a785b048932995e52c8aff3b81982327639beac7d5b3337f77",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/08-iac-infraestrutura/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "da2369feff79ae74a236def7a243f2fbb3db372c42e66313272b5caf7be89b51",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "111ca7f542f71b47e7cc16d2a0a80c00b57bb5df96944bafbfc72c4ab839fc8c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "b936d2eabf0631e6b371f5d8c9c9f69ac73e8078d1c0ab5ef5a16e6940578ba4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/01-imagens-base.md": {
+      "state": "untranslated",
+      "source_sha256": "1a77773e8283c1c269d2a1215c29accf689f1a3b3a4912f87096a1070945133f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/02-runners-isolamento.md": {
+      "state": "untranslated",
+      "source_sha256": "fc4dfc2a3e654997498f669a01e7367f2f7eba75e710aed6906a911eb664168f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/03-assinatura-cadeia-trust.md": {
+      "state": "untranslated",
+      "source_sha256": "06e989d8ee04a01c4d5dfc2869b1bae51598288c5e84350c8caa14b399612f2c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/04-hardening-containers.md": {
+      "state": "untranslated",
+      "source_sha256": "be59cff1132a4645cb72b4fd359d8b8c55cec1a41fafba56debdbc9b645a5f90",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/05-policies-runtime-opa.md": {
+      "state": "untranslated",
+      "source_sha256": "a3257443291c1cb44525303212f43c0dd6726a9d67d82281cc8ddfd58f32d99a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/06-inventario-sbom.md": {
+      "state": "untranslated",
+      "source_sha256": "4870f63f7f41c82a90b5c52514956a28fbdc1f349ff1ffdd2baa4f03527db33e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/07-vulnerabilidades-imagens.md": {
+      "state": "untranslated",
+      "source_sha256": "ba4183fdae21bb3e4b27eec87cc706d05ac7dbd1c3db59c62ae64dc3e85865e9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/08-kubernetes-execucao.md": {
+      "state": "untranslated",
+      "source_sha256": "6832738c0763f26acca6bf2609e9a07a82b784eb4bf63dc1fd3ca2afe8504e3a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/09-risco-processo-imagens.md": {
+      "state": "untranslated",
+      "source_sha256": "c52cba5b6fe7997d0e5b121ba6adf0aa18248b0a409b543dd0b4d93105583738",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/10-excecoes-containers.md": {
+      "state": "untranslated",
+      "source_sha256": "221cdfff8ef681190e282ad0839d413754f4247d0cf83df0c7332ad5646e49ab",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/11-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "0bc64a63a9928a037e2d6e0004e722856d83aea39dd2171b9c3899a71893dd58",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/addon/12-self-hosted-inference.md": {
+      "state": "untranslated",
+      "source_sha256": "dc2e3723366b3cf1588c80d73b680b4558dc4280e8a3c8dcd7fac56f4ec55da7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "db2b0ca4318a37618286caa71303c0982c346fca961f690b591292e4327340fa",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "e7dc85e1debd4cfe17b48d212ef86b0482bc6f1e4d803bd00ac56269fd5cfedd",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "31aecab7e7f6c6bf5915d584584618ec440c051160b4d79ec0067a59eb212991",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "10e9a853de0ae4418ff021967f5145f734d011701b8e5057bf87fe4abe6d91db",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/exemplo-pipeline-container.md": {
+      "state": "untranslated",
+      "source_sha256": "b8e10db7b8800a7450c448a3bf0216b60660c7bae837b9e178dbeb04a37ff5d1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "929fdd47c1fa287a7088dcbf057077e29193c31b14fc5fb94e28d997ecd607e4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/09-containers-imagens/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "752f736e72857169d861c9002465d475fa4a2bdf46fe8e8e3ca21f1146cf98a6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "add657f9ab1cbc6b763d69e019b7ba1ca1d525c6ef6d12a86407f327bb1730fd",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "19764cd8d93371cbf84fbefb37c7441d9114b98143167d51eadf916d6246e825",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/00-estrategia-testes.md": {
+      "state": "untranslated",
+      "source_sha256": "64ba741bef6f565e8891fdf57924dd6c2e3bf6640c8fdae04c45c07a66faf38a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/01-sast.md": {
+      "state": "untranslated",
+      "source_sha256": "e3fe482ce96a431292d29dbf454e2746326c94ed28c8b0169b8923086d6c5d07",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/02-dast.md": {
+      "state": "untranslated",
+      "source_sha256": "dec9b8d2cad223b9262f1eb14e6cf382d0cc7546d54ef29a7b312e07d392967a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/03-iast.md": {
+      "state": "untranslated",
+      "source_sha256": "4ce34f5dae573502b77fc5623ee5536999795049e3cb5dbebdaa13f619968f5d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/04-fuzzing.md": {
+      "state": "untranslated",
+      "source_sha256": "1c1cebaf934ef7d5d9299d00a83dc9010da90e55773bd9247bc895476950cb5e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/05-validacao-regressao.md": {
+      "state": "untranslated",
+      "source_sha256": "3b0a53f1625e31e573aaa6a4f5ab8d8dd270efde5bb2229274ee06e50d61e94e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/06-cobertura-e-priorizacao.md": {
+      "state": "untranslated",
+      "source_sha256": "fb83e5aa55a731ff795e6ec6f39801e375a2c2e18b7cba3b82bed9e9b517b046",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/07-integracao-pipeline.md": {
+      "state": "untranslated",
+      "source_sha256": "cf740c2a05ee8d3c90ef7da0565bc8147b71a3c8034fc338a65e296c3fcd69d9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/08-gestao-findings.md": {
+      "state": "untranslated",
+      "source_sha256": "59753f47491e314fcd68d46e8bbb9b35e1717e6d74876e40abcee72a78da7530",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/09-feedback-equipa.md": {
+      "state": "untranslated",
+      "source_sha256": "49ded483d8320632efbf5a18a016aecb0e474b814a08f76396446f986cf67a3a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/10-evidencia-reprodutibilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "442229aa3f42f9823cfeac647868e1bc332b909e6e80661a1dbd3c4062865fec",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/11-pen-testing.md": {
+      "state": "untranslated",
+      "source_sha256": "1e9134d2558337e50e8a5981fb2149cd171c4fa7e05a109409f13898b8c49807",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/12-estudo-caso-aplicacao-l3.md": {
+      "state": "untranslated",
+      "source_sha256": "31577ba22b06552ff2ac54a1e5a3257c6b81a6c3c3fc9c3472ea2021bb3fb486",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/13-ia-nos-testes.md": {
+      "state": "untranslated",
+      "source_sha256": "7572762a122bdf5784506443233f24a23fa96aa5e766e51ab31ac4d57aa627c6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/14-tlpt-readiness.md": {
+      "state": "untranslated",
+      "source_sha256": "11136c753dd538c1b60ce7d5db533f24c354bffb7b12ede1acf82bdc9637e203",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/15-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "f560990afc6d2cf99c623ffb39cd64e0a51e4f3c8069880d7ab2827e07ceb64d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/16-ptes-fases-pentest.md": {
+      "state": "untranslated",
+      "source_sha256": "89b028b8c4cce053adea547f34e8163e3fbf77ec9c02e6f6624d0ecf9ff196ec",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/addon/17-matriz-verificacao-transversal.md": {
+      "state": "untranslated",
+      "source_sha256": "daf88cf10912ab4e986bb0aad8a51d038ffaea5606d520e024f93982d3e3019f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "55301f49a292d5c5ebf9d4fc0681fb3112c143da4156650c7447d48d446b8ec0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "7bd23d3c29366184312da728f675a350d31b4053d38b3e4bf526712b123091b6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "094fccf2042f1c8b094b8cf91fd2aeaec454bb27267167161103104a4dc85c92",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "75a06b86c0c2d881295d60fc3c4f977bee16439756e8fac2596cd0822f39424d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "b3b5fa21c2bfdea9564d4447dd10395bae5dfb19d5fdf70f85e415eb6812ab25",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "f7ab554ce619625f27dfa56a236f8e88eba7317b733d534a2b37d0eefb42d376",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/10-testes-seguranca/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "8f50ee87abd9c0a3394535ffbe99139609f3cb318da110b376cb6a94e38c007b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/README.md": {
+      "state": "untranslated",
+      "source_sha256": "de62ccc38461d35b27256350f4b191e242fbcf11a913ac980d6d42bf9fba18c6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "787d13ff704b8396639ef0b5ebb4f1aafa38935eba1f4896b74e4b494a9f4aa6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "82e2fa66ae935a8aef2092aa45a1999b2726c15eaae3c34b7e814133146abd0c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/01-modelo-controle-execucao.md": {
+      "state": "untranslated",
+      "source_sha256": "be72d68667b8d7a03b95c61e613c7a05df9eb87bd3a0526a25c9d024012d5a83",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/02-praticas-release-management.md": {
+      "state": "untranslated",
+      "source_sha256": "3777ea5fce07c16685c46137f15cea00393309335a553d6e2eae957981c8d93d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/03-feature-flags-e-toggle.md": {
+      "state": "untranslated",
+      "source_sha256": "63ffee5e8b7026bc41f29cb02b9b0e0a34e7258a6ae220bf66c561d036bd860a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/04-validacoes-pre-deploy.md": {
+      "state": "untranslated",
+      "source_sha256": "0afa0cf75d8ec909b13523c8448cb7e623f583a41b9a3c3ca5d2948d93411f02",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/05-monitorizacao-e-reacao.md": {
+      "state": "untranslated",
+      "source_sha256": "dcaed290ae34caccef54ecb261b2b3a80b80ff4e6b29e0a57525cf88c2ac6682",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/06-controle-versao-e-rollback.md": {
+      "state": "untranslated",
+      "source_sha256": "4619953a4794df73c122fa52ac515e8bb20bca06c821abc23b14db7a4fecf31b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/07-deploy-progressivo-e-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "ac4389af4de6d75c781f6e9f920d646870a5a76ed63a810c0bf05d764fa1188f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/08-segregacao-e-validacao-operacional.md": {
+      "state": "untranslated",
+      "source_sha256": "d5697be15ffb1448db2053b1a24589a6f92a05522d1338b5c7f7d0fef8aabf9d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/09-excecoes-deploy.md": {
+      "state": "untranslated",
+      "source_sha256": "b0ac4597a67817892ccb075920112086559fab279d06a80d56a194f3746b10b1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/addon/10-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "e9d8ada1e57efc27a62e19c1a6b97f28ce06c24de81afa5f1c49381efbc88c0d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "1c4c751329b39d028e784b998a57d1043fc7eed44c491271f4ba3829d740a777",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "94cd8399b41c32c58775f3f557ff865ee84601bcdad2d6ae5d86593643cdfba6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "21772fb43684a768b463098a4ebf28abb71a764e3543e798b5826d857dab63ad",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "24d587cc3ccbaf2ae8b6e22843df94d04ca8ee4ee8e7ac64d6314f307c3174dd",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "73d4894cd2af99ffc8714d543c3f8e03e477dd47a1be14a4bb66bd6177b11d6b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "e7048a50bc5445719b0111d018bd31e4b49e8559dce044f8f28aba9b57bea24c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/11-deploy-seguro/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "ac51e88eb5fe0afca447d5ab0a8e33d0152c9e5301273057bcd90c2d3c10eb9b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/README.md": {
+      "state": "untranslated",
+      "source_sha256": "0a25bae807a0e9f9ccf0fe5dd86919ee64a5fa00212a54a707b836a2193c885e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "ee5e4163bdc3c8125f80372cd7d54f148e1934f2fe5d5106b7ed82996e5bfe7e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "f46990a86a497b5b244fa9198943a74a2fb94192a667dce189197f6352122ed4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/01-dominios-monitorizacao.md": {
+      "state": "untranslated",
+      "source_sha256": "2032a83e577b75c7f074c29dd6d2bf8b2b7ca70fd4417f1a1199416f68344f7a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/02-controles-logging-centralizado.md": {
+      "state": "untranslated",
+      "source_sha256": "a3cb8f55a300400bcfb549fd6420c0b72882d2cd878fb4ae376d26a8116d6001",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/03-alertas-eventos-criticos.md": {
+      "state": "untranslated",
+      "source_sha256": "42a64e714ea877cc46029cc8dd3211ad2224da2b0cf6fe885a3f2962d0a8c4b3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/04-integracao-siem.md": {
+      "state": "untranslated",
+      "source_sha256": "72bea402deee9eace91bc7008b953fb749ee6a183d10f40f9dff5a7fe7411733",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/05-monitorizacao-resposta.md": {
+      "state": "untranslated",
+      "source_sha256": "df274c2653f3f58568ae7a7961f397dedab9338aa8de49c4019bac5d70c69a81",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/06-correlacao-anomalias.md": {
+      "state": "untranslated",
+      "source_sha256": "0a1e8c150d87248ec9a6e81b32915ac4517ea2d0d6a929ed56c20c4b282ff572",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/07-metricas-indicadores.md": {
+      "state": "untranslated",
+      "source_sha256": "64d4d62713fe08e66dbac26736bc4cc785d0044d09753a0c0a3f90a4bec4ff01",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/08-matriz-controles-por-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "c192af25e080a7a0b92e1d13ff9f874727ab26c80d5ade197a16582b2902422c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/09-exemplos-eventos.md": {
+      "state": "untranslated",
+      "source_sha256": "debb4e7f49406548b5eba63bcc3826f254f19a7a3ae84df59c6d19c3242a61f3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/10-excecoes-operacoes.md": {
+      "state": "untranslated",
+      "source_sha256": "313f10ec43d85300b5fda1bdbb6c6f912d563499eadb7d0a2fec189379ac744d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/11-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "9a913e68aa926ff058c3da70c13984905afe6badb6a27af04c11302f63056549",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/12-epss-kev-priorizacao.md": {
+      "state": "untranslated",
+      "source_sha256": "2097b45db0a2cf668022b9617539e8c2f8472615604e83b1220698bfec483c6c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/addon/13-attack-detection-engineering.md": {
+      "state": "untranslated",
+      "source_sha256": "9f55b2eb5991f6b300be6e4ae741c30f778d44a1190cfca9ae31f937cc7ab6f0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "78757d00f4003226179899ac96059471dd61cc5ca9cc6c4478d6052acce25552",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "899eb185defc8efada7412dabd9447ce581c04c1b05e4d31434ec6d0793d13be",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "97179d477070768c475946bc0e662ea61fdb910b2e23356f45a48f93ce781841",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "e1e9d22dd05d1c01db2b830e3d5a8e882b5f6ccc34a6d65e55d9538d4e493f9f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/casos-praticos-monitorizacao.md": {
+      "state": "untranslated",
+      "source_sha256": "9badbcadd5725f54fa6029f5da8c582a726ca5d9c190150af94b3c0e23a28812",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "e9388647a65722f54abb95d272d9f7977c3cca199a9bef989ee29b34de45ab91",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "8d874069bee1880dc2f4b6dcab3c7c2243e963cc6b8a81c2987280b327c0eda0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/12-monitorizacao-operacoes/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "7dc0836281685fcf6012a37422f53f471ac7590a3845918f802e53e6009b8c88",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "bc52c1d1eb82160a8773ff47f0138fbfa78a6920b429df4ef4c033d55af9a100",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "3a7dd042d97a17b4730e33eac5069d8493a462c2d6eb204efe2a0b744a2647de",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/01-catalogo-formativo.md": {
+      "state": "untranslated",
+      "source_sha256": "8c046433733cd34a3b88ac2d50ce48571e3df0b421bfa9673c03cae597f1c61c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/02-trilho-formativo.md": {
+      "state": "untranslated",
+      "source_sha256": "781745a5d9501139c497d2a70aa7a92ca601d90134641ef0ddc75d109cfe4b0d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/03-programa-champions.md": {
+      "state": "untranslated",
+      "source_sha256": "c93d509c92aa7fa22411149e46345f0e691a773a0d01d6425db4297ab70a422d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/04-tecnicas-formativas.md": {
+      "state": "untranslated",
+      "source_sha256": "d085effc6c00c93adaa235d6f54fc1b80e55c860bd659ef8606202f07f024d88",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/05-integracao-transversal.md": {
+      "state": "untranslated",
+      "source_sha256": "91ac026e38729cb48450ee085b83eeb18ca23e16f3d22d3c77a34e6ddd66b6dc",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/06-manual-formação-por-capitulo.md": {
+      "state": "untranslated",
+      "source_sha256": "7a720f0674557616a18f975d672d804c609bd0fb74523a650870503340c27f54",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/07-exemplo1-manual-formacao-dev-pr-seguro.md": {
+      "state": "untranslated",
+      "source_sha256": "2266eae3031c2e476f1002da77609dbade0544aa2dac63bc79b9124ec2f05ef6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/08-exemplo2-formacao-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "61818e1c936ad287787db220c707dee71a8e93cc15997c2246fd7524b791e343",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/10-checklist-onboarding.md": {
+      "state": "untranslated",
+      "source_sha256": "a835bca6bfa701229c95de61bb4499063e796a654e107cb85da5c858b7a3809a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/11-kpis-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "73dc0dfce687ab8fb8f92b93145bed4535486184ece547d13aacdfb88b217af6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/11-template-quiz-onboarding.md": {
+      "state": "untranslated",
+      "source_sha256": "fbd5b7ccc037196dc56beb6cd94e60ba0577a07cc7e69dc3883615d9d20038ca",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/12-formacao-uso-seguro-ia-tooling.md": {
+      "state": "untranslated",
+      "source_sha256": "bb06a51f8c78ce7feb736f8f7fa918e2946d748e3260b3e2ff3e916c95b6337f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/13-guia-preparacao-sandbox.md": {
+      "state": "untranslated",
+      "source_sha256": "d54d90efc6ae562996596229c6f4597e8220be3ede3b774c1e33d14005ed866b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/20-modelo-inclusao-terceiros.md": {
+      "state": "untranslated",
+      "source_sha256": "68b157a085c71a502c2fc7f00b08f3015e2238551de80f357ba6258819b69b92",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/21-plano-formacao-terceiros.md": {
+      "state": "untranslated",
+      "source_sha256": "a14812a2cbfa197a125549c6ade8482bc28dc79d254edff0f442319b26a1d97b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/22-template-quiz-terceiros.md": {
+      "state": "untranslated",
+      "source_sha256": "1492221b05f3809a1403dedad386a076cff540e978be4fcb1e0a66290d17dbb0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/addon/90-indicadores-metricas.md": {
+      "state": "untranslated",
+      "source_sha256": "7ea731baea13ea5d262cf8f3926d4592294aeeede9e3ee618cf72b33065ffe66",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "74466a70ce0493ad1b752568b6687c4fe43a425771a78b98ab1472e09fe51ba2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "ac110d13d1820fed8d8cd3fa14d05ac31477d338a2d94bf8c2e74f3da60eb2e7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "3c8b4ada42da8aef9016b0e4ec3b7e1230b8db2b18c4e1fa828c5a96d235364e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "43b876a1cf1f3f97e4d264953c578476dd8a1a5563858402a1045d2cd4869ce9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "4ee6aa60af93269f3c6863f557c0608decf7fa07eaa7a96bb70bf63919d3310a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "ee5093986bae2d5616f84c5c203a59340c4bfc28fedde3fdfd6383e3ca65f734",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/13-formacao-onboarding/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "ae93f1af9beaeeb4d34eab5086b8b18949c5eb7afbbf20b2af763f17bc6c2a8e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/achievable-maturity.md": {
+      "state": "untranslated",
+      "source_sha256": "a6500f631a6f522e0360fd70eaa4060ea07404f8e68f5ef642b230719c8bd86b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md": {
+      "state": "untranslated",
+      "source_sha256": "7ea54d1bb61e82beb81033e6480a17f392511b21534645d39e03ec4c28983097",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/01-modelo-governancao.md": {
+      "state": "untranslated",
+      "source_sha256": "018d12973d972d0a76a674219df3d7a129daaed76fbb01edf9e4b82cec5ebbc0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/02-clausulas-contratuais.md": {
+      "state": "untranslated",
+      "source_sha256": "f3836f082e61255fe52163c5c1e3f411ff1792323be87edb88a08fd036d8578c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md": {
+      "state": "untranslated",
+      "source_sha256": "bbdf209fc2a756adb1facbe340d988f843f1b55aa2888f21499085217971e504",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/04-rastreabilidade-organizacional.md": {
+      "state": "untranslated",
+      "source_sha256": "de576f5b83de62f5e794c747d17a529df1ee0023fbd808ab897bf300679ff76e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md": {
+      "state": "untranslated",
+      "source_sha256": "c62ed4bbb68b2da00827262116a97fa12265b41febf2c2ace0894a8e3bb6b62a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md": {
+      "state": "untranslated",
+      "source_sha256": "c8b2c3ebbd78e9d1fc634a93ca044411b493c567a20b252bf5911908c81e8506",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/07-governancao-e-maturidade.md": {
+      "state": "untranslated",
+      "source_sha256": "4b2ed7c5541a94826b45d6237cd366375fa6f334f71a38e52a9d7298c9ddb303",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/08-diagramas-governanca.md": {
+      "state": "untranslated",
+      "source_sha256": "b0c6a4d58e5706b078c098631a6cf13981d622a8e09fd1a9dbc76213e5df5a47",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/10-governanca-legada.md": {
+      "state": "untranslated",
+      "source_sha256": "8ae810a77b8fdc2ef6cd56a706baac4d1495a2e7af9f3c2201bbfaed578814d4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/11-controlos-praticas-sbd.md": {
+      "state": "untranslated",
+      "source_sha256": "c780a6c1b68d35d6f15358704e9d6f132b897fbad93d826dee07094d56627eb0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/12-processo-excecoes.md": {
+      "state": "untranslated",
+      "source_sha256": "ef8932c2587799ea5842e778c4bcc893588949d884f084c45ea684a4c5a86cf0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/13-checklist-offboarding.md": {
+      "state": "untranslated",
+      "source_sha256": "b6c8dba4f15144446b4a8e139ba3a7aab3e606bd29e84b359d48ca80f671e9cb",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/13-kpis-dominio-gov.md": {
+      "state": "untranslated",
+      "source_sha256": "8e24f998e158ce1c9bd7c24f996cb021f183d2c6c126b584acc33af814c79bd4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/addon/14-exemplo_template-validacao-contractors.md": {
+      "state": "untranslated",
+      "source_sha256": "731ceff5f64b55649cb8b413e1e71b02baec1512a40ec19f4c62e8c103ff6180",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md": {
+      "state": "untranslated",
+      "source_sha256": "8304add6fc07c1271ae25ea6f6c930c76a85c496fbaa8969edb3652556ccfd38",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/canon/20-checklist-revisao.md": {
+      "state": "untranslated",
+      "source_sha256": "be280419eb4616142670d1b4dcfb11a4e633e230a0f732f640639cc48ede9a38",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "dcd169f6806c08046a7d3568eea6bd75e2edb2d69f153ae3fdcae8433b730ada",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/canon/50-ameacas-mitigadas.md": {
+      "state": "untranslated",
+      "source_sha256": "5a5aa0728f84cb144416f502879c20ee48bece1d4f8637b471cc6bf6eeda0c67",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md": {
+      "state": "untranslated",
+      "source_sha256": "65bb88156a71bcb9261f06ba0143b26dfa80dc886ed31f65a6acb21d5a3a865c",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "df8f21596458ec288c5c308a21d456e3214515b5dac4d79cce1e7a7f7d03abf1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/kpis-arquitetura-visao-geral.md": {
+      "state": "untranslated",
+      "source_sha256": "56dc6b5b942d5baf25fd42cb43382887c94ea78e3b85b0e509fc8ef79458e53e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/kpis-governanca.md": {
+      "state": "untranslated",
+      "source_sha256": "9d18ea49f73199164b94c60f50fb82c89d0e7d7e354dff6fac6326c25e985391",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/kpis-kri-executivo.md": {
+      "state": "untranslated",
+      "source_sha256": "4b177793890a354f32399b35bbcace882d4718052f1ae1aec0aa9d6bd7ca6652",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/policies-relevantes.md": {
+      "state": "untranslated",
+      "source_sha256": "a1214f4d09631387b5a3123d93d6d1a001261241de765ef2be377e37896adcf2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/14-governanca-contratacao/recomendacoes-avancadas.md": {
+      "state": "untranslated",
+      "source_sha256": "ab3b1472216f9d8c0ecddaed5fbdb5c33c8fe56d2ba5b1a55d8224f56cfac485",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/index.mdx": {
+      "state": "untranslated",
+      "source_sha256": "9ba127460c0ea6f77d6f0b2cf31b3f329a095931221afcc7441695fb1451d8f6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/intro.md": {
+      "state": "untranslated",
+      "source_sha256": "f92f89c1a8ce0dd254b673adee561e6da72e1b30e22c102ee11616067a1166d6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/01-intro.md": {
+      "state": "untranslated",
+      "source_sha256": "5423861490bf10ee1bc9917f7ca8514f8db916c09b615e2ec7cdcc8f72a2e931",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/02-quickstart.md": {
+      "state": "untranslated",
+      "source_sha256": "979745957a57a59c14e7ec4fe4c9dd80cc9c152f5f69afb3eaf0a144101f55ad",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/03-instalacao.md": {
+      "state": "untranslated",
+      "source_sha256": "441312f31ede94e086085cb216901a9f80e460ed6098be863029b9c38d143c83",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/04-skills-agentes.md": {
+      "state": "untranslated",
+      "source_sha256": "fa86c8b8943ad6e149084714ffc00d43d152347d93cc2e5360c14cf20faa4cb3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/05-tools-reference.md": {
+      "state": "untranslated",
+      "source_sha256": "a4840cc80c5849dfe5f4c330531585055376204cda202385c03b79a46ffd2a5a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/06-resources-prompts.md": {
+      "state": "untranslated",
+      "source_sha256": "b6e666393638252bcb3e8b983fc364665ffe131265266a26a434b3e7e1d5173d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/01-auditoria-pr.md": {
+      "state": "untranslated",
+      "source_sha256": "cafca3650c0f697ad71b57197287d86e68d0fdbf6a40c733acd75e4248bd7a48",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/02-codegen-grounded.md": {
+      "state": "untranslated",
+      "source_sha256": "9407d5a65acb8f3565329c8df32068bc19a5b2eb4386a7dc60f69e1a0eee60a7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/03-threat-modeling.md": {
+      "state": "untranslated",
+      "source_sha256": "18009480952bdc80a78604a30346b8350278e79175daac70a9228e9677f619a0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/04-governance-bootstrap.md": {
+      "state": "untranslated",
+      "source_sha256": "8b75ab44f3a190e0b7c7ea16a3a235ca2571b37b4dd098fcac6465a3f97edb75",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/05-onboarding-formacao.md": {
+      "state": "untranslated",
+      "source_sha256": "97681f28df073a8bb6c8a6fe21615c4794bc6828184431e0acb41a1294b05fee",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/06-cross-check-conformidade.md": {
+      "state": "untranslated",
+      "source_sha256": "7ab1313d9a84ddd4629f9c1e921d1b78f5ebb065e2036664df43d6e062de315e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/07-agentic-sdlc.md": {
+      "state": "untranslated",
+      "source_sha256": "6529d9440d7443c435555a072ffd611c124cc9c3d62d8dff4686cb8203ac8807",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/07-casos-uso/index.mdx": {
+      "state": "untranslated",
+      "source_sha256": "e6a387e636891c75cc3e26fe22dcca5dee3bb8266c41076fe6345583d944b20a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/08-padroes-avancados.md": {
+      "state": "untranslated",
+      "source_sha256": "b55414796d8502793bf0be412a5f066b7d227f99097a9983a30e126157fb359a",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/09-epistemica-anti-patterns.md": {
+      "state": "untranslated",
+      "source_sha256": "54870edbe709c9f417a0efd2a0b781421c07098dc8a8fbdf0da35456a6539052",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/10-troubleshooting-faq.md": {
+      "state": "untranslated",
+      "source_sha256": "150f9b5ba66fdc1fd53c9c865b93178b9f0e10fd04e3487a8bd87ebd5d191da5",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/mcp/11-versionamento-roadmap.md": {
+      "state": "untranslated",
+      "source_sha256": "d5b21a2370b37fdf252cfd32f357a045d25216164ea7b7a1eba515416d921457",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/01_policy-dast-fuzzing.md": {
+      "state": "untranslated",
+      "source_sha256": "98de3da080bf7e8ee006191fe0fa338d622d473afcdb47878ae1872988962136",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/02_policy-classificacao-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "caf1529ed31920f81cfd84da499eaf6502e2349e552091ccbfeae834668e0509",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/03_policy-aceitacao-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "8f7840599024d3adff0c8e9940512284bcdb6f1cf01e3ccce471a322121295f7",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/04_policy-revisao-periodica-risco.md": {
+      "state": "untranslated",
+      "source_sha256": "5494058850689a2d52c4105429fcca4fb58109b3d2403e465c6875db80f0fb43",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/05_policy-gestao-excecoes.md": {
+      "state": "untranslated",
+      "source_sha256": "043b4a2e343c1653d2142eba3448b3e09c871f33e9630110e41d1f48f01b17b6",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/06_policy-rastreabilidade.md": {
+      "state": "untranslated",
+      "source_sha256": "f1f23dd0bffbb12e6193d03172d63a62927489f7b7cc59884d24412df2284d3e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/07_policy-requisitos-seguranca.md": {
+      "state": "untranslated",
+      "source_sha256": "bd5b8e1002e211999eb35d487c1c8711a7f6932d7c3f0ce12b6b9c7c2b0306d3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/08_policy-threat-modeling.md": {
+      "state": "untranslated",
+      "source_sha256": "461d995af7f9b089a32b19b674fceac89f942a003e7082518bb5097b20eea736",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/09_policy-arquitetura-segura.md": {
+      "state": "untranslated",
+      "source_sha256": "5230b3e6c8dce52e97e3594e05c33cb6ef5d4c01ca56c6ca37283406b6881e6d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/10_policy-dependencias.md": {
+      "state": "untranslated",
+      "source_sha256": "e335c4d2d728385a47302e8eb748666e952200aec29a10170577373f944aea0e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/11_policy-sbom.md": {
+      "state": "untranslated",
+      "source_sha256": "c3cc7e16a2e001b450e507ab0bcfc46d52b9241cbe2873a8832ec3ac240bd400",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/12_policy-excecoes-cve.md": {
+      "state": "untranslated",
+      "source_sha256": "9af281ecf1238062a19378c34a1fdc14dc90df0c0bc5b28c819f8ef5adf08dd3",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/13_policy-atualizacao-automatica.md": {
+      "state": "untranslated",
+      "source_sha256": "98f33c1c33c1b6c463c1d2839f04a82deb84f726c42a4f7f295183c4cc5e8fef",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/14_policy-guidelines-desenvolvimento.md": {
+      "state": "untranslated",
+      "source_sha256": "00b183a2d7494e75bc111c22e42aad24d156eaf36effeb518bc594b2fc0e5754",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/15_policy-revisao-codigo.md": {
+      "state": "untranslated",
+      "source_sha256": "a7732aee1d10a3c43210fbb5435a1e46f21a4c06e0e061256b37af54af7f94c8",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/16_policy-uso-ferramentas-apoio.md": {
+      "state": "untranslated",
+      "source_sha256": "079f3e02faca4edd0048dfe56117e6df051ce9f7cdc6d925779f6407aa2224a4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/17_policy-cicd-seguro.md": {
+      "state": "untranslated",
+      "source_sha256": "3a6c16c33b9d67c3d7548e7c2faed5dd89457f75e56c6992c3c01cece71d91d2",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/18_policy-gestao-segredos.md": {
+      "state": "untranslated",
+      "source_sha256": "203be51e27c75af385f1444529f00512f03343a158a6188014f51a8248ec1794",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/19_policy-estrategia-testes.md": {
+      "state": "untranslated",
+      "source_sha256": "018486adb6ffbc104633514d931feb6b100d56befcd72ef94fcbcdb8b0c0b928",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/20_policy-release-seguro.md": {
+      "state": "untranslated",
+      "source_sha256": "fb38080be3a4b2b6fdf5236d698c8597f460854c20273b8a32f41ded2a3686ef",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/21_policy-iac-seguro.md": {
+      "state": "untranslated",
+      "source_sha256": "ce34db1295c3fdc13da31711c2cbbfa8b65e7c515bf7848630dc97ff58064f28",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/22_policy-aprovacao-plan-iac.md": {
+      "state": "untranslated",
+      "source_sha256": "c7149baa199812cd97be64c852dce0fd1debac3a65375aa0ab0fcbf17b73e89d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/23_policy-containers-seguros.md": {
+      "state": "untranslated",
+      "source_sha256": "d1de7cb6c73cd660d46300e01ea7f2963319748d6f20e59117486ba773f6efc0",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/24_policy-golden-base-images.md": {
+      "state": "untranslated",
+      "source_sha256": "aa3f03a7ec626ef1ada2a696ea94098ac358927854834f3c91f5f5dc5e394998",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/25_policy-deploy-seguro.md": {
+      "state": "untranslated",
+      "source_sha256": "3206029c5cbf7b3c9ea8a8bf69c4176faca845ad6e52944faffec0bc678a4bc4",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/26_policy-aprovacao-release.md": {
+      "state": "untranslated",
+      "source_sha256": "30115bae6406db8e5573f8524d870b57a079583e08705be9adf8ae9d6b073ff9",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/27_policy-rollback.md": {
+      "state": "untranslated",
+      "source_sha256": "0ebfda6a45003839853518aede1b5067b90b2ed8a67ac4e447e5b64a449b071b",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/28_policy-monitorizacao-pos-deploy.md": {
+      "state": "untranslated",
+      "source_sha256": "2b7331c2032de2dbfda972cba8df90832c40417dfaebd0db2a2aeaf5cbc3e31f",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/29_policy-logging-estruturado.md": {
+      "state": "untranslated",
+      "source_sha256": "e49443a249479630003f80c4a3e9d2b3938d1a45acc99d52c81af0fb17d87f54",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/30_policy-monitorizacao-seguranca.md": {
+      "state": "untranslated",
+      "source_sha256": "a292caaef9c4041ab2fa6bd9c3a95e0a38de7a9274bfc82dab37b478f7ae00a8",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/31_policy-gestao-alertas.md": {
+      "state": "untranslated",
+      "source_sha256": "55fc83828fe5dafcafeef4a7b35c9256010463b0abb2454d981764b9dcccf1fe",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/32_policy-irp.md": {
+      "state": "untranslated",
+      "source_sha256": "d0e5a2958e902b2775b6df6cab655700bd994d71f5ddaa679f6a0d2ca9a0aa49",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/33_policy-contratacao-segura.md": {
+      "state": "untranslated",
+      "source_sha256": "6f170781a4d1b27ed54ba4a7cc28861e577f2cf27047970cca1fec98a3c9b229",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/34_policy-rastreabilidade-organizacional.md": {
+      "state": "untranslated",
+      "source_sha256": "8a2f2ccc4a125496cf78b36c26b3dafde695a53919eb3c67188e1ac602456928",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/35_policy-kpis-governacao.md": {
+      "state": "untranslated",
+      "source_sha256": "8971e04d532751cac0de627f62483b9669abbcfff51217a98fe771fa23fb6a4e",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/36_policy-pentesting.md": {
+      "state": "untranslated",
+      "source_sha256": "2c534295c7e652e86cdbe6fce54efce53f673ed05e099fe81f13f42adec7fae1",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/37_policy-formacao-seguranca.md": {
+      "state": "untranslated",
+      "source_sha256": "d9762dee09572e510aadc2178856f449fb058b73d11948d5b47b627b134ca304",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/38_policy-mandates-agentes.md": {
+      "state": "untranslated",
+      "source_sha256": "ade9485a82d270d1892979bd08c15a0011478af7e970bafc49f3bd4433b7c41d",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "020-assets/policies/39_policy-ai-bom-supply-chain.md": {
+      "state": "untranslated",
+      "source_sha256": "99da943278df2f83977861bbb5e192909fb5f7d82cee17fb5f8ab00ac162e376",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    },
+    "tldr.md": {
+      "state": "untranslated",
+      "source_sha256": "e9ee147b7a6d34b1797bca0b40eb5336ecbd05ce544871516190981bd1168c55",
+      "translated_source_sha256": null,
+      "target_sha256": null,
+      "terms_sha256_at_translation": null,
+      "translated_at": null,
+      "pending_blocks": 0
+    }
+  },
+  "totals": {
+    "untranslated": 413,
+    "synced": 0,
+    "partial": 0,
+    "pt-ahead": 0,
+    "en-ahead": 0,
+    "drift": 0,
+    "stale-terms": 0
+  }
+}

@@ -340,3 +340,30 @@ class SyncStateTests(TreeTestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SyncStateSymlinkTests(unittest.TestCase):
+    def test_mirror_symlink_follows_its_target(self):
+        import json, os, subprocess, sys, tempfile
+        from pathlib import Path
+        root = Path(tempfile.mkdtemp())
+        docs = root / "docs"
+        current = root / "i18n" / "en" / "docusaurus-plugin-content-docs" / "current"
+        (docs / "a").mkdir(parents=True)
+        (current / "a").mkdir(parents=True)
+        (docs / "a" / "real.md").write_text("---\nid: real\n---\n# T\n\ntexto\n", encoding="utf-8")
+        os.symlink("real.md", docs / "a" / "link.md")
+        (current / "a" / "real.md").write_text(
+            "---\nid: real\ntranslation:\n  source_locale: pt\n  source_path: a/real.md\n  source_sha256: x\n"
+            "  target_sha256: y\n  terms_sha256: null\n---\n# T\n\ntext\n", encoding="utf-8")
+        os.symlink("real.md", current / "a" / "link.md")
+        script = Path(__file__).resolve().parents[1] / "sync_state.py"
+        run = subprocess.run([sys.executable, str(script), "--docs-dir", str(docs), "--i18n-dir", str(root / "i18n"),
+                              "--state-file", str(root / "s.json"), "--registry", str(root / "none.yaml"), "--write"],
+                             capture_output=True, text=True)
+        self.assertEqual(run.returncode, 0, run.stderr)
+        self.assertNotIn("source_path", run.stderr)
+        files = json.loads((root / "s.json").read_text(encoding="utf-8"))["files"]
+        self.assertEqual(files["a/link.md"]["symlink_to"], "a/real.md")
+        self.assertEqual(files["a/link.md"]["state"], files["a/real.md"]["state"])
+

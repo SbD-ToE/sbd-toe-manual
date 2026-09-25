@@ -46,7 +46,7 @@ SYNC_STATE_RELPATH = "translation/state/sync-state.json"
 MARKDOWN_EXTENSIONS = (".md", ".mdx")
 
 # Front-matter keys whose values are expected to differ between locales.
-TRANSLATED_FRONTMATTER_KEYS = ("title", "description")
+TRANSLATED_FRONTMATTER_KEYS = ("title", "description", "sidebar_label")
 # Front-matter key that only exists on translated files.
 TRANSLATION_BLOCK_KEY = "translation"
 

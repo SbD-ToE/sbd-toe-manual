@@ -3420,7 +3420,7 @@ terms:
   state: in-record
   owner: manual-agent
   en: practitioner Manual
-  en_variants: [manual, prose, prose layer, practitioner-Manual, prose surface]
+  en_variants: [Manual, manual, practitioner-Manual, prose, prose layer, prose surface, the Manual]
   pt: Manual
   pt_variants: []
   ontology_id: null
@@ -3445,7 +3445,9 @@ terms:
   false_friends: []
   pending_reason: null
   blocks_translation: true
-  notes: ''
+  notes: |2-
+
+    [MA 2026-09-25] «Manual» (nome próprio do artefacto) traduz como «Manual»/«the Manual»; «practitioner Manual» é a forma dos papers.
 - key: pre_registered
   species: 1
   state: in-record
@@ -3588,7 +3590,7 @@ terms:
   en: programme
   en_variants: [research line, programmes, program, prospectus, release line, programs, release lines]
   pt: programa
-  pt_variants: [linha]
+  pt_variants: []
   ontology_id: null
   sense: A linha de investigação como um todo (P0 = prospecto); «line» = sequência cumulativa de camadas;
     «release line» = v1.x.
@@ -3606,7 +3608,9 @@ terms:
   false_friends: []
   pending_reason: null
   blocks_translation: true
-  notes: ''
+  notes: |2-
+
+    [MA 2026-09-25] «linha» retirada de pt_variants: no Manual é linha de código/linha de base, não linha de investigação.
 - key: promotion
   species: 1
   state: pending

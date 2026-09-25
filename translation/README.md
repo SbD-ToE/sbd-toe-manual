@@ -70,6 +70,7 @@ Estados e condições:
 | estado | condição |
 |---|---|
 | `untranslated` | não existe ficheiro no espelho |
+| (symlink) | um symlink na fonte espelha-se como symlink; a entrada copia o estado do alvo e acrescenta `symlink_to` |
 | `synced` | `translated_source_sha256` == hash actual da fonte, `pending_blocks` == 0, `terms_sha256_at_translation` == actual |
 | `partial` | existe tradução com `pending_blocks` > 0 |
 | `pt-ahead` | a fonte mudou depois da tradução (só ela) |
@@ -82,7 +83,7 @@ Precedência quando várias condições se verificam: `drift` > `en-ahead` > `pt
 ## Contrato do frontmatter de um ficheiro traduzido
 
 Gerado por `translate.py`, nunca à mão. Todo o frontmatter estrutural da fonte (`id`, `sidebar_position`, …) é
-copiado; `title` e `description` são traduzidos; acrescenta-se:
+copiado; `title`, `description` e `sidebar_label` são traduzidos (decisão do Manual agent 2026-09-25: a sidebar EN não pode sair em PT); acrescenta-se:
 
 ```yaml
 translation:

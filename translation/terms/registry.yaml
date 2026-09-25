@@ -846,6 +846,28 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: categorize_sw
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Categorize SW
+  en_variants: [RM.1 (Categorize SW)]
+  pt: Categorize SW
+  pt_variants: []
+  ontology_id: null
+  sense: Nome de prática de fonte externa (grafia AmE do original); identificador, não prosa.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-25] Nomes de práticas/controlos de fontes externas mantêm a grafia original; isentos
+    do lint en-GB por serem do-not-translate.'
 - key: chapter_role
   species: 1
   state: in-record

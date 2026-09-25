@@ -23,6 +23,7 @@ sobre a forma NFC, por isso as chaves do `sync-state.json` são idênticas em ma
 | `terms_import.py` | frente 3: semeia/actualiza `translation/terms/registry.yaml` a partir do levantamento do Curator (regras mecânicas do README do registo) |
 | `terms_lint.py` | frente 3: `validate` (esquema), `spelling` (en-GB), `pending-blocks` (detector de blocos bloqueados), `consistency` (PT→EN por bloco), `export-pending` (fila para o hub), `hash` |
 | `species3_candidates.py` | frente 3: varrimento de frequência da prosa PT → CSV de **candidatos** a espécie 3 (não entra no registo) |
+| `translate.py` | frente 6: `prepare` (jobs com esqueleto + marcadores + glossário + proveniência) → tradução por agente externo → `assemble` (reconstrói, valida, grava) → `check` (atalho do CI). Não chama nenhum modelo |
 | `tests/` | `unittest` com fixtures em `tests/fixtures/` |
 
 ## `fingerprint.py`
@@ -127,7 +128,7 @@ python translation/scripts/terms_lint.py hash --registry …
   prosa. Exit 1 com erros; `--fix` aplica só substituições inequívocas (erros de regras `fixable`, nunca avisos nem
   `programme`).
 - `pending-blocks` — para cada bloco da fonte (parágrafo, item de lista, célula de tabela, cabeçalho, título de
-  admonition, `title`/`description` do frontmatter; fora de código) que contenha, por palavra inteira sem distinção
+  admonition, `title`/`description` do frontmatter; fora de código, de declarações MDX `import`/`export` até à linha em branco seguinte e de blocos `<style>`/`<script>`) que contenha, por palavra inteira sem distinção
   de maiúsculas e em NFC, `pt` ou `pt_variants` de uma entrada `pending` com `blocks_translation: true`, imprime
   `ficheiro:linha  chave  excerto`; resumo por ficheiro (só os bloqueados, salvo `--all-files`) e por chave. Exit 0
   (detector), salvo `--fail-on-block`. `--json` para o `translate.py`/`sync_state.py`.
@@ -154,6 +155,79 @@ unigramas com ≥ 4 letras, bigramas de palavras de conteúdo e trigramas `X de 
 `termo_pt, docs, total, exemplo_ficheiro, exemplo_linha`, ordenadas por frequência documental, total e termo. É uma
 lista de **candidatos** para o Manual agent rever — nada entra no registo por este script.
 
+## `translate.py`
+
+**Não chama nenhum modelo.** Divide o trabalho em três passos deterministas à volta de um passo de tradução feito por
+um agente/modelo externo, para que a proveniência e a estrutura sejam reproduzíveis independentemente de quem traduz.
+
+```bash
+python translation/scripts/translate.py prepare  --path 010-sbd-manual/00-fundamentos --out /tmp/jobs [--only-stale] [--force] [--json]
+# passo externo: o tradutor lê /tmp/jobs/<caminho>.job.json e escreve /tmp/jobs/<caminho>.out.json
+python translation/scripts/translate.py assemble --job /tmp/jobs/<caminho>.job.json [--out-json …] --engine <modelo> [--write] [--print]
+python translation/scripts/translate.py check    --path 010-sbd-manual/00-fundamentos
+```
+
+**`prepare`** — para cada ficheiro fonte seleccionado e elegível pelo `sync_state` (`untranslated`, `pt-ahead`,
+`stale-terms`; `--only-stale` restringe aos dois últimos; `--force` ignora o estado; `partial`, `drift` e `en-ahead`
+são saltados com aviso) escreve `<out>/<caminho>.job.json`:
+
+- proveniência: `source_path`, `source_sha256`, `source_commit` (último commit que tocou o ficheiro; `source_dirty`
+  se há alterações por commitar; `--source-commit` fixa-o), `terms_sha256`, `prompt_sha256` (de
+  `translation/prompts/translate-v1.md`), `direction`;
+- **esqueleto**: a sequência de segmentos do ficheiro na ordem original, cada um com `id`, `kind`, `line`, `raw`
+  (linhas verbatim) e, quando traduzível, `text` (com marcadores), `protected`, `translate`, `blocked_by`, `prefix`/
+  `suffix` (o que o script repõe à volta do texto: `## `, ` {#id}`, marcador e indentação de item, `:::note `).
+  Kinds: `frontmatter` (só `title`/`description` traduzem, em `fields`; o resto copia), `heading` (` {#id}` fica no
+  `suffix`, nunca no texto), `paragraph` (inclui blockquotes e linhas JSX/HTML com prosa — as tags ficam marcadores),
+  `list_item` (marcador e indentação no `prefix`; linhas de continuação no texto com marcadores de quebra),
+  `table_row` (`cells[]` com `id` `sNNNN.cK`, `start`/`end` na linha; cabeçalho traduz; linha delimitadora não),
+  `admonition_open` (tipo no `prefix`; título traduz) / `admonition_close`, `code_block`, `html_comment`, `esm`
+  (`import`/`export` até à linha em branco), `blank`, `raw` (`---`, blocos `<style>`, expressões `{…}`);
+- **marcadores** `⟦P0⟧, ⟦P1⟧…` (numeração por unidade) substituem, no texto enviado ao tradutor, os tokens protegidos:
+  code spans, comentários inline, destinos de ligação (`[texto](⟦P0⟧)`), referências `[ref]`, tags HTML/JSX, URLs,
+  ids (`protected_tokens.ID_PATTERN`), siglas (`ACRONYM_PATTERN`), formas EN de entradas `do-not-translate` do registo
+  e quebras de linha dentro do segmento (com o espaço final da linha e a indentação da seguinte). `protected[]` guarda
+  o original de cada um; uma unidade só com marcadores (`| CIC-001 |`, `<div>`) fica `translate: false`, `reason: no-prose`;
+- **glossário aplicável**: `terms` (entradas `in-record`/`coined`/`changed` cujas formas fonte ocorrem na prosa:
+  `source → target` + variantes + `sense`), `do_not_translate` (nomes presentes em qualquer das línguas) e `pending`
+  (as que bloqueiam unidades neste ficheiro, com razão e dono). Uma unidade cujo texto contém `pt`/`pt_variants` de uma
+  entrada `pending` com `blocks_translation: true` fica `translate: false` com `blocked_by` (mesma segmentação por
+  bloco e mesmas agulhas do `terms_lint.py pending-blocks`; o `prepare` cruza os dois e avisa se divergirem);
+- `units` (ids de tudo o que o tradutor tem de devolver) e `stats`; o resumo do `prepare` dá ficheiros, unidades,
+  palavras, marcadores, bloqueios por chave e entradas de glossário (`--json` para máquina).
+
+O `prepare` é determinista (mesmo job byte a byte) e auto-verifica-se: os segmentos têm de reconstituir a fonte
+verbatim, e a contagem de cabeçalhos/tabelas/blocos de código/admonitions tem de coincidir com `common.parse_markdown`
+(o mesmo parser do `fingerprint.py`) — senão falha em vez de produzir um job errado. Um symlink na fonte produz um job
+`{"kind": "symlink", "link_target": …}` sem nada a traduzir.
+
+**Passo externo** — o tradutor (agente) segue `translation/prompts/translate-v1.md` (só `text` das unidades
+`translate: true`; marcadores intactos e uma vez cada; glossário obrigatório; British English; registo do Manual) e
+escreve `<out>/<caminho>.out.json` = `{"segments": [{"id", "text"}, …]}`.
+
+**`assemble`** — reconstrói o ficheiro alvo a partir do esqueleto + traduções: repõe os protegidos (**falha** se um
+marcador faltar, estiver duplicado, for desconhecido, ou se o texto trouxer uma quebra de linha literal; uma célula não
+pode conter `|` sem escape); unidades bloqueadas ficam na língua fonte com `<!-- i18n:pending key=<chaves> -->`
+imediatamente antes — na linha anterior para parágrafos, cabeçalhos e admonitions; indentado dentro da lista para itens
+(para não partir a lista); antes da tabela (uma vez, com as chaves de todas as células bloqueadas) para células; na
+primeira linha do corpo para `title`/`description`. Gera o frontmatter do contrato (`translation/README.md`): cópia
+estrutural, `title`/`description` traduzidos (aspas mantidas se a fonte as tinha), bloco `translation:` com
+`source_locale`, `source_path`, `source_sha256`, `source_commit`, `target_sha256` (hash do ficheiro sem o bloco, via
+`common.strip_translation_block`), `engine` (`--engine`, obrigatório), `prompt_sha256`, `terms_sha256`, `translated_at`
+(`--translated-at` para testes), `reviewed_by: null`. Fonte sem frontmatter → mínimo (`id` efectivo + bloco). Recusa
+montar se a fonte mudou desde o `prepare` (`--ignore-source-change` para forçar). Corre `equivalence` (em memória) e o
+`terms_lint spelling` sobre o resultado e **não grava se falhar** (`--allow-spelling-errors` deixa passar a ortografia);
+com `--write` grava no caminho espelho e imprime o estado derivado por `sync_state` para o ficheiro; job de symlink com
+`--write` cria o mesmo symlink relativo no espelho (nunca uma cópia).
+
+**`check`** — `equivalence.py --path` + `terms_lint spelling` + `terms_lint consistency` sobre os ficheiros alvo já
+existentes para o caminho dado; exit 1 se algum falhar. É o que o CI corre por partes.
+
+Limites conhecidos: `sidebar_label` não é traduzido (o contrato só nomeia `title`/`description`; a lista vive em
+`common.TRANSLATED_FRONTMATTER_KEYS`); valores `title`/`description` em escalar de bloco (`|`, `>`) ficam por traduzir
+(`reason: block-scalar`); `consistency` não corre no `assemble` (só no `check`); um symlink no espelho aponta a uma
+tradução cujo `source_path` é o alvo do link, o que o `sync_state.py` hoje assinala como aviso.
+
 ## Testes
 
 ```bash
@@ -164,6 +238,14 @@ python -m unittest discover -s translation/scripts/tests -p 'test_*.py'
 desdobramento, idempotência com edição manual preservada, registo commitado igual ao gerado), o `validate`, o
 `spelling` (fixture `tests/fixtures/terms/en-spelling.md`), o `pending-blocks` (fixture `pt-pending.md`), o
 `export-pending` (determinista) e o `hash` (igual ao de `sync_state.py`).
+
+`test_translate.py` verifica o `prepare` sobre a fixture `tests/fixtures/translate/source/04-pagina-traducao.md`
+(esqueleto, marcadores, glossário, `blocked_by`, determinismo byte a byte, elegibilidade por `sync_state`), o
+`assemble` com uma tradução mecânica (ficheiro EN passa `equivalence`, comentários `pending` no sítio certo, frontmatter
+conforme o contrato, `sync_state` deriva `partial`, `check` verde), as falhas sem gravar (marcador em falta, quebra de
+linha literal, id desconhecido, ortografia, fonte alterada), fonte sem frontmatter → mínimo, symlink → symlink, o
+`terms_lint` a ignorar ESM e `<style>`, e um smoke test sobre o capítulo piloto real (segmentação coerente com o parser
++ montagem de identidade equivalente).
 
 ## CI
 

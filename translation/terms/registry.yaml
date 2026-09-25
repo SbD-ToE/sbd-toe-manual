@@ -2456,16 +2456,14 @@ terms:
     EN nos dados; a decisão é quase formal, mas é do lead.'
 - key: mandato_operacional
   species: 2
-  state: pending
+  state: withdrawn
   owner: lead
   en: null
   en_variants: []
   pt: mandato operacional
   pt_variants: [mandatos operacionais]
   ontology_id: null
-  sense: Conceito listado pelo Orchestrator como Espécie 2; NÃO localizado por chave na v2.6 (`operational_mandate`/`mandato
-    operacional` = 0 em sbdtoe-ontology.yaml) nem na prosa do Manual. Sentido a confirmar pelo lead antes
-    de coinar.
+  sense: RETIRADO — não é conceito do programa (ver notes).
   senses: []
   evidence:
     source: null
@@ -2475,13 +2473,13 @@ terms:
   change_cost: null
   curator: {finding: A18}
   previous: null
-  proposal: operational mandate — SÓ depois de o lead confirmar onde o conceito vive e o que distingue
-    de `mandatory` (força normativa de requisito, Curator `mandatory`)
+  proposal: null
   false_friends: [mandatory]
-  pending_reason: unborn
-  blocks_translation: true
-  notes: 'false friend: `mandatory` nos papers = força normativa (obrigatório vs informativo); v2.6 mantém
-    `mandatory` como constante legacy em ArtifactRequirement (Q-T1 aposentado em v2.9).'
+  pending_reason: null
+  blocks_translation: false
+  notes: |-
+    false friend: `mandatory` nos papers = força normativa (obrigatório vs informativo); v2.6 mantém `mandatory` como constante legacy em ArtifactRequirement (Q-T1 aposentado em v2.9).
+    [MA 2026-09-25] WITHDRAWN por correcção do Orchestrator (2026-09-25): «mandato operacional» não é conceito — era a proposta de espécie do Archon para a autoridade posicional, retirada com os números; constava da lista do épico por erro (épico corrigido §8). Entrada mantida como memória; não bloqueia, não exige decisão.
 - key: mandatory
   species: 1
   state: in-record

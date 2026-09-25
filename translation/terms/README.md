@@ -27,7 +27,7 @@ meta:
 terms:
   - key: slice                      # chave estável do registo; snake_case ASCII; nunca muda
     species: 1                      # 1 = já no registo científico · 2 = por nascer · 3 = vocabulário de prosa
-    state: in-record                # in-record · coined · pending · changed · do-not-translate
+    state: in-record                # in-record · coined · pending · changed · do-not-translate · withdrawn
     owner: manual-agent             # manual-agent · archon · lead
     en: slice                       # forma EN canónica (null enquanto pending na espécie 2)
     en_variants: [slices, per-slice, cross-slice]   # formas aceites na prosa EN (lint)
@@ -57,6 +57,8 @@ terms:
 - **`coined`**: espécie 2 com EN decidido e registado (`ratified_by`, `date` em `notes` ou `previous`).
 - **`changed`**: espécie 1 cujo EN foi alterado face aos papers; `previous` obrigatório — é a reconciliação
   («o que em [P1] chamámos X passa a Y»).
+- **`withdrawn`**: entrada que deixou de designar um conceito do programa (ex.: proposta retirada). Fica no registo
+  como memória, com a razão em `notes`; `blocks_translation: false`; nunca isenta nem exige nada no lint.
 - **`do-not-translate`**: ids, códigos de categoria, chaves de dados, nomes nascidos em inglês. `translate.py`
   protege-os antes do modelo e o `equivalence.py` conta-os. A lista de padrões vive em
   `translation/scripts/protected_tokens.py`; entradas do registo desta classe cobrem **nomes**, não padrões.

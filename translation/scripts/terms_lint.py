@@ -63,7 +63,7 @@ import protected_tokens  # noqa: E402
 # --------------------------------------------------------------------------- #
 
 SPECIES = (1, 2, 3)
-STATES = ("in-record", "coined", "pending", "changed", "do-not-translate")
+STATES = ("in-record", "coined", "pending", "changed", "do-not-translate", "withdrawn")
 OWNERS = ("manual-agent", "archon", "lead")
 PENDING_REASONS = ("polysemy", "en-vs-en-collision", "unborn", "v26-collision")
 AUTHORITATIVE_STATES = ("in-record", "coined", "changed")
@@ -173,7 +173,7 @@ def validate_registry(registry: dict) -> List[str]:
             problems.append(f"{where}: senses is required when pending_reason is 'polysemy'")
         en = entry.get("en")
         if en is None:
-            if not (species == 2 and state == "pending"):
+            if (not (species == 2 and state == "pending")) and entry.get("state") != "withdrawn":
                 problems.append(f"{where}: en may be null only for a species-2 entry in state 'pending'")
         elif not isinstance(en, str) or not en.strip():
             problems.append(f"{where}: en must be a non-empty string or null")

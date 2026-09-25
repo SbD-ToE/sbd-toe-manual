@@ -56,6 +56,7 @@ translation/
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,
+      "glossary_sha256_at_translation": null,
       "translated_at": null,
       "pending_blocks": 0
     }
@@ -71,14 +72,19 @@ Estados e condições:
 |---|---|
 | `untranslated` | não existe ficheiro no espelho |
 | (symlink) | um symlink na fonte espelha-se como symlink; a entrada copia o estado do alvo e acrescenta `symlink_to` |
-| `synced` | `translated_source_sha256` == hash actual da fonte, `pending_blocks` == 0, `terms_sha256_at_translation` == actual |
+| `synced` | `translated_source_sha256` == hash actual da fonte, `pending_blocks` == 0, glossário aplicado inalterado (ver `stale-terms`) |
 | `partial` | existe tradução com `pending_blocks` > 0 |
 | `pt-ahead` | a fonte mudou depois da tradução (só ela) |
 | `en-ahead` | a tradução mudou depois de gerada (só ela); não deve ocorrer na Fase 1 |
 | `drift` | ambas mudaram |
-| `stale-terms` | o registo mudou numa entrada que ocorre no ficheiro, depois da tradução |
+| `stale-terms` | o registo mudou numa entrada que o ficheiro **aplicou**: `common.glossary_sha256(registo actual, glossary_keys)` ≠ `glossary_sha256` gravado no frontmatter (uma chave que deixou de existir no registo conta como mudança; mudar `notes`, `evidence`, `counts`, `sense`, `proposal`, … nunca conta) |
 
 Precedência quando várias condições se verificam: `drift` > `en-ahead` > `pt-ahead` > `stale-terms` > `partial` > `synced`.
+
+`terms_sha256_at_translation` (registo inteiro) é proveniência; `glossary_sha256_at_translation` (glossário aplicado)
+é o que decide `stale-terms`. Um espelho gerado antes de existir `glossary_sha256` (`null` no estado) cai na regra
+antiga — `terms_sha256_at_translation` ≠ hash actual do registo — e o `sync_state.py` avisa «legacy provenance:
+re-stamp with assemble». Enquanto `translation/terms/registry.yaml` não existir, `stale-terms` nunca ocorre.
 
 ## Contrato do frontmatter de um ficheiro traduzido
 
@@ -95,9 +101,19 @@ translation:
   engine: <modelo>
   prompt_sha256: <sha256 de prompts/translate-v1.md>
   terms_sha256: <sha256 de terms/registry.yaml>
+  glossary_keys: [<chaves do registo aplicadas ao ficheiro, ordenadas>]
+  glossary_sha256: <sha256 do glossário aplicado — common.glossary_sha256(registo, glossary_keys)>
   translated_at: <ISO-8601>
   reviewed_by: null
 ```
+
+`terms_sha256` é **proveniência** (que registo inteiro estava em vigor); `glossary_sha256` é o que **decide
+`stale-terms`**: o hash das entradas que o `prepare` pôs no glossário do ficheiro (termos `in-record`/`coined`/`changed`
+cujas formas fonte ocorrem, nomes `do-not-translate` presentes e entradas `pending` que bloquearam unidades — as chaves
+em `glossary_keys`), reduzidas aos campos `key`, `state`, `en`, `en_variants`, `pt`, `pt_variants`,
+`blocks_translation` e serializadas canonicamente (JSON, chaves ordenadas, `ensure_ascii=False`, sem espaços, entradas por
+ordem de chave, variantes como conjunto ordenado). Mudar uma nota do registo nunca torna uma tradução stale; mudar o EN de
+um termo que o ficheiro usou torna.
 
 Ficheiros fonte **sem frontmatter** (46) recebem no espelho um frontmatter mínimo com `id` igual ao id efectivo
 (derivado do nome do ficheiro) mais o bloco `translation`.

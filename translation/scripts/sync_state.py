@@ -8,9 +8,16 @@ derived from hashes only:
   mirror's front matter;
 * the current hash of the translated body (the mirror file without its
   ``translation`` block) versus the recorded ``translation.target_sha256``;
-* the recorded ``translation.terms_sha256`` versus the current hash of
-  ``translation/terms/registry.yaml`` (``null`` while the registry does not
-  exist, in which case ``stale-terms`` can never occur);
+* the recorded ``translation.glossary_sha256`` versus
+  ``common.glossary_sha256(<current registry>, translation.glossary_keys)`` —
+  the hash of the registry entries the translation actually applied, reduced
+  to the fields that matter (``common.GLOSSARY_HASH_FIELDS``); a key that has
+  left the registry counts as a change, editing ``notes``/``evidence``/… does
+  not. ``translation.terms_sha256`` (whole registry) is provenance only.
+  Mirrors stamped before this field existed (no ``glossary_sha256``) fall back
+  to comparing ``terms_sha256`` with the current registry hash and raise a
+  "legacy provenance" warning — re-stamp them with ``translate.py assemble``.
+  While the registry does not exist ``stale-terms`` can never occur;
 * the number of ``<!-- i18n:pending … -->`` markers in the mirror.
 
 Precedence when several conditions hold:
@@ -65,6 +72,20 @@ def terms_registry_sha256(root: Path, registry: Optional[Path] = None) -> Option
     return None
 
 
+def load_registry(root: Path, registry: Optional[Path] = None) -> Optional[Dict]:
+    """The terms registry as a mapping (``None`` while the file does not exist)."""
+    registry = Path(registry) if registry is not None else root / common.TERMS_REGISTRY_RELPATH
+    if not registry.is_file():
+        return None
+    data = common.yaml_load(common.read_text(registry))
+    if not isinstance(data, dict) or not isinstance(data.get("terms"), list):
+        raise common.TranslationToolError(f"{registry}: not a registry (expected a mapping with a 'terms' list)")
+    return data
+
+
+LEGACY_PROVENANCE_WARNING = "legacy provenance: re-stamp with assemble"
+
+
 def derive_state(
     *,
     source_hash: str,
@@ -75,8 +96,16 @@ def derive_state(
     recorded_terms_hash: Optional[str],
     pending_blocks: int,
     translated: bool,
+    glossary_hash: Optional[str] = None,
+    recorded_glossary_hash: Optional[str] = None,
 ) -> str:
-    """Apply the README conditions and precedence."""
+    """Apply the README conditions and precedence.
+
+    ``stale-terms`` is decided by the applied-glossary hash when the mirror
+    recorded one (``recorded_glossary_hash``; ``glossary_hash`` is its current
+    value, ``None`` while there is no registry). Without it — legacy mirrors —
+    the whole-registry ``terms_sha256`` comparison applies.
+    """
     if not translated:
         return "untranslated"
     source_changed = recorded_source_hash != source_hash
@@ -87,7 +116,11 @@ def derive_state(
         return STATE_TARGET_AHEAD
     if source_changed:
         return STATE_SOURCE_AHEAD
-    if terms_hash is not None and recorded_terms_hash != terms_hash:
+    if recorded_glossary_hash is not None:
+        terms_stale = glossary_hash is not None and glossary_hash != recorded_glossary_hash
+    else:
+        terms_stale = terms_hash is not None and recorded_terms_hash != terms_hash
+    if terms_stale:
         return "stale-terms"
     if pending_blocks > 0:
         return "partial"
@@ -102,7 +135,10 @@ def _mirror_root(target: Path, rel: str) -> Path:
     return root
 
 
-def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], source_locale: str, warnings: List[str]) -> Dict:
+def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], source_locale: str, warnings: List[str], registry: Optional[Dict] = None) -> Dict:
+    """State entry for one corpus file. ``registry`` is the current terms
+    registry (mapping) used to recompute the applied-glossary hash; ``None``
+    while it does not exist (then neither variant of ``stale-terms`` fires)."""
     source_hash = common.file_sha256(source)
     entry: Dict = {
         "state": "untranslated",
@@ -110,6 +146,7 @@ def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], 
         "translated_source_sha256": None,
         "target_sha256": None,
         "terms_sha256_at_translation": None,
+        "glossary_sha256_at_translation": None,
         "translated_at": None,
         "pending_blocks": 0,
     }
@@ -149,6 +186,17 @@ def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], 
     recorded_source = _as_str(block.get("source_sha256"))
     recorded_target = _as_str(block.get("target_sha256"))
     recorded_terms = _as_str(block.get("terms_sha256"))
+    recorded_glossary = _as_str(block.get("glossary_sha256"))
+    glossary_keys = block.get("glossary_keys")
+    glossary_hash: Optional[str] = None
+    if recorded_glossary is not None and not isinstance(glossary_keys, list):
+        warnings.append(f"{rel}: translation.glossary_sha256 is recorded but translation.glossary_keys is not a list; {LEGACY_PROVENANCE_WARNING}")
+        recorded_glossary = None
+    if recorded_glossary is None:
+        if block and terms_hash is not None:
+            warnings.append(f"{rel}: no translation.glossary_sha256 in the front matter — stale-terms falls back to the whole-registry terms_sha256; {LEGACY_PROVENANCE_WARNING}")
+    elif registry is not None:
+        glossary_hash = common.glossary_sha256(registry, [str(k) for k in glossary_keys])
 
     entry.update(
         {
@@ -161,10 +209,13 @@ def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], 
                 recorded_terms_hash=recorded_terms,
                 pending_blocks=pending,
                 translated=True,
+                glossary_hash=glossary_hash,
+                recorded_glossary_hash=recorded_glossary,
             ),
             "translated_source_sha256": recorded_source,
             "target_sha256": body_hash,
             "terms_sha256_at_translation": recorded_terms,
+            "glossary_sha256_at_translation": recorded_glossary,
             "translated_at": _as_str(block.get("translated_at")),
             "pending_blocks": pending,
         }
@@ -175,6 +226,7 @@ def file_entry(rel: str, source: Path, target: Path, terms_hash: Optional[str], 
 def build_state(root: Path, docs_dir: Path, i18n_dir: Path, source_locale: str, target_locale: str, *, generated_at: Optional[str] = None, registry: Optional[Path] = None) -> Tuple[Dict, List[str]]:
     warnings: List[str] = []
     terms_hash = terms_registry_sha256(root, registry)
+    registry_data = load_registry(root, registry)
     files: Dict[str, Dict] = {}
     for rel in common.iter_corpus(docs_dir):
         files[rel] = file_entry(
@@ -184,6 +236,7 @@ def build_state(root: Path, docs_dir: Path, i18n_dir: Path, source_locale: str, 
             terms_hash,
             source_locale,
             warnings,
+            registry=registry_data,
         )
     source_set = set(files)
     for rel in common.iter_mirror(i18n_dir, target_locale):

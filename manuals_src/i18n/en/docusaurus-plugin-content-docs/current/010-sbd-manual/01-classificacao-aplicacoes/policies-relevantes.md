@@ -7,13 +7,13 @@ translation:
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/policies-relevantes.md
   source_sha256: 55b234ea202a9995d2f827e3c5e06df944998446b5d88267740439de6e58f6b7
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 33d63af08a6899a54d0ec2bf0177f9f6b3268c413b40e69b5232e9f7834ae065
+  target_sha256: 39c4e1c49590ce826c769b3c34203c2ae433fa483f0115be7e499ed68126691d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443
   glossary_keys: [avaliacao, categorize_sw, chapter_role, framework_source_corpus, maturity, practitioner_manual, traceability]
   glossary_sha256: 5ad65c1e9e9d3455e023629d5e9dbc0f5733c5bcc54408a6669e1ab81e4ad272
-  translated_at: 2026-09-25T17:59:55Z
+  translated_at: 2026-09-25T18:00:16Z
   reviewed_by: null
 ---
 
@@ -56,7 +56,7 @@ These policies:
 |------------------------|----------------------------------------------------------------------------------|
 | **ISO/IEC 27005**      | Identification (8.2), Assessment (8.3), Acceptance (8.5)                            |
 | **NIST SP 800-30**     | Steps 1–4 (Characterisation, Threats, Vulnerabilities, Impact)                 |
-| **NIST SSDF**          | RM.1 (RM.1 (Categorize SW)), RM.2 (Assess Risk), RM.3 (Manage Risk)                    |
+| **NIST SSDF**          | RM.1 (Categorize SW), RM.2 (Assess Risk), RM.3 (Manage Risk)                    |
 | **ENISA Risk Management** | Sec. 2.3, 3.1 - formal definition of risk assessment and acceptance policies |
 | **CIS Controls v8**    | Controls 2, 4 - policies for inventory, risk assessment and acceptance         |
 | **OWASP SAMM**         | Governance > Risk Management (levels 1 and 2)                                      |

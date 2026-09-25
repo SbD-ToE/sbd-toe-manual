@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:59:58Z",
+  "generated_at": "2026-09-25T18:00:19Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443",
@@ -608,10 +608,10 @@
       "state": "synced",
       "source_sha256": "55b234ea202a9995d2f827e3c5e06df944998446b5d88267740439de6e58f6b7",
       "translated_source_sha256": "55b234ea202a9995d2f827e3c5e06df944998446b5d88267740439de6e58f6b7",
-      "target_sha256": "33d63af08a6899a54d0ec2bf0177f9f6b3268c413b40e69b5232e9f7834ae065",
+      "target_sha256": "39c4e1c49590ce826c769b3c34203c2ae433fa483f0115be7e499ed68126691d",
       "terms_sha256_at_translation": "f3ae07385fc10c458f9087ea5ea231fd2bbf0e4852b0e4c0e84ec84618762443",
       "glossary_sha256_at_translation": "5ad65c1e9e9d3455e023629d5e9dbc0f5733c5bcc54408a6669e1ab81e4ad272",
-      "translated_at": "2026-09-25T17:59:55Z",
+      "translated_at": "2026-09-25T18:00:16Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/pre-note.md": {

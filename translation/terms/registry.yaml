@@ -5193,6 +5193,121 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: v1_entity_atb_dfd_modeling
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Trust-Boundary And DFD Modeling
+  en_variants: []
+  pt: Trust-Boundary And DFD Modeling
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACM-ATB-002) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_iat_authorization_policy
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Authorization Policy Integrity And Least Privilege
+  en_variants: []
+  pt: Authorization Policy Integrity And Least Privilege
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-IAT-002) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_iat_least_privilege_authorization
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Least-Privilege Authorization Governance
+  en_variants: []
+  pt: Least-Privilege Authorization Governance
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACP-IAT-002) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_its_authorized_peer_policies
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Message Integrity And Authorized Peer Policies
+  en_variants: []
+  pt: Message Integrity And Authorized Peer Policies
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACM-ITS-004) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_its_authorized_peer_validation
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Message Integrity And Authorized Peer Validation
+  en_variants: []
+  pt: Message Integrity And Authorized Peer Validation
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-ITS-003 / ACP-ITS-004) nas tabelas de rastreabilidade
+    — identificador da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
 - key: v1_entity_tmr_peer_review
   species: 3
   state: do-not-translate

@@ -1,0 +1,91 @@
+ Jornal Oficial
+ da União Europeia
+ PT
+ Série L
+ 2025/90725
+ 19.9.2025
+ Retificação do Regulamento de Execução (UE) 2024/2956 da Comissão, de 29 de novembro de 2024, que estabelece normas técnicas de execução para a aplicação do Regulamento (UE) 2022/2554 do Parlamento Europeu e do Conselho no respeitante aos modelos normalizados para o registo de informações
+ (
+ «Jornal Oficial da União Europeia» L, 2024/2956, 2 de dezembro de 2024
+ )
+ Na página 24, na coluna com o código B_05.01.0020:
+ onde se lê:
+ «Tipo de código para identificar o terceiro prestador de serviços de TIC comunicado em B_05.01.0010
+ 1.
+ “LEI” para o LEI
+ 2.
+ “EUID” para o EUID
+ 3.
+ “Código do país” + traço inferior + “Tipo de código” para códigos não LEI e não EUID
+ Código do país: Indicar o código ISO 3166-1 alfa-2 do país de emissão do outro código para identificar o terceiro prestador de serviços de TIC
+ Tipo de código:
+ 1.
+ CRN para o número de registo da sociedade
+ 2.
+ VAT para o número de IVA
+ 3.
+ PNR para o número de passaporte
+ 4.
+ NIN para o número de identificação nacional
+ Apenas o LEI ou o EUID devem ser utilizados para as pessoas coletivas, tal como identificadas em B_05.01.0070, ao passo que o código alternativo só pode ser utilizado para uma pessoa singular que atue a título profissional.
+ Só podem ser utilizados LEI para pessoas coletivas que não estejam estabelecidas na União.»,
+ deve ler-se:
+ «Tipo de código para identificar o terceiro prestador de serviços de TIC comunicado em B_05.01.0010
+ 1.
+ “LEI” para o LEI
+ 2.
+ “EUID” para o EUID
+ 3.
+ CRN para o número de registo da sociedade
+ 4.
+ VAT para o número de IVA
+ 5.
+ PNR para o número de passaporte
+ 6.
+ NIN para o número de identificação nacional
+ Apenas o LEI ou o EUID devem ser utilizados para as pessoas coletivas, tal como identificadas em B_05.01.0070, ao passo que o código alternativo só pode ser utilizado para uma pessoa singular que atue a título profissional.
+ Só podem ser utilizados LEI para pessoas coletivas que não estejam estabelecidas na União.».
+ Na página 25, na coluna com o código B_05.01.0090:
+ onde se lê:
+ «Moeda do montante comunicado em B_05.01.0070»,
+ deve ler-se:
+ «Moeda do montante comunicado em B_05.01.0100».
+ Na página 30, na coluna com o código B_06.01.0060:
+ onde se lê:
+ «B_06.01.0060»,
+ deve ler-se:
+ «B_06.01.0050».
+ Na página 30, na coluna com o código B_06.01.0070:
+ onde se lê:
+ «B_06.01.0070»,
+ deve ler-se:
+ «B_06.01.0060».
+ Na página 31, na coluna com o código B_06.01.0080:
+ onde se lê:
+ «B_06.01.0080»,
+ deve ler-se:
+ «B_06.01.0070».
+ Na página 31, na coluna com o código B_06.01.0090:
+ onde se lê:
+ «B_06.01.0090»,
+ deve ler-se:
+ «B_06.01.0080».
+ Na página 31, na coluna com o código B_06.01.0100:
+ onde se lê:
+ «B_06.01.0100»,
+ deve ler-se:
+ «B_06.01.0090».
+ Na página 31, na coluna com o código B_06.01.0110:
+ onde se lê:
+ «B_06.01.0110»,
+ deve ler-se:
+ «B_06.01.0100».
+ Na página 35, na coluna com o código B_07.01.0110:
+ onde se lê:
+ «7.
+ Avaliação não realizada»,
+ deve ler-se:
+ «3.
+ Avaliação não realizada».
+ ELI: http://data.europa.eu/eli/reg_impl/2024/2956/corrigendum/2025-09-19/oj
+ ISSN 1977-0774 (electronic edition)

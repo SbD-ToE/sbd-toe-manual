@@ -10,3 +10,11 @@ oficial do MESMO artigo) e ao **lote jurídico** que o lead vai validar antes da
 - `MANIFEST.json` — CELEX, acto, idioma, URL de origem, data de download, sha256 do HTML e de cada ficheiro.
 
 Não é conteúdo publicado nem fonte do Manual. Não editar à mão: regenerar a partir do EUR-Lex e actualizar o manifesto.
+
+## Legislação derivada — `secondary/`
+
+Actos delegados, de execução e de alteração (RTS/ITS do DORA, NIS2 Reg. de Execução 2024/2690, EUCC e alterações, actos do CRA,
+Omnibus do AI Act 2026/1744) e versões consolidadas (AI Act, CSA, EUCC — sem valor jurídico; autênticos são só os textos do JO),
+PT e EN, no mesmo formato, com rectificações `R(NN)`, HTML de origem em `raw/` e `MANIFEST.json` (sha256 de cada ficheiro,
+estado e datas por acto). Obtidos do EUR-Lex a 2026-09-26 por um agente do Orchestrator; copiados e verificados (186 sha256
+conferidos contra o manifesto) pelo Manual agent. Ver `secondary/README.md`.

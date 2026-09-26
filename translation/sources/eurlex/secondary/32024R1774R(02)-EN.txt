@@ -1,0 +1,19 @@
+ Official Journal
+ of the European Union
+ EN
+ L series
+ 2025/90420
+ 15.5.2025
+ Corrigendum to Commission Delegated Regulation (EU) 2024/1774 of 13 March 2024 supplementing Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to regulatory technical standards specifying ICT risk management tools, methods, processes, and policies and the simplified ICT risk management framework
+ (
+ Official Journal of the European Union L, 2024/1774, 25 June 2024
+ )
+ On page 23, in Article 22 (‘ICT-related incident management policy’), first subparagraph, point (d):
+ for:
+ ‘(d)
+ retain all evidence relating to ICT-related incidents for a period that shall be no longer than necessary for the purposes for which the data are collected, commensurate with the criticality of the affected business functions, supporting processes, and ICT and information assets, in accordance with Article 15 of Commission Delegated Regulation (EU) 2024/1772 (12) and with any applicable retention requirement pursuant to Union law;’,
+ read:
+ ‘(d)
+ retain all evidence relating to ICT-related incidents for a period that shall be no longer than necessary for the purposes for which the data are collected, commensurate with the criticality of the affected business functions, supporting processes, and ICT and information assets, in accordance with Article 8(2) of Commission Delegated Regulation (EU) 2024/1772 (12) and with any applicable retention requirement pursuant to Union law;’.
+ ELI: http://data.europa.eu/eli/reg_del/2024/1774/corrigendum/2025-05-15/oj
+ ISSN 1977-0677 (electronic edition)

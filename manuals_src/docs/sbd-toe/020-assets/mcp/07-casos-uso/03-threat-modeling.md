@@ -15,7 +15,7 @@ tags:
 
 O *threat modelling* tem uma falha previsível em ambientes acelerados — ou se faz cedo demais (e fica desactualizado quando o código chega), ou se faz tarde demais (e vira teatro de conformidade). O MCP ajuda a fazê-lo num momento útil: o agente extrai do manual as *threats* já catalogadas para o *risk level* do projecto e os *concerns* do sistema, e ancora-as nos controlos que as mitigam — com IDs.
 
-O exemplo aqui é uma API pública de gestão de utilizadores (criar conta, autenticar, recuperar password). Em duas chamadas ao servidor, o agente reúne o material para um *threat model* defensável, com confiança explicitamente marcada (`derived` vs `heuristic`) sempre que a ligação entre *threat* e controlo é inferida e não estrutural.
+O exemplo aqui é uma API pública de gestão de utilizadores (criar conta, autenticar, recuperar password). Em duas chamadas ao servidor, o agente reúne o material para um *threat model* defensável, com a confiança de cada ligação marcada em `mitigation_confidence`. Hoje, todas as ligações servidas são `derived`, estruturais. Se aparecer outro valor, a ligação é inferida e rotula-se como tal.
 
 ## Pré-requisitos {#pré-requisitos}
 

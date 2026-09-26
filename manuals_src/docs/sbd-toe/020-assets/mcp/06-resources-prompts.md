@@ -29,7 +29,21 @@ A diferença prática:
 
 ## Resources {#resources}
 
-Todos os resources usam o esquema `sbd://toe/*` e devolvem `text/markdown`, `application/json` ou `application/yaml` consoante o tipo.
+Todos os resources usam o esquema `sbd://toe/*` e devolvem `text/markdown`, `application/json` ou `application/yaml` consoante o tipo. O MIME de cada um é o que `resources/list` publica:
+
+| resource | MIME |
+|---|---|
+| `sbd://toe/model` | `application/json` |
+| `sbd://toe/notes` · `sbd://toe/notes/{id}` | `application/json` |
+| `sbd://toe/codegen-instructions/{mode}` | `application/json` |
+| `sbd://toe/quick-start` | `application/json` |
+| `sbd://toe/activation-vocabulary` | `application/json` |
+| `sbd://toe/index-compact` | `application/json` |
+| `sbd://toe/chapter-applicability/{riskLevel}` | `application/json` |
+| `sbd://toe/version` | `application/json` |
+| `sbd://toe/ontology` | `application/yaml` |
+| `sbd://toe/agent-guide` · `sbd://toe/grounded-codegen-guide` | `text/markdown` |
+| `sbd://toe/skill/{role}` · `sbd://toe/subagent/{role}` | `text/markdown` |
 
 ### `sbd://toe/agent-guide` {#sbdtoeagent-guide}
 
@@ -59,7 +73,12 @@ Todos os resources usam o esquema `sbd://toe/*` e devolvem `text/markdown`, `app
 sbd://toe/chapter-applicability/L2
 ```
 
-Devolve um objeto com esta forma, em que `chapters[]` traz a exigência de cada capítulo nesse nível:
+Devolve um objeto com esta forma. O objecto de topo traz `riskLevel`, `semantics`, `canonical_anchor` e `chapters`. Cada capítulo de `chapters[]` traz `chapter_id`, `title` e `applicable`, que é sempre `true`: nenhum capítulo é excluído. Traz também:
+
+- `demand`: as contagens `obrigatorio`, `recomendado`, `opcional` e `specific` nesse nível;
+- `dominant`: o perfil dominante do capítulo;
+- `roles` e `user_stories`: contagens;
+- `source`: de onde vem a linha. Um capítulo fundacional sem *assignments* no bundle declara um *fallback*.
 
 ```json
 {
@@ -82,7 +101,7 @@ Devolve um objeto com esta forma, em que `chapters[]` traz a exigência de cada 
 ### `sbd://toe/grounded-codegen-guide` {#sbdtoegrounded-codegen-guide}
 
 **MIME:** `text/markdown`
-**Conteúdo:** guia agente para `prepare_sbd_toe_codegen_context` — *workflow*, ramificação por *status* (`ready_for_codegen` / `needs_clarification` / `needs_decomposition` / `unsupported_scope`), disciplina de *output* (citar ids de `citations`, preencher `security_rationale`, distinguir code/tests/evidence), e **proibições explícitas** (não inventar IDs, não declarar conformidade, não poluir código com rastreabilidade-noise).
+**Conteúdo:** guia agente para `prepare_sbd_toe_codegen_context` — *workflow*, ramificação por *status* (`ready_for_codegen` / `needs_clarification` / `needs_decomposition` / `needs_input` / `unsupported_scope`), disciplina de *output* (citar ids de `citations`, preencher `security_rationale`, distinguir code/tests/evidence), e **proibições explícitas** (não inventar IDs, não declarar conformidade, não poluir código com rastreabilidade-noise).
 
 **Quando ler:** sempre antes de qualquer trabalho de *codegen* ou *review* via `prepare_sbd_toe_codegen_context`.
 
@@ -109,11 +128,16 @@ Devolve um objeto com esta forma, em que `chapters[]` traz a exigência de cada 
 ### `sbd://toe/notes/{id}` · `sbd://toe/notes` {#sbdtoenotesid--sbdtoenotes}
 
 **Parâmetro:** `{id}` = um `note_id` (interpolado no URI)
-**Conteúdo:** as notas que as respostas trazem por referência. Em vez de repetir a mesma nota em cada resposta, o servidor devolve um `note_id`, e `sbd://toe/notes/{id}` resolve-o. A descrição de `sbd://toe/notes` está na lista servida (`resources/list`).
+**MIME:** `application/json`
+**Conteúdo:** o registo das notas por referência. As respostas do prepare trazem um `note_id` em vez de repetirem a prosa, mais um cabeçalho `notes`. `sbd://toe/notes` devolve o índice `{ids, notes}`, com todos os ids e textos. `sbd://toe/notes/{id}` devolve `{id, text}`. Um id desconhecido devolve um erro declarado com os ids válidos.
 
 ### `sbd://toe/model` · `sbd://toe/codegen-instructions/{mode}` {#sbdtoemodel--sbdtoecodegen-instructionsmode}
 
-A descrição de ambos está na lista servida (`resources/list`).
+**MIME:** `application/json` (ambos)
+
+**`sbd://toe/model`** é o mapa do conhecimento servido, não a lista de tools. Traz as entidades com as contagens reais, as relações com as cardinalidades reais, e os capítulos e as categorias com a forma de os alcançar. Mostra as três formas de pedir: por conceito (o atalho `concerns`), por estrutura (`chapters`/`categories`, sempre possível) e por navegação (o grafo), com quando usar cada uma. Tudo é derivado do bundle servido; nada enumerável é escrito à mão. Ler quando o atalho de `concerns` não tiver a pergunta. Blocos: `how_to_ask`, `entities`, `relations`, `chapters`, `categories` e `see_also`.
+
+**`sbd://toe/codegen-instructions/{mode}`** é a cópia de referência, por modo (`codegen`, `review`, `test-plan`), do texto estático do prepare. Contém os slots de `llm_codegen_instructions`, com as regras de montagem, e o esqueleto de `security_rationale_template`. Montados pelas regras embutidas, dão o mesmo texto que o prepare põe inline. Contém ainda a legenda `detail_encoding`, que explica como ler um *payload* `lista`/`standard`. As instruções e o *template* vêm inline em todos os níveis: este resource é a referência, não uma dependência. Com `read_sbd_toe_resource`, `slot` devolve um só slot.
 
 ### `sbd://toe/version` {#sbdtoeversion}
 

@@ -76,7 +76,7 @@ Em clientes que expõem *prompts* MCP, o *prompt* `setup_sbd_toe_agent(riskLevel
 
 ## A primeira chamada real {#a-primeira-chamada-real}
 
-Para uma tarefa concreta, a primeira chamada é a que as descrições das tools marcam como *START HERE*: `select_sbd_toe_requirements`, com aquilo que o agente leu **declarado** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. O servidor não adivinha a partir do texto da tarefa: sem declaração, devolve `needs_input` com o vocabulário aceite (publicado em `sbd://toe/activation-vocabulary`). Detalhe na [referência de tools](./05-tools-reference.md).
+Para uma tarefa concreta, a primeira chamada é a que as descrições das tools marcam como *START HERE*: `select_sbd_toe_requirements`, com aquilo que o agente leu **declarado** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. `exposure: "local"` é válido mas inerte: declarado sozinho, dá `needs_input`. O servidor não adivinha a partir do texto da tarefa: sem declaração, devolve `needs_input` com o vocabulário aceite (publicado em `sbd://toe/activation-vocabulary`). Detalhe na [referência de tools](./05-tools-reference.md).
 
 ## E a seguir {#e-a-seguir}
 

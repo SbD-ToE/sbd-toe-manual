@@ -49,7 +49,7 @@ prepare_sbd_toe_codegen_context({
 A resposta é `ready_for_codegen`, dentro do envelope. O `task` fica registado como contexto; o que conduz a seleção é a declaração — `risk_level`, `concerns`, `technologies`. A `adjacency` da resposta avisa o que ficou por declarar e mudaria o conjunto: neste caso, a exposição pública.
 
 :::note O que muda ao declarar mais
-Declarar também `"exposure": "public"` alarga a seleção para 70 requisitos — acima do tecto do nível `lista`. A resposta passa então a `needs_decomposition`, com dois lotes executáveis (de 48 e de 23 requisitos) cuja união é a seleção inteira. Não é um erro: é o servidor a dizer que a tarefa, assim declarada, não cabe numa só resposta desse nível, e a propor como a percorrer sem perder nada.
+Declarar também `"exposure": "public"` alarga a seleção para 70 requisitos, mais do que o nível `lista` promete caber. A resposta passa então a `needs_decomposition`, com lotes executáveis cuja união é a seleção inteira. Os lotes podem partilhar requisitos: o que as `technologies` preservadas trazem por si (aqui, SES-008 por `jwt`) vem em todos. Por isso a soma das contagens pode passar do total. Não é um erro: é o servidor a dizer que a tarefa, assim declarada, não cabe numa só resposta desse nível, e a propor como a percorrer sem perder nada.
 :::
 
 ### 3. Ramificar por `status` {#3-ramificar-por-status}
@@ -85,7 +85,7 @@ Não re-chamar a tool até o utilizador responder.
 
 **STOP**. Não escolher um sub-task silenciosamente. Responder:
 1. `reasons[]`.
-2. Quando a seleção ultrapassa o tecto do nível de `detail`, a resposta traz em `requirement_ceiling.batches` os lotes executáveis (`categories` + os ativadores preservados) cuja união é a seleção inteira — apresentar esses lotes, em vez de redesenhar sub-tarefas à mão.
+2. Quando a seleção passa do que o nível de `detail` promete caber, a resposta traz em `requirement_ceiling.batches` os lotes executáveis (`categories` + os ativadores preservados) cuja união é a seleção inteira; os lotes podem partilhar requisitos — apresentar esses lotes, em vez de redesenhar sub-tarefas à mão.
 3. **Pergunta ao utilizador por que lote começar.**
 
 #### `unsupported_scope` {#unsupported_scope}
@@ -103,8 +103,8 @@ Não re-chamar a tool até o utilizador responder.
 O que chega com `ready_for_codegen` está desenhado para caber no contexto do agente sem perder rastreabilidade:
 
 - **Um objeto por requisito** — `{id, name, type, description, verify, evidence}`: o requisito, como se verifica e que evidência se espera, no mesmo sítio.
-- **Níveis de `detail`** — `lista`, `standard` e `full` definem quanto de cada requisito vem *inline*. O que cada nível inclui está na descrição servida da tool; a `lista` é a escolha natural para começar.
-- **Tectos por contagem** — cada nível aceita até um certo número de requisitos. Acima do tecto, a resposta é `needs_decomposition`, com os lotes de `requirement_ceiling.batches` que somam o todo.
+- **Níveis de `detail`** — `lista`, `standard` e `full` servem o mesmo conjunto de ids citáveis e o mesmo requisito completo; muda o que vem *inline* e o que vem por referência (ver a [referência da tool](../05-tools-reference.md#prepare_sbd_toe_codegen_context)). A `lista` é a escolha natural para começar.
+- **Envelope de tokens** — `lista` e `standard` prometem caber num envelope, medido sobre o *payload* que o cliente recebe. Acima dele, a resposta é `needs_decomposition`, com os lotes medidos de `requirement_ceiling.batches`, que juntos cobrem a seleção inteira. `full` não tem envelope e declara o preço em `size_estimate`.
 - **`adjacency`** — o que não foi declarado e mudaria o conjunto selecionado. É a forma de o servidor dizer «isto também podia contar» sem o decidir pelo agente.
 - **`size_estimate`** — o tamanho da própria resposta; `within_envelope: false` avisa que excede o envelope previsto.
 - **Notas por referência** — em vez de repetir a mesma nota, a resposta traz um `note_id`, que se resolve em `sbd://toe/notes/{id}`.

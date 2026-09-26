@@ -33,6 +33,24 @@ Cada tool abaixo lista parâmetros, *output* esperado, e padrão recomendado. A 
 - `changed_files` ativa capítulos pela tabela publicada — é a forma direta de levar um *diff* à seleção.
 - O texto da tarefa (`task`) é registado como contexto, não interpretado.
 - Sem declaração, a resposta é `needs_input`: devolve o vocabulário, os candidatos a confirmar e, para declarações inertes, os `valid_values`. O agente confirma com o utilizador e volta a chamar com a declaração completa.
+- `exposure` aceita quatro valores. `local` é válido e inerte, não activa nada: declarado sozinho, dá `needs_input`, nunca uma seleção vazia em silêncio. `internal` e `authenticated` activam `auth` e `logging`. `public` activa `auth`, `logging`, `api`, `validation` e `architecture`. A fonte é `sbd://toe/activation-vocabulary`.
+
+**A resposta traz:**
+
+- `selection`, com `selected[]`, `narrowed_out` e `excluded_by_level`. Cada entrada de `selected[]` traz `requirement_id`, `name`, `category`, `type`, `source_chapter` e `selection_trace[]`, com a camada, a fonte, o gatilho e o `basis` (`declared` ou `lexical`).
+- `context`, com os capítulos e as categorias activados.
+- `out_of_scope_chapters`, com o que nenhuma declaração activou, por capítulo e contagem, e o caminho para o trazer.
+- `task`, registado como `recorded_context`, com `affects_selection: false`.
+- `basis_summary`, `coverage` (total, página, `nextOffset`, e as contagens de `narrowed_out` e `excluded_by_level`), `denominators` (os denominadores nomeados) e `cross_surface_check` (a concordância com `consult_security_requirements` na parte comparável).
+- `overlay`, `activation_trace`, `provenance` e `next`.
+
+`selected` é paginado por ordem de id, não por relevância: para chegar a uma categoria, declara-se o *concern* que a activa, ou pede-se por estrutura (`categories`). A linha de `next` que aponta para o prepare anuncia o custo como estimativa.
+
+O `select` tem o mesmo eixo `detail` que o prepare:
+
+- `full`, o nível por omissão, traz o `selection_trace` completo em cada item.
+- `standard` move as justificações distintas para `selection_trace_legend`, e cada item referencia-as em `trace`.
+- `lista` é o mesmo que `standard`, sem os campos deriváveis `type` e `source_chapter`.
 
 **Encadeamento típico:** `select_sbd_toe_requirements` → `prepare_sbd_toe_codegen_context` (para gerar código com esses requisitos) → [`get_sbd_toe_verification_matrix(requirement_ids)`](#get_sbd_toe_verification_matrix) (a prova esperada para cada requisito selecionado).
 
@@ -67,7 +85,7 @@ Em clientes **sem suporte de MCP sampling** (ex.: Claude Code), a tool **não in
 
 ### `explain_sbd_toe_topic` {#explain_sbd_toe_topic}
 
-Leitura CONSULT. Os parâmetros e a forma da resposta estão na descrição servida (`tools/list`).
+Leitura CONSULT: «o que é que o manual diz sobre X», sem tarefa e sem projecto. Pergunta-se por conceito (`concern`) ou por estrutura (`category` ou `chapter`). A resposta percorre os requisitos (com `applies_at`), a orientação (práticas), a prova, as ameaças, os anti-padrões («o que NÃO fazer») e o lugar no ciclo de vida, distinguindo requisito de orientação e marcando a proveniência. `risk_level` é opcional e só anota: não filtra, e a resposta é a mesma sem ele. É paginada sobre os requisitos.
 
 ---
 
@@ -78,7 +96,7 @@ Leitura CONSULT. Os parâmetros e a forma da resposta estão na descrição serv
 **Parâmetros:**
 - `risk_level` (`L1` | `L2` | `L3`) — obrigatório
 - `concerns` (string[]) — opcional, valores do **vocabulário fechado** abaixo
-- `exposure`, `data_sensitivity` — opcionais
+- `exposure`, `data_sensitivity` — opcionais (`exposure`: `local`, `internal`, `authenticated` ou `public` — ver [`select_sbd_toe_requirements`](#select_sbd_toe_requirements))
 - `mode` (`full` | `index`) — opcional
 
 **Vocabulário de `concerns` (fechado):** os valores aceites, e o que cada um ativa, estão publicados em `sbd://toe/activation-vocabulary` — é aí que se confirmam, em vez de numa lista copiada.
@@ -108,7 +126,7 @@ Valores fora do vocabulário são **declarados, não aproximados** (não há *fu
 }
 ```
 
-`coverage_gaps.requirements_without_control_link` é **sempre devolvido** (hoje `count: 0` em L1, L2 e L3): declara os requisitos activos sem entrada em `requirement_control_links` — uma lacuna declarada, não uma ausência de obrigação (o requisito é servido; os controlos são, no máximo, derivados por domínio, `_confidence: "derived"`).
+`coverage_gaps.requirements_without_control_link` é **sempre devolvido**. Com o conhecimento servido actual, `count` é 0 nos três níveis. Se aparecer um requisito sem ligação a controlos, é listado aqui como lacuna declarada, não como ausência de obrigação (o requisito é servido; os controlos são, no máximo, derivados por domínio, `_confidence: "derived"`).
 
 **Tamanho:** a resposta completa de L2/L3 pode exceder o contexto do cliente. O guia (`sbd://toe/agent-guide`) publica os tamanhos medidos na *build* servida, e cada resposta declara o seu em `size_estimate`.
 **Regra prática:** **sempre** passar `concerns` em L2/L3 — a resposta fica muito mais pequena.
@@ -239,6 +257,10 @@ resolve_entities({"record_type": "requirement", "filters": {"requirement_id": "R
 **Parâmetros:**
 - `risk_level` (`L1` | `L2` | `L3`) — obrigatório
 - `concerns` (string[]) — opcional
+- `detail` (`lista` | `standard` | `full`) — opcional; `minimal` é recusado, com o mesmo aviso que no prepare
+- `limit` — opcional, 25 por omissão; `coverage` e `size_estimate` vêm sempre
+
+**Ordem:** as ameaças vêm ordenadas por pertença ao âmbito declarado. Primeiro vêm os capítulos de domínio dos *concerns* declarados. Os capítulos 01 e 02, com as meta-ameaças de processo, vêm no fim. Dentro de cada grupo, a ordem é por `mitigation_confidence`, capítulo e id. Por isso, a primeira página é a parte relevante, e as seguintes acrescentam o geral.
 
 **Output:** (ameaças `MT-NNN`; cada ligação cita o `control_id` real)
 ```json
@@ -261,7 +283,7 @@ resolve_entities({"record_type": "requirement", "filters": {"requirement_id": "R
 - A tool **corre `consult` internamente** — não chamar `consult_security_requirements` antes.
 
 :::info *Routing* dos *concerns* — `routing_basis`
-Cada resposta declara, por *concern*, a base do *routing* em `routing_basis`: `domain_chapter` quando o *concern* tem um capítulo de ameaças próprio, `activated_controls` quando as ameaças chegam pelos capítulos que definem os controlos ativados. Só uma parte dos *concerns* tem capítulo de ameaças próprio; ler `routing_basis` diz, para cada um, de onde vieram as ameaças devolvidas.
+Todos os *concerns* do vocabulário são aceites, mas só uma parte tem capítulo de ameaças próprio (por exemplo `architecture`, `iac`, `logging`, `supply_chain` e `threat_modeling`). Para os outros, as ameaças chegam pelos capítulos que definem os controlos activados. Cada resposta declara, por *concern*, a base do *routing* em `routing_basis`: `domain_chapter` quando o *concern* tem um capítulo de ameaças próprio, `activated_controls` quando as ameaças chegam pelos capítulos que definem os controlos activados. Um *concern* que não tem rota vai para `unsupported_concerns`.
 :::
 
 ---
@@ -272,7 +294,15 @@ Lista os artefactos que o manual identifica para um repositório, agrupados por 
 
 **Parâmetros:** `riskLevel`, `offset`, `limit` (paginado).
 
-**Output:** `byChapter`, `totalArtefacts`, `artefact_totals`, `coverage`, `risk_level_effect` (o efeito declarado do *risk level*).
+**Output:**
+
+- `riskLevel` e `risk_level_effect`, que é `{filters, basis, note, asserts}` e diz quanto o nível filtra, e porquê;
+- `totalArtefacts`, o número de linhas capítulo↔artefacto;
+- `artefact_totals`, com `distinct_count` (artefactos distintos) e `chapter_relation_count` (linhas). Nunca se somam linhas para contar artefactos;
+- `byChapter[]`, em que cada entrada é `{chapterId, artefacts[]}` e cada artefacto é `{artefactId, chapterId, riskLevels[]}`, com ids na forma `ART-<slug>-<hash>`;
+- `coverage`, que pagina sobre os capítulos, mais `size_estimate`, `note` e `next`.
+
+A relação capítulo↔artefacto é uma projecção: não diz quem possui o artefacto nem obriga a produzi-lo.
 
 **Padrão:** *bootstrap* de governança num repo novo — gerar a partir da lista artefactos por capítulo, criar os ficheiros vazios + READMEs.
 
@@ -308,13 +338,17 @@ A tool **mais sofisticada** — devolve contexto determinístico para *codegen*,
 | `ready_for_codegen` | Scope claro, contexto pronto | Proceder — preencher `security_rationale` |
 | `needs_input` | Nada foi declarado | **STOP** — a resposta traz o vocabulário, os candidatos a confirmar e, para declarações inertes, os `valid_values`; confirmar com o utilizador e declarar |
 | `needs_clarification` | Inputs ambíguos | **STOP** — perguntar ao utilizador, não gerar código |
-| `needs_decomposition` | Scope demasiado largo, ou seleção acima do tecto do nível de `detail` | **STOP** — acima do tecto, seguir os lotes executáveis de `requirement_ceiling.batches`, cuja união é a seleção inteira |
+| `needs_decomposition` | Scope demasiado largo, ou seleção acima do que o nível de `detail` promete caber | **STOP** — nesse caso, executar os lotes medidos de `requirement_ceiling.batches`, cuja união é a seleção inteira (os lotes podem partilhar requisitos) |
 | `unsupported_scope` | Capacidade ausente no servidor | **STOP** — reportar verbatim |
 
 **Forma da resposta:**
 
 - **Um objeto por requisito** — `{id, name, type, description, verify, evidence}`: o requisito, como se verifica e que evidência se espera, num só sítio.
-- **`detail`** — `lista`, `standard` ou `full` controla quanto de cada requisito vem *inline*; cada nível tem um tecto por contagem de requisitos, acima do qual a resposta passa a `needs_decomposition` com lotes que somam o todo.
+- **`detail`** — os três níveis servem o mesmo conjunto de ids citáveis e o mesmo requisito completo, e a descrição nunca é cortada em nenhum nível. Muda o que vem *inline* e o que vem por referência:
+  - **`lista`** traz inline os requisitos, os controlos e as entidades do grafo agrupadas por *slice*, o bloco `citations`, as instruções de geração e o *template* de `security_rationale`. Por referência vêm o `manual_grounding` (contagens por grupo e `entries_ref` para `full`), as relações (`relations_summary`, com a contabilidade exacta) e o *trace* de activação (só com `debug: true`). A `adjacency` vem em resumo, com `detail_ref`.
+  - **`standard`** é o mesmo que `lista`, mais o detalhe da `adjacency` inline, com todos os sinais.
+  - **`full`** é o nível por omissão. Traz o mesmo que `standard`, mais o `manual_grounding` verbatim, o `activation_trace` e uma `relations_ref` executável em `trace_sbd_toe_graph`. Com `include_relations: true`, as relações vêm inline.
+- **Envelope** — `lista` e `standard` prometem caber num envelope de tokens, medido sobre o *payload* que o cliente recebe. Acima dele, a resposta é `needs_decomposition` com lotes medidos que, juntos, cobrem a seleção inteira. `full` não tem envelope e declara o preço em `size_estimate`.
 - **`adjacency`** — o que não foi declarado e mudaria o conjunto selecionado (por exemplo, declarar a exposição pública).
 - **`completeness_report.verification`** — a cobertura de verificação, com os ids de padrão em `verification.by_ref`.
 - **`size_estimate`** — o tamanho da própria resposta; `within_envelope: false` avisa que excede o envelope previsto.
@@ -376,7 +410,7 @@ A narrativa de implementação canon/20 de um capítulo (o "como implementar"), 
 
 ### `get_sbd_toe_chapter_capability` {#get_sbd_toe_chapter_capability}
 
-Leitura IMPL. Os parâmetros e a forma da resposta estão na descrição servida (`tools/list`).
+Leitura IMPL: para implementar o capítulo N, que capacidade é precisa, como se sabe que existe e como se mede. Devolve os KPIs que o manual define para o capítulo, com `thresholds_by_level` (L1/L2/L3) como dados, e os artefactos que a capacidade deve produzir. Alcança-se por `chapter`, `metric_id` ou `dimension`. `risk_level` acrescenta `target_at_level`, e sem `chapter` devolve todos os KPIs publicados. Fecha o ciclo com [`assess_sbd_toe_implementation`](#assess_sbd_toe_implementation). Não é a leitura GUIDE: essa é [`select_sbd_toe_requirements`](#select_sbd_toe_requirements).
 
 ### `get_sbd_toe_operating_model` {#get_sbd_toe_operating_model}
 
@@ -423,11 +457,21 @@ Lente regulatória (o inverso da *provenance*): dado um *framework*, que áreas/
 
 ### `get_sbd_toe_playbook` {#get_sbd_toe_playbook}
 
-Leitura **NORMATIVA**: devolve os playbooks publicados por diploma, com a autoridade declarada. Para referenciais sem cross-check publicado (ISO, PCI, SOC2, …), a resposta declara `no_cross_check` em vez de improvisar uma correspondência. É o caminho principal do [caso de uso de cross-check normativo](./casos-uso/cross-check-conformidade), a par de `map_sbd_toe_regulatory_activation`. Os parâmetros estão na descrição servida (`tools/list`).
+Leitura **NORMATIVA**: devolve os playbooks publicados por diploma, com a autoridade declarada. Para referenciais sem cross-check publicado (ISO, PCI, SOC2, …), a resposta declara `no_cross_check` em vez de improvisar uma correspondência. É o caminho principal do [caso de uso de cross-check normativo](./casos-uso/cross-check-conformidade), a par de `map_sbd_toe_regulatory_activation`.
+
+Todos os parâmetros são opcionais:
+
+- Sem argumentos, devolve o índice.
+- `framework`, por código (`DORA`, `NIS2`, `CRA`, `RGPD`, `AI-ACT`, `ENISA-CSA`) ou id (`EXT-DORA`…), devolve os playbooks desse diploma.
+- `playbook_id`, um id vindo do índice (ex.: `OVR-DORA-playbook`), devolve as secções paginadas.
+- `kind` filtra o índice por tipo: `normative_cross_check`, `implementation_playbook`, `convergence_note`, `illustrative_example` ou `illustrative_index`.
+- `offset` e `limit` (por omissão 10) paginam as secções.
+
+Os exemplos ilustrativos vêm numa banda separada, e um diploma sem cross-check publicado devolve `no_cross_check`. O índice traz `delimitation`, `scope`, `normative_playbooks`, `illustrative_examples`, `covered_frameworks`, `roadmap_declared_by_manual` e `coverage`.
 
 ### `get_sbd_toe_macro_processes` {#get_sbd_toe_macro_processes}
 
-Leitura **PROGRAMA**. Os parâmetros e a forma da resposta estão na descrição servida (`tools/list`).
+Leitura **PROGRAMA**: por onde começar e em que sequência. Sem argumentos, devolve a ordem de adopção publicada, derivada só das arestas de dependência, os macro-processos e os pré-requisitos. Com `mp_id` (ex.: `MP-01`), devolve um macro-processo em detalhe: pergunta, continuidade, invariante, dono, participantes, percurso de capítulos, indicadores, pontos de controlo, evidência esperada e proporcionalidade L1–L3. Declara os seus limites: não há entidade «programa», a travessia MP↔fase do SDLC é uma lacuna publicada, e `traverses_bundles` é um percurso, não uma relação de pertença.
 
 ---
 
@@ -435,7 +479,7 @@ Leitura **PROGRAMA**. Os parâmetros e a forma da resposta estão na descrição
 
 ### `read_sbd_toe_resource` {#read_sbd_toe_resource}
 
-Lê um resource `sbd://toe/*` por URI, através de uma chamada de tool:
+Espelho de `resources/read` para clientes sem suporte a *resources* MCP, como o Claude Desktop. Devolve qualquer resource por URI, incluindo os que têm *template*, com o valor já na URI (ex.: `sbd://toe/notes/prepare.repeat_call_hint`). `slot` devolve um só slot de um recurso JSON com slots (`codegen-instructions`). `char_offset` e `char_limit` paginam o texto. Uma URI desconhecida devolve um erro declarado com a lista válida.
 
 ```
 read_sbd_toe_resource(uri="sbd://toe/version")
@@ -443,7 +487,15 @@ read_sbd_toe_resource(uri="sbd://toe/version")
 
 ### `trace_sbd_toe_requirement_sources` · `trace_sbd_toe_graph` {#trace_sbd_toe_requirement_sources--trace_sbd_toe_graph}
 
-Os parâmetros e a forma da resposta de ambas estão na descrição servida (`tools/list`).
+**`trace_sbd_toe_requirement_sources`** diz de onde vem cada requisito. As fontes directas (`source_anchors`, o marcador «Fontes» do próprio manual) vêm separadas da cadeia compensada REQ→CTRL→ACO→fontes, que tem tipo e confiança por salto. Essa cadeia leva o rótulo `coverage_compensated`: é cobertura por correspondência entre modelos, não autoria, e `related` não cobre. Aceita 1 a 50 `requirement_ids` e é paginada. `include_chains: false` devolve só contagens e referência. Requisitos sem fonte declarada e ids desconhecidos são declarados.
+
+**`trace_sbd_toe_graph`** faz travessia multi-salto, curada, sobre o grafo de relações da AppSec Core (slices, objectivos de controlo, mecanismos, práticas), para perguntas de rastreabilidade que as tools de alto nível não expõem. Escolhe-se uma lente com `lens`:
+
+- `slice_implementation`: slice → objectivos → mecanismos e práticas;
+- `objective_realization`: objectivo → mecanismos e práticas;
+- `mechanism_provenance`: mecanismo ou prática → objectivos → slices.
+
+`anchor` restringe a travessia a uma entidade. A travessia é determinística e paginada (`page`, `pageSize` até 200, `total` e `cursor`), e nunca trunca em silêncio. É o destino das `relations_ref` do prepare.
 
 ---
 

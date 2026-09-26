@@ -28,7 +28,7 @@ Há uma janela curta no início de um repositório novo em que tudo é mais bara
 plan_sbd_toe_repo_governance(riskLevel, offset, limit)
 ```
 
-**Output esperado** (campos): `byChapter` (os artefactos agrupados por capítulo), `totalArtefacts`, `artefact_totals`, `coverage` e `risk_level_effect`. Os ids de artefacto têm a forma `ART-<slug>-<hash>`. A resposta é paginada (`offset` / `limit`): percorrer todas as páginas antes de dar a lista por completa.
+**Output esperado** (campos): `byChapter[]` (os artefactos agrupados por capítulo, cada um `{artefactId, chapterId, riskLevels[]}`), `totalArtefacts` (o número de linhas capítulo↔artefacto), `artefact_totals` (`distinct_count`, os artefactos distintos, e `chapter_relation_count`, as linhas — nunca se somam linhas para contar artefactos), `coverage` e `risk_level_effect`. Os ids de artefacto têm a forma `ART-<slug>-<hash>`. A relação capítulo↔artefacto é uma projecção: não diz quem possui o artefacto nem obriga a produzi-lo. A resposta é paginada (`offset` / `limit`): percorrer todas as páginas antes de dar a lista por completa.
 
 ### 2. Passar o *risk level* {#2-filtrar-por-risk-level-opcional}
 
@@ -97,7 +97,7 @@ Este repositório segue o manual Security by Design — Theory of Everything.
 
 - O *bootstrap* gera **placeholders** — não preenche os artefactos. Cada artefacto requer trabalho de equipa.
 - **Não declarar conformidade** com base na existência de placeholders. Conformidade requer conteúdo preenchido + evidência.
-- Documentar o ***risk level* assumido** explicitamente em cada artefacto — se subir, alguns artefactos extra ficam a faltar.
+- Documentar o ***risk level* assumido** explicitamente em cada artefacto. Ao subir de L1 para L2, o capítulo 03 passa a listar os seus artefactos, e a lista por capítulo cresce, mas não aparecem artefactos novos. `risk_level_effect` declara que o nível filtra pouco, por desenho.
 
 ## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 

@@ -174,7 +174,7 @@ Para PRs que tocam **múltiplos capítulos** simultaneamente. Versão expandida 
 
 Quando `prepare_sbd_toe_codegen_context` devolve `needs_decomposition` repetidamente.
 
-Se a causa é a seleção ter ultrapassado o tecto do nível de `detail`, a resposta já traz a decomposição: os lotes executáveis de `requirement_ceiling.batches` (`categories` + os ativadores preservados), cuja união é a seleção inteira. Seguir esses lotes, um de cada vez — não redesenhar a decomposição à mão. O padrão abaixo aplica-se ao resto dos casos:
+Se a causa é a seleção passar do que o nível de `detail` promete caber, a resposta já traz a decomposição: os lotes executáveis de `requirement_ceiling.batches` (`categories` + os ativadores preservados), cuja união é a seleção inteira (os lotes podem partilhar requisitos). Seguir esses lotes, um de cada vez — não redesenhar a decomposição à mão. O padrão abaixo aplica-se ao resto dos casos:
 
 ```
 1. Primeira chamada com a task original

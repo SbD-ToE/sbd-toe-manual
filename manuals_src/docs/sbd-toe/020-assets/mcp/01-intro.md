@@ -63,7 +63,7 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 |---|---|---|
 | `select_sbd_toe_requirements` | GUIDE | Porta de entrada (*START HERE*): seleção declarativa, determinística e reproduzível dos requisitos a partir do que o agente declara; sem declaração → `needs_input` |
 | `search_sbd_toe_manual` | CONSULT | Pesquisa narrativa/conceptual com citações (não normativa) |
-| `explain_sbd_toe_topic` | CONSULT | Leitura CONSULT — parâmetros e resposta na descrição servida (`tools/list`) |
+| `explain_sbd_toe_topic` | CONSULT | «O que é que o manual diz sobre X», por conceito ou por estrutura: requisitos, orientação, prova, ameaças, anti-padrões e lugar no ciclo de vida |
 | `consult_security_requirements` | CONSULT | Determinístico: requisitos + controlos activos por *risk level* (com *concerns*) |
 | `map_sbd_toe_applicability` | CONSULT | Exigência por capítulo para o *risk level* e o perfil do projeto |
 | `get_sbd_toe_chapter_brief` | CONSULT | Resumo estruturado de um capítulo (fases, artefactos, tópicos) |
@@ -78,18 +78,18 @@ A linha editorial atravessa todos os modos: **o MCP devolve aquilo que o manual 
 | `answer_sbd_toe_manual` | CONSULT | Q&A *grounded* (degrada para retrieval sem *MCP sampling*) |
 | `map_sbd_toe_regulatory_activation` | CONSULT | Framework (DORA/NIS2/CRA/RGPD) → capítulos do manual que activa |
 | `get_sbd_toe_playbook` | NORMATIVA | Playbooks publicados por diploma, com autoridade declarada; `no_cross_check` para referenciais sem cross-check publicado (ISO, PCI, SOC2, …) |
-| `get_sbd_toe_macro_processes` | PROGRAMA | Leitura PROGRAMA — parâmetros e resposta na descrição servida (`tools/list`) |
+| `get_sbd_toe_macro_processes` | PROGRAMA | Por onde começar e em que sequência: ordem de adopção, macro-processos e pré-requisitos; com `mp_id`, um macro-processo em detalhe |
 | `get_sbd_toe_chapter_implementation_checklist` | IMPL | "Como implementar o cap. NN" — narrativa canon/20 |
-| `get_sbd_toe_chapter_capability` | IMPL | Leitura IMPL — parâmetros e resposta na descrição servida (`tools/list`) |
+| `get_sbd_toe_chapter_capability` | IMPL | Capacidade para implementar um capítulo: KPIs com `thresholds_by_level` e artefactos a produzir |
 | `get_sbd_toe_operating_model` | IMPL | RACI / governança / cadências (do *rollout playbook*) |
 | `plan_sbd_toe_rollout` | IMPL | Roadmap por fases — ordem de implementação |
 | `get_sbd_toe_verification_matrix` | IMPL | Lado EXPECTED: validação + evidência esperada por requisito |
 | `assess_sbd_toe_implementation` | IMPL | Postura de KPIs vs *thresholds* por nível |
 | `inspect_sbd_toe_retrieval` | DIAG | Diagnóstico do retriever |
 | `generate_sbd_toe_skill` | SETUP | Skill/subagent por *role* (`format`, `flavour`) — ou o *agent guide* sem `role` |
-| `read_sbd_toe_resource` | — | Lê um resource `sbd://toe/*` por URI (ex.: `read_sbd_toe_resource(uri="sbd://toe/version")`) |
-| `trace_sbd_toe_requirement_sources` | — | Parâmetros e resposta na descrição servida (`tools/list`) |
-| `trace_sbd_toe_graph` | — | Parâmetros e resposta na descrição servida (`tools/list`) |
+| `read_sbd_toe_resource` | — | Espelho de `resources/read` para clientes sem *resources* MCP: lê um resource `sbd://toe/*` por URI (ex.: `read_sbd_toe_resource(uri="sbd://toe/version")`) |
+| `trace_sbd_toe_requirement_sources` | — | De onde vem cada requisito: fontes directas do manual, separadas da cadeia compensada REQ→CTRL→ACO→fontes |
+| `trace_sbd_toe_graph` | — | Travessia multi-salto do grafo da AppSec Core por lente (`slice_implementation`, `objective_realization`, `mechanism_provenance`) |
 
 A lista servida é a fonte: `tools/list` devolve as tools da versão instalada, com as descrições completas.
 
@@ -108,9 +108,9 @@ A lista servida é a fonte: `tools/list` devolve as tools da versão instalada, 
 | `sbd://toe/subagent/{role}` | Definição de *subagent* de um *role* (= `format=subagent`, *harnessed*) |
 | `sbd://toe/version` | Nome / versão / *provenance* (manual, KG, ontologia) do servidor a correr |
 | `sbd://toe/notes/{id}` | Resolve os `note_id` que as respostas trazem por referência |
-| `sbd://toe/notes` | Descrição na lista servida (`resources/list`) |
-| `sbd://toe/model` | Descrição na lista servida (`resources/list`) |
-| `sbd://toe/codegen-instructions/{mode}` | Descrição na lista servida (`resources/list`) |
+| `sbd://toe/notes` | O índice das notas por referência: `{ids, notes}`, com todos os ids e textos |
+| `sbd://toe/model` | O mapa do conhecimento servido: entidades, relações, capítulos e categorias, e as três formas de pedir |
+| `sbd://toe/codegen-instructions/{mode}` | A cópia de referência, por modo, do texto estático do prepare (instruções e *template* de `security_rationale`) |
 
 ### Prompts {#prompts}
 
@@ -179,5 +179,5 @@ Em particular, o servidor **nunca** deve ser usado para declarar conformidade re
 2. [Instalação por cliente](./03-instalacao.md) — Claude Code, Claude Desktop, Cursor, VS Code (Copilot), Windsurf, Zed.
 3. [Skills e agentes](./04-skills-agentes.md) — onde guardar a *skill* e como inicializar a sessão.
 4. [Tools reference](./05-tools-reference.md) e [resources / prompts](./06-resources-prompts.md) — API completa.
-5. [Casos de uso](./casos-uso/) — receitas prontas: auditoria de PR, *codegen grounded*, *threat modeling*, *bootstrap* de governança, *onboarding*, *cross-check* normativo.
+5. [Casos de uso](./casos-uso/) — receitas prontas: auditoria de PR, *codegen grounded*, *threat modeling*, *bootstrap* de governança, *onboarding*, *cross-check* normativo, Agentic SDLC.
 6. [Padrões avançados](./08-padroes-avancados.md) · [Disciplina epistémica](./09-epistemica-anti-patterns.md) · [Troubleshooting / FAQ](./10-troubleshooting-faq.md) · [Versionamento / roadmap](./11-versionamento-roadmap.md).

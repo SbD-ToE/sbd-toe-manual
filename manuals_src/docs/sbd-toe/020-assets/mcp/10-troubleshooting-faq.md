@@ -155,7 +155,7 @@ get_guide_by_role({"risk_level": "L2", "phase": "implement"})
 
 ### Causa {#causa-2}
 
-Duas causas possíveis. A seleção declarada ultrapassa o tecto do nível de `detail` — e então a resposta traz em `requirement_ceiling.batches` os lotes executáveis cuja união é a seleção inteira. Ou a tarefa-mãe é demasiado conceptual / aberta. Em ambos os casos, *brute-force* (re-chamar com pequenos *tweaks*) não passa o gate.
+Duas causas possíveis. A seleção declarada passa do que o nível de `detail` promete caber — e então a resposta traz em `requirement_ceiling.batches` os lotes executáveis cuja união é a seleção inteira (os lotes podem partilhar requisitos). Ou a tarefa-mãe é demasiado conceptual / aberta. Em ambos os casos, *brute-force* (re-chamar com pequenos *tweaks*) não passa o gate.
 
 ### Solução {#solução-5}
 
@@ -193,9 +193,12 @@ O servidor instalado não tem a capacidade que pediste. Possíveis sub-causas:
 
 ### Sintoma — `detail: "minimal"` ou `detail: "ultrathin"` é recusado {#sintoma--detail-minimal-ou-detail-ultrathin-é-recusado}
 
-**Causa.** Esses níveis foram retirados. Os níveis de `detail` aceites são `lista`, `standard` e `full`.
+**Causa.** Os dois níveis foram retirados, cada um por uma razão:
 
-**Solução.** Usar um dos três níveis aceites. O que cada um põe *inline* está na descrição servida de `prepare_sbd_toe_codegen_context`.
+- `minimal` passou a chamar-se `lista`. Herdou o mesmo envelope de tokens e passou a trazer inline, por requisito, a descrição, `verify` e `evidence`.
+- `ultrathin` foi retirado de vez. Existia para cortar a descrição publicada, e a descrição deixou de ser negociável: não sai de nenhum nível.
+
+**Solução.** Quem vem de docs antigos usa `lista` em qualquer dos dois casos. O erro devolvido pelo servidor diz isto mesmo, e diz para onde cada um foi. `get_threat_landscape` e `select_sbd_toe_requirements` aceitam o mesmo eixo (`lista`/`standard`/`full`) e também recusam `minimal` com o mesmo aviso. O que cada nível põe *inline* está na [referência de `prepare_sbd_toe_codegen_context`](./05-tools-reference.md#prepare_sbd_toe_codegen_context).
 
 ---
 
@@ -203,7 +206,7 @@ O servidor instalado não tem a capacidade que pediste. Possíveis sub-causas:
 
 **Causa.** A resposta declara que o seu tamanho excede o envelope previsto. É uma declaração, não um erro: o servidor avisa em vez de truncar em silêncio.
 
-**Solução.** Não ignorar o aviso. Um nível de `detail` mais compacto, ou uma declaração mais estreita (menos *concerns*, menos categorias), reduz a resposta. Se a seleção ultrapassar o tecto do nível, a resposta passa a `needs_decomposition` com lotes — ver acima.
+**Solução.** Não ignorar o aviso. Um nível de `detail` mais compacto, ou uma declaração mais estreita (menos *concerns*, menos categorias), reduz a resposta. Se a seleção passar do que o nível promete caber, a resposta passa a `needs_decomposition` com lotes — ver acima.
 
 ---
 

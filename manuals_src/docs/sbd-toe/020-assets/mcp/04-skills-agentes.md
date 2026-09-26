@@ -77,7 +77,7 @@ Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão e
 
 ### O contrato declarativo {#o-contrato-declarativo}
 
-Para uma tarefa concreta, o que a skill deve ensinar ao cliente é a porta de entrada `select_sbd_toe_requirements`: o agente **declara** o que leu — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files` — e o servidor seleciona os requisitos de forma determinística. O `task` fica registado, não é interpretado; sem declaração, a resposta é `needs_input`, com o vocabulário aceite (`sbd://toe/activation-vocabulary`). Para gerar código a seguir, `prepare_sbd_toe_codegen_context`. O `consult_security_requirements` continua útil, mas para outra pergunta: devolve o catálogo do nível, não a seleção para uma tarefa.
+Para uma tarefa concreta, o que a skill deve ensinar ao cliente é a porta de entrada `select_sbd_toe_requirements`: o agente **declara** o que leu — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files` — e o servidor seleciona os requisitos de forma determinística (`exposure: "local"` é válido mas inerte e, declarado sozinho, dá `needs_input`). O `task` fica registado, não é interpretado; sem declaração, a resposta é `needs_input`, com o vocabulário aceite (`sbd://toe/activation-vocabulary`). Para gerar código a seguir, `prepare_sbd_toe_codegen_context`. O `consult_security_requirements` continua útil, mas para outra pergunta: devolve o catálogo do nível, não a seleção para uma tarefa.
 
 ### Roles canónicos {#roles-canónicos}
 

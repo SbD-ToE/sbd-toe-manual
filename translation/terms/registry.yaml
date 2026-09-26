@@ -5640,3 +5640,49 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: v1_entity_tsv_specialized_depth
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Specialized Empirical Testing Depth And Regression Assurance
+  en_variants: []
+  pt: Specialized Empirical Testing Depth And Regression Assurance
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-TSV-006) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 10: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_tsv_specialized_testing
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Specialized Empirical Testing
+  en_variants: []
+  pt: Specialized Empirical Testing
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACP-TSV-006) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 10: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'

@@ -5686,3 +5686,49 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 10: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
     nem reescrever.'
+- key: v1_entity_rpr_release_authorization
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Release Authorization And Irreversible Change Accountability
+  en_variants: []
+  pt: Release Authorization And Irreversible Change Accountability
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-RPR-001) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 11: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_rpr_verified_artifact_promotion
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Verified Artifact Promotion
+  en_variants: []
+  pt: Verified Artifact Promotion
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-RPR-002, ACP-RPR-002) nas tabelas de rastreabilidade
+    — identificador da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 11: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'

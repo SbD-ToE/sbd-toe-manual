@@ -16,8 +16,10 @@ Esta abordagem assegura uma continuidade explícita entre obrigações normativa
 
 ---
 
+import {translate} from '@docusaurus/Translate';
+
 export const ToeChart = () => (
-  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama conceptual da Theory of Everything" style={{maxWidth: '100%'}}>
+  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label={translate({id: 'toe.chart.ariaLabel', message: 'Diagrama conceptual da Theory of Everything'})} style={{maxWidth: '100%'}}>
     <defs>
       <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.18"/>
@@ -38,17 +40,17 @@ export const ToeChart = () => (
     <circle cx="704" cy="148" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="704" cy="148" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="704" y="70" textAnchor="middle" className="toe-title">Top-Down</text>
-    <text x="704" y="92" textAnchor="middle" className="toe-text">Normas &amp; Regulação</text>
+    <text x="704" y="92" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.topDown', message: 'Normas & Regulação'})}</text>
     <line x1="704" y1="195" x2="704" y2="268" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
     <circle cx="704" cy="558" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="704" cy="558" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="704" y="635" textAnchor="middle" className="toe-title">Bottom-Up</text>
-    <text x="704" y="657" textAnchor="middle" className="toe-text">Ameaças &amp; Incidentes</text>
+    <text x="704" y="657" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.bottomUp', message: 'Ameaças & Incidentes'})}</text>
     <line x1="704" y1="511" x2="704" y2="438" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
     <circle cx="499" cy="353" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="499" cy="353" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="420" y="345" textAnchor="end" className="toe-title">Engineering</text>
-    <text x="420" y="365" textAnchor="end" className="toe-text">Execução &amp; Ciclo de vida</text>
+    <text x="420" y="365" textAnchor="end" className="toe-text">{translate({id: 'toe.chart.engineering', message: 'Execução & Ciclo de vida'})}</text>
     <line x1="546" y1="353" x2="619" y2="353" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
 </svg>
 );

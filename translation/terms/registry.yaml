@@ -5350,6 +5350,75 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 04: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
     nem reescrever.'
+- key: v1_entity_ivf_centralized_error_governance
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Centralized Error Governance
+  en_variants: []
+  pt: Centralized Error Governance
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACP-IVF-006) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 06: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_ivf_centralized_error_handling
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Centralized Error Handling And Sensitive Error Logging Hygiene
+  en_variants: []
+  pt: Centralized Error Handling And Sensitive Error Logging Hygiene
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-IVF-006) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 06: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_ivf_centralized_error_translation
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Centralized Error Translation And Redaction
+  en_variants: []
+  pt: Centralized Error Translation And Redaction
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACM-IVF-004) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 06: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
 - key: v1_entity_tmr_peer_review
   species: 3
   state: do-not-translate

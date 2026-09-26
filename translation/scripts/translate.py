@@ -401,8 +401,11 @@ class Segmenter:
                 unit.finish()
             seg.fields.append({"unit": unit, "key": match.group("key"), "index": index + 1, "quoted": quoted})
         body_lines = lines[close_index + 1 :]
-        if body_start == close_index + 1:  # closing line carried body text ("---foo")
-            body_lines = [lines[close_index][3:], *body_lines]
+        if body_start == close_index + 1:  # closing line carried text ("---foo", e.g. an over-long "-----…" rule)
+            # The whole closing line already belongs to the front-matter segment's raw text; emitting its tail again
+            # as the first body line would duplicate it (segments must reassemble the source verbatim). The tail is
+            # kept verbatim with the front matter and the body starts on the next line.
+            body_start = close_index + 2
         return body_lines, body_start
 
     # -- body -------------------------------------------------------------- #
@@ -1222,6 +1225,14 @@ def cmd_assemble(args) -> int:
         common.warn(f"{rel}: the terms registry changed since the job was prepared; the front matter records the job's terms_sha256")
     if not isinstance(job.get("glossary_keys"), list) or not isinstance(job.get("glossary_sha256"), str):
         raise TranslateError(f"{job_file}: job has no glossary_keys/glossary_sha256 (prepared before applied-glossary provenance); re-run prepare")
+    if args.write and job.get("source_dirty"):
+        # source_commit is "the last commit that touched the file"; with uncommitted changes that commit does not
+        # contain the text that was translated, so writing it would record false provenance (Orchestrator, 2026-09-26).
+        raise TranslateError(
+            f"{rel}: the job was prepared from uncommitted source changes, so source_commit "
+            f"{(job.get('source_commit') or '?')[:12]} does not contain the translated text; commit the source, "
+            "re-run prepare (ids are deterministic, the out.json is reused) and assemble again"
+        )
     out_file = Path(args.out_json) if args.out_json else out_path_for(job_file)
     if not out_file.is_file():
         raise TranslateError(f"out file not found: {out_file}")

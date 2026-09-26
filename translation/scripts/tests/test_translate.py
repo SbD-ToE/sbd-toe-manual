@@ -462,6 +462,46 @@ class AssembleTests(unittest.TestCase):
         self.assertFalse(self.ws.mirror().exists())
 
 
+    def test_job_prepared_from_a_dirty_source_is_refused_on_write(self):
+        self.ws.write_out(REL, mechanical_out(self.job))
+        job_path = self.ws.jobs / (REL + ".job.json")
+        job = json.loads(job_path.read_text(encoding="utf-8"))
+        job["source_dirty"] = True
+        job_path.write_text(json.dumps(job, ensure_ascii=False), encoding="utf-8")
+        code, _ = self.ws.assemble(REL)  # dry run still validates
+        self.assertEqual(code, 0)
+        with redirect_stderr(io.StringIO()) as err:
+            code, _ = self.ws.assemble(REL, "--write")
+        self.assertEqual(code, 2)
+        self.assertIn("uncommitted source changes", err.getvalue())
+        self.assertFalse(self.ws.mirror().exists())
+
+
+class FrontmatterClosingLineTests(unittest.TestCase):
+    def test_closing_line_with_trailing_text_round_trips(self):
+        """A front matter closed by an over-long rule ("---" + 85 "-") must not duplicate the rule in the body."""
+        ws = Workspace()
+        try:
+            rel = "sub/03-longa.md"
+            (ws.docs / "sub").mkdir()
+            rule = "-" * 88
+            (ws.docs / rel).write_text(f"---\n\nid: longa\ntitle: Página longa\n{rule}\n\n# Título\n\nUm parágrafo.\n", encoding="utf-8")
+            code, _ = ws.prepare(rel)
+            self.assertEqual(code, 0)
+            job = ws.job(rel)
+            self.assertEqual(job["segments"][0]["kind"], "frontmatter")
+            self.assertTrue(job["segments"][0]["raw"].endswith(rule))
+            self.assertNotIn(rule[3:], [s["raw"] for s in job["segments"][1:]])
+            out = {"segments": [{"id": u["id"], "text": u["text"]} for u in units_of(job) if u["translate"]]}
+            ws.write_out(rel, out)
+            code, output = ws.assemble(rel, "--write", "--allow-spelling-errors")
+            self.assertEqual(code, 0, output)
+            self.assertEqual(common.read_text(ws.mirror(rel)).count(rule[3:]), 1)
+            self.assertEqual(equivalence.compare_files(ws.docs / rel, ws.mirror(rel), rel), [])
+        finally:
+            ws.cleanup()
+
+
 class NoFrontmatterAndSymlinkTests(unittest.TestCase):
     def test_source_without_frontmatter_gets_the_minimal_one(self):
         ws = Workspace()

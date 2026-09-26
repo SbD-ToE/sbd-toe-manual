@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T09:14:51Z",
+  "generated_at": "2026-09-26T09:18:12Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
@@ -1551,7 +1551,7 @@
       "target_sha256": "53ab255462a184fe8a6cafdaff382f02150f3c9e4a22cf958de0d69d720966f5",
       "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
       "glossary_sha256_at_translation": "a4f0e9ead71bab57184406fc1a3c2292d7c575bbcaf7802a7f8e21290b838039",
-      "translated_at": "2026-09-26T09:14:50Z",
+      "translated_at": "2026-09-26T09:18:09Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/06-desenvolvimento-seguro/addon/11-kpis-metricas.md": {

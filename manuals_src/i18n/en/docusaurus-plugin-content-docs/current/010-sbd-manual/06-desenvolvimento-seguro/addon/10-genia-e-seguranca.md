@@ -8,14 +8,14 @@ translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/addon/10-genia-e-seguranca.md
   source_sha256: 11f4df7a2a0324c0bcacbbd1d7ce71a63f394da192e41a5d977970f7fc2aae48
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_commit: f37ed776ef1021f6640a8d28490caa27af3da492
   target_sha256: 53ab255462a184fe8a6cafdaff382f02150f3c9e4a22cf958de0d69d720966f5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, discipline, framework_source_corpus, lifecycle_phase, maturity, mcp, practitioner_manual, sbdtoe_sbd, schema, threat, transversal, validation_evaluation, verification_taxonomy]
   glossary_sha256: a4f0e9ead71bab57184406fc1a3c2292d7c575bbcaf7802a7f8e21290b838039
-  translated_at: 2026-09-26T09:14:50Z
+  translated_at: 2026-09-26T09:18:09Z
   reviewed_by: null
 ---
 

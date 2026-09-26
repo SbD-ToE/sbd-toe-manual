@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
-  source_sha256: 63ab1c3f24333c1f13a93301accb86dc3073c7db8f97cf03988d6451d3fd3a03
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 6820332945d3c40b88323cb3b2923a13e5d5c0b5402d376a2a138a7472aac757
+  source_sha256: 01f8ab4191e8d2cf75b145f17734e90539c5592c8f60af25e170bc4f7c1017d9
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: cc2c5739117c57dc70e1c4449cc481f0e515b1b5e81e684f57116e7ddfba8119
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
   glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: f11017a1a43f703219cdfdf7f762e3b35b92067d12a8948c15e3ca5fb0742aa9
-  translated_at: 2026-09-26T12:48:53Z
+  translated_at: 2026-09-26T17:23:51Z
   reviewed_by: null
 ---
 
@@ -696,7 +696,7 @@ Tools can act, but not decide on irreversible impacts.
 
 :::userstory
 **Story.**  
-As **Ops**, I want **to separate the automatic execution of irreversible actions from human authorisation**, so that **control and explicit accountability are ensured**.
+As **DevOps / SRE**, I want **to separate the automatic execution of irreversible actions from human authorisation**, so that **control and explicit accountability are ensured**.
 
 **Acceptance criteria (BDD).**  
 - **Given** that an irreversible action is proposed automatically  
@@ -714,7 +714,7 @@ L3: dual approval
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Production | Critical action | Ops | Before execution |
+| Production | Critical action | DevOps / SRE | Before execution |
 
 ---
 

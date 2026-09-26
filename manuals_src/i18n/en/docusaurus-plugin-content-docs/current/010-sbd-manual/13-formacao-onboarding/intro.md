@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/intro.md
-  source_sha256: 605a041fe0326608e6bda87650c621660da9b5db66fa01fdda70afa6ec89ec12
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 374563a08bc9a3ed7d853b19ead5822c89ba56e3733b496c40f1892920f618f0
+  source_sha256: 92dcd54cc5d42da75cb36d644a1ba031bbce89f9f37128b92c6fe0a0d3f2214c
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 8fa7afebb205c75c5335b04262af6219dd90137ffe605caf16b1fe904c7c2fe0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, maturity, practitioner_manual, programme_line, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: bb1601a52c4ddd27ee6b026c2a74f89efec9bdcc2f36bb5361c4dbb2081614d9
-  translated_at: 2026-09-26T12:49:03Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, maturity, mcp_reading_normativa, mcp_reading_programa, practitioner_manual, programme_line, role_rh_peopleops, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: fd93f7a6f1c824201dba622a81c4c82b7b5e157ec4225ee9be2bb3da0eab8ebc
+  translated_at: 2026-09-26T17:23:53Z
   reviewed_by: null
 ---
 
@@ -75,7 +75,7 @@ regardless of the degree of automation in place.
 - **AppSec Engineer** → produce content, deliver training, manage champions.  
 - **DevOps / SRE** → upskilling in secure pipelines and monitoring.  
 - **Executive Management** → training in risk acceptance and governance.  
-- **Security Champion (HR)** → manage the LMS, onboarding and individual plans.  
+- **HR / People Operations** → manage the LMS, onboarding and individual plans.  
 - **Security Champion** → evangelise and support teams.  
 - **Suppliers / Third Parties** → suppliers with access must receive minimum training.  
 
@@ -119,8 +119,8 @@ Training is what **turns processes into culture**.
 
 | Policy | Mandatory? | Application | Minimum content |
 |----------|--------------|-----------|-----------------|
-| [Security Training and Upskilling Policy](/sbd-toe/assets/policies/policy-formacao-seguranca) | Yes | Security Champion (HR) + AppSec Engineer | Annual plan, LMS, periodic review |
-| [Security Training and Upskilling Policy — Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca) | Yes | Security Champion (HR) + Executive Management | Mandatory training at the start |
+| [Security Training and Upskilling Policy](/sbd-toe/assets/policies/policy-formacao-seguranca) | Yes | HR / People Operations + AppSec Engineer | Annual plan, LMS, periodic review |
+| [Security Training and Upskilling Policy — Onboarding](/sbd-toe/assets/policies/policy-formacao-seguranca) | Yes | HR / People Operations + Executive Management | Mandatory training at the start |
 | [Training and Upskilling Policy — Security Champions](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recommended | AppSec Engineer + Developer | Formal programme with clear roles |
 | [Security Governance KPIs Policy](/sbd-toe/assets/policies/policy-kpis-governacao) | Yes | GRC / Compliance | KPIs, effectiveness, audit reports |
 | [Training and Upskilling Policy — Practical Exercises](/sbd-toe/assets/policies/policy-formacao-seguranca) | Recommended | AppSec Engineer + QA + Developer | Labs, CTFs, simulations |

@@ -8,15 +8,15 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md
-  source_sha256: 5b2064ecc713f3b0e70df23e02c24be0d2af2c68148396f23e733d0bd31a6b33
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 860b311ba53eeaccffba6fe584fa802dc9dbe574f76acbadcf378a80f1b3e94f
+  source_sha256: f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: e21b95260d4ff548abfb020eec7c61688b94b51abd20b0e88e103472e4f8c6f5
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, sbdtoe_sbd, threat, traceability, validation_evaluation]
-  glossary_sha256: 89bc70ca88a6766daf94002ad9b4bfcbcabf87a26fd0d7b34333db240f4baae9
-  translated_at: 2026-09-25T20:19:55Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [chapter_role, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: b0928b87e5f106860d60334dc469c360bbe7175264fa61303a28d604bf599c9a
+  translated_at: 2026-09-26T17:23:37Z
   reviewed_by: null
 ---
 
@@ -32,6 +32,7 @@ They ensure that security principles are embedded in structural decisions from t
 - Anticipate risk implications in integrations and data flows
 - Ensure architectural consistency across pipelines, IaC and deploys
 - Take documented architectural decisions (ADR)
+- Own the design rules: they accept the *policies* that check them automatically and approve the exceptions to those rules
 
 ### Organisational Context {#contexto-organizacional}
 The architects' work supports the *security by design* principles set out in **GDPR** and the **AI Act**, as well as **NIS2** obligations related to planning appropriate technical measures. Without secure architecture, later fixes are costly and ineffective.

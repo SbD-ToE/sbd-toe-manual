@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/intro.md
-  source_sha256: bea3884945e2421a8d84d92dd425ecb2160b1aee3919f6c17068e6e15cc9e598
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 0908a8c90d3e4c5fab1c064ae253fb68b6394dbe1c79885c9efcdc03776eb314
+  source_sha256: 727db834a0062b02dcb28fbddbfbe25348bb0c13399b95317af922fb7b0dadaf
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: b353a9f1b601675d7990a5d9156a8e59585e3466e16f0f61372b043042719ec6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: d389c1c7650227a4fac059cbef962f32e9e99702dfacef72f0adf4fb6c2158b5
-  translated_at: 2026-09-26T12:48:54Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 8f108ca9797d0032a7f320e358a679de1b69a7002a09e474ba7d333005c67026
+  translated_at: 2026-09-26T17:23:52Z
   reviewed_by: null
 ---
 
@@ -129,7 +129,7 @@ Exceptions to automatic gates (e.g. non-applicable CVE, SAST false positive) fol
 2. **Approver by severity**:
    - CRITICAL: AppSec Engineer + Executive Management
    - HIGH: AppSec Engineer
-   - MEDIUM: Scrum Master / Team Lead
+   - MEDIUM: Tech Lead
 
 3. **Time validity**: Exceptions expire automatically (max. 6 months L2, 3 months L3)
 

@@ -6,15 +6,15 @@ tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md
-  source_sha256: c8f4e9f7c4c9b532ee000f2b293c86a1734ee561dcb582c6f48878b044873d01
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 90f1fcf8205bfdc614a186d5d96a82ccbb3ddc3579fce4a8d418ef50c428b918
+  source_sha256: 494e19cc6498d3d3e3e6fb37e0b853dcf5b674b99cf5539dd93069c6f05ef76f
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 04eea28956d3fd7297b2ac19b7437c5e88eb96cb2d6ee959d0bd9dd0c51a931b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, provenance, requirement_runtime, risk_level, threat, traceability, validation_evaluation]
-  glossary_sha256: fa07cae05475c5980517dd825e44481c8a0cb6188ca13ffceecebb3f9854dd51
-  translated_at: 2026-09-25T20:18:51Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_normativa, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: d45fddaaccdfa8c26fe229dc96f03edc577cd271b2a62cd3064be56a6d38f97d
+  translated_at: 2026-09-26T17:23:42Z
   reviewed_by: null
 ---
 
@@ -771,7 +771,7 @@ As a **GRC/Compliance** role, I want **to maintain an up-to-date central invento
 
 **Checklist.**  
 - [ ] Central inventory or GRC exists and records all applications with level, review date, owner and compliance status  
-- [ ] Approval recorded by the authority proportional to the level: L1 Scrum Master / Team Lead, L2 AppSec Engineer, L3 CISO — dated and attributed to the responsible person  
+- [ ] Approval recorded by the authority proportional to the level: L1 Tech Lead, L2 AppSec Engineer, L3 CISO — dated and attributed to the responsible person  
 - [ ] Inventory updated after every classification change or transfer of responsibility  
 - [ ] Inventory accessible for audit without manual preparation  
 
@@ -782,7 +782,7 @@ As a **GRC/Compliance** role, I want **to maintain an up-to-date central invento
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Entry in the inventory; approval by the Scrum Master / Team Lead | Inventory with audit trail; approval by the AppSec Engineer | Inventory with granular tracking; approval by the CISO/equivalent |
+| Entry in the inventory; approval by the Tech Lead | Inventory with audit trail; approval by the AppSec Engineer | Inventory with granular tracking; approval by the CISO/equivalent |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |

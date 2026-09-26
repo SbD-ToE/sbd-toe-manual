@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md
-  source_sha256: 16f4c0326acc73e438d193bf66c16f248b7d7639bcd6d893f3e10f66e0acf809
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: a654d24e54f013dd354548f6bdd8c8d583af06dd96a2f8cf053d9abbc1d95531
+  source_sha256: 64b9b01d70d5cba2e78c852a2e6452ee96b53393e4bb22193b0045eabc958c2d
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 496a062239eddf8411d52934fd2f121d81c912a2ccb287797b4f58d54748cff5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, papel_suporte, practitioner_manual, programme_line, risk_level, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 7ee8c94398c5d4969cb0a6b905467ad31eab8a74a84cabf0332528f36f053d59
-  translated_at: 2026-09-26T12:49:02Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verification_taxonomy]
+  glossary_sha256: e309a609173bece757686b33bef78ea82a9a2e15ece9c11941b848892e9c4823
+  translated_at: 2026-09-26T17:23:52Z
   reviewed_by: null
 ---
 
@@ -43,7 +43,7 @@ translation:
 | **Security Champion** | Mentor teams, facilitate peer learning |
 | **Executive Management** | Support adoption, validate regulatory compliance |
 | **GRC / Compliance** | Manage traceability, audits, KPIs |
-| **Security Champion (HR)** | Operate the LMS, manage onboarding, integrate into the individual development plan |
+| **HR / People Operations** | Operate the LMS, manage onboarding, integrate into the individual development plan |
 | **Software Architects** | Contribute to threat modelling and secure patterns |
 | **Operations (Ops)** | Take part in simulations, communication during incidents |
 | **Suppliers / Third Parties** | Receive mandatory minimum training |
@@ -57,7 +57,7 @@ translation:
 
 :::userstory
 **Story.**   
-As a **Security Champion (HR)**, I want **to ensure mandatory onboarding training in SbD**, so that **everyone starts out aligned with the practices**.  
+As **HR / People Operations**, I want **to ensure mandatory onboarding training in SbD**, so that **everyone starts out aligned with the practices**.  
 
 **Acceptance criteria (BDD).**  
 - **Given** a new staff member  
@@ -85,7 +85,7 @@ As a **Security Champion (HR)**, I want **to ensure mandatory onboarding trainin
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Arrival of a new staff member | Security Champion (HR) + AppSec Engineer | Before technical access |
+| Onboarding | Arrival of a new staff member | HR / People Operations + AppSec Engineer | Before technical access |
 
 **Useful links.**  
 [Technical Onboarding Checklist](./addon/checklist-onboarding)  
@@ -126,7 +126,7 @@ As an **AppSec Engineer**, I want **to provide continuous training by profile (D
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Continuous cycle | Quarterly (L3) / Half-yearly (L2) / Annual (L1) | AppSec Engineer + Security Champion (HR) | Deadline communicated 2 weeks in advance |
+| Continuous cycle | Quarterly (L3) / Half-yearly (L2) / Annual (L1) | AppSec Engineer + HR / People Operations | Deadline communicated 2 weeks in advance |
 
 **Useful links.**  
 [Training Catalogue by Technical Profile](./addon/catalogo-formativo)  
@@ -419,7 +419,7 @@ As an **AppSec Engineer / GRC**, I want **to maintain and update training tracks
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Governance/Audit | Annual (Q1) or new risk | AppSec Engineer + GRC / Compliance + Security Champion (HR) | Before the new training cycle |
+| Governance/Audit | Annual (Q1) or new risk | AppSec Engineer + GRC / Compliance + HR / People Operations | Before the new training cycle |
 
 **Useful links.**  
 [Training Catalogue by Technical Profile](./addon/catalogo-formativo)  
@@ -472,7 +472,7 @@ Risk classification document (Ch. 01), track matrix (addon/02) with the selectio
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Governance | Application classification | AppSec Engineer + Security Champion (HR) | Before the first technical assignment |
+| Onboarding / Governance | Application classification | AppSec Engineer + HR / People Operations | Before the first technical assignment |
 
 **Useful links.**  
 [Training Tracks by Role and Risk](./addon/trilho-formativo)  
@@ -520,7 +520,7 @@ As **HR / GRC**, I want **to formally validate the onboarding of each staff memb
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Arrival of a new staff member | Security Champion (HR) + GRC / Compliance | Before technical access |
+| Onboarding | Arrival of a new staff member | HR / People Operations + GRC / Compliance | Before technical access |
 
 **Useful links.**  
 [Technical Onboarding Checklist](./addon/checklist-onboarding)  
@@ -568,7 +568,7 @@ As an **AppSec Engineer / HR**, I want **to implement and run validation quizzes
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Continuous | Track completion or annually | AppSec Engineer + Security Champion (HR) | Before/during access |
+| Onboarding / Continuous | Track completion or annually | AppSec Engineer + HR / People Operations | Before/during access |
 
 **Useful links.**  
 [Quiz Template for Onboarding](./addon/quiz-onboarding)  
@@ -617,7 +617,7 @@ As **GRC / Executive Management**, I want **to ensure that suppliers and third p
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Supplier contract | GRC / Compliance + Security Champion (HR) + AppSec Engineer | Before access |
+| Onboarding | Supplier contract | GRC / Compliance + HR / People Operations + AppSec Engineer | Before access |
 
 **Useful links.**  
 [Model for the Inclusion of Third Parties](./addon/inclusao-terceiros)  
@@ -730,7 +730,7 @@ As an **AppSec Engineer / HR**, I want **to define and execute a remediation pat
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Result below the threshold | AppSec Engineer + Security Champion (HR) | Remediation started before any granting of access |
+| Onboarding | Result below the threshold | AppSec Engineer + HR / People Operations | Remediation started before any granting of access |
 
 **Useful links.** [Training Requirements Catalogue (TRN-003)](./addon/catalogo-requisitos-formacao)  
 [Technical Onboarding Checklist](./addon/checklist-onboarding)  
@@ -773,7 +773,7 @@ As **GRC / Executive Management**, I want **to record a responsibility statement
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Contract with a third party with technical access | GRC / Compliance + Security Champion (HR) + AppSec Engineer | Statement recorded before access |
+| Onboarding | Contract with a third party with technical access | GRC / Compliance + HR / People Operations + AppSec Engineer | Statement recorded before access |
 
 **Useful links.** [Training Requirements Catalogue (TRN-007)](./addon/catalogo-requisitos-formacao)  
 [Model for the Inclusion of Third Parties](./addon/inclusao-terceiros)  
@@ -859,7 +859,7 @@ As an **AppSec Engineer / HR**, I want **to make training in the secure use of A
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Continuous cycle | Access to AI/automation tooling or new risk | AppSec Engineer + Security Champion (HR) | Before autonomous use of AI tooling |
+| Onboarding / Continuous cycle | Access to AI/automation tooling or new risk | AppSec Engineer + HR / People Operations | Before autonomous use of AI tooling |
 
 **Useful links.** [Training in the Secure Use of AI and Tooling](./addon/formacao-uso-seguro-ia-tooling)  
 [Training Catalogue by Technical Profile](./addon/catalogo-formativo)  
@@ -888,7 +888,7 @@ As a **DevOps / AppSec Engineer**, I want **to provision and operate an isolated
 - [ ] Read-only initial permissions, evolving only after validation  
 - [ ] Logging of all activity (logins, commits, access to secrets) enabled  
 - [ ] Practical exercises (≥70%) and comprehension quiz (≥80%) completed  
-- [ ] Completion sign-off (Scrum Master / Team Lead + AppSec) conditions real access  
+- [ ] Completion sign-off (Tech Lead + AppSec) conditions real access  
 - [ ] Sandbox destroyed and credentials revoked after onboarding; logs archived  
 
 :::
@@ -903,7 +903,7 @@ As a **DevOps / AppSec Engineer**, I want **to provision and operate an isolated
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Technical onboarding of a contractor | DevOps / SRE + AppSec Engineer + Security Champion (Training Manager) | Provisioning T-5 days; sign-off before real access (T+7) |
+| Onboarding | Technical onboarding of a contractor | DevOps / SRE + AppSec Engineer + Training Manager | Provisioning T-5 days; sign-off before real access (T+7) |
 
 **Useful links.** [Sandbox Preparation Guide for Contractors](./addon/guia-preparacao-sandbox)  
 [Model for the Inclusion of Third Parties](./addon/inclusao-terceiros)  

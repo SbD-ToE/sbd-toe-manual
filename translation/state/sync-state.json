@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-26T16:44:47Z",
+  "generated_at": "2026-09-26T17:26:53Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8",
+  "terms_sha256": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "synced",
@@ -136,7 +136,7 @@
     },
     "002-cross-check-normativo/exemplo-playbook/03-exemplo-raci-governance.md": {
       "state": "untranslated",
-      "source_sha256": "2285a5a5f6772afab389bd97666420de1fa27f96fcad43ba93b7e052cf085f77",
+      "source_sha256": "34812f2926b416c68ed0d0dbe99c97d60f18fa1109a83e607204b98501873148",
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,
@@ -226,12 +226,12 @@
     },
     "010-sbd-manual/00-fundamentos/baseline.md": {
       "state": "synced",
-      "source_sha256": "c1f95a1fcd348b88604ecd5ffc0f9b132e3f1175715fa1137ba48dc931795473",
-      "translated_source_sha256": "c1f95a1fcd348b88604ecd5ffc0f9b132e3f1175715fa1137ba48dc931795473",
-      "target_sha256": "5802edc4c4a33561cdceaa32b5e762f19cb4dd976982e3a6d659ef94e15fd046",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "9cf7a95e7e92c29c8de85d2c5a3defe33cca28ae1f051d106f160b58afbd14b2",
-      "translated_at": "2026-09-25T20:19:51Z",
+      "source_sha256": "2cc6ab5d2f2c2f4462567e4939345ca65cd4d3e6b8a80212015654fc7b59f8e6",
+      "translated_source_sha256": "2cc6ab5d2f2c2f4462567e4939345ca65cd4d3e6b8a80212015654fc7b59f8e6",
+      "target_sha256": "1a2c9d8a503e95ea10f8c63710f9556d3088e0a443c738b768b32db1eeae5fb0",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "a2cee05331d6453cf31e6f7dc03fe8b1d064a08030134cdec00051b4fce1b078",
+      "translated_at": "2026-09-26T17:23:35Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/canon/25-rastreabilidade.md": {
@@ -276,12 +276,12 @@
     },
     "010-sbd-manual/00-fundamentos/macro-processos.md": {
       "state": "synced",
-      "source_sha256": "2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5",
-      "translated_source_sha256": "2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5",
-      "target_sha256": "2ffa70abfe58a88372be8532aa9356136794c1111a77e724f88e80d5ba921b95",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "d143b16b30d30ff0c34d227abe6d12c1bd63a645463d8a4b6f3ab3d284d8d3dd",
-      "translated_at": "2026-09-25T20:19:54Z",
+      "source_sha256": "bb0c4fdb48c5af7ed06c7b7c12fffc01518f41439715b4e231bb81d7ed2b938c",
+      "translated_source_sha256": "bb0c4fdb48c5af7ed06c7b7c12fffc01518f41439715b4e231bb81d7ed2b938c",
+      "target_sha256": "9667b444f00198d922c9709e3291570bcf14a674fe96fee9a87d3fbca6e74a1e",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "c17682c23ff78b7bcadabd4bca7d2bbbfb6d54069e6d0cb7b0ea1a00caae9e7f",
+      "translated_at": "2026-09-26T17:23:36Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/appsec-engineer.md": {
@@ -296,22 +296,22 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md": {
       "state": "synced",
-      "source_sha256": "5b2064ecc713f3b0e70df23e02c24be0d2af2c68148396f23e733d0bd31a6b33",
-      "translated_source_sha256": "5b2064ecc713f3b0e70df23e02c24be0d2af2c68148396f23e733d0bd31a6b33",
-      "target_sha256": "860b311ba53eeaccffba6fe584fa802dc9dbe574f76acbadcf378a80f1b3e94f",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "89bc70ca88a6766daf94002ad9b4bfcbcabf87a26fd0d7b34333db240f4baae9",
-      "translated_at": "2026-09-25T20:19:55Z",
+      "source_sha256": "f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b",
+      "translated_source_sha256": "f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b",
+      "target_sha256": "e21b95260d4ff548abfb020eec7c61688b94b51abd20b0e88e103472e4f8c6f5",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "b0928b87e5f106860d60334dc469c360bbe7175264fa61303a28d604bf599c9a",
+      "translated_at": "2026-09-26T17:23:37Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md": {
       "state": "synced",
-      "source_sha256": "0a2295eee3eba0b97f889d7eeda4aea6e085a57bf510e591b504317a789f1fba",
-      "translated_source_sha256": "0a2295eee3eba0b97f889d7eeda4aea6e085a57bf510e591b504317a789f1fba",
-      "target_sha256": "c2751e73e92a07236440e3536492ecc2f5b83dc2ced2984085585d62f27ec7f9",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "047a347a495a1f2b62aae314e65227be0c474069e96ecb191a05ecea70d928c1",
-      "translated_at": "2026-09-25T20:19:56Z",
+      "source_sha256": "beeea94ae0b3139e65a5867b0e8bf3830175e90d9a2bd392f3e2de1ef70ed5ab",
+      "translated_source_sha256": "beeea94ae0b3139e65a5867b0e8bf3830175e90d9a2bd392f3e2de1ef70ed5ab",
+      "target_sha256": "7cab2d5b5bd496cc1b4f98037692159e52532094284514708d83ae51e6ba3f78",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "91b9725648f074b6ab11602f2a86dabcd09da1f322bed539d7f56f586a6ef951",
+      "translated_at": "2026-09-26T17:23:38Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/developer.md": {
@@ -336,22 +336,22 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/fornecedores-terceiros.md": {
       "state": "synced",
-      "source_sha256": "98f43e2c2dc3aed57c27dce2abe64641cda34ac35144d75eef3c71ea53dcef16",
-      "translated_source_sha256": "98f43e2c2dc3aed57c27dce2abe64641cda34ac35144d75eef3c71ea53dcef16",
-      "target_sha256": "9444c34abce82c31cc1704aa0be939d1a93fed6f21fa3ed5a37b12510cdce1f2",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "6ada444a55b2b5e511c0e24c81d5881ea88dcef597cf613e60a518281766f35d",
-      "translated_at": "2026-09-25T20:19:58Z",
+      "source_sha256": "df42e2de7fe621af6199fd4e0b8edd706362bdab8c758d5511f004e61389a6af",
+      "translated_source_sha256": "df42e2de7fe621af6199fd4e0b8edd706362bdab8c758d5511f004e61389a6af",
+      "target_sha256": "f4a06c26b78f2d617e03a9f1fe6ca5d54a4990891d2a9797412f18d7e416c724",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "cf4559bc5afee0b7806d6405613705b33201af4d0728cef7c7236630b3ab682d",
+      "translated_at": "2026-09-26T17:23:38Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/gestao-executiva.md": {
       "state": "synced",
-      "source_sha256": "00f90a58b54480243afc99846123e7bb78112b72e3b7263d30c60646111754e2",
-      "translated_source_sha256": "00f90a58b54480243afc99846123e7bb78112b72e3b7263d30c60646111754e2",
-      "target_sha256": "b3c6e117ad1af86802dcf99418c09f8783d16ccc8b919829d50b498dfdc71e85",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "a1b4ba2b6d8690591914dc59730fc6125e6a9e7d17caf85773958952ebe1299e",
-      "translated_at": "2026-09-25T20:19:58Z",
+      "source_sha256": "6534f390202ca4b9533d1c84825480b9ea4492f1f3a0244b89374089dabb2b3e",
+      "translated_source_sha256": "6534f390202ca4b9533d1c84825480b9ea4492f1f3a0244b89374089dabb2b3e",
+      "target_sha256": "10b004396223147fc3b460114d6023197eac9646edef8603b3a98214ca50a62d",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "11ee6b5e1dcd2eaad47491c748c3e8b9fa2686c8bfe2843365bd3f5bade61b53",
+      "translated_at": "2026-09-26T17:23:39Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/grc-compliance.md": {
@@ -366,22 +366,42 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/intro.md": {
       "state": "synced",
-      "source_sha256": "5edfe767c6f2d5168913d6347848018d9a455ad9232515c74e112b3cf473dbb0",
-      "translated_source_sha256": "5edfe767c6f2d5168913d6347848018d9a455ad9232515c74e112b3cf473dbb0",
-      "target_sha256": "2b19aa994a5be165721cffbb5639e92b137d114dda583535615d982629169b47",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "25c052d3617224355861221b7b5ee51ddc8746b32f9ba7319abf7efbb26779ff",
-      "translated_at": "2026-09-25T20:19:59Z",
+      "source_sha256": "8b0b69b9354cb598a434e53b99a195aa1dc333967ab09a8f27dca6dc05653d3d",
+      "translated_source_sha256": "8b0b69b9354cb598a434e53b99a195aa1dc333967ab09a8f27dca6dc05653d3d",
+      "target_sha256": "b08893a85bc5fe52148bd79cc5549dab8d646678c51663c4680a7dfc782c4315",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "e99f765f41fc8635878c41542c13570a2e36df27a4b7d146a33052ddefcad471",
+      "translated_at": "2026-09-26T17:23:40Z",
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/juridico.md": {
+      "state": "synced",
+      "source_sha256": "20afb0122010f254374521cc59b9afe4236660d8d03835b204a50fbf640f93d0",
+      "translated_source_sha256": "20afb0122010f254374521cc59b9afe4236660d8d03835b204a50fbf640f93d0",
+      "target_sha256": "f863c05dddbfe94ff0407d636a105d0dc882039802f825f0c503bbc0ac20b4ce",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "a26d2737ead7fbab0b7318f500d30cf92a857635d4abf0117a67c8244d62279f",
+      "translated_at": "2026-09-26T17:23:57Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md": {
       "state": "synced",
-      "source_sha256": "f8af5c2ee7d4403761f19c67dfda2d0bafa8aa0bf945cb3b24ee7f6ffe753fa1",
-      "translated_source_sha256": "f8af5c2ee7d4403761f19c67dfda2d0bafa8aa0bf945cb3b24ee7f6ffe753fa1",
-      "target_sha256": "45091c5c915986e045d6229c5cc5c00f136a6fa3cff79b7bb5fb9f1ed8cc260f",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "f2fb12fcf56dd55200e4a32b9af4adf8b4af08fab225182d4f60e2e11e863a0f",
-      "translated_at": "2026-09-25T20:20:00Z",
+      "source_sha256": "68f8469ff5c0aedd8cf2e8371a57ceeb74e9f979e544aede890e4bc12620a9ab",
+      "translated_source_sha256": "68f8469ff5c0aedd8cf2e8371a57ceeb74e9f979e544aede890e4bc12620a9ab",
+      "target_sha256": "0ab76865a3c4641afa13b35beec7d00d3669235e3e675ea0efe937c4b0ecbdc0",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "0c4cb135b66401d73e1986756948b09914e8a20264b8133e205d97c506454622",
+      "translated_at": "2026-09-26T17:23:41Z",
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/procurement.md": {
+      "state": "synced",
+      "source_sha256": "15dcf220ef5f101d56415be4fc853377115372de7cc0192cdcb864db4c6797e7",
+      "translated_source_sha256": "15dcf220ef5f101d56415be4fc853377115372de7cc0192cdcb864db4c6797e7",
+      "target_sha256": "67fdfa22987483e6328294ef3d7eec7dcd402bb1117d57ae80a03e35e0c50a9f",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "40827c67481c741514f39eb6ed8876f9ccff12a7b6db8989b36ec7d8c20b124a",
+      "translated_at": "2026-09-26T17:23:57Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/product-owner.md": {
@@ -404,6 +424,16 @@
       "translated_at": "2026-09-25T20:22:03Z",
       "pending_blocks": 0
     },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/rh-peopleops.md": {
+      "state": "synced",
+      "source_sha256": "a4772be8bc204cca0d6cf8d10df8fd6bfb01d8c826865a16f0d0fa14452021ae",
+      "translated_source_sha256": "a4772be8bc204cca0d6cf8d10df8fd6bfb01d8c826865a16f0d0fa14452021ae",
+      "target_sha256": "f1aa3d1bd2d77d3c665bc480230ed9875fdf96dd68c2db1ed71d36825eff63c9",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "fff9605ae2c09188088fe27455aae49c3b61cf080279279ca918971acd3a0276",
+      "translated_at": "2026-09-26T17:23:58Z",
+      "pending_blocks": 0
+    },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/scrum-master.md": {
       "state": "synced",
       "source_sha256": "b67181e2c8f99ee9d27a2aa015c985b836a36ba6d931efe9bbbe2748ba5ed5d8",
@@ -416,12 +446,22 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/security-champion.md": {
       "state": "synced",
-      "source_sha256": "447c8bf60929a581fda006d0a41942ecea4a89389c9034fc584712d973048533",
-      "translated_source_sha256": "447c8bf60929a581fda006d0a41942ecea4a89389c9034fc584712d973048533",
-      "target_sha256": "831e5af7fb8b10b156da60455f34b8a67e7602bc500753b497129d897dd9f5d1",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "cf11ce6eebc2e29aa62e7e2cd5c59de39a4c5881fc48b97780d4e7c519cd716d",
-      "translated_at": "2026-09-25T20:20:02Z",
+      "source_sha256": "c61c613154aec68aee5c7e5627d10463843c4f76436c0089fbf6b4803057005f",
+      "translated_source_sha256": "c61c613154aec68aee5c7e5627d10463843c4f76436c0089fbf6b4803057005f",
+      "target_sha256": "8e6fe3956edcb7ff64d37abb4393b142ab02e3804e4275bc5d46eb9252e0c359",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "d02f44f3e8656b91d44c3ef7331d60f32556d1f5577919c9daaf6c541ac62949",
+      "translated_at": "2026-09-26T17:23:41Z",
+      "pending_blocks": 0
+    },
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/tech-lead.md": {
+      "state": "synced",
+      "source_sha256": "617fb8d1922515329c179646eeecda70ed019753d053e37009f3f70122c386da",
+      "translated_source_sha256": "617fb8d1922515329c179646eeecda70ed019753d053e37009f3f70122c386da",
+      "target_sha256": "9c3d264afba8c8a4172e651cdcd51c673cc922efb30615ae32b33aafa7a2cabc",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "85c8f9c073e517a3058f7b1ac5cd487f919fc2f7923f7f7e3adaa51946330359",
+      "translated_at": "2026-09-26T17:23:59Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md": {
@@ -556,12 +596,12 @@
     },
     "010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "c8f4e9f7c4c9b532ee000f2b293c86a1734ee561dcb582c6f48878b044873d01",
-      "translated_source_sha256": "c8f4e9f7c4c9b532ee000f2b293c86a1734ee561dcb582c6f48878b044873d01",
-      "target_sha256": "90f1fcf8205bfdc614a186d5d96a82ccbb3ddc3579fce4a8d418ef50c428b918",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "fa07cae05475c5980517dd825e44481c8a0cb6188ca13ffceecebb3f9854dd51",
-      "translated_at": "2026-09-25T20:18:51Z",
+      "source_sha256": "494e19cc6498d3d3e3e6fb37e0b853dcf5b674b99cf5539dd93069c6f05ef76f",
+      "translated_source_sha256": "494e19cc6498d3d3e3e6fb37e0b853dcf5b674b99cf5539dd93069c6f05ef76f",
+      "target_sha256": "04eea28956d3fd7297b2ac19b7437c5e88eb96cb2d6ee959d0bd9dd0c51a931b",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "d45fddaaccdfa8c26fe229dc96f03edc577cd271b2a62cd3064be56a6d38f97d",
+      "translated_at": "2026-09-26T17:23:42Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/canon/20-checklist-revisao.md": {
@@ -596,12 +636,12 @@
     },
     "010-sbd-manual/01-classificacao-aplicacoes/intro.md": {
       "state": "synced",
-      "source_sha256": "50bf0948ad49421c24ea773b1750957708ffc6d4a29875e98b36776da022c7d1",
-      "translated_source_sha256": "50bf0948ad49421c24ea773b1750957708ffc6d4a29875e98b36776da022c7d1",
-      "target_sha256": "b8161697d13cfbbf2b2953d308be010b2cf10f322243070df334b522498a2b02",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "383d6ef46debdc37cd8236321c0a133e51352f416d3687fc65b4811e4eba561c",
-      "translated_at": "2026-09-25T20:18:54Z",
+      "source_sha256": "b289e7aa0f89193cb030454414943dde07970c2773de5c4998ae389630b5ee81",
+      "translated_source_sha256": "b289e7aa0f89193cb030454414943dde07970c2773de5c4998ae389630b5ee81",
+      "target_sha256": "034ddf62b8bd4d79ea7cddfb1d727c5a5e046065f06593dae1b107d336c847d1",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "4b3633ac9d030a8bd44ab5d39fd20b7957ac4c2e8e01e0bde8aa8c3259b800a9",
+      "translated_at": "2026-09-26T17:23:43Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/policies-relevantes.md": {
@@ -776,12 +816,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "3ea1903d91d8056ef369176a5743c32ebd7babbe5d9fa34a7c3fb7c2009134d2",
-      "translated_source_sha256": "3ea1903d91d8056ef369176a5743c32ebd7babbe5d9fa34a7c3fb7c2009134d2",
-      "target_sha256": "a5d36774e31e9d771ec42c85b2d7cc0d5d4f0af70ff475bd2268f310e2b848c3",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "bfbb178fff4eef60ed7c47ebdb0cbf0b49345d64847e912678d9212d62490971",
-      "translated_at": "2026-09-25T20:22:04Z",
+      "source_sha256": "40e5a02ac36f1761c0df8e75208e2a419c94dd9323fefa9e7428d52f13374a86",
+      "translated_source_sha256": "40e5a02ac36f1761c0df8e75208e2a419c94dd9323fefa9e7428d52f13374a86",
+      "target_sha256": "c75f0e88cb5ec3294ef9a382da280957fd85ffbbcbf9fccc271804930ecc0a69",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "0b425934edc3b2654453524bb0d0eef36d5811b572cd85c3e9e4cd1f3db478bc",
+      "translated_at": "2026-09-26T17:23:44Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/canon/20-checklist-revisao.md": {
@@ -976,12 +1016,12 @@
     },
     "010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "ac14736f434886f43c82a3e56f8150994735b46f752916331f5f5bc3282bfb26",
-      "translated_source_sha256": "ac14736f434886f43c82a3e56f8150994735b46f752916331f5f5bc3282bfb26",
-      "target_sha256": "429c73b748c200bf1c55fd9e1c3bc3f92851bbb9469e735e624881764d9685b2",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "afc1a65d961243cc3a1919331a3666c7ecece36fd55258fc8c721e857c146d1f",
-      "translated_at": "2026-09-25T20:17:03Z",
+      "source_sha256": "72e1cdb1a07d8429219ee5914f4ab7cf890f847f54bc8912f3fbc5d8696d391d",
+      "translated_source_sha256": "72e1cdb1a07d8429219ee5914f4ab7cf890f847f54bc8912f3fbc5d8696d391d",
+      "target_sha256": "77d936f68451872f90cc245189a76a267722ee9e0804d09b549c05b41e6fc229",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "945094da407f7b09b983d82d70df6721bbb3691087682d7b95fe77de8ec1eb48",
+      "translated_at": "2026-09-26T17:23:44Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/03-threat-modeling/canon/20-checklist-revisao.md": {
@@ -1116,12 +1156,12 @@
     },
     "010-sbd-manual/04-arquitetura-segura/addon/05-validacao.md": {
       "state": "synced",
-      "source_sha256": "55aa1cb77905811a71b90ab2528f422b884abc48d4b33db5895fda495b676afb",
-      "translated_source_sha256": "55aa1cb77905811a71b90ab2528f422b884abc48d4b33db5895fda495b676afb",
-      "target_sha256": "3bf1746495de563e7a6eb7cfbb63961a0e08464ca87eebe262ffd1ad69d293d3",
-      "terms_sha256_at_translation": "5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312",
-      "glossary_sha256_at_translation": "08538eeb32f409b0200b47b76473329f6e2859edfe2bd7d2960f6a9268d6642b",
-      "translated_at": "2026-09-26T08:32:05Z",
+      "source_sha256": "db7d4cd7e54b0ae31fe2bdb4ee4cd1ec7db6f4cb47effb301b06bfc345b588bf",
+      "translated_source_sha256": "db7d4cd7e54b0ae31fe2bdb4ee4cd1ec7db6f4cb47effb301b06bfc345b588bf",
+      "target_sha256": "5ee7174cb8be030bdb43a859ac4f045a84dc24ea8fca7ed9f50a833b4f5880f5",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "7c88fc8fbff365d7c9f69db72c1f0b4a0f85ec26f541a8baab5bbe55ecd566ed",
+      "translated_at": "2026-09-26T17:23:45Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/04-arquitetura-segura/addon/06-rastreabilidade.md": {
@@ -1176,12 +1216,12 @@
     },
     "010-sbd-manual/04-arquitetura-segura/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "e795d51c82a46859253ffd41e8b87ecc5d1482bc1c64dfcd12c7df1ce7e65ac6",
-      "translated_source_sha256": "e795d51c82a46859253ffd41e8b87ecc5d1482bc1c64dfcd12c7df1ce7e65ac6",
-      "target_sha256": "d69fdce70df20078d6c0ec3a6b9dfffe35ee6b84958091848d8bc940d58def6f",
-      "terms_sha256_at_translation": "5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312",
-      "glossary_sha256_at_translation": "a30df8fa0b873fc7e1d6500a631e842ec6bcc14187a815cdcdda183949e557f6",
-      "translated_at": "2026-09-26T08:32:09Z",
+      "source_sha256": "c3213c8e94382c853f45c3f0833608397023ee9fd4ac1ad30cd6c235871f22ef",
+      "translated_source_sha256": "c3213c8e94382c853f45c3f0833608397023ee9fd4ac1ad30cd6c235871f22ef",
+      "target_sha256": "65bd2ab7a554d0aad774f9019abd2bec3229d8fa5eac8676fb57a048d89bdb67",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "463cf3b8138b35735768d9ee8f6fb62a4b3b6d24dc3f1f40bfd0600a50eec3f7",
+      "translated_at": "2026-09-26T17:23:46Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/04-arquitetura-segura/canon/20-checklist-revisao.md": {
@@ -1606,12 +1646,12 @@
     },
     "010-sbd-manual/06-desenvolvimento-seguro/intro.md": {
       "state": "synced",
-      "source_sha256": "3580aa28cb79f74ef42dee457216ba708edfdb941bb3bdc7920ec4fea1519748",
-      "translated_source_sha256": "3580aa28cb79f74ef42dee457216ba708edfdb941bb3bdc7920ec4fea1519748",
-      "target_sha256": "0305d761b7ee66d2d24388a2fd7c6dc0107cbd18d837b2c083746552f8851ce7",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
-      "glossary_sha256_at_translation": "ac54fef37a76075f28e7b5d152f633861116cee8049016fbe1ddb60a9bd02a5d",
-      "translated_at": "2026-09-26T08:57:17Z",
+      "source_sha256": "b657a76581122881b85434934c49185e4ce2bcc84eba40b93c3fdf6a7d2ba877",
+      "translated_source_sha256": "b657a76581122881b85434934c49185e4ce2bcc84eba40b93c3fdf6a7d2ba877",
+      "target_sha256": "d646a0f84085e4f31c148acbbf0bef3a274379ae202b29a2702e4759dce8aaae",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "bb02b58678513c9fa89f46547780c3725497f0d139f39a88c2c85b679014df59",
+      "translated_at": "2026-09-26T17:23:47Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/06-desenvolvimento-seguro/policies-relevantes.md": {
@@ -1906,22 +1946,22 @@
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md": {
       "state": "synced",
-      "source_sha256": "d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9",
-      "translated_source_sha256": "d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9",
-      "target_sha256": "a1b0a7a00df720fcbc88f7a5e4a971e926e6d147fadf73cd81595cd6c9b01b04",
-      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
-      "glossary_sha256_at_translation": "f311aac6f5bc95780781a4c838f4b75f36169f6a425fa320fbe2fba386bcbed3",
-      "translated_at": "2026-09-26T09:45:03Z",
+      "source_sha256": "0d9bed6efd9f3534b9f6a74ee82cb7a6ce004bcb338a7ee1342b7f7287545cf1",
+      "translated_source_sha256": "0d9bed6efd9f3534b9f6a74ee82cb7a6ce004bcb338a7ee1342b7f7287545cf1",
+      "target_sha256": "8293c5779a80592befb92c547382eae18829988f0c4fe4c80027dd7e2a3555f3",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "4c70d351743ea4d36e2cde35cedc08832771c872232b8b26922522e7189cc2c8",
+      "translated_at": "2026-09-26T17:23:47Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md": {
       "state": "synced",
-      "source_sha256": "8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8",
-      "translated_source_sha256": "8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8",
-      "target_sha256": "0731cb6c81652ead360b4c20457a7dd9dc04392452c013c9af7c6b297e3671ab",
-      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
+      "source_sha256": "78aa075498a9bb4a9856ac4dd65636ed06bcd67f03684b543bf78144b69249b2",
+      "translated_source_sha256": "78aa075498a9bb4a9856ac4dd65636ed06bcd67f03684b543bf78144b69249b2",
+      "target_sha256": "096626757ee53ca45479a197704062f025e9a095ac468c9f362efc435edc5847",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
       "glossary_sha256_at_translation": "a8de4bfe48c98dcdbb311490bdb1c30117b13b58b532e5f8ba175472ac2d7c0e",
-      "translated_at": "2026-09-26T09:45:03Z",
+      "translated_at": "2026-09-26T17:23:48Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/05-exemplos-praticas-boas.md": {
@@ -2226,12 +2266,12 @@
     },
     "010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac",
-      "translated_source_sha256": "2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac",
-      "target_sha256": "30a639f9ac0f5671b2c45361bf5fefdcd62ddead422cf087c26323a87b350da1",
-      "terms_sha256_at_translation": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
-      "glossary_sha256_at_translation": "4081b27e5293e8af9914140a6101c9bf342e86cdc35819f86cc14f94e3640151",
-      "translated_at": "2026-09-26T10:39:33Z",
+      "source_sha256": "20c598c8f3131249e4476ed20bfcb55a7d0d1652dc6f77a64c042a6019e27e35",
+      "translated_source_sha256": "20c598c8f3131249e4476ed20bfcb55a7d0d1652dc6f77a64c042a6019e27e35",
+      "target_sha256": "b44068930305fb738ed86a2ecccfda9785ed7edbe833a85e0f15b07dd492f85f",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "23c8697793e9a64d0534687c159bb1ae7929e04b56b0674c33d50e1d1caf7be5",
+      "translated_at": "2026-09-26T17:23:49Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/09-containers-imagens/canon/20-checklist-revisao.md": {
@@ -2496,12 +2536,12 @@
     },
     "010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "37a668f3a83c09e3720ce3eaddf95eac4a7d822bca80726ba306df12e5a7f83f",
-      "translated_source_sha256": "37a668f3a83c09e3720ce3eaddf95eac4a7d822bca80726ba306df12e5a7f83f",
-      "target_sha256": "246008337eda0839748725bc575369892df5462500cd20583aadcc285fa53665",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "9354204446604aa8f1938406d77369dea0bf518119c71597fe067b524d010d0a",
-      "translated_at": "2026-09-26T12:48:51Z",
+      "source_sha256": "32ca61b7ea261f6ce9b4fe562b089d3c60f694c0d28162f88fa2ebc243a936ba",
+      "translated_source_sha256": "32ca61b7ea261f6ce9b4fe562b089d3c60f694c0d28162f88fa2ebc243a936ba",
+      "target_sha256": "cbc54609294b4b5d9576be51b0429544139b4cd7fd86fd44981f0dbf6acfc2ee",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "c980cbf5cabf4af2bcee8d980cae93d2cd117d24ddf0f22fc5c053864d1f9f19",
+      "translated_at": "2026-09-26T17:23:50Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/10-testes-seguranca/canon/20-checklist-revisao.md": {
@@ -2696,12 +2736,12 @@
     },
     "010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "63ab1c3f24333c1f13a93301accb86dc3073c7db8f97cf03988d6451d3fd3a03",
-      "translated_source_sha256": "63ab1c3f24333c1f13a93301accb86dc3073c7db8f97cf03988d6451d3fd3a03",
-      "target_sha256": "6820332945d3c40b88323cb3b2923a13e5d5c0b5402d376a2a138a7472aac757",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "source_sha256": "01f8ab4191e8d2cf75b145f17734e90539c5592c8f60af25e170bc4f7c1017d9",
+      "translated_source_sha256": "01f8ab4191e8d2cf75b145f17734e90539c5592c8f60af25e170bc4f7c1017d9",
+      "target_sha256": "cc2c5739117c57dc70e1c4449cc481f0e515b1b5e81e684f57116e7ddfba8119",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
       "glossary_sha256_at_translation": "f11017a1a43f703219cdfdf7f762e3b35b92067d12a8948c15e3ca5fb0742aa9",
-      "translated_at": "2026-09-26T12:48:53Z",
+      "translated_at": "2026-09-26T17:23:51Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/11-deploy-seguro/canon/20-checklist-revisao.md": {
@@ -2736,12 +2776,12 @@
     },
     "010-sbd-manual/11-deploy-seguro/intro.md": {
       "state": "synced",
-      "source_sha256": "bea3884945e2421a8d84d92dd425ecb2160b1aee3919f6c17068e6e15cc9e598",
-      "translated_source_sha256": "bea3884945e2421a8d84d92dd425ecb2160b1aee3919f6c17068e6e15cc9e598",
-      "target_sha256": "0908a8c90d3e4c5fab1c064ae253fb68b6394dbe1c79885c9efcdc03776eb314",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "d389c1c7650227a4fac059cbef962f32e9e99702dfacef72f0adf4fb6c2158b5",
-      "translated_at": "2026-09-26T12:48:54Z",
+      "source_sha256": "727db834a0062b02dcb28fbddbfbe25348bb0c13399b95317af922fb7b0dadaf",
+      "translated_source_sha256": "727db834a0062b02dcb28fbddbfbe25348bb0c13399b95317af922fb7b0dadaf",
+      "target_sha256": "b353a9f1b601675d7990a5d9156a8e59585e3466e16f0f61372b043042719ec6",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "8f108ca9797d0032a7f320e358a679de1b69a7002a09e474ba7d333005c67026",
+      "translated_at": "2026-09-26T17:23:52Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/11-deploy-seguro/policies-relevantes.md": {
@@ -3196,12 +3236,12 @@
     },
     "010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "16f4c0326acc73e438d193bf66c16f248b7d7639bcd6d893f3e10f66e0acf809",
-      "translated_source_sha256": "16f4c0326acc73e438d193bf66c16f248b7d7639bcd6d893f3e10f66e0acf809",
-      "target_sha256": "a654d24e54f013dd354548f6bdd8c8d583af06dd96a2f8cf053d9abbc1d95531",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "7ee8c94398c5d4969cb0a6b905467ad31eab8a74a84cabf0332528f36f053d59",
-      "translated_at": "2026-09-26T12:49:02Z",
+      "source_sha256": "64b9b01d70d5cba2e78c852a2e6452ee96b53393e4bb22193b0045eabc958c2d",
+      "translated_source_sha256": "64b9b01d70d5cba2e78c852a2e6452ee96b53393e4bb22193b0045eabc958c2d",
+      "target_sha256": "496a062239eddf8411d52934fd2f121d81c912a2ccb287797b4f58d54748cff5",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "e309a609173bece757686b33bef78ea82a9a2e15ece9c11941b848892e9c4823",
+      "translated_at": "2026-09-26T17:23:52Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/13-formacao-onboarding/canon/20-checklist-revisao.md": {
@@ -3236,12 +3276,12 @@
     },
     "010-sbd-manual/13-formacao-onboarding/intro.md": {
       "state": "synced",
-      "source_sha256": "605a041fe0326608e6bda87650c621660da9b5db66fa01fdda70afa6ec89ec12",
-      "translated_source_sha256": "605a041fe0326608e6bda87650c621660da9b5db66fa01fdda70afa6ec89ec12",
-      "target_sha256": "374563a08bc9a3ed7d853b19ead5822c89ba56e3733b496c40f1892920f618f0",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "bb1601a52c4ddd27ee6b026c2a74f89efec9bdcc2f36bb5361c4dbb2081614d9",
-      "translated_at": "2026-09-26T12:49:03Z",
+      "source_sha256": "92dcd54cc5d42da75cb36d644a1ba031bbce89f9f37128b92c6fe0a0d3f2214c",
+      "translated_source_sha256": "92dcd54cc5d42da75cb36d644a1ba031bbce89f9f37128b92c6fe0a0d3f2214c",
+      "target_sha256": "8fa7afebb205c75c5335b04262af6219dd90137ffe605caf16b1fe904c7c2fe0",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "fd93f7a6f1c824201dba622a81c4c82b7b5e157ec4225ee9be2bb3da0eab8ebc",
+      "translated_at": "2026-09-26T17:23:53Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/13-formacao-onboarding/policies-relevantes.md": {
@@ -3326,12 +3366,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md": {
       "state": "synced",
-      "source_sha256": "0ffbe8008ca74fd3549ccfe57a0a011e95dec5f8c5cbaaff3e735c9f8340fb14",
-      "translated_source_sha256": "0ffbe8008ca74fd3549ccfe57a0a011e95dec5f8c5cbaaff3e735c9f8340fb14",
-      "target_sha256": "8f4513b9e98d97f088c37b5d7daa839317a7107a24cec2fd5839ea35ca109203",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "source_sha256": "3d993c78e35be630c0f66e7a54af8babdd9d5f8e5e3d4c279ced64fa35076a29",
+      "translated_source_sha256": "3d993c78e35be630c0f66e7a54af8babdd9d5f8e5e3d4c279ced64fa35076a29",
+      "target_sha256": "b96734cf38082ec856662f7c9fcc07e736d67ae276863837dc08365bccbd08cb",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
       "glossary_sha256_at_translation": "bd8a834d2b41e687e68562eadceb677f8d5e1151f64b9b4e66b5226bff24de7b",
-      "translated_at": "2026-09-26T12:49:06Z",
+      "translated_at": "2026-09-26T17:23:54Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md": {
@@ -3426,12 +3466,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "bf8690e7dd796d27b3927c614d16413f014f32ab8137faf3c3c24a359a8b6ff4",
-      "translated_source_sha256": "bf8690e7dd796d27b3927c614d16413f014f32ab8137faf3c3c24a359a8b6ff4",
-      "target_sha256": "a2d05f0ce22e062155b7de2f9a3c23d895985c62ee27438f19e068cd5f3ad2aa",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "360b3fa67cb2f7995801f408ffc6f670cbe002abb8e2ea13970bac89b89bf8ac",
-      "translated_at": "2026-09-26T12:00:21Z",
+      "source_sha256": "57e931e06176a02dd04b4c29a79b99cee91f689bade471d194c7620acc7fe3c2",
+      "translated_source_sha256": "57e931e06176a02dd04b4c29a79b99cee91f689bade471d194c7620acc7fe3c2",
+      "target_sha256": "cc50de497ec2f654e8a795f6a0e3ee7674fc82c80f23e561244476520a3af440",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "44f596dd01644335cdb878d0fa61066efa781d5832c3a195e1b1af6f08e07419",
+      "translated_at": "2026-09-26T17:23:54Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/canon/20-checklist-revisao.md": {
@@ -3476,12 +3516,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/intro.md": {
       "state": "synced",
-      "source_sha256": "70b65bb873563088f06b09d43cc1197382b0dd00c153ff6ea49f8296da89c479",
-      "translated_source_sha256": "70b65bb873563088f06b09d43cc1197382b0dd00c153ff6ea49f8296da89c479",
-      "target_sha256": "a9380da7136f46510447bb58035eda04a3b6df9f9e80e318a170c015b68b7e54",
-      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "b009e9c096aa37111084f100028228761f500098c00dc30aff092ef7bc936f1c",
-      "translated_at": "2026-09-26T12:00:25Z",
+      "source_sha256": "6eacb0e2283482ee354854b5fcecf834a7615185596701f2e5b22a6e0d90fe0a",
+      "translated_source_sha256": "6eacb0e2283482ee354854b5fcecf834a7615185596701f2e5b22a6e0d90fe0a",
+      "target_sha256": "648dbd3b8b6f4b22c0eb4375d942c9636cdb00a0b6bc08267814afcdfe74e8f7",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "4a37a34fe44061e28d79b0330d6c818d9e6bae1140d0f531388ece1a541da66f",
+      "translated_at": "2026-09-26T17:23:55Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/kpis-arquitetura-visao-geral.md": {
@@ -3996,12 +4036,12 @@
     },
     "020-assets/policies/27_policy-rollback.md": {
       "state": "synced",
-      "source_sha256": "50cc18778be19f708ca9c6c7914d00dd00027ccd08d5bb641cc714daa37e31e6",
-      "translated_source_sha256": "50cc18778be19f708ca9c6c7914d00dd00027ccd08d5bb641cc714daa37e31e6",
-      "target_sha256": "f47bd4270e7b03411497d80cc8faeb6f857929fc606277b4a17ad08d677140a0",
-      "terms_sha256_at_translation": "bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0",
-      "glossary_sha256_at_translation": "110399c81782b2b857b934c1ae1c80750bfc6edbbd743b4b25bf177ee1e0a7bd",
-      "translated_at": "2026-09-26T14:10:59Z",
+      "source_sha256": "a0107b0864ac9e0a35d1ab17f6e72a83ab013629019bec697d4a3edefe276acc",
+      "translated_source_sha256": "a0107b0864ac9e0a35d1ab17f6e72a83ab013629019bec697d4a3edefe276acc",
+      "target_sha256": "ab2ec58e56b79b817b2d2b5468c744c932dd8c58e6b18f09a7bc7eb5812487e2",
+      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "glossary_sha256_at_translation": "8537e843ad8eee2f1e2c76388fcfa0849bb04d6389a0723e26cc14b7f9ed3033",
+      "translated_at": "2026-09-26T17:23:56Z",
       "pending_blocks": 0
     },
     "020-assets/policies/28_policy-monitorizacao-pos-deploy.md": {
@@ -4137,7 +4177,7 @@
   },
   "totals": {
     "untranslated": 21,
-    "synced": 392,
+    "synced": 396,
     "partial": 0,
     "pt-ahead": 0,
     "en-ahead": 0,

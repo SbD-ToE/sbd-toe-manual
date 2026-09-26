@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/aplicacao-lifecycle.md
-  source_sha256: e795d51c82a46859253ffd41e8b87ecc5d1482bc1c64dfcd12c7df1ce7e65ac6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: d69fdce70df20078d6c0ec3a6b9dfffe35ee6b84958091848d8bc940d58def6f
+  source_sha256: c3213c8e94382c853f45c3f0833608397023ee9fd4ac1ad30cd6c235871f22ef
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 65bd2ab7a554d0aad774f9019abd2bec3229d8fa5eac8676fb57a048d89bdb67
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, layer, lifecycle_phase, llm, plain_rag, provenance, requirement_runtime, risk_level, threat, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: a30df8fa0b873fc7e1d6500a631e842ec6bcc14187a815cdcdda183949e557f6
-  translated_at: 2026-09-26T08:32:09Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, layer, lifecycle_phase, llm, papel_suporte, plain_rag, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, slug_threat_modeling, threat, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 463cf3b8138b35735768d9ee8f6fb62a4b3b6d24dc3f1f40bfd0600a50eec3f7
+  translated_at: 2026-09-26T17:23:46Z
   reviewed_by: null
 ---
 
@@ -769,7 +769,7 @@ As a **Software Architect** and **AppSec Engineer**, I want to validate that the
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Design / Review | Activation of an agent at A2+ | `software_architect` + `appsec` | Before activation of the *mandate* |
+| Design / Review | Activation of an agent at A2+ | Software Architects + AppSec Engineer | Before activation of the *mandate* |
 | Level increase | Promotion A2→A3 or A3→A4 | `appsec` (+ `grc` at A3; + `CISO` at A4) | Before the new activation |
 | Periodic review | `review_cadence` of the *mandate* | `appsec` | According to cadence (annual A2; half-yearly A3; quarterly A4) |
 

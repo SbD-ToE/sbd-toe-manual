@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: 2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac
-  source_commit: 28f13ce4d7e0acbbdc6a21d6cf195544784b0b07
-  target_sha256: 30a639f9ac0f5671b2c45361bf5fefdcd62ddead422cf087c26323a87b350da1
+  source_sha256: 20c598c8f3131249e4476ed20bfcb55a7d0d1652dc6f77a64c042a6019e27e35
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: b44068930305fb738ed86a2ecccfda9785ed7edbe833a85e0f15b07dd492f85f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 4081b27e5293e8af9914140a6101c9bf342e86cdc35819f86cc14f94e3640151
-  translated_at: 2026-09-26T10:39:33Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 23c8697793e9a64d0534687c159bb1ae7929e04b56b0674c33d50e1d1caf7be5
+  translated_at: 2026-09-26T17:23:49Z
   reviewed_by: null
 ---
 
@@ -550,7 +550,7 @@ As **DevOps + AppSec**, I want to ***enforce* the use of dedicated ServiceAccoun
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Deploy | Workload definition | DevOps / SRE | Before go-live |
+| Deploy | Workload definition | Software Architects approve; DevOps / SRE executes | Before go-live |
 
 **Useful links.**  
 [Kubernetes and Execution](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
@@ -564,7 +564,7 @@ Without network segmentation, compromised workloads exfiltrate data and propagat
 
 :::userstory
 **Story.**   
-As **DevOps / SRE**, I want to apply NetworkPolicy with explicit ingress/egress in every namespace, so as to limit communications to what is strictly necessary and detect anomalies.
+As **DevOps / SRE + Software Architects**, I want to apply NetworkPolicy with explicit ingress/egress in every namespace, so as to limit communications to what is strictly necessary and detect anomalies.
 
 **Acceptance criteria (BDD).**  
 - **Given** that a workload tries to contact an unauthorised service **When** the flow is not in a NetworkPolicy **Then** the connection is blocked and recorded in audit logs
@@ -780,7 +780,7 @@ Applications that process critical data (payments, personal data) require reinfo
 
 :::userstory
 **Story.**  
-As **DevOps / SRE + AppSec Engineer**, I want to configure advanced sandboxes (gVisor, Kata Containers, Firecracker) via RuntimeClass on sensitive workloads, so as to ensure reinforced syscall isolation and protection against privilege escalation.
+As **DevOps / SRE + AppSec Engineer + Software Architects**, I want to configure advanced sandboxes (gVisor, Kata Containers, Firecracker) via RuntimeClass on sensitive workloads, so as to ensure reinforced syscall isolation and protection against privilege escalation.
 
 **Acceptance criteria (BDD).**  
 - **Given** that a sensitive pod is created (e.g. with the label `sandbox=required`)  
@@ -870,7 +870,7 @@ As **DevOps / SRE + AppSec Engineer**, I want to manage a catalogue of Golden Ba
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Design/Platform | Proposal of a new base | DevOps / SRE + AppSec Engineer | 5 working days |
+| Design/Platform | Proposal of a new base | Software Architects approve; DevOps / SRE + AppSec Engineer execute | 5 working days |
 | Operations | CVE/EOL/incident | DevOps / SRE + AppSec Engineer + GRC / Compliance | according to severity |
 
 ---
@@ -1026,7 +1026,7 @@ A shared GPU without explicit isolation is a posture gap, not a neutral cost opt
 
 :::userstory
 **Story.**   
-As **DevOps / SRE + AppSec Engineer**, I want to isolate the inference workload at GPU level and separate sensitive inference from user workloads, so as to prevent *cross-tenant* interference and service degradation.  
+As **DevOps / SRE + AppSec Engineer + Software Architects**, I want to isolate the inference workload at GPU level and separate sensitive inference from user workloads, so as to prevent *cross-tenant* interference and service degradation.  
 
 **Acceptance criteria (BDD).**  
 - **Given** a sensitive inference pod  
@@ -1057,7 +1057,7 @@ As **DevOps / SRE + AppSec Engineer**, I want to isolate the inference workload 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Design/Platform | Provisioning of the inference cluster | DevOps / SRE + AppSec Engineer | Before go-live |
+| Design/Platform | Provisioning of the inference cluster | Software Architects approve; DevOps / SRE + AppSec Engineer execute | Before go-live |
 | Production | Scheduling of a sensitive pod | DevOps / SRE (automatic) | Immediate |
 
 **Useful links.** [Self-Hosted AI Inference](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)

@@ -8,15 +8,15 @@ tags: [princípios, security by design, iac, fundamentos, arquitetura segura]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md
-  source_sha256: 8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8
-  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
-  target_sha256: 0731cb6c81652ead360b4c20457a7dd9dc04392452c013c9af7c6b297e3671ab
+  source_sha256: 78aa075498a9bb4a9856ac4dd65636ed06bcd67f03684b543bf78144b69249b2
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 096626757ee53ca45479a197704062f025e9a095ac468c9f362efc435edc5847
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase, provenance, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: a8de4bfe48c98dcdbb311490bdb1c30117b13b58b532e5f8ba175472ac2d7c0e
-  translated_at: 2026-09-26T09:45:03Z
+  translated_at: 2026-09-26T17:23:48Z
   reviewed_by: null
 ---
 
@@ -116,7 +116,7 @@ This principle prevents systematic errors, insecure defaults or *hallucinations*
 | DevOps / Cloud     | Implement structure, tagging, segregation and review of permissions |
 | Security / AppSec | Define default policies and validate SbD principles                 |
 | Architecture        | Approve layout, naming and output standards                      |
-| Platform         | Provide shared scaffolds, templates and validations             |
+| DevOps / SRE (Platform) | Provide shared scaffolds, templates and validations             |
 
 ---
 

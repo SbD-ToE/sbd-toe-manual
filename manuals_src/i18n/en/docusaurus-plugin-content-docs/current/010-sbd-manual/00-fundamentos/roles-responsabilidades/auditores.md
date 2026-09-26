@@ -8,15 +8,15 @@ sidebar_position: 14
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md
-  source_sha256: 0a2295eee3eba0b97f889d7eeda4aea6e085a57bf510e591b504317a789f1fba
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c2751e73e92a07236440e3536492ecc2f5b83dc2ced2984085585d62f27ec7f9
+  source_sha256: beeea94ae0b3139e65a5867b0e8bf3830175e90d9a2bd392f3e2de1ef70ed5ab
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 7cab2d5b5bd496cc1b4f98037692159e52532094284514708d83ae51e6ba3f78
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, framework_source_corpus, sbdtoe_sbd, traceability, transversal]
-  glossary_sha256: 047a347a495a1f2b62aae314e65227be0c474069e96ecb191a05ecea70d928c1
-  translated_at: 2026-09-25T20:19:56Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [chapter_role, framework_source_corpus, sbdtoe_sbd, slug_threat_modeling, traceability, transversal]
+  glossary_sha256: 91b9725648f074b6ab11602f2a86dabcd09da1f322bed539d7f56f586a6ef951
+  translated_at: 2026-09-26T17:23:38Z
   reviewed_by: null
 ---
 
@@ -31,6 +31,7 @@ They verify risk classifications, traceability, evidence of application, and ali
 - Validate the effective application of the prescribed practices
 - Assess risk classifications, requirements, traceability and evidence
 - Produce independent reports and improvement recommendations
+- Do not audit processes, controls or decisions they took part in: the auditor and the audited function are different people
 - Attest compliance before the authorities
 
 ### Organisational Context {#contexto-organizacional}

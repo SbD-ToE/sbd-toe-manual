@@ -8,15 +8,15 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/gestao-executiva.md
-  source_sha256: 00f90a58b54480243afc99846123e7bb78112b72e3b7263d30c60646111754e2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: b3c6e117ad1af86802dcf99418c09f8783d16ccc8b919829d50b498dfdc71e85
+  source_sha256: 6534f390202ca4b9533d1c84825480b9ea4492f1f3a0244b89374089dabb2b3e
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 10b004396223147fc3b460114d6023197eac9646edef8603b3a98214ca50a62d
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [alcada, audit_trail, capacitacao, chapter_role, maturity, sbdtoe_sbd, traceability, trilho_formativo]
-  glossary_sha256: a1b4ba2b6d8690591914dc59730fc6125e6a9e7d17caf85773958952ebe1299e
-  translated_at: 2026-09-25T20:19:58Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [alcada, audit_trail, capacitacao, chapter_role, maturity, papel_suporte, sbdtoe_sbd, traceability, trilho_formativo]
+  glossary_sha256: 11ee6b5e1dcd2eaad47491c748c3e8b9fa2686c8bfe2843365bd3f5bade61b53
+  translated_at: 2026-09-26T17:23:39Z
   reviewed_by: null
 ---
 
@@ -90,7 +90,7 @@ Run **incident simulations** (war room) regularly, define upskilling KPIs, ensur
 - [US-04: Incident simulations (war room)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---exercícios-práticos-e-simulações) - Validate response processes (with GRC / Compliance)
 - [US-11: Upskilling KPIs](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---validação-formal-de-onboarding-via-checklist) - Evaluate real impact (with GRC / Compliance)
 - [US-12: Minimum training for third parties](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Comply with NIS2/DORA (with GRC / Compliance)
-- [US-13: Training track for contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA before technical access (with Security Champion (training))
+- [US-13: Training track for contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA before technical access (with Training Manager)
 
 ### Ch. 14 - Governance and Contracting {#cap-14---governança-e-contratação}
 Define and monitor **governance KPIs**, appoint a Security Champion per critical application, consolidate and report KPIs, and formalise a governance model with delegated authority levels.

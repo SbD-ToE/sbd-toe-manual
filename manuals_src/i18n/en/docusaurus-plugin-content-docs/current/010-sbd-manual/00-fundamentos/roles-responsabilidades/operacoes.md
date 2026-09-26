@@ -1,40 +1,42 @@
 ---
 id: operacoes
-title: Operations (Ops)
-sidebar_label: 🔧 Operations (Ops)
-description: Responsibilities of Operations in SbD-ToE
-tags: [operacoes, ops, runtime, incident-response, responsabilidades]
+title: SecOps (Security Operations)
+sidebar_label: 🔧 SecOps (Security Operations)
+description: Responsibilities of SecOps (Security Operations) in SbD-ToE
+tags: [operacoes, secops, runtime, incident-response, responsabilidades]
 sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md
-  source_sha256: f8af5c2ee7d4403761f19c67dfda2d0bafa8aa0bf945cb3b24ee7f6ffe753fa1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 45091c5c915986e045d6229c5cc5c00f136a6fa3cff79b7bb5fb9f1ed8cc260f
+  source_sha256: 68f8469ff5c0aedd8cf2e8371a57ceeb74e9f979e544aede890e4bc12620a9ab
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 0ab76865a3c4641afa13b35beec7d00d3669235e3e675ea0efe937c4b0ecbdc0
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, framework_source_corpus, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: f2fb12fcf56dd55200e4a32b9af4adf8b4af08fab225182d4f60e2e11e863a0f
-  translated_at: 2026-09-25T20:20:00Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [chapter_role, framework_source_corpus, role_secops, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 0c4cb135b66401d73e1986756948b09914e8a20264b8133e205d97c506454622
+  translated_at: 2026-09-26T17:23:41Z
   reviewed_by: null
 ---
 
-# Operations (Ops)
+# SecOps (Security Operations)
 
 ## Overview {#visão-geral}
 
-Ops maintains **runtime integrity**, ensuring availability, patch application and coordinated incident response.  
-Responsible for **continuous monitoring**, alert configuration and execution of response playbooks.
+SecOps maintains **security at runtime**: detection, security alerts and coordinated incident response.  
+Responsible for **continuous security monitoring**, alert configuration and execution of response playbooks. General operations — availability, routine patching, rollback — belong to [DevOps / SRE](devops-sre).
+
+**Specialisations:** SecOps (IR), also called Incident Response; SecOps (SOC); SecOps (Incident Commander); and the security on-call. The availability on-call belongs to DevOps / SRE.
 
 ### Key Responsibilities {#responsabilidades-principais}
-- Ensure secure execution at runtime
-- Apply patches and regular updates
+- Ensure the detection of security events at runtime
+- Trigger the security patch when a vulnerability in running systems requires it
 - Coordinate incident response (Ch. 12)
-- Maintain availability and operational resilience
+- Ensure incident notification within the regulatory deadlines
 
 ### Organisational Context {#contexto-organizacional}
-Ops is the **front line in complying with NIS2** (incident response, 24-hour notification) and **DORA** (operational continuity and management of critical events).
+SecOps is the **front line in complying with NIS2** (incident response, notification within 24h) and **DORA** (operational continuity and management of critical events).
 
 ## Regulatory Framework {#enquadramento-regulatório}
 
@@ -47,13 +49,13 @@ Front line in:
 ## Activities by Chapter {#atividades-por-capítulo}
 
 ### Ch. 09 - Containers and Images {#cap-09---containers-e-imagens}
-Keep the **container baseline** up to date and apply security patches to base images systematically.
+Track **vulnerabilities in running images** and trigger the security patch; maintaining the baseline belongs to DevOps / SRE.
 
 ### Ch. 11 - Secure Deployment {#cap-11---deploy-seguro}
-Ensure **resilience in deploys**, coordinate rollback when necessary, and validate recovery procedures.
+Trigger the **rollback when a deploy introduces a security incident**; executing the rollback belongs to DevOps / SRE.
 
 ### Ch. 12 - Monitoring and Operations {#cap-12---monitorização-e-operações}
-Configure **critical alerts with SLAs**, integrate alerts with incident response playbooks, correlate multi-source events, tune alerts to reduce false positives, coordinate incident response, work with metrics and maintain availability.
+Configure **critical alerts with SLAs**, integrate alerts with incident response playbooks, correlate multi-source events, tune alerts to reduce false positives, coordinate incident response and work with detection and response metrics.
 
 **User Stories:**
 - [US-03: Critical alerts with SLAs](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-03---alertas-com-slas-definidos) - Timely incident response

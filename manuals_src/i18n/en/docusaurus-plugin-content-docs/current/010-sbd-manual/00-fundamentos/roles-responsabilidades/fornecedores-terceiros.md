@@ -8,15 +8,15 @@ sidebar_position: 13
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/fornecedores-terceiros.md
-  source_sha256: 98f43e2c2dc3aed57c27dce2abe64641cda34ac35144d75eef3c71ea53dcef16
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 9444c34abce82c31cc1704aa0be939d1a93fed6f21fa3ed5a37b12510cdce1f2
+  source_sha256: df42e2de7fe621af6199fd4e0b8edd706362bdab8c758d5511f004e61389a6af
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: f4a06c26b78f2d617e03a9f1fe6ca5d54a4990891d2a9797412f18d7e416c724
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [avaliacao, chapter_role, practitioner_manual, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 6ada444a55b2b5e511c0e24c81d5881ea88dcef597cf613e60a518281766f35d
-  translated_at: 2026-09-25T20:19:58Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [avaliacao, chapter_role, practitioner_manual, role_rh_peopleops, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: cf4559bc5afee0b7806d6405613705b33201af4d0728cef7c7236630b3ab682d
+  translated_at: 2026-09-26T17:23:38Z
   reviewed_by: null
 ---
 
@@ -61,15 +61,15 @@ The organisation requires and records the **mandatory minimum training** before 
 
 **Associated requirements:**
 - [US-12: Minimum training for third parties](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Receive mandatory training (GRC / Compliance / Executive Management responsible for ensuring it)
-- [US-13: Training track for contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA before technical access (CISO / Security Champion (training) responsible for executing it)
+- [US-13: Training track for contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA before technical access (CISO / Training Manager responsible for executing it)
 
 ### Ch. 14 - Governance and Contracting {#cap-14---governança-e-contratação}
 The organisation sets the **contractual security clauses**, validates the supplier before onboarding, monitors compliance throughout the contract and carries out formal offboarding at the end.
 
 **Associated requirements:**
 - [US-03: Continuous validation of suppliers](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---validação-contínua-de-fornecedores) - GRC validates compliance
-- [US-15: Technical preparation of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Security Champion (HR) carries out the preparation
-- [US-17: Secure offboarding](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Security Champion (HR) / DevOps / SRE carry out the offboarding
+- [US-15: Technical preparation of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Security Champion + HR / People Operations carry out the preparation
+- [US-17: Secure offboarding](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Security Champion + HR / People Operations + DevOps / SRE carry out the offboarding
 - [US-14: Periodic reassessment of suppliers](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Submit to reassessment
 - [US-18: Continuous monitoring of suppliers](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-18---monitorização-contínua-de-conformidade-de-fornecedores-alertas-e-escalação) - Allow monitoring (AppSec Engineer / Operations (Ops) carry it out)
 

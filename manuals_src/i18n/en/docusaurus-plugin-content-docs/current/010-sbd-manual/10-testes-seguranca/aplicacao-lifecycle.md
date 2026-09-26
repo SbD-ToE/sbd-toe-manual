@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md
-  source_sha256: 37a668f3a83c09e3720ce3eaddf95eac4a7d822bca80726ba306df12e5a7f83f
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 246008337eda0839748725bc575369892df5462500cd20583aadcc285fa53665
+  source_sha256: 32ca61b7ea261f6ce9b4fe562b089d3c60f694c0d28162f88fa2ebc243a936ba
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: cbc54609294b4b5d9576be51b0429544139b4cd7fd86fd44981f0dbf6acfc2ee
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 9354204446604aa8f1938406d77369dea0bf518119c71597fe067b524d010d0a
-  translated_at: 2026-09-26T12:48:51Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: c980cbf5cabf4af2bcee8d980cae93d2cd117d24ddf0f22fc5c053864d1f9f19
+  translated_at: 2026-09-26T17:23:50Z
   reviewed_by: null
 ---
 
@@ -588,7 +588,7 @@ As an **AppSec Engineer + DevOps / SRE**, I want **a structured decision framewo
   **Then** the decision is documented in template T1 (FIX/ACCEPT/SUPPRESS/DEFER) with a traceable justification
 - **Given** a HIGH finding in L3  
   **When** DevOps proposes ACCEPT-risk but AppSec disagrees  
-  **Then** the conflict is escalated with template T2 to the CISO/Scrum Master / Team Lead, with resolution within a 4h SLA
+  **Then** the conflict is escalated with template T2 to the CISO/Tech Lead, with resolution within a 4h SLA
 - **Given** a FIX-IMMEDIATELY decision  
   **When** the fix is applied in a PR  
   **Then** revalidation confirms that the finding has disappeared and no new CRITICAL finding was introduced
@@ -838,7 +838,7 @@ As a **DevOps / SRE**, I want **to formally separate the automatic signal (tool 
 |---|---|
 | L1 | Overrides permitted with a simple record |
 | L2 | Override requires AppSec Engineer approval + expiry |
-| L3 | Override requires dual approval (AppSec Engineer + Product Owner / Scrum Master / Team Lead) + expiry + mandatory retest |
+| L3 | Override requires dual approval (AppSec Engineer + Product Owner / Tech Lead) + expiry + mandatory retest |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |

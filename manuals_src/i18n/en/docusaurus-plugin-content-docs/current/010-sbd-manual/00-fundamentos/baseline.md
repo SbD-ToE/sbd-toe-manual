@@ -8,15 +8,15 @@ sidebar_position: 4
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/baseline.md
-  source_sha256: c1f95a1fcd348b88604ecd5ffc0f9b132e3f1175715fa1137ba48dc931795473
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5802edc4c4a33561cdceaa32b5e762f19cb4dd976982e3a6d659ef94e15fd046
+  source_sha256: 2cc6ab5d2f2c2f4462567e4939345ca65cd4d3e6b8a80212015654fc7b59f8e6
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 1a2c9d8a503e95ea10f8c63710f9556d3088e0a443c738b768b32db1eeae5fb0
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, layer, lifecycle_phase, mapping, maturity, piso_limiar, piso_relacao, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 9cf7a95e7e92c29c8de85d2c5a3defe33cca28ae1f051d106f160b58afbd14b2
-  translated_at: 2026-09-25T20:19:51Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, layer, lifecycle_phase, mapping, maturity, piso_limiar, piso_relacao, risk_level, role_juridico, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: a2cee05331d6453cf31e6f7dc03fe8b1d064a08030134cdec00051b4fce1b078
+  translated_at: 2026-09-26T17:23:35Z
   reviewed_by: null
 ---
 
@@ -85,7 +85,7 @@ Regardless of the risk level, **every application** must implement:
 ### 5️⃣ **CI/CD Pipelines with Minimum Checks** (Ch. 07) {#5️⃣-pipelines-cicd-com-verificações-mínimas-cap-07}
 **What**: Run CI/CD pipelines with minimum security gates (SAST, dependency scanning, secret scanning). Never deploy without validations.
 
-**Why**: Automated pipelines guarantee that no vulnerable code reaches production through human oversight. These checks can be fully automated, provided the execution and blocking criteria are objective, deterministic and auditable.
+**Why**: Automated pipelines guarantee that no vulnerable code reaches production through human oversight. These checks can be fully automated, provided the execution and blocking criteria are objective, deterministic and auditable. Automated validation replaces human approval when the owner of that approval has accepted it as sufficient and deterministic; whatever deviates from it goes back to that owner as an exception.
 
 **Responsible**: DevOps, AppSec
 

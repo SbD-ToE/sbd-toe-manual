@@ -8,15 +8,15 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/macro-processos.md
-  source_sha256: 2dca9de75035ef680459a983831f02904a6fa60f3628a28b3538fa7db2b9c0f5
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 2ffa70abfe58a88372be8532aa9356136794c1111a77e724f88e80d5ba921b95
+  source_sha256: bb0c4fdb48c5af7ed06c7b7c12fffc01518f41439715b4e231bb81d7ed2b938c
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 9667b444f00198d922c9709e3291570bcf14a674fe96fee9a87d3fbca6e74a1e
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, oracle, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
-  glossary_sha256: d143b16b30d30ff0c34d227abe6d12c1bd63a645463d8a4b6f3ab3d284d8d3dd
-  translated_at: 2026-09-25T20:19:54Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, esquema_regime, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, mcp_reading_normativa, mcp_reading_programa, oracle, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, schema, slug_threat_modeling, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
+  glossary_sha256: c17682c23ff78b7bcadabd4bca7d2bbbfb6d54069e6d0cb7b0ea1a00caae9e7f
+  translated_at: 2026-09-26T17:23:36Z
   reviewed_by: null
 ---
 
@@ -381,7 +381,7 @@ flowchart LR
   C14 -.->|"alçadas → mandate A0–A4 · REQ-AGN-001"| C02["02 Governação de automatismos"]
 ```
 
-- **Fundamentals · Roles → Training and Onboarding (00 → 13).** What leaves is the [13 canonical roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro) and security *ownership* per application ([`GOV-002`](/sbd-toe/sbd-manual/governanca-contratacao/addon/catalogo-requisitos-governanca)). They enter Training and Onboarding as a precondition of competence: mandatory *onboarding* before autonomous work ([`TRN-002`](/sbd-toe/sbd-manual/formacao-onboarding/addon/catalogo-requisitos-formacao)), validated against an objective criterion (`TRN-003`), and access to L2+ environments conditional on valid *onboarding* (`TRN-004`).
+- **Fundamentals · Roles → Training and Onboarding (00 → 13).** What leaves is the [17 canonical roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro) and security *ownership* per application ([`GOV-002`](/sbd-toe/sbd-manual/governanca-contratacao/addon/catalogo-requisitos-governanca)). They enter Training and Onboarding as a precondition of competence: mandatory *onboarding* before autonomous work ([`TRN-002`](/sbd-toe/sbd-manual/formacao-onboarding/addon/catalogo-requisitos-formacao)), validated against an objective criterion (`TRN-003`), and access to L2+ environments conditional on valid *onboarding* (`TRN-004`).
 - **Training and Onboarding → Governance and Contracting (13 → 14).** What leaves is competence validated and maintained (`TRN-005`, continuous training at L2/L3). It enters Governance and Contracting as the exercise of authority within approval authorities known by level (`GOV-003`), exception management (`GOV-004`, `GOV-005`) and third-party duties: technical *onboarding* before access (`GOV-013`), periodic access review (`GOV-014`), clauses and validation (`GOV-006`, `GOV-007`).
 - **Governance and Contracting → Automation governance (14 → 02, automation branch).** What leaves is the governance model with approval authorities. It enters Security Requirements as a recorded and versioned *mandate* per agent ([`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)), an autonomy level per context (`REQ-AGN-002`), a *kill-switch* (`REQ-AGN-003`) and an *intent declaration* before a destructive action (`REQ-AGN-004`); the agent operates as an isolated *principal* with a *mandate* and *least privilege* ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura)); the *mandate* is instrumented by [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes).
 
@@ -401,7 +401,7 @@ It applies to the **person in a role** (staff member, security *owner*, approver
 
 ### Inputs {#entradas-3}
 
-- Formal governance model with roles, responsibilities and a decision cycle (`GOV-001`); the 13 roles (Fundamentals).
+- Formal governance model with roles, responsibilities and a decision cycle (`GOV-001`); the 17 roles (Fundamentals).
 - Application Classification by level (MP1), which fixes the approval authorities (`GOV-003`).
 - Training tracks by profile and level (`TRN-001`); contracts with security clauses (`GOV-006`).
 - Minimum *mandate* schema (Policy 38; Security Requirements, US-15).
@@ -411,7 +411,7 @@ It applies to the **person in a role** (staff member, security *owner*, approver
 1. **Define roles and assign *ownership*** per application, with the competence and authority to decide within the scope of the project — Governance and Contracting, `GOV-001`, `GOV-002`, US-09 (the L2/L3 *owner* completes the Training and Onboarding training).
 2. **Make authority conditional on competence**: validated *onboarding* before autonomous work and before access to L2+; continuous training half-yearly (L2) or quarterly (L3); equivalent *onboarding* for third parties — Training and Onboarding, `TRN-002`, `TRN-003`, `TRN-004`, `TRN-005`, `TRN-007`.
 3. **Exercise authority within the approval authorities**: L1 technical lead; L2 AppSec + technical lead; L3 AppSec + GRC/CISO with a mandatory compensating measure — Governance and Contracting, `GOV-003`; canonical process, "Approval authorities". Decisions beyond one's authority escalate in a defined and traceable way.
-4. **Grant exceptions through the canonical process** in six steps — identification, technical justification, impact assessment, compensating measures, formal approval, recording and activation of monitoring — with the mandatory fields, the chain of authority (who requested, who assessed, who approved) and a maximum term of 90 days; tacit approvals are invalid; an exception expired without renewal is a non-conformity — Governance and Contracting, `GOV-004`, `GOV-005`, canonical process; Security Requirements, US-03.
+4. **Grant exceptions through the canonical process** in six steps — identification, technical justification, impact assessment, compensating measures, formal approval, recording and activation of monitoring — with the mandatory fields, the chain of authority (who requested, who assessed, who approved) and a maximum term of 90 days; tacit approvals are invalid; an exception expired without renewal is a non-conformity — Governance and Contracting, `GOV-004`, `GOV-005`, canonical process; Security Requirements, US-03. Whoever requests the exception does not approve it: requester and approver are different people, and the chain of authority records both.
 5. **Apply the domain-specific particulars**, without replacing the process: identification by the canonical catalogue ID ([Security Requirements](/sbd-toe/sbd-manual/requisitos-seguranca/addon/gestao-excecoes)); ADR with risk acceptance and a record in the traceability matrix ([Secure Architecture](/sbd-toe/sbd-manual/arquitetura-segura/addon/excecoes)); YAML record with approver and validity verified in the *pipeline* ([Dependencies (SBOM, SCA) (05)](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/excecoes-e-aceitacao-risco)); SAST markings do not replace formal approval ([Secure Development (06)](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/excecoes-e-justificacoes)); active exception visible in the *pipeline* logs and metadata ([Secure CI/CD (07)](/sbd-toe/sbd-manual/cicd-seguro/addon/controle-excecoes-visibilidade)); expired exception automatically blocks the *pipeline* ([Infrastructure as Code (08)](/sbd-toe/sbd-manual/iac-infraestrutura/addon/gestao-excecoes)); global deactivation of a *policy* is always non-conformant ([Containers and Images (09)](/sbd-toe/sbd-manual/containers-imagens/addon/excecoes-containers)); *break-glass* with *post-facto* approval within 24h ([Secure Deployment (11)](/sbd-toe/sbd-manual/deploy-seguro/addon/excecoes-deploy)); silencing with a mandatory end date and log retention with a term dictated by regulatory risk ([Monitoring and Operations (12)](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/excecoes-operacoes)).
 6. **Mandate automation and agents**: *mandate* in VCS with identity, level, *scope*, *tools*, environments, *owner*, *approver*, *kill-switch* and validity window; approval by level — A1 Scrum Master / Team Lead; A2 + AppSec Engineer; A3 + GRC / Compliance; A4 Executive Management / CISO with a formal signature; *kill-switch* exercised before activation and periodically; a change of level reopens the cycle — Security Requirements, `REQ-AGN-001..004`, US-15; Secure Architecture, `ARC-015`. Human review and independent technical validation cannot be disabled on grounds of "trust in the tool" (Security Requirements, minimum governance rules).
 7. **Govern third parties**: validation and proportional clauses before *onboarding*; technical preparation and training before access, with real access granted only afterwards; periodic access review with same-day removal of what is not needed; *offboarding* — Governance and Contracting, `GOV-006`, `GOV-007`, `GOV-013`, `GOV-014`, US-15, US-16, US-19, US-17.
@@ -500,7 +500,7 @@ Each of the four elements of the invariant has a home in the existing indicators
 |---|---|---|
 | **Eligible population** | Portfolio foundation F-01..F-04; "Denominator and portfolio foundation" on each KPIs page | *Which set is being talked about?* Without a complete F-02, the percentage has no interpretable base. |
 | **Evidence contract** | "Complementary definitions" and "Collection and instrumentation" (primary source) on each KPIs page; "mandatory evidence" | *What counts as proof?* An indicator without evidence is a declaration. |
-| **Owner** | "Collection and responsibilities" per cross-cutting dimension (T-01/T-03 AppSec Engineer; T-02 GRC / Compliance with AppSec Engineer; T-04 GRC / Compliance; T-05 AppSec Engineer with GRC / Compliance (Procurement); T-06 Executive Management / CISO with GRC / Compliance) | *Who answers for the number?* |
+| **Owner** | "Collection and responsibilities" per cross-cutting dimension (T-01/T-03 AppSec Engineer; T-02 GRC / Compliance with AppSec Engineer; T-04 GRC / Compliance; T-05 AppSec Engineer with Procurement; T-06 Executive Management / CISO with GRC / Compliance) | *Who answers for the number?* |
 | **Measure of resulting state** | The indicator itself — named as a state ("% of applications with…", "# … without…"), not as an activity | *Does the state that the activity was supposed to produce exist?* |
 
 The owner is defined per cross-cutting dimension, not per indicator; and the applications that enter the denominator but not the numerator (for example, a designated *owner* without valid training, in `GOV-K01`) are precisely what the structure makes visible.
@@ -606,7 +606,7 @@ The *thresholds* of each indicator are defined by level in the catalogues and ar
 |---|---|
 | [Theory of Everything — invariants](/sbd-toe/teory-of-everything/intro) | Defines invariant; the macro-processes are its process form |
 | [How to use the Manual](/sbd-toe/sbd-manual/fundamentos/como-usar) | Structure per chapter and L1–L3 proportionality |
-| [Roles and responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro) | The 13 canonical roles used on this page |
+| [Roles and responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro) | The 17 canonical roles used on this page |
 | [Baseline](/sbd-toe/sbd-manual/fundamentos/baseline) | Foundation, independent of the level (MP1) |
 | [Cross-cutting verification matrix](/sbd-toe/sbd-manual/testes-seguranca/addon/matriz-verificacao-transversal) | Precedent of an index without duplication; oracles (MP2) |
 | [Canonical exception process](/sbd-toe/sbd-manual/governanca-contratacao/addon/processo-excecoes) | Precedent of process documentation; backbone of MP4 |

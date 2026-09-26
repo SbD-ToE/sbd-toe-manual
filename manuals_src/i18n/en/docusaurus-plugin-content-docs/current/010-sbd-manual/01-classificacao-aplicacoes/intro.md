@@ -6,15 +6,15 @@ tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/intro.md
-  source_sha256: 50bf0948ad49421c24ea773b1750957708ffc6d4a29875e98b36776da022c7d1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: b8161697d13cfbbf2b2953d308be010b2cf10f322243070df334b522498a2b02
+  source_sha256: b289e7aa0f89193cb030454414943dde07970c2773de5c4998ae389630b5ee81
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 034ddf62b8bd4d79ea7cddfb1d727c5a5e046065f06593dae1b107d336c847d1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [basilar, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, risk_level, sbdtoe_sbd, traceability]
-  glossary_sha256: 383d6ef46debdc37cd8236321c0a133e51352f416d3687fc65b4811e4eba561c
-  translated_at: 2026-09-25T20:18:54Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [basilar, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, mapping, maturity, mcp_reading_normativa, normative_empirical, papel_suporte, practitioner_manual, risk_level, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: 4b3633ac9d030a8bd44ab5d39fd20b7957ac4c2e8e01e0bde8aa8c3259b800a9
+  translated_at: 2026-09-26T17:23:43Z
   reviewed_by: null
 ---
 
@@ -105,7 +105,7 @@ What varies are the **attributes of the risk** - such as origin, mechanism, dete
 
 | Role                | Contribution                                                                 |
 | -------------------- | -------------------------------------------------------------------------- |
-| Developer / Scrum Master / Team Lead | Propose the classification, identify relevant changes                    |
+| Developer / Tech Lead | Propose the classification, identify relevant changes                    |
 | AppSec Engineer      | Validate the model applied, adjust the risk level, apply the matrix             |
 | Software Architects | Review technical implications, flows and exposure                            |
 | Product Owner / Executive Management | Approve risk acceptance, assess the impact of exceptions        |

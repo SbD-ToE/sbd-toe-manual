@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/intro.md
-  source_sha256: 3580aa28cb79f74ef42dee457216ba708edfdb941bb3bdc7920ec4fea1519748
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 0305d761b7ee66d2d24388a2fd7c6dc0107cbd18d837b2c083746552f8851ce7
+  source_sha256: b657a76581122881b85434934c49185e4ce2bcc84eba40b93c3fdf6a7d2ba877
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: d646a0f84085e4f31c148acbbf0bef3a274379ae202b29a2702e4759dce8aaae
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
-  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, lifecycle_phase, maturity, practitioner_manual, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: ac54fef37a76075f28e7b5d152f633861116cee8049016fbe1ddb60a9bd02a5d
-  translated_at: 2026-09-26T08:57:17Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, lifecycle_phase, maturity, papel_suporte, practitioner_manual, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: bb02b58678513c9fa89f46547780c3725497f0d139f39a88c2c85b679014df59
+  translated_at: 2026-09-26T17:23:47Z
   reviewed_by: null
 ---
 
@@ -96,7 +96,7 @@ These practices are not optional. They constitute the **foundation of trust** th
 | **Software Architects**     | Curate guidelines, approve *rulesets* and periodically review their adequacy |
 | **AppSec Engineer**            | Define minimum criteria, co-approve guidelines, validate exceptions and map CWE/ASVS |
 | **DevOps / SRE**               | Integrate validations into the pipeline, version configurations and apply *enforcement* |
-| **QA**                         | Apply security checklists in PRs and guarantee compliance |
+| **Developer (technical reviewer)** | Apply security checklists in PRs and guarantee compliance |
 | **Developer**                  | Apply guidelines, run local validations and propose improvements |
 
 ---

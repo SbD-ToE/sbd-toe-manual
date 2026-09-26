@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/intro.md
-  source_sha256: 70b65bb873563088f06b09d43cc1197382b0dd00c153ff6ea49f8296da89c479
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a9380da7136f46510447bb58035eda04a3b6df9f9e80e318a170c015b68b7e54
+  source_sha256: 6eacb0e2283482ee354854b5fcecf834a7615185596701f2e5b22a6e0d90fe0a
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 648dbd3b8b6f4b22c0eb4375d942c9636cdb00a0b6bc08267814afcdfe74e8f7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, layer, maturity, papel_suporte, practitioner_manual, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: b009e9c096aa37111084f100028228761f500098c00dc30aff092ef7bc936f1c
-  translated_at: 2026-09-26T12:00:25Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, layer, maturity, mcp_reading_normativa, papel_suporte, practitioner_manual, role_juridico, role_procurement, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 4a37a34fe44061e28d79b0330d6c818d9e6bae1140d0f531388ece1a541da66f
+  translated_at: 2026-09-26T17:23:55Z
   reviewed_by: null
 ---
 
@@ -97,7 +97,7 @@ Effective governance requires clearly defined roles, with proportional authority
 - **AppSec Engineer** → validates exceptions and oversees traceability.  
 - **DevOps / SRE** → ensures practical application in pipelines and deploy.  
 - **Executive Management** → approves residual risk and governs organisational adoption.  
-- **GRC / Compliance (Legal + Procurement)** → integrates security clauses into contracts.  
+- **Legal + Procurement** → integrates security clauses into contracts.  
 - **GRC / Compliance** → collects evidence, manages metrics and audits.  
 
 👉 Each role exercises authority **derived from the defined governance model**
@@ -152,9 +152,9 @@ system of organisational governance**.
 | Policy | Mandatory? | Application | Minimum content |
 |----------|--------------|-----------|-----------------|
 | [Security Exception Management Policy](/sbd-toe/assets/policies/policy-gestao-excecoes) | Yes | AppSec Engineer + Executive Management | Formal request, approval and deadline flow |
-| [Secure Contracting Policy](/sbd-toe/assets/policies/policy-contratacao-segura) | Yes | GRC / Compliance (Legal + Procurement) | SbD-ToE clauses, continuous validation |
+| [Secure Contracting Policy](/sbd-toe/assets/policies/policy-contratacao-segura) | Yes | Legal + Procurement | SbD-ToE clauses, continuous validation |
 | [Organisational Traceability Policy](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional) | Yes | GRC / Compliance | Centralised register, dashboards |
-| [Secure Contracting Policy — Supplier Audit](/sbd-toe/assets/policies/policy-contratacao-segura) | Recommended | AppSec Engineer + GRC / Compliance (Procurement) | Periodic security audits |
+| [Secure Contracting Policy — Supplier Audit](/sbd-toe/assets/policies/policy-contratacao-segura) | Recommended | Procurement + AppSec Engineer | Periodic security audits |
 | [Security Governance KPIs Policy](/sbd-toe/assets/policies/policy-kpis-governacao) | Yes | GRC / Compliance + Executive Management | Metrics, reports, objectives |
 
 In the printed version, consult the **Manual's Organisational Policies Annex**,

@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/aplicacao-lifecycle.md
-  source_sha256: 3ea1903d91d8056ef369176a5743c32ebd7babbe5d9fa34a7c3fb7c2009134d2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a5d36774e31e9d771ec42c85b2d7cc0d5d4f0af70ff475bd2268f310e2b848c3
+  source_sha256: 40e5a02ac36f1761c0df8e75208e2a419c94dd9323fefa9e7428d52f13374a86
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: c75f0e88cb5ec3294ef9a382da280957fd85ffbbcbf9fccc271804930ecc0a69
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, framework_source_corpus, lifecycle_phase, mapping, maturity, provenance, requirement_runtime, risk_level, schema, threat, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: bfbb178fff4eef60ed7c47ebdb0cbf0b49345d64847e912678d9212d62490971
-  translated_at: 2026-09-25T20:22:04Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_normativa, papel_suporte, provenance, requirement_runtime, risk_level, role_tech_lead, schema, threat, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 0b425934edc3b2654453524bb0d0eef36d5811b572cd85c3e9e4cd1f3db478bc
+  translated_at: 2026-09-26T17:23:44Z
   reviewed_by: null
 ---
 
@@ -72,7 +72,7 @@ When the review takes place, the expected outcome is not merely to “verbally c
 | Product Owner                  | Ensure integration into the backlog; ensure that relevant requirements exist as traceable work |
 | Developer                           | Implement controls; apply tags; link changes to `SEC-Lx-*` and/or to the catalogue requirement; propose exceptions when necessary |
 | QA                                  | Define acceptance and validation criteria; ensure test coverage and evidence     |
-| Software Architects / Scrum Master / Team Lead / DevOps / SRE | Review requirements in critical changes; ensure technical coherence and impact on risk  |
+| Software Architects / Tech Lead / DevOps / SRE | Review requirements in critical changes; ensure technical coherence and impact on risk  |
 | AppSec Engineer                     | Validate application; approve exceptions; ensure overall alignment and consistency          |
 | GRC / Compliance (where applicable) | Record exceptions and decisions; support auditing and organisational traceability          |
 
@@ -130,7 +130,7 @@ Applicable requirements must be reviewed whenever there is a material change in 
 
 :::userstory
 **Story.**  
-As **Software Architects** and **Scrum Master / Team Lead**, I want to review applicable requirements whenever a critical integration or relevant change occurs, so that the selected controls and requirements are updated, traced and validated.
+As **Software Architects / Tech Lead** and **Scrum Master / Team Lead**, I want to review applicable requirements whenever a critical integration or relevant change occurs, so that the selected controls and requirements are updated, traced and validated.
 
 **Acceptance criteria (BDD).**
 - **Given** that a significant change occurs (external integration, change of data, exposure, architecture)
@@ -155,7 +155,7 @@ As **Software Architects** and **Scrum Master / Team Lead**, I want to review ap
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Design/Refactor | Change of architecture, data or exposure | Software Architects + Scrum Master / Team Lead | Before the release |
+| Design/Refactor | Change of architecture, data or exposure | Software Architects + Tech Lead | Before the release |
 
 **Useful links.**
 - 🔗 [Requirements validation and review](./addon/validacao-requisitos)
@@ -413,7 +413,7 @@ As **AppSec/PO/TL**, I want to establish and maintain a catalogue of the project
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Start | Kick-off / major release | AppSec Engineer + Product Owner + Scrum Master / Team Lead | Before the initial backlog / before the release |
+| Start | Kick-off / major release | AppSec Engineer + Product Owner + Tech Lead | Before the initial backlog / before the release |
 
 **Useful links.**
 - 🔗 [Requirements catalogue](./addon/catalogo-requisitos)  
@@ -457,7 +457,7 @@ As **QA/AppSec/TL**, I want to validate each requirement of the catalogue accord
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Testing/Review | Pipelines and checkpoints | QA + AppSec Engineer + Scrum Master / Team Lead | Per sprint and before release |
+| Testing/Review | Pipelines and checkpoints | QA + AppSec Engineer + Tech Lead | Per sprint and before release |
 
 **Useful links.**
 - 🔗 [Requirements validation](./addon/validacao-requisitos)  
@@ -618,7 +618,7 @@ The use of automated assistants and AI-based tools can speed up development, but
 
 :::userstory
 **Story.**  
-As a **Developer**, **Scrum Master / Team Lead** and **AppSec Engineer**, I want to ensure that any code, configuration or test generated with the help of automated assistants (including AI) is explicitly reviewed, validated and traceable, so that fulfilment of the security requirements is verifiable and responsibility remains human.
+As a **Developer**, **Tech Lead** and **AppSec Engineer**, I want to ensure that any code, configuration or test generated with the help of automated assistants (including AI) is explicitly reviewed, validated and traceable, so that fulfilment of the security requirements is verifiable and responsibility remains human.
 
 **Acceptance criteria (BDD).**
 - **Given** that an automated assistant is used to generate code, configuration or tests  
@@ -651,7 +651,7 @@ As a **Developer**, **Scrum Master / Team Lead** and **AppSec Engineer**, I want
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| PR/MR | Introduction of generated code/configuration | Developer + Scrum Master / Team Lead | Before the merge |
+| PR/MR | Introduction of generated code/configuration | Developer + Tech Lead | Before the merge |
 | Release | Final security gate | AppSec Engineer | Before go-live |
 
 **Useful links.**
@@ -668,7 +668,7 @@ When moving from **assistants that suggest** to **agents that execute** (creatin
 
 :::userstory
 **Story.**
-As an **AppSec Engineer** and **Scrum Master / Team Lead**, I want to classify the autonomy level (A0–A4) of each AI agent in operational use and record its *mandate* versioned in VCS, so that each agent operates under explicit, auditable authorisation proportional to the risk of the context.
+As an **AppSec Engineer** and **Tech Lead**, I want to classify the autonomy level (A0–A4) of each AI agent in operational use and record its *mandate* versioned in VCS, so that each agent operates under explicit, auditable authorisation proportional to the risk of the context.
 
 **Acceptance criteria (BDD).**
 - **Given** that an AI agent is going to operate in the project at A1 or above
@@ -681,7 +681,7 @@ As an **AppSec Engineer** and **Scrum Master / Team Lead**, I want to classify t
 **Acceptance criteria (DoD).**
 - [ ] *Mandate* present in VCS, validated against the minimum schema (mandatory fields) and referenced by `mandate_ref` in audit
 - [ ] `autonomy_level` classified according to [levels A0–A4](./addon/governanca-automatismos#niveis-autonomia) and justified in writing
-- [ ] *Approver* appropriate to the level (A1: Scrum Master / Team Lead; A2: Scrum Master / Team Lead + AppSec Engineer; A3: Scrum Master / Team Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` with formal sign-off)
+- [ ] *Approver* appropriate to the level (A1: Tech Lead; A2: Tech Lead + AppSec Engineer; A3: Tech Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` with formal sign-off)
 - [ ] Ephemeral *identity* configured (no reuse of human credentials)
 - [ ] *Kill-switch* exercised in sandbox/staging with the timing recorded before activation
 - [ ] `effective_until` defined — no *mandates* without a validity window
@@ -699,7 +699,7 @@ As an **AppSec Engineer** and **Scrum Master / Team Lead**, I want to classify t
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | A1+ | Simple *mandate*; approval by Scrum Master / Team Lead; A2+ allowed only outside production |
+| L1 | A1+ | Simple *mandate*; approval by Tech Lead; A2+ allowed only outside production |
 | L2 | A1+ | Full *mandate*; *kill-switch* exercised quarterly at A3 |
 | L3 | A1+ | Full *mandate* + quarterly organisational review; A4 requires formal sign-off by the `CISO` |
 
@@ -802,7 +802,7 @@ Before each destructive action or action with external effect, the AI agent decl
 
 :::userstory
 **Story.**   
-As an **AppSec Engineer** and **Scrum Master / Team Lead**, I want each A2+ AI agent to declare its intent as an *audit event* before each destructive *tool-call*, so that each risky action is preceded by an auditable declaration that can be reconciled with the actual action.  
+As an **AppSec Engineer** and **Tech Lead**, I want each A2+ AI agent to declare its intent as an *audit event* before each destructive *tool-call*, so that each risky action is preceded by an auditable declaration that can be reconciled with the actual action.  
 
 **Acceptance criteria (BDD).**  
 - **Given** an A2+ AI agent operating under an active *mandate*  

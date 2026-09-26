@@ -7,15 +7,15 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/addon/05-validacao.md
-  source_sha256: 55aa1cb77905811a71b90ab2528f422b884abc48d4b33db5895fda495b676afb
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3bf1746495de563e7a6eb7cfbb63961a0e08464ca87eebe262ffd1ad69d293d3
+  source_sha256: db7d4cd7e54b0ae31fe2bdb4ee4cd1ec7db6f4cb47effb301b06bfc345b588bf
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 5ee7174cb8be030bdb43a859ac4f045a84dc24ea8fca7ed9f50a833b4f5880f5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, risk_level, traceability, validation_evaluation]
-  glossary_sha256: 08538eeb32f409b0200b47b76473329f6e2859edfe2bd7d2960f6a9268d6642b
-  translated_at: 2026-09-26T08:32:05Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, papel_suporte, requirement_runtime, risk_level, traceability, validation_evaluation]
+  glossary_sha256: 7c88fc8fbff365d7c9f69db72c1f0b4a0f85ec26f541a8baab5bbe55ecd566ed
+  translated_at: 2026-09-26T17:23:45Z
   reviewed_by: null
 ---
 
@@ -46,7 +46,7 @@ This document defines how to validate each requirement of the secure architectur
 | ARC-008 | Data flows between trust zones protected | DFD with explicit controls at each trust boundary; updated and versioned in a repository | Initial design; after a change to data flows | Architect, AppSec |
 | ARC-009 | Significant changes trigger a new review | Documented process with a definition of the "significant change" threshold; evidence of a review carried out after the last relevant change | After each change that reaches the threshold defined in the process | Architect, PO |
 | ARC-010 | Architecture diagrams versioned and accessible | Diagram in the repository with version history; accessible to the relevant teams; reviewed within the defined period | Periodic review (at least annual or per significant release) | Architect, DevOps |
-| ARC-011 | Logical and physical segmentation between environments | Evidence of network, permission and identity segregation between dev, staging and prod; documented and verifiable by audit | Infrastructure review; cross-environment permissions audit | Platform engineering, AppSec |
+| ARC-011 | Logical and physical segmentation between environments | Evidence of network, permission and identity segregation between dev, staging and prod; documented and verifiable by audit | Infrastructure review; cross-environment permissions audit | Platform engineering, Software Architects, AppSec |
 | ARC-012 | Formal approval criteria for high-risk applications | Formal checklist completed and signed by the security owner; approval record prior to deployment to production | Release gate for L3 applications | AppSec, Security owner |
 | ARC-013 | Automatic topology validation in CI/CD or as code | CI job with topology validation output; execution logs available; failures block promotion | Per pipeline run; periodic coverage review | DevSecOps, Architect |
 

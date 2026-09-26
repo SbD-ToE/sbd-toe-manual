@@ -8,15 +8,15 @@ sidebar_position: 27
 translation:
   source_locale: pt
   source_path: 020-assets/policies/27_policy-rollback.md
-  source_sha256: 50cc18778be19f708ca9c6c7914d00dd00027ccd08d5bb641cc714daa37e31e6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: f47bd4270e7b03411497d80cc8faeb6f857929fc606277b4a17ad08d677140a0
+  source_sha256: a0107b0864ac9e0a35d1ab17f6e72a83ab013629019bec697d4a3edefe276acc
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: ab2ec58e56b79b817b2d2b5468c744c932dd8c58e6b18f09a7bc7eb5812487e2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, lifecycle_phase, practitioner_manual, requirement_runtime, sbdtoe_sbd, traceability, verification_taxonomy]
-  glossary_sha256: 110399c81782b2b857b934c1ae1c80750bfc6edbbd743b4b25bf177ee1e0a7bd
-  translated_at: 2026-09-26T14:10:59Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, lifecycle_phase, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, verification_taxonomy]
+  glossary_sha256: 8537e843ad8eee2f1e2c76388fcfa0849bb04d6389a0723e26cc14b7f9ed3033
+  translated_at: 2026-09-26T17:23:56Z
   reviewed_by: null
 ---
 
@@ -185,7 +185,7 @@ Each rollback executed in production must produce auditable evidence:
 |---|---|
 | DevOps / SRE | Configure and maintain automatic rollback capability; run periodic tests; document procedures |
 | Developer | Ensure that DB migrations have a down migration; test rollback in staging before deploy to production |
-| Tech Lead / On-Call | Take the manual rollback decision when necessary; record the decision |
+| Tech Lead / DevOps / SRE (On-Call) | Take the manual rollback decision when necessary; record the decision |
 | AppSec Engineer | Verify that the rollback process does not compromise security controls |
 | GRC / Compliance | Audit rollback records; verify that RTOs are met in the tests |
 

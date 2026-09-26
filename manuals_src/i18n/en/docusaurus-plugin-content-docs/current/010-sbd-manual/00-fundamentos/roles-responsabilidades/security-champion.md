@@ -8,15 +8,15 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/security-champion.md
-  source_sha256: 447c8bf60929a581fda006d0a41942ecea4a89389c9034fc584712d973048533
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 831e5af7fb8b10b156da60455f34b8a67e7602bc500753b497129d897dd9f5d1
+  source_sha256: c61c613154aec68aee5c7e5627d10463843c4f76436c0089fbf6b4803057005f
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 8e6fe3956edcb7ff64d37abb4393b142ab02e3804e4275bc5d46eb9252e0c359
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [capacitacao, chapter_role, sbdtoe_sbd, transversal]
-  glossary_sha256: cf11ce6eebc2e29aa62e7e2cd5c59de39a4c5881fc48b97780d4e7c519cd716d
-  translated_at: 2026-09-25T20:20:02Z
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [capacitacao, chapter_role, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, transversal]
+  glossary_sha256: d02f44f3e8656b91d44c3ef7331d60f32556d1f5577919c9daaf6c541ac62949
+  translated_at: 2026-09-26T17:23:41Z
   reviewed_by: null
 ---
 
@@ -59,10 +59,10 @@ Act as the **designated security owner** for critical applications. Run a struct
 
 **User Stories:**
 - [US-05: Formal Security Champion appointment](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Clear accountability (with Executive Management)
-- [US-11: Technical preparation of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Ensure preparation before access (with Security Champion (HR))
-- [US-12: Secure offboarding](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revoke access completely (with Security Champion (HR) / DevOps / SRE)
-- [US-15: Quarterly access review](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Maintain least privilege (with Scrum Master / Team Lead)
-- [US-16: Post-project feedback](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Inform re-hiring (with Scrum Master / Team Lead)
+- [US-11: Technical preparation of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Ensure preparation before access (with HR / People Operations)
+- [US-12: Secure offboarding](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revoke access completely (with HR / People Operations / DevOps / SRE)
+- [US-15: Quarterly access review](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Maintain least privilege (with Tech Lead)
+- [US-16: Post-project feedback](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Inform re-hiring (with Tech Lead)
 
 ---
 

@@ -8,15 +8,15 @@ tags: [governação, módulos, iac, reutilização, segurança, supply-chain, ra
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md
-  source_sha256: d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9
-  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
-  target_sha256: a1b0a7a00df720fcbc88f7a5e4a971e926e6d147fadf73cd81595cd6c9b01b04
+  source_sha256: 0d9bed6efd9f3534b9f6a74ee82cb7a6ce004bcb338a7ee1342b7f7287545cf1
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: 8293c5779a80592befb92c547382eae18829988f0c4fe4c80027dd7e2a3555f3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, provenance, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: f311aac6f5bc95780781a4c838f4b75f36169f6a425fa320fbe2fba386bcbed3
-  translated_at: 2026-09-26T09:45:03Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, papel_suporte, provenance, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 4c70d351743ea4d36e2cde35cedc08832771c872232b8b26922522e7189cc2c8
+  translated_at: 2026-09-26T17:23:47Z
   reviewed_by: null
 ---
 
@@ -132,7 +132,7 @@ When modules are:
 | DevOps / Infra     | Technical integration and consumption of modules             |
 | Architecture        | Definition of modular standards and authorised sources |
 | AppSec / Security | Validation of origin, integrity and risk            |
-| Cloud / Platform | Management of the internal repository and lifecycle       |
+| DevOps / SRE (Platform) | Management of the internal repository and lifecycle       |
 | GRC / Compliance   | Oversight of approval and traceability           |
 
 ---

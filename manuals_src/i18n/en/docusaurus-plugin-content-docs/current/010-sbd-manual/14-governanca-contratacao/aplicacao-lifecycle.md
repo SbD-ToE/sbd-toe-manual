@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: bf8690e7dd796d27b3927c614d16413f014f32ab8137faf3c3c24a359a8b6ff4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a2d05f0ce22e062155b7de2f9a3c23d895985c62ee27438f19e068cd5f3ad2aa
+  source_sha256: 57e931e06176a02dd04b4c29a79b99cee91f689bade471d194c7620acc7fe3c2
+  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
+  target_sha256: cc50de497ec2f654e8a795f6a0e3ee7674fc82c80f23e561244476520a3af440
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, papel_suporte, programme_line, provenance, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 360b3fa67cb2f7995801f408ffc6f670cbe002abb8e2ea13970bac89b89bf8ac
-  translated_at: 2026-09-26T12:00:21Z
+  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_normativa, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 44f596dd01644335cdb878d0fa61066efa781d5832c3a195e1b1af6f08e07419
+  translated_at: 2026-09-26T17:23:54Z
   reviewed_by: null
 ---
 
@@ -41,7 +41,7 @@ translation:
 | **AppSec Engineer** | Validate exceptions, oversee traceability |
 | **DevOps / SRE** | Ensure technical execution in line with the clauses |
 | **Executive Management** | Approve residual risk |
-| **GRC / Compliance (Procurement + Legal)** | Integrate security clauses into contracts |
+| **Legal + Procurement** | Integrate security clauses into contracts |
 | **GRC / Compliance** | Consolidate metrics and audit suppliers |
 
 ---
@@ -90,7 +90,7 @@ As **Developer + AppSec Engineer**, I want **to submit security exceptions throu
 
 :::userstory
 **Story.**   
-As **GRC / Compliance (Legal + Procurement)**, I want **to include SbD-ToE clauses in contracts**, so that **supplier compliance is guaranteed**.  
+As **Legal + Procurement**, I want **to include SbD-ToE clauses in contracts**, so that **supplier compliance is guaranteed**.  
 
 **Acceptance criteria (BDD).**  
 - **Given** a new contract  
@@ -114,7 +114,7 @@ As **GRC / Compliance (Legal + Procurement)**, I want **to include SbD-ToE claus
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | New contract | GRC / Compliance (Legal + Procurement) | According to the US cycle |
+| Planning | New contract | Legal + Procurement | According to the US cycle |
 
 ---
 
@@ -244,7 +244,7 @@ As **Executive Management**, I want **to define and monitor governance KPIs**, s
 
 :::userstory
 **Story.**   
-As **GRC / Compliance (Procurement Officer)**, I want **to execute the formal supplier validation flow (questionnaire → AppSec analysis → approval)**, so that **new suppliers are guaranteed to meet minimum requirements before onboarding**.  
+As a **Procurement Officer**, I want **to execute the formal supplier validation flow (questionnaire → AppSec analysis → approval)**, so that **new suppliers are guaranteed to meet minimum requirements before onboarding**.  
 
 **Acceptance criteria (BDD).**  
 - **Given** a new supplier classified as L2 or L3  
@@ -269,7 +269,7 @@ As **GRC / Compliance (Procurement Officer)**, I want **to execute the formal su
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | New L2/L3 supplier; start of the validation flow | AppSec Engineer + GRC / Compliance (Procurement Officer) | 2 weeks (L2), 1 week (L3) |
+| Planning | New L2/L3 supplier; start of the validation flow | AppSec Engineer + Procurement Officer | 2 weeks (L2), 1 week (L3) |
 
 **Useful links.**  
 - [Supplier Validation Model](./addon/modelo-validacao-fornecedores)
@@ -510,8 +510,8 @@ As **CISO + AppSec Engineer**, I want **to formalise and document the governance
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | SbD-ToE kick-off, annual review, organisational change | CISO + AppSec Engineer + GRC / Compliance (Legal) | Publication within 2 weeks |
-| Execution | SbD-ToE kick-off, annual review, organisational change | CISO + AppSec Engineer + GRC / Compliance (Legal) | Publication within 2 weeks |
+| Planning | SbD-ToE kick-off, annual review, organisational change | CISO + AppSec Engineer + GRC / Compliance + Legal | Publication within 2 weeks |
+| Execution | SbD-ToE kick-off, annual review, organisational change | CISO + AppSec Engineer + GRC / Compliance + Legal | Publication within 2 weeks |
 
 **Useful links.**  
 - [Governance Model](./addon/modelo-governancao)
@@ -570,7 +570,7 @@ As **AppSec Engineer + Scrum Master / Team Lead**, I want **to maintain a centra
 
 :::userstory
 **Story.**   
-As **AppSec Engineer + GRC / Compliance (Procurement Officer)**, I want **to reassess and re-approve suppliers periodically (annual by default, half-yearly for L2, quarterly for L3), with updated technical validation, SLA compliance analysis, and escalation for a penalty or replacement decision if necessary**, so that **they are ensured to continue meeting requirements and SLAs, risk is mitigated, and continuity decisions are based on evidence**.
+As **Procurement Officer + AppSec Engineer**, I want **to reassess and re-approve suppliers periodically (annual by default, half-yearly for L2, quarterly for L3), with updated technical validation, SLA compliance analysis, and escalation for a penalty or replacement decision if necessary**, so that **they are ensured to continue meeting requirements and SLAs, risk is mitigated, and continuity decisions are based on evidence**.
 
 **Acceptance criteria (BDD).**  
 - **Given** an active supplier with a contract in force  
@@ -598,8 +598,8 @@ As **AppSec Engineer + GRC / Compliance (Procurement Officer)**, I want **to rea
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Validation | Scheduled calendar (annual/half-yearly), Critical incident, Unmitigated critical CVE, Change of contract/ownership/SLA | AppSec Engineer (technical analysis) + GRC / Compliance (Procurement Officer — coordination; decision and record) | Reassessment completed within 2 weeks of the trigger |
-| Operation | Scheduled calendar (annual/half-yearly), Critical incident, Unmitigated critical CVE, Change of contract/ownership/SLA | AppSec Engineer (technical analysis) + GRC / Compliance (Procurement Officer — coordination; decision and record) | Reassessment completed within 2 weeks of the trigger |
+| Validation | Scheduled calendar (annual/half-yearly), Critical incident, Unmitigated critical CVE, Change of contract/ownership/SLA | AppSec Engineer (technical analysis) + Procurement Officer (coordination) + GRC / Compliance (decision and record) | Reassessment completed within 2 weeks of the trigger |
+| Operation | Scheduled calendar (annual/half-yearly), Critical incident, Unmitigated critical CVE, Change of contract/ownership/SLA | AppSec Engineer (technical analysis) + Procurement Officer (coordination) + GRC / Compliance (decision and record) | Reassessment completed within 2 weeks of the trigger |
 
 **Useful links.**  
 - [Supplier Validation Model](./addon/modelo-validacao-fornecedores)
@@ -613,7 +613,7 @@ As **AppSec Engineer + GRC / Compliance (Procurement Officer)**, I want **to rea
 
 :::userstory
 **Story.**   
-As a **Security Champion (HR/Recruiter)**, I want **to execute a structured technical preparation process for contractors (screening, mandatory training, comprehension test, sandbox environment) before they gain access to systems**, so that **they are guaranteed to be prepared, to have understood fundamental policies, and to be able to work securely**.
+As **Security Champion + HR / People Operations**, I want **to execute a structured technical preparation process for contractors (screening, mandatory training, comprehension test, sandbox environment) before they gain access to systems**, so that **they are guaranteed to be prepared, to have understood fundamental policies, and to be able to work securely**.
 
 **Acceptance criteria (BDD).**  
 - **Given** a new contractor approved by Procurement (US-06) and a signed contract  
@@ -626,7 +626,7 @@ As a **Security Champion (HR/Recruiter)**, I want **to execute a structured tech
 - [ ] Security policy comprehension quiz completed (minimum score 80%)  
 - [ ] Access to a sandbox environment provided for practice (e.g. private Git repository, demo application, security tools)  
 - [ ] NDA and confidentiality agreement digitally signed with timestamp  
-- [ ] Technical onboarding checklist completed and validated by the team (Security Champion + Scrum Master / Team Lead)  
+- [ ] Technical onboarding checklist completed and validated by the team (Security Champion + Tech Lead)  
 - [ ] Real access to systems granted only after all approval steps  
 - [ ] "Ready for access" record documented in GRC with date, validator, and reference to all validations  
 
@@ -642,7 +642,7 @@ As a **Security Champion (HR/Recruiter)**, I want **to execute a structured tech
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | Contract signed, project start date | Security Champion (HR coordination) + AppSec Engineer (validation) + Scrum Master / Team Lead (sandbox setup) | Completion 2–3 working days before the start date; Notification: Contractor informed by e-mail about the track |
+| Planning | Contract signed, project start date | HR / People Operations (coordination) + AppSec Engineer (validation) + Tech Lead (sandbox setup) | Completion 2–3 working days before the start date; Notification: Contractor informed by e-mail about the track |
 
 **Useful links.**  
 - [Ch. 13 - Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
@@ -658,7 +658,7 @@ As a **Security Champion (HR/Recruiter)**, I want **to execute a structured tech
 
 :::userstory
 **Story.**   
-As **CISO + Security Champion (Training Manager)**, I want **to define and execute a mandatory training track per contractor profile, with an explicit completion SLA before technical access**, so that **minimum security awareness, regulatory compliance (DORA, NIS2), and traceability of preparation are guaranteed**.
+As **CISO + Training Manager**, I want **to define and execute a mandatory training track per contractor profile, with an explicit completion SLA before technical access**, so that **minimum security awareness, regulatory compliance (DORA, NIS2), and traceability of preparation are guaranteed**.
 
 **Acceptance criteria (BDD).**  
 - **Given** a newly hired contractor  
@@ -693,8 +693,8 @@ As **CISO + Security Champion (Training Manager)**, I want **to define and execu
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | Contractor approved (end of US-06/US-15) | AppSec Engineer (completion validation) + Security Champion (Training Manager — track coordination; HR traceability) | Training completed before real access; Notification: weekly if at risk, daily if `<`3 days |
-| Execution | Contractor approved (end of US-06/US-15) | AppSec Engineer (completion validation) + Security Champion (Training Manager — track coordination; HR traceability) | Training completed before real access; Notification: weekly if at risk, daily if `<`3 days |
+| Planning | Contractor approved (end of US-06/US-15) | AppSec Engineer (completion validation) + Training Manager (track coordination; HR traceability) | Training completed before real access; Notification: weekly if at risk, daily if `<`3 days |
+| Execution | Contractor approved (end of US-06/US-15) | AppSec Engineer (completion validation) + Training Manager (track coordination; HR traceability) | Training completed before real access; Notification: weekly if at risk, daily if `<`3 days |
 
 **Useful links.**  
 - [Ch. 13 - Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)  
@@ -709,7 +709,7 @@ As **CISO + Security Champion (Training Manager)**, I want **to define and execu
 
 :::userstory
 **Story.**   
-As **Security Champion (HR) + DevOps / SRE**, I want **to execute a formal and automatic secure offboarding process when a contractor finishes or a supplier is terminated**, so that **access is guaranteed to be fully revoked, assets recovered, confidentiality maintained, and legal compliance ensured**.
+As **Security Champion + HR / People Operations + DevOps / SRE**, I want **to execute a formal and automatic secure offboarding process when a contractor finishes or a supplier is terminated**, so that **access is guaranteed to be fully revoked, assets recovered, confidentiality maintained, and legal compliance ensured**.
 
 **Acceptance criteria (BDD).**  
 - **Given** a contractor whose end date is known (or a supplier terminated with notice)  
@@ -717,7 +717,7 @@ As **Security Champion (HR) + DevOps / SRE**, I want **to execute a formal and a
   **Then** access is revoked, assets recovered, and completion documented  
 
 **Acceptance criteria (DoD).**  
-- [ ] Offboarding checklist prepared 2 weeks in advance (DevOps / SRE, Security Champion, AppSec Engineer, Scrum Master / Team Lead)  
+- [ ] Offboarding checklist prepared 2 weeks in advance (DevOps / SRE, HR / People Operations, AppSec Engineer, Tech Lead)  
 - [ ] Formal notification sent to the contractor/supplier with the exact deactivation date  
 - [ ] Access to systems revoked (at most 24h after the end date):  
     - User accounts deactivated in Git, Jira, CI/CD  
@@ -747,8 +747,8 @@ As **Security Champion (HR) + DevOps / SRE**, I want **to execute a formal and a
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Operation | Known end date (scheduled), Immediate termination (unscheduled) | DevOps / SRE (technical access) + AppSec Engineer (validation) + Security Champion (HR timeline coordination; checkpoints) | Offboarding completed within **`<`24h** of the end date; Notification: HR sends notice 2 weeks in advance |
-| Validation | Known end date (scheduled), Immediate termination (unscheduled) | DevOps / SRE (technical access) + AppSec Engineer (validation) + Security Champion (HR timeline coordination; checkpoints) | Offboarding completed within **`<`24h** of the end date; Notification: HR sends notice 2 weeks in advance |
+| Operation | Known end date (scheduled), Immediate termination (unscheduled) | DevOps / SRE (technical access) + AppSec Engineer (validation) + HR / People Operations (timeline coordination; checkpoints) | Offboarding completed within **`<`24h** of the end date; Notification: HR sends notice 2 weeks in advance |
+| Validation | Known end date (scheduled), Immediate termination (unscheduled) | DevOps / SRE (technical access) + AppSec Engineer (validation) + HR / People Operations (timeline coordination; checkpoints) | Offboarding completed within **`<`24h** of the end date; Notification: HR sends notice 2 weeks in advance |
 
 **Useful links.**  
 - [Supplier Reassessment - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  
@@ -778,8 +778,8 @@ As **AppSec Engineer + Operations (Ops)**, I want **to continuously monitor the 
     - SLA not met (e.g. uptime `<`99.5% for L3, `<`99% for L2)  
     - Change of ownership, location, or subcontracting  
 - [ ] Automatic escalation with priority:  
-    - **P0 (exploited critical CVE):** Immediate → AppSec Engineer + GRC / Compliance (Procurement Officer) + CISO  
-    - **P1 (critical CVE, serious incident):** 1h → AppSec Engineer + GRC / Compliance (Procurement Officer)  
+    - **P0 (exploited critical CVE):** Immediate → AppSec Engineer + Procurement Officer + CISO  
+    - **P1 (critical CVE, serious incident):** 1h → AppSec Engineer + Procurement Officer  
     - **P2 (high CVE, moderate incident):** 4h → AppSec Engineer  
 - [ ] Automatic trigger of a special out-of-cycle review (US-14) if there is a critical gap  
 - [ ] Record of alert, escalation, and action documented in GRC (audit trail)  
@@ -811,22 +811,22 @@ As **AppSec Engineer + Operations (Ops)**, I want **to continuously monitor the 
 
 :::userstory
 **Story.**   
-As **Security Champion + DevOps / SRE + Scrum Master / Team Lead**, I want **to review the access of active contractors quarterly, validating that they only have the access needed for the project**, so that **the principle of least privilege is maintained, the risk of excessive access is reduced, and obsolete access is removed**.
+As **Security Champion + DevOps / SRE + Tech Lead**, I want **to review the access of active contractors quarterly, validating that they only have the access needed for the project**, so that **the principle of least privilege is maintained, the risk of excessive access is reduced, and obsolete access is removed**.
 
 **Acceptance criteria (BDD).**  
 - **Given** active contractors with access to systems (repos, CI/CD, databases, cloud)  
   **When** the quarterly review cycle arrives  
-  **Then** access is validated with the Scrum Master / Team Lead, and excessive access is removed on the same day  
+  **Then** access is validated with the Tech Lead, and excessive access is removed on the same day  
 
 **Acceptance criteria (DoD).**  
 - [ ] List of active contractors extracted from systems (Git orgs, Jira, VPN, Cloud IAM, databases)  
 - [ ] For each contractor:  
     - Access listed in detail (repositories, CI/CD pipelines, databases, cloud resources, etc.)  
-    - Scrum Master / Team Lead validates each access: **Needed for the current project?** (Yes/No/Modify)  
+    - Tech Lead validates each access: **Needed for the current project?** (Yes/No/Modify)  
     - If **Not needed:** access removed on the same day  
     - If **Modify:** new scope configured, old one revoked  
     - If **Yes:** maintained with dated confirmation  
-- [ ] Review checklist completed and digitally signed by the Scrum Master / Team Lead + Security Champion  
+- [ ] Review checklist completed and digitally signed by the Tech Lead + Security Champion  
 - [ ] Notification sent to each contractor informing them of the review outcome  
 - [ ] If access is removed: clear notification indicating the reason and completion date  
 - [ ] Record of changes documented in the audit trail (Git logs, IAM change log, etc.)  
@@ -844,7 +844,7 @@ As **Security Champion + DevOps / SRE + Scrum Master / Team Lead**, I want **to 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Validation | Schedule (quarterly), Project change, Incident | Security Champion (coordination) + Scrum Master / Team Lead (validation of need) + DevOps / SRE (technical changes) | Review started and completed within **1 week** |
+| Validation | Schedule (quarterly), Project change, Incident | Security Champion (coordination) + Tech Lead (validation of need) + DevOps / SRE (technical changes) | Review started and completed within **1 week** |
 
 **Useful links.**  
 - [Technical Preparation - US-15](#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)  
@@ -859,12 +859,12 @@ As **Security Champion + DevOps / SRE + Scrum Master / Team Lead**, I want **to 
 
 :::userstory
 **Story.**   
-As **Security Champion + Scrum Master / Team Lead**, I want **to collect structured post-project feedback on contractors covering security understanding, incidents, and recommendations**, so that **re-hire decisions are informed, the preparation programme is improved, and an assessment database is created**.
+As **Security Champion + Tech Lead**, I want **to collect structured post-project feedback on contractors covering security understanding, incidents, and recommendations**, so that **re-hire decisions are informed, the preparation programme is improved, and an assessment database is created**.
 
 **Acceptance criteria (BDD).**  
 - **Given** a contractor whose project is ending  
   **When** offboarding is initiated (US-17)  
-  **Then** a feedback form is sent for the Scrum Master / Team Lead + AppSec Engineer to complete  
+  **Then** a feedback form is sent for the Tech Lead + AppSec Engineer to complete  
 
 **Acceptance criteria (DoD).**  
 - [ ] Feedback form created with structured questions:  
@@ -873,7 +873,7 @@ As **Security Champion + Scrum Master / Team Lead**, I want **to collect structu
     - **Compliance:** Contractor followed mandatory procedures (Yes/No), Violations (Yes/No + desc)  
     - **Recommendations:** Areas for improvement in training/preparation, Overall security rating (1–5 stars)  
     - **Decision:** Re-hire recommended? (Yes/No/Maybe + justification)  
-- [ ] Feedback collected from the Scrum Master / Team Lead + AppSec Engineer + Security Champion (consensus)  
+- [ ] Feedback collected from the Tech Lead + AppSec Engineer + Security Champion (consensus)  
 - [ ] Result recorded in a centralised system (HR, Procurement, GRC) with date and reviewers  
 - [ ] Rating (positive/neutral/negative) stored as a reference for future hiring  
 - [ ] If there are multiple contractors from the same supplier: aggregated insights for supplier review (US-14)  
@@ -891,7 +891,7 @@ As **Security Champion + Scrum Master / Team Lead**, I want **to collect structu
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Operation | Offboarding initiated (US-17) | Security Champion (coordination) + Scrum Master / Team Lead + AppSec Engineer (completion) | Feedback completed within **3 working days** after the end of the contract |
+| Operation | Offboarding initiated (US-17) | Security Champion (coordination) + Tech Lead + AppSec Engineer (completion) | Feedback completed within **3 working days** after the end of the contract |
 
 **Useful links.**  
 - [Offboarding - US-17](#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)  
@@ -907,7 +907,7 @@ US-14 covers continuous reassessment of suppliers in general. When the supplier 
 
 :::userstory
 **Story.**
-As **GRC / Compliance (Procurement + Legal)**, I want each contract with an AI model provider to include minimum clauses covering data handling, location, *audit rights*, change notification and applicable regulatory compliance, so that operational use of the provider is legally and technically sustainable.
+As **GRC / Compliance + Procurement** with support from **Legal**, I want each contract with an AI model provider to include minimum clauses covering data handling, location, *audit rights*, change notification and applicable regulatory compliance, so that operational use of the provider is legally and technically sustainable.
 
 **Acceptance criteria (BDD).**
 - **Given** that a new AI provider is intended to be adopted for operational use
@@ -950,7 +950,7 @@ As **GRC / Compliance (Procurement + Legal)**, I want each contract with an AI m
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Pre-onboarding | Adoption of a new AI provider | GRC / Compliance (Procurement + Legal) | Before operational use |
+| Pre-onboarding | Adoption of a new AI provider | GRC / Compliance + Procurement + Legal | Before operational use |
 | Operation | Change notification by the provider | AppSec Engineer + GRC / Compliance | According to the contractual SLA; pre-*cutover* |
 | Periodic review | Cadence by risk level | GRC / Compliance | L1 annual / L2 half-yearly / L3 quarterly |
 | Discontinuation | Provider removed from the list | GRC / Compliance + DevOps / SRE | Migration plan before operational removal |

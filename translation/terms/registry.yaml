@@ -4496,6 +4496,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: snyk_license
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Snyk License
+  en_variants: []
+  pt: Snyk License
+  pt_variants: []
+  ontology_id: null
+  sense: Nome de produto (Snyk) com grafia AmE.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 05: nome próprio com grafia AmE; não reescrever.'
 - key: solution_direct
   species: 1
   state: in-record
@@ -4548,6 +4569,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: spdx_license_list
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: SPDX License List
+  en_variants: []
+  pt: SPDX License List
+  pt_variants: []
+  ontology_id: null
+  sense: Título de documento externo (SPDX) com grafia AmE.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 05: nome próprio com grafia AmE; não reescrever.'
 - key: stage_pass
   species: 1
   state: in-record

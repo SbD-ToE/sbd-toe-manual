@@ -1,0 +1,276 @@
+{
+ "purpose": "Textos oficiais EUR-Lex (PT e EN) dos 6 actos do cross-check normativo — referência da regra EUR-Lex e do LOTE JURÍDICO. Não publicado (fora de manuals_src).",
+ "method": "HTML consolidado/original via legal-content/<LL>/TXT/HTML/?uri=CELEX:<id>; texto extraído (tags removidas, espaços normalizados); divisão por cabeçalho «Article N» / «Artigo N.º». Artigos só (considerandos no .txt integral; anexos no fim do último artigo e no .txt).",
+ "retrieved_by": "Manual agent, 2026-09-26",
+ "files": [
+  {
+   "file": "32022R2554-PT.txt",
+   "celex": "32022R2554",
+   "act": "DORA — Regulation (EU) 2022/2554",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32022R2554",
+   "downloaded": "2026-09-26T18:33:57",
+   "articles": 64,
+   "html_sha256": "d10aa8aa8323b95d20ec24bb175cbbfb38cd51d80e27aa8af1a24a22df11ab3f",
+   "sha256": "f5fd1e4f81f5d2cad8c60badf97ff3d693cb9345f5d1a0bd145b59622dbc4892"
+  },
+  {
+   "file": "32022R2554-PT.articles.json",
+   "celex": "32022R2554",
+   "act": "DORA — Regulation (EU) 2022/2554",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32022R2554",
+   "downloaded": "2026-09-26T18:33:57",
+   "articles": 64,
+   "html_sha256": "d10aa8aa8323b95d20ec24bb175cbbfb38cd51d80e27aa8af1a24a22df11ab3f",
+   "sha256": "f3ef1dc73341af70eeabe24ca3d0053a059fd7f522bbd5b411341bee4d41aea2"
+  },
+  {
+   "file": "32022R2554-EN.txt",
+   "celex": "32022R2554",
+   "act": "DORA — Regulation (EU) 2022/2554",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2554",
+   "downloaded": "2026-09-26T18:33:57",
+   "articles": 64,
+   "html_sha256": "023739d22a25d08f3e2ab21739400427b4dd567ff827004ca8cefbfbedee2882",
+   "sha256": "6fe8fcbecc0d72a22cf89fb9ad9fd87c41ed649e0eeeb5ef9e65647d9c4ddbd2"
+  },
+  {
+   "file": "32022R2554-EN.articles.json",
+   "celex": "32022R2554",
+   "act": "DORA — Regulation (EU) 2022/2554",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2554",
+   "downloaded": "2026-09-26T18:33:57",
+   "articles": 64,
+   "html_sha256": "023739d22a25d08f3e2ab21739400427b4dd567ff827004ca8cefbfbedee2882",
+   "sha256": "60bfde51421bfb954e4eeb543838f69890e7ef705af752db4f56146a6d4f4ef2"
+  },
+  {
+   "file": "32022L2555-PT.txt",
+   "celex": "32022L2555",
+   "act": "NIS2 — Directive (EU) 2022/2555",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32022L2555",
+   "downloaded": "2026-09-26T18:34:07",
+   "articles": 46,
+   "html_sha256": "127ec98e3ad7a18ba99aa63ad1079a84b1febaed998a61dfe9a46b94834ff582",
+   "sha256": "8aee891101a215b0bd40c245b51b360f1f097965abc85c4e108216a34faa0a0a"
+  },
+  {
+   "file": "32022L2555-PT.articles.json",
+   "celex": "32022L2555",
+   "act": "NIS2 — Directive (EU) 2022/2555",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32022L2555",
+   "downloaded": "2026-09-26T18:34:07",
+   "articles": 46,
+   "html_sha256": "127ec98e3ad7a18ba99aa63ad1079a84b1febaed998a61dfe9a46b94834ff582",
+   "sha256": "5c66dd1cecf9db3603e7aa39eb3b5a849cd61d413124483a9e1106d28e88305e"
+  },
+  {
+   "file": "32022L2555-EN.txt",
+   "celex": "32022L2555",
+   "act": "NIS2 — Directive (EU) 2022/2555",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2555",
+   "downloaded": "2026-09-26T18:34:06",
+   "articles": 46,
+   "html_sha256": "fed1eaee8ce1d631e3c1ef32e8d45e833683859494f250d76d065eefbf3d581c",
+   "sha256": "5d2467a75d60d913d2bd7d55a5bb0e06c48c09a908a23d5810fd7fe68f962f8f"
+  },
+  {
+   "file": "32022L2555-EN.articles.json",
+   "celex": "32022L2555",
+   "act": "NIS2 — Directive (EU) 2022/2555",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022L2555",
+   "downloaded": "2026-09-26T18:34:06",
+   "articles": 46,
+   "html_sha256": "fed1eaee8ce1d631e3c1ef32e8d45e833683859494f250d76d065eefbf3d581c",
+   "sha256": "011900c11351095d3d3e2d210da90ca3c768ea921118cd73bc6979fd5aefcdcb"
+  },
+  {
+   "file": "32024R2847-PT.txt",
+   "celex": "32024R2847",
+   "act": "CRA — Regulation (EU) 2024/2847",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32024R2847",
+   "downloaded": "2026-09-26T18:34:08",
+   "articles": 71,
+   "html_sha256": "197ecc814f569d7adfe506db686aa0ef94fd57f9e6da243aa6d1ec714e311b53",
+   "sha256": "57ac8901442db1122ff0d1eeebaf3b207bd49a74f6f53ebc6de98f181a252bb6"
+  },
+  {
+   "file": "32024R2847-PT.articles.json",
+   "celex": "32024R2847",
+   "act": "CRA — Regulation (EU) 2024/2847",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32024R2847",
+   "downloaded": "2026-09-26T18:34:08",
+   "articles": 71,
+   "html_sha256": "197ecc814f569d7adfe506db686aa0ef94fd57f9e6da243aa6d1ec714e311b53",
+   "sha256": "dd87b41facb3e282677388e40955b029c9d8f9635dd8784bd743d0bd1ddb552e"
+  },
+  {
+   "file": "32024R2847-EN.txt",
+   "celex": "32024R2847",
+   "act": "CRA — Regulation (EU) 2024/2847",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R2847",
+   "downloaded": "2026-09-26T18:34:07",
+   "articles": 71,
+   "html_sha256": "616acc4fdaea166da69d76c628cd392dc79fb0dc4ac92fd42bce8b25c153f5bf",
+   "sha256": "97e755ecad17bcc01df0179a5feeda73aba894c0be679ad6356a4ca6acfd20ed"
+  },
+  {
+   "file": "32024R2847-EN.articles.json",
+   "celex": "32024R2847",
+   "act": "CRA — Regulation (EU) 2024/2847",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R2847",
+   "downloaded": "2026-09-26T18:34:07",
+   "articles": 71,
+   "html_sha256": "616acc4fdaea166da69d76c628cd392dc79fb0dc4ac92fd42bce8b25c153f5bf",
+   "sha256": "54985c872f142884811d0f574e5143f6f8edaa94b9566e45cce74e18818b8ce9"
+  },
+  {
+   "file": "32016R0679-PT.txt",
+   "celex": "32016R0679",
+   "act": "GDPR — Regulation (EU) 2016/679",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32016R0679",
+   "downloaded": "2026-09-26T18:34:09",
+   "articles": 99,
+   "html_sha256": "8bad4794410ee13edec509c7779811e239b9c0d082af8e9c81599f7dd6b4e1f0",
+   "sha256": "cc48bd92dd952a4452da6f59943b6a0c0d9aeae61d0f07e2f5b24cf3e6da784e"
+  },
+  {
+   "file": "32016R0679-PT.articles.json",
+   "celex": "32016R0679",
+   "act": "GDPR — Regulation (EU) 2016/679",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32016R0679",
+   "downloaded": "2026-09-26T18:34:09",
+   "articles": 99,
+   "html_sha256": "8bad4794410ee13edec509c7779811e239b9c0d082af8e9c81599f7dd6b4e1f0",
+   "sha256": "0c87eac60ab418d0f1990a4ee7064246d4a6863d2e22019c6c44a4ded13a1195"
+  },
+  {
+   "file": "32016R0679-EN.txt",
+   "celex": "32016R0679",
+   "act": "GDPR — Regulation (EU) 2016/679",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+   "downloaded": "2026-09-26T18:34:08",
+   "articles": 99,
+   "html_sha256": "f2debb0a62bb9e29e9af44edb079a74d96b385c2e3dfffba9e80f49032492ed5",
+   "sha256": "943dd59cfb53c4eac8b6bdef1dd5d413c97026b58bbbd891e14ae67c61b4a109"
+  },
+  {
+   "file": "32016R0679-EN.articles.json",
+   "celex": "32016R0679",
+   "act": "GDPR — Regulation (EU) 2016/679",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
+   "downloaded": "2026-09-26T18:34:08",
+   "articles": 99,
+   "html_sha256": "f2debb0a62bb9e29e9af44edb079a74d96b385c2e3dfffba9e80f49032492ed5",
+   "sha256": "8766893ecb31ebb212afeb3b06bf50e04ed024edc0bf7cb6d07879de3ac1fd57"
+  },
+  {
+   "file": "32024R1689-PT.txt",
+   "celex": "32024R1689",
+   "act": "AI Act — Regulation (EU) 2024/1689",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32024R1689",
+   "downloaded": "2026-09-26T18:34:11",
+   "articles": 113,
+   "html_sha256": "217a59fddad643f98868dc3e7d1bccd53cda8afec0ecbc2a1ea96221cb2a197b",
+   "sha256": "cc07adf354bb65cddf3b7d77c8ac2a97c7fe1515734b53634b26f4870370416a"
+  },
+  {
+   "file": "32024R1689-PT.articles.json",
+   "celex": "32024R1689",
+   "act": "AI Act — Regulation (EU) 2024/1689",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32024R1689",
+   "downloaded": "2026-09-26T18:34:11",
+   "articles": 113,
+   "html_sha256": "217a59fddad643f98868dc3e7d1bccd53cda8afec0ecbc2a1ea96221cb2a197b",
+   "sha256": "e128044d0fa96865e0eaf293fd9187203187d6fbad3ed0fa1665cef26f3d30ca"
+  },
+  {
+   "file": "32024R1689-EN.txt",
+   "celex": "32024R1689",
+   "act": "AI Act — Regulation (EU) 2024/1689",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+   "downloaded": "2026-09-26T18:34:10",
+   "articles": 113,
+   "html_sha256": "74a821582ff77e304ae37bfab3e343ec7f75bfd2595ce2a072d895b574f6e21e",
+   "sha256": "4d08dcdaf926a2bea52f5f5d774825893188192d402ec4c84e8ae3e7468f3041"
+  },
+  {
+   "file": "32024R1689-EN.articles.json",
+   "celex": "32024R1689",
+   "act": "AI Act — Regulation (EU) 2024/1689",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+   "downloaded": "2026-09-26T18:34:10",
+   "articles": 113,
+   "html_sha256": "74a821582ff77e304ae37bfab3e343ec7f75bfd2595ce2a072d895b574f6e21e",
+   "sha256": "c03ea8f0fa534e6ff8cd7c6b99a218b5c7bf9993dfe2b93c799e33f7043a58ee"
+  },
+  {
+   "file": "32019R0881-PT.txt",
+   "celex": "32019R0881",
+   "act": "Cybersecurity Act — Regulation (EU) 2019/881",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32019R0881",
+   "downloaded": "2026-09-26T18:34:12",
+   "articles": 69,
+   "html_sha256": "196e37c35a5f3bfd08fc0f2adf957c6843fdda922c8565a2dcc4be634cf37880",
+   "sha256": "477a5eb3b9e0212c12b3eaf94228c27701a17807168e05555977769a679a02f1"
+  },
+  {
+   "file": "32019R0881-PT.articles.json",
+   "celex": "32019R0881",
+   "act": "Cybersecurity Act — Regulation (EU) 2019/881",
+   "lang": "PT",
+   "source_url": "https://eur-lex.europa.eu/legal-content/PT/TXT/HTML/?uri=CELEX:32019R0881",
+   "downloaded": "2026-09-26T18:34:12",
+   "articles": 69,
+   "html_sha256": "196e37c35a5f3bfd08fc0f2adf957c6843fdda922c8565a2dcc4be634cf37880",
+   "sha256": "e2b87a41b7843352bc670092b1d9d40bc8547ae40c33808b7f9308aa4afc2a71"
+  },
+  {
+   "file": "32019R0881-EN.txt",
+   "celex": "32019R0881",
+   "act": "Cybersecurity Act — Regulation (EU) 2019/881",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0881",
+   "downloaded": "2026-09-26T18:34:11",
+   "articles": 69,
+   "html_sha256": "295e2b914cd056fb6990cae72046c176002087773376497783fd439c56ecf272",
+   "sha256": "65703a8ab2e034bb63b181c68683af923d8b9c28e5715f32d0de5d29e2bbfd58"
+  },
+  {
+   "file": "32019R0881-EN.articles.json",
+   "celex": "32019R0881",
+   "act": "Cybersecurity Act — Regulation (EU) 2019/881",
+   "lang": "EN",
+   "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R0881",
+   "downloaded": "2026-09-26T18:34:11",
+   "articles": 69,
+   "html_sha256": "295e2b914cd056fb6990cae72046c176002087773376497783fd439c56ecf272",
+   "sha256": "5375c8eb91f68658a4210d3d3810f04b540ddeb468f985c29f6f07a37055e9e8"
+  },
+  {
+   "file": "definitions.json",
+   "note": "pares PT↔EN dos artigos de definições (DORA 3, NIS2 6, CRA 3, GDPR 4, AI Act 3, CSA 2), por número do ponto",
+   "sha256": "0a3da0427d8fc2a27cd6103c4548cb7cb0fe49d5dab64ddc53527fca8ef01c9c"
+  }
+ ]
+}

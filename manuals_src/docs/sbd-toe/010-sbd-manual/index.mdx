@@ -6,6 +6,7 @@ sidebar_position: 0
 ---
 
 import Link from '@docusaurus/Link';
+import {translate} from '@docusaurus/Translate';
 
 export const CHAPTERS = [
   { n: '01', type: 'basilar', title: 'Classificação das Aplicações',
@@ -57,6 +58,8 @@ export const TYPE_INFO = {
   operacional: { emoji: '⚙️', label: 'Operacional', color: '#00aa44', desc: 'Implementação e automação (L2-L3)' },
   organizacional: { emoji: '🏛️', label: 'Organizacional', color: '#9933cc', desc: 'Governação e gestão (Transversal)' },
 };
+
+export const OPEN_CHAPTER = 'Abrir capítulo →';
 
 <style>{`
   .intro-text {
@@ -172,8 +175,8 @@ export const TYPE_INFO = {
       <div key={key} className="legend-item">
         <span className="legend-emoji">{info.emoji}</span>
         <div>
-          <div className="legend-label" style={{color: info.color}}>{info.label}</div>
-          <div className="legend-desc">{info.desc}</div>
+          <div className="legend-label" style={{color: info.color}}>{translate({id: `manualIndex.type.${key}.label`, message: info.label})}</div>
+          <div className="legend-desc">{translate({id: `manualIndex.type.${key}.desc`, message: info.desc})}</div>
         </div>
       </div>
     ))}
@@ -187,16 +190,16 @@ export const TYPE_INFO = {
           <div className="chapter-header">
             <div className="chapter-number">{chapter.n}</div>
             <div className="chapter-info">
-              <h3 className="chapter-title">{chapter.title}</h3>
+              <h3 className="chapter-title">{translate({id: `manualIndex.chapter.${chapter.n}.title`, message: chapter.title})}</h3>
               <span className="chapter-type" style={{color: typeInfo.color}}>
                 <span>{typeInfo.emoji}</span>
-                <span>{typeInfo.label}</span>
+                <span>{translate({id: `manualIndex.type.${chapter.type}.label`, message: typeInfo.label})}</span>
               </span>
             </div>
           </div>
-          <p className="chapter-desc">{chapter.desc}</p>
+          <p className="chapter-desc">{translate({id: `manualIndex.chapter.${chapter.n}.desc`, message: chapter.desc})}</p>
           <Link className="button button--primary button--sm chapter-link" to={chapter.href}>
-            Abrir capítulo →
+            {translate({id: 'manualIndex.openChapter', message: OPEN_CHAPTER})}
           </Link>
         </div>
       );

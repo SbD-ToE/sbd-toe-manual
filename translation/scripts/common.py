@@ -42,6 +42,22 @@ MANUALS_SUBDIR = "manuals_src"
 DOCS_SUBDIR = "docs/sbd-toe"  # the docs plugin has path: 'docs/sbd-toe'
 I18N_SUBDIR = "i18n"
 DOCS_PLUGIN_MIRROR = "docusaurus-plugin-content-docs/current"
+PAGES_PLUGIN_MIRROR = "docusaurus-plugin-content-pages"
+PAGES_SUBDIR = "src/pages"  # standalone pages (about, faq, licenciamento, tldr): mirrored under PAGES_PLUGIN_MIRROR
+PLUGIN_MIRRORS = {"docs": DOCS_PLUGIN_MIRROR, "pages": PAGES_PLUGIN_MIRROR}
+_plugin = "docs"
+
+
+def use_plugin(name: str) -> None:
+    """Select which Docusaurus content plugin the mirror helpers target (``docs`` by default; ``pages`` for src/pages)."""
+    global _plugin
+    if name not in PLUGIN_MIRRORS:
+        raise ValueError(f"unknown content plugin {name!r} (expected one of {sorted(PLUGIN_MIRRORS)})")
+    _plugin = name
+
+
+def current_plugin() -> str:
+    return _plugin
 TERMS_REGISTRY_RELPATH = "translation/terms/registry.yaml"
 SYNC_STATE_RELPATH = "translation/state/sync-state.json"
 MARKDOWN_EXTENSIONS = (".md", ".mdx")
@@ -89,8 +105,8 @@ def repo_root(start: Optional[Path] = None) -> Path:
 
 
 def default_docs_dir(root: Optional[Path] = None) -> Path:
-    """Directory holding the canonical (source-locale) corpus."""
-    return (root or repo_root()) / MANUALS_SUBDIR / DOCS_SUBDIR
+    """Directory holding the canonical (source-locale) corpus (src/pages when the ``pages`` plugin is selected)."""
+    return (root or repo_root()) / MANUALS_SUBDIR / (PAGES_SUBDIR if _plugin == "pages" else DOCS_SUBDIR)
 
 
 def default_i18n_dir(root: Optional[Path] = None) -> Path:
@@ -116,8 +132,8 @@ def existing_path(path: Path) -> Path:
 
 
 def mirror_dir(i18n_dir: Path, target_locale: str) -> Path:
-    """Root of the docs mirror for ``target_locale`` (README rule 2)."""
-    return Path(i18n_dir) / target_locale / DOCS_PLUGIN_MIRROR
+    """Root of the mirror for ``target_locale`` (README rule 2): docs by default, pages under ``use_plugin("pages")``."""
+    return Path(i18n_dir) / target_locale / PLUGIN_MIRRORS[_plugin]
 
 
 def mirror_path(rel_path: str, i18n_dir: Path, target_locale: str) -> Path:

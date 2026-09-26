@@ -948,6 +948,8 @@ def cmd_prepare(args) -> int:
             if dirty:
                 warnings.append(f"{rel}: uncommitted changes in the working tree; source_commit is the last commit that touched the file")
             job = build_job(text=text, rel=rel, source_locale=args.source_locale, target_locale=args.target_locale, registry=registry, terms_sha256=terms_sha, prompt_sha256=prompt_sha, source_commit=commit, source_dirty=dirty)
+            if args.plugin != "docs":
+                job["plugin"] = args.plugin
             if registry:
                 # Cross-check the block detector of terms_lint (same registry, same text).
                 _total, hits = terms_lint.pending_blocks_for_text(text, terms_lint.pending_needles(registry, args.source_locale), where=rel)
@@ -1199,6 +1201,8 @@ def cmd_assemble(args) -> int:
     if job.get("schema") != JOB_SCHEMA:
         raise TranslateError(f"{job_file}: unsupported job schema {job.get('schema')!r}")
     rel = job["source_path"]
+    if job.get("plugin", "docs") != args.plugin:
+        raise TranslateError(f"{job_file}: the job was prepared for the {job.get('plugin', 'docs')!r} content plugin; pass --plugin {job.get('plugin', 'docs')}")
     direction = job.get("direction") or {}
     source_locale = direction.get("source_locale", args.source_locale)
     target_locale = direction.get("target_locale", args.target_locale)
@@ -1335,6 +1339,7 @@ def _add_common(p: argparse.ArgumentParser) -> None:
     p.add_argument("--docs-dir", type=Path, default=None, help="source corpus root (default: <repo>/manuals_src/docs/sbd-toe)")
     p.add_argument("--i18n-dir", type=Path, default=None, help="i18n root (default: <repo>/manuals_src/i18n)")
     p.add_argument("--registry", type=Path, default=None, help=f"terms registry (default: <repo>/{common.TERMS_REGISTRY_RELPATH})")
+    p.add_argument("--plugin", choices=sorted(common.PLUGIN_MIRRORS), default="docs", help="content plugin: docs (manuals_src/docs/sbd-toe) or pages (manuals_src/src/pages → docusaurus-plugin-content-pages)")
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -1373,6 +1378,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    common.use_plugin(getattr(args, "plugin", "docs"))
     try:
         return args.func(args)
     except common.TranslationToolError as exc:

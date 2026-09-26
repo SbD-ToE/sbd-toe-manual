@@ -609,3 +609,34 @@ class RealCorpusSmokeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PagesPluginTests(unittest.TestCase):
+    """`--plugin pages` (2026-09-26): standalone pages (manuals_src/src/pages) mirror under
+    docusaurus-plugin-content-pages; a job prepared for one plugin is never assembled into the other's mirror."""
+
+    def tearDown(self):
+        common.use_plugin("docs")
+
+    def test_mirror_dir_follows_the_selected_plugin(self):
+        i18n = Path("/x/i18n")
+        self.assertEqual(common.mirror_dir(i18n, "en"), i18n / "en" / "docusaurus-plugin-content-docs" / "current")
+        common.use_plugin("pages")
+        self.assertEqual(common.mirror_dir(i18n, "en"), i18n / "en" / "docusaurus-plugin-content-pages")
+        self.assertTrue(str(common.default_docs_dir(Path("/r"))).endswith("manuals_src/src/pages"))
+
+    def test_unknown_plugin_is_rejected(self):
+        with self.assertRaises(ValueError):
+            common.use_plugin("blog")
+
+    def test_assemble_refuses_a_job_prepared_for_another_plugin(self):
+        import io
+        from contextlib import redirect_stderr
+        with tempfile.TemporaryDirectory() as t:
+            job = Path(t) / "about.mdx.job.json"
+            job.write_text(json.dumps({"schema": translate.JOB_SCHEMA, "kind": "document", "source_path": "about.mdx", "plugin": "pages"}), encoding="utf-8")
+            err = io.StringIO()
+            with redirect_stderr(err):
+                code = translate.main(["assemble", "--job", str(job), "--engine", "test"])
+            self.assertEqual(code, 2)
+            self.assertIn("--plugin pages", err.getvalue())

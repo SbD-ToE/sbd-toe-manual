@@ -8,10 +8,11 @@ translation:
   target_sha256: add137084bbd15be7cfd6c839cfe1e556ca167c893fd10d014ed3bddb6f78614
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [appsec_core, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, sbdtoe_sbd, threat, validation_evaluation]
-  glossary_sha256: 5a04226a675e95805042c589c14e80029ea0fd1d635a0791f8a1a1a02b87bc71
+  glossary_sha256: 62fcc21e2a75eb7b7f3823444d878d03abd56b9be0bc313b9f9847c217c03531
   translated_at: 2026-09-26T13:39:11Z
+  stamped_at: 2026-09-26T18:34:43Z
   reviewed_by: null
 ---
 

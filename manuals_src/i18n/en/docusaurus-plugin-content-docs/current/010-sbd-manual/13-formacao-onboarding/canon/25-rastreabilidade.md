@@ -8,10 +8,11 @@ translation:
   target_sha256: b47243324c7e2346e65bc0633be1b5e1b4506a734d52086c49e2c5915a24b208
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [appsec_core, capacitacao, chapter_role, practitioner_manual, programme_line, sbdtoe_sbd, slice, slug_threat_modeling, traceability, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation]
-  glossary_sha256: 17c20ad97d714ebf25ddd2a5a68ec9a456cfa5ddf0ee1d5be81eac1dbae20de1
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [appsec_core, capacitacao, chapter_role, mcp_reading_programa, practitioner_manual, programme_line, sbdtoe_sbd, slice, slug_threat_modeling, traceability, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation]
+  glossary_sha256: 4bb8e0cb18c71651e0ced0aaba73684ce0a14940c6bba4662089ecbec49b54ed
   translated_at: 2026-09-26T13:37:10Z
+  stamped_at: 2026-09-26T18:36:06Z
   reviewed_by: null
 ---
 

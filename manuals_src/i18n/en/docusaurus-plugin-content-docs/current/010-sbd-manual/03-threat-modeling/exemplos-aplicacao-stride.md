@@ -11,10 +11,11 @@ translation:
   target_sha256: 94da943cf85a9b121c4e7b35382c413b61e9888950a20eaa45daecbadec63b39
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [framework_source_corpus, lifecycle_phase, threat, validation_evaluation]
-  glossary_sha256: 07946098b7311f297cb78a9ab3f95ebc82cb2d7186ae4c260a8e1f830ec9ffba
+  glossary_sha256: 5703039decea24c8b9fe2c496045b1d37f2289a50c0bfa268d3e96d47dee6c95
   translated_at: 2026-09-25T20:17:06Z
+  stamped_at: 2026-09-26T18:33:27Z
   reviewed_by: null
 ---
 

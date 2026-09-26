@@ -13,10 +13,11 @@ translation:
   target_sha256: ea77aaaa983a956decf5b83dfcb7fdef401c4743f9adf78ca6b3b0415abab45e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, lifecycle_phase, sbdtoe_sbd, validation_evaluation, verification_taxonomy]
-  glossary_sha256: de3b5f926bce61a05b4dc22e05f02013794b1dc13b8a91cb3dd9944d3a520e2a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, dora_financial_entity, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: ecd85d0eb852938c878cc4c42bd54ce76309ffaa8d94692de306f981048dd32c
   translated_at: 2026-09-26T14:11:02Z
+  stamped_at: 2026-09-26T18:37:03Z
   reviewed_by: null
 ---
 

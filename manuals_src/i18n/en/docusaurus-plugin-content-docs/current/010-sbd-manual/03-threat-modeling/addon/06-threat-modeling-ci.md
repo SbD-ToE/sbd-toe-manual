@@ -11,10 +11,11 @@ translation:
   target_sha256: ba52b35580323844f245c2083bb9e0b2f0f36137153781b07ec3e967bf8c4be5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [como_fazer, cycle_iteration, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, sbdtoe_sbd, threat, traceability, validation_evaluation]
-  glossary_sha256: d2b4127984478fba3f7bc64ac5026915dcbbe446bc490a193bc4726626d694ca
+  glossary_sha256: ab801d496384b679b03c1ad3c038b6b1d1ba3c5f559337976bbc75fad4a59ad1
   translated_at: 2026-09-25T20:16:59Z
+  stamped_at: 2026-09-26T18:33:19Z
   reviewed_by: null
 ---
 

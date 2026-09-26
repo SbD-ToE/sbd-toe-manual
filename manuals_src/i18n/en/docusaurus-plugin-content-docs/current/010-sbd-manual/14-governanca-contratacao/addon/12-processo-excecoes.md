@@ -12,10 +12,11 @@ translation:
   target_sha256: 2e856048e3770aa778c5b4521d5045d17bc04bba66f6f6eacd8d172d6450217b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, maturity, papel_suporte, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, transversal, validation_evaluation]
-  glossary_sha256: 7b68c3cbce5eaa32f0068d400d4d833223c4d5a2ad8a9df2c8f70caaf3fb5ca2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, maturity, papel_suporte, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal, validation_evaluation]
+  glossary_sha256: e369fca5209e396286ce719b0c316a74a1c84e29f1844996e975804c90e4126e
   translated_at: 2026-09-26T12:00:18Z
+  stamped_at: 2026-09-26T18:36:19Z
   reviewed_by: null
 ---
 

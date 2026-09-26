@@ -12,10 +12,11 @@ translation:
   target_sha256: 375cdbd930fd87a5da2df70dc39b8f5074aeb376f8f4e3dd8cae5136e1d7a653
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, dora_financial_entity, dora_ict_risk, esquema_regime, nis2_essential_entity, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema]
-  glossary_sha256: 37ac6cdb7a0f186ea7025fc1c72a5ea9a936286f7ead075fc267bf9df908c6d9
+  glossary_sha256: 367cbfc990c372504a0a5aa43a8cccc97eedb6aae788948e5ae129aa3e1c8877
   translated_at: 2026-09-26T18:12:06Z
+  stamped_at: 2026-09-26T18:32:23Z
   reviewed_by: null
 ---
 

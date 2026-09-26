@@ -13,10 +13,11 @@ translation:
   target_sha256: dd64b16feaf53bfa8d84534a038544df4321b31e58807160c9ba1251f7f3483c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, eu_ai_system, papel_suporte, practitioner_manual, risk_level, role_juridico, role_juridico_dpo, role_procurement, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: a8996bfc257e487ff141d36007d226c313262492df4d341c386bda356766903a
+  glossary_sha256: b702989a6b038d522a70dc73ccba3d5ed23f3808e66a9b08824e77a38de7b779
   translated_at: 2026-09-26T17:44:45Z
+  stamped_at: 2026-09-26T18:32:36Z
   reviewed_by: null
 ---
 

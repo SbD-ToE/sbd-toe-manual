@@ -13,10 +13,11 @@ translation:
   target_sha256: bd7a168e39981e5268365bbf505988bd426556bfcefaef62202b77cf7247983f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, maturity, programme_line, risk_level, sbdtoe_sbd, traceability, trilho_formativo]
-  glossary_sha256: a7817bc10dc5b34907d0dab9833944d1861bf137306a4226573f579a1a8994e4
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, maturity, mcp_reading_programa, programme_line, risk_level, role_procurement, role_tech_lead, sbdtoe_sbd, traceability, trilho_formativo]
+  glossary_sha256: 639410b3fc031123bcb00e29436061550d3fbf8c70c46e03b9ed66b38b339fcf
   translated_at: 2026-09-26T14:11:04Z
+  stamped_at: 2026-09-26T18:37:06Z
   reviewed_by: null
 ---
 

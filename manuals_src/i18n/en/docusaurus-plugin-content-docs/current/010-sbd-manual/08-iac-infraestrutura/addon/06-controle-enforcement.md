@@ -13,10 +13,11 @@ translation:
   target_sha256: f84a9d44c5c19ada48f7d84a512153769fbbd94f1aa17691d35d0aa22aec7bfa
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
-  glossary_keys: [cycle_iteration, discipline, lifecycle_phase, practitioner_manual, verification_taxonomy]
-  glossary_sha256: 3cfda390a0457ad76a85d92317363d986f2836edea34a9646d46f66012265948
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [cycle_iteration, discipline, lifecycle_phase, practitioner_manual, verificacao_check, verification_taxonomy]
+  glossary_sha256: 0a6f3effe9cf62bdc2a6f58e185a56dbabec150901204203e9fb1cfe719202a0
   translated_at: 2026-09-26T09:45:05Z
+  stamped_at: 2026-09-26T18:34:35Z
   reviewed_by: null
 ---
 

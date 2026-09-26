@@ -12,10 +12,11 @@ translation:
   target_sha256: ac4bb068f1c2ce96bf19bca819e6e0dc6bb6051ab563b2e0d10b2dd6071022e5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [alcada, audit_trail, chapter_role, lifecycle_phase, risk_level, traceability, validation_evaluation]
-  glossary_sha256: e4fa5a7a81d2e7a2dd284e5badaf5604e379983fb0cb556bbf50cf84c8b89672
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, audit_trail, chapter_role, lifecycle_phase, risk_level, role_procurement, traceability, validation_evaluation]
+  glossary_sha256: a434679b09aecbc542f47a2687e82aff39f0e5dac6a0d0919f3dd3b0b65d8f70
   translated_at: 2026-09-26T12:49:05Z
+  stamped_at: 2026-09-26T18:36:13Z
   reviewed_by: null
 ---
 

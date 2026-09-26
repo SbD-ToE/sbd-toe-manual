@@ -12,10 +12,11 @@ translation:
   target_sha256: 715ceea4f59625c29bb28a448cf275c7a146a2dbbf6d078fe04d6fafc84d1269
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 82bbd36942cae535b027b449daf19423098f487bb35c9a467c9459c9d64230d3
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 554488124abc29c0a074ab0f564738d25c3197109db2ea24fbb3cc6f965ed64c
   translated_at: 2026-09-26T12:48:58Z
+  stamped_at: 2026-09-26T18:35:46Z
   reviewed_by: null
 ---
 

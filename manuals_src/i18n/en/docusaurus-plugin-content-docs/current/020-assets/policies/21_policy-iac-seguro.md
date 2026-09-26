@@ -13,10 +13,11 @@ translation:
   target_sha256: 7e0901ef7ef47d548fa366fee6b95a4f46dd538c8a064341be7bebf7fe7ee367
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, practitioner_manual, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 5b1d3eb1e6b9d769abe9c98fa9c65768b8d67a60e3e74edbd335b83279da07ea
+  glossary_sha256: ecd53498f823c203ba2d1f1bbc6d567b9d66ef95eca0b82734cae6f66172431d
   translated_at: 2026-09-26T14:10:55Z
+  stamped_at: 2026-09-26T18:36:56Z
   reviewed_by: null
 ---
 

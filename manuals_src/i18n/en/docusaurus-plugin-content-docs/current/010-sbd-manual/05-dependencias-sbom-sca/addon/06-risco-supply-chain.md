@@ -11,10 +11,11 @@ translation:
   target_sha256: 1e2d5f3193a68f6dc1f1aac1e34426e6f8417b9dcec4b1f1c8ad12fa3759bee3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a
-  glossary_keys: [mirror_osf, threat, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 1e3a629e8110aaf9583bc39cb5d0b9dc24dc2ec9c58746303bb9ceb84e04415d
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [mirror_osf, threat, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 70c50183f862a2db7dfc554f885f28a1b7a0a0e1df94ef2bdc23b3833c110e4c
   translated_at: 2026-09-26T08:45:25Z
+  stamped_at: 2026-09-26T18:33:49Z
   reviewed_by: null
 ---
 

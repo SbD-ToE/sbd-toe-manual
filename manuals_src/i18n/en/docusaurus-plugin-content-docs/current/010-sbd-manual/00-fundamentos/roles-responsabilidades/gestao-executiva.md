@@ -13,10 +13,11 @@ translation:
   target_sha256: 10b004396223147fc3b460114d6023197eac9646edef8603b3a98214ca50a62d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [alcada, audit_trail, capacitacao, chapter_role, maturity, papel_suporte, sbdtoe_sbd, traceability, trilho_formativo]
-  glossary_sha256: 11ee6b5e1dcd2eaad47491c748c3e8b9fa2686c8bfe2843365bd3f5bade61b53
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, audit_trail, capacitacao, chapter_role, dora_digital_operational_resilience, eu_management_body, maturity, papel_suporte, sbdtoe_sbd, traceability, trilho_formativo]
+  glossary_sha256: 43d7fdf87f66b7cccd9689ae86c68b2d80ac98961c6cb2dee94d925104e2d7e8
   translated_at: 2026-09-26T17:23:39Z
+  stamped_at: 2026-09-26T18:32:34Z
   reviewed_by: null
 ---
 

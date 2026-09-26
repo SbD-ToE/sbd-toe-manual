@@ -11,10 +11,11 @@ translation:
   target_sha256: c347d24179f8719ff9a9124d9637184bac6bf6ff1ae6c75548ed5710d59cc08b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
-  glossary_keys: [audit_trail, avaliacao, chapter_role, cycle_iteration, framework_source_corpus, gap_family, layer, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 64e0f11eccc39d95ea78eb5054f17cffdcc3bc4046eb87ee4f12551e7046cdbb
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, avaliacao, chapter_role, cycle_iteration, dora_financial_entity, framework_source_corpus, gap_family, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 8cad1e1713526ba736fd6262a3c297ec235d99a2b203d1671bff4746c75b8195
   translated_at: 2026-09-26T10:31:33Z
+  stamped_at: 2026-09-26T18:35:13Z
   reviewed_by: null
 ---
 

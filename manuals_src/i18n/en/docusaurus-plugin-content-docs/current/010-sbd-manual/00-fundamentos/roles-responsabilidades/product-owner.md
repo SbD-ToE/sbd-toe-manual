@@ -12,11 +12,12 @@ translation:
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
   target_sha256: 6e4349013fdea3128fca965f71561cbf3f1f157974ab90555cabb7d5b48b13f6
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: ec5b85ae5c44f19938071c42de502ec2a888bebdce4691d01b15b4af153825d9
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: e3e902ffdb28bf94d10370b4d5967ec861e41fbbd17a27a955ef687c7db1d852
   translated_at: 2026-09-25T20:20:01Z
+  stamped_at: 2026-09-26T18:32:38Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: 9690c66122e843968d0a824cd5bd7bd66a9a6f859de0b7dceaef7ccf4f6705e2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 0ce416a6fb95ad87c5f64d7502dd63b19376a74cbb85982a8b5676fcc068c517
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: c0f4e2d904dadb56c660ddd5b460d1a61794d1de4ab21b47e09a9df0337c3776
   translated_at: 2026-09-26T18:11:53Z
+  stamped_at: 2026-09-26T18:30:48Z
   reviewed_by: null
 ---
 

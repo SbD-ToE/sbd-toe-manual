@@ -12,10 +12,11 @@ translation:
   target_sha256: 66a0bfc4a9bc19dc586acd0f750b56f4fe5931c5056bc4f5e9cb5c6a51181990
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [avaliacao, instrument, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 869ac6db14832708406f00b0b42fd8ffeaf3ce2d2a91a2ca1b34a47a963c89e1
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, instrument, mcp_reading_programa, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 37f557ce13821d2b85f46a16d57c7cd7ee69bb8f0ed5949502db9436324ffa72
   translated_at: 2026-09-26T12:49:09Z
+  stamped_at: 2026-09-26T18:36:26Z
   reviewed_by: null
 ---
 

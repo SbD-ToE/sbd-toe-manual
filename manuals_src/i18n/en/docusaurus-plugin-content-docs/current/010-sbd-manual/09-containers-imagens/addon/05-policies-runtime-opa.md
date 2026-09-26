@@ -11,10 +11,11 @@ translation:
   target_sha256: 7c3889e69b6328404ddd017f37e5835755c7e61c3604aabaaa7ab28294ed2338
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, sbdtoe_sbd, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 6be983961725a366afb1fd0bef6cd49bcd9ce5e7521c816eab5a7414b8d22929
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, lifecycle_phase, papel_suporte, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 77f25fbd7507df5a9b2412df320d942d7fc4ec436de09ff10ab5c913ddae2f1d
   translated_at: 2026-09-26T09:58:16Z
+  stamped_at: 2026-09-26T18:34:51Z
   reviewed_by: null
 ---
 

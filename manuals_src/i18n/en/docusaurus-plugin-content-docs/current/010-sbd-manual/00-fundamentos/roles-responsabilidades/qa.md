@@ -12,11 +12,12 @@ translation:
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
   target_sha256: 644d81983756a47493f531eff1c34d2d4278b0670f89d36065c4e544555ee00b
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 4cc8e063f31c47c86a3ce86b4586a79e8a367c66e949c0165a689914b8850404
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 9b63c3ff1edb0c51613c103b7715233e0a9589bc82028edecbc3bcaa45e2371b
   translated_at: 2026-09-25T20:22:03Z
+  stamped_at: 2026-09-26T18:32:39Z
   reviewed_by: null
 ---
 

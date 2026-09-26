@@ -12,10 +12,11 @@ translation:
   target_sha256: cc50de497ec2f654e8a795f6a0e3ee7674fc82c80f23e561244476520a3af440
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 955c55cb1eab0c33a6915af3350bf0f022e5fbd667c194487ab5a8cbe9632c3e
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 2e4a5bba3484a556d9ed76f10c8294d7380fb5e850534e00cf8152858029678c
   translated_at: 2026-09-26T17:58:15Z
+  stamped_at: 2026-09-26T18:36:22Z
   reviewed_by: null
 ---
 

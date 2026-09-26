@@ -11,10 +11,11 @@ translation:
   target_sha256: f4499779008eaa88e9b12c457368cd8f59be2253cf3eea9cee4726c3665b7468
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, mapping, maturity, practitioner_manual, risk_level, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 4146ba953b11e2ea0d54ef991c5d755602d7b74a8da0d3ae61be8b7e77fa4ba5
+  glossary_sha256: bf4c48591608eff3589229e47913654a7df6688238b8fdc48ef7ed77805984be
   translated_at: 2026-09-26T11:44:19Z
+  stamped_at: 2026-09-26T18:35:55Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: 4781945a6512071c54e160e7503b75da86efbb71c5266ecbd5d0c3ee498872d3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, framework_source_corpus, gap_family, mapping, maturity, microsoft_threat_modeling_tool, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, threat, traceability, transversal, validation_evaluation]
-  glossary_sha256: ed6c925dce3a58d8b99b3808551625275c3e4c1dfaf548cc2eab7326b80a80c6
+  glossary_sha256: b693488b75dc299ec246f0ca37d0312199fe3e353d22bf04e28e31c275e34783
   translated_at: 2026-09-26T12:48:41Z
+  stamped_at: 2026-09-26T18:33:21Z
   reviewed_by: null
 ---
 

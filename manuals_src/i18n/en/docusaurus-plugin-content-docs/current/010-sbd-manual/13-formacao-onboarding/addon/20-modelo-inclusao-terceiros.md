@@ -11,10 +11,11 @@ translation:
   target_sha256: 8c78a34453c8082a82d6f1d9f9311642a79bb562a45fe3031dc4d372846154b8
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, requirement_runtime, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 62ce24b71421440c7560baae2a7f97030f32ff0866ced6a0cfc3fe879c6a9e7d
+  glossary_sha256: 1ee88263ad58f33a6b38d765ab48828d1d9ba700c49866afb68ea10160a7e48f
   translated_at: 2026-09-26T11:44:25Z
+  stamped_at: 2026-09-26T18:36:01Z
   reviewed_by: null
 ---
 

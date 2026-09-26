@@ -11,10 +11,11 @@ translation:
   target_sha256: 36425ef42c8ac623f9f50125d220299626dfa158161666e62f414821356d0a80
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: e3a0a2a16fafe56b28ed87256d3cff0f0aed977c8bbc04f3f5d6099a7d322097
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, prescriptive, provenance, requirement_runtime, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 06cc6aad3b73fec617a1b8498a884f87801039fbf6fe6d681c512bc6f565922e
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, normative_empirical, practitioner_manual, prescriptive, provenance, requirement_runtime, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: f387b783f0ebfe23c369c67885943809f2df1a67cfc8b78a2c289be8772ae5a3
   translated_at: 2026-09-26T13:55:19Z
+  stamped_at: 2026-09-26T18:37:10Z
   reviewed_by: null
 ---
 

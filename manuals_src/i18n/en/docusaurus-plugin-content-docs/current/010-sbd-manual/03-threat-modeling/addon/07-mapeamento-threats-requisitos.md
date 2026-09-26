@@ -8,13 +8,14 @@ translation:
   source_path: 010-sbd-manual/03-threat-modeling/addon/07-mapeamento-threats-requisitos.md
   source_sha256: d4844007b1f9b071679e7d930408f1b1bbb1e742a0f2bb8a46e7595400fafb41
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: bd7e5dd0b87249e232bb60251370642f4a530db8811b49c3739ead7274926779
+  target_sha256: 4d964bc95900e97ed4948d1411a9704d3ffd7ec09dd855410e65f36c97732120
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [audit_trail, chapter_role, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, sbdtoe_sbd, threat, validation_evaluation, verification_taxonomy]
-  glossary_sha256: b4c19dc98f936ff1d93d2937908640968e809047d65773dd853ca2fb085c73d6
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, threat, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: f3501507fc511bf8a504fc10d2edec54af0a4dcd831f192fdaba299365252a74
   translated_at: 2026-09-25T20:16:59Z
+  stamped_at: 2026-09-26T18:38:31Z
   reviewed_by: null
 ---
 
@@ -96,7 +97,7 @@ During the security validation phase of each project, this mapping must be used 
 
 | Document                        | Relation to this file                            |
 |----------------------------------|------------------------------------------------------|
-| [threat modelling in CI](./threat-modeling-ci) | Automated validation of the model in CI/CD pipelines |
+| [threat-modeling-ci](./threat-modeling-ci) | Automated validation of the model in CI/CD pipelines |
 | [base method](./metodologias-e-ferramentas)  | General principles of threat modelling in SbD-ToE     |
 
 ---

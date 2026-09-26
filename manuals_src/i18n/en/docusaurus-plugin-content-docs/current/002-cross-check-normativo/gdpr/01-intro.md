@@ -12,10 +12,11 @@ translation:
   target_sha256: 92ae694528021e3918c0b8215daa8b0a7497486086a1ce4645d8a8ba2e875e45
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, cycle_iteration, gap_family, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, normative_empirical, role_juridico, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: a28d6ef83c6735d802775f3bbc6c4d1802b43b1dc9acdf7f5dc8ad5a00f0fb46
+  glossary_sha256: d1f091d7196b7f6f3ac5f4d671a1ec5ca697cd1f55bd15d2c31aad8c7508b6d9
   translated_at: 2026-09-26T18:12:03Z
+  stamped_at: 2026-09-26T18:32:19Z
   reviewed_by: null
 ---
 

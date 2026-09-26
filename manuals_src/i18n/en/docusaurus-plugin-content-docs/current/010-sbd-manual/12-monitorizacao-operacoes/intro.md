@@ -12,10 +12,11 @@ translation:
   target_sha256: 62d9be1bea56ce79558963777f9c524276ebf8ff2a699a0147935800096532cd
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: ded17d619035e7c2d723a896280bceb3be1e4cdb7b370f025eec3c92f1c76d9e
+  glossary_sha256: 4e4c8a329c7550f5284f312e7fe7b7b5197dee9c019258792f558e2fc096478c
   translated_at: 2026-09-26T12:48:59Z
+  stamped_at: 2026-09-26T18:35:49Z
   reviewed_by: null
 ---
 

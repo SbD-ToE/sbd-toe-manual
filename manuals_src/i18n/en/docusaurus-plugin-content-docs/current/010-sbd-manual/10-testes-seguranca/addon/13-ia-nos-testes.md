@@ -11,10 +11,11 @@ translation:
   target_sha256: d1deb28809da0cb0bc7f5a3b1dde1f15509b79a57e9fb7bce98c32d61c5c24ef
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
-  glossary_keys: [avaliacao, chapter_role, como_fazer, deterministic, framework_source_corpus, llm, oracle, practitioner_manual, provenance, requirement_runtime, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 9a73274c8621d12fbd1aa97ea004f5d677b3c9dc7e616d495614aacf524cf007
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, como_fazer, deterministic, framework_source_corpus, llm, oracle, practitioner_manual, provenance, requirement_runtime, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 009d6d5841417a1684e2755d8ea8dc52691d4084f7a03600c7c62fdc1b6ca2e4
   translated_at: 2026-09-26T10:31:33Z
+  stamped_at: 2026-09-26T18:35:13Z
   reviewed_by: null
 ---
 

@@ -13,10 +13,11 @@ translation:
   target_sha256: 67fdfa22987483e6328294ef3d7eec7dcd402bb1117d57ae80a03e35e0c50a9f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 40827c67481c741514f39eb6ed8876f9ccff12a7b6db8989b36ec7d8c20b124a
+  glossary_sha256: 0d45a996d228262669518d282b89cd2a1801d4d8026e195131d24d26854aafdb
   translated_at: 2026-09-26T17:23:57Z
+  stamped_at: 2026-09-26T18:32:37Z
   reviewed_by: null
 ---
 

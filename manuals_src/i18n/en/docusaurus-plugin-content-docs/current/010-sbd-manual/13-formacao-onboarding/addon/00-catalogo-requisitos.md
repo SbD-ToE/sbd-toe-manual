@@ -13,10 +13,11 @@ translation:
   target_sha256: 5ae51320c0d54984a2a3024cb414ce4164722181b754b63bf2ce6352c83f36fb
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, papel_suporte, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 7dca685935c380a0e917b803e051dfb144db45665b3a453c3e9809fef0260827
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: e0a2c35ef2ba38a7e24fa5a77ca5b923d3765b684717dcde3ea7cbec8c622e60
   translated_at: 2026-09-26T11:44:15Z
+  stamped_at: 2026-09-26T18:35:51Z
   reviewed_by: null
 ---
 

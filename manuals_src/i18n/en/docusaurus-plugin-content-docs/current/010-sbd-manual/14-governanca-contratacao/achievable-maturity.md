@@ -8,10 +8,11 @@ translation:
   target_sha256: 074157776e9b8083fc4b2aeacb9497916d21b6b4ca73e053b05d0e7e45328230
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
-  glossary_sha256: b53be3c3016c35427636086bb5cfba650674a05b0c5118f4428bb85c6db03944
+  glossary_sha256: 2071f9ebe9dd8c20a023fec0a7eb71e60f97693332419f69c4a89ba4d5910d79
   translated_at: 2026-09-26T13:37:11Z
+  stamped_at: 2026-09-26T18:36:10Z
   reviewed_by: null
 ---
 

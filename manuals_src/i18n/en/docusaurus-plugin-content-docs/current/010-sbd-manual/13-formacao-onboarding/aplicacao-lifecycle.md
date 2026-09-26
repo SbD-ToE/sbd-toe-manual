@@ -12,10 +12,11 @@ translation:
   target_sha256: 496a062239eddf8411d52934fd2f121d81c912a2ccb287797b4f58d54748cff5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verification_taxonomy]
-  glossary_sha256: e309a609173bece757686b33bef78ea82a9a2e15ece9c11941b848892e9c4823
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 96ccc90382d8ea1505027b5e23de3f10c3833065fdf3702a08846e3637b0a810
   translated_at: 2026-09-26T17:23:52Z
+  stamped_at: 2026-09-26T18:36:04Z
   reviewed_by: null
 ---
 

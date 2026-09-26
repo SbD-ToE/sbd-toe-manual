@@ -19,10 +19,11 @@ translation:
   target_sha256: de59f43c1fe12da2730776403853f39af16fad5366f953a3430570b8f12aed33
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, discipline, framework_source_corpus, mcp, normative_empirical, oracle, practitioner_manual, sbdtoe_sbd, slug_threat_modeling, transversal]
-  glossary_sha256: 84fb6866d90c1e8a320d71610fa747e8c1e124d7390bc668883049e09dc5e9d5
+  glossary_sha256: 1e0db2628c6f3bfe0708c3ecf008a86e392d11fdaf30b728c72640e66de252d3
   translated_at: 2026-09-26T14:55:20Z
+  stamped_at: 2026-09-26T18:37:52Z
   reviewed_by: null
 ---
 

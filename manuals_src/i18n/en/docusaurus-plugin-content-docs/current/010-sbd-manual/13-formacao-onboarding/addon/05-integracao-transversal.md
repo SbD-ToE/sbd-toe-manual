@@ -11,10 +11,11 @@ translation:
   target_sha256: d6b74d7c7752de9b1d3c5c4e8e8f029a0cf1139c08092148eaac02087d90a69f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, practitioner_manual, sbdtoe_sbd, transversal, validation_evaluation]
-  glossary_sha256: 8eaf286fd37a6039a9df330d3bfd3a7444b9ad46e7d15ade1fd7269df748d4cc
+  glossary_sha256: bac0543c715418998a7f6db7b68d7e9daa67fe09d197a1e71b935beb2053710f
   translated_at: 2026-09-26T11:44:18Z
+  stamped_at: 2026-09-26T18:35:54Z
   reviewed_by: null
 ---
 

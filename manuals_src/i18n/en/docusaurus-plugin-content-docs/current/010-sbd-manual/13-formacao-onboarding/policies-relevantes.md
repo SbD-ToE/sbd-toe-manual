@@ -9,10 +9,11 @@ translation:
   target_sha256: dc9092e586f4105be5ac0de34f38850ea5d2e57ab9941c1d16007e8b7b195093
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, chapter_role, cycle_iteration, lifecycle_phase, maturity, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 879a15dea47a1b4b980a6388e5b5aa8a0785ec1ab917472816999690530405ea
+  glossary_sha256: a1933e8dd20795774ce2b463050c5f5cdb4ea64a5f615fcf94778b7f8dee04ef
   translated_at: 2026-09-26T11:44:31Z
+  stamped_at: 2026-09-26T18:36:08Z
   reviewed_by: null
 ---
 

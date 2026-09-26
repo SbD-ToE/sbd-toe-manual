@@ -12,10 +12,11 @@ translation:
   target_sha256: 341fefbf620606fd931eb154233f5ae841d36700fb32d650aaf8982df398ac99
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [avaliacao, chapter_role, framework_source_corpus, instrument, layer, mapping, practitioner_manual, threat]
-  glossary_sha256: 7472707dd2211815181befd34f3a68e9b8adf931dc9c5d65e652396e102711d0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, framework_source_corpus, instrument, layer, mapping, papel_suporte, practitioner_manual, slug_threat_modeling, threat]
+  glossary_sha256: a88ae20b313c3760a5d3bd210d1a79e3d1ce60974a6b6aae415c78c3563da897
   translated_at: 2026-09-25T20:17:02Z
+  stamped_at: 2026-09-26T18:33:22Z
   reviewed_by: null
 ---
 

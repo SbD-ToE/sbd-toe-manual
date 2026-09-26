@@ -12,10 +12,11 @@ translation:
   target_sha256: c593d53255da5a71cf273a8fc19e641ec26469be2e4ad05cdbfb90c8a549a232
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
-  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 8e9633b3e860aa79b9f784689bdeb759bb252a5a33af799ccaea48e8690b23c7
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 5df48b5c070762561dfcab4ef20b08f94b388ce9522d0ba473b89144011fa057
   translated_at: 2026-09-26T18:12:04Z
+  stamped_at: 2026-09-26T18:32:21Z
   reviewed_by: null
 ---
 

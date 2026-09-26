@@ -16,10 +16,11 @@ translation:
   target_sha256: 4c66b60eb1db7f75863ad4f295404d9878c3973a277a56fdcbbdd6f7ef30e9c8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, deterministic, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, sbdtoe_sbd, schema, traceability]
-  glossary_sha256: 3872ab6453f9771a21801a6ab600dc3f921e34e9e667e787431939f7de212c9c
+  glossary_sha256: 2795d8b2333bd3be10c0a84aa8fcdcadcfdec3c2b1c8171a67403fc0cbb46c87
   translated_at: 2026-09-26T16:42:02Z
+  stamped_at: 2026-09-26T18:36:36Z
   reviewed_by: null
 ---
 

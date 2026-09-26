@@ -13,10 +13,11 @@ translation:
   target_sha256: 978834965c762c38c0183674157ca16a6bf44a71673c92d608a44c8270b775a0
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, risk_level, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 6370929de8f5e7c319726dda381ef14d622808891aab3abbc1a383da6ef797e4
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 22ff3b5b5d71ad18aa105d9d275a156caffe5cf8e5bae336bb9a65530f5117b6
   translated_at: 2026-09-26T14:11:03Z
+  stamped_at: 2026-09-26T18:37:04Z
   reviewed_by: null
 ---
 

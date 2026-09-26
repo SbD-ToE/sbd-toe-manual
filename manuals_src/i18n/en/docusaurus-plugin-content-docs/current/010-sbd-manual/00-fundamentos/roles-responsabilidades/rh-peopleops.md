@@ -13,10 +13,11 @@ translation:
   target_sha256: f1aa3d1bd2d77d3c665bc480230ed9875fdf96dd68c2db1ed71d36825eff63c9
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [audit_trail, chapter_role, practitioner_manual, role_rh_formacao, role_rh_peopleops, role_rh_recrutamento, sbdtoe_sbd, trilho_formativo, validation_evaluation]
-  glossary_sha256: fff9605ae2c09188088fe27455aae49c3b61cf080279279ca918971acd3a0276
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, dora_ict_risk, practitioner_manual, role_rh_formacao, role_rh_peopleops, role_rh_recrutamento, sbdtoe_sbd, trilho_formativo, validation_evaluation]
+  glossary_sha256: 37dda1941f888484dfcb369739cc1248517800399d9240af881449a5ab0dfb63
   translated_at: 2026-09-26T17:23:58Z
+  stamped_at: 2026-09-26T18:32:40Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: ab7ba1197d2b6a8f25c9256a0b403003574ab8eed71bb1b0afc3450f1325929f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [avaliacao, framework_source_corpus, mapping, maturity, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
-  glossary_sha256: 5d766fae0a1b914d87a96427ef9b3cbb3d3e0f0fc68e07238d6ee81029a26210
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, framework_source_corpus, mapping, maturity, mcp_reading_programa, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
+  glossary_sha256: 2c92163b752775c634a63056ec96fa60207e7acd9504b68d32116da8f73463a7
   translated_at: 2026-09-26T12:48:50Z
+  stamped_at: 2026-09-26T18:35:14Z
   reviewed_by: null
 ---
 

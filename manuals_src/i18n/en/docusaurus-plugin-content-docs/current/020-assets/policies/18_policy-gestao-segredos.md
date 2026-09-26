@@ -13,10 +13,11 @@ translation:
   target_sha256: 63f66cca76689f34f467f4b6e03a05aec9aa8f478e3c4031c105cd0b84624273
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, practitioner_manual, requirement_runtime, sbdtoe_sbd, traceability]
-  glossary_sha256: 8448e7866aff662a20e965ed72d5d9bef0d383c5f63666f3baad71a46eccaaf1
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: 077f37bc925ed0aa91cdef68a608b0b398676281e1f550abaa13dcefb6ad59b5
   translated_at: 2026-09-26T14:10:53Z
+  stamped_at: 2026-09-26T18:36:54Z
   reviewed_by: null
 ---
 

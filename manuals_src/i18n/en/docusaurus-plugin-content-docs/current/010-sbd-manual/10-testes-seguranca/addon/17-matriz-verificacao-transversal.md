@@ -12,10 +12,11 @@ translation:
   target_sha256: 170d35e2fb9a6e548075226e64bb9d5b4472a3e71d8f5274f41b910c6057c31d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
-  glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, oracle, provenance, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 0a83903c5397919a6fc3f3f65e732d2dddd952b96a4cd929f830dd2e3239732d
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, oracle, provenance, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 839c41df5bd01421cb1345fecef361309031b8b15eca90fb1e28d440d01c6a55
   translated_at: 2026-09-26T10:31:35Z
+  stamped_at: 2026-09-26T18:35:16Z
   reviewed_by: null
 ---
 

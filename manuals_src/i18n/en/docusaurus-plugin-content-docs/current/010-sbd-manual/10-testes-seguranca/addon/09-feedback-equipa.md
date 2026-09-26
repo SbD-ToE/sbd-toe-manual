@@ -12,10 +12,11 @@ translation:
   target_sha256: eddf49c709dd65e04ff8623cefd9e2d401236f69ae0fd37c78c9cd4f7849ad5b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, maturity]
-  glossary_sha256: cb3678cf0362a9c66766c626a784d8b9238542bda3d36bdeb7ee7808053c826f
+  glossary_sha256: e359a6ded9090ff45ccb28683b641dd77cf04bf0a414c4427a626b8e56ecab78
   translated_at: 2026-09-26T10:31:30Z
+  stamped_at: 2026-09-26T18:35:09Z
   reviewed_by: null
 ---
 

@@ -11,10 +11,11 @@ translation:
   target_sha256: a7510e2b52fb3320c84591c290e3f86952a581a37c611401c973dc91ea42aad3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, instrument, llm, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 274931c697393230a6977112e9386c2d1b55fce0b67b344f4f53eb029547459f
+  glossary_sha256: f98282a1ba8014d288c86a12a7a44f2075dbdbe1b77036c829eb632a30dbca5b
   translated_at: 2026-09-26T11:44:23Z
+  stamped_at: 2026-09-26T18:36:00Z
   reviewed_by: null
 ---
 

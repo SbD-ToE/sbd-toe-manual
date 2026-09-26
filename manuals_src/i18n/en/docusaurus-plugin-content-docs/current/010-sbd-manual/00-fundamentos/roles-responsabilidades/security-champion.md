@@ -13,10 +13,11 @@ translation:
   target_sha256: 8e6fe3956edcb7ff64d37abb4393b142ab02e3804e4275bc5d46eb9252e0c359
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [capacitacao, chapter_role, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, transversal]
-  glossary_sha256: d02f44f3e8656b91d44c3ef7331d60f32556d1f5577919c9daaf6c541ac62949
+  glossary_sha256: 8b8164c78ee0a92a41d6d9ca373d72cd5d688e3ba2df2ac41bedb8ea52248266
   translated_at: 2026-09-26T17:23:41Z
+  stamped_at: 2026-09-26T18:32:41Z
   reviewed_by: null
 ---
 

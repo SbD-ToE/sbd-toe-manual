@@ -12,10 +12,11 @@ translation:
   target_sha256: 87b3cc1a3872d8ee6e4847a516b989e3aa9453e8b94688f03c4185dd928e19b8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 7b013ae242071785e1dd4c4af9bfaa8930d8b1950f3550f2f0a5795ef08bc04a
+  glossary_sha256: d8789918a65f924184e12a90327b9f510ab0b663ec42996c1b7c31f8af42addc
   translated_at: 2026-09-26T18:11:52Z
+  stamped_at: 2026-09-26T18:32:14Z
   reviewed_by: null
 ---
 

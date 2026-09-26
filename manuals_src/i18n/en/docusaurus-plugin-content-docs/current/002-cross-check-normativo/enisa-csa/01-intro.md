@@ -12,10 +12,11 @@ translation:
   target_sha256: 08e4ce7b3ef8d56bff3d715c603dbfcaaaa91a303d79d52dea97e6e91dd41481
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, cra_pde, csa_assurance_level, esquema_regime, eu_ce_marking, layer, mapping, maturity, practitioner_manual, requirement_runtime, role_procurement, sbdtoe_sbd, schema, traceability]
-  glossary_sha256: 4eab474dfa557378320ff2bfd55d0036110671b546a9def414ac289452bd87d8
+  glossary_sha256: 670a3378789805df880244f77bae860fb716dbb406f0d455a8998b653c25fff2
   translated_at: 2026-09-26T18:11:58Z
+  stamped_at: 2026-09-26T18:32:16Z
   reviewed_by: null
 ---
 

@@ -17,10 +17,11 @@ translation:
   target_sha256: 413a25e1d30f64ca2a6dccd98fad0c3b405534da19be39d1e7412faccd27aabc
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, travessia_generica, travessia_relacao, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 5a324a9b15fed35c662f1f16dd4c9b4f902c3fbe0f880f2a616688f04e701162
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, travessia_generica, travessia_relacao, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b4b5636ca40cc4653ae2480bbc103d3a6a6f5b83bffe3a3decfa1a49e3494a87
   translated_at: 2026-09-26T17:58:48Z
+  stamped_at: 2026-09-26T18:36:33Z
   reviewed_by: null
 ---
 

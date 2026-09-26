@@ -12,10 +12,11 @@ translation:
   target_sha256: 1a55108c4c06538bcbdc0b936253d290a9c692cf8431f588578ac747167ade3e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [maturity, practitioner_manual, validation_evaluation]
-  glossary_sha256: 3956127a2db6f8da73678646769aa190831ada6098b1dfc75c5c2aed08211ef5
+  glossary_sha256: d310e4aa6fd9158c1d01bdab856e20ba99687a746c9dbe4b520b02231e7c313b
   translated_at: 2026-09-26T12:48:57Z
+  stamped_at: 2026-09-26T18:35:42Z
   reviewed_by: null
 ---
 

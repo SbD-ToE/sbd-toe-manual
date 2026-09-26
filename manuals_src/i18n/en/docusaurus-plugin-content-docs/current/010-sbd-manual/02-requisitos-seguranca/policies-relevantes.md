@@ -12,10 +12,11 @@ translation:
   target_sha256: 96183937b3b9ae93ecf3022f513216af36750a2af7a7e0c95f2c6aefb92e2a54
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, mapping, maturity, practitioner_manual, requirement_runtime, traceability, transversal, validation_evaluation]
-  glossary_sha256: caa23711b2c685c3c20ba049a01bdd2279a3a3223ddb7958efeacc9c9611be19
+  glossary_sha256: 4b87249bbd23806914ba5b5867f1a0d6bd79b2fe85cf7d802f556092ccbdebe6
   translated_at: 2026-09-25T20:20:19Z
+  stamped_at: 2026-09-26T18:33:12Z
   reviewed_by: null
 ---
 

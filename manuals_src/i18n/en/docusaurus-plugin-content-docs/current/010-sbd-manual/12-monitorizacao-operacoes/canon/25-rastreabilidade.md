@@ -8,10 +8,11 @@ translation:
   target_sha256: 1adbc4e54cc6a8dc417bf2cf5d2c0c563de716a1b07ca8102cbb40f231bbcde8
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [appsec_core, chapter_role, framework_source_corpus, llm, practitioner_manual, sbdtoe_sbd, slice, traceability, v1_entity_slg_central_ingestion_normalization, v1_entity_slg_centralized_ingestion_accountability, v1_entity_slg_critical_event_catalog_discipline, v1_entity_slg_critical_event_catalog_governance, v1_entity_slg_event_catalog_coverage, v1_entity_slg_structured_centralized_logging, validation_evaluation]
-  glossary_sha256: 9d3d1f77d71f6aee8e15f512459f22d004b89606ddae43692003320739592508
+  glossary_sha256: efa458fee4966e198d5e02e7b084ace4e7bd4b95d64b5c454118f71ce760b479
   translated_at: 2026-09-26T13:37:09Z
+  stamped_at: 2026-09-26T18:35:47Z
   reviewed_by: null
 ---
 

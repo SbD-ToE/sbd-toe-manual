@@ -12,11 +12,12 @@ translation:
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
   target_sha256: 526b46ba2a6385e7fd722eba309b108969893b7c5bd2b186e15f23216b0986e2
   engine: claude-fable-5-1
-  prompt_sha256: 13029ebd6497cb63207d12577bb94bbd3b20a5d9c8d3ebd2e4a450d20a45a251
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [alcada, audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, provenance, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verification_taxonomy]
-  glossary_sha256: c9d864ddbf667d6870459e290b0a96887d8330ab68dbc820d947988bdf2fb318
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, provenance, sbdtoe_sbd, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 9dc1708737d58b37283d9546562bda18eecb85795472f3221d3ff6235b35be3c
   translated_at: 2026-09-25T20:19:55Z
+  stamped_at: 2026-09-26T18:32:29Z
   reviewed_by: null
 ---
 

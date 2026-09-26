@@ -13,10 +13,11 @@ translation:
   target_sha256: 264c91aa2f496767907448ce52c0b06f1b76fddb22da0b3b9e85e3fcf33191ff
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, mapping, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 8854854461a424d75deea3c0c5a6242713d049f90753d09e76194d32aef713b9
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, mapping, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 7402313977f920ab2096c07c547d11d17b370dd3166547ecbb21842daf7e7631
   translated_at: 2026-09-26T14:10:46Z
+  stamped_at: 2026-09-26T18:36:47Z
   reviewed_by: null
 ---
 

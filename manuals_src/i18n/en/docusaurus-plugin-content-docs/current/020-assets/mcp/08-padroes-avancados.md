@@ -16,10 +16,11 @@ translation:
   target_sha256: b054e633dee563b626c1d777eae69919947a5e1f277e4f0f679075b3aa308616
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, deterministic, discipline, lifecycle_phase, mapping, mcp, normative_empirical, practitioner_manual, requirement_runtime]
-  glossary_sha256: b8ec3bd5388ea94ee08aeebe95537f90dcc90e808bac6f263d6681ddcab944df
+  glossary_sha256: b36d5e662b7c0a31cc367797bbaac66a1c0717faa283cdc7e4c77639a4510cdf
   translated_at: 2026-09-26T16:42:05Z
+  stamped_at: 2026-09-26T18:36:41Z
   reviewed_by: null
 ---
 

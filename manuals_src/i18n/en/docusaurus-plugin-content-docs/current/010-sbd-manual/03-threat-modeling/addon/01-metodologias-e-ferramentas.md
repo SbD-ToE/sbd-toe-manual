@@ -11,10 +11,11 @@ translation:
   target_sha256: 2dc51c9be5b2b616f3b9014787c7aaabd86f4e1e7dccadd143c606aef1b570da
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [atlas_defense_evasion, avaliacao, chapter_role, framework_source_corpus, llm, maturity, mcp, microsoft_threat_modeling_tool, owasp_threat_modeling_cheat_sheet, plain_rag, practitioner_manual, threat, traceability, validation_evaluation]
-  glossary_sha256: 369db0e8837e8c94129b471a6e598851f15ba19435be41b8eee9d7965f5a6a87
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [atlas_defense_evasion, avaliacao, chapter_role, eu_ai_training_data, framework_source_corpus, llm, maturity, mcp, microsoft_threat_modeling_tool, owasp_threat_modeling_cheat_sheet, plain_rag, practitioner_manual, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: 396bd172c31ec160bc4b803ed4a776cd8ab5f9837eee69897f1cf1ee0b8c58be
   translated_at: 2026-09-25T20:17:26Z
+  stamped_at: 2026-09-26T18:33:16Z
   reviewed_by: null
 ---
 

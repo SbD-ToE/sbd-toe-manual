@@ -10,10 +10,11 @@ translation:
   target_sha256: 0538c61627ba420e4d1a236ceb07482f20a48138d9f3a3c9efab428b9eb631fb
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, risk_level, threat, traceability, validation_evaluation]
-  glossary_sha256: 04e846cb464307cd5096991380a0e7a253ab9c5d970792a1a8ede7c1d8597f6c
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, risk_level, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: 8e3f26441eb9aa27b7a316969b13da92c28adea94a3116b4ab43dfd5d09f725a
   translated_at: 2026-09-25T20:17:07Z
+  stamped_at: 2026-09-26T18:33:29Z
   reviewed_by: null
 ---
 

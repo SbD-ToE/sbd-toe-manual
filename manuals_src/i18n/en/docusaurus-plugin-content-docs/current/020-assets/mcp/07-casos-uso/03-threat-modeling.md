@@ -17,10 +17,11 @@ translation:
   target_sha256: 4e68da539ed643eff51d1cd8e491adcc4aad253ca1d39dba037172e08c010632
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, discipline, mcp, practitioner_manual, threat, validation_evaluation]
-  glossary_sha256: 9295ee4b6fd79121b8c65819b7ad448c6bf8cd7abab799066587082d7b652a05
+  glossary_sha256: a38d9f77bb47dbfc947c5404995fc1836a9160dd9738ec2eec0a3f5d3b8baed5
   translated_at: 2026-09-26T16:42:03Z
+  stamped_at: 2026-09-26T18:36:38Z
   reviewed_by: null
 ---
 

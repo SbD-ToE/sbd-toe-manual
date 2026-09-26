@@ -8,10 +8,11 @@ translation:
   target_sha256: 1292d8e06a75f08fbe5e37c3f92a641b92cf9efa4902ba6c47c45499c4641470
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, mcp, practitioner_manual, sbdtoe_sbd, slice, slug_threat_modeling, traceability, v1_entity_atb_dfd_modeling, v1_entity_iat_authorization_policy, v1_entity_iat_least_privilege_authorization, v1_entity_its_authorized_peer_policies, v1_entity_its_authorized_peer_validation, validation_evaluation]
-  glossary_sha256: 7825a4c17bfb909ab7d3ce5dd01c502a94b97e8d51e6dddd88bae0c831b58bae
+  glossary_sha256: 33bfe7a872b606c3cc95a3cb487df1b0a37a78bd7a9b9791bf1fb0331d99e834
   translated_at: 2026-09-26T13:36:58Z
+  stamped_at: 2026-09-26T18:33:40Z
   reviewed_by: null
 ---
 

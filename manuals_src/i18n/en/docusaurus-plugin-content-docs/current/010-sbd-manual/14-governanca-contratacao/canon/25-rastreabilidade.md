@@ -8,10 +8,11 @@ translation:
   target_sha256: 28997424a2fc52d898aea34c0fd7b2369e6ffa41867a200be115e996d8f5fcc2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [alcada, appsec_core, avaliacao, chapter_role, cycle_iteration, maturity, practitioner_manual, risk_level, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation]
-  glossary_sha256: b2bdf0bd2dcf1849ee48321b749c0508f0bc7bc577a7f4935dc4f29a1d99a10b
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, appsec_core, avaliacao, chapter_role, cycle_iteration, maturity, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: a3540b0e268b7c60fa1a4e8631ebebb16561f01b5981b2f014d1fd6d35ed7762
   translated_at: 2026-09-26T13:37:12Z
+  stamped_at: 2026-09-26T18:36:24Z
   reviewed_by: null
 ---
 

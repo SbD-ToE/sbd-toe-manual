@@ -11,10 +11,11 @@ translation:
   target_sha256: 329c7938e9d2bcee896e58a1bd5eb09c552b6936f7c8759321705773ef82601a
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, eu_ai_human_oversight, eu_ai_system, framework_source_corpus, layer, normative_empirical, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 61da72ed4f59b7fb913a75e6a2c402e8c6d1088e5da8c27224a205bade0d2e60
+  glossary_sha256: af5265cd3e841ca525b0af6dbc39411e63b17e0e4ec606bea0edd666e7766b71
   translated_at: 2026-09-26T17:45:15Z
+  stamped_at: 2026-09-26T18:33:04Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: c493fd21de995892808a48e67e5a27922ac572f6e612846541477db369c66b98
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, gap_family, layer, mapping, maturity, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 56b389efb6c662a9afc5acb3cf4e54a5390a6c47d0073df97ed569c7c649c7a4
+  glossary_sha256: c808b55b3b60d0d143b7c1e5aa2d08fae6e16187f9811c418362f27a9b391516
   translated_at: 2026-09-26T12:48:41Z
+  stamped_at: 2026-09-26T18:33:07Z
   reviewed_by: null
 ---
 

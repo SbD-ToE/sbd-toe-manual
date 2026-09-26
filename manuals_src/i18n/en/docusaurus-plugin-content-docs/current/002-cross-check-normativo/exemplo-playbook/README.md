@@ -11,10 +11,11 @@ translation:
   target_sha256: e97528d4d29b56dbb432448914d5c6dcc887a6287078e0c0a9e7f49d2f8640dc
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, framework_source_corpus, lifecycle_phase, maturity, normative_empirical, practitioner_manual, role_juridico, sbdtoe_sbd, traceability]
-  glossary_sha256: 0115c2bc69942c77b680fe4bf247b646c5a739d72e157ee62ac6eb9365c4a94e
+  glossary_sha256: 9053b641651a969706a59eb8e62170db5c2fc63079d736cd8d2e403901801db5
   translated_at: 2026-09-26T18:12:02Z
+  stamped_at: 2026-09-26T18:32:19Z
   reviewed_by: null
 ---
 

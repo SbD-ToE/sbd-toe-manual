@@ -11,10 +11,11 @@ translation:
   target_sha256: 37db3f883222001722d4078e2acb2ea3caac31ccf7f6d7f3931869a54e696e57
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 33b2b119c82785f371d2921f7942ed32816594c156aaef9f00e8ad96677fc819
+  glossary_sha256: 8f820b66eb2dbb337220a7ce2bca1caf2cae8800a17edd10978069b3e2e0ab1d
   translated_at: 2026-09-26T10:39:34Z
+  stamped_at: 2026-09-26T18:32:58Z
   reviewed_by: null
 ---
 

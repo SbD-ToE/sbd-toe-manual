@@ -13,10 +13,11 @@ translation:
   target_sha256: c9987075f5743283f244de979412ea57f3b6b2945b2e7d88725ebbfbe8f69bd0
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, discipline, provenance, sbdtoe_sbd, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 238cd4b2d62f02a2b2fafd60bfda33d3139f30a6736a66d286fb0f3ee1e2af35
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, discipline, provenance, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 1242300918c450ee45119d249cdb72a718ed02c0fb103efc0f0427408fc75e6a
   translated_at: 2026-09-26T14:10:51Z
+  stamped_at: 2026-09-26T18:36:52Z
   reviewed_by: null
 ---
 

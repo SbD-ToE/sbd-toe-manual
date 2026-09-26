@@ -11,10 +11,11 @@ translation:
   target_sha256: 6119fa1dc6ca4c1f0df6346532a9c2b0c4e43a8da68d8b67caec0bc47743c646
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase]
-  glossary_sha256: 6831e8f6b3201711af20558f305b3d3ae28178bc06c1099b9276e33615b1dbd1
+  glossary_sha256: 540a567690bfaae3ed63f8daa0b0c330aa13d74eb75447cdd7313723f8fa76c2
   translated_at: 2026-09-26T12:48:46Z
+  stamped_at: 2026-09-26T18:34:48Z
   reviewed_by: null
 ---
 

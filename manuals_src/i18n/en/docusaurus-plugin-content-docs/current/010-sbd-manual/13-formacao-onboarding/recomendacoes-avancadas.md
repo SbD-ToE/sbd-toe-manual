@@ -12,10 +12,11 @@ translation:
   target_sha256: 36b2160a76cbde0a3cec0ed06d5c98efee0f500f350fc46c3fbac56b1b691ac6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, maturity, practitioner_manual, sbdtoe_sbd, trilho_formativo, validation_evaluation]
-  glossary_sha256: 99143e7907217564a528bb86a6d04e294a023daf08c1bf48eb2a277f29a4bdbd
+  glossary_sha256: a9681689fa7f251654cb14413df9de5ca283eb1645fd4c45f5c446990090ae77
   translated_at: 2026-09-26T11:44:31Z
+  stamped_at: 2026-09-26T18:36:09Z
   reviewed_by: null
 ---
 

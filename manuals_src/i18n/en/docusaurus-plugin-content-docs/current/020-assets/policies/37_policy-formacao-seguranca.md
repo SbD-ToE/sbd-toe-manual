@@ -13,10 +13,11 @@ translation:
   target_sha256: 531bca4acc30461cbd960e92779630263baa9e810306cfdf55b3450485226735
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [avaliacao, capacitacao, chapter_role, framework_source_corpus, gap_family, llm, maturity, papel_suporte, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: f9063cfd964288b97f046de9a8eed3d1b9bff5d3ce20479300d73b4fcd603df2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, capacitacao, chapter_role, framework_source_corpus, gap_family, llm, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: 6e53f6d4a50c57cb34d3c03f1edf2f42f065e601c553b88784126070c79929a8
   translated_at: 2026-09-26T14:11:06Z
+  stamped_at: 2026-09-26T18:37:07Z
   reviewed_by: null
 ---
 

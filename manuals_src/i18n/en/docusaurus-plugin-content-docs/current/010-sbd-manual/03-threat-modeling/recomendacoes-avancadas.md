@@ -12,10 +12,11 @@ translation:
   target_sha256: 4d7b92df4c7cbc85bb804b44a4da1f544ed281d707fbf090b0b781aac235e27b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [audit_trail, basilar, chapter_role, discipline, framework_source_corpus, maturity, threat, traceability]
-  glossary_sha256: e0e391756cc0eca40a3fbab1b529ebde070284b1263705ff2783342f75fe3b92
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, basilar, chapter_role, discipline, framework_source_corpus, maturity, segregacao_de_funcoes, threat, traceability]
+  glossary_sha256: 33107224395756424a324b1feda5d49bb1f92dfdc9ac4766dafdb4eedeb81d32
   translated_at: 2026-09-25T20:17:08Z
+  stamped_at: 2026-09-26T18:33:29Z
   reviewed_by: null
 ---
 

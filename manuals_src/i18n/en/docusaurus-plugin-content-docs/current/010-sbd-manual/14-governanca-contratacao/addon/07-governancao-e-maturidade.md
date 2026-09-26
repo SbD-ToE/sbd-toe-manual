@@ -12,10 +12,11 @@ translation:
   target_sha256: 6340f15a6914b6ab37b39e0d06356a4c0f96ebb991e6cda3a5d4c19a4132d5cb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [chapter_role, cycle_iteration, maturity, programme_line, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 1ffc4e3f476d97f0bf3c1e33dc7fea9df561b97f76f463442c09871ac66b65d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, cycle_iteration, maturity, mcp_reading_programa, programme_line, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: 5d3ba1dcb9c2dc4b856627552ab31047eec8be818eb4252f7f9c5fa3b2128d0e
   translated_at: 2026-09-26T12:49:07Z
+  stamped_at: 2026-09-26T18:36:16Z
   reviewed_by: null
 ---
 

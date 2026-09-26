@@ -11,10 +11,11 @@ translation:
   target_sha256: 092bdef9e45d29fa76f7d7c0c3291ee2c70a77032939fa2f90255b7bd5f08631
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, risk_level, sbdtoe_sbd, trilho_formativo, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 78979ab925a0e39b93c827745073eae9de56e29014c603540f8b09ee3300b631
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, risk_level, role_procurement, role_tech_lead, sbdtoe_sbd, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 7b04fcf0f6adef64092b748ec217b0823f7f85c0ce7df0fcfcd452465a180302
   translated_at: 2026-09-26T11:44:16Z
+  stamped_at: 2026-09-26T18:35:52Z
   reviewed_by: null
 ---
 

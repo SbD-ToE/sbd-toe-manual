@@ -12,10 +12,11 @@ translation:
   target_sha256: c869c88a98eeb0b7ecefca035e997c10b650004441ff9aa2bde54873afef4b78
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
-  glossary_keys: [basilar, chapter_role, cycle_iteration, lifecycle_phase, plain_rag, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 5eeaa0fe83fe469eca9743cf2cefe74226720d46d7aaf1fd16f91237b95aa76e
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [basilar, chapter_role, cycle_iteration, lifecycle_phase, papel_suporte, plain_rag, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: 3a83e68a45e7b5fe9241f1c1622050557d5c485d8660abca9ab35709e5b2a87f
   translated_at: 2026-09-26T08:32:11Z
+  stamped_at: 2026-09-26T18:33:41Z
   reviewed_by: null
 ---
 

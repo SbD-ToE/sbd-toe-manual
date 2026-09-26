@@ -13,10 +13,11 @@ translation:
   target_sha256: 0f51d1585e0a09e45354e053b55c43f2af3c07c54ea2d8b3bebd14bf478087be
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, eu_ai_human_oversight, eu_ai_system, framework_source_corpus, github_copilot_trust_center, llm, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: e3fe5becf62da95fa8a0c61cd286c4d16b72119d9f76b9de283368cab2981e0f
+  glossary_sha256: 4d0e2a61968979ad6778d12948f913618eb13e4c9888c6b8003555932afa1c39
   translated_at: 2026-09-26T17:45:14Z
+  stamped_at: 2026-09-26T18:36:53Z
   reviewed_by: null
 ---
 

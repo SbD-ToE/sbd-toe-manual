@@ -12,10 +12,11 @@ translation:
   target_sha256: 4fc8fdd6c38d93be7b232959309312ae052234bf605ae9e23af88f73af993c4a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
-  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verification_taxonomy]
-  glossary_sha256: c99b7aa1a178687c6dcd8d896488327431d69728b208918bf0610eab7bc29995
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
+  glossary_sha256: a6178f1c42e12c81fdf29c49af5d874040d9171b85dc82ae818e747f245fc0d9
   translated_at: 2026-09-26T18:11:54Z
+  stamped_at: 2026-09-26T18:32:15Z
   reviewed_by: null
 ---
 

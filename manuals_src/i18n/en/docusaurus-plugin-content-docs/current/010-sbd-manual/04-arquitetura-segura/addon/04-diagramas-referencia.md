@@ -11,10 +11,11 @@ translation:
   target_sha256: 95c5903bd6175420d5776f5e1479ee72764ee18376fad193bee6c898696f67d2
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, risk_level, traceability, validation_evaluation]
-  glossary_sha256: 9e8d22c7194b682031fab6c0caa59a12fe9bdc91f0ef56df523e59973e5128d8
+  glossary_sha256: bf1167c6ea7a7473584504ac16943df52d7b2e8a850b0af01b2f398f5d5d0438
   translated_at: 2026-09-26T08:32:04Z
+  stamped_at: 2026-09-26T18:33:33Z
   reviewed_by: null
 ---
 

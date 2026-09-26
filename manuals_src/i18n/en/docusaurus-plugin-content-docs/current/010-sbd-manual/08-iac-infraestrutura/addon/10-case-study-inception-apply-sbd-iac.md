@@ -12,10 +12,11 @@ translation:
   target_sha256: fdfbb07dae8ace1a7ee0b20a91e10689f0eaedbe4277ea3ec56bd67330298e26
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
-  glossary_keys: [capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation]
-  glossary_sha256: 6eee1cc989513c2df86c86318f421d3f0dee5baf66a3eb34e48cb0de2fddec1d
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mcp_reading_programa, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation]
+  glossary_sha256: 513b30381f481a91c0922f722d5e0006cb125329fd8511c706fcb8452156d0dc
   translated_at: 2026-09-26T09:25:39Z
+  stamped_at: 2026-09-26T18:34:38Z
   reviewed_by: null
 ---
 

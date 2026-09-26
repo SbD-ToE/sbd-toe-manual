@@ -12,10 +12,11 @@ translation:
   target_sha256: 7e6d99548714dbbda1c68f05fecdadc87f948a19dcc23caf13cc6ad535b577e1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, maturity, practitioner_manual, provenance, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: f13e072f88220204c7a0b191279b47c1bb8e274f78a7b0c8a62c66536805e3b2
+  glossary_sha256: c5cffdaf18682625638385d3dde397a2b0d2e4ff5098327a7caa014c2621cf7c
   translated_at: 2026-09-26T09:09:18Z
+  stamped_at: 2026-09-26T18:34:24Z
   reviewed_by: null
 ---
 

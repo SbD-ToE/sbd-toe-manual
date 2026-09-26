@@ -12,10 +12,11 @@ translation:
   target_sha256: 96f4c5b7e02737a349bd868cf7b01b53e40c124e1cf665b7354c6b20efddc8cf
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [chapter_role, cycle_iteration, layer, lifecycle_phase, papel_suporte, programme_line, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 0b086c20e2c33174a1e9c5b7cc0c99ec8f27dee186e5f6ac7d5a45168e11a662
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, cycle_iteration, layer, lifecycle_phase, mcp_reading_programa, papel_suporte, programme_line, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 1b8016914a449e110869812ad2b5b64e95d4c15c3d48180cea8549e5c37798d4
   translated_at: 2026-09-26T12:00:28Z
+  stamped_at: 2026-09-26T18:36:30Z
   reviewed_by: null
 ---
 

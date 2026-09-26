@@ -13,10 +13,11 @@ translation:
   target_sha256: c1241cc5e0c7d20d4c18f8f9ca5652393881388114dff9b5b40ac4bc244332d7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 71f725a98d1da43270701bea9bc6da337be884d348b2a3321bfbacce9b8c2760
+  glossary_sha256: 2190616af45c704d0bdde9b6b05175705cda4e10018fb8b2c46ae504cde9f3e4
   translated_at: 2026-09-26T14:10:42Z
+  stamped_at: 2026-09-26T18:36:43Z
   reviewed_by: null
 ---
 

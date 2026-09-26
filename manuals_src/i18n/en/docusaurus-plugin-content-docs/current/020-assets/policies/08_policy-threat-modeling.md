@@ -13,10 +13,11 @@ translation:
   target_sha256: 9d59c8bbc101f588d6334c9379cd77f55188121cbcbdf994df38b50bfaf4c492
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, nist_sp_800_154_title, owasp_threat_modeling_cheat_sheet, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability]
-  glossary_sha256: 10f6a058d71b15fb63b52c1c09322e4fde34bf83748f087b58ee1466246f5850
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, nist_sp_800_154_title, owasp_threat_modeling_cheat_sheet, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability]
+  glossary_sha256: 0ed186f3703cb74264ad6c652f0dbf6244477db2bc9c60212228da1676bd5da3
   translated_at: 2026-09-26T14:10:46Z
+  stamped_at: 2026-09-26T18:36:48Z
   reviewed_by: null
 ---
 

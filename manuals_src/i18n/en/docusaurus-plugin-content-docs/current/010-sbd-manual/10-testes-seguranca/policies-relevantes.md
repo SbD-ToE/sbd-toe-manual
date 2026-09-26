@@ -12,10 +12,11 @@ translation:
   target_sha256: 39e0c2433ccac74c3d257a2101943be4b5955496b85e778ed71594a5e5116561
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, maturity, practitioner_manual, traceability, validation_evaluation]
-  glossary_sha256: ddf85f927c43aa6ec782c402dfcb880dfb5c34e6cbb1adafd6d5594817754d58
+  glossary_sha256: 8848f1828c56b0d4511ed27e9a8b9e346d3aafde7b9d366d88933826ae528972
   translated_at: 2026-09-26T10:31:39Z
+  stamped_at: 2026-09-26T18:35:20Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: a0bc0db2ffa1f1f64413097494190789494301f8192a875b45cf1c1e5ff5e011
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [mapping, maturity, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: f5112ab9627c106cdb9dcddcf53a8842e55eb05c465627801bb72cbda92353f8
+  glossary_sha256: 0a7b9e978aeefac6f56427ce97f72e2d922241729c8649f00dd1cf2e887e6476
   translated_at: 2026-09-25T20:22:04Z
+  stamped_at: 2026-09-26T18:33:14Z
   reviewed_by: null
 ---
 

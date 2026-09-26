@@ -13,10 +13,11 @@ translation:
   target_sha256: 9667b444f00198d922c9709e3291570bcf14a674fe96fee9a87d3fbca6e74a1e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
-  glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, esquema_regime, eu_ai_training_data, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, mcp_reading_programa, oracle, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, schema, slug_threat_modeling, threat, traceability, transversal, travessia_relacao, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 72218acb5e6166a52b69db85468975e2b57fd4b4cfc1a9cb29ffeb40b499392f
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, esquema_regime, eu_ai_training_data, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, mcp_reading_programa, oracle, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, schema, slug_threat_modeling, threat, traceability, transversal, travessia_relacao, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: f170aa9185d54dbe6f0e30426beaa60241d5132ee314f06b6fe843d414fd03fc
   translated_at: 2026-09-26T17:58:10Z
+  stamped_at: 2026-09-26T18:32:27Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: ba9b675eabdd5ba33cfa6f43686987227c644351e28b341b7157d52d0a772094
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [cycle_iteration, maturity, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 1a7fffcdce67327ca58ee33e563f141d3260834853c72183c388a0d84f006527
+  glossary_sha256: 6dd9db856b0e29a2fdf7f28064521de7fcea738f04c6692f6ecf0f5737c392df
   translated_at: 2026-09-26T12:00:17Z
+  stamped_at: 2026-09-26T18:36:17Z
   reviewed_by: null
 ---
 

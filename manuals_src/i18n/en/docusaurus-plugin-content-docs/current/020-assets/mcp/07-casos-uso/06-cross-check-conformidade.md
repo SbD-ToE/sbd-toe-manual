@@ -21,10 +21,11 @@ translation:
   target_sha256: 4396b111e5b62ffa3ab2d5e5afd1a7f81bcb48c6aae42517915ab4f0d533e2a0
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, framework_source_corpus, mcp, normative_empirical, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd]
-  glossary_sha256: 622216276adbf0b2ef143e612e4d864867c0730c8dccb09c1e087be18d5e9584
+  glossary_sha256: bddc0c41e9dac1412688775062a8a141f3172882908bc853d4b82fcce14ab445
   translated_at: 2026-09-26T14:55:20Z
+  stamped_at: 2026-09-26T18:36:40Z
   reviewed_by: null
 ---
 

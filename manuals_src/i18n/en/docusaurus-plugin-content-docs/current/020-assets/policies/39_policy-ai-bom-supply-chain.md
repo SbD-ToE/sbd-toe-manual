@@ -13,10 +13,11 @@ translation:
   target_sha256: 51f7e692cf1df9d59257adcef1eb4af9bf41e247c46e0dde0fb53f6217e307a0
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, esquema_regime, lifecycle_phase, llm, mcp, plain_rag, requirement_runtime, risk_level, sbdtoe_sbd, schema]
-  glossary_sha256: 04a987faa1b36b197cb5d9bbdba8a92da7d8e12cbeb08e1d640eb67bbb4b7c02
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, esquema_regime, lifecycle_phase, llm, mcp, plain_rag, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
+  glossary_sha256: cad4500ccbe26507a16255679a4895fa9545c3fd3b574d9728dde34adf3fd492
   translated_at: 2026-09-26T14:11:07Z
+  stamped_at: 2026-09-26T18:37:09Z
   reviewed_by: null
 ---
 

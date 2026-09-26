@@ -12,10 +12,11 @@ translation:
   target_sha256: 86d5c70e1f804cfbdd583199f5e840f98374bc36bc5f8ab3ddb8a94e3fca5e86
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [avaliacao, framework_source_corpus, mapping, programme_line, risk_level, sbdtoe_sbd, transversal]
-  glossary_sha256: 7fa1706bae89b4f04efce3a4ca990c40fa761784e8179dd89dbf7713bdd3de0c
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, eu_critical_infrastructure, framework_source_corpus, mapping, mcp_reading_programa, programme_line, risk_level, sbdtoe_sbd, transversal]
+  glossary_sha256: d117fa22fc6819fd793de55dfaba68f15adf03daf012ca96b6a4a7b67d4913d1
   translated_at: 2026-09-26T12:48:58Z
+  stamped_at: 2026-09-26T18:35:44Z
   reviewed_by: null
 ---
 

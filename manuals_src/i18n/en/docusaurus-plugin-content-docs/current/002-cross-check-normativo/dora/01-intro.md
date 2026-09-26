@@ -12,10 +12,11 @@ translation:
   target_sha256: 8af13523ba1c6ee07f55486f4ca33e7fd5297122fcce4ecb1057ba4b7987d119
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
-  glossary_sha256: 72798e51c5d3462fe72ce1b41c5794884546ef3f9e517dec5585541425ed8204
+  glossary_sha256: 8c99c3d7bcd12b9dcf52bbf4feb885ac792f90db8ccf2167c9002c0e3e3deefb
   translated_at: 2026-09-26T18:11:56Z
+  stamped_at: 2026-09-26T18:32:15Z
   reviewed_by: null
 ---
 

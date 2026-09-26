@@ -8,10 +8,11 @@ translation:
   target_sha256: 0763e57df8911a6512fe11ba7d84a24dfe42d25a92b5fe11b5f84e308b34afb8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [appsec_core, avaliacao, chapter_role, practitioner_manual, sbdtoe_sbd, threat, validation_evaluation]
-  glossary_sha256: 11b8aee46be47b15de2b0cf58999afa5c34de8d8a2fc7086f4a31fe81552f5c3
+  glossary_sha256: c487565c696eabfb834c4daa58b31f1062a0a61c385208bfc0a48c985ffd8c07
   translated_at: 2026-09-26T12:00:23Z
+  stamped_at: 2026-09-26T18:36:25Z
   reviewed_by: null
 ---
 

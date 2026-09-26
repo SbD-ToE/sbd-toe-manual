@@ -12,10 +12,11 @@ translation:
   target_sha256: 563123751d748f220fa1a9162b2f805e86cb886dfe64afed1b87f6e7cdcf150b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, discipline, dnt_fedramp_name, dnt_soc2_name, dora_financial_entity, dora_ict_risk, esquema_regime, framework_source_corpus, instrument, lifecycle_phase, maturity, normative_empirical, papel_suporte, practitioner_manual, prescriptive, sbdtoe_sbd, schema]
-  glossary_sha256: 559597941762b85a55615caeb9632acdf8633166bcf0018a4b12186338c9a9ca
+  glossary_sha256: ca16ac4499d6410a729e35747dfbfb136994ee2785cc8fb357306b8ace277110
   translated_at: 2026-09-26T18:11:51Z
+  stamped_at: 2026-09-26T18:30:47Z
   reviewed_by: null
 ---
 

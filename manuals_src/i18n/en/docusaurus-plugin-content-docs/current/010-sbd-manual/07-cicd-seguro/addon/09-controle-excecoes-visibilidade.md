@@ -12,10 +12,11 @@ translation:
   target_sha256: e0478ce4a6f4a000c0f3f7baf9e524ea13ff41808370491150ac7218c0800f18
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, cycle_iteration, maturity, validation_evaluation]
-  glossary_sha256: 3e1d39dde67352d988874b2087722ceb5725939c31234719bd7a7842081642a8
+  glossary_sha256: 0d2035d37ce2d8b2b77f6785af938c081aa0d7dbc56efc89f588dace95e27018
   translated_at: 2026-09-26T09:09:17Z
+  stamped_at: 2026-09-26T18:34:22Z
   reviewed_by: null
 ---
 

@@ -13,10 +13,11 @@ translation:
   target_sha256: f56fed52052af8896433df8fe32527a99942fde223b4c72038e5afeb645ea8a4
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, framework_source_corpus, papel_suporte, practitioner_manual, role_juridico, role_procurement, role_rh_peopleops, role_secops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: e99f765f41fc8635878c41542c13570a2e36df27a4b7d146a33052ddefcad471
+  glossary_sha256: 13bc3be243dfb68bc21123a791bad438f95c8d2f732e0b3998d23e9c237efb20
   translated_at: 2026-09-26T17:44:45Z
+  stamped_at: 2026-09-26T18:32:35Z
   reviewed_by: null
 ---
 

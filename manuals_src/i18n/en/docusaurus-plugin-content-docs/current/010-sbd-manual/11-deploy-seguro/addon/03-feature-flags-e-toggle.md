@@ -11,10 +11,11 @@ translation:
   target_sha256: fc9f192a9a4564a66b69f185604e5d8523b1e970c6ec46f48dc843dc0f508c2c
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, discipline, traceability, validation_evaluation]
-  glossary_sha256: 0a30aeeb87d1b002c02db03bf1e31b35173038dd2c086f163f002cacd5808775
+  glossary_sha256: 4c352f0352ff64aa4eca008d4f8409f9204dc6d5bb1b886ce0b6c2d80e8843e9
   translated_at: 2026-09-26T11:00:48Z
+  stamped_at: 2026-09-26T18:35:25Z
   reviewed_by: null
 ---
 

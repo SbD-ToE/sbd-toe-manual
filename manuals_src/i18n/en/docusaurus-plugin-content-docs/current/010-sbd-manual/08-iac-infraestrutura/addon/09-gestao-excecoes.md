@@ -12,10 +12,11 @@ translation:
   target_sha256: 9e5d126fbdfd2f9379b2581dba9bc6a481b018a9e48a5997bd585e080c09f06e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, avaliacao, requirement_runtime, validation_evaluation]
-  glossary_sha256: 67091f71e27e85835e96d582511fe43a6602640a11fa4479a0d6d8911b617f1b
+  glossary_sha256: dec8bb79c71ff15b9a2e45d808b8da1065a731747fa627111386731b6ac848d8
   translated_at: 2026-09-26T09:25:38Z
+  stamped_at: 2026-09-26T18:34:37Z
   reviewed_by: null
 ---
 

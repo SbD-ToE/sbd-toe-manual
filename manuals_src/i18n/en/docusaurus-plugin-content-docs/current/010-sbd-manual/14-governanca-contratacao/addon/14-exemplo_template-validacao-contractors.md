@@ -11,10 +11,11 @@ translation:
   target_sha256: 8bb878e193daaa86b189118e888e11edaf74b0eb5dd296d3d7be5e07d63789b2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [avaliacao, chapter_role, papel_suporte, validation_evaluation, verification_taxonomy]
-  glossary_sha256: e9d334ff651462e9246ad2c87aa8947270246576a996e79f8c02c7d1cfd74a87
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, papel_suporte, role_procurement, role_tech_lead, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: e1004a44534609d71c0d79b49f8667db265dee048efc1b57565ada71054115fb
   translated_at: 2026-09-26T12:00:20Z
+  stamped_at: 2026-09-26T18:36:21Z
   reviewed_by: null
 ---
 

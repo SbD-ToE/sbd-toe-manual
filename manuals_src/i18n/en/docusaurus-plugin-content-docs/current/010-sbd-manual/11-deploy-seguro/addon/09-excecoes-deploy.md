@@ -12,10 +12,11 @@ translation:
   target_sha256: cac52c2a0d852a0a517f1e89722909ff24a4057de5c1895fd934edd04a6d4977
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, provenance, validation_evaluation]
-  glossary_sha256: 706f29934f8dd95ae4cbf35015548fd6869a7662d89c2b2b88c6da069fac2100
+  glossary_sha256: eb5d40cea34081fe65eca08010d3048ec0704af947e3e5f070d727bc0061cf5e
   translated_at: 2026-09-26T11:00:52Z
+  stamped_at: 2026-09-26T18:35:30Z
   reviewed_by: null
 ---
 

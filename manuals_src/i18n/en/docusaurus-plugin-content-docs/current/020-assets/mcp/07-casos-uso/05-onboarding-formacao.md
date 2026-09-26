@@ -18,10 +18,11 @@ translation:
   target_sha256: 5721366cea116e24693ce43da82fceb80ff9f60cdacf346336e1702865bde960
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, discipline, lifecycle_phase, mcp, papel_suporte, practitioner_manual]
-  glossary_sha256: e6538a5806702b1cfc932e8052a8d6c9d5838af0257cd2f7e8b3728e675e32af
+  glossary_sha256: 28c3e93ae4d5394f3b4776f1395f8b2598f3d639e9edc8505f7756d1e4c8ae82
   translated_at: 2026-09-26T14:55:19Z
+  stamped_at: 2026-09-26T18:36:39Z
   reviewed_by: null
 ---
 

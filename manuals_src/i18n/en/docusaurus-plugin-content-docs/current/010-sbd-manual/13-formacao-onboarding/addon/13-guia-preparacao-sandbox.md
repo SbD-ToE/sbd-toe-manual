@@ -11,10 +11,11 @@ translation:
   target_sha256: 27e75b2e3d7e7433bb005f6d118dd54939cfcb37d08ee107b46b6026eac5e33f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [cycle_iteration, lifecycle_phase, practitioner_manual, threat, validation_evaluation]
-  glossary_sha256: 8fba7ac055f3b4c39649388b614e2c063a0b53cc425a8b5761a9033f17273d99
+  glossary_sha256: 6014d7b847404cbf1617297bddbc97ef01b3b72d355846ab682041beda1e42a4
   translated_at: 2026-09-26T12:56:00Z
+  stamped_at: 2026-09-26T18:36:01Z
   reviewed_by: null
 ---
 

@@ -12,10 +12,11 @@ translation:
   target_sha256: cb758983d634067eaf59bf5922ea0b798d47b2a3983aa633f15499a50aa33e55
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 8d1537cb3830101f261667640f3ab1b3c13a0b8f8a25bae438b95d1e40673d63
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, requirement_runtime, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 3fdb95b7a5dbd4270ce24b0264e6fb47c70feee7cc76c4b9e0ed280054e10cf6
   translated_at: 2026-09-26T12:49:04Z
+  stamped_at: 2026-09-26T18:36:12Z
   reviewed_by: null
 ---
 

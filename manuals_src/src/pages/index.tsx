@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Translate, {translate} from '@docusaurus/Translate';
 import styles from './index.module.css';
 
 // URL central para o Capítulo 00 / Theory of Everything
@@ -23,8 +24,9 @@ function HomepageHeader() {
             className={styles.heroTagline}
             role="doc-subtitle"
           >
-            Um modelo unificado para pensar, desenhar e operar segurança em
-            desenvolvimento de software.
+            <Translate id="homepage.hero.tagline">
+              Um modelo unificado para pensar, desenhar e operar segurança em desenvolvimento de software.
+            </Translate>
           </p>
           <p
             className="hero__subtitle"
@@ -34,9 +36,9 @@ function HomepageHeader() {
               color: 'var(--ifm-color-emphasis-700)',
             }}
           >
-            O SbD–ToE liga regulamentos europeus, normas técnicas, frameworks de
-            maturidade, ameaças reais e engenharia de software num manual
-            prescritivo, reutilizável e proporcional ao risco.
+            <Translate id="homepage.hero.subtitle">
+              O SbD–ToE liga regulamentos europeus, normas técnicas, frameworks de maturidade, ameaças reais e engenharia de software num manual prescritivo, reutilizável e proporcional ao risco.
+            </Translate>
           </p>
 
         </div>
@@ -68,7 +70,7 @@ function ToeDiagram() {
       <svg
         viewBox="0 -20 1407 744"
         role="img"
-        aria-label="Diagrama conceptual da Theory of Everything"
+        aria-label={translate({id: 'toe.chart.ariaLabel', message: 'Diagrama conceptual da Theory of Everything'})}
         className={styles.diagramSvg}
         preserveAspectRatio="xMidYMid meet"
       >
@@ -163,7 +165,7 @@ function ToeDiagram() {
           textAnchor="middle"
           className="toe-home-text"
         >
-          Normas &amp; Regulação
+          {translate({id: 'toe.chart.topDown', message: 'Normas & Regulação'})}
         </text>
         <line
           x1="704"
@@ -202,7 +204,7 @@ function ToeDiagram() {
           textAnchor="middle"
           className="toe-home-text"
         >
-          Ameaças &amp; Incidentes
+          {translate({id: 'toe.chart.bottomUp', message: 'Ameaças & Incidentes'})}
         </text>
         <line
           x1="704"
@@ -241,7 +243,7 @@ function ToeDiagram() {
           textAnchor="end"
           className="toe-home-text"
         >
-          Execução &amp; Ciclo de vida
+          {translate({id: 'toe.chart.engineering', message: 'Execução & Ciclo de vida'})}
         </text>
         <line
           x1="546"
@@ -261,9 +263,9 @@ function ToeDiagram() {
           marginInline: 'auto',
         }}
       >
-        O SbD–ToE é o núcleo onde convergem normas, ameaças e engenharia.
-        A partir deste centro, cada capítulo do manual desdobra a visão em
-        práticas e controlos concretos.
+        <Translate id="homepage.diagram.caption">
+          O SbD–ToE é o núcleo onde convergem normas, ameaças e engenharia. A partir deste centro, cada capítulo do manual desdobra a visão em práticas e controlos concretos.
+        </Translate>
       </p>
     </div>
   );
@@ -277,16 +279,16 @@ function SectionCards() {
 
   const cards = [
     {
-      title: 'Manual SbD–ToE',
+      title: translate({id: 'homepage.card.manual.title', message: 'Manual SbD–ToE'}),
       description:
-        'Capítulos 01–14. Corpo principal do manual, organizado por tema técnico ao longo do ciclo de vida.',
+        translate({id: 'homepage.card.manual.description', message: 'Capítulos 01–14. Corpo principal do manual, organizado por tema técnico ao longo do ciclo de vida.'}),
       to: manualUrl,
       icon: '📘',
     },
     {
-      title: 'Cross-check normativo',
+      title: translate({id: 'homepage.card.crossCheck.title', message: 'Cross-check normativo'}),
       description:
-        'Matriz que mostra como o SbD–ToE responde a NIS2, DORA, CRA, ISO 27001/27034 e outras referências.',
+        translate({id: 'homepage.card.crossCheck.description', message: 'Matriz que mostra como o SbD–ToE responde a NIS2, DORA, CRA, ISO 27001/27034 e outras referências.'}),
       to: crossCheckUrl,
       icon: '🏛️',
     },
@@ -311,7 +313,7 @@ function SectionCards() {
                 </div>
                 <div className="card__footer">
                   <Link className="button button--primary button--sm" to={c.to}>
-                    Abrir →
+                    <Translate id="homepage.card.open">Abrir →</Translate>
                   </Link>
                 </div>
               </div>
@@ -329,8 +331,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Início - ${siteConfig.title}`}
-      description="Security by Design - Theory of Everything. Manual prático, aberto e prescritivo para aplicar segurança por desenho em organizações modernas."
+      title={`${translate({id: 'homepage.title', message: 'Início'})} - ${siteConfig.title}`}
+      description={translate({id: 'homepage.description', message: 'Security by Design - Theory of Everything. Manual prático, aberto e prescritivo para aplicar segurança por desenho em organizações modernas.'})}
     >
       <HomepageHeader />
       <main>

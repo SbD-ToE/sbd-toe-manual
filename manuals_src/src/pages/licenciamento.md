@@ -6,7 +6,7 @@ description: Condições de uso e partilha do manual SbD-ToE
 
 # 📎 Licenciamento e Termos de Reutilização
 
-## Licenciamento
+## Licenciamento {#licenciamento}
 
 Este manual encontra-se registado no **IGAC - Inspeção-Geral das Atividades Culturais** sob o n.º **949/2025**, com titularidade atribuída a **Pedro Farinha**, e é publicado sob a licença  
 **Creative Commons Attribution–ShareAlike 4.0 International (CC BY-SA 4.0)**.
@@ -24,7 +24,7 @@ Esta licença permite:
 
 ---
 
-## Termos de reutilização e atribuição
+## Termos de reutilização e atribuição {#termos-de-reutilização-e-atribuição}
 
 O uso do manual deve respeitar as condições da licença CC BY-SA 4.0 e reconhecer explicitamente a autoria e origem do trabalho.
 
@@ -44,7 +44,7 @@ Cada uma dessas fontes mantém a sua **licença própria**, que deve ser respeit
 
 ---
 
-## ✅ Recomendações de utilização
+## ✅ Recomendações de utilização {#-recomendações-de-utilização}
 
 - Qualquer redistribuição ou adaptação deve manter a atribuição e a mesma licença (CC BY-SA 4.0).  
 - Inclui, sempre que possível, **ligações diretas às fontes** e referência à **licença original** de cada framework ou ferramenta.  

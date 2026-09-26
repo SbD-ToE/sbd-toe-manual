@@ -125,7 +125,7 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
   - [Playbook de implementação prática](ai-act/playbook)
   - [Análise de convergência com o CRA](ai-act/convergencia-cra)
 
-#### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification) {#enisa-csa-cloud-security-alliance-certification}
+#### **[ENISA / CSA](enisa-csa/intro)** (Regulamento Cibersegurança — certificação europeia da cibersegurança) {#enisa-csa-cloud-security-alliance-certification}
 - 📂 `enisa-csa/`
   - [Enquadramento do esquema de certificação](enisa-csa/intro)
 

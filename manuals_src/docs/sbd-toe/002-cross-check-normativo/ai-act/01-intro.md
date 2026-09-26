@@ -20,12 +20,12 @@ O **AI Act** é o **Regulamento (UE) 2024/1689** (CELEX: [32024R1689](https://eu
 
 - **2 de fevereiro de 2025** - práticas proibidas (Art. 5) e literacia em IA (Art. 4).
 - **2 de agosto de 2025** - modelos de IA de finalidade geral (GPAI, Capítulo V), governação e regime sancionatório.
-- **2 de agosto de 2026** - generalidade das obrigações para sistemas de IA de **alto risco** do Anexo III.
-- **2 de agosto de 2027** - sistemas de alto risco abrangidos pela legislação de produto do Anexo I.
+- **2 de dezembro de 2027** - generalidade das obrigações para sistemas de IA de **alto risco** do Anexo III (Reg. (UE) 2026/1744, que alterou o art. 113.º).
+- **2 de agosto de 2028** - sistemas de alto risco abrangidos pela legislação de produto do Anexo I (Reg. (UE) 2026/1744).
 
-> ℹ️ **Nota (2026):** o acordo político **Digital Omnibus** (2026) prevê **diferir** as obrigações de alto risco — Anexo III para **2 de dezembro de 2027** e Anexo I para **2 de agosto de 2028**. As datas acima são as **promulgadas**; o diferimento só produz efeitos com a publicação no Jornal Oficial.
+> ℹ️ **Nota (2026):** O Regulamento (UE) 2026/1744 («Digital Omnibus on AI»), publicado no JO L de 24.7.2026 e em vigor desde 27.7.2026, alterou o art. 113.º: as obrigações de alto risco (cap. III, secções 1–3) aplicam-se a partir de **2 de dezembro de 2027** (Anexo III / art. 6.º, n.º 2) e de **2 de agosto de 2028** (Anexo I / art. 6.º, n.º 1).
 
-O AI Act adota uma **abordagem baseada no risco**, com quatro patamares: risco **inaceitável** (proibido, Art. 5), **alto risco** (Art. 6 e Anexos I/III, sujeito ao grosso das obrigações técnicas), risco **limitado** (deveres de transparência, Art. 50) e risco **mínimo** (sem obrigações específicas). Sobre estes patamares incidem ainda regras próprias para **GPAI** (Art. 53) e GPAI com **risco sistémico** (Art. 55).
+O AI Act adota uma **abordagem baseada no risco**, com quatro patamares: risco **inaceitável** (proibido, Art. 5), **alto risco** (Art. 6 e Anexos I/III, sujeito ao grosso das obrigações técnicas), risco **limitado** (deveres de transparência, Art. 50) e risco **mínimo** (sem obrigações específicas além das horizontais, como a literacia do Art. 4). Sobre estes patamares incidem ainda regras próprias para **GPAI** (Art. 53) e GPAI com **risco sistémico** (Art. 55).
 
 É essencial enquadrar a natureza do regulamento: o AI Act é, antes de tudo, **legislação de segurança de produto e de proteção de direitos fundamentais** aplicada a sistemas de IA, não uma norma de segurança aplicacional (AppSec). Contudo, as obrigações para sistemas de alto risco incorporam **requisitos técnicos substanciais** que cruzam diretamente com o SbD-ToE - em particular:
 
@@ -80,7 +80,7 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 | Sistema de gestão da qualidade | Art. 17 | Cap. 07 (CI/CD), Cap. 11 (release), Cap. 06, Cap. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Manual da qualidade formal | Mapear gates SbD-ToE + ciclos Policy 38/39 para os elementos do QMS |
 | Cadeia de fornecimento | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de *providers* aprovados), Policy 39, Cap. 14 US-21 | — | — |
 | Obrigações do *deployer* | Art. 26 | Policy 38 (mandate + ownership), Cap. 02 §A0–A4, Cap. 12 US-13 (logs sob controlo do *deployer*) | Documentação operacional do *deployer* | Estender mandate com obrigações específicas quando organização é *deployer* |
-| Conformidade e marcação CE | Art. 43, 47–49 | — ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) é a declaração de conformidade do *provider*, não a marcação CE da própria organização) | Avaliação de conformidade do sistema + marcação CE da organização | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
+| Conformidade e marcação CE | Art. 43, 47–49 | — (DEP-014 regista a conformidade declarada contratualmente pelo provider; não é a declaração UE de conformidade do Art. 47 nem substitui a avaliação de conformidade e a marcação CE a cargo do prestador do sistema) | Avaliação de conformidade do sistema + marcação CE da organização | Estabelecer swimlane GRC + jurídico para o circuito de avaliação |
 | GPAI e risco sistémico | Art. 53, Art. 55 | Cap. 03 playbook + Cap. 05 (AI BOM), Cap. 10 §C5 (*eval suites* + *red teaming*), Cap. 12 US-13 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014), Policy 19 §7, Policy 30 §9 | Documentação técnica GPAI (Anexo XI/XII); política de *copyright* | Documentação delegada à equipa de IA; *cybersecurity* já dentro |
 | Monitorização pós-comercialização | Art. 72 | Cap. 12 (monitorização, *drift*), `OPS-011..014`, Cap. 12 US-13 | Plano formal de monitorização pós-mercado por sistema | Formalizar plano por sistema com base nos sinais já disponíveis |
 | Incidentes graves | Art. 73 | Cap. 12, Cap. 14, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (incidentes agentic-específicos) | Definição regulamentar de "incidente grave"; prazos (2/10/15 dias) e *templates* | Parametrizar *runbook* e exportadores SIEM/ITSM |
@@ -93,7 +93,7 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 
 **Conteúdo normativo**
 
-O Art. 4 obriga *providers* e *deployers* a assegurar que os colaboradores envolvidos na operação ou utilização de sistemas de IA têm um **nível adequado de literacia em IA**, ponderando os seus conhecimentos técnicos, experiência, educação e formação, bem como o contexto em que o sistema vai ser usado e os destinatários previstos.
+O Art. 4 (na redacção do Reg. (UE) 2026/1744) obriga *prestadores* e *responsáveis pela implantação* a adotar medidas para promover a literacia em IA do pessoal e de outras pessoas envolvidas na operação ou utilização de sistemas de IA — obrigação de meios, que não exige garantir um nível específico de literacia., ponderando os seus conhecimentos técnicos, experiência, educação e formação, bem como o contexto em que o sistema vai ser usado e os destinatários previstos.
 
 **Cobertura SbD-ToE**
 
@@ -197,7 +197,7 @@ O Art. 11 exige documentação técnica elaborada **antes** da colocação no me
 | Requisitos e medidas de segurança | Cap. 02 + `REQ-AGN-001..004` | Catálogo de requisitos (incluindo subconjunto agentic) |
 | Processo de desenvolvimento | Cap. 06, Cap. 07 | Desenvolvimento seguro, CI/CD com gates |
 | Gestão de risco e alterações | Cap. 03, Cap. 12 | Threat model + playbook agentic; monitorização e melhoria |
-| Inventário de componentes e modelos | Cap. 05 + [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM + Policy 39 | Lista de componentes (Anexo IV §2(a)) incluindo modelos, datasets, *tools* e prompts |
+| Inventário de componentes e modelos | Cap. 05 + [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM + Policy 39 | Evidência para o Anexo IV (ponto 2, alíneas a) e c): sistemas/ferramentas de terceiros e arquitetura de componentes; ponto 1, alínea c): versões de software) incluindo modelos, datasets, *tools* e prompts |
 | Operação sob mandate | Policy 38 | *Mandate* documentado e versionado por agente AI |
 
 **O que o SbD-ToE cobre**
@@ -237,7 +237,7 @@ O Art. 12 exige capacidade de **registo automático de eventos** (logs) ao longo
 **O que o SbD-ToE cobre**
 
 - Logging estruturado e observabilidade "by design" (Cap. 12).
-- **Audit completo por *tool invocation*** quando há agentes AI ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Granular numa dimensão **complementar** (operacional) à do log epistémico de inferência exigido pelo Art. 12 — não o substitui.
+- **Audit completo por *tool invocation*** quando há agentes AI ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — cada chamada gera evento com `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`. Granular numa dimensão **complementar** (operacional) ao registo de eventos de inferência que cada sistema deve definir para cumprir o Art. 12 — não o substitui.
 - Trilho auditável e correlação de eventos, com orientação para retenção e imutabilidade (Cap. 12).
 - **Telemetria operacional agentic** (Cap. 12 US-13) que sustenta a base evidencial para Art. 72 (monitorização pós-mercado) e Art. 73 (incidentes graves).
 
@@ -317,7 +317,7 @@ A maior parte do trabalho técnico está agora dentro do manual: declarar o nív
 
 ---
 
-### Artigo 15 - Exatidão, robustez e cibersegurança {#artigo-15---exatidão-robustez-e-cibersegurança}
+### Artigo 15 - Exatidão, solidez e cibersegurança {#artigo-15---exatidão-robustez-e-cibersegurança}
 
 > 🎯 **Núcleo do cross-check.** É no Art. 15 que o SbD-ToE oferece a cobertura mais forte e direta. A cibersegurança de sistemas de IA é, em grande medida, a disciplina central do manual aplicada a um novo tipo de artefacto (modelos e pipelines de ML).
 
@@ -376,7 +376,7 @@ O Art. 17 obriga os fornecedores a um sistema de gestão da qualidade documentad
 - Procedimentos de desenvolvimento e pipeline com gates auditáveis (Cap. 06, Cap. 07), incluindo agentes AI como *principals* (US-19).
 - Controlo de qualidade técnico e validação pré-release (Cap. 10, Cap. 11), incluindo *eval suites* contínuas para agentes (§C5).
 - Estrutura de governação, papéis e aprovações (Cap. 14).
-- **Ciclo de vida formal de governação para agentes AI** (Policy 38) — *mandate* com proposta → avaliação → aprovação → activação → operação → revisão / revogação. Mapeável directamente aos elementos do QMS do Art. 17 §3 (procedimentos, sistemas de gestão de dados, registos de comunicação).
+- **Ciclo de vida formal de governação para agentes AI** (Policy 38) — *mandate* com proposta → avaliação → aprovação → activação → operação → revisão / revogação. Mapeável directamente aos elementos do QMS do Art. 17.º, n.º 1 (em particular alíneas f), j) e k): gestão de dados, gestão da comunicação, manutenção de registos).
 - **Ciclo de vida formal para *supply chain* AI** (Policy 39) — formato AI BOM, *pinning*, lista aprovada de *providers*, resposta a incidentes *upstream* por classe.
 
 **Lacunas intencionais**
@@ -426,7 +426,7 @@ Operacionalmente já está implementado (Policy 39 + `DEP-013/014` + Cap. 14 US-
 
 **Conteúdo normativo**
 
-O Art. 26 define obrigações específicas dos *deployers* de sistemas de IA de alto risco: usar o sistema conforme as instruções de utilização, atribuir supervisão humana qualificada, assegurar input data adequado, monitorizar o funcionamento, conservar logs sob seu controlo (Art. 19), e cooperar com autoridades.
+O Art. 26 define obrigações específicas dos *deployers* de sistemas de IA de alto risco: usar o sistema conforme as instruções de utilização, atribuir supervisão humana qualificada, assegurar input data adequado, monitorizar o funcionamento, conservar os registos sob o seu controlo durante pelo menos seis meses (Art. 26.º, n.º 6), e cooperar com autoridades.
 
 **Cobertura SbD-ToE**
 
@@ -455,7 +455,7 @@ Para usos em que a organização é *deployer*, o *mandate* (Policy 38) é o art
 
 ---
 
-### Artigo 72 - Monitorização pós-comercialização {#artigo-72---monitorização-pós-comercialização}
+### Artigo 72 - Acompanhamento pós-comercialização {#artigo-72---monitorização-pós-comercialização}
 
 **Conteúdo normativo**
 
@@ -561,7 +561,7 @@ Sugere-se: tratar pesos, *checkpoints* e *datasets* como ativos de cadeia de for
 
 **Conteúdo normativo**
 
-O Art. 5 proíbe um conjunto de práticas (p. ex., manipulação subliminar prejudicial, *social scoring* por entidades públicas, certa identificação biométrica remota em tempo real). O Art. 50 impõe deveres de transparência para sistemas de risco limitado (informar que se interage com IA; marcar conteúdo sintético / *deepfakes*).
+O Art. 5 proíbe um conjunto de práticas (p. ex., manipulação subliminar prejudicial, classificação social — *social scoring* —, certa identificação biométrica remota em tempo real em espaços acessíveis ao público para efeitos de aplicação da lei); desde 2 de dezembro de 2026, também a geração/manipulação de imagens íntimas sem consentimento e de material de abuso sexual de crianças (art. 5.º, n.º 1, al. ba) e bb), aditadas pelo Reg. (UE) 2026/1744). O Art. 50 impõe deveres de transparência para sistemas de risco limitado (informar que se interage com IA; marcar conteúdo sintético / *deepfakes*).
 
 **Cobertura SbD-ToE**
 
@@ -583,7 +583,7 @@ A determinação de proibições e os deveres de transparência devem ser conduz
 
 O AI Act pede sistemas de IA **seguros, robustos, documentados e supervisionáveis**, com responsabilidade do fornecedor ao longo de todo o ciclo de vida. O SbD-ToE oferece o **coração técnico-operacional** desse esforço: gestão de risco técnico (Cap. 01, 03), arquitetura defensiva (Cap. 04), integridade da cadeia de dados e modelos (Cap. 05), pipelines e gates de qualidade (Cap. 06, 07, 11), testes e robustez adversarial (Cap. 10), logging e monitorização pós-mercado (Cap. 12) e governação (Cap. 14).
 
-A cobertura mais **forte e direta** está no **Art. 15** (exatidão, robustez, cibersegurança) e nos seus correlatos operacionais (Art. 12 logging, Art. 72 monitorização, Art. 73 incidentes, Art. 17 QMS) - é aqui que "implementar SbD-ToE" se aproxima de "cumprir o AI Act".
+A cobertura mais **forte e direta** está no **Art. 15** (exatidão, robustez, cibersegurança) e nos seus correlatos operacionais (Art. 12 logging, Art. 72 monitorização, Art. 73 incidentes, Art. 17 QMS) - é aqui que a evidência técnica do SbD-ToE é mais directamente reutilizável — sem que isso equivalha a cumprir o AI Act, que exige todos os requisitos da secção 2 e a avaliação de conformidade.
 
 As lacunas observadas **não são falhas do modelo**, mas **abstenções deliberadas**: dimensões próprias do domínio de IA (governação de dados/enviesamento, exatidão estatística, supervisão humana, transparência) e dimensões jurídicas (classificação de risco, FRIA, avaliação de conformidade, marcação CE, práticas proibidas). Estas exigem equipas de ciência de dados, ética, produto, jurídico e compliance - o SbD-ToE fornece-lhes a evidência técnica, não o juízo de conformidade.
 
@@ -594,7 +594,7 @@ O resultado é coerente com a filosofia do manual:
 
 ### Âmbito, papéis e sanções {#âmbito-papéis-e-sanções}
 
-O AI Act distingue **fornecedores (providers)**, **utilizadores implementadores (deployers)**, importadores e distribuidores, com obrigações distintas. O grosso das obrigações técnicas (e da cobertura SbD-ToE) recai sobre o **fornecedor de sistema de alto risco**; o *deployer* tem obrigações próprias (uso conforme às instruções, supervisão humana, em certos casos FRIA - Art. 26, 27).
+O AI Act distingue **prestadores (providers)**, **responsáveis pela implantação (deployers)**, importadores e distribuidores, com obrigações distintas. O grosso das obrigações técnicas (e da cobertura SbD-ToE) recai sobre o **fornecedor de sistema de alto risco**; o *deployer* tem obrigações próprias (uso conforme às instruções, supervisão humana, em certos casos FRIA - Art. 26, 27).
 
 Em termos sancionatórios (Art. 99), o regulamento estabelece patamares máximos:
 
@@ -627,7 +627,7 @@ Em termos sancionatórios (Art. 99), o regulamento estabelece patamares máximos
 
 :::note Exceções e evidência de controlo
 
-O AI Act, tal como NIS2 e DORA, beneficia de um processo formal de exceções à conformidade. Casos em que um requisito não é aplicável, ou em que se aceita um risco residual temporário (p. ex., um vetor adversarial mitigado por compensação enquanto se prepara o *retraining*), devem ser documentados, aprovados ao nível adequado e revistos periodicamente.
+A aplicação do SbD-ToE em contexto AI Act, tal como em NIS2 e DORA, beneficia de um processo formal de exceções internas a requisitos técnicos. Uma exceção interna não altera nenhuma obrigação legal do AI Act; apenas documenta um risco técnico aceite para o dossiê de evidência. Casos em que um requisito não é aplicável, ou em que se aceita um risco residual temporário (p. ex., um vetor adversarial mitigado por compensação enquanto se prepara o *retraining*), devem ser documentados, aprovados ao nível adequado e revistos periodicamente.
 
 O Cap. 14 (Governança e Contratação) do SbD-ToE fornece os artefactos necessários: registo de exceções, critérios de aceitação de risco, cadeia de aprovação e plano de remediação. Note-se que certos desvios **não são exceptuáveis** no contexto AI Act - desde logo, qualquer uso que recaia nas práticas proibidas do Art. 5. A existência de um processo formal de exceções não é sinal de fragilidade: é evidência de governação madura e de controlo consciente sobre o perfil de risco.
 

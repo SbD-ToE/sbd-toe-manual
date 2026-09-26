@@ -174,7 +174,7 @@ Toda a evidência de conformidade deve satisfazer os seguintes requisitos para s
 | Registos de excepções (incluindo expiradas) | 5 anos |
 
 :::note
-Em ambientes regulados (DORA, NIS2, RGPD), os prazos regulatórios prevalecem sobre os mínimos desta política. O período mais longo é sempre o aplicável.
+Em ambientes regulados (DORA, NIS2), os prazos regulatórios prevalecem sobre os mínimos desta política; quando houver dados pessoais, o RGPD limita a conservação ao período necessário.
 :::
 
 ---
@@ -211,5 +211,5 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | NIST SSDF - PO.3, PO.7 | Implementação de práticas de segurança e rastreabilidade |
 | OWASP SAMM - PO2, PO3 | Maturidade organizacional em segurança |
 | ISO/IEC 27001 - A.18 | Compliance and information security reviews |
-| DORA - Art. 17 | ICT risk management documentation and evidence |
+| DORA - Art. 6(5) | ICT risk management documentation and evidence |
 | NIS2 - Art. 21 | Cybersecurity measures and accountability |

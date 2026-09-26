@@ -29,7 +29,7 @@ O CRA impõe obrigações aos fabricantes, importadores e distribuidores, inclui
 
 - requisitos essenciais de **segurança por conceção e por defeito** durante todo o ciclo de vida;
 - processos de **gestão de vulnerabilidades**, incluindo receção, análise, correção e divulgação responsável;
-- **monitorização pós-comercialização** e correção atempada de vulnerabilidades;
+- **tratamento de vulnerabilidades durante o período de apoio** (Anexo I, Parte II) e correção sem demora;
 - requisitos de **documentação técnica**, instruções e informação ao utilizador;
 - obrigações de **notificação de vulnerabilidades exploradas ativamente e incidentes graves**.
 
@@ -59,7 +59,7 @@ O SbD-ToE foi desenhado para aplicações e pipelines software; grande parte dos
 
 ## Aviso Regulatório {#aviso-regulatório}
 
-O CRA introduz obrigações de: classificação crítica, marcação CE, declaração de conformidade, avaliação de conformidade (inclui módulos com envolvimento de organismos notificados em certas categorias), obrigações pós-comercialização (vulnerability handling), e comunicação rápida a ENISA (ou ponto único) de vulnerabilidades ativamente exploradas.
+O CRA introduz obrigações de: classificação como produto importante (classes I/II, Anexo III) ou crítico (Anexo IV), marcação CE, declaração de conformidade, avaliação de conformidade (inclui módulos com envolvimento de organismos notificados em certas categorias), obrigações pós-comercialização (vulnerability handling), e notificação de vulnerabilidades ativamente exploradas, em simultâneo, à CSIRT designada como coordenadora e à ENISA, através da plataforma única de comunicação de informações (art. 14.º e 16.º).
 
 Também convém fixar duas datas operacionais do regulamento:
 
@@ -67,7 +67,7 @@ Também convém fixar duas datas operacionais do regulamento:
 - a aplicação geral do regulamento arranca a `11 December 2027`
 
 O SbD-ToE cobre o "como" técnico, mas **não substitui**:
-- Procedimentos formais de avaliação de conformidade (módulos A, B, C, D, etc.)
+- Procedimentos formais de avaliação da conformidade (módulo A; módulos B + C; módulo H; ou sistema europeu de certificação da cibersegurança, art. 32.º)
 - Interações com organismos notificados
 - Emissão da declaração UE de conformidade / marcação CE
 - Processo jurídico de responsabilidade do fabricante/importador/distribuidor
@@ -77,9 +77,9 @@ O SbD-ToE cobre o "como" técnico, mas **não substitui**:
 | Domínio CRA | Referência Regulamentar (Resumo) | Cobertura SbD-ToE | Lacuna Intencional | Ação de Adaptação |
 |-------------|----------------------------------|-------------------|--------------------|-------------------|
 | Gestão do Ciclo de Vida Seguro | Requisitos de segurança aplicável durante todo o ciclo (design → desenvolvimento → distribuição → manutenção) | Cap. 02 (requisitos), Cap. 06 (desenvolvimento), Cap. 07 (CI/CD), Cap. 11 (pré-deploy) | Não distingue bem papéis fabricante/importador/distribuidor nem a determinação formal do support period | Mapear roles SbD-ToE → papéis CRA e registar policy de support period |
-| Identificação e Gestão de Vulnerabilidades | Processos para receber, avaliar, priorizar e corrigir vulnerabilidades | Cap. 05 (SBOM/SCA), Cap. 10 (testes), Cap. 12 (monitorização), Addons exceções | Mecanismo formal de receção externa (coordinated disclosure portal) | Implementar canal público + política ADVD (coordinated disclosure) |
+| Identificação e Gestão de Vulnerabilidades | Processos para receber, avaliar, priorizar e corrigir vulnerabilidades | Cap. 05 (SBOM/SCA), Cap. 10 (testes), Cap. 12 (monitorização), Addons exceções | Mecanismo formal de receção externa (coordinated disclosure portal) | Implementar canal público + política de divulgação coordenada de vulnerabilidades (Anexo I, Parte II, ponto 5) |
 | SBOM / Transparência | Disponibilização de informação de componentes e dependências críticas | Cap. 05 (SBOM contínuo) | Formato exato de disponibilização externa (ex: CycloneDX export público) | Criar rotina de export SBOM sanitizada para stakeholders |
-| Correções e Patches Rápidos | Aplicar correções de segurança sem demora injustificada | Cap. 05 (gestão CVE), Cap. 07 (automação CI/CD), Cap. 12 (deteção de exploração) | Critérios de severidade CRA (prazos regulamentares) | Definir SLA de patch CRA: Crítico ≤15d, Alto ≤30d, Médio ≤90d |
+| Correções e Patches Rápidos | Aplicar correções de segurança sem demora injustificada | Cap. 05 (gestão CVE), Cap. 07 (automação CI/CD), Cap. 12 (deteção de exploração) | O CRA não fixa prazos numéricos de correção (exige correção «sem demora») | Definir SLA interno de patch (ex.: Crítico ≤15d, Alto ≤30d, Médio ≤90d) como operacionalização do «sem demora» |
 | Reporte de Vulnerabilidades Exploited | Notificar autoridade (ex: ENISA/ponto único) sobre vulnerabilidades exploradas ativamente | Cap. 12 (deteção, métricas exploração), Cap. 14 (governança) | Não separa suficientemente reporting obrigatório, comunicação a utilizadores e plataforma/regime oficial | Adicionar runbook técnico + interface formal de notificação e comunicação |
 | Medidas para Prevenção de Vulnerabilidades | Controlo de qualidade e testes de segurança antes de release | Cap. 10 (SAST/DAST/fuzzing), Cap. 11 (gate de release) | Critérios formais de rejeição/liberação por criticidade | Adicionar matriz: nível criticidade → bloqueio automático release |
 | Documentação de Segurança | Instruções e info de segurança para utilizadores/admins | Cap. 04 (arquitetura), Cap. 11 (deploy seguro) | Manual não gera sozinho a totalidade da surface `Annex II` (support period, contact point, end-of-support wording) | Criar artifact "Guia de Segurança do Produto" + tabela de support period e ponto de contacto |
@@ -124,7 +124,7 @@ Isto deve ser lido como base técnica para cumprir a obrigação de reporte, nã
 **Ação:** Script de extração (ex: export do SIEM + SBOM) → JSON pronto.
 
 ### 6. Qualidade e Testes de Segurança {#6-qualidade-e-testes-de-segurança}
-SbD-ToE cobre variedade de testes. Alinhar com exigência CRA de evitar lançamento com vulnerabilidades conhecidas críticas.
+SbD-ToE cobre variedade de testes. Alinhar com a exigência do CRA de disponibilizar o produto no mercado sem vulnerabilidades exploráveis conhecidas (Anexo I, Parte I, 2(a), com base na avaliação dos riscos).
 
 **Ação:** Gate "no-critical-known" antes de release; exceções só com aprovação board (criticidade máxima).
 

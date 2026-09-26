@@ -75,7 +75,7 @@ Onde necessário, o texto distingue explicitamente:
 1. **Inventariar Aplicações e Sistemas**
    - Nome, proprietário, dados processados, serviços suportados
    - Dependências (quem depende)
-   - **Tipo de entidade:** Essencial / Importante (conforme NIS2 Anexos I/II)
+   - **Tipo de entidade:** Essencial / Importante (conforme NIS2 art. 3.º, com base nos setores dos Anexos I/II e na dimensão)
    - Referência: [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classificar por Risco (L1–L3)**
@@ -298,14 +298,14 @@ O que caracteriza uma exceção em SbD-ToE/NIS2:
 - Exemplo: Deploy com vulnerabilidade alta (vs. requisito L3 = zero críticas)
 - Aprovação formal, justificação, TTL (Time-To-Live), plano de remediação
 
-Quem aprova (conforme NIS2 Art. 20):
+Quem aprova (proposta SbD-ToE, enquadrada pela responsabilidade do órgão de direção prevista no art. 20.º da NIS2):
 - L1 (baixo risco): Tech lead / AppSec Engineer
 - L2 (médio risco): CISO
 - L3 (crítico): Board / CRO / órgão de gestão equivalente, conforme o modelo de governação aplicável
 
 Implicação regulatória:
 - Exceções sem aprovação formal podem comprometer a supervisão (Art. 20)
-- Algumas exceções são inaceitáveis (ex: SQLi nunca, MFA nunca)
+- Algumas exceções devem ser consideradas inaceitáveis por política interna (ex.: SQLi explorável, ausência de MFA onde seja adequada); a NIS2 exige medidas corretivas sem demora injustificada quando há incumprimento (art. 21.º, n.º 4)
 - Trilho auditado é obrigatório para demonstrar controlo à autoridade nacional
 
 Sugere-se:

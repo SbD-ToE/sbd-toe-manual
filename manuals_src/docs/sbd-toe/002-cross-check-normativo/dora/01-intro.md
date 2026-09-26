@@ -34,7 +34,7 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 
 De forma prática, o DORA traduz-se em obrigações que impactam diretamente as práticas do SbD-ToE:
 
-- **Órgão de gestão com responsabilidade explícita (Art. 5.º).**  
+- **Órgão de administração com responsabilidade explícita (Art. 5.º).**  
   - O órgão de gestão aprova a estratégia de gestão de risco TIC, acompanha a sua execução e é responsável por garantir que existem políticas, procedimentos, documentação e evidência.  
   - No SbD-ToE isto liga-se à governação global, políticas e à exigência de _accountability_ sobre decisões de risco.
 
@@ -51,7 +51,7 @@ De forma prática, o DORA traduz-se em obrigações que impactam diretamente as 
   - No SbD-ToE isto cruza diretamente com capítulos de testes de segurança, _red teaming_, _chaos engineering_ e validação contínua de pipelines.
 
 - **Gestão de risco de terceiros TIC (Art. 28.º–30.º).**  
-  - Impõe inventário de fornecedores TIC críticos, avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
+  - Impõe um registo de informações sobre todos os acordos contratuais com terceiros prestadores de serviços de TIC (distinguindo os que apoiam funções críticas ou importantes), avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
   - O manual cobre estes aspetos nos capítulos de dependências, SBOM/SCA, supply chain, _outsourcing_ e governação/contratação.
 
 - **Decisões de exceção e vulnerabilidades não remediadas.**  
@@ -197,8 +197,8 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 #### O que DORA Exige Explicitamente {#o-que-dora-exige-explicitamente}
 
-**Art. 5 (Gestão de Risco TIC):**
-> "Membros do órgão de gestão aprovam a estratégia e supervisionam a execução de políticas, incluindo respostas a riscos emergentes."
+**Art. 5.º (Governação e organização):**
+> «O órgão de administração da entidade financeira define, aprova, fiscaliza e é responsável pela aplicação de todas as disposições relacionadas com o quadro de gestão do risco associado às TIC […]» (art. 5.º, n.º 2)
 
 **Tradução operacional:**
 - Decisões de aceitação de risco (exceções) exigem aprovação documentada de autoridade formal
@@ -241,7 +241,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 |-------|------------------|-----------|-----|
 | **L1** | Validação por AppSec Engineer (informal) | Aprovação por autoridade formal designada | ⚠️ Developer-friendly, mas falta escalada clara |
 | **L2** | Validação formal por AppSec + GRC | Aprovação por CISO ou equivalente formal | ✅ Adequado, mas manual não o diz explicitamente |
-| **L3** | Aprovação de Gestão Executiva/CISO | **Aprovação de board ou CRO (exigência DORA)** | ❌ **GAP CRÍTICO** - Manual não especifica "board-level approval" |
+| **L3** | Aprovação de Gestão Executiva/CISO | Aceitação de risco residual acima da tolerância aprovada pelo órgão de administração, por função/responsável formalmente designado, com inventário justificado e revisão anual (RTS 2024/1774, art. 3.º, al. a) e d); DORA art. 5.º, n.º 2, e 6.º, n.º 4) | ⚠️ **GAP** - Manual não formaliza papéis de aceitação, inventário e revisão anual de riscos residuais aceites |
 
 **Como manifesta:** Organização aceita exceção L3 com aprovação de CISO; regulador questiona: "foi aprovada em board?" → sem ata = **falha de governance**.
 
@@ -266,7 +266,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | **Criação de exceção** | Documenta com owner, TTL, critérios | ✅ Bom | ✅ Alinhado |
 | **Reavaliação periódica** | Revisão 30 dias antes expiração; re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
 | **Rastreamento centralizado** | Ferramenta GRC; audit trail por aplicação | ✅ Bom | ⚠️ Manual não descreve formato de reporte a DORA |
-| **Escalada ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** - Sem guia de quando escalar ao regulador |
+| **Escalada ao regulador** | Não mencionado no manual | ⚠️ O DORA exige a comunicação de incidentes de caráter severo relacionados com as TIC (art. 19.º); exceções relacionadas devem constar da documentação de suporte | ❌ **GAP** - Sem guia de como integrar exceções no reporte de incidentes |
 
 **Como manifesta:** Incidente de segurança; regulador pede: "mostre-me exceções relevantes" → organização não tem visão consolidada ou não sabe se deve reportar.
 
@@ -383,7 +383,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 2. ✅ Mapear níveis de criticidade a aprovadores DORA-compatíveis (L1→AppSec, L2→CISO, L3→Board/CRO)
 3. ✅ Definir categorias de inaceitabilidade (política organizacional)
 4. ✅ Implementar rastreamento centralizado com audit trail (ferramenta GRC)
-5. ✅ Estabelecer reporte trimestral a estruturas de governance (exigência DORA Art. 5)
+5. ✅ Estabelecer reporte periódico ao órgão de administração (o art. 5.º, n.º 2, al. i), do DORA exige canais de informação; a periodicidade trimestral é opção organizacional)
 6. ✅ Definir protocolo de escalada ao regulador em contexto de incidente (Art. 17–23)
 
 ---

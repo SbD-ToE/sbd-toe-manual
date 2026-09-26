@@ -62,7 +62,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 1. Critérios de gatilho DPIA definidos  
 2. Reutilizar Threat Modeling ([Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro)) como anexo técnico  
 3. Adicionar Privacy TM (LINDDUN) quando alto risco  
-4. Aprovação DPO e registo  
+4. Parecer do EPD/DPO e decisão do responsável pelo tratamento; registo  
 **Evidências:** DPIA #1; anexos TM; aprovação DPO
 
 ### Fase 6 (M3–M4): Processors (Art. 28) {#fase-6-m3m4-processors-art-28}

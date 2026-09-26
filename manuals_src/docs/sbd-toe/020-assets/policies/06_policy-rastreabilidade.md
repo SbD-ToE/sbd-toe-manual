@@ -180,7 +180,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Registos de classificação e reavaliação | 2 anos | 3 anos | 5 anos |
 
 :::note
-Em contextos regulados (RGPD, DORA, NIS2, saúde, financeiro), os prazos de retenção podem ser superiores aos definidos nesta tabela. Prevalecem sempre os requisitos regulatórios aplicáveis.
+Em contextos regulados (DORA, NIS2, saúde, financeiro), os prazos de retenção podem ser superiores; o RGPD pode, pelo contrário, exigir prazos mais curtos para registos com dados pessoais. Prevalecem sempre os requisitos regulatórios aplicáveis.
 :::
 
 ---
@@ -238,5 +238,5 @@ O índice de evidências e os logs de auditoria devem ser disponibilizados integ
 | ISO/IEC 27001 - Cláusula 9.1 | Monitorização, medição, análise e avaliação |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | SSDF PW.8 | Archive and protect each software release |
-| NIS2 - Artigo 21 | Obrigações de registo e notificação |
+| NIS2 - Artigos 21 e 23 | Medidas de gestão de riscos e obrigações de notificação |
 | DORA - Artigo 10 | Rastreabilidade de eventos e logs |

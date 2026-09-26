@@ -23,7 +23,7 @@ Sugere-se usar o SbD-ToE como núcleo técnico para os artigos que exigem medida
 ## PARTE I: ANÁLISE NORMATIVA (GDPR → SbD-ToE) {#parte-i-análise-normativa-gdpr--sbd-toe}
 
 ### Princípios (Art. 5) {#princípios-art-5}
-Exigem: minimização, limitação de finalidades, exatidão, limitação de conservação, integridade e confidencialidade, responsabilização.
+Exigem: licitude, lealdade e transparência; limitação das finalidades; minimização dos dados; exatidão; limitação da conservação; integridade e confidencialidade; responsabilidade.
 
 Cobertura SbD-ToE:
 - Cap. 01: Classificação e identificação de dados por criticidade (apoia minimização/retensão)
@@ -35,8 +35,8 @@ Lacuna intencional: Definição de bases legais, políticas de conservação e f
 
 ---
 
-### Privacy by Design/Default (Art. 25) {#privacy-by-designdefault-art-25}
-Exige que a privacidade esteja incorporada no design e que as configurações por defeito sejam as mais protetoras.
+### Proteção de dados desde a conceção e por defeito (art. 25.º) {#privacy-by-designdefault-art-25}
+Exige medidas que apliquem os princípios de proteção de dados desde a conceção e que, por defeito, só sejam tratados os dados pessoais necessários para cada finalidade (quantidade, extensão, conservação, acessibilidade).
 
 Cobertura SbD-ToE:
 - Cap. 04: Padrões arquiteturais seguros (pseudonimização, segmentação)
@@ -59,7 +59,7 @@ Lacuna intencional: O SbD-ToE não fornece modelo ROPA. Ação: Manter ROPA em f
 ---
 
 ### Segurança do Tratamento (Art. 32) {#segurança-do-tratamento-art-32}
-Exige medidas técnicas e organizativas adequadas: pseudonimização, cifragem, resiliência, testes periódicos da eficácia.
+Exige medidas técnicas e organizativas adequadas ao risco, incluindo, consoante o adequado: pseudonimização e cifragem, confidencialidade/integridade/disponibilidade/resiliência, restabelecimento da disponibilidade e testes regulares da eficácia.
 
 Cobertura SbD-ToE:
 - Cap. 02: Requisitos mínimos por nível (inclui cifragem, IAM, hardening)
@@ -73,7 +73,7 @@ Lacuna intencional: Critérios legais de “adequação” e análise de risco c
 ---
 
 ### Notificação de Violação (Art. 33/34) {#notificação-de-violação-art-3334}
-Exige notificar a autoridade competente em até 72h (Art. 33) e, quando aplicável, comunicar aos titulares (Art. 34).
+Exige notificar a autoridade de controlo competente sem demora injustificada e, sempre que possível, até 72 h após o conhecimento da violação, salvo se não for suscetível de resultar num risco (art. 33.º); se houver elevado risco, comunicar aos titulares (art. 34.º).
 
 Cobertura SbD-ToE:
 - Cap. 12: Deteção, classificação e resposta a incidentes; runbooks

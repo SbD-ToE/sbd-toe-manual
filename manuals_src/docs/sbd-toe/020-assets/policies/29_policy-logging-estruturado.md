@@ -121,11 +121,11 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 |---|---|---|
 | Logs operacionais (runtime, erros) | 90 dias | 1 ano |
 | Logs de segurança (autenticação, autorização, alterações) | 1 ano | 2 anos (ou conforme regulação) |
-| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 3 anos (DORA: 5 anos) |
+| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 3 anos (ou o período definido na avaliação de risco exigida pela RTS DORA 2024/1774, art. 12.º, se superior) |
 | Logs de pipeline CI/CD | 90 dias | 1 ano |
 
 :::note
-Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulatórios prevalecem sobre os mínimos desta política. O período mais longo é sempre o aplicável.
+Em contextos regulados (DORA, NIS2, saúde, financeiro), os prazos regulatórios prevalecem sobre os mínimos desta política. Para logs com dados pessoais, o RGPD impõe o limite oposto: conservação apenas durante o período necessário (art. 5.º, n.º 1, alínea e)).
 :::
 
 ---
@@ -171,6 +171,6 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | Elastic Common Schema (ECS) | Schema de referência para campos normalizados |
 | OWASP Logging Cheat Sheet | Boas práticas de logging seguro |
 | GDPR / RGPD - Art. 5(1)(e) | Limitação de conservação de dados pessoais |
-| DORA - Art. 12 | Requisitos de logging para entidades financeiras |
+| DORA (art. 9.º) — Reg. Delegado (UE) 2024/1774, art. 12.º (quadro simplificado: art. 34.º, al. f)) | Requisitos de logging para entidades financeiras |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | ISO/IEC 27001 - A.12.4 | Logging and monitoring |

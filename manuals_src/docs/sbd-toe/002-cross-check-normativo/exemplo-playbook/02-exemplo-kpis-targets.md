@@ -54,7 +54,7 @@ Para cada dimensão, apresentamos targets exemplares.
 | **Operações** | MTTR P0 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
 | | MTTR P1 (High) | `<`8h | Permanente | Business impacto |
 | | Incidents detetados/month | `<`5 | M12 | Reduzir com maturidade |
-| **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA Art. 26 requer |
+| **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA art. 28.º, n.º 3 (modelos: Reg. de Execução (UE) 2024/2956) |
 | | % com onboarding completo | 100% | M3 | Antes de acesso |
 | | % com security trainning | 100% | M3 | Obrigatório antes acesso |
 | **Conformidade** | Política assinada board | ✓ | M1 | DORA Art. 5 |
@@ -154,11 +154,11 @@ graph TB
 | | % auditados (risk assessment) | 100% | M3 | DORA requer |
 | | % com contrato atualizado | 100% | M6 | Cláusulas técnicas |
 | | % com acesso revogado `<`24h | 100% | Permanente | Offboarding rigoroso |
-| **Conformidade** | Política board + GDPR officer | ✓ | M0 | Pré-requisito |
-| | Trilho auditoria (logs) | 5 anos | M0 | GDPR + DORA |
+| **Conformidade** | Política board + encarregado da proteção de dados (EPD/DPO) designado, se aplicável | ✓ | M0 | Pré-requisito |
+| | Trilho auditoria (logs) | 5 anos | M0 | Política interna fundamentada em avaliação de risco (DORA: Reg. Delegado (UE) 2024/1774, art. 12.º; RGPD art. 5.º, n.º 1, al. e), se houver dados pessoais) |
 | | Staff SbD training | 100% devs | M6 | Maior volume |
 | | Staff GRC training | 100% arquitetura | M3 | Entender normativos |
-| | TLPT (L3 apps) | 100% | M12 | DORA Art. 19 |
+| | TLPT (entidades identificadas pela autoridade TLPT; funções críticas ou importantes) | conforme ciclo ≥ 3 anos | M12 | DORA art. 26.º; Reg. Delegado (UE) 2025/1190 |
 | | Attestation TLPT | ✓ | M13 | Evidência board |
 | | Readiness inspeção supervisor | 100% | M18 | Completa preparação |
 
@@ -218,7 +218,7 @@ gantt
 | | % com onboarding | 100% | M3 | Antes acesso |
 | | % com training | 100% | M3 | Obrigatório |
 | **Conformidade** | Política board | ✓ | M1 | DORA Art. 5 |
-| | Trilho auditoria | 3 anos (GDPR) | M0 | |
+| | Trilho auditoria | 3 anos (política interna) | M0 | |
 | | Staff training | 100% | M4 | PME: todos conhecem |
 | | TLPT readiness | Piloto L3 critical | M10 | Menos apps = pode fazer |
 | | Readiness inspeção | 90% | M12 | Antes deadline DORA |

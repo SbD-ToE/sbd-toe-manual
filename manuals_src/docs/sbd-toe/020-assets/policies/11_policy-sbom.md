@@ -211,7 +211,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 - Publicação de nova versão major do formato CycloneDX ou SPDX
 - Publicação de nova versão da especificação CycloneDX `ml-bom` ou SPDX AI Profile
-- Alteração regulatória que imponha requisitos adicionais de SBOM (ex: EU Cyber Resilience Act, EU AI Act Art. 25)
+- Alteração regulatória que imponha requisitos adicionais de SBOM (ex.: CRA, Anexo I, Parte II, ponto 1; atos de execução do art. 13.º, n.º 24, do CRA)
 - Incidente com origem em componente não inventariado (SBOM ou AI BOM)
 
 ---

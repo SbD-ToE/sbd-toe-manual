@@ -190,10 +190,10 @@ O processo descrito serve em simultâneo várias obrigações regulatórias. Map
 | **DORA** | Art. 17 (gestão de incidentes ICT) | Paragens 10, 11 |
 | **CRA** | Anexo I Parte I (cybersec by design) | Paragens 3, 5, 6, 8 |
 | **CRA** | Anexo I Parte II (vulnerability handling) | Paragem 7 (Policy 39 §7) + Paragens 10, 11 |
-| **CRA** | Art. 13 (SBOM) | Paragem 7 (AI BOM cobre + complementa) |
+| **CRA** | Anexo I, Parte II, ponto 1 (SBOM) | Paragem 7 (AI BOM cobre + complementa) |
 | **RGPD** | Art. 5(1)(c) (minimização) | Policy 18 §10.1 |
 | **RGPD** | Art. 6 / 9 (base legal) | Policy 18 §10.2 |
-| **RGPD** | Art. 28 (sub-processadores) | Paragem 7 + Policy 33 §10 |
+| **RGPD** | Art. 28.º (subcontratantes) | Paragem 7 + Policy 33 §10 |
 | **RGPD** | Art. 44–49 (transferências) | Policy 33 §10.2 |
 
 ---
@@ -245,5 +245,5 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 - **Mini-site MCP** ([`/sbd-toe/assets/mcp/intro`](/sbd-toe/assets/mcp/intro)) — exemplos práticos de skills/agentes que materializam várias destas paragens
 - **AI Act cross-check** ([`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro)) — análise artigo-a-artigo
-- **CRA convergence note** ([`/sbd-toe/cross-check-normativo/ai-act/convergencia-cra`](/sbd-toe/cross-check-normativo/ai-act/convergencia-cra)) — uma arquitectura, duas presunções de conformidade
+- — uma arquitectura técnica; uma única presunção de conformidade (CRA, art. 12.º, n.º 1, espelhada no AI Act, art. 42.º, n.º 3, na redacção do Reg. (UE) 2026/1744), limitada aos requisitos de cibersegurança do art. 15.º do AI Act
 - **Outros exemplos de playbook**: [Toolchain](./exemplo-toolchain-options), [KPIs](./exemplo-kpis-targets), [RACI](./exemplo-raci-governance), [Relatório de incidentes](./exemplo-relatorio-incidentes)

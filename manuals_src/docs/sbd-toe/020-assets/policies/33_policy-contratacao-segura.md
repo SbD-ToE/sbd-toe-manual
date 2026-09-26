@@ -217,8 +217,8 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 ### 10.3 *Audit rights* {#103-audit-rights}
 
-- Direito contratual a aceder a *logs* de inferência ou equivalente quando exigido (típico em L3 e em sistemas regulados — DORA Art. 28, AI Act Art. 26).
-- Em alternativa, *audit reports* periódicos (SOC 2 Type II, ISO/IEC 42001 certification, AI Act Art. 47 declaration of conformity para GPAI).
+- Direito contratual a aceder a *logs* de inferência ou equivalente quando exigido (típico em L3 e em sistemas regulados — DORA Art. 30(3)(e), AI Act Art. 26).
+- Em alternativa, *audit reports* periódicos (SOC 2 Type II, certificação ISO/IEC 42001, declaração UE de conformidade do Art. 47 quando o sistema fornecido é de alto risco, ou documentação do Art. 53/Anexo XII quando GPAI).
 
 ### 10.4 SLA de notificação prévia {#104-sla-de-notificação-prévia}
 
@@ -235,8 +235,8 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 - **AI Act Art. 53** (obrigações de *providers* de GPAI): documentação técnica do modelo, *summary of training data* publicado, *copyright compliance policy*.
 - **AI Act Art. 55** (cibersegurança de GPAI com risco sistémico): *AI red teaming* contínuo, hardening de infraestrutura, *post-market monitoring*.
-- **RGPD Art. 28** (sub-processadores): contratos com sub-processadores, notificação prévia de mudanças.
-- **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável quando o *provider* é tratado como *ICT third-party* crítico.
+- **RGPD, art. 28.º** (subcontratantes): contrato com o subcontratante (n.º 3) e informação prévia sobre a contratação ou substituição de outros subcontratantes (n.º 2).
+- **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável a qualquer *provider* de serviços de TIC a entidade abrangida; requisitos contratuais reforçados quando o serviço apoia funções críticas ou importantes (DORA art. 30.º, n.º 3).
 
 ### 10.7 Operacionalização {#107-operacionalização}
 
@@ -279,7 +279,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | ISO/IEC 42001:2023 | AI Management System — relações com fornecedores AI |
 | NIST SP 800-161 | Cybersecurity Supply Chain Risk Management |
 | NIST AI RMF 1.0 — MAP-4.x | Third-party AI risk |
-| RGPD - Art. 28, 44–49 | Subprocessadores; transferências internacionais |
+| RGPD - Art. 28.º, 44.º–49.º | Subcontratantes; transferências internacionais |
 | DORA - Art. 28-30 | ICT third-party risk management |
 | NIS2 - Art. 21 | Supply chain security measures |
 | EU AI Act (Reg. (UE) 2024/1689) - Art. 25, 26, 47, 53, 55 | Cadeia de fornecimento AI; obrigações de provider de GPAI |

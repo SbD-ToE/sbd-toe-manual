@@ -28,7 +28,7 @@ SecOps é a **linha da frente no cumprimento de NIS2** (resposta a incidentes, n
 ## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Linha da frente em:
-- **NIS2**: Notificação de incidentes em 24h
+- **NIS2**: Alerta rápido de incidentes significativos em 24h (notificação de incidente em 72h)
 - **DORA**: Continuidade operacional e resiliência
 
 ---

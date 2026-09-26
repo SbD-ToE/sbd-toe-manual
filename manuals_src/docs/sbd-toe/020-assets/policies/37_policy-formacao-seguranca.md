@@ -247,7 +247,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | OWASP Top 10 for LLM Applications (2025) | Conteúdo programático para AppSec |
 | MITRE ATLAS | Catálogo de tactics/techniques adversariais para AppSec / red team |
 | OWASP WebGoat / Juice Shop / DVWA | Plataformas de referência para labs em aplicações vulneráveis |
-| DORA - Art. 15 | ICT-related training requirements for financial entities |
+| DORA - Art. 13(6) | ICT-related training requirements for financial entities |
 | NIS2 - Art. 21 | Cybersecurity training obligations |
 | ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |
 | ISO/IEC 42001:2023 | AI Management System — workforce competence |

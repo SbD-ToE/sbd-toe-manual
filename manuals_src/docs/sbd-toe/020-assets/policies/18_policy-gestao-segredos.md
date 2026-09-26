@@ -213,7 +213,7 @@ Cada uso operacional em que o agente vê PII tem **base legal RGPD declarada** �
 
 ### 10.3 Sub-processadores {#103-sub-processadores}
 
-O *provider* do modelo é um **sub-processador** quando trata dados pessoais em nome da organização (RGPD Art. 28.º). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
+O *provider* do modelo é um **subcontratante** quando trata dados pessoais por conta da organização (RGPD, art. 28.º); se a própria organização for subcontratante, o *provider* é «outro subcontratante» (art. 28.º, n.os 2 e 4). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
 
 - Contrato de sub-processador com cláusulas explícitas (retention, *training opt-out*, audit rights).
 - Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o *provider* processa fora do EEA.
@@ -251,7 +251,7 @@ Quando a interacção do utilizador com o agente gera dados pessoais, aplicam-se
 - ❌ Enviar PII a *provider* fora da lista aprovada — *shadow AI* com risco RGPD.
 - ❌ Logar *prompts* com PII sem redacção em [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) — `audit trail` torna-se ele próprio repositório de dados pessoais sem base legal específica.
 - ❌ Confiar que o *provider* "não usa para treino" sem cláusula contratual — declarações operacionais não substituem o Art. 28.º.
-- ❌ Ignorar categorias especiais (Art. 9.º RGPD) no prompt — saúde, biometria, dados de menores, etc. exigem base legal reforçada que muitos casos de uso de chatbots não satisfazem.
+- ❌ Ignorar categorias especiais (art. 9.º RGPD) no prompt — saúde, dados biométricos para identificação inequívoca, origem racial ou étnica, etc. — ou dados de crianças (art. 8.º), que exigem condições reforçadas que muitos casos de uso de chatbots não satisfazem.
 - ❌ Tratar redacção como ofuscação suficiente — *pseudonimização* (RGPD) não é anonimização; PII pseudonimizada continua a ser dado pessoal.
 
 ### 10.9 Cruzamento com cross-check RGPD {#109-cruzamento-com-cross-check-rgpd}

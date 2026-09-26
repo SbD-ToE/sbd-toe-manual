@@ -21,7 +21,7 @@ Este addon define o que é o TLPT, o que o SbD-ToE já cobre como base de prepar
 
 ### Regulamento DORA {#regulamento-dora}
 
-O TLPT está regulado pelo **Regulamento (UE) 2022/2554** (DORA), em vigor desde 17 de janeiro de 2025:
+O TLPT está regulado pelo **Regulamento (UE) 2022/2554** (DORA), em vigor desde 16 de janeiro de 2023 e aplicável desde 17 de janeiro de 2025:
 
 | Artigo | Conteúdo |
 |--------|----------|

@@ -915,7 +915,7 @@ Como **GRC / Compliance + Procurement** com apoio de **Jurídico**, quero que ca
 - [ ] **SLA de notificação prévia** de mudanças que alterem comportamento (versão maior do modelo, política de dados, descontinuação)
 - [ ] **SLA de disponibilidade** declarado; *fallback* arquitectónico em caso de *outage* (cross-link Cap. 04 §AI/ML)
 - [ ] **Conformidade declarada com AI Act Art. 53/55** quando o provedor fornece GPAI
-- [ ] **Conformidade declarada com RGPD Art. 28** (sub-processadores) quando há dados pessoais
+- [ ] **Conformidade declarada com o RGPD, art. 28.º** (subcontratantes) quando há dados pessoais
 - [ ] Provedor incluído na lista aprovada ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)) com `risk_classification`
 - [ ] Cláusulas críticas registadas na ficha do provedor; revisão calendarizada
 

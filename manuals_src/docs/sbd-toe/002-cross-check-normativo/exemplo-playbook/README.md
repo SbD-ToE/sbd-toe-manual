@@ -187,7 +187,7 @@ Visão geral, estrutura e instruções de uso
 **Quando usar:**
 - Negociando com fornecedores
 - Incluindo security requirements
-- Alinhando com DORA Art. 26-28
+- Alinhando com DORA Art. 28–30
 
 ---
 

@@ -176,14 +176,14 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 - **Referência:** [Cap. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Cap. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
 
 #### 7.2 AI red teaming contínuo (Art. 55) {#72-ai-red-teaming-contínuo-art-55}
-- **O que:** Programa contínuo de avaliação adversarial materializado em [Cap. 10 §C5 — *eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites): regression de prompt/skill, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B*. Para A4 (GPAI com risco sistémico), cadência mensal de *kill-switch* e actualização do corpus de detecção [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
+- **O que:** Programa contínuo de avaliação adversarial materializado em [Cap. 10 §C5 — *eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites): regression de prompt/skill, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B*. Para agentes em nível A4 (escala interna do SbD-ToE) — e, independentemente do nível, quando se é prestador de GPAI com risco sistémico (Art. 51) —, cadência mensal de *kill-switch* e actualização do corpus de detecção [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
 - **Referência:** [Cap. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Policy 19 §7](/sbd-toe/assets/policies/policy-estrategia-testes)
 
 #### 7.3 Hardening de infraestrutura física e lógica (Art. 55) {#73-hardening-de-infraestrutura-física-e-lógica-art-55}
 - **Referência:** [Cap. 08 — IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 09 — Containers/Runtime](/sbd-toe/sbd-manual/containers-imagens/intro), [Cap. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
 
 #### 7.4 Conformidade contratual declarada (Art. 53/55 *providers*) {#74-conformidade-contratual-declarada-art-5355-providers}
-- **O que:** Quando consumimos GPAI de um *provider*, o contrato declara conformidade Art. 53 (documentação técnica, *summary of training data*, política de *copyright*) e — quando aplicável — Art. 55 (*AI red teaming* contínuo, hardening, *post-market monitoring*).
+- **O que:** Quando consumimos GPAI de um *provider*, o contrato declara conformidade Art. 53 (documentação técnica, *summary of training data*, política de *copyright*) e — quando aplicável — Art. 55 (avaliação do modelo com testagem antagónica documentada, avaliação e atenuação de riscos sistémicos, comunicação de incidentes graves ao Serviço para a IA, cibersegurança do modelo e da infraestrutura física).
 - **Referência:** [Cap. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle), [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura)
 
 #### 7.5 Documentação GPAI, copyright e resumo de dados (delegado) {#75-documentação-gpai-copyright-e-resumo-de-dados-delegado}

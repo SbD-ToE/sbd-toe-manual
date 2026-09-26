@@ -24,7 +24,7 @@ Este documento apresenta um **template exemplar** de como estruturar reporte de 
 
 **Este é um exemplo** - não é o template oficial DORA.
 
-Os reguladores (EBA, BCB, ESMA) publicarão templates ITS oficiais. Este exemplo:
+As normas técnicas (RTS/ITS) com os modelos oficiais são elaboradas pelas AES (EBA, EIOPA e ESMA), através do Comité Conjunto, nos termos do art. 20.º do DORA. Este exemplo:
 - Ilustra **princípios** de estruturação
 - Pode servir como **base interna**
 - Deve ser **adaptado** aos templates regulatórios finais
@@ -137,7 +137,7 @@ Action Items:
 ### 8. Conformidade DORA (Informativo) {#8-conformidade-dora-informativo}
 
 ```
-DORA Art. 18 Threshold Analysis:
+DORA art. 18.º + Reg. Delegado (UE) 2024/1772, art. 8.º–9.º — análise de limiares: serviços críticos afetados? acesso malicioso bem-sucedido com possível perda de dados (art. 9.º, n.º 5, al. b))? clientes > 10 % ou > 100 000; transações > 10 %; duração > 24 h ou indisponibilidade > 2 h (funções críticas/importantes); ≥ 2 Estados-Membros; impacto económico > 100 000 EUR; impacto reputacional (art. 2.º)
 - Availability Impact: `<`20% (low)
 - Confidentiality Impact: None
 - Integrity Impact: None
@@ -204,7 +204,7 @@ Este template estrutura sistemas de tickets de incidentes:
 
 ## Retenção de Logs {#retenção-de-logs}
 
-**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + DORA Art. 18:**
+**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Reg. Delegado (UE) 2024/1774, art. 22.º, al. d) — período definido pela entidade, proporcional à criticalidade e não superior ao necessário):**
 
 ```
 Todos os incidentes + trilho auditoria devem ser retidos:
@@ -244,7 +244,7 @@ Exemplo de envio automático de incidentes do SIEM para sistema de tickets:
 
 ## Próximos Passos {#próximos-passos}
 
-Quando DORA RTS/ITS oficiais saírem:
+Com base nas normas técnicas de reporte já adotadas ao abrigo dos art. 18.º e 20.º do DORA (Reg. Delegado (UE) 2024/1772 — classificação; Reg. Delegado (UE) 2025/301 — conteúdo e prazos; Reg. de Execução (UE) 2025/302 — formulários e modelos):
 1. Comparar este template com oficial
 2. Estender com campos adicionais DORA
 3. Integrar com sistema de reporting regulatório

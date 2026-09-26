@@ -81,7 +81,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **OPS-K07 - IRP activado:** o processo formal de resposta a incidentes (Incident Response Plan) está activado quando existe um ticket ou registo com: classificação do incidente, owner de resposta, timeline de acções, e estado de resolução. Incidentes resolvidos informalmente sem registo não satisfazem este critério.
 
-**OPS-K08 - Retenção conforme regulação:** o período mínimo aplicável depende da regulação sectorial. Referência base: DORA exige 2 anos para logs de ICT; NIS2 não define período mas exige disponibilidade para auditoria. Sistemas sem classificação regulatória aplicam a política interna - mínimo 90 dias para L1, 1 ano para L2, 2 anos para L3.
+**OPS-K08 - Retenção conforme regulação:** o período mínimo aplicável depende da regulação sectorial. DORA: a entidade define o período de conservação com base na avaliação do risco TIC (Reg. Delegado (UE) 2024/1774, art. 12.º); NIS2: para as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690, exige-se um «período predefinido» (anexo, ponto 3.2.5), sem valor numérico; verificar a legislação nacional de transposição. Sistemas sem classificação regulatória aplicam a política interna — por escolha do Manual, mínimo 90 dias para L1, 1 ano para L2 e 2 anos para L3.
 
 ---
 

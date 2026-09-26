@@ -236,7 +236,7 @@ Se consegues responder SIM a isto, tens uma base AppSec forte para uma implement
 
 ## Nota Crítica: Gestão de Exceções em DORA {#nota-crítica-gestão-de-exceções-em-dora}
 
-DORA exige que desvios e exceções sejam formais, auditáveis e aprovados ao nível adequado.
+O quadro DORA exige que as exceções à aplicação das políticas de segurança das TIC sejam registadas e que a resiliência seja assegurada nesses casos (Reg. Delegado (UE) 2024/1774, art. 2.º, n.º 2, al. c)); a aceitação de riscos residuais acima da tolerância exige funções atribuídas, inventário justificado e revisão anual (art. 3.º, al. d)). O nível de aprovação concreto é definido pela entidade.
 
 O que caracteriza uma exceção em SbD-ToE/DORA:
 - desvio formal de um requisito;

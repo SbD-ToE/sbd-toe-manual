@@ -19,7 +19,7 @@ O **Cybersecurity Act** é o **Regulamento (UE) 2019/881** (CELEX: [32019R0881](
 - reforça o mandato da **ENISA** enquanto agência europeia de cibersegurança; e
 - estabelece um **quadro europeu de certificação de cibersegurança** para produtos, serviços e processos TIC.
 
-No âmbito deste quadro, estão a ser desenvolvidos vários **esquemas europeus de certificação**, nomeadamente:
+vários **sistemas europeus de certificação da cibersegurança** («esquemas», na designação corrente)
 
 - **EUCC** - para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
 - **EUCS** - para serviços de computação em nuvem;
@@ -43,17 +43,17 @@ O manual SbD-ToE fornece a "camada de engenharia" que permite:
 
 ---
 
-Os esquemas europeus de certificação de cibersegurança, no âmbito do **Cybersecurity Act (CSA)**, visam **reconhecimento UE** de que produtos/serviços cumprem requisitos de segurança. A **ENISA** coordena e suporta a elaboração de esquemas; a certificação é executada por **Organismos de Avaliação da Conformidade (CABs)** acreditados e supervisionada por **autoridades nacionais**.
+Os esquemas europeus de certificação de cibersegurança, no âmbito do **Cybersecurity Act (CSA)**, visam **reconhecimento UE** de que produtos/serviços cumprem requisitos de segurança. A **ENISA** elabora os projetos de sistema, a pedido da Comissão, que os adota por ato de execução; a certificação é executada por **Organismos de Avaliação da Conformidade (CABs)** acreditados e supervisionada por **autoridades nacionais**.
 
 Esta nota explica "para quem se destina", quando é útil/necessária e como **reaproveitar controlos e evidências do SbD‑ToE**.
 
 ## Para quem se destina {#para-quem-se-destina}
 
-- **Fabricantes de produtos TIC** → esquema **EUCC** (para ICT products; base Common Criteria). Níveis: Basic, Substantial, High.
+- **Fabricantes de produtos TIC** → sistema **EUCC** (Reg. de Execução (UE) 2024/482; base Critérios Comuns). Níveis de garantia: «substancial» (AVA_VAN 1–2) e «elevado» (AVA_VAN 3–5); o EUCC não prevê o nível «básico».
 - **Prestadores de serviços Cloud** → esquema **EUCS** (para serviços cloud). Níveis: Basic, Substantial, High.
 - **Fornecedores/Operadores 5G** → esquema **EU5G** (para redes e componentes 5G). Níveis: alinhados ao risco.
 - **CABs/Laboratórios** → aplicam os critérios dos esquemas.
-- **Autoridades Nacionais** → supervisionam, reconhecem e listam certificados.
+- **Autoridades nacionais de certificação da cibersegurança** → supervisionam e fazem cumprir as regras dos sistemas (e, no nível «elevado», emitem certificados); a ENISA publica os certificados no seu sítio Web.
 - **Compradores (incl. setor público)** → usam certificados como critério de procurement.
 
 Notas:

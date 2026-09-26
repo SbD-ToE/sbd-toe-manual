@@ -5732,3 +5732,141 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 11: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
     nem reescrever.'
+- key: v1_entity_slg_central_ingestion_normalization
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Central Log Ingestion And Normalization
+  en_variants: []
+  pt: Central Log Ingestion And Normalization
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACM-SLG-002) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_slg_event_catalog_coverage
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Security Event Catalog And Coverage Verification
+  en_variants: []
+  pt: Security Event Catalog And Coverage Verification
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACM-SLG-005) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_slg_critical_event_catalog_discipline
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Critical Security Event Coverage And Catalog Discipline
+  en_variants: []
+  pt: Critical Security Event Coverage And Catalog Discipline
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-SLG-001) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_slg_centralized_ingestion_accountability
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Centralized Log Ingestion And Source Accountability
+  en_variants: []
+  pt: Centralized Log Ingestion And Source Accountability
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACO-SLG-005) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_slg_critical_event_catalog_governance
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Critical Event Catalog Governance
+  en_variants: []
+  pt: Critical Event Catalog Governance
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACP-SLG-001) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'
+- key: v1_entity_slg_structured_centralized_logging
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Structured And Centralized Security Logging
+  en_variants: []
+  pt: Structured And Centralized Security Logging
+  pt_variants: []
+  ontology_id: null
+  sense: Nome (label EN) de entidade AppSec Core V1 (ACP-SLG-002) nas tabelas de rastreabilidade — identificador
+    da ontologia, não prosa do Manual.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
+    nem reescrever.'

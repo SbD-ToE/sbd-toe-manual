@@ -6045,3 +6045,193 @@ terms:
   pending_reason: null
   blocks_translation: false
   notes: '[MA 2026-09-26] Docs do MCP: identificador do servidor verbatim (src/tools/get-macro-processes.ts).'
+- key: role_tech_lead
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: Tech Lead
+  en_variants:
+  - Tech Leads
+  pt: Tech Lead
+  pt_variants:
+  - Tech Leads
+  ontology_id: null
+  sense: 'Papel canónico `tech-lead` (decisão A do lead). Distinto de Scrum Master / Team Lead (TL2: «não
+    confundir»).'
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_rh_peopleops
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: HR / People Operations
+  en_variants: []
+  pt: RH / PeopleOps
+  pt_variants: []
+  ontology_id: null
+  sense: Papel canónico `rh-peopleops` (N1); tier do meio (outro domínio da organização).
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_procurement
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: Procurement
+  en_variants:
+  - Procurement Officer
+  pt: Procurement
+  pt_variants:
+  - Procurement Officer
+  ontology_id: null
+  sense: Papel canónico `procurement` (N2); tier do meio.
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_juridico
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: Legal
+  en_variants: []
+  pt: Jurídico
+  pt_variants: []
+  ontology_id: null
+  sense: Papel canónico `legal` (P15); tier do meio; composto frequente «GRC + Jurídico» / «GRC + Legal».
+    Só o nome do papel (maiúscula), não o adjectivo.
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_secops
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: SecOps (Security Operations)
+  en_variants: []
+  pt: SecOps (Operações de Segurança)
+  pt_variants: []
+  ontology_id: null
+  sense: Nome do papel `operacoes` depois do P1 (id inalterado); só a operação de segurança (P2).
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_juridico_dpo
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: Legal (DPO)
+  en_variants: []
+  pt: Jurídico (DPO)
+  pt_variants: []
+  ontology_id: null
+  sense: Especialização DPO de Jurídico (P16).
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_rh_formacao
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: HR (Learning & Development)
+  en_variants: []
+  pt: RH (Formação)
+  pt_variants: []
+  ontology_id: null
+  sense: Especialização de RH; formas Training Manager / Training (P17).
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'
+- key: role_rh_recrutamento
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: HR (Recruiting)
+  en_variants: []
+  pt: RH (Recrutamento)
+  pt_variants: []
+  ontology_id: null
+  sense: Especialização de RH; formas Recruiter / HR/Recruiter.
+  senses: []
+  evidence: sbd-toe-knowledge-graph@3f7b21e agentic/briefs/2026-09-26-codex-correccao-papeis/_roles.yaml
+    (sbdtoe-role-list/1); decisões do lead 2026-09-26 (hub 2026-09-26-orchestrator-despacho-correccao-papeis.md)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
+    prosa (épico §9).'

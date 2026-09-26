@@ -18,6 +18,7 @@ Verificam classificações de risco, rastreabilidade, evidência de aplicação,
 - Validam a aplicação efetiva das práticas prescritas
 - Avaliam classificações de risco, requisitos, rastreabilidade e evidências
 - Produzem relatórios independentes e recomendações de melhoria
+- Não auditam processos, controlos ou decisões em que participaram: o auditor e a função auditada são pessoas distintas
 - Comprovam conformidade perante autoridades
 
 ### Contexto Organizacional {#contexto-organizacional}

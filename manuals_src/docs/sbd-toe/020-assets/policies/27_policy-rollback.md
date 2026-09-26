@@ -172,7 +172,7 @@ Cada rollback executado em produção deve produzir evidência auditável:
 |---|---|
 | DevOps / SRE | Configurar e manter capacidade de rollback automático; executar testes periódicos; documentar procedimentos |
 | Developer | Garantir que migrações de BD têm down migration; testar rollback em staging antes de deploy em produção |
-| Tech Lead / On-Call | Tomar decisão de rollback manual quando necessário; registar a decisão |
+| Tech Lead / DevOps / SRE (On-Call) | Tomar decisão de rollback manual quando necessário; registar a decisão |
 | AppSec Engineer | Verificar que o processo de rollback não compromete controlos de segurança |
 | GRC / Compliance | Auditar registos de rollback; verificar que RTOs são cumpridos nos testes |
 

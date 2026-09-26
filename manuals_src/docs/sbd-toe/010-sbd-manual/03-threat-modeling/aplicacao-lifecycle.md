@@ -33,7 +33,7 @@ Inclui modelos reutilizáveis de user stories, ações por papel, artefactos esp
 | Papel / Função             | Responsabilidades-chave |
 |----------------------------|--------------------------|
 | Arquitetos de Software     | Facilitar sessões, manter modelos atualizados e garantir consistência arquitetural |
-| Scrum Master / Team Lead   | **Responsável pela decisão final do modelo** no contexto da equipa/projeto (aprovação do baseline e revisões) |
+| Tech Lead                  | **Responsável pela decisão final do modelo** no contexto da equipa/projeto (aprovação do baseline e revisões) |
 | Developer                  | Identificar fluxos, pontos de entrada, regras de negócio e mudanças técnicas relevantes |
 | QA                         | Traduzir ameaças em critérios de aceitação e validar evidência de mitigação/testes |
 | AppSec Engineer            | Identificar ameaças técnicas, rever mitigação, validar risco residual e apoiar decisões de exceção |
@@ -371,7 +371,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 |:---|:---|:---|
 | L1 | Opcional | Checklist simplificada |
 | L2 | Sim | Análise formal de privacidade |
-| L3 | Sim | LINDDUN completo + validação independente (GRC / Compliance (DPO)) |
+| L3 | Sim | LINDDUN completo + validação independente (DPO) |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -390,7 +390,7 @@ O Threat Modeling só é controlo de segurança quando existe um modelo aprovado
 
 :::userstory
 **História.**  
-Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero aprovar formalmente o Threat Model (baseline e revisões), para garantir decisão explícita, rastreabilidade e auditabilidade.
+Como **Tech Lead** e **AppSec Engineer**, quero aprovar formalmente o Threat Model (baseline e revisões), para garantir decisão explícita, rastreabilidade e auditabilidade.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que o Threat Model foi atualizado  
@@ -415,7 +415,7 @@ Como **Scrum Master / Team Lead** e **AppSec Engineer**, quero aprovar formalmen
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Opcional | Aprovação leve (registo simples) |
-| L2 | Sim | Aprovação formal por Scrum Master / Team Lead + AppSec Engineer |
+| L2 | Sim | Aprovação formal por Tech Lead + AppSec Engineer |
 | L3 | Sim | Aprovação formal + revisão independente (segregação) |
 
 **Integração no SDLC.**
@@ -513,7 +513,7 @@ Como **Software Architect** e **AppSec Engineer**, quero executar o [playbook ag
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design | Introdução do agente no sistema | `software_architect` + `appsec` | Antes da activação do *mandate* |
+| Design | Introdução do agente no sistema | Arquitetos de Software + AppSec Engineer | Antes da activação do *mandate* |
 | Subida de nível | Promoção A1→A2 ou superior | `appsec` | Antes da nova activação |
 | Alteração de *tools* | Adição/remoção em `tools_allowlist` | `appsec` | Antes de a *tool* entrar em uso |
 | Mudança de modelo | Versão maior do *provider* | `appsec` | Antes do *cutover* |
@@ -562,7 +562,7 @@ Como **Software Architect** e **AppSec Engineer**, quero estender o threat model
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design | Introdução de componente AI/ML sem tool-use | `software_architect` + `appsec` | Antes do go-live |
+| Design | Introdução de componente AI/ML sem tool-use | Arquitetos de Software + AppSec Engineer | Antes do go-live |
 | Alteração | Troca de modelo base, dataset ou pipeline RAG | `appsec` | Antes do cutover |
 
 **Ligações úteis.** [Metodologias — §AI/ML](./addon/metodologias-e-ferramentas#ai-ml) · [`THR-008`](./addon/catalogo-requisitos-threat-modeling)
@@ -605,7 +605,7 @@ Como **AppSec Engineer** e **Product Owner**, quero derivar abuse/misuse cases n
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Requisitos / Threat Modeling | Início de épico ou fluxo funcional relevante | `appsec` + `product_owner` | Antes da derivação de requisitos |
+| Requisitos / Threat Modeling | Início de épico ou fluxo funcional relevante | AppSec Engineer + Product Owner | Antes da derivação de requisitos |
 
 **Ligações úteis.** [Método de Abuse e Misuse Cases](./addon/abuse-misuse-cases) · [Estratégia de testes (Cap. 10)](/sbd-toe/sbd-manual/testes-seguranca/addon/estrategia-testes)
 
@@ -619,7 +619,7 @@ A revisão independente cobre os pontos cegos da equipa; em alto risco, o métod
 
 :::userstory
 **História.**   
-Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que o threat model seja revisto por elemento independente da equipa de entrega antes do go-live a partir de L2, e que sistemas de alto risco apliquem PASTA como metodologia, para garantir cobertura de pontos cegos e rastreio formal ameaça → risco → controlo.  
+Como **AppSec Engineer** e **Tech Lead**, quero que o threat model seja revisto por elemento independente da equipa de entrega antes do go-live a partir de L2, e que sistemas de alto risco apliquem PASTA como metodologia, para garantir cobertura de pontos cegos e rastreio formal ameaça → risco → controlo.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um sistema L2+ a entrar em go-live ou com alteração arquitetural material  
@@ -651,7 +651,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que o threat mode
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
 | Pré go-live | Go-live de aplicação L2+ ou alteração arquitetural material | `appsec` (independente) | Antes do go-live (bloqueante) |
-| Design | Sistema regulado / alto risco | `software_architect` + `appsec` | Na seleção de metodologia |
+| Design | Sistema regulado / alto risco | Arquitetos de Software + AppSec Engineer | Na seleção de metodologia |
 
 **Ligações úteis.** [`THR-007`](./addon/catalogo-requisitos-threat-modeling) · [`THR-003`](./addon/catalogo-requisitos-threat-modeling) · [Metodologias — comparação PASTA](./addon/metodologias-e-ferramentas)
 
@@ -695,7 +695,7 @@ Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Threat Modeling | Finalização ou reutilização de threat model | `appsec` + `software_architect` | Antes da aprovação do baseline |
+| Threat Modeling | Finalização ou reutilização de threat model | AppSec Engineer + Arquitetos de Software | Antes da aprovação do baseline |
 
 **Ligações úteis.** [Riscos de Processo no Threat Modeling](./addon/riscos-processo-threat-modeling) · [Validação e Evidência](./addon/validacao-evidencia-threat-modeling)
 
@@ -709,7 +709,7 @@ Como **AppSec Engineer** e **Arquitetos de Software**, quero reconhecer e tratar
 | Integração em CI/CD              | Não aplicável                            | Revisão periódica                              | Automação integrada e bloqueante                                 |
 | Risco aceite                     | Informal                                 | Documentado                                    | Formal, aprovado por AppSec Engineer e com sunset definido       |
 | Automação / Reutilização         | Não aplicável                            | Recomendado (ferramenta ou script)             | Obrigatório (ferramenta centralizada, integração contínua)       |
-| **Análise LINDDUN (privacidade)**| Não aplicável                            | Obrigatória se houver dados pessoais           | Sempre obrigatória, com revisão por GRC / Compliance (DPO)       |
+| **Análise LINDDUN (privacidade)**| Não aplicável                            | Obrigatória se houver dados pessoais           | Sempre obrigatória, com revisão por DPO                          |
 
 ---
 

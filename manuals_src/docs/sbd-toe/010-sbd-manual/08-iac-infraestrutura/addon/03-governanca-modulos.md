@@ -119,7 +119,7 @@ devem aplicar-se **regras reforçadas**:
 | DevOps / Infra     | Integração técnica e consumo de módulos             |
 | Arquitetura        | Definição de padrões modulares e fontes autorizadas |
 | AppSec / Segurança | Validação de origem, integridade e risco            |
-| Cloud / Plataforma | Gestão do repositório interno e ciclo de vida       |
+| DevOps / SRE (Plataforma) | Gestão do repositório interno e ciclo de vida       |
 | GRC / Compliance   | Supervisão de aprovação e rastreabilidade           |
 
 ---

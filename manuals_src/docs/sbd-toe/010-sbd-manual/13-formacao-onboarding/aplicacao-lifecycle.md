@@ -30,7 +30,7 @@ genia: us-format-normalization
 | **Security Champion** | Mentorar equipas, facilitar peer-learning |
 | **Gestão Executiva** | Apoiar adoção, validar conformidade regulatória |
 | **GRC / Compliance** | Gerir rastreabilidade, auditorias, KPIs |
-| **Security Champion (RH)** | Operar LMS, gerir onboarding, integrar em PDI |
+| **RH / PeopleOps** | Operar LMS, gerir onboarding, integrar em PDI |
 | **Arquitetos de Software** | Contribuir ao threat modeling e padrões seguros |
 | **Operações (Ops)** | Participar em simulações, comunicação em incidentes |
 | **Fornecedores / Terceiros** | Receber formação mínima obrigatória |
@@ -44,7 +44,7 @@ genia: us-format-normalization
 
 :::userstory
 **História.**   
-Como **Security Champion (RH)**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
+Como **RH / PeopleOps**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** novo colaborador  
@@ -72,7 +72,7 @@ Como **Security Champion (RH)**, quero **garantir formação obrigatória de onb
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Entrada de novo colaborador | Security Champion (RH) + AppSec Engineer | Antes de acesso técnico |
+| Onboarding | Entrada de novo colaborador | RH / PeopleOps + AppSec Engineer | Antes de acesso técnico |
 
 **Ligações úteis.**  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -113,7 +113,7 @@ Como **AppSec Engineer**, quero **fornecer formação contínua por perfil (Dev,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Ciclo contínuo | Trimestral (L3) / Semestral (L2) / Anual (L1) | AppSec Engineer + Security Champion (RH) | Deadline comunicado com 2 semanas |
+| Ciclo contínuo | Trimestral (L3) / Semestral (L2) / Anual (L1) | AppSec Engineer + RH / PeopleOps | Deadline comunicado com 2 semanas |
 
 **Ligações úteis.**  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -406,7 +406,7 @@ Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos po
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Governance/Auditoria | Anual (Q1) ou novo risco | AppSec Engineer + GRC / Compliance + Security Champion (RH) | Antes do ciclo de formação novo |
+| Governance/Auditoria | Anual (Q1) ou novo risco | AppSec Engineer + GRC / Compliance + RH / PeopleOps | Antes do ciclo de formação novo |
 
 **Ligações úteis.**  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -459,7 +459,7 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Governance | Classificação da aplicação | AppSec Engineer + Security Champion (RH) | Antes de primeira atribuição técnica |
+| Onboarding / Governance | Classificação da aplicação | AppSec Engineer + RH / PeopleOps | Antes de primeira atribuição técnica |
 
 **Ligações úteis.**  
 [Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
@@ -507,7 +507,7 @@ Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador*
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Entrada de novo colaborador | Security Champion (RH) + GRC / Compliance | Antes de acesso técnico |
+| Onboarding | Entrada de novo colaborador | RH / PeopleOps + GRC / Compliance | Antes de acesso técnico |
 
 **Ligações úteis.**  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -555,7 +555,7 @@ Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de valida�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Contínuo | Conclusão de trilho ou anualmente | AppSec Engineer + Security Champion (RH) | Antes/durante acesso |
+| Onboarding / Contínuo | Conclusão de trilho ou anualmente | AppSec Engineer + RH / PeopleOps | Antes/durante acesso |
 
 **Ligações úteis.**  
 [Template de Quiz para Onboarding](./addon/quiz-onboarding)  
@@ -604,7 +604,7 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Contrato de fornecedor | GRC / Compliance + Security Champion (RH) + AppSec Engineer | Antes de acesso |
+| Onboarding | Contrato de fornecedor | GRC / Compliance + RH / PeopleOps + AppSec Engineer | Antes de acesso |
 
 **Ligações úteis.**  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
@@ -717,7 +717,7 @@ Como **AppSec Engineer / RH**, quero **definir e executar um caminho de remedia�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Resultado abaixo do limiar | AppSec Engineer + Security Champion (RH) | Remediação iniciada antes de qualquer concessão de acesso |
+| Onboarding | Resultado abaixo do limiar | AppSec Engineer + RH / PeopleOps | Remediação iniciada antes de qualquer concessão de acesso |
 
 **Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-003)](./addon/catalogo-requisitos-formacao)  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -760,7 +760,7 @@ Como **GRC / Gestão Executiva**, quero **registar um termo de responsabilidade 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Contrato de terceiro com acesso técnico | GRC / Compliance + Security Champion (RH) + AppSec Engineer | Termo registado antes de acesso |
+| Onboarding | Contrato de terceiro com acesso técnico | GRC / Compliance + RH / PeopleOps + AppSec Engineer | Termo registado antes de acesso |
 
 **Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-007)](./addon/catalogo-requisitos-formacao)  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
@@ -846,7 +846,7 @@ Como **AppSec Engineer / RH**, quero **tornar obrigatória e verificável a form
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Ciclo contínuo | Acesso a tooling de IA/automação ou novo risco | AppSec Engineer + Security Champion (RH) | Antes de uso autónomo de tooling de IA |
+| Onboarding / Ciclo contínuo | Acesso a tooling de IA/automação ou novo risco | AppSec Engineer + RH / PeopleOps | Antes de uso autónomo de tooling de IA |
 
 **Ligações úteis.** [Formação em Uso Seguro de IA e Tooling](./addon/formacao-uso-seguro-ia-tooling)  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -875,7 +875,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 - [ ] Permissões iniciais read-only, evoluindo só após validação  
 - [ ] Logging de toda a atividade (logins, commits, acessos a secrets) ativado  
 - [ ] Exercícios práticos (≥70%) e quiz de compreensão (≥80%) concluídos  
-- [ ] Sign-off de conclusão (Scrum Master / Team Lead + AppSec) condiciona o acesso real  
+- [ ] Sign-off de conclusão (Tech Lead + AppSec) condiciona o acesso real  
 - [ ] Destruição do sandbox e revogação de credenciais pós-onboarding; logs arquivados  
 
 :::
@@ -890,7 +890,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Onboarding técnico de contractor | DevOps / SRE + AppSec Engineer + Security Champion (Training Manager) | Provisão T-5 dias; sign-off antes de acesso real (T+7) |
+| Onboarding | Onboarding técnico de contractor | DevOps / SRE + AppSec Engineer + Training Manager | Provisão T-5 dias; sign-off antes de acesso real (T+7) |
 
 **Ligações úteis.** [Guia de Preparação Sandbox para Contractors](./addon/guia-preparacao-sandbox)  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  

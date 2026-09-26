@@ -1,0 +1,257 @@
+# Lista formal de papéis do SbD-ToE — dado lido pelo compile (KG) e pelo MCP.
+# Formal role list of SbD-ToE — data read at compile time (KG) and by the MCP.
+#
+# Fonte: decisões do programme lead de 2026-09-26 (despacho `2026-09-26-orchestrator-despacho-correccao-papeis.md`),
+# sobre a lista revista v2 do Codex. Nomes PT/EN à nascença (épico i18n §9); EN em inglês britânico (§7).
+# Este ficheiro é o ÚNICO sítio onde se decide que forma escrita resolve para que papel.
+#
+# Regras de leitura (implementadas em `sbd-toe-knowledge-graph/src/sbdtoe_indexing/core/role_list.py`):
+#  - cada forma é comparada por slug (sem acentos, minúsculas, separadores → «-»);
+#  - uma forma pertence a UMA entrada; o compile falha se duas entradas reclamarem a mesma forma;
+#  - rótulos compostos partem-se pelos separadores; «X (Y)»: Y é papel/especialização se estiver na lista,
+#    senão é anotação de função (nunca papel);
+#  - os ids dos papéis canónicos são estáveis e servidos; os nomes podem mudar sem mudar o id.
+
+schema: sbdtoe-role-list/1
+version: 3
+decided: "2026-09-26"
+
+principle:
+  pt: >-
+    Um papel é um conjunto de responsabilidades, não uma pessoa. Uma pessoa pode acumular papéis — o Tech Lead
+    pode ser quem faz a arquitectura, ou até um júnior, se a organização o decidir. O Manual prescreve o que o papel
+    tem de fazer, não quem o faz. As únicas restrições sobre quem são as incompatibilidades.
+  en: >-
+    A role is a set of responsibilities, not a person. One person may hold several roles — the Tech Lead may be
+    whoever does the architecture, or even a junior, if the organisation so decides. The Manual prescribes what the
+    role must do, not who does it. The only constraints on who are the incompatibilities.
+
+types:
+  canonical:        {pt: Papel canónico, en: Canonical role}
+  alias:            {pt: Alias, en: Alias}
+  specialisation:   {pt: Especialização, en: Specialisation}
+  composite:        {pt: Composto, en: Composite}
+  incompatibility:  {pt: Incompatibilidade, en: Incompatibility}
+  four_eyes:        {pt: Dupla aprovação, en: Four-eyes approval}
+  external_actor:   {pt: Actor externo, en: External actor}
+  automated_actor:  {pt: Actor automático, en: Automated actor}
+  placeholder:      {pt: Marcador de responsável, en: Owner placeholder}
+  subject:          {pt: Sujeito do processo, en: Process subject}
+  function_annotation: {pt: Anotação de função, en: Function annotation}
+
+separators:
+  composition: ["/", "+", ",", ";", " e ", " y ", " and "]
+  alternative: [" ou ", " or "]            # P11: alternativa — ambos os papéis podem executar; não é composto
+  participation: [" com apoio de ", " com apoio do ", " com apoio da ", " com apoio dos ", " com apoio das ", " com "]  # P11: participação; não é composto
+
+# Qualificadores: palavras que acompanham um papel sem serem papel («CISO ou equivalente», «Legal se necessário»).
+# São anotações de função (P10) — registadas, nunca papel.
+qualifiers: [equivalente, ou equivalente, se necessário, quando aplicável, delegado, sénior, senior]
+
+# Formas que são também substantivos comuns: resolvem como rótulo inteiro numa posição de papel (voz de US,
+# coluna Responsável), mas NÃO como menção solta numa linha de texto (léxico de envolvimentos de decisão).
+label_only_forms: [Segurança, Sec, Gestão, Management, Produto, Desenvolvimento, Testes, Test, Operations, Compliance,
+                   Arquitetura, Arquitectura, Plataforma, Infraestrutura, Infrastructure, Infra, Cloud, Training, Direção,
+                   Direcção, Lead, Negócio, BA, Terceiros, Auditoria]
+
+roles:
+  - id: appsec-engineer
+    name: {pt: AppSec Engineer, en: AppSec Engineer}
+    aliases: [AppSec, AppSec Engineers, AppSec Lead, AppSec Manager, AppSec Team, Equipa AppSec, Equipa de Segurança,
+              Segurança, Sec, Responsável de segurança]
+    specialisations:
+      - id: pentest
+        name: {pt: AppSec Engineer (Pentest), en: AppSec Engineer (Penetration Testing)}
+        forms: [PenTester, Pentester, PenTesters, Red Team, Equipa ofensiva]
+        note: pode ser externa — o Manual pede evidência independente (INC-07)
+
+  - id: arquitetos-software
+    name: {pt: Arquitetos de Software, en: Software Architects}
+    aliases: [Arquiteto de Software, Arquitecto de Software, Arquitectos de Software, Arquiteto, Arquitecto, Arquitetos,
+              Arquitectos, Arquitetura, Arquitectura, Arquitecto técnico, Arquiteto técnico, Software Architect,
+              Software Architects, Architect, Equipa de arquitetura, Equipa de arquitectura]
+
+  - id: auditores
+    name: {pt: Auditores, en: Auditors}
+    aliases: [Auditor, Auditoria, Auditores Internos, Auditoria Interna, Internal Auditor, Auditores internos e externos]
+
+  - id: developer
+    name: {pt: Developer, en: Developer}
+    aliases: [Dev, Devs, Developers, Dev Team, Equipa de Desenvolvimento, Equipa Dev, Desenvolvimento, Desenvolvedor,
+              Desenvolvedores, Programador, Programadores]
+
+  - id: devops-sre
+    name: {pt: DevOps / SRE, en: DevOps / SRE}
+    aliases: [DevOps, SRE, DevOps Engineer, DevOps Lead, SRE sénior, Equipa de DevOps, IaC Lead]
+    specialisations:
+      - id: plataforma
+        name: {pt: DevOps / SRE (Plataforma), en: DevOps / SRE (Platform)}
+        forms: [Plataforma, Infraestrutura, Infrastructure, Infra, Engenharia de plataforma, Platform Engineering,
+                Platform Engineer, Cloud, CloudEng]
+        note: >-
+          P5 — onde a linha é decisão de desenho, o Manual escreve o composto com Arquitetos de Software
+          (lista das linhas para revisão do lead no relatório do Codex)
+      - id: release
+        name: {pt: DevOps / SRE (Release), en: DevOps / SRE (Release Management)}
+        forms: [Release Manager, Release Management]
+
+  - id: fornecedores-terceiros
+    name: {pt: Fornecedores / Terceiros, en: Suppliers / Third Parties}
+    aliases: [Fornecedor, Fornecedores, Terceiros, Supplier, Suppliers, Third Party, Third-Party, Third Parties]
+
+  - id: gestao-executiva
+    name: {pt: Gestão Executiva / CISO, en: Executive Management / CISO}
+    aliases: [Gestão Executiva, CISO, Gestão, Management, Executive Management, Direção, Direcção, CTO, CEO,
+              Security Officer]
+    specialisations:
+      - id: pmo
+        name: {pt: Gestão Executiva (PMO), en: Executive Management (PMO)}
+        forms: [PMO]
+
+  - id: grc-compliance
+    name: {pt: GRC / Compliance, en: GRC / Compliance}
+    aliases: [GRC, Compliance, GRC Analyst, Compliance Officer]
+
+  - id: operacoes
+    name: {pt: SecOps (Operações de Segurança), en: SecOps (Security Operations)}   # P1 — id inalterado
+    aliases: [SecOps, Ops, Operações, Operações (Ops), Operations, Security Operations, Equipa de Operações]
+    specialisations:
+      - id: ir
+        name: {pt: SecOps (IR), en: SecOps (IR)}
+        forms: [IR, Incident Response, Resposta a Incidentes, SecOps (Resposta a Incidentes), Incident Responder,
+                Incident Responders, CSIRT]
+        note: P3 — «SecOps (IR)» e «SecOps (Resposta a Incidentes)» são uma só especialização
+      - id: soc
+        name: {pt: SecOps (SOC), en: SecOps (SOC)}
+        forms: [SOC, Security Monitoring, Security Monitoring Team]
+      - id: incident-commander
+        name: {pt: SecOps (Comandante de Incidente), en: SecOps (Incident Commander)}
+        forms: [Incident Commander]
+      - id: on-call
+        name: {pt: SecOps (Prevenção de segurança), en: SecOps (Security On-Call)}
+        forms: []           # alcançada só pela regra de contexto `on-call` (P4b)
+
+  - id: product-owner
+    name: {pt: Product Owner, en: Product Owner}
+    aliases: [PO, Product Owners, Product Manager, Gestão de Produto, Gestor de Produto, Product Management,
+              Application Manager, Gestor de Aplicação, Produto]
+    specialisations:
+      - id: analise-negocio
+        name: {pt: Product Owner (Análise de Negócio), en: Product Owner (Business Analysis)}
+        forms: [BA, Business Analyst, Negócio]
+
+  - id: qa
+    name: {pt: QA, en: QA}
+    aliases: [Testes, Tester, Testers, Test Engineer, QA Test Engineer, Quality Assurance, Quality Assurance (QA), Test]
+
+  - id: scrum-master
+    name: {pt: Scrum Master / Team Lead, en: Scrum Master / Team Lead}
+    aliases: [Scrum Master, Team Lead]      # TL2 — «Team Lead» fica aqui; não confundir com Tech Lead
+
+  - id: security-champion
+    name: {pt: Security Champion, en: Security Champion}
+    aliases: [Security Champions, Champion, Champions]
+
+  - id: tech-lead                            # decisão A — id novo
+    name: {pt: Tech Lead, en: Tech Lead}
+    aliases: [Tech Leads, Líder Técnico, Líderes Técnicos, Dev Lead, TL, Technical Lead, Lead, Liderança técnica]
+
+  - id: rh-peopleops                         # N1 — id reutilizado (P19)
+    name: {pt: RH / PeopleOps, en: HR / People Operations}
+    aliases: [RH, HR, PeopleOps, People Ops, People Operations, Recursos Humanos, HR Manager]
+    specialisations:
+      - id: formacao
+        name: {pt: RH (Formação), en: HR (Learning & Development)}
+        forms: [Training Manager, Training]
+        note: P17
+      - id: recrutamento
+        name: {pt: RH (Recrutamento), en: HR (Recruiting)}
+        forms: [Recruiter, HR/Recruiter]
+
+  - id: procurement                          # N2 — id reutilizado (P19)
+    name: {pt: Procurement, en: Procurement}
+    aliases: [Compras]
+    specialisations:
+      - id: officer
+        name: {pt: Procurement (Procurement Officer), en: Procurement (Procurement Officer)}
+        forms: [Procurement Officer]
+
+  - id: legal                                # P15 — id reutilizado (P19)
+    name: {pt: Jurídico, en: Legal}
+    aliases: [Jurídica]
+    specialisations:
+      - id: dpo
+        name: {pt: Jurídico (DPO), en: Legal (DPO)}
+        forms: [DPO, Data Protection Officer, Encarregado de Proteção de Dados]
+        note: P16 — pode ser externo; a independência é a incompatibilidade INC-06
+
+composites:
+  - forms: [DevSecOps]
+    members: [devops-sre, appsec-engineer]
+    name: {pt: DevSecOps, en: DevSecOps}
+    note: P8 — composto também na lista servida
+  - forms: [AI Reliability Engineer]
+    members: [appsec-engineer, devops-sre, grc-compliance]
+    name: {pt: Engenheiro de Fiabilidade de IA, en: AI Reliability Engineer}
+  - forms: [GRC / Legal, GRC / Jurídico, GRC + Jurídico]
+    members: [grc-compliance, legal]
+    name: {pt: GRC + Jurídico, en: GRC + Legal}
+    note: P15
+
+context_rules:
+  - id: on-call
+    forms: [On-Call, On Call, On-call lead, On-call sénior]
+    note: P4b — só o on-call de segurança é SecOps; o de disponibilidade é DevOps / SRE
+    security_markers: [segurança, security, incidente, incident, alerta de segurança, SIEM, SOC, IRP, playbook,
+                       contenção, containment, ameaça, threat, forense]
+    if_security: operacoes:on-call
+    otherwise: devops-sre
+    without_context: unresolved      # sem contexto não se adivinha: declarado
+
+non_roles:
+  - kind: external_actor
+    forms: [Facilities, TI, IT, TI corporativa, Corporate IT, DBA, Comunidade externa, Autoridade TLPT, Regulador,
+            Consultores]
+    note: N4 — TI corporativa e DBA são actores externos, como Facilities
+  - kind: automated_actor
+    forms: [Pipeline, Pipeline CI/CD, CI/CD, CI, CD, Runner, Runtime, Admission Controller, Agente, Agent,
+            Automático, Automatic, Scanner SCA, Bot, Automatizado]
+  - kind: placeholder
+    forms: [Owner, Owner técnico, Owner do agente, Security Owner, GRC Owner, Responsável técnico, Revisores definidos]
+  - kind: subject
+    forms: [Contractor, Contratado, Contractors, atacante, Atacante]
+    note: «atacante» é a persona dos abuse cases (cap. 03), não um responsável
+
+incompatibilities:
+  - {id: INC-01, not_same_person: ["autor da alteração (PR de código ou IaC)", "revisor / aprovador dessa alteração"],
+     name: {pt: Quem escreve não aprova, en: Author does not approve}, evidence: explícita,
+     anchors: ["020-assets/policies/15_policy-revisao-codigo.md:113", "020-assets/policies/22_policy-aprovacao-plan-iac.md:85"]}
+  - {id: INC-02, not_same_person: ["aprovador do plan IaC", "executor do apply em produção"],
+     name: {pt: Quem aprova não executa, en: Approver does not execute}, evidence: explícita,
+     anchors: ["020-assets/policies/22_policy-aprovacao-plan-iac.md:85", "010-sbd-manual/08-iac-infraestrutura/aplicacao-lifecycle.md:852"]}
+  - {id: INC-03, not_same_person: ["revisor do threat model / da arquitectura", "equipa de entrega do sistema revisto"],
+     name: {pt: Revisão independente da equipa de entrega, en: Review independent of the delivery team}, evidence: explícita,
+     anchors: ["010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md:53", "010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md:614"]}
+  - {id: INC-04, not_same_person: ["validador da classificação de risco", "owner da aplicação classificada"],
+     name: {pt: Segundo par de olhos na classificação, en: Second pair of eyes on classification}, evidence: explícita,
+     anchors: ["010-sbd-manual/00-fundamentos/macro-processos.md:115"]}
+  - {id: INC-05, not_same_person: ["revisor da selecção de requisitos", "quem seleccionou os requisitos"],
+     name: {pt: Revisão independente da selecção, en: Independent review of the selection}, evidence: explícita,
+     anchors: ["020-assets/policies/07_policy-requisitos-seguranca.md:58"]}
+  - {id: INC-06, not_same_person: ["legal:dpo", "quem decide finalidades e meios do tratamento"],
+     name: {pt: DPO independente, en: Independent DPO}, evidence: "fraca no Manual; forte na lei (RGPD art. 38.º)",
+     anchors: ["010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md:374"]}
+  - {id: INC-07, not_same_person: ["appsec-engineer:pentest", "equipa que construiu ou defende o sistema"],
+     name: {pt: Teste ofensivo independente, en: Independent offensive testing}, evidence: explícita,
+     anchors: ["010-sbd-manual/10-testes-seguranca/addon/11-pen-testing.md:132"]}
+  - {id: INC-08, not_same_person: ["auditores", "função auditada"],
+     name: {pt: O auditor não audita o que faz, en: Auditor does not audit own work}, evidence: "a tornar explícita no Manual (decisão B)",
+     anchors: ["010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md:20"]}
+  - {id: INC-09, not_same_person: ["quem pede a excepção", "quem a aprova"],
+     name: {pt: Quem pede não aprova, en: Requester does not approve}, evidence: "a tornar explícita no Manual (decisão B)",
+     anchors: ["010-sbd-manual/00-fundamentos/macro-processos.md:440"]}
+
+four_eyes:
+  name: {pt: Dupla aprovação, en: Four-eyes approval}
+  rule: pelo menos duas pessoas distintas aprovam; restrição de número de pessoas, não de papel
+  anchors: ["020-assets/policies/26_policy-aprovacao-release.md:59", "010-sbd-manual/07-cicd-seguro/addon/00-gestao-segura-codigo-fonte.md:30"]

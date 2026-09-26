@@ -350,7 +350,7 @@ Onboarding (Security Champion + SRE)
 | **Dev Leads** | Bi-weekly | Reunião | CISO |
 | **All Staff** | Anual | All-hands | CEO/CISO |
 | **Security Champions** | Quinzenal | Reunião + Slack | CISO |
-| **On-call (incidents)** | On-demand | Pagerduty + Slack | On-call lead |
+| **On-call (incidents)** | On-demand | Pagerduty + Slack | DevOps / SRE (On-Call) |
 
 ---
 

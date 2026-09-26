@@ -59,7 +59,7 @@ Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verba
 | Product Owner                  | Assegurar integração no backlog; garantir que requisitos relevantes existem como trabalho rastreável |
 | Developer                           | Implementar controlos; aplicar tags; ligar mudanças a `SEC-Lx-*` e/ou ao requisito do catálogo; propor exceções quando necessário |
 | QA                                  | Definir critérios de aceitação e validação; garantir cobertura de testes e evidência     |
-| Arquitetos de Software / Scrum Master / Team Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
+| Arquitetos de Software / Tech Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
 | AppSec Engineer                     | Validar aplicação; aprovar exceções; garantir alinhamento e consistência global          |
 | GRC / Compliance (quando aplicável) | Registar exceções e decisões; apoiar auditoria e rastreabilidade organizacional          |
 
@@ -117,7 +117,7 @@ Requisitos aplicáveis devem ser revistos sempre que exista alteração material
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
+Como **Arquitetos de Software / Tech Lead** e **Scrum Master / Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que ocorre uma alteração significativa (integração externa, mudança de dados, exposição, arquitetura)
@@ -142,7 +142,7 @@ Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requ
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetos de Software + Scrum Master / Team Lead | Antes da release |
+| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetos de Software + Tech Lead | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [Validação e revisão de requisitos](./addon/validacao-requisitos)
@@ -400,7 +400,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Início | Kick-off / release major | AppSec Engineer + Product Owner + Scrum Master / Team Lead | Antes do backlog inicial / antes da release |
+| Início | Kick-off / release major | AppSec Engineer + Product Owner + Tech Lead | Antes do backlog inicial / antes da release |
 
 **Ligações úteis.**
 - 🔗 [Catálogo de requisitos](./addon/catalogo-requisitos)  
@@ -444,7 +444,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito do catálogo segundo os crit
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Testes/Review | Pipelines e checkpoints | QA + AppSec Engineer + Scrum Master / Team Lead | Por sprint e antes de release |
+| Testes/Review | Pipelines e checkpoints | QA + AppSec Engineer + Tech Lead | Por sprint e antes de release |
 
 **Ligações úteis.**
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)  
@@ -605,7 +605,7 @@ O uso de assistentes automatizados e ferramentas baseadas em IA pode acelerar o 
 
 :::userstory
 **História.**  
-Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
+Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que é utilizado um assistente automatizado para gerar código, configuração ou testes  
@@ -638,7 +638,7 @@ Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero ga
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| PR/MR | Introdução de código/configuração gerada | Developer + Scrum Master / Team Lead | Antes do merge |
+| PR/MR | Introdução de código/configuração gerada | Developer + Tech Lead | Antes do merge |
 | Release | Gate final de segurança | AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
@@ -655,7 +655,7 @@ Quando passa-se de **assistentes que sugerem** para **agentes que executam** (cr
 
 :::userstory
 **História.**
-Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
+Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que um agente AI vai operar no projecto em A1 ou superior
@@ -668,7 +668,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o ní
 **Critérios de aceitação (DoD).**
 - [ ] *Mandate* presente em VCS, validado contra esquema mínimo (campos obrigatórios) e referenciado por `mandate_ref` em audit
 - [ ] `autonomy_level` classificado de acordo com [níveis A0–A4](./addon/governanca-automatismos#niveis-autonomia) e justificado por escrito
-- [ ] *Approver* adequado ao nível (A1: Scrum Master / Team Lead; A2: Scrum Master / Team Lead + AppSec Engineer; A3: Scrum Master / Team Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` em assinatura formal)
+- [ ] *Approver* adequado ao nível (A1: Tech Lead; A2: Tech Lead + AppSec Engineer; A3: Tech Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` em assinatura formal)
 - [ ] *Identity* efémera configurada (sem reuso de credenciais humanas)
 - [ ] *Kill-switch* exercitado em sandbox/staging com cronómetro registado antes da activação
 - [ ] `effective_until` definido — sem *mandates* sem janela de validade
@@ -686,7 +686,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o ní
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | A1+ | *Mandate* simples; aprovação por Scrum Master / Team Lead; A2+ permitido apenas fora de produção |
+| L1 | A1+ | *Mandate* simples; aprovação por Tech Lead; A2+ permitido apenas fora de produção |
 | L2 | A1+ | *Mandate* completo; *kill-switch* exercitado trimestralmente em A3 |
 | L3 | A1+ | *Mandate* completo + revisão organizacional trimestral; A4 exige assinatura formal do `CISO` |
 
@@ -789,7 +789,7 @@ Antes de cada ação destrutiva ou com efeito externo, o agente AI declara inten
 
 :::userstory
 **História.**   
-Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
+Como **AppSec Engineer** e **Tech Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um agente AI A2+ a operar sob *mandate* ativo  

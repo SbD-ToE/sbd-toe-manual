@@ -537,7 +537,7 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Deploy | Definição de workload | DevOps / SRE | Antes do go-live |
+| Deploy | Definição de workload | Arquitetos de Software aprovam; DevOps / SRE executa | Antes do go-live |
 
 **Ligações úteis.**  
 [Kubernetes e Execução](/sbd-toe/sbd-manual/containers-imagens/addon/kubernetes-execucao)
@@ -551,7 +551,7 @@ Sem segmentação de rede, workloads comprometidos exfiltram dados e propagam at
 
 :::userstory
 **História.**   
-Como **DevOps / SRE**, quero aplicar NetworkPolicy com ingress/egress explícito em cada namespace, para limitar comunicações ao estritamente necessário e detetar anomalias.
+Como **DevOps / SRE + Arquitetos de Software**, quero aplicar NetworkPolicy com ingress/egress explícito em cada namespace, para limitar comunicações ao estritamente necessário e detetar anomalias.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um workload tenta contactar um serviço não-autorizado **Quando** o fluxo não está em NetworkPolicy **Então** a conexão é bloqueada e registada em logs de auditoria
@@ -767,7 +767,7 @@ Aplicações que processam dados críticos (pagamentos, dados pessoais) exigem i
 
 :::userstory
 **História.**  
-Como **DevOps / SRE + AppSec Engineer**, quero configurar sandboxes avançados (gVisor, Kata Containers, Firecracker) via RuntimeClass em workloads sensíveis, para garantir isolamento reforçado de syscalls e proteção contra escalada de privilégios.
+Como **DevOps / SRE + AppSec Engineer + Arquitetos de Software**, quero configurar sandboxes avançados (gVisor, Kata Containers, Firecracker) via RuntimeClass em workloads sensíveis, para garantir isolamento reforçado de syscalls e proteção contra escalada de privilégios.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que um pod sensível é criado (ex: com label `sandbox=required`)  
@@ -857,7 +857,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero gerir um catálogo de Golden Base
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design/Plataforma | Proposta de nova base | DevOps / SRE + AppSec Engineer | 5 dias úteis |
+| Design/Plataforma | Proposta de nova base | Arquitetos de Software aprovam; DevOps / SRE + AppSec Engineer executam | 5 dias úteis |
 | Operação | CVE/EOL/incidente | DevOps / SRE + AppSec Engineer + GRC / Compliance | conforme severidade |
 
 ---
@@ -1013,7 +1013,7 @@ Uma GPU partilhada sem isolamento explícito é um gap de postura, não uma otim
 
 :::userstory
 **História.**   
-Como **DevOps / SRE + AppSec Engineer**, quero isolar o workload de inferência ao nível da GPU e separar inferência sensível de workloads de utilizador, para impedir interferência *cross-tenant* e degradação de serviço.  
+Como **DevOps / SRE + AppSec Engineer + Arquitetos de Software**, quero isolar o workload de inferência ao nível da GPU e separar inferência sensível de workloads de utilizador, para impedir interferência *cross-tenant* e degradação de serviço.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um pod de inferência sensível  
@@ -1044,7 +1044,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero isolar o workload de inferência 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Design/Plataforma | Provisionamento do cluster de inferência | DevOps / SRE + AppSec Engineer | Antes do go-live |
+| Design/Plataforma | Provisionamento do cluster de inferência | Arquitetos de Software aprovam; DevOps / SRE + AppSec Engineer executam | Antes do go-live |
 | Produção | Agendamento de pod sensível | DevOps / SRE (automático) | Imediato |
 
 **Ligações úteis.** [Inferência AI Self-Hosted](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference)

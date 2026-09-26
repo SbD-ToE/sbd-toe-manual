@@ -92,7 +92,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 | Papel                | Contributo                                                                 |
 | -------------------- | -------------------------------------------------------------------------- |
-| Developer / Scrum Master / Team Lead | Propor classificação, identificar alterações relevantes                    |
+| Developer / Tech Lead | Propor classificação, identificar alterações relevantes                    |
 | AppSec Engineer      | Validar modelo aplicado, ajustar nível de risco, aplicar matriz             |
 | Arquitetos de Software | Rever implicações técnicas, fluxos e exposição                            |
 | Product Owner / Gestão Executiva | Aprovar aceitação de risco, avaliar impacto de exceções        |

@@ -83,7 +83,7 @@ Estas práticas não são opcionais. Constituem o **alicerce de confiança** que
 | **Arquitetos de Software**     | Curar guidelines, aprovar *rulesets* e rever periodicamente a sua adequação |
 | **AppSec Engineer**            | Definir critérios mínimos, co-aprovar guidelines, validar exceções e mapear CWE/ASVS |
 | **DevOps / SRE**               | Integrar validações no pipeline, versionar configurações e aplicar *enforcement* |
-| **QA**                         | Aplicar checklists de segurança nos PRs e garantir conformidade |
+| **Developer (revisor técnico)** | Aplicar checklists de segurança nos PRs e garantir conformidade |
 | **Developer**                  | Aplicar guidelines, executar validações locais e propor melhorias |
 
 ---

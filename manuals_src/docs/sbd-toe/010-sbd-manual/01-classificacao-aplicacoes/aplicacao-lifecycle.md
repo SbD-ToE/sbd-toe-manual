@@ -758,7 +758,7 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 
 **Checklist.**  
 - [ ] Inventário central ou GRC existe e regista todas as aplicações com nível, data de revisão, owner e estado de conformidade  
-- [ ] Aprovação registada pela autoridade proporcional ao nível: L1 Scrum Master / Team Lead, L2 AppSec Engineer, L3 CISO — datada e atribuída ao responsável  
+- [ ] Aprovação registada pela autoridade proporcional ao nível: L1 Tech Lead, L2 AppSec Engineer, L3 CISO — datada e atribuída ao responsável  
 - [ ] Inventário atualizado após cada alteração de classificação ou transferência de responsabilidade  
 - [ ] Inventário acessível para auditoria sem preparação manual  
 
@@ -769,7 +769,7 @@ Como **GRC/Compliance**, quero **manter um inventário central (ou GRC) atualiza
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Entrada no inventário; aprovação por Scrum Master / Team Lead | Inventário com audit trail; aprovação por AppSec Engineer | Inventário com rastreamento granular; aprovação por CISO/equivalente |
+| Entrada no inventário; aprovação por Tech Lead | Inventário com audit trail; aprovação por AppSec Engineer | Inventário com rastreamento granular; aprovação por CISO/equivalente |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |

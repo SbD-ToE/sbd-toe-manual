@@ -575,7 +575,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **framework de decisão estrutura
   **Então** decisão é documentada em template T1 (CORRIGIR/ACEITAR/SUPRIMIR/DEFER) com justificação rastreável
 - **Dado** finding HIGH em L3  
   **Quando** DevOps propõe ACEITAR-risco mas AppSec discorda  
-  **Então** conflito é escalado com template T2 para CISO/Scrum Master / Team Lead, com resolução em SLA 4h
+  **Então** conflito é escalado com template T2 para CISO/Tech Lead, com resolução em SLA 4h
 - **Dado** decisão de CORRIGIR-IMEDIATO  
   **Quando** correção é aplicada em PR  
   **Então** revalidação confirma que finding desapareceu e nenhum novo finding CRITICAL foi introduzido
@@ -825,7 +825,7 @@ Como **DevOps / SRE**, quero **separar formalmente o sinal automático (resultad
 |---|---|
 | L1 | Overrides permitidos com registo simples |
 | L2 | Override exige aprovação AppSec Engineer + expiração |
-| L3 | Override exige dupla aprovação (AppSec Engineer + Product Owner / Scrum Master / Team Lead) + expiração + retest obrigatório |
+| L3 | Override exige dupla aprovação (AppSec Engineer + Product Owner / Tech Lead) + expiração + retest obrigatório |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |

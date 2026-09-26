@@ -72,7 +72,7 @@ Independentemente do nível de risco, **todas as aplicações** devem implementa
 ### 5️⃣ **Pipelines CI/CD com Verificações Mínimas** (Cap. 07) {#5️⃣-pipelines-cicd-com-verificações-mínimas-cap-07}
 **O what**: Executar pipelines CI/CD com gates mínimos de segurança (SAST, dependency scanning, secret scanning). Nunca fazer deploy sem validações.
 
-**Por quê**: Pipelines automáticos garantem que nenhum código vulnerável chega a produção por lapso humano. Estas verificações podem ser totalmente automatizadas,desde que os critérios de execução e bloqueio sejam objetivos, determinísticos e auditáveis.
+**Por quê**: Pipelines automáticos garantem que nenhum código vulnerável chega a produção por lapso humano. Estas verificações podem ser totalmente automatizadas, desde que os critérios de execução e bloqueio sejam objetivos, determinísticos e auditáveis. A validação automática substitui a aprovação humana quando o dono dessa aprovação a aceitou como suficiente e determinística; o que dela se desvia volta a ele como exceção.
 
 **Responsável**: DevOps, AppSec
 

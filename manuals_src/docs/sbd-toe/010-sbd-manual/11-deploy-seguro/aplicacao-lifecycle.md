@@ -683,7 +683,7 @@ Ferramentas podem agir, mas não decidir impactos irreversíveis.
 
 :::userstory
 **História.**  
-Como **Ops**, quero **separar execução automática de ações irreversíveis da autorização humana**, para **garantir controlo e responsabilidade explícita**.
+Como **DevOps / SRE**, quero **separar execução automática de ações irreversíveis da autorização humana**, para **garantir controlo e responsabilidade explícita**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma ação irreversível é proposta automaticamente  
@@ -701,7 +701,7 @@ L3: dupla aprovação
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Produção | Ação crítica | Ops | Antes da execução |
+| Produção | Ação crítica | DevOps / SRE | Antes da execução |
 
 ---
 

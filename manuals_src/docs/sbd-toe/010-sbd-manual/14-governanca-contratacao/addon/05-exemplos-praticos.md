@@ -68,7 +68,7 @@ Contrato de licenciamento de software de armazenamento em cloud, utilizado por s
 - [x] Atualização das cláusulas contratuais para refletir novos requisitos (EX-DAT-004, EX-BKP-002 — identificadores ilustrativos; não correspondem ao Catálogo de Requisitos do Cap. 02)
 - [x] Validação técnica do SBOM do agente de sincronização
 - [x] Aceitação formal de SLA de mitigação de CVEs em `<`5 dias
-- [x] Formação atualizada da PO e da equipa de IT Ops envolvida
+- [x] Formação atualizada da PO e da equipa de DevOps / SRE envolvida
 
 **Owner da renovação:** sofia.rodrigues@empresa  
 

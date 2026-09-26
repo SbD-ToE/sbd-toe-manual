@@ -756,7 +756,7 @@ Como **Software Architect** e **AppSec Engineer**, quero validar que a arquitect
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design / Revisão | Activação de agente em A2+ | `software_architect` + `appsec` | Antes da activação do *mandate* |
+| Design / Revisão | Activação de agente em A2+ | Arquitetos de Software + AppSec Engineer | Antes da activação do *mandate* |
 | Subida de nível | Promoção A2→A3 ou A3→A4 | `appsec` (+ `grc` em A3; + `CISO` em A4) | Antes da nova activação |
 | Revisão periódica | `review_cadence` do *mandate* | `appsec` | Conforme cadência (anual A2; semestral A3; trimestral A4) |
 

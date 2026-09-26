@@ -48,15 +48,15 @@ A organização exige e regista a **formação mínima obrigatória** antes de c
 
 **Requisitos associados:**
 - [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Receber formação obrigatória (GRC / Compliance / Gestão Executiva responsável por garantir)
-- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (CISO / Security Champion (formação) responsável por executar)
+- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (CISO / Training Manager responsável por executar)
 
 ### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 A organização fixa as **cláusulas contratuais de segurança**, valida o fornecedor antes do onboarding, monitoriza a conformidade ao longo do contrato e executa o offboarding formal no fim.
 
 **Requisitos associados:**
 - [US-03: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-03---validação-contínua-de-fornecedores) - GRC valida conformidade
-- [US-15: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Security Champion (RH) executam preparação
-- [US-17: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Security Champion (RH) / DevOps / SRE executam offboarding
+- [US-15: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Security Champion + RH / PeopleOps executam preparação
+- [US-17: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Security Champion + RH / PeopleOps + DevOps / SRE executam offboarding
 - [US-14: Reavaliação periódica de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding) - Submeter-se a reavaliação
 - [US-18: Monitorização contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-18---monitorização-contínua-de-conformidade-de-fornecedores-alertas-e-escalação) - Permitir monitorização (AppSec Engineer / Operações (Ops) executam)
 

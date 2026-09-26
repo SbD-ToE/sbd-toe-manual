@@ -103,7 +103,7 @@ Este princípio evita que erros sistemáticos, defaults inseguros ou *hallucinat
 | DevOps / Cloud     | Implementar estrutura, tagging, segregação e revisão de permissões |
 | Segurança / AppSec | Definir políticas default e validar princípios SbD                 |
 | Arquitetura        | Aprovar standards de layout, naming e outputs                      |
-| Plataforma         | Fornecer scaffolds, templates e validações partilhadas             |
+| DevOps / SRE (Plataforma) | Fornecer scaffolds, templates e validações partilhadas             |
 
 ---
 

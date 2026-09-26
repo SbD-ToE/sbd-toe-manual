@@ -19,6 +19,7 @@ Garantem que princípios de segurança estão embutidos nas decisões estruturai
 - Antecipam implicações de risco em integrações e fluxos de dados
 - Garantem consistência da arquitetura em pipelines, IaC e deploys
 - Tomam decisões arquiteturais documentadas (ADR)
+- São donos das regras de desenho: aceitam as *policies* que as verificam de forma automática e aprovam as exceções a essas regras
 
 ### Contexto Organizacional {#contexto-organizacional}
 O trabalho dos arquitetos suporta princípios de *security by design* previstos em **GDPR**, **AI Act** e também obrigações de **NIS2** relacionadas com planeamento de medidas técnicas adequadas. Sem arquitetura segura, correções posteriores são caras e ineficazes.

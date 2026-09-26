@@ -116,7 +116,7 @@ Exceções a gates automáticos (ex: CVE não-aplicável, falso positivo SAST) s
 2. **Aprovador por severidade**:
    - CRITICAL: AppSec Engineer + Gestão Executiva
    - HIGH: AppSec Engineer
-   - MEDIUM: Scrum Master / Team Lead
+   - MEDIUM: Tech Lead
 
 3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
 

@@ -77,7 +77,7 @@ Executar **simulações de incidentes** (war room) regularmente, definir KPIs de
 - [US-04: Simulações de incidentes (war room)](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-04---exercícios-práticos-e-simulações) - Validar processos de resposta (com GRC / Compliance)
 - [US-11: KPIs de capacitação](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---validação-formal-de-onboarding-via-checklist) - Avaliar impacto real (com GRC / Compliance)
 - [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - Cumprir NIS2/DORA (com GRC / Compliance)
-- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (com Security Champion (formação))
+- [US-13: Trilho formativo para contractors](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-13---operacionalização-de-formação-de-terceiros) - SLA antes de acesso técnico (com Training Manager)
 
 ### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Definir e monitorizar **KPIs de governação**, designar Security Champion por aplicação crítica, consolidar e reportar KPIs, formalizar modelo de governação com alçadas.

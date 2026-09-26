@@ -2214,6 +2214,27 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: harbor_registry
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Harbor
+  en_variants: []
+  pt: Harbor
+  pt_variants: []
+  ontology_id: null
+  sense: Nome de produto (registo de imagens CNCF Harbor) com grafia AmE.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 09: nome próprio com grafia AmE; não reescrever.'
 - key: harness
   species: 1
   state: pending
@@ -4272,6 +4293,29 @@ terms:
   pending_reason: null
   blocks_translation: true
   notes: ''
+- key: segregacao_de_funcoes
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: segregation of duties
+  en_variants: [Segregation of duties, SoD]
+  pt: segregação de funções
+  pt_variants: [separação de funções, Segregação de funções, Separação de funções]
+  ontology_id: null
+  sense: 'Princípio de controlo: nenhuma pessoa ou papel detém sozinha funções incompatíveis (ex.: autor
+    e aprovador).'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Fixado após o cap. 08 (tradutores divergiam entre «separation» e «segregation»);
+    forma dos caps. 02–07. Sugestão do Orchestrator.'
 - key: semantic_convergence
   species: 1
   state: in-record

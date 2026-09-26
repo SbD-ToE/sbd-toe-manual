@@ -878,6 +878,14 @@ def cmd_consistency(args) -> int:
     errors = 0
     warnings = 0
     mirror_base = mirror_root if mirror_root.is_dir() else mirror_root.parent
+    # A sub-directory of the mirror (a chapter) must still map to the corpus by its path relative to the MIRROR ROOT
+    # (…/docusaurus-plugin-content-docs/current), not relative to itself — otherwise no source counterpart is found and
+    # the block comparison is silently skipped (bug found 2026-09-26: every per-chapter `translate.py check` reported
+    # "0 errors" without comparing anything).
+    for candidate in (mirror_base, *mirror_base.resolve().parents):
+        if Path(candidate).resolve().as_posix().endswith("/" + str(common.DOCS_PLUGIN_MIRROR).strip("/")):
+            mirror_base = Path(candidate)
+            break
     for target_path in files:
         shown = display_path(target_path, root)
         if mirror_root.is_dir():
@@ -887,6 +895,8 @@ def cmd_consistency(args) -> int:
         source_path = common.source_path(rel, docs_dir) if mirror_root.is_dir() else (args.source_path or None)
         if source_path is None or not Path(source_path).exists():
             common.warn(f"{shown}: no source counterpart under {docs_dir}; checked per file only for untranslated forms")
+            if mirror_root.is_dir():
+                errors += 1  # a mirror file without its source is an orphan, never a silent pass
             source_blocks = None
         else:
             _l, source_blocks = extract_prose(common.read_text(source_path), where=str(source_path))

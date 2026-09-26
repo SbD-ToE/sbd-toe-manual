@@ -884,6 +884,19 @@ def cmd_consistency(args) -> int:
             untranslated = _word_regex(leftovers, ignore_case=True)
         checks.append((str(entry["key"]), source_re, target_re, untranslated))
 
+    # do-not-translate names (identifiers such as the MCP reading label «PROGRAMA») are not prose: blank them out
+    # (case-sensitive, whole word — the same rule as the protected tokens) before looking for glossary forms, or a
+    # verbatim identifier is read as the PT word «programa» (found 2026-09-26, MCP docs).
+    dnt_forms: List[str] = []
+    for entry in registry.get("terms", []):
+        if isinstance(entry, dict) and entry.get("state") == "do-not-translate":
+            dnt_forms.extend(_forms(entry, args.source_locale))
+            dnt_forms.extend(_forms(entry, args.target_locale))
+    dnt_re = _word_regex(sorted(set(dnt_forms)), ignore_case=False)
+
+    def _prose(text: str) -> str:
+        return dnt_re.sub(" ", text) if dnt_re is not None else text
+
     errors = 0
     warnings = 0
     mirror_base = mirror_root if mirror_root.is_dir() else mirror_root.parent
@@ -915,9 +928,9 @@ def cmd_consistency(args) -> int:
         for key, source_re, target_re, untranslated in checks:
             if source_blocks is not None:
                 for index, sblock in enumerate(source_blocks):
-                    if not source_re.search(common.nfc(sblock.text)):
+                    if not source_re.search(_prose(common.nfc(sblock.text))):
                         continue
-                    haystack = common.nfc(target_blocks[index].text) if aligned else target_all
+                    haystack = _prose(common.nfc(target_blocks[index].text)) if aligned else _prose(target_all)
                     if not target_re.search(haystack):
                         errors += 1
                         line = target_blocks[index].line if aligned else sblock.line
@@ -927,7 +940,7 @@ def cmd_consistency(args) -> int:
                             break
             if untranslated is not None:
                 for tblock in target_blocks:
-                    match = untranslated.search(common.nfc(tblock.text))
+                    match = untranslated.search(_prose(common.nfc(tblock.text)))
                     if match:
                         warnings += 1
                         print(f"{shown}:{tblock.line}  {key}  source form {match.group(0)!r} left in the {args.target_locale} text  [warning]")

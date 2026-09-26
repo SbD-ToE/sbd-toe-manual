@@ -467,3 +467,40 @@ class ConsistencyPolysemyTests(unittest.TestCase):
         self.assertIn("piso_relacao  source form present", out)
         self.assertIn("piso_limiar  source form present", out)
         self.assertEqual(code, 1)
+
+
+class ConsistencyDoNotTranslateTests(unittest.TestCase):
+    """A do-not-translate identifier (MCP reading label «PROGRAMA») is not the PT word «programa»: consistency must not
+    ask for «programme» in its block nor warn that it was left untranslated (2026-09-26)."""
+
+    def _run(self, pt_text: str, en_text: str) -> tuple:
+        import io
+        import yaml
+        from contextlib import redirect_stderr, redirect_stdout
+        with tempfile.TemporaryDirectory() as t:
+            tmp = Path(t)
+            docs = tmp / "docs"
+            mirror = tmp / "i18n" / "en" / common.DOCS_PLUGIN_MIRROR
+            (docs / "cap").mkdir(parents=True)
+            (mirror / "cap").mkdir(parents=True)
+            (docs / "cap" / "a.md").write_text(f"# T\n\n{pt_text}\n", encoding="utf-8")
+            (mirror / "cap" / "a.md").write_text(f"# T\n\n{en_text}\n", encoding="utf-8")
+            word = minimal_entry("programme_line", species=1, pt="programa", pt_variants=[], en="programme", en_variants=[])
+            ident = minimal_entry("mcp_reading_programa", species=3, pt="PROGRAMA", pt_variants=[], en="PROGRAMA", en_variants=[])
+            ident["state"] = "do-not-translate"
+            registry = tmp / "registry.yaml"
+            registry.write_text(yaml.safe_dump(registry_with(word, ident), allow_unicode=True, sort_keys=False), encoding="utf-8")
+            out, err = io.StringIO(), io.StringIO()
+            with redirect_stdout(out), redirect_stderr(err):
+                code = terms_lint.main(["consistency", "--path", str(mirror / "cap"), "--registry", str(registry), "--docs-dir", str(docs)])
+            return code, out.getvalue()
+
+    def test_identifier_is_not_the_word(self):
+        code, out = self._run("Leitura PROGRAMA da tool.", "PROGRAMA reading of the tool.")
+        self.assertIn("0 error(s), 0 warning(s)", out)
+        self.assertEqual(code, 0)
+
+    def test_the_word_itself_is_still_checked(self):
+        code, out = self._run("O programa de segurança.", "The security plan.")
+        self.assertIn("programme_line  source form present", out)
+        self.assertEqual(code, 1)

@@ -5,11 +5,11 @@ title: Controlo de Execução e Enforcement de Políticas em IaC
 sidebar_position: 6
 description: Mecanismos técnicos e organizacionais para garantir o enforcement automático de políticas de segurança em pipelines IaC.
 tags: [enforcement, controlo, políticas, iac, pipelines, segurança]
--------------------------------------------------------------------
+---
 
 # 🛡️ Enforcement Contínuo de Políticas e Regras de Segurança em IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todos os projetos de Infraestrutura como Código (IaC) cumprem **requisitos mínimos de segurança de forma automática, consistente e verificável**, através de mecanismos de *policy enforcement* integrados no ciclo de vida de desenvolvimento e operação.
 

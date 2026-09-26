@@ -5,11 +5,11 @@ title: Princípios de Security by Design aplicados a IaC
 sidebar_position: 4
 description: Interpretação dos princípios de Security by Design no contexto específico de Infraestrutura como Código.
 tags: [princípios, security by design, iac, fundamentos, arquitetura segura]
-----------------------------------------------------------------------------
+---
 
 # 🛡️ Princípios de Security by Design aplicados a Projetos IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todos os projetos IaC são desenhados e mantidos com base em princípios estruturais de **segurança por definição**, reforçando a fiabilidade e a resiliência da infraestrutura que provisionam.
 

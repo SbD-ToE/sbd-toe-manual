@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T09:35:15Z",
+  "generated_at": "2026-09-26T09:44:50Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
@@ -1905,8 +1905,8 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md": {
-      "state": "synced",
-      "source_sha256": "06dd1db1d25aed958b9758815f7f3dc6910067007c1fd90f807813ea4d7257df",
+      "state": "pt-ahead",
+      "source_sha256": "d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9",
       "translated_source_sha256": "06dd1db1d25aed958b9758815f7f3dc6910067007c1fd90f807813ea4d7257df",
       "target_sha256": "de55817bd73c7b0a0628651f5bd7f9178623f44b244f005bd9733e521b2bacdc",
       "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
@@ -1915,8 +1915,8 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md": {
-      "state": "synced",
-      "source_sha256": "3868c4c54f816dc29d045486be243386d3e838d9dc8dcecd9d439a2517c9d38d",
+      "state": "pt-ahead",
+      "source_sha256": "8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8",
       "translated_source_sha256": "3868c4c54f816dc29d045486be243386d3e838d9dc8dcecd9d439a2517c9d38d",
       "target_sha256": "53ba33eb884065a82c04ca6967157fda4f3e2f78768705971472d81513645090",
       "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
@@ -1925,8 +1925,8 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/05-exemplos-praticas-boas.md": {
-      "state": "synced",
-      "source_sha256": "f1a04342a682399f2eadc6c7c0013353aba60a8eba98f32bb6d50479f79ad8ed",
+      "state": "pt-ahead",
+      "source_sha256": "c06f373263cab3c2f465040032d6391fa4fe39b7542b23e4c3720510e9e6d60c",
       "translated_source_sha256": "f1a04342a682399f2eadc6c7c0013353aba60a8eba98f32bb6d50479f79ad8ed",
       "target_sha256": "c06205fbf14129df1bdc9306d01bac8a1c61a89f08f4d9839d8e061dbcbc2765",
       "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
@@ -1935,8 +1935,8 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/06-controle-enforcement.md": {
-      "state": "synced",
-      "source_sha256": "cf7bd411d8e583170ae1db952e2dce91df9b57c148202932b94b6c40271414d1",
+      "state": "pt-ahead",
+      "source_sha256": "d4a6b9355f3b63f1b7525d9e8b4abe7b0db72b24823740728708da24774e20ca",
       "translated_source_sha256": "cf7bd411d8e583170ae1db952e2dce91df9b57c148202932b94b6c40271414d1",
       "target_sha256": "a8a3f740b2e64795bc4cc6f731bb2fed8e42a96a820c18ad652ea7bd6442b277",
       "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
@@ -2176,7 +2176,7 @@
     },
     "010-sbd-manual/09-containers-imagens/addon/08-kubernetes-execucao.md": {
       "state": "untranslated",
-      "source_sha256": "1c726a8b336bb238f86c29a40abe2788e16c95d8df5b8ea923818e55025312d8",
+      "source_sha256": "41866be4b7002e988c5083eb47c2f6a837c8cf833ac971800f8ff440443b1e45",
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,
@@ -2186,7 +2186,7 @@
     },
     "010-sbd-manual/09-containers-imagens/addon/09-risco-processo-imagens.md": {
       "state": "untranslated",
-      "source_sha256": "6156204574efa8300c26fa0666f3a295379c316f156bf4d6df970ec60ce83a37",
+      "source_sha256": "321405787c36d866718c937bfdfd6f4e30b4636efd29f56a990f6d20ac170352",
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,
@@ -4137,9 +4137,9 @@
   },
   "totals": {
     "untranslated": 227,
-    "synced": 186,
+    "synced": 182,
     "partial": 0,
-    "pt-ahead": 0,
+    "pt-ahead": 4,
     "en-ahead": 0,
     "drift": 0,
     "stale-terms": 0

@@ -5,11 +5,11 @@ title: Governação de Módulos e Reutilização Segura
 sidebar_position: 3
 description: Práticas prescritivas de governação, validação e controlo de módulos reutilizáveis em IaC, garantindo segurança, proveniência e rastreabilidade.
 tags: [governação, módulos, iac, reutilização, segurança, supply-chain, rastreabilidade]
-----------------------------------------------------------------------------------------
+---
 
 # 🛡️ Governação de Módulos Reutilizáveis em IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que **todos os módulos reutilizados em projetos de Infraestrutura como Código (IaC)** - internos ou externos - são tratados como **componentes de supply chain**, sujeitos a governação formal, validação contínua e evidência auditável.
 

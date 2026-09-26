@@ -4,7 +4,7 @@ id: riscos-processo-imagens
 title: Riscos de Processo na Construção, Validação e Promoção de Imagens
 description: Identificação e mitigação dos riscos introduzidos pela automação na cadeia de build, validação e execução de imagens de container
 tags: [containers, imagens, risco-processo, pipeline, decisao-humana, evidencias, supply-chain, proveniencia, cicd, sbd-toe]
-----------------------------------------------------------------------------------------------------------------------------
+---
 
 # 🛠️ Riscos de Processo na Construção, Validação e Promoção de Imagens
 

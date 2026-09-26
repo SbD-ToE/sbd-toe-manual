@@ -5,11 +5,11 @@ title: Exemplos de Boas Práticas de IaC Seguro
 sidebar_position: 5
 description: Exemplos comentados de código e práticas seguras para aplicar em repositórios de Infraestrutura como Código.
 tags: [exemplos, boas práticas, iac, código seguro, repositórios]
------------------------------------------------------------------
+---
 
 # 🛠️ Exemplos de Estrutura e Práticas Seguras em Projetos IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Apresentar **exemplos concretos, reutilizáveis e auditáveis** de como estruturar e operar projetos de Infraestrutura como Código (IaC) de forma segura, coerente e alinhada com as práticas prescritas neste capítulo.
 

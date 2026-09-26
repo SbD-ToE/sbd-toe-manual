@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: 57e931e06176a02dd04b4c29a79b99cee91f689bade471d194c7620acc7fe3c2
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: cc50de497ec2f654e8a795f6a0e3ee7674fc82c80f23e561244476520a3af440
+  source_sha256: b47cbacc0c820182dd7edb8a8558c9c6d27d0bdd153d8a842aef4c98fb0e225f
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 17876c1616b0f0c697128be67d8bcc314ae157c0642adcdc531f04627195f93d
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 2e4a5bba3484a556d9ed76f10c8294d7380fb5e850534e00cf8152858029678c
-  translated_at: 2026-09-26T17:58:15Z
-  stamped_at: 2026-09-26T18:36:22Z
+  translated_at: 2026-09-26T23:27:27Z
+  stamped_at: 2026-09-26T23:27:27Z
   reviewed_by: null
 ---
 
@@ -929,7 +929,7 @@ As **GRC / Compliance + Procurement** with support from **Legal**, I want each c
 - [ ] **Prior notification SLA** for changes that alter behaviour (major model version, data policy, discontinuation)
 - [ ] **Availability SLA** declared; architectural *fallback* in case of *outage* (cross-link Ch. 04 §AI/ML)
 - [ ] **Declared compliance with AI Act Art. 53/55** when the provider supplies GPAI
-- [ ] **Declared compliance with GDPR Art. 28** (sub-processors) when there is personal data
+- [ ] **Declared compliance with GDPR Article 28** (processors) when personal data are involved
 - [ ] Provider included in the approved list ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)) with `risk_classification`
 - [ ] Critical clauses recorded in the provider's record sheet; review scheduled
 

@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/02-playbook.md
-  source_sha256: 51b0e3815de2290b9d90345905db44db8757442b47433423085841d31d6de23c
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 9690c66122e843968d0a824cd5bd7bd66a9a6f859de0b7dceaef7ccf4f6705e2
+  source_sha256: 6f383dac253ec66f9e077c0dfdfa5bcd5826fcf760e57750471086d884ffe19a
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 812973ddf0f2bf4f499edd50f79feffadf3ef46962bdeec6b6b62987b71aa557
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c0f4e2d904dadb56c660ddd5b460d1a61794d1de4ab21b47e09a9df0337c3776
-  translated_at: 2026-09-26T18:11:53Z
-  stamped_at: 2026-09-26T18:30:48Z
+  translated_at: 2026-09-26T23:27:12Z
+  stamped_at: 2026-09-26T23:27:12Z
   reviewed_by: null
 ---
 
@@ -190,14 +190,14 @@ Before any technical action, the legal framing must be established - **complianc
 - **Reference:** [Ch. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Ch. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
 
 #### 7.2 Continuous AI red teaming (Art. 55) {#72-ai-red-teaming-contínuo-art-55}
-- **What:** A continuous adversarial evaluation programme materialised in [Ch. 10 §C5 — *eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites): prompt/skill regression, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B*. For A4 (GPAI with systemic risk), monthly cadence for the *kill-switch* and for updating the detection corpus [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
+- **What:** A continuous adversarial evaluation programme materialised in [Ch. 10 §C5 — *eval suites*](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites): prompt/skill regression, *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*), *drift detection*, *A/B*. For agents at level A4 (internal scale of SbD-ToE) — and, regardless of level, when the organisation is a provider of GPAI with systemic risk (Art. 51) —, a monthly cadence of *kill-switch* drills and updates to the detection corpus [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014).
 - **Reference:** [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Policy 19 §7](/sbd-toe/assets/policies/policy-estrategia-testes)
 
 #### 7.3 Hardening of physical and logical infrastructure (Art. 55) {#73-hardening-de-infraestrutura-física-e-lógica-art-55}
 - **Reference:** [Ch. 08 — IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Ch. 09 — Containers/Runtime](/sbd-toe/sbd-manual/containers-imagens/intro), [Ch. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
 
 #### 7.4 Declared contractual compliance (Art. 53/55 *providers*) {#74-conformidade-contratual-declarada-art-5355-providers}
-- **What:** When GPAI is consumed from a *provider*, the contract declares compliance with Art. 53 (technical documentation, *summary of training data*, *copyright* policy) and — where applicable — Art. 55 (continuous *AI red teaming*, hardening, *post-market monitoring*).
+- **What:** When GPAI is consumed from a *provider*, the contract declares compliance with Art. 53 (technical documentation, *summary of training data*, *copyright* policy) and — where applicable — Art. 55 (model evaluation with documented adversarial testing, assessment and mitigation of systemic risks, reporting of serious incidents to the AI Office, cybersecurity of the model and of the physical infrastructure).
 - **Reference:** [Ch. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle), [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura)
 
 #### 7.5 GPAI documentation, copyright and data summary (delegated) {#75-documentação-gpai-copyright-e-resumo-de-dados-delegado}

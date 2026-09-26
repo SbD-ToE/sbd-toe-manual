@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/01-intro.md
-  source_sha256: ced48ba1c6b77f3f54be0c8e068e00236bc7aeaaf915ac7dc2b1b45a133c19bd
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c593d53255da5a71cf273a8fc19e641ec26469be2e4ad05cdbfb90c8a549a232
+  source_sha256: b7964853f07fbefbf55a546e3dd0f6f005d25939ca890be3a3bb6c18a13139f7
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 2b34dd886f0de443c88e15765d92faa532e829c064a0cb4ebeb1b1b19200ca39
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 5df48b5c070762561dfcab4ef20b08f94b388ce9522d0ba473b89144011fa057
-  translated_at: 2026-09-26T18:12:04Z
-  stamped_at: 2026-09-26T18:32:21Z
+  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 726faae316dcc38b914507bcd27d9e29f0c3bf98174408bbd75c75b2f2ed9af7
+  translated_at: 2026-09-26T23:27:22Z
+  stamped_at: 2026-09-26T23:27:22Z
   reviewed_by: null
 ---
 
@@ -41,7 +41,7 @@ This document presents:
 
 **Normative content**
 
-Article 20 puts the management body at the centre: it approves the cybersecurity risk-management measures, oversees their implementation and can be held liable for infringements. It also requires regular training for management.
+Art. 20 places the management body at the centre: it approves the cybersecurity risk-management measures, oversees their implementation and can be held liable for infringements. It also requires training for the members of the management body (and encourages regular training for employees).
 
 **SbD-ToE coverage**
 
@@ -71,7 +71,7 @@ It is suggested to record, in Ch. 14, how the management's approval and oversigh
 
 **Normative content**
 
-Article 21 calls for a minimum set of measures, based on an all-hazards approach: policies on risk analysis and information system security, incident handling, business continuity/crisis management (backups, DR), supply chain security, security in acquisition/development/maintenance, assessment of the effectiveness of controls, cyber hygiene/training, IAM, cryptography, vulnerability management/patching, logging and monitoring.
+Article 21(2) calls for measures that, based on an all-hazards approach, cover at least: policies on risk analysis and information system security; incident handling; business continuity (backup management, disaster recovery) and crisis management; supply chain security; security in systems acquisition, development and maintenance, including vulnerability handling and disclosure; assessment of the effectiveness of the measures; basic cyber hygiene practices and cybersecurity training; cryptography and encryption; human resources security, access control and asset management; multi-factor authentication and secured communications. For providers of DNS services, TLD name registries, cloud computing services, data centre services, CDN, managed services and managed security services, online marketplaces, online search engines, social networking services platforms and trust service providers, Implementing Regulation (EU) 2024/2690 specifies these measures, including monitoring and logging (Annex, point 3.2).
 
 In 2024/2025, the Commission and ENISA published technical guidance and practical mappings with examples of evidence for implementing these measures - extremely useful for audit.
 
@@ -119,7 +119,7 @@ NIS2 defines a reporting track for significant incidents:
 
 - **Early warning** ("early warning") within 24h of becoming aware.
 - **Incident notification** with an initial assessment within 72h.
-- **Final report** within 1 month (intermediate updates may also be required).
+- **Final report** within 1 month of the incident notification (72h), with intermediate reports at the request of the CSIRT/authority.
 
 **SbD-ToE coverage**
 
@@ -224,7 +224,7 @@ In this way, SbD-ToE remains useful in day-to-day practice, and NIS2 adds the la
 
 NIS2 extends the scope to 18 sectors (Annexes I/II) and reinforces the distinction between essential and important entities. In many countries, there are national registries and self-registration deadlines for entities in scope; following official trackers helps to implement the local specificities.
 
-In terms of penalties, the Directive sets thresholds that Member States transpose: up to €10M or 2% of total worldwide annual turnover for essential entities and up to €7M or 1.4% for important entities (whichever is higher).
+In terms of penalties, the Directive requires Member States to provide, for infringements of Articles 21 or 23, administrative fines of a maximum of at least €10 M or 2 % of the total worldwide annual turnover for essential entities, and of at least €7 M or 1.4 % for important entities (whichever is higher).
 
 ### References {#referências}
 

@@ -7,16 +7,16 @@ sidebar_position: 9
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/enisa-csa/01-intro.md
-  source_sha256: 2c7c8846352655c87e16ca0e44560b976653304c25e266c41b8edb2c209f714a
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 08e4ce7b3ef8d56bff3d715c603dbfcaaaa91a303d79d52dea97e6e91dd41481
+  source_sha256: 25549f953174aec799b59160752dfb45d53042b434f696f2db8ae59e7b710226
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 0897dc1e480003fb4054f47ead7578de93385bf0746774a194647e96aef85348
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, cra_pde, csa_assurance_level, esquema_regime, eu_ce_marking, layer, mapping, maturity, practitioner_manual, requirement_runtime, role_procurement, sbdtoe_sbd, schema, traceability]
-  glossary_sha256: 670a3378789805df880244f77bae860fb716dbb406f0d455a8998b653c25fff2
-  translated_at: 2026-09-26T18:11:58Z
-  stamped_at: 2026-09-26T18:32:16Z
+  glossary_keys: [avaliacao, cra_pde, csa_assurance_level, csa_certification_scheme, esquema_regime, eu_ce_marking, layer, mapping, maturity, practitioner_manual, requirement_runtime, role_procurement, sbdtoe_sbd, schema, traceability]
+  glossary_sha256: adee14336371e09a6aa3ffbea429a07e1d77ba52180aa9766019790067b5cb10
+  translated_at: 2026-09-26T23:27:17Z
+  stamped_at: 2026-09-26T23:27:17Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ The **Cybersecurity Act** is **Regulation (EU) 2019/881** (CELEX: [32019R0881](h
 - strengthens the mandate of **ENISA** as the European Union Agency for Cybersecurity; and
 - establishes a **European cybersecurity certification framework** for ICT products, ICT services and ICT processes.
 
-Within this framework, several **European cybersecurity certification schemes** are being developed, namely:
+several **European cybersecurity certification schemes** («schemes», in common usage)
 
 - **EUCC** - for ICT products (the evolutionary European successor to the Common Criteria);
 - **EUCS** - for cloud computing services;
@@ -57,17 +57,17 @@ The SbD-ToE Manual provides the "engineering layer" that makes it possible to:
 
 ---
 
-The European cybersecurity certification schemes under the **Cybersecurity Act (CSA)** aim at **EU recognition** that products/services meet security requirements. **ENISA** coordinates and supports the preparation of schemes; certification is carried out by accredited **conformity assessment bodies (CABs)** and supervised by **national authorities**.
+European cybersecurity certification schemes, under the **Cybersecurity Act (CSA)**, aim at **EU recognition** that products/services meet security requirements. **ENISA** prepares the candidate schemes at the request of the Commission, which adopts them by means of implementing acts; certification is carried out by accredited **conformity assessment bodies (CABs)** and supervised by **national authorities**.
 
 This note explains "who it is for", when it is useful/necessary and how to **reuse SbD‑ToE controls and evidence**.
 
 ## Who it is for {#para-quem-se-destina}
 
-- **Manufacturers of ICT products** → **EUCC** scheme (for ICT products; Common Criteria basis). Levels: Basic, Substantial, High.
+- **Manufacturers of ICT products** → **EUCC** scheme (Implementing Regulation (EU) 2024/482; based on the Common Criteria). Assurance levels: «substantial» (AVA_VAN 1–2) and «high» (AVA_VAN 3–5); the EUCC does not provide for the «basic» level.
 - **Cloud service providers** → **EUCS** scheme (for cloud services). Levels: Basic, Substantial, High.
 - **5G suppliers/operators** → **EU5G** scheme (for 5G networks and components). Levels: aligned with risk.
 - **CABs/Laboratories** → apply the criteria of the schemes.
-- **National cybersecurity certification authorities** → supervise, recognise and list certificates.
+- **National cybersecurity certification authorities** → supervise and enforce the rules of the schemes (and, at the «high» level, issue certificates); ENISA publishes the certificates on its website.
 - **Buyers (incl. the public sector)** → use certificates as a procurement criterion.
 
 Notes:

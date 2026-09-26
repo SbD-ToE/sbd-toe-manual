@@ -8,15 +8,16 @@ sidebar_position: 11
 translation:
   source_locale: pt
   source_path: 020-assets/policies/11_policy-sbom.md
-  source_sha256: 631f9813e06fc1271bbe81180e3cde02209e749da70151e4e903bda5141049fd
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5df25a609f264685d56481b71a15a66d9e6ef3004106747aaad103aacb65853d
+  source_sha256: f99d62e09324582cc8799d400bcdf6c42e0234d555d60ea023e28ff4b6751e26
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 9305b2fbf2d7d1e15621288dfd4211f472acbadd9a8f323263d384e7b641f56d
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [discipline, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verification_taxonomy]
-  glossary_sha256: 608fda23f09da0191c67baa652ce1bad59a11272de681623218ac821f4e239f2
-  translated_at: 2026-09-26T14:10:48Z
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [cra_pde, discipline, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
+  glossary_sha256: d99b4d2853dcbccd8a40918fc1a0da217a7932b2a2b3bbd020269904ff9eae1f
+  translated_at: 2026-09-26T23:27:29Z
+  stamped_at: 2026-09-26T23:27:29Z
   reviewed_by: null
 ---
 
@@ -224,7 +225,7 @@ This policy must be **reviewed annually** or after any of the following events:
 
 - Publication of a new major version of the CycloneDX or SPDX format
 - Publication of a new version of the CycloneDX `ml-bom` specification or the SPDX AI Profile
-- Regulatory change imposing additional SBOM requirements (e.g. EU Cyber Resilience Act, EU AI Act Art. 25)
+- A regulatory change that imposes additional SBOM requirements (e.g. CRA, Annex I, Part II, point (1); implementing acts under Article 13(24) of the CRA)
 - Incident originating in a component that was not inventoried (SBOM or AI BOM)
 
 ---

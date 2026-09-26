@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: 55cf927eae84c69f91d03914575a9e2b38d052814113bc24ded7a975237c2a8c
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: d0bd436d7a15f986df924d7c263566e1d4c11937e340ff72993c48a02a2a29b2
+  source_sha256: b388cf2516e2c7516c98cce868d32646012c59811bd3ef42515a4bf8a01eaa16
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 44aad6e5787577cecd415291ea0612191154bdba1688d5f2cce868003d0d6aeb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
   glossary_sha256: d480c6d2f38233898900d6964c9907b7ec514f07432e1433856da5000ace74a7
-  translated_at: 2026-09-26T18:12:05Z
-  stamped_at: 2026-09-26T18:32:22Z
+  translated_at: 2026-09-26T23:27:23Z
+  stamped_at: 2026-09-26T23:27:23Z
   reviewed_by: null
 ---
 
@@ -89,7 +89,7 @@ Where necessary, the text explicitly distinguishes:
 1. **Inventory Applications and Systems**
    - Name, owner, data processed, services supported
    - Dependencies (who depends on it)
-   - **Entity type:** Essential / Important (as per NIS2 Annexes I/II)
+   - **Entity type:** Essential / Important (under NIS2 Art. 3, based on the sectors in Annexes I/II and on size)
    - Reference: [Ch. 01 - Application Classification](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classify by Risk (L1–L3)**
@@ -312,14 +312,14 @@ What characterises an exception in SbD-ToE/NIS2:
 - Example: Deploy with a high vulnerability (vs. L3 requirement = zero criticals)
 - Formal approval, justification, TTL (Time-To-Live), remediation plan
 
-Who approves (as per NIS2 Art. 20):
+Who approves (SbD-ToE proposal, framed by the responsibility of the management body laid down in Article 20 of NIS2):
 - L1 (low risk): Tech Lead / AppSec Engineer
 - L2 (medium risk): CISO
 - L3 (critical): Board / CRO / equivalent management body, according to the applicable governance model
 
 Regulatory implication:
 - Exceptions without formal approval may compromise oversight (Art. 20)
-- Some exceptions are unacceptable (e.g. SQLi never, MFA never)
+- Some exceptions must be considered unacceptable by internal policy (e.g. exploitable SQLi, absence of MFA where appropriate); NIS2 requires corrective measures without undue delay where there is non-compliance (Art. 21(4))
 - An audited trail is mandatory to demonstrate control to the national authority
 
 Suggested:

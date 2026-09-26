@@ -8,16 +8,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 020-assets/policies/06_policy-rastreabilidade.md
-  source_sha256: cabf60016a80e2d3805da4f1a45d3578b9d49d0c9a3775d729d8538dde64ede3
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: cc092670b4d805ae29f24dd3ba6b81867f7dabf168a1f5686deaaed5a8a3bcbb
+  source_sha256: a16e652a797f1369672ae49cfa8aff310ce99c0bff9a9c067dc7fd222082d81d
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: c6384d929ee0f1ece3e63f9bbcec34e9f9b46ee8d132fa795b1d7c07798c53d5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 8d8c42644fbae55d04dc05ac622a3177cc6115d2fe7b21d627c95a717739bb92
-  translated_at: 2026-09-26T14:10:45Z
-  stamped_at: 2026-09-26T18:36:46Z
+  translated_at: 2026-09-26T23:27:28Z
+  stamped_at: 2026-09-26T23:27:28Z
   reviewed_by: null
 ---
 
@@ -194,7 +194,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Classification and reassessment records | 2 years | 3 years | 5 years |
 
 :::note
-In regulated contexts (GDPR, DORA, NIS2, healthcare, financial), retention periods may be longer than those defined in this table. The applicable regulatory requirements always prevail.
+In regulated contexts (DORA, NIS2, healthcare, financial), retention periods may be longer; the GDPR may, conversely, require shorter periods for logs containing personal data. Applicable regulatory requirements always prevail.
 :::
 
 ---
@@ -252,5 +252,5 @@ The evidence index and the audit logs must be made available in full in internal
 | ISO/IEC 27001 - Clause 9.1 | Monitoring, measurement, analysis and evaluation |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | SSDF PW.8 | Archive and protect each software release |
-| NIS2 - Article 21 | Recording and notification obligations |
+| NIS2 - Articles 21 and 23 | Risk-management measures and reporting obligations |
 | DORA - Article 10 | Traceability of events and logs |

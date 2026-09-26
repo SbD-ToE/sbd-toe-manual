@@ -8,16 +8,16 @@ sidebar_position: 37
 translation:
   source_locale: pt
   source_path: 020-assets/policies/37_policy-formacao-seguranca.md
-  source_sha256: ede3073f75933f0afd0285df91029dfef999ecaf9255176ca8192a64c3e17971
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 531bca4acc30461cbd960e92779630263baa9e810306cfdf55b3450485226735
+  source_sha256: 568e7a02864e7dfe8cc6fbd04f5d3e44302101e63de47c9ca66b32c0a3d188c7
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: f1612613832c0c1676a889be16859214a784e04952146bff19009e35ce1142e1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, capacitacao, chapter_role, framework_source_corpus, gap_family, llm, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
   glossary_sha256: 6e53f6d4a50c57cb34d3c03f1edf2f42f065e601c553b88784126070c79929a8
-  translated_at: 2026-09-26T14:11:06Z
-  stamped_at: 2026-09-26T18:37:07Z
+  translated_at: 2026-09-26T23:27:34Z
+  stamped_at: 2026-09-26T23:27:34Z
   reviewed_by: null
 ---
 
@@ -261,7 +261,7 @@ This policy must be **reviewed annually** or after any of the following events:
 | OWASP Top 10 for LLM Applications (2025) | Syllabus content for AppSec |
 | MITRE ATLAS | Catalogue of adversarial tactics/techniques for AppSec / red team |
 | OWASP WebGoat / Juice Shop / DVWA | Reference platforms for labs on vulnerable applications |
-| DORA - Art. 15 | ICT-related training requirements for financial entities |
+| DORA - Art. 13(6) | ICT-related training requirements for financial entities |
 | NIS2 - Art. 21 | Cybersecurity training obligations |
 | ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |
 | ISO/IEC 42001:2023 | AI Management System — workforce competence |

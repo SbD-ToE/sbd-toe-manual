@@ -6,15 +6,16 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/02-exemplo-kpis-targets.md
-  source_sha256: 9f80cb3d7a2fe4a01241ae1dd6dfad268094e2d609fc694a409d27c1287036a2
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 7c88655ce275dfc6de202e408c9d90467fe47476d03c96322395d0b02b816770
+  source_sha256: c01be6cf9d6545eec27a2d9ae9dc3d018da58f4bf5549205d476d5c30fde97db
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: cd0bc5a1927384fa3f2c9541081ced164cceeb02520c7fbedf231d205b41e258
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
-  glossary_keys: [maturity, practitioner_manual, requirement_runtime, sbdtoe_sbd]
-  glossary_sha256: 7181a06300a7579c8a732e591943ed35bfcce6287cd746781e9f14370a2c361c
-  translated_at: 2026-09-26T18:11:59Z
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, cycle_iteration, gdpr_dpo, maturity, practitioner_manual, requirement_runtime, sbdtoe_sbd]
+  glossary_sha256: 07b8d257fffe6e0515d8b110f8bb5a96d4a5740a2a4c82f729fcde517572c2f2
+  translated_at: 2026-09-26T23:27:17Z
+  stamped_at: 2026-09-26T23:27:17Z
   reviewed_by: null
 ---
 
@@ -67,7 +68,7 @@ For each dimension, example targets are presented.
 | **Operations** | MTTR P0 (Critical) | `<`2h | Permanent | Payments: direct impact |
 | | MTTR P1 (High) | `<`8h | Permanent | Business impact |
 | | Incidents detected/month | `<`5 | M12 | Reduce with maturity |
-| **Supply Chain** | Suppliers in the inventory | 100% | M2 | Required by DORA Art. 26 |
+| **Supply Chain** | Suppliers in the inventory | 100% | M2 | DORA Art. 28(3) (templates: Implementing Regulation (EU) 2024/2956) |
 | | % with complete onboarding | 100% | M3 | Before access |
 | | % with security training | 100% | M3 | Mandatory before access |
 | **Compliance** | Policy signed by the board | ✓ | M1 | DORA Art. 5 |
@@ -167,11 +168,11 @@ graph TB
 | | % audited (risk assessment) | 100% | M3 | Required by DORA |
 | | % with an updated contract | 100% | M6 | Technical clauses |
 | | % with access revoked `<`24h | 100% | Permanent | Rigorous offboarding |
-| **Compliance** | Board policy + GDPR officer | ✓ | M0 | Prior requirement |
-| | Audit trail (logs) | 5 years | M0 | GDPR + DORA |
+| **Compliance** | Board policy + designated data protection officer (DPO), where applicable | ✓ | M0 | Prior requirement |
+| | Audit trail (logs) | 5 years | M0 | Internal policy based on risk assessment (DORA: Delegated Regulation (EU) 2024/1774, Art. 12; GDPR Art. 5(1), point (e), where personal data are involved) |
 | | Staff SbD training | 100% devs | M6 | Larger volume |
 | | Staff GRC training | 100% architecture | M3 | Understand the regulations |
-| | TLPT (L3 apps) | 100% | M12 | DORA Art. 19 |
+| | TLPT (entities identified by the TLPT authority; critical or important functions) | per a cycle of ≥ 3 years | M12 | DORA Art. 26; Delegated Regulation (EU) 2025/1190 |
 | | TLPT attestation | ✓ | M13 | Board evidence |
 | | Supervisory inspection readiness | 100% | M18 | Full preparation |
 
@@ -231,7 +232,7 @@ gantt
 | | % with onboarding | 100% | M3 | Before access |
 | | % with training | 100% | M3 | Mandatory |
 | **Compliance** | Board policy | ✓ | M1 | DORA Art. 5 |
-| | Audit trail | 3 years (GDPR) | M0 | |
+| | Audit trail | 3 years (internal policy) | M0 | |
 | | Staff training | 100% | M4 | SME: everyone is aware |
 | | TLPT readiness | Critical L3 pilot | M10 | Fewer apps = feasible |
 | | Inspection readiness | 90% | M12 | Before the DORA deadline |

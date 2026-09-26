@@ -8,15 +8,16 @@ sidebar_position: 29
 translation:
   source_locale: pt
   source_path: 020-assets/policies/29_policy-logging-estruturado.md
-  source_sha256: 0fb2a3b691d9b5d5be970772da6ad8e1cccb16e16725db17e38e0d6fe0c941ce
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 02bc03086c48a9b95f6f26788d7d76d628c1e734dcc7079ba8ea5b832cffef7e
+  source_sha256: 4e52cf0ea7d7e5e18cb4117ae5c30aa463b371286a50e7af10fee11827905cb8
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 6b4d264fea116146f40fb88acb10c95473f54748e6aeca1b307f4563cd9a3843
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [chapter_role, papel_suporte, requirement_runtime, sbdtoe_sbd]
-  glossary_sha256: 1a60d9e8761f3f44655cb1913eb43e896d0421b057d78ef3c75bff005aa33db4
-  translated_at: 2026-09-26T14:11:00Z
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [avaliacao, chapter_role, dora_financial_entity, papel_suporte, requirement_runtime, sbdtoe_sbd]
+  glossary_sha256: 13da87a100b9a6b5e50710912fc5b9b1bcca5bef6633df46dccca28e829c3c18
+  translated_at: 2026-09-26T23:27:31Z
+  stamped_at: 2026-09-26T23:27:31Z
   reviewed_by: null
 ---
 
@@ -134,11 +135,11 @@ Recording sensitive data in debug or error logs is one of the most common source
 |---|---|---|
 | Operational logs (runtime, errors) | 90 days | 1 year |
 | Security logs (authentication, authorisation, changes) | 1 year | 2 years (or as required by regulation) |
-| Audit logs (administrative operations, access to sensitive data) | 1 year | 3 years (DORA: 5 years) |
+| Audit logs (administrative operations, access to sensitive data) | 1 year | 3 years (or the period defined in the risk assessment required by DORA RTS 2024/1774, Art. 12, if longer) |
 | CI/CD pipeline logs | 90 days | 1 year |
 
 :::note
-In regulated contexts (DORA, NIS2, GDPR, healthcare, financial), regulatory periods prevail over the minimums of this policy. The longest period is always the applicable one.
+In regulated contexts (DORA, NIS2, healthcare, financial), regulatory periods prevail over the minimums of this policy. For logs containing personal data, the GDPR imposes the opposite limit: retention only for as long as necessary (Article 5(1), point (e)).
 :::
 
 ---
@@ -184,6 +185,6 @@ This policy must be **reviewed annually** or after any of the following events:
 | Elastic Common Schema (ECS) | Reference schema for normalised fields |
 | OWASP Logging Cheat Sheet | Good practices for secure logging |
 | GDPR / RGPD - Art. 5(1)(e) | Storage limitation of personal data |
-| DORA - Art. 12 | Logging requirements for financial entities |
+| DORA (Art. 9) — Delegated Regulation (EU) 2024/1774, Art. 12 (simplified framework: Art. 34, point (f)) | Logging requirements for financial entities |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | ISO/IEC 27001 - A.12.4 | Logging and monitoring |

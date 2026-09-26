@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/02-playbook.md
-  source_sha256: 318250e6e36fb2de32e053a6f16a18c9279dec165d418341e3e631698ae5f588
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8df12a3b73cc89893418029788bbf01a88d15dcfc7e4fc5cf1880c2b0e472743
+  source_sha256: fd3254d0ef6de2b50dc1aea70435707e662571817ae7962d6a45924b585d7798
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: f2daa391479e3597e3e23bc774a522c1265d6430a43fdd070e187c5cdda9ffd3
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, dora_ict_risk, eu_management_body, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: 5af0b23362097214c240525fdc5b4472d031b232a8c13a8622c5cdc863004bc0
-  translated_at: 2026-09-26T18:11:57Z
-  stamped_at: 2026-09-26T18:30:50Z
+  translated_at: 2026-09-26T23:27:16Z
+  stamped_at: 2026-09-26T23:27:16Z
   reviewed_by: null
 ---
 
@@ -250,7 +250,7 @@ A YES to each of these indicates a strong AppSec foundation for a defensible DOR
 
 ## Critical Note: Exception Management under DORA {#nota-crítica-gestão-de-exceções-em-dora}
 
-DORA requires deviations and exceptions to be formal, auditable and approved at the appropriate level.
+The DORA framework requires exceptions to the implementation of the ICT security policies to be recorded and resilience to be ensured in those cases (Delegated Regulation (EU) 2024/1774, Article 2(2), point (c)); the acceptance of residual risks above the tolerance requires assigned roles, a justified inventory and annual review (Article 3, point (d)). The concrete approval level is defined by the entity.
 
 What characterises an exception in SbD-ToE/DORA:
 - a formal deviation from a requirement;

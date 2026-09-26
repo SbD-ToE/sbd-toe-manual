@@ -7,16 +7,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/01-intro.md
-  source_sha256: 41e68e472bc45a9141257ebfe964fd81ec13dd060470921fd3e40a895f0105fa
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8af13523ba1c6ee07f55486f4ca33e7fd5297122fcce4ecb1057ba4b7987d119
+  source_sha256: e8d9db41d2e3bbab245bdbc5a8202392aa6ac166524795b8c9d98995c0e64e3e
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: d212fd15e78a67f0d737fe0acabcd1f14235936a447d144b74f7543872da5cdf
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
-  glossary_sha256: 8c99c3d7bcd12b9dcf52bbf4feb885ac792f90db8ccf2167c9002c0e3e3deefb
-  translated_at: 2026-09-26T18:11:56Z
-  stamped_at: 2026-09-26T18:32:15Z
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, dora_ict_rmf, dora_ict_tpp, dora_major_ict_incident, dora_register_of_information, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: ff9e9c7c0e48c0bfc306a7cdfc46074c67f972a6fafd399ec6fc1eaa64ef69d0
+  translated_at: 2026-09-26T23:27:15Z
+  stamped_at: 2026-09-26T23:27:15Z
   reviewed_by: null
 ---
 
@@ -65,7 +65,7 @@ In practical terms, DORA translates into obligations that directly affect SbD-To
   - In SbD-ToE this intersects directly with the chapters on security testing, _red teaming_, _chaos engineering_ and continuous pipeline validation.
 
 - **ICT third-party risk management (Art. 28–30).**  
-  - It requires an inventory of ICT third-party service providers supporting critical or important functions, risk assessment, specific contractual clauses and ongoing oversight.  
+  - It requires a register of information on all contractual arrangements with ICT third-party service providers (distinguishing those that support critical or important functions), risk assessment, specific contractual clauses and ongoing monitoring.  
   - The Manual covers these aspects in the chapters on dependencies, SBOM/SCA, supply chain, _outsourcing_ and governance/contracting.
 
 - **Exception decisions and unremediated vulnerabilities.**  
@@ -211,8 +211,8 @@ DORA Art. 5 establishes that **digital resilience is the ultimate responsibility
 
 #### What DORA Explicitly Requires {#o-que-dora-exige-explicitamente}
 
-**Art. 5 (ICT Risk Management):**
-> "Members of the management body approve the strategy and oversee the implementation of policies, including responses to emerging risks."
+**Art. 5 (Governance and organisation):**
+> «The management body of the financial entity shall define, approve, oversee and be responsible for the implementation of all arrangements related to the ICT risk management framework […]» (Article 5(2))
 
 **Operational translation:**
 - Risk acceptance decisions (exceptions) require documented approval from a formal authority
@@ -255,7 +255,7 @@ DORA Art. 5 establishes that **digital resilience is the ultimate responsibility
 |-------|------------------|-----------|-----|
 | **L1** | Validation by AppSec Engineer (informal) | Approval by a formally designated authority | ⚠️ Developer-friendly, but clear escalation is missing |
 | **L2** | Formal validation by AppSec + GRC | Approval by the CISO or a formal equivalent | ✅ Adequate, but the Manual does not say so explicitly |
-| **L3** | Approval by Executive Management/CISO | **Approval by the board or CRO (DORA requirement)** | ❌ **CRITICAL GAP** - The Manual does not specify "board-level approval" |
+| **L3** | Approval by Executive Management/CISO | Acceptance of residual risk above the tolerance approved by the management body, by a formally designated function/owner, with a justified inventory and annual review (RTS 2024/1774, Art. 3, points (a) and (d); DORA Articles 5(2) and 6(4)) | ⚠️ **GAP** - The Manual does not formalise roles for the acceptance, inventory and annual review of accepted residual risks |
 
 **How it manifests:** The organisation accepts an L3 exception with CISO approval; the regulator asks: "was it approved by the board?" → no minutes = **governance failure**.
 
@@ -280,7 +280,7 @@ DORA Art. 5 establishes that **digital resilience is the ultimate responsibility
 | **Exception creation** | Documents with owner, TTL, criteria | ✅ Good | ✅ Aligned |
 | **Periodic reassessment** | Review 30 days before expiry; mandatory re-approval | ✅ Good | ✅ Aligned |
 | **Centralised tracking** | GRC tool; audit trail per application | ✅ Good | ⚠️ The Manual does not describe the reporting format for DORA |
-| **Escalation to the regulator** | Not mentioned in the Manual | ❌ DORA requires exceptions to be reported in the context of incidents | ❌ **GAP** - No guidance on when to escalate to the regulator |
+| **Escalation to the regulator** | Not mentioned in the Manual | ⚠️ DORA requires the reporting of major ICT-related incidents (Art. 19); related exceptions must be recorded in the supporting documentation | ❌ **GAP** - No guidance on how to integrate exceptions into incident reporting |
 
 **How it manifests:** A security incident; the regulator asks: "show me the relevant exceptions" → the organisation has no consolidated view or does not know whether it must report.
 
@@ -397,7 +397,7 @@ Expand `US-15 (Processo formal de exceções)` with:
 2. ✅ Map criticality levels to DORA-compatible approvers (L1→AppSec, L2→CISO, L3→Board/CRO)
 3. ✅ Define unacceptability categories (organisational policy)
 4. ✅ Implement centralised tracking with an audit trail (GRC tool)
-5. ✅ Establish quarterly reporting to governance structures (DORA Art. 5 requirement)
+5. ✅ Establish periodic reporting to the management body (DORA Article 5(2), point (i), requires reporting channels; the quarterly periodicity is an organisational option)
 6. ✅ Define a protocol for escalation to the regulator in an incident context (Art. 17–23)
 
 ---

@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/01-intro.md
-  source_sha256: 9f31ae0c46b078f69ee647e4f3b96b039c400b3cf38573aa565f25c73bc7cf97
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 92ae694528021e3918c0b8215daa8b0a7497486086a1ce4645d8a8ba2e875e45
+  source_sha256: f3c7eb0036177a53600ca6b675407a6f59f64c6b104e8b9171bbfec5cd0ec3b4
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 56aea47d4ccb0d75739141cde006913210394f2c2eeb0ba00b6c6e45f97b57f6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, cycle_iteration, gap_family, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, normative_empirical, role_juridico, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: d1f091d7196b7f6f3ac5f4d671a1ec5ca697cd1f55bd15d2c31aad8c7508b6d9
-  translated_at: 2026-09-26T18:12:03Z
-  stamped_at: 2026-09-26T18:32:19Z
+  glossary_keys: [avaliacao, cycle_iteration, gap_family, gdpr_dpbd, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, normative_empirical, role_juridico, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: ca5b531fec820ff2de86aa59cae9f18f3bc511b4caf02f96ddac5e4be8ce2665
+  translated_at: 2026-09-26T23:27:21Z
+  stamped_at: 2026-09-26T23:27:21Z
   reviewed_by: null
 ---
 
@@ -37,7 +37,7 @@ It is suggested that SbD-ToE be used as the technical core for the articles that
 ## PART I: NORMATIVE ANALYSIS (GDPR → SbD-ToE) {#parte-i-análise-normativa-gdpr--sbd-toe}
 
 ### Principles (Art. 5) {#princípios-art-5}
-They require: data minimisation, purpose limitation, accuracy, storage limitation, integrity and confidentiality, accountability.
+They require: lawfulness, fairness and transparency; purpose limitation; data minimisation; accuracy; storage limitation; integrity and confidentiality; accountability.
 
 SbD-ToE coverage:
 - Ch. 01: Classification and identification of data by criticality (supports minimisation/retention)
@@ -49,8 +49,8 @@ Intentional gap: Definition of legal bases, retention policies and purposes → 
 
 ---
 
-### Privacy by Design/Default (Art. 25) {#privacy-by-designdefault-art-25}
-Requires privacy to be embedded in the design and default settings to be the most protective.
+### Data protection by design and by default (Art. 25) {#privacy-by-designdefault-art-25}
+It requires measures that implement the data-protection principles by design and that ensure that, by default, only personal data which are necessary for each specific purpose are processed (amount, extent, storage, accessibility).
 
 SbD-ToE coverage:
 - Ch. 04: Secure architectural patterns (pseudonymisation, segmentation)
@@ -73,7 +73,7 @@ Intentional gap: SbD-ToE does not provide a ROPA template. Action: Keep the ROPA
 ---
 
 ### Security of Processing (Art. 32) {#segurança-do-tratamento-art-32}
-Requires appropriate technical and organisational measures: pseudonymisation, encryption, resilience, regular testing of effectiveness.
+It requires technical and organisational measures appropriate to the risk, including, as appropriate: pseudonymisation and encryption, confidentiality/integrity/availability/resilience, restoring availability and regular testing of effectiveness.
 
 SbD-ToE coverage:
 - Ch. 02: Minimum requirements per level (includes encryption, IAM, hardening)
@@ -87,7 +87,7 @@ Intentional gap: Legal criteria of “appropriateness” and contextual risk ana
 ---
 
 ### Personal Data Breach Notification (Art. 33/34) {#notificação-de-violação-art-3334}
-Requires notifying the competent supervisory authority within 72h (Art. 33) and, where applicable, communicating the breach to the data subjects (Art. 34).
+It requires notifying the competent supervisory authority without undue delay and, where feasible, not later than 72 h after having become aware of the breach, unless it is unlikely to result in a risk (Art. 33); where there is a high risk, communicating it to the data subjects (Art. 34).
 
 SbD-ToE coverage:
 - Ch. 12: Incident detection, classification and response; runbooks

@@ -6,16 +6,16 @@ tags: [exemplos, incidentes, reporte, dora, template]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md
-  source_sha256: 580986b13def08feed58fd6abb06d7dd4c57cd5f3bcc59ed27616c145f3bc2bc
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8b000beb4f071fc2ce9134b32df260450104fb1943fd6f89d272beb486e664af
+  source_sha256: 90de6b890943bad9252f07bc9b7254b92fa5e18dc4b2091b28ff7ca0e0e40e93
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: b7399a52ab4645ec89cf4d5e01745413d7bb5cf713d08f2c070e24f8509fd5fa
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [sbdtoe_sbd, validation_evaluation]
   glossary_sha256: aa9660cd34b7e5284bf74e41acd3af6ce8f366c12c19adb198082b2a2d2a24a7
-  translated_at: 2026-09-26T18:12:01Z
-  stamped_at: 2026-09-26T18:32:18Z
+  translated_at: 2026-09-26T23:27:18Z
+  stamped_at: 2026-09-26T23:27:18Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This document presents an **example template** of how to structure incident repo
 
 **This is an example** - it is not the official DORA template.
 
-The regulators (EBA, BCB, ESMA) will publish official ITS templates. This example:
+The technical standards (RTS/ITS) with the official templates are developed by the ESAs (EBA, EIOPA and ESMA), through the Joint Committee, in accordance with Article 20 of DORA. This example:
 - Illustrates structuring **principles**
 - May serve as an **internal baseline**
 - Must be **adapted** to the final regulatory templates
@@ -151,7 +151,7 @@ Action Items:
 ### 8. DORA Compliance (Informative) {#8-conformidade-dora-informativo}
 
 ```
-DORA Art. 18 Threshold Analysis:
+DORA art. 18.º + Reg. Delegado (UE) 2024/1772, art. 8.º–9.º — análise de limiares: serviços críticos afetados? acesso malicioso bem-sucedido com possível perda de dados (art. 9.º, n.º 5, al. b))? clientes > 10 % ou > 100 000; transações > 10 %; duração > 24 h ou indisponibilidade > 2 h (funções críticas/importantes); ≥ 2 Estados-Membros; impacto económico > 100 000 EUR; impacto reputacional (art. 2.º)
 - Availability Impact: `<`20% (low)
 - Confidentiality Impact: None
 - Integrity Impact: None
@@ -218,7 +218,7 @@ This template structures incident ticketing systems:
 
 ## Log Retention {#retenção-de-logs}
 
-**[Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + DORA Art. 18 Compliance:**
+**Compliance [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Delegated Regulation (EU) 2024/1774, Art. 22, point (d) — period defined by the entity, commensurate with criticality and no longer than necessary):**
 
 ```
 Todos os incidentes + trilho auditoria devem ser retidos:
@@ -258,7 +258,7 @@ Example of automatically sending incidents from the SIEM to the ticketing system
 
 ## Next Steps {#próximos-passos}
 
-When the official DORA RTS/ITS are released:
+Based on the reporting technical standards already adopted under Articles 18 and 20 of DORA (Delegated Regulation (EU) 2024/1772 — classification; Delegated Regulation (EU) 2025/301 — content and time limits; Implementing Regulation (EU) 2025/302 — forms and templates):
 1. Compare this template with the official one
 2. Extend it with additional DORA fields
 3. Integrate with the regulatory reporting system

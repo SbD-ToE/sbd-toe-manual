@@ -6,16 +6,16 @@ tags: [playbook, exemplos, dora, nis2, iso27001, cra, gdpr, templates]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/README.md
-  source_sha256: 9fa78611b8a756c649ee5ca0e6a06dfce9bdd1b0e48b6fd3950cdf53eaff3035
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e97528d4d29b56dbb432448914d5c6dcc887a6287078e0c0a9e7f49d2f8640dc
+  source_sha256: c2440286db9403eddff03b9cc17ca605dfdabd8a31d3123691e02a22de44bb5f
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: e31f2fc5953f67334df00ed5c35d077b731d5646333f42696fc1bd3b8d992658
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, framework_source_corpus, lifecycle_phase, maturity, normative_empirical, practitioner_manual, role_juridico, sbdtoe_sbd, traceability]
   glossary_sha256: 9053b641651a969706a59eb8e62170db5c2fc63079d736cd8d2e403901801db5
-  translated_at: 2026-09-26T18:12:02Z
-  stamped_at: 2026-09-26T18:32:19Z
+  translated_at: 2026-09-26T23:27:20Z
+  stamped_at: 2026-09-26T23:27:20Z
   reviewed_by: null
 ---
 
@@ -201,7 +201,7 @@ Overview, structure and instructions for use
 **When to use:**
 - Negotiating with suppliers
 - Including security requirements
-- Aligning with DORA Articles 26-28
+- Aligning with DORA Art. 28–30
 
 ---
 

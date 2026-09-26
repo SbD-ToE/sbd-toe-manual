@@ -8,16 +8,16 @@ sidebar_position: 18
 translation:
   source_locale: pt
   source_path: 020-assets/policies/18_policy-gestao-segredos.md
-  source_sha256: 39561dd7c3c711181153e283586a598d055762b3b28c9a22ed6282a84364c08f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 63f66cca76689f34f467f4b6e03a05aec9aa8f478e3c4031c105cd0b84624273
+  source_sha256: 248ce20e1be6bfeee30f2d275af020b14124750ca559270c823f6f220863bab3
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 23c305659689aabd6e65d6188f7aa49077affd32bbcd0e3e8dfc288156ea40bb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
   glossary_sha256: 077f37bc925ed0aa91cdef68a608b0b398676281e1f550abaa13dcefb6ad59b5
-  translated_at: 2026-09-26T14:10:53Z
-  stamped_at: 2026-09-26T18:36:54Z
+  translated_at: 2026-09-26T23:27:30Z
+  stamped_at: 2026-09-26T23:27:30Z
   reviewed_by: null
 ---
 
@@ -227,7 +227,7 @@ Each operational use in which the agent sees PII has a **declared GDPR legal bas
 
 ### 10.3 Sub-processors {#103-sub-processadores}
 
-The model *provider* is a **sub-processor** when it processes personal data on behalf of the organisation (GDPR Art. 28). The contractual clause set out in [Policy 33 §10](./policy-contratacao-segura) applies:
+The model *provider* is a **processor** when it processes personal data on behalf of the organisation (GDPR, Art. 28); if the organisation is itself a processor, the *provider* is «another processor» (Art. 28(2) and (4)). The contractual clause set out in [Policy 33 §10](./policy-contratacao-segura) applies:
 
 - Sub-processor contract with explicit clauses (retention, *training opt-out*, audit rights).
 - Processing location documented; *Standard Contractual Clauses* (SCCs) or another valid mechanism for international transfers (GDPR Arts. 44–49) when the *provider* processes outside the EEA.
@@ -265,7 +265,7 @@ When the user's interaction with the agent generates personal data, the GDPR rig
 - ❌ Sending PII to a *provider* outside the approved list — *shadow AI* with GDPR risk.
 - ❌ Logging *prompts* with PII without redaction in [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) — the `audit trail` itself becomes a repository of personal data with no specific legal basis.
 - ❌ Trusting that the *provider* "does not use it for training" without a contractual clause — operational statements do not replace Art. 28.
-- ❌ Ignoring special categories (GDPR Art. 9) in the prompt — health, biometrics, children's data, etc. require a reinforced legal basis that many chatbot use cases do not satisfy.
+- ❌ Ignoring special categories (Art. 9 GDPR) in the prompt — health, biometric data for the purpose of uniquely identifying a natural person, racial or ethnic origin, etc. — or children's data (Art. 8), which require reinforced conditions that many chatbot use cases do not meet.
 - ❌ Treating redaction as sufficient obfuscation — *pseudonymisation* (GDPR) is not anonymisation; pseudonymised PII remains personal data.
 
 ### 10.9 Crossover with the GDPR cross-check {#109-cruzamento-com-cross-check-rgpd}

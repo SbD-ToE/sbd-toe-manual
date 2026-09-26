@@ -7,16 +7,16 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/11-kpis-metricas.md
-  source_sha256: 0d3b975c5e2948f6ae0d74c33e2681c0dab4cabd9b73c1f2d8f2b98b0f2c9c12
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 86d5c70e1f804cfbdd583199f5e840f98374bc36bc5f8ab3ddb8a94e3fca5e86
+  source_sha256: d8f67cb2c8862b505a831f45b2cca7417604be9a8d05429668a972976469d6c8
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: bb0a0b3241a49151ba70a2c99cb595fc54c16d6ae0b0bd47b70aa33f59eba5ea
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, eu_critical_infrastructure, framework_source_corpus, mapping, mcp_reading_programa, programme_line, risk_level, sbdtoe_sbd, transversal]
-  glossary_sha256: d117fa22fc6819fd793de55dfaba68f15adf03daf012ca96b6a4a7b67d4913d1
-  translated_at: 2026-09-26T12:48:58Z
-  stamped_at: 2026-09-26T18:35:44Z
+  glossary_keys: [avaliacao, dora_ict_risk, eu_critical_infrastructure, framework_source_corpus, mapping, mcp_reading_programa, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
+  glossary_sha256: 84987d97f96872162f36a42eaf05563a2797e791d6bf50d8f4d1ba30b5d284e2
+  translated_at: 2026-09-26T23:27:26Z
+  stamped_at: 2026-09-26T23:27:26Z
   reviewed_by: null
 ---
 
@@ -95,7 +95,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 **OPS-K07 - IRP activated:** the formal incident response process (Incident Response Plan) is activated when there is a ticket or record with: the classification of the incident, a response owner, a timeline of actions, and a resolution state. Incidents resolved informally without a record do not satisfy this criterion.
 
-**OPS-K08 - Retention in line with regulation:** the applicable minimum period depends on the sectoral regulation. Base reference: DORA requires 2 years for ICT logs; NIS2 does not define a period but requires availability for audit. Systems without a regulatory classification apply the internal policy - a minimum of 90 days for L1, 1 year for L2, 2 years for L3.
+**OPS-K08 - Retention in line with regulation:** the applicable minimum period depends on sectoral regulation. DORA: the entity defines the retention period based on the ICT risk assessment (Delegated Regulation (EU) 2024/1774, Art. 12); NIS2: for entities covered by Implementing Regulation (EU) 2024/2690, a «predefined period» is required (Annex, point 3.2.5), with no numerical value; the national transposing legislation should be checked. Systems without a regulatory classification apply the internal policy — as the Manual's choice, a minimum of 90 days for L1, 1 year for L2 and 2 years for L3.
 
 ---
 

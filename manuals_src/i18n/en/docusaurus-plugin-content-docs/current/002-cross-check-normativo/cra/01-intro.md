@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/01-intro.md
-  source_sha256: 9f05de47581bb3be3c3a95481224cf776b2f9438925da1f192f6680664380d6f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4fc8fdd6c38d93be7b232959309312ae052234bf605ae9e23af88f73af993c4a
+  source_sha256: e195fee78a194d19ca3061021b1257e851b948c166f0cf7178d9bf54caf5103f
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: e2f48e57b3cc2246d077c259c7185de22ca280134e84b426cdb1e4ced90d66ca
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
-  glossary_sha256: a6178f1c42e12c81fdf29c49af5d874040d9171b85dc82ae818e747f245fc0d9
-  translated_at: 2026-09-26T18:11:54Z
-  stamped_at: 2026-09-26T18:32:15Z
+  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cra_support_period, csa_certification_scheme, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
+  glossary_sha256: c235712b8952eddfed809f6d1784dd1e9fa378f4bdf192ab8f823970a2b37a66
+  translated_at: 2026-09-26T23:27:14Z
+  stamped_at: 2026-09-26T23:27:14Z
   reviewed_by: null
 ---
 
@@ -43,7 +43,7 @@ The CRA imposes obligations on manufacturers, importers and distributors, includ
 
 - essential requirements for **security by design and by default** throughout the entire lifecycle;
 - **vulnerability handling** processes, including receipt, analysis, remediation and responsible disclosure;
-- **post-market monitoring** and timely remediation of vulnerabilities;
+- **vulnerability handling during the support period** (Annex I, Part II) and remediation without delay;
 - requirements for **technical documentation**, instructions and information to the user;
 - obligations to **notify actively exploited vulnerabilities and severe incidents**.
 
@@ -73,7 +73,7 @@ SbD-ToE was designed for software applications and pipelines; a large part of it
 
 ## Regulatory Notice {#aviso-regulatório}
 
-The CRA introduces obligations concerning: critical-product classification, CE marking, declaration of conformity, conformity assessment (including modules involving notified bodies for certain categories), post-market obligations (vulnerability handling), and rapid notification to ENISA (or the single reporting platform) of actively exploited vulnerabilities.
+The CRA introduces obligations for: classification as an important product (classes I/II, Annex III) or a critical product (Annex IV), CE marking, declaration of conformity, conformity assessment (including modules involving notified bodies for certain categories), post-market obligations (vulnerability handling), and notification of actively exploited vulnerabilities, simultaneously, to the CSIRT designated as coordinator and to ENISA, via the single reporting platform (Articles 14 and 16).
 
 It is also worth fixing two operational dates of the regulation:
 
@@ -81,7 +81,7 @@ It is also worth fixing two operational dates of the regulation:
 - the general application of the regulation starts on `11 December 2027`
 
 SbD-ToE covers the technical "how", but **does not replace**:
-- Formal conformity assessment procedures (modules A, B, C, D, etc.)
+- Formal conformity assessment procedures (module A; modules B + C; module H; or a European cybersecurity certification scheme, Article 32)
 - Interactions with notified bodies
 - Issuing the EU declaration of conformity / CE marking
 - Legal process of manufacturer/importer/distributor liability
@@ -91,9 +91,9 @@ SbD-ToE covers the technical "how", but **does not replace**:
 | CRA Domain | Regulatory Reference (Summary) | SbD-ToE Coverage | Intentional Gap | Adaptation Action |
 |-------------|----------------------------------|-------------------|--------------------|-------------------|
 | Secure Lifecycle Management | Security requirements applicable throughout the entire cycle (design → development → distribution → maintenance) | Ch. 02 (requirements), Ch. 06 (development), Ch. 07 (CI/CD), Ch. 11 (pre-deploy) | Does not clearly distinguish manufacturer/importer/distributor roles, nor the formal determination of the support period | Map SbD-ToE roles → CRA roles and record a support period policy |
-| Vulnerability Identification and Management | Processes to receive, assess, prioritise and remediate vulnerabilities | Ch. 05 (SBOM/SCA), Ch. 10 (testing), Ch. 12 (monitoring), exception addons | Formal mechanism for external receipt (coordinated disclosure portal) | Implement a public channel + ADVD policy (coordinated disclosure) |
+| Vulnerability Identification and Management | Processes to receive, assess, prioritise and remediate vulnerabilities | Ch. 05 (SBOM/SCA), Ch. 10 (testing), Ch. 12 (monitoring), exception addons | Formal mechanism for external receipt (coordinated disclosure portal) | Implement a public channel + a coordinated vulnerability disclosure policy (Annex I, Part II, point (5)) |
 | SBOM / Transparency | Provision of information on critical components and dependencies | Ch. 05 (continuous SBOM) | Exact format for external provision (e.g. public CycloneDX export) | Create a sanitised SBOM export routine for stakeholders |
-| Rapid Fixes and Patches | Apply security fixes without undue delay | Ch. 05 (CVE management), Ch. 07 (CI/CD automation), Ch. 12 (exploitation detection) | CRA severity criteria (regulatory deadlines) | Define a CRA patch SLA: Critical ≤15d, High ≤30d, Medium ≤90d |
+| Rapid Fixes and Patches | Apply security fixes without undue delay | Ch. 05 (CVE management), Ch. 07 (CI/CD automation), Ch. 12 (exploitation detection) | The CRA does not set numerical remediation deadlines (it requires remediation «without delay») | Define an internal patch SLA (e.g. Critical ≤15d, High ≤30d, Medium ≤90d) as the operationalisation of «without delay» |
 | Exploited Vulnerability Reporting | Notify the authority (e.g. ENISA/single reporting platform) of actively exploited vulnerabilities | Ch. 12 (detection, exploitation metrics), Ch. 14 (governance) | Does not sufficiently separate mandatory reporting, communication to users and the official platform/regime | Add a technical runbook + a formal notification and communication interface |
 | Vulnerability Prevention Measures | Quality control and security testing before release | Ch. 10 (SAST/DAST/fuzzing), Ch. 11 (release gate) | Formal rejection/release criteria by criticality | Add a matrix: criticality level → automatic release block |
 | Security Documentation | Security instructions and information for users/admins | Ch. 04 (architecture), Ch. 11 (secure deploy) | The manual does not on its own generate the entire `Annex II` surface (support period, contact point, end-of-support wording) | Create a "Product Security Guide" artefact + a support period and contact point table |
@@ -138,7 +138,7 @@ This must be read as a technical basis for meeting the reporting obligation, not
 **Action:** Extraction script (e.g. SIEM + SBOM export) → ready-made JSON.
 
 ### 6. Quality and Security Testing {#6-qualidade-e-testes-de-segurança}
-SbD-ToE covers a variety of tests. Align with the CRA requirement to avoid releasing with known critical vulnerabilities.
+SbD-ToE covers a variety of tests. Align with the CRA requirement to make the product available on the market without known exploitable vulnerabilities (Annex I, Part I, point (2)(a), on the basis of the risk assessment).
 
 **Action:** "no-critical-known" gate before release; exceptions only with board approval (maximum criticality).
 

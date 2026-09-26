@@ -8,16 +8,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md
-  source_sha256: 68f8469ff5c0aedd8cf2e8371a57ceeb74e9f979e544aede890e4bc12620a9ab
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 0ab76865a3c4641afa13b35beec7d00d3669235e3e675ea0efe937c4b0ecbdc0
+  source_sha256: d835006eaf8a4de5de9b792814bfee407e4f861842fe65f26aa305b5f971f80d
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 343d4e8685cfab6f210d0ca9f1034cf9ee27b83e061dbe10f2924c38c94e21e9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [chapter_role, framework_source_corpus, role_secops, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: da853bba39b7ec1b6a3ed346b4dada12088cae3935ea9a6deb99a3b34563a06a
-  translated_at: 2026-09-26T17:23:41Z
-  stamped_at: 2026-09-26T18:32:37Z
+  glossary_keys: [chapter_role, framework_source_corpus, nis2_early_warning, nis2_significant_incident, role_secops, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: b6f19b5bb65f51bdb8650163da2e5f7a8e8b7c6ce1535b540aa811a8b4d96299
+  translated_at: 2026-09-26T23:27:25Z
+  stamped_at: 2026-09-26T23:27:25Z
   reviewed_by: null
 ---
 
@@ -42,7 +42,7 @@ SecOps is the **front line in complying with NIS2** (incident response, notifica
 ## Regulatory Framework {#enquadramento-regulatório}
 
 Front line in:
-- **NIS2**: Incident notification within 24 hours
+- **NIS2**: Early warning of significant incidents within 24h (incident notification within 72h)
 - **DORA**: Operational continuity and resilience
 
 ---

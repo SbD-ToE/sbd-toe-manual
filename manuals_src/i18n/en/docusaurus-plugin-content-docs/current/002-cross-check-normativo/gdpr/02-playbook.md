@@ -7,16 +7,16 @@ sidebar_position: 8
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/02-playbook.md
-  source_sha256: d310619cd99c1979155f22c0531888feef73eee3e6bf0dd3247cb76f167bf2d6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 2c5ecf24556fb94b679234a72ccef2c5cd847b398ebf4fc686d1debb67f0e98e
+  source_sha256: 683069414e39aa942cae6d9a168b7c6f7633a7808f8d3ad19c66fb1b68e606e0
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 86060f65c891645ccd0d341c8f51d58313d1fb955defe273fc3357b7977621f6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [chapter_role, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, mapping, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: a535915f86103ad8e68418dd1d821c57be5b24a1af65d3aa9acd04495a0ee333
-  translated_at: 2026-09-26T18:12:04Z
-  stamped_at: 2026-09-26T18:32:20Z
+  glossary_keys: [chapter_role, gdpr_controller, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, mapping, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: 3a70647e9644dba9550555d7fdd37d5a84d84482350594c2ef9ebf8e8c0200fe
+  translated_at: 2026-09-26T23:27:22Z
+  stamped_at: 2026-09-26T23:27:22Z
   reviewed_by: null
 ---
 
@@ -76,7 +76,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 1. DPIA trigger criteria defined  
 2. Reuse Threat Modelling ([Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro)) as a technical annex  
 3. Add Privacy TM (LINDDUN) when high risk  
-4. DPO approval and record  
+4. Opinion of the DPO and decision of the controller; record  
 **Evidence:** DPIA #1; TM annexes; DPO approval
 
 ### Phase 6 (M3–M4): Processors (Art. 28) {#fase-6-m3m4-processors-art-28}

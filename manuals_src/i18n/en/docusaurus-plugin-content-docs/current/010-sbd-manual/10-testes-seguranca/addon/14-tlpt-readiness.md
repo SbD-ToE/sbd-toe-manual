@@ -6,16 +6,16 @@ tags: [tlpt, dora, pentest, threat-intelligence, resiliência, regulatório, att
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/addon/14-tlpt-readiness.md
-  source_sha256: c251b82baa8779450b51041d79ec37bc97eb8e367f0115ba189304906c44c0e5
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c347d24179f8719ff9a9124d9637184bac6bf6ff1ae6c75548ed5710d59cc08b
+  source_sha256: db72b8100a21d9fd8204c1adc8d3f616909149ee410da333f1bc7193a9bc0b9b
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 1c18af70f611b696765e3680b488ad67a27425e8b491d64344f27e89513aa3ff
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, chapter_role, cycle_iteration, dora_financial_entity, framework_source_corpus, gap_family, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 8cad1e1713526ba736fd6262a3c297ec235d99a2b203d1671bff4746c75b8195
-  translated_at: 2026-09-26T10:31:33Z
-  stamped_at: 2026-09-26T18:35:13Z
+  translated_at: 2026-09-26T23:27:26Z
+  stamped_at: 2026-09-26T23:27:26Z
   reviewed_by: null
 ---
 
@@ -35,7 +35,7 @@ This addon defines what TLPT is, what SbD-ToE already covers as a preparation ba
 
 ### The DORA Regulation {#regulamento-dora}
 
-TLPT is regulated by **Regulation (EU) 2022/2554** (DORA), in force since 17 January 2025:
+TLPT is regulated by **Regulation (EU) 2022/2554** (DORA), in force since 16 January 2023 and applicable since 17 January 2025:
 
 | Article | Content |
 |--------|----------|

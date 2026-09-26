@@ -8,16 +8,16 @@ sidebar_position: 34
 translation:
   source_locale: pt
   source_path: 020-assets/policies/34_policy-rastreabilidade-organizacional.md
-  source_sha256: 4f57616ff35d84fe53fc8d8753d3c64d349031a7ce41fdbeae2511a39e7c03cd
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 23f07754282da347285e431c6e133538ef3fba9291f622466a3053b42cf0fc5f
+  source_sha256: 5e495ae4655c59622e9b935bce13e8d076948311fb284e2e036a0440f2b94b08
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: 37851f56cf09e2c01ee03ef1f2b32f43d02a225b769339741e47b8902be7d8ac
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, maturity, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 097a316bb00ef5a9c2723a97d8be46671ed579daeda0c5a2673fa9a171d46fec
-  translated_at: 2026-09-26T14:11:04Z
-  stamped_at: 2026-09-26T18:37:05Z
+  translated_at: 2026-09-26T23:27:33Z
+  stamped_at: 2026-09-26T23:27:33Z
   reviewed_by: null
 ---
 
@@ -188,7 +188,7 @@ All compliance evidence must meet the following requirements to be considered au
 | Exception records (including expired ones) | 5 years |
 
 :::note
-In regulated environments (DORA, NIS2, GDPR), regulatory time limits prevail over the minimums of this policy. The longer period is always the one that applies.
+In regulated environments (DORA, NIS2), regulatory periods prevail over the minimums of this policy; where personal data are involved, the GDPR limits retention to the period necessary.
 :::
 
 ---
@@ -225,5 +225,5 @@ This policy must be **reviewed annually** or after any of the following events:
 | NIST SSDF - PO.3, PO.7 | Implementation of security practices and traceability |
 | OWASP SAMM - PO2, PO3 | Organisational security maturity |
 | ISO/IEC 27001 - A.18 | Compliance and information security reviews |
-| DORA - Art. 17 | ICT risk management documentation and evidence |
+| DORA - Art. 6(5) | ICT risk management documentation and evidence |
 | NIS2 - Art. 21 | Cybersecurity measures and accountability |

@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/05-exemplo-agentic-sdlc.md
-  source_sha256: 55be28a9ca22dc59fe96a83f5b958051cd23ba9b8877d94a4f97738a8621159a
-  source_commit: f37ed776ef1021f6640a8d28490caa27af3da492
-  target_sha256: 1e16e544c4c2683469c80efbdf39f2dfef7deeabab2ab5ba7ebe857ca38a930f
+  source_sha256: c866236f1754086453ad1ec16f8c8a979d085caac620f8fde1a39f8a3dccbd96
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: c0a8a4438be74e14b1b5ec28215e0037cc1d3ca2f54324ba3c3c26f9695e7e58
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, eu_ai_human_oversight, framework_source_corpus, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, transversal, trilho_formativo, validation_evaluation]
   glossary_sha256: 60abe2c7a2d37d2eb315d40cee198ba9303ef9b73bd836bc447b88afa73ab794
-  translated_at: 2026-09-26T18:12:02Z
-  stamped_at: 2026-09-26T18:37:49Z
+  translated_at: 2026-09-26T23:27:19Z
+  stamped_at: 2026-09-26T23:27:19Z
   reviewed_by: null
 ---
 
@@ -204,17 +204,17 @@ The process described serves several regulatory obligations at the same time. Su
 | **DORA** | Art. 17 (ICT-related incident management) | Stops 10, 11 |
 | **CRA** | Annex I Part I (cybersec by design) | Stops 3, 5, 6, 8 |
 | **CRA** | Annex I Part II (vulnerability handling) | Stop 7 (Policy 39 §7) + Stops 10, 11 |
-| **CRA** | Art. 13 (SBOM) | Stop 7 (the AI BOM covers + complements) |
+| **CRA** | Annex I, Part II, point (1) (SBOM) | Stop 7 (the AI BOM covers + complements) |
 | **GDPR** | Art. 5(1)(c) (data minimisation) | Policy 18 §10.1 |
 | **GDPR** | Art. 6 / 9 (legal basis) | Policy 18 §10.2 |
-| **GDPR** | Art. 28 (sub-processors) | Stop 7 + Policy 33 §10 |
+| **GDPR** | Art. 28 (processors) | Stop 7 + Policy 33 §10 |
 | **GDPR** | Art. 44–49 (transfers) | Policy 33 §10.2 |
 
 ---
 
 ## Concrete example: PR audit agent (level A2) {#exemplo-concreto-agente-de-auditoria-de-pr-nível-a2}
 
-Illustrative scenario, based on a realistic operational case — implementable with the SbD-ToE MCP server.
+Illustrative scenario, based on a realistic operational case — implementable with the MCP SbD-ToE server.
 
 | Step | Action | Where it lands |
 |---|---|---|
@@ -259,5 +259,5 @@ Illustrative scenario, based on a realistic operational case — implementable w
 
 - **MCP mini-site** ([`/sbd-toe/assets/mcp/intro`](/sbd-toe/assets/mcp/intro)) — practical examples of skills/agents that materialise several of these stops
 - **AI Act cross-check** ([`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro)) — article-by-article analysis
-- **CRA convergence note** ([`/sbd-toe/cross-check-normativo/ai-act/convergencia-cra`](/sbd-toe/cross-check-normativo/ai-act/convergencia-cra)) — one architecture, two presumptions of conformity
+- — one technical architecture; a single presumption of conformity (CRA, Article 12(1), mirrored in the AI Act, Article 42(3), as worded by Regulation (EU) 2026/1744), limited to the cybersecurity requirements of Article 15 of the AI Act
 - **Other playbook examples**: [Toolchain](./exemplo-toolchain-options), [KPIs](./exemplo-kpis-targets), [RACI](./exemplo-raci-governance), [Incident report](./exemplo-relatorio-incidentes)

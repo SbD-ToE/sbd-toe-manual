@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/01-intro.md
-  source_sha256: 27cc3ed9424ac44ef6fdf8e2c14f3a6f82030d869da014abf089719fedc50cb7
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 563123751d748f220fa1a9162b2f805e86cb886dfe64afed1b87f6e7cdcf150b
+  source_sha256: c4400d64f202632d5c2b7c0ff6bd5bbc80229ea19d09c9a8d818ce57f68ad6f9
+  source_commit: be49273442123786a27c269d98751832652acabb
+  target_sha256: db971c2f33abb118e5b441f952641d78dea8c6c0c990ee456dafa46265f3fa31
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, discipline, dnt_fedramp_name, dnt_soc2_name, dora_financial_entity, dora_ict_risk, esquema_regime, framework_source_corpus, instrument, lifecycle_phase, maturity, normative_empirical, papel_suporte, practitioner_manual, prescriptive, sbdtoe_sbd, schema]
   glossary_sha256: ca16ac4499d6410a729e35747dfbfb136994ee2785cc8fb357306b8ace277110
-  translated_at: 2026-09-26T18:11:51Z
-  stamped_at: 2026-09-26T18:30:47Z
+  translated_at: 2026-09-26T23:27:10Z
+  stamped_at: 2026-09-26T23:27:10Z
   reviewed_by: null
 ---
 
@@ -139,7 +139,7 @@ This chapter is organised by **framework/normative instrument**, each in a dedic
   - [Practical implementation playbook](ai-act/playbook)
   - [Convergence analysis with the CRA](ai-act/convergencia-cra)
 
-#### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification) {#enisa-csa-cloud-security-alliance-certification}
+#### **[ENISA / CSA](enisa-csa/intro)** (Cybersecurity Act — European cybersecurity certification) {#enisa-csa-cloud-security-alliance-certification}
 - 📂 `enisa-csa/`
   - [Framing of the certification scheme](enisa-csa/intro)
 

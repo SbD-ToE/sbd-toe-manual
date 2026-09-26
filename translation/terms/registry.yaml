@@ -448,7 +448,14 @@ terms:
   state: in-record
   owner: manual-agent
   en: audit trail
-  en_variants: [auditable, auditability, audit-trail, audit-traceable, audit trails]
+  en_variants:
+  - auditable
+  - auditability
+  - audit-trail
+  - audit-traceable
+  - audit trails
+  - auditably
+  - unauditable
   pt: trilho de auditoria
   pt_variants: [auditável]
   ontology_id: null
@@ -529,7 +536,13 @@ terms:
   state: in-record
   owner: manual-agent
   en: assessment
-  en_variants: [assessments, evaluation, evaluations, assess]
+  en_variants:
+  - assessments
+  - evaluation
+  - evaluations
+  - assess
+  - assessing
+  - assessed
   pt: avaliação
   pt_variants: [avaliações]
   ontology_id: null
@@ -2602,7 +2615,11 @@ terms:
   state: in-record
   owner: manual-agent
   en: lifecycle
-  en_variants: [Phase, SDLC]
+  en_variants:
+  - Phase
+  - SDLC
+  - stage
+  - stages
   pt: ciclo de vida
   pt_variants: [fase]
   ontology_id: null
@@ -4994,7 +5011,10 @@ terms:
   state: in-record
   owner: manual-agent
   en: cross-cutting
-  en_variants: [cross-cutting obligations, transversal]
+  en_variants:
+  - cross-cutting obligations
+  - transversal
+  - across the organisation
   pt: transversal
   pt_variants: [transversais]
   ontology_id: null
@@ -5532,7 +5552,12 @@ terms:
   state: in-record
   owner: manual-agent
   en: validation
-  en_variants: [evaluation]
+  en_variants:
+  - evaluation
+  - validating
+  - validate
+  - validated
+  - validates
   pt: validação
   pt_variants: []
   ontology_id: null
@@ -7465,3 +7490,56 @@ terms:
   pending_reason: null
   blocks_translation: false
   notes: '[MA 2026-09-26] Cross-check normativo (01-intro): nome próprio externo verbatim.'
+- key: verificacao_check
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: check
+  en_variants:
+  - checks
+  - checking
+  - checked
+  - checklist
+  - checkpoint
+  - verify
+  - verified
+  - verifying
+  pt: verificação
+  pt_variants: []
+  ontology_id: null
+  sense: '«verificação» no sentido operacional genérico do Manual (check, lista de verificação, ponto de verificação)
+    — distinto de verification_taxonomy (taxonomia de verificação do programa). Polissemia: a consistency aceita
+    qualquer dos sentidos da forma partilhada (limite declarado: não detecta a troca entre estes dois sentidos).'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Passe único da dívida de consistency (opção B do lead).'
+- key: empirico_generico
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: empirical
+  en_variants: []
+  pt: empírico
+  pt_variants: []
+  ontology_id: null
+  sense: '«empírico» no sentido corrente (baseado na experiência, ex.: «modelo empírico») — distinto de normative_empirical
+    (conhecimento normativo vs empírico do programa). Polissemia declarada.'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Passe único da dívida de consistency (opção B do lead).'

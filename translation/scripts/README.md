@@ -149,6 +149,13 @@ python translation/scripts/terms_lint.py hash --registry …
   bloco da fonte tem de sair no bloco espelho com `en` ou uma de `en_variants` (alinhamento por bloco quando fonte
   e espelho têm o mesmo número de blocos; senão por ficheiro). Forma PT deixada no EN = aviso. Sem ficheiros EN:
   sucesso com aviso.
+  **Fronteiras (passe único 2026-09-26):** do lado PT um hífen colado conta como parte da palavra («requisito» não casa
+  em «pré-requisito»); do lado EN a fronteira é tolerante («personal-data set» contém «personal data»). Formas
+  morfológicas do mesmo sentido (validating/validated, assessing, auditably, stage) entram como `en_variants`.
+  **Polissemia — limite declarado:** entradas que partilham uma forma PT são sentidos da mesma palavra (piso →
+  foundation/floor; verificação → verification taxonomy/check; empírico → empirical knowledge/empirical); um bloco que
+  traga a forma EN de QUALQUER dos sentidos passa. O lint NÃO detecta a troca de um sentido pelo outro — o registo não
+  tem pistas de contexto legíveis por máquina; essa troca fica à guarda do tradutor e da revisão.
 - `export-pending` — Markdown determinista, uma tabela por destinatário (`archon`, `lead`, `manual-agent`): chave,
   espécie, razão, PT, EN actual, `proposal`, `false_friends` (com o `sense` da entrada referida), `senses` resumidos,
   e as instruções de resposta. Inclui o `terms_sha256` do registo.
@@ -229,7 +236,8 @@ primeira linha do corpo para `title`/`description`. Gera o frontmatter do contra
 estrutural, `title`/`description` traduzidos (aspas mantidas se a fonte as tinha), bloco `translation:` com
 `source_locale`, `source_path`, `source_sha256`, `source_commit`, `target_sha256` (hash do ficheiro sem o bloco, via
 `common.strip_translation_block`), `engine` (`--engine`, obrigatório), `prompt_sha256`, `terms_sha256`, `glossary_keys`
-(lista em fluxo, `[a, b]`) e `glossary_sha256` copiados do job, `translated_at` (`--translated-at` para testes),
+(lista em fluxo, `[a, b]`) e `glossary_sha256` copiados do job, `translated_at` (`--translated-at` para testes), `stamped_at` (sempre agora; com
+`--restamp` o `translated_at` do espelho existente mantém-se — re-estampa só de proveniência, texto reutilizado),
 `reviewed_by: null`. Fonte sem frontmatter → mínimo (`id` efectivo + bloco). Recusa montar se a fonte mudou desde o
 `prepare` (`--ignore-source-change` para forçar) e recusa um job sem `glossary_keys`/`glossary_sha256` (preparado antes
 desta proveniência): re-correr o `prepare` (`--force`) dá o mesmo job com os mesmos ids, e o `.out.json` reutiliza-se —

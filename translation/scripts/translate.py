@@ -1029,7 +1029,7 @@ def yaml_scalar(value) -> str:
 
 TRANSLATION_BLOCK_KEYS = (
     "source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256",
-    "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "reviewed_by",
+    "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "stamped_at", "reviewed_by",
 )
 
 
@@ -1258,7 +1258,20 @@ def cmd_assemble(args) -> int:
     if not out_file.is_file():
         raise TranslateError(f"out file not found: {out_file}")
     translations = load_translations(json.loads(common.read_text(out_file)))
-    translated_at = args.translated_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    now = args.translated_at or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # translated_at = when the TEXT was translated; stamped_at = when this provenance block was written. A re-stamp
+    # (provenance only — glossary/terms/source hashes refreshed, text reused) keeps the mirror's translated_at, so the
+    # date no longer claims a translation that did not happen (handover §5, decided in the single pass 2026-09-26).
+    translated_at = now
+    if getattr(args, "restamp", False):
+        if not mirror.is_file():
+            raise TranslateError(f"{rel}: --restamp needs an existing mirror to keep its translated_at")
+        old_fm, _body, _n = common.parse_frontmatter(common.read_text(mirror), where=str(mirror))
+        old_block = (old_fm or {}).get(common.TRANSLATION_BLOCK_KEY) or {}
+        previous = old_block.get("translated_at")
+        if not previous:
+            raise TranslateError(f"{rel}: --restamp: the mirror has no translated_at to keep")
+        translated_at = str(previous)
     meta = {
         "source_locale": source_locale,
         "source_path": rel,
@@ -1270,6 +1283,7 @@ def cmd_assemble(args) -> int:
         "glossary_keys": list(job["glossary_keys"]),
         "glossary_sha256": job["glossary_sha256"],
         "translated_at": translated_at,
+        "stamped_at": now,
         "reviewed_by": None,
     }
     final_text, _without, problems = assemble_text(job, translations, meta)
@@ -1381,6 +1395,8 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--write", action="store_true", help="save to the mirror path when every check passes")
     p.add_argument("--print", action="store_true", help="print the assembled file to stdout")
     p.add_argument("--translated-at", default=None, help="override the ISO-8601 timestamp (tests)")
+    p.add_argument("--restamp", action="store_true",
+                   help="provenance-only re-stamp: keep the mirror's translated_at, set stamped_at to now")
     p.add_argument("--allow-spelling-errors", action="store_true", help="report en-GB spelling errors without blocking the write")
     p.add_argument("--ignore-source-change", action="store_true", help="assemble even if the source changed since prepare")
     _add_common(p)

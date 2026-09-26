@@ -103,9 +103,12 @@ translation:
   terms_sha256: <sha256 de terms/registry.yaml>
   glossary_keys: [<chaves do registo aplicadas ao ficheiro, ordenadas>]
   glossary_sha256: <sha256 do glossário aplicado — common.glossary_sha256(registo, glossary_keys)>
-  translated_at: <ISO-8601>
+  translated_at: <ISO-8601 — quando o TEXTO foi traduzido>
+  stamped_at: <ISO-8601 — quando este bloco foi escrito (re-estampa só de proveniência: `assemble --restamp` mantém translated_at)>
   reviewed_by: null
 ```
+
+Espelhos anteriores a 2026-09-26 não têm `stamped_at`: lê-se `translated_at` como data de ambos.
 
 `terms_sha256` é **proveniência** (que registo inteiro estava em vigor); `glossary_sha256` é o que **decide
 `stale-terms`**: o hash das entradas que o `prepare` pôs no glossário do ficheiro (termos `in-record`/`coined`/`changed`

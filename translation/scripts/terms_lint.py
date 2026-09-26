@@ -106,13 +106,18 @@ def _forms(entry: dict, which: str) -> List[str]:
     return forms
 
 
-def _word_regex(forms: Iterable[str], *, ignore_case: bool) -> Optional[re.Pattern]:
-    """Whole-word alternation of ``forms`` (longest first); spaces match any whitespace."""
+def _word_regex(forms: Iterable[str], *, ignore_case: bool, hyphen_is_word: bool = False) -> Optional[re.Pattern]:
+    """Whole-word alternation of ``forms`` (longest first); spaces match any whitespace.
+
+    ``hyphen_is_word``: a hyphen glued to the form also counts as part of a word, so «requisito» does not match inside
+    «pré-requisito» (a different word). Used for the SOURCE side of the consistency check; the target side stays
+    tolerant («personal-data set» still carries «personal data»)."""
     cleaned = sorted({common.nfc(f) for f in forms if f}, key=lambda s: (-len(s), s))
     if not cleaned:
         return None
     parts = [re.escape(f).replace(r"\ ", r"\s+") for f in cleaned]
-    pattern = r"(?<![\w])(?:" + "|".join(parts) + r")(?![\w])"
+    edge = r"[\w-]" if hyphen_is_word else r"[\w]"
+    pattern = r"(?<!" + edge + r")(?:" + "|".join(parts) + r")(?!" + edge + r")"
     return re.compile(pattern, re.IGNORECASE if ignore_case else 0)
 
 
@@ -874,7 +879,7 @@ def cmd_consistency(args) -> int:
         target_forms = list(_forms(entry, args.target_locale))
         for form in source_forms:
             target_forms.extend(t for t in senses_by_form.get(form.casefold(), []) if t not in target_forms)
-        source_re = _word_regex(source_forms, ignore_case=True)
+        source_re = _word_regex(source_forms, ignore_case=True, hyphen_is_word=True)
         target_re = _word_regex(target_forms, ignore_case=True)
         if source_re is None or target_re is None:
             continue

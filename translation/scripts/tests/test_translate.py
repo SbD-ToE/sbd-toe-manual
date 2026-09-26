@@ -332,6 +332,23 @@ class AssembleTests(unittest.TestCase):
     def tearDown(self):
         self.ws.cleanup()
 
+    def test_restamp_keeps_translated_at_and_advances_stamped_at(self):
+        self.ws.write_out(REL, mechanical_out(self.job))
+        code, out = self.ws.assemble(REL, "--write")
+        self.assertEqual(code, 0, out)
+        code, out = self.ws.assemble(REL, "--write", "--restamp", "--translated-at", "2026-09-30T00:00:00Z")
+        self.assertEqual(code, 0, out)
+        block = common.parse_frontmatter(common.read_text(self.ws.mirror()))[0]["translation"]
+        self.assertEqual(block["translated_at"], "2026-09-25T00:00:00Z")
+        self.assertEqual(block["stamped_at"], "2026-09-30T00:00:00Z")
+
+    def test_restamp_without_a_mirror_is_refused(self):
+        self.ws.write_out(REL, mechanical_out(self.job))
+        with redirect_stderr(io.StringIO()):
+            code, _out = self.ws.assemble(REL, "--write", "--restamp")
+        self.assertNotEqual(code, 0)
+        self.assertFalse(self.ws.mirror().is_file())
+
     def test_mechanical_translation_writes_an_equivalent_file(self):
         self.ws.write_out(REL, mechanical_out(self.job))
         code, out = self.ws.assemble(REL, "--write")
@@ -349,7 +366,7 @@ class AssembleTests(unittest.TestCase):
         self.assertEqual(fm["title"], "Página de tradução com cobertura")
         self.assertEqual(fm["description"], "Fixture for translate.py — slice ACO-TSV, requirement CIC-003.")
         block = fm["translation"]
-        self.assertEqual(list(block), ["source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256", "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "reviewed_by"])
+        self.assertEqual(list(block), ["source_locale", "source_path", "source_sha256", "source_commit", "target_sha256", "engine", "prompt_sha256", "terms_sha256", "glossary_keys", "glossary_sha256", "translated_at", "stamped_at", "reviewed_by"])
         self.assertEqual(block["glossary_keys"], ["appsec_core", "coverage", "requirement", "slice"])
         self.assertEqual(block["glossary_sha256"], self.job["glossary_sha256"])
         self.assertEqual(block["glossary_sha256"], common.glossary_sha256(REGISTRY, block["glossary_keys"]))
@@ -362,6 +379,7 @@ class AssembleTests(unittest.TestCase):
         self.assertEqual(block["prompt_sha256"], common.file_sha256(PROMPT))
         self.assertEqual(block["terms_sha256"], terms_lint.registry_sha256(self.ws.registry))
         self.assertEqual(block["translated_at"], "2026-09-25T00:00:00Z")
+        self.assertEqual(block["stamped_at"], "2026-09-25T00:00:00Z")
         self.assertIsNone(block["reviewed_by"])
         self.assertEqual(block["target_sha256"], common.content_sha256(common.strip_translation_block(text)))
         # Pending comments where they belong; blocked units stay in the source language.

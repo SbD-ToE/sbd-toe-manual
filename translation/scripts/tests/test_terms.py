@@ -504,3 +504,16 @@ class ConsistencyDoNotTranslateTests(unittest.TestCase):
         code, out = self._run("O programa de segurança.", "The security plan.")
         self.assertIn("programme_line  source form present", out)
         self.assertEqual(code, 1)
+
+
+class WordRegexHyphenTest(unittest.TestCase):
+    """Source side of consistency: a glued hyphen is part of the word (single pass, 2026-09-26)."""
+
+    def test_source_side_does_not_match_inside_hyphenated_word(self):
+        rx = terms_lint._word_regex(["requisito"], ignore_case=True, hyphen_is_word=True)
+        self.assertIsNone(rx.search("é um pré-requisito do gate"))
+        self.assertIsNotNone(rx.search("cada requisito tem dono"))
+
+    def test_target_side_stays_tolerant(self):
+        rx = terms_lint._word_regex(["personal data"], ignore_case=True)
+        self.assertIsNotNone(rx.search("each personal data-set is recorded"))

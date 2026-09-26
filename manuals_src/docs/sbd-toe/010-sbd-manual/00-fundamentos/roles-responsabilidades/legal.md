@@ -1,5 +1,5 @@
 ---
-id: juridico
+id: legal
 title: Jurídico
 sidebar_label: ⚖️ Jurídico
 description: O que o SbD-ToE requer que exista do lado do Jurídico

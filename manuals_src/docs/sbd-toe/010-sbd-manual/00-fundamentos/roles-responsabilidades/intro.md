@@ -64,7 +64,7 @@ Cada role tem o seu próprio documento detalhado com:
 **Outros domínios da organização** (o Manual diz o que tem de existir, não como trabalham):
 - [RH / PeopleOps](rh-peopleops)
 - [Procurement](procurement)
-- [Jurídico](juridico)
+- [Jurídico](legal)
 
 **Terceiros:**
 - [Fornecedores / Terceiros](fornecedores-terceiros)

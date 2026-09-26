@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T17:44:57Z",
+  "generated_at": "2026-09-26T17:47:19Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
@@ -768,10 +768,10 @@
       "state": "synced",
       "source_sha256": "852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4",
       "translated_source_sha256": "852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4",
-      "target_sha256": "c55add09c150ca190b8fdeb6bac1cca49340e8da6b9bec685f10c0f0eaf841d3",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "73cac629d3ff844df741efbbdc728aee0299a88046ab56e6a0c3b8cd83da606a",
-      "translated_at": "2026-09-25T20:20:11Z",
+      "target_sha256": "329c7938e9d2bcee896e58a1bd5eb09c552b6936f7c8759321705773ef82601a",
+      "terms_sha256_at_translation": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
+      "glossary_sha256_at_translation": "61da72ed4f59b7fb913a75e6a2c402e8c6d1088e5da8c27224a205bade0d2e60",
+      "translated_at": "2026-09-26T17:45:15Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/10-validacao-requisitos.md": {
@@ -3928,10 +3928,10 @@
       "state": "synced",
       "source_sha256": "3f3045d1cb240dcbc3905fd05c369f2ac27e8fe1432c3e80aa9d0f924dba51d3",
       "translated_source_sha256": "3f3045d1cb240dcbc3905fd05c369f2ac27e8fe1432c3e80aa9d0f924dba51d3",
-      "target_sha256": "33bb96a29f6d619a3ba325936c0d9b6ded4cd0cc50b6d77c6850e3c1b74c767b",
-      "terms_sha256_at_translation": "bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0",
-      "glossary_sha256_at_translation": "bce7004dbaef07797cad1f1fc5fe70fd03ac9249c55b5c093b9ad05085ee7661",
-      "translated_at": "2026-09-26T14:10:52Z",
+      "target_sha256": "0f51d1585e0a09e45354e053b55c43f2af3c07c54ea2d8b3bebd14bf478087be",
+      "terms_sha256_at_translation": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
+      "glossary_sha256_at_translation": "e3fe5becf62da95fa8a0c61cd286c4d16b72119d9f76b9de283368cab2981e0f",
+      "translated_at": "2026-09-26T17:45:14Z",
       "pending_blocks": 0
     },
     "020-assets/policies/17_policy-cicd-seguro.md": {

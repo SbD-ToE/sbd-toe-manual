@@ -8,13 +8,13 @@ translation:
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md
   source_sha256: 852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c55add09c150ca190b8fdeb6bac1cca49340e8da6b9bec685f10c0f0eaf841d3
+  target_sha256: 329c7938e9d2bcee896e58a1bd5eb09c552b6936f7c8759321705773ef82601a
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [audit_trail, chapter_role, framework_source_corpus, layer, normative_empirical, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 73cac629d3ff844df741efbbdc728aee0299a88046ab56e6a0c3b8cd83da606a
-  translated_at: 2026-09-25T20:20:11Z
+  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  glossary_keys: [audit_trail, chapter_role, eu_ai_human_oversight, eu_ai_system, framework_source_corpus, layer, normative_empirical, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: 61da72ed4f59b7fb913a75e6a2c402e8c6d1088e5da8c27224a205bade0d2e60
+  translated_at: 2026-09-26T17:45:15Z
   reviewed_by: null
 ---
 
@@ -111,7 +111,7 @@ The use of automation **reinforces** (does not replace) the obligations in the f
 
 ## 🤖 Autonomy level model for AI agents {#niveis-autonomia}
 
-Up to this point the subject has been **assisted automation** — tools that suggest, but where decision and execution are human. A different class of tool has emerged: **agents** that receive an objective, decide which steps to take, invoke real *tools* (create a PR, run tests, read secrets, deploy), and can do so with varying degrees of human supervision. *Copilot Workspace*, *Claude Code*, *Cursor agent mode*, *Devin*, agents built on proprietary SDKs — all fit here.
+Up to this point the subject has been **assisted automation** — tools that suggest, but where decision and execution are human. A different class of tool has emerged: **agents** that receive an objective, decide which steps to take, invoke real *tools* (create a PR, run tests, read secrets, deploy), and can do so with varying degrees of human oversight. *Copilot Workspace*, *Claude Code*, *Cursor agent mode*, *Devin*, agents built on proprietary SDKs — all fit here.
 
 When moving from a "tool that suggests" to an "agent that executes", the question is no longer *"was it reviewed?"* but *"was it authorised to do this, in this context, with this reach?"*. A **five-level autonomy model (A0–A4)** is therefore adopted, which makes that authorisation explicit, classifiable and auditable.
 

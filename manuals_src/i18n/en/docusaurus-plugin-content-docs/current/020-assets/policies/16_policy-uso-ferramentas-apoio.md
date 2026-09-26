@@ -10,13 +10,13 @@ translation:
   source_path: 020-assets/policies/16_policy-uso-ferramentas-apoio.md
   source_sha256: 3f3045d1cb240dcbc3905fd05c369f2ac27e8fe1432c3e80aa9d0f924dba51d3
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 33bb96a29f6d619a3ba325936c0d9b6ded4cd0cc50b6d77c6850e3c1b74c767b
+  target_sha256: 0f51d1585e0a09e45354e053b55c43f2af3c07c54ea2d8b3bebd14bf478087be
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [avaliacao, framework_source_corpus, github_copilot_trust_center, llm, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: bce7004dbaef07797cad1f1fc5fe70fd03ac9249c55b5c093b9ad05085ee7661
-  translated_at: 2026-09-26T14:10:52Z
+  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  glossary_keys: [avaliacao, eu_ai_human_oversight, eu_ai_system, framework_source_corpus, github_copilot_trust_center, llm, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: e3fe5becf62da95fa8a0c61cd286c4d16b72119d9f76b9de283368cab2981e0f
+  translated_at: 2026-09-26T17:45:14Z
   reviewed_by: null
 ---
 
@@ -154,7 +154,7 @@ At L3, before any GenAI tool is used in the context of the project, it must be v
 
 ## 11. Autonomous agents (A2+) with tool-use {#11-agentes-autónomos-a2-com-tool-use}
 
-Sections 1–10 cover the general case: the tool **suggests** and the developer **decides**. When what the tool does becomes **executing actions with real effect** — opening PRs, reading secrets, performing deploys, writing to external systems — the territory is that of **autonomous agents**, with varying degrees of human supervision. The five-level autonomy model (A0–A4) is defined in [Ch. 02 — Autonomy level model](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia); it applies here without reformulation.
+Sections 1–10 cover the general case: the tool **suggests** and the developer **decides**. When what the tool does becomes **executing actions with real effect** — opening PRs, reading secrets, performing deploys, writing to external systems — the territory is that of **autonomous agents**, with varying degrees of human oversight. The five-level autonomy model (A0–A4) is defined in [Ch. 02 — Autonomy level model](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia); it applies here without reformulation.
 
 ### 11.1 Where this policy applies vs. Policy 38 {#111-onde-esta-política-se-aplica-vs-policy-38}
 

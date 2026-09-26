@@ -6235,3 +6235,1215 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Correcção dos papéis: nome bilingue decidido pelo lead e registado ANTES da
     prosa (épico §9).'
+- key: eu_ai_system
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: AI system
+  en_variants:
+  - AI systems
+  pt: sistema de IA
+  pt_variants:
+  - sistemas de IA
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(1)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(1) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_deployer
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: deployer
+  en_variants:
+  - deployers
+  pt: responsável pela implantação
+  pt_variants:
+  - responsáveis pela implantação
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(4)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(4) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_high_risk_system
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: high-risk AI system
+  en_variants:
+  - high-risk AI systems
+  pt: sistema de IA de risco elevado
+  pt_variants:
+  - sistemas de IA de risco elevado
+  - sistema de IA de alto risco
+  - sistemas de IA de alto risco
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 6).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 6 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_gpai_model
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: general-purpose AI model
+  en_variants:
+  - general-purpose AI models
+  pt: modelo de IA de finalidade geral
+  pt_variants:
+  - modelos de IA de finalidade geral
+  - modelo de IA de uso geral
+  - modelos de IA de uso geral
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(63)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(63) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_human_oversight
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: human oversight
+  en_variants: []
+  pt: supervisão humana
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 14).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 14 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_post_market_monitoring
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: post-market monitoring
+  en_variants: []
+  pt: acompanhamento pós-comercialização
+  pt_variants:
+  - monitorização pós-comercialização
+  - monitorização pós-mercado
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(25), 72).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(25), 72 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_qms
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: quality management system
+  en_variants:
+  - quality management systems
+  pt: sistema de gestão da qualidade
+  pt_variants:
+  - sistemas de gestão da qualidade
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 17).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 17 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_instructions_for_use
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: instructions for use
+  en_variants: []
+  pt: instruções de utilização
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(15)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(15) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_training_data
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: training data
+  en_variants: []
+  pt: dados de treino
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(29)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(29) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_notified_body
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: notified body
+  en_variants:
+  - notified bodies
+  pt: organismo notificado
+  pt_variants:
+  - organismos notificados
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(22); CRA 32024R2847 3(47)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(22); CRA 32024R2847 3(47) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ce_marking
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: CE marking
+  en_variants: []
+  pt: marcação CE
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(24); CRA 32024R2847 3(31)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(24); CRA 32024R2847 3(31) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_market_surveillance_authority
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: market surveillance authority
+  en_variants:
+  - market surveillance authorities
+  pt: autoridade de fiscalização do mercado
+  pt_variants:
+  - autoridades de fiscalização do mercado
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(26)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(26) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_placing_on_market
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: placing on the market
+  en_variants: []
+  pt: colocação no mercado
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(9)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(9) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_reasonably_foreseeable_misuse
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: reasonably foreseeable misuse
+  en_variants: []
+  pt: utilização indevida razoavelmente previsível
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(13)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(13) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_risk_management_system
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: risk management system
+  en_variants: []
+  pt: sistema de gestão de riscos
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 9).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 9 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_fria
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: fundamental rights impact assessment
+  en_variants: []
+  pt: avaliação de impacto sobre os direitos fundamentais
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 27).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 27 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_literacy
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: AI literacy
+  en_variants: []
+  pt: literacia no domínio da IA
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 4).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 4 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_ai_widespread_infringement
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: widespread infringement
+  en_variants: []
+  pt: infração generalizada
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(61)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(61) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_critical_infrastructure
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: critical infrastructure
+  en_variants: []
+  pt: infraestrutura crítica
+  pt_variants:
+  - infraestruturas críticas
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(62)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(62) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_biometric_identification
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: biometric identification
+  en_variants: []
+  pt: identificação biométrica
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
+    art. 3(35)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R1689, art. 3(35) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_digital_operational_resilience
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: digital operational resilience
+  en_variants: []
+  pt: resiliência operacional digital
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(1)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(1) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_ict_risk
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: ICT risk
+  en_variants:
+  - ICT risks
+  pt: risco associado às TIC
+  pt_variants:
+  - risco TIC
+  - riscos TIC
+  - risco de TIC
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(5)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(5) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_ict_tpp
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: ICT third-party service provider
+  en_variants:
+  - ICT third-party service providers
+  pt: terceiro prestador de serviços de TIC
+  pt_variants:
+  - terceiros prestadores de serviços de TIC
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(19)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(19) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_financial_entity
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: financial entity
+  en_variants:
+  - financial entities
+  pt: entidade financeira
+  pt_variants:
+  - entidades financeiras
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 2).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 2 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_management_body
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: management body
+  en_variants:
+  - management bodies
+  pt: órgão de administração
+  pt_variants:
+  - órgãos de administração
+  - órgão de gestão
+  - órgãos de gestão
+  - órgãos de direção
+  - órgão de direção
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 5; NIS2 32022L2555 20).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 5; NIS2 32022L2555 20 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_major_ict_incident
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: major ICT-related incident
+  en_variants:
+  - major ICT-related incidents
+  pt: incidente de caráter severo relacionado com as TIC
+  pt_variants:
+  - incidentes de caráter severo relacionados com as TIC
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(10)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(10) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_tlpt
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: threat-led penetration testing
+  en_variants: []
+  pt: testes de penetração baseados em ameaças
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(17)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(17) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_ict_rmf
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: ICT risk management framework
+  en_variants: []
+  pt: quadro de gestão do risco associado às TIC
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 6).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 6 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_register_of_information
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: register of information
+  en_variants: []
+  pt: registo de informações
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 28(3)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 28(3) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: dora_legacy_ict_system
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: legacy ICT system
+  en_variants:
+  - legacy ICT systems
+  pt: sistema de TIC legado
+  pt_variants:
+  - sistemas de TIC legados
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022R2554,
+    art. 3(3)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022R2554, art. 3(3) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: nis2_essential_entity
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: essential entity
+  en_variants:
+  - essential entities
+  - essential/important entity
+  - essential/important entities
+  pt: entidade essencial
+  pt_variants:
+  - entidades essenciais
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022L2555,
+    art. 3).
+  senses: []
+  evidence: EUR-Lex CELEX:32022L2555, art. 3 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: nis2_important_entity
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: important entity
+  en_variants:
+  - important entities
+  pt: entidade importante
+  pt_variants:
+  - entidades importantes
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022L2555,
+    art. 3).
+  senses: []
+  evidence: EUR-Lex CELEX:32022L2555, art. 3 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: nis2_significant_incident
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: significant incident
+  en_variants:
+  - significant incidents
+  pt: incidente significativo
+  pt_variants:
+  - incidentes significativos
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022L2555,
+    art. 23(3)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022L2555, art. 23(3) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: nis2_crm_measures
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: cybersecurity risk-management measures
+  en_variants: []
+  pt: medidas de gestão dos riscos de cibersegurança
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022L2555,
+    art. 21).
+  senses: []
+  evidence: EUR-Lex CELEX:32022L2555, art. 21 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: nis2_early_warning
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: early warning
+  en_variants: []
+  pt: alerta rápido
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32022L2555,
+    art. 23(4)(a)).
+  senses: []
+  evidence: EUR-Lex CELEX:32022L2555, art. 23(4)(a) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: cra_pde
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: product with digital elements
+  en_variants:
+  - products with digital elements
+  pt: produto com elementos digitais
+  pt_variants:
+  - produtos com elementos digitais
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R2847,
+    art. 3(1)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R2847, art. 3(1) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: cra_economic_operator
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: economic operator
+  en_variants:
+  - economic operators
+  pt: operador económico
+  pt_variants:
+  - operadores económicos
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R2847,
+    art. 3(12)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R2847, art. 3(12) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: cra_actively_exploited_vulnerability
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: actively exploited vulnerability
+  en_variants:
+  - actively exploited vulnerabilities
+  pt: vulnerabilidade ativamente explorada
+  pt_variants:
+  - vulnerabilidades ativamente exploradas
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R2847,
+    art. 3(42)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R2847, art. 3(42) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: cra_sbom
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: software bill of materials
+  en_variants: []
+  pt: lista de materiais do software
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R2847,
+    art. 3(39)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R2847, art. 3(39) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: cra_support_period
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: support period
+  en_variants: []
+  pt: período de apoio
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R2847,
+    art. 3(20)).
+  senses: []
+  evidence: EUR-Lex CELEX:32024R2847, art. 3(20) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_controller
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: controller
+  en_variants:
+  - controllers
+  pt: responsável pelo tratamento
+  pt_variants:
+  - responsáveis pelo tratamento
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 4(7)).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 4(7) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_personal_data_breach
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: personal data breach
+  en_variants:
+  - personal data breaches
+  pt: violação de dados pessoais
+  pt_variants:
+  - violações de dados pessoais
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 4(12)).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 4(12) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_pseudonymisation
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: pseudonymisation
+  en_variants: []
+  pt: pseudonimização
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 4(5)).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 4(5) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_dpbd
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: data protection by design and by default
+  en_variants: []
+  pt: proteção de dados desde a conceção e por defeito
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 25).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 25 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_dpia
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: data protection impact assessment
+  en_variants: []
+  pt: avaliação de impacto sobre a proteção de dados
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 35).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 35 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_ropa
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: records of processing activities
+  en_variants: []
+  pt: registos das atividades de tratamento
+  pt_variants:
+  - registo das atividades de tratamento
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 30).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 30 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_security_of_processing
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: security of processing
+  en_variants: []
+  pt: segurança do tratamento
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 32).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 32 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: gdpr_dpo
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: data protection officer
+  en_variants: []
+  pt: encarregado da proteção de dados
+  pt_variants: []
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32016R0679,
+    art. 37).
+  senses: []
+  evidence: EUR-Lex CELEX:32016R0679, art. 37 (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: csa_certification_scheme
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: European cybersecurity certification scheme
+  en_variants:
+  - European cybersecurity certification schemes
+  pt: sistema europeu de certificação da cibersegurança
+  pt_variants:
+  - sistemas europeus de certificação da cibersegurança
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32019R0881,
+    art. 2(9)).
+  senses: []
+  evidence: EUR-Lex CELEX:32019R0881, art. 2(9) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: csa_assurance_level
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: assurance level
+  en_variants:
+  - assurance levels
+  pt: nível de garantia
+  pt_variants:
+  - níveis de garantia
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32019R0881,
+    art. 2(21)).
+  senses: []
+  evidence: EUR-Lex CELEX:32019R0881, art. 2(21) (versões PT e EN oficiais, obtidas 2026-09-26)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
+    do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'

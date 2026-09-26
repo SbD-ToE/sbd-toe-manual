@@ -11,15 +11,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/10-troubleshooting-faq.md
-  source_sha256: 343ef2346d92dcc1d79254c9cde071fd255b9668b8f39b6ec40e140c673336de
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: fcf8d491b8d2d13f4f6ce64df418a926f2000c6b9ba5ea1c406dffbfc827dc44
+  source_sha256: 4b60beabe910637240da6f2cf7d621570ab8afa295652c532bed28582d3c7b11
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: c29fe19b4489f1da6bb3dadcf35444d296c4f5cbba0a40a8fcbc71d4507b7c7d
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, framework_source_corpus, llm, mcp, normative_empirical, practitioner_manual, sbdtoe_sbd, verification_taxonomy]
-  glossary_sha256: b2aded4645437cae2f8533d3fa8cbca79e7c27392514cf033f43ed7a113bac82
-  translated_at: 2026-09-26T14:55:23Z
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, framework_source_corpus, llm, mcp, normative_empirical, practitioner_manual, requirement_runtime, sbdtoe_sbd, verification_taxonomy]
+  glossary_sha256: 6acc92a2f7af2418ec42a07be731c1ba1086c607d1f7b6119e503279db276d2b
+  translated_at: 2026-09-26T16:42:06Z
   reviewed_by: null
 ---
 
@@ -168,7 +168,7 @@ get_guide_by_role({"risk_level": "L2", "phase": "implement"})
 
 ### Cause {#causa-2}
 
-Two possible causes. The declared selection exceeds the ceiling of the `detail` level — and then the response carries, in `requirement_ceiling.batches`, the executable batches whose union is the whole selection. Or the parent task is too conceptual / open-ended. In both cases, *brute force* (calling again with small *tweaks*) does not get past the gate.
+Two possible causes. The declared selection goes beyond what the `detail` level promises to fit — and then the response carries in `requirement_ceiling.batches` the executable batches whose union is the whole selection (batches may share requirements). Or the parent task is too conceptual / open-ended. In both cases, *brute force* (re-calling with small *tweaks*) does not get through the gate.
 
 ### Solution {#solução-5}
 
@@ -206,9 +206,12 @@ The installed server does not have the capability that was requested. Possible s
 
 ### Symptom — `detail: "minimal"` or `detail: "ultrathin"` is rejected {#sintoma--detail-minimal-ou-detail-ultrathin-é-recusado}
 
-**Cause.** Those levels were withdrawn. The accepted `detail` levels are `lista`, `standard` and `full`.
+**Cause.** The two levels were withdrawn, each for a reason:
 
-**Solution.** Use one of the three accepted levels. What each one puts *inline* is in the served description of `prepare_sbd_toe_codegen_context`.
+- `minimal` was renamed `lista`. It inherited the same token envelope and now carries inline, per requirement, the description, `verify` and `evidence`.
+- `ultrathin` was withdrawn for good. It existed to cut the published description, and the description is no longer negotiable: it is left out of no level.
+
+**Solution.** Anyone coming from old docs uses `lista` in either case. The error returned by the server says exactly this, and says where each one went. `get_threat_landscape` and `select_sbd_toe_requirements` accept the same axis (`lista`/`standard`/`full`) and also refuse `minimal` with the same warning. What each level puts *inline* is in the [`prepare_sbd_toe_codegen_context` reference](./05-tools-reference.md#prepare_sbd_toe_codegen_context).
 
 ---
 
@@ -216,7 +219,7 @@ The installed server does not have the capability that was requested. Possible s
 
 **Cause.** The response declares that its size exceeds the expected envelope. It is a declaration, not an error: the server warns instead of truncating silently.
 
-**Solution.** Do not ignore the warning. A more compact `detail` level, or a narrower declaration (fewer *concerns*, fewer categories), reduces the response. If the selection exceeds the level's ceiling, the response becomes `needs_decomposition` with batches — see above.
+**Solution.** Do not ignore the warning. A more compact `detail` level, or a narrower declaration (fewer *concerns*, fewer categories), reduces the response. If the selection goes beyond what the level promises to fit, the response becomes `needs_decomposition` with batches — see above.
 
 ---
 

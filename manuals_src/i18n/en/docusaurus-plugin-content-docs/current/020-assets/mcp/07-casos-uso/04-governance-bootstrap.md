@@ -12,15 +12,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/07-casos-uso/04-governance-bootstrap.md
-  source_sha256: 0e56340f34f28b8afd7065dee530b9b3cc7502faedd063ff0ad6132e5f01890f
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: 47548270bdc4d3ae37dfbbdcc6c70d5e5731bf29f138aad841d216210c9f7d77
+  source_sha256: d79cfdfbcd47e6a5053517ad83aca5b399d40ab89105c2d363cc74cfda60d654
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: d181f9de4653f142c9a85c2bced858dfe1d75521971969642ea8e92323c12740
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, discipline, mcp, normative_empirical, practitioner_manual]
   glossary_sha256: 40b3a2ba6b88de2bfe0818246a8a78744644cb88e7a08299991ac065e54ccfc0
-  translated_at: 2026-09-26T14:55:19Z
+  translated_at: 2026-09-26T16:42:04Z
   reviewed_by: null
 ---
 
@@ -41,7 +41,7 @@ There is a short window at the start of a new repository in which everything is 
 plan_sbd_toe_repo_governance(riskLevel, offset, limit)
 ```
 
-**Expected output** (fields): `byChapter` (the artefacts grouped by chapter), `totalArtefacts`, `artefact_totals`, `coverage` and `risk_level_effect`. Artefact ids take the form `ART-<slug>-<hash>`. The response is paginated (`offset` / `limit`): go through every page before treating the list as complete.
+**Expected output** (fields): `byChapter[]` (the artefacts grouped by chapter, each one `{artefactId, chapterId, riskLevels[]}`), `totalArtefacts` (the number of chapter↔artefact rows), `artefact_totals` (`distinct_count`, the distinct artefacts, and `chapter_relation_count`, the rows — rows are never added up to count artefacts), `coverage` and `risk_level_effect`. Artefact ids have the form `ART-<slug>-<hash>`. The chapter↔artefact relation is a projection: it does not say who owns the artefact nor oblige anyone to produce it. The response is paginated (`offset` / `limit`): go through every page before treating the list as complete.
 
 ### 2. Pass the *risk level* {#2-filtrar-por-risk-level-opcional}
 
@@ -110,7 +110,7 @@ Este repositório segue o manual Security by Design — Theory of Everything.
 
 - The *bootstrap* generates **placeholders** — it does not fill in the artefacts. Each artefact requires team work.
 - **Do not declare compliance** on the basis of the existence of placeholders. Compliance requires filled-in content + evidence.
-- Document the **assumed *risk level*** explicitly in each artefact — if it rises, some extra artefacts will be missing.
+- Document the **assumed *risk level*** explicitly in each artefact. Moving up from L1 to L2, chapter 03 starts listing its artefacts, and the per-chapter list grows, but no new artefacts appear. `risk_level_effect` declares that the level filters little, by design.
 
 ## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 

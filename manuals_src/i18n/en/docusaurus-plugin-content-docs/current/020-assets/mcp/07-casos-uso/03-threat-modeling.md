@@ -12,15 +12,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/07-casos-uso/03-threat-modeling.md
-  source_sha256: cb19c759eafa0dd75075fae1afc7e94fcb83e52fe19b435a18e18d89bf8d7584
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: c41f6ec369abca1bfd8f0a608464ee2418c2ece4c29cdc945624f18f63ba77f9
+  source_sha256: 5eee70a486668f104ea584040407a6e6595cce2be02a8aaf87f38debd9e2f243
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: 4e68da539ed643eff51d1cd8e491adcc4aad253ca1d39dba037172e08c010632
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, discipline, mcp, practitioner_manual, threat, validation_evaluation]
   glossary_sha256: 9295ee4b6fd79121b8c65819b7ad448c6bf8cd7abab799066587082d7b652a05
-  translated_at: 2026-09-26T14:55:18Z
+  translated_at: 2026-09-26T16:42:03Z
   reviewed_by: null
 ---
 
@@ -28,7 +28,7 @@ translation:
 
 *Threat modelling* has a predictable failure in fast-paced environments — either it is done too early (and is out of date by the time the code arrives), or it is done too late (and turns into compliance theatre). The MCP helps to do it at a useful moment: the agent extracts from the manual the *threats* already catalogued for the project's *risk level* and the system's *concerns*, and anchors them in the controls that mitigate them — with IDs.
 
-The example here is a public user-management API (create account, authenticate, recover password). In two calls to the server, the agent gathers the material for a defensible *threat model*, with confidence explicitly marked (`derived` vs `heuristic`) whenever the link between *threat* and control is inferred rather than structural.
+The example here is a public user-management API (create account, authenticate, recover password). In two calls to the server, the agent gathers the material for a defensible *threat model*, with the confidence of each link marked in `mitigation_confidence`. Today, every served link is `derived`, structural. If another value appears, the link is inferred and is labelled as such.
 
 ## Prior requirements {#pré-requisitos}
 

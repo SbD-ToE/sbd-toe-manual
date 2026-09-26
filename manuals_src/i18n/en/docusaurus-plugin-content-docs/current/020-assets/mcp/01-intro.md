@@ -12,15 +12,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/01-intro.md
-  source_sha256: 7d558250f0aa5e109f5539269f8e9fdc24bf0ee2e6cae00fec5a31cb6d2212fd
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: ce9f4282a412f9145f3ee1c373adbb32e13461ac0488cebf18fb36a0c1375092
+  source_sha256: 4df07a32dc09bdeb989342de06f884e99b0d924fe726d0c80e63b859c6a69d3d
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: 413a25e1d30f64ca2a6dccd98fad0c3b405534da19be39d1e7412faccd27aabc
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
-  glossary_keys: [appsec_core, chapter_role, deterministic, discipline, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_normativa, mcp_reading_programa, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 389740950037ea3b1d08520e6fa3d3754c24260c08286864ac0163a795cedcd9
-  translated_at: 2026-09-26T14:55:13Z
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, lifecycle_phase, llm, macro_processo, mcp, mcp_reading_normativa, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, threat, travessia_generica, travessia_relacao, validation_evaluation, verification_taxonomy]
+  glossary_sha256: e7834304897c62d8fb3fb78768ce482af41688420f2d0269cf9ae598e79629c7
+  translated_at: 2026-09-26T16:43:52Z
   reviewed_by: null
 ---
 
@@ -76,7 +76,7 @@ The editorial line runs through every mode: **the MCP returns what the Manual sa
 |---|---|---|
 | `select_sbd_toe_requirements` | GUIDE | Entry point (*START HERE*): declarative, deterministic and reproducible selection of the requirements from what the agent declares; without a declaration → `needs_input` |
 | `search_sbd_toe_manual` | CONSULT | Narrative/conceptual search with citations (non-normative) |
-| `explain_sbd_toe_topic` | CONSULT | CONSULT reading — parameters and response in the served description (`tools/list`) |
+| `explain_sbd_toe_topic` | CONSULT | «What does the Manual say about X», by concept or by structure: requirements, guidance, proof, threats, anti-patterns and place in the lifecycle |
 | `consult_security_requirements` | CONSULT | Deterministic: requirements + active controls by *risk level* (with *concerns*) |
 | `map_sbd_toe_applicability` | CONSULT | What each chapter demands for the project's *risk level* and profile |
 | `get_sbd_toe_chapter_brief` | CONSULT | Structured summary of a chapter (phases, artefacts, topics) |
@@ -91,18 +91,18 @@ The editorial line runs through every mode: **the MCP returns what the Manual sa
 | `answer_sbd_toe_manual` | CONSULT | *Grounded* Q&A (degrades to retrieval without *MCP sampling*) |
 | `map_sbd_toe_regulatory_activation` | CONSULT | Framework (DORA/NIS2/CRA/GDPR) → Manual chapters it activates |
 | `get_sbd_toe_playbook` | NORMATIVA | Playbooks published per legal instrument, with declared authority; `no_cross_check` for frameworks without a published cross-check (ISO, PCI, SOC2, …) |
-| `get_sbd_toe_macro_processes` | PROGRAMA | PROGRAMA reading — parameters and response in the served description (`tools/list`) |
+| `get_sbd_toe_macro_processes` | PROGRAMA | Where to start and in what sequence: adoption order, macro-processes and prerequisites; with `mp_id`, one macro-process in detail |
 | `get_sbd_toe_chapter_implementation_checklist` | IMPL | "How to implement Ch. NN" — canon/20 narrative |
-| `get_sbd_toe_chapter_capability` | IMPL | IMPL reading — parameters and response in the served description (`tools/list`) |
+| `get_sbd_toe_chapter_capability` | IMPL | Capability to implement a chapter: KPIs with `thresholds_by_level` and artefacts to produce |
 | `get_sbd_toe_operating_model` | IMPL | RACI / governance / cadences (from the *rollout playbook*) |
 | `plan_sbd_toe_rollout` | IMPL | Roadmap by phases — order of implementation |
 | `get_sbd_toe_verification_matrix` | IMPL | EXPECTED side: validation + expected evidence per requirement |
 | `assess_sbd_toe_implementation` | IMPL | KPI posture vs *thresholds* per level |
 | `inspect_sbd_toe_retrieval` | DIAG | Retriever diagnostics |
 | `generate_sbd_toe_skill` | SETUP | Skill/subagent per *role* (`format`, `flavour`) — or the *agent guide* without `role` |
-| `read_sbd_toe_resource` | — | Reads an `sbd://toe/*` resource by URI (e.g. `read_sbd_toe_resource(uri="sbd://toe/version")`) |
-| `trace_sbd_toe_requirement_sources` | — | Parameters and response in the served description (`tools/list`) |
-| `trace_sbd_toe_graph` | — | Parameters and response in the served description (`tools/list`) |
+| `read_sbd_toe_resource` | — | Mirror of `resources/read` for clients without MCP *resources*: reads a `sbd://toe/*` resource by URI (e.g. `read_sbd_toe_resource(uri="sbd://toe/version")`) |
+| `trace_sbd_toe_requirement_sources` | — | Where each requirement comes from: the Manual's direct sources, kept apart from the compensated chain REQ→CTRL→ACO→sources |
+| `trace_sbd_toe_graph` | — | Traverses the AppSec Core graph over multiple hops, by lens (`slice_implementation`, `objective_realization`, `mechanism_provenance`) |
 
 The served list is the source: `tools/list` returns the tools of the installed version, with the complete descriptions.
 
@@ -121,9 +121,9 @@ The served list is the source: `tools/list` returns the tools of the installed v
 | `sbd://toe/subagent/{role}` | *Subagent* definition of a *role* (= `format=subagent`, *harnessed*) |
 | `sbd://toe/version` | Name / version / *provenance* (Manual, KG, ontology) of the running server |
 | `sbd://toe/notes/{id}` | Resolves the `note_id` values that responses carry by reference |
-| `sbd://toe/notes` | Description in the served list (`resources/list`) |
-| `sbd://toe/model` | Description in the served list (`resources/list`) |
-| `sbd://toe/codegen-instructions/{mode}` | Description in the served list (`resources/list`) |
+| `sbd://toe/notes` | The index of notes by reference: `{ids, notes}`, with every id and text |
+| `sbd://toe/model` | The map of the served knowledge: entities, relations, chapters and categories, and the three ways of asking |
+| `sbd://toe/codegen-instructions/{mode}` | The reference copy, per mode, of the prepare's static text (instructions and the `security_rationale` *template*) |
 
 ### Prompts {#prompts}
 
@@ -192,5 +192,5 @@ In particular, the server must **never** be used to declare regulatory complianc
 2. [Installation by client](./03-instalacao.md) — Claude Code, Claude Desktop, Cursor, VS Code (Copilot), Windsurf, Zed.
 3. [Skills and agents](./04-skills-agentes.md) — where to save the *skill* and how to initialise the session.
 4. [Tools reference](./05-tools-reference.md) and [resources / prompts](./06-resources-prompts.md) — complete API.
-5. [Use cases](./casos-uso/) — ready-made recipes: PR audit, *grounded codegen*, *threat modelling*, governance *bootstrap*, *onboarding*, normative *cross-check*.
+5. [Use cases](./casos-uso/) — ready-made recipes: PR audit, *grounded codegen*, *threat modelling*, governance *bootstrap*, *onboarding*, normative *cross-check*, Agentic SDLC.
 6. [Advanced patterns](./08-padroes-avancados.md) · [Epistemic discipline](./09-epistemica-anti-patterns.md) · [Troubleshooting / FAQ](./10-troubleshooting-faq.md) · [Versioning / roadmap](./11-versionamento-roadmap.md).

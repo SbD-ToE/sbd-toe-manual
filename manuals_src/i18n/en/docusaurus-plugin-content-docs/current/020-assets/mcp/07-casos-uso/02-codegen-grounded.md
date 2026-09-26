@@ -12,15 +12,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/07-casos-uso/02-codegen-grounded.md
-  source_sha256: c6325dd5a7686686af94649b63562e7431d61b5182477a6e4f9bba9063cd8dba
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: 60c552c7774dad7e917d45a466325ae604ccc07c7fb21544294e7364af558f3c
+  source_sha256: 27ccb90e82593ab53a612d5b5a877ff84128d1e7f5573570c9a50753fb82482e
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: b9816cdecdbc421d4b0ba4f463848a2f37b4076af203a78c605b27e58fe32f24
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [appsec_core, discipline, framework_source_corpus, lifecycle_phase, mcp, mcp_reading_normativa, open_closed_world, requirement_runtime, shacl_owl, slug_threat_modeling, traceability, verification_taxonomy]
   glossary_sha256: 2c9a4e8b6689203b229a1b5d42513dc8c313b8097156313dd0158958d02feded
-  translated_at: 2026-09-26T14:55:17Z
+  translated_at: 2026-09-26T16:42:02Z
   reviewed_by: null
 ---
 
@@ -62,7 +62,7 @@ prepare_sbd_toe_codegen_context({
 The response is `ready_for_codegen`, within the envelope. The `task` is recorded as context; what drives the selection is the declaration — `risk_level`, `concerns`, `technologies`. The response's `adjacency` warns of what was left undeclared and would change the set: in this case, public exposure.
 
 :::note What changes when declaring more
-Also declaring `"exposure": "public"` widens the selection to 70 requirements — above the ceiling of the `lista` level. The response then becomes `needs_decomposition`, with two executable batches (of 48 and of 23 requirements) whose union is the entire selection. It is not an error: it is the server saying that the task, as declared, does not fit in a single response at that level, and proposing how to work through it without losing anything.
+Also declaring `"exposure": "public"` widens the selection to 70 requirements, more than the `lista` level promises to fit. The response then becomes `needs_decomposition`, with executable batches whose union is the whole selection. Batches may share requirements: what the preserved `technologies` bring in by themselves (here, SES-008 via `jwt`) comes in all of them. That is why the sum of the counts may exceed the total. It is not an error: it is the server saying that the task, as declared, does not fit in a single response at that level, and proposing how to go through it without losing anything.
 :::
 
 ### 3. Branch by `status` {#3-ramificar-por-status}
@@ -98,7 +98,7 @@ Do not call the tool again until the user replies.
 
 **STOP**. Do not silently choose a sub-task. Respond with:
 1. `reasons[]`.
-2. When the selection exceeds the ceiling of the `detail` level, the response brings in `requirement_ceiling.batches` the executable batches (`categories` + the preserved activators) whose union is the entire selection — present those batches, instead of redesigning sub-tasks by hand.
+2. When the selection goes beyond what the `detail` level promises to fit, the response carries in `requirement_ceiling.batches` the executable batches (`categories` + the preserved activators) whose union is the whole selection; batches may share requirements — present those batches, instead of redesigning sub-tasks by hand.
 3. **Ask the user which batch to start with.**
 
 #### `unsupported_scope` {#unsupported_scope}
@@ -116,8 +116,8 @@ Do not call the tool again until the user replies.
 What arrives with `ready_for_codegen` is designed to fit in the agent's context without losing traceability:
 
 - **One object per requirement** — `{id, name, type, description, verify, evidence}`: the requirement, how it is verified and what evidence is expected, in the same place.
-- **`detail` levels** — `lista`, `standard` and `full` define how much of each requirement comes *inline*. What each level includes is in the tool's served description; `lista` is the natural choice to start with.
-- **Count ceilings** — each level accepts up to a certain number of requirements. Above the ceiling, the response is `needs_decomposition`, with the `requirement_ceiling.batches` batches that add up to the whole.
+- **`detail` levels** — `lista`, `standard` and `full` serve the same set of citable ids and the same complete requirement; what changes is what comes *inline* and what comes by reference (see the [tool reference](../05-tools-reference.md#prepare_sbd_toe_codegen_context)). `lista` is the natural choice to start with.
+- **Token envelope** — `lista` and `standard` promise to fit in an envelope, measured on the *payload* the client receives. Above it, the response is `needs_decomposition`, with the measured batches of `requirement_ceiling.batches`, which together cover the whole selection. `full` has no envelope and declares the price in `size_estimate`.
 - **`adjacency`** — what was not declared and would change the selected set. It is the server's way of saying «this could also count» without deciding it for the agent.
 - **`size_estimate`** — the size of the response itself; `within_envelope: false` warns that it exceeds the expected envelope.
 - **Notes by reference** — instead of repeating the same note, the response carries a `note_id`, which resolves to `sbd://toe/notes/{id}`.

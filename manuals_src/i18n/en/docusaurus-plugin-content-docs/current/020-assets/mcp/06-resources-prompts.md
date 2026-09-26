@@ -11,15 +11,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/06-resources-prompts.md
-  source_sha256: 792e62db3dd10423dec8c9512bb93832d01b222f1bae6718c73957ae08ac0797
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: 8353c476d245a4a5f9f590103e66e90ea316fa8481670ec351f9b4af00940d37
+  source_sha256: a0f70bebcba0ffdb2b1e78a4909528d1bc356da2f18a2a605590f81bfc114952
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: 4c66b60eb1db7f75863ad4f295404d9878c3973a277a56fdcbbdd6f7ef30e9c8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, deterministic, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, sbdtoe_sbd, schema, traceability]
   glossary_sha256: 3872ab6453f9771a21801a6ab600dc3f921e34e9e667e787431939f7de212c9c
-  translated_at: 2026-09-26T14:55:16Z
+  translated_at: 2026-09-26T16:42:02Z
   reviewed_by: null
 ---
 
@@ -42,7 +42,21 @@ The practical difference:
 
 ## Resources {#resources}
 
-All resources use the `sbd://toe/*` scheme and return `text/markdown`, `application/json` or `application/yaml` depending on the type.
+All resources use the `sbd://toe/*` scheme and return `text/markdown`, `application/json` or `application/yaml` depending on the type. The MIME type of each is the one `resources/list` publishes:
+
+| resource | MIME |
+|---|---|
+| `sbd://toe/model` | `application/json` |
+| `sbd://toe/notes` · `sbd://toe/notes/{id}` | `application/json` |
+| `sbd://toe/codegen-instructions/{mode}` | `application/json` |
+| `sbd://toe/quick-start` | `application/json` |
+| `sbd://toe/activation-vocabulary` | `application/json` |
+| `sbd://toe/index-compact` | `application/json` |
+| `sbd://toe/chapter-applicability/{riskLevel}` | `application/json` |
+| `sbd://toe/version` | `application/json` |
+| `sbd://toe/ontology` | `application/yaml` |
+| `sbd://toe/agent-guide` · `sbd://toe/grounded-codegen-guide` | `text/markdown` |
+| `sbd://toe/skill/{role}` · `sbd://toe/subagent/{role}` | `text/markdown` |
 
 ### `sbd://toe/agent-guide` {#sbdtoeagent-guide}
 
@@ -72,7 +86,12 @@ All resources use the `sbd://toe/*` scheme and return `text/markdown`, `applicat
 sbd://toe/chapter-applicability/L2
 ```
 
-Returns an object with this shape, in which `chapters[]` carries what each chapter demands at that level:
+Returns an object of this shape. The top-level object carries `riskLevel`, `semantics`, `canonical_anchor` and `chapters`. Each chapter in `chapters[]` carries `chapter_id`, `title` and `applicable`, which is always `true`: no chapter is excluded. It also carries:
+
+- `demand`: the counts `obrigatorio`, `recomendado`, `opcional` and `specific` at that level;
+- `dominant`: the chapter's dominant profile;
+- `roles` and `user_stories`: counts;
+- `source`: where the row comes from. A foundational chapter without *assignments* in the bundle declares a *fallback*.
 
 ```json
 {
@@ -95,7 +114,7 @@ Returns an object with this shape, in which `chapters[]` carries what each chapt
 ### `sbd://toe/grounded-codegen-guide` {#sbdtoegrounded-codegen-guide}
 
 **MIME:** `text/markdown`
-**Content:** agent guide for `prepare_sbd_toe_codegen_context` — *workflow*, branching by *status* (`ready_for_codegen` / `needs_clarification` / `needs_decomposition` / `unsupported_scope`), *output* discipline (cite ids from `citations`, fill in `security_rationale`, distinguish code/tests/evidence), and **explicit prohibitions** (do not invent IDs, do not declare compliance, do not pollute code with traceability noise).
+**Content:** agent guide for `prepare_sbd_toe_codegen_context` — *workflow*, branching by *status* (`ready_for_codegen` / `needs_clarification` / `needs_decomposition` / `needs_input` / `unsupported_scope`), *output* discipline (cite ids from `citations`, fill in `security_rationale`, distinguish code/tests/evidence), and **explicit prohibitions** (do not invent IDs, do not declare compliance, do not pollute code with traceability noise).
 
 **When to read:** always before any *codegen* or *review* work via `prepare_sbd_toe_codegen_context`.
 
@@ -122,11 +141,16 @@ Returns an object with this shape, in which `chapters[]` carries what each chapt
 ### `sbd://toe/notes/{id}` · `sbd://toe/notes` {#sbdtoenotesid--sbdtoenotes}
 
 **Parameter:** `{id}` = a `note_id` (interpolated into the URI)
-**Content:** the notes that responses carry by reference. Instead of repeating the same note in every response, the server returns a `note_id`, and `sbd://toe/notes/{id}` resolves it. The description of `sbd://toe/notes` is in the served list (`resources/list`).
+**MIME:** `application/json`
+**Content:** the register of notes by reference. Prepare responses carry a `note_id` instead of repeating the prose, plus a `notes` header. `sbd://toe/notes` returns the index `{ids, notes}`, with every id and text. `sbd://toe/notes/{id}` returns `{id, text}`. An unknown id returns a declared error with the valid ids.
 
 ### `sbd://toe/model` · `sbd://toe/codegen-instructions/{mode}` {#sbdtoemodel--sbdtoecodegen-instructionsmode}
 
-The description of both is in the served list (`resources/list`).
+**MIME:** `application/json` (both)
+
+**`sbd://toe/model`** is the map of the served knowledge, not the list of tools. It carries the entities with the real counts, the relations with the real cardinalities, and the chapters and categories with the way to reach them. It shows the three ways of asking: by concept (the `concerns` shortcut), by structure (`chapters`/`categories`, always possible) and by navigation (the graph), with when to use each. Everything is derived from the served bundle; nothing enumerable is written by hand. Read it when the `concerns` shortcut does not have the question. Blocks: `how_to_ask`, `entities`, `relations`, `chapters`, `categories` and `see_also`.
+
+**`sbd://toe/codegen-instructions/{mode}`** is the reference copy, per mode (`codegen`, `review`, `test-plan`), of the prepare's static text. It contains the `llm_codegen_instructions` slots, with the assembly rules, and the `security_rationale_template` skeleton. Assembled by the embedded rules, they give the same text the prepare puts inline. It also contains the `detail_encoding` legend, which explains how to read a `lista`/`standard` *payload*. The instructions and the *template* come inline at every level: this resource is the reference, not a dependency. With `read_sbd_toe_resource`, `slot` returns a single slot.
 
 ### `sbd://toe/version` {#sbdtoeversion}
 

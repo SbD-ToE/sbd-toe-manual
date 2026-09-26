@@ -10,15 +10,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/02-quickstart.md
-  source_sha256: 1a3ba4b71e42f402f44d1061eeb73ea5c7197b82000ffe80bd01950e6594172f
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: c29a19bc5d65459f9223b3601ea8ce1f23a26c992f1ffcdc759d9b1c848ea02f
+  source_sha256: 25d9240e27cfebae372b40d9770c2e221dce488d96e7bc47f60750171ee8e7ed
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: 35a1bd6c5db22f6bfa05fb45ff3319fe8b802670ef19af17dfb444d8119df7b8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, mcp, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: b20cebdb9f9b412a16c1c281cb4aadcff08e6aa205a9ed8ca364950dc9893c44
-  translated_at: 2026-09-26T14:55:13Z
+  translated_at: 2026-09-26T16:41:59Z
   reviewed_by: null
 ---
 
@@ -89,7 +89,7 @@ In clients that expose MCP *prompts*, the *prompt* `setup_sbd_toe_agent(riskLeve
 
 ## The first real call {#a-primeira-chamada-real}
 
-For a concrete task, the first call is the one the tool descriptions mark as *START HERE*: `select_sbd_toe_requirements`, with what the agent has read **declared** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. The server does not guess from the task text: without a declaration, it returns `needs_input` with the accepted vocabulary (published in `sbd://toe/activation-vocabulary`). Details in the [tools reference](./05-tools-reference.md).
+For a concrete task, the first call is the one the tool descriptions mark as *START HERE*: `select_sbd_toe_requirements`, with what the agent has read **declared** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. `exposure: "local"` is valid but inert: declared on its own, it gives `needs_input`. The server does not guess from the task text: without a declaration, it returns `needs_input` with the accepted vocabulary (published in `sbd://toe/activation-vocabulary`). Details in the [tools reference](./05-tools-reference.md).
 
 ## What next {#e-a-seguir}
 

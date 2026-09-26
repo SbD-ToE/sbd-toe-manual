@@ -12,15 +12,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/04-skills-agentes.md
-  source_sha256: 403c6085dbd070ff869d48f48b828b85276f524f870c19f7e340c79526676ce4
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: d157b22379c61e57b3428b771b05a9f21310b524949ea032d63b24c9f88c9022
+  source_sha256: 1247a7ea7012d60e6b841905ff11c5e69bad3efee682d41a726606531a994a6b
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: a0abf2f73c49f270ea764d1d072cc3dc2c8b8350e28455cc088152e18a191b37
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, framework_source_corpus, mapping, maturity, mcp, papel_suporte, practitioner_manual, sbdtoe_sbd, slice]
   glossary_sha256: 4f7e4dc806c3e3544afbbca7658170ec11703d567af19b78c5bcfb2bab7f2565
-  translated_at: 2026-09-26T14:55:15Z
+  translated_at: 2026-09-26T16:42:00Z
   reviewed_by: null
 ---
 
@@ -90,7 +90,7 @@ Suggestion: pin this *prompt* as the **first message** of any session whose subj
 
 ### The declarative contract {#o-contrato-declarativo}
 
-For a concrete task, what the skill should teach the client is the entry point `select_sbd_toe_requirements`: the agent **declares** what it has read — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files` — and the server selects the requirements deterministically. The `task` is recorded, not interpreted; without a declaration, the response is `needs_input`, with the accepted vocabulary (`sbd://toe/activation-vocabulary`). To generate code next, `prepare_sbd_toe_codegen_context`. The `consult_security_requirements` remains useful, but for a different question: it returns the level's catalogue, not the selection for a task.
+For a concrete task, what the skill should teach the client is the entry point `select_sbd_toe_requirements`: the agent **declares** what it has read — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files` — and the server selects the requirements deterministically (`exposure: "local"` is valid but inert and, declared on its own, gives `needs_input`). The `task` is recorded, not interpreted; without a declaration, the response is `needs_input`, with the accepted vocabulary (`sbd://toe/activation-vocabulary`). To generate code next, `prepare_sbd_toe_codegen_context`. `consult_security_requirements` is still useful, but for a different question: it returns the level's catalogue, not the selection for a task.
 
 ### Canonical roles {#roles-canónicos}
 

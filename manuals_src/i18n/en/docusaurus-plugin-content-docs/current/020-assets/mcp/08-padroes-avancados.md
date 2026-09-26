@@ -11,15 +11,15 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/08-padroes-avancados.md
-  source_sha256: 5330a13899bcb5a0f0ab0275f94e61f9257da52b302d04afb6c360232541455c
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: 13c964d699e28906a7ab2122de3a61ec7a6ce70ebb043b3d5bda4c263d7cd344
+  source_sha256: 6adc184dac1d541b98aeede8f235b04a1dc45ed90843e200cab54c7fae28b657
+  source_commit: 058f86265e07bc86cb7f19162dd2c6b87fbcc0a7
+  target_sha256: b054e633dee563b626c1d777eae69919947a5e1f277e4f0f679075b3aa308616
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
   glossary_keys: [chapter_role, cycle_iteration, deterministic, discipline, lifecycle_phase, mapping, mcp, normative_empirical, practitioner_manual, requirement_runtime]
   glossary_sha256: b8ec3bd5388ea94ee08aeebe95537f90dcc90e808bac6f263d6681ddcab944df
-  translated_at: 2026-09-26T14:55:22Z
+  translated_at: 2026-09-26T16:42:05Z
   reviewed_by: null
 ---
 
@@ -187,7 +187,7 @@ For PRs that touch **multiple chapters** at the same time. An expanded version o
 
 When `prepare_sbd_toe_codegen_context` returns `needs_decomposition` repeatedly.
 
-If the cause is that the selection exceeded the ceiling of the `detail` level, the response already carries the decomposition: the executable batches of `requirement_ceiling.batches` (`categories` + the preserved activators), whose union is the whole selection. Follow those batches, one at a time — do not redesign the decomposition by hand. The pattern below applies to the remaining cases:
+If the cause is the selection going beyond what the `detail` level promises to fit, the response already carries the decomposition: the executable batches of `requirement_ceiling.batches` (`categories` + the preserved activators), whose union is the whole selection (batches may share requirements). Follow those batches, one at a time — do not redesign the decomposition by hand. The pattern below applies to the remaining cases:
 
 ```
 1. Primeira chamada com a task original

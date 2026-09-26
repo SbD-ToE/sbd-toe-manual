@@ -106,7 +106,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
 | **Prompts-como-código** | [Cap. 06 §prompts-como-codigo](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) | Versionamento em VCS, code review, secret scanning, drift detection vs fonte canónica |
-| **Structured outputs** | [Cap. 06 §structured-outputs](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Schema declarado, validação dupla sintáctica + semântica, *fail-open* com *fallback* |
+| **Structured outputs** | [Cap. 06 §structured-outputs](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Schema declarado, validação dupla sintáctica + semântica, *fail-closed* com *fallback* |
 | **Policy 15** | [Policy 15 §2](/sbd-toe/assets/policies/policy-revisao-codigo) | Alcance estendido a prompts/skill files; mudança de `tools_allowlist` tratada como mudança IAM |
 
 ---

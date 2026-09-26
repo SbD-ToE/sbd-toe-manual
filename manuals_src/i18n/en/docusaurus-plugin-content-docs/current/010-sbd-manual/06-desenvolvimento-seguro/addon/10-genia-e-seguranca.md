@@ -7,15 +7,15 @@ tags: [genia, ai, código gerado, validação, segurança, revisão]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/addon/10-genia-e-seguranca.md
-  source_sha256: 02caf89e39c048b5e0b752fef74fb4bf759ea255fccf046ea6b9dec1231c70b7
+  source_sha256: 11f4df7a2a0324c0bcacbbd1d7ce71a63f394da192e41a5d977970f7fc2aae48
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7e8df415030d7f08929364b289ed5fb07bbe2101e1c4be58c84b946c67b051cd
+  target_sha256: 53ab255462a184fe8a6cafdaff382f02150f3c9e4a22cf958de0d69d720966f5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, discipline, framework_source_corpus, lifecycle_phase, maturity, mcp, practitioner_manual, sbdtoe_sbd, schema, threat, transversal, validation_evaluation, verification_taxonomy]
   glossary_sha256: a4f0e9ead71bab57184406fc1a3c2292d7c575bbcaf7802a7f8e21290b838039
-  translated_at: 2026-09-26T08:57:13Z
+  translated_at: 2026-09-26T09:14:50Z
   reviewed_by: null
 ---
 
@@ -151,7 +151,7 @@ When the model's output feeds application logic — a *tool call* with arguments
 1. **Schema declared server-side.** The model is not trusted to "remember" the format; the *schema* (JSON Schema, *Pydantic*, *Zod*, or equivalent) is declared on the server that makes the call. The *schema* is part of the reviewed code — versioned, tested, *type-checked*.
 2. **The *provider's* native mechanisms where they exist.** Anthropic *tool use* + *structured outputs* and OpenAI *Structured Outputs* guarantee (with restrictions) syntactic adherence to the declared *schema*. This is preferred to permissive *parsing* of the raw text.
 3. **Double validation — syntactic and semantic.** Adhering to the *schema* is not enough. Correct types, *ranges* within what is expected, IDs that exist in the database, *side effects* within the *scope* of the *mandate* (Policy 38). The model may obey the *schema* and still return `{"action": "delete_database"}` in a context where that is prohibited.
-4. **Fail open, with a declared *fallback*.** When the output does not validate, the system **does not consume the output** and follows the declared *fallback* (ask the user, escalate to a human, return a handled error). Never *"try to parse anyway"*.
+4. **Fail closed, with a declared *fallback*.** When the output does not validate, the system **does not consume the output** and follows the declared *fallback* (ask the user, escalate to a human, return a handled error). Never *"try to parse anyway"*.
 
 ### 🛡️ Patterns {#️-padrões}
 

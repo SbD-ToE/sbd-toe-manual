@@ -138,7 +138,7 @@ Quando o output do modelo alimenta lógica aplicacional — *tool call* com argu
 1. **Schema declarado lado-servidor.** Não se confia no modelo para "lembrar" o formato; declaramos o *schema* (JSON Schema, *Pydantic*, *Zod*, equivalente) no servidor que faz a chamada. O *schema* é parte do código revisto — versionado, testado, *type-checked*.
 2. **Mecanismos nativos do *provider* quando existem.** Anthropic *tool use* + *structured outputs* e OpenAI *Structured Outputs* garantem (com restrições) aderência sintática ao *schema* declarado. Prefere-se isto a *parsing* permissivo do texto bruto.
 3. **Validação dupla — sintáctica e semântica.** Aderir ao *schema* não basta. Tipos correctos, *ranges* dentro do esperado, IDs que existem na base, *side effects* dentro do *scope* do *mandate* (Policy 38). O modelo pode obedecer ao *schema* e ainda assim devolver `{"action": "delete_database"}` num contexto em que isso é proibido.
-4. **Falha aberta, com *fallback* declarado.** Quando o output não valida, o sistema **não consome o output** e segue *fallback* declarado (perguntar ao utilizador, escalar para humano, retornar erro tratado). Nunca *"try to parse anyway"*.
+4. **Falha fechada, com *fallback* declarado.** Quando o output não valida, o sistema **não consome o output** e segue *fallback* declarado (perguntar ao utilizador, escalar para humano, retornar erro tratado). Nunca *"try to parse anyway"*.
 
 ### 🛡️ Padrões {#️-padrões}
 

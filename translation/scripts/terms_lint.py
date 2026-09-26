@@ -860,11 +860,20 @@ def cmd_consistency(args) -> int:
         return 0
 
     checks: List[Tuple[str, re.Pattern, re.Pattern, str]] = []  # key, source needle, expected forms, pt canonical
-    for entry in registry.get("terms", []):
-        if not isinstance(entry, dict) or entry.get("state") not in AUTHORITATIVE_STATES:
-            continue
+    authoritative = [e for e in registry.get("terms", []) if isinstance(e, dict) and e.get("state") in AUTHORITATIVE_STATES]
+    # Polysemy: entries that share a source form (e.g. «piso» = foundation relation / floor threshold) are senses of
+    # one word; a block that renders ANY of those senses is consistent. Without this, every «piso» block failed for the
+    # sense it does not carry (found 2026-09-26, ch. 12: «SLA por severidade como piso» → floor, flagged as no
+    # «foundation»).
+    senses_by_form: Dict[str, List[str]] = {}
+    for entry in authoritative:
+        for form in _forms(entry, args.source_locale):
+            senses_by_form.setdefault(form.casefold(), []).extend(_forms(entry, args.target_locale))
+    for entry in authoritative:
         source_forms = _forms(entry, args.source_locale)
-        target_forms = _forms(entry, args.target_locale)
+        target_forms = list(_forms(entry, args.target_locale))
+        for form in source_forms:
+            target_forms.extend(t for t in senses_by_form.get(form.casefold(), []) if t not in target_forms)
         source_re = _word_regex(source_forms, ignore_case=True)
         target_re = _word_regex(target_forms, ignore_case=True)
         if source_re is None or target_re is None:

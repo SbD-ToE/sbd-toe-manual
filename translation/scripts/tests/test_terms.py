@@ -429,3 +429,41 @@ class ConsistencyDirectoryTests(unittest.TestCase):
             self.assertIn("no source counterpart", err)
             self.assertIn("2 error(s)", out)
             self.assertEqual(code, 1)
+
+
+class ConsistencyPolysemyTests(unittest.TestCase):
+    """Two entries sharing a source form are senses of one word («piso» = foundation relation / floor threshold): a
+    block rendering ANY sense is consistent; a block rendering none is still an error (ch. 12, 2026-09-26)."""
+
+    def _run(self, en_text: str) -> tuple:
+        import io
+        import yaml
+        from contextlib import redirect_stderr, redirect_stdout
+        with tempfile.TemporaryDirectory() as t:
+            tmp = Path(t)
+            docs = tmp / "docs"
+            mirror = tmp / "i18n" / "en" / common.DOCS_PLUGIN_MIRROR
+            (docs / "cap").mkdir(parents=True)
+            (mirror / "cap").mkdir(parents=True)
+            (docs / "cap" / "a.md").write_text("# T\n\nO SLA por severidade mantém-se como piso.\n", encoding="utf-8")
+            (mirror / "cap" / "a.md").write_text(f"# T\n\n{en_text}\n", encoding="utf-8")
+            relation = minimal_entry("piso_relacao", species=2, pt="piso", pt_variants=[], en="foundation", en_variants=[])
+            relation["state"] = "coined"
+            threshold = minimal_entry("piso_limiar", species=1, pt="piso", pt_variants=[], en="floor", en_variants=[])
+            registry = tmp / "registry.yaml"
+            registry.write_text(yaml.safe_dump(registry_with(relation, threshold), allow_unicode=True, sort_keys=False), encoding="utf-8")
+            out, err = io.StringIO(), io.StringIO()
+            with redirect_stdout(out), redirect_stderr(err):
+                code = terms_lint.main(["consistency", "--path", str(mirror / "cap"), "--registry", str(registry), "--docs-dir", str(docs)])
+            return code, out.getvalue()
+
+    def test_block_with_one_sense_passes_for_both_entries(self):
+        code, out = self._run("The SLA by severity remains the floor.")
+        self.assertIn("0 error(s)", out)
+        self.assertEqual(code, 0)
+
+    def test_block_with_no_sense_still_fails(self):
+        code, out = self._run("The SLA by severity remains the minimum.")
+        self.assertIn("piso_relacao  source form present", out)
+        self.assertIn("piso_limiar  source form present", out)
+        self.assertEqual(code, 1)

@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: b8a1eb9e8ef4b59a0da8f51a288a2764fb584d8662f267139bade9f882a1a8c4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 6f92a603193b1b7a4bd5f2cdaf4d735d52afd37b1bb6a5bf2b4866222543bdcb
+  source_sha256: 2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac
+  source_commit: 28f13ce4d7e0acbbdc6a21d6cf195544784b0b07
+  target_sha256: 30a639f9ac0f5671b2c45361bf5fefdcd62ddead422cf087c26323a87b350da1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
   glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verification_taxonomy]
   glossary_sha256: 4081b27e5293e8af9914140a6101c9bf342e86cdc35819f86cc14f94e3640151
-  translated_at: 2026-09-26T09:58:49Z
+  translated_at: 2026-09-26T10:39:33Z
   reviewed_by: null
 ---
 
@@ -1272,4 +1272,5 @@ More important than applying scattered controls is ensuring that they are integr
 - **Golden base images + allowlist + ephemeral and signed builders** are the security tripod - standardisation reduces supply chain risk.
 
 In short: **containers are enablers of agility and portability, but only when treated with the same scientific discipline applied to any other critical software artefact**. Container security is not just the responsibility of DevOps: it is a cross-cutting concern of the Dev Team, AppSec, Platform and GRC.
+
 ---

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T10:32:01Z",
+  "generated_at": "2026-09-26T10:39:57Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
@@ -646,12 +646,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/01-catalogo-requisitos.md": {
       "state": "synced",
-      "source_sha256": "ddb52f97bb27ba663531bdeb7c4794b71689f97d3eab442cf2f7de50d3c8c7c8",
-      "translated_source_sha256": "ddb52f97bb27ba663531bdeb7c4794b71689f97d3eab442cf2f7de50d3c8c7c8",
-      "target_sha256": "bf52c3dcfca8c3bae343d932b3ac7f2d00817235682b511bfb68a87e8feca1f7",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
+      "source_sha256": "b232a9e943ac6c8520ddde171823146e7c5e853f57b7034b00f3b94130ccffe0",
+      "translated_source_sha256": "b232a9e943ac6c8520ddde171823146e7c5e853f57b7034b00f3b94130ccffe0",
+      "target_sha256": "37db3f883222001722d4078e2acb2ea3caac31ccf7f6d7f3931869a54e696e57",
+      "terms_sha256_at_translation": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
       "glossary_sha256_at_translation": "33b2b119c82785f371d2921f7942ed32816594c156aaef9f00e8ad96677fc819",
-      "translated_at": "2026-09-25T20:20:06Z",
+      "translated_at": "2026-09-26T10:39:34Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md": {
@@ -2226,12 +2226,12 @@
     },
     "010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md": {
       "state": "synced",
-      "source_sha256": "b8a1eb9e8ef4b59a0da8f51a288a2764fb584d8662f267139bade9f882a1a8c4",
-      "translated_source_sha256": "b8a1eb9e8ef4b59a0da8f51a288a2764fb584d8662f267139bade9f882a1a8c4",
-      "target_sha256": "6f92a603193b1b7a4bd5f2cdaf4d735d52afd37b1bb6a5bf2b4866222543bdcb",
-      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
+      "source_sha256": "2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac",
+      "translated_source_sha256": "2546055b018cdd7f1f03f7609f3c72183280d058d59f28aceb6c6a87b1585cac",
+      "target_sha256": "30a639f9ac0f5671b2c45361bf5fefdcd62ddead422cf087c26323a87b350da1",
+      "terms_sha256_at_translation": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
       "glossary_sha256_at_translation": "4081b27e5293e8af9914140a6101c9bf342e86cdc35819f86cc14f94e3640151",
-      "translated_at": "2026-09-26T09:58:49Z",
+      "translated_at": "2026-09-26T10:39:33Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/09-containers-imagens/canon/20-checklist-revisao.md": {
@@ -3196,7 +3196,7 @@
     },
     "010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md": {
       "state": "untranslated",
-      "source_sha256": "2f613e923cbf7ea7eeea30e90438d03af62fd3b10402e1ff7b4083b4da8069a8",
+      "source_sha256": "c48150a94c3f846210aeb11be34d4ef97ac4021bbf8d882ac93de2bf0e42ab28",
       "translated_source_sha256": null,
       "target_sha256": null,
       "terms_sha256_at_translation": null,

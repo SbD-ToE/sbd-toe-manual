@@ -6,15 +6,15 @@ tags: [tipo:catalogo, tema:requisitos, rastreabilidade, criticidade, ASVS]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/01-catalogo-requisitos.md
-  source_sha256: ddb52f97bb27ba663531bdeb7c4794b71689f97d3eab442cf2f7de50d3c8c7c8
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: bf52c3dcfca8c3bae343d932b3ac7f2d00817235682b511bfb68a87e8feca1f7
+  source_sha256: b232a9e943ac6c8520ddde171823146e7c5e853f57b7034b00f3b94130ccffe0
+  source_commit: 28f13ce4d7e0acbbdc6a21d6cf195544784b0b07
+  target_sha256: 37db3f883222001722d4078e2acb2ea3caac31ccf7f6d7f3931869a54e696e57
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 33b2b119c82785f371d2921f7942ed32816594c156aaef9f00e8ad96677fc819
-  translated_at: 2026-09-25T20:20:06Z
+  translated_at: 2026-09-26T10:39:34Z
   reviewed_by: null
 ---
 
@@ -71,6 +71,7 @@ The proportional application of requirements by technical domain can be consulte
 - [IDE - Development Tools](lista-requisitos-base#ide)
 
 For a quick reference to the proportional application of requirements by risk level, see the annex “Base Requirements Catalogue” at the end of this chapter.
+
 ---
 
 ## 📌 Closing Note {#-nota-final}

@@ -1066,7 +1066,22 @@ def load_translations(out_doc: dict) -> Dict[str, str]:
     return translations
 
 
-def _render_unit(unit: dict, translations: Dict[str, str], problems: List[str], *, cell: bool = False) -> Optional[str]:
+# Official-text links follow the reader's language (lead rule, cross-check normativo 2026-09-26):
+# EUR-Lex pages in the source language point to the same act in the target language. Deterministic;
+# only the language segment of eur-lex.europa.eu/legal-content/<LL>/ changes, so the act is the same.
+_EURLEX_LANG_RE = re.compile(r"(https?://eur-lex\.europa\.eu/legal-content/)([A-Z]{2})(/)")
+
+
+def localise_official_links(text: str, source_locale: Optional[str], target_locale: Optional[str]) -> str:
+    """Rewrite EUR-Lex links from the source language to the target language."""
+    if not source_locale or not target_locale:
+        return text
+    src, tgt = source_locale.upper(), target_locale.upper()
+    return _EURLEX_LANG_RE.sub(lambda m: m.group(1) + (tgt if m.group(2) == src else m.group(2)) + m.group(3), text)
+
+
+def _render_unit(unit: dict, translations: Dict[str, str], problems: List[str], *, cell: bool = False,
+                 locales: Tuple[Optional[str], Optional[str]] = (None, None)) -> Optional[str]:
     """Restored translated text of a unit, or ``None`` when the unit is not translated."""
     if not unit.get("translate"):
         return None
@@ -1078,7 +1093,7 @@ def _render_unit(unit: dict, translations: Dict[str, str], problems: List[str], 
         problems.append(f"{unit['id']}: empty translation")
         return None
     try:
-        restored = restore(text_out, unit["protected"])
+        restored = localise_official_links(restore(text_out, unit["protected"]), *locales)
     except TranslateError as exc:
         problems.append(f"{unit['id']}: {exc}")
         return None
@@ -1094,6 +1109,8 @@ def assemble_text(job: dict, translations: Dict[str, str], meta: dict) -> Tuple[
     """Return (final text, text without the translation block, problems)."""
     problems: List[str] = []
     segments = job["segments"]
+    direction = job.get("direction") or {}
+    locales = (direction.get("source_locale"), direction.get("target_locale"))
     known = set(job.get("units", []))
     extra = sorted(set(translations) - known)
     if extra:
@@ -1115,7 +1132,7 @@ def assemble_text(job: dict, translations: Dict[str, str], meta: dict) -> Tuple[
         if kind == "frontmatter":
             lines = seg["raw"].split("\n")
             for f in seg.get("fields", []):
-                rendered = _render_unit(f, translations, problems)
+                rendered = _render_unit(f, translations, problems, locales=locales)
                 if f["blocked_by"]:
                     fm_pending.extend(f["blocked_by"])
                 if rendered is None:
@@ -1128,7 +1145,7 @@ def assemble_text(job: dict, translations: Dict[str, str], meta: dict) -> Tuple[
                 body_lines.append(pending_comment(table_keys[seg["table"]]))
             row = seg["raw"]
             for cell in sorted(seg.get("cells", []), key=lambda c: -c["start"]):
-                rendered = _render_unit(cell, translations, problems, cell=True)
+                rendered = _render_unit(cell, translations, problems, cell=True, locales=locales)
                 if rendered is not None:
                     row = row[: cell["start"]] + rendered + row[cell["end"] :]
             body_lines.append(row)
@@ -1143,7 +1160,7 @@ def assemble_text(job: dict, translations: Dict[str, str], meta: dict) -> Tuple[
                 body_lines.append(indent + pending_comment(seg["blocked_by"]))
                 body_lines.append(seg["raw"])
                 continue
-            rendered = _render_unit(seg, translations, problems)
+            rendered = _render_unit(seg, translations, problems, locales=locales)
             body_lines.append(seg["raw"] if rendered is None else seg["prefix"] + rendered + seg["suffix"])
             continue
         body_lines.append(seg["raw"])

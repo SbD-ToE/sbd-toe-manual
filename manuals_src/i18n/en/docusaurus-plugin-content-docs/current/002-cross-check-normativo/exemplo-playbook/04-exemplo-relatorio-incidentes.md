@@ -11,10 +11,10 @@ translation:
   target_sha256: 8b000beb4f071fc2ce9134b32df260450104fb1943fd6f89d272beb486e664af
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [sbdtoe_sbd, validation_evaluation]
   glossary_sha256: 3a9b85df8a952c312898acf08c8c1475f977410b078c334d48a095fde978e4f9
-  translated_at: 2026-09-26T17:57:34Z
+  translated_at: 2026-09-26T18:12:01Z
   reviewed_by: null
 ---
 

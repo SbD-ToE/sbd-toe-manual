@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/nis2/03-convergencia-dora.md
   source_sha256: ba5522db6d6f65dab3e5b134282e1a971d0adc137ca5cc220a1cc670a9db0ad5
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: ccb676b7e5c5a58d650f20ec76d103f121838d80063ea851842c95831304bf83
+  target_sha256: 375cdbd930fd87a5da2df70dc39b8f5074aeb376f8f4e3dd8cae5136e1d7a653
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, dora_financial_entity, dora_ict_risk, esquema_regime, nis2_essential_entity, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema]
   glossary_sha256: 37ac6cdb7a0f186ea7025fc1c72a5ea9a936286f7ead075fc267bf9df908c6d9
-  translated_at: 2026-09-26T17:57:40Z
+  translated_at: 2026-09-26T18:12:06Z
   reviewed_by: null
 ---
 
@@ -35,7 +35,7 @@ DORA is lex specialis for ICT risk management, resilience testing and incident r
 | Technical risk management | 21 | 5 | DORA |
 | Testing/Resilience | 21 (generic) | 19–20 (TLPT, continuity) | DORA |
 | Incident reporting | 23 (24h/72h/1M) | 18 (RTS/ITS typologies) | DORA (format / supervisory circuit) |
-| Supply chain | 21 | 26–28 | DORA for critical financial ICT third parties; NIS2 may complement general requirements |
+| Supply chain | 21 | 26–28 | DORA for ICT third-party service providers supporting critical or important functions of financial entities; NIS2 may complement general requirements |
 | Threat sharing | (implicit ENISA) | 16 | DORA |
 
 ## What remains relevant from NIS2 {#o-que-continua-relevante-da-nis2}
@@ -60,7 +60,7 @@ Even under DORA, NIS2 aspects may retain value:
 2. **Regulatory origin matrix** - For each technical requirement ([Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro)), a new `Fonte` column with the enum: `DORA`, `NIS2`, `Ambas`, `Outras`.
 3. **Incident schema** - Base = DORA RTS/ITS; mark additional NIS2 fields (e.g. impact on essential services) as optional.
 4. **Exceptions process** - L3 escalation always with board oversight (covers DORA & NIS2 governance simultaneously).
-5. **Supplier inventory** - Unify: SBOM (components), contractors ([Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)), critical ICT suppliers (mark whether required by DORA or by NIS2 clients).
+5. **Supplier inventory** - Unify: SBOM (components), contractors ([Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)), ICT third-party service providers supporting critical or important functions (mark whether required by DORA or by NIS2 clients).
 6. **Training** - Annual board module (DORA governance) + all-hazards cyber module (NIS2), integrated; one track, two labels.
 
 ## Convergence Checklist (YES = ready) {#checklist-de-convergência-sim--pronto}

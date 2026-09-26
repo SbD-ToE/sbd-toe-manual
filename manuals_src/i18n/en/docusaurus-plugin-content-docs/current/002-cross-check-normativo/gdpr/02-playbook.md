@@ -12,10 +12,10 @@ translation:
   target_sha256: 2c5ecf24556fb94b679234a72ccef2c5cd847b398ebf4fc686d1debb67f0e98e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [chapter_role, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, mapping, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
   glossary_sha256: 276135a67b957a418116e4abf230b968903515a116df23d296c421b1d1b82515
-  translated_at: 2026-09-26T17:57:37Z
+  translated_at: 2026-09-26T18:12:04Z
   reviewed_by: null
 ---
 

@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/cra/01-intro.md
   source_sha256: 9f05de47581bb3be3c3a95481224cf776b2f9438925da1f192f6680664380d6f
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a28fff301f719be30db9d7bd4ae6610a0d49dbd8a1939890403b1e0e6c25a280
+  target_sha256: 4fc8fdd6c38d93be7b232959309312ae052234bf605ae9e23af88f73af993c4a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
-  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cycle_iteration, eu_ai_post_market_monitoring, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verification_taxonomy]
-  glossary_sha256: 58d0091add5a089dd1c2e272be3c741facaa22b8b710ba0ecdb3ef0fd4aa6a20
-  translated_at: 2026-09-26T17:57:28Z
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verification_taxonomy]
+  glossary_sha256: c99b7aa1a178687c6dcd8d896488327431d69728b208918bf0610eab7bc29995
+  translated_at: 2026-09-26T18:11:54Z
   reviewed_by: null
 ---
 
@@ -29,7 +29,7 @@ translation:
 
 ### 🧩 CRA - Cyber Resilience Act {#-cra---cyber-resilience-act}
 
-The **Cyber Resilience Act (CRA)** is **Regulation (EU) 2024/2847** (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847)), which lays down horizontal requirements for the design, development, production and support of products with digital elements.
+The **Cyber Resilience Act (CRA)** is **Regulation (EU) 2024/2847** (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847)), which lays down horizontal requirements for the design, development, production and support of products with digital elements.
 
 In this reading, `CRA` should be understood first and foremost as a framework of:
 
@@ -213,7 +213,7 @@ Answer YES to the following points:
 
 ## References {#referências}
 
-- **Cyber Resilience Act**: Regulation (EU) 2024/2847 (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R2847))
+- **Cyber Resilience Act**: Regulation (EU) 2024/2847 (CELEX: [32024R2847](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R2847))
 - SbD-ToE Manual Chapters 01–14 
 - ENISA Guidance on Product Security & Vulnerability Disclosure 
 - ISO/IEC 29147 (Vulnerability Disclosure), ISO/IEC 30111 (Vulnerability Handling)

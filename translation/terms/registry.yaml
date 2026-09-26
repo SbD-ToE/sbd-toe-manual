@@ -6347,12 +6347,10 @@ terms:
   en: post-market monitoring
   en_variants: []
   pt: acompanhamento pós-comercialização
-  pt_variants:
-  - monitorização pós-comercialização
-  - monitorização pós-mercado
+  pt_variants: []
   ontology_id: null
-  sense: Termo oficial do acto (UE) — forma PT e EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689,
-    art. 3(25), 72).
+  sense: Termo oficial do AI Act (âmbito AI Act; não forçar no CRA — decisão do Orchestrator 2026-09-26) — forma PT e
+    EN do mesmo artigo na versão oficial EUR-Lex (CELEX 32024R1689, art. 3(25), 72).
   senses: []
   evidence: EUR-Lex CELEX:32024R1689, art. 3(25), 72 (versões PT e EN oficiais, obtidas 2026-09-26)
   counts: {}

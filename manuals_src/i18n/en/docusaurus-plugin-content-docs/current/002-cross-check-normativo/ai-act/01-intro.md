@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
   source_sha256: ae22bac0310d5337d8c9259c2a36edc93275663ca9c2030577841eb922fe309d
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 635c4016d00b902209f74898e94cf515eca29ab2d7eb91a64140c629377a387a
+  target_sha256: 87b3cc1a3872d8ee6e4847a516b989e3aa9453e8b94688f03c4185dd928e19b8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 68509bfcdc38ca567cb8191a199e7fae5068535eea97e164d764ce52597c4242
-  translated_at: 2026-09-26T17:57:25Z
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: 7b013ae242071785e1dd4c4af9bfaa8930d8b1950f3550f2f0a5795ef08bc04a
+  translated_at: 2026-09-26T18:11:52Z
   reviewed_by: null
 ---
 
@@ -29,7 +29,7 @@ translation:
 
 ### 🤖 AI Act - Artificial Intelligence Regulation {#-ai-act---regulamento-de-inteligência-artificial}
 
-The **AI Act** is **Regulation (EU) 2024/1689** (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1689)), the world's first horizontal legal framework dedicated to artificial intelligence. It entered into force on 1 August 2024 and applies in phases:
+The **AI Act** is **Regulation (EU) 2024/1689** (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)), the world's first horizontal legal framework dedicated to artificial intelligence. It entered into force on 1 August 2024 and applies in phases:
 
 - **2 February 2025** - prohibited practices (Art. 5) and AI literacy (Art. 4).
 - **2 August 2025** - general-purpose AI models (GPAI, Chapter V), governance and the penalties regime.
@@ -618,7 +618,7 @@ In terms of penalties (Art. 99), the regulation sets maximum tiers:
 
 ### References {#referências}
 
-- **AI Act**: Regulation (EU) 2024/1689 (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024R1689)).
+- **AI Act**: Regulation (EU) 2024/1689 (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)).
 - **Art. 9** - Risk management system (lifecycle).
 - **Art. 10** - Data and data governance (representativeness, bias).
 - **Art. 11 and Annex IV** - Technical documentation.

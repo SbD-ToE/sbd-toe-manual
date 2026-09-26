@@ -12,10 +12,10 @@ translation:
   target_sha256: a8edb542072e5bcb686fe6e8313fe1265f67bf69f8224bce6d2c45082accb729
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cycle_iteration, lifecycle_phase, papel_suporte, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: f2dfc811e805fb11c531c4d237e99e3e39617ce4f4bc349a799f861c1cd5c6cd
-  translated_at: 2026-09-26T17:57:28Z
+  translated_at: 2026-09-26T18:11:55Z
   reviewed_by: null
 ---
 

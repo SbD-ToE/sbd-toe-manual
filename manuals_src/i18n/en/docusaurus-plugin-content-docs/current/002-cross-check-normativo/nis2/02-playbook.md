@@ -12,10 +12,10 @@ translation:
   target_sha256: d0bd436d7a15f986df924d7c263566e1d4c11937e340ff72993c48a02a2a29b2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
   glossary_sha256: 038a47de0c4044d13dd83d7e19e49bedc408e89772a40019eb5b6a2f99602558
-  translated_at: 2026-09-26T17:57:39Z
+  translated_at: 2026-09-26T18:12:05Z
   reviewed_by: null
 ---
 

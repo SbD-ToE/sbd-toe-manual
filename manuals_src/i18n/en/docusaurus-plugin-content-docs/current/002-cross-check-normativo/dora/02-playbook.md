@@ -12,10 +12,10 @@ translation:
   target_sha256: 8df12a3b73cc89893418029788bbf01a88d15dcfc7e4fc5cf1880c2b0e472743
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, dora_ict_risk, eu_management_body, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: 82c270800584eff9e1c4ef62a03e981f00808fb7c738296d1c6f6cdb0a5d0c3c
-  translated_at: 2026-09-26T17:57:30Z
+  translated_at: 2026-09-26T18:11:57Z
   reviewed_by: null
 ---
 

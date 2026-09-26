@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/dora/01-intro.md
   source_sha256: 41e68e472bc45a9141257ebfe964fd81ec13dd060470921fd3e40a895f0105fa
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 1e8476c2b31d67f3a75e730279cca589b85f06ac9145869b16a65628c6025e6b
+  target_sha256: 8af13523ba1c6ee07f55486f4ca33e7fd5297122fcce4ecb1057ba4b7987d119
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
   glossary_sha256: 72798e51c5d3462fe72ce1b41c5794884546ef3f9e517dec5585541425ed8204
-  translated_at: 2026-09-26T18:01:06Z
+  translated_at: 2026-09-26T18:11:56Z
   reviewed_by: null
 ---
 
@@ -27,7 +27,7 @@ translation:
 
 ## General Framework {#enquadramento-geral}
 
-The **Digital Operational Resilience Act (DORA)** - **Regulation (EU) 2022/2554** (CELEX: [32022R2554](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022R2554)) - marks a historic turning point in the way the European Union approaches **digital resilience** in the financial sector.  
+The **Digital Operational Resilience Act (DORA)** - **Regulation (EU) 2022/2554** (CELEX: [32022R2554](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554)) - marks a historic turning point in the way the European Union approaches **digital resilience** in the financial sector.  
 From January 2025, it is no longer enough for financial entities to protect data or follow general good practice: they are required to demonstrate, with evidence and consistent mechanisms, that they **can identify, prevent, detect, respond to and learn from technological risks**.
 
 SbD-ToE was conceived as a **universal application security model** and naturally covers the technical pillars of DORA. This document consolidates:
@@ -64,7 +64,7 @@ In practical terms, DORA translates into obligations that directly affect SbD-To
   - In SbD-ToE this intersects directly with the chapters on security testing, _red teaming_, _chaos engineering_ and continuous pipeline validation.
 
 - **ICT third-party risk management (Art. 28–30).**  
-  - It requires an inventory of critical ICT third-party service providers, risk assessment, specific contractual clauses and ongoing oversight.  
+  - It requires an inventory of ICT third-party service providers supporting critical or important functions, risk assessment, specific contractual clauses and ongoing oversight.  
   - The Manual covers these aspects in the chapters on dependencies, SBOM/SCA, supply chain, _outsourcing_ and governance/contracting.
 
 - **Exception decisions and unremediated vulnerabilities.**  

@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/enisa-csa/01-intro.md
   source_sha256: 2c7c8846352655c87e16ca0e44560b976653304c25e266c41b8edb2c209f714a
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 64b11a0b310a3921faf9ba78d0f3302e8f4aa87344eba5b9a106eacc2019a4df
+  target_sha256: 08e4ce7b3ef8d56bff3d715c603dbfcaaaa91a303d79d52dea97e6e91dd41481
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, cra_pde, csa_assurance_level, esquema_regime, eu_ce_marking, layer, mapping, maturity, practitioner_manual, requirement_runtime, role_procurement, sbdtoe_sbd, schema, traceability]
   glossary_sha256: 4eab474dfa557378320ff2bfd55d0036110671b546a9def414ac289452bd87d8
-  translated_at: 2026-09-26T17:57:31Z
+  translated_at: 2026-09-26T18:11:58Z
   reviewed_by: null
 ---
 
@@ -27,7 +27,7 @@ translation:
 
 ### 🏛️ ENISA and the Cybersecurity Act (CSA) {#️-enisa-e-cybersecurity-act-csa}
 
-The **Cybersecurity Act** is **Regulation (EU) 2019/881** (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881)), which:
+The **Cybersecurity Act** is **Regulation (EU) 2019/881** (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881)), which:
 
 - strengthens the mandate of **ENISA** as the European Union Agency for Cybersecurity; and
 - establishes a **European cybersecurity certification framework** for ICT products, ICT services and ICT processes.
@@ -66,7 +66,7 @@ This note explains "who it is for", when it is useful/necessary and how to **reu
 - **Cloud service providers** → **EUCS** scheme (for cloud services). Levels: Basic, Substantial, High.
 - **5G suppliers/operators** → **EU5G** scheme (for 5G networks and components). Levels: aligned with risk.
 - **CABs/Laboratories** → apply the criteria of the schemes.
-- **National Authorities** → supervise, recognise and list certificates.
+- **National cybersecurity certification authorities** → supervise, recognise and list certificates.
 - **Buyers (incl. the public sector)** → use certificates as a procurement criterion.
 
 Notes:
@@ -155,7 +155,7 @@ It is suggested to create a **certification dossier** with cross-references (con
 
 ## References {#referências}
 
-- **Cybersecurity Act**: Regulation (EU) 2019/881 (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881))
+- **Cybersecurity Act**: Regulation (EU) 2019/881 (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881))
 - ENISA - Certification scheme pages (EUCC, EUCS, EU5G)
 - SbD‑ToE Chapters 01–14; CRA/NIS2/DORA cross‑checks
 

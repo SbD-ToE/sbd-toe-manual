@@ -12,10 +12,10 @@ translation:
   target_sha256: a741cf34f5694c301a2d9b460e3bd04f48038fa9decc308b3ee0d088dc9096f3
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_pde, cycle_iteration, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_system, eu_ce_marking, eu_notified_body, framework_source_corpus, layer, lifecycle_phase, practitioner_manual, provenance, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, transversal]
   glossary_sha256: 115a96b7a2c4c9c99d7fbe583336a11973bc44b64520c53c4c85864314ce0afb
-  translated_at: 2026-09-26T17:57:27Z
+  translated_at: 2026-09-26T18:11:54Z
   reviewed_by: null
 ---
 

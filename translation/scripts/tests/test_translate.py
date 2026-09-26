@@ -640,3 +640,22 @@ class PagesPluginTests(unittest.TestCase):
                 code = translate.main(["assemble", "--job", str(job), "--engine", "test"])
             self.assertEqual(code, 2)
             self.assertIn("--plugin pages", err.getvalue())
+
+
+class LocaliseOfficialLinksTest(unittest.TestCase):
+    """EUR-Lex links follow the reader's language (cross-check normativo, 2026-09-26)."""
+
+    def test_source_language_segment_becomes_target(self):
+        text = "[32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555)"
+        self.assertEqual(
+            translate.localise_official_links(text, "pt", "en"),
+            "[32022L2555](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555)",
+        )
+
+    def test_other_languages_and_other_hosts_untouched(self):
+        text = "https://eur-lex.europa.eu/legal-content/FR/TXT/ https://example.org/legal-content/PT/x"
+        self.assertEqual(translate.localise_official_links(text, "pt", "en"), text)
+
+    def test_without_locales_is_identity(self):
+        text = "https://eur-lex.europa.eu/legal-content/PT/TXT/"
+        self.assertEqual(translate.localise_official_links(text, None, None), text)

@@ -9,13 +9,13 @@ translation:
   source_path: 002-cross-check-normativo/gdpr/01-intro.md
   source_sha256: 9f31ae0c46b078f69ee647e4f3b96b039c400b3cf38573aa565f25c73bc7cf97
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 83c1362a76b56900dd6a2be7b012cd95168029be01d7b161592d533369cd23b2
+  target_sha256: 92ae694528021e3918c0b8215daa8b0a7497486086a1ce4645d8a8ba2e875e45
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  terms_sha256: 5f18169e44cb78faceac7d31df119020c508135f27e39f4105f054ecf5a72d33
   glossary_keys: [avaliacao, cycle_iteration, gap_family, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, normative_empirical, role_juridico, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: a28d6ef83c6735d802775f3bbc6c4d1802b43b1dc9acdf7f5dc8ad5a00f0fb46
-  translated_at: 2026-09-26T17:57:37Z
+  translated_at: 2026-09-26T18:12:03Z
   reviewed_by: null
 ---
 
@@ -27,7 +27,7 @@ translation:
 
 ## Scope {#âmbito}
 
-The **General Data Protection Regulation (GDPR)** - **Regulation (EU) 2016/679** (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679)) - lays down principles and obligations for the processing of personal data. This cross-check focuses on the **technical dimension** aligned with SbD-ToE (security and engineering), recognising that several obligations are **legal-organisational** (legal basis, rights of the data subject, international transfers).
+The **General Data Protection Regulation (GDPR)** - **Regulation (EU) 2016/679** (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679)) - lays down principles and obligations for the processing of personal data. This cross-check focuses on the **technical dimension** aligned with SbD-ToE (security and engineering), recognising that several obligations are **legal-organisational** (legal basis, rights of the data subject, international transfers).
 
 It is suggested that SbD-ToE be used as the technical core for the articles that require security measures, privacy-by-design and incident management, working with Legal/GRC for the rest.
 
@@ -152,7 +152,7 @@ Answer YES:
 
 ## References {#referências}
 
-- **GDPR**: Regulation (EU) 2016/679 (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32016R0679))
+- **GDPR**: Regulation (EU) 2016/679 (CELEX: [32016R0679](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679))
 - ENISA - Guidelines on Security of Personal Data Processing
 - EDPB - Guidelines (DPIA, Breach Notification)
 - SbD-ToE Chapters 01–14

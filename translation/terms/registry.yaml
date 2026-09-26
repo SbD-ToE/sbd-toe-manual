@@ -5980,3 +5980,24 @@ terms:
   pending_reason: null
   blocks_translation: false
   notes: '[MA 2026-09-26] FAQ: desambigua «esquema» (scheme) de «esquema» (schema); espécie 3.'
+- key: nist_sp_800_154_title
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: Guide to Data-Centric System Threat Modeling
+  en_variants: []
+  pt: Guide to Data-Centric System Threat Modeling
+  pt_variants: []
+  ontology_id: null
+  sense: Título do NIST SP 800-154 (grafia oficial AmE).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Políticas (08): título de documento externo verbatim.'

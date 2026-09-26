@@ -6,15 +6,15 @@ tags: [governanca, contractors, sandbox, formacao, onboarding, pratica]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/13-guia-preparacao-sandbox.md
-  source_sha256: f9ba9876b515a77dc6336a8a82dfced35a0a0a0ccf23fbad750e2b1bd15fa4bd
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: ba80ecb13d63cbf175f1f6d3b16fc381c144031f57156152114ffa5f1b379039
+  source_sha256: b39ab15371b0560131ad03cf812cf4dc54410d4f8f502aa76c8854e2c9fe4ec1
+  source_commit: 1860d7830f3934c2b62996b21c22b5b51ce3953b
+  target_sha256: 27e75b2e3d7e7433bb005f6d118dd54939cfcb37d08ee107b46b6026eac5e33f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [cycle_iteration, lifecycle_phase, practitioner_manual, threat, validation_evaluation]
   glossary_sha256: 8fba7ac055f3b4c39649388b614e2c063a0b53cc425a8b5761a9033f17273d99
-  translated_at: 2026-09-26T12:49:01Z
+  translated_at: 2026-09-26T12:56:00Z
   reviewed_by: null
 ---
 
@@ -436,7 +436,7 @@ The sandbox is the **practical component of US-16 (Training Track)**:
 ## 📎 Templates and Links {#-templates-e-links}
 
 - [Contractor Validation Template](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
-- [Technical Preparation - US-15](../aplicacao-lifecycle#us-15)
+- [Technical Preparation - US-15](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)
 - [Training and Onboarding - Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
 - [Offboarding Checklist](/sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding)
 

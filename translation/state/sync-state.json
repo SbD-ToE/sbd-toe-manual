@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T12:49:44Z",
+  "generated_at": "2026-09-26T12:56:02Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
@@ -3146,12 +3146,12 @@
     },
     "010-sbd-manual/13-formacao-onboarding/addon/13-guia-preparacao-sandbox.md": {
       "state": "synced",
-      "source_sha256": "f9ba9876b515a77dc6336a8a82dfced35a0a0a0ccf23fbad750e2b1bd15fa4bd",
-      "translated_source_sha256": "f9ba9876b515a77dc6336a8a82dfced35a0a0a0ccf23fbad750e2b1bd15fa4bd",
-      "target_sha256": "ba80ecb13d63cbf175f1f6d3b16fc381c144031f57156152114ffa5f1b379039",
+      "source_sha256": "b39ab15371b0560131ad03cf812cf4dc54410d4f8f502aa76c8854e2c9fe4ec1",
+      "translated_source_sha256": "b39ab15371b0560131ad03cf812cf4dc54410d4f8f502aa76c8854e2c9fe4ec1",
+      "target_sha256": "27e75b2e3d7e7433bb005f6d118dd54939cfcb37d08ee107b46b6026eac5e33f",
       "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "8fba7ac055f3b4c39649388b614e2c063a0b53cc425a8b5761a9033f17273d99",
-      "translated_at": "2026-09-26T12:49:01Z",
+      "translated_at": "2026-09-26T12:56:00Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/13-formacao-onboarding/addon/20-modelo-inclusao-terceiros.md": {

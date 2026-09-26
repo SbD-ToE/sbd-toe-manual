@@ -7,15 +7,15 @@ tags: [métricas, indicadores, mttd, mttr, dashboards, kpi]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/07-metricas-indicadores.md
-  source_sha256: c1e0234901dbe487197ed11b32ec5f518e32ca3db735bbba5e0d87070dbfd382
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 2a384392751a7403aff635737c5129752fc0a243c6bbab3cfd132a5957e7c4d1
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 1a55108c4c06538bcbdc0b936253d290a9c692cf8431f588578ac747167ade3e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [maturity, practitioner_manual, validation_evaluation]
   glossary_sha256: 3956127a2db6f8da73678646769aa190831ada6098b1dfc75c5c2aed08211ef5
-  translated_at: 2026-09-26T11:17:29Z
+  translated_at: 2026-09-26T12:48:57Z
   reviewed_by: null
 ---
 

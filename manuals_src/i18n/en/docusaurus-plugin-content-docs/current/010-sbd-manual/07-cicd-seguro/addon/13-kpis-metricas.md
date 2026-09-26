@@ -7,15 +7,15 @@ tags: [kpi, metricas, CIC, cicd, pipeline, gates, artefactos, secrets, L1, L2, L
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/addon/13-kpis-metricas.md
-  source_sha256: ebe026c14e3d4a7f6d10c58f5828fbf61d26ac3ceb74698c5e8d7530d09921e1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 9c35cdec34b0a83ff5f83e2ea042cc75a45b2dbbe5bb05aecf4a2021ed64e0fc
+  source_sha256: e7af2c1f1cec117212a6c07c00fc92d09a026c21e231101795bcbcffa609ea16
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 4449af86fd274115e6e9835aaf0cfba6df40f88d39cff6517073f459a7814fe9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, mapping, practitioner_manual, provenance, risk_level, sbdtoe_sbd, traceability, transversal, verification_taxonomy]
   glossary_sha256: 270ab836130e0d588f04e88415f3ebf5438a71e1f30a16e6be609fdad9d13db8
-  translated_at: 2026-09-26T09:09:19Z
+  translated_at: 2026-09-26T12:48:44Z
   reviewed_by: null
 ---
 
@@ -112,4 +112,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/00-catalogo-requisitos.md` | Requirements CIC-001..010 that underpin the indicators |
 | `addon/09-controle-excecoes-visibilidade.md` | Pipeline exception process (CIC-K02) |
 | `addon/06-politicas-gates-pipeline.md` | Definition of the gates that feed CIC-K01 |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-02, T-03 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-02, T-03 |

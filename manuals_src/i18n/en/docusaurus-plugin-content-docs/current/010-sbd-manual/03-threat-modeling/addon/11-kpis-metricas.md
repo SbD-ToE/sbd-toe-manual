@@ -7,15 +7,15 @@ tags: [kpi, metricas, THR, threat-modeling, ameacas, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/addon/11-kpis-metricas.md
-  source_sha256: 21e7f76fd52dfc5c51cd56ccebc6ee5d7f9a210056f781dce5b5e57c76795176
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c60dc8389027aa953fc493f888501a453774a4332f5885050374596c3d531905
+  source_sha256: 80db15bdd6932964d1d3ed2ed8278bafe04194342a054b7cb573716261423235
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 4781945a6512071c54e160e7503b75da86efbb71c5266ecbd5d0c3ee498872d3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, framework_source_corpus, gap_family, mapping, maturity, microsoft_threat_modeling_tool, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation]
-  glossary_sha256: 6971f9b3f5abd37af87049a4fdae2e0e5ae4f13982505433c5d53fd5e6ac4635
-  translated_at: 2026-09-25T20:17:01Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, framework_source_corpus, gap_family, mapping, maturity, microsoft_threat_modeling_tool, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, threat, traceability, transversal, validation_evaluation]
+  glossary_sha256: ed6c925dce3a58d8b99b3808551625275c3e4c1dfaf548cc2eab7326b80a80c6
+  translated_at: 2026-09-26T12:48:41Z
   reviewed_by: null
 ---
 
@@ -115,4 +115,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/03-validacao-evidencia-threat-modeling.md` | Validation process that feeds THR-K03/K05 |
 | `addon/07-mapeamento-threats-requisitos.md` | Threat → requirement mapping (THR-K05) |
 | Ch. 04 `addon/10-kpis-metricas.md` | ARC-K01 (threat model per architecture) complements THR-K01 |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |

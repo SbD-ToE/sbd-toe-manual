@@ -6,15 +6,15 @@ tags: [runners, isolamento, pipelines, execucao, seguranca, cicd]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/02-runners-isolamento.md
-  source_sha256: 6600d8a9e8d6204c7bff5dab0bfaca96e5daaca5fae6d841608a09ac21a73104
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 9acebbd40b5e3a9973e7fda3c0a7500f31f63f178df4dc1bf3196947b768be08
+  source_sha256: 7ad065da50347a56996e02982fa1b0b8698b947e7b0375df1ed01ddcf60bd9f8
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 6119fa1dc6ca4c1f0df6346532a9c2b0c4e43a8da68d8b67caec0bc47743c646
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase]
   glossary_sha256: 6831e8f6b3201711af20558f305b3d3ae28178bc06c1099b9276e33615b1dbd1
-  translated_at: 2026-09-26T09:58:14Z
+  translated_at: 2026-09-26T12:48:46Z
   reviewed_by: null
 ---
 
@@ -139,7 +139,7 @@ Without these elements, automation turns into systemic risk.
 |----------------------------------|-------------------------------------------------|
 | `01-imagens-base.md`             | Images allowed in execution environments    |
 | `05-policies-runtime-opa.md`    | Technical enforcement of policies                |
-| `06-sbom-containers.md`         | Inventory of the execution environment              |
+| `06-inventario-sbom.md`         | Inventory of the execution environment              |
 | `09-riscos-processo-imagens.md` | Separation between automatic execution and decision   |
 | `15-aplicacao-lifecycle.md`     | Operational application in the lifecycle          |
 

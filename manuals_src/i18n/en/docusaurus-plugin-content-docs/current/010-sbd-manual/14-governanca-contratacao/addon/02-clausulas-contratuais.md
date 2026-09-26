@@ -7,15 +7,15 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/02-clausulas-contratuais.md
-  source_sha256: def489d0f6a08e18b7f87ae765d97c6d8b309b7fe2e32cf9abdd8ae18fb0d8bc
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: e08d442c203cbe1273ef3712f0f683441bf516e9436d2beb1abd1b030dfe75e4
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: cb758983d634067eaf59bf5922ea0b798d47b2a3983aa633f15499a50aa33e55
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 8d1537cb3830101f261667640f3ab1b3c13a0b8f8a25bae438b95d1e40673d63
-  translated_at: 2026-09-26T12:00:12Z
+  translated_at: 2026-09-26T12:49:04Z
   reviewed_by: null
 ---
 

@@ -7,15 +7,15 @@ tags: [formacao, iac, terraform, tfsec, checkov, pipelines, devops, validacao, r
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/08-exemplo2-formacao-iac.md
-  source_sha256: 92a67a22cb05a5cbec52d2491aa846a5393a126df07c43a5c3c9dcb40e34ad93
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e478754d7e8425225f0b01b57e6615e07a242e9a8bc2951ab34d366f360d3745
+  source_sha256: 0b076e64935a9e38b9a5172d0ef6e12a46ad48c25f4e97bfcb9786d8fe814dc9
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: ccb77e4c26e08414c3c0ab3f07133bcb88a9ad8043f8b5c1a35e504e9a698bdc
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, maturity, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: a250d7c9405d0224c31e0fa4892b8ff48a07000f13f9caa6ab1188470352f288
-  translated_at: 2026-09-26T11:44:20Z
+  translated_at: 2026-09-26T12:49:00Z
   reviewed_by: null
 ---
 
@@ -88,7 +88,7 @@ To equip the technical teams to:
 
 | Chapter                       | Relevance                                                 |
 |--------------------------------|------------------------------------------------------------|
-| Chapter 08 - Secure IaC       | Main source of requirements and practices (IAC-001 to IAC-013) |
+| Chapter 08 - Secure IaC       | Main source of requirements and practices (`IAC-001` to `IAC-013`) |
 | Chapter 07 - Secure CI/CD     | Integration with pipelines and isolated executions             |
 | Chapter 04 - Architecture      | Structural impact of configurations and reusable modules|
 | Chapter 02 - Requirements       | Correspondence with the Ch. 02 requirements related to secrets, permissions, segregation |

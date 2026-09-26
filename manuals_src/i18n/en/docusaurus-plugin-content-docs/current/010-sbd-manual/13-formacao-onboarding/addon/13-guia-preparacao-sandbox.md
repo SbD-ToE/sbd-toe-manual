@@ -6,15 +6,15 @@ tags: [governanca, contractors, sandbox, formacao, onboarding, pratica]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/13-guia-preparacao-sandbox.md
-  source_sha256: f5df336e9ded0859420177ac0535c83eb50c1dfffe105f67d12534a7c8f9f75b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: f762776c7d738b787b951f3720ba14bf469eff2b2b8718c6091933ae53777f7f
+  source_sha256: f9ba9876b515a77dc6336a8a82dfced35a0a0a0ccf23fbad750e2b1bd15fa4bd
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: ba80ecb13d63cbf175f1f6d3b16fc381c144031f57156152114ffa5f1b379039
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [cycle_iteration, lifecycle_phase, practitioner_manual, validation_evaluation]
-  glossary_sha256: a69a2bb101cfd4e4e549bbca9ce816783635ce9bc40a6973f89207a71071f655
-  translated_at: 2026-09-26T11:44:24Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [cycle_iteration, lifecycle_phase, practitioner_manual, threat, validation_evaluation]
+  glossary_sha256: 8fba7ac055f3b4c39649388b614e2c063a0b53cc425a8b5761a9033f17273d99
+  translated_at: 2026-09-26T12:49:01Z
   reviewed_by: null
 ---
 
@@ -355,7 +355,7 @@ T+0: Backup de work realizado (se necessário)
 
 Each sandbox includes a **README.md with:**
 
-```markdown
+````markdown
 # Sandbox Onboarding Guide
 
 ## Bem-vindo!
@@ -369,89 +369,89 @@ Este é seu ambiente de prática seguro. Aqui pode aprender sem risco de impacta
    git clone https://github.com/[org]/sandbox-app.git
    ```
 
-2. **Set up the local environment:**
+2. **Setup local environment:**
    ```bash
    cd sandbox-app
    cp .env.example .env
    # Não substitua secrets - use Vault
    ```
 
-3. **Run the security tests:**
+3. **Executar testes de segurança:**
    ```bash
    npm install
    npm run test:security
    ```
 
-### Exercises {#exercícios}
+### Exercícios
 
-Start with Exercise 1: [Link]
+Comece com Exercício 1: [Link]
 
-### Asking for Help {#pedir-ajuda}
+### Pedir Ajuda
 
 - Slack: #sandbox-support
 - Email: [security-email]
-- Escalation: Tech Lead [name]
+- Escalação: Tech Lead [name]
 
-### Activity Logs {#logs-de-atividade}
+### Logs de Atividade
 
-Your activity is being monitored (audited logs). This is normal and expected.
+A sua atividade está sendo monitorizada (logs auditados). Isto é normal e esperado.
 
-### Deadline {#deadline}
+### Deadline
 
-Exercises must be completed by [date]. The quiz takes place on [date + 1].
+Exercícios devem ser completados até [data]. Quiz passa em [data + 1].
 
 ---
+````
+
+---
+
+## 🎓 Integration with Ch. 13 (Training) {#-integration-com-cap-13-formação}
+
+The sandbox is the **practical component of US-16 (Training Track)**:
+
+- Theoretical track: LMS + online courses
+- Practical track: sandbox exercises
+- Validation: quiz + exercise score
+
+**Completion SLA:** T+7 days = onboarding complete
+
+---
+
+## 🏁 End-of-Engagement Checklist {#-checklist-de-término}
+
 ```
-
----
-
-## 🎓 Integration com Cap. 13 (Formação)
-
-Sandbox é **componente prático de US-16 (Trilho de Formação)**:
-
-- Trilho teórico: LMS + cursos online
-- Trilho prático: Sandbox exercises
-- Validação: Quiz + Exercise score
-
-**SLA de Conclusão:** T+7 dias = onboarding completo
-
----
-
-## 🏁 Checklist de Término
-
-```
-[ ] Contractor completed 70% of the exercises
+[ ] Contractor completou 70% exercícios
 [ ] Quiz score ≥80%
-[ ] Tech Lead validated understanding (conversation check-in)
-[ ] AppSec Engineer reviewed the logs (no red flags)
-[ ] Backup of work carried out
-[ ] Sandbox credentials revoked
-[ ] Completion sign-off signed
-[ ] History archived (7 years)
-[ ] Real access granted (US-15 complete)
+[ ] Tech Lead validou compreensão (conversation check-in)
+[ ] AppSec Engineer reviewed logs (sem red flags)
+[ ] Backup de work realizado
+[ ] Sandbox credentials revogadas
+[ ] Sign-off de conclusão assinado
+[ ] Histórico arquivado (7 anos)
+[ ] Acesso real concedido (US-15 completo)
 ```
 
 ---
 
-## 📎 Templates e Links
+## 📎 Templates and Links {#-templates-e-links}
 
 - [Contractor Validation Template](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
-- [Preparação Técnica - US-15](../aplicacao-lifecycle#us-15)
-- [Formação e Onboarding - Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
+- [Technical Preparation - US-15](../aplicacao-lifecycle#us-15)
+- [Training and Onboarding - Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
 - [Offboarding Checklist](/sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding)
 
 ---
 
-## 🔄 Melhoria Contínua
+## 🔄 Continuous Improvement {#-melhoria-contínua}
 
 **Feedback Loop:**
-1. Contractor completa sandbox
-2. AppSec Engineer revê logs
-3. Feedback capturado (what worked, what was confusing)
-4. Exercises iteradas trimestralmente
-5. Novos cenários de ameaça incluídos
+1. The contractor completes the sandbox
+2. The AppSec Engineer reviews the logs
+3. Feedback captured (what worked, what was confusing)
+4. Exercises iterated quarterly
+5. New threat scenarios included
 
-**Propriedade:** DevOps + AppSec Engineer  
-**Revisão:** Quarterly (mínimo)
+**Ownership:** DevOps + AppSec Engineer  
+**Review:** Quarterly (minimum)
 
 

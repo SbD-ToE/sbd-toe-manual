@@ -6,15 +6,15 @@ tags: [exemplo, pipeline, containers, cicd, segurança, execucao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/exemplo-pipeline-container.md
-  source_sha256: d59d6ba443cf9c121159cd4b084c6ef5e686437ab20f922015debf088a10ebd4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7596649b76d079b0fecc3d06ea960590222f9d1ceaa8711c43120e25aa2b20b3
+  source_sha256: 4b8f645969d06cca95766eae10eebbd0ec1db1c133d1a9728312ce2a56354f78
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 983b6ae77aec4b9a327f885d283647fa4000458167adec1c5feafd9d4535d714
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, discipline, lifecycle_phase, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: d67e5693fd05335bd5c291314dd57c07488698842bdb384d1f418d5108307257
-  translated_at: 2026-09-26T09:58:23Z
+  translated_at: 2026-09-26T12:48:49Z
   reviewed_by: null
 ---
 
@@ -45,7 +45,7 @@ The pipeline in question is responsible for **compiling, testing, signing and pu
 |-------------------------------|-----------------------------------------------|-------------------------------------------|
 | Secure base image            | `FROM node:18.17.0-alpine` + `USER node`      | `01-imagens-base.md`                      |
 | Image signing          | `cosign sign` with GitHub OIDC                | `03-assinatura-cadeia-trust.md`           |
-| SBOM generation               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-sbom-containers.md`               |
+| SBOM generation               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-inventario-sbom.md`               |
 | Vulnerability scanner   | `trivy image` with blocking on CVSS > 7       | `07-vulnerabilidades-imagens.md`          |
 | Isolated runners              | `runs-on: [self-hosted, ephemeral]`           | `02-runners-isolamento.md`                |
 | Execution with enforcement      | Kyverno `validate` for labels, UID, origin   | `05-policies-runtime-opa.md`              |

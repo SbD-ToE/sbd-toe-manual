@@ -7,15 +7,15 @@ tags: [kpi, metricas, ARC, arquitectura, threat-model, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/addon/10-kpis-metricas.md
-  source_sha256: 282e0daf636b64372e27f0dac754daba7323d18d3d748709b58f72941d6895b2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5a27a627eee3ad11eca1702d90931151f0537674e1c578f4fba7019ea2f94abc
+  source_sha256: 393e75183cbbaba85957eb68f1dba988ae4b091eac2d5ba8269ceb6243f7e95f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 7187129e5f798385386aadefbd665e85077d224714b4d522fbc8e78ce0364fa7
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, travessia_generica, travessia_relacao, validation_evaluation, verification_taxonomy]
   glossary_sha256: 0c482b7c3fb6daf7fe5ee29d511633c40527883c3fa7c87386fef32e3c4dac52
-  translated_at: 2026-09-26T08:32:08Z
+  translated_at: 2026-09-26T12:48:42Z
   reviewed_by: null
 ---
 
@@ -110,4 +110,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/01-catalogo-requisitos.md` | Requirements ARC-001..013 that underpin the indicators |
 | `addon/06-rastreabilidade.md` | Threat→requirement→ADR→control→evidence traceability model |
 | `addon/03-excecoes.md` | Deviations from ARC controls require a formal exception |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-04, T-06 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-04, T-06 |

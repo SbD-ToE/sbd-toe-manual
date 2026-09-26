@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/intro.md
-  source_sha256: 0a636c76750024eb2e50ac8ea385de2a36b3952f2b35d743c83aa7dfbcbe8165
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 720dd5b4e627021d144ff0608648849ae8b7c019b287755da7822cafc2bd6f00
+  source_sha256: c6a3ea15865bcb07e3a81cb45dc615ad11ab9f7a7583add938d47b473d41b15f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 62d9be1bea56ce79558963777f9c524276ebf8ff2a699a0147935800096532cd
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: ded17d619035e7c2d723a896280bceb3be1e4cdb7b370f025eec3c92f1c76d9e
-  translated_at: 2026-09-26T11:17:37Z
+  translated_at: 2026-09-26T12:48:59Z
   reviewed_by: null
 ---
 
@@ -33,14 +33,12 @@ The operational chapters implement the SbD-ToE in specific technical contexts. T
 
 # Monitoring and Operations
 
-## 
-
 Monitoring is much more than collecting technical data.  
 It is turning scattered signals into **actionable intelligence** that allows teams to anticipate risks, detect failures and respond before a problem turns into a serious incident.  
 
 Experience shows that a large share of attacks are discovered not because of the adversary's sophistication, but because of a lack of visibility. Cases such as Equifax or Target proved that **the logs were there** - but they were incomplete, poorly structured or simply ignored.  
 
-That is why frameworks such as the **SSDF***,  and regulations such as **NIS2** require clear monitoring and response controls. Preventing is not enough: it is necessary to **detect and react**.  
+That is why frameworks such as the **SSDF**, and regulations such as **NIS2** require clear monitoring and response controls. Preventing is not enough: it is necessary to **detect and react**.  
 
 👉 This chapter links directly to:  
 - **Ch. 11 - Secure Deployment**, which guarantees that observable versions enter production.  
@@ -63,7 +61,7 @@ These practices are complementary: they only make sense when they act together, 
 
 ---
 
-## � Automation and Governance in Monitoring {#-automação-e-governação-em-monitorização}
+## Automation and Governance in Monitoring {#-automação-e-governação-em-monitorização}
 
 Secure monitoring combines **extensive automation** with **explicit governance**, distinguishing between:
 
@@ -156,7 +154,7 @@ rca_required: true
 
 ---
 
-## �🧪 Practical prescription {#-prescrição-prática}
+## 🧪 Practical prescription {#-prescrição-prática}
 
 In practice, applying this chapter means answering four fundamental questions:  
 

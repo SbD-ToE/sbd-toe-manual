@@ -7,15 +7,15 @@ tags: [kpi, metricas, CLA, classificacao, risco, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/addon/12-kpis-metricas.md
-  source_sha256: 016d5cd62b7af002c89710043c1b5bdfc41956381f02bfe10577c259ef421daf
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 461b335f94e5ef03d5f3f35f7d9e3e40e39958ba28120509e136ecc5b19ef20e
+  source_sha256: 0187f5fc3cdd89d2ae2f8d90ea17b10055f1910ab4323d856638f176f3b54c10
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 4f96eed02ebc0d982792168c8aed06351c03ec5353398e771b4a959e4934ead7
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [alcada, avaliacao, cycle_iteration, framework_source_corpus, mapping, maturity, programme_line, risk_level, sbdtoe_sbd, transversal, validation_evaluation]
   glossary_sha256: 7e949b678f0f1294401594e5b96bbdf77262fb43b3b3ce769164e7b215c2dee2
-  translated_at: 2026-09-25T20:18:50Z
+  translated_at: 2026-09-26T12:48:40Z
   reviewed_by: null
 ---
 
@@ -115,4 +115,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/04-risco-residual.md` | Residual risk documentation process (CLA-K05) |
 | `addon/02-ciclo-vida-risco.md` | Review cycles that define the CLA-K02 thresholds |
 | Ch. 14 `addon/12-processo-excecoes.md` | Residual risk acceptance (CLA-K05) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |

@@ -7,15 +7,15 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md
-  source_sha256: 6856cfd786c69e7dccfb416c34fd8d0160e36b2b8f84f2682d0b81f13ee357e8
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 92a026d44c539748d3084a9dc0c0b113dc7bf2f427e4cca817b838a43db116c5
+  source_sha256: c81b99fee4ee624edad33a624d08592b6193cc452e8521de14e4f30c96d96540
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: ac4bb068f1c2ce96bf19bca819e6e0dc6bb6051ab563b2e0d10b2dd6071022e5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [alcada, audit_trail, chapter_role, lifecycle_phase, risk_level, traceability, validation_evaluation]
   glossary_sha256: e4fa5a7a81d2e7a2dd284e5badaf5604e379983fb0cb556bbf50cf84c8b89672
-  translated_at: 2026-09-26T12:00:13Z
+  translated_at: 2026-09-26T12:49:05Z
   reviewed_by: null
 ---
 
@@ -126,7 +126,7 @@ When part of the validation process is supported by automated mechanisms, it mus
 | Ch. 01 - Risk classification  | Defines the level of application of the model       |
 | Ch. 02 - Security requirements | Determines what to validate by type of risk   |
 | addon/02-clausulas-contratuais.md | Clauses by type of contract and risk      |
-| addon/01-modelo-governacao.md     | Roles and approval authorities for the approval of exceptions |
+| addon/01-modelo-governancao.md     | Roles and approval authorities for the approval of exceptions |
 | addon/05-exemplos-praticos.md     | Real cases of application of the model          |
 
 ---

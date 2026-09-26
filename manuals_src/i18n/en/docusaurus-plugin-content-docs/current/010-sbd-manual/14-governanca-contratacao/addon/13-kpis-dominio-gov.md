@@ -7,15 +7,15 @@ tags: [kpi, metricas, GOV, governanca, excecoes, ownership, contratos, fornecedo
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/13-kpis-dominio-gov.md
-  source_sha256: 2133f17ac6b1e2583f743c9967aaf282124e6e4d75e168b85859f9b14e498cf7
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 15a9863db0203f8bb76fa7a43f7752e20754ae7b6ded8ad13edf7672d313f822
+  source_sha256: 2442a7af2256dd79966420e947f3d082d76114bd9953ae077b9a545e7b727e74
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 523405c7d166854c3f95e86548b2367ded08a0c3147f00595aaa1ed4f2d8c1e2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [alcada, avaliacao, cycle_iteration, discipline, framework_source_corpus, mapping, programme_line, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: e260d703dd327d6940b9413ec21c716b5d2fe8a8b799e32af2a4408a0d949b10
-  translated_at: 2026-09-26T12:00:20Z
+  translated_at: 2026-09-26T12:49:08Z
   reviewed_by: null
 ---
 
@@ -118,4 +118,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/02-clausulas-contratuais.md` | Contractual proportionality criteria (GOV-K05) |
 | `addon/03-modelo-validacao-fornecedores.md` | Annual supplier validation (GOV-K06) |
 | `addon/06-validacao-continuada.md` | Review cycles that produce deviations (GOV-K08) |
-| `addon/kpis-governanca.md` | Cross-cutting dimensions T-02, T-04, T-05 |
+| `kpis-governanca.md` | Cross-cutting dimensions T-02, T-04, T-05 |

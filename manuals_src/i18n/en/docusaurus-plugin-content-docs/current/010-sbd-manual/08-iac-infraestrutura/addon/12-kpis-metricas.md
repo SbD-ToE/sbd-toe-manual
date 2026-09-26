@@ -7,15 +7,15 @@ tags: [kpi, metricas, IAC, infraestrutura, policy-as-code, drift, opa, sentinel,
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/12-kpis-metricas.md
-  source_sha256: f6fc93f3e09ffb5fe06069c09834a6a9401aac0980294def325cd222a5fa8559
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3f66e63d0bb895fb8fd8157caa7f823b89d5304825c2776f60d633646e50b6ca
+  source_sha256: cfe9ff849c4d50623f93c795ec2b041cdf4e46e03450b7068b2f4469d91aa9fd
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 0af242594db1f8762fd4430ea32ad970bc9d423910afd7cb47ac8a1a627542e2
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, gap_family, mapping, practitioner_manual, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: d12c51842620dc03f0614f51c0db140c54a70afa0197dde6ee110492a1e8eb9f
-  translated_at: 2026-09-26T09:25:40Z
+  translated_at: 2026-09-26T12:48:45Z
   reviewed_by: null
 ---
 
@@ -112,4 +112,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/08-matriz-requisitos-iac.md` | Requirements IAC-001..013 that underpin the indicators |
 | `addon/09-gestao-excecoes.md` | IaC policy exception process (IAC-K04) |
 | `addon/06-controle-enforcement.md` | Enforcement mechanisms that feed IAC-K01/K07 |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-02 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-02 |

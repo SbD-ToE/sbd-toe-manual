@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md
-  source_sha256: 0cb549a12cf32705f2cc2eca3229b9a8ac212ea8b57502552a90a6a737864b58
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 37a668f3a83c09e3720ce3eaddf95eac4a7d822bca80726ba306df12e5a7f83f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 246008337eda0839748725bc575369892df5462500cd20583aadcc285fa53665
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
-  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, oracle, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 9b919bdfb9468f7f0c3e81b5a23ac098c02cd7698e6f654350734c70f013236d
-  translated_at: 2026-09-26T10:31:36Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: 9354204446604aa8f1938406d77369dea0bf518119c71597fe067b524d010d0a
+  translated_at: 2026-09-26T12:48:51Z
   reviewed_by: null
 ---
 

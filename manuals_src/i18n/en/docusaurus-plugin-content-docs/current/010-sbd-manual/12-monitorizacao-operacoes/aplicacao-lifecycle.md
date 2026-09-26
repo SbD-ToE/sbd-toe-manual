@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-  source_sha256: c2acf7398cb0f585c0639f2e477479074489b50a06b1c9f2164b954968bc57d4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: ecf280a765babffdc3c506f4103025913696b0d9cc72b8553caeb6269871831f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 715ceea4f59625c29bb28a448cf275c7a146a2dbbf6d078fe04d6fafc84d1269
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 73c94ac6ab56ffc02cd6139d4c30ba8cf4fc8b8c7b9ba7862dd56547db33abc4
-  translated_at: 2026-09-26T11:17:34Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 82bbd36942cae535b027b449daf19423098f487bb35c9a467c9459c9d64230d3
+  translated_at: 2026-09-26T12:48:58Z
   reviewed_by: null
 ---
 

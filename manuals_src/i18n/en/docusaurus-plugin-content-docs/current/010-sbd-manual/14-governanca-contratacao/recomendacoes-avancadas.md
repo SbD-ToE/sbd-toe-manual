@@ -7,15 +7,15 @@ tags: [avancado, governance, excecoes, contratos, auditoria, rastreabilidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/recomendacoes-avancadas.md
-  source_sha256: 9071a420c1d39e70bd8bf261d27956ba4a2ab0fdb4d5523ac4b3512706289645
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: f4332cbfef114fea4b374d9f035457fe1b71a88f61ebbb875f292212643a681f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 068c7a8d986e69c694968007dc87e207060500bdfbf4b7c19ce18df0c6e26df5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase, maturity, traceability, validation_evaluation]
   glossary_sha256: 008046fdd0fa3fd8bc59b1b8ea2332e4841aebb575b3b520d44c804946899f83
-  translated_at: 2026-09-26T12:00:28Z
+  translated_at: 2026-09-26T12:49:10Z
   reviewed_by: null
 ---
 

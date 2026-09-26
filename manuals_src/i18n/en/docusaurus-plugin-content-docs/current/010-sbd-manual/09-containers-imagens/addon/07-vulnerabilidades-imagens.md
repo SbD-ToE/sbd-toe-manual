@@ -6,15 +6,15 @@ tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/07-vulnerabilidades-imagens.md
-  source_sha256: 92530da58777fee8634baeadf542d18cd89a8f59c0cc49d9eb1af858d7300c27
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: cd50aa5e59549a66adacde38557f9b8ceda0d30caa6564fb4ea9a0901e388876
+  source_sha256: 600ee1864bd60f4c835c0617558117e2e079c2f24744ec0e72503510cc331aff
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: a6324f4631c69d45181f55fa64a2c8401c513806bc6434585104fd0f217b9b34
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
-  glossary_keys: [audit_trail, avaliacao, chapter_role, sbdtoe_sbd, traceability]
-  glossary_sha256: e774c8b4c2473f96e0490db7c9f5148dd799072fe5c9292fff0a2744d8f92df4
-  translated_at: 2026-09-26T09:58:17Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, avaliacao, chapter_role, papel_suporte, sbdtoe_sbd, traceability]
+  glossary_sha256: 4c87e784075c7bc06a815d03699a59f8b2d9d9b628548a28a995fb9c4771fbfa
+  translated_at: 2026-09-26T12:48:47Z
   reviewed_by: null
 ---
 
@@ -79,7 +79,7 @@ These tools **detect presence**, not exploitability or real impact.
 
 ## 🛠️ How to apply detection correctly {#️-como-aplicar-a-deteção-corretamente}
 
-1. **Generate the SBOM of the final image** (see `06-sbom-containers.md`);
+1. **Generate the SBOM of the final image** (see `06-inventario-sbom.md`);
 2. **Run an SCA scanner** on the real image;
 3. **Produce a technical report**, including:
    - CVE;
@@ -143,7 +143,7 @@ They must not be used as:
 | Document                         | Relation to vulnerabilities                 |
 |----------------------------------|----------------------------------------------|
 | `01-imagens-base.md`             | Minimisation reduces the CVE surface         |
-| `06-sbom-containers.md`          | Scanner uses the SBOM as its basis                   |
+| `06-inventario-sbom.md`          | Scanner uses the SBOM as its basis                   |
 | `03-assinatura-cadeia-trust.md` | Integrity of the analysed image              |
 | `09-riscos-processo-imagens.md` | Scanners as a signal, not a decision             |
 | `15-aplicacao-lifecycle.md`     | Integration into the SSDLC                          |

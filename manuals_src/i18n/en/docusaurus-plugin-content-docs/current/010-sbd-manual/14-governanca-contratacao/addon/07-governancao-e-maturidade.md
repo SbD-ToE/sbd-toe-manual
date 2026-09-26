@@ -7,15 +7,15 @@ tags: [maturidade, governanca, compliance, evolucao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/07-governancao-e-maturidade.md
-  source_sha256: 753ca6fe0d33a4038a241637b206019b8de0f27738c783eb6caea24bdf3c7356
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4d2f4e9135ddc8deca81a2026f214053def6cf06ef06e68daf3766d7a8303454
+  source_sha256: d9f7f0465ba4e71e922cb52fd98116b455b90d53668932fd9c68de470d7be8c9
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 6340f15a6914b6ab37b39e0d06356a4c0f96ebb991e6cda3a5d4c19a4132d5cb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, cycle_iteration, maturity, programme_line, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: 1ffc4e3f476d97f0bf3c1e33dc7fea9df561b97f76f463442c09871ac66b65d2
-  translated_at: 2026-09-26T12:00:16Z
+  translated_at: 2026-09-26T12:49:07Z
   reviewed_by: null
 ---
 
@@ -57,7 +57,7 @@ The evolution of the SbD-ToE model may be guided by:
 
 * Formal adoption of the governance model (`addon/01-modelo-governancao.md`);
 * Integration of reviews and exceptions into a quarterly cycle;
-* Generation of KPIs and dashboards (`addon/kpis-governanca.md`);
+* Generation of KPIs and dashboards (`kpis-governanca.md`);
 * Cross audits across applications, contracts and traceability.
 
 ---
@@ -74,6 +74,6 @@ The evolution of the SbD-ToE model may be guided by:
 
 * `achievable-maturity.md` of each chapter
 * `addon/01` to `addon/07` - components supporting maturity
-* `addon/kpis-governanca.md` - Governance KPIs
+* `kpis-governanca.md` - Governance KPIs
 
 ---

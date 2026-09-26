@@ -7,15 +7,15 @@ tags: [kpi, metricas, CNT, containers, imagens, kubernetes, admission-controller
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/11-kpis-metricas.md
-  source_sha256: 16fd63b3499e5358852beb9d08b1fc575e61361c573441c069e8fda2d3d54bcb
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 81c884a7bdc514d116ac43b5e8de479a2ef2033034ae5137e1199ace47f2a0d6
+  source_sha256: e1ae462dfdc909c770edcf2cc8dad38ab9d1c2f0e344de79a572125278965802
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 06943880f2631d057d2d68a9c294f610d7866a675a36caf362864313f3dc9624
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, provenance, risk_level, sbdtoe_sbd, transversal, verification_taxonomy]
   glossary_sha256: 53c2d7ec71d3519ed4cdaccfb337c5fb32e3463c7fb316edee86f1294efc4b5e
-  translated_at: 2026-09-26T09:58:48Z
+  translated_at: 2026-09-26T12:48:48Z
   reviewed_by: null
 ---
 
@@ -112,4 +112,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/00-catalogo-requisitos.md` | Requirements CNT-001..012 that underpin the indicators |
 | `addon/10-excecoes-containers.md` | Container exception process (CNT-K01, CNT-K04) |
 | `addon/07-vulnerabilidades-imagens.md` | Vulnerability management that feeds CNT-K01/K02 |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-03, T-05 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-03, T-05 |

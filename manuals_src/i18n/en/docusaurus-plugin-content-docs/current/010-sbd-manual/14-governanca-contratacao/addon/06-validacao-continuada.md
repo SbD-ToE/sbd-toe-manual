@@ -7,15 +7,15 @@ tags: [validacao, excecoes, auditoria, ciclo-continuo]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/06-validacao-continuada.md
-  source_sha256: 7b45d5f7718668baf214b9050c0ed4b2f74894c914f7cb7f9bd021380b1c985b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 195b09469f3fa87ade52c751a76c46e867c9049a3917fd9939f6fd5abbe6e97b
+  source_sha256: 2abb4a0ef643625caf257e655af4ec9a2beb62728c798fc8d89b4b474b1ac310
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 25b20c67636918bb1ec2e2c6ed4a251feb997e51cf30916a0ba5f66b81555965
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [cycle_iteration, lifecycle_phase, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: 0da2c8bc3c92bf62222625f5f05deb6d78e72225f5e0cee733c6eca7b1ab43e7
-  translated_at: 2026-09-26T12:00:15Z
+  translated_at: 2026-09-26T12:49:07Z
   reviewed_by: null
 ---
 
@@ -89,7 +89,7 @@ The continuous validation process may be automated or supported by tools that al
 
 * Integrate reviews with the release cycle or with internal oversight mechanisms;
 * Create alerts for expired or non-revalidated exceptions;
-* Use this process to feed the governance KPIs (see `addon/kpis-governanca.md`);
+* Use this process to feed the governance KPIs (see `kpis-governanca.md`);
 * Treat recurring validation as an integral part of the security lifecycle;
 * Use continuous validation as a mechanism for detecting implicit delegations of authority to processes or systems, ensuring their review or revocation when necessary.
 

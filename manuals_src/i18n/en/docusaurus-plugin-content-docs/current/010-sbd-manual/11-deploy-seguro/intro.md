@@ -7,15 +7,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/intro.md
-  source_sha256: 913cb6da685828998c2c92226834e78eafad0de1c50c39458f686b2f896a4a3f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a3b0e72d6c9b7eaf196312e67f5f8e985d1c722eedf86ed22c9defce6368038b
+  source_sha256: bea3884945e2421a8d84d92dd425ecb2160b1aee3919f6c17068e6e15cc9e598
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 0908a8c90d3e4c5fab1c064ae253fb68b6394dbe1c79885c9efcdc03776eb314
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
-  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, practitioner_manual, provenance, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 1e86a3d96cd70777c70e82076f4305fd0f32d26ca702667ffc8b8ae334e1145c
-  translated_at: 2026-09-26T11:00:56Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
+  glossary_sha256: d389c1c7650227a4fac059cbef962f32e9e99702dfacef72f0adf4fb6c2158b5
+  translated_at: 2026-09-26T12:48:54Z
   reviewed_by: null
 ---
 
@@ -63,7 +63,7 @@ These elements must be applied as a **coherent set of controls**: the robustness
 
 ---
 
-## � Automation and Governance in Deployment {#-automação-e-governação-no-deploy}
+## Automation and Governance in Deployment {#-automação-e-governação-no-deploy}
 
 Secure deployment combines **extensive automation** with **explicit governance**, distinguishing between:
 
@@ -137,7 +137,7 @@ Exceptions to automatic gates (e.g. non-applicable CVE, SAST false positive) fol
 
 ---
 
-## �🧪 Practical prescription {#-prescrição-prática}
+## 🧪 Practical prescription {#-prescrição-prática}
 
 What distinguishes mature organisations is not only *what* they do at *deployment*, but **how they operationalise the process as a repeatable mechanism of validation and risk containment**, with objective evidence.
 

@@ -7,15 +7,15 @@ tags: [exemplos, excecoes, onboarding, governance]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md
-  source_sha256: 1cc864d3fd9471b8525e78eba21d6d8115afe9d5b80dc8b24f04b9205034b6ad
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 0ffbe8008ca74fd3549ccfe57a0a011e95dec5f8c5cbaaff3e735c9f8340fb14
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 8f4513b9e98d97f088c37b5d7daa839317a7107a24cec2fd5839ea35ca109203
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [cycle_iteration, framework_source_corpus, requirement_runtime, risk_level, sbdtoe_sbd, validation_evaluation, verification_taxonomy]
   glossary_sha256: bd8a834d2b41e687e68562eadceb677f8d5e1151f64b9b4e66b5226bff24de7b
-  translated_at: 2026-09-26T12:00:14Z
+  translated_at: 2026-09-26T12:49:06Z
   reviewed_by: null
 ---
 

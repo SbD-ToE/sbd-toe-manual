@@ -2,20 +2,20 @@
 id: intro
 title: Training and Upskilling
 description: Strategies and practices to ensure that teams, profiles and stakeholders are prepared to apply Security by Design
-tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, ]
+tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM]
 sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/intro.md
-  source_sha256: 1a249a710fe66831d4f8b70eec77124fd12f9abe904ba5a4167876261d3bc13c
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8c0e13fe839372cac91f6eca036ad41be434c4df5d36d13a7a3ebafe7f000fb5
+  source_sha256: 605a041fe0326608e6bda87650c621660da9b5db66fa01fdda70afa6ec89ec12
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 374563a08bc9a3ed7d853b19ead5822c89ba56e3733b496c40f1892920f618f0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, maturity, practitioner_manual, programme_line, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: bb1601a52c4ddd27ee6b026c2a74f89efec9bdcc2f36bb5361c4dbb2081614d9
-  translated_at: 2026-09-26T11:44:30Z
+  translated_at: 2026-09-26T12:49:03Z
   reviewed_by: null
 ---
 

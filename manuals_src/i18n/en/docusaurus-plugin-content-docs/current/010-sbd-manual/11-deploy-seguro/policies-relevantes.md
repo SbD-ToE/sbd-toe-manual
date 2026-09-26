@@ -7,15 +7,15 @@ sidebar_position: 60
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/policies-relevantes.md
-  source_sha256: 37f2627f609f511be4700cb91808807880d9cc4e71123e0d203ae6205e238d80
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: cce4ef9a17d421a268ffc43582bce52e25a93fed36c72a83c42912fdfba373ee
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: b3aa5cf76ead49a69918c526e77b87edc8ecbfcf4df5a46a2204da7f45469a6d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, chapter_role, practitioner_manual, requirement_runtime, traceability, validation_evaluation]
   glossary_sha256: f4a70027520beefec026546c7156565a95521d22161e190dd349a027540a59e9
-  translated_at: 2026-09-26T11:00:56Z
+  translated_at: 2026-09-26T12:48:55Z
   reviewed_by: null
 ---
 

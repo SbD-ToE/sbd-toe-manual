@@ -7,15 +7,15 @@ tags: [kpi, metricas, RQS, requisitos, rastreabilidade, cobertura, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/16-kpis-metricas.md
-  source_sha256: 03af6b58e9639eadee6c3d24db60904a2957f9650b1c509bde6e07e0495cd629
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4d1d9314133d3296c0a14ce26b0ed1f2a2465a6c66cc8b895a7b7d6061ba165a
+  source_sha256: 2b08d8ee4c9c9d14557491f78378cef373e7e7d13b005d0625eef8ac3cb9ba9d
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: c493fd21de995892808a48e67e5a27922ac572f6e612846541477db369c66b98
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, gap_family, layer, mapping, maturity, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: 56b389efb6c662a9afc5acb3cf4e54a5390a6c47d0073df97ed569c7c649c7a4
-  translated_at: 2026-09-25T20:20:14Z
+  translated_at: 2026-09-26T12:48:41Z
   reviewed_by: null
 ---
 
@@ -110,4 +110,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/03-taxonomia-rastreabilidade.md` | Traceability model underpinning RQS-K03 |
 | `addon/07-validacao-requisitos.md` | Requirements validation process (RQS-K04/K05) |
 | `addon/08-gestao-excecoes.md` | Excepted requirements (RQS-K02, RQS-K06) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-06 |

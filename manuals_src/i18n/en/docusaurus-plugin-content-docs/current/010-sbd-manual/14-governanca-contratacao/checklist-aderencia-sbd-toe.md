@@ -7,15 +7,15 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: f360be6887d5e2ce1c12e8e1e6e68459fe77d387af884f5780ac05d6b9dd1956
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c2c27a888889814aa2e7bcdc2237e3412ddf2546ca679ad32857260c6674e8f1
+  source_sha256: ab7030c658f8017c8f4d0bcbf539ecb174cf97b77e866e7d52ed9c4a7859fc59
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 66a0bfc4a9bc19dc586acd0f750b56f4fe5931c5056bc4f5e9cb5c6a51181990
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, instrument, programme_line, provenance, requirement_runtime, risk_level, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: 869ac6db14832708406f00b0b42fd8ffeaf3ce2d2a91a2ca1b34a47a963c89e1
-  translated_at: 2026-09-26T12:00:24Z
+  translated_at: 2026-09-26T12:49:09Z
   reviewed_by: null
 ---
 
@@ -71,7 +71,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 1 - Classification and Risk Management {#1---classificação-e-gestão-de-risco}
 
-*Policies: classificacao-risco, aceitacao-risco, revisao-periodica-risco, gestao-excecoes*
+*Policies: `classificacao-risco`, `aceitacao-risco`, `revisao-periodica-risco`, `gestao-excecoes`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -87,7 +87,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 2 - Requirements, Threats and Architecture {#2---requisitos-ameaças-e-arquitectura}
 
-*Policies: requisitos-seguranca, threat-modeling, arquitetura-segura, rastreabilidade*
+*Policies: `requisitos-seguranca`, `threat-modeling`, `arquitetura-segura`, `rastreabilidade`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -107,7 +107,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 3 - Dependencies and SBOM {#3---dependências-e-sbom}
 
-*Policies: dependencias, sbom, excecoes-cve, atualizacao-automatica*
+*Policies: `dependencias`, `sbom`, `excecoes-cve`, `atualizacao-automatica`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -128,7 +128,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 4 - Secure Development {#4---desenvolvimento-seguro}
 
-*Policies: guidelines-desenvolvimento, revisao-codigo, uso-ferramentas-apoio*
+*Policies: `guidelines-desenvolvimento`, `revisao-codigo`, `uso-ferramentas-apoio`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -148,7 +148,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 5 - CI/CD and Pipeline {#5---cicd-e-pipeline}
 
-*Policies: cicd-seguro, gestao-segredos*
+*Policies: `cicd-seguro`, `gestao-segredos`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -168,7 +168,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 6 - IaC and Containers {#6---iac-e-containers}
 
-*Policies: iac-seguro, aprovacao-plan-iac, containers-seguros, golden-base-images*
+*Policies: `iac-seguro`, `aprovacao-plan-iac`, `containers-seguros`, `golden-base-images`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -189,7 +189,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 7 - Security Testing {#7---testes-de-segurança}
 
-*Policies: dast-fuzzing, estrategia-testes, release-seguro, aprovacao-release, pentesting*
+*Policies: `dast-fuzzing`, `estrategia-testes`, `release-seguro`, `aprovacao-release`, `pentesting`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -209,7 +209,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 8 - Deployment and Operations {#8---deploy-e-operações}
 
-*Policies: deploy-seguro, rollback, monitorizacao-pos-deploy, logging-estruturado, monitorizacao-seguranca, gestao-alertas, irp*
+*Policies: `deploy-seguro`, `rollback`, `monitorizacao-pos-deploy`, `logging-estruturado`, `monitorizacao-seguranca`, `gestao-alertas`, `irp`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|
@@ -233,7 +233,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 
 ## 9 - Governance and Training {#9---governação-e-formação}
 
-*Policies: contratacao-segura, rastreabilidade-organizacional, kpis-governacao, formacao-seguranca*
+*Policies: `contratacao-segura`, `rastreabilidade-organizacional`, `kpis-governacao`, `formacao-seguranca`*
 
 | # | Item | Level | Policy |
 |---|------|:-----:|---------|

@@ -8,15 +8,15 @@ sidebar_position: 20
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/canon/20-checklist-revisao.md
-  source_sha256: 2da5cdb23fdf62980264b55b025fc426b8a0b89f76a4acd3956dc6991634d29a
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: c7545fdc5649bd6f6b62e4794234dc0decc813f19e8857ae61bdb8e55df4249e
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: d12a0d9612cc077c38de50beda23b1d90830fc8c56ccfdce57e7aca37bcfb1b9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [capacitacao, chapter_role, cycle_iteration, lifecycle_phase, maturity, papel_suporte, practitioner_manual, programme_line, sbdtoe_sbd, trilho_formativo, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 51496f7c253da80c162da2b4a59dd72ab5262614f06026a43749516c43abbdf1
-  translated_at: 2026-09-26T11:44:28Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, maturity, papel_suporte, practitioner_manual, programme_line, sbdtoe_sbd, trilho_formativo, validation_evaluation, verification_taxonomy]
+  glossary_sha256: ae96d709315401954ead72b30d966b74e176afbb2c474abbef6c322e35ff9e80
+  translated_at: 2026-09-26T12:49:03Z
   reviewed_by: null
 ---
 

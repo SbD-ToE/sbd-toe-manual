@@ -7,15 +7,15 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/11-kpis-metricas.md
-  source_sha256: 18a48663ae5e099b0dcef47a6dd177a4d9c054fe77891ad81b0e0e706703de06
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e55553325e648091b76b4cef1478f10f7df2445a9d5768cca8e9d2ce8d89e4ad
+  source_sha256: 0d3b975c5e2948f6ae0d74c33e2681c0dab4cabd9b73c1f2d8f2b98b0f2c9c12
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 86d5c70e1f804cfbdd583199f5e840f98374bc36bc5f8ab3ddb8a94e3fca5e86
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, mapping, programme_line, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: 7fa1706bae89b4f04efce3a4ca990c40fa761784e8179dd89dbf7713bdd3de0c
-  translated_at: 2026-09-26T11:17:32Z
+  translated_at: 2026-09-26T12:48:58Z
   reviewed_by: null
 ---
 
@@ -131,4 +131,4 @@ These thresholds apply to security events of high/critical severity. For events 
 | `addon/00-catalogo-requisitos.md` | OPS-001..015 catalogue that frames the operational indicators |
 | `addon/07-metricas-indicadores.md` | Operational synthesis of MTTD/MTTR for the teams' day-to-day use |
 | `addon/10-excecoes-operacoes.md` | Exceptions to alerts and retention (OPS-K02, OPS-K08) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimension T-03 (resolution speed) |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimension T-03 (resolution speed) |

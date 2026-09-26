@@ -7,15 +7,15 @@ tags: [kpi, metricas, TST, testes, sast, dast, pentest, findings, regressao, L1,
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/addon/15-kpis-metricas.md
-  source_sha256: c0a2aec9e2404905d8973ae7a4300b4d6a4cb31d7a29922ebb33d150277e968e
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 17766be14311bf04eee9db35b6f3545bc488981a31ab4eabdb83211ceb6e7b2a
+  source_sha256: e5d8034c3fcae11cd566d10366756f249c7eecb53b14812c91f5c69b64ff6e1a
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: ab7ba1197d2b6a8f25c9256a0b403003574ab8eed71bb1b0afc3450f1325929f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, mapping, maturity, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: 5d766fae0a1b914d87a96427ef9b3cbb3d3e0f0fc68e07238d6ee81029a26210
-  translated_at: 2026-09-26T10:31:34Z
+  translated_at: 2026-09-26T12:48:50Z
   reviewed_by: null
 ---
 
@@ -118,4 +118,4 @@ Findings with an active formal exception are excluded from the TST-K03 calculati
 | `addon/00-catalogo-requisitos.md` | Requirements TST-001..010 that underpin the indicators |
 | `addon/08-gestao-findings.md` | Centralisation (TST-K05) and triage (TST-K07) process |
 | `addon/05-validacao-regressao.md` | Regression detection methodology (TST-K04) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-03 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-03 |

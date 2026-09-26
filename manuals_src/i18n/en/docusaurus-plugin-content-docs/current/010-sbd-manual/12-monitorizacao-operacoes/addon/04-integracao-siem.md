@@ -7,15 +7,15 @@ tags: [siem, integração, parsing, dashboards, correlação]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/04-integracao-siem.md
-  source_sha256: 46836b92d49e69a7f6f79d6b4a61fa1853272d247d09af7c7ad7732f490d4156
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 9e0507859faa92d892dd29d44855588608060271759c26358e6c54f2d0138824
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: f0db58fa6464c9c48242ba0cb6575dca92805e14aaf5bc0b23f0b304f0365980
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, layer, requirement_runtime, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: 8fe48e93275c859644dcd8ad8d46edf688da39d7ff27a3aa0689c223df5b0879
-  translated_at: 2026-09-26T11:17:27Z
+  translated_at: 2026-09-26T12:48:56Z
   reviewed_by: null
 ---
 

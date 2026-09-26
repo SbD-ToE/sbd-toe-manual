@@ -7,15 +7,15 @@ tags: [correlação, anomalias, eventos, deteção, multi-sistema]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/06-correlacao-anomalias.md
-  source_sha256: d34789fd43b0efbb7ca7868aff79aadf6cfc8f8dcf65d81e6d323d6b5b9ff1b1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 9230a89fccf498052abbe471a8c57e749c90da1bc7cdccf389d278ae95adc1cc
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: 0ca24a1378f18bd41eaa84c785ca24871f690328b05ebcfdf18b91ce2774de03
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [atomic_composite, framework_source_corpus, threat]
   glossary_sha256: 0917066591d22dea423ceca2d7ba774c31433bed2344f53f6c816c6a209b8c5b
-  translated_at: 2026-09-26T11:17:29Z
+  translated_at: 2026-09-26T12:48:56Z
   reviewed_by: null
 ---
 

@@ -7,15 +7,15 @@ tags: [kpi, metricas, DPL, deploy, release, break-glass, rollback, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/addon/10-kpis-metricas.md
-  source_sha256: c45039608f1617fb6c2289a13d0819928d215887177d4c525d6884ebe649596d
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: fb86e8887f3b0ec812ebd5660ab07db0af5caead302c584b4c401dff3a715e24
+  source_sha256: 8cfedee8c11560809165a8db9016cdcced83234e3485bf795dc67dcdfb5ed53e
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: c95ee89fc0a443e1120874fdbce0d49cbbfc34c1901f499e535b2bdb0a1f5235
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, avaliacao, discipline, framework_source_corpus, mapping, risk_level, sbdtoe_sbd, traceability, transversal, verification_taxonomy]
   glossary_sha256: 49d24a87c78aab8aadc094bde8dedd2f8fa0ad044b777e1c0b9cbd64e682e2ad
-  translated_at: 2026-09-26T11:00:52Z
+  translated_at: 2026-09-26T12:48:53Z
   reviewed_by: null
 ---
 
@@ -112,4 +112,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/00-catalogo-requisitos.md` | Requirements DPL-001..009 that underpin the indicators |
 | `addon/09-excecoes-deploy.md` | Break-glass process and post-facto approval (DPL-K02/K03/K07) |
 | `addon/04-validacoes-pre-deploy.md` | Pre-deployment security checklist (DPL-K01) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-02 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-02 |

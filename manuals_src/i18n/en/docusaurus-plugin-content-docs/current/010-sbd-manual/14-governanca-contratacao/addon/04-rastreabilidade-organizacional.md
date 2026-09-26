@@ -7,15 +7,15 @@ tags: [rastreabilidade, evidencias, compliance, auditoria]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/04-rastreabilidade-organizacional.md
-  source_sha256: ce1c6d3e992e255367bce410e8d3977e15f6ba5c9e9d2f8ce60f67a8de3450a2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 34d6b3d99675464915e4891577182c50166a7c89cf785cb039d1de3781b9d2b4
+  source_sha256: 906bb9b77dc039b034961577dd3fb3405ecd55a84d4411201f4287c7713a09b0
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 709dd4a80cdffa8b5adbafa9d56c9592522f355794cc5d426477e07cfb008480
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, avaliacao, chapter_role, framework_source_corpus, maturity, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: c181321ea0ec3ba2bc5decb138318f5e62a6b1bec425367d0c8504dd0254004b
-  translated_at: 2026-09-26T12:00:14Z
+  translated_at: 2026-09-26T12:49:05Z
   reviewed_by: null
 ---
 
@@ -100,7 +100,7 @@ flowchart LR
 
 * This table must be used as the **basis for technical governance** and executive decision;
 * It must integrate the data coming from the **per-chapter checklists SbD-ToE**;
-* It may be used to **build maturity and visibility KPIs** (see `addon/kpis-governanca.md`).
+* It may be used to **build maturity and visibility KPIs** (see `kpis-governanca.md`).
 
 ---
 
@@ -111,6 +111,6 @@ flowchart LR
 * `addon/01-modelo-governancao.md` - Governance and exceptions
 * `addon/02-clausulas-contratuais.md` - Contractual clauses
 * `addon/03-modelo-validacao-fornecedores.md` - Supplier validation
-* `addon/kpis-governanca.md` - Governance KPIs
+* `kpis-governanca.md` - Governance KPIs
 
 ---

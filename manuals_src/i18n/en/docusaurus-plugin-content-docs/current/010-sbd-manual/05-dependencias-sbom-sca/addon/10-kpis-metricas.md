@@ -7,15 +7,15 @@ tags: [kpi, metricas, DEP, sbom, sca, dependencias, cve, supply-chain, L1, L2, L
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/10-kpis-metricas.md
-  source_sha256: 5f08ebe61e1c90d51d6df1af22a242add9abf5b800ffc333f12e51f2fc6837b5
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c577d5c0e8abc9e806790e580c78b269b3c270a823f9bc5b1c35bc699341e3bb
+  source_sha256: 9a1494a5907537dee035a3718973f523c947df4885856033103360e810715d43
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 2fbe2954b35a6504e086f1baa00c40145578ad9e23303a082864db43712d11e5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, mapping, practitioner_manual, risk_level, sbdtoe_sbd, snyk_license, traceability, transversal]
   glossary_sha256: 20ba8acde860b8d1572a6ab7662ac94fa868798e283c1c9d4717832a59ec58af
-  translated_at: 2026-09-26T08:45:27Z
+  translated_at: 2026-09-26T12:48:43Z
   reviewed_by: null
 ---
 
@@ -120,4 +120,4 @@ These thresholds are a baseline reference. Sectoral regulation (DORA, NIS2) may 
 | `addon/00-catalogo-requisitos.md` | Requirements DEP-001..010 that underpin the indicators |
 | `addon/08-rastreabilidade-vulnerabilidades.md` | CVE → application → resolution traceability model |
 | `addon/09-excecoes-e-aceitacao-risco.md` | CVEs without resolution within SLA require a formal exception |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-03, T-05 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-03, T-05 |

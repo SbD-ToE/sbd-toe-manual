@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md
-  source_sha256: c48150a94c3f846210aeb11be34d4ef97ac4021bbf8d882ac93de2bf0e42ab28
-  source_commit: 28f13ce4d7e0acbbdc6a21d6cf195544784b0b07
+  source_sha256: 16f4c0326acc73e438d193bf66c16f248b7d7639bcd6d893f3e10f66e0acf809
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
   target_sha256: a654d24e54f013dd354548f6bdd8c8d583af06dd96a2f8cf053d9abbc1d95531
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, papel_suporte, practitioner_manual, programme_line, risk_level, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 23e28f455139e1618282921fa33c638e742cc23eee093d75aaa58c70ac47db8b
-  translated_at: 2026-09-26T11:44:27Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, papel_suporte, practitioner_manual, programme_line, risk_level, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 7ee8c94398c5d4969cb0a6b905467ad31eab8a74a84cabf0332528f36f053d59
+  translated_at: 2026-09-26T12:49:02Z
   reviewed_by: null
 ---
 

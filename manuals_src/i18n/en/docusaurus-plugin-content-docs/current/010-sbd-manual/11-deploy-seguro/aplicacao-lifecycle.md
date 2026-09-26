@@ -7,15 +7,15 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
-  source_sha256: 3de9b13ab4de20e5faf60c7c2fb09f9381a22482b5af176d227a723564368ee1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 05c54ba5bdb8d6a096cd2ddede51306e7bc80aa0b0e44f9e40ad0effbb06d9cf
+  source_sha256: 63ab1c3f24333c1f13a93301accb86dc3073c7db8f97cf03988d6451d3fd3a03
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 6820332945d3c40b88323cb3b2923a13e5d5c0b5402d376a2a138a7472aac757
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, practitioner_manual, provenance, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: c38ae5d3295744c60898ca52cb6a2aee390f9b764df56c5b54da19f368c19a0d
-  translated_at: 2026-09-26T11:00:53Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: f11017a1a43f703219cdfdf7f762e3b35b92067d12a8948c15e3ca5fb0742aa9
+  translated_at: 2026-09-26T12:48:53Z
   reviewed_by: null
 ---
 
@@ -917,4 +917,20 @@ Proportionality makes it possible to adapt rigour without compromising security:
 | Approval *gates* | Warning | Blocking on High/Critical | Blocking on Medium+ |
 | *Rollback* | Manual | Automated | Automated + tested |
 | Traceability | Basic | Complete | Complete + audit |
-| Monitoring | Basic | Critical
+| Monitoring | Basic | Critical | Complete + automatic response |
+| Feature flags and toggles | Optional | Recommended | Mandatory |
+| Secrets management (OIDC/Workload Identity) | Recommended | Mandatory | Mandatory + automatic rotation |
+| Semantic versioning and changelog | Basic | Complete + security | Complete + security + compatibility |
+| Progressive deployment (Canary/Blue-Green) | Recommended (manual) | Automated with metrics | Automated + threshold-triggered rollback |
+| Pre-deployment technical validations | SAST + Warning | SAST + DAST + blocking on High/Critical | SAST + DAST + blocking on Medium+ |
+| Rollback by type (binary, config, DB, infra) | Documented manual | Automated (binary + config) | Automated for all types + tested |
+
+---
+
+## 🏁 Final recommendations {#-recomendações-finais}
+
+- **Never promote directly** to production without staging.  
+- **Automate deployments, trace and roll back** whenever necessary.  
+- **Regularly tested rollback** ensures resilience.  
+- **Post-deployment monitoring** must be integrated with incident response (Ch. 12).  
+- **Applying L1–L3 proportionality** ensures a balance between cost and risk.  

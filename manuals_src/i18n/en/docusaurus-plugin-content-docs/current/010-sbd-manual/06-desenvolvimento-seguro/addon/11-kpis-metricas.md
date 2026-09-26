@@ -7,15 +7,15 @@ tags: [kpi, metricas, DEV, desenvolvimento, sast, secrets, code-review, L1, L2, 
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/addon/11-kpis-metricas.md
-  source_sha256: 320a06ac91571dbfba013cb8c7bab6174110eb3583ecca5283b96d6639fd9d21
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4246c2e1b7ab5c08148cd0df9f856acee7c6d99782f6d7f6e4f0124269867f3b
+  source_sha256: b469f2cc361b1c0ce471333236a1b0d077f2982a6456a5503936fb85dc349eba
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 4e124fab717cafb0108fd5200a1176545096a2f7505d5cfad4b67af3f4e3d684
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, mapping, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
   glossary_sha256: 426672c4ed0c15cce9b8b51bccea14c746c80f7297afff327f01c8ceb65d1b9e
-  translated_at: 2026-09-26T08:57:14Z
+  translated_at: 2026-09-26T12:48:43Z
   reviewed_by: null
 ---
 
@@ -108,4 +108,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/00-catalogo-requisitos.md` | Requirements DEV-001..009 that underpin the indicators |
 | `addon/05-excecoes-e-justificacoes.md` | SAST exception process (DEV-K04) |
 | Ch. 10 `addon/08-gestao-findings.md` | Centralisation and triage of the findings that feed DEV-K01/K05 |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimensions T-01, T-02, T-03 |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimensions T-01, T-02, T-03 |

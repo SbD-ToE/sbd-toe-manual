@@ -6,15 +6,15 @@ tags: [containers, assinatura, trust, notary, cosign, rekor, supply-chain]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/03-assinatura-cadeia-trust.md
-  source_sha256: a8219c8bafc880a6a96a11c4be41c68a4a21c33f2083f44ae9c211532939de6a
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: cb7a0d7bdc575db78a3e38f384211b5e141da03ca8881c6cc51886fb2dd007dd
+  source_sha256: f895b14dc3558ece17085b6a4b43f4b039ef247b91be4887484b1c3bed7118ab
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 9433381ad71008ceee2afe0aaaee890ac456daf4514537b99c6f484c174b5ab4
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, avaliacao, framework_source_corpus, practitioner_manual, provenance, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: 5f4946fde7e0d1dc1d2022a032b6aea751e48f5d9e54ad9c1313303a7f55d500
-  translated_at: 2026-09-26T09:58:15Z
+  translated_at: 2026-09-26T12:48:47Z
   reviewed_by: null
 ---
 
@@ -137,7 +137,7 @@ Traceability must make it possible to reconstruct the complete path of the image
 |----------------------------------|------------------------------------------------|
 | `01-imagens-base.md`             | Signing after approval of the base image       |
 | `05-policies-runtime-opa.md`    | Technical enforcement of verification             |
-| `06-sbom-containers.md`         | Link between composition and integrity         |
+| `06-inventario-sbom.md`         | Link between composition and integrity         |
 | `09-riscos-processo-imagens.md` | Separation between evidence and decision            |
 | `25-rastreabilidade.md`         | Auditable demonstration of integrity          |
 

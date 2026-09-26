@@ -6,15 +6,15 @@ tags: [containers, imagens base, hardening, runtime, supply chain]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/01-imagens-base.md
-  source_sha256: 220e636ba57eb7a75d05b9604cf043253dbe3afa1830fbe6ce81a8f3fa843b10
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: b04f538fc00a4e4ba06326f0d966300b2d5fe146ae8516e1df18416292554e58
+  source_sha256: 6d350ffb15b4385f19446df0b934502964b313c982870dff695054d8d11cb70b
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 9594aa68c779f69189fc3ec44452a845f063739b9e4bc36e1aaf7e94f080552b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [cycle_iteration, discipline, framework_source_corpus, harbor_registry, lifecycle_phase, provenance, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: 2278a334e0ff78288ba206e23a4b25ca4cd969ba6056b9e5498cbcf565ae6239
-  translated_at: 2026-09-26T09:58:14Z
+  translated_at: 2026-09-26T12:48:45Z
   reviewed_by: null
 ---
 
@@ -131,7 +131,7 @@ Automatic reuse of images **does not exempt** this revalidation.
 |----------------------------------|-----------------------------------------------------------|
 | `03-assinatura-cadeia-trust.md`  | Signing and integrity verification                   |
 | `05-policies-runtime-opa.md`    | Technical enforcement of approved images                  |
-| `06-sbom-containers.md`         | Inventory and composition of images                       |
+| `06-inventario-sbom.md`         | Inventory and composition of images                       |
 | `07-vulnerabilidades-imagens.md`| Continuous vulnerability analysis                      |
 | `09-riscos-processo-imagens.md` | Separation between automatic validation and human decision     |
 

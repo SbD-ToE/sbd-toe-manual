@@ -7,15 +7,15 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/addon/01-sast.md
-  source_sha256: 844e5838e2033d03f3115e53a67718236bed2ddd4dd4e4ed081dcbba1e1323cf
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: b4614bc64e400a836aa1e83d532dfa534ea2ab49feefb66b9d08fffaf7999acb
+  source_sha256: 30f27f67b6c3971f37a7197f05627dc519b66598dd8c227f2b6206f230b3333f
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 8a39ef1b682b3b367cc0db070174cfcfec57ae55db7cb68e3649c10030b3d022
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, cycle_iteration, framework_source_corpus, traceability, validation_evaluation]
   glossary_sha256: 6b8cdfef9b4ed0cbf3bc040622d75708c85c90ecc2cf94fb95dbf43082f9ab28
-  translated_at: 2026-09-26T10:31:25Z
+  translated_at: 2026-09-26T12:48:49Z
   reviewed_by: null
 ---
 
@@ -78,7 +78,7 @@ It can be performed by:
 |--------------------------------|-----------------------------------------------|
 | Chapter 02 - Requirements       | Validates `EX-REQ-203`, `EX-REQ-205`, `EX-REQ-303`        |
 | Chapter 06 - Development  | Reinforces secure coding practices             |
-| Chapter 07 - Secure CI/CD     | See `07-integracao-validacoes.md`             |
+| Chapter 07 - Secure CI/CD     | See `07-validacoes-seguranca-integradas.md`             |
 | `06-cobertura-e-priorizacao.md`| Defines analysis targets and priorities       |
 | `08-gestao-findings.md`        | Ensures effective handling of the results      |
 | `09-feedback-equipa.md`        | Involvement of the teams in validation         |

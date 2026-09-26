@@ -7,15 +7,15 @@ tags: [kpi, metricas, TRN, formacao, onboarding, champions, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/11-kpis-metricas.md
-  source_sha256: 4a880f9a3ad0cee7a9c639a19afcd542e1d5dc3bc366e778bd18cb9e2aca8878
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e230bbff95d6c82761184aba900087d0c25794c889e0bc9fcc84f66e0b215556
+  source_sha256: 0201793f053a19aa7c8ddd21094582b56fe5a1866638e258c4115ca1bd026b04
+  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
+  target_sha256: 1bf61338d077e6e6766e0f19bdc120e7cb077149b273ad8f8b442723e3991f06
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [avaliacao, framework_source_corpus, gap_family, mapping, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: efa77c2f6ab152a6140bc8580eac8be81a5f96636ae8605a7e615cb8649fdc61
-  translated_at: 2026-09-26T11:44:22Z
+  translated_at: 2026-09-26T12:49:00Z
   reviewed_by: null
 ---
 
@@ -118,4 +118,4 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | `addon/03-programa-champions.md` | Champion activity criteria (TRN-K07) |
 | `addon/90-indicadores-metricas.md` | Operational synthesis of metrics for the teams' day-to-day use |
 | Ch. 14 `addon/03-modelo-validacao-fornecedores.md` | Supplier training requirements (TRN-K03) |
-| Ch. 14 `addon/kpis-governanca.md` | Cross-cutting dimension T-04 (ownership and training) |
+| Ch. 14 `kpis-governanca.md` | Cross-cutting dimension T-04 (ownership and training) |

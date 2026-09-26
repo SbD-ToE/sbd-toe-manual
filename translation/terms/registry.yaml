@@ -5893,3 +5893,26 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 13: fixado para desambiguar «papel» (paper) de «papel» (role) no lint;
     espécie 3.'
+- key: slug_threat_modeling
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: threat-modeling
+  en_variants: []
+  pt: threat-modeling
+  pt_variants: []
+  ontology_id: null
+  sense: 'Slug (id de política/página: policy-threat-modeling, /threat-modeling/) citado em texto simples
+    — identificador, não prosa. A prática e o nome do cap. 03 levam «threat modelling» / «Threat Modelling».'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 14 (checklist-aderencia l.77): regra dos nomes próprios externos — slug
+    verbatim; sem colisão com o nome do capítulo (esse tem espaço, não hífen).'

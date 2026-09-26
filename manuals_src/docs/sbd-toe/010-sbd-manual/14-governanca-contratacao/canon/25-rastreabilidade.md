@@ -21,7 +21,7 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **87 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **98 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -59,7 +59,18 @@ Total: **87 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `14-governanca-contratacao:trilho-de-formacao-obrigatoria-pre-acesso-contractors` | Trilho de Formação Obrigatória pré-Acesso (Contractors) | normative | explicit | deterministic |
 | Practice | `14-governanca-contratacao:validacao-continua-de-fornecedores` | Validação contínua de fornecedores | normative | explicit | deterministic |
 | Practice | `14-governanca-contratacao:validacao-periodica-de-aplicacoes-ciclo-de-conformidade` | Validação periódica de aplicações (ciclo de conformidade) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-222` | Adoção de fornecedor sem avaliação | normative | heuristic | bounded |
+| Threat | `MT-223` | Falta de cláusulas contratuais | normative | heuristic | bounded |
+| Threat | `MT-224` | Uso de serviços sem rastreio | normative | heuristic | bounded |
+| Threat | `MT-225` | Iniciativas paralelas sem coordenação | normative | heuristic | bounded |
+| Threat | `MT-226` | Falta de continuidade organizacional | normative | heuristic | bounded |
+| Threat | `MT-227` | Risco de decisões legadas sem controlo | normative | heuristic | bounded |
+| Threat | `MT-228` | Decisões não revistas com mudança de contexto | normative | heuristic | bounded |
+| Threat | `MT-229` | Falta de governança em decisões históricas | normative | heuristic | bounded |
+| Threat | `MT-230` | Falta de conhecimento sobre o estado de segurança | normative | heuristic | bounded |
+| Threat | `MT-231` | Estratégia de segurança desarticulada | normative | heuristic | bounded |
+| Threat | `MT-232` | Segurança definida mas não aplicada | normative | heuristic | bounded |
+| Threat | `MT-233` | Políticas de segurança não institucionalizadas | normative | heuristic | bounded |
 | Concept | `sem:concept:ciclo-sbd-toe` | ciclo SbD-ToE | semantic | scored | bounded |
 | Concept | `sem:concept:clausulas-contratuais-de-sbd-toe` | cláusulas contratuais de SbD-ToE | semantic | scored | bounded |
 | Concept | `sem:concept:clausulas-contratuais-de-seguranca` | cláusulas contratuais de segurança | semantic | scored | bounded |

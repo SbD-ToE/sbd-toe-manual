@@ -16,7 +16,7 @@ Cobertura V1 entity-level: **56 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **83 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **100 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -50,7 +50,24 @@ Total: **83 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `04-arquitetura-segura:sincronizacao-threat-modeling-arquitetura` | Sincronização Threat Modeling ↔ Arquitetura | normative | explicit | deterministic |
 | Practice | `04-arquitetura-segura:triggers-de-arquitetura-viva-e-disciplina-de-revisao` | Triggers de “arquitetura viva” e disciplina de revisão | normative | explicit | deterministic |
 | Practice | `04-arquitetura-segura:validacao-arquitetural-automatizavel-no-ci-cd-quando-aplicavel` | Validação arquitetural automatizável no CI/CD (quando aplicável) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-055` | Interfaces expostas sem isolamento | normative | heuristic | bounded |
+| Threat | `MT-056` | Mistura de dados e controlo na mesma zona | normative | heuristic | bounded |
+| Threat | `MT-057` | Acesso lateral não controlado entre módulos | normative | heuristic | bounded |
+| Threat | `MT-058` | Ausência de isolamento entre utilizadores | normative | heuristic | bounded |
+| Threat | `MT-059` | Arquitetura inexistente ou desatualizada | normative | heuristic | bounded |
+| Threat | `MT-060` | Confusão sobre localização de controlos | normative | heuristic | bounded |
+| Threat | `MT-061` | Ambiguidade sobre fronteiras e zonas | normative | heuristic | bounded |
+| Threat | `MT-062` | Arquitetura não revê mecanismos de fallback | normative | heuristic | bounded |
+| Threat | `MT-063` | Arquitetura nunca revista | normative | heuristic | bounded |
+| Threat | `MT-064` | Alterações estruturais sem revalidação | normative | heuristic | bounded |
+| Threat | `MT-065` | Design informal ou ad hoc | normative | heuristic | bounded |
+| Threat | `MT-066` | Exceções de arquitetura sem rasto | normative | heuristic | bounded |
+| Threat | `MT-067` | Requisitos de arquitetura não definidos | normative | heuristic | bounded |
+| Threat | `MT-068` | Impossibilidade de mapear decisões a controlos | normative | heuristic | bounded |
+| Threat | `MT-069` | Diagrama não reflete controlos implementados | normative | heuristic | bounded |
+| Threat | `MT-070` | Aplicações L1 tratadas como críticas | normative | heuristic | bounded |
+| Threat | `MT-071` | Sobredimensionamento de segurança da arquitetura | normative | heuristic | bounded |
+| Threat | `MT-072` | Ambientes de execução não refletidos no design | normative | heuristic | bounded |
 | Concept | `sem:concept:confianca` | confiança | semantic | scored | bounded |
 | Concept | `sem:concept:controlos-de-seguranca` | Controlos de segurança | semantic | scored | bounded |
 | Concept | `sem:concept:controlos-interzonais` | controlos interzonais | semantic | scored | bounded |

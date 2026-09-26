@@ -21,7 +21,7 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **101 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **121 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -55,7 +55,27 @@ Total: **101 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe
 | Practice | `07-cicd-seguro:separacao-formal-entre-sinal-automatico-e-decisao-de-promocao` | Separação formal entre sinal automático e decisão de promoção | normative | explicit | deterministic |
 | Practice | `07-cicd-seguro:testes-de-seguranca-dinamicos-dast` | Testes de segurança dinâmicos (DAST) | normative | explicit | deterministic |
 | Practice | `07-cicd-seguro:validacao-de-integridade-de-imagens-base` | Validação de integridade de imagens base | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-111` | Execução de código não autorizado em pipeline | normative | heuristic | bounded |
+| Threat | `MT-112` | Comprometimento do ambiente de build | normative | heuristic | bounded |
+| Threat | `MT-113` | Elevação de privilégios no pipeline | normative | heuristic | bounded |
+| Threat | `MT-114` | Push não autorizado para branches protegidas | normative | heuristic | bounded |
+| Threat | `MT-115` | Execução de código não auditado | normative | heuristic | bounded |
+| Threat | `MT-116` | Substituição silenciosa de código legítimo | normative | heuristic | bounded |
+| Threat | `MT-117` | Build forjado fora da pipeline | normative | heuristic | bounded |
+| Threat | `MT-118` | Injeção de lógica dinâmica em pipeline | normative | heuristic | bounded |
+| Threat | `MT-119` | Uso de componentes externos inseguros | normative | heuristic | bounded |
+| Threat | `MT-120` | Vazamento de segredos via logs | normative | heuristic | bounded |
+| Threat | `MT-121` | Segredos hardcoded | normative | heuristic | bounded |
+| Threat | `MT-122` | Reutilização de segredos | normative | heuristic | bounded |
+| Threat | `MT-123` | Ausência de gates de segurança | normative | heuristic | bounded |
+| Threat | `MT-124` | Validações não executadas | normative | heuristic | bounded |
+| Threat | `MT-125` | Falta de rastreabilidade | normative | heuristic | bounded |
+| Threat | `MT-126` | Bypass de controlos sem rasto | normative | heuristic | bounded |
+| Threat | `MT-127` | Alterações críticas sem visibilidade | normative | heuristic | bounded |
+| Threat | `MT-128` | Promoções sem responsável humano | normative | heuristic | bounded |
+| Threat | `MT-129` | Evidência plausível sem execução | normative | heuristic | bounded |
+| Threat | `MT-130` | Não-determinismo do pipeline | normative | heuristic | bounded |
+| Threat | `MT-131` | Exfiltração de contexto sensível | normative | heuristic | bounded |
 | Concept | `sem:concept:ambientes-de-execucao` | Ambientes de execução | semantic | scored | bounded |
 | Concept | `sem:concept:appsec` | AppSec | semantic | scored | bounded |
 | Concept | `sem:concept:artefact-protection` | Artefact Protection | semantic | scored | bounded |
@@ -87,7 +107,7 @@ Total: **101 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe
 | Mechanism | `sem:mechanism:configuracao-de-oidc-e-ttl-curto-para-segredos` | Configuração de OIDC e TTL curto para segredos | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:controlo-de-logging-e-debug-com-ativacao-temporaria-e-auditavel` | Controlo de logging e debug com ativação temporária e auditável | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:gestao-de-segredos` | Gestão de segredos | semantic | scored | bounded |
-| Mechanism | `sem:mechanism:integracao-de-ferramentas-como-semgrep-trivy-cosign-scorecard-e-scanners-de-iac-containers` | Integração de ferramentas como semgrep, trivy, cosign, scorecard e scanners de I | semantic | scored | bounded |
+| Mechanism | `sem:mechanism:integracao-de-ferramentas-como-semgrep-trivy-cosign-scorecard-e-scanners-de-iac-containers` | Integração de ferramentas como semgrep, trivy, cosign, scorecard e scanners de IaC/containers | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:integracao-de-scanners-servicos-repositorios-registries` | Integração de scanners, serviços, repositórios, registries | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:logs-mascarados` | logs mascarados | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:oidc` | OIDC | semantic | scored | bounded |

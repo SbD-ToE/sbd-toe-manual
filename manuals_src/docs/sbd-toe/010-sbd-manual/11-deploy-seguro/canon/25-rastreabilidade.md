@@ -16,7 +16,7 @@ Cobertura V1 entity-level: **27 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **58 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -49,7 +49,21 @@ Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `11-deploy-seguro:validacao-humana-obrigatoria-apos-deploy-automatizado` | Validação humana obrigatória após deploy automatizado | normative | explicit | deterministic |
 | Practice | `11-deploy-seguro:validacoes-tecnicas-pre-deploy-com-gates-condicionais` | Validações técnicas pré-deploy com *gates* condicionais | normative | explicit | deterministic |
 | Practice | `11-deploy-seguro:versionamento-semantico-e-changelog-tecnico` | Versionamento semântico e *changelog* técnico | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-182` | Código em produção sem validação | normative | heuristic | bounded |
+| Threat | `MT-183` | Ativação funcional sem controlo | normative | heuristic | bounded |
+| Threat | `MT-184` | Promoção manual fora do CI/CD | normative | heuristic | bounded |
+| Threat | `MT-185` | Deploy falhado sem rollback | normative | heuristic | bounded |
+| Threat | `MT-186` | Feature irreversível | normative | heuristic | bounded |
+| Threat | `MT-187` | Falha sem reação | normative | heuristic | bounded |
+| Threat | `MT-188` | Release conjunta sem segmentação | normative | heuristic | bounded |
+| Threat | `MT-189` | Feature exposta a todos os utilizadores | normative | heuristic | bounded |
+| Threat | `MT-190` | Falta de validação operacional | normative | heuristic | bounded |
+| Threat | `MT-191` | Falhas pós-deploy não detetadas | normative | heuristic | bounded |
+| Threat | `MT-192` | Reação tardia a problemas críticos | normative | heuristic | bounded |
+| Threat | `MT-193` | Eventos críticos ignorados | normative | heuristic | bounded |
+| Threat | `MT-194` | Toggle ativado inadvertidamente | normative | heuristic | bounded |
+| Threat | `MT-195` | Release sem segmentação geográfica ou lógica | normative | heuristic | bounded |
+| Threat | `MT-196` | Execução de função crítica não validada | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

@@ -16,7 +16,7 @@ Cobertura V1 entity-level: **37 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **42 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **59 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -44,7 +44,24 @@ Total: **42 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `06-desenvolvimento-seguro:uso-validado-de-genia` | Uso Validado de GenIA | normative | explicit | deterministic |
 | Practice | `06-desenvolvimento-seguro:validacao-de-padroes-perigosos-e-anti-patterns` | Validação de Padrões Perigosos e Anti-patterns | normative | explicit | deterministic |
 | Practice | `06-desenvolvimento-seguro:validacoes-locais-obrigatorias-pre-commit` | Validações Locais Obrigatórias (Pre-commit) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-093` | Inclusão de padrões inseguros por hábito | normative | heuristic | bounded |
+| Threat | `MT-094` | Uso de funções descontinuadas ou perigosas | normative | heuristic | bounded |
+| Threat | `MT-095` | Injeção de código sem escape adequado | normative | heuristic | bounded |
+| Threat | `MT-096` | Código inseguro sem deteção | normative | heuristic | bounded |
+| Threat | `MT-097` | Ausência de rastreabilidade entre problemas e decisões | normative | heuristic | bounded |
+| Threat | `MT-098` | Validação apenas reativa (ex: testes QA) | normative | heuristic | bounded |
+| Threat | `MT-099` | Segurança removida por “incompatibilidade” | normative | heuristic | bounded |
+| Threat | `MT-100` | Exceções não revistas ou revalidadas | normative | heuristic | bounded |
+| Threat | `MT-101` | Desvios não rastreados entre guideline e prática | normative | heuristic | bounded |
+| Threat | `MT-102` | Geração de código inseguro via IA | normative | heuristic | bounded |
+| Threat | `MT-103` | Inclusão de vulnerabilidades conhecidas | normative | heuristic | bounded |
+| Threat | `MT-104` | Falta de accountability sobre código gerado | normative | heuristic | bounded |
+| Threat | `MT-105` | Inclusão de bibliotecas descontinuadas | normative | heuristic | bounded |
+| Threat | `MT-106` | Falta de justificação para uso de dependência insegura | normative | heuristic | bounded |
+| Threat | `MT-107` | Componente vulnerável mantido no build final | normative | heuristic | bounded |
+| Threat | `MT-108` | Inconsistência entre equipas e projetos | normative | heuristic | bounded |
+| Threat | `MT-109` | Inexistência de baseline de segurança | normative | heuristic | bounded |
+| Threat | `MT-110` | Fraca responsabilização pela segurança do código | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

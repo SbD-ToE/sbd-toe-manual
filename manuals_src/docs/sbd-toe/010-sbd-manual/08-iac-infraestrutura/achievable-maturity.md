@@ -32,7 +32,7 @@ Total: **13 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:2` | SLSA | Fonte, Build e Proveniência | external | derived |
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:3` | SLSA | Fonte, Build e Proveniência | external | derived |
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:4` | SLSA | Fonte, Build e Proveniência | external | derived |
-| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Validação de planos, proveniência, segregação, controlo de b | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Validação de planos, proveniência, segregação, controlo de builds | external | derived |
 
 ---
 

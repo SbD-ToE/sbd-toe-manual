@@ -22,7 +22,7 @@ Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 |---|---|---|---|---|---|
 | MaturityMapping | `10-testes-seguranca:maturity:owasp-dsomm:owasp-dsomm-dominios-testing-design-development:design-development` | OWASP DSOMM | Domínios Testing + Design & Development | external | derived |
 | MaturityMapping | `10-testes-seguranca:maturity:owasp-dsomm:owasp-dsomm-dominios-testing-design-development:testing` | OWASP DSOMM | Domínios Testing + Design & Development | external | derived |
-| MaturityMapping | `10-testes-seguranca:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Integração contínua, rastreabilidade por release, gates auto | external | derived |
+| MaturityMapping | `10-testes-seguranca:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Integração contínua, rastreabilidade por release, gates automáticos | external | derived |
 | MaturityMapping | `10-testes-seguranca:maturity:owasp-samm:owasp-samm-verification-security-testing:1` | OWASP SAMM | Verification → Security Testing | external | derived |
 | MaturityMapping | `10-testes-seguranca:maturity:owasp-samm:owasp-samm-verification-security-testing:2` | OWASP SAMM | Verification → Security Testing | external | derived |
 | MaturityMapping | `10-testes-seguranca:maturity:owasp-samm:owasp-samm-verification-security-testing:3` | OWASP SAMM | Verification → Security Testing | external | derived |

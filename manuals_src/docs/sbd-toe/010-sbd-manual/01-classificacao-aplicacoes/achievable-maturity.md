@@ -24,7 +24,7 @@ Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:governance-metrics` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:risk-management` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:owasp-dsomm-governance-risk-management-requirements:security-requirements` | OWASP DSOMM | Governance, Risk Management, Requirements | external | derived |
-| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Derivação de requisitos, rastreabilidade, decisão proporcion | external | derived |
+| MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Derivação de requisitos, rastreabilidade, decisão proporcional | external | derived |
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:1` | OWASP SAMM | Governance → Risk Management | external | derived |
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:2` | OWASP SAMM | Governance → Risk Management | external | derived |
 | MaturityMapping | `01-classificacao-aplicacoes:maturity:owasp-samm:owasp-samm-governance-risk-management:3` | OWASP SAMM | Governance → Risk Management | external | derived |

@@ -16,7 +16,7 @@ Cobertura V1 entity-level: **20 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **63 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -44,7 +44,26 @@ Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `05-dependencias-sbom-sca:sca-automatico-com-gates` | SCA automático com *gates* | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-automatica-de-compatibilidade-de-licencas` | Validação Automática de Compatibilidade de Licenças | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-de-release-go-no-go` | Validação de release (*go/no-go*) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-073` | Inclusão de bibliotecas com CVEs ativos | normative | heuristic | bounded |
+| Threat | `MT-074` | Dependências desatualizadas | normative | heuristic | bounded |
+| Threat | `MT-075` | Ausência de registo de versões | normative | heuristic | bounded |
+| Threat | `MT-076` | Inclusão de bibliotecas não auditadas | normative | heuristic | bounded |
+| Threat | `MT-077` | Desconhecimento de bibliotecas utilizadas | normative | heuristic | bounded |
+| Threat | `MT-078` | Falta de associação entre vulnerabilidade e artefacto | normative | heuristic | bounded |
+| Threat | `MT-079` | Falta de histórico de introdução de pacotes | normative | heuristic | bounded |
+| Threat | `MT-080` | Inclusão de pacotes de repositórios maliciosos | normative | heuristic | bounded |
+| Threat | `MT-081` | Dependência transitiva com componente inseguro | normative | heuristic | bounded |
+| Threat | `MT-082` | Pipeline injeta versão não autenticada | normative | heuristic | bounded |
+| Threat | `MT-083` | CVEs ignoradas sem justificação | normative | heuristic | bounded |
+| Threat | `MT-084` | Mitigações aplicadas sem rastreio | normative | heuristic | bounded |
+| Threat | `MT-085` | Falta de ciclo de revisão de exceções | normative | heuristic | bounded |
+| Threat | `MT-086` | Uso arbitrário de bibliotecas | normative | heuristic | bounded |
+| Threat | `MT-087` | Bibliotecas proibidas são usadas | normative | heuristic | bounded |
+| Threat | `MT-088` | Falta de política de substituição | normative | heuristic | bounded |
+| Threat | `MT-089` | Introdução de dependência vulnerável não declarada | normative | heuristic | bounded |
+| Threat | `MT-090` | Confusão de dependências | normative | heuristic | bounded |
+| Threat | `MT-091` | Backdoor via ferramenta de build | normative | heuristic | bounded |
+| Threat | `MT-092` | Drift de composição entre builds | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

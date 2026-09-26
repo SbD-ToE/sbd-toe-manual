@@ -23,7 +23,7 @@ Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:build-deploy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:policy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:tooling` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
-| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Políticas de risco, hardening, bloqueios CI/CD, rastreabilid | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Políticas de risco, hardening, bloqueios CI/CD, rastreabilidade SCA | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:1` | OWASP SAMM | Construction → Dependency Management | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:2` | OWASP SAMM | Construction → Dependency Management | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:3` | OWASP SAMM | Construction → Dependency Management | external | derived |

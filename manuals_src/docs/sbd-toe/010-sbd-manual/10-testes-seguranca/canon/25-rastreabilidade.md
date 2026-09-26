@@ -16,7 +16,7 @@ Cobertura V1 entity-level: **19 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **43 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **57 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -48,7 +48,21 @@ Total: **43 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `10-testes-seguranca:separacao-formal-entre-sinal-automatico-e-decisao-de-bloqueio-override` | Separação formal entre sinal automático e decisão de bloqueio/override | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-empirica-de-exploitabilidade-de-findings` | Validação Empírica de Exploitabilidade de Findings | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-humana-da-interpretacao-final-dos-resultados` | Validação humana da interpretação final dos resultados | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-167` | Injeções (SQLi, OS Command, etc.) | normative | heuristic | bounded |
+| Threat | `MT-168` | Falhas de controlo de acesso | normative | heuristic | bounded |
+| Threat | `MT-169` | Lógicas de negócio exploráveis | normative | heuristic | bounded |
+| Threat | `MT-170` | Regressão de segurança | normative | heuristic | bounded |
+| Threat | `MT-171` | Baixa cobertura dos testes | normative | heuristic | bounded |
+| Threat | `MT-172` | Falhas conhecidas não testadas | normative | heuristic | bounded |
+| Threat | `MT-173` | Falhas detetadas mas não resolvidas | normative | heuristic | bounded |
+| Threat | `MT-174` | Equipa sem feedback técnico | normative | heuristic | bounded |
+| Threat | `MT-175` | Validações não repetíveis | normative | heuristic | bounded |
+| Threat | `MT-176` | Testes manuais não escaláveis | normative | heuristic | bounded |
+| Threat | `MT-177` | Falta de testes antes de go-live | normative | heuristic | bounded |
+| Threat | `MT-178` | Decisão de qualidade feita sem base | normative | heuristic | bounded |
+| Threat | `MT-179` | Classes novas não detetadas por SAST/DAST | normative | heuristic | bounded |
+| Threat | `MT-180` | Testes superficiais sem contexto técnico | normative | heuristic | bounded |
+| Threat | `MT-181` | Ferramentas não calibradas por contexto | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

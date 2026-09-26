@@ -23,16 +23,16 @@ Total: **13 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:build-deploy` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:ops-monitoring` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:supply-chain` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Construção determinística, proveniência, hardening e observa | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Construção determinística, proveniência, hardening e observabilidade de runtime | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:1` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:2` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:3` | OWASP SAMM | Deployment, Verification e Governance | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Build seguro, policy-as-code, assinatura, controlo de regist | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Build seguro, policy-as-code, assinatura, controlo de registos e validação de manifestos | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:1` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:2` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:3` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:4` | SLSA | Build Integrity & Provenance | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Assinaturas, attestations, pipelines confiáveis e digest pin | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Assinaturas, attestations, pipelines confiáveis e digest pinning | external | derived |
 
 ---
 
@@ -49,7 +49,7 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 | OWASP SAMM | Deployment, Verification e Governance | Governação mínima de imagens e registos | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP SAMM | Deployment, Verification e Governance | Scanning e assinatura no CI/CD | `achievable-maturity.md` | 0.90 | Explícito |
 | OWASP SAMM | Deployment, Verification e Governance | Policy-as-code, admission controllers, rastreabilidade auditável | `achievable-maturity.md` | 0.90 | Explícito |
-| OWASP SAMM | — | Build seguro, policy-as-code, assinatura, controlo de registos e validação de ma | `achievable-maturity.md` | 0.90 | Explícito |
+| OWASP SAMM | — | Build seguro, policy-as-code, assinatura, controlo de registos e validação de manifestos | `achievable-maturity.md` | 0.90 | Explícito |
 
 ---
 

@@ -23,7 +23,7 @@ Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `03-threat-modeling:maturity:owasp-dsomm:owasp-dsomm-architecture-risk-analysis-requirements:architecture` | OWASP DSOMM | Architecture, Risk Analysis, Requirements | external | derived |
 | MaturityMapping | `03-threat-modeling:maturity:owasp-dsomm:owasp-dsomm-architecture-risk-analysis-requirements:requirements` | OWASP DSOMM | Architecture, Risk Analysis, Requirements | external | derived |
 | MaturityMapping | `03-threat-modeling:maturity:owasp-dsomm:owasp-dsomm-architecture-risk-analysis-requirements:risk-analysis` | OWASP DSOMM | Architecture, Risk Analysis, Requirements | external | derived |
-| MaturityMapping | `03-threat-modeling:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Integração no SDLC, rastreabilidade, threat maps reutilizáve | external | derived |
+| MaturityMapping | `03-threat-modeling:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Integração no SDLC, rastreabilidade, threat maps reutilizáveis | external | derived |
 | MaturityMapping | `03-threat-modeling:maturity:owasp-samm:owasp-samm-design-threat-assessment:1` | OWASP SAMM | Design → Threat Assessment | external | derived |
 | MaturityMapping | `03-threat-modeling:maturity:owasp-samm:owasp-samm-design-threat-assessment:2` | OWASP SAMM | Design → Threat Assessment | external | derived |
 | MaturityMapping | `03-threat-modeling:maturity:owasp-samm:owasp-samm-design-threat-assessment:3` | OWASP SAMM | Design → Threat Assessment | external | derived |

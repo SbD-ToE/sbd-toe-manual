@@ -21,7 +21,7 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **139 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **156 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -146,7 +146,24 @@ Total: **139 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe
 | Practice | `02-requisitos-seguranca:validacao-de-tags-sec-lx-e-requisitos-no-pipeline` | Validação de tags `SEC-Lx-*` e requisitos no pipeline | normative | explicit | deterministic |
 | Practice | `02-requisitos-seguranca:validacao-e-aprovacao-final` | Validação e aprovação final | normative | explicit | deterministic |
 | Practice | `02-requisitos-seguranca:validacao-por-requisito-dominio-req-xxx-evidencia` | Validação por requisito/domínio (REQ-XXX → evidência) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-021` | Ausência de requisitos de segurança | normative | heuristic | bounded |
+| Threat | `MT-022` | Definição ambígua ou não testável | normative | heuristic | bounded |
+| Threat | `MT-023` | Requisitos genéricos não específicos | normative | heuristic | bounded |
+| Threat | `MT-024` | Falta de requisitos em sistemas legados | normative | heuristic | bounded |
+| Threat | `MT-025` | Requisitos não alinhados com risco | normative | heuristic | bounded |
+| Threat | `MT-026` | Requisitos definidos mas nunca verificados | normative | heuristic | bounded |
+| Threat | `MT-027` | Validações inconsistentes entre projetos | normative | heuristic | bounded |
+| Threat | `MT-028` | Ausência de rastreio entre requisito e teste | normative | heuristic | bounded |
+| Threat | `MT-029` | Requisitos não verificados em CI/CD | normative | heuristic | bounded |
+| Threat | `MT-030` | Risco aceite sem validação documental | normative | heuristic | bounded |
+| Threat | `MT-031` | Exceções a requisitos não documentadas | normative | heuristic | bounded |
+| Threat | `MT-032` | Segurança omitida por “não ser funcional” | normative | heuristic | bounded |
+| Threat | `MT-033` | Aceitação de exceções sem aprovação | normative | heuristic | bounded |
+| Threat | `MT-034` | Exceções não reverificadas no tempo | normative | heuristic | bounded |
+| Threat | `MT-035` | Não saber se requisitos foram aplicados | normative | heuristic | bounded |
+| Threat | `MT-036` | Requisitos aplicados mas não testados | normative | heuristic | bounded |
+| Threat | `MT-037` | Mudanças de requisitos não propagadas | normative | heuristic | bounded |
+| Threat | `MT-038` | Ambiguidade entre requisito e controlo | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

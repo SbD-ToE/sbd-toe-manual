@@ -20,7 +20,7 @@ Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 
 | Entity type | ID | Framework | Framework area | Authority class | Source mode |
 |---|---|---|---|---|---|
-| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Validação de fornecedores, requisitos contratuais, rastreabi | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Validação de fornecedores, requisitos contratuais, rastreabilidade | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:governance` | OWASP DSOMM | Definição clara de ownership, políticas, controlo contínuo | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:tooling-metrics` | OWASP DSOMM | KPIs de governação e feedback contínuo | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:training` | OWASP DSOMM | Onboarding formal de stakeholders | external | derived |

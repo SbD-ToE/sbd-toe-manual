@@ -16,11 +16,11 @@ Cobertura V1 entity-level: **25 entidades** primárias. Estrutura abaixo expõe 
 
 ## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **61 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **76 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
-| Requirement | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significati | normative | explicit | deterministic |
+| Requirement | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | normative | explicit | deterministic |
 | Requirement | `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | normative | explicit | deterministic |
 | Requirement | `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | normative | explicit | deterministic |
 | Requirement | `THR-004` | Disposição formal de cada ameaça identificada com owner | normative | explicit | deterministic |
@@ -38,7 +38,22 @@ Total: **61 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `03-threat-modeling:reutilizacao-controlada-e-revisao-de-modelos-anteriores` | Reutilização controlada e revisão de modelos anteriores | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-arquitetura-com-threat-modeling` | Validação de arquitetura com threat modeling | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-impacto-no-negocio` | Validação de impacto no negócio | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-039` | Ameaças desconhecidas e não tratadas | normative | heuristic | bounded |
+| Threat | `MT-040` | Prioridades de segurança mal definidas | normative | heuristic | bounded |
+| Threat | `MT-041` | Requisitos definidos sem base em ameaças | normative | heuristic | bounded |
+| Threat | `MT-042` | Ameaças a privacidade ignoradas | normative | heuristic | bounded |
+| Threat | `MT-043` | Falta de cobertura de ameaças não técnicas | normative | heuristic | bounded |
+| Threat | `MT-044` | Arquitetura insegura não identificada | normative | heuristic | bounded |
+| Threat | `MT-045` | Validação superficial em design reviews | normative | heuristic | bounded |
+| Threat | `MT-046` | Controles aplicados sem base em arquitetura | normative | heuristic | bounded |
+| Threat | `MT-047` | Ausência de revisão em interfaces críticas | normative | heuristic | bounded |
+| Threat | `MT-048` | Ameaças descobertas demasiado tarde | normative | heuristic | bounded |
+| Threat | `MT-049` | Mudanças críticas sem nova modelação | normative | heuristic | bounded |
+| Threat | `MT-050` | Descontinuidade entre equipas e fases | normative | heuristic | bounded |
+| Threat | `MT-051` | Ameaças não visíveis na pipeline CI/CD | normative | heuristic | bounded |
+| Threat | `MT-052` | Conhecimento de ameaças não acumulado | normative | heuristic | bounded |
+| Threat | `MT-053` | Inconsistência entre projetos e equipas | normative | heuristic | bounded |
+| Threat | `MT-054` | Ferramentas desconectadas do ciclo | normative | heuristic | bounded |
 | Concept | `sem:concept:backlog-items` | Backlog Items | semantic | scored | bounded |
 | Concept | `sem:concept:catalogo-de-requisitos` | Catálogo de Requisitos | semantic | scored | bounded |
 | Concept | `sem:concept:context-diagrams` | Context Diagrams | semantic | scored | bounded |

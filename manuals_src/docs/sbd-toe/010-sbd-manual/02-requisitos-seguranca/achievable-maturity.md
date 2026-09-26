@@ -23,7 +23,7 @@ Total: **12 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-dsomm:owasp-dsomm-requirements-architecture-verification:architecture` | OWASP DSOMM | Requirements, Architecture, Verification | external | derived |
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-dsomm:owasp-dsomm-requirements-architecture-verification:requirements` | OWASP DSOMM | Requirements, Architecture, Verification | external | derived |
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-dsomm:owasp-dsomm-requirements-architecture-verification:verification` | OWASP DSOMM | Requirements, Architecture, Verification | external | derived |
-| MaturityMapping | `02-requisitos-seguranca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Catálogo validado, derivação por risco, critérios de aceitaç | external | derived |
+| MaturityMapping | `02-requisitos-seguranca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Catálogo validado, derivação por risco, critérios de aceitação | external | derived |
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-samm:owasp-samm-design-security-requirements:1` | OWASP SAMM | Design → Security Requirements | external | derived |
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-samm:owasp-samm-design-security-requirements:2` | OWASP SAMM | Design → Security Requirements | external | derived |
 | MaturityMapping | `02-requisitos-seguranca:maturity:owasp-samm:owasp-samm-design-security-requirements:3` | OWASP SAMM | Design → Security Requirements | external | derived |

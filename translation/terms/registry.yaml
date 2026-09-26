@@ -5916,3 +5916,67 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 14 (checklist-aderencia l.77): regra dos nomes próprios externos — slug
     verbatim; sem colisão com o nome do capítulo (esse tem espaço, não hífen).'
+- key: github_copilot_trust_center
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: GitHub Copilot Trust Center
+  en_variants: []
+  pt: GitHub Copilot Trust Center
+  pt_variants: []
+  ontology_id: null
+  sense: Nome de produto/página da GitHub (grafia oficial AmE).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Políticas (16_policy-uso-ferramentas-apoio): nome próprio verbatim.'
+- key: mit_license
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: MIT License
+  en_variants: []
+  pt: MIT License
+  pt_variants: []
+  ontology_id: null
+  sense: Nome oficial de licença (grafia AmE).
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] about.mdx: nome próprio de licença verbatim (regra dos nomes próprios externos).'
+- key: esquema_regime
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: scheme
+  en_variants: [schemes, certification scheme]
+  pt: esquema
+  pt_variants: [esquemas]
+  ontology_id: null
+  sense: '«esquema de certificação» / «esquemas CSA da ENISA» — regime (scheme), NÃO o schema da ontologia.
+    Homónimo: a consistency aceita qualquer dos sentidos (d803aeb7).'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] FAQ: desambigua «esquema» (scheme) de «esquema» (schema); espécie 3.'

@@ -481,5 +481,45 @@
   "toe.chart.engineering": {
     "message": "Execution & Lifecycle",
     "description": "ToE intro diagram label"
+  },
+  "homepage.hero.tagline": {
+    "message": "A unified model for thinking about, designing and operating security in software development.",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.hero.subtitle": {
+    "message": "SbD–ToE connects European regulations, technical standards, maturity frameworks, real threats and software engineering in a prescriptive, reusable and risk-proportional manual.",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.diagram.caption": {
+    "message": "SbD–ToE is the core where standards, threats and engineering converge. From this centre, each chapter of the manual unfolds the vision into concrete practices and controls.",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.card.manual.title": {
+    "message": "SbD–ToE Manual",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.card.manual.description": {
+    "message": "Chapters 01–14. The main body of the manual, organised by technical theme across the lifecycle.",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.card.crossCheck.title": {
+    "message": "Regulatory cross-check",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.card.crossCheck.description": {
+    "message": "Matrix showing how SbD–ToE responds to NIS2, DORA, CRA, ISO 27001/27034 and other references.",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.card.open": {
+    "message": "Open →",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.title": {
+    "message": "Home",
+    "description": "Homepage (src/pages/index.tsx)"
+  },
+  "homepage.description": {
+    "message": "Security by Design - Theory of Everything. A practical, open and prescriptive manual for applying security by design in modern organisations.",
+    "description": "Homepage (src/pages/index.tsx)"
   }
 }

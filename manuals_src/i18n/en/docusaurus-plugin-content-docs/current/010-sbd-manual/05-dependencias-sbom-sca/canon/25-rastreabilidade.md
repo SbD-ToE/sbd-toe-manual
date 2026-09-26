@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md
-  source_sha256: fc764f8a7accd45c548ff0da867e64853d8b7dda11452e598b07b08ba5eac90f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 97e1e3136585002f5de97db0e41c752165affc43e3e13e37db246aab67572680
+  source_sha256: fa082cae7e65048087cdab1a8e6b3376f0160fa55397ea2cdda07d7a81f5d0aa
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: ba0f4f9bddd77cf67709c729a3d41f6fc5a63abcbf6a1c5e1cae9ad7c88b8e09
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a
-  glossary_keys: [appsec_core, avaliacao, chapter_role, framework_source_corpus, llm, practitioner_manual, sbdtoe_sbd, slice, traceability, validation_evaluation]
-  glossary_sha256: 96ac4ea9dd0e082d8b95cd38bf01f9d3c9221466f1f70070ff459dd2b0a2b37f
-  translated_at: 2026-09-26T08:45:29Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, avaliacao, chapter_role, cycle_iteration, framework_source_corpus, llm, practitioner_manual, sbdtoe_sbd, slice, traceability, validation_evaluation]
+  glossary_sha256: 8a4d54ae1e733e09ab79d49e275fffaca0a27a924b22b7eeb3f04d9c428070d8
+  translated_at: 2026-09-26T13:37:00Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **20 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **44 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **63 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -61,7 +61,26 @@ Total: **44 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `05-dependencias-sbom-sca:sca-automatico-com-gates` | Automatic SCA with *gates* | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-automatica-de-compatibilidade-de-licencas` | Automatic Licence Compatibility Validation | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-de-release-go-no-go` | Release validation (*go/no-go*) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-073` | Inclusion of libraries with active CVEs | normative | heuristic | bounded |
+| Threat | `MT-074` | Outdated dependencies | normative | heuristic | bounded |
+| Threat | `MT-075` | Absence of a version record | normative | heuristic | bounded |
+| Threat | `MT-076` | Inclusion of unaudited libraries | normative | heuristic | bounded |
+| Threat | `MT-077` | Lack of knowledge of the libraries used | normative | heuristic | bounded |
+| Threat | `MT-078` | Lack of association between vulnerability and artefact | normative | heuristic | bounded |
+| Threat | `MT-079` | Lack of a history of package introduction | normative | heuristic | bounded |
+| Threat | `MT-080` | Inclusion of packages from malicious repositories | normative | heuristic | bounded |
+| Threat | `MT-081` | Transitive dependency with an insecure component | normative | heuristic | bounded |
+| Threat | `MT-082` | Pipeline injects an unauthenticated version | normative | heuristic | bounded |
+| Threat | `MT-083` | CVEs ignored without justification | normative | heuristic | bounded |
+| Threat | `MT-084` | Mitigations applied without tracking | normative | heuristic | bounded |
+| Threat | `MT-085` | Lack of an exception review cycle | normative | heuristic | bounded |
+| Threat | `MT-086` | Arbitrary use of libraries | normative | heuristic | bounded |
+| Threat | `MT-087` | Prohibited libraries are used | normative | heuristic | bounded |
+| Threat | `MT-088` | Lack of a replacement policy | normative | heuristic | bounded |
+| Threat | `MT-089` | Introduction of an undeclared vulnerable dependency | normative | heuristic | bounded |
+| Threat | `MT-090` | Dependency confusion | normative | heuristic | bounded |
+| Threat | `MT-091` | Backdoor via a build tool | normative | heuristic | bounded |
+| Threat | `MT-092` | Composition drift between builds | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

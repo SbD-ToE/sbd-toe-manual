@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/achievable-maturity.md
-  source_sha256: dc4dad978281528f2bd4ed452ec8b978bf6e17bc967c4c5cec07f70925daa102
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: f6ba61340ce9f7c3be56cb0de70dc72f700d0613c6b32a09a88167f941c55978
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
   target_sha256: 51e7a9b35cbf60a8761f438b82a402e5fce5c6e1fc280591d73503e7ef3a84cb
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [chapter_role, framework_source_corpus, mapping, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
-  glossary_sha256: 37bba78375c8997104615ae15f0a3a3c0abe6930d5de00cf2a850bcb5f6af0dc
-  translated_at: 2026-09-25T20:16:56Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [chapter_role, framework_source_corpus, mapping, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: 49980cc4150c9a0fc2a026b76c48e515d9d7dfe540207932bcc80c605240cbfa
+  translated_at: 2026-09-26T13:36:56Z
   reviewed_by: null
 ---
 

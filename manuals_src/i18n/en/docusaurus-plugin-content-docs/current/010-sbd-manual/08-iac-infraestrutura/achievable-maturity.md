@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/achievable-maturity.md
-  source_sha256: 2e61eef103af2bc98cf8d063dfbb2b02878eaf51f94082334cb8c11f7c11be32
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c3c05e0d5c1eae73635eabe989eca23cc6c126b11af458a3c1657f2ec2c980d8
+  source_sha256: 1a0811766c3d9ea3de6d54a976fa2c66e961d8a9a8cbb55e36cfa8af3ca32ea6
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 37e0e392e02069dcf2b72bf5d985a8eafcb7da305fc6781b7005a921bb3e3891
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, provenance, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
   glossary_sha256: c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3
-  translated_at: 2026-09-26T09:25:33Z
+  translated_at: 2026-09-26T13:37:03Z
   reviewed_by: null
 ---
 
@@ -49,7 +49,7 @@ Total: **13 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:2` | SLSA | Source, Build and Provenance | external | derived |
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:3` | SLSA | Source, Build and Provenance | external | derived |
 | MaturityMapping | `08-iac-infraestrutura:maturity:slsa:slsa-fonte-build-e-proveniencia:4` | SLSA | Source, Build and Provenance | external | derived |
-| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Validation of plans, provenance, segregation, control of b | external | derived |
+| MaturityMapping | `08-iac-infraestrutura:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Validation of plans, provenance, segregation, control of builds | external | derived |
 
 ---
 

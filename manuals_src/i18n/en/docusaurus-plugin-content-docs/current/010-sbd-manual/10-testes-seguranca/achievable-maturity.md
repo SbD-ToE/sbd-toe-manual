@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/achievable-maturity.md
-  source_sha256: ffd8fb4b698c40cb24ff300c24bd8c384bbf0a2f6ed319005a4a3d0945dcdade
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: b5bf37e34625cf7fa662419f9c728e22da4fe4933df9ee95ddc5321d461c6ed5
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
   target_sha256: fce99ce0f4ade3e73b2fb798ad9daf77795ab53504552ce1dc6fd3efcb7ee68b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
   glossary_sha256: b53be3c3016c35427636086bb5cfba650674a05b0c5118f4428bb85c6db03944
-  translated_at: 2026-09-26T10:31:23Z
+  translated_at: 2026-09-26T13:37:06Z
   reviewed_by: null
 ---
 

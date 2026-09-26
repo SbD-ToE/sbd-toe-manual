@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/achievable-maturity.md
-  source_sha256: fc2446592c0c4accf78e207b80b79f12cc4878392b59aaceed2d3bc1ae2245c3
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7c6baaa507cdf3f833a333a15b64b9d10d3e9426a77dba4bbedbc09f56c876d5
+  source_sha256: f17470aed1432b27f2b37f1f870c1179da0e5c10db78ffdda4ecd21f5d014f74
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 2563ffd11157c28e87bd38f603b0fa5f49087efc5dd92560f2094d6865e36c01
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, provenance, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
   glossary_sha256: c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3
-  translated_at: 2026-09-26T08:45:20Z
+  translated_at: 2026-09-26T13:36:59Z
   reviewed_by: null
 ---
 
@@ -40,7 +40,7 @@ Total: **12 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:build-deploy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:policy` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:owasp-dsomm-policy-build-deploy-tooling:tooling` | OWASP DSOMM | Policy, Build & Deploy, Tooling | external | derived |
-| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Risk policies, hardening, CI/CD blocking, traceabil | external | derived |
+| MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Risk policies, hardening, CI/CD blocking, SCA traceability | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:1` | OWASP SAMM | Construction → Dependency Management | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:2` | OWASP SAMM | Construction → Dependency Management | external | derived |
 | MaturityMapping | `05-dependencias-sbom-sca:maturity:owasp-samm:owasp-samm-construction-dependency-management:3` | OWASP SAMM | Construction → Dependency Management | external | derived |

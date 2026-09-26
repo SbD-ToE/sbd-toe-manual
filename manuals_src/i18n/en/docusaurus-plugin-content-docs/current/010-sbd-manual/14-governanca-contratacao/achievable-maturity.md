@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/achievable-maturity.md
-  source_sha256: c61331bc4d3a82320cf3347e2b3b868692633b2e013829deaef10e63f67292a6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 58c2c5ac4a7955e38d0c86455d4c550895675178061e063a105631de0e4bcfbf
+  source_sha256: 86565e0a2fac0831cdf14ba54a6822400aa6013f0d3bdbe108ed73e051c9449f
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 074157776e9b8083fc4b2aeacb9497916d21b6b4ca73e053b05d0e7e45328230
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
   glossary_sha256: b53be3c3016c35427636086bb5cfba650674a05b0c5118f4428bb85c6db03944
-  translated_at: 2026-09-26T12:00:10Z
+  translated_at: 2026-09-26T13:37:11Z
   reviewed_by: null
 ---
 
@@ -37,7 +37,7 @@ Total: **14 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 
 | Entity type | ID | Framework | Framework area | Authority class | Source mode |
 |---|---|---|---|---|---|
-| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Supplier validation, contractual requirements, traceabi | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Supplier validation, contractual requirements, traceability | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:governance` | OWASP DSOMM | Clear definition of ownership, policies, continuous control | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:tooling-metrics` | OWASP DSOMM | Governance KPIs and continuous feedback | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:training` | OWASP DSOMM | Formal onboarding of stakeholders | external | derived |

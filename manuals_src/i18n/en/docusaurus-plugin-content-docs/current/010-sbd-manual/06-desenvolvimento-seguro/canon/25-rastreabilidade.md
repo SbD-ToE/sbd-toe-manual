@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md
-  source_sha256: 4709f459b0600679503fb2a4349926024390b5c6e129b6982367d17674e6579f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 0282800b482d27d89da59a4bcb6f9e65d0aa51f497f6dc701376363017bb072e
+  source_sha256: d0091d24510789e73b41b3f967acaf6eaedbff7a2d1832d82412dd9580e9e48a
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 43608962a396bdd030cd4df0bc18904e6421cceda4b40ab7ac75eff7ab2bdff1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [appsec_core, chapter_role, llm, practitioner_manual, provenance, risk_level, sbdtoe_sbd, slice, traceability, v1_entity_ivf_centralized_error_governance, v1_entity_ivf_centralized_error_handling, v1_entity_ivf_centralized_error_translation, validation_evaluation]
   glossary_sha256: 41649295f7acd8649cf31b8fb65912d83beab0182df1e4e715cded27f42c9e1c
-  translated_at: 2026-09-26T08:57:16Z
+  translated_at: 2026-09-26T13:37:01Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **37 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **42 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **59 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -61,7 +61,24 @@ Total: **42 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `06-desenvolvimento-seguro:uso-validado-de-genia` | Validated Use of GenAI | normative | explicit | deterministic |
 | Practice | `06-desenvolvimento-seguro:validacao-de-padroes-perigosos-e-anti-patterns` | Validation of Dangerous Patterns and Anti-patterns | normative | explicit | deterministic |
 | Practice | `06-desenvolvimento-seguro:validacoes-locais-obrigatorias-pre-commit` | Mandatory Local Validations (Pre-commit) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-093` | Inclusion of insecure patterns out of habit | normative | heuristic | bounded |
+| Threat | `MT-094` | Use of deprecated or dangerous functions | normative | heuristic | bounded |
+| Threat | `MT-095` | Code injection without adequate escaping | normative | heuristic | bounded |
+| Threat | `MT-096` | Insecure code without detection | normative | heuristic | bounded |
+| Threat | `MT-097` | Absence of traceability between issues and decisions | normative | heuristic | bounded |
+| Threat | `MT-098` | Only reactive validation (e.g. QA tests) | normative | heuristic | bounded |
+| Threat | `MT-099` | Security removed due to “incompatibility” | normative | heuristic | bounded |
+| Threat | `MT-100` | Exceptions not reviewed or revalidated | normative | heuristic | bounded |
+| Threat | `MT-101` | Untracked deviations between guideline and practice | normative | heuristic | bounded |
+| Threat | `MT-102` | Generation of insecure code via AI | normative | heuristic | bounded |
+| Threat | `MT-103` | Inclusion of known vulnerabilities | normative | heuristic | bounded |
+| Threat | `MT-104` | Lack of accountability for generated code | normative | heuristic | bounded |
+| Threat | `MT-105` | Inclusion of discontinued libraries | normative | heuristic | bounded |
+| Threat | `MT-106` | Lack of justification for the use of an insecure dependency | normative | heuristic | bounded |
+| Threat | `MT-107` | Vulnerable component kept in the final build | normative | heuristic | bounded |
+| Threat | `MT-108` | Inconsistency across teams and projects | normative | heuristic | bounded |
+| Threat | `MT-109` | Absence of a security baseline | normative | heuristic | bounded |
+| Threat | `MT-110` | Weak accountability for code security | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

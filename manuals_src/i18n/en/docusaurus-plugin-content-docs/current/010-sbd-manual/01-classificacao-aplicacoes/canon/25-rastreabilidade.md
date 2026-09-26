@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/canon/25-rastreabilidade.md
-  source_sha256: a1bbfeba7cb518f737c16e919a1a03e4637e2684bb422fad7c4ff4e3b42cbc00
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: ae4ba63b058e7916bad155c895b7f6a6e25aa20a2d88fe18278de5b127c0f416
+  source_sha256: 5793639d2d4d6526982fab21338bfb274aa39616d316bdf01d25501966c196eb
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 99ad2a7067cec48c5fddd80693593bf773a19ef1da696fac9c4d47b523e54948
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, lifecycle_phase, mapping, practitioner_manual, risk_level, sbdtoe_sbd, slice, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 10be9a140a9763b8c028528defa137e6e6770d4fa00899fd48112b3b76b51b4e
-  translated_at: 2026-09-25T20:18:53Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, lifecycle_phase, mapping, practitioner_manual, risk_level, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: ef5a4e98d0d32d70da154287e65c64f996fe9a4e74286008e7b5b95e37cc6538
+  translated_at: 2026-09-26T13:36:54Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **59 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **78 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -57,7 +57,26 @@ Total: **59 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `01-classificacao-aplicacoes:mapeamento-de-ameacas-por-nivel-de-risco` | Threat mapping by risk level | normative | explicit | deterministic |
 | Practice | `01-classificacao-aplicacoes:revisao-por-alteracao-relevante-event-based` | Review upon relevant change (event-based) | normative | explicit | deterministic |
 | Practice | `01-classificacao-aplicacoes:validacao-antes-do-go-live` | Validation before go-live | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-001` | Failure to apply minimum controls | normative | heuristic | bounded |
+| Threat | `MT-002` | Over-engineering and excessive friction | normative | heuristic | bounded |
+| Threat | `MT-003` | Inconsistency between projects with the same risk | normative | heuristic | bounded |
+| Threat | `MT-004` | Optional security in low-risk products | normative | heuristic | bounded |
+| Threat | `MT-005` | Critical changes without reclassification | normative | heuristic | bounded |
+| Threat | `MT-006` | Integration with APIs or third parties ignored | normative | heuristic | bounded |
+| Threat | `MT-007` | Deploy with altered risk not reviewed | normative | heuristic | bounded |
+| Threat | `MT-008` | Different versions with divergent classifications | normative | heuristic | bounded |
+| Threat | `MT-009` | Informal acceptance of critical risks | normative | heuristic | bounded |
+| Threat | `MT-010` | Impossibility of subsequent audit | normative | heuristic | bounded |
+| Threat | `MT-011` | Risk accepted by inappropriate parties | normative | heuristic | bounded |
+| Threat | `MT-012` | Lack of regulatory explainability | normative | heuristic | bounded |
+| Threat | `MT-013` | Poorly assessed exposed interfaces | normative | heuristic | bounded |
+| Threat | `MT-014` | Unrecognised sensitive data | normative | heuristic | bounded |
+| Threat | `MT-015` | Assumption of secure environments by default | normative | heuristic | bounded |
+| Threat | `MT-016` | Ignoring critical dependencies | normative | heuristic | bounded |
+| Threat | `MT-017` | Residual risk never reviewed | normative | heuristic | bounded |
+| Threat | `MT-018` | Lack of planned reassessment events | normative | heuristic | bounded |
+| Threat | `MT-019` | Reclassification dependent on exceptions | normative | heuristic | bounded |
+| Threat | `MT-020` | Risk decisions without business feedback | normative | heuristic | bounded |
 | Concept | `sem:concept:aceitacao-de-risco` | risk acceptance | semantic | scored | bounded |
 | Concept | `sem:concept:atributos-do-risco` | risk attributes | semantic | scored | bounded |
 | Concept | `sem:concept:ciclo-de-desenvolvimento` | development cycle | semantic | scored | bounded |

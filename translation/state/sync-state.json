@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T13:14:07Z",
+  "generated_at": "2026-09-26T13:39:37Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
@@ -426,12 +426,12 @@
     },
     "010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "ccd05f4ff6699e7c7dcf520df8e184739fee47b6da119a44dcbcc174ba7b7d3b",
-      "translated_source_sha256": "ccd05f4ff6699e7c7dcf520df8e184739fee47b6da119a44dcbcc174ba7b7d3b",
+      "source_sha256": "194c78e9020f6e2348b42e4c720aacc3ff354971d5a84beaf736fc800f723dcf",
+      "translated_source_sha256": "194c78e9020f6e2348b42e4c720aacc3ff354971d5a84beaf736fc800f723dcf",
       "target_sha256": "022d2e3a638a94a09b059d52c3cfc1d577e0afd262244e8463a23c3683a893e6",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "0cd1e6309433d4e75cb1b588a32a8a222349580641d4ab09d983b24c6528e57c",
-      "translated_at": "2026-09-25T20:18:42Z",
+      "translated_at": "2026-09-26T13:36:54Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md": {
@@ -576,12 +576,12 @@
     },
     "010-sbd-manual/01-classificacao-aplicacoes/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "a1bbfeba7cb518f737c16e919a1a03e4637e2684bb422fad7c4ff4e3b42cbc00",
-      "translated_source_sha256": "a1bbfeba7cb518f737c16e919a1a03e4637e2684bb422fad7c4ff4e3b42cbc00",
-      "target_sha256": "ae4ba63b058e7916bad155c895b7f6a6e25aa20a2d88fe18278de5b127c0f416",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "10be9a140a9763b8c028528defa137e6e6770d4fa00899fd48112b3b76b51b4e",
-      "translated_at": "2026-09-25T20:18:53Z",
+      "source_sha256": "5793639d2d4d6526982fab21338bfb274aa39616d316bdf01d25501966c196eb",
+      "translated_source_sha256": "5793639d2d4d6526982fab21338bfb274aa39616d316bdf01d25501966c196eb",
+      "target_sha256": "99ad2a7067cec48c5fddd80693593bf773a19ef1da696fac9c4d47b523e54948",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "ef5a4e98d0d32d70da154287e65c64f996fe9a4e74286008e7b5b95e37cc6538",
+      "translated_at": "2026-09-26T13:36:54Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/canon/50-ameacas-mitigadas.md": {
@@ -636,12 +636,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "d80010a574b8b75ed6457c8fa5212458e74b0d54d6a157decb83cf93c7010a05",
-      "translated_source_sha256": "d80010a574b8b75ed6457c8fa5212458e74b0d54d6a157decb83cf93c7010a05",
+      "source_sha256": "8c5929024495f6a448bb39b4d9892fb10e8658e5416e8981ba96e969f7077f35",
+      "translated_source_sha256": "8c5929024495f6a448bb39b4d9892fb10e8658e5416e8981ba96e969f7077f35",
       "target_sha256": "110ab275b959928d50539a68ac856a79a89cfe6e0c657f6c014b9cdfa23a7b2b",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "e953bdfafd0cce8a6c3408510750dc69fe9f5539101374b64eb19c1b833f6c12",
-      "translated_at": "2026-09-25T20:20:05Z",
+      "translated_at": "2026-09-26T13:36:55Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/01-catalogo-requisitos.md": {
@@ -796,12 +796,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "f9e92f866e6ca8d9ac66c0bf97837588d2549fd26e65d55dee2a02a1ec49e3b4",
-      "translated_source_sha256": "f9e92f866e6ca8d9ac66c0bf97837588d2549fd26e65d55dee2a02a1ec49e3b4",
-      "target_sha256": "8a7b02753e3b52a234ba6ac108d21b82e69146e653735c0a91b2c85c5f392e4f",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "e816cdace68ace76bade905301121c1996195a60cf991f170df3b6f2e41f9ca2",
-      "translated_at": "2026-09-25T20:20:16Z",
+      "source_sha256": "3e9a4a35906ea9c0f16447f670b7b104d18b4996aeb99ae1ae8fc9c06cab1d27",
+      "translated_source_sha256": "3e9a4a35906ea9c0f16447f670b7b104d18b4996aeb99ae1ae8fc9c06cab1d27",
+      "target_sha256": "6aea1e568d56996a9b70162b76992f3b0100869a672530befd81e308bbc4bb0e",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "cd687035e18be913f4e1161ae9d07a9311beffce9ec4791956c98ac3a1bb4c7b",
+      "translated_at": "2026-09-26T13:36:56Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/canon/50-ameacas-mitigadas.md": {
@@ -856,12 +856,12 @@
     },
     "010-sbd-manual/03-threat-modeling/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "dc4dad978281528f2bd4ed452ec8b978bf6e17bc967c4c5cec07f70925daa102",
-      "translated_source_sha256": "dc4dad978281528f2bd4ed452ec8b978bf6e17bc967c4c5cec07f70925daa102",
+      "source_sha256": "f6ba61340ce9f7c3be56cb0de70dc72f700d0613c6b32a09a88167f941c55978",
+      "translated_source_sha256": "f6ba61340ce9f7c3be56cb0de70dc72f700d0613c6b32a09a88167f941c55978",
       "target_sha256": "51e7a9b35cbf60a8761f438b82a402e5fce5c6e1fc280591d73503e7ef3a84cb",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "37bba78375c8997104615ae15f0a3a3c0abe6930d5de00cf2a850bcb5f6af0dc",
-      "translated_at": "2026-09-25T20:16:56Z",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "49980cc4150c9a0fc2a026b76c48e515d9d7dfe540207932bcc80c605240cbfa",
+      "translated_at": "2026-09-26T13:36:56Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md": {
@@ -996,12 +996,12 @@
     },
     "010-sbd-manual/03-threat-modeling/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "52472c95693dedd8aa9958bf5612affc0893532a23452750724d151b87169788",
-      "translated_source_sha256": "52472c95693dedd8aa9958bf5612affc0893532a23452750724d151b87169788",
-      "target_sha256": "6449cb9412953e0222a03196ad4b92ceabc918e95d4efcf3ef7a66d58d51913e",
-      "terms_sha256_at_translation": "5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0",
-      "glossary_sha256_at_translation": "3098d7a082056cdb2d325b0c99bb8280a988a65c335f4bb7250ef618c3b10b98",
-      "translated_at": "2026-09-25T20:17:27Z",
+      "source_sha256": "36e29f2c834ab6eaba7a080edf93981c87bf9fc2cc8075d4a2ba1d60807f520b",
+      "translated_source_sha256": "36e29f2c834ab6eaba7a080edf93981c87bf9fc2cc8075d4a2ba1d60807f520b",
+      "target_sha256": "459fac9d0293bcdc37f277b2c36bffbc1d1839720df2611d4dd0956449652647",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "6408e2bbbe201f2a1f65807f8403ca7398a878a948288870220b993941c99057",
+      "translated_at": "2026-09-26T13:36:57Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/03-threat-modeling/canon/50-ameacas-mitigadas.md": {
@@ -1196,12 +1196,12 @@
     },
     "010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "6cc68debdcfc1b9da55edde1bdba780438c6eb7e3907ac8b1f6746611125eef3",
-      "translated_source_sha256": "6cc68debdcfc1b9da55edde1bdba780438c6eb7e3907ac8b1f6746611125eef3",
-      "target_sha256": "b13acf8d38ce5ae6a56422e256510f8c50fddf1657686245f806fb1143164518",
-      "terms_sha256_at_translation": "5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312",
-      "glossary_sha256_at_translation": "44fcb030f40e50c93208807f2d5531806bfac8478442ec10a7dcc1cc0c527a08",
-      "translated_at": "2026-09-26T08:32:10Z",
+      "source_sha256": "c413746d30df02fc6b444f5b5327a80a86a7d9e0e87aa76c59951360775a9370",
+      "translated_source_sha256": "c413746d30df02fc6b444f5b5327a80a86a7d9e0e87aa76c59951360775a9370",
+      "target_sha256": "1292d8e06a75f08fbe5e37c3f92a641b92cf9efa4902ba6c47c45499c4641470",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "7825a4c17bfb909ab7d3ce5dd01c502a94b97e8d51e6dddd88bae0c831b58bae",
+      "translated_at": "2026-09-26T13:36:58Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/04-arquitetura-segura/canon/50-ameacas-mitigadas.md": {
@@ -1246,12 +1246,12 @@
     },
     "010-sbd-manual/05-dependencias-sbom-sca/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "fc2446592c0c4accf78e207b80b79f12cc4878392b59aaceed2d3bc1ae2245c3",
-      "translated_source_sha256": "fc2446592c0c4accf78e207b80b79f12cc4878392b59aaceed2d3bc1ae2245c3",
-      "target_sha256": "7c6baaa507cdf3f833a333a15b64b9d10d3e9426a77dba4bbedbc09f56c876d5",
-      "terms_sha256_at_translation": "0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a",
+      "source_sha256": "f17470aed1432b27f2b37f1f870c1179da0e5c10db78ffdda4ecd21f5d014f74",
+      "translated_source_sha256": "f17470aed1432b27f2b37f1f870c1179da0e5c10db78ffdda4ecd21f5d014f74",
+      "target_sha256": "2563ffd11157c28e87bd38f603b0fa5f49087efc5dd92560f2094d6865e36c01",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3",
-      "translated_at": "2026-09-26T08:45:20Z",
+      "translated_at": "2026-09-26T13:36:59Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md": {
@@ -1386,12 +1386,12 @@
     },
     "010-sbd-manual/05-dependencias-sbom-sca/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "fc764f8a7accd45c548ff0da867e64853d8b7dda11452e598b07b08ba5eac90f",
-      "translated_source_sha256": "fc764f8a7accd45c548ff0da867e64853d8b7dda11452e598b07b08ba5eac90f",
-      "target_sha256": "97e1e3136585002f5de97db0e41c752165affc43e3e13e37db246aab67572680",
-      "terms_sha256_at_translation": "0594036caa5df5f000ba40e62fe5e20f348d76f6f2035281e833391c2c9abd3a",
-      "glossary_sha256_at_translation": "96ac4ea9dd0e082d8b95cd38bf01f9d3c9221466f1f70070ff459dd2b0a2b37f",
-      "translated_at": "2026-09-26T08:45:29Z",
+      "source_sha256": "fa082cae7e65048087cdab1a8e6b3376f0160fa55397ea2cdda07d7a81f5d0aa",
+      "translated_source_sha256": "fa082cae7e65048087cdab1a8e6b3376f0160fa55397ea2cdda07d7a81f5d0aa",
+      "target_sha256": "ba0f4f9bddd77cf67709c729a3d41f6fc5a63abcbf6a1c5e1cae9ad7c88b8e09",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "8a4d54ae1e733e09ab79d49e275fffaca0a27a924b22b7eeb3f04d9c428070d8",
+      "translated_at": "2026-09-26T13:37:00Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/05-dependencias-sbom-sca/canon/50-ameacas-mitigadas.md": {
@@ -1436,12 +1436,12 @@
     },
     "010-sbd-manual/06-desenvolvimento-seguro/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "46fd47f3c01e40029e41c278ec20d01bfa657b6fe8548ee7622e767ec2ad6b7e",
-      "translated_source_sha256": "46fd47f3c01e40029e41c278ec20d01bfa657b6fe8548ee7622e767ec2ad6b7e",
-      "target_sha256": "322baab3c07b141c17514aebaf9877c20cdfcf5413e979412e46ba0e00597eb7",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "source_sha256": "eddd87ed8c8ee45f3b7f93a989c1abfb87b13c008cd0e71091b841500cba0eda",
+      "translated_source_sha256": "eddd87ed8c8ee45f3b7f93a989c1abfb87b13c008cd0e71091b841500cba0eda",
+      "target_sha256": "670bd9c853877fa3cbc357d2144c9f627d55f15c47117f9f4f84c735bec52413",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "67cab9ffae2db8503449a33b84a4f130876f8777c4b04ffe115f0e3b59f2279c",
-      "translated_at": "2026-09-26T08:57:07Z",
+      "translated_at": "2026-09-26T13:37:00Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/06-desenvolvimento-seguro/addon/00-catalogo-requisitos.md": {
@@ -1586,12 +1586,12 @@
     },
     "010-sbd-manual/06-desenvolvimento-seguro/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "4709f459b0600679503fb2a4349926024390b5c6e129b6982367d17674e6579f",
-      "translated_source_sha256": "4709f459b0600679503fb2a4349926024390b5c6e129b6982367d17674e6579f",
-      "target_sha256": "0282800b482d27d89da59a4bcb6f9e65d0aa51f497f6dc701376363017bb072e",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "source_sha256": "d0091d24510789e73b41b3f967acaf6eaedbff7a2d1832d82412dd9580e9e48a",
+      "translated_source_sha256": "d0091d24510789e73b41b3f967acaf6eaedbff7a2d1832d82412dd9580e9e48a",
+      "target_sha256": "43608962a396bdd030cd4df0bc18904e6421cceda4b40ab7ac75eff7ab2bdff1",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "41649295f7acd8649cf31b8fb65912d83beab0182df1e4e715cded27f42c9e1c",
-      "translated_at": "2026-09-26T08:57:16Z",
+      "translated_at": "2026-09-26T13:37:01Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/06-desenvolvimento-seguro/canon/50-ameacas-mitigadas.md": {
@@ -1636,12 +1636,12 @@
     },
     "010-sbd-manual/07-cicd-seguro/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "449babadf7bd6356bea6cad73526917ad11b5947a710937efe7b576941bae9be",
-      "translated_source_sha256": "449babadf7bd6356bea6cad73526917ad11b5947a710937efe7b576941bae9be",
-      "target_sha256": "00d8623306676ff76df39b9af67e2f802c3d461442ee3a32cef520a6e1f2d8ba",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "source_sha256": "ffc27266299928c1d84a2ed289758fa457608baf5d8865db485ddbe2c29584a8",
+      "translated_source_sha256": "ffc27266299928c1d84a2ed289758fa457608baf5d8865db485ddbe2c29584a8",
+      "target_sha256": "7f259e0f302b2301775f7af1417732b7ae8abc9ccfdf2d61ea4606d15a0672fc",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3",
-      "translated_at": "2026-09-26T09:09:10Z",
+      "translated_at": "2026-09-26T13:37:02Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md": {
@@ -1816,12 +1816,12 @@
     },
     "010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "ee206f71b70358975c7dc8357ebb392d93219246908364fe6e2a8f9cda257219",
-      "translated_source_sha256": "ee206f71b70358975c7dc8357ebb392d93219246908364fe6e2a8f9cda257219",
-      "target_sha256": "24246eedfb51b48a952636381bcd3ea98950f609f86f820d454ca5389b952249",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
-      "glossary_sha256_at_translation": "398364776e853c0f37a97c73b2f40d5b802fd37b6016b096adddf4c03e5e313f",
-      "translated_at": "2026-09-26T09:09:21Z",
+      "source_sha256": "8eef1b2663776e072ed6508a801499302df9a1b804d894a0b26912d46a9da1b8",
+      "translated_source_sha256": "8eef1b2663776e072ed6508a801499302df9a1b804d894a0b26912d46a9da1b8",
+      "target_sha256": "6597a3f0c89fa74e19d0f77300818f5cb675ed2635d9af78f2220f93b05c6429",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "1f0acc5e6f9ec8bef9e2c7ef7fc7a6c8d20971831c8460b381c221542a1c9d78",
+      "translated_at": "2026-09-26T13:37:03Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/07-cicd-seguro/canon/50-ameacas-mitigadas.md": {
@@ -1876,12 +1876,12 @@
     },
     "010-sbd-manual/08-iac-infraestrutura/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "2e61eef103af2bc98cf8d063dfbb2b02878eaf51f94082334cb8c11f7c11be32",
-      "translated_source_sha256": "2e61eef103af2bc98cf8d063dfbb2b02878eaf51f94082334cb8c11f7c11be32",
-      "target_sha256": "c3c05e0d5c1eae73635eabe989eca23cc6c126b11af458a3c1657f2ec2c980d8",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "source_sha256": "1a0811766c3d9ea3de6d54a976fa2c66e961d8a9a8cbb55e36cfa8af3ca32ea6",
+      "translated_source_sha256": "1a0811766c3d9ea3de6d54a976fa2c66e961d8a9a8cbb55e36cfa8af3ca32ea6",
+      "target_sha256": "37e0e392e02069dcf2b72bf5d985a8eafcb7da305fc6781b7005a921bb3e3891",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3",
-      "translated_at": "2026-09-26T09:25:33Z",
+      "translated_at": "2026-09-26T13:37:03Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/01-planeamento-e-controle.md": {
@@ -2026,22 +2026,22 @@
     },
     "010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "47ee344a1a3e66cad5397d5c4d973a3d3951c1713c6de682feccb6aeccb7c854",
-      "translated_source_sha256": "47ee344a1a3e66cad5397d5c4d973a3d3951c1713c6de682feccb6aeccb7c854",
-      "target_sha256": "aee0cc971dba594f81f91ef6885da7a74856815f48ca79b3a20beb4a1611b9ec",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
-      "glossary_sha256_at_translation": "8349ff43f97f3c1c547a5c74ec415ce61b96d47966741d5d48b11e6c267e8ccb",
-      "translated_at": "2026-09-26T09:25:42Z",
+      "source_sha256": "7176b006cd508f50032480c61e87c7dbd4ed5b20ea8058c26fd718b208b9c076",
+      "translated_source_sha256": "7176b006cd508f50032480c61e87c7dbd4ed5b20ea8058c26fd718b208b9c076",
+      "target_sha256": "3143b703d1eb6871e8f098d8c3a4ead285f80e3093672de181560a359719f180",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "abe00091a9dfcf3f699889af0e5c5ef5a46aebc3e491450a48d01c61bc36219a",
+      "translated_at": "2026-09-26T13:39:10Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/canon/50-ameacas-mitigadas.md": {
       "state": "synced",
       "source_sha256": "ae04e91497b31db7e4c3c389b80c45eeab8c48bd44d6ced6fdda4e6134342303",
       "translated_source_sha256": "ae04e91497b31db7e4c3c389b80c45eeab8c48bd44d6ced6fdda4e6134342303",
-      "target_sha256": "97e6504bbcc8c3319968aac418e944dddd0ee5cdafbdb699c1afdf39f6739353",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "target_sha256": "add137084bbd15be7cfd6c839cfe1e556ca167c893fd10d014ed3bddb6f78614",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "5a04226a675e95805042c589c14e80029ea0fd1d635a0791f8a1a1a02b87bc71",
-      "translated_at": "2026-09-26T09:25:43Z",
+      "translated_at": "2026-09-26T13:39:11Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/intro.md": {
@@ -2086,12 +2086,12 @@
     },
     "010-sbd-manual/09-containers-imagens/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "aa3ac6445f991ebc662368d810023530a2c4de59bd662e65d9b0866fd6b926e6",
-      "translated_source_sha256": "aa3ac6445f991ebc662368d810023530a2c4de59bd662e65d9b0866fd6b926e6",
-      "target_sha256": "3b6f26f373c70056ca75e90e90d691d9ee29534853bb1c354b04d384040b040f",
-      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
+      "source_sha256": "55596c09119c424214297c40e33b628ac46f732f5dbca24be6e25e0a2bdd7aff",
+      "translated_source_sha256": "55596c09119c424214297c40e33b628ac46f732f5dbca24be6e25e0a2bdd7aff",
+      "target_sha256": "6a0809562246c764e1058a6cf2c6d0b5de0587262ea5ab945bfe591c40a3787e",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "f1c7971f2339e29a94eac291d077ea4cba9f03650a1190206d6eb56bef540599",
-      "translated_at": "2026-09-26T09:58:12Z",
+      "translated_at": "2026-09-26T13:37:05Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/09-containers-imagens/addon/00-catalogo-requisitos.md": {
@@ -2246,12 +2246,12 @@
     },
     "010-sbd-manual/09-containers-imagens/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "4efd3a06cf9d1c4fbc158083ef406f5fbc34d88b2373d5917a8919f80d4ef25f",
-      "translated_source_sha256": "4efd3a06cf9d1c4fbc158083ef406f5fbc34d88b2373d5917a8919f80d4ef25f",
-      "target_sha256": "768f24dc14bbe8dd407263df9d9a65d3ded30c572ec2c33b9ffeef6dd822f3c4",
-      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
-      "glossary_sha256_at_translation": "20a47ac9cb29abfb678f9bf6f6cf7490ac7c8243522ba3971353a03f247fb2d7",
-      "translated_at": "2026-09-26T09:58:22Z",
+      "source_sha256": "3288ea4018270e7493e58113d4ce3218e16e1b7a38f7cb06d3119fe671902dbd",
+      "translated_source_sha256": "3288ea4018270e7493e58113d4ce3218e16e1b7a38f7cb06d3119fe671902dbd",
+      "target_sha256": "8e216f4acdb80fe7ecc569d461c3105f6bd782862721b8b611aa8b7a005fd668",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "34a97d56be3d4a27ef79970358959f37bf480f407e43607af3329a3cd48a5790",
+      "translated_at": "2026-09-26T13:37:06Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/09-containers-imagens/canon/50-ameacas-mitigadas.md": {
@@ -2296,12 +2296,12 @@
     },
     "010-sbd-manual/10-testes-seguranca/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "ffd8fb4b698c40cb24ff300c24bd8c384bbf0a2f6ed319005a4a3d0945dcdade",
-      "translated_source_sha256": "ffd8fb4b698c40cb24ff300c24bd8c384bbf0a2f6ed319005a4a3d0945dcdade",
+      "source_sha256": "b5bf37e34625cf7fa662419f9c728e22da4fe4933df9ee95ddc5321d461c6ed5",
+      "translated_source_sha256": "b5bf37e34625cf7fa662419f9c728e22da4fe4933df9ee95ddc5321d461c6ed5",
       "target_sha256": "fce99ce0f4ade3e73b2fb798ad9daf77795ab53504552ce1dc6fd3efcb7ee68b",
-      "terms_sha256_at_translation": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "b53be3c3016c35427636086bb5cfba650674a05b0c5118f4428bb85c6db03944",
-      "translated_at": "2026-09-26T10:31:23Z",
+      "translated_at": "2026-09-26T13:37:06Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md": {
@@ -2516,12 +2516,12 @@
     },
     "010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "3796492514ff67db90a6e55e4df6cac70fa157f136b4ab6a0b19abc16a9a9949",
-      "translated_source_sha256": "3796492514ff67db90a6e55e4df6cac70fa157f136b4ab6a0b19abc16a9a9949",
-      "target_sha256": "25c1a7a1665083521aea595429015233bdb7b0ce0905d8026940283b21e9e3f1",
-      "terms_sha256_at_translation": "2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687",
+      "source_sha256": "77789469fd4e799140b39080c65ceedc9064175081abf36e646f6ae9601e2cfe",
+      "translated_source_sha256": "77789469fd4e799140b39080c65ceedc9064175081abf36e646f6ae9601e2cfe",
+      "target_sha256": "47971c08eddfc8dea45da7b9920081417145a631da581a6f24797555d8ed23ae",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "be6895156acc86f557b151d045dcd8425ab0eb9aa2847cf9ebc7c87c095af0f8",
-      "translated_at": "2026-09-26T10:31:37Z",
+      "translated_at": "2026-09-26T13:37:07Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/10-testes-seguranca/canon/50-ameacas-mitigadas.md": {
@@ -2716,12 +2716,12 @@
     },
     "010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "f1cb35a1aded4afdbcc73943bb3c8101cec37b9e3058814d224b83969ae91542",
-      "translated_source_sha256": "f1cb35a1aded4afdbcc73943bb3c8101cec37b9e3058814d224b83969ae91542",
-      "target_sha256": "8a527bc4542d3f0f7ee10c8f5406aa878c49bfef880f40589ae1da62d5e7b153",
-      "terms_sha256_at_translation": "112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d",
+      "source_sha256": "d403d5cadd0e0c97e6cb84c76096eae84d8f49642cebaf71bef03eeb1cf7b1d2",
+      "translated_source_sha256": "d403d5cadd0e0c97e6cb84c76096eae84d8f49642cebaf71bef03eeb1cf7b1d2",
+      "target_sha256": "011c0ad1d282147365a6cec0c9040da551ab0cdd9fa397a528f6efffb420c3a6",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "03788518367f99bfde0a4fc62beb23f7b7784f4140ec9da7b89576f7256d2268",
-      "translated_at": "2026-09-26T11:00:55Z",
+      "translated_at": "2026-09-26T13:37:08Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/11-deploy-seguro/canon/50-ameacas-mitigadas.md": {
@@ -2946,12 +2946,12 @@
     },
     "010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "69d901701a4296ed6120dc000636c2d32d7b89eef63a2c173bd9fdd12fe9371d",
-      "translated_source_sha256": "69d901701a4296ed6120dc000636c2d32d7b89eef63a2c173bd9fdd12fe9371d",
-      "target_sha256": "000e0fce7a34a1f7436a4628c92b2b693370242a7528c9ebb4aca3ae588daf8c",
-      "terms_sha256_at_translation": "ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173",
+      "source_sha256": "582cdc45b3708779c8993ab8d6eec408528603fb3b0f199d772ade4f0815b436",
+      "translated_source_sha256": "582cdc45b3708779c8993ab8d6eec408528603fb3b0f199d772ade4f0815b436",
+      "target_sha256": "1adbc4e54cc6a8dc417bf2cf5d2c0c563de716a1b07ca8102cbb40f231bbcde8",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "9d3d1f77d71f6aee8e15f512459f22d004b89606ddae43692003320739592508",
-      "translated_at": "2026-09-26T11:17:35Z",
+      "translated_at": "2026-09-26T13:37:09Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/12-monitorizacao-operacoes/canon/50-ameacas-mitigadas.md": {
@@ -3006,12 +3006,12 @@
     },
     "010-sbd-manual/13-formacao-onboarding/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "8e3bc85a88335aca62e4f8eb7a434cdce6dc74789fdc68b7df928d540b5ff63a",
-      "translated_source_sha256": "8e3bc85a88335aca62e4f8eb7a434cdce6dc74789fdc68b7df928d540b5ff63a",
-      "target_sha256": "6090c8ff274848a127c7475732f432a44f5066edad0e438c7071022f1087f6be",
-      "terms_sha256_at_translation": "d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a",
+      "source_sha256": "b420596c100822ee36127725a47dbb4d3728957cd39a36f42410e39fd503851e",
+      "translated_source_sha256": "b420596c100822ee36127725a47dbb4d3728957cd39a36f42410e39fd503851e",
+      "target_sha256": "75531dd9758b4cc92a0f763f3e62f6510ffe19c63333f98188eb2e5fdc591434",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "421c529234b0aad0a7729d8ff59baaf53911d413130fe6ea7311cd7667fcb57a",
-      "translated_at": "2026-09-26T11:44:14Z",
+      "translated_at": "2026-09-26T13:37:09Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/13-formacao-onboarding/addon/00-catalogo-requisitos.md": {
@@ -3216,12 +3216,12 @@
     },
     "010-sbd-manual/13-formacao-onboarding/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "2498f19aafd46f99b94d846b12258e80778a15e14edca6698ad4b300a1e4704b",
-      "translated_source_sha256": "2498f19aafd46f99b94d846b12258e80778a15e14edca6698ad4b300a1e4704b",
-      "target_sha256": "df3726e234da66813184dd4687d92035bf83a7906e18b2b6e80dcb0ac7b400ae",
-      "terms_sha256_at_translation": "d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a",
-      "glossary_sha256_at_translation": "48d89a5bc6cffd877a1eab1e9f9706a91f3e40eca990977103a29aafeacb5f35",
-      "translated_at": "2026-09-26T11:44:29Z",
+      "source_sha256": "e9ab7ec48b440e70a333e3c9053231d76e5800946c74385b4bb810410e2378f6",
+      "translated_source_sha256": "e9ab7ec48b440e70a333e3c9053231d76e5800946c74385b4bb810410e2378f6",
+      "target_sha256": "b47243324c7e2346e65bc0633be1b5e1b4506a734d52086c49e2c5915a24b208",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "17c20ad97d714ebf25ddd2a5a68ec9a456cfa5ddf0ee1d5be81eac1dbae20de1",
+      "translated_at": "2026-09-26T13:37:10Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/13-formacao-onboarding/canon/50-ameacas-mitigadas.md": {
@@ -3266,12 +3266,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/achievable-maturity.md": {
       "state": "synced",
-      "source_sha256": "c61331bc4d3a82320cf3347e2b3b868692633b2e013829deaef10e63f67292a6",
-      "translated_source_sha256": "c61331bc4d3a82320cf3347e2b3b868692633b2e013829deaef10e63f67292a6",
-      "target_sha256": "58c2c5ac4a7955e38d0c86455d4c550895675178061e063a105631de0e4bcfbf",
+      "source_sha256": "86565e0a2fac0831cdf14ba54a6822400aa6013f0d3bdbe108ed73e051c9449f",
+      "translated_source_sha256": "86565e0a2fac0831cdf14ba54a6822400aa6013f0d3bdbe108ed73e051c9449f",
+      "target_sha256": "074157776e9b8083fc4b2aeacb9497916d21b6b4ca73e053b05d0e7e45328230",
       "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
       "glossary_sha256_at_translation": "b53be3c3016c35427636086bb5cfba650674a05b0c5118f4428bb85c6db03944",
-      "translated_at": "2026-09-26T12:00:10Z",
+      "translated_at": "2026-09-26T13:37:11Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md": {
@@ -3446,12 +3446,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "4a4ea8831ec78e3b161f64629b0e983b292ba030bcc3f0a15399eb8e559f59d8",
-      "translated_source_sha256": "4a4ea8831ec78e3b161f64629b0e983b292ba030bcc3f0a15399eb8e559f59d8",
-      "target_sha256": "20e3b111554614b9435083bc10676b353dff9ec7cfbc48d225b375f4e4a4aaec",
+      "source_sha256": "598d1e6a46757caee4fb1b7f7ecfcc6749636db77434eae9b3ab3481a7280843",
+      "translated_source_sha256": "598d1e6a46757caee4fb1b7f7ecfcc6749636db77434eae9b3ab3481a7280843",
+      "target_sha256": "28997424a2fc52d898aea34c0fd7b2369e6ffa41867a200be115e996d8f5fcc2",
       "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
-      "glossary_sha256_at_translation": "5bac4cbe246f777048a9a01a8c963b1b997c00fa71844e1ad58af5b58705f553",
-      "translated_at": "2026-09-26T12:00:23Z",
+      "glossary_sha256_at_translation": "b2bdf0bd2dcf1849ee48321b749c0508f0bc7bc577a7f4935dc4f29a1d99a10b",
+      "translated_at": "2026-09-26T13:37:12Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/canon/50-ameacas-mitigadas.md": {

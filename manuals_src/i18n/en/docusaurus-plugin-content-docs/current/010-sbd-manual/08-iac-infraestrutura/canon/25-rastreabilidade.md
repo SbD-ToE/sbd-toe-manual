@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/canon/25-rastreabilidade.md
-  source_sha256: 47ee344a1a3e66cad5397d5c4d973a3d3951c1713c6de682feccb6aeccb7c854
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: aee0cc971dba594f81f91ef6885da7a74856815f48ca79b3a20beb4a1611b9ec
+  source_sha256: 7176b006cd508f50032480c61e87c7dbd4ed5b20ea8058c26fd718b208b9c076
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 3143b703d1eb6871e8f098d8c3a4ead285f80e3093672de181560a359719f180
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, lifecycle_phase, practitioner_manual, provenance, sbdtoe_sbd, slice, traceability, validation_evaluation]
-  glossary_sha256: 8349ff43f97f3c1c547a5c74ec415ce61b96d47966741d5d48b11e6c267e8ccb
-  translated_at: 2026-09-26T09:25:42Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, lifecycle_phase, papel_suporte, practitioner_manual, provenance, sbdtoe_sbd, segregacao_de_funcoes, slice, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: abe00091a9dfcf3f699889af0e5c5ef5a46aebc3e491450a48d01c61bc36219a
+  translated_at: 2026-09-26T13:39:10Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **103 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **119 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -74,7 +74,23 @@ Total: **103 entities** of Manual ontology V2 mapped to this chapter via `sbd-to
 | Practice | `08-iac-infraestrutura:segregacao-de-ambientes-tagging-e-permissoes-minimas` | Segregation of environments, tagging and minimum permissions | normative | explicit | deterministic |
 | Practice | `08-iac-infraestrutura:separacao-de-funcoes-sod-e-controlo-de-execucao-de-apply` | Segregation of duties (SoD) and control of `apply` execution | normative | explicit | deterministic |
 | Practice | `08-iac-infraestrutura:validacoes-automaticas-integradas` | Integrated automatic validations | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-132` | Insecure or permissive defaults | normative | heuristic | bounded |
+| Threat | `MT-133` | Configurations without validation | normative | heuristic | bounded |
+| Threat | `MT-134` | Critical fields left blank or default | normative | heuristic | bounded |
+| Threat | `MT-135` | Inconsistent environments between executions | normative | heuristic | bounded |
+| Threat | `MT-136` | Use of insecure modules or modules without validation | normative | heuristic | bounded |
+| Threat | `MT-137` | Hardcoding of critical parameters | normative | heuristic | bounded |
+| Threat | `MT-138` | Insecure environments provisioned by mistake | normative | heuristic | bounded |
+| Threat | `MT-139` | Provisioning with excessive permissions | normative | heuristic | bounded |
+| Threat | `MT-140` | Lack of data classification tags | normative | heuristic | bounded |
+| Threat | `MT-141` | Use of real data in test environments | normative | heuristic | bounded |
+| Threat | `MT-142` | Hardcoded or poorly managed secrets | normative | heuristic | bounded |
+| Threat | `MT-143` | Changes applied without review | normative | heuristic | bounded |
+| Threat | `MT-144` | Lack of owner and accountability | normative | heuristic | bounded |
+| Threat | `MT-145` | Reuse of modules without tracking | normative | heuristic | bounded |
+| Threat | `MT-146` | Application of insecure changes through bypass | normative | heuristic | bounded |
+| Threat | `MT-147` | Informal or non-existent justifications | normative | heuristic | bounded |
+| Threat | `MT-148` | Environments provisioned with accumulated exceptions | normative | heuristic | bounded |
 | Concept | `sem:concept:catalogo-de-modulos-internos-certificados` | Catalogue of certified internal modules | semantic | scored | bounded |
 | Concept | `sem:concept:dashboards-de-validacao-automatizada` | Automated validation dashboards | semantic | scored | bounded |
 | Concept | `sem:concept:drift` | drift | semantic | scored | bounded |

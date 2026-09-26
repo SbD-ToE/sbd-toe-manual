@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/achievable-maturity.md
-  source_sha256: 8e3bc85a88335aca62e4f8eb7a434cdce6dc74789fdc68b7df928d540b5ff63a
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 6090c8ff274848a127c7475732f432a44f5066edad0e438c7071022f1087f6be
+  source_sha256: b420596c100822ee36127725a47dbb4d3728957cd39a36f42410e39fd503851e
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 75531dd9758b4cc92a0f763f3e62f6510ffe19c63333f98188eb2e5fdc591434
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, risk_level, sbdtoe_sbd, shacl_owl, traceability, trilho_formativo]
   glossary_sha256: 421c529234b0aad0a7729d8ff59baaf53911d413130fe6ea7311cd7667fcb57a
-  translated_at: 2026-09-26T11:44:14Z
+  translated_at: 2026-09-26T13:37:09Z
   reviewed_by: null
 ---
 
@@ -38,11 +38,11 @@ Total: **6 MaturityMapping entities** mapped to this chapter (via `sbd-toe-knowl
 | Entity type | ID | Framework | Framework area | Authority class | Source mode |
 |---|---|---|---|---|---|
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:owasp-dsomm-education-training:education-training` | OWASP DSOMM | Education & Training | external | derived |
-| MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Adaptive training, continuous feedback, integration with matur | external | derived |
+| MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Adaptive training, continuous feedback, integration with maturity | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:1` | OWASP SAMM | Governance → Education & Guidance | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:2` | OWASP SAMM | Governance → Education & Guidance | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:3` | OWASP SAMM | Governance → Education & Guidance | external | derived |
-| MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:visao-geral-de-alinhamento:samm-v2-1` | OWASP SAMM | Training tracks by role and risk, traceability, cham | external | derived |
+| MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:visao-geral-de-alinhamento:samm-v2-1` | OWASP SAMM | Training tracks by role and risk, traceability, champions | external | derived |
 
 ---
 

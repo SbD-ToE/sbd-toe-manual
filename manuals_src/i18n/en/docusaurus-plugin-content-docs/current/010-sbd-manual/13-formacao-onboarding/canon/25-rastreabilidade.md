@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/canon/25-rastreabilidade.md
-  source_sha256: 2498f19aafd46f99b94d846b12258e80778a15e14edca6698ad4b300a1e4704b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: df3726e234da66813184dd4687d92035bf83a7906e18b2b6e80dcb0ac7b400ae
+  source_sha256: e9ab7ec48b440e70a333e3c9053231d76e5800946c74385b4bb810410e2378f6
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: b47243324c7e2346e65bc0633be1b5e1b4506a734d52086c49e2c5915a24b208
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: d743dfcba33f930c34618b93d1eaaa34f697328d45aaf3bb657c33b8b3c59c9a
-  glossary_keys: [appsec_core, capacitacao, chapter_role, practitioner_manual, programme_line, sbdtoe_sbd, slice, traceability, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation]
-  glossary_sha256: 48d89a5bc6cffd877a1eab1e9f9706a91f3e40eca990977103a29aafeacb5f35
-  translated_at: 2026-09-26T11:44:29Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, capacitacao, chapter_role, practitioner_manual, programme_line, sbdtoe_sbd, slice, slug_threat_modeling, traceability, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation]
+  glossary_sha256: 17c20ad97d714ebf25ddd2a5a68ec9a456cfa5ddf0ee1d5be81eac1dbae20de1
+  translated_at: 2026-09-26T13:37:10Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **88 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **97 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -67,7 +67,16 @@ Total: **88 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `13-formacao-onboarding:validacao-de-conhecimento-via-quizzes-estruturados` | Knowledge Validation via Structured Quizzes | normative | explicit | deterministic |
 | Practice | `13-formacao-onboarding:validacao-formal-de-onboarding-via-checklist` | Formal Onboarding Validation via Checklist | normative | explicit | deterministic |
 | Practice | `13-formacao-onboarding:war-room-e-simulacoes-de-incidentes` | War Room and Incident Simulations | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-212` | Insecure configuration due to lack of knowledge | normative | heuristic | bounded |
+| Threat | `MT-213` | Improper reuse of secrets or tokens | normative | heuristic | bounded |
+| Threat | `MT-214` | Technical access granted without validation | normative | heuristic | bounded |
+| Threat | `MT-215` | Inclusion of third parties without validation | normative | heuristic | bounded |
+| Threat | `MT-216` | Lack of ownership of security | normative | heuristic | bounded |
+| Threat | `MT-217` | Behavioural regression / fragile culture | normative | heuristic | bounded |
+| Threat | `MT-218` | Non-traceable training | normative | heuristic | bounded |
+| Threat | `MT-219` | Uneven training across teams or roles | normative | heuristic | bounded |
+| Threat | `MT-220` | Theoretical training without practical impact | normative | heuristic | bounded |
+| Threat | `MT-221` | Outdated or non-applicable content | normative | heuristic | bounded |
 | Concept | `sem:concept:champion-seguranca` | security champions | semantic | scored | bounded |
 | Concept | `sem:concept:champions` | Champions | semantic | scored | bounded |
 | Concept | `sem:concept:checklist-de-validacao` | Validation Checklist | semantic | scored | bounded |

@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md
-  source_sha256: ccd05f4ff6699e7c7dcf520df8e184739fee47b6da119a44dcbcc174ba7b7d3b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 194c78e9020f6e2348b42e4c720aacc3ff354971d5a84beaf736fc800f723dcf
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
   target_sha256: 022d2e3a638a94a09b059d52c3cfc1d577e0afd262244e8463a23c3683a893e6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, traceability]
   glossary_sha256: 0cd1e6309433d4e75cb1b588a32a8a222349580641d4ab09d983b24c6528e57c
-  translated_at: 2026-09-25T20:18:42Z
+  translated_at: 2026-09-26T13:36:54Z
   reviewed_by: null
 ---
 

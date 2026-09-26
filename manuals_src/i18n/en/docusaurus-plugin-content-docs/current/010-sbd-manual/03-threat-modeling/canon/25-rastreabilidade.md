@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/canon/25-rastreabilidade.md
-  source_sha256: 52472c95693dedd8aa9958bf5612affc0893532a23452750724d151b87169788
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 6449cb9412953e0222a03196ad4b92ceabc918e95d4efcf3ef7a66d58d51913e
+  source_sha256: 36e29f2c834ab6eaba7a080edf93981c87bf9fc2cc8075d4a2ba1d60807f520b
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 459fac9d0293bcdc37f277b2c36bffbc1d1839720df2611d4dd0956449652647
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, practitioner_manual, requirement_runtime, sbdtoe_sbd, slice, threat, traceability, v1_entity_tmr_risk_governance, v1_entity_tmr_scope_trigger, validation_evaluation]
-  glossary_sha256: 3098d7a082056cdb2d325b0c99bb8280a988a65c335f4bb7250ef618c3b10b98
-  translated_at: 2026-09-25T20:17:27Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, practitioner_manual, requirement_runtime, sbdtoe_sbd, slice, slug_threat_modeling, threat, traceability, v1_entity_tmr_risk_governance, v1_entity_tmr_scope_trigger, validation_evaluation]
+  glossary_sha256: 6408e2bbbe201f2a1f65807f8403ca7398a878a948288870220b993941c99057
+  translated_at: 2026-09-26T13:36:57Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **25 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **61 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **76 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -55,7 +55,22 @@ Total: **61 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `03-threat-modeling:reutilizacao-controlada-e-revisao-de-modelos-anteriores` | Controlled reuse and review of earlier models | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-arquitetura-com-threat-modeling` | Architecture validation with threat modelling | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-impacto-no-negocio` | Business impact validation | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-039` | Unknown and unaddressed threats | normative | heuristic | bounded |
+| Threat | `MT-040` | Poorly defined security priorities | normative | heuristic | bounded |
+| Threat | `MT-041` | Requirements defined without a basis in threats | normative | heuristic | bounded |
+| Threat | `MT-042` | Privacy threats ignored | normative | heuristic | bounded |
+| Threat | `MT-043` | Lack of coverage of non-technical threats | normative | heuristic | bounded |
+| Threat | `MT-044` | Insecure architecture not identified | normative | heuristic | bounded |
+| Threat | `MT-045` | Superficial validation in design reviews | normative | heuristic | bounded |
+| Threat | `MT-046` | Controls applied without a basis in architecture | normative | heuristic | bounded |
+| Threat | `MT-047` | Absence of review of critical interfaces | normative | heuristic | bounded |
+| Threat | `MT-048` | Threats discovered too late | normative | heuristic | bounded |
+| Threat | `MT-049` | Critical changes without new modelling | normative | heuristic | bounded |
+| Threat | `MT-050` | Discontinuity between teams and phases | normative | heuristic | bounded |
+| Threat | `MT-051` | Threats not visible in the CI/CD pipeline | normative | heuristic | bounded |
+| Threat | `MT-052` | Threat knowledge not accumulated | normative | heuristic | bounded |
+| Threat | `MT-053` | Inconsistency between projects and teams | normative | heuristic | bounded |
+| Threat | `MT-054` | Tools disconnected from the cycle | normative | heuristic | bounded |
 | Concept | `sem:concept:backlog-items` | Backlog Items | semantic | scored | bounded |
 | Concept | `sem:concept:catalogo-de-requisitos` | Requirements Catalogue | semantic | scored | bounded |
 | Concept | `sem:concept:context-diagrams` | Context Diagrams | semantic | scored | bounded |

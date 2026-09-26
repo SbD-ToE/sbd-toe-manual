@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/canon/25-rastreabilidade.md
-  source_sha256: f1cb35a1aded4afdbcc73943bb3c8101cec37b9e3058814d224b83969ae91542
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8a527bc4542d3f0f7ee10c8f5406aa878c49bfef880f40589ae1da62d5e7b153
+  source_sha256: d403d5cadd0e0c97e6cb84c76096eae84d8f49642cebaf71bef03eeb1cf7b1d2
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 011c0ad1d282147365a6cec0c9040da551ab0cdd9fa397a528f6efffb420c3a6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 112d795f9bd927f0d4c24114e389470217eb00c1d6b919ae2df2e4f7bdb4878d
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [appsec_core, audit_trail, chapter_role, practitioner_manual, provenance, sbdtoe_sbd, slice, traceability, v1_entity_rpr_release_authorization, v1_entity_rpr_verified_artifact_promotion, validation_evaluation]
   glossary_sha256: 03788518367f99bfde0a4fc62beb23f7b7784f4140ec9da7b89576f7256d2268
-  translated_at: 2026-09-26T11:00:55Z
+  translated_at: 2026-09-26T13:37:08Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **27 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **44 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **58 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -66,7 +66,21 @@ Total: **44 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `11-deploy-seguro:validacao-humana-obrigatoria-apos-deploy-automatizado` | Mandatory human validation after automated deployment | normative | explicit | deterministic |
 | Practice | `11-deploy-seguro:validacoes-tecnicas-pre-deploy-com-gates-condicionais` | Pre-deployment technical validations with conditional *gates* | normative | explicit | deterministic |
 | Practice | `11-deploy-seguro:versionamento-semantico-e-changelog-tecnico` | Semantic versioning and technical *changelog* | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-182` | Code in production without validation | normative | heuristic | bounded |
+| Threat | `MT-183` | Functional activation without control | normative | heuristic | bounded |
+| Threat | `MT-184` | Manual promotion outside the CI/CD | normative | heuristic | bounded |
+| Threat | `MT-185` | Failed deployment without rollback | normative | heuristic | bounded |
+| Threat | `MT-186` | Irreversible feature | normative | heuristic | bounded |
+| Threat | `MT-187` | Failure without response | normative | heuristic | bounded |
+| Threat | `MT-188` | Joint release without segmentation | normative | heuristic | bounded |
+| Threat | `MT-189` | Feature exposed to all users | normative | heuristic | bounded |
+| Threat | `MT-190` | Lack of operational validation | normative | heuristic | bounded |
+| Threat | `MT-191` | Undetected post-deployment failures | normative | heuristic | bounded |
+| Threat | `MT-192` | Late response to critical problems | normative | heuristic | bounded |
+| Threat | `MT-193` | Critical events ignored | normative | heuristic | bounded |
+| Threat | `MT-194` | Toggle activated inadvertently | normative | heuristic | bounded |
+| Threat | `MT-195` | Release without geographical or logical segmentation | normative | heuristic | bounded |
+| Threat | `MT-196` | Execution of a non-validated critical function | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

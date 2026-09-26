@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/canon/25-rastreabilidade.md
-  source_sha256: 6cc68debdcfc1b9da55edde1bdba780438c6eb7e3907ac8b1f6746611125eef3
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: b13acf8d38ce5ae6a56422e256510f8c50fddf1657686245f806fb1143164518
+  source_sha256: c413746d30df02fc6b444f5b5327a80a86a7d9e0e87aa76c59951360775a9370
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 1292d8e06a75f08fbe5e37c3f92a641b92cf9efa4902ba6c47c45499c4641470
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5536afdcc04f76a07c66e747133c73d68308884707c296abf945937a9630a312
-  glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, mcp, practitioner_manual, sbdtoe_sbd, slice, traceability, v1_entity_atb_dfd_modeling, v1_entity_iat_authorization_policy, v1_entity_iat_least_privilege_authorization, v1_entity_its_authorized_peer_policies, v1_entity_its_authorized_peer_validation, validation_evaluation]
-  glossary_sha256: 44fcb030f40e50c93208807f2d5531806bfac8478442ec10a7dcc1cc0c527a08
-  translated_at: 2026-09-26T08:32:10Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, mcp, practitioner_manual, sbdtoe_sbd, slice, slug_threat_modeling, traceability, v1_entity_atb_dfd_modeling, v1_entity_iat_authorization_policy, v1_entity_iat_least_privilege_authorization, v1_entity_its_authorized_peer_policies, v1_entity_its_authorized_peer_validation, validation_evaluation]
+  glossary_sha256: 7825a4c17bfb909ab7d3ce5dd01c502a94b97e8d51e6dddd88bae0c831b58bae
+  translated_at: 2026-09-26T13:36:58Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **56 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **83 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **100 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -67,7 +67,24 @@ Total: **83 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `04-arquitetura-segura:sincronizacao-threat-modeling-arquitetura` | Threat Modelling ↔ Architecture synchronisation | normative | explicit | deterministic |
 | Practice | `04-arquitetura-segura:triggers-de-arquitetura-viva-e-disciplina-de-revisao` | “Living architecture” triggers and review discipline | normative | explicit | deterministic |
 | Practice | `04-arquitetura-segura:validacao-arquitetural-automatizavel-no-ci-cd-quando-aplicavel` | Automatable architectural validation in the CI/CD (where applicable) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-055` | Exposed interfaces without isolation | normative | heuristic | bounded |
+| Threat | `MT-056` | Data and control mixed in the same zone | normative | heuristic | bounded |
+| Threat | `MT-057` | Uncontrolled lateral access between modules | normative | heuristic | bounded |
+| Threat | `MT-058` | Absence of isolation between users | normative | heuristic | bounded |
+| Threat | `MT-059` | Non-existent or outdated architecture | normative | heuristic | bounded |
+| Threat | `MT-060` | Confusion about the location of controls | normative | heuristic | bounded |
+| Threat | `MT-061` | Ambiguity about boundaries and zones | normative | heuristic | bounded |
+| Threat | `MT-062` | Architecture does not review fallback mechanisms | normative | heuristic | bounded |
+| Threat | `MT-063` | Architecture never reviewed | normative | heuristic | bounded |
+| Threat | `MT-064` | Structural changes without revalidation | normative | heuristic | bounded |
+| Threat | `MT-065` | Informal or ad hoc design | normative | heuristic | bounded |
+| Threat | `MT-066` | Architecture exceptions without a trace | normative | heuristic | bounded |
+| Threat | `MT-067` | Architecture requirements not defined | normative | heuristic | bounded |
+| Threat | `MT-068` | Impossibility of mapping decisions to controls | normative | heuristic | bounded |
+| Threat | `MT-069` | Diagram does not reflect implemented controls | normative | heuristic | bounded |
+| Threat | `MT-070` | L1 applications treated as critical | normative | heuristic | bounded |
+| Threat | `MT-071` | Over-dimensioning of the architecture's security | normative | heuristic | bounded |
+| Threat | `MT-072` | Execution environments not reflected in the design | normative | heuristic | bounded |
 | Concept | `sem:concept:confianca` | trust | semantic | scored | bounded |
 | Concept | `sem:concept:controlos-de-seguranca` | Security controls | semantic | scored | bounded |
 | Concept | `sem:concept:controlos-interzonais` | inter-zone controls | semantic | scored | bounded |

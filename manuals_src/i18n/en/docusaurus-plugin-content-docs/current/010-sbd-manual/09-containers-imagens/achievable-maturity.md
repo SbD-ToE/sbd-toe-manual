@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/achievable-maturity.md
-  source_sha256: aa3ac6445f991ebc662368d810023530a2c4de59bd662e65d9b0866fd6b926e6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3b6f26f373c70056ca75e90e90d691d9ee29534853bb1c354b04d384040b040f
+  source_sha256: 55596c09119c424214297c40e33b628ac46f732f5dbca24be6e25e0a2bdd7aff
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 6a0809562246c764e1058a6cf2c6d0b5de0587262ea5ab945bfe591c40a3787e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [audit_trail, chapter_role, framework_source_corpus, maturity, practitioner_manual, provenance, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: f1c7971f2339e29a94eac291d077ea4cba9f03650a1190206d6eb56bef540599
-  translated_at: 2026-09-26T09:58:12Z
+  translated_at: 2026-09-26T13:37:05Z
   reviewed_by: null
 ---
 
@@ -40,16 +40,16 @@ Total: **13 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:build-deploy` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:ops-monitoring` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:owasp-dsomm-build-deploy-supply-chain-ops-monitoring:supply-chain` | OWASP DSOMM | Build & Deploy / Supply Chain / Ops Monitoring | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Deterministic build, provenance, hardening and observa | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Deterministic build, provenance, hardening and runtime observability | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:1` | OWASP SAMM | Deployment, Verification and Governance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:2` | OWASP SAMM | Deployment, Verification and Governance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:owasp-samm:owasp-samm-deployment-verification-e-governance:3` | OWASP SAMM | Deployment, Verification and Governance | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Secure build, policy-as-code, signing, control of regist | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:owasp-samm:visao-geral-de-alinhamento:owasp-samm-v2-1` | OWASP SAMM | Secure build, policy-as-code, signing, control of registries and validation of manifests | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:1` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:2` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:3` | SLSA | Build Integrity & Provenance | external | derived |
 | MaturityMapping | `09-containers-imagens:maturity:slsa:slsa-v1-0-build-integrity-provenance:4` | SLSA | Build Integrity & Provenance | external | derived |
-| MaturityMapping | `09-containers-imagens:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Signatures, attestations, trusted pipelines and digest pin | external | derived |
+| MaturityMapping | `09-containers-imagens:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Signatures, attestations, trusted pipelines and digest pinning | external | derived |
 
 ---
 
@@ -66,7 +66,7 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 | OWASP SAMM | Deployment, Verification and Governance | Minimum governance of images and registries | `achievable-maturity.md` | 0.90 | Explicit |
 | OWASP SAMM | Deployment, Verification and Governance | Scanning and signing in CI/CD | `achievable-maturity.md` | 0.90 | Explicit |
 | OWASP SAMM | Deployment, Verification and Governance | Policy-as-code, admission controllers, auditable traceability | `achievable-maturity.md` | 0.90 | Explicit |
-| OWASP SAMM | — | Secure build, policy-as-code, signing, control of registries and validation of ma | `achievable-maturity.md` | 0.90 | Explicit |
+| OWASP SAMM | — | Secure build, policy-as-code, signing, control of registries and validation of manifests | `achievable-maturity.md` | 0.90 | Explicit |
 
 ---
 

@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/canon/25-rastreabilidade.md
-  source_sha256: 4a4ea8831ec78e3b161f64629b0e983b292ba030bcc3f0a15399eb8e559f59d8
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 20e3b111554614b9435083bc10676b353dff9ec7cfbc48d225b375f4e4a4aaec
+  source_sha256: 598d1e6a46757caee4fb1b7f7ecfcc6749636db77434eae9b3ab3481a7280843
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 28997424a2fc52d898aea34c0fd7b2369e6ffa41867a200be115e996d8f5fcc2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
-  glossary_keys: [alcada, appsec_core, chapter_role, cycle_iteration, maturity, practitioner_manual, risk_level, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation]
-  glossary_sha256: 5bac4cbe246f777048a9a01a8c963b1b997c00fa71844e1ad58af5b58705f553
-  translated_at: 2026-09-26T12:00:23Z
+  glossary_keys: [alcada, appsec_core, avaliacao, chapter_role, cycle_iteration, maturity, practitioner_manual, risk_level, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: b2bdf0bd2dcf1849ee48321b749c0508f0bc7bc577a7f4935dc4f29a1d99a10b
+  translated_at: 2026-09-26T13:37:12Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **87 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **98 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -76,7 +76,18 @@ Total: **87 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `14-governanca-contratacao:trilho-de-formacao-obrigatoria-pre-acesso-contractors` | Mandatory pre-Access Training Track (Contractors) | normative | explicit | deterministic |
 | Practice | `14-governanca-contratacao:validacao-continua-de-fornecedores` | Continuous supplier validation | normative | explicit | deterministic |
 | Practice | `14-governanca-contratacao:validacao-periodica-de-aplicacoes-ciclo-de-conformidade` | Periodic validation of applications (compliance cycle) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-222` | Supplier adoption without assessment | normative | heuristic | bounded |
+| Threat | `MT-223` | Lack of contractual clauses | normative | heuristic | bounded |
+| Threat | `MT-224` | Use of services without tracking | normative | heuristic | bounded |
+| Threat | `MT-225` | Parallel initiatives without coordination | normative | heuristic | bounded |
+| Threat | `MT-226` | Lack of organisational continuity | normative | heuristic | bounded |
+| Threat | `MT-227` | Risk of legacy decisions without control | normative | heuristic | bounded |
+| Threat | `MT-228` | Decisions not reviewed when the context changes | normative | heuristic | bounded |
+| Threat | `MT-229` | Lack of governance over historical decisions | normative | heuristic | bounded |
+| Threat | `MT-230` | Lack of knowledge of the security state | normative | heuristic | bounded |
+| Threat | `MT-231` | Disjointed security strategy | normative | heuristic | bounded |
+| Threat | `MT-232` | Security defined but not applied | normative | heuristic | bounded |
+| Threat | `MT-233` | Security policies not institutionalised | normative | heuristic | bounded |
 | Concept | `sem:concept:ciclo-sbd-toe` | SbD-ToE cycle | semantic | scored | bounded |
 | Concept | `sem:concept:clausulas-contratuais-de-sbd-toe` | SbD-ToE contractual clauses | semantic | scored | bounded |
 | Concept | `sem:concept:clausulas-contratuais-de-seguranca` | security contractual clauses | semantic | scored | bounded |
@@ -86,7 +97,7 @@ Total: **87 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Concept | `sem:concept:governacao` | governance | semantic | scored | bounded |
 | Concept | `sem:concept:governanca-organizacional` | organisational governance | semantic | scored | bounded |
 | Concept | `sem:concept:kpis-consolidados` | consolidated KPIs | semantic | scored | bounded |
-| Concept | `sem:concept:kpis-de-governacao` | governance KPIs | semantic | scored | bounded |
+| Concept | `sem:concept:kpis-de-governacao` | Governance KPIs | semantic | scored | bounded |
 | Concept | `sem:concept:modelo-de-governacao-e-autoridade` | governance and authority model | semantic | scored | bounded |
 | Concept | `sem:concept:modelo-formal-e-aprovado-de-governacao` | formal and approved governance model | semantic | scored | bounded |
 | Concept | `sem:concept:papeis-envolvidos` | roles involved | semantic | scored | bounded |
@@ -112,7 +123,7 @@ Total: **87 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Signal | `sem:signal:clausulas-contratuais-rastreadas` | Tracked contractual clauses | semantic | scored | bounded |
 | Signal | `sem:signal:excecoes-as-praticas-prescritas` | exceptions to the prescribed practices | semantic | scored | bounded |
 | Signal | `sem:signal:excecoes-registadas-e-aprovadas` | Recorded and approved exceptions | semantic | scored | bounded |
-| Signal | `sem:signal:kpis-consolidados` | Consolidated KPIs | semantic | scored | bounded |
+| Signal | `sem:signal:kpis-consolidados` | consolidated KPIs | semantic | scored | bounded |
 | Signal | `sem:signal:kpis-de-governacao` | Governance KPIs | semantic | scored | bounded |
 | Signal | `sem:signal:ligacao-explicita-a-frameworks-normativos` | Explicit linkage to regulatory frameworks | semantic | scored | bounded |
 | Signal | `sem:signal:registo-e-aprovacao-de-excecoes` | recording and approval of exceptions | semantic | scored | bounded |

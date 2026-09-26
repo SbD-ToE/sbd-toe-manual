@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/canon/25-rastreabilidade.md
-  source_sha256: 69d901701a4296ed6120dc000636c2d32d7b89eef63a2c173bd9fdd12fe9371d
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 000e0fce7a34a1f7436a4628c92b2b693370242a7528c9ebb4aca3ae588daf8c
+  source_sha256: 582cdc45b3708779c8993ab8d6eec408528603fb3b0f199d772ade4f0815b436
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 1adbc4e54cc6a8dc417bf2cf5d2c0c563de716a1b07ca8102cbb40f231bbcde8
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [appsec_core, chapter_role, framework_source_corpus, llm, practitioner_manual, sbdtoe_sbd, slice, traceability, v1_entity_slg_central_ingestion_normalization, v1_entity_slg_centralized_ingestion_accountability, v1_entity_slg_critical_event_catalog_discipline, v1_entity_slg_critical_event_catalog_governance, v1_entity_slg_event_catalog_coverage, v1_entity_slg_structured_centralized_logging, validation_evaluation]
   glossary_sha256: 9d3d1f77d71f6aee8e15f512459f22d004b89606ddae43692003320739592508
-  translated_at: 2026-09-26T11:17:35Z
+  translated_at: 2026-09-26T13:37:09Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **18 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **82 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **96 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -48,7 +48,7 @@ Total: **82 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Requirement | `OPS-009` | Behavioural detection and baseline of normal activity | normative | explicit | deterministic |
 | Requirement | `OPS-010` | Monitoring effectiveness metrics measured and reviewed | normative | explicit | deterministic |
 | Control | `CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70` | Monitoring and operational response | normative | explicit | deterministic |
-| Practice | `12-monitorizacao-operacoes:alertas-com-slas-definidosum-alerta-sem-prazo-de-resposta-e-apenas-ruido` | Alerts with defined SLAsAn alert without a response deadline is just noise. | normative | explicit | deterministic |
+| Practice | `12-monitorizacao-operacoes:alertas-com-slas-definidos` | Alerts with defined SLAs | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:classificacao-e-cobertura-de-dominios-de-monitorizacao` | Classification and Coverage of Monitoring Domains | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:correlacao-de-eventos-e-detecao-comportamental` | Event Correlation and Behavioural Detection | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:definicao-de-eventos-e-metricas-criticas` | Definition of critical events and metrics | normative | explicit | deterministic |
@@ -60,7 +60,21 @@ Total: **82 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `12-monitorizacao-operacoes:rastreabilidade-e-conformidade-com-regulacoes-ssdf-nis2-iso-27001` | Traceability and Compliance with Regulations (SSDF, NIS2, ISO 27001) | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:seguranca-e-integridade-de-logs` | Log Security and Integrity | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:validacao-e-tuning-de-alertas` | Alert Validation and *Tuning* | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-197` | Critical events not recorded | normative | heuristic | bounded |
+| Threat | `MT-198` | Volatile or truncated logs | normative | heuristic | bounded |
+| Threat | `MT-199` | Lack of execution traceability | normative | heuristic | bounded |
+| Threat | `MT-200` | Incidents without an alert | normative | heuristic | bounded |
+| Threat | `MT-201` | Alerts ignored due to noise | normative | heuristic | bounded |
+| Threat | `MT-202` | Lack of alert correlation | normative | heuristic | bounded |
+| Threat | `MT-203` | Incidents without a defined owner | normative | heuristic | bounded |
+| Threat | `MT-204` | Ad-hoc or late reaction | normative | heuristic | bounded |
+| Threat | `MT-205` | Events without action triggered | normative | heuristic | bounded |
+| Threat | `MT-206` | Absence of posture metrics | normative | heuristic | bounded |
+| Threat | `MT-207` | Inability to prioritise risks | normative | heuristic | bounded |
+| Threat | `MT-208` | Data without granularity or overview | normative | heuristic | bounded |
+| Threat | `MT-209` | New systems without monitoring | normative | heuristic | bounded |
+| Threat | `MT-210` | Teams ignore operational alerts | normative | heuristic | bounded |
+| Threat | `MT-211` | Data not used for continuous improvement | normative | heuristic | bounded |
 | Concept | `sem:concept:alert-fatigue` | Alert fatigue | semantic | scored | bounded |
 | Concept | `sem:concept:alertas-acionaveis` | Actionable alerts | semantic | scored | bounded |
 | Concept | `sem:concept:canal-de-notificacao` | Notification channel | semantic | scored | bounded |

@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/achievable-maturity.md
-  source_sha256: 449babadf7bd6356bea6cad73526917ad11b5947a710937efe7b576941bae9be
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 00d8623306676ff76df39b9af67e2f802c3d461442ee3a32cef520a6e1f2d8ba
+  source_sha256: ffc27266299928c1d84a2ed289758fa457608baf5d8865db485ddbe2c29584a8
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 7f259e0f302b2301775f7af1417732b7ae8abc9ccfdf2d61ea4606d15a0672fc
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, maturity, practitioner_manual, provenance, sbdtoe_sbd, shacl_owl, traceability, validation_evaluation]
   glossary_sha256: c549f75e0f101e1e0301dde3ae439a4c8223117053e0bb967c29e3b829cc38b3
-  translated_at: 2026-09-26T09:09:10Z
+  translated_at: 2026-09-26T13:37:02Z
   reviewed_by: null
 ---
 
@@ -41,7 +41,7 @@ Total: **14 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:operate` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:release` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:test` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
-| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Secure execution, artefact validation, signatures, trac | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Secure execution, artefact validation, signatures, traceability | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:1` | OWASP SAMM | Build & Deployment Automation | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:2` | OWASP SAMM | Build & Deployment Automation | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:3` | OWASP SAMM | Build & Deployment Automation | external | derived |
@@ -50,7 +50,7 @@ Total: **14 MaturityMapping entities** mapped to this chapter (via `sbd-toe-know
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:2` | SLSA | Provenance & CI/CD Control | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:3` | SLSA | Provenance & CI/CD Control | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:4` | SLSA | Provenance & CI/CD Control | external | derived |
-| MaturityMapping | `07-cicd-seguro:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Provenance, trusted builders, execution control, harden | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Provenance, trusted builders, execution control, hardening of pipelines | external | derived |
 
 ---
 

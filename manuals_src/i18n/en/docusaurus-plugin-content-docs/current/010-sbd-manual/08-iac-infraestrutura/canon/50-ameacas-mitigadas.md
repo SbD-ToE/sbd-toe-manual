@@ -5,13 +5,13 @@ translation:
   source_path: 010-sbd-manual/08-iac-infraestrutura/canon/50-ameacas-mitigadas.md
   source_sha256: ae04e91497b31db7e4c3c389b80c45eeab8c48bd44d6ced6fdda4e6134342303
   source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 97e6504bbcc8c3319968aac418e944dddd0ee5cdafbdb699c1afdf39f6739353
+  target_sha256: add137084bbd15be7cfd6c839cfe1e556ca167c893fd10d014ed3bddb6f78614
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [appsec_core, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, sbdtoe_sbd, threat, validation_evaluation]
   glossary_sha256: 5a04226a675e95805042c589c14e80029ea0fd1d635a0791f8a1a1a02b87bc71
-  translated_at: 2026-09-26T09:25:43Z
+  translated_at: 2026-09-26T13:39:11Z
   reviewed_by: null
 ---
 
@@ -42,7 +42,7 @@ Total: **28 entities** (Threat × 17, AntiPattern × 6, Signal × 5) mapped to t
 | Threat | `MT-133` | Configurations without validation | normative | heuristic |
 | Threat | `MT-134` | Critical fields left blank or default | normative | heuristic |
 | Threat | `MT-135` | Inconsistent environments between executions | normative | heuristic |
-| Threat | `MT-136` | Use of insecure or unvalidated modules | normative | heuristic |
+| Threat | `MT-136` | Use of insecure modules or modules without validation | normative | heuristic |
 | Threat | `MT-137` | Hardcoding of critical parameters | normative | heuristic |
 | Threat | `MT-138` | Insecure environments provisioned by mistake | normative | heuristic |
 | Threat | `MT-139` | Provisioning with excessive permissions | normative | heuristic |
@@ -79,7 +79,7 @@ Canonical threat surfaces per Manual + CAPEC primary anchor (per §26 §4 discip
 | `MT-133` | STRIDE | Configurations without validation | — | `addon/06-controle-enforcement.md` | partial | Explicit |
 | `MT-134` | STRIDE | Critical fields left blank or default | — | `addon/07-rastreabilidade-e-tags.md` | partial | Explicit |
 | `MT-135` | STRIDE | Inconsistent environments between executions | — | `addon/06`, `addon/30-recomendacoes-avancadas` | partial | Explicit |
-| `MT-136` | STRIDE | Use of insecure or unvalidated modules | — | `addon/03-governanca-modulos.md` | partial | Explicit |
+| `MT-136` | STRIDE | Use of insecure modules or modules without validation | — | `addon/03-governanca-modulos.md` | partial | Explicit |
 | `MT-137` | STRIDE | Hardcoding of critical parameters | — | `addon/02-validacoes-e-checks.md` | partial | Explicit |
 | `MT-138` | STRIDE | Insecure environments provisioned by mistake | — | `addon/01-planeamento-e-controle.md` | partial | Explicit |
 | `MT-139` | STRIDE | Provisioning with excessive permissions | — | `addon/04-principios-sbd-iac.md` | partial | Explicit |

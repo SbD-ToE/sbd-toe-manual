@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/canon/25-rastreabilidade.md
-  source_sha256: f9e92f866e6ca8d9ac66c0bf97837588d2549fd26e65d55dee2a02a1ec49e3b4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8a7b02753e3b52a234ba6ac108d21b82e69146e653735c0a91b2c85c5f392e4f
+  source_sha256: 3e9a4a35906ea9c0f16447f670b7b104d18b4996aeb99ae1ae8fc9c06cab1d27
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 6aea1e568d56996a9b70162b76992f3b0100869a672530befd81e308bbc4bb0e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
-  glossary_keys: [appsec_core, capacitacao, chapter_role, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema, slice, threat, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: e816cdace68ace76bade905301121c1996195a60cf991f170df3b6f2e41f9ca2
-  translated_at: 2026-09-25T20:20:16Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, capacitacao, chapter_role, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema, slice, slug_threat_modeling, threat, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: cd687035e18be913f4e1161ae9d07a9311beffce9ec4791956c98ac3a1bb4c7b
+  translated_at: 2026-09-26T13:36:56Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **139 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **156 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -163,7 +163,24 @@ Total: **139 entities** of Manual ontology V2 mapped to this chapter via `sbd-to
 | Practice | `02-requisitos-seguranca:validacao-de-tags-sec-lx-e-requisitos-no-pipeline` | Validation of `SEC-Lx-*` tags and requirements in the pipeline | normative | explicit | deterministic |
 | Practice | `02-requisitos-seguranca:validacao-e-aprovacao-final` | Final validation and approval | normative | explicit | deterministic |
 | Practice | `02-requisitos-seguranca:validacao-por-requisito-dominio-req-xxx-evidencia` | Validation per requirement/domain (REQ-XXX → evidence) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-021` | Absence of security requirements | normative | heuristic | bounded |
+| Threat | `MT-022` | Ambiguous or untestable definition | normative | heuristic | bounded |
+| Threat | `MT-023` | Generic, non-specific requirements | normative | heuristic | bounded |
+| Threat | `MT-024` | Lack of requirements in legacy systems | normative | heuristic | bounded |
+| Threat | `MT-025` | Requirements not aligned with risk | normative | heuristic | bounded |
+| Threat | `MT-026` | Requirements defined but never verified | normative | heuristic | bounded |
+| Threat | `MT-027` | Inconsistent validations across projects | normative | heuristic | bounded |
+| Threat | `MT-028` | No tracing between requirement and test | normative | heuristic | bounded |
+| Threat | `MT-029` | Requirements not verified in CI/CD | normative | heuristic | bounded |
+| Threat | `MT-030` | Risk accepted without documentary validation | normative | heuristic | bounded |
+| Threat | `MT-031` | Undocumented exceptions to requirements | normative | heuristic | bounded |
+| Threat | `MT-032` | Security omitted for “not being functional” | normative | heuristic | bounded |
+| Threat | `MT-033` | Acceptance of exceptions without approval | normative | heuristic | bounded |
+| Threat | `MT-034` | Exceptions not re-verified in time | normative | heuristic | bounded |
+| Threat | `MT-035` | Not knowing whether requirements were applied | normative | heuristic | bounded |
+| Threat | `MT-036` | Requirements applied but not tested | normative | heuristic | bounded |
+| Threat | `MT-037` | Requirement changes not propagated | normative | heuristic | bounded |
+| Threat | `MT-038` | Ambiguity between requirement and control | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

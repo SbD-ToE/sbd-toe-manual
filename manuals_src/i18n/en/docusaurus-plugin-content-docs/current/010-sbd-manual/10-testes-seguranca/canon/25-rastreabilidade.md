@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/canon/25-rastreabilidade.md
-  source_sha256: 3796492514ff67db90a6e55e4df6cac70fa157f136b4ab6a0b19abc16a9a9949
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 25c1a7a1665083521aea595429015233bdb7b0ce0905d8026940283b21e9e3f1
+  source_sha256: 77789469fd4e799140b39080c65ceedc9064175081abf36e646f6ae9601e2cfe
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 47971c08eddfc8dea45da7b9920081417145a631da581a6f24797555d8ed23ae
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 2ffd43fd37c8802a693f5fa1e43a3d3a9df1ca9d5ea898c88f6f405bedc9d687
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [appsec_core, audit_trail, avaliacao, chapter_role, practitioner_manual, risk_level, sbdtoe_sbd, slice, traceability, v1_entity_tsv_specialized_depth, v1_entity_tsv_specialized_testing, validation_evaluation]
   glossary_sha256: be6895156acc86f557b151d045dcd8425ab0eb9aa2847cf9ebc7c87c095af0f8
-  translated_at: 2026-09-26T10:31:37Z
+  translated_at: 2026-09-26T13:37:07Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ V1 entity-level coverage: **19 primary entities**. The structure below exposes t
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **43 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **57 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -65,7 +65,21 @@ Total: **43 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `10-testes-seguranca:separacao-formal-entre-sinal-automatico-e-decisao-de-bloqueio-override` | Formal separation between automatic signal and blocking/override decision | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-empirica-de-exploitabilidade-de-findings` | Empirical Validation of Findings Exploitability | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-humana-da-interpretacao-final-dos-resultados` | Human validation of the final interpretation of results | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-167` | Injections (SQLi, OS Command, etc.) | normative | heuristic | bounded |
+| Threat | `MT-168` | Access control failures | normative | heuristic | bounded |
+| Threat | `MT-169` | Exploitable business logic | normative | heuristic | bounded |
+| Threat | `MT-170` | Security regression | normative | heuristic | bounded |
+| Threat | `MT-171` | Low test coverage | normative | heuristic | bounded |
+| Threat | `MT-172` | Known flaws not tested | normative | heuristic | bounded |
+| Threat | `MT-173` | Flaws detected but not resolved | normative | heuristic | bounded |
+| Threat | `MT-174` | Team without technical feedback | normative | heuristic | bounded |
+| Threat | `MT-175` | Non-repeatable validations | normative | heuristic | bounded |
+| Threat | `MT-176` | Non-scalable manual tests | normative | heuristic | bounded |
+| Threat | `MT-177` | Lack of testing before go-live | normative | heuristic | bounded |
+| Threat | `MT-178` | Quality decision made without basis | normative | heuristic | bounded |
+| Threat | `MT-179` | New classes not detected by SAST/DAST | normative | heuristic | bounded |
+| Threat | `MT-180` | Superficial tests without technical context | normative | heuristic | bounded |
+| Threat | `MT-181` | Tools not calibrated by context | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

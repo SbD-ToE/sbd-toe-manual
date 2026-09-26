@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/canon/25-rastreabilidade.md
-  source_sha256: ee206f71b70358975c7dc8357ebb392d93219246908364fe6e2a8f9cda257219
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 24246eedfb51b48a952636381bcd3ea98950f609f86f820d454ca5389b952249
+  source_sha256: 8eef1b2663776e072ed6508a801499302df9a1b804d894a0b26912d46a9da1b8
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 6597a3f0c89fa74e19d0f77300818f5cb675ed2635d9af78f2220f93b05c6429
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
-  glossary_keys: [appsec_core, audit_trail, chapter_role, deterministic, framework_source_corpus, practitioner_manual, provenance, sbdtoe_sbd, slice, traceability, validation_evaluation]
-  glossary_sha256: 398364776e853c0f37a97c73b2f40d5b802fd37b6016b096adddf4c03e5e313f
-  translated_at: 2026-09-26T09:09:21Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, audit_trail, chapter_role, deterministic, framework_source_corpus, practitioner_manual, provenance, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: 1f0acc5e6f9ec8bef9e2c7ef7fc7a6c8d20971831c8460b381c221542a1c9d78
+  translated_at: 2026-09-26T13:37:03Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **101 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **121 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -72,7 +72,27 @@ Total: **101 entities** of Manual ontology V2 mapped to this chapter via `sbd-to
 | Practice | `07-cicd-seguro:separacao-formal-entre-sinal-automatico-e-decisao-de-promocao` | Formal separation between automatic signal and promotion decision | normative | explicit | deterministic |
 | Practice | `07-cicd-seguro:testes-de-seguranca-dinamicos-dast` | Dynamic security testing (DAST) | normative | explicit | deterministic |
 | Practice | `07-cicd-seguro:validacao-de-integridade-de-imagens-base` | Validation of base image integrity | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-111` | Execution of unauthorised code in the pipeline | normative | heuristic | bounded |
+| Threat | `MT-112` | Compromise of the build environment | normative | heuristic | bounded |
+| Threat | `MT-113` | Privilege escalation in the pipeline | normative | heuristic | bounded |
+| Threat | `MT-114` | Unauthorised push to protected branches | normative | heuristic | bounded |
+| Threat | `MT-115` | Execution of unaudited code | normative | heuristic | bounded |
+| Threat | `MT-116` | Silent replacement of legitimate code | normative | heuristic | bounded |
+| Threat | `MT-117` | Build forged outside the pipeline | normative | heuristic | bounded |
+| Threat | `MT-118` | Injection of dynamic logic into the pipeline | normative | heuristic | bounded |
+| Threat | `MT-119` | Use of insecure external components | normative | heuristic | bounded |
+| Threat | `MT-120` | Leakage of secrets via logs | normative | heuristic | bounded |
+| Threat | `MT-121` | Hardcoded secrets | normative | heuristic | bounded |
+| Threat | `MT-122` | Reuse of secrets | normative | heuristic | bounded |
+| Threat | `MT-123` | Absence of security gates | normative | heuristic | bounded |
+| Threat | `MT-124` | Validations not executed | normative | heuristic | bounded |
+| Threat | `MT-125` | Lack of traceability | normative | heuristic | bounded |
+| Threat | `MT-126` | Bypass of controls without a trace | normative | heuristic | bounded |
+| Threat | `MT-127` | Critical changes without visibility | normative | heuristic | bounded |
+| Threat | `MT-128` | Promotions without a human owner | normative | heuristic | bounded |
+| Threat | `MT-129` | Plausible evidence without execution | normative | heuristic | bounded |
+| Threat | `MT-130` | Non-determinism of the pipeline | normative | heuristic | bounded |
+| Threat | `MT-131` | Exfiltration of sensitive context | normative | heuristic | bounded |
 | Concept | `sem:concept:ambientes-de-execucao` | Execution environments | semantic | scored | bounded |
 | Concept | `sem:concept:appsec` | AppSec | semantic | scored | bounded |
 | Concept | `sem:concept:artefact-protection` | Artefact Protection | semantic | scored | bounded |
@@ -104,7 +124,7 @@ Total: **101 entities** of Manual ontology V2 mapped to this chapter via `sbd-to
 | Mechanism | `sem:mechanism:configuracao-de-oidc-e-ttl-curto-para-segredos` | Configuration of OIDC and short TTL for secrets | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:controlo-de-logging-e-debug-com-ativacao-temporaria-e-auditavel` | Control of logging and debug with temporary and auditable activation | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:gestao-de-segredos` | Secrets management | semantic | scored | bounded |
-| Mechanism | `sem:mechanism:integracao-de-ferramentas-como-semgrep-trivy-cosign-scorecard-e-scanners-de-iac-containers` | Integration of tools such as semgrep, trivy, cosign, scorecard and I scanners | semantic | scored | bounded |
+| Mechanism | `sem:mechanism:integracao-de-ferramentas-como-semgrep-trivy-cosign-scorecard-e-scanners-de-iac-containers` | Integration of tools such as semgrep, trivy, cosign, scorecard and IaC/container scanners | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:integracao-de-scanners-servicos-repositorios-registries` | Integration of scanners, services, repositories, registries | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:logs-mascarados` | masked logs | semantic | scored | bounded |
 | Mechanism | `sem:mechanism:oidc` | OIDC | semantic | scored | bounded |

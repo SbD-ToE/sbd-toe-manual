@@ -3,15 +3,15 @@ id: rastreabilidade
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/canon/25-rastreabilidade.md
-  source_sha256: 4efd3a06cf9d1c4fbc158083ef406f5fbc34d88b2373d5917a8919f80d4ef25f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 768f24dc14bbe8dd407263df9d9a65d3ded30c572ec2c33b9ffeef6dd822f3c4
+  source_sha256: 3288ea4018270e7493e58113d4ce3218e16e1b7a38f7cb06d3119fe671902dbd
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
+  target_sha256: 8e216f4acdb80fe7ecc569d461c3105f6bd782862721b8b611aa8b7a005fd668
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
-  glossary_keys: [appsec_core, audit_trail, chapter_role, practitioner_manual, provenance, sbdtoe_sbd, slice, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 20a47ac9cb29abfb678f9bf6f6cf7490ac7c8243522ba3971353a03f247fb2d7
-  translated_at: 2026-09-26T09:58:22Z
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [appsec_core, audit_trail, chapter_role, practitioner_manual, provenance, sbdtoe_sbd, slice, slug_threat_modeling, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 34a97d56be3d4a27ef79970358959f37bf480f407e43607af3329a3cd48a5790
+  translated_at: 2026-09-26T13:37:06Z
   reviewed_by: null
 ---
 
@@ -38,7 +38,7 @@ This chapter **is not the primary anchor** of any AppSec Core V1 slice. The exte
 
 ## § Manual ontology V2 — canonical entities of this chapter {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **50 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **67 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -58,10 +58,10 @@ Total: **50 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Control | `CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9` | Management of secrets and operational identities | normative | explicit | deterministic |
 | Control | `CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d` | Secure supply chain of images and containers | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:aplicacao-de-politicas-formais-de-seguranca-no-runtime-com-opa-kyverno` | Application of formal security policies at runtime with OPA/Kyverno | normative | explicit | deterministic |
-| Practice | `09-containers-imagens:aprovacao-depreciacao-e-revogacao-de-golden-base-images-catalogo-organizacional` | Approval, deprecation and revocation of Golden Base Images (organisational catalo | normative | explicit | deterministic |
+| Practice | `09-containers-imagens:aprovacao-depreciacao-e-revogacao-de-golden-base-images-catalogo-organizacional` | Approval, deprecation and revocation of Golden Base Images (organisational catalogue) | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:assinatura-e-verificacao-de-proveniencia-de-imagens-com-cosign-e-rekor` | Signing and provenance verification of images with Cosign and Rekor | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:builders-e-runners-ephemerais-assinados-e-com-auditoria` | Ephemeral, Signed and Audited Builders and Runners | normative | explicit | deterministic |
-| Practice | `09-containers-imagens:construcao-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest` | Building of images from secure, minimalist bases pinned by diges | normative | explicit | deterministic |
+| Practice | `09-containers-imagens:construcao-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest` | Building images from secure, minimalist bases pinned by digest | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:enforcement-centralizado-e-auditavel-de-politicas-no-runtime` | Centralised and Auditable Enforcement of Policies at Runtime | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:excecoes-temporarias-a-findings-policies-com-ttl-compensacoes-e-revalidacao` | Temporary exceptions to findings/policies with TTL, compensations and revalidation | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:geracao-e-rastreabilidade-de-sbom-em-imagens` | Generation and Traceability of SBOM in Images | normative | explicit | deterministic |
@@ -74,7 +74,24 @@ Total: **50 entities** of Manual ontology V2 mapped to this chapter via `sbd-toe
 | Practice | `09-containers-imagens:sandboxing-avancado-com-gvisor-kata-para-workloads-criticas` | Advanced Sandboxing with gVisor/Kata for Critical Workloads | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:segmentacao-de-rede-e-networkpolicy` | Network Segmentation and NetworkPolicy | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:validacao-automatica-de-vulnerabilidades-em-imagens-no-pipeline-ci-cd` | Automatic validation of vulnerabilities in images in the CI/CD pipeline | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-149` | Vulnerable/obsolete base images | normative | heuristic | bounded |
+| Threat | `MT-150` | Inclusion of insecure dependencies in the build | normative | heuristic | bounded |
+| Threat | `MT-151` | Unexpected content in the build _context_ | normative | heuristic | bounded |
+| Threat | `MT-152` | Insecure configurations in the Dockerfile | normative | heuristic | bounded |
+| Threat | `MT-153` | Unsigned images / without verification | normative | heuristic | bounded |
+| Threat | `MT-154` | Malicious substitution in the registry | normative | heuristic | bounded |
+| Threat | `MT-155` | Lack of an audit trail (who built what) | normative | heuristic | bounded |
+| Threat | `MT-156` | Execution as root / excessive capabilities | normative | heuristic | bounded |
+| Threat | `MT-157` | Insecure mounts and volumes | normative | heuristic | bounded |
+| Threat | `MT-158` | Lack of network policies | normative | heuristic | bounded |
+| Threat | `MT-159` | Permissive _admission_ | normative | heuristic | bounded |
+| Threat | `MT-160` | Secrets embedded in the image | normative | heuristic | bounded |
+| Threat | `MT-161` | Exposure in environment variables | normative | heuristic | bounded |
+| Threat | `MT-162` | Insecure manifests approved | normative | heuristic | bounded |
+| Threat | `MT-163` | Image↔manifest misalignment | normative | heuristic | bounded |
+| Threat | `MT-164` | Lack of traceability of deploys | normative | heuristic | bounded |
+| Threat | `MT-165` | _Shadow containers_ outside the pipeline | normative | heuristic | bounded |
+| Threat | `MT-166` | Configuration _drift_ | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 

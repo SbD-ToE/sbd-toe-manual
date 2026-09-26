@@ -3,15 +3,15 @@ id: achievable-maturity
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/achievable-maturity.md
-  source_sha256: d80010a574b8b75ed6457c8fa5212458e74b0d54d6a157decb83cf93c7010a05
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
+  source_sha256: 8c5929024495f6a448bb39b4d9892fb10e8658e5416e8981ba96e969f7077f35
+  source_commit: e341b40c451d9ef4be61e6cd59d994cda54c1aa0
   target_sha256: 110ab275b959928d50539a68ac856a79a89cfe6e0c657f6c014b9cdfa23a7b2b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 5c08c8e5a6891162c9e9f50251c6496da3b47913a0ecfd9a53dfce59ec6cbaf0
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
   glossary_keys: [chapter_role, framework_source_corpus, mapping, maturity, practitioner_manual, sbdtoe_sbd, shacl_owl, validation_evaluation]
   glossary_sha256: e953bdfafd0cce8a6c3408510750dc69fe9f5539101374b64eb19c1b833f6c12
-  translated_at: 2026-09-25T20:20:05Z
+  translated_at: 2026-09-26T13:36:55Z
   reviewed_by: null
 ---
 

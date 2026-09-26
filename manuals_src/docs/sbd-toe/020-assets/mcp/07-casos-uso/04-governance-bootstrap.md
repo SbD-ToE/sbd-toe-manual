@@ -24,35 +24,15 @@ Há uma janela curta no início de um repositório novo em que tudo é mais bara
 
 ### 1. Listar artefactos requeridos {#1-listar-artefactos-requeridos}
 
-```json
-plan_sbd_toe_repo_governance()
+```
+plan_sbd_toe_repo_governance(riskLevel, offset, limit)
 ```
 
-**Output esperado** (forma):
+**Output esperado** (campos): `byChapter` (os artefactos agrupados por capítulo), `totalArtefacts`, `artefact_totals`, `coverage` e `risk_level_effect`. Os ids de artefacto têm a forma `ART-<slug>-<hash>`. A resposta é paginada (`offset` / `limit`): percorrer todas as páginas antes de dar a lista por completa.
 
-```json
-{
-  "artifacts": [
-    {
-      "artifact_id": "ART-01-classificacao-aplicacoes-form",
-      "chapter": "01-classificacao-aplicacoes",
-      "description": "Formulário de classificação de risco",
-      "required_at": "project_init"
-    },
-    {
-      "artifact_id": "ART-02-requisitos-seguranca-catalog",
-      "chapter": "02-requisitos-seguranca",
-      "description": "Catálogo de requisitos de segurança",
-      "required_at": "project_init"
-    },
-    ...
-  ]
-}
-```
+### 2. Passar o *risk level* {#2-filtrar-por-risk-level-opcional}
 
-### 2. Filtrar por *risk level* (opcional) {#2-filtrar-por-risk-level-opcional}
-
-Cruzar com [`sbd://toe/chapter-applicability/L1`](../06-resources-prompts.md#sbdtoechapter-applicabilityrisklevel) — eliminar artefactos de capítulos excluídos para o *risk level*.
+Passar o `riskLevel` a `plan_sbd_toe_repo_governance`: a resposta declara o efeito do nível em `risk_level_effect`. Não há artefactos a eliminar por nível — nenhum capítulo é excluído; a aplicabilidade é graduada e o que muda é a exigência (ver [`sbd://toe/chapter-applicability/{riskLevel}`](../06-resources-prompts.md#sbdtoechapter-applicabilityrisklevel)).
 
 ### 3. Estruturar o repo {#3-estruturar-o-repo}
 
@@ -75,19 +55,19 @@ repo-root/
 
 ### 4. *Scaffold* automático {#4-scaffold-automático}
 
-Para cada `artifact_id`:
+Para cada artefacto devolvido:
 
 ```markdown
 <!-- governance/<chapter>/<artifact>.md -->
 
 # <título>
 
-> **Artefacto:** `ART-<chapter>-<name>`
+> **Artefacto:** `ART-<slug>-<hash>`
 > **Capítulo:** [<chapter>](https://www.securitybydesign.dev/sbd-toe/sbd-manual/<chapter>/intro)
 > **Estado:** ⏳ pendente
 
 ## Propósito
-<do `description` do MCP>
+<do que o MCP devolve para o artefacto>
 
 ## Conteúdo esperado
 - ...
@@ -134,7 +114,7 @@ tools: Read, Write, Edit, Bash, mcp__sbd-toe__*
 
 1. Perguntar risk_level alvo se não estiver explícito.
 2. Chamar plan_sbd_toe_repo_governance.
-3. Filtrar artefactos por chapter applicable ao risk_level (via sbd://toe/chapter-applicability/{riskLevel}).
+3. Passar riskLevel a plan_sbd_toe_repo_governance e ler risk_level_effect (nenhum capítulo é excluído; paginar até ao fim).
 4. Criar layout governance/<chapter>/<artifact>.md com placeholders.
 5. Criar AGENTS.md + CLAUDE.md com bloco de inicialização.
 6. Guardar a skill canónica via generate_sbd_toe_skill em .claude/skills/sbd-toe.md.
@@ -146,7 +126,7 @@ tools: Read, Write, Edit, Bash, mcp__sbd-toe__*
 
 | Trigger | Acção |
 |---|---|
-| *Risk level* sobe (L1→L2 ou L2→L3) | Re-correr — adiciona artefactos dos capítulos novos. Não apagar nada. |
+| *Risk level* sobe (L1→L2 ou L2→L3) | Re-correr — a exigência muda; não apagar nada. |
 | Upgrade do MCP server | Re-correr `generate_sbd_toe_skill()` para refrescar a skill. |
 | Adição de cross-check normativo posterior ao *snapshot* do MCP | Adicionar manualmente a partir do manual web até nova publicação — confirmar a cobertura em `sbd://toe/version` (ver [content lag](../10-troubleshooting-faq.md#content-lag)). |
 

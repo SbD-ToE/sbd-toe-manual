@@ -31,7 +31,7 @@ A tabela mostra, para cada paragem do fluxo agentic, qual *tool* / *resource* / 
 
 | Paragem | Tool MCP | Output esperado |
 |---|---|---|
-| **1. Classificar nível A0–A4** | `setup_sbd_toe_agent(riskLevel, projectRole)` + `consult_security_requirements(risk_level, ["requirements"])` | Lista activa de requisitos `REQ-AGN-*`; capítulos activos para o nível |
+| **1. Classificar nível A0–A4** | `setup_sbd_toe_agent(riskLevel, projectRole)` + `consult_security_requirements(risk_level, ["agents"])` | Lista activa de requisitos `REQ-AGN-*` (o *concern* `agents` ativa a categoria AGN); exigência por capítulo no nível |
 | **2. Threat model agentic** | `get_threat_landscape(risk_level, concerns=["auth","api","integrity","distribution"])` + `search_sbd_toe_manual("playbook agentic threat library")` | Threat library MITRE ATLAS aplicável + mitigações citáveis (Cap. 03) |
 | **3. Validar arquitectura ARC-015** | `query_sbd_toe_entities(query="ARC-015")` + `consult_security_requirements(risk_level, ["architecture"])` | Critério de aceitação completo de `ARC-015` + controlos arquitectónicos `ARC-001..014` complementares |
 | **4. Registar mandate** | `plan_sbd_toe_repo_governance()` filtrando por capítulos 02+14 + `get_sbd_toe_chapter_brief("02-requisitos-seguranca")` (para `artifact_ids` reais) | Artefactos que o manual exige; template de mandate ancorado em Policy 38 |
@@ -62,9 +62,9 @@ Em cada paragem do processo, o agente que executa via MCP deve:
 
 Para uma decisão concreta — por exemplo, "este agente pode subir de A2 para A3?" — a sequência MCP é:
 
-1. `setup_sbd_toe_agent("L2", "appsec")` — carrega capítulos activos + regras de role
+1. `setup_sbd_toe_agent("L2", "appsec")` — carrega a exigência por capítulo + regras de role
 2. Ler `sbd://toe/agent-guide` (uma vez por sessão)
-3. `consult_security_requirements("L2", ["requirements"])` — confirma se `REQ-AGN-002` está activo (sim, em L1+)
+3. `consult_security_requirements("L2", ["agents"])` — confirma se `REQ-AGN-002` está activo (sim, em L1+)
 4. `search_sbd_toe_manual("A0 A4 níveis de autonomia subir nível critérios")` — extrai a regra de promoção
 5. `get_guide_by_role("L2", "appsec", "operate")` — práticas de revisão aplicáveis
 6. Combinar com o que está em VCS: ler o *mandate* actual; verificar se *kill-switch* foi exercitado conforme cadência; verificar se *eval suite* confirma o nível pretendido
@@ -102,8 +102,8 @@ tools: Read, Glob, Grep, mcp__sbd-toe__*
 
 # Hard rules
 
-- citation_map (quando `prepare_sbd_toe_codegen_context` é usado) é
-  mundo fechado de IDs válidos — não inventar.
+- citations (quando `prepare_sbd_toe_codegen_context` é usado) é
+  mundo fechado de ids válidos — não inventar.
 - Em dúvida, marcar `not verified` em vez de assumir.
 - Em decisões A3/A4, propor mas nunca decidir; escalação ao CISO via
   Policy 38 §5.3 é obrigatória.
@@ -121,7 +121,7 @@ tools: Read, Glob, Grep, mcp__sbd-toe__*
 ## Relacionado {#relacionado}
 
 - **Vista regulatória do mesmo processo**: [Cross-check — Agentic SDLC ponta-a-ponta](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc) — descreve **o quê** e mapeia para AI Act/NIS2/DORA/CRA
-- [Caso de uso — Codegen grounded](./codegen-grounded) — disciplina de `citation_map` aplicada a *codegen*
+- [Caso de uso — Codegen grounded](./codegen-grounded) — disciplina de `citations` aplicada a *codegen*
 - [Caso de uso — Threat modeling](./threat-modeling) — paragem 2 detalhada
 - [Caso de uso — Bootstrap de governança](./governance-bootstrap) — paragem 4 detalhada (mandate scaffolding)
 - [Caso de uso — Auditoria de PR](./auditoria-pr) — caso operacional realista de agente A2

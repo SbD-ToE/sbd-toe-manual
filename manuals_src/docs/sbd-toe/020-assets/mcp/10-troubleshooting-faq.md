@@ -24,15 +24,15 @@ Ler o resource:
 sbd://toe/version
 ```
 
-Devolve `{name, version, description}`. A versão é incrementada a cada *publish* no npm.
+Devolve `name`, `version` e a *provenance* do que é servido — `manual`, `kg`, `ontology`, `serving_contract` e `surface_history`. A versão é incrementada a cada *publish* no npm.
 
 Verificação local:
 
 ```bash
-npx -y @shiftleftpt/sbd-toe-mcp --version 2>/dev/null
-# ou — em alternativa:
 npm view @shiftleftpt/sbd-toe-mcp version
 ```
+
+O pacote não tem uma *flag* `--version`: `npx -y @shiftleftpt/sbd-toe-mcp` arranca o servidor. Para a versão que o cliente está de facto a usar, a fonte é o resource `sbd://toe/version`.
 
 ### Como saber se o servidor está a correr no cliente {#como-saber-se-o-servidor-está-a-correr-no-cliente}
 
@@ -56,8 +56,6 @@ Uma página existe no manual web, mas o MCP não a devolve (`search_sbd_toe_manu
 
 O servidor serve um *snapshot* do manual e o índice KG construído a partir dele; a versão do manual, do KG e da ontologia está em `sbd://toe/version`. Conteúdo adicionado ao manual web **depois** desse *snapshot* só entra no MCP na publicação seguinte.
 
-**Estado corrente:** `@shiftleftpt/sbd-toe-mcp@0.10.2` serve o manual `v1.7.0` sobre o KG formal `v1.6.0`, com os seis cross-checks (**CRA**, **DORA**, **NIS2**, **GDPR**, **AI Act**, **ENISA/CSA**) indexados — **sem lag conhecido**.
-
 ### Como confirmar o que está indexado {#como-confirmar-o-que-está-indexado}
 
 ```
@@ -80,7 +78,7 @@ A cada publicação npm o *snapshot* avança. A diferença entre a tag do manual
 
 ### Sintoma — `consult_security_requirements(L3)` é lento ou estoura o contexto {#sintoma--consult_security_requirementsl3-é-lento-ou-estoura-o-contexto}
 
-Output de L3 sem `concerns` é ~36k chars — pode exceder o contexto do cliente.
+O output de L3 sem `concerns` pode exceder o contexto do cliente. Cada resposta declara o seu tamanho em `size_estimate`, e o guia (`sbd://toe/agent-guide`) publica os tamanhos medidos na *build* servida.
 
 ### Solução {#solução-1}
 
@@ -90,7 +88,7 @@ Output de L3 sem `concerns` é ~36k chars — pode exceder o contexto do cliente
 consult_security_requirements({"risk_level": "L3", "concerns": ["auth", "encryption"]})
 ```
 
-Reduz para ~9k chars por *concern set*. Iterar por *concern* se precisares de coverage completa.
+A resposta fica muito mais pequena. Quando for precisa a cobertura completa, iterar por *concern*.
 
 ---
 
@@ -107,7 +105,7 @@ Reduz para ~9k chars por *concern set*. Iterar por *concern* se precisares de co
 ### Diagnóstico {#diagnóstico}
 
 ```json
-inspect_sbd_toe_retrieval({"query": "<query original>"})
+inspect_sbd_toe_retrieval({"question": "<pergunta original>"})
 ```
 
 Devolve ranking, *scores*, *rule_trace*. Identifica se é *vocabulary* ou *intent*.
@@ -157,11 +155,11 @@ get_guide_by_role({"risk_level": "L2", "phase": "implement"})
 
 ### Causa {#causa-2}
 
-A tarefa-mãe é demasiado conceptual / aberta. *Brute-force* (re-chamar com pequenos *tweaks*) não passa o gate.
+Duas causas possíveis. A seleção declarada ultrapassa o tecto do nível de `detail` — e então a resposta traz em `requirement_ceiling.batches` os lotes executáveis cuja união é a seleção inteira. Ou a tarefa-mãe é demasiado conceptual / aberta. Em ambos os casos, *brute-force* (re-chamar com pequenos *tweaks*) não passa o gate.
 
 ### Solução {#solução-5}
 
-1. Aceitar uma das sub-tarefas sugeridas e re-chamar **apenas para essa**
+1. Se a resposta traz `requirement_ceiling.batches`: seguir os lotes, um de cada vez — não redesenhar a decomposição à mão. Caso contrário, aceitar uma das sub-tarefas sugeridas e re-chamar **apenas para essa**
 2. Se a sub-tarefa também devolver `needs_decomposition` → **STOP**, escalar com o utilizador
 3. Recomeçar a sessão com uma decomposição manual antes da primeira chamada
 
@@ -177,11 +175,35 @@ O servidor instalado não tem a capacidade que pediste. Possíveis sub-causas:
 
 | Causa | Acção |
 |---|---|
-| `AppSec Core v1 runtime ausente` | Deploy incompleto — re-correr `npm run checkout:backend` ou *pin* outra KG snapshot. |
+| `AppSec Core v1 runtime ausente` | Instalação incompleta — reinstalar ou atualizar o pacote publicado e reportar ao operador. |
 | `Overlay regulatório ausente` | Remover `regulatory_frameworks` / `include_regulatory_overlay`, ou esperar publicação. |
 | `Framework regulatório desconhecida` | Listar os *short codes* suportados em `regulatory_overlay.frameworks`. |
 
 **Não fabricar** IDs para "continuar" — o gate é por design.
+
+---
+
+### Sintoma — devolve `needs_input` {#sintoma--devolve-needs_input}
+
+**Causa.** Nada foi declarado. Em modo declarativo (o *default*), o servidor não infere *concerns* nem outros campos a partir do `task`: o `task` é registado, não interpretado.
+
+**Solução.** A resposta traz o vocabulário aceite, os candidatos a confirmar e, para declarações inertes, os `valid_values`. Confirmar os candidatos com o utilizador e voltar a chamar com a declaração completa — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`, consoante o que se sabe. Os valores aceites estão em `sbd://toe/activation-vocabulary`.
+
+---
+
+### Sintoma — `detail: "minimal"` ou `detail: "ultrathin"` é recusado {#sintoma--detail-minimal-ou-detail-ultrathin-é-recusado}
+
+**Causa.** Esses níveis foram retirados. Os níveis de `detail` aceites são `lista`, `standard` e `full`.
+
+**Solução.** Usar um dos três níveis aceites. O que cada um põe *inline* está na descrição servida de `prepare_sbd_toe_codegen_context`.
+
+---
+
+### Sintoma — `size_estimate.within_envelope: false` {#sintoma--size_estimatewithin_envelope-false}
+
+**Causa.** A resposta declara que o seu tamanho excede o envelope previsto. É uma declaração, não um erro: o servidor avisa em vez de truncar em silêncio.
+
+**Solução.** Não ignorar o aviso. Um nível de `detail` mais compacto, ou uma declaração mais estreita (menos *concerns*, menos categorias), reduz a resposta. Se a seleção ultrapassar o tecto do nível, a resposta passa a `needs_decomposition` com lotes — ver acima.
 
 ---
 
@@ -228,7 +250,7 @@ Executar o comando manualmente para isolar:
 npx -y @shiftleftpt/sbd-toe-mcp
 ```
 
-Deve mostrar logs *stderr* a indicar "MCP server listening on stdio" (ou equivalente). Se não — problema do servidor / Node / dependências.
+O servidor não escreve nada no *stderr* ao arrancar — o silêncio não é sinal de erro. Para validar, enviar-lhe uma mensagem `initialize` do protocolo MCP ou, no Claude Code, correr `claude mcp list`. Se a mensagem `initialize` não tiver resposta, o problema é do servidor / Node / dependências.
 
 ---
 
@@ -253,7 +275,7 @@ O conteúdo canónico do manual está em PT. O *agent guide* diz explicitamente:
 Não decidir unilateralmente. Apresentar:
 
 1. O que `map_sbd_toe_applicability` sugere
-2. O que mudaria se `risk_level` fosse X vs Y (custo: capítulos adicionais)
+2. O que mudaria se `risk_level` fosse X vs Y (custo: a exigência de cada capítulo muda; o conjunto de capítulos é o mesmo)
 3. Quem assina a decisão (`CISO`, `executive_management`, `appsec`)
 
 Marcar como `inferred` enquanto não há decisão.
@@ -280,7 +302,7 @@ Não inclui versão explícita — comparar `sbd://toe/version` com a versão us
 
 ## Quando reportar bug {#quando-reportar-bug}
 
-Reportar em [github.com/Shiftleftpt/sbd-toe-mcp-poc/issues](https://github.com/Shiftleftpt/sbd-toe-mcp-poc/issues) se:
+Reportar em [github.com/SbD-ToE/sbd-toe-mcp/issues](https://github.com/SbD-ToE/sbd-toe-mcp/issues) se:
 
 - `inspect_sbd_toe_retrieval` mostra *rule_trace* incoerente
 - Output contradiz directamente o que o manual web diz para um capítulo canon

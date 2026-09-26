@@ -60,6 +60,10 @@ consult_security_requirements({"risk_level": "L2", "concerns": ["auth", "logging
 
 Devolve `controls[]` filtrados — usar **apenas estes IDs** no relatório.
 
+:::tip Alternativa declarativa
+Em vez de inferir os *concerns* à mão, a lista de ficheiros alterados pode ser declarada diretamente em `changed_files` de [`select_sbd_toe_requirements`](../05-tools-reference.md), que ativa os capítulos pela tabela publicada. Para fechar a auditoria com a evidência esperada, `get_sbd_toe_verification_matrix(requirement_ids)` devolve, para os requisitos selecionados, o método de validação e a evidência esperada.
+:::
+
 ### 4. Cruzar diff ↔ controlos {#4-cruzar-diff--controlos}
 
 Para cada *hunk* relevante, identificar:

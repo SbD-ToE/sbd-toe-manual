@@ -66,8 +66,8 @@ get_threat_landscape({
 }
 ```
 
-:::warning Routing dos *concerns*
-À data desta versão, os *concerns* de **base** (`auth`, `validation`, `api`) roteiam para o **cap. 02** e devolvem meta-ameaças de **processo** (`MT-021..038`), não as ameaças técnicas do domínio. Para ameaças técnicas, incluir um *concern* de **domínio** (ex.: `architecture` → cap. 04, `MT-055..072`) e cruzar com os requisitos de `consult_security_requirements`. *(Verificar o comportamento ao vivo — há fix em curso no servidor.)*
+:::info Routing dos *concerns* — `routing_basis`
+A resposta declara, para cada *concern*, a base do *routing* em `routing_basis`: `domain_chapter` quando o *concern* tem um capítulo de ameaças próprio, `activated_controls` quando as ameaças chegam pelos capítulos que definem os controlos ativados. Ler `routing_basis` antes de estruturar o *threat model* diz de onde veio cada ameaça — e, com isso, como a apresentar.
 :::
 
 ### 3. Práticas por *role* (opcional, mas útil) {#3-práticas-por-role-opcional-mas-útil}

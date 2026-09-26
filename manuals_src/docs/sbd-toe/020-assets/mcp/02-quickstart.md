@@ -64,13 +64,19 @@ Após reiniciar o cliente, as tools `sbd-toe.*` ficam disponíveis automaticamen
 
 ## Validar a ligação {#validar-a-ligação}
 
-Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), basta começar qualquer conversa com:
+Para confirmar que a sessão está realmente a falar com o servidor (e não apenas a fingir que sim), basta pedir-lhe a identidade do que está a servir:
 
 ```
-setup_sbd_toe_agent(riskLevel="L2", projectRole="appsec-engineer")
+read_sbd_toe_resource(uri="sbd://toe/version")
 ```
 
-A resposta deve enumerar os capítulos activos para esse *risk level* e as regras específicas do papel. Uma lista coerente — capítulos numerados, *concerns*, regras — confirma a ligação. Uma resposta vaga ou sem IDs indica que o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.
+ou, em alternativa, `list_sbd_toe_chapters()`. Uma resposta com o nome do pacote, a versão e a *provenance* (manual, KG, ontologia) — ou com o índice de capítulos, com ids reais — confirma a ligação. Uma resposta vaga ou sem ids indica que o cliente provavelmente está a improvisar; vale a pena rever a configuração antes de avançar.
+
+Em clientes que expõem *prompts* MCP, o *prompt* `setup_sbd_toe_agent(riskLevel, projectRole)` inicializa a sessão: a resposta descreve a exigência de cada capítulo nesse nível (por exemplo, «dominantemente obrigatório em L2») e as regras do papel — nenhum capítulo fica excluído. Clientes sem suporte de *prompts*, como o Claude Desktop, não o expõem; por isso não serve como única validação.
+
+## A primeira chamada real {#a-primeira-chamada-real}
+
+Para uma tarefa concreta, a primeira chamada é a que as descrições das tools marcam como *START HERE*: `select_sbd_toe_requirements`, com aquilo que o agente leu **declarado** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. O servidor não adivinha a partir do texto da tarefa: sem declaração, devolve `needs_input` com o vocabulário aceite (publicado em `sbd://toe/activation-vocabulary`). Detalhe na [referência de tools](./05-tools-reference.md).
 
 ## E a seguir {#e-a-seguir}
 

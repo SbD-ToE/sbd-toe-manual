@@ -60,7 +60,7 @@ Permitido apenas quando:
 Sempre marcar explicitamente quando:
 - Combinas `manual-grounded` + `observed` para chegar a uma conclusão
 - Aplicas conhecimento geral de segurança a um contexto específico
-- Estendes uma `mitigation_confidence: "heuristic"` a outra situação
+- Uma ligação sem `mitigation_confidence: "derived"` é estendida a outra situação
 
 Forma recomendada: **"Inferência: `<conclusão>`. Baseado em: `<grounded ID>` + `<observação>`."**
 
@@ -70,7 +70,7 @@ Usar generosamente. Casos:
 - A tool devolveu lista vazia (`controls: []`, `threats: []`, `assignments: []`)
 - O *risk level* não foi confirmado pelo utilizador
 - O resultado precisa de teste / scan / log que ainda não correu
-- A pergunta toca em regulamento que o MCP **não indexa** (AI Act, CRA, …)
+- A pergunta toca em conteúdo posterior ao *snapshot* servido (ver `sbd://toe/version`)
 
 ---
 
@@ -81,7 +81,7 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 | Campo do MCP | Tradução |
 |---|---|
 | `mitigation_confidence: "derived"` | `manual-grounded` (ligação estrutural) |
-| `mitigation_confidence: "heuristic"` | `inferred` — flag explicitamente |
+| ligação sem `mitigation_confidence: "derived"` | `inferred` — flag explicitamente |
 | `completeness_report.m_recall < 1.0` | sinalizar **cobertura parcial** — o que falta é `not verified` |
 | `coverage.hasMore: true` / `coverage_gaps` | resultado **paginado / com lacunas declaradas** — continuar via `nextOffset`; o servidor é *coverage-preserving* (nada truncado em silêncio), mas "página 1" ≠ "tudo" |
 | `rule_trace` sem `CONCERNS_FILTER_*` quando concerns foram passadas | sinal de problema — pode estar a devolver mais do que se filtrou |
@@ -115,15 +115,15 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 ❌ Re-chamar `prepare_sbd_toe_codegen_context` com o mesmo payload para "tentar de novo".
 ✅ Parar, dialogar com o utilizador, **re-chamar só após inputs novos**.
 
-### 6. Mostrar `mitigation_confidence: "heuristic"` como certeza {#6-mostrar-mitigation_confidence-heuristic-como-certeza}
+### 6. Mostrar uma ligação inferida como certeza {#6-mostrar-mitigation_confidence-heuristic-como-certeza}
 
-❌ "`CTRL-…` mitiga `MT-NNN`."
-✅ "`CTRL-…` mitiga `MT-NNN` — ligação **inferida** (*fallback* sem confidence `derived`); validar com teste / revisão humana."
+❌ "`CTRL-…` mitiga `MT-NNN`." — apresentado como certeza, sem `mitigation_confidence: "derived"`.
+✅ "`CTRL-…` mitiga `MT-NNN` — ligação **inferida** (sem `mitigation_confidence: derived`); validar com teste / revisão humana."
 
 ### 7. Assumir a cobertura do *snapshot* sem a confirmar {#7-assumir-a-cobertura-do-snapshot-sem-a-confirmar}
 
 ❌ Responder sobre um cross-check normativo (ou qualquer página) assumindo que o MCP a serve — ou que não a serve.
-✅ Ler `sbd://toe/version` (manual, KG, ontologia) e, em dúvida, validar com `inspect_sbd_toe_retrieval` se o documento aparece nos *top-ranked records*. Em `0.10.2` os seis cross-checks — **CRA / DORA / NIS2 / GDPR / AI Act / ENISA-CSA** — estão indexados; conteúdo posterior ao *snapshot* vive só no manual web até nova publicação (ver [content lag](./10-troubleshooting-faq.md#content-lag)).
+✅ Ler `sbd://toe/version` (manual, KG, ontologia) e, em dúvida, validar com `inspect_sbd_toe_retrieval` se o documento aparece nos *top-ranked records*. Os cross-checks publicados — **CRA / DORA / NIS2 / GDPR / AI Act / ENISA-CSA** — estão indexados no *snapshot* servido; conteúdo posterior ao *snapshot* vive só no manual web até nova publicação (ver [content lag](./10-troubleshooting-faq.md#content-lag)).
 
 ### 8. Confundir *concerns* (ontológicos) com domínios STRIDE {#8-confundir-concerns-ontológicos-com-domínios-stride}
 
@@ -133,7 +133,7 @@ Algumas tools devolvem campos próprios de confiança. Traduzi-los para rótulos
 ### 9. Saltar `setup_sbd_toe_agent` no início da sessão {#9-saltar-setup_sbd_toe_agent-no-início-da-sessão}
 
 ❌ Começar a chamar tools sem inicializar.
-✅ Primeira mensagem da sessão de segurança: `setup_sbd_toe_agent(riskLevel, projectRole)` — carrega os capítulos activos e as regras do *role*.
+✅ Primeira mensagem da sessão de segurança: `setup_sbd_toe_agent(riskLevel, projectRole)` — carrega a exigência por capítulo e as regras do *role*. Em clientes que não expõem *prompts* (como o Claude Desktop), começar por `sbd://toe/quick-start` e pela declaração em `select_sbd_toe_requirements`.
 
 ### 10. Re-gerar a skill no início de cada sessão {#10-re-gerar-a-skill-no-início-de-cada-sessão}
 
@@ -153,7 +153,7 @@ Este mini-site cobre o uso do MCP server SbD-ToE — o consumo. Quando a organiz
 
 1. Cada afirmação tem um dos 4 rótulos?
 2. Todos os IDs citados existem em outputs MCP da sessão?
-3. *Heuristic confidence* está marcado como tal?
+3. Ligações sem `mitigation_confidence: derived` estão marcadas como inferidas?
 4. `m_recall < 1.0` foi sinalizado?
 5. Não há declaração de conformidade?
 6. Código não foi apresentado como evidência?

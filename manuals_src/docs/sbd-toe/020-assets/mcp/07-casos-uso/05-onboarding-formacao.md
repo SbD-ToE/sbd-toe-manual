@@ -16,7 +16,9 @@ tags:
 
 Pedir a um *developer* recém-chegado para ler os 15 capítulos do manual antes de fazer o primeiro commit é, na prática, pedir que não os leia. Onboarding eficaz é o oposto: começa pequeno, no que esse papel faz nas próximas duas semanas, e cresce com o trabalho.
 
-O `get_guide_by_role` foi pensado precisamente para isso. Recebe o *risk level* e o papel — `developer`, `appsec-engineer`, `devops-sre`, `qa`, qualquer um dos 13 canónicos — e devolve apenas as práticas que o manual atribui a essa pessoa, organizadas por fase do SDLC. O agente compõe um guia personalizado a partir daí: o que se espera deste papel em *requirements*, *design*, *implement*, *test*, *operate* — com *user stories* já ligadas, prontas a virar *acceptance criteria*.
+O `get_guide_by_role` foi pensado precisamente para isso. Recebe o *risk level* e o papel — `developer`, `appsec-engineer`, `devops-sre`, `qa`, qualquer um dos 13 canónicos — e devolve apenas as práticas que o manual atribui a essa pessoa, organizadas por fase do SDLC. O agente compõe um guia personalizado a partir daí: o que se espera deste papel em cada fase — `plan`, `design`, `develop`, `test`, `operate`, … — com *user stories* já ligadas, prontas a virar *acceptance criteria*.
+
+As fases canónicas são `plan`, `design`, `develop`, `build`, `test`, `deploy`, `operate` e `govern`. Os nomes antigos continuam a resolver como *aliases* (`requirements`→`plan`, `implement`→`develop`, `governance`→`govern`), mas os exemplos desta página usam a forma canónica.
 
 ## Pré-requisitos {#pré-requisitos}
 
@@ -53,10 +55,10 @@ Cada `assignment` tem:
 Para um guia "primeira sprint", filtrar pela primeira fase relevante:
 
 ```json
-get_guide_by_role({"risk_level": "L2", "role": "developer", "phase": "implement"})
+get_guide_by_role({"risk_level": "L2", "role": "developer", "phase": "develop"})
 ```
 
-→ apenas atribuições da fase `implement`.
+→ apenas atribuições da fase `develop`.
 
 ### 4. Estruturar o guia {#4-estruturar-o-guia}
 
@@ -71,7 +73,7 @@ Modelo recomendado:
 
 ## Como o role contribui em cada fase
 
-### Fase: requirements
+### Fase: plan
 - Practice <ID>: <texto> (cap. <chapterId>)
   - User story: <texto>
   - Acceptance criteria: <texto>
@@ -79,7 +81,7 @@ Modelo recomendado:
 ### Fase: design
 ...
 
-### Fase: implement
+### Fase: develop
 ...
 
 ### Fase: test
@@ -129,7 +131,7 @@ tools: Read, Write, mcp__sbd-toe__*
 1. Perguntar role + risk_level se não explícitos.
 2. Chamar get_guide_by_role(risk_level) sem role para ver contagens.
 3. Chamar get_guide_by_role(risk_level, role) para detalhe.
-4. Estruturar guia por fase (requirements → operate).
+4. Estruturar guia por fase (plan → govern).
 5. Para cada assignment vazio: marcar "sem atribuições directas — não inventar".
 6. Acrescentar pointers ao repo (governance/, CLAUDE.md, AGENTS.md) se existirem.
 ```
@@ -139,9 +141,9 @@ tools: Read, Write, mcp__sbd-toe__*
 Para um *role* que faz muitas fases (`developer`, `arquitetos-software`), iterar fase a fase para manter o output dentro do contexto:
 
 ```
-get_guide_by_role(L2, "developer", "requirements")
+get_guide_by_role(L2, "developer", "plan")
 get_guide_by_role(L2, "developer", "design")
-get_guide_by_role(L2, "developer", "implement")
+get_guide_by_role(L2, "developer", "develop")
 get_guide_by_role(L2, "developer", "test")
 get_guide_by_role(L2, "developer", "operate")
 ```

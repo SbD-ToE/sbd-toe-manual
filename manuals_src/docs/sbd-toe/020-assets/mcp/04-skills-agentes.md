@@ -21,7 +21,7 @@ Em vez de te pedir para escreveres essas instruções do zero (e ficarem desactu
 
 | Cliente | Caminho do ficheiro | Escopo |
 |---|---|---|
-| **Claude Code** | `.claude/skills/sbd-toe.md` | Por projecto |
+| **Claude Code** | Skill de papel: `.claude/skills/sbd-<role>.md` · subagent: `.claude/agents/sbd-<role>.md` (o `suggested_path` devolvido pela tool). O *agent guide* sem papel não traz `suggested_path` — guardá-lo num caminho à escolha, por exemplo `.claude/skills/sbd-toe.md` | Por projecto |
 | **GitHub Copilot (VS Code)** | `.github/copilot-instructions.md` | Por repositório |
 | **Cursor** | `.cursorrules` | Por projecto |
 | **Windsurf / Codeium** | `.codeium/instructions.md` (ou skill equivalente) | Por projecto |
@@ -41,9 +41,9 @@ Após instalado o MCP (ver [Instalação](./03-instalacao.md)), executar no clie
 - `role` — uma das 13 personas canónicas (aliases resolvem; papel desconhecido → erro com a lista das 13). Sem `role`, devolve o *agent guide*.
 - `format` — `skill` (ficheiro de orientação) ou `subagent` (definição de agente, `.claude/agents/…`).
 - `flavour` — `harnessed` (embebe as tools `mcp__sbd-toe__*`; consulta o manual ao vivo) ou `skilled` (*slice* congelado, sem tools live, offline).
-- `risk_level` (default `L2`), `phase`, `include_detail` — opcionais.
+- `risk_level` (default `L2`), `phase`, `include_detail`, `tool_prefix`, `clientType` — opcionais.
 
-A tool devolve `content` + `suggested_path` + `meta.coverage` (capítulos, *user stories*, *checklist items* — cobertura **declarada**, nada truncado em silêncio). Guardar **bytewise** no `suggested_path` (ou no caminho equivalente da tabela cliente→ficheiro acima). O conteúdo começa com um cabeçalho identificador:
+A tool devolve `content` + `suggested_path` (nas skills e subagents de papel) + `meta.coverage` (capítulos, *user stories*, *checklist items* — cobertura **declarada**, nada truncado em silêncio). Guardar **bytewise** no `suggested_path` (ou no caminho equivalente da tabela cliente→ficheiro acima). O conteúdo começa com um cabeçalho identificador:
 
 ```
 ---
@@ -69,12 +69,15 @@ setup_sbd_toe_agent(riskLevel="<L1|L2|L3>", projectRole="<role>")
 
 O resultado é o **estado inicial** da sessão:
 
-- Capítulos activos para o `riskLevel`
-- Capítulos excluídos / condicionais
+- A exigência de cada capítulo no `riskLevel` — a aplicabilidade é graduada: todos os capítulos se aplicam, nenhum fica excluído
 - *Domains* activos da ontologia
 - Regras específicas do *role* (ex.: para `appsec-engineer`, ênfase em capítulos 03/06/10)
 
-Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão em que o tema seja segurança no projecto.
+Sugestão: cravar este *prompt* como **primeira mensagem** de qualquer sessão em que o tema seja segurança no projecto. Convém não depender só dele: é um *prompt* MCP, e clientes sem suporte de *prompts* (como o Claude Desktop) não o expõem.
+
+### O contrato declarativo {#o-contrato-declarativo}
+
+Para uma tarefa concreta, o que a skill deve ensinar ao cliente é a porta de entrada `select_sbd_toe_requirements`: o agente **declara** o que leu — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files` — e o servidor seleciona os requisitos de forma determinística. O `task` fica registado, não é interpretado; sem declaração, a resposta é `needs_input`, com o vocabulário aceite (`sbd://toe/activation-vocabulary`). Para gerar código a seguir, `prepare_sbd_toe_codegen_context`. O `consult_security_requirements` continua útil, mas para outra pergunta: devolve o catálogo do nível, não a seleção para uma tarefa.
 
 ### Roles canónicos {#roles-canónicos}
 
@@ -117,8 +120,10 @@ Ver receita completa em [Caso de uso — auditoria de PR](./casos-uso/auditoria-
 ## Quando aplicar SbD-ToE
 
 Sempre que a tarefa toque em segurança (autenticação, validação, logging,
-gestão de segredos, IaC, containers, deploy, monitorização) — começar por
-chamar `consult_security_requirements` antes de propor código.
+gestão de segredos, IaC, containers, deploy, monitorização) — antes de propor
+código, chamar `select_sbd_toe_requirements` declarando o que se leu
+(risk_level, concerns, exposure, data_sensitivity, technologies,
+changed_files), ou `prepare_sbd_toe_codegen_context` para gerar o código.
 ```
 
 ### Cursor {#cursor}
@@ -141,11 +146,11 @@ Três níveis de integração — escolher consoante a maturidade da equipa:
 
 | Nível | Quando | Como |
 |---|---|---|
-| **Prompt directo** | Adoção experimental, sessões pontuais | Chamar tools manualmente: "Usa `consult_security_requirements(L2)` antes de propor código." |
+| **Prompt directo** | Adoção experimental, sessões pontuais | Chamar tools manualmente: "Usa `select_sbd_toe_requirements`, com a declaração do que foi lido, antes de propor código." |
 | **Skill estática** | Adopção em projecto fixo | `generate_sbd_toe_skill(role, format="skill")` → guardar no caminho canónico (auto-carregada) |
 | **Subagent / persona** | Workflows recorrentes (auditoria de PR, *codegen*, *threat model*) | `generate_sbd_toe_skill(role, format="subagent", flavour="harnessed")` → `.claude/agents/sbd-<role>.md` |
 
-A receita completa para cada nível está em [Casos de uso](./casos-uso/) — 6 cenários com exemplos *runnable*.
+A receita completa para cada nível está em [Casos de uso](./casos-uso/) — cenários com exemplos *runnable*.
 
 ---
 

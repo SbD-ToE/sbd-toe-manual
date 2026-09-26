@@ -23,11 +23,11 @@ O servidor `@shiftleftpt/sbd-toe-mcp` é distribuído **exclusivamente via npm**
 |---|---|
 | **Node.js** | ≥ 20.9.0 |
 | **Acesso ao registo npm** | Pública — sem token necessário |
-| **Espaço em disco** | ~40 MB (snapshot do manual + ontologia) |
+| **Espaço em disco** | Algumas dezenas de MB (*snapshot* do manual, KG e ontologia) |
 | **Rede** | Apenas no primeiro arranque (`npx` faz *fetch*) ou em *upgrades* |
 
 :::tip Modo offline / *air-gapped*
-Para ambientes sem acesso npm, descarregar o bundle do [GitHub Release](https://github.com/Shiftleftpt/sbd-toe-mcp-poc/releases) e referir o `dist/index.js` extraído via `command: "node"` (ver secção [GitHub Release Bundle](#github-release-bundle)).
+Para ambientes sem acesso npm, descarregar o bundle do [GitHub Release](https://github.com/SbD-ToE/sbd-toe-mcp/releases), verificar o `.sha256` e referir o `dist/index.js` extraído via `command: "node"` (ver secção [GitHub Release Bundle](#github-release-bundle)).
 :::
 
 ---
@@ -161,9 +161,9 @@ Qualquer cliente que suporte o transporte `stdio` do MCP usa o mesmo padrão: `c
 
 ## GitHub Release Bundle {#github-release-bundle}
 
-Para ambientes sem acesso a `npm` (ar-gapped, *air-gapped*, *self-hosted*) ou para *pinning* a uma versão específica:
+Para ambientes sem acesso a `npm` (*air-gapped*, *self-hosted*) ou para *pinning* a uma versão específica:
 
-1. Descarregar o bundle de [github.com/Shiftleftpt/sbd-toe-mcp-poc/releases](https://github.com/Shiftleftpt/sbd-toe-mcp-poc/releases).
+1. Descarregar o bundle de [github.com/SbD-ToE/sbd-toe-mcp/releases](https://github.com/SbD-ToE/sbd-toe-mcp/releases) — `sbd-toe-mcp-v<versão>-bundle.tar.gz` (ou `.zip`) — e o respetivo `.sha256`, e verificar o *checksum* antes de extrair.
 2. Extrair para um caminho conhecido — `/opt/sbd-toe-mcp/` por exemplo.
 3. Referir o `dist/index.js` em vez de `npx`:
 
@@ -190,7 +190,7 @@ Sem `risk level` correcto, o MCP devolve um conjunto de controlos desnecessariam
 | **APIs públicas** ou tratamento de **dados de utilizador** não-sensíveis | `L2` |
 | **PII** (RGPD), saúde, financeira, sistema **regulado** (DORA, NIS2, AI Act high-risk) | `L3` |
 
-Quando há dúvida, usar a tool `map_sbd_toe_applicability(projectAttributes)` ou o *prompt* `setup_sbd_toe_agent(riskLevel, projectRole)` em modo conversacional — o agente resolve.
+A decisão do nível segue o método do cap. 01 — nenhuma tool a toma pelo projeto. A tool `map_sbd_toe_applicability` exige `riskLevel` e aceita `technologies`, `hasPersonalData`, `isPublicFacing` e `projectRole`: não decide o nível, mas mostra o efeito de cada nível no projeto, o que ajuda a comparar as alternativas quando há dúvida.
 
 ---
 

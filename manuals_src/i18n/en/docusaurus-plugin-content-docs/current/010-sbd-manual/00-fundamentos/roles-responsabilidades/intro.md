@@ -8,15 +8,15 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/intro.md
-  source_sha256: 8b0b69b9354cb598a434e53b99a195aa1dc333967ab09a8f27dca6dc05653d3d
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: b08893a85bc5fe52148bd79cc5549dab8d646678c51663c4680a7dfc782c4315
+  source_sha256: bf017fb90a2e41777197a1e314cbc3f5d7e51adfa4582a8344f825010b3fb10b
+  source_commit: ae767ad0c676d5e086f60faac073845c8c77e0f3
+  target_sha256: f56fed52052af8896433df8fe32527a99942fde223b4c72038e5afeb645ea8a4
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
+  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
   glossary_keys: [chapter_role, framework_source_corpus, papel_suporte, practitioner_manual, role_juridico, role_procurement, role_rh_peopleops, role_secops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: e99f765f41fc8635878c41542c13570a2e36df27a4b7d146a33052ddefcad471
-  translated_at: 2026-09-26T17:23:40Z
+  translated_at: 2026-09-26T17:44:45Z
   reviewed_by: null
 ---
 
@@ -77,7 +77,7 @@ Each role has its own detailed document with:
 **Other domains of the organisation** (the Manual says what must exist, not how they work):
 - [HR / People Operations](rh-peopleops)
 - [Procurement](procurement)
-- [Legal](juridico)
+- [Legal](legal)
 
 **Third parties:**
 - [Suppliers / Third Parties](fornecedores-terceiros)

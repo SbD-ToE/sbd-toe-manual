@@ -1,5 +1,5 @@
 ---
-id: juridico
+id: legal
 title: Legal
 sidebar_label: ⚖️ Legal
 description: What SbD-ToE requires to exist on the Legal side
@@ -7,16 +7,16 @@ tags: [juridico, legal, contratos, dpo, responsabilidades]
 sidebar_position: 11.7
 translation:
   source_locale: pt
-  source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/juridico.md
-  source_sha256: 20afb0122010f254374521cc59b9afe4236660d8d03835b204a50fbf640f93d0
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: f863c05dddbfe94ff0407d636a105d0dc882039802f825f0c503bbc0ac20b4ce
+  source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/legal.md
+  source_sha256: 0b9dd6a98807776c72df2b780fc9f0aac54839e03e07acb7fada2b166ae41725
+  source_commit: ae767ad0c676d5e086f60faac073845c8c77e0f3
+  target_sha256: dd64b16feaf53bfa8d84534a038544df4321b31e58807160c9ba1251f7f3483c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [chapter_role, papel_suporte, practitioner_manual, risk_level, role_juridico, role_juridico_dpo, role_procurement, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: a26d2737ead7fbab0b7318f500d30cf92a857635d4abf0117a67c8244d62279f
-  translated_at: 2026-09-26T17:23:57Z
+  terms_sha256: fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3
+  glossary_keys: [chapter_role, eu_ai_system, papel_suporte, practitioner_manual, risk_level, role_juridico, role_juridico_dpo, role_procurement, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: a8996bfc257e487ff141d36007d226c313262492df4d341c386bda356766903a
+  translated_at: 2026-09-26T17:44:45Z
   reviewed_by: null
 ---
 

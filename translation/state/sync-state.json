@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-26T17:26:53Z",
+  "generated_at": "2026-09-26T17:44:57Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+  "terms_sha256": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "synced",
@@ -366,22 +366,22 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/intro.md": {
       "state": "synced",
-      "source_sha256": "8b0b69b9354cb598a434e53b99a195aa1dc333967ab09a8f27dca6dc05653d3d",
-      "translated_source_sha256": "8b0b69b9354cb598a434e53b99a195aa1dc333967ab09a8f27dca6dc05653d3d",
-      "target_sha256": "b08893a85bc5fe52148bd79cc5549dab8d646678c51663c4680a7dfc782c4315",
-      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
+      "source_sha256": "bf017fb90a2e41777197a1e314cbc3f5d7e51adfa4582a8344f825010b3fb10b",
+      "translated_source_sha256": "bf017fb90a2e41777197a1e314cbc3f5d7e51adfa4582a8344f825010b3fb10b",
+      "target_sha256": "f56fed52052af8896433df8fe32527a99942fde223b4c72038e5afeb645ea8a4",
+      "terms_sha256_at_translation": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
       "glossary_sha256_at_translation": "e99f765f41fc8635878c41542c13570a2e36df27a4b7d146a33052ddefcad471",
-      "translated_at": "2026-09-26T17:23:40Z",
+      "translated_at": "2026-09-26T17:44:45Z",
       "pending_blocks": 0
     },
-    "010-sbd-manual/00-fundamentos/roles-responsabilidades/juridico.md": {
+    "010-sbd-manual/00-fundamentos/roles-responsabilidades/legal.md": {
       "state": "synced",
-      "source_sha256": "20afb0122010f254374521cc59b9afe4236660d8d03835b204a50fbf640f93d0",
-      "translated_source_sha256": "20afb0122010f254374521cc59b9afe4236660d8d03835b204a50fbf640f93d0",
-      "target_sha256": "f863c05dddbfe94ff0407d636a105d0dc882039802f825f0c503bbc0ac20b4ce",
-      "terms_sha256_at_translation": "69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b",
-      "glossary_sha256_at_translation": "a26d2737ead7fbab0b7318f500d30cf92a857635d4abf0117a67c8244d62279f",
-      "translated_at": "2026-09-26T17:23:57Z",
+      "source_sha256": "0b9dd6a98807776c72df2b780fc9f0aac54839e03e07acb7fada2b166ae41725",
+      "translated_source_sha256": "0b9dd6a98807776c72df2b780fc9f0aac54839e03e07acb7fada2b166ae41725",
+      "target_sha256": "dd64b16feaf53bfa8d84534a038544df4321b31e58807160c9ba1251f7f3483c",
+      "terms_sha256_at_translation": "fe18815f5e1e72cf3b21cbab85b700034933fdb346f1f87246bf671279c357f3",
+      "glossary_sha256_at_translation": "a8996bfc257e487ff141d36007d226c313262492df4d341c386bda356766903a",
+      "translated_at": "2026-09-26T17:44:45Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/operacoes.md": {

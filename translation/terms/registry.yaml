@@ -5870,3 +5870,26 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cap. 12: labels V1 são do Archon; a grafia AmE é a da ontologia. Não traduzir
     nem reescrever.'
+- key: papel_suporte
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: paper
+  en_variants: [on paper]
+  pt: papel
+  pt_variants: []
+  ontology_id: null
+  sense: 'Suporte físico («formato papel», «digital ou papel») — NÃO o papel/role da taxonomia (chapter_role).
+    Homónimo: a consistency aceita qualquer dos sentidos (d803aeb7).'
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Cap. 13: fixado para desambiguar «papel» (paper) de «papel» (role) no lint;
+    espécie 3.'

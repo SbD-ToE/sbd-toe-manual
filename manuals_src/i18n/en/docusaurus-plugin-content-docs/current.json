@@ -4,15 +4,15 @@
     "description": "The label for version current"
   },
   "sidebar.manualAtual.category.0-Fundamentos do Manual": {
-    "message": "0-Fundamentos do Manual",
+    "message": "0-Fundamentals",
     "description": "The label for category '0-Fundamentos do Manual' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.Roles do SbD–ToE": {
-    "message": "Roles do SbD–ToE",
+    "message": "SbD–ToE Roles",
     "description": "The label for category 'Roles do SbD–ToE' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.1-Classificaçao das Aplicações": {
-    "message": "1-Classificaçao das Aplicações",
+    "message": "1-Application Classification",
     "description": "The label for category '1-Classificaçao das Aplicações' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-01-complemento-tecnico": {
@@ -20,7 +20,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.2-Requisitos de Segurança": {
-    "message": "2-Requisitos de Segurança",
+    "message": "2-Security Requirements",
     "description": "The label for category '2-Requisitos de Segurança' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-02-complemento-tecnico": {
@@ -28,7 +28,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.3-Threat Modeling": {
-    "message": "3-Threat Modeling",
+    "message": "3-Threat Modelling",
     "description": "The label for category '3-Threat Modeling' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-03-complemento-tecnico": {
@@ -36,7 +36,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.4-Arquitetura Segura": {
-    "message": "4-Arquitetura Segura",
+    "message": "4-Secure Architecture",
     "description": "The label for category '4-Arquitetura Segura' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-04-complemento-tecnico": {
@@ -44,7 +44,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.5-Controlo de Dependências (SBOM, SCA)": {
-    "message": "5-Controlo de Dependências (SBOM, SCA)",
+    "message": "5-Dependencies (SBOM, SCA)",
     "description": "The label for category '5-Controlo de Dependências (SBOM, SCA)' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-05-complemento-tecnico": {
@@ -52,7 +52,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.6-Desenvolvimento Seguro": {
-    "message": "6-Desenvolvimento Seguro",
+    "message": "6-Secure Development",
     "description": "The label for category '6-Desenvolvimento Seguro' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-06-complemento-tecnico": {
@@ -60,7 +60,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.7-CI/CD Seguro": {
-    "message": "7-CI/CD Seguro",
+    "message": "7-Secure CI/CD",
     "description": "The label for category '7-CI/CD Seguro' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-07-complemento-tecnico": {
@@ -76,7 +76,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.9-Containers e Imagens": {
-    "message": "9-Containers e Imagens",
+    "message": "9-Containers and Images",
     "description": "The label for category '9-Containers e Imagens' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-09-complemento-tecnico": {
@@ -84,7 +84,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.10-Testes de Segurança": {
-    "message": "10-Testes de Segurança",
+    "message": "10-Security Testing",
     "description": "The label for category '10-Testes de Segurança' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-10-complemento-tecnico": {
@@ -92,7 +92,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.11-Deploy Seguro": {
-    "message": "11-Deploy Seguro",
+    "message": "11-Secure Deployment",
     "description": "The label for category '11-Deploy Seguro' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-11-complemento-tecnico": {
@@ -100,7 +100,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.12-Monitorização e Operações": {
-    "message": "12-Monitorização e Operações",
+    "message": "12-Monitoring and Operations",
     "description": "The label for category '12-Monitorização e Operações' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-12-complemento-tecnico": {
@@ -108,7 +108,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.13-Formação e Onboarding": {
-    "message": "13-Formação e Onboarding",
+    "message": "13-Training and Onboarding",
     "description": "The label for category '13-Formação e Onboarding' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-13-complemento-tecnico": {
@@ -116,7 +116,7 @@
     "description": "The label for category 'Complemento Técnico' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.14-Governança e Contratação": {
-    "message": "14-Governança e Contratação",
+    "message": "14-Governance and Contracting",
     "description": "The label for category '14-Governança e Contratação' in sidebar 'manualAtual'"
   },
   "sidebar.manualAtual.category.cap-14-complemento-tecnico": {
@@ -128,7 +128,7 @@
     "description": "The label for the doc item 'Índice' in sidebar 'manualAtual', linking to the doc sbd-manual/index"
   },
   "sidebar.toeAssets.category.🏛️ Assets & Policies Organizacionais": {
-    "message": "🏛️ Assets & Policies Organizacionais",
+    "message": "🏛️ Organisational Assets & Policies",
     "description": "The label for category '🏛️ Assets & Policies Organizacionais' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.🔌 MCP Server (SbD-ToE)": {
@@ -140,15 +140,15 @@
     "description": "The label for category 'Casos de uso' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Políticas Recomendadas": {
-    "message": "Políticas Recomendadas",
+    "message": "Recommended Policies",
     "description": "The label for category 'Políticas Recomendadas' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Risco": {
-    "message": "Risco",
+    "message": "Risk",
     "description": "The label for category 'Risco' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Design & Análise": {
-    "message": "Design & Análise",
+    "message": "Design & Analysis",
     "description": "The label for category 'Design & Análise' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Supply Chain": {
@@ -156,27 +156,27 @@
     "description": "The label for category 'Supply Chain' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Desenvolvimento Seguro": {
-    "message": "Desenvolvimento Seguro",
+    "message": "Secure Development",
     "description": "The label for category 'Desenvolvimento Seguro' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Pipeline & Entrega": {
-    "message": "Pipeline & Entrega",
+    "message": "Pipeline & Delivery",
     "description": "The label for category 'Pipeline & Entrega' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Infraestrutura": {
-    "message": "Infraestrutura",
+    "message": "Infrastructure",
     "description": "The label for category 'Infraestrutura' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Testes": {
-    "message": "Testes",
+    "message": "Testing",
     "description": "The label for category 'Testes' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Operações & Monitorização": {
-    "message": "Operações & Monitorização",
+    "message": "Operations & Monitoring",
     "description": "The label for category 'Operações & Monitorização' in sidebar 'toeAssets'"
   },
   "sidebar.toeAssets.category.Governação": {
-    "message": "Governação",
+    "message": "Governance",
     "description": "The label for category 'Governação' in sidebar 'toeAssets'"
   },
   "sidebar.toeCrossCheck.category.DORA": {
@@ -196,11 +196,11 @@
     "description": "The label for category 'GDPR' in sidebar 'toeCrossCheck'"
   },
   "sidebar.toeCrossCheck.category.AI Act (Regulamento de IA)": {
-    "message": "AI Act (Regulamento de IA)",
+    "message": "AI Act (AI Regulation)",
     "description": "The label for category 'AI Act (Regulamento de IA)' in sidebar 'toeCrossCheck'"
   },
   "sidebar.toeCrossCheck.category.Exemplos de Playbook": {
-    "message": "Exemplos de Playbook",
+    "message": "Playbook Examples",
     "description": "The label for category 'Exemplos de Playbook' in sidebar 'toeCrossCheck'"
   }
 }

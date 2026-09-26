@@ -325,5 +325,145 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "manualIndex.chapter.01.title": {
+    "message": "Application Classification",
+    "description": "Manual index card: title of Ch. 01"
+  },
+  "manualIndex.chapter.01.desc": {
+    "message": "Criticality criteria (exposure, data, impact) for proportional controls and traceability",
+    "description": "Manual index card: description of Ch. 01"
+  },
+  "manualIndex.chapter.02.title": {
+    "message": "Security Requirements",
+    "description": "Manual index card: title of Ch. 02"
+  },
+  "manualIndex.chapter.02.desc": {
+    "message": "Prescriptive catalogue and validations by risk level, aligned with DSOMM/SSDF/SAMM",
+    "description": "Manual index card: description of Ch. 02"
+  },
+  "manualIndex.chapter.03.title": {
+    "message": "Threat Modelling",
+    "description": "Manual index card: title of Ch. 03"
+  },
+  "manualIndex.chapter.03.desc": {
+    "message": "Identification of threats and abuse scenarios with STRIDE/LINDDUN, linked to requirements and tests",
+    "description": "Manual index card: description of Ch. 03"
+  },
+  "manualIndex.chapter.04.title": {
+    "message": "Secure Architecture",
+    "description": "Manual index card: title of Ch. 04"
+  },
+  "manualIndex.chapter.04.desc": {
+    "message": "Architecture patterns and decisions (ADR) aligned with risks and requirements",
+    "description": "Manual index card: description of Ch. 04"
+  },
+  "manualIndex.chapter.05.title": {
+    "message": "Dependencies, SBOM and SCA",
+    "description": "Manual index card: title of Ch. 05"
+  },
+  "manualIndex.chapter.05.desc": {
+    "message": "Component management, SBOM and SCA with governed and traceable exceptions",
+    "description": "Manual index card: description of Ch. 05"
+  },
+  "manualIndex.chapter.06.title": {
+    "message": "Secure Development",
+    "description": "Manual index card: title of Ch. 06"
+  },
+  "manualIndex.chapter.06.desc": {
+    "message": "Secure coding practices, code reviews and validations in the workflow",
+    "description": "Manual index card: description of Ch. 06"
+  },
+  "manualIndex.chapter.07.title": {
+    "message": "Secure CI/CD",
+    "description": "Manual index card: title of Ch. 07"
+  },
+  "manualIndex.chapter.07.desc": {
+    "message": "Pipeline as a product: isolation, signatures, promotions and end-to-end integrity",
+    "description": "Manual index card: description of Ch. 07"
+  },
+  "manualIndex.chapter.08.title": {
+    "message": "Infrastructure as Code (IaC)",
+    "description": "Manual index card: title of Ch. 08"
+  },
+  "manualIndex.chapter.08.desc": {
+    "message": "Applying SbD to infrastructure and environments with traceable automation",
+    "description": "Manual index card: description of Ch. 08"
+  },
+  "manualIndex.chapter.09.title": {
+    "message": "Containers and Images",
+    "description": "Manual index card: title of Ch. 09"
+  },
+  "manualIndex.chapter.09.desc": {
+    "message": "Hardening, trusted registries, publication policy and secure execution",
+    "description": "Manual index card: description of Ch. 09"
+  },
+  "manualIndex.chapter.10.title": {
+    "message": "Security Testing",
+    "description": "Manual index card: title of Ch. 10"
+  },
+  "manualIndex.chapter.10.desc": {
+    "message": "L1–L3 verification strategy: SAST, DAST, IAST, fuzzing, semantic analysis",
+    "description": "Manual index card: description of Ch. 10"
+  },
+  "manualIndex.chapter.11.title": {
+    "message": "Secure Deployment",
+    "description": "Manual index card: title of Ch. 11"
+  },
+  "manualIndex.chapter.11.desc": {
+    "message": "Controlled releases, reversibility, feature flags and security evidence",
+    "description": "Manual index card: description of Ch. 11"
+  },
+  "manualIndex.chapter.12.title": {
+    "message": "Monitoring and Operations",
+    "description": "Manual index card: title of Ch. 12"
+  },
+  "manualIndex.chapter.12.desc": {
+    "message": "Observability, detection/alerting, response playbooks and post-deployment coverage",
+    "description": "Manual index card: description of Ch. 12"
+  },
+  "manualIndex.chapter.13.title": {
+    "message": "Training and Onboarding",
+    "description": "Manual index card: title of Ch. 13"
+  },
+  "manualIndex.chapter.13.desc": {
+    "message": "Continuous upskilling by role, secure coding dojos and training tracks",
+    "description": "Manual index card: description of Ch. 13"
+  },
+  "manualIndex.chapter.14.title": {
+    "message": "Governance and Contracting",
+    "description": "Manual index card: title of Ch. 14"
+  },
+  "manualIndex.chapter.14.desc": {
+    "message": "Governance models, KPIs, contractual clauses and supplier validation",
+    "description": "Manual index card: description of Ch. 14"
+  },
+  "manualIndex.type.basilar.label": {
+    "message": "Foundational",
+    "description": "Manual index: chapter type label"
+  },
+  "manualIndex.type.basilar.desc": {
+    "message": "Applicable at every level (L1-L3)",
+    "description": "Manual index: chapter type description"
+  },
+  "manualIndex.type.operacional.label": {
+    "message": "Operational",
+    "description": "Manual index: chapter type label"
+  },
+  "manualIndex.type.operacional.desc": {
+    "message": "Implementation and automation (L2-L3)",
+    "description": "Manual index: chapter type description"
+  },
+  "manualIndex.type.organizacional.label": {
+    "message": "Organisational",
+    "description": "Manual index: chapter type label"
+  },
+  "manualIndex.type.organizacional.desc": {
+    "message": "Governance and management (cross-cutting)",
+    "description": "Manual index: chapter type description"
+  },
+  "manualIndex.openChapter": {
+    "message": "Open chapter →",
+    "description": "Manual index card: button to open the chapter"
   }
 }

@@ -17,10 +17,10 @@ translation:
   target_sha256: b9816cdecdbc421d4b0ba4f463848a2f37b4076af203a78c605b27e58fe32f24
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
-  glossary_keys: [appsec_core, discipline, framework_source_corpus, lifecycle_phase, mcp, mcp_reading_normativa, open_closed_world, requirement_runtime, shacl_owl, slug_threat_modeling, traceability, verification_taxonomy]
-  glossary_sha256: 2c9a4e8b6689203b229a1b5d42513dc8c313b8097156313dd0158958d02feded
-  translated_at: 2026-09-26T16:42:02Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [appsec_core, discipline, framework_source_corpus, lifecycle_phase, mcp, open_closed_world, requirement_runtime, shacl_owl, slug_threat_modeling, traceability, verification_taxonomy]
+  glossary_sha256: 6604385242a0d7e03a0aaed75f2306e3757274cd535e8ef8f7622e83bf90079a
+  translated_at: 2026-09-26T17:58:19Z
   reviewed_by: null
 ---
 

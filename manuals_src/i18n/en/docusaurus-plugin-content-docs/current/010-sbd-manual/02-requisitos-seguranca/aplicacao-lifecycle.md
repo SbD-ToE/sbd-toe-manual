@@ -12,10 +12,10 @@ translation:
   target_sha256: c75f0e88cb5ec3294ef9a382da280957fd85ffbbcbf9fccc271804930ecc0a69
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_normativa, papel_suporte, provenance, requirement_runtime, risk_level, role_tech_lead, schema, threat, traceability, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 0b425934edc3b2654453524bb0d0eef36d5811b572cd85c3e9e4cd1f3db478bc
-  translated_at: 2026-09-26T17:23:44Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, papel_suporte, provenance, requirement_runtime, risk_level, role_tech_lead, schema, threat, traceability, validation_evaluation, verification_taxonomy]
+  glossary_sha256: a137adfde19217cfcc327ddf6dfc0092750e7fc52087370a1c253aff8002cc80
+  translated_at: 2026-09-26T17:58:13Z
   reviewed_by: null
 ---
 

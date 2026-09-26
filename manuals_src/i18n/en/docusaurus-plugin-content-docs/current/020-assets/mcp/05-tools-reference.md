@@ -16,10 +16,10 @@ translation:
   target_sha256: cdd21c0481d05ff69bff57b18fc40c6cfc08478da976d61999bf5cf3de2d266d
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
-  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mcp, mcp_reading_normativa, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, sbdtoe_sbd, slice, traceability, travessia_generica, travessia_relacao, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 0990071e3bdd9ff1a1d92f96a8c76f398895bd1498ebb2e29a0e63c86f5e1178
-  translated_at: 2026-09-26T16:43:53Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [appsec_core, chapter_role, cycle_iteration, deterministic, discipline, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mcp, mcp_reading_programa, mirror_osf, normative_empirical, open_closed_world, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, sbdtoe_sbd, slice, traceability, travessia_generica, travessia_relacao, validation_evaluation, verification_taxonomy]
+  glossary_sha256: faa86e1cdafe343c70e211aae90c326d6fc7ef228fec86bb4ba32316bba7e15f
+  translated_at: 2026-09-26T17:58:18Z
   reviewed_by: null
 ---
 

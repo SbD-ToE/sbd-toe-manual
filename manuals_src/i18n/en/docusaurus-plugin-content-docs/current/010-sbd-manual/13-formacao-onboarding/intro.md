@@ -12,10 +12,10 @@ translation:
   target_sha256: 8fa7afebb205c75c5335b04262af6219dd90137ffe605caf16b1fe904c7c2fe0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, maturity, mcp_reading_normativa, mcp_reading_programa, practitioner_manual, programme_line, role_rh_peopleops, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: fd93f7a6f1c824201dba622a81c4c82b7b5e157ec4225ee9be2bb3da0eab8ebc
-  translated_at: 2026-09-26T17:23:53Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, maturity, mcp_reading_programa, practitioner_manual, programme_line, role_rh_peopleops, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 42b2516a52c4c59a36f0c29416523ab606714823d9327a2d591503af8f850f11
+  translated_at: 2026-09-26T17:58:14Z
   reviewed_by: null
 ---
 

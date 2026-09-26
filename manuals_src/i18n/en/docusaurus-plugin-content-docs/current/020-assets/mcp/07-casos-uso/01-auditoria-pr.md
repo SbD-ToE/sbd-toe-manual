@@ -17,10 +17,10 @@ translation:
   target_sha256: 49be31981503383bf06383d292a6f61b8492d2c70b2ef87311054b6c5acfc679
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
-  glossary_keys: [discipline, mcp, mcp_reading_normativa, practitioner_manual, validation_evaluation]
-  glossary_sha256: b2592061fbecc422d2e31c654740b15df7b499e111508463f004b99da1137181
-  translated_at: 2026-09-26T14:55:17Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [discipline, mcp, practitioner_manual, validation_evaluation]
+  glossary_sha256: a72f13f664ae812032811b0182c964155ebe19c826837f3b2932f35745641a66
+  translated_at: 2026-09-26T17:58:49Z
   reviewed_by: null
 ---
 

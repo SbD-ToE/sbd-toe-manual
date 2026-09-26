@@ -12,10 +12,10 @@ translation:
   target_sha256: 648dbd3b8b6f4b22c0eb4375d942c9636cdb00a0b6bc08267814afcdfe74e8f7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 69aedbbdd11831f1cdc997bd1abfda3e2e4d3b411b1b43faf096628c510f395b
-  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, layer, maturity, mcp_reading_normativa, papel_suporte, practitioner_manual, role_juridico, role_procurement, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
-  glossary_sha256: 4a37a34fe44061e28d79b0330d6c818d9e6bae1140d0f531388ece1a541da66f
-  translated_at: 2026-09-26T17:23:55Z
+  terms_sha256: da8c4621ee3f200794cd49e34ddc29239ba89f55effb1e5e578d388e50580b8d
+  glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, layer, maturity, papel_suporte, practitioner_manual, role_juridico, role_procurement, sbdtoe_sbd, traceability, transversal, validation_evaluation, verification_taxonomy]
+  glossary_sha256: 5912014724b8abb26e8886a61e0c34802cda853e7b9711308eff04a5dc27583f
+  translated_at: 2026-09-26T17:58:16Z
   reviewed_by: null
 ---
 

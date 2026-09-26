@@ -113,7 +113,7 @@ Quando parte do processo de validação é suportado por mecanismos automatizado
 | Cap. 01 - Classificação de risco  | Define o nível de aplicação do modelo       |
 | Cap. 02 - Requisitos de segurança | Determina o que validar por tipo de risco   |
 | addon/02-clausulas-contratuais.md | Cláusulas por tipo de contrato e risco      |
-| addon/01-modelo-governacao.md     | Papéis e alçadas para aprovação de exceções |
+| addon/01-modelo-governancao.md     | Papéis e alçadas para aprovação de exceções |
 | addon/05-exemplos-praticos.md     | Casos reais de aplicação do modelo          |
 
 ---

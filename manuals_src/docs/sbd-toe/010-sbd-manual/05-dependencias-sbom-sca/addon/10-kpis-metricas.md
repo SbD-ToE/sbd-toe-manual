@@ -107,4 +107,4 @@ Estes thresholds são referência de base. Regulamentação sectorial (DORA, NIS
 | `addon/00-catalogo-requisitos.md` | Requisitos DEP-001..010 que fundamentam os indicadores |
 | `addon/08-rastreabilidade-vulnerabilidades.md` | Modelo de rastreabilidade CVE → aplicação → resolução |
 | `addon/09-excecoes-e-aceitacao-risco.md` | CVEs sem resolução dentro de SLA requerem excepção formal |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |

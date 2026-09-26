@@ -87,7 +87,7 @@ flowchart LR
 
 * Esta tabela deve ser usada como **base para governação técnica** e decisão executiva;
 * Deve integrar os dados provenientes dos **checklists por capítulo SbD-ToE**;
-* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver `addon/kpis-governanca.md`).
+* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver `kpis-governanca.md`).
 
 ---
 
@@ -98,6 +98,6 @@ flowchart LR
 * `addon/01-modelo-governancao.md` - Governação e exceções
 * `addon/02-clausulas-contratuais.md` - Cláusulas contratuais
 * `addon/03-modelo-validacao-fornecedores.md` - Validação de fornecedores
-* `addon/kpis-governanca.md` - KPIs de governação
+* `kpis-governanca.md` - KPIs de governação
 
 ---

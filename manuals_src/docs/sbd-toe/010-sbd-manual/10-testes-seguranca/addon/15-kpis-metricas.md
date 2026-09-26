@@ -105,4 +105,4 @@ Findings com excepção formal activa são excluídos do cálculo de TST-K03 mas
 | `addon/00-catalogo-requisitos.md` | Requisitos TST-001..010 que fundamentam os indicadores |
 | `addon/08-gestao-findings.md` | Processo de centralização (TST-K05) e triagem (TST-K07) |
 | `addon/05-validacao-regressao.md` | Metodologia de detecção de regressões (TST-K04) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03 |

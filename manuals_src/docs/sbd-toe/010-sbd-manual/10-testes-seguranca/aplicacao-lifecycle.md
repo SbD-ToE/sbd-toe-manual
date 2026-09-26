@@ -483,7 +483,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings d
 **Checklist.**  
 - [ ] Plataforma centralizada deployada (DefectDojo, Vulcan, Security Hub, etc.)  
 - [ ] Conectores para todas as ferramentas (SAST, DAST, IAST, SCA) configurados  
-- [ ] Regras de deduplica e correlação ativas  
+- [ ] Regras de deduplicação e correlação ativas  
 - [ ] Critérios de triagem documentados (CWE, OWASP, risco organizacional)  
 - [ ] SLA definidos por severidade e Lx (Crítico: `<24h`, Alto: `<7d`, Médio: `<30d`)  
 - [ ] Dashboard públicos com KPIs (findings abertos, taxa de resolução, tempo médio)  
@@ -492,7 +492,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings d
 
 :::
 
-**Artefactos & evidências.** Configuração plataforma centralizada versionada, regras de deduplica, dashboard de findings, SLA documento, logs de mudança de estado, relatórios mensais KPIs.  
+**Artefactos & evidências.** Configuração plataforma centralizada versionada, regras de deduplicação, dashboard de findings, SLA documento, logs de mudança de estado, relatórios mensais KPIs.  
 
 **Proporcionalidade por risco.**  
 | Nível | Exigência | Detalhes |

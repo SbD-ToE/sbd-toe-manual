@@ -42,7 +42,7 @@ Estas políticas devem:
 | [Política de Logging e Rastreabilidade](/sbd-toe/assets/policies/policy-deploy-seguro)            | ✅ Sim      | Todos os ambientes de produção e staging       | Requisitos de logging, versionamento, toggles e auditabilidade           |
 | [Política de Gating e Automatismo de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro)      | ⚠️ Opcional | Pipelines com deploy automatizado               | Definição de gates, aprovação automática, bloqueio por findings         |
 | [Política de Validação em Ambiente de Staging](/sbd-toe/assets/policies/policy-deploy-seguro)    | ✅ Sim      | Projetos com staging ou pre-prod                | Validação funcional, métricas e readiness com evidência                   |
-| [Política de Autonomia e Responsabilidade de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro) | ⚠️ Opcional | Equipas com deploy self-service ou continuo     | Quem pode autorizar, requisitos mínimos, registo de decisões             |
+| [Política de Autonomia e Responsabilidade de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro) | ⚠️ Opcional | Equipas com deploy self-service ou contínuo     | Quem pode autorizar, requisitos mínimos, registo de decisões             |
 
 ---
 

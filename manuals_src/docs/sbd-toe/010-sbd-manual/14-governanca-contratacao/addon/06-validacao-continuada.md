@@ -76,7 +76,7 @@ O processo de validação contínua pode ser automatizado ou apoiado em ferramen
 
 * Integrar revisões com o ciclo de release ou com mecanismos de fiscalização interna;
 * Criar alertas para exceções caducadas ou não revalidadas;
-* Usar este processo para alimentar os KPIs de governação (ver `addon/kpis-governanca.md`);
+* Usar este processo para alimentar os KPIs de governação (ver `kpis-governanca.md`);
 * Tratar a validação recorrente como parte integrante do ciclo de vida de segurança;
 * Utilizar a validação contínua como mecanismo de deteção de delegações implícitas de autoridade a processos ou sistemas, assegurando a sua revisão ou revogação quando necessário.
 

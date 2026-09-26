@@ -29,7 +29,7 @@ A fase de execução de uma aplicação em produção exige **observabilidade ad
 - Ativação de kill switch
 - Acesso a funcionalidades desativadas por toggle
 - Logs com mensagens de exceção não tratadas
-- Detetação de padrões anómalos (ex: spikes de login)
+- Deteção de padrões anómalos (ex: spikes de login)
 
 ---
 
@@ -67,7 +67,7 @@ Estas métricas devem ser ligadas a:
   - ID da release
   - Identificador de funcionalidade
   - Timestamp + contexto
-- Alteracões de configuração devem ser:
+- Alterações de configuração devem ser:
   - Versionadas
   - Auditadas por perfil autorizado
   - Ligadas a um motivo/documentação

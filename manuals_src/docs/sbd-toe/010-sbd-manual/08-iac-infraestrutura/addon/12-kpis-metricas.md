@@ -99,4 +99,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/08-matriz-requisitos-iac.md` | Requisitos IAC-001..013 que fundamentam os indicadores |
 | `addon/09-gestao-excecoes.md` | Processo de excepção de policy IaC (IAC-K04) |
 | `addon/06-controle-enforcement.md` | Mecanismos de enforcement que alimentam IAC-K01/K07 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02 |

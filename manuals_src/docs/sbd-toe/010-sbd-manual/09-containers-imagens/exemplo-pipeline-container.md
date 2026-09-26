@@ -32,7 +32,7 @@ O pipeline em causa é responsável por **compilar, testar, assinar e publicar u
 |-------------------------------|-----------------------------------------------|-------------------------------------------|
 | Imagem base segura            | `FROM node:18.17.0-alpine` + `USER node`      | `01-imagens-base.md`                      |
 | Assinatura da imagem          | `cosign sign` com GitHub OIDC                | `03-assinatura-cadeia-trust.md`           |
-| Geração de SBOM               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-sbom-containers.md`               |
+| Geração de SBOM               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-inventario-sbom.md`               |
 | Scanner de vulnerabilidades   | `trivy image` com bloqueio por CVSS > 7       | `07-vulnerabilidades-imagens.md`          |
 | Runners isolados              | `runs-on: [self-hosted, ephemeral]`           | `02-runners-isolamento.md`                |
 | Execução com enforcement      | Kyverno `validate` para labels, UID, origem   | `05-policies-runtime-opa.md`              |

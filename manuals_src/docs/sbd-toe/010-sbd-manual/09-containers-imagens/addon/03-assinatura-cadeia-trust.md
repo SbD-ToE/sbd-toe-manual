@@ -124,7 +124,7 @@ A rastreabilidade deve permitir reconstruir o percurso completo da imagem.
 |----------------------------------|------------------------------------------------|
 | `01-imagens-base.md`             | Assinatura após aprovação da imagem base       |
 | `05-policies-runtime-opa.md`    | Enforcement técnico de verificação             |
-| `06-sbom-containers.md`         | Ligação entre composição e integridade         |
+| `06-inventario-sbom.md`         | Ligação entre composição e integridade         |
 | `09-riscos-processo-imagens.md` | Separação entre evidência e decisão            |
 | `25-rastreabilidade.md`         | Demonstração auditável de integridade          |
 

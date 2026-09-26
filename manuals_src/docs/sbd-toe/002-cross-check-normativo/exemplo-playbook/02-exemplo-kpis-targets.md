@@ -81,7 +81,7 @@ graph TB
             D3["SCA findings altos: 0<br/>🟢 OK"]
         end
         
-        subgraph OPS["�� OPERAÇÕES"]
+        subgraph OPS["OPERAÇÕES"]
             O1["MTTR P0: 1.5h<br/>🟢 OK"]
             O2["MTTR P1: 6h<br/>🟢 OK"]
             O3["Incidents/month: 3<br/>target: `<5` | 🟢 OK"]
@@ -273,7 +273,7 @@ graph TB
         subgraph RISK["🎯 RISCO"]
             R1["Critical: 0 / target: 0<br/>🟢 OK"]
             R2["High: 3 / target: `<5`<br/>🟢 OK"]
-            R3["Medium: 12 / target: `<20`<br/>�� WATCH"]
+            R3["Medium: 12 / target: `<20`<br/>🟡 WATCH"]
         end
         
         subgraph COMP["📋 CONFORMIDADE"]

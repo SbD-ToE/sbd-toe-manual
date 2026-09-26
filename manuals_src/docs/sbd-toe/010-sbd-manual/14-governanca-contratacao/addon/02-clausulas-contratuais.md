@@ -36,7 +36,7 @@ São disposições formais incorporadas nos contratos com fornecedores, parceiro
 > 📎 Estas cláusulas são essenciais para transferir obrigações de segurança e alinhar o fornecedor com os princípios do SbD-ToE.
 
 A utilização de processos ou mecanismos técnicos automatizados para suportar o cumprimento destas cláusulas não altera nem reduz as responsabilidades contratuais do fornecedor.
-O fornecedor permanece integralmente responsável pela conformidade, evidência e resultados obtidos,independentemente do grau de automação utilizado.
+O fornecedor permanece integralmente responsável pela conformidade, evidência e resultados obtidos, independentemente do grau de automação utilizado.
 
 
 ---

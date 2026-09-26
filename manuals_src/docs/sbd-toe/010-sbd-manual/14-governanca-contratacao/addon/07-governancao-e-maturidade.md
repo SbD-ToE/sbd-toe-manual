@@ -44,7 +44,7 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 
 * Adoção formal do modelo de governança (`addon/01-modelo-governancao.md`);
 * Integração de revisões e exceções num ciclo trimestral;
-* Geração de KPIs e dashboards (`addon/kpis-governanca.md`);
+* Geração de KPIs e dashboards (`kpis-governanca.md`);
 * Auditorias cruzadas entre aplicações, contratos e rastreabilidade.
 
 ---
@@ -61,6 +61,6 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 
 * `achievable-maturity.md` de cada capítulo
 * `addon/01` a `addon/07` - componentes de suporte à maturidade
-* `addon/kpis-governanca.md` - KPIs de governança
+* `kpis-governanca.md` - KPIs de governança
 
 ---

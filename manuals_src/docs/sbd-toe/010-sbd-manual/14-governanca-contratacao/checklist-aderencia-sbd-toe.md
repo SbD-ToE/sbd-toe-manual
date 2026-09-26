@@ -58,7 +58,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 1 - Classificação e Gestão de Risco {#1---classificação-e-gestão-de-risco}
 
-*Políticas: classificacao-risco, aceitacao-risco, revisao-periodica-risco, gestao-excecoes*
+*Políticas: `classificacao-risco`, `aceitacao-risco`, `revisao-periodica-risco`, `gestao-excecoes`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -74,7 +74,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 2 - Requisitos, Ameaças e Arquitectura {#2---requisitos-ameaças-e-arquitectura}
 
-*Políticas: requisitos-seguranca, threat-modeling, arquitetura-segura, rastreabilidade*
+*Políticas: `requisitos-seguranca`, `threat-modeling`, `arquitetura-segura`, `rastreabilidade`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -94,7 +94,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 3 - Dependências e SBOM {#3---dependências-e-sbom}
 
-*Políticas: dependencias, sbom, excecoes-cve, atualizacao-automatica*
+*Políticas: `dependencias`, `sbom`, `excecoes-cve`, `atualizacao-automatica`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -115,7 +115,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 4 - Desenvolvimento Seguro {#4---desenvolvimento-seguro}
 
-*Políticas: guidelines-desenvolvimento, revisao-codigo, uso-ferramentas-apoio*
+*Políticas: `guidelines-desenvolvimento`, `revisao-codigo`, `uso-ferramentas-apoio`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -135,7 +135,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 5 - CI/CD e Pipeline {#5---cicd-e-pipeline}
 
-*Políticas: cicd-seguro, gestao-segredos*
+*Políticas: `cicd-seguro`, `gestao-segredos`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -155,7 +155,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 6 - IaC e Containers {#6---iac-e-containers}
 
-*Políticas: iac-seguro, aprovacao-plan-iac, containers-seguros, golden-base-images*
+*Políticas: `iac-seguro`, `aprovacao-plan-iac`, `containers-seguros`, `golden-base-images`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -176,7 +176,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 7 - Testes de Segurança {#7---testes-de-segurança}
 
-*Políticas: dast-fuzzing, estrategia-testes, release-seguro, aprovacao-release, pentesting*
+*Políticas: `dast-fuzzing`, `estrategia-testes`, `release-seguro`, `aprovacao-release`, `pentesting`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -196,7 +196,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 8 - Deploy e Operações {#8---deploy-e-operações}
 
-*Políticas: deploy-seguro, rollback, monitorizacao-pos-deploy, logging-estruturado, monitorizacao-seguranca, gestao-alertas, irp*
+*Políticas: `deploy-seguro`, `rollback`, `monitorizacao-pos-deploy`, `logging-estruturado`, `monitorizacao-seguranca`, `gestao-alertas`, `irp`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -220,7 +220,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ## 9 - Governação e Formação {#9---governação-e-formação}
 
-*Políticas: contratacao-segura, rastreabilidade-organizacional, kpis-governacao, formacao-seguranca*
+*Políticas: `contratacao-segura`, `rastreabilidade-organizacional`, `kpis-governacao`, `formacao-seguranca`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|

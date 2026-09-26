@@ -102,4 +102,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/04-risco-residual.md` | Processo de documentação de risco residual (CLA-K05) |
 | `addon/02-ciclo-vida-risco.md` | Ciclos de revisão que definem os thresholds de CLA-K02 |
 | Cap. 14 `addon/12-processo-excecoes.md` | Aceitação de risco residual (CLA-K05) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-06 |

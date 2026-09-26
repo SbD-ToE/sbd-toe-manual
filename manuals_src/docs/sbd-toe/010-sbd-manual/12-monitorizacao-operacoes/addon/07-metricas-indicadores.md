@@ -60,7 +60,7 @@ Definir métricas e indicadores para avaliar a **eficácia, cobertura e maturida
 | ------------------- | ------------------------------------------------------------------ |
 | **L1 (mínimo)**     | Logging ativo local, análise manual ocasional                      |
 | **L2 (moderado)**   | Alertas automáticos com tuning, dashboards de operação básicos     |
-| **L3 (avçado)**     | Correlação de fontes, detecção comportamental, KPIs como MTTD/MTTR |
+| **L3 (avançado)**     | Correlação de fontes, detecção comportamental, KPIs como MTTD/MTTR |
 
 > 📊 Estas métricas contribuem também para os Capítulos 10 (Testes de Segurança) e 11 (Controlo de Execução).
 

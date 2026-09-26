@@ -99,4 +99,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/00-catalogo-requisitos.md` | Requisitos DPL-001..009 que fundamentam os indicadores |
 | `addon/09-excecoes-deploy.md` | Processo de break-glass e aprovação post-facto (DPL-K02/K03/K07) |
 | `addon/04-validacoes-pre-deploy.md` | Checklist de segurança pré-deploy (DPL-K01) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02 |

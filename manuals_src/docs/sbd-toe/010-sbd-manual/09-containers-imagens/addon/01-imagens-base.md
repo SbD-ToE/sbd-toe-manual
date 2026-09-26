@@ -118,7 +118,7 @@ A reutilização automática de imagens **não dispensa** esta revalidação.
 |----------------------------------|-----------------------------------------------------------|
 | `03-assinatura-cadeia-trust.md`  | Assinatura e verificação de integridade                   |
 | `05-policies-runtime-opa.md`    | Enforcement técnico de imagens aprovadas                  |
-| `06-sbom-containers.md`         | Inventário e composição das imagens                       |
+| `06-inventario-sbom.md`         | Inventário e composição das imagens                       |
 | `07-vulnerabilidades-imagens.md`| Análise contínua de vulnerabilidades                      |
 | `09-riscos-processo-imagens.md` | Separação entre validação automática e decisão humana     |
 

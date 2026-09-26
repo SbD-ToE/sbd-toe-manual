@@ -20,14 +20,12 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 
 # Monitorização & Operações
 
-## 
-
 Monitorizar é muito mais do que recolher dados técnicos.  
 É transformar sinais dispersos em **inteligência acionável** que permite às equipas antecipar riscos, detetar falhas e responder antes que um problema se transforme em incidente grave.  
 
 A experiência mostra-nos que grande parte dos ataques não são descobertos pela sofisticação do adversário, mas pela falta de visibilidade. Casos como o da Equifax ou da Target provaram que **logs estavam lá** - mas eram incompletos, mal estruturados ou simplesmente ignorados.  
 
-É por isso que frameworks, como o **SSDF***,  e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
+É por isso que frameworks, como o **SSDF**, e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
 
 👉 Este capítulo liga-se diretamente a:  
 - **Cap. 11 - Deploy Seguro**, que garante a entrada em produção de versões observáveis.  
@@ -50,7 +48,7 @@ Estas práticas são complementares: só fazem sentido quando atuam em conjunto,
 
 ---
 
-## � Automação e Governação em Monitorização {#-automação-e-governação-em-monitorização}
+## Automação e Governação em Monitorização {#-automação-e-governação-em-monitorização}
 
 A monitorização segura combina **automação extensiva** com **governação explícita**, diferenciando:
 
@@ -143,7 +141,7 @@ rca_required: true
 
 ---
 
-## �🧪 Prescrição prática {#-prescrição-prática}
+## 🧪 Prescrição prática {#-prescrição-prática}
 
 Na prática, aplicar este capítulo significa responder a quatro perguntas fundamentais:  
 

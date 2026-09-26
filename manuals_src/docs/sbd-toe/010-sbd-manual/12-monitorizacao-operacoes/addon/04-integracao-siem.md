@@ -67,7 +67,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 
 ## ✅ Boas práticas de integração {#-boas-práticas-de-integração}
 
-* Validar logs com `tcpdump`, `wireshark` ou dashboards de ingesão;
+* Validar logs com `tcpdump`, `wireshark` ou dashboards de ingestão;
 * Usar **filtros de enriquecimento** (ex: geolocalização, `user-agent`, `env`);
 * Evitar redundância (mesmo evento enviado para vários destinos);
 * Testar envio com `logger`, `curl`, replay de logs reais;
@@ -81,7 +81,7 @@ Trata-se da cadeia de **coleta, transporte, transformação e ingestão** dos ev
 | ----------------------------------- | --------------------------------------------- |
 | Evento chegou ao SIEM               | Confirmar via index ou forwarder log          |
 | Campos foram parseados corretamente | Ver em dashboard ou query de inspeção         |
-| Latência entre geração e ingesão    | Medida com timestamp vs ingest time           |
+| Latência entre geração e ingestão    | Medida com timestamp vs ingest time           |
 | Duplicados ou perdas                | Verificação por hash / ID / contagem esperada |
 
 ---

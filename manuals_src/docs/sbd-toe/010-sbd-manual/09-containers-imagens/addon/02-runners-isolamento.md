@@ -126,7 +126,7 @@ Sem estes elementos, a automação transforma-se em risco sistémico.
 |----------------------------------|-------------------------------------------------|
 | `01-imagens-base.md`             | Imagens permitidas nos ambientes de execução    |
 | `05-policies-runtime-opa.md`    | Enforcement técnico de políticas                |
-| `06-sbom-containers.md`         | Inventário do ambiente de execução              |
+| `06-inventario-sbom.md`         | Inventário do ambiente de execução              |
 | `09-riscos-processo-imagens.md` | Separação entre execução automática e decisão   |
 | `15-aplicacao-lifecycle.md`     | Aplicação operacional no ciclo de vida          |
 

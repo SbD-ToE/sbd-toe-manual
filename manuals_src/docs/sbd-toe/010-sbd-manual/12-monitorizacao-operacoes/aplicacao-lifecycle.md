@@ -514,7 +514,7 @@ Como **GRC/Auditoria**, quero **documentar e demonstrar conformidade entre contr
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um framework de conformidade aplicável (SSDF, NIS2, ISO 27001)  
-  **Quando** mapéio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
+  **Quando** mapeio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
   **Então** cada controlo técnico é rastreável até um requisito regulatório específico  
 - E existe evidência auditável (logs, dashboards, relatórios, métricas)  
 - E relatórios de conformidade são gerados trimestralmente  

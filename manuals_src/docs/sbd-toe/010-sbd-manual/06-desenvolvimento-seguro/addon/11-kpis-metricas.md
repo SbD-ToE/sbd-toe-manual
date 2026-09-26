@@ -95,4 +95,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/00-catalogo-requisitos.md` | Requisitos DEV-001..009 que fundamentam os indicadores |
 | `addon/05-excecoes-e-justificacoes.md` | Processo de excepção de SAST (DEV-K04) |
 | Cap. 10 `addon/08-gestao-findings.md` | Centralização e triagem de findings que alimentam DEV-K01/K05 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |

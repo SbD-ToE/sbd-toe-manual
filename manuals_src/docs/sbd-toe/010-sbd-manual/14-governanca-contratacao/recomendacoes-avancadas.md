@@ -13,7 +13,7 @@ Este ficheiro inclui práticas que reforçam a governança da segurança aplicac
 
 ---
 
-## 🏢 1. Governaça distribuída com controlo central {#-1-governaça-distribuída-com-controlo-central}
+## 🏢 1. Governança distribuída com controlo central {#-1-governaça-distribuída-com-controlo-central}
 
 * Definição de *owners* de segurança por domínio ou unidade organizacional;
 * Modelo federado de exceções, com revisão central (GRC ou AppSec board);

@@ -342,7 +342,7 @@ T+0: Backup de work realizado (se necessário)
 
 Cada sandbox inclui **README.md com:**
 
-```markdown
+````markdown
 # Sandbox Onboarding Guide
 
 ## Bem-vindo!
@@ -369,30 +369,30 @@ Este é seu ambiente de prática seguro. Aqui pode aprender sem risco de impacta
    npm run test:security
    ```
 
-### Exercícios {#exercícios}
+### Exercícios
 
 Comece com Exercício 1: [Link]
 
-### Pedir Ajuda {#pedir-ajuda}
+### Pedir Ajuda
 
 - Slack: #sandbox-support
 - Email: [security-email]
 - Escalação: Tech Lead [name]
 
-### Logs de Atividade {#logs-de-atividade}
+### Logs de Atividade
 
 A sua atividade está sendo monitorizada (logs auditados). Isto é normal e esperado.
 
-### Deadline {#deadline}
+### Deadline
 
 Exercícios devem ser completados até [data]. Quiz passa em [data + 1].
 
 ---
-```
+````
 
 ---
 
-## 🎓 Integration com Cap. 13 (Formação)
+## 🎓 Integration com Cap. 13 (Formação) {#-integration-com-cap-13-formação}
 
 Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
@@ -404,7 +404,7 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
 ---
 
-## 🏁 Checklist de Término
+## 🏁 Checklist de Término {#-checklist-de-término}
 
 ```
 [ ] Contractor completou 70% exercícios
@@ -420,7 +420,7 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
 ---
 
-## 📎 Templates e Links
+## 📎 Templates e Links {#-templates-e-links}
 
 - [Contractor Validation Template](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
 - [Preparação Técnica - US-15](../aplicacao-lifecycle#us-15)
@@ -429,7 +429,7 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
 ---
 
-## 🔄 Melhoria Contínua
+## 🔄 Melhoria Contínua {#-melhoria-contínua}
 
 **Feedback Loop:**
 1. Contractor completa sandbox

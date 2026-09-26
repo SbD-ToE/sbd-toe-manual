@@ -25,7 +25,7 @@ genia: us-format-normalization
 |-------|------------------|
 | **Developer** | Participar em formação prática, aplicar no código |
 | **Quality Assurance (QA)** | Formação em validação e regressões |
-| **AppSec Engineer** | Produzir conteúdos, ministrar formação, facilitar sesões |
+| **AppSec Engineer** | Produzir conteúdos, ministrar formação, facilitar sessões |
 | **DevOps / SRE** | Capacitação em CI/CD e monitorização |
 | **Security Champion** | Mentorar equipas, facilitar peer-learning |
 | **Gestão Executiva** | Apoiar adoção, validar conformidade regulatória |
@@ -674,7 +674,7 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 **Proporcionalidade L1–L3.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Formatos básicos (microlearning) | Labs e quizzes estructurados | Labs com scoring + simulações + auditoria |
+| Formatos básicos (microlearning) | Labs e quizzes estruturados | Labs com scoring + simulações + auditoria |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |

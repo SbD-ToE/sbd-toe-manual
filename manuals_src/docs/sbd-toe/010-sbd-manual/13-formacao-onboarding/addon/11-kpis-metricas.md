@@ -105,4 +105,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-programa-champions.md` | Critérios de actividade de champion (TRN-K07) |
 | `addon/90-indicadores-metricas.md` | Síntese operacional de métricas para uso quotidiano das equipas |
 | Cap. 14 `addon/03-modelo-validacao-fornecedores.md` | Requisitos de formação de fornecedores (TRN-K03) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensão transversal T-04 (ownership e formação) |
+| Cap. 14 `kpis-governanca.md` | Dimensão transversal T-04 (ownership e formação) |

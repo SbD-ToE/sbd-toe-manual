@@ -102,4 +102,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-validacao-evidencia-threat-modeling.md` | Processo de validação que alimenta THR-K03/K05 |
 | `addon/07-mapeamento-threats-requisitos.md` | Mapeamento ameaça → requisito (THR-K05) |
 | Cap. 04 `addon/10-kpis-metricas.md` | ARC-K01 (threat model por arquitectura) complementa THR-K01 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-06 |

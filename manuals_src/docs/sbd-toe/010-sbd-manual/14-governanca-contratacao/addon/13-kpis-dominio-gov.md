@@ -105,4 +105,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/02-clausulas-contratuais.md` | Critérios de proporcionalidade contratual (GOV-K05) |
 | `addon/03-modelo-validacao-fornecedores.md` | Validação anual de fornecedores (GOV-K06) |
 | `addon/06-validacao-continuada.md` | Ciclos de revisão que produzem desvios (GOV-K08) |
-| `addon/kpis-governanca.md` | Dimensões transversais T-02, T-04, T-05 |
+| `kpis-governanca.md` | Dimensões transversais T-02, T-04, T-05 |

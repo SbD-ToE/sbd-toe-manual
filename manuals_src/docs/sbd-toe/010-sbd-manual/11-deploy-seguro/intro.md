@@ -50,7 +50,7 @@ Estes elementos devem ser aplicados como um **conjunto coerente de controlos**: 
 
 ---
 
-## � Automação e Governação no Deploy {#-automação-e-governação-no-deploy}
+## Automação e Governação no Deploy {#-automação-e-governação-no-deploy}
 
 O deploy seguro combina **automação extensiva** com **governação explícita**, diferenciando:
 
@@ -124,7 +124,7 @@ Exceções a gates automáticos (ex: CVE não-aplicável, falso positivo SAST) s
 
 ---
 
-## �🧪 Prescrição prática {#-prescrição-prática}
+## 🧪 Prescrição prática {#-prescrição-prática}
 
 O que distingue organizações maduras não é apenas *o que* fazem no *deploy*, mas **como operacionalizam o processo como um mecanismo repetível de validação e contenção de risco**, com evidência objetiva.
 

@@ -90,7 +90,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 | Documento                        | Relação com este tópico                      |
 | -------------------------------- | -------------------------------------------- |
 | `02-logging-centralizado.md`     | Fonte dos eventos para correlação            |
-| `04-integracao-siem.md`          | Canal e formato da ingesão                   |
+| `04-integracao-siem.md`          | Canal e formato da ingestão                   |
 | `03-alertas-eventos-criticos.md` | Geração de alertas baseada em padrões        |
 | `09-ameacas-mitigadas.md`        | Mapeia deteção a cenários de ameaça (OSC\&R) |
 

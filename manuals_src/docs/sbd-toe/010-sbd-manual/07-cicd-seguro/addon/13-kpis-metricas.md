@@ -99,4 +99,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/00-catalogo-requisitos.md` | Requisitos CIC-001..010 que fundamentam os indicadores |
 | `addon/09-controle-excecoes-visibilidade.md` | Processo de excepção de pipeline (CIC-K02) |
 | `addon/06-politicas-gates-pipeline.md` | Definição dos gates que alimentam CIC-K01 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |

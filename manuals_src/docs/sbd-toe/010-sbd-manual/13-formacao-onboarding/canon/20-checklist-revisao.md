@@ -52,7 +52,7 @@ Permite avaliar de forma **binária, objetiva e rastreável** a adoção prátic
 
 ## ✅ Conformidade e KPI {#-conformidade-e-kpi}
 
-- Este checklist permite declarar **conformidade com as práticas do Capítulo 13** de forma audível e mensurável.
+- Este checklist permite declarar **conformidade com as práticas do Capítulo 13** de forma auditável e mensurável.
 - O número de respostas afirmativas pode ser utilizado como **indicador de maturidade da organização** em segurança baseada em capacitação.
 - Os dados gerados devem ser incluídos em **planos de melhoria contínua, auditorias de ciclo de vida e objetivos de qualidade técnica**.
 

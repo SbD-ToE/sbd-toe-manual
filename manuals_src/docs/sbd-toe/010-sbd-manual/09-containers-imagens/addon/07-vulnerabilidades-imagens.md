@@ -66,7 +66,7 @@ Estas ferramentas **detetam presença**, não explorabilidade nem impacto real.
 
 ## 🛠️ Como aplicar a deteção corretamente {#️-como-aplicar-a-deteção-corretamente}
 
-1. **Gerar SBOM da imagem final** (ver `06-sbom-containers.md`);
+1. **Gerar SBOM da imagem final** (ver `06-inventario-sbom.md`);
 2. **Executar scanner SCA** sobre a imagem real;
 3. **Produzir relatório técnico**, incluindo:
    - CVE;
@@ -130,7 +130,7 @@ Não devem ser usados como:
 | Documento                         | Relação com vulnerabilidades                 |
 |----------------------------------|----------------------------------------------|
 | `01-imagens-base.md`             | Minimização reduz superfície de CVEs         |
-| `06-sbom-containers.md`          | Scanner usa SBOM como base                   |
+| `06-inventario-sbom.md`          | Scanner usa SBOM como base                   |
 | `03-assinatura-cadeia-trust.md` | Integridade da imagem analisada              |
 | `09-riscos-processo-imagens.md` | Scanners como sinal, não decisão             |
 | `15-aplicacao-lifecycle.md`     | Integração no SSDLC                          |

@@ -2,7 +2,7 @@
 id: intro
 title: Formação e Capacitação
 description: Estratégias e práticas para garantir que equipas, perfis e stakeholders estão preparados para aplicar o Security by Design
-tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM, ]
+tags: [formacao, capacitacao, onboarding, champions, aprendizagem, DSOMM, SAMM]
 sidebar_position: 0
 ---
 
@@ -25,7 +25,7 @@ A **formação em segurança** é o elo que transforma prescrições técnicas e
 - **Cap. 12 - Monitorização & Operações** garante visibilidade em runtime, mas depende de equipas treinadas para interpretar alertas e reagir.  
 - **Cap. 14 - Governança & Contratação** define compromissos organizacionais, mas só é eficaz se as equipas tiverem o conhecimento para os cumprir.  
 
-Para assegurar que a "segurança se vive e respira" e é parte do DNA da organização, é essencial cultivar esse corpo. Este capitulo define como a Segurança passa a ser algo intriseco à organização através de:
+Para assegurar que a "segurança se vive e respira" e é parte do DNA da organização, é essencial cultivar esse corpo. Este capitulo define como a Segurança passa a ser algo intrínseco à organização através de:
 
 - Programas de onboarding para novos elementos.  
 - Formação contínua para Dev, QA, DevOps, AppSec, Gestão.  

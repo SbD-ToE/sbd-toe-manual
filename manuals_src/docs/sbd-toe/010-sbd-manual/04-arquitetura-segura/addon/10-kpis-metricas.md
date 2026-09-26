@@ -97,4 +97,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/01-catalogo-requisitos.md` | Requisitos ARC-001..013 que fundamentam os indicadores |
 | `addon/06-rastreabilidade.md` | Modelo de rastreabilidade threat→requisito→ADR→controlo→evidência |
 | `addon/03-excecoes.md` | Desvios aos controlos ARC requerem excepção formal |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-04, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-04, T-06 |

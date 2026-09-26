@@ -904,4 +904,20 @@ A proporcionalidade permite adaptar rigor sem comprometer segurança:
 | *Gates* de aprovação | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
 | *Rollback* | Manual | Automatizado | Automatizado + testado |
 | Rastreabilidade | Básica | Completa | Completa + auditoria |
-| Monitorização | Básica | Crítica
+| Monitorização | Básica | Crítica | Completa + resposta automática |
+| Feature flags e toggles | Opcional | Recomendado | Obrigatório |
+| Gestão de segredos (OIDC/Workload Identity) | Recomendado | Obrigatório | Obrigatório + rotação automática |
+| Versionamento semântico e changelog | Básico | Completo + segurança | Completo + segurança + compatibilidade |
+| Deploy progressivo (Canary/Blue-Green) | Recomendado (manual) | Automatizado com métricas | Automatizado + threshold-triggered rollback |
+| Validações técnicas pré-deploy | SAST + Aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+| Rollback por tipo (binário, config, BD, infra) | Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
+
+---
+
+## 🏁 Recomendações finais {#-recomendações-finais}
+
+- **Nunca promover diretamente** para produção sem staging.  
+- **Automatizar deploys, rastrear e reverter** sempre que necessário.  
+- **Rollback testado regularmente** assegura resiliência.  
+- **Monitorização pós-deploy** deve estar integrada com resposta a incidentes (Cap. 12).  
+- **Aplicar proporcionalidade L1–L3** garante equilíbrio entre custo e risco.  

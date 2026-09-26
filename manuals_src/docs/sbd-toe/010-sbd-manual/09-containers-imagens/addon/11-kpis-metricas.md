@@ -99,4 +99,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/00-catalogo-requisitos.md` | Requisitos CNT-001..012 que fundamentam os indicadores |
 | `addon/10-excecoes-containers.md` | Processo de excepção de containers (CNT-K01, CNT-K04) |
 | `addon/07-vulnerabilidades-imagens.md` | Gestão de vulnerabilidades que alimenta CNT-K01/K02 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |

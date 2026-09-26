@@ -97,4 +97,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-taxonomia-rastreabilidade.md` | Modelo de rastreabilidade que fundamenta RQS-K03 |
 | `addon/07-validacao-requisitos.md` | Processo de validação de requisitos (RQS-K04/K05) |
 | `addon/08-gestao-excecoes.md` | Requisitos excepcionados (RQS-K02, RQS-K06) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-06 |

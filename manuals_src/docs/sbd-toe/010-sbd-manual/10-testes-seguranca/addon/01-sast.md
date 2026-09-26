@@ -65,7 +65,7 @@ Pode ser realizado por:
 |--------------------------------|-----------------------------------------------|
 | Capítulo 02 - Requisitos       | Valida `EX-REQ-203`, `EX-REQ-205`, `EX-REQ-303`        |
 | Capítulo 06 - Desenvolvimento  | Reforça práticas de secure coding             |
-| Capítulo 07 - CI/CD Seguro     | Ver `07-integracao-validacoes.md`             |
+| Capítulo 07 - CI/CD Seguro     | Ver `07-validacoes-seguranca-integradas.md`             |
 | `06-cobertura-e-priorizacao.md`| Define targets e prioridades de análise       |
 | `08-gestao-findings.md`        | Garante tratamento eficaz dos resultados      |
 | `09-feedback-equipa.md`        | Envolvimento das equipas na validação         |

@@ -8,21 +8,21 @@ tags: [princípios, security by design, iac, fundamentos, arquitetura segura]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md
-  source_sha256: 3868c4c54f816dc29d045486be243386d3e838d9dc8dcecd9d439a2517c9d38d
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 53ba33eb884065a82c04ca6967157fda4f3e2f78768705971472d81513645090
+  source_sha256: 8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8
+  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
+  target_sha256: 0731cb6c81652ead360b4c20457a7dd9dc04392452c013c9af7c6b297e3671ab
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase, provenance, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: a8de4bfe48c98dcdbb311490bdb1c30117b13b58b532e5f8ba175472ac2d7c0e
-  translated_at: 2026-09-26T09:25:35Z
+  translated_at: 2026-09-26T09:45:03Z
   reviewed_by: null
-----------------------------------------------------------------------------
+---
 
 # 🛡️ Security by Design Principles applied to IaC Projects
 
-## 🌟 Objective
+## 🌟 Objective {#-objetivo}
 
 Ensure that all IaC projects are designed and maintained on the basis of structural principles of **security by definition**, reinforcing the reliability and resilience of the infrastructure they provision.
 

@@ -8,21 +8,21 @@ tags: [governação, módulos, iac, reutilização, segurança, supply-chain, ra
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md
-  source_sha256: 06dd1db1d25aed958b9758815f7f3dc6910067007c1fd90f807813ea4d7257df
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: de55817bd73c7b0a0628651f5bd7f9178623f44b244f005bd9733e521b2bacdc
+  source_sha256: d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9
+  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
+  target_sha256: a1b0a7a00df720fcbc88f7a5e4a971e926e6d147fadf73cd81595cd6c9b01b04
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, provenance, traceability, validation_evaluation, verification_taxonomy]
   glossary_sha256: f311aac6f5bc95780781a4c838f4b75f36169f6a425fa320fbe2fba386bcbed3
-  translated_at: 2026-09-26T09:25:34Z
+  translated_at: 2026-09-26T09:45:03Z
   reviewed_by: null
-----------------------------------------------------------------------------------------
+---
 
 # 🛡️ Governance of Reusable Modules in IaC
 
-## 🌟 Objective
+## 🌟 Objective {#-objetivo}
 
 Ensure that **all modules reused in Infrastructure as Code (IaC) projects** - internal or external - are treated as **supply chain components**, subject to formal governance, continuous validation and auditable evidence.
 

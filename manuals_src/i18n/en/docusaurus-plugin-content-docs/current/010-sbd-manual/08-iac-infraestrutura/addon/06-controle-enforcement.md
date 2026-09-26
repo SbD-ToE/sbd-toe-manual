@@ -8,21 +8,21 @@ tags: [enforcement, controlo, políticas, iac, pipelines, segurança]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/06-controle-enforcement.md
-  source_sha256: cf7bd411d8e583170ae1db952e2dce91df9b57c148202932b94b6c40271414d1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a8a3f740b2e64795bc4cc6f731bb2fed8e42a96a820c18ad652ea7bd6442b277
+  source_sha256: d4a6b9355f3b63f1b7525d9e8b4abe7b0db72b24823740728708da24774e20ca
+  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
+  target_sha256: f84a9d44c5c19ada48f7d84a512153769fbbd94f1aa17691d35d0aa22aec7bfa
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
   glossary_keys: [cycle_iteration, discipline, lifecycle_phase, practitioner_manual, verification_taxonomy]
   glossary_sha256: 3cfda390a0457ad76a85d92317363d986f2836edea34a9646d46f66012265948
-  translated_at: 2026-09-26T09:25:36Z
+  translated_at: 2026-09-26T09:45:05Z
   reviewed_by: null
--------------------------------------------------------------------
+---
 
 # 🛡️ Continuous Enforcement of Security Policies and Rules in IaC
 
-## 🌟 Objective
+## 🌟 Objective {#-objetivo}
 
 Ensure that all Infrastructure as Code (IaC) projects meet **minimum security requirements in an automatic, consistent and verifiable way**, through *policy enforcement* mechanisms integrated into the development and operations lifecycle.
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T09:44:50Z",
+  "generated_at": "2026-09-26T09:45:06Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
@@ -1905,43 +1905,43 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md": {
-      "state": "pt-ahead",
+      "state": "synced",
       "source_sha256": "d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9",
-      "translated_source_sha256": "06dd1db1d25aed958b9758815f7f3dc6910067007c1fd90f807813ea4d7257df",
-      "target_sha256": "de55817bd73c7b0a0628651f5bd7f9178623f44b244f005bd9733e521b2bacdc",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "translated_source_sha256": "d551f391cec1504c7c193e86696397322494ebe79782399ecf436133325a83e9",
+      "target_sha256": "a1b0a7a00df720fcbc88f7a5e4a971e926e6d147fadf73cd81595cd6c9b01b04",
+      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
       "glossary_sha256_at_translation": "f311aac6f5bc95780781a4c838f4b75f36169f6a425fa320fbe2fba386bcbed3",
-      "translated_at": "2026-09-26T09:25:34Z",
+      "translated_at": "2026-09-26T09:45:03Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/04-principios-sbd-iac.md": {
-      "state": "pt-ahead",
+      "state": "synced",
       "source_sha256": "8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8",
-      "translated_source_sha256": "3868c4c54f816dc29d045486be243386d3e838d9dc8dcecd9d439a2517c9d38d",
-      "target_sha256": "53ba33eb884065a82c04ca6967157fda4f3e2f78768705971472d81513645090",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "translated_source_sha256": "8dad43c2ed6b3587e76bb91f30dd63882524c08d80c91be3ad8d2498efe1d0a8",
+      "target_sha256": "0731cb6c81652ead360b4c20457a7dd9dc04392452c013c9af7c6b297e3671ab",
+      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
       "glossary_sha256_at_translation": "a8de4bfe48c98dcdbb311490bdb1c30117b13b58b532e5f8ba175472ac2d7c0e",
-      "translated_at": "2026-09-26T09:25:35Z",
+      "translated_at": "2026-09-26T09:45:03Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/05-exemplos-praticas-boas.md": {
-      "state": "pt-ahead",
+      "state": "synced",
       "source_sha256": "c06f373263cab3c2f465040032d6391fa4fe39b7542b23e4c3720510e9e6d60c",
-      "translated_source_sha256": "f1a04342a682399f2eadc6c7c0013353aba60a8eba98f32bb6d50479f79ad8ed",
-      "target_sha256": "c06205fbf14129df1bdc9306d01bac8a1c61a89f08f4d9839d8e061dbcbc2765",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "translated_source_sha256": "c06f373263cab3c2f465040032d6391fa4fe39b7542b23e4c3720510e9e6d60c",
+      "target_sha256": "c1268f241613ae9df1249bedcb87d95ac71528e45cedf8c7769aea2c7cf8104a",
+      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
       "glossary_sha256_at_translation": "4f7d762dc31caf92a79b7805a0ee8a8c7086fdf47b2ba4871f0a925da986c0d4",
-      "translated_at": "2026-09-26T09:25:36Z",
+      "translated_at": "2026-09-26T09:45:04Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/06-controle-enforcement.md": {
-      "state": "pt-ahead",
+      "state": "synced",
       "source_sha256": "d4a6b9355f3b63f1b7525d9e8b4abe7b0db72b24823740728708da24774e20ca",
-      "translated_source_sha256": "cf7bd411d8e583170ae1db952e2dce91df9b57c148202932b94b6c40271414d1",
-      "target_sha256": "a8a3f740b2e64795bc4cc6f731bb2fed8e42a96a820c18ad652ea7bd6442b277",
-      "terms_sha256_at_translation": "056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95",
+      "translated_source_sha256": "d4a6b9355f3b63f1b7525d9e8b4abe7b0db72b24823740728708da24774e20ca",
+      "target_sha256": "f84a9d44c5c19ada48f7d84a512153769fbbd94f1aa17691d35d0aa22aec7bfa",
+      "terms_sha256_at_translation": "6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99",
       "glossary_sha256_at_translation": "3cfda390a0457ad76a85d92317363d986f2836edea34a9646d46f66012265948",
-      "translated_at": "2026-09-26T09:25:36Z",
+      "translated_at": "2026-09-26T09:45:05Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/08-iac-infraestrutura/addon/07-rastreabilidade-e-tags.md": {
@@ -4137,9 +4137,9 @@
   },
   "totals": {
     "untranslated": 227,
-    "synced": 182,
+    "synced": 186,
     "partial": 0,
-    "pt-ahead": 4,
+    "pt-ahead": 0,
     "en-ahead": 0,
     "drift": 0,
     "stale-terms": 0

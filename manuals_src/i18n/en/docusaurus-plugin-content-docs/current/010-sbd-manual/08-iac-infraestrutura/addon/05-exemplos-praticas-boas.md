@@ -8,21 +8,21 @@ tags: [exemplos, boas práticas, iac, código seguro, repositórios]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/05-exemplos-praticas-boas.md
-  source_sha256: f1a04342a682399f2eadc6c7c0013353aba60a8eba98f32bb6d50479f79ad8ed
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c06205fbf14129df1bdc9306d01bac8a1c61a89f08f4d9839d8e061dbcbc2765
+  source_sha256: c06f373263cab3c2f465040032d6391fa4fe39b7542b23e4c3720510e9e6d60c
+  source_commit: 4430e7c4ca4536589773f3f465bd05857a1e6c38
+  target_sha256: c1268f241613ae9df1249bedcb87d95ac71528e45cedf8c7769aea2c7cf8104a
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 056f81fc0221610254c3eefaa182065e249abe5f887f679635bef5554d85ef95
+  terms_sha256: 6163399f3326e10bced3afe0b9ddfa197cae2c643b2beeb28c226f7164a47a99
   glossary_keys: [audit_trail, chapter_role, traceability, validation_evaluation]
   glossary_sha256: 4f7d762dc31caf92a79b7805a0ee8a8c7086fdf47b2ba4871f0a925da986c0d4
-  translated_at: 2026-09-26T09:25:36Z
+  translated_at: 2026-09-26T09:45:04Z
   reviewed_by: null
------------------------------------------------------------------
+---
 
 # 🛠️ Examples of Secure Structure and Practices in IaC Projects
 
-## 🌟 Objective
+## 🌟 Objective {#-objetivo}
 
 Present **concrete, reusable and auditable examples** of how to structure and operate Infrastructure as Code (IaC) projects in a secure, coherent way aligned with the practices prescribed in this chapter.
 

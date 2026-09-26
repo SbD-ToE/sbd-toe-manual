@@ -382,3 +382,50 @@ class SlugExemptionTests(unittest.TestCase):
         self.assertEqual(tokens[0][0], "modeling")
         self.assertGreater(tokens[0][1], text.index("in prose") - 20)
 
+
+
+class ConsistencyDirectoryTests(unittest.TestCase):
+    """Regression for 60d377d7: a run over a SUB-directory of the mirror (a chapter, as `translate.py check` does) must
+    map files to the corpus by their path relative to the mirror ROOT, and a mirror file without a source is an error."""
+
+    def _layout(self, tmp: Path):
+        import yaml
+        docs = tmp / "docs"
+        mirror = tmp / "i18n" / "en" / common.DOCS_PLUGIN_MIRROR
+        (docs / "cap" / "sub").mkdir(parents=True)
+        (mirror / "cap" / "sub").mkdir(parents=True)
+        (docs / "cap" / "sub" / "a.md").write_text("# T\n\nUma avaliação do risco.\n", encoding="utf-8")
+        # EN renders «avaliação» with a form that is NOT in the entry → one real inconsistency.
+        (mirror / "cap" / "sub" / "a.md").write_text("# T\n\nA review of the risk.\n", encoding="utf-8")
+        registry = tmp / "registry.yaml"
+        entry = minimal_entry("avaliacao", species=3, pt="avaliação", pt_variants=[], en="assessment", en_variants=[])
+        registry.write_text(yaml.safe_dump(registry_with(entry), allow_unicode=True, sort_keys=False), encoding="utf-8")
+        return docs, mirror, registry
+
+    def _run(self, path: Path, docs: Path, registry: Path) -> tuple:
+        import io
+        from contextlib import redirect_stderr, redirect_stdout
+        out, err = io.StringIO(), io.StringIO()
+        with redirect_stdout(out), redirect_stderr(err):
+            code = terms_lint.main(["consistency", "--path", str(path), "--registry", str(registry), "--docs-dir", str(docs)])
+        return code, out.getvalue(), err.getvalue()
+
+    def test_chapter_directory_finds_the_source_and_reports_the_inconsistency(self):
+        with tempfile.TemporaryDirectory() as t:
+            docs, mirror, registry = self._layout(Path(t))
+            code_root, out_root, _ = self._run(mirror, docs, registry)
+            code_sub, out_sub, err_sub = self._run(mirror / "cap", docs, registry)
+            self.assertNotIn("no source counterpart", err_sub)
+            self.assertIn("avaliacao  source form present", out_sub)
+            self.assertIn("1 error(s)", out_sub)
+            self.assertEqual((code_sub, out_sub.splitlines()[-1]), (code_root, out_root.splitlines()[-1]))
+            self.assertEqual(code_sub, 1)
+
+    def test_mirror_file_without_source_is_an_error_in_a_directory_run(self):
+        with tempfile.TemporaryDirectory() as t:
+            docs, mirror, registry = self._layout(Path(t))
+            (mirror / "cap" / "sub" / "orphan.md").write_text("# Orphan\n\nText.\n", encoding="utf-8")
+            code, out, err = self._run(mirror / "cap", docs, registry)
+            self.assertIn("no source counterpart", err)
+            self.assertIn("2 error(s)", out)
+            self.assertEqual(code, 1)

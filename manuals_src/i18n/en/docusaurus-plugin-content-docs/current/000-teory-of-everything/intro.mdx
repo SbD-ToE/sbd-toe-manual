@@ -1,0 +1,257 @@
+---
+id: intro
+title: Theory of Everything
+description: Unified philosophy underpinning Security by Design – Theory of Everything (SbD–ToE)
+sidebar_label: 🧠 ToE Philosophy
+sidebar_position: 1
+translation:
+  source_locale: pt
+  source_path: 000-teory-of-everything/intro.mdx
+  source_sha256: f82c965d76013461d014c6e998da4ae75a7388b1d5abb3fbf6bb3b97dc1d8906
+  source_commit: d894c1083b3b9af84973cefd7487ec813fa0b98f
+  target_sha256: a803692062355f172b4953fa474578f7d920e552e9f8d310db47694cf63eb7d7
+  engine: claude-opus-5-5
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2
+  glossary_keys: [alcada, audit_trail, basilar, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, maturity, normative_empirical, papel_suporte, practitioner_manual, prescriptive, provenance, sbdtoe_sbd, threat, traceability, transversal, travessia_relacao, validation_evaluation]
+  glossary_sha256: 6c53798e1425d61928793859e20a03b9b026014bf372b15521c87fb04de64c9b
+  translated_at: 2026-09-26T13:13:53Z
+  reviewed_by: null
+---
+
+# Security by Design – Theory of Everything
+
+**Security by Design – Theory of Everything (SbD–ToE)** is a unified operating model for secure software engineering that turns diverse principles, frameworks and requirements into executable, risk-proportional and verifiable practices.
+
+Instead of adding yet another framework, SbD-ToE works as a unification and rationalisation layer for the existing ecosystem, organising dispersed norms, frameworks, recommendations and practices into a coherent and operational model. 
+
+This approach ensures explicit continuity between normative obligations, architecture decisions, development practices, pipeline validation and operational evidence, throughout the entire software lifecycle.
+
+---
+
+import {translate} from '@docusaurus/Translate';
+
+export const ToeChart = () => (
+  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label={translate({id: 'toe.chart.ariaLabel', message: 'Diagrama conceptual da Theory of Everything'})} style={{maxWidth: '100%'}}>
+    <defs>
+      <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.18"/>
+        <stop offset="60%" stopColor="var(--ifm-color-primary)" stopOpacity="0.05"/>
+        <stop offset="100%" stopColor="transparent" stopOpacity="0"/>
+      </radialGradient>
+      <style>{`
+        .toe-title { font-weight: bold; font-size: 27px; fill: currentColor; }
+        .toe-text { font-size: 21px; fill: var(--ifm-color-emphasis-700); }
+        .toe-emergent { font-size: 15px; fill: var(--ifm-color-emphasis-600); opacity: 0.7; }
+      `}</style>
+    </defs>
+    <circle cx="704" cy="353" r="185" fill="url(#toeGlow)"/>
+    <circle cx="704" cy="353" r="205" fill="none" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6" strokeDasharray="6 6"/>
+    <circle cx="704" cy="353" r="85" fill="var(--ifm-background-surface-color)" stroke="var(--ifm-color-primary)" strokeWidth="3.6"/>
+    <text x="704" y="347" textAnchor="middle" fontSize="18" fontWeight="bold" fill="currentColor">Security by Design</text>
+    <text x="704" y="362" textAnchor="middle" fontSize="16" fill="currentColor">Theory of Everything</text>
+    <circle cx="704" cy="148" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="704" cy="148" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="704" y="70" textAnchor="middle" className="toe-title">Top-Down</text>
+    <text x="704" y="92" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.topDown', message: 'Normas & Regulação'})}</text>
+    <line x1="704" y1="195" x2="704" y2="268" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+    <circle cx="704" cy="558" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="704" cy="558" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="704" y="635" textAnchor="middle" className="toe-title">Bottom-Up</text>
+    <text x="704" y="657" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.bottomUp', message: 'Ameaças & Incidentes'})}</text>
+    <line x1="704" y1="511" x2="704" y2="438" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+    <circle cx="499" cy="353" r="47" fill="var(--ifm-background-surface-color)"/>
+    <circle cx="499" cy="353" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
+    <text x="420" y="345" textAnchor="end" className="toe-title">Engineering</text>
+    <text x="420" y="365" textAnchor="end" className="toe-text">{translate({id: 'toe.chart.engineering', message: 'Execução & Ciclo de vida'})}</text>
+    <line x1="546" y1="353" x2="619" y2="353" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
+</svg>
+);
+
+<ToeChart />
+---
+
+SbD–ToE arises from the systematic observation of recurring failures in the way security is conceived, implemented and governed in modern organisations. These failures rarely result from an absence of norms, of knowledge about threats or of technical tools. They result, almost always, from a deeper problem:
+
+> Security fails through the **absence of an integrating model** that turns heterogeneous sources of truth — norms, threats and engineering practice — into **coherent decisions**, **executable practices** and **verifiable evidence**.
+
+In practice, *Security by Design* appears fragmented across regulation, frameworks, engineering, operations and people. SbD–ToE exists to **resolve this structural fracture**, treating security as a **single socio-technical system** rather than as a set of isolated domains.
+
+---
+
+## 🧠 The structural problem of modern Security by Design {#-o-problema-estrutural-do-security-by-design-moderno}
+
+In the contemporary organisational context, security tends to manifest itself asymmetrically:
+
+- **regulation** defines high-level obligations, often technically neutral;
+- **norms and frameworks** describe expected capabilities and maturity levels, but rarely prescribe concrete execution;
+- **real threats** evolve in an adversarial, empirical way and faster than normative models;
+- **engineering** operates under severe constraints of time, cost, skills and technological legacy.
+
+Each of these dimensions is legitimate in its own right. The problem arises when **there is no disciplined mechanism that makes them converge**.
+
+The typical result includes:
+- declarative compliance without effective mitigation;
+- technical practices disconnected from risk and from the norm;
+- implicit decisions without assignment of accountability;
+- difficulty in producing auditable evidence;
+- inability to achieve measurable continuous improvement.
+
+SbD–ToE starts from the principle that **security is only defensible when these dimensions are treated as parts of a single system**, with clear rules of integration, decision and validation.
+
+---
+
+## 🧭 The three foundational vectors of SbD–ToE {#-os-três-vetores-basilares-do-sbdtoe}
+
+SbD–ToE rests on **three fundamental vectors**, which represent irreducible structural forces present in any secure engineering system. These vectors are **necessary and sufficient**; everything that is relevant to *Security by Design* emerges from their disciplined interaction.
+
+---
+
+### 🏛️ Top-Down Vector — Normative, regulatory and intentional {#️-vetor-top-down--normativo-regulatório-e-intencional}
+
+The **top-down** vector represents what is **required, expected or considered acceptable** by regulators, customers and the organisation itself.
+
+It includes:
+- regulation and legislation (e.g. NIS2, DORA, CRA, GDPR);
+- technical norms and standards (ISO/IEC, NIST);
+- maturity frameworks and good practices (OWASP SAMM, BSIMM, SSDF, DSOMM, SLSA, CIS, ENISA).
+
+This vector defines the **space of obligation**:
+- what has to exist;
+- who is accountable;
+- what must be demonstrable;
+- when and under what conditions security is assessed.
+
+By nature, this vector is **declarative and abstract**. It does not describe how to develop secure software, but it conditions every technical and organisational decision.
+
+---
+
+### 🔍 Bottom-Up Vector — Threats, failures and real impact {#-vetor-bottom-up--ameaças-falhas-e-impacto-real}
+
+The **bottom-up** vector represents the empirical reality of failure: how systems are actually compromised, abused or degraded in the real world.
+
+It includes:
+- threats and attack taxonomies (STRIDE, CAPEC, ATT&CK, OSC&R);
+- recurring classes of vulnerabilities and structural weaknesses (CWE, OWASP Top 10);
+- real incidents, *post-mortems* and observed failure patterns.
+
+This vector defines the **space of real risk** and acts as a corrective force on purely normative thinking. Without it, security quickly degrades into abstract compliance and theoretical mitigation.
+
+---
+
+### ⚙️ Engineering Vector — Practice, execution and experience {#️-vetor-de-engenharia--prática-execução-e-experiência}
+
+The third vector corresponds to **real engineering**: the space where norms and threats collide with people, processes, tooling and organisational limitations.
+
+It includes:
+- development, CI/CD, IaC, testing, operations and incident response;
+- concrete technical practices, *user stories*, checklists and artefacts;
+- risk-proportional application (L1–L3);
+- experience accumulated from day-to-day practice (“from the trenches”).
+
+This vector defines the **space of feasible execution** and works as the model's **structural validation mechanism**.
+
+---
+
+## 🧱 Emergent properties and invariants of the system {#-propriedades-emergentes-e-invariantes-do-sistema}
+
+From the disciplined interaction between the three vectors, **structural properties** emerge that are not optional. Among these, the **invariants of the secure engineering process** stand out.
+
+An **invariant** is a condition that:
+- cuts across the whole SDLC;
+- is independent of technology, tool or methodology;
+- when violated, renders the system **non-auditable**, **non-attributable** or **non-defensible**.
+
+Examples of canonical invariants in SbD–ToE include:
+- explicit separation between automated suggestion and human decision;
+- primacy of verifiable evidence over narrative plausibility;
+- traceability between decision, execution and artefacts;
+- reproducibility of the process or an explicit compensating control;
+- protection of the process's own critical assets (secrets, IP, pipelines, builders).
+
+Invariants **do not constitute an autonomous vector**. They are **emergent properties** that stabilise the interaction between the normative, the threat and engineering.
+
+---
+
+## 🔗 The five macro-processes: invariants in process form {#-os-cinco-macro-processos-invariantes-em-forma-de-processo}
+
+Chapters 01–14 of the Manual organise secure engineering by **capability areas**: they state *what* has to exist and *how* it is done, with L1–L3 proportionality. An organisation that applies them has the mechanisms. The systemic failure that the macro-processes address is not the absence of a mechanism; it is the **absence of a governed linkage layer** between mechanisms that do exist — the classification that does not select the requirements, the *threat model* that the tests do not close, the SBOM that describes a different *build*, the exception approved without approval authority, the indicator that measures activity instead of state.
+
+The invariants described above therefore have a procedural form. SbD–ToE names **five macro-processes**, each preserving a **continuity** — a relation that has to remain intact between activities that the chapters prescribe separately. They are orthogonal to the chapters: each macro-process is a **path** through several of them, and no chapter owns a macro-process. They are neither lifecycle phases nor new chapters; they are invariants in the sense defined above, and together they make up the **governed linkage layer** (*governed linkage layer*) of the model.
+
+| Macro-process | Continuity | Invariant | Question it answers |
+|---|---|---|---|
+| MP1 **Classify → Select** | Applicability | A recorded security profile selects requirements, gates, review depth, evidence and training. | "What applies here?" |
+| MP2 **Design → Assure** | Intent | Threats, architecture decisions and tests close over the same declared outcome. | "Does what was designed and implemented satisfy the security intent?" |
+| MP3 **Build → Run** | Provenance / execution | The evidence from dependencies, *pipeline*, artefact, *deployment* and *runtime* describes the same released version. | "Is what is running or acting what was governed, verified and authorised?" |
+| MP4 **Authorise → Act / Except** | Authority and agency | Roles, supplier duties, automated systems and exceptions require explicit authority and retained evidence. Capability does not imply authority. | "Who or what may decide or execute this, on whose behalf, within what scope, and when is an exception or an escalation mandatory?" |
+| MP5 **Measure → Improve** | Assurance and learning | Every chapter needs an eligible population, an evidence contract, an owner and a measure of resulting state. | "Did the system work, and what has to change?" |
+
+Each macro-process is defined as a process — purpose, chapter traversal, triggers, inputs, activities anchored in existing requirements, outputs, roles, control points, evidence and indicators — and in **measurable** form, reusing the chapters' KPIs, so that it can serve as the basis for a future maturity measurement without that measurement being defined here. AI and agentic systems enter as an extension of each macro-process, not as a separate universe. Beyond "what has to be done here?", the Manual now also answers the question: **"what has to remain connected before, during and after — and how is it known that it still is?"** The full process definition is in the [process view in Fundamentals](/sbd-toe/sbd-manual/fundamentos/macro-processos).
+
+---
+
+## 📚 *Security by Design* in normative and regulatory frameworks {#-security-by-design-nos-referenciais-normativos-e-regulatórios}
+
+The principle of *Security by Design* is today widely enshrined in the main normative, technical and regulatory frameworks, albeit with different degrees of explicitness, prescription and operational detail. There is clear convergence on the premise that security must be integrated from conception and maintained throughout the entire lifecycle, but this convergence occurs above all at the level of the **normative principle**, leaving its **systematic operationalisation** open.
+
+In particular:
+
+- **NIST — Secure Software Development Framework (SP 800-218)**  
+  > “**Addressing security requirements and risks during software design (secure by design) is key for improving software security and also helps improve development efficiency.**”  
+  > — *NIST Special Publication 800-218, Secure Software Development Framework (SSDF)*  
+  > Official source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf  
+
+  The SSDF explicitly states the principle of Security by Design and incorporates a risk-based approach to tailoring practices (considering factors such as risk, cost and feasibility), including examples of prioritisation and exceptions. However, it remains at a high level, without prescribing granular operational details for specific risk levels (e.g. L1–L3), standardised minimum artefacts, systematic and automated linkage to real-time threats, or integrated governance that explicitly traverses the SDLC with verifiable evidence in every organisational context.
+
+- **Directive (EU) 2022/2555 — NIS2**  
+  > “**appropriate and proportionate technical and organisational measures to manage the risks posed to the security of network and information systems**”  
+  > — *Article 21(1), Directive (EU) 2022/2555*  
+  > Official source: https://eur-lex.europa.eu/eli/dir/2022/2555/oj  
+
+  NIS2 defines clear obligations and formal accountability, but does not specify how to translate those measures into repeatable and auditable engineering practices.
+
+- **Regulation (EU) 2022/2554 — DORA**  
+  > “**uniform requirements concerning the security of network and information systems supporting the business processes of financial entities**”  
+  > — *Regulation (EU) 2022/2554 (DORA)*  
+  > Official source: https://eur-lex.europa.eu/eli/reg/2022/2554/oj  
+
+  DORA reinforces integrated and governed security, including third parties, without providing a prescriptive technical model at SDLC level.
+
+---
+
+## 🧱 Convergence in principle, gap in operationalisation {#-convergência-no-princípio-lacuna-na-operacionalização}
+
+Taken together, these frameworks:
+- converge on the **what** (integration of security from conception);
+- set expectations as to the **when** (throughout the lifecycle);
+- define organisational and regulatory responsibilities.
+
+They systematically leave open, however:
+- the **how** of operationalising *Security by Design* coherently;
+- the **how** of ensuring reproducibility, traceability and evidence;
+- the explicit linkage between norms, threats, engineering and people;
+- the cross-cutting governance of modern projects and *legacy* systems;
+- the upskilling and accountability of people, internal and external.
+
+---
+
+## 🔄 The role of SbD–ToE {#-o-papel-do-sbdtoe}
+
+It is precisely in this space — between the normative principle and technical execution — that **Security by Design – Theory of Everything (SbD–ToE)** positions itself.
+
+SbD–ToE provides:
+- the **how**: prescriptive practices, pipelines, tests, artefacts and evidence;
+- the **why**: explicit linkage to risk, threat and obligation;
+- the **what for**: accountable decision-making, effective governance and defensible audit.
+
+It does so coherently:
+- from the level of the norm to the level of the code;
+- from the modern project to the *legacy* system;
+- from engineering to the training of people;
+- from technical execution to organisational governance.
+
+> SbD–ToE does not replace norms or frameworks.  
+> It is the **unifying plane** that makes them operationally coherent, reproducible and auditable in a single socio-technical system.
+
+---

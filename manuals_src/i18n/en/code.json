@@ -465,5 +465,21 @@
   "manualIndex.openChapter": {
     "message": "Open chapter →",
     "description": "Manual index card: button to open the chapter"
+  },
+  "toe.chart.ariaLabel": {
+    "message": "Conceptual diagram of the Theory of Everything",
+    "description": "ToE intro diagram label"
+  },
+  "toe.chart.topDown": {
+    "message": "Standards & Regulation",
+    "description": "ToE intro diagram label"
+  },
+  "toe.chart.bottomUp": {
+    "message": "Threats & Incidents",
+    "description": "ToE intro diagram label"
+  },
+  "toe.chart.engineering": {
+    "message": "Execution & Lifecycle",
+    "description": "ToE intro diagram label"
   }
 }

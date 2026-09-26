@@ -93,7 +93,7 @@ Estas dimensões são da competência de equipas de compliance, jurídico, ciên
 
 **Conteúdo normativo**
 
-O Art. 4 (na redacção do Reg. (UE) 2026/1744) obriga *prestadores* e *responsáveis pela implantação* a adotar medidas para promover a literacia em IA do pessoal e de outras pessoas envolvidas na operação ou utilização de sistemas de IA — obrigação de meios, que não exige garantir um nível específico de literacia., ponderando os seus conhecimentos técnicos, experiência, educação e formação, bem como o contexto em que o sistema vai ser usado e os destinatários previstos.
+O Art. 4 (na redacção do Reg. (UE) 2026/1744) obriga *prestadores* e *responsáveis pela implantação* a adotar medidas para promover a literacia em IA do pessoal e de outras pessoas envolvidas na operação ou utilização de sistemas de IA — obrigação de meios, que não exige garantir um nível específico de literacia, ponderando os seus conhecimentos técnicos, experiência, educação e formação, bem como o contexto em que o sistema vai ser usado e os destinatários previstos.
 
 **Cobertura SbD-ToE**
 
@@ -561,7 +561,7 @@ Sugere-se: tratar pesos, *checkpoints* e *datasets* como ativos de cadeia de for
 
 **Conteúdo normativo**
 
-O Art. 5 proíbe um conjunto de práticas (p. ex., manipulação subliminar prejudicial, classificação social — *social scoring* —, certa identificação biométrica remota em tempo real em espaços acessíveis ao público para efeitos de aplicação da lei); desde 2 de dezembro de 2026, também a geração/manipulação de imagens íntimas sem consentimento e de material de abuso sexual de crianças (art. 5.º, n.º 1, al. ba) e bb), aditadas pelo Reg. (UE) 2026/1744). O Art. 50 impõe deveres de transparência para sistemas de risco limitado (informar que se interage com IA; marcar conteúdo sintético / *deepfakes*).
+O Art. 5 proíbe um conjunto de práticas (p. ex., manipulação subliminar prejudicial, classificação social — *social scoring* —, certa identificação biométrica remota em tempo real em espaços acessíveis ao público para efeitos de aplicação da lei); a partir de 2 de dezembro de 2026, também a geração/manipulação de imagens íntimas sem consentimento e de material de abuso sexual de crianças (art. 5.º, n.º 1, al. ba) e bb), aditadas pelo Reg. (UE) 2026/1744). O Art. 50 impõe deveres de transparência para sistemas de risco limitado (informar que se interage com IA; marcar conteúdo sintético / *deepfakes*).
 
 **Cobertura SbD-ToE**
 

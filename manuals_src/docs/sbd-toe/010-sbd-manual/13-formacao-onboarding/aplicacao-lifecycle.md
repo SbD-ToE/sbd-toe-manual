@@ -444,6 +444,7 @@ Como **AppSec Engineer / GRC**, quero **aplicar trilhos formativos de forma expl
 - [ ] Catálogo → Trilho: existe um artefacto de mapeamento catálogo→trilho (`catalogo_trilhos.csv` ou `catalogo_trilhos.json`) que lista, para cada capítulo/tópico do `addon/01`, o módulo/trilho recomendado e a versão L1/L2/L3 aplicável.  
 - 
 **Artefactos & evidências adicionais.** `catalogo_trilhos.csv` com colunas mínimas: capitulo, topico, trilho_L1, trilho_L2, trilho_L3, formato_sugerido, exemplo_import_lms. Um exemplo de importação (CSV pequeno) deve acompanhar o plano de formação.  
+
 - 
 :::
 

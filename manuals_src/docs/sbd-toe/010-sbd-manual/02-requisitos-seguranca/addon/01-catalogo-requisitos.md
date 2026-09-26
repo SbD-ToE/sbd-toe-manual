@@ -58,6 +58,7 @@ Consulte a aplicação proporcional dos requisitos por domínio técnico no
 - [IDE - Ferramentas de Desenvolvimento](lista-requisitos-base#ide)
 
 Para consulta rápida da aplicação proporcional dos requisitos por nível de risco, ver o anexo “Catálogo Base de Requisitos” no final deste capítulo.
+
 ---
 
 ## 📌 Nota Final {#-nota-final}

@@ -1259,4 +1259,5 @@ Mais importante do que aplicar controlos dispersos é garantir que estão integr
 - **Golden base images + allowlist + builders ephemerais e assinados** são o tripé de segurança - padronização reduz risco de supply chain.
 
 Em síntese: **containers são facilitadores de agilidade e portabilidade, mas apenas quando tratados com a mesma disciplina científica aplicada a qualquer outro artefacto crítico de software**. Segurança de containers não é apenas responsabilidade de DevOps: é uma preocupação transversal de Dev Team, AppSec, Plataforma e GRC.
+
 ---

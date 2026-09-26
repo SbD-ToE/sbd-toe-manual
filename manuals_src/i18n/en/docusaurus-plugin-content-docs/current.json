@@ -202,5 +202,9 @@
   "sidebar.toeCrossCheck.category.Exemplos de Playbook": {
     "message": "Playbook Examples",
     "description": "The label for category 'Exemplos de Playbook' in sidebar 'toeCrossCheck'"
+  },
+  "sidebar.toeCrossCheck.category.ENISA & CSA (Certificação)": {
+    "message": "ENISA & CSA (Certification)",
+    "description": "The label for category 'ENISA & CSA (Certificação)' in sidebar 'toeCrossCheck'"
   }
 }

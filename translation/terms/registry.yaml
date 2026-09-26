@@ -6001,3 +6001,47 @@ terms:
   pending_reason: null
   blocks_translation: false
   notes: '[MA 2026-09-26] Políticas (08): título de documento externo verbatim.'
+- key: mcp_reading_normativa
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: NORMATIVA
+  en_variants: []
+  pt: NORMATIVA
+  pt_variants: []
+  ontology_id: null
+  sense: Rótulo literal de leitura do servidor MCP (reading id «NORMATIVA», como CONSULT/GUIDE/IMPL) —
+    maiúsculas; não é prosa.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Docs do MCP: identificador do servidor verbatim (src/tools/get-macro-processes.ts).'
+- key: mcp_reading_programa
+  species: 3
+  state: do-not-translate
+  owner: manual-agent
+  en: PROGRAMA
+  en_variants: []
+  pt: PROGRAMA
+  pt_variants: []
+  ontology_id: null
+  sense: Rótulo literal de leitura do servidor MCP (reading id «PROGRAMA», como CONSULT/GUIDE/IMPL) —
+    maiúsculas; não é prosa.
+  senses: []
+  evidence: null
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-26] Docs do MCP: identificador do servidor verbatim (src/tools/get-macro-processes.ts).'

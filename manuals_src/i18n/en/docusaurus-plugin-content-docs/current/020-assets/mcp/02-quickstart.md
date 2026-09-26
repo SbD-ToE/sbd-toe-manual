@@ -1,0 +1,98 @@
+---
+id: quickstart
+title: Quickstart — 60 seconds
+description: Connecting the SbD-ToE MCP to Claude Code or Cursor in under a minute.
+sidebar_label: Quickstart
+sidebar_position: 2
+tags:
+  - mcp
+  - quickstart
+translation:
+  source_locale: pt
+  source_path: 020-assets/mcp/02-quickstart.md
+  source_sha256: 1a3ba4b71e42f402f44d1061eeb73ea5c7197b82000ffe80bd01950e6594172f
+  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
+  target_sha256: c29a19bc5d65459f9223b3601ea8ce1f23a26c992f1ffcdc759d9b1c848ea02f
+  engine: claude-opus-5-5
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  glossary_keys: [chapter_role, mcp, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: b20cebdb9f9b412a16c1c281cb4aadcff08e6aa205a9ed8ca364950dc9893c44
+  translated_at: 2026-09-26T14:55:13Z
+  reviewed_by: null
+---
+
+# Quickstart — 60 seconds
+
+The quickest way to evaluate the MCP is to try it for a minute and watch the AI client cite the Manual with IDs instead of paraphrasing it. There is nothing to clone and no credentials to configure — the server is published on npm and starts via `npx`.
+
+## Prior requirement {#pré-requisito}
+
+- **Node.js ≥ 20.9.0** ([nodejs.org](https://nodejs.org/))
+
+## Option 1 — Claude Code (CLI) {#opção-1--claude-code-cli}
+
+```bash
+claude mcp add sbd-toe -- npx -y @shiftleftpt/sbd-toe-mcp
+```
+
+And that is it. In a new Claude Code session, it is enough to ask:
+
+> *"List the chapters of the SbD-ToE Manual."*
+
+The session should start with the tool `list_sbd_toe_chapters` returning the 15 chapters.
+
+## Option 2 — Cursor / Claude Desktop / Windsurf {#opção-2--cursor--claude-desktop--windsurf}
+
+Add to the client's MCP configuration file:
+
+```json
+{
+  "mcpServers": {
+    "sbd-toe": {
+      "command": "npx",
+      "args": ["-y", "@shiftleftpt/sbd-toe-mcp"]
+    }
+  }
+}
+```
+
+After restarting the client, the `sbd-toe.*` tools become available automatically.
+
+## Option 3 — VS Code + GitHub Copilot {#opção-3--vs-code--github-copilot}
+
+`.vscode/mcp.json` in the repository:
+
+```json
+{
+  "servers": {
+    "sbdToe": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@shiftleftpt/sbd-toe-mcp"]
+    }
+  }
+}
+```
+
+## Validating the connection {#validar-a-ligação}
+
+To confirm that the session is really talking to the server (and not merely pretending to), it is enough to ask it for the identity of what it is serving:
+
+```
+read_sbd_toe_resource(uri="sbd://toe/version")
+```
+
+or, alternatively, `list_sbd_toe_chapters()`. A response with the package name, the version and the *provenance* (Manual, KG, ontology) — or with the chapter index, with real ids — confirms the connection. A vague response or one without ids indicates that the client is probably improvising; the configuration is worth reviewing before moving on.
+
+In clients that expose MCP *prompts*, the *prompt* `setup_sbd_toe_agent(riskLevel, projectRole)` initialises the session: the response describes what each chapter demands at that level (for example, «predominantly mandatory at L2») and the rules of the role — no chapter is excluded. Clients without *prompt* support, such as Claude Desktop, do not expose it; for that reason it cannot serve as the only validation.
+
+## The first real call {#a-primeira-chamada-real}
+
+For a concrete task, the first call is the one the tool descriptions mark as *START HERE*: `select_sbd_toe_requirements`, with what the agent has read **declared** — `risk_level`, `concerns`, `exposure`, `data_sensitivity`, `technologies`, `changed_files`. The server does not guess from the task text: without a declaration, it returns `needs_input` with the accepted vocabulary (published in `sbd://toe/activation-vocabulary`). Details in the [tools reference](./05-tools-reference.md).
+
+## What next {#e-a-seguir}
+
+- Unsure which *risk level* to apply? See [Installation by client](./03-instalacao.md) → section "Determining the project's *risk level*".
+- For the AI client to consult the Manual **automatically** without having to be asked: configure a [skill / agent file](./04-skills-agentes.md).
+- Ready-made recipes (audit, *codegen*, *threat model*): [Use cases](./casos-uso/).

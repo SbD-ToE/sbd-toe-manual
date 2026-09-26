@@ -1,0 +1,126 @@
+---
+id: index
+title: Use cases — recipes with the SbD-ToE MCP
+description: Ready-made recipes combining tools, resources and prompts of the SbD-ToE MCP — PR audit, grounded codegen, threat modelling, governance bootstrap, onboarding and normative cross-check.
+sidebar_label: Use cases
+sidebar_position: 0
+tags:
+  - mcp
+  - casos-uso
+  - skills
+  - exemplos
+translation:
+  source_locale: pt
+  source_path: 020-assets/mcp/07-casos-uso/index.mdx
+  source_sha256: 85616fab24e20246e8c8ea7e2a6ac182781c02c846137c54f9fef67d5ca33983
+  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
+  target_sha256: 75baad2e0b7c9014f7c293ee08da390652a735bc2d95b41367d018ddcccccb2f
+  engine: claude-opus-5-5
+  prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
+  terms_sha256: 211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8
+  glossary_keys: [chapter_role, discipline, lifecycle_phase, mcp, normative_empirical, practitioner_manual, sbdtoe_sbd, slug_threat_modeling, transversal]
+  glossary_sha256: 574d077a750ed43dcab0559c3ff1118fbaa6d80ea8f7084cb9037a775894675c
+  translated_at: 2026-09-26T14:55:21Z
+  reviewed_by: null
+---
+
+import UseCaseCard from '@site/src/components/UseCaseCard';
+import UseCaseGrid from '@site/src/components/UseCaseGrid';
+
+# Use cases
+
+Most software team workflows end up falling into half a dozen patterns — someone opens a PR and needs to audit it; someone is about to write sensitive code and wants it *grounded* in a manual; someone starts a new repo and wants alignment from the outset. Rather than reinventing the use of the MCP each time, this section gathers tested recipes, each one already designed around what is typically wanted.
+
+Every recipe has the same skeleton:
+
+- **When to apply** — trigger signal for the agent
+- **MCP call sequence** — tools, resources, prompts in the correct order
+- **Output discipline** — format, IDs to cite, anti-patterns to avoid
+- **Skill / subagent file** — *snippet* ready to save in the client
+
+Choose the case that most resembles the work at hand today:
+
+<UseCaseGrid>
+  <UseCaseCard
+    icon="🔍"
+    title="PR audit"
+    summary="Automated review of Pull Requests against the active controls of the project's risk_level — findings citable by CTRL-*."
+    to="./auditoria-pr"
+    tags={['review', 'PR', 'CTRL-*']}
+  />
+  <UseCaseCard
+    icon="⚙️"
+    title="Grounded codegen"
+    summary="Generate code with prepare_sbd_toe_codegen_context — branching by status (ready / input / clarification / decomposition / unsupported) and citations discipline."
+    to="./codegen-grounded"
+    tags={['codegen', 'citations', 'security_rationale']}
+  />
+  <UseCaseCard
+    icon="🎯"
+    title="Threat modelling"
+    summary="Combine get_threat_landscape + consult_security_requirements by concern (auth, api, encryption…) to produce grounded threat models."
+    to="./threat-modeling"
+    tags={['threats', 'STRIDE', 'concerns']}
+  />
+  <UseCaseCard
+    icon="🏗️"
+    title="Governance bootstrap"
+    summary="Apply plan_sbd_toe_repo_governance to a new repo — list of artefacts by chapter and automatic scaffold."
+    to="./governance-bootstrap"
+    tags={['governance', 'artefactos', 'bootstrap']}
+  />
+  <UseCaseCard
+    icon="🎓"
+    title="Onboarding by role"
+    summary="get_guide_by_role(risk_level, role) to generate a personalised onboarding guide — practices by SDLC phase, user stories joined."
+    to="./onboarding-formacao"
+    tags={['onboarding', 'roles', 'training']}
+  />
+  <UseCaseCard
+    icon="📋"
+    title="Normative cross-check"
+    summary="Cross-reference SbD-ToE with CRA, DORA, NIS2, GDPR, AI Act and ENISA/CSA via MCP — the published cross-checks, indexed in the served snapshot (see sbd://toe/version)."
+    to="./cross-check-conformidade"
+    tags={['compliance', 'AI Act', 'CRA', 'DORA']}
+  />
+  <UseCaseCard
+    icon="🧭"
+    title="Agentic SDLC via MCP"
+    summary="How the MCP supports each stop of the end-to-end agentic process — from mandate to kill-switch — with the right tool for each decision."
+    to="./agentic-sdlc"
+    tags={['agentic', 'SDLC', 'mandate', 'eval-suite']}
+  />
+</UseCaseGrid>
+
+---
+
+## How to read each recipe {#como-ler-cada-receita}
+
+> 💡 The **Agentic SDLC via MCP** case is the operational view of the [end-to-end agentic process](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc) (cross-cutting cross-check). They are coupled but separate — the regulatory view lives in the cross-check, the MCP usage view lives here.
+
+Each page follows the same structure:
+
+1. **Scenario** — a concrete situation in prose.
+2. **Prerequisites** — *risk level* + *role* + installed skill.
+3. **Flow** — sequence of MCP calls (with expected input/output).
+4. **Output discipline** — format of the final report + epistemic labels.
+5. **Skill / subagent snippet** — text ready to save (`.claude/skills/...`, `.github/copilot-instructions.md`, …).
+6. **Anti-patterns** — what **not** to do.
+
+## Shortcuts by *risk level* {#atalhos-por-risk-level}
+
+| Risk level | Typical priority cases |
+|---|---|
+| **L1** | [Governance bootstrap](./04-governance-bootstrap.md) · [Onboarding](./05-onboarding-formacao.md) |
+| **L2** | [PR audit](./01-auditoria-pr.md) · [Grounded codegen](./02-codegen-grounded.md) · [Threat modelling](./03-threat-modeling.md) |
+| **L3** | All of the above + [Normative cross-check](./06-cross-check-conformidade.md) |
+
+## Shortcuts by *role* {#atalhos-por-role}
+
+| Role | Priority use case |
+|---|---|
+| `developer` | [Grounded codegen](./02-codegen-grounded.md) |
+| `appsec-engineer` | [PR audit](./01-auditoria-pr.md) · [Threat modelling](./03-threat-modeling.md) |
+| `arquitetos-software` | [Threat modelling](./03-threat-modeling.md) |
+| `grc-compliance` / `auditores` | [Normative cross-check](./06-cross-check-conformidade.md) · [Governance bootstrap](./04-governance-bootstrap.md) |
+| `scrum-master` | [Onboarding](./05-onboarding-formacao.md) |

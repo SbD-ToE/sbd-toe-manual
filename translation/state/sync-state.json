@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T12:01:39Z",
+  "generated_at": "2026-09-26T12:09:23Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
@@ -3535,13 +3535,13 @@
       "pending_blocks": 0
     },
     "010-sbd-manual/index.mdx": {
-      "state": "untranslated",
+      "state": "synced",
       "source_sha256": "9ba127460c0ea6f77d6f0b2cf31b3f329a095931221afcc7441695fb1451d8f6",
-      "translated_source_sha256": null,
-      "target_sha256": null,
-      "terms_sha256_at_translation": null,
-      "glossary_sha256_at_translation": null,
-      "translated_at": null,
+      "translated_source_sha256": "9ba127460c0ea6f77d6f0b2cf31b3f329a095931221afcc7441695fb1451d8f6",
+      "target_sha256": "ecb8a402c95f411947e55920fd6a364bfe84f70c13fe37bbac590fedeae67670",
+      "terms_sha256_at_translation": "58969e2d675e7d50a5a5dfa4be392be5d340a032c3290dc90c7ef1fe2101a3d2",
+      "glossary_sha256_at_translation": "959f6dcc6180cbcd324148e06ce8d164ec5e3aa3142574a8284ecf7c42fcd7b4",
+      "translated_at": "2026-09-26T12:09:20Z",
       "pending_blocks": 0
     },
     "020-assets/intro.md": {
@@ -4136,8 +4136,8 @@
     }
   },
   "totals": {
-    "untranslated": 82,
-    "synced": 331,
+    "untranslated": 81,
+    "synced": 332,
     "partial": 0,
     "pt-ahead": 0,
     "en-ahead": 0,

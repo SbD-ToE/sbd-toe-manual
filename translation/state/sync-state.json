@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T09:08:14Z",
+  "generated_at": "2026-09-27T12:05:06Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -54,6 +54,16 @@
       "translated_at": "2026-09-27T09:05:39Z",
       "pending_blocks": 0
     },
+    "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
+      "state": "synced",
+      "source_sha256": "68ff9b58fbda5a976212087b8f2723fe6aaf3da368fb1183dddc24728b4076be",
+      "translated_source_sha256": "68ff9b58fbda5a976212087b8f2723fe6aaf3da368fb1183dddc24728b4076be",
+      "target_sha256": "193deb29e18243bcd0421751b15127f1982c8063d27a208ce883de2f43badea0",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
+      "pending_blocks": 0
+    },
     "002-cross-check-normativo/cra/01-intro.md": {
       "state": "synced",
       "source_sha256": "91828b5c3a1fcc60f1b5829d6817325e6fe7862179ed69df716b2fae4a39c0bd",
@@ -72,6 +82,16 @@
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
       "glossary_sha256_at_translation": "add33d9a5f390ac71a175848cc9b05861423da22abdbf4138f3f3c577e2d1732",
       "translated_at": "2026-09-27T07:53:30Z",
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
+      "state": "synced",
+      "source_sha256": "b35a38c857cf8cb2ed6718015ec8b2c3e924ee13920ba8549fa3281009ec81c8",
+      "translated_source_sha256": "b35a38c857cf8cb2ed6718015ec8b2c3e924ee13920ba8549fa3281009ec81c8",
+      "target_sha256": "7a0747ddba598066e3e879a3efe8ef87c140bd0d0460f81301acf2a6c5143222",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/dora/01-intro.md": {
@@ -104,6 +124,16 @@
       "translated_at": "2026-09-27T07:05:57Z",
       "pending_blocks": 0,
       "symlink_to": "002-cross-check-normativo/nis2/03-convergencia-dora.md"
+    },
+    "002-cross-check-normativo/dora/90-requisitos-aplicaveis.md": {
+      "state": "synced",
+      "source_sha256": "d2aa23d3a141bc6aae408fa7a32bcacd23a303d0c5e53353018ca4967495d883",
+      "translated_source_sha256": "d2aa23d3a141bc6aae408fa7a32bcacd23a303d0c5e53353018ca4967495d883",
+      "target_sha256": "0516c30309bfdd8bebf4018a3d48f919b9c9717218efbcbc9217ce44c6abdeb7",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
+      "pending_blocks": 0
     },
     "002-cross-check-normativo/enisa-csa/01-intro.md": {
       "state": "synced",
@@ -195,6 +225,16 @@
       "translated_at": "2026-09-27T07:29:58Z",
       "pending_blocks": 0
     },
+    "002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md": {
+      "state": "synced",
+      "source_sha256": "c0bc11227c14e160a2a72295dacb2fa73dcc89cc1afd222d295f80aea116e596",
+      "translated_source_sha256": "c0bc11227c14e160a2a72295dacb2fa73dcc89cc1afd222d295f80aea116e596",
+      "target_sha256": "790581d202c15bb3a932763d2cbb2c9b656b449f3053d5ffebb3652e1f0f7de8",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
+      "pending_blocks": 0
+    },
     "002-cross-check-normativo/nis2/01-intro.md": {
       "state": "synced",
       "source_sha256": "cb414e2076574b10836632500526baee9c75f25c5bdf31fd67b1a2e7bfc53129",
@@ -223,6 +263,16 @@
       "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
       "glossary_sha256_at_translation": "efa6d8e8dc98c6c39d5f5fd9b08904c5e4a19c91b85e04b586ed217c83b1e114",
       "translated_at": "2026-09-27T07:05:57Z",
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md": {
+      "state": "synced",
+      "source_sha256": "276252c591a0a80317deba4e80398d75925b3c3daf48622ba072d995fcc9372c",
+      "translated_source_sha256": "276252c591a0a80317deba4e80398d75925b3c3daf48622ba072d995fcc9372c",
+      "target_sha256": "a4e2b2da25bd83ed628430716e97eaccc51f7bfaf50af4faebca4487531b992b",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/baseline.md": {
@@ -4178,7 +4228,7 @@
   },
   "totals": {
     "untranslated": 0,
-    "synced": 417,
+    "synced": 422,
     "partial": 0,
     "pt-ahead": 0,
     "en-ahead": 0,

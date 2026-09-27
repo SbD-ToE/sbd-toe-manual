@@ -7,22 +7,24 @@ sidebar_position: 9
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/enisa-csa/01-intro.md
-  source_sha256: 25549f953174aec799b59160752dfb45d53042b434f696f2db8ae59e7b710226
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 0897dc1e480003fb4054f47ead7578de93385bf0746774a194647e96aef85348
+  source_sha256: 92209b9a40a522f6372b2b3d16b8a77c720736f05e84c2fe9bbc8a95d833a4e5
+  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
+  target_sha256: ad46eeb6a82ce6ed9f367469ff762deaafb25034476b3a11aa268d7183e355d2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, cra_pde, csa_assurance_level, csa_certification_scheme, esquema_regime, eu_ce_marking, layer, mapping, maturity, practitioner_manual, requirement_runtime, role_procurement, sbdtoe_sbd, schema, traceability]
-  glossary_sha256: adee14336371e09a6aa3ffbea429a07e1d77ba52180aa9766019790067b5cb10
-  translated_at: 2026-09-26T23:27:17Z
-  stamped_at: 2026-09-26T23:27:17Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, cra_pde, cra_support_period, csa_assurance_level, csa_certification_scheme, esquema_regime, eu_ce_marking, gap_family, layer, mapping, maturity, mcp_reading_programa, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, role_juridico, role_procurement, sbdtoe_sbd, schema, traceability]
+  glossary_sha256: da0f05606e22222963e4fb95d6645c47b050f8cadb465ef395ad38c164edfe47
+  translated_at: 2026-09-27T23:03:32Z
+  stamped_at: 2026-09-27T23:03:32Z
   reviewed_by: null
 ---
 
 # ENISA/CSA certification: when to use it and how to map it to SbD‑ToE
 
 > See also: [CRA](/sbd-toe/cross-check-normativo/cra/intro), [DORA](/sbd-toe/cross-check-normativo/dora/intro), [NIS2](/sbd-toe/cross-check-normativo/nis2/intro) and the [DORA & NIS2 Convergence Note](/sbd-toe/cross-check-normativo/dora/convergencia-dora).
+>
+> Obligation-by-obligation coverage: [CSA/EUCC Coverage](/sbd-toe/cross-check-normativo/enisa-csa/cobertura).
 
 ## Scope {#âmbito}
 
@@ -33,15 +35,14 @@ The **Cybersecurity Act** is **Regulation (EU) 2019/881** (CELEX: [32019R0881](h
 - strengthens the mandate of **ENISA** as the European Union Agency for Cybersecurity; and
 - establishes a **European cybersecurity certification framework** for ICT products, ICT services and ICT processes.
 
-several **European cybersecurity certification schemes** («schemes», in common usage)
+The framework provides for several **European cybersecurity certification schemes** (“schemes”, in common usage), including:
 
 - **EUCC** - for ICT products (the evolutionary European successor to the Common Criteria);
 - **EUCS** - for cloud computing services;
 - **EU5G** - for 5G networks and services.
 
-> 📅 **Status in 2025.**  
-> In 2025, the EUCC is at a more mature stage, close to operationalisation, while the EUCS and the EU5G are still at different stages of development and approval.  
-> SbD-ToE acknowledges this reality: it uses the schemes as **good-practice references and sources of requirements**, not as a closed list of obligations already in force in every Member State.
+> 📅 **Status in 2026.**  
+> The EUCC was adopted by Implementing Regulation (EU) 2024/482 and is mapped obligation by obligation in the coverage matrix, together with the CSA (Articles 51 to 56). The EUCS and EU5G are not mapped: they remain as reference, with no coverage answer.
 
 From the SbD-ToE perspective, certification under the CSA typically entails:
 
@@ -52,7 +53,7 @@ From the SbD-ToE perspective, certification under the CSA typically entails:
 
 The SbD-ToE Manual provides the "engineering layer" that makes it possible to:
 
-- design and operate systems aligned with the assurance levels expected by the schemes (‘basic’, ‘substantial’, ‘high’);
+- design and operate systems aligned with the assurance levels defined in each scheme (in the EUCC: substantial and high);
 - produce **evidence artefacts** (SBOM, test reports, _runbooks_, traceability matrices) that can be used in conformity assessment processes under the CSA.
 
 ---
@@ -61,18 +62,48 @@ European cybersecurity certification schemes, under the **Cybersecurity Act (CSA
 
 This note explains "who it is for", when it is useful/necessary and how to **reuse SbD‑ToE controls and evidence**.
 
+## What this Manual covers and what stays out {#o-que-este-manual-cobre-e-o-que-fica-de-fora}
+
+The SbD-ToE is centred on the application: requirements, architecture, code, dependencies, pipeline, deployment and operation of the software. For each obligation of the CSA and the EUCC, the Manual answers in one of three categories, and no obligation is left in silence:
+
+- **Covers**, and states how: catalogue requirement, policy, floor or requirement added by the regime, or engineering evidence for a duty that sits on another plane.
+- **Declared gap**: what the Manual does not cover by default, stating what is missing.
+- **Out of scope**: what the Manual does not deal with, with the reason.
+
+The full list, obligation by obligation, is generated from the coverage matrix and is in [Coverage](./cobertura#cobertura). Where this page and the list diverge, the list prevails.
+
+Certification is voluntary, unless Union or Member State law makes it mandatory (CSA, Article 56(2)). For this reason, this regime has no context in the regulatory overlay: it neither raises nor adds requirements, and answers only in the three categories.
+
+The Manual covers, among others, the security objectives of Article 51 and Article 51a (encryption, access control, logging, SBOM, backups with tested restore and application recovery), the point of contact of Article 55(1)(c) (`GOV-015`) and the incident notification of Article 56(8) ([Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória)).
+
+**Declared gaps, in summary:**
+- the supplementary cybersecurity information of Article 55 (secure use guidance, support period, vulnerability repositories and advisories) and the EUCC obligations that depend on it. When the product is also under the CRA, the support period is prescribed by `CTX-CRA-R01`;
+- public disclosure of fixed vulnerabilities and registration in the European vulnerability database (EUCC, Article 39); the public advisory on fixed vulnerabilities is prescribed only in the CRA context (`CTX-CRA-R03`);
+- calculation of attack potential according to the Common Criteria and the CEM (EUCC, Article 34(2)) and vulnerability analysis referred to the target of evaluation and the certificate (Articles 33 to 35);
+- a certification-aware corrective update route (EUCC, Annex IV);
+- retention of records for 5 years after the certificate expires (EUCC, Articles 8(7) and 41(2));
+- a secure update mechanism in the product delivered to the user, prescribed only for CRA products (`CTX-CRA-R02`), and assessment of the third-party ICT tools used in providing the service (Article 51(j) and Article 51a(g)).
+
+**Out of scope, by programme decision:**
+- Security of the entity as a whole (corporate network and administration channels, EDR, patching of operating systems and equipment, inventory and classification of all assets): the Manual is centred on the application.
+- Formal relations with the certification body, the ITSEF and the national authority: the certification plane, which this cross-check refers to the certification dossier.
+- Promotion, mark and label of the certificate and communication of its suspension: the legal and commercial plane of certification.
+- EU statement of conformity and assumption of responsibility (CSA, Article 53(2)): the legal plane of conformity.
+- Certification of protection profiles: an activity of whoever develops profiles, not of the product's engineering process.
+- Provisions on the architecture of the certification scheme (self-assessment, levels, withdrawal): they create no engineering duty.
+
 ## Who it is for {#para-quem-se-destina}
 
 - **Manufacturers of ICT products** → **EUCC** scheme (Implementing Regulation (EU) 2024/482; based on the Common Criteria). Assurance levels: «substantial» (AVA_VAN 1–2) and «high» (AVA_VAN 3–5); the EUCC does not provide for the «basic» level.
-- **Cloud service providers** → **EUCS** scheme (for cloud services). Levels: Basic, Substantial, High.
+- **Cloud service providers** → **EUCS** scheme (for cloud services; not mapped in the matrix).
 - **5G suppliers/operators** → **EU5G** scheme (for 5G networks and components). Levels: aligned with risk.
 - **CABs/Laboratories** → apply the criteria of the schemes.
 - **National cybersecurity certification authorities** → supervise and enforce the rules of the schemes (and, at the «high» level, issue certificates); ENISA publishes the certificates on its website.
 - **Buyers (incl. the public sector)** → use certificates as a procurement criterion.
 
 Notes:
-- As a general rule, certification is **voluntary**, unless sectoral legislation, implementing acts or **tender specifications** make it mandatory for certain markets/contracts.
-- Certification **does not replace** the **CRA** (CE marking and regulatory obligations for products). It may, however, serve as **strong evidence** of security practices.
+- Certification is **voluntary**, unless Union or Member State law makes it mandatory (CSA, Article 56(2)); **tender specifications** may require it by contract.
+- Certification **does not exempt** from the obligations of the **CRA** (EU declaration, CE marking, post-market obligations). A European certificate covering essential requirements of Annex I to the CRA gives a presumption of conformity with those requirements (CRA, Article 27(8)); with an assurance level of at least “substantial”, under a scheme specified by delegated act, it removes the need for third-party assessment for the corresponding requirements (CRA, Article 27(9)).
 
 ## Schemes in focus {#esquemas-em-foco}
 
@@ -89,7 +120,7 @@ Objective: to demonstrate security requirements for suppliers/operators in the 5
 ## How it relates to DORA/NIS2/CRA {#como-se-relaciona-com-doranis2cra}
 
 - They share the same “technical language” (encryption, IAM, vulnerability management, testing, monitoring, continuity).
-- The **CRA** imposes requirements and **CE marking** for products with digital elements; CSA certification can **complement** it as evidence (it does not replace it).
+- The **CRA** imposes requirements and **CE marking** for products with digital elements; CSA certification can give a presumption of conformity with the essential requirements it covers (CRA, Article 27(8) and (9)), but does not replace the manufacturer's other obligations.
 - **NIS2/DORA** demand technical maturity; certification can **speed up audits** and allow **certificates to be accepted as proof** in procurement/regulation.
 
 ## Decision trees (simplified) {#árvores-de-decisão-simplificadas}
@@ -102,12 +133,12 @@ Objective: to demonstrate security requirements for suppliers/operators in the 5
 
 2) Is there an external requirement?
 - Does a regulator/law/sector require it? → proceed with certification
-- Do customers/tenders ask for it? → assess cost/benefit and level (Basic/Substantial/High)
+- Do customers/tenders ask for it? → assess cost/benefit and the assurance level provided for in the scheme (in the EUCC: substantial or high)
 - No requirement? → maintain “readiness” and evidence; decide strategically
 
 3) Which level?
-- Low market and risk exposure → Basic/Substantial
-- Critical/highly regulated markets → Substantial/High
+- Market and low risk → the lowest level provided for in the scheme (in the EUCC: substantial)
+- Critical/highly regulated markets → substantial or high
 
 ## SbD‑ToE → Certification mapping (typical evidence) {#mapeamento-sbdtoe--certificação-evidência-típica}
 
@@ -118,8 +149,8 @@ Objective: to demonstrate security requirements for suppliers/operators in the 5
 | Ch. 05 - SBOM/SCA | Component inventory, CVE management | Vulnerability management and supply chain |
 | Ch. 06–07 - SDLC/CI‑CD | Gates, review, traceability, SoD | Secure lifecycle and build integrity |
 | Ch. 08–09 - IaC/Containers | Secure configurations and runtime | Hardening and consistency |
-| Ch. 10–11 - Testing/Release | SAST/DAST/fuzzing; “no‑critical” gate | Effectiveness of controls before release |
-| Ch. 12 - Operations | Monitoring, response, continuity | Operational resilience |
+| Ch. 10–11 - Testing/Release | SAST/DAST/fuzzing; gate with no known vulnerabilities at release (`DEP-002`); the secure update mechanism on the user's side is prescribed only for CRA products | Effectiveness of controls before release |
+| Ch. 12 - Operations | Monitoring, response, application recovery and backups with tested restore (`OPS-016`, `OPS-017`) | Operational resilience (the entity's business continuity: out of scope) |
 | Ch. 13 - Training | Skills and awareness | Organisational capability |
 | Ch. 14 - Governance | RACI, suppliers, audit | Management and traceability |
 
@@ -132,8 +163,8 @@ It is suggested to create a **certification dossier** with cross-references (con
 - [ ] SBOM per release + SCA records + patch SLAs
 - [ ] Pipelines with gates; build/signing logs, SoD (segregation of duties)
 - [ ] Test records (SAST/DAST/fuzzing/pen)
-- [ ] Release quality reports and “no‑critical known”
-- [ ] Monitoring, runbooks, exercises (incident/DR)
+- [ ] Release quality reports and reports of the gate with no known vulnerabilities at release (`DEP-002`)
+- [ ] Monitoring, runbooks, incident exercises and restore tests (`OPS-016`)
 - [ ] Training and records (technical/management)
 - [ ] Supplier management (contracts, clauses, assessments)
 - [ ] Audited trail (who approved, when, why)
@@ -149,9 +180,9 @@ It is suggested to create a **certification dossier** with cross-references (con
 ## Next steps {#próximos-passos}
 
 1. Confirm the object (product/service) and the external requirement (law/customer).  
-2. Select the scheme and target level (Basic/Substantial/High).  
+2. Select the scheme and target level (in the EUCC: substantial or high).  
 3. Build a requirement→evidence mapping matrix (SbD‑ToE).  
-4. Fill gaps (e.g. independence of testing, sampling).  
+4. Fill the declared gaps in the [coverage](/sbd-toe/cross-check-normativo/enisa-csa/cobertura) (supplementary information of Article 55, public disclosure of fixed vulnerabilities, CC/CEM attack potential, certification-aware correction route, retention).  
 5. Internal pre‑audit; then select a CAB and schedule the evaluation.  
 
 ## References {#referências}
@@ -160,6 +191,5 @@ It is suggested to create a **certification dossier** with cross-references (con
 - ENISA - Certification scheme pages (EUCC, EUCS, EU5G)
 - SbD‑ToE Chapters 01–14; CRA/NIS2/DORA cross‑checks
 
-**Version:** 1.0  
-**Date:** November 2025  
-**Next review:** May 2026
+**Version:** 1.1  
+**Date:** September 2026 (aligned with the coverage matrix of the CSA and the EUCC)

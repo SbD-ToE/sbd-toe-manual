@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: 0c760ecc653a9318b07822682b2cbf87bb01bc5c48b6f0b13fc612934d863567
+  source_sha256: 6c34e3740fcbddb53946ee996d41547633a21339c713c421ec625e1812e69aa9
   source_commit: null
-  target_sha256: f5153f479d25c08aee3fa5196c8c0757a84059a1051f0ea80f2f41dc52b75d3b
+  target_sha256: a2d7ca1282c7e20ccd25516396e93dd7f977221b96fe2ea4dc900117ed98ebab
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -117,6 +117,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
 | `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
+| `AUT-012` | Cryptographic authenticators and local biometrics | ✔ | ✔ | ✔ | — |
+| `AUT-013` | Management and recovery of authentication factors | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -407,6 +409,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
 | `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
+| `AUT-012` | Cryptographic authenticators and local biometrics | ✔ | ✔ | ✔ | — |
+| `AUT-013` | Management and recovery of authentication factors | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |

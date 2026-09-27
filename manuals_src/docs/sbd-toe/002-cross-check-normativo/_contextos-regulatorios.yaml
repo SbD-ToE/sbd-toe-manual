@@ -1275,6 +1275,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1418,6 +1420,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1676,6 +1680,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1956,6 +1962,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2109,6 +2117,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2369,6 +2379,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2652,6 +2664,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2802,6 +2816,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3062,6 +3078,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3344,6 +3362,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3496,6 +3516,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3756,6 +3778,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4039,6 +4063,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4186,6 +4212,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4448,6 +4476,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4733,6 +4763,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4884,6 +4916,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5143,6 +5177,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5424,6 +5460,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5569,6 +5607,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5828,6 +5868,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -6110,6 +6152,8 @@ lista_ids:
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -6259,6 +6303,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -6522,6 +6568,8 @@ lista_ids:
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
         - {id: AUT-011, origem: base}
+        - {id: AUT-012, origem: base}
+        - {id: AUT-013, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}

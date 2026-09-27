@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: bf1eb8e1825c273420fdc5c21495f0d4b4824fd10c80c1129e548e3a824701a0
+  source_sha256: a2afe60f89d18ccd7a354d1f131a67867b9e05c6803af853b98d581d9dd96d75
   source_commit: null
-  target_sha256: 9831c940ccd5246001dbe32925a4b8deafb7996a3c8689e5aeb795a9b5d78a98
+  target_sha256: 562fb46701083f48a3f386b644791c017b4dfa8348d1ea92198d31faf783c545
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -103,6 +103,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
 | `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
+| `AUT-012` | Cryptographic authenticators and local biometrics | ✔ | ✔ | ✔ | — |
+| `AUT-013` | Management and recovery of authentication factors | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |

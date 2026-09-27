@@ -89,6 +89,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
 | `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
+| `AUT-012` | Autenticadores criptográficos e biometria local | ✔ | ✔ | ✔ | — |
+| `AUT-013` | Gestão e recuperação dos factores de autenticação | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |

@@ -94,7 +94,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
-| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Tentar login sem segundo factor. Confirmar rejeição e logs de falha. | Log de autenticação falhada sem MFA. Captura do bloqueio. |
+| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Tentar login sem segundo factor. Confirmar rejeição e logs de falha. Confirmar que os factores aceites são os do requisito. Em L3, tentar o login de uma conta de administração sem WebAuthn/FIDO2 e confirmar a rejeição. | Log de autenticação falhada sem MFA. Captura do bloqueio. Configuração dos factores aceites. Em L3, log da rejeição do administrador sem factor resistente a *phishing*. |
 | AUT-002 | SEC-Lx-AUT-PWD | L1+ | Rever política activa. Tentar definir password inválida. Confirmar rejeição. | Política documentada. Log de erro ou rejeição. |
 | AUT-003 | SEC-Lx-AUT-BRUTE | L1+ | Simular tentativas repetidas falhadas. Confirmar bloqueio, CAPTCHA ou atraso progressivo. | Log com contagem de falhas. Evidência de bloqueio ou atraso. |
 | AUT-004 | SEC-Lx-AUT-LOGOUT | L1+ | Efectuar logout. Tentar reutilizar sessão ou token. Confirmar rejeição. | Log de sessão revogada. Erro de autenticação na reutilização. |
@@ -105,6 +105,8 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Tentar alterar credenciais sem reautenticação. Confirmar bloqueio. | Log da tentativa bloqueada. Evidência de verificação da sessão activa. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simular login anómalo. Confirmar notificação ao utilizador e registo. | Exemplo de notificação enviada. Log do evento crítico detectado. |
 | AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verificar que não existem contas nem credenciais por defeito activas na aplicação e nos componentes em produção. Confirmar alteração da credencial inicial no primeiro uso. | Inventário de contas sem credenciais por defeito. Evidência do fluxo de primeiro acesso. |
+| AUT-012 | SEC-Lx-AUT-WEBAUTHN | L1+ (se aplicável) | Repetir uma asserção já usada, enviar uma asserção com origem ou identificador da *relying party* alheios e outra com assinatura inválida, e confirmar a rejeição de todas. Com verificação do utilizador exigida, enviar uma asserção sem ela e confirmar a rejeição. Confirmar que o servidor não recebe nem guarda dados biométricos. | Logs das asserções rejeitadas, por motivo. Configuração da biblioteca WebAuthn. Esquema de dados da credencial (só chave pública, identificador e contador). |
+| AUT-013 | SEC-Lx-AUT-RECOVERY | L1+ | Pedir uma recuperação e confirmar um *token* de uso único e expirável, resposta idêntica para contas inexistentes e notificação ao utilizador. Em L2+, simular a perda do segundo factor e confirmar que o e-mail sozinho não basta; revogar um autenticador e confirmar que as sessões associadas terminam e que ele deixa de autenticar. | Log da recuperação e notificação enviada. Captura da lista de autenticadores e da revogação. Log das sessões terminadas e da asserção rejeitada depois da revogação. |
 
 ---
 

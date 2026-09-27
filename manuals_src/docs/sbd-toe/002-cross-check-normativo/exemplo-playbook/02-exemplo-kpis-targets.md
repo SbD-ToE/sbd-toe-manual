@@ -51,8 +51,8 @@ Para cada dimensão, apresentamos targets exemplares.
 | **Desenvolvimento** | Cobertura de testes | ≥80% | M6 | Progressivo: começar com funções críticas |
 | | SAST findings altos | 0 | Permanente | Gate de CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate de CI/CD |
-| **Operações** | MTTR P0 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
-| | MTTR P1 (High) | `<`8h | Permanente | Business impacto |
+| **Operações** | MTTR P1 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
+| | MTTR P2 (High) | `<`8h | Permanente | Business impacto |
 | | Incidents detetados/month | `<`5 | M12 | Reduzir com maturidade |
 | **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA art. 28.º, n.º 3 (modelos: Reg. de Execução (UE) 2024/2956) |
 | | % com onboarding completo | 100% | M3 | Antes de acesso |
@@ -82,8 +82,8 @@ graph TB
         end
         
         subgraph OPS["OPERAÇÕES"]
-            O1["MTTR P0: 1.5h<br/>🟢 OK"]
-            O2["MTTR P1: 6h<br/>🟢 OK"]
+            O1["MTTR P1: 1.5h<br/>🟢 OK"]
+            O2["MTTR P2: 6h<br/>🟢 OK"]
             O3["Incidents/month: 3<br/>target: `<5` | 🟢 OK"]
         end
         
@@ -146,10 +146,10 @@ graph TB
 | | SAST findings altos | 0 | Permanente | Zero tolerance |
 | | SCA findings altos | 0 | Permanente | Zero tolerance |
 | | Code review rate | 100% | Permanente | Segregação duties |
-| **Operações** | MTTR P0 (Critical) | `<`1h | Permanente | Impacto sistémico |
-| | MTTR P1 (High) | `<`4h | Permanente | Impacto operacional |
+| **Operações** | MTTR P1 (Critical) | `<`1h | Permanente | Impacto sistémico |
+| | MTTR P2 (High) | `<`4h | Permanente | Impacto operacional |
 | | Disponibilidade core apps | ≥99.95% | Permanente | SLA regulatório |
-| | Incidents P0 resolvidos `<`24h | 100% | Permanente | Reporte DORA obrigatório |
+| | Incidents P1 resolvidos `<`24h | 100% | Permanente | Objetivo interno; a notificação DORA corre em paralelo, nos prazos das RTS (Política 32 §6) |
 | **Supply Chain** | Fornecedores no inventário | 100% | M1 | DORA Art. 26 |
 | | % auditados (risk assessment) | 100% | M3 | DORA requer |
 | | % com contrato atualizado | 100% | M6 | Cláusulas técnicas |
@@ -211,8 +211,8 @@ gantt
 | **Desenvolvimento** | Cobertura de testes | ≥75% | M6 | Pragmático para PME |
 | | SAST findings altos | 0 | Permanente | Gate CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate CI/CD |
-| **Operações** | MTTR P0 | `<`4h | Permanente | Seguros: impacto operacional |
-| | MTTR P1 | `<`24h | Permanente | Menos crítico que banco |
+| **Operações** | MTTR P1 | `<`4h | Permanente | Seguros: impacto operacional |
+| | MTTR P2 | `<`24h | Permanente | Menos crítico que banco |
 | | Disponibilidade | ≥99.5% | Permanente | SLA comercial |
 | **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA requer |
 | | % com onboarding | 100% | M3 | Antes acesso |

@@ -31,7 +31,7 @@ Os oito indicadores são um **subconjunto curado** dos indicadores técnicos - n
 | 3 | Quantas aplicações em produção estão sem falhas críticas conhecidas? | ≥ 70% | ≥ 90% | 100% | Mensal |
 | 4 | Existem credenciais expostas ou autorizações de risco caducadas? | = 0 | = 0 | = 0 | Semanal |
 | 5 | Quanto tempo demora a detectar um incidente de segurança? | ≤ 24h | ≤ 4h | ≤ 30 min | Mensal |
-| 6 | Quanto tempo demora a reagir após detectar o incidente? | ≤ 48h | ≤ 4h | ≤ 1h | Mensal |
+| 6 | Quanto tempo demora a reagir após detectar o incidente? | ≤ 8h | ≤ 4h | ≤ 1h | Mensal |
 | 7 | As equipas têm formação em segurança actualizada? | ≥ 80% | ≥ 90% | 100% | Trimestral |
 | 8 | As aplicações críticas foram testadas por uma entidade independente? | - | ≥ 80% | 100% | Semestral |
 

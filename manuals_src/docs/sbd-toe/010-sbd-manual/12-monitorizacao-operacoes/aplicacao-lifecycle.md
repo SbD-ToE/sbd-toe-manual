@@ -197,7 +197,7 @@ Como **Ops**, quero **integrar alertas com playbooks de resposta a incidentes**,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Alerta confirmado | Operações (Ops) | ≤ 30 min |
+| Operações | Alerta confirmado | Operações (Ops) | Por severidade, conforme as Políticas 31 e 32 (P1: primeira resposta ≤ 5 min, triagem ≤ 15 min) |
 
 **Ligações úteis.** [Formação & Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 

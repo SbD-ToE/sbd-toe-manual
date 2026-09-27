@@ -127,7 +127,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - 📄 **Template:** [Relatório de Incidentes](../exemplo-playbook/exemplo-relatorio-incidentes)
 
 #### 4.3 Parametrização de reporte externo {#43-parametrização-de-reporte-externo}
-- **O que:** traduzir o processo interno em `initial`, `intermediate` e `final report`
+- **O que:** traduzir o processo interno em `initial`, `intermediate` e `final report`, nos prazos fixados pelas RTS (Reg. Delegado (UE) 2025/301, art. 5.º: notificação inicial ≤ 4 h após a classificação como severo e ≤ 24 h após o conhecimento; relatório intercalar ≤ 72 h após a notificação inicial; relatório final ≤ 1 mês após o último relatório intercalar) e informar os clientes afetados sem demora indevida (art. 19.º, n.º 3)
 - **Como:** parametrizar campos, templates e exportadores conforme RTS/ITS e autoridade competente
 - **Boundary:** esta parte já não fica toda no manual base; exige material regulatório complementar
 - **Referências:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)

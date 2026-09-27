@@ -52,7 +52,7 @@ O fornecedor permanece integralmente responsável pela conformidade, evidência 
 | Segurança mínima        | O fornecedor garante conformidade com os controlos definidos conforme o nível de risco da aplicação. |
 | Vulnerabilidades        | Compromisso de correção de CVEs críticos em `<`72h após divulgação pública.                        |
 | SBOM / transparência    | Disponibilização de SBOM atualizado com dependências críticas, mediante solicitação.             |
-| Incidentes              | Notificação de incidentes de segurança no prazo máximo de 24h após deteção.                      |
+| Incidentes              | Notificação de incidentes de segurança sem demora injustificada e, no máximo, 24h após o conhecimento.                      |
 | Auditoria / evidência   | Direito da organização a solicitar evidência de controlos ou realizar auditorias formais.         |
 
 #### 🛠️ Outsourcing de desenvolvimento {#️-outsourcing-de-desenvolvimento}

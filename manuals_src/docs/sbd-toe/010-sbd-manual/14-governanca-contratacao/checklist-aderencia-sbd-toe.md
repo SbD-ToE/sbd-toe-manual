@@ -105,7 +105,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 3.05 | SBOM é gerado automaticamente por release, inclui dependências transitivas e está associado ao artefacto com referência ao commit SHA | **L2+** | pol-11 |
 | 3.06 | SBOM é arquivado durante o período mínimo obrigatório (L2: 1 ano; L3: 2 anos) | **L2+** | pol-11 |
 | 3.07 | Excepções de CVE têm tipo explícito (not affected / fix not available / fix deferred / risk accepted), controlo compensatório e TTL conforme nível | **S** | pol-12 |
-| 3.08 | O SLA de triagem de CVE é respeitado: Crítico ≤ 24h, Alto ≤ 48h | **S** | pol-12 |
+| 3.08 | O SLA de triagem de CVE é respeitado: Crítico ≤ 24h, Alto ≤ 48h; com indício de exploração ativa ≤ 4h | **S** | pol-12 |
 | 3.09 | Existe processo de actualização automática de dependências (Renovate, Dependabot ou equivalente) activo e configurado | **L2+** | pol-13 |
 | 3.10 | SBOM é assinado digitalmente com verificação de assinatura no deploy | **L3** | pol-11 |
 | 3.11 | Proveniência completa está registada (SLSA attestation ou equivalente) | **L3** | pol-11 |
@@ -214,7 +214,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 8.12 | Existe Incident Response Plan com critérios de activação, fases estruturadas e playbooks | **L2+** | pol-32 |
 | 8.13 | Incidentes de segurança têm post-mortem realizado em menos de 5 dias úteis | **L2+** | pol-32 |
 | 8.14 | Rollback automático está configurado para todos os tipos de artefacto com RTO ≤ 15 minutos | **L3** | pol-27 |
-| 8.15 | Notificações regulatórias (RGPD ≤ 72h, DORA ≤ 4h alerta inicial, NIS2 ≤ 24h) são cumpridas dentro dos prazos legais | **L3** | pol-32 |
+| 8.15 | Notificações regulatórias aplicáveis cumpridas dentro dos prazos legais (Política 32 §6): RGPD ≤ 72h (art. 33.º); NIS2 alerta rápido ≤ 24h e notificação ≤ 72h; DORA notificação inicial nos prazos do Reg. Delegado (UE) 2025/301; CRA alerta precoce ≤ 24h; AI Act ≤ 15 dias (art. 73.º) | **S** | pol-32 |
 
 ---
 

@@ -57,7 +57,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | OPS-K01 | % aplicações de produção com logging de eventos de segurança centralizado em SIEM ou equivalente | Q% | ≥ 60% | ≥ 90% | 100% | T-03 | Mensal |
 | OPS-K02 | % alertas de segurança com threshold definido, testado e documentado (sem alertas por omissão ou não calibrados) | Q% | ≥ 50% | ≥ 80% | ≥ 95% | T-03 | Trimestral |
 | OPS-K03 | MTTD - tempo médio desde ocorrência de evento de segurança até geração de alerta | Qt | ≤ 24h | ≤ 4h | ≤ 30min | T-03 | Mensal |
-| OPS-K04 | MTTR - tempo médio desde geração de alerta até início de acção de mitigação | Qt | ≤ 48h | ≤ 4h | ≤ 1h | T-03 | Mensal |
+| OPS-K04 | MTTR - tempo médio desde geração de alerta até início de acção de mitigação | Qt | ≤ 8h | ≤ 4h | ≤ 1h | T-03 | Mensal |
 | OPS-K05 | % alertas disparados que resultam em falso positivo (taxa de ruído) | Q% ↓ | ≤ 50% | ≤ 30% | ≤ 15% | T-03 | Mensal |
 | OPS-K06 | % eventos de segurança críticos com cobertura de correlação entre pelo menos duas fontes distintas | Q% | - | ≥ 70% | ≥ 95% | T-03 | Trimestral |
 | OPS-K07 | % incidentes de segurança com processo formal de resposta (IRP) activado e rastreável | Q% | ≥ 80% | 100% | 100% | T-03 | Por incidente |
@@ -73,7 +73,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **OPS-K03 - MTTD (Mean Time to Detect):** medido como `timestamp_alerta − timestamp_evento`. Para eventos que não geram alerta imediato (detecção por correlação ou análise periódica), o timestamp de detecção é o momento em que um analista toma conhecimento do evento. Eventos sem registo de timestamp de ocorrência não podem ser incluídos no cálculo - a sua ausência é em si um indicador de gap de logging.
 
-**OPS-K04 - MTTR (Mean Time to Respond):** medido como `timestamp_primeira_acção − timestamp_alerta`. A primeira acção inclui: isolamento, bloqueio, escalonamento formal, ou activação de runbook. Tempo de análise antes da primeira acção conta para o MTTR.
+**OPS-K04 - MTTR (Mean Time to Respond):** medido como `timestamp_primeira_acção − timestamp_alerta`. A primeira acção inclui: isolamento, bloqueio, escalonamento formal, ou activação de runbook. Tempo de análise antes da primeira acção conta para o MTTR. Quando o incidente segue o trilho regulatório, o escalonamento para GRC/Compliance e EPD/DPO ocorre em ≤ 1 h após a confirmação, em qualquer nível (Política 32 §4.1).
 
 **OPS-K05 - Taxa de ruído:** um falso positivo é um alerta que, após triagem formal por analista, é classificado como irrelevante para o contexto de segurança. A taxa de ruído elevada tem dois efeitos: (a) consome capacidade de resposta; (b) cria dessensibilização aos alertas, aumentando o risco de ignorar verdadeiros positivos. A calibração de alertas é o mecanismo de controlo.
 
@@ -90,7 +90,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | Métrica | L1 | L2 | L3 |
 |---------|:--:|:--:|:--:|
 | MTTD (detecção) | ≤ 24h | ≤ 4h | ≤ 30min |
-| MTTR (resposta) | ≤ 48h | ≤ 4h | ≤ 1h |
+| MTTR (resposta) | ≤ 8h | ≤ 4h | ≤ 1h |
 
 Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Para eventos de severidade média, os thresholds podem ser 3× superiores. Sectores regulados (financeiro, saúde, infraestruturas críticas) podem ter requisitos mais exigentes por norma sectorial.
 

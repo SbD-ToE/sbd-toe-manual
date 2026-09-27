@@ -23,7 +23,7 @@ Responsável por **monitorização de segurança contínua**, configuração de 
 - Garantem a notificação de incidentes dentro dos prazos regulatórios
 
 ### Contexto Organizacional {#contexto-organizacional}
-SecOps é a **linha da frente no cumprimento de NIS2** (resposta a incidentes, notificação em 24h) e **DORA** (continuidade operacional e gestão de eventos críticos).
+SecOps é a **linha da frente no cumprimento de NIS2** (resposta a incidentes; alerta rápido em 24 h, notificação de incidente em 72 h e relatório final 1 mês após a notificação, para incidentes significativos) e **DORA** (continuidade operacional e gestão de eventos críticos).
 
 ## Enquadramento Regulatório {#enquadramento-regulatório}
 

@@ -147,6 +147,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Critérios "explorada ativamente" definidos
 - [ ] Script export JSON pronto
 - [ ] Runbook de notificação do art. 14.º (24 h / 72 h / relatório final)
+- [ ] Percurso rápido: triagem ≤ 4 h com indício de exploração ativa (escolha do Manual); alerta precoce ≤ 24 h após o conhecimento
 - [ ] Matriz de comunicação a utilizadores
 - [ ] Simulação concluída
 - [ ] Evidência testes arquivada

@@ -493,7 +493,7 @@ Sugere-se formalizar um plano de monitorização pós-mercado assente na observa
 
 **Conteúdo normativo**
 
-O Art. 73 obriga os fornecedores a comunicar **incidentes graves** às autoridades de fiscalização do mercado, em prazos definidos — em regra **até 15 dias** após conhecimento; **até 10 dias** em caso de morte de uma pessoa; e **até 2 dias** em caso de infração generalizada ou de perturbação grave e irreversível de infraestrutura crítica (Art. 3.º, n.º 49, al. b)) — e a tomar medidas corretivas.
+O Art. 73 obriga os prestadores a comunicar **incidentes graves** às autoridades de fiscalização do mercado dos Estados-Membros onde ocorreram, **imediatamente** após determinarem uma relação causal (ou a probabilidade razoável de que exista) entre o sistema de IA e o incidente e, em qualquer caso, **o mais tardar 15 dias** após o prestador ou, se for caso disso, o responsável pela implantação ter tomado conhecimento; **até 10 dias** em caso de morte de uma pessoa; e **até 2 dias** em caso de infração generalizada ou de incidente grave na aceção do art. 3.º, ponto 49, alínea b). Pode ser apresentado um relatório inicial incompleto, seguido de um completo (n.º 5). Segue-se a investigação e a tomada de medidas corretivas (n.º 6).
 
 **Cobertura SbD-ToE**
 
@@ -515,7 +515,7 @@ O Art. 73 obriga os fornecedores a comunicar **incidentes graves** às autoridad
 
 **Lacunas intencionais**
 
-O SbD-ToE não fixa a **definição regulamentar de "incidente grave"** do AI Act, nem os prazos (15 dias / 10 dias / 2 dias consoante a gravidade), templates de submissão ou o circuito para a autoridade competente. À semelhança de NIS2 e DORA, estes campos são deixados configuráveis.
+O SbD-ToE não reproduz a **definição de "incidente grave"** do AI Act (art. 3.º, ponto 49), nem templates de submissão ou o circuito para a autoridade de fiscalização do mercado; à semelhança de NIS2 e DORA, estes campos são deixados configuráveis. Os prazos, esses, não são configuráveis: são os do art. 73.º (15 dias / 10 dias / 2 dias, a contar do conhecimento).
 
 **Como cumprir**
 

@@ -87,7 +87,7 @@ Exige processo ponta-a-ponta: deteção, registo, classificação, reporte forma
 - **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Processos de deteção e resposta de incidentes
 - **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Responsabilidades de reporte e escalonamento
 
-**Lacuna intencional:** O SbD-ToE não define taxonomia de prioridades (P0–P3) nem templates específicos DORA, preservando universalidade. A conformidade requer configuração de campos de incidentes segundo RTS/ITS da DORA e integração com sistemas de reporte automático (ex: SIEM).
+**Lacuna intencional:** O SbD-ToE define uma escala interna de severidade (P1–P4, Política 31), mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA, preservando universalidade. A conformidade requer configuração de campos de incidentes segundo RTS/ITS da DORA e integração com sistemas de reporte automático (ex: SIEM).
 
 ---
 
@@ -253,7 +253,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 |---------|---------|------|
 | "Não implementar MFA porque é complexo" | Tecnicamente aceitável com TTL em L1 | ❌ **Pode contrariar medidas mínimas de autenticação forte e gestão de risco TIC em DORA** |
 | "SQLi em endpoint legado, mantém-se" | Aceitável com compensação (ex: WAF) em L1/L2 | ❌ **Pode violar DORA** (SQLi é nunca aceitável em qualquer L) |
-| "CVE P0 em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
+| "CVE crítico em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
 
 **Como manifesta:** Organização registra exceção no SbD-ToE formalmente; regulador rejeita: "esta exceção não é admissível em DORA" → perda de tempo, revisão forçada.
 

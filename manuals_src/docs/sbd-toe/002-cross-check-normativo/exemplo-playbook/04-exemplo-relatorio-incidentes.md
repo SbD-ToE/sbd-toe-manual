@@ -46,10 +46,12 @@ Reporter: Security Team
 
 ```
 Severity (SbD-ToE):
-├─ Critical (P0): Impacto imediato em apps L3 / dados sensíveis
-├─ High (P1): Impacto em apps L2 / comprometimento significativo
-├─ Medium (P2): Impacto limitado / dados não-sensíveis
-└─ Low (P3): Informativo
+├─ Critical (P1): Impacto imediato em produção / dados sensíveis
+├─ High (P2): Comprometimento significativo
+├─ Medium (P3): Impacto limitado / dados não-sensíveis
+└─ Low (P4): Informativo
+(A severidade não depende do nível L. Trilho regulatório: qualquer
+ severidade, qualquer nível; sobe no mínimo a P2 - Política 32 §4.1)
 
 Categorization:
 ├─ Malware/Ransomware
@@ -126,7 +128,7 @@ What went well:
 What could improve:
 - Should have had rate limiting from start (code review gap)
 - CAPTCHA should be standard (not opt-in)
-- Post-incident review should happen faster (within 24h)
+- Post-incident review should happen faster (within 24h, well inside the 5 working days of Policy 32)
 
 Action Items:
 1. Add rate limiting to security checklist (Dev team)
@@ -162,7 +164,7 @@ Este template estrutura sistemas de tickets de incidentes:
 | Description | Text | Sim | Descrição detalhada do incidente |
 | Detection Date | DateTime | Sim | Data/hora UTC de detecção |
 | Reporter | Dropdown (staff) | Sim | Quem reportou |
-| Severity | Dropdown (P0-P3) | Sim | SbD-ToE classification |
+| Severity | Dropdown (P1-P4) | Sim | SbD-ToE classification |
 | Category | Dropdown | Sim | Tipo de incidente |
 | Affected Systems | Multi-select | Sim | Apps/infra impactados |
 | Root Cause | Text | Condicional (pós-investigação) | Causa identificada |
@@ -171,7 +173,7 @@ Este template estrutura sistemas de tickets de incidentes:
 | Status | Dropdown (Open/Investigating/Remediated/Closed) | Sim | Estado atual |
 | Resolution Date | DateTime | Condicional (pós-resolução) | Quando foi resolvido |
 | Retest Date | DateTime | Condicional | Quando será testado |
-| DORA Reportable | Dropdown (Yes/No/Unknown) | Condicional (pós-investigação) | Necessário notificar? |
+| Regulatory Track | Multi-select (RGPD/NIS2/DORA/CRA/AI Act/None/Under assessment) | Sim (na triagem; decisão ≤ 4 h) | Que notificações se aplicam e quando conta o prazo? |
 | Related Incidents | Multi-link | Não | Incidentes relacionados |
 | Attachments | Files | Não | Logs, screenshots, etc. |
 | Audit Trail | Read-only log | Sim | Quem fez o quê, quando |
@@ -184,8 +186,11 @@ Este template estrutura sistemas de tickets de incidentes:
 - [ ] Detectar e confirmar
 - [ ] Criar ticket
 - [ ] Notificar on-call
+- [ ] Indício de trilho regulatório? Escalar para GRC/Compliance + EPD/DPO (≤ 1 h) e registar o momento do conhecimento
 
 ### Curto prazo (< 24 horas) {#curto-prazo--24-horas}
+- [ ] Decisão de notificabilidade (≤ 4 h)
+- [ ] Alerta rápido NIS2 / alerta precoce CRA (≤ 24 h após o conhecimento); notificação inicial DORA nos prazos do Reg. Delegado (UE) 2025/301
 - [ ] Investigação completa
 - [ ] Root cause identificado
 - [ ] Remediation em progresso
@@ -195,9 +200,13 @@ Este template estrutura sistemas de tickets de incidentes:
 - [ ] Testes validaram fix
 - [ ] Lições aprendidas documentadas
 
-### Compliance (conforme DORA) {#compliance-conforme-dora}
-- [ ] Análise DORA (reportável?)
-- [ ] Notificação supervisor (se aplica)
+### Compliance (relógios regulatórios) {#compliance-conforme-dora}
+- [ ] RGPD: autoridade de controlo ≤ 72 h após o conhecimento (art. 33.º); titulares sem demora injustificada se houver elevado risco (art. 34.º)
+- [ ] NIS2: notificação de incidente ≤ 72 h; relatório final ≤ 1 mês após a notificação
+- [ ] DORA: relatório intercalar e final nos prazos do Reg. Delegado (UE) 2025/301, art. 5.º
+- [ ] CRA: notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave)
+- [ ] AI Act: incidente grave ≤ 15 dias (10 em caso de morte; 2 em caso de infração generalizada) - art. 73.º
+- [ ] Post-mortem ≤ 5 dias úteis após a resolução (Política 32 §4.6)
 - [ ] Arquivo conforme a Política 06 §10 (1 ano em L1/L2, 3 anos em L3; audit trail)
 
 ---

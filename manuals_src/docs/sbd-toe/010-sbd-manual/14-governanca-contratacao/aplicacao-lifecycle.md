@@ -765,9 +765,10 @@ Como **AppSec Engineer + Operações (Ops)**, quero **monitorizar continuamente 
     - SLA não cumprido (ex.: uptime `<`99.5% para L3, `<`99% para L2)  
     - Mudança de propriedade, localização, ou subcontratação  
 - [ ] Escalação automática com prioridade:  
-    - **P0 (CVE crítico explorado):** Immediate → AppSec Engineer + Procurement Officer + CISO  
-    - **P1 (CVE crítico, incidente grave):** 1h → AppSec Engineer + Procurement Officer  
-    - **P2 (CVE high, incidente moderado):** 4h → AppSec Engineer  
+    - **P1 (CVE crítico explorado, incidente grave):** imediato → AppSec Engineer + Procurement Officer + CISO  
+    - **P2 (CVE crítico sem exploração conhecida, incidente significativo):** ≤ 1h → AppSec Engineer + Procurement Officer  
+    - **P3 (CVE high, incidente moderado):** ≤ 4h → AppSec Engineer  
+    - **Trilho regulatório (qualquer severidade):** GRC/Compliance + EPD/DPO ≤ 1h após a confirmação ([Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção))  
 - [ ] Trigger automático de revisão especial fora-de-ciclo (US-14) se gap crítico  
 - [ ] Registo de alerta, escalonamento, e ação documentado em GRC (audit trail)  
 - [ ] Dashboard em tempo real com status de fornecedores críticos e alertas ativas (visível a board)  
@@ -784,7 +785,7 @@ Como **AppSec Engineer + Operações (Ops)**, quero **monitorizar continuamente 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Operação | Incidente, CVE crítico, SLA breach, mudança contratual | AppSec Engineer (setup inicial) + Operações (Ops) (operação 24x7) | Alerta em **`<`1h** de deteção, escalonamento em `<`15 min |
+| Operação | Incidente, CVE crítico, SLA breach, mudança contratual | AppSec Engineer (setup inicial) + Operações (Ops) (operação 24x7) | Triagem ≤ 15 min após o alerta; escalonamento por severidade (P1 imediato; P2 ≤ 1h); GRC/Compliance + EPD/DPO ≤ 1h se houver trilho regulatório |
 
 **Ligações úteis.**  
 - [Reavaliação de Fornecedores - US-14](#us-14---reavaliação-contínua-e-rotação-de-fornecedores-pós-onboarding)  

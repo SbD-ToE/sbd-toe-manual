@@ -158,7 +158,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 | SAST (severidade crítica) | 30 dias | 14 dias | 7 dias |
 | Containers (CVE ≥ 9.0 em imagem) | 14 dias | 7 dias | 3 dias |
 | Pipeline (detecção → mitigação) | 14 dias | 7 dias | 3 dias |
-| Operações (alerta → mitigação) | - | 4h | 1h |
+| Operações (alerta → mitigação, OPS-K04) | 8h | 4h | 1h |
 
 **Indicadores de domínio que alimentam T-03:**
 

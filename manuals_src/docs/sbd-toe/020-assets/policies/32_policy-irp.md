@@ -32,7 +32,9 @@ O objetivo desta política é garantir que:
 |---|---|
 | L1 | Recomendado; processo de resposta documentado; contactos de escalonamento definidos |
 | L2 | Obrigatório; playbooks definidos; integração com sistema de gestão de incidentes; post-mortem |
-| L3 | Obrigatório; playbooks automatizados (SOAR); notificação regulatória; testes semestrais; war room |
+| L3 | Obrigatório; playbooks automatizados (SOAR); testes semestrais; war room |
+
+A notificação regulatória (secção 6) é obrigatória sempre que aplicável, em qualquer nível: depende do incidente e da entidade, não do nível L.
 
 ---
 
@@ -58,8 +60,9 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 ### 4.1 Triagem (T0 - ≤ 15 minutos de detecção) {#41-triagem-t0----15-minutos-de-detecção}
 
 - [ ] Alerta classificado: verdadeiro positivo ou falso positivo
-- [ ] Severidade atribuída (P1/P2/P3)
+- [ ] Severidade atribuída (P1–P4; P1 é o topo da escala)
 - [ ] Responsável pelo incidente designado (Incident Commander)
+- [ ] Avaliação de notificabilidade: se houver indício de violação de dados pessoais, de incidente significativo (NIS2), de incidente de caráter severo relacionado com as TIC (DORA), de vulnerabilidade ativamente explorada ou incidente grave (CRA) ou de incidente grave (AI Act), o incidente segue o **trilho regulatório**, em qualquer severidade e em qualquer nível, e sobe no mínimo a P2: GRC/Compliance e EPD/DPO informados ≤ 1 h após a confirmação; o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h (escolha do Manual; ver secção 6)
 - [ ] Canal de comunicação do incidente aberto (war room se P1)
 
 ### 4.2 Contenção (T1 - início imediato após confirmação) {#42-contenção-t1---início-imediato-após-confirmação}
@@ -121,13 +124,18 @@ Alguns incidentes requerem notificação a autoridades regulatórias dentro de p
 
 | Regulação | Tipo de incidente | Prazo |
 |---|---|---|
-| RGPD - Art. 33 | Violação de dados pessoais | ≤ 72 horas após conhecimento |
+| RGPD - Art. 33, n.º 1 | Violação de dados pessoais (salvo se não for suscetível de resultar num risco para os direitos e liberdades das pessoas singulares) | À autoridade de controlo (em Portugal, a CNPD): sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento; depois das 72 h, acompanhada dos motivos do atraso; pode ser faseada (n.º 4) |
+| RGPD - Art. 33, n.º 2 | Violação conhecida pelo subcontratante | Ao responsável pelo tratamento, sem demora injustificada (o contrato pode fixar um prazo em horas) |
+| RGPD - Art. 34 | Violação suscetível de implicar um elevado risco para os direitos e liberdades das pessoas singulares | Aos titulares dos dados, sem demora injustificada (exceções no n.º 3) |
 | DORA - Art. 19 + Reg. Delegado (UE) 2025/301, art. 5.º | Incidente de caráter severo relacionado com as TIC (entidade financeira) | Notificação inicial ≤ 4 h após a classificação como severo e ≤ 24 h após o conhecimento; relatório intercalar ≤ 72 h após a notificação inicial; relatório final ≤ 1 mês após o último relatório intercalar |
-| NIS2 - Art. 23 | Incidente significativo em entidade essencial/importante | ≤ 24 horas (alerta) + 72 horas (notificação) |
+| DORA - Art. 19, n.º 3 | Incidente de caráter severo com impacto nos interesses financeiros dos clientes | Aos clientes, sem demora indevida e logo que a entidade tenha tomado conhecimento |
+| NIS2 - Art. 23, n.º 4 (conforme a transposição nacional) | Incidente significativo em entidade essencial/importante | À CSIRT ou, se aplicável, à autoridade competente: alerta rápido ≤ 24 h; notificação de incidente ≤ 72 h (prestadores de serviços de confiança: ≤ 24 h); relatório intercalar a pedido; relatório final ≤ 1 mês após a notificação de incidente (se o incidente estiver em curso: relatório intercalar nessa altura e final ≤ 1 mês após a resolução) |
 | CRA - Art. 14 (aplicável desde 11.9.2026) | Vulnerabilidade ativamente explorada ou incidente grave num produto com elementos digitais colocado no mercado pela organização | À CSIRT designada como coordenadora e à ENISA, pela plataforma única: alerta precoce ≤ 24 h; notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave) |
+| CRA - Art. 14, n.º 8 | Vulnerabilidade ativamente explorada ou incidente grave | Aos utilizadores afetados (e, se for caso disso, a todos), com as medidas de atenuação e corretivas que possam tomar |
+| AI Act - Art. 73 | Incidente grave com sistema de IA de risco elevado | À autoridade de fiscalização do mercado do Estado-Membro onde ocorreu: imediatamente após determinar a relação causal (ou a sua probabilidade razoável) e, o mais tardar, 15 dias após o conhecimento pelo prestador ou pelo responsável pela implantação; 10 dias em caso de morte; 2 dias em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b); admite relatório inicial incompleto (n.º 5) |
 
 :::warning
-A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. O prazo começa a contar a partir do momento em que a organização tem conhecimento do incidente - não quando a causa raiz é identificada. No DORA, o prazo de 4 h conta da classificação do incidente como de caráter severo (com o limite de 24 h a contar do conhecimento) e o de 72 h conta da notificação inicial (Reg. Delegado (UE) 2025/301, art. 5.º).
+A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. Os prazos contam-se a partir do conhecimento do incidente ou da violação - não da identificação da causa raiz -, salvo nas etapas que a lei ancora noutro momento: o relatório final NIS2 conta da notificação de incidente; o relatório final CRA de uma vulnerabilidade conta da disponibilização da medida corretiva ou de atenuação. No DORA, o prazo de 4 h conta da classificação do incidente como de caráter severo (com o limite de 24 h a contar do conhecimento) e o de 72 h conta da notificação inicial (Reg. Delegado (UE) 2025/301, art. 5.º).
 :::
 
 **Retenção dos registos de incidentes.** A timeline, o post-mortem e as notificações enviadas conservam-se por 1 ano em L1 e L2 e por 3 anos em L3 (escolha do Manual; ver a [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos)). No DORA, o período é definido pela entidade (Reg. Delegado (UE) 2024/1774, art. 22.º, al. d)).

@@ -105,6 +105,8 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 
 ## 6. Prazos máximos e reavaliação {#6-prazos-máximos-e-reavaliação}
 
+**Triagem.** Cada CVE que afete um componente implantado é triado (afetado / não afetado / decisão) em ≤ 24 h se for Critical e em ≤ 48 h se for High, em qualquer nível; com indício de exploração ativa (por exemplo, presença no KEV), em ≤ 4 h. Se o componente integrar um produto com elementos digitais que a organização coloca no mercado, a exploração ativa confirmada ativa o trilho do CRA, art. 14.º (Política 32 §6). Estes prazos são escolha do Manual.
+
 ### 6.1 TTL por severidade e tipo {#61-ttl-por-severidade-e-tipo}
 
 | Severidade CVE | Tipo | L1 | L2 | L3 |

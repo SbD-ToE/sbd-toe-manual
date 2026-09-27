@@ -77,7 +77,7 @@ Todos os contratos que impliquem acesso técnico devem incluir cláusulas de seg
 | Cláusula | Descrição |
 |---|---|
 | Confidencialidade | Obrigação de confidencialidade de dados, credenciais e arquitetura |
-| Notificação de incidentes | Prazo de notificação de incidentes de segurança à organização (recomendado: ≤ 24 horas de conhecimento) |
+| Notificação de incidentes | Prazo de notificação de incidentes de segurança à organização (sem demora injustificada e ≤ 24 horas após o conhecimento) |
 | Uso aceitável | Proibição de acesso além do estritamente necessário para o âmbito contratual |
 | Subcontratação | Proibição ou condicionamento de subcontratação com acesso a dados ou sistemas |
 | Rescisão por incumprimento | Cláusula de rescisão imediata em caso de violação de segurança grave |

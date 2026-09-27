@@ -103,8 +103,8 @@ Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado p
 
 A NIS2 define um trilho de reporte para incidentes significativos:
 
-- **Alerta cedo** ("early warning") até 24h após conhecimento.
-- **Notificação** com avaliação inicial até 72h.
+- **Alerta rápido** (*early warning*), à CSIRT ou, se aplicável, à autoridade competente, sem demora injustificada e até 24 h após o conhecimento do incidente significativo.
+- **Notificação de incidente**, com avaliação inicial, até 72 h após o conhecimento.
 - **Relatório final** até 1 mês após a notificação de incidente (72h), com relatórios intercalares a pedido da CSIRT/autoridade.
 
 **Cobertura SbD-ToE**
@@ -123,7 +123,7 @@ A NIS2 define um trilho de reporte para incidentes significativos:
 
 **Lacunas intencionais**
 
-O SbD-ToE não fixa um modelo canónico de dados para incidentes, nem uma taxonomia P0–P3 "oficial", nem os templates de submissão. Isto é intencional: DORA, NIS2, HIPAA pedem conjuntos diferentes de campos e formatos. O manual diz "registar o incidente com campos obrigatórios", e o conjunto final de campos vem do normativo aplicável (no caso NIS2, das orientações nacionais e do Art. 23).
+O SbD-ToE não fixa um modelo canónico de dados para incidentes, nem uma taxonomia de severidade "oficial" (a escala P1–P4 da Política 31 é interna), nem os templates de submissão. Isto é intencional: DORA, NIS2, HIPAA pedem conjuntos diferentes de campos e formatos. O manual diz "registar o incidente com campos obrigatórios", e o conjunto final de campos vem do normativo aplicável (no caso NIS2, das orientações nacionais e do Art. 23).
 
 **Como cumprir**
 

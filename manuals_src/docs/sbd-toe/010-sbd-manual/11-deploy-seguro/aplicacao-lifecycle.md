@@ -206,7 +206,7 @@ Como **DevOps/SRE**, quero **ter *rollback* rápido e testado periodicamente**, 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Incidente ou falha | DevOps/SRE | ≤ 1h |
+| Produção | Incidente ou falha | DevOps/SRE | RTO de rollback conforme a Política 27 §6 (≤ 30 min em L2, ≤ 15 min em L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
@@ -561,7 +561,7 @@ Como **DevOps/SRE**, quero **documentar e testar *rollback* para cada tipo de al
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Incidente | Falha em produção | DevOps/SRE | ≤ 15 min |
+| Incidente | Falha em produção | DevOps/SRE | RTO de rollback conforme a Política 27 §6 (≤ 30 min em L2, ≤ 15 min em L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 

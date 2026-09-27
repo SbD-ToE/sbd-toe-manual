@@ -69,6 +69,7 @@ Quando o SLA de primeira resposta é excedido sem acção registada, o alerta de
 |---|---|---|---|
 | Escalonamento automático por SLA excedido | Não aplicável | Obrigatório (para Tech Lead) | Obrigatório (para Tech Lead + AppSec/GRC) |
 | Notificação a gestor quando P1 persiste > 30 minutos | Não aplicável | Recomendado | Obrigatório |
+| Escalonamento para GRC/Compliance e EPD/DPO quando há indício de trilho regulatório ([Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção)) | Obrigatório (≤ 1 h) | Obrigatório (≤ 1 h) | Obrigatório (≤ 1 h) |
 
 A cadeia de escalonamento deve ser documentada e testada periodicamente (pelo menos uma vez por semestre).
 

@@ -152,7 +152,7 @@ CEO
 | Deteção de incidentes | - | **R** | I | - | C | - | - | - |
 | **Incidentes & Resposta** | | | | | | | | |
 | Classificação de incidentes | - | A | - | - | C | C | - | - |
-| Resposta P0/P1 | C | **A** | C | - | R | I | I | I |
+| Resposta P1/P2 | C | **A** | C | - | R | I | I | I |
 | Reporte incidentes DORA | - | C | - | - | - | **R** | A | A |
 | **Conformidade & Auditoria** | | | | | | | | |
 | Auditoria interna (SbD) | I | C | I | - | - | **R** | I | A |
@@ -241,7 +241,7 @@ CEO (Lisboa)
 **Reporta a:** CRO ou CEO (depende governance)
 
 **Escalações típicas:**
-- Incidente P0 (dentro de 30 min)
+- Incidente P1 (dentro de 30 min)
 - Vuln crítica não resolvida (within 48h)
 - Conformidade DORA em risco (weekly)
 
@@ -393,7 +393,7 @@ Cada organização deve documentar:
 - [ ] **Organigrama definido** - Roles claros, reporting lines
 - [ ] **RACI documentada** - Aprovada e comunicada
 - [ ] **Reuniões agendadas** - Calendário confirmado
-- [ ] **Escalation paths claros** - Documentado (ex: P0 → CISO → CTO → CEO)
+- [ ] **Escalation paths claros** - Documentado (ex: P1 → CISO → CTO → CEO)
 - [ ] **Aprovações assinadas** - Board signature on policies
 - [ ] **Training** - Todos conhecem seu role
 - [ ] **Audit trail ativo** - Logs de quem decidiu o quê, quando

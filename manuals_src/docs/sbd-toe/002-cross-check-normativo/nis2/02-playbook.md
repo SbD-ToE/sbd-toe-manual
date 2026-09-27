@@ -172,11 +172,12 @@ Onde necessário, o texto distingue explicitamente:
 - **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 #### 5.3 Reporte de Incidentes Significativos {#53-reporte-de-incidentes-significativos}
-- **O que:** Submeter incidentes à autoridade competente
+- **O que:** Submeter incidentes significativos à CSIRT ou, se aplicável, à autoridade competente (art. 23.º, n.º 4)
 - **Prazos:**
-  - **Alerta cedo:** 24h após conhecimento
-  - **Notificação:** 72h com avaliação inicial
-  - **Relatório final:** 1 mês (podendo haver atualizações intermédias)
+  - **Alerta rápido:** ≤ 24h após o conhecimento
+  - **Notificação de incidente:** ≤ 72h após o conhecimento, com avaliação inicial
+  - **Relatório intercalar:** a pedido da CSIRT ou da autoridade competente
+  - **Relatório final:** ≤ 1 mês após a notificação de incidente (se o incidente estiver em curso: relatório intercalar nessa altura e final ≤ 1 mês após a resolução)
 - **Schema:** Parametrizar campos conforme Art. 23 e guias ENISA
 - **Como:** Exportadores SIEM/ITSM → ficheiros prontos a submeter
 - **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)

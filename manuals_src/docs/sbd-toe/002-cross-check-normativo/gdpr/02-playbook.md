@@ -26,7 +26,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 | 25 | Privacy by design/default | [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)–[Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Configurações seguras por defeito |
 | 30 | ROPA | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Inventário apps/dados + registo GRC |
 | 32 | Segurança do tratamento | [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Cifragem, IAM, testes, resiliência |
-| 33/34 | Violação de dados | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Runbook 72h + comunicação |
+| 33/34 | Violação de dados | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Runbook: autoridade de controlo ≤ 72h (art. 33.º); titulares sem demora injustificada se houver elevado risco (art. 34.º) |
 | 35 | DPIA | [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Cap. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro) | TM + anexos técnicos na DPIA |
 
 ---
@@ -72,7 +72,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 **Evidências:** Checklist; contratos; relatórios de revisão
 
 ### Fase 7 (M4–M5): Incidentes e Notificação 72h (Art. 33/34) {#fase-7-m4m5-incidentes-e-notificação-72h-art-3334}
-1. Runbook com cronómetro 72h e campos mínimos (o quê, quando, dados, medidas)  
+1. Runbook com cronómetro de 72h para a notificação à autoridade de controlo (art. 33.º) e campos mínimos (o quê, quando, dados, medidas); decisão, sem demora injustificada, sobre a comunicação aos titulares quando houver elevado risco (art. 34.º)  
 2. Critérios de risco para comunicação a titulares  
 3. Exercício anual de simulação  
 **Evidências:** Runbook; registos exercício; relatório pós‑ação
@@ -108,7 +108,8 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 
 ### Incidentes 72h {#incidentes-72h}
 - [ ] Runbook com campos GDPR
-- [ ] Cronómetro 72h visível
+- [ ] Cronómetro 72h visível (art. 33.º, a contar do conhecimento)
+- [ ] Critério de elevado risco e comunicação aos titulares sem demora injustificada (art. 34.º)
 - [ ] Exercício anual concluído
 - [ ] Templates de comunicação prontos
 
@@ -128,7 +129,7 @@ Estrutura: Requisitos → Ação → Evidência. Reutilizar controlos NIS2/DORA 
 | Métrica | Definição | Objetivo |
 |---------|-----------|---------|
 | % apps com Art. 32 completo | Apps com cifragem+IAM+testes | ≥95% |
-| Tempo médio até notificação | Evento → submissão à autoridade | ≤60h |
+| Notificações dentro do prazo legal | Conhecimento → submissão à autoridade | 100% ≤ 72h (alvo interno ≤ 48h) |
 | % DPIA no prazo | DPIAs concluídas dentro do SLA | ≥90% |
 | Conformidade retenção | Execução jobs vs. plano | ≥95% |
 

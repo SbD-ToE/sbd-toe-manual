@@ -66,7 +66,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | Taxa de verdadeiros positivos (alertas P1/P2) | % de alertas P1/P2 que correspondem a incidentes reais | > 70% |
 | Número de incidentes de segurança por período | Tendência de ocorrências | Trend descendente ou estável |
 | Tempo médio de detecção (MTTD) | Tempo entre início do incidente e detecção | Referência interna por tipo |
-| Tempo médio de resolução (MTTR de incidentes) | Tempo entre detecção e resolução de incidentes | Referência interna por severidade |
+| Tempo médio de resposta a incidentes (MTTR, OPS-K04) | Tempo entre o alerta e o início da acção de mitigação | ≤ 8 h (L1), ≤ 4 h (L2), ≤ 1 h (L3) |
 | % de incidentes com post-mortem realizado no prazo | Post-mortems concluídos em ≤ 5 dias úteis após resolução | 100% para P1; > 80% para P2 |
 
 ### 3.4 Pipeline e desenvolvimento {#34-pipeline-e-desenvolvimento}

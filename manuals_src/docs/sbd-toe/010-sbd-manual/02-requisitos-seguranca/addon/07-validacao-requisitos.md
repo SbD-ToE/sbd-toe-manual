@@ -270,6 +270,18 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | IDE-005 | SEC-Lx-IDE-PERM | L2+ | Verificar permissões concedidas a extensões. Confirmar que apenas as necessárias estão activas. | Permissões revistas. Execução sandboxed confirmada. |
 | IDE-006 | SEC-Lx-IDE-LOCAL | L2+ | Verificar controlo sobre uso de ambientes locais. Confirmar existência de logs ou proxy quando aplicável. | Política de uso de ambientes locais. Logs de rede ou proxy. |
 
+### PRI - Dados Pessoais (engenharia) {#pri---dados-pessoais-engenharia}
+
+| ID | Tag operacional | Nível | Método de validação | Evidência esperada |
+|----|-----------------|:-----:|---------------------|-------------------|
+| PRI-001 | SEC-Lx-PRI-MIN | L1+ | Comparar os campos de dados pessoais recolhidos com o registo de finalidades. Confirmar que não há campos sem finalidade. | Lista de campos com finalidade associada. |
+| PRI-002 | SEC-Lx-PRI-RETAIN | L1+ | Verificar prazos definidos e amostrar registos acima do prazo, incluindo réplicas e sistemas a jusante. Confirmar o prazo declarado para as cópias de segurança. | Configuração de retenção. Evidência de apagamento ou anonimização por amostragem. |
+| PRI-003 | SEC-Lx-PRI-RIGHTS | L1+ | Executar exportação, rectificação e apagamento para um titular de teste. Confirmar formato de leitura automática, propagação a jusante e verificação de identidade em pedidos fora do canal autenticado. | Ficheiro exportado. Registo das execuções. Evidência de propagação. |
+| PRI-004 | SEC-Lx-PRI-INVENTORY | L2+ | Rever o inventário. Confirmar finalidade, sistema e destinatários por conjunto de dados, e o registo de alterações. | Inventário actualizado com histórico de alterações. |
+| PRI-005 | SEC-Lx-PRI-LOGPII | L2+ | Rever o conceito de PII em registos e amostrar logs. Nos registos imutáveis, confirmar pseudónimos e chaves por titular. | Conceito documentado. Amostras de log conformes. |
+| PRI-006 | SEC-Lx-PRI-CONSENT | L1+ | Dar e retirar consentimento (ou opor-se) com um titular de teste. Confirmar registo auditável, esforço equivalente, efeito nos tratamentos dependentes e persistência após sincronização. | Registo de consentimento com versão do texto. Evidência do efeito da retirada. |
+| PRI-007 | SEC-Lx-PRI-DEFAULT | L1+ | Criar uma conta nova e verificar as definições iniciais de partilha, visibilidade e tratamento opcional. | Captura ou teste automatizado das definições por defeito. |
+
 ---
 
 ## 5) Resultados esperados da validação {#5-resultados-esperados-da-validação}

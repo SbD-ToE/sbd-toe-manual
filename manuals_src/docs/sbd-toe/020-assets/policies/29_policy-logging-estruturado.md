@@ -150,6 +150,18 @@ O Manual não reproduz os prazos dos regimes (b) a (d): a organização mapeia o
 | Acesso a logs restrito e auditado | Obrigatório (acesso restrito); auditoria do acesso recomendada | Obrigatório | Obrigatório |
 | Alertas em caso de tentativa de alteração ou eliminação | Não aplicável | Recomendado | Obrigatório |
 
+### 8.1 Imutabilidade e apagamento de dados pessoais {#81-imutabilidade-e-apagamento-de-dados-pessoais}
+
+Um registo que não se pode alterar também não se pode apagar a pedido. Para que a imutabilidade não impeça o apagamento de dados pessoais (`PRI-003`), aplica-se esta regra aos registos e às cópias imutáveis:
+
+- os dados pessoais entram só como identificador pseudónimo interno, nunca como identificador directo (nome, email, número de documento);
+- qualquer conteúdo identificador que tenha de ficar no registo vai cifrado com uma chave por titular, guardada fora do armazenamento imutável;
+- um pedido de apagamento cumpre-se destruindo a chave desse titular (*crypto-shredding*); o que resta do registo deixa de identificar a pessoa e fica até ao fim do prazo de retenção, com acesso restrito;
+- quando se restaura uma cópia de segurança, reaplicam-se os apagamentos pedidos depois da data da cópia;
+- a decisão fica registada, com o pedido de origem.
+
+Se a destruição da chave vale juridicamente como apagamento é matéria do DPO; o Manual prescreve o mecanismo técnico (`PRI-005`).
+
 ---
 
 ## 9. Responsabilidades {#9-responsabilidades}

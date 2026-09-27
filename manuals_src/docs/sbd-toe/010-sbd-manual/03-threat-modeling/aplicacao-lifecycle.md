@@ -350,13 +350,13 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 **Critérios de aceitação (BDD).**
 - **Dado** que o sistema trata dados pessoais  
   **Quando** executo Threat Modeling  
-  **Então** **incluo análise LINDDUN** com ameaças, mitigação e **mapeamento para os requisitos de privacidade do Cap. 02 (`PRI-001`–`PRI-005`)**  
+  **Então** **incluo análise LINDDUN** com ameaças, mitigação e **mapeamento para os requisitos de privacidade do Cap. 02 (`PRI-001`–`PRI-007`)**  
 - E **crio `privacy-dfd`** com trust boundaries específicos  
 
 **Checklist.**
 - [ ] `privacy-dfd` criado  
 - [ ] Lista LINDDUN preenchida  
-- [ ] **Ligação aos requisitos de privacidade do Cap. 02 (`PRI-001`–`PRI-005`)**  
+- [ ] **Ligação aos requisitos de privacidade do Cap. 02 (`PRI-001`–`PRI-007`)**  
 - [ ] **Ameaças classificadas quanto a severidade e mitigação**  
 - [ ] Evidência arquivada no repositório de arquitetura  
 :::
@@ -369,7 +369,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero aplicar **LINDDUN** qua
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |:---|:---|:---|
-| L1 | Opcional | Checklist simplificada |
+| L1 | Sim | Forma leve: as sete categorias LINDDUN percorridas sobre os fluxos de dados pessoais, com as ameaças ligadas aos requisitos `PRI-*` |
 | L2 | Sim | Análise formal de privacidade |
 | L3 | Sim | LINDDUN completo + validação independente (DPO) |
 

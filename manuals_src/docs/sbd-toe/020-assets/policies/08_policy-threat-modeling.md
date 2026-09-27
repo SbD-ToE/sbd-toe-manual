@@ -44,7 +44,7 @@ A organização adota as seguintes metodologias, selecionadas proporcionalmente 
 | **LINDDUN** | Ameaças à privacidade | Sistemas com dados pessoais, sujeitos a RGPD ou obrigações de consentimento |
 | **PASTA** | Modelação baseada em risco de negócio | Sistemas regulados, críticos ou em contextos com exigência formal elevada |
 
-Em L2, STRIDE é suficiente como metodologia base. Em L3, LINDDUN deve ser aplicado sempre que existam dados pessoais, e PASTA deve ser considerado em contextos regulatórios.
+STRIDE é a metodologia base em L2 e L3. Sempre que existam dados pessoais, o LINDDUN é obrigatório em todos os níveis: em L1 em forma leve (as sete categorias percorridas sobre os fluxos de dados pessoais), em L2 e L3 como análise formal. PASTA deve ser considerado em contextos regulatórios.
 
 ---
 
@@ -186,7 +186,7 @@ A reutilização sem revisão explícita é equivalente a não ter threat modeli
 |---|---|---|---|
 | Threat modeling obrigatório | Não | Sim | Sim |
 | STRIDE como metodologia base | Recomendado | Obrigatório | Obrigatório |
-| LINDDUN (dados pessoais) | Opcional | Obrigatório | Obrigatório |
+| LINDDUN (dados pessoais) | Obrigatório (forma leve) | Obrigatório | Obrigatório |
 | Aprovação formal | Não aplicável | AppSec + Tech Lead | AppSec + Arquiteto + revisão independente |
 | Gate no pipeline CI/CD | Não aplicável | Recomendado | Obrigatório |
 | Revisão periódica | A pedido | Anual / release major | Semestral / release major |

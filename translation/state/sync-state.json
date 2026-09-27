@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T22:07:33Z",
+  "generated_at": "2026-09-27T22:20:51Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "9316d6519baa39e5ff2e361b12c85582ddddbac86e9de4b1bd5fa2763edf3a2d",
-      "translated_source_sha256": "9316d6519baa39e5ff2e361b12c85582ddddbac86e9de4b1bd5fa2763edf3a2d",
-      "target_sha256": "4542ec94a822e66e06eee39bececa6e6a115d6b5b1d040a3e105ab40d948e711",
+      "source_sha256": "dd588e99c9f7aca1d91678d3d67d46ebbeee4b479ded0c207a13f061ee1618e3",
+      "translated_source_sha256": "dd588e99c9f7aca1d91678d3d67d46ebbeee4b479ded0c207a13f061ee1618e3",
+      "target_sha256": "d25785c20e4f9b34d4e915d8f2dd9a005de5d490060294b8e681b204c3652aa5",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -86,9 +86,9 @@
     },
     "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "7669fba8bf4aec2a7ede4a30803898c2cd3799bf69135076510cdc451e456432",
-      "translated_source_sha256": "7669fba8bf4aec2a7ede4a30803898c2cd3799bf69135076510cdc451e456432",
-      "target_sha256": "0a0ce4240efd17a176ff5cccee5f92e5f1a568f3f5873c252ca623418aae0a73",
+      "source_sha256": "6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72",
+      "translated_source_sha256": "6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72",
+      "target_sha256": "fccab04259d20ef5a06bba051be7608d6e7b68462772c7e013d5c843b98cd089",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",

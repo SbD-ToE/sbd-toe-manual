@@ -685,24 +685,23 @@ itens:
     pt: Art. 6.º, n.os 1, 1-A, 1-B, 1-C
     en: Article 6(1), (1a), (1b) and (1c)
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: requisito
-    alvo: CLA-004
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-cla---classificação-de-aplicações
+  - tipo: pagina
+    rotulo:
+      pt: Quando se aplica (CTX-AIA-RE)
+      en: When it applies (CTX-AIA-RE)
+    ficheiro: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
+    ancora: quando-se-aplica
     citacao:
-      pt: exposição a novos contextos regulatórios
-      en: exposure to new regulatory contexts
-  falta:
-    pt: A determinação jurídica é de compliance, mas o Manual não recolhe o resultado («sistema de IA de risco elevado») como entrada da classificação nem lhe associa piso de nível e ativação dos requisitos de IA; CLA-004 só prevê reclassificação genérica por «novos contextos regulatórios». Aplica-se desde 2.8.2028.
-    en: The legal determination belongs to compliance, but the Manual does not take the result (“high-risk AI system”) as an input to classification nor associate with it a level floor and the activation of the AI requirements; CLA-004 only provides for generic reclassification due to “new regulatory contexts”. Applies from 2.8.2028.
+      pt: O sistema de IA é de risco elevado nos termos do art. 6.º
+      en: The AI system is high-risk under Article 6
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2028-08-02'
   substitui: []
   nota: null
@@ -712,29 +711,19 @@ itens:
     pt: Art. 6.º, n.os 2 e 3
     en: Article 6(2) and (3)
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: requisito
-    alvo: CLA-004
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-cla---classificação-de-aplicações
-    citacao:
-      pt: exposição a novos contextos regulatórios
-      en: exposure to new regulatory contexts
   - tipo: pagina
     rotulo:
-      pt: 🧩 Critérios complementares em contextos de automação e apoio à decisão
-      en: 🧩 Complementary criteria in automation and decision-support contexts
-    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/01-modelo-classificacao-eixos.md
-    ancora: -critérios-complementares-em-contextos-de-automação-e-apoio-à-decisão
+      pt: Quando se aplica (CTX-AIA-RE)
+      en: When it applies (CTX-AIA-RE)
+    ficheiro: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
+    ancora: quando-se-aplica
     citacao:
-      pt: não cria novos eixos de risco
-      en: '**does not create new risk axes**'
-  falta:
-    pt: Idem AIA-6-1 para o anexo III (aplica-se desde 2.12.2027). O Cap. 01 afirma que a IA não altera por si só a criticidade — não há ponte entre o estatuto legal de risco elevado e L2/L3. Raiz dos conflitos de nível.
-    en: Idem AIA-6-1 for Annex III (applies from 2.12.2027). Ch. 01 states that AI does not by itself alter criticality — there is no bridge between the legal high-risk status and L2/L3. Root of the level conflicts.
+      pt: O sistema de IA é de risco elevado nos termos do art. 6.º
+      en: The AI system is high-risk under Article 6
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -811,8 +800,10 @@ itens:
       pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
       en: complete logging of model inputs and outputs (with PII sanitisation)
   falta:
-    pt: Cibersegurança coberta (L2+); faltam exatidão, governação de dados, transparência/instruções e supervisão humana para sistemas não agênticos — ver arts. 10.º, 13.º, 14.º, 15.º.
-    en: Cybersecurity covered (L2+); missing are accuracy, data governance, transparency/instructions and human oversight for non-agentic systems — see Articles 10, 13, 14, 15.
+    pt: Cibersegurança (THR-008, ARC-014, DEP-011 a DEP-014), supervisão humana (ARC-014 com o piso P08) e transparência (CTX-AIA-RE-R01/R02) cobertas; exatidão e solidez pendentes da ronda AISVS/SAIF; governação de dados fora de âmbito.
+    en: Cybersecurity (THR-008, ARC-014, DEP-011 to DEP-014), human oversight (ARC-014 with floor P08) and transparency (CTX-AIA-RE-R01/R02) covered; accuracy and robustness pending the AISVS/SAIF round; data governance out of scope.
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -845,7 +836,7 @@ itens:
     pt: Art. 9.º, n.º 1
     en: Article 9(1)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -874,10 +865,10 @@ itens:
     citacao:
       pt: Ameaças adversariais catalogadas por ID canónico (ATLAS `AML.T*` / NIST AI 100-2 / OWASP LLM/ML Top 10)
       en: Adversarial threats catalogued by canonical ID (ATLAS `AML.T*` / NIST AI 100-2 / OWASP LLM/ML Top 10)
-  falta:
-    pt: Existe gestão de risco de segurança (classificação + threat modeling estendido a IA); falta um sistema de gestão de riscos para saúde, segurança e direitos fundamentais, documentado e mantido ao longo do ciclo de vida.
-    en: Security risk management exists (classification + threat modelling extended to AI); missing is a risk management system for health, safety and fundamental rights, documented and maintained throughout the lifecycle.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -890,7 +881,7 @@ itens:
     pt: Art. 9.º, n.º 2
     en: Article 9(2)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -919,10 +910,10 @@ itens:
     citacao:
       pt: registo de drift de comportamento e degradação de precisão
       en: recording of behaviour drift and accuracy degradation
-  falta:
-    pt: Identificação de ameaças e de abuso (misuse) e monitorização de drift existem; faltam estimativa de riscos para saúde/segurança/direitos fundamentais em uso previsto e a avaliação de riscos a partir de dados pós-comercialização.
-    en: Identification of threats and of abuse (misuse) and drift monitoring exist; missing are the estimation of risks to health/safety/fundamental rights under intended use and the evaluation of risks based on post-market data.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -935,13 +926,13 @@ itens:
     pt: Art. 9.º, n.º 4
     en: Article 9(4)
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: Nenhuma prescrição sobre efeitos combinados dos requisitos da secção 2 (p. ex. conflito exatidão × supervisão × transparência).
-    en: No prescription on the combined effects of the requirements of Section 2 (e.g. conflict between accuracy × oversight × transparency).
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -954,7 +945,7 @@ itens:
     pt: Art. 9.º, n.º 5
     en: Article 9(5)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -973,10 +964,10 @@ itens:
     citacao:
       pt: toda a não-aplicação de um controlo é registada com justificação, compensação, aprovador e prazo
       en: every non-application of a control is recorded with justification, compensation, approver and deadline
-  falta:
-    pt: Risco residual com compensação, owner e TTL existe; faltam a hierarquia legal (eliminar por conceção → mitigar → informar o implantador → formar) e o critério de aceitabilidade do risco residual para pessoas afetadas.
-    en: Residual risk with compensation, owner and TTL exists; missing are the legal hierarchy (eliminate by design → mitigate → inform the deployer → train) and the criterion for acceptability of residual risk for affected persons.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1063,7 +1054,7 @@ itens:
     pt: Art. 9.º, n.º 9
     en: Article 9(9)
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: us
@@ -1076,10 +1067,10 @@ itens:
     citacao:
       pt: Quando o sistema trata dados pessoais, a análise de privacidade deve complementar a análise de segurança.
       en: When the system processes personal data, the privacy analysis must complement the security analysis.
-  falta:
-    pt: O LINDDUN cobre privacidade; nenhuma prescrição sobre impacto em menores ou grupos vulneráveis.
-    en: LINDDUN covers privacy; no prescription on the impact on minors or vulnerable groups.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead; a classificação e o threat model do Manual dão só evidência incidental.
+    en: Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -1111,7 +1102,7 @@ itens:
     pt: Art. 10.º, n.º 1
     en: Article 10(1)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -1131,10 +1122,10 @@ itens:
     citacao:
       pt: Inclui `dataset_id`, `version`, `source`, `hash`, `curation_process`
       en: Includes `dataset_id`, `version`, `source`, `hash`, `curation_process`
-  falta:
-    pt: Proveniência, versão e curadoria de datasets (L2+); faltam critérios de qualidade dos conjuntos de treino/validação/teste.
-    en: Provenance, version and curation of datasets (L2+); missing are quality criteria for training/validation/testing datasets.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1149,7 +1140,7 @@ itens:
     pt: Art. 10.º, n.º 2
     en: Article 10(2)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -1177,10 +1168,10 @@ itens:
     citacao:
       pt: Inclui `dataset_id`, `version`, `source`, `hash`, `curation_process`
       en: Includes `dataset_id`, `version`, `source`, `hash`, `curation_process`
-  falta:
-    pt: Cobre origem/recolha, proveniência e integridade; faltam escolhas de conceção, pressupostos, avaliação de disponibilidade, exame e mitigação de enviesamentos e identificação de lacunas.
-    en: Covers origin/collection, provenance and integrity; missing are design choices, assumptions, assessment of availability, examination and mitigation of biases and identification of gaps.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1193,13 +1184,13 @@ itens:
     pt: Art. 10.º, n.º 3
     en: Article 10(3)
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: 'Pertinência, representatividade, ausência de erros e propriedades estatísticas: nenhuma prescrição (abstenção declarada no cross-check).'
-    en: 'Relevance, representativeness, freedom from errors and statistical properties: no prescription (abstention declared in the cross-check).'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1212,13 +1203,13 @@ itens:
     pt: Art. 10.º, n.º 4
     en: Article 10(4)
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: 'Adequação ao contexto geográfico/comportamental/funcional: nenhuma prescrição.'
-    en: 'Appropriateness to the geographical/behavioural/functional context: no prescription.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1231,13 +1222,13 @@ itens:
     pt: Art. 10.º, n.º 6
     en: Article 10(6)
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: 'Qualidade dos conjuntos de teste em sistemas sem treino (p. ex. LLM de terceiros): as eval suites (§C5) testam agentes quanto a regressão/abuso, sem critérios de representatividade dos dados de teste.'
-    en: 'Quality of testing datasets in systems without training (e.g. third-party LLM): the eval suites (§C5) test agents for regression/abuse, without representativeness criteria for the test data.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
+    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -2654,8 +2645,10 @@ itens:
       pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
       en: complete logging of model inputs and outputs (with PII sanitisation)
   falta:
-    pt: 'Remete para a secção 2: ver AIA-9 a AIA-15 (cibersegurança sim; dados, transparência, supervisão e exatidão com lacunas).'
-    en: 'Refers to Section 2: see AIA-9 to AIA-15 (cybersecurity yes; data, transparency, oversight and accuracy with gaps).'
+    pt: Cibersegurança (THR-008, ARC-014, DEP-011 a DEP-014), supervisão humana (ARC-014 com o piso P08) e transparência (CTX-AIA-RE-R01/R02) cobertas; exatidão e solidez pendentes da ronda AISVS/SAIF; governação de dados fora de âmbito.
+    en: Cybersecurity (THR-008, ARC-014, DEP-011 to DEP-014), human oversight (ARC-014 with floor P08) and transparency (CTX-AIA-RE-R01/R02) covered; accuracy and robustness pending the AISVS/SAIF round; data governance out of scope.
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2946,7 +2939,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea a)
     en: Article 17(1), point (a)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -2973,10 +2966,10 @@ itens:
     citacao:
       pt: O threat model tem controlo de versão explícito
       en: The threat model is under explicit version control
-  falta:
-    pt: Governação e gatilhos de reavaliação por mudança existem; falta estratégia de cumprimento regulamentar documentada, incluindo procedimentos de avaliação da conformidade e de gestão de modificações.
-    en: Governance and reassessment triggers on change exist; missing is a documented strategy for regulatory compliance, including conformity assessment procedures and procedures for the management of modifications.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -2989,7 +2982,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea b)
     en: Article 17(1), point (b)
   classe: engenharia
-  forca: cobre
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -3016,7 +3009,9 @@ itens:
     citacao:
       pt: Alterações relevantes disparam revisão de threat modeling
       en: Relevant changes trigger a threat modelling review
-  falta: null
+  falta:
+    pt: O art. 17.º está fora de âmbito; o Manual fornece evidência de engenharia para este elemento do sistema de gestão da qualidade.
+    en: Article 17 is out of scope; the Manual provides engineering evidence for this element of the quality management system.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3032,7 +3027,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea c)
     en: Article 17(1), point (c)
   classe: engenharia
-  forca: cobre
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -3059,7 +3054,9 @@ itens:
     citacao:
       pt: possível reconstruir o que correu, quando, com que inputs, com que resultado e quem aprovou
       en: possible to reconstruct what ran, when, with which inputs, with which result and who approved
-  falta: null
+  falta:
+    pt: O art. 17.º está fora de âmbito; o Manual fornece evidência de engenharia para este elemento do sistema de gestão da qualidade.
+    en: Article 17 is out of scope; the Manual provides engineering evidence for this element of the quality management system.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3109,7 +3106,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea e)
     en: Article 17(1), point (e)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -3128,10 +3125,10 @@ itens:
     citacao:
       pt: Guidelines por linguagem/stack publicadas em repositório versionado
       en: Guidelines per language/stack published in a versioned repository
-  falta:
-    pt: Especificações técnicas próprias (catálogo, guidelines); falta a gestão de normas harmonizadas/especificações comuns (plano da conformidade).
-    en: Own technical specifications (catalogue, guidelines); missing is the management of harmonised standards/common specifications (compliance plane).
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3144,7 +3141,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea f)
     en: Article 17(1), point (f)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -3163,10 +3160,10 @@ itens:
     citacao:
       pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
       en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
-  falta:
-    pt: Inventário de datasets e registo de finalidades; falta procedimento de gestão de dados (aquisição, rotulagem, armazenamento, filtragem, agregação, conservação) para dados de treino.
-    en: Dataset inventory and record of purposes; missing is a data management procedure (acquisition, labelling, storage, filtration, aggregation, retention) for training data.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3179,7 +3176,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea g)
     en: Article 17(1), point (g)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -3198,10 +3195,10 @@ itens:
     citacao:
       pt: têm threat model estendido que cobre ameaças adversariais específicas
       en: have an extended threat model covering specific adversarial threats
-  falta:
-    pt: Ver AIA-9-1.
-    en: See AIA-9-1.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3241,7 +3238,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea i)
     en: Article 17(1), point (i)
   classe: organizacional
-  forca: cobre
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: politica
@@ -3262,7 +3259,9 @@ itens:
     citacao:
       pt: ou de incidente grave (AI Act), o incidente segue o **trilho regulatório**
       en: or a serious incident (AI Act), the incident follows the **regulatory track**
-  falta: null
+  falta:
+    pt: O art. 17.º está fora de âmbito; o Manual fornece evidência de engenharia para este elemento do sistema de gestão da qualidade.
+    en: Article 17 is out of scope; the Manual provides engineering evidence for this element of the quality management system.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3276,7 +3275,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea j)
     en: Article 17(1), point (j)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: politica
@@ -3288,10 +3287,10 @@ itens:
     citacao:
       pt: ou de incidente grave (AI Act), o incidente segue o **trilho regulatório**
       en: or a serious incident (AI Act), the incident follows the **regulatory track**
-  falta:
-    pt: Comunicação a autoridades via trilho regulatório do IRP; falta comunicação com organismos notificados, outros operadores, clientes e partes interessadas.
-    en: Communication with authorities via the IRP's regulatory track; missing is communication with notified bodies, other operators, customers and interested parties.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -3304,7 +3303,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea k)
     en: Article 17(1), point (k)
   classe: organizacional
-  forca: cobre
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -3324,7 +3323,9 @@ itens:
     citacao:
       pt: Pacote de evidências de validação por release (índice + export assinado)
       en: Validation evidence package per release (index + signed export)
-  falta: null
+  falta:
+    pt: O art. 17.º está fora de âmbito; o Manual fornece evidência de engenharia para este elemento do sistema de gestão da qualidade.
+    en: Article 17 is out of scope; the Manual provides engineering evidence for this element of the quality management system.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3340,7 +3341,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea l)
     en: Article 17(1), point (l)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -3368,10 +3369,10 @@ itens:
     citacao:
       pt: Fornecedores com acesso a dados, código ou pipelines são validados com questionário ou checklist antes de onboarding
       en: Suppliers with access to data, code or pipelines are validated with a questionnaire or checklist before onboarding
-  falta:
-    pt: Segurança do aprovisionamento de modelos/fornecedores de IA coberta; falta a gestão de recursos (pessoal, meios).
-    en: Security of the supply of AI models/vendors covered; missing is resource management (staff, means).
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -3384,7 +3385,7 @@ itens:
     pt: Art. 17.º, n.º 1, alínea m)
     en: Article 17(1), point (m)
   classe: organizacional
-  forca: cobre
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -3403,7 +3404,9 @@ itens:
     citacao:
       pt: Cada aplicação ou projecto tem um owner de segurança formalmente designado e registado
       en: Each application or project has a formally designated and registered security owner
-  falta: null
+  falta:
+    pt: O art. 17.º está fora de âmbito; o Manual fornece evidência de engenharia para este elemento do sistema de gestão da qualidade.
+    en: Article 17 is out of scope; the Manual provides engineering evidence for this element of the quality management system.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

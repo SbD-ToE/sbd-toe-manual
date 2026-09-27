@@ -381,17 +381,17 @@ Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas 
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 39 |
-| Parcial | 21 |
+| Cobre | 47 |
+| Parcial | 20 |
 | Apoia evidência | 20 |
-| Lacuna | 14 |
+| Lacuna | 7 |
 | Fora de âmbito | 97 |
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
 Todas as obrigações da matriz `_matriz/cra.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 46 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
-### Cobre (59) {#cobre}
+### Cobre (67) {#cobre}
 
 Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
 
@@ -404,11 +404,17 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | CRA-13-6-b | Art. 13.º, n.º 6, 2.º período | Cobre | `CTX-CRA-R04` |
 | CRA-13-7 | Art. 13.º, n.º 7 | Cobre | `DEP-010`; `TST-003`; `GOV-009`; [Política 10 §8](/sbd-toe/assets/policies/policy-dependencias#8-alertas-de-vulnerabilidades-em-produção) |
 | CRA-13-8-p1 | Art. 13.º, n.º 8, 1.º parágrafo | Cobre | [Política 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); `DEP-007`; [Política 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02`; `CTX-CRA-R03` |
+| CRA-13-8-p2 | Art. 13.º, n.º 8, 2.º parágrafo | Cobre | `CTX-CRA-R01` |
+| CRA-13-8-p3 | Art. 13.º, n.º 8, 3.º parágrafo | Cobre | `CTX-CRA-R01` |
+| CRA-13-8-p5 | Art. 13.º, n.º 8, 5.º parágrafo | Cobre | `CTX-CRA-R01` |
 | CRA-13-8-p6 | Art. 13.º, n.º 8, 6.º parágrafo | Cobre | [Política 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Política 19 §4.2](/sbd-toe/assets/policies/policy-estrategia-testes#42-triagem-formal); `DEP-007`; `GOV-015`; `GOV-015` |
+| CRA-13-9 | Art. 13.º, n.º 9 | Cobre | `CTX-CRA-R01` |
+| CRA-13-11 | Art. 13.º, n.º 11 | Cobre | `CTX-CRA-R01` |
 | CRA-13-12-p1 | Art. 13.º, n.º 12, 1.º parágrafo | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos) |
 | CRA-13-12-p2 | Art. 13.º, n.º 12, 2.º parágrafo | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); `TST-004` |
 | CRA-13-15 | Art. 13.º, n.º 15 | Apoia evidência | [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico); [Política 20 §8](/sbd-toe/assets/policies/policy-release-seguro#8-registo-histórico-de-releases) |
 | CRA-13-17 | Art. 13.º, n.º 17 | Cobre | `GOV-015` |
+| CRA-13-19-p2 | Art. 13.º, n.º 19, 2.º parágrafo | Cobre | `CTX-CRA-R01` |
 | CRA-13-21 | Art. 13.º, n.º 21 | Apoia evidência | `DST-007`; `DPL-005` |
 | CRA-14-1 | Art. 14.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); [Cap. 05 US-11](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados) |
 | CRA-14-3 | Art. 14.º, n.os 3 e 5 | Cobre | `CTX-CRA-R05`; [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
@@ -420,6 +426,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | CRA-31-2 | Art. 31.º, n.º 2 | Apoia evidência | `THR-006`; `ARC-010` |
 | CRA-69-3 | Art. 69.º, n.º 3 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | CRA-AnxI-P1-1 | Anexo I, parte I, ponto 1 | Cobre | `CLA-003`; `CLA-001`; `THR-001` |
+| CRA-AnxI-P1-2a | Anexo I, parte I, ponto 2, alínea a) | Cobre | `DEP-002`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `TST-005`; `TST-008`; [Política 12 §8](/sbd-toe/assets/policies/policy-excecoes-cve#8-integração-no-pipeline) |
 | CRA-AnxI-P1-2c | Anexo I, parte I, ponto 2, alínea c) | Cobre | `CTX-CRA-R02` |
 | CRA-AnxI-P1-2d | Anexo I, parte I, ponto 2, alínea d) | Cobre | `ACC-001`; `ACC-003`; `AUT-001`; `AUT-010` |
 | CRA-AnxI-P1-2e | Anexo I, parte I, ponto 2, alínea e) | Cobre | `ENC-001`; `ENC-002`; `ENC-003` |
@@ -438,6 +445,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | CRA-AnxII-3 | Anexo II, ponto 3 | Apoia evidência | [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
 | CRA-AnxII-4 | Anexo II, ponto 4 | Apoia evidência | [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); `ARC-001` |
 | CRA-AnxII-5 | Anexo II, ponto 5 | Apoia evidência | [Cap. 03 US-13](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-13---derivação-de-abusemisuse-cases-para-o-backlog); `THR-001` |
+| CRA-AnxII-7 | Anexo II, ponto 7 | Cobre | `CTX-CRA-R01` |
 | CRA-AnxII-8c | Anexo II, ponto 8, alínea c) | Cobre | `CTX-CRA-R02` |
 | CRA-AnxII-8e | Anexo II, ponto 8, alínea e) | Cobre | `CTX-CRA-R02` |
 | CRA-AnxII-8f | Anexo II, ponto 8, alínea f) | Apoia evidência | `DST-004`; `DEP-001` |
@@ -457,7 +465,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | CRA-AnxVIII-PIV-3.2 | Anexo VIII, parte IV (módulo H), ponto 3.2 | Cobre | `GOV-001`; `TST-001`; `TRN-001`; `GOV-011`; `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02` |
 | CRA-AnxVIII-PIV-3.4a3.5 | Anexo VIII, parte IV (módulo H), pontos 3.4 e 3.5 | Apoia evidência | `GOV-010` |
 
-### Lacuna declarada (35) {#lacuna}
+### Lacuna declarada (27) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -469,16 +477,10 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | CRA-13-1 | Art. 13.º, n.º 1 | Parcial | `REQ-001`; `CLA-003`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `CTX-CRA-R02` | Conceção/desenvolvimento conformes com toda a parte I do anexo I: faltam reposição do estado original, remoção e transferência seguras de todos os dados, minimização de dados não pessoais e comunicação de corrupções/acessos ao utilizador em L1. O mecanismo de atualização do produto está em CTX-CRA-R02. |
 | CRA-13-3 | Art. 13.º, n.º 3 | Parcial | `THR-006`; [Política 08 §4.2](/sbd-toe/assets/policies/policy-threat-modeling#42-cadência-periódica) | A avaliação de riscos do Manual não indica, requisito a requisito, se e como se aplicam as alíneas do anexo I, parte I, ponto 2, nem como se aplicam o ponto 1 e a parte II; não é estruturada por finalidade prevista, utilização razoavelmente previsível, ambiente operacional e período de utilização; a atualização não está ancorada ao período de apoio. |
 | CRA-13-4 | Art. 13.º, n.º 4 | Parcial | [Política 07 §9](/sbd-toe/assets/policies/policy-requisitos-seguranca#9-gestão-de-exceções-a-requisitos); `GOV-009` | Existe justificação formal de requisitos não implementados (exceções), mas não a integração da avaliação de riscos na documentação técnica (anexo VII) nem a justificação por requisito essencial do CRA considerado não aplicável. |
-| CRA-13-8-p2 | Art. 13.º, n.º 8, 2.º parágrafo | Lacuna | — | O Manual não define o período de apoio nem os critérios para o determinar (vida útil expectável, expectativas razoáveis, orientações). |
-| CRA-13-8-p3 | Art. 13.º, n.º 8, 3.º parágrafo | Lacuna | — | Não prescreve o período de apoio mínimo de 5 anos (salvo produto com utilização prevista inferior). |
-| CRA-13-8-p5 | Art. 13.º, n.º 8, 5.º parágrafo | Lacuna | — | Não há registo da fundamentação do período de apoio para a documentação técnica. |
-| CRA-13-9 | Art. 13.º, n.º 9 | Lacuna | — | Não há dever de manter disponíveis as atualizações de segurança emitidas por ≥10 anos ou pelo resto do período de apoio. |
 | CRA-13-10 | Art. 13.º, n.º 10 | Lacuna | — | Sem política de versões suportadas: não prevê a faculdade de corrigir só a última versão nem a condição de acesso gratuito a ela. |
-| CRA-13-11 | Art. 13.º, n.º 11 | Lacuna | — | Sem regra para arquivos públicos de versões anteriores (aviso de risco e indicação de que não são apoiadas). |
 | CRA-13-13 | Art. 13.º, n.º 13 | Parcial | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Política 08 §9.3](/sbd-toe/assets/policies/policy-threat-modeling#93-retenção) | A regra dos 10 anos cobre a SBOM e o pacote de evidências; outros elementos da documentação técnica (versões históricas do threat model: 3 anos; registos de aprovação: 1–3 anos) não estão abrangidos; a declaração UE está fora de âmbito. |
 | CRA-13-14 | Art. 13.º, n.º 14 | Parcial | `ARC-009`; `CLA-006`; `REQ-005`; `THR-006` | Alterações de conceção/processo disparam revisão, mas falta acompanhar alterações das normas harmonizadas/especificações comuns que servem de referência à declaração de conformidade. |
 | CRA-13-18 | Art. 13.º, n.º 18 | Parcial | [Política 20 §4.1](/sbd-toe/assets/policies/policy-release-seguro#41-critérios-obrigatórios) | Só existe o critério genérico «Documentação de segurança atualizada» (recomendado em L2, obrigatório em L3); falta prescrever o conteúdo do anexo II, o destinatário (utilizador), a língua e a conservação por 10 anos/período de apoio. |
-| CRA-13-19-p2 | Art. 13.º, n.º 19, 2.º parágrafo | Lacuna | — | Não há notificação ao utilizador do fim do período de apoio (nem mecanismo técnico para a fazer). |
 | CRA-14-2-a | Art. 14.º, n.º 2, alínea a) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | O prazo de 24 h e o registo do momento do conhecimento estão prescritos; falta o conteúdo mínimo (indicação dos Estados-Membros onde o produto foi disponibilizado). |
 | CRA-14-2-b | Art. 14.º, n.º 2, alínea b) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 72 h prescrito; falta o conteúdo mínimo (informação geral do produto, natureza da exploração e da vulnerabilidade, medidas corretivas tomadas e a tomar pelos utilizadores, sensibilidade da informação). |
 | CRA-14-2-c | Art. 14.º, n.º 2, alínea c) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 14 dias após a medida corretiva prescrito (e a regra de contagem está correta na nota da Política 32 §6); falta o conteúdo do relatório final (gravidade e impacto, agente malicioso, pormenores da atualização). |
@@ -486,14 +488,12 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | CRA-14-4-b | Art. 14.º, n.º 4, alínea b) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 72 h prescrito; falta o conteúdo (natureza, avaliação inicial, medidas, sensibilidade). |
 | CRA-14-6 | Art. 14.º, n.º 6 | Lacuna | — | A linha CRA da Política 32 §6 não prevê o relatório intercalar a pedido da CSIRT (existe só na linha NIS2). |
 | CRA-14-7 | Art. 14.º, n.º 7 | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Nomeia a CSIRT designada como coordenadora e a plataforma única, mas não a regra de determinação (Estado-Membro do estabelecimento principal e regra subsidiária para fabricantes fora da UE). |
-| CRA-AnxI-P1-2a | Anexo I, parte I, ponto 2, alínea a) | Parcial | `DEP-002`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `TST-005`; `TST-008`; [Política 12 §8](/sbd-toe/assets/policies/policy-excecoes-cve#8-integração-no-pipeline) | O critério de bloqueio é a severidade (Critical/High), não a explorabilidade conhecida; a checklist de release só tem colunas L2/L3; as exceções «Fix deferred»/«Risk accepted» permitem colocar no mercado com vulnerabilidade explorável conhecida. |
 | CRA-AnxI-P1-2b | Anexo I, parte I, ponto 2, alínea b) | Parcial | `CFG-001`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CNT-003` | Configuração endurecida do ambiente de produção e «fail secure» existem, mas não configuração segura por defeito do produto entregue ao utilizador nem a possibilidade de repor o estado original. |
 | CRA-AnxI-P1-2f | Anexo I, parte I, ponto 2, alínea f) | Parcial | `ENC-009`; `INT-005`; `CIC-007`; `DST-003`; `CFG-007`; `LOG-003` | Integridade de programas (assinatura) e de mensagens coberta em L2/L3; integridade de dados críticos e de configuração só em L3; falta comunicar as corrupções ao utilizador. |
 | CRA-AnxI-P1-2g | Anexo I, parte I, ponto 2, alínea g) | Parcial | `PRI-001` | A minimização cobre só dados pessoais e só a partir de L2; o CRA abrange dados «pessoais ou outros». |
 | CRA-AnxI-P1-2i | Anexo I, parte I, ponto 2, alínea i) | Parcial | `CNT-012`; `ARC-006` | Isolamento e políticas de rede contêm o impacto lateral, mas não há requisito para que as funções do próprio produto não degradem outros dispositivos/redes (p. ex. limitação de tráfego de saída, tempestades de retry). |
 | CRA-AnxI-P1-2l | Anexo I, parte I, ponto 2, alínea l) | Parcial | `LOG-001`; `OPS-001`; `OPS-002` | Registo e monitorização de atividade interna prescritos; falta a opção de exclusão (opt-out) para o utilizador e a orientação para disponibilizar essa informação de segurança ao utilizador. |
 | CRA-AnxI-P1-2m | Anexo I, parte I, ponto 2, alínea m) | Parcial | `PRI-003` | Apagamento/exportação a pedido cobre só dados pessoais de um titular e a partir de L2; falta remoção pelo utilizador de todos os dados e parâmetros, de forma segura e permanente, e transferência segura para outros produtos. |
-| CRA-AnxII-7 | Anexo II, ponto 7 | Lacuna | — | Sem tipo de apoio nem data-limite do período de apoio (depende de CRA-13-8-p2). |
 | CRA-AnxII-8a | Anexo II, ponto 8, alínea a) | Lacuna | — | Não prescreve guia de colocação em funcionamento e utilização segura para o utilizador (hardening guide); o critério «Documentação de segurança atualizada» da Política 20 §4.1 não define conteúdo. |
 | CRA-AnxII-8b | Anexo II, ponto 8, alínea b) | Lacuna | — | Não há instrução ao utilizador sobre como alterações do produto afetam a segurança dos dados. |
 | CRA-AnxII-8d | Anexo II, ponto 8, alínea d) | Lacuna | — | Não há instruções de desativação segura e remoção de dados pelo utilizador (capacidade também em falta, CRA-AnxI-P1-2m). |

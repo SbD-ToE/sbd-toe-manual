@@ -653,14 +653,14 @@ itens:
     pt: Art. 13.º, n.º 8, 2.º parágrafo
     en: Article 13(8), second subparagraph
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: O Manual não define o período de apoio nem os critérios para o determinar (vida útil expectável, expectativas razoáveis, orientações).
-    en: The Manual does not define the support period nor the criteria for determining it (expected lifetime, reasonable expectations, guidance).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -676,14 +676,14 @@ itens:
     pt: Art. 13.º, n.º 8, 3.º parágrafo
     en: Article 13(8), third subparagraph
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Não prescreve o período de apoio mínimo de 5 anos (salvo produto com utilização prevista inferior).
-    en: Does not prescribe the minimum support period of 5 years (except for a product with a shorter intended use).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -697,18 +697,18 @@ itens:
     pt: Art. 13.º, n.º 8, 5.º parágrafo
     en: Article 13(8), fifth subparagraph
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Não há registo da fundamentação do período de apoio para a documentação técnica.
-    en: There is no record of the rationale for the support period for the technical documentation.
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: []
   nota: null
@@ -777,14 +777,14 @@ itens:
     pt: Art. 13.º, n.º 9
     en: Article 13(9)
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Não há dever de manter disponíveis as atualizações de segurança emitidas por ≥10 anos ou pelo resto do período de apoio.
-    en: There is no duty to keep the security updates issued available for ≥10 years or for the remainder of the support period.
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -821,18 +821,18 @@ itens:
     pt: Art. 13.º, n.º 11
     en: Article 13(11)
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Sem regra para arquivos públicos de versões anteriores (aviso de risco e indicação de que não são apoiadas).
-    en: No rule for public archives of previous versions (risk warning and indication that they are not supported).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: []
   nota: null
@@ -1166,14 +1166,14 @@ itens:
     pt: Art. 13.º, n.º 19, 2.º parágrafo
     en: Article 13(19), second subparagraph
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Não há notificação ao utilizador do fim do período de apoio (nem mecanismo técnico para a fazer).
-    en: There is no notification to the user of the end of the support period (nor technical mechanism to do so).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3298,7 +3298,7 @@ itens:
     pt: Anexo I, parte I, ponto 2, alínea a)
     en: Annex I, Part I, point 2(a)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
@@ -3345,9 +3345,7 @@ itens:
     citacao:
       pt: Bloquear build se CVE Critical/High sem exceção aprovada
       en: Block the build if there is a Critical/High CVE without an approved exception
-  falta:
-    pt: O critério de bloqueio é a severidade (Critical/High), não a explorabilidade conhecida; a checklist de release só tem colunas L2/L3; as exceções «Fix deferred»/«Risk accepted» permitem colocar no mercado com vulnerabilidade explorável conhecida.
-    en: The blocking criterion is severity (Critical/High), not known exploitability; the release checklist only has L2/L3 columns; the “Fix deferred”/“Risk accepted” exceptions allow placing on the market with a known exploitable vulnerability.
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -3357,8 +3355,8 @@ itens:
   aplicavel_desde: '2027-12-11'
   substitui: [EXT-CRA-OBL-ciclo-de-vida-seguro]
   nota:
-    pt: 'Ver contradições: tensão com a política de exceções.'
-    en: 'See contradictions: tension with the exceptions policy.'
+    pt: A explorabilidade conhecida bloqueia a colocação no mercado em qualquer nível, sem excepção, pelos pisos CTX-CRA-P01 e P02.
+    en: Known exploitability blocks placing on the market at any level, with no exception, through floors CTX-CRA-P01 and P02.
 - id: CRA-AnxI-P1-2b
   acto_fonte: 32024R2847
   referencia:
@@ -4329,14 +4327,14 @@ itens:
     pt: Anexo II, ponto 7
     en: Annex II, point 7
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Sem tipo de apoio nem data-limite do período de apoio (depende de CRA-13-8-p2).
-    en: No type of support nor end date of the support period (depends on CRA-13-8-p2).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 9316d6519baa39e5ff2e361b12c85582ddddbac86e9de4b1bd5fa2763edf3a2d
+  source_sha256: dd588e99c9f7aca1d91678d3d67d46ebbeee4b479ded0c207a13f061ee1618e3
   source_commit: null
-  target_sha256: 4542ec94a822e66e06eee39bececa6e6a115d6b5b1d040a3e105ab40d948e711
+  target_sha256: d25785c20e4f9b34d4e915d8f2dd9a005de5d490060294b8e681b204c3652aa5
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -709,17 +709,17 @@ Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those add
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 41 |
-| Partial | 33 |
-| Supports evidence | 44 |
-| Gap | 11 |
-| Out of scope | 116 |
+| Covers | 38 |
+| Partial | 22 |
+| Supports evidence | 49 |
+| Gap | 4 |
+| Out of scope | 132 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
 All the obligations of the matrix `_matriz/aiact.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 15 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (85) {#cobre}
+### Covers (87) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
@@ -732,6 +732,8 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | AIA-5-1-b-B | Article 5(1), first subparagraph, point (b-B) | Covers | `THR-008`; `ARC-014` |
 | AIA-5-1-e | Article 5(1), first subparagraph, point (e) | Supports evidence | [Ch. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais); `DEP-011` |
 | AIA-5-1A | Article 5(1a) | Covers | `THR-008`; `ARC-014`; [C5 - Continuous eval suites for agents in development and production](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) |
+| AIA-6-1 | Article 6(1), (1a), (1b) and (1c) | Covers | [When it applies (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
+| AIA-6-2-3 | Article 6(2) and (3) | Covers | [When it applies (CTX-AIA-RE)](/sbd-toe/cross-check-normativo/ai-act/requisitos-aplicaveis#quando-se-aplica) |
 | AIA-6-4 | Article 6(4) | Supports evidence | `CLA-001`; `GOV-009` |
 | AIA-11-1-a | Article 11(1), first subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
 | AIA-11-1-b | Article 11(1), second subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
@@ -758,11 +760,11 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | AIA-14-3 | Article 14(3) | Covers | `ARC-014`; `REQ-AGN-002`; [Policy 38 §2](/sbd-toe/assets/policies/policy-mandates-agentes#2-âmbito) |
 | AIA-14-4 | Article 14(4) | Covers | `ARC-014`; `REQ-AGN-003`; `ARC-015`; [🎯 Scope and framing](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#-âmbito-e-enquadramento) |
 | AIA-15-5 | Article 15(5) | Covers | `THR-008`; `ARC-014`; `DEP-011`; `OPS-014`; [1. The model weights are a critical asset](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference#1-os-pesos-do-modelo-são-activo-crítico) |
-| AIA-17-1-b | Article 17(1), point (b) | Covers | `ARC-004`; `THR-006`; `REQ-005` |
-| AIA-17-1-c | Article 17(1), point (c) | Covers | `DEV-001`; `DEV-004`; `CIC-005` |
-| AIA-17-1-i | Article 17(1), point (i) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
-| AIA-17-1-k | Article 17(1), point (k) | Covers | `GOV-009`; [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
-| AIA-17-1-m | Article 17(1), point (m) | Covers | `GOV-001`; `GOV-002` |
+| AIA-17-1-b | Article 17(1), point (b) | Supports evidence | `ARC-004`; `THR-006`; `REQ-005` |
+| AIA-17-1-c | Article 17(1), point (c) | Supports evidence | `DEV-001`; `DEV-004`; `CIC-005` |
+| AIA-17-1-i | Article 17(1), point (i) | Supports evidence | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| AIA-17-1-k | Article 17(1), point (k) | Supports evidence | `GOV-009`; [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| AIA-17-1-m | Article 17(1), point (m) | Supports evidence | `GOV-001`; `GOV-002` |
 | AIA-17-2 | Article 17(2) | Supports evidence | `CLA-001` |
 | AIA-18-1 | Article 18(1) | Supports evidence | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
 | AIA-18-3 | Article 18(3) | Supports evidence | [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs) |
@@ -811,7 +813,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | AIA-86-1 | Article 86(1) | Covers | `CTX-AIA-RE-R03`; [Ch. 04 US-15](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identificação-e-governação-de-componentes-não-determinísticos); `OPS-011` |
 | AIA-111-4 | Article 111(4) | Covers | `CTX-AIA-RE-R02` |
 
-### Declared gap (44) {#lacuna}
+### Declared gap (26) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -823,35 +825,17 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | AIA-4a-1-d | Article 4a(1), point (d) | Partial | [Policy 18 §10.4](/sbd-toe/assets/policies/policy-gestao-segredos#104-training-opt-out-obrigatório-para-pii); `DEP-014` | There is only a prohibition on use for training/retention by the AI service vendor; there is no general prohibition on transmission of, or access to, these data by third parties. |
 | AIA-4a-1-e | Article 4a(1), point (e) | Partial | `PRI-002` | PRI-002 imposes a deadline and verifiable deletion, but not the legal trigger “once the bias has been corrected”. |
 | AIA-4a-1-f | Article 4a(1), point (f) | Partial | `PRI-004` | The inventory records the purpose; it does not record the reasons for strict necessity nor the impossibility of using other data. |
-| AIA-6-1 | Article 6(1), (1a), (1b) and (1c) | Gap | `CLA-004` | The legal determination belongs to compliance, but the Manual does not take the result (“high-risk AI system”) as an input to classification nor associate with it a level floor and the activation of the AI requirements; CLA-004 only provides for generic reclassification due to “new regulatory contexts”. Applies from 2.8.2028. |
-| AIA-6-2-3 | Article 6(2) and (3) | Gap | `CLA-004`; [🧩 Complementary criteria in automation and decision-support contexts](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos#-critérios-complementares-em-contextos-de-automação-e-apoio-à-decisão) | Idem AIA-6-1 for Annex III (applies from 2.12.2027). Ch. 01 states that AI does not by itself alter criticality — there is no bridge between the legal high-risk status and L2/L3. Root of the level conflicts. |
-| AIA-8-1 | Article 8(1) | Partial | `THR-008`; `ARC-014`; `OPS-011` | Cybersecurity covered (L2+); missing are accuracy, data governance, transparency/instructions and human oversight for non-agentic systems — see Articles 10, 13, 14, 15. |
-| AIA-9-1 | Article 9(1) | Partial | `CLA-001`; `THR-008`; [Ch. 03 US-12](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-12---threat-modeling-estendido-para-componentes-aiml-não-agentic) | Security risk management exists (classification + threat modelling extended to AI); missing is a risk management system for health, safety and fundamental rights, documented and maintained throughout the lifecycle. |
-| AIA-9-2 | Article 9(2) | Partial | `THR-008`; [Ch. 03 US-13](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-13---derivação-de-abusemisuse-cases-para-o-backlog); `OPS-011` | Identification of threats and of abuse (misuse) and drift monitoring exist; missing are the estimation of risks to health/safety/fundamental rights under intended use and the evaluation of risks based on post-market data. |
-| AIA-9-4 | Article 9(4) | Gap | — | No prescription on the combined effects of the requirements of Section 2 (e.g. conflict between accuracy × oversight × transparency). |
-| AIA-9-5 | Article 9(5) | Partial | `CLA-007`; `GOV-004` | Residual risk with compensation, owner and TTL exists; missing are the legal hierarchy (eliminate by design → mitigate → inform the deployer → train) and the criterion for acceptability of residual risk for affected persons. |
-| AIA-9-9 | Article 9(9) | Gap | [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | LINDDUN covers privacy; no prescription on the impact on minors or vulnerable groups. |
-| AIA-10-1 | Article 10(1) | Partial | `DEP-011`; [Policy 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) | Provenance, version and curation of datasets (L2+); missing are quality criteria for training/validation/testing datasets. |
-| AIA-10-2 | Article 10(2) | Partial | `DEP-011`; `ARC-014`; [Policy 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) | Covers origin/collection, provenance and integrity; missing are design choices, assumptions, assessment of availability, examination and mitigation of biases and identification of gaps. |
-| AIA-10-3 | Article 10(3) | Gap | — | Relevance, representativeness, freedom from errors and statistical properties: no prescription (abstention declared in the cross-check). |
-| AIA-10-4 | Article 10(4) | Gap | — | Appropriateness to the geographical/behavioural/functional context: no prescription. |
-| AIA-10-6 | Article 10(6) | Gap | — | Quality of testing datasets in systems without training (e.g. third-party LLM): the eval suites (§C5) test agents for regression/abuse, without representativeness criteria for the test data. |
+| AIA-8-1 | Article 8(1) | Partial | `THR-008`; `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Cybersecurity (THR-008, ARC-014, DEP-011 to DEP-014), human oversight (ARC-014 with floor P08) and transparency (CTX-AIA-RE-R01/R02) covered; accuracy and robustness pending the AISVS/SAIF round; data governance out of scope. |
 | AIA-AnxIV-4 | Annex IV, point 4 | Gap | — | **AppSec Core AISVS/SAIF round.** Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round. |
 | AIA-13-3-b-ii | Article 13(3), point (b)(ii) | Gap | — | **AppSec Core AISVS/SAIF round.** Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round. |
 | AIA-15-1 | Article 15(1) | Partial | `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Cybersecurity covered (THR-008, ARC-014, DEP-011 to DEP-014, OPS-011 to OPS-014, DPL-010/011); accuracy and robustness pending the AppSec Core AISVS/SAIF round. |
 | AIA-15-3 | Article 15(3) | Gap | — | **AppSec Core AISVS/SAIF round.** Declaration of the accuracy levels and parameters pending the AppSec Core AISVS/SAIF round. |
 | AIA-15-4 | Article 15(4) | Partial | [Design considerations](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#considerações-de-design); [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [🧱 Structured outputs — validation of what the model returns](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Fallback, fail-secure and fail-closed output validation exist; missing are redundancy/safety plans for performance and bias mitigation in feedback loops of systems that continue to learn. |
-| AIA-16-a | Article 16, point (a) | Partial | `THR-008`; `ARC-014`; `OPS-011` | Refers to Section 2: see AIA-9 to AIA-15 (cybersecurity yes; data, transparency, oversight and accuracy with gaps). |
+| AIA-16-a | Article 16, point (a) | Partial | `THR-008`; `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Cybersecurity (THR-008, ARC-014, DEP-011 to DEP-014), human oversight (ARC-014 with floor P08) and transparency (CTX-AIA-RE-R01/R02) covered; accuracy and robustness pending the AISVS/SAIF round; data governance out of scope. |
 | AIA-16-c | Article 16, point (c) | Partial | `GOV-001`; `TST-001` | See AIA-17-1-*: operational components of a QMS exist; missing is the formal QMS structure of Article 17. |
 | AIA-16-d | Article 16, point (d) | Partial | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) | See AIA-18-1: no 10-year period for the documentation of high-risk AI systems. |
 | AIA-16-e | Article 16, point (e) | Partial | [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003` | See AIA-19-1. |
 | AIA-16-j | Article 16, point (j) | Partial | `DPL-005`; [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | See AIA-20-1/20-2. |
-| AIA-17-1-a | Article 17(1), point (a) | Partial | `GOV-001`; `CLA-006`; `THR-006` | Governance and reassessment triggers on change exist; missing is a documented strategy for regulatory compliance, including conformity assessment procedures and procedures for the management of modifications. |
-| AIA-17-1-e | Article 17(1), point (e) | Partial | `REQ-001`; `DEV-001` | Own technical specifications (catalogue, guidelines); missing is the management of harmonised standards/common specifications (compliance plane). |
-| AIA-17-1-f | Article 17(1), point (f) | Partial | `DEP-011`; `PRI-004` | Dataset inventory and record of purposes; missing is a data management procedure (acquisition, labelling, storage, filtration, aggregation, retention) for training data. |
-| AIA-17-1-g | Article 17(1), point (g) | Partial | `CLA-001`; `THR-008` | See AIA-9-1. |
-| AIA-17-1-j | Article 17(1), point (j) | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | Communication with authorities via the IRP's regulatory track; missing is communication with notified bodies, other operators, customers and interested parties. |
-| AIA-17-1-l | Article 17(1), point (l) | Partial | `DEP-014`; [Policy 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#7-resposta-a-incidentes-upstream); `GOV-007` | Security of the supply of AI models/vendors covered; missing is resource management (staff, means). |
 | AIA-20-1 | Article 20(1) | Partial | `DPL-005`; [Policy 27 §3](/sbd-toe/assets/policies/policy-rollback#3-tipos-de-rollback-e-requisitos-específicos) | Tested rollback allows restoring/disabling; missing are withdrawal/recall of the system and informing distributors, deployers, the authorised representative and importers. |
 | AIA-20-2 | Article 20(2) | Partial | [Policy 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | Incident investigation exists; missing are joint investigation with the deployer and informing the market surveillance authority of the non-compliance (not only of serious incidents). |
 | AIA-25-4 | Article 25(4), first subparagraph | Partial | [Policy 33 §10.3](/sbd-toe/assets/policies/policy-contratacao-segura#103-audit-rights); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); `DEP-014`; [Ch. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-21) | Specific contractual clauses for AI service vendors (retention, audit, notification, declared compliance); they do not specify the information, capabilities, technical access and assistance needed for the provider to comply with the regulation. |
@@ -862,7 +846,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | AIA-55-1-a | Article 55(1), point (a) | Partial | [Policy 19 §7.1](/sbd-toe/assets/policies/policy-estrategia-testes#71-composição-mínima); [C5 - Continuous eval suites for agents in development and production](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) | Red-team corpus and eval suites (agents A2+/A3+); missing are standardised model evaluation protocols and documented adversarial testing at model level. |
 | AIA-73-6 | Article 73(6) | Partial | [Policy 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); `LOG-009` | Evidence preservation and investigation exist; the prohibition on altering the system in a way that affects the analysis of causes without informing the authorities beforehand is missing (the IRP prioritises containment “when possible”). |
 
-### Out of scope (116) {#fora-de-ambito}
+### Out of scope (132) {#fora-de-ambito}
 
 Obligations that the Manual declares out of scope, with the reason.
 
@@ -879,9 +863,19 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-5-1-h | Article 5(1), first subparagraph, point (h) | Judgement on the admissibility of the purpose (prohibited practice) — legal and product qualification; the Manual declares it out of scope. Generic hook: Ch. 02 US-17 (legal obligations mapped to requirements). |
 | AIA-5-1B | Article 5(1b) | Provision delimiting scope, a definition or a legal qualification; it does not create an engineering duty. |
 | AIA-8-2 | Article 8(2) | Integrated conformity with the Annex I sectoral legislation; product-conformity plane. |
+| AIA-9-1 | Article 9(1) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-2 | Article 9(2) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-4 | Article 9(4) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
+| AIA-9-5 | Article 9(5) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
 | AIA-9-6 | Article 9(6) to (7) | Article 9 (risk management system) is out of scope by the lead's decision. |
 | AIA-9-8 | Article 9(8) | Article 9 (risk management system) is out of scope by the lead's decision. |
+| AIA-9-9 | Article 9(9) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
 | AIA-9-10 | Article 9(10) | Option/presumption (does not create an autonomous duty); compliance-strategy plane. |
+| AIA-10-1 | Article 10(1) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-2 | Article 10(2) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-3 | Article 10(3) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-4 | Article 10(4) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-6 | Article 10(6) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
 | AIA-11-2 | Article 11(2) | Single technical documentation with the Annex I sectoral legislation; documentary organisation of compliance. |
 | AIA-AnxIV-2-d | Annex IV, point 2(d) | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
 | AIA-AnxIV-5 | Annex IV, point 5 | The risk management system of Article 9 is out of scope by the lead's decision. |
@@ -896,8 +890,14 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-16-i | Article 16, point (i) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-k | Article 16, point (k) | Relationship with authorities / penalty regime; legal plane, not engineering. |
 | AIA-16-l | Article 16, point (l) | Accessibility requirements (Directives 2016/2102 and 2019/882): product quality, outside a security engineering manual. |
+| AIA-17-1-a | Article 17(1), point (a) | Article 17 (quality management system) is out of scope by the lead's decision. |
 | AIA-17-1-d | Article 17(1), point (d) | Article 17 (quality management system) is out of scope by the lead's decision. |
+| AIA-17-1-e | Article 17(1), point (e) | Article 17 (quality management system) is out of scope by the lead's decision. |
+| AIA-17-1-f | Article 17(1), point (f) | Article 17 (quality management system) is out of scope by the lead's decision. |
+| AIA-17-1-g | Article 17(1), point (g) | Article 17 (quality management system) is out of scope by the lead's decision. |
 | AIA-17-1-h | Article 17(1), point (h) | Article 17 (quality management system) is out of scope by the lead's decision. The Article 72 plan is in CTX-AIA-RE-R04. |
+| AIA-17-1-j | Article 17(1), point (j) | Article 17 (quality management system) is out of scope by the lead's decision. |
+| AIA-17-1-l | Article 17(1), point (l) | Article 17 (quality management system) is out of scope by the lead's decision. |
 | AIA-17-3-4 | Article 17(3) and (4) | Option/presumption (does not create an autonomous duty); compliance-strategy plane. |
 | AIA-21-1 | Article 21(1) | Relationship with authorities / penalty regime; legal plane, not engineering. |
 | AIA-22-1 | Article 22(1) to (2) | Duty of another economic operator (importer/distributor/authorised representative), not of the engineering process of the provider or the deployer. |

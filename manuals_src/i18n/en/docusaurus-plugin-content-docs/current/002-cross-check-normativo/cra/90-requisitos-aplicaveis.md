@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 7669fba8bf4aec2a7ede4a30803898c2cd3799bf69135076510cdc451e456432
+  source_sha256: 6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72
   source_commit: null
-  target_sha256: 0a0ce4240efd17a176ff5cccee5f92e5f1a568f3f5873c252ca623418aae0a73
+  target_sha256: fccab04259d20ef5a06bba051be7608d6e7b68462772c7e013d5c843b98cd089
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -395,17 +395,17 @@ Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addre
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 39 |
-| Partial | 21 |
+| Covers | 47 |
+| Partial | 20 |
 | Supports evidence | 20 |
-| Gap | 14 |
+| Gap | 7 |
 | Out of scope | 97 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
 All the obligations of the matrix `_matriz/cra.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 46 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (59) {#cobre}
+### Covers (67) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
@@ -418,11 +418,17 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | CRA-13-6-b | Article 13(6), second sentence | Covers | `CTX-CRA-R04` |
 | CRA-13-7 | Article 13(7) | Covers | `DEP-010`; `TST-003`; `GOV-009`; [Policy 10 §8](/sbd-toe/assets/policies/policy-dependencias#8-alertas-de-vulnerabilidades-em-produção) |
 | CRA-13-8-p1 | Article 13(8), first subparagraph | Covers | [Policy 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); `DEP-007`; [Policy 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02`; `CTX-CRA-R03` |
+| CRA-13-8-p2 | Article 13(8), second subparagraph | Covers | `CTX-CRA-R01` |
+| CRA-13-8-p3 | Article 13(8), third subparagraph | Covers | `CTX-CRA-R01` |
+| CRA-13-8-p5 | Article 13(8), fifth subparagraph | Covers | `CTX-CRA-R01` |
 | CRA-13-8-p6 | Article 13(8), sixth subparagraph | Covers | [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Policy 19 §4.2](/sbd-toe/assets/policies/policy-estrategia-testes#42-triagem-formal); `DEP-007`; `GOV-015`; `GOV-015` |
+| CRA-13-9 | Article 13(9) | Covers | `CTX-CRA-R01` |
+| CRA-13-11 | Article 13(11) | Covers | `CTX-CRA-R01` |
 | CRA-13-12-p1 | Article 13(12), first subparagraph | Supports evidence | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Policy 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos) |
 | CRA-13-12-p2 | Article 13(12), second subparagraph | Supports evidence | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); `TST-004` |
 | CRA-13-15 | Article 13(15) | Supports evidence | [Ch. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico); [Policy 20 §8](/sbd-toe/assets/policies/policy-release-seguro#8-registo-histórico-de-releases) |
 | CRA-13-17 | Article 13(17) | Covers | `GOV-015` |
+| CRA-13-19-p2 | Article 13(19), second subparagraph | Covers | `CTX-CRA-R01` |
 | CRA-13-21 | Article 13(21) | Supports evidence | `DST-007`; `DPL-005` |
 | CRA-14-1 | Article 14(1) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); [Ch. 05 US-11](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados) |
 | CRA-14-3 | Article 14(3) and (5) | Covers | `CTX-CRA-R05`; [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
@@ -434,6 +440,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | CRA-31-2 | Article 31(2) | Supports evidence | `THR-006`; `ARC-010` |
 | CRA-69-3 | Article 69(3) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | CRA-AnxI-P1-1 | Annex I, Part I, point 1 | Covers | `CLA-003`; `CLA-001`; `THR-001` |
+| CRA-AnxI-P1-2a | Annex I, Part I, point 2(a) | Covers | `DEP-002`; [Policy 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `TST-005`; `TST-008`; [Policy 12 §8](/sbd-toe/assets/policies/policy-excecoes-cve#8-integração-no-pipeline) |
 | CRA-AnxI-P1-2c | Annex I, Part I, point 2(c) | Covers | `CTX-CRA-R02` |
 | CRA-AnxI-P1-2d | Annex I, Part I, point 2(d) | Covers | `ACC-001`; `ACC-003`; `AUT-001`; `AUT-010` |
 | CRA-AnxI-P1-2e | Annex I, Part I, point 2(e) | Covers | `ENC-001`; `ENC-002`; `ENC-003` |
@@ -452,6 +459,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | CRA-AnxII-3 | Annex II, point 3 | Supports evidence | [Ch. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
 | CRA-AnxII-4 | Annex II, point 4 | Supports evidence | [Policy 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); `ARC-001` |
 | CRA-AnxII-5 | Annex II, point 5 | Supports evidence | [Ch. 03 US-13](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-13---derivação-de-abusemisuse-cases-para-o-backlog); `THR-001` |
+| CRA-AnxII-7 | Annex II, point 7 | Covers | `CTX-CRA-R01` |
 | CRA-AnxII-8c | Annex II, point 8(c) | Covers | `CTX-CRA-R02` |
 | CRA-AnxII-8e | Annex II, point 8(e) | Covers | `CTX-CRA-R02` |
 | CRA-AnxII-8f | Annex II, point 8(f) | Supports evidence | `DST-004`; `DEP-001` |
@@ -471,7 +479,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | CRA-AnxVIII-PIV-3.2 | Annex VIII, Part IV (module H), point 3.2 | Covers | `GOV-001`; `TST-001`; `TRN-001`; `GOV-011`; `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02` |
 | CRA-AnxVIII-PIV-3.4a3.5 | Annex VIII, Part IV (module H), points 3.4 and 3.5 | Supports evidence | `GOV-010` |
 
-### Declared gap (35) {#lacuna}
+### Declared gap (27) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -483,16 +491,10 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | CRA-13-1 | Article 13(1) | Partial | `REQ-001`; `CLA-003`; [Policy 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `CTX-CRA-R02` | Design/development in conformity with the whole of Part I of Annex I: missing are reset to the original state, secure removal and transfer of all data, minimisation of non-personal data and notification of corruptions/access to the user at L1. The product update mechanism is in CTX-CRA-R02. |
 | CRA-13-3 | Article 13(3) | Partial | `THR-006`; [Policy 08 §4.2](/sbd-toe/assets/policies/policy-threat-modeling#42-cadência-periódica) | The Manual's risk assessment does not indicate, requirement by requirement, whether and how the points of Annex I, Part I, point (2) apply, nor how point (1) and Part II apply; it is not structured by intended purpose, reasonably foreseeable use, operational environment and period of use; the update is not anchored to the support period. |
 | CRA-13-4 | Article 13(4) | Partial | [Policy 07 §9](/sbd-toe/assets/policies/policy-requisitos-seguranca#9-gestão-de-exceções-a-requisitos); `GOV-009` | There is formal justification of non-implemented requirements (exceptions), but not the integration of the risk assessment into the technical documentation (Annex VII) nor the justification per CRA essential requirement deemed not applicable. |
-| CRA-13-8-p2 | Article 13(8), second subparagraph | Gap | — | The Manual does not define the support period nor the criteria for determining it (expected lifetime, reasonable expectations, guidance). |
-| CRA-13-8-p3 | Article 13(8), third subparagraph | Gap | — | Does not prescribe the minimum support period of 5 years (except for a product with a shorter intended use). |
-| CRA-13-8-p5 | Article 13(8), fifth subparagraph | Gap | — | There is no record of the rationale for the support period for the technical documentation. |
-| CRA-13-9 | Article 13(9) | Gap | — | There is no duty to keep the security updates issued available for ≥10 years or for the remainder of the support period. |
 | CRA-13-10 | Article 13(10) | Gap | — | No supported-versions policy: does not provide for the option of fixing only the latest version nor the condition of free access to it. |
-| CRA-13-11 | Article 13(11) | Gap | — | No rule for public archives of previous versions (risk warning and indication that they are not supported). |
 | CRA-13-13 | Article 13(13) | Partial | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Policy 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Policy 08 §9.3](/sbd-toe/assets/policies/policy-threat-modeling#93-retenção) | The 10-year rule covers the SBOM and the evidence package; other elements of the technical documentation (historical versions of the threat model: 3 years; approval records: 1–3 years) are not covered; the EU declaration is out of scope. |
 | CRA-13-14 | Article 13(14) | Partial | `ARC-009`; `CLA-006`; `REQ-005`; `THR-006` | Design/process changes trigger review, but tracking changes to the harmonised standards/common specifications that serve as reference for the declaration of conformity is missing. |
 | CRA-13-18 | Article 13(18) | Partial | [Policy 20 §4.1](/sbd-toe/assets/policies/policy-release-seguro#41-critérios-obrigatórios) | Only the generic criterion “Security documentation updated” exists (recommended at L2, mandatory at L3); prescribing the content of Annex II, the recipient (user), the language and retention for 10 years/support period is missing. |
-| CRA-13-19-p2 | Article 13(19), second subparagraph | Gap | — | There is no notification to the user of the end of the support period (nor technical mechanism to do so). |
 | CRA-14-2-a | Article 14(2), point (a) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | The 24 h deadline and the recording of the moment of awareness are prescribed; the minimum content is missing (indication of the Member States where the product has been made available). |
 | CRA-14-2-b | Article 14(2), point (b) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | 72 h deadline prescribed; the minimum content is missing (general information about the product, nature of the exploit and of the vulnerability, corrective measures taken and to be taken by users, sensitivity of the information). |
 | CRA-14-2-c | Article 14(2), point (c) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Deadline of 14 days after the corrective measure prescribed (and the counting rule is correct in the note to Policy 32 §6); the content of the final report is missing (severity and impact, malicious actor, details of the update). |
@@ -500,14 +502,12 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | CRA-14-4-b | Article 14(4), point (b) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | 72 h deadline prescribed; the content is missing (nature, initial assessment, measures, sensitivity). |
 | CRA-14-6 | Article 14(6) | Gap | — | The CRA row of Policy 32 §6 does not provide for the intermediate report at the request of the CSIRT (it exists only in the NIS2 row). |
 | CRA-14-7 | Article 14(7) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Names the CSIRT designated as coordinator and the single reporting platform, but not the determination rule (Member State of the main establishment and fallback rule for manufacturers outside the EU). |
-| CRA-AnxI-P1-2a | Annex I, Part I, point 2(a) | Partial | `DEP-002`; [Policy 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `TST-005`; `TST-008`; [Policy 12 §8](/sbd-toe/assets/policies/policy-excecoes-cve#8-integração-no-pipeline) | The blocking criterion is severity (Critical/High), not known exploitability; the release checklist only has L2/L3 columns; the “Fix deferred”/“Risk accepted” exceptions allow placing on the market with a known exploitable vulnerability. |
 | CRA-AnxI-P1-2b | Annex I, Part I, point 2(b) | Partial | `CFG-001`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CNT-003` | Hardened configuration of the production environment and “fail secure” exist, but not a secure by default configuration of the product delivered to the user nor the possibility of resetting to the original state. |
 | CRA-AnxI-P1-2f | Annex I, Part I, point 2(f) | Partial | `ENC-009`; `INT-005`; `CIC-007`; `DST-003`; `CFG-007`; `LOG-003` | Integrity of software (signing) and of messages covered at L2/L3; integrity of critical data and of configuration only at L3; reporting corruptions to the user is missing. |
 | CRA-AnxI-P1-2g | Annex I, Part I, point 2(g) | Partial | `PRI-001` | Minimisation covers only personal data and only from L2; the CRA covers data “personal or other”. |
 | CRA-AnxI-P1-2i | Annex I, Part I, point 2(i) | Partial | `CNT-012`; `ARC-006` | Isolation and network policies contain lateral impact, but there is no requirement that the product's own functions do not degrade other devices/networks (e.g. limiting outbound traffic, retry storms). |
 | CRA-AnxI-P1-2l | Annex I, Part I, point 2(l) | Partial | `LOG-001`; `OPS-001`; `OPS-002` | Logging and monitoring of internal activity prescribed; the opt-out option for the user and the guidance to make that security information available to the user are missing. |
 | CRA-AnxI-P1-2m | Annex I, Part I, point 2(m) | Partial | `PRI-003` | Erasure/export on request covers only personal data of a data subject and from L2; removal by the user of all data and settings, securely and permanently, and secure transfer to other products are missing. |
-| CRA-AnxII-7 | Annex II, point 7 | Gap | — | No type of support nor end date of the support period (depends on CRA-13-8-p2). |
 | CRA-AnxII-8a | Annex II, point 8(a) | Gap | — | Does not prescribe a guide for commissioning and secure use for the user (hardening guide); the criterion “Security documentation updated” of Policy 20 §4.1 does not define content. |
 | CRA-AnxII-8b | Annex II, point 8(b) | Gap | — | There is no instruction to the user on how changes to the product affect the security of data. |
 | CRA-AnxII-8d | Annex II, point 8(d) | Gap | — | There are no instructions for secure decommissioning and removal of data by the user (capability also missing, CRA-AnxI-P1-2m). |

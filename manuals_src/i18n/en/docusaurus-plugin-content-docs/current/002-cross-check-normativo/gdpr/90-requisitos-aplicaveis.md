@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: 3b575d32b7fab4a48f014a4ca03e5d13744ed322c4d9a67f99b0fd97c8d9d47f
+  source_sha256: 0ce915002c2ed120ead28b0e9df442f3a9443454530affc8ffb80141aeeb7746
   source_commit: null
-  target_sha256: b75f2f842243d22c3b809aa148ce4493bf1b495db6d20fc9fa5501f37ee3e54a
+  target_sha256: 369715e402cd784fe2b7e3d7226e541de65a7d6f565db57a0ed1fe33dfa1ca38
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -463,7 +463,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | RGPD-15-1 | Article 15(1) | Partial | `PRI-003`; `PRI-004` | The copy of the data and the inventory of purposes and recipients are prescribed (PRI-003, PRI-004). The informational content of the reply (purposes, recipients, period, source, rights) belongs to the formal reply, to be declared out of scope. |
 | RGPD-20-2 | Article 20(2) | Partial | `PRI-003` | Export in a machine-readable format is prescribed (PRI-003); direct transmission between controllers, where technically feasible, is not. |
 | RGPD-24-2 | Article 24(2) | Partial | [Policy 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Policy 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | There is no data protection policy among the 39 policies; there is only the section on personal data in AI prompts (Policy 18 §10) and the prohibitions in logs (Policy 29 §5). |
-| RGPD-28-3 | Article 28(3) | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | The Article 28(3) contract is prescribed only for AI service vendors; for other processors Policy 33 §4 requires only security clauses. |
+| RGPD-28-3 | Article 28(3) | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | Floor CTX-RGPD-P01 makes the Article 28(3) contract mandatory with any processor; in the master policy, the full contract is prescribed only in the AI-vendor slice (Policy 33 §10.7), and for the others Policy 33 §4 requires only security clauses. |
 | RGPD-34-2 | Article 34(2) | Partial | [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Requires honest communication, but not the minimum content (nature of the breach in clear language, DPO contact, consequences, measures). |
 | RGPD-35-2 | Article 35(2) | Partial | [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Key Responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Review by the DPO only at L3 and of the LINDDUN analysis, not of the DPIA. |
 | RGPD-38-1 | Article 38(1) | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | DPO involved in breaches (≤ 1 h) and in the L3 LINDDUN review; not involved in design, DPIA, choice of processors or exceptions. |

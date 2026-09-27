@@ -671,17 +671,17 @@ Contagem das obrigações da matriz `_matriz/nis2.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 95 |
-| Parcial | 64 |
+| Cobre | 98 |
+| Parcial | 62 |
 | Apoia evidência | 12 |
-| Lacuna | 11 |
+| Lacuna | 10 |
 | Fora de âmbito | 38 |
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
 Todas as obrigações da matriz `_matriz/nis2.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 8 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
-### Cobre (107) {#cobre}
+### Cobre (110) {#cobre}
 
 Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
 
@@ -695,9 +695,12 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | NIS2-21-2-h | Art. 21.º, n.º 2, al. h) | Cobre | `ENC-001`; `ENC-003`; [Política 18 §4](/sbd-toe/assets/policies/policy-gestao-segredos#4-armazenamento-centralizado); [Política 18 §6.1](/sbd-toe/assets/policies/policy-gestao-segredos#61-ttl-por-tipo-de-segredo) |
 | NIS2-21-4 | Art. 21.º, n.º 4 | Cobre | `GOV-010`; [Política 34 §5.2](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional#52-processo-de-validação); `GOV-004` |
 | NIS2-23-1-1 | Art. 23.º, n.º 1, 1.º par. (1.º per.) | Cobre | [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| NIS2-23-1-3 | Art. 23.º, n.º 1, 1.º par. (3.º per.) | Cobre | [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-3 | Art. 23.º, n.º 3 | Cobre | `CTX-NIS2-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| NIS2-23-4-a | Art. 23.º, n.º 4, al. a) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-4-b | Art. 23.º, n.º 4, al. b) | Cobre | [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | NIS2-23-4-c | Art. 23.º, n.º 4, al. c) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| NIS2-23-4-d | Art. 23.º, n.º 4, al. d) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-4-e | Art. 23.º, n.º 4, al. e) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | NIS2-23-4-2par | Art. 23.º, n.º 4, 2.º par. | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | NIS2-32-2-eg | Art. 32.º, n.º 2, als. e)–g); art. 33.º, n.º 2, als. d)–f) | Apoia evidência | [Política 34 §7](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional#7-evidência-auditável); `GOV-009`; [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
@@ -795,7 +798,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | NIS2-IR2690-11.7.2 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.7.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Cobre | `AUT-001`; `AUT-008`; `CLA-003` |
 | NIS2-IR2690-12.1.3 | Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555) | Cobre | `CLA-005`; `CLA-006` |
 
-### Lacuna declarada (75) {#lacuna}
+### Lacuna declarada (72) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -804,17 +807,14 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | NIS2-20-1 | Art. 20.º, n.º 1 | Parcial | `GOV-001`; [Cap. 14 US-22](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-22); `GOV-011`; [Política 35 §5](/sbd-toe/assets/policies/policy-kpis-governacao#5-cadência-de-recolha-e-reporte) | O Manual exige aprovação «pela direcção» do modelo de governação e das políticas e reporte de KPIs à gestão, mas não atribui ao órgão de direção a aprovação das medidas do art. 21.º como um todo, a supervisão da sua aplicação nem a responsabilização pessoal; o cross-check reconhece que «não fixa ex ante a forma jurídica exata da cadeia de aprovação». |
 | NIS2-20-2 | Art. 20.º, n.º 2 | Parcial | [Política 37 §4.1](/sbd-toe/assets/policies/policy-formacao-seguranca#41-matriz-de-trilhos-por-perfil-e-nível-de-risco); `TRN-001` | Não há formação obrigatória dos membros do órgão de direção em gestão de riscos de cibersegurança: a Política 37 abrange «colaboradores com funções técnicas» e para «Gestão / Tech Lead» prevê apenas «Awareness executivo» em L1; a formação regular dos restantes trabalhadores (não técnicos) não é prescrita. |
 | NIS2-21-1 | Art. 21.º, n.º 1 | Parcial | `CLA-003`; [Política 02 §3](/sbd-toe/assets/policies/policy-classificacao-risco#3-modelo-de-classificação---eixos-edi); `REQ-001` | A proporcionalidade do Manual é por aplicação (L1–L3) e cobre o ciclo de vida do software; não cobre o conjunto dos sistemas de rede e informação da entidade (rede corporativa, postos de trabalho, instalações, continuidade). |
-| NIS2-21-2 | Art. 21.º, n.º 2, proémio | Parcial | `CLA-003`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura) | Abordagem all-hazards incompleta: ambiente físico (fora de âmbito), continuidade/cópias de segurança/DR (lacuna) e ciber-higiene geral (parcial) não são tratados. |
+| NIS2-21-2 | Art. 21.º, n.º 2, proémio | Parcial | `CLA-003`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `OPS-016`; `OPS-017` | Abordagem a todos os riscos: as cópias e a recuperação da aplicação estão cobertas (OPS-016, OPS-017); o ambiente físico e a continuidade da entidade ficam fora de âmbito; a ciber-higiene geral é parcial. |
 | NIS2-21-2-c | Art. 21.º, n.º 2, al. c) | Parcial | `OPS-016`; `OPS-017` | A continuidade das actividades e a gestão de crises da entidade ficam fora do âmbito do Manual; a recuperação da aplicação está prescrita (OPS-016, OPS-017). |
 | NIS2-21-2-g | Art. 21.º, n.º 2, al. g) | Parcial | [Política 37 §2](/sbd-toe/assets/policies/policy-formacao-seguranca#2-âmbito-e-obrigatoriedade); `TRN-002`; `TRN-007` | Formação de segurança prescrita para funções técnicas e terceiros com acesso; faltam práticas de ciber-higiene e sensibilização para todo o pessoal (não técnico) e para os órgãos de direção. |
 | NIS2-21-2-i | Art. 21.º, n.º 2, al. i) | Parcial | `ACC-001`; `ACC-002`; `CLA-008`; `TRN-002` | Controlo de acessos coberto; gestão de ativos limitada ao inventário de aplicações e componentes (sem inventário de todos os ativos nem política de tratamento de ativos); segurança dos RH fora de âmbito salvo onboarding/offboarding. |
 | NIS2-21-2-j | Art. 21.º, n.º 2, al. j) | Parcial | `AUT-001`; `AUT-008`; [🛡️ Requisitos de segurança por ambiente](/sbd-toe/sbd-manual/deploy-seguro/addon/08-segregacao-e-validacao-operacional#️-requisitos-de-segurança-por-ambiente); `GOV-016` | Comunicações seguras de voz, vídeo e texto e sistemas seguros de comunicações de emergência não são tratados (segurança da entidade, fora do âmbito do Manual); a MFA está prescrita para a aplicação (AUT-001) e para o acesso privilegiado aos sistemas de suporte (GOV-016). |
 | NIS2-21-3 | Art. 21.º, n.º 3 | Parcial | [Política 33 §3.1](/sbd-toe/assets/policies/policy-contratacao-segura#31-critérios-de-avaliação); [Política 33 §3.1](/sbd-toe/assets/policies/policy-contratacao-segura#31-critérios-de-avaliação); `DEP-006`; `GOV-007` | A due diligence avalia o processo de gestão de vulnerabilidades e relatórios de testes do fornecedor (L2/L3), mas não a qualidade global dos produtos nem os procedimentos de desenvolvimento seguro como critério explícito, e ignora as avaliações coordenadas de riscos da UE (art. 22.º). |
 | NIS2-23-1-2 | Art. 23.º, n.º 1, 1.º par. (2.º per.) | Parcial | [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Há comunicação genérica «a utilizadores afectados quando aplicável», mas a linha NIS2 da Política 32 §6 não inclui a notificação dos destinatários dos serviços (ao contrário das linhas DORA e CRA), sem prazo nem critério «suscetível de afetar negativamente a prestação». |
-| NIS2-23-1-3 | Art. 23.º, n.º 1, 1.º par. (3.º per.) | Lacuna | — | O Manual não pede a recolha nem a comunicação de informação sobre impacto transfronteiriço do incidente (Estados-Membros afetados). |
 | NIS2-23-2 | Art. 23.º, n.º 2 | Lacuna | — | Não há dever de comunicar aos destinatários do serviço ciberameaças significativas nem as medidas que podem adotar; a Política 32 só trata incidentes. |
-| NIS2-23-4-a | Art. 23.º, n.º 4, al. a) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | O prazo de 24 h está prescrito; o conteúdo (suspeita de ato ilícito ou malicioso, possível impacto transfronteiriço) não. |
-| NIS2-23-4-d | Art. 23.º, n.º 4, al. d) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) | Prazo e análise de causa raiz/acções correctivas existem; o conteúdo exigido do relatório final (tipo de ameaça, medidas de atenuação aplicadas e em curso, impacto transfronteiriço) não está parametrizado — o cross-check assume-o como lacuna deliberada (templates nacionais). |
 | NIS2-23-7 | Art. 23.º, n.º 7 | Parcial | [Política 32 §9](/sbd-toe/assets/policies/policy-irp#9-responsabilidades); [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Existe controlo de quem autoriza comunicações públicas, mas não o procedimento de informar o público quando a CSIRT/autoridade o exija. |
 | NIS2-24-1 | Art. 24.º, n.º 1 | Lacuna | — | Os critérios de aquisição e de due diligence (Política 33 §3.1) não contemplam a exigência de produtos, serviços ou processos TIC certificados ao abrigo de sistemas europeus de certificação (CSA) quando o Estado-Membro o imponha. |
 | NIS2-IR2690-art2 | Reg. Exec. (UE) 2024/2690, art. 2.º | Parcial | `GOV-004`; [Política 05 §3](/sbd-toe/assets/policies/policy-gestao-excecoes#3-princípios-fundamentais); `CLA-003` | A não-aplicação de controlos passa por exceção formal documentada, mas as isenções por nível (requisitos marcados «-» ou «Recomendado» em L1/L2) não são exceções e não geram a fundamentação documentada, requisito a requisito, que o art. 2.º, n.º 2, exige quando se considere não aplicável um requisito modulado. |
@@ -866,7 +866,7 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | NIS2-IR2690-11.1.1 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Parcial | `ACC-001`; `ACC-005` | Controlo de acesso lógico prescrito; o acesso físico está fora de âmbito. |
 | NIS2-IR2690-11.1.3 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Parcial | [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); `ACC-007` | Revisão do modelo de acessos após incidente significativo prescrita; a revisão periódica do modelo de permissões (ACC-007) continua só em L2/L3. |
 | NIS2-IR2690-11.4.2 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Lacuna | — | Não se exige uso exclusivo dos sistemas de administração, separação lógica do software aplicacional nem proteção dedicada do seu acesso. |
-| NIS2-IR2690-11.6.3 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Parcial | `AUT-007`; `AUT-001` | Federação e MFA só L2/L3; métodos de ponta (sem password, FIDO2) não referidos. |
+| NIS2-IR2690-11.6.3 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Parcial | `AUT-007`; `AUT-001`; `AUT-012`; `AUT-013` | Os métodos sem password e FIDO2 estão prescritos (AUT-001, AUT-012); a federação e o MFA continuam só em L2/L3 no núcleo. |
 | NIS2-IR2690-11.6.4 | Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555) | Lacuna | — | Não há revisão periódica dos procedimentos e tecnologias de autenticação. |
 | NIS2-IR2690-12.1.1 | Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555) | Parcial | `CLA-001`; [Política 02 §3](/sbd-toe/assets/policies/policy-classificacao-risco#3-modelo-de-classificação---eixos-edi) | Classificação de aplicações por criticidade; não há níveis de classificação de todos os ativos, incluindo informação. |
 | NIS2-IR2690-12.1.2 | Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555) | Parcial | `CLA-001` | Eixos exposição/dados/impacto aproximam C/I/D, mas não há atribuição de nível a cada ativo com base em confidencialidade, integridade, autenticidade e disponibilidade alinhada com a continuidade. |

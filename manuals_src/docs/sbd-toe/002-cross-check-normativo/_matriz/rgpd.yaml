@@ -1803,8 +1803,8 @@ itens:
       pt: incluem cláusulas de segurança proporcionais ao nível de risco
       en: include security clauses proportional to the risk level
   falta:
-    pt: Contrato do art. 28.º, n.º 3, só é prescrito para fornecedores de serviços de IA; para os demais subcontratantes a Política 33 §4 exige apenas cláusulas de segurança.
-    en: The Article 28(3) contract is prescribed only for AI service vendors; for other processors Policy 33 §4 requires only security clauses.
+    pt: O piso CTX-RGPD-P01 torna o contrato do art. 28.º, n.º 3, obrigatório com qualquer subcontratante; na política master, o contrato completo só está prescrito na fatia dos fornecedores de IA (Política 33 §10.7), e para os demais a Política 33 §4 exige apenas cláusulas de segurança.
+    en: Floor CTX-RGPD-P01 makes the Article 28(3) contract mandatory with any processor; in the master policy, the full contract is prescribed only in the AI-vendor slice (Policy 33 §10.7), and for the others Policy 33 §4 requires only security clauses.
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:

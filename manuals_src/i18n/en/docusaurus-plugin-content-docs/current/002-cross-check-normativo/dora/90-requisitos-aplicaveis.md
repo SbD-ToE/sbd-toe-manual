@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: 2333270cd1b3d5ad4cd6ca2f8227bc022f2f8b5fe792c87c6a5e9047bfb6e006
+  source_sha256: 178509d0555a84ecdf93ec9c0e78ae3caa0fcf10e7098cf1fa5908569f647ae8
   source_commit: null
-  target_sha256: 9877fa4deb1fb013d05f2769f242f35990c05a76ad69f21d791f7d1d3c69b3ef
+  target_sha256: 7d087c35e31333fa34ef36a715a5604e2e18e16e421b4058fd61884ab922096d
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -684,17 +684,17 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 151 |
-| Partial | 115 |
+| Covers | 166 |
+| Partial | 109 |
 | Supports evidence | 123 |
 | Gap | 3 |
-| Out of scope | 234 |
+| Out of scope | 225 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
 All the obligations of the matrix `_matriz/dora.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 13 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (274) {#cobre}
+### Covers (289) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
@@ -723,6 +723,8 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | DORA-8-3 | Article 8(3) | Covers | [Policy 04 §4.1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#41-triggers-que-obrigam-a-revisão-imediata); `CLA-006`; `ARC-009`; `THR-006` |
 | DORA-9-1 | Article 9(1) | Covers | [6️⃣ Essential Logging and Monitoring (Ch. 12)](/sbd-toe/sbd-manual/fundamentos/baseline#6️⃣-registo-e-monitorização-essencial-cap-12); `OPS-001`; `OPS-005` |
 | DORA-9-3-a | Article 9(3), point (a) | Covers | `ENC-001`; `INT-003`; `INT-004` |
+| DORA-9-3-b | Article 9(3), point (b) | Covers | `ACC-006`; `ENC-009`; `INT-009`; `OPS-016` |
+| DORA-9-3-c | Article 9(3), point (c) | Covers | `ENC-009`; `ACC-006`; `OPS-015`; `OPS-016`; `OPS-017`; `CTX-DORA-R01` |
 | DORA-9-4-a | Article 9(4), point (a) | Supports evidence | `GOV-001` |
 | DORA-9-4-d | Article 9(4), point (d) | Covers | `ENC-007`; `AUT-001`; [🛡️ Security requirements per environment](/sbd-toe/sbd-manual/deploy-seguro/addon/08-segregacao-e-validacao-operacional#️-requisitos-de-segurança-por-ambiente); `CFG-006`; `ENC-007` |
 | DORA-10-1-p2 | Article 10(1), second subparagraph | Covers | `OPS-007`; [Policy 30 §7](/sbd-toe/assets/policies/policy-monitorizacao-seguranca#7-validação-e-tuning-de-regras-de-detecção) |
@@ -955,7 +957,20 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | DORA-RTS1774-38-1 | Article 38(1) | Supports evidence | `REQ-001` |
 | DORA-RTS1774-39-2-d | Article 39(2), points (d) to (f) | Covers | [🔁 Practical mapping between DRP/BIA and security risk](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia#-mapeamento-prático-entre-drpbia-e-risco-de-segurança); [Policy 27 §6](/sbd-toe/assets/policies/policy-rollback#6-rto-de-rollback-por-nível); [Policy 32 §3](/sbd-toe/assets/policies/policy-irp#3-critérios-de-activação-do-irp); `OPS-017`; `OPS-017` |
 | DORA-RTS1774-39-2-g | Article 39(2), point (g) | Covers | `OPS-016` |
+| DORA-RTS1772-1-1 | Article 1(1) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-1-2 | Article 1(2) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-1-3 | Article 1(3) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | DORA-RTS1772-1-4 | Article 1(4) | Supports evidence | `LOG-010` |
+| DORA-RTS1772-1-5 | Article 1(5); Article 9(1), second subparagraph | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-2-1 | Article 2(1) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-2-2 | Article 2(2) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-3-1 | Article 3(1) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-3-2 | Article 3(2) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-4 | Article 4 | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-5 | Article 5 | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-6 | Article 6 | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-7-1 | Article 7(1) and (2) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-7-3 | Article 7(3) and (4) | Covers | `CTX-DORA-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | DORA-RTS1772-8-1 | Article 8(1); Article 9 | Supports evidence | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Incidents, Classification and Reporting (DORA Articles 17–23)](/sbd-toe/cross-check-normativo/dora/intro#incidentes-classificação-e-reporte-artigos-1723-dora) |
 | DORA-RTS1772-8-2 | Article 8(2), first subparagraph | Covers | `CTX-DORA-R02`; [Policy 32 §4.7](/sbd-toe/assets/policies/policy-irp#47-análise-de-recorrência); [Incidents, Classification and Reporting (DORA Articles 17–23)](/sbd-toe/cross-check-normativo/dora/intro#incidentes-classificação-e-reporte-artigos-1723-dora) |
 | DORA-RTS1772-8-2-p2 | Article 8(2), second subparagraph | Covers | `CTX-DORA-R02` |
@@ -975,7 +990,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | DORA-RTS1190-10-1 | Article 10(1) | Supports evidence | [6) Readiness checklist (binary)](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness#6-checklist-de-readiness-binário); [Ch. 12 US-16](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-16---cobertura-attck-e-priorização-epsskev) |
 | DORA-RTS1190-13-2 | Article 13(2) | Supports evidence | `TST-003`; [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) |
 
-### Declared gap (118) {#lacuna}
+### Declared gap (112) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -995,8 +1010,6 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | DORA-8-6 | Article 8(6) | Partial | `CLA-008`; [Policy 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | Inventories of functions and of third-party dependencies updated upon every major change. |
 | DORA-8-7 | Article 8(7) | Partial | [🛠️ Proposed approach](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta); [Policy 04 §4.1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#41-triggers-que-obrigam-a-revisão-imediata) | Specific annual assessment of legacy systems and assessment before/after each connection. |
 | DORA-9-2 | Article 9(2) | Partial | `ENC-001`; `ENC-002`; `ENC-009` | Data in use; availability/continuity of systems. |
-| DORA-9-3-b | Article 9(3), point (b) | Partial | `ACC-006`; `ENC-009`; `INT-009` | Safeguarding against data loss (backups). |
-| DORA-9-3-c | Article 9(3), point (c) | Partial | `ENC-009`; `ACC-006`; `OPS-015` | Prevention of unavailability and data loss (redundancy, backups). |
 | DORA-9-3-d | Article 9(3), point (d) | Partial | `CFG-004`; `IAC-007`; [Policy 22 §5](/sbd-toe/assets/policies/policy-aprovacao-plan-iac#5-separação-de-funções-sod) | Controls against human error in the administration of production data (outside IaC/deploy). |
 | DORA-9-4-b | Article 9(4), point (b), and second subparagraph | Partial | `ARC-006`; `ARC-011`; `CNT-012`; [Policy 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação) | Configuration of network interconnection for instant severance/segmentation at entity level. |
 | DORA-9-4-c | Article 9(4), point (c) | Partial | `ACC-001`; `ACC-002`; `ACC-010` | Physical access. |
@@ -1095,12 +1108,8 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | DORA-RTS1774-39-1 | Article 39(1) | Partial | [Policy 32 §5](/sbd-toe/assets/policies/policy-irp#5-playbooks-de-resposta) | Continuity plans (the Manual has incident playbooks, incl. ransomware). |
 | DORA-RTS1774-40-1 | Article 40(1) and (2) | Partial | [Policy 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); [Policy 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback); `OPS-016` | Tests of the entity's continuity plans with scenarios (outside the scope of the Manual); testing of backup and restoration is prescribed (OPS-016). |
 | DORA-RTS1774-40-3 | Article 40(3) | Partial | [Policy 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp) | Reporting of deficiencies to the management body. |
-| DORA-RTS1772-3-1 | Article 3(1) | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); `LOG-002` | Measurement of duration from occurrence (using logs when prior to detection). |
-| DORA-RTS1772-3-2 | Article 3(2) | Partial | `OPS-015`; `OPS-006` | Measurement of downtime until restoration of the previous service level. |
-| DORA-RTS1772-5 | Article 5 | Partial | [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) | Structured assessment of the impact on availability, authenticity, integrity and confidentiality. |
-| DORA-RTS1772-6 | Article 6 | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); `CLA-008` | Criterion of services affected that support FCI or authorised financial services. |
 
-### Out of scope (234) {#fora-de-ambito}
+### Out of scope (225) {#fora-de-ambito}
 
 Obligations that the Manual declares out of scope, with the reason.
 
@@ -1258,15 +1267,6 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS1774-39-2-h | Article 39(2), points (h) to (j) | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. |
 | DORA-RTS1774-41-1 | Article 41(1) | Reporting to/relationship with the competent authority — legal-regulatory level, not a software engineering prescription. |
 | DORA-RTS1774-41-2 | Article 41(2) | Reporting to/relationship with the competent authority — legal-regulatory level, not a software engineering prescription. |
-| DORA-RTS1772-1-1 | Article 1(1) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-1-2 | Article 1(2) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-1-3 | Article 1(3) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-1-5 | Article 1(5); Article 9(1), second subparagraph | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-2-1 | Article 2(1) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-2-2 | Article 2(2) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-4 | Article 4 | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-7-1 | Article 7(1) and (2) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
-| DORA-RTS1772-7-3 | Article 7(3) and (4) | Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale). |
 | DORA-RTS301-1 | Article 1 | Reporting to/relationship with the competent authority — legal-regulatory plane, not a software engineering prescription. Content/templates of notifications. |
 | DORA-RTS301-2 | Article 2 | Reporting to/relationship with the competent authority — legal-regulatory plane, not a software engineering prescription. Content/templates of notifications. |
 | DORA-RTS301-3 | Article 3 | Reporting to/relationship with the competent authority — legal-regulatory plane, not a software engineering prescription. Content/templates of notifications. |

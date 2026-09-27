@@ -28,7 +28,7 @@ translation:
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
   source_sha256: dd588e99c9f7aca1d91678d3d67d46ebbeee4b479ded0c207a13f061ee1618e3
   source_commit: null
-  target_sha256: d25785c20e4f9b34d4e915d8f2dd9a005de5d490060294b8e681b204c3652aa5
+  target_sha256: 895d7045e458069e6666ea7fc3390e127d58d5f76a012f0ef9392abe483a9080
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -871,11 +871,11 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-9-8 | Article 9(8) | Article 9 (risk management system) is out of scope by the lead's decision. |
 | AIA-9-9 | Article 9(9) | Article 9 (risk management system) is out of scope by the lead's decision; the Manual's classification and threat model give only incidental evidence. |
 | AIA-9-10 | Article 9(10) | Option/presumption (does not create an autonomous duty); compliance-strategy plane. |
-| AIA-10-1 | Article 10(1) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-2 | Article 10(2) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-3 | Article 10(3) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-4 | Article 10(4) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
-| AIA-10-6 | Article 10(6) | Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-1 | Article 10(1) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-2 | Article 10(2) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-3 | Article 10(3) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-4 | Article 10(4) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
+| AIA-10-6 | Article 10(6) | Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence. |
 | AIA-11-2 | Article 11(2) | Single technical documentation with the Annex I sectoral legislation; documentary organisation of compliance. |
 | AIA-AnxIV-2-d | Annex IV, point 2(d) | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
 | AIA-AnxIV-5 | Annex IV, point 5 | The risk management system of Article 9 is out of scope by the lead's decision. |

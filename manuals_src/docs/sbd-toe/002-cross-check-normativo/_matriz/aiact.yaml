@@ -1125,7 +1125,7 @@ itens:
   falta: null
   razao_fora_de_ambito:
     pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1171,7 +1171,7 @@ itens:
   falta: null
   razao_fora_de_ambito:
     pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1190,7 +1190,7 @@ itens:
   falta: null
   razao_fora_de_ambito:
     pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1209,7 +1209,7 @@ itens:
   falta: null
   razao_fora_de_ambito:
     pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -1228,7 +1228,7 @@ itens:
   falta: null
   razao_fora_de_ambito:
     pt: A governação de dados de treino e a avaliação estatística de enviesamento (art. 10.º) ficam fora de âmbito por decisão do lead; a proveniência e a integridade dos conjuntos de dados (DEP-011) dão só evidência incidental.
-    en: Training-data governance and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
+    en: Governance of training data and statistical bias assessment (Article 10) are out of scope by the lead's decision; the provenance and integrity of datasets (DEP-011) give only incidental evidence.
   conflito: false
   explicacao_conflito: null
   confianca: media

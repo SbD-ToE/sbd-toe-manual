@@ -221,9 +221,25 @@ itens:
     citacao:
       pt: Componentes com diferentes níveis de confiança devem estar isolados; acesso entre zonas controlado e mínimo
       en: Components with different trust levels must be isolated; access between zones controlled and minimal
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Objectivos e procedimento de recuperação da aplicação
+      en: Recovery objectives and procedure for the application
   falta:
-    pt: 'Abordagem all-hazards incompleta: ambiente físico (fora de âmbito), continuidade/cópias de segurança/DR (lacuna) e ciber-higiene geral (parcial) não são tratados.'
-    en: 'Incomplete all-hazards approach: physical environment (out of scope), continuity/backups/DR (gap) and general cyber hygiene (partial) are not addressed.'
+    pt: 'Abordagem a todos os riscos: as cópias e a recuperação da aplicação estão cobertas (OPS-016, OPS-017); o ambiente físico e a continuidade da entidade ficam fora de âmbito; a ciber-higiene geral é parcial.'
+    en: 'All-hazards approach: the application backups and recovery are covered (OPS-016, OPS-017); the physical environment and the entity''s business continuity are out of scope; general cyber hygiene is partial.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -960,16 +976,23 @@ itens:
     pt: Art. 23.º, n.º 1, 1.º par. (3.º per.)
     en: Article 23(1), first subparagraph (third sentence)
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: O Manual não pede a recolha nem a comunicação de informação sobre impacto transfronteiriço do incidente (Estados-Membros afetados).
-    en: The Manual does not require the collection or communication of information on the cross-border impact of the incident (Member States affected).
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6.1
+      en: Policy 32 §6.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 61-critério-e-conteúdo-mínimo-por-regime
+    citacao:
+      pt: O conteúdo mínimo é o que a lei pede
+      en: The minimum content is what the law requires
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 18.10.2024 (art. 41.º — aplicação das medidas nacionais de transposição)
   substitui: [EXT-NIS2-OBL-23]
   nota:
@@ -1052,7 +1075,7 @@ itens:
     pt: Art. 23.º, n.º 4, al. a)
     en: Article 23(4), point (a)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -1064,13 +1087,20 @@ itens:
     citacao:
       pt: 'À CSIRT ou, se aplicável, à autoridade competente: alerta rápido ≤ 24 h'
       en: 'To the CSIRT or, where applicable, the competent authority: early warning ≤ 24 h'
-  falta:
-    pt: O prazo de 24 h está prescrito; o conteúdo (suspeita de ato ilícito ou malicioso, possível impacto transfronteiriço) não.
-    en: The 24 h deadline is prescribed; the content (suspicion of an unlawful or malicious act, possible cross-border impact) is not.
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6.1
+      en: Policy 32 §6.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 61-critério-e-conteúdo-mínimo-por-regime
+    citacao:
+      pt: O conteúdo mínimo é o que a lei pede
+      en: The minimum content is what the law requires
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 18.10.2024 (art. 41.º — aplicação das medidas nacionais de transposição)
   substitui: [EXT-NIS2-OBL-23]
   nota:
@@ -1156,7 +1186,7 @@ itens:
     pt: Art. 23.º, n.º 4, al. d)
     en: Article 23(4), point (d)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -1186,13 +1216,20 @@ itens:
     citacao:
       pt: Plano de acções correctivas com owner e prazo
       en: Corrective action plan with owner and deadline
-  falta:
-    pt: Prazo e análise de causa raiz/acções correctivas existem; o conteúdo exigido do relatório final (tipo de ameaça, medidas de atenuação aplicadas e em curso, impacto transfronteiriço) não está parametrizado — o cross-check assume-o como lacuna deliberada (templates nacionais).
-    en: Deadline and root cause analysis/corrective actions exist; the required content of the final report (type of threat, mitigation measures applied and ongoing, cross-border impact) is not parameterised — the cross-check treats it as a deliberate gap (national templates).
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6.1
+      en: Policy 32 §6.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 61-critério-e-conteúdo-mínimo-por-regime
+    citacao:
+      pt: O conteúdo mínimo é o que a lei pede
+      en: The minimum content is what the law requires
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 18.10.2024 (art. 41.º — aplicação das medidas nacionais de transposição)
   substitui: [EXT-NIS2-OBL-23]
   nota:
@@ -7892,9 +7929,25 @@ itens:
     citacao:
       pt: Login sem segundo factor é rejeitado
       en: Login without a second factor is rejected
+  - tipo: requisito
+    alvo: AUT-012
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: aut
+    citacao:
+      pt: Autenticadores criptográficos e biometria local
+      en: Cryptographic authenticators and local biometrics
+  - tipo: requisito
+    alvo: AUT-013
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: aut
+    citacao:
+      pt: Gestão e recuperação dos factores de autenticação
+      en: Management and recovery of authentication factors
   falta:
-    pt: Federação e MFA só L2/L3; métodos de ponta (sem password, FIDO2) não referidos.
-    en: Federation and MFA only at L2/L3; state-of-the-art methods (passwordless, FIDO2) not mentioned.
+    pt: Os métodos sem password e FIDO2 estão prescritos (AUT-001, AUT-012); a federação e o MFA continuam só em L2/L3 no núcleo.
+    en: Passwordless and FIDO2 methods are prescribed (AUT-001, AUT-012); federation and MFA remain L2/L3 only in the core.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

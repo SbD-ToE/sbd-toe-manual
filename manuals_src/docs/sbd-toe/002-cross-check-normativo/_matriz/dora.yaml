@@ -1512,7 +1512,7 @@ itens:
     pt: art. 9.º, n.º 3, al. b)
     en: Article 9(3), point (b)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -1539,9 +1539,15 @@ itens:
     citacao:
       pt: Consumidores idempotentes
       en: Idempotent consumers
-  falta:
-    pt: Salvaguarda contra perda de dados (cópias de segurança).
-    en: Safeguarding against data loss (backups).
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1555,7 +1561,7 @@ itens:
     pt: art. 9.º, n.º 3, al. c)
     en: Article 9(3), point (c)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -1582,9 +1588,25 @@ itens:
     citacao:
       pt: Sinais contínuos de saúde e disponibilidade operacional
       en: Continuous operational health and availability signals
-  falta:
-    pt: Prevenção de indisponibilidade e perda de dados (redundância, backups).
-    en: Prevention of unavailability and data loss (redundancy, backups).
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Objectivos e procedimento de recuperação da aplicação
+      en: Recovery objectives and procedure for the application
+  - tipo: acrescento
+    alvo: CTX-DORA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -16465,25 +16487,25 @@ itens:
     pt: art. 1.º, n.º 1
     en: Article 1(1)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16493,25 +16515,25 @@ itens:
     pt: art. 1.º, n.º 2
     en: Article 1(2)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16521,25 +16543,25 @@ itens:
     pt: art. 1.º, n.º 3
     en: Article 1(3)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16576,25 +16598,25 @@ itens:
     pt: art. 1.º, n.º 5; art. 9.º, n.º 1, 2.º par.
     en: Article 1(5); Article 9(1), second subparagraph
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16604,25 +16626,25 @@ itens:
     pt: art. 2.º, n.º 1
     en: Article 2(1)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16632,25 +16654,25 @@ itens:
     pt: art. 2.º, n.º 2
     en: Article 2(2)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16660,29 +16682,21 @@ itens:
     pt: art. 3.º, n.º 1
     en: Article 3(1)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
   - tipo: politica
     rotulo:
-      pt: Política 32 §4.1
-      en: Policy 32 §4.1
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
     ficheiro: 020-assets/policies/32_policy-irp.md
-    ancora: 41-triagem-t0----15-minutos-de-detecção
+    ancora: 43-investigação
     citacao:
-      pt: o momento do conhecimento registado no ticket
-      en: the moment of awareness recorded in the ticket
-  - tipo: requisito
-    alvo: LOG-002
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-    ancora: log
-    citacao:
-      pt: Atributos mínimos em logs
-      en: Minimum attributes in logs
-  falta:
-    pt: Medição da duração desde a ocorrência (recurso a logs quando anterior à deteção).
-    en: Measurement of duration from occurrence (using logs when prior to detection).
+      pt: Dados de impacto registados
+      en: Impact data recorded
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -16696,28 +16710,21 @@ itens:
     pt: art. 3.º, n.º 2
     en: Article 3(2)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: requisito
-    alvo: OPS-015
-    niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-ops---monitorização-e-operações
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: Sinais contínuos de saúde e disponibilidade operacional
-      en: Continuous operational health and availability signals
-  - tipo: requisito
-    alvo: OPS-006
-    niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-ops---monitorização-e-operações
-    citacao:
-      pt: SLA de resposta (time-to-acknowledge e time-to-resolve) definido por severidade de alerta
-      en: Response SLA (time-to-acknowledge and time-to-resolve) defined per alert severity
-  falta:
-    pt: Medição do tempo de indisponibilidade até reposição do nível de serviço anterior.
-    en: Measurement of downtime until restoration of the previous service level.
+      pt: Dados de impacto registados
+      en: Impact data recorded
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -16731,25 +16738,25 @@ itens:
     pt: art. 4.º
     en: Article 4
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16759,9 +16766,11 @@ itens:
     pt: art. 5.º
     en: Article 5
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
   - tipo: politica
     rotulo:
       pt: Política 32 §4.3
@@ -16769,11 +16778,9 @@ itens:
     ficheiro: 020-assets/policies/32_policy-irp.md
     ancora: 43-investigação
     citacao:
-      pt: Âmbito do impacto determinado (sistemas, dados, utilizadores afectados)
-      en: Scope of the impact determined (affected systems, data, users)
-  falta:
-    pt: Avaliação estruturada do impacto em disponibilidade, autenticidade, integridade e confidencialidade.
-    en: Structured assessment of the impact on availability, authenticity, integrity and confidentiality.
+      pt: Dados de impacto registados
+      en: Impact data recorded
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -16787,29 +16794,21 @@ itens:
     pt: art. 6.º
     en: Article 6
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
   - tipo: politica
     rotulo:
-      pt: Política 32 §4.1
-      en: Policy 32 §4.1
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
     ficheiro: 020-assets/policies/32_policy-irp.md
-    ancora: 41-triagem-t0----15-minutos-de-detecção
+    ancora: 43-investigação
     citacao:
-      pt: de incidente de caráter severo relacionado com as TIC (DORA)
-      en: a major ICT-related incident (DORA)
-  - tipo: requisito
-    alvo: CLA-008
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-cla---classificação-de-aplicações
-    citacao:
-      pt: Existe inventário central ou GRC com registo de cada aplicação
-      en: A central inventory or GRC exists with a record of each application
-  falta:
-    pt: Critério de afetação de serviços que apoiam FCI ou serviços financeiros autorizados.
-    en: Criterion of services affected that support FCI or authorised financial services.
+      pt: Dados de impacto registados
+      en: Impact data recorded
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -16825,25 +16824,25 @@ itens:
     pt: art. 7.º, n.os 1 e 2
     en: Article 7(1) and (2)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -16853,25 +16852,25 @@ itens:
     pt: art. 7.º, n.os 3 e 4
     en: Article 7(3) and (4)
   classe: organizacional
-  forca: fora_de_ambito
+  forca: cobre
   contexto: null
   resposta:
-  - tipo: pagina
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
     rotulo:
-      pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
-      en: Incidents, Classification and Reporting (DORA Articles 17–23)
-    ficheiro: 002-cross-check-normativo/dora/01-intro.md
-    ancora: incidentes-classificação-e-reporte-artigos-1723-dora
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
     citacao:
-      pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
-      en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
+      pt: Dados de impacto registados
+      en: Impact data recorded
   falta: null
-  razao_fora_de_ambito:
-    pt: Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4).
-    en: Regulatory incident classification/impact criteria (RTS 2024/1772) — GRC plane; the DORA cross-check declares an intentional gap (the Manual uses an internal P1–P4 scale).
+  razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: f2bfb7574c6e8a17de0b1c159ee65c87fd574e71843c2cff8a1fdd2d338e5492
+  source_sha256: 69ca694c40e182805af67b60e64b1e637910b8b262500bfea7505e96bbf90759
   source_commit: null
-  target_sha256: ff8a7374c2f92b5ce1775eddfbf96c9a4c427e99466060b820a4e7d2b7f4c0c7
+  target_sha256: 2583a84874917802bc2f944bb9bffc33c6956cfe03fc47ed9e0c275da929b64d
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -685,17 +685,17 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 95 |
-| Partial | 64 |
+| Covers | 98 |
+| Partial | 62 |
 | Supports evidence | 12 |
-| Gap | 11 |
+| Gap | 10 |
 | Out of scope | 38 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
 All the obligations of the matrix `_matriz/nis2.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 8 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (107) {#cobre}
+### Covers (110) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
@@ -709,9 +709,12 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | NIS2-21-2-h | Article 21(2), point (h) | Covers | `ENC-001`; `ENC-003`; [Policy 18 §4](/sbd-toe/assets/policies/policy-gestao-segredos#4-armazenamento-centralizado); [Policy 18 §6.1](/sbd-toe/assets/policies/policy-gestao-segredos#61-ttl-por-tipo-de-segredo) |
 | NIS2-21-4 | Article 21(4) | Covers | `GOV-010`; [Policy 34 §5.2](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional#52-processo-de-validação); `GOV-004` |
 | NIS2-23-1-1 | Article 23(1), first subparagraph (first sentence) | Covers | [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| NIS2-23-1-3 | Article 23(1), first subparagraph (third sentence) | Covers | [Policy 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-3 | Article 23(3) | Covers | `CTX-NIS2-R02`; [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| NIS2-23-4-a | Article 23(4), point (a) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-4-b | Article 23(4), point (b) | Covers | [Policy 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | NIS2-23-4-c | Article 23(4), point (c) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| NIS2-23-4-d | Article 23(4), point (d) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); [Policy 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime) |
 | NIS2-23-4-e | Article 23(4), point (e) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | NIS2-23-4-2par | Article 23(4), second subparagraph | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
 | NIS2-32-2-eg | Article 32(2), points (e) to (g); Article 33(2), points (d) to (f) | Supports evidence | [Policy 34 §7](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional#7-evidência-auditável); `GOV-009`; [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
@@ -809,7 +812,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | NIS2-IR2690-11.7.2 | Implementing Regulation (EU) 2024/2690, Annex, point 11.7.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Covers | `AUT-001`; `AUT-008`; `CLA-003` |
 | NIS2-IR2690-12.1.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Covers | `CLA-005`; `CLA-006` |
 
-### Declared gap (75) {#lacuna}
+### Declared gap (72) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -818,17 +821,14 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | NIS2-20-1 | Article 20(1) | Partial | `GOV-001`; [Ch. 14 US-22](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-22); `GOV-011`; [Policy 35 §5](/sbd-toe/assets/policies/policy-kpis-governacao#5-cadência-de-recolha-e-reporte) | The Manual requires approval “by senior management” of the governance model and the policies, and reporting of KPIs to management, but does not assign to the management body the approval of the Article 21 measures as a whole, oversight of their implementation, or personal liability; the cross-check acknowledges that it “does not fix ex ante the exact legal form of the approval chain”. |
 | NIS2-20-2 | Article 20(2) | Partial | [Policy 37 §4.1](/sbd-toe/assets/policies/policy-formacao-seguranca#41-matriz-de-trilhos-por-perfil-e-nível-de-risco); `TRN-001` | There is no mandatory training of members of the management body in cybersecurity risk management: Policy 37 covers “staff with technical functions” and for “Management / Tech Lead” provides only “Executive awareness” at L1; regular training of the remaining (non-technical) employees is not prescribed. |
 | NIS2-21-1 | Article 21(1) | Partial | `CLA-003`; [Policy 02 §3](/sbd-toe/assets/policies/policy-classificacao-risco#3-modelo-de-classificação---eixos-edi); `REQ-001` | The Manual's proportionality is per application (L1–L3) and covers the software lifecycle; it does not cover the entity's network and information systems as a whole (corporate network, workstations, premises, continuity). |
-| NIS2-21-2 | Article 21(2), introductory wording | Partial | `CLA-003`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura) | Incomplete all-hazards approach: physical environment (out of scope), continuity/backups/DR (gap) and general cyber hygiene (partial) are not addressed. |
+| NIS2-21-2 | Article 21(2), introductory wording | Partial | `CLA-003`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `OPS-016`; `OPS-017` | All-hazards approach: the application backups and recovery are covered (OPS-016, OPS-017); the physical environment and the entity's business continuity are out of scope; general cyber hygiene is partial. |
 | NIS2-21-2-c | Article 21(2), point (c) | Partial | `OPS-016`; `OPS-017` | The entity's business continuity and crisis management fall outside the scope of the Manual; recovery of the application is prescribed (OPS-016, OPS-017). |
 | NIS2-21-2-g | Article 21(2), point (g) | Partial | [Policy 37 §2](/sbd-toe/assets/policies/policy-formacao-seguranca#2-âmbito-e-obrigatoriedade); `TRN-002`; `TRN-007` | Security training prescribed for technical roles and third parties with access; cyber hygiene practices and awareness for all (non-technical) staff and for the management bodies are missing. |
 | NIS2-21-2-i | Article 21(2), point (i) | Partial | `ACC-001`; `ACC-002`; `CLA-008`; `TRN-002` | Access control covered; asset management limited to the inventory of applications and components (no inventory of all assets nor asset handling policy); human resources security out of scope except onboarding/offboarding. |
 | NIS2-21-2-j | Article 21(2), point (j) | Partial | `AUT-001`; `AUT-008`; [🛡️ Security requirements per environment](/sbd-toe/sbd-manual/deploy-seguro/addon/08-segregacao-e-validacao-operacional#️-requisitos-de-segurança-por-ambiente); `GOV-016` | Secured voice, video and text communications and secured emergency communication systems are not addressed (entity security, outside the scope of the Manual); MFA is prescribed for the application (AUT-001) and for privileged access to the supporting systems (GOV-016). |
 | NIS2-21-3 | Article 21(3) | Partial | [Policy 33 §3.1](/sbd-toe/assets/policies/policy-contratacao-segura#31-critérios-de-avaliação); [Policy 33 §3.1](/sbd-toe/assets/policies/policy-contratacao-segura#31-critérios-de-avaliação); `DEP-006`; `GOV-007` | Due diligence assesses the supplier's vulnerability management process and test reports (L2/L3), but not the overall quality of products nor secure development procedures as an explicit criterion, and ignores the Union-level coordinated risk assessments (Article 22). |
 | NIS2-23-1-2 | Article 23(1), first subparagraph (second sentence) | Partial | [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | There is a generic communication “to affected users where applicable”, but the NIS2 line of Policy 32 §6 does not include notification of the recipients of the services (unlike the DORA and CRA lines), with no deadline and no “likely to adversely affect the provision” criterion. |
-| NIS2-23-1-3 | Article 23(1), first subparagraph (third sentence) | Gap | — | The Manual does not require the collection or communication of information on the cross-border impact of the incident (Member States affected). |
 | NIS2-23-2 | Article 23(2) | Gap | — | There is no duty to communicate to the recipients of the service significant cyber threats or the measures they can take; Policy 32 deals only with incidents. |
-| NIS2-23-4-a | Article 23(4), point (a) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | The 24 h deadline is prescribed; the content (suspicion of an unlawful or malicious act, possible cross-border impact) is not. |
-| NIS2-23-4-d | Article 23(4), point (d) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação); [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) | Deadline and root cause analysis/corrective actions exist; the required content of the final report (type of threat, mitigation measures applied and ongoing, cross-border impact) is not parameterised — the cross-check treats it as a deliberate gap (national templates). |
 | NIS2-23-7 | Article 23(7) | Partial | [Policy 32 §9](/sbd-toe/assets/policies/policy-irp#9-responsabilidades); [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | There is control over who authorises public communications, but not the procedure for informing the public when the CSIRT/authority requires it. |
 | NIS2-24-1 | Article 24(1) | Gap | — | The procurement and due diligence criteria (Policy 33 §3.1) do not provide for the requirement of ICT products, services or processes certified under European cybersecurity certification schemes (CSA) where the Member State imposes it. |
 | NIS2-IR2690-art2 | Implementing Regulation (EU) 2024/2690, Article 2 | Partial | `GOV-004`; [Policy 05 §3](/sbd-toe/assets/policies/policy-gestao-excecoes#3-princípios-fundamentais); `CLA-003` | Non-application of controls goes through a documented formal exception, but exemptions by level (requirements marked “-” or “Recommended” at L1/L2) are not exceptions and do not generate the documented justification, requirement by requirement, that Article 2(2) requires when a modulated requirement is considered not applicable. |
@@ -880,7 +880,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | NIS2-IR2690-11.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 11.1.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Partial | `ACC-001`; `ACC-005` | Logical access control prescribed; physical access is out of scope. |
 | NIS2-IR2690-11.1.3 | Implementing Regulation (EU) 2024/2690, Annex, point 11.1.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Partial | [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); `ACC-007` | Review of the access model after a significant incident prescribed; the periodic review of the permission model (ACC-007) remains L2/L3 only. |
 | NIS2-IR2690-11.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 11.4.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Gap | — | Exclusive use of administration systems, logical separation from application software and dedicated protection of access to them are not required. |
-| NIS2-IR2690-11.6.3 | Implementing Regulation (EU) 2024/2690, Annex, point 11.6.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Partial | `AUT-007`; `AUT-001` | Federation and MFA only at L2/L3; state-of-the-art methods (passwordless, FIDO2) not mentioned. |
+| NIS2-IR2690-11.6.3 | Implementing Regulation (EU) 2024/2690, Annex, point 11.6.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Partial | `AUT-007`; `AUT-001`; `AUT-012`; `AUT-013` | Passwordless and FIDO2 methods are prescribed (AUT-001, AUT-012); federation and MFA remain L2/L3 only in the core. |
 | NIS2-IR2690-11.6.4 | Implementing Regulation (EU) 2024/2690, Annex, point 11.6.4 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Gap | — | There is no periodic review of authentication procedures and technologies. |
 | NIS2-IR2690-12.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-001`; [Policy 02 §3](/sbd-toe/assets/policies/policy-classificacao-risco#3-modelo-de-classificação---eixos-edi) | Classification of applications by criticality; there are no classification levels for all assets, including information. |
 | NIS2-IR2690-12.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-001` | The exposure/data/impact axes approximate C/I/A, but there is no assignment of a level to each asset based on confidentiality, integrity, authenticity and availability aligned with continuity. |

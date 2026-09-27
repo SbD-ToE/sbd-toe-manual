@@ -670,17 +670,17 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 151 |
-| Parcial | 115 |
+| Cobre | 166 |
+| Parcial | 109 |
 | Apoia evidência | 123 |
 | Lacuna | 3 |
-| Fora de âmbito | 234 |
+| Fora de âmbito | 225 |
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
 Todas as obrigações da matriz `_matriz/dora.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 13 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
-### Cobre (274) {#cobre}
+### Cobre (289) {#cobre}
 
 Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
 
@@ -709,6 +709,8 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | DORA-8-3 | art. 8.º, n.º 3 | Cobre | [Política 04 §4.1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#41-triggers-que-obrigam-a-revisão-imediata); `CLA-006`; `ARC-009`; `THR-006` |
 | DORA-9-1 | art. 9.º, n.º 1 | Cobre | [6️⃣ Registo e Monitorização Essencial (Cap. 12)](/sbd-toe/sbd-manual/fundamentos/baseline#6️⃣-registo-e-monitorização-essencial-cap-12); `OPS-001`; `OPS-005` |
 | DORA-9-3-a | art. 9.º, n.º 3, al. a) | Cobre | `ENC-001`; `INT-003`; `INT-004` |
+| DORA-9-3-b | art. 9.º, n.º 3, al. b) | Cobre | `ACC-006`; `ENC-009`; `INT-009`; `OPS-016` |
+| DORA-9-3-c | art. 9.º, n.º 3, al. c) | Cobre | `ENC-009`; `ACC-006`; `OPS-015`; `OPS-016`; `OPS-017`; `CTX-DORA-R01` |
 | DORA-9-4-a | art. 9.º, n.º 4, al. a) | Apoia evidência | `GOV-001` |
 | DORA-9-4-d | art. 9.º, n.º 4, al. d) | Cobre | `ENC-007`; `AUT-001`; [🛡️ Requisitos de segurança por ambiente](/sbd-toe/sbd-manual/deploy-seguro/addon/08-segregacao-e-validacao-operacional#️-requisitos-de-segurança-por-ambiente); `CFG-006`; `ENC-007` |
 | DORA-10-1-p2 | art. 10.º, n.º 1, 2.º parágrafo | Cobre | `OPS-007`; [Política 30 §7](/sbd-toe/assets/policies/policy-monitorizacao-seguranca#7-validação-e-tuning-de-regras-de-detecção) |
@@ -941,7 +943,20 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | DORA-RTS1774-38-1 | art. 38.º, n.º 1 | Apoia evidência | `REQ-001` |
 | DORA-RTS1774-39-2-d | art. 39.º, n.º 2, als. d) a f) | Cobre | [🔁 Mapeamento prático entre DRP/BIA e risco de segurança](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia#-mapeamento-prático-entre-drpbia-e-risco-de-segurança); [Política 27 §6](/sbd-toe/assets/policies/policy-rollback#6-rto-de-rollback-por-nível); [Política 32 §3](/sbd-toe/assets/policies/policy-irp#3-critérios-de-activação-do-irp); `OPS-017`; `OPS-017` |
 | DORA-RTS1774-39-2-g | art. 39.º, n.º 2, al. g) | Cobre | `OPS-016` |
+| DORA-RTS1772-1-1 | art. 1.º, n.º 1 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-1-2 | art. 1.º, n.º 2 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-1-3 | art. 1.º, n.º 3 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | DORA-RTS1772-1-4 | art. 1.º, n.º 4 | Apoia evidência | `LOG-010` |
+| DORA-RTS1772-1-5 | art. 1.º, n.º 5; art. 9.º, n.º 1, 2.º par. | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-2-1 | art. 2.º, n.º 1 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-2-2 | art. 2.º, n.º 2 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-3-1 | art. 3.º, n.º 1 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-3-2 | art. 3.º, n.º 2 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-4 | art. 4.º | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-5 | art. 5.º | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-6 | art. 6.º | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-7-1 | art. 7.º, n.os 1 e 2 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| DORA-RTS1772-7-3 | art. 7.º, n.os 3 e 4 | Cobre | `CTX-DORA-R02`; [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
 | DORA-RTS1772-8-1 | art. 8.º, n.º 1; art. 9.º | Apoia evidência | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Incidentes, Classificação e Reporte (Artigos 17–23 DORA)](/sbd-toe/cross-check-normativo/dora/intro#incidentes-classificação-e-reporte-artigos-1723-dora) |
 | DORA-RTS1772-8-2 | art. 8.º, n.º 2, 1.º par. | Cobre | `CTX-DORA-R02`; [Política 32 §4.7](/sbd-toe/assets/policies/policy-irp#47-análise-de-recorrência); [Incidentes, Classificação e Reporte (Artigos 17–23 DORA)](/sbd-toe/cross-check-normativo/dora/intro#incidentes-classificação-e-reporte-artigos-1723-dora) |
 | DORA-RTS1772-8-2-p2 | art. 8.º, n.º 2, 2.º par. | Cobre | `CTX-DORA-R02` |
@@ -961,7 +976,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | DORA-RTS1190-10-1 | art. 10.º, n.º 1 | Apoia evidência | [6) Checklist de readiness (binário)](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness#6-checklist-de-readiness-binário); [Cap. 12 US-16](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-16---cobertura-attck-e-priorização-epsskev) |
 | DORA-RTS1190-13-2 | art. 13.º, n.º 2 | Apoia evidência | `TST-003`; [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) |
 
-### Lacuna declarada (118) {#lacuna}
+### Lacuna declarada (112) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -981,8 +996,6 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | DORA-8-6 | art. 8.º, n.º 6 | Parcial | `CLA-008`; [Política 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | Inventários de funções e de dependências de terceiros atualizados a cada alteração importante. |
 | DORA-8-7 | art. 8.º, n.º 7 | Parcial | [🛠️ Abordagem proposta](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta); [Política 04 §4.1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#41-triggers-que-obrigam-a-revisão-imediata) | Avaliação anual específica de sistemas legados e avaliação antes/depois de cada conexão. |
 | DORA-9-2 | art. 9.º, n.º 2 | Parcial | `ENC-001`; `ENC-002`; `ENC-009` | Dados em utilização; disponibilidade/continuidade dos sistemas. |
-| DORA-9-3-b | art. 9.º, n.º 3, al. b) | Parcial | `ACC-006`; `ENC-009`; `INT-009` | Salvaguarda contra perda de dados (cópias de segurança). |
-| DORA-9-3-c | art. 9.º, n.º 3, al. c) | Parcial | `ENC-009`; `ACC-006`; `OPS-015` | Prevenção de indisponibilidade e perda de dados (redundância, backups). |
 | DORA-9-3-d | art. 9.º, n.º 3, al. d) | Parcial | `CFG-004`; `IAC-007`; [Política 22 §5](/sbd-toe/assets/policies/policy-aprovacao-plan-iac#5-separação-de-funções-sod) | Controlos contra erro humano na administração de dados em produção (fora de IaC/deploy). |
 | DORA-9-4-b | art. 9.º, n.º 4, al. b), e 2.º parágrafo | Parcial | `ARC-006`; `ARC-011`; `CNT-012`; [Política 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação) | Configuração da interligação de redes para corte/segmentação instantâneos ao nível da entidade. |
 | DORA-9-4-c | art. 9.º, n.º 4, al. c) | Parcial | `ACC-001`; `ACC-002`; `ACC-010` | Acesso físico. |
@@ -1081,12 +1094,8 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | DORA-RTS1774-39-1 | art. 39.º, n.º 1 | Parcial | [Política 32 §5](/sbd-toe/assets/policies/policy-irp#5-playbooks-de-resposta) | Planos de continuidade (o Manual tem playbooks de incidente, incl. ransomware). |
 | DORA-RTS1774-40-1 | art. 40.º, n.os 1 e 2 | Parcial | [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); [Política 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback); `OPS-016` | Testes dos planos de continuidade da entidade com cenários (fora do âmbito do Manual); o teste de salvaguarda e restauração está prescrito (OPS-016). |
 | DORA-RTS1774-40-3 | art. 40.º, n.º 3 | Parcial | [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp) | Reporte de deficiências ao órgão de administração. |
-| DORA-RTS1772-3-1 | art. 3.º, n.º 1 | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); `LOG-002` | Medição da duração desde a ocorrência (recurso a logs quando anterior à deteção). |
-| DORA-RTS1772-3-2 | art. 3.º, n.º 2 | Parcial | `OPS-015`; `OPS-006` | Medição do tempo de indisponibilidade até reposição do nível de serviço anterior. |
-| DORA-RTS1772-5 | art. 5.º | Parcial | [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) | Avaliação estruturada do impacto em disponibilidade, autenticidade, integridade e confidencialidade. |
-| DORA-RTS1772-6 | art. 6.º | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); `CLA-008` | Critério de afetação de serviços que apoiam FCI ou serviços financeiros autorizados. |
 
-### Fora de âmbito (234) {#fora-de-ambito}
+### Fora de âmbito (225) {#fora-de-ambito}
 
 Obrigações que o Manual declara fora de âmbito, com a razão.
 
@@ -1244,15 +1253,6 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS1774-39-2-h | art. 39.º, n.º 2, als. h) a j) | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. |
 | DORA-RTS1774-41-1 | art. 41.º, n.º 1 | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. |
 | DORA-RTS1774-41-2 | art. 41.º, n.º 2 | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. |
-| DORA-RTS1772-1-1 | art. 1.º, n.º 1 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-1-2 | art. 1.º, n.º 2 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-1-3 | art. 1.º, n.º 3 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-1-5 | art. 1.º, n.º 5; art. 9.º, n.º 1, 2.º par. | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-2-1 | art. 2.º, n.º 1 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-2-2 | art. 2.º, n.º 2 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-4 | art. 4.º | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-7-1 | art. 7.º, n.os 1 e 2 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
-| DORA-RTS1772-7-3 | art. 7.º, n.os 3 e 4 | Critério regulatório de classificação/impacto de incidentes (RTS 2024/1772) — plano GRC; o cross-check DORA declara lacuna intencional (o Manual usa escala interna P1–P4). |
 | DORA-RTS301-1 | art. 1.º | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações. |
 | DORA-RTS301-2 | art. 2.º | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações. |
 | DORA-RTS301-3 | art. 3.º | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. Conteúdo/modelos das notificações. |

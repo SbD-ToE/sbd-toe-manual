@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T12:05:06Z",
+  "generated_at": "2026-09-27T12:07:54Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "68ff9b58fbda5a976212087b8f2723fe6aaf3da368fb1183dddc24728b4076be",
-      "translated_source_sha256": "68ff9b58fbda5a976212087b8f2723fe6aaf3da368fb1183dddc24728b4076be",
-      "target_sha256": "193deb29e18243bcd0421751b15127f1982c8063d27a208ce883de2f43badea0",
+      "source_sha256": "9f84f19cbd2f1c14de2e885b86252dee0daa83db282dee71daeb9ed04c924131",
+      "translated_source_sha256": "9f84f19cbd2f1c14de2e885b86252dee0daa83db282dee71daeb9ed04c924131",
+      "target_sha256": "b410d1861e15753378524f553214f912fbeaf7717ead0b8cd2b3f0fd691ee028",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -687,12 +687,12 @@
     },
     "010-sbd-manual/01-classificacao-aplicacoes/intro.md": {
       "state": "synced",
-      "source_sha256": "20b5a0eb3e281ff8950aa448e52a5caa3fbe3ba1550cd4827c554098f438ed9e",
-      "translated_source_sha256": "20b5a0eb3e281ff8950aa448e52a5caa3fbe3ba1550cd4827c554098f438ed9e",
-      "target_sha256": "e8ad62636824ecda2d1d2913fc7dd4984fab4ee843b59b9bd102cb2e603712e1",
-      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "cbe1f3640988274ebc7dbade162cd30240f42b41d9cf02457079156d87079c0c",
-      "translated_at": "2026-09-27T07:53:38Z",
+      "source_sha256": "d4e40fdc8ad759bb546eccf7bddc4775d586c1d06780b892bf9372d287c1a5df",
+      "translated_source_sha256": "d4e40fdc8ad759bb546eccf7bddc4775d586c1d06780b892bf9372d287c1a5df",
+      "target_sha256": "a3a1ac9f272d990f1e6a14fdc27acd5db11b47ce29b2aa8c04e62ea521add1d7",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "c2e97463f64fd6a2dee0e6b6fe195ccb1ff70e820eefbec414aa7b626980cd5f",
+      "translated_at": "2026-09-27T12:07:45Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/policies-relevantes.md": {

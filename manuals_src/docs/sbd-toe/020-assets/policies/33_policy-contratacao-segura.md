@@ -94,6 +94,20 @@ Todos os contratos que impliquem acesso técnico devem incluir cláusulas de seg
 
 A organização deve manter um modelo contratual padrão com cláusulas de segurança validadas juridicamente, actualizado anualmente ou após alterações regulatórias relevantes. O modelo deve ser disponibilizado a Procurement e Jurídico como referência de negociação - as cláusulas de segurança são requisitos mínimos, não pontos de negociação em contratos L2/L3.
 
+### 4.4 Subcontratantes de dados pessoais (RGPD, art. 28.º) {#44-subcontratantes-de-dados-pessoais-rgpd-art-28}
+
+Quando o fornecedor trata dados pessoais por conta da organização, é subcontratante no sentido do RGPD, e o tratamento é regulado por contrato, em qualquer nível. O contrato define o objeto, a duração, a natureza e a finalidade do tratamento, o tipo de dados pessoais e as categorias de titulares, e obriga o subcontratante a:
+
+- tratar os dados só mediante instruções documentadas da organização, incluindo quanto a transferências, e informá-la se considerar que uma instrução viola a lei de proteção de dados;
+- garantir que as pessoas autorizadas estão sujeitas a confidencialidade;
+- adotar as medidas de segurança do art. 32.º do RGPD (as cláusulas das secções 4.1 e 4.2 são o mínimo);
+- só recorrer a outro subcontratante com autorização prévia da organização e nas mesmas condições;
+- ajudar a organização a responder aos pedidos dos titulares (ver `PRI-003`) e a cumprir as obrigações de segurança, de notificação de violações e de avaliação de impacto;
+- no fim da prestação, apagar ou devolver os dados e apagar as cópias, salvo obrigação legal de conservação (ver `PRI-002`);
+- disponibilizar a informação necessária para demonstrar o cumprimento e permitir auditorias.
+
+Para os fornecedores de serviços de IA, a secção 10 acrescenta as cláusulas específicas.
+
 ---
 
 ## 5. Onboarding técnico de contractors {#5-onboarding-técnico-de-contractors}

@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/07-validacao-requisitos.md
-  source_sha256: 29f6783bab28ef9a09a513b2c7b410be455ffa695c703023a6419a84597f6f92
-  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
-  target_sha256: 5e1f4cedc3a7933f15f35c8ee4891aed05f8c50a900e7f2d8ae30a1a7eece04d
+  source_sha256: 799d8f446853032a7f6b0e80fdca005b7184a9a229b9432e9e6fe918243cbfa6
+  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
+  target_sha256: 893fdecbb8f771543a8114fb7ba80904e300d9a47d8afcd6efd82d6eb1a059a3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, eu_startups, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 79f8c164a9afdb1bcb219b5345eb9b77b29a1359d519ca25de5ddce4e941390e
-  translated_at: 2026-09-27T18:03:21Z
-  stamped_at: 2026-09-27T18:03:21Z
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, esquema_regime, eu_startups, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 7beaad0698ebe261bca42ad993794bd334b5bc87f8de82556890e2cf7216aa6e
+  translated_at: 2026-09-27T21:29:56Z
+  stamped_at: 2026-09-27T21:29:56Z
   reviewed_by: null
 ---
 
@@ -108,7 +108,7 @@ For each requirement of the canonical catalogue the following are given: the ref
 
 | ID | Operational tag | Level | Validation method | Expected evidence |
 |----|-----------------|:-----:|---------------------|-------------------|
-| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Attempt login without a second factor. Confirm rejection and failure logs. | Log of failed authentication without MFA. Screenshot of the block. |
+| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Attempt login without a second factor. Confirm rejection and failure logs. Confirm that the accepted factors are those of the requirement. At L3, attempt the login of an administration account without WebAuthn/FIDO2 and confirm rejection. | Log of failed authentication without MFA. Screenshot of the block. Configuration of the accepted factors. At L3, log of the rejection of the administrator without a *phishing*-resistant factor. |
 | AUT-002 | SEC-Lx-AUT-PWD | L1+ | Review the active policy. Attempt to set an invalid password. Confirm rejection. | Documented policy. Error or rejection log. |
 | AUT-003 | SEC-Lx-AUT-BRUTE | L1+ | Simulate repeated failed attempts. Confirm lockout, CAPTCHA or progressive delay. | Log with failure count. Evidence of lockout or delay. |
 | AUT-004 | SEC-Lx-AUT-LOGOUT | L1+ | Log out. Attempt to reuse the session or token. Confirm rejection. | Log of revoked session. Authentication error on reuse. |
@@ -119,6 +119,8 @@ For each requirement of the canonical catalogue the following are given: the ref
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Attempt to change credentials without re-authentication. Confirm the block. | Log of the blocked attempt. Evidence of active session verification. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simulate an anomalous login. Confirm notification to the user and logging. | Example of the notification sent. Log of the critical event detected. |
 | AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verify that no default accounts or credentials are active in the application and in the components in production. Confirm that the initial credential is changed at first use. | Inventory of accounts without default credentials. Evidence of the first-access flow. |
+| AUT-012 | SEC-Lx-AUT-WEBAUTHN | L1+ (if applicable) | Replay an assertion already used, send an assertion with a foreign origin or *relying party* identifier and another with an invalid signature, and confirm that all are rejected. With user verification required, send an assertion without it and confirm rejection. Confirm that the server neither receives nor stores biometric data. | Logs of the rejected assertions, by reason. Configuration of the WebAuthn library. Credential data schema (public key, identifier and counter only). |
+| AUT-013 | SEC-Lx-AUT-RECOVERY | L1+ | Request a recovery and confirm a single-use, expiring *token*, an identical response for non-existent accounts and a notification to the user. At L2+, simulate the loss of the second factor and confirm that email alone is not enough; revoke an authenticator and confirm that the associated sessions end and that it no longer authenticates. | Recovery log and notification sent. Screenshot of the list of authenticators and of the revocation. Log of the sessions ended and of the assertion rejected after the revocation. |
 
 ---
 

@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 3c201737481e18dbb23540d8e068887bbb435d7c2a582d2127b0cf88e2b51f3b
-  source_commit: 8eb6a0aba53db254727866b9715b6a7e56eb7490
-  target_sha256: db2290a200144cb572c108f2c28f79a51bafd4a205cc5df7ed13199ab0d6219f
+  source_sha256: 1f6a74921007dd188f5396eb0b6b5b462a3393dbdb8b48944bb592c13a26024b
+  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
+  target_sha256: 697b6d6195711473680825fc4816018e7b57d400db6c02db05e620dbe461d5b9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-27T19:34:25Z
-  stamped_at: 2026-09-27T19:34:25Z
+  translated_at: 2026-09-27T21:30:09Z
+  stamped_at: 2026-09-27T21:30:09Z
   reviewed_by: null
 ---
 
@@ -99,7 +99,7 @@ Requirements that ensure only legitimate entities access the system, with contro
 
 | ID | Name | L1 | L2 | L3 | Acceptance criterion |
 |----|------|:--:|:--:|:--:|----------------------|
-| AUT-001 | Mandatory MFA | - | ✔ | ✔ | Login without a second factor is rejected; evidence of the block in logs. |
+| AUT-001 | Mandatory MFA | - | ✔ | ✔ | Login without a second factor is rejected; evidence of the block in logs. A cryptographic authenticator (WebAuthn/FIDO2, passkey), a TOTP code or a *push* approval with number matching count as a second factor; a passkey or security key with user verification (PIN or local biometrics, `AUT-012`) meets MFA on its own. At L3, the application offers *phishing*-resistant authentication (WebAuthn/FIDO2) and requires it for administration accounts; SMS or email codes are not accepted as a second factor. |
 | AUT-002 | Password policy | ✔ | ✔ | ✔ | The system rejects passwords that do not comply with the policy; the block is evidenced in testing. |
 | AUT-003 | Brute-force protection | ✔ | ✔ | ✔ | Account locked or access delayed after N failed attempts; logs evidence the event. |
 | AUT-004 | Active session revocation | ✔ | ✔ | ✔ | Logout invalidates the token/session immediately; reuse results in an authentication error. |
@@ -110,6 +110,8 @@ Requirements that ensure only legitimate entities access the system, with contro
 | AUT-009 | Re-authentication for critical changes | ✔ | ✔ | ✔ | Changes to credentials or sensitive data require confirmation of the active identity. |
 | AUT-010 | Alert on suspicious access | - | ✔ | ✔ | Anomalous access generates an alert or a notification to the user; log of the event available. |
 | AUT-011 | No default credentials | ✔ | ✔ | ✔ | The application is not delivered or put into production with default accounts or credentials; initial credentials unique per installation and changed at first use; default accounts of components and platforms disabled or with their credential changed. |
+| AUT-012 | Cryptographic authenticators and local biometrics | ✔ | ✔ | ✔ | When the application accepts passkeys, security keys or another WebAuthn/FIDO2 authenticator: at registration and at each authentication, the server validates a single-use random challenge, the origin and the *relying party* identifier, the signature with the registered public key and, when the policy requires it, the user-verification indication; a signature counter that goes backwards, or an equivalent signal, is treated as a possible clone and logged. Biometrics (fingerprint, face recognition) only unlock the credential on the device: the server receives only the signed assertion and never receives, stores or compares biometric data. The stored public key is not a secret; `AUT-006` applies to secrets. |
+| AUT-013 | Management and recovery of authentication factors | ✔ | ✔ | ✔ | Access recovery uses a random, single-use *token* with a short expiry, and does not reveal whether the account exists; each recovery and each factor added or removed is notified to the user through an already registered channel. At L2 and L3, users see their authenticators (name, registration date, last use) and can revoke any of them, with re-authentication (`AUT-009`); revoking an authenticator or recovering the account ends the sessions established with it; when a factor is lost, recovery requires another registered authenticator, single-use recovery codes or strong identity re-verification, never email alone, and biometrics are never the only recovery factor. At L3, recoveries of administration accounts are logged and reviewed. |
 
 ---
 

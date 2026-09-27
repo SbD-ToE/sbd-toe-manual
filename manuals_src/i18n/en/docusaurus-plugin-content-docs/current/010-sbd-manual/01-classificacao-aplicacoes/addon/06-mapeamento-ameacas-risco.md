@@ -6,16 +6,16 @@ tags: [tipo:mapeamento, ameacas, risco, validacao, controlo]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/addon/06-mapeamento-ameacas-risco.md
-  source_sha256: 9fc86053db0025c02cd890a4a235c8e53df6867cc6b58873af0375ee17a4720c
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 3acd3aedca061de1ed47d64a687c8685c3d4d97156f93a8bedd80f64333b9bf4
+  source_sha256: 8601028d6e9bb4d95ce836e7dea4cdea4559715382e36496ea3c2c174fa712ef
+  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
+  target_sha256: ddfc5395976c2cdc8924e3294ddd341d0132d6767187d1cd399df5a04365e7a4
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, lifecycle_phase, mapping, papel_suporte, risk_level, sbdtoe_sbd, threat, traceability, validation_evaluation]
   glossary_sha256: e386a71541afa431331f530649604daccec5ab63b2a2d9fb4183b788d6eb822f
-  translated_at: 2026-09-25T20:18:47Z
-  stamped_at: 2026-09-26T18:32:47Z
+  translated_at: 2026-09-27T21:29:57Z
+  stamped_at: 2026-09-27T21:29:57Z
   reviewed_by: null
 ---
 
@@ -93,7 +93,7 @@ This mapping confirms that the identified risks **correspond directly to known a
 
 | ATT&CK Technique            | Attack vector                | Associated risk                 | Typical controls                 |
 |---------------------------|-------------------------------|----------------------------------|----------------------------------|
-| Initial Access: Phishing  | Credential compromise     | Unauthorised access            | MFA, awareness                   |
+| Initial Access: Phishing  | Credential compromise     | Unauthorised access            | Phishing-resistant MFA (`AUT-001`, L3), awareness |
 | Execution: Scripting      | Remote execution                | Arbitrary execution              | Hardening, validation             |
 | Discovery: Cloud Services | Resource enumeration         | Excessive exposure              | Restrictive IAM, logging          |
 | Impact: Data Destruction  | Data sabotage             | Loss of integrity             | Backups, change control  |

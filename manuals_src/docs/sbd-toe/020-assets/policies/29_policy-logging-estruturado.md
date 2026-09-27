@@ -126,8 +126,17 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 | Registos gerados automaticamente por sistemas de IA de risco elevado (OPS-011/012) | Pelo menos 6 meses | 1 ano | 2 anos |
 
 :::note
-Os prazos desta tabela são escolha do Manual. Prevalece o prazo mínimo legal mais longo que seja aplicável: por exemplo, os registos gerados automaticamente por sistemas de IA de risco elevado são conservados «por um período adequado à finalidade prevista do sistema de IA de risco elevado, de pelo menos seis meses» (AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6), e a documentação técnica de produtos com elementos digitais fica disponível «por, pelo menos, 10 anos após a data de colocação no mercado [...] ou pelo período de apoio, consoante o que for mais longo» (CRA, art. 13.º, n.º 13). No DORA, é a entidade financeira que estabelece o período de conservação, tendo em conta, entre outros fatores, os resultados da avaliação do risco associado às TIC (Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2); na NIS2, as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690 mantêm os registos «durante um período predefinido» (anexo, ponto 3.2.5). Quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e)).
+**Precedência.** Os prazos desta tabela são o **mínimo recomendado pelo Manual** (escolha do Manual) e não esgotam o que se espera da organização. Prevalece o mais exigente de entre:
+
+- **(a) a lei da UE aplicável** — por exemplo, os registos gerados automaticamente por sistemas de IA de risco elevado são conservados «por um período adequado à finalidade prevista do sistema de IA de risco elevado, de pelo menos seis meses» (AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6), e a documentação técnica de produtos com elementos digitais, incluindo a SBOM, fica disponível «por, pelo menos, 10 anos após a data de colocação no mercado [...] ou pelo período de apoio, consoante o que for mais longo» (CRA, art. 13.º, n.º 13). No DORA, é a entidade financeira que estabelece o período de conservação, tendo em conta, entre outros fatores, os resultados da avaliação do risco associado às TIC (Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2); as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690 mantêm os registos «durante um período predefinido» (anexo, ponto 3.2.5);
+- **(b) a legislação nacional**, incluindo a transposição da NIS2 e os regimes sectoriais (por exemplo, prevenção do branqueamento de capitais, fiscal, laboral, saúde);
+- **(c) as orientações e expectativas dos supervisores** (por exemplo EBA, ESMA, EIOPA, Banco de Portugal, CMVM, ASF, ANACOM, CNCS), que não são lei mas são esperadas em auditoria;
+- **(d) as expectativas normais do sector**: normas e referenciais assumidos por contrato ou esperados pelo mercado (por exemplo PCI DSS para dados de cartões de pagamento, ISO/IEC 27001 e SOC 2 em auditorias de clientes, requisitos de clientes e de seguradoras).
+
+O Manual não reproduz os prazos dos regimes (b) a (d): a organização mapeia o prazo aplicável na versão em vigor de cada um. Em qualquer caso, quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e)).
 :::
+
+**Mapa de retenção da organização.** A organização mantém um mapa que indica, por tipo de registo, o regime que fixa o prazo — lei da UE, legislação nacional, supervisor, sector ou este Manual — e o valor adoptado, que é o mais exigente dos aplicáveis. É o artefacto que um auditor pede; revê-se sempre que muda um regime aplicável.
 
 ---
 

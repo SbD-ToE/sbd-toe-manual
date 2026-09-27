@@ -36,7 +36,7 @@ Onde necessário, o texto distingue explicitamente:
 | **21** | Medidas de Gestão de Risco | [Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Cap. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implementar controlos técnicos, evidência e revisão contínua |
 | **23** | Reporte de Incidentes | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Deteção, escalonamento interno e preparação de reporte externo |
 | **Cadeia Fornecimento** | Segurança de Fornecedores | [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM, due diligence técnica e supplier governance complementar (`Art. 21(2)(d)`, `21(3)`, `22`) |
-| **Continuidade** | Continuidade e Crise | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbooks e exercícios (`Art. 21(2)(c)`); cópias de segurança e DR ainda não prescritos no Manual; BCM corporativo amplo fica fora |
+| **Continuidade** | Continuidade e Crise | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbooks e exercícios; cópias de segurança com restauro testado (OPS-016) e recuperação da aplicação (OPS-017) (`Art. 21(2)(c)`); BCM corporativo amplo fica fora |
 
 ---
 
@@ -191,7 +191,7 @@ Onde necessário, o texto distingue explicitamente:
 - **O que:** Backups regulares, testados, off-site
 - **Como:** Automatização, testes de restauração periódicos
 - **Trilho:** Logs de backups, testes, resultados
-- **Estado no Manual:** ainda não prescrito. O Cap. 12 cobre a resposta e a recuperação operacional; as cópias de segurança e os testes de restauro ficam por definir pela organização.
+- **Estado no Manual:** cópias de segurança com restauro testado em OPS-016 e objectivos e procedimento de recuperação em OPS-017 (Cap. 12); a redundância é requisito do contexto NIS2 para as entidades pertinentes.
 - **Referência:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 #### 6.2 Gestão de Crise {#62-gestão-de-crise}

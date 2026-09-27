@@ -67,7 +67,7 @@ Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeame
 |---|---|---|
 | Políticas de análise de risco | Cap. 02, Cap. 03 | Requisitos de segurança, threat modeling |
 | Gestão de incidentes | Cap. 12 | Deteção, resposta, pós-incidente |
-| Continuidade/crise (backups, DR) | Cap. 11, Cap. 12 | Parcial: runbooks, exercícios de resposta e rollback testado; cópias de segurança, testes de restauro e recuperação de desastres dos sistemas ainda não prescritos |
+| Continuidade/crise (backups, DR) | Cap. 11, Cap. 12 | Runbooks e exercícios de resposta; cópias de segurança com restauro testado (OPS-016); objectivos e procedimento de recuperação da aplicação (OPS-017, L2/L3); BCM e gestão de crise da entidade fora do Manual |
 | Segurança da cadeia de fornecimento | Cap. 05, Cap. 14 | SBOM/SCA, dependências, requisitos contratuais |
 | Segurança em desenvolvimento | Cap. 06, Cap. 07, Cap. 08 | Desenvolvimento seguro, CI/CD, IaC |
 | Avaliação da eficácia | Cap. 10, Cap. 12 | Testes de segurança, monitorização contínua |
@@ -172,21 +172,22 @@ A NIS2 pede continuidade de negócio, gestão de crise, backups e DR testados, e
 | Requisito NIS2 | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Runbooks e exercícios de resposta/recuperação | Cap. 12 | Runbooks, exercícios, testes |
-| Backups com testes de restauração | — | Ainda não prescritos: existem só o snapshot pré-deploy (Política 27 §3) e a cópia de segurança do cofre de segredos (Política 18 §4) |
+| Backups com testes de restauração | Cap. 12 | Cópias de segurança com restauro testado ([`OPS-016`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#catálogo-ops---monitorização-e-operações)), com cadência por nível |
 | Logging/observabilidade "by design" | Cap. 12 | Logging, observabilidade, retenção |
 
 **O que o SbD-ToE cobre**
 
 - Runbooks e exercícios de resposta/recuperação (Cap. 12).
+- Cópias de segurança com restauro testado (OPS-016) e objectivos e procedimento de recuperação da aplicação (OPS-017).
 - Logging/observabilidade "by design" (Cap. 12), com orientação para retenção alinhável a normas.
 
 **Lacunas intencionais**
 
 Períodos de retenção e campos exactos de logs: variam entre NIS2, DORA e regimes setoriais; o manual define "logs com campos obrigatórios" e deixa os campos finais para serem plugados segundo o normativo aplicável (NIS2 aqui). Continuidade empresarial ampla, BCM corporativo e gestão de crise institucional também podem exigir artefactos fora do manual base.
 
-**Lacuna por cobrir**
+**Redundância e continuidade**
 
-As cópias de segurança, os testes de restauro e a recuperação de desastres dos sistemas que o Manual governa (art. 21.º, n.º 2, al. c); Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1 e 4.2) ainda não estão prescritos. O rollback ([`DPL-005`](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy#catálogo-dpl---deploy-seguro)) reverte um deploy; não recupera dados nem sistemas.
+As cópias de segurança e o restauro testado (OPS-016) e a recuperação da aplicação (OPS-017) estão prescritos. A redundância pelo menos parcial dos sistemas (Reg. de Execução (UE) 2024/2690, anexo, ponto 4.2.4) entra só para as entidades pertinentes, como requisito do contexto NIS2 (ver [Requisitos aplicáveis](/sbd-toe/cross-check-normativo/nis2/requisitos-aplicaveis)). A continuidade do negócio e a gestão de crise da entidade ficam fora do Manual.
 
 **Como cumprir**
 

@@ -11,10 +11,17 @@ fonte_obrigacoes:
 origem:
   pt: Mapa mapa-cra.json do despacho 2026-09-27-cobertura-cross-check (hub), convertido por script e revisto pelo Manual agent.
   en: Map mapa-cra.json from the 2026-09-27-cobertura-cross-check dispatch (hub), converted by script and reviewed by the Manual agent.
+mapa_evidencia:
+  prefixos: [CRA-AnxVII-]
+  titulo:
+    pt: anexo VII do CRA
+    en: CRA Annex VII
 itens:
 - id: CRA-2-1
   acto_fonte: 32024R2847
-  referencia: Art. 2.º, n.º 1
+  referencia:
+    pt: Art. 2.º, n.º 1
+    en: Article 2(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -33,7 +40,9 @@ itens:
     en: The “scope gate” exists only in the CRA normative cross-check (002-cross-check-normativo/cra/01-intro.md), which does not count as a prescriptive answer.
 - id: CRA-2-2a7
   acto_fonte: 32024R2847
-  referencia: Art. 2.º, n.os 2 a 8
+  referencia:
+    pt: Art. 2.º, n.os 2 a 8
+    en: Article 2(2) to (8)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -50,7 +59,9 @@ itens:
   nota: null
 - id: CRA-4-2
   acto_fonte: 32024R2847
-  referencia: Art. 4.º, n.º 2
+  referencia:
+    pt: Art. 4.º, n.º 2
+    en: Article 4(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -67,7 +78,9 @@ itens:
   nota: null
 - id: CRA-4-3
   acto_fonte: 32024R2847
-  referencia: Art. 4.º, n.os 3 e 4
+  referencia:
+    pt: Art. 4.º, n.os 3 e 4
+    en: Article 4(3) and (4)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -86,7 +99,9 @@ itens:
     en: Low priority; would fit in Ch. 11 (release management / feature flags).
 - id: CRA-6
   acto_fonte: 32024R2847
-  referencia: Art. 6.º
+  referencia:
+    pt: Art. 6.º
+    en: Article 6
   classe: engenharia
   forca: parcial
   contexto: null
@@ -142,7 +157,9 @@ itens:
   nota: null
 - id: CRA-7-1
   acto_fonte: 32024R2847
-  referencia: Art. 7.º, n.os 1 e 2
+  referencia:
+    pt: Art. 7.º, n.os 1 e 2
+    en: Article 7(1) and (2)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -161,7 +178,9 @@ itens:
     en: CLA-001 classifies by application risk, not by the regulatory category of the product; a regulatory attribute in the classification would suffice (Ch. 01).
 - id: CRA-8-1
   acto_fonte: 32024R2847
-  referencia: Art. 8.º, n.º 1
+  referencia:
+    pt: Art. 8.º, n.º 1
+    en: Article 8(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -178,7 +197,9 @@ itens:
   nota: null
 - id: CRA-11
   acto_fonte: 32024R2847
-  referencia: Art. 11.º
+  referencia:
+    pt: Art. 11.º
+    en: Article 11
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -195,7 +216,9 @@ itens:
   nota: null
 - id: CRA-12-1
   acto_fonte: 32024R2847
-  referencia: Art. 12.º, n.º 1
+  referencia:
+    pt: Art. 12.º, n.º 1
+    en: Article 12(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -228,7 +251,9 @@ itens:
     en: The patterns and the threat model for AI components produce useful evidence, but the presumption of conformity with Article 15 of the AI Act is demonstrated in the EU declaration (conformity level). The AI↔CRA convergence lives in the normative cross-check, not in the prescriptive chapters.
 - id: CRA-12-2a4
   acto_fonte: 32024R2847
-  referencia: Art. 12.º, n.os 2 a 4
+  referencia:
+    pt: Art. 12.º, n.os 2 a 4
+    en: Article 12(2) to (4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -245,7 +270,9 @@ itens:
   nota: null
 - id: CRA-13-1
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 1
+  referencia:
+    pt: Art. 13.º, n.º 1
+    en: Article 13(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -289,7 +316,9 @@ itens:
   nota: null
 - id: CRA-13-2
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 2
+  referencia:
+    pt: Art. 13.º, n.º 2
+    en: Article 13(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -340,7 +369,9 @@ itens:
     en: In a CRA product at level L1 there is no formal threat model; the classification covers the risk more weakly. It is recommended to require THR-001 for any CRA product regardless of level.
 - id: CRA-13-3
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 3
+  referencia:
+    pt: Art. 13.º, n.º 3
+    en: Article 13(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -374,7 +405,9 @@ itens:
   nota: null
 - id: CRA-13-4
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 4
+  referencia:
+    pt: Art. 13.º, n.º 4
+    en: Article 13(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -408,7 +441,9 @@ itens:
   nota: null
 - id: CRA-13-5
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 5
+  referencia:
+    pt: Art. 13.º, n.º 5
+    en: Article 13(5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -460,7 +495,9 @@ itens:
     en: At L1 due diligence is reduced to SCA/pinning; for a CRA product DEP-006 should be made mandatory.
 - id: CRA-13-6-a
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 6, 1.º período
+  referencia:
+    pt: Art. 13.º, n.º 6, 1.º período
+    en: Article 13(6), first sentence
   classe: engenharia
   forca: cobre
   contexto:
@@ -481,7 +518,9 @@ itens:
     en: Policy 12 §3 only refers to “upstream has not yet corrected it”.
 - id: CRA-13-6-b
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 6, 2.º período
+  referencia:
+    pt: Art. 13.º, n.º 6, 2.º período
+    en: Article 13(6), second sentence
   classe: engenharia
   forca: cobre
   contexto:
@@ -500,7 +539,9 @@ itens:
   nota: null
 - id: CRA-13-7
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 7
+  referencia:
+    pt: Art. 13.º, n.º 7
+    en: Article 13(7)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -550,7 +591,9 @@ itens:
     en: Systematic documentation exists as traceability of findings/CVE/decisions; updating the risk assessment on new third-party information is covered by the threat model triggers (L2/L3).
 - id: CRA-13-8-p1
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 8, 1.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 8, 1.º parágrafo
+    en: Article 13(8), first subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -605,7 +648,9 @@ itens:
   nota: null
 - id: CRA-13-8-p2
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 8, 2.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 8, 2.º parágrafo
+    en: Article 13(8), second subparagraph
   classe: organizacional
   forca: lacuna
   contexto:
@@ -626,7 +671,9 @@ itens:
     en: Gap acknowledged by the CRA cross-check itself; it is a prerequisite of 13-8-p1, 13-9, 13-19 and Annex II, point (7).
 - id: CRA-13-8-p3
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 8, 3.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 8, 3.º parágrafo
+    en: Article 13(8), third subparagraph
   classe: organizacional
   forca: lacuna
   contexto:
@@ -645,7 +692,9 @@ itens:
   nota: null
 - id: CRA-13-8-p5
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 8, 5.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 8, 5.º parágrafo
+    en: Article 13(8), fifth subparagraph
   classe: organizacional
   forca: lacuna
   contexto:
@@ -664,7 +713,9 @@ itens:
   nota: null
 - id: CRA-13-8-p6
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 8, 6.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 8, 6.º parágrafo
+    en: Article 13(8), sixth subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -721,7 +772,9 @@ itens:
   nota: null
 - id: CRA-13-9
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 9
+  referencia:
+    pt: Art. 13.º, n.º 9
+    en: Article 13(9)
   classe: engenharia
   forca: lacuna
   contexto:
@@ -742,7 +795,9 @@ itens:
     en: 'Tension: Policy 06 §10 sets the retention of “Build artefacts and SBOM” at “Per release / 1 year / 2 years”; the CRA note raises to 10 years only the SBOM and the evidence package, not the artefacts (the updates). The precedence clause (Policy 29 §7) avoids a formal contradiction, but the duty is not prescribed.'
 - id: CRA-13-10
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 10
+  referencia:
+    pt: Art. 13.º, n.º 10
+    en: Article 13(10)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -761,7 +816,9 @@ itens:
     en: Conditional option; low priority.
 - id: CRA-13-11
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 11
+  referencia:
+    pt: Art. 13.º, n.º 11
+    en: Article 13(11)
   classe: organizacional
   forca: lacuna
   contexto:
@@ -780,7 +837,9 @@ itens:
   nota: null
 - id: CRA-13-12-p1
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 12, 1.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 12, 1.º parágrafo
+    en: Article 13(12), first subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -815,7 +874,9 @@ itens:
     en: The Manual produces the inputs (per-release evidence, SBOM, architecture, threat model), but drawing up the CRA technical documentation is an act of the conformity route.
 - id: CRA-13-12-p2
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 12, 2.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 12, 2.º parágrafo
+    en: Article 13(12), second subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -849,7 +910,9 @@ itens:
     en: Conformity assessment (modules A, B+C, H) is legal/GRC level; the Manual provides evidence.
 - id: CRA-13-12-p3
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 12, 3.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 12, 3.º parágrafo
+    en: Article 13(12), third subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -866,7 +929,9 @@ itens:
   nota: null
 - id: CRA-13-13
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 13
+  referencia:
+    pt: Art. 13.º, n.º 13
+    en: Article 13(13)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -910,7 +975,9 @@ itens:
   nota: null
 - id: CRA-13-14
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 14
+  referencia:
+    pt: Art. 13.º, n.º 14
+    en: Article 13(14)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -959,7 +1026,9 @@ itens:
   nota: null
 - id: CRA-13-15
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 15
+  referencia:
+    pt: Art. 13.º, n.º 15
+    en: Article 13(15)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -995,7 +1064,9 @@ itens:
     en: Semantic versioning and release records provide the software identifier; affixing/indicating it to the user is market level.
 - id: CRA-13-16
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 16
+  referencia:
+    pt: Art. 13.º, n.º 16
+    en: Article 13(16)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1012,7 +1083,9 @@ itens:
   nota: null
 - id: CRA-13-17
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 17
+  referencia:
+    pt: Art. 13.º, n.º 17
+    en: Article 13(17)
   classe: organizacional
   forca: cobre
   contexto:
@@ -1039,7 +1112,9 @@ itens:
     en: 'Single point of contact, easily identifiable and included in the information to the user: floor CTX-CRA-P04.'
 - id: CRA-13-18
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 18
+  referencia:
+    pt: Art. 13.º, n.º 18
+    en: Article 13(18)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -1065,7 +1140,9 @@ itens:
   nota: null
 - id: CRA-13-19-p1
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 19, 1.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 19, 1.º parágrafo
+    en: Article 13(19), first subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1084,7 +1161,9 @@ itens:
     en: Depends on the determination of the support period, which is a gap (CRA-13-8-p2).
 - id: CRA-13-19-p2
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 19, 2.º parágrafo
+  referencia:
+    pt: Art. 13.º, n.º 19, 2.º parágrafo
+    en: Article 13(19), second subparagraph
   classe: engenharia
   forca: lacuna
   contexto:
@@ -1103,7 +1182,9 @@ itens:
   nota: null
 - id: CRA-13-20
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 20
+  referencia:
+    pt: Art. 13.º, n.º 20
+    en: Article 13(20)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1120,7 +1201,9 @@ itens:
   nota: null
 - id: CRA-13-21
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 21
+  referencia:
+    pt: Art. 13.º, n.º 21
+    en: Article 13(21)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1153,7 +1236,9 @@ itens:
     en: Removal of compromised versions and rollback are technical means; withdrawal/recall from the market and the decision to bring into conformity are market level.
 - id: CRA-13-22
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 22
+  referencia:
+    pt: Art. 13.º, n.º 22
+    en: Article 13(22)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1170,7 +1255,9 @@ itens:
   nota: null
 - id: CRA-13-23
   acto_fonte: 32024R2847
-  referencia: Art. 13.º, n.º 23
+  referencia:
+    pt: Art. 13.º, n.º 23
+    en: Article 13(23)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1187,7 +1274,9 @@ itens:
   nota: null
 - id: CRA-14-1
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 1
+  referencia:
+    pt: Art. 14.º, n.º 1
+    en: Article 14(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1239,7 +1328,9 @@ itens:
   nota: null
 - id: CRA-14-2-a
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 2, alínea a)
+  referencia:
+    pt: Art. 14.º, n.º 2, alínea a)
+    en: Article 14(2), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1274,7 +1365,9 @@ itens:
   nota: null
 - id: CRA-14-2-b
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 2, alínea b)
+  referencia:
+    pt: Art. 14.º, n.º 2, alínea b)
+    en: Article 14(2), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1300,7 +1393,9 @@ itens:
   nota: null
 - id: CRA-14-2-c
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 2, alínea c)
+  referencia:
+    pt: Art. 14.º, n.º 2, alínea c)
+    en: Article 14(2), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1326,7 +1421,9 @@ itens:
   nota: null
 - id: CRA-14-3
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.os 3 e 5
+  referencia:
+    pt: Art. 14.º, n.os 3 e 5
+    en: Article 14(3) and (5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1363,7 +1460,9 @@ itens:
   nota: null
 - id: CRA-14-4-a
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 4, alínea a)
+  referencia:
+    pt: Art. 14.º, n.º 4, alínea a)
+    en: Article 14(4), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1389,7 +1488,9 @@ itens:
   nota: null
 - id: CRA-14-4-b
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 4, alínea b)
+  referencia:
+    pt: Art. 14.º, n.º 4, alínea b)
+    en: Article 14(4), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1415,7 +1516,9 @@ itens:
   nota: null
 - id: CRA-14-4-c
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 4, alínea c)
+  referencia:
+    pt: Art. 14.º, n.º 4, alínea c)
+    en: Article 14(4), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1448,7 +1551,9 @@ itens:
   nota: null
 - id: CRA-14-6
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 6
+  referencia:
+    pt: Art. 14.º, n.º 6
+    en: Article 14(6)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1465,7 +1570,9 @@ itens:
   nota: null
 - id: CRA-14-7
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 7
+  referencia:
+    pt: Art. 14.º, n.º 7
+    en: Article 14(7)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -1491,7 +1598,9 @@ itens:
   nota: null
 - id: CRA-14-8
   acto_fonte: 32024R2847
-  referencia: Art. 14.º, n.º 8
+  referencia:
+    pt: Art. 14.º, n.º 8
+    en: Article 14(8)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1534,7 +1643,9 @@ itens:
     en: Does not prescribe a structured, machine-readable format (e.g. CSAF/VEX), which the law requires “where appropriate”.
 - id: CRA-15-1a2
   acto_fonte: 32024R2847
-  referencia: Art. 15.º, n.os 1 e 2
+  referencia:
+    pt: Art. 15.º, n.os 1 e 2
+    en: Article 15(1) and (2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1551,7 +1662,9 @@ itens:
   nota: null
 - id: CRA-17-2
   acto_fonte: 32024R2847
-  referencia: Art. 17.º, n.º 2
+  referencia:
+    pt: Art. 17.º, n.º 2
+    en: Article 17(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1577,7 +1690,9 @@ itens:
     en: The decision to inform the public at the request of the CSIRT depends on the authority; the Manual only defines who approves external communications.
 - id: CRA-18-1a2
   acto_fonte: 32024R2847
-  referencia: Art. 18.º, n.os 1 e 2
+  referencia:
+    pt: Art. 18.º, n.os 1 e 2
+    en: Article 18(1) and (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1594,7 +1709,9 @@ itens:
   nota: null
 - id: CRA-18-3
   acto_fonte: 32024R2847
-  referencia: Art. 18.º, n.º 3, proémio
+  referencia:
+    pt: Art. 18.º, n.º 3, proémio
+    en: Article 18(3), introductory wording
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1611,7 +1728,9 @@ itens:
   nota: null
 - id: CRA-18-3-a
   acto_fonte: 32024R2847
-  referencia: Art. 18.º, n.º 3, alínea a)
+  referencia:
+    pt: Art. 18.º, n.º 3, alínea a)
+    en: Article 18(3), point (a)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1628,7 +1747,9 @@ itens:
   nota: null
 - id: CRA-18-3-b
   acto_fonte: 32024R2847
-  referencia: Art. 18.º, n.º 3, alínea b)
+  referencia:
+    pt: Art. 18.º, n.º 3, alínea b)
+    en: Article 18(3), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1645,7 +1766,9 @@ itens:
   nota: null
 - id: CRA-18-3-c
   acto_fonte: 32024R2847
-  referencia: Art. 18.º, n.º 3, alínea c)
+  referencia:
+    pt: Art. 18.º, n.º 3, alínea c)
+    en: Article 18(3), point (c)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1662,7 +1785,9 @@ itens:
   nota: null
 - id: CRA-19-1
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 1
+  referencia:
+    pt: Art. 19.º, n.º 1
+    en: Article 19(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1679,7 +1804,9 @@ itens:
   nota: null
 - id: CRA-19-2-a
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 2, alínea a)
+  referencia:
+    pt: Art. 19.º, n.º 2, alínea a)
+    en: Article 19(2), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1696,7 +1823,9 @@ itens:
   nota: null
 - id: CRA-19-2-b
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 2, alínea b)
+  referencia:
+    pt: Art. 19.º, n.º 2, alínea b)
+    en: Article 19(2), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1713,7 +1842,9 @@ itens:
   nota: null
 - id: CRA-19-2-c
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 2, alínea c)
+  referencia:
+    pt: Art. 19.º, n.º 2, alínea c)
+    en: Article 19(2), point (c)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1730,7 +1861,9 @@ itens:
   nota: null
 - id: CRA-19-2-d
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 2, alínea d)
+  referencia:
+    pt: Art. 19.º, n.º 2, alínea d)
+    en: Article 19(2), point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1747,7 +1880,9 @@ itens:
   nota: null
 - id: CRA-19-2-p2
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 2, 2.º parágrafo
+  referencia:
+    pt: Art. 19.º, n.º 2, 2.º parágrafo
+    en: Article 19(2), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1764,7 +1899,9 @@ itens:
   nota: null
 - id: CRA-19-3-p1
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 3, 1.º parágrafo
+  referencia:
+    pt: Art. 19.º, n.º 3, 1.º parágrafo
+    en: Article 19(3), first subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1781,7 +1918,9 @@ itens:
   nota: null
 - id: CRA-19-3-p2
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 3, 2.º parágrafo
+  referencia:
+    pt: Art. 19.º, n.º 3, 2.º parágrafo
+    en: Article 19(3), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1798,7 +1937,9 @@ itens:
   nota: null
 - id: CRA-19-4
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 4
+  referencia:
+    pt: Art. 19.º, n.º 4
+    en: Article 19(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1815,7 +1956,9 @@ itens:
   nota: null
 - id: CRA-19-5-p1
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 5, 1.º parágrafo
+  referencia:
+    pt: Art. 19.º, n.º 5, 1.º parágrafo
+    en: Article 19(5), first subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1832,7 +1975,9 @@ itens:
   nota: null
 - id: CRA-19-6
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 6
+  referencia:
+    pt: Art. 19.º, n.º 6
+    en: Article 19(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1849,7 +1994,9 @@ itens:
   nota: null
 - id: CRA-19-7
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 7
+  referencia:
+    pt: Art. 19.º, n.º 7
+    en: Article 19(7)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1866,7 +2013,9 @@ itens:
   nota: null
 - id: CRA-19-8
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 8
+  referencia:
+    pt: Art. 19.º, n.º 8
+    en: Article 19(8)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1883,7 +2032,9 @@ itens:
   nota: null
 - id: CRA-20-1
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 1
+  referencia:
+    pt: Art. 20.º, n.º 1
+    en: Article 20(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1900,7 +2051,9 @@ itens:
   nota: null
 - id: CRA-20-2-a
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 2, alínea a)
+  referencia:
+    pt: Art. 20.º, n.º 2, alínea a)
+    en: Article 20(2), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1917,7 +2070,9 @@ itens:
   nota: null
 - id: CRA-20-2-b
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 2, alínea b)
+  referencia:
+    pt: Art. 20.º, n.º 2, alínea b)
+    en: Article 20(2), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1934,7 +2089,9 @@ itens:
   nota: null
 - id: CRA-20-3
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 3
+  referencia:
+    pt: Art. 20.º, n.º 3
+    en: Article 20(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1951,7 +2108,9 @@ itens:
   nota: null
 - id: CRA-20-4-p1
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 4, 1.º parágrafo
+  referencia:
+    pt: Art. 20.º, n.º 4, 1.º parágrafo
+    en: Article 20(4), first subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1968,7 +2127,9 @@ itens:
   nota: null
 - id: CRA-20-5
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 5
+  referencia:
+    pt: Art. 20.º, n.º 5
+    en: Article 20(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1985,7 +2146,9 @@ itens:
   nota: null
 - id: CRA-20-6
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 6
+  referencia:
+    pt: Art. 20.º, n.º 6
+    en: Article 20(6)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2002,7 +2165,9 @@ itens:
   nota: null
 - id: CRA-19-5-p2
   acto_fonte: 32024R2847
-  referencia: Art. 19.º, n.º 5, 2.º parágrafo
+  referencia:
+    pt: Art. 19.º, n.º 5, 2.º parágrafo
+    en: Article 19(5), second subparagraph
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2021,7 +2186,9 @@ itens:
     en: If the organisation is an importer, the Manual also has no track for reporting vulnerabilities to the manufacturer (analogous to gap CRA-13-6-a).
 - id: CRA-20-4-p2
   acto_fonte: 32024R2847
-  referencia: Art. 20.º, n.º 4, 2.º parágrafo
+  referencia:
+    pt: Art. 20.º, n.º 4, 2.º parágrafo
+    en: Article 20(4), second subparagraph
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2040,7 +2207,9 @@ itens:
     en: Likewise for distributors.
 - id: CRA-21
   acto_fonte: 32024R2847
-  referencia: Art. 21.º
+  referencia:
+    pt: Art. 21.º
+    en: Article 21
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2059,7 +2228,9 @@ itens:
     en: The Manual does not define “substantial modification”; ARC-009 (“significant change”) is the engineering analogue, not the legal concept.
 - id: CRA-22
   acto_fonte: 32024R2847
-  referencia: Art. 22.º
+  referencia:
+    pt: Art. 22.º
+    en: Article 22
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2076,7 +2247,9 @@ itens:
   nota: null
 - id: CRA-23
   acto_fonte: 32024R2847
-  referencia: Art. 23.º
+  referencia:
+    pt: Art. 23.º
+    en: Article 23
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2111,7 +2284,9 @@ itens:
     en: The supplier and dependency approval records support the identification of the operators; retention periods of 3–5 years fall short of the 10 years of Article 23(2).
 - id: CRA-24-1
   acto_fonte: 32024R2847
-  referencia: Art. 24.º, n.º 1
+  referencia:
+    pt: Art. 24.º, n.º 1
+    en: Article 24(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2128,7 +2303,9 @@ itens:
   nota: null
 - id: CRA-24-2
   acto_fonte: 32024R2847
-  referencia: Art. 24.º, n.º 2
+  referencia:
+    pt: Art. 24.º, n.º 2
+    en: Article 24(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2145,7 +2322,9 @@ itens:
   nota: null
 - id: CRA-52-3
   acto_fonte: 32024R2847
-  referencia: Art. 52.º, n.º 3
+  referencia:
+    pt: Art. 52.º, n.º 3
+    en: Article 52(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2162,7 +2341,9 @@ itens:
   nota: null
 - id: CRA-24-3
   acto_fonte: 32024R2847
-  referencia: Art. 24.º, n.º 3
+  referencia:
+    pt: Art. 24.º, n.º 3
+    en: Article 24(3)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2181,7 +2362,9 @@ itens:
     en: Policy 32 §6 is reusable by a steward, but its scope is the product “placed on the market by the organisation”.
 - id: CRA-28-1a2
   acto_fonte: 32024R2847
-  referencia: Art. 28.º, n.os 1 e 2
+  referencia:
+    pt: Art. 28.º, n.os 1 e 2
+    en: Article 28(1) and (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2198,7 +2381,9 @@ itens:
   nota: null
 - id: CRA-28-3
   acto_fonte: 32024R2847
-  referencia: Art. 28.º, n.º 3
+  referencia:
+    pt: Art. 28.º, n.º 3
+    en: Article 28(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2215,7 +2400,9 @@ itens:
   nota: null
 - id: CRA-28-4
   acto_fonte: 32024R2847
-  referencia: Art. 28.º, n.º 4
+  referencia:
+    pt: Art. 28.º, n.º 4
+    en: Article 28(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2232,7 +2419,9 @@ itens:
   nota: null
 - id: CRA-30-1
   acto_fonte: 32024R2847
-  referencia: Art. 30.º, n.os 1 e 2 (e art. 29.º)
+  referencia:
+    pt: Art. 30.º, n.os 1 e 2 (e art. 29.º)
+    en: Article 30(1) and (2) (and Article 29)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2249,7 +2438,9 @@ itens:
   nota: null
 - id: CRA-30-3a4
   acto_fonte: 32024R2847
-  referencia: Art. 30.º, n.os 3 e 4
+  referencia:
+    pt: Art. 30.º, n.os 3 e 4
+    en: Article 30(3) and (4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2266,7 +2457,9 @@ itens:
   nota: null
 - id: CRA-31-3a4
   acto_fonte: 32024R2847
-  referencia: Art. 31.º, n.os 3 e 4
+  referencia:
+    pt: Art. 31.º, n.os 3 e 4
+    en: Article 31(3) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2283,7 +2476,9 @@ itens:
   nota: null
 - id: CRA-32-1
   acto_fonte: 32024R2847
-  referencia: Art. 32.º, n.º 1
+  referencia:
+    pt: Art. 32.º, n.º 1
+    en: Article 32(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2300,7 +2495,9 @@ itens:
   nota: null
 - id: CRA-32-2
   acto_fonte: 32024R2847
-  referencia: Art. 32.º, n.º 2
+  referencia:
+    pt: Art. 32.º, n.º 2
+    en: Article 32(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2317,7 +2514,9 @@ itens:
   nota: null
 - id: CRA-32-3
   acto_fonte: 32024R2847
-  referencia: Art. 32.º, n.º 3
+  referencia:
+    pt: Art. 32.º, n.º 3
+    en: Article 32(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2334,7 +2533,9 @@ itens:
   nota: null
 - id: CRA-32-4
   acto_fonte: 32024R2847
-  referencia: Art. 32.º, n.º 4
+  referencia:
+    pt: Art. 32.º, n.º 4
+    en: Article 32(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2351,7 +2552,9 @@ itens:
   nota: null
 - id: CRA-32-5
   acto_fonte: 32024R2847
-  referencia: Art. 32.º, n.º 5
+  referencia:
+    pt: Art. 32.º, n.º 5
+    en: Article 32(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2368,7 +2571,9 @@ itens:
   nota: null
 - id: CRA-33-5
   acto_fonte: 32024R2847
-  referencia: Art. 33.º, n.º 5
+  referencia:
+    pt: Art. 33.º, n.º 5
+    en: Article 33(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2385,7 +2590,9 @@ itens:
   nota: null
 - id: CRA-58
   acto_fonte: 32024R2847
-  referencia: Art. 58.º
+  referencia:
+    pt: Art. 58.º
+    en: Article 58
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2402,7 +2609,9 @@ itens:
   nota: null
 - id: CRA-AnxV
   acto_fonte: 32024R2847
-  referencia: Anexo V
+  referencia:
+    pt: Anexo V
+    en: Annex V
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2419,7 +2628,9 @@ itens:
   nota: null
 - id: CRA-AnxVI
   acto_fonte: 32024R2847
-  referencia: Anexo VI
+  referencia:
+    pt: Anexo VI
+    en: Annex VI
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2436,7 +2647,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-7
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 7
+  referencia:
+    pt: Anexo VII, ponto 7
+    en: Annex VII, point 7
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2453,7 +2666,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PI-4
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte I (módulo A), pontos 4.1 e 4.2
+  referencia:
+    pt: Anexo VIII, parte I (módulo A), pontos 4.1 e 4.2
+    en: Annex VIII, Part I (module A), points 4.1 and 4.2
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2470,7 +2685,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PI-5
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte I (módulo A), ponto 5
+  referencia:
+    pt: Anexo VIII, parte I (módulo A), ponto 5
+    en: Annex VIII, Part I (module A), point 5
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2487,7 +2704,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PII-3
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte II (módulo B), ponto 3
+  referencia:
+    pt: Anexo VIII, parte II (módulo B), ponto 3
+    en: Annex VIII, Part II (module B), point 3
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2504,7 +2723,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PII-10
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte II (módulo B), ponto 10
+  referencia:
+    pt: Anexo VIII, parte II (módulo B), ponto 10
+    en: Annex VIII, Part II (module B), point 10
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2521,7 +2742,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PII-11
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte II (módulo B), ponto 11
+  referencia:
+    pt: Anexo VIII, parte II (módulo B), ponto 11
+    en: Annex VIII, Part II (module B), point 11
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2538,7 +2761,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIII-3
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte III (módulo C), pontos 3.1 e 3.2
+  referencia:
+    pt: Anexo VIII, parte III (módulo C), pontos 3.1 e 3.2
+    en: Annex VIII, Part III (module C), points 3.1 and 3.2
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2555,7 +2780,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIII-4
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte III (módulo C), ponto 4
+  referencia:
+    pt: Anexo VIII, parte III (módulo C), ponto 4
+    en: Annex VIII, Part III (module C), point 4
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2572,7 +2799,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-3.1
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 3.1
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 3.1
+    en: Annex VIII, Part IV (module H), point 3.1
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2589,7 +2818,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-4.2
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 4.2
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 4.2
+    en: Annex VIII, Part IV (module H), point 4.2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2606,7 +2837,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-5
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), pontos 5.1 e 5.2
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), pontos 5.1 e 5.2
+    en: Annex VIII, Part IV (module H), points 5.1 and 5.2
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2623,7 +2856,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-6
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 6
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 6
+    en: Annex VIII, Part IV (module H), point 6
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2640,7 +2875,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-8
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 8
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 8
+    en: Annex VIII, Part IV (module H), point 8
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2657,7 +2894,9 @@ itens:
   nota: null
 - id: CRA-AnxII-6
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 6
+  referencia:
+    pt: Anexo II, ponto 6
+    en: Annex II, point 6
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2674,7 +2913,9 @@ itens:
   nota: null
 - id: CRA-31-1
   acto_fonte: 32024R2847
-  referencia: Art. 31.º, n.º 1
+  referencia:
+    pt: Art. 31.º, n.º 1
+    en: Article 31(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2718,7 +2959,9 @@ itens:
     en: Architecture, threat model, SBOM and test evidence are Annex VII content; assembling the technical documentation is an act of the conformity route.
 - id: CRA-31-2
   acto_fonte: 32024R2847
-  referencia: Art. 31.º, n.º 2
+  referencia:
+    pt: Art. 31.º, n.º 2
+    en: Article 31(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2751,7 +2994,9 @@ itens:
     en: Versioned artefacts updated by trigger support the continuous updating of the technical documentation.
 - id: CRA-53
   acto_fonte: 32024R2847
-  referencia: Art. 53.º
+  referencia:
+    pt: Art. 53.º
+    en: Article 53
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2768,7 +3013,9 @@ itens:
   nota: null
 - id: CRA-54-1-4
   acto_fonte: 32024R2847
-  referencia: Art. 54.º, n.º 1 (1.º parágrafo, 2.º período) e n.º 4
+  referencia:
+    pt: Art. 54.º, n.º 1 (1.º parágrafo, 2.º período) e n.º 4
+    en: Article 54(1) (first subparagraph, second sentence) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2785,7 +3032,9 @@ itens:
   nota: null
 - id: CRA-56-3
   acto_fonte: 32024R2847
-  referencia: Art. 56.º, n.º 3 (último período)
+  referencia:
+    pt: Art. 56.º, n.º 3 (último período)
+    en: Article 56(3) (last sentence)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2802,7 +3051,9 @@ itens:
   nota: null
 - id: CRA-57-2-7
   acto_fonte: 32024R2847
-  referencia: Art. 57.º, n.os 2 e 7 (último período)
+  referencia:
+    pt: Art. 57.º, n.os 2 e 7 (último período)
+    en: Article 57(2) and (7) (last sentence)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2819,7 +3070,9 @@ itens:
   nota: null
 - id: CRA-64-2
   acto_fonte: 32024R2847
-  referencia: Art. 64.º, n.º 2
+  referencia:
+    pt: Art. 64.º, n.º 2
+    en: Article 64(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2836,7 +3089,9 @@ itens:
   nota: null
 - id: CRA-64-3
   acto_fonte: 32024R2847
-  referencia: Art. 64.º, n.º 3
+  referencia:
+    pt: Art. 64.º, n.º 3
+    en: Article 64(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2853,7 +3108,9 @@ itens:
   nota: null
 - id: CRA-64-4
   acto_fonte: 32024R2847
-  referencia: Art. 64.º, n.º 4
+  referencia:
+    pt: Art. 64.º, n.º 4
+    en: Article 64(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2870,7 +3127,9 @@ itens:
   nota: null
 - id: CRA-64-10
   acto_fonte: 32024R2847
-  referencia: Art. 64.º, n.º 10
+  referencia:
+    pt: Art. 64.º, n.º 10
+    en: Article 64(10)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2887,7 +3146,9 @@ itens:
   nota: null
 - id: CRA-65
   acto_fonte: 32024R2847
-  referencia: Art. 65.º
+  referencia:
+    pt: Art. 65.º
+    en: Article 65
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2904,7 +3165,9 @@ itens:
   nota: null
 - id: CRA-69-1
   acto_fonte: 32024R2847
-  referencia: Art. 69.º, n.º 1
+  referencia:
+    pt: Art. 69.º, n.º 1
+    en: Article 69(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2921,7 +3184,9 @@ itens:
   nota: null
 - id: CRA-69-2
   acto_fonte: 32024R2847
-  referencia: Art. 69.º, n.º 2
+  referencia:
+    pt: Art. 69.º, n.º 2
+    en: Article 69(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2938,7 +3203,9 @@ itens:
   nota: null
 - id: CRA-71-2
   acto_fonte: 32024R2847
-  referencia: Art. 71.º, n.º 2
+  referencia:
+    pt: Art. 71.º, n.º 2
+    en: Article 71(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2955,7 +3222,9 @@ itens:
   nota: null
 - id: CRA-69-3
   acto_fonte: 32024R2847
-  referencia: Art. 69.º, n.º 3
+  referencia:
+    pt: Art. 69.º, n.º 3
+    en: Article 69(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2981,7 +3250,9 @@ itens:
     en: Policy 32 §6 applies the track to any product placed on the market by the organisation, without limiting by date of placing; it does not say so expressly.
 - id: CRA-AnxI-P1-1
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 1
+  referencia:
+    pt: Anexo I, parte I, ponto 1
+    en: Annex I, Part I, point 1
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3022,7 +3293,9 @@ itens:
     en: The principle of proportionality to risk is the Manual's axis; the concrete adequacy depends on the gaps in the points of point (2).
 - id: CRA-AnxI-P1-2a
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea a)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea a)
+    en: Annex I, Part I, point 2(a)
   classe: engenharia
   forca: parcial
   contexto:
@@ -3087,7 +3360,9 @@ itens:
     en: 'See contradictions: tension with the exceptions policy.'
 - id: CRA-AnxI-P1-2b
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea b)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea b)
+    en: Annex I, Part I, point 2(b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3129,7 +3404,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2c
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea c)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea c)
+    en: Annex I, Part I, point 2(c)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3150,7 +3427,9 @@ itens:
     en: Policy 13 (“Automatic Update”) deals with dependency bots (Renovate/Dependabot) in the repository, not with updating the product at the user; in SaaS, Ch. 11 covers deployment by the manufacturer itself.
 - id: CRA-AnxI-P1-2d
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea d)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea d)
+    en: Annex I, Part I, point 2(d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3199,7 +3478,9 @@ itens:
     en: At L1, notifying the user of unauthorised access (AUT-010) is not mandatory.
 - id: CRA-AnxI-P1-2e
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea e)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea e)
+    en: Annex I, Part I, point 2(e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3238,7 +3519,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2f
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea f)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea f)
+    en: Annex I, Part I, point 2(f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3303,7 +3586,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2g
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea g)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea g)
+    en: Annex I, Part I, point 2(g)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3328,7 +3613,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2h
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea h)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea h)
+    en: Annex I, Part I, point 2(h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3386,7 +3673,9 @@ itens:
     en: Does not explicitly identify the “essential and basic functions” to be preserved.
 - id: CRA-AnxI-P1-2i
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea i)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea i)
+    en: Annex I, Part I, point 2(i)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3419,7 +3708,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2j
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea j)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea j)
+    en: Annex I, Part I, point 2(j)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3467,7 +3758,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2k
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea k)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea k)
+    en: Annex I, Part I, point 2(k)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3514,7 +3807,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2l
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea l)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea l)
+    en: Annex I, Part I, point 2(l)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3555,7 +3850,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P1-2m
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte I, ponto 2, alínea m)
+  referencia:
+    pt: Anexo I, parte I, ponto 2, alínea m)
+    en: Annex I, Part I, point 2(m)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3580,7 +3877,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-1
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 1
+  referencia:
+    pt: Anexo I, parte II, ponto 1
+    en: Annex I, Part II, point 1
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3620,7 +3919,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-2
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 2
+  referencia:
+    pt: Anexo I, parte II, ponto 2
+    en: Annex I, Part II, point 2
   classe: engenharia
   forca: cobre
   contexto:
@@ -3664,7 +3965,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-3
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 3
+  referencia:
+    pt: Anexo I, parte II, ponto 3
+    en: Annex I, Part II, point 3
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3704,7 +4007,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-4
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 4
+  referencia:
+    pt: Anexo I, parte II, ponto 4
+    en: Annex I, Part II, point 4
   classe: engenharia
   forca: cobre
   contexto:
@@ -3741,7 +4046,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-5
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 5
+  referencia:
+    pt: Anexo I, parte II, ponto 5
+    en: Annex I, Part II, point 5
   classe: engenharia
   forca: cobre
   contexto:
@@ -3766,7 +4073,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-6
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 6
+  referencia:
+    pt: Anexo I, parte II, ponto 6
+    en: Annex I, Part II, point 6
   classe: engenharia
   forca: cobre
   contexto:
@@ -3791,7 +4100,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-7
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 7
+  referencia:
+    pt: Anexo I, parte II, ponto 7
+    en: Annex I, Part II, point 7
   classe: engenharia
   forca: cobre
   contexto:
@@ -3842,7 +4153,9 @@ itens:
   nota: null
 - id: CRA-AnxI-P2-8
   acto_fonte: 32024R2847
-  referencia: Anexo I, parte II, ponto 8
+  referencia:
+    pt: Anexo I, parte II, ponto 8
+    en: Annex I, Part II, point 8
   classe: engenharia
   forca: cobre
   contexto:
@@ -3861,7 +4174,9 @@ itens:
   nota: null
 - id: CRA-AnxII-1
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 1
+  referencia:
+    pt: Anexo II, ponto 1
+    en: Annex II, point 1
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3878,7 +4193,9 @@ itens:
   nota: null
 - id: CRA-AnxII-2
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 2
+  referencia:
+    pt: Anexo II, ponto 2
+    en: Annex II, point 2
   classe: engenharia
   forca: cobre
   contexto:
@@ -3905,7 +4222,9 @@ itens:
     en: 'Stating the point of contact and the disclosure policy to the user: floor CTX-CRA-P04.'
 - id: CRA-AnxII-3
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 3
+  referencia:
+    pt: Anexo II, ponto 3
+    en: Annex II, point 3
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3932,7 +4251,9 @@ itens:
     en: Versioning provides the unique identifier; indicating it to the user is market level.
 - id: CRA-AnxII-4
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 4
+  referencia:
+    pt: Anexo II, ponto 4
+    en: Annex II, point 4
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -3966,7 +4287,9 @@ itens:
     en: The solution sheet and the trust zones describe environment and security properties, but for internal use; there is no user information artefact.
 - id: CRA-AnxII-5
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 5
+  referencia:
+    pt: Anexo II, ponto 5
+    en: Annex II, point 5
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4001,7 +4324,9 @@ itens:
     en: Abuse/misuse cases and the threat model identify foreseeable misuse; turning them into information for the user is missing.
 - id: CRA-AnxII-7
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 7
+  referencia:
+    pt: Anexo II, ponto 7
+    en: Annex II, point 7
   classe: organizacional
   forca: lacuna
   contexto:
@@ -4020,7 +4345,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8a
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea a)
+  referencia:
+    pt: Anexo II, ponto 8, alínea a)
+    en: Annex II, point 8(a)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -4037,7 +4364,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8b
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea b)
+  referencia:
+    pt: Anexo II, ponto 8, alínea b)
+    en: Annex II, point 8(b)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -4054,7 +4383,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8c
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea c)
+  referencia:
+    pt: Anexo II, ponto 8, alínea c)
+    en: Annex II, point 8(c)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4073,7 +4404,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8d
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea d)
+  referencia:
+    pt: Anexo II, ponto 8, alínea d)
+    en: Annex II, point 8(d)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -4090,7 +4423,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8e
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea e)
+  referencia:
+    pt: Anexo II, ponto 8, alínea e)
+    en: Annex II, point 8(e)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4109,7 +4444,9 @@ itens:
   nota: null
 - id: CRA-AnxII-8f
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 8, alínea f)
+  referencia:
+    pt: Anexo II, ponto 8, alínea f)
+    en: Annex II, point 8(f)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4142,7 +4479,9 @@ itens:
     en: SBOM attached to the release supports the integrator; the information package for the integrator to comply with Annexes I and VII is missing.
 - id: CRA-AnxII-9
   acto_fonte: 32024R2847
-  referencia: Anexo II, ponto 9
+  referencia:
+    pt: Anexo II, ponto 9
+    en: Annex II, point 9
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4167,7 +4506,9 @@ itens:
   nota: null
 - id: CRA-AnxIII-I
   acto_fonte: 32024R2847
-  referencia: Anexo III, classe I
+  referencia:
+    pt: Anexo III, classe I
+    en: Annex III, classe I
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4186,7 +4527,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-AnxIII-II
   acto_fonte: 32024R2847
-  referencia: Anexo III, classe II
+  referencia:
+    pt: Anexo III, classe II
+    en: Annex III, classe II
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4205,7 +4548,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-AnxIV
   acto_fonte: 32024R2847
-  referencia: Anexo IV
+  referencia:
+    pt: Anexo IV
+    en: Annex IV
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4224,7 +4569,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-R2025-2392-2
   acto_fonte: 32025R2392
-  referencia: Reg. de Execução (UE) 2025/2392, arts. 1.º e 2.º
+  referencia:
+    pt: Reg. de Execução (UE) 2025/2392, arts. 1.º e 2.º
+    en: Implementing Regulation (EU) 2025/2392, Articles 1 and 2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4243,7 +4590,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-R2025-2392-AnxI-CI
   acto_fonte: 32025R2392
-  referencia: Reg. de Execução (UE) 2025/2392, anexo I, classe I
+  referencia:
+    pt: Reg. de Execução (UE) 2025/2392, anexo I, classe I
+    en: Implementing Regulation (EU) 2025/2392, Annex I, classe I
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4262,7 +4611,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-R2025-2392-AnxI-CII
   acto_fonte: 32025R2392
-  referencia: Reg. de Execução (UE) 2025/2392, anexo I, classe II
+  referencia:
+    pt: Reg. de Execução (UE) 2025/2392, anexo I, classe II
+    en: Implementing Regulation (EU) 2025/2392, Annex I, classe II
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4281,7 +4632,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-R2025-2392-AnxII
   acto_fonte: 32025R2392
-  referencia: Reg. de Execução (UE) 2025/2392, anexo II
+  referencia:
+    pt: Reg. de Execução (UE) 2025/2392, anexo II
+    en: Implementing Regulation (EU) 2025/2392, Annex II
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4300,7 +4653,9 @@ itens:
     en: The identification of the category in the classification process is dealt with in CRA-7-1 (gap).
 - id: CRA-R2025-1535-1
   acto_fonte: 32025R1535
-  referencia: Reg. Delegado (UE) 2025/1535, art. 1.º
+  referencia:
+    pt: Reg. Delegado (UE) 2025/1535, art. 1.º
+    en: Delegated Regulation (EU) 2025/1535, Article 1
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4317,7 +4672,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-1
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 1
+  referencia:
+    pt: Anexo VII, ponto 1
+    en: Annex VII, point 1
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4353,7 +4710,9 @@ itens:
     en: Purpose, software versions and instructions are not produced as a general description of the product.
 - id: CRA-AnxVII-2a
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 2, alínea a)
+  referencia:
+    pt: Anexo VII, ponto 2, alínea a)
+    en: Annex VII, point 2(a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4393,7 +4752,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-2b
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 2, alínea b)
+  referencia:
+    pt: Anexo VII, ponto 2, alínea b)
+    en: Annex VII, point 2(b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4443,7 +4804,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-2c
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 2, alínea c)
+  referencia:
+    pt: Anexo VII, ponto 2, alínea c)
+    en: Annex VII, point 2(c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4483,7 +4846,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-3
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 3
+  referencia:
+    pt: Anexo VII, ponto 3
+    en: Annex VII, point 3
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4516,7 +4881,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-4
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 4
+  referencia:
+    pt: Anexo VII, ponto 4
+    en: Annex VII, point 4
   classe: organizacional
   forca: cobre
   contexto:
@@ -4535,7 +4902,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-5
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 5
+  referencia:
+    pt: Anexo VII, ponto 5
+    en: Annex VII, point 5
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4552,7 +4921,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-6
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 6
+  referencia:
+    pt: Anexo VII, ponto 6
+    en: Annex VII, point 6
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4586,7 +4957,9 @@ itens:
   nota: null
 - id: CRA-AnxVII-8
   acto_fonte: 32024R2847
-  referencia: Anexo VII, ponto 8
+  referencia:
+    pt: Anexo VII, ponto 8
+    en: Annex VII, point 8
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4621,7 +4994,9 @@ itens:
     en: The Manual provides for retaining the SBOM and making it available in audits; the reasoned request is the authority's.
 - id: CRA-AnxVIII-PI-2
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte I (módulo A), ponto 2
+  referencia:
+    pt: Anexo VIII, parte I (módulo A), ponto 2
+    en: Annex VIII, Part I (module A), point 2
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4645,7 +5020,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PI-3
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte I (módulo A), ponto 3
+  referencia:
+    pt: Anexo VIII, parte I (módulo A), ponto 3
+    en: Annex VIII, Part I (module A), point 3
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4700,7 +5077,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PII-7
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte II (módulo B), ponto 7, 2.º parágrafo
+  referencia:
+    pt: Anexo VIII, parte II (módulo B), ponto 7, 2.º parágrafo
+    en: Annex VIII, Part II (module B), point 7, second subparagraph
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4733,7 +5112,9 @@ itens:
     en: The change triggers make it possible to detect relevant modifications; communication to the notified body is conformity level.
 - id: CRA-AnxVIII-PIII-2
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte III (módulo C), ponto 2
+  referencia:
+    pt: Anexo VIII, parte III (módulo C), ponto 2
+    en: Annex VIII, Part III (module C), point 2
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4767,7 +5148,9 @@ itens:
     en: For software, promoting exactly the tested artefact is the equivalent of production in conformity with the approved type.
 - id: CRA-AnxVIII-PIV-2
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 2
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 2
+    en: Annex VIII, Part IV (module H), point 2
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4798,7 +5181,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-3.2
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), ponto 3.2
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), ponto 3.2
+    en: Annex VIII, Part IV (module H), point 3.2
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4857,7 +5242,9 @@ itens:
   nota: null
 - id: CRA-AnxVIII-PIV-3.4a3.5
   acto_fonte: 32024R2847
-  referencia: Anexo VIII, parte IV (módulo H), pontos 3.4 e 3.5
+  referencia:
+    pt: Anexo VIII, parte IV (módulo H), pontos 3.4 e 3.5
+    en: Annex VIII, Part IV (module H), points 3.4 and 3.5
   classe: organizacional
   forca: apoia_evidencia
   contexto: null

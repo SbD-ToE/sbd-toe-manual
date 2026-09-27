@@ -17,7 +17,9 @@ regra_substitui:
 itens:
 - id: DORA-4-1
   acto_fonte: 32022R2554
-  referencia: art. 4.º, n.º 1
+  referencia:
+    pt: art. 4.º, n.º 1
+    en: Article 4(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -51,7 +53,9 @@ itens:
     en: The Manual applies proportionality by application risk level (L1–L3), not by the entity size/profile criteria of Article 4.
 - id: DORA-4-2
   acto_fonte: 32022R2554
-  referencia: art. 4.º, n.º 2
+  referencia:
+    pt: art. 4.º, n.º 2
+    en: Article 4(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -85,7 +89,9 @@ itens:
     en: Same as 4-1.
 - id: DORA-5-1
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 1
+  referencia:
+    pt: art. 5.º, n.º 1
+    en: Article 5(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -119,7 +125,9 @@ itens:
     en: Security governance model approved by senior management supports the framework; the cross-check acknowledges that the Manual does not set the hierarchical level.
 - id: DORA-5-2
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, 1.º parágrafo
+  referencia:
+    pt: art. 5.º, n.º 2, 1.º parágrafo
+    en: Article 5(2), first subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -151,7 +159,9 @@ itens:
   nota: null
 - id: DORA-5-2-a
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. a)
+  referencia:
+    pt: art. 5.º, n.º 2, al. a)
+    en: Article 5(2), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -176,7 +186,9 @@ itens:
     en: Ultimate responsibility is corporate; the Manual provides the approved model and the traceability of decisions (GOV-009).
 - id: DORA-5-2-b
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. b)
+  referencia:
+    pt: art. 5.º, n.º 2, al. b)
+    en: Article 5(2), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -210,7 +222,9 @@ itens:
     en: The Manual's set of 39 policies is raw material for the required policies; approval/accountability lies with the body.
 - id: DORA-5-2-c
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. c)
+  referencia:
+    pt: art. 5.º, n.º 2, al. c)
+    en: Article 5(2), point (c)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -243,7 +257,9 @@ itens:
     en: Roles and approval authorities per application/level; does not cover the assignment of roles in the entity's ICT functions.
 - id: DORA-5-2-d
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. d)
+  referencia:
+    pt: art. 5.º, n.º 2, al. d)
+    en: Article 5(2), point (d)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -269,7 +285,9 @@ itens:
     en: The acceptance thresholds per level serve as a proxy for risk tolerance to be approved by the body.
 - id: DORA-5-2-e
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. e)
+  referencia:
+    pt: art. 5.º, n.º 2, al. e)
+    en: Article 5(2), point (e)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -295,7 +313,9 @@ itens:
   nota: null
 - id: DORA-5-2-f
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. f)
+  referencia:
+    pt: art. 5.º, n.º 2, al. f)
+    en: Article 5(2), point (f)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -312,7 +332,9 @@ itens:
   nota: null
 - id: DORA-5-2-g
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. g)
+  referencia:
+    pt: art. 5.º, n.º 2, al. g)
+    en: Article 5(2), point (g)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -329,7 +351,9 @@ itens:
   nota: null
 - id: DORA-5-2-h
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. h)
+  referencia:
+    pt: art. 5.º, n.º 2, al. h)
+    en: Article 5(2), point (h)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -363,7 +387,9 @@ itens:
     en: A secure procurement policy exists; the DORA distinction of services supporting FCI is missing.
 - id: DORA-5-2-i
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 2, al. i)
+  referencia:
+    pt: art. 5.º, n.º 2, al. i)
+    en: Article 5(2), point (i)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -398,7 +424,9 @@ itens:
     en: Periodic reports to executive management and communication of P1 incidents to management; not specific to ICT third parties.
 - id: DORA-5-3
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 3
+  referencia:
+    pt: art. 5.º, n.º 3
+    en: Article 5(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -415,7 +443,9 @@ itens:
   nota: null
 - id: DORA-5-4
   acto_fonte: 32022R2554
-  referencia: art. 5.º, n.º 4
+  referencia:
+    pt: art. 5.º, n.º 4
+    en: Article 5(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -441,7 +471,9 @@ itens:
   nota: null
 - id: DORA-6-1
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 1
+  referencia:
+    pt: art. 6.º, n.º 1
+    en: Article 6(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -493,7 +525,9 @@ itens:
     en: The Manual provides the application component of the framework (risk classification, acceptance and review); the DORA framework belongs to the whole entity.
 - id: DORA-6-2
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 2
+  referencia:
+    pt: art. 6.º, n.º 2
+    en: Article 6(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -536,7 +570,9 @@ itens:
     en: Covers software, pipelines, IaC and containers.
 - id: DORA-6-3
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 3, 1.º per.
+  referencia:
+    pt: art. 6.º, n.º 3, 1.º per.
+    en: Article 6(3), first sentence
   classe: engenharia
   forca: parcial
   contexto: null
@@ -570,7 +606,9 @@ itens:
   nota: null
 - id: DORA-6-3-p2
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 3, 2.º per.
+  referencia:
+    pt: art. 6.º, n.º 3, 2.º per.
+    en: Article 6(3), second sentence
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -587,7 +625,9 @@ itens:
   nota: null
 - id: DORA-6-4
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 4
+  referencia:
+    pt: art. 6.º, n.º 4
+    en: Article 6(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -604,7 +644,9 @@ itens:
   nota: null
 - id: DORA-6-5
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 5
+  referencia:
+    pt: art. 6.º, n.º 5
+    en: Article 6(5)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -629,7 +671,9 @@ itens:
     en: Periodic review cycles; reporting to the authority upon request is regulatory level.
 - id: DORA-6-6
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 6
+  referencia:
+    pt: art. 6.º, n.º 6
+    en: Article 6(6)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -655,7 +699,9 @@ itens:
     en: Report for audit provided for; internal audit itself is an organisational function.
 - id: DORA-6-7
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 7
+  referencia:
+    pt: art. 6.º, n.º 7
+    en: Article 6(7)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -678,7 +724,9 @@ itens:
   nota: null
 - id: DORA-6-8
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, proémio
+  referencia:
+    pt: art. 6.º, n.º 8, proémio
+    en: Article 6(8), introductory wording
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -710,7 +758,9 @@ itens:
   nota: null
 - id: DORA-6-8-a
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. a)
+  referencia:
+    pt: art. 6.º, n.º 8, al. a)
+    en: Article 6(8), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -733,7 +783,9 @@ itens:
   nota: null
 - id: DORA-6-8-b
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. b)
+  referencia:
+    pt: art. 6.º, n.º 8, al. b)
+    en: Article 6(8), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -766,7 +818,9 @@ itens:
   nota: null
 - id: DORA-6-8-c
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. c)
+  referencia:
+    pt: art. 6.º, n.º 8, al. c)
+    en: Article 6(8), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -802,7 +856,9 @@ itens:
     en: Governance KPIs (GOV-011, L2+) and eight executive KRIs.
 - id: DORA-6-8-d
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. d)
+  referencia:
+    pt: art. 6.º, n.º 8, al. d)
+    en: Article 6(8), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -835,7 +891,9 @@ itens:
   nota: null
 - id: DORA-6-8-e
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. e)
+  referencia:
+    pt: art. 6.º, n.º 8, al. e)
+    en: Article 6(8), point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -877,7 +935,9 @@ itens:
   nota: null
 - id: DORA-6-8-f
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. f)
+  referencia:
+    pt: art. 6.º, n.º 8, al. f)
+    en: Article 6(8), point (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -901,7 +961,9 @@ itens:
   nota: null
 - id: DORA-6-8-g
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. g)
+  referencia:
+    pt: art. 6.º, n.º 8, al. g)
+    en: Article 6(8), point (g)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -926,7 +988,9 @@ itens:
   nota: null
 - id: DORA-6-8-h
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 8, al. h)
+  referencia:
+    pt: art. 6.º, n.º 8, al. h)
+    en: Article 6(8), point (h)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -952,7 +1016,9 @@ itens:
     en: The IRP includes the DORA regulatory track with deadlines.
 - id: DORA-6-10
   acto_fonte: 32022R2554
-  referencia: art. 6.º, n.º 10
+  referencia:
+    pt: art. 6.º, n.º 10
+    en: Article 6(10)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -969,7 +1035,9 @@ itens:
   nota: null
 - id: DORA-7
   acto_fonte: 32022R2554
-  referencia: art. 7.º, als. a) a d)
+  referencia:
+    pt: art. 7.º, als. a) a d)
+    en: Article 7, points (a) to (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1002,7 +1070,9 @@ itens:
   nota: null
 - id: DORA-8-1
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 1
+  referencia:
+    pt: art. 8.º, n.º 1
+    en: Article 8(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1053,7 +1123,9 @@ itens:
     en: 'Annual review at L1 meets the floor (“at least annual”): CLA-005, Policy 02 §5 and Policy 04 §3.1.'
 - id: DORA-8-2
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 2
+  referencia:
+    pt: art. 8.º, n.º 2
+    en: Article 8(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1096,7 +1168,9 @@ itens:
   nota: null
 - id: DORA-8-3
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 3
+  referencia:
+    pt: art. 8.º, n.º 3
+    en: Article 8(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1146,7 +1220,9 @@ itens:
     en: Mandatory review triggers (architecture, integration, AI, incident) with deadlines.
 - id: DORA-8-4
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 4
+  referencia:
+    pt: art. 8.º, n.º 4
+    en: Article 8(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1195,7 +1271,9 @@ itens:
   nota: null
 - id: DORA-8-5
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 5
+  referencia:
+    pt: art. 8.º, n.º 5
+    en: Article 8(5)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1228,7 +1306,9 @@ itens:
   nota: null
 - id: DORA-8-6
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 6
+  referencia:
+    pt: art. 8.º, n.º 6
+    en: Article 8(6)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1262,7 +1342,9 @@ itens:
   nota: null
 - id: DORA-8-7
   acto_fonte: 32022R2554
-  referencia: art. 8.º, n.º 7
+  referencia:
+    pt: art. 8.º, n.º 7
+    en: Article 8(7)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1297,7 +1379,9 @@ itens:
   nota: null
 - id: DORA-9-1
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 1
+  referencia:
+    pt: art. 9.º, n.º 1
+    en: Article 9(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1339,7 +1423,9 @@ itens:
     en: Baseline requires monitoring of anomalies in all services; automatic alerts from L2 onwards.
 - id: DORA-9-2
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 2
+  referencia:
+    pt: art. 9.º, n.º 2
+    en: Article 9(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1380,7 +1466,9 @@ itens:
   nota: null
 - id: DORA-9-3-a
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 3, al. a)
+  referencia:
+    pt: art. 9.º, n.º 3, al. a)
+    en: Article 9(3), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1419,7 +1507,9 @@ itens:
   nota: null
 - id: DORA-9-3-b
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 3, al. b)
+  referencia:
+    pt: art. 9.º, n.º 3, al. b)
+    en: Article 9(3), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1460,7 +1550,9 @@ itens:
   nota: null
 - id: DORA-9-3-c
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 3, al. c)
+  referencia:
+    pt: art. 9.º, n.º 3, al. c)
+    en: Article 9(3), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1501,7 +1593,9 @@ itens:
   nota: null
 - id: DORA-9-3-d
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 3, al. d)
+  referencia:
+    pt: art. 9.º, n.º 3, al. d)
+    en: Article 9(3), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1543,7 +1637,9 @@ itens:
   nota: null
 - id: DORA-9-4-a
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. a)
+  referencia:
+    pt: art. 9.º, n.º 4, al. a)
+    en: Article 9(4), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1568,7 +1664,9 @@ itens:
     en: The Manual offers thematic policies; not a master information security policy of the entity.
 - id: DORA-9-4-b
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. b), e 2.º parágrafo
+  referencia:
+    pt: art. 9.º, n.º 4, al. b), e 2.º parágrafo
+    en: Article 9(4), point (b), and second subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1618,7 +1716,9 @@ itens:
   nota: null
 - id: DORA-9-4-c
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. c)
+  referencia:
+    pt: art. 9.º, n.º 4, al. c)
+    en: Article 9(4), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1659,7 +1759,9 @@ itens:
   nota: null
 - id: DORA-9-4-d
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. d)
+  referencia:
+    pt: art. 9.º, n.º 4, al. d)
+    en: Article 9(4), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1717,7 +1819,9 @@ itens:
     en: See RTS 2024/1774 Article 21, point (f)(ii), for the detail (MFA).
 - id: DORA-9-4-e
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. e), e 3.º parágrafo
+  referencia:
+    pt: art. 9.º, n.º 4, al. e), e 3.º parágrafo
+    en: Article 9(4), point (e), and third subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1777,7 +1881,9 @@ itens:
     en: Robust management of software, configuration and IaC changes.
 - id: DORA-9-4-f
   acto_fonte: 32022R2554
-  referencia: art. 9.º, n.º 4, al. f)
+  referencia:
+    pt: art. 9.º, n.º 4, al. f)
+    en: Article 9(4), point (f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1829,7 +1935,9 @@ itens:
   nota: null
 - id: DORA-10-1
   acto_fonte: 32022R2554
-  referencia: art. 10.º, n.º 1
+  referencia:
+    pt: art. 10.º, n.º 1
+    en: Article 10(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1871,7 +1979,9 @@ itens:
   nota: null
 - id: DORA-10-1-p2
   acto_fonte: 32022R2554
-  referencia: art. 10.º, n.º 1, 2.º parágrafo
+  referencia:
+    pt: art. 10.º, n.º 1, 2.º parágrafo
+    en: Article 10(1), second subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1905,7 +2015,9 @@ itens:
     en: Periodic simulation of events and IR exercises.
 - id: DORA-10-2
   acto_fonte: 32022R2554
-  referencia: art. 10.º, n.º 2
+  referencia:
+    pt: art. 10.º, n.º 2
+    en: Article 10(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1947,7 +2059,9 @@ itens:
     en: Thresholds, IRP activation criteria and automatic alerts; multi-source correlation at L3.
 - id: DORA-10-3
   acto_fonte: 32022R2554
-  referencia: art. 10.º, n.º 3
+  referencia:
+    pt: art. 10.º, n.º 3
+    en: Article 10(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1981,7 +2095,9 @@ itens:
   nota: null
 - id: DORA-10-4
   acto_fonte: 32022R2554
-  referencia: art. 10.º, n.º 4
+  referencia:
+    pt: art. 10.º, n.º 4
+    en: Article 10(4)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1998,7 +2114,9 @@ itens:
   nota: null
 - id: DORA-11-1
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 1
+  referencia:
+    pt: art. 11.º, n.º 1
+    en: Article 11(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2024,7 +2142,9 @@ itens:
   nota: null
 - id: DORA-11-2
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 2, als. a) a e)
+  referencia:
+    pt: art. 11.º, n.º 2, als. a) a e)
+    en: Article 11(2), points (a) to (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2068,7 +2188,9 @@ itens:
   nota: null
 - id: DORA-11-3
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 3
+  referencia:
+    pt: art. 11.º, n.º 3
+    en: Article 11(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2103,7 +2225,9 @@ itens:
   nota: null
 - id: DORA-11-4
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 4
+  referencia:
+    pt: art. 11.º, n.º 4
+    en: Article 11(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2129,7 +2253,9 @@ itens:
   nota: null
 - id: DORA-11-5
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 5
+  referencia:
+    pt: art. 11.º, n.º 5
+    en: Article 11(5)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2155,7 +2281,9 @@ itens:
   nota: null
 - id: DORA-11-6-a
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 6, al. a), e 2.º parágrafo
+  referencia:
+    pt: art. 11.º, n.º 6, al. a), e 2.º parágrafo
+    en: Article 11(6), point (a), and second subparagraph
   classe: engenharia
   forca: parcial
   contexto:
@@ -2204,7 +2332,9 @@ itens:
     en: IRP tests ranging from annual (L1) to half-yearly (L2/L3) meet the cadence for the incident response strand.
 - id: DORA-11-6-b
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 6, al. b)
+  referencia:
+    pt: art. 11.º, n.º 6, al. b)
+    en: Article 11(6), point (b)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2221,7 +2351,9 @@ itens:
   nota: null
 - id: DORA-11-6-p3
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 6, 3.º parágrafo
+  referencia:
+    pt: art. 11.º, n.º 6, 3.º parágrafo
+    en: Article 11(6), third subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2245,7 +2377,9 @@ itens:
   nota: null
 - id: DORA-11-7
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 7
+  referencia:
+    pt: art. 11.º, n.º 7
+    en: Article 11(7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2262,7 +2396,9 @@ itens:
   nota: null
 - id: DORA-11-8
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 8
+  referencia:
+    pt: art. 11.º, n.º 8
+    en: Article 11(8)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2305,7 +2441,9 @@ itens:
     en: Documented containment with timestamp, timeline and logs for reconstruction.
 - id: DORA-11-9
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 9
+  referencia:
+    pt: art. 11.º, n.º 9
+    en: Article 11(9)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2322,7 +2460,9 @@ itens:
   nota: null
 - id: DORA-11-10
   acto_fonte: 32022R2554
-  referencia: art. 11.º, n.º 10
+  referencia:
+    pt: art. 11.º, n.º 10
+    en: Article 11(10)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2339,7 +2479,9 @@ itens:
   nota: null
 - id: DORA-12-1-a
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 1, al. a)
+  referencia:
+    pt: art. 12.º, n.º 1, al. a)
+    en: Article 12(1), point (a)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2366,7 +2508,9 @@ itens:
     en: The ransomware playbook (Policy 32 §5) presupposes “recovery from backup” without a requirement to support it.
 - id: DORA-12-1-b
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 1, al. b)
+  referencia:
+    pt: art. 12.º, n.º 1, al. b)
+    en: Article 12(1), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2407,7 +2551,9 @@ itens:
   nota: null
 - id: DORA-12-2
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 2
+  referencia:
+    pt: art. 12.º, n.º 2
+    en: Article 12(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2440,7 +2586,9 @@ itens:
   nota: null
 - id: DORA-12-3
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 3
+  referencia:
+    pt: art. 12.º, n.º 3
+    en: Article 12(3)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2467,7 +2615,9 @@ itens:
     en: 'Restoration on systems segregated from the source: floor CTX-DORA-P11.'
 - id: DORA-12-3-p2
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 3, 2.º e 3.º parágrafos
+  referencia:
+    pt: art. 12.º, n.º 3, 2.º e 3.º parágrafos
+    en: Article 12(3), second and third subparagraphs
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2484,7 +2634,9 @@ itens:
   nota: null
 - id: DORA-12-4
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 4
+  referencia:
+    pt: art. 12.º, n.º 4
+    en: Article 12(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2503,7 +2655,9 @@ itens:
   nota: null
 - id: DORA-12-5
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 5
+  referencia:
+    pt: art. 12.º, n.º 5
+    en: Article 12(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2520,7 +2674,9 @@ itens:
   nota: null
 - id: DORA-12-6
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 6
+  referencia:
+    pt: art. 12.º, n.º 6
+    en: Article 12(6)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2563,7 +2719,9 @@ itens:
   nota: null
 - id: DORA-12-7
   acto_fonte: 32022R2554
-  referencia: art. 12.º, n.º 7
+  referencia:
+    pt: art. 12.º, n.º 7
+    en: Article 12(7)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2597,7 +2755,9 @@ itens:
   nota: null
 - id: DORA-13-1
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 1
+  referencia:
+    pt: art. 13.º, n.º 1
+    en: Article 13(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2642,7 +2802,9 @@ itens:
     en: Vulnerability feeds, correlation with runtime inventory and EPSS/KEV prioritisation.
 - id: DORA-13-2
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 2, 1.º e 3.º parágrafos
+  referencia:
+    pt: art. 13.º, n.º 2, 1.º e 3.º parágrafos
+    en: Article 13(2), first and third subparagraphs
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2677,7 +2839,9 @@ itens:
     en: Post-mortem ≤ 5 working days with root cause and corrective plan; mandatory from L2 onwards (Policy 32 §2).
 - id: DORA-13-2-p2
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 2, 2.º parágrafo
+  referencia:
+    pt: art. 13.º, n.º 2, 2.º parágrafo
+    en: Article 13(2), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2694,7 +2858,9 @@ itens:
   nota: null
 - id: DORA-13-3
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 3
+  referencia:
+    pt: art. 13.º, n.º 3
+    en: Article 13(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2734,7 +2900,9 @@ itens:
   nota: null
 - id: DORA-13-4
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 4
+  referencia:
+    pt: art. 13.º, n.º 4
+    en: Article 13(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2766,7 +2934,9 @@ itens:
   nota: null
 - id: DORA-13-5
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 5
+  referencia:
+    pt: art. 13.º, n.º 5
+    en: Article 13(5)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2801,7 +2971,9 @@ itens:
     en: Report to executive management ranging from annual (L1) to quarterly (L3).
 - id: DORA-13-6
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 6
+  referencia:
+    pt: art. 13.º, n.º 6
+    en: Article 13(6)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2844,7 +3016,9 @@ itens:
   nota: null
 - id: DORA-13-7
   acto_fonte: 32022R2554
-  referencia: art. 13.º, n.º 7
+  referencia:
+    pt: art. 13.º, n.º 7
+    en: Article 13(7)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2876,7 +3050,9 @@ itens:
   nota: null
 - id: DORA-14-1
   acto_fonte: 32022R2554
-  referencia: art. 14.º, n.º 1
+  referencia:
+    pt: art. 14.º, n.º 1
+    en: Article 14(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2893,7 +3069,9 @@ itens:
   nota: null
 - id: DORA-14-2
   acto_fonte: 32022R2554
-  referencia: art. 14.º, n.º 2
+  referencia:
+    pt: art. 14.º, n.º 2
+    en: Article 14(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2910,7 +3088,9 @@ itens:
   nota: null
 - id: DORA-14-3
   acto_fonte: 32022R2554
-  referencia: art. 14.º, n.º 3
+  referencia:
+    pt: art. 14.º, n.º 3
+    en: Article 14(3)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2934,7 +3114,9 @@ itens:
   nota: null
 - id: DORA-16-1-a
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. a)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. a)
+    en: Article 16(1), second subparagraph, point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2975,7 +3157,9 @@ itens:
   nota: null
 - id: DORA-16-1-b
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. b)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. b)
+    en: Article 16(1), second subparagraph, point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3007,7 +3191,9 @@ itens:
   nota: null
 - id: DORA-16-1-c
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. c)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. c)
+    en: Article 16(1), second subparagraph, point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3048,7 +3234,9 @@ itens:
   nota: null
 - id: DORA-16-1-d
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. d)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. d)
+    en: Article 16(1), second subparagraph, point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3080,7 +3268,9 @@ itens:
   nota: null
 - id: DORA-16-1-e
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. e)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. e)
+    en: Article 16(1), second subparagraph, point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3113,7 +3303,9 @@ itens:
   nota: null
 - id: DORA-16-1-f
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. f)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. f)
+    en: Article 16(1), second subparagraph, point (f)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3162,7 +3354,9 @@ itens:
   nota: null
 - id: DORA-16-1-g
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. g)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. g)
+    en: Article 16(1), second subparagraph, point (g)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3196,7 +3390,9 @@ itens:
   nota: null
 - id: DORA-16-1-h
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 1, 2.º parágrafo, al. h)
+  referencia:
+    pt: art. 16.º, n.º 1, 2.º parágrafo, al. h)
+    en: Article 16(1), second subparagraph, point (h)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3230,7 +3426,9 @@ itens:
   nota: null
 - id: DORA-16-2
   acto_fonte: 32022R2554
-  referencia: art. 16.º, n.º 2
+  referencia:
+    pt: art. 16.º, n.º 2
+    en: Article 16(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3253,7 +3451,9 @@ itens:
   nota: null
 - id: DORA-17-1
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 1
+  referencia:
+    pt: art. 17.º, n.º 1
+    en: Article 17(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3316,7 +3516,9 @@ itens:
   nota: null
 - id: DORA-17-2
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 2
+  referencia:
+    pt: art. 17.º, n.º 2
+    en: Article 17(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3353,7 +3555,9 @@ itens:
   nota: null
 - id: DORA-17-3-a
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. a)
+  referencia:
+    pt: art. 17.º, n.º 3, al. a)
+    en: Article 17(3), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3384,7 +3588,9 @@ itens:
   nota: null
 - id: DORA-17-3-b
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. b)
+  referencia:
+    pt: art. 17.º, n.º 3, al. b)
+    en: Article 17(3), point (b)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3439,7 +3645,9 @@ itens:
   nota: null
 - id: DORA-17-3-c
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. c)
+  referencia:
+    pt: art. 17.º, n.º 3, al. c)
+    en: Article 17(3), point (c)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3472,7 +3680,9 @@ itens:
   nota: null
 - id: DORA-17-3-d
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. d)
+  referencia:
+    pt: art. 17.º, n.º 3, al. d)
+    en: Article 17(3), point (d)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3514,7 +3724,9 @@ itens:
   nota: null
 - id: DORA-17-3-e
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. e)
+  referencia:
+    pt: art. 17.º, n.º 3, al. e)
+    en: Article 17(3), point (e)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3540,7 +3752,9 @@ itens:
   nota: null
 - id: DORA-17-3-f
   acto_fonte: 32022R2554
-  referencia: art. 17.º, n.º 3, al. f)
+  referencia:
+    pt: art. 17.º, n.º 3, al. f)
+    en: Article 17(3), point (f)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3573,7 +3787,9 @@ itens:
   nota: null
 - id: DORA-18-1
   acto_fonte: 32022R2554
-  referencia: art. 18.º, n.º 1, als. a) a f)
+  referencia:
+    pt: art. 18.º, n.º 1, als. a) a f)
+    en: Article 18(1), points (a) to (f)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3621,7 +3837,9 @@ itens:
     en: Triage includes the assessment of DORA reportability and escalation to GRC.
 - id: DORA-18-2
   acto_fonte: 32022R2554
-  referencia: art. 18.º, n.º 2
+  referencia:
+    pt: art. 18.º, n.º 2
+    en: Article 18(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -3648,7 +3866,9 @@ itens:
     en: Criteria for significant cyber threats are regulatory; EPSS/KEV supports the likelihood assessment.
 - id: DORA-19-1
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 1, 1.º, 3.º, 4.º e 5.º parágrafos
+  referencia:
+    pt: art. 19.º, n.º 1, 1.º, 3.º, 4.º e 5.º parágrafos
+    en: Article 19(1), first, third, fourth and fifth subparagraphs
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3683,7 +3903,9 @@ itens:
     en: The IRP reproduces the DORA deadlines (RTS 2025/301, Article 5) without divergence.
 - id: DORA-19-2
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 2
+  referencia:
+    pt: art. 19.º, n.º 2
+    en: Article 19(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3700,7 +3922,9 @@ itens:
   nota: null
 - id: DORA-19-3
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 3, 1.º parágrafo
+  referencia:
+    pt: art. 19.º, n.º 3, 1.º parágrafo
+    en: Article 19(3), first subparagraph
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3724,7 +3948,9 @@ itens:
   nota: null
 - id: DORA-19-3-p2
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 3, 2.º parágrafo
+  referencia:
+    pt: art. 19.º, n.º 3, 2.º parágrafo
+    en: Article 19(3), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3741,7 +3967,9 @@ itens:
   nota: null
 - id: DORA-19-4-a
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 4, al. a)
+  referencia:
+    pt: art. 19.º, n.º 4, al. a)
+    en: Article 19(4), point (a)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3765,7 +3993,9 @@ itens:
   nota: null
 - id: DORA-19-4-b
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 4, al. b)
+  referencia:
+    pt: art. 19.º, n.º 4, al. b)
+    en: Article 19(4), point (b)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3789,7 +4019,9 @@ itens:
   nota: null
 - id: DORA-19-4-c
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 4, al. c)
+  referencia:
+    pt: art. 19.º, n.º 4, al. c)
+    en: Article 19(4), point (c)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3822,7 +4054,9 @@ itens:
   nota: null
 - id: DORA-19-5
   acto_fonte: 32022R2554
-  referencia: art. 19.º, n.º 5
+  referencia:
+    pt: art. 19.º, n.º 5
+    en: Article 19(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3839,7 +4073,9 @@ itens:
   nota: null
 - id: DORA-23
   acto_fonte: 32022R2554
-  referencia: art. 23.º
+  referencia:
+    pt: art. 23.º
+    en: Article 23
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3856,7 +4092,9 @@ itens:
   nota: null
 - id: DORA-24-1
   acto_fonte: 32022R2554
-  referencia: art. 24.º, n.os 1 e 2
+  referencia:
+    pt: art. 24.º, n.os 1 e 2
+    en: Article 24(1) and (2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3888,7 +4126,9 @@ itens:
   nota: null
 - id: DORA-24-3
   acto_fonte: 32022R2554
-  referencia: art. 24.º, n.º 3
+  referencia:
+    pt: art. 24.º, n.º 3
+    en: Article 24(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3919,7 +4159,9 @@ itens:
   nota: null
 - id: DORA-24-4
   acto_fonte: 32022R2554
-  referencia: art. 24.º, n.º 4
+  referencia:
+    pt: art. 24.º, n.º 4
+    en: Article 24(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3952,7 +4194,9 @@ itens:
   nota: null
 - id: DORA-24-5
   acto_fonte: 32022R2554
-  referencia: art. 24.º, n.º 5
+  referencia:
+    pt: art. 24.º, n.º 5
+    en: Article 24(5)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3992,7 +4236,9 @@ itens:
   nota: null
 - id: DORA-24-6
   acto_fonte: 32022R2554
-  referencia: art. 24.º, n.º 6
+  referencia:
+    pt: art. 24.º, n.º 6
+    en: Article 24(6)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4035,7 +4281,9 @@ itens:
     en: Policy 36 sets the DORA floor (annual for systems supporting FCIs) with a precedence clause; at L1 the “not applicable” pentest is made up for by the precedence and by the automated per-build tests.
 - id: DORA-25-1
   acto_fonte: 32022R2554
-  referencia: art. 25.º, n.º 1
+  referencia:
+    pt: art. 25.º, n.º 1
+    en: Article 25(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4077,7 +4325,9 @@ itens:
   nota: null
 - id: DORA-25-2
   acto_fonte: 32022R2554
-  referencia: art. 25.º, n.º 2
+  referencia:
+    pt: art. 25.º, n.º 2
+    en: Article 25(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4108,7 +4358,9 @@ itens:
   nota: null
 - id: DORA-25-3
   acto_fonte: 32022R2554
-  referencia: art. 25.º, n.º 3
+  referencia:
+    pt: art. 25.º, n.º 3
+    en: Article 25(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4131,7 +4383,9 @@ itens:
   nota: null
 - id: DORA-26-1
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 1
+  referencia:
+    pt: art. 26.º, n.º 1
+    en: Article 26(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4166,7 +4420,9 @@ itens:
   nota: null
 - id: DORA-26-2
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 2
+  referencia:
+    pt: art. 26.º, n.º 2
+    en: Article 26(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4190,7 +4446,9 @@ itens:
   nota: null
 - id: DORA-26-3
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 3
+  referencia:
+    pt: art. 26.º, n.º 3
+    en: Article 26(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4216,7 +4474,9 @@ itens:
   nota: null
 - id: DORA-26-4
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 4
+  referencia:
+    pt: art. 26.º, n.º 4
+    en: Article 26(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4242,7 +4502,9 @@ itens:
   nota: null
 - id: DORA-26-5
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 5
+  referencia:
+    pt: art. 26.º, n.º 5
+    en: Article 26(5)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4268,7 +4530,9 @@ itens:
     en: Pentest rules of engagement (real data prohibited) support risk controls during the test.
 - id: DORA-26-6
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 6
+  referencia:
+    pt: art. 26.º, n.º 6
+    en: Article 26(6)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4294,7 +4558,9 @@ itens:
   nota: null
 - id: DORA-26-7
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 7
+  referencia:
+    pt: art. 26.º, n.º 7
+    en: Article 26(7)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4320,7 +4586,9 @@ itens:
   nota: null
 - id: DORA-26-8
   acto_fonte: 32022R2554
-  referencia: art. 26.º, n.º 8, 1.º e 2.º parágrafos
+  referencia:
+    pt: art. 26.º, n.º 8, 1.º e 2.º parágrafos
+    en: Article 26(8), first and second subparagraphs
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4346,7 +4614,9 @@ itens:
   nota: null
 - id: DORA-27-1
   acto_fonte: 32022R2554
-  referencia: art. 27.º, n.º 1, als. a) a e)
+  referencia:
+    pt: art. 27.º, n.º 1, als. a) a e)
+    en: Article 27(1), points (a) to (e)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4372,7 +4642,9 @@ itens:
   nota: null
 - id: DORA-27-2
   acto_fonte: 32022R2554
-  referencia: art. 27.º, n.º 2
+  referencia:
+    pt: art. 27.º, n.º 2
+    en: Article 27(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4389,7 +4661,9 @@ itens:
   nota: null
 - id: DORA-27-3
   acto_fonte: 32022R2554
-  referencia: art. 27.º, n.º 3
+  referencia:
+    pt: art. 27.º, n.º 3
+    en: Article 27(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4406,7 +4680,9 @@ itens:
   nota: null
 - id: DORA-28-1
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 1, al. a) e b)
+  referencia:
+    pt: art. 28.º, n.º 1, al. a) e b)
+    en: Article 28(1), points (a) and (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4438,7 +4714,9 @@ itens:
   nota: null
 - id: DORA-28-1-a
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 1, al. a)
+  referencia:
+    pt: art. 28.º, n.º 1, al. a)
+    en: Article 28(1), point (a)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4455,7 +4733,9 @@ itens:
   nota: null
 - id: DORA-28-2
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 2
+  referencia:
+    pt: art. 28.º, n.º 2
+    en: Article 28(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4489,7 +4769,9 @@ itens:
   nota: null
 - id: DORA-28-2-orgao
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 2, última frase
+  referencia:
+    pt: art. 28.º, n.º 2, última frase
+    en: Article 28(2), last sentence
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4506,7 +4788,9 @@ itens:
   nota: null
 - id: DORA-28-3
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 3, 1.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 3, 1.º parágrafo
+    en: Article 28(3), first subparagraph
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -4540,7 +4824,9 @@ itens:
     en: Consolidated per-application register includes validated suppliers; the ITS templates are an intentional gap.
 - id: DORA-28-3-p2
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 3, 2.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 3, 2.º parágrafo
+    en: Article 28(3), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4557,7 +4843,9 @@ itens:
   nota: null
 - id: DORA-28-3-p3
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 3, 3.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 3, 3.º parágrafo
+    en: Article 28(3), third subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4574,7 +4862,9 @@ itens:
   nota: null
 - id: DORA-28-3-p4
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 3, 4.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 3, 4.º parágrafo
+    en: Article 28(3), fourth subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4591,7 +4881,9 @@ itens:
   nota: null
 - id: DORA-28-3-p5
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 3, 5.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 3, 5.º parágrafo
+    en: Article 28(3), fifth subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4608,7 +4900,9 @@ itens:
   nota: null
 - id: DORA-28-4-a
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 4, al. a)
+  referencia:
+    pt: art. 28.º, n.º 4, al. a)
+    en: Article 28(4), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4631,7 +4925,9 @@ itens:
   nota: null
 - id: DORA-28-4-b
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 4, al. b)
+  referencia:
+    pt: art. 28.º, n.º 4, al. b)
+    en: Article 28(4), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4648,7 +4944,9 @@ itens:
   nota: null
 - id: DORA-28-4-c
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 4, al. c)
+  referencia:
+    pt: art. 28.º, n.º 4, al. c)
+    en: Article 28(4), point (c)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4672,7 +4970,9 @@ itens:
   nota: null
 - id: DORA-28-4-d
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 4, al. d)
+  referencia:
+    pt: art. 28.º, n.º 4, al. d)
+    en: Article 28(4), point (d)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4715,7 +5015,9 @@ itens:
   nota: null
 - id: DORA-28-4-e
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 4, al. e)
+  referencia:
+    pt: art. 28.º, n.º 4, al. e)
+    en: Article 28(4), point (e)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4732,7 +5034,9 @@ itens:
   nota: null
 - id: DORA-28-5
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 5
+  referencia:
+    pt: art. 28.º, n.º 5
+    en: Article 28(5)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4766,7 +5070,9 @@ itens:
   nota: null
 - id: DORA-28-6
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 6, 1.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 6, 1.º parágrafo
+    en: Article 28(6), first subparagraph
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4801,7 +5107,9 @@ itens:
   nota: null
 - id: DORA-28-6-p2
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 6, 2.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 6, 2.º parágrafo
+    en: Article 28(6), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4818,7 +5126,9 @@ itens:
   nota: null
 - id: DORA-28-7
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 7, al. a) a d)
+  referencia:
+    pt: art. 28.º, n.º 7, al. a) a d)
+    en: Article 28(7), points (a) to (d)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -4844,7 +5154,9 @@ itens:
   nota: null
 - id: DORA-28-8
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 8, 1.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 8, 1.º parágrafo
+    en: Article 28(8), first subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4870,7 +5182,9 @@ itens:
   nota: null
 - id: DORA-28-8-p2
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 8, 2.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 8, 2.º parágrafo
+    en: Article 28(8), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4887,7 +5201,9 @@ itens:
   nota: null
 - id: DORA-28-8-p3
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 8, 3.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 8, 3.º parágrafo
+    en: Article 28(8), third subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4904,7 +5220,9 @@ itens:
   nota: null
 - id: DORA-28-8-p4
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 8, 4.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 8, 4.º parágrafo
+    en: Article 28(8), fourth subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4930,7 +5248,9 @@ itens:
   nota: null
 - id: DORA-28-8-p5
   acto_fonte: 32022R2554
-  referencia: art. 28.º, n.º 8, 5.º parágrafo
+  referencia:
+    pt: art. 28.º, n.º 8, 5.º parágrafo
+    en: Article 28(8), fifth subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4947,7 +5267,9 @@ itens:
   nota: null
 - id: DORA-29-1
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 1, 1.º parágrafo, al. a) e b)
+  referencia:
+    pt: art. 29.º, n.º 1, 1.º parágrafo, al. a) e b)
+    en: Article 29(1), first subparagraph, points (a) and (b)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4973,7 +5295,9 @@ itens:
   nota: null
 - id: DORA-29-1-p2
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 1, 2.º parágrafo
+  referencia:
+    pt: art. 29.º, n.º 1, 2.º parágrafo
+    en: Article 29(1), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4999,7 +5323,9 @@ itens:
   nota: null
 - id: DORA-29-2
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 2, 1.º parágrafo
+  referencia:
+    pt: art. 29.º, n.º 2, 1.º parágrafo
+    en: Article 29(2), first subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5025,7 +5351,9 @@ itens:
   nota: null
 - id: DORA-29-2-p2
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 2, 2.º parágrafo
+  referencia:
+    pt: art. 29.º, n.º 2, 2.º parágrafo
+    en: Article 29(2), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5042,7 +5370,9 @@ itens:
   nota: null
 - id: DORA-29-2-p3
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 2, 3.º parágrafo
+  referencia:
+    pt: art. 29.º, n.º 2, 3.º parágrafo
+    en: Article 29(2), third subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5059,7 +5389,9 @@ itens:
   nota: null
 - id: DORA-29-2-p4
   acto_fonte: 32022R2554
-  referencia: art. 29.º, n.º 2, 4.º parágrafo
+  referencia:
+    pt: art. 29.º, n.º 2, 4.º parágrafo
+    en: Article 29(2), fourth subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5085,7 +5417,9 @@ itens:
   nota: null
 - id: DORA-30-1
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 1
+  referencia:
+    pt: art. 30.º, n.º 1
+    en: Article 30(1)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5118,7 +5452,9 @@ itens:
   nota: null
 - id: DORA-30-2-a
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. a)
+  referencia:
+    pt: art. 30.º, n.º 2, al. a)
+    en: Article 30(2), point (a)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5144,7 +5480,9 @@ itens:
   nota: null
 - id: DORA-30-2-b
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. b)
+  referencia:
+    pt: art. 30.º, n.º 2, al. b)
+    en: Article 30(2), point (b)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5170,7 +5508,9 @@ itens:
     en: Only in the AI suppliers annex.
 - id: DORA-30-2-c
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. c)
+  referencia:
+    pt: art. 30.º, n.º 2, al. c)
+    en: Article 30(2), point (c)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5194,7 +5534,9 @@ itens:
   nota: null
 - id: DORA-30-2-d
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. d)
+  referencia:
+    pt: art. 30.º, n.º 2, al. d)
+    en: Article 30(2), point (d)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5218,7 +5560,9 @@ itens:
   nota: null
 - id: DORA-30-2-e
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. e)
+  referencia:
+    pt: art. 30.º, n.º 2, al. e)
+    en: Article 30(2), point (e)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5244,7 +5588,9 @@ itens:
   nota: null
 - id: DORA-30-2-f
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. f)
+  referencia:
+    pt: art. 30.º, n.º 2, al. f)
+    en: Article 30(2), point (f)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5268,7 +5614,9 @@ itens:
   nota: null
 - id: DORA-30-2-g
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. g)
+  referencia:
+    pt: art. 30.º, n.º 2, al. g)
+    en: Article 30(2), point (g)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5285,7 +5633,9 @@ itens:
   nota: null
 - id: DORA-30-2-h
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. h)
+  referencia:
+    pt: art. 30.º, n.º 2, al. h)
+    en: Article 30(2), point (h)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5311,7 +5661,9 @@ itens:
   nota: null
 - id: DORA-30-2-i
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 2, al. i)
+  referencia:
+    pt: art. 30.º, n.º 2, al. i)
+    en: Article 30(2), point (i)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5343,7 +5695,9 @@ itens:
   nota: null
 - id: DORA-30-3-a
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. a)
+  referencia:
+    pt: art. 30.º, n.º 3, al. a)
+    en: Article 30(3), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5360,7 +5714,9 @@ itens:
   nota: null
 - id: DORA-30-3-b
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. b)
+  referencia:
+    pt: art. 30.º, n.º 3, al. b)
+    en: Article 30(3), point (b)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5384,7 +5740,9 @@ itens:
   nota: null
 - id: DORA-30-3-c
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. c)
+  referencia:
+    pt: art. 30.º, n.º 3, al. c)
+    en: Article 30(3), point (c)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5408,7 +5766,9 @@ itens:
   nota: null
 - id: DORA-30-3-d
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. d)
+  referencia:
+    pt: art. 30.º, n.º 3, al. d)
+    en: Article 30(3), point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5425,7 +5785,9 @@ itens:
   nota: null
 - id: DORA-30-3-e
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. e)
+  referencia:
+    pt: art. 30.º, n.º 3, al. e)
+    en: Article 30(3), point (e)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5458,7 +5820,9 @@ itens:
   nota: null
 - id: DORA-30-3-f
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 3, al. f)
+  referencia:
+    pt: art. 30.º, n.º 3, al. f)
+    en: Article 30(3), point (f)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5475,7 +5839,9 @@ itens:
   nota: null
 - id: DORA-30-4
   acto_fonte: 32022R2554
-  referencia: art. 30.º, n.º 4
+  referencia:
+    pt: art. 30.º, n.º 4
+    en: Article 30(4)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5499,7 +5865,9 @@ itens:
   nota: null
 - id: DORA-31-4
   acto_fonte: 32022R2554
-  referencia: art. 31.º, n.º 4
+  referencia:
+    pt: art. 31.º, n.º 4
+    en: Article 31(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5516,7 +5884,9 @@ itens:
   nota: null
 - id: DORA-31-5-p2
   acto_fonte: 32022R2554
-  referencia: art. 31.º, n.º 5, 2.º parágrafo
+  referencia:
+    pt: art. 31.º, n.º 5, 2.º parágrafo
+    en: Article 31(5), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5533,7 +5903,9 @@ itens:
   nota: null
 - id: DORA-31-12
   acto_fonte: 32022R2554
-  referencia: art. 31.º, n.º 12
+  referencia:
+    pt: art. 31.º, n.º 12
+    en: Article 31(12)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5550,7 +5922,9 @@ itens:
   nota: null
 - id: DORA-31-13
   acto_fonte: 32022R2554
-  referencia: art. 31.º, n.º 13
+  referencia:
+    pt: art. 31.º, n.º 13
+    en: Article 31(13)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5567,7 +5941,9 @@ itens:
   nota: null
 - id: DORA-35-1-d-iv
   acto_fonte: 32022R2554
-  referencia: art. 35.º, n.º 1, al. d), subal. iv), último parágrafo
+  referencia:
+    pt: art. 35.º, n.º 1, al. d), subal. iv), último parágrafo
+    en: Article 35(1), point (d)(iv), last subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5584,7 +5960,9 @@ itens:
   nota: null
 - id: DORA-35-5
   acto_fonte: 32022R2554
-  referencia: art. 35.º, n.º 5
+  referencia:
+    pt: art. 35.º, n.º 5
+    en: Article 35(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5601,7 +5979,9 @@ itens:
   nota: null
 - id: DORA-37-4
   acto_fonte: 32022R2554
-  referencia: art. 37.º, n.º 4
+  referencia:
+    pt: art. 37.º, n.º 4
+    en: Article 37(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5618,7 +5998,9 @@ itens:
   nota: null
 - id: DORA-38-4
   acto_fonte: 32022R2554
-  referencia: art. 38.º, n.º 4
+  referencia:
+    pt: art. 38.º, n.º 4
+    en: Article 38(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5635,7 +6017,9 @@ itens:
   nota: null
 - id: DORA-39-6
   acto_fonte: 32022R2554
-  referencia: art. 39.º, n.º 6
+  referencia:
+    pt: art. 39.º, n.º 6
+    en: Article 39(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5652,7 +6036,9 @@ itens:
   nota: null
 - id: DORA-42-1
   acto_fonte: 32022R2554
-  referencia: art. 42.º, n.º 1
+  referencia:
+    pt: art. 42.º, n.º 1
+    en: Article 42(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5669,7 +6055,9 @@ itens:
   nota: null
 - id: DORA-42-3-p2
   acto_fonte: 32022R2554
-  referencia: art. 42.º, n.º 3, 2.º parágrafo
+  referencia:
+    pt: art. 42.º, n.º 3, 2.º parágrafo
+    en: Article 42(3), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5686,7 +6074,9 @@ itens:
   nota: null
 - id: DORA-42-9-p2
   acto_fonte: 32022R2554
-  referencia: art. 42.º, n.º 9, 2.º parágrafo
+  referencia:
+    pt: art. 42.º, n.º 9, 2.º parágrafo
+    en: Article 42(9), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5703,7 +6093,9 @@ itens:
   nota: null
 - id: DORA-45-1
   acto_fonte: 32022R2554
-  referencia: art. 45.º, n.º 1, al. a) a c)
+  referencia:
+    pt: art. 45.º, n.º 1, al. a) a c)
+    en: Article 45(1), points (a) to (c)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -5729,7 +6121,9 @@ itens:
   nota: null
 - id: DORA-45-2
   acto_fonte: 32022R2554
-  referencia: art. 45.º, n.º 2
+  referencia:
+    pt: art. 45.º, n.º 2
+    en: Article 45(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5755,7 +6149,9 @@ itens:
   nota: null
 - id: DORA-45-3
   acto_fonte: 32022R2554
-  referencia: art. 45.º, n.º 3
+  referencia:
+    pt: art. 45.º, n.º 3
+    en: Article 45(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5781,7 +6177,9 @@ itens:
   nota: null
 - id: DORA-59
   acto_fonte: 32022R2554
-  referencia: art. 59.º (altera Reg. (CE) 1060/2009, anexo I, secção A, ponto 4)
+  referencia:
+    pt: art. 59.º (altera Reg. (CE) 1060/2009, anexo I, secção A, ponto 4)
+    en: Article 59 (amends Regulation (EC) No 1060/2009, Annex I, Section A, point 4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5798,7 +6196,9 @@ itens:
   nota: null
 - id: DORA-60
   acto_fonte: 32022R2554
-  referencia: art. 60.º (altera Reg. (UE) 648/2012, arts. 26.º, 34.º, 56.º, 79.º...)
+  referencia:
+    pt: art. 60.º (altera Reg. (UE) 648/2012, arts. 26.º, 34.º, 56.º, 79.º...)
+    en: Article 60 (amends Regulation (EU) No 648/2012, Articles 26, 34, 56, 79...)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5815,7 +6215,9 @@ itens:
   nota: null
 - id: DORA-61
   acto_fonte: 32022R2554
-  referencia: art. 61.º (altera Reg. (UE) 909/2014, art. 45.º)
+  referencia:
+    pt: art. 61.º (altera Reg. (UE) 909/2014, art. 45.º)
+    en: Article 61 (amends Regulation (EU) No 909/2014, Article 45)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -5832,7 +6234,9 @@ itens:
   nota: null
 - id: DORA-62
   acto_fonte: 32022R2554
-  referencia: art. 62.º (altera Reg. (UE) 600/2014, arts. 27.º-G, 27.º-H, 27.º-I)
+  referencia:
+    pt: art. 62.º (altera Reg. (UE) 600/2014, arts. 27.º-G, 27.º-H, 27.º-I)
+    en: Article 62 (amends Regulation (EU) No 600/2014, Articles 27g, 27h and 27i)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5849,7 +6253,9 @@ itens:
   nota: null
 - id: DORA-63
   acto_fonte: 32022R2554
-  referencia: art. 63.º (adita art. 6.º, n.º 6, ao Reg. (UE) 2016/1011)
+  referencia:
+    pt: art. 63.º (adita art. 6.º, n.º 6, ao Reg. (UE) 2016/1011)
+    en: Article 63 (adita Article 6(6), ao Regulation (EU) 2016/1011)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5866,7 +6272,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-1
   acto_fonte: 32024R1773
-  referencia: art. 1.º, al. a) a j)
+  referencia:
+    pt: art. 1.º, al. a) a j)
+    en: Article 1, points (a) to (j)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -5892,7 +6300,9 @@ itens:
     en: Secure procurement proportional to the risk level.
 - id: DORA-RTS1773-2
   acto_fonte: 32024R1773
-  referencia: art. 2.º
+  referencia:
+    pt: art. 2.º
+    en: Article 2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5909,7 +6319,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-1
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 1
+  referencia:
+    pt: art. 3.º, n.º 1
+    en: Article 3(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5926,7 +6338,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-2
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 2
+  referencia:
+    pt: art. 3.º, n.º 2
+    en: Article 3(2)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -5954,7 +6368,9 @@ itens:
     en: 'Common root cause: the Manual''s proportionality is by level L1–L3 (E+D+I axes), not by the DORA notion of “critical or important function”; an asset supporting an FCI that is classified L1/L2 falls below the legal floor.'
 - id: DORA-RTS1773-3-3
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 3
+  referencia:
+    pt: art. 3.º, n.º 3
+    en: Article 3(3)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -5977,7 +6393,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-4
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 4
+  referencia:
+    pt: art. 3.º, n.º 4
+    en: Article 3(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5994,7 +6412,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-5
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 5
+  referencia:
+    pt: art. 3.º, n.º 5
+    en: Article 3(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6011,7 +6431,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-6
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 6, al. a) a d)
+  referencia:
+    pt: art. 3.º, n.º 6, al. a) a d)
+    en: Article 3(6), points (a) to (d)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -6043,7 +6465,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-7
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 7
+  referencia:
+    pt: art. 3.º, n.º 7
+    en: Article 3(7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6060,7 +6484,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-3-8
   acto_fonte: 32024R1773
-  referencia: art. 3.º, n.º 8, al. a) a d)
+  referencia:
+    pt: art. 3.º, n.º 8, al. a) a d)
+    en: Article 3(8), points (a) to (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6077,7 +6503,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-4
   acto_fonte: 32024R1773
-  referencia: art. 4.º, al. a) a f)
+  referencia:
+    pt: art. 4.º, al. a) a f)
+    en: Article 4, points (a) to (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6121,7 +6549,9 @@ itens:
     en: Cycle due diligence → clauses → monitoring → offboarding.
 - id: DORA-RTS1773-5-1
   acto_fonte: 32024R1773
-  referencia: art. 5.º, n.º 1
+  referencia:
+    pt: art. 5.º, n.º 1
+    en: Article 5(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6138,7 +6568,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-5-2
   acto_fonte: 32024R1773
-  referencia: art. 5.º, n.º 2, al. a) a i)
+  referencia:
+    pt: art. 5.º, n.º 2, al. a) a i)
+    en: Article 5(2), points (a) to (i)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6162,7 +6594,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-6-1
   acto_fonte: 32024R1773
-  referencia: art. 6.º, n.º 1, al. a) a f)
+  referencia:
+    pt: art. 6.º, n.º 1, al. a) a f)
+    en: Article 6(1), points (a) to (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6186,7 +6620,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-6-2
   acto_fonte: 32024R1773
-  referencia: art. 6.º, n.º 2
+  referencia:
+    pt: art. 6.º, n.º 2
+    en: Article 6(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6203,7 +6639,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-6-3
   acto_fonte: 32024R1773
-  referencia: art. 6.º, n.º 3, al. a) a e)
+  referencia:
+    pt: art. 6.º, n.º 3, al. a) a e)
+    en: Article 6(3), points (a) to (e)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6227,7 +6665,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-6-4
   acto_fonte: 32024R1773
-  referencia: art. 6.º, n.º 4
+  referencia:
+    pt: art. 6.º, n.º 4
+    en: Article 6(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6251,7 +6691,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-7-1
   acto_fonte: 32024R1773
-  referencia: art. 7.º, n.º 1
+  referencia:
+    pt: art. 7.º, n.º 1
+    en: Article 7(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6268,7 +6710,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-7-2
   acto_fonte: 32024R1773
-  referencia: art. 7.º, n.º 2
+  referencia:
+    pt: art. 7.º, n.º 2
+    en: Article 7(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6285,7 +6729,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-8-1
   acto_fonte: 32024R1773
-  referencia: art. 8.º, n.º 1
+  referencia:
+    pt: art. 8.º, n.º 1
+    en: Article 8(1)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -6309,7 +6755,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-8-2
   acto_fonte: 32024R1773
-  referencia: art. 8.º, n.º 2, al. a) a d)
+  referencia:
+    pt: art. 8.º, n.º 2, al. a) a d)
+    en: Article 8(2), points (a) to (d)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -6342,7 +6790,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-8-3
   acto_fonte: 32024R1773
-  referencia: art. 8.º, n.º 3, al. a) a h)
+  referencia:
+    pt: art. 8.º, n.º 3, al. a) a h)
+    en: Article 8(3), points (a) to (h)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6368,7 +6818,9 @@ itens:
     en: L3 due diligence requires test reports, not only certifications.
 - id: DORA-RTS1773-8-4
   acto_fonte: 32024R1773
-  referencia: art. 8.º, n.º 4
+  referencia:
+    pt: art. 8.º, n.º 4
+    en: Article 8(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6385,7 +6837,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-9-1
   acto_fonte: 32024R1773
-  referencia: art. 9.º, n.º 1
+  referencia:
+    pt: art. 9.º, n.º 1
+    en: Article 9(1)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -6409,7 +6863,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-9-2
   acto_fonte: 32024R1773
-  referencia: art. 9.º, n.º 2, al. a) a e)
+  referencia:
+    pt: art. 9.º, n.º 2, al. a) a e)
+    en: Article 9(2), points (a) to (e)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6444,7 +6900,9 @@ itens:
     en: SLA indicators for vulnerabilities, artefact delivery, incident notification; periodic reassessment.
 - id: DORA-RTS1773-9-3
   acto_fonte: 32024R1773
-  referencia: art. 9.º, n.º 3
+  referencia:
+    pt: art. 9.º, n.º 3
+    en: Article 9(3)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6468,7 +6926,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-9-4
   acto_fonte: 32024R1773
-  referencia: art. 9.º, n.º 4
+  referencia:
+    pt: art. 9.º, n.º 4
+    en: Article 9(4)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6492,7 +6952,9 @@ itens:
   nota: null
 - id: DORA-RTS1773-10
   acto_fonte: 32024R1773
-  referencia: art. 10.º
+  referencia:
+    pt: art. 10.º
+    en: Article 10
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6509,7 +6971,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-2
   acto_fonte: 32024R2956
-  referencia: art. 2.º
+  referencia:
+    pt: art. 2.º
+    en: Article 2
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6535,7 +6999,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-1
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 1
+  referencia:
+    pt: art. 3.º, n.º 1
+    en: Article 3(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6561,7 +7027,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-2
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 2, al. a) e b)
+  referencia:
+    pt: art. 3.º, n.º 2, al. a) e b)
+    en: Article 3(2), points (a) and (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6587,7 +7055,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-3
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 3
+  referencia:
+    pt: art. 3.º, n.º 3
+    en: Article 3(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6613,7 +7083,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-4
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 4, al. a) a f)
+  referencia:
+    pt: art. 3.º, n.º 4, al. a) a f)
+    en: Article 3(4), points (a) to (f)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6639,7 +7111,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-5
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 5
+  referencia:
+    pt: art. 3.º, n.º 5
+    en: Article 3(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6665,7 +7139,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-3-6
   acto_fonte: 32024R2956
-  referencia: art. 3.º, n.º 6
+  referencia:
+    pt: art. 3.º, n.º 6
+    en: Article 3(6)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6691,7 +7167,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-4
   acto_fonte: 32024R2956
-  referencia: art. 4.º, n.os 2 e 3
+  referencia:
+    pt: art. 4.º, n.os 2 e 3
+    en: Article 4(2) and (3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6717,7 +7195,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-5-1
   acto_fonte: 32024R2956
-  referencia: art. 5.º, n.º 1, al. a) a o); anexo I
+  referencia:
+    pt: art. 5.º, n.º 1, al. a) a o); anexo I
+    en: Article 5(1), points (a) to (o); Annex I
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6743,7 +7223,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-6
   acto_fonte: 32024R2956
-  referencia: art. 6.º, n.os 1 e 2
+  referencia:
+    pt: art. 6.º, n.os 1 e 2
+    en: Article 6(1) and (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6769,7 +7251,9 @@ itens:
   nota: null
 - id: DORA-ITS2956-AnexoI
   acto_fonte: 32024R2956
-  referencia: anexo I, parte 1
+  referencia:
+    pt: anexo I, parte 1
+    en: Annex I, Part 1
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6795,7 +7279,9 @@ itens:
   nota: null
 - id: DORA-RTS532-1
   acto_fonte: 32025R0532
-  referencia: art. 1.º, al. a) a l)
+  referencia:
+    pt: art. 1.º, al. a) a l)
+    en: Article 1, points (a) to (l)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6812,7 +7298,9 @@ itens:
   nota: null
 - id: DORA-RTS532-2
   acto_fonte: 32025R0532
-  referencia: art. 2.º
+  referencia:
+    pt: art. 2.º
+    en: Article 2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6829,7 +7317,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-1
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, 1.º parágrafo e al. a) a e)
+  referencia:
+    pt: art. 3.º, n.º 1, 1.º parágrafo e al. a) a e)
+    en: Article 3(1), first subparagraph and points (a) to (e)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -6855,7 +7345,9 @@ itens:
     en: Subcontracting prohibited or conditioned by a universal clause.
 - id: DORA-RTS532-3-1-f
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, al. f)
+  referencia:
+    pt: art. 3.º, n.º 1, al. f)
+    en: Article 3(1), point (f)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6872,7 +7364,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-1-g
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, al. g)
+  referencia:
+    pt: art. 3.º, n.º 1, al. g)
+    en: Article 3(1), point (g)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6889,7 +7383,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-1-h
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, al. h)
+  referencia:
+    pt: art. 3.º, n.º 1, al. h)
+    en: Article 3(1), point (h)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6906,7 +7402,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-1-i
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, al. i)
+  referencia:
+    pt: art. 3.º, n.º 1, al. i)
+    en: Article 3(1), point (i)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6923,7 +7421,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-1-j
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 1, al. j)
+  referencia:
+    pt: art. 3.º, n.º 1, al. j)
+    en: Article 3(1), point (j)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6940,7 +7440,9 @@ itens:
   nota: null
 - id: DORA-RTS532-3-2
   acto_fonte: 32025R0532
-  referencia: art. 3.º, n.º 2
+  referencia:
+    pt: art. 3.º, n.º 2
+    en: Article 3(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6964,7 +7466,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-a
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. a)
+  referencia:
+    pt: art. 4.º, n.º 1, al. a)
+    en: Article 4(1), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6981,7 +7485,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-b
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. b)
+  referencia:
+    pt: art. 4.º, n.º 1, al. b)
+    en: Article 4(1), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6998,7 +7504,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-c
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. c)
+  referencia:
+    pt: art. 4.º, n.º 1, al. c)
+    en: Article 4(1), point (c)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7015,7 +7523,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-d
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. d)
+  referencia:
+    pt: art. 4.º, n.º 1, al. d)
+    en: Article 4(1), point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7032,7 +7542,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-e
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. e)
+  referencia:
+    pt: art. 4.º, n.º 1, al. e)
+    en: Article 4(1), point (e)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7049,7 +7561,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-f
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. f)
+  referencia:
+    pt: art. 4.º, n.º 1, al. f)
+    en: Article 4(1), point (f)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7066,7 +7580,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-g
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. g)
+  referencia:
+    pt: art. 4.º, n.º 1, al. g)
+    en: Article 4(1), point (g)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7083,7 +7599,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-h
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. h)
+  referencia:
+    pt: art. 4.º, n.º 1, al. h)
+    en: Article 4(1), point (h)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7100,7 +7618,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-i
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. i)
+  referencia:
+    pt: art. 4.º, n.º 1, al. i)
+    en: Article 4(1), point (i)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -7134,7 +7654,9 @@ itens:
     en: The Manual's clauses condition subcontracting but do not require flow-down of security standards.
 - id: DORA-RTS532-4-1-j
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. j)
+  referencia:
+    pt: art. 4.º, n.º 1, al. j)
+    en: Article 4(1), point (j)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7151,7 +7673,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-k
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. k)
+  referencia:
+    pt: art. 4.º, n.º 1, al. k)
+    en: Article 4(1), point (k)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7168,7 +7692,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-1-l
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 1, al. l)
+  referencia:
+    pt: art. 4.º, n.º 1, al. l)
+    en: Article 4(1), point (l)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7185,7 +7711,9 @@ itens:
   nota: null
 - id: DORA-RTS532-4-2
   acto_fonte: 32025R0532
-  referencia: art. 4.º, n.º 2
+  referencia:
+    pt: art. 4.º, n.º 2
+    en: Article 4(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7202,7 +7730,9 @@ itens:
   nota: null
 - id: DORA-RTS532-5-1
   acto_fonte: 32025R0532
-  referencia: art. 5.º, n.º 1
+  referencia:
+    pt: art. 5.º, n.º 1
+    en: Article 5(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7219,7 +7749,9 @@ itens:
   nota: null
 - id: DORA-RTS532-5-2
   acto_fonte: 32025R0532
-  referencia: art. 5.º, n.º 2
+  referencia:
+    pt: art. 5.º, n.º 2
+    en: Article 5(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7236,7 +7768,9 @@ itens:
   nota: null
 - id: DORA-RTS532-5-3
   acto_fonte: 32025R0532
-  referencia: art. 5.º, n.º 3
+  referencia:
+    pt: art. 5.º, n.º 3
+    en: Article 5(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7253,7 +7787,9 @@ itens:
   nota: null
 - id: DORA-RTS532-5-4
   acto_fonte: 32025R0532
-  referencia: art. 5.º, n.º 4
+  referencia:
+    pt: art. 5.º, n.º 4
+    en: Article 5(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -7270,7 +7806,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-1
   acto_fonte: 32024R1774
-  referencia: art. 1.º
+  referencia:
+    pt: art. 1.º
+    en: Article 1
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7302,7 +7840,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-1
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 1
+  referencia:
+    pt: art. 2.º, n.º 1
+    en: Article 2(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7325,7 +7865,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-1-a
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 1, al. a)
+  referencia:
+    pt: art. 2.º, n.º 1, al. a)
+    en: Article 2(1), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7358,7 +7900,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-1-b
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 1, al. b)
+  referencia:
+    pt: art. 2.º, n.º 1, al. b)
+    en: Article 2(1), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7399,7 +7943,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-1-c
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 1, al. c)
+  referencia:
+    pt: art. 2.º, n.º 1, al. c)
+    en: Article 2(1), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7446,7 +7992,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-1-d
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 1, al. d)
+  referencia:
+    pt: art. 2.º, n.º 1, al. d)
+    en: Article 2(1), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7487,7 +8035,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-a
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. a)
+  referencia:
+    pt: art. 2.º, n.º 2, al. a)
+    en: Article 2(2), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7510,7 +8060,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-b
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. b)
+  referencia:
+    pt: art. 2.º, n.º 2, al. b)
+    en: Article 2(2), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7535,7 +8087,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-c
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. c)
+  referencia:
+    pt: art. 2.º, n.º 2, al. c)
+    en: Article 2(2), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7577,7 +8131,9 @@ itens:
     en: Formal register of exceptions with compensation and enforcement KPIs.
 - id: DORA-RTS1774-2-2-d
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. d)
+  referencia:
+    pt: art. 2.º, n.º 2, al. d)
+    en: Article 2(2), point (d)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7600,7 +8156,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-e
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. e)
+  referencia:
+    pt: art. 2.º, n.º 2, al. e)
+    en: Article 2(2), point (e)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7617,7 +8175,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-f
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. f)
+  referencia:
+    pt: art. 2.º, n.º 2, al. f)
+    en: Article 2(2), point (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7641,7 +8201,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-g
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. g)
+  referencia:
+    pt: art. 2.º, n.º 2, al. g)
+    en: Article 2(2), point (g)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7658,7 +8220,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-h
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. h)
+  referencia:
+    pt: art. 2.º, n.º 2, al. h)
+    en: Article 2(2), point (h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7682,7 +8246,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-i
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. i)
+  referencia:
+    pt: art. 2.º, n.º 2, al. i)
+    en: Article 2(2), point (i)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7705,7 +8271,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-j
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. j)
+  referencia:
+    pt: art. 2.º, n.º 2, al. j)
+    en: Article 2(2), point (j)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7728,7 +8296,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-2-2-k
   acto_fonte: 32024R1774
-  referencia: art. 2.º, n.º 2, al. k)
+  referencia:
+    pt: art. 2.º, n.º 2, al. k)
+    en: Article 2(2), point (k)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7751,7 +8321,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3
   acto_fonte: 32024R1774
-  referencia: art. 3.º, prim. parágrafo
+  referencia:
+    pt: art. 3.º, prim. parágrafo
+    en: Article 3, first subparagraph
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7784,7 +8356,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-a
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. a)
+  referencia:
+    pt: art. 3.º, al. a)
+    en: Article 3, point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -7817,7 +8391,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-b
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. b)
+  referencia:
+    pt: art. 3.º, al. b)
+    en: Article 3, point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7861,7 +8437,9 @@ itens:
     en: E+D+I axes (impact), threat modelling methodology and likelihood of exploitation (EPSS/KEV).
 - id: DORA-RTS1774-3-c
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. c)
+  referencia:
+    pt: art. 3.º, al. c)
+    en: Article 3, point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7893,7 +8471,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-c-p2
   acto_fonte: 32024R1774
-  referencia: art. 3.º, segundo parágrafo, als. a) a c)
+  referencia:
+    pt: art. 3.º, segundo parágrafo, als. a) a c)
+    en: Article 3, second subparagraph, points (a) to (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7926,7 +8506,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-d
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. d)
+  referencia:
+    pt: art. 3.º, al. d)
+    en: Article 3, point (d)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -7966,7 +8548,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-d-iv
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. d), subal. iv)
+  referencia:
+    pt: art. 3.º, al. d), subal. iv)
+    en: Article 3, point (d)(iv)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -8001,7 +8585,9 @@ itens:
     en: Maximum TTL of 90 days with re-approval — more demanding than the annual review.
 - id: DORA-RTS1774-3-e
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. e)
+  referencia:
+    pt: art. 3.º, al. e)
+    en: Article 3, point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8044,7 +8630,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-3-f
   acto_fonte: 32024R1774
-  referencia: art. 3.º, al. f)
+  referencia:
+    pt: art. 3.º, al. f)
+    en: Article 3, point (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -8068,7 +8656,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-4-1
   acto_fonte: 32024R1774
-  referencia: art. 4.º, n.º 1
+  referencia:
+    pt: art. 4.º, n.º 1
+    en: Article 4(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8110,7 +8700,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-4-2-a
   acto_fonte: 32024R1774
-  referencia: art. 4.º, n.º 2, al. a)
+  referencia:
+    pt: art. 4.º, n.º 2, al. a)
+    en: Article 4(2), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8144,7 +8736,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-4-2-b
   acto_fonte: 32024R1774
-  referencia: art. 4.º, n.º 2, al. b)
+  referencia:
+    pt: art. 4.º, n.º 2, al. b)
+    en: Article 4(2), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8185,7 +8779,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-4-2-c
   acto_fonte: 32024R1774
-  referencia: art. 4.º, n.º 2, al. c)
+  referencia:
+    pt: art. 4.º, n.º 2, al. c)
+    en: Article 4(2), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8211,7 +8807,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-5-1
   acto_fonte: 32024R1774
-  referencia: art. 5.º, n.º 1
+  referencia:
+    pt: art. 5.º, n.º 1
+    en: Article 5(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8245,7 +8843,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-5-2
   acto_fonte: 32024R1774
-  referencia: art. 5.º, n.º 2
+  referencia:
+    pt: art. 5.º, n.º 2
+    en: Article 5(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8279,7 +8879,9 @@ itens:
     en: 'E+D+I criteria include impact; Common root cause: the Manual''s proportionality is by level L1–L3 (E+D+I axes), not by the DORA notion of “critical or important function”; an asset supporting an FCI that is classified L1/L2 falls below the legal floor.'
 - id: DORA-RTS1774-6-1
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 1
+  referencia:
+    pt: art. 6.º, n.º 1
+    en: Article 6(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8328,7 +8930,9 @@ itens:
     en: Prescribed as requirements (not as a standalone policy document).
 - id: DORA-RTS1774-6-2
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 2, prim. parágrafo
+  referencia:
+    pt: art. 6.º, n.º 2, prim. parágrafo
+    en: Article 6(2), first subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8359,7 +8963,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-6-2-a
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 2, al. a)
+  referencia:
+    pt: art. 6.º, n.º 2, al. a)
+    en: Article 6(2), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8392,7 +8998,9 @@ itens:
     en: At rest mandatory from L2 onwards (L1 by definition without sensitive data).
 - id: DORA-RTS1774-6-2-b
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 2, al. b) e segundo parágrafo
+  referencia:
+    pt: art. 6.º, n.º 2, al. b) e segundo parágrafo
+    en: Article 6(2), point (b) and second subparagraph
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -8411,7 +9019,9 @@ itens:
     en: Conditional obligation (“where necessary”); low priority.
 - id: DORA-RTS1774-6-2-c
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 2, al. c)
+  referencia:
+    pt: art. 6.º, n.º 2, al. c)
+    en: Article 6(2), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8442,7 +9052,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-6-2-d
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 2, al. d)
+  referencia:
+    pt: art. 6.º, n.º 2, al. d)
+    en: Article 6(2), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8498,7 +9110,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-6-3
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 3
+  referencia:
+    pt: art. 6.º, n.º 3
+    en: Article 6(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8529,7 +9143,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-6-4
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 4
+  referencia:
+    pt: art. 6.º, n.º 4
+    en: Article 6(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -8554,7 +9170,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-6-5
   acto_fonte: 32024R1774
-  referencia: art. 6.º, n.º 5
+  referencia:
+    pt: art. 6.º, n.º 5
+    en: Article 6(5)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8586,7 +9204,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-7-1
   acto_fonte: 32024R1774
-  referencia: art. 7.º, n.º 1
+  referencia:
+    pt: art. 7.º, n.º 1
+    en: Article 7(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -8646,7 +9266,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-7-2
   acto_fonte: 32024R1774
-  referencia: art. 7.º, n.º 2
+  referencia:
+    pt: art. 7.º, n.º 2
+    en: Article 7(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8677,7 +9299,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-7-3
   acto_fonte: 32024R1774
-  referencia: art. 7.º, n.º 3
+  referencia:
+    pt: art. 7.º, n.º 3
+    en: Article 7(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8709,7 +9333,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-7-4
   acto_fonte: 32024R1774
-  referencia: art. 7.º, n.º 4
+  referencia:
+    pt: art. 7.º, n.º 4
+    en: Article 7(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -8743,7 +9369,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-7-5
   acto_fonte: 32024R1774
-  referencia: art. 7.º, n.º 5
+  referencia:
+    pt: art. 7.º, n.º 5
+    en: Article 7(5)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8775,7 +9403,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-1
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 1
+  referencia:
+    pt: art. 8.º, n.º 1
+    en: Article 8(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8818,7 +9448,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-a
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. a)
+  referencia:
+    pt: art. 8.º, n.º 2, al. a)
+    en: Article 8(2), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -8868,7 +9500,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-i
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. i)
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. i)
+    en: Article 8(2), point (b)(i)
   classe: engenharia
   forca: cobre
   contexto:
@@ -8901,7 +9535,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-ii
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. ii)
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. ii)
+    en: Article 8(2), point (b)(ii)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -8918,7 +9554,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-iii
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. iii)
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. iii)
+    en: Article 8(2), point (b)(iii)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8958,7 +9596,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-iv
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. iv)
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. iv)
+    en: Article 8(2), point (b)(iv)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -8990,7 +9630,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-v
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. v) e segundo parágrafo
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. v) e segundo parágrafo
+    en: Article 8(2), point (b)(v) and second subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9040,7 +9682,9 @@ itens:
     en: Network/identity segregation between environments formalised at L3 (ARC-011); separation of environments and data at all levels.
 - id: DORA-RTS1774-8-2-b-vi
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. vi)
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. vi)
+    en: Article 8(2), point (b)(vi)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9071,7 +9715,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-b-vii
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. b), subal. vii) e terceiro parágrafo
+  referencia:
+    pt: art. 8.º, n.º 2, al. b), subal. vii) e terceiro parágrafo
+    en: Article 8(2), point (b)(vii) and third subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9097,7 +9743,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-8-2-c
   acto_fonte: 32024R1774
-  referencia: art. 8.º, n.º 2, al. c)
+  referencia:
+    pt: art. 8.º, n.º 2, al. c)
+    en: Article 8(2), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9141,7 +9789,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-9-1
   acto_fonte: 32024R1774
-  referencia: art. 9.º, n.º 1
+  referencia:
+    pt: art. 9.º, n.º 1
+    en: Article 9(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9166,7 +9816,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-9-2
   acto_fonte: 32024R1774
-  referencia: art. 9.º, n.º 2
+  referencia:
+    pt: art. 9.º, n.º 2
+    en: Article 9(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -9183,7 +9835,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-1
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 1
+  referencia:
+    pt: art. 10.º, n.º 1
+    en: Article 10(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9233,7 +9887,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-a
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. a)
+  referencia:
+    pt: art. 10.º, n.º 2, al. a)
+    en: Article 10(2), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9257,7 +9913,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-b
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. b) e segundo parágrafo
+  referencia:
+    pt: art. 10.º, n.º 2, al. b) e segundo parágrafo
+    en: Article 10(2), point (b) and second subparagraph
   classe: engenharia
   forca: parcial
   contexto:
@@ -9315,7 +9973,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-c
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. c) e terceiro parágrafo
+  referencia:
+    pt: art. 10.º, n.º 2, al. c) e terceiro parágrafo
+    en: Article 10(2), point (c) and third subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9359,7 +10019,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-d
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. d) e quarto parágrafo
+  referencia:
+    pt: art. 10.º, n.º 2, al. d) e quarto parágrafo
+    en: Article 10(2), point (d), and fourth subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9407,7 +10069,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-e
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. e)
+  referencia:
+    pt: art. 10.º, n.º 2, al. e)
+    en: Article 10(2), point (e)
   classe: engenharia
   forca: cobre
   contexto:
@@ -9442,7 +10106,9 @@ itens:
     en: DST-007 covers only the notification of compromised artefacts.
 - id: DORA-RTS1774-10-2-f
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. f) e quinto parágrafo
+  referencia:
+    pt: art. 10.º, n.º 2, al. f) e quinto parágrafo
+    en: Article 10(2), point (f), and fifth subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9476,7 +10142,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-g
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. g)
+  referencia:
+    pt: art. 10.º, n.º 2, al. g)
+    en: Article 10(2), point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9507,7 +10175,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-2-h
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 2, al. h)
+  referencia:
+    pt: art. 10.º, n.º 2, al. h)
+    en: Article 10(2), point (h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9538,7 +10208,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-3
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 3
+  referencia:
+    pt: art. 10.º, n.º 3
+    en: Article 10(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9581,7 +10253,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-4-a
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 4, al. a)
+  referencia:
+    pt: art. 10.º, n.º 4, al. a)
+    en: Article 10(4), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9615,7 +10289,9 @@ itens:
     en: For software components; hardware out of scope.
 - id: DORA-RTS1774-10-4-b
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 4, al. b)
+  referencia:
+    pt: art. 10.º, n.º 4, al. b)
+    en: Article 10(4), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9648,7 +10324,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-4-c
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 4, al. c)
+  referencia:
+    pt: art. 10.º, n.º 4, al. c)
+    en: Article 10(4), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9679,7 +10357,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-10-4-d
   acto_fonte: 32024R1774
-  referencia: art. 10.º, n.º 4, al. d)
+  referencia:
+    pt: art. 10.º, n.º 4, al. d)
+    en: Article 10(4), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9720,7 +10400,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-1
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 1
+  referencia:
+    pt: art. 11.º, n.º 1
+    en: Article 11(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9743,7 +10425,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-a
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. a)
+  referencia:
+    pt: art. 11.º, n.º 2, al. a)
+    en: Article 11(2), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -9782,7 +10466,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-b
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. b) e segundo parágrafo
+  referencia:
+    pt: art. 11.º, n.º 2, al. b) e segundo parágrafo
+    en: Article 11(2), point (b) and second subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9840,7 +10526,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-c
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. c)
+  referencia:
+    pt: art. 11.º, n.º 2, al. c)
+    en: Article 11(2), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9881,7 +10569,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-d
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. d)
+  referencia:
+    pt: art. 11.º, n.º 2, al. d)
+    en: Article 11(2), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9906,7 +10596,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-e
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. e)
+  referencia:
+    pt: art. 11.º, n.º 2, al. e)
+    en: Article 11(2), point (e)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -9923,7 +10615,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-f
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. f)
+  referencia:
+    pt: art. 11.º, n.º 2, al. f)
+    en: Article 11(2), point (f)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -9940,7 +10634,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-g
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. g)
+  referencia:
+    pt: art. 11.º, n.º 2, al. g)
+    en: Article 11(2), point (g)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -9965,7 +10661,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-h
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. h)
+  referencia:
+    pt: art. 11.º, n.º 2, al. h)
+    en: Article 11(2), point (h)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -9982,7 +10680,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-i
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. i)
+  referencia:
+    pt: art. 11.º, n.º 2, al. i)
+    en: Article 11(2), point (i)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10016,7 +10716,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-j
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. j)
+  referencia:
+    pt: art. 11.º, n.º 2, al. j)
+    en: Article 11(2), point (j)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -10033,7 +10735,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-11-2-k
   acto_fonte: 32024R1774
-  referencia: art. 11.º, n.º 2, al. k) e terceiro parágrafo
+  referencia:
+    pt: art. 11.º, n.º 2, al. k) e terceiro parágrafo
+    en: Article 11(2), point (k) and third subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10066,7 +10770,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-1
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 1
+  referencia:
+    pt: art. 12.º, n.º 1
+    en: Article 12(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10106,7 +10812,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-2-a
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. a) e segundo parágrafo
+  referencia:
+    pt: art. 12.º, n.º 2, al. a) e segundo parágrafo
+    en: Article 12(2), point (a) and second subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10148,7 +10856,9 @@ itens:
     en: Retention map by regime; aligned with the DORA rule (period set by the entity on a risk basis).
 - id: DORA-RTS1774-12-2-b
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. b)
+  referencia:
+    pt: art. 12.º, n.º 2, al. b)
+    en: Article 12(2), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10179,7 +10889,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-2-c
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. c)
+  referencia:
+    pt: art. 12.º, n.º 2, al. c)
+    en: Article 12(2), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10221,7 +10933,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-2-d
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. d)
+  referencia:
+    pt: art. 12.º, n.º 2, al. d)
+    en: Article 12(2), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10255,7 +10969,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-2-e
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. e)
+  referencia:
+    pt: art. 12.º, n.º 2, al. e)
+    en: Article 12(2), point (e)
   classe: engenharia
   forca: parcial
   contexto:
@@ -10292,7 +11008,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-12-2-f
   acto_fonte: 32024R1774
-  referencia: art. 12.º, n.º 2, al. f)
+  referencia:
+    pt: art. 12.º, n.º 2, al. f)
+    en: Article 12(2), point (f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10318,7 +11036,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13
   acto_fonte: 32024R1774
-  referencia: art. 13.º, prim. parágrafo
+  referencia:
+    pt: art. 13.º, prim. parágrafo
+    en: Article 13, first subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10352,7 +11072,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-a
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. a)
+  referencia:
+    pt: art. 13.º, al. a)
+    en: Article 13, point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10391,7 +11113,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-b
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. b)
+  referencia:
+    pt: art. 13.º, al. b)
+    en: Article 13, point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10424,7 +11148,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-c
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. c)
+  referencia:
+    pt: art. 13.º, al. c)
+    en: Article 13, point (c)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -10443,7 +11169,9 @@ itens:
     en: Relevant for cloud environments managed through IaC (management plane); low priority.
 - id: DORA-RTS1774-13-d
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. d)
+  referencia:
+    pt: art. 13.º, al. d)
+    en: Article 13, point (d)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -10460,7 +11188,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-e
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. e)
+  referencia:
+    pt: art. 13.º, al. e)
+    en: Article 13, point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10491,7 +11221,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-f
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. f)
+  referencia:
+    pt: art. 13.º, al. f)
+    en: Article 13, point (f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10533,7 +11265,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-g
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. g)
+  referencia:
+    pt: art. 13.º, al. g)
+    en: Article 13, point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10564,7 +11298,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-h
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. h) e segundo parágrafo
+  referencia:
+    pt: art. 13.º, al. h) e segundo parágrafo
+    en: Article 13, point (h) and second subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -10591,7 +11327,9 @@ itens:
     en: The Manual validates IaC (policy-as-code, drift) but does not prescribe periodic rule review; there is no weaker value, there is absence.
 - id: DORA-RTS1774-13-i
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. i)
+  referencia:
+    pt: art. 13.º, al. i)
+    en: Article 13, point (i)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10624,7 +11362,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-j
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. j)
+  referencia:
+    pt: art. 13.º, al. j)
+    en: Article 13, point (j)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10657,7 +11397,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-k
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. k)
+  referencia:
+    pt: art. 13.º, al. k)
+    en: Article 13, point (k)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -10674,7 +11416,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-l
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. l)
+  referencia:
+    pt: art. 13.º, al. l)
+    en: Article 13, point (l)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10707,7 +11451,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-13-m
   acto_fonte: 32024R1774
-  referencia: art. 13.º, al. m)
+  referencia:
+    pt: art. 13.º, al. m)
+    en: Article 13, point (m)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -10730,7 +11476,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-14-1
   acto_fonte: 32024R1774
-  referencia: art. 14.º, n.º 1
+  referencia:
+    pt: art. 14.º, n.º 1
+    en: Article 14(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10761,7 +11509,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-14-1-a
   acto_fonte: 32024R1774
-  referencia: art. 14.º, n.º 1, al. a)
+  referencia:
+    pt: art. 14.º, n.º 1, al. a)
+    en: Article 14(1), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10792,7 +11542,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-14-1-b
   acto_fonte: 32024R1774
-  referencia: art. 14.º, n.º 1, al. b)
+  referencia:
+    pt: art. 14.º, n.º 1, al. b)
+    en: Article 14(1), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -10834,7 +11586,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-14-1-c
   acto_fonte: 32024R1774
-  referencia: art. 14.º, n.º 1, al. c)
+  referencia:
+    pt: art. 14.º, n.º 1, al. c)
+    en: Article 14(1), point (c)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -10858,7 +11612,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-14-2
   acto_fonte: 32024R1774
-  referencia: art. 14.º, n.º 2
+  referencia:
+    pt: art. 14.º, n.º 2
+    en: Article 14(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -10897,7 +11653,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-1
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 1
+  referencia:
+    pt: art. 15.º, n.º 1
+    en: Article 15(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -10929,7 +11687,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-2
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 2
+  referencia:
+    pt: art. 15.º, n.º 2
+    en: Article 15(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -10952,7 +11712,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-3
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 3, als. a) a f)
+  referencia:
+    pt: art. 15.º, n.º 3, als. a) a f)
+    en: Article 15(3), points (a) to (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -10983,7 +11745,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-3-g
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 3, al. g)
+  referencia:
+    pt: art. 15.º, n.º 3, al. g)
+    en: Article 15(3), point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11022,7 +11786,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-4
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 4
+  referencia:
+    pt: art. 15.º, n.º 4
+    en: Article 15(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -11045,7 +11811,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-15-5
   acto_fonte: 32024R1774
-  referencia: art. 15.º, n.º 5
+  referencia:
+    pt: art. 15.º, n.º 5
+    en: Article 15(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -11062,7 +11830,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-1
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 1, prim. parágrafo
+  referencia:
+    pt: art. 16.º, n.º 1, prim. parágrafo
+    en: Article 16(1), first subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11103,7 +11873,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-1-a
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 1, al. a)
+  referencia:
+    pt: art. 16.º, n.º 1, al. a)
+    en: Article 16(1), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11142,7 +11914,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-1-b
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 1, al. b)
+  referencia:
+    pt: art. 16.º, n.º 1, al. b)
+    en: Article 16(1), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11183,7 +11957,9 @@ itens:
     en: Express approval by the business function and by the asset owner is not explicit (responsible reviewer identified).
 - id: DORA-RTS1774-16-1-c
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 1, al. c)
+  referencia:
+    pt: art. 16.º, n.º 1, al. c)
+    en: Article 16(1), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11232,7 +12008,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-2
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 2, prim. parágrafo
+  referencia:
+    pt: art. 16.º, n.º 2, prim. parágrafo
+    en: Article 16(2), first subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11271,7 +12049,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-2-p2
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 2, segundo e terceiro parágrafos
+  referencia:
+    pt: art. 16.º, n.º 2, segundo e terceiro parágrafos
+    en: Article 16(2), segundo and third subparagraphs
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -11288,7 +12068,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-3
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 3
+  referencia:
+    pt: art. 16.º, n.º 3
+    en: Article 16(3)
   classe: engenharia
   forca: parcial
   contexto:
@@ -11343,7 +12125,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-3-a
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 3, al. a)
+  referencia:
+    pt: art. 16.º, n.º 3, al. a)
+    en: Article 16(3), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11374,7 +12158,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-3-b
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 3, al. b)
+  referencia:
+    pt: art. 16.º, n.º 3, al. b)
+    en: Article 16(3), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11406,7 +12192,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-3-c
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 3, al. c)
+  referencia:
+    pt: art. 16.º, n.º 3, al. c)
+    en: Article 16(3), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11437,7 +12225,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-4
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 4
+  referencia:
+    pt: art. 16.º, n.º 4
+    en: Article 16(4)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11469,7 +12259,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-5
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 5
+  referencia:
+    pt: art. 16.º, n.º 5
+    en: Article 16(5)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11511,7 +12303,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-6
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 6
+  referencia:
+    pt: art. 16.º, n.º 6
+    en: Article 16(6)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -11547,7 +12341,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-7
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 7
+  referencia:
+    pt: art. 16.º, n.º 7
+    en: Article 16(7)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11588,7 +12384,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-16-8
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 8
+  referencia:
+    pt: art. 16.º, n.º 8
+    en: Article 16(8)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11630,7 +12428,9 @@ itens:
     en: Testing of proprietary third-party software (COTS) less explicit.
 - id: DORA-RTS1774-16-9
   acto_fonte: 32024R1774
-  referencia: art. 16.º, n.º 9
+  referencia:
+    pt: art. 16.º, n.º 9
+    en: Article 16(9)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -11656,7 +12456,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, prim. parágrafo
+  referencia:
+    pt: art. 17.º, n.º 1, prim. parágrafo
+    en: Article 17(1), first subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -11707,7 +12509,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-a
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. a)
+  referencia:
+    pt: art. 17.º, n.º 1, al. a)
+    en: Article 17(1), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11738,7 +12542,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-b
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. b)
+  referencia:
+    pt: art. 17.º, n.º 1, al. b)
+    en: Article 17(1), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11780,7 +12586,9 @@ itens:
     en: Formal SoD at L2/L3 (Policy 22); L1 with peer review.
 - id: DORA-RTS1774-17-1-c
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. c)
+  referencia:
+    pt: art. 17.º, n.º 1, al. c)
+    en: Article 17(1), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11811,7 +12619,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-d
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. d)
+  referencia:
+    pt: art. 17.º, n.º 1, al. d)
+    en: Article 17(1), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -11844,7 +12654,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-e
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. e)
+  referencia:
+    pt: art. 17.º, n.º 1, al. e)
+    en: Article 17(1), point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11876,7 +12688,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-f
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. f)
+  referencia:
+    pt: art. 17.º, n.º 1, al. f)
+    en: Article 17(1), point (f)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11909,7 +12723,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-g
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. g)
+  referencia:
+    pt: art. 17.º, n.º 1, al. g)
+    en: Article 17(1), point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11942,7 +12758,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-1-h
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 1, al. h)
+  referencia:
+    pt: art. 17.º, n.º 1, al. h)
+    en: Article 17(1), point (h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -11982,7 +12800,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-17-2
   acto_fonte: 32024R1774
-  referencia: art. 17.º, n.º 2
+  referencia:
+    pt: art. 17.º, n.º 2
+    en: Article 17(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -11999,7 +12819,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-18-1
   acto_fonte: 32024R1774
-  referencia: art. 18.º, n.º 1
+  referencia:
+    pt: art. 18.º, n.º 1
+    en: Article 18(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -12016,7 +12838,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-18-2
   acto_fonte: 32024R1774
-  referencia: art. 18.º, n.º 2, als. a) a e) e parágrafos seguintes
+  referencia:
+    pt: art. 18.º, n.º 2, als. a) a e) e parágrafos seguintes
+    en: Article 18(2), points (a) to (e), and following subparagraphs
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -12033,7 +12857,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-19-a
   acto_fonte: 32024R1774
-  referencia: art. 19.º, al. a)
+  referencia:
+    pt: art. 19.º, al. a)
+    en: Article 19, point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -12064,7 +12890,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-19-b-i
   acto_fonte: 32024R1774
-  referencia: art. 19.º, al. b), subal. i)
+  referencia:
+    pt: art. 19.º, al. b), subal. i)
+    en: Article 19, point (b)(i)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -12103,7 +12931,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-19-b-ii
   acto_fonte: 32024R1774
-  referencia: art. 19.º, al. b), subal. ii)
+  referencia:
+    pt: art. 19.º, al. b), subal. ii)
+    en: Article 19, point (b)(ii)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -12126,7 +12956,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-19-b-iii
   acto_fonte: 32024R1774
-  referencia: art. 19.º, al. b), subal. iii)
+  referencia:
+    pt: art. 19.º, al. b), subal. iii)
+    en: Article 19, point (b)(iii)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -12152,7 +12984,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-20-1
   acto_fonte: 32024R1774
-  referencia: art. 20.º, n.º 1
+  referencia:
+    pt: art. 20.º, n.º 1
+    en: Article 20(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -12203,7 +13037,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-20-2-a
   acto_fonte: 32024R1774
-  referencia: art. 20.º, n.º 2, al. a) e segundo parágrafo
+  referencia:
+    pt: art. 20.º, n.º 2, al. a) e segundo parágrafo
+    en: Article 20(2), point (a) and second subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -12238,7 +13074,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-20-2-b
   acto_fonte: 32024R1774
-  referencia: art. 20.º, n.º 2, al. b) e terceiro parágrafo
+  referencia:
+    pt: art. 20.º, n.º 2, al. b) e terceiro parágrafo
+    en: Article 20(2), point (b) and third subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -12296,7 +13134,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-a
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. a)
+  referencia:
+    pt: art. 21.º, al. a)
+    en: Article 21, point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12327,7 +13167,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-b
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. b)
+  referencia:
+    pt: art. 21.º, al. b)
+    en: Article 21, point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12367,7 +13209,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-c
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. c)
+  referencia:
+    pt: art. 21.º, al. c)
+    en: Article 21, point (c)
   classe: engenharia
   forca: cobre
   contexto:
@@ -12418,7 +13262,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-d
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. d)
+  referencia:
+    pt: art. 21.º, al. d)
+    en: Article 21, point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12457,7 +13303,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-e
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. e), subals. i) a iii)
+  referencia:
+    pt: art. 21.º, al. e), subals. i) a iii)
+    en: Article 21, point (e)(i) to (iii)
   classe: engenharia
   forca: cobre
   contexto:
@@ -12507,7 +13355,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-e-ii
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. e), subal. ii), e parágrafo 'Para efeitos da alínea e), subalínea ii)'
+  referencia:
+    pt: art. 21.º, al. e), subal. ii), e parágrafo 'Para efeitos da alínea e), subalínea ii)'
+    en: Article 21, point (e)(ii), and the subparagraph 'For the purposes of point (e)(ii)'
   classe: engenharia
   forca: cobre
   contexto:
@@ -12548,7 +13398,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-e-iv
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. e), subal. iv)
+  referencia:
+    pt: art. 21.º, al. e), subal. iv)
+    en: Article 21, point (e)(iv)
   classe: engenharia
   forca: cobre
   contexto:
@@ -12599,7 +13451,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-f-i
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. f), subal. i)
+  referencia:
+    pt: art. 21.º, al. f), subal. i)
+    en: Article 21, point (f)(i)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12638,7 +13492,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-f-ii
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. f), subal. ii)
+  referencia:
+    pt: art. 21.º, al. f), subal. ii)
+    en: Article 21, point (f)(ii)
   classe: engenharia
   forca: cobre
   contexto:
@@ -12682,7 +13538,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-21-g
   acto_fonte: 32024R1774
-  referencia: art. 21.º, al. g) e parágrafos finais
+  referencia:
+    pt: art. 21.º, al. g) e parágrafos finais
+    en: Article 21, point (g), and final subparagraphs
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -12699,7 +13557,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-22
   acto_fonte: 32024R1774
-  referencia: art. 22.º, prim. parágrafo
+  referencia:
+    pt: art. 22.º, prim. parágrafo
+    en: Article 22, first subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -12745,7 +13605,9 @@ itens:
     en: Same root as the conflict flagged in DORA-17-1.
 - id: DORA-RTS1774-22-a
   acto_fonte: 32024R1774
-  referencia: art. 22.º, al. a)
+  referencia:
+    pt: art. 22.º, al. a)
+    en: Article 22, point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12780,7 +13642,9 @@ itens:
     en: Even at L1 a “documented response process” is required.
 - id: DORA-RTS1774-22-b
   acto_fonte: 32024R1774
-  referencia: art. 22.º, al. b)
+  referencia:
+    pt: art. 22.º, al. b)
+    en: Article 22, point (b)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -12806,7 +13670,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-22-c
   acto_fonte: 32024R1774
-  referencia: art. 22.º, al. c)
+  referencia:
+    pt: art. 22.º, al. c)
+    en: Article 22, point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12837,7 +13703,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-22-d
   acto_fonte: 32024R1774
-  referencia: art. 22.º, al. d) e segundo parágrafo
+  referencia:
+    pt: art. 22.º, al. d) e segundo parágrafo
+    en: Article 22, point (d) and second subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12870,7 +13738,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-22-e
   acto_fonte: 32024R1774
-  referencia: art. 22.º, al. e)
+  referencia:
+    pt: art. 22.º, al. e)
+    en: Article 22, point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -12911,7 +13781,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-1
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 1
+  referencia:
+    pt: art. 23.º, n.º 1
+    en: Article 23(1)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -12943,7 +13815,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-2-a
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 2, al. a)
+  referencia:
+    pt: art. 23.º, n.º 2, al. a)
+    en: Article 23(2), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -12987,7 +13861,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-2-b
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 2, al. b) e segundo parágrafo
+  referencia:
+    pt: art. 23.º, n.º 2, al. b) e segundo parágrafo
+    en: Article 23(2), point (b) and second subparagraph
   classe: engenharia
   forca: parcial
   contexto:
@@ -13032,7 +13908,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-2-c
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 2, al. c)
+  referencia:
+    pt: art. 23.º, n.º 2, al. c)
+    en: Article 23(2), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -13075,7 +13953,9 @@ itens:
     en: 24/7 on-call for P1 only at L2/L3.
 - id: DORA-RTS1774-23-2-d
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 2, al. d)
+  referencia:
+    pt: art. 23.º, n.º 2, al. d)
+    en: Article 23(2), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -13106,7 +13986,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-3
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 3
+  referencia:
+    pt: art. 23.º, n.º 3
+    en: Article 23(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13142,7 +14024,9 @@ itens:
     en: Same root as the conflict flagged in DORA-RTS1774-12-2-d.
 - id: DORA-RTS1774-23-4
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.º 4
+  referencia:
+    pt: art. 23.º, n.º 4
+    en: Article 23(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13176,7 +14060,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-23-5
   acto_fonte: 32024R1774
-  referencia: art. 23.º, n.os 5 e 6
+  referencia:
+    pt: art. 23.º, n.os 5 e 6
+    en: Article 23(5) and (6)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -13200,7 +14086,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-24-1-a
   acto_fonte: 32024R1774
-  referencia: art. 24.º, n.º 1, al. a)
+  referencia:
+    pt: art. 24.º, n.º 1, al. a)
+    en: Article 24(1), point (a)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -13217,7 +14105,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-24-1-b
   acto_fonte: 32024R1774
-  referencia: art. 24.º, n.º 1, al. b)
+  referencia:
+    pt: art. 24.º, n.º 1, al. b)
+    en: Article 24(1), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13241,7 +14131,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-24-2
   acto_fonte: 32024R1774
-  referencia: art. 24.º, n.º 2
+  referencia:
+    pt: art. 24.º, n.º 2
+    en: Article 24(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -13258,7 +14150,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-24-3
   acto_fonte: 32024R1774
-  referencia: art. 24.º, n.º 3
+  referencia:
+    pt: art. 24.º, n.º 3
+    en: Article 24(3)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -13275,7 +14169,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-24-4
   acto_fonte: 32024R1774
-  referencia: art. 24.º, n.º 4
+  referencia:
+    pt: art. 24.º, n.º 4
+    en: Article 24(4)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -13292,7 +14188,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-25-1
   acto_fonte: 32024R1774
-  referencia: art. 25.º, n.º 1
+  referencia:
+    pt: art. 25.º, n.º 1
+    en: Article 25(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13327,7 +14225,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-25-2
   acto_fonte: 32024R1774
-  referencia: art. 25.º, n.º 2
+  referencia:
+    pt: art. 25.º, n.º 2
+    en: Article 25(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13362,7 +14262,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-25-3
   acto_fonte: 32024R1774
-  referencia: art. 25.º, n.os 3 e 4
+  referencia:
+    pt: art. 25.º, n.os 3 e 4
+    en: Article 25(3) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -13379,7 +14281,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-25-5
   acto_fonte: 32024R1774
-  referencia: art. 25.º, n.º 5
+  referencia:
+    pt: art. 25.º, n.º 5
+    en: Article 25(5)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13405,7 +14309,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-26-1
   acto_fonte: 32024R1774
-  referencia: art. 26.º, n.º 1
+  referencia:
+    pt: art. 26.º, n.º 1
+    en: Article 26(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13440,7 +14346,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-26-2
   acto_fonte: 32024R1774
-  referencia: art. 26.º, n.º 2
+  referencia:
+    pt: art. 26.º, n.º 2
+    en: Article 26(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13466,7 +14374,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-26-3
   acto_fonte: 32024R1774
-  referencia: art. 26.º, n.º 3
+  referencia:
+    pt: art. 26.º, n.º 3
+    en: Article 26(3)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -13483,7 +14393,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-26-4
   acto_fonte: 32024R1774
-  referencia: art. 26.º, n.º 4
+  referencia:
+    pt: art. 26.º, n.º 4
+    en: Article 26(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13509,7 +14421,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-27-1
   acto_fonte: 32024R1774
-  referencia: art. 27.º, n.º 1
+  referencia:
+    pt: art. 27.º, n.º 1
+    en: Article 27(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -13526,7 +14440,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-27-2
   acto_fonte: 32024R1774
-  referencia: art. 27.º, n.º 2
+  referencia:
+    pt: art. 27.º, n.º 2
+    en: Article 27(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -13543,7 +14459,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-1
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 1
+  referencia:
+    pt: art. 28.º, n.º 1
+    en: Article 28(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13566,7 +14484,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-a
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. a)
+  referencia:
+    pt: art. 28.º, n.º 2, al. a)
+    en: Article 28(2), point (a)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13589,7 +14509,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-b
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. b)
+  referencia:
+    pt: art. 28.º, n.º 2, al. b)
+    en: Article 28(2), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13620,7 +14542,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-c
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. c)
+  referencia:
+    pt: art. 28.º, n.º 2, al. c)
+    en: Article 28(2), point (c)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13643,7 +14567,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-d
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. d)
+  referencia:
+    pt: art. 28.º, n.º 2, al. d)
+    en: Article 28(2), point (d)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13675,7 +14601,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-e
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. e)
+  referencia:
+    pt: art. 28.º, n.º 2, al. e)
+    en: Article 28(2), point (e)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -13692,7 +14620,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-f
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, als. f) e g)
+  referencia:
+    pt: art. 28.º, n.º 2, als. f) e g)
+    en: Article 28(2), points (f) and (g)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13715,7 +14645,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-h
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. h)
+  referencia:
+    pt: art. 28.º, n.º 2, al. h)
+    en: Article 28(2), point (h)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13738,7 +14670,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-2-i
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 2, al. i)
+  referencia:
+    pt: art. 28.º, n.º 2, al. i)
+    en: Article 28(2), point (i)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13762,7 +14696,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-3
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 3
+  referencia:
+    pt: art. 28.º, n.º 3
+    en: Article 28(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -13779,7 +14715,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-4
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 4
+  referencia:
+    pt: art. 28.º, n.º 4
+    en: Article 28(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -13796,7 +14734,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-5
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 5
+  referencia:
+    pt: art. 28.º, n.º 5
+    en: Article 28(5)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13820,7 +14760,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-28-6
   acto_fonte: 32024R1774
-  referencia: art. 28.º, n.º 6
+  referencia:
+    pt: art. 28.º, n.º 6
+    en: Article 28(6)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13843,7 +14785,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-29-1
   acto_fonte: 32024R1774
-  referencia: art. 29.º, n.º 1
+  referencia:
+    pt: art. 29.º, n.º 1
+    en: Article 29(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13866,7 +14810,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-29-2
   acto_fonte: 32024R1774
-  referencia: art. 29.º, n.º 2
+  referencia:
+    pt: art. 29.º, n.º 2
+    en: Article 29(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13899,7 +14845,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-30-1
   acto_fonte: 32024R1774
-  referencia: art. 30.º, n.º 1
+  referencia:
+    pt: art. 30.º, n.º 1
+    en: Article 30(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -13934,7 +14882,9 @@ itens:
     en: 'Common root cause: the Manual''s proportionality is by level L1–L3 (E+D+I axes), not by the DORA notion of “critical or important function”; an asset supporting an FCI that is classified L1/L2 falls below the legal floor.'
 - id: DORA-RTS1774-30-2
   acto_fonte: 32024R1774
-  referencia: art. 30.º, n.º 2
+  referencia:
+    pt: art. 30.º, n.º 2
+    en: Article 30(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -13959,7 +14909,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-31-1
   acto_fonte: 32024R1774
-  referencia: art. 31.º, n.º 1
+  referencia:
+    pt: art. 31.º, n.º 1
+    en: Article 31(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14009,7 +14961,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-31-2
   acto_fonte: 32024R1774
-  referencia: art. 31.º, n.º 2
+  referencia:
+    pt: art. 31.º, n.º 2
+    en: Article 31(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14041,7 +14995,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-31-3
   acto_fonte: 32024R1774
-  referencia: art. 31.º, n.º 3
+  referencia:
+    pt: art. 31.º, n.º 3
+    en: Article 31(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14074,7 +15030,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-31-4
   acto_fonte: 32024R1774
-  referencia: art. 31.º, n.º 4
+  referencia:
+    pt: art. 31.º, n.º 4
+    en: Article 31(4)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14106,7 +15064,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-32
   acto_fonte: 32024R1774
-  referencia: art. 32.º, n.os 1 a 3
+  referencia:
+    pt: art. 32.º, n.os 1 a 3
+    en: Article 32(1) to (3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -14123,7 +15083,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33
   acto_fonte: 32024R1774
-  referencia: art. 33.º, prim. parágrafo
+  referencia:
+    pt: art. 33.º, prim. parágrafo
+    en: Article 33, first subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14156,7 +15118,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33-a
   acto_fonte: 32024R1774
-  referencia: art. 33.º, al. a)
+  referencia:
+    pt: art. 33.º, al. a)
+    en: Article 33, point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14187,7 +15151,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33-b
   acto_fonte: 32024R1774
-  referencia: art. 33.º, al. b)
+  referencia:
+    pt: art. 33.º, al. b)
+    en: Article 33, point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14218,7 +15184,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33-c
   acto_fonte: 32024R1774
-  referencia: art. 33.º, al. c) e segundo parágrafo
+  referencia:
+    pt: art. 33.º, al. c) e segundo parágrafo
+    en: Article 33, point (c) and second subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -14260,7 +15228,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33-d
   acto_fonte: 32024R1774
-  referencia: art. 33.º, al. d) e terceiro parágrafo
+  referencia:
+    pt: art. 33.º, al. d) e terceiro parágrafo
+    en: Article 33, point (d) and third subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -14304,7 +15274,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-33-e
   acto_fonte: 32024R1774
-  referencia: art. 33.º, al. e)
+  referencia:
+    pt: art. 33.º, al. e)
+    en: Article 33, point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14345,7 +15317,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-a
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. a)
+  referencia:
+    pt: art. 34.º, al. a)
+    en: Article 34, point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14379,7 +15353,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-b
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. b)
+  referencia:
+    pt: art. 34.º, al. b)
+    en: Article 34, point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14405,7 +15381,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-c
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. c)
+  referencia:
+    pt: art. 34.º, al. c)
+    en: Article 34, point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14430,7 +15408,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-d
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. d)
+  referencia:
+    pt: art. 34.º, al. d)
+    en: Article 34, point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14481,7 +15461,9 @@ itens:
     en: In the simplified framework there is no weekly floor; the Manual's proportional cadence is compatible.
 - id: DORA-RTS1774-34-e
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. e)
+  referencia:
+    pt: art. 34.º, al. e)
+    en: Article 34, point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14516,7 +15498,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-f
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. f) e segundo parágrafo
+  referencia:
+    pt: art. 34.º, al. f) e segundo parágrafo
+    en: Article 34, point (f) and second subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14550,7 +15534,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-g
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. g)
+  referencia:
+    pt: art. 34.º, al. g)
+    en: Article 34, point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14590,7 +15576,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-h
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. h)
+  referencia:
+    pt: art. 34.º, al. h)
+    en: Article 34, point (h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14624,7 +15612,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-34-i
   acto_fonte: 32024R1774
-  referencia: art. 34.º, al. i)
+  referencia:
+    pt: art. 34.º, al. i)
+    en: Article 34, point (i)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14666,7 +15656,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35
   acto_fonte: 32024R1774
-  referencia: art. 35.º, prim. parágrafo
+  referencia:
+    pt: art. 35.º, prim. parágrafo
+    en: Article 35, first subparagraph
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14707,7 +15699,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-a
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. a)
+  referencia:
+    pt: art. 35.º, al. a)
+    en: Article 35, point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14740,7 +15734,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-b
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. b)
+  referencia:
+    pt: art. 35.º, al. b)
+    en: Article 35, point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14773,7 +15769,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-c
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. c)
+  referencia:
+    pt: art. 35.º, al. c)
+    en: Article 35, point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14804,7 +15802,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-d
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. d)
+  referencia:
+    pt: art. 35.º, al. d)
+    en: Article 35, point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14835,7 +15835,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-e
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. e)
+  referencia:
+    pt: art. 35.º, al. e)
+    en: Article 35, point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -14860,7 +15862,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-f
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. f)
+  referencia:
+    pt: art. 35.º, al. f)
+    en: Article 35, point (f)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -14877,7 +15881,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-35-g
   acto_fonte: 32024R1774
-  referencia: art. 35.º, al. g)
+  referencia:
+    pt: art. 35.º, al. g)
+    en: Article 35, point (g)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -14894,7 +15900,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-36-1
   acto_fonte: 32024R1774
-  referencia: art. 36.º, n.º 1
+  referencia:
+    pt: art. 36.º, n.º 1
+    en: Article 36(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14917,7 +15925,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-36-2
   acto_fonte: 32024R1774
-  referencia: art. 36.º, n.º 2
+  referencia:
+    pt: art. 36.º, n.º 2
+    en: Article 36(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14948,7 +15958,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-36-3
   acto_fonte: 32024R1774
-  referencia: art. 36.º, n.º 3
+  referencia:
+    pt: art. 36.º, n.º 3
+    en: Article 36(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -14979,7 +15991,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-37
   acto_fonte: 32024R1774
-  referencia: art. 37.º, prim. parágrafo
+  referencia:
+    pt: art. 37.º, prim. parágrafo
+    en: Article 37, first subparagraph
   classe: engenharia
   forca: cobre
   contexto: null
@@ -15011,7 +16025,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-37-a
   acto_fonte: 32024R1774
-  referencia: art. 37.º, al. a)
+  referencia:
+    pt: art. 37.º, al. a)
+    en: Article 37, point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -15042,7 +16058,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-37-b
   acto_fonte: 32024R1774
-  referencia: art. 37.º, al. b)
+  referencia:
+    pt: art. 37.º, al. b)
+    en: Article 37, point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -15073,7 +16091,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-37-c
   acto_fonte: 32024R1774
-  referencia: art. 37.º, al. c)
+  referencia:
+    pt: art. 37.º, al. c)
+    en: Article 37, point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -15105,7 +16125,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-38-1
   acto_fonte: 32024R1774
-  referencia: art. 38.º, n.º 1
+  referencia:
+    pt: art. 38.º, n.º 1
+    en: Article 38(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -15128,7 +16150,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-38-2
   acto_fonte: 32024R1774
-  referencia: art. 38.º, n.º 2
+  referencia:
+    pt: art. 38.º, n.º 2
+    en: Article 38(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15170,7 +16194,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-39-1
   acto_fonte: 32024R1774
-  referencia: art. 39.º, n.º 1
+  referencia:
+    pt: art. 39.º, n.º 1
+    en: Article 39(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15196,7 +16222,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-39-2-a
   acto_fonte: 32024R1774
-  referencia: art. 39.º, n.º 2, als. a) a c)
+  referencia:
+    pt: art. 39.º, n.º 2, als. a) a c)
+    en: Article 39(2), points (a) to (c)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15213,7 +16241,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-39-2-d
   acto_fonte: 32024R1774
-  referencia: art. 39.º, n.º 2, als. d) a f)
+  referencia:
+    pt: art. 39.º, n.º 2, als. d) a f)
+    en: Article 39(2), points (d) to (f)
   classe: engenharia
   forca: cobre
   contexto:
@@ -15273,7 +16303,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-39-2-g
   acto_fonte: 32024R1774
-  referencia: art. 39.º, n.º 2, al. g)
+  referencia:
+    pt: art. 39.º, n.º 2, al. g)
+    en: Article 39(2), point (g)
   classe: engenharia
   forca: cobre
   contexto:
@@ -15298,7 +16330,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-39-2-h
   acto_fonte: 32024R1774
-  referencia: art. 39.º, n.º 2, als. h) a j)
+  referencia:
+    pt: art. 39.º, n.º 2, als. h) a j)
+    en: Article 39(2), points (h) to (j)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15315,7 +16349,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-40-1
   acto_fonte: 32024R1774
-  referencia: art. 40.º, n.os 1 e 2
+  referencia:
+    pt: art. 40.º, n.os 1 e 2
+    en: Article 40(1) and (2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15358,7 +16394,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-40-3
   acto_fonte: 32024R1774
-  referencia: art. 40.º, n.º 3
+  referencia:
+    pt: art. 40.º, n.º 3
+    en: Article 40(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15384,7 +16422,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-41-1
   acto_fonte: 32024R1774
-  referencia: art. 41.º, n.º 1
+  referencia:
+    pt: art. 41.º, n.º 1
+    en: Article 41(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -15401,7 +16441,9 @@ itens:
   nota: null
 - id: DORA-RTS1774-41-2
   acto_fonte: 32024R1774
-  referencia: art. 41.º, n.º 2
+  referencia:
+    pt: art. 41.º, n.º 2
+    en: Article 41(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15418,7 +16460,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-1-1
   acto_fonte: 32024R1772
-  referencia: art. 1.º, n.º 1
+  referencia:
+    pt: art. 1.º, n.º 1
+    en: Article 1(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15444,7 +16488,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-1-2
   acto_fonte: 32024R1772
-  referencia: art. 1.º, n.º 2
+  referencia:
+    pt: art. 1.º, n.º 2
+    en: Article 1(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15470,7 +16516,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-1-3
   acto_fonte: 32024R1772
-  referencia: art. 1.º, n.º 3
+  referencia:
+    pt: art. 1.º, n.º 3
+    en: Article 1(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15496,7 +16544,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-1-4
   acto_fonte: 32024R1772
-  referencia: art. 1.º, n.º 4
+  referencia:
+    pt: art. 1.º, n.º 4
+    en: Article 1(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -15521,7 +16571,9 @@ itens:
     en: Logging of business events (transactions) at L3 supports the count.
 - id: DORA-RTS1772-1-5
   acto_fonte: 32024R1772
-  referencia: art. 1.º, n.º 5; art. 9.º, n.º 1, 2.º par.
+  referencia:
+    pt: art. 1.º, n.º 5; art. 9.º, n.º 1, 2.º par.
+    en: Article 1(5); Article 9(1), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15547,7 +16599,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-2-1
   acto_fonte: 32024R1772
-  referencia: art. 2.º, n.º 1
+  referencia:
+    pt: art. 2.º, n.º 1
+    en: Article 2(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15573,7 +16627,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-2-2
   acto_fonte: 32024R1772
-  referencia: art. 2.º, n.º 2
+  referencia:
+    pt: art. 2.º, n.º 2
+    en: Article 2(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15599,7 +16655,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-3-1
   acto_fonte: 32024R1772
-  referencia: art. 3.º, n.º 1
+  referencia:
+    pt: art. 3.º, n.º 1
+    en: Article 3(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15633,7 +16691,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-3-2
   acto_fonte: 32024R1772
-  referencia: art. 3.º, n.º 2
+  referencia:
+    pt: art. 3.º, n.º 2
+    en: Article 3(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15666,7 +16726,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-4
   acto_fonte: 32024R1772
-  referencia: art. 4.º
+  referencia:
+    pt: art. 4.º
+    en: Article 4
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15692,7 +16754,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-5
   acto_fonte: 32024R1772
-  referencia: art. 5.º
+  referencia:
+    pt: art. 5.º
+    en: Article 5
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15718,7 +16782,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-6
   acto_fonte: 32024R1772
-  referencia: art. 6.º
+  referencia:
+    pt: art. 6.º
+    en: Article 6
   classe: engenharia
   forca: parcial
   contexto: null
@@ -15754,7 +16820,9 @@ itens:
     en: 'Common root cause: the Manual''s proportionality is by level L1–L3 (E+D+I axes), not by the DORA notion of “critical or important function”; an asset supporting an FCI that is classified L1/L2 falls below the legal floor.'
 - id: DORA-RTS1772-7-1
   acto_fonte: 32024R1772
-  referencia: art. 7.º, n.os 1 e 2
+  referencia:
+    pt: art. 7.º, n.os 1 e 2
+    en: Article 7(1) and (2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15780,7 +16848,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-7-3
   acto_fonte: 32024R1772
-  referencia: art. 7.º, n.os 3 e 4
+  referencia:
+    pt: art. 7.º, n.os 3 e 4
+    en: Article 7(3) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -15806,7 +16876,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-8-1
   acto_fonte: 32024R1772
-  referencia: art. 8.º, n.º 1; art. 9.º
+  referencia:
+    pt: art. 8.º, n.º 1; art. 9.º
+    en: Article 8(1); Article 9
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -15841,7 +16913,9 @@ itens:
     en: Triage routes the “major” decision to GRC; RTS thresholds not incorporated.
 - id: DORA-RTS1772-8-2
   acto_fonte: 32024R1772
-  referencia: art. 8.º, n.º 2, 1.º par.
+  referencia:
+    pt: art. 8.º, n.º 2, 1.º par.
+    en: Article 8(2), first subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -15878,7 +16952,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-8-2-p2
   acto_fonte: 32024R1772
-  referencia: art. 8.º, n.º 2, 2.º par.
+  referencia:
+    pt: art. 8.º, n.º 2, 2.º par.
+    en: Article 8(2), second subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -15897,7 +16973,9 @@ itens:
   nota: null
 - id: DORA-RTS1772-10
   acto_fonte: 32024R1772
-  referencia: art. 10.º
+  referencia:
+    pt: art. 10.º
+    en: Article 10
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -15924,7 +17002,9 @@ itens:
     en: Exploitation probability (EPSS/KEV) supports the “high probability” criterion; the qualification is regulatory.
 - id: DORA-RTS301-1
   acto_fonte: 32025R0301
-  referencia: art. 1.º
+  referencia:
+    pt: art. 1.º
+    en: Article 1
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -15950,7 +17030,9 @@ itens:
   nota: null
 - id: DORA-RTS301-2
   acto_fonte: 32025R0301
-  referencia: art. 2.º
+  referencia:
+    pt: art. 2.º
+    en: Article 2
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -15976,7 +17058,9 @@ itens:
   nota: null
 - id: DORA-RTS301-3
   acto_fonte: 32025R0301
-  referencia: art. 3.º
+  referencia:
+    pt: art. 3.º
+    en: Article 3
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16002,7 +17086,9 @@ itens:
   nota: null
 - id: DORA-RTS301-4
   acto_fonte: 32025R0301
-  referencia: art. 4.º
+  referencia:
+    pt: art. 4.º
+    en: Article 4
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16028,7 +17114,9 @@ itens:
   nota: null
 - id: DORA-RTS301-5-1-a
   acto_fonte: 32025R0301
-  referencia: art. 5.º, n.º 1, al. a)
+  referencia:
+    pt: art. 5.º, n.º 1, al. a)
+    en: Article 5(1), point (a)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -16054,7 +17142,9 @@ itens:
     en: Deadline reproduced correctly (≤ 4 h after classification, ≤ 24 h after becoming aware).
 - id: DORA-RTS301-5-1-b
   acto_fonte: 32025R0301
-  referencia: art. 5.º, n.º 1, al. b)
+  referencia:
+    pt: art. 5.º, n.º 1, al. b)
+    en: Article 5(1), point (b)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -16080,7 +17170,9 @@ itens:
     en: ≤ 72 h after the initial notification — reproduced correctly.
 - id: DORA-RTS301-5-1-c
   acto_fonte: 32025R0301
-  referencia: art. 5.º, n.º 1, al. c)
+  referencia:
+    pt: art. 5.º, n.º 1, al. c)
+    en: Article 5(1), point (c)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -16106,7 +17198,9 @@ itens:
     en: ≤ 1 month after the latest intermediate report — reproduced correctly.
 - id: DORA-RTS301-5-2
   acto_fonte: 32025R0301
-  referencia: art. 5.º, n.º 2
+  referencia:
+    pt: art. 5.º, n.º 2
+    en: Article 5(2)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -16130,7 +17224,9 @@ itens:
   nota: null
 - id: DORA-RTS301-5-3
   acto_fonte: 32025R0301
-  referencia: art. 5.º, n.º 3
+  referencia:
+    pt: art. 5.º, n.º 3
+    en: Article 5(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16156,7 +17252,9 @@ itens:
   nota: null
 - id: DORA-RTS301-6
   acto_fonte: 32025R0301
-  referencia: art. 6.º
+  referencia:
+    pt: art. 6.º
+    en: Article 6
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16182,7 +17280,9 @@ itens:
   nota: null
 - id: DORA-ITS302-1-1
   acto_fonte: 32025R0302
-  referencia: art. 1.º, n.º 1, al. a) a c); anexo I
+  referencia:
+    pt: art. 1.º, n.º 1, al. a) a c); anexo I
+    en: Article 1(1), points (a) to (c); Annex I
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16208,7 +17308,9 @@ itens:
   nota: null
 - id: DORA-ITS302-1-2
   acto_fonte: 32025R0302
-  referencia: art. 1.º, n.º 2
+  referencia:
+    pt: art. 1.º, n.º 2
+    en: Article 1(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16234,7 +17336,9 @@ itens:
   nota: null
 - id: DORA-ITS302-1-3
   acto_fonte: 32025R0302
-  referencia: art. 1.º, n.º 3
+  referencia:
+    pt: art. 1.º, n.º 3
+    en: Article 1(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16260,7 +17364,9 @@ itens:
   nota: null
 - id: DORA-ITS302-1-4
   acto_fonte: 32025R0302
-  referencia: art. 1.º, n.º 4
+  referencia:
+    pt: art. 1.º, n.º 4
+    en: Article 1(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16286,7 +17392,9 @@ itens:
   nota: null
 - id: DORA-ITS302-1-5
   acto_fonte: 32025R0302
-  referencia: art. 1.º, n.º 5; anexo II
+  referencia:
+    pt: art. 1.º, n.º 5; anexo II
+    en: Article 1(5); Annex II
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16312,7 +17420,9 @@ itens:
   nota: null
 - id: DORA-ITS302-3
   acto_fonte: 32025R0302
-  referencia: art. 3.º
+  referencia:
+    pt: art. 3.º
+    en: Article 3
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16338,7 +17448,9 @@ itens:
   nota: null
 - id: DORA-ITS302-4-1
   acto_fonte: 32025R0302
-  referencia: art. 4.º, n.º 1
+  referencia:
+    pt: art. 4.º, n.º 1
+    en: Article 4(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16364,7 +17476,9 @@ itens:
   nota: null
 - id: DORA-ITS302-4-2
   acto_fonte: 32025R0302
-  referencia: art. 4.º, n.º 2
+  referencia:
+    pt: art. 4.º, n.º 2
+    en: Article 4(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -16390,7 +17504,9 @@ itens:
   nota: null
 - id: DORA-ITS302-5
   acto_fonte: 32025R0302
-  referencia: art. 5.º
+  referencia:
+    pt: art. 5.º
+    en: Article 5
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16416,7 +17532,9 @@ itens:
   nota: null
 - id: DORA-ITS302-6-1
   acto_fonte: 32025R0302
-  referencia: art. 6.º, n.º 1
+  referencia:
+    pt: art. 6.º, n.º 1
+    en: Article 6(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16442,7 +17560,9 @@ itens:
   nota: null
 - id: DORA-ITS302-6-2
   acto_fonte: 32025R0302
-  referencia: art. 6.º, n.º 2
+  referencia:
+    pt: art. 6.º, n.º 2
+    en: Article 6(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16468,7 +17588,9 @@ itens:
   nota: null
 - id: DORA-ITS302-6-3
   acto_fonte: 32025R0302
-  referencia: art. 6.º, n.º 3
+  referencia:
+    pt: art. 6.º, n.º 3
+    en: Article 6(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16494,7 +17616,9 @@ itens:
   nota: null
 - id: DORA-ITS302-7-1
   acto_fonte: 32025R0302
-  referencia: art. 7.º, n.º 1
+  referencia:
+    pt: art. 7.º, n.º 1
+    en: Article 7(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16520,7 +17644,9 @@ itens:
   nota: null
 - id: DORA-ITS302-7-2
   acto_fonte: 32025R0302
-  referencia: art. 7.º, n.º 2
+  referencia:
+    pt: art. 7.º, n.º 2
+    en: Article 7(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16546,7 +17672,9 @@ itens:
   nota: null
 - id: DORA-ITS302-7-3
   acto_fonte: 32025R0302
-  referencia: art. 7.º, n.º 3
+  referencia:
+    pt: art. 7.º, n.º 3
+    en: Article 7(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16572,7 +17700,9 @@ itens:
   nota: null
 - id: DORA-ITS302-8-1
   acto_fonte: 32025R0302
-  referencia: art. 8.º, n.º 1; anexos III e IV
+  referencia:
+    pt: art. 8.º, n.º 1; anexos III e IV
+    en: Article 8(1); Annexes III and IV
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16598,7 +17728,9 @@ itens:
   nota: null
 - id: DORA-ITS302-8-2
   acto_fonte: 32025R0302
-  referencia: art. 8.º, n.º 2
+  referencia:
+    pt: art. 8.º, n.º 2
+    en: Article 8(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16624,7 +17756,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-1
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 1
+  referencia:
+    pt: art. 4.º, n.º 1
+    en: Article 4(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16650,7 +17784,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-a
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. a)
+  referencia:
+    pt: art. 4.º, n.º 2, al. a)
+    en: Article 4(2), point (a)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -16674,7 +17810,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-b
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. b)
+  referencia:
+    pt: art. 4.º, n.º 2, al. b)
+    en: Article 4(2), point (b)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16700,7 +17838,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-c
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. c)
+  referencia:
+    pt: art. 4.º, n.º 2, al. c)
+    en: Article 4(2), point (c)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -16724,7 +17864,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-d
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. d)
+  referencia:
+    pt: art. 4.º, n.º 2, al. d)
+    en: Article 4(2), point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16750,7 +17892,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-e
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. e)
+  referencia:
+    pt: art. 4.º, n.º 2, al. e)
+    en: Article 4(2), point (e)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16776,7 +17920,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-4-2-f
   acto_fonte: 32025R1190
-  referencia: art. 4.º, n.º 2, al. f)
+  referencia:
+    pt: art. 4.º, n.º 2, al. f)
+    en: Article 4(2), point (f)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16802,7 +17948,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-5-1
   acto_fonte: 32025R1190
-  referencia: art. 5.º, n.º 1
+  referencia:
+    pt: art. 5.º, n.º 1
+    en: Article 5(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -16826,7 +17974,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-5-2
   acto_fonte: 32025R1190
-  referencia: art. 5.º, n.º 2
+  referencia:
+    pt: art. 5.º, n.º 2
+    en: Article 5(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -16850,7 +18000,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-6-1
   acto_fonte: 32025R1190
-  referencia: art. 6.º, n.º 1
+  referencia:
+    pt: art. 6.º, n.º 1
+    en: Article 6(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -16874,7 +18026,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-6-2
   acto_fonte: 32025R1190
-  referencia: art. 6.º, n.º 2
+  referencia:
+    pt: art. 6.º, n.º 2
+    en: Article 6(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16900,7 +18054,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-a
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. a)
+  referencia:
+    pt: art. 7.º, n.º 1, al. a)
+    en: Article 7(1), point (a)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16926,7 +18082,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-b
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. b)
+  referencia:
+    pt: art. 7.º, n.º 1, al. b)
+    en: Article 7(1), point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -16952,7 +18110,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-cd
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. c) e d)
+  referencia:
+    pt: art. 7.º, n.º 1, al. c) e d)
+    en: Article 7(1), points (c) and (d)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -16978,7 +18138,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-e
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. e)
+  referencia:
+    pt: art. 7.º, n.º 1, al. e)
+    en: Article 7(1), point (e)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17004,7 +18166,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-f
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. f)
+  referencia:
+    pt: art. 7.º, n.º 1, al. f)
+    en: Article 7(1), point (f)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17030,7 +18194,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-g
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. g)
+  referencia:
+    pt: art. 7.º, n.º 1, al. g)
+    en: Article 7(1), point (g)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17056,7 +18222,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-h
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. h)
+  referencia:
+    pt: art. 7.º, n.º 1, al. h)
+    en: Article 7(1), point (h)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17082,7 +18250,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-7-1-i
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 1, al. i)
+  referencia:
+    pt: art. 7.º, n.º 1, al. i)
+    en: Article 7(1), point (i)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -17108,7 +18278,9 @@ itens:
     en: Analogous pentest rules of engagement (prohibitions).
 - id: DORA-RTS1190-7-2
   acto_fonte: 32025R1190
-  referencia: art. 7.º, n.º 2
+  referencia:
+    pt: art. 7.º, n.º 2
+    en: Article 7(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17134,7 +18306,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-8-1
   acto_fonte: 32025R1190
-  referencia: art. 8.º, n.º 1
+  referencia:
+    pt: art. 8.º, n.º 1
+    en: Article 8(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17160,7 +18334,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-1
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 1
+  referencia:
+    pt: art. 9.º, n.º 1
+    en: Article 9(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17186,7 +18362,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-2
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 2; anexo I
+  referencia:
+    pt: art. 9.º, n.º 2; anexo I
+    en: Article 9(2); Annex I
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17212,7 +18390,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-4
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 4
+  referencia:
+    pt: art. 9.º, n.º 4
+    en: Article 9(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17238,7 +18418,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-6
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 6, 1.º período; anexo II
+  referencia:
+    pt: art. 9.º, n.º 6, 1.º período; anexo II
+    en: Article 9(6), first sentence; Annex II
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -17262,7 +18444,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-6-oa
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 6, 2.º período
+  referencia:
+    pt: art. 9.º, n.º 6, 2.º período
+    en: Article 9(6), second sentence
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17288,7 +18472,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-7
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 7
+  referencia:
+    pt: art. 9.º, n.º 7
+    en: Article 9(7)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -17312,7 +18498,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-8
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 8
+  referencia:
+    pt: art. 9.º, n.º 8
+    en: Article 9(8)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17338,7 +18526,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-9
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 9
+  referencia:
+    pt: art. 9.º, n.º 9
+    en: Article 9(9)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -17364,7 +18554,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-10
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 10
+  referencia:
+    pt: art. 9.º, n.º 10
+    en: Article 9(10)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17390,7 +18582,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-9-11
   acto_fonte: 32025R1190
-  referencia: art. 9.º, n.º 11
+  referencia:
+    pt: art. 9.º, n.º 11
+    en: Article 9(11)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17416,7 +18610,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-1
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 1
+  referencia:
+    pt: art. 10.º, n.º 1
+    en: Article 10(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -17450,7 +18646,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-2
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 2
+  referencia:
+    pt: art. 10.º, n.º 2
+    en: Article 10(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17476,7 +18674,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-3
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 3
+  referencia:
+    pt: art. 10.º, n.º 3
+    en: Article 10(3)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17502,7 +18702,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-4
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 4
+  referencia:
+    pt: art. 10.º, n.º 4
+    en: Article 10(4)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17528,7 +18730,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-5
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 5; anexo III
+  referencia:
+    pt: art. 10.º, n.º 5; anexo III
+    en: Article 10(5); Annex III
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17554,7 +18758,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-10-6
   acto_fonte: 32025R1190
-  referencia: art. 10.º, n.º 6
+  referencia:
+    pt: art. 10.º, n.º 6
+    en: Article 10(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17580,7 +18786,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-1
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 1; anexo IV
+  referencia:
+    pt: art. 11.º, n.º 1; anexo IV
+    en: Article 11(1); Annex IV
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17606,7 +18814,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-2
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 2
+  referencia:
+    pt: art. 11.º, n.º 2
+    en: Article 11(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17632,7 +18842,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-3
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 3
+  referencia:
+    pt: art. 11.º, n.º 3
+    en: Article 11(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17658,7 +18870,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-4
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 4
+  referencia:
+    pt: art. 11.º, n.º 4
+    en: Article 11(4)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17684,7 +18898,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-5
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 5
+  referencia:
+    pt: art. 11.º, n.º 5
+    en: Article 11(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17710,7 +18926,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-6
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 6
+  referencia:
+    pt: art. 11.º, n.º 6
+    en: Article 11(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17736,7 +18954,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-7
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 7
+  referencia:
+    pt: art. 11.º, n.º 7
+    en: Article 11(7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17762,7 +18982,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-8
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 8
+  referencia:
+    pt: art. 11.º, n.º 8
+    en: Article 11(8)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17788,7 +19010,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-9
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 9
+  referencia:
+    pt: art. 11.º, n.º 9
+    en: Article 11(9)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17814,7 +19038,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-11-10
   acto_fonte: 32025R1190
-  referencia: art. 11.º, n.º 10
+  referencia:
+    pt: art. 11.º, n.º 10
+    en: Article 11(10)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17840,7 +19066,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-1
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 1
+  referencia:
+    pt: art. 12.º, n.º 1
+    en: Article 12(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17866,7 +19094,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-2
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 2; anexo V
+  referencia:
+    pt: art. 12.º, n.º 2; anexo V
+    en: Article 12(2); Annex V
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17892,7 +19122,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-3
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 3
+  referencia:
+    pt: art. 12.º, n.º 3
+    en: Article 12(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17918,7 +19150,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-4
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 4; anexo VI
+  referencia:
+    pt: art. 12.º, n.º 4; anexo VI
+    en: Article 12(4); Annex VI
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17944,7 +19178,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-5
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 5
+  referencia:
+    pt: art. 12.º, n.º 5
+    en: Article 12(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -17970,7 +19206,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-6
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 6
+  referencia:
+    pt: art. 12.º, n.º 6
+    en: Article 12(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -17996,7 +19234,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-12-7
   acto_fonte: 32025R1190
-  referencia: art. 12.º, n.º 7; anexo VII
+  referencia:
+    pt: art. 12.º, n.º 7; anexo VII
+    en: Article 12(7); Annex VII
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -18022,7 +19262,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-13-1
   acto_fonte: 32025R1190
-  referencia: art. 13.º, n.º 1
+  referencia:
+    pt: art. 13.º, n.º 1
+    en: Article 13(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -18048,7 +19290,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-13-2
   acto_fonte: 32025R1190
-  referencia: art. 13.º, n.º 2
+  referencia:
+    pt: art. 13.º, n.º 2
+    en: Article 13(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -18082,7 +19326,9 @@ itens:
     en: Findings management with SLA and a corrective plan supports the post-TLPT plan.
 - id: DORA-RTS1190-15-1-a
   acto_fonte: 32025R1190
-  referencia: art. 15.º, n.º 1, 1.º par., al. a), e 2.º par.
+  referencia:
+    pt: art. 15.º, n.º 1, 1.º par., al. a), e 2.º par.
+    en: Article 15(1), first subparagraph, point (a), and second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -18108,7 +19354,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-15-1-b
   acto_fonte: 32025R1190
-  referencia: art. 15.º, n.º 1, al. b)
+  referencia:
+    pt: art. 15.º, n.º 1, al. b)
+    en: Article 15(1), point (b)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -18134,7 +19382,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-15-1-c
   acto_fonte: 32025R1190
-  referencia: art. 15.º, n.º 1, al. c)
+  referencia:
+    pt: art. 15.º, n.º 1, al. c)
+    en: Article 15(1), point (c)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -18160,7 +19410,9 @@ itens:
   nota: null
 - id: DORA-RTS1190-15-3
   acto_fonte: 32025R1190
-  referencia: art. 15.º, n.º 3
+  referencia:
+    pt: art. 15.º, n.º 3
+    en: Article 15(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null

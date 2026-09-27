@@ -137,6 +137,7 @@ def check_target(t: dict, where: str, master: dict, quote: bool = True) -> None:
 
 def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
     ctx_ids = {c["id"] for c in ctx_doc["contextos"]}
+    rondas = {r["id"] for r in (ctx_doc.get("vocabulario") or {}).get("rondas") or []}
     floor_ctx = L.floor_contexts(ctx_doc)
     for acto, m in matrices.items():
         w = f"_matriz/{acto}.yaml"
@@ -151,6 +152,16 @@ def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
         if L.sha256(raw) != fo.get("sha256"):
             fail(w, "sha256 de fonte_obrigacoes não confere")
         O = {o["id"]: o for o in obl["obrigacoes"]}
+        me = m.get("mapa_evidencia")
+        if me is not None:
+            pref = me.get("prefixos") if isinstance(me, dict) else None
+            if not pref or not all(isinstance(x, str) and x for x in pref):
+                fail(w, "mapa_evidencia.prefixos em falta ou inválido")
+            else:
+                for x in pref:
+                    if not any(it.get("id", "").startswith(x) for it in m.get("itens") or []):
+                        fail(w, f"mapa_evidencia: prefixo {x!r} sem obrigações")
+            bilingual((me or {}).get("titulo") if isinstance(me, dict) else None, w + "/mapa_evidencia/titulo")
         legacy = m.get("framework_legado")
         seen = set()
         for i, it in enumerate(m.get("itens") or []):
@@ -168,8 +179,16 @@ def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
                     fail(iw, "retirado sem data")
                 bilingual(it.get("razao"), iw + "/razao")
                 continue
-            if it.get("referencia") != O[oid]["referencia"]:
-                fail(iw, "referencia ≠ texto oficial")
+            ref = it.get("referencia")
+            bilingual(ref, iw + "/referencia")
+            if not isinstance(ref, dict) or ref.get("pt") != O[oid]["referencia"]:
+                fail(iw, "referencia.pt ≠ texto oficial")
+            pend = it.get("pendente")
+            if pend is not None:
+                if not isinstance(pend, dict) or set(pend) != {"ronda"} or pend.get("ronda") not in rondas:
+                    fail(iw, f"pendente inválido {pend!r}: ronda fora de vocabulario.rondas")
+                elif it.get("forca") == "cobre":
+                    fail(iw, "pendente numa obrigação coberta")
             af = it.get("acto_fonte")
             if not (isinstance(af, str) and CELEX_RE.fullmatch(af)) and not (isinstance(af, list) and af and all(CELEX_RE.fullmatch(x) for x in af)):
                 fail(iw, f"acto_fonte não é CELEX: {af!r}")

@@ -325,12 +325,6 @@ T = {
     },
 }
 
-# Documentary obligations rendered as an evidence map on the regime view (lead decision 2026-09-27).
-EVIDENCE_MAP = {
-    "aiact": {"prefixos": ("AIA-11-1-", "AIA-AnxIV-", "AIA-13-"), "anexo": {"pt": "art. 11.º, anexo IV e art. 13.º do AI Act", "en": "AI Act Article 11, Annex IV and Article 13"}},
-    "cra": {"prefixos": ("CRA-AnxVII-",), "anexo": {"pt": "anexo VII do CRA", "en": "CRA Annex VII"}},
-}
-
 CTX_ACTO = {"CTX-NIS2": "nis2", "CTX-DORA": "dora", "CTX-CRA": "cra", "CTX-AIA-RE": "aiact", "CTX-RGPD": "rgpd"}
 
 
@@ -480,16 +474,19 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
         body.append("")
     acto = CTX_ACTO[cid]
     # evidence map (documentary obligations)
-    em = EVIDENCE_MAP.get(acto)
+    em = matrix.get("mapa_evidencia")
     if em:
         fn = {f["id"]: f["nome"][lang] for f in vocab["forca"]}
-        body += [f"## {t['h_mapa']} {{#mapa-evidencia}}", "", t["mapa_intro"].format(anexo=em["anexo"][lang], acto=acto), "", t["cols_mapa"], "|---|---|---|---|---|"]
+        rn = {r["id"]: r["nome"][lang] for r in vocab.get("rondas") or []}
+        body += [f"## {t['h_mapa']} {{#mapa-evidencia}}", "", t["mapa_intro"].format(anexo=em["titulo"][lang], acto=acto), "", t["cols_mapa"], "|---|---|---|---|---|"]
         for it in matrix["itens"]:
-            if it.get("retirado") or not it["id"].startswith(em["prefixos"]):
+            if it.get("retirado") or not it["id"].startswith(tuple(em["prefixos"])):
                 continue
             resp = "; ".join(_resp_text(r, lang) for r in it.get("resposta") or []) or "—"
-            note = it.get("razao_fora_de_ambito") or it.get("falta") or {}
-            ref = it["referencia"] if lang == "pt" else _ref_en(it["referencia"])
+            note = dict(it.get("razao_fora_de_ambito") or it.get("falta") or {})
+            if it.get("pendente"):
+                note[lang] = f"**{rn.get(it['pendente'].get('ronda'), it['pendente'].get('ronda'))}.** " + note.get(lang, "")
+            ref = it["referencia"][lang]
             body.append(f"| {it['id']} | {_cell(ref)} | {fn[it['forca']]} | {_cell(resp)} | {_cell(note.get(lang, '—') if note else '—')} |")
         body.append("")
     # strength summary

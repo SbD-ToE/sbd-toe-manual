@@ -14,7 +14,9 @@ origem:
 itens:
 - id: RGPD-5-1-a
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea a)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea a)
+    en: Article 5(1), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -42,7 +44,9 @@ itens:
     en: Lawfulness and fairness are a legal judgement; transparency has technical support only in the elicitation of the LINDDUN “Unawareness” threat (L3/personal data).
 - id: RGPD-5-1-b
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea b)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea b)
+    en: Article 5(1), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -75,7 +79,9 @@ itens:
     en: The Manual records the purpose per dataset and per field and records changes of purpose — engineering evidence; determining the legitimate purpose and the compatibility judgement are legal.
 - id: RGPD-5-1-c
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea c)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea c)
+    en: Article 5(1), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -141,7 +147,9 @@ itens:
   nota: null
 - id: RGPD-5-1-d
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea d)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea d)
+    en: Article 5(1), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -164,7 +172,9 @@ itens:
   nota: null
 - id: RGPD-5-1-e
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea e)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea e)
+    en: Article 5(1), point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -232,7 +242,9 @@ itens:
     en: 'No contradiction: the log/evidence retention tables are minimums, and the precedence clause of Policy 29 §7 expressly limits them by Article 5(1), point (e). Residual tension: the WORM mandatory at L3 (Policy 29 §8) prevents erasure before the fixed period — see RGPD-17-1.'
 - id: RGPD-5-1-f
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 1, alínea f)
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea f)
+    en: Article 5(1), point (f)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -295,7 +307,9 @@ itens:
   nota: null
 - id: RGPD-5-2
   acto_fonte: 32016R0679
-  referencia: Art. 5.º, n.º 2
+  referencia:
+    pt: Art. 5.º, n.º 2
+    en: Article 5(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -338,7 +352,9 @@ itens:
     en: Traceability of decisions and documentary proof (GRC) support the demonstration; there is no GDPR accountability dossier (record, DPIA, legal bases) in the Manual.
 - id: RGPD-6-1
   acto_fonte: 32016R0679
-  referencia: Art. 6.º, n.º 1
+  referencia:
+    pt: Art. 6.º, n.º 1
+    en: Article 6(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -375,7 +391,9 @@ itens:
     en: 'One-off exception to the delimitation: in the AI agents slice, Policy 18 §10.2 requires a declared GDPR legal basis in the mandate or in the “project''s processing record” (L2/L3 mandatory). The Ch. 02 delimitation is therefore accurate for the PRI catalogue but not for the whole Manual.'
 - id: RGPD-6-4
   acto_fonte: 32016R0679
-  referencia: Art. 6.º, n.º 4
+  referencia:
+    pt: Art. 6.º, n.º 4
+    en: Article 6(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -400,7 +418,9 @@ itens:
     en: The record of changes of purpose makes it possible to detect further processing; the compatibility assessment (Article 6(4)) is not prescribed.
 - id: RGPD-7-1
   acto_fonte: 32016R0679
-  referencia: Art. 7.º, n.º 1
+  referencia:
+    pt: Art. 7.º, n.º 1
+    en: Article 7(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -423,7 +443,9 @@ itens:
   nota: null
 - id: RGPD-7-2
   acto_fonte: 32016R0679
-  referencia: Art. 7.º, n.º 2
+  referencia:
+    pt: Art. 7.º, n.º 2
+    en: Article 7(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -440,7 +462,9 @@ itens:
   nota: null
 - id: RGPD-7-3
   acto_fonte: 32016R0679
-  referencia: Art. 7.º, n.º 3
+  referencia:
+    pt: Art. 7.º, n.º 3
+    en: Article 7(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -463,7 +487,9 @@ itens:
   nota: null
 - id: RGPD-8-1
   acto_fonte: 32016R0679
-  referencia: Art. 8.º, n.º 1
+  referencia:
+    pt: Art. 8.º, n.º 1
+    en: Article 8(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -480,7 +506,9 @@ itens:
   nota: null
 - id: RGPD-8-2
   acto_fonte: 32016R0679
-  referencia: Art. 8.º, n.º 2
+  referencia:
+    pt: Art. 8.º, n.º 2
+    en: Article 8(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -508,7 +536,9 @@ itens:
   nota: null
 - id: RGPD-9-1
   acto_fonte: 32016R0679
-  referencia: Art. 9.º, n.º 1 e n.º 2
+  referencia:
+    pt: Art. 9.º, n.º 1 e n.º 2
+    en: Article 9(1) and (2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -552,7 +582,9 @@ itens:
     en: Special categories raise the D axis, never enter operational logs and are always redacted in L3 prompts; verifying the exception of Article 9(2) is legal.
 - id: RGPD-9-3
   acto_fonte: 32016R0679
-  referencia: Art. 9.º, n.º 3
+  referencia:
+    pt: Art. 9.º, n.º 3
+    en: Article 9(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -569,7 +601,9 @@ itens:
   nota: null
 - id: RGPD-10
   acto_fonte: 32016R0679
-  referencia: Art. 10.º
+  referencia:
+    pt: Art. 10.º
+    en: Article 10
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -586,7 +620,9 @@ itens:
   nota: null
 - id: RGPD-11-2
   acto_fonte: 32016R0679
-  referencia: Art. 11.º, n.º 2
+  referencia:
+    pt: Art. 11.º, n.º 2
+    en: Article 11(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -603,7 +639,9 @@ itens:
   nota: null
 - id: RGPD-12-1
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 1
+  referencia:
+    pt: Art. 12.º, n.º 1
+    en: Article 12(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -620,7 +658,9 @@ itens:
   nota: null
 - id: RGPD-12-2
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 2
+  referencia:
+    pt: Art. 12.º, n.º 2
+    en: Article 12(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -675,7 +715,9 @@ itens:
     en: 'The Ch. 02 delimitation “formal rights → legal side” refers to the GDPR cross-check, which in turn refers to DPO/GRC (“Legal basis, purposes, rights | Legal matter”): the technical capability supporting the rights is left without a prescriptive owner outside PRI-003.'
 - id: RGPD-12-3
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 3
+  referencia:
+    pt: Art. 12.º, n.º 3
+    en: Article 12(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -692,7 +734,9 @@ itens:
   nota: null
 - id: RGPD-12-4
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 4
+  referencia:
+    pt: Art. 12.º, n.º 4
+    en: Article 12(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -709,7 +753,9 @@ itens:
   nota: null
 - id: RGPD-12-5
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 5
+  referencia:
+    pt: Art. 12.º, n.º 5
+    en: Article 12(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -726,7 +772,9 @@ itens:
   nota: null
 - id: RGPD-12-6
   acto_fonte: 32016R0679
-  referencia: Art. 12.º, n.º 6
+  referencia:
+    pt: Art. 12.º, n.º 6
+    en: Article 12(6)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -757,7 +805,9 @@ itens:
   nota: null
 - id: RGPD-13-1
   acto_fonte: 32016R0679
-  referencia: Art. 13.º, n.º 1
+  referencia:
+    pt: Art. 13.º, n.º 1
+    en: Article 13(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -774,7 +824,9 @@ itens:
   nota: null
 - id: RGPD-13-2
   acto_fonte: 32016R0679
-  referencia: Art. 13.º, n.º 2
+  referencia:
+    pt: Art. 13.º, n.º 2
+    en: Article 13(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -791,7 +843,9 @@ itens:
   nota: null
 - id: RGPD-13-3
   acto_fonte: 32016R0679
-  referencia: Art. 13.º, n.º 3
+  referencia:
+    pt: Art. 13.º, n.º 3
+    en: Article 13(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -808,7 +862,9 @@ itens:
   nota: null
 - id: RGPD-14-1-2
   acto_fonte: 32016R0679
-  referencia: Art. 14.º, n.º 1 e n.º 2
+  referencia:
+    pt: Art. 14.º, n.º 1 e n.º 2
+    en: Article 14(1) and (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -825,7 +881,9 @@ itens:
   nota: null
 - id: RGPD-14-3
   acto_fonte: 32016R0679
-  referencia: Art. 14.º, n.º 3
+  referencia:
+    pt: Art. 14.º, n.º 3
+    en: Article 14(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -842,7 +900,9 @@ itens:
   nota: null
 - id: RGPD-14-4
   acto_fonte: 32016R0679
-  referencia: Art. 14.º, n.º 4
+  referencia:
+    pt: Art. 14.º, n.º 4
+    en: Article 14(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -859,7 +919,9 @@ itens:
   nota: null
 - id: RGPD-15-1
   acto_fonte: 32016R0679
-  referencia: Art. 15.º, n.º 1
+  referencia:
+    pt: Art. 15.º, n.º 1
+    en: Article 15(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -892,7 +954,9 @@ itens:
   nota: null
 - id: RGPD-15-2
   acto_fonte: 32016R0679
-  referencia: Art. 15.º, n.º 2
+  referencia:
+    pt: Art. 15.º, n.º 2
+    en: Article 15(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -909,7 +973,9 @@ itens:
   nota: null
 - id: RGPD-15-3
   acto_fonte: 32016R0679
-  referencia: Art. 15.º, n.º 3
+  referencia:
+    pt: Art. 15.º, n.º 3
+    en: Article 15(3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -932,7 +998,9 @@ itens:
   nota: null
 - id: RGPD-16
   acto_fonte: 32016R0679
-  referencia: Art. 16.º
+  referencia:
+    pt: Art. 16.º
+    en: Article 16
   classe: engenharia
   forca: cobre
   contexto: null
@@ -972,7 +1040,9 @@ itens:
   nota: null
 - id: RGPD-17-1
   acto_fonte: 32016R0679
-  referencia: Art. 17.º, n.º 1
+  referencia:
+    pt: Art. 17.º, n.º 1
+    en: Article 17(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1023,7 +1093,9 @@ itens:
     en: 'The tension between WORM storage (Policy 29 §8, mandatory at L3) and erasure is resolved in Policy 29 §8.1: in immutable logs, personal data enter only as a pseudonym, identifying content is encrypted with a per-person key, and erasure is achieved by destroying the key (PRI-005). Whether this counts legally as erasure is a matter for the DPO.'
 - id: RGPD-17-2
   acto_fonte: 32016R0679
-  referencia: Art. 17.º, n.º 2
+  referencia:
+    pt: Art. 17.º, n.º 2
+    en: Article 17(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1042,7 +1114,9 @@ itens:
   nota: null
 - id: RGPD-18-1
   acto_fonte: 32016R0679
-  referencia: Art. 18.º, n.º 1
+  referencia:
+    pt: Art. 18.º, n.º 1
+    en: Article 18(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1061,7 +1135,9 @@ itens:
   nota: null
 - id: RGPD-18-2
   acto_fonte: 32016R0679
-  referencia: Art. 18.º, n.º 2
+  referencia:
+    pt: Art. 18.º, n.º 2
+    en: Article 18(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1080,7 +1156,9 @@ itens:
   nota: null
 - id: RGPD-18-3
   acto_fonte: 32016R0679
-  referencia: Art. 18.º, n.º 3
+  referencia:
+    pt: Art. 18.º, n.º 3
+    en: Article 18(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1097,7 +1175,9 @@ itens:
   nota: null
 - id: RGPD-19
   acto_fonte: 32016R0679
-  referencia: Art. 19.º
+  referencia:
+    pt: Art. 19.º
+    en: Article 19
   classe: engenharia
   forca: cobre
   contexto:
@@ -1130,7 +1210,9 @@ itens:
   nota: null
 - id: RGPD-20-1
   acto_fonte: 32016R0679
-  referencia: Art. 20.º, n.º 1
+  referencia:
+    pt: Art. 20.º, n.º 1
+    en: Article 20(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1153,7 +1235,9 @@ itens:
   nota: null
 - id: RGPD-20-2
   acto_fonte: 32016R0679
-  referencia: Art. 20.º, n.º 2
+  referencia:
+    pt: Art. 20.º, n.º 2
+    en: Article 20(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1178,7 +1262,9 @@ itens:
   nota: null
 - id: RGPD-21-1
   acto_fonte: 32016R0679
-  referencia: Art. 21.º, n.º 1
+  referencia:
+    pt: Art. 21.º, n.º 1
+    en: Article 21(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1197,7 +1283,9 @@ itens:
     en: Weighing compelling grounds is legal; the technical capability to cease processing is addressed in RGPD-21-2-3 and RGPD-21-5 (gaps).
 - id: RGPD-21-2-3
   acto_fonte: 32016R0679
-  referencia: Art. 21.º, n.º 2 e n.º 3
+  referencia:
+    pt: Art. 21.º, n.º 2 e n.º 3
+    en: Article 21(2) and (3)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1229,7 +1317,9 @@ itens:
   nota: null
 - id: RGPD-21-4
   acto_fonte: 32016R0679
-  referencia: Art. 21.º, n.º 4
+  referencia:
+    pt: Art. 21.º, n.º 4
+    en: Article 21(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1246,7 +1336,9 @@ itens:
   nota: null
 - id: RGPD-21-5
   acto_fonte: 32016R0679
-  referencia: Art. 21.º, n.º 5
+  referencia:
+    pt: Art. 21.º, n.º 5
+    en: Article 21(5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1265,7 +1357,9 @@ itens:
   nota: null
 - id: RGPD-22-1
   acto_fonte: 32016R0679
-  referencia: Art. 22.º, n.º 1 e n.º 2
+  referencia:
+    pt: Art. 22.º, n.º 1 e n.º 2
+    en: Article 22(1) and (2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1284,7 +1378,9 @@ itens:
   nota: null
 - id: RGPD-22-3
   acto_fonte: 32016R0679
-  referencia: Art. 22.º, n.º 3
+  referencia:
+    pt: Art. 22.º, n.º 3
+    en: Article 22(3)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1303,7 +1399,9 @@ itens:
   nota: null
 - id: RGPD-22-4
   acto_fonte: 32016R0679
-  referencia: Art. 22.º, n.º 4
+  referencia:
+    pt: Art. 22.º, n.º 4
+    en: Article 22(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1322,7 +1420,9 @@ itens:
   nota: null
 - id: RGPD-24-1
   acto_fonte: 32016R0679
-  referencia: Art. 24.º, n.º 1
+  referencia:
+    pt: Art. 24.º, n.º 1
+    en: Article 24(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1364,7 +1464,9 @@ itens:
     en: Controls proportionate to risk and reviewed periodically — this is the Manual's model; responsibility and demonstration of GDPR compliance lie with the organisation.
 - id: RGPD-24-2
   acto_fonte: 32016R0679
-  referencia: Art. 24.º, n.º 2
+  referencia:
+    pt: Art. 24.º, n.º 2
+    en: Article 24(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -1399,7 +1501,9 @@ itens:
   nota: null
 - id: RGPD-25-1
   acto_fonte: 32016R0679
-  referencia: Art. 25.º, n.º 1
+  referencia:
+    pt: Art. 25.º, n.º 1
+    en: Article 25(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1457,7 +1561,9 @@ itens:
   nota: null
 - id: RGPD-25-2
   acto_fonte: 32016R0679
-  referencia: Art. 25.º, n.º 2
+  referencia:
+    pt: Art. 25.º, n.º 2
+    en: Article 25(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1521,7 +1627,9 @@ itens:
   nota: null
 - id: RGPD-26-1
   acto_fonte: 32016R0679
-  referencia: Art. 26.º, n.º 1
+  referencia:
+    pt: Art. 26.º, n.º 1
+    en: Article 26(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1538,7 +1646,9 @@ itens:
   nota: null
 - id: RGPD-26-2
   acto_fonte: 32016R0679
-  referencia: Art. 26.º, n.º 2
+  referencia:
+    pt: Art. 26.º, n.º 2
+    en: Article 26(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1555,7 +1665,9 @@ itens:
   nota: null
 - id: RGPD-27-1
   acto_fonte: 32016R0679
-  referencia: Art. 27.º, n.º 1 e n.º 2
+  referencia:
+    pt: Art. 27.º, n.º 1 e n.º 2
+    en: Article 27(1) and (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1572,7 +1684,9 @@ itens:
   nota: null
 - id: RGPD-28-1
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 1
+  referencia:
+    pt: Art. 28.º, n.º 1
+    en: Article 28(1)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -1606,7 +1720,9 @@ itens:
     en: Security due diligence of vendors with access to data is evidence of the “sufficient guarantees”; it does not include specific data protection criteria (assistance, erasure, further sub-processing).
 - id: RGPD-28-2
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 2
+  referencia:
+    pt: Art. 28.º, n.º 2
+    en: Article 28(2)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -1632,7 +1748,9 @@ itens:
     en: Universal clause prohibiting or conditioning sub-processing; it does not require prior written authorisation nor the right to object under general authorisation.
 - id: RGPD-28-3
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3
+  referencia:
+    pt: Art. 28.º, n.º 3
+    en: Article 28(3)
   classe: juridico-contratual
   forca: parcial
   contexto:
@@ -1697,7 +1815,9 @@ itens:
   nota: null
 - id: RGPD-28-3-a
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea a)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea a)
+    en: Article 28(3), point (a)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1714,7 +1834,9 @@ itens:
   nota: null
 - id: RGPD-28-3-b
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea b)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea b)
+    en: Article 28(3), point (b)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1740,7 +1862,9 @@ itens:
     en: Individual confidentiality agreement for contractors; it does not cover the organisation's own staff when the organisation acts as processor.
 - id: RGPD-28-3-c
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea c)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea c)
+    en: Article 28(3), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1790,7 +1914,9 @@ itens:
     en: If the organisation is a processor, the catalogue applies to it as Article 32 measures; as controller, Policy 33 §4.2 imposes the catalogue on L2 vendors. Refers to the limits of RGPD-32-1-c.
 - id: RGPD-28-3-e
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea e)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea e)
+    en: Article 28(3), point (e)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1813,7 +1939,9 @@ itens:
   nota: null
 - id: RGPD-28-3-f
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea f)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea f)
+    en: Article 28(3), point (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1848,7 +1976,9 @@ itens:
     en: Notification of breaches to the controller provided for; assistance with DPIA and prior consultation is not.
 - id: RGPD-28-3-g
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea g)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea g)
+    en: Article 28(3), point (g)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1880,7 +2010,9 @@ itens:
   nota: null
 - id: RGPD-28-3-h
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea h)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea h)
+    en: Article 28(3), point (h)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -1904,7 +2036,9 @@ itens:
   nota: null
 - id: RGPD-28-3-2
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, segundo parágrafo
+  referencia:
+    pt: Art. 28.º, n.º 3, segundo parágrafo
+    en: Article 28(3), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1921,7 +2055,9 @@ itens:
   nota: null
 - id: RGPD-28-3-d
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 3, alínea d)
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea d)
+    en: Article 28(3), point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1938,7 +2074,9 @@ itens:
   nota: null
 - id: RGPD-28-4
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 4
+  referencia:
+    pt: Art. 28.º, n.º 4
+    en: Article 28(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1955,7 +2093,9 @@ itens:
   nota: null
 - id: RGPD-28-10
   acto_fonte: 32016R0679
-  referencia: Art. 28.º, n.º 10
+  referencia:
+    pt: Art. 28.º, n.º 10
+    en: Article 28(10)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1972,7 +2112,9 @@ itens:
   nota: null
 - id: RGPD-29
   acto_fonte: 32016R0679
-  referencia: Art. 29.º
+  referencia:
+    pt: Art. 29.º
+    en: Article 29
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1991,7 +2133,9 @@ itens:
     en: Least privilege (ACC-002) provides technical support; see RGPD-32-4.
 - id: RGPD-30-1
   acto_fonte: 32016R0679
-  referencia: Art. 30.º, n.º 1
+  referencia:
+    pt: Art. 30.º, n.º 1
+    en: Article 30(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2032,7 +2176,9 @@ itens:
     en: The inventory of personal datasets by purpose and system, the application inventory and the architecture documentation feed the record; the Manual does not provide the record (the cross-check refers it to GRC/Legal).
 - id: RGPD-30-2
   acto_fonte: 32016R0679
-  referencia: Art. 30.º, n.º 2
+  referencia:
+    pt: Art. 30.º, n.º 2
+    en: Article 30(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2057,7 +2203,9 @@ itens:
     en: PRI-004 does not distinguish processing on behalf of each controller; limited usefulness for the processor's record.
 - id: RGPD-30-3-4
   acto_fonte: 32016R0679
-  referencia: Art. 30.º, n.º 3 e n.º 4
+  referencia:
+    pt: Art. 30.º, n.º 3 e n.º 4
+    en: Article 30(3) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2074,7 +2222,9 @@ itens:
   nota: null
 - id: RGPD-31
   acto_fonte: 32016R0679
-  referencia: Art. 31.º
+  referencia:
+    pt: Art. 31.º
+    en: Article 31
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2091,7 +2241,9 @@ itens:
   nota: null
 - id: RGPD-32-1
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 1
+  referencia:
+    pt: Art. 32.º, n.º 1
+    en: Article 32(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2132,7 +2284,9 @@ itens:
     en: 'It is the core of the Manual: controls selected by risk classification (exposure, data, impact).'
 - id: RGPD-32-1-a
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 1, alínea a)
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea a)
+    en: Article 32(1), point (a)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2192,7 +2346,9 @@ itens:
     en: Article 32 makes it conditional on appropriateness (“as appropriate”), which is compatible with grading by level.
 - id: RGPD-32-1-b
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 1, alínea b)
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea b)
+    en: Article 32(1), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2247,7 +2403,9 @@ itens:
   nota: null
 - id: RGPD-32-1-c
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 1, alínea c)
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea c)
+    en: Article 32(1), point (c)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2315,7 +2473,9 @@ itens:
   nota: null
 - id: RGPD-32-1-d
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 1, alínea d)
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea d)
+    en: Article 32(1), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2363,7 +2523,9 @@ itens:
   nota: null
 - id: RGPD-32-2
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 2
+  referencia:
+    pt: Art. 32.º, n.º 2
+    en: Article 32(2)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2402,7 +2564,9 @@ itens:
   nota: null
 - id: RGPD-32-4
   acto_fonte: 32016R0679
-  referencia: Art. 32.º, n.º 4
+  referencia:
+    pt: Art. 32.º, n.º 4
+    en: Article 32(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2450,7 +2614,9 @@ itens:
   nota: null
 - id: RGPD-33-1
   acto_fonte: 32016R0679
-  referencia: Art. 33.º, n.º 1
+  referencia:
+    pt: Art. 33.º, n.º 1
+    en: Article 33(1)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2492,7 +2658,9 @@ itens:
   nota: null
 - id: RGPD-33-2
   acto_fonte: 32016R0679
-  referencia: Art. 33.º, n.º 2
+  referencia:
+    pt: Art. 33.º, n.º 2
+    en: Article 33(2)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2525,7 +2693,9 @@ itens:
   nota: null
 - id: RGPD-33-3
   acto_fonte: 32016R0679
-  referencia: Art. 33.º, n.º 3
+  referencia:
+    pt: Art. 33.º, n.º 3
+    en: Article 33(3)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2558,7 +2728,9 @@ itens:
   nota: null
 - id: RGPD-33-4
   acto_fonte: 32016R0679
-  referencia: Art. 33.º, n.º 4
+  referencia:
+    pt: Art. 33.º, n.º 4
+    en: Article 33(4)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2584,7 +2756,9 @@ itens:
     en: Incorporated in the regulatory notification table; the supplementing process is not detailed.
 - id: RGPD-33-5
   acto_fonte: 32016R0679
-  referencia: Art. 33.º, n.º 5
+  referencia:
+    pt: Art. 33.º, n.º 5
+    en: Article 33(5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2641,7 +2815,9 @@ itens:
     en: 'Tension: retention of incident records of 1 year at L1/L2 may be short for verification by the authority; the precedence clause (law prevails) avoids formal contradiction, but the GDPR does not fix a period and the Manual does not identify it in the retention map.'
 - id: RGPD-34-1
   acto_fonte: 32016R0679
-  referencia: Art. 34.º, n.º 1
+  referencia:
+    pt: Art. 34.º, n.º 1
+    en: Article 34(1)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2674,7 +2850,9 @@ itens:
   nota: null
 - id: RGPD-34-2
   acto_fonte: 32016R0679
-  referencia: Art. 34.º, n.º 2
+  referencia:
+    pt: Art. 34.º, n.º 2
+    en: Article 34(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2700,7 +2878,9 @@ itens:
   nota: null
 - id: RGPD-35-1
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 1
+  referencia:
+    pt: Art. 35.º, n.º 1
+    en: Article 35(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2753,7 +2933,9 @@ itens:
     en: The Manual declares LINDDUN as the technical component of the DPIA and refuses to replace the legal assessment; it does not prescribe the DPIA nor the “high risk” trigger for data subjects.
 - id: RGPD-35-2
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 2
+  referencia:
+    pt: Art. 35.º, n.º 2
+    en: Article 35(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2789,7 +2971,9 @@ itens:
   nota: null
 - id: RGPD-35-3
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 3
+  referencia:
+    pt: Art. 35.º, n.º 3
+    en: Article 35(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2808,7 +2992,9 @@ itens:
     en: The classification (D=3; I=3 for automated decisions without human review) flags candidates, but the mandatory cases are a legal judgement.
 - id: RGPD-35-7
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 7
+  referencia:
+    pt: Art. 35.º, n.º 7
+    en: Article 35(7)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2851,7 +3037,9 @@ itens:
     en: Systematic description (DFD), risks and measures come from the threat model; assessment of necessity and proportionality is missing.
 - id: RGPD-35-9
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 9
+  referencia:
+    pt: Art. 35.º, n.º 9
+    en: Article 35(9)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2868,7 +3056,9 @@ itens:
   nota: null
 - id: RGPD-35-11
   acto_fonte: 32016R0679
-  referencia: Art. 35.º, n.º 11
+  referencia:
+    pt: Art. 35.º, n.º 11
+    en: Article 35(11)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2910,7 +3100,9 @@ itens:
     en: Review triggers for the threat model/architecture upon change; not linked to review of the DPIA.
 - id: RGPD-36-1
   acto_fonte: 32016R0679
-  referencia: Art. 36.º, n.º 1
+  referencia:
+    pt: Art. 36.º, n.º 1
+    en: Article 36(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2927,7 +3119,9 @@ itens:
   nota: null
 - id: RGPD-36-3
   acto_fonte: 32016R0679
-  referencia: Art. 36.º, n.º 3
+  referencia:
+    pt: Art. 36.º, n.º 3
+    en: Article 36(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2944,7 +3138,9 @@ itens:
   nota: null
 - id: RGPD-37-1
   acto_fonte: 32016R0679
-  referencia: Art. 37.º, n.º 1
+  referencia:
+    pt: Art. 37.º, n.º 1
+    en: Article 37(1)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2961,7 +3157,9 @@ itens:
   nota: null
 - id: RGPD-37-5
   acto_fonte: 32016R0679
-  referencia: Art. 37.º, n.º 5
+  referencia:
+    pt: Art. 37.º, n.º 5
+    en: Article 37(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2978,7 +3176,9 @@ itens:
   nota: null
 - id: RGPD-37-7
   acto_fonte: 32016R0679
-  referencia: Art. 37.º, n.º 7
+  referencia:
+    pt: Art. 37.º, n.º 7
+    en: Article 37(7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -2995,7 +3195,9 @@ itens:
   nota: null
 - id: RGPD-38-1
   acto_fonte: 32016R0679
-  referencia: Art. 38.º, n.º 1
+  referencia:
+    pt: Art. 38.º, n.º 1
+    en: Article 38(1)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3040,7 +3242,9 @@ itens:
   nota: null
 - id: RGPD-38-2
   acto_fonte: 32016R0679
-  referencia: Art. 38.º, n.º 2
+  referencia:
+    pt: Art. 38.º, n.º 2
+    en: Article 38(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3057,7 +3261,9 @@ itens:
   nota: null
 - id: RGPD-38-3
   acto_fonte: 32016R0679
-  referencia: Art. 38.º, n.º 3
+  referencia:
+    pt: Art. 38.º, n.º 3
+    en: Article 38(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3074,7 +3280,9 @@ itens:
   nota: null
 - id: RGPD-38-6
   acto_fonte: 32016R0679
-  referencia: Art. 38.º, n.º 6
+  referencia:
+    pt: Art. 38.º, n.º 6
+    en: Article 38(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3091,7 +3299,9 @@ itens:
   nota: null
 - id: RGPD-39-1
   acto_fonte: 32016R0679
-  referencia: Art. 39.º, n.º 1
+  referencia:
+    pt: Art. 39.º, n.º 1
+    en: Article 39(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3135,7 +3345,9 @@ itens:
     en: The Manual produces inputs for the DPO's tasks (privacy analysis, notifiability assessment); the tasks themselves are the DPO's.
 - id: RGPD-40-4
   acto_fonte: 32016R0679
-  referencia: Art. 40.º, n.º 4
+  referencia:
+    pt: Art. 40.º, n.º 4
+    en: Article 40(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3152,7 +3364,9 @@ itens:
   nota: null
 - id: RGPD-42-6-7
   acto_fonte: 32016R0679
-  referencia: Art. 42.º, n.º 6 e n.º 7
+  referencia:
+    pt: Art. 42.º, n.º 6 e n.º 7
+    en: Article 42(6) and (7)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3169,7 +3383,9 @@ itens:
   nota: null
 - id: RGPD-44
   acto_fonte: 32016R0679
-  referencia: Art. 44.º
+  referencia:
+    pt: Art. 44.º
+    en: Article 44
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -3206,7 +3422,9 @@ itens:
     en: Legal obligation into which the Manual partially enters, against its own delimitation.
 - id: RGPD-46-1
   acto_fonte: 32016R0679
-  referencia: Art. 46.º, n.º 1 a n.º 3
+  referencia:
+    pt: Art. 46.º, n.º 1 a n.º 3
+    en: Article 46(1) to (3)
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -3232,7 +3450,9 @@ itens:
   nota: null
 - id: RGPD-47-2
   acto_fonte: 32016R0679
-  referencia: Art. 47.º, n.º 2
+  referencia:
+    pt: Art. 47.º, n.º 2
+    en: Article 47(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3249,7 +3469,9 @@ itens:
   nota: null
 - id: RGPD-48
   acto_fonte: 32016R0679
-  referencia: Art. 48.º
+  referencia:
+    pt: Art. 48.º
+    en: Article 48
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3266,7 +3488,9 @@ itens:
   nota: null
 - id: RGPD-49-1
   acto_fonte: 32016R0679
-  referencia: Art. 49.º, n.º 1
+  referencia:
+    pt: Art. 49.º, n.º 1
+    en: Article 49(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3283,7 +3507,9 @@ itens:
   nota: null
 - id: RGPD-49-1-2
   acto_fonte: 32016R0679
-  referencia: Art. 49.º, n.º 1, segundo parágrafo
+  referencia:
+    pt: Art. 49.º, n.º 1, segundo parágrafo
+    en: Article 49(1), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3300,7 +3526,9 @@ itens:
   nota: null
 - id: RGPD-49-6
   acto_fonte: 32016R0679
-  referencia: Art. 49.º, n.º 6
+  referencia:
+    pt: Art. 49.º, n.º 6
+    en: Article 49(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66
+  source_sha256: 96fd3cd966b94b681daf509545e91ce7b17f559b3146993872d8f0c509c55244
   source_commit: null
-  target_sha256: 8b03ae35de6ba62336b38a2b6398109ea5ab7ab59dafeebc21533aae5278db6d
+  target_sha256: b1f355860b71ac7233efdb34d487694b6e12907c3ee79485a8f8d41ee7c73921
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -674,30 +674,30 @@ Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 1
 
 | Obligation | Reference | Strength | How the Manual responds | Note |
 |---|---|---|---|---|
-| AIA-11-1-a | Art. 11.º, n.º 1, primeiro parágrafo | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | Drafting the document is for the provider; the Manual provides the evidence (see the evidence map on the “Applicable requirements” page). |
-| AIA-11-1-b | Art. 11.º, n.º 1, segundo parágrafo | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | The Annex IV points without an artefact are declared gaps in the evidence map. |
-| AIA-AnxIV-1 | Anexo IV, ponto 1 | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014`; `DEP-011`; `DEP-012`; `DEP-013` | Declared gap: intended purpose (point (a)), forms of placing on the market (point (d)), hardware outside self-hosted inference (point (e)) and description of the interface for the deployer (point (g)). Out of scope: photographs and markings (point (f)). |
-| AIA-AnxIV-2-a | Anexo IV, ponto 2, alínea a | Supports evidence | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | The training methodology is out of scope (data governance, Article 10). |
-| AIA-AnxIV-2-b | Anexo IV, ponto 2, alínea b | Supports evidence | `ARC-004` | Declared gap: general logic, algorithms and what the system optimises. Assumptions about groups of persons are out of scope (bias). |
-| AIA-AnxIV-2-c | Anexo IV, ponto 2, alínea c | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014` | Declared gap: computational resources for development, training, testing and validation. |
-| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Out of scope | — | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
-| AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Supports evidence | `ARC-014`; `REQ-AGN-003` | Assessment of the oversight measures supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
-| AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Covers | `ARC-009`; `DEP-013` | — |
-| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Supports evidence | `TST-004`; `DPL-010`; `CIC-007` | Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias). |
-| AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Covers | `REQ-001`; `THR-008`; `ARC-014` | — |
-| AIA-AnxIV-3 | Anexo IV, ponto 3 | Supports evidence | `OPS-011`; `ARC-014`; `THR-008` | Declared gap: performance capabilities and limitations and input data specifications. Accuracy by groups of persons is out of scope (bias). |
-| AIA-AnxIV-4 | Anexo IV, ponto 4 | Gap | — | Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round. |
-| AIA-AnxIV-5 | Anexo IV, ponto 5 | Out of scope | — | The risk management system of Article 9 is out of scope by the lead's decision. |
-| AIA-AnxIV-6 | Anexo IV, ponto 6 | Covers | `THR-006`; `ARC-010`; `CIC-005` | — |
-| AIA-AnxIV-7 | Anexo IV, ponto 7 | Out of scope | — | List of harmonised standards/common specifications applied: conformity level. |
-| AIA-AnxIV-8 | Anexo IV, ponto 8 | Out of scope | — | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
-| AIA-AnxIV-9 | Anexo IV, ponto 9 | Covers | `CTX-AIA-RE-R04`; `OPS-011` | — |
-| AIA-13-1 | Art. 13.º, n.º 1 | Supports evidence | `ARC-014`; `OPS-011` | Interpretation of the output is supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
-| AIA-13-2 | Art. 13.º, n.º 2 | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
-| AIA-13-3 | Art. 13.º, n.º 3 | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
-| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Gap | — | Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round. |
-| AIA-13-3-e | Art. 13.º, n.º 3, alínea e) | Supports evidence | `DEP-013` | — |
-| AIA-13-3-f | Art. 13.º, n.º 3, alínea f) | Supports evidence | `OPS-011` | — |
+| AIA-11-1-a | Article 11(1), first subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | Drafting the document is for the provider; the Manual provides the evidence (see the evidence map on the “Applicable requirements” page). |
+| AIA-11-1-b | Article 11(1), second subparagraph | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | The Annex IV points without an artefact are declared gaps in the evidence map. |
+| AIA-AnxIV-1 | Annex IV, point 1 | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014`; `DEP-011`; `DEP-012`; `DEP-013` | Declared gap: intended purpose (point (a)), forms of placing on the market (point (d)), hardware outside self-hosted inference (point (e)) and description of the interface for the deployer (point (g)). Out of scope: photographs and markings (point (f)). |
+| AIA-AnxIV-2-a | Annex IV, point 2(a) | Supports evidence | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | The training methodology is out of scope (data governance, Article 10). |
+| AIA-AnxIV-2-b | Annex IV, point 2(b) | Supports evidence | `ARC-004` | Declared gap: general logic, algorithms and what the system optimises. Assumptions about groups of persons are out of scope (bias). |
+| AIA-AnxIV-2-c | Annex IV, point 2(c) | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014` | Declared gap: computational resources for development, training, testing and validation. |
+| AIA-AnxIV-2-d | Annex IV, point 2(d) | Out of scope | — | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
+| AIA-AnxIV-2-e | Annex IV, point 2(e) | Supports evidence | `ARC-014`; `REQ-AGN-003` | Assessment of the oversight measures supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
+| AIA-AnxIV-2-f | Annex IV, point 2(f) | Covers | `ARC-009`; `DEP-013` | — |
+| AIA-AnxIV-2-g | Annex IV, point 2(g) | Supports evidence | `TST-004`; `DPL-010`; `CIC-007` | **AppSec Core AISVS/SAIF round.** Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias). |
+| AIA-AnxIV-2-h | Annex IV, point 2(h) | Covers | `REQ-001`; `THR-008`; `ARC-014` | — |
+| AIA-AnxIV-3 | Annex IV, point 3 | Supports evidence | `OPS-011`; `ARC-014`; `THR-008` | Declared gap: performance capabilities and limitations and input data specifications. Accuracy by groups of persons is out of scope (bias). |
+| AIA-AnxIV-4 | Annex IV, point 4 | Gap | — | **AppSec Core AISVS/SAIF round.** Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round. |
+| AIA-AnxIV-5 | Annex IV, point 5 | Out of scope | — | The risk management system of Article 9 is out of scope by the lead's decision. |
+| AIA-AnxIV-6 | Annex IV, point 6 | Covers | `THR-006`; `ARC-010`; `CIC-005` | — |
+| AIA-AnxIV-7 | Annex IV, point 7 | Out of scope | — | List of harmonised standards/common specifications applied: conformity level. |
+| AIA-AnxIV-8 | Annex IV, point 8 | Out of scope | — | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
+| AIA-AnxIV-9 | Annex IV, point 9 | Covers | `CTX-AIA-RE-R04`; `OPS-011` | — |
+| AIA-13-1 | Article 13(1) | Supports evidence | `ARC-014`; `OPS-011` | Interpretation of the output is supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
+| AIA-13-2 | Article 13(2) | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3 | Article 13(3) | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3-b-ii | Article 13(3), point (b)(ii) | Gap | — | **AppSec Core AISVS/SAIF round.** Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3-e | Article 13(3), point (e) | Supports evidence | `DEP-013` | — |
+| AIA-13-3-f | Article 13(3), point (f) | Supports evidence | `OPS-011` | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 

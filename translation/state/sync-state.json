@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T20:40:42Z",
+  "generated_at": "2026-09-27T20:55:30Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66",
-      "translated_source_sha256": "9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66",
-      "target_sha256": "8b03ae35de6ba62336b38a2b6398109ea5ab7ab59dafeebc21533aae5278db6d",
+      "source_sha256": "96fd3cd966b94b681daf509545e91ce7b17f559b3146993872d8f0c509c55244",
+      "translated_source_sha256": "96fd3cd966b94b681daf509545e91ce7b17f559b3146993872d8f0c509c55244",
+      "target_sha256": "b1f355860b71ac7233efdb34d487694b6e12907c3ee79485a8f8d41ee7c73921",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -88,7 +88,7 @@
       "state": "synced",
       "source_sha256": "852c5d5c06682a76a77ebc0dc9e654d2e08a07a57830c4f45b56b51fcc289de3",
       "translated_source_sha256": "852c5d5c06682a76a77ebc0dc9e654d2e08a07a57830c4f45b56b51fcc289de3",
-      "target_sha256": "e877b20021a47eeeaa05df3ef1fbabaa13f4a591b49ce0d3414ebac09950cfe3",
+      "target_sha256": "6e766344e9d97d0d46da4a2e51a8dd23b2cd8385a6e21bcc5eb5f694e7cfc1c7",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",

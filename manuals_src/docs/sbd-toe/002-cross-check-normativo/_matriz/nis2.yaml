@@ -14,7 +14,9 @@ origem:
 itens:
 - id: NIS2-3-4-a_d
   acto_fonte: 32022L2555
-  referencia: Art. 3.º, n.º 4, 1.º par., als. a)–d)
+  referencia:
+    pt: Art. 3.º, n.º 4, 1.º par., als. a)–d)
+    en: Article 3(4), first subparagraph, points (a) to (d)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -33,7 +35,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Indirect support: the inventory (CLA-008, ARC-002) can feed the list, but does not include IP address ranges or institutional contacts.'
 - id: NIS2-3-4-2par
   acto_fonte: 32022L2555
-  referencia: Art. 3.º, n.º 4, 2.º par.
+  referencia:
+    pt: Art. 3.º, n.º 4, 2.º par.
+    en: Article 3(4), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -52,7 +56,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-20-1
   acto_fonte: 32022L2555
-  referencia: Art. 20.º, n.º 1
+  referencia:
+    pt: Art. 20.º, n.º 1
+    en: Article 20(1)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -106,7 +112,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-20-2
   acto_fonte: 32022L2555
-  referencia: Art. 20.º, n.º 2
+  referencia:
+    pt: Art. 20.º, n.º 2
+    en: Article 20(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -142,7 +150,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-1
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 1
+  referencia:
+    pt: Art. 21.º, n.º 1
+    en: Article 21(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -186,7 +196,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, proémio
+  referencia:
+    pt: Art. 21.º, n.º 2, proémio
+    en: Article 21(2), introductory wording
   classe: organizacional
   forca: parcial
   contexto: null
@@ -222,7 +234,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-a
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. a)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. a)
+    en: Article 21(2), point (a)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -273,7 +287,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Application-centred risk analysis policy; the entity''s risk management (Annex to the Implementing Regulation, point 2) is dealt with in items IR2690-2.x.'
 - id: NIS2-21-2-b
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. b)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. b)
+    en: Article 21(2), point (b)
   classe: engenharia
   forca: cobre
   contexto:
@@ -338,7 +354,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-c
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. c)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. c)
+    en: Article 21(2), point (c)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -373,7 +391,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Top-priority gap: it is a minimum point of Article 21(2), and the graph overlay and the cross-check report it as covered.'
 - id: NIS2-21-2-d
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. d)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. d)
+    en: Article 21(2), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -431,7 +451,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-e
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. e)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. e)
+    en: Article 21(2), point (e)
   classe: engenharia
   forca: cobre
   contexto:
@@ -499,7 +521,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-f
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. f)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. f)
+    en: Article 21(2), point (f)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -550,7 +574,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-g
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. g)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. g)
+    en: Article 21(2), point (g)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -594,7 +620,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-h
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. h)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. h)
+    en: Article 21(2), point (h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -645,7 +673,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Detail of the Implementing Regulation (cryptographic agility, full key lifecycle) in IR2690-9.2.'
 - id: NIS2-21-2-i
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. i)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. i)
+    en: Article 21(2), point (i)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -696,7 +726,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-j
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 2, al. j)
+  referencia:
+    pt: Art. 21.º, n.º 2, al. j)
+    en: Article 21(2), point (j)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -748,7 +780,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-3
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 3
+  referencia:
+    pt: Art. 21.º, n.º 3
+    en: Article 21(3)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -801,7 +835,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-4
   acto_fonte: 32022L2555
-  referencia: Art. 21.º, n.º 4
+  referencia:
+    pt: Art. 21.º, n.º 4
+    en: Article 21(4)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -843,7 +879,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Corrective actions with an owner and a deadline after periodic validation; non-application of controls goes through a formal exception.'
 - id: NIS2-23-1-1
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 1, 1.º par. (1.º per.)
+  referencia:
+    pt: Art. 23.º, n.º 1, 1.º par. (1.º per.)
+    en: Article 23(1), first subparagraph (first sentence)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -887,7 +925,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-1-2
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 1, 1.º par. (2.º per.)
+  referencia:
+    pt: Art. 23.º, n.º 1, 1.º par. (2.º per.)
+    en: Article 23(1), first subparagraph (second sentence)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -915,7 +955,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-1-3
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 1, 1.º par. (3.º per.)
+  referencia:
+    pt: Art. 23.º, n.º 1, 1.º par. (3.º per.)
+    en: Article 23(1), first subparagraph (third sentence)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -934,7 +976,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-2
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 2
+  referencia:
+    pt: Art. 23.º, n.º 2
+    en: Article 23(2)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -953,7 +997,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-3
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 3
+  referencia:
+    pt: Art. 23.º, n.º 3
+    en: Article 23(3)
   classe: organizacional
   forca: cobre
   contexto:
@@ -1001,7 +1047,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-a
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, al. a)
+  referencia:
+    pt: Art. 23.º, n.º 4, al. a)
+    en: Article 23(4), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1029,7 +1077,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-b
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, al. b)
+  referencia:
+    pt: Art. 23.º, n.º 4, al. b)
+    en: Article 23(4), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1073,7 +1123,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-c
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, al. c)
+  referencia:
+    pt: Art. 23.º, n.º 4, al. c)
+    en: Article 23(4), point (c)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -1099,7 +1151,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-d
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, al. d)
+  referencia:
+    pt: Art. 23.º, n.º 4, al. d)
+    en: Article 23(4), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1145,7 +1199,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-e
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, al. e)
+  referencia:
+    pt: Art. 23.º, n.º 4, al. e)
+    en: Article 23(4), point (e)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -1171,7 +1227,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-23-4-2par
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 4, 2.º par.
+  referencia:
+    pt: Art. 23.º, n.º 4, 2.º par.
+    en: Article 23(4), second subparagraph
   classe: organizacional
   forca: cobre
   contexto: null
@@ -1197,7 +1255,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Trust service providers: ≤ 24 h, explicit in Policy 32 §6.'
 - id: NIS2-23-7
   acto_fonte: 32022L2555
-  referencia: Art. 23.º, n.º 7
+  referencia:
+    pt: Art. 23.º, n.º 7
+    en: Article 23(7)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -1234,7 +1294,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-24-1
   acto_fonte: 32022L2555
-  referencia: Art. 24.º, n.º 1
+  referencia:
+    pt: Art. 24.º, n.º 1
+    en: Article 24(1)
   classe: juridico-contratual
   forca: lacuna
   contexto: null
@@ -1253,7 +1315,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. Low priority; fits into Policy 33 §3.1 as a conditional criterion.'
 - id: NIS2-26-3
   acto_fonte: 32022L2555
-  referencia: Art. 26.º, n.º 3
+  referencia:
+    pt: Art. 26.º, n.º 3
+    en: Article 26(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1272,7 +1336,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-27-2
   acto_fonte: 32022L2555
-  referencia: Art. 27.º, n.º 2
+  referencia:
+    pt: Art. 27.º, n.º 2
+    en: Article 27(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1291,7 +1357,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-27-3
   acto_fonte: 32022L2555
-  referencia: Art. 27.º, n.º 3
+  referencia:
+    pt: Art. 27.º, n.º 3
+    en: Article 27(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1310,7 +1378,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-28-1
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 1
+  referencia:
+    pt: Art. 28.º, n.º 1
+    en: Article 28(1)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1329,7 +1399,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-28-2
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 2
+  referencia:
+    pt: Art. 28.º, n.º 2
+    en: Article 28(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1348,7 +1420,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-28-3
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 3
+  referencia:
+    pt: Art. 28.º, n.º 3
+    en: Article 28(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1367,7 +1441,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-28-4
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 4
+  referencia:
+    pt: Art. 28.º, n.º 4
+    en: Article 28(4)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1386,7 +1462,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-28-5
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 5
+  referencia:
+    pt: Art. 28.º, n.º 5
+    en: Article 28(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1405,7 +1483,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-28-6
   acto_fonte: 32022L2555
-  referencia: Art. 28.º, n.º 6
+  referencia:
+    pt: Art. 28.º, n.º 6
+    en: Article 28(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1424,7 +1504,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The accuracy of and access to personal registration data intersect with the GDPR (PRI-*), but the duty is specific to the registration service.'
 - id: NIS2-29-4
   acto_fonte: 32022L2555
-  referencia: Art. 29.º, n.º 4
+  referencia:
+    pt: Art. 29.º, n.º 4
+    en: Article 29(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1443,7 +1525,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-30-1
   acto_fonte: 32022L2555
-  referencia: Art. 30.º, n.º 1, al. a)
+  referencia:
+    pt: Art. 30.º, n.º 1, al. a)
+    en: Article 30(1), point (a)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1462,7 +1546,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-32-2-2par
   acto_fonte: 32022L2555
-  referencia: Art. 32.º, n.º 2, 3.º par.; art. 33.º, n.º 2, 3.º par.
+  referencia:
+    pt: Art. 32.º, n.º 2, 3.º par.; art. 33.º, n.º 2, 3.º par.
+    en: Article 32(2), third subparagraph; Article 33(2), third subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1481,7 +1567,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-32-2-eg
   acto_fonte: 32022L2555
-  referencia: Art. 32.º, n.º 2, als. e)–g); art. 33.º, n.º 2, als. d)–f)
+  referencia:
+    pt: Art. 32.º, n.º 2, als. e)–g); art. 33.º, n.º 2, als. d)–f)
+    en: Article 32(2), points (e) to (g); Article 33(2), points (d) to (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1524,7 +1612,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The Manual produces auditable, retained evidence that answers the authority''s requests for information and evidence; the response to the request itself belongs to the supervisory plane.'
 - id: NIS2-32-4-d
   acto_fonte: 32022L2555
-  referencia: Art. 32.º, n.º 4, als. b), d), f); art. 33.º, n.º 4, als. b), d), f)
+  referencia:
+    pt: Art. 32.º, n.º 4, als. b), d), f); art. 33.º, n.º 4, als. b), d), f)
+    en: Article 32(4), points (b), (d) and (f); Article 33(4), points (b), (d) and (f)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1558,7 +1648,9 @@ itens:
     en: 'Duty under Directive (EU) 2022/2555: applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. The cycle of corrective actions with an owner and a deadline serves to execute binding instructions and audit recommendations; compliance before the authority belongs to the supervisory plane.'
 - id: NIS2-32-6
   acto_fonte: 32022L2555
-  referencia: Art. 32.º, n.º 6
+  referencia:
+    pt: Art. 32.º, n.º 6
+    en: Article 32(6)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1577,7 +1669,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-34-4_5
   acto_fonte: 32022L2555
-  referencia: Art. 34.º, n.os 4 e 5
+  referencia:
+    pt: Art. 34.º, n.os 4 e 5
+    en: Article 34(4) and (5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -1596,7 +1690,9 @@ itens:
     en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-IR2690-art1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 1.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 1.º
+    en: Implementing Regulation (EU) 2024/2690, Article 1
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1615,7 +1711,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The classification model (CLA-001) does not record whether the organisation is a relevant entity under the Implementing Regulation — information that determines whether the annex is binding; the NIS2 playbook only suggests declaring essential/important.'
 - id: NIS2-IR2690-art2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 2.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 2.º
+    en: Implementing Regulation (EU) 2024/2690, Article 2
   classe: organizacional
   forca: parcial
   contexto: null
@@ -1659,7 +1757,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. It is the mechanism that makes most of the conflicts in this map structural.'
 - id: NIS2-IR2690-art3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 3.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 3.º
+    en: Implementing Regulation (EU) 2024/2690, Article 3
   classe: organizacional
   forca: cobre
   contexto:
@@ -1689,7 +1789,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-art4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 4.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 4.º
+    en: Implementing Regulation (EU) 2024/2690, Article 4
   classe: organizacional
   forca: cobre
   contexto:
@@ -1710,7 +1812,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-art5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 5.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 5.º
+    en: Implementing Regulation (EU) 2024/2690, Article 5
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1744,7 +1848,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art6
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 6.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 6.º
+    en: Implementing Regulation (EU) 2024/2690, Article 6
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1778,7 +1884,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art7
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 7.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 7.º
+    en: Implementing Regulation (EU) 2024/2690, Article 7
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1812,7 +1920,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art8
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 8.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 8.º
+    en: Implementing Regulation (EU) 2024/2690, Article 8
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1846,7 +1956,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them. The criterion of compromise of physical access is out of scope.'
 - id: NIS2-IR2690-art9
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 9.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 9.º
+    en: Implementing Regulation (EU) 2024/2690, Article 9
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1880,7 +1992,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art10
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 10.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 10.º
+    en: Implementing Regulation (EU) 2024/2690, Article 10
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1914,7 +2028,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art11
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 11.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 11.º
+    en: Implementing Regulation (EU) 2024/2690, Article 11
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1948,7 +2064,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art12
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 12.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 12.º
+    en: Implementing Regulation (EU) 2024/2690, Article 12
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -1982,7 +2100,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art13
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 13.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 13.º
+    en: Implementing Regulation (EU) 2024/2690, Article 13
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2016,7 +2136,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them.'
 - id: NIS2-IR2690-art14
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, art. 14.º
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, art. 14.º
+    en: Implementing Regulation (EU) 2024/2690, Article 14
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -2050,7 +2172,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The sectoral thresholds (duration of unavailability, % or number of users affected, response time) are not in the Manual; the continuous availability signals (OPS-015) and regulatory triage produce the evidence for applying them. The criterion of compromise of physical access is out of scope.'
 - id: NIS2-IR2690-1.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.1.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.1.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.1.1 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2095,7 +2219,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.1.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.1.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.1.2 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2141,7 +2267,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.1 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2174,7 +2302,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.2 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2215,7 +2345,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Onboarding includes “policies and good practices relevant to the profile”; third parties bound by clauses and equivalent onboarding.'
 - id: NIS2-IR2690-1.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.3 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -2234,7 +2366,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.2.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.4 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2267,7 +2401,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.2.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.5 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.5 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.5 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2303,7 +2439,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-1.2.6
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.6 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 1.2.6 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 1.2.6 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2337,7 +2475,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.1.1 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2381,7 +2521,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.1.2 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2434,7 +2576,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.1.3 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2479,7 +2623,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.1.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.1.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.1.4 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2539,7 +2685,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.2.1 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2582,7 +2730,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.2.2 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2616,7 +2766,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.2.3 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2651,7 +2803,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.3.1 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2698,7 +2852,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.2 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.3.2 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -2717,7 +2873,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.3 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.3.3 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2754,7 +2912,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.3.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.3.4 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 2.3.4 (Article 21(2), point (a), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2792,7 +2952,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.1.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto:
@@ -2849,7 +3011,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.1.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2922,7 +3086,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.1.3 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -2957,7 +3123,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3007,7 +3175,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3041,7 +3211,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Modulated requirement (“to the extent feasible”): at L1 the absence of automation requires documented justification under Article 2, which the Manual does not produce.'
 - id: NIS2-IR2690-3.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.3 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3093,7 +3265,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.4 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.4 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.4 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto:
@@ -3149,7 +3323,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.5 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.5 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.5 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto:
@@ -3204,7 +3380,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.6
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.6 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.6 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.6 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -3240,7 +3418,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.7
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.7 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.7 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.2.7 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3283,7 +3463,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.3.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.3.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.3.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3320,7 +3502,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.3.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.3.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.3.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3348,7 +3532,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.4.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.4.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.4.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.4.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3383,7 +3569,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.4.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.4.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.4.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.4.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto:
@@ -3430,7 +3618,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.5.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.5.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3464,7 +3654,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.5.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.5.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3508,7 +3700,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.5.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.5.3 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3552,7 +3746,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.5.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.4 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.4 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.5.4 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -3595,7 +3791,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.5.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.5 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.5.5 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.5.5 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3639,7 +3837,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.6.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.1 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.6.1 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3674,7 +3874,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.6.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.6.2 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3725,7 +3927,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.6.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.6.3 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 3.6.3 (Article 21(2), point (b), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3751,7 +3955,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.1.1 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto:
@@ -3788,7 +3994,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.1.2 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto:
@@ -3815,7 +4023,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.1.3 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3851,7 +4061,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.1.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.1.4 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3878,7 +4090,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.1 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3907,7 +4121,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.2 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3934,7 +4150,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.3 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3961,7 +4179,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.4 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3982,7 +4202,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.5 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.5 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.5 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto:
@@ -4003,7 +4225,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.2.6
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.6 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.6 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.2.6 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4030,7 +4254,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.3.1 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4049,7 +4275,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.3.2 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4068,7 +4296,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.3.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.3.4 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4087,7 +4317,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-4.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.3.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 4.3.3 (Article 21(2), point (c), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4124,7 +4356,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.1 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.1 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.1 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto:
@@ -4170,7 +4404,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.2 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.2 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.2 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4215,7 +4451,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.3 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.3 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.3 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -4234,7 +4472,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Low priority.'
 - id: NIS2-IR2690-5.1.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.4 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.4 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.4 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -4316,7 +4556,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.5 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.5 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.5 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -4342,7 +4584,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.6
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.6 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.6 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.6 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -4376,7 +4620,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.7
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.7 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.7 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 5.1.7 (Article 21(2), point (d), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -4428,7 +4674,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Prior notification of changes is explicit only for AI service vendors (Policy 33 §10.4).'
 - id: NIS2-IR2690-6.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.1.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4472,7 +4720,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.1.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4517,7 +4767,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.1.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.1.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -4552,7 +4804,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.2.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4601,7 +4855,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.2.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4686,7 +4942,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. “Zero trust” is not named as a principle; the isolation and least-exposure principles of Policy 09 §3 come close.'
 - id: NIS2-IR2690-6.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.2.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -4723,7 +4981,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.2.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.2.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.2.4 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4748,7 +5008,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.3.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4798,7 +5060,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Network configuration only insofar as it is defined in IaC.'
 - id: NIS2-IR2690-6.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.3.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4850,7 +5114,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.3.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.3.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -4894,7 +5160,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.4.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.4.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -4935,7 +5203,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.4.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto:
@@ -4999,7 +5269,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.4.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.4.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5034,7 +5306,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.4.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.4.4 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5060,7 +5334,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.5.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.5.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5085,7 +5361,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.5.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.5.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5134,7 +5412,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.5.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.5.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.5.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5159,7 +5439,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.6.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.6.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.6.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.6.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5228,7 +5510,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.6.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.6.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.6.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.6.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5262,7 +5546,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.7.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.7.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5311,7 +5597,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Generic duty; covered by the catalogue as a whole in its application part.'
 - id: NIS2-IR2690-6.7.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.7.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5378,7 +5666,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.7.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.7.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.7.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5420,7 +5710,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.8.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.8.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5462,7 +5754,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.8.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.8.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5530,7 +5824,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.8.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.8.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.8.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5572,7 +5868,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.9.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.9.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.9.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.9.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5631,7 +5929,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.9.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.9.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.9.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.9.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5658,7 +5958,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. EDR on servers and workstations is IT operations at the boundary of the scope.'
 - id: NIS2-IR2690-6.10.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.1 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.10.1 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5709,7 +6011,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.10.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.10.2 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -5779,7 +6083,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. The resolution SLAs (30/7/3 days for critical ones) are the Manual''s choice and give way to a stricter requirement (Policy 19 §4.3).'
 - id: NIS2-IR2690-6.10.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.10.3 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5821,7 +6127,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.10.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 6.10.4 (Article 21(2), point (e), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5848,7 +6156,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Low priority.'
 - id: NIS2-IR2690-7.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.1 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.1 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 7.1 (Article 21(2), point (f), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5890,7 +6200,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-7.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.2 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.2 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 7.2 (Article 21(2), point (f), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5925,7 +6237,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Selection of the measures to be monitored based on previous incidents not explicit.'
 - id: NIS2-IR2690-7.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.3 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 7.3 (artigo 21.o, n.o 2, alínea f), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 7.3 (Article 21(2), point (f), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5960,7 +6274,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.1 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.1 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.1.1 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -6005,7 +6321,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.2 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.2 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.1.2 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -6040,7 +6358,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.3 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.1.3 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.1.3 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6082,7 +6402,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.1 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.1 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.2.1 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6123,7 +6445,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.2 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.2 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.2.2 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6148,7 +6472,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.3 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.3 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.2.3 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6191,7 +6517,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.2.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.4 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.4 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.2.4 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -6218,7 +6546,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-8.2.5
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.5 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 8.2.5 (artigo 21.o, n.o 2, alínea g), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 8.2.5 (Article 21(2), point (g), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6252,7 +6582,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-9.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.1 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.1 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 9.1 (Article 21(2), point (h), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -6302,7 +6634,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-9.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.2 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.2 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 9.2 (Article 21(2), point (h), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6379,7 +6713,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-9.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.3 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 9.3 (artigo 21.o, n.o 2, alínea h), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 9.3 (Article 21(2), point (h), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6415,7 +6751,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -6459,7 +6797,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -6494,7 +6834,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.1.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.1.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6513,7 +6855,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.2.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6532,7 +6876,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.2.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6551,7 +6897,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.2.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.2.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6570,7 +6918,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.4.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.4.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.4.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6589,7 +6939,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.4.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.4.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.4.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6608,7 +6960,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.3.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.3.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.3.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -6645,7 +6999,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-10.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.3.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 10.3.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 10.3.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -6682,7 +7038,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.1.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -6717,7 +7075,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.1.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -6758,7 +7118,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.1.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.1.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -6794,7 +7156,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.2.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6846,7 +7210,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.2.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -6904,7 +7270,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.2.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6957,7 +7325,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.3.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6984,7 +7354,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.3.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7038,7 +7410,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.3.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7075,7 +7449,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.4.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.4.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7110,7 +7486,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.4.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.4.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -7129,7 +7507,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.5.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.5.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7189,7 +7569,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.5.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.5.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7250,7 +7632,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.5.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.5.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7287,7 +7671,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.5.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.5.4 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto:
@@ -7347,7 +7733,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.6.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.6.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7396,7 +7784,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.6.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.6.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7478,7 +7868,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.6.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.6.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7513,7 +7905,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.6.4
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.6.4 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -7532,7 +7926,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. Low priority.'
 - id: NIS2-IR2690-11.7.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.7.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.7.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.7.1 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7573,7 +7969,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. No conflict: the Implementing Regulation modulates MFA by classification; but the L1 exemption is not justified case by case (Article 2).'
 - id: NIS2-IR2690-11.7.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.7.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.7.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 11.7.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -7614,7 +8012,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -7650,7 +8050,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -7677,7 +8079,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.1.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -7710,7 +8114,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.2.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -7737,7 +8143,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.2.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -7765,7 +8173,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.2.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.2.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -7784,7 +8194,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.3.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7803,7 +8215,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.3.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -7822,7 +8236,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.3.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.3.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7841,7 +8257,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.4.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7884,7 +8302,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.4.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7919,7 +8339,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-12.4.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -7946,7 +8368,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.1.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.1.1 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7965,7 +8389,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.1.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.1.2 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -7984,7 +8410,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.1.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.1.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.1.3 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8003,7 +8431,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.2.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.2.1 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8022,7 +8452,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.2.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.2.2 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8041,7 +8473,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.2.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.2.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.2.3 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8060,7 +8494,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.3.1
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.1 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.3.1 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8079,7 +8515,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.3.2
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.2 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.3.2 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -8098,7 +8536,9 @@ itens:
     en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-13.3.3
   acto_fonte: 32024R2690
-  referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+  referencia:
+    pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 13.3.3 (artigo 21.o, n.o 2, alíneas c), e) e i), da Diretiva (UE) 2022/2555)
+    en: Implementing Regulation (EU) 2024/2690, Annex, point 13.3.3 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null

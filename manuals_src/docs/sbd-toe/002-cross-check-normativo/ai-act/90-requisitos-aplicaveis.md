@@ -669,19 +669,19 @@ Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act)
 | AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Fora de âmbito | — | Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental. |
 | AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Apoia evidência | `ARC-014`; `REQ-AGN-003` | Avaliação das medidas de supervisão apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08). |
 | AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Cobre | `ARC-009`; `DEP-013` | — |
-| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Apoia evidência | `TST-004`; `DPL-010`; `CIC-007` | Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento). |
+| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Apoia evidência | `TST-004`; `DPL-010`; `CIC-007` | **Ronda AISVS/SAIF do AppSec Core.** Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento). |
 | AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Cobre | `REQ-001`; `THR-008`; `ARC-014` | — |
 | AIA-AnxIV-3 | Anexo IV, ponto 3 | Apoia evidência | `OPS-011`; `ARC-014`; `THR-008` | Lacuna declarada: capacidades e limitações de desempenho e especificações dos dados de entrada. A exactidão por grupos de pessoas fica fora de âmbito (enviesamento). |
-| AIA-AnxIV-4 | Anexo IV, ponto 4 | Lacuna | — | Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-AnxIV-4 | Anexo IV, ponto 4 | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core. |
 | AIA-AnxIV-5 | Anexo IV, ponto 5 | Fora de âmbito | — | Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead. |
 | AIA-AnxIV-6 | Anexo IV, ponto 6 | Cobre | `THR-006`; `ARC-010`; `CIC-005` | — |
 | AIA-AnxIV-7 | Anexo IV, ponto 7 | Fora de âmbito | — | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
 | AIA-AnxIV-8 | Anexo IV, ponto 8 | Fora de âmbito | — | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-AnxIV-9 | Anexo IV, ponto 9 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` | — |
 | AIA-13-1 | Art. 13.º, n.º 1 | Apoia evidência | `ARC-014`; `OPS-011` | A interpretação do output é apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08). |
-| AIA-13-2 | Art. 13.º, n.º 2 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
-| AIA-13-3 | Art. 13.º, n.º 3 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
-| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Lacuna | — | Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-2 | Art. 13.º, n.º 2 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | **Ronda AISVS/SAIF do AppSec Core.** A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3 | Art. 13.º, n.º 3 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | **Ronda AISVS/SAIF do AppSec Core.** A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core. |
 | AIA-13-3-e | Art. 13.º, n.º 3, alínea e) | Apoia evidência | `DEP-013` | — |
 | AIA-13-3-f | Art. 13.º, n.º 3, alínea f) | Apoia evidência | `OPS-011` | — |
 

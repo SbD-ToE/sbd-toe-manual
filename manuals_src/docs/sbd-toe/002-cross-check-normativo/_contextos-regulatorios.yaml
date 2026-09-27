@@ -24,6 +24,8 @@ vocabulario:
     - {id: apoia_evidencia, nome: {pt: Apoia evidência, en: Supports evidence}, descricao: {pt: "O Manual produz evidência de engenharia para um dever de outro plano; nunca conta como cobertura.", en: "The Manual produces engineering evidence for a duty on another plane; it never counts as coverage."}}
     - {id: lacuna, nome: {pt: Lacuna, en: Gap}, descricao: {pt: "O Manual deveria cobrir e não cobre.", en: "The Manual should cover it and does not."}}
     - {id: fora_de_ambito, nome: {pt: Fora de âmbito, en: Out of scope}, descricao: {pt: "Legitimamente fora de um manual de engenharia de segurança de software; a razão está declarada.", en: "Legitimately outside a software security engineering manual; the reason is declared."}}
+  rondas:  # rondas de destilação do AppSec Core de que dependem lacunas pendentes (campo «pendente» da matriz)
+    - {id: AISVS-SAIF, nome: {pt: Ronda AISVS/SAIF do AppSec Core, en: AppSec Core AISVS/SAIF round}, descricao: {pt: "Destilação dos controlos de engenharia de IA (OWASP AISVS, Google SAIF) no AppSec Core; as lacunas marcadas ficam pendentes dela e não são definitivas.", en: "Distillation of the AI engineering controls (OWASP AISVS, Google SAIF) into AppSec Core; the gaps marked are pending it and are not final."}}
   classe:
     - {id: engenharia, nome: {pt: Engenharia, en: Engineering}}
     - {id: organizacional, nome: {pt: Organizacional, en: Organisational}}

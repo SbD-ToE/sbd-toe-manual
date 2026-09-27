@@ -12,10 +12,17 @@ versao_consolidada: 02024R1689-20260727
 origem:
   pt: Mapa mapa-aiact.json do despacho 2026-09-27-cobertura-cross-check (hub), convertido por script e revisto pelo Manual agent.
   en: Map mapa-aiact.json from the 2026-09-27-cobertura-cross-check dispatch (hub), converted by script and reviewed by the Manual agent.
+mapa_evidencia:
+  prefixos: [AIA-11-1-, AIA-AnxIV-, AIA-13-]
+  titulo:
+    pt: art. 11.º, anexo IV e art. 13.º do AI Act
+    en: AI Act Article 11, Annex IV and Article 13
 itens:
 - id: AIA-2-1
   acto_fonte: 32024R1689
-  referencia: Art. 2.º, n.º 1
+  referencia:
+    pt: Art. 2.º, n.º 1
+    en: Article 2(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -34,7 +41,9 @@ itens:
     en: The Manual does not model the qualification of roles (provider/deployer) per system; relevant for AIA-25-1.
 - id: AIA-2-12
   acto_fonte: 32024R1689
-  referencia: Art. 2.º, n.º 12
+  referencia:
+    pt: Art. 2.º, n.º 12
+    en: Article 2(12)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -53,7 +62,9 @@ itens:
     en: 'Relevant for OSS models in the AI BOM (DEP-011/012): the exclusion does not cover high-risk, Article 5 or Article 50.'
 - id: AIA-2-13
   acto_fonte: 32024R1689
-  referencia: Art. 2.º, n.º 13
+  referencia:
+    pt: Art. 2.º, n.º 13
+    en: Article 2(13)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -70,7 +81,9 @@ itens:
   nota: null
 - id: AIA-4-1
   acto_fonte: 32024R1689
-  referencia: Art. 4.º, n.º 1 (substituído)
+  referencia:
+    pt: Art. 4.º, n.º 1 (substituído)
+    en: Article 4(1) (replaced)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -114,7 +127,9 @@ itens:
   nota: null
 - id: AIA-4a-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea a)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea a)
+    en: Article 4a(1), point (a)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -131,7 +146,9 @@ itens:
   nota: null
 - id: AIA-4a-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea b)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea b)
+    en: Article 4a(1), point (b)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -172,7 +189,9 @@ itens:
   nota: null
 - id: AIA-4a-1-c
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea c)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea c)
+    en: Article 4a(1), point (c)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -213,7 +232,9 @@ itens:
   nota: null
 - id: AIA-4a-1-d
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea d)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea d)
+    en: Article 4a(1), point (d)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -247,7 +268,9 @@ itens:
   nota: null
 - id: AIA-4a-1-e
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea e)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea e)
+    en: Article 4a(1), point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -272,7 +295,9 @@ itens:
   nota: null
 - id: AIA-4a-1-f
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 1, alínea f)
+  referencia:
+    pt: Art. 4.º-A, n.º 1, alínea f)
+    en: Article 4a(1), point (f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -297,7 +322,9 @@ itens:
   nota: null
 - id: AIA-4a-2
   acto_fonte: 32024R1689
-  referencia: Art. 4.º-A, n.º 2
+  referencia:
+    pt: Art. 4.º-A, n.º 2
+    en: Article 4a(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -330,7 +357,9 @@ itens:
     en: Option conditional on the safeguards of paragraph 1; see AIA-4a-1-*.
 - id: AIA-5-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea a)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea a)
+    en: Article 5(1), first subparagraph, point (a)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -357,7 +386,9 @@ itens:
     en: There is no screening for prohibited practices in the lifecycle (classification/requirements). A gate of “admissible purpose” in Ch. 01/02 is recommended.
 - id: AIA-5-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea b)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea b)
+    en: Article 5(1), first subparagraph, point (b)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -384,7 +415,9 @@ itens:
     en: Idem AIA-5-1-a.
 - id: AIA-5-1-b-A
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-A)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-A)
+    en: Article 5(1), first subparagraph, point (b-A)
   classe: engenharia
   forca: cobre
   contexto:
@@ -417,7 +450,9 @@ itens:
   nota: null
 - id: AIA-5-1-b-B
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-B)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-B)
+    en: Article 5(1), first subparagraph, point (b-B)
   classe: engenharia
   forca: cobre
   contexto:
@@ -450,7 +485,9 @@ itens:
   nota: null
 - id: AIA-5-1-c
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea c)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea c)
+    en: Article 5(1), first subparagraph, point (c)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -467,7 +504,9 @@ itens:
   nota: null
 - id: AIA-5-1-d
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea d)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea d)
+    en: Article 5(1), first subparagraph, point (d)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -484,7 +523,9 @@ itens:
   nota: null
 - id: AIA-5-1-e
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea e)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea e)
+    en: Article 5(1), first subparagraph, point (e)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -519,7 +560,9 @@ itens:
     en: The dataset inventory with source and curation (DEP-011, L2+) evidences the origin of facial images; the prohibition itself concerns purpose.
 - id: AIA-5-1-f
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea f)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea f)
+    en: Article 5(1), first subparagraph, point (f)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -536,7 +579,9 @@ itens:
   nota: null
 - id: AIA-5-1-g
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea g)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea g)
+    en: Article 5(1), first subparagraph, point (g)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -553,7 +598,9 @@ itens:
   nota: null
 - id: AIA-5-1-h
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea h)
+  referencia:
+    pt: Art. 5.º, n.º 1, primeiro parágrafo, alínea h)
+    en: Article 5(1), first subparagraph, point (h)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -570,7 +617,9 @@ itens:
   nota: null
 - id: AIA-5-1A
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1-A
+  referencia:
+    pt: Art. 5.º, n.º 1-A
+    en: Article 5(1a)
   classe: engenharia
   forca: cobre
   contexto:
@@ -612,7 +661,9 @@ itens:
   nota: null
 - id: AIA-5-1B
   acto_fonte: 32024R1689
-  referencia: Art. 5.º, n.º 1-B
+  referencia:
+    pt: Art. 5.º, n.º 1-B
+    en: Article 5(1b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -629,7 +680,9 @@ itens:
   nota: null
 - id: AIA-6-1
   acto_fonte: 32024R1689
-  referencia: Art. 6.º, n.os 1, 1-A, 1-B, 1-C
+  referencia:
+    pt: Art. 6.º, n.os 1, 1-A, 1-B, 1-C
+    en: Article 6(1), (1a), (1b) and (1c)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -654,7 +707,9 @@ itens:
   nota: null
 - id: AIA-6-2-3
   acto_fonte: 32024R1689
-  referencia: Art. 6.º, n.os 2 e 3
+  referencia:
+    pt: Art. 6.º, n.os 2 e 3
+    en: Article 6(2) and (3)
   classe: organizacional
   forca: lacuna
   contexto: null
@@ -688,7 +743,9 @@ itens:
   nota: null
 - id: AIA-6-4
   acto_fonte: 32024R1689
-  referencia: Art. 6.º, n.º 4
+  referencia:
+    pt: Art. 6.º, n.º 4
+    en: Article 6(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -721,7 +778,9 @@ itens:
     en: The documented and approved classification (CLA-001) can host the “not high-risk” assessment; registration (Article 49(2)) belongs to the compliance plane.
 - id: AIA-8-1
   acto_fonte: 32024R1689
-  referencia: Art. 8.º, n.º 1
+  referencia:
+    pt: Art. 8.º, n.º 1
+    en: Article 8(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -762,7 +821,9 @@ itens:
   nota: null
 - id: AIA-8-2
   acto_fonte: 32024R1689
-  referencia: Art. 8.º, n.º 2
+  referencia:
+    pt: Art. 8.º, n.º 2
+    en: Article 8(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -779,7 +840,9 @@ itens:
   nota: null
 - id: AIA-9-1
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 1
+  referencia:
+    pt: Art. 9.º, n.º 1
+    en: Article 9(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -822,7 +885,9 @@ itens:
   nota: null
 - id: AIA-9-2
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 2
+  referencia:
+    pt: Art. 9.º, n.º 2
+    en: Article 9(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -865,7 +930,9 @@ itens:
   nota: null
 - id: AIA-9-4
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 4
+  referencia:
+    pt: Art. 9.º, n.º 4
+    en: Article 9(4)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -882,7 +949,9 @@ itens:
   nota: null
 - id: AIA-9-5
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 5
+  referencia:
+    pt: Art. 9.º, n.º 5
+    en: Article 9(5)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -915,7 +984,9 @@ itens:
   nota: null
 - id: AIA-9-6
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.os 6-7
+  referencia:
+    pt: Art. 9.º, n.os 6-7
+    en: Article 9(6) to (7)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -949,7 +1020,9 @@ itens:
   nota: null
 - id: AIA-9-8
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 8
+  referencia:
+    pt: Art. 9.º, n.º 8
+    en: Article 9(8)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -985,7 +1058,9 @@ itens:
   nota: null
 - id: AIA-9-9
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 9
+  referencia:
+    pt: Art. 9.º, n.º 9
+    en: Article 9(9)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1012,7 +1087,9 @@ itens:
   nota: null
 - id: AIA-9-10
   acto_fonte: 32024R1689
-  referencia: Art. 9.º, n.º 10
+  referencia:
+    pt: Art. 9.º, n.º 10
+    en: Article 9(10)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1029,7 +1106,9 @@ itens:
   nota: null
 - id: AIA-10-1
   acto_fonte: 32024R1689
-  referencia: Art. 10.º, n.º 1
+  referencia:
+    pt: Art. 10.º, n.º 1
+    en: Article 10(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1065,7 +1144,9 @@ itens:
     en: The Manual's cross-check declares statistical quality out of scope (deliberate abstention).
 - id: AIA-10-2
   acto_fonte: 32024R1689
-  referencia: Art. 10.º, n.º 2
+  referencia:
+    pt: Art. 10.º, n.º 2
+    en: Article 10(2)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -1107,7 +1188,9 @@ itens:
   nota: null
 - id: AIA-10-3
   acto_fonte: 32024R1689
-  referencia: Art. 10.º, n.º 3
+  referencia:
+    pt: Art. 10.º, n.º 3
+    en: Article 10(3)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1124,7 +1207,9 @@ itens:
   nota: null
 - id: AIA-10-4
   acto_fonte: 32024R1689
-  referencia: Art. 10.º, n.º 4
+  referencia:
+    pt: Art. 10.º, n.º 4
+    en: Article 10(4)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1141,7 +1226,9 @@ itens:
   nota: null
 - id: AIA-10-6
   acto_fonte: 32024R1689
-  referencia: Art. 10.º, n.º 6
+  referencia:
+    pt: Art. 10.º, n.º 6
+    en: Article 10(6)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1158,7 +1245,9 @@ itens:
   nota: null
 - id: AIA-11-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 11.º, n.º 1, primeiro parágrafo
+  referencia:
+    pt: Art. 11.º, n.º 1, primeiro parágrafo
+    en: Article 11(1), first subparagraph
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1215,7 +1304,9 @@ itens:
   nota: null
 - id: AIA-11-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 11.º, n.º 1, segundo parágrafo
+  referencia:
+    pt: Art. 11.º, n.º 1, segundo parágrafo
+    en: Article 11(1), second subparagraph
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1272,7 +1363,9 @@ itens:
   nota: null
 - id: AIA-11-2
   acto_fonte: 32024R1689
-  referencia: Art. 11.º, n.º 2
+  referencia:
+    pt: Art. 11.º, n.º 2
+    en: Article 11(2)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -1289,7 +1382,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-1
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 1
+  referencia:
+    pt: Anexo IV, ponto 1
+    en: Annex IV, point 1
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1354,7 +1449,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-a
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea a
+  referencia:
+    pt: Anexo IV, ponto 2, alínea a
+    en: Annex IV, point 2(a)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1403,7 +1500,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-b
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea b
+  referencia:
+    pt: Anexo IV, ponto 2, alínea b
+    en: Annex IV, point 2(b)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1428,7 +1527,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-c
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea c
+  referencia:
+    pt: Anexo IV, ponto 2, alínea c
+    en: Annex IV, point 2(c)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1469,7 +1570,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-d
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea d
+  referencia:
+    pt: Anexo IV, ponto 2, alínea d
+    en: Annex IV, point 2(d)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1486,7 +1589,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-e
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea e
+  referencia:
+    pt: Anexo IV, ponto 2, alínea e
+    en: Annex IV, point 2(e)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1519,7 +1624,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-f
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea f
+  referencia:
+    pt: Anexo IV, ponto 2, alínea f
+    en: Annex IV, point 2(f)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1552,7 +1659,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-g
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea g
+  referencia:
+    pt: Anexo IV, ponto 2, alínea g
+    en: Annex IV, point 2(g)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1584,6 +1693,8 @@ itens:
   falta:
     pt: Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento).
     en: Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias).
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1593,7 +1704,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-2-h
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 2, alínea h
+  referencia:
+    pt: Anexo IV, ponto 2, alínea h
+    en: Annex IV, point 2(h)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1634,7 +1747,9 @@ itens:
     en: Cybersecurity measures are the central object of the Manual and are documented and traceable.
 - id: AIA-AnxIV-3
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 3
+  referencia:
+    pt: Anexo IV, ponto 3
+    en: Annex IV, point 3
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1675,7 +1790,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-4
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 4
+  referencia:
+    pt: Anexo IV, ponto 4
+    en: Annex IV, point 4
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -1683,6 +1800,8 @@ itens:
   falta:
     pt: 'Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core.'
     en: 'Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round.'
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1692,7 +1811,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-5
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 5
+  referencia:
+    pt: Anexo IV, ponto 5
+    en: Annex IV, point 5
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1709,7 +1830,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-6
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 6
+  referencia:
+    pt: Anexo IV, ponto 6
+    en: Annex IV, point 6
   classe: engenharia
   forca: cobre
   contexto: null
@@ -1750,7 +1873,9 @@ itens:
     en: Versioning of the threat model, diagrams and pipeline runs documents changes throughout the lifecycle.
 - id: AIA-AnxIV-7
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 7
+  referencia:
+    pt: Anexo IV, ponto 7
+    en: Annex IV, point 7
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1767,7 +1892,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-8
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 8
+  referencia:
+    pt: Anexo IV, ponto 8
+    en: Annex IV, point 8
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1784,7 +1911,9 @@ itens:
   nota: null
 - id: AIA-AnxIV-9
   acto_fonte: 32024R1689
-  referencia: Anexo IV, ponto 9
+  referencia:
+    pt: Anexo IV, ponto 9
+    en: Annex IV, point 9
   classe: engenharia
   forca: cobre
   contexto:
@@ -1811,7 +1940,9 @@ itens:
   nota: null
 - id: AIA-12-1
   acto_fonte: 32024R1689
-  referencia: Art. 12.º, n.º 1
+  referencia:
+    pt: Art. 12.º, n.º 1
+    en: Article 12(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1853,7 +1984,9 @@ itens:
   nota: null
 - id: AIA-12-2
   acto_fonte: 32024R1689
-  referencia: Art. 12.º, n.º 2
+  referencia:
+    pt: Art. 12.º, n.º 2
+    en: Article 12(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -1886,7 +2019,9 @@ itens:
   nota: null
 - id: AIA-12-3
   acto_fonte: 32024R1689
-  referencia: Art. 12.º, n.º 3
+  referencia:
+    pt: Art. 12.º, n.º 3
+    en: Article 12(3)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -1903,7 +2038,9 @@ itens:
   nota: null
 - id: AIA-13-1
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 1
+  referencia:
+    pt: Art. 13.º, n.º 1
+    en: Article 13(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1936,7 +2073,9 @@ itens:
   nota: null
 - id: AIA-13-2
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 2
+  referencia:
+    pt: Art. 13.º, n.º 2
+    en: Article 13(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -1976,6 +2115,8 @@ itens:
   falta:
     pt: 'A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core.'
     en: 'Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round.'
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1985,7 +2126,9 @@ itens:
   nota: null
 - id: AIA-13-3
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 3
+  referencia:
+    pt: Art. 13.º, n.º 3
+    en: Article 13(3)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2025,6 +2168,8 @@ itens:
   falta:
     pt: 'A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core.'
     en: 'Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round.'
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2034,7 +2179,9 @@ itens:
   nota: null
 - id: AIA-13-3-b-ii
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 3, alínea b), subalínea ii)
+  referencia:
+    pt: Art. 13.º, n.º 3, alínea b), subalínea ii)
+    en: Article 13(3), point (b)(ii)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -2042,6 +2189,8 @@ itens:
   falta:
     pt: Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core.
     en: Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round.
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2051,7 +2200,9 @@ itens:
   nota: null
 - id: AIA-13-3-e
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 3, alínea e)
+  referencia:
+    pt: Art. 13.º, n.º 3, alínea e)
+    en: Article 13(3), point (e)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2074,7 +2225,9 @@ itens:
   nota: null
 - id: AIA-13-3-f
   acto_fonte: 32024R1689
-  referencia: Art. 13.º, n.º 3, alínea f)
+  referencia:
+    pt: Art. 13.º, n.º 3, alínea f)
+    en: Article 13(3), point (f)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -2097,7 +2250,9 @@ itens:
   nota: null
 - id: AIA-14-1
   acto_fonte: 32024R1689
-  referencia: Art. 14.º, n.º 1
+  referencia:
+    pt: Art. 14.º, n.º 1
+    en: Article 14(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2142,7 +2297,9 @@ itens:
     en: Floor CTX-AIA-RE-P08 raises ARC-014 (minimum oversight) to all levels in high-risk systems; the floor scope adds the oversight interface of Article 14(4). Product agents remain under ARC-015.
 - id: AIA-14-2
   acto_fonte: 32024R1689
-  referencia: Art. 14.º, n.º 2
+  referencia:
+    pt: Art. 14.º, n.º 2
+    en: Article 14(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2183,7 +2340,9 @@ itens:
   nota: null
 - id: AIA-14-3
   acto_fonte: 32024R1689
-  referencia: Art. 14.º, n.º 3
+  referencia:
+    pt: Art. 14.º, n.º 3
+    en: Article 14(3)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2225,7 +2384,9 @@ itens:
   nota: null
 - id: AIA-14-4
   acto_fonte: 32024R1689
-  referencia: Art. 14.º, n.º 4
+  referencia:
+    pt: Art. 14.º, n.º 4
+    en: Article 14(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2275,7 +2436,9 @@ itens:
   nota: null
 - id: AIA-14-5
   acto_fonte: 32024R1689
-  referencia: Art. 14.º, n.º 5
+  referencia:
+    pt: Art. 14.º, n.º 5
+    en: Article 14(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2292,7 +2455,9 @@ itens:
   nota: null
 - id: AIA-15-1
   acto_fonte: 32024R1689
-  referencia: Art. 15.º, n.º 1
+  referencia:
+    pt: Art. 15.º, n.º 1
+    en: Article 15(1)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2316,6 +2481,8 @@ itens:
   falta:
     pt: Cibersegurança coberta (THR-008, ARC-014, DEP-011 a DEP-014, OPS-011 a OPS-014, DPL-010/011); exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core.
     en: Cybersecurity covered (THR-008, ARC-014, DEP-011 to DEP-014, OPS-011 to OPS-014, DPL-010/011); accuracy and robustness pending the AppSec Core AISVS/SAIF round.
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2325,7 +2492,9 @@ itens:
   nota: null
 - id: AIA-15-3
   acto_fonte: 32024R1689
-  referencia: Art. 15.º, n.º 3
+  referencia:
+    pt: Art. 15.º, n.º 3
+    en: Article 15(3)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -2333,6 +2502,8 @@ itens:
   falta:
     pt: Declaração dos níveis e parâmetros de exactidão pendente da ronda AISVS/SAIF do AppSec Core.
     en: Declaration of the accuracy levels and parameters pending the AppSec Core AISVS/SAIF round.
+  pendente:
+    ronda: AISVS-SAIF
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2342,7 +2513,9 @@ itens:
   nota: null
 - id: AIA-15-4
   acto_fonte: 32024R1689
-  referencia: Art. 15.º, n.º 4
+  referencia:
+    pt: Art. 15.º, n.º 4
+    en: Article 15(4)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2386,7 +2559,9 @@ itens:
   nota: null
 - id: AIA-15-5
   acto_fonte: 32024R1689
-  referencia: Art. 15.º, n.º 5
+  referencia:
+    pt: Art. 15.º, n.º 5
+    en: Article 15(5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -2446,7 +2621,9 @@ itens:
     en: Data and model poisoning, evasion, confidentiality attacks and model flaws covered (ATLAS threat model, architecture, supply chain, runtime detection).
 - id: AIA-16-a
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea a)
+  referencia:
+    pt: Art. 16.º, alínea a)
+    en: Article 16, point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2487,7 +2664,9 @@ itens:
   nota: null
 - id: AIA-16-b
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea b)
+  referencia:
+    pt: Art. 16.º, alínea b)
+    en: Article 16, point (b)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2504,7 +2683,9 @@ itens:
   nota: null
 - id: AIA-16-c
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea c)
+  referencia:
+    pt: Art. 16.º, alínea c)
+    en: Article 16, point (c)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2537,7 +2718,9 @@ itens:
   nota: null
 - id: AIA-16-d
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea d)
+  referencia:
+    pt: Art. 16.º, alínea d)
+    en: Article 16, point (d)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2572,7 +2755,9 @@ itens:
   nota: null
 - id: AIA-16-e
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea e)
+  referencia:
+    pt: Art. 16.º, alínea e)
+    en: Article 16, point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2606,7 +2791,9 @@ itens:
   nota: null
 - id: AIA-16-f
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea f)
+  referencia:
+    pt: Art. 16.º, alínea f)
+    en: Article 16, point (f)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2623,7 +2810,9 @@ itens:
   nota: null
 - id: AIA-16-g
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea g)
+  referencia:
+    pt: Art. 16.º, alínea g)
+    en: Article 16, point (g)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2640,7 +2829,9 @@ itens:
   nota: null
 - id: AIA-16-h
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea h)
+  referencia:
+    pt: Art. 16.º, alínea h)
+    en: Article 16, point (h)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2657,7 +2848,9 @@ itens:
   nota: null
 - id: AIA-16-i
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea i)
+  referencia:
+    pt: Art. 16.º, alínea i)
+    en: Article 16, point (i)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2674,7 +2867,9 @@ itens:
   nota: null
 - id: AIA-16-j
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea j)
+  referencia:
+    pt: Art. 16.º, alínea j)
+    en: Article 16, point (j)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2708,7 +2903,9 @@ itens:
   nota: null
 - id: AIA-16-k
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea k)
+  referencia:
+    pt: Art. 16.º, alínea k)
+    en: Article 16, point (k)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -2725,7 +2922,9 @@ itens:
   nota: null
 - id: AIA-16-l
   acto_fonte: 32024R1689
-  referencia: Art. 16.º, alínea l)
+  referencia:
+    pt: Art. 16.º, alínea l)
+    en: Article 16, point (l)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2742,7 +2941,9 @@ itens:
   nota: null
 - id: AIA-17-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea a)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea a)
+    en: Article 17(1), point (a)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -2783,7 +2984,9 @@ itens:
   nota: null
 - id: AIA-17-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea b)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea b)
+    en: Article 17(1), point (b)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2824,7 +3027,9 @@ itens:
     en: Documented design (ADR), design control and verification via versioned threat model and review after change.
 - id: AIA-17-1-c
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea c)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea c)
+    en: Article 17(1), point (c)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -2863,7 +3068,9 @@ itens:
   nota: null
 - id: AIA-17-1-d
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea d)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea d)
+    en: Article 17(1), point (d)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -2897,7 +3104,9 @@ itens:
   nota: null
 - id: AIA-17-1-e
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea e)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea e)
+    en: Article 17(1), point (e)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2930,7 +3139,9 @@ itens:
   nota: null
 - id: AIA-17-1-f
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea f)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea f)
+    en: Article 17(1), point (f)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2963,7 +3174,9 @@ itens:
   nota: null
 - id: AIA-17-1-g
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea g)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea g)
+    en: Article 17(1), point (g)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -2996,7 +3209,9 @@ itens:
   nota: null
 - id: AIA-17-1-h
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea h)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea h)
+    en: Article 17(1), point (h)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -3021,7 +3236,9 @@ itens:
   nota: null
 - id: AIA-17-1-i
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea i)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea i)
+    en: Article 17(1), point (i)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3054,7 +3271,9 @@ itens:
   nota: null
 - id: AIA-17-1-j
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea j)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea j)
+    en: Article 17(1), point (j)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3080,7 +3299,9 @@ itens:
   nota: null
 - id: AIA-17-1-k
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea k)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea k)
+    en: Article 17(1), point (k)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3114,7 +3335,9 @@ itens:
     en: Record-keeping covered; the retention period is dealt with in AIA-18-1.
 - id: AIA-17-1-l
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea l)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea l)
+    en: Article 17(1), point (l)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3156,7 +3379,9 @@ itens:
   nota: null
 - id: AIA-17-1-m
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 1, alínea m)
+  referencia:
+    pt: Art. 17.º, n.º 1, alínea m)
+    en: Article 17(1), point (m)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -3187,7 +3412,9 @@ itens:
   nota: null
 - id: AIA-17-2
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.º 2
+  referencia:
+    pt: Art. 17.º, n.º 2
+    en: Article 17(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3212,7 +3439,9 @@ itens:
     en: The Manual's L1–L3 proportionality is compatible, but the law prohibits reducing the degree of rigour — see the level conflict (AIA-12-1).
 - id: AIA-17-3-4
   acto_fonte: 32024R1689
-  referencia: Art. 17.º, n.os 3 e 4
+  referencia:
+    pt: Art. 17.º, n.os 3 e 4
+    en: Article 17(3) and (4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3229,7 +3458,9 @@ itens:
   nota: null
 - id: AIA-18-1
   acto_fonte: 32024R1689
-  referencia: Art. 18.º, n.º 1
+  referencia:
+    pt: Art. 18.º, n.º 1
+    en: Article 18(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3255,7 +3486,9 @@ itens:
     en: 'Tension: periods below the legal one, mitigated by the precedence clause.'
 - id: AIA-18-3
   acto_fonte: 32024R1689
-  referencia: Art. 18.º, n.º 3
+  referencia:
+    pt: Art. 18.º, n.º 3
+    en: Article 18(3)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3281,7 +3514,9 @@ itens:
     en: The precedence clause refers to the financial sectoral regime (DORA).
 - id: AIA-19-1
   acto_fonte: 32024R1689
-  referencia: Art. 19.º, n.º 1
+  referencia:
+    pt: Art. 19.º, n.º 1
+    en: Article 19(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -3323,7 +3558,9 @@ itens:
   nota: null
 - id: AIA-19-2
   acto_fonte: 32024R1689
-  referencia: Art. 19.º, n.º 2
+  referencia:
+    pt: Art. 19.º, n.º 2
+    en: Article 19(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -3347,7 +3584,9 @@ itens:
   nota: null
 - id: AIA-20-1
   acto_fonte: 32024R1689
-  referencia: Art. 20.º, n.º 1
+  referencia:
+    pt: Art. 20.º, n.º 1
+    en: Article 20(1)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3381,7 +3620,9 @@ itens:
   nota: null
 - id: AIA-20-2
   acto_fonte: 32024R1689
-  referencia: Art. 20.º, n.º 2
+  referencia:
+    pt: Art. 20.º, n.º 2
+    en: Article 20(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3416,7 +3657,9 @@ itens:
   nota: null
 - id: AIA-21-1
   acto_fonte: 32024R1689
-  referencia: Art. 21.º, n.º 1
+  referencia:
+    pt: Art. 21.º, n.º 1
+    en: Article 21(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3433,7 +3676,9 @@ itens:
   nota: null
 - id: AIA-21-2
   acto_fonte: 32024R1689
-  referencia: Art. 21.º, n.º 2
+  referencia:
+    pt: Art. 21.º, n.º 2
+    en: Article 21(2)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -3466,7 +3711,9 @@ itens:
     en: Intact and retained logs make it possible to grant access; the request comes from the authority.
 - id: AIA-22-1
   acto_fonte: 32024R1689
-  referencia: Art. 22.º, n.os 1-2
+  referencia:
+    pt: Art. 22.º, n.os 1-2
+    en: Article 22(1) to (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3483,7 +3730,9 @@ itens:
   nota: null
 - id: AIA-22-3
   acto_fonte: 32024R1689
-  referencia: Art. 22.º, n.º 3
+  referencia:
+    pt: Art. 22.º, n.º 3
+    en: Article 22(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3500,7 +3749,9 @@ itens:
   nota: null
 - id: AIA-22-4
   acto_fonte: 32024R1689
-  referencia: Art. 22.º, n.º 4
+  referencia:
+    pt: Art. 22.º, n.º 4
+    en: Article 22(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3517,7 +3768,9 @@ itens:
   nota: null
 - id: AIA-23-1
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 1
+  referencia:
+    pt: Art. 23.º, n.º 1
+    en: Article 23(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3534,7 +3787,9 @@ itens:
   nota: null
 - id: AIA-23-2
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 2
+  referencia:
+    pt: Art. 23.º, n.º 2
+    en: Article 23(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3551,7 +3806,9 @@ itens:
   nota: null
 - id: AIA-23-3
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 3
+  referencia:
+    pt: Art. 23.º, n.º 3
+    en: Article 23(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3568,7 +3825,9 @@ itens:
   nota: null
 - id: AIA-23-4
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 4
+  referencia:
+    pt: Art. 23.º, n.º 4
+    en: Article 23(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3585,7 +3844,9 @@ itens:
   nota: null
 - id: AIA-23-5
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 5
+  referencia:
+    pt: Art. 23.º, n.º 5
+    en: Article 23(5)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3602,7 +3863,9 @@ itens:
   nota: null
 - id: AIA-23-6
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 6
+  referencia:
+    pt: Art. 23.º, n.º 6
+    en: Article 23(6)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3619,7 +3882,9 @@ itens:
   nota: null
 - id: AIA-23-7
   acto_fonte: 32024R1689
-  referencia: Art. 23.º, n.º 7
+  referencia:
+    pt: Art. 23.º, n.º 7
+    en: Article 23(7)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3636,7 +3901,9 @@ itens:
   nota: null
 - id: AIA-24-1
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 1
+  referencia:
+    pt: Art. 24.º, n.º 1
+    en: Article 24(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3653,7 +3920,9 @@ itens:
   nota: null
 - id: AIA-24-2
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 2
+  referencia:
+    pt: Art. 24.º, n.º 2
+    en: Article 24(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3670,7 +3939,9 @@ itens:
   nota: null
 - id: AIA-24-3
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 3
+  referencia:
+    pt: Art. 24.º, n.º 3
+    en: Article 24(3)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3687,7 +3958,9 @@ itens:
   nota: null
 - id: AIA-24-4
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 4
+  referencia:
+    pt: Art. 24.º, n.º 4
+    en: Article 24(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -3704,7 +3977,9 @@ itens:
   nota: null
 - id: AIA-24-5
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 5
+  referencia:
+    pt: Art. 24.º, n.º 5
+    en: Article 24(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3721,7 +3996,9 @@ itens:
   nota: null
 - id: AIA-24-6
   acto_fonte: 32024R1689
-  referencia: Art. 24.º, n.º 6
+  referencia:
+    pt: Art. 24.º, n.º 6
+    en: Article 24(6)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3738,7 +4015,9 @@ itens:
   nota: null
 - id: AIA-25-1
   acto_fonte: 32024R1689
-  referencia: Art. 25.º, n.º 1
+  referencia:
+    pt: Art. 25.º, n.º 1
+    en: Article 25(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3757,7 +4036,9 @@ itens:
     en: 'Relevant: fine-tuning/modification of third-party models (DEP-011) may make the organisation a provider; the Manual does not flag this trigger.'
 - id: AIA-25-2
   acto_fonte: 32024R1689
-  referencia: Art. 25.º, n.º 2
+  referencia:
+    pt: Art. 25.º, n.º 2
+    en: Article 25(2)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -3791,7 +4072,9 @@ itens:
     en: The AI BOM and the Manual's artefacts are what would be shared with a new provider; the duty to cooperate is contractual/legal.
 - id: AIA-25-3
   acto_fonte: 32024R1689
-  referencia: Art. 25.º, n.º 3
+  referencia:
+    pt: Art. 25.º, n.º 3
+    en: Article 25(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3808,7 +4091,9 @@ itens:
   nota: null
 - id: AIA-25-4
   acto_fonte: 32024R1689
-  referencia: Art. 25.º, n.º 4, primeiro parágrafo
+  referencia:
+    pt: Art. 25.º, n.º 4, primeiro parágrafo
+    en: Article 25(4), first subparagraph
   classe: juridico-contratual
   forca: parcial
   contexto: null
@@ -3861,7 +4146,9 @@ itens:
   nota: null
 - id: AIA-25-5
   acto_fonte: 32024R1689
-  referencia: Art. 25.º, n.º 5
+  referencia:
+    pt: Art. 25.º, n.º 5
+    en: Article 25(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -3878,7 +4165,9 @@ itens:
   nota: null
 - id: AIA-26-1
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 1
+  referencia:
+    pt: Art. 26.º, n.º 1
+    en: Article 26(1)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3914,7 +4203,9 @@ itens:
   nota: null
 - id: AIA-26-2
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 2
+  referencia:
+    pt: Art. 26.º, n.º 2
+    en: Article 26(2)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -3949,7 +4240,9 @@ itens:
   nota: null
 - id: AIA-26-4
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 4
+  referencia:
+    pt: Art. 26.º, n.º 4
+    en: Article 26(4)
   classe: engenharia
   forca: lacuna
   contexto: null
@@ -3974,7 +4267,9 @@ itens:
   nota: null
 - id: AIA-26-5
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 5
+  referencia:
+    pt: Art. 26.º, n.º 5
+    en: Article 26(5)
   classe: organizacional
   forca: parcial
   contexto: null
@@ -4016,7 +4311,9 @@ itens:
   nota: null
 - id: AIA-26-6
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 6
+  referencia:
+    pt: Art. 26.º, n.º 6
+    en: Article 26(6)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4059,7 +4356,9 @@ itens:
   nota: null
 - id: AIA-26-7
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 7
+  referencia:
+    pt: Art. 26.º, n.º 7
+    en: Article 26(7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4076,7 +4375,9 @@ itens:
   nota: null
 - id: AIA-26-8
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 8
+  referencia:
+    pt: Art. 26.º, n.º 8
+    en: Article 26(8)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4093,7 +4394,9 @@ itens:
   nota: null
 - id: AIA-26-9
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 9
+  referencia:
+    pt: Art. 26.º, n.º 9
+    en: Article 26(9)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4120,7 +4423,9 @@ itens:
     en: LINDDUN anchored to DPIA obligations in coordination with the DPO; the DPIA belongs to the GDPR plane.
 - id: AIA-26-10
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 10
+  referencia:
+    pt: Art. 26.º, n.º 10
+    en: Article 26(10)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4137,7 +4442,9 @@ itens:
   nota: null
 - id: AIA-26-11
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 11
+  referencia:
+    pt: Art. 26.º, n.º 11
+    en: Article 26(11)
   classe: organizacional
   forca: cobre
   contexto:
@@ -4156,7 +4463,9 @@ itens:
   nota: null
 - id: AIA-26-12
   acto_fonte: 32024R1689
-  referencia: Art. 26.º, n.º 12
+  referencia:
+    pt: Art. 26.º, n.º 12
+    en: Article 26(12)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4173,7 +4482,9 @@ itens:
   nota: null
 - id: AIA-27-1
   acto_fonte: 32024R1689
-  referencia: Art. 27.º, n.º 1
+  referencia:
+    pt: Art. 27.º, n.º 1
+    en: Article 27(1)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4208,7 +4519,9 @@ itens:
     en: The FRIA is a legal/ethical judgement; threat model and LINDDUN are inputs.
 - id: AIA-27-2
   acto_fonte: 32024R1689
-  referencia: Art. 27.º, n.º 2
+  referencia:
+    pt: Art. 27.º, n.º 2
+    en: Article 27(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4233,7 +4546,9 @@ itens:
     en: Threat model update triggers can signal a change in the FRIA elements.
 - id: AIA-27-3
   acto_fonte: 32024R1689
-  referencia: Art. 27.º, n.º 3
+  referencia:
+    pt: Art. 27.º, n.º 3
+    en: Article 27(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4250,7 +4565,9 @@ itens:
   nota: null
 - id: AIA-27-4
   acto_fonte: 32024R1689
-  referencia: Art. 27.º, n.º 4
+  referencia:
+    pt: Art. 27.º, n.º 4
+    en: Article 27(4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -4275,7 +4592,9 @@ itens:
   nota: null
 - id: AIA-41-5
   acto_fonte: 32024R1689
-  referencia: Art. 41.º, n.º 5
+  referencia:
+    pt: Art. 41.º, n.º 5
+    en: Article 41(5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -4292,7 +4611,9 @@ itens:
   nota: null
 - id: AIA-42-1
   acto_fonte: 32024R1689
-  referencia: Art. 42.º, n.º 1
+  referencia:
+    pt: Art. 42.º, n.º 1
+    en: Article 42(1)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -4309,7 +4630,9 @@ itens:
   nota: null
 - id: AIA-42-2
   acto_fonte: 32024R1689
-  referencia: Art. 42.º, n.º 2
+  referencia:
+    pt: Art. 42.º, n.º 2
+    en: Article 42(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -4326,7 +4649,9 @@ itens:
   nota: null
 - id: AIA-42-3
   acto_fonte: 32024R1689
-  referencia: Art. 42.º, n.º 3
+  referencia:
+    pt: Art. 42.º, n.º 3
+    en: Article 42(3)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4359,7 +4684,9 @@ itens:
     en: 'Presumption of cybersecurity via the CRA (Article 12(1) of the CRA): the Manual''s CRA coverage (see mapa-cra.json) is the most direct route to Article 15.'
 - id: AIA-43-1
   acto_fonte: 32024R1689
-  referencia: Art. 43.º, n.º 1
+  referencia:
+    pt: Art. 43.º, n.º 1
+    en: Article 43(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4376,7 +4703,9 @@ itens:
   nota: null
 - id: AIA-43-2
   acto_fonte: 32024R1689
-  referencia: Art. 43.º, n.º 2
+  referencia:
+    pt: Art. 43.º, n.º 2
+    en: Article 43(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4393,7 +4722,9 @@ itens:
   nota: null
 - id: AIA-43-3
   acto_fonte: 32024R1689
-  referencia: Art. 43.º, n.º 3
+  referencia:
+    pt: Art. 43.º, n.º 3
+    en: Article 43(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4410,7 +4741,9 @@ itens:
   nota: null
 - id: AIA-43-4
   acto_fonte: 32024R1689
-  referencia: Art. 43.º, n.º 4
+  referencia:
+    pt: Art. 43.º, n.º 4
+    en: Article 43(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4451,7 +4784,9 @@ itens:
   nota: null
 - id: AIA-47-1
   acto_fonte: 32024R1689
-  referencia: Art. 47.º, n.º 1
+  referencia:
+    pt: Art. 47.º, n.º 1
+    en: Article 47(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4468,7 +4803,9 @@ itens:
   nota: null
 - id: AIA-47-2
   acto_fonte: 32024R1689
-  referencia: Art. 47.º, n.º 2
+  referencia:
+    pt: Art. 47.º, n.º 2
+    en: Article 47(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4485,7 +4822,9 @@ itens:
   nota: null
 - id: AIA-47-3
   acto_fonte: 32024R1689
-  referencia: Art. 47.º, n.º 3
+  referencia:
+    pt: Art. 47.º, n.º 3
+    en: Article 47(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4502,7 +4841,9 @@ itens:
   nota: null
 - id: AIA-47-4
   acto_fonte: 32024R1689
-  referencia: Art. 47.º, n.º 4
+  referencia:
+    pt: Art. 47.º, n.º 4
+    en: Article 47(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4519,7 +4860,9 @@ itens:
   nota: null
 - id: AIA-AnxV
   acto_fonte: 32024R1689
-  referencia: Anexo V
+  referencia:
+    pt: Anexo V
+    en: Annex V
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4536,7 +4879,9 @@ itens:
   nota: null
 - id: AIA-48-2
   acto_fonte: 32024R1689
-  referencia: Art. 48.º, n.º 2
+  referencia:
+    pt: Art. 48.º, n.º 2
+    en: Article 48(2)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -4553,7 +4898,9 @@ itens:
   nota: null
 - id: AIA-48-3
   acto_fonte: 32024R1689
-  referencia: Art. 48.º, n.os 3-5
+  referencia:
+    pt: Art. 48.º, n.os 3-5
+    en: Article 48(3) to (5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4570,7 +4917,9 @@ itens:
   nota: null
 - id: AIA-49-1
   acto_fonte: 32024R1689
-  referencia: Art. 49.º, n.º 1
+  referencia:
+    pt: Art. 49.º, n.º 1
+    en: Article 49(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4587,7 +4936,9 @@ itens:
   nota: null
 - id: AIA-49-2
   acto_fonte: 32024R1689
-  referencia: Art. 49.º, n.º 2
+  referencia:
+    pt: Art. 49.º, n.º 2
+    en: Article 49(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4604,7 +4955,9 @@ itens:
   nota: null
 - id: AIA-49-3
   acto_fonte: 32024R1689
-  referencia: Art. 49.º, n.º 3
+  referencia:
+    pt: Art. 49.º, n.º 3
+    en: Article 49(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4621,7 +4974,9 @@ itens:
   nota: null
 - id: AIA-49-4
   acto_fonte: 32024R1689
-  referencia: Art. 49.º, n.º 4
+  referencia:
+    pt: Art. 49.º, n.º 4
+    en: Article 49(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4638,7 +4993,9 @@ itens:
   nota: null
 - id: AIA-49-5
   acto_fonte: 32024R1689
-  referencia: Art. 49.º, n.º 5
+  referencia:
+    pt: Art. 49.º, n.º 5
+    en: Article 49(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4655,7 +5012,9 @@ itens:
   nota: null
 - id: AIA-AnxVIII-A
   acto_fonte: 32024R1689
-  referencia: Anexo VIII, secção A
+  referencia:
+    pt: Anexo VIII, secção A
+    en: Annex VIII, Section A
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4672,7 +5031,9 @@ itens:
   nota: null
 - id: AIA-AnxVIII-B
   acto_fonte: 32024R1689
-  referencia: Anexo VIII, secção B
+  referencia:
+    pt: Anexo VIII, secção B
+    en: Annex VIII, Section B
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4689,7 +5050,9 @@ itens:
   nota: null
 - id: AIA-AnxVIII-C
   acto_fonte: 32024R1689
-  referencia: Anexo VIII, secção C
+  referencia:
+    pt: Anexo VIII, secção C
+    en: Annex VIII, Section C
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -4706,7 +5069,9 @@ itens:
   nota: null
 - id: AIA-AnxVI
   acto_fonte: 32024R1689
-  referencia: Anexo VI
+  referencia:
+    pt: Anexo VI
+    en: Annex VI
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4739,7 +5104,9 @@ itens:
     en: Internal control is a conformity procedure; the Manual's periodic reviews and traceable evidence are inputs.
 - id: AIA-AnxVII-3
   acto_fonte: 32024R1689
-  referencia: Anexo VII, pontos 3.1, 3.3, 3.4
+  referencia:
+    pt: Anexo VII, pontos 3.1, 3.3, 3.4
+    en: Annex VII, points 3.1, 3.3, 3.4
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4756,7 +5123,9 @@ itens:
   nota: null
 - id: AIA-AnxVII-4
   acto_fonte: 32024R1689
-  referencia: Anexo VII, pontos 4.1-4.5, 4.7
+  referencia:
+    pt: Anexo VII, pontos 4.1-4.5, 4.7
+    en: Annex VII, points 4.1-4.5, 4.7
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -4789,7 +5158,9 @@ itens:
     en: The versioned inventory of datasets and models makes it possible to grant access; the duty is towards the notified body.
 - id: AIA-AnxVII-5
   acto_fonte: 32024R1689
-  referencia: Anexo VII, ponto 5.2
+  referencia:
+    pt: Anexo VII, ponto 5.2
+    en: Annex VII, point 5.2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4806,7 +5177,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-1
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 1
+  referencia:
+    pt: Anexo III, ponto 1
+    en: Annex III, point 1
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4823,7 +5196,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-2
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 2
+  referencia:
+    pt: Anexo III, ponto 2
+    en: Annex III, point 2
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4840,7 +5215,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-3
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 3
+  referencia:
+    pt: Anexo III, ponto 3
+    en: Annex III, point 3
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4857,7 +5234,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-4
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 4
+  referencia:
+    pt: Anexo III, ponto 4
+    en: Annex III, point 4
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4874,7 +5253,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-5
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 5
+  referencia:
+    pt: Anexo III, ponto 5
+    en: Annex III, point 5
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4891,7 +5272,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-6
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 6
+  referencia:
+    pt: Anexo III, ponto 6
+    en: Annex III, point 6
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4908,7 +5291,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-7
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 7
+  referencia:
+    pt: Anexo III, ponto 7
+    en: Annex III, point 7
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4925,7 +5310,9 @@ itens:
   nota: null
 - id: AIA-AnxIII-8
   acto_fonte: 32024R1689
-  referencia: Anexo III, ponto 8
+  referencia:
+    pt: Anexo III, ponto 8
+    en: Annex III, point 8
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -4942,7 +5329,9 @@ itens:
   nota: null
 - id: AIA-50-1
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 1
+  referencia:
+    pt: Art. 50.º, n.º 1
+    en: Article 50(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4961,7 +5350,9 @@ itens:
   nota: null
 - id: AIA-50-2
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 2
+  referencia:
+    pt: Art. 50.º, n.º 2
+    en: Article 50(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -4980,7 +5371,9 @@ itens:
   nota: null
 - id: AIA-50-3
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 3
+  referencia:
+    pt: Art. 50.º, n.º 3
+    en: Article 50(3)
   classe: organizacional
   forca: cobre
   contexto:
@@ -4999,7 +5392,9 @@ itens:
   nota: null
 - id: AIA-50-4-a
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 4, primeiro parágrafo
+  referencia:
+    pt: Art. 50.º, n.º 4, primeiro parágrafo
+    en: Article 50(4), first subparagraph
   classe: engenharia
   forca: cobre
   contexto:
@@ -5018,7 +5413,9 @@ itens:
   nota: null
 - id: AIA-50-4-b
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 4, segundo parágrafo
+  referencia:
+    pt: Art. 50.º, n.º 4, segundo parágrafo
+    en: Article 50(4), second subparagraph
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5035,7 +5432,9 @@ itens:
   nota: null
 - id: AIA-50-5
   acto_fonte: 32024R1689
-  referencia: Art. 50.º, n.º 5
+  referencia:
+    pt: Art. 50.º, n.º 5
+    en: Article 50(5)
   classe: engenharia
   forca: cobre
   contexto:
@@ -5054,7 +5453,9 @@ itens:
   nota: null
 - id: AIA-52-1
   acto_fonte: 32024R1689
-  referencia: Art. 52.º, n.os 1-2
+  referencia:
+    pt: Art. 52.º, n.os 1-2
+    en: Article 52(1) to (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5071,7 +5472,9 @@ itens:
   nota: null
 - id: AIA-53-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 1, alínea a)
+  referencia:
+    pt: Art. 53.º, n.º 1, alínea a)
+    en: Article 53(1), point (a)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5106,7 +5509,9 @@ itens:
     en: For a GPAI provider, the AI BOM and archived eval runs are partial inputs to the Annex XI documentation; the Manual is written from the consumer side.
 - id: AIA-53-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 1, alínea b)
+  referencia:
+    pt: Art. 53.º, n.º 1, alínea b)
+    en: Article 53(1), point (b)
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5140,7 +5545,9 @@ itens:
     en: The Manual requires this information from vendors (consumer side); it does not prescribe its production when the organisation is a GPAI provider.
 - id: AIA-53-1-c
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 1, alínea c)
+  referencia:
+    pt: Art. 53.º, n.º 1, alínea c)
+    en: Article 53(1), point (c)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5157,7 +5564,9 @@ itens:
   nota: null
 - id: AIA-53-1-d
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 1, alínea d)
+  referencia:
+    pt: Art. 53.º, n.º 1, alínea d)
+    en: Article 53(1), point (d)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5174,7 +5583,9 @@ itens:
   nota: null
 - id: AIA-53-3
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 3
+  referencia:
+    pt: Art. 53.º, n.º 3
+    en: Article 53(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5191,7 +5602,9 @@ itens:
   nota: null
 - id: AIA-53-4
   acto_fonte: 32024R1689
-  referencia: Art. 53.º, n.º 4
+  referencia:
+    pt: Art. 53.º, n.º 4
+    en: Article 53(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5208,7 +5621,9 @@ itens:
   nota: null
 - id: AIA-54-1
   acto_fonte: 32024R1689
-  referencia: Art. 54.º, n.os 1-2
+  referencia:
+    pt: Art. 54.º, n.os 1-2
+    en: Article 54(1) to (2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5225,7 +5640,9 @@ itens:
   nota: null
 - id: AIA-54-3
   acto_fonte: 32024R1689
-  referencia: Art. 54.º, n.os 3-5
+  referencia:
+    pt: Art. 54.º, n.os 3-5
+    en: Article 54(3) to (5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5242,7 +5659,9 @@ itens:
   nota: null
 - id: AIA-55-1-a
   acto_fonte: 32024R1689
-  referencia: Art. 55.º, n.º 1, alínea a)
+  referencia:
+    pt: Art. 55.º, n.º 1, alínea a)
+    en: Article 55(1), point (a)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5277,7 +5696,9 @@ itens:
   nota: null
 - id: AIA-55-1-b
   acto_fonte: 32024R1689
-  referencia: Art. 55.º, n.º 1, alínea b)
+  referencia:
+    pt: Art. 55.º, n.º 1, alínea b)
+    en: Article 55(1), point (b)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5302,7 +5723,9 @@ itens:
     en: Systemic risks at Union level are an AI-domain plane; the adversarial threat model is an input.
 - id: AIA-55-1-c
   acto_fonte: 32024R1689
-  referencia: Art. 55.º, n.º 1, alínea c)
+  referencia:
+    pt: Art. 55.º, n.º 1, alínea c)
+    en: Article 55(1), point (c)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5344,7 +5767,9 @@ itens:
   nota: null
 - id: AIA-55-1-d
   acto_fonte: 32024R1689
-  referencia: Art. 55.º, n.º 1, alínea d)
+  referencia:
+    pt: Art. 55.º, n.º 1, alínea d)
+    en: Article 55(1), point (d)
   classe: engenharia
   forca: cobre
   contexto: null
@@ -5386,7 +5811,9 @@ itens:
     en: Protection of weights (encryption, integrity, access), model theft and supply chain; the physical infrastructure falls under the general infrastructure controls.
 - id: AIA-55-2
   acto_fonte: 32024R1689
-  referencia: Art. 55.º, n.º 2
+  referencia:
+    pt: Art. 55.º, n.º 2
+    en: Article 55(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5403,7 +5830,9 @@ itens:
   nota: null
 - id: AIA-AnxXI-1
   acto_fonte: 32024R1689
-  referencia: Anexo XI, secção 1
+  referencia:
+    pt: Anexo XI, secção 1
+    en: Annex XI, Section 1
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5437,7 +5866,9 @@ itens:
     en: AI BOM covers architecture/components, licence and dataset provenance; acceptable use policies, computation and energy are left out.
 - id: AIA-AnxXI-2
   acto_fonte: 32024R1689
-  referencia: Anexo XI, secção 2
+  referencia:
+    pt: Anexo XI, secção 2
+    en: Annex XI, Section 2
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5464,7 +5895,9 @@ itens:
     en: Archived eval runs and red-team corpus are inputs to the evaluation documentation.
 - id: AIA-AnxXII
   acto_fonte: 32024R1689
-  referencia: Anexo XII
+  referencia:
+    pt: Anexo XII
+    en: Annex XII
   classe: juridico-contratual
   forca: apoia_evidencia
   contexto: null
@@ -5490,7 +5923,9 @@ itens:
     en: Consumer side only.
 - id: AIA-91-5
   acto_fonte: 32024R1689
-  referencia: Art. 91.º, n.º 5
+  referencia:
+    pt: Art. 91.º, n.º 5
+    en: Article 91(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5507,7 +5942,9 @@ itens:
   nota: null
 - id: AIA-92-5
   acto_fonte: 32024R1689
-  referencia: Art. 92.º, n.os 3 e 5
+  referencia:
+    pt: Art. 92.º, n.os 3 e 5
+    en: Article 92(3) and (5)
   classe: engenharia
   forca: fora_de_ambito
   contexto: null
@@ -5524,7 +5961,9 @@ itens:
   nota: null
 - id: AIA-57-12
   acto_fonte: 32024R1689
-  referencia: Art. 57.º, n.º 12
+  referencia:
+    pt: Art. 57.º, n.º 12
+    en: Article 57(12)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5541,7 +5980,9 @@ itens:
   nota: null
 - id: AIA-59-1
   acto_fonte: 32024R1689
-  referencia: Art. 59.º, n.º 1
+  referencia:
+    pt: Art. 59.º, n.º 1
+    en: Article 59(1)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5582,7 +6023,9 @@ itens:
     en: 'Regulatory sandbox: the Manual does not model sandboxes; the isolation, access and deletion controls are inputs.'
 - id: AIA-60-4
   acto_fonte: 32024R1689
-  referencia: Art. 60.º, n.º 4
+  referencia:
+    pt: Art. 60.º, n.º 4
+    en: Article 60(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5599,7 +6042,9 @@ itens:
   nota: null
 - id: AIA-60-7
   acto_fonte: 32024R1689
-  referencia: Art. 60.º, n.os 7-8
+  referencia:
+    pt: Art. 60.º, n.os 7-8
+    en: Article 60(7) to (8)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -5633,7 +6078,9 @@ itens:
     en: IRP and rollback support communication, suspension and recall; the testing circuit is regulatory.
 - id: AIA-60-9
   acto_fonte: 32024R1689
-  referencia: Art. 60.º, n.º 9
+  referencia:
+    pt: Art. 60.º, n.º 9
+    en: Article 60(9)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5650,7 +6097,9 @@ itens:
   nota: null
 - id: AIA-61-1
   acto_fonte: 32024R1689
-  referencia: Art. 61.º
+  referencia:
+    pt: Art. 61.º
+    en: Article 61
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5667,7 +6116,9 @@ itens:
   nota: null
 - id: AIA-72-1
   acto_fonte: 32024R1689
-  referencia: Art. 72.º, n.º 1
+  referencia:
+    pt: Art. 72.º, n.º 1
+    en: Article 72(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -5694,7 +6145,9 @@ itens:
   nota: null
 - id: AIA-72-2
   acto_fonte: 32024R1689
-  referencia: Art. 72.º, n.º 2
+  referencia:
+    pt: Art. 72.º, n.º 2
+    en: Article 72(2)
   classe: engenharia
   forca: cobre
   contexto:
@@ -5721,7 +6174,9 @@ itens:
   nota: null
 - id: AIA-72-3
   acto_fonte: 32024R1689
-  referencia: Art. 72.º, n.º 3
+  referencia:
+    pt: Art. 72.º, n.º 3
+    en: Article 72(3)
   classe: engenharia
   forca: cobre
   contexto:
@@ -5748,7 +6203,9 @@ itens:
   nota: null
 - id: AIA-72-4
   acto_fonte: 32024R1689
-  referencia: Art. 72.º, n.º 4
+  referencia:
+    pt: Art. 72.º, n.º 4
+    en: Article 72(4)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -5765,7 +6222,9 @@ itens:
   nota: null
 - id: AIA-73-1
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 1
+  referencia:
+    pt: Art. 73.º, n.º 1
+    en: Article 73(1)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5798,7 +6257,9 @@ itens:
   nota: null
 - id: AIA-73-2
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 2
+  referencia:
+    pt: Art. 73.º, n.º 2
+    en: Article 73(2)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5822,7 +6283,9 @@ itens:
   nota: null
 - id: AIA-73-3
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 3
+  referencia:
+    pt: Art. 73.º, n.º 3
+    en: Article 73(3)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5846,7 +6309,9 @@ itens:
   nota: null
 - id: AIA-73-4
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 4
+  referencia:
+    pt: Art. 73.º, n.º 4
+    en: Article 73(4)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5870,7 +6335,9 @@ itens:
   nota: null
 - id: AIA-73-5
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 5
+  referencia:
+    pt: Art. 73.º, n.º 5
+    en: Article 73(5)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -5894,7 +6361,9 @@ itens:
   nota: null
 - id: AIA-73-6
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.º 6
+  referencia:
+    pt: Art. 73.º, n.º 6
+    en: Article 73(6)
   classe: engenharia
   forca: parcial
   contexto: null
@@ -5928,7 +6397,9 @@ itens:
   nota: null
 - id: AIA-73-9-10
   acto_fonte: 32024R1689
-  referencia: Art. 73.º, n.os 9-10
+  referencia:
+    pt: Art. 73.º, n.os 9-10
+    en: Article 73(9) to (10)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -5945,7 +6416,9 @@ itens:
   nota: null
 - id: AIA-74-12
   acto_fonte: 32024R1689
-  referencia: Art. 74.º, n.º 12
+  referencia:
+    pt: Art. 74.º, n.º 12
+    en: Article 74(12)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -5979,7 +6452,9 @@ itens:
     en: Versioned datasets referenced by hash make it possible to grant access; secure remote access is not prescribed.
 - id: AIA-74-13
   acto_fonte: 32024R1689
-  referencia: Art. 74.º, n.º 13
+  referencia:
+    pt: Art. 74.º, n.º 13
+    en: Article 74(13)
   classe: engenharia
   forca: apoia_evidencia
   contexto: null
@@ -6004,7 +6479,9 @@ itens:
     en: Source code versioned and traceable; access is for the authority.
 - id: AIA-75-1A
   acto_fonte: 32024R1689
-  referencia: Art. 75.º, n.º 1-A
+  referencia:
+    pt: Art. 75.º, n.º 1-A
+    en: Article 75(1a)
   classe: organizacional
   forca: cobre
   contexto: null
@@ -6037,7 +6514,9 @@ itens:
   nota: null
 - id: AIA-75-1E
   acto_fonte: 32024R1689
-  referencia: Art. 75.º, n.º 1-E, segundo parágrafo
+  referencia:
+    pt: Art. 75.º, n.º 1-E, segundo parágrafo
+    en: Article 75(1e), second subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6054,7 +6533,9 @@ itens:
   nota: null
 - id: AIA-75c-3
   acto_fonte: 32024R1689
-  referencia: Art. 75.º-C, n.º 3
+  referencia:
+    pt: Art. 75.º-C, n.º 3
+    en: Article 75c(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6071,7 +6552,9 @@ itens:
   nota: null
 - id: AIA-79-4
   acto_fonte: 32024R1689
-  referencia: Art. 79.º, n.os 2 e 4
+  referencia:
+    pt: Art. 79.º, n.os 2 e 4
+    en: Article 79(2) and (4)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6104,7 +6587,9 @@ itens:
     en: Rollback and corrective actions with owner and deadline support execution; the measure is the authority's.
 - id: AIA-80-4
   acto_fonte: 32024R1689
-  referencia: Art. 80.º, n.os 4, 5 e 7
+  referencia:
+    pt: Art. 80.º, n.os 4, 5 e 7
+    en: Article 80(4), (5) and (7)
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6123,7 +6608,9 @@ itens:
     en: 'Reinforces AIA-6-2-3: the Manual does not ensure that the legal classification is reflected in the level.'
 - id: AIA-82-2
   acto_fonte: 32024R1689
-  referencia: Art. 82.º, n.º 2
+  referencia:
+    pt: Art. 82.º, n.º 2
+    en: Article 82(2)
   classe: organizacional
   forca: apoia_evidencia
   contexto: null
@@ -6154,7 +6641,9 @@ itens:
   nota: null
 - id: AIA-83-1
   acto_fonte: 32024R1689
-  referencia: Art. 83.º, n.º 1
+  referencia:
+    pt: Art. 83.º, n.º 1
+    en: Article 83(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6171,7 +6660,9 @@ itens:
   nota: null
 - id: AIA-86-1
   acto_fonte: 32024R1689
-  referencia: Art. 86.º, n.º 1
+  referencia:
+    pt: Art. 86.º, n.º 1
+    en: Article 86(1)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6208,7 +6699,9 @@ itens:
   nota: null
 - id: AIA-87
   acto_fonte: 32024R1689
-  referencia: Art. 87.º
+  referencia:
+    pt: Art. 87.º
+    en: Article 87
   classe: organizacional
   forca: fora_de_ambito
   contexto: null
@@ -6225,7 +6718,9 @@ itens:
   nota: null
 - id: AIA-99-3
   acto_fonte: 32024R1689
-  referencia: Art. 99.º, n.º 3
+  referencia:
+    pt: Art. 99.º, n.º 3
+    en: Article 99(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6242,7 +6737,9 @@ itens:
   nota: null
 - id: AIA-99-4
   acto_fonte: 32024R1689
-  referencia: Art. 99.º, n.º 4
+  referencia:
+    pt: Art. 99.º, n.º 4
+    en: Article 99(4)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6259,7 +6756,9 @@ itens:
   nota: null
 - id: AIA-99-5
   acto_fonte: 32024R1689
-  referencia: Art. 99.º, n.º 5
+  referencia:
+    pt: Art. 99.º, n.º 5
+    en: Article 99(5)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6276,7 +6775,9 @@ itens:
   nota: null
 - id: AIA-101-1
   acto_fonte: 32024R1689
-  referencia: Art. 101.º, n.º 1
+  referencia:
+    pt: Art. 101.º, n.º 1
+    en: Article 101(1)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6293,7 +6794,9 @@ itens:
   nota: null
 - id: AIA-111-2
   acto_fonte: 32024R1689
-  referencia: Art. 111.º, n.º 2
+  referencia:
+    pt: Art. 111.º, n.º 2
+    en: Article 111(2)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6310,7 +6813,9 @@ itens:
   nota: null
 - id: AIA-111-3
   acto_fonte: 32024R1689
-  referencia: Art. 111.º, n.º 3
+  referencia:
+    pt: Art. 111.º, n.º 3
+    en: Article 111(3)
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null
@@ -6327,7 +6832,9 @@ itens:
   nota: null
 - id: AIA-111-4
   acto_fonte: 32024R1689
-  referencia: Art. 111.º, n.º 4
+  referencia:
+    pt: Art. 111.º, n.º 4
+    en: Article 111(4)
   classe: engenharia
   forca: cobre
   contexto:
@@ -6346,7 +6853,9 @@ itens:
   nota: null
 - id: AIA-113-3
   acto_fonte: 32024R1689
-  referencia: Art. 113.º, terceiro parágrafo
+  referencia:
+    pt: Art. 113.º, terceiro parágrafo
+    en: Article 113, third subparagraph
   classe: juridico-contratual
   forca: fora_de_ambito
   contexto: null

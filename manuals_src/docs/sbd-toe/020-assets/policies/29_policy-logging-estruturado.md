@@ -31,7 +31,7 @@ Esta política aplica-se a todos os sistemas em execução que produzam eventos 
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Logging básico; formato estruturado recomendado; centralização recomendada |
+| L1 | Obrigatório; formato estruturado; eventos de segurança da secção 4; logs persistidos fora da instância; retenção mínima; centralização recomendada |
 | L2 | Obrigatório; formato JSON estruturado; eventos de segurança obrigatórios; centralização; retenção mínima |
 | L3 | Obrigatório; JSON/ECS; eventos completos; centralização + SIEM; WORM; retenção regulatória |
 
@@ -144,10 +144,10 @@ O Manual não reproduz os prazos dos regimes (b) a (d): a organização mapeia o
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
-| Logs protegidos de modificação | Recomendado | Obrigatório | Obrigatório |
+| Logs protegidos de modificação | Obrigatório | Obrigatório | Obrigatório |
 | Armazenamento WORM (Write Once, Read Many) | Não aplicável | Recomendado | Obrigatório |
 | Hash ou assinatura periódica de logs | Não aplicável | Recomendado | Obrigatório |
-| Acesso a logs restrito e auditado | Recomendado | Obrigatório | Obrigatório |
+| Acesso a logs restrito e auditado | Obrigatório (acesso restrito); auditoria do acesso recomendada | Obrigatório | Obrigatório |
 | Alertas em caso de tentativa de alteração ou eliminação | Não aplicável | Recomendado | Obrigatório |
 
 ---

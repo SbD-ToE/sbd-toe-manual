@@ -29,7 +29,7 @@ O objetivo desta política é garantir que:
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Recomendado; monitorização básica de health e erros |
+| L1 | Obrigatório; logs estruturados e persistidos fora da instância; catálogo de eventos críticos de segurança; monitorização básica de health e erros |
 | L2 | Obrigatório; eventos de segurança definidos; alertas com SLA; integração com SIEM recomendada |
 | L3 | Obrigatório; monitorização completa; SIEM obrigatório; correlação comportamental; revisão trimestral |
 

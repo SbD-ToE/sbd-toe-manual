@@ -36,7 +36,7 @@ Esta política aplica-se a todos os fornecedores, parceiros e contractors que:
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Recomendado; cláusulas básicas de confidencialidade e boas práticas; contacto de segurança definido |
+| L1 | Obrigatório; cláusulas de segurança proporcionais (confidencialidade e boas práticas); validação do fornecedor antes do onboarding, com questionário ou checklist; contacto de segurança definido |
 | L2 | Obrigatório; due diligence pré-contratual; cláusulas SbD-ToE; onboarding documentado; reavaliação anual |
 | L3 | Obrigatório; due diligence formal; auditoria técnica; cláusulas completas; SBOM e relatórios de testes obrigatórios; reavaliação semestral; direito formal de auditoria |
 

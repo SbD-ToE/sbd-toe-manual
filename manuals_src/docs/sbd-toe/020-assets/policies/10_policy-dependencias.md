@@ -132,7 +132,7 @@ O pipeline CI/CD deve incluir análise SCA automática em cada build, cobrindo d
 
 | Nível | Requisito SCA |
 |---|---|
-| L1 | Alerta; não bloqueia |
+| L1 | Bloqueia findings High e Critical sem exceção aprovada |
 | L2 | Bloqueia findings High e Critical sem exceção aprovada |
 | L3 | Bloqueia findings Medium, High e Critical sem exceção aprovada |
 

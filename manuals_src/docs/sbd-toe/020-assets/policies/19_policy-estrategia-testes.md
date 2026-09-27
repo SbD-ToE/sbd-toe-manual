@@ -30,14 +30,14 @@ O objetivo desta política é garantir que:
 
 | Técnica | L1 | L2 | L3 |
 |---|---|---|---|
-| **SAST** (análise estática) | Recomendado | Obrigatório | Obrigatório |
+| **SAST** (análise estática) | Obrigatório | Obrigatório | Obrigatório |
 | **Secret detection** | Obrigatório | Obrigatório | Obrigatório |
-| **SCA** (composição de software) | Obrigatório (alerta) | Obrigatório (gate) | Obrigatório (gate) |
+| **SCA** (composição de software) | Obrigatório (gate) | Obrigatório (gate) | Obrigatório (gate) |
 | **DAST** (análise dinâmica) | Recomendado | Obrigatório em staging | Obrigatório em staging + critérios de cobertura |
-| **IAST** (instrumentação em runtime) | Opcional | Recomendado | Recomendado |
+| **IAST** (instrumentação em runtime) | Opcional | Recomendado | Obrigatório em staging |
 | **Fuzzing** | Opcional | Recomendado (endpoints críticos) | Obrigatório (endpoints públicos + parsing) |
 | **Testes manuais de segurança** | Não obrigatório | Recomendado por release | Obrigatório por release major |
-| **PenTesting** | Não obrigatório | Recomendado anual | Obrigatório (ver Política de PenTesting) |
+| **PenTesting** | Não obrigatório | Obrigatório anual (ver Política de PenTesting) | Obrigatório (ver Política de PenTesting) |
 
 ### 2.2 SAST {#22-sast}
 
@@ -67,10 +67,10 @@ Os thresholds de bloqueio devem ser documentados e versionados em `gates-config.
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
-| SAST Critical/High | Alerta | Bloqueia merge | Bloqueia merge |
+| SAST Critical/High | Bloqueia merge | Bloqueia merge | Bloqueia merge |
 | SAST Medium | Não aplicável | Alerta | Bloqueia merge |
 | Secret detection (qualquer finding) | Bloqueia | Bloqueia | Bloqueia |
-| SCA High/Critical CVE sem exceção | Alerta | Bloqueia promoção | Bloqueia promoção |
+| SCA High/Critical CVE sem exceção | Bloqueia promoção | Bloqueia promoção | Bloqueia promoção |
 | DAST High/Critical em staging | Não aplicável | Bloqueia promoção a produção | Bloqueia promoção a produção |
 | Cobertura DAST abaixo de threshold | Não aplicável | Alerta | Bloqueia (threshold: 80% de endpoints) |
 | Fuzzing com crash confirmado | Não aplicável | Bloqueia release | Bloqueia release |

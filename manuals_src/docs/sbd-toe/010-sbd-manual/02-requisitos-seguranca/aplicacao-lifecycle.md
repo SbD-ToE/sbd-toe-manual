@@ -483,7 +483,7 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD execute verifica
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | SAST básico; SCA recomendado |
+| L1 | Sim | SAST e SCA com bloqueio de findings Critical/High |
 | L2 | Sim | SAST + SCA obrigatórios; limiares configurados |
 | L3 | Sim | SAST + SCA + DAST; gates rigorosos; SBOM + assinatura obrigatórios |
 
@@ -631,7 +631,7 @@ Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qual
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | Revisão humana e SAST básico |
+| L1 | Sim | Revisão humana e gates de SAST/SCA |
 | L2 | Sim | Revisão + SAST/SCA obrigatórios |
 | L3 | Sim | Revisão + SAST/SCA + validações reforçadas e AppSec review |
 

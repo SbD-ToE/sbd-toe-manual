@@ -162,7 +162,7 @@ Como **AppSec Engineer**, quero **executar SCA automático nos pipelines**, para
 **Proporcionalidade por risco.**
 | Nível | Política |
 |---|---|
-| L1 | Alerta |
+| L1 | Bloqueio High/Critical |
 | L2 | Bloqueio High/Critical |
 | L3 | Bloqueio Medium+
 

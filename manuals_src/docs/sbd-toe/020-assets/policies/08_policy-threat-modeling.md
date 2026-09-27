@@ -186,7 +186,7 @@ A reutilização sem revisão explícita é equivalente a não ter threat modeli
 |---|---|---|---|
 | Threat modeling obrigatório | Não | Sim | Sim |
 | STRIDE como metodologia base | Recomendado | Obrigatório | Obrigatório |
-| LINDDUN (dados pessoais) | Opcional | Recomendado | Obrigatório |
+| LINDDUN (dados pessoais) | Opcional | Obrigatório | Obrigatório |
 | Aprovação formal | Não aplicável | AppSec + Tech Lead | AppSec + Arquiteto + revisão independente |
 | Gate no pipeline CI/CD | Não aplicável | Recomendado | Obrigatório |
 | Revisão periódica | A pedido | Anual / release major | Semestral / release major |

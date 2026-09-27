@@ -139,9 +139,9 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 | Requisito da política | L1 | L2 | L3 |
 |---|---|---|---|
-| Catálogo do projeto criado e versionado | Recomendado | Obrigatório | Obrigatório |
-| Tags `SEC-Lx-*` no backlog | Recomendado | Obrigatório | Obrigatório |
-| Critérios de validação por requisito | Recomendado | Obrigatório | Obrigatório |
+| Catálogo do projeto criado e versionado | Obrigatório | Obrigatório | Obrigatório |
+| Tags `SEC-Lx-*` no backlog | Obrigatório | Obrigatório | Obrigatório |
+| Critérios de validação por requisito | Obrigatório | Obrigatório | Obrigatório |
 | Validação automática de tags no pipeline | Não aplicável | Recomendado | Obrigatório |
 | Revisão independente da seleção | Não aplicável | Recomendado | Obrigatório |
 | Relatório de rastreabilidade exportável | Opcional | Recomendado | Obrigatório |

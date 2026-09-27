@@ -83,8 +83,8 @@ As configurações resultantes devem ser:
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
-| Guidelines documentadas por stack | Regras upstream sem tailoring | Curadas com tailoring documentado | Curadas + policy-as-code |
-| Operacionalização como configuração de ferramenta | Recomendado | Obrigatório | Obrigatório |
+| Guidelines documentadas por stack | Regras upstream *default*, aprovadas e revistas dentro do período de validade | Curadas com tailoring documentado | Curadas + policy-as-code |
+| Operacionalização como configuração de ferramenta | Obrigatório | Obrigatório | Obrigatório |
 | Configuração centralizada e reutilizável | Recomendado | Obrigatório | Obrigatório |
 | Desvios à guideline registados por projeto | Opcional | Obrigatório | Obrigatório |
 

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 163f828d3bd1e6ce48a0073fa180f85fd5edfde389a255e5d39436fabdff8af5
+  source_sha256: cbf557744cb0b106160a436d1f25087e7f458fd9276dd1b08268b3b5185de969
   source_commit: null
-  target_sha256: 919c5364ec029a197de468e05480d84be264841b7db0bcf9ed7ac0bf33914ba7
+  target_sha256: 141bc7ca7e148fbc4b2d8382d067d25b62ad0914c5c957137c928564711cace1
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -97,6 +97,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-008` | Step-up for sensitive actions | — | ✔ | ✔ | — |
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
+| `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -106,7 +107,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ACC-007` | Validation of the access model | — | ✔ | ✔ | — |
 | `ACC-008` | Real-time revocation | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Attribute-based authorisation (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Periodic review of permissions | — | ✔ | ✔ | — |
+| `ACC-010` | Periodic review of permissions | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Logging of critical events | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Minimum attributes in logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protection of log integrity and access | ✔ | ✔ | ✔ | — |
@@ -354,8 +355,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-011` | Governance KPIs defined, collected and reported | — | ✔ | ✔ | — |
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
-| `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Periodic review of access to supporting systems (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
+| `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
 
 ## Requirement list — ART50 {#lista-art50}
 
@@ -379,6 +382,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-008` | Step-up for sensitive actions | — | ✔ | ✔ | — |
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
+| `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -388,7 +392,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ACC-007` | Validation of the access model | — | ✔ | ✔ | — |
 | `ACC-008` | Real-time revocation | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Attribute-based authorisation (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Periodic review of permissions | — | ✔ | ✔ | — |
+| `ACC-010` | Periodic review of permissions | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Logging of critical events | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Minimum attributes in logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protection of log integrity and access | ✔ | ✔ | ✔ | — |
@@ -636,8 +640,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-011` | Governance KPIs defined, collected and reported | — | ✔ | ✔ | — |
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
-| `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Periodic review of access to supporting systems (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
+| `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 

@@ -51,12 +51,14 @@ A organização é uma das entidades financeiras enumeradas no art. 2.º, n.º 1
 | CTX-DORA-P04 | `LOG-008` | — | obrigatório | — | Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2, al. e): «Medidas para detetar uma falha nos sistemas de registo» (DORA-RTS1774-12-2-e) | não admitida |
 | CTX-DORA-P05 | `ACC-010` | — | obrigatório; frequência de actualização dos direitos de acesso ≥ anual («pelo menos, uma vez por ano para todos os sistemas de TIC que não sejam sistemas de TIC que apoiem funções críticas ou importantes») | — | Reg. Delegado (UE) 2024/1774, art. 21.º, al. e), subal. iv): «atualização dos direitos de acesso sempre que sejam necessárias alterações e, pelo menos, uma vez por ano para todos os sistemas de TIC» (DORA-RTS1774-21-e-iv) | não admitida |
 | CTX-DORA-P06 | `ACC-010` | FCI | obrigatório; frequência de actualização dos direitos de acesso ≥ semestral («pelo menos a cada seis meses para os sistemas de TIC que apoiem funções críticas ou importantes») | — | Reg. Delegado (UE) 2024/1774, art. 21.º, al. e), subal. iv): «pelo menos a cada seis meses para os sistemas de TIC que apoiem funções críticas ou importantes» (DORA-RTS1774-21-e-iv) | não admitida |
-| CTX-DORA-P07 | `AUT-001` | — | obrigatório | Autenticação forte no acesso remoto à rede da entidade, no acesso privilegiado, no acesso a activos de TIC que apoiem funções críticas ou importantes e a activos de TIC acessíveis ao público. | Reg. Delegado (UE) 2024/1774, art. 21.º, al. f), subal. ii); art. 33.º, al. d) (regime simplificado): «a utilização de métodos de autenticação forte em conformidade com as melhores práticas e técnicas para o acesso remoto à rede da entidade financeira, para o acesso privilegiado e ainda para o acesso a ativos de TIC que apoiem funções críticas ou importantes ou ativos de TIC acessíveis ao público» (DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d) | admitida |
+| CTX-DORA-P07 | `AUT-001` | — | obrigatório | Autenticação forte dos utilizadores da aplicação no acesso a activos de TIC que apoiem funções críticas ou importantes e a activos de TIC acessíveis ao público (o acesso remoto e o privilegiado estão em CTX-DORA-P13). | Reg. Delegado (UE) 2024/1774, art. 21.º, al. f), subal. ii); art. 33.º, al. d) (regime simplificado): «a utilização de métodos de autenticação forte em conformidade com as melhores práticas e técnicas para o acesso remoto à rede da entidade financeira, para o acesso privilegiado e ainda para o acesso a ativos de TIC que apoiem funções críticas ou importantes ou ativos de TIC acessíveis ao público» (DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d) | admitida |
 | CTX-DORA-P08 | [Política 10 §9](/sbd-toe/assets/policies/policy-dependencias#9-auditoria-periódica) | FCI | obrigatório; frequência da análise automatizada de vulnerabilidades ≥ semanal («pelo menos semanalmente») | Análise automatizada de vulnerabilidades dos activos de TIC que apoiam funções críticas ou importantes, não só das dependências e imagens. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. b), e segundo parágrafo: «as entidades financeiras devem realizar, pelo menos semanalmente, uma análise automatizada da vulnerabilidade e avaliações dos ativos de TIC para os ativos de TIC que apoiam funções críticas ou importantes» (DORA-RTS1774-10-2-b) | não admitida |
 | CTX-DORA-P09 | `OPS-005` | FCI | obrigatório | — | Reg. Delegado (UE) 2024/1774, art. 23.º, n.º 2, al. b): «implementar ferramentas geradoras de alertas para atividades e comportamentos anómalos, pelo menos para os ativos de TIC e de informação que apoiem funções críticas ou importantes» (DORA-RTS1774-23-2-b) | não admitida |
 | CTX-DORA-P10 | `GOV-015` | — | obrigatório | Divulgação responsável aos clientes, às contrapartes e ao público. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. e): «Estabelecer procedimentos para a divulgação responsável das vulnerabilidades aos clientes, às contrapartes e ao público» (DORA-RTS1774-10-2-e) | não admitida |
 | CTX-DORA-P11 | `OPS-016` | — | obrigatório | Restauro em sistemas física e logicamente separados do sistema de origem, protegidos contra acesso não autorizado e corrupção; testes periódicos de salvaguarda e de restauração. | Reg. (UE) 2022/2554, art. 12.º, n.os 1 a 3; Reg. Delegado (UE) 2024/1774, art. 8.º, n.º 2, al. b), subal. i), e art. 39.º, n.º 2, al. g): «utilizam sistemas de TIC que estejam física e logicamente separados do sistema de TIC de origem» (DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-8-2-b-i, DORA-RTS1774-39-2-g) | não admitida |
 | CTX-DORA-P12 | `OPS-017` | FCI | obrigatório | Também em L1 para aplicações que suportam funções críticas ou importantes: níveis e prazos de recuperação e dependências de prestadores de serviços de TIC. | Reg. (UE) 2022/2554, art. 12.º, n.º 6; Reg. Delegado (UE) 2024/1774, art. 39.º, n.º 2, al. d): «Ao determinar o tempo de recuperação e os objetivos concretos de recuperação para cada função» (DORA-12-6, DORA-RTS1774-39-2-d) | não admitida |
+| CTX-DORA-P13 | `GOV-016` | — | obrigatório | Autenticação forte no acesso remoto à rede da entidade e no acesso privilegiado; contas dedicadas às tarefas administrativas e gestão automatizada do acesso privilegiado (PAM) quando viável e adequado, em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 21.º, als. e) e f), subal. ii), e art. 33.º, als. c) e d): «devem utilizar, sempre que possível, contas específicas para a execução de tarefas administrativas» (DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d) | não admitida |
+| CTX-DORA-P14 | `GOV-017` | — | obrigatório | Identificação e autenticação únicas de pessoas e sistemas; processo de gestão do ciclo de vida de identidades e contas, com soluções automatizadas sempre que possível e adequado; contas genéricas e partilhadas limitadas, em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 20.º, n.os 1 e 2, al. b), e art. 21.º, al. c): «Um processo de gestão do ciclo de vida das identidades e das contas» (DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c) | não admitida |
 
 ## Requisitos acrescentados pelo regime {#acrescentos}
 
@@ -94,6 +96,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -351,8 +354,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-DORA-P13 |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — FCI {#lista-fci}
@@ -377,6 +382,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -634,8 +640,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-DORA-P13 |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
@@ -644,8 +652,8 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 127 |
-| Parcial | 134 |
+| Cobre | 137 |
+| Parcial | 124 |
 | Apoia evidência | 123 |
 | Lacuna | 8 |
 | Fora de âmbito | 234 |

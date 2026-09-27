@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 589cc6fae5dc1cf6bc9dc5ce8bfd5a7064207a9fb86f312a7cdd67862aca9309
+  source_sha256: 4747dfdc23788eed9616a5aa4c0a35c43e350dcc2160f9d6a8e06b1f0511f546
   source_commit: null
-  target_sha256: da6e0dafda2b5bd7b6a58ce5ea4d9c5aae9b1ca535223cbb1f4bf040124b4b6c
+  target_sha256: 323c103bd6808f0faa79bdf8f61d8c7f4037ab0a83a5890b5aefc3b6ed4d43c6
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -99,6 +99,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-008` | Step-up for sensitive actions | — | ✔ | ✔ | — |
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
+| `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -108,7 +109,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ACC-007` | Validation of the access model | — | ✔ | ✔ | — |
 | `ACC-008` | Real-time revocation | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Attribute-based authorisation (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Periodic review of permissions | — | ✔ | ✔ | — |
+| `ACC-010` | Periodic review of permissions | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Logging of critical events | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Minimum attributes in logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protection of log integrity and access | ✔ | ✔ | ✔ | — |
@@ -356,8 +357,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-011` | Governance KPIs defined, collected and reported | — | ✔ | ✔ | — |
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
-| `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Periodic review of access to supporting systems (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-CRA-P04 |
+| `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
 | `CTX-CRA-R01` | Support period determined, communicated and honoured | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | ▲ | ▲ | ▲ | — |

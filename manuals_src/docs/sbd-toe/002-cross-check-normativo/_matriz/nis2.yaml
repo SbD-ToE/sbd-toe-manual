@@ -719,9 +719,17 @@ itens:
     citacao:
       pt: MFA para staging e produção
       en: MFA for staging and production
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L1, contas dedicadas, autenticação multifator e registo das acções
+      en: at L1, dedicated accounts, multi-factor authentication and logging of actions
   falta:
-    pt: MFA prescrita em L2/L3 e para acesso a staging/produção; comunicações seguras de voz, vídeo e texto e sistemas seguros de comunicações de emergência não são tratados.
-    en: MFA prescribed at L2/L3 and for access to staging/production; secured voice, video and text communications and secured emergency communication systems are not addressed.
+    pt: Comunicações seguras de voz, vídeo e texto e sistemas seguros de comunicações de emergência não são tratados (segurança da entidade, fora do âmbito do Manual); a MFA está prescrita para a aplicação (AUT-001) e para o acesso privilegiado aos sistemas de suporte (GOV-016).
+    en: Secured voice, video and text communications and secured emergency communication systems are not addressed (entity security, outside the scope of the Manual); MFA is prescribed for the application (AUT-001) and for privileged access to the supporting systems (GOV-016).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6632,8 +6640,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: ACC-008
@@ -6649,8 +6659,8 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
   - tipo: politica
     rotulo:
       pt: Política 33 §7.1
@@ -6660,9 +6670,15 @@ itens:
     citacao:
       pt: Revogação de todos os acessos (sistemas, repositórios, ferramentas, VPN, credenciais de serviço)
       en: Revocation of all access (systems, repositories, tools, VPN, service credentials)
-  falta:
-    pt: Revogação imediata e ciclo de terceiros; concessão/alteração/retirada documentada para trabalhadores internos (joiner-mover-leaver) não prescrita.
-    en: Immediate revocation and third-party lifecycle; documented granting/modification/removal for internal employees (joiner-mover-leaver) not prescribed.
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: concessão, alteração e retirada de acessos registadas (entrada, mudança de função, saída)
+      en: granting, change and removal of access recorded (joining, change of role, leaving)
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6701,8 +6717,8 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
   - tipo: politica
     rotulo:
       pt: Política 33 §7.1
@@ -6734,14 +6750,14 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.2.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-NIS2
     grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -6753,11 +6769,25 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
-  falta:
-    pt: Revisão periódica de direitos só obrigatória em L2/L3 para acessos internos; terceiros revistos em todos os níveis.
-    en: Periodic review of rights mandatory only at L2/L3 for internal access; third parties reviewed at all levels.
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
+  - tipo: requisito
+    alvo: ACC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: 'cadência mínima (escolha do Manual): anual em L1, semestral em L2, trimestral em L3'
+      en: 'minimum cadence (the Manual''s choice): annual at L1, half-yearly at L2, quarterly at L3'
+  - tipo: requisito
+    alvo: GOV-014
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: o das identidades internas pelo menos anualmente em L1, semestralmente em L2 e trimestralmente em L3; o das contas privilegiadas e de administração trimestralmente em todos os níveis
+      en: that of internal identities at least annually at L1, half-yearly at L2 and quarterly at L3; that of privileged and administration accounts quarterly at all levels
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -6773,20 +6803,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
-    alvo: ACC-004
+    alvo: GOV-016
     niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-    ancora: acc
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: Perfis de utilizador, administrador e serviço são distintos
-      en: User, administrator and service profiles are distinct
-  falta:
-    pt: Não há política de gestão de contas privilegiadas e de administração de sistema; ACC-004 só separa perfis.
-    en: There is no policy for the management of privileged and system administration accounts; ACC-004 only separates profiles.
+      pt: Acesso privilegiado e de administração aos sistemas que suportam a aplicação
+      en: Privileged and administrative access to the systems that support the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6800,7 +6830,7 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-NIS2
     grau: PERTINENTE
@@ -6830,9 +6860,15 @@ itens:
     citacao:
       pt: MFA para staging e produção
       en: MFA for staging and production
-  falta:
-    pt: Contas de administração distintas (ACC-004) e MFA para staging/produção (addon); a autenticação forte das contas privilegiadas não é requisito de catálogo em L1.
-    en: Separate administration accounts (ACC-004) and MFA for staging/production (addon); strong authentication of privileged accounts is not a catalogue requirement at L1.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L1, contas dedicadas, autenticação multifator e registo das acções
+      en: at L1, dedicated accounts, multi-factor authentication and logging of actions
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -6848,22 +6884,28 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-NIS2
     grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
       pt: Auditorias periódicas removem permissões obsoletas
       en: Periodic audits remove obsolete permissions
-  falta:
-    pt: Não há revisão específica de contas privilegiadas; a revisão geral de permissões só existe em L2/L3.
-    en: There is no specific review of privileged accounts; the general review of permissions exists only at L2/L3.
+  - tipo: requisito
+    alvo: GOV-014
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: o das identidades internas pelo menos anualmente em L1, semestralmente em L2 e trimestralmente em L3; o das contas privilegiadas e de administração trimestralmente em todos os níveis
+      en: that of internal identities at least annually at L1, half-yearly at L2 and quarterly at L3; that of privileged and administration accounts quarterly at all levels
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -6879,12 +6921,28 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há regra de restrição e controlo dos sistemas de administração do sistema.
-    en: There is no rule restricting and controlling system administration systems.
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
+  resposta:
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Acesso privilegiado e de administração aos sistemas que suportam a aplicação
+      en: Privileged and administrative access to the systems that support the application
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: consolas de administração restritas a quem administra
+      en: administration consoles restricted to those who administer
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6917,8 +6975,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: ACC-008
@@ -6945,9 +7005,23 @@ itens:
     citacao:
       pt: com identidade própria (workload identity efémera via OIDC)
       en: with its own identity (ephemeral workload identity via OIDC)
-  falta:
-    pt: Ciclo de vida para terceiros e para agentes IA; ciclo de identidades de trabalhadores internos não prescrito.
-    en: Lifecycle for third parties and for AI agents; lifecycle of internal employee identities not prescribed.
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Cada identidade com acesso aos sistemas da aplicação é única e associada a uma pessoa
+      en: Each identity with access to the application's systems is unique and associated with a person
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: concessão, alteração e retirada de acessos registadas (entrada, mudança de função, saída)
+      en: granting, change and removal of access recorded (joining, change of role, leaving)
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6961,8 +7035,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: LOG-002
@@ -6998,9 +7074,15 @@ itens:
     citacao:
       pt: com identidade própria (workload identity efémera via OIDC)
       en: with its own identity (ephemeral workload identity via OIDC)
-  falta:
-    pt: Atribuição a pessoa identificada em pipelines e identidades próprias para agentes; não há requisito geral de identidades únicas associadas a uma pessoa nem de registo da gestão de identidades.
-    en: Attribution to an identified person in pipelines and dedicated identities for agents; there is no general requirement for unique identities associated with a person or for logging of identity management.
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Cada identidade com acesso aos sistemas da aplicação é única e associada a uma pessoa
+      en: Each identity with access to the application's systems is unique and associated with a person
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -7014,8 +7096,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: us
     alvo: 07-cicd-seguro-us-20
@@ -7027,9 +7111,15 @@ itens:
     citacao:
       pt: Sem contas partilhadas nem *tokens* pessoais *long-lived* para escrita
       en: No shared accounts or *long-lived* personal *tokens* for writing
-  falta:
-    pt: Contas partilhadas proibidas no SCM/CI; não há regime de autorização excecional documentada para identidades partilhadas nos restantes sistemas.
-    en: Shared accounts prohibited in SCM/CI; there is no regime of documented exceptional authorisation for shared identities in the other systems.
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: identidades partilhadas só por necessidade documentada e aprovada
+      en: shared identities only by documented and approved need
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -7043,8 +7133,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.5.4 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
     alvo: GOV-014
@@ -7052,11 +7144,11 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -7071,9 +7163,23 @@ itens:
     citacao:
       pt: Revogação de todos os acessos (sistemas, repositórios, ferramentas, VPN, credenciais de serviço)
       en: Revocation of all access (systems, repositories, tools, VPN, service credentials)
-  falta:
-    pt: Revisão de terceiros em todos os níveis; identidades internas só revistas em L2/L3.
-    en: Review of third parties at all levels; internal identities reviewed only at L2/L3.
+  - tipo: requisito
+    alvo: GOV-014
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: o das identidades internas pelo menos anualmente em L1, semestralmente em L2 e trimestralmente em L3; o das contas privilegiadas e de administração trimestralmente em todos os níveis
+      en: that of internal identities at least annually at L1, half-yearly at L2 and quarterly at L3; that of privileged and administration accounts quarterly at all levels
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: concessão, alteração e retirada de acessos registadas (entrada, mudança de função, saída)
+      en: granting, change and removal of access recorded (joining, change of role, leaving)
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -7136,7 +7242,7 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.6.2 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -7196,9 +7302,15 @@ itens:
     citacao:
       pt: Perfis de utilizador, administrador e serviço são distintos
       en: User, administrator and service profiles are distinct
-  falta:
-    pt: Força de password, bloqueio, expiração de sessão, credenciais protegidas e revogação por exposição cobertos; falta alteração obrigatória de credenciais iniciais/por defeito e credenciais separadas explícitas para contas privilegiadas.
-    en: Password strength, lockout, session expiry, protected credentials and revocation on exposure covered; mandatory change of initial/default credentials and explicitly separate credentials for privileged accounts are missing.
+  - tipo: requisito
+    alvo: AUT-011
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: aut
+    citacao:
+      pt: A aplicação não é entregue nem posta em produção com contas ou credenciais por defeito
+      en: The application is not delivered or put into production with default accounts or credentials
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

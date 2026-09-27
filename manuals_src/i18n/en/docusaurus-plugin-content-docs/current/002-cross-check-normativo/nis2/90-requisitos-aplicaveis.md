@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: b4880adf7477d726884df2536e6202e2611cd0f833e063bef8e8998a0b933b01
+  source_sha256: 08a29f154bb65bbd0c47673fc3ccd81dbd76ce8aa4c6118a468cd6a27b710761
   source_commit: null
-  target_sha256: 083f62d3576b28effa24bde45bdd28faa247d6d012362eca306a21b8f9c03b84
+  target_sha256: 822097d5804852e5ebc22e1912701ea15772d36f8ea57d25479822587f80b41c
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -70,12 +70,14 @@ The entity is essential or important under Article 3 of Directive (EU) 2022/2555
 | CTX-NIS2-P09 | `GOV-007` | PERTINENTE | mandatory | — | Implementing Regulation (EU) 2024/2690, Annex, point 5.1.1: “the relevant entities shall establish, implement and apply a supply chain security policy which governs the relations with their direct suppliers and service providers” (NIS2-IR2690-5.1.1) | not admitted |
 | CTX-NIS2-P10 | `DPL-007` | PERTINENTE | mandatory | Changes tested and assessed before being implemented, including emergency and configuration changes. | Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2: “The procedures shall ensure that those changes are documented and, based on the risk assessment carried out pursuant to point 2.1, tested and assessed in view of the potential impact before being implemented.” (NIS2-IR2690-6.4.2) | not admitted |
 | CTX-NIS2-P11 | `IAC-007` | PERTINENTE | mandatory | — | Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2: “The procedures shall ensure that those changes are documented and, based on the risk assessment carried out pursuant to point 2.1, tested and assessed in view of the potential impact before being implemented.” (NIS2-IR2690-6.4.2) | admitted |
-| CTX-NIS2-P12 | `ACC-010` | PERTINENTE | mandatory | Includes the access rights of privileged and system administration accounts, at planned intervals, with the results documented. | Implementing Regulation (EU) 2024/2690, Annex, points 11.2.3 and 11.3.3: “The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes.” (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3) | not admitted |
-| CTX-NIS2-P13 | `AUT-001` | PERTINENTE | mandatory | Privileged accounts and system administration accounts. | Implementing Regulation (EU) 2024/2690, Annex, point 11.3.2(a): “establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts” (NIS2-IR2690-11.3.2) | admitted |
+| CTX-NIS2-P12 | `ACC-010` | PERTINENTE | mandatory | Includes the access rights of privileged and system administration accounts, at planned intervals, with the results documented. | Implementing Regulation (EU) 2024/2690, Annex, point 11.2.3: “The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes.” (NIS2-IR2690-11.2.3) | not admitted |
+| CTX-NIS2-P13 | `GOV-016` | PERTINENTE | mandatory | Privileged accounts and system administration accounts. | Implementing Regulation (EU) 2024/2690, anexo, pontos 11.3.1, 11.3.2, al. a), e 11.4.1: “establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts” (NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1) | not admitted |
 | CTX-NIS2-P14 | `GOV-015` | — | mandatory | Vulnerability handling and disclosure, including vulnerabilities reported by external sources. | Directive (EU) 2022/2555, Article 21(2), point (e): “including vulnerability handling and disclosure” (NIS2-21-2-e) | not admitted |
 | CTX-NIS2-P15 | `GOV-015` | PERTINENTE | mandatory | The disclosure procedure follows the national coordinated vulnerability disclosure policy. | Implementing Regulation (EU) 2024/2690, Annex, point 6.10.2(e): “lay down a procedure for disclosing vulnerabilities in accordance with the applicable national coordinated vulnerability disclosure policy” (NIS2-IR2690-6.10.2) | not admitted |
 | CTX-NIS2-P16 | `OPS-016` | PERTINENTE | mandatory | Complete and accurate backups, including configuration data and data in cloud environments, stored in a safe location outside the system's network; integrity verified and recovery tested, at any level. | Implementing Regulation (EU) 2024/2690, anexo, pontos 4.2.1 a 4.2.3 e 4.2.6: “the relevant entities shall lay down backup plans” (NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6) | not admitted |
 | CTX-NIS2-P17 | `OPS-017` | PERTINENTE | mandatory | Recovery plan with activation and deactivation conditions and recovery order, also at L1. | Implementing Regulation (EU) 2024/2690, Annex, points 4.1.1 and 4.1.2: “The relevant entities’ operations shall be restored according to the business continuity and disaster recovery plan.” (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | not admitted |
+| CTX-NIS2-P18 | `GOV-014` | PERTINENTE | mandatory | Review at planned intervals of identities and of privileged and administration accounts on the supporting systems, with documented results. | Implementing Regulation (EU) 2024/2690, anexo, pontos 11.2.3, 11.3.3 e 11.5.4: “The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes.” (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4) | not admitted |
+| CTX-NIS2-P19 | `GOV-017` | PERTINENTE | mandatory | Granting, change, removal and documentation of access rights; unique identities, linked to a person and overseen; logging of identity management. | Implementing Regulation (EU) 2024/2690, Annex, points 11.2.1 and 11.5.1 a 11.5.3: “The relevant entities shall provide, modify, remove and document access rights to network and information systems in accordance with the access control policy referred to in point 11.1.” (NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3) | not admitted |
 
 ## Requirements added by the regime {#acrescentos}
 
@@ -113,6 +115,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-008` | Step-up for sensitive actions | — | ✔ | ✔ | — |
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
+| `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -122,7 +125,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ACC-007` | Validation of the access model | — | ✔ | ✔ | — |
 | `ACC-008` | Real-time revocation | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Attribute-based authorisation (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Periodic review of permissions | — | ✔ | ✔ | — |
+| `ACC-010` | Periodic review of permissions | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Logging of critical events | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Minimum attributes in logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protection of log integrity and access | ✔ | ✔ | ✔ | — |
@@ -370,8 +373,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-011` | Governance KPIs defined, collected and reported | — | ✔ | ✔ | — |
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
-| `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Periodic review of access to supporting systems (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
+| `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
 
 ## Requirement list — PERTINENTE {#lista-pertinente}
 
@@ -385,7 +390,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CLA-006` | Classification reassessment after a significant change event | ✔ | ✔ | ✔ | — |
 | `CLA-007` | Residual risk with formalised compensation, owner and TTL | — | ✔ | ✔ | — |
 | `CLA-008` | Application inventory kept up to date and accessible for audit | ✔ | ✔ | ✔ | — |
-| `AUT-001` | Mandatory MFA | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
+| `AUT-001` | Mandatory MFA | — | ✔ | ✔ | — |
 | `AUT-002` | Password policy | ✔ | ✔ | ✔ | — |
 | `AUT-003` | Brute-force protection | ✔ | ✔ | ✔ | — |
 | `AUT-004` | Active session revocation | ✔ | ✔ | ✔ | — |
@@ -395,6 +400,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `AUT-008` | Step-up for sensitive actions | — | ✔ | ✔ | — |
 | `AUT-009` | Re-authentication for critical changes | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alert on suspicious access | — | ✔ | ✔ | — |
+| `AUT-011` | No default credentials | ✔ | ✔ | ✔ | — |
 | `ACC-001` | RBAC access control | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Principle of least privilege | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Blocking and auditing of illegitimate access | ✔ | ✔ | ✔ | — |
@@ -652,8 +658,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-011` | Governance KPIs defined, collected and reported | — | ✔ | ✔ | — |
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
-| `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Periodic review of access to supporting systems (least privilege) | ▲ | ▲ | ▲ | CTX-NIS2-P18 |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
+| `GOV-016` | Privileged and administration accounts of supporting systems | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
+| `GOV-017` | Lifecycle of identities with access to systems | ▲ | ▲ | ▲ | CTX-NIS2-P19 |
 | `CTX-NIS2-R01` | At least partial redundancy | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
@@ -662,8 +670,8 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 68 |
-| Partial | 88 |
+| Covers | 79 |
+| Partial | 79 |
 | Supports evidence | 12 |
-| Gap | 14 |
+| Gap | 12 |
 | Out of scope | 38 |

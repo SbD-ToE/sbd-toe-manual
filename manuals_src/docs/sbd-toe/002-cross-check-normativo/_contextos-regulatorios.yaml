@@ -281,22 +281,22 @@ contextos:
         piso: {obrigatorio: true}
         ambito: {pt: "Inclui os direitos de acesso das contas privilegiadas e de administração do sistema, a intervalos planeados, com os resultados documentados.", en: "Includes the access rights of privileged and system administration accounts, at planned intervals, with the results documented."}
         base:
-          obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3]
-          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3 e 11.3.3"
+          obrigacoes: [NIS2-IR2690-11.2.3]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 11.2.3"
           citacao: {pt: "As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.", en: "The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes."}
         admite_justificacao: false
       - id: CTX-NIS2-P13
-        alvo: {tipo: requisito, alvo: AUT-001}
+        alvo: {tipo: requisito, alvo: GOV-016}
         grau: PERTINENTE
         niveis: null
         operador: elevar
         piso: {obrigatorio: true}
         ambito: {pt: "Contas privilegiadas e contas de administração do sistema.", en: "Privileged accounts and system administration accounts."}
         base:
-          obrigacoes: [NIS2-IR2690-11.3.2]
-          referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 11.3.2, al. a)"
+          obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 11.3.1, 11.3.2, al. a), e 11.4.1"
           citacao: {pt: "Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema", en: "establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts"}
-        admite_justificacao: true
+        admite_justificacao: false
       - id: CTX-NIS2-P14
         alvo: {tipo: requisito, alvo: GOV-015}
         grau: null
@@ -344,6 +344,30 @@ contextos:
           obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]
           referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1.1 e 4.1.2"
           citacao: {pt: "As operações das entidades pertinentes devem ser restabelecidas de acordo com o plano de continuidade das atividades e de recuperação de desastres.", en: "The relevant entities’ operations shall be restored according to the business continuity and disaster recovery plan."}
+        admite_justificacao: false
+      - id: CTX-NIS2-P18
+        alvo: {tipo: requisito, alvo: GOV-014}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Revisão a intervalos planeados das identidades e das contas privilegiadas e de administração nos sistemas de suporte, com resultados documentados.", en: "Review at planned intervals of identities and of privileged and administration accounts on the supporting systems, with documented results."}
+        base:
+          obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3, 11.3.3 e 11.5.4"
+          citacao: {pt: "As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.", en: "The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes."}
+        admite_justificacao: false
+      - id: CTX-NIS2-P19
+        alvo: {tipo: requisito, alvo: GOV-017}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Concessão, alteração, retirada e documentação dos direitos de acesso; identidades únicas, associadas a uma pessoa e supervisionadas; registo da gestão de identidades.", en: "Granting, change, removal and documentation of access rights; unique identities, linked to a person and overseen; logging of identity management."}
+        base:
+          obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.1 e 11.5.1 a 11.5.3"
+          citacao: {pt: "As entidades pertinentes concedem, alteram, retiram e documentam os direitos de acesso aos sistemas de rede e informação em conformidade com a política de controlo do acesso a que se refere o ponto 11.1.", en: "The relevant entities shall provide, modify, remove and document access rights to network and information systems in accordance with the access control policy referred to in point 11.1."}
         admite_justificacao: false
 
   - id: CTX-DORA
@@ -456,7 +480,7 @@ contextos:
         niveis: null
         operador: elevar
         piso: {obrigatorio: true}
-        ambito: {pt: "Autenticação forte no acesso remoto à rede da entidade, no acesso privilegiado, no acesso a activos de TIC que apoiem funções críticas ou importantes e a activos de TIC acessíveis ao público.", en: "Strong authentication for remote access to the entity's network, for privileged access, for access to ICT assets supporting critical or important functions and to ICT assets that are publicly accessible."}
+        ambito: {pt: "Autenticação forte dos utilizadores da aplicação no acesso a activos de TIC que apoiem funções críticas ou importantes e a activos de TIC acessíveis ao público (o acesso remoto e o privilegiado estão em CTX-DORA-P13).", en: "Strong authentication of the application's users for access to ICT assets supporting critical or important functions and to ICT assets that are publicly accessible (remote and privileged access are in CTX-DORA-P13)."}
         base:
           obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]
           referencia: "Reg. Delegado (UE) 2024/1774, art. 21.º, al. f), subal. ii); art. 33.º, al. d) (regime simplificado)"
@@ -529,6 +553,30 @@ contextos:
           obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]
           referencia: "Reg. (UE) 2022/2554, art. 12.º, n.º 6; Reg. Delegado (UE) 2024/1774, art. 39.º, n.º 2, al. d)"
           citacao: {pt: "Ao determinar o tempo de recuperação e os objetivos concretos de recuperação para cada função", en: "In determining the recovery time and recovery point objectives for each function"}
+        admite_justificacao: false
+      - id: CTX-DORA-P13
+        alvo: {tipo: requisito, alvo: GOV-016}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Autenticação forte no acesso remoto à rede da entidade e no acesso privilegiado; contas dedicadas às tarefas administrativas e gestão automatizada do acesso privilegiado (PAM) quando viável e adequado, em qualquer nível.", en: "Strong authentication for remote access to the entity's network and for privileged access; dedicated accounts for administrative tasks and automated privileged access management (PAM) where feasible and appropriate, at any level."}
+        base:
+          obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 21.º, als. e) e f), subal. ii), e art. 33.º, als. c) e d)"
+          citacao: {pt: "devem utilizar, sempre que possível, contas específicas para a execução de tarefas administrativas", en: "financial entities shall, where possible, use dedicated accounts for the performance of administrative tasks on ICT systems"}
+        admite_justificacao: false
+      - id: CTX-DORA-P14
+        alvo: {tipo: requisito, alvo: GOV-017}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Identificação e autenticação únicas de pessoas e sistemas; processo de gestão do ciclo de vida de identidades e contas, com soluções automatizadas sempre que possível e adequado; contas genéricas e partilhadas limitadas, em qualquer nível.", en: "Unique identification and authentication of persons and systems; lifecycle management process for identities and accounts, with automated solutions where possible and appropriate; generic and shared accounts limited, at any level."}
+        base:
+          obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 20.º, n.os 1 e 2, al. b), e art. 21.º, al. c)"
+          citacao: {pt: "Um processo de gestão do ciclo de vida das identidades e das contas", en: "a lifecycle management process for identities and accounts"}
         admite_justificacao: false
 
   - id: CTX-CRA
@@ -870,6 +918,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -877,6 +926,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: base}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -982,6 +1032,8 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-NIS2-P02], obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1002,6 +1054,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1235,6 +1288,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1254,6 +1309,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1513,6 +1569,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
     PERTINENTE:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1528,6 +1586,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1535,6 +1594,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3]}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -1638,10 +1698,10 @@ lista_ids:
         - {id: GOV-006, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P08], obrigacoes: [NIS2-IR2690-5.1.1]}
         - {id: GOV-007, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P09], obrigacoes: [NIS2-IR2690-5.1.1]}
         - {id: GOV-009, origem: base, cap: '14'}
-        - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-014, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P18], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4]}
         - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
-        - {id: AUT-001, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.2]}
-        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3]}
+        - {id: GOV-016, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]}
+        - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: LOG-004, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P03], obrigacoes: [NIS2-IR2690-3.2.4]}
         - {id: LOG-007, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P04], obrigacoes: [NIS2-IR2690-3.2.4]}
         - {id: IAC-007, origem: elevado, cap: '08', grau: PERTINENTE, pisos: [CTX-NIS2-P11], obrigacoes: [NIS2-IR2690-6.4.2]}
@@ -1659,7 +1719,7 @@ lista_ids:
         - {id: CLA-006, origem: base, cap: '01'}
         - {id: CLA-007, origem: base, cap: '01'}
         - {id: CLA-008, origem: base, cap: '01'}
-        - {id: AUT-001, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.2]}
+        - {id: AUT-001, origem: base}
         - {id: AUT-002, origem: base}
         - {id: AUT-003, origem: base}
         - {id: AUT-004, origem: base}
@@ -1669,6 +1729,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1677,7 +1738,7 @@ lista_ids:
         - {id: ACC-006, origem: base}
         - {id: ACC-007, origem: base}
         - {id: ACC-008, origem: base}
-        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3]}
+        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3]}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -1900,8 +1961,10 @@ lista_ids:
         - {id: GOV-010, origem: base, cap: '14'}
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
-        - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-014, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P18], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4]}
         - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
+        - {id: GOV-016, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]}
+        - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1912,7 +1975,7 @@ lista_ids:
         - {id: CLA-006, origem: base, cap: '01'}
         - {id: CLA-007, origem: base, cap: '01'}
         - {id: CLA-008, origem: base, cap: '01'}
-        - {id: AUT-001, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.2]}
+        - {id: AUT-001, origem: base}
         - {id: AUT-002, origem: base}
         - {id: AUT-003, origem: base}
         - {id: AUT-004, origem: base}
@@ -1922,6 +1985,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -1931,7 +1995,7 @@ lista_ids:
         - {id: ACC-007, origem: base}
         - {id: ACC-008, origem: base}
         - {id: ACC-009, origem: base}
-        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3]}
+        - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3]}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -2179,8 +2243,10 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
-        - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-014, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P18], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4]}
         - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
+        - {id: GOV-016, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]}
+        - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
   CTX-DORA:
     base:
@@ -2198,6 +2264,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2205,6 +2272,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: elevado, pisos: [CTX-DORA-P05], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -2310,8 +2378,9 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
-        - {id: ACC-010, origem: elevado, pisos: [CTX-DORA-P05], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-DORA-P02], obrigacoes: [DORA-17-1]}
@@ -2335,6 +2404,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2568,6 +2638,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -2588,6 +2660,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2847,6 +2920,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
     FCI:
       L1:
@@ -2863,6 +2938,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -2870,6 +2946,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: elevado, grau: FCI, pisos: [CTX-DORA-P05, CTX-DORA-P06], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -2975,8 +3052,9 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
-        - {id: ACC-010, origem: elevado, grau: FCI, pisos: [CTX-DORA-P05, CTX-DORA-P06], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-005, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P09], obrigacoes: [DORA-RTS1774-23-2-b]}
@@ -3002,6 +3080,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3235,6 +3314,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -3255,6 +3336,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3514,6 +3596,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
+        - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
   CTX-CRA:
     base:
@@ -3531,6 +3615,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3538,6 +3623,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: base}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -3643,6 +3729,8 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
         - {id: DEP-006, origem: elevado, cap: '05', pisos: [CTX-CRA-P03], obrigacoes: [CRA-13-5]}
         - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
@@ -3667,6 +3755,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -3900,6 +3989,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
         - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
         - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
@@ -3923,6 +4014,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4182,6 +4274,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
         - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
         - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
@@ -4202,6 +4296,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4209,6 +4304,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: base}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -4314,6 +4410,8 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
         - {id: THR-008, origem: elevado, cap: '03', pisos: [CTX-AIA-RE-P04], obrigacoes: [AIA-15-5]}
         - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05], obrigacoes: [AIA-15-5]}
         - {id: DEP-011, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P06], obrigacoes: [AIA-15-5]}
@@ -4340,6 +4438,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4573,6 +4672,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4592,6 +4693,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4851,6 +4953,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
     ART50:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -4866,6 +4970,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -4873,6 +4978,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: base}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -4978,6 +5084,8 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4997,6 +5105,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5230,6 +5339,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5249,6 +5360,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5508,6 +5620,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
   CTX-RGPD:
     base:
       L1:
@@ -5524,6 +5638,7 @@ lista_ids:
         - {id: AUT-005, origem: base}
         - {id: AUT-006, origem: base}
         - {id: AUT-009, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5531,6 +5646,7 @@ lista_ids:
         - {id: ACC-005, origem: base}
         - {id: ACC-006, origem: base}
         - {id: ACC-008, origem: base}
+        - {id: ACC-010, origem: base}
         - {id: LOG-001, origem: base}
         - {id: LOG-002, origem: base}
         - {id: LOG-003, origem: base}
@@ -5636,6 +5752,8 @@ lista_ids:
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5655,6 +5773,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -5888,6 +6007,8 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5907,6 +6028,7 @@ lista_ids:
         - {id: AUT-008, origem: base}
         - {id: AUT-009, origem: base}
         - {id: AUT-010, origem: base}
+        - {id: AUT-011, origem: base}
         - {id: ACC-001, origem: base}
         - {id: ACC-002, origem: base}
         - {id: ACC-003, origem: base}
@@ -6166,3 +6288,5 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: base, cap: '14'}
+        - {id: GOV-016, origem: base, cap: '14'}
+        - {id: GOV-017, origem: base, cap: '14'}

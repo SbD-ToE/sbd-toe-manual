@@ -56,12 +56,14 @@ A entidade é essencial ou importante nos termos do art. 3.º da Diretiva (UE) 2
 | CTX-NIS2-P09 | `GOV-007` | PERTINENTE | obrigatório | — | Reg. de Execução (UE) 2024/2690, anexo, ponto 5.1.1: «as entidades pertinentes estabelecem, executam e aplicam uma política de segurança da cadeia de abastecimento que reja as relações com os seus fornecedores e prestadores de serviços diretos» (NIS2-IR2690-5.1.1) | não admitida |
 | CTX-NIS2-P10 | `DPL-007` | PERTINENTE | obrigatório | Alterações testadas e avaliadas antes de aplicadas, incluindo alterações de emergência e de configuração. | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.4.2: «Os procedimentos devem assegurar que tais alterações são documentadas e, antes de serem aplicadas, são testadas e avaliadas tendo em conta o impacto potencial, com base na avaliação dos riscos realizada nos termos do ponto 2.1.» (NIS2-IR2690-6.4.2) | não admitida |
 | CTX-NIS2-P11 | `IAC-007` | PERTINENTE | obrigatório | — | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.4.2: «Os procedimentos devem assegurar que tais alterações são documentadas e, antes de serem aplicadas, são testadas e avaliadas tendo em conta o impacto potencial, com base na avaliação dos riscos realizada nos termos do ponto 2.1.» (NIS2-IR2690-6.4.2) | admitida |
-| CTX-NIS2-P12 | `ACC-010` | PERTINENTE | obrigatório | Inclui os direitos de acesso das contas privilegiadas e de administração do sistema, a intervalos planeados, com os resultados documentados. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3 e 11.3.3: «As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.» (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3) | não admitida |
-| CTX-NIS2-P13 | `AUT-001` | PERTINENTE | obrigatório | Contas privilegiadas e contas de administração do sistema. | Reg. de Execução (UE) 2024/2690, anexo, ponto 11.3.2, al. a): «Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema» (NIS2-IR2690-11.3.2) | admitida |
+| CTX-NIS2-P12 | `ACC-010` | PERTINENTE | obrigatório | Inclui os direitos de acesso das contas privilegiadas e de administração do sistema, a intervalos planeados, com os resultados documentados. | Reg. de Execução (UE) 2024/2690, anexo, ponto 11.2.3: «As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.» (NIS2-IR2690-11.2.3) | não admitida |
+| CTX-NIS2-P13 | `GOV-016` | PERTINENTE | obrigatório | Contas privilegiadas e contas de administração do sistema. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.3.1, 11.3.2, al. a), e 11.4.1: «Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema» (NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1) | não admitida |
 | CTX-NIS2-P14 | `GOV-015` | — | obrigatório | Tratamento e divulgação de vulnerabilidades, incluindo as comunicadas por fontes externas. | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. e): «incluindo o tratamento e a divulgação de vulnerabilidades» (NIS2-21-2-e) | não admitida |
 | CTX-NIS2-P15 | `GOV-015` | PERTINENTE | obrigatório | O procedimento de divulgação segue a política nacional de divulgação coordenada de vulnerabilidades. | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.10.2, al. e): «procedimento para a divulgação de vulnerabilidades em conformidade com a política nacional aplicável em matéria de divulgação coordenada de vulnerabilidades» (NIS2-IR2690-6.10.2) | não admitida |
 | CTX-NIS2-P16 | `OPS-016` | PERTINENTE | obrigatório | Cópias completas e exactas, incluindo dados de configuração e dados em nuvem, guardadas em local seguro fora da rede do sistema; integridade verificada e recuperação testada, em qualquer nível. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.1 a 4.2.3 e 4.2.6: «as entidades pertinentes estabelecem planos de reserva» (NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6) | não admitida |
 | CTX-NIS2-P17 | `OPS-017` | PERTINENTE | obrigatório | Plano de recuperação com condições de activação e desactivação e ordem de recuperação, também em L1. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1.1 e 4.1.2: «As operações das entidades pertinentes devem ser restabelecidas de acordo com o plano de continuidade das atividades e de recuperação de desastres.» (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | não admitida |
+| CTX-NIS2-P18 | `GOV-014` | PERTINENTE | obrigatório | Revisão a intervalos planeados das identidades e das contas privilegiadas e de administração nos sistemas de suporte, com resultados documentados. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3, 11.3.3 e 11.5.4: «As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.» (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4) | não admitida |
+| CTX-NIS2-P19 | `GOV-017` | PERTINENTE | obrigatório | Concessão, alteração, retirada e documentação dos direitos de acesso; identidades únicas, associadas a uma pessoa e supervisionadas; registo da gestão de identidades. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.1 e 11.5.1 a 11.5.3: «As entidades pertinentes concedem, alteram, retiram e documentam os direitos de acesso aos sistemas de rede e informação em conformidade com a política de controlo do acesso a que se refere o ponto 11.1.» (NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3) | não admitida |
 
 ## Requisitos acrescentados pelo regime {#acrescentos}
 
@@ -99,6 +101,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -108,7 +111,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ACC-007` | Validação do modelo de acesso | — | ✔ | ✔ | — |
 | `ACC-008` | Revogação em tempo real | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Autorização baseada em atributos (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Revisão periódica de permissões | — | ✔ | ✔ | — |
+| `ACC-010` | Revisão periódica de permissões | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Registo de eventos críticos | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Atributos mínimos em logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protecção de integridade e acesso aos logs | ✔ | ✔ | ✔ | — |
@@ -356,8 +359,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
 
 ## Lista de requisitos — PERTINENTE {#lista-pertinente}
 
@@ -371,7 +376,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CLA-006` | Reavaliação de classificação após evento de mudança significativa | ✔ | ✔ | ✔ | — |
 | `CLA-007` | Risco residual com compensação formalizada, owner e TTL | — | ✔ | ✔ | — |
 | `CLA-008` | Inventário de aplicações actualizado e acessível para auditoria | ✔ | ✔ | ✔ | — |
-| `AUT-001` | MFA obrigatório | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
+| `AUT-001` | MFA obrigatório | — | ✔ | ✔ | — |
 | `AUT-002` | Política de passwords | ✔ | ✔ | ✔ | — |
 | `AUT-003` | Protecção contra brute force | ✔ | ✔ | ✔ | — |
 | `AUT-004` | Revogação activa de sessões | ✔ | ✔ | ✔ | — |
@@ -381,6 +386,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -638,8 +644,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ▲ | ▲ | ▲ | CTX-NIS2-P18 |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-NIS2-P19 |
 | `CTX-NIS2-R01` | Redundância pelo menos parcial | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
@@ -648,8 +656,8 @@ Contagem das obrigações da matriz `_matriz/nis2.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 68 |
-| Parcial | 88 |
+| Cobre | 79 |
+| Parcial | 79 |
 | Apoia evidência | 12 |
-| Lacuna | 14 |
+| Lacuna | 12 |
 | Fora de âmbito | 38 |

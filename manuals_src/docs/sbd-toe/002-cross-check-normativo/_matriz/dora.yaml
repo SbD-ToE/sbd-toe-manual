@@ -1641,7 +1641,7 @@ itens:
       en: Principle of least privilege
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -12045,8 +12045,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 20.º, n.º 1
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-004
@@ -12074,9 +12076,15 @@ itens:
     citacao:
       pt: Sem contas partilhadas nem *tokens* pessoais *long-lived* para escrita
       en: No shared accounts or *long-lived* personal *tokens* for writing
-  falta:
-    pt: Política de gestão de identidade única para pessoas e sistemas (identidades de máquina).
-    en: Single identity management policy for people and systems (machine identities).
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Cada identidade com acesso aos sistemas da aplicação é única e associada a uma pessoa
+      en: Each identity with access to the application's systems is unique and associated with a person
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12123,8 +12131,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 20.º, n.º 2, al. b) e terceiro parágrafo
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-008
@@ -12149,11 +12159,25 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
-  falta:
-    pt: Ciclo de vida automatizado de identidades de colaboradores internos.
-    en: Automated identity lifecycle for internal staff.
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: concessão, alteração e retirada de acessos registadas (entrada, mudança de função, saída)
+      en: granting, change and removal of access recorded (joining, change of role, leaving)
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L3, provisionamento automatizado e reconciliação periódica entre identidades e pessoas
+      en: at L3, automated provisioning and periodic reconciliation between identities and people
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12236,8 +12260,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 21.º, al. c)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-004
@@ -12257,9 +12283,23 @@ itens:
     citacao:
       pt: Sem contas partilhadas nem *tokens* pessoais *long-lived* para escrita
       en: No shared accounts or *long-lived* personal *tokens* for writing
-  falta:
-    pt: Limitação geral de contas genéricas/partilhadas.
-    en: General limitation of generic/shared accounts.
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Cada identidade com acesso aos sistemas da aplicação é única e associada a uma pessoa
+      en: Each identity with access to the application's systems is unique and associated with a person
+  - tipo: requisito
+    alvo: GOV-017
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: identidades partilhadas só por necessidade documentada e aprovada
+      en: shared identities only by documented and approved need
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12310,8 +12350,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 21.º, al. e), subals. i) a iii)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-008
@@ -12330,9 +12372,23 @@ itens:
     citacao:
       pt: Prazo máximo para revogação de acessos
       en: Maximum deadline for access revocation
-  falta:
-    pt: Acesso privilegiado/emergência atribuído ad hoc (JIT) e contas de administrador genéricas.
-    en: Privileged/emergency access assigned ad hoc (JIT) and generic administrator accounts.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Acesso privilegiado e de administração aos sistemas que suportam a aplicação
+      en: Privileged and administrative access to the systems that support the application
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: acesso de emergência (*break-glass*) registado e revisto
+      en: emergency access (*break-glass*) logged and reviewed
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12344,8 +12400,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 21.º, al. e), subal. ii), e parágrafo 'Para efeitos da alínea e), subalínea ii)'
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-004
@@ -12355,9 +12413,23 @@ itens:
     citacao:
       pt: Perfis de utilizador, administrador e serviço são distintos
       en: User, administrator and service profiles are distinct
-  falta:
-    pt: Solução PAM automatizada.
-    en: Automated PAM solution.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L1, contas dedicadas, autenticação multifator e registo das acções
+      en: at L1, dedicated accounts, multi-factor authentication and logging of actions
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L3, também gestão de acessos privilegiados automatizada (PAM) e registo das sessões privilegiadas
+      en: at L3, also automated privileged access management (PAM) and logging of privileged sessions
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12369,14 +12441,14 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 21.º, al. e), subal. iv)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-DORA
     grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -12388,11 +12460,25 @@ itens:
     ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
     ancora: catálogo-gov---governação-e-contratação
     citacao:
-      pt: semestral em L1, trimestral em L2/L3
-      en: half-yearly at L1, quarterly at L2/L3
-  falta:
-    pt: Recertificação de acessos pelo menos anual (todos os sistemas) e semestral (sistemas de FCI).
-    en: Access recertification at least annually (all systems) and half-yearly (FCI systems).
+      pt: o de contractors activos semestralmente em L1 e trimestralmente em L2/L3
+      en: that of active contractors half-yearly at L1 and quarterly at L2/L3
+  - tipo: requisito
+    alvo: ACC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: 'cadência mínima (escolha do Manual): anual em L1, semestral em L2, trimestral em L3'
+      en: 'minimum cadence (the Manual''s choice): annual at L1, half-yearly at L2, quarterly at L3'
+  - tipo: requisito
+    alvo: GOV-014
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: o das identidades internas pelo menos anualmente em L1, semestralmente em L2 e trimestralmente em L3; o das contas privilegiadas e de administração trimestralmente em todos os níveis
+      en: that of internal identities at least annually at L1, half-yearly at L2 and quarterly at L3; that of privileged and administration accounts quarterly at all levels
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -12445,7 +12531,7 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 21.º, al. f), subal. ii)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-DORA
     grau: null
@@ -12467,9 +12553,15 @@ itens:
     citacao:
       pt: MFA para staging e produção
       en: MFA for staging and production
-  falta:
-    pt: MFA para acesso remoto à rede e para ativos que apoiem FCI classificados L1.
-    en: MFA for remote network access and for assets supporting FCI classified L1.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L1, contas dedicadas, autenticação multifator e registo das acções
+      en: at L1, dedicated accounts, multi-factor authentication and logging of actions
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -13930,7 +14022,7 @@ itens:
       en: RBAC access control
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -14012,8 +14104,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 33.º, al. c) e segundo parágrafo
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ACC-004
@@ -14032,9 +14126,15 @@ itens:
     citacao:
       pt: Os seguintes eventos de segurança devem ser sempre registados, independentemente do nível de criticidade da aplicação
       en: The following security events must always be recorded, regardless of the application's criticality level
-  falta:
-    pt: Atribuição pontual (ad hoc) de acesso privilegiado/emergência.
-    en: Ad hoc assignment of privileged/emergency access.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: acesso de emergência (*break-glass*) registado e revisto
+      en: emergency access (*break-glass*) logged and reviewed
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -14046,7 +14146,7 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 33.º, al. d) e terceiro parágrafo
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-DORA
     grau: null
@@ -14068,9 +14168,15 @@ itens:
     citacao:
       pt: MFA para staging e produção
       en: MFA for staging and production
-  falta:
-    pt: Autenticação forte para ativos de FCI publicamente disponíveis classificados L1 e acesso remoto.
-    en: Strong authentication for publicly available FCI assets classified L1 and remote access.
+  - tipo: requisito
+    alvo: GOV-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: em L1, contas dedicadas, autenticação multifator e registo das acções
+      en: at L1, dedicated accounts, multi-factor authentication and logging of actions
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -14084,12 +14190,12 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 33.º, al. e)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:
@@ -14103,9 +14209,15 @@ itens:
     citacao:
       pt: Revogação em tempo real
       en: Real-time revocation
-  falta:
-    pt: Revisão periódica de direitos em L1.
-    en: Periodic review of rights at L1.
+  - tipo: requisito
+    alvo: ACC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: 'cadência mínima (escolha do Manual): anual em L1, semestral em L2, trimestral em L3'
+      en: 'minimum cadence (the Manual''s choice): annual at L1, half-yearly at L2, quarterly at L3'
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:

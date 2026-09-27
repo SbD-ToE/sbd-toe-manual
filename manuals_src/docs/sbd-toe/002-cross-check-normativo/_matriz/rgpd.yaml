@@ -2291,7 +2291,7 @@ itens:
       en: Accounts without unnecessary permissions
   - tipo: requisito
     alvo: ACC-010
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: acc
     citacao:

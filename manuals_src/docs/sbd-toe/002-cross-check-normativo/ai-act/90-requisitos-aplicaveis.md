@@ -83,6 +83,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -92,7 +93,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ACC-007` | Validação do modelo de acesso | — | ✔ | ✔ | — |
 | `ACC-008` | Revogação em tempo real | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Autorização baseada em atributos (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Revisão periódica de permissões | — | ✔ | ✔ | — |
+| `ACC-010` | Revisão periódica de permissões | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Registo de eventos críticos | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Atributos mínimos em logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protecção de integridade e acesso aos logs | ✔ | ✔ | ✔ | — |
@@ -340,8 +341,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
 
 ## Lista de requisitos — ART50 {#lista-art50}
 
@@ -365,6 +368,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
 | `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
 | `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
 | `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
 | `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
 | `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
@@ -374,7 +378,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ACC-007` | Validação do modelo de acesso | — | ✔ | ✔ | — |
 | `ACC-008` | Revogação em tempo real | ✔ | ✔ | ✔ | — |
 | `ACC-009` | Autorização baseada em atributos (ABAC) | — | — | ✔ | — |
-| `ACC-010` | Revisão periódica de permissões | — | ✔ | ✔ | — |
+| `ACC-010` | Revisão periódica de permissões | ✔ | ✔ | ✔ | — |
 | `LOG-001` | Registo de eventos críticos | ✔ | ✔ | ✔ | — |
 | `LOG-002` | Atributos mínimos em logs | ✔ | ✔ | ✔ | — |
 | `LOG-003` | Protecção de integridade e acesso aos logs | ✔ | ✔ | ✔ | — |
@@ -622,8 +626,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
-| `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 

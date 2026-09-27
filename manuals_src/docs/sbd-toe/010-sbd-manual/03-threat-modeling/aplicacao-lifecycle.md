@@ -202,7 +202,7 @@ Como **AppSec Engineer** e **GRC/Compliance**, quero documentar e aprovar formal
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Aceitação informal |
+| L1 | Sim (quando exista risco aceite) | Registo simples e referenciável da aceitação (ticket ou nota), com quem pediu, avaliou e aprovou |
 | L2 | Sim | Documentação formal |
 | L3 | Sim | Documentação formal + mitigação compensatória |
 

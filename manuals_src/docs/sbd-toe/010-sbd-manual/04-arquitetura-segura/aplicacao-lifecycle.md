@@ -125,7 +125,7 @@ Como **Arquitetos de Software**, quero produzir uma ficha de arquitetura com con
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Ficha simplificada e controlos essenciais |
+| L1 | Sim | Ficha simplificada: zonas de confiança, exposição externa justificada, isolamento de domínios sensíveis e controlos nas fronteiras |
 | L2 | Sim | Ficha detalhada + rastreabilidade mínima |
 | L3 | Sim | Ficha completa + revisão independente + evidência reforçada |
 
@@ -253,7 +253,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero rever trust boundaries 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Âmbito reduzido (integrações críticas) |
+| L1 | Sim | Todas as fronteiras de confiança identificadas, com controlos explícitos em cada uma; revisão aprofundada focada nas integrações críticas |
 | L2 | Sim | Âmbito completo |
 | L3 | Sim | Âmbito completo + validações reforçadas (conforme risco) |
 
@@ -881,7 +881,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero aplicar padrões ar
 
 | Nível | Aplicação de práticas de Arquitetura Segura |
 |---|---|
-| L1 | Princípios mínimos; decisões (ADR) apenas para alto impacto; integrações críticas; gate simplificado quando aplicável; triggers mínimos |
+| L1 | Zonas de confiança, exposição externa justificada, isolamento de domínios sensíveis e controlos nas fronteiras (ficha simplificada); diagramas versionados; princípios mínimos; decisões (ADR) apenas para alto impacto; gate simplificado quando aplicável; triggers mínimos |
 | L2 | Princípios completos; ficha detalhada; revisão formal; ADR para decisões significativas; exceções formais; validações automatizáveis quando aplicável; sincronização com threat modeling |
 | L3 | Cobertura integral; segregação de funções; evidência reforçada; governação formal; gates rigorosos; revisão independente quando aplicável; disciplina de “arquitetura viva” |
 

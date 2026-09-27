@@ -99,7 +99,7 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | Subconjunto essencial |
+| L1 | Sim | Subconjunto essencial |
 | L2 | Sim | Catálogo completo aplicável a L2 |
 | L3 | Sim | Catálogo completo aplicável a L3 + reforços |
 
@@ -180,7 +180,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 > **Referência:** Esta user story especializa o processo organizacional de exceções (Cap. 14) para o contexto de requisitos. TTL, alçadas de aprovação e revalidação devem seguir a política master definida nesse capítulo.
 
 **Proporcionalidade.**
-- L1: processo simplificado; L2: formalização obrigatória; L3: formal + mitigação exigida
+- L1: processo simplificado, com registo formal obrigatório (justificação, compensação, aprovador e prazo); L2: formalização obrigatória; L3: formal + mitigação exigida
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -221,7 +221,7 @@ Como **QA**, quero garantir que todos os requisitos aplicados têm rastreabilida
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | Apenas requisitos críticos |
+| L1 | Sim | Requisitos aplicáveis marcados e rastreáveis no backlog |
 | L2 | Sim | Cobertura total dos requisitos selecionados |
 | L3 | Sim | Cobertura total + rastreabilidade reforçada |
 
@@ -307,7 +307,7 @@ Como **QA**, quero garantir que os requisitos aplicáveis têm validação assoc
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | Validação básica dos requisitos críticos |
+| L1 | Sim | Validação básica dos requisitos críticos |
 | L2 | Sim | Cobertura integral dos requisitos selecionados |
 | L3 | Sim | Cobertura integral + revisão independente |
 
@@ -350,7 +350,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Recomendado | Revisão simplificada |
+| L1 | Sim | Revisão simplificada, documentada e com responsável identificado |
 | L2 | Sim | Revisão formal |
 | L3 | Sim | Revisão formal + mitigação exigida |
 
@@ -862,8 +862,8 @@ Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compar
 | Prática                    | L1 (baixo risco)               | L2 (médio risco)                          | L3 (alto risco)                                      |
 | -------------------------- | ------------------------------ | ----------------------------------------- | ---------------------------------------------------- |
 | Catálogo de requisitos     | Subconjunto essencial          | Catálogo completo aplicável a L2          | Catálogo completo aplicável a L3 + reforços relevantes |
-| Rastreabilidade (tags)     | Recomendado                    | Obrigatória nos cartões de segurança      | Obrigatória em cartões técnicos e funcionais          |
-| Exceções                   | Simplificado                   | Documentadas e aprovadas                  | Formalizadas com TTL curto e mitigação                |
+| Rastreabilidade (tags)     | Obrigatória nos requisitos aplicáveis | Obrigatória nos cartões de segurança      | Obrigatória em cartões técnicos e funcionais          |
+| Exceções                   | Simplificado, com registo formal | Documentadas e aprovadas                  | Formalizadas com TTL curto e mitigação                |
 | Validação de requisitos    | Revisão/validação básica        | Testes associados e evidência             | Testes + evidência + revisão independente             |
 | Reavaliação por alterações | A pedido                        | A cada alteração crítica                   | Sempre que há mudança de exposição/arquitetura/controlo |
 

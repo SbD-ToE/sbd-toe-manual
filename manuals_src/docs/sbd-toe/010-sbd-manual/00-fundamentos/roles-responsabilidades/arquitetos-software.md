@@ -27,7 +27,7 @@ O trabalho dos arquitetos suporta princípios de *security by design* previstos 
 ## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Concretizam:
-- **GDPR** e **AI Act**: *Security by design* e *privacy by design*
+- **GDPR** (proteção de dados desde a conceção, art. 25.º) e **AI Act** (sistemas de IA de risco elevado «concebidos e desenvolvidos de maneira que alcancem um nível apropriado de exatidão, solidez e cibersegurança», art. 15.º, n.º 1)
 - **NIS2**: Medidas técnicas estruturais adequadas
 
 ---

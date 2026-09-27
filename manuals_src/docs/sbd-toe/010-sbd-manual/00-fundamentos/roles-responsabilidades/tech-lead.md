@@ -29,7 +29,7 @@ A aprovação proporcional ao risco concretiza a **responsabilização** que NIS
 
 Suporta:
 - **NIS2** e **DORA**: Decisão técnica atribuída, registada e proporcional ao risco
-- **AI Act**: Supervisão humana do código e das ações de agentes AI
+- **AI Act**: Supervisão humana (art. 14.º, para sistemas de IA de risco elevado); no SbD-ToE estendida ao código e às ações de agentes AI (escolha do Manual)
 
 ---
 

@@ -173,14 +173,14 @@ O processo descrito serve em simultâneo várias obrigações regulatórias. Map
 | **AI Act** | Art. 10 (dados / governação) | Paragem 7 (AI BOM) |
 | **AI Act** | Art. 11 + Anexo IV (doc técnica) | Paragens 4, 7 |
 | **AI Act** | Art. 12 + Art. 19 (logging) | Paragem 10 |
-| **AI Act** | Art. 13 (transparência aos *deployers*) | Paragem 4 (mandate como fonte) |
+| **AI Act** | Art. 13 (transparência e prestação de informações aos responsáveis pela implantação) | Paragem 4 (mandate como fonte) |
 | **AI Act** | **Art. 14 (supervisão humana)** ⚡ | Paragens 1, 3, 4 (camada agentic colmata gap histórico) |
-| **AI Act** | Art. 15 (robustez / cybersec) | Paragens 2, 3, 8, 10 |
+| **AI Act** | Art. 15 (exatidão, solidez e cibersegurança) | Paragens 2, 3, 8, 10 |
 | **AI Act** | Art. 17 (QMS) | Todo o processo (Policy 38 + Policy 39 dão *ciclos formais*) |
-| **AI Act** | Art. 25 (cadeia de fornecimento) | Paragem 7 |
-| **AI Act** | Art. 26 (deployer) | Paragem 4 (mandate de deployer) + Paragem 10 |
+| **AI Act** | Art. 25 (responsabilidades ao longo da cadeia de valor da IA) | Paragem 7 |
+| **AI Act** | Art. 26 (responsáveis pela implantação) | Paragem 4 (mandate do responsável pela implantação) + Paragem 10 |
 | **AI Act** | Art. 53 / 55 (GPAI) | Paragens 7, 8, 10 |
-| **AI Act** | Art. 72 (pós-mercado) | Paragem 10 |
+| **AI Act** | Art. 72 (acompanhamento pós-comercialização) | Paragem 10 |
 | **AI Act** | Art. 73 (incidentes graves) | Paragens 10, 11 |
 | **NIS2** | Art. 21 (medidas de gestão de risco) | Paragens 1, 2, 3, 10 |
 | **NIS2** | Art. 23 (notificação de incidentes) | Paragem 10 + Policy 30 §9.3 |

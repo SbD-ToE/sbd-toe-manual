@@ -205,7 +205,7 @@ Este template estrutura sistemas de tickets de incidentes:
 - [ ] NIS2: notificação de incidente ≤ 72 h; relatório final ≤ 1 mês após a notificação
 - [ ] DORA: relatório intercalar e final nos prazos do Reg. Delegado (UE) 2025/301, art. 5.º
 - [ ] CRA: notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave)
-- [ ] AI Act: incidente grave ≤ 15 dias (10 em caso de morte; 2 em caso de infração generalizada) - art. 73.º
+- [ ] AI Act: incidente grave ≤ 15 dias (10 em caso de morte; 2 em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b)), a contar do conhecimento pelo prestador ou, se for caso disso, pelo responsável pela implantação - art. 73.º, n.os 2 a 4
 - [ ] Post-mortem ≤ 5 dias úteis após a resolução (Política 32 §4.6)
 - [ ] Arquivo conforme a Política 06 §10 (1 ano em L1/L2, 3 anos em L3; audit trail)
 

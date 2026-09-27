@@ -251,4 +251,4 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | NIS2 - Art. 21 | Cybersecurity training obligations |
 | ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |
 | ISO/IEC 42001:2023 | AI Management System — workforce competence |
-| EU AI Act (Reg. (UE) 2024/1689) - Art. 4 (AI literacy) | Obrigação geral de literacia em AI |
+| EU AI Act (Reg. (UE) 2024/1689) - Art. 4 (literacia no domínio da IA), na redação do Reg. (UE) 2026/1744 | Prestadores e responsáveis pela implantação «adotam medidas para promover a literacia no domínio da IA» do seu pessoal, sem obrigação de garantir «qualquer nível específico de literacia»; a formação obrigatória do §11 é escolha do Manual |

@@ -188,7 +188,7 @@ Sem `risk level` correcto, o MCP devolve um conjunto de controlos desnecessariam
 |---|---|
 | Aplicação **interna**, sem dados sensíveis, sem expor APIs públicas | `L1` |
 | **APIs públicas** ou tratamento de **dados de utilizador** não-sensíveis | `L2` |
-| **PII** (RGPD), saúde, financeira, sistema **regulado** (DORA, NIS2, AI Act high-risk) | `L3` |
+| **PII** (RGPD), saúde, financeira, sistema **regulado** (DORA, NIS2, AI Act — risco elevado) | `L3` |
 
 A decisão do nível segue o método do cap. 01 — nenhuma tool a toma pelo projeto. A tool `map_sbd_toe_applicability` exige `riskLevel` e aceita `technologies`, `hasPersonalData`, `isPublicFacing` e `projectRole`: não decide o nível, mas mostra o efeito de cada nível no projeto, o que ajuda a comparar as alternativas quando há dúvida.
 

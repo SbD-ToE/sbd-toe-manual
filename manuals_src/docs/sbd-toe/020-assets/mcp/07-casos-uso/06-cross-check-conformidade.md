@@ -53,8 +53,8 @@ Se os top-ranked records apontam a `002-cross-check-normativo/<framework>/...` �
 ### 1. Identificar a obrigação regulatória {#1-identificar-a-obrigação-regulatória}
 
 Da fonte primária (EUR-Lex / texto do regulamento), extrair:
-- Artigo (ex.: AI Act Art. 15 — *accuracy, robustness and cybersecurity*)
-- Conceitos-chave (ex.: *adversarial examples*, *model evasion*, *data poisoning*)
+- Artigo (ex.: AI Act Art. 15 — «Exatidão, solidez e cibersegurança»)
+- Conceitos-chave (ex.: «exemplos antagónicos ou evasão de modelos», «contaminação de dados» — art. 15.º, n.º 5)
 
 ### 2. Localizar a resposta {#2-localizar-a-resposta}
 
@@ -125,7 +125,7 @@ O cross-check **mostra como o manual responde** ao regulamento — **não** decl
 
 - **Evidência operacional** (logs, attestations, audit reports)
 - **Decisão do *legal counsel*** ou DPO/CISO
-- **Avaliação externa** quando a regulação assim o exige (ex.: AI Act high-risk Art. 43)
+- **Avaliação externa** quando a regulação assim o exige (ex.: AI Act, art. 43.º, nos casos em que o procedimento de avaliação da conformidade envolve um organismo notificado — anexo VII; os sistemas do anexo III, pontos 2 a 8, seguem o controlo interno do anexo VI — art. 43.º, n.º 2)
 
 Marcar **sempre** o relatório como *"cross-check técnico — não declaração de conformidade"*.
 

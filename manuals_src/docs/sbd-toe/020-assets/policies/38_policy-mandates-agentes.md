@@ -204,4 +204,4 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 | NIST SP 800-207 | Zero Trust — agente como *principal* não-humano |
 | NIST SP 800-218A | SSDF Profile for GenAI |
 | ISO/IEC 42001:2023 | AI Management System — ciclo de vida, ownership, revisão |
-| EU AI Act (Reg. (UE) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obrigações de *deployers*) — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |
+| EU AI Act (Reg. (UE) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obrigações dos responsáveis pela implantação de sistemas de IA de risco elevado) — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |

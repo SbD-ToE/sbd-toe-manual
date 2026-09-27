@@ -1,7 +1,7 @@
 ---
 id: convergencia-cra
 title: Nota - Convergência AI Act & CRA
-description: Orientação para produtos que são simultaneamente sistema de IA de alto risco (AI Act) e produto com elementos digitais (CRA) - presunção de conformidade do Art. 12 do CRA e avaliação de conformidade única no eixo cibersegurança
+description: Orientação para produtos que são simultaneamente sistema de IA de risco elevado (AI Act) e produto com elementos digitais (CRA) - presunção de conformidade do Art. 12 do CRA e avaliação de conformidade única no eixo cibersegurança
 sidebar_position: 3
 tags: [ai-act, cra, convergencia, presuncao-conformidade, ciberseguranca]
 ---
@@ -10,13 +10,13 @@ tags: [ai-act, cra, convergencia, presuncao-conformidade, ciberseguranca]
 
 ## Âmbito {#âmbito}
 
-Esta nota destina-se a fabricantes de **produtos com elementos digitais** que são, em simultâneo, **sistemas de IA de alto risco** (AI Act, Art. 6) e produtos abrangidos pelo **Cyber Resilience Act** (Regulamento (UE) 2024/2847). Ao contrário da relação NIS2 ↔ DORA - dois regimes de gestão de risco organizacional resolvidos por *lex specialis* -, aqui a relação é de **presunção de conformidade** e **avaliação de conformidade única** no eixo da cibersegurança.
+Esta nota destina-se a fabricantes de **produtos com elementos digitais** que são, em simultâneo, **sistemas de IA de risco elevado** (AI Act, Art. 6) e produtos abrangidos pelo **Cyber Resilience Act** (Regulamento (UE) 2024/2847). Ao contrário da relação NIS2 ↔ DORA - dois regimes de gestão de risco organizacional resolvidos por *lex specialis* -, aqui a relação é de **presunção de conformidade** e **avaliação de conformidade única** no eixo da cibersegurança.
 
 Os dois regulamentos aplicam-se **cumulativamente**, mas o legislador construiu uma ponte explícita no plano técnico da cibersegurança para evitar trabalho em duplicado.
 
 ## A relação não é *lex specialis* - é presunção de conformidade {#a-relação-não-é-lex-specialis---é-presunção-de-conformidade}
 
-O **Art. 12 do CRA** estabelece que um produto classificado como sistema de IA de alto risco ao abrigo do Art. 6 do AI Act é **presumido conforme com os requisitos de cibersegurança do Art. 15 do AI Act** quando se verifiquem, cumulativamente, três condições:
+O **Art. 12 do CRA** — regra que o AI Act passou a espelhar no art. 42.º, n.º 3, aditado pelo Reg. (UE) 2026/1744 — estabelece que um produto classificado como sistema de IA de risco elevado ao abrigo do Art. 6 do AI Act é **considerado conforme com os requisitos de cibersegurança do Art. 15 do AI Act** quando se verifiquem, cumulativamente, três condições:
 
 | Condição (CRA Art. 12) | O que exige | Onde o SbD-ToE entra |
 |---|---|---|
@@ -28,9 +28,9 @@ Verificadas as três, **não é necessário demonstrar separadamente** o Art. 15
 
 ## Avaliação de conformidade única {#avaliação-de-conformidade-única}
 
-O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de conformidade do Art. 43 do AI Act**. Além disso, os **organismos notificados** competentes para o sistema de IA de alto risco ao abrigo do AI Act são também competentes para controlar a conformidade com o Anexo I do CRA (sujeito ao Art. 39 do CRA). Resultado prático: **uma avaliação, um organismo, uma declaração** - cobrindo o eixo cibersegurança de ambos os regulamentos.
+O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de conformidade do Art. 43 do AI Act**. Além disso, os **organismos notificados** competentes para o sistema de IA de risco elevado ao abrigo do AI Act são também competentes para controlar a conformidade com o Anexo I do CRA (sujeito ao Art. 39 do CRA). Resultado prático: **uma avaliação, uma declaração** (e um só organismo notificado quando o procedimento do Art. 43 o prevê; para os sistemas do anexo III, pontos 2 a 8, o procedimento é o controlo interno do anexo VI, sem organismo notificado — art. 43.º, n.º 2) - cobrindo o eixo cibersegurança de ambos os regulamentos.
 
-> ⚖️ **Derrogação.** Os produtos importantes (CRA, Anexo III) e críticos (Anexo IV) que sejam sistemas de IA de alto risco sujeitos ao controlo interno do Anexo VI do AI Act ficam sujeitos, quanto aos requisitos essenciais de cibersegurança, aos procedimentos de avaliação da conformidade do CRA (art. 12.º, n.º 3). A determinação do procedimento é matéria de compliance/jurídico. A escolha do procedimento é matéria de compliance/jurídico.
+> ⚖️ **Derrogação.** Os produtos importantes (CRA, Anexo III) e críticos (Anexo IV) que sejam sistemas de IA de risco elevado sujeitos ao controlo interno do Anexo VI do AI Act ficam sujeitos, quanto aos requisitos essenciais de cibersegurança, aos procedimentos de avaliação da conformidade do CRA (art. 12.º, n.º 3). A determinação do procedimento é matéria de compliance/jurídico.
 
 ## Onde os âmbitos se cruzam e onde divergem {#onde-os-âmbitos-se-cruzam-e-onde-divergem}
 
@@ -45,7 +45,7 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 
 ## O que continua próprio de cada regulamento {#o-que-continua-próprio-de-cada-regulamento}
 
-**Só o AI Act** (não coberto pela presunção do CRA): gestão de risco (Art. 9), governação de dados e enviesamento (Art. 10), supervisão humana (Art. 14), transparência (Art. 13 e 50), avaliação de impacto sobre direitos fundamentais (Art. 27) e as obrigações GPAI (Art. 53/55). A presunção do Art. 12 do CRA **cobre apenas o Art. 15** (cibersegurança) - todas as restantes obrigações de alto risco do AI Act mantêm-se integralmente.
+**Só o AI Act** (não coberto pela presunção do CRA): gestão de risco (Art. 9), governação de dados e enviesamento (Art. 10), supervisão humana (Art. 14), transparência (Art. 13 e 50), avaliação de impacto sobre direitos fundamentais (Art. 27) e as obrigações GPAI (Art. 53/55). A presunção do Art. 12 do CRA **cobre apenas o Art. 15** (cibersegurança) - todas as restantes obrigações aplicáveis aos sistemas de IA de risco elevado no AI Act mantêm-se integralmente.
 
 **Só o CRA**: tratamento de vulnerabilidades ao longo de todo o ciclo de vida (Anexo I, Parte II), divulgação coordenada de vulnerabilidades, obrigação de atualizações de segurança e período de suporte, e o reporte de vulnerabilidades ativamente exploradas à CSIRT designada como coordenadora e à ENISA (Art. 14).
 
@@ -66,16 +66,16 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 2. **Processo único de tratamento de vulnerabilidades** ([Cap. 05 `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Policy 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) conforme o Anexo I (Parte II) do CRA — serve também de evidência para a vertente de cibersegurança do Art. 15 (a exatidão e a solidez do Art. 15 ficam fora da presunção do art. 12.º do CRA e têm de ser demonstradas autonomamente), incluindo a resposta a incidentes *upstream* em supply chain AI (`AML.T0019`, `AML.T0109`, `AML.T0110`).
 3. **SBOM + AI BOM único** ([Cap. 05 `DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) em formato CycloneDX 1.6 *ml-bom*, [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) a alimentar ambos os regulamentos — satisfaz o CRA Anexo I Parte II(1) (SBOM) e serve de evidência para o AI Act Art. 10.º, n.º 2, alínea b) (origem dos dados) e para o Art. 11.º/Anexo IV (descrição dos componentes e ferramentas de terceiros).
 4. **Declaração UE de conformidade** que demonstra o nível de cibersegurança do Art. 15, acionando a presunção do Art. 12 do CRA. Cláusulas contratuais com *providers* AI (Cap. 14 US-21 + Policy 33 §10) declaram conformidade Art. 53/55 quando GPAI.
-5. **Avaliação de conformidade única** pelo organismo notificado AI Act (Art. 43), estendida ao Anexo I do CRA.
+5. **Avaliação de conformidade única** pelo procedimento pertinente do Art. 43 do AI Act (com organismo notificado quando esse procedimento o preveja), estendida ao Anexo I do CRA (CRA, art. 12.º, n.º 2).
 6. **Matriz de origem regulatória** — no catálogo do [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), coluna `Fonte` com enum `AI Act`, `CRA`, `Ambos`, `Outras`.
-7. ⚡ **Camada agentic transversal** — [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (agente como *principal*), `REQ-AGN-001..004` (mandate, *kill-switch*, *intent*), `OPS-012..014` (audit per *tool*, *budget*, *jailbreak detection*) e Policy 38 (*mandates lifecycle*) fornecem controlos técnicos relevantes para o Art. 14, o Art. 15 e o Art. 26 do AI Act e para o Anexo I (Partes I e II) do CRA (*cybersec by design*). Estes controlos são **evidência técnica, não uma declaração de conformidade**: o **CRA (Art. 12) estabelece** uma presunção de conformidade **apenas com o Art. 15** do AI Act (cibersegurança) quando o Anexo I é cumprido e demonstrado na declaração UE de conformidade. O Art. 14 (supervisão humana) e o Art. 26 (deployer) **não** estão abrangidos por essa presunção — mantêm-se como obrigações próprias.
+7. ⚡ **Camada agentic transversal** — [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (agente como *principal*), `REQ-AGN-001..004` (mandate, *kill-switch*, *intent*), `OPS-012..014` (audit per *tool*, *budget*, *jailbreak detection*) e Policy 38 (*mandates lifecycle*) fornecem controlos técnicos relevantes para o Art. 14, o Art. 15 e o Art. 26 do AI Act e para o Anexo I (Partes I e II) do CRA (*cybersec by design*). Estes controlos são **evidência técnica, não uma declaração de conformidade**: o **CRA (Art. 12) estabelece** uma presunção de conformidade **apenas com o Art. 15** do AI Act (cibersegurança) quando o Anexo I é cumprido e demonstrado na declaração UE de conformidade. O Art. 14 (supervisão humana) e o Art. 26 (responsáveis pela implantação) **não** estão abrangidos por essa presunção — mantêm-se como obrigações próprias.
 
 ## Checklist de Convergência (SIM = pronto) {#checklist-de-convergência-sim--pronto}
 
 - [ ] Evidência de cibersegurança mapeada simultaneamente ao Art. 15 (AI Act) e ao Anexo I, Partes I e II (CRA) — incluindo [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) e *eval suites* (Cap. 10 §C5).
 - [ ] Processo de *vulnerability handling* conforme o Anexo I, Parte II (CRA) documentado, com extensão para *upstream* AI supply chain (Policy 39 §7).
 - [ ] Declaração UE de conformidade demonstra o nível de cibersegurança do Art. 15 (CRA Art. 12).
-- [ ] Avaliação de conformidade única (Art. 43 AI Act) acordada com o organismo notificado.
+- [ ] Avaliação de conformidade única (Art. 43 AI Act), acordada com o organismo notificado quando o procedimento aplicável o preveja.
 - [ ] SBOM + AI BOM único (CycloneDX 1.6 `ml-bom` para a parte AI) cobre ambos os regulamentos.
 - [ ] Circuitos de reporte distintos (AI Act Art. 73 / CRA Art. 14) com base de deteção técnica partilhada ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9.3).
 - [ ] Catálogo do Cap. 02 com coluna `Fonte` preenchida (AI Act / CRA / Ambos).
@@ -85,10 +85,10 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 ## Perguntas Frequentes {#perguntas-frequentes}
 
 **Q1. Preciso de fazer duas avaliações de conformidade de cibersegurança?**
-Não. O CRA Art. 12, conjugado com o Art. 43 do AI Act, permite uma avaliação única - o mesmo organismo notificado pode controlar ambos.
+Não. O CRA Art. 12, conjugado com o Art. 43 do AI Act, permite uma avaliação única - quando o procedimento do Art. 43 envolve um organismo notificado, esse organismo pode controlar ambos (CRA, art. 12.º, n.º 2); no controlo interno do anexo VI (art. 43.º, n.º 2) não intervém organismo notificado.
 
 **Q2. O CRA substitui o Art. 15 do AI Act?**
-Não substitui. Cria uma **presunção de conformidade** com o Art. 15 quando cumpres o Anexo I (Partes I e II) e o demonstras na declaração. As restantes obrigações de alto risco do AI Act mantêm-se.
+Não substitui. Cria uma **presunção de conformidade** com o Art. 15 quando cumpres o Anexo I (Partes I e II) e o demonstras na declaração. As restantes obrigações aplicáveis aos sistemas de IA de risco elevado no AI Act mantêm-se.
 
 **Q3. E o tratamento de vulnerabilidades?**
 Implementa o do CRA (Anexo I, Parte II) — é o mais detalhado e serve de base comum. Não satisfaz, por si só, o Art. 15: a presunção do art. 12.º do CRA exige também a Parte I e a demonstração na declaração UE, e cobre apenas a cibersegurança (não a exatidão nem a solidez).
@@ -98,7 +98,7 @@ Não. O AI Act (Art. 73, incidentes graves) e o CRA (Art. 14, vulnerabilidades a
 
 ## Referências {#referências}
 
-- Regulamento (UE) 2024/1689 (AI Act) - Art. 6, 15, 43.
+- Regulamento (UE) 2024/1689 (AI Act) - Art. 6, 15, 42 (n.º 3, aditado pelo Reg. (UE) 2026/1744), 43.
 - Regulamento (UE) 2024/2847 (CRA) - Art. 12, Art. 14, Anexo I (Partes I e II), Anexos III/IV.
 - [Cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) e [Cross-check CRA](/sbd-toe/cross-check-normativo/cra/intro) (deste capítulo).
 - SbD-ToE Manual ([Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)).

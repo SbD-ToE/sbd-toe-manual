@@ -214,7 +214,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 8.12 | Existe Incident Response Plan com critérios de activação, fases estruturadas e playbooks | **L2+** | pol-32 |
 | 8.13 | Incidentes de segurança têm post-mortem realizado em menos de 5 dias úteis | **L2+** | pol-32 |
 | 8.14 | Rollback automático está configurado para todos os tipos de artefacto com RTO ≤ 15 minutos | **L3** | pol-27 |
-| 8.15 | Notificações regulatórias aplicáveis cumpridas dentro dos prazos legais (Política 32 §6): RGPD ≤ 72h (art. 33.º); NIS2 alerta rápido ≤ 24h e notificação ≤ 72h; DORA notificação inicial nos prazos do Reg. Delegado (UE) 2025/301; CRA alerta precoce ≤ 24h; AI Act ≤ 15 dias (art. 73.º) | **S** | pol-32 |
+| 8.15 | Notificações regulatórias aplicáveis cumpridas dentro dos prazos legais (Política 32 §6): RGPD ≤ 72h (art. 33.º); NIS2 alerta rápido ≤ 24h e notificação ≤ 72h; DORA notificação inicial nos prazos do Reg. Delegado (UE) 2025/301; CRA alerta precoce ≤ 24h; AI Act ≤ 15 dias; ≤ 10 dias em caso de morte; ≤ 2 dias em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b) (art. 73.º, n.ºs 2 a 4) | **S** | pol-32 |
 
 ---
 

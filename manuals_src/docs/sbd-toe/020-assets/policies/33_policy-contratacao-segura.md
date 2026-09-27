@@ -217,8 +217,8 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 ### 10.3 *Audit rights* {#103-audit-rights}
 
-- Direito contratual a aceder a *logs* de inferência ou equivalente quando exigido (típico em L3 e em sistemas regulados — DORA Art. 30(3)(e), AI Act Art. 26).
-- Em alternativa, *audit reports* periódicos (SOC 2 Type II, certificação ISO/IEC 42001, declaração UE de conformidade do Art. 47 quando o sistema fornecido é de alto risco, ou documentação do Art. 53/Anexo XII quando GPAI).
+- Direito contratual a aceder a *logs* de inferência ou equivalente quando exigido (típico em L3 e em sistemas regulados — DORA Art. 30(3)(e), AI Act, art. 26.º, n.º 6).
+- Em alternativa, *audit reports* periódicos (SOC 2 Type II, certificação ISO/IEC 42001, declaração UE de conformidade do Art. 47 quando o sistema fornecido é de risco elevado, ou documentação do Art. 53/Anexo XII quando GPAI).
 
 ### 10.4 SLA de notificação prévia {#104-sla-de-notificação-prévia}
 
@@ -233,8 +233,8 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 
 ### 10.6 Conformidade regulatória declarada {#106-conformidade-regulatória-declarada}
 
-- **AI Act Art. 53** (obrigações de *providers* de GPAI): documentação técnica do modelo, *summary of training data* publicado, *copyright compliance policy*.
-- **AI Act Art. 55** (cibersegurança de GPAI com risco sistémico): *AI red teaming* contínuo, hardening de infraestrutura, *post-market monitoring*.
+- **AI Act Art. 53** (obrigações dos prestadores de modelos de IA de finalidade geral): documentação técnica do modelo (n.º 1, al. a)), informações e documentação para os prestadores a jusante (al. b)), política de cumprimento do direito da União em matéria de direitos de autor (al. c)) e resumo público dos conteúdos utilizados para o treino (al. d)).
+- **AI Act Art. 55** (obrigações dos prestadores de modelos de IA de finalidade geral com risco sistémico): avaliação do modelo com «testagens antagónicas» documentadas (n.º 1, al. a)), avaliação e atenuação de riscos sistémicos (al. b)), acompanhamento e comunicação de incidentes graves ao Serviço para a IA (al. c)) e proteção de cibersegurança do modelo e da sua infraestrutura física (al. d)).
 - **RGPD, art. 28.º** (subcontratantes): contrato com o subcontratante (n.º 3) e informação prévia sobre a contratação ou substituição de outros subcontratantes (n.º 2).
 - **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável a qualquer *provider* de serviços de TIC a entidade abrangida; requisitos contratuais reforçados quando o serviço apoia funções críticas ou importantes (DORA art. 30.º, n.º 3).
 
@@ -282,4 +282,4 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | RGPD - Art. 28.º, 44.º–49.º | Subcontratantes; transferências internacionais |
 | DORA - Art. 28-30 | ICT third-party risk management |
 | NIS2 - Art. 21 | Supply chain security measures |
-| EU AI Act (Reg. (UE) 2024/1689) - Art. 25, 26, 47, 53, 55 | Cadeia de fornecimento AI; obrigações de provider de GPAI |
+| EU AI Act (Reg. (UE) 2024/1689) - Art. 25, 26, 47, 53, 55 | Responsabilidades ao longo da cadeia de valor da IA (art. 25.º); obrigações dos responsáveis pela implantação (art. 26.º); declaração UE de conformidade (art. 47.º); obrigações dos prestadores de modelos de IA de finalidade geral (art. 53.º e 55.º) |

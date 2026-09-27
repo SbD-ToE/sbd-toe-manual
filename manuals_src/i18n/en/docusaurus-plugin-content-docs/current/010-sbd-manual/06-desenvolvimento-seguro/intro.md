@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/intro.md
-  source_sha256: b657a76581122881b85434934c49185e4ce2bcc84eba40b93c3fdf6a7d2ba877
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: d646a0f84085e4f31c148acbbf0bef3a274379ae202b29a2702e4759dce8aaae
+  source_sha256: c0fa9ddd5a6d7f3e8e089482d8213daf4bef0926f13b3de1c836dec4ecc9482c
+  source_commit: 810e8083697d2705d15e9913f01ca8634db01cd4
+  target_sha256: 00ff0b67dc9be58ff58876c9242d5870f934cddb360345956d299294560e4d7b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, lifecycle_phase, maturity, papel_suporte, practitioner_manual, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 8a63a2be73c74dffc9ec5f911a6981862fddaa9d57c96a536421f0ad0455f7df
-  translated_at: 2026-09-26T17:23:47Z
-  stamped_at: 2026-09-26T18:34:10Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, basilar, chapter_role, cycle_iteration, discipline, eu_startups, lifecycle_phase, maturity, papel_suporte, practitioner_manual, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: cc7ae20ee1323f31c0acaa6686340e4cd2f40e49c0f5840db246134553b5ddb7
+  translated_at: 2026-09-27T15:08:20Z
+  stamped_at: 2026-09-27T15:08:20Z
   reviewed_by: null
 ---
 
@@ -132,7 +132,7 @@ Ultimately, it is about turning **every line of code** into an opportunity to re
 
 | Risk level | Minimum requirement |
 |----------------|------------------|
-| **L1 (low)** | Mandatory linters, PR checklist, justified dependencies |
+| **L1 (low)** | Approved guidelines per stack, mandatory linters, SAST as a *gate* (blocking high or critical severity), PR checklist, justified dependencies |
 | **L2 (medium)** | Curated guidelines per stack, mandatory SAST, recorded exceptions |
 | **L3 (high)**  | Formal governance, dedicated reviewer, *policy-as-code* in CI/CD |
 

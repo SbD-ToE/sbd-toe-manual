@@ -79,7 +79,7 @@ Este mapeamento confirma que os riscos identificados **têm correspondência dir
 
 | Técnica ATT&CK            | Vetor de ataque                | Risco associado                 | Controlos típicos                 |
 |---------------------------|-------------------------------|----------------------------------|----------------------------------|
-| Initial Access: Phishing  | Compromisso de credenciais     | Acesso não autorizado            | MFA, awareness                   |
+| Initial Access: Phishing  | Compromisso de credenciais     | Acesso não autorizado            | MFA resistente a *phishing* (`AUT-001`, L3), awareness |
 | Execution: Scripting      | Execução remota                | Execução arbitrária              | Hardening, validação             |
 | Discovery: Cloud Services | Enumeração de recursos         | Exposição excessiva              | IAM restritivo, logging          |
 | Impact: Data Destruction  | Sabotagem de dados             | Perda de integridade             | Backups, controlo de alterações  |

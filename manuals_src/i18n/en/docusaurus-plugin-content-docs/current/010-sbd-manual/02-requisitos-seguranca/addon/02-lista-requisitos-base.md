@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 4bd848ac503f87450c8da9e7dd30afa2dc9cb15a64c93b07717dab27ba4d8d17
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 192a6581a72e4f990be9459af7625e003370a0db722a40775de8cf655186efbc
+  source_sha256: 1f6a74921007dd188f5396eb0b6b5b462a3393dbdb8b48944bb592c13a26024b
+  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
+  target_sha256: 697b6d6195711473680825fc4816018e7b57d400db6c02db05e620dbe461d5b9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-25T20:22:31Z
-  stamped_at: 2026-09-26T18:32:59Z
+  translated_at: 2026-09-27T21:30:09Z
+  stamped_at: 2026-09-27T21:30:09Z
   reviewed_by: null
 ---
 
@@ -99,7 +99,7 @@ Requirements that ensure only legitimate entities access the system, with contro
 
 | ID | Name | L1 | L2 | L3 | Acceptance criterion |
 |----|------|:--:|:--:|:--:|----------------------|
-| AUT-001 | Mandatory MFA | - | ✔ | ✔ | Login without a second factor is rejected; evidence of the block in logs. |
+| AUT-001 | Mandatory MFA | - | ✔ | ✔ | Login without a second factor is rejected; evidence of the block in logs. A cryptographic authenticator (WebAuthn/FIDO2, passkey), a TOTP code or a *push* approval with number matching count as a second factor; a passkey or security key with user verification (PIN or local biometrics, `AUT-012`) meets MFA on its own. At L3, the application offers *phishing*-resistant authentication (WebAuthn/FIDO2) and requires it for administration accounts; SMS or email codes are not accepted as a second factor. |
 | AUT-002 | Password policy | ✔ | ✔ | ✔ | The system rejects passwords that do not comply with the policy; the block is evidenced in testing. |
 | AUT-003 | Brute-force protection | ✔ | ✔ | ✔ | Account locked or access delayed after N failed attempts; logs evidence the event. |
 | AUT-004 | Active session revocation | ✔ | ✔ | ✔ | Logout invalidates the token/session immediately; reuse results in an authentication error. |
@@ -109,6 +109,9 @@ Requirements that ensure only legitimate entities access the system, with contro
 | AUT-008 | Step-up for sensitive actions | - | ✔ | ✔ | Critical operations require an additional factor; testing evidences the block without step-up. |
 | AUT-009 | Re-authentication for critical changes | ✔ | ✔ | ✔ | Changes to credentials or sensitive data require confirmation of the active identity. |
 | AUT-010 | Alert on suspicious access | - | ✔ | ✔ | Anomalous access generates an alert or a notification to the user; log of the event available. |
+| AUT-011 | No default credentials | ✔ | ✔ | ✔ | The application is not delivered or put into production with default accounts or credentials; initial credentials unique per installation and changed at first use; default accounts of components and platforms disabled or with their credential changed. |
+| AUT-012 | Cryptographic authenticators and local biometrics | ✔ | ✔ | ✔ | When the application accepts passkeys, security keys or another WebAuthn/FIDO2 authenticator: at registration and at each authentication, the server validates a single-use random challenge, the origin and the *relying party* identifier, the signature with the registered public key and, when the policy requires it, the user-verification indication; a signature counter that goes backwards, or an equivalent signal, is treated as a possible clone and logged. Biometrics (fingerprint, face recognition) only unlock the credential on the device: the server receives only the signed assertion and never receives, stores or compares biometric data. The stored public key is not a secret; `AUT-006` applies to secrets. |
+| AUT-013 | Management and recovery of authentication factors | ✔ | ✔ | ✔ | Access recovery uses a random, single-use *token* with a short expiry, and does not reveal whether the account exists; each recovery and each factor added or removed is notified to the user through an already registered channel. At L2 and L3, users see their authenticators (name, registration date, last use) and can revoke any of them, with re-authentication (`AUT-009`); revoking an authenticator or recovering the account ends the sessions established with it; when a factor is lost, recovery requires another registered authenticator, single-use recovery codes or strong identity re-verification, never email alone, and biometrics are never the only recovery factor. At L3, recoveries of administration accounts are logged and reviewed. |
 
 ---
 
@@ -127,7 +130,7 @@ Requirements that ensure each entity accesses only the resources and operations 
 | ACC-007 | Validation of the access model | - | ✔ | ✔ | Permission model reviewed and documented; access-control threats mapped. |
 | ACC-008 | Real-time revocation | ✔ | ✔ | ✔ | Removal of access takes effect immediately; the permission test fails after revocation. |
 | ACC-009 | Attribute-based authorisation (ABAC) | - | - | ✔ | The access decision depends on dynamic attributes; logs evidence the policy evaluation. |
-| ACC-010 | Periodic review of permissions | - | ✔ | ✔ | Periodic audits remove obsolete permissions; review records kept and dated. |
+| ACC-010 | Periodic review of permissions | ✔ | ✔ | ✔ | Periodic audits remove obsolete permissions; review records kept and dated; minimum cadence (the Manual's choice): annual at L1, half-yearly at L2, quarterly at L3. |
 
 ---
 
@@ -245,11 +248,11 @@ Requirements that guarantee the protection of sensitive data in transit and at r
 |----|------|:--:|:--:|:--:|----------------------|
 | ENC-001 | Encryption of all communications in transit | ✔ | ✔ | ✔ | All communication between client and server and between internal services uses TLS with a defined minimum version; insecure versions (TLS 1.0, 1.1, SSLv3) disabled and verifiable by configuration. |
 | ENC-002 | Encryption of sensitive data at rest | - | ✔ | ✔ | Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage; encryption keys managed separately from the data; evidence of application to all relevant datastores. |
-| ENC-003 | Robust cryptographic algorithms and configurations | - | ✔ | ✔ | Only approved algorithms and adequate key sizes in use (e.g. AES-256, RSA ≥ 2048, approved elliptic curves); weak or deprecated algorithms (MD5, SHA-1 for integrity, DES) absent; list of approved primitives documented. |
+| ENC-003 | Robust cryptographic algorithms and configurations | - | ✔ | ✔ | Only approved algorithms and adequate key sizes in use (e.g. AES-256, RSA ≥ 2048, approved elliptic curves); weak or deprecated algorithms (MD5, SHA-1 for integrity, DES) absent; list of approved primitives documented. An inventory of the cryptographic primitives, libraries and protocols per component, kept with the SBOM; the list of primitives is reviewed at least yearly and whenever a cryptanalysis advisory affects it (including the post-quantum transition). At L3, algorithms can be swapped by configuration, without changing the code. |
 | ENC-004 | Adaptive password hashing | ✔ | ✔ | ✔ | Passwords stored with an adaptive, brute-force-resistant algorithm (bcrypt, Argon2, PBKDF2); cost factor configured and reviewed periodically; absence of static or reversible hashing confirmed. |
 | ENC-005 | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | Passwords, tokens, card numbers and sensitive personal data do not appear in clear text in logs, error responses or debugging outputs; coverage verified by log analysis and testing. |
 | ENC-006 | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | Secret-detection tool active in the pipeline (e.g. truffleHog, gitleaks, detect-secrets); commits with detected secrets blocked or alerted; no clear-text secrets in the repository history. |
-| ENC-007 | Periodic rotation of keys and secrets | - | ✔ | ✔ | Rotation policy defined per type of secret; rotation carried out within the defined deadlines; auditable evidence of rotation; no keys without an expiry date for critical material. |
+| ENC-007 | Lifecycle of keys, secrets and certificates | - | ✔ | ✔ | Rotation policy defined per type of secret; rotation carried out within the defined deadlines; auditable evidence of rotation; no keys without an expiry date for critical material. Each cryptographic key has a defined lifecycle (generation, distribution, storage, backup, archiving, recovery, revocation and destruction), with usage rules per key type; retired keys are kept only to decrypt existing data. Certificates are listed in an inventory with owner, validity and where the key is kept, with an alert before expiry and automated renewal where possible ([Policy 18 §6.4](/sbd-toe/assets/policies/policy-gestao-segredos#64-ciclo-de-vida-das-chaves-e-inventário-de-certificados)). |
 | ENC-008 | Prevention of client-side caching of sensitive data | - | ✔ | ✔ | Responses containing sensitive data include headers that inhibit caching (Cache-Control: no-store, etc.); configuration verifiable by header analysis in a test environment. |
 | ENC-009 | Verifiable integrity of critical data | - | - | ✔ | Critical data with an integrity verification mechanism (MACs, signatures, checksums); tampering detected and logged; coverage applied to data with business or regulatory impact. |
 
@@ -259,17 +262,21 @@ Requirements that guarantee the protection of sensitive data in transit and at r
 
 Engineering requirements on personal data: what is collected, how long it is kept, and what the system is able to do with that data. The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue: it is a matter for the normative cross-check and the regulatory overlay.
 
+An application with personal data can be L1 (personal data score D=2, and E1+D2+I1 = 4). That is why `PRI-001`, `PRI-002`, `PRI-003`, `PRI-006` and `PRI-007` apply from L1: the harm to the data subject does not depend on the level. The inventory (`PRI-004`) and the PII-in-logs concept (`PRI-005`) stay at L2/L3; when the GDPR applies, the regulatory overlay raises them to all levels.
+
 | ID | Name | L1 | L2 | L3 | Acceptance criterion |
 |----|------|:--:|:--:|:--:|----------------------|
-| PRI-001 | Minimisation of the personal data collected | - | ✔ | ✔ | Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow. |
-| PRI-002 | Retention of personal data with a deadline and effective deletion | - | ✔ | ✔ | Personal-data sets have a defined retention period; deletion at the end of the period is carried out and verifiable by sampling or automated evidence. |
-| PRI-003 | Technical capability for deletion and export on request | - | ✔ | ✔ | A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database. |
-| PRI-004 | Record of purpose per personal-data set | - | ✔ | ✔ | An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded. |
-| PRI-005 | Documented and applied concept for PII in logs | - | ✔ | ✔ | A documented concept for handling PII in logs exists (what is logged, masked how, for how long) and its application is verified. |
+| PRI-001 | Minimisation of the personal data collected | ✔ | ✔ | ✔ | Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow. |
+| PRI-002 | Retention of personal data with a deadline and effective deletion | ✔ | ✔ | ✔ | Personal-data sets have a defined retention period; deletion at the end of the period is carried out, reaches replicas, caches and downstream systems, and is verifiable by sampling or automated evidence; in backups, the data expire with the backup retention cycle, within a declared period. Irreversible anonymisation is an accepted alternative to deletion. When the organisation processes data on behalf of a customer, at the end of the service the data and their copies are deleted or returned, as the contract provides, with evidence. |
+| PRI-003 | Technical capability for access, rectification, deletion and export on request | ✔ | ✔ | ✔ | A tested mechanism exists, without manual intervention in the database, to do the following with the personal data of an identified data subject: export a copy in a structured, commonly used and machine-readable format; rectify and complete them; delete them, including replicas, caches and downstream systems. Rectifications and deletions propagate to the known recipients (at L2/L3, those recorded in `PRI-004`). A request received outside the authenticated channel is carried out only after the requester's identity has been verified. At L1, a documented procedure with a tested administrative function or script is enough; at L2/L3, it is a feature of the application or of the back office, and each execution is logged. |
+| PRI-004 | Record of purpose and recipients per personal-data set | - | ✔ | ✔ | An inventory associates each personal-data set with its purpose, the system that processes it and the recipients, internal and external, to whom it is disclosed; changes of purpose or of recipients are recorded. |
+| PRI-005 | Documented and applied concept for PII in logs | - | ✔ | ✔ | A documented concept for handling PII in logs exists (what is logged, masked how, for how long) and its application is verified. In immutable (WORM) logs and backups, personal data enter only as a pseudonymous identifier; any identifying content is encrypted with a per-person key, and deletion is achieved by destroying that key (Policy 29 §8). |
+| PRI-006 | Technical management of consent and objection preferences | ✔ | ✔ | ✔ | When the application processes data on the basis of consent, or allows a person to refuse a processing operation (e.g. marketing communications, profiling): each consent is recorded in an auditable way (data subject, time, purpose, version of the text shown); withdrawal or objection is available through the same channel and takes no more effort than giving consent; it takes effect in the dependent processing and persists, without being reset by re-imports or synchronisations. |
+| PRI-007 | Privacy by default in user-facing settings | ✔ | ✔ | ✔ | Sharing, visibility and optional-processing settings start at the most protective option: optional processing requires action by the user (opt-in), and profiles and personal content are not visible to an indefinite number of people without the user's intervention; the default configuration is verified in testing. |
 
 The existing neighbours keep their object: `ENC-005` forbids sensitive data in clear text in logs, outputs and API responses; `ERR-007` requires pseudonymised context in error logs (L2+); `LOG-005` sets the **minimum** retention of logs. `PRI-002` sets the **maximum** retention of business personal data, and `PRI-005` adds what none of them prescribes: the documented and verified concept — it does not repeat the prohibition, it requires the concept.
 
-**Sources.** PRI-001…004 — [authorship] SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
+**Sources.** PRI-001…004, PRI-006 and PRI-007 — [authorship] SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
 
 ---
 
@@ -283,7 +290,7 @@ Requirements specific to API surfaces, which are the most frequent exposure vect
 | API-002 | Unnecessary endpoints removed or hidden | ✔ | ✔ | ✔ | Debug or legacy endpoints not exposed in production; only in controlled test environments. |
 | API-003 | Input validation in APIs | ✔ | ✔ | ✔ | Malformed inputs are rejected; logs record the attempt with minimum context. |
 | API-004 | Rate limiting and abuse detection | - | ✔ | ✔ | Limit configured and active; excessive calls result in a 429 or a temporary block. |
-| API-005 | Protection by TLS and up-to-date certificates | ✔ | ✔ | ✔ | TLS channel mandatory; valid certificates; security headers (HSTS, etc.) active. |
+| API-005 | Protection by TLS and up-to-date certificates | ✔ | ✔ | ✔ | TLS channel mandatory; valid certificates, with an alert before expiry; security headers (HSTS, etc.) active. |
 | API-006 | Verification of the SDKs and wrappers used | ✔ | ✔ | ✔ | Dependencies and versions documented in the SBOM; audit of licences and known vulnerabilities. |
 | API-007 | Logging and auditing of external calls | - | ✔ | ✔ | External calls logged with the essential data (origin, destination, result, timestamp). |
 
@@ -336,7 +343,7 @@ Requirements that guarantee the integrity and traceability of artefacts througho
 |----|------|:--:|:--:|:--:|----------------------|
 | DST-001 | Authenticated and auditable repositories | ✔ | ✔ | ✔ | Mandatory authentication and active logs for access to artefact repositories. |
 | DST-002 | Approval for public publication | - | ✔ | ✔ | Publication in a public registry requires approval and formal documentation of the process. |
-| DST-003 | Digital signature or checksum | - | ✔ | ✔ | Artefacts signed or validated by hash before publication; automated verification. |
+| DST-003 | Digital signature or checksum | - | ✔ | ✔ | Artefacts signed or validated by hash before publication; automated verification; updates distributed to users or customers carry a published signature or hash, which the product or the installer verifies before installation. |
 | DST-004 | Inclusion of an SBOM in the artefacts | - | ✔ | ✔ | SBOM generated and attached to each release; dependency traceability available. |
 | DST-005 | Access segregated by role and environment | - | ✔ | ✔ | Only authorised users and automations access production artefacts. |
 | DST-006 | Deploy only via a validated pipeline | - | ✔ | ✔ | Artefacts deployed only by a controlled and audited pipeline; no manual deploy to production. |

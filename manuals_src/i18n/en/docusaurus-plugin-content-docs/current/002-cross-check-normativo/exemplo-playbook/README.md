@@ -6,16 +6,16 @@ tags: [playbook, exemplos, dora, nis2, iso27001, cra, gdpr, templates]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/README.md
-  source_sha256: c2440286db9403eddff03b9cc17ca605dfdabd8a31d3123691e02a22de44bb5f
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: e31f2fc5953f67334df00ed5c35d077b731d5646333f42696fc1bd3b8d992658
+  source_sha256: bf9f51377107ba299ba342e82a713d57c137b45cc6dd6ab33c48c65b3ba5b19c
+  source_commit: 08bf36a1ce25c3f1e804b8a1119e4006b60c63bc
+  target_sha256: b07bf09c48700521468cfc6b3bf7511f2b59f51a2bbf1bfec18dc2d408649fe1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, framework_source_corpus, lifecycle_phase, maturity, normative_empirical, practitioner_manual, role_juridico, sbdtoe_sbd, traceability]
-  glossary_sha256: 9053b641651a969706a59eb8e62170db5c2fc63079d736cd8d2e403901801db5
-  translated_at: 2026-09-26T23:27:20Z
-  stamped_at: 2026-09-26T23:27:20Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, eu_startups, framework_source_corpus, lifecycle_phase, maturity, normative_empirical, practitioner_manual, role_juridico, sbdtoe_sbd, traceability]
+  glossary_sha256: 274c8014149e431f890a33a2b4a6fe38b5f53736a81b39e0d79108ddf32a403c
+  translated_at: 2026-09-27T23:21:27Z
+  stamped_at: 2026-09-27T23:21:27Z
   reviewed_by: null
 ---
 
@@ -300,7 +300,7 @@ These examples will be updated when:
 - Feedback from real implementations
 - Changes in best practices
 
-**Next scheduled review:** June 2026
+**Next review:** when one of the conditions above occurs.
 
 ---
 
@@ -318,4 +318,4 @@ If any of the following is found:
 
 **Version:** 1.0  
 **Date:** November 2025  
-**Next update:** June 2026
+**Next update:** with the next revision of the regulatory coverage matrix.

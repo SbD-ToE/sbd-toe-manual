@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
-  source_sha256: 72e1cdb1a07d8429219ee5914f4ab7cf890f847f54bc8912f3fbc5d8696d391d
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 77d936f68451872f90cc245189a76a267722ee9e0804d09b549c05b41e6fc229
+  source_sha256: e67701bee73eb6cb6adb944b609328813c3665c0f0ce7df16cb6c5b6afcebb47
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: b550ee0b448a4195624a106e6352451fb059429dbd0f9d5821498de0952d60ab
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, llm, mapping, papel_suporte, plain_rag, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 3acecd9ff52af0e1975e6f692e9c99dac4f3739992f5e5022e2aa8cf3eb9a8b6
-  translated_at: 2026-09-26T17:23:44Z
-  stamped_at: 2026-09-26T18:33:23Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, framework_source_corpus, gap_family, lifecycle_phase, llm, mapping, papel_suporte, plain_rag, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b9e81e02eb64c52b49420a86d83285b20fc614a9727106cda2975cea0f68b2b7
+  translated_at: 2026-09-27T18:03:18Z
+  stamped_at: 2026-09-27T18:03:18Z
   reviewed_by: null
 ---
 
@@ -216,7 +216,7 @@ As an **AppSec Engineer** and **GRC/Compliance**, I want to document and formall
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Optional | Informal acceptance |
+| L1 | Yes (when there is accepted risk) | Simple, referenceable record of the acceptance (ticket or note), stating who requested, assessed and approved it |
 | L2 | Yes | Formal documentation |
 | L3 | Yes | Formal documentation + compensating mitigation |
 
@@ -364,13 +364,13 @@ As **Software Architects + AppSec Engineer**, I want to apply **LINDDUN** whenev
 **Acceptance criteria (BDD).**
 - **Given** that the system processes personal data  
   **When** I carry out Threat Modelling  
-  **Then** **I include a LINDDUN analysis** with threats, mitigation and **mapping to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-005`)**  
+  **Then** **I include a LINDDUN analysis** with threats, mitigation and **mapping to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-007`)**  
 - And **I create a `privacy-dfd`** with specific trust boundaries  
 
 **Checklist.**
 - [ ] `privacy-dfd` created  
 - [ ] LINDDUN list filled in  
-- [ ] **Link to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-005`)**  
+- [ ] **Link to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-007`)**  
 - [ ] **Threats classified by severity and mitigation**  
 - [ ] Evidence archived in the architecture repository  
 :::
@@ -383,7 +383,7 @@ As **Software Architects + AppSec Engineer**, I want to apply **LINDDUN** whenev
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |:---|:---|:---|
-| L1 | Optional | Simplified checklist |
+| L1 | Yes | Lightweight form: the seven LINDDUN categories worked through over the personal-data flows, with the threats linked to the `PRI-*` requirements |
 | L2 | Yes | Formal privacy analysis |
 | L3 | Yes | Full LINDDUN + independent validation (DPO) |
 

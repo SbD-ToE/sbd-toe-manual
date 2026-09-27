@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: c8a4b478f9c2536af0ce9f4ed13fc5a335b9d7176ba965101186dfef64c9d3b2
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 523bcb4a0d637d4adda1302f683e6cfa215ec45a099978175a72f2ec4223ac11
+  source_sha256: cbf478a908597a99165f08515527ce9abafd3aa0c33b53ac842ee5ea018697c6
+  source_commit: 32821387919e916ec1de27205c76122088df0f3e
+  target_sha256: 81c5402025a46164ab149b3f90bddfd501bf87b203a91dfa44bd6aec010af725
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, audit_trail, avaliacao, cycle_iteration, discipline, dora_ict_tpp, eu_ai_deployer, eu_ai_gpai_model, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: fea0ad6b475dabee1f63ac359ec777b052598383abcc5ad20898c386125b0da9
-  translated_at: 2026-09-27T09:05:45Z
-  stamped_at: 2026-09-27T09:05:45Z
+  translated_at: 2026-09-27T23:08:57Z
+  stamped_at: 2026-09-27T23:08:57Z
   reviewed_by: null
 ---
 
@@ -50,7 +50,7 @@ This policy applies to all suppliers, partners and contractors that:
 
 | Level | Applicability |
 |---|---|
-| L1 | Recommended; basic confidentiality and good-practice clauses; security contact defined |
+| L1 | Mandatory; proportionate security clauses (confidentiality and good practice); supplier validation before onboarding, with a questionnaire or checklist; security contact defined |
 | L2 | Mandatory; pre-contractual due diligence; SbD-ToE clauses; documented onboarding; annual reassessment |
 | L3 | Mandatory; formal due diligence; technical audit; complete clauses; SBOM and test reports mandatory; half-yearly reassessment; formal right to audit |
 
@@ -107,6 +107,20 @@ All contracts that involve technical access must include security clauses propor
 ### 4.3 Reference contract template {#43-modelo-contratual-de-referência}
 
 The organisation must maintain a standard contract template with legally validated security clauses, updated annually or after relevant regulatory changes. The template must be made available to Procurement and Legal as a negotiation reference - security clauses are minimum requirements, not negotiation points in L2/L3 contracts.
+
+### 4.4 Processors of personal data (GDPR, Article 28) {#44-subcontratantes-de-dados-pessoais-rgpd-art-28}
+
+When the supplier processes personal data on behalf of the organisation, it is a processor within the meaning of the GDPR, and the processing is governed by a contract, at any level. The contract sets out the subject matter, duration, nature and purpose of the processing, the type of personal data and the categories of data subjects, and obliges the processor to:
+
+- process the data only on documented instructions from the organisation, including with regard to transfers, and inform it if it considers that an instruction infringes data protection law;
+- ensure that authorised persons are bound by confidentiality;
+- adopt the security measures of Article 32 of the GDPR (the clauses in sections 4.1 and 4.2 are the minimum);
+- engage another processor only with the organisation's prior authorisation and under the same conditions;
+- assist the organisation in responding to data subjects' requests (see `PRI-003`) and in meeting its obligations on security, breach notification and impact assessment;
+- at the end of the service, delete or return the data and delete any copies, unless there is a legal obligation to retain them (see `PRI-002`);
+- make available the information needed to demonstrate compliance and allow for audits.
+
+For AI service vendors, section 10 adds the specific clauses.
 
 ---
 

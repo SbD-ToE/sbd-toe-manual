@@ -1,23 +1,23 @@
 ---
 id: catalogo-requisitos-operacoes
 title: Monitoring and Operations Requirements Catalogue
-description: Canonical catalogue of requirements for the security monitoring and operations programme (OPS-001 to OPS-015), with applicability by risk level and acceptance criteria for centralised logging, critical events, retention, SIEM, alerts, response SLA, correlation, integration with the IRP, behavioural detection, effectiveness metrics and continuous operational health signals.
+description: Canonical catalogue of requirements for the security monitoring and operations programme (OPS-001 to OPS-017), with applicability by risk level and acceptance criteria for centralised logging, critical events, retention, SIEM, alerts, response SLA, correlation, integration with the IRP, behavioural detection, effectiveness metrics and continuous operational health signals, backups with tested restore and recovery of the application.
 requirement_class: dominio
-tags: [tipo:catalogo, classe:dominio, tema:operacoes, OPS, monitorizacao, SIEM, alertas, IRP, correlacao, MTTD, MTTR, health, readiness, liveness, disponibilidade, rastreabilidade, L1, L2, L3, auditoria]
+tags: [tipo:catalogo, classe:dominio, tema:operacoes, OPS, monitorizacao, SIEM, alertas, IRP, correlacao, MTTD, MTTR, health, readiness, liveness, disponibilidade, rastreabilidade, L1, L2, L3, backup, restauro, recuperacao, auditoria]
 sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
-  source_sha256: 6e7242d32a5e18defe022c96a2b5739d1d8af46d752ae6cf4377c945942b3f75
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 2ff8a33236e54481dd221d9f27c7611b6551b7fef1fb3614c1a061fb08af985a
-  engine: claude-fable-5-1
+  source_sha256: 5a1b04c92b36445640d52f0dc9035653c170e330b1d58dc399ecd4ce0ceda626
+  source_commit: 340729d3c6203de3d943929de2e7a3d81bcfc89f
+  target_sha256: db6953d94b17bca744cd4b39fd766bb772a2d57581dcf3c52b10e88007acab81
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, cycle_iteration, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, mapping, maturity, mcp, mcp_reading_programa, plain_rag, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, traceability]
-  glossary_sha256: e4263ecf7212bb43fc0422f2d996995e6746f08954c437f05c671c6dcea7c564
-  translated_at: 2026-09-27T07:06:00Z
-  stamped_at: 2026-09-27T07:06:00Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, cycle_iteration, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, mapping, maturity, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
+  glossary_sha256: 38584c37cce6d237f532c1a0bdbf873a8e846b217eec9800145592a052bfccdc
+  translated_at: 2026-09-27T14:46:12Z
+  stamped_at: 2026-09-27T14:46:12Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ It is important to distinguish this catalogue from the `LOG-` domain of Ch. 02: 
 
 For the complete mapping of all SbD-ToE requirements catalogues by technical domain, canonical prefix and owner, see [Ch. 02 - Catalogue Mapping](/sbd-toe/sbd-manual/requisitos-seguranca/addon/lista-requisitos-base#mapeamento-de-catalogos).
 
-The scope includes: centralisation and persistence of logs in production, definition of critical security events, retention in accordance with policy and regulatory requirements, integration with SIEM, automatic alerts with thresholds and a response SLA, correlation of events across sources, integration with the incident response process, behavioural detection, continuous operational health/readiness signals and measurement of operational effectiveness.
+The scope includes: centralisation and persistence of logs in production, definition of critical security events, retention in accordance with policy and regulatory requirements, integration with SIEM, automatic alerts with thresholds and a response SLA, correlation of events across sources, integration with the incident response process, behavioural detection, continuous operational health/readiness signals, measurement of operational effectiveness and the ability to restore the application: backups with tested restore and recovery objectives and procedure.
 
 > **On curation:** Consolidated from NIST SP 800-137 (Continuous Monitoring), NIST SP 800-61 (Incident Response), CIS Controls v8 (Controls 8, 13, 17), MITRE ATT&CK (Detection coverage), DORA (Art. 10, operational monitoring) and good practice of the modern SOC. It must be adapted to the monitoring platform context in use and reviewed with each operational security maturity cycle.
 
@@ -73,6 +73,8 @@ Requirements ensuring that the organisation has effective operational visibility
 | OPS-013 | Budget and *runaway* detection in model consumption (token spend) | - | ✔ | ✔ | Per agent and per mandate, a maximum consumption *budget* per time window is defined (tokens, calls, cost); each inference counts towards the budget; on reaching the warning threshold, an alert goes to the *owner*; on reaching the maximum threshold, the session pauses or the *kill-switch* is triggered according to the autonomy level. Usage metrics reported at the cadence of the *mandate* review. Detects uncontrolled *loops*, abuse and model efficiency regressions after an *upgrade*. |
 | OPS-014 | Detection of *jailbreak* / *off-policy actions* in production | - | - | ✔ | For A2+ agents, an active mechanism for detecting *jailbreak* attempts (LLM01-2025) and *off-policy actions* — actions outside the *scope* declared in the *mandate*. Signals include: divergence between the declared `intent` and the actual action (cross-link OPS-012), known adversarial patterns in the input, a *tool call* with arguments materially different from those expected, model refusals followed by a different attempt by the user. Actionable events feed IR (OPS-007) and the offline *eval suite* (Ch. 10 §C5). For L3 systems with an AI component, detection is mandatory — for A4 with a signed *mandate*, it is updated at the cadence declared in the *mandate*. |
 | OPS-015 | Continuous operational health and availability signals | - | ✔ | ✔ | Critical services and applications in production expose an explicit health, readiness or availability signal, or an equivalent platform mechanism, monitored continuously outside the instance. Examples include a health endpoint, heartbeat, readiness/liveness probes, load balancer health checks or the supervisor's watchdog. Persistent failures generate an actionable alert and feed, where applicable, rollback ([`DPL-008`](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy)) or incident response ([`OPS-007`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)). The signal does not expose secrets, sensitive configuration or unauthorised internal diagnostics; coverage is verifiable by service inventory. |
+| OPS-016 | Backups with tested restore | ✔ | ✔ | ✔ | Backups of the data and configuration needed to restore the application, with scope and frequency set by criticality (RPO): at L1, backups exist, with controlled access and stored outside the source system; at L2, frequency derived from the RPO, at least one isolated or immutable copy and integrity verified regularly; at L3, automated verification and a copy in a separate failure domain. Restore tested from the backups (the Manual's choice: annual at L1, half-yearly at L2, quarterly at L3), with time and completeness recorded against the RTO and the RPO and failures corrected. |
+| OPS-017 | Recovery objectives and procedure for the application | - | ✔ | ✔ | RTO and RPO defined per application from the risk classification (or from the existing BIA, see Ch. 01); system recovery procedure documented, with activation conditions, recovery order and dependencies (including suppliers); reviewed after significant changes; at L3, exercised at least once a year (the Manual's choice), with the RTO measured. |
 
 ---
 
@@ -86,6 +88,8 @@ Requirements ensuring that the organisation has effective operational visibility
 - **OPS-009**: Behavioural detection is necessarily probabilistic and contextual - it does not detect known threats with signatures, but anomalies that deviate from established patterns. It requires active maintenance of the baselines and a contextually calibrated tolerance of false positives.
 - **OPS-011**: AI/ML observability differs from traditional logging in three dimensions: (1) **input dimensionality** — prompts are arbitrarily complex free text, requiring logging with PII sanitisation and potentially differentiated retention decisions; (2) **probabilistic observability** — model outputs vary by design; the anomaly signal is not "output ≠ expected" but "output ≠ statistical baseline" (drift, accuracy degradation, confidence distribution); (3) **agentic action audit** — when the model invokes backend tools (e.g. via MCP, function calling), each invocation is an action with operational impact that must be treated as a first-order audit event, not as a sub-event of the model call. For the AI/ML architecture that originates these events, see [Ch. 04 — §AI/ML](../../arquitetura-segura/recomendacoes-avancadas#ai-ml).
 - **OPS-015**: This requirement defines the continuous operational health/readiness/availability signal in production. [`DPL-008`](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy) consumes that signal during deploys and rollback decisions; the [Post-Deployment Monitoring Policy](/sbd-toe/assets/policies/policy-monitorizacao-pos-deploy) operationalises the post-deployment window. Concrete platform patterns, such as Kubernetes probes or specific watchdogs, belong in service observability or cloud-native playbooks; the canonical requirement remains platform-neutral.
+- **OPS-016**: Rollback ([DPL-005](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy#catálogo-dpl---deploy-seguro)) reverts a deployment; it does not bring back data that was deleted, corrupted or encrypted by *ransomware*. Only a backup does, and only if the restore has been tested: a backup that has never been restored is a hypothesis, not a control. That is why the requirement joins the capability and the test, and the demand grows with the level: isolation and integrity verification from L2, automation and a separate failure domain at L3. The test cadences are the Manual's choice; an applicable regime may set others.
+- **OPS-017**: Knowing how long the application can be down (RTO) and how much data it can lose (RPO) is what gives measure to the backups (OPS-016) and to recovery. The objectives derive from the application's criticality, and a BIA the organisation already has can serve as a basis (Ch. 01). The procedure is the application's: the entity's business continuity and crisis management fall outside the scope of this Manual.
 
 ### Detailed note — OPS-012 {#ops-012}
 

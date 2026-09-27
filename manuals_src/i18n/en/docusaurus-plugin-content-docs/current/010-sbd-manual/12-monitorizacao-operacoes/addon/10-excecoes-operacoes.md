@@ -7,16 +7,16 @@ tags: [exceções, operacoes, monitorizacao, alertas, retencao, DORA, NIS2, SIEM
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/10-excecoes-operacoes.md
-  source_sha256: bcc9d469895751ff6d747e5f39c8727d1beb30f6d746783a91c719c5c7a6c8b1
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 21b6d3ae7b5760865297a904652811a9bf4cc6b096175f7a809ef961050a6577
+  source_sha256: fb0fd2491f23648ac37d3a2bbf9bdc0b7233f4b4dc679b9acd519e910423882c
+  source_commit: e942cb6d9bc50586a82a25264f7bb2a016652246
+  target_sha256: 738025cfeb2b95963d10dea30375bb25581c45023371d7154a0640873b52792a
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, avaliacao, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, validation_evaluation]
   glossary_sha256: 99e0d8587c7733c5c6dc374a84d95e5ca9b4bffd25c4838cac143ed3a2e2ab05
-  translated_at: 2026-09-27T07:53:55Z
-  stamped_at: 2026-09-27T07:53:55Z
+  translated_at: 2026-09-27T18:45:46Z
+  stamped_at: 2026-09-27T18:45:46Z
   reviewed_by: null
 ---
 
@@ -57,10 +57,10 @@ Silenced alerts without an end date or without a compensating control are treate
 
 ## Log retention - regulatory implications {#retenção-de-logs---implicações-regulatórias}
 
-Exceptions to OPS-003 with retention below an applicable statutory minimum (e.g. at least six months for the logs of high-risk AI systems — AI Act, Articles 19(1) and 26(6)), below the period set by the entity in its risk assessment (DORA; NIS2, where applicable) or below the internal policy have implications that go beyond technical approval:
+Below an applicable statutory minimum there is no exception to OPS-003: the statutory minimum prevails (Policy 29 §7), e.g. at least six months for the logs of high-risk AI systems (AI Act, Articles 19(1) and 26(6)). Exceptions with retention below the period set by the entity in its risk assessment (DORA; NIS2, where applicable) or below the internal policy, but never below the statutory minimum, have implications that go beyond technical approval:
 
 - the chain of authority must include legal or compliance validation, not only AppSec;
-- the exception must reference the specific regulatory requirement that is being compromised;
+- the exception must reference the regulatory requirement or the entity's period that is being reduced;
 - the maximum time limit is the lower of the ceiling of Policy 05 §7 and what the regulatory risk allows.
 
 ---

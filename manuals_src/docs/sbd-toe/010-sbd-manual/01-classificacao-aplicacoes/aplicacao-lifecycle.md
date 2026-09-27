@@ -87,7 +87,7 @@ Como **Developer / Scrum Master / Team Lead**, quero **classificar a aplicação
 |---|---|---|
 | L1 | Sim | Classificação simplificada, apenas eixos principais |
 | L2 | Sim | Classificação completa com **validação formal por AppSec Engineer** |
-| L3 | Sim | Classificação formal, **validada e aprovada por AppSec Engineer + GRC/Compliance** |
+| L3 | Sim | Classificação formal, **validada por AppSec Engineer + GRC/Compliance e aprovada pelo CISO ou equivalente** |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
@@ -284,7 +284,7 @@ Como **QA**, quero **validar que os requisitos aplicáveis por nível de risco e
 **Proporcionalidade por risco.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Recomendado (obrigatório) | Obrigatório (formal + assinatura) |
+| Obrigatório (checklist simplificada; aprovação registada antes da produção) | Obrigatório | Obrigatório (formal + assinatura) |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
@@ -338,7 +338,7 @@ Como **AppSec Engineer**, quero **verificar se as ameaças esperadas para o nív
 **Proporcionalidade por risco.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional (STRIDE básico) | Recomendado (STRIDE completo) | Obrigatório (STRIDE + MITRE ATT&CK) |
+| Opcional (STRIDE básico) | Obrigatório (STRIDE completo) | Obrigatório (STRIDE + MITRE ATT&CK) |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
@@ -389,9 +389,9 @@ Como **AppSec Engineer**, quero **rever a classificação com cadência fixa (L1
 - Evidência: issue rastreável datada, commit versionado, ou registo auditable
 
 **Proporcionalidade (cadência típica).**
-| Nível | Frequência sugerida | Obrigatório? |
+| Nível | Frequência | Obrigatório? |
 |---|---|---|
-| L1 | 12 meses | Recomendado |
+| L1 | 12 meses | Obrigatório |
 | L2 | 6 meses | Obrigatório |
 | L3 | 3 meses (ou por sprint) | Obrigatório |
 
@@ -491,12 +491,12 @@ Como **DevOps/SRE**, quero classificar **artefactos técnicos da aplicação** (
 - Evidência: commit com tags de classificação, issue rastreável, scan report, approval email
 
 **Proporcionalidade (por tipo de artefacto).**
-| Artefacto | Cap. Aplicável | L1 (Recomendado) | L2 (Obrigatório) | L3 (Reforçado) |
+| Artefacto | Cap. Aplicável | L1 (Obrigatório) | L2 (Obrigatório) | L3 (Reforçado) |
 |---|---|---|---|---|
 | Dockerfile | 09 | Base segura | Full hardening + scanning | Base segura auditada, scanning automático, registry private |
-| Pipeline (GH/GL/Jenkins) | 07 | Secrets em variables | Secrets em KV, audit log, SAST | Secrets em KV, audit log, SAST+DAST, assinatura imagem, 2FA |
-| IaC (Terraform/Helm) | 08 | Versionamento | Versionamento + review | Versionamento + review rigorosa + compliance scanning |
-| Imagem registada | 09 | Versão explícita | Scan vulnerabilidades | Scan + runtime policy + image signing |
+| Pipeline (GH/GL/Jenkins) | 07 | Secrets em variables protegidas, audit log, SAST + SCA | Secrets em KV, audit log, SAST + SCA | Secrets em KV, audit log, SAST + SCA + DAST, assinatura imagem, 2FA |
+| IaC (Terraform/Helm) | 08 | Versionamento + validação automática (lint, análise de segurança) | Versionamento + validação automática + review | Versionamento + validação automática + review rigorosa + compliance scanning |
+| Imagem registada | 09 | Versão explícita + scan vulnerabilidades | Scan vulnerabilidades | Scan + runtime policy + image signing |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
@@ -584,7 +584,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
   **Então** **Auditores podem validar conformidade** e **todas as decisões de classificação/risco têm fundamento normativo**
 
 **Critérios de aceitação (DoD).**
-- [ ] **Política 1 - Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequency de revisão (obrigatória em L2/L3)  
+- [ ] **Política 1 - Classificação de Risco**: Modelo E+D+I, critérios L1/L2/L3, responsabilidades por nível, frequência de revisão (obrigatória em todos os níveis)  
 - [ ] **Política 2 - Aceitação de Risco**: Critérios de aceitabilidade, TTL por nível, aprovadores, exceções + revalidação obrigatória antes da expiração  
 - [ ] **Política 3 - Revisão Periódica**: Cadência time-based (12m/6m/3m), owners, escalonamento de decisões, triggers para revisão de matriz e ameaças  
 - [ ] **Política 4 - Rastreabilidade & Auditoria**: Registo centralizado de classificações, exceções, revisões; versionamento; pista de auditoria; retenção de dados; acesso restrito  
@@ -605,7 +605,7 @@ Como **Gestão Executiva/CISO**, quero que existam **4 políticas organizacionai
 **Proporcionalidade (aplicação por nível).**
 | Nível | Classificação | Aceitação | Revisão Periódica | Rastreabilidade |
 |---|---|---|---|---|
-| L1 | Recomendado (simplificado) | Recomendado | Recomendado (anual) | Recomendado |
+| L1 | Obrigatório (simplificado) | Obrigatório (simplificado) | Obrigatório (anual) | Obrigatório (inventário) |
 | L2 | Obrigatório (completo) | Obrigatório + TTL | Obrigatório (semestral) | Obrigatório + audit trail |
 | L3 | Obrigatório (formal com aprovações) | Obrigatório + TTL + re-aprovação Gestão | Obrigatório (trimestral) | Obrigatório + rastreamento granular |
 
@@ -839,13 +839,13 @@ flowchart TB
 | US-01 - Classificação inicial                    | ✔  | ✔  | ✔  | Validação AppSec obrigatória em L2/L3 |
 | US-02 - Aplicação da matriz (c/ requisitos do Cap. 02)        | ✔  | ✔  | ✔  | Rastreabilidade REQ para Cap. 02 |
 | US-03 - Revisão por alteração relevante          | ✔  | ✔  | ✔  | Event-based, cascata a US-02/US-06 |
-| **US-07 - Revisão periódica time-based**        | ✔ (Rec.) | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em L2/L3) |
+| **US-07 - Revisão periódica time-based**        | ✔  | ✔  | ✔  | Cadência: 12m / 6m / 3m (obrigatória em todos os níveis) |
 | US-04 - Risco residual                           | (opcional) | ✔ | ✔  | Aprovações formais em L3 |
 | **US-08 - Aceitação com TTL**                    | (Rec.) | ✔ | ✔  | TTL conforme política master (Cap. 14); re-aprovação obrigatória em L2/L3 |
-| US-05 - Validação go-live                        | (Rec.) | ✔ | ✔  | Aprovação AppSec + Gestão em L3 |
+| US-05 - Validação go-live                        | ✔ | ✔ | ✔  | Aprovação AppSec + Gestão em L3 |
 | US-06 - Mapeamento de ameaças                    | (opcional) | ✔ | ✔  | Validação Arquitetos; escala de risco crítico |
-| US-09 - Classificação de artefactos técnicos    | ✔ (Rec.) | ✔ | ✔  | Aplica controlos Cap. 07/08/09; Arquitetos valida |
-| **US-11 - Políticas Organizacionais Formais**   | (Rec.) | ✔ | ✔  | 4 políticas obrigatórias em L2/L3; treinamento + auditoria |
+| US-09 - Classificação de artefactos técnicos    | ✔ | ✔ | ✔  | Aplica controlos Cap. 07/08/09; Arquitetos valida |
+| **US-11 - Políticas Organizacionais Formais**   | ✔ (simplificado) | ✔ | ✔  | 4 políticas obrigatórias (simplificadas em L1); treinamento + auditoria |
 | **US-10 - KPIs e Reporting**                    | (Rec.) | ✔ | ✔  | Mensal (ops), trimestral (gestão), anual (auditores) |
 
 ---

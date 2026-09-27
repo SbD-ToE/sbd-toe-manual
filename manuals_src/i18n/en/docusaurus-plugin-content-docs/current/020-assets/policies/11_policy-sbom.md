@@ -8,16 +8,16 @@ sidebar_position: 11
 translation:
   source_locale: pt
   source_path: 020-assets/policies/11_policy-sbom.md
-  source_sha256: 5a87027218468bc91423203403e52b9854753a5e33e3f257a67bda5652bd7253
-  source_commit: cdec9170438c29c7a3bd21b0463b30a06569c461
-  target_sha256: b21a124f50ba4cd51dcc1382ec08ed91ea5d15af6e49789767f3ccda6348fbe2
+  source_sha256: aedb7a9fb9cd1ea83485ce1a97b727027b481fec8130b4a038103494b9eba78f
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: 9fffe36c5dec18dc89ab8584b9dd578c3f5912137a670d09bd0f44f2605d98cb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, cra_pde, cra_support_period, discipline, eu_market_surveillance_authority, eu_placing_on_market, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: 397ec8b9d83c2b41e1051072fcb4652dd075845def344eb9303d068a588f6b38
-  translated_at: 2026-09-27T09:05:44Z
-  stamped_at: 2026-09-27T09:05:44Z
+  translated_at: 2026-09-27T13:29:41Z
+  stamped_at: 2026-09-27T13:29:41Z
   reviewed_by: null
 ---
 
@@ -81,10 +81,10 @@ SBOMs must be produced in JSON or XML format. Proprietary formats are not accept
 | Requirement | L1 | L2 | L3 |
 |---|---|---|---|
 | SBOM generated in every build | Mandatory (basic) | Mandatory (complete) | Mandatory (complete + signed) |
-| SBOM includes transitive dependencies | Recommended | Mandatory | Mandatory |
-| SBOM associated with the release artefact | Recommended | Mandatory | Mandatory |
+| SBOM includes transitive dependencies | Mandatory | Mandatory | Mandatory |
+| SBOM associated with the release artefact | Mandatory | Mandatory | Mandatory |
 | SBOM for container images | Recommended | Mandatory | Mandatory |
-| SBOM archived as a pipeline artefact | Recommended | Mandatory | Mandatory |
+| SBOM archived as a pipeline artefact | Mandatory | Mandatory | Mandatory |
 
 Generation of the SBOM must be automated in the pipeline - manual or ad hoc generation is not acceptable as a substitute for the build SBOM.
 

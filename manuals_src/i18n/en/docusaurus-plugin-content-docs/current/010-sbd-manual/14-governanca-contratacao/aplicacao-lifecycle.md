@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: dbf6bc99c49ee9558d2b9d2451e9a786aff3af183f2477333cdc4f05250cfaf0
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 7a5bc76d1139593076c83ab6b109eee495d2f6073e55e69288edb4bc9a5bac63
+  source_sha256: db3c2d55083342888036f5452d54b27816384319b269f1ac24d67a1d6257bfbe
+  source_commit: a516e3d115d1fa2cd512e36541105c7a3b83afb2
+  target_sha256: d2c49546f487918e990f1d7b2a59f219d2fdb4764bb0ec1a94b500ed7d5c2519
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, eu_startups, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 17ea8f20dee371f9538e7253b0d310b1692a0e8b2ee9981a9721f918ac97cb29
-  translated_at: 2026-09-27T09:05:41Z
-  stamped_at: 2026-09-27T09:05:41Z
+  translated_at: 2026-09-27T15:08:17Z
+  stamped_at: 2026-09-27T15:08:17Z
   reviewed_by: null
 ---
 
@@ -77,7 +77,7 @@ As **Developer + AppSec Engineer**, I want **to submit security exceptions throu
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional | Recommended | Mandatory |
+| Mandatory (formal record; approval by the application manager) | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -110,7 +110,7 @@ As **Legal + Procurement**, I want **to include SbD-ToE clauses in contracts**, 
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Mandatory | Mandatory + audits |
+| Mandatory (minimum clauses) | Mandatory | Mandatory + audits |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -143,7 +143,7 @@ As **GRC / Compliance**, I want **to validate suppliers continuously**, so that 
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional | Recommended | Mandatory |
+| Optional | Mandatory (annual) | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -176,7 +176,7 @@ As an **AppSec Engineer**, I want **to aggregate security practices by project i
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -231,7 +231,7 @@ As **Executive Management**, I want **to define and monitor governance KPIs**, s
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -248,7 +248,7 @@ As **Executive Management**, I want **to define and monitor governance KPIs**, s
 As a **Procurement Officer**, I want **to execute the formal supplier validation flow (questionnaire → AppSec analysis → approval)**, so that **new suppliers are guaranteed to meet minimum requirements before onboarding**.  
 
 **Acceptance criteria (BDD).**  
-- **Given** a new supplier classified as L2 or L3  
+- **Given** a new supplier with access to data, code or pipelines  
   **When** the validation flow is initiated  
   **Then** the questionnaire is sent, analysed by AppSec, and the approval/exception is recorded  
 
@@ -265,12 +265,12 @@ As a **Procurement Officer**, I want **to execute the formal supplier validation
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional | Recommended | Mandatory |
+| Mandatory (questionnaire or checklist) | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | New L2/L3 supplier; start of the validation flow | AppSec Engineer + Procurement Officer | 2 weeks (L2), 1 week (L3) |
+| Planning | New supplier with access to data, code or pipelines; start of the validation flow | AppSec Engineer + Procurement Officer | 2 weeks (L1 and L2), 1 week (L3) |
 
 **Useful links.**  
 - [Supplier Validation Model](./addon/modelo-validacao-fornecedores)
@@ -303,7 +303,7 @@ As an **AppSec Engineer**, I want **to review and reassess exceptions and compen
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -342,7 +342,7 @@ As **AppSec Engineer + Scrum Master / Team Lead**, I want **to maintain a struct
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -362,15 +362,15 @@ As **AppSec Engineer + Scrum Master / Team Lead**, I want **to maintain a struct
 
 :::userstory
 **Story.**   
-As **Executive Management**, I want **to formally designate a security owner (Security Champion) for each critical application**, so that **clear accountability, continuity of security decisions and risk communication are guaranteed**.  
+As **Executive Management**, I want **to formally designate a security owner (for example, the Security Champion) for each application**, so that **clear accountability, continuity of security decisions and risk communication are guaranteed**.  
 
 **Acceptance criteria (BDD).**  
-- **Given** an application classified as L2 or L3  
-  **When** a Security Champion is designated  
+- **Given** an application classified as L1, L2 or L3  
+  **When** the security owner is designated  
   **Then** they are responsible for submitting exceptions, validations, risk communication and policy compliance  
 
 **Acceptance criteria (DoD).**  
-- [ ] Security Champion designated in writing (official e-mail, document, HR system)  
+- [ ] Security owner designated in writing (official e-mail, document, HR system)  
 - [ ] Responsibilities documented (exceptions, validation, communication, traceability)  
 - [ ] Mandatory SbD-ToE training completed (Ch. 13 - Training and Onboarding)  
 - [ ] Centralised register maintained (Git, Confluence, SharePoint)  
@@ -383,12 +383,12 @@ As **Executive Management**, I want **to formally designate a security owner (Se
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Mandatory | Mandatory |
+| Mandatory | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Planning | L2/L3 application; project kick-off or owner rotation | Executive Management + Security Champion + AppSec Engineer | Designation at project kick-off or change of owner |
+| Planning | L1–L3 application; project kick-off or owner rotation | Executive Management + Security Champion + AppSec Engineer | Designation at project kick-off or change of owner |
 
 **Useful links.**  
 - [Governance Model](./addon/modelo-governancao)
@@ -464,7 +464,7 @@ As **CISO + Executive Management**, I want **to consolidate and report governanc
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -506,7 +506,7 @@ As **CISO + AppSec Engineer**, I want **to formalise and document the governance
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Mandatory (model approved by senior management) | Mandatory (+ approval authorities per level) | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -549,7 +549,7 @@ As **AppSec Engineer + Scrum Master / Team Lead**, I want **to maintain a centra
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory |
+| Basic | Mandatory | Mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -594,7 +594,7 @@ As **Procurement Officer + AppSec Engineer**, I want to **reassess and re-approv
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Annual | Half-yearly | Quarterly / critical event |
+| Annual | Annual / critical event | Half-yearly / critical event |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -638,7 +638,7 @@ As **Security Champion + HR / People Operations**, I want **to execute a structu
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Recommended | Mandatory + validated quiz |
+| Basic | Mandatory | Mandatory + validated quiz |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -689,7 +689,7 @@ As **CISO + Training Manager**, I want **to define and execute a mandatory train
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Mandatory | Mandatory + 80% score required |
+| Mandatory (onboarding equivalent to that of employees, completed before access) | Mandatory | Mandatory + 80% score required |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -1041,21 +1041,21 @@ As **GRC / Compliance** with the support of **CISO + Executive Management**, I w
 
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
-| Formal exceptions with approval authorities | Optional | Recommended | Mandatory |
-| Contractual clauses | Recommended | Mandatory | Mandatory + audits |
-| Supplier validation (initial) | Optional | Recommended | Mandatory |
-| Organisational traceability | Basic | Recommended | Mandatory |
-| Governance KPIs | Basic | Recommended | Mandatory |
-| Formal supplier validation flow | Optional | Recommended | Mandatory |
-| Continuous review of exceptions | Basic | Recommended | Mandatory |
-| Compliance repository per app | Basic | Recommended | Mandatory |
-| Formal designation of security owners | Recommended | Mandatory | Mandatory |
+| Formal exceptions with approval authorities | Mandatory (formal record; approval by the application manager) | Mandatory | Mandatory |
+| Contractual clauses | Mandatory (minimum clauses) | Mandatory | Mandatory + audits |
+| Continuous supplier validation | Optional | Mandatory (annual) | Mandatory |
+| Organisational traceability | Basic | Mandatory | Mandatory |
+| Governance KPIs | Basic | Mandatory | Mandatory |
+| Formal supplier validation flow | Mandatory (questionnaire or checklist) | Mandatory | Mandatory |
+| Continuous review of exceptions | Basic | Mandatory | Mandatory |
+| Compliance repository per app | Basic | Mandatory | Mandatory |
+| Formal designation of security owners | Mandatory | Mandatory | Mandatory |
 | Periodic compliance validation | Annual | Half-yearly | Quarterly |
-| Maturity KPIs and executive reporting | Basic | Recommended | Mandatory |
-| Formal governance model | Basic | Recommended | Mandatory |
-| Centralised checklist per chapter | Basic | Recommended | Mandatory |
-| Post-onboarding supplier reassessment | Annual | Annual | Half-yearly / critical event |
-| **Technical preparation of contractors** | Basic | Recommended | Mandatory + validated quiz |
+| Maturity KPIs and executive reporting | Basic | Mandatory | Mandatory |
+| Formal governance model | Mandatory (model approved by senior management) | Mandatory (+ approval authorities per level) | Mandatory |
+| Centralised checklist per chapter | Basic | Mandatory | Mandatory |
+| Post-onboarding supplier reassessment | Annual | Annual / critical event | Half-yearly / critical event |
+| **Technical preparation of contractors** | Basic | Mandatory | Mandatory + validated quiz |
 | **Pre-access training track** | Basic | Mandatory | Mandatory + 80% score |
 | **Secure offboarding** | Basic | Mandatory | Mandatory + audit trail |
 | **Continuous supplier monitoring** | No | Recommended | Mandatory |

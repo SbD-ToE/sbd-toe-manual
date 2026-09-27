@@ -8,16 +8,16 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 020-assets/policies/10_policy-dependencias.md
-  source_sha256: e50d2f126e7df5c584cd7dca9cf6d94abf2e7a2d9342ed93231c046d5e811bf7
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 402c2ee4242135b8ed4fa1f7038e6a85127e86c017dc075a8aee0ea1b7f7dfd1
+  source_sha256: bdb0e4beaeadf34a033f47ee40cb3c85dd532572a135a5802aad7ebb0b68a750
+  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
+  target_sha256: dcd656cb52925a7628e089b4b94d509334ea5bdd596ce1189fdbcf4fadfa7e38
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c4a5dc988eb18558948a8787872ca650b4201a15571961c26cb014e9cbd7dc30
-  translated_at: 2026-09-27T09:08:13Z
-  stamped_at: 2026-09-27T09:08:13Z
+  translated_at: 2026-09-27T14:19:05Z
+  stamped_at: 2026-09-27T14:19:05Z
   reviewed_by: null
 ---
 
@@ -146,7 +146,7 @@ The CI/CD pipeline must include automatic SCA analysis in every build, covering 
 
 | Level | SCA requirement |
 |---|---|
-| L1 | Alert; does not block |
+| L1 | Blocks High and Critical findings without an approved exception |
 | L2 | Blocks High and Critical findings without an approved exception |
 | L3 | Blocks Medium, High and Critical findings without an approved exception |
 
@@ -166,6 +166,7 @@ For systems in production, there must be a mechanism for correlating the SBOM of
 
 - [ ] Inventory of deployed components per service and environment (`inventario-runtime-<servico>-<ambiente>.json`)
 - [ ] Integration with a vulnerability feed (NVD, OSV, GitHub Advisory Database)
+- [ ] Sources of vulnerability information recorded (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals, at least at the annual review of this policy
 - [ ] Alert generated when a CVE affects a deployed version, with component, version, environment and severity
 - [ ] Response SLA defined per severity (see CVE Exceptions Policy)
 

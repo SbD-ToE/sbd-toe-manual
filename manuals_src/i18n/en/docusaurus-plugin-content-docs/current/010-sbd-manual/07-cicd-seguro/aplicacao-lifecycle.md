@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/aplicacao-lifecycle.md
-  source_sha256: e879734dc6b71d774c08f8f65cc99c6741c20ad532590ef44054a1616d24bece
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 17805c66842b854b7a8499c9726f1c358103bd6a146eb02e7116d86e4c9305d6
+  source_sha256: 5023737507c52572f27e4ae34ec5f8039a3e37b452199a1b6fc60bd55af4ae81
+  source_commit: a7cc396e338fab4654022c3d9077a3472e358da2
+  target_sha256: bd1ba42b6119c94ce0f82a8f23405f75cc5d263935062835ada4b93d718b7a8d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, practitioner_manual, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 413c76b102e0c311b1d8351a02636a6cd9df70602c5cf8f3c94740b36467c159
-  translated_at: 2026-09-26T09:09:20Z
-  stamped_at: 2026-09-26T18:34:26Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, como_fazer, cycle_iteration, deterministic, eu_startups, framework_source_corpus, lifecycle_phase, practitioner_manual, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 8e0a9e412a45cb18d7c66722a093bf4faba95364df8e5c65e23bbbf2434d4a47
+  translated_at: 2026-09-27T15:09:26Z
+  stamped_at: 2026-09-27T15:09:26Z
   reviewed_by: null
 ---
 
@@ -157,7 +157,7 @@ Commit history; `ci-pipeline.yml` file; PR approval; review logs; record of effe
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Yes | Single pipeline version with manual approval |
+| L1 | Yes | Pipeline versioned in the repository; changes only via PR with review |
 | L2 | Yes | Versioning and mandatory review |
 | L3 | Yes | Signed change control and reinforced provenance validation |
 
@@ -195,7 +195,7 @@ As **Developers**, I want the pipeline to run security validators with observabl
 - [ ] Secrets scanning active  
 - [ ] IaC scanning (when applicable)  
 - [ ] Execution logs/artefacts retained  
-- [ ] High failures block merge (L2/L3)
+- [ ] High/Critical failures block merge (L1–L3)
 :::
 
 **🧾 Artefacts & evidence.**  
@@ -204,8 +204,8 @@ Scanner reports; CI/CD logs; *exit codes*; blocking records; vulnerability dashb
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Yes | Baseline validation (SAST, secrets) |
-| L2 | Yes | Inclusion of IaC and dependency analysis |
+| L1 | Yes | Blocking baseline validation (SAST, SCA, secrets) + SBOM per build; image scanning where containers exist |
+| L2 | Yes | L1 baseline + inclusion of IaC |
 | L3 | Yes | Full validation including containers and SBOM |
 
 **Integration into the SDLC.**
@@ -247,7 +247,7 @@ Secrets policies; access logs; OIDC configuration; evidence of TTL/rotation.
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Optional | Secrets stored encrypted + masking |
+| L1 | Yes | Secrets in a vault or protected platform variables + masking |
 | L2 | Yes | OIDC implemented with controlled TTL |
 | L3 | Yes | Automatic ephemeral tokens and frequent rotation |
 
@@ -322,7 +322,7 @@ As **DevOps / SRE**, I want all artefacts to be signed and to have validated pro
 - [ ] Automatic signing  
 - [ ] Provenance generated  
 - [ ] Verification before release  
-- [ ] Automatic rejection on failure (L2/L3)
+- [ ] Automatic rejection on failure (L1–L3)
 :::
 
 **🧾 Artefacts & evidence.**  
@@ -333,7 +333,7 @@ Digital signatures; provenance files; promotion logs; build audit.
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Yes | Signing recommended + manual verification on releases |
+| L1 | Yes | Verifiable hash generated at build + verification before promotion, with rejection on failure (signing recommended) |
 | L2 | Yes | Automatic signing + mandatory verification |
 | L3 | Yes | Automatic blocking + reinforced provenance validations |
 
@@ -378,7 +378,7 @@ Gate policies; blocking logs; records of threshold changes; evidence of decision
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Yes | Blocking on Critical only |
+| L1 | Yes | Blocking on High/Critical |
 | L2 | Yes | High/Critical blocking + AppSec approval for exceptions |
 | L3 | Yes | Automatic blocking + reinforced governance (incl. GRC on exceptions) |
 
@@ -421,7 +421,7 @@ Scanning reports; SBOM; image audit; build logs.
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Optional | Periodic scans of base images |
+| L1 | Yes | Image scanning in the pipeline (Critical blocks) + SBOM per build |
 | L2 | Yes | Mandatory SBOM + validation of base images |
 | L3 | Yes | Continuous scans + CVE correlation + blocking on critical risk |
 
@@ -1158,10 +1158,10 @@ The matrix ensures that effort is proportional to risk **without ever compromisi
 | Determinism        | Sufficient logging                 | Reproducibility as a requirement            | Reproducibility + reinforced audit |
 | Signal vs decision    | Named approval for production    | Named approval + segregation of duties    | Named approval + reinforced control + audit |
 | Empirical evidence  | Basic logs + key artefacts    | Logs + *exit codes* + reinforced retention    | Full evidence + immutable export (when required) |
-| Scanners            | SAST + secrets                     | + IaC + dependencies                        | + containers + SBOM + extended coverage |
+| Scanners            | SAST + SCA + secrets + SBOM (+ images, if any) | + IaC                                        | + extended coverage |
 | Secrets            | Masking + secure storage     | OIDC preferred + controlled TTL             | OIDC mandatory + short TTL + frequent rotation |
 | Runners             | Shared with hardening          | Segregated per project                       | Ephemeral + network segmentation + automatic destruction |
-| Artefacts          | Signing recommended             | Signing + mandatory verification        | Automatic blocking on failure + reinforced provenance |
+| Artefacts          | Hash verified before promotion + rejection on failure; signing recommended | Signing + mandatory verification        | Automatic blocking on failure + reinforced provenance |
 | Exceptions            | Simple record                    | Dual approval + TTL                         | Dual approval + frequent review + audit |
 | Traceability     | Logs 30 days                       | Logs 90 days + commit-build correlation        | ≥1 year + immutable export + dashboards |
 | DAST                | Periodic manual                   | In pre-release staging                       | Continuous + automatic blocking |

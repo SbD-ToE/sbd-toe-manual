@@ -29,7 +29,7 @@ O objetivo desta política é garantir que:
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Recomendado; checklist simplificada; aprovação do Tech Lead |
+| L1 | Obrigatório; checklist simplificada; gates automáticos de segurança; aprovação explícita do Tech Lead, registada |
 | L2 | Obrigatório; checklist completa; gate automático; aprovação formal |
 | L3 | Obrigatório; checklist completa; gate automático; dupla aprovação; artefacto de decisão imutável |
 

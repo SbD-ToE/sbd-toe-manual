@@ -6,16 +6,16 @@ tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md
-  source_sha256: f4e5883d1f6044fd7dd470991b5655143aad6c94c0372120ba27bd1e357fc0fa
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: fa56d885b84b5e7512691556b257cc2c21d59a3c09d5922ea4756370963b554f
+  source_sha256: 5f5f9d7f804d8fe98fd78238d166c468813d636cc60e5da3fdf19362b51f11bc
+  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
+  target_sha256: 127b292acd94f4c63497db41d2e8175a82718f4c4997e5ec06597e6342f311a6
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
-  glossary_sha256: f6ae917127ac6e8e5843bed4b0ae5149090a1084fca0c5e241cb591a7f0239e0
-  translated_at: 2026-09-27T07:53:36Z
-  stamped_at: 2026-09-27T07:53:36Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: 174b8415b4b1d2e9821f36a9dca0e6a5bbb87a1cf45d928e23040a4a940c3d5a
+  translated_at: 2026-09-27T15:09:27Z
+  stamped_at: 2026-09-27T15:09:27Z
   reviewed_by: null
 ---
 
@@ -101,7 +101,7 @@ As a **Developer / Scrum Master / Team Lead**, I want **to classify the applicat
 |---|---|---|
 | L1 | Yes | Simplified classification, main axes only |
 | L2 | Yes | Full classification with **formal validation by the AppSec Engineer** |
-| L3 | Yes | Formal classification, **validated and approved by the AppSec Engineer + GRC/Compliance** |
+| L3 | Yes | Formal classification, **validated by the AppSec Engineer + GRC/Compliance and approved by the CISO or equivalent** |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -298,7 +298,7 @@ As a **QA** role, I want **to validate that the requirements applicable to the r
 **Proportionality by risk.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Recommended (mandatory) | Mandatory (formal + signature) |
+| Mandatory (simplified checklist; approval recorded before production) | Mandatory | Mandatory (formal + signature) |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -352,7 +352,7 @@ As an **AppSec Engineer**, I want **to verify whether the threats expected for t
 **Proportionality by risk.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional (basic STRIDE) | Recommended (full STRIDE) | Mandatory (STRIDE + MITRE ATT&CK) |
+| Optional (basic STRIDE) | Mandatory (full STRIDE) | Mandatory (STRIDE + MITRE ATT&CK) |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -403,9 +403,9 @@ As an **AppSec Engineer**, I want **to review the classification at a fixed cade
 - Evidence: dated traceable issue, versioned commit, or auditable record
 
 **Proportionality (typical cadence).**
-| Level | Suggested frequency | Mandatory? |
+| Level | Frequency | Mandatory? |
 |---|---|---|
-| L1 | 12 months | Recommended |
+| L1 | 12 months | Mandatory |
 | L2 | 6 months | Mandatory |
 | L3 | 3 months (or per sprint) | Mandatory |
 
@@ -505,12 +505,12 @@ As a **DevOps/SRE**, I want to classify the **application's technical artefacts*
 - Evidence: commit with classification tags, traceable issue, scan report, approval email
 
 **Proportionality (by artefact type).**
-| Artefact | Applicable Ch. | L1 (Recommended) | L2 (Mandatory) | L3 (Reinforced) |
+| Artefact | Applicable Ch. | L1 (Mandatory) | L2 (Mandatory) | L3 (Reinforced) |
 |---|---|---|---|---|
 | Dockerfile | 09 | Secure base | Full hardening + scanning | Audited secure base, automatic scanning, private registry |
-| Pipeline (GH/GL/Jenkins) | 07 | Secrets in variables | Secrets in KV, audit log, SAST | Secrets in KV, audit log, SAST+DAST, image signing, 2FA |
-| IaC (Terraform/Helm) | 08 | Versioning | Versioning + review | Versioning + rigorous review + compliance scanning |
-| Registered image | 09 | Explicit version | Vulnerability scan | Scan + runtime policy + image signing |
+| Pipeline (GH/GL/Jenkins) | 07 | Secrets in protected variables, audit log, SAST + SCA | Secrets in KV, audit log, SAST + SCA | Secrets in KV, audit log, SAST + SCA + DAST, image signing, 2FA |
+| IaC (Terraform/Helm) | 08 | Versioning + automated validation (lint, security analysis) | Versioning + automated validation + review | Versioning + automated validation + rigorous review + compliance scanning |
+| Registered image | 09 | Explicit version + vulnerability scan | Vulnerability scan | Scan + runtime policy + image signing |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -598,7 +598,7 @@ As **Executive Management/CISO**, I want **4 formal, approved organisational pol
   **Then** **Auditors can validate compliance** and **all classification/risk decisions have a normative basis**
 
 **Acceptance criteria (DoD).**
-- [ ] **Policy 1 - Risk Classification**: E+D+I model, L1/L2/L3 criteria, responsibilities per level, review frequency (mandatory at L2/L3)  
+- [ ] **Policy 1 - Risk Classification**: E+D+I model, L1/L2/L3 criteria, responsibilities per level, review frequency (mandatory at all levels)  
 - [ ] **Policy 2 - Risk Acceptance**: Acceptability criteria, TTL per level, approvers, exceptions + mandatory revalidation before expiry  
 - [ ] **Policy 3 - Periodic Review**: Time-based cadence (12m/6m/3m), owners, escalation of decisions, triggers for matrix and threat review  
 - [ ] **Policy 4 - Traceability & Audit**: Centralised record of classifications, exceptions, reviews; versioning; audit trail; data retention; restricted access  
@@ -619,7 +619,7 @@ As **Executive Management/CISO**, I want **4 formal, approved organisational pol
 **Proportionality (application per level).**
 | Level | Classification | Acceptance | Periodic Review | Traceability |
 |---|---|---|---|---|
-| L1 | Recommended (simplified) | Recommended | Recommended (yearly) | Recommended |
+| L1 | Mandatory (simplified) | Mandatory (simplified) | Mandatory (annual) | Mandatory (inventory) |
 | L2 | Mandatory (full) | Mandatory + TTL | Mandatory (half-yearly) | Mandatory + audit trail |
 | L3 | Mandatory (formal with approvals) | Mandatory + TTL + Management re-approval | Mandatory (quarterly) | Mandatory + granular tracking |
 
@@ -853,13 +853,13 @@ flowchart TB
 | US-01 - Initial classification                    | ✔  | ✔  | ✔  | AppSec validation mandatory at L2/L3 |
 | US-02 - Applying the matrix (with Ch. 02 requirements)        | ✔  | ✔  | ✔  | REQ traceability to Ch. 02 |
 | US-03 - Review upon relevant change          | ✔  | ✔  | ✔  | Event-based, cascades to US-02/US-06 |
-| **US-07 - Periodic time-based review**        | ✔ (Rec.) | ✔  | ✔  | Cadence: 12m / 6m / 3m (mandatory at L2/L3) |
+| **US-07 - Periodic time-based review**        | ✔  | ✔  | ✔  | Cadence: 12m / 6m / 3m (mandatory at all levels) |
 | US-04 - Residual risk                           | (optional) | ✔ | ✔  | Formal approvals at L3 |
 | **US-08 - Acceptance with TTL**                    | (Rec.) | ✔ | ✔  | TTL per master policy (Ch. 14); re-approval mandatory at L2/L3 |
-| US-05 - Go-live validation                        | (Rec.) | ✔ | ✔  | AppSec + Management approval at L3 |
+| US-05 - Go-live validation                        | ✔ | ✔ | ✔  | AppSec + Management approval at L3 |
 | US-06 - Threat mapping                    | (optional) | ✔ | ✔  | Architect validation; escalates critical risk |
-| US-09 - Classification of technical artefacts    | ✔ (Rec.) | ✔ | ✔  | Applies Ch. 07/08/09 controls; Architects validate |
-| **US-11 - Formal Organisational Policies**   | (Rec.) | ✔ | ✔  | 4 policies mandatory at L2/L3; training + audit |
+| US-09 - Classification of technical artefacts    | ✔ | ✔ | ✔  | Applies Ch. 07/08/09 controls; Architects validate |
+| **US-11 - Formal Organisational Policies**   | ✔ (simplified) | ✔ | ✔  | 4 mandatory policies (simplified at L1); training + audit |
 | **US-10 - KPIs and Reporting**                    | (Rec.) | ✔ | ✔  | Monthly (ops), quarterly (management), yearly (auditors) |
 
 ---

@@ -50,6 +50,16 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 
 ---
 
+## 🧭 Nota: contexto regulatório {#-nota-contexto-regulatório}
+
+O nível L1–L3 mede o risco próprio da aplicação. Independentemente dele, a aplicação pode estar sob um regime que torne obrigatórios alguns requisitos em qualquer nível: uma entidade financeira sob o DORA, um produto com elementos digitais sob o CRA ou um sistema de IA de risco elevado sob o AI Act, por exemplo. Por isso, o registo de classificação declara também os **contextos regulatórios** aplicáveis, com a evidência que os fundamenta, e revê-os nos mesmos momentos em que revê a classificação.
+
+Os catálogos de requisitos não mudam com o regime. O que cada contexto exige acima do nível (os pisos, cada um com o artigo que o fundamenta) está no cross-check normativo, na página «Requisitos aplicáveis» de cada regulação.
+
+> 📌 Ver: [Cross-check normativo](/sbd-toe/cross-check-normativo/intro)
+
+---
+
 ## 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê {#-prescrição-prática-o-quê-quem-como-quando-porquê-e-para-quê}
 
 ### 📌 O que deve ser feito {#-o-que-deve-ser-feito}

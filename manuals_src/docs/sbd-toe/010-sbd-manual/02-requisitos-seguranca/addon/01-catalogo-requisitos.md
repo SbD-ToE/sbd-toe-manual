@@ -51,6 +51,7 @@ Consulte a aplicação proporcional dos requisitos por domínio técnico no
 - [ERR - Gestão de Erros](lista-requisitos-base#err)
 - [CFG - Configuração Segura](lista-requisitos-base#cfg)
 - [ENC - Dados Sensíveis e Criptografia](lista-requisitos-base#enc)
+- [PRI - Dados Pessoais (engenharia)](lista-requisitos-base#pri)
 - [API - Segurança de APIs](lista-requisitos-base#api)
 - [INT - Mensagens e Integrações](lista-requisitos-base#int)
 - [REQ - Definição de Requisitos](lista-requisitos-base#req)

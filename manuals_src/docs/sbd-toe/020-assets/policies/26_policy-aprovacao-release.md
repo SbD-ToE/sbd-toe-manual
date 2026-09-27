@@ -28,7 +28,7 @@ O objetivo desta política é garantir que:
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Recomendado; aprovação informal do Tech Lead |
+| L1 | Obrigatório; aprovação explícita do Tech Lead, registada com data e identidade do aprovador |
 | L2 | Obrigatório; aprovação formal registada; aceitação explícita de risco residual se aplicável |
 | L3 | Obrigatório; dupla aprovação; registo imutável; aceitação de risco residual com alçada CISO |
 

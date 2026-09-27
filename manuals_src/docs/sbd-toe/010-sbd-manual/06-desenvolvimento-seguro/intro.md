@@ -118,7 +118,7 @@ Em última análise, trata-se de transformar **cada linha de código** numa opor
 
 | Nível de risco | Exigência mínima |
 |----------------|------------------|
-| **L1 (baixo)** | Linters obrigatórios, checklist de PR, dependências justificadas |
+| **L1 (baixo)** | Guidelines aprovadas por stack, linters obrigatórios, SAST como *gate* (bloqueio de severidade alta ou crítica), checklist de PR, dependências justificadas |
 | **L2 (médio)** | Guidelines curadas por stack, SAST obrigatório, exceções registadas |
 | **L3 (alto)**  | Governação formal, revisor dedicado, *policy-as-code* em CI/CD |
 

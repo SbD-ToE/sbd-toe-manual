@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/aplicacao-lifecycle.md
-  source_sha256: c336da9e83b4d205a3319534be29d6fbe238c0d7147060d4625ec96e8a95a2f7
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 0f08c962d8c1fd0372a74dc7326621758d5f2ab5073a30d5e6817c0aae2ec57b
+  source_sha256: d7985dd2a36d4523a448f2210c2f1b96db1af8c1e7ba5d1bde5e3559b9571576
+  source_commit: a7cc396e338fab4654022c3d9077a3472e358da2
+  target_sha256: 42df4f026e9ad1e50a35835d012b87a19d21d4df0d2e85df7b3b04f7ba84c064
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, eu_placing_on_market, lifecycle_phase, mapping, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 1d9c05e4730e8aec8b1730c0b391b1e9b922eb5c8efc5b3bee2b00c1d220bda0
-  translated_at: 2026-09-27T07:05:58Z
-  stamped_at: 2026-09-27T07:14:46Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, eu_placing_on_market, eu_startups, lifecycle_phase, mapping, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 3bb1fe7ab668390b69d928dc873c34bd5922f2ff88191aecd185bdaa9295916e
+  translated_at: 2026-09-27T15:09:22Z
+  stamped_at: 2026-09-27T15:09:22Z
   reviewed_by: null
 ---
 
@@ -247,7 +247,7 @@ As **DevOps / SRE**, I want to integrate linters and SAST into the pipeline, so 
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |-------|--------------|---------|
-| L1    | Yes          | Basic linters + light SAST |
+| L1    | Yes          | Security linters + SAST blocking High/Critical findings |
 | L2    | Yes          | Full SAST + severity *gating* |
 | L3    | Yes          | SAST + additional validations (IaC/DAST) |
 
@@ -382,7 +382,7 @@ As an **AppSec Engineer**, I want to review and publish curated guidelines quart
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |-------|--------------|---------|
-| L1    | Optional     | Use of *default* upstream rules |
+| L1    | Yes          | *Default* upstream rules, approved and reviewed within the validity period |
 | L2    | Yes          | Mandatory organisational curation |
 | L3    | Yes          | *Policy-as-code* + controlled distribution |
 
@@ -581,7 +581,7 @@ As a **Developer**, I want to run **linters and security validations locally** b
 **Proportionality.**
 | Level | Mandatory? | Adjustments |
 |-------|---------------|---------|
-| L1 | Recommended | Basic linters (style, typos) |
+| L1 | Yes | Linter with security rules active locally (hook or IDE) |
 | L2 | Yes | Mandatory linters + *secrets scanning* |
 | L3 | Yes | Pre-commit + light local SAST + pattern validation |
 
@@ -628,7 +628,7 @@ As an **AppSec Engineer**, I want the pipeline to **automatically detect dangero
 **Proportionality.**
 | Level | Mandatory? | Adjustments |
 |-------|---------------|---------|
-| L1 | Yes | Detection of **critical** patterns only (eval, exec) |
+| L1 | Yes | Detection of **critical** and **high** patterns (eval, exec, SQL, XSS) |
 | L2 | Yes | Expanded detection (**critical** + **high**: SQL, XSS) |
 | L3 | Yes | Complete detection + context and educational reinforcement |
 
@@ -766,7 +766,7 @@ As an **AppSec Engineer**, I want the provenance of all incorporated code to be 
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Provenance flagged; SAST with a basic baseline | Provenance identified + human review for non-internal origin; baseline approved by AppSec + thresholds per profile | + *policy-as-code* for the gate, periodic audit of the baseline and profiles, auditable retention of deviations |
+| Provenance flagged; SAST with an AppSec-approved baseline and High/Critical blocking | Provenance identified + human review for non-internal origin; baseline approved by AppSec + thresholds per profile | + *policy-as-code* for the gate, periodic audit of the baseline and profiles, auditable retention of deviations |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -806,14 +806,14 @@ As an **AppSec Engineer**, I want the provenance of all incorporated code to be 
 | Guidelines | Upstream rules | Curated per stack | Audited and *policy-as-code* |
 | Code review | Basic checklist | Dual review | Dedicated review (includes AppSec when applicable) |
 | Dependencies | Simple validation | Formal validation | Traceable SBOM |
-| CI/CD | Basic linters | Mandatory SAST | SAST + IaC/DAST + policies |
+| CI/CD | Security linters + SAST (High/Critical blocking) | Mandatory SAST | SAST + IaC/DAST + policies |
 | Exceptions | Simple record | Revalidation per sprint | Dual approval |
 | GenAI | Optional record | Review + mandatory constraints | Formal review, licences and reinforced evidence |
 | Governance | Annual curation | Quarterly | Continuous and automated |
 | Evidence | Manual export | Automatic export | Immutable and audited archive |
 | Security Gate | Basic | Complete | Reinforced and automated |
-| Local Validations (US-12) | Recommended | Mandatory | Mandatory + light SAST |
-| Dangerous Patterns (US-13) | Critical only | Critical + High | Complete + education |
+| Local Validations (US-12) | Mandatory (local security linter) | Mandatory | Mandatory + light SAST |
+| Dangerous Patterns (US-13) | Critical + High | Critical + High | Complete + education |
 | Metrics & Compliance (US-14) | Recommended | With alerts | Continuous + SLA |
 
 ---

@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: a589f923c640b81d1961d1f1c6d5d6c33043145281a73ac8ef04553c619cdb4d
-  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
-  target_sha256: ee75854902e1f27d80f7a66749e782fdd3882b8228e4d5cf4822a12ee992aa46
+  source_sha256: 6101013138beedf6d8558a87f2ca4d40c4da5b662d7af828541cc59195fe3f18
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: 30a9bc4aab9ec882686353406bf67e17a4e084b25b356fbd4fa04174b0f3ecb8
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: c2753e8f6683dd662128141b2367ef4a76a91da340ee5e3eaff416993b57e772
-  translated_at: 2026-09-27T08:02:48Z
-  stamped_at: 2026-09-27T08:02:48Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, eu_startups, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: e49f84b634f56a3dadc8484abb51b1a3730a24e53cec2739d8d00492cd6474b6
+  translated_at: 2026-09-27T15:09:23Z
+  stamped_at: 2026-09-27T15:09:23Z
   reviewed_by: null
 ---
 
@@ -112,7 +112,7 @@ As the **Dev Team**, I want to build images from trusted bases, versioned by SHA
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Yes | Official images with a version (not `latest`) |
+| L1 | Yes | Official images from an approved source with a version (not `latest`) + no unjustified interactive tools |
 | L2 | Yes | Fixed digest + Hadolint validation + no interactive tools |
 | L3 | Yes | Fixed digest + Hadolint + multi-stage + Distroless + scanner integrated into the build |
 
@@ -163,7 +163,7 @@ As **DevOps / SRE**, I want the pipeline to run vulnerability scanners (SCA) on 
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Yes | Warning for Critical + Medium |
+| L1 | Yes | Block on Critical; warning for High/Medium |
 | L2 | Yes | Block on High/Critical |
 | L3 | Yes | Block on Medium+ |
 
@@ -215,7 +215,7 @@ As an **AppSec Engineer**, I want all produced images to be digitally signed and
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
 | L1 | Recommended | Optional signing, warning if unsigned |
-| L2 | Recommended | Signing recommended, verification in Admission Control |
+| L2 | Yes | Signing mandatory, verification in Admission Control with rejection of images without a valid signature |
 | L3 | Yes | Mandatory signing, blocking verification |
 
 **Integration into the SDLC.**  
@@ -270,7 +270,7 @@ As **DevOps / SRE**, I want every container execution in Kubernetes to be valida
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Basic validation (non-root) in audit mode |
+| L1 | Yes | Non-root with active enforcement (containers running as root rejected); remaining policies in audit mode |
 | L2 | Yes | Restrictive policies in enforce mode |
 | L3 | Yes | Complete policies + detailed audit + periodic review |
 
@@ -435,7 +435,7 @@ As **DevOps + AppSec**, I want to impose an allowlist of trusted registries and 
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Warning for untrusted registries |
+| L1 | Yes | Allowlist of approved sources for base images, with rejection of unapproved sources; warning for other untrusted registries |
 | L2 | Yes | Allowlist with blocking by origin, digest recommended |
 | L3 | Yes | Restrictive allowlist + mandatory digest-only + verified signature |
 
@@ -490,7 +490,7 @@ As **DevOps / SRE**, I want to prohibit static credentials in images and use eph
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Secret scanning, credentials not in env vars |
+| L1 | Yes | Secret scanning active in the pipeline; credentials not embedded in the image or in env vars |
 | L2 | Yes | Mandatory secret scanning, OIDC with short TTL |
 | L3 | Yes | Secret scanning + OIDC + automatic rotation + continuous audit |
 
@@ -544,7 +544,7 @@ As **DevOps + AppSec**, I want to ***enforce* the use of dedicated ServiceAccoun
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Dedicated SAs, reasonable permissions |
+| L1 | Yes | Dedicated SAs (not default), with no unnecessary permissions |
 | L2 | Yes | Dedicated SA mandatory, minimal RBAC validated |
 | L3 | Yes | Dedicated SA + minimal RBAC + periodic review + no wildcard permissions |
 
@@ -645,8 +645,8 @@ As **DevOps + AppSec**, I want to maintain a catalogue of Golden Base Images wit
 **Proportionality L1–L3.**  
 | Level | Prescription | Patch SLA | Signing | Deprecation | Audit |
 |-------|-----------|----------|-----------|------------|-----------|
-| **L1** | Recommended; informal catalogue | Ad hoc | No | Manual | Annual |
-| **L2** | Mandatory for prod; published catalogue | 7d critical | Cosign recommended | Notice at deprecation; removal ≤ 60d | Half-yearly |
+| **L1** | Mandatory (periodic renewal); informal catalogue | Renewal policy defined (periodic rebuild or on base *trigger*) | No | Manual | Annual |
+| **L2** | Mandatory for prod; published catalogue | 7d critical | Cosign mandatory | Notice at deprecation; removal ≤ 60d | Half-yearly |
 | **L3** | Mandatory; strict SLA | 3d critical | Cosign + OIDC mandatory | Notice at deprecation; removal ≤ 60d + validation | Monthly |
 
 **Integration into the SDLC.**  
@@ -864,7 +864,7 @@ As **DevOps / SRE + AppSec Engineer**, I want to manage a catalogue of Golden Ba
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Simple catalogue + ad hoc review |
+| L1 | Yes | Simple catalogue of approved base images, maintained, with documented selection decision + ad hoc review |
 | L2 | Yes | Formal approval + quarterly review + deprecation with deadlines |
 | L3 | Yes | Formal approval + monthly/event-driven review + rapid blocking revocation |
 
@@ -913,7 +913,7 @@ As **Release Manager/DevOps + AppSec**, I want the promotion of an image between
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Automated promotion with logging and traceability |
+| L1 | Yes | Explicit approval before production; automated promotion between non-production environments with logging and traceability |
 | L2 | Yes | Explicit approval + minimum per-environment revalidation |
 | L3 | Yes | Explicit approval + reinforced revalidation + short TTL + audit |
 
@@ -961,7 +961,7 @@ As **AppSec + GRC**, I want to manage exceptions to findings/policies as formal,
 **⚖️ Proportionality.**  
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Exceptions recorded, TTL optional but encouraged |
+| L1 | Yes | Exceptions recorded with justification, compensating control, approver and deadline |
 | L2 | Yes | Mandatory TTL + minimum compensations + monthly review |
 | L3 | Yes | Short TTL + reinforced compensations + weekly/monthly review + audit |
 
@@ -1102,7 +1102,7 @@ As **DevOps + AppSec**, I want the inference container and API to apply specific
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Authentication **always** mandatory; container *hardening* and limits recommended | Container *hardening* + *network policy* + *rate limit*/`max_tokens` + *pinning*/SCA mandatory | All of L2 + reinforced audit per *principal* and periodic review |
+| Authentication **always** mandatory; *non-root*, *pinned* runtime version and SCA mandatory; remaining *hardening* and limits recommended | Container *hardening* + *network policy* + *rate limit*/`max_tokens` + *pinning*/SCA mandatory | All of L2 + reinforced audit per *principal* and periodic review |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -1194,7 +1194,7 @@ As **DevOps / SRE**, I want an image retention/clean-up policy with periodic ren
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Renewal ≤90 days recommended; ad hoc clean-up | Mandatory renewal + flagging + defined retention | Renewal ≤30 days + automated clean-up + traceability preserved and audited |
+| Periodic renewal mandatory (≤90 days or on base *trigger*) with flagging of outdated images; ad hoc clean-up | Mandatory renewal + flagging + defined retention | Renewal ≤30 days + automated clean-up + traceability preserved and audited |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -1242,16 +1242,16 @@ The following table shows how to scale each practice.
 |---------|----|----|----|
 | Trusted base images | Yes | Yes | Yes |
 | Pinning by digest | Recommended | Mandatory | Mandatory |
-| Image scanning | Warning | Block High/Critical | Block Medium+ |
-| Signing & provenance | Optional | Recommended | Mandatory |
-| Runtime policies | Basic (non-root) | Restrictive | Complete + audit |
+| Image scanning | Block Critical | Block High/Critical | Block Medium+ |
+| Signing & provenance | Optional | Mandatory | Mandatory |
+| Runtime policies | Non-root with active enforcement | Restrictive | Complete + audit |
 | Runtime monitoring | Basic | Critical | Full + automatic response |
 | **SBOM per image** | Recommended | Mandatory | Mandatory (+ with provenance) |
-| **Registry allowlist/digest-only** | Warning | Block by origin | Block + digest-only |
-| **Secrets outside the image / OIDC** | Recommended | Mandatory | Mandatory + automatic rotation |
-| **Minimal RBAC / dedicated SA** | Recommended | Mandatory | Mandatory + periodic review |
+| **Registry allowlist/digest-only** | Block by source (base images) | Block by origin | Block + digest-only |
+| **Secrets outside the image / OIDC** | Mandatory (secret scanning; no credentials in the image) | Mandatory | Mandatory + automatic rotation |
+| **Minimal RBAC / dedicated SA** | Mandatory (dedicated SA, least privilege) | Mandatory | Mandatory + periodic review |
 | **NetworkPolicy (ingress/egress)** | Basic | Critical ingress+egress | Full ingress+egress + audit |
-| **Golden base + patch SLA** | Recommended | Mandatory | Mandatory + accelerated rollout |
+| **Golden base + patch SLA** | Mandatory (periodic renewal) | Mandatory | Mandatory + accelerated rollout |
 | **Ephemeral/signed builders/runners** | Recommended | Mandatory | Mandatory + network segmentation |
 | **Centralised enforcement with audit** | Recommended | Yes (logging + alerts) | Yes (logging + alerts + dashboard + review) |
 | **Advanced sandboxing (gVisor/Kata)** | Optional | Recommended (sensitive workloads) | Mandatory (critical workloads) |

@@ -6,16 +6,16 @@ tags: [tipo:catalogo, tema:requisitos, rastreabilidade, criticidade, ASVS]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/01-catalogo-requisitos.md
-  source_sha256: b232a9e943ac6c8520ddde171823146e7c5e853f57b7034b00f3b94130ccffe0
-  source_commit: 28f13ce4d7e0acbbdc6a21d6cf195544784b0b07
-  target_sha256: 37db3f883222001722d4078e2acb2ea3caac31ccf7f6d7f3931869a54e696e57
+  source_sha256: fff22379fdb166674a535b1019243ec4ee48f28264a7625a94715a747356d02e
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 4036a714c0ce3cdfda3e1b056c6b7260f22128a142cf828ed05258f2d75dc7a3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 8f820b66eb2dbb337220a7ce2bca1caf2cae8800a17edd10978069b3e2e0ab1d
-  translated_at: 2026-09-26T10:39:34Z
-  stamped_at: 2026-09-26T18:32:58Z
+  translated_at: 2026-09-27T18:03:23Z
+  stamped_at: 2026-09-27T18:03:23Z
   reviewed_by: null
 ---
 
@@ -65,6 +65,7 @@ The proportional application of requirements by technical domain can be consulte
 - [ERR - Error Handling](lista-requisitos-base#err)
 - [CFG - Secure Configuration](lista-requisitos-base#cfg)
 - [ENC - Sensitive Data and Cryptography](lista-requisitos-base#enc)
+- [PRI - Personal Data (engineering)](lista-requisitos-base#pri)
 - [API - API Security](lista-requisitos-base#api)
 - [INT - Messaging and Integrations](lista-requisitos-base#int)
 - [REQ - Requirements Definition](lista-requisitos-base#req)

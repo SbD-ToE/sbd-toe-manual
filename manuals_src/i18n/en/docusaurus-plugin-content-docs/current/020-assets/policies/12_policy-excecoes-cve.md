@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 020-assets/policies/12_policy-excecoes-cve.md
-  source_sha256: a7e9003b262dc8a96630daabaf2d65a7a7901c2f7f5216dd266eed6bc2f2ea08
-  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
-  target_sha256: 971d894943ed1c3874b4a3e3c940b95ad39dff7e2a6b6ebfcd82dcec4fd2f9f3
+  source_sha256: 0ad612a37abb03c25e6656b3dbced247f5c672a27b53b1b381415a3832bb22b4
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: a3192623981b8a39c5ad26801ec1ef1a29600c293f6e7b4d5bdfe70b5718df76
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, avaliacao, cra_pde, framework_source_corpus, layer, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
   glossary_sha256: d08b98b471eb30727a46f86ffaccdaa8a76183dd5cfbcd23195832b870d197fc
-  translated_at: 2026-09-27T08:02:38Z
-  stamped_at: 2026-09-27T08:02:38Z
+  translated_at: 2026-09-27T13:29:42Z
+  stamped_at: 2026-09-27T13:29:42Z
   reviewed_by: null
 ---
 
@@ -172,7 +172,7 @@ The CI/CD pipeline must check the status of active exceptions in every build:
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
-| Block the build if there is a Critical/High CVE without an approved exception | No | Yes | Yes |
+| Block the build if there is a Critical/High CVE without an approved exception | Yes | Yes | Yes |
 | Block the build if an exception has expired without reassessment | No | Yes | Yes |
 | Alert 15 days before expiry (or at the midpoint of the TTL, if shorter than 30 days — Policy 05 §7) | Recommended | Mandatory | Mandatory |
 | Generate a report of active exceptions per build | Recommended | Mandatory | Mandatory |

@@ -18,7 +18,7 @@ Dependências desatualizadas acumulam vulnerabilidades e derivam do estado segur
 O objetivo desta política é garantir que:
 
 - Bots de atualização estão ativos e configurados em todos os repositórios L2/L3
-- O critério de auto-merge é restrito a atualizações de impacto nulo ou mínimo verificado
+- O critério de auto-merge é restrito a atualizações *patch* ou de segurança, com todos os gates obrigatórios verdes e registo rastreável
 - Atualizações com potencial de breaking change exigem revisão e aprovação humana
 - A cadência e o agrupamento de PRs são configurados para minimizar ruído operacional
 
@@ -30,7 +30,7 @@ O objetivo desta política é garantir que:
 |---|---|
 | L1 | Recomendado; configuração mínima sem auto-merge |
 | L2 | Obrigatório; bot ativo com auto-merge condicional |
-| L3 | Obrigatório; bot ativo com auto-merge restrito e handoff humano para qualquer atualização com impacto |
+| L3 | Obrigatório; bot ativo sem auto-merge e handoff humano para todas as atualizações (revisão acelerada para *security patches*) |
 
 ---
 
@@ -48,28 +48,28 @@ A organização aceita as seguintes ferramentas para automação de atualizaçã
 
 ## 4. Critérios de auto-merge {#4-critérios-de-auto-merge}
 
-O auto-merge automático de PRs de atualização só é permitido quando **todos** os seguintes critérios são satisfeitos:
+O auto-merge automático de PRs de atualização só é permitido nos níveis e tipos de atualização declarados na secção 4.1, quando **todos** os seguintes critérios são satisfeitos e cada merge automático fica registado de forma rastreável (PR, versão anterior e nova, resultado dos gates):
 
 | Critério | Requisito |
 |---|---|
-| Tipo de atualização | Patch ou minor sem breaking change declarado |
+| Tipo de atualização | Patch ou atualização de segurança (correção de CVE), sem breaking change declarado; minor e major exigem sempre revisão humana |
 | Análise de impacto | Bot confirma: sem alteração de API pública, sem major semver, sem flags de breaking change em release notes |
-| Pipeline CI | Todos os jobs passam (testes, SAST, SCA, linters) |
+| Pipeline CI | Todos os jobs e gates obrigatórios passam (testes, SAST, SCA, linters) |
 | Gates de segurança | Nenhum CVE novo introduzido pela atualização |
 | Licença | Licença da nova versão idêntica ou equivalente à anterior; sem licença nova adicionada que não esteja na whitelist |
 
 :::warning
-Auto-merge em L3 é restrito a atualizações patch. Atualizações minor em L3 requerem revisão humana, mesmo que o CI passe.
+Atualizações minor e major requerem sempre revisão humana, em qualquer nível, mesmo que o CI passe. Em L3 não há auto-merge: patches e *security patches* seguem revisão humana (acelerada no caso de CVE), conforme a secção 4.1.
 :::
 
 ### 4.1 Proporcionalidade do auto-merge {#41-proporcionalidade-do-auto-merge}
 
 | Tipo de atualização | L1 | L2 | L3 |
 |---|---|---|---|
-| Patch (ex: 1.2.3 → 1.2.4) | Auto-merge se CI verde | Auto-merge se CI verde + gates OK | Requer revisão humana |
+| Patch (ex: 1.2.3 → 1.2.4) | Requer revisão (sem auto-merge em L1, ver §2) | Auto-merge se CI verde + gates OK | Requer revisão humana |
 | Minor sem breaking (ex: 1.2.x → 1.3.0) | Requer revisão | Requer revisão | Requer revisão + aprovação AppSec |
 | Major (ex: 1.x → 2.0.0) | Requer revisão + testes | Requer revisão + AppSec + testes | Requer revisão + AppSec + arquiteto |
-| Security patch (CVE fix) | Auto-merge se CI verde | Auto-merge prioritário se CI verde | Revisão acelerada: prazo ≤ 24h |
+| Security patch (CVE fix) | Requer revisão (sem auto-merge em L1, ver §2) | Auto-merge prioritário se CI verde + gates OK | Revisão acelerada: prazo ≤ 24h |
 
 ---
 

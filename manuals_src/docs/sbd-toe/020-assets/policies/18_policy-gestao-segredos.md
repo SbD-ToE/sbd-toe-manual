@@ -128,6 +128,23 @@ Em caso de suspeita ou confirmação de exposição de um segredo:
 3. Rever os logs de acesso do cofre para avaliar uso indevido do período de exposição
 4. Registar o incidente e notificar conforme Política de Rastreabilidade e processo de IRP
 
+### 6.4 Ciclo de vida das chaves e inventário de certificados {#64-ciclo-de-vida-das-chaves-e-inventário-de-certificados}
+
+As chaves criptográficas da aplicação (cifra de dados, assinatura, TLS) seguem um ciclo de vida definido por tipo de chave (`ENC-007`):
+
+| Fase | O que se exige |
+|---|---|
+| Geração | Em cofre ou HSM, com gerador aleatório aprovado e o algoritmo e tamanho da lista de primitivas (`ENC-003`) |
+| Distribuição | Só por canal cifrado e autenticado, para os sistemas que a usam |
+| Armazenamento | Em cofre ou HSM; nunca em código, imagens ou ficheiros de configuração versionados |
+| Cópia de segurança e arquivo | Cifradas, com acesso restrito e separado das cópias dos dados que a chave protege |
+| Recuperação | Procedimento documentado e testado, com registo de quem recuperou |
+| Rotação e retirada | Nos prazos da §6.1; uma chave retirada guarda-se só para decifrar dados existentes |
+| Revogação | Imediata em caso de exposição (§6.3) |
+| Destruição | Quando já não há dados que dependam da chave, com registo |
+
+**Inventário de certificados.** A aplicação mantém um inventário de todos os seus certificados (TLS, assinatura, clientes mTLS), com dono, emissor, validade e local de guarda da chave privada (cofre, HSM, dispositivo). Há alerta antes da expiração (pelo menos 30 dias; 90 dias em L3) e renovação automatizada quando o emissor o permite. A infraestrutura de chaves públicas da organização fica fora do âmbito deste Manual.
+
 ---
 
 ## 7. Segredos de terceiros e integrações {#7-segredos-de-terceiros-e-integrações}

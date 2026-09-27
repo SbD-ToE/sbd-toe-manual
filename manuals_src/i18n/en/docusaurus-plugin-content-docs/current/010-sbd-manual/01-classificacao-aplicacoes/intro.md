@@ -6,16 +6,16 @@ tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/intro.md
-  source_sha256: 20b5a0eb3e281ff8950aa448e52a5caa3fbe3ba1550cd4827c554098f438ed9e
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: e8ad62636824ecda2d1d2913fc7dd4984fab4ee843b59b9bd102cb2e603712e1
-  engine: claude-fable-5-1
+  source_sha256: d4e40fdc8ad759bb546eccf7bddc4775d586c1d06780b892bf9372d287c1a5df
+  source_commit: 707aabf0adeee0d73c51cdf15d0a7764583eed77
+  target_sha256: a3a1ac9f272d990f1e6a14fdc27acd5db11b47ce29b2aa8c04e62ea521add1d7
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [basilar, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, risk_level, role_tech_lead, sbdtoe_sbd, traceability]
-  glossary_sha256: cbe1f3640988274ebc7dbade162cd30240f42b41d9cf02457079156d87079c0c
-  translated_at: 2026-09-27T07:53:38Z
-  stamped_at: 2026-09-27T07:53:38Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [basilar, chapter_role, cra_pde, cycle_iteration, dora_financial_entity, eu_ai_high_risk_system, eu_ai_system, eu_startups, evidenciabilidade, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, piso_limiar, practitioner_manual, risk_level, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: c2e97463f64fd6a2dee0e6b6fe195ccb1ff70e820eefbec414aa7b626980cd5f
+  translated_at: 2026-09-27T12:07:45Z
+  stamped_at: 2026-09-27T12:07:45Z
   reviewed_by: null
 ---
 
@@ -61,6 +61,16 @@ SbD-ToE treats **risk as a single concept**, regardless of its technical or proc
 What varies are the **attributes of the risk** - such as origin, mechanism, detectability, reproducibility and evidentiability - which directly influence the applicable requirements and controls.
 
 > 📌 See: [Risk Attributes](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/atributos-risco)
+
+---
+
+## 🧭 Note: regulatory context {#-nota-contexto-regulatório}
+
+Risk level L1–L3 measures the application's own risk. Independently of it, the application may be under a regime that makes some requirements mandatory at any level: a financial entity under DORA, a product with digital elements under the CRA or a high-risk AI system under the AI Act, for example. For this reason, the classification record also declares the applicable **regulatory contexts**, with the evidence that grounds them, and reviews them at the same points at which it reviews the classification.
+
+The requirement catalogues do not change with the regime. What each context requires above the level (each floor, with the Article that grounds it) is in the normative cross-check, on each regulation's “Applicable requirements” page.
+
+> 📌 See: [Normative cross-check](/sbd-toe/cross-check-normativo/intro)
 
 ---
 

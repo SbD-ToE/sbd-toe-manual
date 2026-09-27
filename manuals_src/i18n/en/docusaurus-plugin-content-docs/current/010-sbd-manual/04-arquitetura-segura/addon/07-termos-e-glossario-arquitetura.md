@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/addon/07-termos-e-glossario-arquitetura.md
-  source_sha256: f68bd7fd80799477d19475e486a063189bc392ff1182ff01afd65341d05ab67c
-  source_commit: b70310b9c1ed90b26a37c10213882b943eec510b
-  target_sha256: 5f8838ee7a86b4e47cb78f0f315c0fac9c45ce0cd895a1f92870c34e37fbc9ca
+  source_sha256: 0531dae951ef77b5034fa792ef95b2c67e64475196a5538a62ba7501ae9d9389
+  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
+  target_sha256: eed545638db182941124453db96cbe531773461fcba53bfbfe3e24ac3f6918ee
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [chapter_role, maturity, provenance, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c0c17aed6075e176582da152e44c92de5e55d011c8e7ee64b6b92fb29aedb60a
-  translated_at: 2026-09-26T08:32:06Z
-  stamped_at: 2026-09-26T18:33:35Z
+  translated_at: 2026-09-27T15:08:32Z
+  stamped_at: 2026-09-27T15:08:32Z
   reviewed_by: null
 ---
 
@@ -104,7 +104,7 @@ To do so, a common taxonomy must be adopted, one that allows information and kno
 - **US-12 (Living Architecture)**: publish the list of triggers and evidence their execution when they occur.
 
 ## 🧭 Proportionality L1–L3 (application of the jargon)  {#-proporcionalidade-l1l3-aplicação-do-jargão}
-- **L1**: Simplified records (key decisions, critical integrations, lightweight *checklist*).  
+- **L1**: Simplified records (key decisions, critical integrations, lightweight *checklist*), with trust zones, flows between zones and the controls at each boundary in a versioned diagram.  
 - **L2**: ADRs for significant decisions; complete *trust boundaries*; TM synchronisation; formal exceptions.  
 - **L3**: Full coverage, independent *reviews*, validations in CI/CD, automation of triggers where possible.
 

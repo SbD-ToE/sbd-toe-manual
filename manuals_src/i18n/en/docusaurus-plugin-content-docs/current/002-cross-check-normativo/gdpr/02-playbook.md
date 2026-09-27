@@ -7,16 +7,16 @@ sidebar_position: 8
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/02-playbook.md
-  source_sha256: a64323e829e828a09b5819f1cb3ae1b86375b0fa518d92be1ad8414cb11c26b1
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 540d4bfaeb8404e5b122e295f0aee017e1e16ce3d727f9584525cf7a82fa473a
+  source_sha256: 3b16718e312836a54fdb5efe43d0d39d9cc8234c493e5dcfffd3cd706f2087a7
+  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
+  target_sha256: be5d7d46899747b415a44e4342f6a374bae4e930d5e55bd3ea7d702ba6a427d7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [chapter_role, gdpr_controller, gdpr_pseudonymisation, gdpr_security_of_processing, lifecycle_phase, mapping, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: 3a70647e9644dba9550555d7fdd37d5a84d84482350594c2ef9ebf8e8c0200fe
-  translated_at: 2026-09-27T07:29:58Z
-  stamped_at: 2026-09-27T07:29:58Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [chapter_role, eu_startups, gap_family, gdpr_controller, gdpr_security_of_processing, lifecycle_phase, mapping, papel_suporte, practitioner_manual, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: cc8d41815bbb654fe89e5e8185a7d3f5d9ff5e28d868f752f514b64f6106a625
+  translated_at: 2026-09-27T23:03:30Z
+  stamped_at: 2026-09-27T23:03:30Z
   reviewed_by: null
 ---
 
@@ -24,9 +24,11 @@ translation:
 
 ## Overview {#visão-geral}
 
-Objective: operationalise GDPR Art. 25/30/32/33–34/35 based on the technical capabilities of SbD-ToE and integrate with Legal/DPO.
+Objective: operationalise GDPR Articles 15–22, 25, 30, 32, 33–34 and 35 on the basis of the technical capabilities of SbD-ToE and integrate with Legal/the DPO.
 
 Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherever possible.
+
+What the Manual covers, the gaps it declares and what stays out of scope, obligation by obligation, are in [Applicable requirements — What this Manual covers and what stays out](./requisitos-aplicaveis#cobertura).
 
 > 📚 **Supporting Resources:** For practical templates and implementation examples, see the [Example Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) with reusable encryption toolchains, privacy KPIs and incident response processes.
 
@@ -37,6 +39,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 | GDPR Article | Requirement | SbD-ToE Chapter | Main Action |
 |-------------|-----------|------------------|----------------|
 | 5 | Principles | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Ch. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Minimisation, retention, security |
+| 15–22 | Data subjects' rights | [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) | Tested technical mechanism (PRI-003, PRI-006); formal response with Legal/the DPO |
 | 25 | Privacy by design/default | [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Ch. 06](/sbd-toe/sbd-manual/desenvolvimento-seguro/intro)–[Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Ch. 11](/sbd-toe/sbd-manual/deploy-seguro/intro) | Secure default configurations |
 | 30 | ROPA | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Apps/data inventory + GRC record |
 | 32 | Security of processing | [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Encryption, IAM, testing, resilience |
@@ -48,22 +51,31 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 ## Implementation Phases (≈ 4–6 months) {#fases-de-implementação--46-meses}
 
 ### Phase 1 (M0–M1): Governance and Framing {#fase-1-m0m1-governação-e-enquadramento}
-1. Appoint a DPO (if applicable) and align the RACI ([Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro))  
-2. "Privacy by Design & by Default" policy approved  
+1. Appoint the DPO, if applicable (a legal matter, out of scope of the Manual; the Manual assumes the role where there is personal data) and align the RACI ([Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro))  
+2. Data protection policy approved by the organisation (the Manual does not include it among its policies: a declared gap against Article 24(2))  
 3. Define the classification of personal data per application  
 **Evidence:** Approval minutes; RACI; data/applications matrix
 
 ### Phase 2 (M1–M2): Inventory & ROPA {#fase-2-m1m2-inventário--ropa}
-1. Update the SbD-ToE inventory (apps, data, high-level purposes)  
-2. Record the ROPA in a GRC tool (Art. 30 fields)  
+1. Maintain the inventory of purposes and recipients per personal dataset (PRI-004, mandatory at any level)  
+2. Record the ROPA in a GRC tool (Article 30 fields), fed by that inventory  
 3. Link SbD-ToE app IDs to the ROPA  
 **Evidence:** ROPA export; ID mapping
 
 ### Phase 3 (M2–M3): Privacy by Design/Default (Art. 25) {#fase-3-m2m3-privacy-by-designdefault-art-25}
-1. Pattern catalogue: pseudonymisation, data minimisation, retention, proportionate logging  
+1. Ch. 02 PRI requirements applied: minimisation (PRI-001), retention with effective erasure (PRI-002), PII in logs (PRI-005) and privacy by default (PRI-007)  
 2. Default configs: minimal collection, encryption at rest/in transit  
 3. Pipeline gate: block on excessive collection (schema linting, for example)  
 **Evidence:** PbD catalogue; pipelines; blocking examples
+
+### Phase 3-A (M2–M3): Data subjects' rights (Articles 15–22) {#fase-3-a-m2m3-direitos-dos-titulares-arts-1522}
+1. Tested mechanism for access, rectification, erasure and export, reaching the recorded recipients (PRI-003, PRI-004)  
+2. Restriction of processing (CTX-RGPD-R01) and erasure of data made public (CTX-RGPD-R02)  
+3. Consent and objection, including automated signals such as GPC (PRI-006; CTX-RGPD-R04)  
+4. Solely automated decisions with human intervention and the right to contest (CTX-RGPD-R05)  
+5. Age verification and parental consent where applicable (CTX-RGPD-R03)  
+**Out of scope:** the formal response to the data subject (deadlines, reasons), with Legal/the DPO.  
+**Evidence:** tests of the mechanism; record of executions
 
 ### Phase 4 (M2–M3): Security of Processing (Art. 32) {#fase-4-m2m3-segurança-do-tratamento-art-32}
 1. Encryption: TLS 1.2+; at rest with key management  
@@ -75,26 +87,28 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 ### Phase 5 (M3–M4): DPIA (Art. 35) {#fase-5-m3m4-dpia-art-35}
 1. DPIA trigger criteria defined  
 2. Reuse Threat Modelling ([Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro)) as a technical annex  
-3. Add Privacy TM (LINDDUN) when high risk  
-4. Opinion of the DPO and decision of the controller; record  
+3. Attach the LINDDUN analysis, mandatory at all levels when there is personal data (THR-003)  
+4. Opinion of the DPO and decision of the controller, recorded (outside the Manual; the Manual only provides for the DPO's review of the LINDDUN analysis at L3)  
 **Evidence:** DPIA #1; TM annexes; DPO approval
 
 ### Phase 6 (M3–M4): Processors (Art. 28) {#fase-6-m3m4-processors-art-28}
 1. Security checklist for processors  
-2. Standard technical clauses (encryption, logs, sub-processors)  
-3. Monitoring and annual review  
+2. Contract under Article 28(3) with each processor that processes personal data, at any level (CTX-RGPD-P01), with technical security clauses; the legal content belongs to Legal/the DPO  
+3. The same contract with the processors that receive personal data in AI prompts, at any level (Policy 18 §10.3; CTX-RGPD-P02)  
+4. Monitoring and annual review  
 **Evidence:** Checklist; contracts; review reports
 
 ### Phase 7 (M4–M5): Incidents and 72h Notification (Art. 33/34) {#fase-7-m4m5-incidentes-e-notificação-72h-art-3334}
-1. Runbook with a 72h timer for notification to the supervisory authority (Article 33) and minimum fields (what, when, data, measures); decision, without undue delay, on communication to data subjects where there is a high risk (Article 34)  
-2. Risk criteria for communication to data subjects  
+1. Runbook with a 72 h clock (Article 33) and the minimum content of Policy 32 §6.1: nature of the breach, categories and approximate number of data subjects and of records, DPO contact, likely consequences and measures. All breaches are recorded, notified or not, with the reasons (CTX-RGPD-R06); decision, without undue delay, on communicating to data subjects when there is a high risk (Article 34)  
+2. High-risk criterion for communicating to data subjects; the content of that communication (Article 34(2)) is a declared gap of the Manual, to be prepared with the DPO  
 3. Annual simulation exercise  
 **Evidence:** Runbook; exercise records; post-action report
 
 ### Phase 8 (M5–M6): Retention & Secure Erasure {#fase-8-m5m6-retenção--eliminação-segura}
-1. Formalised retention tables (with Legal)  
-2. Scheduled erasure/pseudonymisation jobs  
-3. Proof of execution (logs, reports)  
+1. Retention periods per personal dataset, with effective erasure that reaches replicas, caches and copies (PRI-002); the legal grounds for the periods belong to Legal  
+2. Scheduled deletion or anonymisation jobs  
+3. In immutable logs and copies (WORM), pseudonyms and a key per data subject, and erasure by destroying the key (Policy 29 §8.1; PRI-005; CTX-RGPD-P05)  
+4. Proof of execution (logs, reports)  
 **Evidence:** Retention table; erasure logs; audits
 
 ---
@@ -102,7 +116,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 ## Checklists {#checklists}
 
 ### PbD/PbDf {#pbdpbdf}
-- [ ] Privacy pattern catalogue published
+- [ ] Requirements PRI-001 to PRI-007 applied and verified
 - [ ] Secure defaults applied (minimal collection, encryption)
 - [ ] Pipeline gate for schemas/data
 - [ ] Periodic review of configurations
@@ -117,19 +131,19 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 ### DPIA {#dpia}
 - [ ] Trigger criteria defined
 - [ ] Threat Modelling attached
-- [ ] Privacy TM (if high risk)
+- [ ] LINDDUN analysis attached (THR-003)
 - [ ] DPO approval
 
 ### 72h Incidents {#incidentes-72h}
-- [ ] Runbook with GDPR fields
+- [ ] Runbook with the minimum content of Policy 32 §6.1 and recording of all breaches (CTX-RGPD-R06)
 - [ ] 72h timer visible (Article 33, counted from awareness)
 - [ ] High-risk criterion and communication to data subjects without undue delay (Article 34)
 - [ ] Annual exercise completed
-- [ ] Communication templates ready
+- [ ] Content of the communication to data subjects prepared with the DPO (a declared gap of the Manual, Article 34(2))
 
 ### Processors {#processors}
 - [ ] Security checklist applied
-- [ ] Standard technical clauses
+- [ ] Contract under Article 28(3) in force with each processor
 - [ ] Annual review and records
 
 ### Retention {#retenção}
@@ -143,14 +157,14 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 | Metric | Definition | Target |
 |---------|-----------|---------|
 | % apps with Art. 32 complete | Apps with encryption+IAM+testing | ≥95% |
-| Notifications within the legal time limit | Awareness → submission to the authority | 100% ≤ 72h (internal target ≤ 48h) |
+| Notifications within the legal time limit | Awareness → submission to the authority | 100% ≤ 72h (legal deadline, Article 33); a shorter internal target, if any, belongs to the organisation |
 | % DPIA on time | DPIAs completed within the SLA | ≥90% |
 | Retention compliance | Job execution vs. plan | ≥95% |
 
 ---
 
 ## Artefacts to Maintain {#artefactos-a-manter}
-- PbD/PbDf policy
+- Data protection policy (the organisation's; a declared gap of the Manual, Article 24(2))
 - ROPA export (GRC)
 - Test and gate reports
 - DPIAs with technical annexes
@@ -162,7 +176,7 @@ Structure: Requirements → Action → Evidence. Reuse NIS2/DORA controls wherev
 
 ## Notes {#notas}
 - Incidents may also trigger NIS2/DORA. A single runbook with differentiated reporting channels is recommended.
-- LINDDUN is recommended for Privacy TM; keep it as an add-on to [Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro).
+- LINDDUN is part of threat modelling at all levels when there is personal data, in a light form at L1 (THR-003, [Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro)).
 
 ---
 
@@ -185,6 +199,6 @@ These resources demonstrate practical implementations aligned with the GDPR.
 - ENISA - Security of Personal Data Processing
 - SbD-ToE [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)–[Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
-**Version:** 1.0  
-**Date:** November 2025  
+**Version:** 1.1  
+**Date:** September 2026  
 **Note:** This playbook complements the GDPR normative analysis with practical actions

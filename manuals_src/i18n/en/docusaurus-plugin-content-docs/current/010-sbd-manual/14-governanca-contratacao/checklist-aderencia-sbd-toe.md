@@ -7,16 +7,16 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: d35c8d00beb496d013f834d739ebf636e40211b9d790d6b70335f363921c93e2
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: 7ceb8f9ad545355321afc3d0dbf0d11278644e1c56f2e7df04e72577f9475bdb
+  source_sha256: 7737cb06a89424d358e816908a4b3cdbb2dede4afb07806a4fb43b50ea566bf4
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 98ebdb28c9278c94fd2c40c3ad7fd3b32e59ba788e5154bd2870b2c2c98b0b23
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, eu_ai_widespread_infringement, instrument, mcp_reading_programa, nis2_early_warning, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 81d16b4dfe1a305a205c5a1438619800f1c71565825b41c8680a5c6ce0591216
-  translated_at: 2026-09-27T08:34:23Z
-  stamped_at: 2026-09-27T08:34:23Z
+  translated_at: 2026-09-27T18:03:19Z
+  stamped_at: 2026-09-27T18:03:19Z
   reviewed_by: null
 ---
 
@@ -100,7 +100,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 2.06 | Threat modelling is reassessed at the defined triggers: new integration, new data type, change of architecture | **L2+** | pol-08 |
 | 2.07 | Up-to-date security architecture documentation (solution-architecture.md or equivalent) exists | **L2+** | pol-09 |
 | 2.08 | Architecture decisions with a security impact are documented in ADRs with context, alternatives considered and security impact | **L2+** | pol-09 |
-| 2.09 | Threat modelling includes LINDDUN for applications that process personal data | **L3** | pol-08 |
+| 2.09 | Applications that process personal data have a LINDDUN analysis (at L1, in lightweight form) | **L1+** | pol-08 |
 | 2.10 | Threat modelling has an independent review (by an entity not involved in the design) | **L3** | pol-08 |
 | 2.11 | There is a gate in the CI/CD pipeline that verifies whether the architecture documentation is up to date | **L3** | pol-09 |
 

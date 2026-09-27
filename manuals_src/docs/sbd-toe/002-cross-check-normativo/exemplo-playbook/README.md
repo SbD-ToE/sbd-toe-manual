@@ -286,7 +286,7 @@ Estes exemplos serão atualizados quando:
 - Feedback de implementações reais
 - Mudanças em best practices
 
-**Próxima revisão programada:** Junho 2026
+**Próxima revisão:** quando se verificar uma das condições acima.
 
 ---
 
@@ -304,4 +304,4 @@ Se encontrar:
 
 **Versão:** 1.0  
 **Data:** Novembro 2025  
-**Próxima atualização:** Junho 2026
+**Próxima atualização:** com a próxima revisão da matriz de cobertura regulatória.

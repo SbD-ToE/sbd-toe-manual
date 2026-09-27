@@ -100,7 +100,7 @@ O runtime (vLLM, TGI, etc.) é uma dependência de cadeia como qualquer outra �
 | Pesos encriptados *at-rest* | Recomendado | Obrigatório | Obrigatório |
 | Hash verificado no *startup* | Recomendado | Obrigatório | Obrigatório |
 | Hard GPU isolation | Não exigido | Recomendado | Obrigatório quando workloads sensíveis partilham hardware |
-| Container *read-only* + *drop capabilities* + *non-root* | Recomendado | Obrigatório | Obrigatório |
+| Container *read-only* + *drop capabilities* + *non-root* | *Non-root* obrigatório; *read-only* e *drop capabilities* recomendados | Obrigatório | Obrigatório |
 | Network policy restritiva | Recomendado | Obrigatório | Obrigatório |
 | Autenticação em *runtime API* | Obrigatório (sempre — independentemente do nível) | Obrigatório | Obrigatório |
 | *Rate limit* + *token budget* + `max_tokens` servidor | Recomendado | Obrigatório | Obrigatório |

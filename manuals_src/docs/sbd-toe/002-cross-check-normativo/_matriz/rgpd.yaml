@@ -1,0 +1,3578 @@
+# Matriz de cobertura regulatória — RGPD. Schema sbdtoe-reg-coverage/1.
+# Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/rgpd.json.
+schema: sbdtoe-reg-coverage/1
+acto: rgpd
+pasta: gdpr
+version: 1
+decided: '2026-09-27'
+framework_legado: EXT-RGPD
+fonte_obrigacoes:
+  caminho: translation/sources/eurlex/obrigacoes/rgpd.json
+  sha256: 470b1d6918733699fb7d0383f95d84d5e3fdf2be2261f57492ef622c334c10fb
+origem:
+  pt: Mapa mapa-rgpd-csa.json do despacho 2026-09-27-cobertura-cross-check (hub), convertido por script e revisto pelo Manual agent.
+  en: Map mapa-rgpd-csa.json from the 2026-09-27-cobertura-cross-check dispatch (hub), converted by script and reviewed by the Manual agent.
+itens:
+- id: RGPD-5-1-a
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea a)
+    en: Article 5(1), point (a)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: As sete categorias de ameaça
+      en: The seven threat categories
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: as-sete-categorias-de-ameaça
+    citacao:
+      pt: A pessoa não está informada sobre a recolha, o processamento ou a partilha dos seus dados
+      en: The person is not informed about the collection, processing or sharing of their data
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota:
+    pt: A licitude e a lealdade são juízo jurídico; a transparência tem apoio técnico apenas na elicitação da ameaça «Unawareness» do LINDDUN (L3/dados pessoais).
+    en: Lawfulness and fairness are a legal judgement; transparency has technical support only in the elicitation of the LINDDUN “Unawareness” threat (L3/personal data).
+- id: RGPD-5-1-b
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea b)
+    en: Article 5(1), point (b)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  - tipo: requisito
+    alvo: PRI-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada; campos sem finalidade são removidos do fluxo de recolha
+      en: Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota:
+    pt: O Manual regista a finalidade por conjunto de dados e por campo e regista alterações de finalidade — evidência de engenharia; a determinação da finalidade legítima e o juízo de compatibilidade são jurídicos.
+    en: The Manual records the purpose per dataset and per field and records changes of purpose — engineering evidence; determining the legitimate purpose and the compatibility judgement are legal.
+- id: RGPD-5-1-c
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea c)
+    en: Article 5(1), point (c)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada
+      en: Each personal-data field collected is associated with a recorded purpose
+  - tipo: requisito
+    alvo: PRI-005
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Existe um conceito documentado de tratamento de PII em registos (o que se regista, mascarado como, por quanto tempo)
+      en: A documented concept for handling PII in logs exists (what is logged, masked how, for how long)
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §5
+      en: Policy 29 §5
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 5-proibições-absolutas-nos-logs
+    citacao:
+      pt: PII directamente identificável (nome completo + morada + NIF)
+      en: Directly identifiable PII (full name + address + tax ID number)
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §3.2
+      en: Policy 29 §3.2
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 32-schema-mínimo-de-evento
+    citacao:
+      pt: interno, nunca email ou nome
+      en: internal, never email or name
+  - tipo: requisito
+    alvo: ENC-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Passwords, tokens, números de cartão, dados pessoais sensíveis não aparecem em claro em logs
+      en: Passwords, tokens, card numbers and sensitive personal data do not appear in clear text in logs
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.1
+      en: Policy 18 §10.1
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 101-princípio-de-minimização
+    citacao:
+      pt: Redacção / pseudonimização antes do envio
+      en: Redaction / pseudonymisation before sending
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota: null
+- id: RGPD-5-1-d
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea d)
+    en: Article 5(1), point (d)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: rectificar e completar
+      en: rectify and complete them
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota: null
+- id: RGPD-5-1-e
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea e)
+    en: Article 5(1), point (e)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: chega às réplicas, caches e sistemas a jusante
+      en: reaches replicas, caches and downstream systems
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: A anonimização irreversível é alternativa aceite ao apagamento
+      en: Irreversible anonymisation is an accepted alternative to deletion
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §7
+      en: Policy 29 §7
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 7-retenção-de-logs
+    citacao:
+      pt: quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e))
+      en: where logs contain personal data, they are kept for no longer than is necessary for the purpose (GDPR, Article 5(1), point (e))
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §7
+      en: Policy 29 §7
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 7-retenção-de-logs
+    citacao:
+      pt: A organização mantém um mapa que indica, por tipo de registo, o regime que fixa o prazo
+      en: The organisation maintains a map that shows, for each record type, the regime that sets the period
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: sempre com o limite do RGPD quando há dados pessoais
+      en: always within the GDPR limit where personal data are involved
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota:
+    pt: 'Sem contradição: as tabelas de retenção de logs/evidências são mínimos, e a cláusula de precedência da Política 29 §7 limita-os expressamente pelo art. 5.º, n.º 1, al. e). Tensão residual: o WORM obrigatório em L3 (Política 29 §8) impede apagar antes do prazo fixado — ver RGPD-17-1.'
+    en: 'No contradiction: the log/evidence retention tables are minimums, and the precedence clause of Policy 29 §7 expressly limits them by Article 5(1), point (e). Residual tension: the WORM mandatory at L3 (Policy 29 §8) prevents erasure before the fixed period — see RGPD-17-1.'
+- id: RGPD-5-1-f
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 1, alínea f)
+    en: Article 5(1), point (f)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Toda a comunicação entre cliente e servidor e entre serviços internos usa TLS
+      en: All communication between client and server and between internal services uses TLS
+  - tipo: requisito
+    alvo: ENC-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
+      en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  - tipo: requisito
+    alvo: ACC-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Acesso não autorizado a dados críticos é impedido e registado
+      en: Unauthorised access to critical data is prevented and logged
+  - tipo: requisito
+    alvo: LOG-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Logs não alteráveis por utilizadores comuns
+      en: Logs cannot be altered by ordinary users
+  - tipo: requisito
+    alvo: ENC-009
+    niveis: [L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados críticos com mecanismo de verificação de integridade (MACs, assinaturas, checksums); adulterações detectadas e registadas
+      en: Critical data with an integrity verification mechanism (MACs, signatures, checksums); tampering detected and logged
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota: null
+- id: RGPD-5-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 5.º, n.º 2
+    en: Article 5(2)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-009
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Toda a decisão de risco ou excepção tem artefactos de evidência referenciáveis
+      en: Every risk decision or exception has referenceable evidence artefacts
+  - tipo: pagina
+    rotulo:
+      pt: Enquadramento Regulatório
+      en: Regulatory Framework
+    ficheiro: 010-sbd-manual/00-fundamentos/roles-responsabilidades/grc-compliance.md
+    ancora: enquadramento-regulatório
+    citacao:
+      pt: Demonstração de conformidade (*accountability*)
+      en: Demonstration of compliance (*accountability*)
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Registos de incidentes (timeline, post-mortem, notificações)
+      en: Incident records (timeline, post-mortem, notifications)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-5]
+  nota:
+    pt: Rastreabilidade de decisões e prova documental (GRC) apoiam a demonstração; não há dossiê de accountability RGPD (registo, AIPD, bases legais) no Manual.
+    en: Traceability of decisions and documentary proof (GRC) support the demonstration; there is no GDPR accountability dossier (record, DPIA, legal bases) in the Manual.
+- id: RGPD-6-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 6.º, n.º 1
+    en: Article 6(1)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: PRI - Dados Pessoais (engenharia)
+      en: PRI - Personal Data (engineering)
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: 'O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo: é matéria do cross-check normativo e do overlay regulatório.'
+      en: 'The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue: it is a matter for the normative cross-check and the regulatory overlay.'
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.2
+      en: Policy 18 §10.2
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 102-base-legal-explícita
+    citacao:
+      pt: Cada uso operacional em que o agente vê PII tem
+      en: Each operational use in which the agent sees PII has
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: 'Exceção pontual à delimitação: na fatia de agentes de IA a Política 18 §10.2 exige base legal RGPD declarada no mandate ou na «ficha de tratamento do projecto» (L2/L3 obrigatório). A delimitação do cap. 02 é, portanto, exata para o catálogo PRI mas não para todo o Manual.'
+    en: 'One-off exception to the delimitation: in the AI agents slice, Policy 18 §10.2 requires a declared GDPR legal basis in the mandate or in the “project''s processing record” (L2/L3 mandatory). The Ch. 02 delimitation is therefore accurate for the PRI catalogue but not for the whole Manual.'
+- id: RGPD-6-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 6.º, n.º 4
+    en: Article 6(4)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: O registo de alterações de finalidade permite detetar tratamento posterior; a avaliação de compatibilidade (art. 6.º, n.º 4) não é prescrita.
+    en: The record of changes of purpose makes it possible to detect further processing; the compatibility assessment (Article 6(4)) is not prescribed.
+- id: RGPD-7-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 7.º, n.º 1
+    en: Article 7(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: cada consentimento fica registado de forma auditável
+      en: each consent is recorded in an auditable way
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-7-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 7.º, n.º 2
+    en: Article 7(2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-7-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 7.º, n.º 3
+    en: Article 7(3)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-8-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 8.º, n.º 1
+    en: Article 8(1)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-8-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 8.º, n.º 2
+    en: Article 8(2)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R03
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.8
+      en: Policy 18 §10.8
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 108-anti-padrões
+    citacao:
+      pt: ou dados de crianças (art. 8.º), que exigem condições reforçadas
+      en: or children's data (Art. 8), which require reinforced conditions
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-9-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 9.º, n.º 1 e n.º 2
+    en: Article 9(1) and (2)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: 📑 Tipo de Dados (D)
+      en: 📑 Data Type (D)
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/01-modelo-classificacao-eixos.md
+    ancora: -tipo-de-dados-d
+    citacao:
+      pt: Dados pessoais, identificáveis ou confidenciais internos
+      en: Personal, identifiable or internally confidential data
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §5
+      en: Policy 29 §5
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 5-proibições-absolutas-nos-logs
+    citacao:
+      pt: Dados de saúde, dados biométricos | Nunca registar em logs operacionais
+      en: Health data, biometric data | Never record in operational logs
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.7
+      en: Policy 18 §10.7
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 107-proporcionalidade
+    citacao:
+      pt: Obrigatório (categorias especiais sempre redactadas)
+      en: Mandatory (special categories always redacted)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Categorias especiais elevam o eixo D, nunca entram em logs operacionais e são sempre redigidas em prompts L3; a verificação da exceção do art. 9.º, n.º 2, é jurídica.
+    en: Special categories raise the D axis, never enter operational logs and are always redacted in L3 prompts; verifying the exception of Article 9(2) is legal.
+- id: RGPD-9-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 9.º, n.º 3
+    en: Article 9(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-10
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 10.º
+    en: Article 10
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-11-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 11.º, n.º 2
+    en: Article 11(2)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia.'
+    en: 'Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-12-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 1
+    en: Article 12(1)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-12-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 2
+    en: Article 12(2)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.7
+      en: Policy 18 §10.7
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 107-proporcionalidade
+    citacao:
+      pt: Procedimento para direitos do titular | Recomendado | Obrigatório
+      en: Procedure for data subject rights | Recommended | Mandatory
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.6
+      en: Policy 18 §10.6
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 106-direitos-do-titular-dos-dados
+    citacao:
+      pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
+      en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
+  falta:
+    pt: A parte técnica do exercício dos direitos está prescrita (PRI-003, PRI-006; limitação em CTX-RGPD-R01). O canal de pedidos e a resposta formal ao titular são matéria jurídica, a declarar fora de âmbito.
+    en: The technical part of exercising the rights is prescribed (PRI-003, PRI-006; restriction in CTX-RGPD-R01). The request channel and the formal reply to the data subject are legal matters, to be declared out of scope.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: 'A delimitação «direitos formais → lado legal» do cap. 02 remete para o cross-check RGPD, que por sua vez remete para DPO/GRC («Base legal, finalidades, direitos | Matéria jurídica»): a capacidade técnica que suporta os direitos fica sem dono prescritivo fora de PRI-003.'
+    en: 'The Ch. 02 delimitation “formal rights → legal side” refers to the GDPR cross-check, which in turn refers to DPO/GRC (“Legal basis, purposes, rights | Legal matter”): the technical capability supporting the rights is left without a prescriptive owner outside PRI-003.'
+- id: RGPD-12-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 3
+    en: Article 12(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia.'
+    en: 'Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-12-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 4
+    en: Article 12(4)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia.'
+    en: 'Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-12-5
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 5
+    en: Article 12(5)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia.'
+    en: 'Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-12-6
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 12.º, n.º 6
+    en: Article 12(6)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: AUT-009
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: aut
+    citacao:
+      pt: Alterações de credenciais ou dados sensíveis exigem confirmação da identidade activa
+      en: Changes to credentials or sensitive data require confirmation of the active identity
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Um pedido recebido fora do canal autenticado só é executado depois de verificada a identidade de quem pede
+      en: A request received outside the authenticated channel is carried out only after the requester's identity has been verified
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-13-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 13.º, n.º 1
+    en: Article 13(1)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-13-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 13.º, n.º 2
+    en: Article 13(2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-13-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 13.º, n.º 3
+    en: Article 13(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-14-1-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 14.º, n.º 1 e n.º 2
+    en: Article 14(1) and (2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-14-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 14.º, n.º 3
+    en: Article 14(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-14-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 14.º, n.º 4
+    en: Article 14(4)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-15-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 15.º, n.º 1
+    en: Article 15(1)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  falta:
+    pt: A cópia dos dados e o inventário de finalidades e destinatários estão prescritos (PRI-003, PRI-004). O conteúdo informativo da resposta (finalidades, destinatários, prazo, origem, direitos) é matéria da resposta formal, a declarar fora de âmbito.
+    en: The copy of the data and the inventory of purposes and recipients are prescribed (PRI-003, PRI-004). The informational content of the reply (purposes, recipients, period, source, rights) belongs to the formal reply, to be declared out of scope.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-15-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 15.º, n.º 2
+    en: Article 15(2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-15-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 15.º, n.º 3
+    en: Article 15(3)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-16
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 16.º
+    en: Article 16
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: rectificar e completar
+      en: rectify and complete them
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: As rectificações e os apagamentos propagam-se aos destinatários conhecidos
+      en: Rectifications and deletions propagate to the known recipients
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.6
+      en: Policy 18 §10.6
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 106-direitos-do-titular-dos-dados
+    citacao:
+      pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
+      en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-17-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 17.º, n.º 1
+    en: Article 17(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: apagar, incluindo réplicas, caches e sistemas a jusante
+      en: delete them, including replicas, caches and downstream systems
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: chega às réplicas, caches e sistemas a jusante
+      en: reaches replicas, caches and downstream systems
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §8.1
+      en: Policy 29 §8.1
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 81-imutabilidade-e-apagamento-de-dados-pessoais
+    citacao:
+      pt: um pedido de apagamento cumpre-se destruindo a chave desse titular
+      en: a deletion request is met by destroying that person's key
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.6
+      en: Policy 18 §10.6
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 106-direitos-do-titular-dos-dados
+    citacao:
+      pt: quando o titular exerce direito ao esquecimento (sujeito a obrigações legais de retenção concorrentes)
+      en: when the data subject exercises the right to be forgotten (subject to competing legal retention obligations)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: 'A tensão entre o armazenamento WORM (Política 29 §8, obrigatório em L3) e o apagamento resolve-se na Política 29 §8.1: nos registos imutáveis os dados pessoais entram só como pseudónimo, o conteúdo identificador vai cifrado com chave por titular e o apagamento cumpre-se destruindo a chave (PRI-005). Se isso vale juridicamente como apagamento é matéria do DPO.'
+    en: 'The tension between WORM storage (Policy 29 §8, mandatory at L3) and erasure is resolved in Policy 29 §8.1: in immutable logs, personal data enter only as a pseudonym, identifying content is encrypted with a per-person key, and erasure is achieved by destroying the key (PRI-005). Whether this counts legally as erasure is a matter for the DPO.'
+- id: RGPD-17-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 17.º, n.º 2
+    en: Article 17(2)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R02
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-18-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 18.º, n.º 1
+    en: Article 18(1)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-18-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 18.º, n.º 2
+    en: Article 18(2)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-18-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 18.º, n.º 3
+    en: Article 18(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia.'
+    en: 'Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-19
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 19.º
+    en: Article 19
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: As rectificações e os apagamentos propagam-se aos destinatários conhecidos
+      en: Rectifications and deletions propagate to the known recipients
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-20-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 20.º, n.º 1
+    en: Article 20(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-20-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 20.º, n.º 2
+    en: Article 20(2)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta:
+    pt: A exportação em formato de leitura automática está prescrita (PRI-003); a transmissão directa entre responsáveis, quando tecnicamente possível, não está.
+    en: Export in a machine-readable format is prescribed (PRI-003); direct transmission between controllers, where technically feasible, is not.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-21-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 21.º, n.º 1
+    en: Article 21(1)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: A ponderação de razões imperiosas é jurídica; a capacidade técnica de cessar o tratamento é tratada em RGPD-21-2-3 e RGPD-21-5 (lacunas).
+    en: Weighing compelling grounds is legal; the technical capability to cease processing is addressed in RGPD-21-2-3 and RGPD-21-5 (gaps).
+- id: RGPD-21-2-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 21.º, n.º 2 e n.º 3
+    en: Article 21(2) and (3)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.6
+      en: Policy 18 §10.6
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 106-direitos-do-titular-dos-dados
+    citacao:
+      pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
+      en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-21-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 21.º, n.º 4
+    en: Article 21(4)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO.'
+    en: 'Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-21-5
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 21.º, n.º 5
+    en: Article 21(5)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R04
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-22-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 22.º, n.º 1 e n.º 2
+    en: Article 22(1) and (2)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-22-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 22.º, n.º 3
+    en: Article 22(3)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-22-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 22.º, n.º 4
+    en: Article 22(4)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-24-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 24.º, n.º 1
+    en: Article 24(1)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: CLA-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: O nível de classificação determina o conjunto de controlos base obrigatórios
+      en: The classification level determines the set of mandatory baseline controls
+  - tipo: requisito
+    alvo: GOV-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Ciclo de revisão periódica definido por tipo de activo
+      en: Periodic review cycle defined by asset type
+  - tipo: politica
+    rotulo:
+      pt: Política 04 §1
+      en: Policy 04 §1
+    ficheiro: 020-assets/policies/04_policy-revisao-periodica-risco.md
+    ancora: 1-objetivo
+    citacao:
+      pt: revisão da classificação de risco aplicacional e dos controlos de segurança associados, ao longo de todo o ciclo de vida de cada aplicação
+      en: reviewing the application risk classification and the associated security controls throughout the entire lifecycle of each application
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Controlos proporcionais ao risco e revistos periodicamente — é o modelo do Manual; a responsabilidade e a demonstração de conformidade RGPD são da organização.
+    en: Controls proportionate to risk and reviewed periodically — this is the Manual's model; responsibility and demonstration of GDPR compliance lie with the organisation.
+- id: RGPD-24-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 24.º, n.º 2
+    en: Article 24(2)
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.1
+      en: Policy 18 §10.1
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 101-princípio-de-minimização
+    citacao:
+      pt: Redacção / pseudonimização antes do envio
+      en: Redaction / pseudonymisation before sending
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §5
+      en: Policy 29 §5
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 5-proibições-absolutas-nos-logs
+    citacao:
+      pt: PII directamente identificável (nome completo + morada + NIF)
+      en: Directly identifiable PII (full name + address + tax ID number)
+  falta:
+    pt: Não existe política de proteção de dados entre as 39 políticas; há apenas a secção de dados pessoais em prompts de IA (Política 18 §10) e as proibições em logs (Política 29 §5).
+    en: There is no data protection policy among the 39 policies; there is only the section on personal data in AI prompts (Policy 18 §10) and the prohibitions in logs (Policy 29 §5).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-25-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 25.º, n.º 1
+    en: Article 25(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: THR-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: exige-se só a vertente LINDDUN em forma leve
+      en: only the LINDDUN strand is required, in lightweight form
+  - tipo: us
+    alvo: 03-threat-modeling-us-08
+    rotulo:
+      pt: Cap. 03 US-08
+      en: Ch. 03 US-08
+    ficheiro: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
+    ancora: us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo
+    citacao:
+      pt: mapeamento para os requisitos de privacidade do Cap. 02
+      en: mapping to the privacy requirements of Ch. 02
+  - tipo: pagina
+    rotulo:
+      pt: O método
+      en: The method
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: o-método
+    citacao:
+      pt: derivar requisitos de privacidade e medidas de mitigação — minimização, anonimização, consentimento, transparência
+      en: derive privacy requirements and mitigation measures — minimisation, anonymisation, consent, transparency
+  - tipo: requisito
+    alvo: PRI-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada; campos sem finalidade são removidos do fluxo de recolha
+      en: Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow
+  - tipo: requisito
+    alvo: ERR-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: err
+    citacao:
+      pt: dados pessoais ou credenciais nunca registados em logs de erro
+      en: personal data or credentials are never recorded in error logs
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-25]
+  nota: null
+- id: RGPD-25-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 25.º, n.º 2
+    en: Article 25(2)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: os tratamentos opcionais exigem acção do utilizador (opt-in)
+      en: optional processing requires action by the user (opt-in)
+  - tipo: requisito
+    alvo: PRI-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: não ficam visíveis a um número indeterminado de pessoas sem intervenção do utilizador
+      en: are not visible to an indefinite number of people without the user's intervention
+  - tipo: politica
+    rotulo:
+      pt: Política 09 §3
+      en: Policy 09 §3
+    ficheiro: 020-assets/policies/09_policy-arquitetura-segura.md
+    ancora: 3-princípios-de-arquitetura-segura
+    citacao:
+      pt: Nenhum componente, serviço ou dado deve ter exposição superior à necessária para a sua função
+      en: No component, service or data item may have greater exposure than its function requires
+  - tipo: requisito
+    alvo: PRI-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada; campos sem finalidade são removidos do fluxo de recolha
+      en: Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
+  - tipo: requisito
+    alvo: ACC-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Contas sem permissões desnecessárias
+      en: Accounts without unnecessary permissions
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-25]
+  nota: null
+- id: RGPD-26-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 26.º, n.º 1
+    en: Article 26(1)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-26-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 26.º, n.º 2
+    en: Article 26(2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-27-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 27.º, n.º 1 e n.º 2
+    en: Article 27(1) and (2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 1
+    en: Article 28(1)
+  classe: juridico-contratual
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §3
+      en: Policy 33 §3
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 3-due-diligence-pré-contratual
+    citacao:
+      pt: Antes de estabelecer qualquer relação contratual com acesso técnico, deve ser realizada uma avaliação de segurança proporcional ao nível de risco
+      en: Before establishing any contractual relationship with technical access, a security assessment proportional to the risk level must be carried out
+  - tipo: requisito
+    alvo: GOV-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Fornecedores com acesso a dados, código ou pipelines são validados com questionário ou checklist antes de onboarding
+      en: Suppliers with access to data, code or pipelines are validated with a questionnaire or checklist before onboarding
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: A due diligence de segurança de fornecedores com acesso a dados é evidência das «garantias suficientes»; não inclui critérios específicos de proteção de dados (assistência, apagamento, subcontratação ulterior).
+    en: Security due diligence of vendors with access to data is evidence of the “sufficient guarantees”; it does not include specific data protection criteria (assistance, erasure, further sub-processing).
+- id: RGPD-28-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 2
+    en: Article 28(2)
+  classe: juridico-contratual
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.1
+      en: Policy 33 §4.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 41-cláusulas-universais-todos-os-níveis
+    citacao:
+      pt: Proibição ou condicionamento de subcontratação com acesso a dados ou sistemas
+      en: Prohibition or conditioning of subcontracting with access to data or systems
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Cláusula universal de proibição ou condicionamento da subcontratação; não exige autorização prévia escrita nem o direito de oposição em autorização geral.
+    en: Universal clause prohibiting or conditioning sub-processing; it does not require prior written authorisation nor the right to object under general authorisation.
+- id: RGPD-28-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3
+    en: Article 28(3)
+  classe: juridico-contratual
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.4
+      en: Policy 33 §4.4
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 44-subcontratantes-de-dados-pessoais-rgpd-art-28
+    citacao:
+      pt: o tratamento é regulado por contrato, em qualquer nível
+      en: the processing is governed by a contract, at any level
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.3
+      en: Policy 18 §10.3
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 103-sub-processadores
+    citacao:
+      pt: Contrato com o subcontratante (RGPD, art. 28.º, n.º 3) com cláusulas explícitas
+      en: Contract with the processor (GDPR, Article 28(3)) with explicit clauses
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.7
+      en: Policy 18 §10.7
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 107-proporcionalidade
+    citacao:
+      pt: Subcontratante com cláusulas do art. 28.º | Obrigatório (sempre que há PII)
+      en: Processor with Article 28 clauses | Mandatory (whenever there is PII)
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §10.6
+      en: Policy 33 §10.6
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 106-conformidade-regulatória-declarada
+    citacao:
+      pt: contrato com o subcontratante (n.º 3) e informação prévia sobre a contratação ou substituição de outros subcontratantes (n.º 2)
+      en: contract with the processor (paragraph 3) and prior information on the engagement or replacement of other processors (paragraph 2)
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §10.7
+      en: Policy 33 §10.7
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 107-operacionalização
+    citacao:
+      pt: 10.6 Conformidade regulatória declarada | — | Aplicável quando relevante | Obrigatório quando GPAI ou dados pessoais
+      en: 10.6 Declared regulatory compliance | — | Applicable when relevant | Mandatory when GPAI or personal data
+  - tipo: requisito
+    alvo: GOV-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: incluem cláusulas de segurança proporcionais ao nível de risco
+      en: include security clauses proportional to the risk level
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: true
+  explicacao_conflito:
+    pt: 'Contradição interna com efeito legal: a Política 33 §10.7 marca a «Conformidade regulatória declarada» (que inclui o contrato do art. 28.º) como «—» em L1 e «Aplicável quando relevante» em L2, ao passo que o art. 28.º, n.º 3, é exigível sempre que um subcontratante trata dados pessoais — e a Política 18 §10.7 marca-o «Obrigatório (sempre que há PII)» em todos os níveis.'
+    en: 'Internal contradiction with legal effect: Policy 33 §10.7 marks “Declared regulatory compliance” (which includes the Article 28 contract) as “—” at L1 and “Applicable when relevant” at L2, whereas Article 28(3) is enforceable whenever a processor processes personal data — and Policy 18 §10.7 marks it “Mandatory (whenever there is PII)” at all levels.'
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-a
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea a)
+    en: Article 28(3), point (a)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-b
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea b)
+    en: Article 28(3), point (b)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §5.1
+      en: Policy 33 §5.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 51-processo-de-onboarding
+    citacao:
+      pt: Termo de responsabilidade e confidencialidade individual
+      en: Individual statement of responsibility and confidentiality
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Termo de confidencialidade individual para contractors; não cobre o pessoal próprio quando a organização atua como subcontratante.
+    en: Individual confidentiality agreement for contractors; it does not cover the organisation's own staff when the organisation acts as processor.
+- id: RGPD-28-3-c
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea c)
+    en: Article 28(3), point (c)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: CLA-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: O nível de classificação determina o conjunto de controlos base obrigatórios
+      en: The classification level determines the set of mandatory baseline controls
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.2
+      en: Policy 33 §4.2
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 42-cláusulas-adicionais-por-nível-de-risco
+    citacao:
+      pt: Aplicação do Catálogo SbD-ToE
+      en: Application of the SbD-ToE Catalogue
+  - tipo: requisito
+    alvo: ENC-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
+      en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota:
+    pt: Se a organização é subcontratante, o catálogo aplica-se-lhe como medidas do art. 32.º; como responsável, a Política 33 §4.2 impõe o catálogo aos fornecedores L2. Remete para os limites de RGPD-32-1-c.
+    en: If the organisation is a processor, the catalogue applies to it as Article 32 measures; as controller, Policy 33 §4.2 imposes the catalogue on L2 vendors. Refers to the limits of RGPD-32-1-c.
+- id: RGPD-28-3-e
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea e)
+    en: Article 28(3), point (e)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-f
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea f)
+    en: Article 28(3), point (f)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: Ao responsável pelo tratamento, sem demora injustificada (o contrato pode fixar um prazo em horas)
+      en: To the controller, without undue delay (the contract may set a time limit in hours)
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.1
+      en: Policy 33 §4.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 41-cláusulas-universais-todos-os-níveis
+    citacao:
+      pt: sem demora injustificada e ≤ 24 horas após o conhecimento
+      en: without undue delay and ≤ 24 hours after becoming aware
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Notificação de violações ao responsável prevista; a assistência em AIPD e consulta prévia não.
+    en: Notification of breaches to the controller provided for; assistance with DPIA and prior consultation is not.
+- id: RGPD-28-3-g
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea g)
+    en: Article 28(3), point (g)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: no fim do serviço os dados e as respectivas cópias são apagados ou devolvidos
+      en: at the end of the service the data and their copies are deleted or returned
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §7.1
+      en: Policy 33 §7.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 71-checklist-de-offboarding
+    citacao:
+      pt: Confirmação de eliminação ou devolução de dados da organização em posse do fornecedor (quando aplicável)
+      en: Confirmation of deletion or return of the organisation's data held by the supplier (where applicable)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-h
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea h)
+    en: Article 28(3), point (h)
+  classe: juridico-contratual
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.2
+      en: Policy 33 §4.2
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 42-cláusulas-adicionais-por-nível-de-risco
+    citacao:
+      pt: direito formal de auditoria técnica pela organização
+      en: formal right of technical audit by the organisation
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, segundo parágrafo
+    en: Article 28(3), second subparagraph
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-3-d
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 3, alínea d)
+    en: Article 28(3), point (d)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 4
+    en: Article 28(4)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-28-10
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 28.º, n.º 10
+    en: Article 28(10)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-29
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 29.º
+    en: Article 29
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: O menor privilégio (ACC-002) apoia tecnicamente; ver RGPD-32-4.
+    en: Least privilege (ACC-002) provides technical support; see RGPD-32-4.
+- id: RGPD-30-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 30.º, n.º 1
+    en: Article 30(1)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  - tipo: requisito
+    alvo: CLA-008
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: Existe inventário central ou GRC com registo de cada aplicação
+      en: A central inventory or GRC exists with a record of each application
+  - tipo: requisito
+    alvo: ARC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagrama com zonas de confiança delimitadas, identificadas e justificadas
+      en: Diagram with trust zones delimited, identified and justified
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-30]
+  nota:
+    pt: O inventário de conjuntos de dados pessoais por finalidade e sistema, o inventário de aplicações e a documentação de arquitetura alimentam o registo; o Manual não fornece o registo (o cross-check remete-o para GRC/Jurídico).
+    en: The inventory of personal datasets by purpose and system, the application inventory and the architecture documentation feed the record; the Manual does not provide the record (the cross-check refers it to GRC/Legal).
+- id: RGPD-30-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 30.º, n.º 2
+    en: Article 30(2)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: PRI-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-30]
+  nota:
+    pt: PRI-004 não distingue tratamentos por conta de cada responsável; utilidade limitada para o registo do subcontratante.
+    en: PRI-004 does not distinguish processing on behalf of each controller; limited usefulness for the processor's record.
+- id: RGPD-30-3-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 30.º, n.º 3 e n.º 4
+    en: Article 30(3) and (4)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-31
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 31.º
+    en: Article 31
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-32-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 1
+    en: Article 32(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: CLA-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: Cada aplicação tem classificação de criticidade formalizada segundo os eixos de exposição, sensibilidade de dados e impacto de incidente
+      en: Each application has a criticality classification formalised according to the axes of exposure, data sensitivity and incident impact
+  - tipo: requisito
+    alvo: CLA-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: O nível de classificação determina o conjunto de controlos base obrigatórios
+      en: The classification level determines the set of mandatory baseline controls
+  - tipo: requisito
+    alvo: THR-001
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: Aplicações com classificação L2 ou superior têm threat model formal documentado
+      en: Applications classified L2 or higher have a formal, documented threat model
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota:
+    pt: 'É o núcleo do Manual: controlos selecionados pela classificação de risco (exposição, dados, impacto).'
+    en: 'It is the core of the Manual: controls selected by risk classification (exposure, data, impact).'
+- id: RGPD-32-1-a
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea a)
+    en: Article 32(1), point (a)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
+      en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
+  - tipo: requisito
+    alvo: ENC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Toda a comunicação entre cliente e servidor e entre serviços internos usa TLS
+      en: All communication between client and server and between internal services uses TLS
+  - tipo: requisito
+    alvo: ERR-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: err
+    citacao:
+      pt: dados pessoais ou credenciais nunca registados em logs de erro
+      en: personal data or credentials are never recorded in error logs
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.1
+      en: Policy 18 §10.1
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 101-princípio-de-minimização
+    citacao:
+      pt: Redacção / pseudonimização antes do envio
+      en: Redaction / pseudonymisation before sending
+  - tipo: requisito
+    alvo: PRI-005
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: os dados pessoais entram só como identificador pseudónimo
+      en: personal data enter only as a pseudonymous identifier
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota:
+    pt: O art. 32.º condiciona à adequação («consoante o adequado»), o que é compatível com a graduação por nível.
+    en: Article 32 makes it conditional on appropriateness (“as appropriate”), which is compatible with grading by level.
+- id: RGPD-32-1-b
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea b)
+    en: Article 32(1), point (b)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Toda a comunicação entre cliente e servidor e entre serviços internos usa TLS
+      en: All communication between client and server and between internal services uses TLS
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  - tipo: requisito
+    alvo: ENC-009
+    niveis: [L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados críticos com mecanismo de verificação de integridade (MACs, assinaturas, checksums); adulterações detectadas e registadas
+      en: Critical data with an integrity verification mechanism (MACs, signatures, checksums); tampering detected and logged
+  - tipo: requisito
+    alvo: OPS-015
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: monitorizado continuamente fora da instância
+      en: monitored continuously outside the instance
+  - tipo: requisito
+    alvo: ARC-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Evidência de isolamento activo entre domínios sensíveis
+      en: Evidence of active isolation between sensitive domains
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota: null
+- id: RGPD-32-1-c
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea c)
+    en: Article 32(1), point (c)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: DPL-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: Procedimento de rollback definido, documentado e testado periodicamente
+      en: Rollback procedure defined, documented and tested periodically
+  - tipo: politica
+    rotulo:
+      pt: Política 27 §3.3
+      en: Policy 27 §3.3
+    ficheiro: 020-assets/policies/27_policy-rollback.md
+    ancora: 33-rollback-de-base-de-dados
+    citacao:
+      pt: Snapshot/backup pré-deploy disponível
+      en: Pre-deploy snapshot/backup available
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.5
+      en: Policy 32 §4.5
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 45-recuperação
+    citacao:
+      pt: Sistemas restaurados com versões limpas e verificadas
+      en: Systems restored with clean and verified versions
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §5
+      en: Policy 32 §5
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 5-playbooks-de-resposta
+    citacao:
+      pt: Isolamento, forensics, recuperação de backup
+      en: Isolation, forensics, recovery from backup
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota: null
+- id: RGPD-32-1-d
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 1, alínea d)
+    en: Article 32(1), point (d)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: TST-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Documento de estratégia com tipologias de teste, frequência, responsáveis e critérios de aceitação por nível de risco
+      en: Strategy document with test types, frequency, owners and acceptance criteria by risk level
+  - tipo: requisito
+    alvo: TST-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Pentesting executado com frequência mínima definida por nível de risco
+      en: Pentesting performed at a minimum frequency defined by risk level
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §8
+      en: Policy 32 §8
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 8-testes-periódicos-do-irp
+    citacao:
+      pt: Tabletop + simulação de playbook
+      en: Tabletop + playbook simulation
+  - tipo: requisito
+    alvo: GOV-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Ciclo de revisão periódica definido por tipo de activo
+      en: Periodic review cycle defined by asset type
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota: null
+- id: RGPD-32-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 2
+    en: Article 32(2)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: THR-001
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: Aplicações com classificação L2 ou superior têm threat model formal documentado
+      en: Applications classified L2 or higher have a formal, documented threat model
+  - tipo: requisito
+    alvo: THR-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: cada fluxo de dados sensíveis identifica origem, destino, canal e nível de confiança
+      en: each sensitive data flow identifies origin, destination, channel and trust level
+  - tipo: requisito
+    alvo: CLA-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: Cada aplicação tem classificação de criticidade formalizada segundo os eixos de exposição, sensibilidade de dados e impacto de incidente
+      en: Each application has a criticality classification formalised according to the axes of exposure, data sensitivity and incident impact
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-32]
+  nota: null
+- id: RGPD-32-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 32.º, n.º 4
+    en: Article 32(4)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ACC-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Contas sem permissões desnecessárias
+      en: Accounts without unnecessary permissions
+  - tipo: requisito
+    alvo: ACC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Auditorias periódicas removem permissões obsoletas
+      en: Periodic audits remove obsolete permissions
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §5.1
+      en: Policy 33 §5.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 51-processo-de-onboarding
+    citacao:
+      pt: Termo de responsabilidade e confidencialidade individual
+      en: Individual statement of responsibility and confidentiality
+  - tipo: requisito
+    alvo: TRN-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/13-formacao-onboarding/addon/00-catalogo-requisitos.md
+    ancora: catálogo-trn---formação-e-onboarding
+    citacao:
+      pt: Existem trilhos de formação de segurança definidos por perfil de colaborador
+      en: Security training tracks exist, defined by staff profile
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-33-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 33.º, n.º 1
+    en: Article 33(1)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: 'À autoridade de controlo (em Portugal, a CNPD): sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento'
+      en: 'To the supervisory authority (in Portugal, the CNPD): without undue delay and, where feasible, not later than 72 hours after having become aware of it'
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.1
+      en: Policy 32 §4.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 41-triagem-t0----15-minutos-de-detecção
+    citacao:
+      pt: o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h
+      en: the moment of awareness recorded in the ticket; notifiability decision ≤ 4 h
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §2
+      en: Policy 32 §2
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 2-âmbito-e-obrigatoriedade
+    citacao:
+      pt: A notificação regulatória (secção 6) é obrigatória sempre que aplicável, em qualquer nível
+      en: Regulatory notification (section 6) is mandatory whenever applicable, at any level
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota: null
+- id: RGPD-33-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 33.º, n.º 2
+    en: Article 33(2)
+  classe: organizacional
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: Ao responsável pelo tratamento, sem demora injustificada (o contrato pode fixar um prazo em horas)
+      en: To the controller, without undue delay (the contract may set a time limit in hours)
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §4.1
+      en: Policy 33 §4.1
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 41-cláusulas-universais-todos-os-níveis
+    citacao:
+      pt: sem demora injustificada e ≤ 24 horas após o conhecimento
+      en: without undue delay and ≤ 24 hours after becoming aware
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota: null
+- id: RGPD-33-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 33.º, n.º 3
+    en: Article 33(3)
+  classe: organizacional
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6.1
+      en: Policy 32 §6.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 61-critério-e-conteúdo-mínimo-por-regime
+    citacao:
+      pt: O conteúdo mínimo é o que a lei pede
+      en: The minimum content is what the law requires
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
+    citacao:
+      pt: Âmbito do impacto determinado (sistemas, dados, utilizadores afectados)
+      en: Scope of the impact determined (affected systems, data, users)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota: null
+- id: RGPD-33-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 33.º, n.º 4
+    en: Article 33(4)
+  classe: organizacional
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: pode ser faseada (n.º 4)
+      en: may be provided in phases (paragraph 4)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota:
+    pt: Incorporado na tabela de notificação regulatória; não detalha o processo de complemento.
+    en: Incorporated in the regulatory notification table; the supplementing process is not detailed.
+- id: RGPD-33-5
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 33.º, n.º 5
+    en: Article 33(5)
+  classe: engenharia
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R06
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.6
+      en: Policy 32 §4.6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 46-post-mortem
+    citacao:
+      pt: Realizado no prazo máximo de 5 dias úteis após resolução
+      en: Held within a maximum of 5 working days after resolution
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.1
+      en: Policy 32 §4.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 41-triagem-t0----15-minutos-de-detecção
+    citacao:
+      pt: o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h
+      en: the moment of awareness recorded in the ticket; notifiability decision ≤ 4 h
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: A timeline, o post-mortem e as notificações enviadas conservam-se por 1 ano em L1 e L2 e por 3 anos em L3
+      en: The timeline, the post-mortem and the notifications sent are kept for 1 year at L1 and L2 and for 3 years at L3
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Registos de incidentes (timeline, post-mortem, notificações)
+      en: Incident records (timeline, post-mortem, notifications)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota:
+    pt: 'Tensão: retenção de registos de incidentes de 1 ano em L1/L2 pode ser curta para verificação pela autoridade; a cláusula de precedência (lei prevalece) evita contradição formal, mas o RGPD não fixa prazo e o Manual não o identifica no mapa de retenção.'
+    en: 'Tension: retention of incident records of 1 year at L1/L2 may be short for verification by the authority; the precedence clause (law prevails) avoids formal contradiction, but the GDPR does not fix a period and the Manual does not identify it in the retention map.'
+- id: RGPD-34-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 34.º, n.º 1
+    en: Article 34(1)
+  classe: organizacional
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: Aos titulares dos dados, sem demora injustificada (exceções no n.º 3)
+      en: To the data subjects, without undue delay (exceptions in paragraph 3)
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §7
+      en: Policy 32 §7
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 7-comunicação-durante-o-incidente
+    citacao:
+      pt: Comunicação a utilizadores afectados quando aplicável - honesta e sem comprometer a investigação
+      en: Communication to affected users where applicable - honest and without compromising the investigation
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota: null
+- id: RGPD-34-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 34.º, n.º 2
+    en: Article 34(2)
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §7
+      en: Policy 32 §7
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 7-comunicação-durante-o-incidente
+    citacao:
+      pt: Comunicação a utilizadores afectados quando aplicável - honesta e sem comprometer a investigação
+      en: Communication to affected users where applicable - honest and without compromising the investigation
+  falta:
+    pt: Exige comunicação honesta, mas não o conteúdo mínimo (natureza da violação em linguagem clara, contacto do EPD, consequências, medidas).
+    en: Requires honest communication, but not the minimum content (nature of the breach in clear language, DPO contact, consequences, measures).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-33-34]
+  nota: null
+- id: RGPD-35-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 1
+    en: Article 35(1)
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: Âmbito e propósito
+      en: Scope and purpose
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: âmbito-e-propósito
+    citacao:
+      pt: o LINDDUN é o instrumento que estrutura a sua componente técnica
+      en: LINDDUN is the instrument that structures its technical component
+  - tipo: us
+    alvo: 03-threat-modeling-us-08
+    rotulo:
+      pt: Cap. 03 US-08
+      en: Ch. 03 US-08
+    ficheiro: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
+    ancora: us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo
+    citacao:
+      pt: mapeamento para os requisitos de privacidade do Cap. 02
+      en: mapping to the privacy requirements of Ch. 02
+  - tipo: requisito
+    alvo: THR-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: LINDDUN em aplicações com fluxos de dados pessoais ou contexto de privacidade
+      en: LINDDUN in applications with personal-data flows or a privacy context
+  - tipo: pagina
+    rotulo:
+      pt: Âmbito e propósito
+      en: Scope and purpose
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: âmbito-e-propósito
+    citacao:
+      pt: Não substitui a avaliação legal de conformidade nem o parecer do DPO
+      en: It does not replace the legal compliance assessment or the DPO's opinion
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-35]
+  nota:
+    pt: O Manual declara o LINDDUN como a componente técnica da AIPD e recusa substituir a avaliação legal; não prescreve a AIPD nem o gatilho de «elevado risco» para titulares.
+    en: The Manual declares LINDDUN as the technical component of the DPIA and refuses to replace the legal assessment; it does not prescribe the DPIA nor the “high risk” trigger for data subjects.
+- id: RGPD-35-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 2
+    en: Article 35(2)
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: us
+    alvo: 03-threat-modeling-us-08
+    rotulo:
+      pt: Cap. 03 US-08
+      en: Ch. 03 US-08
+    ficheiro: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
+    ancora: us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo
+    citacao:
+      pt: LINDDUN completo + validação independente (DPO)
+      en: Full LINDDUN + independent validation (DPO)
+  - tipo: pagina
+    rotulo:
+      pt: Responsabilidades Principais
+      en: Key Responsibilities
+    ficheiro: 010-sbd-manual/00-fundamentos/roles-responsabilidades/legal.md
+    ancora: responsabilidades-principais
+    citacao:
+      pt: Através do DPO, validam de forma independente a análise de privacidade em L3
+      en: Through the DPO, independently validate the privacy analysis at L3
+  falta:
+    pt: Revisão pelo DPO só em L3 e sobre a análise LINDDUN, não sobre a AIPD.
+    en: Review by the DPO only at L3 and of the LINDDUN analysis, not of the DPIA.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-35]
+  nota: null
+- id: RGPD-35-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 3
+    en: Article 35(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-35]
+  nota:
+    pt: A classificação (D=3; I=3 para decisões automáticas sem revisão humana) sinaliza candidatos, mas os casos obrigatórios são juízo jurídico.
+    en: The classification (D=3; I=3 for automated decisions without human review) flags candidates, but the mandatory cases are a legal judgement.
+- id: RGPD-35-7
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 7
+    en: Article 35(7)
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: O método
+      en: The method
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: o-método
+    citacao:
+      pt: Representar o sistema num *data flow diagram*
+      en: Represent the system in a *data flow diagram*
+  - tipo: requisito
+    alvo: THR-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: cada fluxo de dados sensíveis identifica origem, destino, canal e nível de confiança
+      en: each sensitive data flow identifies origin, destination, channel and trust level
+  - tipo: pagina
+    rotulo:
+      pt: O método
+      en: The method
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: o-método
+    citacao:
+      pt: derivar requisitos de privacidade e medidas de mitigação — minimização, anonimização, consentimento, transparência
+      en: derive privacy requirements and mitigation measures — minimisation, anonymisation, consent, transparency
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-35]
+  nota:
+    pt: Descrição sistemática (DFD), riscos e medidas vêm do threat model; falta avaliação de necessidade e proporcionalidade.
+    en: Systematic description (DFD), risks and measures come from the threat model; assessment of necessity and proportionality is missing.
+- id: RGPD-35-9
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 9
+    en: Article 35(9)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO.'
+    en: 'Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-35-11
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 35.º, n.º 11
+    en: Article 35(11)
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 08 §4.1
+      en: Policy 08 §4.1
+    ficheiro: 020-assets/policies/08_policy-threat-modeling.md
+    ancora: 41-triggers-obrigatórios
+    citacao:
+      pt: Arranque de novo projeto ou produto (L2/L3)
+      en: Start of a new project or product (L2/L3)
+  - tipo: requisito
+    alvo: ARC-009
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: evidência de revisão executada após a última alteração que atingiu esse limiar
+      en: evidence of a review carried out after the last change that reached that threshold
+  - tipo: requisito
+    alvo: CLA-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: a classificação é reavaliada no prazo máximo de 30 dias
+      en: the classification is reassessed within a maximum of 30 days
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: [EXT-RGPD-OBL-35]
+  nota:
+    pt: Gatilhos de revisão do threat model/arquitetura por alteração; não se liga à revisão da AIPD.
+    en: Review triggers for the threat model/architecture upon change; not linked to review of the DPIA.
+- id: RGPD-36-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 36.º, n.º 1
+    en: Article 36(1)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-36-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 36.º, n.º 3
+    en: Article 36(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-37-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 37.º, n.º 1
+    en: Article 37(1)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-37-5
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 37.º, n.º 5
+    en: Article 37(5)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-37-7
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 37.º, n.º 7
+    en: Article 37(7)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-38-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 38.º, n.º 1
+    en: Article 38(1)
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.1
+      en: Policy 32 §4.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 41-triagem-t0----15-minutos-de-detecção
+    citacao:
+      pt: GRC/Compliance e EPD/DPO informados ≤ 1 h após a confirmação
+      en: GRC/Compliance and the DPO informed ≤ 1 h after confirmation
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável
+      en: The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable
+  - tipo: us
+    alvo: 03-threat-modeling-us-08
+    rotulo:
+      pt: Cap. 03 US-08
+      en: Ch. 03 US-08
+    ficheiro: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
+    ancora: us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo
+    citacao:
+      pt: LINDDUN completo + validação independente (DPO)
+      en: Full LINDDUN + independent validation (DPO)
+  falta:
+    pt: EPD envolvido em violações (≤ 1 h) e na revisão LINDDUN L3; não é envolvido em design, AIPD, escolha de subcontratantes ou exceções.
+    en: DPO involved in breaches (≤ 1 h) and in the L3 LINDDUN review; not involved in design, DPIA, choice of processors or exceptions.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-38-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 38.º, n.º 2
+    en: Article 38(2)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-38-3
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 38.º, n.º 3
+    en: Article 38(3)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-38-6
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 38.º, n.º 6
+    en: Article 38(6)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico).'
+    en: 'Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-39-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 39.º, n.º 1
+    en: Article 39(1)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: pagina
+    rotulo:
+      pt: O método
+      en: The method
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
+    ancora: o-método
+    citacao:
+      pt: Ancorar as ameaças e mitigações às obrigações aplicáveis (RGPD, DPIA), em articulação com o DPO
+      en: Anchor the threats and mitigations to the applicable obligations (GDPR, DPIA), in coordination with the DPO
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável
+      en: The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable
+  - tipo: pagina
+    rotulo:
+      pt: Responsabilidades Principais
+      en: Key Responsibilities
+    ficheiro: 010-sbd-manual/00-fundamentos/roles-responsabilidades/legal.md
+    ancora: responsabilidades-principais
+    citacao:
+      pt: Através do DPO, validam de forma independente a análise de privacidade em L3
+      en: Through the DPO, independently validate the privacy analysis at L3
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: O Manual produz insumos para as funções do EPD (análise de privacidade, avaliação de notificabilidade); as funções em si são do EPD.
+    en: The Manual produces inputs for the DPO's tasks (privacy analysis, notifiability assessment); the tasks themselves are the DPO's.
+- id: RGPD-40-4
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 40.º, n.º 4
+    en: Article 40(4)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-42-6-7
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 42.º, n.º 6 e n.º 7
+    en: Article 42(6) and (7)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia.
+    en: Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-44
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 44.º
+    en: Article 44
+  classe: juridico-contratual
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.3
+      en: Policy 18 §10.3
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 103-sub-processadores
+    citacao:
+      pt: ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º)
+      en: or another valid mechanism for international transfers (GDPR Arts. 44–49)
+  - tipo: politica
+    rotulo:
+      pt: Política 33 §10.2
+      en: Policy 33 §10.2
+    ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
+    ancora: 102-localização-de-processamento
+    citacao:
+      pt: Documentar onde os dados são processados (região, centro de dados, jurisdição).
+      en: Document where data is processed (region, data centre, jurisdiction).
+  falta:
+    pt: Só na fatia de fornecedores de serviços de IA; hosting, SaaS e outros subcontratantes fora do EEE não têm regra de localização/transferência.
+    en: Only in the AI service vendors slice; hosting, SaaS and other processors outside the EEA have no location/transfer rule.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota:
+    pt: Obrigação jurídica em que o Manual entra parcialmente, contra a sua própria delimitação.
+    en: Legal obligation into which the Manual partially enters, against its own delimitation.
+- id: RGPD-46-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 46.º, n.º 1 a n.º 3
+    en: Article 46(1) to (3)
+  classe: juridico-contratual
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §10.3
+      en: Policy 18 §10.3
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 103-sub-processadores
+    citacao:
+      pt: ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º)
+      en: or another valid mechanism for international transfers (GDPR Arts. 44–49)
+  falta:
+    pt: Exige SCC «ou outro mecanismo válido» apenas para fornecedores de IA; não trata avaliação de impacto da transferência nem medidas técnicas suplementares.
+    en: Requires SCCs “or another valid mechanism” only for AI vendors; does not address transfer impact assessment nor supplementary technical measures.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-47-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 47.º, n.º 2
+    en: Article 47(2)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-48
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 48.º
+    en: Article 48
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-49-1
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 49.º, n.º 1
+    en: Article 49(1)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-49-1-2
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 49.º, n.º 1, segundo parágrafo
+    en: Article 49(1), second subparagraph
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+- id: RGPD-49-6
+  acto_fonte: 32016R0679
+  referencia:
+    pt: Art. 49.º, n.º 6
+    en: Article 49(6)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2).'
+    en: 'Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2).'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
+  substitui: []
+  nota: null
+excluidas:
+- id: RGPD-AUT-EM
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: RGPD-AUT-AIPD
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: RGPD-AUT-COD-CERT
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: RGPD-AUT-TRANSF
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: RGPD-AUT-SUPERV
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: RGPD-AUT-SANC
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.

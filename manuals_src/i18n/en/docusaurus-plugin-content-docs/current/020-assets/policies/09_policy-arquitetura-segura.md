@@ -8,16 +8,16 @@ sidebar_position: 9
 translation:
   source_locale: pt
   source_path: 020-assets/policies/09_policy-arquitetura-segura.md
-  source_sha256: 068677d26c590a8cf3e58e0e52412e07f8c143a05411c3eca770531e44e22c96
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: f188a9533286b8c5f2b7620be21e4dfa25dcb49e8e313e803ad8f270aa2c5836
+  source_sha256: 47a6a3f72cb7663d231bd7f953e283d4832e1da0e2b0f69059768c2d84f01c03
+  source_commit: 32978973a6e4e01d6abcfe36fb0e33a8192cb20d
+  target_sha256: b9b654e28f9ac37a33d9c4139e8d0a2bf4d1d7d52c2f8a4098324edf5c237370
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [cycle_iteration, lifecycle_phase, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 78233c3946ccd27e8c8124db05e2c58f170d75b66e73da40e5de0359a56b532e
-  translated_at: 2026-09-26T14:12:04Z
-  stamped_at: 2026-09-26T18:36:49Z
+  translated_at: 2026-09-27T15:08:14Z
+  stamped_at: 2026-09-27T15:08:14Z
   reviewed_by: null
 ---
 
@@ -225,14 +225,14 @@ The gate must be configured by DevOps/SRE, in coordination with the AppSec Engin
 
 | Requirement | L1 | L2 | L3 |
 |---|---|---|---|
-| Documented architecture baseline | Recommended | Mandatory | Mandatory |
+| Documented architecture baseline | Mandatory | Mandatory | Mandatory |
 | `solution-architecture.md` approved | Recommended | Mandatory | Mandatory |
 | ADR for decisions with security impact | Optional | Mandatory | Mandatory |
-| Inventory of trust boundaries | Recommended | Mandatory | Mandatory |
+| Inventory of trust boundaries | Mandatory | Mandatory | Mandatory |
 | `integration-review.md` per new integration | Recommended | Mandatory | Mandatory |
 | Independent review | Not applicable | Recommended | Mandatory |
 | Consistency gate in the CI/CD pipeline | Not applicable | Recommended | Mandatory |
-| Reusable pattern catalogue | Optional | Recommended | Mandatory |
+| Reusable pattern catalogue | Optional | Mandatory | Mandatory |
 
 ---
 

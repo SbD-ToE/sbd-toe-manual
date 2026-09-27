@@ -164,7 +164,7 @@ ALLOW_MODULE_SOURCES = [
 | --------------------- | ----------- | ----------- | ------------------------------ |
 | Allowlist de fontes   | Recomendado | Obrigatório | Obrigatório                    |
 | Pinning de versão     | Obrigatório | Obrigatório | Obrigatório                    |
-| Validação automática  | Recomendado | Obrigatório | Obrigatório                    |
+| Validação automática  | Obrigatório | Obrigatório | Obrigatório                    |
 | Aprovação formal      | Recomendado | Obrigatório | Obrigatório (reforçada)        |
 | Inventário/SBOM       | Recomendado | Obrigatório | Obrigatório                    |
 | Revalidação periódica | Recomendado | Obrigatório | Obrigatório + frequência maior |

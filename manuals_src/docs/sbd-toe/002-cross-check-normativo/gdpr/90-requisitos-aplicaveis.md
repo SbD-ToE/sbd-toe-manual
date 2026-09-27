@@ -1,0 +1,513 @@
+---
+id: requisitos-aplicaveis
+title: "Requisitos aplicáveis — Tratamento de dados pessoais (RGPD)"
+description: "Vista gerada: requisitos do Manual que se aplicam sob o contexto CTX-RGPD, por nível e grau, com os pisos que o regime eleva e a base legal de cada um."
+sidebar_position: 90
+tags: [cross-check, gdpr, requisitos, overlay, gerado]
+sbdtoe_generated: reg-requirements-view
+derived_from:
+  - 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+  - 010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md
+  - 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+  - 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/06-desenvolvimento-seguro/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/08-iac-infraestrutura/addon/08-matriz-requisitos-iac.md
+  - 010-sbd-manual/09-containers-imagens/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/13-formacao-onboarding/addon/00-catalogo-requisitos.md
+  - 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+  - 002-cross-check-normativo/_contextos-regulatorios.yaml
+  - 002-cross-check-normativo/_matriz/rgpd.yaml
+---
+
+# Requisitos aplicáveis: Tratamento de dados pessoais (RGPD)
+
+> **Página gerada** por `scripts/gen_reg_views.py` a partir dos catálogos de requisitos e de `002-cross-check-normativo/_contextos-regulatorios.yaml`. Não se edita à mão: o catálogo de cada requisito é a fonte canónica, e esta página é uma vista do overlay regulatório.
+
+Esta página junta, para o contexto **CTX-RGPD**, a selecção base do Manual por nível e os **pisos** que o regime eleva, cada um com a obrigação que o fundamenta. Um contexto nunca baixa um mínimo do Manual.
+
+## Quando se aplica {#quando-se-aplica}
+
+A aplicação trata dados pessoais. A declaração é sempre explícita (sim ou não) e nunca se deduz da classificação de sensibilidade dos dados. Declara-se por aplicação.
+
+> Reg. (UE) 2016/679, art. 2.º, n.º 1: «O presente regulamento aplica-se ao tratamento de dados pessoais por meios total ou parcialmente automatizados»
+
+## Pisos do contexto {#pisos}
+
+| Piso | Alvo | Grau | Piso exigido | Âmbito | Base legal | Justificação de não aplicabilidade |
+|---|---|---|---|---|---|---|
+| CTX-RGPD-P01 | [Política 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28) | — | obrigatório | Contrato do art. 28.º, n.º 3, obrigatório em qualquer nível sempre que um subcontratante trata dados pessoais. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
+| CTX-RGPD-P02 | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | obrigatório | Contrato do art. 28.º, n.º 3, com os subcontratantes que recebem dados pessoais em prompts, em qualquer nível. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
+| CTX-RGPD-P03 | `OPS-016` | — | obrigatório | Dados pessoais incluídos nas cópias, com restauro testado. | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c): «A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico» (RGPD-32-1-c) | não admitida |
+| CTX-RGPD-P04 | `PRI-004` | — | obrigatório | Inventário de finalidades e destinatários em qualquer nível: sem ele, as rectificações, os apagamentos e as limitações não chegam aos destinatários. | Reg. (UE) 2016/679, art. 19.º: «a cada destinatário a quem os dados pessoais tenham sido transmitidos» (RGPD-19) | não admitida |
+| CTX-RGPD-P05 | `PRI-005` | — | obrigatório | Conceito de PII em registos em qualquer nível, com pseudónimos e chave por titular nos registos imutáveis (Política 29 §8.1). | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. a): «A pseudonimização e a cifragem dos dados pessoais» (RGPD-32-1-a) | não admitida |
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-RGPD-R01` | Limitação do tratamento | Capacidade de marcar os dados pessoais de um titular como limitados; a marca é respeitada em todos os caminhos de tratamento (aplicação, integrações, exportações, análise), que passam a só conservar os dados, salvo consentimento do titular ou as excepções do art. 18.º, n.º 2; a marca propaga-se aos destinatários registados em PRI-004 e o levantamento da limitação fica registado. | Reg. (UE) 2016/679, art. 18.º, n.os 1 e 2: «os dados pessoais só podem, à exceção da conservação, ser objeto de tratamento com o consentimento do titular» (RGPD-18-1, RGPD-18-2) |
+| `CTX-RGPD-R02` | Apagamento de dados tornados públicos | Quando a aplicação tornou públicos dados pessoais que depois tem de apagar: as medidas técnicas razoáveis para informar quem os trata (p. ex. pedido de remoção a motores de busca e a agregadores conhecidos, cabeçalhos e metadados de não indexação, invalidação de caches públicas) estão definidas e são executadas com o apagamento, com registo. | Reg. (UE) 2016/679, art. 17.º, n.º 2: «toma as medidas que forem razoáveis, incluindo de caráter técnico» (RGPD-17-2) |
+| `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | Quando um serviço da sociedade da informação é oferecido directamente a crianças com base em consentimento: a idade é verificada abaixo do limiar aplicável (16 anos, ou o limiar nacional, não inferior a 13) e o consentimento do titular das responsabilidades parentais é obtido e verificado com os meios adequados à tecnologia disponível, com registo em PRI-006. | Reg. (UE) 2016/679, art. 8.º, n.º 2: «envida todos os esforços adequados para verificar que o consentimento foi dado ou autorizado pelo titular das responsabilidades parentais da criança» (RGPD-8-2) |
+| `CTX-RGPD-R04` | Oposição por meios automatizados | Nos serviços da sociedade da informação, os sinais automatizados de oposição enviados pelo navegador ou pelo agente do utilizador (p. ex. Global Privacy Control) são reconhecidos e tratados como oposição válida, com o mesmo efeito da oposição dada pela interface (PRI-006). | Reg. (UE) 2016/679, art. 21.º, n.º 5: «o titular dos dados pode exercer o seu direito de oposição por meios automatizados, utilizando especificações técnicas» (RGPD-21-5) |
+| `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4. Quando a decisão é apoiada por um sistema de IA de risco elevado do anexo III, aplica-se também CTX-AIA-RE-R03. | Reg. (UE) 2016/679, art. 22.º, n.os 1, 3 e 4: «o direito de, pelo menos, obter intervenção humana por parte do responsável, manifestar o seu ponto de vista e contestar a decisão» (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
+| `CTX-RGPD-R06` | Registo de violações de dados pessoais | Todas as violações de dados pessoais ficam documentadas, notificadas ou não: factos, efeitos, medidas de reparação e a fundamentação da decisão de notificar ou não notificar, de forma que a autoridade de controlo possa verificar o cumprimento. | Reg. (UE) 2016/679, art. 33.º, n.º 5: «O responsável pelo tratamento documenta quaisquer violações de dados pessoais» (RGPD-33-5) |
+
+## Como se lê a lista {#como-se-le}
+
+Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
+
+**Regra de activação.** Requisitos efectivos = selecção técnica ∪ elevados ∪ acrescentados. Os ids de origem «base» só entram se a selecção técnica (contexto técnico da aplicação) os activar. Um id elevado ou acrescentado sem activação técnica não cai em silêncio: entra marcado «aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade» (modelo do Reg. de Execução (UE) 2024/2690, art. 2.º).
+
+## Lista de requisitos — contexto (sem grau) {#lista-contexto}
+
+| Requisito | Nome | L1 | L2 | L3 | Pisos |
+|---|---|:--:|:--:|:--:|---|
+| `CLA-001` | Classificação formal segundo o modelo de eixos de risco | ✔ | ✔ | ✔ | — |
+| `CLA-002` | Aprovação proporcional ao nível de risco atribuído | ✔ | ✔ | ✔ | — |
+| `CLA-003` | Activação de controlos base determinada pela classificação | ✔ | ✔ | ✔ | — |
+| `CLA-004` | Critérios de reclassificação documentados e monitorizados | ✔ | ✔ | ✔ | — |
+| `CLA-005` | Ciclo periódico de revisão de classificação diferenciado por nível | ✔ | ✔ | ✔ | — |
+| `CLA-006` | Reavaliação de classificação após evento de mudança significativa | ✔ | ✔ | ✔ | — |
+| `CLA-007` | Risco residual com compensação formalizada, owner e TTL | — | ✔ | ✔ | — |
+| `CLA-008` | Inventário de aplicações actualizado e acessível para auditoria | ✔ | ✔ | ✔ | — |
+| `AUT-001` | MFA obrigatório | — | ✔ | ✔ | — |
+| `AUT-002` | Política de passwords | ✔ | ✔ | ✔ | — |
+| `AUT-003` | Protecção contra brute force | ✔ | ✔ | ✔ | — |
+| `AUT-004` | Revogação activa de sessões | ✔ | ✔ | ✔ | — |
+| `AUT-005` | Expiração automática de sessão | ✔ | ✔ | ✔ | — |
+| `AUT-006` | Proibição de credenciais em claro | ✔ | ✔ | ✔ | — |
+| `AUT-007` | Suporte a autenticação federada | — | ✔ | ✔ | — |
+| `AUT-008` | Step-up para acções sensíveis | — | ✔ | ✔ | — |
+| `AUT-009` | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | — |
+| `AUT-010` | Alerta de acessos suspeitos | — | ✔ | ✔ | — |
+| `AUT-011` | Sem credenciais por defeito | ✔ | ✔ | ✔ | — |
+| `AUT-012` | Autenticadores criptográficos e biometria local | ✔ | ✔ | ✔ | — |
+| `AUT-013` | Gestão e recuperação dos factores de autenticação | ✔ | ✔ | ✔ | — |
+| `ACC-001` | Controlo de acesso RBAC | ✔ | ✔ | ✔ | — |
+| `ACC-002` | Princípio do menor privilégio | ✔ | ✔ | ✔ | — |
+| `ACC-003` | Bloqueio e auditoria de acessos ilegítimos | ✔ | ✔ | ✔ | — |
+| `ACC-004` | Separação de perfis | ✔ | ✔ | ✔ | — |
+| `ACC-005` | Controlo de acesso a APIs e serviços | ✔ | ✔ | ✔ | — |
+| `ACC-006` | Protecção de recursos sensíveis | ✔ | ✔ | ✔ | — |
+| `ACC-007` | Validação do modelo de acesso | — | ✔ | ✔ | — |
+| `ACC-008` | Revogação em tempo real | ✔ | ✔ | ✔ | — |
+| `ACC-009` | Autorização baseada em atributos (ABAC) | — | — | ✔ | — |
+| `ACC-010` | Revisão periódica de permissões | ✔ | ✔ | ✔ | — |
+| `LOG-001` | Registo de eventos críticos | ✔ | ✔ | ✔ | — |
+| `LOG-002` | Atributos mínimos em logs | ✔ | ✔ | ✔ | — |
+| `LOG-003` | Protecção de integridade e acesso aos logs | ✔ | ✔ | ✔ | — |
+| `LOG-004` | Análise periódica de logs | — | ✔ | ✔ | — |
+| `LOG-005` | Retenção mínima dos logs | ✔ | ✔ | ✔ | — |
+| `LOG-006` | Envio para sistema centralizado | — | ✔ | ✔ | — |
+| `LOG-007` | Classificação e detecção de anomalias | — | ✔ | ✔ | — |
+| `LOG-008` | Alarme em falhas do mecanismo de logging | — | ✔ | ✔ | — |
+| `LOG-009` | Logs suportam resposta a incidentes | — | ✔ | ✔ | — |
+| `LOG-010` | Logging de eventos críticos de negócio | — | — | ✔ | — |
+| `SES-001` | Expiração automática por inactividade | ✔ | ✔ | ✔ | — |
+| `SES-002` | Logout manual e após alteração de credenciais | ✔ | ✔ | ✔ | — |
+| `SES-003` | Identificadores de sessão imprevisíveis | ✔ | ✔ | ✔ | — |
+| `SES-004` | Transmissão segura dos tokens | ✔ | ✔ | ✔ | — |
+| `SES-005` | Ligação da sessão ao contexto do cliente | — | ✔ | ✔ | — |
+| `SES-006` | Revogação explícita da sessão | ✔ | ✔ | ✔ | — |
+| `SES-007` | Prevenção de sessões long-lived | — | ✔ | ✔ | — |
+| `SES-008` | Scope, TTL e revogação de tokens JWT | — | ✔ | ✔ | — |
+| `VAL-001` | Validação geral de entradas externas | ✔ | ✔ | ✔ | — |
+| `VAL-002` | Uso de whitelists em vez de blacklists | ✔ | ✔ | ✔ | — |
+| `VAL-003` | Validadores de esquema (JSON/XML schema) | — | ✔ | ✔ | — |
+| `VAL-004` | Sanitização contra injecções | ✔ | ✔ | ✔ | — |
+| `VAL-005` | Validação antes do uso interno | ✔ | ✔ | ✔ | — |
+| `VAL-006` | Mensagens de erro seguras na validação | ✔ | ✔ | ✔ | — |
+| `VAL-007` | Testes automáticos contra entradas maliciosas | — | ✔ | ✔ | — |
+| `VAL-008` | Codificação/escaping de output em renderização (anti-XSS) | ✔ | ✔ | ✔ | — |
+| `FIL-001` | Limite de tamanho processável por upload | ✔ | ✔ | ✔ | — |
+| `FIL-002` | Validação de tipo por conteúdo, não só por extensão | ✔ | ✔ | ✔ | — |
+| `FIL-003` | Tratamento seguro de arquivos comprimidos | — | ✔ | ✔ | — |
+| `FIL-004` | Quota de armazenamento por utilizador | — | ✔ | ✔ | — |
+| `FIL-005` | Armazenamento fora da árvore servida, com nomes gerados | ✔ | ✔ | ✔ | — |
+| `FIL-006` | Serving de ficheiros em contexto inerte | — | ✔ | ✔ | — |
+| `FIL-007` | Rastreio anti-malware de ficheiros de origem não confiável | — | ✔ | ✔ | — |
+| `FIL-008` | Limite de dimensão de imagens (pixel flood) | — | ✔ | ✔ | — |
+| `ERR-001` | Erros não expõem dados sensíveis | ✔ | ✔ | ✔ | — |
+| `ERR-002` | Mensagens genéricas no cliente | ✔ | ✔ | ✔ | — |
+| `ERR-003` | Não revelar existência de recursos | ✔ | ✔ | ✔ | — |
+| `ERR-004` | Mensagens localizadas e seguras | ✔ | ✔ | ✔ | — |
+| `ERR-005` | Gestão padronizada e centralizada | — | ✔ | ✔ | — |
+| `ERR-006` | Testes automáticos para erros excessivos | — | ✔ | ✔ | — |
+| `ERR-007` | Logs de erro com contexto pseudonimizado | — | ✔ | ✔ | — |
+| `CFG-001` | Debug e flags desactivados em produção | ✔ | ✔ | ✔ | — |
+| `CFG-002` | Separação de ambientes com validação automática | ✔ | ✔ | ✔ | — |
+| `CFG-003` | Ausência de parâmetros hardcoded | ✔ | ✔ | ✔ | — |
+| `CFG-004` | Configuração externa com permissões controladas | ✔ | ✔ | ✔ | — |
+| `CFG-005` | Validação de configuração no arranque | — | ✔ | ✔ | — |
+| `CFG-006` | Uso de cofres e gestão segura de segredos | — | ✔ | ✔ | — |
+| `CFG-007` | Monitorização de drift de configuração | — | — | ✔ | — |
+| `ENC-001` | Encriptação de todas as comunicações em trânsito | ✔ | ✔ | ✔ | — |
+| `ENC-002` | Encriptação de dados sensíveis em repouso | — | ✔ | ✔ | — |
+| `ENC-003` | Algoritmos e configurações criptográficas robustas | — | ✔ | ✔ | — |
+| `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
+| `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
+| `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
+| `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
+| `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
+| `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Capacidade técnica de acesso, rectificação, apagamento e exportação a pedido | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Registo de finalidade e destinatários por conjunto de dados pessoais | ▲ | ▲ | ▲ | CTX-RGPD-P04 |
+| `PRI-005` | Conceito documentado e aplicado de PII em registos | ▲ | ▲ | ▲ | CTX-RGPD-P05 |
+| `PRI-006` | Gestão técnica do consentimento e das preferências de oposição | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacidade por defeito nas definições voltadas ao utilizador | ✔ | ✔ | ✔ | — |
+| `API-001` | Autenticação e autorização de chamadas API | ✔ | ✔ | ✔ | — |
+| `API-002` | Endpoints desnecessários removidos ou ocultos | ✔ | ✔ | ✔ | — |
+| `API-003` | Validação de input em APIs | ✔ | ✔ | ✔ | — |
+| `API-004` | Rate limiting e detecção de abusos | — | ✔ | ✔ | — |
+| `API-005` | Protecção por TLS e certificados actualizados | ✔ | ✔ | ✔ | — |
+| `API-006` | Verificação de SDKs e wrappers utilizados | ✔ | ✔ | ✔ | — |
+| `API-007` | Logging e auditoria de chamadas externas | — | ✔ | ✔ | — |
+| `INT-001` | Validação de mensagens entre sistemas | ✔ | ✔ | ✔ | — |
+| `INT-002` | Autenticação mútua ou tokens seguros | ✔ | ✔ | ✔ | — |
+| `INT-003` | Transmissão cifrada com TLS | ✔ | ✔ | ✔ | — |
+| `INT-004` | Proibição de protocolos inseguros | ✔ | ✔ | ✔ | — |
+| `INT-005` | Assinatura e integridade de mensagens | — | ✔ | ✔ | — |
+| `INT-006` | Validação cruzada de origem e destino | — | ✔ | ✔ | — |
+| `INT-007` | Monitorização e detecção de padrões anómalos | — | — | ✔ | — |
+| `INT-008` | Revisão de segurança e contrato em integrações | — | — | ✔ | — |
+| `INT-009` | Consumidores idempotentes | — | ✔ | ✔ | — |
+| `INT-010` | Fila de mensagens mortas com tratamento e alarme | — | ✔ | ✔ | — |
+| `INT-011` | Protecção contra replay de mensagens | — | ✔ | ✔ | — |
+| `INT-012` | Ordem de processamento onde semanticamente exigida | — | — | ✔ | — |
+| `REQ-001` | Inclusão de requisitos de segurança | ✔ | ✔ | ✔ | — |
+| `REQ-002` | Revisão formal de segurança dos requisitos | ✔ | ✔ | ✔ | — |
+| `REQ-003` | Alinhamento com classificação de risco | ✔ | ✔ | ✔ | — |
+| `REQ-004` | Versionamento e gestão de requisitos | ✔ | ✔ | ✔ | — |
+| `REQ-005` | Nova análise de ameaça após alteração de requisito | — | ✔ | ✔ | — |
+| `REQ-006` | Rastreabilidade requisito → ameaça → teste | — | ✔ | ✔ | — |
+| `REQ-007` | Revisão iterativa com equipas | — | ✔ | ✔ | — |
+| `DST-001` | Repositórios autenticados e auditáveis | ✔ | ✔ | ✔ | — |
+| `DST-002` | Aprovação para publicação pública | — | ✔ | ✔ | — |
+| `DST-003` | Assinatura digital ou checksum | — | ✔ | ✔ | — |
+| `DST-004` | Inclusão de SBOM nos artefactos | — | ✔ | ✔ | — |
+| `DST-005` | Acesso segregado por role e ambiente | — | ✔ | ✔ | — |
+| `DST-006` | Deploy apenas via pipeline validado | — | ✔ | ✔ | — |
+| `DST-007` | Revogação e limpeza de artefactos comprometidos | ✔ | ✔ | ✔ | — |
+| `IDE-001` | Ferramentas e IDEs autorizadas | ✔ | ✔ | ✔ | — |
+| `IDE-002` | Actualização e gestão de vulnerabilidades | ✔ | ✔ | ✔ | — |
+| `IDE-003` | Auditoria de código gerado por ferramentas | — | ✔ | ✔ | — |
+| `IDE-004` | Extensões e plugins de fontes confiáveis | ✔ | ✔ | ✔ | — |
+| `IDE-005` | Controlo de permissões de extensões | — | ✔ | ✔ | — |
+| `IDE-006` | Limitação de ambientes locais sem controlo | — | ✔ | ✔ | — |
+| `REQ-AGN-001` | Mandate registado e versionado | ✔ | ✔ | ✔ | — |
+| `REQ-AGN-002` | Nível de autonomia classificado por contexto | ✔ | ✔ | ✔ | — |
+| `REQ-AGN-003` | Kill-switch operacional documentado e testado | — | ✔ | ✔ | — |
+| `REQ-AGN-004` | Intent declaration antes de tool-call destrutivo | — | ✔ | ✔ | — |
+| `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | — | ✔ | ✔ | — |
+| `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | — | ✔ | ✔ | — |
+| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | ✔ | ✔ | ✔ | — |
+| `THR-004` | Disposição formal de cada ameaça identificada com owner | — | ✔ | ✔ | — |
+| `THR-005` | Rastreabilidade ameaça → requisito → backlog → validação | — | ✔ | ✔ | — |
+| `THR-006` | Threat model versionado e actualizado dentro do ciclo ou após trigger | — | ✔ | ✔ | — |
+| `THR-007` | Revisão independente por AppSec antes de go-live em L2 e L3 | — | ✔ | ✔ | — |
+| `THR-008` | Threat modeling estendido para sistemas com componentes AI/ML | — | ✔ | ✔ | — |
+| `ARC-001` | Zonas de confiança identificadas e documentadas | ✔ | ✔ | ✔ | — |
+| `ARC-002` | Exposição externa minimizada e justificada | ✔ | ✔ | ✔ | — |
+| `ARC-003` | Revisão de arquitectura com foco em segurança | — | ✔ | ✔ | — |
+| `ARC-004` | Decisões de arquitectura documentadas | — | ✔ | ✔ | — |
+| `ARC-005` | Threat modeling integrado nos fluxos críticos | — | ✔ | ✔ | — |
+| `ARC-006` | Controlos técnicos de isolamento entre domínios sensíveis | ✔ | ✔ | ✔ | — |
+| `ARC-007` | Padrões de arquitectura reutilizáveis e aprovados | — | ✔ | ✔ | — |
+| `ARC-008` | Fluxos de dados entre zonas de confiança protegidos | ✔ | ✔ | ✔ | — |
+| `ARC-009` | Alterações significativas desencadeiam nova revisão | — | ✔ | ✔ | — |
+| `ARC-010` | Diagramas de arquitectura versionados e acessíveis | ✔ | ✔ | ✔ | — |
+| `ARC-011` | Segmentação lógica e física entre ambientes | — | — | ✔ | — |
+| `ARC-012` | Critérios formais de aprovação para aplicações de risco elevado | — | — | ✔ | — |
+| `ARC-013` | Validação automática de topologia em CI/CD ou como código | — | — | ✔ | — |
+| `ARC-014` | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | — | ✔ | ✔ | — |
+| `ARC-015` | Agentes AI operam como principals isolados com mandate e least privilege | — | ✔ | ✔ | — |
+| `DEP-001` | SBOM gerado por build, em formato standardizado | ✔ | ✔ | ✔ | — |
+| `DEP-002` | SCA integrado em pipeline com bloqueio por política de severidade | ✔ | ✔ | ✔ | — |
+| `DEP-003` | Versões de dependências fixas e auditáveis | ✔ | ✔ | ✔ | — |
+| `DEP-004` | Proibição de dependências introduzidas por cópia manual | ✔ | ✔ | ✔ | — |
+| `DEP-005` | Registries e repositórios de origem controlados | — | ✔ | ✔ | — |
+| `DEP-006` | Aprovação formal para introdução de novas dependências | — | ✔ | ✔ | — |
+| `DEP-007` | Política de actualização com SLA definido por severidade | ✔ | ✔ | ✔ | — |
+| `DEP-008` | Actualização automatizada com análise de impacto | — | ✔ | ✔ | — |
+| `DEP-009` | Detecção de dependências não-intencionais ou emergentes | — | — | ✔ | — |
+| `DEP-010` | Rastreabilidade SBOM → vulnerabilidade → correcção | — | ✔ | ✔ | — |
+| `DEP-011` | Inventário e proveniência de dependências AI/ML | — | ✔ | ✔ | — |
+| `DEP-012` | AI BOM gerado por build em formato standardizado | — | ✔ | ✔ | — |
+| `DEP-013` | Versão pinned explícita para modelos AI e providers | — | ✔ | ✔ | — |
+| `DEP-014` | Lista de providers AI aprovados com classificação de risco | — | ✔ | ✔ | — |
+| `DEV-001` | Guidelines de código seguro versionadas e aprovadas por stack | ✔ | ✔ | ✔ | — |
+| `DEV-002` | Linters e rulesets de segurança configurados e enforced | ✔ | ✔ | ✔ | — |
+| `DEV-003` | Análise estática (SAST) integrada como gate de integração | ✔ | ✔ | ✔ | — |
+| `DEV-004` | Revisão de código com checklist de segurança em componentes críticos | ✔ | ✔ | ✔ | — |
+| `DEV-005` | Gestão formal de excepções técnicas e desvios a guidelines | — | ✔ | ✔ | — |
+| `DEV-006` | Proveniência do código incorporado identificada e controlada | — | ✔ | ✔ | — |
+| `DEV-007` | Constrangimentos técnicos explícitos para código gerado por IA | — | ✔ | ✔ | — |
+| `DEV-008` | Perfis de qualidade com thresholds mínimos de segurança por nível de risco | — | ✔ | ✔ | — |
+| `DEV-009` | Anotações de segurança rastreáveis no código e nos testes | — | — | ✔ | — |
+| `CIC-001` | Pipelines como código, versionados e sujeitos a revisão | ✔ | ✔ | ✔ | — |
+| `CIC-002` | Triggers controlados e restritos a fontes autorizadas | ✔ | ✔ | ✔ | — |
+| `CIC-003` | Gestão segura de segredos no pipeline | ✔ | ✔ | ✔ | — |
+| `CIC-004` | Gates de segurança obrigatórios antes de promoção entre ambientes | ✔ | ✔ | ✔ | — |
+| `CIC-005` | Rastreabilidade completa de cada execução de pipeline | ✔ | ✔ | ✔ | — |
+| `CIC-006` | Isolamento de runners e ambientes de execução | — | ✔ | ✔ | — |
+| `CIC-007` | Integridade e proveniência verificável dos artefactos produzidos | — | ✔ | ✔ | — |
+| `CIC-008` | Separação de responsabilidades entre build, test e deploy | — | ✔ | ✔ | — |
+| `CIC-009` | Credenciais do pipeline com âmbito mínimo e rotação definida | — | ✔ | ✔ | — |
+| `CIC-010` | Protecção contra execução de código não autorizado em runners | — | — | ✔ | — |
+| `CIC-011` | Promoção entre ambientes atribuível a um responsável identificado | — | ✔ | ✔ | — |
+| `IAC-001` | Backend remoto autenticado com locking activo | — | ✔ | ✔ | — |
+| `IAC-002` | Ambientes segregados e versionados | ✔ | ✔ | ✔ | — |
+| `IAC-003` | Validações automáticas obrigatórias em pipeline | ✔ | ✔ | ✔ | — |
+| `IAC-004` | Módulos reutilizados com origem confiável e versão imutável | — | ✔ | ✔ | — |
+| `IAC-005` | Histórico completo com versionamento, tags e releases | ✔ | ✔ | ✔ | — |
+| `IAC-006` | Convenções formais de naming, tagging e layout | — | ✔ | ✔ | — |
+| `IAC-007` | Plan rastreável e aprovado antes de qualquer apply | — | ✔ | ✔ | — |
+| `IAC-008` | Rastreabilidade ficheiro → recurso → ambiente | — | ✔ | ✔ | — |
+| `IAC-009` | Enforcement automático de políticas em pipeline | — | — | ✔ | — |
+| `IAC-010` | Artefactos de plan e manifests versionados e com hash | — | ✔ | ✔ | — |
+| `IAC-011` | Gestão segura de segredos - proibição de hardcoding | ✔ | ✔ | ✔ | — |
+| `IAC-012` | Detecção automatizada de drift entre IaC e estado real | — | ✔ | ✔ | — |
+| `IAC-013` | Revisão periódica formal de módulos e templates | — | — | ✔ | — |
+| `CNT-001` | Imagens base de origem confiável e aprovada | ✔ | ✔ | ✔ | — |
+| `CNT-002` | Scanning de vulnerabilidades em imagens no CI/CD | ✔ | ✔ | ✔ | — |
+| `CNT-003` | Imagens minimalistas - ausência de componentes não necessários | ✔ | ✔ | ✔ | — |
+| `CNT-004` | Execução como utilizador não-root | ✔ | ✔ | ✔ | — |
+| `CNT-005` | Sistema de ficheiros em modo de leitura em runtime | — | ✔ | ✔ | — |
+| `CNT-006` | Restrição de capabilities do kernel e perfis de syscall | — | ✔ | ✔ | — |
+| `CNT-007` | Assinatura e verificação de proveniência de imagens | — | ✔ | ✔ | — |
+| `CNT-008` | SBOM por imagem publicada | — | ✔ | ✔ | — |
+| `CNT-009` | Políticas de admission control activas | — | ✔ | ✔ | — |
+| `CNT-010` | Renovação periódica de imagens base | ✔ | ✔ | ✔ | — |
+| `CNT-011` | Acesso ao registry com autenticação e rastreabilidade | ✔ | ✔ | ✔ | — |
+| `CNT-012` | Isolamento de namespace e políticas de rede em Kubernetes | — | — | ✔ | — |
+| `TST-001` | Estratégia formal de testes de segurança por nível de risco | ✔ | ✔ | ✔ | — |
+| `TST-002` | SAST com perfil de cobertura gerido e baseline de falsos positivos | ✔ | ✔ | ✔ | — |
+| `TST-003` | Gestão formal de findings com SLA de correcção por severidade | ✔ | ✔ | ✔ | — |
+| `TST-004` | Evidência de testes reproduzível, auditável e ligada ao build | ✔ | ✔ | ✔ | — |
+| `TST-005` | DAST integrado em ambiente de staging antes de promoção | — | ✔ | ✔ | — |
+| `TST-006` | Testes de regressão de segurança para vulnerabilidades corrigidas | — | ✔ | ✔ | — |
+| `TST-007` | Thresholds mínimos de cobertura de testes de segurança por risco | — | ✔ | ✔ | — |
+| `TST-008` | Testes de penetração periódicos com escopo e metodologia definidos | — | ✔ | ✔ | — |
+| `TST-009` | Fuzzing sistemático em componentes de processamento de input complexo | — | — | ✔ | — |
+| `TST-010` | IAST em ambiente de staging para validação comportamental em runtime | — | — | ✔ | — |
+| `DPL-001` | Aprovação formal obrigatória antes de deploy em produção | ✔ | ✔ | ✔ | — |
+| `DPL-002` | Promoção apenas de artefactos com proveniência verificada | ✔ | ✔ | ✔ | — |
+| `DPL-003` | Gates automáticos de segurança como condição de promoção | ✔ | ✔ | ✔ | — |
+| `DPL-004` | Rastreabilidade end-to-end de cada deploy | ✔ | ✔ | ✔ | — |
+| `DPL-005` | Rollback configurado, testado e com SLA definido | ✔ | ✔ | ✔ | — |
+| `DPL-006` | Credenciais de deploy com âmbito mínimo e vida curta | ✔ | ✔ | ✔ | — |
+| `DPL-007` | Validação em staging antes de promoção a produção | — | ✔ | ✔ | — |
+| `DPL-008` | Monitorização activa durante e após deploy | — | ✔ | ✔ | — |
+| `DPL-009` | Deploy progressivo com contenção de impacto para aplicações críticas | — | — | ✔ | — |
+| `DPL-010` | Release gates para sistemas com agentes AI | — | ✔ | ✔ | — |
+| `DPL-011` | Canary e demoção de autonomia no release de modelos | — | — | ✔ | — |
+| `OPS-001` | Logging estruturado e persistente para todos os componentes em produção | ✔ | ✔ | ✔ | — |
+| `OPS-002` | Catálogo de eventos críticos de segurança definido e verificado | ✔ | ✔ | ✔ | — |
+| `OPS-003` | Retenção de logs conforme política e requisitos regulatórios | — | ✔ | ✔ | — |
+| `OPS-004` | Centralização de logs em sistema SIEM ou equivalente | — | ✔ | ✔ | — |
+| `OPS-005` | Alertas automáticos para eventos de segurança críticos | — | ✔ | ✔ | — |
+| `OPS-006` | SLA de resposta a alertas definido e medido | — | ✔ | ✔ | — |
+| `OPS-007` | Integração com processo formal de resposta a incidentes | — | ✔ | ✔ | — |
+| `OPS-008` | Correlação de eventos entre múltiplas fontes | — | — | ✔ | — |
+| `OPS-009` | Deteção comportamental e baseline de actividade normal | — | — | ✔ | — |
+| `OPS-010` | Métricas de eficácia da monitorização medidas e revistas | — | — | ✔ | — |
+| `OPS-011` | Observabilidade dedicada a componentes AI/ML em produção | — | ✔ | ✔ | — |
+| `OPS-012` | Audit completo por tool invocation de agente AI | — | ✔ | ✔ | — |
+| `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
+| `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
+| `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ▲ | ▲ | ▲ | CTX-RGPD-P03 |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | — | ✔ | ✔ | — |
+| `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
+| `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
+| `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
+| `TRN-004` | Acesso a ambientes críticos condicionado a onboarding validado | ✔ | ✔ | ✔ | — |
+| `TRN-005` | Formação de segurança contínua para equipas em projectos L2 e L3 | — | ✔ | ✔ | — |
+| `TRN-006` | Conteúdo formativo versionado e actualizado após triggers definidos | — | ✔ | ✔ | — |
+| `TRN-007` | Onboarding de segurança equivalente para terceiros e contratados | ✔ | ✔ | ✔ | — |
+| `TRN-008` | Programa formal de Security Champions em equipas L3 | — | — | ✔ | — |
+| `TRN-009` | KPIs de formação definidos, recolhidos e accionados | — | ✔ | ✔ | — |
+| `GOV-001` | Modelo formal de governação de segurança aprovado | ✔ | ✔ | ✔ | — |
+| `GOV-002` | Ownership de segurança atribuído por aplicação ou projecto | ✔ | ✔ | ✔ | — |
+| `GOV-003` | Alçadas de aprovação definidas e conhecidas por nível de risco | — | ✔ | ✔ | — |
+| `GOV-004` | Processo formal de gestão de excepções activo | ✔ | ✔ | ✔ | — |
+| `GOV-005` | Excepções com validade, monitorização e revalidação obrigatória | — | ✔ | ✔ | — |
+| `GOV-006` | Cláusulas de segurança proporcionais ao risco em contratos com terceiros | ✔ | ✔ | ✔ | — |
+| `GOV-007` | Validação formal de fornecedores antes de onboarding | ✔ | ✔ | ✔ | — |
+| `GOV-008` | Rastreabilidade organizacional de decisões de segurança por aplicação | — | ✔ | ✔ | — |
+| `GOV-009` | Evidência de decisões rastreável, referenciável e retida | ✔ | ✔ | ✔ | — |
+| `GOV-010` | Ciclo de validação contínua e revisão periódica de conformidade | — | ✔ | ✔ | — |
+| `GOV-011` | KPIs de governação definidos, recolhidos e reportados | — | ✔ | ✔ | — |
+| `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
+| `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
+| `GOV-014` | Revisão periódica de acesso aos sistemas de suporte (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
+| `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
+| `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
+| `CTX-RGPD-R01` | Limitação do tratamento | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R02` | Apagamento de dados tornados públicos | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R04` | Oposição por meios automatizados | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R06` | Registo de violações de dados pessoais | ▲ | ▲ | ▲ | — |
+
+## Obrigações do regime por força de cobertura {#forca}
+
+Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
+
+| Força | Obrigações |
+|---|--:|
+| Cobre | 39 |
+| Parcial | 9 |
+| Apoia evidência | 17 |
+| Lacuna | 0 |
+| Fora de âmbito | 49 |
+
+## O que este Manual cobre e o que fica de fora {#cobertura}
+
+Todas as obrigações da matriz `_matriz/rgpd.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 6 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+
+### Cobre (56) {#cobre}
+
+Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
+
+| Obrigação | Referência | Força | Forma |
+|---|---|---|---|
+| RGPD-5-1-b | Art. 5.º, n.º 1, alínea b) | Apoia evidência | `PRI-004`; `PRI-001` |
+| RGPD-5-1-c | Art. 5.º, n.º 1, alínea c) | Cobre | `PRI-001`; `PRI-005`; [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Política 29 §3.2](/sbd-toe/assets/policies/policy-logging-estruturado#32-schema-mínimo-de-evento); `ENC-005`; [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização) |
+| RGPD-5-1-d | Art. 5.º, n.º 1, alínea d) | Cobre | `PRI-003` |
+| RGPD-5-1-e | Art. 5.º, n.º 1, alínea e) | Cobre | `PRI-002`; `PRI-002`; `PRI-002`; [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-5-1-f | Art. 5.º, n.º 1, alínea f) | Cobre | `ENC-001`; `ENC-002`; `ACC-001`; `ACC-006`; `LOG-003`; `ENC-009` |
+| RGPD-5-2 | Art. 5.º, n.º 2 | Apoia evidência | `GOV-009`; [Enquadramento Regulatório](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/grc-compliance#enquadramento-regulatório); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-6-4 | Art. 6.º, n.º 4 | Apoia evidência | `PRI-004` |
+| RGPD-7-1 | Art. 7.º, n.º 1 | Cobre | `PRI-006` |
+| RGPD-7-3 | Art. 7.º, n.º 3 | Cobre | `PRI-006` |
+| RGPD-8-2 | Art. 8.º, n.º 2 | Cobre | `CTX-RGPD-R03`; [Política 18 §10.8](/sbd-toe/assets/policies/policy-gestao-segredos#108-anti-padrões) |
+| RGPD-9-1 | Art. 9.º, n.º 1 e n.º 2 | Apoia evidência | [📑 Tipo de Dados (D)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos#-tipo-de-dados-d); [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade) |
+| RGPD-12-6 | Art. 12.º, n.º 6 | Cobre | `AUT-009`; `PRI-003` |
+| RGPD-15-3 | Art. 15.º, n.º 3 | Cobre | `PRI-003` |
+| RGPD-16 | Art. 16.º | Cobre | `PRI-003`; `PRI-003`; [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-1 | Art. 17.º, n.º 1 | Cobre | `PRI-003`; `PRI-002`; [Política 29 §8.1](/sbd-toe/assets/policies/policy-logging-estruturado#81-imutabilidade-e-apagamento-de-dados-pessoais); [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-2 | Art. 17.º, n.º 2 | Cobre | `CTX-RGPD-R02` |
+| RGPD-18-1 | Art. 18.º, n.º 1 | Cobre | `CTX-RGPD-R01` |
+| RGPD-18-2 | Art. 18.º, n.º 2 | Cobre | `CTX-RGPD-R01` |
+| RGPD-19 | Art. 19.º | Cobre | `PRI-004`; `PRI-003` |
+| RGPD-20-1 | Art. 20.º, n.º 1 | Cobre | `PRI-003` |
+| RGPD-21-2-3 | Art. 21.º, n.º 2 e n.º 3 | Cobre | `PRI-006`; [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-21-5 | Art. 21.º, n.º 5 | Cobre | `CTX-RGPD-R04` |
+| RGPD-22-1 | Art. 22.º, n.º 1 e n.º 2 | Cobre | `CTX-RGPD-R05` |
+| RGPD-22-3 | Art. 22.º, n.º 3 | Cobre | `CTX-RGPD-R05` |
+| RGPD-22-4 | Art. 22.º, n.º 4 | Cobre | `CTX-RGPD-R05` |
+| RGPD-24-1 | Art. 24.º, n.º 1 | Apoia evidência | `CLA-003`; `GOV-010`; [Política 04 §1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#1-objetivo) |
+| RGPD-25-1 | Art. 25.º, n.º 1 | Cobre | `THR-003`; [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `PRI-001`; `ERR-007` |
+| RGPD-25-2 | Art. 25.º, n.º 2 | Cobre | `PRI-007`; `PRI-007`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `PRI-001`; `PRI-002`; `ACC-002` |
+| RGPD-28-1 | Art. 28.º, n.º 1 | Apoia evidência | [Política 33 §3](/sbd-toe/assets/policies/policy-contratacao-segura#3-due-diligence-pré-contratual); `GOV-007` |
+| RGPD-28-2 | Art. 28.º, n.º 2 | Apoia evidência | [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3 | Art. 28.º, n.º 3 | Cobre | [Política 33 §4.4](/sbd-toe/assets/policies/policy-contratacao-segura#44-subcontratantes-de-dados-pessoais-rgpd-art-28); [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` |
+| RGPD-28-3-b | Art. 28.º, n.º 3, alínea b) | Apoia evidência | [Política 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding) |
+| RGPD-28-3-c | Art. 28.º, n.º 3, alínea c) | Cobre | `CLA-003`; [Política 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco); `ENC-002`; `ACC-001` |
+| RGPD-28-3-e | Art. 28.º, n.º 3, alínea e) | Cobre | `PRI-003` |
+| RGPD-28-3-f | Art. 28.º, n.º 3, alínea f) | Apoia evidência | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3-g | Art. 28.º, n.º 3, alínea g) | Cobre | `PRI-002`; [Política 33 §7.1](/sbd-toe/assets/policies/policy-contratacao-segura#71-checklist-de-offboarding) |
+| RGPD-28-3-h | Art. 28.º, n.º 3, alínea h) | Apoia evidência | [Política 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco) |
+| RGPD-30-1 | Art. 30.º, n.º 1 | Apoia evidência | `PRI-004`; `CLA-008`; `ARC-001` |
+| RGPD-30-2 | Art. 30.º, n.º 2 | Apoia evidência | `PRI-004` |
+| RGPD-32-1 | Art. 32.º, n.º 1 | Cobre | `CLA-001`; `CLA-003`; `THR-001` |
+| RGPD-32-1-a | Art. 32.º, n.º 1, alínea a) | Cobre | `ENC-002`; `ENC-001`; `ERR-007`; [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); `PRI-005` |
+| RGPD-32-1-b | Art. 32.º, n.º 1, alínea b) | Cobre | `ENC-001`; `ACC-001`; `ENC-009`; `OPS-015`; `ARC-006` |
+| RGPD-32-1-c | Art. 32.º, n.º 1, alínea c) | Cobre | `DPL-005`; [Política 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados); [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); [Política 32 §5](/sbd-toe/assets/policies/policy-irp#5-playbooks-de-resposta); `OPS-016`; `OPS-016` |
+| RGPD-32-1-d | Art. 32.º, n.º 1, alínea d) | Cobre | `TST-001`; `TST-008`; [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); `GOV-010` |
+| RGPD-32-2 | Art. 32.º, n.º 2 | Cobre | `THR-001`; `THR-002`; `CLA-001` |
+| RGPD-32-4 | Art. 32.º, n.º 4 | Apoia evidência | `ACC-002`; `ACC-010`; [Política 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding); `TRN-001` |
+| RGPD-33-1 | Art. 33.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) |
+| RGPD-33-2 | Art. 33.º, n.º 2 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-33-3 | Art. 33.º, n.º 3 | Cobre | [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| RGPD-33-4 | Art. 33.º, n.º 4 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| RGPD-33-5 | Art. 33.º, n.º 5 | Cobre | `CTX-RGPD-R06`; [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-34-1 | Art. 34.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) |
+| RGPD-35-1 | Art. 35.º, n.º 1 | Apoia evidência | [Âmbito e propósito](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito); [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); `THR-003`; [Âmbito e propósito](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito) |
+| RGPD-35-7 | Art. 35.º, n.º 7 | Apoia evidência | [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `THR-002`; [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método) |
+| RGPD-35-11 | Art. 35.º, n.º 11 | Apoia evidência | [Política 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); `ARC-009`; `CLA-006` |
+| RGPD-39-1 | Art. 39.º, n.º 1 | Apoia evidência | [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) |
+
+### Lacuna declarada (9) {#lacuna}
+
+Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
+
+| Obrigação | Referência | Força | Como o Manual responde | O que falta |
+|---|---|---|---|---|
+| RGPD-12-2 | Art. 12.º, n.º 2 | Parcial | `PRI-003`; `PRI-006`; `CTX-RGPD-R01`; [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) | A parte técnica do exercício dos direitos está prescrita (PRI-003, PRI-006; limitação em CTX-RGPD-R01). O canal de pedidos e a resposta formal ao titular são matéria jurídica, a declarar fora de âmbito. |
+| RGPD-15-1 | Art. 15.º, n.º 1 | Parcial | `PRI-003`; `PRI-004` | A cópia dos dados e o inventário de finalidades e destinatários estão prescritos (PRI-003, PRI-004). O conteúdo informativo da resposta (finalidades, destinatários, prazo, origem, direitos) é matéria da resposta formal, a declarar fora de âmbito. |
+| RGPD-20-2 | Art. 20.º, n.º 2 | Parcial | `PRI-003` | A exportação em formato de leitura automática está prescrita (PRI-003); a transmissão directa entre responsáveis, quando tecnicamente possível, não está. |
+| RGPD-24-2 | Art. 24.º, n.º 2 | Parcial | [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | Não existe política de proteção de dados entre as 39 políticas; há apenas a secção de dados pessoais em prompts de IA (Política 18 §10) e as proibições em logs (Política 29 §5). |
+| RGPD-34-2 | Art. 34.º, n.º 2 | Parcial | [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Exige comunicação honesta, mas não o conteúdo mínimo (natureza da violação em linguagem clara, contacto do EPD, consequências, medidas). |
+| RGPD-35-2 | Art. 35.º, n.º 2 | Parcial | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Revisão pelo DPO só em L3 e sobre a análise LINDDUN, não sobre a AIPD. |
+| RGPD-38-1 | Art. 38.º, n.º 1 | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | EPD envolvido em violações (≤ 1 h) e na revisão LINDDUN L3; não é envolvido em design, AIPD, escolha de subcontratantes ou exceções. |
+| RGPD-44 | Art. 44.º | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 33 §10.2](/sbd-toe/assets/policies/policy-contratacao-segura#102-localização-de-processamento) | Só na fatia de fornecedores de serviços de IA; hosting, SaaS e outros subcontratantes fora do EEE não têm regra de localização/transferência. |
+| RGPD-46-1 | Art. 46.º, n.º 1 a n.º 3 | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | Exige SCC «ou outro mecanismo válido» apenas para fornecedores de IA; não trata avaliação de impacto da transferência nem medidas técnicas suplementares. |
+
+### Fora de âmbito (49) {#fora-de-ambito}
+
+Obrigações que o Manual declara fora de âmbito, com a razão.
+
+| Obrigação | Referência | Razão |
+|---|---|---|
+| RGPD-5-1-a | Art. 5.º, n.º 1, alínea a) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-6-1 | Art. 6.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-7-2 | Art. 7.º, n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-8-1 | Art. 8.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-9-3 | Art. 9.º, n.º 3 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-10 | Art. 10.º | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-11-2 | Art. 11.º, n.º 2 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-1 | Art. 12.º, n.º 1 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-12-3 | Art. 12.º, n.º 3 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-4 | Art. 12.º, n.º 4 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-5 | Art. 12.º, n.º 5 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-13-1 | Art. 13.º, n.º 1 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-13-2 | Art. 13.º, n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-13-3 | Art. 13.º, n.º 3 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-1-2 | Art. 14.º, n.º 1 e n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-3 | Art. 14.º, n.º 3 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-4 | Art. 14.º, n.º 4 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-15-2 | Art. 15.º, n.º 2 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-18-3 | Art. 18.º, n.º 3 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-21-1 | Art. 21.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-21-4 | Art. 21.º, n.º 4 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-26-1 | Art. 26.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-26-2 | Art. 26.º, n.º 2 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-27-1 | Art. 27.º, n.º 1 e n.º 2 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-a | Art. 28.º, n.º 3, alínea a) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-2 | Art. 28.º, n.º 3, segundo parágrafo | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-d | Art. 28.º, n.º 3, alínea d) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-4 | Art. 28.º, n.º 4 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-10 | Art. 28.º, n.º 10 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-29 | Art. 29.º | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-30-3-4 | Art. 30.º, n.º 3 e n.º 4 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-31 | Art. 31.º | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-35-3 | Art. 35.º, n.º 3 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-35-9 | Art. 35.º, n.º 9 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-36-1 | Art. 36.º, n.º 1 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-36-3 | Art. 36.º, n.º 3 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-37-1 | Art. 37.º, n.º 1 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-37-5 | Art. 37.º, n.º 5 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-37-7 | Art. 37.º, n.º 7 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-2 | Art. 38.º, n.º 2 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-3 | Art. 38.º, n.º 3 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-6 | Art. 38.º, n.º 6 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-40-4 | Art. 40.º, n.º 4 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-42-6-7 | Art. 42.º, n.º 6 e n.º 7 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-47-2 | Art. 47.º, n.º 2 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-48 | Art. 48.º | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-1 | Art. 49.º, n.º 1 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-1-2 | Art. 49.º, n.º 1, segundo parágrafo | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-6 | Art. 49.º, n.º 6 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |

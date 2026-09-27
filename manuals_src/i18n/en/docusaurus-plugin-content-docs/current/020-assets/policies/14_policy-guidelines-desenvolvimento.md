@@ -8,16 +8,16 @@ sidebar_position: 14
 translation:
   source_locale: pt
   source_path: 020-assets/policies/14_policy-guidelines-desenvolvimento.md
-  source_sha256: 9d7e94456e4f9991bfc197b5ffb35cf25464622fc7c11bb9e2db03a2475a5a44
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 09eb9ffd0853ea6e13d8556f58a1d5111d368110c65f38ba021b6e419fa2ba5a
+  source_sha256: 49cf8f6cad45a6fba7805c1d812b54041fe35db1f793966bb63bb7b505d5efd9
+  source_commit: 32978973a6e4e01d6abcfe36fb0e33a8192cb20d
+  target_sha256: 632c602920c9bf1a37c48eeed99c5081df9d5c1ec77835ea5d800b16d9f2bfdc
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [cycle_iteration, framework_source_corpus, lifecycle_phase, requirement_runtime, role_tech_lead, sbdtoe_sbd, transversal, verificacao_check, verification_taxonomy]
-  glossary_sha256: 0a25ff26f1f9081f39520a5a265f458a789e96d7c5f5b8021a0170683a285868
-  translated_at: 2026-09-26T14:10:51Z
-  stamped_at: 2026-09-26T18:36:51Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [cycle_iteration, eu_startups, framework_source_corpus, lifecycle_phase, requirement_runtime, role_tech_lead, sbdtoe_sbd, transversal, verificacao_check, verification_taxonomy]
+  glossary_sha256: 12b1398151049ba9440ee1540900a1a696430984b892350281ebd8f400b348dd
+  translated_at: 2026-09-27T15:08:11Z
+  stamped_at: 2026-09-27T15:08:11Z
   reviewed_by: null
 ---
 
@@ -97,8 +97,8 @@ The resulting configurations must be:
 
 | Requirement | L1 | L2 | L3 |
 |---|---|---|---|
-| Guidelines documented per stack | Upstream rules without tailoring | Curated with documented tailoring | Curated + policy-as-code |
-| Operationalisation as tool configuration | Recommended | Mandatory | Mandatory |
+| Guidelines documented per stack | *Default* upstream rules, approved and reviewed within the validity period | Curated with documented tailoring | Curated + policy-as-code |
+| Operationalisation as tool configuration | Mandatory | Mandatory | Mandatory |
 | Centralised and reusable configuration | Recommended | Mandatory | Mandatory |
 | Deviations from the guideline recorded per project | Optional | Mandatory | Mandatory |
 

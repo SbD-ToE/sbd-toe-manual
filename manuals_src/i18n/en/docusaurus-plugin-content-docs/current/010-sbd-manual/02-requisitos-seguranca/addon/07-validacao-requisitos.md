@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/07-validacao-requisitos.md
-  source_sha256: d2cad2c1f76e0ec120514ca3e31df69d50e0ad07d03d93df9e9e20acf49a07df
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 32b7c988390c130cf70a2a854f363cd75b1bbae76af8efb1b52aff6b7673986c
+  source_sha256: 799d8f446853032a7f6b0e80fdca005b7184a9a229b9432e9e6fe918243cbfa6
+  source_commit: 2323948c2926b1a6da69a7dc962e4d0d66bc6a88
+  target_sha256: 893fdecbb8f771543a8114fb7ba80904e300d9a47d8afcd6efd82d6eb1a059a3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 239d9004390c1fa44600ae10c0f86aba42f41047870a62934359937f9f982671
-  translated_at: 2026-09-25T20:20:10Z
-  stamped_at: 2026-09-26T18:33:02Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, esquema_regime, eu_startups, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, schema, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 7beaad0698ebe261bca42ad993794bd334b5bc87f8de82556890e2cf7216aa6e
+  translated_at: 2026-09-27T21:29:56Z
+  stamped_at: 2026-09-27T21:29:56Z
   reviewed_by: null
 ---
 
@@ -108,7 +108,7 @@ For each requirement of the canonical catalogue the following are given: the ref
 
 | ID | Operational tag | Level | Validation method | Expected evidence |
 |----|-----------------|:-----:|---------------------|-------------------|
-| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Attempt login without a second factor. Confirm rejection and failure logs. | Log of failed authentication without MFA. Screenshot of the block. |
+| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Attempt login without a second factor. Confirm rejection and failure logs. Confirm that the accepted factors are those of the requirement. At L3, attempt the login of an administration account without WebAuthn/FIDO2 and confirm rejection. | Log of failed authentication without MFA. Screenshot of the block. Configuration of the accepted factors. At L3, log of the rejection of the administrator without a *phishing*-resistant factor. |
 | AUT-002 | SEC-Lx-AUT-PWD | L1+ | Review the active policy. Attempt to set an invalid password. Confirm rejection. | Documented policy. Error or rejection log. |
 | AUT-003 | SEC-Lx-AUT-BRUTE | L1+ | Simulate repeated failed attempts. Confirm lockout, CAPTCHA or progressive delay. | Log with failure count. Evidence of lockout or delay. |
 | AUT-004 | SEC-Lx-AUT-LOGOUT | L1+ | Log out. Attempt to reuse the session or token. Confirm rejection. | Log of revoked session. Authentication error on reuse. |
@@ -118,6 +118,9 @@ For each requirement of the canonical catalogue the following are given: the ref
 | AUT-008 | SEC-Lx-AUT-STEPUP | L2+ | Simulate a sensitive action. Confirm that an additional factor is required. | Screenshot of step-up. Log associated with the critical action. |
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Attempt to change credentials without re-authentication. Confirm the block. | Log of the blocked attempt. Evidence of active session verification. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simulate an anomalous login. Confirm notification to the user and logging. | Example of the notification sent. Log of the critical event detected. |
+| AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verify that no default accounts or credentials are active in the application and in the components in production. Confirm that the initial credential is changed at first use. | Inventory of accounts without default credentials. Evidence of the first-access flow. |
+| AUT-012 | SEC-Lx-AUT-WEBAUTHN | L1+ (if applicable) | Replay an assertion already used, send an assertion with a foreign origin or *relying party* identifier and another with an invalid signature, and confirm that all are rejected. With user verification required, send an assertion without it and confirm rejection. Confirm that the server neither receives nor stores biometric data. | Logs of the rejected assertions, by reason. Configuration of the WebAuthn library. Credential data schema (public key, identifier and counter only). |
+| AUT-013 | SEC-Lx-AUT-RECOVERY | L1+ | Request a recovery and confirm a single-use, expiring *token*, an identical response for non-existent accounts and a notification to the user. At L2+, simulate the loss of the second factor and confirm that email alone is not enough; revoke an authenticator and confirm that the associated sessions end and that it no longer authenticates. | Recovery log and notification sent. Screenshot of the list of authenticators and of the revocation. Log of the sessions ended and of the assertion rejected after the revocation. |
 
 ---
 
@@ -134,7 +137,7 @@ For each requirement of the canonical catalogue the following are given: the ref
 | ACC-007 | SEC-Lx-ACC-MODEL | L2+ | Verify the existence of a reviewed and documented permissions model. | Documentation of the model. Dated review record. |
 | ACC-008 | SEC-Lx-ACC-REVOKE | L1+ | Revoke access. Test immediately after revocation. Confirm failure. | Log of the failed attempt after revocation. Revocation timestamp. |
 | ACC-009 | SEC-Lx-ACC-ABAC | L3 | Test the access decision with distinct attributes. Confirm enforcement of the dynamic policy. | Logs with attribute evaluation. Test with context variation. |
-| ACC-010 | SEC-Lx-ACC-REVIEW | L2+ | Verify the existence of a periodic review process. Confirm removal of obsolete permissions. | Dated review records. Evidence of permissions clean-up. |
+| ACC-010 | SEC-Lx-ACC-REVIEW | L1+ | Verify the existence of a periodic review process. Confirm removal of obsolete permissions. | Dated review records. Evidence of permissions clean-up. |
 
 ---
 
@@ -282,6 +285,18 @@ For each requirement of the canonical catalogue the following are given: the ref
 | IDE-004 | SEC-Lx-IDE-EXT | L1+ | Verify the list of installed extensions. Confirm that they come from recognised sources. | List of extensions with documented origin. |
 | IDE-005 | SEC-Lx-IDE-PERM | L2+ | Verify the permissions granted to extensions. Confirm that only the necessary ones are active. | Reviewed permissions. Sandboxed execution confirmed. |
 | IDE-006 | SEC-Lx-IDE-LOCAL | L2+ | Verify control over the use of local environments. Confirm the existence of logs or a proxy where applicable. | Policy on the use of local environments. Network or proxy logs. |
+
+### PRI - Personal Data (engineering) {#pri---dados-pessoais-engenharia}
+
+| ID | Operational tag | Level | Validation method | Expected evidence |
+|----|-----------------|:-----:|---------------------|-------------------|
+| PRI-001 | SEC-Lx-PRI-MIN | L1+ | Compare the personal-data fields collected with the register of purposes. Confirm there are no fields without a purpose. | List of fields with their associated purpose. |
+| PRI-002 | SEC-Lx-PRI-RETAIN | L1+ | Check the defined periods and sample records beyond the period, including replicas and downstream systems. Confirm the declared period for backups. | Retention configuration. Evidence of deletion or anonymisation by sampling. |
+| PRI-003 | SEC-Lx-PRI-RIGHTS | L1+ | Run export, rectification and deletion for a test data subject. Confirm the machine-readable format, downstream propagation and identity verification for requests outside the authenticated channel. | Exported file. Log of the executions. Evidence of propagation. |
+| PRI-004 | SEC-Lx-PRI-INVENTORY | L2+ | Review the inventory. Confirm purpose, system and recipients per data set, and the record of changes. | Up-to-date inventory with change history. |
+| PRI-005 | SEC-Lx-PRI-LOGPII | L2+ | Review the PII-in-logs concept and sample logs. In immutable logs, confirm pseudonyms and per-person keys. | Documented concept. Compliant log samples. |
+| PRI-006 | SEC-Lx-PRI-CONSENT | L1+ | Give and withdraw consent (or object) with a test data subject. Confirm the auditable record, equivalent effort, effect on the dependent processing and persistence after synchronisation. | Consent record with the version of the text. Evidence of the effect of the withdrawal. |
+| PRI-007 | SEC-Lx-PRI-DEFAULT | L1+ | Create a new account and check the initial sharing, visibility and optional-processing settings. | Screenshot or automated test of the default settings. |
 
 ---
 

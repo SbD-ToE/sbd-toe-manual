@@ -132,7 +132,7 @@ O pipeline CI/CD deve incluir análise SCA automática em cada build, cobrindo d
 
 | Nível | Requisito SCA |
 |---|---|
-| L1 | Alerta; não bloqueia |
+| L1 | Bloqueia findings High e Critical sem exceção aprovada |
 | L2 | Bloqueia findings High e Critical sem exceção aprovada |
 | L3 | Bloqueia findings Medium, High e Critical sem exceção aprovada |
 
@@ -152,6 +152,7 @@ Para sistemas em produção, deve existir um mecanismo de correlação entre o S
 
 - [ ] Inventário de componentes implantados por serviço e ambiente (`inventario-runtime-<servico>-<ambiente>.json`)
 - [ ] Integração com feed de vulnerabilidades (NVD, OSV, GitHub Advisory Database)
+- [ ] Fontes de informação sobre vulnerabilidades registadas (bases públicas, avisos de fornecedores, CSIRT) e revistas a intervalos planeados, pelo menos na revisão anual desta política
 - [ ] Alerta gerado quando CVE afeta versão implantada, com componente, versão, ambiente e severidade
 - [ ] SLA de resposta definido por severidade (ver Política de Exceções a CVEs)
 

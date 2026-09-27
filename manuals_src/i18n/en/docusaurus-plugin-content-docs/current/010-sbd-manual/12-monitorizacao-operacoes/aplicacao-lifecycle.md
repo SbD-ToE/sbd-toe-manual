@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-  source_sha256: 78a2f6ad145ab5a4740f4e04a587918d2995f81fc9987eefdce306d5d5c294fb
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: f6b3a661e65640684b0b8245f143ef8ed525b155c985824a8e96aa834f7fe1a8
+  source_sha256: 70975fce67fbb9368de964a149c8f4a9a04baa35ad880972a8f3966970a70127
+  source_commit: 5e4b3eab6144ef4347232513856d6d9cb86a487c
+  target_sha256: 2bc1637d06ff475d219731d6a80281e63cb698e92e3bd426abe1ee7d7f45e78f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 554488124abc29c0a074ab0f564738d25c3197109db2ea24fbb3cc6f965ed64c
-  translated_at: 2026-09-27T07:53:56Z
-  stamped_at: 2026-09-27T07:53:56Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 73ddf9493ad31627d5b23fe22fc69cebf91031f6ef85c245290da67e62f3b0ba
+  translated_at: 2026-09-27T15:08:23Z
+  stamped_at: 2026-09-27T15:08:23Z
   reviewed_by: null
 ---
 
@@ -89,7 +89,7 @@ As a **Developer**, I want **to generate structured and centralised logs**, so t
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Structured | Structured + correlation in SIEM |
+| Structured, persisted outside the instance | Structured + centralised (SIEM or equivalent) | Structured + correlation in SIEM |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -128,7 +128,7 @@ As an **AppSec Engineer**, I want **to define critical security events and metri
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Partial definition | Full definition + quarterly review |
+| Catalogue of critical events defined, verified and reviewed per release | Catalogue defined and verified, reviewed per release | Full definition + quarterly review |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -286,7 +286,7 @@ As **AppSec/DevOps**, I want **to classify and map monitoring domains** (technic
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic (technical) | Technical + security | Complete (technical, security, business, compliance, CI/CD) |
+| Technical + security (critical events) | Technical + security | Complete (technical, security, business, compliance, CI/CD) |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -329,7 +329,7 @@ As **DevOps/GRC**, I want **to ensure log security and integrity** (WORM retenti
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local: 30 days (operational), 90 days (security) | WORM + 1 year (security) | WORM + 2 years (security) + verifiable integrity |
+| Persisted outside the instance, protected against tampering; 30 days (operational), 90 days (security) | WORM + 1 year (security) | WORM + 2 years (security) + verifiable integrity |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -504,7 +504,7 @@ Risk classification document, proportionality matrix with selected controls, jus
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local logging + basic domain mapping | Matrix applied; SIEM and alerts implemented | Matrix applied + continuous review with metrics |
+| Structured logging persisted outside the instance + catalogue of critical events + basic domain mapping | Matrix applied; SIEM and alerts implemented | Matrix applied + continuous review with metrics |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -658,7 +658,7 @@ As **DevOps/AppSec**, I want **to ensure that no secret or PII is logged in clea
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic redaction of credentials | Redaction + formal exceptions (TTL of Policy 05 §7) | Redaction verified by sampling + exceptions (TTL of Policy 05 §7) + pre-expiry reassessment |
+| Redaction of credentials, *tokens* and PII, verified by sampling + formal exceptions with a deadline | Redaction verified by sampling + formal exceptions (TTL of Policy 05 §7) + pre-expiry alert | Redaction verified by sampling + exceptions (TTL of Policy 05 §7) + pre-expiry reassessment |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -740,7 +740,7 @@ As **AppSec/IR**, I want **to map detection rules to MITRE ATT&CK techniques and
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Not applicable | ATT&CK mapping of critical rules + KEV in prioritisation | Full ATT&CK coverage + EPSS/KEV with continuous review |
+| KEV in prioritisation (active exploitation brings the SLA forward) | ATT&CK mapping of critical rules + KEV in prioritisation | Full ATT&CK coverage + EPSS/KEV with continuous review |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -862,17 +862,17 @@ The following matrix translates the controls into proportional levels (L1–L3),
 
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
-| Logging | Basic | Structured | Structured + SIEM |
-| Critical events | Basic | Partial definition | Complete + quarterly review |
+| Logging | Structured, persisted outside the instance | Structured + SIEM (or equivalent) | Structured + SIEM + correlation |
+| Critical events | Catalogue defined, verified and reviewed per release | Catalogue defined and verified, reviewed per release | Complete + quarterly review |
 | Alerts | Warning | Critical SLA | Critical SLA + automation |
 | IRP integration | Manual | Playbooks defined | Automated playbooks |
 | Metrics | Basic | Calculated | Calculated + targets |
-| Monitoring domains | Technical only | Technical + security | Complete (technical, security, business, compliance, CI/CD) |
-| Log security | Basic | WORM + controlled access | WORM + signature + function isolation |
+| Monitoring domains | Technical + security (critical events) | Technical + security | Complete (technical, security, business, compliance, CI/CD) |
+| Log security | Persisted outside the instance + protection against tampering | WORM + controlled access | WORM + signature + function isolation |
 | SIEM integration | Optional | Forwarder configured | SIEM + parsing + dashboards |
 | Behavioural correlation | Not applicable | Optional | Mandatory |
 | Alert validation | Occasional manual | Periodic | Continuous + automation |
-| Proportionality by domain | Local logging + basic mapping | Matrix applied; SIEM and alerts implemented | Matrix applied + continuous review with metrics |
+| Proportionality by domain | Structured logging outside the instance + catalogue of critical events + basic mapping | Matrix applied; SIEM and alerts implemented | Matrix applied + continuous review with metrics |
 | Regulatory traceability | Basic mapping | Mapping + documented evidence | Mapping + evidence + metrics + continuous audit |
 
 ---

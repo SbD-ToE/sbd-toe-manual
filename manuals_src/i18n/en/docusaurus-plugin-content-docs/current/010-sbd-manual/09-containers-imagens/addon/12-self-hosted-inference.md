@@ -7,16 +7,16 @@ tags: [ai, ml, inference, runtime, vllm, ollama, tgi, triton, gpu, hardening, se
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/12-self-hosted-inference.md
-  source_sha256: d049f3df8a7e680b4ce1b91172da6801ff91c4f41e2ceb01acee6a6463eb1c75
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c0d5b1625618cb4602e6bfa75b363c531f33c4fa9620903ac1ff80cdd0689e9e
+  source_sha256: 62d4f677236922e5ebbf61f4b6d803f0e5271ecb26a03abd2d3f8faeec3453ba
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: 44f9532b1aeab5cd9480f8e7eed94769b8b026f84c4d7d38afec56ec6cc993ca
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [cycle_iteration, framework_source_corpus, lifecycle_phase, llm, maturity, risk_level, verificacao_check, verification_taxonomy]
   glossary_sha256: b1a57ddada5120e0dc38882dbf7de3f9d588fbd9bceebe6e93f4fc1fd477dcac
-  translated_at: 2026-09-26T09:58:20Z
-  stamped_at: 2026-09-26T18:34:55Z
+  translated_at: 2026-09-27T15:08:28Z
+  stamped_at: 2026-09-27T15:08:28Z
   reviewed_by: null
 ---
 
@@ -114,7 +114,7 @@ The runtime (vLLM, TGI, etc.) is a supply-chain dependency like any other — ex
 | Weights encrypted *at rest* | Recommended | Mandatory | Mandatory |
 | Hash verified at *startup* | Recommended | Mandatory | Mandatory |
 | Hard GPU isolation | Not required | Recommended | Mandatory when sensitive workloads share hardware |
-| *Read-only* container + *drop capabilities* + *non-root* | Recommended | Mandatory | Mandatory |
+| *Read-only* container + *drop capabilities* + *non-root* | *Non-root* mandatory; *read-only* and *drop capabilities* recommended | Mandatory | Mandatory |
 | Restrictive network policy | Recommended | Mandatory | Mandatory |
 | Authentication on the *runtime API* | Mandatory (always — regardless of level) | Mandatory | Mandatory |
 | *Rate limit* + *token budget* + server-side `max_tokens` | Recommended | Mandatory | Mandatory |

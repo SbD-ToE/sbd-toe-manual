@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md
-  source_sha256: 81214fa795470ee1b6ff8e353399d9c4311e5cd24b2b094a3ecbdd85f01a1e67
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 69fdd59ddb9a98ba09e718d9dfd924af56a3876888ddd4e55fb3e8181724781d
+  source_sha256: c6bdcc7a902c4cda1ee15cf5cdb8fa4b8af63240f5d276819e25a0cee3f5f8e2
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: a3d3e8c3e6ff4fb75b5b96a77fec875141157fbc1db4deabdcb98fa7a54d3e59
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: 2ef62e6832b405cb282ff0bf137e48289f24be2502c02c91f2166c43fb4cfc32
-  translated_at: 2026-09-27T07:53:51Z
-  stamped_at: 2026-09-27T07:53:51Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: 47e00370d2bcfbc03d3f8c3d1bea88c7797d8690919cfc314ad8b5f3a3be262e
+  translated_at: 2026-09-27T15:08:16Z
+  stamped_at: 2026-09-27T15:08:16Z
   reviewed_by: null
 ---
 
@@ -93,7 +93,7 @@ As an **AppSec Engineer**, I want **to define a security testing strategy per ap
 | Level | Mandatory? | Minimum coverage |
 |---|---|---|
 | L1 | Yes | SAST + checklist |
-| L2 | Yes | + authenticated DAST |
+| L2 | Yes | + authenticated DAST + annual PenTest |
 | L3 | Yes | + fuzzing/IAST + PenTest |
 
 **Integration into the SDLC.**  
@@ -132,7 +132,7 @@ As a **Developer**, I want **to run automatic SAST on the PR with inline comment
 **Proportionality by risk.**  
 | Level | Gate policy |
 |---|---|
-| L1 | Warning |
+| L1 | Blocking on High/Critical |
 | L2 | Blocking on High/Critical |
 | L3 | Blocking on Medium+ |
 
@@ -213,7 +213,7 @@ As a **DevOps / SRE**, I want **to integrate automatic gates into the pipeline (
 **Proportionality by risk.**  
 | Level | Policy |
 |---|---|
-| L1 | Warning |
+| L1 | Block on Critical; High/Critical in SAST and SCA |
 | L2 | Blocking on High/Critical |
 | L3 | Blocking on Medium+ |
 
@@ -340,7 +340,7 @@ As a **Product Owner**, I want **to establish security acceptance criteria per r
 **Proportionality by risk.**  
 | Level | Policy |
 |---|---|
-| L1 | Simple checklist |
+| L1 | Simple checklist + Critical blocking |
 | L2 | Blocking on High/Critical |
 | L3 | No critical without a formal exception |
 
@@ -511,7 +511,7 @@ As an **AppSec Engineer + DevOps / SRE**, I want **to centralise all findings fr
 **Proportionality by risk.**  
 | Level | Requirement | Details |
 |---|---|---|
-| L1 | Simple centralisation | Manual triage, SLA recommended |
+| L1 | Simple centralisation | Manual triage, SLA per severity mandatory (Policy 19 §4.3) |
 | L2 | Centralisation with SLA | Formal states, alerts on exception |
 | L3 | Centralisation + audit | Strict SLA, dual approval, monthly report |
 
@@ -837,7 +837,7 @@ As a **DevOps / SRE**, I want **to formally separate the automatic signal (tool 
 **Proportionality by risk.**  
 | Level | Requirement |
 |---|---|
-| L1 | Overrides permitted with a simple record |
+| L1 | Overrides permitted with a record of justification, compensating control, approver and deadline |
 | L2 | Override requires AppSec Engineer approval + expiry |
 | L3 | Override requires dual approval (AppSec Engineer + Product Owner / Tech Lead) + expiry + mandatory retest |
 
@@ -1041,7 +1041,7 @@ As an **AppSec Engineer + DevOps / SRE**, I want **to frame the use of AI in tes
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Policy C1–C4; eval suite recommended (A1) | C1–C4 mandatory; eval suite as a gate for A2+ agents | + periodic manual red-team, drift in short windows and production telemetry (A4) |
+| Policy C1–C4; eval suite recommended (A1) | C1–C4 mandatory; eval suite as a mandatory gate on every promotion that changes the model, *skill files* or *system prompts* | + periodic manual red-team, drift in short windows and production telemetry (A4) |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -1120,14 +1120,14 @@ The goal is to calibrate testing according to the criticality of the application
 
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
-| SAST | Warning | Blocking on High/Critical | Blocking on Medium+ |
+| SAST | Blocking on High/Critical | Blocking on High/Critical | Blocking on Medium+ |
 | DAST | Manual | Automated authenticated | Automated + extended coverage |
 | **IAST** | **N/A** | **Recommended (criticals)** | **Mandatory (full coverage)** |
 | Fuzzing | Optional | Priority endpoints | Critical endpoints |
 | Regressions | Critical cases | Per findings | Mandatory |
-| PenTesting | N/A | Occasional | Pre-production mandatory |
-| **Findings management** | **Simple backlog** | **Centralised with SLA** | **Centralised + audit** |
-| Release | Simple checklist | Blocking on High/Critical | No critical without an exception |
+| PenTesting | N/A | Annual + after significant architecture change | Annual + pre-production mandatory |
+| **Findings management** | **Simple backlog with SLA per severity** | **Centralised with SLA** | **Centralised + audit** |
+| Release | Simple checklist + Critical blocking | Blocking on High/Critical | No critical without an exception |
 
 ---
 

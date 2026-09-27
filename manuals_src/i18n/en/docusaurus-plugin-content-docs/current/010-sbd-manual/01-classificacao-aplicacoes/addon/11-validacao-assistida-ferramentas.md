@@ -6,16 +6,16 @@ tags: [tipo:risco-processo, tema:automacao, validacao, decisao, rastreabilidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/addon/11-validacao-assistida-ferramentas.md
-  source_sha256: 1cc54ccd3ac5b6fc1c04402650052d9c4bebbf67b7178912d6253d9c33c4dd4a
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a7e54fff6e13ca08a867aad2bf7db326f53a4c165e13b79b405154e74d377e1f
+  source_sha256: b122140189a4ed906bdc83d9dfdf00b1b23bd51941bb067f1cfef55cbaa42186
+  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
+  target_sha256: 1bf0070a7ec5c28b78a332d7be3f78679b3ae5eec2430dd9c19baaa51792d2d0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, practitioner_manual, risk_level, threat, traceability, validation_evaluation]
-  glossary_sha256: e59e267a43bf250e16129eeec097524d1c2ac4b0c19d46da13645a2d547c8b10
-  translated_at: 2026-09-25T20:18:49Z
-  stamped_at: 2026-09-26T18:32:50Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, eu_startups, framework_source_corpus, lifecycle_phase, mapping, practitioner_manual, risk_level, threat, traceability, validation_evaluation]
+  glossary_sha256: a0ce664d62380d8508c4e4f3e6ca9c6ad274c6666562e90cf62e4c762ccc4240
+  translated_at: 2026-09-27T15:08:33Z
+  stamped_at: 2026-09-27T15:08:33Z
   reviewed_by: null
 ---
 
@@ -443,7 +443,7 @@ Add to the DoD:
 
 | Practice | L1 | L2 | L3 |
 |---|---|---|---|
-| **Mandatory validation of suggestions** | Recommended | Mandatory | Mandatory + Executive Management |
+| **Mandatory validation of suggestions** | Mandatory | Mandatory | Mandatory + Executive Management |
 | **Benchmark vs. history** | Optional | Recommended | Mandatory |
 | **Formalised escalation path** | Ad hoc | Documented | Documented + SLA |
 | **Assisted re-validation TTL** | 12m | 6m | 3m |

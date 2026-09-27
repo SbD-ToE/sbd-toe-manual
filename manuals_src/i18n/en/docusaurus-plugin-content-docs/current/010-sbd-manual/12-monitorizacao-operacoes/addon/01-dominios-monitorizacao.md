@@ -7,16 +7,16 @@ tags: [monitorização, observabilidade, logging, segurança, runtime, infraestr
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/01-dominios-monitorizacao.md
-  source_sha256: ef52d5fc7e8f650d874b51ffb0ae12b649e1fe0240b72e217315c55c8189a0c3
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5410d1fa50d22992db122a9e7e972dbfab95db60ab6459c0c8fca642a43ee97b
+  source_sha256: f9c11fa3390f1d70f6e68a9d67550b62c232bd92110b905a90fa781794c70257
+  source_commit: 5e4b3eab6144ef4347232513856d6d9cb86a487c
+  target_sha256: a2ca5d1c3eee3eeb74e8c743952e4d9678e257e2d1977b862d9ff7126407e1df
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, risk_level, traceability]
   glossary_sha256: e9dc350fc47e063712862528255aba4899b0f8b9ae0a25ac913c0a4b6bf3a623
-  translated_at: 2026-09-26T11:17:25Z
-  stamped_at: 2026-09-26T18:35:38Z
+  translated_at: 2026-09-27T15:08:29Z
+  stamped_at: 2026-09-27T15:08:29Z
   reviewed_by: null
 ---
 
@@ -76,7 +76,7 @@ The selection of domains and the depth of monitoring must be proportional to the
 
 - **L3 applications**: full coverage of the domains, with SIEM integration and active alerts.
 - **L2 applications**: focus on runtime, infrastructure and security; centralised logging mandatory.
-- **L1 applications**: may be limited to technical metrics, provided that this is justified and accepted by security.
+- **L1 applications**: structured, persistent *logging* and a catalogue of critical security events are mandatory; the remaining coverage may be limited to technical metrics, provided that this is justified and accepted by security.
 
 > 📌 The `addon/08-matriz-controles-por-risco.md` details the minimums per risk level.
 

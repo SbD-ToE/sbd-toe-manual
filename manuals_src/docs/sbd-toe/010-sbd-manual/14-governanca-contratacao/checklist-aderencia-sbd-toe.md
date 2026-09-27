@@ -86,7 +86,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 2.06 | O threat modeling é reavaliado nos triggers definidos: nova integração, novo tipo de dado, alteração de arquitectura | **L2+** | pol-08 |
 | 2.07 | Existe documentação de arquitectura de segurança (solution-architecture.md ou equivalente) actualizada | **L2+** | pol-09 |
 | 2.08 | Decisões de arquitectura com impacto de segurança estão documentadas em ADRs com contexto, alternativas consideradas e impacto de segurança | **L2+** | pol-09 |
-| 2.09 | O threat modeling inclui LINDDUN para aplicações que tratam dados pessoais | **L3** | pol-08 |
+| 2.09 | As aplicações que tratam dados pessoais têm análise LINDDUN (em L1, em forma leve) | **L1+** | pol-08 |
 | 2.10 | O threat modeling tem revisão independente (por entidade não envolvida no design) | **L3** | pol-08 |
 | 2.11 | Existe gate no pipeline CI/CD que verifica se a documentação de arquitectura está actualizada | **L3** | pol-09 |
 

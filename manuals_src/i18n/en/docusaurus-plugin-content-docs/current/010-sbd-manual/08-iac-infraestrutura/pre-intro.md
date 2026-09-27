@@ -7,16 +7,16 @@ sidebar_position: -1
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/pre-intro.md
-  source_sha256: f2ebaf6b454a2878f371136cecab7bb8f2b09f1592fcd398e487030f1191f2cd
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 777a7b41d07c75554a4a0e130cf3ca2d92eed5ae844df988f73fab827e6f4a51
+  source_sha256: d0680d4e979bb6fad8467f9495603a426728e4dfd6f290dc078eb7cdb75bfc5f
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: 1b9179d99519d9b9a3178fc2859c74bf28a22240087704dfb37c55a619a0db5d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, discipline, lifecycle_phase, mapping, prescriptive, provenance, requirement_runtime, sbdtoe_sbd, traceability, transversal]
   glossary_sha256: 11a94fa7f1d14a393f9ce2490f2e10b5b49eba07cf5d4f53291071d7e847de1a
-  translated_at: 2026-09-26T09:25:44Z
-  stamped_at: 2026-09-26T18:34:44Z
+  translated_at: 2026-09-27T15:08:25Z
+  stamped_at: 2026-09-27T15:08:25Z
   reviewed_by: null
 ---
 
@@ -128,7 +128,7 @@ Each IaC requirement becomes its **own user story**, because this:
 
 | Domain | L1 (low) | L2 (medium) | L3 (critical) |
 |---------|------------|------------|--------------|
-| Automatic validations | Warning | Block High/Critical | Block Medium+ |
+| Automatic validations | Block (failure blocks the `apply`) | Block High/Critical | Block Medium+ |
 | `plan` approval | Recommended | Mandatory | Mandatory + dual approval |
 | Remote backend/state | Recommended | Remote with locking | Remote + monitoring and break-glass |
 | Module origin | Pinning recommended | Pinning mandatory | Allowlist + formal review + SBOM |

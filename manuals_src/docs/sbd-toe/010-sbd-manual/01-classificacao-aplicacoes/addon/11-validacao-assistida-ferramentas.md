@@ -429,7 +429,7 @@ Adicionar ao DoD:
 
 | Prática | L1 | L2 | L3 |
 |---|---|---|---|
-| **Validação obrigatória de sugestão** | Recomendada | Obrigatória | Obrigatória + Gestão Executiva |
+| **Validação obrigatória de sugestão** | Obrigatória | Obrigatória | Obrigatória + Gestão Executiva |
 | **Benchmark vs. histórico** | Opcional | Recomendado | Obrigatório |
 | **Trilho de escalação formalizado** | Ad-hoc | Documentado | Documentado + SLA |
 | **TTL de re-validação assistida** | 12m | 6m | 3m |

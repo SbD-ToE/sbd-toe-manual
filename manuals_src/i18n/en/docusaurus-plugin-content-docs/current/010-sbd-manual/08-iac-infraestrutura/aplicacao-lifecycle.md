@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/aplicacao-lifecycle.md
-  source_sha256: 3abd164d67c86a67458782c9420984a5df721a21e7b59509a63275b05b403430
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 1424cfd6ea992dcbbdd0cc10b296c78818bb61e12d2140093379b64e20aa5792
+  source_sha256: d840d5cacef449fe9a0e775d5de2d569a1ca2bf879ea3cb4920b4cdf0cf41ed7
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: 86c48baf77997e36f2534817685431afb69b7498a7397bb042cf1ecb1b13cccb
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, lifecycle_phase, mapping, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 681837b4b54f4d69b4aef0052aa232c1f13114b3793c45b0e466a44d937f2341
-  translated_at: 2026-09-26T09:25:41Z
-  stamped_at: 2026-09-26T18:34:40Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, eu_startups, lifecycle_phase, mapping, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b99609928c4b9bc3e42a77c6f7f7d7d61900bdf3c9bcdc9e02c651ca4a747e8f
+  translated_at: 2026-09-27T15:09:25Z
+  stamped_at: 2026-09-27T15:09:25Z
   reviewed_by: null
 ---
 
@@ -220,8 +220,8 @@ Lint reports, scanner outputs, pipeline logs, compliance badges.
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Yes | Linters + warning |
-| L2 | Yes | Linters + scanners + blocking on severe findings |
+| L1 | Yes | Linters + security scanners + policy validation; failure blocks the `apply` |
+| L2 | Yes | Linters + scanners + policy validation; failure blocks the `apply` |
 | L3 | Yes | Linters + scanners + policies + 100% coverage |
 
 **Integration into the SDLC.**
@@ -331,7 +331,7 @@ As **DevOps / SRE** and **GRC / Compliance**, I want **a complete history of cha
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Recommended | Simple naming + basic git |
+| L1 | Yes | Simple naming + intact Git history, semantic tags per release and release notes |
 | L2 | Yes | Naming + commit conventions + tagging |
 | L3 | Yes | Naming + conventions + semantic tagging + CHANGELOG |
 
@@ -638,7 +638,7 @@ As **DevOps / SRE**, I want **restore points**, **explicit confirmations** for *
 **⚖️ Proportionality.**
 | Level | Mandatory? | Adjustments |
 |---|---:|---|
-| L1 | Yes | Documented manual *rollback* |
+| L1 | Yes | Documented manual *rollback*, tested annually |
 | L2 | Yes | Automatic *snapshots* |
 | L3 | Yes | Automated *rollback* and *kill-switch* |
 
@@ -807,17 +807,17 @@ Proportionality makes it possible to balance cost, risk and control.
 | Practice | L1 (low) | L2 (medium) | L3 (high/critical) |
 |---|---|---|---|
 | Remote backend + locking | **Mandatory** | Mandatory | Mandatory + reinforced audit |
-| Automatic validations | Warning | Blocking of severe failures | Full blocking + complete coverage |
+| Automatic validations | Blocking (lint, scanners and policy) | Blocking (lint, scanners and policy) | Full blocking + complete coverage |
 | Module governance | Simple whitelist | Whitelist + automatic validation | Whitelist + validation + SBOM + reinforced review |
 | Environment segregation + tagging | **Mandatory (minimum)** | Mandatory + complete tagging | Mandatory + tags + OPA validation |
-| Traceability and naming | Recommended | Mandatory + formal conventions | Mandatory + pre-commit + CHANGELOG |
+| Traceability and naming | Mandatory (Git history + semantic tags + release notes) | Mandatory + formal conventions | Mandatory + pre-commit + CHANGELOG |
 | Formal plan review | Recommended | Mandatory | Mandatory + dual approval + change window |
 | File→resource traceability | Recommended | Mandatory + documentation | Mandatory + automatic dashboard |
 | Policy enforcement | Recommended | Mandatory OPA/Rego | OPA + formal exceptions + metrics |
 | Trusted origin of modules | Recommended | Mandatory + pinning | Mandatory + formal provenance |
-| IaC secrets management | Recommended | Mandatory (OIDC/short TTL) | Mandatory + JIT + audit |
+| IaC secrets management | Mandatory (no *hardcoding*; vault + secret scanning) | Mandatory (OIDC/short TTL) | Mandatory + JIT + audit |
 | Drift detection | Recommended | Mandatory (fortnightly) | Mandatory (weekly) + alerts |
-| Rollback and guardrails | Recommended | Mandatory (snapshots) | Mandatory + automated rollback |
+| Rollback and guardrails | Mandatory (documented and tested manual *rollback*) | Mandatory (snapshots) | Mandatory + automated rollback |
 | Signing + provenance | Recommended | Mandatory (gate for critical environments) | Mandatory + automatic rejection |
 
 ---

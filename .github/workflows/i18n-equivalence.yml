@@ -9,6 +9,7 @@ on:
     paths:
       - 'manuals_src/**'
       - 'translation/**'
+      - 'scripts/*reg*.py'
       - '.github/workflows/i18n-equivalence.yml'
   workflow_dispatch:
 
@@ -74,6 +75,9 @@ jobs:
         run: >
           python translation/scripts/equivalence.py --all
           --source-locale "$SOURCE_LOCALE" --target-locale "$TARGET_LOCALE"
+
+      - name: Regulatory overlay data (contexts, matrices, generated views)
+        run: python scripts/check_reg_context.py
 
       - name: Sync state is reproducible
         run: >

@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: dbe6c25fc24be2e6f350ac2a6a73e10f8941eff1c2a13f5b4de2d621eebbb20e
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 78d7ff2a747033edd6bed2f269712a58c73b3962748d464277e0ebb019685110
+  source_sha256: f7fca21d57df0e930860abb385d0bfc3099dede7ede33de7dd6fd684fdc2d0b8
+  source_commit: 5bc57a2de453d4a50f78edcfb2b9546615b20690
+  target_sha256: 0c398afbf8e4c4bc19cbda9b50582e57a24ca16035e36442aecf7837a6516382
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: 914582ffaf8812b31229ca5a0f97367099d874a098bb96818fee212816bd6fbd
-  translated_at: 2026-09-27T07:53:32Z
-  stamped_at: 2026-09-27T07:53:32Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, eu_startups, gap_family, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, piso_limiar, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: 84b271c55169b7b23695b01c478ed09b72a49513ad43af99a95eaca4ac1d9dd6
+  translated_at: 2026-09-27T23:03:35Z
+  stamped_at: 2026-09-27T23:03:35Z
   reviewed_by: null
 ---
 
@@ -27,6 +27,8 @@ translation:
 This playbook maps **NIS2 requirements (Directive (EU) 2022/2555) to practical SbD-ToE actions**.
 
 **Principle:** Implementing SbD-ToE creates a strong basis for meeting NIS2, but full compliance also requires regulatory formalisation, explicit management accountability and national or sectoral parameterisation where applicable.
+
+What the Manual covers, the gaps it declares and what stays out of scope, obligation by obligation, are in [Applicable requirements — What this Manual covers and what stays out](./requisitos-aplicaveis#cobertura).
 
 **Structure:** Each section shows:
 - NIS2 requirement (article)
@@ -50,7 +52,7 @@ Where necessary, the text explicitly distinguishes:
 | **21** | Cybersecurity Risk-Management Measures | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Ch. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Ch. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implement technical controls, evidence and continuous review |
 | **23** | Incident Reporting | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Detection, internal escalation and preparation of external reporting |
 | **Supply Chain** | Supplier Security | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM, technical due diligence and complementary supplier governance (`Art. 21(2)(d)`, `21(3)`, `22`) |
-| **Continuity** | Business Continuity and Crisis Management | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Backups, runbooks and exercises (`Art. 21(2)(c)`); broad corporate BCM remains out of scope |
+| **Continuity** | Business Continuity and Crisis Management | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbooks and exercises; backups with tested restore (OPS-016) and recovery of the application (OPS-017) (`Art. 21(2)(c)`); broad corporate BCM remains out of scope |
 
 ---
 
@@ -73,13 +75,14 @@ Where necessary, the text explicitly distinguishes:
 3. **Define the RACI**
    - Who approves what (formal approvals and oversight)
    - Escalations (when to escalate)
-   - Reference: [Ch. 07 - Roles](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
+   - Reference: [Foundations - Roles and responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
 4. **Establish a Training Programme for Management**
    - Periodicity: Annual (minimum)
    - Content: Threats, NIS2 requirements, responsibilities
    - **Evidence:** Attendance, materials, assessments
    - Reference: [Ch. 13 - Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
+   - **Status in the Manual:** Policy 37 provides only “Executive awareness” at L1; the programme for the management body is a declared gap, and it is for the organisation to formalise it.
 
 ---
 
@@ -93,15 +96,14 @@ Where necessary, the text explicitly distinguishes:
    - Reference: [Ch. 01 - Application Classification](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classify by Risk (L1–L3)**
-   - L3: Direct impact on critical (essential) services
-   - L2: Supports important processes
-   - L1: Support tools
+   - Level L1–L3 per application, according to the axes of exposure, data sensitivity and impact (CLA-001); the level does not correspond to the NIS2 categories of essential entities and important entities
+   - The NIS2 context is declared per entity and applies its floor to all applications; for the relevant entities under Implementing Regulation (EU) 2024/2690, the PERTINENTE-grade floor also applies
    - Matrix signed by CTO + Product leads + CISO
 
 3. **Define Minimum Requirements per Level**
-   - L1: Basics (passwords, logs, code review)
-   - L2: Essentials (+ threat modelling, SAST)
-   - L3: Rigorous (+ DAST, 24x7 monitoring)
+   - L1: baseline (authentication, logs, code review, SAST as a gate — DEV-003 —, SCA blocking Critical and High — DEP-002)
+   - L2: adds formal threat modelling (THR-001), DAST (TST-005), log centralisation and automatic alerts (OPS-004, OPS-005)
+   - L3: reinforced rigour and evidence; the exact selection per level is in the catalogue
    - Reference: [Ch. 02 - Requirements](/sbd-toe/sbd-manual/requisitos-seguranca/intro)
 
 ---
@@ -111,16 +113,17 @@ Where necessary, the text explicitly distinguishes:
 
 #### 3.1 Policies on Risk Analysis {#31-políticas-de-análise-de-risco}
 - **What:** Identify and assess cybersecurity risks
-- **How:** Threat modelling (L2–L3); impact analysis
+- **How:** threat modelling at L2 and L3 (THR-001); at L1, only the light LINDDUN strand when there is personal data (THR-003). The entity's risk tolerance and business impact analysis (BIA) are not prescribed by the Manual: they are declared gaps.
 - **Trail:** Document risks, decisions, mitigations
 - **Reference:** [Ch. 03 - Threat Modelling](/sbd-toe/sbd-manual/threat-modeling/intro)
 
-#### 3.2 Vulnerability Management and Patching {#32-gestão-de-vulnerabilidades-e-patching}
-- **What:** SBOM (Software Bill of Materials) + SCA
-- **Why:** Art. 21 requires vulnerability management and system updates
-- **How:** Generate the SBOM; continuous scanning; update dependencies
+#### 3.2 Vulnerability handling and disclosure {#32-gestão-de-vulnerabilidades-e-patching}
+- **What:** SBOM and SCA, and a coordinated disclosure process that receives and handles external reports (GOV-015, mandatory at any level in the NIS2 context: CTX-NIS2-P14; for relevant entities, in line with the national coordinated disclosure policy: CTX-NIS2-P15)
+- **Why:** Article 21(2)(e) calls for vulnerability handling and disclosure
+- **How:** Generate SBOM; continuous scanning; update dependencies; publish the channel for receiving external reports
 - **Trail:** Keep the SBOM up to date, vulnerabilities documented
-- **Reference:** [Ch. 05 - Dependencies & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)
+- **Out of scope:** patching of operating systems, network equipment and off-the-shelf software (entity security).
+- **Reference:** [Ch. 05 - Dependencies & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 14 - Governance and Contracting](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 #### 3.3 Security in Development and Maintenance {#33-segurança-em-desenvolvimento-e-manutenção}
 - **What:** Security gates in the pipeline
@@ -130,7 +133,8 @@ Where necessary, the text explicitly distinguishes:
 
 #### 3.4 IAM and Access Control {#34-iam-e-controlo-de-acessos}
 - **What:** Strong authentication, privilege management
-- **How:** MFA, principle of least privilege, periodic review
+- **How:** MFA (AUT-001); least privilege; access review at planned intervals (ACC-010, GOV-014); privileged and administration accounts with strong authentication and a documented lifecycle (GOV-016, GOV-017), mandatory for relevant entities (CTX-NIS2-P12, P13, P18, P19).
+- **Declared gaps:** exclusive use and separation of administration systems (point 11.4.2) and periodic review of authentication technologies (point 11.6.4).
 - **Trail:** Access logs, approvals, revocations
 - **Reference:** [Ch. 02 - Security Requirements](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04 - Secure Architecture](/sbd-toe/sbd-manual/arquitetura-segura/intro)
 
@@ -141,8 +145,9 @@ Where necessary, the text explicitly distinguishes:
 - **Reference:** [Ch. 02 - Security Requirements](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04 - Secure Architecture](/sbd-toe/sbd-manual/arquitetura-segura/intro)
 
 #### 3.6 Cyber Hygiene and Training {#36-higiene-cibernética-e-formação}
-- **What:** Staff training, threat awareness
+- **What:** training for technical roles and for third parties with access (TRN-001, TRN-002, TRN-007)
 - **How:** Continuous training programme, simulations
+- **Declared gap:** scheduled awareness and cyber hygiene practices for all non-technical staff and for the management body.
 - **Trail:** Attendance, materials, assessments
 - **Reference:** [Ch. 13 - Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
@@ -165,6 +170,7 @@ Where necessary, the text explicitly distinguishes:
 #### 4.3 Register of Critical Suppliers {#43-registo-de-fornecedores-críticos}
 - **What:** Inventory of critical ICT suppliers
 - **How:** Fields as required by the national authority (follow local guides/portals)
+- **Status in the Manual:** secure contracting policy (Policy 33), security clauses (GOV-006) and supplier validation (GOV-007); for relevant entities, at any level (CTX-NIS2-P07 to P09). The register fields the national authority asks for belong to the organisation.
 - **Trail:** Periodic updates, risk assessments
 - **Reference:** [Ch. 05 - Dependencies & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 14 - Governance and Contracting](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
@@ -174,8 +180,8 @@ Where necessary, the text explicitly distinguishes:
 **NIS2 Art. 23** - Reporting of significant incidents
 
 #### 5.1 Centralised Monitoring {#51-monitorização-centralizada}
-- **What:** Centralised logs of apps, infrastructure, access
-- **Retention:** As per ENISA/national authority guidance
+- **What:** centralised application and access logs (LOG-001, OPS-001); for relevant entities, regular analysis, threshold-based alarms and backup of logs (CTX-NIS2-P03 to P06). Network traffic and the execution of system utilities are entity security, outside the Manual.
+- **Retention:** period defined per log type (LOG-005; Policy 29 §7, the Manual's choice); the most demanding period of the law, national transposition or the supervisor prevails
 - **Protection:** Immutability (prevent alteration)
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
@@ -192,8 +198,8 @@ Where necessary, the text explicitly distinguishes:
   - **Incident notification:** ≤ 72h after becoming aware, with an initial assessment
   - **Intermediate report:** at the request of the CSIRT or the competent authority
   - **Final report:** ≤ 1 month after the incident notification (if the incident is ongoing: an intermediate report at that time and a final report ≤ 1 month after it has been handled)
-- **Schema:** Parameterise fields according to Art. 23 and ENISA guides
-- **How:** SIEM/ITSM exporters → files ready for submission
+- **Content:** impact data from the record (Policy 32 §4.3); significant incident criterion (CTX-NIS2-R02) and, for relevant entities, thresholds and aggregation of recurring incidents (CTX-NIS2-R03; Policy 32 §4.7); minimum content of each stage (Policy 32 §6.1)
+- **How:** SIEM/ITSM exporters to the national CSIRT's forms; the forms and channels belong to the authority
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
@@ -205,12 +211,14 @@ Where necessary, the text explicitly distinguishes:
 - **What:** Regular, tested, off-site backups
 - **How:** Automation, periodic restore tests
 - **Trail:** Logs of backups, tests, results
+- **State in the Manual:** backups with tested restore in OPS-016 and recovery objectives and procedure in OPS-017 (Ch. 12); redundancy is a requirement of the NIS2 context for the relevant entities.
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
-#### 6.2 Crisis Management {#62-gestão-de-crise}
-- **What:** Response plan for significant incidents
+#### 6.2 Response to serious incidents (crisis management stays outside) {#62-gestão-de-crise}
+- **What:** IRP with playbooks, P1 war room and post-mortem with review of the affected artefacts (Policy 32 §4.6; mandatory at any level in the NIS2 context: CTX-NIS2-P01)
 - **How:** Runbooks, exercises, defined roles
 - **Trail:** Documented exercises, lessons learned
+- **Out of scope:** the entity's crisis management (Implementing Regulation (EU) 2024/2690, point 4.3) and the business continuity plan.
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
@@ -234,17 +242,18 @@ Where necessary, the text explicitly distinguishes:
 - **What:** Periodic review of the implemented controls
 - **How:** Internal audits, security metrics, testing
 - **Trail:** Audit reports, remediation plans
+- **Declared gap:** independent review of the approach to security as a whole and hierarchical independence of reviewers (points 2.3.1 and 2.3.2).
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
 ## Compliance Checklist {#checklist-de-conformidade}
 
-The list below makes it possible to validate the alignment of the SbD-ToE programme with the NIS2 requirements. Periodic review of these points is suggested to ensure continuous compliance:
+The list below makes it possible to validate the alignment of the SbD-ToE programme with NIS2 requirements. Periodic review of these points is suggested to keep the alignment:
 
-- [ ] **Governance:** Formal approval and oversight chain documented; RACI mapped; annual training for management
+- [ ] **Governance:** Formal approval and oversight chain documented; RACI mapped; annual training of the management body (provided by the organisation: a declared gap of the Manual)
 - [ ] **Classification:** All apps classified L1–L3; entity type (essential/important) defined
-- [ ] **Risk Policies:** Threat modelling implemented (L2–L3)
+- [ ] **Risk Policies:** Formal threat modelling (L2–L3) and light LINDDUN at L1 when there is personal data (THR-003)
 - [ ] **Vulnerabilities:** SBOM generated and kept up to date; continuous SCA
 - [ ] **CI/CD:** Security gates operational
 - [ ] **IAM:** MFA implemented; principle of least privilege in force
@@ -252,7 +261,7 @@ The list below makes it possible to validate the alignment of the SbD-ToE progra
 - [ ] **Training:** Continuous training programme operational
 - [ ] **Suppliers:** Inventory of critical suppliers; lifecycle operational
 - [ ] **Monitoring:** Centralised logs, adequate retention
-- [ ] **Incidents:** Detection, escalation and 24h/72h/1M reporting preparation process active
+- [ ] **Incidents:** IRP at any level (CTX-NIS2-P01); detection, escalation and the minimum content of Policy 32 §6.1 for 24h/72h/1M reporting
 - [ ] **Continuity:** Backups tested; runbooks and operational recovery validated
 - [ ] **Testing:** SAST/DAST integrated; periodic effectiveness assessment
 - [ ] **Evidence:** Data room with documentation (policies, tests, logs, training)
@@ -275,32 +284,32 @@ The list below makes it possible to validate the alignment of the SbD-ToE progra
 | **[Ch. 10](/sbd-toe/sbd-manual/testes-seguranca/intro)** | Art. 21 | Continuous testing (SAST/DAST/penetration) |
 | **[Ch. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 21 | Pre-deploy validation, requirements compliance |
 | **[Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)** | Art. 20 (oversight), Art. 21, 23 | Monitoring, incidents, runbooks, operational continuity and evidence |
-| **[Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 20, 21 | Cybersecurity training for staff and management |
+| **[Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 20, 21 | Training for technical roles and for third parties with access; training of the management body is a declared gap |
 | **[Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 20 (primary), Art. 21, 23 | Governance, approval chain, escalation and supplier lifecycle |
 
 ---
 
-## Simple Metric: Am I Compliant? {#métrica-simples-estou-compliant}
+## Simple metric: self-assessment of the baseline {#métrica-simples-estou-compliant}
 
-An organisation that can answer YES to the following has a strong basis for a defensible NIS2 reading:
+Each affirmative answer scores one point; how to read the result follows the list.
 
-1. **Governance:** Do I have a formal management approval and oversight chain? ✓
-2. **Board Training:** Does management have annual cybersecurity training? ✓
-3. **Risk Management:** Are all apps classified? ✓
-4. **Policies:** Do I have policies on risk analysis and security? ✓
-5. **Vulnerabilities:** Do I have SBOM and SCA active? ✓
-6. **Development:** Secure CI/CD with operational gates? ✓
-7. **IAM & Crypto:** MFA and cryptography implemented? ✓
-8. **Training:** Continuous training programme active? ✓
-9. **Supply Chain:** Inventory of critical suppliers and operational lifecycle? ✓
-10. **Operations:** Centralised monitoring with adequate retention? ✓
-11. **Incident Response:** Can I detect, escalate internally and prepare 24h/72h/1M reporting? ✓
-12. **Continuity:** Backups tested, runbooks and operational recovery validated? ✓
-13. **Testing:** Do I perform SAST/DAST and effectiveness assessment? ✓
-14. **Evidence:** Can I demonstrate all of this in an audit? ✓
+1. **Governance:** Do I have a formal chain of approval and oversight by management?
+2. **Board Training:** Does management receive annual cybersecurity training?
+3. **Risk Management:** Are all apps classified?
+4. **Policies:** Do I have risk analysis and security policies?
+5. **Vulnerabilities:** Do I have SBOM and SCA in place?
+6. **Development:** Secure CI/CD with operational gates?
+7. **IAM & Crypto:** MFA and cryptography implemented?
+8. **Training:** Continuous training programme in place?
+9. **Supply Chain:** Inventory of critical suppliers and operational lifecycle?
+10. **Operations:** Centralised monitoring with adequate retention?
+11. **Incident Response:** Can I detect, escalate internally and prepare 24h/72h/1M reporting?
+12. **Continuity:** Tested backups, runbooks and operational recovery validated?
+13. **Testing:** Do I run SAST/DAST and assess effectiveness?
+14. **Evidence:** Can I demonstrate all of this in an audit?
 
-**If 12/14:** The organisation has a strong basis for a NIS2 audit, but should still confirm the applicable national and sectoral requirements.  
-**If `<`7/14:** Prioritise governance + classification + monitoring + incidents.
+**With 12 or more out of 14:** the application-side baseline is strong. For a NIS2 audit, what is still missing are the entity's measures that the Manual leaves out of scope (physical security, workstations, HR, continuity and crisis, inventory of all assets), the gaps declared in [Applicable requirements](./requisitos-aplicaveis#cobertura) and national and sectoral requirements.  
+**With fewer than 7 out of 14:** the priority is governance, classification, monitoring and incidents.
 
 ---
 
@@ -310,13 +319,15 @@ NIS2 requires compliance with cybersecurity risk-management measures (Art. 21). 
 
 What characterises an exception in SbD-ToE/NIS2:
 - Formal deviation from a requirement
-- Example: Deploy with a high vulnerability (vs. L3 requirement = zero criticals)
+- Example: a deploy with an unfixed High vulnerability, when SCA blocks Critical and High at any level (DEP-002)
 - Formal approval, justification, TTL (Time-To-Live), remediation plan
 
-Who approves (SbD-ToE proposal, framed by the responsibility of the management body laid down in Article 20 of NIS2):
-- L1 (low risk): Tech Lead / AppSec Engineer
-- L2 (medium risk): CISO
-- L3 (critical): Board / CRO / equivalent management body, according to the applicable governance model
+Who approves, in the Manual (Policy 05 §6):
+- L1: Tech Lead or AppSec Engineer
+- L2: AppSec Engineer, with Product Management for High, and the CISO for Critical
+- L3: AppSec Engineer with GRC for Medium and the CISO for High; Critical is not acceptable as an exception
+
+Escalating the decision to the management body, as a reading of Article 20 suggests, is formalisation by the organisation: the Manual does not prescribe it (a declared gap against Implementing Regulation (EU) 2024/2690, point 2.3.3).
 
 Regulatory implication:
 - Exceptions without formal approval may compromise oversight (Art. 20)
@@ -345,7 +356,7 @@ For concrete support in implementing this playbook, see the following reusable e
 - 👥 **[RACI and Governance](../exemplo-playbook/exemplo-raci-governance)** - Responsibility matrices aligned with Art. 20 (management accountability)
 - 📝 **[Incident Report](../exemplo-playbook/exemplo-relatorio-incidentes)** - Formal reporting templates with NIS2 timelines (24h/72h/1M)
 
-These resources are **reusable across multiple frameworks** (NIS2, DORA, ISO 27001, CRA) and show how to implement the deliberate abstentions of SbD-ToE (the manual does not prescribe specific tools; the examples show practical options).
+These resources are **reusable across multiple frameworks** (NIS2, DORA, ISO 27001, CRA) and show practical options for what SbD-ToE leaves deliberately configurable (the manual does not prescribe specific tools).
 
 ---
 
@@ -374,6 +385,6 @@ Complete documentation: See SbD-ToE chapters 01–14 for technical and operation
 
 ---
 
-**Version:** 1.0  
-**Date:** January 2025  
+**Version:** 1.1  
+**Date:** September 2026  
 **Note:** This playbook complements the [NIS2 normative analysis](intro) with practical implementation

@@ -1,7 +1,7 @@
 ---
 id: intro
 title: NIS2 - Cross-check normativo
-description: Como o SbD-ToE cobre, deixa em aberto deliberadamente e pode integrar rapidamente os requisitos da Diretiva NIS2 (UE 2022/2555)
+description: O que o SbD-ToE cobre, as lacunas que declara e o que deixa fora do âmbito face à Diretiva NIS2 (UE 2022/2555)
 tags: [cross-check, nis2, diretiva, ciberseguranca, incident-reporting, governance]
 sidebar_position: 3
 ---
@@ -16,8 +16,22 @@ No espírito da NIS2, não chega "ter controlos" - é preciso demonstrar capacid
 
 Este documento apresenta:
 
-1. **PARTE I: ANÁLISE NORMATIVA** - mapeamento artigo a artigo dos requisitos NIS2 para capítulos SbD-ToE, identificando cobertura existente, lacunas intencionais e passos de integração.
+1. **PARTE I: ANÁLISE NORMATIVA** - mapeamento artigo a artigo dos requisitos NIS2 para capítulos SbD-ToE, identificando o que o Manual cobre, as lacunas que declara, o que fica fora do âmbito e os passos de integração.
 2. **PARTE II: SÍNTESE E REFERÊNCIAS** - visão consolidada da relação NIS2/SbD-ToE e referências normativas.
+
+## O que este Manual cobre e o que fica de fora {#o-que-este-manual-cobre-e-o-que-fica-de-fora}
+
+O SbD-ToE é centrado na aplicação: requisitos, arquitetura, código, dependências, pipeline, deploy e operação do software. Para cada obrigação da NIS2, o Manual responde numa de três categorias, e nenhuma obrigação fica em silêncio:
+
+- **Cobre**, e diz de que forma: requisito do catálogo, política, piso ou requisito acrescentado pelo regime, ou evidência de engenharia para um dever de outro plano.
+- **Lacuna declarada**: o que o Manual não cobre por omissão, com o que falta.
+- **Fora de âmbito**: o que o Manual não trata, com a razão.
+
+A lista completa, obrigação a obrigação, é gerada da matriz de cobertura e está em [Requisitos aplicáveis — O que este Manual cobre e o que fica de fora](./requisitos-aplicaveis#cobertura). Quando esta página e a lista divergirem, prevalece a lista.
+
+**Fora de âmbito, por decisão do programa:**
+- Segurança da entidade como um todo (rede corporativa e canais de administração, EDR, patching de sistemas operativos e equipamentos, inventário e classificação de todos os ativos): o Manual é centrado na aplicação.
+- Continuidade do negócio, gestão de crise e BIA da entidade. O Manual cobre as cópias de segurança, o restauro testado e a recuperação da aplicação (OPS-016, OPS-017).
 
 ---
 
@@ -33,23 +47,23 @@ O Art. 20 coloca o órgão de direção no centro: aprova as medidas de gestão 
 
 | Requisito NIS2 | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
-| Aprovação de medidas pelo órgão de gestão | Cap. 14, Cap. 02 | Governança, cadeia de aprovação e base técnica de suporte |
+| Aprovação de medidas pelo órgão de gestão | Cap. 14, Cap. 02 | Aprovação formal do modelo de governação e das políticas pela direção (GOV-001); a aprovação das medidas do art. 21.º pelo órgão de direção é lacuna declarada |
 | Supervisão da execução | Cap. 12, Cap. 14 | Métricas, evidências operacionais, monitorização e escalonamento |
-| Formação regular da gestão | Cap. 13 | Programa de formação e onboarding |
+| Formação do órgão de direção | Cap. 13 | Parcial: a Política 37 prevê só «Awareness executivo» em L1; a formação obrigatória do órgão de direção e a formação regular do pessoal não técnico ficam como lacuna declarada |
 
 **O que o SbD-ToE cobre**
 
 - Define base técnica de requisitos e políticas (Cap. 02) e a cadeia de governança/aprovação aplicável (Cap. 14).
 - Estabelece ciclos de supervisão, monitorização e evidência operacional (Cap. 12), articuláveis com a accountability de gestão.
-- Prescreve programa de formação e onboarding (Cap. 13).
+- Prescreve formação e onboarding para funções técnicas e terceiros com acesso (Cap. 13); a formação do órgão de direção é lacuna declarada.
 
-**Lacunas intencionais**
+**Lacunas declaradas**
 
-Quem assina as políticas: o manual exige aprovação formal, mas não fixa ex ante a forma jurídica exata da cadeia de aprovação. Isto é propositado: em contextos puramente técnicos, aprovação operacional pode bastar; para leitura NIS2, a accountability do órgão de gestão tem de ficar explicitamente formalizada.
+O Manual exige a aprovação formal, pela direção, do modelo de governação e das políticas (GOV-001), mas não atribui ao órgão de direção a aprovação das medidas do art. 21.º como um todo, a supervisão da sua aplicação nem a responsabilização pessoal. Também não exige que se designe uma pessoa que responda diretamente perante o órgão de direção, e a aceitação do risco residual sobe, no máximo, ao CISO. A forma jurídica da cadeia de aprovação fica, por opção, com a organização.
 
 **Como cumprir**
 
-Sugere-se registar, no Cap. 14, como a cadeia de aprovação e supervisão da gestão foi formalizada, usando o catálogo do Cap. 02 como base técnica e guardando evidência de formação periódica à gestão (conforme Art. 20).
+Sugere-se registar, no Cap. 14, como a cadeia de aprovação e supervisão da gestão foi formalizada, usando o catálogo do Cap. 02 como base técnica e guardando evidência da formação periódica do órgão de direção, que a organização assegura para além do Manual (Art. 20).
 
 ---
 
@@ -67,14 +81,15 @@ Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeame
 |---|---|---|
 | Políticas de análise de risco | Cap. 02, Cap. 03 | Requisitos de segurança, threat modeling |
 | Gestão de incidentes | Cap. 12 | Deteção, resposta, pós-incidente |
-| Continuidade/crise (backups, DR) | Cap. 12 | Runbooks, exercícios, backups testados |
+| Continuidade/crise (backups, DR) | Cap. 11, Cap. 12 | Runbooks e exercícios de resposta; cópias de segurança com restauro testado (OPS-016); objectivos e procedimento de recuperação da aplicação (OPS-017, L2/L3); BCM e gestão de crise da entidade fora do Manual |
 | Segurança da cadeia de fornecimento | Cap. 05, Cap. 14 | SBOM/SCA, dependências, requisitos contratuais |
 | Segurança em desenvolvimento | Cap. 06, Cap. 07, Cap. 08 | Desenvolvimento seguro, CI/CD, IaC |
 | Avaliação da eficácia | Cap. 10, Cap. 12 | Testes de segurança, monitorização contínua |
-| Higiene cibernética/treino | Cap. 13 | Formação e onboarding |
-| IAM, criptografia | Cap. 02, Cap. 04 | Requisitos de segurança, arquitetura segura |
-| Gestão de vulnerabilidades/patching | Cap. 05, Cap. 10 | Dependências, SCA, testes |
-| Logging e monitorização | Cap. 12 | Observabilidade, SIEM, alertas |
+| Higiene cibernética/treino | Cap. 13 | Formação de funções técnicas e de terceiros com acesso (TRN-002, TRN-007); ciber-higiene e sensibilização de todo o pessoal e do órgão de direção ficam como lacuna declarada |
+| IAM, contas privilegiadas, criptografia | Cap. 02, Cap. 04, Cap. 14 | MFA (AUT-001); revisão de acessos (ACC-010, GOV-014); contas privilegiadas e de administração (GOV-016, GOV-017); ciclo de vida das chaves e inventário de certificados (ENC-007); agilidade criptográfica (ENC-003); nas entidades pertinentes, obrigatórios em qualquer nível (CTX-NIS2-P12, P13, P18 a P21) |
+| Gestão de ativos e segurança dos RH | Cap. 01, Cap. 13 | Inventário de aplicações e componentes (CLA-008, DEP-001); o inventário de todos os ativos é segurança da entidade, fora do âmbito, e a política de tratamento de ativos é lacuna declarada; a segurança dos RH fica fora do âmbito (gestão de pessoal), salvo onboarding e offboarding |
+| Tratamento e divulgação de vulnerabilidades | Cap. 05, Cap. 10, Cap. 14 | Dependências, SCA, testes; divulgação coordenada e tratamento das comunicações externas (GOV-015; CTX-NIS2-P14, P15). A correção de sistemas operativos, equipamentos de rede e software de prateleira é segurança da entidade, fora do âmbito do Manual |
+| Logging e monitorização | Cap. 12 | Observabilidade, SIEM, alertas; nas entidades pertinentes são obrigatórios a análise regular, os alarmes com limiares e a cópia de segurança dos registos (LOG-004, LOG-007, OPS-005, LOG-005; CTX-NIS2-P03 a P06); o tráfego de rede e a redundância da monitorização ficam como lacuna declarada |
 
 **O que o SbD-ToE cobre**
 
@@ -87,13 +102,13 @@ Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeame
 - **Monitorização, logging, resposta e melhoria contínua** (Cap. 12).
 - **Governança & contratação** (Cap. 14), incluindo avaliação de terceiros.
 
-**Lacunas intencionais**
+**Lacunas declaradas e fora do âmbito**
 
-Taxonomias/formatos "fechados": a NIS2 detalha tópicos, mas o detalhe (p. ex., lista exata de campos de logs ou templates de políticas) pode variar entre jurisdições e setores. O SbD-ToE mantém modelos genéricos, para que possam ser "plugados" aos requisitos nacionais/setoriais.
+O Manual é centrado na aplicação. Ficam fora do âmbito, com razão registada, a segurança física e ambiental, os postos de trabalho e os suportes amovíveis, a gestão de recursos humanos, a continuidade do negócio e a gestão de crises, e a segurança da entidade como um todo (inventário de todos os ativos, EDR, correção de sistemas operativos). Entre as lacunas declaradas estão a ciber-higiene de todo o pessoal, a política de tratamento de ativos e a certificação europeia na aquisição (art. 24.º). Os formatos «fechados», como campos de logs e modelos de políticas, continuam deliberadamente genéricos. O detalhe, requisito a requisito, está em [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
 
 **Como cumprir**
 
-Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado por `01/03/05/10/12/14`, e alinhar as evidências com o guia técnico da ENISA (exemplos de evidência e mapeamentos). Declarar, no Cap. 01, que a proporcionalidade segue as classes NIS2 (essencial/importante) e o impacto nos serviços.
+Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado por `01/03/05/10/12/14`, e alinhar as evidências com o guia técnico da ENISA (exemplos de evidência e mapeamentos). O contexto NIS2 declara-se por entidade e é herdado por todas as aplicações; nas entidades pertinentes do Reg. de Execução (UE) 2024/2690 aplica-se também o grau PERTINENTE. Os níveis L1–L3 continuam a resultar da classificação de cada aplicação (Cap. 01) e não correspondem às categorias essencial e importante.
 
 ---
 
@@ -114,6 +129,7 @@ A NIS2 define um trilho de reporte para incidentes significativos:
 | Deteção e resposta | Cap. 12 | Processo de deteção, resposta, pós-incidente |
 | Escalonamento e responsabilidades | Cap. 14 | Papéis e responsabilidades |
 | Classificação de severidade | Cap. 01, Cap. 12 | Critérios de impacto, classificação de incidentes |
+| Processo de resposta obrigatório | Cap. 12 | IRP obrigatório em qualquer nível no contexto NIS2 (CTX-NIS2-P01), com post-mortem dos incidentes significativos e revisão dos artefactos afetados (Política 32 §4.6) |
 
 **O que o SbD-ToE cobre**
 
@@ -121,13 +137,13 @@ A NIS2 define um trilho de reporte para incidentes significativos:
 - Papéis de escalonamento e responsabilidades (Cap. 14).
 - Critérios de impacto (Cap. 01) que suportam a classificação de severidade.
 
-**Lacunas intencionais**
+**Cobertura e lacunas declaradas**
 
-O SbD-ToE não fixa um modelo canónico de dados para incidentes, nem uma taxonomia de severidade "oficial" (a escala P1–P4 da Política 31 é interna), nem os templates de submissão. Isto é intencional: DORA, NIS2, HIPAA pedem conjuntos diferentes de campos e formatos. O manual diz "registar o incidente com campos obrigatórios", e o conjunto final de campos vem do normativo aplicável (no caso NIS2, das orientações nacionais e do Art. 23).
+O registo do incidente recolhe os dados de impacto (Política 32 §4.3). O critério de incidente significativo (CTX-NIS2-R02) e, nas entidades pertinentes, os limiares e a agregação dos incidentes recorrentes do Reg. de Execução (UE) 2024/2690 (CTX-NIS2-R03) decidem se o incidente é notificável. Os prazos e o conteúdo mínimo de cada etapa estão na Política 32 §6 e §6.1. A escala P1–P4 é interna e não substitui estes critérios. O Manual não substitui os formulários nem os canais da CSIRT. Ficam como lacuna declarada a notificação aos destinatários do serviço (art. 23.º, n.º 1), a comunicação aos destinatários das ciberameaças significativas (n.º 2) e a informação ao público quando a CSIRT o exija (n.º 7).
 
 **Como cumprir**
 
-Sugere-se, no Cap. 12, adotar um schema mínimo (`incident.json/csv`) e parametrizar os campos em função da NIS2 (p. ex., causa provável, severidade, consequências, IOCs, medidas; cf. guias ENISA). Configurar exportadores do SIEM/ITSM → ficheiros prontos a submeter nos prazos (24h/72h/1 mês).
+Sugere-se partir dos dados de impacto da Política 32 §4.3 e do conteúdo mínimo da §6.1 e ligar os exportadores do SIEM/ITSM aos formulários da CSIRT nacional, nos prazos de 24 h, 72 h e 1 mês.
 
 ---
 
@@ -142,18 +158,18 @@ A NIS2 enfatiza segurança da cadeia de fornecimento e de aquisição/desenvolvi
 | Requisito NIS2 | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Inventário de dependências e SBOM | Cap. 05 | SBOM, SCA, políticas de atualização |
-| Requisitos contratuais técnicos | Cap. 14 | Governança e contratação, práticas de avaliação |
-| Arquiteturas portáveis e planos de saída | Cap. 04, Cap. 08 | Arquitetura segura, IaC |
+| Requisitos contratuais técnicos | Cap. 14 | Governança e contratação, práticas de avaliação (GOV-006, GOV-007); nas entidades pertinentes, política da cadeia de abastecimento em qualquer nível (Política 33; CTX-NIS2-P07 a P09) |
+| Saída de fornecedores | Cap. 14 | Offboarding com revogação de acessos e eliminação ou devolução dos dados (Política 33 §7.1) |
 
 **O que o SbD-ToE cobre**
 
 - Inventário de dependências e SBOM, SCA, políticas de atualização (Cap. 05).
 - Requisitos contratuais técnicos (Cap. 14) e práticas de avaliação.
-- Arquiteturas portáveis e planos de saída (técnicos).
+- Offboarding de fornecedores, com revogação de acessos e eliminação ou devolução dos dados (Política 33 §7.1).
 
-**Lacunas intencionais**
+**Fora do âmbito e lacunas declaradas**
 
-Listas nacionais de entidades a registar, procedimentos de designação e requisitos jurídicos de contrato (variam entre Estados-Membros). Campos normativos específicos de registos nacionais.
+O registo junto da autoridade, a designação de representante e o conteúdo jurídico dos contratos pertencem ao plano jurídico-administrativo e ficam fora do âmbito. São lacunas declaradas a exigência de produtos TIC certificados ao abrigo do CSA quando o Estado-Membro o imponha (art. 24.º, n.º 1), as avaliações coordenadas de riscos da UE nos critérios de seleção (art. 22.º), a qualidade global dos produtos e os procedimentos de desenvolvimento seguro do fornecedor como critério explícito, as atualizações de segurança durante toda a vida útil e a verificação de antecedentes do pessoal do fornecedor.
 
 **Como cumprir**
 
@@ -172,22 +188,26 @@ A NIS2 pede continuidade de negócio, gestão de crise, backups e DR testados, e
 | Requisito NIS2 | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Runbooks e exercícios de resposta/recuperação | Cap. 12 | Runbooks, exercícios, testes |
-| Backups com testes de restauração | Cap. 12 | Backups testados, validação |
+| Backups com testes de restauração | Cap. 12 | Cópias de segurança com restauro testado ([`OPS-016`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#catálogo-ops---monitorização-e-operações)), com cadência por nível |
 | Logging/observabilidade "by design" | Cap. 12 | Logging, observabilidade, retenção |
 
 **O que o SbD-ToE cobre**
 
 - Runbooks e exercícios de resposta/recuperação (Cap. 12).
-- Backups com testes de restauração e validação (Cap. 12).
+- Cópias de segurança com restauro testado (OPS-016) e objectivos e procedimento de recuperação da aplicação (OPS-017).
 - Logging/observabilidade "by design" (Cap. 12), com orientação para retenção alinhável a normas.
 
-**Lacunas intencionais**
+**Cobertura e fora do âmbito**
 
-Períodos de retenção e campos exactos de logs: variam entre NIS2, DORA e regimes setoriais; o manual define "logs com campos obrigatórios" e deixa os campos finais para serem plugados segundo o normativo aplicável (NIS2 aqui). Continuidade empresarial ampla, BCM corporativo e gestão de crise institucional também podem exigir artefactos fora do manual base.
+Os atributos mínimos dos registos (LOG-002), o catálogo de eventos (OPS-002) e a retenção por tipo de registo (LOG-005; Política 29 §7) estão prescritos; nas entidades pertinentes, a análise regular, os alarmes com limiares e a cópia de segurança dos registos são obrigatórios (CTX-NIS2-P03 a P06). Os prazos da Política 29 §7 são escolha do Manual: prevalece o mais exigente de entre a lei, a legislação nacional, os supervisores e o setor. A continuidade do negócio, o BCM corporativo e a gestão de crises da entidade ficam fora do âmbito do Manual, que é centrado na aplicação: a war room P1 da Política 32 é resposta a incidentes, não gestão de crises.
+
+**Redundância e continuidade**
+
+As cópias de segurança e o restauro testado (OPS-016) e a recuperação da aplicação (OPS-017) estão prescritos. A redundância pelo menos parcial dos sistemas (Reg. de Execução (UE) 2024/2690, anexo, ponto 4.2.4) entra só para as entidades pertinentes, como requisito do contexto NIS2 (ver [Requisitos aplicáveis](/sbd-toe/cross-check-normativo/nis2/requisitos-aplicaveis)). A continuidade do negócio e a gestão de crise da entidade ficam fora do Manual.
 
 **Como cumprir**
 
-Sugere-se alinhar a matriz de fontes (app, IAM, rede, cloud audit, EDR) e retenção com as orientações ENISA, colhendo exemplos de evidência para auditoria.
+Sugere-se alinhar com as orientações da ENISA as fontes que o Manual cobre (aplicação, IAM, cloud audit) e a retenção, colhendo exemplos de evidência para auditoria. As fontes da entidade, como a rede e o EDR, vêm da segurança da entidade, fora do âmbito do Manual.
 
 ---
 
@@ -197,12 +217,12 @@ Sugere-se alinhar a matriz de fontes (app, IAM, rede, cloud audit, EDR) e reten�
 
 A NIS2 pede gestão com responsabilidade, medidas com substância e reportes com prazos. O SbD-ToE oferece o coração técnico-operacional: políticas, processos, testes, inventários, automação e evidências.
 
-As aparentes lacunas do manual - quem aprova políticas, campos rígidos de logs/incidentes, templates e formatos de submissão, pormenores jurídicos de contratos - são lacunas deliberadas: detalhes específicos que mudam entre normas e países e que, por isso, o SbD-ToE deixa configuráveis.
+A resposta do Manual à NIS2 tem três partes. Cobre, com a forma indicada em cada requisito, a base técnico-operacional. Declara lacunas onde fica aquém, como a formação do órgão de direção, a ciber-higiene de todo o pessoal ou a gestão de ativos para além das aplicações. E deixa fora do âmbito, com razão, a segurança da entidade como um todo, a continuidade do negócio e a relação administrativa com as autoridades. Os modelos de submissão e os pormenores jurídicos dos contratos continuam deliberadamente configuráveis.
 
 O resultado é estável:
 
 - **Hoje**, o SbD-ToE oferece uma base técnico-operacional forte para práticas compatíveis com NIS2.
-- **Depois**, quando a organização quiser defender conformidade NIS2, o trabalho incremental principal passa por formalizar aprovação e supervisão da gestão, esquemas de reporte externo e requisitos nacionais ou setoriais sobre essa base já existente.
+- **Depois**, quando a organização quiser defender conformidade NIS2, o trabalho incremental principal passa por formalizar a aprovação e a supervisão pelo órgão de direção, fechar as lacunas declaradas que lhe interessem, assegurar o que fica fora do âmbito do Manual e ligar o conteúdo mínimo da Política 32 §6.1 aos formulários nacionais, sobre essa base já existente.
 
 Assim, o SbD-ToE mantém-se útil na prática diária, e a NIS2 acrescenta a camada de formalidade regulatória e supervisão. Juntos, oferecem um percurso de conformidade mais sustentável do que uma leitura puramente checklist.
 
@@ -227,8 +247,8 @@ Em termos sancionatórios, a Diretiva obriga os Estados-Membros a prever, por vi
 
 :::note Exceções e evidência de controlo
 
-A NIS2, tal como a DORA, beneficia de um processo formal de exceções à conformidade. Casos onde um requisito específico não é aplicável ou onde se aceita um risco temporário devem ser documentados, aprovados pelo órgão de gestão e revistos periodicamente.
+A NIS2, tal como a DORA, beneficia de um processo formal de exceções à conformidade. Casos em que um requisito não se aplica, ou em que se aceita um risco temporário, são documentados e revistos periodicamente (GOV-004; Políticas 03 e 05). No Manual, a alçada de aprovação sobe, no máximo, ao CISO. São lacunas declaradas a aceitação do risco residual pelo órgão de direção e a fundamentação, requisito a requisito, das isenções por nível que o Reg. de Execução (UE) 2024/2690 pede (art. 2.º).
 
-O Cap. 14 (Governança e Contratação) do SbD-ToE fornece os artefactos necessários: registo de exceções, critérios de aceitação de risco, cadeia de aprovação e plano de remediação. A existência deste processo não é sinal de fragilidade - é evidência de governação madura e de controlo consciente sobre o perfil de risco da organização.
+O Cap. 14 (Governança e Contratação) do SbD-ToE fornece os artefactos: registo de exceções, critérios de aceitação de risco, alçadas de aprovação e plano de remediação. A existência deste processo não é sinal de fragilidade - é evidência de governação madura e de controlo consciente sobre o perfil de risco da organização.
 
 :::

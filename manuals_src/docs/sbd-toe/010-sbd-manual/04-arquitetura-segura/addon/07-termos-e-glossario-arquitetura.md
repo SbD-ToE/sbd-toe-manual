@@ -90,7 +90,7 @@ Para tal é necessário adoptar uma taxonomia comum que permita a partilha de in
 - **US-12 (Arquitetura Viva)**: publicar a lista de trigger e evidenciar execução quando ocorrem.
 
 ## 🧭 Proporcionalidade L1–L3 (aplicação do jargão)  {#-proporcionalidade-l1l3-aplicação-do-jargão}
-- **L1**: Registos simplificados (decisões chave, integrações críticas, *checklist* leve).  
+- **L1**: Registos simplificados (decisões chave, integrações críticas, *checklist* leve), com zonas de confiança, fluxos entre zonas e os controlos em cada fronteira num diagrama versionado.  
 - **L2**: ADR para decisões significativas; *trust boundaries* completos; sincronização TM; exceções formais.  
 - **L3**: Cobertura integral, *reviews* independentes, validações em CI/CD, automação de trigger onde possível.
 

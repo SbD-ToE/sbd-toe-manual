@@ -8,16 +8,16 @@ sidebar_position: 30
 translation:
   source_locale: pt
   source_path: 020-assets/policies/30_policy-monitorizacao-seguranca.md
-  source_sha256: e03d74c34c107ac290b4312b6240f9219648aaa3947d26fc5b4d58cbf4188d94
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8a7f925e99db0faa09db6ceb71f64a6cbe1b4262d681e4794f77b5e89e875453
+  source_sha256: eab02ea71c9952703df92e681a085326d1f92f544b2f44feb9811d013971f4ef
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: 0d8566e6e7e0bad38aedeaee82824a69a116118eac46fc7ebb6c72d84c155bd1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [framework_source_corpus, llm, requirement_runtime, risk_level, sbdtoe_sbd, threat, validation_evaluation]
   glossary_sha256: 36ddfa8729b4f13864bfaf945ad7615e7d3491e54ea8e6f62cd1fc0d7f49f9aa
-  translated_at: 2026-09-26T14:11:01Z
-  stamped_at: 2026-09-26T18:37:01Z
+  translated_at: 2026-09-27T13:29:38Z
+  stamped_at: 2026-09-27T13:29:38Z
   reviewed_by: null
 ---
 
@@ -43,7 +43,7 @@ The objective of this policy is to ensure that:
 
 | Level | Applicability |
 |---|---|
-| L1 | Recommended; basic monitoring of health and errors |
+| L1 | Mandatory; structured logs persisted outside the instance; catalogue of critical security events; basic monitoring of health and errors |
 | L2 | Mandatory; security events defined; alerts with SLA; SIEM integration recommended |
 | L3 | Mandatory; complete monitoring; SIEM mandatory; behavioural correlation; quarterly review |
 

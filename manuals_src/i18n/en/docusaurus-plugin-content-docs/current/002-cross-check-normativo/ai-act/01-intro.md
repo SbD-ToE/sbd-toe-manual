@@ -1,22 +1,22 @@
 ---
 id: intro
 title: AI Act - Normative cross-check
-description: Analysis of how SbD-ToE covers the technical requirements of Regulation (EU) 2024/1689 (AI Act) - accuracy, robustness, cybersecurity, logging, risk management and post-market monitoring of AI systems
+description: Analysis of how SbD-ToE responds to the obligations of Regulation (EU) 2024/1689 (AI Act) - cybersecurity, record-keeping, human oversight, transparency, post-market monitoring and serious incidents of AI systems, with accuracy and robustness pending a future round
 tags: [cross-check, ai-act, regulamento-ia, ia, machine-learning, robustez, ciberseguranca, gpai]
 sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: 520feba27b21b46d3d1791322a56187b709d81dbd6582650786db91282fdf5bf
-  source_commit: cdec9170438c29c7a3bd21b0463b30a06569c461
-  target_sha256: 1ed30bf10a04bd5e4ade9f89425cc80ac8d986b6058c1075d2bfe1d51f03ddff
+  source_sha256: 79042ac9d0b7b8f5c033ec071f5594b9abd99271efd179cc1e04946ea811f76d
+  source_commit: 138535837a74162b603e54ac55284c3abb65bb34
+  target_sha256: 95b52cf732dc3e9ad7276bbbe8dead2faf9862ffb5265e93a6d40205c3a5dfbf
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [ai_service_vendor, audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, eu_startups, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 2805c0372e89edbab2e6c08497efef4950804deeb215705453d6b1def5c114fb
-  translated_at: 2026-09-27T09:05:36Z
-  stamped_at: 2026-09-27T09:05:36Z
+  glossary_keys: [ai_service_vendor, appsec_core, audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_risk_management_system, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, eu_startups, framework_source_corpus, gap_family, gdpr_pseudonymisation, layer, lifecycle_phase, llm, mcp, mcp_reading_programa, normative_empirical, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 687f80aa0544aa71e211cfe59e5efb5638ebf1d29fb833664cd4d8142c656575
+  translated_at: 2026-09-27T23:08:55Z
+  stamped_at: 2026-09-27T23:08:55Z
   reviewed_by: null
 ---
 
@@ -25,6 +25,8 @@ translation:
 > For practical implementation, see the [SbD-ToE 4 AI Act Playbook](/sbd-toe/cross-check-normativo/ai-act/playbook).
 >
 > For universal application patterns, see the core chapters of SbD-ToE (01–14).
+>
+> The Manual's response to each obligation (covered, declared gap or out of scope) is summarised in [“What this Manual covers and what stays out”](#o-que-este-manual-cobre-e-o-que-fica-de-fora) and listed, obligation by obligation, in [Applicable requirements](./requisitos-aplicaveis#cobertura).
 
 ## Scope {#âmbito}
 
@@ -44,12 +46,14 @@ The AI Act adopts a **risk-based approach** with four tiers: **unacceptable** ri
 
 It is essential to frame the nature of the regulation: the AI Act is, first and foremost, **product safety and fundamental rights protection legislation** applied to AI systems, not an application security (AppSec) standard. However, the obligations for high-risk AI systems incorporate **substantial technical requirements** that intersect directly with SbD-ToE - in particular:
 
-- **Art. 9** - risk management system throughout the lifecycle;
 - **Art. 12 / Art. 19** - automatic recording of events (logging) and keeping of logs;
-- **Art. 15** - accuracy, robustness and **cybersecurity** (including resilience to adversarial attacks);
-- **Art. 17** - quality management system (QMS);
+- **Art. 14** - human oversight;
+- **Art. 15** - **cybersecurity** (including resilience against adversarial attacks); the accuracy and robustness required by the same Article are pending a future round;
+- **Art. 50** - transparency for certain AI systems;
 - **Art. 72** - post-market monitoring;
 - **Art. 73** - reporting of serious incidents.
+
+Articles 9 (risk management system) and 17 (quality management system) are outside the Manual's scope: they are management systems of the organisation, not requirements of the application. The Manual's controls serve as evidence for them.
 
 In SbD-ToE, the AI Act is operationalised through the same technical disciplines that underpin any secure software - secure engineering (requirements, architecture, development, IaC, pipelines, testing), supply chain and provenance (dependencies, containers, SBOM), monitoring and response processes, and governance/contracting - now applied to the **lifecycle of AI systems** (datasets, models, training and inference pipelines, inference services).
 
@@ -64,41 +68,67 @@ In SbD-ToE, the AI Act is operationalised through the same technical disciplines
 
 ## Regulatory Notice {#aviso-regulatório}
 
-SbD-ToE covers the **technical "how"** of the high-risk requirements, but **does not replace** the legal, AI-domain and conformity assessment dimensions of the AI Act. Specifically, the following are **out of scope** for the manual:
+SbD-ToE covers the **technical "how"** of a good part of the high-risk obligations, but it **does not replace** the legal and conformity assessment dimensions of the AI Act. On the matters most often confused, the answer is as follows:
 
-- **Risk classification** (Art. 6 and Annexes I/III) - the legal determination of whether a system is high-risk.
-- **Governance of training data, validation data and testing data** (Art. 10) - representativeness, detection and mitigation of bias (*bias*), statistical quality of the data sets. These are **AI/data science domain** questions, not AppSec ones.
-- **Transparency and provision of information to deployers** (Art. 13) and to natural persons (Art. 50).
-- **Human oversight** (Art. 14) - the **design/UX** of *human-in-the-loop* / *human-on-the-loop* mechanisms and human judgement (oversight-as-understanding). The **interruption (*stop/override*) and governance** facet is technically covered (see matrix, Art. 14).
-- **Fundamental rights impact assessment (FRIA)** (Art. 27) - an obligation of certain deployers: bodies governed by public law, private entities providing public services and deployers of the systems referred to in Annex III, point 5, points (b) and (c), for high-risk systems under Article 6(2) (with the exception of those in Annex III, point 2) (Article 27(1)).
-- **Conformity assessment** (Art. 43), involvement of **notified bodies**, **EU declaration of conformity** (Art. 47), **CE marking** (Art. 48) and **registration in the EU database** (Art. 49/71).
-- **Determination of prohibited practices** (Art. 5) and the legal qualification of roles (provider, deployer, importer, distributor).
+- **Risk classification** (Art. 6 and Annexes I/III): the legal determination of whether a system is high-risk is a compliance matter. The outcome is declared per application as context CTX-AIA-RE, with the legal qualification attached, and the floor entries of that context apply at any level L1–L3. The Manual's L3 level is not the same as high-risk.
+- **Governance of training data and of validation and testing data** (Art. 10): representativeness, detection and mitigation of bias and the statistical quality of the data sets are **out of scope**, by programme decision: they are data science work. The provenance and integrity of the data sets (`DEP-011`) provide incidental evidence for them.
+- **Transparency** (Arts. 13 and 50): Art. 50 is **covered** by two requirements added by the regime (CTX-AIA-RE-R01 and R02). For the instructions for use of Art. 13, the Manual provides evidence, and the drafting is the provider's. Out of scope is the disclosure of AI-generated text published on matters of public interest (Article 50(4), second subparagraph): it is an editorial decision, not an engineering one.
+- **Human oversight** (Art. 14): paragraphs 1 to 4 are **covered** for any high-risk system, with or without agents, by `ARC-014` with the floor CTX-AIA-RE-P08. Out of scope are the specifics of **biometric identification systems** (Annex III, point 1): the records of Article 12(3) and the verification by two persons of Article 14(5). An application of that kind is developed with the Manual like any other, and biometrics as an authentication factor is in `AUT-012`.
+- **Fundamental rights impact assessment (FRIA)** (Art. 27): an obligation of certain deployers: bodies governed by public law, private entities providing public services and deployers of the systems referred to in Annex III, point 5(b) and (c), for high-risk systems under Article 6(2) (with the exception of those in Annex III, point 2) (Article 27(1)). The FRIA belongs to the deployer; the Ch. 03 threat model (including LINDDUN) provides evidence for it. Only the notification of the result to the authority (Article 27(3)) is out of scope.
+- **Conformity assessment** (Art. 43), involvement of **notified bodies**, **EU declaration of conformity** (Art. 47), **CE marking** (Art. 48) and **registration in the EU database** (Art. 49/71): out of scope.
+- **Determination of prohibited practices** (Art. 5) and legal qualification of roles (provider, deployer, importer, distributor): out of scope. The technical safeguards that Article 5(1a) requires of generators of realistic images, video or audio are **covered** (floor entries CTX-AIA-RE-P09 and P10).
 
-These dimensions fall within the remit of compliance, legal, data science teams and of the relationship with the competent authority. SbD-ToE provides the technical controls and the evidence; it does not issue the conformity judgement.
+Legal judgement on these matters belongs to the compliance and legal teams and to the relationship with the competent authority. SbD-ToE provides the technical controls and the evidence; it does not issue the conformity judgement.
+
+## What this Manual covers and what stays out {#o-que-este-manual-cobre-e-o-que-fica-de-fora}
+
+SbD-ToE is centred on the application: requirements, architecture, code, dependencies, pipeline, deployment and operation of the software. For each AI Act obligation, the Manual answers in one of three categories, and no obligation is left unanswered:
+
+- **Covers**, and says how: a catalogue requirement, a policy, a floor or a requirement added by the regime, or engineering evidence for a duty that sits on another plane.
+- **Declared gap**: what the Manual does not cover by omission, with what is missing.
+- **Out of scope**: what the Manual does not address, with the reason.
+
+The full list, obligation by obligation, is generated from the coverage matrix and is in [Applicable requirements — What this Manual covers and what stays out](./requisitos-aplicaveis#cobertura). Where this page and the list differ, the list prevails.
+
+**Out of scope, by programme decision:**
+- Security of the entity as a whole (corporate network and administration channels, EDR, patching of operating systems and equipment, inventory and classification of all assets): the Manual is centred on the application.
+- Risk management system (Article 9) and quality management system (Article 17): these are management systems of the organisation; the Manual's controls serve as evidence for them.
+- Governance of training data and bias assessment (Article 10): this is data science work; the provenance and integrity of the data sets (`DEP-011`) provide only incidental evidence.
+- Conformity assessment and drafting of the declaration of conformity: these belong to the product conformity plane, in the hands of the provider.
+- Specifics of biometric identification systems (records of Article 12(3) and verification by two persons of Article 14(5)): the application is developed with the Manual like any other, and biometrics as an authentication factor is in `AUT-012`.
+
+Declared gap pending the AISVS/SAIF round of AppSec Core: accuracy and robustness (Article 15). The technical documentation (Annex IV) has an [evidence map](./requisitos-aplicaveis#mapa-evidencia) on the generated page. AI comes in like any other topic; there is no separate AI manual.
 
 ---
 
 ## Cross-Check Matrix (summary) {#matriz-de-cross-check-resumo}
 
-> ✏️ **Refresh 2026-05-30.** This matrix was updated following the *agentic release* (Ch. 02 §A0–A4, Ch. 03 agentic playbook, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39, US-13/14/15/16/19/21). Several gaps that were classified as "intentional" (out of AppSec by design) have been **partially or fully closed** — these are flagged where they apply.
+> ✏️ **Refresh 2026-09-27.** This table summarises the AI Act coverage matrix (`_matriz/aiact.yaml`), which incorporates the *agentic release* (Ch. 02 §A0–A4, Ch. 03 agentic playbook, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), `DEP-012..014`, `OPS-012..014`, Policy 38, Policy 39) and the floor entries and requirements of context CTX-AIA-RE. The “Residual gap” column records only declared gaps; what is out of scope is marked as such. The obligation-by-obligation answer is in [Applicable requirements](./requisitos-aplicaveis#cobertura).
 
 | AI Act domain | Reference (article) | SbD-ToE coverage | Residual gap | Adaptation action |
 |---|---|---|---|---|
-| AI literacy | Art. 4 | Ch. 13 (training), Policy 37 §11 (matrix per *role*) | Formal literacy assessment | Document completions of training tracks as evidence |
-| Risk management system | Art. 9 | Ch. 01 (classification), Ch. 02 (requirements), Ch. 02 §A0–A4 + [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (autonomy levels), Ch. 03 (threat modelling + agentic playbook), Ch. 12 (monitoring) | Risk to health, safety and fundamental rights throughout the intended use | Extend the threat model with an AI risk taxonomy (ATLAS — already included) and societal impact |
-| Data and data governance | Art. 10 | Ch. 05 (provenance), [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) (AI inventory), [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) (AI BOM CycloneDX 1.6 ml-bom), Policy 39, Ch. 02 (data requirements) | Representativeness, bias, statistical quality (AI domain) | Data science *data governance* process; *datasheets*/*data cards* |
-| Technical documentation | Art. 11, Annex IV | Ch. 02, Ch. 04 (architecture + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM), Ch. 06, Policy 38 (mandate) | Formal structure of Annex IV; *model cards* | Map SbD-ToE artefacts (including mandate + AI BOM) to the Annex IV index |
-| Recording of events (logging) | Art. 12, Art. 19 | Ch. 12 (observability), [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (AI/ML), [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation* with `mandate_ref`), Ch. 12 US-13 (agentic telemetry), Policy 30 §9 | Field schema specific to the *model output* remains configurable | Document the inference schema per system |
-| Transparency to deployers | Art. 13 | Ch. 02, Ch. 04 (partial), Policy 38 (mandate as a structured source of *capabilities*, limitations and oversight) | Model-specific performance metrics | Derive "instructions for use" from the mandate + Ch. 04/06 artefacts |
-| Human oversight | Art. 14 ⚡ | Ch. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, level classification, *kill-switch*, *intent declaration*), Ch. 04 [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval + architectural *kill-switch*), Policy 38 (mandate lifecycle) | Human intervention UX/flow (AI/product domain) | UX design remains with the AI team; technical control and operational governance already inside |
-| Accuracy, robustness and cybersecurity | Art. 15 | Ch. 03 agentic playbook + MITRE ATLAS, Ch. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)+[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 (AI BOM), Ch. 10 §C5 (*eval suites*), Ch. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak* / *off-policy*) | Declared accuracy metrics; regulatory thresholds | Declare metrics in coordination with the AI team |
-| Quality management system | Art. 17 | Ch. 07 (CI/CD), Ch. 11 (release), Ch. 06, Ch. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Formal quality manual | Map SbD-ToE gates + Policy 38/39 cycles to the QMS elements |
-| Supply chain | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (list of approved AI service vendors), Policy 39, Ch. 14 US-21 | — | — |
-| Obligations of the *deployer* | Art. 26 | Policy 38 (mandate + ownership), Ch. 02 §A0–A4, Ch. 12 US-13 (logs under the *deployer*'s control) | Operational documentation of the *deployer* | Extend the mandate with specific obligations when the organisation is a *deployer* |
-| Conformity and CE marking | Art. 43, 47–49 | — (DEP-014 records the conformity declared contractually by the AI service vendor; it is not the EU declaration of conformity of Art. 47, nor does it replace the conformity assessment and CE marking that fall to the provider of the system) | Conformity assessment of the system + the organisation's CE marking | Establish a GRC + legal swimlane for the assessment circuit |
-| GPAI and systemic risk | Art. 53, Art. 55 | Ch. 03 playbook + Ch. 05 (AI BOM), Ch. 10 §C5 (*eval suites* + *red teaming*), Ch. 12 US-13 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014), Policy 19 §7, Policy 30 §9 | GPAI technical documentation (Annex XI/XII); *copyright* policy | Documentation delegated to the AI team; *cybersecurity* already inside |
-| Post-market monitoring | Art. 72 | Ch. 12 (monitoring, *drift*), `OPS-011..014`, Ch. 12 US-13 | Formal post-market monitoring plan per system | Formalise a plan per system based on the signals already available |
-| Serious incidents | Art. 73 | Ch. 12, Ch. 14, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (agentic-specific incidents) | Regulatory definition of "serious incident"; deadlines (2/10/15 days) and *templates* | Parameterise the *runbook* and the SIEM/ITSM exporters |
+| AI literacy | Art. 4 | Ch. 13 (training), Policy 37 §11 (matrix per *role*) | Partial: business staff who operate or use product AI systems; consideration of the context of use and of the persons targeted | Document completions of training tracks as evidence |
+| Special categories of data to correct bias | Article 4a | `ENC-002`, `PRI-001`, `ACC-001..003`, `LOG-001`, `PRI-002`, `PRI-004` | Partial: limitation of re-use and pseudonymisation of these data sets; documentation per access; general prohibition on transmission to third parties; deletion as soon as the bias has been corrected; justification of strict necessity | The judgement of necessity (paragraph 1, point (a)) is out of scope |
+| Risk management system | Art. 9 | Out of scope (programme decision): management system of the organisation | — | The artefacts of Ch. 01, 03 and 12 serve as evidence |
+| Data and data governance | Art. 10 | Out of scope (programme decision): governance of training data and bias | — | [`DEP-011`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) and [`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) provide incidental evidence of provenance |
+| Technical documentation | Art. 11, Annex IV | Ch. 02, Ch. 04 (architecture + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM), Ch. 06, Policy 38 (mandate) | Declared gaps per point of Annex IV (see the [evidence map](./requisitos-aplicaveis#mapa-evidencia)); adequacy of the performance metrics (point 4) pending the AISVS/SAIF round | Map SbD-ToE artefacts (including mandate + AI BOM) to the Annex IV index; the drafting is the provider's |
+| Recording of events (logging) | Art. 12, Art. 19 | Ch. 12 (observability), [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (AI/ML), [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation* with `mandate_ref`), Ch. 12 US-13 (agentic telemetry), Policy 30 §9 | — (*model output* schema configurable per system, with the minimums of the floor entries CTX-AIA-RE-P01 to P03 and P11; records of biometric identification, Article 12(3): out of scope) | Document the inference schema per system |
+| Transparency to deployers | Art. 13 | Ch. 02, Ch. 04 (partial), Policy 38 (mandate as a structured source of *capabilities*, limitations and oversight) | Levels of accuracy and robustness in the instructions: declared gap, pending the AISVS/SAIF round of AppSec Core; intended purpose and description of the interface | Derive "instructions for use" from the mandate + Ch. 04/06 artefacts; the drafting is the provider's |
+| Human oversight | Art. 14 ⚡ | [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014) with the floor CTX-AIA-RE-P08 (any high-risk system); for agents, Ch. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, level classification, *kill-switch*, *intent declaration*), Ch. 04 [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval + architectural *kill-switch*), Policy 38 (mandate lifecycle) | — (Article 14(5), biometric identification: out of scope) | Oversight interface in any high-risk system (the concrete UX belongs to the product); *kill-switch*, *intent declaration* and OOB approval for agents |
+| Accuracy, robustness and cybersecurity | Art. 15 | Ch. 03 agentic playbook + MITRE ATLAS, Ch. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)+[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 (AI BOM), Ch. 10 §C5 (*eval suites*), Ch. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak* / *off-policy*) | Accuracy and robustness: declared gap, pending the AISVS/SAIF round of AppSec Core; redundancy and mitigation of bias in feedback loops (Article 15(4), partial) | Await the round; until then, record the metrics obtained as evidence, without presenting them as compliance |
+| Quality management system | Art. 17 | Out of scope (programme decision): management system of the organisation | — | The gates (Ch. 06, 07, 11, 14) and Policies 38/39 serve as evidence |
+| Supply chain | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (list of approved AI service vendors), Policy 39, Ch. 14 US-21 | Partial: the written agreement does not specify information, capabilities, technical access and assistance (Article 25(4)) | Review the clauses of Policy 33 §10 with the legal team |
+| Obligations of the *deployer* | Art. 26 | Policy 38 (mandate + ownership), Ch. 02 §A0–A4, Ch. 12 US-13 (logs under the *deployer*'s control) | Operation in accordance with the provider's instructions in acquired systems; overseers of non-agentic systems; relevance and representativeness of input data; informing the provider and suspending non-agentic systems | Extend the mandate with specific obligations when the organisation is a *deployer* |
+| Conformity and CE marking | Art. 43, 47–49 | — (DEP-014 records the conformity declared contractually by the AI service vendor; it is not the EU declaration of conformity of Art. 47, nor does it replace the conformity assessment and CE marking that fall to the provider of the system) | — (out of scope: conformity plane, in the hands of the provider) | Establish a GRC + legal swimlane for the assessment circuit |
+| GPAI and systemic risk | Art. 53, Art. 55 | Ch. 03 playbook + Ch. 05 (AI BOM), Ch. 10 §C5 (*eval suites* + *red teaming*), Ch. 12 US-13 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014), Policy 19 §7, Policy 30 §9 | Partial: model evaluation with standardised protocols and documented adversarial testing (Article 55(1)(a)) | Annexes XI/XII drafted by the model provider, with evidence from the Manual; *copyright* policy and summary of training data out of scope (legal plane) |
+| Post-market monitoring | Art. 72 | Ch. 12 (monitoring, *drift*), `OPS-011..014`, Ch. 12 US-13 + plan per system ([CTX-AIA-RE-R04](./requisitos-aplicaveis#acrescentos), integrated into Annex IV, point 9) | — | Apply R04 when the organisation is the provider |
+| Serious incidents | Art. 73 | Ch. 12, Ch. 14, [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*off-policy* → IR), Policy 30 §9.3, Policy 16 §11.4 (agentic-specific incidents), Policy 32 §4.1 and [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) (definition and deadlines) | Partial: not altering the system in a way that affects the analysis of causes without first informing the authority (Article 73(6)) | Configure SIEM/ITSM exporters for the notification |
+| Safeguards for realistic content generators | Article 5(1a) | `THR-008` and `ARC-014` with the floor entries CTX-AIA-RE-P09 and P10 (ART50 grade) | — (out of scope: judgement on the admissibility of the purpose, Article 5) | Threat model of the generated content, red-team and input and output filters |
+| Transparency for certain AI systems | Art. 50 | CTX-AIA-RE-R01 (inform) and R02 (mark synthetic content), ART50 grade | — (out of scope: text on matters of public interest, Article 50(4), second subparagraph) | Declare the ART50 grade on the application and verify the notice and the marking in testing |
+| Substantial modification | Article 43(4); Annex IV, point 2(f) | `ARC-009` with the floor CTX-AIA-RE-P11 | — | Classify and record each change; flag the substantial modification |
+| Explanation to affected persons | Article 26(11); Art. 86 | CTX-AIA-RE-R03 + `OPS-011` | — | Record, per decision, the outcome and the main elements that determined it |
+| Corrective actions and duty of information | Art. 20 | `DPL-005` (rollback), Policy 32 | Partial: withdrawal or recall of the system; informing distributors, deployers, the authorised representative and importers; joint investigation with the deployer | — |
+| Documentation keeping | Art. 16, point (d); Art. 18 | Policy 06 §10 | Partial: no 10-year period for the documentation of high-risk AI systems | — |
 
 ---
 
@@ -125,13 +155,13 @@ Art. 4, as worded by Regulation (EU) 2026/1744 (in force since 27 July 2026), pr
 - **Practical exercises** — *tabletops* of *off-policy action*, *red team* against an agent in a sandbox, *mandate* classification exercise (Policy 37 §11.2).
 - **Automatic activation** — when the organisation adopts AI agents at A1+, the agentic module of Policy 37 §11 becomes **mandatory** (instead of recommended).
 
-**Residual gaps**
+**Declared gap (partial)**
 
-**Formal literacy assessment** (tests, internal certifications, tracking of competence over time) is work for HR and the upskilling function. SbD-ToE defines the **minimum content** and the **cadence**, not the method of individual assessment.
+The Manual covers the technical roles of the SDLC and the use of AI as a tool or agent, but not the business staff who operate or use product AI systems on behalf of the organisation, nor the consideration of the context of use and of the persons targeted. Article 4 does not require any specific level of literacy to be reached; individual competence assessment, where the organisation wants it, is work for HR and the training and upskilling function.
 
 **How to comply**
 
-Policy 37 §11 can be operationalised directly. For organisations with heavy adoption of agents, it is suggested to complement it with periodic competence assessment and formal recording of track completions as evidence for Art. 4.
+Policy 37 §11 can be operationalised directly for the technical roles. Until the gap is closed in the Manual, the organisation includes on its own initiative the business staff who operate product AI systems and records the completions of the tracks as evidence for Art. 4.
 
 ---
 
@@ -159,13 +189,13 @@ Art. 9 requires a **continuous and iterative** risk management system throughout
 - Catalogue of security requirements and their measures (Ch. 02), including the agentic subset `REQ-AGN-001..004`.
 - Continuous reassessment, in a cycle, with operational metrics (Ch. 12), including agentic-specific signals (`OPS-011..014`).
 
-**Intentional gaps**
+**Out of scope**
 
-SbD-ToE threat modelling is, by construction, **domain-agnostic**: it covers security threats to the system, but does not prescribe the analysis of risks to **health, safety and fundamental rights** specific to the AI Act (e.g. risk of discrimination, societal impact). This dimension is specific to the AI Act and requires the involvement of domain, ethics and legal teams.
+The risk management system of Article 9 (health, safety and fundamental rights throughout the lifecycle) is a management system of the organisation and is outside the Manual's scope by programme decision. The threat model, classification and monitoring described above serve as evidence for it; the Manual does not prescribe the analysis of risks to health, safety and fundamental rights (e.g., risk of discrimination, societal impact).
 
 **How to comply**
 
-It is suggested to extend the Ch. 03 threat model with an AI risk taxonomy - using **MITRE ATLAS** for the adversarial vector and the **NIST AI RMF** / **ISO/IEC 23894** for the risk framing - and to link the iteration to the continuous improvement cycle of Ch. 12. The residual risk and the measures should be documented, maintaining the auditable record that Art. 9 presupposes.
+The organisation runs the risk management system within its own framework (e.g., **NIST AI RMF** or **ISO/IEC 23894**) and references as evidence the Ch. 03 threat model, which already uses **MITRE ATLAS** for the adversarial vector, and the Ch. 12 monitoring.
 
 ---
 
@@ -190,13 +220,17 @@ Art. 10 requires that the training data sets, validation data sets and testing d
 - **AI BOM per *build*** in a standardised format (CycloneDX 1.6 *ml-bom*) — operationalises the *AI-BOM* that was suggested in the first version of this cross-check (Policy 39, Ch. 05 US-14).
 - Data protection, classification and access control requirements (Ch. 02, Ch. 04).
 
-**Residual gaps**
+**Out of scope**
 
-**Statistical quality, representativeness and bias detection/mitigation** remain problems of **data science and of the application domain**, not of application security. SbD-ToE does not prescribe *fairness* metrics, *debiasing* techniques or representativeness criteria — rightly so, since they vary by use case and fall within the remit of the AI/data teams.
+The governance of training data and of validation and testing data (statistical quality, representativeness, detection and mitigation of bias) is outside the Manual's scope by programme decision: it is data science work. The Manual does not prescribe *fairness* metrics, *debiasing* techniques or representativeness criteria; the provenance and integrity of the data sets (`DEP-011`, `DEP-012`) provide incidental evidence for it.
+
+**Article 4a: partial coverage**
+
+The exceptional processing of special categories of personal data to correct bias (Article 4a) has partial coverage: there is encryption at rest, access control with logging, and a retention period with verifiable deletion (`ENC-002`, `ACC-001`, `ACC-003`, `LOG-001`, `PRI-002`). Missing are the technical limitations on the re-use of these data sets and their pseudonymisation, documentation per access and the duty of confidentiality of those who access them, the general prohibition on transmission to third parties, deletion as soon as the bias has been corrected and the recording of the justification of strict necessity. The judgement of necessity (paragraph 1, point (a)) is out of scope: it is a data science and data protection decision.
 
 **How to comply**
 
-The *AI-BOM* that was suggested in earlier versions of this document **is already implemented** ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), Policy 39, Ch. 05 US-14). What remains is to complement SbD-ToE with a data science *data governance* process — data lineage, *datasheets for datasets*, *data cards*, bias assessment — coordinated with the AI team.
+The *AI-BOM* that was suggested in earlier versions of this document **is already implemented** ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), Policy 39, Ch. 05 US-14). The governance of training data (data lineage, *datasheets for datasets*, *data cards*, bias assessment) follows the organisation's data science process, outside the Manual.
 
 ---
 
@@ -225,13 +259,13 @@ Art. 11 requires technical documentation drawn up **before** placing on the mark
 - **AI BOM** as an auditable artefact that materialises part of the list of components required by Annex IV, point 2(a) ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012), Policy 39).
 - The ***mandate*** of each AI agent as a traceable operational artefact (Policy 38) — it enters the Annex IV, point 2(b) index (development and design elements) whenever the system includes agents.
 
-**Intentional gaps**
+**Declared gaps and out of scope**
 
-SbD-ToE does not generate documentation **in the formal structure of Annex IV** nor a normalised **model card**. Organising the artefacts according to the regulatory index is mapping work, not new technical production.
+SbD-ToE does not generate the documentation **in the formal structure of Annex IV** nor a standardised **model card**: the drafting is the provider's, and the Manual provides the engineering evidence. The [evidence map](./requisitos-aplicaveis#mapa-evidencia) on the generated page links each point of Annex IV to the artefacts and lists the gaps per point. The adequacy of the performance metrics (Annex IV, point 4) is a declared gap, pending the AISVS/SAIF round of AppSec Core. Points 2(d) and 5 refer to Articles 10 and 9, which are out of scope, as are the list of applied standards and the EU declaration (points 7 and 8). The monitoring plan (point 9) and the pre-determined changes (point 2(f)) are covered by CTX-AIA-RE-R04 and by the floor CTX-AIA-RE-P11.
 
 **How to comply**
 
-It is suggested to build an "Annex IV index" pointing to the existing SbD-ToE artefacts (architecture, requirements, threat model, pipeline and testing evidence), complemented by a *model card* (purpose, training data, performance metrics, limitations) under the responsibility of the AI team.
+It is suggested to build an "Annex IV index" pointing to the existing SbD-ToE artefacts (architecture, requirements, threat model, pipeline and test evidence), complemented by a *model card* (purpose, training data, performance metrics, limitations) drafted by the provider; the performance metrics do not yet have a criterion in the Manual (AISVS/SAIF round).
 
 ---
 
@@ -257,10 +291,11 @@ Art. 12 requires the capability for **automatic recording of events** (logs) thr
 - **Full audit per *tool invocation*** when AI agents are present ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — each call generates an event with `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redacted), `intent_event_ref`, `outcome`, `external_effect`. Granular in a **complementary** (operational) dimension to the recording of inference events that each system must define to comply with Art. 12 — it does not replace it.
 - Auditable trail and event correlation, with guidance on retention and immutability (Ch. 12).
 - **Agentic operational telemetry** (Ch. 12 US-13) that underpins the evidence base for Art. 72 (post-market monitoring) and Art. 73 (serious incidents).
+- **Floor entries of context CTX-AIA-RE**: in high-risk systems, and at any level, AI/ML observability (`OPS-011`, floor P01), audit per *tool invocation* when there are agents (`OPS-012`, floor P02) and retention of logs for at least six months, with no exception below the legal floor (`OPS-003`, floor P03).
 
-**Residual gaps**
+**Configuration per system and out of scope**
 
-The *model output* schema (model version, relevant *features*, decision, confidence) remains **configurable per system** — it depends on the use case and on the balance with personal data protection. Ch. 12 fixes the *operational* schema (who invoked, under which mandate, on which resource); the *epistemic* schema (why this output) is declared per system.
+The *model output* schema (model version, relevant *features*, decision, confidence) remains **configurable per system**, with two minimums: the record that makes it possible to identify substantial modifications (floor CTX-AIA-RE-P11) and, when an Annex III system supports decisions about people, the outcome and the main elements of each decision (CTX-AIA-RE-R03). Ch. 12 fixes the *operational* schema (who invoked, under which mandate, on which resource); the *epistemic* schema (why this output) is declared per system. The records specific to biometric identification (Article 12(3)) are out of scope.
 
 **How to comply**
 
@@ -287,19 +322,19 @@ Art. 13 requires high-risk AI systems to be sufficiently transparent to enable d
 - Documentary basis of requirements and architecture that feeds part of the instructions for use (Ch. 02, Ch. 04).
 - The ***mandate*** (Policy 38) as a **structured source** of *capabilities*, *scope*, *autonomy_level*, *risk_residual* and oversight procedures — directly extractable into the *deployer*'s "instructions for use".
 
-**Residual gaps**
+**Declared gaps**
 
-**Performance metrics** (accuracy, precision, *recall*) and **levels of accuracy** continue to depend on the specific model and domain — to be declared by the AI team. SbD-ToE does not replace that work, but it has materially reduced what remains to be produced for the instructions for use.
+The declaration of the levels of accuracy and robustness in the instructions for use (Article 13(3)(b)(ii)) is a declared gap, pending the AISVS/SAIF round of AppSec Core. The matrix also declares the intended purpose and the description of the interface as gaps. The drafting of the instructions is the provider's; the Manual provides the evidence, and the interpretation of the output is supported by the minimum oversight of `ARC-014` (floor CTX-AIA-RE-P08).
 
 **How to comply**
 
-It is suggested to derive an "instructions for use" document from the ***mandate*** (Policy 38), from the artefacts of Ch. 04 (architecture, trust boundaries) and Ch. 06, complemented by the performance metrics and limitations provided by the AI team.
+It is suggested to derive an "instructions for use" document from the ***mandate*** (Policy 38) and from the artefacts of Ch. 04 (architecture, trust boundaries) and Ch. 06, complemented by the performance metrics and limitations that the provider declares; until the AISVS/SAIF round, those metrics have no criterion in the Manual.
 
 ---
 
 ### Article 14 - Human oversight {#artigo-14---supervisão-humana}
 
-> ⚡ **Refresh 2026-05-30.** The first version of this cross-check treated Art. 14 as largely outside AppSec ("the design of oversight mechanisms is an AI/product problem"). With the agentic layer introduced in 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — the **interruption (*stop/override*) and governance facet** became covered. **Oversight-as-understanding** (human judgement and the intervention UX) remains the domain of the AI/product team; the architectural *how* and the governance *when* already live in the manual.
+> ⚡ **Refresh 2026-09-27.** The first version of this cross-check treated Art. 14 as largely outside AppSec. With the agentic layer — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — and the floor CTX-AIA-RE-P08, paragraphs 1 to 4 of Art. 14 are **covered** for any high-risk system, with or without agents. The oversight interface is a requirement of the Manual; the concrete design of the UX that meets it belongs to the product.
 
 **Normative content**
 
@@ -309,11 +344,12 @@ Art. 14 requires high-risk AI systems to be designed to enable **effective human
 
 | AI Act requirement | SbD-ToE chapter | Coverage |
 |---|---|---|
+| Oversight interface in any high-risk system | [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014) + floor CTX-AIA-RE-P08 | Understand capabilities and limitations, detect anomalies, interpret the output, decide not to use it or override it, stop the system; warning to those who oversee about automation bias |
 | Define a proportionate oversight level | Ch. 02 §A0–A4 + [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | Five autonomy levels (A0 read-only → A4 autonomous); classification per context |
 | Operational mandate with declared oversight | Policy 38 (mandate) + [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | *Owner*, *approver*, `review_cadence`, *kill-switch*, *intent audit sink* |
 | Architectural interruption capability (*stop*) | [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) + [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*kill-switch*) | Credential revocation + *runtime* termination + *namespace* isolation + on-call alert, within seconds |
 | Conscious override of a destructive action | [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) (*intent declaration*) + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval) | The agent declares its intent before a destructive *tool call*; *out-of-band* human approval required at A2+ |
-| Periodic exercise of the *stop* | Policy 38 + Policy 18 §9.3 | *Kill-switch* exercised in sandbox/staging (annually at A2, quarterly at A3, monthly at A4) with the timing recorded |
+| Periodic exercise of the *stop* | Policy 38 + Policy 18 §9.3 | *Kill-switch* exercised in sandbox/staging (annual at A2, quarterly at A3, monthly at A4: the Manual's cadences) with a recorded timer |
 | Audit of *off-policy actions* | [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 30 §9.3 + Policy 16 §11.4 | Divergence between the declared `intent` and the actual action generates an actionable alert + enters IR |
 
 **What SbD-ToE covers**
@@ -324,19 +360,21 @@ Art. 14 requires high-risk AI systems to be designed to enable **effective human
 - ***Intent declaration*** ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) — at A2+, before each destructive *tool call* the agent declares to the infrastructure *what it is going to do and why*; the gate cross-checks intent against the actual action a posteriori ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)).
 - ***Out-of-band* human approval** — outside the agent's channel (Slack, GitHub review, signed webhook), so that *prompt injection* in the main channel cannot "self-approve".
 
-**Residual gaps**
+**Systems without agents and out of scope**
 
-The **UX of the human decision** (how the user interprets the output and decides to intervene) and the specification of the **cognitive oversight points** (when the system should ask for confirmation, what information to show) remain outside the AppSec scope — they are AI system design and human factors. SbD-ToE ensures that interruption is **implementable, exercised, audited and required by governance**; it does not design the oversight interface.
+Policy 38 and `REQ-AGN` apply to agents with tool use. For high-risk systems without agents, the floor CTX-AIA-RE-P08 elevates `ARC-014` at any level: the oversight interface makes it possible to understand the capabilities and limitations of the system, detect anomalies, interpret the output, decide not to use it or override it and stop the system, and those who oversee are warned about automation bias. In the coverage matrix, paragraphs 1 to 4 of Art. 14 are covered. The concrete design of the UX (what information to show, when to ask for confirmation) belongs to the product; the requirement that this UX must meet belongs to the Manual.
+
+Verification by two persons before a decision based on biometric identification (Article 14(5)) is out of scope, along with the other specifics of those systems.
 
 **How to comply**
 
-Most of the technical work is now within the manual: declare the A0–A4 level in the *mandate* (Policy 38), instrument an exercised *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) and *intent declaration* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) in accordance with [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), and configure [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) to detect divergence. The AI/product team complements this with the UX of intervention and the cognitive points of oversight. For high-risk AI systems with an agentic component, US-15 (Ch. 02) + US-16 (Ch. 04) form the operational checklist.
+Most of the technical work is now inside the manual: declare the A0–A4 level in the *mandate* (Policy 38), instrument an exercised *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) and *intent declaration* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) in line with [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), and configure [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) to detect divergence. For systems without agents, `ARC-014` applies with the scope of the floor P08, and the product team designs the UX that meets it. For high-risk AI systems with an agentic component, US-15 (Ch. 02) + US-16 (Ch. 04) make up the operational checklist.
 
 ---
 
 ### Article 15 - Accuracy, robustness and cybersecurity {#artigo-15---exatidão-robustez-e-cibersegurança}
 
-> 🎯 **Core of the cross-check.** It is in Art. 15 that SbD-ToE offers the strongest and most direct coverage. The cybersecurity of AI systems is, to a large extent, the central discipline of the manual applied to a new type of artefact (ML models and pipelines).
+> 🎯 **Core of the cross-check.** It is in the cybersecurity of Art. 15 that SbD-ToE offers its strongest and most direct coverage. The cybersecurity of AI systems is, to a large extent, the manual's central discipline applied to a new type of artefact (ML models and pipelines). The accuracy and robustness required by the same Article are pending a future round.
 
 **Normative content**
 
@@ -362,13 +400,13 @@ Art. 15 requires high-risk AI systems to achieve an appropriate level of **accur
 - **Runtime monitoring** (Ch. 12 + `OPS-011..014`): anomaly detection, *model drift*, *audit per tool invocation* ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)), *budget / runaway* ([`OPS-013`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-013)), *jailbreak* / *off-policy actions* ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)).
 - **Runtime hardening** (Ch. 09 + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)): isolation of the inference service in containers; AI agent with ephemeral OIDC *workload identity* + minimum *scope* per *tool*.
 
-**Intentional gaps**
+**Declared gap**
 
-SbD-ToE does not set **accuracy metrics** or regulatory performance thresholds (they are specific to the model and the use case). In the base version, it does not prescribe concrete adversarial techniques (*adversarial training*, ML-specific *input sanitisation*, LLM *output filtering*) - these are domain additions that the manual frames but does not impose, in order to preserve universality.
+Accuracy and robustness (levels, parameters and metrics; Article 15(1) and (3)) are a declared gap, pending the AISVS/SAIF round of AppSec Core. The cybersecurity of Article 15(5) is covered. Of paragraph 4, *fallback*, *fail-secure* and fail-closed output validation are in place; missing are redundancy and fail-safe plans for performance, and the mitigation of bias in feedback loops of systems that continue to learn. *Adversarial training* is not prescribed in the base version; content-safety filters on input and output are required for realistic content generators (floor CTX-AIA-RE-P10).
 
 **How to comply**
 
-It is suggested to: (1) extend the threat model (Ch. 03) with **MITRE ATLAS** and the **OWASP ML/LLM Top 10**; (2) add **adversarial robustness tests** and an **AI red teaming** programme to the test catalogue (Ch. 10); (3) treat the provenance of data and models as a critical supply chain (Ch. 05); (4) configure monitoring (Ch. 12) for *drift* and attack patterns; (5) declare the accuracy metrics obtained and the acceptable thresholds, in coordination with the AI team.
+It is suggested to: (1) extend the threat model (Ch. 03) with **MITRE ATLAS** and the **OWASP ML/LLM Top 10**; (2) add **adversarial robustness tests** and an **AI red teaming** programme to the test catalogue (Ch. 10); (3) treat data and model provenance as a critical supply chain (Ch. 05); (4) configure monitoring (Ch. 12) for *drift* and attack patterns; (5) record the accuracy metrics obtained as evidence, without presenting them as compliance, until the AISVS/SAIF round.
 
 ---
 
@@ -393,16 +431,16 @@ Art. 17 requires providers of high-risk AI systems to have a documented quality 
 - Development and pipeline procedures with auditable gates (Ch. 06, Ch. 07), including AI agents as *principals* (US-19).
 - Technical quality control and pre-release validation (Ch. 10, Ch. 11), including continuous *eval suites* for agents (§C5).
 - Governance structure, roles and approvals (Ch. 14).
-- **Formal governance lifecycle for AI agents** (Policy 38) — *mandate* with proposal → assessment → approval → activation → operation → review / revocation. Directly mappable to the elements of the QMS in Article 17(1) (in particular points (f), (j) and (k): data management, handling of communication, record-keeping).
+- **Formal governance lifecycle for AI agents** (Policy 38) — *mandate* with proposal → assessment → approval → activation → operation → review / revocation. It serves as evidence for elements of the QMS in Article 17(1) (e.g., the record-keeping of point (k)).
 - **Formal lifecycle for the AI *supply chain*** (Policy 39) — AI BOM format, *pinning*, approved list of AI service vendors, response to *upstream* incidents by class.
 
-**Intentional gaps**
+**Out of scope**
 
-SbD-ToE provides the **operational components** of a technical QMS, but not its **formal and documentary structure** as required by Art. 17 (written procedures, management responsibilities, quality manual). This formalisation is documentary organisation work.
+The quality management system of Article 17 is a management system of the organisation and is outside the Manual's scope by programme decision. The components described above serve as evidence for it: the matrix records them as engineering evidence for design, development, reporting of serious incidents, record-keeping and accountability (Article 17(1), points (b), (c), (i), (k) and (m)).
 
 **How to comply**
 
-It is suggested to map the SbD-ToE gates and processes (Ch. 06/07/10/11/14) to the elements of Art. 17, producing a QMS document that references these controls as evidence - reusing, where applicable, an existing **ISO/IEC 42001** system.
+An organisation that has to maintain the QMS can reference the SbD-ToE gates and processes (Ch. 06/07/10/11/14) as evidence, re-using, where applicable, an existing **ISO/IEC 42001** system.
 
 ---
 
@@ -429,13 +467,13 @@ Art. 25 (amended by Regulation (EU) 2026/1744) deals with responsibilities along
 - **Response to *upstream* incidents** by class — `AML.T0019` *Publish Poisoned Datasets*, `AML.T0109` *AI Supply Chain Rug Pull*, `AML.T0110` *AI Agent Tool Poisoning*, *provider outage* — with specific *runbooks*.
 - **Reclassification on material change** — Ch. 03 US-11 and Ch. 04 US-16 require a review of the *threat model* and of the architecture when the AI service vendor changes the model's major version or when the `tools_allowlist` changes.
 
-**Residual gaps**
+**Declared gap (partial)**
 
-The **legal contractual definition** of responsibilities along the chain (who answers for what in the event of an incident, allocation of the SLA for notification to authorities) remains within the Legal scope — SbD-ToE provides the technical and operational structure, not the legal drafting.
+The clauses of Policy 33 §10 do not yet specify the information, capabilities, technical access and assistance that Article 25(4) requires in the written agreement. The qualification of who becomes a provider (paragraph 1) is out of scope: it is a legal qualification. The legal drafting of responsibilities along the chain belongs to the legal team; SbD-ToE provides the technical and operational structure.
 
 **How to comply**
 
-Operationally, it is already implemented (Policy 39 + `DEP-013/014` + Ch. 14 US-21). What remains is coordination with Legal to ensure that the contractual clauses aligned with Policy 33 §10 also satisfy the requirements of Art. 25 — in particular for systems in which the organisation is simultaneously *provider* and *deployer*.
+The operational basis exists (Policy 39 + `DEP-013/014` + Ch. 14 US-21). What remains is to complete the clauses with the content of Article 25(4), in coordination with the legal team — in particular for systems in which the organisation is both *provider* and *deployer*.
 
 ---
 
@@ -457,12 +495,14 @@ Art. 26 sets out specific obligations for deployers of high-risk AI systems: use
 
 **What SbD-ToE covers**
 
-- **Mandate as a *deployer* artefact** (Policy 38) — when the organisation operates (rather than supplies) a high-risk AI system, the *mandate* is the formal evidence of "how this system is used, under what oversight, with what *kill-switch*". Directly extractable for an Art. 26 audit.
+- **Mandate as a *deployer* artefact** (Policy 38) — when the organisation operates (rather than supplies) a high-risk AI system, the *mandate* is the formal evidence of "how this system is used, under what oversight, with which *kill-switch*". Directly extractable for an Art. 26 audit.
 - **Composite function for qualified oversight** (Ch. 00 *AI Reliability Engineer* note) — `appsec` + `devops` + `grc` under the mandate of the `CISO`, with mandatory literacy (Policy 37 §11).
 - **Operational monitoring** (Ch. 12 US-13, `OPS-011..014`) — logs and signals under the *deployer*'s control, kept in accordance with policy (`OPS-003`).
 - **Incident response** linked to notification to authorities (Ch. 12 + Policy 30 §9.3 + Policy 32) — *off-policy actions* and *jailbreak* in production enter the IR flow that feeds Art. 73.
 
-**Residual gaps**
+**Declared gaps**
+
+The matrix declares: operating acquired AI systems in accordance with the provider's instructions for use (paragraph 1, partial); competence, authority and support of those who oversee non-agentic systems on the deployer's side (paragraph 2, partial); relevance and representativeness of input data for the purpose (paragraph 4, gap); informing the provider and suspending non-agentic systems when there is a risk (paragraph 5, partial). Covered are the keeping of logs (paragraph 6, floor CTX-AIA-RE-P03) and informing affected persons (paragraph 11, CTX-AIA-RE-R03). Informing and consulting workers (paragraph 7) is out of scope: it is a matter of labour law.
 
 When the organisation is simultaneously provider (*provider*) and deployer (*deployer*) (a common case in *first-party* development), the separation of obligations between the two roles becomes blurred — it is advisable to clarify internally (and contractually when there are sub-deployers) which role is assumed in each use.
 
@@ -496,13 +536,13 @@ Art. 72 requires providers to establish and document a proportionate post-market
 - Detection of performance degradation and *model drift* (Ch. 12, [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)).
 - **Feedback cycle for *eval suites*** (Ch. 10 §C5) — incidents detected in production feed the offline suite, strengthening future regression.
 
-**Intentional gaps**
+**Coverage by the regime**
 
-SbD-ToE does not define the **formal post-market monitoring plan** with the structure of Art. 72, nor the specific AI performance indicators to be reported to the authority.
+When the organisation is the provider, the monitoring plan per system is a requirement added by the regime ([CTX-AIA-RE-R04](./requisitos-aplicaveis#acrescentos)): it forms part of the technical documentation (Annex IV, point 9) and names the signals collected in production (`OPS-011`) and those supplied by deployers, the performance criteria, the cadence and owner of the analysis, and the triggers for corrective action. The model drift metrics remain pending the AISVS/SAIF round of AppSec Core.
 
 **How to comply**
 
-It is suggested to formalise a post-market monitoring plan built on the observability of Ch. 12, with *dashboards* for performance, *drift* and vulnerability status, and reassessment triggers that feed the Art. 9 cycle.
+Apply R04 on top of the Ch. 12 observability, with *dashboards* for performance, *drift* and vulnerability status, and triggers that set off rollback, reclassification, review of the threat model or notification of a serious incident.
 
 ---
 
@@ -521,6 +561,7 @@ Art. 73 requires providers to report **serious incidents** to the market surveil
 | Response to *upstream* incidents | Policy 39 §7 | *Rug pull*, *dataset poisoning*, *tool poisoning*, *provider outage* |
 | Escalation and responsibilities | Ch. 14 + Policy 38 | Roles and responsibilities; *owner* + *approver* declared in the *mandate* |
 | Severity classification | Ch. 01, Ch. 12 | Impact criteria, classification |
+| Definition and notification deadlines | Policy 32 §4.1 and [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Definition of serious incident and the deadlines of Article 73 |
 
 **What SbD-ToE covers**
 
@@ -530,13 +571,13 @@ Art. 73 requires providers to report **serious incidents** to the market surveil
 - Escalation roles and responsibilities (Ch. 14, Policy 38).
 - Impact criteria that support severity classification (Ch. 01, Ch. 12).
 
-**Intentional gaps**
+**Declared gap (partial)**
 
-SbD-ToE does not reproduce the AI Act **definition of "serious incident"** (Article 3, point (49)), nor submission templates or the circuit to the market surveillance authority; as with NIS2 and DORA, these fields are left configurable. The time limits, by contrast, are not configurable: they are those of Article 73 (15 days / 10 days / 2 days, counted from awareness).
+The definition of serious incident and the deadlines are in Policy 32 (§4.1 and §6), and the matrix records Article 73(1) to (5) as covered. The deadlines are those of Article 73 (15 days / 10 days / 2 days, counted from awareness). Missing is the rule of not altering the system, in a way that affects the analysis of causes, without first informing the authority (Article 73(6)): the IRP favours containment “where possible”.
 
 **How to comply**
 
-It is suggested to parameterise the Ch. 12 runbook and incident schema with the typology and deadlines of Art. 73, and to configure the SIEM/ITSM exporters to generate the notification ready for submission to the market surveillance authority.
+Configure the Ch. 12 incident schema and the SIEM/ITSM exporters to produce the notification provided for in Policy 32 §6, and add to the runbook the prior informing of the authority before any change to the system that affects the analysis of causes.
 
 ---
 
@@ -558,15 +599,15 @@ Art. 53 requires providers of **general-purpose AI models** (GPAI) to provide te
 
 **What SbD-ToE covers**
 
-- **Continuous AI red teaming** materialised (Ch. 10 §C5 + Policy 19 §7) — not merely as a recommendation. *Eval suites* include an *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*) with the cadence required at A4 (monthly).
+- **Continuous AI red teaming** made concrete (Ch. 10 §C5 + Policy 19 §7) — not merely as a recommendation. *Eval suites* include an *abuse corpus* (LLM01-2025 *prompt injection*, LLM06-2025 *excessive agency*) with a monthly cadence at A4 (the Manual's choice).
 - **Cybersecurity of the infrastructure** that serves the model (Ch. 04 incl. [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Ch. 08, Ch. 09).
 - **Integrity and access protection** for weights, *checkpoints* and *datasets* — now with an auditable AI BOM and required *pinning* (`DEP-012/013`, Policy 39). Response to `AML.T0109` *Supply Chain Rug Pull* documented in Policy 39 §7.
 - **Monitoring and response** (Ch. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014)) — active detection of *jailbreak* (LLM01-2025) and *off-policy actions* in production; detection corpus updated according to the cadence of the *mandate*.
 - **Contractual compliance declared by GPAI service vendors** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014), Ch. 14 US-21, Policy 33 §10) — required in the AI service vendor approval process.
 
-**Intentional gaps**
+**Declared gaps and out of scope**
 
-SbD-ToE does not prescribe the **GPAI technical documentation** (Annex XI/XII), the **copyright policy** or the **summary of the training data** - these are domain and legal obligations. The assessment of **systemic risks** (high-impact capabilities at scale) is likewise external to AppSec.
+The documentation of Annexes XI and XII draws on evidence from the Manual (AI BOM, *eval suites*), but its drafting is the model provider's; the Manual is written from the side of those who consume the model. Model evaluation with standardised protocols and documented adversarial testing at model level (Article 55(1)(a)) has partial coverage. The reporting of serious incidents and the cybersecurity of the model and of the infrastructure (Article 55(1)(c) and (d)) are covered. The copyright policy and the summary of the training content (Article 53(1)(c) and (d)) are out of scope: they belong to the legal plane. The assessment of systemic risks at Union level (Article 55(1)(b)) belongs to the AI domain; the adversarial threat model provides evidence for it.
 
 **How to comply**
 
@@ -582,15 +623,17 @@ Art. 5 prohibits a set of practices (e.g. harmful subliminal manipulation, socia
 
 **SbD-ToE coverage**
 
-Both articles are **essentially legal and product-design in nature**, outside the technical-AppSec scope of SbD-ToE.
+Art. 50 is **covered** by two requirements added by the regime, declared with the ART50 grade of context CTX-AIA-RE (which can also be declared on its own, for systems that are not high-risk): informing people that they are interacting with an AI system or that they are exposed to emotion recognition or biometric categorisation, and disclosing deep fakes (CTX-AIA-RE-R01); and marking synthetic content in a machine-readable format, with the marking verified in testing (CTX-AIA-RE-R02).
 
-**Intentional gaps (by design)**
+For points (ba) and (bb) of Article 5(1), placing on the market a system whose intended purpose is not that generation is prohibited only if, among other conditions, the system does not have “reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation” (Article 5(1a)(a)(ii)). Those safeguards are **covered** by the floor entries CTX-AIA-RE-P09 (threat model of the misuse of generated content, assessed with red-team and content-safety tests) and P10 (content-safety filters and classifiers on input and output), without replacing the legal qualification.
 
-SbD-ToE does not determine the admissibility of a purpose (Art. 5) nor design the user disclosure mechanisms (Art. 50). Note, however, that for points (ba) and (bb) placing on the market a system whose intended purpose is not such generation is only prohibited if, among other conditions, the system does not have «reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation» (Article 5(1a), point (a)(ii)) — a point where technical evidence (threat model, *eval suites*, *output* filters) is relevant, without replacing the legal qualification. Technically, it can support **content provenance marking** (e.g. *watermarking*/content credentials) when that product decision is taken.
+**Out of scope**
+
+The judgement on the admissibility of a purpose (Art. 5) is a legal and product qualification and is out of scope; for points (a), (b) and (e) of paragraph 1, the Manual provides evidence (Ch. 02 US-17, `DEP-011`). Also out of scope is the disclosure of AI-generated text published on matters of public interest (Article 50(4), second subparagraph): it is an editorial decision of the deployer.
 
 **How to comply**
 
-The determination of prohibitions and the transparency duties must be led by legal and product. SbD-ToE comes in only for the **reliable technical implementation** of the chosen mechanisms (integrity of the marking, auditable record).
+Declare the ART50 grade on the application when the system is covered by Art. 50 and apply requirements R01 and R02 and, in generators of realistic images, video or audio, the floor entries P09 and P10. The determination of prohibitions and the legal qualification of the transparency duties remain with the legal and product teams.
 
 ---
 
@@ -600,14 +643,14 @@ The determination of prohibitions and the transparency duties must be led by leg
 
 The AI Act calls for AI systems that are **safe, robust, documented and open to oversight**, with the provider responsible throughout the entire lifecycle. SbD-ToE offers the **technical-operational core** of that effort: technical risk management (Ch. 01, 03), defensive architecture (Ch. 04), integrity of the data and model supply chain (Ch. 05), pipelines and quality gates (Ch. 06, 07, 11), testing and adversarial robustness (Ch. 10), logging and post-market monitoring (Ch. 12) and governance (Ch. 14).
 
-The **strongest and most direct** coverage is in **Art. 15** (accuracy, robustness, cybersecurity) and its operational correlates (Art. 12 logging, Art. 72 post-market monitoring, Art. 73 incidents, Art. 17 QMS) - this is where the technical evidence of SbD-ToE is most directly reusable — without this amounting to compliance with the AI Act, which requires all the requirements of Section 2 and the conformity assessment.
+The **strongest and most direct** coverage lies in the **cybersecurity of Art. 15** and its operational correlates (Art. 12 and 19 record-keeping, Art. 14 human oversight, Art. 50 transparency, Art. 72 post-market monitoring, Art. 73 incidents) - this is where the technical evidence of SbD-ToE is most directly reusable — without this amounting to compliance with the AI Act, which requires all the requirements of Section 2 and the conformity assessment.
 
-The gaps observed **are not flaws in the model**, but **deliberate abstentions**: dimensions specific to the AI domain (data governance/bias, statistical accuracy, human oversight, transparency) and legal dimensions (risk classification, FRIA, conformity assessment, CE marking, prohibited practices). These require data science, ethics, product, legal and compliance teams - SbD-ToE provides them with the technical evidence, not the conformity judgement.
+The matrix separates three answers. **Covered:** cybersecurity, record-keeping, human oversight, the transparency of Article 50, substantial modification, explanation to affected persons, post-market monitoring, serious incidents and the declaration of high-risk status as the application's context. **Declared gap:** accuracy and robustness (pending the AISVS/SAIF round of AppSec Core) and the specific gaps listed per Article. **Out of scope, with a reason:** risk management (Article 9), governance of training data (Article 10), quality management (Article 17), the specifics of biometric identification, conformity assessment, CE marking, the EU declaration and the judgement on prohibited practices. In these, SbD-ToE provides technical evidence to the teams responsible, not the conformity judgement.
 
 The result is consistent with the philosophy of the manual:
 
 - **Today**, SbD-ToE makes it possible to build and operate the software of an AI system with security by design.
-- **Tomorrow**, when the organisation has to comply with the AI Act, connect the details - extend the threat model to the adversarial vector (ATLAS), formalise the QMS (Art. 17), parameterise incidents (Art. 73) and post-market monitoring (Art. 72), and coordinate with the domain teams on the data, oversight and transparency dimensions.
+- **Tomorrow**, when the organisation has to comply with the AI Act, it declares context CTX-AIA-RE on the application, applies the floor entries and requirements that it elevates, and works out with the teams responsible what is out of scope.
 
 ### Scope, roles and penalties {#âmbito-papéis-e-sanções}
 
@@ -652,6 +695,6 @@ Ch. 14 (Governance and Contracting) of SbD-ToE provides the necessary artefacts:
 
 ---
 
-**Version:** 1.0
-**Date:** May 2026
-**Next review:** November 2026
+**Version:** 1.1
+**Date:** September 2026
+**Next review:** with the next revision of the AI Act coverage matrix

@@ -211,14 +211,14 @@ A configuração do gate deve ser feita pelo DevOps/SRE, em coordenação com Ap
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
-| Baseline de arquitetura documentada | Recomendado | Obrigatório | Obrigatório |
+| Baseline de arquitetura documentada | Obrigatório | Obrigatório | Obrigatório |
 | `solution-architecture.md` aprovado | Recomendado | Obrigatório | Obrigatório |
 | ADR para decisões com impacto de segurança | Opcional | Obrigatório | Obrigatório |
-| Inventário de trust boundaries | Recomendado | Obrigatório | Obrigatório |
+| Inventário de trust boundaries | Obrigatório | Obrigatório | Obrigatório |
 | `integration-review.md` por nova integração | Recomendado | Obrigatório | Obrigatório |
 | Revisão independente | Não aplicável | Recomendado | Obrigatório |
 | Gate de consistência no pipeline CI/CD | Não aplicável | Recomendado | Obrigatório |
-| Catálogo de padrões reutilizável | Opcional | Recomendado | Obrigatório |
+| Catálogo de padrões reutilizável | Opcional | Obrigatório | Obrigatório |
 
 ---
 

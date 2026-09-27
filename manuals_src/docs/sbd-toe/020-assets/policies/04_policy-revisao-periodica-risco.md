@@ -36,7 +36,7 @@ Aplicações em processo de descomissionamento mantêm a obrigação de revisão
 
 | Nível | Cadência mínima | Obrigatoriedade |
 |---|---|---|
-| L1 | Anual (12 meses) | Recomendado |
+| L1 | Anual (12 meses) | Obrigatório |
 | L2 | Semestral (6 meses) | Obrigatório |
 | L3 | Trimestral (3 meses) | Obrigatório |
 

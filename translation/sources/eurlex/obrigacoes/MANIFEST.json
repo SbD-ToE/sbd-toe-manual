@@ -1,0 +1,44 @@
+{
+ "purpose": "Texto oficial sic (PT) das obrigações dos 6 actos do cross-check normativo, com id estável por obrigação. Referenciado pelas matrizes de cobertura em manuals_src/docs/sbd-toe/002-cross-check-normativo/_matriz/<acto>.yaml (fonte_obrigacoes.sha256).",
+ "origin": "sbd-ai-runtime/handover/em-curso/2026-09-27-cobertura-cross-check/ (obrigacoes-cra.json, obrigacoes-dora.json, obrigacoes-aiact.json copiados sem alteração; obrigacoes-nis2-rgpd-csa.json dividido por acto sem alterar o conteúdo das obrigações)",
+ "retrieved_by": "Manual agent, 2026-09-27",
+ "verified": "Cada fragmento de texto_oficial_pt confere por correspondência exata (espaços normalizados, marcadores ▼ removidos) com os textos EUR-Lex PT desta pasta e de secondary/.",
+ "files": [
+  {
+   "file": "cra.json",
+   "acto": "CRA",
+   "obrigacoes": 237,
+   "sha256": "3c1488fe4a89b1da0421ff9aceddd71ea214ac1d417839569434432edc594b86"
+  },
+  {
+   "file": "dora.json",
+   "acto": "DORA",
+   "obrigacoes": 639,
+   "sha256": "9f24dbc4799492f23e756d7efc9ac9abf47110150ff720e3977749727289acfb"
+  },
+  {
+   "file": "nis2.json",
+   "acto": "NIS2",
+   "obrigacoes": 228,
+   "sha256": "dc5aef8126e965e7c29c04b6c6d6cfc75978ef71baec9bf5dda7e74fac1f780a"
+  },
+  {
+   "file": "aiact.json",
+   "acto": "AI Act (consolidado 27.7.2026)",
+   "obrigacoes": 260,
+   "sha256": "35b2c7d25cf4a27a0c1fe5bdb06c797dd64a29cff7a3d722c355fb1a131485ef"
+  },
+  {
+   "file": "rgpd.json",
+   "acto": "RGPD",
+   "obrigacoes": 120,
+   "sha256": "470b1d6918733699fb7d0383f95d84d5e3fdf2be2261f57492ef622c334c10fb"
+  },
+  {
+   "file": "csa.json",
+   "acto": "CSA",
+   "obrigacoes": 99,
+   "sha256": "e73769d755cb410e89bb3cde476e77fb3126704e77596f498ebf7bc64be8ed26"
+  }
+ ]
+}

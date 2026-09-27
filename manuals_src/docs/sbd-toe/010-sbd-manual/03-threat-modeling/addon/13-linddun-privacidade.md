@@ -1,8 +1,8 @@
 ---
 id: linddun-privacidade
 title: LINDDUN — Threat Modeling de Privacidade
-description: Metodologia LINDDUN para threat modeling de privacidade — as sete categorias de ameaça, mapeamento a data flow diagrams e aplicação a sistemas L3 e a dados pessoais ou regulados. Complementa o threat modeling de segurança (STRIDE); não substitui a avaliação legal de conformidade.
-tags: [LINDDUN, privacidade, threat-modeling, RGPD, DPIA, dados-pessoais, DFD, KU-Leuven, L3]
+description: Metodologia LINDDUN para threat modeling de privacidade — as sete categorias de ameaça, mapeamento a data flow diagrams e aplicação a qualquer sistema com dados pessoais ou regulados, em todos os níveis. Complementa o threat modeling de segurança (STRIDE); não substitui a avaliação legal de conformidade.
+tags: [LINDDUN, privacidade, threat-modeling, RGPD, DPIA, dados-pessoais, DFD, KU-Leuven, L1, L2, L3]
 sidebar_position: 13
 ---
 
@@ -16,7 +16,7 @@ O threat modeling de segurança (STRIDE) protege o sistema contra um adversário
 
 O manual já inclui um [exemplo aplicado de LINDDUN](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade-lindunn). Este addon fornece o **método** que o sustenta, para que possa ser aplicado a qualquer sistema, e não apenas seguido como exemplo.
 
-Aplicabilidade: **L3**, e qualquer sistema que processe **dados pessoais ou regulados**, independentemente do nível. Onde existe obrigação de *Data Protection Impact Assessment* (DPIA) sob o RGPD, o LINDDUN é o instrumento que estrutura a sua componente técnica.
+Aplicabilidade: qualquer sistema que processe **dados pessoais ou regulados**, em todos os níveis (`THR-003`). Em L1, em forma leve: as sete categorias percorridas sobre os fluxos de dados pessoais. Em L2 e L3, como análise formal; em L3, com revisão independente pelo DPO. Onde existe obrigação de *Data Protection Impact Assessment* (DPIA) sob o RGPD, o LINDDUN é o instrumento que estrutura a sua componente técnica.
 
 > O LINDDUN estrutura a **elicitação** de ameaças à privacidade. Não substitui a avaliação legal de conformidade nem o parecer do DPO — a categoria *Non-compliance* aponta para obrigações legais, não as resolve.
 

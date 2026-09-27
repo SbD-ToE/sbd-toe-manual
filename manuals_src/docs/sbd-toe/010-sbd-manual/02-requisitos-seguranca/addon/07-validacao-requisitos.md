@@ -94,7 +94,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 
 | ID | Tag operacional | Nível | Método de validação | Evidência esperada |
 |----|-----------------|:-----:|---------------------|-------------------|
-| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Tentar login sem segundo factor. Confirmar rejeição e logs de falha. | Log de autenticação falhada sem MFA. Captura do bloqueio. |
+| AUT-001 | SEC-Lx-AUT-MFA | L2+ | Tentar login sem segundo factor. Confirmar rejeição e logs de falha. Confirmar que os factores aceites são os do requisito. Em L3, tentar o login de uma conta de administração sem WebAuthn/FIDO2 e confirmar a rejeição. | Log de autenticação falhada sem MFA. Captura do bloqueio. Configuração dos factores aceites. Em L3, log da rejeição do administrador sem factor resistente a *phishing*. |
 | AUT-002 | SEC-Lx-AUT-PWD | L1+ | Rever política activa. Tentar definir password inválida. Confirmar rejeição. | Política documentada. Log de erro ou rejeição. |
 | AUT-003 | SEC-Lx-AUT-BRUTE | L1+ | Simular tentativas repetidas falhadas. Confirmar bloqueio, CAPTCHA ou atraso progressivo. | Log com contagem de falhas. Evidência de bloqueio ou atraso. |
 | AUT-004 | SEC-Lx-AUT-LOGOUT | L1+ | Efectuar logout. Tentar reutilizar sessão ou token. Confirmar rejeição. | Log de sessão revogada. Erro de autenticação na reutilização. |
@@ -104,6 +104,9 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | AUT-008 | SEC-Lx-AUT-STEPUP | L2+ | Simular acção sensível. Confirmar exigência de factor adicional. | Captura de step-up. Log associado à acção crítica. |
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Tentar alterar credenciais sem reautenticação. Confirmar bloqueio. | Log da tentativa bloqueada. Evidência de verificação da sessão activa. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simular login anómalo. Confirmar notificação ao utilizador e registo. | Exemplo de notificação enviada. Log do evento crítico detectado. |
+| AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verificar que não existem contas nem credenciais por defeito activas na aplicação e nos componentes em produção. Confirmar alteração da credencial inicial no primeiro uso. | Inventário de contas sem credenciais por defeito. Evidência do fluxo de primeiro acesso. |
+| AUT-012 | SEC-Lx-AUT-WEBAUTHN | L1+ (se aplicável) | Repetir uma asserção já usada, enviar uma asserção com origem ou identificador da *relying party* alheios e outra com assinatura inválida, e confirmar a rejeição de todas. Com verificação do utilizador exigida, enviar uma asserção sem ela e confirmar a rejeição. Confirmar que o servidor não recebe nem guarda dados biométricos. | Logs das asserções rejeitadas, por motivo. Configuração da biblioteca WebAuthn. Esquema de dados da credencial (só chave pública, identificador e contador). |
+| AUT-013 | SEC-Lx-AUT-RECOVERY | L1+ | Pedir uma recuperação e confirmar um *token* de uso único e expirável, resposta idêntica para contas inexistentes e notificação ao utilizador. Em L2+, simular a perda do segundo factor e confirmar que o e-mail sozinho não basta; revogar um autenticador e confirmar que as sessões associadas terminam e que ele deixa de autenticar. | Log da recuperação e notificação enviada. Captura da lista de autenticadores e da revogação. Log das sessões terminadas e da asserção rejeitada depois da revogação. |
 
 ---
 
@@ -120,7 +123,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | ACC-007 | SEC-Lx-ACC-MODEL | L2+ | Verificar existência de modelo de permissões revisto e documentado. | Documentação do modelo. Registo de revisão datada. |
 | ACC-008 | SEC-Lx-ACC-REVOKE | L1+ | Revogar acesso. Testar imediatamente após revogação. Confirmar falha. | Log de tentativa falhada após revogação. Timestamp de revogação. |
 | ACC-009 | SEC-Lx-ACC-ABAC | L3 | Testar decisão de acesso com atributos distintos. Confirmar aplicação de política dinâmica. | Logs com avaliação de atributos. Teste com variação de contexto. |
-| ACC-010 | SEC-Lx-ACC-REVIEW | L2+ | Verificar existência de processo de revisão periódica. Confirmar remoção de permissões obsoletas. | Registos de revisão datados. Evidência de limpeza de permissões. |
+| ACC-010 | SEC-Lx-ACC-REVIEW | L1+ | Verificar existência de processo de revisão periódica. Confirmar remoção de permissões obsoletas. | Registos de revisão datados. Evidência de limpeza de permissões. |
 
 ---
 
@@ -268,6 +271,18 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | IDE-004 | SEC-Lx-IDE-EXT | L1+ | Verificar lista de extensões instaladas. Confirmar que são de fontes reconhecidas. | Lista de extensões com origem documentada. |
 | IDE-005 | SEC-Lx-IDE-PERM | L2+ | Verificar permissões concedidas a extensões. Confirmar que apenas as necessárias estão activas. | Permissões revistas. Execução sandboxed confirmada. |
 | IDE-006 | SEC-Lx-IDE-LOCAL | L2+ | Verificar controlo sobre uso de ambientes locais. Confirmar existência de logs ou proxy quando aplicável. | Política de uso de ambientes locais. Logs de rede ou proxy. |
+
+### PRI - Dados Pessoais (engenharia) {#pri---dados-pessoais-engenharia}
+
+| ID | Tag operacional | Nível | Método de validação | Evidência esperada |
+|----|-----------------|:-----:|---------------------|-------------------|
+| PRI-001 | SEC-Lx-PRI-MIN | L1+ | Comparar os campos de dados pessoais recolhidos com o registo de finalidades. Confirmar que não há campos sem finalidade. | Lista de campos com finalidade associada. |
+| PRI-002 | SEC-Lx-PRI-RETAIN | L1+ | Verificar prazos definidos e amostrar registos acima do prazo, incluindo réplicas e sistemas a jusante. Confirmar o prazo declarado para as cópias de segurança. | Configuração de retenção. Evidência de apagamento ou anonimização por amostragem. |
+| PRI-003 | SEC-Lx-PRI-RIGHTS | L1+ | Executar exportação, rectificação e apagamento para um titular de teste. Confirmar formato de leitura automática, propagação a jusante e verificação de identidade em pedidos fora do canal autenticado. | Ficheiro exportado. Registo das execuções. Evidência de propagação. |
+| PRI-004 | SEC-Lx-PRI-INVENTORY | L2+ | Rever o inventário. Confirmar finalidade, sistema e destinatários por conjunto de dados, e o registo de alterações. | Inventário actualizado com histórico de alterações. |
+| PRI-005 | SEC-Lx-PRI-LOGPII | L2+ | Rever o conceito de PII em registos e amostrar logs. Nos registos imutáveis, confirmar pseudónimos e chaves por titular. | Conceito documentado. Amostras de log conformes. |
+| PRI-006 | SEC-Lx-PRI-CONSENT | L1+ | Dar e retirar consentimento (ou opor-se) com um titular de teste. Confirmar registo auditável, esforço equivalente, efeito nos tratamentos dependentes e persistência após sincronização. | Registo de consentimento com versão do texto. Evidência do efeito da retirada. |
+| PRI-007 | SEC-Lx-PRI-DEFAULT | L1+ | Criar uma conta nova e verificar as definições iniciais de partilha, visibilidade e tratamento opcional. | Captura ou teste automatizado das definições por defeito. |
 
 ---
 

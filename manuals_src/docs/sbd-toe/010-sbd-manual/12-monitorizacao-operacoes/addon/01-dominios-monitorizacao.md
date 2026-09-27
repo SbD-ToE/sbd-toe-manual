@@ -62,7 +62,7 @@ A seleção de domínios e profundidade de monitorização deve ser proporcional
 
 - **Aplicações L3**: cobertura completa dos domínios, com integração com SIEM e alertas ativos.
 - **Aplicações L2**: foco em runtime, infraestrutura e segurança; logging centralizado obrigatório.
-- **Aplicações L1**: podem limitar-se a métricas técnicas, desde que justificado e aceite por segurança.
+- **Aplicações L1**: *logging* estruturado e persistente e catálogo de eventos críticos de segurança são obrigatórios; a restante cobertura pode limitar-se a métricas técnicas, desde que justificado e aceite por segurança.
 
 > 📌 A `addon/08-matriz-controles-por-risco.md` detalha os mínimos por nível de risco.
 

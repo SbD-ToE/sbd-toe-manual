@@ -67,10 +67,10 @@ Os SBOMs devem ser produzidos em formato JSON ou XML. Formatos proprietários n�
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
 | SBOM gerado em cada build | Obrigatório (básico) | Obrigatório (completo) | Obrigatório (completo + assinado) |
-| SBOM inclui dependências transitivas | Recomendado | Obrigatório | Obrigatório |
-| SBOM associado ao artefacto de release | Recomendado | Obrigatório | Obrigatório |
+| SBOM inclui dependências transitivas | Obrigatório | Obrigatório | Obrigatório |
+| SBOM associado ao artefacto de release | Obrigatório | Obrigatório | Obrigatório |
 | SBOM para imagens de container | Recomendado | Obrigatório | Obrigatório |
-| SBOM arquivado como artefacto do pipeline | Recomendado | Obrigatório | Obrigatório |
+| SBOM arquivado como artefacto do pipeline | Obrigatório | Obrigatório | Obrigatório |
 
 A geração do SBOM deve ser automatizada no pipeline - não é aceitável geração manual ou ad-hoc como substituto do SBOM de build.
 

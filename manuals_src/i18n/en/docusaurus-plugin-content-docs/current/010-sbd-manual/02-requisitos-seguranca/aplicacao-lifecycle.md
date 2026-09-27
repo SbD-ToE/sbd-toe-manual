@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/aplicacao-lifecycle.md
-  source_sha256: 40e5a02ac36f1761c0df8e75208e2a419c94dd9323fefa9e7428d52f13374a86
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: c75f0e88cb5ec3294ef9a382da280957fd85ffbbcbf9fccc271804930ecc0a69
-  engine: claude-fable-5-1
+  source_sha256: 1fbacc9c4e3e18599491cd9ad938d1a9c544531c03faf4fb3ea05f904c1b9270
+  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
+  target_sha256: 649b7215b959a68f76a5c91fe34d7daceb76c63757cb9be11e895951c0b1d7f6
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, papel_suporte, provenance, requirement_runtime, risk_level, role_tech_lead, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: fd29c33d4d80d3aab83704d26baae58f215a70694b930c72bd901cc95239b213
-  translated_at: 2026-09-26T17:58:13Z
-  stamped_at: 2026-09-26T18:33:08Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, discipline, esquema_regime, eu_startups, framework_source_corpus, lifecycle_phase, mapping, maturity, papel_suporte, provenance, requirement_runtime, risk_level, role_tech_lead, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 26ca4e34ce8107ab6729c663f3e5ed0ff3e78402fec5f5f940207031eb92d25c
+  translated_at: 2026-09-27T15:08:19Z
+  stamped_at: 2026-09-27T15:08:19Z
   reviewed_by: null
 ---
 
@@ -113,7 +113,7 @@ As a **Product Owner**, I want to select the requirements applicable to the proj
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Essential subset |
+| L1 | Yes | Essential subset |
 | L2 | Yes | Full catalogue applicable to L2 |
 | L3 | Yes | Full catalogue applicable to L3 + reinforcements |
 
@@ -194,7 +194,7 @@ As a **Developer** (proposer) and **GRC/Compliance** (recorder), I want to recor
 > **Reference:** This user story specialises the organisational exception process (Ch. 14) for the requirements context. TTL, approval authorities and revalidation must follow the master policy defined in that chapter.
 
 **Proportionality.**
-- L1: simplified process; L2: mandatory formalisation; L3: formal + mitigation required
+- L1: simplified process, with mandatory formal record (justification, compensation, approver and deadline); L2: mandatory formalisation; L3: formal + mitigation required
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -235,7 +235,7 @@ As a **QA role**, I want to ensure that all applied requirements have traceabili
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Critical requirements only |
+| L1 | Yes | Applicable requirements marked and traceable in the backlog |
 | L2 | Yes | Full coverage of the selected requirements |
 | L3 | Yes | Full coverage + reinforced traceability |
 
@@ -321,7 +321,7 @@ As a **QA role**, I want to ensure that the applicable requirements have associa
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Basic validation of critical requirements |
+| L1 | Yes | Basic validation of critical requirements |
 | L2 | Yes | Full coverage of the selected requirements |
 | L3 | Yes | Full coverage + independent review |
 
@@ -364,7 +364,7 @@ As the **Security Team / AppSec**, I want to validate the application of the req
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Simplified review |
+| L1 | Yes | Simplified review, documented and with an identified owner |
 | L2 | Yes | Formal review |
 | L3 | Yes | Formal review + mitigation required |
 
@@ -497,7 +497,7 @@ As a **DevOps/SRE** and **Developer**, I want the CI/CD pipeline to run security
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Basic SAST; SCA recommended |
+| L1 | Yes | SAST and SCA blocking Critical/High findings |
 | L2 | Yes | SAST + SCA mandatory; thresholds configured |
 | L3 | Yes | SAST + SCA + DAST; strict gates; SBOM + signing mandatory |
 
@@ -645,7 +645,7 @@ As a **Developer**, **Tech Lead** and **AppSec Engineer**, I want to ensure that
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Recommended | Human review and basic SAST |
+| L1 | Yes | Human review and SAST/SCA gates |
 | L2 | Yes | Review + SAST/SCA mandatory |
 | L3 | Yes | Review + SAST/SCA + reinforced validations and AppSec review |
 
@@ -876,8 +876,8 @@ As **GRC/Compliance** and **AppSec**, I want to collect the RQS indicators and c
 | Practice                    | L1 (low risk)               | L2 (medium risk)                          | L3 (high risk)                                      |
 | -------------------------- | ------------------------------ | ----------------------------------------- | ---------------------------------------------------- |
 | Requirements catalogue     | Essential subset          | Full catalogue applicable to L2          | Full catalogue applicable to L3 + relevant reinforcements |
-| Traceability (tags)     | Recommended                    | Mandatory on security cards      | Mandatory on technical and functional cards          |
-| Exceptions                   | Simplified                   | Documented and approved                  | Formalised with a short TTL and mitigation                |
+| Traceability (tags)     | Mandatory for applicable requirements | Mandatory on security cards      | Mandatory on technical and functional cards          |
+| Exceptions                   | Simplified, with formal record | Documented and approved                  | Formalised with a short TTL and mitigation                |
 | Requirements validation    | Basic review/validation        | Associated tests and evidence             | Tests + evidence + independent review             |
 | Reassessment upon changes | On request                        | On every critical change                   | Whenever there is a change of exposure/architecture/control |
 

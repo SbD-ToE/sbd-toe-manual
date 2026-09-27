@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T14:22:18Z",
+  "generated_at": "2026-09-27T14:32:20Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -3369,10 +3369,10 @@
       "state": "synced",
       "source_sha256": "6ec00fe7332a77c4adbc832f2a872396065f9b391c8b58c8bf4064da42357bb2",
       "translated_source_sha256": "6ec00fe7332a77c4adbc832f2a872396065f9b391c8b58c8bf4064da42357bb2",
-      "target_sha256": "d9c0a8a42dafefd4584b72a486e97030dfea2268e360324752169be041d438b1",
+      "target_sha256": "51f8054c4c9b379e9db2b6e40d7204a4b4991a58ee3393ad15fa4c406a14ea65",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "53d793aa57da3ad735e7c493c668c3601da8730301a650b0ebed1de33980c0f8",
-      "translated_at": "2026-09-27T14:19:08Z",
+      "translated_at": "2026-09-27T14:30:47Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/addon/01-modelo-governancao.md": {

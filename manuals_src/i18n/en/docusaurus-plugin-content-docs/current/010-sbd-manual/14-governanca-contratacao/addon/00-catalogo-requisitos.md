@@ -10,14 +10,14 @@ translation:
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
   source_sha256: 6ec00fe7332a77c4adbc832f2a872396065f9b391c8b58c8bf4064da42357bb2
   source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
-  target_sha256: d9c0a8a42dafefd4584b72a486e97030dfea2268e360324752169be041d438b1
+  target_sha256: 51f8054c4c9b379e9db2b6e40d7204a4b4991a58ee3393ad15fa4c406a14ea65
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, audit_trail, avaliacao, cycle_iteration, gap_family, layer, mapping, maturity, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 53d793aa57da3ad735e7c493c668c3601da8730301a650b0ebed1de33980c0f8
-  translated_at: 2026-09-27T14:19:08Z
-  stamped_at: 2026-09-27T14:19:08Z
+  translated_at: 2026-09-27T14:30:47Z
+  stamped_at: 2026-09-27T14:30:47Z
   reviewed_by: null
 ---
 
@@ -88,7 +88,7 @@ Requirements ensuring that security is applied with formal authority, complete t
 - **GOV-012**: The maturity assessment only has value if compared with previous cycles and if it generates a plan with concrete targets. An assessment that changes nothing is not a control - it is an exercise.
 - **GOV-013**: The risk of an unprepared third party is not bad faith - it is involuntary error: exposed credentials, unauthorised access to data, insecure practices through lack of knowledge. The *sign-off* before access is the point where preparation becomes a precondition and not a subsequent formality. It links Ch. 13 (Training) to Ch. 14 (Governance): training provides the content, governance provides the access *gate* and the traceability.
 - **GOV-014**: *Access creep* is silent - permissions accumulate over time and nobody removes them without a cycle that forces it. Periodic review is the mechanism that keeps *least privilege* alive rather than declared. The difference from internal access review is the risk profile of the third party and the frequency: for an L3 contractor, the quarter is the acceptable limit between the end of a need and the removal of the corresponding access.
-- **GOV-015**: Vulnerabilities that come from outside (researchers, customers, users) do not pass through the internal scanners: without a known channel and a process with time limits, they get lost, or become public before the fix. The policy does not require rewards (*bug bounty*): it requires that there is somewhere to report, someone who responds and a known next step. A confirmed report enters the same circuit as internal findings, and informing the affected users closes the loop. The acknowledgement and initial-assessment time limits are the Manual's choice; an applicable regime may set others.
+- **GOV-015**: Vulnerabilities that come from outside (researchers, customers, users) do not pass through the internal scanners: without a known channel and a process with time limits, they get lost, or become public before the fix. The policy does not require rewards (*bug bounty*): it requires that there is somewhere to report, someone who responds and a known next step. A confirmed report enters the same circuit as internal findings, and informing the affected users closes the cycle. The acknowledgement and initial-assessment time limits are the Manual's choice; an applicable regime may set others.
 
 ---
 

@@ -21,7 +21,7 @@ O objetivo desta política é garantir que:
 - A activação do IRP é criteriosa, proporcional e auditável
 - As fases de contenção, erradicação e recuperação são executadas de forma ordenada
 - A notificação regulatória é feita dentro dos prazos aplicáveis
-- O post-mortem é realizado após cada incidente significativo
+- O post-mortem é realizado após cada incidente, a partir de L2; sob DORA ou NIS2, também em L1 para os incidentes que atingem o limiar de notificação
 - Os playbooks e o próprio IRP são testados periodicamente
 
 ---
@@ -30,7 +30,7 @@ O objetivo desta política é garantir que:
 
 | Nível | Obrigatoriedade |
 |---|---|
-| L1 | Recomendado; processo de resposta documentado; contactos de escalonamento definidos |
+| L1 | Recomendado; processo de resposta documentado; contactos de escalonamento definidos; incidentes registados |
 | L2 | Obrigatório; playbooks definidos; integração com sistema de gestão de incidentes; post-mortem |
 | L3 | Obrigatório; playbooks automatizados (SOAR); testes semestrais; war room |
 
@@ -62,7 +62,7 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 - [ ] Alerta classificado: verdadeiro positivo ou falso positivo
 - [ ] Severidade atribuída (P1–P4; P1 é o topo da escala)
 - [ ] Responsável pelo incidente designado (Incident Commander)
-- [ ] Avaliação de notificabilidade: se houver indício de violação de dados pessoais, de incidente significativo (NIS2), de incidente de caráter severo relacionado com as TIC (DORA), de vulnerabilidade ativamente explorada ou incidente grave (CRA) ou de incidente grave (AI Act), o incidente segue o **trilho regulatório**, em qualquer severidade e em qualquer nível, e sobe no mínimo a P2: GRC/Compliance e EPD/DPO informados ≤ 1 h após a confirmação; o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h (escolha do Manual; ver secção 6)
+- [ ] Avaliação de notificabilidade: se houver indício de violação de dados pessoais, de incidente significativo (NIS2), de incidente de caráter severo relacionado com as TIC (DORA), de vulnerabilidade ativamente explorada ou incidente grave (CRA) ou de incidente grave (AI Act), o incidente segue o **trilho regulatório**, em qualquer severidade e em qualquer nível, e sobe no mínimo a P2: GRC/Compliance e EPD/DPO informados ≤ 1 h após a confirmação; o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h (escolha do Manual; ver secção 6), registada com a fundamentação, também quando é negativa
 - [ ] Canal de comunicação do incidente aberto (war room se P1)
 
 ### 4.2 Contenção (T1 - início imediato após confirmação) {#42-contenção-t1---início-imediato-após-confirmação}
@@ -78,6 +78,7 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 - [ ] Timeline do incidente reconstruída
 - [ ] Causa raiz identificada ou hipótese de trabalho documentada
 - [ ] Âmbito do impacto determinado (sistemas, dados, utilizadores afectados)
+- [ ] Dados de impacto registados: utilizadores ou clientes afectados, duração e período de indisponibilidade, distribuição geográfica, dados afectados (confidencialidade, integridade, disponibilidade), perdas financeiras estimadas, serviços ou funções críticas afectados; são os dados que os critérios de notificabilidade da secção 6.1 pedem
 
 ### 4.4 Erradicação {#44-erradicação}
 
@@ -98,6 +99,11 @@ Um alerta não confirmado não activa o IRP formalmente - activa a fase de triag
 - [ ] Análise de causa raiz (5 Whys ou equivalente)
 - [ ] Plano de acções correctivas com owner e prazo
 - [ ] Documento arquivado e lições aprendidas partilhadas internamente
+- [ ] Revisão dos artefactos afectados, com disposição registada por artefacto (revisto ou sem alteração, com a razão): análise de risco e classificação, threat model, modelo de acessos, configurações, arquitectura, contratos de fornecedores, KPIs e o próprio IRP
+
+### 4.7 Análise de recorrência {#47-análise-de-recorrência}
+
+Os incidentes analisam-se também em conjunto, para encontrar padrões e recorrências (a mesma causa primária aparente). A análise é trimestral em L2 e mensal em L3, e recomendada em L1 (escolha do Manual). Cada recorrência abre um problema, com causa raiz e acções correctivas com owner e prazo. As regras de agregação para efeitos de notificação são dos regimes (DORA, NIS2) e constam do overlay regulatório.
 
 ---
 
@@ -133,12 +139,27 @@ Alguns incidentes requerem notificação a autoridades regulatórias dentro de p
 | CRA - Art. 14 (aplicável desde 11.9.2026) | Vulnerabilidade ativamente explorada ou incidente grave num produto com elementos digitais colocado no mercado pela organização | À CSIRT designada como coordenadora e à ENISA, pela plataforma única: alerta precoce ≤ 24 h; notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave) |
 | CRA - Art. 14, n.º 8 | Vulnerabilidade ativamente explorada ou incidente grave | Aos utilizadores afetados (e, se for caso disso, a todos), com as medidas de atenuação e corretivas que possam tomar |
 | AI Act - Art. 73 | Incidente grave com sistema de IA de risco elevado | À autoridade de fiscalização do mercado do Estado-Membro onde ocorreu: imediatamente após determinar a relação causal (ou a sua probabilidade razoável) e, o mais tardar, 15 dias após o conhecimento pelo prestador ou pelo responsável pela implantação; 10 dias em caso de morte; 2 dias em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b); admite relatório inicial incompleto (n.º 5) |
+| AI Act - Art. 75, n.º 1-A | Incidente grave com sistema de IA de risco elevado sujeito à competência do Serviço para a IA (sistema baseado num modelo de finalidade geral do mesmo prestador) | Ao Serviço para a IA, em vez da autoridade de fiscalização do mercado, com os prazos do art. 73 |
+| AI Act - Art. 55, n.º 1, al. c) | Incidente grave com modelo de IA de finalidade geral com risco sistémico (prestador do modelo) | Ao Serviço para a IA e, se for caso disso, às autoridades nacionais competentes, sem demora injustificada, com as eventuais medidas corretivas |
+| CSA - Art. 56, n.º 8 | Vulnerabilidade ou irregularidade detetada depois da certificação que possa afetar a conformidade de um produto com certificado europeu de cibersegurança | Ao organismo emissor do certificado (ou à autoridade que o emitiu) |
 
 :::warning
 A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. Os prazos contam-se a partir do conhecimento do incidente ou da violação - não da identificação da causa raiz -, salvo nas etapas que a lei ancora noutro momento: o relatório final NIS2 conta da notificação de incidente; o relatório final CRA de uma vulnerabilidade conta da disponibilização da medida corretiva ou de atenuação. No DORA, o prazo de 4 h conta da classificação do incidente como de caráter severo (com o limite de 24 h a contar do conhecimento) e o de 72 h conta da notificação inicial (Reg. Delegado (UE) 2025/301, art. 5.º).
 :::
 
 **Retenção dos registos de incidentes.** A timeline, o post-mortem e as notificações enviadas conservam-se por 1 ano em L1 e L2 e por 3 anos em L3 (escolha do Manual; ver a [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos)). No DORA, o período é definido pela entidade (Reg. Delegado (UE) 2024/1774, art. 22.º, al. d)).
+
+### 6.1 Critério e conteúdo mínimo por regime {#61-critério-e-conteúdo-mínimo-por-regime}
+
+O registo do incidente (secção 4.3) recolhe os dados de impacto; o critério de notificabilidade e os limiares são os de cada regime, que o overlay regulatório detalha. O conteúdo mínimo é o que a lei pede; não substitui os formulários das autoridades.
+
+| Regime | Critério | Conteúdo mínimo |
+|---|---|---|
+| RGPD - Art. 33 | Risco para os direitos e liberdades das pessoas singulares | Natureza da violação, com as categorias e o número aproximado de titulares e de registos; contacto do EPD; consequências prováveis; medidas adotadas ou propostas. Todas as violações ficam documentadas, notificadas ou não |
+| DORA - Art. 19 | Incidente de caráter severo segundo o art. 18 e o Reg. Delegado (UE) 2024/1772, incluindo a agregação de incidentes recorrentes | Modelos do Reg. de Execução (UE) 2025/302 para a notificação inicial, o relatório intercalar e o relatório final |
+| NIS2 - Art. 23 | Incidente significativo (art. 23, n.º 3); nas entidades pertinentes, os limiares dos arts. 3 e 4 do Reg. de Execução (UE) 2024/2690 | Alerta rápido: suspeita de ato ilícito ou malicioso e impacto transfronteiriço. Notificação: avaliação inicial, gravidade, impacto e indicadores de exposição. Relatório final: descrição pormenorizada, gravidade e impacto, tipo de ameaça ou causa primária, medidas de atenuação, impacto transfronteiriço |
+| CRA - Art. 14 | Incidente grave (art. 14, n.º 5): afeta a disponibilidade, autenticidade, integridade ou confidencialidade de dados ou funções, ou introduz código mal-intencionado | Relatório final: descrição pormenorizada, gravidade e impacto, tipo de ameaça ou causa primária, medidas de atenuação aplicadas e em curso |
+| AI Act - Art. 73 | Incidente grave (art. 3, ponto 49) | O previsto no art. 73 |
 
 ---
 

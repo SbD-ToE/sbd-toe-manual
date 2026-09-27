@@ -117,7 +117,7 @@ Na cadência declarada (`review_cadence`), o *owner* + `appsec` revêem:
 - [ ] *Intent events* da janela: *intent-action divergence* observada?
 - [ ] *Off-policy actions* registadas?
 - [ ] *Kill-switch* exercitado conforme cadência exigida (A3 trimestral, A4 mensal)?
-- [ ] Provider de modelo manteve a versão pinned?
+- [ ] O fornecedor de serviços de IA manteve a versão *pinned* do modelo?
 - [ ] *Tools_allowlist* continua proporcional ao trabalho real?
 
 Resultado: renovação (com ou sem alterações), descida de nível, ou revogação.
@@ -130,7 +130,7 @@ Revogação é executada **imediatamente** pelo *kill-switch* nas situações:
 - *Prompt injection* bem-sucedida resultando em tool call não autorizada
 - *Credential exposure* da identidade do agente
 - Falha de *kill-switch* (mesmo sem incidente material — quebra de confiança operacional)
-- Alteração silenciosa do provider/modelo (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
+- Alteração silenciosa do modelo pelo fornecedor de serviços de IA (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
 
 Revogação não é sinónimo de extinção definitiva — pode haver re-emissão após análise *post-mortem* e *mandate* novo.
 

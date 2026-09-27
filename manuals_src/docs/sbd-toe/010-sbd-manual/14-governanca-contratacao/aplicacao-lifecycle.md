@@ -915,7 +915,7 @@ Como **GRC / Compliance + Procurement** com apoio de **Jurídico**, quero que ca
 - [ ] **Audit rights**: acesso contratualizado a logs de inferência ou equivalente quando exigido (típico em L3)
 - [ ] **SLA de notificação prévia** de mudanças que alterem comportamento (versão maior do modelo, política de dados, descontinuação)
 - [ ] **SLA de disponibilidade** declarado; *fallback* arquitectónico em caso de *outage* (cross-link Cap. 04 §AI/ML)
-- [ ] **Conformidade declarada com AI Act Art. 53/55** quando o provedor fornece GPAI
+- [ ] **Conformidade declarada com o AI Act art. 53.º (e art. 55.º, se o modelo tiver risco sistémico)** quando o provedor fornece GPAI
 - [ ] **Conformidade declarada com o RGPD, art. 28.º** (subcontratantes) quando há dados pessoais
 - [ ] Provedor incluído na lista aprovada ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)) com `risk_classification`
 - [ ] Cláusulas críticas registadas na ficha do provedor; revisão calendarizada
@@ -933,7 +933,7 @@ Como **GRC / Compliance + Procurement** com apoio de **Jurídico**, quero que ca
 |---|---|---|
 | L1 | Recomendado | Cláusulas mínimas: localização + zero retention para dados sensíveis |
 | L2 | Sim | Cláusulas detalhadas: retention, opt-out, localização, SLA, audit rights básico |
-| L3 | Sim | Cláusulas detalhadas + audit rights operacionais + AI Act Art. 53/55 quando GPAI; revisão Legal obrigatória |
+| L3 | Sim | Cláusulas detalhadas + audit rights operacionais + AI Act art. 53.º (e art. 55.º, se o modelo tiver risco sistémico) quando GPAI; revisão Legal obrigatória |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |

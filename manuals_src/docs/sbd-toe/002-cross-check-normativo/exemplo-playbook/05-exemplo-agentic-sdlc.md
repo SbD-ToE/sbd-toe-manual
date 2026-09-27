@@ -118,7 +118,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 | **`DEP-011..014`** | [Cap. 05 §DEP-011](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) | Inventário AI + AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + *providers* aprovados |
 | **User story** | [Cap. 05 US-14](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-14) | Gerar AI BOM por *build*; *provider* aprovado obrigatório |
 | **Policy 39** | [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | Ciclo de vida AI BOM; resposta a incidentes *upstream* por classe (`AML.T0019/T0109/T0110`) |
-| **Policy 33 §10** (contratação) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Cláusulas Art. 53/55 declaradas + RGPD Art. 28 |
+| **Policy 33 §10** (contratação) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Cláusulas do art. 53.º (e do art. 55.º, se o modelo tiver risco sistémico) declaradas + RGPD Art. 28 |
 
 ---
 

@@ -202,11 +202,11 @@ A auditoria deve cobrir:
 
 ---
 
-## 12. Anexo — Provedores AI como dependência de fornecimento {#12-anexo--provedores-ai-como-dependência-de-fornecimento}
+## 12. Anexo — Fornecedores de serviços de IA como dependência de fornecimento {#12-anexo--provedores-ai-como-dependência-de-fornecimento}
 
-Modelos AI consumidos via *provider* externo (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) ou *self-hosted* (HuggingFace, vLLM, Ollama) são **dependências de fornecimento** com particularidades — versão pode mudar comportamento sem mudar tag visível, artefacto é opaco, ataque típico tem nome próprio (`AML.T0109` Supply Chain Rug Pull). Aplicam-se aqui:
+Modelos AI consumidos via fornecedor de serviços de IA externo (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) ou *self-hosted* (HuggingFace, vLLM, Ollama) são **dependências de fornecimento** com particularidades — versão pode mudar comportamento sem mudar tag visível, artefacto é opaco, ataque típico tem nome próprio (`AML.T0109` Supply Chain Rug Pull). Aplicam-se aqui:
 
-- **Critérios de aprovação** (secção 3 alargada): adicionalmente avaliamos *data retention*, *training opt-out*, localização de processamento (RGPD Art. 44–49 quando aplicável), AI Act Art. 53/55 (quando GPAI), SLA de notificação de mudanças de versão, *audit rights* contratualizados.
+- **Critérios de aprovação** (secção 3 alargada): adicionalmente avaliamos *data retention*, *training opt-out*, localização de processamento (RGPD Art. 44–49 quando aplicável), AI Act art. 53.º (e art. 55.º, se o modelo tiver risco sistémico) quando GPAI, SLA de notificação de mudanças de versão, *audit rights* contratualizados.
 - **Pinning de versões** (secção 4 alargada): proibido `latest`/range/alias dinâmico em modelos AI; cross-link `DEP-013`.
 - **SCA estendido** (secção 7 alargada): para componentes AI usamos AI BOM (CycloneDX 1.6 `ml-bom`) gerado por *build* — ver [Policy 11 §AI BOM](./policy-sbom) e [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain).
 - **Resposta a incidentes *upstream***: mesma triagem da secção 8 alargada com classes `AML.T0010` / `AML.T0019` / `AML.T0109` / `AML.T0110` e LLM03-2025.
@@ -244,4 +244,4 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | NIST AI RMF 1.0 — MAP-4.x (third-party AI) | Mapping de risco de terceiros AI |
 | SSDF PW.4 | Reuse of existing, well-secured software |
 | SLSA (Supply chain Levels for Software Artifacts) | Framework de integridade de supply chain |
-| EU AI Act (Reg. (UE) 2024/1689) — Art. 25, 53, 55 | Quando aplicável a providers AI / GPAI |
+| EU AI Act (Reg. (UE) 2024/1689) — Art. 25, 53, 55 | Quando aplicável a fornecedores de serviços de IA / GPAI |

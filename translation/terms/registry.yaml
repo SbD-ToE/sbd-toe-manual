@@ -6532,6 +6532,31 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
     do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: ai_service_vendor
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: AI service vendor
+  en_variants:
+  - AI service vendors
+  pt: fornecedor de serviços de IA
+  pt_variants:
+  - fornecedores de serviços de IA
+  ontology_id: null
+  sense: Fornecedor comercial de modelos ou serviços de IA consumidos pela organização (Anthropic, OpenAI, HuggingFace, self-hosted). Distinto
+    do papel «prestador» (provider) definido no AI Act, art. 3.º, ponto 3, que fica reservado a esse sentido.
+  senses: []
+  evidence: Decisão do lead 2026-09-27 (via Orchestrator, confirmação directa na sessão do Manual agent)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-27] Termo bilingue à nascença (decisão do lead). Aplicado no dossiê AI Act e nas políticas que citam o AI Act; no resto
+    do Manual «provedor/provider AI» fica para a vaga editorial (ACHADOS).'
 - key: eu_startups
   species: 3
   state: in-record

@@ -177,7 +177,7 @@ Quando o sistema inclui componentes AI — modelos, datasets, MCP servers/tools,
 
 ### 11.1 Formato preferido {#111-formato-preferido}
 
-**CycloneDX 1.6 com extensão `ml-bom`** (publicada em 2024 pela OWASP). Alternativas reconhecidas: SPDX 3.0 AI Profile; formatos proprietários do *provider* quando consumíveis pelo *pipeline* de governança da organização.
+**CycloneDX 1.6 com extensão `ml-bom`** (publicada em 2024 pela OWASP). Alternativas reconhecidas: SPDX 3.0 AI Profile; formatos proprietários do fornecedor de serviços de IA quando consumíveis pelo *pipeline* de governança da organização.
 
 ### 11.2 Conteúdo mínimo {#112-conteúdo-mínimo}
 
@@ -187,7 +187,7 @@ Para além dos campos comuns a todos os componentes:
 - **Datasets**: `dataset_id`, `version`, `source`, `hash`, `curation_process`
 - **MCP servers/tools**: `server_id`, `version`, `scopes`, `source`, `audit_log_sink`
 - **Prompts embebidos**: `prompt_id`, `version` (commit SHA), `owner`, tipo (`system|rag|skill`)
-- **Providers**: lista com `name`, `risk_classification`, `contract_ref`, cláusulas críticas
+- **Fornecedores de serviços de IA**: lista com `name`, `risk_classification`, `contract_ref`, cláusulas críticas
 
 ### 11.3 Obrigatoriedade {#113-obrigatoriedade}
 
@@ -199,7 +199,7 @@ Para além dos campos comuns a todos os componentes:
 
 ### 11.4 Operação detalhada {#114-operação-detalhada}
 
-A operação completa do AI BOM — geração, *pinning*, lista de *providers* aprovados, resposta a incidentes *upstream* — vive em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain). Esta política mantém-se como referência da disciplina SBOM em geral; Policy 39 especializa-se na fatia AI.
+A operação completa do AI BOM — geração, *pinning*, lista de fornecedores de serviços de IA aprovados, resposta a incidentes *upstream* — vive em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain). Esta política mantém-se como referência da disciplina SBOM em geral; Policy 39 especializa-se na fatia AI.
 
 > 📌 Em curto: SBOM cobre o que vem do *package manager*; AI BOM cobre o que vem de *model registries*, *dataset hubs* e MCP servers. Disciplina equivalente, formato compatível, processo coerente.
 
@@ -223,7 +223,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime; **DEP-012 AI BOM**; **US-14** |
 | SbD-ToE Cap. 07 - CI/CD Seguro | Integração SBOM no pipeline de build e release |
 | SbD-ToE Cap. 09 - Containers e Imagens | SBOM por camada de imagem |
-| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes; anexo Providers AI |
+| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes; anexo Fornecedores de serviços de IA AI |
 | Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Tratamento específico de modelos, datasets, MCP, prompts |
 | Política de Rastreabilidade (`06_policy-rastreabilidade.md`) | Arquivo e retenção de artefactos de build |
 | CycloneDX 1.6 `ml-bom` (OWASP, 2024) | Formato preferido para AI BOM |

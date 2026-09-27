@@ -199,15 +199,15 @@ Para cada fornecedor e contractor, a organização deve manter um registo actual
 
 ---
 
-## 10. Anexo — Cláusulas específicas para provedores de modelos AI {#anexo-ai-providers}
+## 10. Anexo — Cláusulas específicas para fornecedores de serviços de IA {#anexo-ai-providers}
 
-Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace ou *self-hosted* equivalente), o conjunto de cláusulas contratuais previstas na secção 4 é estendido com seis cláusulas específicas. Não substituem nenhuma das anteriores — adicionam disciplina à fatia AI.
+Quando o fornecedor é um **fornecedor de serviços de IA** — fornecedor de modelos de IA (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace ou *self-hosted* equivalente), o conjunto de cláusulas contratuais previstas na secção 4 é estendido com seis cláusulas específicas. Não substituem nenhuma das anteriores — adicionam disciplina à fatia AI.
 
 ### 10.1 *Data retention* e *training opt-out* {#101-data-retention-e-training-opt-out}
 
-- Política de retenção do *provider* explicitada: durante quanto tempo dados enviados são retidos; em que sistemas; com que controlos de acesso.
+- Política de retenção do fornecedor de serviços de IA explicitada: durante quanto tempo dados enviados são retidos; em que sistemas; com que controlos de acesso.
 - *Training opt-out* contratualizado quando aplicável — preferência por **zero retention** para dados sensíveis (PII, código proprietário, segredos potencialmente expostos em prompts).
-- Quando o *provider* tem *training* "opt-out por defeito", essa garantia é declarada na ficha de aprovação (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
+- Quando o fornecedor de serviços de IA tem *training* "opt-out por defeito", essa garantia é declarada na ficha de aprovação (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 ### 10.2 Localização de processamento {#102-localização-de-processamento}
 
@@ -229,19 +229,19 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 ### 10.5 SLA de disponibilidade e *fallback* {#105-sla-de-disponibilidade-e-fallback}
 
 - SLA de disponibilidade declarado; mecanismo de comunicação em caso de *outage*.
-- A arquitectura do sistema considera *fallback* para quando o *provider* está indisponível ou retorna *outputs* degradados (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
+- A arquitectura do sistema considera *fallback* para quando o fornecedor de serviços de IA está indisponível ou retorna *outputs* degradados (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
 
 ### 10.6 Conformidade regulatória declarada {#106-conformidade-regulatória-declarada}
 
 - **AI Act Art. 53** (obrigações dos prestadores de modelos de IA de finalidade geral): documentação técnica do modelo (n.º 1, al. a)), informações e documentação para os prestadores a jusante (al. b)), política de cumprimento do direito da União em matéria de direitos de autor (al. c)) e resumo público dos conteúdos utilizados para o treino (al. d)).
 - **AI Act Art. 55** (obrigações dos prestadores de modelos de IA de finalidade geral com risco sistémico): avaliação do modelo com «testagens antagónicas» documentadas (n.º 1, al. a)), avaliação e atenuação de riscos sistémicos (al. b)), acompanhamento e comunicação de incidentes graves ao Serviço para a IA (al. c)) e proteção de cibersegurança do modelo e da sua infraestrutura física (al. d)).
 - **RGPD, art. 28.º** (subcontratantes): contrato com o subcontratante (n.º 3) e informação prévia sobre a contratação ou substituição de outros subcontratantes (n.º 2).
-- **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável a qualquer *provider* de serviços de TIC a entidade abrangida; requisitos contratuais reforçados quando o serviço apoia funções críticas ou importantes (DORA art. 30.º, n.º 3).
+- **NIS2 Art. 21** e **DORA Art. 28–30**: aplicável a qualquer terceiro prestador de serviços de TIC a entidade abrangida; requisitos contratuais reforçados quando o serviço apoia funções críticas ou importantes (DORA art. 30.º, n.º 3).
 
 ### 10.7 Operacionalização {#107-operacionalização}
 
-- O provedor entra na **lista aprovada [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
-- Cláusulas críticas registadas na ficha do provedor; revisão calendarizada das cláusulas do provedor AI — objecto distinto da reavaliação geral de fornecedores (secção 6) — conforme o nível de risco (L1 anual; L2 semestral; L3 trimestral).
+- O fornecedor de serviços de IA entra na **lista aprovada [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
+- Cláusulas críticas registadas na ficha do fornecedor de serviços de IA; revisão calendarizada das cláusulas do fornecedor de serviços de IA — objecto distinto da reavaliação geral de fornecedores (secção 6) — conforme o nível de risco (L1 anual; L2 semestral; L3 trimestral).
 - Detalhe operacional completo em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain) e no Cap. 14 US "Contratação de provedores AI".
 
 | Cláusula | L1 | L2 | L3 |
@@ -272,8 +272,8 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | SbD-ToE Cap. 14 - Governança & Contratação | US-02: cláusulas; US-14: reavaliação; US-15: onboarding contractors; US-17: offboarding; **US-21 — Contratação de providers AI** |
 | Política de Rastreabilidade Organizacional (`34_policy-rastreabilidade-organizacional.md`) | Registo e evidência de conformidade |
 | Política de Gestão de Segredos (`18_policy-gestao-segredos.md`) | Credenciais de contractors e revogação |
-| Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Operacionalização do ciclo de vida de providers AI |
-| Política de Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Quando o provider fornece agentes / runtimes |
+| Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Operacionalização do ciclo de vida de fornecedores de serviços de IA |
+| Política de Mandates de Agentes AI (`38_policy-mandates-agentes.md`) | Quando o fornecedor de serviços de IA fornece agentes / runtimes |
 | ISO/IEC 27001 - A.15 | Supplier relationships |
 | ISO/IEC 27036 | Information security for supplier relationships |
 | ISO/IEC 42001:2023 | AI Management System — relações com fornecedores AI |

@@ -29,7 +29,7 @@ Este anexo aplica-se sempre que, no processo de desenvolvimento, sejam utilizado
 - Automatismos que produzam *artefactos executáveis* ou logicamente relevantes.
 
 Não se aplica:
-- a sistemas cujo **produto final seja um sistema de IA** (ver manual SbD-AI-ToE);
+- aos componentes de IA do **próprio produto**: regem-se pelo `THR-008`, pelo `ARC-014` (US-18 do Cap. 04), pelo `ARC-015` (US-16 do Cap. 04, que aplica `REQ-AGN-003` e `REQ-AGN-004` aos agentes do produto), pelo `DEP-011` a `DEP-014` e pelo `OPS-011` a `OPS-014`; quando o sistema é regulado pelo AI Act, também pelo overlay regulatório (contexto CTX-AIA-RE);
 - a ferramentas puramente informativas sem impacto no código, configuração ou lógica.
 
 ---

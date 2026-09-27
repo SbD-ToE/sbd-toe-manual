@@ -327,8 +327,8 @@ itens:
   aplicavel_desde: 18.10.2024 (art. 41.º — aplicação das medidas nacionais de transposição)
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Dever da Diretiva (UE) 2022/2555: aplica-se às entidades essenciais e importantes através da transposição nacional (em Portugal, o regime jurídico da cibersegurança que a transpõe); o texto nacional pode concretizar ou acrescentar. CONFLITO: A Diretiva exige capacidade de tratamento de incidentes para todos os sistemas da entidade; a Política 32 §2 torna-a apenas recomendada em aplicações L1 (só a notificação regulatória é obrigatória em qualquer nível). Uma aplicação L1 de entidade NIS2 fica sem processo de resposta obrigatório.'
-    en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. CONFLICT: The Directive requires incident handling capability for all of the entity''s systems; Policy 32 §2 makes it only recommended in L1 applications (only regulatory notification is mandatory at any level). An L1 application of a NIS2 entity is left without a mandatory response process.'
+    pt: 'Dever da Diretiva (UE) 2022/2555: aplica-se às entidades essenciais e importantes através da transposição nacional (em Portugal, o regime jurídico da cibersegurança que a transpõe); o texto nacional pode concretizar ou acrescentar.'
+    en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-c
   acto_fonte: 32022L2555
   referencia: Art. 21.º, n.º 2, al. c)
@@ -422,8 +422,8 @@ itens:
   aplicavel_desde: 18.10.2024 (art. 41.º — aplicação das medidas nacionais de transposição)
   substitui: [EXT-NIS2-OBL-seguranca-de-fornecedores]
   nota:
-    pt: 'Dever da Diretiva (UE) 2022/2555: aplica-se às entidades essenciais e importantes através da transposição nacional (em Portugal, o regime jurídico da cibersegurança que a transpõe); o texto nacional pode concretizar ou acrescentar. Ver IR2690-5.1.1 sobre a Política 33 ser só «Recomendado» em L1.'
-    en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it. See IR2690-5.1.1 on Policy 33 being only “Recommended” at L1.'
+    pt: 'Dever da Diretiva (UE) 2022/2555: aplica-se às entidades essenciais e importantes através da transposição nacional (em Portugal, o regime jurídico da cibersegurança que a transpõe); o texto nacional pode concretizar ou acrescentar.'
+    en: 'Obligation under Directive (EU) 2022/2555: it applies to essential entities and important entities through national transposition (in Portugal, the national cybersecurity legal framework that transposes it); the national text may specify or add to it.'
 - id: NIS2-21-2-e
   acto_fonte: 32022L2555
   referencia: Art. 21.º, n.º 2, al. e)
@@ -2440,8 +2440,8 @@ itens:
     ficheiro: 020-assets/policies/04_policy-revisao-periodica-risco.md
     ancora: 31-cadências-mínimas-obrigatórias
     citacao:
-      pt: L1 | Anual (12 meses) | Recomendado
-      en: L1 | Annual (12 months) | Recommended
+      pt: L1 | Anual (12 meses) | Obrigatório
+      en: L1 | Annual (12 months) | Mandatory
   - tipo: politica
     rotulo:
       pt: Política 04 §4.1
@@ -2460,19 +2460,17 @@ itens:
       pt: no prazo máximo de 30 dias após trigger de mudança
       en: within 30 days of a change trigger
   falta:
-    pt: Revisão anual e após incidente prescrita no catálogo (CLA-005 ✔ L1), contrariada pela Política 04 §3.1.
-    en: Annual and post-incident review prescribed in the catalogue (CLA-005 ✔ L1), contradicted by Policy 04 §3.1.
+    pt: Revisão anual e após incidente prescrita (CLA-005 e Política 04 §3.1, obrigatórias em L1); o threat model, onde vive a análise de ameaças, não existe em L1.
+    en: Annual and post-incident review prescribed (CLA-005 and Policy 04 §3.1, mandatory at L1); the threat model, where the threat analysis lives, does not exist at L1.
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: O Reg. Exec. exige revisão da avaliação de riscos pelo menos anual, sem modulação. A Política 04 §3.1 classifica a revisão anual de L1 como «Recomendado», o que permite a uma aplicação L1 escapar à revisão (inconsistente com CLA-005, que a torna obrigatória); o threat model, onde vive a análise de ameaças, nem existe em L1.
-    en: The Implementing Regulation requires review of the risk assessment at least annually, without modulation. Policy 04 §3.1 classifies the L1 annual review as “Recommended”, which allows an L1 application to escape the review (inconsistent with CLA-005, which makes it mandatory); the threat model, where the threat analysis lives, does not even exist at L1.
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O Reg. Exec. exige revisão da avaliação de riscos pelo menos anual, sem modulação. A Política 04 §3.1 classifica a revisão anual de L1 como «Recomendado», o que permite a uma aplicação L1 escapar à revisão (inconsistente com CLA-005, que a torna obrigatória); o threat model, onde vive a análise de ameaças, nem existe em L1.'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: The Implementing Regulation requires review of the risk assessment at least annually, without modulation. Policy 04 §3.1 classifies the L1 annual review as “Recommended”, which allows an L1 application to escape the review (inconsistent with CLA-005, which makes it mandatory); the threat model, where the threat analysis lives, does not even exist at L1.'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-2.2.1
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 2.2.1 (artigo 21.o, n.o 2, alínea a), da Diretiva (UE) 2022/2555)
@@ -2758,8 +2756,8 @@ itens:
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 3.1.1 impõe à entidade uma política de tratamento de incidentes aplicada a todos os SRI; a Política 32 §2 deixa-a «Recomendado» para aplicações L1.'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 3.1.1 imposes on the entity an incident handling policy applied to all network and information systems; Policy 32 §2 leaves it as “Recommended” for L1 applications.'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.1.2
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.1.2 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
@@ -3043,14 +3041,14 @@ itens:
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
-    pt: O ponto 3.2.4 exige análise regular dos registos e limiares de alerta com alarmes automáticos, sem modulação por criticidade; o catálogo não os exige em L1 (LOG-004, LOG-007 e OPS-005 «-» em L1; Política 30 §2 «Recomendado» em L1), embora a baseline «SEMPRE» do Cap. 00 peça «monitorizar anomalias» — inconsistência interna.
-    en: Point 3.2.4 requires regular analysis of logs and alert thresholds with automatic alarms, without modulation by criticality; the catalogue does not require them at L1 (LOG-004, LOG-007 and OPS-005 “-” at L1; Policy 30 §2 “Recommended” at L1), although the “ALWAYS” baseline of Ch. 00 asks to “monitor for anomalies” — an internal inconsistency.
+    pt: O ponto 3.2.4 exige análise regular dos registos e limiares de alerta com alarmes automáticos, sem modulação por criticidade; o catálogo não os exige em L1 (LOG-004, LOG-007 e OPS-005 «-» em L1), embora a baseline «SEMPRE» do Cap. 00 peça «monitorizar anomalias» — inconsistência interna. Resolvido para entidades pertinentes pelos pisos CTX-NIS2-P03 a P05.
+    en: Point 3.2.4 requires regular analysis of logs and alert thresholds with automatic alarms, without modulation by criticality; the catalogue does not require them at L1 (LOG-004, LOG-007 and OPS-005 “-” at L1), although the “ALWAYS” baseline of Ch. 00 asks to “monitor for anomalies” — an internal inconsistency. Resolved for relevant entities by floors CTX-NIS2-P03 to P05.
   confianca: alta
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 3.2.4 exige análise regular dos registos e limiares de alerta com alarmes automáticos, sem modulação por criticidade; o catálogo não os exige em L1 (LOG-004, LOG-007 e OPS-005 «-» em L1; Política 30 §2 «Recomendado» em L1), embora a baseline «SEMPRE» do Cap. 00 peça «monitorizar anomalias» — inconsistência interna.'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 3.2.4 requires regular analysis of logs and alert thresholds with automatic alarms, without modulation by criticality; the catalogue does not require them at L1 (LOG-004, LOG-007 and OPS-005 “-” at L1; Policy 30 §2 “Recommended” at L1), although the “ALWAYS” baseline of Ch. 00 asks to “monitor for anomalies” — an internal inconsistency.'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.5
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.5 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
@@ -3092,22 +3090,20 @@ itens:
     ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
     ancora: 8-integridade-e-imutabilidade
     citacao:
-      pt: '| Logs protegidos de modificação | Recomendado | Obrigatório | Obrigatório |'
-      en: '| Logs protected from modification | Recommended | Mandatory | Mandatory |'
+      pt: '| Logs protegidos de modificação | Obrigatório | Obrigatório | Obrigatório |'
+      en: '| Logs protected from modification | Mandatory | Mandatory | Mandatory |'
   falta:
     pt: Retenção por período definido e proteção contra alteração estão no catálogo; não se prescreve cópia de segurança dos registos.
     en: Retention for a defined period and protection against alteration are in the catalogue; backup of logs is not prescribed.
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: O ponto 3.2.5 exige proteção dos registos contra acesso ou alteração não autorizados; a Política 29 §8 marca «Logs protegidos de modificação» e «Acesso a logs restrito e auditado» como «Recomendado» em L1 (contradiz LOG-003, obrigatório em L1).
-    en: Point 3.2.5 requires protection of logs against unauthorised access or alteration; Policy 29 §8 marks “Logs protected from modification” and “Access to logs restricted and audited” as “Recommended” at L1 (contradicts LOG-003, mandatory at L1).
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 3.2.5 exige proteção dos registos contra acesso ou alteração não autorizados; a Política 29 §8 marca «Logs protegidos de modificação» e «Acesso a logs restrito e auditado» como «Recomendado» em L1 (contradiz LOG-003, obrigatório em L1).'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 3.2.5 requires protection of logs against unauthorised access or alteration; Policy 29 §8 marks “Logs protected from modification” and “Access to logs restricted and audited” as “Recommended” at L1 (contradicts LOG-003, mandatory at L1).'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-3.2.6
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 3.2.6 (artigo 21.o, n.o 2, alínea b), da Diretiva (UE) 2022/2555)
@@ -4023,8 +4019,8 @@ itens:
     ficheiro: 020-assets/policies/33_policy-contratacao-segura.md
     ancora: 2-âmbito-e-obrigatoriedade
     citacao:
-      pt: Recomendado; cláusulas básicas de confidencialidade e boas práticas; contacto de segurança definido
-      en: Recommended; basic confidentiality and good-practice clauses; security contact defined
+      pt: Obrigatório; cláusulas de segurança proporcionais (confidencialidade e boas práticas); validação do fornecedor antes do onboarding
+      en: Mandatory; proportionate security clauses (confidentiality and good practice); supplier validation before onboarding
   - tipo: requisito
     alvo: GOV-006
     niveis: [L1, L2, L3]
@@ -4042,19 +4038,17 @@ itens:
       pt: Fornecedores com acesso a dados, código ou pipelines são validados com questionário ou checklist antes de onboarding
       en: Suppliers with access to data, code or pipelines are validated with a questionnaire or checklist before onboarding
   falta:
-    pt: A política de contratação segura existe, mas é só «Recomendado» em L1 e não define o papel da entidade na cadeia de abastecimento.
-    en: The secure procurement policy exists, but it is only “Recommended” at L1 and does not define the entity's role in the supply chain.
+    pt: A política de contratação segura (Política 33) é obrigatória em todos os níveis, mas não define o papel da entidade na cadeia de abastecimento nem o comunica aos fornecedores.
+    en: The secure procurement policy (Policy 33) is mandatory at all levels, but it does not define the entity's role in the supply chain nor communicate it to suppliers.
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: O ponto 5.1.1 exige uma política de segurança da cadeia de abastecimento que reja as relações com todos os fornecedores diretos; a Política 33 §2 torna-a «Recomendado» em L1 (mitigado por GOV-006/GOV-007 e pela baseline, obrigatórios em todos os níveis — inconsistência interna).
-    en: Point 5.1.1 requires a supply chain security policy governing relations with all direct suppliers; Policy 33 §2 makes it “Recommended” at L1 (mitigated by GOV-006/GOV-007 and by the baseline, mandatory at all levels — an internal inconsistency).
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-seguranca-de-fornecedores]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 5.1.1 exige uma política de segurança da cadeia de abastecimento que reja as relações com todos os fornecedores diretos; a Política 33 §2 torna-a «Recomendado» em L1 (mitigado por GOV-006/GOV-007 e pela baseline, obrigatórios em todos os níveis — inconsistência interna).'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 5.1.1 requires a supply chain security policy governing relations with all direct suppliers; Policy 33 §2 makes it “Recommended” at L1 (mitigated by GOV-006/GOV-007 and by the baseline, mandatory at all levels — an internal inconsistency).'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-5.1.2
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 5.1.2 (artigo 21.o, n.o 2, alínea d), da Diretiva (UE) 2022/2555)
@@ -4590,8 +4584,8 @@ itens:
       pt: O resultado da due diligence deve ser documentado e aprovado antes da assinatura do contrato
       en: The outcome of the due diligence must be documented and approved before the contract is signed
   falta:
-    pt: O desenvolvimento externalizado cai no âmbito da Política 33, mas herda a lacuna de L1 («Recomendado») e as lacunas de aquisição (6.1).
-    en: Outsourced development falls within the scope of Policy 33, but it inherits the L1 gap (“Recommended”) and the acquisition gaps (6.1).
+    pt: O desenvolvimento externalizado cai no âmbito da Política 33, mas herda as lacunas de aquisição (6.1).
+    en: Outsourced development falls within the scope of Policy 33, but it inherits the acquisition gaps (6.1).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4852,22 +4846,22 @@ itens:
     ficheiro: 020-assets/policies/26_policy-aprovacao-release.md
     ancora: 2-âmbito-e-obrigatoriedade
     citacao:
-      pt: Recomendado; aprovação informal do Tech Lead
-      en: Recommended; informal approval by the Tech Lead
+      pt: Obrigatório; aprovação explícita do Tech Lead, registada com data e identidade do aprovador
+      en: Mandatory; explicit approval by the Tech Lead, recorded with the approver's date and identity
   falta:
     pt: Aprovação e gates antes da produção em todos os níveis (DPL-001/003); validação em staging e plan aprovado só L2/L3; avaliação de impacto não explícita.
     en: Approval and gates before production at all levels (DPL-001/003); validation in staging and approved plan only at L2/L3; impact assessment not explicit.
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
-    pt: O ponto 6.4.2 exige que todas as alterações sejam documentadas e testadas/avaliadas antes da aplicação; a Política 26 §2 deixa a aprovação de release em L1 como «Recomendado; aprovação informal do Tech Lead» (inconsistente com DPL-001, obrigatório em L1).
-    en: Point 6.4.2 requires all changes to be documented and tested/assessed before being applied; Policy 26 §2 leaves release approval at L1 as “Recommended; informal approval by the Tech Lead” (inconsistent with DPL-001, mandatory at L1).
+    pt: O ponto 6.4.2 exige que todas as alterações sejam documentadas e testadas/avaliadas antes da aplicação; a validação em staging (DPL-007) e o plan aprovado (IAC-007) só são obrigatórios em L2/L3. Resolvido para entidades pertinentes pelos pisos CTX-NIS2-P10 e P11.
+    en: Point 6.4.2 requires all changes to be documented and tested/assessed before being applied; validation in staging (DPL-007) and the approved plan (IAC-007) are mandatory only at L2/L3. Resolved for relevant entities by floors CTX-NIS2-P10 and P11.
   confianca: media
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 6.4.2 exige que todas as alterações sejam documentadas e testadas/avaliadas antes da aplicação; a Política 26 §2 deixa a aprovação de release em L1 como «Recomendado; aprovação informal do Tech Lead» (inconsistente com DPL-001, obrigatório em L1).'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 6.4.2 requires all changes to be documented and tested/assessed before being applied; Policy 26 §2 leaves release approval at L1 as “Recommended; informal approval by the Tech Lead” (inconsistent with DPL-001, mandatory at L1).'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-6.4.3
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.4.3 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
@@ -6724,8 +6718,8 @@ itens:
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 11.2.3 exige revisão dos direitos de acesso a intervalos planeados, sem modulação; ACC-010 não a exige em L1, pelo que os acessos internos a aplicações L1 nunca são revistos.'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 11.2.3 requires review of access rights at planned intervals, without modulation; ACC-010 does not require it at L1, so internal access to L1 applications is never reviewed.'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.3.1
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
@@ -6799,8 +6793,8 @@ itens:
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: O ponto 11.3.2 exige autenticação forte (p. ex. MFA) para contas privilegiadas, qualquer que seja a classificação; AUT-001 não se aplica a L1, pelo que os administradores de uma aplicação L1 podem autenticar-se só com password (a recomendação do Cap. 11 addon 08 não é requisito de catálogo).'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Point 11.3.2 requires strong authentication (e.g. MFA) for privileged accounts, whatever the classification; AUT-001 does not apply to L1, so the administrators of an L1 application can authenticate with a password only (the recommendation of Ch. 11 addon 08 is not a catalogue requirement).'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.3.3
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.3.3 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)
@@ -6830,8 +6824,8 @@ itens:
   aplicavel_desde: '7.11.2024 (entrada em vigor: 20.º dia após publicação no JO, art. 16.º; sem data de aplicação diferida)'
   substitui: [EXT-NIS2-OBL-21]
   nota:
-    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas. CONFLITO: Mesma fuga do 11.2.3: em L1 os direitos das contas privilegiadas e de administração não são revistos, contra o ponto 11.3.3.'
-    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference. CONFLICT: Same escape as in 11.2.3: at L1 the rights of privileged and administration accounts are not reviewed, contrary to point 11.3.3.'
+    pt: 'Reg. de Execução (UE) 2024/2690: directamente aplicável desde 7.11.2024, mas apenas às entidades pertinentes do art. 1.º (DNS, registos TLD, nuvem, centros de dados, CDN, serviços geridos e de segurança gerida, mercados em linha, motores de pesquisa, redes sociais, serviços de confiança); para as restantes entidades NIS2 serve de referência de boas práticas.'
+    en: 'Implementing Regulation (EU) 2024/2690: directly applicable since 7.11.2024, but only to the relevant entities of Article 1 (DNS, TLD registries, cloud, data centres, CDN, managed services and managed security services, online marketplaces, search engines, social networks, trust services); for the other NIS2 entities it serves as a good-practice reference.'
 - id: NIS2-IR2690-11.4.1
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 11.4.1 (artigo 21.o, n.o 2, alíneas i) e j), da Diretiva (UE) 2022/2555)

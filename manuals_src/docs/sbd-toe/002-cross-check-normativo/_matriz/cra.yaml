@@ -2995,19 +2995,19 @@ itens:
       pt: Bloquear build se CVE Critical/High sem exceção aprovada
       en: Block the build if there is a Critical/High CVE without an approved exception
   falta:
-    pt: O critério de bloqueio é a severidade (Critical/High), não a explorabilidade conhecida; em L1 o build não bloqueia CVE Critical/High sem exceção (Política 12 §8) e a checklist de release só tem colunas L2/L3; as exceções «Fix deferred»/«Risk accepted» permitem colocar no mercado com vulnerabilidade explorável conhecida.
-    en: The blocking criterion is severity (Critical/High), not known exploitability; at L1 the build does not block Critical/High CVEs without an exception (Policy 12 §8) and the release checklist only has L2/L3 columns; the “Fix deferred”/“Risk accepted” exceptions allow placing on the market with a known exploitable vulnerability.
+    pt: O critério de bloqueio é a severidade (Critical/High), não a explorabilidade conhecida; a checklist de release só tem colunas L2/L3; as exceções «Fix deferred»/«Risk accepted» permitem colocar no mercado com vulnerabilidade explorável conhecida.
+    en: The blocking criterion is severity (Critical/High), not known exploitability; the release checklist only has L2/L3 columns; the “Fix deferred”/“Risk accepted” exceptions allow placing on the market with a known exploitable vulnerability.
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
-    pt: 'Tensão com a Política 12 e com o gate de L1: o critério de bloqueio do Manual é a severidade (Critical/High), não a explorabilidade conhecida; em L1 o build não bloqueia, e as excepções «fix deferred» e «risk accepted» podem abranger vulnerabilidades exploráveis conhecidas, que o Anexo I, Parte I, ponto 2, al. a), não admite na colocação no mercado.'
-    en: 'Tension with Policy 12 and with the L1 gate: the Manual''s blocking criterion is severity (Critical/High), not known exploitability; at L1 the build does not block, and the “fix deferred” and “risk accepted” exceptions may cover known exploitable vulnerabilities, which Annex I, Part I, point (2)(a) does not allow at placing on the market.'
+    pt: 'Tensão com a Política 12: o critério de bloqueio do Manual é a severidade (Critical/High), não a explorabilidade conhecida, e as excepções «fix deferred» e «risk accepted» podem abranger vulnerabilidades exploráveis conhecidas, que o Anexo I, Parte I, ponto 2, al. a), não admite na colocação no mercado. Resolvida para produtos CRA pelos pisos CTX-CRA-P01 e CTX-CRA-P02.'
+    en: 'Tension with Policy 12: the Manual''s blocking criterion is severity (Critical/High), not known exploitability, and the “fix deferred” and “risk accepted” exceptions may cover known exploitable vulnerabilities, which Annex I, Part I, point (2)(a) does not allow at placing on the market. Resolved for CRA products by floors CTX-CRA-P01 and CTX-CRA-P02.'
   confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: [EXT-CRA-OBL-ciclo-de-vida-seguro]
   nota:
-    pt: 'Ver contradições: tensão com a política de exceções e com o gate L1.'
-    en: 'See contradictions: tension with the exceptions policy and with the L1 gate.'
+    pt: 'Ver contradições: tensão com a política de exceções.'
+    en: 'See contradictions: tension with the exceptions policy.'
 - id: CRA-AnxI-P1-2b
   acto_fonte: 32024R2847
   referencia: Anexo I, parte I, ponto 2, alínea b)
@@ -3538,9 +3538,7 @@ itens:
   confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: [EXT-CRA-OBL-sbom]
-  nota:
-    pt: 'Inconsistência interna menor: a Política 11 §4 põe dependências transitivas como «Recomendado» em L1, enquanto DEP-001 as inclui em L1; ambas satisfazem o mínimo legal (dependências de nível superior).'
-    en: 'Minor internal inconsistency: Policy 11 §4 sets transitive dependencies as “Recommended” at L1, whereas DEP-001 includes them at L1; both satisfy the legal minimum (top-level dependencies).'
+  nota: null
 - id: CRA-AnxI-P2-2
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 2

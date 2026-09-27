@@ -1049,8 +1049,8 @@ itens:
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota:
-    pt: 'Revisão anual em L1 cumpre o piso («pelo menos anual»): CLA-005 e Política 02 §5 (a Política 04 §3.1 marca L1 como «Recomendado» — inconsistência interna).'
-    en: 'Annual review at L1 meets the floor (“at least annual”): CLA-005 and Policy 02 §5 (Policy 04 §3.1 marks L1 as “Recommended” — internal inconsistency).'
+    pt: 'Revisão anual em L1 cumpre o piso («pelo menos anual»): CLA-005, Política 02 §5 e Política 04 §3.1.'
+    en: 'Annual review at L1 meets the floor (“at least annual”): CLA-005, Policy 02 §5 and Policy 04 §3.1.'
 - id: DORA-8-2
   acto_fonte: 32022R2554
   referencia: art. 8.º, n.º 2
@@ -10040,16 +10040,14 @@ itens:
     ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
     ancora: 8-integridade-e-imutabilidade
     citacao:
-      pt: '| Logs protegidos de modificação | Recomendado | Obrigatório | Obrigatório |'
-      en: '| Logs protected from modification | Recommended | Mandatory | Mandatory |'
+      pt: '| Logs protegidos de modificação | Obrigatório | Obrigatório | Obrigatório |'
+      en: '| Logs protected from modification | Mandatory | Mandatory | Mandatory |'
   falta:
-    pt: Proteção obrigatória em L1 na Política 29; proteção em trânsito/utilização.
-    en: Protection mandatory at L1 in Policy 29; protection in transit/in use.
+    pt: Proteção em trânsito e em utilização.
+    en: Protection in transit and in use.
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO: a Política 29 §8 marca «Logs protegidos de modificação» como «Recomendado» em L1, abaixo do dever incondicional do RTS e em contradição interna com LOG-003 (obrigatório L1–L3).'
-    en: 'CONFLICT: Policy 29 §8 marks “Logs protected from modification” as “Recommended” at L1, below the unconditional duty of the RTS and in internal contradiction with LOG-003 (mandatory L1–L3).'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
@@ -11128,8 +11126,8 @@ itens:
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
-    pt: 'CONFLITO: a Política 19 §2.1 marca DAST como «Recomendado» em L1 (TST-005 também só L2+), enquanto o RTS exige análise com testes estáticos e dinâmicos. Inconsistência interna: a mesma matriz marca SAST «Recomendado» em L1, contra DEV-003 e o baseline (SAST em todas as builds).'
-    en: 'CONFLICT: Policy 19 §2.1 marks DAST as “Recommended” at L1 (TST-005 also only L2+), whereas the RTS requires analysis with static and dynamic testing. Internal inconsistency: the same matrix marks SAST “Recommended” at L1, contrary to DEV-003 and the baseline (SAST in all builds).'
+    pt: 'CONFLITO: a Política 19 §2.1 marca DAST como «Recomendado» em L1 (TST-005 também só L2+), enquanto o RTS exige análise com testes estáticos e dinâmicos. Resolvido para entidades financeiras pelo piso CTX-DORA-P03.'
+    en: 'CONFLICT: Policy 19 §2.1 marks DAST as “Recommended” at L1 (TST-005 also only L2+), whereas the RTS requires analysis with static and dynamic testing. Resolved for financial entities by floor CTX-DORA-P03.'
   confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
@@ -12820,8 +12818,8 @@ itens:
     ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
     ancora: 8-integridade-e-imutabilidade
     citacao:
-      pt: '| Logs protegidos de modificação | Recomendado | Obrigatório | Obrigatório |'
-      en: '| Logs protected from modification | Recommended | Mandatory | Mandatory |'
+      pt: '| Logs protegidos de modificação | Obrigatório | Obrigatório | Obrigatório |'
+      en: '| Logs protected from modification | Mandatory | Mandatory | Mandatory |'
   falta:
     pt: Proteção obrigatória em L1 (ver 12-2-d).
     en: Protection mandatory at L1 (see 12-2-d).

@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/02-playbook.md
-  source_sha256: 6f383dac253ec66f9e077c0dfdfa5bcd5826fcf760e57750471086d884ffe19a
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 812973ddf0f2bf4f499edd50f79feffadf3ef46962bdeec6b6b62987b71aa557
+  source_sha256: 6fe6e535fced5d464a16018d4f54da135423b8acfde851e725cfc579476c0d95
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 86a482196db34380c054625f9a248a71e32e3f919b606947c1f6e11cf363edab
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c0f4e2d904dadb56c660ddd5b460d1a61794d1de4ab21b47e09a9df0337c3776
-  translated_at: 2026-09-26T23:27:12Z
-  stamped_at: 2026-09-26T23:27:12Z
+  translated_at: 2026-09-27T07:05:53Z
+  stamped_at: 2026-09-27T07:05:53Z
   reviewed_by: null
 ---
 
@@ -162,7 +162,7 @@ Before any technical action, the legal framing must be established - **complianc
 
 #### 5.1 Inference logging + audit per *tool invocation* {#51-logging-de-inferência--audit-per-tool-invocation}
 - **What:** Log schema extended with inference metadata (model id/version, relevant *features*, decision and confidence, *correlation id*) + **audit per *tool invocation*** ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) where there are AI agents: `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redacted), `intent_event_ref`, `outcome`, `external_effect`.
-- **Retention:** Aligned with the lifetime of the system and with the GDPR; immutability.
+- **Retention:** A period appropriate to the intended purpose of the system, of at least six months (AI Act, Articles 19(1) and 26(6)); in SbD-ToE, 1 year at L2 and 2 years at L3 (the Manual's choice; [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs)); retention limited by the GDPR where personal data are involved; immutability.
 - **Reference:** [Ch. 12 — `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) + [Ch. 12 US-13](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
 
 #### 5.2 Post-market monitoring plan (Art. 72) {#52-plano-de-monitorização-pós-mercado-art-72}

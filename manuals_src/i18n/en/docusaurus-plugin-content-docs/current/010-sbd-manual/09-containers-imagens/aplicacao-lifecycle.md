@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: 20c598c8f3131249e4476ed20bfcb55a7d0d1652dc6f77a64c042a6019e27e35
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: b44068930305fb738ed86a2ecccfda9785ed7edbe833a85e0f15b07dd492f85f
+  source_sha256: edf5ec33b867163d4128cc94330b763ff9b3829dac7f6310f7b26ad476c010d9
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 5d60e85d2510f908dddf5b173c64ce3e401bc24671ec7e234a95501dc72c2a23
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: f2de6576d8fb5a353b8605bb248f65beaae6a38e4c36d1a390ee7c64304f9411
-  translated_at: 2026-09-26T17:23:49Z
-  stamped_at: 2026-09-26T18:34:56Z
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: c2753e8f6683dd662128141b2367ef4a76a91da340ee5e3eaff416993b57e772
+  translated_at: 2026-09-27T07:05:59Z
+  stamped_at: 2026-09-27T07:05:59Z
   reviewed_by: null
 ---
 
@@ -310,7 +310,7 @@ As **AppSec + GRC**, I want to monitor the behaviour of running containers and g
 - [ ] Alerts for critical events (privilege escalation, file modifications, network escape)
 - [ ] Integration with the alerting system (SIEM, Prometheus, webhooks)
 - [ ] Incident response playbook documented and tested
-- [ ] Log retention with a defined minimum period (e.g. 90 days L2, 180 days L3)
+- [ ] Log retention in line with Policy 29 (security logs: 1 year at L2, 2 years at L3)
 - [ ] Real-time event dashboard
 
 :::
@@ -365,7 +365,7 @@ As **DevOps / SRE**, I want to generate the SBOM (Software Bill of Materials) au
 - [ ] SBOM attached to the build artefact (registry label, separate storage)
 - [ ] All direct and transitive dependencies included
 - [ ] Versioned with the image hash and build identifier
-- [ ] Minimum retention of 1 year
+- [ ] Retention according to level (Policy 11: 1 year at L2, 2 years at L3; for products within the scope of the CRA, at least 10 years or the support period, if longer)
 - [ ] Query available for audit and compliance
 
 :::
@@ -602,7 +602,7 @@ As **DevOps / SRE + Software Architects**, I want to apply NetworkPolicy with ex
 |------|---------|-------------|-----|
 | Design | Survey of dependencies | Developer | Before specifying pods |
 | Deploy | Manifest application | DevOps / SRE + Admission Controller | Before workload scheduling |
-| Ops | Flow audit | DevOps / SRE + AppSec Engineer | 30d audit log retention |
+| Ops | Flow audit | DevOps / SRE + AppSec Engineer | Audit log retention in line with Policy 29 |
 | GRC | Exceptions vs compliance | GRC / Compliance | Quarterly review |
 
 **Useful links.**  

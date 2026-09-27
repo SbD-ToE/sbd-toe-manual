@@ -8,16 +8,16 @@ sidebar_position: 17
 translation:
   source_locale: pt
   source_path: 020-assets/policies/17_policy-cicd-seguro.md
-  source_sha256: 832ab3c95b29f7ed347deeea0b37d2716d790eb0d9648204db6f1d25fd54e1b8
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 48bce7a930b573b289c5c46d92dcf6ae67d3242960b646d36d1a40bee3561fb5
+  source_sha256: 763b4d415ad77071901e76bc3d4eedbac1fd2a2ace2bec09b8a6cb62b84b1268
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 75b68a510c0e87ffc720127f094f411ae33df8a20e925dbc9f400c1b3e65a28f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [framework_source_corpus, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 3ab65579479763a74a25d09c08b15d3e952c3cfb3c97e236360972fe1b2e559c
-  translated_at: 2026-09-26T14:10:53Z
-  stamped_at: 2026-09-26T18:36:53Z
+  translated_at: 2026-09-27T07:06:16Z
+  stamped_at: 2026-09-27T07:06:16Z
   reviewed_by: null
 ---
 
@@ -164,7 +164,7 @@ The pipeline itself is an attack vector - it must be treated with the same rigou
 | Execution logs | Complete output of each run | 90 days (L2), 1 year (L3) |
 | Scanner reports (SAST, SCA, secrets) | Results per run, linked to the commit | 90 days (L2), 1 year (L3) |
 | SBOM per build | See SBOM Policy | See SBOM Policy |
-| Promotion approval records | Identity, timestamp, approved artefact | 1 year (L2), 2 years (L3) |
+| Promotion approval records | Identity, timestamp, approved artefact | 2 years (L2), 3 years (L3) |
 | Gate/threshold configuration | Documented and versioned thresholds | Version history |
 
 ---

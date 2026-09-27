@@ -6,16 +6,16 @@ tags: [exemplos, toolchain, ferramentas, iac, logs, vulnerabilidades]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/01-exemplo-toolchain-options.md
-  source_sha256: e5784daff3b113b2e2ec865b47e7cbae25f968d9e3b1a268b1eb17aa58d69400
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a3de58e092b3f2da945b6fad3939da61cfef7f3a86857e96633c1b51f4d0bdb2
+  source_sha256: d799aee99457c5b197a43f1a2fea340052be2541d06d8b5a092906cade7a09cf
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: e76d194ba7304d42de7d766be40da8db645334685a3aa0294b5876a9f7123b25
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, como_fazer, maturity, practitioner_manual, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: 71c62381a9af907303d98845009126d2f81a75f4c45153e4188997bb50ae5b51
-  translated_at: 2026-09-26T18:11:59Z
-  stamped_at: 2026-09-26T18:32:17Z
+  translated_at: 2026-09-27T07:05:56Z
+  stamped_at: 2026-09-27T07:05:56Z
   reviewed_by: null
 ---
 
@@ -660,7 +660,7 @@ All the examples above ensure:
 **Audit Evidence:**
 - Logs with UTC timestamp, user/session IDs, action performed
 - Correlation with traces (Datadog APM, Elasticsearch APM)
-- Retention policy configured (3+ years for L3)
+- Retention policy configured in line with Policy 29 (e.g. ≥ 1 year for pipeline logs at L3)
 
 ---
 
@@ -835,7 +835,7 @@ jobs:
 
 **Audit Trail ([Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 ```
-Workflow logs (7 anos retention)
+Workflow logs (retenção conforme nível: ≥ 1 ano em L3)
 ├── SAST: SonarQube scan results
 ├── SCA: Dependency check report
 ├── Secrets: Trufflehog findings

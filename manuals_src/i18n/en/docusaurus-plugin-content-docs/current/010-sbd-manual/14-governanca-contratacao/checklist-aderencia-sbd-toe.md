@@ -7,16 +7,16 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: ab7030c658f8017c8f4d0bcbf539ecb174cf97b77e866e7d52ed9c4a7859fc59
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 66a0bfc4a9bc19dc586acd0f750b56f4fe5931c5056bc4f5e9cb5c6a51181990
+  source_sha256: b1f1624d4bbe41f3d9f494b164d2847c1b9d6e4ee40ff5d3d31d8ddca0a3c3f0
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 61b6813324f3d6e204d03e522cefbed767f6b190c64cce77efd5db7b70f15a68
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, instrument, mcp_reading_programa, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 37f557ce13821d2b85f46a16d57c7cd7ee69bb8f0ed5949502db9436324ffa72
-  translated_at: 2026-09-26T12:49:09Z
-  stamped_at: 2026-09-26T18:36:26Z
+  translated_at: 2026-09-27T07:06:09Z
+  stamped_at: 2026-09-27T07:06:09Z
   reviewed_by: null
 ---
 
@@ -222,7 +222,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 8.06 | There is a post-deploy observation period with monitored metrics and formal closure criteria (L2: 30 min; L3: 60 min) | **L2+** | pol-28 |
 | 8.07 | Security event logs are in a structured format (JSON) with a mandatory minimum schema (timestamp UTC, level, event.action, application, trace.id) | **L2+** | pol-29 |
 | 8.08 | Logs do not contain passwords, full tokens, card data or unmasked PII | **S** | pol-29 |
-| 8.09 | Security logs are centralised with a minimum retention of 1 year (L2) / 2 years for security and 3 years for audit (L3/DORA) | **L2+** | pol-29 |
+| 8.09 | Security logs are centralised with a minimum retention of 1 year (L2) / 2 years for security and 3 years for audit (L3) | **L2+** | pol-29 |
 | 8.10 | Critical security events have defined alerts with runbooks (diagnosis, immediate actions, escalation) | **L2+** | pol-30, pol-31 |
 | 8.11 | Each alert has a defined response SLA and automatic routing | **L2+** | pol-31 |
 | 8.12 | There is an Incident Response Plan with activation criteria, structured phases and playbooks | **L2+** | pol-32 |

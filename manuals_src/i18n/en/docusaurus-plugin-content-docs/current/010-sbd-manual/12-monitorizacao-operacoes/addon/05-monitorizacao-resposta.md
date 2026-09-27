@@ -7,16 +7,16 @@ tags: [resposta a incidentes, IRP, SOAR, integração, playbooks]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/05-monitorizacao-resposta.md
-  source_sha256: 0787d600fbbc67837d80c9393a0d8758433fcd6f8badcc9214c60ff6d42bb976
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: d9fed7420aab04b9ac99c30b64b714b82975abacfa209fc2a4ad5e46dca99140
+  source_sha256: 74d8b0a39cc83662eed5cded5700ec88e07adaba48f7935db1875d7c5fdccef0
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 66a3da48aef90b8ed958b88b3c1745bc49dd5dfc6618a2299c12aaa4536edd8d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, cycle_iteration, requirement_runtime, validation_evaluation]
   glossary_sha256: f54d9bfabf1a57875d5f9fd1a792f0cf1058f991156ab7731da2c3405e013022
-  translated_at: 2026-09-26T11:17:28Z
-  stamped_at: 2026-09-26T18:35:41Z
+  translated_at: 2026-09-27T07:06:01Z
+  stamped_at: 2026-09-27T07:06:01Z
   reviewed_by: null
 ---
 
@@ -58,7 +58,7 @@ Each stage depends on the **quality, context and availability** of the monitored
 | **User/session context**  | Attribute actions and trace movements             |
 | **Correlation across sources**        | Unify events from application, infra, CI/CD      |
 | **Integration with IRP**             | Automates tickets, response workflow         |
-| **Retention of at least 90 days** | Allows retroactive investigation and audit (L3) |
+| **Retention in line with Policy 29** (1 year at L2, 2 years at L3) | Enables retrospective investigation and audit |
 
 ---
 

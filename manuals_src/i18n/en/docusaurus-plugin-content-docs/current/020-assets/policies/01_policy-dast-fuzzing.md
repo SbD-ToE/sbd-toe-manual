@@ -8,16 +8,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 020-assets/policies/01_policy-dast-fuzzing.md
-  source_sha256: 11d0a8a80aacf593a6b649aede085c6c50932751eb5a9e22a2172ab9546f04c4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: c1241cc5e0c7d20d4c18f8f9ca5652393881388114dff9b5b40ac4bc244332d7
+  source_sha256: 510a592508c76597b018d117e07e2dd075f1b1cf7695be0c4277c671161ef0b4
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 6d5df6480904863cb55acc237dd17d0bce7d7e3ee1a06ea24af3cffcc09590d4
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, avaliacao, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 2190616af45c704d0bdde9b6b05175705cda4e10018fb8b2c46ae504cde9f3e4
-  translated_at: 2026-09-26T14:10:42Z
-  stamped_at: 2026-09-26T18:36:43Z
+  translated_at: 2026-09-27T07:06:10Z
+  stamped_at: 2026-09-27T07:06:10Z
   reviewed_by: null
 ---
 
@@ -85,7 +85,7 @@ This policy is **mandatory for L2 and L3**. For L1, the practices described here
 
 - [ ] DAST job executed **after** deploy to staging and **before** promotion to production
 - [ ] Report correlated with the commit SHA and release tag
-- [ ] Report archived as a pipeline artefact with a minimum retention of 90 days
+- [ ] Report archived as a pipeline artefact with a minimum retention of 30 days (L1), 90 days (L2) or 1 year (L3)
 - [ ] DAST result traceable in the release record
 
 ### 3.4 Blocking and response criteria {#34-critérios-de-bloqueio-e-resposta}
@@ -105,10 +105,10 @@ The pipeline reports the result (automated signal). The decision to override or 
 
 | Artefact | Minimum retention |
 |---|---|
-| DAST report (HTML/JSON/SARIF) | 90 days |
-| Gate evidence (pass/fail) in the pipeline log | 90 days |
+| DAST report (HTML/JSON/SARIF) | 30 days (L1), 90 days (L2), 1 year (L3) |
+| Gate evidence (pass/fail) in the pipeline log | 30 days (L1), 90 days (L2), 1 year (L3) |
 | Open findings in the centralised platform | Until closure or formal acceptance |
-| Exception register | 1 year |
+| Exception register | 1 year (L1), 2 years (L2), 3 years (L3) after closure (Policy 06 §10) |
 
 ---
 
@@ -171,10 +171,10 @@ The pipeline reports the result (automated signal). The decision to override or 
 
 | Artefact | Minimum retention |
 |---|---|
-| Fuzzing report | 90 days |
+| Fuzzing report | 30 days (L1), 90 days (L2), 1 year (L3) |
 | Input corpora (versioned) | Permanent |
 | Reproducible cases (PoC) in the findings platform | Until closure |
-| Exception register | 1 year |
+| Exception register | 1 year (L1), 2 years (L2), 3 years (L3) after closure (Policy 06 §10) |
 
 ---
 

@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/01-intro.md
-  source_sha256: 6bc5c3f7c20a59672ebd14664b1b56d0ef1ad2ba727560015d732f272cd41e36
-  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
-  target_sha256: cf43b75b8d74f75dd51949800264b66d93fa9a38487246635acf37efca4250e0
+  source_sha256: cbb98c621106fe72c86896007cb500590481c6a1248c7260c0bdc193441c2036
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 008565d9bf5509d9c53fe8285cd1ec8c1f74be6d28d3f5f2e41589f673482959
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cra_support_period, csa_certification_scheme, cycle_iteration, eu_ce_marking, eu_notified_body, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
-  glossary_sha256: c235712b8952eddfed809f6d1784dd1e9fa378f4bdf192ab8f823970a2b37a66
-  translated_at: 2026-09-27T00:04:40Z
-  stamped_at: 2026-09-27T00:04:40Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cra_support_period, csa_certification_scheme, cycle_iteration, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
+  glossary_sha256: 65e3761ca8f3fcf186a68a382295b6910c3a06b27e92e479ad1fc272b84f8f61
+  translated_at: 2026-09-27T07:05:54Z
+  stamped_at: 2026-09-27T07:14:33Z
   reviewed_by: null
 ---
 
@@ -44,7 +44,7 @@ The CRA imposes obligations on manufacturers, importers and distributors, includ
 - essential requirements for **security by design and by default** throughout the entire lifecycle;
 - **vulnerability handling** processes, including receipt, analysis, remediation and responsible disclosure;
 - **vulnerability handling during the support period** (Annex I, Part II) and remediation without delay;
-- requirements for **technical documentation**, instructions and information to the user;
+- requirements for **technical documentation**, instructions and information to the user — the technical documentation and the EU declaration of conformity are kept at the disposal of the market surveillance authorities «for at least 10 years after the product with digital elements has been placed on the market or for the support period, whichever is longer» (Article 13(13));
 - obligations to **notify actively exploited vulnerabilities and severe incidents**.
 
 ### Scope gate {#gate-de-âmbito}

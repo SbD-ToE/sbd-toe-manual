@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 020-assets/policies/12_policy-excecoes-cve.md
-  source_sha256: 9fd4cca7e1c02eb53f36b4f3882ee85c2095415e91f534591e30ed99222a1704
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7985baeeea31b6a35f79c62c4089e976fc2d364a8ddaf9762eab0d6d08822b1c
+  source_sha256: a6098419fa73f0f4b71e8009c137b9a34e215e903bb040f4a723532051c9dc54
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: a8c3c22dee1ac892e0bc01e2c750e1f5bbd19c3d0b79a1cdf97973889fda09a1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, avaliacao, framework_source_corpus, layer, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
   glossary_sha256: 7564a010faf668f12fad0ec13ece3cafe4df63a971e2b77baa01cecc85c67a79
-  translated_at: 2026-09-26T14:10:49Z
-  stamped_at: 2026-09-26T18:36:50Z
+  translated_at: 2026-09-27T07:06:15Z
+  stamped_at: 2026-09-27T07:06:15Z
   reviewed_by: null
 ---
 
@@ -179,9 +179,9 @@ The CI/CD pipeline must check the status of active exceptions in every build:
 
 | Artefact | Description | Retention |
 |---|---|---|
-| `excecoes.yaml` / `vex.yaml` | Register of active exceptions with approvals and deadlines | While the exception is active + 1 year |
+| `excecoes.yaml` / `vex.yaml` | Register of active exceptions with approvals and deadlines | While the exception is active + 1 year (L1), 2 years (L2), 3 years (L3) |
 | `sca-report.*` | SCA report with findings and the status of exceptions | 90 days (L2), 1 year (L3) |
-| Reassessment history | Records of previous reassessments with decisions | 2 years (L3), 1 year (L2) |
+| Reassessment history | Records of previous reassessments with decisions | 2 years (L2), 3 years (L3) after the exception is closed |
 
 ---
 

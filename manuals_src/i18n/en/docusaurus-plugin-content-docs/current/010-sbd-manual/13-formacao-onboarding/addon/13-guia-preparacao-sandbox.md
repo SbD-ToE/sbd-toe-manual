@@ -6,16 +6,16 @@ tags: [governanca, contractors, sandbox, formacao, onboarding, pratica]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/13-guia-preparacao-sandbox.md
-  source_sha256: b39ab15371b0560131ad03cf812cf4dc54410d4f8f502aa76c8854e2c9fe4ec1
-  source_commit: 1860d7830f3934c2b62996b21c22b5b51ce3953b
-  target_sha256: 27e75b2e3d7e7433bb005f6d118dd54939cfcb37d08ee107b46b6026eac5e33f
+  source_sha256: 952bed0892f15019e4089b3636350760a9f15e49efad2d0e449a4c7c0be7ad28
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 6882dc34f2623b0c5a7487a4f90dac2df8ef5e596a3f379596a3b0e5dda9dde0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [cycle_iteration, lifecycle_phase, practitioner_manual, threat, validation_evaluation]
   glossary_sha256: 6014d7b847404cbf1617297bddbc97ef01b3b72d355846ab682041beda1e42a4
-  translated_at: 2026-09-26T12:56:00Z
-  stamped_at: 2026-09-26T18:36:01Z
+  translated_at: 2026-09-27T07:06:06Z
+  stamped_at: 2026-09-27T07:06:06Z
   reviewed_by: null
 ---
 
@@ -347,7 +347,7 @@ T+0: Backup de work realizado (se necessário)
      Contractor removido de org/namespace
      Credentials revogadas
      Resources deletados
-     Logs arquivados (7 anos)
+     Logs arquivados (conforme a Política 29 §7)
 ```
 
 ---
@@ -428,7 +428,7 @@ The sandbox is the **practical component of US-16 (Training Track)**:
 [ ] Backup de work realizado
 [ ] Sandbox credentials revogadas
 [ ] Sign-off de conclusão assinado
-[ ] Histórico arquivado (7 anos)
+[ ] Histórico arquivado (conforme a Política 33 §8)
 [ ] Acesso real concedido (US-15 completo)
 ```
 

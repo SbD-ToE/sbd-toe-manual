@@ -8,16 +8,16 @@ sidebar_position: 25
 translation:
   source_locale: pt
   source_path: 020-assets/policies/25_policy-deploy-seguro.md
-  source_sha256: 2b2cb981f00e7ffb97be36cee7888ee7822807525c1c6057d4748c08ff80e6e2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 754a21b2a2629b93ca4185bfb3be410dec2bd5d9620d46a576e07ac0c599fda6
+  source_sha256: c019be1545d119976344dba223d1ba54aba8533d2edaef5587ce9998346585e5
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: a6665a449061e53d6a2b65a60a15c02ab15605f6d4e1fa0bc8930df1e297a1a5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [framework_source_corpus, practitioner_manual, provenance, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 4a2a7b0692910162a880f92df27cb308ba85deaadfe00adee7f96599f0985bdd
-  translated_at: 2026-09-26T14:10:58Z
-  stamped_at: 2026-09-26T18:36:58Z
+  translated_at: 2026-09-27T07:06:18Z
+  stamped_at: 2026-09-27T07:06:18Z
   reviewed_by: null
 ---
 
@@ -155,7 +155,7 @@ Evidence artefacts:
 | Artefact | Description | Retention |
 |---|---|---|
 | Deploy execution log | Complete output of the deploy pipeline | 90 days (L2), 1 year (L3) |
-| Approval record | Identity, timestamp, approved digest | 1 year (L2), 2 years (L3) |
+| Approval record | Identity, timestamp, approved digest | 2 years (L2), 3 years (L3) |
 | Rollout configuration | Strategy and promotion criteria | Active version |
 | CHANGELOG and Git tags | Versioning and release metadata | History |
 | End-to-end traceability | Commit→artefact→deploy cross-reference | As per the Traceability Policy |

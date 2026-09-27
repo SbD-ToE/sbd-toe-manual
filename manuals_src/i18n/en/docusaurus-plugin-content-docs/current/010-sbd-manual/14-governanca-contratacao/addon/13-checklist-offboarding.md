@@ -6,16 +6,16 @@ tags: [governanca, contractors, offboarding, rescisao, seguranca, auditoria]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/13-checklist-offboarding.md
-  source_sha256: 40672366fd9b67354c222d9a8a7e43bb7ba9aa0d208489d495f9af918b5f030b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4ecc98ad227b84085779059dba54855fec31605e6adef9aa1e70d8bedba9b893
+  source_sha256: a94e0d32d777d4dbdf4b51596f00ef925f88bbca2e812706875e19f5fcd7281a
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: c46c1c6ee86eb786e867804062593daa02551cfab62064ff5899b6c7256c85fe
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [cycle_iteration, framework_source_corpus, mirror_osf, role_tech_lead, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 5eeae2b4c43fea6604885323ecebdb95dc382b55f9ce490f85c63a7bc3e12612
-  translated_at: 2026-09-26T12:00:19Z
-  stamped_at: 2026-09-26T18:36:20Z
+  translated_at: 2026-09-27T07:06:07Z
+  stamped_at: 2026-09-27T07:06:07Z
   reviewed_by: null
 ---
 
@@ -94,7 +94,7 @@ T+7 dias: Auditoria
 | **Backup of developed source code** | DevOps | [ ] | [ ] | Zip archive, versioned with a timestamp |
 | **Backup of created documentation** | Tech Lead | [ ] | [ ] | Wikis, README, specs, design docs |
 | **Backup of important communication** | HR | [ ] | [ ] | Critical emails, Slack messages (if compliance requires it) |
-| **Archive in secure storage** | DevOps | [ ] | [ ] | Retention: 7 years (DORA requirement), restricted access |
+| **Archive in secure storage** | DevOps | [ ] | [ ] | Retention: 5 years (Policy 33 §8), restricted access |
 
 **Storage:**
 ```
@@ -333,7 +333,7 @@ Contacto para follow-up: _________________
 
 ## 📊 Artefacts & Documentation {#-artefactos--documentação}
 
-**Keep for 7 years (DORA requirement):**
+**Keep for 5 years (Policy 33 §8):**
 
 ```
 Archive Location: /compliance/offboarding/{contractor-name}/{date}/
@@ -424,7 +424,7 @@ Offboarding is considered **COMPLETE** when:
 - ✅ Sign-off form signed by 4+ parties
 - ✅ Log audit shows no post-termination activity
 - ✅ Confidentiality obligations reinforced
-- ✅ Complete archive in compliance storage (7 years)
+- ✅ Complete archive in compliance storage (5 years)
 
 ---
 

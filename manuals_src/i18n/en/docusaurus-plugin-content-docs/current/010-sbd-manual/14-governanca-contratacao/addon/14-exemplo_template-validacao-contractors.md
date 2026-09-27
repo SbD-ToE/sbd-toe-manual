@@ -6,16 +6,16 @@ tags: [governanca, contractors, validacao, triagem, checklist, onboarding]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/14-exemplo_template-validacao-contractors.md
-  source_sha256: 17032c9d490dc0bef019db42d2108f53b8e032c6df44a68c019b3add633c2931
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 8bb878e193daaa86b189118e888e11edaf74b0eb5dd296d3d7be5e07d63789b2
+  source_sha256: b80522063ed81275fc7801cd1b96859206c32c3ebb69aab23583a53f0eb6ce0f
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: e9de10bfc720903eb32b039edc5eef89c0ad4fc90f770cad012d8f6b3a9914b9
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, papel_suporte, role_procurement, role_tech_lead, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: e1004a44534609d71c0d79b49f8667db265dee048efc1b57565ada71054115fb
-  translated_at: 2026-09-26T12:00:20Z
-  stamped_at: 2026-09-26T18:36:21Z
+  translated_at: 2026-09-27T07:06:07Z
+  stamped_at: 2026-09-27T07:06:07Z
   reviewed_by: null
 ---
 
@@ -244,6 +244,6 @@ After approval in this template, the contractor follows:
 ## 🏁 Final Notes {#-notas-finais}
 
 - **This template is mandatory for L2–L3** and recommended for L1.
-- **Keep a history of all validations** for 7 years (DORA requirement).
+- **Keep the history of all validations** for the duration of the contract + 1 year (+ 3 years at L3), in line with [Policy 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade).
 - **Review this template annually** against updated security policies.
 - **Escalation:** If any field raises a red flag, contact the CISO before approval.

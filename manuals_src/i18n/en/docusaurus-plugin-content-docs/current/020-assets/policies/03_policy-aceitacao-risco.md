@@ -8,15 +8,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 020-assets/policies/03_policy-aceitacao-risco.md
-  source_sha256: 13ec483762279b491858c8168444dfb1fb0820ca2c86d3597bff7c796756b6b2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: dfdb4cfad1db1a372dd3d1a83452a88bd6396b8a3f78bb670c31642ebacf278c
+  source_sha256: 93dfe5585ce71ba2aa8ff5965ad887a23aa821cf15097fc55c20ab123232f17d
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 6b28a3facb3e0f9ee23a10ca85e9d547d1f1c96906894aaf717e1fbbc4996cc7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [alcada, cycle_iteration, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability]
-  glossary_sha256: abbe3e1eea703f641a6bfb399c503862115846961d5e6764158924df1dfa87b1
-  translated_at: 2026-09-26T14:10:43Z
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [alcada, cycle_iteration, mcp_reading_programa, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability]
+  glossary_sha256: 034cc5d6d8d631cc594516f3ebe34bab806bce90df395766cab2e6dbdfddceb2
+  translated_at: 2026-09-27T07:06:11Z
+  stamped_at: 2026-09-27T07:06:11Z
   reviewed_by: null
 ---
 
@@ -155,9 +156,9 @@ Expired records without a documented reassessment are treated as **unmanaged ris
 
 | Artefact | Suggested location | Retention |
 |---|---|---|
-| Accepted-risk record | `docs/security/risk-acceptance/` or GRC platform | 2 years after expiry |
+| Accepted-risk record | `docs/security/risk-acceptance/` or GRC platform | 1 year (L1), 2 years (L2), 3 years (L3) after expiry |
 | Evidence of compensating mitigation | Attached to the record | While the risk is active |
-| Formal approvals | Attached to the record (PR, issue, signed document) | 2 years after expiry |
+| Formal approvals | Attached to the record (PR, issue, signed document) | 1 year (L1), 2 years (L2), 3 years (L3) after expiry |
 
 ---
 

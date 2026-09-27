@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: b47cbacc0c820182dd7edb8a8558c9c6d27d0bdd153d8a842aef4c98fb0e225f
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 17876c1616b0f0c697128be67d8bcc314ae157c0642adcdc531f04627195f93d
+  source_sha256: 8a8d1349840a0d8aa0fd392bf4527561e885b7554904d0bc7fee855ce0cf6503
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 2ea978674b78d6e299f07701de913b45e630a0834ed1d638111792eadcfa0ede
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 2e4a5bba3484a556d9ed76f10c8294d7380fb5e850534e00cf8152858029678c
-  translated_at: 2026-09-26T23:27:27Z
-  stamped_at: 2026-09-26T23:27:27Z
+  translated_at: 2026-09-27T07:06:08Z
+  stamped_at: 2026-09-27T07:06:08Z
   reviewed_by: null
 ---
 
@@ -680,7 +680,7 @@ As **CISO + Training Manager**, I want **to define and execute a mandatory train
 - [ ] Completion SLA communicated to the contractor: Maximum **5 working days before the start date**  
 - [ ] Automatic notification sent if the SLA is at risk (e.g. 2 days before the deadline)  
 - [ ] "Training complete" sign-off provided to the AppSec Engineer (releases technical access)  
-- [ ] History kept for 3 years (DORA, NIS2 requirement)  
+- [ ] History kept in line with [Policy 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade) (duration of the contract + 1 year at L1 and L2; duration of the contract + 3 years at L3)  
 
 :::
 
@@ -734,7 +734,7 @@ As **Security Champion + HR / People Operations + DevOps / SRE**, I want **to ex
 - [ ] Last backup of the contractor's work performed (e.g. clone of private repos)  
 - [ ] Formal "offboarding complete" sign-off recorded in GRC with timestamp  
 - [ ] Legal reminder sent to the contractor: Confidentiality obligations continue after termination (duration, consequences)  
-- [ ] Offboarding report archived for 7 years (DORA requirement)  
+- [ ] Offboarding report archived for 5 years ([Policy 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade))  
 
 :::
 

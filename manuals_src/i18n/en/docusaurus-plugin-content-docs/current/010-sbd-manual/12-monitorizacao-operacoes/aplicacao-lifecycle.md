@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-  source_sha256: ecf280a765babffdc3c506f4103025913696b0d9cc72b8553caeb6269871831f
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 715ceea4f59625c29bb28a448cf275c7a146a2dbbf6d078fe04d6fafc84d1269
+  source_sha256: 9cce0d87837cebf90c48e3946832200af945e58d885a98b5ddab1e009a60f4ed
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 1ae8af5bbb51e35c38391553838612e1857d186eab348377cc7bc3d4bbbb5367
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 554488124abc29c0a074ab0f564738d25c3197109db2ea24fbb3cc6f965ed64c
-  translated_at: 2026-09-26T12:48:58Z
-  stamped_at: 2026-09-26T18:35:46Z
+  translated_at: 2026-09-27T07:06:03Z
+  stamped_at: 2026-09-27T07:06:03Z
   reviewed_by: null
 ---
 
@@ -319,7 +319,7 @@ As **DevOps/GRC**, I want **to ensure log security and integrity** (WORM retenti
 - [ ] Access to logs restricted and audited  
 - [ ] Hash or digital signature applied per batch  
 - [ ] Logs separated from the application (forwarder, sidecar, service)  
-- [ ] Minimum retention: 30d (L1), 90d (L2/L3)  
+- [ ] Minimum retention in line with [Policy 29](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs): security logs 90 days (L1), 1 year (L2), 2 years (L3); operational logs 30 days (L1), 90 days (L2), 1 year (L3)  
 - [ ] Retention reversal test every quarter  
 
 :::
@@ -329,7 +329,7 @@ As **DevOps/GRC**, I want **to ensure log security and integrity** (WORM retenti
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local (no retention) | WORM + 90d | WORM + 180d + verifiable integrity |
+| Local: 30 days (operational), 90 days (security) | WORM + 1 year (security) | WORM + 2 years (security) + verifiable integrity |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |

@@ -6,16 +6,16 @@ tags: [caso de estudo, exemplos, logging, alertas, deteção, correlação, tele
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/casos-praticos-monitorizacao.md
-  source_sha256: 7396a9988f34774ada830f69fdce3a133fbca0ea5192d5def26b1a1f033a88df
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: cd441a5651842c0f35f8b0b61820db96929c644a95d7bc58593a5955d9b24819
+  source_sha256: 3a8850c7980cc42f5f35352b566ff3bd2b8baa3dc4a099354661938b27cdaa57
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 5df24da2e76ad590bcd9c3effa1ec49b0c82c1af0126f1646cb162c19723045b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, practitioner_manual, traceability, validation_evaluation]
   glossary_sha256: a3e31eca02d3feda6771afa947c017741f236504da7e545162132f66d5ef9b77
-  translated_at: 2026-09-26T11:17:37Z
-  stamped_at: 2026-09-26T18:35:48Z
+  translated_at: 2026-09-27T07:06:04Z
+  stamped_at: 2026-09-27T07:06:04Z
   reviewed_by: null
 ---
 
@@ -113,7 +113,7 @@ This annex presents **practical examples** of the application of the monitoring,
 
 - Local logging to a rotating file in a structured format (JSON)
 - Events recorded: `login`, `erro`, `config.change`
-- 15-day retention on local disk with weekly backups
+- Retention of 30 days on local disk with weekly backups
 - Manual validation of the logging operation in release reviews
 - No SIEM, no automatic correlation and no real-time alerts
 

@@ -6,16 +6,16 @@ tags: [policy, organizacional, monitorizacao, deteccao, resposta, operacoes]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/policies-relevantes.md
-  source_sha256: 761ce76d56f7920b98ea9a2c2167c631ced3eb56d9e4b4a0a5622fdb6b620e95
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e5639de46a84e06b96fefe7778ef94c31d5eeaaab88f8acfcb0a7169cce4600d
+  source_sha256: 504df17347e7583f53f3ea26ef1d29cf3b2e4cfd8864bdee63e59293cb1ad036
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 5c295a920b581e9f3df830a271c72cf46a06c66fdb64d920c3fbaf0c267f6bfc
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, maturity]
   glossary_sha256: e359a6ded9090ff45ccb28683b641dd77cf04bf0a414c4427a626b8e56ecab78
-  translated_at: 2026-09-26T11:17:38Z
-  stamped_at: 2026-09-26T18:35:50Z
+  translated_at: 2026-09-27T07:06:05Z
+  stamped_at: 2026-09-27T07:06:05Z
   reviewed_by: null
 ---
 
@@ -46,7 +46,7 @@ These policies:
 | [Monitoring and Logging Policy](/sbd-toe/assets/policies/policy-logging-estruturado)              | ✅ Yes        | All services and applications             | Definition of events, logging levels, structured formats, centralised destinations. |
 | [Alerting and Behaviour Detection Policy](/sbd-toe/assets/policies/policy-gestao-alertas)  | ✅ Yes        | Critical systems and production environments  | Types of sensitive events, thresholds, false-positive tolerance, response. |
 | [Service Observability Policy](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)          | ⚠️ Optional  | Microservices and distributed architectures  | Minimum metrics, mandatory dashboards, correlation with logs.                |
-| [Log Retention and Access Policy](/sbd-toe/assets/policies/policy-logging-estruturado)         | ✅ Yes        | All security and operations logs      | Retention ≥30 days, ACL, encryption, access logging.                          |
+| [Log Retention and Access Policy](/sbd-toe/assets/policies/policy-logging-estruturado)         | ✅ Yes        | All security and operations logs      | Retention per log type and level (Policy 29 §7), ACL, encryption, access logging.                          |
 | [Operational Incident Response Policy](/sbd-toe/assets/policies/policy-irp)   | ✅ Yes        | All domains with active detection        | Response channels, playbooks, reporting, domain owners.                     |
 | [Agent Coverage and Instrumentation Policy](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)| ⚠️ Optional  | Infrastructure, cloud, endpoints           | Types of mandatory agents, minimum coverage, maintenance of visibility.   |
 

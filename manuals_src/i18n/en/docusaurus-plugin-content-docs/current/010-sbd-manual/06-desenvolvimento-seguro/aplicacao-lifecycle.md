@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/aplicacao-lifecycle.md
-  source_sha256: aa3b30e71435f18d87c1f89fc527c67d2decfbacde16b357762b23e989719a96
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: bb0e3b59b618bba2bf91402173fd2965202517cf823cd7dac702e4e62c255a30
+  source_sha256: c336da9e83b4d205a3319534be29d6fbe238c0d7147060d4625ec96e8a95a2f7
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 0f08c962d8c1fd0372a74dc7326621758d5f2ab5073a30d5e6817c0aae2ec57b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, discipline, lifecycle_phase, mapping, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 1ad868f656ea7fea894ef208c31604f554ac9b8d1abaedb5eb90a473d6cd4bfd
-  translated_at: 2026-09-26T08:57:15Z
-  stamped_at: 2026-09-26T18:34:07Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, eu_placing_on_market, lifecycle_phase, mapping, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 1d9c05e4730e8aec8b1730c0b391b1e9b922eb5c8efc5b3bee2b00c1d220bda0
+  translated_at: 2026-09-27T07:05:58Z
+  stamped_at: 2026-09-27T07:14:46Z
   reviewed_by: null
 ---
 
@@ -529,7 +529,7 @@ As **Quality Assurance (QA)** and **DevOps / SRE**, I want to **centrally archiv
 - [ ] Evidence repository defined (preferably WORM)  
 - [ ] Automatic export per *build/release*  
 - [ ] Evidence index per application and *commit*  
-- [ ] Retention policy defined (≥ 2 years; L3 ≥ 5 years)  
+- [ ] Retention policy defined (1 year at L1, 2 years at L2, 3 years at L3; for products within the scope of the CRA, at least 10 years after placing on the market or the support period, whichever is longer)  
 - [ ] Audited and controlled access
 :::
 
@@ -546,7 +546,7 @@ As **Quality Assurance (QA)** and **DevOps / SRE**, I want to **centrally archiv
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| CI/CD | Completion of the execution of validations in the pipeline | **Quality Assurance (QA)** + **DevOps / SRE** | Export per *build*/*release*; retention ≥ 2 years (≥ 5 years at L3) |
+| CI/CD | Completion of the execution of validations in the pipeline | **Quality Assurance (QA)** + **DevOps / SRE** | Export per *build*/*release*; retention of 1 year (L1), 2 years (L2), 3 years (L3); ≥ 10 years for products within the scope of the CRA |
 
 ---
 

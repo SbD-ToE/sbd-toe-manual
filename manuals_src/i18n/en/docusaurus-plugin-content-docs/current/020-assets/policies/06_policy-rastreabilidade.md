@@ -8,16 +8,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 020-assets/policies/06_policy-rastreabilidade.md
-  source_sha256: a16e652a797f1369672ae49cfa8aff310ce99c0bff9a9c067dc7fd222082d81d
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: c6384d929ee0f1ece3e63f9bbcec34e9f9b46ee8d132fa795b1d7c07798c53d5
+  source_sha256: f4ba401a504d1d3f6d39afab15228672b0b39c46251dbcafb2c6f71aba7d82a5
+  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
+  target_sha256: 2702b04b12725b074e9bd0d3f0a19435fb0df70d2cdee05281d20f55cc754a42
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 8d8c42644fbae55d04dc05ac622a3177cc6115d2fe7b21d627c95a717739bb92
-  translated_at: 2026-09-26T23:27:28Z
-  stamped_at: 2026-09-26T23:27:28Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [audit_trail, avaliacao, cra_support_period, cycle_iteration, eu_placing_on_market, lifecycle_phase, mapping, mcp_reading_programa, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 9b234151e8d7d9065bcd702907cac5c99b0768a3610c9c89eac8e74850abb83b
+  translated_at: 2026-09-27T07:09:00Z
+  stamped_at: 2026-09-27T07:14:35Z
   reviewed_by: null
 ---
 
@@ -187,14 +187,19 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Type of evidence | L1 | L2 | L3 |
 |---|---|---|---|
 | Application logs | 30 days | 90 days | 1 year |
+| Security logs (authentication, authorisation, changes) | 90 days | 1 year | 2 years |
+| Audit logs (administrative operations, access to sensitive data) | 1 year | 1 year | 3 years |
 | CI/CD pipeline logs | 30 days | 90 days | 1 year |
-| Security reports (SAST/DAST/SCA) | 30 days | 90 days | 1 year |
+| Security reports per run (SAST/DAST/SCA, fuzzing, image scanning, IaC) | 30 days | 90 days | 1 year |
+| Validation evidence package per release (index + signed export) | 1 year | 2 years | 3 years |
 | Build artefacts and SBOM | Per release | 1 year | 2 years |
-| Records of approvals and exceptions | 1 year | 2 years | 3 years |
+| Approval records | 1 year | 2 years | 3 years |
+| Records of exceptions and risk acceptances (including expired ones), with approvals and reassessments | 1 year after closure or expiry | 2 years after closure or expiry | 3 years after closure or expiry |
+| Incident records (timeline, post-mortem, notifications) | 1 year | 1 year | 3 years |
 | Classification and reassessment records | 2 years | 3 years | 5 years |
 
 :::note
-In regulated contexts (DORA, NIS2, healthcare, financial), retention periods may be longer; the GDPR may, conversely, require shorter periods for logs containing personal data. Applicable regulatory requirements always prevail.
+The periods in this table are the minimum recommended by the Manual (the Manual's choice). The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails, always within the GDPR limit where personal data are involved — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); the value adopted is recorded in the organisation's retention map. For products within the scope of the CRA, the evidence package and the SBOM that form part of the technical documentation are kept available for at least 10 years after placing on the market or for the support period, whichever is longer (CRA, Article 13(13)), regardless of level.
 :::
 
 ---

@@ -7,16 +7,16 @@ tags: [dora, nis2, convergencia, lex-specialis, governação]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/03-convergencia-dora.md
-  source_sha256: 841d0ea7dd38020b65acf40e5ec0f98b2c8bb7a7d07d5a62d6a1b21c8dd27f18
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 348593e6eb296a34d1b8c11e73b8a0087414f9e66d46356e59fda5c7ad30a415
+  source_sha256: 332618a06a23efffa5db92550264e321ae115a160c1daa2a8628e34f26c9971d
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: e64f0722fe1198033b40da3cc56af6d91ddff319c752e733a489a8b87983dbe3
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, dora_financial_entity, dora_ict_risk, dora_ict_tpp, esquema_regime, nis2_essential_entity, practitioner_manual, requirement_runtime, sbdtoe_sbd, schema]
   glossary_sha256: efa6d8e8dc98c6c39d5f5fd9b08904c5e4a19c91b85e04b586ed217c83b1e114
-  translated_at: 2026-09-26T23:27:24Z
-  stamped_at: 2026-09-26T23:27:24Z
+  translated_at: 2026-09-27T07:05:57Z
+  stamped_at: 2026-09-27T07:05:57Z
   reviewed_by: null
 ---
 
@@ -69,7 +69,7 @@ Even under DORA, NIS2 aspects may retain value:
 - [ ] The SbD-ToE requirements catalogue has the `Fonte` column filled in.
 - [ ] The master policy includes a section "Lex Specialis: DORA as a sector-specific act (NIS2 Art. 4; DORA Art. 1(2)) — NIS2 risk-management and notification obligations (and the related supervision) not applicable".
 - [ ] Incident schema based on the DORA RTS/ITS, with optional NIS2 fields.
-- [ ] Log retention defined at ≥3 years (justified as covering both).
+- [ ] Log retention defined per record type, with a single period that satisfies DORA and NIS2 and is grounded in the risk assessment (in SbD-ToE, at L3: 2 years for security logs and 3 years for audit, the Manual's choice).
 - [ ] The supplier inventory indicates criticality + regulatory origin.
 - [ ] Annual management training recorded (DORA + NIS2 content integrated).
 - [ ] Formal exceptions process with board approval for L3.
@@ -83,8 +83,8 @@ No. The DORA circuit is followed. If the national authority requires an aggregat
 **Q2. What if a non-financial supplier invokes NIS2?**  
 The supplier's demand is mapped to a control already satisfied under DORA; a SoA with the regulatory origin is sent.
 
-**Q3. Are 1-year logs enough for NIS2?**  
-For convergence, keeping 3+ years (DORA) reduces discussion. The rationale should be documented.
+**Q3. Is 1 year of logs enough for NIS2?**  
+Neither DORA nor NIS2 sets a number: under DORA, the entity establishes the retention period taking into account the results of the ICT risk assessment (Delegated Regulation (EU) 2024/1774, Article 12(2)); Implementing Regulation (EU) 2024/2690 requires logs to be maintained «for a predefined period» (Annex, point 3.2.5). For convergence, a single period per record type reduces debate — in SbD-ToE, 2 years for security logs and 3 years for audit at L3 (the Manual's choice). Document the rationale.
 
 **Q4. TLPT vs. NIS2 testing?**  
 Running TLPT (where applicable) satisfies and exceeds the generic NIS2 requirement to assess effectiveness.

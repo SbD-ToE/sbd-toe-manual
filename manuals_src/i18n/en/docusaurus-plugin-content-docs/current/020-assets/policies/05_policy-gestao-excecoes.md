@@ -8,16 +8,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 020-assets/policies/05_policy-gestao-excecoes.md
-  source_sha256: a9fa551b006323339de026c7ccdc0035a22cdddae80b7699bcc9a511bcc86660
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 2e80fffd96eecb0de96f76888eb0d527a517c99a4bce15da7811b6e266a72e5c
+  source_sha256: b782b67e8e0938dd4231488fc6352665157e5312a6cbcef250742da38cfb21ca
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 68588615797f27475104e27214bd20dabe17cf788a82cf871c1bf69819984f8b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [alcada, avaliacao, cycle_iteration, mcp_reading_programa, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal, validation_evaluation]
   glossary_sha256: a5302cbd5b98385fac17cd6ac1b703a0b26bf260a6ba51d8206b8655aee9bdad
-  translated_at: 2026-09-26T14:10:44Z
-  stamped_at: 2026-09-26T18:36:45Z
+  translated_at: 2026-09-27T07:06:12Z
+  stamped_at: 2026-09-27T07:06:12Z
   reviewed_by: null
 ---
 
@@ -182,9 +182,9 @@ The CI/CD pipeline and the release processes must, wherever possible, technicall
 
 | Artefact | Suggested location | Retention |
 |---|---|---|
-| Exception record | `docs/security/exceptions/` or GRC platform | 2 years after closure |
+| Exception record | `docs/security/exceptions/` or GRC platform | 1 year (L1), 2 years (L2), 3 years (L3) after closure |
 | Evidence of compensating mitigation | Attached to the record | While the exception is active |
-| Formal approvals | Attached to the record | 2 years after closure |
+| Formal approvals | Attached to the record | 1 year (L1), 2 years (L2), 3 years (L3) after closure |
 | Report of active exceptions | GRC / compliance dashboard | Continuously updated |
 
 ---

@@ -6537,7 +6537,8 @@ terms:
   state: in-record
   owner: manual-agent
   en: placing on the market
-  en_variants: []
+  en_variants:
+  - placed on the market
   pt: colocação no mercado
   pt_variants: []
   ontology_id: null

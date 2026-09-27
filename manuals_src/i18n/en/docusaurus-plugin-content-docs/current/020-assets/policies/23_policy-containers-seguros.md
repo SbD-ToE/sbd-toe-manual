@@ -8,16 +8,16 @@ sidebar_position: 23
 translation:
   source_locale: pt
   source_path: 020-assets/policies/23_policy-containers-seguros.md
-  source_sha256: f459d88df873a67188cbd668b840453dc61d5870c7be47f3f56d85670b0f14b8
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 9cd0b4ca2d0efd6a5efd0232e597a40448034f11b295cfd54e690c47a71988cc
+  source_sha256: d70ac76c5bfa08cc5f3eeaf3dabaf9c5faf91ae9ed40c1ad3e8f08e88ecbc88f
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 0f9c77fe8a70520d4f8e31481fe4a0a0d3fa9e9e3ead060f60cb16d7e34eab45
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [cycle_iteration, framework_source_corpus, lifecycle_phase, provenance, requirement_runtime, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: f04fb69f8e9c35a5ac329866aae65eafd920a0a3fc072fcb6d13d877d05d3547
-  translated_at: 2026-09-26T14:10:56Z
-  stamped_at: 2026-09-26T18:36:57Z
+  translated_at: 2026-09-27T07:06:17Z
+  stamped_at: 2026-09-27T07:06:17Z
   reviewed_by: null
 ---
 
@@ -174,7 +174,7 @@ Secrets must not be included in container images under any circumstances:
 | Image SBOM | Inventory per build | See SBOM Policy |
 | Image signature | Per build, in the image registry | While the image is in use |
 | Provenance attestation | Per build | 1 year (L2), 2 years (L3) |
-| Admission logs | Policy violations in the cluster | 90 days (L2), 1 year (L3) |
+| Admission logs | Policy violations in the cluster | 1 year (L2), 2 years (L3) |
 
 ---
 

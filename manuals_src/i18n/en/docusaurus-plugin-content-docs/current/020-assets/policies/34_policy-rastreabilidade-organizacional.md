@@ -8,16 +8,16 @@ sidebar_position: 34
 translation:
   source_locale: pt
   source_path: 020-assets/policies/34_policy-rastreabilidade-organizacional.md
-  source_sha256: 5e495ae4655c59622e9b935bce13e8d076948311fb284e2e036a0440f2b94b08
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 37851f56cf09e2c01ee03ef1f2b32f43d02a225b769339741e47b8902be7d8ac
+  source_sha256: e0c6f2903373abb5fbcd3ac2bf7e4fbed0d0648ac368b3e694b5ad25636a89d0
+  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
+  target_sha256: fcfa24d53385ce4ebc2daf2c61bafa818e84dba3c30b80ae61c8026ae6314f22
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, maturity, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 097a316bb00ef5a9c2723a97d8be46671ed579daeda0c5a2673fa9a171d46fec
-  translated_at: 2026-09-26T23:27:33Z
-  stamped_at: 2026-09-26T23:27:33Z
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, lifecycle_phase, maturity, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 6a45f03776d0d7dc8233e119ee2b076ccefb2386a76f8e3fc3ea28809b4bf843
+  translated_at: 2026-09-27T07:09:02Z
+  stamped_at: 2026-09-27T07:09:02Z
   reviewed_by: null
 ---
 
@@ -182,13 +182,13 @@ All compliance evidence must meet the following requirements to be considered au
 | Artefact | Minimum retention |
 |---|---|
 | Compliance repository (current status and history) | Lifetime of the application + 3 years |
-| Validation evidence | 3 years |
+| Validation evidence (package per release) | 1 year (L1), 2 years (L2), 3 years (L3) |
 | Security Champion designation records | Duration of the designation + 2 years |
 | Periodic validation reports | 3 years |
-| Exception records (including expired ones) | 5 years |
+| Exception records (including expired ones) | In line with Policy 06 §10: 1 year (L1), 2 years (L2), 3 years (L3) after closure or expiry |
 
 :::note
-In regulated environments (DORA, NIS2), regulatory periods prevail over the minimums of this policy; where personal data are involved, the GDPR limits retention to the period necessary.
+The periods in this table are the minimum recommended by the Manual (the Manual's choice). The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails, always within the GDPR limit where personal data are involved — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); the value adopted is recorded in the organisation's retention map.
 :::
 
 ---

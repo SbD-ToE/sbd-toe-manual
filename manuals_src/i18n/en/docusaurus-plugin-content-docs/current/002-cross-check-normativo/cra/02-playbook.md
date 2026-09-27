@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/02-playbook.md
-  source_sha256: 53092b9a6f1b0b5e2d1e37fc930c1520f90bbc18506e3e3d2f701b8e53005e0d
-  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
-  target_sha256: 30a54d7173abebf049cea71a0bf698b769fbe36ae2b71ad69d110ae014826c7c
+  source_sha256: e3647a8e7582e415ebec5d4502785e28dffcc0799786173d261291632161c18c
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: ee332f74ba5496cff1d560e92c9d063b5e26c821a260f0a6e4462a60b0650704
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 4ed3643be5263bd3398a33c3ebb893c1ecab3802434417249277e004ff8a5a75
-  translated_at: 2026-09-27T00:04:41Z
-  stamped_at: 2026-09-27T00:04:41Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cra_support_period, cycle_iteration, eu_placing_on_market, lifecycle_phase, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: add33d9a5f390ac71a175848cc9b05861423da22abdbf4138f3f3c577e2d1732
+  translated_at: 2026-09-27T07:05:55Z
+  stamped_at: 2026-09-27T07:14:34Z
   reviewed_by: null
 ---
 
@@ -174,6 +174,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 - [ ] Hardened configuration recommendations
 - [ ] Vulnerability management section
 - [ ] Version and date
+- [ ] Technical documentation (including the SBOM) and EU declaration of conformity kept for at least 10 years after placing on the market or for the support period, whichever is longer (Article 13(13))
 
 ### Physical Supply Chain Checklist (if applicable) {#checklist-supply-chain-física-se-aplicável}
 - [ ] Firmware/hardware list

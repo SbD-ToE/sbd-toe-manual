@@ -7,16 +7,16 @@ tags: [proporcionalidade, risco, matriz, controles, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/08-matriz-controles-por-risco.md
-  source_sha256: 2270ef8a7a0d517699e2f52f2a85425c20f4ff05a9db00a85e1ef8c8a6950dba
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: e6fef72692696fb4f0ad4db400ad20b24581b1d671b61d5ddcacce51fbbf5536
+  source_sha256: 436df5318df5b381ff615bf7fba76c3c60f016ce9536904b8d3c1439f7869710
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: b0ff0d0eb78891a5fc6f2949c264a6e3b0ca4e0307e9ccec42acba3b9977f708
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, lifecycle_phase, maturity, requirement_runtime, risk_level, traceability]
   glossary_sha256: 9582a04bbd3949571c2f6f7403eac2f07af5d0a9f857b676a5d71878d224738d
-  translated_at: 2026-09-26T11:17:30Z
-  stamped_at: 2026-09-26T18:35:43Z
+  translated_at: 2026-09-27T07:06:02Z
+  stamped_at: 2026-09-27T07:06:02Z
   reviewed_by: null
 ---
 
@@ -34,7 +34,7 @@ This matrix defines the **minimum mandatory monitoring requirements** for applic
 | ---------------------------------------------- | :-: | :-: | :-: |
 | Structured and persistent logging              |  ✔️ |  ✔️ |  ✔️ |
 | Critical events defined (login, error, etc.) |  ✔️ |  ✔️ |  ✔️ |
-| Minimum retention (>= 30 days)                   |     |  ✔️ |  ✔️ |
+| Minimum retention in line with Policy 29 (security logs: 90 days L1, 1 year L2, 2 years L3) |  ✔️ |  ✔️ |  ✔️ |
 | Logs sent to a centralised system (SIEM) |     |  ✔️ |  ✔️ |
 | Automatic alerts configured               |     |  ✔️ |  ✔️ |
 | Trigger simulations tested                 |     |  ✔️ |  ✔️ |

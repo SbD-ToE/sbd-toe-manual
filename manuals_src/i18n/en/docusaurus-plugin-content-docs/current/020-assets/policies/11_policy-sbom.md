@@ -8,16 +8,16 @@ sidebar_position: 11
 translation:
   source_locale: pt
   source_path: 020-assets/policies/11_policy-sbom.md
-  source_sha256: f99d62e09324582cc8799d400bcdf6c42e0234d555d60ea023e28ff4b6751e26
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 9305b2fbf2d7d1e15621288dfd4211f472acbadd9a8f323263d384e7b641f56d
+  source_sha256: 5dd7db3992c266bea32a576fb615eb159f1a1d97c17f895c26af9704a65493ab
+  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
+  target_sha256: f6aa08f1fcd5d48da05195c6872194408fa4699aa61fd48e3b313e28d8efe09b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [cra_pde, discipline, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
-  glossary_sha256: d99b4d2853dcbccd8a40918fc1a0da217a7932b2a2b3bbd020269904ff9eae1f
-  translated_at: 2026-09-26T23:27:29Z
-  stamped_at: 2026-09-26T23:27:29Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [cra_pde, cra_support_period, discipline, eu_market_surveillance_authority, eu_placing_on_market, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
+  glossary_sha256: c0cd3efb7990023eb226d8e79a7b8424f59bff7dfdc0cff2214e8fb1b067f940
+  translated_at: 2026-09-27T07:09:01Z
+  stamped_at: 2026-09-27T07:14:36Z
   reviewed_by: null
 ---
 
@@ -154,7 +154,7 @@ SBOMs must be archived as CI/CD pipeline artefacts or in a dedicated evidence re
 | Provenance attestation | Per release | 1 year | 2 years |
 
 :::note
-In regulated contexts (DORA, NIS2, healthcare, finance), retention periods may be longer. The applicable regulatory requirements always prevail.
+The periods in this table are the minimum recommended by the Manual (the Manual's choice); the most demanding applicable regime prevails — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs). For products with digital elements within the scope of the CRA, the SBOM forms part of the technical documentation (Annex VII), which the manufacturer keeps at the disposal of the market surveillance authorities «for at least 10 years after the product with digital elements has been placed on the market or for the support period, whichever is longer» (CRA, Article 13(13)); that period prevails over the level. Where records contain personal data, they are kept for no longer than is necessary for the purpose (GDPR, Article 5(1), point (e)).
 :::
 
 ---

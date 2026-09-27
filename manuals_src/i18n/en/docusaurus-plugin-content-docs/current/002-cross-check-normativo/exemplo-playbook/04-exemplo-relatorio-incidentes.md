@@ -6,16 +6,16 @@ tags: [exemplos, incidentes, reporte, dora, template]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md
-  source_sha256: ce89d3a64dfc40f22119d5d7f518ae547049c1a3786611776b2336e8065415ca
-  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
-  target_sha256: ccd7206959c1e008c54522e1153344b08feca048362268a7d6711e6b346ce701
+  source_sha256: e4db47cdcc511e16d451f07e67b5e4c74d5a3add8a1ffbe8aa18a24bfd8e8fb7
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: fb7bec3ed45d8ba6da062848c24b9709227d0c4999992656182cabbe6a773799
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 904288482a68387568aa1d2c0f456ba34be2277354ab56decd5d10cb7ac3d95f
-  translated_at: 2026-09-27T00:04:42Z
-  stamped_at: 2026-09-27T00:04:42Z
+  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, practitioner_manual, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 8beef8d4e289efc0b7ab05a8003354655d7164bea81529fd7f6bda7fc261f24b
+  translated_at: 2026-09-27T07:05:57Z
+  stamped_at: 2026-09-27T07:05:57Z
   reviewed_by: null
 ---
 
@@ -212,7 +212,7 @@ This template structures incident ticketing systems:
 ### Compliance (as per DORA) {#compliance-conforme-dora}
 - [ ] DORA analysis (reportable?)
 - [ ] Notification to the competent authority (if applicable)
-- [ ] Archive for 3+ years (audit trail)
+- [ ] Archived in line with Policy 06 §10 (1 year at L1/L2, 3 years at L3; audit trail)
 
 ---
 
@@ -220,12 +220,13 @@ This template structures incident ticketing systems:
 
 ## Log Retention {#retenção-de-logs}
 
-**Compliance [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Delegated Regulation (EU) 2024/1774, Art. 22, point (d) — period defined by the entity, commensurate with criticality and no longer than necessary):**
+**Compliance [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Delegated Regulation (EU) 2024/1774, Art. 22, point (d) — period defined by the entity, commensurate with criticality and no longer than necessary). The values below are the Manual's choice, in line with [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) and [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs):**
 
 ```
-Todos os incidentes + trilho auditoria devem ser retidos:
-- Mínimo: 3 anos
-- Recomendado: 5 anos
+Registos de incidentes (timeline, post-mortem, notificações):
+- L1 / L2: 1 ano
+- L3: 3 anos
+Trilho de auditoria: 1 ano (L1/L2), 3 anos (L3)
 - Acesso: Immutable (WORM - Write Once Read Many)
 - Verificação: Integridade criptográfica (hash)
 ```

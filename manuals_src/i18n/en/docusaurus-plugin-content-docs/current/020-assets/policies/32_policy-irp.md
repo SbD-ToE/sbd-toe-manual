@@ -8,16 +8,16 @@ sidebar_position: 32
 translation:
   source_locale: pt
   source_path: 020-assets/policies/32_policy-irp.md
-  source_sha256: 2aea934bd2fedbcbe331e39f00e83e3ead56b3b2a6e55ef7568a6ed08ef7440d
-  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
-  target_sha256: b4ba80ac10c3398524c94f07cd45c6eab85b3343bb20d19d8b4b50d94f1b8d5a
+  source_sha256: ffc9b81815eb20220dde858bd2379536bad9364497d305bfcd0c7aaaf772e417
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 3570203660ec7522532e75a1a11f5990e6a98019688707673e2bb476855263e4
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, cra_actively_exploited_vulnerability, cra_pde, dora_financial_entity, dora_major_ict_incident, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 471c1bbbd1f708cb6d3e1bdf796065d2ca7f828b8dd21e4226df3789b003b6e3
-  translated_at: 2026-09-27T00:04:46Z
-  stamped_at: 2026-09-27T00:04:46Z
+  glossary_keys: [audit_trail, cra_actively_exploited_vulnerability, cra_pde, dora_financial_entity, dora_major_ict_incident, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, practitioner_manual, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: d9abfec78bcb9748e988fc9118bcb59dce4eeeab98fc115399af26dcdba978fb
+  translated_at: 2026-09-27T07:06:20Z
+  stamped_at: 2026-09-27T07:06:20Z
   reviewed_by: null
 ---
 
@@ -143,6 +143,8 @@ Some incidents require notification to regulatory authorities within defined dea
 :::warning
 The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable. The time limit starts to run from the moment the organisation becomes aware of the incident - not when the root cause is identified. Under DORA, the 4 h time limit runs from the classification of the incident as major (with a limit of 24 h from awareness) and the 72 h time limit runs from the initial notification (Delegated Regulation (EU) 2025/301, Art. 5).
 :::
+
+**Retention of incident records.** The timeline, the post-mortem and the notifications sent are kept for 1 year at L1 and L2 and for 3 years at L3 (the Manual's choice; see [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos)). Under DORA, the period is defined by the entity (Delegated Regulation (EU) 2024/1774, Art. 22, point (d)).
 
 ---
 

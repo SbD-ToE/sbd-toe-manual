@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: e11f36e13595db629a7a71da37b8baa7f0e805a016625cb6ab5a212049efabc2
-  source_commit: 62f2c1a338ba8a9840bb7d6f9da7819e3fe73eeb
-  target_sha256: f35a8bc2efbc19381f15100ccb4273bf50e0d634b3aee6cfed5a32bc0bafcfec
+  source_sha256: 8637270fd27e49331147b87abe0eb15d61683d7b5504879d351662fa6f6264e1
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 0adb028ba39309bd76f771d3db5c472dd0be4e29339c5e7b2c34ab8bdc8a3a41
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_critical_infrastructure, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 26e67064ec2a02f093997bc7bdc3597e12583bc1378a98cc91bf67081a7005a4
-  translated_at: 2026-09-26T23:27:11Z
-  stamped_at: 2026-09-26T23:27:11Z
+  glossary_sha256: d81225acb75d022285fd2019e7aa0962a0a56ccb488efbd856c6f933359908f0
+  translated_at: 2026-09-27T07:12:41Z
+  stamped_at: 2026-09-27T07:14:32Z
   reviewed_by: null
 ---
 
@@ -236,7 +236,7 @@ It is suggested to build an "Annex IV index" pointing to the existing SbD-ToE ar
 
 **Normative content**
 
-Art. 12 requires the capability for **automatic recording of events** (logs) throughout the lifecycle, with a level of traceability appropriate to the purpose, enabling the identification of risk situations and supporting post-market monitoring. Art. 19 requires providers to **keep the logs** automatically generated, to the extent that they are under their control.
+Art. 12 requires the capability for **automatic recording of events** (logs) throughout the lifecycle, with a level of traceability appropriate to the intended purpose, making it possible to identify risk situations and support post-market monitoring. Art. 19 requires providers to **keep the logs** automatically generated, to the extent that they are under their control, «for a period appropriate to the intended purpose of the high-risk AI system, of at least six months» (Article 19(1)); Article 26(6) imposes the same minimum on deployers.
 
 **SbD-ToE coverage**
 
@@ -261,7 +261,7 @@ The *model output* schema (model version, relevant *features*, decision, confide
 
 **How to comply**
 
-The operational layer is already implemented (`OPS-011..014` + Ch. 12 US-13). What remains is to declare the *model output* schema per system, ensuring retention aligned with the useful life and with GDPR requirements. The retention period should be documented as evidence for Art. 12/19.
+The operational layer is already implemented (`OPS-011..014` + Ch. 12 US-13). What remains is to declare the *model output* schema per system, ensuring retention for a period appropriate to the intended purpose of the system, of at least six months (Articles 19(1) and 26(6)), and compatible with the GDPR. Document the retention period as evidence for Art. 12/19.
 
 ---
 

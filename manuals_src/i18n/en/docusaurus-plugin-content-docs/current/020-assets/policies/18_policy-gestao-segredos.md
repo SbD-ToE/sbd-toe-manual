@@ -8,16 +8,16 @@ sidebar_position: 18
 translation:
   source_locale: pt
   source_path: 020-assets/policies/18_policy-gestao-segredos.md
-  source_sha256: b6fb77fc28341d52ec4268b349d3ac528292c2e52c57a3f79ebf25c15f3b80ea
-  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
-  target_sha256: 1775ec15f9370b51b4c1e32f531d0548a1144ba86761b1e09c76fb7e310bc607
+  source_sha256: bfa19ed86ff3e931dbd1126481fecbfb396f8bb0e419fa77ceb5019af47aba5f
+  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
+  target_sha256: 6aabc21edc2cecf9b9400419ba8deb9f418a6afb97146128739a7e1282b7581f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
-  glossary_sha256: 077f37bc925ed0aa91cdef68a608b0b398676281e1f550abaa13dcefb6ad59b5
-  translated_at: 2026-09-27T00:04:45Z
-  stamped_at: 2026-09-27T00:04:45Z
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: b847cd1776faf8423965219ba186f23372b0d8b6bff2d471e206166f4cc28c0a
+  translated_at: 2026-09-27T07:06:17Z
+  stamped_at: 2026-09-27T07:06:17Z
   reviewed_by: null
 ---
 
@@ -239,7 +239,7 @@ When the content of the *prompt* includes personal data, the *provider* is contr
 
 ### 10.5 Telemetry under the *deployer*'s control {#105-telemetria-sob-controlo-do-deployer}
 
-Inference logs under the organisation's control (AI Act Art. 19 / GDPR Art. 5) comply with [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retention) and [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) with **redaction of PII in the `args`** — the *audit trail* preserves enough to respond to an audit without replicating the personal data.
+Inference logs under the organisation's control (AI Act Art. 19 / GDPR Art. 5) comply with [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retention: at least six months for high-risk AI systems, AI Act, Articles 19(1) and 26(6)) and [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) with **PII redaction in the `args`** — the *audit trail* retains enough to answer an audit without replicating the personal data.
 
 ### 10.6 Data subject rights {#106-direitos-do-titular-dos-dados}
 

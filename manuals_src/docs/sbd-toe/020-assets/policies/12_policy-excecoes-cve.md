@@ -116,9 +116,9 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 | Medium | Qualquer | 90 dias | 60 dias | 30 dias |
 | Low | Qualquer | 90 dias | 60 dias | 30 dias |
 | Fix not available | Qualquer | Tecto da severidade (acima) | Tecto da severidade (acima) | Tecto da severidade (acima) |
+| Not affected | - | Sem TTL* | Sem TTL* | Sem TTL* |
 
 Os tectos seguem a Política 05 §7, que é a master dos prazos de validade de exceções.
-| Not affected | - | Sem TTL* | Sem TTL* | Sem TTL* |
 
 *Exceções do tipo "Not affected" devem ser reavaliadas sempre que o componente é atualizado ou quando é publicada nova informação sobre o CVE que altere o contexto de exploitabilidade.
 

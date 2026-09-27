@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 8e484165a9d5fd9ba67b830e55023613e5f09afe0fad197418118211fe82bf63
+  source_sha256: 8638c44663fc84cd732c2cab86a66b7e01fd81360d539d1a7368506c1bb94313
   source_commit: null
-  target_sha256: 8b3441888df9c1d66d4a41243ed3dc526021664d8764c25abe5af85ef4a35e3a
+  target_sha256: 352ad154137e58b50de5bb6d44124e33c4bd6eb760010735c8e26fb378d2d05d
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -175,7 +175,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -463,7 +463,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -671,8 +671,8 @@ Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those add
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 32 |
-| Partial | 54 |
+| Covers | 34 |
+| Partial | 52 |
 | Supports evidence | 29 |
 | Gap | 22 |
 | Out of scope | 108 |

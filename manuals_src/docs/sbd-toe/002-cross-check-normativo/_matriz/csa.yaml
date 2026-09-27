@@ -1072,7 +1072,7 @@ itens:
   acto_fonte: 32019R0881
   referencia: Art. 56.º, n.º 8
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -1082,11 +1082,9 @@ itens:
     ficheiro: 020-assets/policies/32_policy-irp.md
     ancora: 6-notificação-regulatória
     citacao:
-      pt: 'À autoridade de controlo (em Portugal, a CNPD): sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento'
-      en: 'To the supervisory authority (in Portugal, the CNPD): without undue delay and, where feasible, not later than 72 hours after having become aware of it'
-  falta:
-    pt: A tabela de notificação regulatória (Política 32 §6) não inclui o dever de informar o organismo emissor de vulnerabilidades/irregularidades detetadas após a certificação.
-    en: The regulatory notification table (Policy 32 §6) does not include the duty to inform the issuing body of vulnerabilities/irregularities detected after certification.
+      pt: Ao organismo emissor do certificado
+      en: To the body that issued the certificate
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

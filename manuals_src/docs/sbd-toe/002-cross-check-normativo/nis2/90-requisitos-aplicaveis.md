@@ -45,7 +45,7 @@ A entidade é essencial ou importante nos termos do art. 3.º da Diretiva (UE) 2
 
 | Piso | Alvo | Grau | Piso exigido | Âmbito | Base legal | Justificação de não aplicabilidade |
 |---|---|---|---|---|---|---|
-| CTX-NIS2-P01 | [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | obrigatório | Processo de resposta a incidentes (IRP) obrigatório em qualquer nível. | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. b); Reg. de Execução (UE) 2024/2690, anexo, ponto 3.1.1: «Tratamento de incidentes» (NIS2-21-2-b, NIS2-IR2690-3.1.1) | não admitida |
+| CTX-NIS2-P01 | [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | obrigatório | Processo de resposta a incidentes (IRP) obrigatório em qualquer nível, incluindo o registo dos incidentes e o post-mortem dos incidentes significativos, com a revisão dos artefactos afectados (§4.6). | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. b); Reg. de Execução (UE) 2024/2690, anexo, ponto 3.1.1: «Tratamento de incidentes» (NIS2-21-2-b, NIS2-IR2690-3.1.1) | não admitida |
 | CTX-NIS2-P02 | `OPS-007` | — | obrigatório | — | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. b); Reg. de Execução (UE) 2024/2690, anexo, ponto 3.1.1: «Tratamento de incidentes» (NIS2-21-2-b, NIS2-IR2690-3.1.1) | não admitida |
 | CTX-NIS2-P03 | `LOG-004` | PERTINENTE | obrigatório | — | Reg. de Execução (UE) 2024/2690, anexo, ponto 3.2.4: «Os registos devem ser analisados regularmente para detetar eventuais tendências invulgares ou indesejadas.» (NIS2-IR2690-3.2.4) | não admitida |
 | CTX-NIS2-P04 | `LOG-007` | PERTINENTE | obrigatório | — | Reg. de Execução (UE) 2024/2690, anexo, ponto 3.2.4: «Se os valores fixados para um limiar de alerta forem excedidos, o alerta é acionado automaticamente, se for caso disso.» (NIS2-IR2690-3.2.4) | não admitida |
@@ -64,6 +64,8 @@ A entidade é essencial ou importante nos termos do art. 3.º da Diretiva (UE) 2
 | CTX-NIS2-P17 | `OPS-017` | PERTINENTE | obrigatório | Plano de recuperação com condições de activação e desactivação e ordem de recuperação, também em L1. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1.1 e 4.1.2: «As operações das entidades pertinentes devem ser restabelecidas de acordo com o plano de continuidade das atividades e de recuperação de desastres.» (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | não admitida |
 | CTX-NIS2-P18 | `GOV-014` | PERTINENTE | obrigatório | Revisão a intervalos planeados das identidades e das contas privilegiadas e de administração nos sistemas de suporte, com resultados documentados. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3, 11.3.3 e 11.5.4: «As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.» (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4) | não admitida |
 | CTX-NIS2-P19 | `GOV-017` | PERTINENTE | obrigatório | Concessão, alteração, retirada e documentação dos direitos de acesso; identidades únicas, associadas a uma pessoa e supervisionadas; registo da gestão de identidades. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.1 e 11.5.1 a 11.5.3: «As entidades pertinentes concedem, alteram, retiram e documentam os direitos de acesso aos sistemas de rede e informação em conformidade com a política de controlo do acesso a que se refere o ponto 11.1.» (NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3) | não admitida |
+| CTX-NIS2-P20 | `ENC-007` | PERTINENTE | obrigatório | Gestão de chaves e de certificados em qualquer nível, com os métodos do ponto 9.2, al. c). | Reg. de Execução (UE) 2024/2690, anexo, ponto 9.2: «A abordagem das entidades pertinentes no que toca à gestão de chaves» (NIS2-IR2690-9.2) | admitida |
+| CTX-NIS2-P21 | `ENC-003` | PERTINENTE | obrigatório | Primitivas e protocolos aprovados, com agilidade criptográfica quando adequado, revistos a intervalos planeados perante o progresso técnico, em qualquer nível. | Reg. de Execução (UE) 2024/2690, anexo, pontos 9.2 e 9.3: «seguindo, se for caso disso, uma abordagem de agilidade criptográfica» (NIS2-IR2690-9.2, NIS2-IR2690-9.3) | admitida |
 
 ## Requisitos acrescentados pelo regime {#acrescentos}
 
@@ -72,6 +74,8 @@ Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catál
 | Requisito | Nome | Critério de aceitação | Base legal |
 |---|---|---|---|
 | `CTX-NIS2-R01` | Redundância pelo menos parcial | Com base na avaliação de riscos e no plano de continuidade, disponibilidade suficiente de recursos através de redundância, pelo menos parcial, dos sistemas de rede e informação e dos canais de comunicação de que a aplicação depende; recursos acompanhados e ajustados em função dos requisitos de cópias de segurança e de redundância. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.4 e 4.2.5: «asseguram a disponibilidade suficiente de recursos através, no mínimo, da redundância parcial dos seguintes elementos» (NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5) |
+| `CTX-NIS2-R02` | Critério de incidente significativo | Um incidente é avaliado como significativo, a partir dos dados de impacto do registo (Política 32 §4.3), quando causou ou pode causar graves perturbações operacionais dos serviços ou perdas financeiras à entidade, ou danos materiais ou imateriais consideráveis a outras pessoas; a avaliação e a decisão ficam registadas. | Diretiva (UE) 2022/2555, art. 23.º, n.º 3: «Considera-se que um incidente é significativo se» (NIS2-23-3) |
+| `CTX-NIS2-R03` | Limiares de incidente significativo e agregação dos recorrentes | Nas entidades pertinentes, aplicam-se os critérios do art. 3.º do Reg. de Execução (UE) 2024/2690 (perdas financeiras directas acima de 500 000 EUR ou 5 % do volume de negócios, o que for menor; fuga de segredos comerciais; morte ou danos consideráveis à saúde; acesso malicioso com risco de perturbação grave; e os critérios específicos por tipo de entidade). Trimestralmente, avalia-se a existência de incidentes recorrentes: os que ocorreram pelo menos duas vezes em seis meses, com a mesma causa primária aparente, e cumprem em conjunto o critério financeiro contam como um incidente significativo. | Reg. de Execução (UE) 2024/2690, arts. 3.º e 4.º e anexo, ponto 3.4.2: «Ocorreram pelo menos duas vezes num período de seis meses» (NIS2-IR2690-art3, NIS2-IR2690-art4, NIS2-IR2690-3.4.2) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -166,7 +170,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -365,6 +369,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
+| `CTX-NIS2-R02` | Critério de incidente significativo | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — PERTINENTE {#lista-pertinente}
 
@@ -449,11 +454,11 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CFG-007` | Monitorização de drift de configuração | — | — | ✔ | — |
 | `ENC-001` | Encriptação de todas as comunicações em trânsito | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encriptação de dados sensíveis em repouso | — | ✔ | ✔ | — |
-| `ENC-003` | Algoritmos e configurações criptográficas robustas | — | ✔ | ✔ | — |
+| `ENC-003` | Algoritmos e configurações criptográficas robustas | ▲ | ▲ | ▲ | CTX-NIS2-P21 |
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | ▲ | ▲ | ▲ | CTX-NIS2-P20 |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -653,6 +658,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-NIS2-P19 |
 | `CTX-NIS2-R01` | Redundância pelo menos parcial | ▲ | ▲ | ▲ | — |
+| `CTX-NIS2-R02` | Critério de incidente significativo | ▲ | ▲ | ▲ | — |
+| `CTX-NIS2-R03` | Limiares de incidente significativo e agregação dos recorrentes | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -660,8 +667,8 @@ Contagem das obrigações da matriz `_matriz/nis2.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 79 |
-| Parcial | 79 |
+| Cobre | 95 |
+| Parcial | 64 |
 | Apoia evidência | 12 |
-| Lacuna | 12 |
+| Lacuna | 11 |
 | Fora de âmbito | 38 |

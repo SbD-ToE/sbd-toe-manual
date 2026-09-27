@@ -161,7 +161,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -449,7 +449,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -657,8 +657,8 @@ Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigida
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 32 |
-| Parcial | 54 |
+| Cobre | 34 |
+| Parcial | 52 |
 | Apoia evidência | 29 |
 | Lacuna | 22 |
 | Fora de âmbito | 108 |

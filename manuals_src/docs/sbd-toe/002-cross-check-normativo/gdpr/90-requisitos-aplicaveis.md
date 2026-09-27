@@ -58,6 +58,7 @@ Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catál
 | `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | Quando um serviço da sociedade da informação é oferecido directamente a crianças com base em consentimento: a idade é verificada abaixo do limiar aplicável (16 anos, ou o limiar nacional, não inferior a 13) e o consentimento do titular das responsabilidades parentais é obtido e verificado com os meios adequados à tecnologia disponível, com registo em PRI-006. | Reg. (UE) 2016/679, art. 8.º, n.º 2: «envida todos os esforços adequados para verificar que o consentimento foi dado ou autorizado pelo titular das responsabilidades parentais da criança» (RGPD-8-2) |
 | `CTX-RGPD-R04` | Oposição por meios automatizados | Nos serviços da sociedade da informação, os sinais automatizados de oposição enviados pelo navegador ou pelo agente do utilizador (p. ex. Global Privacy Control) são reconhecidos e tratados como oposição válida, com o mesmo efeito da oposição dada pela interface (PRI-006). | Reg. (UE) 2016/679, art. 21.º, n.º 5: «o titular dos dados pode exercer o seu direito de oposição por meios automatizados, utilizando especificações técnicas» (RGPD-21-5) |
 | `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4. Quando a decisão é apoiada por um sistema de IA de risco elevado do anexo III, aplica-se também CTX-AIA-RE-R03. | Reg. (UE) 2016/679, art. 22.º, n.os 1, 3 e 4: «o direito de, pelo menos, obter intervenção humana por parte do responsável, manifestar o seu ponto de vista e contestar a decisão» (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
+| `CTX-RGPD-R06` | Registo de violações de dados pessoais | Todas as violações de dados pessoais ficam documentadas, notificadas ou não: factos, efeitos, medidas de reparação e a fundamentação da decisão de notificar ou não notificar, de forma que a autoridade de controlo possa verificar o cumprimento. | Reg. (UE) 2016/679, art. 33.º, n.º 5: «O responsável pelo tratamento documenta quaisquer violações de dados pessoais» (RGPD-33-5) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -152,7 +153,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -356,6 +357,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | ▲ | ▲ | ▲ | — |
 | `CTX-RGPD-R04` | Oposição por meios automatizados | ▲ | ▲ | ▲ | — |
 | `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R06` | Registo de violações de dados pessoais | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -363,8 +365,8 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 36 |
-| Parcial | 12 |
+| Cobre | 38 |
+| Parcial | 10 |
 | Apoia evidência | 17 |
 | Lacuna | 0 |
 | Fora de âmbito | 49 |

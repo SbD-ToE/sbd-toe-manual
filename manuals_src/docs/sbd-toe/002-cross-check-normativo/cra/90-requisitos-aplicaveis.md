@@ -56,6 +56,7 @@ Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catál
 | `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | Actualizações de segurança automáticas configuradas por defeito quando aplicável, com mecanismo de autoexclusão claro, notificação das actualizações disponíveis e opção de adiamento temporário; actualizações de segurança distribuídas sem demora e de forma gratuita (salvo acordo com um utilizador profissional sobre produto personalizado), separadas das actualizações de funcionalidades quando tecnicamente viável e acompanhadas de orientações sobre as medidas a tomar; distribuição segura e verificável (DST-003); instruções para instalar as actualizações e para desligar as automáticas nas informações ao utilizador. | Reg. (UE) 2024/2847, anexo I, parte I, ponto 2, al. c), e parte II, pontos 2, 7 e 8; anexo II, ponto 8, als. c) e e): «Assegurar que as atualizações de segurança disponíveis para resolver problemas de segurança identificados sejam distribuídas sem demora» (CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e) |
 | `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | Depois de disponibilizada a actualização de segurança, aviso público sobre as vulnerabilidades corrigidas, com descrição, informação que permita identificar o produto afectado, impactos, gravidade e informação clara e acessível para a correcção; adiamento da divulgação só em casos devidamente justificados, registados, até os utilizadores terem tido a possibilidade de aplicar a correcção. | Reg. (UE) 2024/2847, anexo I, parte II, ponto 4: «Uma vez disponibilizada uma atualização de segurança, partilhar e divulgar publicamente informações sobre as vulnerabilidades corrigidas» (CRA-AnxI-P2-4) |
 | `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | Vulnerabilidade identificada num componente integrado no produto (incluindo de código aberto) comunicada à pessoa ou entidade que o fabrica ou mantém; correcção desenvolvida pela organização partilhada com o responsável pelo componente, se for caso disso em formato legível por máquina; vulnerabilidade tratada segundo a parte II do anexo I (DEP-007, DEP-010). | Reg. (UE) 2024/2847, art. 13.º, n.º 6: «os fabricantes devem comunicar a vulnerabilidade à pessoa ou entidade responsável pelo fabrico ou pela manutenção do componente» (CRA-13-6-a, CRA-13-6-b) |
+| `CTX-CRA-R05` | Critério de incidente grave | Um incidente com impacto na segurança do produto é avaliado como grave quando afecta ou pode afectar a capacidade do produto de proteger a disponibilidade, autenticidade, integridade ou confidencialidade de dados ou funções sensíveis ou importantes, ou quando introduz ou pode introduzir código mal-intencionado no produto ou nos sistemas de um utilizador; a avaliação fica registada e, sendo grave, segue os prazos e o conteúdo da Política 32 §6 e §6.1. | Reg. (UE) 2024/2847, art. 14.º, n.os 3 e 5: «um incidente com impacto na segurança do produto com elementos digitais é considerado grave se» (CRA-14-3) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -150,7 +151,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -353,6 +354,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R05` | Critério de incidente grave | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -360,8 +362,8 @@ Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas 
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 36 |
-| Parcial | 25 |
+| Cobre | 38 |
+| Parcial | 23 |
 | Apoia evidência | 18 |
 | Lacuna | 15 |
 | Fora de âmbito | 97 |

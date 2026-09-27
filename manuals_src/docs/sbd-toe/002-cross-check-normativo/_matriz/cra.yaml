@@ -1328,9 +1328,13 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 14.º, n.os 3 e 5
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R05
   - tipo: politica
     rotulo:
       pt: Política 32 §6
@@ -1349,13 +1353,11 @@ itens:
     citacao:
       pt: o momento do conhecimento registado no ticket; decisão de notificabilidade ≤ 4 h
       en: the moment of awareness recorded in the ticket; notifiability decision ≤ 4 h
-  falta:
-    pt: O trilho de notificação existe, mas o Manual não define «incidente grave» segundo os critérios do art. 14.º, n.º 5 (impacto na disponibilidade, autenticidade, integridade ou confidencialidade, ou introdução/execução de código malicioso).
-    en: The notification track exists, but the Manual does not define “severe incident” according to the criteria of Article 14(5) (impact on availability, authenticity, integrity or confidentiality, or introduction/execution of malicious code).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-09-11'
   substitui: [EXT-CRA-OBL-reporte-exploracao]
   nota: null
@@ -1415,9 +1417,18 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 14.º, n.º 4, alínea c)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6.1
+      en: Policy 32 §6.1
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 61-critério-e-conteúdo-mínimo-por-regime
+    citacao:
+      pt: O conteúdo mínimo é o que a lei pede
+      en: The minimum content is what the law requires
   - tipo: politica
     rotulo:
       pt: Política 32 §6
@@ -1427,9 +1438,7 @@ itens:
     citacao:
       pt: 'À CSIRT designada como coordenadora e à ENISA, pela plataforma única: alerta precoce ≤ 24 h; notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave)'
       en: 'To the CSIRT designated as coordinator and to ENISA, via the single reporting platform: early warning ≤ 24 h; notification ≤ 72 h; final report ≤ 14 days after the corrective measure (vulnerability) or ≤ 1 month after the notification (severe incident)'
-  falta:
-    pt: Prazo de um mês após a notificação prescrito; falta o conteúdo (descrição, gravidade e impacto, tipo de ameaça/causa primária, medidas de atenuação).
-    en: Deadline of one month after the notification prescribed; the content is missing (description, severity and impact, type of threat/root cause, mitigating measures).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

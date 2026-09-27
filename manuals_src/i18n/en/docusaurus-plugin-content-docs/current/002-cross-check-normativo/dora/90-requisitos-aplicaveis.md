@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: e69ad69f40489633c99e27b07b0ce83476a8eabb00959475e79d5de318d46ff3
+  source_sha256: 0c760ecc653a9318b07822682b2cbf87bb01bc5c48b6f0b13fc612934d863567
   source_commit: null
-  target_sha256: 533858879870bc444c97e246c8835e906308b2565b3c6a5628022710c3f44b32
+  target_sha256: 305649f073d788bdcc0f6e98d91fb2f3ddf3b9a10ff924edb0fa61b00dae500a
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -59,7 +59,7 @@ The organisation is one of the financial entities listed in Article 2(1) of Regu
 
 | Floor | Target | Grade | Required floor | Scope | Legal basis | Justification of non-applicability |
 |---|---|---|---|---|---|---|
-| CTX-DORA-P01 | [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | mandatory | ICT-related incident management process defined, established and implemented at any level. | Regulation (EU) 2022/2554, Article 17(1): “Financial entities shall define, establish and implement an ICT-related incident management process” (DORA-17-1) | not admitted |
+| CTX-DORA-P01 | [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | mandatory | ICT-related incident management process defined, established and implemented at any level, including the recording of all incidents and the post-mortem of major incidents, with the review of the affected artefacts (§4.6). | Regulation (EU) 2022/2554, Article 17(1): “Financial entities shall define, establish and implement an ICT-related incident management process” (DORA-17-1) | not admitted |
 | CTX-DORA-P02 | `OPS-007` | — | mandatory | — | Regulation (EU) 2022/2554, Article 17(1): “Financial entities shall define, establish and implement an ICT-related incident management process” (DORA-17-1) | not admitted |
 | CTX-DORA-P03 | `TST-005` | — | mandatory | Dynamic testing (alongside static testing, already mandatory under DEV-003), with security testing of internet-exposed systems and applications. | Delegated Regulation (EU) 2024/1774, Article 16(3): “shall contain the performance of source code reviews covering both static and dynamic testing” (DORA-RTS1774-16-3) | not admitted |
 | CTX-DORA-P04 | `LOG-008` | — | mandatory | — | Delegated Regulation (EU) 2024/1774, Article 12(2), point (e): “measures to detect a failure of logging systems” (DORA-RTS1774-12-2-e) | not admitted |
@@ -73,6 +73,10 @@ The organisation is one of the financial entities listed in Article 2(1) of Regu
 | CTX-DORA-P12 | `OPS-017` | FCI | mandatory | Also at L1 for applications supporting critical or important functions: recovery levels and timeframes and dependencies on ICT third-party service providers. | Regulation (EU) 2022/2554, Article 12(6); Delegated Regulation (EU) 2024/1774, Article 39(2), point (d): “In determining the recovery time and recovery point objectives for each function” (DORA-12-6, DORA-RTS1774-39-2-d) | not admitted |
 | CTX-DORA-P13 | `GOV-016` | — | mandatory | Strong authentication for remote access to the entity's network and for privileged access; dedicated accounts for administrative tasks and automated privileged access management (PAM) where feasible and appropriate, at any level. | Delegated Regulation (EU) 2024/1774, Article 21, als. e) e f), subal. ii), and Article 33, als. c) e d): “financial entities shall, where possible, use dedicated accounts for the performance of administrative tasks on ICT systems” (DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d) | not admitted |
 | CTX-DORA-P14 | `GOV-017` | — | mandatory | Unique identification and authentication of persons and systems; lifecycle management process for identities and accounts, with automated solutions where possible and appropriate; generic and shared accounts limited, at any level. | Delegated Regulation (EU) 2024/1774, Article 20(1) and (2), al. b), and Article 21, point (c): “a lifecycle management process for identities and accounts” (DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c) | not admitted |
+| CTX-DORA-P15 | `ENC-007` | — | mandatory | Full cryptographic key lifecycle at any level. | Delegated Regulation (EU) 2024/1774, Article 7(1): “requirements for managing cryptographic keys through their whole lifecycle” (DORA-RTS1774-7-1) | admitted |
+| CTX-DORA-P16 | `ENC-007` | FCI | mandatory | Register of all certificates and certificate-storing devices, kept up to date, with renewal before expiry, at any level. | Delegated Regulation (EU) 2024/1774, Article 7(4) and (5): “shall create and maintain a register for all certificates and certificate-storing devices” (DORA-RTS1774-7-4) | not admitted |
+| CTX-DORA-P17 | `ENC-003` | — | mandatory | Cryptographic inventory and review at any level, with the cryptographic technology updated as cryptanalysis evolves or, where that is not possible, mitigating measures. | Delegated Regulation (EU) 2024/1774, Article 6(4): “on the basis of developments in cryptanalysis” (DORA-RTS1774-6-4) | admitted |
+| CTX-DORA-P18 | `ARC-006` | FCI | mandatory | Review of the network filtering rules at least every six months, at any level, for the systems supporting critical or important functions. | Delegated Regulation (EU) 2024/1774, Article 13, point (h), e segundo parágrafo: “at least every 6 months” (DORA-RTS1774-13-h) | not admitted |
 
 ## Requirements added by the regime {#acrescentos}
 
@@ -81,6 +85,8 @@ These requirements only make sense under the regime, so they do not live in the 
 | Requirement | Name | Acceptance criterion | Legal basis |
 |---|---|---|---|
 | `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | Redundant ICT capacities, with resources, capabilities and functions adequate to business needs, for the systems the application depends on (microenterprises assess the need based on their risk profile); response and recovery plans tested at least yearly, including, for entities other than microenterprises, cyber-attack scenarios and switchover between the primary ICT infrastructure and the redundant capacity. | Regulation (EU) 2022/2554, Article 12(4), and Article 11(6), point (a): “shall maintain redundant ICT capacities equipped with resources, capabilities and functions that are adequate to ensure business needs” (DORA-12-4, DORA-11-6-a) |
+| `CTX-DORA-R02` | Classification of ICT-related incidents and aggregation of recurring ones | ICT-related incidents are classified and their impact determined with the criteria of Article 18(1) (clients, counterparts and transactions affected; reputation; duration and downtime; geographical spread; data losses; criticality of the services; economic impact) and with the materiality thresholds of Delegated Regulation (EU) 2024/1772, from the impact data in the record (Policy 32 §4.3). Every month, the existence of recurring incidents is assessed: those that occurred at least twice within six months, with the same apparent root cause, and that collectively meet the criteria count as one major incident (except microenterprises and the entities of Article 16(1)). | Regulation (EU) 2022/2554, arts. 17.º, n.º 3, al. b), e 18.º, n.º 1; Delegated Regulation (EU) 2024/1772, Article 8(2): “assess the existence of recurring incidents on a monthly basis” (DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2) |
+| `CTX-DORA-R03` | Record of significant cyber threats | Besides incidents, the significant cyber threats that affect the application or its systems are recorded (description, source, systems targeted, assessment and measures), with the option of voluntary notification to the competent authority (Article 19(2)). | Regulation (EU) 2022/2554, Article 17(2): “Financial entities shall record all ICT-related incidents and significant cyber threats” (DORA-17-2) |
 
 ## How to read the list {#como-se-le}
 
@@ -171,11 +177,11 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CFG-007` | Configuration drift monitoring | — | — | ✔ | — |
 | `ENC-001` | Encryption of all communications in transit | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encryption of sensitive data at rest | — | ✔ | ✔ | — |
-| `ENC-003` | Robust cryptographic algorithms and configurations | — | ✔ | ✔ | — |
+| `ENC-003` | Robust cryptographic algorithms and configurations | ▲ | ▲ | ▲ | CTX-DORA-P17 |
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | ▲ | ▲ | ▲ | CTX-DORA-P15 |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -375,6 +381,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-016` | Privileged and administration accounts of supporting systems | ▲ | ▲ | ▲ | CTX-DORA-P13 |
 | `GOV-017` | Lifecycle of identities with access to systems | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R02` | Classification of ICT-related incidents and aggregation of recurring ones | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R03` | Record of significant cyber threats | ▲ | ▲ | ▲ | — |
 
 ## Requirement list — FCI {#lista-fci}
 
@@ -459,11 +467,11 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CFG-007` | Configuration drift monitoring | — | — | ✔ | — |
 | `ENC-001` | Encryption of all communications in transit | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encryption of sensitive data at rest | — | ✔ | ✔ | — |
-| `ENC-003` | Robust cryptographic algorithms and configurations | — | ✔ | ✔ | — |
+| `ENC-003` | Robust cryptographic algorithms and configurations | ▲ | ▲ | ▲ | CTX-DORA-P17 |
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | ▲ | ▲ | ▲ | CTX-DORA-P15, CTX-DORA-P16 |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -529,7 +537,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ARC-003` | Security-focused architecture review | — | ✔ | ✔ | — |
 | `ARC-004` | Architecture decisions documented | — | ✔ | ✔ | — |
 | `ARC-005` | Threat modelling integrated into critical flows | — | ✔ | ✔ | — |
-| `ARC-006` | Technical isolation controls between sensitive domains | ✔ | ✔ | ✔ | — |
+| `ARC-006` | Technical isolation controls between sensitive domains | ▲ | ▲ | ▲ | CTX-DORA-P18 |
 | `ARC-007` | Reusable and approved architecture patterns | — | ✔ | ✔ | — |
 | `ARC-008` | Data flows between trust zones protected | ✔ | ✔ | ✔ | — |
 | `ARC-009` | Significant changes trigger a new review | — | ✔ | ✔ | — |
@@ -663,6 +671,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-016` | Privileged and administration accounts of supporting systems | ▲ | ▲ | ▲ | CTX-DORA-P13 |
 | `GOV-017` | Lifecycle of identities with access to systems | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R02` | Classification of ICT-related incidents and aggregation of recurring ones | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R03` | Record of significant cyber threats | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -670,8 +680,8 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 137 |
-| Partial | 124 |
+| Covers | 151 |
+| Partial | 115 |
 | Supports evidence | 123 |
-| Gap | 8 |
+| Gap | 3 |
 | Out of scope | 234 |

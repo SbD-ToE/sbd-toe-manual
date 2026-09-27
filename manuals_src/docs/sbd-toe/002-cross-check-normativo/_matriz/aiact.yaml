@@ -5177,9 +5177,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 55.º, n.º 1, alínea c)
   classe: organizacional
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: Ao Serviço para a IA
+      en: To the AI Office
   - tipo: politica
     rotulo:
       pt: Política 32 §4.1
@@ -5198,9 +5207,7 @@ itens:
     citacao:
       pt: À autoridade de fiscalização do mercado do Estado-Membro onde ocorreu
       en: To the market surveillance authority of the Member State where it occurred
-  falta:
-    pt: O IRP só prevê notificação à autoridade de fiscalização do mercado (art. 73.º); falta o circuito para o Serviço para a IA.
-    en: The IRP only provides for notification to the market surveillance authority (Article 73); missing is the circuit to the AI Office.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -5884,7 +5891,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 75.º, n.º 1-A
   classe: organizacional
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -5894,15 +5901,22 @@ itens:
     ficheiro: 020-assets/policies/32_policy-irp.md
     ancora: 6-notificação-regulatória
     citacao:
+      pt: Ao Serviço para a IA
+      en: To the AI Office
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
       pt: À autoridade de fiscalização do mercado do Estado-Membro onde ocorreu
       en: To the market surveillance authority of the Member State where it occurred
-  falta:
-    pt: Sistemas baseados em GPAI do mesmo prestador reportam ao Serviço para a IA; o IRP só prevê a autoridade de fiscalização do mercado.
-    en: Systems based on GPAI from the same provider report to the AI Office; the IRP only provides for the market surveillance authority.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2026-07-27'
   substitui: []
   nota: null

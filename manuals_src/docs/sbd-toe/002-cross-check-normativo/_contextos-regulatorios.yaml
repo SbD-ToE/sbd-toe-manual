@@ -147,7 +147,7 @@ contextos:
         niveis: null
         operador: elevar
         piso: {obrigatorio: true}
-        ambito: {pt: "Processo de resposta a incidentes (IRP) obrigatório em qualquer nível.", en: "Incident response process (IRP) mandatory at any level."}
+        ambito: {pt: "Processo de resposta a incidentes (IRP) obrigatório em qualquer nível, incluindo o registo dos incidentes e o post-mortem dos incidentes significativos, com a revisão dos artefactos afectados (§4.6).", en: "Incident response process (IRP) mandatory at any level, including the recording of incidents and the post-mortem of significant incidents, with the review of the affected artefacts (§4.6)."}
         base:
           obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]
           referencia: "Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. b); Reg. de Execução (UE) 2024/2690, anexo, ponto 3.1.1"
@@ -369,6 +369,30 @@ contextos:
           referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.1 e 11.5.1 a 11.5.3"
           citacao: {pt: "As entidades pertinentes concedem, alteram, retiram e documentam os direitos de acesso aos sistemas de rede e informação em conformidade com a política de controlo do acesso a que se refere o ponto 11.1.", en: "The relevant entities shall provide, modify, remove and document access rights to network and information systems in accordance with the access control policy referred to in point 11.1."}
         admite_justificacao: false
+      - id: CTX-NIS2-P20
+        alvo: {tipo: requisito, alvo: ENC-007}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Gestão de chaves e de certificados em qualquer nível, com os métodos do ponto 9.2, al. c).", en: "Key and certificate management at any level, with the methods of point 9.2(c)."}
+        base:
+          obrigacoes: [NIS2-IR2690-9.2]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 9.2"
+          citacao: {pt: "A abordagem das entidades pertinentes no que toca à gestão de chaves", en: "approach to key management"}
+        admite_justificacao: true
+      - id: CTX-NIS2-P21
+        alvo: {tipo: requisito, alvo: ENC-003}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Primitivas e protocolos aprovados, com agilidade criptográfica quando adequado, revistos a intervalos planeados perante o progresso técnico, em qualquer nível.", en: "Approved primitives and protocols, with cryptographic agility where appropriate, reviewed at planned intervals in light of technical progress, at any level."}
+        base:
+          obrigacoes: [NIS2-IR2690-9.2, NIS2-IR2690-9.3]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 9.2 e 9.3"
+          citacao: {pt: "seguindo, se for caso disso, uma abordagem de agilidade criptográfica", en: "following, where appropriate, a cryptographic agility approach"}
+        admite_justificacao: true
 
   - id: CTX-DORA
     nome: {pt: Entidade financeira (DORA), en: Financial entity (DORA)}
@@ -392,7 +416,7 @@ contextos:
         niveis: null
         operador: elevar
         piso: {obrigatorio: true}
-        ambito: {pt: "Processo de gestão de incidentes de TIC definido, estabelecido e aplicado em qualquer nível.", en: "ICT-related incident management process defined, established and implemented at any level."}
+        ambito: {pt: "Processo de gestão de incidentes de TIC definido, estabelecido e aplicado em qualquer nível, incluindo o registo de todos os incidentes e o post-mortem dos incidentes de caráter severo, com a revisão dos artefactos afectados (§4.6).", en: "ICT-related incident management process defined, established and implemented at any level, including the recording of all incidents and the post-mortem of major incidents, with the review of the affected artefacts (§4.6)."}
         base:
           obrigacoes: [DORA-17-1]
           referencia: "Reg. (UE) 2022/2554, art. 17.º, n.º 1"
@@ -577,6 +601,54 @@ contextos:
           obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]
           referencia: "Reg. Delegado (UE) 2024/1774, art. 20.º, n.os 1 e 2, al. b), e art. 21.º, al. c)"
           citacao: {pt: "Um processo de gestão do ciclo de vida das identidades e das contas", en: "a lifecycle management process for identities and accounts"}
+        admite_justificacao: false
+      - id: CTX-DORA-P15
+        alvo: {tipo: requisito, alvo: ENC-007}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Ciclo de vida completo das chaves criptográficas em qualquer nível.", en: "Full cryptographic key lifecycle at any level."}
+        base:
+          obrigacoes: [DORA-RTS1774-7-1]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 7.º, n.º 1"
+          citacao: {pt: "requisitos relativos à gestão das chaves criptográficas ao longo de todo o seu ciclo de vida", en: "requirements for managing cryptographic keys through their whole lifecycle"}
+        admite_justificacao: true
+      - id: CTX-DORA-P16
+        alvo: {tipo: requisito, alvo: ENC-007}
+        grau: FCI
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Registo de todos os certificados e dos dispositivos que os guardam, mantido actualizado, com renovação antes da expiração, em qualquer nível.", en: "Register of all certificates and certificate-storing devices, kept up to date, with renewal before expiry, at any level."}
+        base:
+          obrigacoes: [DORA-RTS1774-7-4]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 7.º, n.os 4 e 5"
+          citacao: {pt: "devem criar e manter um registo de todos os certificados e dispositivos de armazenamento de certificados", en: "shall create and maintain a register for all certificates and certificate-storing devices"}
+        admite_justificacao: false
+      - id: CTX-DORA-P17
+        alvo: {tipo: requisito, alvo: ENC-003}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Inventário e revisão criptográfica em qualquer nível, com actualização da tecnologia criptográfica perante a evolução da criptoanálise ou, não sendo possível, medidas de atenuação.", en: "Cryptographic inventory and review at any level, with the cryptographic technology updated as cryptanalysis evolves or, where that is not possible, mitigating measures."}
+        base:
+          obrigacoes: [DORA-RTS1774-6-4]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 6.º, n.º 4"
+          citacao: {pt: "com base na evolução da criptoanálise", en: "on the basis of developments in cryptanalysis"}
+        admite_justificacao: true
+      - id: CTX-DORA-P18
+        alvo: {tipo: requisito, alvo: ARC-006}
+        grau: FCI
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Revisão das regras de filtragem de rede pelo menos semestral, em qualquer nível, para os sistemas que apoiam funções críticas ou importantes.", en: "Review of the network filtering rules at least every six months, at any level, for the systems supporting critical or important functions."}
+        base:
+          obrigacoes: [DORA-RTS1774-13-h]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 13.º, al. h), e segundo parágrafo"
+          citacao: {pt: "pelo menos, a cada seis meses", en: "at least every 6 months"}
         admite_justificacao: false
 
   - id: CTX-CRA
@@ -1071,6 +1143,90 @@ acrescentos:
       citacao: {pt: "explicações claras e pertinentes sobre o papel do sistema de IA no processo de tomada de decisão e sobre os principais elementos da decisão tomada", en: "clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision taken"}
     controlos: []
     sem_controlo_razao: {pt: "Capacidade funcional e de processo; o registo por decisão apoia-se em OPS-011.", en: "A functional and process capability; the per-decision record relies on OPS-011."}
+  - id: CTX-DORA-R02
+    contexto: CTX-DORA
+    grau: null
+    niveis: null
+    nome: {pt: "Classificação dos incidentes de TIC e agregação dos recorrentes", en: "Classification of ICT-related incidents and aggregation of recurring ones"}
+    criterio_aceitacao:
+      pt: "Os incidentes de TIC classificam-se e o seu impacto determina-se com os critérios do art. 18.º, n.º 1 (clientes, contrapartes e transacções afectados; reputação; duração e indisponibilidade; distribuição geográfica; perdas de dados; criticidade dos serviços; impacto económico) e com os limiares de materialidade do Reg. Delegado (UE) 2024/1772, a partir dos dados de impacto do registo (Política 32 §4.3). Mensalmente, avalia-se a existência de incidentes recorrentes: os que ocorreram pelo menos duas vezes em seis meses, com a mesma causa primária aparente, e cumprem em conjunto os critérios contam como um incidente de caráter severo (excepto microempresas e as entidades do art. 16.º, n.º 1)."
+      en: "ICT-related incidents are classified and their impact determined with the criteria of Article 18(1) (clients, counterparts and transactions affected; reputation; duration and downtime; geographical spread; data losses; criticality of the services; economic impact) and with the materiality thresholds of Delegated Regulation (EU) 2024/1772, from the impact data in the record (Policy 32 §4.3). Every month, the existence of recurring incidents is assessed: those that occurred at least twice within six months, with the same apparent root cause, and that collectively meet the criteria count as one major incident (except microenterprises and the entities of Article 16(1))."
+    base:
+      obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]
+      referencia: "Reg. (UE) 2022/2554, arts. 17.º, n.º 3, al. b), e 18.º, n.º 1; Reg. Delegado (UE) 2024/1772, art. 8.º, n.º 2"
+      citacao: {pt: "avaliar mensalmente a existência de incidentes recorrentes", en: "assess the existence of recurring incidents on a monthly basis"}
+    controlos: []
+    sem_controlo_razao: {pt: "Critério de processo aplicado pela Política 32 (§4.3, §4.7 e §6.1); sem controlo técnico próprio no Manual.", en: "A process criterion applied through Policy 32 (§4.3, §4.7 and §6.1); no dedicated technical control in the Manual."}
+  - id: CTX-DORA-R03
+    contexto: CTX-DORA
+    grau: null
+    niveis: null
+    nome: {pt: "Registo de ciberameaças significativas", en: "Record of significant cyber threats"}
+    criterio_aceitacao:
+      pt: "Além dos incidentes, as ciberameaças significativas que afectam a aplicação ou os seus sistemas ficam registadas (descrição, fonte, sistemas visados, avaliação e medidas), com a possibilidade de notificação voluntária à autoridade competente (art. 19.º, n.º 2)."
+      en: "Besides incidents, the significant cyber threats that affect the application or its systems are recorded (description, source, systems targeted, assessment and measures), with the option of voluntary notification to the competent authority (Article 19(2))."
+    base:
+      obrigacoes: [DORA-17-2]
+      referencia: "Reg. (UE) 2022/2554, art. 17.º, n.º 2"
+      citacao: {pt: "As entidades financeiras registam todos os incidentes relacionados com as TIC, bem como as ciberameaças significativas", en: "Financial entities shall record all ICT-related incidents and significant cyber threats"}
+    controlos: []
+    sem_controlo_razao: {pt: "Registo de processo; sem controlo técnico próprio no Manual.", en: "A process record; no dedicated technical control in the Manual."}
+  - id: CTX-NIS2-R02
+    contexto: CTX-NIS2
+    grau: null
+    niveis: null
+    nome: {pt: "Critério de incidente significativo", en: "Significant incident criterion"}
+    criterio_aceitacao:
+      pt: "Um incidente é avaliado como significativo, a partir dos dados de impacto do registo (Política 32 §4.3), quando causou ou pode causar graves perturbações operacionais dos serviços ou perdas financeiras à entidade, ou danos materiais ou imateriais consideráveis a outras pessoas; a avaliação e a decisão ficam registadas."
+      en: "An incident is assessed as significant, from the impact data in the record (Policy 32 §4.3), when it has caused or is capable of causing severe operational disruption of the services or financial loss to the entity, or considerable material or non-material damage to other persons; the assessment and the decision are recorded."
+    base:
+      obrigacoes: [NIS2-23-3]
+      referencia: "Diretiva (UE) 2022/2555, art. 23.º, n.º 3"
+      citacao: {pt: "Considera-se que um incidente é significativo se", en: "An incident shall be considered to be significant if"}
+    controlos: []
+    sem_controlo_razao: {pt: "Critério de processo aplicado pela Política 32 (§4.3, §4.7 e §6.1); sem controlo técnico próprio no Manual.", en: "A process criterion applied through Policy 32 (§4.3, §4.7 and §6.1); no dedicated technical control in the Manual."}
+  - id: CTX-NIS2-R03
+    contexto: CTX-NIS2
+    grau: PERTINENTE
+    niveis: null
+    nome: {pt: "Limiares de incidente significativo e agregação dos recorrentes", en: "Significant incident thresholds and aggregation of recurring incidents"}
+    criterio_aceitacao:
+      pt: "Nas entidades pertinentes, aplicam-se os critérios do art. 3.º do Reg. de Execução (UE) 2024/2690 (perdas financeiras directas acima de 500 000 EUR ou 5 % do volume de negócios, o que for menor; fuga de segredos comerciais; morte ou danos consideráveis à saúde; acesso malicioso com risco de perturbação grave; e os critérios específicos por tipo de entidade). Trimestralmente, avalia-se a existência de incidentes recorrentes: os que ocorreram pelo menos duas vezes em seis meses, com a mesma causa primária aparente, e cumprem em conjunto o critério financeiro contam como um incidente significativo."
+      en: "For relevant entities, the criteria of Article 3 of Implementing Regulation (EU) 2024/2690 apply (direct financial losses above EUR 500 000 or 5 % of turnover, whichever is lower; exfiltration of trade secrets; death or considerable damage to health; malicious access capable of causing severe disruption; and the criteria specific to each entity type). Every quarter, the existence of recurring incidents is assessed: those that occurred at least twice within six months, with the same apparent root cause, and that collectively meet the financial criterion count as one significant incident."
+    base:
+      obrigacoes: [NIS2-IR2690-art3, NIS2-IR2690-art4, NIS2-IR2690-3.4.2]
+      referencia: "Reg. de Execução (UE) 2024/2690, arts. 3.º e 4.º e anexo, ponto 3.4.2"
+      citacao: {pt: "Ocorreram pelo menos duas vezes num período de seis meses", en: "have occurred at least twice within six months"}
+    controlos: []
+    sem_controlo_razao: {pt: "Critério de processo aplicado pela Política 32 (§4.3, §4.7 e §6.1); sem controlo técnico próprio no Manual.", en: "A process criterion applied through Policy 32 (§4.3, §4.7 and §6.1); no dedicated technical control in the Manual."}
+  - id: CTX-CRA-R05
+    contexto: CTX-CRA
+    grau: null
+    niveis: null
+    nome: {pt: "Critério de incidente grave", en: "Severe incident criterion"}
+    criterio_aceitacao:
+      pt: "Um incidente com impacto na segurança do produto é avaliado como grave quando afecta ou pode afectar a capacidade do produto de proteger a disponibilidade, autenticidade, integridade ou confidencialidade de dados ou funções sensíveis ou importantes, ou quando introduz ou pode introduzir código mal-intencionado no produto ou nos sistemas de um utilizador; a avaliação fica registada e, sendo grave, segue os prazos e o conteúdo da Política 32 §6 e §6.1."
+      en: "An incident with an impact on the security of the product is assessed as severe when it affects or is capable of affecting the product's ability to protect the availability, authenticity, integrity or confidentiality of sensitive or important data or functions, or when it leads or is capable of leading to the introduction or execution of malicious code in the product or in a user's systems; the assessment is recorded and, if severe, follows the time limits and content of Policy 32 §6 and §6.1."
+    base:
+      obrigacoes: [CRA-14-3]
+      referencia: "Reg. (UE) 2024/2847, art. 14.º, n.os 3 e 5"
+      citacao: {pt: "um incidente com impacto na segurança do produto com elementos digitais é considerado grave se", en: "an incident having an impact on the security of the product with digital elements shall be considered to be severe"}
+    controlos: []
+    sem_controlo_razao: {pt: "Critério de processo aplicado pela Política 32 (§4.3, §4.7 e §6.1); sem controlo técnico próprio no Manual.", en: "A process criterion applied through Policy 32 (§4.3, §4.7 and §6.1); no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R06
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Registo de violações de dados pessoais", en: "Register of personal data breaches"}
+    criterio_aceitacao:
+      pt: "Todas as violações de dados pessoais ficam documentadas, notificadas ou não: factos, efeitos, medidas de reparação e a fundamentação da decisão de notificar ou não notificar, de forma que a autoridade de controlo possa verificar o cumprimento."
+      en: "All personal data breaches are documented, whether notified or not: facts, effects, remedial action and the rationale for the decision to notify or not to notify, so that the supervisory authority can verify compliance."
+    base:
+      obrigacoes: [RGPD-33-5]
+      referencia: "Reg. (UE) 2016/679, art. 33.º, n.º 5"
+      citacao: {pt: "O responsável pelo tratamento documenta quaisquer violações de dados pessoais", en: "The controller shall document any personal data breaches"}
+    controlos: []
+    sem_controlo_razao: {pt: "Registo de processo, apoiado no registo de incidentes da Política 32; sem controlo técnico próprio no Manual.", en: "A process record, relying on the incident record of Policy 32; no dedicated technical control in the Manual."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -1213,6 +1369,7 @@ lista_ids:
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-NIS2-P02], obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1470,6 +1627,7 @@ lista_ids:
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1753,6 +1911,7 @@ lista_ids:
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
     PERTINENTE:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1892,12 +2051,16 @@ lista_ids:
         - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: LOG-004, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P03], obrigacoes: [NIS2-IR2690-3.2.4]}
         - {id: LOG-007, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P04], obrigacoes: [NIS2-IR2690-3.2.4]}
+        - {id: ENC-003, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P21], obrigacoes: [NIS2-IR2690-9.2, NIS2-IR2690-9.3]}
+        - {id: ENC-007, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P20], obrigacoes: [NIS2-IR2690-9.2]}
         - {id: IAC-007, origem: elevado, cap: '08', grau: PERTINENTE, pisos: [CTX-NIS2-P11], obrigacoes: [NIS2-IR2690-6.4.2]}
         - {id: DPL-007, origem: elevado, cap: '11', grau: PERTINENTE, pisos: [CTX-NIS2-P10], obrigacoes: [NIS2-IR2690-6.4.2]}
         - {id: OPS-005, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P05], obrigacoes: [NIS2-IR2690-3.2.4]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-NIS2-P02], obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]}
         - {id: OPS-017, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P17], obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]}
         - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
+        - {id: CTX-NIS2-R03, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-3.4.2, NIS2-IR2690-art3, NIS2-IR2690-art4]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1975,11 +2138,11 @@ lista_ids:
         - {id: CFG-006, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P21], obrigacoes: [NIS2-IR2690-9.2, NIS2-IR2690-9.3]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P20], obrigacoes: [NIS2-IR2690-9.2]}
         - {id: ENC-008, origem: base}
         - {id: PRI-001, origem: base}
         - {id: PRI-002, origem: base}
@@ -2156,6 +2319,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]}
         - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
+        - {id: CTX-NIS2-R03, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-3.4.2, NIS2-IR2690-art3, NIS2-IR2690-art4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2236,11 +2401,11 @@ lista_ids:
         - {id: CFG-007, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P21], obrigacoes: [NIS2-IR2690-9.2, NIS2-IR2690-9.3]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P20], obrigacoes: [NIS2-IR2690-9.2]}
         - {id: ENC-008, origem: base}
         - {id: ENC-009, origem: base}
         - {id: PRI-001, origem: base}
@@ -2440,6 +2605,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.1, NIS2-IR2690-11.3.2, NIS2-IR2690-11.4.1]}
         - {id: GOV-017, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P19], obrigacoes: [NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3]}
         - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
+        - {id: CTX-NIS2-R02, origem: acrescentado, obrigacoes: [NIS2-23-3]}
+        - {id: CTX-NIS2-R03, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-3.4.2, NIS2-IR2690-art3, NIS2-IR2690-art4]}
   CTX-DORA:
     base:
       L1:
@@ -2580,9 +2747,13 @@ lista_ids:
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
+        - {id: ENC-007, origem: elevado, pisos: [CTX-DORA-P15], obrigacoes: [DORA-RTS1774-7-1]}
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-DORA-P02], obrigacoes: [DORA-17-1]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2660,11 +2831,11 @@ lista_ids:
         - {id: CFG-006, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, pisos: [CTX-DORA-P15], obrigacoes: [DORA-RTS1774-7-1]}
         - {id: ENC-008, origem: base}
         - {id: PRI-001, origem: base}
         - {id: PRI-002, origem: base}
@@ -2841,6 +3012,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2921,11 +3094,11 @@ lista_ids:
         - {id: CFG-007, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, pisos: [CTX-DORA-P15], obrigacoes: [DORA-RTS1774-7-1]}
         - {id: ENC-008, origem: base}
         - {id: ENC-009, origem: base}
         - {id: PRI-001, origem: base}
@@ -3125,6 +3298,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
     FCI:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -3207,7 +3382,7 @@ lista_ids:
         - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
-        - {id: ARC-006, origem: base, cap: '04'}
+        - {id: ARC-006, origem: elevado, cap: '04', grau: FCI, pisos: [CTX-DORA-P18], obrigacoes: [DORA-RTS1774-13-h]}
         - {id: ARC-008, origem: base, cap: '04'}
         - {id: ARC-010, origem: base, cap: '04'}
         - {id: DEP-001, origem: base, cap: '05'}
@@ -3264,11 +3439,15 @@ lista_ids:
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
+        - {id: ENC-007, origem: elevado, grau: FCI, pisos: [CTX-DORA-P15, CTX-DORA-P16], obrigacoes: [DORA-RTS1774-7-1, DORA-RTS1774-7-4]}
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-005, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P09], obrigacoes: [DORA-RTS1774-23-2-b]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-DORA-P02], obrigacoes: [DORA-17-1]}
         - {id: OPS-017, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P12], obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3346,11 +3525,11 @@ lista_ids:
         - {id: CFG-006, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, grau: FCI, pisos: [CTX-DORA-P15, CTX-DORA-P16], obrigacoes: [DORA-RTS1774-7-1, DORA-RTS1774-7-4]}
         - {id: ENC-008, origem: base}
         - {id: PRI-001, origem: base}
         - {id: PRI-002, origem: base}
@@ -3412,7 +3591,7 @@ lista_ids:
         - {id: ARC-003, origem: base, cap: '04'}
         - {id: ARC-004, origem: base, cap: '04'}
         - {id: ARC-005, origem: base, cap: '04'}
-        - {id: ARC-006, origem: base, cap: '04'}
+        - {id: ARC-006, origem: elevado, cap: '04', grau: FCI, pisos: [CTX-DORA-P18], obrigacoes: [DORA-RTS1774-13-h]}
         - {id: ARC-007, origem: base, cap: '04'}
         - {id: ARC-008, origem: base, cap: '04'}
         - {id: ARC-009, origem: base, cap: '04'}
@@ -3527,6 +3706,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3607,11 +3788,11 @@ lista_ids:
         - {id: CFG-007, origem: base}
         - {id: ENC-001, origem: base}
         - {id: ENC-002, origem: base}
-        - {id: ENC-003, origem: base}
+        - {id: ENC-003, origem: elevado, pisos: [CTX-DORA-P17], obrigacoes: [DORA-RTS1774-6-4]}
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
-        - {id: ENC-007, origem: base}
+        - {id: ENC-007, origem: elevado, grau: FCI, pisos: [CTX-DORA-P15, CTX-DORA-P16], obrigacoes: [DORA-RTS1774-7-1, DORA-RTS1774-7-4]}
         - {id: ENC-008, origem: base}
         - {id: ENC-009, origem: base}
         - {id: PRI-001, origem: base}
@@ -3677,7 +3858,7 @@ lista_ids:
         - {id: ARC-003, origem: base, cap: '04'}
         - {id: ARC-004, origem: base, cap: '04'}
         - {id: ARC-005, origem: base, cap: '04'}
-        - {id: ARC-006, origem: base, cap: '04'}
+        - {id: ARC-006, origem: elevado, cap: '04', grau: FCI, pisos: [CTX-DORA-P18], obrigacoes: [DORA-RTS1774-13-h]}
         - {id: ARC-007, origem: base, cap: '04'}
         - {id: ARC-008, origem: base, cap: '04'}
         - {id: ARC-009, origem: base, cap: '04'}
@@ -3811,6 +3992,8 @@ lista_ids:
         - {id: GOV-016, origem: elevado, cap: '14', pisos: [CTX-DORA-P13], obrigacoes: [DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d]}
         - {id: GOV-017, origem: elevado, cap: '14', pisos: [CTX-DORA-P14], obrigacoes: [DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c]}
         - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
+        - {id: CTX-DORA-R02, origem: acrescentado, obrigacoes: [DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2]}
+        - {id: CTX-DORA-R03, origem: acrescentado, obrigacoes: [DORA-17-2]}
   CTX-CRA:
     base:
       L1:
@@ -3954,6 +4137,7 @@ lista_ids:
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
         - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
         - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R05, origem: acrescentado, obrigacoes: [CRA-14-3]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4215,6 +4399,7 @@ lista_ids:
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
         - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
         - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R05, origem: acrescentado, obrigacoes: [CRA-14-3]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4502,6 +4687,7 @@ lista_ids:
         - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
         - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
         - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R05, origem: acrescentado, obrigacoes: [CRA-14-3]}
   CTX-AIA-RE:
     base:
       L1:
@@ -6020,6 +6206,7 @@ lista_ids:
         - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
         - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
         - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}
+        - {id: CTX-RGPD-R06, origem: acrescentado, obrigacoes: [RGPD-33-5]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -6282,6 +6469,7 @@ lista_ids:
         - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
         - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
         - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}
+        - {id: CTX-RGPD-R06, origem: acrescentado, obrigacoes: [RGPD-33-5]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -6570,3 +6758,4 @@ lista_ids:
         - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
         - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
         - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}
+        - {id: CTX-RGPD-R06, origem: acrescentado, obrigacoes: [RGPD-33-5]}

@@ -1661,9 +1661,17 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 9.º, n.º 4, al. d)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: ENC-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Cada chave criptográfica tem ciclo de vida definido
+      en: Each cryptographic key has a defined lifecycle
   - tipo: requisito
     alvo: AUT-001
     niveis: [L2, L3]
@@ -1697,13 +1705,11 @@ itens:
     citacao:
       pt: Política de rotação definida por tipo de segredo
       en: Rotation policy defined per type of secret
-  falta:
-    pt: Autenticação forte em L1 e ciclo completo de gestão de chaves.
-    en: Strong authentication at L1 and full key management lifecycle.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota:
@@ -3249,11 +3255,20 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 17.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-DORA
     grau: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §2
+      en: Policy 32 §2
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 2-âmbito-e-obrigatoriedade
+    citacao:
+      pt: incidentes registados
+      en: incidents recorded
   - tipo: politica
     rotulo:
       pt: Política 32 §2
@@ -3289,9 +3304,7 @@ itens:
     citacao:
       pt: evidência de activação em incidente real ou exercício documentado no último ciclo
       en: evidence of activation in a real incident or documented exercise in the last cycle
-  falta:
-    pt: Processo de gestão de incidentes obrigatório para todos os sistemas (incl. L1) e registo de todos os incidentes.
-    en: Incident management process mandatory for all systems (incl. L1) and recording of all incidents.
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -3305,9 +3318,13 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 17.º, n.º 2
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R03
   - tipo: politica
     rotulo:
       pt: Política 32 §4.1
@@ -3326,9 +3343,7 @@ itens:
     citacao:
       pt: Causa raiz identificada ou hipótese de trabalho documentada
       en: Root cause identified or working hypothesis documented
-  falta:
-    pt: Registo de ciberameaças significativas (não só incidentes).
-    en: Recording of significant cyber threats (not only incidents).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3371,9 +3386,22 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 17.º, n.º 3, al. b)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
+    citacao:
+      pt: Dados de impacto registados
+      en: Impact data recorded
   - tipo: politica
     rotulo:
       pt: Política 31 §3
@@ -3401,13 +3429,11 @@ itens:
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
       en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
-  falta:
-    pt: Classificação segundo os critérios do art. 18.º, n.º 1, e RTS 2024/1772 (escala interna P1–P4).
-    en: Classification according to the criteria of Article 18(1) and RTS 2024/1772 (internal P1–P4 scale).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota: null
@@ -3549,9 +3575,22 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 18.º, n.º 1, als. a) a f)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.3
+      en: Policy 32 §4.3
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 43-investigação
+    citacao:
+      pt: Dados de impacto registados
+      en: Impact data recorded
   - tipo: politica
     rotulo:
       pt: Política 32 §4.1
@@ -3570,13 +3609,11 @@ itens:
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
       en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
-  falta:
-    pt: Critérios de classificação do art. 18.º (clientes, duração, distribuição geográfica, perdas de dados, criticidade) — lacuna intencional declarada.
-    en: Classification criteria of Article 18 (clients, duration, geographical spread, data losses, criticality) — declared intentional gap.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-17-23]
   nota:
@@ -8407,9 +8444,26 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 6.º, n.º 2, al. d)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: ENC-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Cada chave criptográfica tem ciclo de vida definido
+      en: Each cryptographic key has a defined lifecycle
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §6.4
+      en: Policy 18 §6.4
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 64-ciclo-de-vida-das-chaves-e-inventário-de-certificados
+    citacao:
+      pt: uma chave retirada guarda-se só para decifrar dados existentes
+      en: a retired key is kept only to decrypt existing data
   - tipo: requisito
     alvo: ENC-007
     niveis: [L2, L3]
@@ -8434,13 +8488,11 @@ itens:
     citacao:
       pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
       en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
-  falta:
-    pt: Regras de utilização correta e ciclo de vida completo das chaves.
-    en: Rules for correct use and full key lifecycle.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota: null
@@ -8479,16 +8531,24 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 6.º, n.º 4
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Agilidade criptográfica face à evolução da criptoanálise (incl. pós-quântica).
-    en: Cryptographic agility in the face of developments in cryptanalysis (incl. post-quantum).
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-003
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: a lista de primitivas é revista pelo menos anualmente e sempre que um aviso de criptoanálise a afecte
+      en: the list of primitives is reviewed at least yearly and whenever a cryptanalysis advisory affects it
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota: null
@@ -8528,9 +8588,28 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 7.º, n.º 1
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ENC-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Cada chave criptográfica tem ciclo de vida definido
+      en: Each cryptographic key has a defined lifecycle
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §6.4
+      en: Policy 18 §6.4
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 64-ciclo-de-vida-das-chaves-e-inventário-de-certificados
+    citacao:
+      pt: uma chave retirada guarda-se só para decifrar dados existentes
+      en: a retired key is kept only to decrypt existing data
   - tipo: requisito
     alvo: ENC-007
     niveis: [L2, L3]
@@ -8557,13 +8636,11 @@ itens:
     citacao:
       pt: Revogação por exposição suspeita
       en: Revocation on suspected exposure
-  falta:
-    pt: Geração, cópia de segurança, arquivo, recuperação, transmissão e destruição de chaves.
-    en: Key generation, backup, archiving, recovery, transmission and destruction.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota: null
@@ -8634,12 +8711,29 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 7.º, n.º 4
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Registo de todos os certificados e dispositivos de armazenamento de certificados.
-    en: Register of all certificates and certificate storage devices.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: FCI
+  resposta:
+  - tipo: requisito
+    alvo: ENC-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Os certificados constam de um inventário com dono, validade e local de guarda da chave
+      en: Certificates are listed in an inventory with owner, validity and where the key is kept
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §6.4
+      en: Policy 18 §6.4
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 64-ciclo-de-vida-das-chaves-e-inventário-de-certificados
+    citacao:
+      pt: Há alerta antes da expiração
+      en: There is an alert before expiry
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -8651,9 +8745,18 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 7.º, n.º 5
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 18 §6.4
+      en: Policy 18 §6.4
+    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
+    ancora: 64-ciclo-de-vida-das-chaves-e-inventário-de-certificados
+    citacao:
+      pt: Há alerta antes da expiração
+      en: There is an alert before expiry
   - tipo: requisito
     alvo: API-005
     niveis: [L1, L2, L3]
@@ -8662,13 +8765,11 @@ itens:
     citacao:
       pt: certificados válidos
       en: valid certificates
-  falta:
-    pt: Processo de renovação atempada antes da expiração.
-    en: Process for timely renewal before expiry.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota: null
@@ -10465,12 +10566,20 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 13.º, al. h) e segundo parágrafo
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Ciclo de vida das regras de firewall/filtros e revisão pelo menos semestral para sistemas que apoiam FCI.
-    en: Lifecycle of firewall rules/filters and review at least half-yearly for systems supporting FCI.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: FCI
+  resposta:
+  - tipo: requisito
+    alvo: ARC-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: as regras são revistas anualmente em L1 e L2 e semestralmente em L3
+      en: the rules are reviewed yearly at L1 and L2 and half-yearly at L3
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12623,8 +12732,8 @@ itens:
       pt: Cada categoria de incidente deve ter um playbook
       en: Each incident category must have a playbook
   falta:
-    pt: Obrigatoriedade em L1 (ver DORA-17-1).
-    en: Mandatory status at L1 (see DORA-17-1).
+    pt: Obrigatório em L1 pelo piso CTX-DORA-P01, que assenta no art. 17.º do DORA (ver DORA-17-1); o artigo do RTS não está na base do piso.
+    en: Mandatory at L1 through floor CTX-DORA-P01, which rests on DORA Article 17 (see DORA-17-1); the RTS article is not in the floor base.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -12763,9 +12872,18 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 22.º, al. e)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.7
+      en: Policy 32 §4.7
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 47-análise-de-recorrência
+    citacao:
+      pt: Cada recorrência abre um problema
+      en: Each recurrence opens a problem
   - tipo: politica
     rotulo:
       pt: Política 32 §4.6
@@ -12783,13 +12901,11 @@ itens:
     citacao:
       pt: Métricas de eficácia da monitorização medidas e revistas
       en: Monitoring effectiveness metrics measured and reviewed
-  falta:
-    pt: Análise periódica de padrões e incidentes recorrentes (número e ocorrência).
-    en: Periodic analysis of patterns and recurring incidents (number and occurrence).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
   nota: null
@@ -15727,9 +15843,22 @@ itens:
   acto_fonte: 32024R1772
   referencia: art. 8.º, n.º 2, 1.º par.
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.7
+      en: Policy 32 §4.7
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 47-análise-de-recorrência
+    citacao:
+      pt: Cada recorrência abre um problema
+      en: Each recurrence opens a problem
   - tipo: pagina
     rotulo:
       pt: Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
@@ -15739,9 +15868,7 @@ itens:
     citacao:
       pt: mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA
       en: but not the DORA classification of incidents (Delegated Regulation (EU) 2024/1772) nor DORA-specific templates
-  falta:
-    pt: Agregação de incidentes recorrentes (≥ 2 em 6 meses, mesma causa aparente) para classificação.
-    en: Aggregation of recurring incidents (≥ 2 in 6 months, same apparent cause) for classification.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -15753,12 +15880,14 @@ itens:
   acto_fonte: 32024R1772
   referencia: art. 8.º, n.º 2, 2.º par.
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Avaliação mensal de incidentes recorrentes.
-    en: Monthly assessment of recurring incidents.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

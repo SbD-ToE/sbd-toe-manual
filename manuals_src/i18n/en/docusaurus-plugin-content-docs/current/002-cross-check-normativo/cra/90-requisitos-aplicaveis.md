@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 00775c48444dc2025786f7005add2d7ae533c0f22ac34a0907dc56304ce13669
+  source_sha256: b31ce7e63baf4dcc69d1f0c1f2f19c1edf653a4fef093807013a456b6037122b
   source_commit: null
-  target_sha256: 89483763362ef2f7c53d9a3e0544877ae94ed6624c6d58eda692b6702be9ef96
+  target_sha256: 8d4a93daa1285fd6ea0b708799e7d19f10d46547fa391090068ac86050e7adf6
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -70,6 +70,7 @@ These requirements only make sense under the regime, so they do not live in the 
 | `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | Automatic security updates enabled by default where applicable, with a clear opt-out mechanism, notification of available updates and the option to postpone them temporarily; security updates disseminated without delay and free of charge (unless otherwise agreed with a business user for a tailor-made product), separate from functionality updates where technically feasible and accompanied by advisory messages on the action to be taken; secure and verifiable distribution (DST-003); instructions for installing updates and for turning off automatic updates in the information to the user. | Regulation (EU) 2024/2847, Annex I, Part I, point (2)(c), and Part II, points (2), (7) and (8); Annex II, point (8)(c) and (e): “ensure that, where security updates are available to address identified security issues, they are disseminated without delay” (CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e) |
 | `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | Once the security update is available, a public advisory on the fixed vulnerabilities, with a description, information allowing the affected product to be identified, impacts, severity and clear and accessible remediation information; delay of the disclosure only in duly justified, recorded cases, until users have had the possibility to apply the fix. | Regulation (EU) 2024/2847, Annex I, Part II, point (4): “once a security update has been made available, share and publicly disclose information about fixed vulnerabilities” (CRA-AnxI-P2-4) |
 | `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | A vulnerability identified in a component integrated in the product (including an open-source component) reported to the person or entity manufacturing or maintaining it; a fix developed by the organisation shared with the person responsible for the component, where appropriate in a machine-readable format; the vulnerability handled in accordance with Part II of Annex I (DEP-007, DEP-010). | Regulation (EU) 2024/2847, Article 13(6): “report the vulnerability to the person or entity manufacturing or maintaining the component” (CRA-13-6-a, CRA-13-6-b) |
+| `CTX-CRA-R05` | Severe incident criterion | An incident with an impact on the security of the product is assessed as severe when it affects or is capable of affecting the product's ability to protect the availability, authenticity, integrity or confidentiality of sensitive or important data or functions, or when it leads or is capable of leading to the introduction or execution of malicious code in the product or in a user's systems; the assessment is recorded and, if severe, follows the time limits and content of Policy 32 §6 and §6.1. | Regulation (EU) 2024/2847, Article 14(3) and (5): “an incident having an impact on the security of the product with digital elements shall be considered to be severe” (CRA-14-3) |
 
 ## How to read the list {#como-se-le}
 
@@ -164,7 +165,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -367,6 +368,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R05` | Severe incident criterion | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -374,8 +376,8 @@ Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addre
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 36 |
-| Partial | 25 |
+| Covers | 38 |
+| Partial | 23 |
 | Supports evidence | 18 |
 | Gap | 15 |
 | Out of scope | 97 |

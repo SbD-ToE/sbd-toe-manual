@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: 6d3755aabef2409de940e5bcf667bddc05c968469478009d0a077e3bfc2a6882
+  source_sha256: bf1eb8e1825c273420fdc5c21495f0d4b4824fd10c80c1129e548e3a824701a0
   source_commit: null
-  target_sha256: 12d6d0a5893810337aae8df0743004544db02fbb12a485e2cea9e7034c0fe8d9
+  target_sha256: 7273974ba49e0eb1b0304ceb90be7495be22b15d78043c41eef9bd81a48d57ff
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -72,6 +72,7 @@ These requirements only make sense under the regime, so they do not live in the 
 | `CTX-RGPD-R03` | Age and parental consent verification | Where an information society service is offered directly to children on the basis of consent: age is verified against the applicable threshold (16, or the national threshold, not below 13), and consent from the holder of parental responsibility is obtained and verified by means appropriate to the available technology, recorded under PRI-006. | Regulation (EU) 2016/679, Article 8(2): “shall make reasonable efforts to verify in such cases that consent is given or authorised by the holder of parental responsibility over the child” (RGPD-8-2) |
 | `CTX-RGPD-R04` | Objection by automated means | In information society services, automated objection signals sent by the browser or user agent (e.g. Global Privacy Control) are recognised and treated as a valid objection, with the same effect as an objection given through the interface (PRI-006). | Regulation (EU) 2016/679, Article 21(5): “the data subject may exercise his or her right to object by automated means using technical specifications” (RGPD-21-5) |
 | `CTX-RGPD-R05` | Solely automated decisions | Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4). When the decision is supported by an Annex III high-risk AI system, CTX-AIA-RE-R03 also applies. | Regulation (EU) 2016/679, Article 22, n.os 1, 3 e 4: “at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision” (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
+| `CTX-RGPD-R06` | Register of personal data breaches | All personal data breaches are documented, whether notified or not: facts, effects, remedial action and the rationale for the decision to notify or not to notify, so that the supervisory authority can verify compliance. | Regulation (EU) 2016/679, Article 33(5): “The controller shall document any personal data breaches” (RGPD-33-5) |
 
 ## How to read the list {#como-se-le}
 
@@ -166,7 +167,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -370,6 +371,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CTX-RGPD-R03` | Age and parental consent verification | ▲ | ▲ | ▲ | — |
 | `CTX-RGPD-R04` | Objection by automated means | ▲ | ▲ | ▲ | — |
 | `CTX-RGPD-R05` | Solely automated decisions | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R06` | Register of personal data breaches | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -377,8 +379,8 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 36 |
-| Partial | 12 |
+| Covers | 38 |
+| Partial | 10 |
 | Supports evidence | 17 |
 | Gap | 0 |
 | Out of scope | 49 |

@@ -45,7 +45,7 @@ A organização é uma das entidades financeiras enumeradas no art. 2.º, n.º 1
 
 | Piso | Alvo | Grau | Piso exigido | Âmbito | Base legal | Justificação de não aplicabilidade |
 |---|---|---|---|---|---|---|
-| CTX-DORA-P01 | [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | obrigatório | Processo de gestão de incidentes de TIC definido, estabelecido e aplicado em qualquer nível. | Reg. (UE) 2022/2554, art. 17.º, n.º 1: «As entidades financeiras definem, estabelecem e aplicam um processo de gestão de incidentes relacionados com as TIC» (DORA-17-1) | não admitida |
+| CTX-DORA-P01 | [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | obrigatório | Processo de gestão de incidentes de TIC definido, estabelecido e aplicado em qualquer nível, incluindo o registo de todos os incidentes e o post-mortem dos incidentes de caráter severo, com a revisão dos artefactos afectados (§4.6). | Reg. (UE) 2022/2554, art. 17.º, n.º 1: «As entidades financeiras definem, estabelecem e aplicam um processo de gestão de incidentes relacionados com as TIC» (DORA-17-1) | não admitida |
 | CTX-DORA-P02 | `OPS-007` | — | obrigatório | — | Reg. (UE) 2022/2554, art. 17.º, n.º 1: «As entidades financeiras definem, estabelecem e aplicam um processo de gestão de incidentes relacionados com as TIC» (DORA-17-1) | não admitida |
 | CTX-DORA-P03 | `TST-005` | — | obrigatório | Testes dinâmicos (a par dos estáticos, já obrigatórios por DEV-003), com testes de segurança dos sistemas e aplicações expostos à Internet. | Reg. Delegado (UE) 2024/1774, art. 16.º, n.º 3: «deve incluir o desempenho das análises do código-fonte que abranjam testes estáticos e dinâmicos» (DORA-RTS1774-16-3) | não admitida |
 | CTX-DORA-P04 | `LOG-008` | — | obrigatório | — | Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2, al. e): «Medidas para detetar uma falha nos sistemas de registo» (DORA-RTS1774-12-2-e) | não admitida |
@@ -59,6 +59,10 @@ A organização é uma das entidades financeiras enumeradas no art. 2.º, n.º 1
 | CTX-DORA-P12 | `OPS-017` | FCI | obrigatório | Também em L1 para aplicações que suportam funções críticas ou importantes: níveis e prazos de recuperação e dependências de prestadores de serviços de TIC. | Reg. (UE) 2022/2554, art. 12.º, n.º 6; Reg. Delegado (UE) 2024/1774, art. 39.º, n.º 2, al. d): «Ao determinar o tempo de recuperação e os objetivos concretos de recuperação para cada função» (DORA-12-6, DORA-RTS1774-39-2-d) | não admitida |
 | CTX-DORA-P13 | `GOV-016` | — | obrigatório | Autenticação forte no acesso remoto à rede da entidade e no acesso privilegiado; contas dedicadas às tarefas administrativas e gestão automatizada do acesso privilegiado (PAM) quando viável e adequado, em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 21.º, als. e) e f), subal. ii), e art. 33.º, als. c) e d): «devem utilizar, sempre que possível, contas específicas para a execução de tarefas administrativas» (DORA-RTS1774-21-e, DORA-RTS1774-21-e-ii, DORA-RTS1774-21-f-ii, DORA-RTS1774-33-c, DORA-RTS1774-33-d) | não admitida |
 | CTX-DORA-P14 | `GOV-017` | — | obrigatório | Identificação e autenticação únicas de pessoas e sistemas; processo de gestão do ciclo de vida de identidades e contas, com soluções automatizadas sempre que possível e adequado; contas genéricas e partilhadas limitadas, em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 20.º, n.os 1 e 2, al. b), e art. 21.º, al. c): «Um processo de gestão do ciclo de vida das identidades e das contas» (DORA-RTS1774-20-1, DORA-RTS1774-20-2-b, DORA-RTS1774-21-c) | não admitida |
+| CTX-DORA-P15 | `ENC-007` | — | obrigatório | Ciclo de vida completo das chaves criptográficas em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 7.º, n.º 1: «requisitos relativos à gestão das chaves criptográficas ao longo de todo o seu ciclo de vida» (DORA-RTS1774-7-1) | admitida |
+| CTX-DORA-P16 | `ENC-007` | FCI | obrigatório | Registo de todos os certificados e dos dispositivos que os guardam, mantido actualizado, com renovação antes da expiração, em qualquer nível. | Reg. Delegado (UE) 2024/1774, art. 7.º, n.os 4 e 5: «devem criar e manter um registo de todos os certificados e dispositivos de armazenamento de certificados» (DORA-RTS1774-7-4) | não admitida |
+| CTX-DORA-P17 | `ENC-003` | — | obrigatório | Inventário e revisão criptográfica em qualquer nível, com actualização da tecnologia criptográfica perante a evolução da criptoanálise ou, não sendo possível, medidas de atenuação. | Reg. Delegado (UE) 2024/1774, art. 6.º, n.º 4: «com base na evolução da criptoanálise» (DORA-RTS1774-6-4) | admitida |
+| CTX-DORA-P18 | `ARC-006` | FCI | obrigatório | Revisão das regras de filtragem de rede pelo menos semestral, em qualquer nível, para os sistemas que apoiam funções críticas ou importantes. | Reg. Delegado (UE) 2024/1774, art. 13.º, al. h), e segundo parágrafo: «pelo menos, a cada seis meses» (DORA-RTS1774-13-h) | não admitida |
 
 ## Requisitos acrescentados pelo regime {#acrescentos}
 
@@ -67,6 +71,8 @@ Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catál
 | Requisito | Nome | Critério de aceitação | Base legal |
 |---|---|---|---|
 | `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | Capacidades de TIC redundantes, com recursos, capacidade e funções adequados às necessidades do negócio, para os sistemas de que a aplicação depende (as microempresas avaliam a necessidade pelo perfil de risco); planos de resposta e recuperação testados pelo menos uma vez por ano, incluindo, nas entidades que não sejam microempresas, cenários de ciberataque e de comutação entre a infraestrutura primária e a capacidade redundante. | Reg. (UE) 2022/2554, art. 12.º, n.º 4, e art. 11.º, n.º 6, al. a): «mantêm capacidades de TIC redundantes equipadas com recursos, capacidade e funções suficientes» (DORA-12-4, DORA-11-6-a) |
+| `CTX-DORA-R02` | Classificação dos incidentes de TIC e agregação dos recorrentes | Os incidentes de TIC classificam-se e o seu impacto determina-se com os critérios do art. 18.º, n.º 1 (clientes, contrapartes e transacções afectados; reputação; duração e indisponibilidade; distribuição geográfica; perdas de dados; criticidade dos serviços; impacto económico) e com os limiares de materialidade do Reg. Delegado (UE) 2024/1772, a partir dos dados de impacto do registo (Política 32 §4.3). Mensalmente, avalia-se a existência de incidentes recorrentes: os que ocorreram pelo menos duas vezes em seis meses, com a mesma causa primária aparente, e cumprem em conjunto os critérios contam como um incidente de caráter severo (excepto microempresas e as entidades do art. 16.º, n.º 1). | Reg. (UE) 2022/2554, arts. 17.º, n.º 3, al. b), e 18.º, n.º 1; Reg. Delegado (UE) 2024/1772, art. 8.º, n.º 2: «avaliar mensalmente a existência de incidentes recorrentes» (DORA-17-3-b, DORA-18-1, DORA-RTS1772-8-2, DORA-RTS1772-8-2-p2) |
+| `CTX-DORA-R03` | Registo de ciberameaças significativas | Além dos incidentes, as ciberameaças significativas que afectam a aplicação ou os seus sistemas ficam registadas (descrição, fonte, sistemas visados, avaliação e medidas), com a possibilidade de notificação voluntária à autoridade competente (art. 19.º, n.º 2). | Reg. (UE) 2022/2554, art. 17.º, n.º 2: «As entidades financeiras registam todos os incidentes relacionados com as TIC, bem como as ciberameaças significativas» (DORA-17-2) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -157,11 +163,11 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CFG-007` | Monitorização de drift de configuração | — | — | ✔ | — |
 | `ENC-001` | Encriptação de todas as comunicações em trânsito | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encriptação de dados sensíveis em repouso | — | ✔ | ✔ | — |
-| `ENC-003` | Algoritmos e configurações criptográficas robustas | — | ✔ | ✔ | — |
+| `ENC-003` | Algoritmos e configurações criptográficas robustas | ▲ | ▲ | ▲ | CTX-DORA-P17 |
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | ▲ | ▲ | ▲ | CTX-DORA-P15 |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -361,6 +367,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-DORA-P13 |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R02` | Classificação dos incidentes de TIC e agregação dos recorrentes | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R03` | Registo de ciberameaças significativas | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — FCI {#lista-fci}
 
@@ -445,11 +453,11 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CFG-007` | Monitorização de drift de configuração | — | — | ✔ | — |
 | `ENC-001` | Encriptação de todas as comunicações em trânsito | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encriptação de dados sensíveis em repouso | — | ✔ | ✔ | — |
-| `ENC-003` | Algoritmos e configurações criptográficas robustas | — | ✔ | ✔ | — |
+| `ENC-003` | Algoritmos e configurações criptográficas robustas | ▲ | ▲ | ▲ | CTX-DORA-P17 |
 | `ENC-004` | Hashing adaptativo de passwords | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Mascaramento de dados sensíveis em logs, outputs e respostas API | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detecção e prevenção de segredos expostos em repositórios | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
+| `ENC-007` | Ciclo de vida de chaves, segredos e certificados | ▲ | ▲ | ▲ | CTX-DORA-P15, CTX-DORA-P16 |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
 | `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
@@ -515,7 +523,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ARC-003` | Revisão de arquitectura com foco em segurança | — | ✔ | ✔ | — |
 | `ARC-004` | Decisões de arquitectura documentadas | — | ✔ | ✔ | — |
 | `ARC-005` | Threat modeling integrado nos fluxos críticos | — | ✔ | ✔ | — |
-| `ARC-006` | Controlos técnicos de isolamento entre domínios sensíveis | ✔ | ✔ | ✔ | — |
+| `ARC-006` | Controlos técnicos de isolamento entre domínios sensíveis | ▲ | ▲ | ▲ | CTX-DORA-P18 |
 | `ARC-007` | Padrões de arquitectura reutilizáveis e aprovados | — | ✔ | ✔ | — |
 | `ARC-008` | Fluxos de dados entre zonas de confiança protegidos | ✔ | ✔ | ✔ | — |
 | `ARC-009` | Alterações significativas desencadeiam nova revisão | — | ✔ | ✔ | — |
@@ -649,6 +657,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ▲ | ▲ | ▲ | CTX-DORA-P13 |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ▲ | ▲ | ▲ | CTX-DORA-P14 |
 | `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R02` | Classificação dos incidentes de TIC e agregação dos recorrentes | ▲ | ▲ | ▲ | — |
+| `CTX-DORA-R03` | Registo de ciberameaças significativas | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -656,8 +666,8 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 137 |
-| Parcial | 124 |
+| Cobre | 151 |
+| Parcial | 115 |
 | Apoia evidência | 123 |
-| Lacuna | 8 |
+| Lacuna | 3 |
 | Fora de âmbito | 234 |

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: dbfedd6fd7c74efbdf98bc5ca8473cf2519dbfe4a7c006e48c15853348fb08dd
+  source_sha256: 73f8df7268b9d4e85cb6879677b3581e1c8a610eef904bc9cc2ebd2bacffc055
   source_commit: null
-  target_sha256: 22ca6bd791678e1bba43da282a9da41c94409977efdfb9356112299ec6fcfb78
+  target_sha256: bc30f0a3c91dd292821a29cbd1991db5b37beee9d9edf23416aaa0c25b26498b
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -59,7 +59,7 @@ The entity is essential or important under Article 3 of Directive (EU) 2022/2555
 
 | Floor | Target | Grade | Required floor | Scope | Legal basis | Justification of non-applicability |
 |---|---|---|---|---|---|---|
-| CTX-NIS2-P01 | [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | mandatory | Incident response process (IRP) mandatory at any level. | Directive (EU) 2022/2555, Article 21(2), point (b); Implementing Regulation (EU) 2024/2690, Annex, point 3.1.1: “incident handling” (NIS2-21-2-b, NIS2-IR2690-3.1.1) | not admitted |
+| CTX-NIS2-P01 | [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) | — | mandatory | Incident response process (IRP) mandatory at any level, including the recording of incidents and the post-mortem of significant incidents, with the review of the affected artefacts (§4.6). | Directive (EU) 2022/2555, Article 21(2), point (b); Implementing Regulation (EU) 2024/2690, Annex, point 3.1.1: “incident handling” (NIS2-21-2-b, NIS2-IR2690-3.1.1) | not admitted |
 | CTX-NIS2-P02 | `OPS-007` | — | mandatory | — | Directive (EU) 2022/2555, Article 21(2), point (b); Implementing Regulation (EU) 2024/2690, Annex, point 3.1.1: “incident handling” (NIS2-21-2-b, NIS2-IR2690-3.1.1) | not admitted |
 | CTX-NIS2-P03 | `LOG-004` | PERTINENTE | mandatory | — | Implementing Regulation (EU) 2024/2690, Annex, point 3.2.4: “The logs shall be regularly reviewed for any unusual or unwanted trends.” (NIS2-IR2690-3.2.4) | not admitted |
 | CTX-NIS2-P04 | `LOG-007` | PERTINENTE | mandatory | — | Implementing Regulation (EU) 2024/2690, Annex, point 3.2.4: “If the laid down values for alarm threshold are exceeded, an alarm shall be triggered, where appropriate, automatically.” (NIS2-IR2690-3.2.4) | not admitted |
@@ -78,6 +78,8 @@ The entity is essential or important under Article 3 of Directive (EU) 2022/2555
 | CTX-NIS2-P17 | `OPS-017` | PERTINENTE | mandatory | Recovery plan with activation and deactivation conditions and recovery order, also at L1. | Implementing Regulation (EU) 2024/2690, Annex, points 4.1.1 and 4.1.2: “The relevant entities’ operations shall be restored according to the business continuity and disaster recovery plan.” (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | not admitted |
 | CTX-NIS2-P18 | `GOV-014` | PERTINENTE | mandatory | Review at planned intervals of identities and of privileged and administration accounts on the supporting systems, with documented results. | Implementing Regulation (EU) 2024/2690, anexo, pontos 11.2.3, 11.3.3 e 11.5.4: “The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes.” (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3, NIS2-IR2690-11.5.4) | not admitted |
 | CTX-NIS2-P19 | `GOV-017` | PERTINENTE | mandatory | Granting, change, removal and documentation of access rights; unique identities, linked to a person and overseen; logging of identity management. | Implementing Regulation (EU) 2024/2690, Annex, points 11.2.1 and 11.5.1 a 11.5.3: “The relevant entities shall provide, modify, remove and document access rights to network and information systems in accordance with the access control policy referred to in point 11.1.” (NIS2-IR2690-11.2.1, NIS2-IR2690-11.5.1, NIS2-IR2690-11.5.2, NIS2-IR2690-11.5.3) | not admitted |
+| CTX-NIS2-P20 | `ENC-007` | PERTINENTE | mandatory | Key and certificate management at any level, with the methods of point 9.2(c). | Implementing Regulation (EU) 2024/2690, Annex, point 9.2: “approach to key management” (NIS2-IR2690-9.2) | admitted |
+| CTX-NIS2-P21 | `ENC-003` | PERTINENTE | mandatory | Approved primitives and protocols, with cryptographic agility where appropriate, reviewed at planned intervals in light of technical progress, at any level. | Implementing Regulation (EU) 2024/2690, Annex, points 9.2 and 9.3: “following, where appropriate, a cryptographic agility approach” (NIS2-IR2690-9.2, NIS2-IR2690-9.3) | admitted |
 
 ## Requirements added by the regime {#acrescentos}
 
@@ -86,6 +88,8 @@ These requirements only make sense under the regime, so they do not live in the 
 | Requirement | Name | Acceptance criterion | Legal basis |
 |---|---|---|---|
 | `CTX-NIS2-R01` | At least partial redundancy | Based on the risk assessment and the continuity plan, sufficient availability of resources through at least partial redundancy of the network and information systems and of the communication channels the application depends on; resources monitored and adjusted according to the backup and redundancy requirements. | Implementing Regulation (EU) 2024/2690, Annex, points 4.2.4 and 4.2.5: “shall ensure sufficient availability of resources by at least partial redundancy of the following” (NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5) |
+| `CTX-NIS2-R02` | Significant incident criterion | An incident is assessed as significant, from the impact data in the record (Policy 32 §4.3), when it has caused or is capable of causing severe operational disruption of the services or financial loss to the entity, or considerable material or non-material damage to other persons; the assessment and the decision are recorded. | Directive (EU) 2022/2555, Article 23(3): “An incident shall be considered to be significant if” (NIS2-23-3) |
+| `CTX-NIS2-R03` | Significant incident thresholds and aggregation of recurring incidents | For relevant entities, the criteria of Article 3 of Implementing Regulation (EU) 2024/2690 apply (direct financial losses above EUR 500 000 or 5 % of turnover, whichever is lower; exfiltration of trade secrets; death or considerable damage to health; malicious access capable of causing severe disruption; and the criteria specific to each entity type). Every quarter, the existence of recurring incidents is assessed: those that occurred at least twice within six months, with the same apparent root cause, and that collectively meet the financial criterion count as one significant incident. | Implementing Regulation (EU) 2024/2690, arts. 3.º e 4.º e Annex, point 3.4.2: “have occurred at least twice within six months” (NIS2-IR2690-art3, NIS2-IR2690-art4, NIS2-IR2690-3.4.2) |
 
 ## How to read the list {#como-se-le}
 
@@ -180,7 +184,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -379,6 +383,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
 | `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
+| `CTX-NIS2-R02` | Significant incident criterion | ▲ | ▲ | ▲ | — |
 
 ## Requirement list — PERTINENTE {#lista-pertinente}
 
@@ -463,11 +468,11 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CFG-007` | Configuration drift monitoring | — | — | ✔ | — |
 | `ENC-001` | Encryption of all communications in transit | ✔ | ✔ | ✔ | — |
 | `ENC-002` | Encryption of sensitive data at rest | — | ✔ | ✔ | — |
-| `ENC-003` | Robust cryptographic algorithms and configurations | — | ✔ | ✔ | — |
+| `ENC-003` | Robust cryptographic algorithms and configurations | ▲ | ▲ | ▲ | CTX-NIS2-P21 |
 | `ENC-004` | Adaptive password hashing | ✔ | ✔ | ✔ | — |
 | `ENC-005` | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | — |
 | `ENC-006` | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | — |
-| `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
+| `ENC-007` | Lifecycle of keys, secrets and certificates | ▲ | ▲ | ▲ | CTX-NIS2-P20 |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
 | `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
@@ -667,6 +672,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-016` | Privileged and administration accounts of supporting systems | ▲ | ▲ | ▲ | CTX-NIS2-P13 |
 | `GOV-017` | Lifecycle of identities with access to systems | ▲ | ▲ | ▲ | CTX-NIS2-P19 |
 | `CTX-NIS2-R01` | At least partial redundancy | ▲ | ▲ | ▲ | — |
+| `CTX-NIS2-R02` | Significant incident criterion | ▲ | ▲ | ▲ | — |
+| `CTX-NIS2-R03` | Significant incident thresholds and aggregation of recurring incidents | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -674,8 +681,8 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 79 |
-| Partial | 79 |
+| Covers | 95 |
+| Partial | 64 |
 | Supports evidence | 12 |
-| Gap | 12 |
+| Gap | 11 |
 | Out of scope | 38 |

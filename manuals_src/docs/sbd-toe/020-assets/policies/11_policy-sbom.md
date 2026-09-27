@@ -223,7 +223,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | SbD-ToE Cap. 05 - Dependências, SBOM e SCA | Geração, correlação com SCA, inventário de runtime; **DEP-012 AI BOM**; **US-14** |
 | SbD-ToE Cap. 07 - CI/CD Seguro | Integração SBOM no pipeline de build e release |
 | SbD-ToE Cap. 09 - Containers e Imagens | SBOM por camada de imagem |
-| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes; anexo Fornecedores de serviços de IA AI |
+| Política de Dependências (`10_policy-dependencias.md`) | Aprovação e rastreabilidade de componentes; anexo Fornecedores de serviços de IA |
 | Política de AI BOM (`39_policy-ai-bom-supply-chain.md`) | Tratamento específico de modelos, datasets, MCP, prompts |
 | Política de Rastreabilidade (`06_policy-rastreabilidade.md`) | Arquivo e retenção de artefactos de build |
 | CycloneDX 1.6 `ml-bom` (OWASP, 2024) | Formato preferido para AI BOM |

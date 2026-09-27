@@ -265,7 +265,7 @@ O Art. 13 exige que os sistemas de IA de risco elevado sejam suficientemente tra
 | Requisito AI Act | Capítulo SbD-ToE | Cobertura |
 |---|---|---|
 | Documentação de capacidades e limitações | Cap. 02, Cap. 04, Policy 38 (mandate) | Requisitos, arquitetura e *mandate* com `capabilities` + `scope` + `risk_residual` |
-| Identidade do fornecedor de serviços de IA e *runtime* | Policy 38 (`agent_runtime` no mandate) + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de fornecedores de serviços de IA) | Identidade do fornecedor de serviços de IA AI + versão *pinned* do modelo |
+| Identidade do fornecedor de serviços de IA e *runtime* | Policy 38 (`agent_runtime` no mandate) + [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (lista de fornecedores de serviços de IA) | Identidade do fornecedor de serviços de IA + versão *pinned* do modelo |
 | Supervisão humana exigida | Cap. 02 §A0–A4 + Policy 38 | Nível de autonomia A0–A4 declarado por uso/contexto |
 
 **O que o SbD-ToE cobre**

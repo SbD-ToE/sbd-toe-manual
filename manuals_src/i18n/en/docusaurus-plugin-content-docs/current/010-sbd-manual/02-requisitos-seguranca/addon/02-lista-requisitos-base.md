@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 09b7e66fbe01a405085c2ea22a4b7548720965c50e696b573405001e75f11f39
-  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
-  target_sha256: 0886173da20f4e77ff45244a9be15ff04739c822fdfe3c6b5906a9c7c6b52f20
+  source_sha256: 3c201737481e18dbb23540d8e068887bbb435d7c2a582d2127b0cf88e2b51f3b
+  source_commit: 8eb6a0aba53db254727866b9715b6a7e56eb7490
+  target_sha256: db2290a200144cb572c108f2c28f79a51bafd4a205cc5df7ed13199ab0d6219f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-27T18:03:41Z
-  stamped_at: 2026-09-27T18:03:41Z
+  translated_at: 2026-09-27T19:34:25Z
+  stamped_at: 2026-09-27T19:34:25Z
   reviewed_by: null
 ---
 
@@ -246,11 +246,11 @@ Requirements that guarantee the protection of sensitive data in transit and at r
 |----|------|:--:|:--:|:--:|----------------------|
 | ENC-001 | Encryption of all communications in transit | ✔ | ✔ | ✔ | All communication between client and server and between internal services uses TLS with a defined minimum version; insecure versions (TLS 1.0, 1.1, SSLv3) disabled and verifiable by configuration. |
 | ENC-002 | Encryption of sensitive data at rest | - | ✔ | ✔ | Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage; encryption keys managed separately from the data; evidence of application to all relevant datastores. |
-| ENC-003 | Robust cryptographic algorithms and configurations | - | ✔ | ✔ | Only approved algorithms and adequate key sizes in use (e.g. AES-256, RSA ≥ 2048, approved elliptic curves); weak or deprecated algorithms (MD5, SHA-1 for integrity, DES) absent; list of approved primitives documented. |
+| ENC-003 | Robust cryptographic algorithms and configurations | - | ✔ | ✔ | Only approved algorithms and adequate key sizes in use (e.g. AES-256, RSA ≥ 2048, approved elliptic curves); weak or deprecated algorithms (MD5, SHA-1 for integrity, DES) absent; list of approved primitives documented. An inventory of the cryptographic primitives, libraries and protocols per component, kept with the SBOM; the list of primitives is reviewed at least yearly and whenever a cryptanalysis advisory affects it (including the post-quantum transition). At L3, algorithms can be swapped by configuration, without changing the code. |
 | ENC-004 | Adaptive password hashing | ✔ | ✔ | ✔ | Passwords stored with an adaptive, brute-force-resistant algorithm (bcrypt, Argon2, PBKDF2); cost factor configured and reviewed periodically; absence of static or reversible hashing confirmed. |
 | ENC-005 | Masking of sensitive data in logs, outputs and API responses | ✔ | ✔ | ✔ | Passwords, tokens, card numbers and sensitive personal data do not appear in clear text in logs, error responses or debugging outputs; coverage verified by log analysis and testing. |
 | ENC-006 | Detection and prevention of secrets exposed in repositories | ✔ | ✔ | ✔ | Secret-detection tool active in the pipeline (e.g. truffleHog, gitleaks, detect-secrets); commits with detected secrets blocked or alerted; no clear-text secrets in the repository history. |
-| ENC-007 | Periodic rotation of keys and secrets | - | ✔ | ✔ | Rotation policy defined per type of secret; rotation carried out within the defined deadlines; auditable evidence of rotation; no keys without an expiry date for critical material. |
+| ENC-007 | Lifecycle of keys, secrets and certificates | - | ✔ | ✔ | Rotation policy defined per type of secret; rotation carried out within the defined deadlines; auditable evidence of rotation; no keys without an expiry date for critical material. Each cryptographic key has a defined lifecycle (generation, distribution, storage, backup, archiving, recovery, revocation and destruction), with usage rules per key type; retired keys are kept only to decrypt existing data. Certificates are listed in an inventory with owner, validity and where the key is kept, with an alert before expiry and automated renewal where possible ([Policy 18 §6.4](/sbd-toe/assets/policies/policy-gestao-segredos#64-ciclo-de-vida-das-chaves-e-inventário-de-certificados)). |
 | ENC-008 | Prevention of client-side caching of sensitive data | - | ✔ | ✔ | Responses containing sensitive data include headers that inhibit caching (Cache-Control: no-store, etc.); configuration verifiable by header analysis in a test environment. |
 | ENC-009 | Verifiable integrity of critical data | - | - | ✔ | Critical data with an integrity verification mechanism (MACs, signatures, checksums); tampering detected and logged; coverage applied to data with business or regulatory impact. |
 
@@ -288,7 +288,7 @@ Requirements specific to API surfaces, which are the most frequent exposure vect
 | API-002 | Unnecessary endpoints removed or hidden | ✔ | ✔ | ✔ | Debug or legacy endpoints not exposed in production; only in controlled test environments. |
 | API-003 | Input validation in APIs | ✔ | ✔ | ✔ | Malformed inputs are rejected; logs record the attempt with minimum context. |
 | API-004 | Rate limiting and abuse detection | - | ✔ | ✔ | Limit configured and active; excessive calls result in a 429 or a temporary block. |
-| API-005 | Protection by TLS and up-to-date certificates | ✔ | ✔ | ✔ | TLS channel mandatory; valid certificates; security headers (HSTS, etc.) active. |
+| API-005 | Protection by TLS and up-to-date certificates | ✔ | ✔ | ✔ | TLS channel mandatory; valid certificates, with an alert before expiry; security headers (HSTS, etc.) active. |
 | API-006 | Verification of the SDKs and wrappers used | ✔ | ✔ | ✔ | Dependencies and versions documented in the SBOM; audit of licences and known vulnerabilities. |
 | API-007 | Logging and auditing of external calls | - | ✔ | ✔ | External calls logged with the essential data (origin, destination, result, timestamp). |
 

@@ -8,16 +8,16 @@ sidebar_position: 18
 translation:
   source_locale: pt
   source_path: 020-assets/policies/18_policy-gestao-segredos.md
-  source_sha256: ee58aedf69cf9c41c6b734af7e3191e23e67ff1633297f6fe4368d447e4a2137
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: a5edd153d9e01f44a00601c920cf1c45f891977910fb4df0761447a1e17ae1db
+  source_sha256: eeb5efcfee0eda7c98a5e2af24bf011352b1075af1778c297474d963a72caf61
+  source_commit: 8eb6a0aba53db254727866b9715b6a7e56eb7490
+  target_sha256: 1f418412ff63ab496cf8b01022f9339f2dea44df18bc84cd5e259753ddcf3b1e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [ai_service_vendor, audit_trail, chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
-  glossary_sha256: ff6a8b36e98572de567a5d95a91ea4225ab8b824b39944a85d6516d855373837
-  translated_at: 2026-09-27T09:05:45Z
-  stamped_at: 2026-09-27T09:05:45Z
+  glossary_keys: [ai_service_vendor, audit_trail, chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, eu_startups, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: 308471ac19778dc8617e28966dbfe6ab54e7a6a755758ffd198265e70bf42aa6
+  translated_at: 2026-09-27T19:34:15Z
+  stamped_at: 2026-09-27T19:34:15Z
   reviewed_by: null
 ---
 
@@ -141,6 +141,23 @@ When the exposure of a secret is suspected or confirmed:
 2. Issue a new secret and distribute it to the systems that depend on it
 3. Review the vault access logs to assess misuse during the exposure period
 4. Record the incident and notify in accordance with the Traceability Policy and the IRP process
+
+### 6.4 Key lifecycle and certificate inventory {#64-ciclo-de-vida-das-chaves-e-inventário-de-certificados}
+
+The application's cryptographic keys (data encryption, signing, TLS) follow a lifecycle defined per key type (`ENC-007`):
+
+| Phase | What is required |
+|---|---|
+| Generation | In a vault or HSM, with an approved random generator and the algorithm and size from the list of primitives (`ENC-003`) |
+| Distribution | Only over an encrypted and authenticated channel, to the systems that use it |
+| Storage | In a vault or HSM; never in code, images or versioned configuration files |
+| Backup and archiving | Encrypted, with restricted access and kept separate from the backups of the data the key protects |
+| Recovery | Documented and tested procedure, recording who recovered the key |
+| Rotation and retirement | Within the periods of §6.1; a retired key is kept only to decrypt existing data |
+| Revocation | Immediate in case of exposure (§6.3) |
+| Destruction | When no data depend on the key any longer, with a record |
+
+**Certificate inventory.** The application keeps an inventory of all its certificates (TLS, signing, mTLS clients), with owner, issuer, validity and where the private key is kept (vault, HSM, device). There is an alert before expiry (at least 30 days; 90 days at L3) and automated renewal where the issuer allows it. The organisation's public key infrastructure is out of scope for this Manual.
 
 ---
 

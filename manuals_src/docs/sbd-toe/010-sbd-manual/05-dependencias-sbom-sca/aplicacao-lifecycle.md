@@ -390,7 +390,7 @@ Como **DevOps/Developer**, quero **bots de atualização com avaliação de impa
 |---|---|
 | L1 | Bots opcionais; *auto‑PR* para *patch/minor* |
 | L2 | Bots obrigatórios; *auto‑merge* apenas para actualizações *patch* ou de segurança, com todos os *gates* obrigatórios verdes, registo rastreável e declarado na política; *minor/major* requer revisão humana |
-| L3 | Bots obrigatórios; *impact analysis* + *canary*; *auto‑merge* apenas para actualizações *patch* ou de segurança, com todos os *gates* obrigatórios verdes, registo rastreável e declarado na política; *minor/major* requer aprovação humana e promoção por estágios |
+| L3 | Bots obrigatórios; *impact analysis* + *canary*; sem *auto‑merge*: *patch* e actualizações de segurança com revisão humana (acelerada para CVE, Política 13 §4.1); *minor/major* requer aprovação humana e promoção por estágios |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |

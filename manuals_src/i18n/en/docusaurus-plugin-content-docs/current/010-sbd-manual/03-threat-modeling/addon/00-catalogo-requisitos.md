@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
-  source_sha256: 9be321621eac9807d29e45fa66f106a6dac96133947494a42aaa6153922a7d09
-  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
-  target_sha256: 16fca63b02e870fef0c48a38202d9d3e883bb320c1b566e9ad3a15c035235bf3
+  source_sha256: e00ad5060fd015733a607b9dc0cae299b93c3c3c3538119ae01684e20d8dadfe
+  source_commit: e942cb6d9bc50586a82a25264f7bb2a016652246
+  target_sha256: 80392f1ce40a288087cfc80f95e063ffcde38345757f2ca9a9e5a24b3effc7d5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [cycle_iteration, framework_source_corpus, gap_family, mapping, plain_rag, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
-  glossary_sha256: 4195795bebf215e4664e664d2d0d7a96de3ba2c777ee0631bdc370a563726f72
-  translated_at: 2026-09-27T18:03:20Z
-  stamped_at: 2026-09-27T18:03:20Z
+  glossary_keys: [cycle_iteration, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, mapping, plain_rag, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: c6b37791095aec6c34b1e369e8a0f5e411b498498bd7b9b16fe3235438ad2c96
+  translated_at: 2026-09-27T18:45:46Z
+  stamped_at: 2026-09-27T18:45:46Z
   reviewed_by: null
 ---
 
@@ -65,7 +65,7 @@ Requirements that ensure the threat modelling process is conducted with methodol
 | THR-005 | Traceability threat → requirement → backlog → validation | - | ✔ | ✔ | Identified threats with a mitigation disposition generate traceable security requirements; those requirements are recorded in the backlog with a reference to the originating threat ID; validation of the requirement in test or review references the corresponding threat ID; the chain is verifiable without manual reconstruction. |
 | THR-006 | Threat model versioned and updated within the cycle or after a trigger | - | ✔ | ✔ | The threat model is under explicit version control; it is reviewed and updated at least every significant release cycle or within 30 days of a change trigger (new integration, trust boundary change, security incident or new threat with relevant impact); the threat model version is referenced in the architecture artefacts and in the go-live process. |
 | THR-007 | Independent review by AppSec before go-live in L2 and L3 | - | ✔ | ✔ | Before go-live of new L2+ applications or of architectural changes with material impact on an L2+ system, the threat model is reviewed by AppSec or by someone with equivalent competence who is independent of the team; the review produces evidence (record, approval or list of deviations with a plan); absence of review blocks the go-live. |
-| THR-008 | Threat modelling extended to systems with AI/ML components | - | ✔ | ✔ | Systems that integrate artificial intelligence or machine learning components (predictive models, LLMs behind a conversational interface, RAG systems, autonomous agents with tool invocation) have an extended threat model covering specific adversarial threats — model poisoning, direct and indirect prompt injection, training data poisoning, model theft, evasion attacks, AI supply chain compromise — referenced to established catalogues (MITRE ATLAS, NIST AI 100-2 e2025); the model identifies additional trust boundaries for training data, model artefacts, inference endpoints and tool invocations; STRIDE or LINDDUN are complemented (not replaced) with AI/ML framing as applicable. |
+| THR-008 | Threat modelling extended to systems with AI/ML components | - | ✔ | ✔ | Systems that integrate artificial intelligence or machine learning components (predictive models, LLMs behind a conversational interface, RAG systems, autonomous agents with tool invocation) have an extended threat model covering specific adversarial threats — model poisoning, direct and indirect prompt injection, training data poisoning, model theft, evasion attacks, AI supply chain compromise — referenced to established catalogues (MITRE ATLAS, NIST AI 100-2 e2025); the model identifies additional trust boundaries for training data, model artefacts, inference endpoints and tool invocations; STRIDE or LINDDUN are complemented (not replaced) with AI/ML framing as applicable. In systems that generate or manipulate realistic images, video or audio, the model also covers the reasonably foreseeable misuse of the generated content (non-consensual intimate images, child sexual abuse material, deepfakes of real people), and the safeguards are assessed with *red-teaming* and content-safety tests before each release. |
 
 ---
 

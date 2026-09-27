@@ -8,16 +8,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
-  source_sha256: d7635a0fc66efbb4438ca8ac32a1faeb0064024750a934af30f22f9d8505f0f1
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 6a0e97644336124a63c16a6cb8a10f7ab05d2575d818f840e734014a8bb905e0
+  source_sha256: c94702e524d295fbf606b4984e38afb5f69fce02558fafffc00f80d7d8f0a2c6
+  source_commit: e942cb6d9bc50586a82a25264f7bb2a016652246
+  target_sha256: 369cf16c8ded9581af0779e724eff46dac90b506afa19f409622053c0586f053
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, instrument, llm, mapping, papel_suporte, plain_rag, provenance, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
-  glossary_sha256: 34d9a689833df33ba363374f94fa94f6a82ef40540cad775cb9b05cd58a295d0
-  translated_at: 2026-09-26T08:32:02Z
-  stamped_at: 2026-09-26T18:33:31Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, chapter_role, cycle_iteration, eu_ai_human_oversight, instrument, llm, mapping, papel_suporte, plain_rag, provenance, requirement_runtime, risk_level, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
+  glossary_sha256: 831f553b1476b531889ff3ec9884e8c06452a88e8febcf78627fabee356480c5
+  translated_at: 2026-09-27T18:45:47Z
+  stamped_at: 2026-09-27T18:45:47Z
   reviewed_by: null
 ---
 
@@ -69,7 +69,7 @@ Requirements that guarantee that the system is designed, documented and reviewed
 | ARC-011 | Logical and physical segmentation between environments | - | - | ✔ | Evidence of network, permission and identity segregation between dev, staging and prod; documented and verifiable. |
 | ARC-012 | Formal approval criteria for high-risk applications | - | - | ✔ | Formal approval checklist completed and signed by the security owner; approval record prior to deployment to production. |
 | ARC-013 | Automatic topology validation in CI/CD or as code | - | - | ✔ | CI job with topology validation output (e.g. Cartography, diagrams-as-code, checkov for topology); execution logs available. |
-| ARC-014 | Architectural patterns specific to systems with AI/ML components | - | ✔ | ✔ | Systems that integrate AI/ML components (LLMs, predictive models, RAG, autonomous agents) have dedicated architectural patterns: explicit trust boundaries between training data / model artefacts / inference endpoints / agentic tool invocations; input sanitisation and output filtering controls specific to direct and indirect prompt injection (LLM01-2025, `AML.T0051.001`); rate limiting and isolation of LLM calls; approval of agentic tool invocations with limited scope (`AML.T0086`); provenance of models and datasets documented (`AML.T0010`, LLM03-2025); the architecture considers model theft (ML05-2023) and training data poisoning (`AML.T0020`) scenarios; trust zones include AI components as distinct participants (not as opaque libraries). |
+| ARC-014 | Architectural patterns specific to systems with AI/ML components | - | ✔ | ✔ | Systems that integrate AI/ML components (LLMs, predictive models, RAG, autonomous agents) have dedicated architectural patterns: explicit trust boundaries between training data / model artefacts / inference endpoints / agentic tool invocations; input sanitisation and output filtering controls specific to direct and indirect prompt injection (LLM01-2025, `AML.T0051.001`); rate limiting and isolation of LLM calls; approval of agentic tool invocations with limited scope (`AML.T0086`); provenance of models and datasets documented (`AML.T0010`, LLM03-2025); the architecture considers model theft (ML05-2023) and training data poisoning (`AML.T0020`) scenarios; trust zones include AI components as distinct participants (not as opaque libraries). Minimum human oversight, proportionate to autonomy: the overseer can ignore or override the component's *output*, stop the component in a safe state or switch to a *fallback* without AI, and receives anomaly signals (degradation, *drift*, unexpected responses). In systems that generate or manipulate realistic images, video or audio: content-safety filters and classifiers on input and output, which block the generation of non-consensual intimate images of identifiable people and of child sexual abuse material; detected misuse is blocked, logged and corrected. |
 | ARC-015 | AI agents operate as isolated *principals* with a mandate and least privilege | - | ✔ | ✔ | When the system includes autonomous agents that invoke *tools* (create a PR, read secrets, deploy, write to external systems), each agent is treated as a **distinct non-human principal**, with its own identity (ephemeral workload identity via OIDC), the minimum necessary *scope* per *tool* and per environment, and never reuses human credentials. At autonomy levels A2+ (see Ch. 02 — [autonomy levels](../../requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia)), the architecture additionally includes: (1) a structured **intent declaration** before each destructive *tool call*, recorded for audit ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)); (2) **out-of-band human approval** for actions with a destructive effect or on critical external systems (LLM06-2025 — Excessive Agency); (3) an **operational kill-switch** that revokes credentials and terminates sessions within seconds ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)); (4) a **complete audit per tool invocation** (timestamp, agent identity, scope, declared intent, actual action, outcome) integrated with the observability of Ch. 12 (`AML.M0024` AI Telemetry Logging). |
 
 ---

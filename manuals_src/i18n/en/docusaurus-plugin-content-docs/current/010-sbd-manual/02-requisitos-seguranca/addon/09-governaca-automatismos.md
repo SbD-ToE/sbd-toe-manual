@@ -6,16 +6,16 @@ tags: [governanca, automatizacao, ia, sdlc, requisitos, validacao, rastreabilida
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md
-  source_sha256: 852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 329c7938e9d2bcee896e58a1bd5eb09c552b6936f7c8759321705773ef82601a
+  source_sha256: 2c98ddbab80b7ebba13764b4e2c51e6bd43b90b6e5426ca5db79fcd88ea53e48
+  source_commit: e942cb6d9bc50586a82a25264f7bb2a016652246
+  target_sha256: a58283fa5520e2968785beea3605d5b9f00deb76e31aebd8b33fd1a434b601d3
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, eu_ai_human_oversight, eu_ai_system, framework_source_corpus, layer, normative_empirical, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
-  glossary_sha256: af5265cd3e841ca525b0af6dbc39411e63b17e0e4ec606bea0edd666e7766b71
-  translated_at: 2026-09-26T17:45:15Z
-  stamped_at: 2026-09-26T18:33:04Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, chapter_role, eu_ai_human_oversight, framework_source_corpus, layer, normative_empirical, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
+  glossary_sha256: 99bd217c01b2110ac5dc70d87c6809b50319bfca636ef6f08812cac3e128af17
+  translated_at: 2026-09-27T18:45:48Z
+  stamped_at: 2026-09-27T18:45:48Z
   reviewed_by: null
 ---
 
@@ -43,7 +43,7 @@ This annex applies whenever the development process uses:
 - Automation that produces *executable artefacts* or logically relevant ones.
 
 It does not apply:
-- to systems whose **final product is an AI system** (see the SbD-AI-ToE manual);
+- to the AI components of the **product itself**: these are governed by `THR-008`, by `ARC-014` (US-18 of Ch. 04), by `ARC-015` (US-16 of Ch. 04, which applies `REQ-AGN-003` and `REQ-AGN-004` to the product's agents), by `DEP-011` to `DEP-014` and by `OPS-011` to `OPS-014`; when the system is regulated by the AI Act, also by the regulatory overlay (context CTX-AIA-RE);
 - to purely informational tools with no impact on code, configuration or logic.
 
 ---

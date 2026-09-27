@@ -25,12 +25,12 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 | O nível de criticidade (L1–L3) está documentado e justificado?                                                         | ☐           |
 | As alçadas de aprovação por nível de risco estão documentadas e conhecidas pelos decisores, com escalonamento rastreável? (`GOV-003`) | ☐           |
 | Os requisitos mínimos proporcionais ao risco estão identificados e aplicados?                                         | ☐           |
-| Existe processo formal de gestão de exceções, registando cada exceção com owner, medida compensatória, evidência referenciável, data de expiração e alerta de revalidação (máx. 90 dias)? (`GOV-004`/`GOV-005`) | ☐           |
+| Existe processo formal de gestão de exceções, registando cada exceção com owner, medida compensatória, evidência referenciável, data de expiração (TTL da Política 05 §7) e alerta de revalidação 15 dias antes (ou a meio do TTL, se inferior a 30 dias)? (`GOV-004`/`GOV-005`) | ☐           |
 | Os contratos com terceiros incluem cláusulas de segurança proporcionais ao risco? (`GOV-006`)                         | ☐           |
 | Os fornecedores com acesso técnico foram validados (questionário/checklist; L3: SBOM, SLA de incidentes, direito de auditoria) antes de onboarding? (`GOV-007`) | ☐           |
 | Existe rastreabilidade organizacional por aplicação ligando risco → requisitos → exceções → fornecedores → owner? (`GOV-008`) | ☐           |
 | A cadeia de autoridade de cada decisão de risco (quem pediu, avaliou, aprovou) é verificável, com evidência referenciável e retida? (`GOV-009`) | ☐           |
-| Existe ciclo de revisão periódica de conformidade por tipo de ativo (L3 trimestral, L2 semestral, fornecedores anual), com ações corretivas (owner e prazo)? (`GOV-010`) | ☐           |
+| Existe ciclo de revisão periódica de conformidade por tipo de ativo (L3 trimestral, L2 semestral, L1 anual; fornecedores anual, semestral em L3), com ações corretivas (owner e prazo)? (`GOV-010`) | ☐           |
 | Existem KPIs de governação definidos, recolhidos e reportados à gestão, com thresholds que despoletam ação corretiva? (`GOV-011`) | ☐           |
 | Existe avaliação de maturidade ativa (SAMM/DSOMM ou equivalente) há ≤12 meses, com plano de evolução (L3)? (`GOV-012`) | ☐           |
 | A aplicação consta da matriz de controlo das práticas SbD-ToE e as políticas organizacionais relevantes estão formalmente aprovadas e auditadas? | ☐           |

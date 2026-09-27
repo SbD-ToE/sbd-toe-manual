@@ -397,8 +397,8 @@ Como **AppSec Engineer**, quero **validar ofensivamente a eficácia dos controlo
 | Nível | Exigência |
 |---|---|
 | L1 | Não aplicável |
-| L2 | Ocasional por risco |
-| L3 | Obrigatório pré-produção |
+| L2 | Anual + após alteração de arquitectura significativa (Política 36) |
+| L3 | Anual + antes da primeira produção + release major (Política 36) |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -485,7 +485,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings d
 - [ ] Conectores para todas as ferramentas (SAST, DAST, IAST, SCA) configurados  
 - [ ] Regras de deduplicação e correlação ativas  
 - [ ] Critérios de triagem documentados (CWE, OWASP, risco organizacional)  
-- [ ] SLA definidos por severidade e Lx (Crítico: `<24h`, Alto: `<7d`, Médio: `<30d`)  
+- [ ] SLA definidos por severidade e Lx (Política 19 §4.3; p. ex. Crítico: 30 / 7 / 3 dias, Alto: 90 / 30 / 15 dias em L1 / L2 / L3)  
 - [ ] Dashboard públicos com KPIs (findings abertos, taxa de resolução, tempo médio)  
 - [ ] Integração com backlog (Jira/Azure Boards) para atribuição automática  
 - [ ] Auditoria de exceções com dupla aprovação para L2/L3  

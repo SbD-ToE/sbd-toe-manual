@@ -111,11 +111,13 @@ Cada exceção deve ser registada em `excecoes.yaml` (ou equivalente, ex: `vex.y
 
 | Severidade CVE | Tipo | L1 | L2 | L3 |
 |---|---|---|---|---|
-| Critical | Fix deferred / Risk accepted | 30 dias | 15 dias | 7 dias |
-| High | Fix deferred / Risk accepted | 60 dias | 30 dias | 15 dias |
-| Medium | Qualquer | 180 dias | 90 dias | 45 dias |
-| Low | Qualquer | 365 dias | 180 dias | 90 dias |
-| Fix not available | Qualquer | 90 dias | 60 dias | 30 dias |
+| Critical | Fix deferred / Risk accepted | 7 dias (plano de remediação obrigatório) | 7 dias (CISO + plano de remediação) | Não aceitável |
+| High | Fix deferred / Risk accepted | 90 dias | 30 dias | 14 dias |
+| Medium | Qualquer | 90 dias | 60 dias | 30 dias |
+| Low | Qualquer | 90 dias | 60 dias | 30 dias |
+| Fix not available | Qualquer | Tecto da severidade (acima) | Tecto da severidade (acima) | Tecto da severidade (acima) |
+
+Os tectos seguem a Política 05 §7, que é a master dos prazos de validade de exceções.
 | Not affected | - | Sem TTL* | Sem TTL* | Sem TTL* |
 
 *Exceções do tipo "Not affected" devem ser reavaliadas sempre que o componente é atualizado ou quando é publicada nova informação sobre o CVE que altere o contexto de exploitabilidade.

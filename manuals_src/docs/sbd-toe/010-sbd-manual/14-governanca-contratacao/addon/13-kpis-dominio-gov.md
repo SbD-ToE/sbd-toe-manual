@@ -57,7 +57,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | GOV-K03 | % excepções activas com prazo de expiração definido e data de reavaliação agendada | Q% | ≥ 80% | 100% | 100% | T-02 | Mensal |
 | GOV-K04 | # excepções expiradas sem renovação formal (devem ser tratadas como não conformidade activa) | Q# ↓ | = 0 | = 0 | = 0 | T-02 | Semanal |
 | GOV-K05 | % contratos com fornecedores de sistemas L2/L3 com cláusulas de segurança proporcionais ao risco, assinadas | Q% | ≥ 80% | 100% | 100% | T-05 | Semestral |
-| GOV-K06 | % fornecedores L3 com validação de segurança anual concluída e documentada | Q% | - | - | 100% | T-05 | Anual |
+| GOV-K06 | % fornecedores L3 com validação de segurança semestral concluída e documentada | Q% | - | - | 100% | T-05 | Semestral |
 | GOV-K07 | % aplicações com rastreabilidade organizacional completa e actualizada (risco → requisitos → excepções → owner) | Q% | - | ≥ 80% | 100% | T-04 | Trimestral |
 | GOV-K08 | % desvios identificados em ciclos de validação contínua com acção correctiva atribuída a owner com prazo | Q% | ≥ 80% | 100% | 100% | T-02 | Por ciclo |
 

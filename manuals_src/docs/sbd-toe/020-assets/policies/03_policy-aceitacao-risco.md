@@ -65,8 +65,8 @@ A aceitação de risco não substitui a correção. É uma decisão temporária 
 | Nível | Severidade máxima aceitável sem escalada | Prazo máximo de aceitação |
 |---|---|---|
 | L1 | High (com justificação e compensação) | 90 dias |
-| L2 | Medium sem escalada; High requer aprovação AppSec | 60 dias |
-| L3 | Medium requer AppSec; High requer CISO; Critical não é aceitável | 30 dias |
+| L2 | Medium sem escalada; High requer aprovação AppSec | 60 dias (High: 30 dias; Política 05 §7) |
+| L3 | Medium requer AppSec; High requer CISO; Critical não é aceitável | 30 dias (High: 14 dias; Política 05 §7) |
 
 :::note
 Findings de severidade **Critical** não podem ser aceites como risco residual em nenhum nível sem um plano de remediação ativo com prazo definido. A aceitação de um finding Critical é uma exceção de último recurso, sujeita a aprovação de CISO e registo formal com prazo máximo de 7 dias.

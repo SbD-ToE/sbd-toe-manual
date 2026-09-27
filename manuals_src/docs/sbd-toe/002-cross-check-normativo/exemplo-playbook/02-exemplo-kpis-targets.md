@@ -351,7 +351,7 @@ graph TB
 
 - Começar conservador (melhor exceder que falhar)
 - Iterar conforme capacidade
-- Alinhar com DORA requirements
+- Alinhar com os requisitos do DORA
 - Comunicar trade-offs
 - Documentar decisões
 

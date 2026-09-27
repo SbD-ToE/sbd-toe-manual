@@ -73,7 +73,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **TRN-K03 - Fornecedor com formação:** para fornecedores de sistemas L3, o requisito é formação ou questionário de segurança específico ao contexto (não genérico). Para sistemas L2, um questionário de segurança documentado é suficiente. O critério de onboarding completo de fornecedores é definido em Cap. 14 `addon/03-modelo-validacao-fornecedores.md`.
 
-**TRN-K04 - Conteúdo actualizado:** um conteúdo está desactualizado quando: (a) referencia requisitos revogados ou alterados; (b) não reflecte mudanças no catálogo de ameaças relevante para o domínio; ou (c) tem mais de 24 meses sem revisão. O prazo de actualização após alteração significativa do catálogo é de 90 dias.
+**TRN-K04 - Conteúdo actualizado:** um conteúdo está desactualizado quando: (a) referencia requisitos revogados ou alterados; (b) não reflecte mudanças no catálogo de ameaças relevante para o domínio; ou (c) tem mais de 12 meses sem revisão. O prazo de actualização após alteração significativa do catálogo é de 90 dias.
 
 **TRN-K05 - Incidente com causa raiz de formação:** um incidente tem causa raiz de formação quando a análise post-mortem identifica que: (a) o comportamento que originou o incidente era coberto por conteúdo de formação existente; e (b) o colaborador envolvido não tinha a formação concluída ou a tinha expirada. Este indicador deve tender a zero e qualquer valor não-zero é um sinal de alerta imediato.
 

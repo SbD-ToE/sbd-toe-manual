@@ -46,13 +46,13 @@ Como **Developer + AppSec Engineer**, quero **submeter exceções de segurança 
 - **Dado** que um controlo não pode ser cumprido numa aplicação classificada como L1, L2 ou L3  
   **Quando** submeto exceção com justificação técnica e compensação  
   **Então** ela é roteada para alçada apropriada, avaliada, e aprovada ou rejeitada  
-- E um calendário de revalidação é automaticamente criado (L3: 3 meses, L2: 6 meses, L1: anual)  
+- E a revalidação é automaticamente agendada para a data de expiração, dentro do TTL da Política 05 §7  
 
 **Critérios de aceitação (DoD).**  
 - [ ] Exceção registada em ferramenta GRC com campos obrigatórios: aplicação, risco (L1–L3), controlo em falta, justificação, compensação, owner  
 - [ ] Alçada de aprovação determinada automaticamente por nível de risco  
 - [ ] Aprovação formal recebida (assinatura digital ou registo de timestamp)  
-- [ ] Calendário de revalidação criado e owner notificado (30 dias antes de expiração)  
+- [ ] Calendário de revalidação criado e owner notificado (15 dias antes da expiração, ou a meio do TTL se este for inferior a 30 dias)  
 - [ ] Issue de mitigação criada no backlog de segurança para próxima release  
 - [ ] Notificação automática enviada a owner se exceção se aproxima de vencer  
 
@@ -455,8 +455,8 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Auditoria | Trimestral (mínimo), Semestral (recomendado) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
-| Operação | Trimestral (mínimo), Semestral (recomendado) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
+| Auditoria | Conforme a Política 35: anual (L1), semestral (L2), trimestral (L3) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
+| Operação | Conforme a Política 35: anual (L1), semestral (L2), trimestral (L3) | GRC / Compliance + AppSec Engineer + CISO | Relatório publicado 5 dias após fim do período |
 
 **Ligações úteis.**  
 - [Governação e Maturidade](./addon/governancao-maturidade)
@@ -557,7 +557,7 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um checklist
 
 :::userstory
 **História.**   
-Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar fornecedores periodicamente (anual por defaut, semestral para L2, trimestral para L3), com validação técnica atualizada, análise de compliance SLA, e escalonamento para decisão de penalização ou substituição se necessário**, para **assegurar que continuam a cumprir requisitos e SLA, que risco é mitigado, e que decisões de continuidade são baseadas em evidência**.
+Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar fornecedores periodicamente (anual para L1 e L2, semestral para L3, e por evento crítico), com validação técnica atualizada, análise de compliance SLA, e escalonamento para decisão de penalização ou substituição se necessário**, para **assegurar que continuam a cumprir requisitos e SLA, que risco é mitigado, e que decisões de continuidade são baseadas em evidência**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um fornecedor ativo com contrato vigente  
@@ -565,7 +565,7 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
   **Então** fornecedor é reavaliado com questionário atualizado, evidência técnica validada (SBOM, SLA compliance, mudanças) e decisão é formalizada  
 
 **Critérios de aceitação (DoD).**  
-- [ ] Calendário de revisão de fornecedores definido e comunicado (anual mínimo, 6 meses para L2, trimestral para L3, ou por evento crítico)  
+- [ ] Calendário de revisão de fornecedores definido e comunicado (anual para L1 e L2, semestral para L3, ou por evento crítico)  
 - [ ] Questionário atualizado com perguntas de segurança e SLA enviado ao fornecedor  
 - [ ] Análise técnica documentada (AppSec): SBOM validado, CVEs analisados, SLA compliance verificado, mudanças organizacionais/técnicas identificadas  
 - [ ] Decisão formalizada e registada em GRC: Aprovado / Exceção criada / Penalização proposta / Rescisão iniciada  
@@ -706,7 +706,7 @@ Como **Security Champion + RH / PeopleOps + DevOps / SRE**, quero **executar pro
 **Critérios de aceitação (DoD).**  
 - [ ] Checklist de offboarding preparado 2 semanas antes (DevOps / SRE, RH / PeopleOps, AppSec Engineer, Tech Lead)  
 - [ ] Notificação formal enviada ao contractor/fornecedor com data exata de desativação  
-- [ ] Acesso a sistemas revogado (no máximo 24h após data de termo):  
+- [ ] Acesso a sistemas revogado (no próprio dia da data de termo; ≤ 2 h em saída não planeada; de imediato por causa de segurança):  
     - Contas de utilizador desativadas em Git, Jira, CI/CD  
     - SSH keys e API tokens removidos  
     - VPN, cloud IAM access revogado  
@@ -1040,7 +1040,7 @@ Como **GRC / Compliance** com apoio de **CISO + Gestão Executiva**, quero **man
 | KPIs de maturidade e reporta executiva | Básico | Recomendado | Obrigatório |
 | Modelo formal de governação | Básico | Recomendado | Obrigatório |
 | Checklist centralizado por capítulo | Básico | Recomendado | Obrigatório |
-| Reavaliação de fornecedores pós-onboarding | Anual | Semestral | Trimestral / evento crítico |
+| Reavaliação de fornecedores pós-onboarding | Anual | Anual | Semestral / evento crítico |
 | **Preparação técnica de contractors** | Básico | Recomendado | Obrigatório + quiz validado |
 | **Trilho de formação pré-acesso** | Básico | Obrigatório | Obrigatório + 80% score |
 | **Offboarding seguro** | Básico | Obrigatório | Obrigatório + audit trail |

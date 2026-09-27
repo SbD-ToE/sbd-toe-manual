@@ -195,7 +195,7 @@ Como **AppSec Engineer**, quero **rever a classificação de criticidade sempre 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |
 |---|---|---|---|
-| Contínuo | Mudança arquitetura, dados ou exposição | **AppSec Engineer + Developer + GRC/Compliance + Product Owner** | 3 dias úteis após trigger |
+| Contínuo | Mudança arquitetura, dados ou exposição | **AppSec Engineer + Developer + GRC/Compliance + Product Owner** | Início ≤ 5 dias úteis após o trigger; conclusão ≤ 30 dias (Política 04) |
 
 **Ligações úteis.**
 - [Ciclo de Vida do Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)  
@@ -442,9 +442,9 @@ Como **GRC/Compliance**, quero registar aceitações com **TTL explícito e aler
 **Proporcionalidade (TTL por nível).**
 | Nível | TTL | Revalidação | Obrigatório? |
 |---|---|---|---|
-| L1 | conforme política master (Cap. 14) | Anual | Recomendado |
-| L2 | conforme política master (Cap. 14) | Semestral | Obrigatório |
-| L3 | conforme política master (Cap. 14) | Trimestral | **Obrigatório + Gestão Executiva** |
+| L1 | Política 05 §7 (90 dias) | Na expiração | Recomendado |
+| L2 | Política 05 §7 (60 dias; High 30 dias) | Na expiração | Obrigatório |
+| L3 | Política 05 §7 (30 dias; High 14 dias) | Na expiração | **Obrigatório + Gestão Executiva** |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsáveis | SLA |

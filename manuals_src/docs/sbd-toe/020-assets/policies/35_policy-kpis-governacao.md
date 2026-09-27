@@ -53,7 +53,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 
 | KPI | Descrição | Target |
 |---|---|---|
-| MTTR por severidade | Tempo médio entre identificação e remediação de findings | Critical ≤ 7 dias; High ≤ 30 dias |
+| MTTR por severidade | Tempo médio entre identificação e remediação de findings | Conforme a Política 19 §4.3 (Critical 30 / 7 / 3 dias; High 90 / 30 / 15 dias em L1 / L2 / L3) |
 | Taxa de reincidência de findings | % de findings do mesmo tipo que reaparecem dentro de 90 dias | &lt; 10% |
 | % de findings Critical/High remediados no SLA | Conformidade com SLAs definidos na política de testes | > 90% |
 | Taxa de exceções activas vs. findings totais | Indicador de acumulação de risco aceite | Trend descendente |

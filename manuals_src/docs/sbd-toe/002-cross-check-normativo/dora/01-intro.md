@@ -312,17 +312,17 @@ B. Exceções ACEITÁVEIS com aprovação board-level (L3 DORA):
    - Componentes legados sem patch aplicável
    - CVEs com "no fix available" + compensação (ex: isolamento de rede)
    - Arquitetura herdada em transição
-   ➜ Ação: APROVAR se board/CRO assina; TTL ≤ 90 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se board/CRO assina; TTL da Política 05 §7 (L3: 30 dias; High 14 dias; Critical não aceitável); reavaliação obrigatória
 
 C. Exceções ACEITÁVEIS com aprovação CISO-level (L2 DORA):
    - Requisitos técnicos com compensação equivalente
    - Testes legítimos de resiliência suspensos (ex: TLPT adiado)
-   ➜ Ação: APROVAR se CISO/AppSec assina; TTL ≤ 180 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se CISO/AppSec assina; TTL da Política 05 §7 (L2: 60 dias; High 30 dias; Critical 7 dias); reavaliação obrigatória
 
 D. Exceções ACEITÁVEIS com aprovação AppSec-level (L1):
    - MVP com funcionalidade reduzida de segurança
    - Prototipagem com dados não-sensíveis
-   ➜ Ação: APROVAR se AppSec assina; TTL ≤ 365 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se AppSec assina; TTL da Política 05 §7 (L1: 90 dias; Critical 7 dias); reavaliação obrigatória
 
 Rastreamento:
 - Ferramenta GRC centralizada (SAP GRC, AuditBoard, ou custom)

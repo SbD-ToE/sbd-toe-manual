@@ -67,7 +67,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 1.03 | A classificação é reavaliada quando ocorrem os triggers definidos: nova integração externa, novo tipo de dado, alteração de exposição, mudança de arquitectura, novo perfil de utilizador | **S** | pol-02, pol-04 |
 | 1.04 | A classificação é reavaliada com periodicidade: L1 anual, L2 semestral, L3 trimestral | **L1+** | pol-04 |
 | 1.05 | Para L3, a reavaliação periódica requer aprovação AppSec + CISO | **L3** | pol-02 |
-| 1.06 | Excepções a controlos têm TTL máximo definido (L1: 90 dias; L2: 60 dias; L3: 30 dias), justificação técnica e mitigação compensatória documentada | **S** | pol-03, pol-05 |
+| 1.06 | Excepções a controlos têm TTL máximo definido (tectos da Política 05 §7: L1 90 dias; L2 60 dias (Low/Medium) e 30 dias (High); L3 30 dias (Low/Medium) e 14 dias (High); Critical 7 dias com plano de remediação, não aceitável em L3), justificação técnica e mitigação compensatória documentada | **S** | pol-03, pol-05 |
 | 1.07 | Excepções são reavaliadas antes da expiração - não existem excepções expiradas sem renovação ou encerramento formal | **S** | pol-05 |
 
 ---
@@ -232,7 +232,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 9.06 | Existe conjunto de KPIs de segurança definidos com fontes de dados, responsáveis e cadência de recolha | **L2+** | pol-35 |
 | 9.07 | Fornecedores e terceiros têm due diligence de segurança realizado antes de contrato (política de segurança, gestão de vulnerabilidades, incidentes nos últimos 12 meses) | **L2+** | pol-33 |
 | 9.08 | Contratos com fornecedores incluem cláusulas SbD-ToE (notificação de incidentes, proibição de subcontratação sem aprovação, rescisão por incumprimento) | **L2+** | pol-33 |
-| 9.09 | Offboarding de fornecedores e colaboradores inclui revogação de todos os acessos em menos de 2 horas (imediato em caso de incidente de segurança) | **S** | pol-33 |
+| 9.09 | Offboarding de fornecedores e colaboradores inclui revogação de todos os acessos no próprio dia em saídas planeadas, em ≤ 2 horas em saídas não planeadas e de imediato por causa de segurança | **S** | pol-33 |
 | 9.10 | Fornecedores L3 entregam SBOM por release e relatórios de testes de segurança periódicos | **L3** | pol-33 |
 | 9.11 | Existe Security Champion com formação específica, com participação activa em comunidade de champions (reuniões mensais) | **L3** | pol-37 |
 | 9.12 | Exercícios práticos de segurança são realizados periodicamente (labs, CTF ou tabletop de incidente) | **L3** | pol-37 |

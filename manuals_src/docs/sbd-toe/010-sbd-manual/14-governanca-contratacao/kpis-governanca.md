@@ -154,10 +154,10 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 
 | Threshold MTTR - findings críticos | L1 | L2 | L3 |
 |------------------------------------|:--:|:--:|:--:|
-| SCA/Dependências (CVE ≥ 9.0) | 30 dias | 14 dias | 5 dias |
-| SAST (severidade crítica) | 30 dias | 14 dias | 7 dias |
-| Containers (CVE ≥ 9.0 em imagem) | 14 dias | 7 dias | 3 dias |
-| Pipeline (detecção → mitigação) | 14 dias | 7 dias | 3 dias |
+| SCA/Dependências (CVE ≥ 9.0) | 30 dias | 7 dias | 3 dias |
+| SAST (severidade crítica) | 30 dias | 7 dias | 3 dias |
+| Containers (CVE ≥ 9.0 em imagem) | 30 dias | 7 dias | 3 dias |
+| Pipeline (detecção → mitigação) | 30 dias | 7 dias | 3 dias |
 | Operações (alerta → mitigação, OPS-K04) | 8h | 4h | 1h |
 
 **Indicadores de domínio que alimentam T-03:**
@@ -212,7 +212,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 |-------------------|:------------:|:------------:|:------------:|
 | % aplicações com SBOM actualizado | ≥ 50% | ≥ 90% | 100% |
 | % contratos L2/L3 com cláusulas de segurança | ≥ 80% | 100% | 100% |
-| % fornecedores L3 com validação anual | - | - | 100% |
+| % fornecedores L3 com validação semestral | - | - | 100% |
 | % imagens de produção assinadas e verificadas | - | ≥ 70% | 100% |
 | # dependências EOL sem mantedor activo em produção | ≤ 5 | ≤ 2 | = 0 |
 
@@ -224,7 +224,7 @@ Cada camada do funil é o denominador da camada seguinte. A diferença entre cam
 | Cap. 09 - Containers | CNT-K03 (assinatura), CNT-K05 (base images), CNT-K06 (SBOM de imagem) |
 | Cap. 14 - Governação | GOV-K05 (cláusulas contratuais), GOV-K06 (validação de fornecedores) |
 
-**Frequência de medição:** mensal para SBOM e imagens; semestral para contratos; anual para validação de fornecedores.
+**Frequência de medição:** mensal para SBOM e imagens; semestral para contratos; anual (L1/L2) ou semestral (L3) para validação de fornecedores.
 
 ---
 
@@ -297,7 +297,7 @@ O dashboard executivo é uma vista condensada das seis dimensões, orientada à 
 - T-02: qualquer excepção expirada sem renovação → **alerta vermelho imediato**
 - T-03: MTTR de finding crítico acima do dobro do threshold definido → **alerta vermelho**
 - T-04: % de owners com formação válida abaixo de 80% em qualquer nível → **alerta amarelo**
-- T-05: qualquer fornecedor L3 sem validação anual → **alerta vermelho**
+- T-05: qualquer fornecedor L3 sem validação semestral → **alerta vermelho**
 - T-06: qualquer domínio abaixo do nível mínimo esperado para o nível de risco dominante da organização → **alerta amarelo com plano obrigatório**
 
 ---

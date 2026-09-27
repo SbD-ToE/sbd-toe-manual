@@ -80,7 +80,7 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 |---|---|
 | Critical | Bloqueia automaticamente; escala imediata para AppSec Engineer |
 | High | Bloqueia automaticamente; requer correção validada ou exceção formal |
-| Medium | Não bloqueia; registo obrigatório na plataforma centralizada; SLA de 30 dias |
+| Medium | Não bloqueia; registo obrigatório na plataforma centralizada; SLA conforme a Política 19 §4.3 (180 / 90 / 45 dias em L1 / L2 / L3) |
 | Low / Info | Não bloqueia; registo; revisão trimestral |
 
 :::note Separação entre sinal automático e decisão humana
@@ -182,12 +182,14 @@ Todos os findings de DAST e fuzzing são consolidados na plataforma centralizada
 
 ### 5.1 SLAs de resolução {#51-slas-de-resolução}
 
-| Severidade | SLA |
-|---|---|
-| Critical | 24 horas |
-| High | 7 dias |
-| Medium | 30 dias |
-| Low | 90 dias |
+Conforme a escada única da Política 19 §4.3 (triagem: Critical 24 horas, High 48 horas, em qualquer nível):
+
+| Severidade | L1 | L2 | L3 |
+|---|---|---|---|
+| Critical | 30 dias | 7 dias | 3 dias |
+| High | 90 dias | 30 dias | 15 dias |
+| Medium | 180 dias | 90 dias | 45 dias |
+| Low | 365 dias | 180 dias | 90 dias |
 
 ---
 

@@ -312,7 +312,7 @@ Implicação regulatória:
 Sugere-se:
 1. Política clara de quem aprova por nível de risco
 2. Trilho auditado: O quê, quem, quando, justificação, TTL
-3. SLAs de remediação: Critical ≤30d, High ≤90d, Medium ≤180d
+3. SLAs de remediação da escada interna do Manual (Política 19 §4.3; escolha do Manual — o art. 21.º, n.º 2, al. e), pede o tratamento de vulnerabilidades sem fixar prazos)
 4. Lista de exceções inaceitáveis (política)
 5. Revisão periódica, escalação se expirada
 

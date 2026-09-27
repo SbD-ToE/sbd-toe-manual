@@ -82,7 +82,7 @@ O que varia são os **atributos do risco** - como origem, mecanismo, detetabilid
 - Quando se introduzam ou alterem mecanismos de automação/assistência (incl. IA) com impacto nos atributos do risco;
 - Em releases principais ou milestones críticos (ex.: produção);
 - Após incidentes de segurança relevantes;
-- No mínimo a cada **6 meses** ou **em cada revisão de arquitetura ou roadmap de segurança**.
+- Periodicamente, conforme a Política 04 (**anual** em L1, **semestral** em L2, **trimestral** em L3), e **em cada revisão de arquitetura ou roadmap de segurança**.
 
 > A revisão periódica da classificação de risco suporta diretamente práticas de **maturidade intermédia** em **SAMM**, **DSOMM** e **SSDF**.
 
@@ -122,7 +122,7 @@ A classificação de risco **não é um evento único**, mas um processo contín
 
 - Em alterações de arquitetura, exposição, dados ou automação/assistência;
 - Antes de releases críticos;
-- Periodicamente (ex.: a cada 6 meses);
+- Periodicamente (anual em L1, semestral em L2, trimestral em L3 — Política 04);
 - Após incidentes ou deteções relevantes.
 
 > 📌 Ver: [Ciclo de Vida da Classificação de Risco](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)

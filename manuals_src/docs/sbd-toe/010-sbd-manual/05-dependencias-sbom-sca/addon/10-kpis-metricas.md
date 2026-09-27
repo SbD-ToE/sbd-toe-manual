@@ -53,8 +53,8 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | DEP-K01 | % aplicações com SBOM gerado automaticamente e actualizado a cada release | Q% | ≥ 50% | ≥ 90% | 100% | T-01, T-05 | Por release |
-| DEP-K02 | % CVEs críticos (CVSS ≥ 9.0) em dependências directas mitigados dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 14d) | 100% (SLA: 5d) | T-03 | Contínuo |
-| DEP-K03 | % CVEs altos (CVSS 7.0–8.9) em dependências directas mitigados dentro de SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 14d) | T-03 | Mensal |
+| DEP-K02 | % CVEs críticos (CVSS ≥ 9.0) em dependências directas mitigados dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 7d) | 100% (SLA: 3d) | T-03 | Contínuo |
+| DEP-K03 | % CVEs altos (CVSS 7.0–8.9) em dependências directas mitigados dentro de SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 15d) | T-03 | Mensal |
 | DEP-K04 | # dependências directas sem mantedor activo (EOL, abandonadas ≥ 24 meses) em produção | Q# ↓ | ≤ 5 | ≤ 2 | = 0 | T-05 | Trimestral |
 | DEP-K05 | % pipelines com SCA automatizado integrado com gate de bloqueio para CVEs críticos | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Mensal |
 | DEP-K06 | % dependências com licença incompatível com política organizacional activas em produção | Q% ↓ | - | = 0% | = 0% | T-05 | Trimestral |
@@ -91,10 +91,10 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 | Severidade (CVSS) | L1 | L2 | L3 |
 |-------------------|:--:|:--:|:--:|
-| Crítico (≥ 9.0) | 30 dias | 14 dias | 5 dias |
-| Alto (7.0–8.9) | 90 dias | 30 dias | 14 dias |
-| Médio (4.0–6.9) | - | 90 dias | 60 dias |
-| Baixo (&lt; 4.0) | - | - | 180 dias |
+| Crítico (≥ 9.0) | 30 dias | 7 dias | 3 dias |
+| Alto (7.0–8.9) | 90 dias | 30 dias | 15 dias |
+| Médio (4.0–6.9) | 180 dias | 90 dias | 45 dias |
+| Baixo (&lt; 4.0) | 365 dias | 180 dias | 90 dias |
 
 Estes thresholds são referência de base. Regulamentação sectorial (DORA, NIS2) pode impor prazos mais curtos que prevalecem.
 

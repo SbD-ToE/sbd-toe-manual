@@ -19,7 +19,7 @@ Este ficheiro funciona como:
 - **KPI operativo** de maturidade em DevSecOps
 - Critério objetivo para **promoção de aplicações** para produção
 
-> 🗓️ **Recomenda-se revisão no mínimo a cada 6 meses**, ou sempre que existam alterações relevantes ao pipeline, runners, segredos, políticas, integrações externas ou modelo de promoção.
+> 🗓️ **Recomenda-se revisão no mínimo anual em L1/L2 e semestral em L3**, ou sempre que existam alterações relevantes ao pipeline, runners, segredos, políticas, integrações externas ou modelo de promoção.
 
 ---
 

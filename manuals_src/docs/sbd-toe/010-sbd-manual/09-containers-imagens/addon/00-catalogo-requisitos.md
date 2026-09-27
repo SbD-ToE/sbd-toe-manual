@@ -64,7 +64,7 @@ Requisitos que garantem que containers são construídos, validados, promovidos 
 - **CNT-006**: A restrição de capabilities é um controlo preventivo fundamental: um container com `CAP_SYS_ADMIN` ou `--privileged` tem efectivamente controlo do nó host em Kubernetes.
 - **CNT-007**: A cadeia de confiança de assinatura deve ser verificada downstream no ponto de deploy - gerar a assinatura sem a verificar antes da execução não constitui controlo efectivo.
 - **CNT-009**: O admission controller deve ser configurado em modo `Enforce`, não apenas `Audit`, para ser considerado um controlo efectivo. Modo audit sem enforcement é apenas observabilidade, não protecção.
-- **CNT-010**: O intervalo de renovação deve ser proporcional ao risco: para workloads L3, um ciclo máximo de 30 dias é razoável; para L1, 90 dias. O critério relevante é a cobertura de patches críticos, não apenas o calendário.
+- **CNT-010**: O intervalo de renovação deve ser proporcional ao risco: para workloads L3, um ciclo máximo de 30 dias; para L2, 60 dias; para L1, 90 dias. O critério relevante é a cobertura de patches críticos, não apenas o calendário.
 
 ---
 

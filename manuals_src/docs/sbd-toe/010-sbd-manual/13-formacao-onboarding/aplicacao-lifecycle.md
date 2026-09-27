@@ -58,7 +58,7 @@ Como **RH / PeopleOps**, quero **garantir formação obrigatória de onboarding 
 - [ ] Acesso técnico bloqueado até conclusão  
 - [ ] Bloqueio automático em Git/Azure DevOps/pipelines CI/CD  
 - [ ] Exceções documentadas com aprovação AppSec/Gestão  
-- [ ] Reautenticação bienal ou por trigger de novo risco  
+- [ ] Recertificação anual (validade de 12 meses) ou por trigger de novo risco  
 
 :::
 
@@ -341,7 +341,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 - [ ] Tempos de deteção, resposta e resolução medidos (MTTD/MTTR)  
 - [ ] Papel de cada interveniente documentado (playbooks)  
 - [ ] Debrief realizado com recomendações  
-- [ ] Cadência definida (anual mínimo, trimestral ideal)  
+- [ ] Cadência definida (mínimo: anual em L1, semestral em L2/L3 — Política 32 §8; trimestral recomendado)  
 
 :::
 
@@ -354,7 +354,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado anual | Trimestral | Trimestral + rotativo por ameaça |
+| Recomendado anual | Semestral (mínimo) | Semestral (mínimo) + rotativo por ameaça |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -923,13 +923,13 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
 | Onboarding seguro | Básico | Obrigatório | Obrigatório + avaliação prática |
-| Formação contínua | Básico | Anual | Trimestral |
+| Formação contínua | Anual | Semestral | Trimestral |
 | Champions | Opcional | Recomendado | Obrigatório |
 | Exercícios práticos | Opcional | Recomendado | Obrigatório |
 | Métricas de eficácia | Básico | Anual | Trimestral com metas |
 | **Code Clinics** | **Ocasional** | **Recorrente (quinzenal)** | **Recorrente + rotativo (semanal)** |
 | **Threat Modeling** | **Opcional** | **Recomendado por épico** | **Obrigatório antes de design** |
-| **Simulações de incidentes** | **Recomendado anual** | **Trimestral** | **Trimestral + rotativo** |
+| **Simulações de incidentes** | **Recomendado anual** | **Semestral (mínimo)** | **Semestral (mínimo) + rotativo** |
 | **Manutenção de trilhos** | **Ocasional** | **Anual** | **Anual + contínua por trigger** |
 | **Trilhos proporcionais por risco** | **Trilho básico** | **Trilho intermédio + labs** | **Trilho avançado + simulações + auditoria** |
 | **Validação de onboarding (checklist)** | **Básico** | **Estruturado (função + risco)** | **Estruturado + auditoria periódica** |

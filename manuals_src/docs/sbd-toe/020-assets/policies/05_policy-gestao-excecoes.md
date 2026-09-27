@@ -108,12 +108,16 @@ Exceções a controlos com impacto de risco **Critical** não são aceitáveis e
 
 | Nível | Severidade | TTL máximo |
 |---|---|---|
-| L1 | Qualquer | 90 dias |
+| L1 | Low / Medium / High | 90 dias |
 | L2 | Low / Medium | 60 dias |
 | L2 | High | 30 dias |
 | L3 | Low / Medium | 30 dias |
 | L3 | High | 14 dias |
-| Qualquer | Critical | 7 dias (com plano de remediação obrigatório) |
+| L1 | Critical | 7 dias (com plano de remediação obrigatório) |
+| L2 | Critical | 7 dias (aprovação de CISO e plano de remediação obrigatório) |
+| L3 | Critical | Não aceitável |
+
+Esta tabela é a master dos prazos de validade de exceções: as Políticas 03 e 12 e os capítulos remetem para ela, e 90 dias é o tecto absoluto. A revalidação faz-se na data de expiração, com alerta ao owner 15 dias antes (ou a meio do TTL, se este for inferior a 30 dias).
 
 A renovação de uma exceção exige **nova aprovação explícita** com reavaliação documentada. A renovação por omissão ou por timeout não é válida.
 

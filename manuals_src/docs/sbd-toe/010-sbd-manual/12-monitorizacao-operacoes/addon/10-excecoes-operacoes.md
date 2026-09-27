@@ -47,7 +47,7 @@ Excepções a OPS-003 com retenção abaixo de um prazo mínimo legal aplicável
 
 - a cadeia de autoridade deve incluir validação jurídica ou de compliance, não apenas AppSec;
 - a excepção deve referenciar o requisito regulatório específico que está a ser comprometido;
-- o prazo máximo é determinado pelo risco regulatório, não pelo prazo genérico de 90 dias.
+- o prazo máximo é o menor entre o tecto da Política 05 §7 e o que o risco regulatório permitir.
 
 ---
 

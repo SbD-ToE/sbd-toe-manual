@@ -42,7 +42,7 @@ Ajudar **Developers e QA** no dia-a-dia, garantir que **checklists de segurança
 - [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças (referenciada como Developer no lifecycle)
 
 ### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
-Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, revisar trimestralmente acesso, recolher feedback pós-projeto.
+Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, rever periodicamente o acesso (semestral em L1, trimestral em L2/L3), recolher feedback pós-projeto.
 
 **User Stories:**
 - [US-05: Designação formal de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Responsabilização clara (com Gestão Executiva)

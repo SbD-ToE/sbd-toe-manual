@@ -241,7 +241,7 @@ Quando o fornecedor é um **provedor de modelos AI** (Anthropic, OpenAI, Google,
 ### 10.7 Operacionalização {#107-operacionalização}
 
 - O provedor entra na **lista aprovada [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** apenas após validação das cláusulas 10.1 a 10.6 (proporcional ao nível de risco).
-- Cláusulas críticas registadas na ficha do provedor; revisão calendarizada conforme nível de risco (L1 anual; L2 semestral; L3 trimestral).
+- Cláusulas críticas registadas na ficha do provedor; revisão calendarizada das cláusulas do provedor AI — objecto distinto da reavaliação geral de fornecedores (secção 6) — conforme o nível de risco (L1 anual; L2 semestral; L3 trimestral).
 - Detalhe operacional completo em [Policy 39 — AI BOM e Supply Chain](./policy-ai-bom-supply-chain) e no Cap. 14 US "Contratação de provedores AI".
 
 | Cláusula | L1 | L2 | L3 |

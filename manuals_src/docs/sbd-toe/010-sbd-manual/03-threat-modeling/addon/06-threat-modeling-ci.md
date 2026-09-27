@@ -59,7 +59,7 @@ A pipeline de CI/CD deve verificar não apenas a presença de ficheiros, mas tam
 | Ficheiro `mitigations.md` ou `yaml` tem estado definido por threat  | ☑️         |
 | `decisions.md` documenta riscos aceites com data + justificação     | ☑️         |
 | Commits ou issues referenciam ameaças (`TM-001`, etc.)              | ☑️         |
-| Última revisão do modelo realizada nos últimos 30 dias              | ☑️         |
+| Modelo revisto dentro da cadência da Política 08 e ≤ 30 dias após a última alteração arquitectural | ☑️         |
 
 ---
 
@@ -132,7 +132,7 @@ fi
 | Tipo de falha                                 | Reação recomendada da pipeline    |
 | --------------------------------------------- | --------------------------------- |
 | Modelo inexistente                            | ❌ Falha crítica                   |
-| Modelo desatualizado (> 30 dias)              | ⚠️ Alerta + bloqueio condicional  |
+| Modelo desatualizado (> 30 dias após alteração arquitectural, ou fora da cadência da Política 08) | ⚠️ Alerta + bloqueio condicional  |
 | Threats não mitigadas nem justificadas        | ⚠️ Aviso + requer issue/documento |
 | Linting falha (YAML, Mermaid inválido)        | ❌ Build falha                     |
 | Nenhuma ligação entre threat e código/backlog | ⚠️ Alerta para revisão manual     |

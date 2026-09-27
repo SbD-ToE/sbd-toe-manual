@@ -68,9 +68,9 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 | Severidade | L1 | L2 | L3 |
 |------------|:--:|:--:|:--:|
-| Crítico (CVSS ≥ 9.0) | 30 dias | 14 dias | 7 dias |
-| Alto (CVSS 7.0–8.9) | 90 dias | 30 dias | 14 dias |
-| Médio (CVSS 4.0–6.9) | - | 90 dias | 60 dias |
+| Crítico (CVSS ≥ 9.0) | 30 dias | 7 dias | 3 dias |
+| Alto (CVSS 7.0–8.9) | 90 dias | 30 dias | 15 dias |
+| Médio (CVSS 4.0–6.9) | 180 dias | 90 dias | 45 dias |
 
 Findings com excepção formal activa são excluídos do cálculo de TST-K03 mas registados separadamente.
 

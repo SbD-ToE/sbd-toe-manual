@@ -93,7 +93,7 @@ Após aprovação, a excepção é registada com todos os campos obrigatórios e
 | Data de aprovação | Sim | |
 | **Cadeia de autoridade** | Sim | Ver secção abaixo |
 | **Evidências técnicas** | Sim | Artefactos que suportam justificação e compensação - relatórios de scanner, tickets, logs, ADRs, evidência de testes; referência por URL ou caminho rastreável |
-| Data de expiração | Sim | Máx. 90 dias; extensão exige reavaliação |
+| Data de expiração | Sim | Tecto da Política 05 §7 (máx. absoluto 90 dias, em L1); extensão exige reavaliação |
 | Trigger de revisão | Sim | Data fixa ou condição (incidente, mudança arquitectural, etc.) |
 
 Campos em falta invalidam o registo. Um registo inválido não produz aprovação.
@@ -135,7 +135,7 @@ Excepções L3 sem aprovação de AppSec e GRC/CISO são não conformes independ
 
 ## Validade, renovação e expiração {#validade-renovação-e-expiração}
 
-O prazo máximo por defeito é **90 dias**. Extensões exigem nova avaliação completa - não são automáticas nem concedidas por omissão.
+O prazo máximo é o da [Política 05 §7](/sbd-toe/assets/policies/policy-gestao-excecoes#7-prazos-máximos-de-validade-ttl), por nível e severidade; **90 dias** é o tecto absoluto (L1). Extensões exigem nova avaliação completa - não são automáticas nem concedidas por omissão.
 
 Excepções expiradas sem renovação activa constituem **não conformidade** a partir da data de expiração. Devem ser tratadas como tal no ciclo de auditoria.
 

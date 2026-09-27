@@ -117,7 +117,7 @@ A formação exclusivamente teórica tem baixa taxa de retenção e não desenvo
 | Labs em aplicações vulneráveis | Ambientes controlados com vulnerabilidades reais para identificação e exploração (ex: OWASP WebGoat, Juice Shop, DVWA) | Recomendado | Obrigatório |
 | CTF (Capture the Flag) | Competições ou exercícios estruturados com desafios de segurança por categoria | Recomendado | Obrigatório (mínimo 1/ano) |
 | Simulação de threat modeling | Sessão prática de threat modeling sobre arquitectura real ou fictícia, com resultado documentado | Recomendado | Obrigatório |
-| Tabletop de resposta a incidentes | Exercício de simulação de incidente sem activação real de sistemas (ver Política de IRP) | Recomendado | Obrigatório (semestral) |
+| Tabletop de resposta a incidentes | Exercício de simulação de incidente sem activação real de sistemas (ver Política de IRP) | Obrigatório (semestral; Política 32 §8) | Obrigatório (semestral) |
 | Code review de segurança guiado | Revisão de código com antipadrões injectados, em contexto de formação | Recomendado | Obrigatório |
 
 Os resultados dos exercícios devem ser registados com data, participantes, tipo de exercício e métricas de desempenho (quando aplicável).

@@ -58,7 +58,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 
 ### Fase 3 (M2–M3): Vulnerability Handling & SLAs {#fase-3-m2m3-vulnerability-handling--slas}
 1. Definir severidade (Critical/High/Medium/Low)  
-2. Estabelecer SLA patch (Critical ≤15d, High ≤30d, Medium ≤90d)  
+2. Adotar a escada interna de remediação da Política 19 §4.3 (escolha do Manual, não prazo do CRA)  
 3. Automatizar criação de issue para CVE crítico  
 4. Dashboard patch compliance  
 **Evidências:** Política SLA; dashboard inicial; issues exemplo
@@ -130,7 +130,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] SAST integrado
 - [ ] DAST integrado
 - [ ] Fuzzing (se aplicável)
-- [ ] Gate bloqueia CVE crítico conhecido
+- [ ] Gate bloqueia vulnerabilidade explorável conhecida (anexo I, parte I, ponto 2, al. a)), não só CVE crítico
 - [ ] Relatório qualidade release arquivado
 - [ ] Processo override exceção formal
 
@@ -175,7 +175,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 ## Métricas-Chave {#métricas-chave}
 | Métrica | Definição | Objetivo Inicial |
 |---------|-----------|------------------|
-| MTTP Crítico | Tempo médio até patch crítico | ≤15 dias |
+| MTTP Crítico | Tempo médio até patch crítico | ≤ SLA do nível (Política 19 §4.3; 3 dias em L3) |
 | % SLA Cumprido | (Vulns patch dentro SLA) / total | ≥90% |
 | Cobertura SBOM | % componentes identificados | ≥95% |
 | Tempo Médio Resposta Disclosure | Receção → primeira resposta | ≤5 dias úteis sem indício de exploração; triagem ≤4 h com indício de exploração ativa (escolha do Manual) |
@@ -202,8 +202,8 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 ## Exceções (Política Resumida) {#exceções-política-resumida}
 Categorias:
 - Inaceitáveis: RCE crítico, bypass autenticação, exposure credenciais em claro
-- Aceitáveis (TTL curto ≤30d): Crítico sem patch disponível + compensação robusta
-- Aceitáveis (TTL médio ≤90d): High com mitigação parcial
+- Aceitáveis (TTL da Política 05 §7: Critical 7 dias com plano de remediação; não aceitável em L3): Crítico sem patch disponível + compensação robusta
+- Aceitáveis (TTL da Política 05 §7: High 90 / 30 / 14 dias em L1 / L2 / L3): High com mitigação parcial
 
 Registos: ID | Vulnerabilidade | Severidade | Justificação | Aprovador | TTL | Mitigação | Data Revisão
 

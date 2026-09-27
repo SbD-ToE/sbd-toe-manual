@@ -382,7 +382,7 @@ Aplica-se à **pessoa num papel** (colaborador, *owner* de segurança, aprovador
 
 - Entrada de colaborador ou mudança de função (Formação e Onboarding, US-01; `TRN-002`); designação ou rotação de *owner* de segurança (Governança e Contratação, US-09).
 - *Onboarding* de fornecedor ou *contractor* (`GOV-007`, `GOV-013`); revisão periódica de acesso — semestral em L1, trimestral em L2/L3 (`GOV-014`); *offboarding* (Governança e Contratação, US-17).
-- Pedido de exceção (processo canónico, passo 1); expiração — prazo máximo por defeito de 90 dias — ou *trigger* fora de prazo: incidente relacionado com o controlo em falta, alteração de arquitetura, risco ou classificação, mudança de fornecedor, dependência ou ambiente (`GOV-005`; processo canónico, "Validade, renovação e expiração").
+- Pedido de exceção (processo canónico, passo 1); expiração — TTL da Política 05 §7, com tecto absoluto de 90 dias — ou *trigger* fora de prazo: incidente relacionado com o controlo em falta, alteração de arquitetura, risco ou classificação, mudança de fornecedor, dependência ou ambiente (`GOV-005`; processo canónico, "Validade, renovação e expiração").
 - Novo agente, ou mudança de nível de autonomia, *scope* ou *allowlist* de *tools*, que reabre o ciclo proposta → aprovação (Requisitos de Segurança, [US-15](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-15)).
 - *Emergency deploy* — o único cenário com aprovação *post-facto*, no prazo máximo de 24h e com notificação a Gestão Executiva / CISO antes ou durante ([exceções de deploy](/sbd-toe/sbd-manual/deploy-seguro/addon/excecoes-deploy)).
 
@@ -420,7 +420,7 @@ Aplica-se à **pessoa num papel** (colaborador, *owner* de segurança, aprovador
 
 - **Acesso bloqueado até *onboarding* validado** (`TRN-004`; Formação e Onboarding, US-01: bloqueio automático em Git e *pipelines*).
 - **Aprovação formal explícita, nominal e registada** — o processo canónico invalida aprovações tácitas e cadeias com passos em falta.
-- **Expiração** — 90 dias por defeito; a não renovação converte a exceção em não conformidade ativa (`GOV-005`).
+- **Expiração** — TTL da Política 05 §7 (tecto absoluto de 90 dias); a não renovação converte a exceção em não conformidade ativa (`GOV-005`).
 - **Revisão periódica de acesso de terceiros** com remoção no próprio dia (`GOV-014`; Governança e Contratação, US-19).
 - **Reabertura do ciclo do *mandate*** a cada mudança de nível, *scope* ou *allowlist* — *amendments* informais são proibidos (Requisitos de Segurança, US-15); ***kill-switch* exercitado** (`REQ-AGN-003`).
 - **Separação entre sinal automático e decisão** de promoção, de bloqueio e de ação irreversível (CI/CD Seguro, US-15; Testes de Segurança, US-16; Deploy Seguro, US-16): a ferramenta sinaliza, o papel com autoridade decide.

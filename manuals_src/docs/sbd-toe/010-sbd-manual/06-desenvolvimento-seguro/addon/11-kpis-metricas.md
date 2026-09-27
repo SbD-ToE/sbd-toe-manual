@@ -52,7 +52,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
-| DEV-K01 | % findings SAST de severidade crítica/alta resolvidos dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 85% (SLA: 14d) | ≥ 98% (SLA: 7d) | T-03 | Por release |
+| DEV-K01 | % findings SAST de severidade crítica/alta resolvidos dentro de SLA | Q% | ≥ 70% (SLA: 30d crítica / 90d alta) | ≥ 85% (SLA: 7d / 30d) | ≥ 98% (SLA: 3d / 15d) | T-03 | Por release |
 | DEV-K02 | # secrets detectados em commits e não removidos/rotacionados em menos de 24h | Q# ↓ | ≤ 2/mês | = 0 | = 0 | T-01 | Contínuo |
 | DEV-K03 | % PRs em aplicações L2/L3 com verificação explícita de critério de segurança na code review | Q% | - | ≥ 80% | 100% | T-01, T-04 | Mensal |
 | DEV-K04 | % excepções de SAST (mutes/waives) com aprovação formal registada e rastreável | Q% | ≥ 80% | 100% | 100% | T-02 | Mensal |

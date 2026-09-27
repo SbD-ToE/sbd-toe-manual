@@ -52,7 +52,7 @@ Coordenar a **preparação de contractors** antes do acesso, o trilho de formaç
 **User Stories:**
 - [US-15: Preparação técnica e validação de contractors pré-acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Contractors preparados antes do acesso (com Security Champion)
 - [US-16: Trilho de formação obrigatória pré-acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Training Manager coordena o trilho (com CISO)
-- [US-17: Offboarding seguro de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Acesso revogado em menos de 24h (com Security Champion e DevOps / SRE)
+- [US-17: Offboarding seguro de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Acesso revogado no próprio dia, ≤ 2 h em saída não planeada (com Security Champion e DevOps / SRE)
 
 ---
 

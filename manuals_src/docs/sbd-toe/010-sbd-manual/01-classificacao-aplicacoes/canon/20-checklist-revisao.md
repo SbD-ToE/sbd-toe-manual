@@ -15,7 +15,7 @@ Serve como **instrumento de verificação periódica, auditoria interna e KPI op
 - Foram aplicados os controlos mínimos correspondentes;
 - Existem evidências rastreáveis que sustentem as decisões de risco.
 
-> 🗓️ **Recomenda-se revisão no mínimo a cada 6 meses**, ou sempre que existirem alterações relevantes (funcionalidade, dados, exposição).
+> 🗓️ **Recomenda-se revisão no mínimo com a cadência da Política 04 (anual em L1, semestral em L2, trimestral em L3)**, ou sempre que existirem alterações relevantes (funcionalidade, dados, exposição).
 
 ---
 

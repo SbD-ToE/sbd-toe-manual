@@ -67,7 +67,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ## 📊 6. Métricas de maturidade para dependências {#-6-métricas-de-maturidade-para-dependências}
 
-- % de findings SCA resolvidos em < 5 dias
+- % de findings SCA resolvidos dentro do SLA do nível (Política 19 §4.3)
 - % de dependências com SBOM completo e versionado
 - Nº médio de dependências por serviço / por imagem
 - Nº de exceções de risco ativas e expiração associada

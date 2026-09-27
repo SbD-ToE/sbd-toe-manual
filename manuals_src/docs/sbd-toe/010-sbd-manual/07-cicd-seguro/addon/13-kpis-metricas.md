@@ -56,9 +56,9 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | CIC-K02 | % bypasses de security gate com aprovação formal registada e rastreável (vs total de bypasses) | Q% | ≥ 80% | 100% | 100% | T-02 | Por evento |
 | CIC-K03 | % artefactos de build assinados digitalmente e com verificação de assinatura antes de deploy | Q% | - | ≥ 70% | 100% | T-01 | Por release |
 | CIC-K04 | % segredos de pipeline injectados via cofre centralizado (Vault, KMS, secret store) vs hardcoded ou env vars não geridos | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Trimestral |
-| CIC-K05 | MTTR - tempo desde detecção de vulnerabilidade crítica em pipeline até mitigação confirmada | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Por evento |
+| CIC-K05 | MTTR - tempo desde detecção de vulnerabilidade crítica em pipeline até mitigação confirmada | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Por evento |
 | CIC-K06 | % runners/agentes de CI/CD com isolamento efectivo entre jobs de diferentes contextos de confiança | Q% | - | ≥ 80% | 100% | T-01 | Trimestral |
-| CIC-K07 | # pipelines sem registo de última revisão de segurança em mais de 12 meses | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Semestral |
+| CIC-K07 | # pipelines sem registo de revisão de segurança dentro da cadência (anual em L1/L2; semestral em L3) | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Semestral |
 
 ---
 

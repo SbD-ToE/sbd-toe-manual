@@ -106,7 +106,7 @@ Location: /archive/offboarded/{contractor-name}/{date}/
 
 ## 🔐 OFFBOARDING EXECUTION (T+0 DATA DE TÉRMINO) {#-offboarding-execution-t0-data-de-término}
 
-### 4. Revogação de Acesso Técnico (`<`24h após T+0) {#4-revogação-de-acesso-técnico-24h-após-t0}
+### 4. Revogação de Acesso Técnico (no próprio dia de T+0) {#4-revogação-de-acesso-técnico-24h-após-t0}
 
 **Timeline:** Começar revogação entre T+0 (fim de expediente) e T+1 (manhã)
 
@@ -227,7 +227,7 @@ git clone https://github.com/[org]/[private-repo]
 | **OAuth tokens** | DevOps | Revoke all tokens for contractor's app | [ ] | App reauthenticates |
 | **Certificates/SSL keys** | DevOps | Rotate if contractor had access | [ ] | Old cert expires or revoked |
 
-**Timing:** All rotations SAME DAY or next day latest (DORA requirement)
+**Prazo:** todas as rotações no próprio dia em saídas planeadas, em ≤ 2 h em saídas não planeadas e de imediato por causa de segurança (escolha do Manual; Política 33 §7).
 
 ---
 

@@ -630,7 +630,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
   **Então** o valor é redactado/mascarado antes da persistência e a redacção é verificável por amostragem  
 - **Dado** um padrão legítimo que dispara um alerta indevido  
   **Quando** se pretende suprimi-lo  
-  **Então** é criada uma exceção versionada com justificação, aprovador por severidade e data de expiração (máx 6 meses L2, 3 meses L3)  
+  **Então** é criada uma exceção versionada com justificação, aprovador por severidade e data de expiração (tectos da Política 05 §7)  
 
 **Checklist.**  
 - [ ] Redacção/masking de secrets e PII aplicada antes da persistência  
@@ -644,7 +644,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Redacção básica de credenciais | Redacção + exceções formais (máx 6 meses) | Redacção verificada por amostragem + exceções (máx 3 meses) + reavaliação pré-expiração |
+| Redacção básica de credenciais | Redacção + exceções formais (TTL da Política 05 §7) | Redacção verificada por amostragem + exceções (TTL da Política 05 §7) + reavaliação pré-expiração |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -767,12 +767,12 @@ Como **IR/AppSec**, quero **executar exercícios de resposta a incidentes end-to
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Walkthrough manual ocasional | Exercício anual de playbooks críticos | Exercícios periódicos end-to-end + medição de MTTR e melhoria contínua |
+| Tabletop anual | Exercício semestral de playbooks críticos (tabletop + simulação) | Exercícios semestrais end-to-end (war room com simulação activa) + medição de MTTR e melhoria contínua |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Ciclo de exercício / revisão de playbook | Operações (Ops) + AppSec | No último ciclo (anual mínimo) |
+| Operações | Ciclo de exercício / revisão de playbook | Operações (Ops) + AppSec | No último ciclo (Política 32 §8: anual em L1, semestral em L2/L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Catálogo de Requisitos de Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
 

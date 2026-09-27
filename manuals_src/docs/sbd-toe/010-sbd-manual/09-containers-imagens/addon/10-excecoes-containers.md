@@ -53,7 +53,7 @@ Excepções implementadas por desactivação global de uma policy são sempre n�
 Excepções a CNT-007 por infraestrutura de assinatura ainda não disponível devem incluir:
 
 - plano de implementação com milestones e responsável;
-- prazo máximo: 90 dias; extensão exige aprovação GRC/CISO;
+- prazo máximo: tectos da Política 05 §7: L1 90 dias; L2 60 dias (Low/Medium) e 30 dias (High); L3 30 dias (Low/Medium) e 14 dias (High); Critical 7 dias com plano de remediação, não aceitável em L3; extensão exige aprovação GRC/CISO;
 - controlos compensatórios activos durante a janela de excepção (ex: verificação de digest, restrição de registries de origem).
 
 ---

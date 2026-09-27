@@ -53,7 +53,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | CNT-K01 | % imagens em produção sem CVEs críticos (CVSS ≥ 9.0) sem excepção formal válida | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-03 | Semanal |
-| CNT-K02 | MTTR - tempo desde identificação de CVE crítico em imagem de produção até substituição/patch | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Por evento |
+| CNT-K02 | MTTR - tempo desde identificação de CVE crítico em imagem de produção até substituição/patch | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Por evento |
 | CNT-K03 | % imagens de produção assinadas digitalmente e com verificação de assinatura antes de deploy | Q% | - | ≥ 70% | 100% | T-01, T-05 | Por release |
 | CNT-K04 | % workloads em orquestrador com política de admission controller activa e em modo de bloqueio | Q% | - | ≥ 80% | 100% | T-01 | Mensal |
 | CNT-K05 | % imagens base de produção actualizadas dentro do ciclo definido por política (sem tags mutáveis) | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-05 | Mensal |

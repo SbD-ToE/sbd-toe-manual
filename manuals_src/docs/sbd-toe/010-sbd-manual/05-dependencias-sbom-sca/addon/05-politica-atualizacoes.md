@@ -40,7 +40,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 
 ## 🔧 Frequência recomendada de revisão {#-frequência-recomendada-de-revisão}
 
-| Tipo de projeto         | Frequência mínima de revisão de dependências |
+| Tipo de projeto         | Frequência mínima de revisão automática de dependências (scan) |
 |--------------------------|------------------------------------------------|
 | Produção crítica (L3)    | Semanal (automática + validação manual)      |
 | Backend / API (L2)       | Quinzenal                                     |
@@ -67,7 +67,7 @@ Estabelecer práticas sistemáticas para a **atualização proativa de bibliotec
 | Atualizações periódicas são feitas de forma rastreável? | ☑         |
 | Todas as atualizações passam por CI/CD com testes?           | ☑         |
 | As versões são auditadas por SCA após update?                 | ☑         |
-| Atualizações críticas são tratadas em menos de 48h?          | ☑         |
+| Atualizações críticas são triadas em ≤ 24h e corrigidas dentro do SLA do nível (Política 19 §4.3)? | ☑         |
 
 ---
 

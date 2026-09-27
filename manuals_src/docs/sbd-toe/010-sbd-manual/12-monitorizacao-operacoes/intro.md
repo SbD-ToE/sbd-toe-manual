@@ -104,7 +104,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
    justification: "Processo de backup automático, validado com Dev"
    approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
-   expiration_date: "2026-07-04"  # Máximo 6 meses
+   expiration_date: "2026-03-05"  # Tecto da Política 05 §7 (p. ex. 60 dias em L2, Low/Medium)
    evidence: "link/to/ticket-JIRA-123"
    ```
 
@@ -113,7 +113,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
    - HIGH: AppSec Engineer
    - MEDIUM: IR Analyst
 
-3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
+3. **Validade temporal**: Exceções expiram automaticamente (tectos da Política 05 §7: L1 90 dias; L2 60 dias (Low/Medium) e 30 dias (High); L3 30 dias (Low/Medium) e 14 dias (High); Critical 7 dias com plano de remediação, não aceitável em L3)
 
 4. **Reavaliação**: Antes de expiração, padrão é reavaliado
 

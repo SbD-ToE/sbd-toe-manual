@@ -105,12 +105,16 @@ Cada finding bloqueante deve ser triado com decisão documentada:
 
 ### 4.3 SLAs de triagem e resolução {#43-slas-de-triagem-e-resolução}
 
-| Severidade | SLA de triagem | SLA de resolução (L2) | SLA de resolução (L3) |
-|---|---|---|---|
-| Critical | 24 horas | 7 dias | 3 dias |
-| High | 48 horas | 30 dias | 15 dias |
-| Medium | 5 dias úteis | 90 dias | 45 dias |
-| Low | 10 dias úteis | 180 dias | 90 dias |
+| Severidade | SLA de triagem (todos os níveis) | SLA de resolução (L1) | SLA de resolução (L2) | SLA de resolução (L3) |
+|---|---|---|---|---|
+| Critical (CVSS ≥ 9.0) | 24 horas | 30 dias | 7 dias | 3 dias |
+| High (CVSS 7.0–8.9) | 48 horas | 90 dias | 30 dias | 15 dias |
+| Medium (CVSS 4.0–6.9) | 5 dias úteis | 180 dias | 90 dias | 45 dias |
+| Low (CVSS < 4.0) | 10 dias úteis | 365 dias (ou o próximo ciclo de manutenção, se for anterior) | 180 dias | 90 dias |
+
+:::note
+Esta é a escada única de remediação do Manual, para todos os findings (testes, SCA, imagens, pipeline, pentest), e os KPI medem o seu cumprimento. Os prazos são o mínimo recomendado pelo Manual (escolha do Manual), não prazos regulamentares: o CRA pede que as vulnerabilidades sejam resolvidas e corrigidas «sem demora» (anexo I, parte II, ponto 2), e a NIS2 (art. 21.º, n.º 2, al. e)) e o DORA (art. 24.º, n.º 5) pedem processos de tratamento e correção, sem fixar dias. Com indício de exploração ativa (por exemplo, KEV) ou em produtos no âmbito do CRA, o prazo do nível é um tecto: estes sinais só antecipam. Prevalece o mais exigente de entre a lei, os supervisores, o sector e os contratos — ver a [cláusula de precedência da Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs).
+:::
 
 ---
 

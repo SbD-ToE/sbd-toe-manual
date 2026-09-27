@@ -70,7 +70,7 @@ A redução de nível de criticidade requer justificação técnica rigorosa e a
 
 ### 4.1 Triggers que obrigam a revisão imediata {#41-triggers-que-obrigam-a-revisão-imediata}
 
-A revisão da classificação deve ser despoletada **imediatamente** (no prazo máximo de 5 dias úteis) quando ocorra qualquer um dos seguintes eventos:
+A revisão da classificação deve ser despoletada **imediatamente** — iniciada no prazo máximo de 5 dias úteis e concluída em 30 dias — quando ocorra qualquer um dos seguintes eventos:
 
 | Trigger | Descrição |
 |---|---|

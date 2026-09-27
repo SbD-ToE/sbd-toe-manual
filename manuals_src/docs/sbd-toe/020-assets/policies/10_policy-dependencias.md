@@ -159,7 +159,7 @@ Para sistemas em produção, deve existir um mecanismo de correlação entre o S
 
 ## 9. Auditoria periódica {#9-auditoria-periódica}
 
-Independentemente dos gates de build, as dependências devem ser auditadas periodicamente:
+Independentemente dos gates de build e da revisão automática (SCA por build; scan mensal em L1, quinzenal em L2 e semanal em L3 — Cap. 05), é feita uma **auditoria de higiene** das dependências (não usadas ou desactualizadas):
 
 | Nível | Cadência mínima |
 |---|---|

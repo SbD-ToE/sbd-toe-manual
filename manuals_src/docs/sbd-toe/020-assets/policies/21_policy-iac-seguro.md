@@ -136,7 +136,7 @@ Alterações manuais à infraestrutura real criam divergência (drift) face ao e
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
-| Job agendado de deteção de drift | Recomendado | Obrigatório (mensal) | Obrigatório (quinzenal) |
+| Job agendado de deteção de drift | Recomendado (mensal) | Obrigatório (quinzenal) | Obrigatório (semanal; drift resolvido em ≤ 7 dias) |
 | Relatório de drift por ambiente gerado e arquivado | Recomendado | Obrigatório | Obrigatório |
 | Drift crítico em produção gera alerta imediato | Recomendado | Obrigatório | Obrigatório |
 | Correção de drift via PR com aprovação (nunca manual) | Recomendado | Obrigatório | Obrigatório |

@@ -8,16 +8,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 020-assets/policies/06_policy-rastreabilidade.md
-  source_sha256: f4ba401a504d1d3f6d39afab15228672b0b39c46251dbcafb2c6f71aba7d82a5
-  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
-  target_sha256: 2702b04b12725b074e9bd0d3f0a19435fb0df70d2cdee05281d20f55cc754a42
+  source_sha256: cf65b2854b1342286a9d2c951c5ebdf741397c1319cbeb0c12633ed00c22b0b6
+  source_commit: 6af34d1649cbda7525cd0bd30968688fab59b228
+  target_sha256: 4a1689fca07af83e91a311842eb3e30f332c451e591d29d152e1dfa47f37ca87
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, cra_support_period, cycle_iteration, eu_placing_on_market, lifecycle_phase, mapping, mcp_reading_programa, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 9b234151e8d7d9065bcd702907cac5c99b0768a3610c9c89eac8e74850abb83b
-  translated_at: 2026-09-27T07:09:00Z
-  stamped_at: 2026-09-27T07:14:35Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, cra_support_period, cycle_iteration, eu_ai_high_risk_system, eu_ai_system, eu_placing_on_market, lifecycle_phase, mapping, mcp_reading_programa, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b183d2d6ee23f991ad14e34618f4436c326893efc7aea162fcb536c9790b6c9c
+  translated_at: 2026-09-27T20:35:22Z
+  stamped_at: 2026-09-27T20:35:22Z
   reviewed_by: null
 ---
 
@@ -199,7 +199,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Classification and reassessment records | 2 years | 3 years | 5 years |
 
 :::note
-The periods in this table are the minimum recommended by the Manual (the Manual's choice). The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails, always within the GDPR limit where personal data are involved — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); the value adopted is recorded in the organisation's retention map. For products within the scope of the CRA, the evidence package and the SBOM that form part of the technical documentation are kept available for at least 10 years after placing on the market or for the support period, whichever is longer (CRA, Article 13(13)), regardless of level.
+The periods in this table are the minimum recommended by the Manual (the Manual's choice). The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails, always within the GDPR limit where personal data are involved — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); the value adopted is recorded in the organisation's retention map. For products within the scope of the CRA, the evidence package and the SBOM that form part of the technical documentation are kept available for at least 10 years after placing on the market or for the support period, whichever is longer (CRA, Article 13(13)), regardless of level. For high-risk AI systems, the provider keeps the technical documentation and the artefacts that feed it for 10 years after placing on the market or putting into service (AI Act, Article 18(1)), also regardless of level.
 :::
 
 ---

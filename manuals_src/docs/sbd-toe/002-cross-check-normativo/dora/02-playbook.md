@@ -106,6 +106,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - **O que:** monitorizar, reagir, conter, recuperar e aprender com eventos e desvios
 - **Como:** logging estruturado; alertas com SLAs; rollback; runbooks; métricas; formação contínua
 - **Trilho:** evidência operacional, post-incident reviews, KPIs e reporting
+- **Limite:** as cópias de segurança, os testes de restauro e os planos de continuidade (art. 11.º e 12.º; Reg. Delegado (UE) 2024/1774, art. 8.º, n.º 2, al. b), subal. i)) ainda não estão prescritos no Manual. O rollback (Cap. 11) reverte um deploy; não recupera dados nem sistemas.
 - **Referências:** [Cap. 11 - Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro), [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
 ---

@@ -6,16 +6,16 @@ tags: [exemplos, incidentes, reporte, dora, template]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md
-  source_sha256: 7b19f8923b81a08d497150d27877757ca72028c99ff063bfcc76a1145050351f
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 5c715847f7ae7f851f1bad1a47115d7e37f48a7fee691da08848cda60eb5290c
+  source_sha256: bd1a97083c490662bef94d05f803a98f042e50cedb81804655fb23a9f4dc05a4
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 57a98f997e474ee29d4b8300b96fe99edb2c01755527b6c4b1147bb168ff5a4f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, eu_ai_widespread_infringement, nis2_early_warning, practitioner_manual, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 1eda95aea0f848e9bac5052aaa958ea477e39afd495fcd13f4038e7fc75987ae
-  translated_at: 2026-09-27T07:29:57Z
-  stamped_at: 2026-09-27T07:29:57Z
+  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, eu_ai_deployer, eu_ai_widespread_infringement, nis2_early_warning, practitioner_manual, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 1d216cc176a0216190a8ea83bf1d05c364c9378454c2786790bb80d865f65227
+  translated_at: 2026-09-27T08:34:19Z
+  stamped_at: 2026-09-27T08:34:19Z
   reviewed_by: null
 ---
 
@@ -219,7 +219,7 @@ This template structures incident ticketing systems:
 - [ ] NIS2: incident notification ≤ 72 h; final report ≤ 1 month after the notification
 - [ ] DORA: intermediate and final reports within the time limits of Delegated Regulation (EU) 2025/301, Art. 5
 - [ ] CRA: notification ≤ 72 h; final report ≤ 14 days after the corrective measure (vulnerability) or ≤ 1 month after the notification (severe incident)
-- [ ] AI Act: serious incident ≤ 15 days (10 in the event of death; 2 in the event of a widespread infringement) - Article 73
+- [ ] AI Act: serious incident ≤ 15 days (10 in the event of death; 2 in the event of a widespread infringement or of a serious incident as defined in Article 3, point (49)(b)), from the time the provider or, where applicable, the deployer becomes aware - Article 73(2) to (4)
 - [ ] Post-mortem ≤ 5 working days after resolution (Policy 32 §4.6)
 - [ ] Archived in line with Policy 06 §10 (1 year at L1/L2, 3 years at L3; audit trail)
 

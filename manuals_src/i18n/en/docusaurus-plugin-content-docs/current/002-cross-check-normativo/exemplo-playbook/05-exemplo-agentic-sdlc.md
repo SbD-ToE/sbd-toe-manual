@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/05-exemplo-agentic-sdlc.md
-  source_sha256: c866236f1754086453ad1ec16f8c8a979d085caac620f8fde1a39f8a3dccbd96
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: c0a8a4438be74e14b1b5ec28215e0037cc1d3ca2f54324ba3c3c26f9695e7e58
+  source_sha256: d02c20c772278cfeba31a565d55cac71a335bc6bd899884844edb41ff83dc55c
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: d0f5f447759efe96d747b096f6032c1c207e42ef30a02d75d60213292eb700a6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [chapter_role, cycle_iteration, eu_ai_human_oversight, framework_source_corpus, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, transversal, trilho_formativo, validation_evaluation]
-  glossary_sha256: 60abe2c7a2d37d2eb315d40cee198ba9303ef9b73bd836bc447b88afa73ab794
-  translated_at: 2026-09-26T23:27:19Z
-  stamped_at: 2026-09-26T23:27:19Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_human_oversight, eu_ai_post_market_monitoring, framework_source_corpus, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, transversal, trilho_formativo, validation_evaluation]
+  glossary_sha256: dd29d428c2371d2b9f6332eb992cfa579f0b0045064ebba773867e00b9f3ab2e
+  translated_at: 2026-09-27T08:34:20Z
+  stamped_at: 2026-09-27T08:34:20Z
   reviewed_by: null
 ---
 
@@ -187,12 +187,12 @@ The process described serves several regulatory obligations at the same time. Su
 | **AI Act** | Art. 10 (data / data governance) | Stop 7 (AI BOM) |
 | **AI Act** | Art. 11 + Annex IV (technical documentation) | Stops 4, 7 |
 | **AI Act** | Art. 12 + Art. 19 (logging) | Stop 10 |
-| **AI Act** | Art. 13 (transparency to *deployers*) | Stop 4 (mandate as a source) |
+| **AI Act** | Art. 13 (transparency and provision of information to deployers) | Stop 4 (mandate as a source) |
 | **AI Act** | **Art. 14 (human oversight)** ⚡ | Stops 1, 3, 4 (the agentic layer closes a historical gap) |
-| **AI Act** | Art. 15 (robustness / cybersec) | Stops 2, 3, 8, 10 |
+| **AI Act** | Art. 15 (accuracy, robustness and cybersecurity) | Stops 2, 3, 8, 10 |
 | **AI Act** | Art. 17 (QMS) | The whole process (Policy 38 + Policy 39 provide *formal cycles*) |
-| **AI Act** | Art. 25 (AI value chain) | Stop 7 |
-| **AI Act** | Art. 26 (deployer) | Stop 4 (deployer mandate) + Stop 10 |
+| **AI Act** | Art. 25 (responsibilities along the AI value chain) | Stop 7 |
+| **AI Act** | Art. 26 (deployers) | Stop 4 (deployer mandate) + Stop 10 |
 | **AI Act** | Art. 53 / 55 (GPAI) | Stops 7, 8, 10 |
 | **AI Act** | Art. 72 (post-market monitoring) | Stop 10 |
 | **AI Act** | Art. 73 (serious incidents) | Stops 10, 11 |

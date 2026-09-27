@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: e39b860537c1637be1e477a029fc71406298837d648ef198395df0d00bbd828c
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 7d398bb02e4b42de4d8e553014242758f440b7e5cc751e13f3fe651e2f950ebd
+  source_sha256: e3654308a2163ffc8e1a704c26a0cd4ad03f78ad423abe139b66b3ebbad10546
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 894af758de496685f9f71834ff2bc5c1f3321b5157b2958ad43d65fe8c50e751
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 22ff3b5b5d71ad18aa105d9d275a156caffe5cf8e5bae336bb9a65530f5117b6
-  translated_at: 2026-09-27T07:54:13Z
-  stamped_at: 2026-09-27T07:54:13Z
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, eu_ai_deployer, eu_ai_gpai_model, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 9d4c9230e1266fdaa3a04d2b9658ef7a4142d394c4c478658cfbfd3e30bd1884
+  translated_at: 2026-09-27T08:34:26Z
+  stamped_at: 2026-09-27T08:34:26Z
   reviewed_by: null
 ---
 
@@ -231,8 +231,8 @@ When the supplier is an **AI model provider** (Anthropic, OpenAI, Google, Mistra
 
 ### 10.3 *Audit rights* {#103-audit-rights}
 
-- Contractual right to access inference *logs* or equivalent when required (typical at L3 and in regulated systems — DORA Art. 30(3)(e), AI Act Art. 26).
-- Alternatively, periodic *audit reports* (SOC 2 Type II, ISO/IEC 42001 certification, the EU declaration of conformity of Art. 47 when the supplied system is high-risk, or the documentation of Art. 53/Annex XII in the case of GPAI).
+- Contractual right to access inference *logs* or equivalent where required (typical at L3 and in regulated systems — DORA Art. 30(3)(e), AI Act, Article 26(6)).
+- Alternatively, periodic *audit reports* (SOC 2 Type II, ISO/IEC 42001 certification, EU declaration of conformity under Art. 47 when the system supplied is high-risk, or Art. 53/Annex XII documentation when GPAI).
 
 ### 10.4 Prior notification SLA {#104-sla-de-notificação-prévia}
 
@@ -247,8 +247,8 @@ When the supplier is an **AI model provider** (Anthropic, OpenAI, Google, Mistra
 
 ### 10.6 Declared regulatory compliance {#106-conformidade-regulatória-declarada}
 
-- **AI Act Art. 53** (obligations of GPAI *providers*): technical documentation of the model, published *summary of training data*, *copyright compliance policy*.
-- **AI Act Art. 55** (cybersecurity of GPAI with systemic risk): continuous *AI red teaming*, infrastructure hardening, *post-market monitoring*.
+- **AI Act Art. 53** (obligations for providers of general-purpose AI models): technical documentation of the model (paragraph 1, point (a)), information and documentation for downstream providers (point (b)), a policy to comply with Union law on copyright (point (c)) and a public summary of the content used for training (point (d)).
+- **AI Act Art. 55** (obligations of providers of general-purpose AI models with systemic risk): model evaluation with documented «adversarial testing» (paragraph 1, point (a)), assessment and mitigation of systemic risks (point (b)), tracking and reporting of serious incidents to the AI Office (point (c)) and cybersecurity protection of the model and its physical infrastructure (point (d)).
 - **GDPR, Art. 28** (processors): contract with the processor (paragraph 3) and prior information on the engagement or replacement of other processors (paragraph 2).
 - **NIS2 Art. 21** and **DORA Art. 28–30**: applicable to any ICT services *provider* to a covered entity; reinforced contractual requirements when the service supports critical or important functions (DORA Article 30(3)).
 
@@ -296,4 +296,4 @@ This policy must be **reviewed annually** or after any of the following events:
 | GDPR - Art. 28, 44–49 | Processors; international transfers |
 | DORA - Art. 28-30 | ICT third-party risk management |
 | NIS2 - Art. 21 | Supply chain security measures |
-| EU AI Act (Reg. (EU) 2024/1689) - Art. 25, 26, 47, 53, 55 | AI supply chain; obligations of GPAI providers |
+| EU AI Act (Reg. (EU) 2024/1689) - Art. 25, 26, 47, 53, 55 | Responsibilities along the AI value chain (Article 25); obligations of deployers (Article 26); EU declaration of conformity (Article 47); obligations of providers of general-purpose AI models (Articles 53 and 55) |

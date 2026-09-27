@@ -7,16 +7,16 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: df1018b341cb8b32567430df4c78dfa469fe19125bf30064ff1e771bee9caeaf
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 9d60e1d1e7b166b11c241fda68561aa1e475146bf2c5ef4b08bdef94c285d3be
+  source_sha256: d35c8d00beb496d013f834d739ebf636e40211b9d790d6b70335f363921c93e2
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 7ceb8f9ad545355321afc3d0dbf0d11278644e1c56f2e7df04e72577f9475bdb
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, instrument, mcp_reading_programa, nis2_early_warning, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: b01001ad8668dd55ed6980a2bf52c61db449dfa29d725b9323bb7d978033cf65
-  translated_at: 2026-09-27T07:54:05Z
-  stamped_at: 2026-09-27T07:54:05Z
+  glossary_keys: [avaliacao, eu_ai_widespread_infringement, instrument, mcp_reading_programa, nis2_early_warning, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 81d16b4dfe1a305a205c5a1438619800f1c71565825b41c8680a5c6ce0591216
+  translated_at: 2026-09-27T08:34:23Z
+  stamped_at: 2026-09-27T08:34:23Z
   reviewed_by: null
 ---
 
@@ -228,7 +228,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 8.12 | There is an Incident Response Plan with activation criteria, structured phases and playbooks | **L2+** | pol-32 |
 | 8.13 | Security incidents have a post-mortem carried out in less than 5 working days | **L2+** | pol-32 |
 | 8.14 | Automatic rollback is configured for all artefact types with RTO ≤ 15 minutes | **L3** | pol-27 |
-| 8.15 | Applicable regulatory notifications met within the legal time limits (Policy 32 §6): GDPR ≤ 72h (Article 33); NIS2 early warning ≤ 24h and notification ≤ 72h; DORA initial notification within the time limits of Delegated Regulation (EU) 2025/301; CRA early warning notification ≤ 24h; AI Act ≤ 15 days (Article 73) | **S** | pol-32 |
+| 8.15 | Applicable regulatory notifications made within the legal time limits (Policy 32 §6): GDPR ≤ 72h (Article 33); NIS2 early warning ≤ 24h and notification ≤ 72h; DORA initial notification within the time limits of Delegated Regulation (EU) 2025/301; CRA early warning ≤ 24h; AI Act ≤ 15 days; ≤ 10 days in the event of death; ≤ 2 days in the event of a widespread infringement or of a serious incident as defined in Article 3, point (49)(b) (Article 73(2) to (4)) | **S** | pol-32 |
 
 ---
 

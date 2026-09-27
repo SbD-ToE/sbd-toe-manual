@@ -8,16 +8,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md
-  source_sha256: f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: e21b95260d4ff548abfb020eec7c61688b94b51abd20b0e88e103472e4f8c6f5
+  source_sha256: d1491d53700aa25f3f7dd650fa88b58d1bc0c1743f07f0651775658ce9cbba62
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 73b6a262fc1403ad398ee060192f48ce44258acfa9830739cb1b3d3d3883d8ba
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [chapter_role, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
-  glossary_sha256: 1b15b415482eadd538bd24f802b88f0758c117c59c12d1a875aabe22b0109d17
-  translated_at: 2026-09-26T17:23:37Z
-  stamped_at: 2026-09-26T18:32:30Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [chapter_role, eu_ai_high_risk_system, eu_ai_system, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
+  glossary_sha256: f4239912434bff902f06a6cf636144893b38d254bc2237fcfd833320e1b3ab7a
+  translated_at: 2026-09-27T08:34:21Z
+  stamped_at: 2026-09-27T08:34:21Z
   reviewed_by: null
 ---
 
@@ -41,7 +41,7 @@ The architects' work supports the *security by design* principles set out in **G
 ## Regulatory Framework {#enquadramento-regulatório}
 
 They give effect to:
-- **GDPR** and **AI Act**: *Security by design* and *privacy by design*
+- **GDPR** (data protection by design, Article 25) and **AI Act** (high-risk AI systems «designed and developed in such a way that they achieve an appropriate level of accuracy, robustness, and cybersecurity», Article 15(1))
 - **NIS2**: Appropriate structural technical measures
 
 ---

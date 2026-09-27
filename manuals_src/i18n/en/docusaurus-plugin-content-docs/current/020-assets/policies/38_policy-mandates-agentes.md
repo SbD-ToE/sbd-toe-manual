@@ -8,16 +8,16 @@ sidebar_position: 38
 translation:
   source_locale: pt
   source_path: 020-assets/policies/38_policy-mandates-agentes.md
-  source_sha256: 63c00105e3d49dc911d44e0002bf343b430a7c18936ca8560875808305522199
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a5fdb95622dd1be247ea4d946980fa38e320d3d867afc4196a1c1aa3effe6938
+  source_sha256: 9974f1ca0f2e5e47a6de918e4b9cdc5528bc0d3412d84e833634ad4e3ccfde38
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 8b439e39f94dd133b127699afc0155a194f023193bbd79324570e4f5cd662606
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, llm, mcp, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
-  glossary_sha256: 26fb030d643de17f1142812c5a996f4f0a1c3fbe517e7769ad3a8014c2ae4dce
-  translated_at: 2026-09-26T14:11:06Z
-  stamped_at: 2026-09-26T18:37:08Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [avaliacao, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, lifecycle_phase, llm, mcp, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
+  glossary_sha256: d36d9ddddd1d27e837c4e11ee08e63e70748ad0b1b905532ec5681e4546078de
+  translated_at: 2026-09-27T08:34:28Z
+  stamped_at: 2026-09-27T08:34:28Z
   reviewed_by: null
 ---
 
@@ -218,4 +218,4 @@ This policy must be **reviewed half-yearly** given the rapid evolution of AI age
 | NIST SP 800-207 | Zero Trust — the agent as a non-human *principal* |
 | NIST SP 800-218A | SSDF Profile for GenAI |
 | ISO/IEC 42001:2023 | AI Management System — lifecycle, ownership, review |
-| EU AI Act (Reg. (EU) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obligations of *deployers*) — see [AI Act cross-check](/sbd-toe/cross-check-normativo/ai-act/intro) |
+| EU AI Act (Reg. (EU) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obligations of deployers of high-risk AI systems) — see [AI Act cross-check](/sbd-toe/cross-check-normativo/ai-act/intro) |

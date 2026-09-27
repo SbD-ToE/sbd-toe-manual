@@ -16,16 +16,16 @@ tags:
 translation:
   source_locale: pt
   source_path: 020-assets/mcp/07-casos-uso/06-cross-check-conformidade.md
-  source_sha256: 7c2253cf1dabec52bd4a9104c3b15dc129f7f92b760ead2749354ac8bed5a49d
-  source_commit: 4e04c6c26f9325b8a3515d4ccd3b126f58be3b1e
-  target_sha256: 4396b111e5b62ffa3ab2d5e5afd1a7f81bcb48c6aae42517915ab4f0d533e2a0
+  source_sha256: ff453063fea93cbefbdbf137419b723f90b4e67a3b355fe0a46544e1c1558053
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: f86bd543ceb89da10039aa50f62ea0bbd558d8601d9e5faeb1d606953ea84aa8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, framework_source_corpus, mcp, normative_empirical, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd]
-  glossary_sha256: bddc0c41e9dac1412688775062a8a141f3172882908bc853d4b82fcce14ab445
-  translated_at: 2026-09-26T14:55:20Z
-  stamped_at: 2026-09-26T18:36:40Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [appsec_core, avaliacao, chapter_role, discipline, eu_notified_body, framework_source_corpus, mcp, normative_empirical, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd]
+  glossary_sha256: 4a0acf899b203bd594e77aef311b79be1dd101b693ad47e580abe900849dd756
+  translated_at: 2026-09-27T08:34:24Z
+  stamped_at: 2026-09-27T08:34:24Z
   reviewed_by: null
 ---
 
@@ -67,8 +67,8 @@ If the top-ranked records point to `002-cross-check-normativo/<framework>/...` �
 ### 1. Identify the regulatory obligation {#1-identificar-a-obrigação-regulatória}
 
 From the primary source (EUR-Lex / text of the regulation), extract:
-- Article (e.g.: AI Act Art. 15 — *accuracy, robustness and cybersecurity*)
-- Key concepts (e.g.: *adversarial examples*, *model evasion*, *data poisoning*)
+- Article (e.g. AI Act Art. 15 — «Accuracy, robustness and cybersecurity»)
+- Key concepts (e.g. «adversarial examples or model evasion», «data poisoning» — Article 15(5))
 
 ### 2. Locate the answer {#2-localizar-a-resposta}
 
@@ -139,7 +139,7 @@ The cross-check **shows how the manual responds** to the regulation — it does 
 
 - **Operational evidence** (logs, attestations, audit reports)
 - **Decision by *legal counsel*** or DPO/CISO
-- **External assessment** when the regulation so requires (e.g.: AI Act high-risk Art. 43)
+- **External assessment** when regulation so requires (e.g. AI Act, Article 43, in cases where the conformity assessment procedure involves a notified body — Annex VII; systems in Annex III, points 2 to 8, follow the internal control of Annex VI — Article 43(2))
 
 **Always** mark the report as *"technical cross-check — not a declaration of compliance"*.
 

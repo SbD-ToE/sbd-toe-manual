@@ -8,16 +8,16 @@ sidebar_position: 9.5
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/tech-lead.md
-  source_sha256: 617fb8d1922515329c179646eeecda70ed019753d053e37009f3f70122c386da
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 9c3d264afba8c8a4172e651cdcd51c673cc922efb30615ae32b33aafa7a2cabc
+  source_sha256: ee22f5d7b110b6846054a72f550a8274467dda16ddc7c8b223dbbe7285c0ef23
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 5cbf40703e2f3c84bc4d1c3b110c0d9fa47e58eba516615391f5fdfc7512da85
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, chapter_role, eu_ai_human_oversight, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling]
-  glossary_sha256: ce566d7d6c3c959b9ecb191bb69cc5b7f34e72820d59c8636c32cb205685e1db
-  translated_at: 2026-09-26T17:23:59Z
-  stamped_at: 2026-09-26T18:32:41Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [audit_trail, chapter_role, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_system, practitioner_manual, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling]
+  glossary_sha256: 866e57a6df412c5145bbc374b8fc17b082dd2ebf901674c5499b1d01b341b396
+  translated_at: 2026-09-27T08:34:22Z
+  stamped_at: 2026-09-27T08:34:22Z
   reviewed_by: null
 ---
 
@@ -43,7 +43,7 @@ Approval proportional to risk gives effect to the **accountability** that NIS2 a
 
 Supports:
 - **NIS2** and **DORA**: Technical decision that is assigned, recorded and proportional to risk
-- **AI Act**: Human oversight of code and of AI agent actions
+- **AI Act**: Human oversight (Article 14, for high-risk AI systems); in SbD-ToE extended to code and to the actions of AI agents (the Manual's choice)
 
 ---
 

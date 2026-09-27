@@ -8,16 +8,16 @@ sidebar_position: 37
 translation:
   source_locale: pt
   source_path: 020-assets/policies/37_policy-formacao-seguranca.md
-  source_sha256: 318978182e69c350d0d63b5660e008ee67cfe82af37cd0ef52b510a2e42f25ed
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 8f6dfbce1e5c2cd4bc9e6cbab4c91914f10ad50d603c0ad063ffe196af72ad79
+  source_sha256: 09a172b6a99b298c33191a63f1e6f0c11dfbf363c309dc31b60bc03c36d11207
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 44bcda4508f2573549e4bd7b84823adb365de6373f1d6940dd948093870b5e65
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, capacitacao, chapter_role, framework_source_corpus, gap_family, llm, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 6e53f6d4a50c57cb34d3c03f1edf2f42f065e601c553b88784126070c79929a8
-  translated_at: 2026-09-27T07:54:15Z
-  stamped_at: 2026-09-27T07:54:15Z
+  glossary_keys: [avaliacao, capacitacao, chapter_role, eu_ai_deployer, eu_ai_literacy, framework_source_corpus, gap_family, llm, maturity, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: 87768844743d61be242731bbc49002197ed38d006846bd7c658dd3f46b56902f
+  translated_at: 2026-09-27T08:34:27Z
+  stamped_at: 2026-09-27T08:34:27Z
   reviewed_by: null
 ---
 
@@ -265,4 +265,4 @@ This policy must be **reviewed annually** or after any of the following events:
 | NIS2 - Art. 21 | Cybersecurity training obligations |
 | ISO/IEC 27001 - A.7.2.2 | Information security awareness, education and training |
 | ISO/IEC 42001:2023 | AI Management System — workforce competence |
-| EU AI Act (Reg. (EU) 2024/1689) - Art. 4 (AI literacy) | General AI literacy obligation |
+| EU AI Act (Regulation (EU) 2024/1689) - Art. 4 (AI literacy), as worded by Regulation (EU) 2026/1744 | Providers and deployers «shall take measures to support the development of AI literacy» of their staff, without an obligation to guarantee «any specific level of AI literacy»; the mandatory training in §11 is the Manual's choice |

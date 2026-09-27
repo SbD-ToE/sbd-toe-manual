@@ -6532,6 +6532,29 @@ terms:
   blocks_translation: false
   notes: '[MA 2026-09-26] Cross-check normativo — regra EUR-Lex do lead: termos na forma EN oficial, nunca retraduzidos
     do PT. Variantes PT = paráfrases do Manual com o mesmo conceito.'
+- key: eu_startups
+  species: 3
+  state: in-record
+  owner: manual-agent
+  en: start-ups
+  en_variants: []
+  pt: empresas em fase de arranque
+  pt_variants: [fase]
+  ontology_id: null
+  sense: Termo oficial do acto (UE) — «PME, incluindo as empresas em fase de arranque» / «SMEs, including start-ups» (CELEX 02024R1689-20260727,
+    art. 99.º, n.º 6). Declara o segundo sentido de «fase» (polissemia com lifecycle_phase).
+  senses: []
+  evidence: EUR-Lex CELEX:02024R1689-20260727, art. 99(6) (versões PT e EN oficiais, obtidas 2026-09-27)
+  counts: {}
+  change_cost: null
+  curator: {}
+  previous: null
+  proposal: null
+  false_friends: []
+  pending_reason: null
+  blocks_translation: false
+  notes: '[MA 2026-09-27] Lote jurídico, bloco 3 — termo oficial EUR-Lex; declara o sentido «fase de arranque» de «fase»
+    para o lint de consistency (polissemia com lifecycle_phase).'
 - key: eu_placing_on_market
   species: 3
   state: in-record

@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: a425d5454bf8014fee6159e450c05393a0b40e730bfd6205825ed018be951030
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 796402018e8f472384dfa62825fdb69502cff46a763fa4ddd6bfd9c9a548bb5a
+  source_sha256: 97efc20869dc0ae1be5364a096766591bfe48461a8e81f972571d1840976e879
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 7b8bd1696fe8d43b78abf15a7ed81fe47a5db6eb96f6223656c0d6395a860b99
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: efb47b08f14879bd8b6756fe84574e79fc96c690ddc045b01835fcb4b7d3751d
-  translated_at: 2026-09-27T07:29:50Z
-  stamped_at: 2026-09-27T07:29:50Z
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
+  glossary_sha256: 869d059c141f81bf336738f70f3cb58776a4ba39b01f7d996149c76b3bccc732
+  translated_at: 2026-09-27T08:37:07Z
+  stamped_at: 2026-09-27T08:37:07Z
   reviewed_by: null
 ---
 
@@ -32,16 +32,17 @@ translation:
 
 The **AI Act** is **Regulation (EU) 2024/1689** (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)), the world's first horizontal legal framework dedicated to artificial intelligence. It entered into force on 1 August 2024 and applies in phases:
 
-- **2 February 2025** - prohibited practices (Art. 5) and AI literacy (Art. 4).
-- **2 August 2025** - general-purpose AI models (GPAI, Chapter V), governance and the penalties regime.
-- **2 December 2027** - the bulk of the obligations for **high-risk** AI systems in Annex III (Regulation (EU) 2026/1744, which amended Article 113).
-- **2 August 2028** - high-risk systems covered by the product legislation in Annex I (Regulation (EU) 2026/1744).
+- **2 February 2025** - prohibited practices (Art. 5) and AI literacy (Art. 4; since 27 July 2026, as worded by Regulation (EU) 2026/1744). The exceptions are the new prohibitions in Article 5(1), first subparagraph, points (ba) and (bb), and paragraphs 1a and 1b of the same Article, inserted by Regulation (EU) 2026/1744, which apply from **2 December 2026** (Article 113, third paragraph, point (a)).
+- **2 August 2025** - general-purpose AI models (GPAI, Chapter V), notifying authorities and notified bodies (Chapter III, Section 4), governance (Chapter VII) and penalties (Chapter XII), **with the exception of Article 101** (fines for providers of general-purpose AI models).
+- **2 August 2026** - general application of the regulation (Article 113, second paragraph), including the transparency obligations of Art. 50 and Article 101; for systems generating synthetic content placed on the market before that date, Article 50(2) must be complied with by 2 December 2026 (Article 111(4)).
+- **2 December 2027** - Chapter III, Sections 1 to 3 (with the exception of Article 6(5)), for **high-risk** AI systems in Annex III (Regulation (EU) 2026/1744, which amended Article 113).
+- **2 August 2028** - high-risk AI systems covered by the product legislation in Annex I (Regulation (EU) 2026/1744).
 
 > ℹ️ **Note (2026):** Regulation (EU) 2026/1744 («Digital Omnibus on AI»), published in OJ L of 24.7.2026 and in force since 27.7.2026, amended Article 113: the high-risk obligations (Chapter III, Sections 1–3) apply from **2 December 2027** (Annex III / Article 6(2)) and from **2 August 2028** (Annex I / Article 6(1)).
 
-The AI Act adopts a **risk-based approach** with four tiers: **unacceptable** risk (prohibited, Art. 5), **high risk** (Art. 6 and Annexes I/III, subject to the bulk of the technical obligations), **limited** risk (transparency obligations, Art. 50) and **minimal** risk (no specific obligations beyond the horizontal ones, such as the AI literacy of Art. 4). On top of these tiers come specific rules for **GPAI** (Art. 53) and GPAI with **systemic risk** (Art. 55).
+The AI Act adopts a **risk-based approach** with four tiers: **unacceptable** risk (prohibited, Art. 5), **high risk** (Art. 6 and Annexes I/III, subject to the bulk of the technical obligations), **limited** risk (a common designation; Art. 50 lays down transparency obligations for «certain AI systems») and **minimal** risk (no specific obligations beyond the horizontal ones, such as the AI literacy of Art. 4). On top of these tiers come specific rules for **GPAI** (Art. 53) and GPAI with **systemic risk** (Art. 55).
 
-It is essential to frame the nature of the regulation: the AI Act is, first and foremost, **product safety and fundamental rights protection legislation** applied to AI systems, not an application security (AppSec) standard. However, the obligations for high-risk systems incorporate **substantial technical requirements** that intersect directly with SbD-ToE - in particular:
+It is essential to frame the nature of the regulation: the AI Act is, first and foremost, **product safety and fundamental rights protection legislation** applied to AI systems, not an application security (AppSec) standard. However, the obligations for high-risk AI systems incorporate **substantial technical requirements** that intersect directly with SbD-ToE - in particular:
 
 - **Art. 9** - risk management system throughout the lifecycle;
 - **Art. 12 / Art. 19** - automatic recording of events (logging) and keeping of logs;
@@ -67,9 +68,9 @@ SbD-ToE covers the **technical "how"** of the high-risk requirements, but **does
 
 - **Risk classification** (Art. 6 and Annexes I/III) - the legal determination of whether a system is high-risk.
 - **Governance of training data, validation data and testing data** (Art. 10) - representativeness, detection and mitigation of bias (*bias*), statistical quality of the data sets. These are **AI/data science domain** questions, not AppSec ones.
-- **Transparency and information to deployers** (Art. 13) and to natural persons (Art. 50).
+- **Transparency and provision of information to deployers** (Art. 13) and to natural persons (Art. 50).
 - **Human oversight** (Art. 14) - the **design/UX** of *human-in-the-loop* / *human-on-the-loop* mechanisms and human judgement (oversight-as-understanding). The **interruption (*stop/override*) and governance** facet is technically covered (see matrix, Art. 14).
-- **Fundamental rights impact assessment (FRIA)** (Art. 27) - an obligation of deployers (*deployers*).
+- **Fundamental rights impact assessment (FRIA)** (Art. 27) - an obligation of certain deployers: bodies governed by public law, private entities providing public services and deployers of the systems referred to in Annex III, point 5, points (b) and (c), for high-risk systems under Article 6(2) (with the exception of those in Annex III, point 2) (Article 27(1)).
 - **Conformity assessment** (Art. 43), involvement of **notified bodies**, **EU declaration of conformity** (Art. 47), **CE marking** (Art. 48) and **registration in the EU database** (Art. 49/71).
 - **Determination of prohibited practices** (Art. 5) and the legal qualification of roles (provider, deployer, importer, distributor).
 
@@ -107,7 +108,7 @@ These dimensions fall within the remit of compliance, legal, data science teams 
 
 **Normative content**
 
-Art. 4 (as worded by Regulation (EU) 2026/1744) requires *providers* and *deployers* to take measures to support the development of AI literacy of their staff and of other persons dealing with the operation or use of AI systems — an obligation of means, which does not require guaranteeing any specific level of literacy, taking into account their technical knowledge, experience, education and training, as well as the context in which the system is to be used and the persons on whom it is to be used.
+Art. 4, as worded by Regulation (EU) 2026/1744 (in force since 27 July 2026), provides: «Providers and deployers of AI systems shall take measures to support the development of AI literacy of their staff and other persons dealing with the operation and use of AI systems on their behalf, taking into account their technical knowledge, experience, education and training and the context the AI systems are to be used in, and considering the persons or groups of persons on whom the AI systems are to be used. This obligation does not require providers or deployers to guarantee any specific level of AI literacy of any individual.» (Article 4(1)). In the Manual's reading, this is an obligation of means. Between 2 February 2025 and 26 July 2026 the original wording applied, which required measures to ensure, «to their best extent», a «sufficient level of AI literacy».
 
 **SbD-ToE coverage**
 
@@ -138,7 +139,7 @@ Policy 37 §11 can be operationalised directly. For organisations with heavy ado
 
 **Normative content**
 
-Art. 9 requires a **continuous iterative** risk management system throughout the entire lifecycle of the high-risk AI system: identification and analysis of the known and reasonably foreseeable risks to health, safety and fundamental rights; estimation of the risks under intended use and under reasonably foreseeable misuse; adoption of appropriate risk management measures; and testing to identify the most appropriate measures.
+Art. 9 requires a **continuous and iterative** risk management system throughout the entire lifecycle of the high-risk AI system: identification and analysis of the known and reasonably foreseeable risks to health, safety and fundamental rights; estimation of the risks under intended use and under reasonably foreseeable misuse; adoption of appropriate risk management measures; and testing to identify the most appropriate measures.
 
 **SbD-ToE coverage**
 
@@ -170,7 +171,7 @@ It is suggested to extend the Ch. 03 threat model with an AI risk taxonomy - usi
 
 **Normative content**
 
-Art. 10 requires that the training data sets, validation data sets and testing data sets be subject to appropriate data governance practices: relevance, representativeness, freedom from errors and completeness to the best extent possible, appropriate statistical properties, and examination of possible biases likely to affect health, safety or fundamental rights.
+Art. 10 requires that the training data sets, validation data sets and testing data sets be subject to appropriate data governance practices: relevance, representativeness, freedom from errors and completeness to the best extent possible, appropriate statistical properties, and examination of possible biases likely to affect health, safety or fundamental rights (Article 10(2) and (3)). With Regulation (EU) 2026/1744, the exceptional processing of special categories of personal data for bias detection and correction moved from Article 10(5) (deleted) to the new Article 4a.
 
 **SbD-ToE coverage**
 
@@ -201,7 +202,7 @@ The *AI-BOM* that was suggested in earlier versions of this document **is alread
 
 **Normative content**
 
-Art. 11 requires technical documentation drawn up **before** the placing on the market and kept up to date, demonstrating conformity. Annex IV details the minimum index: general description of the system, development and design elements, monitoring and control, risk management, changes throughout the lifecycle, and the list of standards applied.
+Art. 11 requires technical documentation drawn up **before** placing on the market or putting into service and kept up to date, demonstrating compliance; since Regulation (EU) 2026/1744, SMEs (including start-ups) and small mid-cap enterprises may provide the elements of Annex IV in a simplified manner, using a Commission form (Article 11(1), second subparagraph). Annex IV sets out the minimum contents: general description of the system, development and design elements, monitoring and control, risk management, changes over the lifecycle, and the list of standards applied.
 
 **SbD-ToE coverage**
 
@@ -253,7 +254,7 @@ Art. 12 requires the capability for **automatic recording of events** (logs) thr
 - Structured logging and observability "by design" (Ch. 12).
 - **Full audit per *tool invocation*** when AI agents are present ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) — each call generates an event with `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redacted), `intent_event_ref`, `outcome`, `external_effect`. Granular in a **complementary** (operational) dimension to the recording of inference events that each system must define to comply with Art. 12 — it does not replace it.
 - Auditable trail and event correlation, with guidance on retention and immutability (Ch. 12).
-- **Agentic operational telemetry** (Ch. 12 US-13) that sustains the evidential basis for Art. 72 (post-market monitoring) and Art. 73 (serious incidents).
+- **Agentic operational telemetry** (Ch. 12 US-13) that underpins the evidence base for Art. 72 (post-market monitoring) and Art. 73 (serious incidents).
 
 **Residual gaps**
 
@@ -269,7 +270,7 @@ The operational layer is already implemented (`OPS-011..014` + Ch. 12 US-13). Wh
 
 **Normative content**
 
-Art. 13 requires high-risk systems to be sufficiently transparent to enable *deployers* to interpret the output and use it appropriately, accompanied by **instructions for use** with the identity of the provider, characteristics, capabilities, limitations of performance, known risks and human oversight measures.
+Art. 13 requires high-risk AI systems to be sufficiently transparent to enable deployers to interpret and use the output appropriately, accompanied by **instructions for use** with the identity and contact details of the provider, characteristics, capabilities, performance limitations, known risks and human oversight measures.
 
 **SbD-ToE coverage**
 
@@ -300,7 +301,7 @@ It is suggested to derive an "instructions for use" document from the ***mandate
 
 **Normative content**
 
-Art. 14 requires high-risk systems to be designed to allow **effective human oversight**, including the ability to understand the capacities and limitations, detect and interpret the output, decide not to use or to override the system, and interrupt its operation (*stop*).
+Art. 14 requires high-risk AI systems to be designed to enable **effective human oversight**, including the ability to understand capabilities and limitations, detect and interpret the output, decide not to use or to override the system, and interrupt its operation (*stop*).
 
 **SbD-ToE coverage**
 
@@ -327,7 +328,7 @@ The **UX of the human decision** (how the user interprets the output and decides
 
 **How to comply**
 
-Most of the technical work is now inside the manual: declare the A0–A4 level in the *mandate* (Policy 38), instrument an exercised *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) and *intent declaration* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) in line with [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), and configure [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) to detect divergence. The AI/product team complements this with the intervention UX and the cognitive oversight points. For high-risk systems with an agentic component, US-15 (Ch. 02) + US-16 (Ch. 04) constitute the operational checklist.
+Most of the technical work is now within the manual: declare the A0–A4 level in the *mandate* (Policy 38), instrument an exercised *kill-switch* ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) and *intent declaration* ([`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) in accordance with [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), and configure [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) to detect divergence. The AI/product team complements this with the UX of intervention and the cognitive points of oversight. For high-risk AI systems with an agentic component, US-15 (Ch. 02) + US-16 (Ch. 04) form the operational checklist.
 
 ---
 
@@ -337,7 +338,7 @@ Most of the technical work is now inside the manual: declare the A0–A4 level i
 
 **Normative content**
 
-Art. 15 requires high-risk systems to achieve an appropriate level of **accuracy, robustness and cybersecurity** and to perform consistently throughout the lifecycle. Paragraph 5 is explicit about the adversarial vector: systems must be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting vulnerabilities, and the technical measures must prevent, detect, respond to, resolve and control for attacks involving **manipulation of the training data set (*data poisoning*)**, **manipulation of pre-trained components used in training (*model poisoning*)**, **inputs designed to cause the model to make a mistake (*adversarial examples / model evasion*)**, **confidentiality attacks** and **model flaws (*model flaws*)**.
+Art. 15 requires high-risk AI systems to achieve an appropriate level of **accuracy, robustness and cybersecurity** and to perform consistently throughout their lifecycle. Paragraph 5 is explicit about the adversarial vector: systems must be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting vulnerabilities, and the technical measures must prevent, detect, respond to, resolve and control for attacks trying to manipulate the training data set (**data poisoning**, *data poisoning*) or pre-trained components used in training (**model poisoning**, *model poisoning*), inputs designed to cause the AI model to make a mistake (**adversarial examples or model evasion**, *adversarial examples / model evasion*), **confidentiality attacks** or **model flaws** — measures to be included «where appropriate» (Article 15(5), third subparagraph).
 
 **SbD-ToE coverage**
 
@@ -373,7 +374,7 @@ It is suggested to: (1) extend the threat model (Ch. 03) with **MITRE ATLAS** an
 
 **Normative content**
 
-Art. 17 requires providers to have a documented quality management system, covering the regulatory compliance strategy, design and development procedures, quality control, testing and validation, risk management, post-market monitoring and incident reporting.
+Art. 17 requires providers of high-risk AI systems to have a documented quality management system (whose implementation, since Regulation (EU) 2026/1744, «shall be proportionate to the size of the provider’s organisation», without lowering the degree of rigour required — Article 17(2)), covering compliance strategy, design and development procedures, quality control, testing and validation, risk management, post-market monitoring and incident reporting.
 
 **SbD-ToE coverage**
 
@@ -407,7 +408,7 @@ It is suggested to map the SbD-ToE gates and processes (Ch. 06/07/10/11/14) to t
 
 **Normative content**
 
-Art. 25 deals with the distribution of responsibilities when several actors contribute to an AI system — upstream *providers*, distributors, importers, integrators, *deployers* — and requires contractual cooperation, sharing of the information necessary to fulfil the obligations, and handling of substantial changes that may reclassify the system.
+Art. 25 (amended by Regulation (EU) 2026/1744) deals with responsibilities along the AI value chain: a distributor, importer, deployer or other third party is considered a provider, with the obligations of Article 16, if it puts its name or trademark on a high-risk AI system, makes a substantial modification to it or modifies its intended purpose in such a way that it becomes high-risk (paragraph 1); the initial provider must then cooperate with the new providers (paragraph 2); and the provider of a high-risk AI system and the third party that supplies «an AI system, AI model, tools, services, components, or processes» used or integrated in it must, «by written agreement», specify the necessary information, capabilities, technical access and assistance (paragraph 4). Non-compliance with paragraphs 2 and 4 is now subject to fines (Article 99(4), point (da)).
 
 **SbD-ToE coverage**
 
@@ -440,7 +441,7 @@ Operationally, it is already implemented (Policy 39 + `DEP-013/014` + Ch. 14 US-
 
 **Normative content**
 
-Art. 26 sets out specific obligations for *deployers* of high-risk AI systems: using the system in accordance with the instructions for use, assigning qualified human oversight, ensuring that input data are appropriate, monitoring the operation, keeping the logs under their control for at least six months (Article 26(6)), and cooperating with authorities.
+Art. 26 sets out specific obligations for deployers of high-risk AI systems: use the system in accordance with the instructions for use, assign qualified human oversight, ensure appropriate input data, monitor operation, keep the logs under their control for at least six months (Article 26(6)), and cooperate with authorities.
 
 **SbD-ToE coverage**
 
@@ -449,12 +450,12 @@ Art. 26 sets out specific obligations for *deployers* of high-risk AI systems: u
 | Use in accordance with instructions; assigned oversight | Policy 38 (mandate with `owner`, `approver`, `autonomy_level`) | The *mandate* declares *who oversees*, *at what cadence*, *under which mandate* |
 | Assignment of qualified oversight | Ch. 00 (AI Reliability Engineer note) + Policy 37 §11 | Composite function + mandatory literacy per *role* |
 | Monitoring of the operation | Ch. 12 US-13 + `OPS-011..014` | Agentic telemetry in production |
-| Keeping of logs (Art. 19) | Ch. 12 + `OPS-003` (retention) + [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per tool) | Complete *audit trail* under the *deployer*'s control |
+| Keeping of logs (Article 26(6)) | Ch. 12 + `OPS-003` (retention) + [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per tool) | Complete *audit trail* under the *deployer*'s control |
 | Communication with authorities | Ch. 12 + Ch. 14 + Policy 30 §9.3 + Policy 32 (IRP) | IR feeds notification to authorities |
 
 **What SbD-ToE covers**
 
-- **Mandate as a *deployer* artefact** (Policy 38) — when the organisation operates (rather than provides) a high-risk AI system, the *mandate* is the formal evidence of "how this system is used, under what oversight, with which *kill-switch*". Directly extractable for the Art. 26 audit.
+- **Mandate as a *deployer* artefact** (Policy 38) — when the organisation operates (rather than supplies) a high-risk AI system, the *mandate* is the formal evidence of "how this system is used, under what oversight, with what *kill-switch*". Directly extractable for an Art. 26 audit.
 - **Composite function for qualified oversight** (Ch. 00 *AI Reliability Engineer* note) — `appsec` + `devops` + `grc` under the mandate of the `CISO`, with mandatory literacy (Policy 37 §11).
 - **Operational monitoring** (Ch. 12 US-13, `OPS-011..014`) — logs and signals under the *deployer*'s control, kept in accordance with policy (`OPS-003`).
 - **Incident response** linked to notification to authorities (Ch. 12 + Policy 30 §9.3 + Policy 32) — *off-policy actions* and *jailbreak* in production enter the IR flow that feeds Art. 73.
@@ -473,7 +474,7 @@ For uses in which the organisation is a *deployer*, the *mandate* (Policy 38) is
 
 **Normative content**
 
-Art. 72 requires a proportionate post-market monitoring system, with a documented plan, that collects and analyses data on the performance of the system throughout its lifetime, making it possible to evaluate continuous compliance.
+Art. 72 requires providers to establish and document a proportionate post-market monitoring system that collects, documents and analyses data on the performance of the system throughout its lifetime, allowing continuous compliance to be evaluated. The system must be based on a post-market monitoring plan that, since Regulation (EU) 2026/1744, «shall be part of the technical documentation referred to in Annex IV»; the Commission adopts guidance, including a template, by 2 September 2027 (Article 72(3)).
 
 **SbD-ToE coverage**
 
@@ -489,7 +490,7 @@ Art. 72 requires a proportionate post-market monitoring system, with a documente
 **What SbD-ToE covers**
 
 - Continuous collection and analysis of operational telemetry (Ch. 12), with complete agentic-specific signals (`OPS-011..014`).
-- **Agentic telemetry** (Ch. 12 US-13) that materialises the evidential basis for the post-market monitoring plan: *tool invocation audit events*, *intent events*, *budget metrics*, *off-policy / jailbreak detection*.
+- **Agentic telemetry** (Ch. 12 US-13) that provides the evidence base for the post-market monitoring plan: *tool invocation audit events*, *intent events*, *budget metrics*, *off-policy / jailbreak detection*.
 - Detection of performance degradation and *model drift* (Ch. 12, [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)).
 - **Feedback cycle for *eval suites*** (Ch. 10 §C5) — incidents detected in production feed the offline suite, strengthening future regression.
 
@@ -499,7 +500,7 @@ SbD-ToE does not define the **formal post-market monitoring plan** with the stru
 
 **How to comply**
 
-It is suggested to formalise a post-market monitoring plan based on the observability of Ch. 12, with *dashboards* for performance, *drift* and vulnerability status, and reassessment triggers that feed the Art. 9 cycle.
+It is suggested to formalise a post-market monitoring plan built on the observability of Ch. 12, with *dashboards* for performance, *drift* and vulnerability status, and reassessment triggers that feed the Art. 9 cycle.
 
 ---
 
@@ -541,7 +542,7 @@ It is suggested to parameterise the Ch. 12 runbook and incident schema with the 
 
 **Normative content**
 
-Art. 53 requires **GPAI** providers to provide technical documentation of the model, information for downstream integrators, a policy to comply with copyright and a summary of the training data. For GPAI with **systemic risk**, Art. 55 adds the obligation of **adversarial evaluation (*adversarial testing* / *red teaming*)**, assessment and mitigation of systemic risks, reporting of serious incidents and ensuring **adequate cybersecurity of the model and of the physical infrastructure**.
+Art. 53 requires providers of **general-purpose AI models** (GPAI) to provide technical documentation of the model (Annex XI), information and documentation for providers of AI systems that integrate the model (Annex XII), a copyright compliance policy and a «sufficiently detailed summary about the content used for training». Art. 55 adds, for models with **systemic risk**, model evaluation including «adversarial testing» (*adversarial testing* / *red teaming*), assessment and mitigation of systemic risks, reporting of serious incidents and ensuring **an adequate level of cybersecurity protection for the model and the physical infrastructure**.
 
 **SbD-ToE coverage**
 
@@ -575,7 +576,7 @@ It is suggested to: treat weights, *checkpoints* and *datasets* as supply chain 
 
 **Normative content**
 
-Art. 5 prohibits a set of practices (e.g. harmful subliminal manipulation, social classification — *social scoring* —, certain real-time remote biometric identification in publicly accessible spaces for the purposes of law enforcement); as from 2 December 2026, also the generation/manipulation of non-consensual intimate images and of child sexual abuse material (Article 5(1), points (ba) and (bb), inserted by Regulation (EU) 2026/1744). Art. 50 imposes transparency obligations for limited-risk systems (informing people that they are interacting with AI; marking synthetic content / *deepfakes*).
+Art. 5 prohibits a set of practices (e.g. harmful subliminal manipulation, social scoring — *social scoring* —, the use of «real-time» remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement, subject to exceptions); from 2 December 2026, also the generation or manipulation of realistic intimate images, videos, audio or similar material of an identifiable person without their consent and of child sexual abuse material (Article 5(1), first subparagraph, points (ba) and (bb), under the conditions of paragraphs 1a and 1b, inserted by Regulation (EU) 2026/1744; Article 113, third paragraph, point (a)). Art. 50 imposes transparency duties on «certain AI systems» (informing people that they are interacting with AI; marking synthetic content / *deepfakes*).
 
 **SbD-ToE coverage**
 
@@ -583,7 +584,7 @@ Both articles are **essentially legal and product-design in nature**, outside th
 
 **Intentional gaps (by design)**
 
-SbD-ToE does not determine the admissibility of a purpose (Art. 5) nor design the mechanisms of disclosure to the user (Art. 50). Technically, it can support **content provenance marking** (e.g. *watermarking*/content credentials) once that product decision is taken.
+SbD-ToE does not determine the admissibility of a purpose (Art. 5) nor design the user disclosure mechanisms (Art. 50). Note, however, that for points (ba) and (bb) placing on the market a system whose intended purpose is not such generation is only prohibited if, among other conditions, the system does not have «reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation» (Article 5(1a), point (a)(ii)) — a point where technical evidence (threat model, *eval suites*, *output* filters) is relevant, without replacing the legal qualification. Technically, it can support **content provenance marking** (e.g. *watermarking*/content credentials) when that product decision is taken.
 
 **How to comply**
 
@@ -595,39 +596,39 @@ The determination of prohibitions and the transparency duties must be led by leg
 
 ### Synthesis of AI Act / SbD-ToE coverage {#síntese-da-cobertura-ai-act--sbd-toe}
 
-The AI Act asks for AI systems that are **secure, robust, documented and capable of being overseen**, with provider responsibility throughout the entire lifecycle. SbD-ToE offers the **technical-operational core** of that effort: technical risk management (Ch. 01, 03), defensive architecture (Ch. 04), integrity of the data and model chain (Ch. 05), pipelines and quality gates (Ch. 06, 07, 11), testing and adversarial robustness (Ch. 10), logging and post-market monitoring (Ch. 12) and governance (Ch. 14).
+The AI Act calls for AI systems that are **safe, robust, documented and open to oversight**, with the provider responsible throughout the entire lifecycle. SbD-ToE offers the **technical-operational core** of that effort: technical risk management (Ch. 01, 03), defensive architecture (Ch. 04), integrity of the data and model supply chain (Ch. 05), pipelines and quality gates (Ch. 06, 07, 11), testing and adversarial robustness (Ch. 10), logging and post-market monitoring (Ch. 12) and governance (Ch. 14).
 
-The **strongest and most direct** coverage lies in **Art. 15** (accuracy, robustness, cybersecurity) and its operational correlates (Art. 12 logging, Art. 72 monitoring, Art. 73 incidents, Art. 17 QMS) - this is where the technical evidence of SbD-ToE is most directly reusable — without this amounting to compliance with the AI Act, which requires all the requirements of Section 2 and the conformity assessment.
+The **strongest and most direct** coverage is in **Art. 15** (accuracy, robustness, cybersecurity) and its operational correlates (Art. 12 logging, Art. 72 post-market monitoring, Art. 73 incidents, Art. 17 QMS) - this is where the technical evidence of SbD-ToE is most directly reusable — without this amounting to compliance with the AI Act, which requires all the requirements of Section 2 and the conformity assessment.
 
 The gaps observed **are not flaws in the model**, but **deliberate abstentions**: dimensions specific to the AI domain (data governance/bias, statistical accuracy, human oversight, transparency) and legal dimensions (risk classification, FRIA, conformity assessment, CE marking, prohibited practices). These require data science, ethics, product, legal and compliance teams - SbD-ToE provides them with the technical evidence, not the conformity judgement.
 
 The result is consistent with the philosophy of the manual:
 
 - **Today**, SbD-ToE makes it possible to build and operate the software of an AI system with security by design.
-- **Tomorrow**, when the organisation has to comply with the AI Act, it connects the details - it extends the threat model to the adversarial vector (ATLAS), formalises the QMS (Art. 17), parameterises incidents (Art. 73) and post-market monitoring (Art. 72), and coordinates the data, oversight and transparency dimensions with the domain teams.
+- **Tomorrow**, when the organisation has to comply with the AI Act, connect the details - extend the threat model to the adversarial vector (ATLAS), formalise the QMS (Art. 17), parameterise incidents (Art. 73) and post-market monitoring (Art. 72), and coordinate with the domain teams on the data, oversight and transparency dimensions.
 
 ### Scope, roles and penalties {#âmbito-papéis-e-sanções}
 
-The AI Act distinguishes **providers**, **deployers**, importers and distributors, with distinct obligations. The bulk of the technical obligations (and of the SbD-ToE coverage) falls on the **provider of a high-risk system**; the *deployer* has its own obligations (use in accordance with the instructions, human oversight, in certain cases a FRIA - Art. 26, 27).
+The AI Act distinguishes **providers (providers)**, **deployers (deployers)**, importers and distributors, with distinct obligations. The bulk of the technical obligations (and of the SbD-ToE coverage) falls on the **provider of high-risk AI systems**; the *deployer* has its own obligations (use in accordance with the instructions, human oversight, FRIA in certain cases - Art. 26, 27).
 
-In terms of penalties (Art. 99), the regulation sets maximum tiers:
+In terms of penalties (Art. 99), the regulation sets maximum tiers (for SMEs, including start-ups, each fine may not exceed the percentage or the amount, «whichever thereof is lower» — Article 99(6); the same applies to small mid-cap enterprises as regards the fines in paragraphs 4 and 5 — Article 99(6a), inserted by Regulation (EU) 2026/1744):
 
 - **Prohibited practices (Art. 5)**: up to **€35 M** or **7%** of total worldwide annual turnover (whichever is higher).
-- **Non-compliance with other obligations** (including those of the high-risk provider, Art. 16): up to **€15 M** or **3%**.
-- **Incorrect, incomplete or misleading information** to notified bodies or authorities: up to **€7.5 M** or **1%**.
-- For **GPAI** providers (Art. 101): up to **€15 M** or **3%**.
+- **Non-compliance with the obligations listed in Article 99(4)** — providers (Article 16), authorised representatives (Article 22), importers (Article 23), distributors (Article 24), providers and operators pursuant to Article 25(2) and (4) (point (da), inserted by Regulation (EU) 2026/1744), deployers (Article 26), notified bodies (Article 31, Article 33(1), (3) and (4), and Article 34) and transparency (Article 50): up to **EUR 15 M** or **3%**.
+- **Incorrect, incomplete or misleading information** supplied to notified bodies or national competent authorities in reply to a request: up to **EUR 7.5 M** or **1%**.
+- For providers of **general-purpose AI models** (Art. 101): fines imposed by the Commission, up to **EUR 15 M** or **3%** (whichever is higher), applicable from 2 August 2026 (Article 113, third paragraph, point (b), excepts Article 101 from the 2 August 2025 date).
 
 ### References {#referências}
 
-- **AI Act**: Regulation (EU) 2024/1689 (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)).
+- **AI Act**: Regulation (EU) 2024/1689 (CELEX: [32024R1689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)), amended by Regulation (EU) 2026/1744 («Digital Omnibus on AI», CELEX: [32026R1744](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R1744)); consolidated text of 27.7.2026 (CELEX: [02024R1689-20260727](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727)).
 - **Art. 9** - Risk management system (lifecycle).
 - **Art. 10** - Data and data governance (representativeness, bias).
 - **Art. 11 and Annex IV** - Technical documentation.
 - **Art. 12 / Art. 19** - Recording of events and keeping of logs.
 - **Art. 13 / Art. 14** - Transparency to deployers and human oversight.
-- **Art. 15** - Accuracy, robustness and cybersecurity (resilience to adversarial attacks).
+- **Art. 15** - Accuracy, robustness and cybersecurity (resilience to attacks, incl. adversarial examples).
 - **Art. 17** - Quality management system.
-- **Art. 72 / Art. 73** - Post-market monitoring and serious incidents.
+- **Art. 72 / Art. 73** - Post-market monitoring and reporting of serious incidents.
 - **Art. 53 / Art. 55** - GPAI obligations and GPAI with systemic risk.
 - **Art. 99 / Art. 101** - Penalties regime.
 - **ISO/IEC 42001** - Artificial intelligence management system.

@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/02-playbook.md
-  source_sha256: f32c6561d4e61f573c4775c96a98d88ae0d16a22bf7e40fdc74f4832b242a92f
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: d8f5e2a0901ffea549d1cb2bb95379555604cd5753ce9d8e3db96ca3a568dd0f
+  source_sha256: 2d739d5b031657083f782285e7ad72148e6aa15f2c38ac13b3006dd750bb7904
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: e3d1bd99ad756d0907a3e3a82f4e1fe378373bfff5d38bb1a3ae83c0f28eadbf
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_human_oversight, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 6d0ed3784841aaa45d5b727fba1ad3652846456d2fafe68171907b0e7626f1f3
-  translated_at: 2026-09-27T07:29:51Z
-  stamped_at: 2026-09-27T07:29:51Z
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 90b2c2790f46bebc3a998e3c9463cf7fc84a6271d33f8bb8dab1b33633726b36
+  translated_at: 2026-09-27T08:34:17Z
+  stamped_at: 2026-09-27T08:34:17Z
   reviewed_by: null
 ---
 
@@ -24,7 +24,7 @@ translation:
 
 ## Overview {#visão-geral}
 
-This playbook maps **AI Act requirements (Regulation (EU) 2024/1689) to practical SbD-ToE actions**, focusing on the technical obligations of **high-risk** AI systems and of **general-purpose AI (GPAI)** models.
+This playbook maps **AI Act requirements (Regulation (EU) 2024/1689) to practical SbD-ToE actions**, focusing on the technical obligations for **high-risk** AI systems and **general-purpose AI (GPAI)** models.
 
 **Principle:** SbD-ToE covers the **technical core** of the AI Act - accuracy, robustness, cybersecurity (Art. 15), logging (Art. 12), risk management (Art. 9), QMS (Art. 17), post-market monitoring (Art. 72) and incidents (Art. 73). The **AI-domain** dimensions (data/bias, human oversight, transparency) and the **legal** ones (risk classification, FRIA, conformity assessment, CE marking) require coordination with data science, product, legal and compliance teams.
 
@@ -42,13 +42,13 @@ This playbook maps **AI Act requirements (Regulation (EU) 2024/1689) to practica
 
 Before any technical action, the legal framing must be established - **compliance/legal work, not AppSec work**, but it conditions the whole playbook:
 
-1. **What is the role?** *Provider*, *deployer*, importer or distributor. The bulk of the technical obligations falls on the **provider of a high-risk system**.
+1. **What is the role?** Provider, deployer, importer or distributor (AI Act, Article 3, points (3), (4), (6) and (7)). The bulk of the technical obligations falls on the **provider of high-risk AI systems** (Article 16).
 2. **What is the risk category?**
    - **Unacceptable** (Art. 5) → prohibited; no technical playbook can legitimise it.
-   - **High risk** (Art. 6, Annexes I/III) → most of this playbook applies.
-   - **Limited risk** (Art. 50) → transparency obligations only.
-   - **Minimal risk** → no specific obligations.
-3. **Is it a GPAI model?** If so, Art. 53 (all) and Art. 55 (systemic risk) apply - see Phase 7.
+   - **High-risk** (Art. 6, Annexes I/III) → most of this playbook applies.
+   - **Certain AI systems** (Art. 50 — direct interaction with people, synthetic content, emotion recognition or biometric categorisation, deep fakes) → transparency obligations, which add to those of Chapter III when the system is also high-risk (Article 50(6)).
+   - **Other AI systems** → none of the Chapter III requirements; Art. 4 (AI literacy), addressed to providers and deployers of AI systems, nevertheless applies.
+3. **Is it a GPAI model?** If so, Art. 53 (with the paragraph 2 exception for models released under a free and open-source licence without systemic risk) and Art. 55 (systemic risk) apply - see Phase 7.
 
 > ⚠️ **Outside the SbD-ToE scope:** risk classification and role qualification are legal determinations. SbD-ToE takes the outcome of this analysis as an input.
 
@@ -60,17 +60,17 @@ Before any technical action, the legal framing must be established - **complianc
 
 | AI Act Article | Requirement | SbD-ToE Chapter | Main Action |
 |---|---|---|---|
-| **4** | AI literacy | [Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro) + [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) | Training track per *role*; mandatory with A1+ agents |
+| **4** | AI literacy (measures to support its development — wording of Regulation (EU) 2026/1744) | [Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro) + [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) | Training track per *role*; mandatory with A1+ agents (the Manual's choice) |
 | **9** | Risk management | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 02 §A0–A4](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia), [Ch. 03 agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) | Classify L1–L3 + level A0–A4; threat model with ATLAS |
-| **10** | Data and governance | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) (`DEP-011..014`) + [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + approved *providers* |
+| **10** | Data and data governance | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) (`DEP-011..014`) + [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + approved *providers* |
 | **11 / Annex IV** | Technical documentation | [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) (mandate) | Annex IV index + *model card* + mandate + AI BOM |
 | **12 / 19** | Logging and retention | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + `OPS-011..014` + Ch. 12 US-13 | Inference logs + audit per *tool invocation* |
-| **13** | Transparency to *deployers* | Ch. 04 + [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) (mandate) | *Mandate* as the source of capabilities/limitations/oversight |
+| **13** | Transparency and provision of information to deployers | Ch. 04 + [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) (mandate) | *Mandate* as the source of capabilities/limitations/oversight |
 | **14** ⚡ | Human oversight | [Ch. 02 §A0–A4](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia) + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) + Policy 38 | Autonomy level model + *kill-switch* + *intent declaration* + OOB approval |
-| **15** | Robustness and cybersecurity | [Ch. 03 playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic), `ARC-014/015`, [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) (*eval suites*), [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak*) | Continuous *eval suites* + threat library + *off-policy detection* |
+| **15** | Accuracy, robustness and cybersecurity | [Ch. 03 playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic), `ARC-014/015`, [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) (*eval suites*), [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak*) | Continuous *eval suites* + threat library + *off-policy detection* |
 | **17** | QMS | [Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), Ch. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Map gates + formal cycles to Art. 17 |
-| **25** | Supply chain | `DEP-013/014` + Policy 39 + Ch. 14 US-21 | *Pinning* + approved *providers* + clauses |
-| **26** | *Deployer* obligations | Policy 38 (mandate) + Ch. 00 (composite function) + Ch. 12 US-13 | *Deployer* mandate + qualified oversight + logs under control |
+| **25** | Responsibilities along the AI value chain | `DEP-013/014` + Policy 39 + Ch. 14 US-21 | *Pinning* + approved *providers* + clauses |
+| **26** | Obligations of deployers | Policy 38 (mandate) + Ch. 00 (composite function) + Ch. 12 US-13 | *Deployer* mandate + qualified oversight + logs under control |
 | **53 / 55** | GPAI | [Ch. 03 playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) + Ch. 05 (`DEP-011..014`) + [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Ch. 14 US-21 | AI red teaming via *eval suites* + protection of weights + Art. 53/55 clauses |
 | **72** | Post-market monitoring | Ch. 12 + `OPS-011..014` + Ch. 12 US-13 | Agentic telemetry + *drift detection* + improvement cycle |
 | **73** | Serious incidents | Ch. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Policy 16 §11.4 + Policy 30 §9.3 + Policy 39 §7 | *Runbook* + agentic incident classes + *upstream* IR |
@@ -106,13 +106,13 @@ Before any technical action, the legal framing must be established - **complianc
    - Reference: [Ch. 01 - Application Classification](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classify criticality (L1–L3) and align with the AI Act category**
-   - High-risk system (Annex III) → typically L3
+   - High-risk AI system (Annex III) → typically L3
    - Document that proportionality follows the AI Act category
 
 3. **Threat model extended to the adversarial vector**
    - Base: STRIDE / MITRE ATT&CK ([Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro))
    - Extension: **MITRE ATLAS** and **OWASP ML/LLM Top 10**
-   - Cover (Article 15(5)): *data poisoning*, *model poisoning*, *adversarial examples* / *model evasion*, confidentiality attacks, *model flaws*
+   - Cover (Article 15(5)): data poisoning, model poisoning, adversarial examples or model evasion (*adversarial examples* / *model evasion*), confidentiality attacks, model flaws
    - **Evidence:** Documented threat model, residual risk and measures (Art. 9)
 
 ---
@@ -210,7 +210,7 @@ Before any technical action, the legal framing must be established - **complianc
 The list below makes it possible to validate the **technical alignment** of the SbD-ToE programme with the requirements of the AI Act — it does not issue the legal compliance judgement. Periodic review is recommended:
 
 - [ ] **Framing:** Role and risk category determined (legal)
-- [ ] **Literacy (Art. 4):** Training track activated in accordance with [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) (mandatory with A1+ agents)
+- [ ] **Literacy (Art. 4):** Training track activated in accordance with [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) (mandatory with A1+ agents — the Manual's choice)
 - [ ] **Governance/QMS (Art. 17):** AI policy approved; gates mapped; Policy 38 (mandates) + Policy 39 (AI BOM lifecycle) operational
 - [ ] **Classification:** AI systems inventoried and classified (L1–L3); levels A0–A4 declared in the *mandates*
 - [ ] **Risk management (Art. 9):** Threat model with the [agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) carried out; MITRE ATLAS + OWASP LLM Top 10 threat library already included
@@ -219,7 +219,7 @@ The list below makes it possible to validate the **technical alignment** of the 
 - [ ] **Documentation (Art. 11/Annex IV):** Annex IV index + *model card* + *mandate* + AI BOM
 - [ ] **Robustness (Art. 15):** Continuous *eval suites* operational (Ch. 10 §C5); *off-policy* / *jailbreak detection* ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014))
 - [ ] **Supply chain (Art. 25):** *Pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)); list of approved *providers* ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); contractual clauses (Ch. 14 US-21)
-- [ ] **Deployer (Art. 26):** *Deployer* *mandate* documented when the organisation operates (does not provide) the system
+- [ ] **Deployer (Art. 26):** Deployer *mandate* documented when the organisation uses the AI system under its own authority (Article 3, point (4)) without being its provider
 - [ ] **Logging (Art. 12/19):** Inference logs + audit per *tool invocation* ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) with retention and immutability
 - [ ] **Monitoring (Art. 72):** Agentic telemetry + *dashboards* for *drift*, *budget*, *off-policy*
 - [ ] **Incidents (Art. 73):** Parameterised *runbook* + agentic classes (Policy 16 §11.4) + *upstream* IR (Policy 39 §7)
@@ -260,21 +260,21 @@ These questions are a **technical** self-diagnosis — answering them does not i
 3. **Robustness (Art. 15):** Do I carry out adversarial testing / AI red teaming?
 4. **Chain:** Do I have provenance and integrity of datasets and models?
 5. **Logging:** Do I record inference events with adequate retention?
-6. **Monitoring:** Do I have a post-market plan with drift detection?
+6. **Monitoring:** Do I have a post-market monitoring plan with drift detection?
 7. **Incidents:** Can I report a serious incident within the Art. 73 deadlines?
 8. **QMS:** Do my gates map to the elements of Art. 17?
 9. **Documentation:** Do I have an Annex IV index + model card?
 10. **Evidence:** Can I demonstrate all of this in an audit?
 
-≥8/10 → Good technical maturity with respect to the AI Act (technical maturity, **not legal compliance**). `<`6 → Prioritise Art. 15 (robustness), logging (Art. 12) and risk management (Art. 9).
+≥8/10 → Good technical maturity with respect to the AI Act (technical maturity, **not legal compliance**). `<`6 → Prioritise Art. 15 (robustness and cybersecurity), logging (Art. 12) and risk management (Art. 9).
 
-> ⚠️ **Note:** this metric covers the **technical core**. Full compliance additionally requires data governance (Art. 10), human oversight (Art. 14), transparency (Art. 13/50) and conformity assessment / CE marking (Art. 43, 47–49) - dimensions outside the SbD-ToE scope.
+> ⚠️ **Note:** this metric covers the **technical core**. Full compliance additionally requires data governance (Art. 10), human oversight (Art. 14), transparency (Art. 13/50) and conformity assessment, EU declaration of conformity, CE marking and registration (Art. 43, 47–49) - dimensions outside the SbD-ToE scope.
 
 ---
 
 ## Critical Note: Exception Management under the AI Act {#nota-crítica-gestão-de-exceções-no-ai-act}
 
-The AI Act requires compliance with the high-risk requirements. Exceptions (deviations) must be formal and audited, with a documentary trail and appropriate approval. An **internal** exception does not change the legal obligation under the AI Act — it only documents an accepted technical risk for the evidence dossier; the legal obligation remains.
+The AI Act requires high-risk AI systems to comply with the requirements of Chapter III, Section 2 (Article 8(1)). Exceptions (deviations) must be formal and audited, with a documentary trail and appropriate approval. An **internal** exception does not change the legal obligation under the AI Act — it merely documents an accepted technical risk for the evidence dossier; the legal obligation remains.
 
 What characterises an exception in SbD-ToE/AI Act:
 - Formal deviation from a requirement (e.g. adversarial vector mitigated by a compensating measure while *retraining* is prepared)
@@ -283,7 +283,7 @@ What characterises an exception in SbD-ToE/AI Act:
 Who approves (by criticality level):
 - L1 (low risk): Tech Lead / AppSec Engineer
 - L2 (medium risk): CISO / AI lead
-- L3 (AI Act high risk): AI governance + management (accountable)
+- L3 (high-risk under the AI Act): AI governance + management (accountable)
 
 Regulatory implication:
 - Exceptions without formal approval compromise the evidence of risk management (Art. 9) and of the QMS (Art. 17)

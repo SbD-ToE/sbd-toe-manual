@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-27T08:02:50Z",
+  "generated_at": "2026-09-27T08:38:53Z",
   "source_locale": "pt",
   "target_locale": "en",
-  "terms_sha256": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+  "terms_sha256": "4672165b78060a1e694aca5834e755c69ea616594c754fff99082f5da3288aad",
   "files": {
     "000-teory-of-everything/intro.mdx": {
       "state": "synced",
@@ -26,32 +26,32 @@
     },
     "002-cross-check-normativo/ai-act/01-intro.md": {
       "state": "synced",
-      "source_sha256": "a425d5454bf8014fee6159e450c05393a0b40e730bfd6205825ed018be951030",
-      "translated_source_sha256": "a425d5454bf8014fee6159e450c05393a0b40e730bfd6205825ed018be951030",
-      "target_sha256": "796402018e8f472384dfa62825fdb69502cff46a763fa4ddd6bfd9c9a548bb5a",
+      "source_sha256": "97efc20869dc0ae1be5364a096766591bfe48461a8e81f972571d1840976e879",
+      "translated_source_sha256": "97efc20869dc0ae1be5364a096766591bfe48461a8e81f972571d1840976e879",
+      "target_sha256": "7b8bd1696fe8d43b78abf15a7ed81fe47a5db6eb96f6223656c0d6395a860b99",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "efb47b08f14879bd8b6756fe84574e79fc96c690ddc045b01835fcb4b7d3751d",
-      "translated_at": "2026-09-27T07:29:50Z",
+      "glossary_sha256_at_translation": "869d059c141f81bf336738f70f3cb58776a4ba39b01f7d996149c76b3bccc732",
+      "translated_at": "2026-09-27T08:37:07Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/ai-act/02-playbook.md": {
       "state": "synced",
-      "source_sha256": "f32c6561d4e61f573c4775c96a98d88ae0d16a22bf7e40fdc74f4832b242a92f",
-      "translated_source_sha256": "f32c6561d4e61f573c4775c96a98d88ae0d16a22bf7e40fdc74f4832b242a92f",
-      "target_sha256": "d8f5e2a0901ffea549d1cb2bb95379555604cd5753ce9d8e3db96ca3a568dd0f",
+      "source_sha256": "2d739d5b031657083f782285e7ad72148e6aa15f2c38ac13b3006dd750bb7904",
+      "translated_source_sha256": "2d739d5b031657083f782285e7ad72148e6aa15f2c38ac13b3006dd750bb7904",
+      "target_sha256": "e3d1bd99ad756d0907a3e3a82f4e1fe378373bfff5d38bb1a3ae83c0f28eadbf",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "6d0ed3784841aaa45d5b727fba1ad3652846456d2fafe68171907b0e7626f1f3",
-      "translated_at": "2026-09-27T07:29:51Z",
+      "glossary_sha256_at_translation": "90b2c2790f46bebc3a998e3c9463cf7fc84a6271d33f8bb8dab1b33633726b36",
+      "translated_at": "2026-09-27T08:34:17Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/ai-act/03-convergencia-cra.md": {
       "state": "synced",
-      "source_sha256": "4b103fa96a277c521a9f7d5ac9afeb6522221c992268669ffbec58451778d580",
-      "translated_source_sha256": "4b103fa96a277c521a9f7d5ac9afeb6522221c992268669ffbec58451778d580",
-      "target_sha256": "0f89eb076b523f3c150450cfea4431ffb7467d74d09808273def9940dfd08943",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "a153fcd1e6e13158e378c7522be9cdb0f87d2d42ab387c4070ad881367e02070",
-      "translated_at": "2026-09-27T00:04:39Z",
+      "source_sha256": "901c09aad2d320e2153f4afd6aad05a4aebf1695326c1f523deb298ad0919143",
+      "translated_source_sha256": "901c09aad2d320e2153f4afd6aad05a4aebf1695326c1f523deb298ad0919143",
+      "target_sha256": "fdb3a4153f978c74547d754e967acad8f6df71de971edba8869a6ea1d080c185",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "026890615258206851eb9a4efd1c2cb34995f570449c022032fde0d7d4acd863",
+      "translated_at": "2026-09-27T08:34:18Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/cra/01-intro.md": {
@@ -147,22 +147,22 @@
     },
     "002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md": {
       "state": "synced",
-      "source_sha256": "7b19f8923b81a08d497150d27877757ca72028c99ff063bfcc76a1145050351f",
-      "translated_source_sha256": "7b19f8923b81a08d497150d27877757ca72028c99ff063bfcc76a1145050351f",
-      "target_sha256": "5c715847f7ae7f851f1bad1a47115d7e37f48a7fee691da08848cda60eb5290c",
+      "source_sha256": "bd1a97083c490662bef94d05f803a98f042e50cedb81804655fb23a9f4dc05a4",
+      "translated_source_sha256": "bd1a97083c490662bef94d05f803a98f042e50cedb81804655fb23a9f4dc05a4",
+      "target_sha256": "57a98f997e474ee29d4b8300b96fe99edb2c01755527b6c4b1147bb168ff5a4f",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "1eda95aea0f848e9bac5052aaa958ea477e39afd495fcd13f4038e7fc75987ae",
-      "translated_at": "2026-09-27T07:29:57Z",
+      "glossary_sha256_at_translation": "1d216cc176a0216190a8ea83bf1d05c364c9378454c2786790bb80d865f65227",
+      "translated_at": "2026-09-27T08:34:19Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/exemplo-playbook/05-exemplo-agentic-sdlc.md": {
       "state": "synced",
-      "source_sha256": "c866236f1754086453ad1ec16f8c8a979d085caac620f8fde1a39f8a3dccbd96",
-      "translated_source_sha256": "c866236f1754086453ad1ec16f8c8a979d085caac620f8fde1a39f8a3dccbd96",
-      "target_sha256": "c0a8a4438be74e14b1b5ec28215e0037cc1d3ca2f54324ba3c3c26f9695e7e58",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "60abe2c7a2d37d2eb315d40cee198ba9303ef9b73bd836bc447b88afa73ab794",
-      "translated_at": "2026-09-26T23:27:19Z",
+      "source_sha256": "d02c20c772278cfeba31a565d55cac71a335bc6bd899884844edb41ff83dc55c",
+      "translated_source_sha256": "d02c20c772278cfeba31a565d55cac71a335bc6bd899884844edb41ff83dc55c",
+      "target_sha256": "d0f5f447759efe96d747b096f6032c1c207e42ef30a02d75d60213292eb700a6",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "dd29d428c2371d2b9f6332eb992cfa579f0b0045064ebba773867e00b9f3ab2e",
+      "translated_at": "2026-09-27T08:34:20Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/exemplo-playbook/README.md": {
@@ -297,12 +297,12 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/arquitetos-software.md": {
       "state": "synced",
-      "source_sha256": "f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b",
-      "translated_source_sha256": "f78a72ecdda50bf28e9cf5b3ad1ac8c6eadb7f4208d25ab4f14fa4db2951eb5b",
-      "target_sha256": "e21b95260d4ff548abfb020eec7c61688b94b51abd20b0e88e103472e4f8c6f5",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "1b15b415482eadd538bd24f802b88f0758c117c59c12d1a875aabe22b0109d17",
-      "translated_at": "2026-09-26T17:23:37Z",
+      "source_sha256": "d1491d53700aa25f3f7dd650fa88b58d1bc0c1743f07f0651775658ce9cbba62",
+      "translated_source_sha256": "d1491d53700aa25f3f7dd650fa88b58d1bc0c1743f07f0651775658ce9cbba62",
+      "target_sha256": "73b6a262fc1403ad398ee060192f48ce44258acfa9830739cb1b3d3d3883d8ba",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "f4239912434bff902f06a6cf636144893b38d254bc2237fcfd833320e1b3ab7a",
+      "translated_at": "2026-09-27T08:34:21Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/auditores.md": {
@@ -457,12 +457,12 @@
     },
     "010-sbd-manual/00-fundamentos/roles-responsabilidades/tech-lead.md": {
       "state": "synced",
-      "source_sha256": "617fb8d1922515329c179646eeecda70ed019753d053e37009f3f70122c386da",
-      "translated_source_sha256": "617fb8d1922515329c179646eeecda70ed019753d053e37009f3f70122c386da",
-      "target_sha256": "9c3d264afba8c8a4172e651cdcd51c673cc922efb30615ae32b33aafa7a2cabc",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "ce566d7d6c3c959b9ecb191bb69cc5b7f34e72820d59c8636c32cb205685e1db",
-      "translated_at": "2026-09-26T17:23:59Z",
+      "source_sha256": "ee22f5d7b110b6846054a72f550a8274467dda16ddc7c8b223dbbe7285c0ef23",
+      "translated_source_sha256": "ee22f5d7b110b6846054a72f550a8274467dda16ddc7c8b223dbbe7285c0ef23",
+      "target_sha256": "5cbf40703e2f3c84bc4d1c3b110c0d9fa47e58eba516615391f5fdfc7512da85",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "866e57a6df412c5145bbc374b8fc17b082dd2ebf901674c5499b1d01b341b396",
+      "translated_at": "2026-09-27T08:34:22Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/01-classificacao-aplicacoes/achievable-maturity.md": {
@@ -3507,12 +3507,12 @@
     },
     "010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md": {
       "state": "synced",
-      "source_sha256": "df1018b341cb8b32567430df4c78dfa469fe19125bf30064ff1e771bee9caeaf",
-      "translated_source_sha256": "df1018b341cb8b32567430df4c78dfa469fe19125bf30064ff1e771bee9caeaf",
-      "target_sha256": "9d60e1d1e7b166b11c241fda68561aa1e475146bf2c5ef4b08bdef94c285d3be",
+      "source_sha256": "d35c8d00beb496d013f834d739ebf636e40211b9d790d6b70335f363921c93e2",
+      "translated_source_sha256": "d35c8d00beb496d013f834d739ebf636e40211b9d790d6b70335f363921c93e2",
+      "target_sha256": "7ceb8f9ad545355321afc3d0dbf0d11278644e1c56f2e7df04e72577f9475bdb",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "b01001ad8668dd55ed6980a2bf52c61db449dfa29d725b9323bb7d978033cf65",
-      "translated_at": "2026-09-27T07:54:05Z",
+      "glossary_sha256_at_translation": "81d16b4dfe1a305a205c5a1438619800f1c71565825b41c8680a5c6ce0591216",
+      "translated_at": "2026-09-27T08:34:23Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/14-governanca-contratacao/intro.md": {
@@ -3617,12 +3617,12 @@
     },
     "020-assets/mcp/03-instalacao.md": {
       "state": "synced",
-      "source_sha256": "cb2d003e655e8e2a12756413ae82b47489fae8f28f78e79d15323a3454ef2f6e",
-      "translated_source_sha256": "cb2d003e655e8e2a12756413ae82b47489fae8f28f78e79d15323a3454ef2f6e",
-      "target_sha256": "072a060bedb43445721b80f15a4a6b8cdd9fa3413f320f1d04d0fff784bfa598",
-      "terms_sha256_at_translation": "211df96a27d713b5934d7534d61f1972d877902236e63b858563d206c67ccaa8",
-      "glossary_sha256_at_translation": "e67921966e361ae9bb58e0803609e2769d833884d61206fce3c6ad361435c36d",
-      "translated_at": "2026-09-26T14:55:14Z",
+      "source_sha256": "b110ec9914a82bf656d17f4a36c980c33218ded1b3b578e167d74739cf6b8aaf",
+      "translated_source_sha256": "b110ec9914a82bf656d17f4a36c980c33218ded1b3b578e167d74739cf6b8aaf",
+      "target_sha256": "b02142fafb13977b4dc8634b744fade2dd6fc65f88c8728ceaffb1f2bc1da65a",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "d97c66b968471198859e01f5c730c1ece105916803784396b352ad7392a492a4",
+      "translated_at": "2026-09-27T08:34:23Z",
       "pending_blocks": 0
     },
     "020-assets/mcp/04-skills-agentes.md": {
@@ -3707,12 +3707,12 @@
     },
     "020-assets/mcp/07-casos-uso/06-cross-check-conformidade.md": {
       "state": "synced",
-      "source_sha256": "7c2253cf1dabec52bd4a9104c3b15dc129f7f92b760ead2749354ac8bed5a49d",
-      "translated_source_sha256": "7c2253cf1dabec52bd4a9104c3b15dc129f7f92b760ead2749354ac8bed5a49d",
-      "target_sha256": "4396b111e5b62ffa3ab2d5e5afd1a7f81bcb48c6aae42517915ab4f0d533e2a0",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "bddc0c41e9dac1412688775062a8a141f3172882908bc853d4b82fcce14ab445",
-      "translated_at": "2026-09-26T14:55:20Z",
+      "source_sha256": "ff453063fea93cbefbdbf137419b723f90b4e67a3b355fe0a46544e1c1558053",
+      "translated_source_sha256": "ff453063fea93cbefbdbf137419b723f90b4e67a3b355fe0a46544e1c1558053",
+      "target_sha256": "f86bd543ceb89da10039aa50f62ea0bbd558d8601d9e5faeb1d606953ea84aa8",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "4a0acf899b203bd594e77aef311b79be1dd101b693ad47e580abe900849dd756",
+      "translated_at": "2026-09-27T08:34:24Z",
       "pending_blocks": 0
     },
     "020-assets/mcp/07-casos-uso/07-agentic-sdlc.md": {
@@ -3947,12 +3947,12 @@
     },
     "020-assets/policies/18_policy-gestao-segredos.md": {
       "state": "synced",
-      "source_sha256": "bfa19ed86ff3e931dbd1126481fecbfb396f8bb0e419fa77ceb5019af47aba5f",
-      "translated_source_sha256": "bfa19ed86ff3e931dbd1126481fecbfb396f8bb0e419fa77ceb5019af47aba5f",
-      "target_sha256": "6aabc21edc2cecf9b9400419ba8deb9f418a6afb97146128739a7e1282b7581f",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "b847cd1776faf8423965219ba186f23372b0d8b6bff2d471e206166f4cc28c0a",
-      "translated_at": "2026-09-27T07:06:17Z",
+      "source_sha256": "100844ccb37cda055c1b64c8873c9b25d77cb94e40bdb6101738037a652b6c36",
+      "translated_source_sha256": "100844ccb37cda055c1b64c8873c9b25d77cb94e40bdb6101738037a652b6c36",
+      "target_sha256": "6db90ea0825f8abea16afe8e818b4844490ce5fb4879ad2541b3a7848cf4994d",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "9c57e5e3cb95b4877fd10c41f44e8fe27f499f0c9e1b096402883bbd5fbef5fd",
+      "translated_at": "2026-09-27T08:34:25Z",
       "pending_blocks": 0
     },
     "020-assets/policies/19_policy-estrategia-testes.md": {
@@ -4097,12 +4097,12 @@
     },
     "020-assets/policies/33_policy-contratacao-segura.md": {
       "state": "synced",
-      "source_sha256": "e39b860537c1637be1e477a029fc71406298837d648ef198395df0d00bbd828c",
-      "translated_source_sha256": "e39b860537c1637be1e477a029fc71406298837d648ef198395df0d00bbd828c",
-      "target_sha256": "7d398bb02e4b42de4d8e553014242758f440b7e5cc751e13f3fe651e2f950ebd",
+      "source_sha256": "e3654308a2163ffc8e1a704c26a0cd4ad03f78ad423abe139b66b3ebbad10546",
+      "translated_source_sha256": "e3654308a2163ffc8e1a704c26a0cd4ad03f78ad423abe139b66b3ebbad10546",
+      "target_sha256": "894af758de496685f9f71834ff2bc5c1f3321b5157b2958ad43d65fe8c50e751",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "22ff3b5b5d71ad18aa105d9d275a156caffe5cf8e5bae336bb9a65530f5117b6",
-      "translated_at": "2026-09-27T07:54:13Z",
+      "glossary_sha256_at_translation": "9d4c9230e1266fdaa3a04d2b9658ef7a4142d394c4c478658cfbfd3e30bd1884",
+      "translated_at": "2026-09-27T08:34:26Z",
       "pending_blocks": 0
     },
     "020-assets/policies/34_policy-rastreabilidade-organizacional.md": {
@@ -4137,32 +4137,32 @@
     },
     "020-assets/policies/37_policy-formacao-seguranca.md": {
       "state": "synced",
-      "source_sha256": "318978182e69c350d0d63b5660e008ee67cfe82af37cd0ef52b510a2e42f25ed",
-      "translated_source_sha256": "318978182e69c350d0d63b5660e008ee67cfe82af37cd0ef52b510a2e42f25ed",
-      "target_sha256": "8f6dfbce1e5c2cd4bc9e6cbab4c91914f10ad50d603c0ad063ffe196af72ad79",
+      "source_sha256": "09a172b6a99b298c33191a63f1e6f0c11dfbf363c309dc31b60bc03c36d11207",
+      "translated_source_sha256": "09a172b6a99b298c33191a63f1e6f0c11dfbf363c309dc31b60bc03c36d11207",
+      "target_sha256": "44bcda4508f2573549e4bd7b84823adb365de6373f1d6940dd948093870b5e65",
       "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "6e53f6d4a50c57cb34d3c03f1edf2f42f065e601c553b88784126070c79929a8",
-      "translated_at": "2026-09-27T07:54:15Z",
+      "glossary_sha256_at_translation": "87768844743d61be242731bbc49002197ed38d006846bd7c658dd3f46b56902f",
+      "translated_at": "2026-09-27T08:34:27Z",
       "pending_blocks": 0
     },
     "020-assets/policies/38_policy-mandates-agentes.md": {
       "state": "synced",
-      "source_sha256": "63c00105e3d49dc911d44e0002bf343b430a7c18936ca8560875808305522199",
-      "translated_source_sha256": "63c00105e3d49dc911d44e0002bf343b430a7c18936ca8560875808305522199",
-      "target_sha256": "a5fdb95622dd1be247ea4d946980fa38e320d3d867afc4196a1c1aa3effe6938",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "26fb030d643de17f1142812c5a996f4f0a1c3fbe517e7769ad3a8014c2ae4dce",
-      "translated_at": "2026-09-26T14:11:06Z",
+      "source_sha256": "9974f1ca0f2e5e47a6de918e4b9cdc5528bc0d3412d84e833634ad4e3ccfde38",
+      "translated_source_sha256": "9974f1ca0f2e5e47a6de918e4b9cdc5528bc0d3412d84e833634ad4e3ccfde38",
+      "target_sha256": "8b439e39f94dd133b127699afc0155a194f023193bbd79324570e4f5cd662606",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "glossary_sha256_at_translation": "d36d9ddddd1d27e837c4e11ee08e63e70748ad0b1b905532ec5681e4546078de",
+      "translated_at": "2026-09-27T08:34:28Z",
       "pending_blocks": 0
     },
     "020-assets/policies/39_policy-ai-bom-supply-chain.md": {
       "state": "synced",
-      "source_sha256": "71243b53f80f5cbe44ed814fe93978dac9684468c418481eb096863517b1d787",
-      "translated_source_sha256": "71243b53f80f5cbe44ed814fe93978dac9684468c418481eb096863517b1d787",
-      "target_sha256": "51f7e692cf1df9d59257adcef1eb4af9bf41e247c46e0dde0fb53f6217e307a0",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
+      "source_sha256": "3df2cc243ef1db979b85123c0da24d931497386cf6f5f5a20c46271cb7c3d1fb",
+      "translated_source_sha256": "3df2cc243ef1db979b85123c0da24d931497386cf6f5f5a20c46271cb7c3d1fb",
+      "target_sha256": "57419ef1ae2d25c46618629b940cc73bf560d6494f08bb8968048ba515c5464e",
+      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
       "glossary_sha256_at_translation": "cad4500ccbe26507a16255679a4895fa9545c3fd3b574d9728dde34adf3fd492",
-      "translated_at": "2026-09-26T14:11:07Z",
+      "translated_at": "2026-09-27T08:34:28Z",
       "pending_blocks": 0
     },
     "tldr.md": {

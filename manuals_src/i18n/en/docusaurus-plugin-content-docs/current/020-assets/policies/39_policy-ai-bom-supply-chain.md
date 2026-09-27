@@ -8,16 +8,16 @@ sidebar_position: 39
 translation:
   source_locale: pt
   source_path: 020-assets/policies/39_policy-ai-bom-supply-chain.md
-  source_sha256: 71243b53f80f5cbe44ed814fe93978dac9684468c418481eb096863517b1d787
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 51f7e692cf1df9d59257adcef1eb4af9bf41e247c46e0dde0fb53f6217e307a0
+  source_sha256: 3df2cc243ef1db979b85123c0da24d931497386cf6f5f5a20c46271cb7c3d1fb
+  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
+  target_sha256: 57419ef1ae2d25c46618629b940cc73bf560d6494f08bb8968048ba515c5464e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, esquema_regime, lifecycle_phase, llm, mcp, plain_rag, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
   glossary_sha256: cad4500ccbe26507a16255679a4895fa9545c3fd3b574d9728dde34adf3fd492
-  translated_at: 2026-09-26T14:11:07Z
-  stamped_at: 2026-09-26T18:37:09Z
+  translated_at: 2026-09-27T08:34:28Z
+  stamped_at: 2026-09-27T08:34:28Z
   reviewed_by: null
 ---
 
@@ -166,4 +166,4 @@ This policy must be **reviewed half-yearly** given the rapid evolution of the ec
 | OWASP MCP Top 10 (2025) | Applicable when MCP servers/tools enter the AI BOM as a dependency — *tool poisoning* has a dedicated catalogue |
 | NIST AI RMF 1.0 — MAP-4.x (third-party AI) | Third-party risk mapping |
 | NIST SP 800-218A | SSDF Profile for GenAI |
-| EU AI Act (Reg. (EU) 2024/1689) — Art. 53/55 (GPAI), Art. 25 (supply chain) | When applicable |
+| EU AI Act (Regulation (EU) 2024/1689) — Art. 53/55 (GPAI), Art. 25 (responsibilities along the AI value chain) | When applicable |

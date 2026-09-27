@@ -46,7 +46,7 @@ A aplicação trata dados pessoais. A declaração é sempre explícita (sim ou 
 
 ## Como se lê a lista {#como-se-le}
 
-Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
+Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
 
 **Regra de activação.** Requisitos efectivos = selecção técnica ∪ elevados ∪ acrescentados. Os ids de origem «base» só entram se a selecção técnica (contexto técnico da aplicação) os activar. Um id elevado ou acrescentado sem activação técnica não cai em silêncio: entra marcado «aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade» (modelo do Reg. de Execução (UE) 2024/2690, art. 2.º).
 
@@ -328,6 +328,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 

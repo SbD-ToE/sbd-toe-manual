@@ -58,10 +58,12 @@ A entidade é essencial ou importante nos termos do art. 3.º da Diretiva (UE) 2
 | CTX-NIS2-P11 | `IAC-007` | PERTINENTE | obrigatório | — | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.4.2: «Os procedimentos devem assegurar que tais alterações são documentadas e, antes de serem aplicadas, são testadas e avaliadas tendo em conta o impacto potencial, com base na avaliação dos riscos realizada nos termos do ponto 2.1.» (NIS2-IR2690-6.4.2) | admitida |
 | CTX-NIS2-P12 | `ACC-010` | PERTINENTE | obrigatório | Inclui os direitos de acesso das contas privilegiadas e de administração do sistema, a intervalos planeados, com os resultados documentados. | Reg. de Execução (UE) 2024/2690, anexo, pontos 11.2.3 e 11.3.3: «As entidades pertinentes analisam os direitos de acesso a intervalos planeados e alteram-nos com base em alterações organizacionais.» (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3) | não admitida |
 | CTX-NIS2-P13 | `AUT-001` | PERTINENTE | obrigatório | Contas privilegiadas e contas de administração do sistema. | Reg. de Execução (UE) 2024/2690, anexo, ponto 11.3.2, al. a): «Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema» (NIS2-IR2690-11.3.2) | admitida |
+| CTX-NIS2-P14 | `GOV-015` | — | obrigatório | Tratamento e divulgação de vulnerabilidades, incluindo as comunicadas por fontes externas. | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. e): «incluindo o tratamento e a divulgação de vulnerabilidades» (NIS2-21-2-e) | não admitida |
+| CTX-NIS2-P15 | `GOV-015` | PERTINENTE | obrigatório | O procedimento de divulgação segue a política nacional de divulgação coordenada de vulnerabilidades. | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.10.2, al. e): «procedimento para a divulgação de vulnerabilidades em conformidade com a política nacional aplicável em matéria de divulgação coordenada de vulnerabilidades» (NIS2-IR2690-6.10.2) | não admitida |
 
 ## Como se lê a lista {#como-se-le}
 
-Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
+Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
 
 **Regra de activação.** Requisitos efectivos = selecção técnica ∪ elevados ∪ acrescentados. Os ids de origem «base» só entram se a selecção técnica (contexto técnico da aplicação) os activar. Um id elevado ou acrescentado sem activação técnica não cai em silêncio: entra marcado «aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade» (modelo do Reg. de Execução (UE) 2024/2690, art. 2.º).
 
@@ -343,6 +345,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
 
 ## Lista de requisitos — PERTINENTE {#lista-pertinente}
 
@@ -622,6 +625,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -629,8 +633,8 @@ Contagem das obrigações da matriz `_matriz/nis2.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 59 |
-| Parcial | 87 |
+| Cobre | 61 |
+| Parcial | 86 |
 | Apoia evidência | 12 |
-| Lacuna | 24 |
+| Lacuna | 23 |
 | Fora de âmbito | 38 |

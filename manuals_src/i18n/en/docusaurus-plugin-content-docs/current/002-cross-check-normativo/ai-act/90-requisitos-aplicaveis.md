@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 9f84f19cbd2f1c14de2e885b86252dee0daa83db282dee71daeb9ed04c924131
+  source_sha256: bb0666b470b1200273f9b1955f4b31446ea6f0afaa4b70f88826be2aabec96c6
   source_commit: null
-  target_sha256: b410d1861e15753378524f553214f912fbeaf7717ead0b8cd2b3f0fd691ee028
+  target_sha256: 92c4175ceef16fbb0ecd1fdb3fc0b1c5bedaa41f03088b2d6ca16a29e58df9af
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -71,7 +71,7 @@ The AI system is high-risk under Article 6 (with the legal qualification attache
 
 ## How to read the list {#como-se-le}
 
-Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
+Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
 
 **Activation rule.** Effective requirements = technical selection ∪ elevated ∪ added. Ids with origin “base” enter only if the technical selection (the application's technical context) activates them. An elevated or added id without technical activation is not dropped silently: it enters flagged “applies by the regime; if the component does not exist, a documented justification of non-applicability is required” (model of Implementing Regulation (EU) 2024/2690, Article 2).
 
@@ -353,6 +353,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
 
 ## Requirement list — ART50 {#lista-art50}
 
@@ -632,6 +633,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 

@@ -9216,8 +9216,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 10.º, n.º 2, al. e)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: DST-007
@@ -9227,9 +9229,15 @@ itens:
     citacao:
       pt: Versões comprometidas são removidas prontamente; utilizadores e dependentes notificados.
       en: Compromised versions are removed promptly; users and dependants notified.
-  falta:
-    pt: Procedimento de divulgação responsável de vulnerabilidades a clientes, contrapartes e público (VDP/CVD).
-    en: Procedure for responsible disclosure of vulnerabilities to clients, counterparts and the public (VDP/CVD).
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

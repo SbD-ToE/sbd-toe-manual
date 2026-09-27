@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: c0bc11227c14e160a2a72295dacb2fa73dcc89cc1afd222d295f80aea116e596
+  source_sha256: 37a96ff4dafad959c773c27f3a52662f1c0bb530476aa80ba24d196b4352d87d
   source_commit: null
-  target_sha256: 790581d202c15bb3a932763d2cbb2c9b656b449f3053d5ffebb3652e1f0f7de8
+  target_sha256: 2802b29fbab4323922d1662a513067e692572006d5621f976c7c3a84fa46842d
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -60,7 +60,7 @@ The application processes personal data. The declaration is always explicit (yes
 
 ## How to read the list {#como-se-le}
 
-Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
+Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
 
 **Activation rule.** Effective requirements = technical selection ∪ elevated ∪ added. Ids with origin “base” enter only if the technical selection (the application's technical context) activates them. An elevated or added id without technical activation is not dropped silently: it enters flagged “applies by the regime; if the component does not exist, a documented justification of non-applicability is required” (model of Implementing Regulation (EU) 2024/2690, Article 2).
 
@@ -342,6 +342,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 

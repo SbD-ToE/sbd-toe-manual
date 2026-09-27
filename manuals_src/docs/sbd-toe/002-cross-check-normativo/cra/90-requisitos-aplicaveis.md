@@ -44,10 +44,22 @@ A aplicação é ou integra um produto com elementos digitais que a organizaçã
 | CTX-CRA-P01 | `DEP-002` | — | obrigatório | Bloqueio por vulnerabilidade explorável conhecida em qualquer nível, além do critério de severidade: nenhuma vulnerabilidade explorável conhecida na colocação no mercado. | Reg. (UE) 2024/2847, anexo I, parte I, ponto 2, al. a): «Ser disponibilizados no mercado sem nenhuma vulnerabilidade passível de ser explorada conhecida» (CRA-AnxI-P1-2a) | não admitida |
 | CTX-CRA-P02 | [Política 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção) | — | obrigatório | As excepções «fix deferred» e «risk accepted» não se aplicam a vulnerabilidades exploráveis conhecidas de um produto CRA no momento da colocação no mercado. | Reg. (UE) 2024/2847, anexo I, parte I, ponto 2, al. a): «Ser disponibilizados no mercado sem nenhuma vulnerabilidade passível de ser explorada conhecida» (CRA-AnxI-P1-2a) | não admitida |
 | CTX-CRA-P03 | `DEP-006` | — | obrigatório | — | Reg. (UE) 2024/2847, art. 13.º, n.º 5: «os fabricantes devem exercer a diligência devida quando integram componentes provenientes de terceiros» (CRA-13-5) | não admitida |
+| CTX-CRA-P04 | `GOV-015` | — | obrigatório | Ponto de contacto único, facilmente identificável e indicado nas informações e instruções ao utilizador (anexo II); endereço de contacto também para vulnerabilidades em componentes de terceiros. | Reg. (UE) 2024/2847, anexo I, parte II, pontos 5 e 6; art. 13.º, n.º 17; anexo II, ponto 2: «Definir e aplicar uma política de divulgação coordenada de vulnerabilidades» (CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-13-17, CRA-AnxII-2) | não admitida |
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-CRA-R01` | Período de apoio determinado, comunicado e cumprido | Período de apoio determinado por produto com os critérios do art. 13.º, n.º 8 (tempo de utilização previsto, expectativas razoáveis dos utilizadores, natureza e finalidade do produto) e com pelo menos cinco anos, salvo utilização prevista inferior; fundamentação registada na documentação técnica; data de fim do apoio indicada nas informações ao utilizador; utilizadores notificados do fim do apoio quando tecnicamente viável; cada actualização de segurança mantida disponível pelo menos 10 anos após a emissão ou pelo resto do período de apoio, se for mais longo; arquivos públicos de versões anteriores com aviso claro dos riscos de uso fora do período de apoio. | Reg. (UE) 2024/2847, art. 13.º, n.os 8, 9, 11 e 19; anexo II, ponto 7; anexo VII, ponto 4: «o período de apoio é de, pelo menos, cinco anos» (CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-13-11, CRA-13-19-p2, CRA-AnxII-7, CRA-AnxVII-4) |
+| `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | Actualizações de segurança automáticas configuradas por defeito quando aplicável, com mecanismo de autoexclusão claro, notificação das actualizações disponíveis e opção de adiamento temporário; actualizações de segurança distribuídas sem demora e de forma gratuita (salvo acordo com um utilizador profissional sobre produto personalizado), separadas das actualizações de funcionalidades quando tecnicamente viável e acompanhadas de orientações sobre as medidas a tomar; distribuição segura e verificável (DST-003); instruções para instalar as actualizações e para desligar as automáticas nas informações ao utilizador. | Reg. (UE) 2024/2847, anexo I, parte I, ponto 2, al. c), e parte II, pontos 2, 7 e 8; anexo II, ponto 8, als. c) e e): «Assegurar que as atualizações de segurança disponíveis para resolver problemas de segurança identificados sejam distribuídas sem demora» (CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e) |
+| `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | Depois de disponibilizada a actualização de segurança, aviso público sobre as vulnerabilidades corrigidas, com descrição, informação que permita identificar o produto afectado, impactos, gravidade e informação clara e acessível para a correcção; adiamento da divulgação só em casos devidamente justificados, registados, até os utilizadores terem tido a possibilidade de aplicar a correcção. | Reg. (UE) 2024/2847, anexo I, parte II, ponto 4: «Uma vez disponibilizada uma atualização de segurança, partilhar e divulgar publicamente informações sobre as vulnerabilidades corrigidas» (CRA-AnxI-P2-4) |
+| `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | Vulnerabilidade identificada num componente integrado no produto (incluindo de código aberto) comunicada à pessoa ou entidade que o fabrica ou mantém; correcção desenvolvida pela organização partilhada com o responsável pelo componente, se for caso disso em formato legível por máquina; vulnerabilidade tratada segundo a parte II do anexo I (DEP-007, DEP-010). | Reg. (UE) 2024/2847, art. 13.º, n.º 6: «os fabricantes devem comunicar a vulnerabilidade à pessoa ou entidade responsável pelo fabrico ou pela manutenção do componente» (CRA-13-6-a, CRA-13-6-b) |
 
 ## Como se lê a lista {#como-se-le}
 
-Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
+Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
 
 **Regra de activação.** Requisitos efectivos = selecção técnica ∪ elevados ∪ acrescentados. Os ids de origem «base» só entram se a selecção técnica (contexto técnico da aplicação) os activar. Um id elevado ou acrescentado sem activação técnica não cai em silêncio: entra marcado «aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade» (modelo do Reg. de Execução (UE) 2024/2690, art. 2.º).
 
@@ -329,6 +341,11 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-CRA-P04 |
+| `CTX-CRA-R01` | Período de apoio determinado, comunicado e cumprido | ▲ | ▲ | ▲ | CTX-CRA-R01 |
+| `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | ▲ | ▲ | ▲ | CTX-CRA-R02 |
+| `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | ▲ | ▲ | ▲ | CTX-CRA-R03 |
+| `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | ▲ | ▲ | ▲ | CTX-CRA-R04 |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -336,8 +353,8 @@ Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas 
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 18 |
-| Parcial | 33 |
+| Cobre | 36 |
+| Parcial | 25 |
 | Apoia evidência | 18 |
-| Lacuna | 25 |
+| Lacuna | 15 |
 | Fora de âmbito | 97 |

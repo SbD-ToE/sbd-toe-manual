@@ -116,9 +116,23 @@ itens:
     citacao:
       pt: Documento de estratégia com tipologias de teste, frequência, responsáveis e critérios de aceitação por nível de risco
       en: Strategy document with test types, frequency, owners and acceptance criteria by risk level
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  - tipo: acrescento
+    alvo: CTX-CRA-R03
   falta:
-    pt: 'Cobertura agregada das partes I e II do anexo I é parcial: lacunas do anexo I que o Manual não prescreve: reposição do estado original (P1-2b), mecanismo de atualização do produto (P1-2c), remoção/transferência segura de dados (P1-2m), CVD, contacto e avisos de segurança (P2-4 a P2-6), distribuição gratuita de atualizações (P2-8), além do período de apoio.'
-    en: 'Aggregate coverage of Parts I and II of Annex I is partial: Annex I gaps that the Manual does not prescribe: reset to the original state (P1-2b), product update mechanism (P1-2c), secure removal/transfer of data (P1-2m), CVD, contact and security advisories (P2-4 to P2-6), free-of-charge distribution of updates (P2-8), in addition to the support period.'
+    pt: 'Cobertura agregada das partes I e II do anexo I é parcial: o Manual não prescreve a reposição do estado original (P1-2b) nem a remoção/transferência segura de dados (P1-2m). A divulgação coordenada e o contacto (GOV-015), os avisos (CTX-CRA-R03), o mecanismo e a distribuição de atualizações (CTX-CRA-R02) e o período de apoio (CTX-CRA-R01) estão prescritos.'
+    en: 'Aggregate coverage of Parts I and II of Annex I is partial: the Manual does not prescribe reset to the original state (P1-2b) nor secure removal/transfer of data (P1-2m). Coordinated disclosure and contact (GOV-015), advisories (CTX-CRA-R03), the update mechanism and distribution (CTX-CRA-R02) and the support period (CTX-CRA-R01) are prescribed.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -261,9 +275,11 @@ itens:
     citacao:
       pt: Existir finding Critical ou High em aberto sem exceção formal válida
       en: There is an open Critical or High finding without a valid formal exception
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
   falta:
-    pt: 'Conceção/desenvolvimento conformes com toda a parte I do anexo I: faltam reposição do estado original, mecanismo de atualização do produto (automáticas por defeito, opt-out, adiamento), remoção e transferência seguras de todos os dados, minimização de dados não pessoais e comunicação de corrupções/acessos ao utilizador em L1.'
-    en: 'Design/development in conformity with the whole of Part I of Annex I: missing are reset to the original state, product update mechanism (automatic by default, opt-out, postponement), secure removal and transfer of all data, minimisation of non-personal data and notification of corruptions/access to the user at L1.'
+    pt: 'Conceção/desenvolvimento conformes com toda a parte I do anexo I: faltam reposição do estado original, remoção e transferência seguras de todos os dados, minimização de dados não pessoais e comunicação de corrupções/acessos ao utilizador em L1. O mecanismo de atualização do produto está em CTX-CRA-R02.'
+    en: 'Design/development in conformity with the whole of Part I of Annex I: missing are reset to the original state, secure removal and transfer of all data, minimisation of non-personal data and notification of corruptions/access to the user at L1. The product update mechanism is in CTX-CRA-R02.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -446,12 +462,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 6, 1.º período
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: O Manual trata vulnerabilidades de componentes como consumidor (triagem, exceção «Fix not available», atualização), mas não prescreve comunicá-las ao fabricante/mantenedor do componente.
-    en: The Manual handles component vulnerabilities as a consumer (triage, “Fix not available” exception, update), but does not prescribe reporting them to the manufacturer/maintainer of the component.
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R04
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -465,12 +483,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 6, 2.º período
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há dever de partilhar com o mantenedor as correções desenvolvidas internamente (patches/forks), nem em formato legível por máquina.
-    en: There is no duty to share with the maintainer the fixes developed internally (patches/forks), nor in machine-readable format.
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R04
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -532,7 +552,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 8, 1.º parágrafo
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -561,9 +581,21 @@ itens:
     citacao:
       pt: a exploração ativa confirmada ativa o trilho do CRA, art. 14.º (Política 32 §6)
       en: confirmed active exploitation triggers the CRA Article 14 track (Policy 32 §6)
-  falta:
-    pt: O tratamento de vulnerabilidades existe, mas não está ancorado a um período de apoio (inexistente no Manual) e falta parte do anexo I, parte II (CVD, avisos públicos, distribuição de atualizações).
-    en: Vulnerability handling exists, but it is not anchored to a support period (non-existent in the Manual) and part of Annex I, Part II is missing (CVD, public advisories, distribution of updates).
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  - tipo: acrescento
+    alvo: CTX-CRA-R03
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -576,7 +608,9 @@ itens:
   referencia: Art. 13.º, n.º 8, 2.º parágrafo
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: O Manual não define o período de apoio nem os critérios para o determinar (vida útil expectável, expectativas razoáveis, orientações).
@@ -595,7 +629,9 @@ itens:
   referencia: Art. 13.º, n.º 8, 3.º parágrafo
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Não prescreve o período de apoio mínimo de 5 anos (salvo produto com utilização prevista inferior).
@@ -612,7 +648,9 @@ itens:
   referencia: Art. 13.º, n.º 8, 5.º parágrafo
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Não há registo da fundamentação do período de apoio para a documentação técnica.
@@ -628,7 +666,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 8, 6.º parágrafo
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -657,9 +695,23 @@ itens:
     citacao:
       pt: SLA de actualização definido por nível de severidade de CVE
       en: Update SLA defined by CVE severity level
-  falta:
-    pt: Existem procedimentos para vulnerabilidades de fontes internas (SAST/DAST/SCA/pentest), mas não política de divulgação coordenada nem processo de receção de reportes de fontes externas (investigadores, utilizadores).
-    en: There are procedures for vulnerabilities from internal sources (SAST/DAST/SCA/pentest), but no coordinated disclosure policy nor process for receiving reports from external sources (researchers, users).
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: relatos confirmados tratados como findings, com os SLA da Política 19 §4.3 (TST-003)
+      en: confirmed reports handled as findings, with the SLAs of Policy 19 §4.3 (TST-003)
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -672,7 +724,9 @@ itens:
   referencia: Art. 13.º, n.º 9
   classe: engenharia
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Não há dever de manter disponíveis as atualizações de segurança emitidas por ≥10 anos ou pelo resto do período de apoio.
@@ -710,7 +764,9 @@ itens:
   referencia: Art. 13.º, n.º 11
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Sem regra para arquivos públicos de versões anteriores (aviso de risco e indicação de que não são apoiadas).
@@ -958,19 +1014,29 @@ itens:
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 17
   classe: organizacional
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não prescreve ponto de contacto único para utilizadores comunicarem vulnerabilidades e receberem informação (só existe como ação sugerida no cross-check).
-    en: Does not prescribe a single point of contact for users to report vulnerabilities and receive information (it exists only as a suggested action in the cross-check).
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: []
-  nota: null
+  nota:
+    pt: 'Ponto de contacto único, facilmente identificável e indicado nas informações ao utilizador: piso CTX-CRA-P04.'
+    en: 'Single point of contact, easily identifiable and included in the information to the user: floor CTX-CRA-P04.'
 - id: CRA-13-18
   acto_fonte: 32024R2847
   referencia: Art. 13.º, n.º 18
@@ -1021,7 +1087,9 @@ itens:
   referencia: Art. 13.º, n.º 19, 2.º parágrafo
   classe: engenharia
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Não há notificação ao utilizador do fim do período de apoio (nem mecanismo técnico para a fazer).
@@ -3054,12 +3122,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte I, ponto 2, alínea c)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Não há mecanismo de atualização de segurança do produto para o utilizador: atualizações automáticas por defeito, opt-out claro, notificação e adiamento temporário.'
-    en: 'There is no security update mechanism of the product for the user: automatic updates by default, clear opt-out, notification and temporary postponement.'
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3543,8 +3613,10 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 2
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta:
   - tipo: politica
     rotulo:
@@ -3571,9 +3643,9 @@ itens:
     citacao:
       pt: SLA de correcção definido por severidade
       en: Remediation SLA defined by severity
-  falta:
-    pt: Correção «sem demora» operacionalizada pela escada de SLA; falta prescrever que as atualizações de segurança sejam distribuídas separadamente das funcionais sempre que tecnicamente viável.
-    en: Remediation “without delay” operationalised by the SLA ladder; prescribing that security updates be distributed separately from functionality updates wherever technically feasible is missing.
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3625,8 +3697,10 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 4
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta:
   - tipo: us
     alvo: 11-deploy-seguro-us-09
@@ -3638,9 +3712,17 @@ itens:
     citacao:
       pt: Secção de segurança com CVEs/mitigações e severidade
       en: Security section with CVEs/mitigations and severity
-  falta:
-    pt: Existe changelog com secção de segurança (CVE, mitigação, severidade) em L2/L3, mas não divulgação pública de avisos de segurança com descrição, produtos afetados, impacto, gravidade e orientações de correção, nem a regra de adiamento justificado.
-    en: There is a changelog with a security section (CVE, mitigation, severity) at L2/L3, but not public disclosure of security advisories with description, affected products, impact, severity and remediation guidance, nor the justified deferral rule.
+  - tipo: acrescento
+    alvo: CTX-CRA-R03
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: utilizadores afectados informados da correcção ou da mitigação
+      en: affected users informed of the fix or mitigation
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3652,12 +3734,20 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 5
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há política de divulgação coordenada de vulnerabilidades (CVD) nos capítulos nem nas políticas; só aparece como ação sugerida no cross-check CRA.
-    en: There is no coordinated vulnerability disclosure (CVD) policy in the chapters or in the policies; it appears only as a suggested action in the CRA cross-check.
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3669,12 +3759,20 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 6
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há endereço de contacto para comunicação de vulnerabilidades (security.txt ou equivalente) nem medidas para facilitar a partilha de informação sobre vulnerabilidades no produto e em componentes de terceiros.
-    en: There is no contact address for reporting vulnerabilities (security.txt or equivalent) nor measures to facilitate the sharing of information about vulnerabilities in the product and in third-party components.
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3686,8 +3784,10 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 7
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta:
   - tipo: requisito
     alvo: DST-003
@@ -3713,9 +3813,17 @@ itens:
     citacao:
       pt: artefactos sem proveniência verificável rejeitados automaticamente
       en: artefacts without verifiable provenance rejected automatically
-  falta:
-    pt: Integridade e proveniência dos artefactos de atualização garantidas (L2/L3); falta o mecanismo de distribuição das atualizações aos utilizadores e a distribuição automática das de segurança quando aplicável.
-    en: Integrity and provenance of update artefacts ensured (L2/L3); the mechanism for distributing updates to users and the automatic distribution of security updates where applicable are missing.
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  - tipo: requisito
+    alvo: DST-003
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: dst
+    citacao:
+      pt: as actualizações distribuídas a utilizadores ou clientes levam assinatura ou hash publicados
+      en: updates distributed to users or customers carry a published signature or hash
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3727,12 +3835,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo I, parte II, ponto 8
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não prescreve distribuição sem demora e gratuita das atualizações de segurança aos utilizadores, com mensagens de orientação.
-    en: Does not prescribe distribution without delay and free of charge of security updates to users, with advisory messages.
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3761,19 +3871,29 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo II, ponto 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem ponto de contacto para vulnerabilidades nem política de CVD para indicar ao utilizador (ver CRA-AnxI-P2-5/6).
-    en: No point of contact for vulnerabilities nor CVD policy to indicate to the user (see CRA-AnxI-P2-5/6).
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
   confianca: alta
   aplicavel_desde: '2027-12-11'
   substitui: []
-  nota: null
+  nota:
+    pt: 'Indicação ao utilizador do ponto de contacto e da política de divulgação: piso CTX-CRA-P04.'
+    en: 'Stating the point of contact and the disclosure policy to the user: floor CTX-CRA-P04.'
 - id: CRA-AnxII-3
   acto_fonte: 32024R2847
   referencia: Anexo II, ponto 3
@@ -3875,7 +3995,9 @@ itens:
   referencia: Anexo II, ponto 7
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Sem tipo de apoio nem data-limite do período de apoio (depende de CRA-13-8-p2).
@@ -3925,12 +4047,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo II, ponto 8, alínea c)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há instruções de instalação de atualizações de segurança (e o mecanismo também é lacuna, CRA-AnxI-P1-2c).
-    en: There are no instructions for installing security updates (and the mechanism is also a gap, CRA-AnxI-P1-2c).
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3959,12 +4083,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo II, ponto 8, alínea e)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Não há instruções para desligar as atualizações automáticas (funcionalidade inexistente, CRA-AnxI-P1-2c).
-    en: There are no instructions for turning off automatic updates (non-existent functionality, CRA-AnxI-P1-2c).
+  forca: cobre
+  contexto:
+    id: CTX-CRA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4260,7 +4386,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VII, ponto 2, alínea b)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -4288,9 +4414,17 @@ itens:
     citacao:
       pt: Artefactos assinados ou validados por hash antes de publicação
       en: Artefacts signed or validated by hash before publication
-  falta:
-    pt: SBOM e processo de tratamento de CVE documentados; faltam política de CVD, comprovativo do endereço de contacto e soluções técnicas de distribuição segura de atualizações aos utilizadores.
-    en: SBOM and CVE handling process documented; CVD policy, proof of the contact address and technical solutions for secure distribution of updates to users are missing.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4376,7 +4510,9 @@ itens:
   referencia: Anexo VII, ponto 4
   classe: organizacional
   forca: lacuna
-  contexto: null
+  contexto:
+    id: CTX-CRA
+    grau: null
   resposta: []
   falta:
     pt: Sem informação para determinar o período de apoio (ver CRA-13-8-p2).
@@ -4502,7 +4638,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VIII, parte I (módulo A), ponto 3
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -4531,9 +4667,21 @@ itens:
     citacao:
       pt: Definição de pipeline em ficheiros versionados no repositório
       en: Pipeline definition in versioned files in the repository
-  falta:
-    pt: O SSDLC do Manual cobre conceção, desenvolvimento e produção controlados, mas o controlo dos processos de tratamento de vulnerabilidades carece de CVD, contacto, avisos, distribuição de atualizações e período de apoio.
-    en: The Manual's SSDLC covers controlled design, development and production, but the control of the vulnerability handling processes lacks CVD, contact, advisories, distribution of updates and support period.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  - tipo: acrescento
+    alvo: CTX-CRA-R03
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4643,7 +4791,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VIII, parte IV (módulo H), ponto 3.2
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -4678,9 +4826,19 @@ itens:
     citacao:
       pt: KPIs de governação estão definidos, são recolhidos periodicamente e reportados à gestão
       en: Governance KPIs are defined, collected periodically and reported to management
-  falta:
-    pt: Objetivos e responsabilidades, verificação, testes e sua frequência, qualificação do pessoal e métricas estão prescritos; faltam os elementos do tratamento de vulnerabilidades (CVD, contacto, avisos, distribuição de atualizações) e o período de apoio.
-    en: Objectives and responsibilities, verification, tests and their frequency, staff qualification and metrics are prescribed; the vulnerability handling elements (CVD, contact, advisories, distribution of updates) and the support period are missing.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  - tipo: acrescento
+    alvo: CTX-CRA-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

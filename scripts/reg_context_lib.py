@@ -261,6 +261,9 @@ T = {
         "h_graus": "Graus",
         "h_pisos": "Pisos do contexto",
         "h_act": "Como se lê a lista",
+        "h_acr": "Requisitos acrescentados pelo regime",
+        "acr_intro": "Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.",
+        "cols_acr": "| Requisito | Nome | Critério de aceitação | Base legal |",
         "h_lista": "Lista de requisitos — {grau}",
         "h_fora": "Obrigações do regime por força de cobertura",
         "base_label": "contexto (sem grau)",
@@ -271,7 +274,7 @@ T = {
         "sim": "admitida",
         "nao": "não admitida",
         "todos": "todos os níveis",
-        "legend": "Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.",
+        "legend": "Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.",
         "act_rule": "Regra de activação",
         "declara": {"entidade": "Declara-se por entidade e é herdado por todas as aplicações.", "aplicacao": "Declara-se por aplicação."},
         "no_pisos": "Sem pisos neste grau por enquanto.",
@@ -289,6 +292,9 @@ T = {
         "h_graus": "Grades",
         "h_pisos": "Context floor list",
         "h_act": "How to read the list",
+        "h_acr": "Requirements added by the regime",
+        "acr_intro": "These requirements only make sense under the regime, so they do not live in the Manual's catalogues; they are defined here, each with its legal basis.",
+        "cols_acr": "| Requirement | Name | Acceptance criterion | Legal basis |",
         "h_lista": "Requirement list — {grau}",
         "h_fora": "Obligations of the regime by coverage strength",
         "base_label": "context (no grade)",
@@ -299,7 +305,7 @@ T = {
         "sim": "admitted",
         "nao": "not admitted",
         "todos": "all levels",
-        "legend": "Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.",
+        "legend": "Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.",
         "act_rule": "Activation rule",
         "declara": {"entidade": "Declared per entity and inherited by all applications.", "aplicacao": "Declared per application."},
         "no_pisos": "No floor at this grade for now.",
@@ -397,6 +403,15 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
     body.append("")
     for gid, note in (ctx.get("nota_graus") or {}).items():
         body += [f"> **{gid}.** {note[lang]}", ""]
+    # additions (regime-only requirements)
+    adds = [a for a in ctx_doc.get("acrescentos") or [] if a.get("contexto") == cid]
+    if adds:
+        body += [f"## {t['h_acr']} {{#acrescentos}}", "", t["acr_intro"], "", t["cols_acr"], "|---|---|---|---|"]
+        for a in adds:
+            ref = a["base"]["referencia"] if lang == "pt" else _ref_en(a["base"]["referencia"])
+            basis = f"{ref}: {q[0]}{a['base']['citacao'][lang]}{q[1]} ({', '.join(a['base']['obrigacoes'])})"
+            body.append(f"| `{a['id']}` | {_cell(a['nome'][lang])} | {_cell(a['criterio_aceitacao'][lang])} | {_cell(basis)} |")
+        body.append("")
     # how to read
     body += [f"## {t['h_act']} {{#como-se-le}}", "", t["legend"], "",
              f"**{t['act_rule']}.** {ctx_doc['regra_lista']['activacao'][lang]}", ""]
@@ -421,7 +436,8 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
                 else:
                     marks.append("▲")
                     pisos.update(e.get("pisos", []))
-            name = master[rid]["nome"][lang] if rid in master else rid
+            add = next((a for a in adds if a["id"] == rid), None)
+            name = master[rid]["nome"][lang] if rid in master else (add["nome"][lang] if add else rid)
             body.append(f"| `{rid}` | {_cell(name)} | {' | '.join(marks)} | {', '.join(sorted(pisos)) or '—'} |")
         body.append("")
     # strength summary
@@ -442,6 +458,13 @@ _REF_EN = [
     (r"Reg\. de Execução \(UE\)", "Implementing Regulation (EU)"),
     (r"Reg\. \(UE\)", "Regulation (EU)"),
     (r"Diretiva \(UE\)", "Directive (EU)"),
+    (r"anexo I, parte I, ponto (\d+), al\. (\w)\), e parte II, pontos (\d+), (\d+) e (\d+)", r"Annex I, Part I, point (\1)(\2), and Part II, points (\3), (\4) and (\5)"),
+    (r"anexo I, parte II, pontos (\d+) e (\d+)", r"Annex I, Part II, points (\1) and (\2)"),
+    (r"anexo I, parte II, ponto (\d+)", r"Annex I, Part II, point (\1)"),
+    (r"anexo II, ponto (\d+), als\. (\w)\) e (\w)\)", r"Annex II, point (\1)(\2) and (\3)"),
+    (r"anexo II, ponto (\d+)", r"Annex II, point (\1)"),
+    (r"anexo VII, ponto (\d+)", r"Annex VII, point (\1)"),
+    (r"art\. (\d+)\.º, n\.os (\d+), (\d+), (\d+) e (\d+)", r"Article \1(\2), (\3), (\4) and (\5)"),
     (r"anexo I, parte I, ponto (\d+), al\. (\w)\)", r"Annex I, Part I, point (\1)(\2)"),
     (r"anexo, pontos ([\d.]+) e ([\d.]+)", r"Annex, points \1 and \2"),
     (r"anexo, ponto ([\d.]+), al\. (\w)\)", r"Annex, point \1(\2)"),

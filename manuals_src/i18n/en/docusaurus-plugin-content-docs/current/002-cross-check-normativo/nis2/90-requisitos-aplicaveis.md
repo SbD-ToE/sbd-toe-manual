@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: 276252c591a0a80317deba4e80398d75925b3c3daf48622ba072d995fcc9372c
+  source_sha256: 92996bcf35caa2ec88bb9065c2c4df074c8c741e964e0237e765543ed1e5df8a
   source_commit: null
-  target_sha256: a4e2b2da25bd83ed628430716e97eaccc51f7bfaf50af4faebca4487531b992b
+  target_sha256: 7314186a2fc39ee984f605f14cf692ba735875027df3fc25f9629339b1d08b29
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -72,10 +72,12 @@ The entity is essential or important under Article 3 of Directive (EU) 2022/2555
 | CTX-NIS2-P11 | `IAC-007` | PERTINENTE | mandatory | — | Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2: “The procedures shall ensure that those changes are documented and, based on the risk assessment carried out pursuant to point 2.1, tested and assessed in view of the potential impact before being implemented.” (NIS2-IR2690-6.4.2) | admitted |
 | CTX-NIS2-P12 | `ACC-010` | PERTINENTE | mandatory | Includes the access rights of privileged and system administration accounts, at planned intervals, with the results documented. | Implementing Regulation (EU) 2024/2690, Annex, points 11.2.3 and 11.3.3: “The relevant entities shall review access rights at planned intervals and shall modify them based on organisational changes.” (NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3) | not admitted |
 | CTX-NIS2-P13 | `AUT-001` | PERTINENTE | mandatory | Privileged accounts and system administration accounts. | Implementing Regulation (EU) 2024/2690, Annex, point 11.3.2(a): “establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts” (NIS2-IR2690-11.3.2) | admitted |
+| CTX-NIS2-P14 | `GOV-015` | — | mandatory | Vulnerability handling and disclosure, including vulnerabilities reported by external sources. | Directive (EU) 2022/2555, Article 21(2), point (e): “including vulnerability handling and disclosure” (NIS2-21-2-e) | not admitted |
+| CTX-NIS2-P15 | `GOV-015` | PERTINENTE | mandatory | The disclosure procedure follows the national coordinated vulnerability disclosure policy. | Implementing Regulation (EU) 2024/2690, Annex, point 6.10.2(e): “lay down a procedure for disclosing vulnerabilities in accordance with the applicable national coordinated vulnerability disclosure policy” (NIS2-IR2690-6.10.2) | not admitted |
 
 ## How to read the list {#como-se-le}
 
-Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
+Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
 
 **Activation rule.** Effective requirements = technical selection ∪ elevated ∪ added. Ids with origin “base” enter only if the technical selection (the application's technical context) activates them. An elevated or added id without technical activation is not dropped silently: it enters flagged “applies by the regime; if the component does not exist, a documented justification of non-applicability is required” (model of Implementing Regulation (EU) 2024/2690, Article 2).
 
@@ -357,6 +359,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14 |
 
 ## Requirement list — PERTINENTE {#lista-pertinente}
 
@@ -636,6 +639,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -643,8 +647,8 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 59 |
-| Partial | 87 |
+| Covers | 61 |
+| Partial | 86 |
 | Supports evidence | 12 |
-| Gap | 24 |
+| Gap | 23 |
 | Out of scope | 38 |

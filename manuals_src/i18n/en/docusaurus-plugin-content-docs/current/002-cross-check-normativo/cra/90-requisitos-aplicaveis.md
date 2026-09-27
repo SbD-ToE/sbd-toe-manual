@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: b35a38c857cf8cb2ed6718015ec8b2c3e924ee13920ba8549fa3281009ec81c8
+  source_sha256: 449a78fbdb1cfb13f3d14ecf02586eb604bfd91c300ab47dc783e4f6434f4d9c
   source_commit: null
-  target_sha256: 7a0747ddba598066e3e879a3efe8ef87c140bd0d0460f81301acf2a6c5143222
+  target_sha256: 31f461070ea9bbf44cd8ad55cc1ebca1ab761d1e795bf9ac2dce1d481bdc0e10
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -58,10 +58,22 @@ The application is, or is part of, a product with digital elements that the orga
 | CTX-CRA-P01 | `DEP-002` | — | mandatory | Blocking on a known exploitable vulnerability at any level, in addition to the severity criterion: no known exploitable vulnerability when placed on the market. | Regulation (EU) 2024/2847, Annex I, Part I, point (2)(a): “be made available on the market without known exploitable vulnerabilities” (CRA-AnxI-P1-2a) | not admitted |
 | CTX-CRA-P02 | [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção) | — | mandatory | The “fix deferred” and “risk accepted” exceptions do not apply to known exploitable vulnerabilities of a CRA product at the time it is placed on the market. | Regulation (EU) 2024/2847, Annex I, Part I, point (2)(a): “be made available on the market without known exploitable vulnerabilities” (CRA-AnxI-P1-2a) | not admitted |
 | CTX-CRA-P03 | `DEP-006` | — | mandatory | — | Regulation (EU) 2024/2847, Article 13(5): “manufacturers shall exercise due diligence when integrating components sourced from third parties” (CRA-13-5) | not admitted |
+| CTX-CRA-P04 | `GOV-015` | — | mandatory | Single point of contact, easily identifiable and included in the information and instructions to the user (Annex II); contact address also for vulnerabilities in third-party components. | Regulation (EU) 2024/2847, Annex I, Part II, points (5) and (6); Article 13(17); Annex II, point (2): “put in place and enforce a policy on coordinated vulnerability disclosure” (CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-13-17, CRA-AnxII-2) | not admitted |
+
+## Requirements added by the regime {#acrescentos}
+
+These requirements only make sense under the regime, so they do not live in the Manual's catalogues; they are defined here, each with its legal basis.
+
+| Requirement | Name | Acceptance criterion | Legal basis |
+|---|---|---|---|
+| `CTX-CRA-R01` | Support period determined, communicated and honoured | Support period determined per product with the criteria of Article 13(8) (expected use time, reasonable user expectations, nature and purpose of the product) and of at least five years, unless the expected use is shorter; rationale recorded in the technical documentation; end date of support stated in the information to the user; users notified of the end of support where technically feasible; each security update kept available for at least 10 years after issue or for the remainder of the support period, whichever is longer; public archives of earlier versions with a clear warning of the risks of use outside the support period. | Regulation (EU) 2024/2847, Article 13(8), (9), (11) and (19); Annex II, point (7); Annex VII, point (4): “the support period shall be at least five years” (CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-13-11, CRA-13-19-p2, CRA-AnxII-7, CRA-AnxVII-4) |
+| `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | Automatic security updates enabled by default where applicable, with a clear opt-out mechanism, notification of available updates and the option to postpone them temporarily; security updates disseminated without delay and free of charge (unless otherwise agreed with a business user for a tailor-made product), separate from functionality updates where technically feasible and accompanied by advisory messages on the action to be taken; secure and verifiable distribution (DST-003); instructions for installing updates and for turning off automatic updates in the information to the user. | Regulation (EU) 2024/2847, Annex I, Part I, point (2)(c), and Part II, points (2), (7) and (8); Annex II, point (8)(c) and (e): “ensure that, where security updates are available to address identified security issues, they are disseminated without delay” (CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e) |
+| `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | Once the security update is available, a public advisory on the fixed vulnerabilities, with a description, information allowing the affected product to be identified, impacts, severity and clear and accessible remediation information; delay of the disclosure only in duly justified, recorded cases, until users have had the possibility to apply the fix. | Regulation (EU) 2024/2847, Annex I, Part II, point (4): “once a security update has been made available, share and publicly disclose information about fixed vulnerabilities” (CRA-AnxI-P2-4) |
+| `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | A vulnerability identified in a component integrated in the product (including an open-source component) reported to the person or entity manufacturing or maintaining it; a fix developed by the organisation shared with the person responsible for the component, where appropriate in a machine-readable format; the vulnerability handled in accordance with Part II of Annex I (DEP-007, DEP-010). | Regulation (EU) 2024/2847, Article 13(6): “report the vulnerability to the person or entity manufacturing or maintaining the component” (CRA-13-6-a, CRA-13-6-b) |
 
 ## How to read the list {#como-se-le}
 
-Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
+Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
 
 **Activation rule.** Effective requirements = technical selection ∪ elevated ∪ added. Ids with origin “base” enter only if the technical selection (the application's technical context) activates them. An elevated or added id without technical activation is not dropped silently: it enters flagged “applies by the regime; if the component does not exist, a documented justification of non-applicability is required” (model of Implementing Regulation (EU) 2024/2690, Article 2).
 
@@ -343,6 +355,11 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-CRA-P04 |
+| `CTX-CRA-R01` | Support period determined, communicated and honoured | ▲ | ▲ | ▲ | CTX-CRA-R01 |
+| `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | ▲ | ▲ | ▲ | CTX-CRA-R02 |
+| `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | ▲ | ▲ | ▲ | CTX-CRA-R03 |
+| `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | ▲ | ▲ | ▲ | CTX-CRA-R04 |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -350,8 +367,8 @@ Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addre
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 18 |
-| Partial | 33 |
+| Covers | 36 |
+| Partial | 25 |
 | Supports evidence | 18 |
-| Gap | 25 |
+| Gap | 15 |
 | Out of scope | 97 |

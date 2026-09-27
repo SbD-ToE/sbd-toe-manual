@@ -54,10 +54,11 @@ A organização é uma das entidades financeiras enumeradas no art. 2.º, n.º 1
 | CTX-DORA-P07 | `AUT-001` | — | obrigatório | Autenticação forte no acesso remoto à rede da entidade, no acesso privilegiado, no acesso a activos de TIC que apoiem funções críticas ou importantes e a activos de TIC acessíveis ao público. | Reg. Delegado (UE) 2024/1774, art. 21.º, al. f), subal. ii); art. 33.º, al. d) (regime simplificado): «a utilização de métodos de autenticação forte em conformidade com as melhores práticas e técnicas para o acesso remoto à rede da entidade financeira, para o acesso privilegiado e ainda para o acesso a ativos de TIC que apoiem funções críticas ou importantes ou ativos de TIC acessíveis ao público» (DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d) | admitida |
 | CTX-DORA-P08 | [Política 10 §9](/sbd-toe/assets/policies/policy-dependencias#9-auditoria-periódica) | FCI | obrigatório; frequência da análise automatizada de vulnerabilidades ≥ semanal («pelo menos semanalmente») | Análise automatizada de vulnerabilidades dos activos de TIC que apoiam funções críticas ou importantes, não só das dependências e imagens. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. b), e segundo parágrafo: «as entidades financeiras devem realizar, pelo menos semanalmente, uma análise automatizada da vulnerabilidade e avaliações dos ativos de TIC para os ativos de TIC que apoiam funções críticas ou importantes» (DORA-RTS1774-10-2-b) | não admitida |
 | CTX-DORA-P09 | `OPS-005` | FCI | obrigatório | — | Reg. Delegado (UE) 2024/1774, art. 23.º, n.º 2, al. b): «implementar ferramentas geradoras de alertas para atividades e comportamentos anómalos, pelo menos para os ativos de TIC e de informação que apoiem funções críticas ou importantes» (DORA-RTS1774-23-2-b) | não admitida |
+| CTX-DORA-P10 | `GOV-015` | — | obrigatório | Divulgação responsável aos clientes, às contrapartes e ao público. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. e): «Estabelecer procedimentos para a divulgação responsável das vulnerabilidades aos clientes, às contrapartes e ao público» (DORA-RTS1774-10-2-e) | não admitida |
 
 ## Como se lê a lista {#como-se-le}
 
-Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
+Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime (aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade); — não seleccionado.
 
 **Regra de activação.** Requisitos efectivos = selecção técnica ∪ elevados ∪ acrescentados. Os ids de origem «base» só entram se a selecção técnica (contexto técnico da aplicação) os activar. Um id elevado ou acrescentado sem activação técnica não cai em silêncio: entra marcado «aplica-se pelo regime; se o componente não existir, exige justificação documentada de não aplicabilidade» (modelo do Reg. de Execução (UE) 2024/2690, art. 2.º).
 
@@ -339,6 +340,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
 
 ## Lista de requisitos — FCI {#lista-fci}
 
@@ -618,6 +620,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado pelo regime (aplica-se pelo 
 | `GOV-012` | Modelo de maturidade activo com evolução medida e planeada | — | — | ✔ | — |
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -625,8 +628,8 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 116 |
+| Cobre | 117 |
 | Parcial | 138 |
 | Apoia evidência | 123 |
-| Lacuna | 15 |
+| Lacuna | 14 |
 | Fora de âmbito | 234 |

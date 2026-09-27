@@ -31,7 +31,8 @@ import gen_reg_views  # noqa: E402
 FORCA = {"cobre", "parcial", "apoia_evidencia", "lacuna", "fora_de_ambito"}
 CLASSE = {"engenharia", "organizacional", "juridico-contratual"}
 CONFIANCA = {"alta", "media", "baixa"}
-TIPO = {"requisito", "us", "politica", "pagina"}
+TIPO = {"requisito", "us", "politica", "pagina", "acrescento"}
+ADDITIONS: set = set()  # CTX-<regime>-Rnn ids declared in _contextos-regulatorios.yaml
 CELEX_RE = re.compile(r"3\d{4}[RLD]\d{4}")
 
 problems: list = []
@@ -86,6 +87,12 @@ def check_target(t: dict, where: str, master: dict, quote: bool = True) -> None:
     tipo = t.get("tipo")
     if tipo not in TIPO:
         fail(where, f"tipo inválido {tipo!r}")
+        return
+    if tipo == "acrescento":
+        if t.get("alvo") not in ADDITIONS:
+            fail(where, f"acrescento {t.get('alvo')!r} não declarado em _contextos-regulatorios.yaml")
+        if t.get("ficheiro") or t.get("ancora"):
+            fail(where, "acrescento usa só alvo (sem ficheiro/ancora)")
         return
     if tipo == "requisito":
         rid = t.get("alvo")
@@ -181,7 +188,8 @@ def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
                 fail(iw, f"forca {it['forca']} sem resposta")
             for j, r in enumerate(resp):
                 check_target(r, f"{iw} resposta[{j}]", master)
-                bilingual(r.get("citacao"), f"{iw} resposta[{j}]/citacao")
+                if r.get("tipo") != "acrescento":
+                    bilingual(r.get("citacao"), f"{iw} resposta[{j}]/citacao")
             if it.get("forca") == "fora_de_ambito":
                 bilingual(it.get("razao_fora_de_ambito"), iw + "/razao_fora_de_ambito")
             elif it.get("razao_fora_de_ambito") is not None:
@@ -330,6 +338,17 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
             fail(aw, "colide com o espaço de ids do master")
         for k in ("nome", "criterio_aceitacao"):
             bilingual(a.get(k), f"{aw}/{k}")
+        mids_a = matrix_ids.get((ctx_by_id.get(a.get("contexto")) or {}).get("matriz"), set())
+        for oid in (a.get("base") or {}).get("obrigacoes") or []:
+            if oid not in mids_a:
+                fail(aw, f"base: obrigação {oid} fora da matriz do contexto")
+        if not (a.get("base") or {}).get("obrigacoes"):
+            fail(aw, "base sem obrigações")
+        legal_quote((a.get("base") or {}).get("citacao"), aw + " base/citacao")
+        if a.get("grau") is not None and a["grau"] not in ((ctx_by_id.get(a.get("contexto")) or {}).get("graus_admitidos") or []):
+            fail(aw, f"grau {a['grau']} não admitido")
+        if a.get("controlos") == [] :
+            bilingual(a.get("sem_controlo_razao"), aw + "/sem_controlo_razao")
         if "controlos" not in a or (a.get("controlos") == [] and not a.get("sem_controlo_razao")):
             fail(aw, "ligação a controlos não declarada (controlos: [...] ou sem_controlo_razao)")
     if "remover" in json.dumps(ctx_doc.get("contextos"), ensure_ascii=False):
@@ -353,6 +372,7 @@ def main() -> int:
     except Exception as exc:  # noqa: BLE001 — report, never trace
         print(f"check_reg_context: erro a carregar os dados: {exc}")
         return 1
+    ADDITIONS.update(a.get("id") for a in ctx_doc.get("acrescentos") or [])
     check_matrices(master, ctx_doc, matrices)
     check_contexts(master, ctx_doc, matrices)
     check_views()

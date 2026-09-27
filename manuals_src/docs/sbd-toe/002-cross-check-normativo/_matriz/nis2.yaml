@@ -428,8 +428,10 @@ itens:
   acto_fonte: 32022L2555
   referencia: Art. 21.º, n.º 2, al. e)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: null
   resposta:
   - tipo: requisito
     alvo: REQ-001
@@ -472,9 +474,15 @@ itens:
     citacao:
       pt: Critical (CVSS ≥ 9.0) | 24 horas | 30 dias
       en: Critical (CVSS ≥ 9.0) | 24 hours | 30 days
-  falta:
-    pt: Aquisição, desenvolvimento e manutenção seguros e tratamento de vulnerabilidades estão cobertos; falta a divulgação de vulnerabilidades (procedimento de divulgação coordenada/CVD, canal de receção de relatos externos), que o Manual não prescreve em lado nenhum.
-    en: Security in acquisition, development and maintenance and vulnerability handling are covered; vulnerability disclosure is missing (coordinated vulnerability disclosure/CVD procedure, channel for receiving external reports), which the Manual does not prescribe anywhere.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -5562,8 +5570,10 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.2 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: politica
     rotulo:
@@ -5600,9 +5610,23 @@ itens:
     citacao:
       pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
       en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
-  falta:
-    pt: Monitorização de feeds, análise, triagem em 24 h das críticas e ligação a exceções/correções existem; falta o procedimento de divulgação de vulnerabilidades conforme a política nacional de divulgação coordenada e a monitorização de avisos de CSIRT e fornecedores.
-    en: Feed monitoring, analysis, triage of critical ones within 24 h and linkage to exceptions/fixes exist; the vulnerability disclosure procedure in accordance with the national coordinated vulnerability disclosure policy, and monitoring of CSIRT and supplier advisories, are missing.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: fontes de informação sobre vulnerabilidades definidas (bases públicas, avisos de fornecedores, CSIRT) e revistas a intervalos planeados
+      en: sources of vulnerability information defined (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -5658,12 +5682,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 6.10.4 (artigo 21.o, n.o 2, alínea e), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
+  forca: parcial
   contexto: null
-  resposta: []
+  resposta:
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: fontes de informação sobre vulnerabilidades definidas (bases públicas, avisos de fornecedores, CSIRT) e revistas a intervalos planeados
+      en: sources of vulnerability information defined (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals
   falta:
-    pt: Não se prevê a revisão periódica dos canais de informação sobre vulnerabilidades (feeds, avisos de fornecedores, CSIRT).
-    en: Periodic review of vulnerability information channels (feeds, supplier advisories, CSIRT) is not provided for.
+    pt: A revisão periódica das fontes de informação sobre vulnerabilidades é obrigatória em L2/L3 (DEP-010); em L1 não.
+    en: Periodic review of the sources of vulnerability information is mandatory at L2/L3 (DEP-010); not at L1.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

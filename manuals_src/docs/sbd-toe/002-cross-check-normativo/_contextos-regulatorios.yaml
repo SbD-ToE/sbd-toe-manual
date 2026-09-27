@@ -35,6 +35,7 @@ vocabulario:
     - {id: us, nome: {pt: User story, en: User story}, chave: alvo}
     - {id: politica, nome: {pt: Política, en: Policy}, chave: ficheiro+ancora}
     - {id: pagina, nome: {pt: Secção do Manual, en: Manual section}, chave: ficheiro+ancora}
+    - {id: acrescento, nome: {pt: Requisito acrescentado pelo regime, en: Requirement added by the regime}, chave: alvo}
   operador:
     - {id: selecionar, nome: {pt: Selecionar, en: Select}, descricao: {pt: "Ids do master que se aplicam em cada nível (selecção base).", en: "Master ids that apply at each level (base selection)."}}
     - {id: elevar, nome: {pt: Elevar, en: Elevate}, descricao: {pt: "Torna obrigatório ou fixa um parâmetro num id do master; nunca baixa um mínimo.", en: "Makes a master id mandatory or fixes a parameter on it; never lowers a minimum."}}
@@ -294,6 +295,30 @@ contextos:
           referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 11.3.2, al. a)"
           citacao: {pt: "Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema", en: "establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts"}
         admite_justificacao: true
+      - id: CTX-NIS2-P14
+        alvo: {tipo: requisito, alvo: GOV-015}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Tratamento e divulgação de vulnerabilidades, incluindo as comunicadas por fontes externas.", en: "Vulnerability handling and disclosure, including vulnerabilities reported by external sources."}
+        base:
+          obrigacoes: [NIS2-21-2-e]
+          referencia: "Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. e)"
+          citacao: {pt: "incluindo o tratamento e a divulgação de vulnerabilidades", en: "including vulnerability handling and disclosure"}
+        admite_justificacao: false
+      - id: CTX-NIS2-P15
+        alvo: {tipo: requisito, alvo: GOV-015}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "O procedimento de divulgação segue a política nacional de divulgação coordenada de vulnerabilidades.", en: "The disclosure procedure follows the national coordinated vulnerability disclosure policy."}
+        base:
+          obrigacoes: [NIS2-IR2690-6.10.2]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 6.10.2, al. e)"
+          citacao: {pt: "procedimento para a divulgação de vulnerabilidades em conformidade com a política nacional aplicável em matéria de divulgação coordenada de vulnerabilidades", en: "lay down a procedure for disclosing vulnerabilities in accordance with the applicable national coordinated vulnerability disclosure policy"}
+        admite_justificacao: false
 
   - id: CTX-DORA
     nome: {pt: Entidade financeira (DORA), en: Financial entity (DORA)}
@@ -443,6 +468,18 @@ contextos:
           referencia: "Reg. Delegado (UE) 2024/1774, art. 23.º, n.º 2, al. b)"
           citacao: {pt: "implementar ferramentas geradoras de alertas para atividades e comportamentos anómalos, pelo menos para os ativos de TIC e de informação que apoiem funções críticas ou importantes", en: "tools generating alerts for anomalous activities and behaviour, at least for ICT assets and information assets supporting critical or important functions"}
         admite_justificacao: false
+      - id: CTX-DORA-P10
+        alvo: {tipo: requisito, alvo: GOV-015}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Divulgação responsável aos clientes, às contrapartes e ao público.", en: "Responsible disclosure to clients, counterparties and the public."}
+        base:
+          obrigacoes: [DORA-RTS1774-10-2-e]
+          referencia: "Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. e)"
+          citacao: {pt: "Estabelecer procedimentos para a divulgação responsável das vulnerabilidades aos clientes, às contrapartes e ao público", en: "establish procedures for the responsible disclosure of vulnerabilities to clients, counterparties, and to the public"}
+        admite_justificacao: false
 
   - id: CTX-CRA
     nome: {pt: Produto com elementos digitais colocado no mercado (CRA), en: Product with digital elements placed on the market (CRA)}
@@ -495,6 +532,18 @@ contextos:
           obrigacoes: [CRA-13-5]
           referencia: "Reg. (UE) 2024/2847, art. 13.º, n.º 5"
           citacao: {pt: "os fabricantes devem exercer a diligência devida quando integram componentes provenientes de terceiros", en: "manufacturers shall exercise due diligence when integrating components sourced from third parties"}
+        admite_justificacao: false
+      - id: CTX-CRA-P04
+        alvo: {tipo: requisito, alvo: GOV-015}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Ponto de contacto único, facilmente identificável e indicado nas informações e instruções ao utilizador (anexo II); endereço de contacto também para vulnerabilidades em componentes de terceiros.", en: "Single point of contact, easily identifiable and included in the information and instructions to the user (Annex II); contact address also for vulnerabilities in third-party components."}
+        base:
+          obrigacoes: [CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-13-17, CRA-AnxII-2]
+          referencia: "Reg. (UE) 2024/2847, anexo I, parte II, pontos 5 e 6; art. 13.º, n.º 17; anexo II, ponto 2"
+          citacao: {pt: "Definir e aplicar uma política de divulgação coordenada de vulnerabilidades", en: "put in place and enforce a policy on coordinated vulnerability disclosure"}
         admite_justificacao: false
 
   - id: CTX-AIA-RE
@@ -653,7 +702,65 @@ contextos:
           citacao: {pt: "O tratamento em subcontratação é regulado por contrato", en: "Processing by a processor shall be governed by a contract"}
         admite_justificacao: true
 
-acrescentos: []   # CTX-<regime>-Rnn: nenhum ainda (autoria pela ordem (c), com a destilação do §6.7 e aprovação do lead)
+# CTX-<regime>-Rnn: requisitos que só fazem sentido sob o regime (destilação §6.7; lista aprovada pelo lead em 2026-09-27).
+# Vivem só aqui, nunca nos catálogos; cada um declara a ligação a controlos.
+acrescentos:
+  - id: CTX-CRA-R01
+    contexto: CTX-CRA
+    grau: null
+    niveis: null
+    nome: {pt: "Período de apoio determinado, comunicado e cumprido", en: "Support period determined, communicated and honoured"}
+    criterio_aceitacao:
+      pt: "Período de apoio determinado por produto com os critérios do art. 13.º, n.º 8 (tempo de utilização previsto, expectativas razoáveis dos utilizadores, natureza e finalidade do produto) e com pelo menos cinco anos, salvo utilização prevista inferior; fundamentação registada na documentação técnica; data de fim do apoio indicada nas informações ao utilizador; utilizadores notificados do fim do apoio quando tecnicamente viável; cada actualização de segurança mantida disponível pelo menos 10 anos após a emissão ou pelo resto do período de apoio, se for mais longo; arquivos públicos de versões anteriores com aviso claro dos riscos de uso fora do período de apoio."
+      en: "Support period determined per product with the criteria of Article 13(8) (expected use time, reasonable user expectations, nature and purpose of the product) and of at least five years, unless the expected use is shorter; rationale recorded in the technical documentation; end date of support stated in the information to the user; users notified of the end of support where technically feasible; each security update kept available for at least 10 years after issue or for the remainder of the support period, whichever is longer; public archives of earlier versions with a clear warning of the risks of use outside the support period."
+    base:
+      obrigacoes: [CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-13-11, CRA-13-19-p2, CRA-AnxII-7, CRA-AnxVII-4]
+      referencia: "Reg. (UE) 2024/2847, art. 13.º, n.os 8, 9, 11 e 19; anexo II, ponto 7; anexo VII, ponto 4"
+      citacao: {pt: "o período de apoio é de, pelo menos, cinco anos", en: "the support period shall be at least five years"}
+    controlos: []
+    sem_controlo_razao: {pt: "Dever de produto e de documentação, sem controlo técnico próprio no Manual.", en: "A product and documentation duty, with no dedicated technical control in the Manual."}
+  - id: CTX-CRA-R02
+    contexto: CTX-CRA
+    grau: null
+    niveis: null
+    nome: {pt: "Distribuição e mecanismo de actualizações de segurança no utilizador", en: "Distribution and mechanism of security updates at the user"}
+    criterio_aceitacao:
+      pt: "Actualizações de segurança automáticas configuradas por defeito quando aplicável, com mecanismo de autoexclusão claro, notificação das actualizações disponíveis e opção de adiamento temporário; actualizações de segurança distribuídas sem demora e de forma gratuita (salvo acordo com um utilizador profissional sobre produto personalizado), separadas das actualizações de funcionalidades quando tecnicamente viável e acompanhadas de orientações sobre as medidas a tomar; distribuição segura e verificável (DST-003); instruções para instalar as actualizações e para desligar as automáticas nas informações ao utilizador."
+      en: "Automatic security updates enabled by default where applicable, with a clear opt-out mechanism, notification of available updates and the option to postpone them temporarily; security updates disseminated without delay and free of charge (unless otherwise agreed with a business user for a tailor-made product), separate from functionality updates where technically feasible and accompanied by advisory messages on the action to be taken; secure and verifiable distribution (DST-003); instructions for installing updates and for turning off automatic updates in the information to the user."
+    base:
+      obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]
+      referencia: "Reg. (UE) 2024/2847, anexo I, parte I, ponto 2, al. c), e parte II, pontos 2, 7 e 8; anexo II, ponto 8, als. c) e e)"
+      citacao: {pt: "Assegurar que as atualizações de segurança disponíveis para resolver problemas de segurança identificados sejam distribuídas sem demora", en: "ensure that, where security updates are available to address identified security issues, they are disseminated without delay"}
+    controlos: []
+    sem_controlo_razao: {pt: "O controlo técnico da integridade da distribuição é DST-003, que o requisito referencia; o resto é dever de produto.", en: "The technical control for distribution integrity is DST-003, which the requirement references; the rest is a product duty."}
+  - id: CTX-CRA-R03
+    contexto: CTX-CRA
+    grau: null
+    niveis: null
+    nome: {pt: "Avisos de segurança públicos sobre vulnerabilidades corrigidas", en: "Public security advisories on fixed vulnerabilities"}
+    criterio_aceitacao:
+      pt: "Depois de disponibilizada a actualização de segurança, aviso público sobre as vulnerabilidades corrigidas, com descrição, informação que permita identificar o produto afectado, impactos, gravidade e informação clara e acessível para a correcção; adiamento da divulgação só em casos devidamente justificados, registados, até os utilizadores terem tido a possibilidade de aplicar a correcção."
+      en: "Once the security update is available, a public advisory on the fixed vulnerabilities, with a description, information allowing the affected product to be identified, impacts, severity and clear and accessible remediation information; delay of the disclosure only in duly justified, recorded cases, until users have had the possibility to apply the fix."
+    base:
+      obrigacoes: [CRA-AnxI-P2-4]
+      referencia: "Reg. (UE) 2024/2847, anexo I, parte II, ponto 4"
+      citacao: {pt: "Uma vez disponibilizada uma atualização de segurança, partilhar e divulgar publicamente informações sobre as vulnerabilidades corrigidas", en: "once a security update has been made available, share and publicly disclose information about fixed vulnerabilities"}
+    controlos: []
+    sem_controlo_razao: {pt: "Dever de comunicação pública; complementa GOV-015 (informação aos utilizadores afectados).", en: "A public communication duty; it complements GOV-015 (information to affected users)."}
+  - id: CTX-CRA-R04
+    contexto: CTX-CRA
+    grau: null
+    niveis: null
+    nome: {pt: "Comunicação ao mantenedor de vulnerabilidades em componentes", en: "Reporting of component vulnerabilities to the maintainer"}
+    criterio_aceitacao:
+      pt: "Vulnerabilidade identificada num componente integrado no produto (incluindo de código aberto) comunicada à pessoa ou entidade que o fabrica ou mantém; correcção desenvolvida pela organização partilhada com o responsável pelo componente, se for caso disso em formato legível por máquina; vulnerabilidade tratada segundo a parte II do anexo I (DEP-007, DEP-010)."
+      en: "A vulnerability identified in a component integrated in the product (including an open-source component) reported to the person or entity manufacturing or maintaining it; a fix developed by the organisation shared with the person responsible for the component, where appropriate in a machine-readable format; the vulnerability handled in accordance with Part II of Annex I (DEP-007, DEP-010)."
+    base:
+      obrigacoes: [CRA-13-6-a, CRA-13-6-b]
+      referencia: "Reg. (UE) 2024/2847, art. 13.º, n.º 6"
+      citacao: {pt: "os fabricantes devem comunicar a vulnerabilidade à pessoa ou entidade responsável pelo fabrico ou pela manutenção do componente", en: "report the vulnerability to the person or entity manufacturing or maintaining the component"}
+    controlos: []
+    sem_controlo_razao: {pt: "Dever de comunicação na cadeia de fornecimento, sem controlo técnico próprio.", en: "A supply-chain communication duty, with no dedicated technical control."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -783,6 +890,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-NIS2-P02], obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1033,6 +1141,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1308,6 +1417,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-NIS2-P14], obrigacoes: [NIS2-21-2-e]}
     PERTINENTE:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -1433,6 +1543,7 @@ lista_ids:
         - {id: GOV-007, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P09], obrigacoes: [NIS2-IR2690-5.1.1]}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
         - {id: AUT-001, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P13], obrigacoes: [NIS2-IR2690-11.3.2]}
         - {id: ACC-010, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P12], obrigacoes: [NIS2-IR2690-11.2.3, NIS2-IR2690-11.3.3]}
         - {id: LOG-004, origem: elevado, grau: PERTINENTE, pisos: [CTX-NIS2-P03], obrigacoes: [NIS2-IR2690-3.2.4]}
@@ -1690,6 +1801,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1965,6 +2077,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
   CTX-DORA:
     base:
       L1:
@@ -2091,6 +2204,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
         - {id: ACC-010, origem: elevado, pisos: [CTX-DORA-P05], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
@@ -2345,6 +2459,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2620,6 +2735,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
     FCI:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -2745,6 +2861,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
         - {id: AUT-001, origem: elevado, pisos: [CTX-DORA-P07], obrigacoes: [DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d]}
         - {id: ACC-010, origem: elevado, grau: FCI, pisos: [CTX-DORA-P05, CTX-DORA-P06], obrigacoes: [DORA-RTS1774-21-e-iv]}
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
@@ -3000,6 +3117,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3275,6 +3393,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
   CTX-CRA:
     base:
       L1:
@@ -3401,7 +3520,12 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
         - {id: DEP-006, origem: elevado, cap: '05', pisos: [CTX-CRA-P03], obrigacoes: [CRA-13-5]}
+        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3651,6 +3775,11 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
+        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3926,6 +4055,11 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
+        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
   CTX-AIA-RE:
     base:
       L1:
@@ -4052,6 +4186,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
         - {id: THR-008, origem: elevado, cap: '03', pisos: [CTX-AIA-RE-P04], obrigacoes: [AIA-15-5]}
         - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05], obrigacoes: [AIA-15-5]}
         - {id: DEP-011, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P06], obrigacoes: [AIA-15-5]}
@@ -4308,6 +4443,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4583,6 +4719,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
     ART50:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -4708,6 +4845,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4957,6 +5095,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5232,6 +5371,7 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
   CTX-RGPD:
     base:
       L1:
@@ -5358,6 +5498,7 @@ lista_ids:
         - {id: GOV-007, origem: base, cap: '14'}
         - {id: GOV-009, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5607,6 +5748,7 @@ lista_ids:
         - {id: GOV-011, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5882,3 +6024,4 @@ lista_ids:
         - {id: GOV-012, origem: base, cap: '14'}
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
+        - {id: GOV-015, origem: base, cap: '14'}

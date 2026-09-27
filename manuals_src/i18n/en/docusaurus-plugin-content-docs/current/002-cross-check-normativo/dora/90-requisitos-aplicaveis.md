@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: d2aa23d3a141bc6aae408fa7a32bcacd23a303d0c5e53353018ca4967495d883
+  source_sha256: f87b555f1a5426df3c9b987e0ab481dd9b6c2eb395f3d2f112a42f9ee78e2504
   source_commit: null
-  target_sha256: 0516c30309bfdd8bebf4018a3d48f919b9c9717218efbcbc9217ce44c6abdeb7
+  target_sha256: 2cedfeb2676f69f6004e9383ffe679fc00b19d05f173b6a28be5c54c06a0475c
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -68,10 +68,11 @@ The organisation is one of the financial entities listed in Article 2(1) of Regu
 | CTX-DORA-P07 | `AUT-001` | — | mandatory | Strong authentication for remote access to the entity's network, for privileged access, for access to ICT assets supporting critical or important functions and to ICT assets that are publicly accessible. | Delegated Regulation (EU) 2024/1774, Article 21, point (f)(ii); Article 33, point (d) (simplified framework): “the use of strong authentication methods in accordance with leading practices and techniques for remote access to the financial entity’s network, for privileged access, for access to ICT assets supporting critical or important functions or ICT assets that are publicly accessible” (DORA-RTS1774-21-f-ii, DORA-RTS1774-33-d) | admitted |
 | CTX-DORA-P08 | [Policy 10 §9](/sbd-toe/assets/policies/policy-dependencias#9-auditoria-periódica) | FCI | mandatory; frequency of automated vulnerability scanning ≥ weekly (“on at least a weekly basis”) | Automated vulnerability scanning of the ICT assets supporting critical or important functions, not only of dependencies and images. | Delegated Regulation (EU) 2024/1774, Article 10(2), point (b), and second subparagraph: “financial entities shall perform the automated vulnerability scanning and assessments on ICT assets for the ICT assets supporting critical or important functions on at least a weekly basis” (DORA-RTS1774-10-2-b) | not admitted |
 | CTX-DORA-P09 | `OPS-005` | FCI | mandatory | — | Delegated Regulation (EU) 2024/1774, Article 23(2), point (b): “tools generating alerts for anomalous activities and behaviour, at least for ICT assets and information assets supporting critical or important functions” (DORA-RTS1774-23-2-b) | not admitted |
+| CTX-DORA-P10 | `GOV-015` | — | mandatory | Responsible disclosure to clients, counterparties and the public. | Delegated Regulation (EU) 2024/1774, Article 10(2), point (e): “establish procedures for the responsible disclosure of vulnerabilities to clients, counterparties, and to the public” (DORA-RTS1774-10-2-e) | not admitted |
 
 ## How to read the list {#como-se-le}
 
-Key: ✔ base selection for the level; ▲ elevated by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
+Key: ✔ base selection for the level; ▲ elevated or added by the regime (applies by the regime; if the component does not exist, a documented justification of non-applicability is required); — not selected.
 
 **Activation rule.** Effective requirements = technical selection ∪ elevated ∪ added. Ids with origin “base” enter only if the technical selection (the application's technical context) activates them. An elevated or added id without technical activation is not dropped silently: it enters flagged “applies by the regime; if the component does not exist, a documented justification of non-applicability is required” (model of Implementing Regulation (EU) 2024/2690, Article 2).
 
@@ -353,6 +354,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-DORA-P10 |
 
 ## Requirement list — FCI {#lista-fci}
 
@@ -632,6 +634,7 @@ Key: ✔ base selection for the level; ▲ elevated by the regime (applies by th
 | `GOV-012` | Active maturity model with measured and planned evolution | — | — | ✔ | — |
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
+| `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-DORA-P10 |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -639,8 +642,8 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 116 |
+| Covers | 117 |
 | Partial | 138 |
 | Supports evidence | 123 |
-| Gap | 15 |
+| Gap | 14 |
 | Out of scope | 234 |

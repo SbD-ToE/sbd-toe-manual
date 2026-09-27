@@ -460,8 +460,8 @@ itens:
       pt: artefactos sem proveniência verificável rejeitados automaticamente
       en: artefacts without verifiable provenance rejected automatically
   falta:
-    pt: Sem vulnerabilidades conhecidas à saída e integridade dos artefactos; falta o mecanismo de atualização segura no produto entregue ao utilizador (lacuna já registada no mapa CRA, anexo I, parte I, ponto 2, al. c)).
-    en: No known vulnerabilities at release and integrity of artefacts; the secure update mechanism in the product delivered to the user is missing (gap already recorded in the CRA map, Annex I, Part I, point (2)(c)).
+    pt: Sem vulnerabilidades conhecidas à saída e integridade dos artefactos; o mecanismo de atualização segura no produto entregue ao utilizador só está prescrito para produtos CRA (CTX-CRA-R02); não há contexto CSA.
+    en: No known vulnerabilities at release and integrity of artefacts; the secure update mechanism in the product delivered to the user is prescribed only for CRA products (CTX-CRA-R02); there is no CSA context.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -956,12 +956,18 @@ itens:
   acto_fonte: 32019R0881
   referencia: Art. 55.º, n.º 1, alínea c)
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: Sem contacto/canal publicado para receção de vulnerabilidades (security.txt ou equivalente) nem política de divulgação coordenada.
-    en: No published contact/channel for receiving vulnerabilities (security.txt or equivalent) nor coordinated disclosure policy.
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1279,7 +1285,7 @@ itens:
   acto_fonte: 32024R0482
   referencia: Art. 8.º, n.º 6, alínea b)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -1308,9 +1314,15 @@ itens:
     citacao:
       pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
       en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
-  falta:
-    pt: Procedimentos de gestão de vulnerabilidades descritos (triagem, exceções, rastreabilidade); falta o procedimento de divulgação de vulnerabilidades.
-    en: Vulnerability management procedures described (triage, exceptions, traceability); the vulnerability disclosure procedure is missing.
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1593,7 +1605,7 @@ itens:
   acto_fonte: 32024R0482
   referencia: Art. 27.º, n.º 1, alínea a)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -1632,9 +1644,15 @@ itens:
     citacao:
       pt: Deve ser escalada para o prazo de remediação mais curto do programa, independentemente do seu CVSS ou EPSS.
       en: It must be escalated to the programme's shortest remediation deadline, regardless of its CVSS or EPSS.
-  falta:
-    pt: Monitorização contínua de CVE em dependências e de exploração (KEV); faltam as comunicações de utilizadores e investigadores (sem canal de receção).
-    en: Continuous monitoring of CVEs in dependencies and of exploitation (KEV); communications from users and researchers are missing (no reception channel).
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1804,9 +1822,17 @@ itens:
     citacao:
       pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
       en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
   falta:
-    pt: Processo interno de tratamento de vulnerabilidades (deteção, triagem, SLA, exceções, rastreabilidade) prescrito; sem alinhamento à EN ISO/IEC 30111 e sem receção externa, verificação de relatos e divulgação.
-    en: Internal vulnerability handling process (detection, triage, SLA, exceptions, traceability) prescribed; no alignment with EN ISO/IEC 30111 and no external reception, verification of reports and disclosure.
+    pt: Processo interno e receção de relatos externos prescritos (TST-003, GOV-015); sem alinhamento explícito à EN ISO/IEC 30111.
+    en: Internal process and reception of external reports prescribed (TST-003, GOV-015); no explicit alignment with EN ISO/IEC 30111.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1820,12 +1846,18 @@ itens:
   acto_fonte: 32024R0482
   referencia: Art. 33.º, n.º 2
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: Sem métodos publicados de receção de vulnerabilidades de fontes externas.
-    en: No published methods for receiving vulnerabilities from external sources.
+  resposta:
+  - tipo: requisito
+    alvo: GOV-015
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Política de divulgação coordenada de vulnerabilidades publicada, com o âmbito dos sistemas abrangidos e um canal de receção de relatos externos
+      en: Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

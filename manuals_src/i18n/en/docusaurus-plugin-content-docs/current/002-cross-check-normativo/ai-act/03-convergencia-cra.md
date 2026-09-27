@@ -7,16 +7,16 @@ tags: [ai-act, cra, convergencia, presuncao-conformidade, ciberseguranca]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/03-convergencia-cra.md
-  source_sha256: c42fa4ae835143c565fe68fba8d280b4c7d0f033260d342269033277f871598a
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 787ff48dd628cbd16daf9e7c2e425cd73e644b7a3897bbf63438e60e21875e2f
+  source_sha256: 4b103fa96a277c521a9f7d5ac9afeb6522221c992268669ffbec58451778d580
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: 0f89eb076b523f3c150450cfea4431ffb7467d74d09808273def9940dfd08943
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_pde, cycle_iteration, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_system, eu_ce_marking, eu_notified_body, framework_source_corpus, layer, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, transversal]
   glossary_sha256: a153fcd1e6e13158e378c7522be9cdb0f87d2d42ab387c4070ad881367e02070
-  translated_at: 2026-09-26T23:27:13Z
-  stamped_at: 2026-09-26T23:27:13Z
+  translated_at: 2026-09-27T00:04:39Z
+  stamped_at: 2026-09-27T00:04:39Z
   reviewed_by: null
 ---
 
@@ -53,7 +53,7 @@ CRA Art. 12 refers the assessment to the **conformity assessment procedure of Ar
 | Product cybersecurity | Art. 15 | Annex I, Parts I and II | **Presumption** (CRA Art. 12) |
 | Vulnerability handling | Implicit in Art. 15 | Annex I, Part II (detailed) | Common technical basis — the presumption (CRA Art. 12) is the conformity mechanism, not the mere adoption of the process |
 | Supply chain / SBOM | Art. 15 (integrity) | Annex I | Single SBOM ([Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)) |
-| Reporting | Art. 73 (serious incidents) | Art. 14 (actively exploited vulnerabilities / severe incidents to ENISA) | **Separate** channels, shared detection basis ([Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) |
+| Reporting | Art. 73 (serious incidents) | Art. 14 (actively exploited vulnerabilities / severe incidents, to the coordinating CSIRT and ENISA: 24 h / 72 h / final report) | **Separate** channels, shared detection basis ([Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) |
 | CE marking / declaration | Art. 43, 47–49 | CRA assessment | Coordinated via Art. 12 |
 | Data governance, human oversight, transparency, FRIA | Art. 10, 13, 14, 27 | — | **AI Act only** (outside the CRA and SbD-ToE) |
 
@@ -61,7 +61,7 @@ CRA Art. 12 refers the assessment to the **conformity assessment procedure of Ar
 
 **AI Act only** (not covered by the CRA presumption): risk management (Art. 9), data governance and bias (Art. 10), human oversight (Art. 14), transparency (Art. 13 and 50), fundamental rights impact assessment (Art. 27) and the GPAI obligations (Art. 53/55). The presumption in Article 12 of the CRA **covers only Article 15** (cybersecurity) - all the other high-risk obligations of the AI Act remain in full.
 
-**CRA only**: vulnerability handling throughout the whole lifecycle (Annex I, Part II), coordinated vulnerability disclosure, the obligation to provide security updates and a support period, and the reporting of actively exploited vulnerabilities to ENISA/CSIRT (Art. 14).
+**CRA only**: vulnerability handling across the whole lifecycle (Annex I, Part II), coordinated vulnerability disclosure, the obligation to provide security updates and the support period, and the reporting of actively exploited vulnerabilities to the CSIRT designated as coordinator and to ENISA (Art. 14).
 
 ## Duplication Risks (Avoid) {#riscos-de-duplicação-evitar}
 
@@ -108,7 +108,7 @@ It does not replace it. It creates a **presumption of conformity** with Art. 15 
 The CRA process is implemented (Annex I, Part II) — it is the most detailed and serves as the common base. It does not, on its own, satisfy Art. 15: the presumption of Article 12 of the CRA also requires Part I and its demonstration in the EU declaration of conformity, and covers only cybersecurity (not accuracy or robustness).
 
 **Q4. Are the reports the same?**
-No. The AI Act (Art. 73, serious incidents) and the CRA (Art. 14, actively exploited vulnerabilities/severe incidents to ENISA) have different triggers, deadlines and channels. They share **technical detection** ([Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)); submission is parameterised by regulation.
+No. The AI Act (Art. 73, serious incidents) and the CRA (Art. 14, actively exploited vulnerabilities/severe incidents, to the coordinating CSIRT and ENISA) have distinct triggers, time limits and channels. They share the **technical detection** ([Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)); submission is parameterised per regulation.
 
 ## References {#referências}
 

@@ -6,16 +6,16 @@ tags: [exemplos, incidentes, reporte, dora, template]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/04-exemplo-relatorio-incidentes.md
-  source_sha256: 90de6b890943bad9252f07bc9b7254b92fa5e18dc4b2091b28ff7ca0e0e40e93
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: b7399a52ab4645ec89cf4d5e01745413d7bb5cf713d08f2c070e24f8509fd5fa
+  source_sha256: ce89d3a64dfc40f22119d5d7f518ae547049c1a3786611776b2336e8065415ca
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: ccd7206959c1e008c54522e1153344b08feca048362268a7d6711e6b346ce701
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: aa9660cd34b7e5284bf74e41acd3af6ce8f366c12c19adb198082b2a2d2a24a7
-  translated_at: 2026-09-26T23:27:18Z
-  stamped_at: 2026-09-26T23:27:18Z
+  glossary_keys: [cra_actively_exploited_vulnerability, cra_pde, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 904288482a68387568aa1d2c0f456ba34be2277354ab56decd5d10cb7ac3d95f
+  translated_at: 2026-09-27T00:04:42Z
+  stamped_at: 2026-09-27T00:04:42Z
   reviewed_by: null
 ---
 
@@ -215,6 +215,8 @@ This template structures incident ticketing systems:
 - [ ] Archive for 3+ years (audit trail)
 
 ---
+
+> 📌 **CRA in parallel.** If the incident involves an actively exploited vulnerability, or a severe incident, in a product with digital elements that the organisation places on the market, the CRA also applies, Article 14 (since 11 September 2026): early warning notification ≤24 h, notification ≤72 h and final report, to the CSIRT designated as coordinator and to ENISA, via the single reporting platform.
 
 ## Log Retention {#retenção-de-logs}
 

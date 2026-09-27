@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/02-playbook.md
-  source_sha256: b99a3d6b88861396919b7d457fe734be66c633ffb31067374f2c8d439095cd8b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a8edb542072e5bcb686fe6e8313fe1265f67bf69f8224bce6d2c45082accb729
+  source_sha256: 53092b9a6f1b0b5e2d1e37fc930c1520f90bbc18506e3e3d2f701b8e53005e0d
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: 30a54d7173abebf049cea71a0bf698b769fbe36ae2b71ad69d110ae014826c7c
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cycle_iteration, lifecycle_phase, papel_suporte, requirement_runtime, sbdtoe_sbd, validation_evaluation]
-  glossary_sha256: 38fa44177b0739adb349746c51490071547124e79aa08753aee0d4c31cd5a286
-  translated_at: 2026-09-26T18:11:55Z
-  stamped_at: 2026-09-26T18:30:49Z
+  glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
+  glossary_sha256: 4ed3643be5263bd3398a33c3ebb893c1ecab3802434417249277e004ff8a5a75
+  translated_at: 2026-09-27T00:04:41Z
+  stamped_at: 2026-09-27T00:04:41Z
   reviewed_by: null
 ---
 
@@ -95,7 +95,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 ### Phase 6 (M5–M6): Active Exploitation Reporting {#fase-6-m5m6-reporte-de-exploração-ativa}
 1. Define criteria for "actively exploited" (IOC, confirmed telemetry)  
 2. Create a script to export incident JSON + SBOM of the affected component  
-3. Runbook for notifying the authority / CSIRT designated as coordinator and a user communication matrix  
+3. Notification runbook for the CSIRT designated as coordinator and ENISA, via the single reporting platform (early warning ≤24 h, notification ≤72 h and final report (Art. 14; applicable since 11.9.2026)), and a communication matrix for users (Article 14(8))  
 4. Internal exercise simulation  
 **Evidence:** Script; runbook; exercise report; communication matrix
 
@@ -155,12 +155,12 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 - [ ] Reporting channel operational (email/portal)
 - [ ] Internal triage runbook
 - [ ] Security point of contact identified
-- [ ] Mean response time `<`5 business days
+- [ ] Average response time `<`5 business days for reports with no indication of exploitation; with an indication of active exploitation, triage ≤4 h and the Article 14 track (the Manual's choice)
 
 ### Exploitation Reporting Checklist {#checklist-reporte-exploração}
 - [ ] "Actively exploited" criteria defined
 - [ ] JSON export script ready
-- [ ] Authority notification runbook
+- [ ] Article 14 notification runbook (24 h / 72 h / final report)
 - [ ] User communication matrix
 - [ ] Simulation completed
 - [ ] Test evidence archived
@@ -190,7 +190,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 | Critical MTTP | Mean time to critical patch | ≤15 days |
 | % SLA Met | (Vulns patched within SLA) / total | ≥90% |
 | SBOM Coverage | % of components identified | ≥95% |
-| Mean Disclosure Response Time | Receipt → first response | ≤5 business days |
+| Mean Disclosure Response Time | Receipt → first response | ≤5 business days with no indication of exploitation; triage ≤4 h with an indication of active exploitation (the Manual's choice) |
 | Gate Effectiveness | Releases blocked due to critical CVE | 100% blocked |
 | Active Critical Exceptions | No. of open critical exceptions | Downward trend |
 

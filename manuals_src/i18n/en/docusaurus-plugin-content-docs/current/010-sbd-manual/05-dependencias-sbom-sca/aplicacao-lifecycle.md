@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md
-  source_sha256: c80efddb32381fb1b56c78c6ecbcddfcfe5eb9fb37b79ccca9bd7c81d9bd9c61
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 593a3d8eee7b10854d8605a636130d4bc172d32f937c665a8a024e1b10da2140
+  source_sha256: 0aac69cfc7eb6856a75809789948b4ec1e30d3d9222459806397a8996b0d5bdc
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: 3b65a4ee562d321a8757bd125db4592db2ea11a08bd701df27360cd202a58f08
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [avaliacao, chapter_role, como_fazer, cycle_iteration, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 13943e9e18381a56f9a74f8b5e67e48bdb5fe655074c036883b757b88deea2fe
-  translated_at: 2026-09-26T08:45:28Z
-  stamped_at: 2026-09-26T18:33:52Z
+  glossary_keys: [avaliacao, chapter_role, como_fazer, cra_pde, cycle_iteration, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: f5a983cfcc9856f17c8558b5cf1fc5b3d8ca697b5b3aa1cfa049e8a5b947c60d
+  translated_at: 2026-09-27T00:04:43Z
+  stamped_at: 2026-09-27T00:04:43Z
   reviewed_by: null
 ---
 
@@ -571,6 +571,8 @@ Signed `sbom-<build>.json`; `inventario-runtime-<servico>-<ambiente>.json`; feed
 | L1 | Yes | 5 working days | 30 days | Alert only on deployed *high/critical* without compensating measures. |
 | L2 | Yes | 2 working days | 14 days | Include *medium* in exposed services; automatic escalation. |
 | L3 | Yes | 1 working day | 7 days | *Blockers* with auto-rollback/kill-switch where applicable. |
+
+> These SLAs are the Manual's choice. A vulnerability with an indication of active exploitation in a product with digital elements that the organisation places on the market leaves this ladder: triage ≤4 h and, if confirmed, the CRA Article 14 track (early warning notification ≤24 h to the CSIRT designated as coordinator and to ENISA).
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |

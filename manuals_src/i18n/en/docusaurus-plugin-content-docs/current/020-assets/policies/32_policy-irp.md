@@ -8,16 +8,16 @@ sidebar_position: 32
 translation:
   source_locale: pt
   source_path: 020-assets/policies/32_policy-irp.md
-  source_sha256: a5f45c1b6801118f58f6aa469c91b24798d75a9f9b66dac151ad87de1fee00ae
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 436dafa43d18a6f0ef830d212b0f4c4167b9354bf6fc5630e8ba1227a271b12a
+  source_sha256: 2aea934bd2fedbcbe331e39f00e83e3ead56b3b2a6e55ef7568a6ed08ef7440d
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: b4ba80ac10c3398524c94f07cd45c6eab85b3343bb20d19d8b4b50d94f1b8d5a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, dora_financial_entity, dora_major_ict_incident, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 86b0fb42ba06238ee254c570a19b867a04691b83c4b33aacbb3b1f136e071d1c
-  translated_at: 2026-09-26T23:27:32Z
-  stamped_at: 2026-09-26T23:27:32Z
+  glossary_keys: [audit_trail, cra_actively_exploited_vulnerability, cra_pde, dora_financial_entity, dora_major_ict_incident, gdpr_personal_data_breach, lifecycle_phase, nis2_essential_entity, nis2_significant_incident, role_tech_lead, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 471c1bbbd1f708cb6d3e1bdf796065d2ca7f828b8dd21e4226df3789b003b6e3
+  translated_at: 2026-09-27T00:04:46Z
+  stamped_at: 2026-09-27T00:04:46Z
   reviewed_by: null
 ---
 
@@ -138,6 +138,7 @@ Some incidents require notification to regulatory authorities within defined dea
 | GDPR - Art. 33 | Personal data breach | ≤ 72 hours after becoming aware |
 | DORA - Art. 19 + Delegated Regulation (EU) 2025/301, Art. 5 | Major ICT-related incident (financial entity) | Initial notification ≤ 4 h after classification as major and ≤ 24 h after becoming aware; intermediate report ≤ 72 h after the initial notification; final report ≤ 1 month after the latest intermediate report |
 | NIS2 - Art. 23 | Significant incident in an essential/important entity | ≤ 24 hours (early warning) + 72 hours (notification) |
+| CRA - Art. 14 (applicable since 11.9.2026) | Actively exploited vulnerability or severe incident in a product with digital elements placed on the market by the organisation | To the CSIRT designated as coordinator and to ENISA, via the single reporting platform: early warning ≤ 24 h; notification ≤ 72 h; final report ≤ 14 days after the corrective measure (vulnerability) or ≤ 1 month after the notification (severe incident) |
 
 :::warning
 The determination of whether an incident is notifiable must be made by GRC/Compliance with the support of the Data Protection Officer (DPO) where applicable. The time limit starts to run from the moment the organisation becomes aware of the incident - not when the root cause is identified. Under DORA, the 4 h time limit runs from the classification of the incident as major (with a limit of 24 h from awareness) and the 72 h time limit runs from the initial notification (Delegated Regulation (EU) 2025/301, Art. 5).

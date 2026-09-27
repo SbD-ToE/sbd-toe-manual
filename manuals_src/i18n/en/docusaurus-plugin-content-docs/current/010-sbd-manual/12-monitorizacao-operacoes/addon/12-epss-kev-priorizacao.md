@@ -7,15 +7,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/12-epss-kev-priorizacao.md
-  source_sha256: eb3e940641d8a491c7cdc09b3a3240b4cedb770339cefdf2787e5d2f38244922
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 05c46d51d6eaab1d72a918b6e0b4d8ba7c7eefa864f6a4a0f912c46df4597c82
+  source_sha256: e4b719230fd49448bb4c39bf192728148eb9f2a82737b971c2ceeeb35b9d11cc
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: 6939f453f1ea14351bfc30afbc188171697e3962e6e4899fe416dc54a1a0f646
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: ebb6c6bf48bf281085379aa982dcfe014d642265f07b08070d51366e58764173
-  glossary_keys: [discipline, framework_source_corpus, layer, piso_limiar, piso_relacao, programme_line, regra_de_fecho]
-  glossary_sha256: 585b06b5473a5fb253ee162b29aec0ccf27165a22b9028b5718ad91952bb5367
-  translated_at: 2026-09-26T11:17:32Z
+  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  glossary_keys: [cra_pde, discipline, framework_source_corpus, layer, mcp_reading_programa, piso_limiar, piso_relacao, programme_line, regra_de_fecho]
+  glossary_sha256: 58484546e2fdac49a108e4585f2f09e6ecac4a9df61823280a64cd9dd0dab792
+  translated_at: 2026-09-27T00:04:44Z
+  stamped_at: 2026-09-27T00:04:44Z
   reviewed_by: null
 ---
 
@@ -60,7 +61,7 @@ The CISA KEV catalogue, established by *Binding Operational Directive* 22-01, li
 
 The presence of a CVE in the KEV changes the nature of the decision:
 
-- A vulnerability in the KEV is no longer a hypothetical risk — it is being exploited. **It must be escalated to the programme's shortest remediation deadline, regardless of its CVSS or EPSS.**
+- A vulnerability in the KEV is no longer a hypothetical risk — it is being exploited. **It must be escalated to the programme's shortest remediation deadline, regardless of its CVSS or EPSS.** If it affects a product with digital elements that the organisation places on the market, it also triggers the CRA notification, Article 14 (early warning ≤24 h to the CSIRT designated as coordinator and to ENISA).
 - The **absence** of a CVE from the KEV **does not mean absence of exploitation** — it only means that there is, as yet, no confirmed and catalogued exploitation. Absence from the KEV is not proof of safety.
 
 ---

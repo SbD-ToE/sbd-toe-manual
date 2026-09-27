@@ -8,16 +8,16 @@ sidebar_position: 18
 translation:
   source_locale: pt
   source_path: 020-assets/policies/18_policy-gestao-segredos.md
-  source_sha256: 248ce20e1be6bfeee30f2d275af020b14124750ca559270c823f6f220863bab3
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: 23c305659689aabd6e65d6188f7aa49077affd32bbcd0e3e8dfc288156ea40bb
+  source_sha256: b6fb77fc28341d52ec4268b349d3ac528292c2e52c57a3f79ebf25c15f3b80ea
+  source_commit: 7374046ddbdd39c675f87192be9d72abc31356ae
+  target_sha256: 1775ec15f9370b51b4c1e32f531d0548a1144ba86761b1e09c76fb7e310bc607
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
   glossary_sha256: 077f37bc925ed0aa91cdef68a608b0b398676281e1f550abaa13dcefb6ad59b5
-  translated_at: 2026-09-26T23:27:30Z
-  stamped_at: 2026-09-26T23:27:30Z
+  translated_at: 2026-09-27T00:04:45Z
+  stamped_at: 2026-09-27T00:04:45Z
   reviewed_by: null
 ---
 
@@ -225,11 +225,11 @@ The previous chapters cover classic secrets — *tokens*, keys, credentials. Whe
 
 Each operational use in which the agent sees PII has a **declared GDPR legal basis** — Art. 6 (consent, contract, legal obligation, legitimate interest, etc.) and, for special categories (Art. 9), a reinforced legal basis. The legal basis is part of the agent's *mandate* (Policy 38 — add the field `legal_basis` where applicable) or of the project's processing record, and it is revisited in the periodic reviews.
 
-### 10.3 Sub-processors {#103-sub-processadores}
+### 10.3 Processors {#103-sub-processadores}
 
 The model *provider* is a **processor** when it processes personal data on behalf of the organisation (GDPR, Art. 28); if the organisation is itself a processor, the *provider* is «another processor» (Art. 28(2) and (4)). The contractual clause set out in [Policy 33 §10](./policy-contratacao-segura) applies:
 
-- Sub-processor contract with explicit clauses (retention, *training opt-out*, audit rights).
+- Contract with the processor (GDPR, Article 28(3)) with explicit clauses (retention, *training opt-out*, audit rights).
 - Processing location documented; *Standard Contractual Clauses* (SCCs) or another valid mechanism for international transfers (GDPR Arts. 44–49) when the *provider* processes outside the EEA.
 - **No PII to *providers* outside the approved list** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
@@ -254,7 +254,7 @@ When the user's interaction with the agent generates personal data, the GDPR rig
 |---|:--:|:--:|:--:|
 | Minimisation / redaction before sending | Recommended | Mandatory where feasible | Mandatory (special categories always redacted) |
 | Declared legal basis | Recommended | Mandatory | Mandatory (GRC review) |
-| Sub-processor with Art. 28 clauses | Mandatory (whenever there is PII) | Mandatory | Mandatory + Legal review |
+| Processor with Article 28 clauses | Mandatory (whenever there is PII) | Mandatory | Mandatory + Legal review |
 | Contracted *training opt-out* | Mandatory (whenever there is PII) | Mandatory | Mandatory |
 | EEA location / SCCs where applicable | Mandatory (when there is PII and processing outside the EEA) | Mandatory | Mandatory (preference for processing in the EEA) |
 | Redaction of PII in the `audit events` ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) | Recommended | Mandatory | Mandatory |

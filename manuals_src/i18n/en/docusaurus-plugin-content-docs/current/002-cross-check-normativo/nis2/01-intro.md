@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/01-intro.md
-  source_sha256: ed56bc3eeb54cdb5a364d502afae2e7a000d766503874a4402606b2c5228a6a0
-  source_commit: 5c2b16d193f5e7fe0cc6b566c47e456677cca656
-  target_sha256: e4632608d7607b1c4e7498601b7c87d0706c80156e86359c658c900aac323f8e
+  source_sha256: d03663e980ee91b8f9d1ee49c6ea2d3c5ed786b6baf8c82c3072117a484e6f0f
+  source_commit: 340729d3c6203de3d943929de2e7a3d81bcfc89f
+  target_sha256: 46c984b19eb55cd474366e6c6cf47009abddb072a16d6cbf66ff93e34a502bbe
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, gap_family, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, verificacao_check, verification_taxonomy]
-  glossary_sha256: 2ae14a21f4f058c8b6407e4751c715b4136d395e7233f4a9c71e073837fabfdb
-  translated_at: 2026-09-27T13:29:49Z
-  stamped_at: 2026-09-27T13:29:49Z
+  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, verificacao_check, verification_taxonomy]
+  glossary_sha256: 3bb641a0c583f19bee78c4198ded7b3d64488786d6f104045d376e53ec03e28e
+  translated_at: 2026-09-27T14:46:10Z
+  stamped_at: 2026-09-27T14:46:10Z
   reviewed_by: null
 ---
 
@@ -81,7 +81,7 @@ In 2024/2025, the Commission and ENISA published technical guidance and practica
 |---|---|---|
 | Policies on risk analysis | Ch. 02, Ch. 03 | Security requirements, threat modelling |
 | Incident handling | Ch. 12 | Detection, response, post-incident |
-| Business continuity/crisis management (backups, DR) | Ch. 11, Ch. 12 | Partial: runbooks, response exercises and tested rollback; backups, restore tests and disaster recovery of the systems not yet prescribed |
+| Business continuity/crisis management (backups, DR) | Ch. 11, Ch. 12 | Response runbooks and exercises; backups with tested restore (OPS-016); recovery objectives and procedure for the application (OPS-017, L2/L3); the entity's BCM and crisis management outside the Manual |
 | Supply chain security | Ch. 05, Ch. 14 | SBOM/SCA, dependencies, contractual requirements |
 | Security in development | Ch. 06, Ch. 07, Ch. 08 | Secure development, CI/CD, IaC |
 | Effectiveness assessment | Ch. 10, Ch. 12 | Security testing, continuous monitoring |
@@ -186,21 +186,22 @@ NIS2 calls for business continuity, crisis management, tested backups and DR, an
 | NIS2 requirement | SbD-ToE chapter | Coverage |
 |---|---|---|
 | Response/recovery runbooks and exercises | Ch. 12 | Runbooks, exercises, tests |
-| Backups with restore tests | — | Not yet prescribed: only the pre-deploy snapshot (Policy 27 §3) and the backup of the secrets vault (Policy 18 §4) exist |
+| Backups with restore tests | Ch. 12 | Backups with tested restore ([`OPS-016`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#catálogo-ops---monitorização-e-operações)), with a cadence by level |
 | Logging/observability "by design" | Ch. 12 | Logging, observability, retention |
 
 **What SbD-ToE covers**
 
 - Response/recovery runbooks and exercises (Ch. 12).
+- Backups with tested restore (OPS-016) and recovery objectives and procedure for the application (OPS-017).
 - Logging/observability "by design" (Ch. 12), with guidance on retention that can be aligned with standards.
 
 **Intentional gaps**
 
 Retention periods and exact log fields: these vary between NIS2, DORA and sectoral regimes; the manual defines "logs with mandatory fields" and leaves the final fields to be plugged in according to the applicable normative framework (NIS2 here). Broad business continuity, corporate BCM and institutional crisis management may also require artefacts outside the core manual.
 
-**Gap to cover**
+**Redundancy and continuity**
 
-Backups, restore tests and disaster recovery of the systems that the Manual governs (Article 21(2), point (c); Implementing Regulation (EU) 2024/2690, Annex, points 4.1 and 4.2) are not yet prescribed. Rollback ([`DPL-005`](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy#catálogo-dpl---deploy-seguro)) reverts a deployment; it does not recover data or systems.
+Backups with tested restore (OPS-016) and recovery of the application (OPS-017) are prescribed. At least partial redundancy of the systems (Implementing Regulation (EU) 2024/2690, Annex, point 4.2.4) applies only to the relevant entities, as a requirement of the NIS2 context (see [Applicable requirements](/sbd-toe/cross-check-normativo/nis2/requisitos-aplicaveis)). The entity's business continuity and crisis management remain outside the Manual.
 
 **How to comply**
 

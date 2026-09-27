@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/02-playbook.md
-  source_sha256: f970b50495359aac6fcfdced51a545037b01234a3d16f84dca4506bbe6042d73
-  source_commit: 5c2b16d193f5e7fe0cc6b566c47e456677cca656
-  target_sha256: 431f6689517aec18701f81401f582507005e2a9f6645937e45929cf6dd55506d
+  source_sha256: 546f624d145292498cd0b740e9c1b265a457b7afbd821ac1fed3fe128534bbc9
+  source_commit: 340729d3c6203de3d943929de2e7a3d81bcfc89f
+  target_sha256: d0a89d42cb39d47bd91fc14b82db1b69beaca94143c58b67ec529c2d1696b85b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [capacitacao, chapter_role, cycle_iteration, dora_ict_risk, eu_management_body, eu_startups, framework_source_corpus, layer, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: dd3ae5f155064b4b5ed7a026cf14fb36e9b1023c60ddd423adaa04c09b358425
-  translated_at: 2026-09-27T13:29:48Z
-  stamped_at: 2026-09-27T13:29:48Z
+  translated_at: 2026-09-27T14:46:09Z
+  stamped_at: 2026-09-27T14:46:09Z
   reviewed_by: null
 ---
 
@@ -120,7 +120,7 @@ This playbook maps **DORA requirements (Regulation (EU) 2022/2554) to practical 
 - **What:** monitor, react, contain, recover and learn from events and deviations
 - **How:** structured logging; alerts with SLAs; rollback; runbooks; metrics; continuous training
 - **Trail:** operational evidence, post-incident reviews, KPIs and reporting
-- **Limit:** backups, restore tests and continuity plans (Articles 11 and 12; Delegated Regulation (EU) 2024/1774, Article 8(2), point (b)(i)) are not yet prescribed in the Manual. Rollback (Ch. 11) reverts a deployment; it does not recover data or systems.
+- **Recovery:** backups with tested restore (OPS-016) and recovery objectives and procedure for the application (OPS-017); redundant capacities and switchover tests for critical or important functions are a requirement of the DORA context. The entity's continuity plans (Article 11) remain outside the Manual.
 - **References:** [Ch. 11 - Secure Deployment](/sbd-toe/sbd-manual/deploy-seguro/intro), [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 13 - Training and Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
 ---

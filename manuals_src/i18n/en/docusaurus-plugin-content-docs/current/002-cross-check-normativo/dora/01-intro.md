@@ -7,16 +7,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/01-intro.md
-  source_sha256: 415fd175088f8e6f5519d4c255d4313a580b10f16656de99826582967f1ef98d
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 7a9ca124a6d944392dfa458c865393ac52154735f35a9d0b4b0238a2209f3220
+  source_sha256: cc92827634e160bb7ea5ad1dc3a61bc30e484d1960ee2e4b42407c30f34c1949
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: 68de4d5914e8e520e4798d76c7c81886e6e41e17eed1790caf827bfdf83d547b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, dora_ict_rmf, dora_ict_tpp, dora_major_ict_incident, dora_register_of_information, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
   glossary_sha256: ff9e9c7c0e48c0bfc306a7cdfc46074c67f972a6fafd399ec6fc1eaa64ef69d0
-  translated_at: 2026-09-27T07:53:31Z
-  stamped_at: 2026-09-27T07:53:31Z
+  translated_at: 2026-09-27T08:02:34Z
+  stamped_at: 2026-09-27T08:02:34Z
   reviewed_by: null
 ---
 
@@ -278,7 +278,7 @@ DORA Art. 5 establishes that **digital resilience is the ultimate responsibility
 | Process | SbD-ToE | DORA Requirement | Gap |
 |----------|---------|----------------|-----|
 | **Exception creation** | Documents with owner, TTL, criteria | ✅ Good | ✅ Aligned |
-| **Periodic reassessment** | Review 30 days before expiry; mandatory re-approval | ✅ Good | ✅ Aligned |
+| **Periodic reassessment** | Revalidation on the expiry date, with an alert 15 days before (Policy 05 §7, the Manual's choice); re-approval mandatory | ✅ Good | ✅ Aligned |
 | **Centralised tracking** | GRC tool; audit trail per application | ✅ Good | ⚠️ The Manual does not describe the reporting format for DORA |
 | **Escalation to the regulator** | Not mentioned in the Manual | ⚠️ DORA requires the reporting of major ICT-related incidents (Art. 19); related exceptions must be recorded in the supporting documentation | ❌ **GAP** - No guidance on how to integrate exceptions into incident reporting |
 

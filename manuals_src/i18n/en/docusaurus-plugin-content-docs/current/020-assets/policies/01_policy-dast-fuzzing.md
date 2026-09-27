@@ -8,16 +8,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 020-assets/policies/01_policy-dast-fuzzing.md
-  source_sha256: 0d8906d64ec8ac0f1bfc4b08f59dd6e163913ebb486d6534f8afb0819e8009fa
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 1225b106419d9f291a8e6894381a8091abf30303cd9e8df6454228b89feae8c2
+  source_sha256: ec7dd8f65144a95a088f8c7aa81e5b5bf09f1049304339e543a55a8909c421f9
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: 106e01320b84c3cebb24aa8b1791a0d36889424acc099b277f3686d886162907
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 2190616af45c704d0bdde9b6b05175705cda4e10018fb8b2c46ae504cde9f3e4
-  translated_at: 2026-09-27T07:54:06Z
-  stamped_at: 2026-09-27T07:54:06Z
+  translated_at: 2026-09-27T08:02:37Z
+  stamped_at: 2026-09-27T08:02:37Z
   reviewed_by: null
 ---
 
@@ -231,7 +231,7 @@ Every exception to this policy requires:
 1. Documented technical justification
 2. Approval by an AppSec Engineer
 3. A defined and active compensating mitigation
-4. Maximum validity period: **30 days** (renewable with new explicit approval)
+4. Maximum validity period in line with Policy 05 §7, by level and severity (L1 90 days; L2 60 / 30 days; L3 30 / 14 days; Critical 7 days with a plan, not acceptable at L3), renewable with new explicit approval
 5. Formal recording in the project's exception repository
 
 Exceptions to findings of Critical severity have a maximum period of **7 days** and require additional approval from the security lead.

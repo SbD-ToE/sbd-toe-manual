@@ -7,16 +7,16 @@ tags: [exemplos, excecoes, onboarding, governance]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/05-exemplos-praticos.md
-  source_sha256: 3d993c78e35be630c0f66e7a54af8babdd9d5f8e5e3d4c279ced64fa35076a29
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: b96734cf38082ec856662f7c9fcc07e736d67ae276863837dc08365bccbd08cb
+  source_sha256: 194699e6a5227d853480ed41f5f36cee7321cd07dd3dcbb9643fbf9a9cb80c22
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: 93896b455a5822268454f58688393f99a4c289f225eb887446a9b0c07a59256e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [cycle_iteration, framework_source_corpus, requirement_runtime, risk_level, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 99e5db07a804d01bb5f51b91db49d7723358aa258b6db13bbf3fe4112c80823b
-  translated_at: 2026-09-26T17:23:54Z
-  stamped_at: 2026-09-26T18:36:14Z
+  translated_at: 2026-09-27T08:02:36Z
+  stamped_at: 2026-09-27T08:02:36Z
   reviewed_by: null
 ---
 
@@ -42,7 +42,7 @@ The application uses a legacy framework without native support for automatic val
 **Controls replaced:** VAL-002, VAL-006  
 **Compensation applied:** Validation in a proxy with schema + fuzzing tests  
 
-**Exception validity:** 6 months  
+**Exception validity:** 60 days (L2, Low/Medium — Policy 05 §7)  
 **Owner:** paula.lima@empresa  
 
 **Approvers:** AppSec + product manager  

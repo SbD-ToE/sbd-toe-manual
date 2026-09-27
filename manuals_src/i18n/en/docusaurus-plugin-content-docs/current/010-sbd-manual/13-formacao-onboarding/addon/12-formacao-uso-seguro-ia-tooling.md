@@ -6,16 +6,16 @@ tags: [formacao, ia, tooling, copilot, code-generation, llm, automacao, guardrai
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/12-formacao-uso-seguro-ia-tooling.md
-  source_sha256: 498ac2af09637140dfba9625186b6094cacc36e371e6a6314ecfadaa1d32a5e2
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a7510e2b52fb3320c84591c290e3f86952a581a37c611401c973dc91ea42aad3
+  source_sha256: 2a8dcc4235506064db118d9d6dec2edaed48916a92eecfba73e7bbfa1ba9d8fc
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: 10d909fc08b8900f7f497c661eadc0d55355802b0145a30f3cc1e855a46a226e
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [chapter_role, instrument, llm, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: f98282a1ba8014d288c86a12a7a44f2075dbdbe1b77036c829eb632a30dbca5b
-  translated_at: 2026-09-26T11:44:23Z
-  stamped_at: 2026-09-26T18:36:00Z
+  translated_at: 2026-09-27T08:02:35Z
+  stamped_at: 2026-09-27T08:02:35Z
   reviewed_by: null
 ---
 
@@ -253,7 +253,7 @@ Análise:
   - Contexto: Usado para checksum de ficheiro, não criptografia
   - É falso positivo? ✓
 Ação: "Solicitar exceção formal com justificação"
-Aprovação: "AppSec valida contexto, aprova exceção com validade 6 meses"
+Aprovação: "AppSec valida contexto, aprova exceção com validade conforme a Política 05 §7 (p. ex. 60 dias em L2)"
 ```
 
 ---

@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 020-assets/policies/12_policy-excecoes-cve.md
-  source_sha256: 232d26762c544ec525f6d5bc6ef389ce9fdf370c9982eb702038a31005547db4
-  source_commit: a75f1a5abdeee57ae29956bbc2366d15959420bb
-  target_sha256: b404af00cf59822818a05ba483a59e8456b2f731de7d7d54a0337d64a6e2f67a
+  source_sha256: a7e9003b262dc8a96630daabaf2d65a7a7901c2f7f5216dd266eed6bc2f2ea08
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: 971d894943ed1c3874b4a3e3c940b95ad39dff7e2a6b6ebfcd82dcec4fd2f9f3
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, cra_pde, framework_source_corpus, layer, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
   glossary_sha256: d08b98b471eb30727a46f86ffaccdaa8a76183dd5cfbcd23195832b870d197fc
-  translated_at: 2026-09-27T07:54:10Z
-  stamped_at: 2026-09-27T07:54:10Z
+  translated_at: 2026-09-27T08:02:38Z
+  stamped_at: 2026-09-27T08:02:38Z
   reviewed_by: null
 ---
 
@@ -174,7 +174,7 @@ The CI/CD pipeline must check the status of active exceptions in every build:
 |---|---|---|---|
 | Block the build if there is a Critical/High CVE without an approved exception | No | Yes | Yes |
 | Block the build if an exception has expired without reassessment | No | Yes | Yes |
-| Alert if an exception has less than 7 days before it expires | Recommended | Mandatory | Mandatory |
+| Alert 15 days before expiry (or at the midpoint of the TTL, if shorter than 30 days — Policy 05 §7) | Recommended | Mandatory | Mandatory |
 | Generate a report of active exceptions per build | Recommended | Mandatory | Mandatory |
 
 ---

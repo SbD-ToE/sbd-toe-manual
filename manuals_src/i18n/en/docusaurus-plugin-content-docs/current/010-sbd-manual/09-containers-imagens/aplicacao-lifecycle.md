@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: 185f2e88bfa7ffe21305ca02dcd8c67cb1b2de64873aed9ef7bb4bd9c7d6b5c9
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 68097900e4b5fec8d9349319e16fe941de216efce3e26be587929a24fec351e5
+  source_sha256: a589f923c640b81d1961d1f1c6d5d6c33043145281a73ac8ef04553c619cdb4d
+  source_commit: c4dc5e0ab3a1644a96f34a49ecae3686b35086ed
+  target_sha256: ee75854902e1f27d80f7a66749e782fdd3882b8228e4d5cf4822a12ee992aa46
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c2753e8f6683dd662128141b2367ef4a76a91da340ee5e3eaff416993b57e772
-  translated_at: 2026-09-27T07:53:49Z
-  stamped_at: 2026-09-27T07:53:49Z
+  translated_at: 2026-09-27T08:02:48Z
+  stamped_at: 2026-09-27T08:02:48Z
   reviewed_by: null
 ---
 
@@ -850,7 +850,7 @@ As **DevOps / SRE + AppSec Engineer**, I want to manage a catalogue of Golden Ba
 **Checklist.**  
 - [ ] Catalogue versioned in Git (image, digest/tag, owner, approval date, review, state: active/deprecated/revoked)
 - [ ] Minimum approval criteria documented (SBOM, scan, provenance where applicable, known EOL)
-- [ ] Review cadence defined (L2: quarterly; L3: monthly or per event)
+- [ ] Review cadence defined (L2: half-yearly; L3: monthly or upon an event)
 - [ ] Revocation process with triggers and communication (includes a rollback/patch plan)
 - [ ] Automatic blocking at L2/L3 for revoked bases (admission/pipeline gate)
 

@@ -8,13 +8,13 @@ tags: [resposta a incidentes, IRP, SOAR, integração, playbooks]
 
 # Monitorização como Suporte à Resposta
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Demonstrar como a monitorização - incluindo logs, alertas e correlação de eventos - constitui um pilar essencial para a **triagem, contenção, análise forense e melhoria contínua** da capacidade de resposta a incidentes.
 
 ---
 
-## 💢 Funções da monitorização na resposta
+## 💢 Funções da monitorização na resposta {#-funções-da-monitorização-na-resposta}
 
 | Função                    | Objetivo principal                                 |
 | ------------------------- | -------------------------------------------------- |
@@ -26,7 +26,7 @@ Demonstrar como a monitorização - incluindo logs, alertas e correlação de ev
 
 ---
 
-## ⟲ Ciclo de deteção para resposta
+## ⟲ Ciclo de deteção para resposta {#-ciclo-de-deteção-para-resposta}
 
 ```
 [Evento gerado] → [Log criado] → [Alerta disparado] → [Triagem] → [Contenção] → [Análise] → [Melhoria]
@@ -36,7 +36,7 @@ Cada etapa depende da **qualidade, contexto e disponibilidade** dos dados monito
 
 ---
 
-## 🚧 Requisitos de suporte à resposta
+## 🚧 Requisitos de suporte à resposta {#-requisitos-de-suporte-à-resposta}
 
 | Requisito                          | Justificação                                     |
 | ---------------------------------- | ------------------------------------------------ |
@@ -44,11 +44,11 @@ Cada etapa depende da **qualidade, contexto e disponibilidade** dos dados monito
 | **Contexto de utilizador/sessão**  | Atribuir ações e rastrear movimentos             |
 | **Correlação entre fontes**        | Unificar eventos de aplicação, infra, CI/CD      |
 | **Integração com IRP**             | Automatiza tickets, workflow de resposta         |
-| **Retenção de pelo menos 90 dias** | Permite investigação e auditoria retroativa (L3) |
+| **Retenção conforme a Política 29** (1 ano em L2, 2 anos em L3) | Permite investigação e auditoria retroativa |
 
 ---
 
-## 🛠️ Integração com plataformas IRP
+## 🛠️ Integração com plataformas IRP {#️-integração-com-plataformas-irp}
 
 | Tipo                       | Exemplos                                               |
 | -------------------------- | ------------------------------------------------------ |
@@ -60,7 +60,7 @@ Cada etapa depende da **qualidade, contexto e disponibilidade** dos dados monito
 
 ---
 
-## 📘 Exemplos de resposta baseada em monitorização
+## 📘 Exemplos de resposta baseada em monitorização {#-exemplos-de-resposta-baseada-em-monitorização}
 
 | Incidente identificado       | Suporte via logs e alertas                              |
 | ---------------------------- | ------------------------------------------------------- |
@@ -72,7 +72,7 @@ Cada etapa depende da **qualidade, contexto e disponibilidade** dos dados monito
 
 ---
 
-## ⟲ Integração com melhoria contínua
+## ⟲ Integração com melhoria contínua {#-integração-com-melhoria-contínua}
 
 Cada incidente ou quase-incidente deve gerar:
 
@@ -83,7 +83,7 @@ Cada incidente ou quase-incidente deve gerar:
 
 ---
 
-## ✅ Recomendações
+## ✅ Recomendações {#-recomendações}
 
 * Definir e manter **playbooks por tipo de alerta** e rota de escalamento;
 * Ligar logs a ferramentas IR para acesso imediato ao contexto;

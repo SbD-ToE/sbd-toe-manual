@@ -14,7 +14,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 
 ---
 
-## 🧭 Quando aplicar Arquitetura Segura
+## 🧭 Quando aplicar Arquitetura Segura {#-quando-aplicar-arquitetura-segura}
 
 | Fase / Evento | Ação esperada | Quem participa | Artefacto principal |
 |---|---|---|---|
@@ -31,7 +31,7 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 
 ---
 
-## 👥 Quem faz o quê
+## 👥 Quem faz o quê {#-quem-faz-o-quê}
 
 | Papel / Função | Responsabilidades-chave |
 |---|---|
@@ -44,13 +44,13 @@ Inclui **modelos reutilizáveis de user stories**, ações por papel, artefactos
 
 ---
 
-## 📝 User Stories reutilizáveis
+## 📝 User Stories reutilizáveis {#-user-stories-reutilizáveis}
 
 > **Nota editorial:** cada user story inclui, de forma consistente, **História**, **BDD**, **Checklist**, **Artefactos & evidências**, **Proporcionalidade (L1–L3)**, **Integração no SDLC** e **Ligações úteis**.
 
 ---
 
-### US-01 - Definição de princípios e baseline de arquitetura segura
+### US-01 - Definição de princípios e baseline de arquitetura segura {#us-01---definição-de-princípios-e-baseline-de-arquitetura-segura}
 
 **Contexto.**  
 No arranque de um projeto (ou épico significativo), é obrigatório estabelecer **princípios** e uma **baseline inicial**, para orientar decisões e evitar deriva arquitetural.
@@ -93,7 +93,7 @@ Como **Arquitetos de Software**, quero definir e versionar princípios de arquit
 
 ---
 
-### US-02 - Ficha de solução com controlos e rastreabilidade arquitetural
+### US-02 - Ficha de solução com controlos e rastreabilidade arquitetural {#us-02---ficha-de-solução-com-controlos-e-rastreabilidade-arquitetural}
 
 **Contexto.**  
 Durante o design, a solução deve ser descrita com **controlos arquiteturais explícitos**, minimização de exposição e ligação a requisitos/ameaças.
@@ -140,7 +140,7 @@ Como **Arquitetos de Software**, quero produzir uma ficha de arquitetura com con
 
 ---
 
-### US-03 - Revisão formal do design arquitetural
+### US-03 - Revisão formal do design arquitetural {#us-03---revisão-formal-do-design-arquitetural}
 
 **Contexto.**  
 Antes de implementar, o design deve ser revisto quanto a conformidade com princípios, requisitos e mitigação de ameaças.
@@ -181,7 +181,7 @@ Como **AppSec Engineer**, quero rever formalmente o design arquitetural, para ga
 
 ---
 
-### US-04 - Gestão de decisões arquiteturais (ADR)
+### US-04 - Gestão de decisões arquiteturais (ADR) {#us-04---gestão-de-decisões-arquiteturais-adr}
 
 **Contexto.**  
 Decisões de arquitetura críticas devem ser documentadas com alternativas e trade-offs, para preservar rastreabilidade e permitir revisão/invalidação.
@@ -224,7 +224,7 @@ Como **Arquitetos de Software**, quero registar decisões arquiteturais (ADR) co
 
 ---
 
-### US-05 - Revisão de fronteiras de confiança e integrações
+### US-05 - Revisão de fronteiras de confiança e integrações {#us-05---revisão-de-fronteiras-de-confiança-e-integrações}
 
 **Contexto.**  
 Integrações internas e com terceiros exigem revisão explícita de fronteiras de confiança e fluxos de dados (incluindo fluxos implícitos).
@@ -267,7 +267,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero rever trust boundaries 
 
 ---
 
-### US-06 - Atualização da baseline após alteração arquitetural significativa
+### US-06 - Atualização da baseline após alteração arquitetural significativa {#us-06---atualização-da-baseline-após-alteração-arquitetural-significativa}
 
 **Contexto.**  
 Alterações arquiteturais significativas invalidam decisões anteriores e exigem atualização da baseline e (quando aplicável) reavaliação de ameaças/requisitos.
@@ -311,7 +311,7 @@ Como **Developer**, quero atualizar a baseline arquitetural quando ocorrem alter
 
 ---
 
-### US-07 - Validação arquitetural automatizável no CI/CD (quando aplicável)
+### US-07 - Validação arquitetural automatizável no CI/CD (quando aplicável) {#us-07---validação-arquitetural-automatizável-no-cicd-quando-aplicável}
 
 **Contexto.**  
 Determinados controlos arquiteturais podem ser validados de forma automatizada (ou semi-automatizada). O objetivo é **produzir evidência reprodutível**, não “substituir” revisão humana.
@@ -355,7 +355,7 @@ Como **DevOps/SRE + AppSec Engineer**, quero integrar validações automatizáve
 
 ---
 
-### US-08 - Avaliação de impacto no negócio e priorização de trade-offs
+### US-08 - Avaliação de impacto no negócio e priorização de trade-offs {#us-08---avaliação-de-impacto-no-negócio-e-priorização-de-trade-offs}
 
 **Contexto.**  
 Decisões arquiteturais implicam trade-offs com impacto no negócio. A priorização deve ser explícita e rastreável.
@@ -396,7 +396,7 @@ Como **Product Owner**, quero avaliar impacto no negócio de requisitos e decis�
 
 ---
 
-### US-09 - Sincronização Threat Modeling ↔ Arquitetura
+### US-09 - Sincronização Threat Modeling ↔ Arquitetura {#us-09---sincronização-threat-modeling--arquitetura}
 
 **Contexto.**  
 Decisões de arquitetura devem refletir ameaças priorizadas e, em sentido inverso, alterações arquiteturais exigem atualização do modelo de ameaças quando aplicável.
@@ -439,7 +439,7 @@ Como **Arquitetos de Software + AppSec Engineer**, quero sincronizar arquitetura
 
 ---
 
-### US-10 - Gestão de exceções arquiteturais com controlos compensatórios
+### US-10 - Gestão de exceções arquiteturais com controlos compensatórios {#us-10---gestão-de-exceções-arquiteturais-com-controlos-compensatórios}
 
 **Contexto.**  
 Quando um requisito/controlo arquitetural não pode ser aplicado, é necessária exceção formal com controlos compensatórios, *owner* e *sunset*.
@@ -484,7 +484,7 @@ Como **Product Owner + AppSec Engineer**, quero gerir exceções arquiteturais c
 
 ---
 
-### US-11 - Triggers de “arquitetura viva” e disciplina de revisão
+### US-11 - Triggers de “arquitetura viva” e disciplina de revisão {#us-11---triggers-de-arquitetura-viva-e-disciplina-de-revisão}
 
 **Contexto.**  
 A arquitetura deve ser tratada como baseline viva. Existem eventos que obrigam a revisão e sincronização de evidência.
@@ -524,7 +524,7 @@ Como **Arquitetos de Software + DevOps/SRE**, quero manter uma lista de triggers
 
 ---
 
-### US-12 - Gate arquitetural antes do Go-live
+### US-12 - Gate arquitetural antes do Go-live {#us-12---gate-arquitetural-antes-do-go-live}
 
 **Contexto.**  
 Antes de produção, deve existir um **gate arquitetural** que confirme: controlos implementados, decisões válidas e exceções tratadas.
@@ -568,7 +568,7 @@ Como **QA + AppSec Engineer + Arquitetos de Software**, quero executar um gate a
 
 ---
 
-### US-13 - Catálogo de padrões de arquitetura segura (reutilização governada)
+### US-13 - Catálogo de padrões de arquitetura segura (reutilização governada) {#us-13---catálogo-de-padrões-de-arquitetura-segura-reutilização-governada}
 
 **Contexto.**  
 Padrões aprovados reduzem variação e risco de omissão. A reutilização deve ser governada e versionada.
@@ -611,7 +611,7 @@ Como **Arquitetos de Software**, quero manter um catálogo versionado de padrõe
 
 ---
 
-### US-14 - Revisão formal de arquitetura para L3 (governação reforçada)
+### US-14 - Revisão formal de arquitetura para L3 (governação reforçada) {#us-14---revisão-formal-de-arquitetura-para-l3-governação-reforçada}
 
 **Contexto.**  
 Aplicações L3 exigem validação formal reforçada (incluindo segregação de funções e decisão auditável).
@@ -655,7 +655,7 @@ Como **Gestão Executiva/CISO + Arquitetos de Software**, quero estabelecer um p
 
 ---
 
-### US-15 - Identificação e governação de componentes não determinísticos
+### US-15 - Identificação e governação de componentes não determinísticos {#us-15---identificação-e-governação-de-componentes-não-determinísticos}
 
 **Contexto.**  
 Arquiteturas modernas podem incluir componentes cujo comportamento **não é estritamente determinístico** (ex.: motores de decisão probabilísticos, scoring heurístico, modelos estatísticos ou componentes de inferência). Estes componentes introduzem desafios específicos em termos de segurança, auditoria, explicabilidade e controlo operacional, que devem ser explicitamente tratados ao nível da arquitetura.
@@ -756,7 +756,7 @@ Como **Software Architect** e **AppSec Engineer**, quero validar que a arquitect
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design / Revisão | Activação de agente em A2+ | `software_architect` + `appsec` | Antes da activação do *mandate* |
+| Design / Revisão | Activação de agente em A2+ | Arquitetos de Software + AppSec Engineer | Antes da activação do *mandate* |
 | Subida de nível | Promoção A2→A3 ou A3→A4 | `appsec` (+ `grc` em A3; + `CISO` em A4) | Antes da nova activação |
 | Revisão periódica | `review_cadence` do *mandate* | `appsec` | Conforme cadência (anual A2; semestral A3; trimestral A4) |
 
@@ -769,7 +769,7 @@ Como **Software Architect** e **AppSec Engineer**, quero validar que a arquitect
 
 ---
 
-### US-17 - Segmentação de ambientes e validação de topologia como código (L3)
+### US-17 - Segmentação de ambientes e validação de topologia como código (L3) {#us-17---segmentação-de-ambientes-e-validação-de-topologia-como-código-l3}
 
 Em L3 a separação entre `dev`, `staging` e `prod` deixa de ser convenção e passa a ser invariante verificável no pipeline.  
 
@@ -811,7 +811,7 @@ Como **DevOps/SRE** e **AppSec Engineer**, quero validar automaticamente, em CI/
 
 ---
 
-### US-18 - Padrões arquitetónicos para sistemas AI/ML não-agentic
+### US-18 - Padrões arquitetónicos para sistemas AI/ML não-agentic {#us-18---padrões-arquitetónicos-para-sistemas-aiml-não-agentic}
 
 Sistemas que integram LLMs, modelos preditivos ou RAG sem *tool-use* exigem trust boundaries e controlos próprios, distintos do caso agentic.  
 
@@ -856,7 +856,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero aplicar padrões ar
 
 ---
 
-## 📑 Artefactos esperados
+## 📑 Artefactos esperados {#-artefactos-esperados}
 
 | Artefacto | Origem / US | Evidência associada |
 |---|---|---|
@@ -877,7 +877,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero aplicar padrões ar
 
 ---
 
-## ⚖️ Matriz de proporcionalidade (L1–L3)
+## ⚖️ Matriz de proporcionalidade (L1–L3) {#️-matriz-de-proporcionalidade-l1l3}
 
 | Nível | Aplicação de práticas de Arquitetura Segura |
 |---|---|
@@ -887,7 +887,7 @@ Como **Arquitetos de Software** e **AppSec Engineer**, quero aplicar padrões ar
 
 ---
 
-## 📌 Recomendações finais
+## 📌 Recomendações finais {#-recomendações-finais}
 
 - Centralizar artefactos em repositório versionado e referenciável por release (baseline, ADR, integrações, exceções).
 - Tratar **dependências externas** e **fluxos implícitos** (observabilidade) como parte da arquitetura, com decisão e evidência.

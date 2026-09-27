@@ -19,7 +19,7 @@ O seu objetivo é **assegurar que a adoção destas ferramentas não compromete*
 
 ---
 
-## 🎯 Âmbito e enquadramento
+## 🎯 Âmbito e enquadramento {#-âmbito-e-enquadramento}
 
 Este anexo aplica-se sempre que, no processo de desenvolvimento, sejam utilizados:
 
@@ -34,7 +34,7 @@ Não se aplica:
 
 ---
 
-## 🧠 Princípios fundamentais (normativos)
+## 🧠 Princípios fundamentais (normativos) {#-princípios-fundamentais-normativos}
 
 As regras seguintes são **invariantes** no modelo SbD-ToE:
 
@@ -55,7 +55,7 @@ As regras seguintes são **invariantes** no modelo SbD-ToE:
 
 ---
 
-## 🔗 Impacto nos temas de requisitos existentes
+## 🔗 Impacto nos temas de requisitos existentes {#-impacto-nos-temas-de-requisitos-existentes}
 
 O uso de automatismos **reforça** (não substitui) as obrigações nos seguintes temas do catálogo:
 
@@ -71,25 +71,25 @@ O uso de automatismos **reforça** (não substitui) as obrigações nos seguinte
 
 ---
 
-## ⚙️ Regras mínimas de governação
+## ⚙️ Regras mínimas de governação {#️-regras-mínimas-de-governação}
 
-### 1. Uso autorizado e conhecido
+### 1. Uso autorizado e conhecido {#1-uso-autorizado-e-conhecido}
 - A organização **deve saber** que ferramentas são usadas;
 - O uso deve estar coberto por política interna (ver Cap. 14).
 
-### 2. Proteção de informação
+### 2. Proteção de informação {#2-proteção-de-informação}
 - É **proibido** introduzir segredos, chaves, dados sensíveis ou informação confidencial em prompts;
 - A violação constitui incidente de segurança.
 
-### 3. Revisão humana obrigatória
+### 3. Revisão humana obrigatória {#3-revisão-humana-obrigatória}
 - Todo o código/configuração gerada deve ser:
   - revisto por um developer qualificado;
   - sujeito aos mesmos critérios de *code review*.
 
-### 4. Validação técnica independente
+### 4. Validação técnica independente {#4-validação-técnica-independente}
 - SAST, SCA, testes e validações **não podem ser desativados** por “confiança na ferramenta”.
 
-### 5. Gestão de exceções
+### 5. Gestão de exceções {#5-gestão-de-exceções}
 - Qualquer atalho ou não aplicação de controlo segue o **processo formal de exceções** do Capítulo 14, com TTL.
 
 ---
@@ -104,7 +104,7 @@ Quando passa-se de "ferramenta que sugere" para "agente que executa", a pergunta
 
 > 📌 Os níveis A0–A4 **não substituem** os princípios fundamentais (responsabilidade humana, output não é evidência, código gerado é código de terceiros). Especializam-nos para o caso em que o agente *executa* e não apenas *sugere*.
 
-### Níveis A0–A4
+### Níveis A0–A4 {#níveis-a0a4}
 
 | Nível | Designação | O que o agente pode fazer | Aprovação humana exigida | Onde aplica tipicamente |
 |---|---|---|---|---|
@@ -116,7 +116,7 @@ Quando passa-se de "ferramenta que sugere" para "agente que executa", a pergunta
 
 > 🧭 **Como ler a tabela.** A classificação é feita **por agente e por contexto** (não por organização). O mesmo agente pode ser A1 num projecto L1 interno e A2 num L2 público; nunca A4 em qualquer projecto sem *mandate* formal (ver [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)).
 
-### Critérios para escolher o nível certo
+### Critérios para escolher o nível certo {#critérios-para-escolher-o-nível-certo}
 
 Subir de nível **adiciona** obrigações, nunca as remove. A regra prática é a mais conservadora compatível com o trabalho real:
 
@@ -142,7 +142,7 @@ Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (
 
 > 💡 **Onde aterram estes requisitos.** [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) é instrumentado pela Policy 38 e referenciado em Cap. 14. [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) é declarado no *mandate* (Policy 38) e validado por *guardrails* em Cap. 04 ([`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)). [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) aterra no Cap. 04 (arquitetura do *kill-switch*) e Cap. 12 (telemetria que o dispara). [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) aterra no Cap. 04 (mecanismo) e Cap. 12 (sinal audit).
 
-### Proporcionalidade por criticidade
+### Proporcionalidade por criticidade {#proporcionalidade-por-criticidade}
 
 | Nível de risco | Requisitos mínimos | Notas operacionais |
 |---|---|---|
@@ -150,7 +150,7 @@ Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (
 | **L2** | [`REQ-AGN-001`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-002`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn), [`REQ-AGN-004`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn) | A3 em produção apenas para tarefas com *revert* demonstrado; A4 fora de scope típico |
 | **L3** | Todos + auditoria trimestral do registo de *mandates* | A4 apenas com *mandate* assinado pelo `CISO` e revisão GRC; preferência por A2 mesmo em automações maduras |
 
-### Como classificar um uso concreto — fluxo decisório
+### Como classificar um uso concreto — fluxo decisório {#como-classificar-um-uso-concreto--fluxo-decisório}
 
 1. **Identificar o uso**: que agente, em que projecto/ambiente, para que tarefa.
 2. **Mapear *tools* invocadas** e marcar as destrutivas/*side-effectful*.
@@ -163,7 +163,7 @@ Estes requisitos são **transversais** aos capítulos 03 (Threat Modeling), 04 (
 
 ---
 
-## 🧪 Evidência e auditoria
+## 🧪 Evidência e auditoria {#-evidência-e-auditoria}
 
 A evidência **não é o uso da ferramenta**, mas sim:
 
@@ -177,7 +177,7 @@ Quando relevante, deve existir referência explícita de que **foi usado automat
 
 ---
 
-## 📚 Alinhamento normativo e referências
+## 📚 Alinhamento normativo e referências {#-alinhamento-normativo-e-referências}
 
 Este anexo está alinhado com as seguintes referências:
 
@@ -190,7 +190,7 @@ Estas referências **não criam novos requisitos aplicacionais**, mas reforçam 
 
 ---
 
-## 🧭 Relação com outros capítulos
+## 🧭 Relação com outros capítulos {#-relação-com-outros-capítulos}
 
 - Capítulo 1 - Classificação de risco: o uso de automatismos **não altera L1–L3**;
 - Capítulo 2 - Requisitos de Segurança: requisitos mantêm-se inalterados;
@@ -199,7 +199,7 @@ Estas referências **não criam novos requisitos aplicacionais**, mas reforçam 
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 O SbD-ToE **compreende e aceita a IA como ferramenta poderosa**, mas rejeita qualquer modelo onde:
 - a confiança substitua validação;

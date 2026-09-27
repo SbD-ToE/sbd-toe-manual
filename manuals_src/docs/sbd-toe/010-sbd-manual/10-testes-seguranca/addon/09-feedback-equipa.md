@@ -9,7 +9,7 @@ sidebar_position: 10
 
 # Feedback à Equipa sobre Resultados de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que os resultados dos testes de segurança são **entregues às equipas de forma clara, contextualizada e acionável**, promovendo:
 
@@ -22,7 +22,7 @@ Assegurar que os resultados dos testes de segurança são **entregues às equipa
 
 ---
 
-## 🔍 O que significa “dar feedback à equipa”
+## 🔍 O que significa “dar feedback à equipa” {#-o-que-significa-dar-feedback-à-equipa}
 
 Dar feedback à equipa envolve:
 
@@ -36,7 +36,7 @@ Dar feedback à equipa envolve:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Automatizar a entrega de findings nos pontos de contacto da equipa**:
    - Comentários automáticos em pull requests (ex: via Semgrep, SonarQube, GitHub Actions);
@@ -50,7 +50,7 @@ Dar feedback à equipa envolve:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Utilizar **comentários inline em PRs** para findings de SAST com contexto claro;
 - Evitar relatórios PDF ou exportações manuais - usar canais vivos e integrados;
@@ -61,7 +61,7 @@ Dar feedback à equipa envolve:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                           |
 |--------------------------------|---------------------------------------------------|

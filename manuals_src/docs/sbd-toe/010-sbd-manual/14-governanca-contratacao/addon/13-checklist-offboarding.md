@@ -14,7 +14,7 @@ tags: [governanca, contractors, offboarding, rescisao, seguranca, auditoria]
 
 ---
 
-## 📖 Objetivo
+## 📖 Objetivo {#-objetivo}
 
 Formalizar e executar processo de **offboarding seguro** para:
 - Contractors cujo contrato termina
@@ -25,7 +25,7 @@ Formalizar e executar processo de **offboarding seguro** para:
 
 ---
 
-## 🏃 Timeline de Offboarding
+## 🏃 Timeline de Offboarding {#-timeline-de-offboarding}
 
 ```
 T-14 dias: Notificação de término é conhecida
@@ -57,9 +57,9 @@ T+7 dias: Auditoria
 
 ---
 
-## 📋 PRÉ-OFFBOARDING (T-14 a T-1)
+## 📋 PRÉ-OFFBOARDING (T-14 a T-1) {#-pré-offboarding-t-14-a-t-1}
 
-### 1. Notificação Inicial e Planning
+### 1. Notificação Inicial e Planning {#1-notificação-inicial-e-planning}
 
 | Item | Owner | Status | Data | Notas |
 |------|-------|--------|------|-------|
@@ -70,7 +70,7 @@ T+7 dias: Auditoria
 
 ---
 
-### 2. Backup e Recuperação de Trabalho
+### 2. Backup e Recuperação de Trabalho {#2-backup-e-recuperação-de-trabalho}
 
 | Item | Owner | Executado | Verificado | Notas |
 |------|-------|-----------|-----------|-------|
@@ -80,7 +80,7 @@ T+7 dias: Auditoria
 | **Backup de código-fonte desenvolvido** | DevOps | [ ] | [ ] | Archive zip, versionado com timestamp |
 | **Backup de documentação criada** | Tech Lead | [ ] | [ ] | Wikis, README, specs, design docs |
 | **Backup de comunicação importante** | HR | [ ] | [ ] | Mails críticas, mensagens Slack (se compliance requer) |
-| **Arquivo em storage seguro** | DevOps | [ ] | [ ] | Rétention: 7 anos (DORA requirement), acesso restricted |
+| **Arquivo em storage seguro** | DevOps | [ ] | [ ] | Retenção: 5 anos (Política 33 §8), acesso restrito |
 
 **Armazenamento:**
 ```
@@ -93,7 +93,7 @@ Location: /archive/offboarded/{contractor-name}/{date}/
 
 ---
 
-### 3. Notificações Pré-Offboarding
+### 3. Notificações Pré-Offboarding {#3-notificações-pré-offboarding}
 
 | Comunicação | De | Para | Quando | Conteúdo |
 |-------------|----|----|--------|----------|
@@ -104,13 +104,13 @@ Location: /archive/offboarded/{contractor-name}/{date}/
 
 ---
 
-## 🔐 OFFBOARDING EXECUTION (T+0 DATA DE TÉRMINO)
+## 🔐 OFFBOARDING EXECUTION (T+0 DATA DE TÉRMINO) {#-offboarding-execution-t0-data-de-término}
 
-### 4. Revogação de Acesso Técnico (`<`24h após T+0)
+### 4. Revogação de Acesso Técnico (no próprio dia de T+0) {#4-revogação-de-acesso-técnico-24h-após-t0}
 
 **Timeline:** Começar revogação entre T+0 (fim de expediente) e T+1 (manhã)
 
-#### 4.1 Git & CI/CD Access
+#### 4.1 Git & CI/CD Access {#41-git--cicd-access}
 
 | Item | Owner | Comando/Ação | Status | Verificação |
 |------|-------|------------|--------|-------------|
@@ -133,7 +133,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-#### 4.2 VPN, Wifi, Physical Access
+#### 4.2 VPN, Wifi, Physical Access {#42-vpn-wifi-physical-access}
 
 | Item | Owner | Ação | Status | Verificação |
 |------|-------|------|--------|-------------|
@@ -144,7 +144,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-#### 4.3 Cloud & SaaS Platforms
+#### 4.3 Cloud & SaaS Platforms {#43-cloud--saas-platforms}
 
 | Plataforma | Item | Owner | Ação | Status | Verificação |
 |-----------|------|-------|------|--------|-------------|
@@ -158,7 +158,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-#### 4.4 Database & Data Store Access
+#### 4.4 Database & Data Store Access {#44-database--data-store-access}
 
 | Item | Owner | Ação | Status | Verificação |
 |------|-------|------|--------|-------------|
@@ -170,7 +170,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-#### 4.5 MFA & Authentication
+#### 4.5 MFA & Authentication {#45-mfa--authentication}
 
 | Item | Owner | Ação | Status | Verificação |
 |------|-------|------|--------|-------------|
@@ -179,7 +179,7 @@ git clone https://github.com/[org]/[private-repo]
 | **Revogar corporate device registration** | IT | Remove from MDM (Mobile Device Management) | [ ] | Device loses corporate mail, VPN |
 
 
-#### 4.6 Integrações, Automação e Acessos Indiretos
+#### 4.6 Integrações, Automação e Acessos Indiretos {#46-integrações-automação-e-acessos-indiretos}
 
 | Item | Owner | Ação | Status | Verificação |
 |------|-------|------|--------|-------------|
@@ -191,7 +191,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-### 5. Recuperação de Ativos Físicos
+### 5. Recuperação de Ativos Físicos {#5-recuperação-de-ativos-físicos}
 
 | Item | Recolhido Por | Responsável | Status | Verificação |
 |------|---------------|-------------|--------|-------------|
@@ -216,7 +216,7 @@ git clone https://github.com/[org]/[private-repo]
 
 ---
 
-### 6. Secrets & Credentials Rotation
+### 6. Secrets & Credentials Rotation {#6-secrets--credentials-rotation}
 
 | Item | Owner | Ação | Status | Verificação |
 |------|-------|------|--------|-------------|
@@ -227,13 +227,13 @@ git clone https://github.com/[org]/[private-repo]
 | **OAuth tokens** | DevOps | Revoke all tokens for contractor's app | [ ] | App reauthenticates |
 | **Certificates/SSL keys** | DevOps | Rotate if contractor had access | [ ] | Old cert expires or revoked |
 
-**Timing:** All rotations SAME DAY or next day latest (DORA requirement)
+**Prazo:** todas as rotações no próprio dia em saídas planeadas, em ≤ 2 h em saídas não planeadas e de imediato por causa de segurança (escolha do Manual; Política 33 §7).
 
 ---
 
-## 📋 PÓS-OFFBOARDING (T+1 a T+7)
+## 📋 PÓS-OFFBOARDING (T+1 a T+7) {#-pós-offboarding-t1-a-t7}
 
-### 7. Verificação de Conclusão
+### 7. Verificação de Conclusão {#7-verificação-de-conclusão}
 
 **T+1 (Dia após término):**
 
@@ -278,7 +278,7 @@ Contacto para follow-up: _________________
 
 ---
 
-### 8. Entrevista de Saída (Feedback)
+### 8. Entrevista de Saída (Feedback) {#8-entrevista-de-saída-feedback}
 
 **T+1 ou T+2, 1-1 com contractor (opcional mas recomendado)**
 
@@ -295,7 +295,7 @@ Contacto para follow-up: _________________
 
 ---
 
-### 9. Auditoria de Logs (T+3 a T+7)
+### 9. Auditoria de Logs (T+3 a T+7) {#9-auditoria-de-logs-t3-a-t7}
 
 **AppSec Engineer revisão:**
 
@@ -317,9 +317,9 @@ Contacto para follow-up: _________________
 
 ---
 
-## 📊 Artefactos & Documentação
+## 📊 Artefactos & Documentação {#-artefactos--documentação}
 
-**Manter por 7 anos (DORA requirement):**
+**Manter por 5 anos (Política 33 §8):**
 
 ```
 Archive Location: /compliance/offboarding/{contractor-name}/{date}/
@@ -338,7 +338,7 @@ Archive Location: /compliance/offboarding/{contractor-name}/{date}/
 
 ---
 
-## ⚠️ Red Flags & Escalation
+## ⚠️ Red Flags & Escalation {#️-red-flags--escalation}
 
 Se qualquer uma das seguintes ocorrer, **ESCALATE IMEDIATAMENTE**:
 
@@ -354,9 +354,9 @@ Se qualquer uma das seguintes ocorrer, **ESCALATE IMEDIATAMENTE**:
 
 ---
 
-## 📎 Checklists por Tipo de Saída
+## 📎 Checklists por Tipo de Saída {#-checklists-por-tipo-de-saída}
 
-### A. Rescisão Imediata (por Causa)
+### A. Rescisão Imediata (por Causa) {#a-rescisão-imediata-por-causa}
 
 ```
 Diferença: Sem avisos, revogação no mesmo dia
@@ -375,7 +375,7 @@ Ações especiais:
 - [ ] Possível relato a authorities
 ```
 
-### B. Rescisão Amigável (Fim de Contrato)
+### B. Rescisão Amigável (Fim de Contrato) {#b-rescisão-amigável-fim-de-contrato}
 
 ```
 Timeline: Planeado com 2 semanas de aviso
@@ -387,7 +387,7 @@ Timeline: Planeado com 2 semanas de aviso
 [ ] Thank you email sent
 ```
 
-### C. Fim de Contrato por Expiração
+### C. Fim de Contrato por Expiração {#c-fim-de-contrato-por-expiração}
 
 ```
 Automático após data pré-definida
@@ -399,7 +399,7 @@ Automático após data pré-definida
 
 ---
 
-## 🏁 Success Criteria
+## 🏁 Success Criteria {#-success-criteria}
 
 Offboarding é considerado **COMPLETO** quando:
 
@@ -410,11 +410,11 @@ Offboarding é considerado **COMPLETO** quando:
 - ✅ Sign-off form assinado por 4+ partes
 - ✅ Auditoria de logs show nenhuma atividade pós-termo
 - ✅ Confidentiality obligations reforçadas
-- ✅ Arquivo completo em storage de compliance (7 anos)
+- ✅ Arquivo completo em storage de compliance (5 anos)
 
 ---
 
-## 📎 Referências & Links
+## 📎 Referências & Links {#-referências--links}
 
 - [Preparação Técnica - US-15](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)
 - [Offboarding - US-17](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores)

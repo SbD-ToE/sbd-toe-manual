@@ -14,13 +14,13 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## 📊 Matriz de cobertura
+## 📊 Matriz de cobertura {#-matriz-de-cobertura}
 
 | Controlo / Requisito                           |  L1 |  L2 |  L3 |
 | ---------------------------------------------- | :-: | :-: | :-: |
 | Logging estruturado e persistente              |  ✔️ |  ✔️ |  ✔️ |
 | Eventos críticos definidos (login, erro, etc.) |  ✔️ |  ✔️ |  ✔️ |
-| Retenção mínima (>= 30 dias)                   |     |  ✔️ |  ✔️ |
+| Retenção mínima conforme a Política 29 (logs de segurança: 90 dias L1, 1 ano L2, 2 anos L3) |  ✔️ |  ✔️ |  ✔️ |
 | Logs enviados para sistema centralizado (SIEM) |     |  ✔️ |  ✔️ |
 | Alertas automáticos configurados               |     |  ✔️ |  ✔️ |
 | Simulações de trigger testadas                 |     |  ✔️ |  ✔️ |
@@ -32,7 +32,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## ✅ Interpretação
+## ✅ Interpretação {#-interpretação}
 
 * ✔️ = obrigatório para esse nível
 * **L1**: logging local e básico para rastreabilidade
@@ -43,7 +43,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 
 ---
 
-## 📌 Recomendações adicionais
+## 📌 Recomendações adicionais {#-recomendações-adicionais}
 
 * Aplicações com exposição externa e dados sensíveis devem, mesmo sendo L1, cumprir requisitos de L2 ou L3;
 * Utilizar esta matriz como **base de revisão em arquitetura, design e readiness para produção**;

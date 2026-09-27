@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação de Formação e Capacitação no Ciclo de Vida
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 | Fase | Ação | Evidência |
 |------|------|-----------|
@@ -19,32 +19,32 @@ genia: us-format-normalization
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 | Papel | Responsabilidade |
 |-------|------------------|
 | **Developer** | Participar em formação prática, aplicar no código |
 | **Quality Assurance (QA)** | Formação em validação e regressões |
-| **AppSec Engineer** | Produzir conteúdos, ministrar formação, facilitar sesões |
+| **AppSec Engineer** | Produzir conteúdos, ministrar formação, facilitar sessões |
 | **DevOps / SRE** | Capacitação em CI/CD e monitorização |
 | **Security Champion** | Mentorar equipas, facilitar peer-learning |
 | **Gestão Executiva** | Apoiar adoção, validar conformidade regulatória |
 | **GRC / Compliance** | Gerir rastreabilidade, auditorias, KPIs |
-| **Security Champion (RH)** | Operar LMS, gerir onboarding, integrar em PDI |
+| **RH / PeopleOps** | Operar LMS, gerir onboarding, integrar em PDI |
 | **Arquitetos de Software** | Contribuir ao threat modeling e padrões seguros |
 | **Operações (Ops)** | Participar em simulações, comunicação em incidentes |
 | **Fornecedores / Terceiros** | Receber formação mínima obrigatória |
 
 ---
 
-## 📖 User Stories normalizadas
+## 📖 User Stories normalizadas {#-user-stories-normalizadas}
 
-### US-01 - Onboarding seguro obrigatório
+### US-01 - Onboarding seguro obrigatório {#us-01---onboarding-seguro-obrigatório}
 **Contexto.** Novos elementos sem formação introduzem riscos básicos.  
 
 :::userstory
 **História.**   
-Como **Security Champion (RH)**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
+Como **RH / PeopleOps**, quero **garantir formação obrigatória de onboarding em SbD**, para **assegurar que todos iniciam alinhados com as práticas**.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** novo colaborador  
@@ -58,7 +58,7 @@ Como **Security Champion (RH)**, quero **garantir formação obrigatória de onb
 - [ ] Acesso técnico bloqueado até conclusão  
 - [ ] Bloqueio automático em Git/Azure DevOps/pipelines CI/CD  
 - [ ] Exceções documentadas com aprovação AppSec/Gestão  
-- [ ] Reautenticação bienal ou por trigger de novo risco  
+- [ ] Recertificação anual (validade de 12 meses) ou por trigger de novo risco  
 
 :::
 
@@ -72,7 +72,7 @@ Como **Security Champion (RH)**, quero **garantir formação obrigatória de onb
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Entrada de novo colaborador | Security Champion (RH) + AppSec Engineer | Antes de acesso técnico |
+| Onboarding | Entrada de novo colaborador | RH / PeopleOps + AppSec Engineer | Antes de acesso técnico |
 
 **Ligações úteis.**  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -80,7 +80,7 @@ Como **Security Champion (RH)**, quero **garantir formação obrigatória de onb
 
 ---
 
-### US-02 - Formação contínua por perfil
+### US-02 - Formação contínua por perfil {#us-02---formação-contínua-por-perfil}
 **Contexto.** Sem atualização contínua, práticas ficam obsoletas.  
 
 :::userstory
@@ -113,7 +113,7 @@ Como **AppSec Engineer**, quero **fornecer formação contínua por perfil (Dev,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Ciclo contínuo | Trimestral (L3) / Semestral (L2) / Anual (L1) | AppSec Engineer + Security Champion (RH) | Deadline comunicado com 2 semanas |
+| Ciclo contínuo | Trimestral (L3) / Semestral (L2) / Anual (L1) | AppSec Engineer + RH / PeopleOps | Deadline comunicado com 2 semanas |
 
 **Ligações úteis.**  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -122,7 +122,7 @@ Como **AppSec Engineer**, quero **fornecer formação contínua por perfil (Dev,
 
 ---
 
-### US-03 - Programa de Security Champions
+### US-03 - Programa de Security Champions {#us-03---programa-de-security-champions}
 **Contexto.** Sem champions, equipas carecem de liderança interna.  
 
 :::userstory
@@ -163,7 +163,7 @@ Como **Champion**, quero **mentorar e evangelizar a equipa**, para **assegurar a
 
 ---
 
-### US-04 - Exercícios práticos e simulações
+### US-04 - Exercícios práticos e simulações {#us-04---exercícios-práticos-e-simulações}
 **Contexto.** Formação teórica sem prática tem baixa retenção.  
 
 :::userstory
@@ -196,7 +196,7 @@ Como **QA**, quero **realizar exercícios práticos (labs, CTFs, simulações)**
 
 ---
 
-### US-05 - Medição de eficácia da formação
+### US-05 - Medição de eficácia da formação {#us-05---medição-de-eficácia-da-formação}
 **Contexto.** Sem medir eficácia, não há melhoria contínua.  
 
 :::userstory
@@ -229,7 +229,7 @@ Como **GRC / Compliance**, quero **medir KPIs de capacitação (taxa de conclus�
 
 ---
 
-### US-06 - Code Clinics Estruturadas e Recorrentes
+### US-06 - Code Clinics Estruturadas e Recorrentes {#us-06---code-clinics-estruturadas-e-recorrentes}
 **Contexto.** Code clinics são sessões regulares de revisão pública de código real, educando sobre padrões seguros. Sem estrutura, tornam-se ad-hoc e perdem impacto.
 
 :::userstory
@@ -274,7 +274,7 @@ Como **AppSec Engineer**, quero **executar code clinics estruturadas** (revisão
 
 ---
 
-### US-07 - Threat Modeling Peer-led e Rotativo
+### US-07 - Threat Modeling Peer-led e Rotativo {#us-07---threat-modeling-peer-led-e-rotativo}
 **Contexto.** Threat modeling é prática crítica mas concentrada em AppSec. Operacionalizar como atividade peer-led e rotativa aumenta distribuição de conhecimento.
 
 :::userstory
@@ -321,7 +321,7 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 
 ---
 
-### US-08 - War Room e Simulações de Incidentes
+### US-08 - War Room e Simulações de Incidentes {#us-08---war-room-e-simulações-de-incidentes}
 **Contexto.** Simulações de incidentes treinam equipas na resposta sob pressão, validam processos e criam cultura de prontidão.
 
 :::userstory
@@ -341,7 +341,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 - [ ] Tempos de deteção, resposta e resolução medidos (MTTD/MTTR)  
 - [ ] Papel de cada interveniente documentado (playbooks)  
 - [ ] Debrief realizado com recomendações  
-- [ ] Cadência definida (anual mínimo, trimestral ideal)  
+- [ ] Cadência definida (mínimo: anual em L1, semestral em L2/L3 — Política 32 §8; trimestral recomendado)  
 
 :::
 
@@ -354,7 +354,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado anual | Trimestral | Trimestral + rotativo por ameaça |
+| Recomendado anual | Semestral (mínimo) | Semestral (mínimo) + rotativo por ameaça |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -368,7 +368,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 
 ---
 
-### US-09 - Manutenção e Atualização de Trilhos Formativos
+### US-09 - Manutenção e Atualização de Trilhos Formativos {#us-09---manutenção-e-atualização-de-trilhos-formativos}
 **Contexto.** Trilhos formativos precisam de revisão periódica com base em novos riscos, tecnologias, lições aprendidas.
 
 :::userstory
@@ -406,7 +406,7 @@ Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos po
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Governance/Auditoria | Anual (Q1) ou novo risco | AppSec Engineer + GRC / Compliance + Security Champion (RH) | Antes do ciclo de formação novo |
+| Governance/Auditoria | Anual (Q1) ou novo risco | AppSec Engineer + GRC / Compliance + RH / PeopleOps | Antes do ciclo de formação novo |
 
 **Ligações úteis.**  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -415,7 +415,7 @@ Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos po
 
 ---
 
-### US-10 - Trilhos Formativos Proporcionais por Risco (L1–L3)
+### US-10 - Trilhos Formativos Proporcionais por Risco (L1–L3) {#us-10---trilhos-formativos-proporcionais-por-risco-l1l3}
 
 **Contexto.**  
 Trilhos formativos precisam de ser explicitamente proporcionais ao risco da aplicação. Embora US-02 mencione "por perfil", falta clareza sobre a aplicação L1–L3 e sua integração com matriz de classificação de risco do cap 01.
@@ -444,6 +444,7 @@ Como **AppSec Engineer / GRC**, quero **aplicar trilhos formativos de forma expl
 - [ ] Catálogo → Trilho: existe um artefacto de mapeamento catálogo→trilho (`catalogo_trilhos.csv` ou `catalogo_trilhos.json`) que lista, para cada capítulo/tópico do `addon/01`, o módulo/trilho recomendado e a versão L1/L2/L3 aplicável.  
 - 
 **Artefactos & evidências adicionais.** `catalogo_trilhos.csv` com colunas mínimas: capitulo, topico, trilho_L1, trilho_L2, trilho_L3, formato_sugerido, exemplo_import_lms. Um exemplo de importação (CSV pequeno) deve acompanhar o plano de formação.  
+
 - 
 :::
 
@@ -458,7 +459,7 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Governance | Classificação da aplicação | AppSec Engineer + Security Champion (RH) | Antes de primeira atribuição técnica |
+| Onboarding / Governance | Classificação da aplicação | AppSec Engineer + RH / PeopleOps | Antes de primeira atribuição técnica |
 
 **Ligações úteis.**  
 [Trilhos Formativos por Função e Risco](./addon/trilho-formativo)  
@@ -467,7 +468,7 @@ Documento de classificação de risco (cap 01), matriz de trilhos (addon/02) com
 
 ---
 
-### US-11 - Validação Formal de Onboarding via Checklist
+### US-11 - Validação Formal de Onboarding via Checklist {#us-11---validação-formal-de-onboarding-via-checklist}
 **Contexto.** Onboarding sem validação formal deixa lacunas. Um checklist estruturado garante que todos os passos mínimos são cumpridos antes de qualquer acesso técnico.
 
 :::userstory
@@ -506,7 +507,7 @@ Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador*
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Entrada de novo colaborador | Security Champion (RH) + GRC / Compliance | Antes de acesso técnico |
+| Onboarding | Entrada de novo colaborador | RH / PeopleOps + GRC / Compliance | Antes de acesso técnico |
 
 **Ligações úteis.**  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -515,7 +516,7 @@ Como **RH / GRC**, quero **validar formalmente o onboarding de cada colaborador*
 
 ---
 
-### US-12 - Validação de Conhecimento via Quizzes Estruturados
+### US-12 - Validação de Conhecimento via Quizzes Estruturados {#us-12---validação-de-conhecimento-via-quizzes-estruturados}
 **Contexto.** Formação sem validação de retenção de conhecimento é ineficaz. Quizzes estruturados garantem compreensão real e funcionam como rastreabilidade objetiva.
 
 :::userstory
@@ -554,7 +555,7 @@ Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de valida�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Contínuo | Conclusão de trilho ou anualmente | AppSec Engineer + Security Champion (RH) | Antes/durante acesso |
+| Onboarding / Contínuo | Conclusão de trilho ou anualmente | AppSec Engineer + RH / PeopleOps | Antes/durante acesso |
 
 **Ligações úteis.**  
 [Template de Quiz para Onboarding](./addon/quiz-onboarding)  
@@ -564,7 +565,7 @@ Como **AppSec Engineer / RH**, quero **implementar e executar quizzes de valida�
 
 ---
 
-### US-13 - Operacionalização de Formação de Terceiros
+### US-13 - Operacionalização de Formação de Terceiros {#us-13---operacionalização-de-formação-de-terceiros}
 **Contexto.** Fornecedores e terceiros com acesso técnico precisam de formação mínima obrigatória para reduzir risco de falhas de segurança.
 
 :::userstory
@@ -603,7 +604,7 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Contrato de fornecedor | GRC / Compliance + Security Champion (RH) + AppSec Engineer | Antes de acesso |
+| Onboarding | Contrato de fornecedor | GRC / Compliance + RH / PeopleOps + AppSec Engineer | Antes de acesso |
 
 **Ligações úteis.**  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
@@ -612,7 +613,7 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 [Governança e Contratação - Capítulo 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)  
 [Papéis e Responsabilidades](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/intro)
 
-### US-14 - KPIs de Capacitação e Reporte (GRC)
+### US-14 - KPIs de Capacitação e Reporte (GRC) {#us-14---kpis-de-capacitação-e-reporte-grc}
 **Contexto.** KPIs dispersos reduzem a capacidade de avaliar impacto da formação. É necessário formalizar lista, responsáveis e cadência.
 
 :::userstory
@@ -647,7 +648,7 @@ Como **GRC / Gestão Executiva**, quero **definir e recolher KPIs de capacitaç�
 
 ---
 
-### US-15 - Formatos de Entrega e DoD por Formato
+### US-15 - Formatos de Entrega e DoD por Formato {#us-15---formatos-de-entrega-e-dod-por-formato}
 **Contexto.** A falta de especificação mínima por formato (labs, code clinics, microlearning, simulações) dificulta replicabilidade e níveis de qualidade.
 
 :::userstory
@@ -673,7 +674,7 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 **Proporcionalidade L1–L3.**
 | L1 | L2 | L3 |
 |----|----|----|
-| Formatos básicos (microlearning) | Labs e quizzes estructurados | Labs com scoring + simulações + auditoria |
+| Formatos básicos (microlearning) | Labs e quizzes estruturados | Labs com scoring + simulações + auditoria |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -682,7 +683,7 @@ Como **AppSec Engineer / RH**, quero **definir os formatos de entrega e o DoD m�
 
 ---
 
-### US-16 - Caminho de Remediação Abaixo do Limiar
+### US-16 - Caminho de Remediação Abaixo do Limiar {#us-16---caminho-de-remediação-abaixo-do-limiar}
 
 Um resultado abaixo do limiar mínimo não pode deixar o onboarding num estado indefinido.  
 
@@ -716,7 +717,7 @@ Como **AppSec Engineer / RH**, quero **definir e executar um caminho de remedia�
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Resultado abaixo do limiar | AppSec Engineer + Security Champion (RH) | Remediação iniciada antes de qualquer concessão de acesso |
+| Onboarding | Resultado abaixo do limiar | AppSec Engineer + RH / PeopleOps | Remediação iniciada antes de qualquer concessão de acesso |
 
 **Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-003)](./addon/catalogo-requisitos-formacao)  
 [Checklist de Onboarding Técnico](./addon/checklist-onboarding)  
@@ -724,7 +725,7 @@ Como **AppSec Engineer / RH**, quero **definir e executar um caminho de remedia�
 
 ---
 
-### US-17 - Termo de Responsabilidade de Terceiros
+### US-17 - Termo de Responsabilidade de Terceiros {#us-17---termo-de-responsabilidade-de-terceiros}
 
 O onboarding de um terceiro só fica completo quando a responsabilidade está formalmente aceite e registada.  
 
@@ -759,7 +760,7 @@ Como **GRC / Gestão Executiva**, quero **registar um termo de responsabilidade 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Contrato de terceiro com acesso técnico | GRC / Compliance + Security Champion (RH) + AppSec Engineer | Termo registado antes de acesso |
+| Onboarding | Contrato de terceiro com acesso técnico | GRC / Compliance + RH / PeopleOps + AppSec Engineer | Termo registado antes de acesso |
 
 **Ligações úteis.** [Catálogo de Requisitos de Formação (TRN-007)](./addon/catalogo-requisitos-formacao)  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
@@ -768,7 +769,7 @@ Como **GRC / Gestão Executiva**, quero **registar um termo de responsabilidade 
 
 ---
 
-### US-18 - Ação Corretiva sobre Desvios de KPIs
+### US-18 - Ação Corretiva sobre Desvios de KPIs {#us-18---ação-corretiva-sobre-desvios-de-kpis}
 
 KPIs sem ação corretiva são métricas decorativas.  
 
@@ -810,7 +811,7 @@ Como **GRC / Gestão Executiva**, quero **acionar uma ação corretiva sempre qu
 
 ---
 
-### US-19 - Formação em Uso Seguro de IA e Tooling
+### US-19 - Formação em Uso Seguro de IA e Tooling {#us-19---formação-em-uso-seguro-de-ia-e-tooling}
 
 Ferramentas assistem; humanos decidem. A formação tem de ensinar a fronteira.  
 
@@ -845,7 +846,7 @@ Como **AppSec Engineer / RH**, quero **tornar obrigatória e verificável a form
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding / Ciclo contínuo | Acesso a tooling de IA/automação ou novo risco | AppSec Engineer + Security Champion (RH) | Antes de uso autónomo de tooling de IA |
+| Onboarding / Ciclo contínuo | Acesso a tooling de IA/automação ou novo risco | AppSec Engineer + RH / PeopleOps | Antes de uso autónomo de tooling de IA |
 
 **Ligações úteis.** [Formação em Uso Seguro de IA e Tooling](./addon/formacao-uso-seguro-ia-tooling)  
 [Catálogo de Formação por Perfil Técnico](./addon/catalogo-formativo)  
@@ -853,7 +854,7 @@ Como **AppSec Engineer / RH**, quero **tornar obrigatória e verificável a form
 
 ---
 
-### US-20 - Sandbox Isolado para Prática de Contractors
+### US-20 - Sandbox Isolado para Prática de Contractors {#us-20---sandbox-isolado-para-prática-de-contractors}
 
 Contractors praticam num ambiente isolado antes de tocar em sistemas reais.  
 
@@ -874,7 +875,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 - [ ] Permissões iniciais read-only, evoluindo só após validação  
 - [ ] Logging de toda a atividade (logins, commits, acessos a secrets) ativado  
 - [ ] Exercícios práticos (≥70%) e quiz de compreensão (≥80%) concluídos  
-- [ ] Sign-off de conclusão (Scrum Master / Team Lead + AppSec) condiciona o acesso real  
+- [ ] Sign-off de conclusão (Tech Lead + AppSec) condiciona o acesso real  
 - [ ] Destruição do sandbox e revogação de credenciais pós-onboarding; logs arquivados  
 
 :::
@@ -889,7 +890,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Onboarding | Onboarding técnico de contractor | DevOps / SRE + AppSec Engineer + Security Champion (Training Manager) | Provisão T-5 dias; sign-off antes de acesso real (T+7) |
+| Onboarding | Onboarding técnico de contractor | DevOps / SRE + AppSec Engineer + Training Manager | Provisão T-5 dias; sign-off antes de acesso real (T+7) |
 
 **Ligações úteis.** [Guia de Preparação Sandbox para Contractors](./addon/guia-preparacao-sandbox)  
 [Modelo de Inclusão de Terceiros](./addon/inclusao-terceiros)  
@@ -898,7 +899,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 
 ---
 
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 | Artefacto | Evidência |
 |-----------|-----------|
@@ -917,18 +918,18 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
 | Onboarding seguro | Básico | Obrigatório | Obrigatório + avaliação prática |
-| Formação contínua | Básico | Anual | Trimestral |
+| Formação contínua | Anual | Semestral | Trimestral |
 | Champions | Opcional | Recomendado | Obrigatório |
 | Exercícios práticos | Opcional | Recomendado | Obrigatório |
 | Métricas de eficácia | Básico | Anual | Trimestral com metas |
 | **Code Clinics** | **Ocasional** | **Recorrente (quinzenal)** | **Recorrente + rotativo (semanal)** |
 | **Threat Modeling** | **Opcional** | **Recomendado por épico** | **Obrigatório antes de design** |
-| **Simulações de incidentes** | **Recomendado anual** | **Trimestral** | **Trimestral + rotativo** |
+| **Simulações de incidentes** | **Recomendado anual** | **Semestral (mínimo)** | **Semestral (mínimo) + rotativo** |
 | **Manutenção de trilhos** | **Ocasional** | **Anual** | **Anual + contínua por trigger** |
 | **Trilhos proporcionais por risco** | **Trilho básico** | **Trilho intermédio + labs** | **Trilho avançado + simulações + auditoria** |
 | **Validação de onboarding (checklist)** | **Básico** | **Estruturado (função + risco)** | **Estruturado + auditoria periódica** |
@@ -937,7 +938,7 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 - **Onboarding é crítico**: sem formação inicial, erros básicos propagam-se.  
 - **Validação formal via checklist** garante que todos os passos mínimos são cumpridos.  

@@ -9,7 +9,7 @@ sidebar_position: 7
 
 # Política de Requisitos de Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define como os **requisitos de segurança** devem ser selecionados, documentados, rastreados, validados e mantidos ao longo de todo o ciclo de vida de cada aplicação desenvolvida ou operada pela organização.
 
@@ -17,21 +17,21 @@ A inclusão de requisitos de segurança no processo de desenvolvimento não é o
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a todas as aplicações com classificação de risco ativa (L1, L2 ou L3), em todas as fases do ciclo de vida: conceção, desenvolvimento, integração, testes, deploy e manutenção.
 
 ---
 
-## 3. Catálogo de requisitos
+## 3. Catálogo de requisitos {#3-catálogo-de-requisitos}
 
-### 3.1 Baseline organizacional
+### 3.1 Baseline organizacional {#31-baseline-organizacional}
 
 A organização mantém um **catálogo baseline de requisitos de segurança**, organizado por domínio e nível de aplicabilidade (L1, L2, L3), alinhado com o modelo SbD-ToE Cap. 02.
 
 O catálogo baseline é versionado, mantido por AppSec e revisto pelo menos anualmente.
 
-### 3.2 Catálogo do projeto
+### 3.2 Catálogo do projeto {#32-catálogo-do-projeto}
 
 No arranque de cada projeto (ou na integração de uma aplicação existente no modelo SbD-ToE), deve ser criado um **catálogo de requisitos do projeto**, derivado da baseline organizacional e filtrado pelo nível de criticidade da aplicação.
 
@@ -46,7 +46,7 @@ No arranque de cada projeto (ou na integração de uma aplicação existente no 
 
 ---
 
-## 4. Seleção proporcional de requisitos
+## 4. Seleção proporcional de requisitos {#4-seleção-proporcional-de-requisitos}
 
 A seleção de requisitos deve ser **proporcional ao nível de risco** da aplicação:
 
@@ -60,7 +60,7 @@ A seleção de requisitos deve ser **proporcional ao nível de risco** da aplica
 
 ---
 
-## 5. Integração no ciclo de desenvolvimento
+## 5. Integração no ciclo de desenvolvimento {#5-integração-no-ciclo-de-desenvolvimento}
 
 Os requisitos de segurança devem ser aplicados nos seguintes momentos do SDLC:
 
@@ -76,7 +76,7 @@ Os requisitos de segurança devem ser aplicados nos seguintes momentos do SDLC:
 
 ---
 
-## 6. Taxonomia e tags
+## 6. Taxonomia e tags {#6-taxonomia-e-tags}
 
 Os requisitos de segurança no backlog devem ser identificados com uma taxonomia rastreável. O formato de referência é:
 
@@ -93,7 +93,7 @@ A validação automática da presença de tags `SEC-Lx-*` nos PRs relevantes dev
 
 ---
 
-## 7. Critérios de validação
+## 7. Critérios de validação {#7-critérios-de-validação}
 
 Cada requisito selecionado deve ter **critérios de aceitação explícitos e verificáveis**, definidos antes do início do desenvolvimento:
 
@@ -106,7 +106,7 @@ Requisitos sem critérios de validação definidos não devem ser considerados c
 
 ---
 
-## 8. Revisão por alteração relevante
+## 8. Revisão por alteração relevante {#8-revisão-por-alteração-relevante}
 
 Os requisitos aplicáveis devem ser revistos sempre que ocorra uma das seguintes alterações:
 
@@ -123,7 +123,7 @@ A revisão deve ser documentada com referência ao trigger, aos requisitos atual
 
 ---
 
-## 9. Gestão de exceções a requisitos
+## 9. Gestão de exceções a requisitos {#9-gestão-de-exceções-a-requisitos}
 
 Quando um requisito obrigatório para o nível não pode ser implementado, aplica-se o processo definido na **Política de Gestão de Exceções de Segurança** (`05_policy-gestao-excecoes`):
 
@@ -135,7 +135,7 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 ---
 
-## 10. Proporcionalidade por nível
+## 10. Proporcionalidade por nível {#10-proporcionalidade-por-nível}
 
 | Requisito da política | L1 | L2 | L3 |
 |---|---|---|---|
@@ -150,7 +150,7 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 ---
 
-## 11. Artefactos
+## 11. Artefactos {#11-artefactos}
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
@@ -162,7 +162,7 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 ---
 
-## 12. Responsabilidades
+## 12. Responsabilidades {#12-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -175,7 +175,7 @@ Quando um requisito obrigatório para o nível não pode ser implementado, aplic
 
 ---
 
-## 13. Revisão e auditoria desta política
+## 13. Revisão e auditoria desta política {#13-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -185,7 +185,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 14. Referências normativas e técnicas
+## 14. Referências normativas e técnicas {#14-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

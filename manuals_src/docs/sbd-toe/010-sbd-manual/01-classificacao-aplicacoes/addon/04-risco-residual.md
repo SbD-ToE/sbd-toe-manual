@@ -21,7 +21,7 @@ Este ficheiro complementa o modelo de classificação e aceitação de risco, in
 
 ---
 
-## 🔢 Definições fundamentais
+## 🔢 Definições fundamentais {#-definições-fundamentais}
 
 - **Risco Bruto (inerente)**  
   Risco identificado **antes da aplicação de controlos**, resultante da combinação de exposição, dados e impacto.
@@ -40,7 +40,7 @@ Este ficheiro complementa o modelo de classificação e aceitação de risco, in
 
 ---
 
-## 🧠 Relação com o modelo E/D/I
+## 🧠 Relação com o modelo E/D/I {#-relação-com-o-modelo-edi}
 
 A análise de risco residual deve ser sempre coerente com a classificação **E/D/I** da aplicação:
 
@@ -55,7 +55,7 @@ Sempre que a aplicação de controlos **não altere materialmente os atributos r
 
 ---
 
-## 🧩 Avaliação prática do risco residual
+## 🧩 Avaliação prática do risco residual {#-avaliação-prática-do-risco-residual}
 
 A avaliação do risco residual deve responder explicitamente às seguintes perguntas:
 
@@ -69,7 +69,7 @@ A ausência de resposta positiva a qualquer uma destas questões **impede a acei
 
 ---
 
-## 📝 Exemplo ilustrativo (não normativo)
+## 📝 Exemplo ilustrativo (não normativo) {#-exemplo-ilustrativo-não-normativo}
 
 **Cenário:** API exposta com autenticação forte
 
@@ -86,7 +86,7 @@ A sua aceitação depende do nível da aplicação e da evidência disponível.
 
 ---
 
-## ⚖️ Papel do risco residual na decisão
+## ⚖️ Papel do risco residual na decisão {#️-papel-do-risco-residual-na-decisão}
 
 O risco residual deve ser comparado com os **limiares de aceitação definidos por nível de aplicação**:
 
@@ -101,7 +101,7 @@ O risco residual deve ser comparado com os **limiares de aceitação definidos p
 
 ---
 
-## ❌ Situações em que o risco residual **não é aceitável**
+## ❌ Situações em que o risco residual **não é aceitável** {#-situações-em-que-o-risco-residual-não-é-aceitável}
 
 Não é aceitável considerar risco residual como tolerável quando:
 
@@ -113,7 +113,7 @@ Não é aceitável considerar risco residual como tolerável quando:
 
 ---
 
-## 🔄 Integração com o ciclo de vida e com GRC
+## 🔄 Integração com o ciclo de vida e com GRC {#-integração-com-o-ciclo-de-vida-e-com-grc}
 
 - O risco residual deve ser **reavaliado sempre que ocorra alteração relevante**:
   - arquitetura,
@@ -128,7 +128,7 @@ Não é aceitável considerar risco residual como tolerável quando:
 
 ---
 
-## 📌 Recomendação final
+## 📌 Recomendação final {#-recomendação-final}
 
 Toda a decisão de aceitação de risco residual deve ser:
 

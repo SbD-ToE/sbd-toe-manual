@@ -13,7 +13,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 * Permitir que projetos legados sejam enquadrados num modelo de governança estruturado;
 * Garantir visibilidade, rastreabilidade e compensações mesmo quando não é possível aplicar todos os requisitos;
@@ -21,7 +21,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## 🧰 Contextos típicos
+## 🧰 Contextos típicos {#-contextos-típicos}
 
 * Aplicações críticas herdadas sem documentação técnica ou owners ativos;
 * Pipelines de CI/CD antigos, operacionais mas fora do controlo da equipa AppSec;
@@ -30,7 +30,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## 🛠️ Abordagem proposta
+## 🛠️ Abordagem proposta {#️-abordagem-proposta}
 
 1. **Identificar e classificar o ativo legado** (usando critérios do Cap. 1);
 2. **Mapear requisitos aplicáveis**, mesmo que não cumpridos;
@@ -45,7 +45,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## 📋 Exemplo de registo de governação de legado
+## 📋 Exemplo de registo de governação de legado {#-exemplo-de-registo-de-governação-de-legado}
 
 | Campo                    | Valor                                                |
 | ------------------------ | ---------------------------------------------------- |
@@ -61,7 +61,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## ✅ Recomendações
+## ✅ Recomendações {#-recomendações}
 
 * Nunca ignorar ativos legados: tratar como exceção formal com rastreabilidade;
 * Incorporar o ciclo de revisão e melhoria contínua;
@@ -70,7 +70,7 @@ Este documento aborda a aplicação proporcional e adaptada do modelo SbD-ToE a 
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos mínimos por risco

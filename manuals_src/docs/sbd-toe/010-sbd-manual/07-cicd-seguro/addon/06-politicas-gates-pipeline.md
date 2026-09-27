@@ -18,7 +18,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Impedir que aplicações críticas avancem no pipeline sem validações obrigatórias;
 - Assegurar que políticas de segurança são aplicadas de forma coerente, automática e auditável;
@@ -26,7 +26,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Classificação explícita da aplicação (L1–L3)**  
    - O nível de risco da aplicação deve estar definido (ex: em ficheiro `.risk-level.yml`, variável de ambiente, tag do repositório);
@@ -50,7 +50,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos de política                                     | Critérios de bloqueio                                   |
 |-------|-------------------------------------------------------------|----------------------------------------------------------|
@@ -60,7 +60,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Workflows condicionais com `.risk-level.yml`;  
@@ -80,7 +80,7 @@ Nem todas as aplicações requerem o mesmo nível de segurança, mas **todas dev
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Deploys de aplicações críticas sem validação obrigatória (OSC&R: CI0006, CI0014);
 - Divergência entre política organizacional e o que o pipeline aplica;

@@ -33,7 +33,7 @@ Este documento identifica esses riscos e estabelece **prescrições claras de mi
 
 ---
 
-## 🎯 Princípio fundamental
+## 🎯 Princípio fundamental {#-princípio-fundamental}
 
 O CI/CD **pode executar ações**,  
 **pode produzir sinais**,  
@@ -45,7 +45,7 @@ A decisão final sobre qualquer ação irreversível - promoção, deploy, rollb
 
 ---
 
-## 🧭 CI/CD como sistema crítico de decisão
+## 🧭 CI/CD como sistema crítico de decisão {#-cicd-como-sistema-crítico-de-decisão}
 
 Tratar o CI/CD como simples automação conduz a erros sistémicos.
 
@@ -62,9 +62,9 @@ Por isso, os riscos associados à automação no CI/CD devem ser tratados **como
 
 ---
 
-## ⚠️ Risco R1 - Não-determinismo do pipeline
+## ⚠️ Risco R1 - Não-determinismo do pipeline {#️-risco-r1---não-determinismo-do-pipeline}
 
-### Descrição
+### Descrição {#descrição}
 
 Um pipeline torna-se não determinístico quando **execuções idênticas não produzem resultados equivalentes**, sem alteração explícita do código ou da configuração versionada.
 
@@ -75,21 +75,21 @@ Neste cenário, o resultado deixa de depender apenas de:
 
 e passa a depender de **contexto implícito**, muitas vezes não versionado nem controlado.
 
-### Como surge
+### Como surge {#como-surge}
 
 - Configurações resolvidas dinamicamente em tempo de execução;
 - Steps gerados ou alterados sem registo explícito;
 - Dependências externas voláteis;
 - Contexto ambiental não fixado.
 
-### Impacto
+### Impacto {#impacto}
 
 - Impossibilidade de reproduzir builds históricos;
 - Auditorias inconclusivas;
 - Incidentes impossíveis de analisar retroativamente;
 - Falsa confiança em resultados anteriores.
 
-### Mitigações prescritas
+### Mitigações prescritas {#mitigações-prescritas}
 
 - O pipeline deve ser tratado como **artefacto versionado**;
 - A definição do pipeline deve ser **explícita e declarativa**;
@@ -98,7 +98,7 @@ e passa a depender de **contexto implícito**, muitas vezes não versionado nem 
   - execução do pipeline;
   - resultados produzidos.
 
-### Evidência mínima exigida
+### Evidência mínima exigida {#evidência-mínima-exigida}
 
 - Definição do pipeline versionada (ex.: YAML/DSL);
 - Identificação inequívoca da versão executada;
@@ -109,28 +109,28 @@ e passa a depender de **contexto implícito**, muitas vezes não versionado nem 
 
 ---
 
-## ⚠️ Risco R2 - Confusão entre sugestão automática e decisão efetiva
+## ⚠️ Risco R2 - Confusão entre sugestão automática e decisão efetiva {#️-risco-r2---confusão-entre-sugestão-automática-e-decisão-efetiva}
 
-### Descrição
+### Descrição {#descrição-1}
 
 Resultados apresentados como *scores*, *ratings*, *prioridades* ou *recomendações* são frequentemente interpretados, na prática, como **decisões finais**.
 
 Esta confusão é subtil, mas perigosa:  
 um *soft gate* mal definido transforma-se num *hard bypass*.
 
-### Como surge
+### Como surge {#como-surge-1}
 
 - Linguagem ambígua nos outputs;
 - Pressão operacional por velocidade;
 - Automatização progressiva sem redefinição de responsabilidades.
 
-### Impacto
+### Impacto {#impacto-1}
 
 - Promoções indevidas;
 - Bypass silencioso de controlos de segurança;
 - Dificuldade em atribuir responsabilidade após incidente.
 
-### Mitigações prescritas
+### Mitigações prescritas {#mitigações-prescritas-1}
 
 - Gates devem ser **explícitos, binários e inequívocos**;
 - A decisão final deve exigir **aprovação humana nominal**;
@@ -138,7 +138,7 @@ um *soft gate* mal definido transforma-se num *hard bypass*.
   - sinal automático;
   - decisão de promoção.
 
-### Evidência mínima exigida
+### Evidência mínima exigida {#evidência-mínima-exigida-1}
 
 - Registo da decisão;
 - Identidade do responsável;
@@ -149,27 +149,27 @@ um *soft gate* mal definido transforma-se num *hard bypass*.
 
 ---
 
-## ⚠️ Risco R3 - Evidência plausível sem execução empírica
+## ⚠️ Risco R3 - Evidência plausível sem execução empírica {#️-risco-r3---evidência-plausível-sem-execução-empírica}
 
-### Descrição
+### Descrição {#descrição-2}
 
 Outputs bem estruturados, convincentes ou completos **não constituem evidência**, se não estiverem associados a execução real observável.
 
 No CI/CD moderno, a aparência de rigor pode mascarar a ausência de validação efetiva.
 
-### Como surge
+### Como surge {#como-surge-2}
 
 - Relatórios agregados sem ligação a execução concreta;
 - Outputs sintetizados ou derivados;
 - Abstração excessiva sobre testes ou scans.
 
-### Impacto
+### Impacto {#impacto-2}
 
 - Auditorias falhadas;
 - Falsa perceção de cobertura;
 - Decisões baseadas em aparência, não em factos.
 
-### Mitigações prescritas
+### Mitigações prescritas {#mitigações-prescritas-2}
 
 - Evidência deve derivar sempre de **execução observável**;
 - Cada resultado relevante deve ser rastreável a:
@@ -178,7 +178,7 @@ No CI/CD moderno, a aparência de rigor pode mascarar a ausência de validação
   - validação efetivamente executada;
 - Outputs não verificáveis não devem ser aceites como evidência.
 
-### Evidência mínima exigida
+### Evidência mínima exigida {#evidência-mínima-exigida-2}
 
 - Logs de execução;
 - Artefactos produzidos;
@@ -189,9 +189,9 @@ No CI/CD moderno, a aparência de rigor pode mascarar a ausência de validação
 
 ---
 
-## ⚠️ Risco R4 - Exfiltração de segredos e contexto sensível
+## ⚠️ Risco R4 - Exfiltração de segredos e contexto sensível {#️-risco-r4---exfiltração-de-segredos-e-contexto-sensível}
 
-### Descrição
+### Descrição {#descrição-3}
 
 O pipeline manipula informação altamente sensível:
 
@@ -203,27 +203,27 @@ O pipeline manipula informação altamente sensível:
 
 Qualquer dependência externa ou mecanismo de exportação implícita constitui um vetor potencial de fuga.
 
-### Como surge
+### Como surge {#como-surge-3}
 
 - Logging excessivo;
 - Debug ativo em produção;
 - Upload implícito de contexto;
 - Falta de segregação de dados.
 
-### Impacto
+### Impacto {#impacto-3}
 
 - Exposição de segredos;
 - Fuga de propriedade intelectual;
 - Incumprimento legal ou contratual.
 
-### Mitigações prescritas
+### Mitigações prescritas {#mitigações-prescritas-3}
 
 - Princípio do mínimo contexto necessário;
 - Redução sistemática de logging sensível;
 - Políticas explícitas de uso de sistemas externos;
 - Revisão regular de configuração e outputs.
 
-### Evidência mínima exigida
+### Evidência mínima exigida {#evidência-mínima-exigida-3}
 
 - Políticas aplicáveis;
 - Configuração validada;
@@ -234,33 +234,33 @@ Qualquer dependência externa ou mecanismo de exportação implícita constitui 
 
 ---
 
-## ⚠️ Risco R5 - Diluição de responsabilidade operacional
+## ⚠️ Risco R5 - Diluição de responsabilidade operacional {#️-risco-r5---diluição-de-responsabilidade-operacional}
 
-### Descrição
+### Descrição {#descrição-4}
 
 Quando o pipeline “decide”, ninguém decide.
 
 A ausência de um responsável humano explícito destrói a noção de não-repúdio e compromete a governação do processo.
 
-### Como surge
+### Como surge {#como-surge-4}
 
 - Automatização sem redefinição de papéis;
 - Falta de ownership claro por ambiente;
 - Ambiguidade organizacional.
 
-### Impacto
+### Impacto {#impacto-4}
 
 - Incidentes sem responsável;
 - Escaladas ineficazes;
 - Falhas de governação e auditoria.
 
-### Mitigações prescritas
+### Mitigações prescritas {#mitigações-prescritas-4}
 
 - Cada promoção deve ter um **owner humano explícito**;
 - Responsabilidades devem estar associadas a papéis claros;
 - Ações irreversíveis exigem decisão nominativa.
 
-### Evidência mínima exigida
+### Evidência mínima exigida {#evidência-mínima-exigida-4}
 
 - Mapping papel → ação;
 - Registos de promoção;
@@ -270,7 +270,7 @@ A ausência de um responsável humano explícito destrói a noção de não-rep�
 
 ---
 
-## 📊 Síntese operacional dos riscos
+## 📊 Síntese operacional dos riscos {#-síntese-operacional-dos-riscos}
 
 | Risco | Onde ocorre | Mitigação chave | Evidência exigida |
 |-----|------------|----------------|------------------|
@@ -282,7 +282,7 @@ A ausência de um responsável humano explícito destrói a noção de não-rep�
 
 ---
 
-## 🧩 Conclusão
+## 🧩 Conclusão {#-conclusão}
 
 A automação no CI/CD **não é o problema**.  
 O problema surge quando a automação **substitui implicitamente decisão, responsabilidade ou evidência**.

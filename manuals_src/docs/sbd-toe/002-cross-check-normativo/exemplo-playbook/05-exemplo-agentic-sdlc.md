@@ -8,7 +8,7 @@ sidebar_position: 5
 
 # Exemplo: Agentic SDLC ponta-a-ponta
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 Quando o sistema inclui **agentes AI** com *tool-use* — modelos que executam acções reais (criar PRs, aplicar manifests Kubernetes, contactar APIs externas) — o processo de desenvolvimento seguro ganha **paragens próprias** em cada fase do SDLC. O SbD-ToE distribuiu essas paragens pelos capítulos existentes (não criou capítulo novo), mas a **vista de processo ponta-a-ponta** vive aqui, neste exemplo.
 
@@ -18,7 +18,7 @@ O SbD-ToE **prescreve as paragens e a sua substância**; este exemplo demonstra 
 
 ---
 
-## Visão geral do fluxo
+## Visão geral do fluxo {#visão-geral-do-fluxo}
 
 ```mermaid
 flowchart LR
@@ -45,9 +45,9 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-## Paragens do processo agentic
+## Paragens do processo agentic {#paragens-do-processo-agentic}
 
-### Paragem 1 — Decisão de adopção e classificação do nível de autonomia
+### Paragem 1 — Decisão de adopção e classificação do nível de autonomia {#paragem-1--decisão-de-adopção-e-classificação-do-nível-de-autonomia}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -59,7 +59,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 2 — Threat modeling para o agente
+### Paragem 2 — Threat modeling para o agente {#paragem-2--threat-modeling-para-o-agente}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -71,7 +71,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 3 — Arquitectura: agente como *principal* isolado
+### Paragem 3 — Arquitectura: agente como *principal* isolado {#paragem-3--arquitectura-agente-como-principal-isolado}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -82,7 +82,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 4 — Mandate registado e versionado
+### Paragem 4 — Mandate registado e versionado {#paragem-4--mandate-registado-e-versionado}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -91,7 +91,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 5 — Identidade e segredos para o agente na pipeline
+### Paragem 5 — Identidade e segredos para o agente na pipeline {#paragem-5--identidade-e-segredos-para-o-agente-na-pipeline}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -101,28 +101,28 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 6 — Prompts e *skill files* como código
+### Paragem 6 — Prompts e *skill files* como código {#paragem-6--prompts-e-skill-files-como-código}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
 | **Prompts-como-código** | [Cap. 06 §prompts-como-codigo](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo) | Versionamento em VCS, code review, secret scanning, drift detection vs fonte canónica |
-| **Structured outputs** | [Cap. 06 §structured-outputs](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Schema declarado, validação dupla sintáctica + semântica, *fail-open* com *fallback* |
+| **Structured outputs** | [Cap. 06 §structured-outputs](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Schema declarado, validação dupla sintáctica + semântica, *fail-closed* com *fallback* |
 | **Policy 15** | [Policy 15 §2](/sbd-toe/assets/policies/policy-revisao-codigo) | Alcance estendido a prompts/skill files; mudança de `tools_allowlist` tratada como mudança IAM |
 
 ---
 
-### Paragem 7 — AI BOM + supply chain de modelos
+### Paragem 7 — AI BOM + supply chain de modelos {#paragem-7--ai-bom--supply-chain-de-modelos}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
 | **`DEP-011..014`** | [Cap. 05 §DEP-011](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) | Inventário AI + AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + *providers* aprovados |
 | **User story** | [Cap. 05 US-14](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-14) | Gerar AI BOM por *build*; *provider* aprovado obrigatório |
 | **Policy 39** | [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | Ciclo de vida AI BOM; resposta a incidentes *upstream* por classe (`AML.T0019/T0109/T0110`) |
-| **Policy 33 §10** (contratação) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Cláusulas Art. 53/55 declaradas + RGPD Art. 28 |
+| **Policy 33 §10** (contratação) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Cláusulas do art. 53.º (e do art. 55.º, se o modelo tiver risco sistémico) declaradas + RGPD Art. 28 |
 
 ---
 
-### Paragem 8 — *Eval suite* contínua
+### Paragem 8 — *Eval suite* contínua {#paragem-8--eval-suite-contínua}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -133,7 +133,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 9 — Release gates
+### Paragem 9 — Release gates {#paragem-9--release-gates}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -141,7 +141,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 10 — Operação: telemetria agentic
+### Paragem 10 — Operação: telemetria agentic {#paragem-10--operação-telemetria-agentic}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -151,7 +151,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-### Paragem 11 — Revisão e renovação
+### Paragem 11 — Revisão e renovação {#paragem-11--revisão-e-renovação}
 
 | Item | Local no SbD-ToE | O que se faz |
 |---|---|---|
@@ -162,7 +162,7 @@ Cada paragem do fluxo tem **substância normativa** num capítulo do SbD-ToE, e 
 
 ---
 
-## Cruzamento com regulamento
+## Cruzamento com regulamento {#cruzamento-com-regulamento}
 
 O processo descrito serve em simultâneo várias obrigações regulatórias. Mapeamento sintético:
 
@@ -173,14 +173,14 @@ O processo descrito serve em simultâneo várias obrigações regulatórias. Map
 | **AI Act** | Art. 10 (dados / governação) | Paragem 7 (AI BOM) |
 | **AI Act** | Art. 11 + Anexo IV (doc técnica) | Paragens 4, 7 |
 | **AI Act** | Art. 12 + Art. 19 (logging) | Paragem 10 |
-| **AI Act** | Art. 13 (transparência aos *deployers*) | Paragem 4 (mandate como fonte) |
+| **AI Act** | Art. 13 (transparência e prestação de informações aos responsáveis pela implantação) | Paragem 4 (mandate como fonte) |
 | **AI Act** | **Art. 14 (supervisão humana)** ⚡ | Paragens 1, 3, 4 (camada agentic colmata gap histórico) |
-| **AI Act** | Art. 15 (robustez / cybersec) | Paragens 2, 3, 8, 10 |
+| **AI Act** | Art. 15 (exatidão, solidez e cibersegurança) | Paragens 2, 3, 8, 10 |
 | **AI Act** | Art. 17 (QMS) | Todo o processo (Policy 38 + Policy 39 dão *ciclos formais*) |
-| **AI Act** | Art. 25 (cadeia de fornecimento) | Paragem 7 |
-| **AI Act** | Art. 26 (deployer) | Paragem 4 (mandate de deployer) + Paragem 10 |
+| **AI Act** | Art. 25 (responsabilidades ao longo da cadeia de valor da IA) | Paragem 7 |
+| **AI Act** | Art. 26 (responsáveis pela implantação) | Paragem 4 (mandate do responsável pela implantação) + Paragem 10 |
 | **AI Act** | Art. 53 / 55 (GPAI) | Paragens 7, 8, 10 |
-| **AI Act** | Art. 72 (pós-mercado) | Paragem 10 |
+| **AI Act** | Art. 72 (acompanhamento pós-comercialização) | Paragem 10 |
 | **AI Act** | Art. 73 (incidentes graves) | Paragens 10, 11 |
 | **NIS2** | Art. 21 (medidas de gestão de risco) | Paragens 1, 2, 3, 10 |
 | **NIS2** | Art. 23 (notificação de incidentes) | Paragem 10 + Policy 30 §9.3 |
@@ -190,15 +190,15 @@ O processo descrito serve em simultâneo várias obrigações regulatórias. Map
 | **DORA** | Art. 17 (gestão de incidentes ICT) | Paragens 10, 11 |
 | **CRA** | Anexo I Parte I (cybersec by design) | Paragens 3, 5, 6, 8 |
 | **CRA** | Anexo I Parte II (vulnerability handling) | Paragem 7 (Policy 39 §7) + Paragens 10, 11 |
-| **CRA** | Art. 13 (SBOM) | Paragem 7 (AI BOM cobre + complementa) |
+| **CRA** | Anexo I, Parte II, ponto 1 (SBOM) | Paragem 7 (AI BOM cobre + complementa) |
 | **RGPD** | Art. 5(1)(c) (minimização) | Policy 18 §10.1 |
 | **RGPD** | Art. 6 / 9 (base legal) | Policy 18 §10.2 |
-| **RGPD** | Art. 28 (sub-processadores) | Paragem 7 + Policy 33 §10 |
+| **RGPD** | Art. 28.º (subcontratantes) | Paragem 7 + Policy 33 §10 |
 | **RGPD** | Art. 44–49 (transferências) | Policy 33 §10.2 |
 
 ---
 
-## Exemplo concreto: agente de auditoria de PR (nível A2)
+## Exemplo concreto: agente de auditoria de PR (nível A2) {#exemplo-concreto-agente-de-auditoria-de-pr-nível-a2}
 
 Cenário ilustrativo, baseado num caso operacional realista — implementável com o servidor MCP SbD-ToE.
 
@@ -218,7 +218,7 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Anti-padrões transversais
+## Anti-padrões transversais {#anti-padrões-transversais}
 
 - ❌ **Subir nível A1 → A2 sem novo *mandate* aprovado** — viola `REQ-AGN-001`/`REQ-AGN-002` e ignora todas as paragens 1–4.
 - ❌ **`tools_allowlist` alargada via *commit* sem revisão** — equivalente a alterar IAM policy sem aprovação; viola Policy 15 §2 + Policy 38 §5.5.
@@ -232,7 +232,7 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Como usar este exemplo
+## Como usar este exemplo {#como-usar-este-exemplo}
 
 1. **Para uma equipa que está a adoptar agentes pela primeira vez**: percorrer as paragens 1 → 11 antes da primeira activação operacional. Não é necessário implementar tudo em A1; o nível A1 cobre paragens 1–6 + 10 (sem *eval* nem *release gate* obrigatórios).
 2. **Para auditoria interna / externa**: usar a tabela de cruzamento com regulamento para reconstruir a árvore de evidência por artigo.
@@ -241,9 +241,9 @@ Cenário ilustrativo, baseado num caso operacional realista — implementável c
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 - **Mini-site MCP** ([`/sbd-toe/assets/mcp/intro`](/sbd-toe/assets/mcp/intro)) — exemplos práticos de skills/agentes que materializam várias destas paragens
 - **AI Act cross-check** ([`/sbd-toe/cross-check-normativo/ai-act/intro`](/sbd-toe/cross-check-normativo/ai-act/intro)) — análise artigo-a-artigo
-- **CRA convergence note** ([`/sbd-toe/cross-check-normativo/ai-act/convergencia-cra`](/sbd-toe/cross-check-normativo/ai-act/convergencia-cra)) — uma arquitectura, duas presunções de conformidade
+- — uma arquitectura técnica; uma única presunção de conformidade (CRA, art. 12.º, n.º 1, espelhada no AI Act, art. 42.º, n.º 3, na redacção do Reg. (UE) 2026/1744), limitada aos requisitos de cibersegurança do art. 15.º do AI Act
 - **Outros exemplos de playbook**: [Toolchain](./exemplo-toolchain-options), [KPIs](./exemplo-kpis-targets), [RACI](./exemplo-raci-governance), [Relatório de incidentes](./exemplo-relatorio-incidentes)

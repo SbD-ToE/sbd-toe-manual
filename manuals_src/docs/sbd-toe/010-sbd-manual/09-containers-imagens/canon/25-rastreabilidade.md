@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Containers e Imagens
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As referências externas relevantes para este domínio encontram-se nos capítulos onde cada slice ancora primariamente.
 
@@ -19,9 +19,9 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **50 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **67 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -41,10 +41,10 @@ Total: **50 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Control | `CTRL-secrets-gestao-de-segredos-e-identidades-operacionais-e2c86cdfe9` | Gestão de segredos e identidades operacionais | normative | explicit | deterministic |
 | Control | `CTRL-supply-chain-supply-chain-segura-de-imagens-e-containers-8a8af25a4d` | Supply chain segura de imagens e containers | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:aplicacao-de-politicas-formais-de-seguranca-no-runtime-com-opa-kyverno` | Aplicação de políticas formais de segurança no runtime com OPA/Kyverno | normative | explicit | deterministic |
-| Practice | `09-containers-imagens:aprovacao-depreciacao-e-revogacao-de-golden-base-images-catalogo-organizacional` | Aprovação, depreciação e revogação de Golden Base Images (catálogo organizaciona | normative | explicit | deterministic |
+| Practice | `09-containers-imagens:aprovacao-depreciacao-e-revogacao-de-golden-base-images-catalogo-organizacional` | Aprovação, depreciação e revogação de Golden Base Images (catálogo organizacional) | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:assinatura-e-verificacao-de-proveniencia-de-imagens-com-cosign-e-rekor` | Assinatura e verificação de proveniência de imagens com Cosign e Rekor | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:builders-e-runners-ephemerais-assinados-e-com-auditoria` | Builders e Runners Ephemerais, Assinados e com Auditoria | normative | explicit | deterministic |
-| Practice | `09-containers-imagens:construcao-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest` | Construção de imagens a partir de bases seguras, minimalistas e pinned por diges | normative | explicit | deterministic |
+| Practice | `09-containers-imagens:construcao-de-imagens-a-partir-de-bases-seguras-minimalistas-e-pinned-por-digest` | Construção de imagens a partir de bases seguras, minimalistas e pinned por digest | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:enforcement-centralizado-e-auditavel-de-politicas-no-runtime` | Enforcement Centralizado e Auditável de Políticas no Runtime | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:excecoes-temporarias-a-findings-policies-com-ttl-compensacoes-e-revalidacao` | Exceções temporárias a findings/policies com TTL, compensações e revalidação | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:geracao-e-rastreabilidade-de-sbom-em-imagens` | Geração e Rastreabilidade de SBOM em Imagens | normative | explicit | deterministic |
@@ -57,13 +57,30 @@ Total: **50 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `09-containers-imagens:sandboxing-avancado-com-gvisor-kata-para-workloads-criticas` | Sandboxing Avançado com gVisor/Kata para Workloads Críticas | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:segmentacao-de-rede-e-networkpolicy` | Segmentação de Rede e NetworkPolicy | normative | explicit | deterministic |
 | Practice | `09-containers-imagens:validacao-automatica-de-vulnerabilidades-em-imagens-no-pipeline-ci-cd` | Validação automática de vulnerabilidades em imagens no pipeline CI/CD | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-149` | Imagens base vulneráveis/obsoletas | normative | heuristic | bounded |
+| Threat | `MT-150` | Inclusão de dependências inseguras no build | normative | heuristic | bounded |
+| Threat | `MT-151` | Conteúdo inesperado no _context_ de build | normative | heuristic | bounded |
+| Threat | `MT-152` | Configurações inseguras no Dockerfile | normative | heuristic | bounded |
+| Threat | `MT-153` | Imagens não assinadas / sem verificação | normative | heuristic | bounded |
+| Threat | `MT-154` | Substituição maliciosa em registo | normative | heuristic | bounded |
+| Threat | `MT-155` | Falta de trilho de auditoria (quem construiu o quê) | normative | heuristic | bounded |
+| Threat | `MT-156` | Execução como root / capabilities excessivas | normative | heuristic | bounded |
+| Threat | `MT-157` | Montagens e volumes inseguros | normative | heuristic | bounded |
+| Threat | `MT-158` | Falta de políticas de rede | normative | heuristic | bounded |
+| Threat | `MT-159` | _Admission_ permissivo | normative | heuristic | bounded |
+| Threat | `MT-160` | Segredos embebidos em imagem | normative | heuristic | bounded |
+| Threat | `MT-161` | Exposição em variáveis de ambiente | normative | heuristic | bounded |
+| Threat | `MT-162` | Manifestos inseguros aprovados | normative | heuristic | bounded |
+| Threat | `MT-163` | Desalinhamento imagem↔manifesto | normative | heuristic | bounded |
+| Threat | `MT-164` | Falta de rastreabilidade de deploys | normative | heuristic | bounded |
+| Threat | `MT-165` | _Shadow containers_ fora do pipeline | normative | heuristic | bounded |
+| Threat | `MT-166` | _Drift_ de configuração | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

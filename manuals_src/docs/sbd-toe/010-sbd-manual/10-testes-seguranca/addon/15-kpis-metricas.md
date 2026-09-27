@@ -10,7 +10,7 @@ tags: [kpi, metricas, TST, testes, sast, dast, pentest, findings, regressao, L1,
 
 # KPIs e Métricas - Testes de Segurança
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **eficácia, cobertura e maturidade do programa de testes de segurança**: a cobertura por tipo de teste (SAST, DAST, pentest), a velocidade de resolução de findings dentro dos SLAs definidos, a centralização da gestão de findings, e a taxa de regressão como proxy de qualidade do processo de remediação.
 
@@ -20,7 +20,7 @@ Os indicadores TST alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,15 +62,15 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **TST-K03 - SLA por severidade e nível (referência TST-003):**
 
 | Severidade | L1 | L2 | L3 |
 |------------|:--:|:--:|:--:|
-| Crítico (CVSS ≥ 9.0) | 30 dias | 14 dias | 7 dias |
-| Alto (CVSS 7.0–8.9) | 90 dias | 30 dias | 14 dias |
-| Médio (CVSS 4.0–6.9) | - | 90 dias | 60 dias |
+| Crítico (CVSS ≥ 9.0) | 30 dias | 7 dias | 3 dias |
+| Alto (CVSS 7.0–8.9) | 90 dias | 30 dias | 15 dias |
+| Médio (CVSS 4.0–6.9) | 180 dias | 90 dias | 45 dias |
 
 Findings com excepção formal activa são excluídos do cálculo de TST-K03 mas registados separadamente.
 
@@ -84,7 +84,7 @@ Findings com excepção formal activa são excluídos do cálculo de TST-K03 mas
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -98,11 +98,11 @@ Findings com excepção formal activa são excluídos do cálculo de TST-K03 mas
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos TST-001..010 que fundamentam os indicadores |
 | `addon/08-gestao-findings.md` | Processo de centralização (TST-K05) e triagem (TST-K07) |
 | `addon/05-validacao-regressao.md` | Metodologia de detecção de regressões (TST-K04) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03 |

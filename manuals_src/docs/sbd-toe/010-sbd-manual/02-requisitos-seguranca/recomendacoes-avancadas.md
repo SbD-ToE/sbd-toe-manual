@@ -15,7 +15,7 @@ Este anexo apresenta **práticas avançadas não obrigatórias** que podem ser a
 
 ---
 
-## 🔀 1. Rastreabilidade Automatizada
+## 🔀 1. Rastreabilidade Automatizada {#-1-rastreabilidade-automatizada}
 
 > **Objetivo**: Permitir rastreabilidade contínua entre requisitos, código, testes e validações.
 
@@ -25,7 +25,7 @@ Este anexo apresenta **práticas avançadas não obrigatórias** que podem ser a
 
 ---
 
-## 🧪 2. Critérios de Aceitação em BDD / Linguagem Formal
+## 🧪 2. Critérios de Aceitação em BDD / Linguagem Formal {#-2-critérios-de-aceitação-em-bdd--linguagem-formal}
 
 > **Objetivo**: Tornar os requisitos testáveis e verificáveis por máquina.
 
@@ -44,7 +44,7 @@ Feature: Autenticação multifator
 
 ---
 
-## 📦 3. Catálogos Internos e Perfis de Requisitos
+## 📦 3. Catálogos Internos e Perfis de Requisitos {#-3-catálogos-internos-e-perfis-de-requisitos}
 
 > **Objetivo**: Reutilizar e padronizar requisitos comuns por tipo de aplicação.
 
@@ -54,7 +54,7 @@ Feature: Autenticação multifator
 
 ---
 
-## 📄 4. Integração com Threat Modeling
+## 📄 4. Integração com Threat Modeling {#-4-integração-com-threat-modeling}
 
 > **Objetivo**: Alinhar os requisitos com ameaças reais modeladas.
 
@@ -64,7 +64,7 @@ Feature: Autenticação multifator
 
 ---
 
-## 📊 5. Medição e Gestão de Coverage
+## 📊 5. Medição e Gestão de Coverage {#-5-medição-e-gestão-de-coverage}
 
 > **Objetivo**: Monitorizar a definição, aplicação e validação de requisitos.
 
@@ -78,7 +78,7 @@ Feature: Autenticação multifator
 
 ---
 
-## 🔐 6. Integração com Conformidade Regulatória
+## 🔐 6. Integração com Conformidade Regulatória {#-6-integração-com-conformidade-regulatória}
 
 > **Objetivo**: Garantir que os requisitos cobrem controlos normativos obrigatórios.
 
@@ -91,7 +91,7 @@ Feature: Autenticação multifator
 
 ---
 
-## 🧠 7. Exemplos de Maturidade Elevada
+## 🧠 7. Exemplos de Maturidade Elevada {#-7-exemplos-de-maturidade-elevada}
 
 | Prática                                 | Valor acrescentado                                  | Ferramentas sugeridas              |
 |-----------------------------------------|-----------------------------------------------------|-------------------------------------|
@@ -103,7 +103,7 @@ Feature: Autenticação multifator
 
 ---
 
-## ✅ Considerações Finais
+## ✅ Considerações Finais {#-considerações-finais}
 
 Estas práticas **não são obrigatórias**, mas recomendadas quando:
 
@@ -116,7 +116,7 @@ Estas práticas **não são obrigatórias**, mas recomendadas quando:
 
 ---
 
-## 🤖 8. Requisitos como Código (Policy as Code)
+## 🤖 8. Requisitos como Código (Policy as Code) {#-8-requisitos-como-código-policy-as-code}
 
 > **Objetivo**: Representar requisitos em formato estruturado e aplicável automaticamente.
 
@@ -140,7 +140,7 @@ permitir {
 
 ---
 
-## 🧰 9. Requisitos Derivados de Princípios de Design Seguro
+## 🧰 9. Requisitos Derivados de Princípios de Design Seguro {#-9-requisitos-derivados-de-princípios-de-design-seguro}
 
 > **Objetivo**: Traduzir princípios de arquitetura em requisitos verificáveis.
 

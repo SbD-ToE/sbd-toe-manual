@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação no Ciclo de Vida - Dependências, SBOM e SCA
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 As práticas acompanham a aplicação desde o arranque até ao *post‑release*.  
 Cada evento é um **trigger** que deve produzir evidências objetivas.
@@ -24,7 +24,7 @@ Cada evento é um **trigger** que deve produzir evidências objetivas.
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A governação é **coletiva** - papéis e responsabilidades consistentes com o intro.md.
 
@@ -39,13 +39,13 @@ A governação é **coletiva** - papéis e responsabilidades consistentes com o 
 
 ---
 
-## 📖 User Stories Reutilizáveis
+## 📖 User Stories Reutilizáveis {#-user-stories-reutilizáveis}
 
 Cada US transforma a prescrição em backlog acionável, com **contexto, rationale científico, BDD/checklist, artefactos, proporcionalidade L1–L3 e integração no SDLC**.
 
 ---
 
-### US-01 - Gestão de dependências seguras
+### US-01 - Gestão de dependências seguras {#us-01---gestão-de-dependências-seguras}
 
 **Contexto.**  
 Dependências externas sem validação introduzem risco invisível (componentes abandonados, origem duvidosa, licenças incompatíveis).
@@ -88,7 +88,7 @@ Como **Developer**, quero **usar apenas dependências aprovadas**, para **reduzi
 
 ---
 
-### US-02 - SBOM em cada build
+### US-02 - SBOM em cada build {#us-02---sbom-em-cada-build}
 
 **Contexto.**  
 Sem SBOM atualizado não é possível determinar rapidamente exposição a CVEs e cumprir requisitos de auditoria.
@@ -134,7 +134,7 @@ Como **DevOps / SRE**, quero **gerar SBOM em cada build**, para **rastreabilidad
 
 ---
 
-### US-03 - SCA automático com *gates*
+### US-03 - SCA automático com *gates* {#us-03---sca-automático-com-gates}
 
 **Contexto.**  
 SCA identifica vulnerabilidades conhecidas em dependências (diretas e transitivas) e deve bloquear risco inaceitável.
@@ -176,7 +176,7 @@ Como **AppSec Engineer**, quero **executar SCA automático nos pipelines**, para
 
 ---
 
-### US-04 - Exceções a CVEs formais e temporárias
+### US-04 - Exceções a CVEs formais e temporárias {#us-04---exceções-a-cves-formais-e-temporárias}
 
 **Contexto.**  
 Nem todos os findings podem ser resolvidos de imediato; exceções devem ser **formais, justificadas e temporárias**.
@@ -213,7 +213,7 @@ Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter 
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
 | L1 | Opcional | Justificação simples |
-| L2 | Sim | Revisão periódica (30–90 dias) |
+| L2 | Sim | Revalidação na expiração (TTL da Política 05 §7: 60 dias Low/Medium, 30 dias High) |
 | L3 | Sim | Validação executiva + métricas de risco
 
 **Integração no SDLC.**
@@ -226,7 +226,7 @@ Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter 
 
 ---
 
-### US-05 - Validação de release (*go/no-go*)
+### US-05 - Validação de release (*go/no-go*) {#us-05---validação-de-release-gono-go}
 
 **Contexto.**  
 Cada release é uma decisão de risco que deve ser **explícita e rastreável**.
@@ -268,7 +268,7 @@ Como **Product Owner**, quero **validar findings e exceções antes do go‑live
 
 ---
 
-### US-06 - Repositórios internos como fonte única
+### US-06 - Repositórios internos como fonte única {#us-06---repositórios-internos-como-fonte-única}
 
 **Contexto.**  
 Sem repositórios internos, dependências podem ser resolvidas de fontes não controladas (*typosquatting*, *confusion*, malícia).
@@ -310,7 +310,7 @@ Como **DevOps / SRE**, quero ***enforce* repositórios internos aprovados**, par
 
 ---
 
-### US-07 - Proibir bibliotecas copiadas manualmente
+### US-07 - Proibir bibliotecas copiadas manualmente {#us-07---proibir-bibliotecas-copiadas-manualmente}
 
 **Contexto.**  
 JS, PHP, DLLs, JARs copiados diretamente para o repo escapam ao SBOM e ao SCA, criando *shadow dependencies*.
@@ -353,7 +353,7 @@ Como **Developer**, quero **usar apenas *package managers*/repositórios interno
 
 ---
 
-### US-08 - Automação da atualização com avaliação de impacto
+### US-08 - Automação da atualização com avaliação de impacto {#us-08---automação-da-atualização-com-avaliação-de-impacto}
 
 **Contexto.**  
 Dependências degradam com o tempo; é necessário atualizar **com segurança e rapidez**.  
@@ -403,7 +403,7 @@ Como **DevOps/Developer**, quero **bots de atualização com avaliação de impa
 
 ---
 
-### US-09 - Auditoria Periódica de Bibliotecas Copiadas Manualmente
+### US-09 - Auditoria Periódica de Bibliotecas Copiadas Manualmente {#us-09---auditoria-periódica-de-bibliotecas-copiadas-manualmente}
 
 **Contexto.**  
 Bibliotecas copiadas manualmente escapam ao SBOM e ao SCA. É necessário **automação periódica** para detetar estas dependências ocultas e ***enforce* substituição** via package manager ou bloqueio em CI/CD.
@@ -452,7 +452,7 @@ Como **AppSec Engineer**, quero **executar auditoria periódica automatizada** p
 
 ---
 
-### US-10 - Inventário e SBOM por Build
+### US-10 - Inventário e SBOM por Build {#us-10---inventário-e-sbom-por-build}
 
 **Contexto.**  
 Cada build deve produzir uma **Software Bill of Materials (SBOM)** assinada e rastreável, identificando todas as dependências utilizadas (diretas e transitivas).  
@@ -513,7 +513,7 @@ Como **DevOps / SRE**, quero gerar automaticamente um **SBOM assinado por build*
 
 ---
 
-### US-11 - Alertas sobre Vulnerabilidades em Componentes Usados
+### US-11 - Alertas sobre Vulnerabilidades em Componentes Usados {#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados}
 
 **Contexto.**  
 Os sistemas devem **detetar automaticamente vulnerabilidades conhecidas (CVEs)** nas dependências utilizadas.  
@@ -554,16 +554,18 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 **Proporcionalidade.**
 | Nível | Obrigatório? | SLA triagem | SLA mitigação | Ajustes |
 |---|---:|---:|---:|---|
-| L1 | Sim | 5 dias úteis | 30 dias | Alertar apenas *high/critical* implantadas sem compensações. |
-| L2 | Sim | 2 dias úteis | 14 dias | Incluir *medium* em serviços expostos; escalonamento automático. |
-| L3 | Sim | 1 dia útil | 7 dias | *Blockers* com auto-rollback/kill-switch quando aplicável. |
+| L1 | Sim | Crítico ≤ 24 h; Alto ≤ 48 h; Médio 5 dias úteis; Baixo 10 dias úteis | Crítico 30 dias | Alertar apenas *high/critical* implantadas sem compensações. |
+| L2 | Sim | Crítico ≤ 24 h; Alto ≤ 48 h; Médio 5 dias úteis; Baixo 10 dias úteis | Crítico 7 dias | Incluir *medium* em serviços expostos; escalonamento automático. |
+| L3 | Sim | Crítico ≤ 24 h; Alto ≤ 48 h; Médio 5 dias úteis; Baixo 10 dias úteis | Crítico 3 dias | *Blockers* com auto-rollback/kill-switch quando aplicável. |
+
+> Estes SLAs são escolha do Manual. Uma vulnerabilidade com indício de exploração ativa num produto com elementos digitais que a organização coloca no mercado sai desta escada: triagem ≤4 h e, se confirmada, trilho do CRA art. 14.º (notificação de alerta precoce ≤24 h à CSIRT designada como coordenadora e à ENISA).
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
 | Publicação CVE | Nova vulnerabilidade pública | Automático (feed) | Detecção automática (1–6h) |
 | Triagem | CVE correlacionada com versão implantada | AppSec + DevOps | L1: 5d, L2: 2d, L3: 1d |
-| Mitigação | Plano de correção ou exceção | DevOps + AppSec | L1: 30d, L2: 14d, L3: 7d |
+| Mitigação | Plano de correção ou exceção | DevOps + AppSec | Crítico: L1 30d, L2 7d, L3 3d (Política 19 §4.3) |
 
 **Ligações úteis.**
 - [US-02 - SBOM em cada build](#us-02---sbom-em-cada-build)
@@ -573,7 +575,7 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 
 ---
 
-### US-12 - Validação Automática de Compatibilidade de Licenças
+### US-12 - Validação Automática de Compatibilidade de Licenças {#us-12---validação-automática-de-compatibilidade-de-licenças}
 
 **Contexto.**  
 Dependências com licenças incompatíveis (GPL, AGPL, etc.) podem introduzir obrigações legais inesperadas. É necessário **validar automaticamente a compatibilidade** contra lista branca organizacional.
@@ -625,7 +627,7 @@ Como **Developer**, quero **validar automaticamente a compatibilidade de licenç
 
 ---
 
-### US-13 - Inventário e controlo de dependências emergentes
+### US-13 - Inventário e controlo de dependências emergentes {#us-13---inventário-e-controlo-de-dependências-emergentes}
 
 **Contexto.**  
 Em arquiteturas modernas, nem todas as dependências entram por declaração explícita em manifests ou lockfiles. Ferramentas de build, pipelines, code generation, plugins e carregamento em runtime podem introduzir **dependências emergentes** que não são imediatamente visíveis.
@@ -735,7 +737,7 @@ Como **AppSec / DevOps**, quero que cada *release* do sistema gere um **AI BOM e
 
 ---
 
-### US-15 - Pinning de versões e integridade por hash
+### US-15 - Pinning de versões e integridade por hash {#us-15---pinning-de-versões-e-integridade-por-hash}
 
 Uma dependência sem versão fixa e sem hash verificável é uma porta aberta a substituição silenciosa na cadeia de fornecimento.  
 
@@ -778,7 +780,7 @@ Como **Developer/Lead**, quero **fixar todas as dependências a versões exactas
 
 ---
 
-### US-16 - Governação documentada de política de severidade, registries e registo de aprovação
+### US-16 - Governação documentada de política de severidade, registries e registo de aprovação {#us-16---governação-documentada-de-política-de-severidade-registries-e-registo-de-aprovação}
 
 Controlos de supply chain só são auditáveis quando a regra que distingue bloquear-de-alertar, a origem permitida e o registo de quem aprovou o quê estão escritos e versionados.  
 
@@ -825,7 +827,7 @@ Como **AppSec Engineer**, quero **manter versionada a política de severidade, a
 
 ---
 
-## 🧩 Nota complementar - Inventário contínuo de componentes e alertas em produção
+## 🧩 Nota complementar - Inventário contínuo de componentes e alertas em produção {#-nota-complementar---inventário-contínuo-de-componentes-e-alertas-em-produção}
 
 A gestão de dependências não termina no build.  
 Deve existir um **inventário contínuo de componentes de 3.ºs** por projeto e ambiente (dev/test/stage/prod), com **alertas automáticos** quando são publicadas vulnerabilidades que afetem versões implantadas.  
@@ -854,7 +856,7 @@ Ums dos aspetos fundamentais no  **Cap. 12 - Monitorização & Operação Segura
 - Relato executivo: compliance Cap. 05 + Cap. 12, visão por L1–L3.
 
 ---
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 | Artefacto | Evidência |
 |-----------|-----------|
@@ -895,7 +897,7 @@ Ums dos aspetos fundamentais no  **Cap. 12 - Monitorização & Operação Segura
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 - **SBOM** deve ser tratado como documento vivo, com assinatura e proveniência verificável por build e por ambiente.  
 - **Inventário contínuo** em produção é essencial: deteta *drift* e vulnerabilidades em versões efetivamente implantadas.  

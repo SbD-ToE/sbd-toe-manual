@@ -15,16 +15,16 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 ---
 
-## 🚀 Recomendações para organizações com maior maturidade
+## 🚀 Recomendações para organizações com maior maturidade {#-recomendações-para-organizações-com-maior-maturidade}
 
-### 🧠 1. Integração com plataforma LMS
+### 🧠 1. Integração com plataforma LMS {#-1-integração-com-plataforma-lms}
 
 - Automatizar **trilhos formativos personalizados** por perfil técnico (Dev, QA, DevOps, AppSec).
 - Integrar quizzes, vídeos, provas práticas e registo automatizado por capítulo (ex: Cap. 05 - SBOM).
 - Gerar **dashboards em tempo real por equipa, projeto ou domínio** funcional.
 - Versionar os conteúdos por capítulo do SbD-ToE e associar métricas de conclusão.
 
-### 🤖 2. Validação automática via CI/CD
+### 🤖 2. Validação automática via CI/CD {#-2-validação-automática-via-cicd}
 
 - Validar automaticamente se a **formação e validação foram concluídas** antes de autorizar:
   - Acesso a repositórios
@@ -33,19 +33,19 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 - Bloquear operações críticas caso o estado do utilizador esteja como "não habilitado".
 - Integrar com fontes de identidade (ex: GitHub, GitLab, Azure AD) para refletir estado de onboarding.
 
-### 🔄 3. Feedback contínuo e adaptativo
+### 🔄 3. Feedback contínuo e adaptativo {#-3-feedback-contínuo-e-adaptativo}
 
 - Utilizar quizzes **adaptativos com reforço em áreas fracas**, baseados no perfil e no histórico.
 - Correlacionar **erros reais em PRs ou incidentes** com reforços automáticos (ex: microlearning).
 - Aplicar técnicas de **repetição espaçada**, métricas de eficácia e gamificação opcional.
 
-### 🔐 4. Onboarding técnico assistido
+### 🔐 4. Onboarding técnico assistido {#-4-onboarding-técnico-assistido}
 
 - Criar **ambientes sandbox seguros** para validar conhecimento (ex: revisão de PRs, deteção de falhas).
 - Incluir **casos reais e lessons learned internos** nos percursos formativos.
 - Monitorizar tempo, desempenho e pontos de abandono durante o onboarding.
 
-### 🌍 5. Expansão para fornecedores e parceiros
+### 🌍 5. Expansão para fornecedores e parceiros {#-5-expansão-para-fornecedores-e-parceiros}
 
 - Disponibilizar **trilhos formativos públicos ou sob NDA** a parceiros estratégicos.
 - Exigir **compliance formativa** com métricas de conclusão antes de permissões técnicas.
@@ -53,9 +53,9 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 ---
 
-## 🧭 Integração com frameworks de maturidade
+## 🧭 Integração com frameworks de maturidade {#-integração-com-frameworks-de-maturidade}
 
-### 📘 OWASP DSOMM - `Training & Awareness`
+### 📘 OWASP DSOMM - `Training & Awareness` {#-owasp-dsomm---training--awareness}
 
 | Nível | Prática esperada no DSOMM                                                                             | Coberto pelas recomendações |
 |-------|--------------------------------------------------------------------------------------------------------|------------------------------|
@@ -66,19 +66,19 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 > ✅ As recomendações aqui descritas permitem atingir **DSOMM nível 4** no domínio `Training & Awareness`.
 
-### 📘 SAMM v2.1 - `Education & Guidance`
+### 📘 SAMM v2.1 - `Education & Guidance` {#-samm-v21---education--guidance}
 
 - **EDU.3 - Automated, role-specific training**: Os trilhos por perfil, gating via CI/CD e dashboards suportam integralmente este nível.
 - A integração com onboarding técnico, conteúdo por capítulo e métricas são exemplos de **aplicação contínua da EDU.3**.
 
-### 📘 NIST SSDF v1.1 - `PO.4`
+### 📘 NIST SSDF v1.1 - `PO.4` {#-nist-ssdf-v11---po4}
 
 - **PO.4.1 / PO.4.2**: Definem que a formação deve ser atualizada com base em incidentes e centrada em papéis.
 - **PO.4.3 / PO.4.4**: Apoiam a medição e revisão contínua - tal como recomendado com os dashboards e KPIs.
 
 ---
 
-## 🧩 Adoção progressiva
+## 🧩 Adoção progressiva {#-adoção-progressiva}
 
 | Nível de Maturidade | Recomendações aplicáveis                                                             |
 |---------------------|----------------------------------------------------------------------------------------|
@@ -88,7 +88,7 @@ Este documento apresenta recomendações avançadas que **complementam as práti
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Estas práticas avançadas tornam a formação:
 

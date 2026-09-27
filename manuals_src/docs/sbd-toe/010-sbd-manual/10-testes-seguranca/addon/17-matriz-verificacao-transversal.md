@@ -16,7 +16,7 @@ O que organiza a matriz é o **oráculo**: o referencial contra o qual se confro
 
 Cap. 10 (Testes de Segurança) cobre apenas a fatia de **oráculo comportamental** — os testes propriamente ditos. Todo o resto da verificação vive no seu capítulo de origem. Esta matriz é onde as duas metades se voltam a juntar, sem que nenhum controlo seja prescrito em dois sítios.
 
-## A taxonomia de oráculos
+## A taxonomia de oráculos {#a-taxonomia-de-oráculos}
 
 | Tipo de verificação | Oráculo | Pergunta que responde | Exemplos |
 |---|---|---|---|
@@ -29,7 +29,7 @@ Cap. 10 (Testes de Segurança) cobre apenas a fatia de **oráculo comportamental
 
 > **O SCA tem duas faces.** A *composition analysis* — gerar o SBOM, inventariar dependências diretas e transitivas — **não tem oráculo**: é levantamento, não verificação. O *vulnerability verdict* — confrontar esse inventário com uma base de CVE — **tem oráculo de lookup**. É a segunda face que faz do SCA uma *análise* e não um *teste*: não há comportamento confrontado, há um inventário comparado com uma lista. Por isso o SCA vive em Cap. 05, ancorado em [`DEP-001`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias) (SBOM, inventário) e [`DEP-002`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias) (*verdict* e bloqueio por severidade), e não em Cap. 10.
 
-## A matriz
+## A matriz {#a-matriz}
 
 Cada linha é uma atividade de verificação prescrita num capítulo. As colunas L1/L2/L3 indicam a aplicabilidade por nível de risco — `✔` obrigatório, `rec.` recomendado, `—` não exigido —, exatamente como consta no catálogo de origem. A coluna *Grounding* cita o requisito que prescreve a atividade. As linhas seguem a ordem do ciclo de vida.
 
@@ -80,33 +80,33 @@ Cada linha é uma atividade de verificação prescrita num capítulo. As colunas
 | Deteção de *jailbreak* e *off-policy actions* em agentes AI | Deteção em runtime | Sinal vs. *mandate* / padrão adversarial | [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | — | — | ✔ | `OPS-014` |
 | Revisão periódica de acesso de terceiros (*least privilege*) | Análise (policy) | Política (*least privilege*) | [Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | ✔ | ✔ | ✔ | `GOV-014` |
 
-## Leitura por oráculo
+## Leitura por oráculo {#leitura-por-oráculo}
 
-### Comportamental — os testes propriamente ditos
+### Comportamental — os testes propriamente ditos {#comportamental--os-testes-propriamente-ditos}
 
 Confrontam comportamento observado com comportamento esperado. SAST (`DEV-003`/`TST-002`) sobre o código estático; DAST (`TST-005`) sobre a aplicação em execução; IAST (`TST-010`) instrumentado em runtime; fuzzing (`TST-009`) com input adversarial; PenTesting (`TST-008`) com exploração real. É a fatia que vive em Cap. 10 — e quase a única que aí vive: a *eval suite* como gate de release de sistemas agentic (`DPL-010`) é também oráculo comportamental, mas executa-se no *deploy* (Cap. 11), porque é aí que a mudança de modelo/*prompt* entra em produção.
 
-### Lookup — confronto com base de CVE
+### Lookup — confronto com base de CVE {#lookup--confronto-com-base-de-cve}
 
 Confrontam um inventário com vulnerabilidades conhecidas. O *vulnerability verdict* do SCA (`DEP-002`), a rastreabilidade SBOM → CVE → correção (`DEP-010`) e o scanning de imagens de container (`CNT-002`). Não há comportamento confrontado: há um inventário comparado com uma lista. É por isto que o SCA é **análise** e não teste — o oráculo é a base de CVE, não o comportamento do sistema.
 
-### Política — confronto com regra ou *baseline*
+### Política — confronto com regra ou *baseline* {#política--confronto-com-regra-ou-baseline}
 
 Confrontam uma configuração com uma regra prescrita. Secrets scanning (`IAC-011`/`CIC-003`), IaC scanning (`IAC-003`), *policy-as-code* (`IAC-009`, `CNT-009`), verificação de assinatura e proveniência (`CIC-007`, `CNT-007`), *hardening* de container (`CNT-004`/`CNT-005`/`CNT-006`), *gates* de pipeline (`CIC-004`), linters (`DEV-002`) e a revisão periódica de acesso de terceiros (`GOV-014`), que confronta o acesso concedido com a regra de *least privilege*. O oráculo é a regra ou *baseline*, não o comportamento.
 
-### Critério de aceitação — confronto com o requisito funcional
+### Critério de aceitação — confronto com o requisito funcional {#critério-de-aceitação--confronto-com-o-requisito-funcional}
 
 Confrontam o sistema com o requisito funcional de segurança. Validação de requisitos (`REQ-001`/`REQ-002`), rastreabilidade requisito → ameaça → teste (`REQ-006`) e testes de regressão de segurança (`TST-006`), que confirmam que a correção satisfaz o critério e previnem recorrência.
 
-### Sinal / runtime — confronto com *baseline* operacional
+### Sinal / runtime — confronto com *baseline* operacional {#sinal--runtime--confronto-com-baseline-operacional}
 
 Confrontam comportamento em produção com uma *baseline*. Deteção de eventos críticos (`OPS-002`/`OPS-005`), correlação SIEM (`OPS-008`), deteção comportamental (`OPS-009`) e deteção de *drift* de IaC (`IAC-012`). O oráculo é o sinal operacional contra o estado esperado. Em sistemas AI/agentic, este oráculo estende-se ao *mandate*: a observabilidade dedicada e o *audit* por *tool invocation* (`OPS-011`/`OPS-012`/`OPS-013`) confrontam a ação real com a intenção declarada, e a deteção de *jailbreak* e *off-policy actions* (`OPS-014`, obrigatória em L3) confronta o comportamento do agente com o *scope* assinado no seu *mandate* — a contraparte operacional do `intent declaration` exigido em requisitos.
 
-### Juízo perito — revisão e design review
+### Juízo perito — revisão e design review {#juízo-perito--revisão-e-design-review}
 
 Confrontam a conceção com padrões, mediados por perícia humana. Revisão de *threat model* (`THR-001`/`THR-003`/`THR-007`), revisão de arquitetura (`ARC-001`/`ARC-003`/`ARC-006`) e code review com checklist (`DEV-004`). O oráculo é o juízo perito contra padrões estabelecidos.
 
-## Como usar a matriz
+## Como usar a matriz {#como-usar-a-matriz}
 
 **Para o auditor.** Lê-se de cima para baixo, fixando uma coluna de risco: para um sistema L2, todas as linhas com `✔` na coluna L2 têm de ter evidência; as marcadas `rec.` são recomendadas mas não bloqueantes; as `—` não se exigem. A resposta a *"está tudo verificado para este nível de risco?"* obtém-se sem percorrer dez capítulos.
 

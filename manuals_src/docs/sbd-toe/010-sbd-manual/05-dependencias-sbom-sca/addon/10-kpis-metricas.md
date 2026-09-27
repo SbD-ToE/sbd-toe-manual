@@ -10,7 +10,7 @@ tags: [kpi, metricas, DEP, sbom, sca, dependencias, cve, supply-chain, L1, L2, L
 
 # KPIs e Métricas - Dependências, SBOM e SCA
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **capacidade de uma organização conhecer, controlar e reagir ao risco introduzido pelas dependências de software**. A gestão de dependências é um domínio altamente quantificável: o SBOM é um artefacto estruturado, as CVEs têm pontuações CVSS normalizadas, e os prazos de remediação são rastreáveis com precisão temporal.
 
@@ -20,7 +20,7 @@ Os indicadores DEP alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,13 +48,13 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | DEP-K01 | % aplicações com SBOM gerado automaticamente e actualizado a cada release | Q% | ≥ 50% | ≥ 90% | 100% | T-01, T-05 | Por release |
-| DEP-K02 | % CVEs críticos (CVSS ≥ 9.0) em dependências directas mitigados dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 14d) | 100% (SLA: 5d) | T-03 | Contínuo |
-| DEP-K03 | % CVEs altos (CVSS 7.0–8.9) em dependências directas mitigados dentro de SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 14d) | T-03 | Mensal |
+| DEP-K02 | % CVEs críticos (CVSS ≥ 9.0) em dependências directas mitigados dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 7d) | 100% (SLA: 3d) | T-03 | Contínuo |
+| DEP-K03 | % CVEs altos (CVSS 7.0–8.9) em dependências directas mitigados dentro de SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 15d) | T-03 | Mensal |
 | DEP-K04 | # dependências directas sem mantedor activo (EOL, abandonadas ≥ 24 meses) em produção | Q# ↓ | ≤ 5 | ≤ 2 | = 0 | T-05 | Trimestral |
 | DEP-K05 | % pipelines com SCA automatizado integrado com gate de bloqueio para CVEs críticos | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Mensal |
 | DEP-K06 | % dependências com licença incompatível com política organizacional activas em produção | Q% ↓ | - | = 0% | = 0% | T-05 | Trimestral |
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **DEP-K02/K03 - SLA de mitigação:** o SLA conta a partir da data de publicação da CVE em NVD/OSV, ou da data de detecção pelo scanner SCA, consoante o que for mais tardio. Mitigação válida inclui: actualização da dependência, remoção da dependência, ou excepção formal documentada com compensação (que suspende o contador mas não fecha o indicador).
 
@@ -74,7 +74,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -87,24 +87,24 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Thresholds de SLA por nível - resumo
+## Thresholds de SLA por nível - resumo {#thresholds-de-sla-por-nível---resumo}
 
 | Severidade (CVSS) | L1 | L2 | L3 |
 |-------------------|:--:|:--:|:--:|
-| Crítico (≥ 9.0) | 30 dias | 14 dias | 5 dias |
-| Alto (7.0–8.9) | 90 dias | 30 dias | 14 dias |
-| Médio (4.0–6.9) | - | 90 dias | 60 dias |
-| Baixo (&lt; 4.0) | - | - | 180 dias |
+| Crítico (≥ 9.0) | 30 dias | 7 dias | 3 dias |
+| Alto (7.0–8.9) | 90 dias | 30 dias | 15 dias |
+| Médio (4.0–6.9) | 180 dias | 90 dias | 45 dias |
+| Baixo (&lt; 4.0) | 365 dias | 180 dias | 90 dias |
 
 Estes thresholds são referência de base. Regulamentação sectorial (DORA, NIS2) pode impor prazos mais curtos que prevalecem.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos DEP-001..010 que fundamentam os indicadores |
 | `addon/08-rastreabilidade-vulnerabilidades.md` | Modelo de rastreabilidade CVE → aplicação → resolução |
 | `addon/09-excecoes-e-aceitacao-risco.md` | CVEs sem resolução dentro de SLA requerem excepção formal |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |

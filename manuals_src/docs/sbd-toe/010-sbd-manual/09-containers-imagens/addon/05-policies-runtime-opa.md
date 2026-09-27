@@ -7,7 +7,7 @@ tags: [opa, kyverno, policies, enforcement, kubernetes, runtime, containers]
 
 # Enforcement Técnico de Políticas no Runtime com OPA e Kyverno
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que *containers* **que não cumprem requisitos mínimos de segurança definidos pela organização não podem ser executados**, através de mecanismos formais e automáticos de enforcement, nomeadamente em **Kubernetes e pipelines CI/CD**.
 
@@ -18,7 +18,7 @@ Este ficheiro define como usar OPA, Kyverno e mecanismos equivalentes **como gua
 
 ---
 
-## 🧬 O que são políticas de execução (no modelo SbD-ToE)
+## 🧬 O que são políticas de execução (no modelo SbD-ToE) {#-o-que-são-políticas-de-execução-no-modelo-sbd-toe}
 
 As **políticas de execução** são regras formais avaliadas automaticamente no momento da criação de um workload. No modelo SbD-ToE, elas servem para:
 
@@ -33,7 +33,7 @@ A aceitação de risco, a concessão de exceções e a promoção entre ambiente
 
 ---
 
-## ⚠️ Enforcement não é aceitação de risco
+## ⚠️ Enforcement não é aceitação de risco {#️-enforcement-não-é-aceitação-de-risco}
 
 Um erro conceptual comum é assumir que:
 
@@ -54,7 +54,7 @@ Uma execução pode:
 
 ---
 
-## 📘 Ferramentas e mecanismos recomendados
+## 📘 Ferramentas e mecanismos recomendados {#-ferramentas-e-mecanismos-recomendados}
 
 | Ferramenta              | Função técnica                                         | Papel no SbD-ToE                    |
 |-------------------------|--------------------------------------------------------|-------------------------------------|
@@ -67,9 +67,9 @@ Estas ferramentas **produzem decisões técnicas binárias (allow / deny)** - n�
 
 ---
 
-## 🛠️ Como aplicar políticas de forma correta
+## 🛠️ Como aplicar políticas de forma correta {#️-como-aplicar-políticas-de-forma-correta}
 
-### 1️⃣ Definir requisitos mínimos não negociáveis
+### 1️⃣ Definir requisitos mínimos não negociáveis {#1️⃣-definir-requisitos-mínimos-não-negociáveis}
 
 Exemplos típicos:
 - Execução como utilizador não-root;
@@ -85,7 +85,7 @@ Estes requisitos devem ser:
 
 ---
 
-### 2️⃣ Implementar políticas como código
+### 2️⃣ Implementar políticas como código {#2️⃣-implementar-políticas-como-código}
 
 - Usar Rego (OPA) ou YAML (Kyverno);
 - Versionar em Git, junto da infraestrutura;
@@ -94,7 +94,7 @@ Estes requisitos devem ser:
 
 ---
 
-### 3️⃣ Testar e aplicar enforcement progressivo
+### 3️⃣ Testar e aplicar enforcement progressivo {#3️⃣-testar-e-aplicar-enforcement-progressivo}
 
 - Iniciar em modo `audit`;
 - Analisar rejeições e falsos positivos;
@@ -105,7 +105,7 @@ O objetivo é **reduzir erro**, não criar bloqueios opacos.
 
 ---
 
-## 📂 Onde manter políticas e como governar
+## 📂 Onde manter políticas e como governar {#-onde-manter-políticas-e-como-governar}
 
 - Repositório Git dedicado (`policies/`);
 - Versionamento e histórico de alterações;
@@ -120,7 +120,7 @@ Qualquer exceção **fora da policy** deve ser:
 
 ---
 
-## 🔍 Relação com decisão humana
+## 🔍 Relação com decisão humana {#-relação-com-decisão-humana}
 
 No modelo SbD-ToE:
 
@@ -136,7 +136,7 @@ Sem esta distinção, a policy torna-se um substituto indevido da governação.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Tratar políticas como *guardrails*, não como selo de aprovação;
 - Manter políticas simples, objetivas e justificadas;
@@ -149,7 +149,7 @@ Sem esta distinção, a policy torna-se um substituto indevido da governação.
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com enforcement                        |
 |----------------------------------|------------------------------------------------|

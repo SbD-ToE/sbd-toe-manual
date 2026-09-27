@@ -12,7 +12,7 @@ A separação clara entre ambientes (desenvolvimento, QA, staging, produção) �
 
 ---
 
-## 🌐 Separar é proteger
+## 🌐 Separar é proteger {#-separar-é-proteger}
 
 | Ambiente      | Objectivo principal                           | Restrições sugeridas                        |
 |---------------|-----------------------------------------------|-----------------------------------------------|
@@ -25,7 +25,7 @@ A separação clara entre ambientes (desenvolvimento, QA, staging, produção) �
 
 ---
 
-## 🛡️ Requisitos de segurança por ambiente
+## 🛡️ Requisitos de segurança por ambiente {#️-requisitos-de-segurança-por-ambiente}
 
 - **Acesso e autenticação**:
   - MFA para staging e produção
@@ -42,7 +42,7 @@ A separação clara entre ambientes (desenvolvimento, QA, staging, produção) �
 
 ---
 
-## 🔢 Validação final antes de produção
+## 🔢 Validação final antes de produção {#-validação-final-antes-de-produção}
 
 | Tipo de validação                  | Descrição                                                       |
 |------------------------------------|------------------------------------------------------------------|
@@ -54,7 +54,7 @@ A separação clara entre ambientes (desenvolvimento, QA, staging, produção) �
 
 ---
 
-## 🚑 Testes em produção com segurança
+## 🚑 Testes em produção com segurança {#-testes-em-produção-com-segurança}
 
 Em alguns contextos, pode ser necessário validar em produção:
 - Com feature flags e âmbito limitado
@@ -65,7 +65,7 @@ Em alguns contextos, pode ser necessário validar em produção:
 
 ---
 
-## 💼 Registo e auditoria obrigatória
+## 💼 Registo e auditoria obrigatória {#-registo-e-auditoria-obrigatória}
 
 - Que versão foi promovida
 - Por quem
@@ -75,7 +75,7 @@ Em alguns contextos, pode ser necessário validar em produção:
 
 ---
 
-## ✅ Checklist de validação operacional
+## ✅ Checklist de validação operacional {#-checklist-de-validação-operacional}
 
 - [ ] O ambiente de staging é equivalente a produção?
 - [ ] A pipeline de produção está segregada das restantes?

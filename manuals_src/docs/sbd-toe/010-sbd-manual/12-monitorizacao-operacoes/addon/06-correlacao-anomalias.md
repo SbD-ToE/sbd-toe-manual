@@ -9,13 +9,13 @@ tags: [correlação, anomalias, eventos, deteção, multi-sistema]
 
 # Correlação e Deteção de Anomalias
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Aplicar técnicas de correlação de eventos e deteção de anomalias para identificar padrões de comportamento que, embora inofensivos de forma isolada, possam indicar risco significativo quando analisados em conjunto.
 
 ---
 
-## 🎯 Objetivos da aplicação de correlação
+## 🎯 Objetivos da aplicação de correlação {#-objetivos-da-aplicação-de-correlação}
 
 * Detetar **comportamentos suspeitos** emergentes de padrões discretos
 * Reduzir **falsos positivos** através de contexto cruzado
@@ -24,7 +24,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 🥁 Tipos de correlação
+## 🥁 Tipos de correlação {#-tipos-de-correlação}
 
 | Tipo               | Exemplo prático                               |
 | ------------------ | --------------------------------------------- |
@@ -36,7 +36,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 🛠️ Técnicas e ferramentas de suporte
+## 🛠️ Técnicas e ferramentas de suporte {#️-técnicas-e-ferramentas-de-suporte}
 
 | Técnica                 | Aplicação / exemplo                           |
 | ----------------------- | --------------------------------------------- |
@@ -50,7 +50,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 🧠 Exemplos de padrões correlacionados
+## 🧠 Exemplos de padrões correlacionados {#-exemplos-de-padrões-correlacionados}
 
 | Padrão identificado                | Interpretação             |
 | ---------------------------------- | ------------------------- |
@@ -62,7 +62,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 🪧 Boas práticas
+## 🪧 Boas práticas {#-boas-práticas}
 
 * Normalizar eventos antes da correlação (formatos, campos)
 * Usar janelas temporais limitadas (ex: 5m, 15m)
@@ -72,7 +72,7 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 📊 Deteção baseada em comportamento
+## 📊 Deteção baseada em comportamento {#-deteção-baseada-em-comportamento}
 
 | Técnica                     | Finalidade                                    |
 | --------------------------- | --------------------------------------------- |
@@ -85,18 +85,18 @@ Aplicar técnicas de correlação de eventos e deteção de anomalias para ident
 
 ---
 
-## 🧹 Integração com outros controlos
+## 🧹 Integração com outros controlos {#-integração-com-outros-controlos}
 
 | Documento                        | Relação com este tópico                      |
 | -------------------------------- | -------------------------------------------- |
 | `02-logging-centralizado.md`     | Fonte dos eventos para correlação            |
-| `04-integracao-siem.md`          | Canal e formato da ingesão                   |
+| `04-integracao-siem.md`          | Canal e formato da ingestão                   |
 | `03-alertas-eventos-criticos.md` | Geração de alertas baseada em padrões        |
 | `09-ameacas-mitigadas.md`        | Mapeia deteção a cenários de ameaça (OSC\&R) |
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Começar com correlação simples, baseada em eventos de alto impacto
 * Testar com dados reais, simulados e logs antigos

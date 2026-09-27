@@ -20,14 +20,12 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 
 # Monitorização & Operações
 
-## 
-
 Monitorizar é muito mais do que recolher dados técnicos.  
 É transformar sinais dispersos em **inteligência acionável** que permite às equipas antecipar riscos, detetar falhas e responder antes que um problema se transforme em incidente grave.  
 
 A experiência mostra-nos que grande parte dos ataques não são descobertos pela sofisticação do adversário, mas pela falta de visibilidade. Casos como o da Equifax ou da Target provaram que **logs estavam lá** - mas eram incompletos, mal estruturados ou simplesmente ignorados.  
 
-É por isso que frameworks, como o **SSDF***,  e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
+É por isso que frameworks, como o **SSDF**, e regulamentos como a **NIS2** exigem controlos claros de monitorização e resposta. Não basta prevenir: é preciso **detetar e reagir**.  
 
 👉 Este capítulo liga-se diretamente a:  
 - **Cap. 11 - Deploy Seguro**, que garante a entrada em produção de versões observáveis.  
@@ -35,7 +33,7 @@ A experiência mostra-nos que grande parte dos ataques não são descobertos pel
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 Ao falar de monitorização e operações, referimo-nos a um ecossistema completo de controlos:  
 
@@ -50,11 +48,11 @@ Estas práticas são complementares: só fazem sentido quando atuam em conjunto,
 
 ---
 
-## � Automação e Governação em Monitorização
+## Automação e Governação em Monitorização {#-automação-e-governação-em-monitorização}
 
 A monitorização segura combina **automação extensiva** com **governação explícita**, diferenciando:
 
-### Decisões Determinísticas (Automação Soberana)
+### Decisões Determinísticas (Automação Soberana) {#decisões-determinísticas-automação-soberana}
 
 Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a automação pode operar sem intervenção:
 
@@ -65,7 +63,7 @@ Quando critérios são **objetivos, reprodutíveis e isentos de contexto**, a au
 
 **Princípio**: Automação determinística **pode operar sem aprovação humana** se critérios estão formalmente definidos e versionados.
 
-### Decisões Não-Determinísticas (Governação Obrigatória)
+### Decisões Não-Determinísticas (Governação Obrigatória) {#decisões-não-determinísticas-governação-obrigatória}
 
 ⚠️ **CRÍTICO**: Automação não-determinística **NÃO PODE** operar sem governação humana.
 
@@ -78,7 +76,7 @@ Quando decisões envolvem **contexto, heurísticas ou comportamento**, exigem va
 
 **Princípio**: Decisões não-determinísticas **NÃO PODEM** ser automatizadas sem validação, aprovação e rastreabilidade humanas. A automação pode **assistir**, mas nunca **decidir sozinha**.
 
-### Guardrails de Automação em SOAR
+### Guardrails de Automação em SOAR {#guardrails-de-automação-em-soar}
 
 Mesmo playbooks automatizados têm **limites explícitos**:
 
@@ -94,7 +92,7 @@ Mesmo playbooks automatizados têm **limites explícitos**:
 
 ---
 
-## 🔐 Gestão de Exceções em Alertas
+## 🔐 Gestão de Exceções em Alertas {#-gestão-de-exceções-em-alertas}
 
 Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal:
 
@@ -106,7 +104,7 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
    justification: "Processo de backup automático, validado com Dev"
    approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
-   expiration_date: "2026-07-04"  # Máximo 6 meses
+   expiration_date: "2026-03-05"  # Tecto da Política 05 §7 (p. ex. 60 dias em L2, Low/Medium)
    evidence: "link/to/ticket-JIRA-123"
    ```
 
@@ -115,13 +113,13 @@ Exceções a alertas (ex: padrão legítimo mas suspeito) seguem processo formal
    - HIGH: AppSec Engineer
    - MEDIUM: IR Analyst
 
-3. **Validade temporal**: Exceções expiram automaticamente (máx 6 meses L2, 3 meses L3)
+3. **Validade temporal**: Exceções expiram automaticamente (tectos da Política 05 §7: L1 90 dias; L2 60 dias (Low/Medium) e 30 dias (High); L3 30 dias (Low/Medium) e 14 dias (High); Critical 7 dias com plano de remediação, não aceitável em L3)
 
 4. **Reavaliação**: Antes de expiração, padrão é reavaliado
 
 ---
 
-## 🚨 Kill Switch para Alertas Mal Calibrados
+## 🚨 Kill Switch para Alertas Mal Calibrados {#-kill-switch-para-alertas-mal-calibrados}
 
 Em caso de "alert storm" ou alerta mal calibrado:
 
@@ -143,7 +141,7 @@ rca_required: true
 
 ---
 
-## �🧪 Prescrição prática
+## 🧪 Prescrição prática {#-prescrição-prática}
 
 Na prática, aplicar este capítulo significa responder a quatro perguntas fundamentais:  
 
@@ -156,7 +154,7 @@ Cada organização deve começar pelo essencial - logging estruturado e centrali
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 A monitorização é um esforço coletivo:  
 
@@ -171,7 +169,7 @@ Sem esta matriz de responsabilidades, os controlos técnicos tornam-se invisíve
 
 ---
 
-## ⚠️ Riscos e armadilhas comuns
+## ⚠️ Riscos e armadilhas comuns {#️-riscos-e-armadilhas-comuns}
 
 É frequente cair em erros como:  
 
@@ -184,7 +182,7 @@ Reconhecer estes riscos desde início ajuda a construir sistemas mais robustos.
 
 ---
 
-## 📝 Exemplos práticos
+## 📝 Exemplos práticos {#-exemplos-práticos}
 
 - Uma equipa DevOps envia *logs* de Kubernetes para um SIEM como Splunk ou Elastic, normalizados em ECS.  
 - AppSec define como eventos críticos *logins falhados repetidos*, *acessos root inesperados* e *criação de pods privilegiados*.  
@@ -195,7 +193,7 @@ Estes exemplos ilustram que monitorização não é abstrata: são práticas já
 
 ---
 
-## 🔗 Integração no ciclo de vida
+## 🔗 Integração no ciclo de vida {#-integração-no-ciclo-de-vida}
 
 A monitorização acompanha o software do primeiro commit até à auditoria:  
 
@@ -210,7 +208,7 @@ Assim, segurança em runtime deixa de ser reativa e passa a ser parte integrante
 
 ---
 
-## 📊 Rastreabilidade organizacional
+## 📊 Rastreabilidade organizacional {#-rastreabilidade-organizacional}
 
 A eficácia da monitorização mede-se em métricas.  
 
@@ -220,7 +218,7 @@ A eficácia da monitorização mede-se em métricas.
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 A segurança não termina no deploy: prolonga-se em runtime através da visibilidade, da deteção e da resposta.  
 - Sem logs → não há visibilidade.  
@@ -232,7 +230,7 @@ Este capítulo é **basilar** porque traduz segurança em capacidade de **deteta
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|

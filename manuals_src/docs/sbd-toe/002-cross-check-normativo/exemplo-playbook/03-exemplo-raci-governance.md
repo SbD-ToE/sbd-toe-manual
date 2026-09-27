@@ -7,7 +7,7 @@ tags: [exemplos, raci, governanca, responsabilidades, organizacao]
 
 # Exemplo: RACI de Governança
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)):
 - ✓ Estrutura de governança
@@ -21,7 +21,7 @@ Este documento apresenta **exemplos de RACI para diferentes contextos**.
 
 ---
 
-## Modelo de Governo
+## Modelo de Governo {#modelo-de-governo}
 
 O governo de segurança deve ter **três níveis**:
 
@@ -43,9 +43,9 @@ O governo de segurança deve ter **três níveis**:
 
 ---
 
-## Exemplo 1: Fintech Pequena (10-20 devs)
+## Exemplo 1: Fintech Pequena (10-20 devs) {#exemplo-1-fintech-pequena-10-20-devs}
 
-### Organigrama Simplificado
+### Organigrama Simplificado {#organigrama-simplificado}
 ```
 CEO
 ├─ CTO (Chief Technology Officer)
@@ -58,7 +58,7 @@ CEO
 └─ CFO (Budget)
 ```
 
-### RACI por Atividade
+### RACI por Atividade {#raci-por-atividade}
 
 | Atividade | CTO | Tech Lead | Security Champion | Compliance | CFO | Board |
 |-----------|-----|-----------|------------------|-----------|-----|-------|
@@ -86,7 +86,7 @@ CEO
 - **C (Consulted):** Opinião importante
 - **I (Informed):** Informado do resultado
 
-### Reuniões de Governo
+### Reuniões de Governo {#reuniões-de-governo}
 
 **Comissão de Segurança (Quinzenal, 1h)**
 - Presentes: CTO, Tech Lead, Security Champion, Compliance Officer
@@ -100,9 +100,9 @@ CEO
 
 ---
 
-## Exemplo 2: Banco Regional (100-200 devs)
+## Exemplo 2: Banco Regional (100-200 devs) {#exemplo-2-banco-regional-100-200-devs}
 
-### Organigrama Estruturado
+### Organigrama Estruturado {#organigrama-estruturado}
 ```
 Conselho/Board
 ├─ Comissão de Risco
@@ -129,7 +129,7 @@ CEO
 └─ CFO
 ```
 
-### RACI Expandida
+### RACI Expandida {#raci-expandida}
 
 | Atividade | CTO | CISO | VP Dev | Tech Lead | Dev/SRE | Compliance | CRO | Board |
 |-----------|-----|------|--------|-----------|---------|-----------|-----|-------|
@@ -152,14 +152,14 @@ CEO
 | Deteção de incidentes | - | **R** | I | - | C | - | - | - |
 | **Incidentes & Resposta** | | | | | | | | |
 | Classificação de incidentes | - | A | - | - | C | C | - | - |
-| Resposta P0/P1 | C | **A** | C | - | R | I | I | I |
+| Resposta P1/P2 | C | **A** | C | - | R | I | I | I |
 | Reporte incidentes DORA | - | C | - | - | - | **R** | A | A |
 | **Conformidade & Auditoria** | | | | | | | | |
 | Auditoria interna (SbD) | I | C | I | - | - | **R** | I | A |
 | Readiness DORA | C | A | C | - | - | **R** | A | **A** |
 | Testagem TLPT | C | **A** | C | - | - | I | I | I |
 
-### Estrutura de Reuniões
+### Estrutura de Reuniões {#estrutura-de-reuniões}
 
 **Steering Committee (Executivo) - Mensal, 1.5h**
 - Presentes: CTO, CISO, CCO, CFO, CRO
@@ -188,14 +188,14 @@ CEO
 
 ---
 
-## Exemplo 3: PME Distribuída (30-50 devs, múltiplas localizações)
+## Exemplo 3: PME Distribuída (30-50 devs, múltiplas localizações) {#exemplo-3-pme-distribuída-30-50-devs-múltiplas-localizações}
 
-### Desafio
+### Desafio {#desafio}
 - Múltiplas localizações (Lisboa, Porto, remoto)
 - Recursos limitados
 - Expertise distribuída
 
-### Solução: Modelo Híbrido
+### Solução: Modelo Híbrido {#solução-modelo-híbrido}
 
 **Estrutura Enxuta:**
 ```
@@ -226,9 +226,9 @@ CEO (Lisboa)
 
 ---
 
-## Responsabilidades Chave por Papel
+## Responsabilidades Chave por Papel {#responsabilidades-chave-por-papel}
 
-### CISO (Chief Information Security Officer)
+### CISO (Chief Information Security Officer) {#ciso-chief-information-security-officer}
 
 **Accountable For:**
 - ✓ Conformidade DORA e regulamentações
@@ -241,13 +241,13 @@ CEO (Lisboa)
 **Reporta a:** CRO ou CEO (depende governance)
 
 **Escalações típicas:**
-- Incidente P0 (dentro de 30 min)
+- Incidente P1 (dentro de 30 min)
 - Vuln crítica não resolvida (within 48h)
 - Conformidade DORA em risco (weekly)
 
 ---
 
-### Tech Lead (Development Squads)
+### Tech Lead (Development Squads) {#tech-lead-development-squads}
 
 **Responsible For:**
 - ✓ Threat modeling (apps próprias)
@@ -264,7 +264,7 @@ CEO (Lisboa)
 
 ---
 
-### Security Champion (Embedded)
+### Security Champion (Embedded) {#security-champion-embedded}
 
 **Role:** "Security voice" dentro da squad
 
@@ -280,7 +280,7 @@ CEO (Lisboa)
 
 ---
 
-### Compliance Officer / GRC
+### Compliance Officer / GRC {#compliance-officer--grc}
 
 **Accountable For:**
 - ✓ Conformidade regulatória (DORA, GDPR, etc.)
@@ -292,9 +292,9 @@ CEO (Lisboa)
 
 ---
 
-## Aprovações Formais (Trilho de Decisão)
+## Aprovações Formais (Trilho de Decisão) {#aprovações-formais-trilho-de-decisão}
 
-### Política de Segurança
+### Política de Segurança {#política-de-segurança}
 ```
 Draft (CISO)
   ↓
@@ -309,7 +309,7 @@ Implementation + Communication
 Annual review
 ```
 
-### Exceção de Segurança (ex: deploy com vuln alta)
+### Exceção de Segurança (ex: deploy com vuln alta) {#exceção-de-segurança-ex-deploy-com-vuln-alta}
 ```
 Request (Tech Lead)
   ↓
@@ -323,7 +323,7 @@ Approval + SLA remediação
 Log em audit trail + notify CRO
 ```
 
-### Fornecedor Crítico
+### Fornecedor Crítico {#fornecedor-crítico}
 ```
 Request (VP Procurement/Tech)
   ↓
@@ -340,7 +340,7 @@ Onboarding (Security Champion + SRE)
 
 ---
 
-## Matriz de Comunicação
+## Matriz de Comunicação {#matriz-de-comunicação}
 
 | Grupo | Frequência | Formato | Owner |
 |-------|-----------|---------|-------|
@@ -350,11 +350,11 @@ Onboarding (Security Champion + SRE)
 | **Dev Leads** | Bi-weekly | Reunião | CISO |
 | **All Staff** | Anual | All-hands | CEO/CISO |
 | **Security Champions** | Quinzenal | Reunião + Slack | CISO |
-| **On-call (incidents)** | On-demand | Pagerduty + Slack | On-call lead |
+| **On-call (incidents)** | On-demand | Pagerduty + Slack | DevOps / SRE (On-Call) |
 
 ---
 
-## Documentação Essencial
+## Documentação Essencial {#documentação-essencial}
 
 Cada organização deve documentar:
 
@@ -388,19 +388,19 @@ Cada organização deve documentar:
 
 ---
 
-## Checklist de Implementação
+## Checklist de Implementação {#checklist-de-implementação}
 
 - [ ] **Organigrama definido** - Roles claros, reporting lines
 - [ ] **RACI documentada** - Aprovada e comunicada
 - [ ] **Reuniões agendadas** - Calendário confirmado
-- [ ] **Escalation paths claros** - Documentado (ex: P0 → CISO → CTO → CEO)
+- [ ] **Escalation paths claros** - Documentado (ex: P1 → CISO → CTO → CEO)
 - [ ] **Aprovações assinadas** - Board signature on policies
 - [ ] **Training** - Todos conhecem seu role
 - [ ] **Audit trail ativo** - Logs de quem decidiu o quê, quando
 
 ---
 
-## Notas Importantes
+## Notas Importantes {#notas-importantes}
 
 1. **Não existe tamanho único** - Adaptar ao contexto
 2. **Evolução:** Estrutura pode mudar conforme maturidade

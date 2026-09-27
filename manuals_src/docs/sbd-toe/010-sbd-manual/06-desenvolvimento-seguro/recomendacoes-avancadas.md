@@ -15,7 +15,7 @@ As recomendações aqui descritas **não substituem os controlos essenciais**, m
 
 ---
 
-## 1. ✅ Regras Semgrep customizadas
+## 1. ✅ Regras Semgrep customizadas {#1--regras-semgrep-customizadas}
 
 Adotar regras específicas da organização usando **Semgrep** permite:
 
@@ -25,7 +25,7 @@ Adotar regras específicas da organização usando **Semgrep** permite:
 
 ---
 
-## 2. ✅ Linters semânticos
+## 2. ✅ Linters semânticos {#2--linters-semânticos}
 
 Para além da sintaxe, usar **linters semânticos** que verifiquem:
 
@@ -35,7 +35,7 @@ Para além da sintaxe, usar **linters semânticos** que verifiquem:
 
 ---
 
-## 3. ✅ Análise de fluxo de dados (Data Flow Analysis)
+## 3. ✅ Análise de fluxo de dados (Data Flow Analysis) {#3--análise-de-fluxo-de-dados-data-flow-analysis}
 
 Integrar ferramentas que analisam **como dados sensíveis percorrem a aplicação**, permitindo:
 
@@ -45,7 +45,7 @@ Integrar ferramentas que analisam **como dados sensíveis percorrem a aplicaçã
 
 ---
 
-## 4. ✅ Feedback contínuo e visibilidade por pull request
+## 4. ✅ Feedback contínuo e visibilidade por pull request {#4--feedback-contínuo-e-visibilidade-por-pull-request}
 
 Implementar mecanismos de:
 
@@ -55,7 +55,7 @@ Implementar mecanismos de:
 
 ---
 
-## 5. ✅ Análise assistida por AI (com validação humana)
+## 5. ✅ Análise assistida por AI (com validação humana) {#5--análise-assistida-por-ai-com-validação-humana}
 
 Utilizar ferramentas baseadas em **LLM (Large Language Models)** para:
 
@@ -65,7 +65,7 @@ Utilizar ferramentas baseadas em **LLM (Large Language Models)** para:
 
 ---
 
-## 6. ✅ Anotação semântica de segurança no código
+## 6. ✅ Anotação semântica de segurança no código {#6--anotação-semântica-de-segurança-no-código}
 
 Adotar anotação leve no código com tags como:
 
@@ -79,7 +79,7 @@ Permite reforçar a rastreabilidade, acelerar revisões e suportar validações 
 
 ---
 
-## 7. ✅ Triagem automatizada e baseada em contexto
+## 7. ✅ Triagem automatizada e baseada em contexto {#7--triagem-automatizada-e-baseada-em-contexto}
 
 Automatizar a classificação de findings com base em:
 
@@ -91,7 +91,7 @@ Evita sobrecarga de findings e foca a atenção no que importa.
 
 ---
 
-## 8. ✅ Políticas de bloqueio por tipo de falha
+## 8. ✅ Políticas de bloqueio por tipo de falha {#8--políticas-de-bloqueio-por-tipo-de-falha}
 
 Definir regras automáticas para bloquear merges ou releases com falhas críticas:
 
@@ -100,7 +100,7 @@ Definir regras automáticas para bloquear merges ou releases com falhas crítica
 
 ---
 
-## 9. ✅ Playbooks e auto-patch
+## 9. ✅ Playbooks e auto-patch {#9--playbooks-e-auto-patch}
 
 Manter playbooks para falhas frequentes com:
 
@@ -112,7 +112,7 @@ Integrar como ações automáticas em findings repetidos.
 
 ---
 
-## 10. ✅ Formação adaptativa orientada por findings
+## 10. ✅ Formação adaptativa orientada por findings {#10--formação-adaptativa-orientada-por-findings}
 
 Usar os findings reais da equipa como base para:
 
@@ -122,17 +122,17 @@ Usar os findings reais da equipa como base para:
 
 ---
 
-## 11. ✅ Defesa contra prompt injection em aplicações LLM
+## 11. ✅ Defesa contra prompt injection em aplicações LLM {#11--defesa-contra-prompt-injection-em-aplicações-llm}
 
 Aplicações que **integram LLMs** (interfaces conversacionais, RAG, agentes com tool invocation) têm uma superfície de ataque específica que não é coberta por validação de input tradicional. A secção 5 (Análise assistida por AI) trata de LLM como **ferramenta de análise estática**; esta secção trata do caso oposto — quando a **aplicação em produção usa LLMs** e processa input que pode conter prompts maliciosos.
 
-### Princípios
+### Princípios {#princípios}
 
 - **Tratar todo o input que chega ao contexto do modelo como untrusted** — inclui input directo do utilizador, conteúdo retrieval-augmented (RAG retrievals), ficheiros uploadados, web content fetchado pelo agente e outputs de tools chamadas pelo agente.
 - **Separar canalmente system prompt de user input** — usar APIs com mensagens estruturadas (`system` / `user` / `assistant` roles) em vez de string concatenation; em pipelines RAG, marcar explicitamente "início e fim de contexto retrieval" para o modelo poder distinguir.
 - **Output filtering** — detectar e bloquear padrões de exfiltração de system prompt (`AML.T0069.002`), padrões de comando que indicam jailbreak bem-sucedido, conteúdo que excede o scope da pergunta original.
 
-### Práticas operacionais
+### Práticas operacionais {#práticas-operacionais}
 
 - **Validação de input pré-modelo**: tamanho máximo do prompt, padrões conhecidos de jailbreak attempts (DAN, role-playing prompts maliciosos), encoding tricks (Base64, Unicode obfuscation) — útil mas insuficiente isoladamente, é defesa em profundidade não controlo único.
 - **Sanitização de output ao destino de renderização** — outputs LLM colocados em HTML são vector de XSS persistente; aplicar VAL-008 (codificação contextual; ver Cap. 02 §VAL) ao output do modelo como se fosse user input não confiável.
@@ -140,7 +140,7 @@ Aplicações que **integram LLMs** (interfaces conversacionais, RAG, agentes com
 - **Logging completo de inputs e outputs do modelo** — com sanitização de PII; ver Cap. 12 §OPS-011 para framing observability.
 - **Aprovação humana out-of-band para tool calls com impacto crítico** — em agentes autónomos, qualquer acção write/mutativa (delete, transfer, send, deploy) deve exigir confirmação explícita; arquitectura associada em Cap. 04 §AI/ML.
 
-### Catálogos relevantes
+### Catálogos relevantes {#catálogos-relevantes}
 
 - **OWASP LLM Top 10 (2025)** — particularmente LLM01 (Prompt Injection) e LLM02 (Sensitive Information Disclosure); referenciados em Cap. 03 §AI/ML.
 - **MITRE ATLAS** techniques relevantes: `AML.T0051.001` Indirect Prompt Injection, `AML.T0086` Exfiltration via AI Agent Tool Invocation, `AML.T0069.002` System Prompt extraction.

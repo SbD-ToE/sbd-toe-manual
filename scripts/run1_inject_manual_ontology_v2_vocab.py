@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# HISTÓRICO — NÃO CORRER (2026-09-26, decisão do lead; lote B do Codex).
+# Renderizador pontual de Maio de 2026, mantido só como registo. Lê entradas de /tmp/iter3_path_d que já não existem,
+# corta células a [:60]/[:80] (B2/B3), colapsa as ameaças numa linha `None` (B4: lia t.get("id") em vez de
+# mitigated_threat_id) e reescreveria edições manuais posteriores (ex.: cap. 04 achievable-maturity).
+# O gerador canónico destas tabelas é o do KG: sbd-toe-knowledge-graph,
+# src/sbdtoe_indexing/workflows/render_manual_kg_tables.py (formatador que nunca trunca + reparação por célula).
 """Run 1 amendment — inject Manual ontology V2 vocab layer em 15 25-rastreabilidade.md.
 
 Per Run 1 dispatch 2026-05-11. Iter 4 baseline (commit 16dfa5ae) extended with:

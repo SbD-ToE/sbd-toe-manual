@@ -9,7 +9,7 @@ sidebar_position: 1
 
 # Política de DAST e Fuzzing
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos mínimos para a execução de **testes dinâmicos de segurança (DAST)** e **fuzzing** em aplicações classificadas como L2 ou L3 no modelo SbD-ToE.
 
@@ -22,7 +22,7 @@ DAST e fuzzing são técnicas complementares:
 
 ---
 
-## 2. Âmbito e proporcionalidade
+## 2. Âmbito e proporcionalidade {#2-âmbito-e-proporcionalidade}
 
 | Técnica | L1 | L2 | L3 |
 |---|---|---|---|
@@ -34,9 +34,9 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 
 ---
 
-## 3. DAST - Testes Dinâmicos de Segurança
+## 3. DAST - Testes Dinâmicos de Segurança {#3-dast---testes-dinâmicos-de-segurança}
 
-### 3.1 Quando executar
+### 3.1 Quando executar {#31-quando-executar}
 
 | Evento | Obrigatoriedade |
 |---|:---:|
@@ -45,14 +45,14 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 | Após alteração de arquitetura ou superfície de exposição | Obrigatório |
 | Execução periódica sobre versão em produção | Recomendado (trimestral) |
 
-### 3.2 Pré-requisitos de ambiente
+### 3.2 Pré-requisitos de ambiente {#32-pré-requisitos-de-ambiente}
 
 - O ambiente de execução deve ser **isolado** - DAST nunca deve ser executado em produção;
 - Os dados do ambiente de teste devem ser **fictícios ou mascarados** - nunca dados reais de utilizadores;
 - O ambiente deve ser **equivalente a produção** em termos de versões, configurações e dependências;
 - O ambiente não deve ser **partilhado** com outros projetos durante a execução do scan.
 
-### 3.3 Configuração obrigatória
+### 3.3 Configuração obrigatória {#33-configuração-obrigatória}
 
 **Autenticação:**
 
@@ -71,36 +71,36 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 
 - [ ] Job DAST executado **após** deploy em staging e **antes** de promoção a produção
 - [ ] Relatório correlacionado com commit SHA e release tag
-- [ ] Relatório arquivado como artefacto do pipeline com retenção mínima de 90 dias
+- [ ] Relatório arquivado como artefacto do pipeline com retenção mínima de 30 dias (L1), 90 dias (L2) ou 1 ano (L3)
 - [ ] Resultado do DAST rastreável no registo de release
 
-### 3.4 Critérios de bloqueio e resposta
+### 3.4 Critérios de bloqueio e resposta {#34-critérios-de-bloqueio-e-resposta}
 
 | Severidade | Ação |
 |---|---|
 | Critical | Bloqueia automaticamente; escala imediata para AppSec Engineer |
 | High | Bloqueia automaticamente; requer correção validada ou exceção formal |
-| Medium | Não bloqueia; registo obrigatório na plataforma centralizada; SLA de 30 dias |
+| Medium | Não bloqueia; registo obrigatório na plataforma centralizada; SLA conforme a Política 19 §4.3 (180 / 90 / 45 dias em L1 / L2 / L3) |
 | Low / Info | Não bloqueia; registo; revisão trimestral |
 
 :::note Separação entre sinal automático e decisão humana
 O pipeline reporta o resultado (sinal automático). A decisão de override ou exceção é sempre **humana e documentada** - nunca implícita ou por timeout. Todo o override requer aprovação explícita de AppSec Engineer com registo de rationale e prazo de validade máximo.
 :::
 
-### 3.5 Artefactos produzidos
+### 3.5 Artefactos produzidos {#35-artefactos-produzidos}
 
 | Artefacto | Retenção mínima |
 |---|---|
-| Relatório DAST (HTML/JSON/SARIF) | 90 dias |
-| Evidência de gate (pass/fail) em log de pipeline | 90 dias |
+| Relatório DAST (HTML/JSON/SARIF) | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
+| Evidência de gate (pass/fail) em log de pipeline | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
 | Findings abertos na plataforma centralizada | Até fecho ou aceitação formal |
-| Registo de exceções | 1 ano |
+| Registo de exceções | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento (Política 06 §10) |
 
 ---
 
-## 4. Fuzzing - Testes de Inputs Inesperados
+## 4. Fuzzing - Testes de Inputs Inesperados {#4-fuzzing---testes-de-inputs-inesperados}
 
-### 4.1 Quando executar
+### 4.1 Quando executar {#41-quando-executar}
 
 | Evento | Obrigatoriedade (L2) |
 |---|:---:|
@@ -109,7 +109,7 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 | Após adição de novo endpoint com parsing de input | Obrigatório |
 | Após alteração de lógica de validação ou deserialização | Recomendado |
 
-### 4.2 Seleção de targets
+### 4.2 Seleção de targets {#42-seleção-de-targets}
 
 **Targets obrigatórios para L2:**
 
@@ -125,7 +125,7 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 - Endpoints com envio de notificações externas (email, SMS, webhooks)
 - Endpoints com rate limiting agressivo sem instância de teste dedicada
 
-### 4.3 Configuração obrigatória
+### 4.3 Configuração obrigatória {#43-configuração-obrigatória}
 
 **Ambiente:**
 
@@ -144,7 +144,7 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 - [ ] Anomalias registadas com PoC mínima reproduzível (input exato, endpoint, versão da aplicação)
 - [ ] Relatório com casos reproduzíveis arquivado
 
-### 4.4 Critérios de severidade
+### 4.4 Critérios de severidade {#44-critérios-de-severidade}
 
 | Resultado | Severidade | Ação |
 |---|---|---|
@@ -153,18 +153,18 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 | Comportamento anómalo controlado | Medium | Registo e triagem |
 | Timeout ou degradação de performance | Low | Registo; análise posterior |
 
-### 4.5 Artefactos produzidos
+### 4.5 Artefactos produzidos {#45-artefactos-produzidos}
 
 | Artefacto | Retenção mínima |
 |---|---|
-| Relatório de fuzzing | 90 dias |
+| Relatório de fuzzing | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
 | Corpora de inputs (versionados) | Permanente |
 | Casos reproduzíveis (PoC) na plataforma de findings | Até fecho |
-| Registo de exceções | 1 ano |
+| Registo de exceções | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento (Política 06 §10) |
 
 ---
 
-## 5. Gestão centralizada de findings
+## 5. Gestão centralizada de findings {#5-gestão-centralizada-de-findings}
 
 Todos os findings de DAST e fuzzing são consolidados na plataforma centralizada de gestão de segurança, em conjunto com os resultados de SAST, IAST e SCA.
 
@@ -180,18 +180,20 @@ Todos os findings de DAST e fuzzing são consolidados na plataforma centralizada
 | Owner de remediação | Responsável pela correção |
 | SLA de resolução | Conforme tabela da secção 5.1 |
 
-### 5.1 SLAs de resolução
+### 5.1 SLAs de resolução {#51-slas-de-resolução}
 
-| Severidade | SLA |
-|---|---|
-| Critical | 24 horas |
-| High | 7 dias |
-| Medium | 30 dias |
-| Low | 90 dias |
+Conforme a escada única da Política 19 §4.3 (triagem: Critical 24 horas, High 48 horas, em qualquer nível):
+
+| Severidade | L1 | L2 | L3 |
+|---|---|---|---|
+| Critical | 30 dias | 7 dias | 3 dias |
+| High | 90 dias | 30 dias | 15 dias |
+| Medium | 180 dias | 90 dias | 45 dias |
+| Low | 365 dias | 180 dias | 90 dias |
 
 ---
 
-## 6. Framework de decisão para findings (Checklist C1)
+## 6. Framework de decisão para findings (Checklist C1) {#6-framework-de-decisão-para-findings-checklist-c1}
 
 Quando um finding bloqueia o pipeline e a equipa avalia override ou exceção, a decisão deve ser documentada com os seguintes critérios:
 
@@ -208,21 +210,21 @@ A decisão de suprimir um finding Critical requer aprovação adicional do respo
 
 ---
 
-## 7. Exceções a esta política
+## 7. Exceções a esta política {#7-exceções-a-esta-política}
 
 Toda exceção à presente política requer:
 
 1. Justificação técnica documentada
 2. Aprovação de AppSec Engineer
 3. Mitigação compensatória definida e ativa
-4. Prazo de validade máximo: **30 dias** (renovável com nova aprovação explícita)
+4. Prazo de validade máximo conforme a Política 05 §7, por nível e severidade (L1 90 dias; L2 60 / 30 dias; L3 30 / 14 dias; Critical 7 dias com plano, não aceitável em L3), renovável com nova aprovação explícita
 5. Registo formal no repositório de exceções do projeto
 
 Exceções a findings de severidade Critical têm prazo máximo de **7 dias** e requerem aprovação adicional do responsável de segurança.
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -234,7 +236,7 @@ Exceções a findings de severidade Critical têm prazo máximo de **7 dias** e 
 
 ---
 
-## 9. Revisão e auditoria
+## 9. Revisão e auditoria {#9-revisão-e-auditoria}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -247,7 +249,7 @@ A evidência de execução desta política (relatórios, logs de gate, registos 
 
 ---
 
-## 10. Referências normativas e técnicas
+## 10. Referências normativas e técnicas {#10-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

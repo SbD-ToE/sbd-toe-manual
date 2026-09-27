@@ -7,7 +7,7 @@ tags: [playbook, exemplos, dora, nis2, iso27001, cra, gdpr, templates]
 
 # Exemplos de Suporte aos Playbooks
 
-## 📚 Estrutura de Ficheiros
+## 📚 Estrutura de Ficheiros {#-estrutura-de-ficheiros}
 
 Esta pasta (`exemplo-playbook`) contém **ficheiros exemplares** que demonstram como implementar os princípios que o SbD-ToE prescreve.
 
@@ -18,14 +18,14 @@ Esta pasta (`exemplo-playbook`) contém **ficheiros exemplares** que demonstram 
 
 ---
 
-## 📖 Ficheiros Disponíveis
+## 📖 Ficheiros Disponíveis {#-ficheiros-disponíveis}
 
-### 1. **README.md** (Este ficheiro)
+### 1. **README.md** (Este ficheiro) {#1-readmemd-este-ficheiro}
 Visão geral, estrutura e instruções de uso
 
 ---
 
-### 2. **[Opções de Toolchain](exemplo-toolchain-options)**
+### 2. **[Opções de Toolchain](exemplo-toolchain-options)** {#2-opções-de-toolchain}
 **O que aborda:** Ferramentas para implementar princípios de IaC, logs, SCA/SAST
 
 **Relacionado com (SbD-ToE):**
@@ -49,7 +49,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 3. **[KPIs e Targets](exemplo-kpis-targets)**
+### 3. **[KPIs e Targets](exemplo-kpis-targets)** {#3-kpis-e-targets}
 **O que aborda:** KPIs e targets para diferentes perfis organizacionais
 
 **Relacionado com (SbD-ToE):**
@@ -73,7 +73,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 4. **[RACI e Governance](exemplo-raci-governance)**
+### 4. **[RACI e Governance](exemplo-raci-governance)** {#4-raci-e-governance}
 **O que aborda:** RACI e estrutura de governança
 
 **Relacionado com (SbD-ToE):**
@@ -98,7 +98,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 5. **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
+### 5. **[Relatório de Incidentes](exemplo-relatorio-incidentes)** {#5-relatório-de-incidentes}
 **O que aborda:** Template de reporte de incidentes
 
 **Relacionado com (SbD-ToE):**
@@ -116,7 +116,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 6. **05-exemplo-rto-rpo.md** *(próximo a criar)*
+### 6. **05-exemplo-rto-rpo.md** *(próximo a criar)* {#6-05-exemplo-rto-rpomd-próximo-a-criar}
 **O que aborda:** Definição de RTO/RPO por app
 
 **Relacionado com (SbD-ToE):**
@@ -134,7 +134,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 7. **06-exemplo-roadmap-adaptado.md** *(próximo a criar)*
+### 7. **06-exemplo-roadmap-adaptado.md** *(próximo a criar)* {#7-06-exemplo-roadmap-adaptadomd-próximo-a-criar}
 **O que aborda:** Roadmaps adaptados a diferentes cenários
 
 **Relacionado com (SbD-ToE):**
@@ -153,7 +153,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 8. **07-exemplo-politica-seguranca.md** *(próximo a criar)*
+### 8. **07-exemplo-politica-seguranca.md** *(próximo a criar)* {#8-07-exemplo-politica-segurancamd-próximo-a-criar}
 **O que aborda:** Template de Política de Segurança
 
 **Relacionado com (SbD-ToE):**
@@ -172,7 +172,7 @@ Visão geral, estrutura e instruções de uso
 
 ---
 
-### 9. **08-exemplo-contrato-fornecedor.md** *(próximo a criar)*
+### 9. **08-exemplo-contrato-fornecedor.md** *(próximo a criar)* {#9-08-exemplo-contrato-fornecedormd-próximo-a-criar}
 **O que aborda:** Cláusulas técnicas de segurança em contratos
 
 **Relacionado com (SbD-ToE):**
@@ -187,39 +187,39 @@ Visão geral, estrutura e instruções de uso
 **Quando usar:**
 - Negociando com fornecedores
 - Incluindo security requirements
-- Alinhando com DORA Art. 26-28
+- Alinhando com DORA Art. 28–30
 
 ---
 
-## 🔍 Como Encontrar o que Procura
+## 🔍 Como Encontrar o que Procura {#-como-encontrar-o-que-procura}
 
-### "Preciso escolher ferramentas"
+### "Preciso escolher ferramentas" {#preciso-escolher-ferramentas}
 → **[Opções de Toolchain](exemplo-toolchain-options)**
 
-### "Como defino targets de segurança?"
+### "Como defino targets de segurança?" {#como-defino-targets-de-segurança}
 → **[KPIs e Targets](exemplo-kpis-targets)**
 
-### "Como estruturo governança?"
+### "Como estruturo governança?" {#como-estruturo-governança}
 → **[RACI e Governance](exemplo-raci-governance)**
 
-### "Como reporto incidentes?"
+### "Como reporto incidentes?" {#como-reporto-incidentes}
 → **[Relatório de Incidentes](exemplo-relatorio-incidentes)**
 
-### "Como defino RTO/RPO?"
+### "Como defino RTO/RPO?" {#como-defino-rtorpo}
 → **Exemplo RTO/RPO** *(a criar)*
 
-### "Como planejo a implementação?"
+### "Como planejo a implementação?" {#como-planejo-a-implementação}
 → **Exemplo Roadmap Adaptado** *(a criar)* + [**Playbook DORA**](../dora/playbook)
 
-### "Como escrevo a política?"
+### "Como escrevo a política?" {#como-escrevo-a-política}
 → **Exemplo Política de Segurança** *(a criar)*
 
-### "Como fecho um contrato seguro?"
+### "Como fecho um contrato seguro?" {#como-fecho-um-contrato-seguro}
 → **Exemplo Contrato com Fornecedor** *(a criar)*
 
 ---
 
-## 📋 Checklist de Uso
+## 📋 Checklist de Uso {#-checklist-de-uso}
 
 Ao usar estes exemplos:
 
@@ -233,7 +233,7 @@ Ao usar estes exemplos:
 
 ---
 
-## 🔗 Relação com Capítulos do Manual
+## 🔗 Relação com Capítulos do Manual {#-relação-com-capítulos-do-manual}
 
 ```
 SbD-ToE Manual
@@ -255,7 +255,7 @@ SbD-ToE Manual
 
 ---
 
-## ⚠️ Avisos Importantes
+## ⚠️ Avisos Importantes {#️-avisos-importantes}
 
 1. **Estes exemplos são ilustrativos**
    - Não copie diretamente
@@ -278,7 +278,7 @@ SbD-ToE Manual
 
 ---
 
-## 🔄 Processo de Atualização
+## 🔄 Processo de Atualização {#-processo-de-atualização}
 
 Estes exemplos serão atualizados quando:
 - DORA RTS/ITS mudam
@@ -290,7 +290,7 @@ Estes exemplos serão atualizados quando:
 
 ---
 
-## 📞 Feedback
+## 📞 Feedback {#-feedback}
 
 Se encontrar:
 - ❓ Ambiguidade nos exemplos

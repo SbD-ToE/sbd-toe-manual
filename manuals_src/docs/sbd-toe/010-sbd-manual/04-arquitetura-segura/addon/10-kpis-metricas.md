@@ -10,7 +10,7 @@ tags: [kpi, metricas, ARC, arquitectura, threat-model, L1, L2, L3]
 
 # KPIs e Métricas - Arquitectura Segura
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **aplicação efectiva de decisões e controlos de arquitectura de segurança** ao longo do ciclo de vida das aplicações. A arquitectura é um domínio predominantemente qualitativo - o que se mede não é o código produzido, mas a existência, actualidade e rastreabilidade das decisões estruturais de segurança.
 
@@ -20,7 +20,7 @@ Os indicadores ARC alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -49,7 +49,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **ARC-K01 - Threat model:** considera-se "revisto e actualizado" um threat model que reflecte a arquitectura actual e foi sujeito a revisão formal após a última mudança arquitectural significativa ou no prazo máximo definido pelo ciclo de avaliação do domínio (semestral para L2; por release major para L3). Ferramenta e formato são livres; a evidência é obrigatória.
 
@@ -77,7 +77,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Automação possível |
 |-----------|---------------|-------------------|
@@ -90,11 +90,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/01-catalogo-requisitos.md` | Requisitos ARC-001..013 que fundamentam os indicadores |
 | `addon/06-rastreabilidade.md` | Modelo de rastreabilidade threat→requisito→ADR→controlo→evidência |
 | `addon/03-excecoes.md` | Desvios aos controlos ARC requerem excepção formal |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-04, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-04, T-06 |

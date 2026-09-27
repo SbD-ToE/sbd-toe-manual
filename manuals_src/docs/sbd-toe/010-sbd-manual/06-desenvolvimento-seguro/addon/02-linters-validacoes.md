@@ -15,7 +15,7 @@ tags: [linters, validação, IDE, pre-commit, segurança, automação]
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Garantir que erros comuns e más práticas são detetados antes da submissão de código.
 - Aumentar a consistência e qualidade técnica do código produzido.
@@ -30,7 +30,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Todos os programadores** durante a escrita de código.
 - **Responsáveis técnicos** ao configurar o repositório e pipelines.
@@ -38,7 +38,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Antes de qualquer commit ou push.
 - No momento da criação do PR (via hook ou pipeline).
@@ -47,7 +47,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## 🧱 Requisitos mínimos
+## 🧱 Requisitos mínimos {#-requisitos-mínimos}
 
 1. **Execução local obrigatória de linters com regras mínimas de segurança**
    - Deve fazer parte do fluxo de desenvolvimento
@@ -66,7 +66,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## 🚨 Falhas comuns detetáveis com linters
+## 🚨 Falhas comuns detetáveis com linters {#-falhas-comuns-detetáveis-com-linters}
 
 - Uso de `eval`, `exec`, `innerHTML` sem escaping
 - Falta de verificação de parâmetros obrigatórios
@@ -75,7 +75,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 - Execução local antes do commit (`pre-commit`, `make lint`, etc.)
 - Execução automática nos pipelines de build ou PR
@@ -84,7 +84,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 - Logs da pipeline com execução dos linters
 - Screenshot ou output integrado no PR
@@ -93,7 +93,7 @@ A aplicação consistente destas validações **reduz significativamente a intro
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                | Ficheiro associado               |
 |-------------------------------------|----------------------------------|

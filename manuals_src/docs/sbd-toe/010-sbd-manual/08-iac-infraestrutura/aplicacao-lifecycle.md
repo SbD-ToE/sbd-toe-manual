@@ -27,7 +27,7 @@ As user stories abaixo operacionalizam estes princípios de forma verificável e
 
 ---
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 A segurança em IaC deve ser aplicada **desde o planeamento até à operação**, garantindo que qualquer alteração em infraestrutura é controlada, auditável e reversível.
 
@@ -43,7 +43,7 @@ A segurança em IaC deve ser aplicada **desde o planeamento até à operação**
 
 ---
 
-## 🔁 Regra de integridade do baseline
+## 🔁 Regra de integridade do baseline {#-regra-de-integridade-do-baseline}
 
 Em IaC, o objeto a proteger não é apenas o recurso final em cloud ou on-prem. O objeto a proteger é também o **baseline versionado** que define como esse recurso nasce, é validado e pode ser alterado. Por isso, devem ser tratados como eventos de revisão obrigatória:
 
@@ -62,7 +62,7 @@ Quando um destes eventos ocorre, a equipa deve pelo menos:
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 | Ação operacional | Responsável | Apoio | Evidência/Artefactos |
 |-------------------|--------------|--------|----------------------|
@@ -75,13 +75,13 @@ Quando um destes eventos ocorre, a equipa deve pelo menos:
 
 ---
 
-## 🧾 User Stories normalizadas
+## 🧾 User Stories normalizadas {#-user-stories-normalizadas}
 
 Cada prática é expressa como **user story reutilizável**, com critérios verificáveis, artefactos concretos e proporcionalidade por nível de risco (L1–L3).
 
 ---
 
-### US-01 - Backend remoto, locking e rastreabilidade
+### US-01 - Backend remoto, locking e rastreabilidade {#us-01---backend-remoto-locking-e-rastreabilidade}
 
 **Contexto.**  
 O estado de infraestrutura deve estar centralizado, protegido e versionado. Sem backend remoto, os riscos incluem perda de estado, conflitos de concorrência e impossibilidade de auditoria.
@@ -127,7 +127,7 @@ Como **DevOps / SRE**, quero **armazenar o estado em backend remoto com locking 
 
 ---
 
-### US-02 - Segregação de ambientes, tagging e permissões mínimas
+### US-02 - Segregação de ambientes, tagging e permissões mínimas {#us-02---segregação-de-ambientes-tagging-e-permissões-mínimas}
 
 **Contexto.**  
 Ambientes (dev, staging, prod) devem ser isolados, com tags obrigatórias e permissões restritivas por princípio. O "fail securely" começa aqui: recursos criados sem permissões, apenas adicionadas conforme necessário.
@@ -173,7 +173,7 @@ Estrutura de repositório (`envs/`), código de módulo com `tags` obrigatórias
 
 ---
 
-### US-03 - Validações automáticas integradas
+### US-03 - Validações automáticas integradas {#us-03---validações-automáticas-integradas}
 
 **Contexto.**  
 Erros de sintaxe, configurações inseguras e violações de políticas devem ser detetadas **antes** de qualquer aplicação em ambiente real.
@@ -219,7 +219,7 @@ Relatórios de lint, outputs de scanners, logs de pipeline, badges de conformida
 
 ---
 
-### US-04 - Governança e origem confiável de módulos
+### US-04 - Governança e origem confiável de módulos {#us-04---governança-e-origem-confiável-de-módulos}
 
 **Contexto.**  
 Módulos mal mantidos ou não verificados propagam riscos na cadeia de fornecimento. É necessário validar origem, versão, conformidade e proveniência antes de permitir uso.
@@ -284,7 +284,7 @@ Registry de módulos, policy de whitelist, SBOM, registos de aprovação, histó
 
 ---
 
-### US-05 - Rastreabilidade, versionamento e naming
+### US-05 - Rastreabilidade, versionamento e naming {#us-05---rastreabilidade-versionamento-e-naming}
 
 **Contexto.**  
 Alterações devem ser rastreáveis via Git com convenções formais de commit, tagging e releases. Nomes de recursos devem seguir padrão consistente.
@@ -330,7 +330,7 @@ Ficheiro `NAMING.md`, logs de Git com commits estruturados, tags e releases no r
 
 ---
 
-### US-06 - Revisão formal de plan antes de apply
+### US-06 - Revisão formal de plan antes de apply {#us-06---revisão-formal-de-plan-antes-de-apply}
 
 **Contexto.**  
 O `terraform plan` (ou equivalente) deve ser revisto e aprovado antes de qualquer aplicação. Isso permite validar impacto, detectar alterações inesperadas e associar a change request.
@@ -376,7 +376,7 @@ PR com plan anexado, comentários de aprovação, logs de gate em pipeline, tril
 
 ---
 
-### US-07 - Rastreabilidade ficheiro → recurso → ambiente
+### US-07 - Rastreabilidade ficheiro → recurso → ambiente {#us-07---rastreabilidade-ficheiro--recurso--ambiente}
 
 **Contexto.**  
 Deve haver mapeamento claro entre alterações em ficheiros IaC, recursos criados e ambientes afetados. Isso suporta accountability e avaliação de impacto.
@@ -422,7 +422,7 @@ Metadata em código, tags em recursos, dashboard de rastreabilidade, script de m
 
 ---
 
-### US-08 - Enforcement automático de políticas
+### US-08 - Enforcement automático de políticas {#us-08---enforcement-automático-de-políticas}
 
 **Contexto.**  
 Políticas de segurança devem ser aplicadas automaticamente via OPA/Sentinel/Rego no pipeline, sem depender exclusivamente de revisão manual.
@@ -468,7 +468,7 @@ Regras OPA em repositório, output de execução, logs de bloqueios, exceções 
 
 ---
 
-### US-09 - Assinatura e Proveniência de artefactos IaC
+### US-09 - Assinatura e Proveniência de artefactos IaC {#us-09---assinatura-e-proveniência-de-artefactos-iac}
 
 **Contexto.**  
 Sem proveniência verificável, *plans* e *applies* podem ser adulterados. Assinaturas e **attestations** devem ser verificadas **antes da promoção**.
@@ -513,7 +513,7 @@ Ficheiros de assinatura; `attestation.json`; *logs* de *gate*; trilha de aprova�
 
 ---
 
-### US-10 - Gestão de segredos e identidades para IaC
+### US-10 - Gestão de segredos e identidades para IaC {#us-10---gestão-de-segredos-e-identidades-para-iac}
 
 **Contexto.**  
 Chaves estáticas em *providers* ou *runners* representam risco elevado. Preferir **OIDC / workload identity**, *scopes* mínimos e **TTL curto**.
@@ -554,7 +554,7 @@ Política de segredos; configuração OIDC; *logs* de emissão/expiração.
 
 ---
 
-### US-11 - Deteção e correção de *drift*
+### US-11 - Deteção e correção de *drift* {#us-11---deteção-e-correção-de-drift}
 
 **Contexto.**  
 Mudanças manuais no *runtime* criam **desalinhamento** (*drift*) com o IaC. É necessário **auditar** e **corrigir** de forma controlada.
@@ -595,7 +595,7 @@ Relatórios de *drift*; PRs de correção; aprovações.
 
 ---
 
-### US-12 - *Rollback* e salvaguarda de *destroy*
+### US-12 - *Rollback* e salvaguarda de *destroy* {#us-12---rollback-e-salvaguarda-de-destroy}
 
 **Contexto.**  
 Falhas de *apply* e *destroy* acidentais têm impacto elevado. É necessária **estratégia de *rollback*** e *guardrails*.
@@ -636,7 +636,7 @@ Procedimento `rollback.md`; *snapshots*; *logs* de confirmação dupla.
 
 ---
 
-### US-13 - Janela de mudança e aprovações por papel
+### US-13 - Janela de mudança e aprovações por papel {#us-13---janela-de-mudança-e-aprovações-por-papel}
 
 **Contexto.**  
 Alterações em ambientes críticos exigem **janela de mudança** e **aprovação multinível**.
@@ -673,7 +673,7 @@ Calendário de mudança; registos de aprovação; *logs* de *apply*.
 
 ---
 
-### US-14 - Exceções formais em IaC
+### US-14 - Exceções formais em IaC {#us-14---exceções-formais-em-iac}
 
 **Contexto.**  
 Nem todas as políticas podem ser cumpridas em todas as circunstâncias. Exceções devem ser **temporárias**, **justificadas** e com **compensações** (addon/09).
@@ -713,9 +713,9 @@ Como **GRC / Compliance** e **AppSec Engineers**, quero **exceções registadas*
 
 ---
 
-## 🛡️ Princípios de SbD Reforçados em IaC
+## 🛡️ Princípios de SbD Reforçados em IaC {#️-princípios-de-sbd-reforçados-em-iac}
 
-### Fail Securely (Falhar com Segurança)
+### Fail Securely (Falhar com Segurança) {#fail-securely-falhar-com-segurança}
 
 O princípio de **fail securely** em IaC estabelece que recursos e permissões devem ter **defaults seguros** por omissão, com **recusa explícita** em vez de permissão ampla:
 
@@ -732,7 +732,7 @@ O princípio de **fail securely** em IaC estabelece que recursos e permissões d
 
 ---
 
-### Desacoplamento entre Módulos e Ambientes
+### Desacoplamento entre Módulos e Ambientes {#desacoplamento-entre-módulos-e-ambientes}
 
 O princípio de **desacoplamento** previne dependências circulares ou implícitas que comprometem a reutilização e testabilidade:
 
@@ -749,7 +749,7 @@ O princípio de **desacoplamento** previne dependências circulares ou implícit
 
 ---
 
-## 📦 Artefactos & Evidências Esperadas
+## 📦 Artefactos & Evidências Esperadas {#-artefactos--evidências-esperadas}
 
 Cada prática deixa uma pegada objetiva.  
 Sem evidência, não há conformidade. A tabela abaixo resume os outputs esperados.
@@ -785,7 +785,7 @@ Sem evidência, não há conformidade. A tabela abaixo resume os outputs esperad
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 Nem todas as aplicações exigem o mesmo rigor.  
 A proporcionalidade permite equilibrar custo, risco e controlo.
@@ -808,7 +808,7 @@ A proporcionalidade permite equilibrar custo, risco e controlo.
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 A segurança de IaC deve ser entendida como **disciplina contínua**.  
 Não basta aplicar controlos isolados: é preciso garantir que todos se reforçam mutuamente, formando uma rede de confiança.
@@ -824,9 +824,9 @@ Em síntese, **IaC é software** - e deve ser tratado com o mesmo rigor, visibil
 
 ---
 
-## 🆕 User Stories adicionais (processo automatizado e assistido)
+## 🆕 User Stories adicionais (processo automatizado e assistido) {#-user-stories-adicionais-processo-automatizado-e-assistido}
 
-### US-15 - Separação de funções (SoD) e controlo de execução de `apply`
+### US-15 - Separação de funções (SoD) e controlo de execução de `apply` {#us-15---separação-de-funções-sod-e-controlo-de-execução-de-apply}
 
 **Contexto.**  
 Em IaC, `apply` é a ação de maior impacto: cria, altera ou destrói recursos reais. Para reduzir risco operacional e evitar abuso (incluindo por automatismos), é necessário aplicar **separação de funções** e controlo explícito de quem pode executar.
@@ -872,7 +872,7 @@ Políticas de environment protection, logs de aprovações, registos de execuç�
 
 ---
 
-### US-16 - Minimização de contexto e proteção de informação sensível em IaC
+### US-16 - Minimização de contexto e proteção de informação sensível em IaC {#us-16---minimização-de-contexto-e-proteção-de-informação-sensível-em-iac}
 
 **Contexto.**  
 Planos, logs de pipeline, outputs e diffs podem revelar segredos e informação sensível (IDs, naming, topologias, permissões, endpoints). Este risco aumenta quando existe automação assistida, integrações externas ou exportação de artefactos.
@@ -918,7 +918,7 @@ Config de redaction, relatórios de secret scanning, evidência de bloqueios, re
 
 ---
 
-### US-17 - Determinismo e reprodutibilidade do `plan`
+### US-17 - Determinismo e reprodutibilidade do `plan` {#us-17---determinismo-e-reprodutibilidade-do-plan}
 
 **Contexto.**  
 Sem determinismo, o `plan` pode variar consoante versões de provider, módulos, ambiente de runner ou dependências transitivas, tornando auditoria e controlo de mudança frágeis. Em ambientes críticos, a organização deve conseguir reproduzir o `plan` e explicar diferenças.
@@ -964,7 +964,7 @@ Lockfiles, manifests de versões, logs de execução, registo de diffs justifica
 
 ---
 
-### US-18 - Proibição de `apply` manual/local fora do pipeline
+### US-18 - Proibição de `apply` manual/local fora do pipeline {#us-18---proibição-de-apply-manuallocal-fora-do-pipeline}
 
 Só o pipeline autorizado pode tocar em infraestrutura real; a estação de trabalho não é um plano de execução.  
 
@@ -1010,7 +1010,7 @@ Como **DevOps / SRE** e **AppSec Engineers**, quero **garantir que todo o `apply
 
 ---
 
-### US-19 - Reabertura da revisão de hardening por integridade do baseline
+### US-19 - Reabertura da revisão de hardening por integridade do baseline {#us-19---reabertura-da-revisão-de-hardening-por-integridade-do-baseline}
 
 Mexer no que define a baseline reabre a revisão da postura de segurança antes do próximo `apply`.  
 

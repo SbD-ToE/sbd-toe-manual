@@ -1,0 +1,38 @@
+{
+  "title": {
+    "message": "SbD–ToE",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Security by Design - Theory of Everything",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Manual": {
+    "message": "Manual",
+    "description": "Navbar item with label Manual"
+  },
+  "item.label.Cross-check": {
+    "message": "Cross-check",
+    "description": "Navbar item with label Cross-check"
+  },
+  "item.label.ToE": {
+    "message": "ToE",
+    "description": "Navbar item with label ToE"
+  },
+  "item.label.Sobre": {
+    "message": "About",
+    "description": "Navbar item with label Sobre"
+  },
+  "item.label.FAQ": {
+    "message": "FAQ",
+    "description": "Navbar item with label FAQ"
+  },
+  "item.label.Licença": {
+    "message": "Licence",
+    "description": "Navbar item with label Licença"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

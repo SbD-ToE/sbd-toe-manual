@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Testes de Segurança
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-TSV` (Testes de segurança e validação empírica).
 
@@ -14,9 +14,9 @@ Cobertura V1 entity-level: **19 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **43 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **57 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -48,17 +48,31 @@ Total: **43 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `10-testes-seguranca:separacao-formal-entre-sinal-automatico-e-decisao-de-bloqueio-override` | Separação formal entre sinal automático e decisão de bloqueio/override | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-empirica-de-exploitabilidade-de-findings` | Validação Empírica de Exploitabilidade de Findings | normative | explicit | deterministic |
 | Practice | `10-testes-seguranca:validacao-humana-da-interpretacao-final-dos-resultados` | Validação humana da interpretação final dos resultados | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-167` | Injeções (SQLi, OS Command, etc.) | normative | heuristic | bounded |
+| Threat | `MT-168` | Falhas de controlo de acesso | normative | heuristic | bounded |
+| Threat | `MT-169` | Lógicas de negócio exploráveis | normative | heuristic | bounded |
+| Threat | `MT-170` | Regressão de segurança | normative | heuristic | bounded |
+| Threat | `MT-171` | Baixa cobertura dos testes | normative | heuristic | bounded |
+| Threat | `MT-172` | Falhas conhecidas não testadas | normative | heuristic | bounded |
+| Threat | `MT-173` | Falhas detetadas mas não resolvidas | normative | heuristic | bounded |
+| Threat | `MT-174` | Equipa sem feedback técnico | normative | heuristic | bounded |
+| Threat | `MT-175` | Validações não repetíveis | normative | heuristic | bounded |
+| Threat | `MT-176` | Testes manuais não escaláveis | normative | heuristic | bounded |
+| Threat | `MT-177` | Falta de testes antes de go-live | normative | heuristic | bounded |
+| Threat | `MT-178` | Decisão de qualidade feita sem base | normative | heuristic | bounded |
+| Threat | `MT-179` | Classes novas não detetadas por SAST/DAST | normative | heuristic | bounded |
+| Threat | `MT-180` | Testes superficiais sem contexto técnico | normative | heuristic | bounded |
+| Threat | `MT-181` | Ferramentas não calibradas por contexto | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-TSV` — Testes de segurança e validação empírica
+### Slice `ACO-TSV` — Testes de segurança e validação empírica {#slice-aco-tsv--testes-de-segurança-e-validação-empírica}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -84,7 +98,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -96,7 +110,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -107,13 +121,13 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(Sem entradas no future-work register para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

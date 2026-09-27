@@ -22,7 +22,7 @@ Neste capitulo inclui-se um catálogo que foi consolidado a partir de múltiplas
 
 ---
 
-## 📌 Como aplicar este catálogo no SbD-ToE
+## 📌 Como aplicar este catálogo no SbD-ToE {#-como-aplicar-este-catálogo-no-sbd-toe}
 
 1. **Seleção proporcional**:  
    Cada requisito tem a indicação do(s) nível(is) de risco em que é obrigatório ou recomendado (L1, L2, L3).
@@ -38,7 +38,7 @@ Neste capitulo inclui-se um catálogo que foi consolidado a partir de múltiplas
 
 ---
 
-## 📚 Consulta rápida dos requisitos base
+## 📚 Consulta rápida dos requisitos base {#-consulta-rápida-dos-requisitos-base}
 
 Consulte a aplicação proporcional dos requisitos por domínio técnico no  
 [Catálogo Base de Requisitos (anexo deste capítulo)](/sbd-toe/sbd-manual/requisitos-seguranca/addon/lista-requisitos-base):
@@ -58,9 +58,10 @@ Consulte a aplicação proporcional dos requisitos por domínio técnico no
 - [IDE - Ferramentas de Desenvolvimento](lista-requisitos-base#ide)
 
 Para consulta rápida da aplicação proporcional dos requisitos por nível de risco, ver o anexo “Catálogo Base de Requisitos” no final deste capítulo.
+
 ---
 
-## 📌 Nota Final
+## 📌 Nota Final {#-nota-final}
 
 O catálogo deve ser entendido como **referência viva e adaptável** - ponto de partida para a definição dos requisitos concretos de cada organização ou projeto, e para a integração efetiva da segurança em todo o ciclo de vida do software.
 

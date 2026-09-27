@@ -7,7 +7,7 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 
 # Exemplo: KPIs e Targets
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Métricas de segurança
@@ -18,7 +18,7 @@ O SbD-ToE **NÃO prescreve** targets específicos porque contextos variam. Este 
 
 ---
 
-## Dimensões de KPIs (Todas as Organizações)
+## Dimensões de KPIs (Todas as Organizações) {#dimensões-de-kpis-todas-as-organizações}
 
 O manual define estas dimensões ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 
@@ -32,15 +32,15 @@ Para cada dimensão, apresentamos targets exemplares.
 
 ---
 
-## Cenário 1: Fintech de Pagamentos (Startup, `<`50 devs)
+## Cenário 1: Fintech de Pagamentos (Startup, `<`50 devs) {#cenário-1-fintech-de-pagamentos-startup-50-devs}
 
-### Contexto
+### Contexto {#contexto}
 - Serviço crítico: Processamento de pagamentos
 - Deadline DORA: Janeiro 2025 (curto)
 - Budget: Limitado
 - Risk appetite: Baixo (pagamentos = PCI-DSS + DORA)
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -51,10 +51,10 @@ Para cada dimensão, apresentamos targets exemplares.
 | **Desenvolvimento** | Cobertura de testes | ≥80% | M6 | Progressivo: começar com funções críticas |
 | | SAST findings altos | 0 | Permanente | Gate de CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate de CI/CD |
-| **Operações** | MTTR P0 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
-| | MTTR P1 (High) | `<`8h | Permanente | Business impacto |
+| **Operações** | MTTR P1 (Critical) | `<`2h | Permanente | Pagamentos: impacto direto |
+| | MTTR P2 (High) | `<`8h | Permanente | Business impacto |
 | | Incidents detetados/month | `<`5 | M12 | Reduzir com maturidade |
-| **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA Art. 26 requer |
+| **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA art. 28.º, n.º 3 (modelos: Reg. de Execução (UE) 2024/2956) |
 | | % com onboarding completo | 100% | M3 | Antes de acesso |
 | | % com security trainning | 100% | M3 | Obrigatório antes acesso |
 | **Conformidade** | Política assinada board | ✓ | M1 | DORA Art. 5 |
@@ -62,7 +62,7 @@ Para cada dimensão, apresentamos targets exemplares.
 | | Staff SbD trainning | 100% devs | M4 | Ramp-up rápido |
 | | Readiness inspeção | 95% | M12 | Antes inspeção supervisor |
 
-### Dashboard (Exemplo visual)
+### Dashboard (Exemplo visual) {#dashboard-exemplo-visual}
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize':'13px'}}}%%
@@ -81,9 +81,9 @@ graph TB
             D3["SCA findings altos: 0<br/>🟢 OK"]
         end
         
-        subgraph OPS["�� OPERAÇÕES"]
-            O1["MTTR P0: 1.5h<br/>🟢 OK"]
-            O2["MTTR P1: 6h<br/>🟢 OK"]
+        subgraph OPS["OPERAÇÕES"]
+            O1["MTTR P1: 1.5h<br/>🟢 OK"]
+            O2["MTTR P2: 6h<br/>🟢 OK"]
             O3["Incidents/month: 3<br/>target: `<5` | 🟢 OK"]
         end
         
@@ -123,16 +123,16 @@ graph TB
 
 ---
 
-## Cenário 2: Banco Tradicional (Regional, `>`200 devs)
+## Cenário 2: Banco Tradicional (Regional, `>`200 devs) {#cenário-2-banco-tradicional-regional-200-devs}
 
-### Contexto
+### Contexto {#contexto-1}
 - Apps críticas: `>`30 (múltiplas linhas de negócio)
 - Deadline DORA: Janeiro 2025
 - Budget: Adequado
 - Risk appetite: Muito baixo (conformidade histórica)
 - Compliance adicional: GDPR, NIS2, regulação local
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets-1}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -146,23 +146,23 @@ graph TB
 | | SAST findings altos | 0 | Permanente | Zero tolerance |
 | | SCA findings altos | 0 | Permanente | Zero tolerance |
 | | Code review rate | 100% | Permanente | Segregação duties |
-| **Operações** | MTTR P0 (Critical) | `<`1h | Permanente | Impacto sistémico |
-| | MTTR P1 (High) | `<`4h | Permanente | Impacto operacional |
+| **Operações** | MTTR P1 (Critical) | `<`1h | Permanente | Impacto sistémico |
+| | MTTR P2 (High) | `<`4h | Permanente | Impacto operacional |
 | | Disponibilidade core apps | ≥99.95% | Permanente | SLA regulatório |
-| | Incidents P0 resolvidos `<`24h | 100% | Permanente | Reporte DORA obrigatório |
+| | Incidents P1 resolvidos `<`24h | 100% | Permanente | Objetivo interno; a notificação DORA corre em paralelo, nos prazos das RTS (Política 32 §6) |
 | **Supply Chain** | Fornecedores no inventário | 100% | M1 | DORA Art. 26 |
 | | % auditados (risk assessment) | 100% | M3 | DORA requer |
 | | % com contrato atualizado | 100% | M6 | Cláusulas técnicas |
 | | % com acesso revogado `<`24h | 100% | Permanente | Offboarding rigoroso |
-| **Conformidade** | Política board + GDPR officer | ✓ | M0 | Pré-requisito |
-| | Trilho auditoria (logs) | 5 anos | M0 | GDPR + DORA |
+| **Conformidade** | Política board + encarregado da proteção de dados (EPD/DPO) designado, se aplicável | ✓ | M0 | Pré-requisito |
+| | Trilho auditoria (logs) | 5 anos | M0 | Política interna fundamentada em avaliação de risco (DORA: Reg. Delegado (UE) 2024/1774, art. 12.º; RGPD art. 5.º, n.º 1, al. e), se houver dados pessoais) |
 | | Staff SbD training | 100% devs | M6 | Maior volume |
 | | Staff GRC training | 100% arquitetura | M3 | Entender normativos |
-| | TLPT (L3 apps) | 100% | M12 | DORA Art. 19 |
+| | TLPT (entidades identificadas pela autoridade TLPT; funções críticas ou importantes) | conforme ciclo ≥ 3 anos | M12 | DORA art. 26.º; Reg. Delegado (UE) 2025/1190 |
 | | Attestation TLPT | ✓ | M13 | Evidência board |
 | | Readiness inspeção supervisor | 100% | M18 | Completa preparação |
 
-### Novidade: Timeline Diferente
+### Novidade: Timeline Diferente {#novidade-timeline-diferente}
 
 ```mermaid
 gantt
@@ -191,16 +191,16 @@ gantt
 
 ---
 
-## Cenário 3: Segurador Digital (PME, 20-50 devs)
+## Cenário 3: Segurador Digital (PME, 20-50 devs) {#cenário-3-segurador-digital-pme-20-50-devs}
 
-### Contexto
+### Contexto {#contexto-2}
 - Apps: Subsistemas críticos (10-15 L3)
 - Deadline DORA: Janeiro 2025
 - Budget: Moderado
 - Risk appetite: Baixo (seguros = dados sensíveis + GDPR)
 - Compliance adicional: GDPR, regulação de seguros local
 
-### KPIs e Targets
+### KPIs e Targets {#kpis-e-targets-2}
 
 | Categoria | Métrica | Target | Período | Justificativa |
 |-----------|---------|--------|---------|---------------|
@@ -211,30 +211,30 @@ gantt
 | **Desenvolvimento** | Cobertura de testes | ≥75% | M6 | Pragmático para PME |
 | | SAST findings altos | 0 | Permanente | Gate CI/CD |
 | | SCA findings altos | 0 | Permanente | Gate CI/CD |
-| **Operações** | MTTR P0 | `<`4h | Permanente | Seguros: impacto operacional |
-| | MTTR P1 | `<`24h | Permanente | Menos crítico que banco |
+| **Operações** | MTTR P1 | `<`4h | Permanente | Seguros: impacto operacional |
+| | MTTR P2 | `<`24h | Permanente | Menos crítico que banco |
 | | Disponibilidade | ≥99.5% | Permanente | SLA comercial |
 | **Supply Chain** | Fornecedores no inventário | 100% | M2 | DORA requer |
 | | % com onboarding | 100% | M3 | Antes acesso |
 | | % com training | 100% | M3 | Obrigatório |
 | **Conformidade** | Política board | ✓ | M1 | DORA Art. 5 |
-| | Trilho auditoria | 3 anos (GDPR) | M0 | |
+| | Trilho auditoria | 3 anos (política interna) | M0 | |
 | | Staff training | 100% | M4 | PME: todos conhecem |
 | | TLPT readiness | Piloto L3 critical | M10 | Menos apps = pode fazer |
 | | Readiness inspeção | 90% | M12 | Antes deadline DORA |
 
 ---
 
-## Cenário 4: Empresa de Outsourcing/Serviços Financeiros
+## Cenário 4: Empresa de Outsourcing/Serviços Financeiros {#cenário-4-empresa-de-outsourcingserviços-financeiros}
 
-### Contexto
+### Contexto {#contexto-3}
 - Apps: Múltiplas soluções SaaS/On-prem
 - Clientes: Diferentes perfis de risco
 - Deadline DORA: Depende cliente
 - Budget: Variável (por cliente)
 - Desafio: Diferentes níveis de maturidade por cliente
 
-### Approach: Targets por Tier
+### Approach: Targets por Tier {#approach-targets-por-tier}
 
 | Tier | Cliente | RTO | Vulns Altas SLA | TLPT | Training |
 |------|---------|-----|-----------------|------|----------|
@@ -242,7 +242,7 @@ gantt
 | **Padrão** | PME financeira | `<`8h | `<`45d | Sim | 80% |
 | **Básico** | Startup fintech | `<`24h | `<`60d | Piloto | 60% |
 
-### Gestão de Clientes
+### Gestão de Clientes {#gestão-de-clientes}
 
 **👤 Cada cliente tem:**
 - Classificação apps (L1-L3)
@@ -260,11 +260,11 @@ gantt
 
 ---
 
-## Componentes de Qualquer Dashboard
+## Componentes de Qualquer Dashboard {#componentes-de-qualquer-dashboard}
 
 Independentemente do cenário, o dashboard deve ter:
 
-### 📊 Dashboard Unificado
+### 📊 Dashboard Unificado {#-dashboard-unificado}
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'fontSize':'14px'}}}%%
@@ -273,7 +273,7 @@ graph TB
         subgraph RISK["🎯 RISCO"]
             R1["Critical: 0 / target: 0<br/>🟢 OK"]
             R2["High: 3 / target: `<5`<br/>🟢 OK"]
-            R3["Medium: 12 / target: `<20`<br/>�� WATCH"]
+            R3["Medium: 12 / target: `<20`<br/>🟡 WATCH"]
         end
         
         subgraph COMP["📋 CONFORMIDADE"]
@@ -312,27 +312,27 @@ graph TB
 
 ---
 
-## Cadência de Revisão
+## Cadência de Revisão {#cadência-de-revisão}
 
-### Mensal (Quick-check)
+### Mensal (Quick-check) {#mensal-quick-check}
 - Critical/High vulns
 - Incidentes abertos
 - Fornecedores sem onboarding
 
-### Trimestral (Formal Review)
+### Trimestral (Formal Review) {#trimestral-formal-review}
 - KPIs contra targets
 - Trends últimos 3 meses
 - Ajustes de targets se needed
 - Board reporting
 
-### Anual (Strategic)
+### Anual (Strategic) {#anual-strategic}
 - Revisão de targets conforme DORA evolução
 - Lições aprendidas vs. targets
 - Projeção para próximo ano
 
 ---
 
-## Processo de Definição de Targets (Por Fazer)
+## Processo de Definição de Targets (Por Fazer) {#processo-de-definição-de-targets-por-fazer}
 
 1. **Baseline:** Auditar estado atual
 2. **Benchmarking:** Comparar com indústria (cuidado: contextos variam)
@@ -345,13 +345,13 @@ graph TB
 
 ---
 
-## Importante
+## Importante {#importante}
 
 **Não existem "targets certos"** - cada organização deve:
 
 - Começar conservador (melhor exceder que falhar)
 - Iterar conforme capacidade
-- Alinhar com DORA requirements
+- Alinhar com os requisitos do DORA
 - Comunicar trade-offs
 - Documentar decisões
 

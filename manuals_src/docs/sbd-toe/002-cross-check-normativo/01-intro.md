@@ -22,7 +22,7 @@ O **Capítulo 002 - Cross-Check Normativo** tem precisamente este papel:
 
 ---
 
-## Contexto e Justificação
+## Contexto e Justificação {#contexto-e-justificação}
 
 Historicamente, o panorama normativo de segurança evoluiu de forma fragmentada:  
 - **Há duas décadas**, poucas normas existiam, muitas vezes limitadas a requisitos de gestão de risco genéricos.  
@@ -38,7 +38,7 @@ Ao ser construído **top-down**, com base em múltiplas referências normativas,
 
 ---
 
-## Objetivos deste capítulo
+## Objetivos deste capítulo {#objetivos-deste-capítulo}
 
 1. **Mostrar a correspondência** entre práticas do SbD-ToE e requisitos de normativos internacionais e europeus.  
 2. **Evidenciar as áreas de cobertura plena**, onde a adoção do modelo conduz a conformidade quase imediata.  
@@ -48,7 +48,7 @@ Ao ser construído **top-down**, com base em múltiplas referências normativas,
 
 ---
 
-## Metodologia adotada
+## Metodologia adotada {#metodologia-adotada}
 
 A análise segue uma estrutura sistemática, comum a todos os normativos:  
 
@@ -63,7 +63,7 @@ A análise segue uma estrutura sistemática, comum a todos os normativos:
 
 ---
 
-## Filosofia de Conformidade Integrada
+## Filosofia de Conformidade Integrada {#filosofia-de-conformidade-integrada}
 
 O **SbD-ToE não é uma norma**, mas foi desenhado para **dialogar com todas as normas**.  
 Isto acontece porque:  
@@ -76,7 +76,7 @@ Esta visão **mitiga a fragmentação regulatória** e oferece às organizaçõe
 
 ---
 
-## Nota Importante: Normativos e Desenvolvimento Aplicacional
+## Nota Importante: Normativos e Desenvolvimento Aplicacional {#nota-importante-normativos-e-desenvolvimento-aplicacional}
 
 Muitos normativos (ex.: **DORA**, **NIS2**, **ISO 27001**) **não são específicos de desenvolvimento de software**, mas cobrem a **gestão integral de risco TIC** em organizações.
 
@@ -91,47 +91,47 @@ No entanto, quando uma organização **possui ou contrata desenvolvimento de sof
 
 ---
 
-## Estrutura do Capítulo
+## Estrutura do Capítulo {#estrutura-do-capítulo}
 
 Este capítulo está organizado por **framework/normativo**, cada um numa pasta dedicada com introdução e playbook de implementação:
 
-### Frameworks Atualmente Cobertos
+### Frameworks Atualmente Cobertos {#frameworks-atualmente-cobertos}
 
-#### **[DORA](dora/intro)** (Digital Operational Resilience Act)
+#### **[DORA](dora/intro)** (Digital Operational Resilience Act) {#dora-digital-operational-resilience-act}
 - 📂 `dora/`
   - [Enquadramento do regulamento](dora/intro)
   - [Playbook de implementação prática](dora/playbook)
   - [Análise de convergência com NIS2](dora/convergencia-dora)
 
-#### **[NIS2](nis2/intro)** (Network and Information Security Directive)
+#### **[NIS2](nis2/intro)** (Network and Information Security Directive) {#nis2-network-and-information-security-directive}
 - 📂 `nis2/`
   - [Enquadramento da diretiva](nis2/intro)
   - [Playbook de implementação prática](nis2/playbook)
   - [Análise de convergência com DORA](nis2/convergencia-dora)
 
-#### **[CRA](cra/intro)** (Cyber Resilience Act)
+#### **[CRA](cra/intro)** (Cyber Resilience Act) {#cra-cyber-resilience-act}
 - 📂 `cra/`
   - [Enquadramento do regulamento](cra/intro)
   - [Playbook de implementação prática](cra/playbook)
 
-#### **[GDPR](gdpr/intro)** (General Data Protection Regulation)
+#### **[GDPR](gdpr/intro)** (General Data Protection Regulation) {#gdpr-general-data-protection-regulation}
 - 📂 `gdpr/`
   - [Enquadramento do regulamento](gdpr/intro)
   - [Playbook de implementação prática](gdpr/playbook)
 
-#### **[AI Act](ai-act/intro)** (Regulamento de Inteligência Artificial)
+#### **[AI Act](ai-act/intro)** (Regulamento de Inteligência Artificial) {#ai-act-regulamento-de-inteligência-artificial}
 - 📂 `ai-act/`
   - [Enquadramento do regulamento](ai-act/intro)
   - [Playbook de implementação prática](ai-act/playbook)
   - [Análise de convergência com o CRA](ai-act/convergencia-cra)
 
-#### **[ENISA CSA](enisa-csa/intro)** (Cloud Security Alliance Certification)
+#### **[ENISA / CSA](enisa-csa/intro)** (Regulamento Cibersegurança — certificação europeia da cibersegurança) {#enisa-csa-cloud-security-alliance-certification}
 - 📂 `enisa-csa/`
   - [Enquadramento do esquema de certificação](enisa-csa/intro)
 
-### Exemplos e Templates de Suporte
+### Exemplos e Templates de Suporte {#exemplos-e-templates-de-suporte}
 
-#### **[Exemplo-Playbook](exemplo-playbook/exemplo-toolchain-options)**
+#### **[Exemplo-Playbook](exemplo-playbook/exemplo-toolchain-options)** {#exemplo-playbook}
 - 📂 [`exemplo-playbook/`](exemplo-playbook/exemplo-toolchain-options)
   - Templates e exemplos reutilizáveis para implementação de qualquer framework
   - Ferramentas, KPIs, governance, relatórios, políticas, contratos
@@ -139,7 +139,7 @@ Este capítulo está organizado por **framework/normativo**, cada um numa pasta 
 
 ---
 
-### Frameworks a Incluir (Roadmap)
+### Frameworks a Incluir (Roadmap) {#frameworks-a-incluir-roadmap}
 
 Os seguintes frameworks estão no roadmap para adição futura:
 
@@ -152,7 +152,7 @@ Os seguintes frameworks estão no roadmap para adição futura:
 
 ---
 
-### Estrutura Comum de Cada Framework
+### Estrutura Comum de Cada Framework {#estrutura-comum-de-cada-framework}
 
 Cada pasta de framework segue esta estrutura consistente:
 
@@ -174,7 +174,7 @@ Cada pasta de framework segue esta estrutura consistente:
 
 ---
 
-## Leitura recomendada
+## Leitura recomendada {#leitura-recomendada}
 
 - Este capítulo deve ser lido **em articulação com o [Capítulo 00 - Theory of Everything](/sbd-toe/teory-of-everything/intro)**, que explica a filosofia global do manual.  
 - Para organizações **com desenvolvimento/aquisição de software**, recomenda-se começar pelos playbooks (ex.: [DORA](dora/playbook), [NIS2](nis2/playbook)), que orientam implementação coerente.

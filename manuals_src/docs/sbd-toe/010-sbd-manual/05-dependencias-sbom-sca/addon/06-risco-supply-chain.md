@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain, risks]
 
 # Ameaças à Cadeia de Fornecimento (Supply Chain)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Identificar os principais vetores de ataque na cadeia de fornecimento de software, com ênfase em dependências externas, e estabelecer contramedidas técnicas e organizacionais eficazes.
 
@@ -15,7 +15,7 @@ Identificar os principais vetores de ataque na cadeia de fornecimento de softwar
 
 ---
 
-## 🔧 Tipos comuns de ataque
+## 🔧 Tipos comuns de ataque {#-tipos-comuns-de-ataque}
 
 | Tipo de Ameaça            | Descrição                                                        | Exemplo real                    |
 |----------------------------|------------------------------------------------------------------|---------------------------------|
@@ -27,44 +27,44 @@ Identificar os principais vetores de ataque na cadeia de fornecimento de softwar
 
 ---
 
-## 🔐 Estratégias de mitigação
+## 🔐 Estratégias de mitigação {#-estratégias-de-mitigação}
 
-### 1. **Verificação de origem**
+### 1. **Verificação de origem** {#1-verificação-de-origem}
 
 - Usar repositórios internos, proxies ou mirrors
 - Bloquear instalação de pacotes fora de origem aprovada
 
-### 2. **Monitorização de nomes**
+### 2. **Monitorização de nomes** {#2-monitorização-de-nomes}
 
 - Auditar novos pacotes adicionados ao `package.json`, `pom.xml`, etc.
 - Usar alertas de typosquatting com ferramentas (ex: Socket.dev, npm-proxy-check)
 
-### 3. **Revisão de scripts embutidos**
+### 3. **Revisão de scripts embutidos** {#3-revisão-de-scripts-embutidos}
 
 - Detetar `postinstall`, `preinstall`, `install` com scripts executáveis
 - Usar flags como `--ignore-scripts` quando apropriado
 
-### 4. **Políticas de aprovação e timeout**
+### 4. **Políticas de aprovação e timeout** {#4-políticas-de-aprovação-e-timeout}
 
 - Exigir revisão de pacotes novos antes de uso
 - Aplicar TTL a dependências abandonadas
 
-### 5. **Isolamento e validação de build**
+### 5. **Isolamento e validação de build** {#5-isolamento-e-validação-de-build}
 
 - Usar ambientes limpos e imutáveis para build
 - Assinar artefactos e validar integridade
 
 ---
 
-## 📖 Casos de estudo
+## 📖 Casos de estudo {#-casos-de-estudo}
 
-### `event-stream`
+### `event-stream` {#event-stream}
 
 - Pacote popular do npm com acesso transferido
 - Atualização introduziu dependência `flatmap-stream` com malware
 - Afetou aplicações financeiras
 
-### `ua-parser-js`
+### `ua-parser-js` {#ua-parser-js}
 
 - Hijack da conta npm do maintainer
 - Versão publicada com minerador de criptomoedas
@@ -72,7 +72,7 @@ Identificar os principais vetores de ataque na cadeia de fornecimento de softwar
 
 ---
 
-## ✅ Recomendações operacionais
+## ✅ Recomendações operacionais {#-recomendações-operacionais}
 
 | Prática                                   | Aplicar em               |
 |-------------------------------------------|---------------------------|
@@ -84,7 +84,7 @@ Identificar os principais vetores de ataque na cadeia de fornecimento de softwar
 
 ---
 
-## 🔗 Ligações com outros ficheiros
+## 🔗 Ligações com outros ficheiros {#-ligações-com-outros-ficheiros}
 
 | Documento                   | Ligação com supply chain                           |
 |-----------------------------|---------------------------------------------------------|

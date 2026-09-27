@@ -11,7 +11,7 @@ sidebar_position: 1
 
 # Catálogo de Requisitos de Arquitectura Segura
 
-## Âmbito: requisitos estruturais e de design
+## Âmbito: requisitos estruturais e de design {#âmbito-requisitos-estruturais-e-de-design}
 
 Este catálogo cobre **requisitos de segurança que se aplicam à concepção, documentação e revisão da arquitectura do sistema** - as propriedades estruturais que devem estar garantidas antes e independentemente da implementação. Incluem-se: definição de zonas de confiança, minimização da superfície de exposição, documentação de decisões de design, integração de threat modeling no processo de arquitectura, padrões reutilizáveis aprovados e versionamento de diagramas.
 
@@ -25,7 +25,7 @@ Para a instanciação em projecto e a nomenclatura operacional de rastreabilidad
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo ARC - Arquitectura Segura
+## Catálogo ARC - Arquitectura Segura {#catálogo-arc---arquitectura-segura}
 
 Requisitos que garantem que o sistema é concebido, documentado e revisto com controlos estruturais proporcionais ao seu nível de risco.
 
@@ -60,7 +60,7 @@ Requisitos que garantem que o sistema é concebido, documentado e revisto com co
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **ARC-003**: A revisão pode ser feita com checklist estruturado, peer review de arquitectura ou workshop de AppSec; o formato é proporcional à complexidade da aplicação.
 - **ARC-005**: O threat modeling neste contexto é aplicado como instrumento de revisão de arquitectura - complementar ao processo autónomo de threat modeling descrito no Cap. 03.

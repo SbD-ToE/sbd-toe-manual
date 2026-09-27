@@ -9,7 +9,7 @@ sidebar_position: 16
 
 # Política de Uso de Ferramentas de Apoio ao Desenvolvimento
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para o **uso controlado de ferramentas de apoio ao desenvolvimento**, com particular enfoque em assistentes de inteligência artificial generativa (GenAI), ferramentas de geração de código, autocompletion assistido e sistemas de sugestão automática.
 
@@ -24,7 +24,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a qualquer ferramenta de apoio ao desenvolvimento que gere, sugira ou complete código, configuração, testes ou documentação técnica de forma automatizada, incluindo (sem carácter exclusivo):
 
@@ -37,7 +37,7 @@ Não está no âmbito desta política o uso de ferramentas determinísticas de s
 
 ---
 
-## 3. Princípio fundamental: a responsabilidade é sempre humana
+## 3. Princípio fundamental: a responsabilidade é sempre humana {#3-princípio-fundamental-a-responsabilidade-é-sempre-humana}
 
 O uso de ferramentas GenAI não transfere nem dilui a responsabilidade do developer pelo código produzido. O código gerado por IA é tratado como **código de terceiros não auditado** - deve ser lido, compreendido, validado e assumido pelo developer antes de ser incluído numa base de código.
 
@@ -47,7 +47,7 @@ A aceitação de sugestões automáticas sem leitura e compreensão do código g
 
 ---
 
-## 4. Regras de uso por nível
+## 4. Regras de uso por nível {#4-regras-de-uso-por-nível}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -61,7 +61,7 @@ A aceitação de sugestões automáticas sem leitura e compreensão do código g
 
 ---
 
-## 5. Aprovação de ferramentas
+## 5. Aprovação de ferramentas {#5-aprovação-de-ferramentas}
 
 Antes de adotar uma nova ferramenta de apoio ao desenvolvimento, deve ser realizada uma avaliação que cubra:
 
@@ -79,7 +79,7 @@ O uso de ferramentas não aprovadas pela organização para gerar código de pro
 
 ---
 
-## 6. Constrangimentos técnicos
+## 6. Constrangimentos técnicos {#6-constrangimentos-técnicos}
 
 Antes de utilizar uma ferramenta GenAI para gerar código relacionado com um projeto, o developer deve comunicar à ferramenta os constrangimentos técnicos relevantes:
 
@@ -92,7 +92,7 @@ Estes constrangimentos devem estar versionados por projeto (`constrangimentos-ge
 
 ---
 
-## 7. Rastreabilidade do output GenAI
+## 7. Rastreabilidade do output GenAI {#7-rastreabilidade-do-output-genai}
 
 Em L2/L3, os PRs que incluam código gerado ou significativamente assistido por ferramentas GenAI devem indicá-lo explicitamente:
 
@@ -104,7 +104,7 @@ O objetivo não é criar burocracia, mas assegurar que os reviewers sabem que o 
 
 ---
 
-## 8. Validação de licenças
+## 8. Validação de licenças {#8-validação-de-licenças}
 
 Ferramentas GenAI podem sugerir código que reproduz parcialmente código com licenças restritivas (copyleft). Para mitigar este risco:
 
@@ -114,7 +114,7 @@ Ferramentas GenAI podem sugerir código que reproduz parcialmente código com li
 
 ---
 
-## 9. Proibição de envio de informação confidencial
+## 9. Proibição de envio de informação confidencial {#9-proibição-de-envio-de-informação-confidencial}
 
 É proibido enviar para ferramentas GenAI externas (não aprovadas para processamento de dados confidenciais):
 
@@ -127,7 +127,7 @@ Em L3, antes de usar qualquer ferramenta GenAI em contexto do projeto, deve ser 
 
 ---
 
-## 10. Responsabilidades
+## 10. Responsabilidades {#10-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -139,11 +139,11 @@ Em L3, antes de usar qualquer ferramenta GenAI em contexto do projeto, deve ser 
 
 ---
 
-## 11. Agentes autónomos (A2+) com tool-use
+## 11. Agentes autónomos (A2+) com tool-use {#11-agentes-autónomos-a2-com-tool-use}
 
 As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer **decide**. Quando o que a ferramenta faz passa a ser **executar acções com efeito real** — abrir PRs, ler segredos, fazer deploys, escrever em sistemas externos — entramos em território de **agentes autónomos**, com graus variáveis de supervisão humana. O modelo de cinco níveis de autonomia (A0–A4) está definido no [Cap. 02 — Modelo de níveis de autonomia](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia); aplicam-se aqui sem reformulação.
 
-### 11.1 Onde esta política se aplica vs. Policy 38
+### 11.1 Onde esta política se aplica vs. Policy 38 {#111-onde-esta-política-se-aplica-vs-policy-38}
 
 | Cenário | Coberto por |
 |---|---|
@@ -152,7 +152,7 @@ As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer *
 
 > 📌 **A separação importa.** As secções 1–10 são suficientes para Copilot/Cursor em modo *sugere*. A partir do momento em que o agente executa (`gh pr create`, `kubectl apply`, `terraform apply`, `npm publish`, qualquer ação fora do IDE), passa a aplicar-se a Policy 38 *além desta*.
 
-### 11.2 Regras operacionais para A2+
+### 11.2 Regras operacionais para A2+ {#112-regras-operacionais-para-a2}
 
 | Regra | A2 | A3 | A4 |
 |---|:--:|:--:|:--:|
@@ -167,7 +167,7 @@ As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer *
 | **Mandate assinado por `CISO`** (não apenas registado) | — | — | ✔ |
 | **Auditoria periódica do mandate** | Anual | Semestral | Trimestral |
 
-### 11.3 Proibições específicas em A2+
+### 11.3 Proibições específicas em A2+ {#113-proibições-específicas-em-a2}
 
 - ❌ **Reutilizar credenciais humanas** para autenticar o agente. Cada agente é um *principal* distinto.
 - ❌ **Aprovar acções destrutivas dentro do canal do agente** (e.g. pedir confirmação no chat onde o agente opera) — viola o princípio out-of-band; resposta a prompt injection torna-se trivialmente aprovável.
@@ -175,7 +175,7 @@ As secções 1–10 cobrem o caso geral: a ferramenta **sugere** e o developer *
 - ❌ **Operar em produção em A3/A4 sem revert automático demonstrado em ambiente de teste.** Se não foi exercitado, é decorativo.
 - ❌ **A4 em qualquer projecto sem mandate assinado pelo `CISO`.** Sem excepções.
 
-### 11.4 Reporte de incidentes específicos a agentes
+### 11.4 Reporte de incidentes específicos a agentes {#114-reporte-de-incidentes-específicos-a-agentes}
 
 Constituem incidentes de segurança que devem ser reportados via processo IR (Cap. 12):
 
@@ -187,7 +187,7 @@ Constituem incidentes de segurança que devem ser reportados via processo IR (Ca
 
 ---
 
-## 12. Revisão e auditoria desta política
+## 12. Revisão e auditoria desta política {#12-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista semestralmente** dada a rápida evolução das ferramentas GenAI, ou após qualquer um dos seguintes eventos:
 
@@ -197,7 +197,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 
 ---
 
-## 13. Referências normativas e técnicas
+## 13. Referências normativas e técnicas {#13-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

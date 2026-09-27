@@ -10,7 +10,7 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 
 # Modelo de Validação de Fornecedores e Terceiros
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Estabelecer um processo formal, proporcional e auditável para:
 
@@ -21,9 +21,9 @@ Estabelecer um processo formal, proporcional e auditável para:
 
 ---
 
-## 🔁 Como aplicar
+## 🔁 Como aplicar {#-como-aplicar}
 
-### 📊 Fluxo de validação típico
+### 📊 Fluxo de validação típico {#-fluxo-de-validação-típico}
 
 ```mermaid
 flowchart TD
@@ -43,7 +43,7 @@ flowchart TD
 
 ---
 
-## 🧲 Critérios de validação por risco
+## 🧲 Critérios de validação por risco {#-critérios-de-validação-por-risco}
 
 | Critério                                  |  L1 |  L2 |  L3 |
 | ----------------------------------------- | :-: | :-: | :-: |
@@ -59,32 +59,32 @@ flowchart TD
 
 ---
 
-## 📝 Exemplos práticos
+## 📝 Exemplos práticos {#-exemplos-práticos}
 
-### ✔️ Aprovação normal (nível L2)
+### ✔️ Aprovação normal (nível L2) {#️-aprovação-normal-nível-l2}
 
 * Questionário preenchido com sucesso
 * Política de vulnerabilidades apresentada
 * Cláusulas contratuais alinhadas com Cap. 2
 
-### ❌ Rejeição (nível L3)
+### ❌ Rejeição (nível L3) {#-rejeição-nível-l3}
 
 * Recusa de cláusulas sobre incidentes
 * Ausência de SBOM ou testes externos
 * Rejeitado por não cumprir exigências críticas
 
-### ⚠️ Exceção aprovada (nível L3)
+### ⚠️ Exceção aprovada (nível L3) {#️-exceção-aprovada-nível-l3}
 
 * Fornecedor crítico sem SBOM, mas com scanner próprio
 * Aprovado com owner identificado, compensação definida e revisão agendada
 
 ---
 
-## 🗂️ Exemplos de questionário de segurança (excerto)
+## 🗂️ Exemplos de questionário de segurança (excerto) {#️-exemplos-de-questionário-de-segurança-excerto}
 
 | Área                    | Pergunta                                                   | Obrigatório (L2/L3) |
 | ----------------------- | ---------------------------------------------------------- | ------------------- |
-| Vulnerabilidades        | Existe política formal de patching com SLA &lt; 7 dias?       | Sim (L2+)           |
+| Vulnerabilidades        | Existe política formal de patching com SLA para CVE crítico (≤ 7 dias em L2; ≤ 72 horas em L3)? | Sim (L2+)           |
 | Acessos privilegiados   | MFA é usado para administração remota de sistemas?         | Sim (L2+)           |
 | Desenvolvimento seguro  | Adotam ASVS ou práticas equivalentes?                      | Recomendado         |
 | Incidentes de segurança | Existe canal 24/7 e plano formal de resposta a incidentes? | Sim (L3)            |
@@ -96,7 +96,7 @@ Quando parte do processo de validação é suportado por mecanismos automatizado
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 * Aplicar este modelo a todos os fornecedores com acesso a dados, código ou pipelines críticos;
 * Formalizar critérios e exceções em sistemas rastreáveis (Git, SharePoint, etc.);
@@ -106,14 +106,14 @@ Quando parte do processo de validação é suportado por mecanismos automatizado
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo              | Relação com validação de fornecedores       |
 | --------------------------------- | ------------------------------------------- |
 | Cap. 01 - Classificação de risco  | Define o nível de aplicação do modelo       |
 | Cap. 02 - Requisitos de segurança | Determina o que validar por tipo de risco   |
 | addon/02-clausulas-contratuais.md | Cláusulas por tipo de contrato e risco      |
-| addon/01-modelo-governacao.md     | Papéis e alçadas para aprovação de exceções |
+| addon/01-modelo-governancao.md     | Papéis e alçadas para aprovação de exceções |
 | addon/05-exemplos-praticos.md     | Casos reais de aplicação do modelo          |
 
 ---

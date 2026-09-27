@@ -10,7 +10,7 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 
 # Checklist de Aderência ao Modelo SbD-ToE
 
-## Para que serve este documento
+## Para que serve este documento {#para-que-serve-este-documento}
 
 Este checklist responde a uma pergunta diferente dos KPIs e KRIs:
 
@@ -30,7 +30,7 @@ O checklist é um instrumento de **adopção** - avalia se os processos, control
 
 ---
 
-## Como usar
+## Como usar {#como-usar}
 
 **Aplicação:** O checklist é aplicado por aplicação (ou por portfolio para avaliação organizacional). Para cada item, regista-se:
 
@@ -56,9 +56,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 1 - Classificação e Gestão de Risco
+## 1 - Classificação e Gestão de Risco {#1---classificação-e-gestão-de-risco}
 
-*Políticas: classificacao-risco, aceitacao-risco, revisao-periodica-risco, gestao-excecoes*
+*Políticas: `classificacao-risco`, `aceitacao-risco`, `revisao-periodica-risco`, `gestao-excecoes`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -67,14 +67,14 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 1.03 | A classificação é reavaliada quando ocorrem os triggers definidos: nova integração externa, novo tipo de dado, alteração de exposição, mudança de arquitectura, novo perfil de utilizador | **S** | pol-02, pol-04 |
 | 1.04 | A classificação é reavaliada com periodicidade: L1 anual, L2 semestral, L3 trimestral | **L1+** | pol-04 |
 | 1.05 | Para L3, a reavaliação periódica requer aprovação AppSec + CISO | **L3** | pol-02 |
-| 1.06 | Excepções a controlos têm TTL máximo definido (L1: 90 dias; L2: 60 dias; L3: 30 dias), justificação técnica e mitigação compensatória documentada | **S** | pol-03, pol-05 |
+| 1.06 | Excepções a controlos têm TTL máximo definido (tectos da Política 05 §7: L1 90 dias; L2 60 dias (Low/Medium) e 30 dias (High); L3 30 dias (Low/Medium) e 14 dias (High); Critical 7 dias com plano de remediação, não aceitável em L3), justificação técnica e mitigação compensatória documentada | **S** | pol-03, pol-05 |
 | 1.07 | Excepções são reavaliadas antes da expiração - não existem excepções expiradas sem renovação ou encerramento formal | **S** | pol-05 |
 
 ---
 
-## 2 - Requisitos, Ameaças e Arquitectura
+## 2 - Requisitos, Ameaças e Arquitectura {#2---requisitos-ameaças-e-arquitectura}
 
-*Políticas: requisitos-seguranca, threat-modeling, arquitetura-segura, rastreabilidade*
+*Políticas: `requisitos-seguranca`, `threat-modeling`, `arquitetura-segura`, `rastreabilidade`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -92,9 +92,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 3 - Dependências e SBOM
+## 3 - Dependências e SBOM {#3---dependências-e-sbom}
 
-*Políticas: dependencias, sbom, excecoes-cve, atualizacao-automatica*
+*Políticas: `dependencias`, `sbom`, `excecoes-cve`, `atualizacao-automatica`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -105,7 +105,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 3.05 | SBOM é gerado automaticamente por release, inclui dependências transitivas e está associado ao artefacto com referência ao commit SHA | **L2+** | pol-11 |
 | 3.06 | SBOM é arquivado durante o período mínimo obrigatório (L2: 1 ano; L3: 2 anos) | **L2+** | pol-11 |
 | 3.07 | Excepções de CVE têm tipo explícito (not affected / fix not available / fix deferred / risk accepted), controlo compensatório e TTL conforme nível | **S** | pol-12 |
-| 3.08 | O SLA de triagem de CVE é respeitado: Crítico ≤ 24h, Alto ≤ 48h | **S** | pol-12 |
+| 3.08 | O SLA de triagem de CVE é respeitado: Crítico ≤ 24h, Alto ≤ 48h; com indício de exploração ativa ≤ 4h | **S** | pol-12 |
 | 3.09 | Existe processo de actualização automática de dependências (Renovate, Dependabot ou equivalente) activo e configurado | **L2+** | pol-13 |
 | 3.10 | SBOM é assinado digitalmente com verificação de assinatura no deploy | **L3** | pol-11 |
 | 3.11 | Proveniência completa está registada (SLSA attestation ou equivalente) | **L3** | pol-11 |
@@ -113,9 +113,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 4 - Desenvolvimento Seguro
+## 4 - Desenvolvimento Seguro {#4---desenvolvimento-seguro}
 
-*Políticas: guidelines-desenvolvimento, revisao-codigo, uso-ferramentas-apoio*
+*Políticas: `guidelines-desenvolvimento`, `revisao-codigo`, `uso-ferramentas-apoio`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -133,9 +133,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 5 - CI/CD e Pipeline
+## 5 - CI/CD e Pipeline {#5---cicd-e-pipeline}
 
-*Políticas: cicd-seguro, gestao-segredos*
+*Políticas: `cicd-seguro`, `gestao-segredos`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -153,9 +153,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 6 - IaC e Containers
+## 6 - IaC e Containers {#6---iac-e-containers}
 
-*Políticas: iac-seguro, aprovacao-plan-iac, containers-seguros, golden-base-images*
+*Políticas: `iac-seguro`, `aprovacao-plan-iac`, `containers-seguros`, `golden-base-images`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -174,9 +174,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 7 - Testes de Segurança
+## 7 - Testes de Segurança {#7---testes-de-segurança}
 
-*Políticas: dast-fuzzing, estrategia-testes, release-seguro, aprovacao-release, pentesting*
+*Políticas: `dast-fuzzing`, `estrategia-testes`, `release-seguro`, `aprovacao-release`, `pentesting`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -194,9 +194,9 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 
 ---
 
-## 8 - Deploy e Operações
+## 8 - Deploy e Operações {#8---deploy-e-operações}
 
-*Políticas: deploy-seguro, rollback, monitorizacao-pos-deploy, logging-estruturado, monitorizacao-seguranca, gestao-alertas, irp*
+*Políticas: `deploy-seguro`, `rollback`, `monitorizacao-pos-deploy`, `logging-estruturado`, `monitorizacao-seguranca`, `gestao-alertas`, `irp`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -208,19 +208,19 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 8.06 | Existe período de observação pós-deploy com métricas monitorizadas e critérios formais de fecho (L2: 30 min; L3: 60 min) | **L2+** | pol-28 |
 | 8.07 | Logs de eventos de segurança estão em formato estruturado (JSON) com schema mínimo obrigatório (timestamp UTC, level, event.action, application, trace.id) | **L2+** | pol-29 |
 | 8.08 | Logs não contêm passwords, tokens completos, dados de cartão ou PII não mascarada | **S** | pol-29 |
-| 8.09 | Logs de segurança estão centralizados com retenção mínima de 1 ano (L2) / 2 anos para segurança e 3 anos para auditoria (L3/DORA) | **L2+** | pol-29 |
+| 8.09 | Logs de segurança estão centralizados com retenção mínima de 1 ano (L2) / 2 anos para segurança e 3 anos para auditoria (L3) | **L2+** | pol-29 |
 | 8.10 | Eventos de segurança críticos têm alertas definidos com runbooks (diagnóstico, acções imediatas, escalamento) | **L2+** | pol-30, pol-31 |
 | 8.11 | Cada alerta tem SLA de resposta e encaminhamento automático definidos | **L2+** | pol-31 |
 | 8.12 | Existe Incident Response Plan com critérios de activação, fases estruturadas e playbooks | **L2+** | pol-32 |
 | 8.13 | Incidentes de segurança têm post-mortem realizado em menos de 5 dias úteis | **L2+** | pol-32 |
 | 8.14 | Rollback automático está configurado para todos os tipos de artefacto com RTO ≤ 15 minutos | **L3** | pol-27 |
-| 8.15 | Notificações regulatórias (RGPD ≤ 72h, DORA ≤ 4h alerta inicial, NIS2 ≤ 24h) são cumpridas dentro dos prazos legais | **L3** | pol-32 |
+| 8.15 | Notificações regulatórias aplicáveis cumpridas dentro dos prazos legais (Política 32 §6): RGPD ≤ 72h (art. 33.º); NIS2 alerta rápido ≤ 24h e notificação ≤ 72h; DORA notificação inicial nos prazos do Reg. Delegado (UE) 2025/301; CRA alerta precoce ≤ 24h; AI Act ≤ 15 dias; ≤ 10 dias em caso de morte; ≤ 2 dias em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b) (art. 73.º, n.ºs 2 a 4) | **S** | pol-32 |
 
 ---
 
-## 9 - Governação e Formação
+## 9 - Governação e Formação {#9---governação-e-formação}
 
-*Políticas: contratacao-segura, rastreabilidade-organizacional, kpis-governacao, formacao-seguranca*
+*Políticas: `contratacao-segura`, `rastreabilidade-organizacional`, `kpis-governacao`, `formacao-seguranca`*
 
 | # | Item | Nível | Política |
 |---|------|:-----:|---------|
@@ -232,14 +232,14 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 9.06 | Existe conjunto de KPIs de segurança definidos com fontes de dados, responsáveis e cadência de recolha | **L2+** | pol-35 |
 | 9.07 | Fornecedores e terceiros têm due diligence de segurança realizado antes de contrato (política de segurança, gestão de vulnerabilidades, incidentes nos últimos 12 meses) | **L2+** | pol-33 |
 | 9.08 | Contratos com fornecedores incluem cláusulas SbD-ToE (notificação de incidentes, proibição de subcontratação sem aprovação, rescisão por incumprimento) | **L2+** | pol-33 |
-| 9.09 | Offboarding de fornecedores e colaboradores inclui revogação de todos os acessos em menos de 2 horas (imediato em caso de incidente de segurança) | **S** | pol-33 |
+| 9.09 | Offboarding de fornecedores e colaboradores inclui revogação de todos os acessos no próprio dia em saídas planeadas, em ≤ 2 horas em saídas não planeadas e de imediato por causa de segurança | **S** | pol-33 |
 | 9.10 | Fornecedores L3 entregam SBOM por release e relatórios de testes de segurança periódicos | **L3** | pol-33 |
 | 9.11 | Existe Security Champion com formação específica, com participação activa em comunidade de champions (reuniões mensais) | **L3** | pol-37 |
 | 9.12 | Exercícios práticos de segurança são realizados periodicamente (labs, CTF ou tabletop de incidente) | **L3** | pol-37 |
 
 ---
 
-## Resumo e scorecard
+## Resumo e scorecard {#resumo-e-scorecard}
 
 Use esta tabela para calcular a aderência por domínio após completar o checklist.
 
@@ -256,7 +256,7 @@ Use esta tabela para calcular a aderência por domínio após completar o checkl
 | 9 - Governação e Formação | 2 | 0 | 7 | 3 | 12 |
 | **Total** | **25** | **5** | **46** | **24** | **96** |
 
-### Leitura do score
+### Leitura do score {#leitura-do-score}
 
 | Score em items S | Interpretação |
 |-----------------|---------------|
@@ -274,7 +274,7 @@ Use esta tabela para calcular a aderência por domínio após completar o checkl
 
 ---
 
-## Referências
+## Referências {#referências}
 
 | Documento | Relação |
 |-----------|---------|

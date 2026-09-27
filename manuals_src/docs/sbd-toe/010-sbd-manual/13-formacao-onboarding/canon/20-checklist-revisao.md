@@ -17,7 +17,7 @@ Permite avaliar de forma **binária, objetiva e rastreável** a adoção prátic
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                              | Verificado? |
 |-------------------------------------------------------------------------------------------------------------------|-------------|
@@ -40,7 +40,7 @@ Permite avaliar de forma **binária, objetiva e rastreável** a adoção prátic
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Este checklist pode ser integrado em **fluxos de onboarding, revisões de permissões, PRs iniciais, auditorias internas ou ciclos de segurança trimestrais**.
 - A verificação deve ser baseada em **evidência concreta**: quizzes, comentários de PR, registos de LMS ou anexos a tickets.
@@ -50,9 +50,9 @@ Permite avaliar de forma **binária, objetiva e rastreável** a adoção prátic
 
 ---
 
-## ✅ Conformidade e KPI
+## ✅ Conformidade e KPI {#-conformidade-e-kpi}
 
-- Este checklist permite declarar **conformidade com as práticas do Capítulo 13** de forma audível e mensurável.
+- Este checklist permite declarar **conformidade com as práticas do Capítulo 13** de forma auditável e mensurável.
 - O número de respostas afirmativas pode ser utilizado como **indicador de maturidade da organização** em segurança baseada em capacitação.
 - Os dados gerados devem ser incluídos em **planos de melhoria contínua, auditorias de ciclo de vida e objetivos de qualidade técnica**.
 

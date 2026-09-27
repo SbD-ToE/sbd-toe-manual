@@ -4,11 +4,11 @@ id: kubernetes-execucao
 title: Execução Segura de Containers em Clusters Kubernetes
 description: Aplicação e verificação efetiva de práticas de segurança, isolamento e controlo para workloads containerizados
 tags: [kubernetes, containers, execucao-segura, isolamento, runtime, seguranca]
--------------------------------------------------------------------------------
+---
 
 # ☸️ Execução Segura de Containers em Clusters Kubernetes
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que a **execução de containers em ambientes Kubernetes** - aplicações, pipelines, sidecars ou agentes - ocorre com **restrições explícitas, enforcement técnico e evidência verificável**, reduzindo riscos como:
 
@@ -22,7 +22,7 @@ A segurança da execução depende de **configuração correta, enforcement ativ
 
 ---
 
-## 🧬 O que significa execução segura em Kubernetes (no SbD-ToE)
+## 🧬 O que significa execução segura em Kubernetes (no SbD-ToE) {#-o-que-significa-execução-segura-em-kubernetes-no-sbd-toe}
 
 No modelo SbD-ToE, executar containers de forma segura em Kubernetes implica:
 
@@ -35,7 +35,7 @@ No modelo SbD-ToE, executar containers de forma segura em Kubernetes implica:
 
 ---
 
-## ⚠️ Configuração não é garantia de segurança
+## ⚠️ Configuração não é garantia de segurança {#️-configuração-não-é-garantia-de-segurança}
 
 É essencial evitar a equivalência implícita:
 
@@ -55,7 +55,7 @@ Este ficheiro trata explicitamente os **três níveis**, não apenas o segundo.
 
 ---
 
-## 📘 Mecanismos de segurança aplicáveis
+## 📘 Mecanismos de segurança aplicáveis {#-mecanismos-de-segurança-aplicáveis}
 
 | Mecanismo                  | Função técnica                             | Limitação inerente                |
 | -------------------------- | ------------------------------------------ | --------------------------------- |
@@ -68,9 +68,9 @@ Este ficheiro trata explicitamente os **três níveis**, não apenas o segundo.
 
 ---
 
-## 🛠️ Como aplicar de forma correta
+## 🛠️ Como aplicar de forma correta {#️-como-aplicar-de-forma-correta}
 
-### 1️⃣ Declarar restrições mínimas obrigatórias
+### 1️⃣ Declarar restrições mínimas obrigatórias {#1️⃣-declarar-restrições-mínimas-obrigatórias}
 
 Todos os pods devem declarar explicitamente:
 
@@ -87,7 +87,7 @@ Estas declarações são **necessárias**, mas não suficientes.
 
 ---
 
-### 2️⃣ Impor enforcement técnico
+### 2️⃣ Impor enforcement técnico {#2️⃣-impor-enforcement-técnico}
 
 * Ativar Pod Security Admission (`restricted` ou `baseline`);
 * Aplicar políticas via Kyverno ou OPA para:
@@ -100,7 +100,7 @@ O enforcement **reduz erro humano**, não substitui governação.
 
 ---
 
-### 3️⃣ Verificar estado efetivo em runtime
+### 3️⃣ Verificar estado efetivo em runtime {#3️⃣-verificar-estado-efetivo-em-runtime}
 
 Para workloads críticos (L2/L3), é necessário:
 
@@ -114,7 +114,7 @@ Sem esta verificação, a segurança é apenas **assumida**.
 
 ---
 
-## 📂 Onde configurar, versionar e observar
+## 📂 Onde configurar, versionar e observar {#-onde-configurar-versionar-e-observar}
 
 * Manifests em repositórios Git versionados;
 * Políticas como código via GitOps;
@@ -124,7 +124,7 @@ Sem esta verificação, a segurança é apenas **assumida**.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 * Tratar Kubernetes como **plataforma de execução**, não como barreira de segurança autónoma;
 * Separar claramente:
@@ -139,7 +139,7 @@ Sem esta verificação, a segurança é apenas **assumida**.
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relação com execução em Kubernetes     |
 | ------------------------------- | -------------------------------------- |

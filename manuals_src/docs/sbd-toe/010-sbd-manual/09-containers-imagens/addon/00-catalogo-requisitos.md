@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Containers e Imagens
 
-## Âmbito: o container como artefacto de software sujeito a governação
+## Âmbito: o container como artefacto de software sujeito a governação {#âmbito-o-container-como-artefacto-de-software-sujeito-a-governação}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao ciclo de vida de containers e imagens** - desde a selecção da imagem base, passando pelo hardening e scanning, até à assinatura, verificação de proveniência, políticas de runtime e acesso a registries.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-CNT-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo CNT - Containers e Imagens
+## Catálogo CNT - Containers e Imagens {#catálogo-cnt---containers-e-imagens}
 
 Requisitos que garantem que containers são construídos, validados, promovidos e executados com controlos de segurança proporcionais ao risco dos workloads que encapsulam.
 
@@ -57,14 +57,14 @@ Requisitos que garantem que containers são construídos, validados, promovidos 
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **CNT-001**: A selecção da imagem base deve ser uma **decisão humana explícita e documentada** - não uma herança implícita de template ou gerador de código. Imagens de bases como `ubuntu:latest` ou imagens sem maintainer verificável são insuficientes para L2/L3.
 - **CNT-003**: A minimalidade da imagem reduz a superfície de ataque em caso de comprometimento de runtime. Ferramentas como `dive` ou análise de layers permitem verificar quais binários estão presentes e justificá-los.
 - **CNT-006**: A restrição de capabilities é um controlo preventivo fundamental: um container com `CAP_SYS_ADMIN` ou `--privileged` tem efectivamente controlo do nó host em Kubernetes.
 - **CNT-007**: A cadeia de confiança de assinatura deve ser verificada downstream no ponto de deploy - gerar a assinatura sem a verificar antes da execução não constitui controlo efectivo.
 - **CNT-009**: O admission controller deve ser configurado em modo `Enforce`, não apenas `Audit`, para ser considerado um controlo efectivo. Modo audit sem enforcement é apenas observabilidade, não protecção.
-- **CNT-010**: O intervalo de renovação deve ser proporcional ao risco: para workloads L3, um ciclo máximo de 30 dias é razoável; para L1, 90 dias. O critério relevante é a cobertura de patches críticos, não apenas o calendário.
+- **CNT-010**: O intervalo de renovação deve ser proporcional ao risco: para workloads L3, um ciclo máximo de 30 dias; para L2, 60 dias; para L1, 90 dias. O critério relevante é a cobertura de patches críticos, não apenas o calendário.
 
 ---
 

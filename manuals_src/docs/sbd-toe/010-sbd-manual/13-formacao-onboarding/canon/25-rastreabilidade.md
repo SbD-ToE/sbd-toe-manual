@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Formação e Onboarding
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As referências externas relevantes para este domínio encontram-se nos capítulos onde cada slice ancora primariamente.
 
@@ -19,9 +19,9 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **88 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **97 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -50,7 +50,16 @@ Total: **88 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `13-formacao-onboarding:validacao-de-conhecimento-via-quizzes-estruturados` | Validação de Conhecimento via Quizzes Estruturados | normative | explicit | deterministic |
 | Practice | `13-formacao-onboarding:validacao-formal-de-onboarding-via-checklist` | Validação Formal de Onboarding via Checklist | normative | explicit | deterministic |
 | Practice | `13-formacao-onboarding:war-room-e-simulacoes-de-incidentes` | War Room e Simulações de Incidentes | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-212` | Configuração insegura por desconhecimento | normative | heuristic | bounded |
+| Threat | `MT-213` | Reutilização indevida de segredos ou tokens | normative | heuristic | bounded |
+| Threat | `MT-214` | Acesso técnico concedido sem validação | normative | heuristic | bounded |
+| Threat | `MT-215` | Inclusão de terceiros sem validação | normative | heuristic | bounded |
+| Threat | `MT-216` | Falta de ownership sobre segurança | normative | heuristic | bounded |
+| Threat | `MT-217` | Regressão comportamental / cultura frágil | normative | heuristic | bounded |
+| Threat | `MT-218` | Formação não rastreável | normative | heuristic | bounded |
+| Threat | `MT-219` | Formação desigual entre equipas ou funções | normative | heuristic | bounded |
+| Threat | `MT-220` | Formação teórica sem impacto prático | normative | heuristic | bounded |
+| Threat | `MT-221` | Conteúdos desatualizados ou não aplicáveis | normative | heuristic | bounded |
 | Concept | `sem:concept:champion-seguranca` | champions em segurança | semantic | scored | bounded |
 | Concept | `sem:concept:champions` | Champions | semantic | scored | bounded |
 | Concept | `sem:concept:checklist-de-validacao` | Checklist de Validação | semantic | scored | bounded |
@@ -109,7 +118,7 @@ Total: **88 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

@@ -9,7 +9,7 @@ sidebar_position: 5
 
 # Política de Gestão de Exceções de Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o processo formal e transversal para a gestão de **exceções a controlos de segurança obrigatórios** definidos no modelo SbD-ToE.
 
@@ -21,7 +21,7 @@ Esta política é **transversal** - aplica-se a todos os domínios e capítulos 
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a toda a organização e cobre exceções originadas em qualquer um dos seguintes contextos:
 
@@ -38,7 +38,7 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ---
 
-## 3. Princípios fundamentais
+## 3. Princípios fundamentais {#3-princípios-fundamentais}
 
 - **Toda a exceção é temporária** - não existe exceção permanente; toda a exceção tem data de expiração
 - **Toda a exceção é documentada** - sem registo formal, não existe exceção; existe incumprimento
@@ -48,7 +48,7 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ---
 
-## 4. Tipos de exceção
+## 4. Tipos de exceção {#4-tipos-de-exceção}
 
 | Tipo | Descrição |
 |---|---|
@@ -59,9 +59,9 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ---
 
-## 5. Processo formal de exceção
+## 5. Processo formal de exceção {#5-processo-formal-de-exceção}
 
-### 5.1 Passos obrigatórios
+### 5.1 Passos obrigatórios {#51-passos-obrigatórios}
 
 1. **Identificar o controlo excecionado** - qual o requisito, controlo ou prática que não está a ser cumprido
 2. **Justificar tecnicamente** - por que razão o controlo não pode ser aplicado (constrangimento técnico, dependência externa, prazo, custo de implementação)
@@ -72,7 +72,7 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 7. **Registar formalmente** - no repositório de exceções da aplicação ou plataforma GRC
 8. **Comunicar** - ao Security Champion e à equipa responsável
 
-### 5.2 Checklist por registo de exceção
+### 5.2 Checklist por registo de exceção {#52-checklist-por-registo-de-exceção}
 
 - [ ] Identificador único da exceção
 - [ ] Controlo excecionado (ID do requisito ou controlo SbD-ToE, quando aplicável)
@@ -89,7 +89,7 @@ Esta política aplica-se a toda a organização e cobre exceções originadas em
 
 ---
 
-## 6. Alçadas de aprovação por nível e severidade
+## 6. Alçadas de aprovação por nível e severidade {#6-alçadas-de-aprovação-por-nível-e-severidade}
 
 | Severidade do risco introduzido | L1 | L2 | L3 |
 |---|---|---|---|
@@ -104,22 +104,26 @@ Exceções a controlos com impacto de risco **Critical** não são aceitáveis e
 
 ---
 
-## 7. Prazos máximos de validade (TTL)
+## 7. Prazos máximos de validade (TTL) {#7-prazos-máximos-de-validade-ttl}
 
 | Nível | Severidade | TTL máximo |
 |---|---|---|
-| L1 | Qualquer | 90 dias |
+| L1 | Low / Medium / High | 90 dias |
 | L2 | Low / Medium | 60 dias |
 | L2 | High | 30 dias |
 | L3 | Low / Medium | 30 dias |
 | L3 | High | 14 dias |
-| Qualquer | Critical | 7 dias (com plano de remediação obrigatório) |
+| L1 | Critical | 7 dias (com plano de remediação obrigatório) |
+| L2 | Critical | 7 dias (aprovação de CISO e plano de remediação obrigatório) |
+| L3 | Critical | Não aceitável |
+
+Esta tabela é a master dos prazos de validade de exceções: as Políticas 03 e 12 e os capítulos remetem para ela, e 90 dias é o tecto absoluto. A revalidação faz-se na data de expiração, com alerta ao owner 15 dias antes (ou a meio do TTL, se este for inferior a 30 dias).
 
 A renovação de uma exceção exige **nova aprovação explícita** com reavaliação documentada. A renovação por omissão ou por timeout não é válida.
 
 ---
 
-## 8. Reavaliação e encerramento
+## 8. Reavaliação e encerramento {#8-reavaliação-e-encerramento}
 
 Cada exceção deve ser reavaliada na data de expiração. A equipa responsável deve:
 
@@ -139,7 +143,7 @@ O ciclo de reavaliação segue a cadência mínima:
 
 ---
 
-## 9. Integração com o ciclo de desenvolvimento
+## 9. Integração com o ciclo de desenvolvimento {#9-integração-com-o-ciclo-de-desenvolvimento}
 
 | Momento | Ação esperada |
 |---|---|
@@ -151,7 +155,7 @@ O ciclo de reavaliação segue a cadência mínima:
 
 ---
 
-## 10. Bypass de controlos sem registo formal
+## 10. Bypass de controlos sem registo formal {#10-bypass-de-controlos-sem-registo-formal}
 
 O contorno de um controlo de segurança obrigatório **sem registo formal de exceção** é tratado como:
 
@@ -164,18 +168,18 @@ O pipeline CI/CD e os processos de release devem, sempre que possível, impedir 
 
 ---
 
-## 11. Artefactos
+## 11. Artefactos {#11-artefactos}
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
-| Registo de exceção | `docs/security/exceptions/` ou plataforma GRC | 2 anos após encerramento |
+| Registo de exceção | `docs/security/exceptions/` ou plataforma GRC | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento |
 | Evidência de mitigação compensatória | Associada ao registo | Enquanto a exceção estiver ativa |
-| Aprovações formais | Associadas ao registo | 2 anos após encerramento |
+| Aprovações formais | Associadas ao registo | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento |
 | Relatório de exceções ativas | GRC / dashboard de conformidade | Atualizado continuamente |
 
 ---
 
-## 12. Responsabilidades
+## 12. Responsabilidades {#12-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -188,7 +192,7 @@ O pipeline CI/CD e os processos de release devem, sempre que possível, impedir 
 
 ---
 
-## 13. Revisão e auditoria desta política
+## 13. Revisão e auditoria desta política {#13-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -200,7 +204,7 @@ O registo de exceções deve ser disponibilizado integralmente em auditorias int
 
 ---
 
-## 14. Referências normativas e técnicas
+## 14. Referências normativas e técnicas {#14-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

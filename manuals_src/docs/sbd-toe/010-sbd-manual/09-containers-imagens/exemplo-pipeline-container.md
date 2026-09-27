@@ -13,7 +13,7 @@ O pipeline em causa é responsável por **compilar, testar, assinar e publicar u
 
 ---
 
-## 📦 Estrutura da pipeline
+## 📦 Estrutura da pipeline {#-estrutura-da-pipeline}
 
 ```text
 .
@@ -26,13 +26,13 @@ O pipeline em causa é responsável por **compilar, testar, assinar e publicar u
 
 ---
 
-## 🔐 Passos principais implementados
+## 🔐 Passos principais implementados {#-passos-principais-implementados}
 
 | Etapa                         | Implementação real                           | Documentação associada                    |
 |-------------------------------|-----------------------------------------------|-------------------------------------------|
 | Imagem base segura            | `FROM node:18.17.0-alpine` + `USER node`      | `01-imagens-base.md`                      |
 | Assinatura da imagem          | `cosign sign` com GitHub OIDC                | `03-assinatura-cadeia-trust.md`           |
-| Geração de SBOM               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-sbom-containers.md`               |
+| Geração de SBOM               | `syft . -o cyclonedx-json > .sbom/container.json` | `06-inventario-sbom.md`               |
 | Scanner de vulnerabilidades   | `trivy image` com bloqueio por CVSS > 7       | `07-vulnerabilidades-imagens.md`          |
 | Runners isolados              | `runs-on: [self-hosted, ephemeral]`           | `02-runners-isolamento.md`                |
 | Execução com enforcement      | Kyverno `validate` para labels, UID, origem   | `05-policies-runtime-opa.md`              |
@@ -40,7 +40,7 @@ O pipeline em causa é responsável por **compilar, testar, assinar e publicar u
 
 ---
 
-## 📜 Exemplo resumido do pipeline (GitHub Actions)
+## 📜 Exemplo resumido do pipeline (GitHub Actions) {#-exemplo-resumido-do-pipeline-github-actions}
 
 ```yaml
 jobs:
@@ -62,7 +62,7 @@ jobs:
 
 ---
 
-## ☸️ Execução controlada no Kubernetes
+## ☸️ Execução controlada no Kubernetes {#️-execução-controlada-no-kubernetes}
 
 ```yaml
 apiVersion: v1
@@ -86,7 +86,7 @@ spec:
 
 ---
 
-## ✅ Resultados obtidos
+## ✅ Resultados obtidos {#-resultados-obtidos}
 
 - Execução de pipeline **100% rastreável** e alinhada com políticas;
 - Imagem final com **SBOM, CVE scan e assinatura verificável**;
@@ -95,7 +95,7 @@ spec:
 
 ---
 
-## 🧹 Lições aprendidas
+## 🧹 Lições aprendidas {#-lições-aprendidas}
 
 - A utilização de *containers* exige disciplina e automatização contínua;
 - O enforcement no runtime é tão importante quanto o build seguro;
@@ -104,7 +104,7 @@ spec:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 - Capítulo 07 - `addon/10-sbd-no-proprio-pipeline.md`
 - Capítulo 05 - `06-validacao-dependencias.md`

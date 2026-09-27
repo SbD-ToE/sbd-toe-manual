@@ -13,7 +13,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🧠 Deteção baseada em comportamento adaptativo
+## 🧠 Deteção baseada em comportamento adaptativo {#-deteção-baseada-em-comportamento-adaptativo}
 
 * Utilizar modelos dinâmicos que aprendem padrões por utilizador, aplicação e equipa;
 * Aplicar perfis por role para identificar desvios subtis (ex: operações de admin por utilizador não habitual);
@@ -22,7 +22,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🔗 Correlação multi-aplicacional e multi-camada
+## 🔗 Correlação multi-aplicacional e multi-camada {#-correlação-multi-aplicacional-e-multi-camada}
 
 * Correlacionar eventos entre aplicações distintas, por identidade, sessão ou origem comum;
 * Integrar logs de diferentes camadas (ex: frontend, backend, infraestrutura);
@@ -31,7 +31,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🛰️ Monitorização de eventos e sinais externos
+## 🛰️ Monitorização de eventos e sinais externos {#️-monitorização-de-eventos-e-sinais-externos}
 
 * Recolher sinais de threat intelligence para enriquecer eventos locais (ex: IPs maliciosos);
 * Incorporar alertas de sistemas terceiros (ex: EDR, WAF, serviços cloud);
@@ -40,7 +40,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 📦 Rastreabilidade e contexto em tempo real
+## 📦 Rastreabilidade e contexto em tempo real {#-rastreabilidade-e-contexto-em-tempo-real}
 
 * Garantir que todos os eventos incluem contexto mínimo: identidade, origem, sessão, aplicação, versão;
 * Aplicar enriquecimento automático com dados de sistemas externos (IAM, CMDB, tags de cloud);
@@ -49,7 +49,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🧭 Automatização de resposta operacional
+## 🧭 Automatização de resposta operacional {#-automatização-de-resposta-operacional}
 
 * Acionar playbooks automáticos (SOAR) com base em correlações de alto risco;
 * Criar tickets automáticos com contexto suficiente para análise imediata;
@@ -58,7 +58,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🎯 KPIs e melhoria contínua
+## 🎯 KPIs e melhoria contínua {#-kpis-e-melhoria-contínua}
 
 * Medir cobertura real por aplicação, componente e tipo de fluxo (ex: login, dados sensíveis);
 * Avaliar a relação entre eventos observados, alertas gerados e incidentes tratados;
@@ -67,7 +67,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🧬 Telemetria contínua e tagging universal
+## 🧬 Telemetria contínua e tagging universal {#-telemetria-contínua-e-tagging-universal}
 
 * Estabelecer uma taxonomia unificada de campos para logs (ex: `trace.id`, `actor.id`, `action.code`);
 * Implementar tagging automatizado no pipeline CI/CD para enriquecimento de eventos em runtime;
@@ -78,7 +78,7 @@ As práticas aqui descritas visam **aumentar a cobertura, a precisão e a maturi
 
 ---
 
-## 🧪 Testes automatizados de visibilidade e deteção
+## 🧪 Testes automatizados de visibilidade e deteção {#-testes-automatizados-de-visibilidade-e-deteção}
 
 * Incluir testes automatizados de logging e alertas no pipeline CI/CD (ex: "evento X gera alerta Y?");
 * Usar simulações de eventos como parte dos testes de PR ou staging;

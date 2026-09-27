@@ -7,7 +7,7 @@ tags: [exemplos, toolchain, ferramentas, iac, logs, vulnerabilidades]
 
 # Exemplo: Opções de Toolchain
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Infraestrutura como Código (IaC)
@@ -19,9 +19,9 @@ O SbD-ToE **NÃO prescreve** qual ferramenta usar. Este documento apresenta **ex
 
 ---
 
-## 1. Infraestrutura como Código (IaC)
+## 1. Infraestrutura como Código (IaC) {#1-infraestrutura-como-código-iac}
 
-### Princípio ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro))
+### Princípio ([Cap. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro)) {#princípio-cap-08}
 Toda configuração de infraestrutura deve ser versionada, auditada e automatizada.
 
 <details>
@@ -160,9 +160,9 @@ apiServer:
 
 ---
 
-## 2. Recolha Centralizada de Logs
+## 2. Recolha Centralizada de Logs {#2-recolha-centralizada-de-logs}
 
-### Princípio ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
+### Princípio ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) {#princípio-cap-12}
 Logs de todas as aplicações, infraestrutura e acessos devem ser centralizados, retidos conforme política, e protegidos contra alteração.
 
 <details>
@@ -275,7 +275,7 @@ SecurityEvent
 
 ---
 
-### 2.1. Integração Aplicacional: Como Fazer Push de Logs
+### 2.1. Integração Aplicacional: Como Fazer Push de Logs {#21-integração-aplicacional-como-fazer-push-de-logs}
 
 As opções acima mostram **onde** centralizar logs. Esta secção mostra **como** as aplicações enviam logs para essas infraestruturas.
 
@@ -633,7 +633,7 @@ logging:
 
 ---
 
-### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro))
+### Conformidade SbD-ToE ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) {#conformidade-sbd-toe-cap-12}
 
 Todos os exemplos acima garantem:
 
@@ -646,13 +646,13 @@ Todos os exemplos acima garantem:
 **Evidência de Auditoria:**
 - Logs com timestamp UTC, user/session IDs, action performed
 - Correlação com traces (Datadog APM, Elasticsearch APM)
-- Retention policy configurada (3+ anos para L3)
+- Retention policy configurada conforme a Política 29 (p. ex. ≥ 1 ano para logs de pipeline em L3)
 
 ---
 
-## 3. Análise de Vulnerabilidades (SCA + SAST)
+## 3. Análise de Vulnerabilidades (SCA + SAST) {#3-análise-de-vulnerabilidades-sca--sast}
 
-### Princípio ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
+### Princípio ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)) {#princípio-cap-05-cap-07}
 Dependências e código devem ser analisados para vulnerabilidades conhecidas, integrados no CI/CD.
 
 <details>
@@ -693,7 +693,7 @@ jobs:
 
 ---
 
-### Opção B: WhiteSource + Custom SAST
+### Opção B: WhiteSource + Custom SAST {#opção-b-whitesource--custom-sast}
 ```python
 # scan.py (SAST custom)
 import ast
@@ -771,9 +771,9 @@ fi
 
 ---
 
-## 4. CI/CD com Gates de Segurança
+## 4. CI/CD com Gates de Segurança {#4-cicd-com-gates-de-segurança}
 
-### Princípio ([Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro))
+### Princípio ([Cap. 07](/sbd-toe/sbd-manual/cicd-seguro/intro)) {#princípio-cap-07}
 Pipeline deve incluir validações de segurança, aprovações formais, e trilho auditoria completo.
 
 <details>
@@ -821,7 +821,7 @@ jobs:
 
 **Trilho Auditoria ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 ```
-Workflow logs (7 anos retention)
+Workflow logs (retenção conforme nível: ≥ 1 ano em L3)
 ├── SAST: SonarQube scan results
 ├── SCA: Dependency check report
 ├── Secrets: Trufflehog findings
@@ -904,12 +904,12 @@ deploy:
 
 ---
 
-## 5. Plataformas Integradas (All-in-One ASPM)
+## 5. Plataformas Integradas (All-in-One ASPM) {#5-plataformas-integradas-all-in-one-aspm}
 
-### Princípio (Multi-capítulo)
+### Princípio (Multi-capítulo) {#princípio-multi-capítulo}
 Uma plataforma unificada pode cobrir múltiplas áreas de segurança com correlação de dados e dashboards centralizados.
 
-### Quando Considerar Plataformas Integradas?
+### Quando Considerar Plataformas Integradas? {#quando-considerar-plataformas-integradas}
 
 **✅ Vantagens:**
 - Dashboard único para múltiplas áreas de segurança
@@ -1135,7 +1135,7 @@ jobs:
 
 ---
 
-### Comparação: Plataforma Integrada vs. Best-of-Breed
+### Comparação: Plataforma Integrada vs. Best-of-Breed {#comparação-plataforma-integrada-vs-best-of-breed}
 
 | Critério | Plataforma Integrada<br/>(Xygeni, Snyk, Checkmarx) | Best-of-Breed<br/>(Ferramentas especializadas) |
 |----------|--------------------------------------|----------------------------------------|
@@ -1151,7 +1151,7 @@ jobs:
 
 ---
 
-### Recomendações por Contexto
+### Recomendações por Contexto {#recomendações-por-contexto}
 
 **Use Plataforma Integrada quando:**
 - ✅ Equipa pequena/média sem expertise profundo em cada área
@@ -1182,7 +1182,7 @@ Exemplo:
 
 ---
 
-## Síntese
+## Síntese {#síntese}
 
 | Dimensão | Princípio (SbD-ToE) | Opção A | Opção B | Opção C | Opção D (Integrada) |
 |----------|---|---|---|---|---|
@@ -1204,7 +1204,7 @@ Exemplo:
 
 ---
 
-## Próximas Etapas
+## Próximas Etapas {#próximas-etapas}
 
 1. **Avaliar contexto organizacional:**
    - Qual stack tecnológico já existe?

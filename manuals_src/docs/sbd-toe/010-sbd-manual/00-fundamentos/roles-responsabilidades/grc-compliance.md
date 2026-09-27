@@ -9,21 +9,21 @@ sidebar_position: 11
 
 # GRC / Compliance
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 GRC assegura que **práticas internas estão alinhadas com normas e regulamentos externos**.  
 Coordena auditorias, mantém documentação de risco residual, gere exceções e fornece prova documental exigida por NIS2, DORA, GDPR.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Asseguram rastreabilidade com normas (SSDF, ISO) e regulamentos (NIS2, DORA, GDPR, AI Act)
 - Monitorizam exceções e garantem documentação de risco residual
 - Coordenam auditorias internas e externas
 - Ligam requisitos técnicos a obrigações legais
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 É o garante da **prova documental** exigida por NIS2 (auditoria, reporte) e DORA (resiliência operacional e gestão de terceiros). Sem GRC, não há demonstração de conformidade.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Fornece prova documental exigida em:
 - **NIS2**: Auditorias, reporting, rastreabilidade
@@ -32,9 +32,9 @@ Fornece prova documental exigida em:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Registar **risco residual** após aplicar controlos, registar aceitações com TTL explícito, consolidar KPIs mensais/trimestrais sobre classificação e exceções.
 
 **User Stories:**
@@ -42,20 +42,20 @@ Registar **risco residual** após aplicar controlos, registar aceitações com T
 - [US-08: Aceitação de Risco com TTL](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle#us-08---aceitação-de-risco-com-ttl-e-revalidação-obrigatória) - Evitar exceções permanentes
 - [KPIs de governação da classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - Demonstrar maturidade
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Publicar política de aplicação e providenciar formação (com Gestão Executiva / CISO).
 
 **User Stories:**
 - [US-07: Política de aplicação de requisitos](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-07---validação-e-aprovação-final) - Procedimentos claros (com Gestão Executiva / CISO)
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Rastrear **commit → pipeline → release** para suportar auditorias. Garantir exceções registadas, aprovadas e temporárias.
 
 **User Stories:**
 - [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease) - Suportar auditorias
 - [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado) - Evitar dívida técnica
 
-### Cap. 08 - IaC e Infraestrutura
+### Cap. 08 - IaC e Infraestrutura {#cap-08---iac-e-infraestrutura}
 Mapear **ficheiro IaC → recurso → ambiente** para validar impacto e rastreabilidade. Garantir janelas de mudança e aprovações por papel. Registar exceções com prazo e contramedidas.
 
 **User Stories:**
@@ -63,14 +63,14 @@ Mapear **ficheiro IaC → recurso → ambiente** para validar impacto e rastreab
 - [US-13: Janela de mudança e aprovações](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-13---janela-de-mudança-e-aprovações-por-papel) - Reduzir risco operacional (com Auditores)
 - [US-14: Exceções formais em IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-14---exceções-formais-em-iac) - Evitar dívida estrutural (com AppSec Engineer)
 
-### Cap. 12 - Monitorização e Operações
+### Cap. 12 - Monitorização e Operações {#cap-12---monitorização-e-operações}
 Medir **MTTD e MTTR de incidentes**. Documentar conformidade entre controlos e requisitos regulatórios (SSDF, NIS2, ISO 27001).
 
 **User Stories:**
 - [US-11: MTTD e MTTR de incidentes](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-11---proporcionalidade-de-controlos-por-risco-l1l3-e-dom%C3%ADnios) - Avaliar eficácia
 - [US-12: Documentação de conformidade regulatória](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12---rastreabilidade-e-conformidade-com-regulações-ssdf-nis2-iso-27001) - Demonstrar alinhamento (com Auditores)
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 Medir **KPIs de capacitação**, executar simulações de incidentes, garantir formação mínima para terceiros, definir e recolher KPIs.
 
 **User Stories:**
@@ -79,19 +79,19 @@ Medir **KPIs de capacitação**, executar simulações de incidentes, garantir f
 - [US-11: KPIs detalhados de capacitação](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-11---validação-formal-de-onboarding-via-checklist) - Reportar conformidade (com Gestão Executiva)
 - [US-12: Formação mínima para terceiros](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-12---validação-de-conhecimento-via-quizzes-estruturados) - NIS2/DORA (com Gestão Executiva)
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Validar **fornecedores de forma contínua**, executar validações periódicas de conformidade, validar formalmente onboarding de colaboradores.
 
 **User Stories:**
 - [US-01: Validação contínua de fornecedores](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-01---processo-formal-de-exceções-com-alçadas-por-nível-de-risco) - Conformidade contratual
 - [US-07: Validações periódicas de conformidade](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-07---ciclo-contínuo-de-revisão-e-reavaliação-de-exceções) - Detetar desvios (com AppSec Engineer)
 
-### Transversal - Todos os Capítulos
+### Transversal - Todos os Capítulos {#transversal---todos-os-capítulos}
 Ligar **requisitos técnicos a obrigações legais** (NIS2, DORA, GDPR, AI Act). Coordenar auditorias e manter rastreabilidade documental.
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

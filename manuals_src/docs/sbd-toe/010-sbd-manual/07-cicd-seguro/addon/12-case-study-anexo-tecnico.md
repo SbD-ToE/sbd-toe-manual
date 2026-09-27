@@ -13,7 +13,7 @@ Este anexo complementa o estudo de caso de aplicação do manual SbD-ToE ao pipe
 
 ---
 
-## ✅ Checkpoints de Validação por Fase
+## ✅ Checkpoints de Validação por Fase {#-checkpoints-de-validação-por-fase}
 
 | Fase          | Validação                           | Ferramenta sugerida         | Capítulo SbD-ToE         |
 | ------------- | ----------------------------------- | --------------------------- | ------------------------ |
@@ -27,7 +27,7 @@ Este anexo complementa o estudo de caso de aplicação do manual SbD-ToE ao pipe
 
 ---
 
-## 🧩 User Stories Relevantes
+## 🧩 User Stories Relevantes {#-user-stories-relevantes}
 
 ```markdown
 **Como engenheiro de DevOps**,  
@@ -53,7 +53,7 @@ Para mitigar riscos de execução maliciosa ou persistência de agentes externos
 
 ---
 
-## 📜 Requisitos Aplicáveis
+## 📜 Requisitos Aplicáveis {#-requisitos-aplicáveis}
 
 | ID         | Descrição                                                           | Aplicável | Fonte       |
 | ---------- | ------------------------------------------------------------------- | --------- | ----------- |
@@ -68,7 +68,7 @@ Para mitigar riscos de execução maliciosa ou persistência de agentes externos
 
 ---
 
-## 📋 Checklist Operacional
+## 📋 Checklist Operacional {#-checklist-operacional}
 
 | Item                                                              | Sim/Não |
 | ----------------------------------------------------------------- | ------- |
@@ -87,7 +87,7 @@ Para mitigar riscos de execução maliciosa ou persistência de agentes externos
 
 ---
 
-## ✅ Considerações Finais
+## ✅ Considerações Finais {#-considerações-finais}
 
 Este anexo traduz a prescrição narrativa do estudo de caso em elementos técnicos concretos e auditáveis, promovendo a **adoção eficaz e rastreável** do SbD-ToE no ciclo de vida dos próprios pipelines.
 

@@ -13,7 +13,7 @@ Este catálogo constitui a **referência canónica de requisitos de segurança a
 
 ---
 
-## Âmbito: requisitos aplicacionais
+## Âmbito: requisitos aplicacionais {#âmbito-requisitos-aplicacionais}
 
 Este catálogo cobre **requisitos de segurança intrínsecos ao software** - as propriedades que o sistema deve garantir em tempo de execução, independentemente de onde é deployed ou como a infraestrutura está definida. Incluem-se: autenticação e gestão de identidade, controlo de acesso, registo e monitorização, gestão de sessões, validação de dados, tratamento de erros, configuração segura de parâmetros da aplicação, segurança de APIs e integrações, e requisitos de processo como gestão de requisitos, distribuição de artefactos e ferramentas de desenvolvimento.
 
@@ -48,7 +48,7 @@ Para a instanciação em projecto e a nomenclatura operacional de rastreabilidad
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -59,7 +59,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Índice
+## Índice {#índice}
 
 - [AUT - Autenticação e Identidade](#aut)
 - [ACC - Controlo de Acesso](#acc)

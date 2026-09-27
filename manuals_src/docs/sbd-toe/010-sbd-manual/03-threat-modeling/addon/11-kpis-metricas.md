@@ -10,7 +10,7 @@ tags: [kpi, metricas, THR, threat-modeling, ameacas, L1, L2, L3]
 
 # KPIs e Métricas - Threat Modeling
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **cobertura, actualidade e qualidade operacional do processo de threat modeling** no ciclo de desenvolvimento de software. O threat modeling é o mecanismo pelo qual as ameaças são identificadas antes de se tornarem vulnerabilidades exploráveis - é análise estruturada de risco aplicada à arquitectura, antes da implementação.
 
@@ -20,7 +20,7 @@ Os indicadores THR alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores THR usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens deste capítulo são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não em relação ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -49,7 +49,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **THR-K01 - Threat model actualizado:** considera-se actualizado um threat model que reflecte a arquitectura actual e foi revisto após a última mudança arquitectural significativa ou no prazo máximo do ciclo definido. A ferramenta é livre (STRIDE manual, IriusRisk, Threat Dragon, Microsoft Threat Modeling Tool); a evidência de revisão é obrigatória.
 
@@ -81,7 +81,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -94,7 +94,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
@@ -102,4 +102,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-validacao-evidencia-threat-modeling.md` | Processo de validação que alimenta THR-K03/K05 |
 | `addon/07-mapeamento-threats-requisitos.md` | Mapeamento ameaça → requisito (THR-K05) |
 | Cap. 04 `addon/10-kpis-metricas.md` | ARC-K01 (threat model por arquitectura) complementa THR-K01 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-06 |

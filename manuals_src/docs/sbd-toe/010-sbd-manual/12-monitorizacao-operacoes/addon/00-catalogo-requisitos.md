@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Monitorização e Operações
 
-## Âmbito: o programa de monitorização como controlo operacional
+## Âmbito: o programa de monitorização como controlo operacional {#âmbito-o-programa-de-monitorização-como-controlo-operacional}
 
 Este catálogo cobre **requisitos do programa de monitorização e operações de segurança** - os controlos que garantem visibilidade contínua sobre o estado de segurança em produção, capacidade de deteção de eventos anómalos e integração com processos formais de resposta a incidentes.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-OPS-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo OPS - Monitorização e Operações
+## Catálogo OPS - Monitorização e Operações {#catálogo-ops---monitorização-e-operações}
 
 Requisitos que garantem que a organização tem visibilidade operacional efectiva sobre os seus sistemas em produção, com capacidade de deteção, correlação e resposta proporcionais ao risco.
 
@@ -46,7 +46,7 @@ Requisitos que garantem que a organização tem visibilidade operacional efectiv
 |----|------|:--:|:--:|:--:|----------------------|
 | OPS-001 | Logging estruturado e persistente para todos os componentes em produção | ✔ | ✔ | ✔ | Logs de todos os componentes em produção em formato estruturado (JSON, CEF ou equivalente); persistidos fora da instância (não apenas locais); acessíveis sem acesso directo ao host; cobertura verificável por inventário. |
 | OPS-002 | Catálogo de eventos críticos de segurança definido e verificado | ✔ | ✔ | ✔ | Catálogo de eventos críticos definido por aplicação (autenticação, alteração de permissões, erros de autorização, acessos a dados sensíveis, etc.); evidência de que esses eventos são efectivamente gerados e retidos; revisto com cada release significativo. |
-| OPS-003 | Retenção de logs conforme política e requisitos regulatórios | - | ✔ | ✔ | Política de retenção documentada por tipo de log e contexto regulatório aplicável; logs retidos pelo período mínimo obrigatório; processo de arquivo e purga documentado e auditável; evidência de cumprimento disponível. |
+| OPS-003 | Retenção de logs conforme política e requisitos regulatórios | - | ✔ | ✔ | Política de retenção documentada por tipo de log e contexto regulatório aplicável; logs retidos pelo período mínimo obrigatório (para os registos gerados automaticamente por sistemas de IA de risco elevado, pelo menos seis meses — AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6); processo de arquivo e purga documentado e auditável; evidência de cumprimento disponível. |
 | OPS-004 | Centralização de logs em sistema SIEM ou equivalente | - | ✔ | ✔ | Logs enviados para sistema de monitorização centralizado com ingestion verificável; sem dependência exclusiva de logs locais para análise de segurança; evidência de logs recebidos por fonte; falhas de envio detectadas e alertadas. |
 | OPS-005 | Alertas automáticos para eventos de segurança críticos | - | ✔ | ✔ | Alertas configurados para eventos críticos definidos no OPS-002; thresholds documentados e revistos periodicamente; canal de notificação testado; alertas não silenciados sem justificação. |
 | OPS-006 | SLA de resposta a alertas definido e medido | - | ✔ | ✔ | SLA de resposta (time-to-acknowledge e time-to-resolve) definido por severidade de alerta; métricas de MTTD e MTTR recolhidas e reportadas periodicamente; desvios ao SLA documentados e tratados. |
@@ -62,7 +62,7 @@ Requisitos que garantem que a organização tem visibilidade operacional efectiv
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **OPS-001 vs LOG- (Cap. 02)**: LOG- define o que a aplicação deve registar e como proteger a integridade dos logs - são requisitos do software. OPS-001 define que esses logs devem ser persistidos e acessíveis na infraestrutura de monitorização - é um requisito do programa operacional. Ambos são necessários e complementares.
 - **OPS-002**: O catálogo de eventos críticos deve ser definido em colaboração com as equipas de desenvolvimento e AppSec - são elas que sabem quais os eventos de negócio com implicações de segurança relevantes. Um SIEM a receber logs sem um catálogo de eventos críticos é observabilidade sem deteção.

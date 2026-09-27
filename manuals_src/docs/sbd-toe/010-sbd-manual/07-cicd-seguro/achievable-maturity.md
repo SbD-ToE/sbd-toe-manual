@@ -1,6 +1,6 @@
 # Achievable Maturity — CI/CD Seguro
 
-## Sumário
+## Sumário {#sumário}
 
 Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
@@ -14,7 +14,7 @@ Cinco secções:
 
 ---
 
-## § Manual ontology V2 — entities relevantes para maturity
+## § Manual ontology V2 — entities relevantes para maturity {#-manual-ontology-v2--entities-relevantes-para-maturity}
 
 Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
@@ -24,7 +24,7 @@ Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:operate` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:release` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:owasp-dsomm-build-test-release-operate:test` | OWASP DSOMM | Build, Test, Release, Operate | external | derived |
-| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Execução segura, validação de artefactos, assinaturas, rastr | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:owasp-dsomm:visao-geral-de-alinhamento:owasp-dsomm` | OWASP DSOMM | Execução segura, validação de artefactos, assinaturas, rastreabilidade | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:1` | OWASP SAMM | Build & Deployment Automation | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:2` | OWASP SAMM | Build & Deployment Automation | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:owasp-samm:owasp-samm-build-deployment-automation:3` | OWASP SAMM | Build & Deployment Automation | external | derived |
@@ -33,11 +33,11 @@ Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:2` | SLSA | Provenance & CI/CD Control | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:3` | SLSA | Provenance & CI/CD Control | external | derived |
 | MaturityMapping | `07-cicd-seguro:maturity:slsa:slsa-provenance-ci-cd-control:4` | SLSA | Provenance & CI/CD Control | external | derived |
-| MaturityMapping | `07-cicd-seguro:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Proveniência, trusted builders, controlo de execução, harden | external | derived |
+| MaturityMapping | `07-cicd-seguro:maturity:slsa:visao-geral-de-alinhamento:slsa-v1-0` | SLSA | Proveniência, trusted builders, controlo de execução, hardening de pipelines | external | derived |
 
 ---
 
-## § SAMM v2 / DSOMM maturity progression
+## § SAMM v2 / DSOMM maturity progression {#-samm-v2--dsomm-maturity-progression}
 
 Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
@@ -55,7 +55,7 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 
 ---
 
-## § SLSA build/integrity progression
+## § SLSA build/integrity progression {#-slsa-buildintegrity-progression}
 
 SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
@@ -69,7 +69,7 @@ SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progres
 
 ---
 
-## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity) {#-out-of-maturity-scope-regulatory-alignment-não-maturity}
 
 Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
 
@@ -77,13 +77,13 @@ _(Regulatory alignment para este capítulo é tratado via Manual ontology V2 Ext
 
 ---
 
-## § Future-work register (maturity gaps)
+## § Future-work register (maturity gaps) {#-future-work-register-maturity-gaps}
 
 _(Nenhuma maturity claim em gap state para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`

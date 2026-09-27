@@ -16,7 +16,7 @@ Uma excepção é uma decisão de risco formal: reconhece que um controlo não e
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Aplica-se a qualquer situação em que um requisito ou controlo prescrito no SbD-ToE não seja aplicado na totalidade. Causas típicas:
 
@@ -30,9 +30,9 @@ A causa não tem de ser excepcional - mas o tratamento tem de o ser. Toda a não
 
 ---
 
-## Processo
+## Processo {#processo}
 
-### 1. Identificação
+### 1. Identificação {#1-identificação}
 
 Definir com precisão o que está em causa:
 
@@ -42,7 +42,7 @@ Definir com precisão o que está em causa:
 
 A identificação incompleta invalida o registo.
 
-### 2. Justificação técnica
+### 2. Justificação técnica {#2-justificação-técnica}
 
 Responder explicitamente a três perguntas:
 
@@ -52,7 +52,7 @@ Responder explicitamente a três perguntas:
 
 Justificações vagas ou genéricas não são aceites como fundamento de aprovação.
 
-### 3. Avaliação de impacto
+### 3. Avaliação de impacto {#3-avaliação-de-impacto}
 
 Quantificar o risco residual criado:
 
@@ -60,23 +60,23 @@ Quantificar o risco residual criado:
 - o nível de risco do contexto é afectado pela ausência deste controlo?
 - o risco residual é aceitável com as compensações previstas?
 
-### 4. Medidas compensatórias
+### 4. Medidas compensatórias {#4-medidas-compensatórias}
 
 Identificar os controlos alternativos que reduzem o risco residual a um nível aceitável. A compensação não precisa de ser equivalente ao controlo em falta - precisa de ser proporcional ao risco residual e verificável.
 
 Excepções sem compensação identificada são aprovadas apenas em L1 com justificação de risco negligenciável.
 
-### 5. Aprovação formal
+### 5. Aprovação formal {#5-aprovação-formal}
 
 A aprovação é explícita, registada e atribuída nominalmente a um papel com autoridade formal, de acordo com as alçadas definidas abaixo. Aprovações tácitas ou implícitas são inválidas.
 
-### 6. Registo e activação do ciclo de monitorização
+### 6. Registo e activação do ciclo de monitorização {#6-registo-e-activação-do-ciclo-de-monitorização}
 
 Após aprovação, a excepção é registada com todos os campos obrigatórios e integrada no ciclo de validação continuada (ver `addon/06-validacao-continuada.md`). A partir deste momento está activa, tem prazo e gera obrigação de revisão.
 
 ---
 
-## Campos obrigatórios
+## Campos obrigatórios {#campos-obrigatórios}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -93,14 +93,14 @@ Após aprovação, a excepção é registada com todos os campos obrigatórios e
 | Data de aprovação | Sim | |
 | **Cadeia de autoridade** | Sim | Ver secção abaixo |
 | **Evidências técnicas** | Sim | Artefactos que suportam justificação e compensação - relatórios de scanner, tickets, logs, ADRs, evidência de testes; referência por URL ou caminho rastreável |
-| Data de expiração | Sim | Máx. 90 dias; extensão exige reavaliação |
+| Data de expiração | Sim | Tecto da Política 05 §7 (máx. absoluto 90 dias, em L1); extensão exige reavaliação |
 | Trigger de revisão | Sim | Data fixa ou condição (incidente, mudança arquitectural, etc.) |
 
 Campos em falta invalidam o registo. Um registo inválido não produz aprovação.
 
 ---
 
-## Cadeia de autoridade
+## Cadeia de autoridade {#cadeia-de-autoridade}
 
 O registo de excepção não é o repositório dos artefactos de aprovação - é o índice que os referencia e garante que a cadeia é completa e rastreável. Os artefactos em si ficam nos sistemas onde foram produzidos (sistema de tickets, email, GRC, wiki).
 
@@ -121,7 +121,7 @@ O meio não é prescrito - ticket, comentário num PR, nota num sistema GRC, reg
 
 ---
 
-## Alçadas de aprovação
+## Alçadas de aprovação {#alçadas-de-aprovação}
 
 | Nível | Aprovação mínima |
 |---|---|
@@ -133,9 +133,9 @@ Excepções L3 sem aprovação de AppSec e GRC/CISO são não conformes independ
 
 ---
 
-## Validade, renovação e expiração
+## Validade, renovação e expiração {#validade-renovação-e-expiração}
 
-O prazo máximo por defeito é **90 dias**. Extensões exigem nova avaliação completa - não são automáticas nem concedidas por omissão.
+O prazo máximo é o da [Política 05 §7](/sbd-toe/assets/policies/policy-gestao-excecoes#7-prazos-máximos-de-validade-ttl), por nível e severidade; **90 dias** é o tecto absoluto (L1). Extensões exigem nova avaliação completa - não são automáticas nem concedidas por omissão.
 
 Excepções expiradas sem renovação activa constituem **não conformidade** a partir da data de expiração. Devem ser tratadas como tal no ciclo de auditoria.
 
@@ -147,7 +147,7 @@ Triggers de revisão obrigatória fora do prazo normal:
 
 ---
 
-## Indicadores de maturidade
+## Indicadores de maturidade {#indicadores-de-maturidade}
 
 O número e a qualidade das excepções activas num projecto são sinais directos de maturidade de segurança:
 
@@ -159,7 +159,7 @@ Ver `kpis-governanca.md` para os indicadores organizacionais associados.
 
 ---
 
-## Especificidades por domínio
+## Especificidades por domínio {#especificidades-por-domínio}
 
 Cada capítulo de domínio define num ficheiro próprio os triggers característicos, campos adicionais, templates e integração com ferramentas. O processo desta secção aplica-se sempre, sem substituição.
 
@@ -174,7 +174,7 @@ Cada capítulo de domínio define num ficheiro próprio os triggers característ
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

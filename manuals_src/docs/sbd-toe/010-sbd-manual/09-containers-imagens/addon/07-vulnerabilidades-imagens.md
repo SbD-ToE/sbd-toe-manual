@@ -7,7 +7,7 @@ tags: [containers, vulnerabilidades, cve, sca, trivy, syft, imagem]
 
 # Deteção e Tratamento de Vulnerabilidades em Imagens
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todas as imagens de container utilizadas em pipelines, ambientes de teste ou produção **são analisadas quanto a vulnerabilidades conhecidas (CVEs)**, produzindo **sinais técnicos objetivos** que suportam decisões informadas sobre mitigação, aceitação ou bloqueio.
 
@@ -15,7 +15,7 @@ Este ficheiro define **como detetar e classificar vulnerabilidades**, não como 
 
 ---
 
-## 🧬 O que são vulnerabilidades em imagens
+## 🧬 O que são vulnerabilidades em imagens {#-o-que-são-vulnerabilidades-em-imagens}
 
 Cada imagem de container inclui **bibliotecas, runtimes e binários** potencialmente vulneráveis, introduzidos por diferentes vias:
 
@@ -33,7 +33,7 @@ Uma vulnerabilidade identificada por um scanner indica:
 
 ---
 
-## ⚠️ Deteção não é avaliação de risco
+## ⚠️ Deteção não é avaliação de risco {#️-deteção-não-é-avaliação-de-risco}
 
 É fundamental evitar a seguinte equivalência incorreta:
 
@@ -51,7 +51,7 @@ Este ficheiro trata da **deteção e classificação técnica**, não da decisã
 
 ---
 
-## 📘 Ferramentas de análise (SCA para containers)
+## 📘 Ferramentas de análise (SCA para containers) {#-ferramentas-de-análise-sca-para-containers}
 
 | Ferramenta        | Função técnica                                  | Papel no SbD-ToE                     |
 |-------------------|-------------------------------------------------|--------------------------------------|
@@ -64,9 +64,9 @@ Estas ferramentas **detetam presença**, não explorabilidade nem impacto real.
 
 ---
 
-## 🛠️ Como aplicar a deteção corretamente
+## 🛠️ Como aplicar a deteção corretamente {#️-como-aplicar-a-deteção-corretamente}
 
-1. **Gerar SBOM da imagem final** (ver `06-sbom-containers.md`);
+1. **Gerar SBOM da imagem final** (ver `06-inventario-sbom.md`);
 2. **Executar scanner SCA** sobre a imagem real;
 3. **Produzir relatório técnico**, incluindo:
    - CVE;
@@ -85,7 +85,7 @@ A automatização **não elimina a necessidade de interpretação**.
 
 ---
 
-## 📂 Armazenamento e rastreabilidade dos resultados
+## 📂 Armazenamento e rastreabilidade dos resultados {#-armazenamento-e-rastreabilidade-dos-resultados}
 
 Para garantir auditabilidade:
 
@@ -98,7 +98,7 @@ Resultados não rastreáveis **não têm valor operacional nem auditável**.
 
 ---
 
-## 🔍 Utilização correta dos resultados de scanning
+## 🔍 Utilização correta dos resultados de scanning {#-utilização-correta-dos-resultados-de-scanning}
 
 No SbD-ToE, os resultados de vulnerabilidades devem ser usados para:
 
@@ -114,7 +114,7 @@ Não devem ser usados como:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Definir **limiares técnicos iniciais** (ex.: CVSS ≥ 7) como *trigger*, não como veredicto;
 - Distinguir vulnerabilidades exploráveis de teóricas;
@@ -125,12 +125,12 @@ Não devem ser usados como:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com vulnerabilidades                 |
 |----------------------------------|----------------------------------------------|
 | `01-imagens-base.md`             | Minimização reduz superfície de CVEs         |
-| `06-sbom-containers.md`          | Scanner usa SBOM como base                   |
+| `06-inventario-sbom.md`          | Scanner usa SBOM como base                   |
 | `03-assinatura-cadeia-trust.md` | Integridade da imagem analisada              |
 | `09-riscos-processo-imagens.md` | Scanners como sinal, não decisão             |
 | `15-aplicacao-lifecycle.md`     | Integração no SSDLC                          |

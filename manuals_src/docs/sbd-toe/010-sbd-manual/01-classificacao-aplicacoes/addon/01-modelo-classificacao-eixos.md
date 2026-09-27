@@ -8,7 +8,7 @@ tags: [tipo:modelo, tema:criticidade, eixo, risco]
 
 # Modelo de Classificação por Eixos de Risco
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Fornecer um modelo **prático, proporcional e aplicável** ao contexto do desenvolvimento de software, para avaliar o **nível de risco de uma aplicação** com base em três eixos fundamentais:
 
@@ -20,7 +20,7 @@ Este modelo permite decisões rápidas e documentadas sobre os controlos mínimo
 
 ---
 
-## 🧠 Enquadramento conceptual
+## 🧠 Enquadramento conceptual {#-enquadramento-conceptual}
 
 No *Security by Design – Theory of Everything (SbD-ToE)*, o risco é tratado como um **conceito único**, caracterizado por múltiplos **atributos internos** (origem, mecanismo, detetabilidade, evidenciabilidade, reprodutibilidade, entre outros).
 
@@ -33,7 +33,7 @@ Este modelo **não pretende capturar a totalidade do risco**, mas fornecer uma b
 
 ---
 
-## 🧮 Fórmula do Modelo Simplificado
+## 🧮 Fórmula do Modelo Simplificado {#-fórmula-do-modelo-simplificado}
 
 A classificação de risco é feita com base na soma dos três eixos:
 
@@ -45,7 +45,7 @@ A classificação de risco é feita com base na soma dos três eixos:
 - **D (Tipo de Dados)**: Sensibilidade, valor e enquadramento legal dos dados processados
 - **I (Impacto Potencial)**: Consequência expectável de uma falha, violação ou decisão incorreta
 
-### Classificação por Pontuação
+### Classificação por Pontuação {#classificação-por-pontuação}
 
 | Soma Total | Classificação de Risco | Código |
 |------------|------------------------|--------|
@@ -57,9 +57,9 @@ Esta classificação representa o **nível mínimo de rigor** a aplicar em requi
 
 ---
 
-## 🧱 Detalhe dos Eixos
+## 🧱 Detalhe dos Eixos {#-detalhe-dos-eixos}
 
-### 🧭 Exposição (E)
+### 🧭 Exposição (E) {#-exposição-e}
 
 Avalia quão acessível está a aplicação ou sistema, considerando superfícies de ataque, interfaces e contexto de rede.
 
@@ -71,7 +71,7 @@ Avalia quão acessível está a aplicação ou sistema, considerando superfície
 
 ---
 
-### 📑 Tipo de Dados (D)
+### 📑 Tipo de Dados (D) {#-tipo-de-dados-d}
 
 Classifica a natureza, sensibilidade e enquadramento legal dos dados processados.
 
@@ -83,7 +83,7 @@ Classifica a natureza, sensibilidade e enquadramento legal dos dados processados
 
 ---
 
-### ⚠️ Impacto Potencial (I)
+### ⚠️ Impacto Potencial (I) {#️-impacto-potencial-i}
 
 Avalia o impacto expectável para a organização caso o risco se materialize.
 
@@ -95,13 +95,13 @@ Avalia o impacto expectável para a organização caso o risco se materialize.
 
 ---
 
-## 🧩 Critérios complementares em contextos de automação e apoio à decisão
+## 🧩 Critérios complementares em contextos de automação e apoio à decisão {#-critérios-complementares-em-contextos-de-automação-e-apoio-à-decisão}
 
 A utilização de mecanismos de automação ou apoio à decisão (incluindo IA) **não cria novos eixos de risco**, nem implica, por si só, alteração da criticidade da aplicação.
 
 Esses mecanismos devem ser considerados **exclusivamente quando modificam atributos relevantes do risco**, nomeadamente exposição, tipo de dados tratados ou impacto efetivo das decisões e ações realizadas.
 
-### 🧭 Regra de aplicação obrigatória
+### 🧭 Regra de aplicação obrigatória {#-regra-de-aplicação-obrigatória}
 
 A reavaliação dos eixos **E**, **D** e **I** é **obrigatória** sempre que a automação ou apoio à decisão:
 
@@ -116,7 +116,7 @@ A manutenção da classificação original **só é aceitável** quando exista:
 - controlo explícito dos outputs automatizados;
 - evidência suficiente de que os atributos do risco não foram alterados.
 
-### 🔎 Orientação prática mínima
+### 🔎 Orientação prática mínima {#-orientação-prática-mínima}
 
 | Situação observada                                                                 | Ajuste esperado |
 |-----------------------------------------------------------------------------------|-----------------|
@@ -129,7 +129,7 @@ A manutenção da classificação original **só é aceitável** quando exista:
 
 ---
 
-## 🔎 Porquê somar os eixos?
+## 🔎 Porquê somar os eixos? {#-porquê-somar-os-eixos}
 
 A opção pela **soma simples** dos eixos privilegia:
 
@@ -144,7 +144,7 @@ Este modelo é empírico e prescritivo, adequado a contextos ágeis e DevSecOps,
 
 ---
 
-## ⚠️ Considerações finais
+## ⚠️ Considerações finais {#️-considerações-finais}
 
 - Este modelo **não substitui** threat modeling nem análises de risco formais;
 - Deve ser usado como **mecanismo rápido de classificação** e ponto de partida para decisões;
@@ -154,7 +154,7 @@ Apesar da sua simplicidade, o modelo permite determinar, de forma rápida e fund
 
 ---
 
-## 🔗 Ligações úteis
+## 🔗 Ligações úteis {#-ligações-úteis}
 
 - Modelo alternativo: [Adoção de classificações existentes (DRP/BIA)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/adopcao-drp-bia)
 - [Capítulo 01 – Classificação da Criticidade Aplicacional](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)

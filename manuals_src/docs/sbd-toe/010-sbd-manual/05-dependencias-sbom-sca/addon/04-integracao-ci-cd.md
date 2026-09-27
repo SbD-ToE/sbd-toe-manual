@@ -7,7 +7,7 @@ tags: [dependencias, sbom, sca, supply-chain, ci-cd]
 
 # Integração com Pipelines CI/CD
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que as práticas de SBOM, SCA e governaça de dependências são aplicadas de forma **automatizada e rastreável** nos pipelines de build, teste e release das aplicações.
 
@@ -15,7 +15,7 @@ Garantir que as práticas de SBOM, SCA e governaça de dependências são aplica
 
 ---
 
-## 🛠️ Ações esperadas em pipelines CI/CD
+## 🛠️ Ações esperadas em pipelines CI/CD {#️-ações-esperadas-em-pipelines-cicd}
 
 | Fase CI/CD        | Ação esperada                                           | Resultado                              |
 |-------------------|---------------------------------------------------------------|----------------------------------------|
@@ -26,7 +26,7 @@ Garantir que as práticas de SBOM, SCA e governaça de dependências são aplica
 
 ---
 
-## 💡 Exemplos de integração (pseudocódigo)
+## 💡 Exemplos de integração (pseudocódigo) {#-exemplos-de-integração-pseudocódigo}
 
 ```yaml
 steps:
@@ -44,7 +44,7 @@ steps:
 
 ---
 
-## 🔐 Políticas de bloqueio (exemplos)
+## 🔐 Políticas de bloqueio (exemplos) {#-políticas-de-bloqueio-exemplos}
 
 | Critério                              | Ação              |
 |----------------------------------------|----------------------|
@@ -56,7 +56,7 @@ steps:
 
 ---
 
-## 🔧 Integração com backlog e rastreabilidade
+## 🔧 Integração com backlog e rastreabilidade {#-integração-com-backlog-e-rastreabilidade}
 
 - Findings devem gerar automaticamente:
   - Tarefa em Jira/Azure DevOps
@@ -67,7 +67,7 @@ steps:
 
 ---
 
-## 🔒 Práticas recomendadas por risco
+## 🔒 Práticas recomendadas por risco {#-práticas-recomendadas-por-risco}
 
 | Risco da aplicação | Prática CI/CD obrigatória                                |
 |---------------------|-------------------------------------------------------------|
@@ -77,7 +77,7 @@ steps:
 
 ---
 
-## 🔗 Ligações com outros ficheiros
+## 🔗 Ligações com outros ficheiros {#-ligações-com-outros-ficheiros}
 
 | Documento                   | Relação com o pipeline                              |
 |-----------------------------|---------------------------------------------------------|

@@ -9,7 +9,7 @@ sidebar_position: 34
 
 # Política de Rastreabilidade Organizacional
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **rastreabilidade das práticas de segurança ao nível organizacional** - o conjunto de mecanismos que permitem demonstrar, a qualquer momento, o estado de conformidade de cada aplicação com os requisitos do SbD-ToE, identificar os responsáveis por cada decisão de segurança, e apresentar evidência auditável a auditores internos, externos ou reguladores.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,11 +35,11 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Repositório de conformidade por aplicação
+## 3. Repositório de conformidade por aplicação {#3-repositório-de-conformidade-por-aplicação}
 
 Cada aplicação deve ter um repositório de conformidade - um artefacto estruturado, versionado e auditável que consolida o estado de conformidade com todos os capítulos do SbD-ToE aplicáveis.
 
-### 3.1 Formato e conteúdo mínimo
+### 3.1 Formato e conteúdo mínimo {#31-formato-e-conteúdo-mínimo}
 
 O repositório pode ser implementado como ficheiro YAML ou Markdown versionado em repositório de código, ferramenta GRC, ou sistema de gestão de conformidade. O formato específico não é prescrito - a auditabilidade e a acessibilidade são os requisitos determinantes.
 
@@ -55,7 +55,7 @@ O repositório pode ser implementado como ficheiro YAML ou Markdown versionado e
 | `last_validated` | Data e responsável pela última validação | Obrigatório |
 | `next_validation` | Data prevista para a próxima validação | Obrigatório |
 
-### 3.2 Atualização
+### 3.2 Atualização {#32-atualização}
 
 O repositório deve ser actualizado:
 
@@ -66,11 +66,11 @@ O repositório deve ser actualizado:
 
 ---
 
-## 4. Designação formal de owners de segurança
+## 4. Designação formal de owners de segurança {#4-designação-formal-de-owners-de-segurança}
 
 Para cada aplicação classificada como L2 ou L3, deve existir um **Security Champion formalmente designado**, com responsabilidades de segurança documentadas e registadas.
 
-### 4.1 Requisitos de designação
+### 4.1 Requisitos de designação {#41-requisitos-de-designação}
 
 | Requisito | Descrição |
 |---|---|
@@ -79,7 +79,7 @@ Para cada aplicação classificada como L2 ou L3, deve existir um **Security Cha
 | Formação mínima concluída | O Security Champion deve ter completado o trilho de formação de segurança obrigatório para a sua função |
 | Substituto designado | Para continuidade em ausências prolongadas (L3 obrigatório) |
 
-### 4.2 Registo centralizado
+### 4.2 Registo centralizado {#42-registo-centralizado}
 
 A organização deve manter um registo centralizado de todos os Security Champions activos, com identificação da aplicação, identidade, data de designação e estado de formação. Este registo é a fonte de verdade para escalamento, comunicação de risco e auditoria.
 
@@ -89,11 +89,11 @@ A designação de Security Champion não exime os restantes membros da equipa da
 
 ---
 
-## 5. Validações periódicas de conformidade
+## 5. Validações periódicas de conformidade {#5-validações-periódicas-de-conformidade}
 
 As validações periódicas de conformidade têm como objectivo verificar se os requisitos do SbD-ToE continuam aplicados e eficazes, detectar desvios e recolher evidência actualizada.
 
-### 5.1 Cadência de validação
+### 5.1 Cadência de validação {#51-cadência-de-validação}
 
 | Nível | Cadência | Gatilhos adicionais |
 |---|---|---|
@@ -101,7 +101,7 @@ As validações periódicas de conformidade têm como objectivo verificar se os 
 | L2 | Semestral | Release major; incidente de segurança; alteração de nível |
 | L3 | Trimestral | Release major; incidente; alteração de proprietário; auditoria externa |
 
-### 5.2 Processo de validação
+### 5.2 Processo de validação {#52-processo-de-validação}
 
 Cada ciclo de validação deve cobrir:
 
@@ -112,7 +112,7 @@ Cada ciclo de validação deve cobrir:
 - [ ] Plano de acção para desvios identificados (owner, prazo, prioridade)
 - [ ] Actualização do repositório de conformidade com resultado da validação
 
-### 5.3 Resultado e decisão
+### 5.3 Resultado e decisão {#53-resultado-e-decisão}
 
 O resultado da validação deve ser documentado com:
 
@@ -123,7 +123,7 @@ O resultado da validação deve ser documentado com:
 
 ---
 
-## 6. Dashboard organizacional
+## 6. Dashboard organizacional {#6-dashboard-organizacional}
 
 A organização deve manter visibilidade agregada do estado de conformidade do seu portfólio de aplicações:
 
@@ -139,7 +139,7 @@ O dashboard não substitui o repositório de conformidade por aplicação - é u
 
 ---
 
-## 7. Evidência auditável
+## 7. Evidência auditável {#7-evidência-auditável}
 
 Toda a evidência de conformidade deve satisfazer os seguintes requisitos para ser considerada auditável:
 
@@ -151,7 +151,7 @@ Toda a evidência de conformidade deve satisfazer os seguintes requisitos para s
 | Imutabilidade | Evidência não alterável após produção (ex: artefacto de pipeline assinado, relatório arquivado) |
 | Acessibilidade | Disponível a auditores internos e externos sem dependência de acesso a sistemas de produção |
 
-### 7.1 Tipos de evidência aceite
+### 7.1 Tipos de evidência aceite {#71-tipos-de-evidência-aceite}
 
 | Tipo | Exemplos |
 |---|---|
@@ -163,23 +163,23 @@ Toda a evidência de conformidade deve satisfazer os seguintes requisitos para s
 
 ---
 
-## 8. Retenção de artefactos de conformidade
+## 8. Retenção de artefactos de conformidade {#8-retenção-de-artefactos-de-conformidade}
 
 | Artefacto | Retenção mínima |
 |---|---|
 | Repositório de conformidade (estado actual e histórico) | Vigência da aplicação + 3 anos |
-| Evidências de validação | 3 anos |
+| Evidências de validação (pacote por release) | 1 ano (L1), 2 anos (L2), 3 anos (L3) |
 | Registos de designação de Security Champion | Duração da designação + 2 anos |
 | Relatórios de validação periódica | 3 anos |
-| Registos de excepções (incluindo expiradas) | 5 anos |
+| Registos de excepções (incluindo expiradas) | Conforme a Política 06 §10: 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento ou expiração |
 
 :::note
-Em ambientes regulados (DORA, NIS2, RGPD), os prazos regulatórios prevalecem sobre os mínimos desta política. O período mais longo é sempre o aplicável.
+Os prazos desta tabela são o mínimo recomendado pelo Manual (escolha do Manual). Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector, sempre com o limite do RGPD quando há dados pessoais — ver a [cláusula de precedência da Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); o valor adoptado regista-se no mapa de retenção da organização.
 :::
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -191,7 +191,7 @@ Em ambientes regulados (DORA, NIS2, RGPD), os prazos regulatórios prevalecem so
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -201,7 +201,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|
@@ -211,5 +211,5 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | NIST SSDF - PO.3, PO.7 | Implementação de práticas de segurança e rastreabilidade |
 | OWASP SAMM - PO2, PO3 | Maturidade organizacional em segurança |
 | ISO/IEC 27001 - A.18 | Compliance and information security reviews |
-| DORA - Art. 17 | ICT risk management documentation and evidence |
+| DORA - Art. 6(5) | ICT risk management documentation and evidence |
 | NIS2 - Art. 21 | Cybersecurity measures and accountability |

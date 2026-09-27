@@ -9,13 +9,13 @@ tags: [eventos, logging, segurança, observabilidade, catálogo]
 
 # Ameaças Mitigadas por Monitorização e Operações
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Mapear os vetores de ataque que podem ser **detetados, antecipados ou correlacionados** pelas práticas descritas neste capítulo, contribuindo para a capacidade de resposta e melhoria da postura de segurança.
 
 ---
 
-## 📊 Categorias de ameaça abordadas
+## 📊 Categorias de ameaça abordadas {#-categorias-de-ameaça-abordadas}
 
 | Categoria (OSC\&R / ATT\&CK)         | Descrição resumida                             |
 | ------------------------------------ | ---------------------------------------------- |
@@ -30,7 +30,7 @@ Mapear os vetores de ataque que podem ser **detetados, antecipados ou correlacio
 
 ---
 
-## 🔍 Mapeamento práticas → ameaças mitigadas
+## 🔍 Mapeamento práticas → ameaças mitigadas {#-mapeamento-práticas--ameaças-mitigadas}
 
 | Prática de monitorização                 | Ameaças mitigadas                    |
 | ---------------------------------------- | ------------------------------------ |
@@ -44,7 +44,7 @@ Mapear os vetores de ataque que podem ser **detetados, antecipados ou correlacio
 
 ---
 
-## 📄 Exemplos de cobertura prática
+## 📄 Exemplos de cobertura prática {#-exemplos-de-cobertura-prática}
 
 | Ameaça identificada        | Evento(s) indicativos                            | Prática associada                     |
 | -------------------------- | ------------------------------------------------ | ------------------------------------- |
@@ -56,7 +56,7 @@ Mapear os vetores de ataque que podem ser **detetados, antecipados ou correlacio
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Utilizar este mapeamento como base para **justificação de controlos de monitorização**;
 * Relacionar diretamente com OSC\&R / MITRE ATT\&CK nos planos de cobertura e threat modeling;

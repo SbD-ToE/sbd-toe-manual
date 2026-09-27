@@ -7,7 +7,7 @@ tags: [sbom, containers, rastreabilidade, supply-chain, assinatura]
 
 # SBOM de Containers e Rastreabilidade de Runtime
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todas as **imagens de container utilizadas em pipelines ou produção** possuem um **SBOM (Software Bill of Materials)** gerado a partir do artefacto real, versionado e rastreável, permitindo:
 
@@ -20,7 +20,7 @@ No modelo SbD-ToE, o SBOM é tratado como **evidência de composição**, não c
 
 ---
 
-## 🧬 O que é um SBOM de container
+## 🧬 O que é um SBOM de container {#-o-que-é-um-sbom-de-container}
 
 Um **SBOM de container** representa o **estado efetivo da imagem após o build**, incluindo:
 
@@ -35,7 +35,7 @@ Um **SBOM de container** representa o **estado efetivo da imagem após o build**
 
 ---
 
-## ⚠️ SBOM completo ≠ ausência de risco
+## ⚠️ SBOM completo ≠ ausência de risco {#️-sbom-completo--ausência-de-risco}
 
 Em ambientes automatizados, é essencial evitar interpretações incorretas:
 
@@ -53,7 +53,7 @@ Por isso, o SBOM deve ser usado como **input técnico para análise**, não como
 
 ---
 
-## 📘 Formatos e ferramentas recomendadas
+## 📘 Formatos e ferramentas recomendadas {#-formatos-e-ferramentas-recomendadas}
 
 | Formato         | Ferramentas suportadas                    | Observações técnicas                   |
 |-----------------|--------------------------------------------|----------------------------------------|
@@ -65,7 +65,7 @@ Por isso, o SBOM deve ser usado como **input técnico para análise**, não como
 
 ---
 
-## 🛠️ Como gerar SBOMs de containers
+## 🛠️ Como gerar SBOMs de containers {#️-como-gerar-sboms-de-containers}
 
 | Etapa                | Exemplo técnico                                   | Notas operacionais                     |
 |----------------------|--------------------------------------------------|----------------------------------------|
@@ -78,7 +78,7 @@ A geração automática **não elimina** a necessidade de interpretação humana
 
 ---
 
-## 📂 Armazenamento, versionamento e correlação
+## 📂 Armazenamento, versionamento e correlação {#-armazenamento-versionamento-e-correlação}
 
 Para garantir rastreabilidade real:
 
@@ -94,7 +94,7 @@ A ausência desta correlação reduz o SBOM a um ficheiro informativo sem valor 
 
 ---
 
-## 🔍 Utilização correta do SBOM
+## 🔍 Utilização correta do SBOM {#-utilização-correta-do-sbom}
 
 No SbD-ToE, o SBOM deve ser usado para:
 
@@ -110,7 +110,7 @@ Não deve ser usado como:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Gerar SBOM automaticamente após cada build;
 - Tratar SBOM como artefacto versionado;
@@ -121,7 +121,7 @@ Não deve ser usado como:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com SBOM de containers              |
 |----------------------------------|---------------------------------------------|

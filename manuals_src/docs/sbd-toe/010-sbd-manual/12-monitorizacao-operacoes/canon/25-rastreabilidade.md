@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Monitorização e Operações
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-SLG` (Logging de eventos de segurança e audit trail).
 
@@ -14,9 +14,9 @@ Cobertura V1 entity-level: **18 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **82 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **96 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -31,7 +31,7 @@ Total: **82 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Requirement | `OPS-009` | Deteção comportamental e baseline de actividade normal | normative | explicit | deterministic |
 | Requirement | `OPS-010` | Métricas de eficácia da monitorização medidas e revistas | normative | explicit | deterministic |
 | Control | `CTRL-monitoring-monitorizacao-e-resposta-operacional-1797f0af70` | Monitorização e resposta operacional | normative | explicit | deterministic |
-| Practice | `12-monitorizacao-operacoes:alertas-com-slas-definidosum-alerta-sem-prazo-de-resposta-e-apenas-ruido` | Alertas com SLAs definidosUm alerta sem prazo de resposta é apenas ruído. | normative | explicit | deterministic |
+| Practice | `12-monitorizacao-operacoes:alertas-com-slas-definidos` | Alertas com SLAs definidos | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:classificacao-e-cobertura-de-dominios-de-monitorizacao` | Classificação e Cobertura de Domínios de Monitorização | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:correlacao-de-eventos-e-detecao-comportamental` | Correlação de Eventos e Deteção Comportamental | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:definicao-de-eventos-e-metricas-criticas` | Definição de eventos e métricas críticas | normative | explicit | deterministic |
@@ -43,7 +43,21 @@ Total: **82 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `12-monitorizacao-operacoes:rastreabilidade-e-conformidade-com-regulacoes-ssdf-nis2-iso-27001` | Rastreabilidade e Conformidade com Regulações (SSDF, NIS2, ISO 27001) | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:seguranca-e-integridade-de-logs` | Segurança e Integridade de Logs | normative | explicit | deterministic |
 | Practice | `12-monitorizacao-operacoes:validacao-e-tuning-de-alertas` | Validação e *Tuning* de Alertas | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-197` | Eventos críticos não registados | normative | heuristic | bounded |
+| Threat | `MT-198` | Logs voláteis ou truncados | normative | heuristic | bounded |
+| Threat | `MT-199` | Falta de rastreabilidade de execução | normative | heuristic | bounded |
+| Threat | `MT-200` | Incidentes sem alerta | normative | heuristic | bounded |
+| Threat | `MT-201` | Alertas ignorados por ruído | normative | heuristic | bounded |
+| Threat | `MT-202` | Falta de correlação de alertas | normative | heuristic | bounded |
+| Threat | `MT-203` | Incidentes sem owner definido | normative | heuristic | bounded |
+| Threat | `MT-204` | Reação ad-hoc ou tardia | normative | heuristic | bounded |
+| Threat | `MT-205` | Eventos sem acionamento de ação | normative | heuristic | bounded |
+| Threat | `MT-206` | Ausência de métricas de postura | normative | heuristic | bounded |
+| Threat | `MT-207` | Impossibilidade de priorizar riscos | normative | heuristic | bounded |
+| Threat | `MT-208` | Dados sem granularidade ou visão | normative | heuristic | bounded |
+| Threat | `MT-209` | Novos sistemas sem monitorização | normative | heuristic | bounded |
+| Threat | `MT-210` | Equipas ignoram alertas operacionais | normative | heuristic | bounded |
+| Threat | `MT-211` | Dados não usados para melhoria contínua | normative | heuristic | bounded |
 | Concept | `sem:concept:alert-fatigue` | Alert fatigue | semantic | scored | bounded |
 | Concept | `sem:concept:alertas-acionaveis` | Alertas acionáveis | semantic | scored | bounded |
 | Concept | `sem:concept:canal-de-notificacao` | Canal de notificação | semantic | scored | bounded |
@@ -93,11 +107,11 @@ Total: **82 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-SLG` — Logging de eventos de segurança e audit trail
+### Slice `ACO-SLG` — Logging de eventos de segurança e audit trail {#slice-aco-slg--logging-de-eventos-de-segurança-e-audit-trail}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -122,7 +136,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -134,7 +148,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -145,13 +159,13 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(Sem entradas no future-work register para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

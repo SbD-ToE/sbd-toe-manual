@@ -10,16 +10,16 @@ sidebar_position: 9
 
 > Veja também: [CRA](/sbd-toe/cross-check-normativo/cra/intro), [DORA](/sbd-toe/cross-check-normativo/dora/intro), [NIS2](/sbd-toe/cross-check-normativo/nis2/intro) e a [Nota de Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/dora/convergencia-dora).
 
-## Âmbito
+## Âmbito {#âmbito}
 
-### 🏛️ ENISA e Cybersecurity Act (CSA)
+### 🏛️ ENISA e Cybersecurity Act (CSA) {#️-enisa-e-cybersecurity-act-csa}
 
 O **Cybersecurity Act** é o **Regulamento (UE) 2019/881** (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881)), que:
 
 - reforça o mandato da **ENISA** enquanto agência europeia de cibersegurança; e
 - estabelece um **quadro europeu de certificação de cibersegurança** para produtos, serviços e processos TIC.
 
-No âmbito deste quadro, estão a ser desenvolvidos vários **esquemas europeus de certificação**, nomeadamente:
+vários **sistemas europeus de certificação da cibersegurança** («esquemas», na designação corrente)
 
 - **EUCC** - para produtos de TIC (substituto evolutivo dos Common Criteria a nível europeu);
 - **EUCS** - para serviços de computação em nuvem;
@@ -43,42 +43,42 @@ O manual SbD-ToE fornece a "camada de engenharia" que permite:
 
 ---
 
-Os esquemas europeus de certificação de cibersegurança, no âmbito do **Cybersecurity Act (CSA)**, visam **reconhecimento UE** de que produtos/serviços cumprem requisitos de segurança. A **ENISA** coordena e suporta a elaboração de esquemas; a certificação é executada por **Organismos de Avaliação da Conformidade (CABs)** acreditados e supervisionada por **autoridades nacionais**.
+Os esquemas europeus de certificação de cibersegurança, no âmbito do **Cybersecurity Act (CSA)**, visam **reconhecimento UE** de que produtos/serviços cumprem requisitos de segurança. A **ENISA** elabora os projetos de sistema, a pedido da Comissão, que os adota por ato de execução; a certificação é executada por **Organismos de Avaliação da Conformidade (CABs)** acreditados e supervisionada por **autoridades nacionais**.
 
 Esta nota explica "para quem se destina", quando é útil/necessária e como **reaproveitar controlos e evidências do SbD‑ToE**.
 
-## Para quem se destina
+## Para quem se destina {#para-quem-se-destina}
 
-- **Fabricantes de produtos TIC** → esquema **EUCC** (para ICT products; base Common Criteria). Níveis: Basic, Substantial, High.
+- **Fabricantes de produtos TIC** → sistema **EUCC** (Reg. de Execução (UE) 2024/482; base Critérios Comuns). Níveis de garantia: «substancial» (AVA_VAN 1–2) e «elevado» (AVA_VAN 3–5); o EUCC não prevê o nível «básico».
 - **Prestadores de serviços Cloud** → esquema **EUCS** (para serviços cloud). Níveis: Basic, Substantial, High.
 - **Fornecedores/Operadores 5G** → esquema **EU5G** (para redes e componentes 5G). Níveis: alinhados ao risco.
 - **CABs/Laboratórios** → aplicam os critérios dos esquemas.
-- **Autoridades Nacionais** → supervisionam, reconhecem e listam certificados.
+- **Autoridades nacionais de certificação da cibersegurança** → supervisionam e fazem cumprir as regras dos sistemas (e, no nível «elevado», emitem certificados); a ENISA publica os certificados no seu sítio Web.
 - **Compradores (incl. setor público)** → usam certificados como critério de procurement.
 
 Notas:
 - Regra geral, a certificação é **voluntária**, salvo quando legislação setorial, atos de execução, ou **cadernos de encargos** a tornem obrigatória para certos mercados/contratos.
 - Certificação **não substitui** o **CRA** (marcação CE e obrigações regulatórias de produtos). Pode, porém, servir como **evidência forte** de práticas de segurança.
 
-## Esquemas em foco
+## Esquemas em foco {#esquemas-em-foco}
 
-### EUCC - ICT products (base Common Criteria)
+### EUCC - ICT products (base Common Criteria) {#eucc---ict-products-base-common-criteria}
 Objetivo: evidenciar que um produto TIC cumpre requisitos e foi avaliado segundo uma **Target of Evaluation** e **Security Functional/Assurance Requirements**. 
 Nível de garantia impacta a **profundidade de testes** e a **independência**.
 
-### EUCS - Cloud services
+### EUCS - Cloud services {#eucs---cloud-services}
 Objetivo: evidenciar controlos de segurança e governança de serviços Cloud. Abrange **gestão de risco, IAM, cifragem, operação, continuidade**, etc.
 
-### EU5G - Redes 5G
+### EU5G - Redes 5G {#eu5g---redes-5g}
 Objetivo: evidenciar requisitos de segurança para fornecedores/operadores na cadeia 5G (equipamento, software, gestão, supply chain).
 
-## Como se relaciona com DORA/NIS2/CRA
+## Como se relaciona com DORA/NIS2/CRA {#como-se-relaciona-com-doranis2cra}
 
 - Partilham a mesma “língua técnica” (cifragem, IAM, gestão de vulnerabilidades, testes, monitorização, continuidade).
 - **CRA** impõe requisitos e **marcação CE** para produtos com elementos digitais; a certificação CSA pode **complementar** como evidência (não a substitui).
 - **NIS2/DORA** exigem maturidade técnica; a certificação pode **acelerar auditorias** e aceitar **certificados como prova** em procurement/regulação.
 
-## Árvores de decisão (simplificadas)
+## Árvores de decisão (simplificadas) {#árvores-de-decisão-simplificadas}
 
 1) O que é o meu objeto principal?
 - Produto TIC (software/firmware/hardware com SW) → considerar **EUCC**
@@ -95,7 +95,7 @@ Objetivo: evidenciar requisitos de segurança para fornecedores/operadores na ca
 - Mercado e risco baixo → Basic/Substantial
 - Mercados críticos/altamente regulados → Substantial/High
 
-## Mapeamento SbD‑ToE → Certificação (evidência típica)
+## Mapeamento SbD‑ToE → Certificação (evidência típica) {#mapeamento-sbdtoe--certificação-evidência-típica}
 
 | Domínio SbD‑ToE | O que demonstra | Relevância CSA |
 |-----------------|-----------------|----------------|
@@ -111,7 +111,7 @@ Objetivo: evidenciar requisitos de segurança para fornecedores/operadores na ca
 
 Sugere-se criar um **dossiê de certificação** com referências cruzadas (control matrix) entre requisitos do esquema (EUCC/EUCS/EU5G) e artefactos SbD‑ToE.
 
-## Checklist de evidências (mínimo viável)
+## Checklist de evidências (mínimo viável) {#checklist-de-evidências-mínimo-viável}
 
 - [ ] Política de segurança (versão, aprovação, âmbito)
 - [ ] Arquitetura e modelo de dados (inclui IAM/crypto/segregação)
@@ -124,7 +124,7 @@ Sugere-se criar um **dossiê de certificação** com referências cruzadas (cont
 - [ ] Gestão de fornecedores (contratos, cláusulas, avaliações)
 - [ ] Trilho auditado (quem aprovou, quando, porquê)
 
-## Métricas úteis
+## Métricas úteis {#métricas-úteis}
 
 - % versões com SBOM publicado
 - MTTP (tempo médio até patch) por severidade
@@ -132,7 +132,7 @@ Sugere-se criar um **dossiê de certificação** com referências cruzadas (cont
 - Cobertura de testes (SAST/DAST/fuzzing) por aplicação
 - % controlos mapeados ao esquema escolhido
 
-## Próximos passos
+## Próximos passos {#próximos-passos}
 
 1. Confirmar objeto (produto/serviço) e exigência externa (lei/cliente).  
 2. Selecionar esquema e nível alvo (Basic/Substantial/High).  
@@ -140,7 +140,7 @@ Sugere-se criar um **dossiê de certificação** com referências cruzadas (cont
 4. Preencher gaps (p. ex., independência de teste, amostragem).  
 5. Pré‑auditoria interna; depois selecionar CAB e calendarizar avaliação.  
 
-## Referências
+## Referências {#referências}
 
 - **Cybersecurity Act**: Regulamento (UE) 2019/881 (CELEX: [32019R0881](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32019R0881))
 - ENISA - Páginas dos esquemas de certificação (EUCC, EUCS, EU5G)

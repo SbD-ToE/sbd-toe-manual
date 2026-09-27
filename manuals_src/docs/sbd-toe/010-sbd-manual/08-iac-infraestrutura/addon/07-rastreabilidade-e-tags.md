@@ -9,7 +9,7 @@ tags: [rastreabilidade, versionamento, tags, iac, git, segurança]
 
 # Rastreabilidade e Uso de Tags em Projetos IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todas as alterações, recursos e ambientes definidos via Infraestrutura como Código (IaC) sejam **rastreáveis, auditáveis e identificáveis**, através de convenções de tagging, metadados e controlo de alterações versionadas.
 
@@ -17,7 +17,7 @@ Garantir que todas as alterações, recursos e ambientes definidos via Infraestr
 
 ---
 
-## 🔖 O que deve ser feito
+## 🔖 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. **Aplicar tags obrigatórias em todos os recursos criados via IaC**, incluindo ambiente, owner, criticidade e origem;
 2. **Manter convenções formais de nomeação** para recursos, ficheiros, ambientes e releases;
@@ -28,7 +28,7 @@ Garantir que todas as alterações, recursos e ambientes definidos via Infraestr
 
 ---
 
-## ⚖️ Como deve ser feito
+## ⚖️ Como deve ser feito {#️-como-deve-ser-feito}
 
 | Elemento                 | Prática recomendada                                                           |
 | ------------------------ | ----------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Garantir que todas as alterações, recursos e ambientes definidos via Infraestr
 
 ---
 
-## 🗓️ Quando aplicar
+## 🗓️ Quando aplicar {#️-quando-aplicar}
 
 | Momento                           | Ação esperada                                                     |
 | --------------------------------- | ----------------------------------------------------------------- |
@@ -52,9 +52,9 @@ Garantir que todas as alterações, recursos e ambientes definidos via Infraestr
 
 ---
 
-## 💼 Exemplos práticos
+## 💼 Exemplos práticos {#-exemplos-práticos}
 
-### 🌍 Tags em Terraform
+### 🌍 Tags em Terraform {#-tags-em-terraform}
 
 ```hcl
 resource "aws_s3_bucket" "logs" {
@@ -70,7 +70,7 @@ resource "aws_s3_bucket" "logs" {
 }
 ```
 
-### 🔍 Metadata local
+### 🔍 Metadata local {#-metadata-local}
 
 ```hcl
 locals {
@@ -81,7 +81,7 @@ locals {
 }
 ```
 
-### 💪 Commit message com rastreabilidade
+### 💪 Commit message com rastreabilidade {#-commit-message-com-rastreabilidade}
 
 ```
 [IaC] Corrigir timeout no ALB do ambiente staging (ISSUE-8723)
@@ -89,7 +89,7 @@ locals {
 
 ---
 
-## ✅ Benefícios diretos
+## ✅ Benefícios diretos {#-benefícios-diretos}
 
 * Permite auditoria e investigação de incidentes de forma objetiva;
 * Aumenta visibilidade sobre impacto e autoria de alterações;

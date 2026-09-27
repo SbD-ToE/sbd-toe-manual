@@ -8,7 +8,7 @@ tags: [formacao, tecnicas, pedagogia, segurança aplicada, exemplos]
 
 # Técnicas Formativas Avançadas
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Reforçar a aprendizagem prática em segurança através de **métodos formativos ativos**, aplicáveis no contexto real das equipas técnicas.
 
@@ -20,7 +20,7 @@ complementando - e não substituindo - os mecanismos automatizados existentes.
 
 ---
 
-## 🧬 O que são técnicas formativas avançadas
+## 🧬 O que são técnicas formativas avançadas {#-o-que-são-técnicas-formativas-avançadas}
 
 São abordagens centradas na **experiência prática**, que ligam conhecimento à execução:
 
@@ -31,9 +31,9 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-## 🛠️ Como aplicar - Técnicas sugeridas
+## 🛠️ Como aplicar - Técnicas sugeridas {#️-como-aplicar---técnicas-sugeridas}
 
-### 1. CTF (Capture The Flag)
+### 1. CTF (Capture The Flag) {#1-ctf-capture-the-flag}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-### 2. War Room / Simulação de Incidente
+### 2. War Room / Simulação de Incidente {#2-war-room--simulação-de-incidente}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-### 3. Code Clinics / PR Live Reviews
+### 3. Code Clinics / PR Live Reviews {#3-code-clinics--pr-live-reviews}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -72,7 +72,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-### 4. Threat Modeling Peer-led
+### 4. Threat Modeling Peer-led {#4-threat-modeling-peer-led}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -85,7 +85,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-### 5. Learning Logs / Repositório de Falhas Reais
+### 5. Learning Logs / Repositório de Falhas Reais {#5-learning-logs--repositório-de-falhas-reais}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -98,7 +98,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-### 6. Labs dirigidos (Guided Labs)
+### 6. Labs dirigidos (Guided Labs) {#6-labs-dirigidos-guided-labs}
 
 | Aspeto            | Detalhes                                                                 |
 |-------------------|--------------------------------------------------------------------------|
@@ -111,7 +111,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Começar com 1 ou 2 técnicas adaptadas à maturidade da equipa
 - Definir objetivos de aprendizagem por técnica
@@ -121,7 +121,7 @@ São abordagens centradas na **experiência prática**, que ligam conhecimento �
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relevância                                       |
 |-----------------------------------|--------------------------------------------------|

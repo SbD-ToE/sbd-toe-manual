@@ -9,7 +9,7 @@ sidebar_position: 6
 
 # Política de Rastreabilidade e Auditoria
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos transversais de **rastreabilidade e auditoria** que devem ser satisfeitos ao longo de todo o ciclo de vida de cada aplicação.
 
@@ -26,7 +26,7 @@ Esta política é **transversal** - aplica-se a todos os domínios do manual SbD
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política cobre as seguintes dimensões de rastreabilidade:
 
@@ -43,7 +43,7 @@ Esta política cobre as seguintes dimensões de rastreabilidade:
 
 ---
 
-## 3. Princípios fundamentais
+## 3. Princípios fundamentais {#3-princípios-fundamentais}
 
 - **Rastreabilidade bidirecional** - deve ser possível navegar do requisito ao código e do código ao requisito
 - **Evidência executável** - relatórios produzidos por execução real, nunca por declaração manual sem suporte técnico
@@ -53,9 +53,9 @@ Esta política cobre as seguintes dimensões de rastreabilidade:
 
 ---
 
-## 4. Rastreabilidade de requisitos (Cap. 02)
+## 4. Rastreabilidade de requisitos (Cap. 02) {#4-rastreabilidade-de-requisitos-cap-02}
 
-### 4.1 Requisitos por nível
+### 4.1 Requisitos por nível {#41-requisitos-por-nível}
 
 | Prática | L1 | L2 | L3 |
 |---|---|---|---|
@@ -64,7 +64,7 @@ Esta política cobre as seguintes dimensões de rastreabilidade:
 | Relatório de rastreabilidade exportável | Opcional | Recomendado | Obrigatório |
 | Revisão independente de rastreabilidade | Não aplicável | Recomendado | Obrigatório |
 
-### 4.2 Requisitos mínimos
+### 4.2 Requisitos mínimos {#42-requisitos-mínimos}
 
 - [ ] Todos os requisitos de segurança aplicáveis identificados com taxonomia rastreável (ex: `SEC-L2-AUT-001`)
 - [ ] Cada requisito ligado a pelo menos um item de backlog, PR ou tarefa técnica
@@ -73,9 +73,9 @@ Esta política cobre as seguintes dimensões de rastreabilidade:
 
 ---
 
-## 5. Rastreabilidade de código e pipeline (Cap. 07)
+## 5. Rastreabilidade de código e pipeline (Cap. 07) {#5-rastreabilidade-de-código-e-pipeline-cap-07}
 
-### 5.1 Cadeia obrigatória
+### 5.1 Cadeia obrigatória {#51-cadeia-obrigatória}
 
 A rastreabilidade deve cobrir a cadeia completa:
 
@@ -83,7 +83,7 @@ A rastreabilidade deve cobrir a cadeia completa:
 commit SHA → execução de pipeline → artefacto produzido → release tag → deployment
 ```
 
-### 5.2 Requisitos por nível
+### 5.2 Requisitos por nível {#52-requisitos-por-nível}
 
 | Elemento | L1 | L2 | L3 |
 |---|---|---|---|
@@ -93,7 +93,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Export imutável de logs de pipeline | Não aplicável | Recomendado | Obrigatório |
 | Não-repúdio de promoções irreversíveis | Não aplicável | Recomendado | Obrigatório |
 
-### 5.3 Requisitos mínimos
+### 5.3 Requisitos mínimos {#53-requisitos-mínimos}
 
 - [ ] ID de correlação único por execução de pipeline
 - [ ] Relatórios de segurança (SAST, DAST, SCA) arquivados como artefactos do pipeline com referência ao commit
@@ -102,9 +102,9 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 
 ---
 
-## 6. Rastreabilidade de artefactos (Cap. 05, 07, 09)
+## 6. Rastreabilidade de artefactos (Cap. 05, 07, 09) {#6-rastreabilidade-de-artefactos-cap-05-07-09}
 
-### 6.1 Requisitos por nível
+### 6.1 Requisitos por nível {#61-requisitos-por-nível}
 
 | Elemento | L1 | L2 | L3 |
 |---|---|---|---|
@@ -114,7 +114,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Verificação de assinatura no deploy | Não aplicável | Obrigatório | Obrigatório |
 | Digest-only para imagens de container | Recomendado | Obrigatório | Obrigatório |
 
-### 6.2 Requisitos mínimos
+### 6.2 Requisitos mínimos {#62-requisitos-mínimos}
 
 - [ ] SBOM em formato CycloneDX ou SPDX, gerado automaticamente por build e arquivado
 - [ ] Artefactos de release assinados com chave gerida e rotacionada periodicamente
@@ -122,9 +122,9 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 
 ---
 
-## 7. Rastreabilidade de infraestrutura (Cap. 08)
+## 7. Rastreabilidade de infraestrutura (Cap. 08) {#7-rastreabilidade-de-infraestrutura-cap-08}
 
-### 7.1 Requisitos mínimos
+### 7.1 Requisitos mínimos {#71-requisitos-mínimos}
 
 - [ ] Cada ficheiro IaC rastreável ao recurso que provisiona e ao ambiente em que foi aplicado
 - [ ] Histórico de `plan` e `apply` retido e auditável
@@ -133,9 +133,9 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 
 ---
 
-## 8. Arquivo de evidências de validação (Cap. 06, 10)
+## 8. Arquivo de evidências de validação (Cap. 06, 10) {#8-arquivo-de-evidências-de-validação-cap-06-10}
 
-### 8.1 Requisitos por nível
+### 8.1 Requisitos por nível {#81-requisitos-por-nível}
 
 | Evidência | L1 | L2 | L3 |
 |---|---|---|---|
@@ -146,7 +146,7 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 | Armazenamento WORM ou equivalente | Não aplicável | Recomendado | Obrigatório |
 | Índice de evidências por aplicação/release | Opcional | Recomendado | Obrigatório |
 
-### 8.2 Requisitos mínimos
+### 8.2 Requisitos mínimos {#82-requisitos-mínimos}
 
 - [ ] Repositório de evidências definido, com controlo de acesso adequado
 - [ ] Export automático por build/release para o repositório de evidências
@@ -155,9 +155,9 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 
 ---
 
-## 9. Rastreabilidade de eventos operacionais (Cap. 12)
+## 9. Rastreabilidade de eventos operacionais (Cap. 12) {#9-rastreabilidade-de-eventos-operacionais-cap-12}
 
-### 9.1 Requisitos mínimos
+### 9.1 Requisitos mínimos {#91-requisitos-mínimos}
 
 - [ ] Logs em formato estruturado (JSON ou equivalente) com campos mínimos: timestamp, nível, evento, origem, contexto
 - [ ] Identificador de correlação (`request_id` ou equivalente) propagado em todos os logs do mesmo fluxo
@@ -168,24 +168,29 @@ commit SHA → execução de pipeline → artefacto produzido → release tag �
 
 ---
 
-## 10. Prazos de retenção mínimos
+## 10. Prazos de retenção mínimos {#10-prazos-de-retenção-mínimos}
 
 | Tipo de evidência | L1 | L2 | L3 |
 |---|---|---|---|
 | Logs de aplicação | 30 dias | 90 dias | 1 ano |
+| Logs de segurança (autenticação, autorização, alterações) | 90 dias | 1 ano | 2 anos |
+| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 1 ano | 3 anos |
 | Logs de pipeline CI/CD | 30 dias | 90 dias | 1 ano |
-| Relatórios de segurança (SAST/DAST/SCA) | 30 dias | 90 dias | 1 ano |
+| Relatórios de segurança por execução (SAST/DAST/SCA, fuzzing, scan de imagem, IaC) | 30 dias | 90 dias | 1 ano |
+| Pacote de evidências de validação por release (índice + export assinado) | 1 ano | 2 anos | 3 anos |
 | Artefactos de build e SBOM | Por release | 1 ano | 2 anos |
-| Registos de aprovações e exceções | 1 ano | 2 anos | 3 anos |
+| Registos de aprovações | 1 ano | 2 anos | 3 anos |
+| Registos de exceções e de aceitação de risco (incluindo expirados), com aprovações e reavaliações | 1 ano após encerramento ou expiração | 2 anos após encerramento ou expiração | 3 anos após encerramento ou expiração |
+| Registos de incidentes (timeline, post-mortem, notificações) | 1 ano | 1 ano | 3 anos |
 | Registos de classificação e reavaliação | 2 anos | 3 anos | 5 anos |
 
 :::note
-Em contextos regulados (RGPD, DORA, NIS2, saúde, financeiro), os prazos de retenção podem ser superiores aos definidos nesta tabela. Prevalecem sempre os requisitos regulatórios aplicáveis.
+Os prazos desta tabela são o mínimo recomendado pelo Manual (escolha do Manual). Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector, sempre com o limite do RGPD quando há dados pessoais — ver a [cláusula de precedência da Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); o valor adoptado regista-se no mapa de retenção da organização. Em produtos no âmbito do CRA, o pacote de evidências e a SBOM que integram a documentação técnica ficam disponíveis por pelo menos 10 anos após a colocação no mercado ou pelo período de apoio, consoante o que for mais longo (CRA, art. 13.º, n.º 13), independentemente do nível.
 :::
 
 ---
 
-## 11. Rastreabilidade de decisões de segurança
+## 11. Rastreabilidade de decisões de segurança {#11-rastreabilidade-de-decisões-de-segurança}
 
 As seguintes decisões devem ser sempre registadas com rastreabilidade completa:
 
@@ -200,7 +205,7 @@ As seguintes decisões devem ser sempre registadas com rastreabilidade completa:
 
 ---
 
-## 12. Responsabilidades
+## 12. Responsabilidades {#12-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -212,7 +217,7 @@ As seguintes decisões devem ser sempre registadas com rastreabilidade completa:
 
 ---
 
-## 13. Revisão e auditoria desta política
+## 13. Revisão e auditoria desta política {#13-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -224,7 +229,7 @@ O índice de evidências e os logs de auditoria devem ser disponibilizados integ
 
 ---
 
-## 14. Referências normativas e técnicas
+## 14. Referências normativas e técnicas {#14-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|
@@ -238,5 +243,5 @@ O índice de evidências e os logs de auditoria devem ser disponibilizados integ
 | ISO/IEC 27001 - Cláusula 9.1 | Monitorização, medição, análise e avaliação |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | SSDF PW.8 | Archive and protect each software release |
-| NIS2 - Artigo 21 | Obrigações de registo e notificação |
+| NIS2 - Artigos 21 e 23 | Medidas de gestão de riscos e obrigações de notificação |
 | DORA - Artigo 10 | Rastreabilidade de eventos e logs |

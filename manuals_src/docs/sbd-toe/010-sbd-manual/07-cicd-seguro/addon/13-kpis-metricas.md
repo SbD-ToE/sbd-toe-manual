@@ -10,7 +10,7 @@ tags: [kpi, metricas, CIC, cicd, pipeline, gates, artefactos, secrets, L1, L2, L
 
 # KPIs e Métricas - CI/CD Seguro
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **segurança estrutural dos pipelines de CI/CD**: a presença e eficácia dos security gates, a integridade e proveniência dos artefactos, a gestão de segredos em contexto de automação, e a visibilidade sobre bypasses e desvios ao processo definido.
 
@@ -20,7 +20,7 @@ Os indicadores CIC alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -56,13 +56,13 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | CIC-K02 | % bypasses de security gate com aprovação formal registada e rastreável (vs total de bypasses) | Q% | ≥ 80% | 100% | 100% | T-02 | Por evento |
 | CIC-K03 | % artefactos de build assinados digitalmente e com verificação de assinatura antes de deploy | Q% | - | ≥ 70% | 100% | T-01 | Por release |
 | CIC-K04 | % segredos de pipeline injectados via cofre centralizado (Vault, KMS, secret store) vs hardcoded ou env vars não geridos | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Trimestral |
-| CIC-K05 | MTTR - tempo desde detecção de vulnerabilidade crítica em pipeline até mitigação confirmada | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Por evento |
+| CIC-K05 | MTTR - tempo desde detecção de vulnerabilidade crítica em pipeline até mitigação confirmada | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Por evento |
 | CIC-K06 | % runners/agentes de CI/CD com isolamento efectivo entre jobs de diferentes contextos de confiança | Q% | - | ≥ 80% | 100% | T-01 | Trimestral |
-| CIC-K07 | # pipelines sem registo de última revisão de segurança em mais de 12 meses | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Semestral |
+| CIC-K07 | # pipelines sem registo de revisão de segurança dentro da cadência (anual em L1/L2; semestral em L3) | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Semestral |
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **CIC-K01 - Security gate em modo bloqueio:** um gate conta para este indicador apenas se a sua falha impedir o avanço do pipeline para o ambiente seguinte sem intervenção explícita e registada. Gates configurados como `continue-on-error: true` ou equivalente não satisfazem este critério.
 
@@ -78,7 +78,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -92,11 +92,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos CIC-001..010 que fundamentam os indicadores |
 | `addon/09-controle-excecoes-visibilidade.md` | Processo de excepção de pipeline (CIC-K02) |
 | `addon/06-politicas-gates-pipeline.md` | Definição dos gates que alimentam CIC-K01 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |

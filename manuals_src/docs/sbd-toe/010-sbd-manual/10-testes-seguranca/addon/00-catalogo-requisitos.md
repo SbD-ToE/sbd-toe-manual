@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Testes de Segurança
 
-## Âmbito: o programa de testes como requisito de processo
+## Âmbito: o programa de testes como requisito de processo {#âmbito-o-programa-de-testes-como-requisito-de-processo}
 
 Este catálogo cobre **requisitos do programa de testes de segurança** - os controlos de processo que definem como os testes de segurança são planeados, executados, geridos e evidenciados ao longo do ciclo de vida. Distingue-se dos requisitos aplicacionais de validação de input (Cap. 02, VAL-) por se focar no *programa* de testes em si, não nas propriedades que o software deve ter.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-TST-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo TST - Testes de Segurança
+## Catálogo TST - Testes de Segurança {#catálogo-tst---testes-de-segurança}
 
 Requisitos que garantem que o programa de testes de segurança é planeado, executado, gerido e evidenciado de forma proporcional ao risco e auditável.
 
@@ -44,18 +44,18 @@ Requisitos que garantem que o programa de testes de segurança é planeado, exec
 |----|------|:--:|:--:|:--:|----------------------|
 | TST-001 | Estratégia formal de testes de segurança por nível de risco | ✔ | ✔ | ✔ | Documento de estratégia com tipologias de teste, frequência, responsáveis e critérios de aceitação por nível de risco; revisto pelo menos anualmente ou após alteração significativa de risco ou arquitectura. |
 | TST-002 | SAST com perfil de cobertura gerido e baseline de falsos positivos | ✔ | ✔ | ✔ | Scanner SAST com perfil de regras documentado e versionado; baseline de falsos positivos aprovada por AppSec; evidência de cobertura de componentes críticos; taxa de falsos positivos revista periodicamente. |
-| TST-003 | Gestão formal de findings com SLA de correcção por severidade | ✔ | ✔ | ✔ | SLA de correcção definido por severidade (ex: crítico ≤ 7 dias, elevado ≤ 30 dias); rastreabilidade finding → ticket → correcção → verificação; findings não resolvidos no SLA com excepção formalizada. |
+| TST-003 | Gestão formal de findings com SLA de correcção por severidade | ✔ | ✔ | ✔ | SLA de correcção definido por severidade (conforme a Política 19 §4.3: crítico 30 / 7 / 3 dias e elevado 90 / 30 / 15 dias em L1 / L2 / L3); rastreabilidade finding → ticket → correcção → verificação; findings não resolvidos no SLA com excepção formalizada. |
 | TST-004 | Evidência de testes reproduzível, auditável e ligada ao build | ✔ | ✔ | ✔ | Relatórios de testes de segurança associados ao build que os gerou; reproduzíveis a partir do mesmo estado do código; retidos pelo período definido em política; disponíveis para auditoria sem necessidade de re-execução. |
 | TST-005 | DAST integrado em ambiente de staging antes de promoção | - | ✔ | ✔ | Scanner DAST activo em ambiente de staging representativo de produção; política de findings definida (o que bloqueia vs. o que alerta); evidência de execução por release; ambiente de staging com dados não reais. |
 | TST-006 | Testes de regressão de segurança para vulnerabilidades corrigidas | - | ✔ | ✔ | Cada vulnerabilidade corrigida origina um teste de regressão que comprova a correcção e previne recorrência; testes de regressão integrados no pipeline; evidência de cobertura disponível. |
 | TST-007 | Thresholds mínimos de cobertura de testes de segurança por risco | - | ✔ | ✔ | Critérios de cobertura mínima definidos por nível de risco (ex: componentes de autenticação, autorização, validação de input); cobertura medida e reportada; desvios documentados e tratados. |
-| TST-008 | Testes de penetração periódicos com escopo e metodologia definidos | - | ✔ | ✔ | Pentesting executado com frequência mínima definida por nível de risco (ex: anual para L2, semestral para L3); escopo documentado; relatório com findings, severidade e plano de correcção; correcções verificadas em reteste. |
+| TST-008 | Testes de penetração periódicos com escopo e metodologia definidos | - | ✔ | ✔ | Pentesting executado com frequência mínima definida por nível de risco (anual em L2 e L3, mais os gatilhos da Política 36 §9); escopo documentado; relatório com findings, severidade e plano de correcção; correcções verificadas em reteste. |
 | TST-009 | Fuzzing sistemático em componentes de processamento de input complexo | - | - | ✔ | Fuzzing integrado no pipeline ou executado periodicamente para parsers, deserializadores, APIs com input estruturado ou lógica com alta entropia de input; corpus gerido e evidência de execução disponível. |
 | TST-010 | IAST em ambiente de staging para validação comportamental em runtime | - | - | ✔ | IAST instrumentado em ambiente de staging para aplicações L3; coverage de fluxos críticos verificada; findings de IAST processados com a mesma política de gestão que outros findings de testes. |
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **TST-001**: A estratégia de testes não é um documento único e estático - é um acordo operacional que deve ser actualizado quando muda o risco, a arquitectura ou a stack tecnológica. Uma estratégia não revista há dois anos é provavelmente inadequada.
 - **TST-002**: A distinção entre DEV-003 (SAST como gate de desenvolvimento) e TST-002 é de perspectiva: DEV-003 trata do gate no ciclo de coding/PR; TST-002 trata do programa de SAST como controlo de cobertura - quais componentes estão cobertos, qual a qualidade do perfil e como se gere o ruído.

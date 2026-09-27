@@ -1,0 +1,38 @@
+{
+  "link.title.Manuais": {
+    "message": "Manuals",
+    "description": "The title of the footer links column with title=Manuais in the footer"
+  },
+  "link.title.Assets": {
+    "message": "Assets",
+    "description": "The title of the footer links column with title=Assets in the footer"
+  },
+  "link.title.Mais": {
+    "message": "More",
+    "description": "The title of the footer links column with title=Mais in the footer"
+  },
+  "link.item.label.SbD-ToE": {
+    "message": "SbD-ToE",
+    "description": "The label of footer link with label=SbD-ToE linking to /sbd-toe/sbd-manual/"
+  },
+  "link.item.label.Políticas Organizacionais": {
+    "message": "Políticas Organizacionais",
+    "description": "The label of footer link with label=Políticas Organizacionais linking to /sbd-toe/assets/intro"
+  },
+  "link.item.label.MCP Server (SbD-ToE)": {
+    "message": "MCP Server (SbD-ToE)",
+    "description": "The label of footer link with label=MCP Server (SbD-ToE) linking to /sbd-toe/assets/mcp/intro"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/Shiftleftpt/SbD-ToE-Manual"
+  },
+  "link.item.label.Estado da tradução": {
+    "message": "Translation status",
+    "description": "The label of footer link with label=Estado da tradução linking to /translation-status"
+  },
+  "copyright": {
+    "message": "© 2026 Shiftleft - Secure Software Engineering, Lda. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

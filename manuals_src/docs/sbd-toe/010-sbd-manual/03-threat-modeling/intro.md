@@ -18,7 +18,7 @@ A ausência ou aplicação parcial do Threat Modeling compromete a **ligação f
 
 # Capítulo 3 - Threat Modeling
 
-## 1. 🧭 O que cobre tecnicamente
+## 1. 🧭 O que cobre tecnicamente {#1--o-que-cobre-tecnicamente}
 
 O **Threat Modeling** é a prática que permite **antecipar ameaças reais** antes da implementação, com base na **arquitetura, fluxos de dados e contexto de risco** da aplicação. É tratado como um **processo decisional estruturado**, sujeito a validação humana e produção de evidência verificável.  
 A ausência de uma ameaça num modelo não constitui prova da sua inexistência, devendo os riscos de omissão e enviesamento ser assumidos e mitigados explicitamente.
@@ -41,14 +41,14 @@ Este capítulo cobre:
 
 ---
 
-## 2. 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê
+## 2. 🧪 Prescrição prática: o quê, quem, como, quando, porquê e para quê {#2--prescrição-prática-o-quê-quem-como-quando-porquê-e-para-quê}
 
-### 🔐 Threat Modeling como elo entre risco, arquitetura e controlo
+### 🔐 Threat Modeling como elo entre risco, arquitetura e controlo {#-threat-modeling-como-elo-entre-risco-arquitetura-e-controlo}
 
 > *Sem Threat Modeling, os requisitos de segurança perdem contexto  
 > e os controlos aplicados deixam de ter origem justificada.*
 
-### 📌 O que deve ser feito
+### 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 - Realizar threat modeling com base no **nível de risco da aplicação**
 - Modelar fluxos de dados e limites de confiança com base em artefactos de arquitetura
@@ -60,7 +60,7 @@ Este capítulo cobre:
 - Documentar decisões, riscos aceites e ações futuras
 - Validar o modelo de ameaças como parte da revisão de arquitetura
 
-### ⚙️ Como deve ser feito
+### ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 - Utilizar diagramas claros e versionados (DFDs, context diagrams)
 - Aplicar metodologias como STRIDE, LINDDUN ou PASTA de forma proporcional
@@ -72,14 +72,14 @@ Este capítulo cobre:
 > Ferramentas especializadas podem **suportar** o processo,  
 > mas **não substituem a análise humana nem a validação técnica**.
 
-### 📆 Quando aplicar
+### 📆 Quando aplicar {#-quando-aplicar}
 
 - No início de projetos ou épicos relevantes
 - Antes de integrações externas, exposições ou mudanças arquiteturais
 - Sempre que a aplicação seja classificada como **L2 ou L3**
 - Sempre que ocorram alterações que possam modificar o perfil de ameaça
 
-### 👥 Quem está envolvido
+### 👥 Quem está envolvido {#-quem-está-envolvido}
 
 | Papel/Função              | Responsabilidades principais                                   |
 |---------------------------|----------------------------------------------------------------|
@@ -90,7 +90,7 @@ Este capítulo cobre:
 
 ---
 
-## 3. ⚠️ Caveats e limitações
+## 3. ⚠️ Caveats e limitações {#3-️-caveats-e-limitações}
 
 - Modelos demasiado abstratos tornam-se inúteis
 - Documentação não versionada perde valor operacional
@@ -99,7 +99,7 @@ Este capítulo cobre:
 
 ---
 
-## 4. 💡 Exemplos e reutilização
+## 4. 💡 Exemplos e reutilização {#4--exemplos-e-reutilização}
 
 - Exemplos de aplicação de STRIDE por tipo de arquitetura
 - Exemplos de threat modeling focado em privacidade (LINDDUN)
@@ -107,7 +107,7 @@ Este capítulo cobre:
 
 ---
 
-## 5. 🔍 O que pode ser feito mais (e porquê)
+## 5. 🔍 O que pode ser feito mais (e porquê) {#5--o-que-pode-ser-feito-mais-e-porquê}
 
 - Criar bibliotecas internas de ameaças reutilizáveis por tipo de sistema
 - Integrar o threat modeling com pipelines de validação e gates de arquitetura
@@ -116,7 +116,7 @@ Este capítulo cobre:
 
 ---
 
-## 🧩 Ligações a outros capítulos
+## 🧩 Ligações a outros capítulos {#-ligações-a-outros-capítulos}
 
 | Capítulo | Relação técnica |
 |---------|-----------------|
@@ -134,7 +134,7 @@ Este capítulo cobre:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|------------------|

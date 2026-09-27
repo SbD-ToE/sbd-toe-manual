@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Desenvolvimento Seguro
 
-## Âmbito: práticas e processos durante o desenvolvimento
+## Âmbito: práticas e processos durante o desenvolvimento {#âmbito-práticas-e-processos-durante-o-desenvolvimento}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao processo de desenvolvimento** - as práticas, mecanismos e controlos que devem estar activos durante a escrita de código, revisão de pull requests e integração de contribuições, garantindo que a segurança é incorporada sistematicamente desde o primeiro commit.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-DEV-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo DEV - Desenvolvimento Seguro
+## Catálogo DEV - Desenvolvimento Seguro {#catálogo-dev---desenvolvimento-seguro}
 
 Requisitos que garantem que as práticas e processos de desenvolvimento incorporam controlos de segurança sistemáticos, verificáveis e proporcionais ao risco.
 
@@ -54,7 +54,7 @@ Requisitos que garantem que as práticas e processos de desenvolvimento incorpor
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **DEV-001**: A curadoria de guidelines deve ser tratada como um produto interno - com ownership claro, versionamento semântico e ciclo de revisão definido. Guidelines desactualizadas são mais perigosas do que a ausência delas, pois criam falsa confiança.
 - **DEV-002**: O tailoring de rulesets (desactivação de regras, ajuste de thresholds) deve ser explicitamente documentado e aprovado - evitando que a "personalização" se torne um mecanismo de contorno de controlos.

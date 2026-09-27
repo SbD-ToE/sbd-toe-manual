@@ -19,7 +19,7 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-## Validação por Requisito
+## Validação por Requisito {#validação-por-requisito}
 
 | Requisito | O que validar | Como validar | Quando | Responsável |
 |-----------|---------------|--------------|--------|-------------|
@@ -33,13 +33,13 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 | ARC-008 | Fluxos de dados entre zonas de confiança protegidos | DFD com controlos explícitos em cada fronteira de confiança; actualizado e versionado em repositório | Design inicial; após alteração de fluxos de dados | Arquitecto, AppSec |
 | ARC-009 | Alterações significativas desencadeiam nova revisão | Processo documentado com definição do limiar de "alteração significativa"; evidência de revisão executada após a última alteração relevante | Após cada alteração que atinja o limiar definido no processo | Arquitecto, PO |
 | ARC-010 | Diagramas de arquitectura versionados e acessíveis | Diagrama no repositório com histórico de versões; acessível a equipas relevantes; revisto no período definido | Revisão periódica (pelo menos anual ou por release significativo) | Arquitecto, DevOps |
-| ARC-011 | Segmentação lógica e física entre ambientes | Evidência de segregação de rede, permissões e identidade entre dev, staging e prod; documentada e verificável por auditoria | Revisão de infraestrutura; auditoria de permissões cross-environment | Engenharia de plataforma, AppSec |
+| ARC-011 | Segmentação lógica e física entre ambientes | Evidência de segregação de rede, permissões e identidade entre dev, staging e prod; documentada e verificável por auditoria | Revisão de infraestrutura; auditoria de permissões cross-environment | Engenharia de plataforma, Arquitetos de Software, AppSec |
 | ARC-012 | Critérios formais de aprovação para aplicações de risco elevado | Checklist formal preenchido e assinado por responsável de segurança; registo de aprovação anterior ao deploy em produção | Gate de release para aplicações L3 | AppSec, Responsável de segurança |
 | ARC-013 | Validação automática de topologia em CI/CD ou como código | Job de CI com output de validação de topologia; logs de execução disponíveis; falhas bloqueiam promoção | Por execução de pipeline; revisão periódica de cobertura | DevSecOps, Arquitecto |
 
 ---
 
-## Aplicação por nível de risco
+## Aplicação por nível de risco {#aplicação-por-nível-de-risco}
 
 | Critério de validação | L1 | L2 | L3 |
 |-----------------------|:--:|:--:|:--:|
@@ -53,7 +53,7 @@ Este documento define como validar cada requisito do catálogo de arquitectura s
 
 ---
 
-## Notas
+## Notas {#notas}
 
 - A validação não é um acto pontual: acompanha a arquitectura ao longo do ciclo de vida. Cada *trigger* de revisão (nova integração, alteração de fluxo de dados, reclassificação de risco) deve desencadear a validação dos requisitos ARC afectados.
 - Para L1, uma checklist simples verificada pelo arquitecto ou lead técnico é suficiente para os requisitos marcados como obrigatórios (ARC-001, ARC-002, ARC-006, ARC-008, ARC-010).

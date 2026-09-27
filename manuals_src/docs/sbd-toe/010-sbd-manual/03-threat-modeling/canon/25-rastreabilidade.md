@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Threat Modeling
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-TMR` (Threat modeling, gestão de risco e rastreabilidade de mitigações).
 
@@ -14,13 +14,13 @@ Cobertura V1 entity-level: **25 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **61 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **76 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
-| Requirement | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significati | normative | explicit | deterministic |
+| Requirement | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | normative | explicit | deterministic |
 | Requirement | `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | normative | explicit | deterministic |
 | Requirement | `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | normative | explicit | deterministic |
 | Requirement | `THR-004` | Disposição formal de cada ameaça identificada com owner | normative | explicit | deterministic |
@@ -38,7 +38,22 @@ Total: **61 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `03-threat-modeling:reutilizacao-controlada-e-revisao-de-modelos-anteriores` | Reutilização controlada e revisão de modelos anteriores | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-arquitetura-com-threat-modeling` | Validação de arquitetura com threat modeling | normative | explicit | deterministic |
 | Practice | `03-threat-modeling:validacao-de-impacto-no-negocio` | Validação de impacto no negócio | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-039` | Ameaças desconhecidas e não tratadas | normative | heuristic | bounded |
+| Threat | `MT-040` | Prioridades de segurança mal definidas | normative | heuristic | bounded |
+| Threat | `MT-041` | Requisitos definidos sem base em ameaças | normative | heuristic | bounded |
+| Threat | `MT-042` | Ameaças a privacidade ignoradas | normative | heuristic | bounded |
+| Threat | `MT-043` | Falta de cobertura de ameaças não técnicas | normative | heuristic | bounded |
+| Threat | `MT-044` | Arquitetura insegura não identificada | normative | heuristic | bounded |
+| Threat | `MT-045` | Validação superficial em design reviews | normative | heuristic | bounded |
+| Threat | `MT-046` | Controles aplicados sem base em arquitetura | normative | heuristic | bounded |
+| Threat | `MT-047` | Ausência de revisão em interfaces críticas | normative | heuristic | bounded |
+| Threat | `MT-048` | Ameaças descobertas demasiado tarde | normative | heuristic | bounded |
+| Threat | `MT-049` | Mudanças críticas sem nova modelação | normative | heuristic | bounded |
+| Threat | `MT-050` | Descontinuidade entre equipas e fases | normative | heuristic | bounded |
+| Threat | `MT-051` | Ameaças não visíveis na pipeline CI/CD | normative | heuristic | bounded |
+| Threat | `MT-052` | Conhecimento de ameaças não acumulado | normative | heuristic | bounded |
+| Threat | `MT-053` | Inconsistência entre projetos e equipas | normative | heuristic | bounded |
+| Threat | `MT-054` | Ferramentas desconectadas do ciclo | normative | heuristic | bounded |
 | Concept | `sem:concept:backlog-items` | Backlog Items | semantic | scored | bounded |
 | Concept | `sem:concept:catalogo-de-requisitos` | Catálogo de Requisitos | semantic | scored | bounded |
 | Concept | `sem:concept:context-diagrams` | Context Diagrams | semantic | scored | bounded |
@@ -71,11 +86,11 @@ Total: **61 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-TMR` — Threat modeling, gestão de risco e rastreabilidade de mitigações
+### Slice `ACO-TMR` — Threat modeling, gestão de risco e rastreabilidade de mitigações {#slice-aco-tmr--threat-modeling-gestão-de-risco-e-rastreabilidade-de-mitigações}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -107,7 +122,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -119,7 +134,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -132,13 +147,13 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(Sem entradas no future-work register para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

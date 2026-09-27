@@ -7,7 +7,7 @@ tags: [containers, imagens base, hardening, runtime, supply chain]
 
 # Imagens Base Seguras e Minimalistas
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que todas as aplicações, pipelines e serviços que utilizam containers **partem de imagens base seguras, controladas e minimizadas**, reduzindo a superfície de ataque e estabelecendo um **ponto de confiança explícito** na cadeia de execução.
 
@@ -24,7 +24,7 @@ Uma imagem base segura permite:
 
 ---
 
-## 🧬 O que é uma imagem base segura
+## 🧬 O que é uma imagem base segura {#-o-que-é-uma-imagem-base-segura}
 
 Uma **imagem base segura** é aquela que:
 
@@ -41,7 +41,7 @@ Uma **imagem base segura** é aquela que:
 
 ---
 
-## 📘 Exemplos de imagens recomendadas
+## 📘 Exemplos de imagens recomendadas {#-exemplos-de-imagens-recomendadas}
 
 | Tipo               | Exemplo                                  | Notas                                                                 |
 |--------------------|------------------------------------------|-----------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Cada imagem deve ser **avaliada, aprovada e registada** como imagem base válida
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
 A aplicação correta de imagens base seguras exige disciplina e rastreabilidade:
 
@@ -71,7 +71,7 @@ A aplicação correta de imagens base seguras exige disciplina e rastreabilidade
 
 ---
 
-## 📂 Onde manter imagens base aprovadas
+## 📂 Onde manter imagens base aprovadas {#-onde-manter-imagens-base-aprovadas}
 
 Imagens base aprovadas devem ser tratadas como **ativos de confiança organizacional**:
 
@@ -88,7 +88,7 @@ A ausência deste catálogo implica **impossibilidade de auditoria efetiva**.
 
 ---
 
-## 🔁 Reavaliação e ciclo de vida
+## 🔁 Reavaliação e ciclo de vida {#-reavaliação-e-ciclo-de-vida}
 
 A aprovação de uma imagem base **não é permanente**.
 
@@ -101,7 +101,7 @@ A reutilização automática de imagens **não dispensa** esta revalidação.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Evitar `latest`: usar versões ou digests auditáveis;
 - Preferir multi-stage builds;
@@ -112,13 +112,13 @@ A reutilização automática de imagens **não dispensa** esta revalidação.
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com imagens base                                  |
 |----------------------------------|-----------------------------------------------------------|
 | `03-assinatura-cadeia-trust.md`  | Assinatura e verificação de integridade                   |
 | `05-policies-runtime-opa.md`    | Enforcement técnico de imagens aprovadas                  |
-| `06-sbom-containers.md`         | Inventário e composição das imagens                       |
+| `06-inventario-sbom.md`         | Inventário e composição das imagens                       |
 | `07-vulnerabilidades-imagens.md`| Análise contínua de vulnerabilidades                      |
 | `09-riscos-processo-imagens.md` | Separação entre validação automática e decisão humana     |
 

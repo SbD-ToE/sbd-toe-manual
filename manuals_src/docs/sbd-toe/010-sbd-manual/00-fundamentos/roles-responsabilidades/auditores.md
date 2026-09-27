@@ -9,21 +9,22 @@ sidebar_position: 14
 
 # Auditores Internos e Externos
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Auditores **validam a aplicação efetiva das práticas** descritas no SbD-ToE.  
 Verificam classificações de risco, rastreabilidade, evidência de aplicação, e alinhamento com requisitos regulatórios em todos os capítulos.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Validam a aplicação efetiva das práticas prescritas
 - Avaliam classificações de risco, requisitos, rastreabilidade e evidências
 - Produzem relatórios independentes e recomendações de melhoria
+- Não auditam processos, controlos ou decisões em que participaram: o auditor e a função auditada são pessoas distintas
 - Comprovam conformidade perante autoridades
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 São instrumentos essenciais para comprovar conformidade perante autoridades de supervisão, tal como requerido em **NIS2**, **DORA**, **GDPR** e **ISO 27001**.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 São instrumentos formais para comprovar cumprimento perante autoridades:
 - **NIS2**: Auditorias de segurança e conformidade
@@ -33,32 +34,32 @@ São instrumentos formais para comprovar cumprimento perante autoridades:
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Transversal - Todos os Capítulos
+### Transversal - Todos os Capítulos {#transversal---todos-os-capítulos}
 Validar **evidência de aplicação de práticas**, verificar **rastreabilidade de decisões** (ADR, exceções, aceitações de risco), confirmar **alinhamento com requisitos regulatórios** (NIS2, DORA, GDPR, SSDF, ISO 27001).
 
 **Requisitos associados:**
 - [US-12: Documentação de conformidade regulatória](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-12---rastreabilidade-e-conformidade-com-regulações-ssdf-nis2-iso-27001) - GRC / Compliance documenta, Auditores validam
 
-### Cap. 01 - Classificação de Aplicações
+### Cap. 01 - Classificação de Aplicações {#cap-01---classificação-de-aplicações}
 Verificar **classificações de risco** e sua adequação ao contexto técnico e negócio. Validar KPIs de governação.
 
 **Requisitos associados:**
 - [KPIs de governação da classificação](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - GRC / Compliance consolida, Auditores validam
 - [Políticas organizacionais formais](/sbd-toe/sbd-manual/classificacao-aplicacoes/aplicacao-lifecycle) - Gestão Executiva publica, Auditores validam aplicação
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Validar **implementação de requisitos por nível** (L1/L2/L3), verificar rastreabilidade requisitos → controlos → evidência.
 
-### Cap. 07 - CI/CD Seguro
+### Cap. 07 - CI/CD Seguro {#cap-07---cicd-seguro}
 Validar **rastreabilidade commit → pipeline → release**, verificar gestão de exceções.
 
 **Requisitos associados:**
 - [US-09: Rastreabilidade ponta-a-ponta](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-09---rastreabilidade-ponta-a-ponta-commitpipelinerelease) - GRC / Compliance rastreia, Auditores validam
 - [US-10: Gestão de exceções](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle#us-10---gestão-de-exceções-bypass-controlado) - GRC / Compliance gere, Auditores validam
 
-### Cap. 08 - IaC e Infraestrutura
+### Cap. 08 - IaC e Infraestrutura {#cap-08---iac-e-infraestrutura}
 Validar **rastreabilidade ficheiro → recurso → ambiente**, verificar janelas de mudança e aprovações, validar exceções formais.
 
 **Requisitos associados:**
@@ -66,7 +67,7 @@ Validar **rastreabilidade ficheiro → recurso → ambiente**, verificar janelas
 - [US-13: Janela de mudança e aprovações](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-13---janela-de-mudança-e-aprovações-por-papel) - GRC / Compliance define, Auditores validam
 - [US-14: Exceções formais em IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-14---exceções-formais-em-iac) - GRC / Compliance / AppSec Engineer gerem, Auditores validam
 
-### Cap. 14 - Governança e Contratação
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
 Auditar **documentação de exceções**, verificar **aprovações formais**, validar **conformidade contratual com fornecedores**, verificar rastreabilidade completa.
 
 **Requisitos associados:**
@@ -76,7 +77,7 @@ Auditar **documentação de exceções**, verificar **aprovações formais**, va
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Auditores utilizam todos os capítulos como fonte de evidência:
 

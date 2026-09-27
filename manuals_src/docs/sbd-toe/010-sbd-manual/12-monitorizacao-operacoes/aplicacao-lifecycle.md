@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação de Monitorização & Operações no Ciclo de Vida
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 Monitorizar e operar em segurança não é uma atividade pontual: é um fio condutor que deve estar presente em todas as fases do ciclo de vida.  
 Desde a primeira linha de código até à revisão de auditoria, a aplicação precisa de gerar visibilidade, suportar deteção e permitir resposta coordenada.  
@@ -26,7 +26,7 @@ A tabela seguinte mostra **os momentos críticos em que cada controlo deve ser a
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 Monitorização e operações seguras exigem responsabilidades bem distribuídas.  
 Não basta que uma equipa “tenha logs”: cada papel deve assumir uma função clara na criação, validação e reação aos eventos.  
@@ -42,12 +42,12 @@ Não basta que uma equipa “tenha logs”: cada papel deve assumir uma função
 
 ---
 
-## 📖 User Stories Reutilizáveis
+## 📖 User Stories Reutilizáveis {#-user-stories-reutilizáveis}
 
 As histórias de utilizador seguintes traduzem os princípios do capítulo em práticas concretas.  
 Cada uma reflete situações reais de risco e as medidas necessárias para garantir visibilidade, deteção e resposta.
 
-### US-01 - Logging estruturado e centralizado
+### US-01 - Logging estruturado e centralizado {#us-01---logging-estruturado-e-centralizado}
 
 O primeiro passo para uma operação segura é **garantir visibilidade**.  
 Sem logs consistentes e centralizados, qualquer investigação começa às cegas.  
@@ -86,7 +86,7 @@ Como **Developer**, quero **gerar logs estruturados e centralizados**, para **as
 
 ---
 
-### US-02 - Definição de eventos e métricas críticas
+### US-02 - Definição de eventos e métricas críticas {#us-02---definição-de-eventos-e-métricas-críticas}
 
 Visibilidade sem contexto gera apenas ruído.  
 É fundamental decidir **o que merece ser observado** e quais eventos devem acionar alertas.  
@@ -125,7 +125,7 @@ Como **AppSec Engineer**, quero **definir eventos e métricas críticas de segur
 
 ---
 
-### US-03 - Alertas com SLAs definidos
+### US-03 - Alertas com SLAs definidos {#us-03---alertas-com-slas-definidos}
 
 Um alerta sem prazo de resposta é apenas ruído.  
 Para que a monitorização tenha impacto, é preciso ligar cada alerta a um **compromisso temporal**.  
@@ -164,7 +164,7 @@ Como **Ops**, quero **configurar alertas críticos com SLAs definidos**, para **
 
 ---
 
-### US-04 - Integração com processos de resposta a incidentes
+### US-04 - Integração com processos de resposta a incidentes {#us-04---integração-com-processos-de-resposta-a-incidentes}
 
 A deteção só cria valor quando conduz a uma resposta.  
 Alertas isolados não resolvem nada: precisam de estar ligados a **playbooks claros e testados**.  
@@ -197,13 +197,13 @@ Como **Ops**, quero **integrar alertas com playbooks de resposta a incidentes**,
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Alerta confirmado | Operações (Ops) | ≤ 30 min |
+| Operações | Alerta confirmado | Operações (Ops) | Por severidade, conforme as Políticas 31 e 32 (P1: primeira resposta ≤ 5 min, triagem ≤ 15 min) |
 
 **Ligações úteis.** [Formação & Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
 ---
 
-### US-05 - Métricas de eficácia (MTTD/MTTR)
+### US-05 - Métricas de eficácia (MTTD/MTTR) {#us-05---métricas-de-eficácia-mttdmttr}
 
 Só é possível melhorar aquilo que se mede.  
 Sem métricas de eficácia, qualquer esforço de monitorização corre o risco de se tornar estático e complacente.  
@@ -242,7 +242,7 @@ Como **GRC / Compliance**, quero **medir MTTD e MTTR de incidentes**, para **ava
 
 ---
 
-### US-06 - Classificação e Cobertura de Domínios de Monitorização
+### US-06 - Classificação e Cobertura de Domínios de Monitorização {#us-06---classificação-e-cobertura-de-domínios-de-monitorização}
 
 Uma abordagem eficaz de monitorização não cobre tudo indiscriminadamente: deve ser **proporcional e focada nos domínios que mais importam** para a segurança e operação de cada aplicação.
 
@@ -283,7 +283,7 @@ Como **AppSec/DevOps**, quero **classificar e mapear domínios de monitorizaçã
 
 ---
 
-### US-07 - Segurança e Integridade de Logs
+### US-07 - Segurança e Integridade de Logs {#us-07---segurança-e-integridade-de-logs}
 
 Logs são evidência: se forem alteráveis, a evidência perde valor.  
 Garantir imutabilidade, acesso auditado e retenção apropriada transforma logs em ativos de segurança e conformidade.
@@ -305,7 +305,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 - [ ] Acesso a logs restrito e auditado  
 - [ ] Hash ou assinatura digital aplicada por lote  
 - [ ] Logs separados de aplicação (forwarder, sidecar, serviço)  
-- [ ] Retenção mínima: 30d (L1), 90d (L2/L3)  
+- [ ] Retenção mínima conforme a [Política 29](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs): logs de segurança 90 dias (L1), 1 ano (L2), 2 anos (L3); logs operacionais 30 dias (L1), 90 dias (L2), 1 ano (L3)  
 - [ ] Teste de reversão de retenção trimestralmente  
 
 :::
@@ -315,7 +315,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local (sem retenção) | WORM + 90d | WORM + 180d + integridade verificável |
+| Local: 30 dias (operacionais), 90 dias (segurança) | WORM + 1 ano (segurança) | WORM + 2 anos (segurança) + integridade verificável |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -326,7 +326,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 
 ---
 
-### US-08 - Integração com SIEM e Normalização de Eventos
+### US-08 - Integração com SIEM e Normalização de Eventos {#us-08---integração-com-siem-e-normalização-de-eventos}
 
 Logs isolados têm valor limitado.  
 Um SIEM com eventos normalizados permite **correlação, busca rápida e deteção automatizada** que seria impossível em silos de dados.
@@ -369,7 +369,7 @@ Como **DevOps/AppSec**, quero **integrar logs com SIEM** (parsing, normalizaçã
 
 ---
 
-### US-09 - Correlação de Eventos e Deteção Comportamental
+### US-09 - Correlação de Eventos e Deteção Comportamental {#us-09---correlação-de-eventos-e-deteção-comportamental}
 
 Eventos isolados podem ser inofensivos; padrões de eventos revelam intenções.  
 A correlação transforma dados em **inteligência** e permite antecipar ataques ou falhas encadeadas.
@@ -412,7 +412,7 @@ Como **AppSec/IR**, quero **correlacionar eventos entre múltiplas fontes** (apl
 
 ---
 
-### US-10 - Validação e *Tuning* de Alertas
+### US-10 - Validação e *Tuning* de Alertas {#us-10---validação-e-tuning-de-alertas}
 
 Um alerta mal calibrado é pior que nenhum alerta: causa ruído e descredibiliza o sistema.  
 Validar e afinar alertas é **trabalho contínuo**, não pontual.
@@ -457,7 +457,7 @@ Como **AppSec/IR**, quero **validar e afinar alertas** (teste de *trigger*, simu
 
 ---
 
-### US-11 - Proporcionalidade de Controlos por Risco (L1–L3) e Domínios
+### US-11 - Proporcionalidade de Controlos por Risco (L1–L3) e Domínios {#us-11---proporcionalidade-de-controlos-por-risco-l1l3-e-domínios}
 
 Nem todas as aplicações exigem o mesmo nível de monitorização. É fundamental que organizações apliquem controlos de forma proporcional ao risco, garantindo eficiência sem subestimar ameaças.
 
@@ -502,7 +502,7 @@ Documento de classificação de risco, matriz de proporcionalidade com controlos
 
 ---
 
-### US-12 - Rastreabilidade e Conformidade com Regulações (SSDF, NIS2, ISO 27001)
+### US-12 - Rastreabilidade e Conformidade com Regulações (SSDF, NIS2, ISO 27001) {#us-12---rastreabilidade-e-conformidade-com-regulações-ssdf-nis2-iso-27001}
 
 A monitorização não é um exercício técnico isolado: é um requisito regulatório cada vez mais exigente. Deve existir rastreabilidade clara entre controlos técnicos e requisitos regulatórios, com evidência auditável.
 
@@ -514,7 +514,7 @@ Como **GRC/Auditoria**, quero **documentar e demonstrar conformidade entre contr
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um framework de conformidade aplicável (SSDF, NIS2, ISO 27001)  
-  **Quando** mapéio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
+  **Quando** mapeio controlos técnicos (logging, alertas, correlação, IRP, métricas)  
   **Então** cada controlo técnico é rastreável até um requisito regulatório específico  
 - E existe evidência auditável (logs, dashboards, relatórios, métricas)  
 - E relatórios de conformidade são gerados trimestralmente  
@@ -614,7 +614,7 @@ Como **Ops / AppSec**, quero recolher telemetria dedicada de operação de agent
 
 ---
 
-### US-14 - Não-logging de secrets e gestão de exceções operacionais
+### US-14 - Não-logging de secrets e gestão de exceções operacionais {#us-14---não-logging-de-secrets-e-gestão-de-exceções-operacionais}
 
 Um log que captura uma password é uma fuga de credenciais à espera de acontecer.  
 
@@ -630,7 +630,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
   **Então** o valor é redactado/mascarado antes da persistência e a redacção é verificável por amostragem  
 - **Dado** um padrão legítimo que dispara um alerta indevido  
   **Quando** se pretende suprimi-lo  
-  **Então** é criada uma exceção versionada com justificação, aprovador por severidade e data de expiração (máx 6 meses L2, 3 meses L3)  
+  **Então** é criada uma exceção versionada com justificação, aprovador por severidade e data de expiração (tectos da Política 05 §7)  
 
 **Checklist.**  
 - [ ] Redacção/masking de secrets e PII aplicada antes da persistência  
@@ -644,7 +644,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Redacção básica de credenciais | Redacção + exceções formais (máx 6 meses) | Redacção verificada por amostragem + exceções (máx 3 meses) + reavaliação pré-expiração |
+| Redacção básica de credenciais | Redacção + exceções formais (TTL da Política 05 §7) | Redacção verificada por amostragem + exceções (TTL da Política 05 §7) + reavaliação pré-expiração |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -655,7 +655,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
 
 ---
 
-### US-15 - Deteção de falha de ingestão e dashboards operacionais
+### US-15 - Deteção de falha de ingestão e dashboards operacionais {#us-15---deteção-de-falha-de-ingestão-e-dashboards-operacionais}
 
 O silêncio de uma fonte de logs pode ser tão grave como um alerta explícito.  
 
@@ -696,7 +696,7 @@ Como **DevOps/SRE**, quero **detetar e alertar falhas de ingestão de logs e exp
 
 ---
 
-### US-16 - Cobertura ATT&CK e priorização EPSS/KEV
+### US-16 - Cobertura ATT&CK e priorização EPSS/KEV {#us-16---cobertura-attck-e-priorização-epsskev}
 
 Detetar sem mapear cobertura é confiar na sorte; remediar sem priorizar é desperdiçar esforço.  
 
@@ -737,7 +737,7 @@ Como **AppSec/IR**, quero **mapear as regras de deteção a técnicas MITRE ATT&
 
 ---
 
-### US-17 - Exercícios de resposta a incidentes end-to-end
+### US-17 - Exercícios de resposta a incidentes end-to-end {#us-17---exercícios-de-resposta-a-incidentes-end-to-end}
 
 Um playbook que nunca foi executado é uma hipótese, não uma capacidade.  
 
@@ -767,18 +767,18 @@ Como **IR/AppSec**, quero **executar exercícios de resposta a incidentes end-to
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Walkthrough manual ocasional | Exercício anual de playbooks críticos | Exercícios periódicos end-to-end + medição de MTTR e melhoria contínua |
+| Tabletop anual | Exercício semestral de playbooks críticos (tabletop + simulação) | Exercícios semestrais end-to-end (war room com simulação activa) + medição de MTTR e melhoria contínua |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Operações | Ciclo de exercício / revisão de playbook | Operações (Ops) + AppSec | No último ciclo (anual mínimo) |
+| Operações | Ciclo de exercício / revisão de playbook | Operações (Ops) + AppSec | No último ciclo (Política 32 §8: anual em L1, semestral em L2/L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Catálogo de Requisitos de Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
 
 ---
 
-### US-18 - Governação de automação SOAR e kill-switch de alertas
+### US-18 - Governação de automação SOAR e kill-switch de alertas {#us-18---governação-de-automação-soar-e-kill-switch-de-alertas}
 
 Automação que executa ações irreversíveis sem aprovação humana é um risco operacional, não um controlo.  
 
@@ -819,7 +819,7 @@ Como **IR/AppSec**, quero **governar a automação SOAR com guardrails explícit
 
 ---
 
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 Cada prática deixa rastos verificáveis.  
 Estes artefactos constituem a evidência objetiva que sustenta auditorias e conformidade regulatória:  
@@ -841,7 +841,7 @@ Estes artefactos constituem a evidência objetiva que sustenta auditorias e conf
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 Nem todas as aplicações têm o mesmo risco ou exigem o mesmo esforço.  
 A matriz seguinte traduz os controlos em níveis proporcionais (L1–L3), equilibrando custo e impacto:  
@@ -863,7 +863,7 @@ A matriz seguinte traduz os controlos em níveis proporcionais (L1–L3), equili
 
 ---
 
-## 🏁 Recomendações finais
+## 🏁 Recomendações finais {#-recomendações-finais}
 
 - **Visibilidade é chave**: sem logging e métricas, não há segurança em produção.  
 - **Alertas devem ser acionáveis**: sem SLAs e playbooks, apenas geram ruído.  

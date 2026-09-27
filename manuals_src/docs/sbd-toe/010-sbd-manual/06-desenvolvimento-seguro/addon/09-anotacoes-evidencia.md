@@ -14,7 +14,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Tornar visível e rastreável a aplicação de validações de segurança.
 - Facilitar revisões técnicas e auditorias internas.
@@ -23,7 +23,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Desenvolvedores**: ao escrever ou revisar código sensível.
 - **Revisores técnicos**: ao aceitar PRs com impacto em segurança.
@@ -31,7 +31,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Durante o desenvolvimento, em código com requisitos ou risco de segurança.
 - No momento de revisão de PRs e pull requests sensíveis.
@@ -40,7 +40,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## 🧱 Boas práticas de anotação
+## 🧱 Boas práticas de anotação {#-boas-práticas-de-anotação}
 
 1. **Usar marcações padronizadas e pesquisáveis**
    - Ex: `@sec:input-validated`, `@sec:auth-required`, `@sec:checked`, `@sec:waived`
@@ -59,7 +59,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 - Verificação automatizada por script (ex: `grep @sec:` ou verificação em CI).
 - Checklist de revisão técnica com marcação de presença de tags.
@@ -68,7 +68,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 - Presença das anotações no código versionado (por commit ou PR).
 - Logs de scans que referenciam ou extraem essas marcações.
@@ -77,7 +77,7 @@ tags: [evidência, anotação, validação, rastreabilidade, SDLC]
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                      | Ficheiro associado               |
 |-------------------------------------------|----------------------------------|

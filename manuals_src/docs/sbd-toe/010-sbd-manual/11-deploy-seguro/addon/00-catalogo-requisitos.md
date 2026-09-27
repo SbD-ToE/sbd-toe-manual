@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Deploy Seguro
 
-## Âmbito: o processo de deploy como fronteira de segurança
+## Âmbito: o processo de deploy como fronteira de segurança {#âmbito-o-processo-de-deploy-como-fronteira-de-segurança}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao processo de deploy** - a fase de promoção de artefactos de software entre ambientes, e em particular para produção. O processo de deploy é uma fronteira crítica: é o momento em que código, credenciais, configuração e artefactos se combinam para modificar estado em sistemas activos.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-DPL-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo DPL - Deploy Seguro
+## Catálogo DPL - Deploy Seguro {#catálogo-dpl---deploy-seguro}
 
 Requisitos que garantem que cada promoção a produção é aprovada, rastreável, reversível e proporcional ao risco da aplicação.
 
@@ -46,7 +46,7 @@ Requisitos que garantem que cada promoção a produção é aprovada, rastreáve
 | DPL-002 | Promoção apenas de artefactos com proveniência verificada | ✔ | ✔ | ✔ | Artefactos promovidos a produção com assinatura digital ou hash verificado no momento do deploy; proveniência rastreável (commit SHA, pipeline run ID); artefactos sem proveniência verificável rejeitados automaticamente. |
 | DPL-003 | Gates automáticos de segurança como condição de promoção | ✔ | ✔ | ✔ | Gates que verificam ausência de CVEs críticos, testes de segurança passados e ausência de segredos detectados executam antes de cada promoção; falha em qualquer gate bloqueia deploy; evidência de execução disponível por deploy. |
 | DPL-004 | Rastreabilidade end-to-end de cada deploy | ✔ | ✔ | ✔ | Cada deploy identificável por ID único com registo de: quem aprovou, o que foi deployed (artefacto + commit SHA), quando, para que ambiente e que gates foram executados; rastreabilidade a partir de incidente até ao commit original. |
-| DPL-005 | Rollback configurado, testado e com SLA definido | ✔ | ✔ | ✔ | Procedimento de rollback definido, documentado e testado periodicamente (pelo menos uma vez por ciclo de release ou anualmente); tempo máximo de rollback definido e verificado em teste; último teste de rollback com data registada. |
+| DPL-005 | Rollback configurado, testado e com SLA definido | ✔ | ✔ | ✔ | Procedimento de rollback definido, documentado e testado periodicamente (anualmente em L1 e trimestralmente em L2/L3, conforme a Política 27); tempo máximo de rollback definido e verificado em teste; último teste de rollback com data registada. |
 | DPL-006 | Credenciais de deploy com âmbito mínimo e vida curta | ✔ | ✔ | ✔ | Credenciais usadas no deploy com âmbito limitado ao necessário e duração mínima (tokens de curta duração preferidos a credenciais permanentes); sem credenciais de deploy partilhadas entre aplicações; logs de uso de credenciais disponíveis. |
 | DPL-007 | Validação em staging antes de promoção a produção | - | ✔ | ✔ | Ambiente de staging com validação funcional e de segurança antes de promoção; critérios de aceitação de staging documentados e evidenciados; staging suficientemente representativo de produção para os fins de validação. |
 | DPL-008 | Monitorização activa durante e após deploy | - | ✔ | ✔ | Métricas de saúde e alertas activos durante a janela de deploy e no período de observação pós-deploy; período de observação definido por nível de risco; anomalias nesse período disparam rollback automático ou alerta urgente com SLA de resposta. |
@@ -56,7 +56,7 @@ Requisitos que garantem que cada promoção a produção é aprovada, rastreáve
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **DPL-001**: "Aprovação humana" não é burocracia - é o mecanismo que garante que uma decisão irreversível (modificar estado em produção) tem um responsável identificável. Em contextos de alta frequência de deploy (múltiplos deploys diários), a aprovação pode ser implementada como gate de release, não necessariamente por deploy individual, desde que o escopo e os critérios estejam documentados.
 - **DPL-002**: A verificação de proveniência no momento do deploy é distinta da geração de proveniência no build (CIC-007). É possível gerar uma assinatura válida e nunca a verificar - o controlo efectivo requer verificação downstream, na promoção.

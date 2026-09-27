@@ -13,7 +13,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## 🥪 1. Testes de Segurança com Cobertura Guiada
+## 🥪 1. Testes de Segurança com Cobertura Guiada {#-1-testes-de-segurança-com-cobertura-guiada}
 
 **Descrição:** Usar fuzzers instrumentados com métricas de cobertura (ex: *coverage-guided fuzzing*) para maximizar caminhos explorados na aplicação, especialmente em APIs complexas.
 
@@ -23,7 +23,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## 🧬 2. Correlação de Findings entre Fontes
+## 🧬 2. Correlação de Findings entre Fontes {#-2-correlação-de-findings-entre-fontes}
 
 **Descrição:** Consolidar findings de SAST, DAST, IAST e SCA numa única plataforma, com correlação automática por código-fonte, CVE, função, endpoint ou componente.
 
@@ -33,7 +33,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## 📈 3. Dashboards de Validação por Aplicação, Equipa e Release
+## 📈 3. Dashboards de Validação por Aplicação, Equipa e Release {#-3-dashboards-de-validação-por-aplicação-equipa-e-release}
 
 **Descrição:** Criar dashboards com métricas como:
 
@@ -48,7 +48,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## ⚙️ 4. Testes de Segurança como Serviço (STaaS)
+## ⚙️ 4. Testes de Segurança como Serviço (STaaS) {#️-4-testes-de-segurança-como-serviço-staas}
 
 **Descrição:** Disponibilizar pipelines ou jobs reutilizáveis com testes de segurança encapsulados (ex: containers com scanners e thresholds predefinidos).
 
@@ -58,7 +58,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## 🔄 5. Revalidação Automatizada de Findings Resolvidos
+## 🔄 5. Revalidação Automatizada de Findings Resolvidos {#-5-revalidação-automatizada-de-findings-resolvidos}
 
 **Descrição:** Validar periodicamente se findings marcados como resolvidos continuam ausentes. Detetar regressões silenciosas.
 
@@ -68,7 +68,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## 🤖 6. Análise Diferencial entre Releases
+## 🤖 6. Análise Diferencial entre Releases {#-6-análise-diferencial-entre-releases}
 
 **Descrição:** Automatizar a comparação entre versões consecutivas da aplicação, identificando:
 
@@ -80,7 +80,7 @@ Este documento complementa as práticas prescritas no Capítulo 10 com **recomen
 
 ---
 
-## ✍️ 7. Integração de Testes de Segurança em Critérios BDD
+## ✍️ 7. Integração de Testes de Segurança em Critérios BDD {#️-7-integração-de-testes-de-segurança-em-critérios-bdd}
 
 **Descrição:** Definir critérios de aceitação de segurança com linguagem tipo Gherkin (Given–When–Then), integrando com testes funcionais.
 
@@ -96,7 +96,7 @@ then the system must reject the request and return 401
 
 ---
 
-## 🔍 8. Observabilidade dos Testes de Segurança
+## 🔍 8. Observabilidade dos Testes de Segurança {#-8-observabilidade-dos-testes-de-segurança}
 
 **Descrição:** Integrar logs e eventos dos testes (SAST, DAST, fuzzing) com ferramentas de observabilidade da organização.
 
@@ -106,7 +106,7 @@ then the system must reject the request and return 401
 
 ---
 
-## 📖 9. Catálogo Vivo de Testes de Segurança por Tipo de Aplicação
+## 📖 9. Catálogo Vivo de Testes de Segurança por Tipo de Aplicação {#-9-catálogo-vivo-de-testes-de-segurança-por-tipo-de-aplicação}
 
 **Descrição:** Manter um repositório versionado com:
 
@@ -121,7 +121,7 @@ then the system must reject the request and return 401
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 Estas práticas avançadas não substituem o essencial - **reforçam-no**. Devem ser priorizadas quando:
 

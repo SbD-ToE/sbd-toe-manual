@@ -1,0 +1,91 @@
+ Official Journal
+ of the European Union
+ EN
+ L series
+ 2025/90725
+ 19.9.2025
+ Corrigendum to Commission Implementing Regulation (EU) 2024/2956 of 29 November 2024 laying down implementing technical standards for the application of Regulation (EU) 2022/2554 of the European Parliament and of the Council with regard to standard templates for the register of information
+ (
+ Official Journal of the European Union L, 2024/2956, 2 December 2024
+ )
+ On page 24, in Column Code B_05.01.0020:
+ for:
+ ‘Type of code to identify the ICT third-party service provider reported in B_05.01.0010
+ 1.
+ ‘LEI’ for LEI
+ 2.
+ ‘EUID’ for EUID
+ 3.
+ ‘Country Code+Underscore+Type of Code’ for non LEI and non EUID code
+ Country Code: Identify the ISO 3166–1 alpha–2 code of the country of issuance of the other code to identify the ICT third- party service provider
+ Type of Code:
+ 1.
+ ‘CRN’ for Corporate registration number
+ 2.
+ ‘VAT’ for VAT number
+ 3.
+ ‘PNR’ for Passport Number
+ 4.
+ ‘NIN’ for National Identity Number
+ Only LEI or EUID shall be used for legal persons, as identified in B_05.01.0070, whereas alternative code may be used only for an individual acting in a business capacity.
+ Only LEI shall be used for legal persons that are not established in the Union.’
+ read:
+ ‘Type of code to identify the ICT third-party service provider reported in B_05.01.0010
+ 1.
+ ‘LEI’ for LEI
+ 2.
+ ‘EUID’ for EUID
+ 3.
+ ‘CRN’ for Corporate registration number
+ 4.
+ ‘VAT’ for VAT number
+ 5.
+ ‘PNR’ for Passport Number
+ 6.
+ ‘NIN’ for National Identity Number
+ Only LEI or EUID shall be used for legal persons, as identified in B_05.01.0070, whereas alternative code may be used only for an individual acting in a business capacity.
+ Only LEI shall be used for legal persons that are not established in the Union.’
+ On page 25, in Column Code B_05.01.0090:
+ for:
+ ‘Currency of the amount reported in B_05.01.0070’
+ read:
+ ‘Currency of the amount reported in B_05.01.0100’
+ On page 30, in Column Code B_06.01.0060:
+ for:
+ ‘B_06.01.0060’
+ read:
+ ‘B_06.01.0050’
+ On page 30, in Column Code B_06.01.0070:
+ for:
+ ‘B_06.01.0070’
+ read:
+ ‘B_06.01.0060’
+ On page 31, in Column Code B_06.01.0080:
+ for:
+ ‘B_06.01.0080’
+ read:
+ ‘B_06.01.0070’
+ On page 31, in Column Code B_06.01.0090:
+ for:
+ ‘B_06.01.0090’
+ read:
+ ‘B_06.01.0080’
+ On page 31, in Column Code B_06.01.0100:
+ for:
+ ‘B_06.01.0100’
+ read:
+ ‘B_06.01.0090’
+ On page 31, in Column Code B_06.01.0110:
+ for:
+ ‘B_06.01.0110’
+ read:
+ ‘B_06.01.0100’
+ On page 35, in Column Code B_07.01.0110:
+ for:
+ ‘7.
+ Assessment not performed’
+ read:
+ ‘3.
+ Assessment not performed’
+ ELI: http://data.europa.eu/eli/reg_impl/2024/2956/corrigendum/2025-09-19/oj
+ ISSN 1977-0677 (electronic edition)

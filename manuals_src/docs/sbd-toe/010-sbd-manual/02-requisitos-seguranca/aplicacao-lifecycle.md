@@ -19,7 +19,7 @@ Inclui modelos reutilizáveis de *user stories*, ações por papel, artefactos e
 
 ---
 
-## 📅 Quando aplicar os requisitos de segurança
+## 📅 Quando aplicar os requisitos de segurança {#-quando-aplicar-os-requisitos-de-segurança}
 
 | Fase / Evento                    | Ação esperada                                                                 | Artefacto principal                      |
 | -------------------------------- | ----------------------------------------------------------------------------- | ---------------------------------------- |
@@ -32,7 +32,7 @@ Inclui modelos reutilizáveis de *user stories*, ações por papel, artefactos e
 
 ---
 
-## 🔁 Regra de re-trigger e versionamento
+## 🔁 Regra de re-trigger e versionamento {#-regra-de-re-trigger-e-versionamento}
 
 O conjunto de requisitos de segurança aplicáveis deve ser **revisto explicitamente** sempre que exista mudança material em pelo menos um dos seguintes eixos:
 
@@ -52,14 +52,14 @@ Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verba
 
 ---
 
-## 👥 Quem faz o quê
+## 👥 Quem faz o quê {#-quem-faz-o-quê}
 
 | Papel / Função                      | Responsabilidades-chave                                                                 |
 | ----------------------------------- | ---------------------------------------------------------------------------------------- |
 | Product Owner                  | Assegurar integração no backlog; garantir que requisitos relevantes existem como trabalho rastreável |
 | Developer                           | Implementar controlos; aplicar tags; ligar mudanças a `SEC-Lx-*` e/ou ao requisito do catálogo; propor exceções quando necessário |
 | QA                                  | Definir critérios de aceitação e validação; garantir cobertura de testes e evidência     |
-| Arquitetos de Software / Scrum Master / Team Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
+| Arquitetos de Software / Tech Lead / DevOps / SRE | Rever requisitos em alterações críticas; assegurar coerência técnica e impacto no risco  |
 | AppSec Engineer                     | Validar aplicação; aprovar exceções; garantir alinhamento e consistência global          |
 | GRC / Compliance (quando aplicável) | Registar exceções e decisões; apoiar auditoria e rastreabilidade organizacional          |
 
@@ -68,9 +68,9 @@ Quando a revisão ocorre, o resultado esperado não é apenas “confirmar verba
 
 ---
 
-## 📝 User Stories e Cartões Reutilizáveis
+## 📝 User Stories e Cartões Reutilizáveis {#-user-stories-e-cartões-reutilizáveis}
 
-### US-01 - Seleção de requisitos por criticidade
+### US-01 - Seleção de requisitos por criticidade {#us-01---seleção-de-requisitos-por-criticidade}
 
 **Contexto.**  
 A seleção inicial de requisitos deve ser proporcional ao risco da aplicação (L1–L3).
@@ -110,14 +110,14 @@ Como **Product Owner**, quero selecionar os requisitos aplicáveis ao projeto, p
 
 ---
 
-### US-02 - Revisão por alteração relevante
+### US-02 - Revisão por alteração relevante {#us-02---revisão-por-alteração-relevante}
 
 **Contexto.**  
 Requisitos aplicáveis devem ser revistos sempre que exista alteração material do contexto técnico, superfície de exposição, dados tratados ou arquitetura.
 
 :::userstory
 **História.**  
-Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
+Como **Arquitetos de Software / Tech Lead** e **Scrum Master / Team Lead**, quero rever requisitos aplicáveis sempre que ocorra uma integração crítica ou mudança relevante, para garantir que os controlos e requisitos selecionados são atualizados, rastreados e validados.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que ocorre uma alteração significativa (integração externa, mudança de dados, exposição, arquitetura)
@@ -142,7 +142,7 @@ Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requ
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetos de Software + Scrum Master / Team Lead | Antes da release |
+| Design/Refactor | Alteração de arquitetura, dados ou exposição | Arquitetos de Software + Tech Lead | Antes da release |
 
 **Ligações úteis.**
 - 🔗 [Validação e revisão de requisitos](./addon/validacao-requisitos)
@@ -150,7 +150,7 @@ Como **Arquitetos de Software** e **Scrum Master / Team Lead**, quero rever requ
 
 ---
 
-### US-03 - Gestão de Exceções com TTL e Revalidação Obrigatória
+### US-03 - Gestão de Exceções com TTL e Revalidação Obrigatória {#us-03---gestão-de-exceções-com-ttl-e-revalidação-obrigatória}
 
 **Contexto.**  
 Nem todos os requisitos são aplicáveis. Exceções devem ser documentadas, justificadas, aprovadas e sujeitas a revalidação, evitando exceções permanentes.
@@ -192,7 +192,7 @@ Como **Developer** (proponente) e **GRC/Compliance** (regista), quero registar e
 
 ---
 
-### US-04 - Rastreabilidade de requisitos
+### US-04 - Rastreabilidade de requisitos {#us-04---rastreabilidade-de-requisitos}
 
 **Contexto.**  
 Todos os requisitos aplicados devem ser rastreáveis no backlog e auditáveis.
@@ -235,7 +235,7 @@ Como **QA**, quero garantir que todos os requisitos aplicados têm rastreabilida
 
 ---
 
-### US-05 - Definição de critérios de validação
+### US-05 - Definição de critérios de validação {#us-05---definição-de-critérios-de-validação}
 
 **Contexto.**  
 Cada requisito selecionado deve ter critérios de aceitação/validação explícitos e verificáveis.
@@ -278,7 +278,7 @@ Como **Product Owner/QA**, quero garantir que cada requisito selecionado no back
 
 ---
 
-### US-06 - Validação de cobertura de testes
+### US-06 - Validação de cobertura de testes {#us-06---validação-de-cobertura-de-testes}
 
 **Contexto.**  
 Requisitos devem ter validação associada para prevenir regressões e garantir eficácia.
@@ -321,7 +321,7 @@ Como **QA**, quero garantir que os requisitos aplicáveis têm validação assoc
 
 ---
 
-### US-07 - Validação e aprovação final
+### US-07 - Validação e aprovação final {#us-07---validação-e-aprovação-final}
 
 **Contexto.**  
 A Equipa de Segurança deve validar a aplicação dos requisitos e aprovar exceções, controlando formalmente as decisões de risco.
@@ -364,7 +364,7 @@ Como **Equipa de Segurança / AppSec**, quero validar a aplicação dos requisit
 
 ---
 
-### US-08 - Catálogo de requisitos do projeto (criação e manutenção)
+### US-08 - Catálogo de requisitos do projeto (criação e manutenção) {#us-08---catálogo-de-requisitos-do-projeto-criação-e-manutenção}
 
 **Contexto.**  
 No arranque do projeto e sempre que existam alterações de âmbito, deve existir um **catálogo versionado de requisitos do projeto**, derivado da baseline organizacional e filtrado pela criticidade.
@@ -400,7 +400,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Início | Kick-off / release major | AppSec Engineer + Product Owner + Scrum Master / Team Lead | Antes do backlog inicial / antes da release |
+| Início | Kick-off / release major | AppSec Engineer + Product Owner + Tech Lead | Antes do backlog inicial / antes da release |
 
 **Ligações úteis.**
 - 🔗 [Catálogo de requisitos](./addon/catalogo-requisitos)  
@@ -408,7 +408,7 @@ Como **AppSec/PO/TL**, quero estabelecer e manter um catálogo de requisitos de 
 
 ---
 
-### US-09 - Validação por requisito/domínio (REQ-XXX → evidência)
+### US-09 - Validação por requisito/domínio (REQ-XXX → evidência) {#us-09---validação-por-requisitodomínio-req-xxx--evidência}
 
 **Contexto.**  
 Cada requisito ativo deve ter validação e evidência associadas.
@@ -444,7 +444,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito do catálogo segundo os crit
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Testes/Review | Pipelines e checkpoints | QA + AppSec Engineer + Scrum Master / Team Lead | Por sprint e antes de release |
+| Testes/Review | Pipelines e checkpoints | QA + AppSec Engineer + Tech Lead | Por sprint e antes de release |
 
 **Ligações úteis.**
 - 🔗 [Validação de requisitos](./addon/validacao-requisitos)  
@@ -452,7 +452,7 @@ Como **QA/AppSec/TL**, quero validar cada requisito do catálogo segundo os crit
 
 ---
 
-### US-10 - Gates automáticos em CI/CD para requisitos de segurança
+### US-10 - Gates automáticos em CI/CD para requisitos de segurança {#us-10---gates-automáticos-em-cicd-para-requisitos-de-segurança}
 
 **Contexto.**  
 Pipelines devem impor verificações automáticas alinhadas com requisitos aplicáveis, bloqueando merge/release quando falham.
@@ -498,7 +498,7 @@ Como **DevOps/SRE** e **Developer**, quero que o pipeline CI/CD execute verifica
 
 ---
 
-### US-11 - Geração de SBOM e assinatura de artefactos de build
+### US-11 - Geração de SBOM e assinatura de artefactos de build {#us-11---geração-de-sbom-e-assinatura-de-artefactos-de-build}
 
 **Contexto.**  
 SBOMs e assinaturas suportam proveniência e auditoria.
@@ -533,7 +533,7 @@ Como **Developer** e **DevOps/SRE**, quero que a pipeline gere um SBOM e assine 
 
 ---
 
-### US-12 - Validação de tags `SEC-Lx-*` e requisitos no pipeline
+### US-12 - Validação de tags `SEC-Lx-*` e requisitos no pipeline {#us-12---validação-de-tags-sec-lx--e-requisitos-no-pipeline}
 
 **Contexto.**  
 Tags e referências devem estar presentes para garantir rastreabilidade.
@@ -565,7 +565,7 @@ Como **Developer** e **QA**, quero que o pipeline valide a presença e conformid
 
 ---
 
-### US-13 - Política, Formação e Procedimentos Operacionais
+### US-13 - Política, Formação e Procedimentos Operacionais {#us-13---política-formação-e-procedimentos-operacionais}
 
 **Contexto.**  
 Para consistência, a organização deve publicar políticas, responsabilidades e formação.
@@ -598,14 +598,14 @@ Como **Gestão Executiva/CISO** e **GRC/Compliance**, quero publicar a política
 
 ---
 
-### US-14 - Uso controlado de assistentes automatizados (incluindo IA) no desenvolvimento
+### US-14 - Uso controlado de assistentes automatizados (incluindo IA) no desenvolvimento {#us-14---uso-controlado-de-assistentes-automatizados-incluindo-ia-no-desenvolvimento}
 
 **Contexto.**  
 O uso de assistentes automatizados e ferramentas baseadas em IA pode acelerar o desenvolvimento, mas **não altera nem substitui** os requisitos de segurança aplicacionais. Todo o output gerado deve ser tratado como código de terceiros e sujeito a governação, validação e rastreabilidade explícitas.
 
 :::userstory
 **História.**  
-Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
+Como **Developer**, **Tech Lead** e **AppSec Engineer**, quero garantir que qualquer código, configuração ou teste gerado com recurso a assistentes automatizados (incluindo IA) é explicitamente revisto, validado e rastreável, para assegurar que o cumprimento dos requisitos de segurança é verificável e que a responsabilidade permanece humana.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que é utilizado um assistente automatizado para gerar código, configuração ou testes  
@@ -638,7 +638,7 @@ Como **Developer**, **Scrum Master / Team Lead** e **AppSec Engineer**, quero ga
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| PR/MR | Introdução de código/configuração gerada | Developer + Scrum Master / Team Lead | Antes do merge |
+| PR/MR | Introdução de código/configuração gerada | Developer + Tech Lead | Antes do merge |
 | Release | Gate final de segurança | AppSec Engineer | Antes do go-live |
 
 **Ligações úteis.**
@@ -655,7 +655,7 @@ Quando passa-se de **assistentes que sugerem** para **agentes que executam** (cr
 
 :::userstory
 **História.**
-Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
+Como **AppSec Engineer** e **Tech Lead**, quero classificar o nível de autonomia (A0–A4) de cada agente AI em uso operacional e registar o respectivo *mandate* versionado em VCS, para que cada agente opere sob autorização explícita, auditável, e proporcional ao risco do contexto.
 
 **Critérios de aceitação (BDD).**
 - **Dado** que um agente AI vai operar no projecto em A1 ou superior
@@ -668,7 +668,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o ní
 **Critérios de aceitação (DoD).**
 - [ ] *Mandate* presente em VCS, validado contra esquema mínimo (campos obrigatórios) e referenciado por `mandate_ref` em audit
 - [ ] `autonomy_level` classificado de acordo com [níveis A0–A4](./addon/governanca-automatismos#niveis-autonomia) e justificado por escrito
-- [ ] *Approver* adequado ao nível (A1: Scrum Master / Team Lead; A2: Scrum Master / Team Lead + AppSec Engineer; A3: Scrum Master / Team Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` em assinatura formal)
+- [ ] *Approver* adequado ao nível (A1: Tech Lead; A2: Tech Lead + AppSec Engineer; A3: Tech Lead + AppSec Engineer + GRC / Compliance; A4: `CISO` em assinatura formal)
 - [ ] *Identity* efémera configurada (sem reuso de credenciais humanas)
 - [ ] *Kill-switch* exercitado em sandbox/staging com cronómetro registado antes da activação
 - [ ] `effective_until` definido — sem *mandates* sem janela de validade
@@ -686,7 +686,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o ní
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | A1+ | *Mandate* simples; aprovação por Scrum Master / Team Lead; A2+ permitido apenas fora de produção |
+| L1 | A1+ | *Mandate* simples; aprovação por Tech Lead; A2+ permitido apenas fora de produção |
 | L2 | A1+ | *Mandate* completo; *kill-switch* exercitado trimestralmente em A3 |
 | L3 | A1+ | *Mandate* completo + revisão organizacional trimestral; A4 exige assinatura formal do `CISO` |
 
@@ -705,7 +705,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero classificar o ní
 
 ---
 
-### US-16 - Classificação do tipo de controlo na matriz de rastreabilidade
+### US-16 - Classificação do tipo de controlo na matriz de rastreabilidade {#us-16---classificação-do-tipo-de-controlo-na-matriz-de-rastreabilidade}
 
 Cada requisito rastreado deve declarar a natureza do controlo — Preventivo, Detetivo ou Corretivo.  
 
@@ -743,7 +743,7 @@ Como **Arquitetos de Software / DevOps / SRE**, quero classificar cada controlo 
 
 ---
 
-### US-17 - Incorporação de restrições legais, normativas e contratuais
+### US-17 - Incorporação de restrições legais, normativas e contratuais {#us-17---incorporação-de-restrições-legais-normativas-e-contratuais}
 
 A seleção de requisitos deve absorver as obrigações legais, normativas e contratuais aplicáveis ao contexto.  
 
@@ -781,7 +781,7 @@ Como **GRC/Compliance** e **Arquitetura**, quero incorporar as restrições lega
 
 ---
 
-### US-18 - Intent declaration por tool-call destrutivo de agente AI
+### US-18 - Intent declaration por tool-call destrutivo de agente AI {#us-18---intent-declaration-por-tool-call-destrutivo-de-agente-ai}
 
 Antes de cada ação destrutiva ou com efeito externo, o agente AI declara intenção auditável.  
 
@@ -789,7 +789,7 @@ Antes de cada ação destrutiva ou com efeito externo, o agente AI declara inten
 
 :::userstory
 **História.**   
-Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
+Como **AppSec Engineer** e **Tech Lead**, quero que cada agente AI A2+ declare a intenção como *audit event* antes de cada *tool-call* destrutivo, para garantir que cada ação de risco é precedida de declaração auditável e reconciliável com a ação efetiva.  
 
 **Critérios de aceitação (BDD).**  
 - **Dado** um agente AI A2+ a operar sob *mandate* ativo  
@@ -819,7 +819,7 @@ Como **AppSec Engineer** e **Scrum Master / Team Lead**, quero que cada agente A
 
 ---
 
-### US-19 - Recolha e thresholds dos indicadores RQS
+### US-19 - Recolha e thresholds dos indicadores RQS {#us-19---recolha-e-thresholds-dos-indicadores-rqs}
 
 Os indicadores RQS de cobertura, rastreabilidade e validação são recolhidos e comparados aos thresholds do nível.  
 
@@ -857,7 +857,7 @@ Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compar
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3)
+## ⚖️ Aplicação proporcional por nível de risco (L1–L2–L3) {#️-aplicação-proporcional-por-nível-de-risco-l1l2l3}
 
 | Prática                    | L1 (baixo risco)               | L2 (médio risco)                          | L3 (alto risco)                                      |
 | -------------------------- | ------------------------------ | ----------------------------------------- | ---------------------------------------------------- |
@@ -869,7 +869,7 @@ Como **GRC/Compliance** e **AppSec**, quero recolher os indicadores RQS e compar
 
 ---
 
-## 📄 Templates e artefactos esperados
+## 📄 Templates e artefactos esperados {#-templates-e-artefactos-esperados}
 
 | Artefacto                       | Formato sugerido           | Onde guardar / referenciar            |
 | ------------------------------- | -------------------------- | ------------------------------------- |

@@ -15,7 +15,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Garantir que **todo o código entregue passou por validações de segurança automatizadas e consistentes**;
 - Integrar testes de segurança como parte obrigatória do fluxo CI/CD;
@@ -23,7 +23,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Integração de testes de segurança no pipeline**  
    - Inclusão de SAST (análise estática) como etapa obrigatória do pipeline;
@@ -48,7 +48,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Requisitos obrigatórios                              | Requisitos reforçados                                     |
 |-------|--------------------------------------------------------|------------------------------------------------------------|
@@ -58,7 +58,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Integração com `CodeQL`, `TruffleHog`, linters IaC;
@@ -78,7 +78,7 @@ A segurança da entrega contínua depende da capacidade de **detetar automaticam
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Inclusão de código malicioso ou inseguro (OSC&R: SC0001, SC0006);
 - Builds com vulnerabilidades conhecidas não detetadas (OSC&R: SC0008);

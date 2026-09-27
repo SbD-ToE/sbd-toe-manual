@@ -15,7 +15,7 @@ Este questionário destina-se a validar se os terceiros (fornecedores, contracto
 
 ---
 
-## 🧪 Perguntas de validação (exemplo base)
+## 🧪 Perguntas de validação (exemplo base) {#-perguntas-de-validação-exemplo-base}
 
 1. **Quando pode um terceiro receber acesso a repositórios ou pipelines?**
    - a) Assim que o contrato estiver assinado  
@@ -57,7 +57,7 @@ Este questionário destina-se a validar se os terceiros (fornecedores, contracto
 
 ---
 
-## 📋 Registo de resultado (modelo)
+## 📋 Registo de resultado (modelo) {#-registo-de-resultado-modelo}
 
 - Nome: __________________________  
 - Empresa / Entidade: __________________________  
@@ -69,7 +69,7 @@ Este questionário destina-se a validar se os terceiros (fornecedores, contracto
 
 ---
 
-## 🧭 Notas de utilização
+## 🧭 Notas de utilização {#-notas-de-utilização}
 
 - O quiz pode ser aplicado em formato papel, formulário digital, ou embebido no LMS
 - Recomenda-se manter o registo por projeto ou contrato, com data e responsável interno

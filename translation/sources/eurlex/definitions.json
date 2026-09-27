@@ -1,0 +1,1106 @@
+{
+ "32022R2554": {
+  "1": [
+   "Resiliência operacional digital",
+   "digital operational resilience"
+  ],
+  "2": [
+   "Sistema de rede e informação",
+   "network and information system"
+  ],
+  "3": [
+   "Sistema de TIC legado",
+   "legacy ICT system"
+  ],
+  "4": [
+   "Segurança dos sistemas de rede e informação",
+   "security of network and information systems"
+  ],
+  "5": [
+   "Risco associado às TIC",
+   "ICT risk"
+  ],
+  "6": [
+   "Ativo de informação",
+   "information asset"
+  ],
+  "7": [
+   "Ativo de TIC",
+   "ICT asset"
+  ],
+  "8": [
+   "Incidente relacionado com as TIC",
+   "ICT-related incident"
+  ],
+  "9": [
+   "Incidente operacional ou de segurança relacionado com pagamentos",
+   "operational or security payment-related incident"
+  ],
+  "10": [
+   "Incidente de caráter severo relacionado com as TIC",
+   "major ICT-related incident"
+  ],
+  "11": [
+   "Incidente de caráter severo operacional ou de segurança relacionado com pagamentos",
+   "major operational or security payment-related incident"
+  ],
+  "12": [
+   "Ciberameaça",
+   "cyber threat"
+  ],
+  "13": [
+   "Ciberameaça significativa",
+   "significant cyber threat"
+  ],
+  "14": [
+   "Ciberataque",
+   "cyber-attack"
+  ],
+  "15": [
+   "Informações sobre ameaças",
+   "threat intelligence"
+  ],
+  "16": [
+   "Vulnerabilidade",
+   "vulnerability"
+  ],
+  "17": [
+   "Testes de penetração baseados em ameaças (TLPT)",
+   "threat-led penetration testing (TLPT)"
+  ],
+  "18": [
+   "Risco associado às TIC devido a terceiros",
+   "ICT third-party risk"
+  ],
+  "19": [
+   "Terceiro prestador de serviços de TIC",
+   "ICT third-party service provider"
+  ],
+  "20": [
+   "Prestador de serviços de TIC intragrupo",
+   "ICT intra-group service provider"
+  ],
+  "21": [
+   "Serviços de TIC",
+   "ICT services"
+  ],
+  "22": [
+   "Função crítica ou importante",
+   "critical or important function"
+  ],
+  "23": [
+   "Terceiro prestador de serviços de TIC crítico",
+   "critical ICT third-party service provider"
+  ],
+  "24": [
+   "Terceiro prestador de serviços de TIC estabelecido num país terceiro",
+   "ICT third-party service provider established in a third country"
+  ],
+  "25": [
+   "Filial",
+   "subsidiary"
+  ],
+  "26": [
+   "Grupo",
+   "group"
+  ],
+  "27": [
+   "Empresa-mãe",
+   "parent undertaking"
+  ],
+  "28": [
+   "Subcontratante de TIC estabelecido num país terceiro",
+   "ICT subcontractor established in a third country"
+  ],
+  "29": [
+   "Risco de concentração no domínio das TIC",
+   "ICT concentration risk"
+  ],
+  "30": [
+   "Órgão de administração",
+   "management body"
+  ],
+  "31": [
+   "Instituição de crédito",
+   "credit institution"
+  ],
+  "32": [
+   "Instituição isenta nos termos da Diretiva 2013/36/UE",
+   "institution exempted pursuant to Directive 2013/36/EU"
+  ],
+  "33": [
+   "Empresa de investimento",
+   "investment firm"
+  ],
+  "34": [
+   "Empresa de investimento de pequena dimensão e não interligada",
+   "small and non-interconnected investment firm"
+  ],
+  "35": [
+   "Instituição de pagamento",
+   "payment institution"
+  ],
+  "36": [
+   "Instituição de pagamento isenta nos termos da Diretiva (UE) 2015/2366",
+   "payment institution exempted pursuant to Directive (EU) 2015/2366"
+  ],
+  "37": [
+   "Prestador de serviços de informação sobre contas",
+   "account information service provider"
+  ],
+  "38": [
+   "Instituição de moeda eletrónica",
+   "electronic money institution"
+  ],
+  "39": [
+   "Instituição de moeda eletrónica isenta nos termos da Diretiva 2009/110/CE",
+   "electronic money institution exempted pursuant to Directive 2009/110/EC"
+  ],
+  "40": [
+   "Contraparte central",
+   "central counterparty"
+  ],
+  "41": [
+   "Repositório de transações",
+   "trade repository"
+  ],
+  "42": [
+   "Central de valores mobiliários",
+   "central securities depository"
+  ],
+  "43": [
+   "Plataforma de negociação",
+   "trading venue"
+  ],
+  "44": [
+   "Gestor de fundos de investimento alternativos",
+   "manager of alternative investment funds"
+  ],
+  "45": [
+   "Sociedade gestora",
+   "management company"
+  ],
+  "46": [
+   "Prestador de serviços de comunicação de dados",
+   "data reporting service provider"
+  ],
+  "47": [
+   "Empresa de seguros",
+   "insurance undertaking"
+  ],
+  "48": [
+   "Empresa de resseguros",
+   "reinsurance undertaking"
+  ],
+  "49": [
+   "Mediador de seguros",
+   "insurance intermediary"
+  ],
+  "50": [
+   "Mediador de seguros a título acessório",
+   "ancillary insurance intermediary"
+  ],
+  "51": [
+   "Mediador de resseguros",
+   "reinsurance intermediary"
+  ],
+  "52": [
+   "Instituição de realização de planos de pensões profissionais",
+   "institution for occupational retirement provision"
+  ],
+  "53": [
+   "Pequena instituição de realização de planos de pensões profissionais",
+   "small institution for occupational retirement provision"
+  ],
+  "54": [
+   "Agência de notação de risco",
+   "credit rating agency"
+  ],
+  "55": [
+   "Prestador de serviços de criptoativos",
+   "crypto-asset service provider"
+  ],
+  "56": [
+   "Emitente de criptofichas (tokens) referenciadas a ativos",
+   "issuer of asset-referenced tokens"
+  ],
+  "57": [
+   "Administrador de índices de referência críticos",
+   "administrator of critical benchmarks"
+  ],
+  "58": [
+   "Prestador de serviços de financiamento colaborativo",
+   "crowdfunding service provider"
+  ],
+  "59": [
+   "Repositório de titularizações",
+   "securitisation repository"
+  ],
+  "60": [
+   "Microempresa",
+   "microenterprise"
+  ],
+  "61": [
+   "Autoridade fiscalizadora principal",
+   "Lead Overseer"
+  ],
+  "62": [
+   "Comité Conjunto",
+   "Joint Committee"
+  ],
+  "63": [
+   "Pequena empresa",
+   "small enterprise"
+  ],
+  "64": [
+   "Média empresa",
+   "medium-sized enterprise"
+  ],
+  "65": [
+   "Autoridade pública",
+   "public authority"
+  ]
+ },
+ "32022L2555": {
+  "1": [
+   "Sistema de rede e informação",
+   "network and information system"
+  ],
+  "2": [
+   "Segurança dos sistemas de rede e informação",
+   "security of network and information systems"
+  ],
+  "3": [
+   "Cibersegurança",
+   "cybersecurity"
+  ],
+  "4": [
+   "Estratégia nacional de cibersegurança",
+   "national cybersecurity strategy "
+  ],
+  "5": [
+   "Quase incidente",
+   "near miss"
+  ],
+  "6": [
+   "Incidente",
+   "incident"
+  ],
+  "7": [
+   "Incidente de cibersegurança em grande escala",
+   "large-scale cybersecurity incident"
+  ],
+  "8": [
+   "Tratamento de incidentes",
+   "incident handling"
+  ],
+  "9": [
+   "Risco",
+   "risk"
+  ],
+  "10": [
+   "Ciberameaça",
+   "cyber threat"
+  ],
+  "11": [
+   "Ciberameaça significativa",
+   "significant cyber threat"
+  ],
+  "12": [
+   "Produto de TIC",
+   "ICT product"
+  ],
+  "13": [
+   "Serviço de TIC",
+   "ICT service"
+  ],
+  "14": [
+   "Processo de TIC",
+   "ICT process"
+  ],
+  "15": [
+   "Vulnerabilidade",
+   "vulnerability"
+  ],
+  "16": [
+   "Norma",
+   "standard"
+  ],
+  "17": [
+   "Especificação técnica",
+   "technical specification"
+  ],
+  "18": [
+   "Ponto de troca de tráfego",
+   "internet exchange point"
+  ],
+  "19": [
+   "Sistema de nomes de domínio",
+   "domain name system"
+  ],
+  "20": [
+   "Prestador de serviços de DNS",
+   "DNS service provider"
+  ],
+  "21": [
+   "Registo de nomes de domínio de topo",
+   "top-level domain name registry"
+  ],
+  "22": [
+   "Entidade que presta serviços de registo de nomes de domínio",
+   "entity providing domain name registration services"
+  ],
+  "23": [
+   "Serviço digital",
+   "digital service"
+  ],
+  "24": [
+   "Serviço de confiança",
+   "trust service"
+  ],
+  "25": [
+   "Prestador de serviços de confiança",
+   "trust service provider"
+  ],
+  "26": [
+   "Serviço de confiança qualificado",
+   "qualified trust service"
+  ],
+  "27": [
+   "Prestador qualificado de serviços de confiança",
+   "qualified trust service provider"
+  ],
+  "28": [
+   "Mercado em linha",
+   "online marketplace"
+  ],
+  "29": [
+   "Motor de pesquisa em linha",
+   "online search engine"
+  ],
+  "30": [
+   "Serviço de computação em nuvem",
+   "cloud computing service"
+  ],
+  "31": [
+   "Serviço de centro de dados",
+   "data centre service"
+  ],
+  "32": [
+   "Rede de distribuição de conteúdos",
+   "content delivery network"
+  ],
+  "33": [
+   "Plataforma de serviços de redes sociais",
+   "social networking services platform"
+  ],
+  "34": [
+   "Representante",
+   "representative"
+  ],
+  "35": [
+   "Entidade da administração pública",
+   "public administration entity"
+  ],
+  "36": [
+   "Rede pública de comunicações eletrónicas",
+   "public electronic communications network"
+  ],
+  "37": [
+   "Serviço de comunicações eletrónicas",
+   "electronic communications service"
+  ],
+  "38": [
+   "Entidade",
+   "entity"
+  ],
+  "39": [
+   "Prestador de serviços geridos",
+   "managed service provider"
+  ],
+  "40": [
+   "Prestador de serviços de segurança geridos",
+   "managed security service provider"
+  ],
+  "41": [
+   "Organismo de investigação",
+   "research organisation"
+  ]
+ },
+ "32024R2847": {
+  "1": [
+   "Produto com elementos digitais",
+   "product with digital elements"
+  ],
+  "2": [
+   "Tratamento remoto de dados",
+   "remote data processing"
+  ],
+  "3": [
+   "Cibersegurança",
+   "cybersecurity"
+  ],
+  "4": [
+   " Software ",
+   "software"
+  ],
+  "5": [
+   " Hardware ",
+   "hardware"
+  ],
+  "6": [
+   "Componente",
+   "component"
+  ],
+  "7": [
+   "Sistema de informação eletrónico",
+   "electronic information system"
+  ],
+  "8": [
+   "Conexão lógica",
+   "logical connection"
+  ],
+  "9": [
+   "Conexão física",
+   "physical connection"
+  ],
+  "10": [
+   "Conexão indireta",
+   "indirect connection"
+  ],
+  "11": [
+   "Ponto terminal",
+   "end-point"
+  ],
+  "12": [
+   "Operador económico",
+   "economic operator"
+  ],
+  "13": [
+   "Fabricante",
+   "manufacturer"
+  ],
+  "14": [
+   "Administrador de software de código-fonte aberto",
+   "open-source software steward"
+  ],
+  "15": [
+   "Mandatário",
+   "authorised representative"
+  ],
+  "16": [
+   "Importador",
+   "importer"
+  ],
+  "17": [
+   "Distribuidor",
+   "distributor"
+  ],
+  "18": [
+   "Consumidor",
+   "consumer"
+  ],
+  "19": [
+   "Microempresas",
+   "microenterprises"
+  ],
+  "20": [
+   "Período de apoio",
+   "support period"
+  ],
+  "21": [
+   "Colocação no mercado",
+   "placing on the market"
+  ],
+  "22": [
+   "Disponibilização no mercado",
+   "making available on the market"
+  ],
+  "23": [
+   "Finalidade prevista",
+   "intended purpose"
+  ],
+  "24": [
+   "Utilização razoavelmente previsível",
+   "reasonably foreseeable use"
+  ],
+  "25": [
+   "Utilização indevida razoavelmente previsível",
+   "reasonably foreseeable misuse"
+  ],
+  "26": [
+   "Autoridade notificadora",
+   "notifying authority"
+  ],
+  "27": [
+   "Avaliação da conformidade",
+   "conformity assessment"
+  ],
+  "28": [
+   "Organismo de avaliação da conformidade",
+   "conformity assessment body"
+  ],
+  "29": [
+   "Organismo notificado",
+   "notified body"
+  ],
+  "30": [
+   "Modificação substancial",
+   "substantial modification"
+  ],
+  "31": [
+   "Marcação CE",
+   "CE marking"
+  ],
+  "32": [
+   "Legislação de harmonização da União",
+   "Union harmonisation legislation"
+  ],
+  "33": [
+   "Autoridade de fiscalização do mercado",
+   "market surveillance authority"
+  ],
+  "34": [
+   "Norma internacional",
+   "international standard"
+  ],
+  "35": [
+   "Norma europeia",
+   "European standard"
+  ],
+  "36": [
+   "Norma harmonizada",
+   "harmonised standard"
+  ],
+  "37": [
+   "Risco de cibersegurança",
+   "cybersecurity risk"
+  ],
+  "38": [
+   "Risco de cibersegurança significativo",
+   "significant cybersecurity risk"
+  ],
+  "39": [
+   "Lista de materiais do software ",
+   "software bill of materials"
+  ],
+  "40": [
+   "Vulnerabilidade",
+   "vulnerability"
+  ],
+  "41": [
+   "Vulnerabilidade passível de ser explorada",
+   "exploitable vulnerability"
+  ],
+  "42": [
+   "Vulnerabilidade ativamente explorada",
+   "actively exploited vulnerability"
+  ],
+  "43": [
+   "Incidente",
+   "incident"
+  ],
+  "44": [
+   "Incidente com impacto na segurança de um produto com elementos digitais",
+   "incident having an impact on the security of the product with digital elements"
+  ],
+  "45": [
+   "Quase incidente",
+   "near miss"
+  ],
+  "46": [
+   "Ciberameaça",
+   "cyber threat"
+  ],
+  "47": [
+   "Dados pessoais",
+   "personal data"
+  ],
+  "48": [
+   " Software livre e de código-fonte aberto",
+   "free and open-source software"
+  ],
+  "49": [
+   "Recolha",
+   "recall"
+  ],
+  "50": [
+   "Retirada",
+   "withdrawal"
+  ],
+  "51": [
+   "CSIRT designada coordenadora",
+   "CSIRT designated as coordinator"
+  ]
+ },
+ "32016R0679": {
+  "1": [
+   "Dados pessoais",
+   "personal data"
+  ],
+  "2": [
+   "Tratamento",
+   "processing"
+  ],
+  "3": [
+   "Limitação do tratamento",
+   "restriction of processing"
+  ],
+  "4": [
+   "Definição de perfis",
+   "profiling"
+  ],
+  "5": [
+   "Pseudonimização",
+   "pseudonymisation"
+  ],
+  "6": [
+   "Ficheiro",
+   "filing system"
+  ],
+  "7": [
+   "Responsável pelo tratamento",
+   "controller"
+  ],
+  "8": [
+   "Subcontratante",
+   "processor"
+  ],
+  "9": [
+   "Destinatário",
+   "recipient"
+  ],
+  "10": [
+   "Terceiro",
+   "third party"
+  ],
+  "11": [
+   "Consentimento",
+   "consent"
+  ],
+  "12": [
+   "Violação de dados pessoais",
+   "personal data breach"
+  ],
+  "13": [
+   "Dados genéticos",
+   "genetic data"
+  ],
+  "14": [
+   "Dados biométricos",
+   "biometric data"
+  ],
+  "15": [
+   "Dados relativos à saúde",
+   "data concerning health"
+  ],
+  "16": [
+   "Estabelecimento principal",
+   "main establishment"
+  ],
+  "17": [
+   "Representante",
+   "representative"
+  ],
+  "18": [
+   "Empresa",
+   "enterprise"
+  ],
+  "19": [
+   "Grupo empresarial",
+   "group of undertakings"
+  ],
+  "20": [
+   "Regras vinculativas aplicáveis às empresas",
+   "binding corporate rules"
+  ],
+  "21": [
+   "Autoridade de controlo",
+   "supervisory authority"
+  ],
+  "22": [
+   "Autoridade de controlo interessada",
+   "supervisory authority concerned"
+  ],
+  "23": [
+   "Tratamento transfronteiriço",
+   "cross-border processing"
+  ],
+  "24": [
+   "Objeção pertinente e fundamentada",
+   "relevant and reasoned objection"
+  ],
+  "25": [
+   "Serviços da sociedade da informação",
+   "information society service"
+  ],
+  "26": [
+   "Organização internacional",
+   "international organisation"
+  ]
+ },
+ "32024R1689": {
+  "1": [
+   "Sistema de IA",
+   "AI system"
+  ],
+  "2": [
+   "Risco",
+   "risk"
+  ],
+  "3": [
+   "Prestador",
+   "provider"
+  ],
+  "4": [
+   "Responsável pela implantação",
+   "deployer"
+  ],
+  "5": [
+   "Mandatário",
+   "authorised representative"
+  ],
+  "6": [
+   "Importador",
+   "importer"
+  ],
+  "7": [
+   "Distribuidor",
+   "distributor"
+  ],
+  "8": [
+   "Operador",
+   "operator"
+  ],
+  "9": [
+   "Colocação no mercado",
+   "placing on the market"
+  ],
+  "10": [
+   "Disponibilização no mercado",
+   "making available on the market"
+  ],
+  "11": [
+   "Colocação em serviço",
+   "putting into service"
+  ],
+  "12": [
+   "Finalidade prevista",
+   "intended purpose"
+  ],
+  "13": [
+   "Utilização indevida razoavelmente previsível",
+   "reasonably foreseeable misuse"
+  ],
+  "14": [
+   "Componente de segurança",
+   "safety component"
+  ],
+  "15": [
+   "Instruções de utilização",
+   "instructions for use"
+  ],
+  "16": [
+   "Recolha de um sistema de IA",
+   "recall of an AI system"
+  ],
+  "17": [
+   "Retirada de um sistema de IA",
+   "withdrawal of an AI system"
+  ],
+  "18": [
+   "Desempenho de um sistema de IA",
+   "performance of an AI system"
+  ],
+  "19": [
+   "Autoridade notificadora",
+   "notifying authority"
+  ],
+  "20": [
+   "Avaliação da conformidade",
+   "conformity assessment"
+  ],
+  "21": [
+   "Organismo de avaliação da conformidade",
+   "conformity assessment body"
+  ],
+  "22": [
+   "Organismo notificado",
+   "notified body"
+  ],
+  "23": [
+   "Modificação substancial",
+   "substantial modification"
+  ],
+  "24": [
+   "Marcação CE",
+   "CE marking"
+  ],
+  "25": [
+   "Sistema de acompanhamento pós-comercialização",
+   "post-market monitoring system"
+  ],
+  "26": [
+   "Autoridade de fiscalização do mercado",
+   "market surveillance authority"
+  ],
+  "27": [
+   "Norma harmonizada",
+   "harmonised standard"
+  ],
+  "28": [
+   "Especificação comum",
+   "common specification"
+  ],
+  "29": [
+   "Dados de treino",
+   "training data"
+  ],
+  "30": [
+   "Dados de validação",
+   "validation data"
+  ],
+  "31": [
+   "Conjunto de dados de validação",
+   "validation data set"
+  ],
+  "32": [
+   "Dados de teste",
+   "testing data"
+  ],
+  "33": [
+   "Dados de entrada",
+   "input data"
+  ],
+  "34": [
+   "Dados biométricos",
+   "biometric data"
+  ],
+  "35": [
+   "Identificação biométrica",
+   "biometric identification"
+  ],
+  "36": [
+   "Verificação biométrica",
+   "biometric verification"
+  ],
+  "37": [
+   "Categorias especiais de dados pessoais",
+   "special categories of personal data"
+  ],
+  "38": [
+   "Dados operacionais sensíveis",
+   "sensitive operational data"
+  ],
+  "39": [
+   "Sistema de reconhecimento de emoções",
+   "emotion recognition system"
+  ],
+  "40": [
+   "Sistema de categorização biométrica",
+   "biometric categorisation system"
+  ],
+  "41": [
+   "Sistema de identificação biométrica à distância",
+   "remote biometric identification system"
+  ],
+  "42": [
+   "Sistema de identificação biométrica à distância em tempo real",
+   "real-time remote biometric identification system"
+  ],
+  "43": [
+   "Sistema de identificação biométrica à distância em diferido",
+   "post-remote biometric identification system"
+  ],
+  "44": [
+   "Espaço acessível ao público",
+   "publicly accessible space"
+  ],
+  "45": [
+   "Autoridade responsável pela aplicação da lei",
+   "law enforcement authority"
+  ],
+  "46": [
+   "Aplicação da lei",
+   "law enforcement"
+  ],
+  "47": [
+   "Serviço para a IA",
+   "AI Office"
+  ],
+  "48": [
+   "Autoridade nacional competente",
+   "national competent authority"
+  ],
+  "49": [
+   "Incidente grave",
+   "serious incident"
+  ],
+  "50": [
+   "Dados pessoais",
+   "personal data"
+  ],
+  "51": [
+   "Dados não pessoais",
+   "non-personal data"
+  ],
+  "52": [
+   "Definição de perfis",
+   "profiling"
+  ],
+  "53": [
+   "Plano de testagem em condições reais",
+   "real-world testing plan"
+  ],
+  "54": [
+   "Plano do ambiente de testagem",
+   "sandbox plan"
+  ],
+  "55": [
+   "Ambiente de testagem da regulamentação da IA",
+   "AI regulatory sandbox"
+  ],
+  "56": [
+   "Literacia no domínio da IA",
+   "AI literacy"
+  ],
+  "57": [
+   "Testagem em condições reais",
+   "testing in real-world conditions"
+  ],
+  "58": [
+   "Participante",
+   "subject"
+  ],
+  "59": [
+   "Consentimento informado",
+   "informed consent"
+  ],
+  "60": [
+   "Falsificações profundas",
+   "deep fake"
+  ],
+  "61": [
+   "Infração generalizada",
+   "widespread infringement"
+  ],
+  "62": [
+   "Infraestrutura crítica",
+   "critical infrastructure"
+  ],
+  "63": [
+   "Modelo de IA de finalidade geral",
+   "general-purpose AI model"
+  ],
+  "64": [
+   "Capacidades de elevado impacto",
+   "high-impact capabilities"
+  ],
+  "65": [
+   "Risco sistémico",
+   "systemic risk"
+  ],
+  "66": [
+   "Sistema de IA de finalidade geral",
+   "general-purpose AI system"
+  ],
+  "67": [
+   "Operação de vírgula flutuante",
+   "floating-point operation"
+  ],
+  "68": [
+   "Prestador a jusante",
+   "downstream provider"
+  ]
+ },
+ "32019R0881": {
+  "1": [
+   "Cibersegurança",
+   "cybersecurity"
+  ],
+  "2": [
+   "Rede e sistema de informação",
+   "network and information system"
+  ],
+  "3": [
+   "Estratégia nacional de segurança das redes e dos sistemas de informação",
+   "national strategy on the security of network and information systems"
+  ],
+  "4": [
+   "Operador de serviços essenciais",
+   "operator of essential services"
+  ],
+  "5": [
+   "Prestador de serviços digitais",
+   "digital service provider"
+  ],
+  "6": [
+   "Incidente",
+   "incident"
+  ],
+  "7": [
+   "Tratamento de incidentes",
+   "incident handling"
+  ],
+  "8": [
+   "Ciberameaça",
+   "cyber threat"
+  ],
+  "9": [
+   "Sistema europeu de certificação da cibersegurança",
+   "European cybersecurity certification scheme"
+  ],
+  "10": [
+   "Sistema nacional de certificação da cibersegurança",
+   "national cybersecurity certification scheme"
+  ],
+  "11": [
+   "Certificado europeu de cibersegurança",
+   "European cybersecurity certificate"
+  ],
+  "12": [
+   "Produto de TIC",
+   "ICT product"
+  ],
+  "13": [
+   "Serviço de TIC",
+   "ICT service"
+  ],
+  "14": [
+   "Processo de TIC",
+   "ICT process"
+  ],
+  "15": [
+   "Acreditação",
+   "accreditation"
+  ],
+  "16": [
+   "Organismo nacional de acreditação",
+   "national accreditation body"
+  ],
+  "17": [
+   "Avaliação da conformidade",
+   "conformity assessment"
+  ],
+  "18": [
+   "Organismo de avaliação da conformidade",
+   "conformity assessment body"
+  ],
+  "19": [
+   "Norma",
+   "standard"
+  ],
+  "20": [
+   "Especificação técnica",
+   "technical specification"
+  ],
+  "21": [
+   "Nível de garantia",
+   "assurance level"
+  ],
+  "22": [
+   "Autoavaliação da conformidade",
+   "conformity self-assessment"
+  ]
+ }
+}

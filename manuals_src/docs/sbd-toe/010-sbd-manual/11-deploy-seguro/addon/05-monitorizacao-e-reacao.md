@@ -11,7 +11,7 @@ A fase de execução de uma aplicação em produção exige **observabilidade ad
 
 ---
 
-## 🔍 Domínios de observabilidade
+## 🔍 Domínios de observabilidade {#-domínios-de-observabilidade}
 
 | Domínio               | Descrição                                                             | Exemplos de ferramenta       |
 |------------------------|----------------------------------------------------------------------|------------------------------|
@@ -22,18 +22,18 @@ A fase de execução de uma aplicação em produção exige **observabilidade ad
 
 ---
 
-## 🚨 Exemplos de eventos que devem gerar alertas
+## 🚨 Exemplos de eventos que devem gerar alertas {#-exemplos-de-eventos-que-devem-gerar-alertas}
 
 - Aumento anormal de erros 5xx
 - Timeout em chamadas para dependências críticas
 - Ativação de kill switch
 - Acesso a funcionalidades desativadas por toggle
 - Logs com mensagens de exceção não tratadas
-- Detetação de padrões anómalos (ex: spikes de login)
+- Deteção de padrões anómalos (ex: spikes de login)
 
 ---
 
-## 🚒 Reação a incidentes
+## 🚒 Reação a incidentes {#-reação-a-incidentes}
 
 | Tipo de resposta          | Exemplo                                                          |
 |---------------------------|------------------------------------------------------------------|
@@ -46,7 +46,7 @@ A fase de execução de uma aplicação em produção exige **observabilidade ad
 
 ---
 
-## 📊 Métricas de rastreabilidade pós-deploy
+## 📊 Métricas de rastreabilidade pós-deploy {#-métricas-de-rastreabilidade-pós-deploy}
 
 - Latência média por funcionalidade
 - Erros por endpoint / método
@@ -61,20 +61,20 @@ Estas métricas devem ser ligadas a:
 
 ---
 
-## 💼 Requisitos para auditoria e rastreabilidade
+## 💼 Requisitos para auditoria e rastreabilidade {#-requisitos-para-auditoria-e-rastreabilidade}
 
 - Logs devem conter:
   - ID da release
   - Identificador de funcionalidade
   - Timestamp + contexto
-- Alteracões de configuração devem ser:
+- Alterações de configuração devem ser:
   - Versionadas
   - Auditadas por perfil autorizado
   - Ligadas a um motivo/documentação
 
 ---
 
-## ✅ Checklist de monitorização
+## ✅ Checklist de monitorização {#-checklist-de-monitorização}
 
 - [ ] Estão definidos alertas para eventos de segurança?
 - [ ] Todos os toggles críticos geram eventos no sistema de logs?

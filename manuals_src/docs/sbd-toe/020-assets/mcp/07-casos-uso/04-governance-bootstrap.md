@@ -15,46 +15,26 @@ tags:
 
 Há uma janela curta no início de um repositório novo em que tudo é mais barato: criar pastas, decidir convenções, deixar *placeholders* para artefactos que ainda não existem. Passada essa janela, retrofitar governança custa o triplo. Este caso de uso aproveita-a: o MCP sabe que artefactos o manual identifica para cada capítulo (políticas, templates, registos, *checklists*), e o agente usa essa lista para gerar um *scaffold* coerente em minutos. O conteúdo dos artefactos fica em aberto — preencher é trabalho da equipa — mas o esqueleto deixa visível, desde o primeiro dia, o que falta.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado.
 - *Risk level* alvo conhecido (`L1` é típico no arranque; subir conforme o sistema cresce).
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Listar artefactos requeridos
+### 1. Listar artefactos requeridos {#1-listar-artefactos-requeridos}
 
-```json
-plan_sbd_toe_repo_governance()
+```
+plan_sbd_toe_repo_governance(riskLevel, offset, limit)
 ```
 
-**Output esperado** (forma):
+**Output esperado** (campos): `byChapter[]` (os artefactos agrupados por capítulo, cada um `{artefactId, chapterId, riskLevels[]}`), `totalArtefacts` (o número de linhas capítulo↔artefacto), `artefact_totals` (`distinct_count`, os artefactos distintos, e `chapter_relation_count`, as linhas — nunca se somam linhas para contar artefactos), `coverage` e `risk_level_effect`. Os ids de artefacto têm a forma `ART-<slug>-<hash>`. A relação capítulo↔artefacto é uma projecção: não diz quem possui o artefacto nem obriga a produzi-lo. A resposta é paginada (`offset` / `limit`): percorrer todas as páginas antes de dar a lista por completa.
 
-```json
-{
-  "artifacts": [
-    {
-      "artifact_id": "ART-01-classificacao-aplicacoes-form",
-      "chapter": "01-classificacao-aplicacoes",
-      "description": "Formulário de classificação de risco",
-      "required_at": "project_init"
-    },
-    {
-      "artifact_id": "ART-02-requisitos-seguranca-catalog",
-      "chapter": "02-requisitos-seguranca",
-      "description": "Catálogo de requisitos de segurança",
-      "required_at": "project_init"
-    },
-    ...
-  ]
-}
-```
+### 2. Passar o *risk level* {#2-filtrar-por-risk-level-opcional}
 
-### 2. Filtrar por *risk level* (opcional)
+Passar o `riskLevel` a `plan_sbd_toe_repo_governance`: a resposta declara o efeito do nível em `risk_level_effect`. Não há artefactos a eliminar por nível — nenhum capítulo é excluído; a aplicabilidade é graduada e o que muda é a exigência (ver [`sbd://toe/chapter-applicability/{riskLevel}`](../06-resources-prompts.md#sbdtoechapter-applicabilityrisklevel)).
 
-Cruzar com [`sbd://toe/chapter-applicability/L1`](../06-resources-prompts.md#sbdtoechapter-applicabilityrisklevel) — eliminar artefactos de capítulos excluídos para o *risk level*.
-
-### 3. Estruturar o repo
+### 3. Estruturar o repo {#3-estruturar-o-repo}
 
 Layout recomendado:
 
@@ -73,21 +53,21 @@ repo-root/
 └── .claude/skills/sbd-toe.md              # Skill canónica (de generate_sbd_toe_skill)
 ```
 
-### 4. *Scaffold* automático
+### 4. *Scaffold* automático {#4-scaffold-automático}
 
-Para cada `artifact_id`:
+Para cada artefacto devolvido:
 
 ```markdown
 <!-- governance/<chapter>/<artifact>.md -->
 
 # <título>
 
-> **Artefacto:** `ART-<chapter>-<name>`
+> **Artefacto:** `ART-<slug>-<hash>`
 > **Capítulo:** [<chapter>](https://www.securitybydesign.dev/sbd-toe/sbd-manual/<chapter>/intro)
 > **Estado:** ⏳ pendente
 
 ## Propósito
-<do `description` do MCP>
+<do que o MCP devolve para o artefacto>
 
 ## Conteúdo esperado
 - ...
@@ -97,7 +77,7 @@ Para cada `artifact_id`:
 - Reviewers: <roles>
 ```
 
-### 5. Inicializar a sessão de equipa
+### 5. Inicializar a sessão de equipa {#5-inicializar-a-sessão-de-equipa}
 
 Em `AGENTS.md` / `CLAUDE.md`, incluir bloco de inicialização:
 
@@ -113,13 +93,13 @@ Este repositório segue o manual Security by Design — Theory of Everything.
   `setup_sbd_toe_agent(riskLevel="L1", projectRole="<role>")`
 ```
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 - O *bootstrap* gera **placeholders** — não preenche os artefactos. Cada artefacto requer trabalho de equipa.
 - **Não declarar conformidade** com base na existência de placeholders. Conformidade requer conteúdo preenchido + evidência.
-- Documentar o ***risk level* assumido** explicitamente em cada artefacto — se subir, alguns artefactos extra ficam a faltar.
+- Documentar o ***risk level* assumido** explicitamente em cada artefacto. Ao subir de L1 para L2, o capítulo 03 passa a listar os seus artefactos, e a lista por capítulo cresce, mas não aparecem artefactos novos. `risk_level_effect` declara que o nível filtra pouco, por desenho.
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-bootstrap.md`:
 
@@ -134,7 +114,7 @@ tools: Read, Write, Edit, Bash, mcp__sbd-toe__*
 
 1. Perguntar risk_level alvo se não estiver explícito.
 2. Chamar plan_sbd_toe_repo_governance.
-3. Filtrar artefactos por chapter applicable ao risk_level (via sbd://toe/chapter-applicability/{riskLevel}).
+3. Passar riskLevel a plan_sbd_toe_repo_governance e ler risk_level_effect (nenhum capítulo é excluído; paginar até ao fim).
 4. Criar layout governance/<chapter>/<artifact>.md com placeholders.
 5. Criar AGENTS.md + CLAUDE.md com bloco de inicialização.
 6. Guardar a skill canónica via generate_sbd_toe_skill em .claude/skills/sbd-toe.md.
@@ -142,21 +122,21 @@ tools: Read, Write, Edit, Bash, mcp__sbd-toe__*
 8. Não inventar conteúdo de artefactos — só scaffold.
 ```
 
-## Quando re-correr
+## Quando re-correr {#quando-re-correr}
 
 | Trigger | Acção |
 |---|---|
-| *Risk level* sobe (L1→L2 ou L2→L3) | Re-correr — adiciona artefactos dos capítulos novos. Não apagar nada. |
+| *Risk level* sobe (L1→L2 ou L2→L3) | Re-correr — a exigência muda; não apagar nada. |
 | Upgrade do MCP server | Re-correr `generate_sbd_toe_skill()` para refrescar a skill. |
 | Adição de cross-check normativo posterior ao *snapshot* do MCP | Adicionar manualmente a partir do manual web até nova publicação — confirmar a cobertura em `sbd://toe/version` (ver [content lag](../10-troubleshooting-faq.md#content-lag)). |
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Preencher os placeholders automaticamente com texto genérico — pior que vazio.
 - ❌ Apagar artefactos "que não vão ser usados" — esconde o gap.
 - ❌ Marcar artefactos como "concluídos" sem revisão humana.
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Onboarding](./onboarding-formacao) — depois do scaffold, treinar a equipa.
 - [Skills e agentes](../04-skills-agentes.md) — para configurar persistência.

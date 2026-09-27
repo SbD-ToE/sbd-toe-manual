@@ -17,11 +17,11 @@ Este addon define o que é o TLPT, o que o SbD-ToE já cobre como base de prepar
 
 ---
 
-## 1) Enquadramento normativo
+## 1) Enquadramento normativo {#1-enquadramento-normativo}
 
-### Regulamento DORA
+### Regulamento DORA {#regulamento-dora}
 
-O TLPT está regulado pelo **Regulamento (UE) 2022/2554** (DORA), em vigor desde 17 de janeiro de 2025:
+O TLPT está regulado pelo **Regulamento (UE) 2022/2554** (DORA), em vigor desde 16 de janeiro de 2023 e aplicável desde 17 de janeiro de 2025:
 
 | Artigo | Conteúdo |
 |--------|----------|
@@ -30,13 +30,13 @@ O TLPT está regulado pelo **Regulamento (UE) 2022/2554** (DORA), em vigor desde
 
 As normas técnicas de regulamentação (RTS) que detalham a metodologia TLPT foram publicadas como **Regulamento Delegado (UE) 2025/1190** da Comissão, em vigor desde **8 de julho de 2025**.
 
-### Base metodológica: TIBER-EU
+### Base metodológica: TIBER-EU {#base-metodológica-tiber-eu}
 
 O TLPT previsto no DORA é compatível com o **framework TIBER-EU** (Threat Intelligence-Based Ethical Red Teaming), publicado pelo Banco Central Europeu (BCE, 2018). Vários bancos centrais nacionais publicaram variantes nacionais (ex: TIBER-PT, TIBER-NL, TIBER-DE).
 
 > O TIBER-EU não é substituído pelo DORA - é a referência metodológica de base que os RTS formalizam. Entidades que já tenham conduzido exercícios TIBER podem utilizar esses resultados como contributo para o processo DORA, **desde que os exercícios sejam reconhecidos como alinhados com o Reg. Delegado (UE) 2025/1190 e aceites pela autoridade TLPT designada**. Esta equivalência não é automática.
 
-### Quem está sujeito a TLPT
+### Quem está sujeito a TLPT {#quem-está-sujeito-a-tlpt}
 
 📜 O TLPT **não se aplica a todas as entidades financeiras** abrangidas pelo DORA. A sujeição é determinada pelas autoridades competentes com base em critérios de risco e impacto sistémico, nos termos do Art. 26 DORA e dos RTS:
 
@@ -49,7 +49,7 @@ O TLPT previsto no DORA é compatível com o **framework TIBER-EU** (Threat Inte
 
 ---
 
-## 2) O que distingue TLPT de PenTest convencional
+## 2) O que distingue TLPT de PenTest convencional {#2-o-que-distingue-tlpt-de-pentest-convencional}
 
 | Dimensão | PenTest (addon 11) | TLPT |
 |----------|-------------------|------|
@@ -64,11 +64,11 @@ O TLPT previsto no DORA é compatível com o **framework TIBER-EU** (Threat Inte
 
 ---
 
-## 3) Pré-condições de readiness
+## 3) Pré-condições de readiness {#3-pré-condições-de-readiness}
 
 O SbD-ToE não estabelece o TLPT em si, mas a maturidade técnica e documental que produz **é relevante para a qualidade e sustentação do exercício**. Esta secção distingue explicitamente o que é obrigação regulatória do que é boa prática de preparação.
 
-### 3.1 Threat Model → Cap. 03
+### 3.1 Threat Model → Cap. 03 {#31-threat-model--cap-03}
 
 🛠️ O TLPT é "threat-led" porque os cenários são derivados de threat intelligence real. Para que esses cenários sejam aplicáveis à entidade com eficácia, é útil ter:
 
@@ -78,7 +78,7 @@ O SbD-ToE não estabelece o TLPT em si, mas a maturidade técnica e documental q
 
 > Não existe disposição nos RTS que exija formalmente um threat model interno como pré-condição. No entanto, a sua ausência tende a produzir cenários TLPT genéricos com menor cobertura dos riscos reais da entidade.
 
-### 3.2 Programa de testes de segurança aplicacional → Cap. 10
+### 3.2 Programa de testes de segurança aplicacional → Cap. 10 {#32-programa-de-testes-de-segurança-aplicacional--cap-10}
 
 🛠️ A existência de um programa de testes - SAST, DAST, IAST, fuzzing, PenTest - não é pré-condição regulatória para realizar TLPT. Uma entidade é identificada para TLPT pela sua relevância sistémica e perfil de risco ICT, independentemente do estado do seu programa de testes.
 
@@ -88,7 +88,7 @@ Compreender o que cada técnica de teste cobre - e o que não cobre - ajuda a in
 
 > A ausência de SAST, DAST, PenTest etc. não impede legalmente a realização de TLPT - ficará, no entanto, reflectida nos resultados do exercício e no plano de remediação exigido para attestation.
 
-### 3.3 Monitorização e resposta a incidentes → Cap. 12
+### 3.3 Monitorização e resposta a incidentes → Cap. 12 {#33-monitorização-e-resposta-a-incidentes--cap-12}
 
 🛠️ O TLPT é executado em produção real. A presença de monitorização operacional permite distinguir actividade do exercício de uma ameaça real, e é condição de segurança para a execução controlada:
 
@@ -98,7 +98,7 @@ Compreender o que cada técnica de teste cobre - e o que não cobre - ajuda a in
 
 > A existência de monitorização em produção não é requisito formal nos RTS para a realização de TLPT, mas é uma salvaguarda operacional que as equipas de segurança e os testers qualificados considerarão na fase de planeamento.
 
-### 3.4 Framework contratual com terceiros → Cap. 14
+### 3.4 Framework contratual com terceiros → Cap. 14 {#34-framework-contratual-com-terceiros--cap-14}
 
 📜 O TLPT envolve testers qualificados externos e, potencialmente, fornecedores ICT via pooled testing. Os RTS estabelecem requisitos de independência e qualificação para os executores (Art. 27 DORA).
 
@@ -110,7 +110,7 @@ Compreender o que cada técnica de teste cobre - e o que não cobre - ajuda a in
 
 ---
 
-## 4) O que o TLPT exige além do SbD-ToE
+## 4) O que o TLPT exige além do SbD-ToE {#4-o-que-o-tlpt-exige-além-do-sbd-toe}
 
 Os seguintes elementos são **obrigações do processo TLPT** (📜 regulatório) que estão fora do âmbito de cobertura do SbD-ToE e devem ser geridos pelas equipas de compliance, GRC e relação com o supervisor:
 
@@ -128,7 +128,7 @@ Os seguintes elementos são **obrigações do processo TLPT** (📜 regulatório
 
 ---
 
-## 5) Integração explícita com este capítulo
+## 5) Integração explícita com este capítulo {#5-integração-explícita-com-este-capítulo}
 
 Este addon articula-se com o restante Cap. 10 da seguinte forma:
 
@@ -142,7 +142,7 @@ Este addon articula-se com o restante Cap. 10 da seguinte forma:
 
 ---
 
-## 6) Checklist de readiness (binário)
+## 6) Checklist de readiness (binário) {#6-checklist-de-readiness-binário}
 
 | Item | Regulatório / Boa prática | Sim/Não |
 |------|:-------------------------:|:-------:|
@@ -161,7 +161,7 @@ Este addon articula-se com o restante Cap. 10 da seguinte forma:
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 O TLPT é a expressão mais exigente do princípio *"testar como o adversário ataca"*. A dimensão regulatória - identificação pela autoridade, qualificação de testers e providers, attestation - é estritamente da competência do supervisor e das equipas de compliance, e está fora do âmbito do SbD-ToE.
 

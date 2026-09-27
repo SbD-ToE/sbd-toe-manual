@@ -7,7 +7,7 @@ tags: [exemplos, incidentes, reporte, dora, template]
 
 # Exemplo: Relatório de Incidentes
 
-## Enquadramento
+## Enquadramento {#enquadramento}
 
 O SbD-ToE prescreve ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):
 - ✓ Processos de deteção de incidentes
@@ -20,20 +20,20 @@ Este documento apresenta um **template exemplar** de como estruturar reporte de 
 
 ---
 
-## ⚠️ Aviso Importante
+## ⚠️ Aviso Importante {#️-aviso-importante}
 
 **Este é um exemplo** - não é o template oficial DORA.
 
-Os reguladores (EBA, BCB, ESMA) publicarão templates ITS oficiais. Este exemplo:
+As normas técnicas (RTS/ITS) com os modelos oficiais são elaboradas pelas AES (EBA, EIOPA e ESMA), através do Comité Conjunto, nos termos do art. 20.º do DORA. Este exemplo:
 - Ilustra **princípios** de estruturação
 - Pode servir como **base interna**
 - Deve ser **adaptado** aos templates regulatórios finais
 
 ---
 
-## Estrutura de Incidente
+## Estrutura de Incidente {#estrutura-de-incidente}
 
-### 1. Identificação
+### 1. Identificação {#1-identificação}
 
 ```
 Incident ID: INC-2025-001234
@@ -42,14 +42,16 @@ Detection Channel: SIEM alert (WAF)
 Reporter: Security Team
 ```
 
-### 2. Classificação Inicial
+### 2. Classificação Inicial {#2-classificação-inicial}
 
 ```
 Severity (SbD-ToE):
-├─ Critical (P0): Impacto imediato em apps L3 / dados sensíveis
-├─ High (P1): Impacto em apps L2 / comprometimento significativo
-├─ Medium (P2): Impacto limitado / dados não-sensíveis
-└─ Low (P3): Informativo
+├─ Critical (P1): Impacto imediato em produção / dados sensíveis
+├─ High (P2): Comprometimento significativo
+├─ Medium (P3): Impacto limitado / dados não-sensíveis
+└─ Low (P4): Informativo
+(A severidade não depende do nível L. Trilho regulatório: qualquer
+ severidade, qualquer nível; sobe no mínimo a P2 - Política 32 §4.1)
 
 Categorization:
 ├─ Malware/Ransomware
@@ -62,7 +64,7 @@ Categorization:
 └─ Other
 ```
 
-### 3. Timeline
+### 3. Timeline {#3-timeline}
 
 ```
 Timeline (UTC):
@@ -76,7 +78,7 @@ Timeline (UTC):
 - 16:00 - Incident closed (provisional)
 ```
 
-### 4. Impacto
+### 4. Impacto {#4-impacto}
 
 ```
 Impact:
@@ -88,7 +90,7 @@ Impact:
 └─ Regulatory Impact: DORA Art. 18 reportable? No (within thresholds)
 ```
 
-### 5. Root Cause Analysis
+### 5. Root Cause Analysis {#5-root-cause-analysis}
 
 ```
 Root Cause:
@@ -99,7 +101,7 @@ Root Cause:
 - Success: 0 (credentials not compromised)
 ```
 
-### 6. Remediation
+### 6. Remediation {#6-remediation}
 
 ```
 Immediate Actions (done):
@@ -114,7 +116,7 @@ Follow-up Actions (planned):
 - [ ] Retest: Penetration testing (within 30 days)
 ```
 
-### 7. Lições Aprendidas
+### 7. Lições Aprendidas {#7-lições-aprendidas}
 
 ```
 What went well:
@@ -126,7 +128,7 @@ What went well:
 What could improve:
 - Should have had rate limiting from start (code review gap)
 - CAPTCHA should be standard (not opt-in)
-- Post-incident review should happen faster (within 24h)
+- Post-incident review should happen faster (within 24h, well inside the 5 working days of Policy 32)
 
 Action Items:
 1. Add rate limiting to security checklist (Dev team)
@@ -134,10 +136,10 @@ Action Items:
 3. Update threat model to include brute-force (Arch)
 ```
 
-### 8. Conformidade DORA (Informativo)
+### 8. Conformidade DORA (Informativo) {#8-conformidade-dora-informativo}
 
 ```
-DORA Art. 18 Threshold Analysis:
+DORA art. 18.º + Reg. Delegado (UE) 2024/1772, art. 8.º–9.º — análise de limiares: serviços críticos afetados? acesso malicioso bem-sucedido com possível perda de dados (art. 9.º, n.º 5, al. b))? clientes > 10 % ou > 100 000; transações > 10 %; duração > 24 h ou indisponibilidade > 2 h (funções críticas/importantes); ≥ 2 Estados-Membros; impacto económico > 100 000 EUR; impacto reputacional (art. 2.º)
 - Availability Impact: `<`20% (low)
 - Confidentiality Impact: None
 - Integrity Impact: None
@@ -151,7 +153,7 @@ Decision: Not reportable to supervisor
 
 ---
 
-## Template Genérico (Excel/Jira/ServiceNow)
+## Template Genérico (Excel/Jira/ServiceNow) {#template-genérico-exceljiraservicenow}
 
 Este template estrutura sistemas de tickets de incidentes:
 
@@ -162,7 +164,7 @@ Este template estrutura sistemas de tickets de incidentes:
 | Description | Text | Sim | Descrição detalhada do incidente |
 | Detection Date | DateTime | Sim | Data/hora UTC de detecção |
 | Reporter | Dropdown (staff) | Sim | Quem reportou |
-| Severity | Dropdown (P0-P3) | Sim | SbD-ToE classification |
+| Severity | Dropdown (P1-P4) | Sim | SbD-ToE classification |
 | Category | Dropdown | Sim | Tipo de incidente |
 | Affected Systems | Multi-select | Sim | Apps/infra impactados |
 | Root Cause | Text | Condicional (pós-investigação) | Causa identificada |
@@ -171,52 +173,62 @@ Este template estrutura sistemas de tickets de incidentes:
 | Status | Dropdown (Open/Investigating/Remediated/Closed) | Sim | Estado atual |
 | Resolution Date | DateTime | Condicional (pós-resolução) | Quando foi resolvido |
 | Retest Date | DateTime | Condicional | Quando será testado |
-| DORA Reportable | Dropdown (Yes/No/Unknown) | Condicional (pós-investigação) | Necessário notificar? |
+| Regulatory Track | Multi-select (RGPD/NIS2/DORA/CRA/AI Act/None/Under assessment) | Sim (na triagem; decisão ≤ 4 h) | Que notificações se aplicam e quando conta o prazo? |
 | Related Incidents | Multi-link | Não | Incidentes relacionados |
 | Attachments | Files | Não | Logs, screenshots, etc. |
 | Audit Trail | Read-only log | Sim | Quem fez o quê, quando |
 
 ---
 
-## Cronograma de Reporte
+## Cronograma de Reporte {#cronograma-de-reporte}
 
-### Imediato (< 1 hora)
+### Imediato (< 1 hora) {#imediato--1-hora}
 - [ ] Detectar e confirmar
 - [ ] Criar ticket
 - [ ] Notificar on-call
+- [ ] Indício de trilho regulatório? Escalar para GRC/Compliance + EPD/DPO (≤ 1 h) e registar o momento do conhecimento
 
-### Curto prazo (< 24 horas)
+### Curto prazo (< 24 horas) {#curto-prazo--24-horas}
+- [ ] Decisão de notificabilidade (≤ 4 h)
+- [ ] Alerta rápido NIS2 / alerta precoce CRA (≤ 24 h após o conhecimento); notificação inicial DORA nos prazos do Reg. Delegado (UE) 2025/301
 - [ ] Investigação completa
 - [ ] Root cause identificado
 - [ ] Remediation em progresso
 
-### Médio prazo (< 7 dias)
+### Médio prazo (< 7 dias) {#médio-prazo--7-dias}
 - [ ] Remediation completa
 - [ ] Testes validaram fix
 - [ ] Lições aprendidas documentadas
 
-### Compliance (conforme DORA)
-- [ ] Análise DORA (reportável?)
-- [ ] Notificação supervisor (se aplica)
-- [ ] Arquivo para 3+ anos (audit trail)
+### Compliance (relógios regulatórios) {#compliance-conforme-dora}
+- [ ] RGPD: autoridade de controlo ≤ 72 h após o conhecimento (art. 33.º); titulares sem demora injustificada se houver elevado risco (art. 34.º)
+- [ ] NIS2: notificação de incidente ≤ 72 h; relatório final ≤ 1 mês após a notificação
+- [ ] DORA: relatório intercalar e final nos prazos do Reg. Delegado (UE) 2025/301, art. 5.º
+- [ ] CRA: notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave)
+- [ ] AI Act: incidente grave ≤ 15 dias (10 em caso de morte; 2 em caso de infração generalizada ou de incidente grave do art. 3.º, ponto 49, alínea b)), a contar do conhecimento pelo prestador ou, se for caso disso, pelo responsável pela implantação - art. 73.º, n.os 2 a 4
+- [ ] Post-mortem ≤ 5 dias úteis após a resolução (Política 32 §4.6)
+- [ ] Arquivo conforme a Política 06 §10 (1 ano em L1/L2, 3 anos em L3; audit trail)
 
 ---
 
-## Retenção de Logs
+> 📌 **CRA em paralelo.** Se o incidente envolver uma vulnerabilidade ativamente explorada, ou um incidente grave, num produto com elementos digitais que a organização coloca no mercado, aplica-se também o CRA, art. 14.º (desde 11 de setembro de 2026): notificação de alerta precoce ≤24 h, notificação ≤72 h e relatório final, à CSIRT designada como coordenadora e à ENISA, através da plataforma única de comunicação de informações.
 
-**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + DORA Art. 18:**
+## Retenção de Logs {#retenção-de-logs}
+
+**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Reg. Delegado (UE) 2024/1774, art. 22.º, al. d) — período definido pela entidade, proporcional à criticalidade e não superior ao necessário). Os valores abaixo são escolha do Manual, conforme a [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) e a [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs):**
 
 ```
-Todos os incidentes + trilho auditoria devem ser retidos:
-- Mínimo: 3 anos
-- Recomendado: 5 anos
+Registos de incidentes (timeline, post-mortem, notificações):
+- L1 / L2: 1 ano
+- L3: 3 anos
+Trilho de auditoria: 1 ano (L1/L2), 3 anos (L3)
 - Acesso: Immutable (WORM - Write Once Read Many)
 - Verificação: Integridade criptográfica (hash)
 ```
 
 ---
 
-## Integração com SIEM
+## Integração com SIEM {#integração-com-siem}
 
 Exemplo de envio automático de incidentes do SIEM para sistema de tickets:
 
@@ -242,9 +254,9 @@ Exemplo de envio automático de incidentes do SIEM para sistema de tickets:
 
 ---
 
-## Próximos Passos
+## Próximos Passos {#próximos-passos}
 
-Quando DORA RTS/ITS oficiais saírem:
+Com base nas normas técnicas de reporte já adotadas ao abrigo dos art. 18.º e 20.º do DORA (Reg. Delegado (UE) 2024/1772 — classificação; Reg. Delegado (UE) 2025/301 — conteúdo e prazos; Reg. de Execução (UE) 2025/302 — formulários e modelos):
 1. Comparar este template com oficial
 2. Estender com campos adicionais DORA
 3. Integrar com sistema de reporting regulatório

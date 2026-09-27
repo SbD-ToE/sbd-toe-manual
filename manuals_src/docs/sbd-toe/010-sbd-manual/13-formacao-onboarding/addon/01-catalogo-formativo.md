@@ -8,7 +8,7 @@ tags: [formacao, perfis, conteudos, catalogo, onboarding]
 
 # Catálogo de Conteúdos Formativos SbD-ToE
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Cruzar os **14 capítulos técnicos do manual SbD-ToE** com os **conteúdos de formação essenciais**, de forma a orientar:
 
@@ -23,7 +23,7 @@ Este catálogo serve de base para programas de formação, onboarding, labs e CT
 
 ---
 
-## 🧬 O que contém
+## 🧬 O que contém {#-o-que-contém}
 
 A matriz define, por capítulo técnico do manual:
 
@@ -36,14 +36,14 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-## 📋 Estrutura da Tabela
+## 📋 Estrutura da Tabela {#-estrutura-da-tabela}
 
 | Capítulo | Tópico a ensinar                   | Público-alvo       | Nível de risco | Formato sugerido                         |
 |----------|------------------------------------|---------------------|----------------|------------------------------------------|
 
 ---
 
-## 📘 Mapa por Capítulo
+## 📘 Mapa por Capítulo {#-mapa-por-capítulo}
 
 | Capítulo | Tópico a ensinar                              | Público-alvo       | Nível | Formato sugerido                    |
 |----------|-----------------------------------------------|---------------------|--------|-------------------------------------|
@@ -73,7 +73,7 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
 - Instanciar como matriz de referência em:
   - Programas de onboarding por função
@@ -86,7 +86,7 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Rever anualmente os tópicos por capítulo e função
 - Usar a matriz como base para criação de labs e workshops internos
@@ -95,7 +95,7 @@ A matriz define, por capítulo técnico do manual:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                           | Relação                                     |
 |-------------------------------------|---------------------------------------------|

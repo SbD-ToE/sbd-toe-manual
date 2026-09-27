@@ -13,7 +13,7 @@ Este documento estabelece o enquadramento técnico e processual para a realizaç
 
 ---
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Definir:
 
@@ -25,7 +25,7 @@ Definir:
 
 ---
 
-## 🔍 O que é PenTesting
+## 🔍 O que é PenTesting {#-o-que-é-pentesting}
 
 PenTesting é uma **validação ofensiva manual e exploratória**, que simula ataques reais sobre um sistema com o objetivo de:
 
@@ -37,11 +37,11 @@ PenTesting é uma **validação ofensiva manual e exploratória**, que simula at
 
 ---
 
-## ⚙️ Abordagens possíveis
+## ⚙️ Abordagens possíveis {#️-abordagens-possíveis}
 
 Existem duas formas principais de conduzir um PenTest:
 
-### ⚫ Abordagem "Caixa Negra" (*Black Box*)
+### ⚫ Abordagem "Caixa Negra" (*Black Box*) {#-abordagem-caixa-negra-black-box}
 
 | Característica           | Descrição |
 |--------------------------|-----------|
@@ -57,7 +57,7 @@ Existem duas formas principais de conduzir um PenTest:
 
 ---
 
-### ⚪ Abordagem "Caixa Cinzenta" (*Grey Box*)
+### ⚪ Abordagem "Caixa Cinzenta" (*Grey Box*) {#-abordagem-caixa-cinzenta-grey-box}
 
 | Característica           | Descrição |
 |--------------------------|-----------|
@@ -73,7 +73,7 @@ Existem duas formas principais de conduzir um PenTest:
 
 ---
 
-## 🔁 Integração com o Capítulo 10
+## 🔁 Integração com o Capítulo 10 {#-integração-com-o-capítulo-10}
 
 O PenTest **não substitui** testes contínuos - é um **complemento estratégico** para:
 
@@ -81,7 +81,7 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 - Confirmar a cobertura de testes automatizados;
 - Identificar abusos que escapam à análise sistemática.
 
-### Ciclo de integração sugerido:
+### Ciclo de integração sugerido: {#ciclo-de-integração-sugerido}
 
 1. **Antes do PenTest**
    - Consolidar findings dos testes automatizados;
@@ -100,7 +100,7 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 
 ---
 
-## 📋 Checklist de Planeamento
+## 📋 Checklist de Planeamento {#-checklist-de-planeamento}
 
 | Item                                                       | Verificado? |
 |------------------------------------------------------------|-------------|
@@ -115,7 +115,7 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 
 ---
 
-## 📎 Diferença entre PenTest e outras validações
+## 📎 Diferença entre PenTest e outras validações {#-diferença-entre-pentest-e-outras-validações}
 
 | Tipo                   | Características                               | Automatizado? | Executado por        |
 |------------------------|-----------------------------------------------|---------------|------------------------|
@@ -127,7 +127,7 @@ O PenTest **não substitui** testes contínuos - é um **complemento estratégic
 
 ---
 
-## ✅ Conclusão
+## ✅ Conclusão {#-conclusão}
 
 O PenTesting é um **instrumento de validação externa e independente**. A sua eficácia depende diretamente da sua **integração com os mecanismos internos de segurança**.
 

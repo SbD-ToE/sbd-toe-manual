@@ -8,7 +8,7 @@ tags: [tipo:anexo, grupo:execucao, tema:release, segurança, staging]
 
 # Práticas de Release Management com Foco em Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Descrever e sistematizar práticas seguras de **gestão de versões, releases e distribuição de software**, com foco em:
 
@@ -19,7 +19,7 @@ Descrever e sistematizar práticas seguras de **gestão de versões, releases e 
 
 ---
 
-## 🧬 O que é Release Management Seguro
+## 🧬 O que é Release Management Seguro {#-o-que-é-release-management-seguro}
 
 Release Management é o processo de **preparação, aprovação, distribuição e monitorização de uma nova versão de software**. Uma release segura deve:
 
@@ -30,9 +30,9 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## 🛠️ Como aplicar
+## 🛠️ Como aplicar {#️-como-aplicar}
 
-### 🗂️ Elementos essenciais de uma release segura
+### 🗂️ Elementos essenciais de uma release segura {#️-elementos-essenciais-de-uma-release-segura}
 
 | Elemento                       | Descrição                                                                 |
 |--------------------------------|---------------------------------------------------------------------------|
@@ -46,7 +46,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-### 🧪 Validações recomendadas por nível de risco
+### 🧪 Validações recomendadas por nível de risco {#-validações-recomendadas-por-nível-de-risco}
 
 | Nível de Risco | Validações mínimas antes de produção                                            |
 |----------------|---------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-### ✅ Exemplo de checklist de release (mínimo recomendado)
+### ✅ Exemplo de checklist de release (mínimo recomendado) {#-exemplo-de-checklist-de-release-mínimo-recomendado}
 
 - [ ] Todos os testes passaram em CI/CD
 - [ ] Findings críticos resolvidos ou justificados
@@ -71,9 +71,9 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## 🔁 Versionamento e Reversibilidade
+## 🔁 Versionamento e Reversibilidade {#-versionamento-e-reversibilidade}
 
-### 📁 Versionamento seguro
+### 📁 Versionamento seguro {#-versionamento-seguro}
 
 - Usar **versionamento semântico** (`MAJOR.MINOR.PATCH`) com convenções documentadas;
 - Associar a cada release:
@@ -82,7 +82,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
   - Owner / equipa responsável;
   - Justificação (ex: fix urgente, nova feature, refactor).
 
-### 📉 Rollback
+### 📉 Rollback {#-rollback}
 
 - Deve ser planeado como parte da release, não como exceção;
 - Deve permitir:
@@ -93,7 +93,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## 📊 Indicadores de risco por release
+## 📊 Indicadores de risco por release {#-indicadores-de-risco-por-release}
 
 - Nº de toggles ativos;
 - Nº de findings abertos;
@@ -103,7 +103,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## 🧰 Ferramentas de suporte
+## 🧰 Ferramentas de suporte {#-ferramentas-de-suporte}
 
 | Categoria        | Ferramentas recomendadas                          |
 |------------------|---------------------------------------------------|
@@ -114,7 +114,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Integrar segurança no processo de release (shift-left + shift-right);
 - Exigir aprovação explícita para releases em produção;
@@ -126,7 +126,7 @@ Release Management é o processo de **preparação, aprovação, distribuição 
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento / Capítulo         | Relação com este tema                       |
 |------------------------------|---------------------------------------------|

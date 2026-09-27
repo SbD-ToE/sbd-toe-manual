@@ -18,7 +18,7 @@ A não identificação explícita destes riscos compromete a fiabilidade do mode
 
 ---
 
-## 1. Omissão estrutural de ameaças
+## 1. Omissão estrutural de ameaças {#1-omissão-estrutural-de-ameaças}
 
 Nem todas as ameaças relevantes são necessariamente identificadas durante uma sessão de Threat Modeling.
 
@@ -34,7 +34,7 @@ A ausência de uma ameaça num modelo **não constitui evidência da sua inexist
 
 ---
 
-## 2. Enviesamento de perspetiva
+## 2. Enviesamento de perspetiva {#2-enviesamento-de-perspetiva}
 
 O Threat Modeling reflete inevitavelmente as perspetivas, experiências e pressupostos dos participantes.
 
@@ -49,7 +49,7 @@ Este enviesamento deve ser assumido como **risco inerente**, não como falha exc
 
 ---
 
-## 3. Confusão entre análise intermédia e decisão formal
+## 3. Confusão entre análise intermédia e decisão formal {#3-confusão-entre-análise-intermédia-e-decisão-formal}
 
 Durante o processo são produzidos múltiplos artefactos intermédios:
 - listas de ameaças potenciais;
@@ -69,7 +69,7 @@ introduz ambiguidade e fragiliza a governação do risco.
 
 ---
 
-## 4. Dependência acrítica de modelos prévios
+## 4. Dependência acrítica de modelos prévios {#4-dependência-acrítica-de-modelos-prévios}
 
 A reutilização de modelos anteriores é prática comum e legítima, mas introduz riscos quando:
 - o contexto mudou;
@@ -83,7 +83,7 @@ Modelos herdados devem ser tratados como **hipóteses de partida**, nunca como v
 
 ---
 
-## 5. Uso não controlado de informação sensível
+## 5. Uso não controlado de informação sensível {#5-uso-não-controlado-de-informação-sensível}
 
 O processo de Threat Modeling envolve frequentemente:
 - diagramas arquiteturais detalhados;
@@ -96,7 +96,7 @@ Estes artefactos constituem **ativos de alto valor**, sujeitos a requisitos de c
 
 ---
 
-## 6. Resultados plausíveis mas incorretos
+## 6. Resultados plausíveis mas incorretos {#6-resultados-plausíveis-mas-incorretos}
 
 Um modelo de ameaças pode parecer:
 - coerente,
@@ -111,7 +111,7 @@ A plausibilidade não substitui validação, revisão e evidência.
 
 ---
 
-## 7. Implicações para o SbD-ToE
+## 7. Implicações para o SbD-ToE {#7-implicações-para-o-sbd-toe}
 
 O SbD-ToE assume explicitamente que:
 - o Threat Modeling é um processo falível;

@@ -10,7 +10,7 @@ tags: [kpi, metricas, DPL, deploy, release, break-glass, rollback, L1, L2, L3]
 
 # KPIs e Métricas - Deploy Seguro
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **segurança do processo de deploy e gestão de releases**: a cobertura das validações pré-deploy, o controlo e rastreabilidade de deploys de emergência (break-glass), a qualidade dos artefactos de evidência de deploy, e a separação efectiva de configuração entre ambientes.
 
@@ -20,7 +20,7 @@ Os indicadores DPL alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **DPL-K01 - Checklist validado:** considera-se validado um checklist que: (a) foi preenchido pelo responsável técnico do deploy; (b) inclui verificação de security gates do pipeline; (c) está associado ao identificador do deploy (pipeline run ID, ticket, change record). Checklists genéricos sem associação ao deploy específico não satisfazem este critério.
 
@@ -78,7 +78,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -92,11 +92,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos DPL-001..009 que fundamentam os indicadores |
 | `addon/09-excecoes-deploy.md` | Processo de break-glass e aprovação post-facto (DPL-K02/K03/K07) |
 | `addon/04-validacoes-pre-deploy.md` | Checklist de segurança pré-deploy (DPL-K01) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02 |

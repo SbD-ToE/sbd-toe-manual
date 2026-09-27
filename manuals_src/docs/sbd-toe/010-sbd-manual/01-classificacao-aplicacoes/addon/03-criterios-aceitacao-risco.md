@@ -17,7 +17,7 @@ Este ficheiro define os **critérios mínimos** para aceitação de risco, alinh
 
 ---
 
-## 🧠 Princípio fundamental
+## 🧠 Princípio fundamental {#-princípio-fundamental}
 
 Um risco **só pode ser aceite** quando:
 
@@ -30,7 +30,7 @@ Sempre que estes pressupostos não se verifiquem, a aceitação de risco **não 
 
 ---
 
-## 📌 Parâmetros para avaliação
+## 📌 Parâmetros para avaliação {#-parâmetros-para-avaliação}
 
 A decisão de aceitação de risco deve considerar, no mínimo:
 
@@ -44,7 +44,7 @@ A decisão de aceitação de risco deve considerar, no mínimo:
 
 ---
 
-## ⚖️ Limiares de aceitação por nível
+## ⚖️ Limiares de aceitação por nível {#️-limiares-de-aceitação-por-nível}
 
 | Nível da aplicação         | Risco Residual Máximo Aceitável | Observações                                     |
 | -------------------------- | ------------------------------- | ----------------------------------------------- |
@@ -57,7 +57,7 @@ A decisão de aceitação de risco deve considerar, no mínimo:
 
 ---
 
-## 🧩 Condições adicionais em contextos de automação e apoio à decisão
+## 🧩 Condições adicionais em contextos de automação e apoio à decisão {#-condições-adicionais-em-contextos-de-automação-e-apoio-à-decisão}
 
 A utilização de automação ou apoio à decisão (incluindo IA) **não invalida por si só** a aceitação de risco.
 
@@ -68,7 +68,7 @@ Contudo, a aceitação **fica condicionada** quando esses mecanismos alteram atr
 - **introduzem não determinismo** relevante;
 - **executam ações com impacto real** sem validação humana obrigatória.
 
-### ❌ Situações em que a aceitação de risco **não é permitida**
+### ❌ Situações em que a aceitação de risco **não é permitida** {#-situações-em-que-a-aceitação-de-risco-não-é-permitida}
 
 Não é aceitável aceitar risco quando:
 
@@ -80,7 +80,7 @@ Não é aceitável aceitar risco quando:
 
 ---
 
-## 🧾 Exemplos de critérios formais de aceitação válidos
+## 🧾 Exemplos de critérios formais de aceitação válidos {#-exemplos-de-critérios-formais-de-aceitação-válidos}
 
 A aceitação pode ser considerada quando, cumulativamente:
 
@@ -92,7 +92,7 @@ A aceitação pode ser considerada quando, cumulativamente:
 
 ---
 
-## 🏡 Processo recomendado de aceitação
+## 🏡 Processo recomendado de aceitação {#-processo-recomendado-de-aceitação}
 
 1. **Identificação clara** do risco e dos seus atributos relevantes.
 2. Validação dos controlos aplicados e da evidência disponível.
@@ -103,7 +103,7 @@ A aceitação pode ser considerada quando, cumulativamente:
 
 ---
 
-## 📌 Recomendações finais
+## 📌 Recomendações finais {#-recomendações-finais}
 
 - Formalizar uma **policy de aceitação de risco aplicacional**, com papéis e responsabilidades definidos.
 - Integrar decisões de aceitação nos **artefactos de release e governação**.

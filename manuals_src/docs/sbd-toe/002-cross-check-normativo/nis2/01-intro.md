@@ -8,7 +8,7 @@ sidebar_position: 3
 
 # Cross-check normativo - NIS2
 
-## Âmbito
+## Âmbito {#âmbito}
 
 A **Diretiva (UE) 2022/2555 (NIS2)** (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555)) atualiza o quadro europeu de cibersegurança para entidades essenciais e importantes em 18 setores, reforçando governação, medidas de gestão de risco e obrigação de reporte de incidentes. Os Estados-Membros tinham até 17 de outubro de 2024 para transpor a NIS2; a NIS1 foi revogada a 18 de outubro de 2024.
 
@@ -21,13 +21,13 @@ Este documento apresenta:
 
 ---
 
-## PARTE I: ANÁLISE NORMATIVA
+## PARTE I: ANÁLISE NORMATIVA {#parte-i-análise-normativa}
 
-### Artigo 20 - Governação e responsabilização
+### Artigo 20 - Governação e responsabilização {#artigo-20---governação-e-responsabilização}
 
 **Conteúdo normativo**
 
-O Art. 20 coloca o órgão de gestão no centro: ele aprova as medidas de gestão de risco de cibersegurança, supervisiona a execução e pode ser responsabilizado por incumprimentos. Exige ainda formação regular para a gestão.
+O Art. 20 coloca o órgão de direção no centro: aprova as medidas de gestão dos riscos de cibersegurança, supervisiona a sua aplicação e pode ser responsabilizado por infrações. Exige ainda formação para os membros do órgão de direção (e incentiva formação regular dos trabalhadores).
 
 **Cobertura SbD-ToE**
 
@@ -53,11 +53,11 @@ Sugere-se registar, no Cap. 14, como a cadeia de aprovação e supervisão da ge
 
 ---
 
-### Artigo 21 - Medidas de gestão de risco de cibersegurança
+### Artigo 21 - Medidas de gestão de risco de cibersegurança {#artigo-21---medidas-de-gestão-de-risco-de-cibersegurança}
 
 **Conteúdo normativo**
 
-O Art. 21 pede um conjunto mínimo de medidas, num all-hazards approach: políticas de análise de risco e segurança, gestão de incidentes, continuidade/crise (backups, DR), segurança da cadeia de fornecimento, segurança em aquisição/desenvolvimento/manutenção, avaliação da eficácia dos controlos, higiene cibernética/treino, IAM, criptografia, gestão de vulnerabilidades/patching, logging e monitorização.
+O Art. 21, n.º 2, pede medidas que, numa abordagem que abranja todos os riscos, cubram pelo menos: políticas de análise dos riscos e de segurança dos sistemas de informação; tratamento de incidentes; continuidade das atividades (cópias de segurança, recuperação de desastres) e gestão de crises; segurança da cadeia de abastecimento; segurança na aquisição, desenvolvimento e manutenção dos sistemas, incluindo o tratamento e a divulgação de vulnerabilidades; avaliação da eficácia das medidas; práticas básicas de ciber-higiene e formação em cibersegurança; criptografia e cifragem; segurança dos recursos humanos, controlo do acesso e gestão de ativos; autenticação multifatores e comunicações seguras. Para os prestadores de DNS, registos de TLD, computação em nuvem, centros de dados, CDN, serviços geridos e de segurança geridos, mercados em linha, motores de pesquisa, redes sociais e prestadores de serviços de confiança, o Reg. de Execução (UE) 2024/2690 concretiza estas medidas, incluindo monitorização e registo (anexo, ponto 3.2).
 
 Em 2024/2025, a Comissão e a ENISA publicaram orientações técnicas e mapeamentos práticos com exemplos de evidência para implementar estas medidas - utilíssimos para auditoria.
 
@@ -97,15 +97,15 @@ Sugere-se usar o catálogo do Cap. 02 como base de SoA técnica, complementado p
 
 ---
 
-### Artigo 23 - Reporte de incidentes
+### Artigo 23 - Reporte de incidentes {#artigo-23---reporte-de-incidentes}
 
 **Conteúdo normativo**
 
 A NIS2 define um trilho de reporte para incidentes significativos:
 
-- **Alerta cedo** ("early warning") até 24h após conhecimento.
-- **Notificação** com avaliação inicial até 72h.
-- **Relatório final** até 1 mês (podendo haver atualizações intermédias).
+- **Alerta rápido** (*early warning*), à CSIRT ou, se aplicável, à autoridade competente, sem demora injustificada e até 24 h após o conhecimento do incidente significativo.
+- **Notificação de incidente**, com avaliação inicial, até 72 h após o conhecimento.
+- **Relatório final** até 1 mês após a notificação de incidente (72h), com relatórios intercalares a pedido da CSIRT/autoridade.
 
 **Cobertura SbD-ToE**
 
@@ -123,7 +123,7 @@ A NIS2 define um trilho de reporte para incidentes significativos:
 
 **Lacunas intencionais**
 
-O SbD-ToE não fixa um modelo canónico de dados para incidentes, nem uma taxonomia P0–P3 "oficial", nem os templates de submissão. Isto é intencional: DORA, NIS2, HIPAA pedem conjuntos diferentes de campos e formatos. O manual diz "registar o incidente com campos obrigatórios", e o conjunto final de campos vem do normativo aplicável (no caso NIS2, das orientações nacionais e do Art. 23).
+O SbD-ToE não fixa um modelo canónico de dados para incidentes, nem uma taxonomia de severidade "oficial" (a escala P1–P4 da Política 31 é interna), nem os templates de submissão. Isto é intencional: DORA, NIS2, HIPAA pedem conjuntos diferentes de campos e formatos. O manual diz "registar o incidente com campos obrigatórios", e o conjunto final de campos vem do normativo aplicável (no caso NIS2, das orientações nacionais e do Art. 23).
 
 **Como cumprir**
 
@@ -131,7 +131,7 @@ Sugere-se, no Cap. 12, adotar um schema mínimo (`incident.json/csv`) e parametr
 
 ---
 
-### Segurança da cadeia de fornecimento e terceiros
+### Segurança da cadeia de fornecimento e terceiros {#segurança-da-cadeia-de-fornecimento-e-terceiros}
 
 **Conteúdo normativo**
 
@@ -161,7 +161,7 @@ Sugere-se estender o registo de fornecedores do Cap. 05 com os campos exigidos p
 
 ---
 
-### Continuidade, crise e operação
+### Continuidade, crise e operação {#continuidade-crise-e-operação}
 
 **Conteúdo normativo**
 
@@ -191,9 +191,9 @@ Sugere-se alinhar a matriz de fontes (app, IAM, rede, cloud audit, EDR) e reten�
 
 ---
 
-## PARTE II: SÍNTESE E REFERÊNCIAS
+## PARTE II: SÍNTESE E REFERÊNCIAS {#parte-ii-síntese-e-referências}
 
-### Síntese da cobertura NIS2/SbD-ToE
+### Síntese da cobertura NIS2/SbD-ToE {#síntese-da-cobertura-nis2sbd-toe}
 
 A NIS2 pede gestão com responsabilidade, medidas com substância e reportes com prazos. O SbD-ToE oferece o coração técnico-operacional: políticas, processos, testes, inventários, automação e evidências.
 
@@ -206,13 +206,13 @@ O resultado é estável:
 
 Assim, o SbD-ToE mantém-se útil na prática diária, e a NIS2 acrescenta a camada de formalidade regulatória e supervisão. Juntos, oferecem um percurso de conformidade mais sustentável do que uma leitura puramente checklist.
 
-### Setor, âmbito e sanções
+### Setor, âmbito e sanções {#setor-âmbito-e-sanções}
 
 A NIS2 alarga o âmbito para 18 setores (Anexos I/II) e reforça a distinção entre essenciais e importantes. Em muitos países, há registos nacionais e prazos de autoregisto para entidades abrangidas; acompanhar trackers oficiais ajuda a implementar as especificidades locais.
 
-Em termos sancionatórios, a Diretiva estabelece patamares que os Estados-Membros transpõem: até 10M€ ou 2% do volume de negócios mundial para essenciais e até 7M€ ou 1,4% para importantes (o que for mais elevado).
+Em termos sancionatórios, a Diretiva obriga os Estados-Membros a prever, por violação dos art. 21.º ou 23.º, coimas com um montante máximo de, pelo menos, 10 M€ ou 2 % do volume de negócios anual mundial para entidades essenciais e de, pelo menos, 7 M€ ou 1,4 % para importantes (o que for mais elevado).
 
-### Referências
+### Referências {#referências}
 
 - **Diretiva NIS2**: Diretiva (UE) 2022/2555 (CELEX: [32022L2555](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022L2555))
 - **Art. 20** - Responsabilidade do órgão de gestão e obrigação de formação.

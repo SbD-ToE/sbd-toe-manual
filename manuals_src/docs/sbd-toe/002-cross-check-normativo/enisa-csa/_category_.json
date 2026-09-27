@@ -1,8 +1,4 @@
 {
   "label": "ENISA & CSA (Certificação)",
-  "position": 7,
-  "link": {
-    "type": "doc",
-    "id": "cross-check-normativo/enisa-csa/intro"
-  }
+  "position": 7
 }

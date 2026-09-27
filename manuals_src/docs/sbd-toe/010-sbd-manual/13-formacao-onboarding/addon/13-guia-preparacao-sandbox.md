@@ -14,7 +14,7 @@ tags: [governanca, contractors, sandbox, formacao, onboarding, pratica]
 
 ---
 
-## 📖 Objetivo
+## 📖 Objetivo {#-objetivo}
 
 Fornecer **ambiente isolado, seguro e controlado** onde contractors praticam:
 - Uso de ferramentas corporativas (Git, CI/CD, SCA, SAST, etc.)
@@ -25,13 +25,13 @@ Fornecer **ambiente isolado, seguro e controlado** onde contractors praticam:
 
 ---
 
-## 🎯 Tipos de Sandbox (por Perfil)
+## 🎯 Tipos de Sandbox (por Perfil) {#-tipos-de-sandbox-por-perfil}
 
-### 1️⃣ Sandbox para Developers
+### 1️⃣ Sandbox para Developers {#1️⃣-sandbox-para-developers}
 
 **âmbito:** Git, CI/CD, secrets management, SAST/SCA, code review workflow
 
-#### 1.1 GitHub/GitLab Organization Private
+#### 1.1 GitHub/GitLab Organization Private {#11-githubgitlab-organization-private}
 
 ```
 Estrutura:
@@ -69,7 +69,7 @@ Estrutura:
 
 ---
 
-#### 1.2 CI/CD Pipeline Demo (GitHub Actions / GitLab CI)
+#### 1.2 CI/CD Pipeline Demo (GitHub Actions / GitLab CI) {#12-cicd-pipeline-demo-github-actions--gitlab-ci}
 
 ```yaml
 # .github/workflows/security-checks-demo.yml
@@ -109,7 +109,7 @@ jobs:
 
 ---
 
-#### 1.3 Secrets Management Demo (Vault / Azure Key Vault)
+#### 1.3 Secrets Management Demo (Vault / Azure Key Vault) {#13-secrets-management-demo-vault--azure-key-vault}
 
 ```
 Setup Sandbox:
@@ -129,11 +129,11 @@ Setup Sandbox:
 
 ---
 
-### 2️⃣ Sandbox para DevOps/Infrastructure
+### 2️⃣ Sandbox para DevOps/Infrastructure {#2️⃣-sandbox-para-devopsinfrastructure}
 
 **âmbito:** IaC, containers, Kubernetes, secrets, CI/CD pipelines
 
-#### 2.1 Kubernetes Sandbox Cluster
+#### 2.1 Kubernetes Sandbox Cluster {#21-kubernetes-sandbox-cluster}
 
 ```
 Setup:
@@ -156,7 +156,7 @@ Setup:
 3. Identificar 3 issues de segurança
 4. Propor correções (IaC)
 
-#### 2.2 Terraform/CloudFormation Demo
+#### 2.2 Terraform/CloudFormation Demo {#22-terraformcloudformation-demo}
 
 ```
 Scenario:
@@ -171,11 +171,11 @@ Scenario:
 
 ---
 
-### 3️⃣ Sandbox para QA/Testers
+### 3️⃣ Sandbox para QA/Testers {#3️⃣-sandbox-para-qatesters}
 
 **âmbito:** Teste de segurança, OWASP, ferramentas de scanning
 
-#### 3.1 Web App para Teste Manual (OWASP WebGoat / Juice Shop)
+#### 3.1 Web App para Teste Manual (OWASP WebGoat / Juice Shop) {#31-web-app-para-teste-manual-owasp-webgoat--juice-shop}
 
 ```
 Setup:
@@ -190,7 +190,7 @@ Setup:
 └─ Scoring: Contractor completa 70% das tasks
 ```
 
-#### 3.2 ZAP (OWASP Zap) Demo Scanning
+#### 3.2 ZAP (OWASP Zap) Demo Scanning {#32-zap-owasp-zap-demo-scanning}
 
 ```bash
 # Setup ZAP no sandbox
@@ -207,9 +207,9 @@ docker run -t owasp/zap2docker-stable zap-baseline.py \
 
 ---
 
-## 🚀 Processo de Criação e Provisão
+## 🚀 Processo de Criação e Provisão {#-processo-de-criação-e-provisão}
 
-### Timeline
+### Timeline {#timeline}
 
 ```
 T-5 dias: Setup começa
@@ -234,7 +234,7 @@ T+7 dias: Validação
   └─ Sign-off → Acesso real concedido
 ```
 
-### Checklist de Provisão
+### Checklist de Provisão {#checklist-de-provisão}
 
 ```yaml
 Pre-Sandbox:
@@ -267,9 +267,9 @@ Validation:
 
 ---
 
-## 📋 Exercícios Padrão por Perfil
+## 📋 Exercícios Padrão por Perfil {#-exercícios-padrão-por-perfil}
 
-### Para Developers
+### Para Developers {#para-developers}
 
 | # | Exercício | Duração | Objetivo | Sucesso |
 |----|-----------|---------|----------|---------|
@@ -279,7 +279,7 @@ Validation:
 | 4 | Create PR | 1h | Workflow PR, code review | PR criada corretamente |
 | **Total** | | **6h** | | ✅ Score ≥70% |
 
-### Para DevOps
+### Para DevOps {#para-devops}
 
 | # | Exercício | Duração | Objetivo | Sucesso |
 |----|-----------|---------|----------|---------|
@@ -289,7 +289,7 @@ Validation:
 | 4 | Network Policies | 1h | Add restrictions | Policy defined |
 | **Total** | | **6h** | | ✅ Score ≥70% |
 
-### Para QA/Testers
+### Para QA/Testers {#para-qatesters}
 
 | # | Exercício | Duração | Objetivo | Sucesso |
 |----|-----------|---------|----------|---------|
@@ -301,16 +301,16 @@ Validation:
 
 ---
 
-## 🔐 Segurança do Sandbox
+## 🔐 Segurança do Sandbox {#-segurança-do-sandbox}
 
-### Isolamento
+### Isolamento {#isolamento}
 
 - **Network:** Sandbox conecta a sandbox network, sem acesso direto a produção
 - **Storage:** Dados no sandbox são efémeros (deleted pós-onboarding)
 - **Compute:** Resource limits aplicados (CPU, memory, disk)
 - **Logging:** Todas as ações logged (read, write, delete)
 
-### Monitorização
+### Monitorização {#monitorização}
 
 ```yaml
 Logging:
@@ -324,7 +324,7 @@ Logging:
       - Multiple failed login attempts
 ```
 
-### Destruição Pós-Onboarding
+### Destruição Pós-Onboarding {#destruição-pós-onboarding}
 
 ```bash
 # T+14 dias (ou após conclusão)
@@ -333,16 +333,16 @@ T+0: Backup de work realizado (se necessário)
      Contractor removido de org/namespace
      Credentials revogadas
      Resources deletados
-     Logs arquivados (7 anos)
+     Logs arquivados (conforme a Política 29 §7)
 ```
 
 ---
 
-## 📚 Documentação e Instruções
+## 📚 Documentação e Instruções {#-documentação-e-instruções}
 
 Cada sandbox inclui **README.md com:**
 
-```markdown
+````markdown
 # Sandbox Onboarding Guide
 
 ## Bem-vindo!
@@ -388,11 +388,11 @@ A sua atividade está sendo monitorizada (logs auditados). Isto é normal e espe
 Exercícios devem ser completados até [data]. Quiz passa em [data + 1].
 
 ---
-```
+````
 
 ---
 
-## 🎓 Integration com Cap. 13 (Formação)
+## 🎓 Integration com Cap. 13 (Formação) {#-integration-com-cap-13-formação}
 
 Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
@@ -404,7 +404,7 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 
 ---
 
-## 🏁 Checklist de Término
+## 🏁 Checklist de Término {#-checklist-de-término}
 
 ```
 [ ] Contractor completou 70% exercícios
@@ -414,22 +414,22 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 [ ] Backup de work realizado
 [ ] Sandbox credentials revogadas
 [ ] Sign-off de conclusão assinado
-[ ] Histórico arquivado (7 anos)
+[ ] Histórico arquivado (conforme a Política 33 §8)
 [ ] Acesso real concedido (US-15 completo)
 ```
 
 ---
 
-## 📎 Templates e Links
+## 📎 Templates e Links {#-templates-e-links}
 
 - [Contractor Validation Template](/sbd-toe/sbd-manual/governanca-contratacao/addon/template-validacao-contractors)
-- [Preparação Técnica - US-15](../aplicacao-lifecycle#us-15)
+- [Preparação Técnica - US-15](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso)
 - [Formação e Onboarding - Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle)
 - [Offboarding Checklist](/sbd-toe/sbd-manual/governanca-contratacao/addon/checklist-offboarding)
 
 ---
 
-## 🔄 Melhoria Contínua
+## 🔄 Melhoria Contínua {#-melhoria-contínua}
 
 **Feedback Loop:**
 1. Contractor completa sandbox

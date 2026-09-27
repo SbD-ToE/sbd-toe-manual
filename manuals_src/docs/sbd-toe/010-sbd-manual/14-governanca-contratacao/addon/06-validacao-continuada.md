@@ -14,7 +14,7 @@ A validação contínua garante não apenas a execução dos controlos definidos
 
 ---
 
-## ⏳ 1. Periodicidade de revisão sugerida
+## ⏳ 1. Periodicidade de revisão sugerida {#-1-periodicidade-de-revisão-sugerida}
 
 | Tipo de ativo            | Frequência sugerida            | Responsável primário         |
 | ------------------------ | ------------------------------ | ---------------------------- |
@@ -27,7 +27,7 @@ A validação contínua garante não apenas a execução dos controlos definidos
 
 ---
 
-## 🔢 2. Itens a validar por ciclo
+## 🔢 2. Itens a validar por ciclo {#-2-itens-a-validar-por-ciclo}
 
 Para além da verificação técnica e contratual, cada ciclo de validação deve confirmar que os pressupostos de governação se mantêm válidos:
 
@@ -42,7 +42,7 @@ Para além da verificação técnica e contratual, cada ciclo de validação dev
 
 ---
 
-## 🌎 3. Integração com ferramentas
+## 🌎 3. Integração com ferramentas {#-3-integração-com-ferramentas}
 
 O processo de validação contínua pode ser automatizado ou apoiado em ferramentas que permitam execução consistente e evidência rastreável, tais como:
 
@@ -55,7 +55,7 @@ O processo de validação contínua pode ser automatizado ou apoiado em ferramen
 
 ---
 
-## 📊 4. Exemplo de plano de revisão anual
+## 📊 4. Exemplo de plano de revisão anual {#-4-exemplo-de-plano-de-revisão-anual}
 
 **Plano:** Revisão anual de contratos e integrações da unidade financeira
 
@@ -72,17 +72,17 @@ O processo de validação contínua pode ser automatizado ou apoiado em ferramen
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Integrar revisões com o ciclo de release ou com mecanismos de fiscalização interna;
 * Criar alertas para exceções caducadas ou não revalidadas;
-* Usar este processo para alimentar os KPIs de governação (ver `addon/kpis-governanca.md`);
+* Usar este processo para alimentar os KPIs de governação (ver `kpis-governanca.md`);
 * Tratar a validação recorrente como parte integrante do ciclo de vida de segurança;
 * Utilizar a validação contínua como mecanismo de deteção de delegações implícitas de autoridade a processos ou sistemas, assegurando a sua revisão ou revogação quando necessário.
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 * Cap. 1 - Revisão da classificação de risco (`addon/15-aplicacao-lifecycle.md`)
 * Cap. 2 - Checklist de requisitos por projeto

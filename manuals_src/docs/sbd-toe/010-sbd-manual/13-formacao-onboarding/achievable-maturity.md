@@ -1,6 +1,6 @@
 # Achievable Maturity — Formação e Onboarding
 
-## Sumário
+## Sumário {#sumário}
 
 Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
@@ -14,22 +14,22 @@ Cinco secções:
 
 ---
 
-## § Manual ontology V2 — entities relevantes para maturity
+## § Manual ontology V2 — entities relevantes para maturity {#-manual-ontology-v2--entities-relevantes-para-maturity}
 
 Total: **6 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
 | Entity type | ID | Framework | Framework area | Authority class | Source mode |
 |---|---|---|---|---|---|
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:owasp-dsomm-education-training:education-training` | OWASP DSOMM | Education & Training | external | derived |
-| MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Formação adaptativa, feedback contínuo, integração com matur | external | derived |
+| MaturityMapping | `13-formacao-onboarding:maturity:owasp-dsomm:visao-geral-de-alinhamento:dsomm` | OWASP DSOMM | Formação adaptativa, feedback contínuo, integração com maturidade | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:1` | OWASP SAMM | Governance → Education & Guidance | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:2` | OWASP SAMM | Governance → Education & Guidance | external | derived |
 | MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:owasp-samm-governance-education-guidance:3` | OWASP SAMM | Governance → Education & Guidance | external | derived |
-| MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:visao-geral-de-alinhamento:samm-v2-1` | OWASP SAMM | Trilhos formativos por função e risco, rastreabilidade, cham | external | derived |
+| MaturityMapping | `13-formacao-onboarding:maturity:owasp-samm:visao-geral-de-alinhamento:samm-v2-1` | OWASP SAMM | Trilhos formativos por função e risco, rastreabilidade, champions | external | derived |
 
 ---
 
-## § SAMM v2 / DSOMM maturity progression
+## § SAMM v2 / DSOMM maturity progression {#-samm-v2--dsomm-maturity-progression}
 
 Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
@@ -44,13 +44,13 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 
 ---
 
-## § SLSA build/integrity progression
+## § SLSA build/integrity progression {#-slsa-buildintegrity-progression}
 
 _(SLSA não aplicável a este capítulo — sem progressão de build/integridade direct.)_
 
 ---
 
-## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity) {#-out-of-maturity-scope-regulatory-alignment-não-maturity}
 
 Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
 
@@ -58,13 +58,13 @@ _(Regulatory alignment para este capítulo é tratado via Manual ontology V2 Ext
 
 ---
 
-## § Future-work register (maturity gaps)
+## § Future-work register (maturity gaps) {#-future-work-register-maturity-gaps}
 
 _(Nenhuma maturity claim em gap state para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`

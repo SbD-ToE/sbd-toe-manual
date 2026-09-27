@@ -22,7 +22,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## 📌 Objetivos
+## 📌 Objetivos {#-objetivos}
 
 - Reduzir a introdução de vulnerabilidades comuns (ex: CWE Top 25)
 - Aumentar a legibilidade, manutenibilidade e segurança do código
@@ -31,7 +31,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## 👥 Quem deve aplicar
+## 👥 Quem deve aplicar {#-quem-deve-aplicar}
 
 - **Desenvolvedores**: durante a escrita e refatoração do código.
 - **Revisores técnicos** (peer reviewers, tech leads): durante a análise de PRs.
@@ -39,7 +39,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## ⏱️ Quando aplicar
+## ⏱️ Quando aplicar {#️-quando-aplicar}
 
 - Sempre que se inicia ou altera código-fonte de produção.
 - Durante revisões técnicas de PRs.
@@ -48,7 +48,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## 🧱 Práticas essenciais
+## 🧱 Práticas essenciais {#-práticas-essenciais}
 
 1. **Evitar cópia de código da internet sem validação**
    - Justificar e rever trechos copiados (StackOverflow, GitHub, etc.)
@@ -77,7 +77,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## 🚨 Práticas proibidas
+## 🚨 Práticas proibidas {#-práticas-proibidas}
 
 - Uso de *secrets* hardcoded (ex: tokens, passwords)
 - Inclusão de *debug code* ou *console logging* em produção
@@ -87,7 +87,7 @@ Estas práticas devem estar integradas nas guidelines técnicas da organização
 
 ---
 
-## ✅ Como validar
+## ✅ Como validar {#-como-validar}
 
 Estas práticas devem ser validadas através de:
 
@@ -97,7 +97,7 @@ Estas práticas devem ser validadas através de:
 
 ---
 
-## 🧾 Como evidenciar
+## 🧾 Como evidenciar {#-como-evidenciar}
 
 A evidência da aplicação destas práticas pode ser:
 
@@ -108,7 +108,7 @@ A evidência da aplicação destas práticas pode ser:
 
 ---
 
-## 🔄 Ligação a outras práticas
+## 🔄 Ligação a outras práticas {#-ligação-a-outras-práticas}
 
 | Tema                                 | Ficheiro associado         |
 |--------------------------------------|----------------------------|

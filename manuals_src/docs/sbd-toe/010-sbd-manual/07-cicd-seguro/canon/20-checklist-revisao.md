@@ -19,11 +19,11 @@ Este ficheiro funciona como:
 - **KPI operativo** de maturidade em DevSecOps
 - Critério objetivo para **promoção de aplicações** para produção
 
-> 🗓️ **Recomenda-se revisão no mínimo a cada 6 meses**, ou sempre que existam alterações relevantes ao pipeline, runners, segredos, políticas, integrações externas ou modelo de promoção.
+> 🗓️ **Recomenda-se revisão no mínimo anual em L1/L2 e semestral em L3**, ou sempre que existam alterações relevantes ao pipeline, runners, segredos, políticas, integrações externas ou modelo de promoção.
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                               | Verificado? |
 |--------------------------------------------------------------------------------------------------------------------|-------------|
@@ -47,7 +47,7 @@ Este ficheiro funciona como:
 
 ---
 
-## 🔄 Notas finais
+## 🔄 Notas finais {#-notas-finais}
 
 - Este checklist deve ser aplicado **por pipeline e por aplicação**, não apenas de forma genérica.
 - O resultado pode ser usado diretamente como:

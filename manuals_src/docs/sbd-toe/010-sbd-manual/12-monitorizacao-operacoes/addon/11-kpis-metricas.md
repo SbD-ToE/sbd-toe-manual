@@ -10,7 +10,7 @@ tags: [kpi, metricas, OPS, monitorizacao, SIEM, alertas, MTTD, MTTR, logging, L1
 
 # KPIs e Métricas - Monitorização e Operações
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **eficácia operacional do programa de monitorização de segurança**: a cobertura de logging centralizado, a qualidade dos alertas, a velocidade de detecção e resposta, e a capacidade de correlação entre fontes. Este domínio opera sobre dados produzidos por todos os outros capítulos - os logs gerados pelo código (Cap. 06), pelo pipeline (Cap. 07), pelos containers (Cap. 09) e pela infraestrutura (Cap. 08) convergem aqui e são avaliados pela sua utilidade operacional.
 
@@ -22,7 +22,7 @@ Os indicadores OPS alimentam a dimensão transversal **T-03 (Velocidade de resol
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -30,7 +30,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -50,14 +50,14 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | OPS-K01 | % aplicações de produção com logging de eventos de segurança centralizado em SIEM ou equivalente | Q% | ≥ 60% | ≥ 90% | 100% | T-03 | Mensal |
 | OPS-K02 | % alertas de segurança com threshold definido, testado e documentado (sem alertas por omissão ou não calibrados) | Q% | ≥ 50% | ≥ 80% | ≥ 95% | T-03 | Trimestral |
 | OPS-K03 | MTTD - tempo médio desde ocorrência de evento de segurança até geração de alerta | Qt | ≤ 24h | ≤ 4h | ≤ 30min | T-03 | Mensal |
-| OPS-K04 | MTTR - tempo médio desde geração de alerta até início de acção de mitigação | Qt | ≤ 48h | ≤ 4h | ≤ 1h | T-03 | Mensal |
+| OPS-K04 | MTTR - tempo médio desde geração de alerta até início de acção de mitigação | Qt | ≤ 8h | ≤ 4h | ≤ 1h | T-03 | Mensal |
 | OPS-K05 | % alertas disparados que resultam em falso positivo (taxa de ruído) | Q% ↓ | ≤ 50% | ≤ 30% | ≤ 15% | T-03 | Mensal |
 | OPS-K06 | % eventos de segurança críticos com cobertura de correlação entre pelo menos duas fontes distintas | Q% | - | ≥ 70% | ≥ 95% | T-03 | Trimestral |
 | OPS-K07 | % incidentes de segurança com processo formal de resposta (IRP) activado e rastreável | Q% | ≥ 80% | 100% | 100% | T-03 | Por incidente |
@@ -65,7 +65,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **OPS-K01 - Logging centralizado:** considera-se centralizado o envio de eventos de segurança para um sistema de recolha central (SIEM, plataforma de log aggregation) com retenção, indexação e capacidade de consulta. Logging local sem forwarding não satisfaz este critério.
 
@@ -73,7 +73,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **OPS-K03 - MTTD (Mean Time to Detect):** medido como `timestamp_alerta − timestamp_evento`. Para eventos que não geram alerta imediato (detecção por correlação ou análise periódica), o timestamp de detecção é o momento em que um analista toma conhecimento do evento. Eventos sem registo de timestamp de ocorrência não podem ser incluídos no cálculo - a sua ausência é em si um indicador de gap de logging.
 
-**OPS-K04 - MTTR (Mean Time to Respond):** medido como `timestamp_primeira_acção − timestamp_alerta`. A primeira acção inclui: isolamento, bloqueio, escalonamento formal, ou activação de runbook. Tempo de análise antes da primeira acção conta para o MTTR.
+**OPS-K04 - MTTR (Mean Time to Respond):** medido como `timestamp_primeira_acção − timestamp_alerta`. A primeira acção inclui: isolamento, bloqueio, escalonamento formal, ou activação de runbook. Tempo de análise antes da primeira acção conta para o MTTR. Quando o incidente segue o trilho regulatório, o escalonamento para GRC/Compliance e EPD/DPO ocorre em ≤ 1 h após a confirmação, em qualquer nível (Política 32 §4.1).
 
 **OPS-K05 - Taxa de ruído:** um falso positivo é um alerta que, após triagem formal por analista, é classificado como irrelevante para o contexto de segurança. A taxa de ruído elevada tem dois efeitos: (a) consome capacidade de resposta; (b) cria dessensibilização aos alertas, aumentando o risco de ignorar verdadeiros positivos. A calibração de alertas é o mecanismo de controlo.
 
@@ -81,22 +81,22 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **OPS-K07 - IRP activado:** o processo formal de resposta a incidentes (Incident Response Plan) está activado quando existe um ticket ou registo com: classificação do incidente, owner de resposta, timeline de acções, e estado de resolução. Incidentes resolvidos informalmente sem registo não satisfazem este critério.
 
-**OPS-K08 - Retenção conforme regulação:** o período mínimo aplicável depende da regulação sectorial. Referência base: DORA exige 2 anos para logs de ICT; NIS2 não define período mas exige disponibilidade para auditoria. Sistemas sem classificação regulatória aplicam a política interna - mínimo 90 dias para L1, 1 ano para L2, 2 anos para L3.
+**OPS-K08 - Retenção conforme regulação:** o período mínimo aplicável depende da regulação sectorial. DORA: a entidade define o período de conservação com base na avaliação do risco TIC (Reg. Delegado (UE) 2024/1774, art. 12.º); NIS2: para as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690, exige-se um «período predefinido» (anexo, ponto 3.2.5), sem valor numérico; verificar a legislação nacional de transposição. Sistemas sem classificação regulatória aplicam a política interna — por escolha do Manual, mínimo 90 dias para L1, 1 ano para L2 e 2 anos para L3.
 
 ---
 
-## Thresholds de MTTD/MTTR por nível - resumo
+## Thresholds de MTTD/MTTR por nível - resumo {#thresholds-de-mttdmttr-por-nível---resumo}
 
 | Métrica | L1 | L2 | L3 |
 |---------|:--:|:--:|:--:|
 | MTTD (detecção) | ≤ 24h | ≤ 4h | ≤ 30min |
-| MTTR (resposta) | ≤ 48h | ≤ 4h | ≤ 1h |
+| MTTR (resposta) | ≤ 8h | ≤ 4h | ≤ 1h |
 
 Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Para eventos de severidade média, os thresholds podem ser 3× superiores. Sectores regulados (financeiro, saúde, infraestruturas críticas) podem ter requisitos mais exigentes por norma sectorial.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -111,11 +111,11 @@ Estes thresholds aplicam a eventos de segurança de severidade alta/crítica. Pa
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Catálogo OPS-001..015 que enquadra os indicadores operacionais |
 | `addon/07-metricas-indicadores.md` | Síntese operacional de MTTD/MTTR para uso quotidiano das equipas |
 | `addon/10-excecoes-operacoes.md` | Excepções a alertas e retenção (OPS-K02, OPS-K08) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensão transversal T-03 (velocidade de resolução) |
+| Cap. 14 `kpis-governanca.md` | Dimensão transversal T-03 (velocidade de resolução) |

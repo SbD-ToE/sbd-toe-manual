@@ -19,7 +19,7 @@ Os capítulos operacionais implementam o SbD-ToE em contextos técnicos específ
 
 ---
 
-## ⚠️ Nota Canónica - Infraestrutura como Processo Automatizado
+## ⚠️ Nota Canónica - Infraestrutura como Processo Automatizado {#️-nota-canónica---infraestrutura-como-processo-automatizado}
 
 A infraestrutura moderna é definida, validada e aplicada através de **processos altamente automatizados**, frequentemente apoiados por mecanismos de **geração, sugestão ou normalização automática de código e configuração**.
 
@@ -46,7 +46,7 @@ Neste contexto, o capítulo funciona também como **centro operacional de baseli
 
 ---
 
-## 🧭 O que cobre tecnicamente
+## 🧭 O que cobre tecnicamente {#-o-que-cobre-tecnicamente}
 
 Na prática, falar em segurança de IaC significa proteger cada camada, desde o primeiro ficheiro até ao último recurso aplicado em produção.  
 As áreas cobertas incluem:
@@ -63,7 +63,7 @@ As áreas cobertas incluem:
 
 ---
 
-## 📌 O que deve ser feito
+## 📌 O que deve ser feito {#-o-que-deve-ser-feito}
 
 Para transformar recomendações em práticas de engenharia aplicáveis, a organização deve garantir, no mínimo:
 
@@ -79,7 +79,7 @@ Para transformar recomendações em práticas de engenharia aplicáveis, a organ
 
 ---
 
-## ⚙️ Como deve ser feito
+## ⚙️ Como deve ser feito {#️-como-deve-ser-feito}
 
 A execução depende de ferramentas práticas e da sua integração disciplinada em pipelines controlados.  
 Não basta confiar na experiência individual - é necessário **automatizar, restringir e auditar**:
@@ -93,7 +93,7 @@ Não basta confiar na experiência individual - é necessário **automatizar, re
 
 ---
 
-## 📆 Quando aplicar
+## 📆 Quando aplicar {#-quando-aplicar}
 
 Os controlos devem ser aplicados ao longo de todo o ciclo de vida do IaC.  
 Ignorar um momento crítico significa permitir acumulação silenciosa de risco:
@@ -106,7 +106,7 @@ Ignorar um momento crítico significa permitir acumulação silenciosa de risco:
 
 ---
 
-## 👥 Quem está envolvido
+## 👥 Quem está envolvido {#-quem-está-envolvido}
 
 A proteção de IaC é uma responsabilidade partilhada, exigindo coordenação entre funções técnicas e de governação:
 
@@ -119,7 +119,7 @@ A proteção de IaC é uma responsabilidade partilhada, exigindo coordenação e
 
 ---
 
-## 🎯 Para quê
+## 🎯 Para quê {#-para-quê}
 
 Investir na segurança de IaC é investir na **confiabilidade da fundação onde todas as aplicações assentam**.  
 Os objetivos são claros:
@@ -131,7 +131,7 @@ Os objetivos são claros:
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 Políticas formais garantem que as práticas não dependem apenas da disciplina individual, mas de regras coletivas, claras e auditáveis.
 

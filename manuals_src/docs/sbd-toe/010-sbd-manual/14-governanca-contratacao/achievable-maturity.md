@@ -1,6 +1,6 @@
 # Achievable Maturity — Governança e Contratação
 
-## Sumário
+## Sumário {#sumário}
 
 Postura de maturidade credível atingível se este capítulo for implementado as written. Análise segue **§26 canon §4 discipline**: SAMM v2.1 + DSOMM são fontes primárias; SLSA só onde fizer sentido como progressão de build/integridade; **alinhamento regulatório NÃO é maturity score** e é registado em § Out-of-Maturity scope.
 
@@ -14,13 +14,13 @@ Cinco secções:
 
 ---
 
-## § Manual ontology V2 — entities relevantes para maturity
+## § Manual ontology V2 — entities relevantes para maturity {#-manual-ontology-v2--entities-relevantes-para-maturity}
 
 Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-knowledge-graph/data/entities/maturity_mappings.json`).
 
 | Entity type | ID | Framework | Framework area | Authority class | Source mode |
 |---|---|---|---|---|---|
-| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Validação de fornecedores, requisitos contratuais, rastreabi | external | derived |
+| MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:3rd-party` | OWASP DSOMM | Validação de fornecedores, requisitos contratuais, rastreabilidade | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:governance` | OWASP DSOMM | Definição clara de ownership, políticas, controlo contínuo | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:tooling-metrics` | OWASP DSOMM | KPIs de governação e feedback contínuo | external | derived |
 | MaturityMapping | `14-governanca-contratacao:maturity:owasp-dsomm:owasp-dsomm:training` | OWASP DSOMM | Onboarding formal de stakeholders | external | derived |
@@ -37,7 +37,7 @@ Total: **14 MaturityMapping entities** mapped a este capítulo (via `sbd-toe-kno
 
 ---
 
-## § SAMM v2 / DSOMM maturity progression
+## § SAMM v2 / DSOMM maturity progression {#-samm-v2--dsomm-maturity-progression}
 
 Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §26 methodology label deterministic per `confidence` field do KG canonical mapping.
 
@@ -55,7 +55,7 @@ Maturity progression per SAMM v2.1 + DSOMM (primary frameworks per §26 §4). §
 
 ---
 
-## § SLSA build/integrity progression
+## § SLSA build/integrity progression {#-slsa-buildintegrity-progression}
 
 SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progressão de build/integridade — este capítulo qualifica).
 
@@ -69,7 +69,7 @@ SLSA progression mapping (per §26 §4: SLSA só onde fizer sentido como progres
 
 ---
 
-## § Out-of-Maturity scope (regulatory alignment NÃO maturity)
+## § Out-of-Maturity scope (regulatory alignment NÃO maturity) {#-out-of-maturity-scope-regulatory-alignment-não-maturity}
 
 Per §26 §4 discipline: alinhamento regulatório (PCI DSS, GDPR, NIS2, DORA, CRA, HIPAA) **NÃO deve ser tratado como maturity score**. Items regulatórios são registados aqui para visibility editorial; conformance vive em obrigações separadas, não em maturity progression.
 
@@ -77,13 +77,13 @@ _(Regulatory alignment para este capítulo é tratado via Manual ontology V2 Ext
 
 ---
 
-## § Future-work register (maturity gaps)
+## § Future-work register (maturity gaps) {#-future-work-register-maturity-gaps}
 
 _(Nenhuma maturity claim em gap state para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74`

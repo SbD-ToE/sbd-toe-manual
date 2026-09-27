@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — IaC e Infraestrutura
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As referências externas relevantes para este domínio encontram-se nos capítulos onde cada slice ancora primariamente.
 
@@ -19,9 +19,9 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **103 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **119 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -57,7 +57,23 @@ Total: **103 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe
 | Practice | `08-iac-infraestrutura:segregacao-de-ambientes-tagging-e-permissoes-minimas` | Segregação de ambientes, tagging e permissões mínimas | normative | explicit | deterministic |
 | Practice | `08-iac-infraestrutura:separacao-de-funcoes-sod-e-controlo-de-execucao-de-apply` | Separação de funções (SoD) e controlo de execução de `apply` | normative | explicit | deterministic |
 | Practice | `08-iac-infraestrutura:validacoes-automaticas-integradas` | Validações automáticas integradas | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-132` | Defaults inseguros ou permissivos | normative | heuristic | bounded |
+| Threat | `MT-133` | Configurações sem validação | normative | heuristic | bounded |
+| Threat | `MT-134` | Campos críticos deixados em branco ou default | normative | heuristic | bounded |
+| Threat | `MT-135` | Ambientes inconsistentes entre execuções | normative | heuristic | bounded |
+| Threat | `MT-136` | Uso de módulos inseguros ou sem validação | normative | heuristic | bounded |
+| Threat | `MT-137` | Hardcoded de parâmetros críticos | normative | heuristic | bounded |
+| Threat | `MT-138` | Ambientes inseguros provisionados por erro | normative | heuristic | bounded |
+| Threat | `MT-139` | Provisionamento com permissões excessivas | normative | heuristic | bounded |
+| Threat | `MT-140` | Falta de tags de classificação de dados | normative | heuristic | bounded |
+| Threat | `MT-141` | Uso de dados reais em ambientes de teste | normative | heuristic | bounded |
+| Threat | `MT-142` | Segredos hardcoded ou mal geridos | normative | heuristic | bounded |
+| Threat | `MT-143` | Alterações aplicadas sem revisão | normative | heuristic | bounded |
+| Threat | `MT-144` | Falta de owner e accountability | normative | heuristic | bounded |
+| Threat | `MT-145` | Reutilização de módulos sem tracking | normative | heuristic | bounded |
+| Threat | `MT-146` | Aplicação de alterações inseguras por bypass | normative | heuristic | bounded |
+| Threat | `MT-147` | Justificações informais ou inexistentes | normative | heuristic | bounded |
+| Threat | `MT-148` | Ambientes provisionados com exceções acumuladas | normative | heuristic | bounded |
 | Concept | `sem:concept:catalogo-de-modulos-internos-certificados` | Catálogo de módulos internos certificados | semantic | scored | bounded |
 | Concept | `sem:concept:dashboards-de-validacao-automatizada` | Dashboards de validação automatizada | semantic | scored | bounded |
 | Concept | `sem:concept:drift` | drift | semantic | scored | bounded |
@@ -117,7 +133,7 @@ Total: **103 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

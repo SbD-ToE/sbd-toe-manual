@@ -10,7 +10,7 @@ tags: [kpi, metricas, DEV, desenvolvimento, sast, secrets, code-review, L1, L2, 
 
 # KPIs e Métricas - Desenvolvimento Seguro
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **integração de práticas de segurança no processo de desenvolvimento de software**: desde a qualidade das revisões de código até à velocidade de resolução de findings estáticos, passando pelo controlo de secrets e pela rastreabilidade das excepções declaradas no código.
 
@@ -20,7 +20,7 @@ Os indicadores DEV alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,11 +48,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
-| DEV-K01 | % findings SAST de severidade crítica/alta resolvidos dentro de SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 85% (SLA: 14d) | ≥ 98% (SLA: 7d) | T-03 | Por release |
+| DEV-K01 | % findings SAST de severidade crítica/alta resolvidos dentro de SLA | Q% | ≥ 70% (SLA: 30d crítica / 90d alta) | ≥ 85% (SLA: 7d / 30d) | ≥ 98% (SLA: 3d / 15d) | T-03 | Por release |
 | DEV-K02 | # secrets detectados em commits e não removidos/rotacionados em menos de 24h | Q# ↓ | ≤ 2/mês | = 0 | = 0 | T-01 | Contínuo |
 | DEV-K03 | % PRs em aplicações L2/L3 com verificação explícita de critério de segurança na code review | Q% | - | ≥ 80% | 100% | T-01, T-04 | Mensal |
 | DEV-K04 | % excepções de SAST (mutes/waives) com aprovação formal registada e rastreável | Q% | ≥ 80% | 100% | 100% | T-02 | Mensal |
@@ -61,7 +61,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **DEV-K01 - SLA de resolução SAST:** conta a partir da data de detecção pelo scanner no pipeline. Um finding é considerado resolvido quando: (a) o código é corrigido e o scanner confirma ausência; ou (b) uma excepção formal com compensação é registada (suspende o contador, mas não fecha o indicador - ver DEV-K04). Falsos positivos confirmados pelo processo de triagem formal não contam.
 
@@ -75,7 +75,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -88,11 +88,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos DEV-001..009 que fundamentam os indicadores |
 | `addon/05-excecoes-e-justificacoes.md` | Processo de excepção de SAST (DEV-K04) |
 | Cap. 10 `addon/08-gestao-findings.md` | Centralização e triagem de findings que alimentam DEV-K01/K05 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02, T-03 |

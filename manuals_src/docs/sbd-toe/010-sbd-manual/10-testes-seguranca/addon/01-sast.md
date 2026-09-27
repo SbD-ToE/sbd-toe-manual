@@ -8,7 +8,7 @@ sidebar_position: 2
 
 # Testes Estáticos de Segurança (SAST)
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Detetar vulnerabilidades de segurança no **código fonte** antes da execução da aplicação, através de **análise estática automática**, garantindo:
 
@@ -21,7 +21,7 @@ Detetar vulnerabilidades de segurança no **código fonte** antes da execução 
 
 ---
 
-## 🔍 O que é SAST
+## 🔍 O que é SAST {#-o-que-é-sast}
 
 O SAST (Static Application Security Testing) analisa o **código-fonte ou bytecode** para identificar padrões perigosos, más práticas, falhas lógicas e potenciais vulnerabilidades - sem executar a aplicação.
 
@@ -35,7 +35,7 @@ Pode ser realizado por:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Selecionar a ferramenta adequada** por stack (ex: Node, Java, .NET, Python);
 2. **Definir regras e thresholds mínimos** de aceitação (ex: falhas críticas bloqueiam build);
@@ -48,7 +48,7 @@ Pode ser realizado por:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Executar o SAST localmente (pré-commit) e no pipeline (CI);
 - Afinar regras para reduzir falsos positivos e ruído;
@@ -59,13 +59,13 @@ Pode ser realizado por:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relação com o SAST                            |
 |--------------------------------|-----------------------------------------------|
 | Capítulo 02 - Requisitos       | Valida `EX-REQ-203`, `EX-REQ-205`, `EX-REQ-303`        |
 | Capítulo 06 - Desenvolvimento  | Reforça práticas de secure coding             |
-| Capítulo 07 - CI/CD Seguro     | Ver `07-integracao-validacoes.md`             |
+| Capítulo 07 - CI/CD Seguro     | Ver `07-validacoes-seguranca-integradas.md`             |
 | `06-cobertura-e-priorizacao.md`| Define targets e prioridades de análise       |
 | `08-gestao-findings.md`        | Garante tratamento eficaz dos resultados      |
 | `09-feedback-equipa.md`        | Envolvimento das equipas na validação         |

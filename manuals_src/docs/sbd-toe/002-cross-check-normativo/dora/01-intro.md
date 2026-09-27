@@ -12,7 +12,7 @@ sidebar_position: 1
 > 
 > Para exemplos práticos internos, ver pasta `exemplo-playbook/`.
 
-## Enquadramento Geral
+## Enquadramento Geral {#enquadramento-geral}
 
 O **Digital Operational Resilience Act (DORA)** - **Regulamento (UE) 2022/2554** (CELEX: [32022R2554](https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32022R2554)) - representa uma viragem histórica na forma como a União Europeia encara a **resiliência digital** no setor financeiro.  
 A partir de janeiro de 2025, não basta às entidades financeiras protegerem dados ou cumprirem boas práticas gerais: exige-se que demonstrem, com evidências e mecanismos consistentes, que **sabem identificar, prevenir, detetar, responder e aprender com riscos tecnológicos**.
@@ -24,9 +24,9 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 
 ---
 
-## PARTE I: ANÁLISE NORMATIVA
+## PARTE I: ANÁLISE NORMATIVA {#parte-i-análise-normativa}
 
-### 🔍 O que DORA exige, em termos operacionais
+### 🔍 O que DORA exige, em termos operacionais {#-o-que-dora-exige-em-termos-operacionais}
 
 > ⚖️ **Nota editorial.**  
 > Esta secção é uma **síntese operacional** dos artigos relevantes do DORA, não uma citação literal do regulamento.  
@@ -34,7 +34,7 @@ O SbD-ToE foi concebido como **modelo universal de segurança aplicacional** e c
 
 De forma prática, o DORA traduz-se em obrigações que impactam diretamente as práticas do SbD-ToE:
 
-- **Órgão de gestão com responsabilidade explícita (Art. 5.º).**  
+- **Órgão de administração com responsabilidade explícita (Art. 5.º).**  
   - O órgão de gestão aprova a estratégia de gestão de risco TIC, acompanha a sua execução e é responsável por garantir que existem políticas, procedimentos, documentação e evidência.  
   - No SbD-ToE isto liga-se à governação global, políticas e à exigência de _accountability_ sobre decisões de risco.
 
@@ -51,7 +51,7 @@ De forma prática, o DORA traduz-se em obrigações que impactam diretamente as 
   - No SbD-ToE isto cruza diretamente com capítulos de testes de segurança, _red teaming_, _chaos engineering_ e validação contínua de pipelines.
 
 - **Gestão de risco de terceiros TIC (Art. 28.º–30.º).**  
-  - Impõe inventário de fornecedores TIC críticos, avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
+  - Impõe um registo de informações sobre todos os acordos contratuais com terceiros prestadores de serviços de TIC (distinguindo os que apoiam funções críticas ou importantes), avaliação de risco, cláusulas contratuais específicas e supervisão contínua.  
   - O manual cobre estes aspetos nos capítulos de dependências, SBOM/SCA, supply chain, _outsourcing_ e governação/contratação.
 
 - **Decisões de exceção e vulnerabilidades não remediadas.**  
@@ -66,7 +66,7 @@ Na prática, o DORA fornece o "chapéu regulatório" e os critérios de responsa
 
 ---
 
-### Governação e Gestão de Risco TIC (Artigos 5–6 DORA)
+### Governação e Gestão de Risco TIC (Artigos 5–6 DORA) {#governação-e-gestão-de-risco-tic-artigos-56-dora}
 
 **Cobertura SbD-ToE:**
 - **[Cap. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro):** Classificação de criticidade aplicacional (L1–L3)
@@ -79,7 +79,7 @@ Na prática, o DORA fornece o "chapéu regulatório" e os critérios de responsa
 
 ---
 
-### Incidentes, Classificação e Reporte (Artigos 17–23 DORA)
+### Incidentes, Classificação e Reporte (Artigos 17–23 DORA) {#incidentes-classificação-e-reporte-artigos-1723-dora}
 
 Exige processo ponta-a-ponta: deteção, registo, classificação, reporte formal e integração com templates/campos harmonizados.
 
@@ -87,11 +87,11 @@ Exige processo ponta-a-ponta: deteção, registo, classificação, reporte forma
 - **[Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro):** Processos de deteção e resposta de incidentes
 - **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro):** Responsabilidades de reporte e escalonamento
 
-**Lacuna intencional:** O SbD-ToE não define taxonomia de prioridades (P0–P3) nem templates específicos DORA, preservando universalidade. A conformidade requer configuração de campos de incidentes segundo RTS/ITS da DORA e integração com sistemas de reporte automático (ex: SIEM).
+**Lacuna intencional:** O SbD-ToE define uma escala interna de severidade (P1–P4, Política 31), mas não a classificação de incidentes do DORA (Reg. Delegado (UE) 2024/1772) nem templates específicos DORA, preservando universalidade. A conformidade requer configuração de campos de incidentes segundo RTS/ITS da DORA e integração com sistemas de reporte automático (ex: SIEM).
 
 ---
 
-### Testes de Resiliência (Artigos 24–27 DORA)
+### Testes de Resiliência (Artigos 24–27 DORA) {#testes-de-resiliência-artigos-2427-dora}
 
 Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing (TLPT) para entidades elegíveis.
 
@@ -104,7 +104,7 @@ Exige programa contínuo de testes, culminando em Threat-Led Penetration Testing
 
 ---
 
-### Gestão de Fornecedores Críticos (Artigos 28–30 DORA)
+### Gestão de Fornecedores Críticos (Artigos 28–30 DORA) {#gestão-de-fornecedores-críticos-artigos-2830-dora}
 
 Os Artigos 28–30 estabelecem requisitos para inventário formal, avaliação de risco, cláusulas contratuais obrigatórias, supervisão contínua e planos de saída testados.
 
@@ -136,7 +136,7 @@ Os Artigos 28–30 estabelecem requisitos para inventário formal, avaliação d
 
 ---
 
-### Partilha de Informação sobre Ameaças (Artigo 45 DORA, contexto complementar)
+### Partilha de Informação sobre Ameaças (Artigo 45 DORA, contexto complementar) {#partilha-de-informação-sobre-ameaças-artigo-45-dora-contexto-complementar}
 
 O Artigo 45 DORA estabelece arranjos de partilha de informação sobre ciberameaças e inteligência de ameaças, promovendo a cooperação entre entidades financeiras e com as autoridades competentes.
 
@@ -148,7 +148,7 @@ O Artigo 45 DORA estabelece arranjos de partilha de informação sobre ciberamea
 
 ---
 
-### Gestão de Exceções e Desvios (Artigos 5, 17–23, 24–27, 28–30 DORA)
+### Gestão de Exceções e Desvios (Artigos 5, 17–23, 24–27, 28–30 DORA) {#gestão-de-exceções-e-desvios-artigos-5-1723-2427-2830-dora}
 
 DORA não menciona explicitamente "exceções", porém em **conformidade regulatória**, exceções constituem **desvios formais de requisitos** que exigem:
 - Aprovação documentada com autoridade formal designada
@@ -175,9 +175,9 @@ DORA não menciona explicitamente "exceções", porém em **conformidade regulat
 
 ---
 
-### Exceções Formais e Desvios de Conformidade (Artigos 5, 17–23, 24–27, 28–30 DORA)
+### Exceções Formais e Desvios de Conformidade (Artigos 5, 17–23, 24–27, 28–30 DORA) {#exceções-formais-e-desvios-de-conformidade-artigos-5-1723-2427-2830-dora}
 
-#### O Problema: Exceções Informais = Incoerência com DORA
+#### O Problema: Exceções Informais = Incoerência com DORA {#o-problema-exceções-informais--incoerência-com-dora}
 
 DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última do órgão de gestão** (board), e **supervisão de execução** significa:
 - Conhecer **todos os desvios** de políticas de segurança
@@ -195,10 +195,10 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 ---
 
-#### O que DORA Exige Explicitamente
+#### O que DORA Exige Explicitamente {#o-que-dora-exige-explicitamente}
 
-**Art. 5 (Gestão de Risco TIC):**
-> "Membros do órgão de gestão aprovam a estratégia e supervisionam a execução de políticas, incluindo respostas a riscos emergentes."
+**Art. 5.º (Governação e organização):**
+> «O órgão de administração da entidade financeira define, aprova, fiscaliza e é responsável pela aplicação de todas as disposições relacionadas com o quadro de gestão do risco associado às TIC […]» (art. 5.º, n.º 2)
 
 **Tradução operacional:**
 - Decisões de aceitação de risco (exceções) exigem aprovação documentada de autoridade formal
@@ -216,7 +216,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 ---
 
-#### Cobertura SbD-ToE (Forte, mas com Gaps Explícitos)
+#### Cobertura SbD-ToE (Forte, mas com Gaps Explícitos) {#cobertura-sbd-toe-forte-mas-com-gaps-explícitos}
 
 **O que SbD-ToE JÁ PRESCREVE (excelente):**
 
@@ -233,7 +233,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 
 ---
 
-#### Gaps Identificados (Incoerências com DORA)
+#### Gaps Identificados (Incoerências com DORA) {#gaps-identificados-incoerências-com-dora}
 
 **Gap 1: Falta de Mapeamento Explícito de Autoridade DORA-compatível**
 
@@ -241,7 +241,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 |-------|------------------|-----------|-----|
 | **L1** | Validação por AppSec Engineer (informal) | Aprovação por autoridade formal designada | ⚠️ Developer-friendly, mas falta escalada clara |
 | **L2** | Validação formal por AppSec + GRC | Aprovação por CISO ou equivalente formal | ✅ Adequado, mas manual não o diz explicitamente |
-| **L3** | Aprovação de Gestão Executiva/CISO | **Aprovação de board ou CRO (exigência DORA)** | ❌ **GAP CRÍTICO** - Manual não especifica "board-level approval" |
+| **L3** | Aprovação de Gestão Executiva/CISO | Aceitação de risco residual acima da tolerância aprovada pelo órgão de administração, por função/responsável formalmente designado, com inventário justificado e revisão anual (RTS 2024/1774, art. 3.º, al. a) e d); DORA art. 5.º, n.º 2, e 6.º, n.º 4) | ⚠️ **GAP** - Manual não formaliza papéis de aceitação, inventário e revisão anual de riscos residuais aceites |
 
 **Como manifesta:** Organização aceita exceção L3 com aprovação de CISO; regulador questiona: "foi aprovada em board?" → sem ata = **falha de governance**.
 
@@ -253,7 +253,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 |---------|---------|------|
 | "Não implementar MFA porque é complexo" | Tecnicamente aceitável com TTL em L1 | ❌ **Pode contrariar medidas mínimas de autenticação forte e gestão de risco TIC em DORA** |
 | "SQLi em endpoint legado, mantém-se" | Aceitável com compensação (ex: WAF) em L1/L2 | ❌ **Pode violar DORA** (SQLi é nunca aceitável em qualquer L) |
-| "CVE P0 em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
+| "CVE crítico em runtime, sem plano de fix" | Aceitável se compensado em L1 | ❌ **Pode contrariar deveres de remediação, validação e supervisão contínua em DORA** |
 
 **Como manifesta:** Organização registra exceção no SbD-ToE formalmente; regulador rejeita: "esta exceção não é admissível em DORA" → perda de tempo, revisão forçada.
 
@@ -264,9 +264,9 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | Processo | SbD-ToE | DORA Exigência | Gap |
 |----------|---------|----------------|-----|
 | **Criação de exceção** | Documenta com owner, TTL, critérios | ✅ Bom | ✅ Alinhado |
-| **Reavaliação periódica** | Revisão 30 dias antes expiração; re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
+| **Reavaliação periódica** | Revalidação na data de expiração, com alerta 15 dias antes (Política 05 §7, escolha do Manual); re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
 | **Rastreamento centralizado** | Ferramenta GRC; audit trail por aplicação | ✅ Bom | ⚠️ Manual não descreve formato de reporte a DORA |
-| **Escalada ao regulador** | Não mencionado no manual | ❌ DORA exige reportar exceções em contexto de incidentes | ❌ **GAP** - Sem guia de quando escalar ao regulador |
+| **Escalada ao regulador** | Não mencionado no manual | ⚠️ O DORA exige a comunicação de incidentes de caráter severo relacionados com as TIC (art. 19.º); exceções relacionadas devem constar da documentação de suporte | ❌ **GAP** - Sem guia de como integrar exceções no reporte de incidentes |
 
 **Como manifesta:** Incidente de segurança; regulador pede: "mostre-me exceções relevantes" → organização não tem visão consolidada ou não sabe se deve reportar.
 
@@ -290,7 +290,7 @@ O SbD-ToE descreve **como** gerir exceções, mas não estabelece **quais catego
 
 ---
 
-#### Como Resolver a Incoerência
+#### Como Resolver a Incoerência {#como-resolver-a-incoerência}
 
 **1. Estabelecer Política Formal de Exceções Compatível com DORA**
 
@@ -312,17 +312,17 @@ B. Exceções ACEITÁVEIS com aprovação board-level (L3 DORA):
    - Componentes legados sem patch aplicável
    - CVEs com "no fix available" + compensação (ex: isolamento de rede)
    - Arquitetura herdada em transição
-   ➜ Ação: APROVAR se board/CRO assina; TTL ≤ 90 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se board/CRO assina; TTL da Política 05 §7 (L3: 30 dias; High 14 dias; Critical não aceitável); reavaliação obrigatória
 
 C. Exceções ACEITÁVEIS com aprovação CISO-level (L2 DORA):
    - Requisitos técnicos com compensação equivalente
    - Testes legítimos de resiliência suspensos (ex: TLPT adiado)
-   ➜ Ação: APROVAR se CISO/AppSec assina; TTL ≤ 180 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se CISO/AppSec assina; TTL da Política 05 §7 (L2: 60 dias; High 30 dias; Critical 7 dias); reavaliação obrigatória
 
 D. Exceções ACEITÁVEIS com aprovação AppSec-level (L1):
    - MVP com funcionalidade reduzida de segurança
    - Prototipagem com dados não-sensíveis
-   ➜ Ação: APROVAR se AppSec assina; TTL ≤ 365 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se AppSec assina; TTL da Política 05 §7 (L1: 90 dias; Critical 7 dias); reavaliação obrigatória
 
 Rastreamento:
 - Ferramenta GRC centralizada (SAP GRC, AuditBoard, ou custom)
@@ -364,7 +364,7 @@ Expandir `US-15 (Processo formal de exceções)` com:
 
 ---
 
-#### Resumo: Por que Ausência de Gestão Formal = Incoerência DORA
+#### Resumo: Por que Ausência de Gestão Formal = Incoerência DORA {#resumo-por-que-ausência-de-gestão-formal--incoerência-dora}
 
 | Aspecto | Sem Gestão Formal | Com Gestão SbD-ToE + DORA Mapping |
 |--------|-------------------|----------------------------------|
@@ -376,19 +376,19 @@ Expandir `US-15 (Processo formal de exceções)` com:
 
 ---
 
-### Conformidade Prática
+### Conformidade Prática {#conformidade-prática}
 
 **Alinhamento SbD-ToE com DORA:**
 1. ✅ Aplicar processo formal de exceções do SbD-ToE ([Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro), [Cap. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro) addon 08, [Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) addon 09)
 2. ✅ Mapear níveis de criticidade a aprovadores DORA-compatíveis (L1→AppSec, L2→CISO, L3→Board/CRO)
 3. ✅ Definir categorias de inaceitabilidade (política organizacional)
 4. ✅ Implementar rastreamento centralizado com audit trail (ferramenta GRC)
-5. ✅ Estabelecer reporte trimestral a estruturas de governance (exigência DORA Art. 5)
+5. ✅ Estabelecer reporte periódico ao órgão de administração (o art. 5.º, n.º 2, al. i), do DORA exige canais de informação; a periodicidade trimestral é opção organizacional)
 6. ✅ Definir protocolo de escalada ao regulador em contexto de incidente (Art. 17–23)
 
 ---
 
-## CONCLUSÃO DO CROSS-CHECK
+## CONCLUSÃO DO CROSS-CHECK {#conclusão-do-cross-check}
 
 O **SbD-ToE cobre o núcleo técnico da DORA**. As lacunas observadas não constituem falhas do modelo, mas **abstenções deliberadas** para preservar universalidade e aplicabilidade em contextos organizacionais diversos.
 
@@ -401,7 +401,7 @@ O **SbD-ToE cobre o núcleo técnico da DORA**. As lacunas observadas não const
 
 ---
 
-## Referências
+## Referências {#referências}
 
 - SbD-ToE Manual (Capítulos 01–14)
 - Regulamento DORA (UE 2022/2554)

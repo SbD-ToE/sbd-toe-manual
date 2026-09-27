@@ -10,7 +10,7 @@ tags: [formacao, iac, terraform, tfsec, checkov, pipelines, devops, validacao, r
 # Módulo Formativo - Infraestrutura como Código (IaC) Seguro
 O presente exemplo ilustra formação num contexto de elevada automação da infraestrutura, onde a compreensão humana dos mecanismos e limites continua a ser essencial.
 
-## 🎯 Objetivo
+## 🎯 Objetivo {#-objetivo}
 
 Capacitar as equipas técnicas para:
 
@@ -21,7 +21,7 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## 📋 Pré-requisitos
+## 📋 Pré-requisitos {#-pré-requisitos}
 
 - Familiaridade com linguagens de IaC (ex: Terraform, Bicep, YAML/K8s)
 - Experiência prévia com pipelines de CI/CD (execução, revisão ou configuração)
@@ -29,7 +29,7 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## 🧪 Formato da sessão
+## 🧪 Formato da sessão {#-formato-da-sessão}
 
 | Bloco                     | Duração | Objetivo                                                              |
 |--------------------------|---------|-----------------------------------------------------------------------|
@@ -43,7 +43,7 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## 📦 Materiais necessários
+## 📦 Materiais necessários {#-materiais-necessários}
 
 - Repositório com exemplos reais e simulados (Terraform, Bicep, K8s)
 - Cheatsheet de ferramentas e comandos (tfsec, checkov, driftctl, opa)
@@ -53,7 +53,7 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## ✅ Critérios de conclusão
+## ✅ Critérios de conclusão {#-critérios-de-conclusão}
 
 - Participação ativa na sessão ou revisão assistida de PR
 - Aprovação no quiz final (mínimo 80%)
@@ -61,7 +61,7 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## 🔁 Integração no ciclo de vida
+## 🔁 Integração no ciclo de vida {#-integração-no-ciclo-de-vida}
 
 - Inclusão do módulo na **formação obrigatória de onboarding DevOps**
 - Tarefas de backlog técnico: `[SEC] Validar plano Terraform com tfsec` / `[SEC] Adicionar tagging obrigatório`
@@ -71,18 +71,18 @@ Capacitar as equipas técnicas para:
 
 ---
 
-## 🔗 Referências cruzadas no SbD-ToE
+## 🔗 Referências cruzadas no SbD-ToE {#-referências-cruzadas-no-sbd-toe}
 
 | Capítulo                       | Relevância                                                 |
 |--------------------------------|------------------------------------------------------------|
-| Capítulo 08 - IaC Seguro       | Fonte principal de requisitos e práticas (IAC-001 a IAC-013) |
+| Capítulo 08 - IaC Seguro       | Fonte principal de requisitos e práticas (`IAC-001` a `IAC-013`) |
 | Capítulo 07 - CI/CD Seguro     | Integração com pipelines e execuções isoladas             |
 | Capítulo 04 - Arquitetura      | Impacto estrutural das configurações e módulos reutilizáveis|
 | Capítulo 02 - Requisitos       | Correspondência com os requisitos do Cap. 02 relacionados com segredos, permissões, segregação |
 
 ---
 
-## 📊 Boas práticas operacionais
+## 📊 Boas práticas operacionais {#-boas-práticas-operacionais}
 
 - Incluir este módulo como **pré-requisito para acesso a ambientes cloud** ou pipelines críticos
 - Realizar sessões trimestrais com análise de erros reais de IaC da organização

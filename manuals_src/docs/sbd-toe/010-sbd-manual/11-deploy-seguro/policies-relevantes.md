@@ -18,7 +18,7 @@ A aplicação consistente e eficaz do Capítulo 11 - **Deploy Seguro** - exige a
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ A execução segura de software em produção **depende de critérios técnicos e operacionais bem definidos e formalizados**.
 
@@ -33,7 +33,7 @@ Estas políticas devem:
 
 ---
 
-## 📓 Políticas recomendadas
+## 📓 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                  | Obrigatória? | Aplicação                                     | Resumo do conteúdo necessário                                             |
 |---------------------------------------------------|--------------|--------------------------------------------------|-------------------------------------------------------------------------|
@@ -42,11 +42,11 @@ Estas políticas devem:
 | [Política de Logging e Rastreabilidade](/sbd-toe/assets/policies/policy-deploy-seguro)            | ✅ Sim      | Todos os ambientes de produção e staging       | Requisitos de logging, versionamento, toggles e auditabilidade           |
 | [Política de Gating e Automatismo de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro)      | ⚠️ Opcional | Pipelines com deploy automatizado               | Definição de gates, aprovação automática, bloqueio por findings         |
 | [Política de Validação em Ambiente de Staging](/sbd-toe/assets/policies/policy-deploy-seguro)    | ✅ Sim      | Projetos com staging ou pre-prod                | Validação funcional, métricas e readiness com evidência                   |
-| [Política de Autonomia e Responsabilidade de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro) | ⚠️ Opcional | Equipas com deploy self-service ou continuo     | Quem pode autorizar, requisitos mínimos, registo de decisões             |
+| [Política de Autonomia e Responsabilidade de Deploy](/sbd-toe/assets/policies/policy-deploy-seguro) | ⚠️ Opcional | Equipas com deploy self-service ou contínuo     | Quem pode autorizar, requisitos mínimos, registo de decisões             |
 
 ---
 
-## 📄 Estrutura sugerida de cada política
+## 📄 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -59,7 +59,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser aprovadas pelas áreas de **segurança, QA e produto**;
 - Devem estar **acessíveis, versionadas e conhecidas** por todas as equipas envolvidas em deploy;

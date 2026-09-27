@@ -18,7 +18,7 @@ A aplicação eficaz do **Capítulo 10 - Testes de Segurança** exige que exista
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ A validação de segurança eficaz não depende apenas de ferramentas - depende de **políticas claras que estabeleçam critérios, responsabilidades e controlo contínuo**.
 
@@ -34,14 +34,14 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                       | Obrigatória? | Aplicação                                 | Resumo do conteúdo necessário |
 |--------------------------------------------------------|--------------|--------------------------------------------|-------------------------------|
 | [Política de Validação de Segurança Aplicacional](/sbd-toe/assets/policies/policy-estrategia-testes)       | ✅ Sim       | Todas as aplicações com entrega contínua   | Tipos de testes exigidos (SAST, DAST, fuzzing), níveis mínimos por criticidade, ferramentas aprovadas. |
 | [Política de Gestão de Findings de Segurança](/sbd-toe/assets/policies/policy-estrategia-testes)            | ✅ Sim       | Todos os produtos com scanner ativo        | Processo de triagem, classificação, priorização, tracking, ownership e reporte de findings. |
 | [Política de Exceções a Vulnerabilidades Identificadas](/sbd-toe/assets/policies/policy-excecoes-cve)  | ✅ Sim       | Quando um finding não é corrigido          | Justificação técnica, prazo de validade, revisão periódica, mitigação compensatória. |
-| [Política de Execução de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting)            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (ex: semestral), âmbito, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
+| [Política de Execução de PenTesting Ofensivo](/sbd-toe/assets/policies/policy-pentesting)            | ⚠️ Opcional  | Aplicações L2/L3, APIs externas, produtos críticos | Periodicidade definida (anual em L2/L3, com gatilhos), âmbito, metodologia, objetivos (black-box/grey-box), reporte e follow-up obrigatório. |
 | [Política de Cobertura de Testes de Segurança](/sbd-toe/assets/policies/policy-estrategia-testes)           | ⚠️ Opcional  | Aplicações críticas (L2–L3)                | Definição de métricas de cobertura esperada, fuzzing dirigido, teste de regressões. |
 | [Política de Integração de Testes com Ciclo de Vida](/sbd-toe/assets/policies/policy-estrategia-testes)     | ⚠️ Opcional  | Equipas com integração DevSecOps           | Definição de critérios BDD, integração com pipelines, PRs, e processos de release. |
 | [Política de Revalidação e Observabilidade de Testes](/sbd-toe/assets/policies/policy-estrategia-testes)    | ⚠️ Opcional  | Ambientes com requisitos de auditoria      | Revalidação de findings, logging dos testes, análise de falhas de execução. |
@@ -50,7 +50,7 @@ Estas políticas:
 
 ---
 
-## 📋 Estrutura sugerida de cada política
+## 📋 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política deve incluir, pelo menos:
 
@@ -64,7 +64,7 @@ Cada política deve incluir, pelo menos:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **aprovadas em conjunto pelas áreas de Segurança, Qualidade e Desenvolvimento**;
 - Devem ser **documentadas, acessíveis e integradas no ciclo de vida de software**;

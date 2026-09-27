@@ -16,7 +16,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 📋 Itens de Verificação
+## 📋 Itens de Verificação {#-itens-de-verificação}
 
 | Item                                                                                                                   | Verificado? |
 |------------------------------------------------------------------------------------------------------------------------|-------------|
@@ -25,23 +25,23 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 | O nível de criticidade (L1–L3) está documentado e justificado?                                                         | ☐           |
 | As alçadas de aprovação por nível de risco estão documentadas e conhecidas pelos decisores, com escalonamento rastreável? (`GOV-003`) | ☐           |
 | Os requisitos mínimos proporcionais ao risco estão identificados e aplicados?                                         | ☐           |
-| Existe processo formal de gestão de exceções, registando cada exceção com owner, medida compensatória, evidência referenciável, data de expiração e alerta de revalidação (máx. 90 dias)? (`GOV-004`/`GOV-005`) | ☐           |
+| Existe processo formal de gestão de exceções, registando cada exceção com owner, medida compensatória, evidência referenciável, data de expiração (TTL da Política 05 §7) e alerta de revalidação 15 dias antes (ou a meio do TTL, se inferior a 30 dias)? (`GOV-004`/`GOV-005`) | ☐           |
 | Os contratos com terceiros incluem cláusulas de segurança proporcionais ao risco? (`GOV-006`)                         | ☐           |
 | Os fornecedores com acesso técnico foram validados (questionário/checklist; L3: SBOM, SLA de incidentes, direito de auditoria) antes de onboarding? (`GOV-007`) | ☐           |
 | Existe rastreabilidade organizacional por aplicação ligando risco → requisitos → exceções → fornecedores → owner? (`GOV-008`) | ☐           |
 | A cadeia de autoridade de cada decisão de risco (quem pediu, avaliou, aprovou) é verificável, com evidência referenciável e retida? (`GOV-009`) | ☐           |
-| Existe ciclo de revisão periódica de conformidade por tipo de ativo (L3 trimestral, L2 semestral, fornecedores anual), com ações corretivas (owner e prazo)? (`GOV-010`) | ☐           |
+| Existe ciclo de revisão periódica de conformidade por tipo de ativo (L3 trimestral, L2 semestral, L1 anual; fornecedores anual, semestral em L3), com ações corretivas (owner e prazo)? (`GOV-010`) | ☐           |
 | Existem KPIs de governação definidos, recolhidos e reportados à gestão, com thresholds que despoletam ação corretiva? (`GOV-011`) | ☐           |
 | Existe avaliação de maturidade ativa (SAMM/DSOMM ou equivalente) há ≤12 meses, com plano de evolução (L3)? (`GOV-012`) | ☐           |
 | A aplicação consta da matriz de controlo das práticas SbD-ToE e as políticas organizacionais relevantes estão formalmente aprovadas e auditadas? | ☐           |
-| Os contratos com provedores de modelos de IA incluem data retention, training opt-out, localização RGPD (Art. 44–49), audit rights, SLA de notificação de mudanças e conformidade AI Act (Art. 53/55 GPAI), constando o provedor da lista aprovada (`DEP-014`)? | ☐           |
+| Os contratos com provedores de modelos de IA incluem data retention, training opt-out, localização RGPD (Art. 44–49), audit rights, SLA de notificação de mudanças e conformidade com o AI Act art. 53.º (e art. 55.º, se o modelo tiver risco sistémico) quando GPAI, constando o provedor da lista aprovada (`DEP-014`)? | ☐           |
 | Existe processo formal de offboarding seguro (revogação de acesso, recuperação de ativos, rotação de segredos) e os decisores têm formação SbD válida nos últimos 12 meses (Cap. 13)? | ☐           |
 | Os terceiros completam onboarding técnico e formação obrigatória (por perfil, com quiz e sandbox) com *sign-off* registado **antes** de acesso a sistemas, sendo o registo rastreável e retido conforme regulação (`GOV-013`)? | ☐           |
 | O acesso de contractors ativos é revisto periodicamente (semestral L1 / trimestral L2–L3) com validação de necessidade, remoção de acesso excessivo no próprio dia, revisão assinada e mudanças em *audit trail* (`GOV-014`)? | ☐           |
 
 ---
 
-## 🔄 Integração Operacional
+## 🔄 Integração Operacional {#-integração-operacional}
 
 - Pode ser usado como **template de revisão recorrente** em Jira, Confluence, SharePoint ou Forms;
 - Deve ter validação conjunta por **AppSec, GRC e gestão de produto**;
@@ -49,7 +49,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 🎯 Conformidade e Indicadores
+## 🎯 Conformidade e Indicadores {#-conformidade-e-indicadores}
 
 - A validação positiva deste checklist permite declarar **conformidade com o Capítulo 14 - Governança e Contratação**.
 - Os resultados podem ser integrados em **dashboards, ciclos de auditoria e métricas de maturidade**.
@@ -61,7 +61,7 @@ Este checklist aplica-se a **projetos, aplicações ou contratos** com impacto t
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 - **Cap. 01** - Classificação de risco (base para aplicação proporcional)
 - **Cap. 02** - Requisitos de segurança (alvo de exceções, rastreabilidade)

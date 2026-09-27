@@ -16,7 +16,7 @@ O modelo LINDDUN permite identificar ameaças específicas associadas a:
 
 ---
 
-## 🎯 Contexto da aplicação
+## 🎯 Contexto da aplicação {#-contexto-da-aplicação}
 
 Serviço de autenticação `auth-service` com as seguintes características:
 
@@ -28,7 +28,7 @@ Serviço de autenticação `auth-service` com as seguintes características:
 
 ---
 
-## 📈 Modelo de dados e fluxos (DFD simplificado)
+## 📈 Modelo de dados e fluxos (DFD simplificado) {#-modelo-de-dados-e-fluxos-dfd-simplificado}
 
 ```mermaid
 flowchart LR
@@ -43,7 +43,7 @@ flowchart LR
 
 ---
 
-## 🔍 Ameaças identificadas (modelo LINDDUN)
+## 🔍 Ameaças identificadas (modelo LINDDUN) {#-ameaças-identificadas-modelo-linddun}
 
 | Categoria       | Ameaça identificada                                         | Impacto | Requisito associado (Cap. 2)                             |
 | --------------- | ----------------------------------------------------------- | ------- | -------------------------------------------------------- |
@@ -57,7 +57,7 @@ flowchart LR
 
 ---
 
-## ✅ Recomendações de controlo
+## ✅ Recomendações de controlo {#-recomendações-de-controlo}
 
 * Anonimizar ou pseudonimizar claims sensíveis nos JWT (usar `sub` sem `email`)
 * Aplicar RBAC ao endpoint `/admin/audits` e filtrar dados retornados
@@ -66,7 +66,7 @@ flowchart LR
 
 ---
 
-## 🧭 Validação de requisitos do Cap. 2
+## 🧭 Validação de requisitos do Cap. 2 {#-validação-de-requisitos-do-cap-2}
 
 Este modelo demonstra a necessidade de aplicar requisitos de segurança e privacidade (Cap. 2) em três domínios:
 

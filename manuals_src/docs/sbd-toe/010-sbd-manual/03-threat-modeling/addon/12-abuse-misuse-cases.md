@@ -10,7 +10,7 @@ sidebar_position: 12
 
 # Método de Abuse e Misuse Cases
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 O manual refere abuse cases em vários pontos, mas sem um método para os produzir. Este addon fornece-o.
 
@@ -24,7 +24,7 @@ Aplicabilidade: **L2 e L3**, nas fases de requisitos e de threat modeling.
 
 ---
 
-## O método
+## O método {#o-método}
 
 1. **Workshop cross-functional.** Reunir produto, desenvolvimento, segurança e QA. A diversidade de perspetivas é o que distingue abuse cases úteis de uma lista previsível — quem conhece a regra de negócio identifica abusos que o atacante genérico não revela.
 2. **Derivar o reverso adversarial.** Para cada user story ou fluxo funcional relevante, formular o seu contraponto hostil: "Como atacante, quero *&lt;objetivo&gt;*, explorando *&lt;fraqueza&gt;*". Um fluxo de upload gera o abuso "carregar um ficheiro que executa código no servidor"; um fluxo de autenticação gera "enumerar contas válidas a partir das mensagens de erro".
@@ -34,7 +34,7 @@ Aplicabilidade: **L2 e L3**, nas fases de requisitos e de threat modeling.
 
 ---
 
-## Integração no backlog
+## Integração no backlog {#integração-no-backlog}
 
 Uma user story adversarial não é uma nota informal — é um requisito rastreável. Deve ter owner, critério de aceitação e estado, e ser tratada no mesmo backlog dos requisitos funcionais. Um abuse case que fica fora do backlog é uma preocupação que se perde entre sprints.
 
@@ -42,13 +42,13 @@ A integração no backlog é o que separa este método de um exercício pontual:
 
 ---
 
-## Relação com o threat modeling estruturado
+## Relação com o threat modeling estruturado {#relação-com-o-threat-modeling-estruturado}
 
 Os abuse cases e o threat modeling estruturado respondem a perguntas diferentes e complementares. O abuse case parte da **função** ("como se abusa deste fluxo?"); o STRIDE parte da **propriedade de segurança** ("onde falha a integridade, a confidencialidade, a disponibilidade?"). Aplicados juntos, cobrem o que cada um isoladamente deixa escapar. Os abuse cases são, tipicamente, o ponto de entrada mais acessível para equipas sem prática de threat modeling formal.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|

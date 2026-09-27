@@ -9,7 +9,7 @@ sidebar_position: 18
 
 # Política de Gestão de Segredos
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **gestão do ciclo de vida completo de segredos** - chaves de API, tokens de acesso, passwords, certificados, credenciais de base de dados e quaisquer outros valores que, se expostos, permitam acesso não autorizado a sistemas, dados ou infraestrutura.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política cobre todos os segredos usados no contexto de desenvolvimento, pipeline, runtime e infraestrutura, independentemente do tipo:
 
@@ -39,7 +39,7 @@ Esta política cobre todos os segredos usados no contexto de desenvolvimento, pi
 
 ---
 
-## 3. Proibições absolutas
+## 3. Proibições absolutas {#3-proibições-absolutas}
 
 As seguintes práticas são **proibidas** independentemente do nível de criticidade ou contexto:
 
@@ -59,7 +59,7 @@ A deteção de segredos hardcoded em código ou configuração deve ser automati
 
 ---
 
-## 4. Armazenamento centralizado
+## 4. Armazenamento centralizado {#4-armazenamento-centralizado}
 
 Todos os segredos devem ser armazenados em cofre de segredos centralizado, com acesso controlado e auditado:
 
@@ -75,23 +75,23 @@ Ferramentas de referência: HashiCorp Vault, AWS Secrets Manager, Azure Key Vaul
 
 ---
 
-## 5. Injeção em runtime
+## 5. Injeção em runtime {#5-injeção-em-runtime}
 
 Segredos devem ser injetados nas aplicações e pipelines exclusivamente em tempo de execução - nunca persistidos no sistema de ficheiros ou em variáveis de ambiente de forma permanente:
 
-### 5.1 Aplicações
+### 5.1 Aplicações {#51-aplicações}
 
 - [ ] Segredos injetados via variável de ambiente em runtime (não em tempo de build)
 - [ ] Variáveis de ambiente com segredos não expostas em endpoints de diagnóstico ou health checks
 - [ ] Alternativa preferida em L2/L3: acesso direto ao cofre via SDK em runtime, com identidade do workload
 
-### 5.2 Pipelines CI/CD
+### 5.2 Pipelines CI/CD {#52-pipelines-cicd}
 
 - [ ] Segredos referenciados via mecanismo nativo do sistema de CI (`secrets.*`, `CI/CD Variables masked`, `Variable Groups`)
 - [ ] Output de comandos que acedam a segredos mascarado nos logs
 - [ ] Credenciais de cloud via OIDC/workload identity (token efémero, TTL ≤ 1h) - elimina chaves estáticas de longa duração
 
-### 5.3 Containers
+### 5.3 Containers {#53-containers}
 
 - [ ] Segredos montados como volumes de segredo do orquestrador (ex: Kubernetes Secrets, com encriptação em repouso)
 - [ ] Alternativa preferida em L3: acesso via cofre com workload identity (ex: Vault Agent, AWS IRSA, GCP Workload Identity)
@@ -99,9 +99,9 @@ Segredos devem ser injetados nas aplicações e pipelines exclusivamente em temp
 
 ---
 
-## 6. TTL, rotação e revogação
+## 6. TTL, rotação e revogação {#6-ttl-rotação-e-revogação}
 
-### 6.1 TTL por tipo de segredo
+### 6.1 TTL por tipo de segredo {#61-ttl-por-tipo-de-segredo}
 
 | Tipo de segredo | TTL máximo recomendado | L3 (TTL máximo obrigatório) |
 |---|---|---|
@@ -112,14 +112,14 @@ Segredos devem ser injetados nas aplicações e pipelines exclusivamente em temp
 | Certificados TLS (aplicação) | 1 ano | 90 dias |
 | Chaves de encriptação de dados | 1 ano (com rotação de envelope) | 90 dias |
 
-### 6.2 Rotação
+### 6.2 Rotação {#62-rotação}
 
 - [ ] Rotação automatizada sempre que o sistema de emissão o suporte (ex: Vault dynamic secrets, AWS IAM roles, OIDC)
 - [ ] Rotação manual agendada para segredos sem suporte a rotação automática, com alertas antes da expiração
 - [ ] Rotação verificável sem alteração de código ou rebuild de imagens
 - [ ] Histórico de rotações auditável
 
-### 6.3 Revogação por exposição suspeita
+### 6.3 Revogação por exposição suspeita {#63-revogação-por-exposição-suspeita}
 
 Em caso de suspeita ou confirmação de exposição de um segredo:
 
@@ -130,7 +130,7 @@ Em caso de suspeita ou confirmação de exposição de um segredo:
 
 ---
 
-## 7. Segredos de terceiros e integrações
+## 7. Segredos de terceiros e integrações {#7-segredos-de-terceiros-e-integrações}
 
 Segredos recebidos de terceiros (ex: chaves de API de fornecedores) devem ser:
 
@@ -141,7 +141,7 @@ Segredos recebidos de terceiros (ex: chaves de API de fornecedores) devem ser:
 
 ---
 
-## 8. Responsabilidades
+## 8. Responsabilidades {#8-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -153,17 +153,17 @@ Segredos recebidos de terceiros (ex: chaves de API de fornecedores) devem ser:
 
 ---
 
-## 9. Agentes AI como *principals* não-humanos
+## 9. Agentes AI como *principals* não-humanos {#9-agentes-ai-como-principals-não-humanos}
 
 O capítulo anterior descreve segredos para identidades CI tradicionais (*runners*, *workloads*). Quando um agente AI passa a operar o pipeline ou recursos da organização — `Claude Code` a executar *tool calls*, `Copilot Workspace` a actuar em PRs, agentes próprios via SDK — esse agente é **mais um *principal* não-humano** sujeito aos mesmos princípios desta política, com três especializações.
 
-### 9.1 Identidade dedicada por agente e por ambiente
+### 9.1 Identidade dedicada por agente e por ambiente {#91-identidade-dedicada-por-agente-e-por-ambiente}
 
 - Cada agente AI tem **identidade *workload* efémera** (OIDC) distinta — sem reuso de credenciais humanas, sem reuso entre ambientes (dev / staging / prod) nem entre agentes.
 - TTL ≤ 1h (mesma regra das outras *workload identities*).
 - A identidade está declarada no *mandate* do agente (campo `identity_ref` — ver [Policy 38 — Mandates de Agentes AI](./policy-mandates-agentes)).
 
-### 9.2 *Scoping* per-tool
+### 9.2 *Scoping* per-tool {#92-scoping-per-tool}
 
 A identidade do agente recebe **apenas os *scopes* necessários para as *tools* declaradas na `tools_allowlist`** do *mandate* — não os *scopes* máximos suportados pelo runtime. Exemplos práticos:
 
@@ -173,7 +173,7 @@ A identidade do agente recebe **apenas os *scopes* necessários para as *tools* 
 
 Alterar `tools_allowlist` ou *scopes* é uma alteração estruturalmente equivalente a alterar uma IAM policy — exige novo ciclo de aprovação do *mandate* (ver Policy 38 §5).
 
-### 9.3 *Kill-switch* operacional
+### 9.3 *Kill-switch* operacional {#93-kill-switch-operacional}
 
 Para agentes em nível A2+, o procedimento de **revogação imediata** ([`REQ-AGN-003`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#req-agn)) tem de ser exercitado periodicamente:
 
@@ -185,7 +185,7 @@ Para agentes em nível A2+, o procedimento de **revogação imediata** ([`REQ-AG
 
 O exercício mede tempo total entre accionamento e revogação efectiva (revogação OIDC + terminação de runtime + isolamento de namespace). Resultado registado; falha no exercício é tratada como degradação operacional e bloqueia novas activações de agentes A3/A4 até estar resolvido.
 
-### 9.4 Proibições específicas
+### 9.4 Proibições específicas {#94-proibições-específicas}
 
 - ❌ **Reutilizar credenciais humanas** para autenticar o agente — viola o princípio fundamental desta política aplicado a *principals* AI.
 - ❌ **Token *long-lived* (>1h)** em qualquer identidade de agente AI — mesma regra que se aplica a runners CI.
@@ -197,70 +197,70 @@ O exercício mede tempo total entre accionamento e revogação efectiva (revoga�
 
 ---
 
-## 10. PII e dados sensíveis em *prompts* (cross-link RGPD)
+## 10. PII e dados sensíveis em *prompts* (cross-link RGPD) {#10-pii-e-dados-sensíveis-em-prompts-cross-link-rgpd}
 
-Os capítulos anteriores cobrem segredos clássicos — *tokens*, chaves, credenciais. Quando um agente AI recebe input de utilizador (chat, *document upload*, *form*), os **dados pessoais** entram no *prompt* e, por arrastamento, podem viajar até ao *provider* do modelo. A categoria do problema é parecida — informação sensível a fluir por canal não controlado — mas o regime jurídico aplicável é o do **RGPD**, não o desta política. Esta secção articula explicitamente os dois para que a coerência operacional não se perca na fronteira.
+Os capítulos anteriores cobrem segredos clássicos — *tokens*, chaves, credenciais. Quando um agente AI recebe input de utilizador (chat, *document upload*, *form*), os **dados pessoais** entram no *prompt* e, por arrastamento, podem viajar até ao fornecedor de serviços de IA do modelo. A categoria do problema é parecida — informação sensível a fluir por canal não controlado — mas o regime jurídico aplicável é o do **RGPD**, não o desta política. Esta secção articula explicitamente os dois para que a coerência operacional não se perca na fronteira.
 
-### 10.1 Princípio de minimização
+### 10.1 Princípio de minimização {#101-princípio-de-minimização}
 
 - O *prompt* enviado ao modelo deve conter **apenas os dados pessoais estritamente necessários** para a tarefa. Aplica-se directamente o princípio da minimização do RGPD Art. 5.º, n.º 1, al. c).
 - **Redacção / pseudonimização antes do envio** quando viável — substituir nomes, e-mails, IDs por *placeholders* (`<USER_X>`, `<EMAIL_REDACTED>`) e remapear no output.
 - Quando a redacção não é viável (ex.: tarefas que exigem o conteúdo literal), a decisão é registada e revista com cadência do *mandate* (Policy 38).
 
-### 10.2 Base legal explícita
+### 10.2 Base legal explícita {#102-base-legal-explícita}
 
 Cada uso operacional em que o agente vê PII tem **base legal RGPD declarada** — Art. 6.º (consentimento, contrato, obrigação legal, interesse legítimo, etc.) e, quando categorias especiais (Art. 9.º), base legal reforçada. A base legal é parte do *mandate* do agente (Policy 38 — adicionar campo `legal_basis` quando aplicável) ou da ficha de tratamento do projecto, e é revisitada nas revisões periódicas.
 
-### 10.3 Sub-processadores
+### 10.3 Subcontratantes {#103-sub-processadores}
 
-O *provider* do modelo é um **sub-processador** quando trata dados pessoais em nome da organização (RGPD Art. 28.º). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
+O fornecedor de serviços de IA do modelo é um **subcontratante** quando trata dados pessoais por conta da organização (RGPD, art. 28.º); se a própria organização for subcontratante, o fornecedor de serviços de IA é «outro subcontratante» (art. 28.º, n.os 2 e 4). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
 
-- Contrato de sub-processador com cláusulas explícitas (retention, *training opt-out*, audit rights).
-- Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o *provider* processa fora do EEA.
-- **Sem PII para *providers* fora da lista aprovada** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
+- Contrato com o subcontratante (RGPD, art. 28.º, n.º 3) com cláusulas explícitas (retention, *training opt-out*, audit rights).
+- Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o fornecedor de serviços de IA processa fora do EEA.
+- **Sem PII para fornecedores de serviços de IA fora da lista aprovada** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
-### 10.4 *Training opt-out* obrigatório para PII
+### 10.4 *Training opt-out* obrigatório para PII {#104-training-opt-out-obrigatório-para-pii}
 
-Quando o conteúdo do *prompt* inclui dados pessoais, é exigido contratualmente que o *provider* **não use esse conteúdo para treino futuro do modelo**. Preferência por **zero retention** para PII; quando o *provider* mantém logs operacionais, com retenção minimizada e propósito declarado.
+Quando o conteúdo do *prompt* inclui dados pessoais, é exigido contratualmente que o fornecedor de serviços de IA **não use esse conteúdo para treino futuro do modelo**. Preferência por **zero retention** para PII; quando o fornecedor de serviços de IA mantém logs operacionais, com retenção minimizada e propósito declarado.
 
-### 10.5 Telemetria sob controlo do *deployer*
+### 10.5 Telemetria sob controlo do responsável pela implantação (*deployer*) {#105-telemetria-sob-controlo-do-deployer}
 
-Os logs de inferência sob controlo da organização (Art. 19.º AI Act / RGPD Art. 5.º) cumprem [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retenção) e [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) com **redacção de PII nos `args`** — o *audit trail* preserva o suficiente para responder a auditoria sem replicar os dados pessoais.
+Os logs de inferência sob controlo da organização (AI Act, art. 19.º, n.º 1, para o prestador, e art. 26.º, n.º 6, para o responsável pela implantação / RGPD Art. 5.º) cumprem [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retenção: pelo menos seis meses nos sistemas de IA de risco elevado, AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6) e [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) com **redacção de PII nos `args`** — o *audit trail* preserva o suficiente para responder a auditoria sem replicar os dados pessoais.
 
-### 10.6 Direitos do titular dos dados
+### 10.6 Direitos do titular dos dados {#106-direitos-do-titular-dos-dados}
 
 Quando a interacção do utilizador com o agente gera dados pessoais, aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º). Em particular:
 
 - **Apagamento dos *audit events*** sob controlo do *deployer* quando o titular exerce direito ao esquecimento (sujeito a obrigações legais de retenção concorrentes).
-- **Não-retenção pelo *provider*** — verificado contratualmente. Quando a retenção pelo *provider* existe, o titular tem de poder accionar o direito também aí.
+- **Não-retenção pelo fornecedor de serviços de IA** — verificado contratualmente. Quando a retenção pelo fornecedor de serviços de IA existe, o titular tem de poder accionar o direito também aí.
 
-### 10.7 Proporcionalidade
+### 10.7 Proporcionalidade {#107-proporcionalidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|:--:|:--:|:--:|
 | Minimização / redacção antes do envio | Recomendado | Obrigatório quando viável | Obrigatório (categorias especiais sempre redactadas) |
 | Base legal declarada | Recomendado | Obrigatório | Obrigatório (revisão GRC) |
-| Sub-processador com cláusulas Art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
+| Subcontratante com cláusulas do art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
 | *Training opt-out* contratualizado | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório |
 | Localização EEA / SCCs quando aplicável | Obrigatório (quando há PII e processamento fora EEA) | Obrigatório | Obrigatório (preferência por processamento EEA) |
 | Redacção de PII nos `audit events` ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) | Recomendado | Obrigatório | Obrigatório |
 | Procedimento para direitos do titular | Recomendado | Obrigatório | Obrigatório (incl. apagamento sob controlo do *deployer*) |
 
-### 10.8 Anti-padrões
+### 10.8 Anti-padrões {#108-anti-padrões}
 
-- ❌ Enviar PII a *provider* fora da lista aprovada — *shadow AI* com risco RGPD.
+- ❌ Enviar PII a fornecedor de serviços de IA fora da lista aprovada — *shadow AI* com risco RGPD.
 - ❌ Logar *prompts* com PII sem redacção em [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) — `audit trail` torna-se ele próprio repositório de dados pessoais sem base legal específica.
-- ❌ Confiar que o *provider* "não usa para treino" sem cláusula contratual — declarações operacionais não substituem o Art. 28.º.
-- ❌ Ignorar categorias especiais (Art. 9.º RGPD) no prompt — saúde, biometria, dados de menores, etc. exigem base legal reforçada que muitos casos de uso de chatbots não satisfazem.
+- ❌ Confiar que o fornecedor de serviços de IA "não usa para treino" sem cláusula contratual — declarações operacionais não substituem o Art. 28.º.
+- ❌ Ignorar categorias especiais (art. 9.º RGPD) no prompt — saúde, dados biométricos para identificação inequívoca, origem racial ou étnica, etc. — ou dados de crianças (art. 8.º), que exigem condições reforçadas que muitos casos de uso de chatbots não satisfazem.
 - ❌ Tratar redacção como ofuscação suficiente — *pseudonimização* (RGPD) não é anonimização; PII pseudonimizada continua a ser dado pessoal.
 
-### 10.9 Cruzamento com cross-check RGPD
+### 10.9 Cruzamento com cross-check RGPD {#109-cruzamento-com-cross-check-rgpd}
 
 Para alinhamento detalhado com o regulamento, ver o [cross-check RGPD](/sbd-toe/cross-check-normativo/gdpr/intro). Esta secção mantém a coerência operacional na fronteira AppSec ↔ RGPD; o cross-check trata as obrigações jurídicas em detalhe.
 
 ---
 
-## 11. Revisão e auditoria desta política
+## 11. Revisão e auditoria desta política {#11-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -270,7 +270,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 12. Referências normativas e técnicas
+## 12. Referências normativas e técnicas {#12-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

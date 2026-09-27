@@ -17,25 +17,25 @@ Cada modelo está associado a:
 
 ---
 
-## 🧱 Modelo 1 - Monólito Web com Backend Interno (Risco L1)
+## 🧱 Modelo 1 - Monólito Web com Backend Interno (Risco L1) {#-modelo-1---monólito-web-com-backend-interno-risco-l1}
 
-### 📝 Descrição
+### 📝 Descrição {#-descrição}
 
 - Aplicação tradicional com backend interno e base de dados local
 - Sem APIs públicas
 - Acesso controlado via rede privada
 
-### ✔️ Requisitos aplicáveis
+### ✔️ Requisitos aplicáveis {#️-requisitos-aplicáveis}
 
 - `ARC-001` (Zonas de confiança identificadas e documentadas)
 - `ARC-007` (Padrões de arquitectura reutilizáveis e aprovados)
 - `ARC-010` (Diagramas de arquitectura versionados e acessíveis)
 
-### 🔑 Ameaças mitigadas
+### 🔑 Ameaças mitigadas {#-ameaças-mitigadas}
 
 - STRIDE: Tampering, Information Disclosure
 
-### 🖼️ Diagrama sugerido
+### 🖼️ Diagrama sugerido {#️-diagrama-sugerido}
 
 ```plaintext
 [UI] --> [Web Server] --> [Database]
@@ -45,24 +45,24 @@ Cada modelo está associado a:
 
 ---
 
-## ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2)
+## ☁️ Modelo 2 - Microserviços com APIs Externas (Risco L2) {#️-modelo-2---microserviços-com-apis-externas-risco-l2}
 
-### 📝 Descrição
+### 📝 Descrição {#-descrição-1}
 
 - APIs expostas via Gateway autenticado
 - Microserviços com segmentação lógica
 - mTLS na comunicação interna
 
-### ✔️ Requisitos aplicáveis
+### ✔️ Requisitos aplicáveis {#️-requisitos-aplicáveis-1}
 
 - `ARC-001`, `ARC-002`, `ARC-003`, `ARC-004`, `ARC-005`, `ARC-006`
 - `ARC-007`, `ARC-008`, `ARC-009`, `ARC-010`
 
-### 🔑 Ameaças mitigadas
+### 🔑 Ameaças mitigadas {#-ameaças-mitigadas-1}
 
 - STRIDE: Elevation of Privilege, Spoofing, Repudiation
 
-### 🖼️ Diagrama sugerido
+### 🖼️ Diagrama sugerido {#️-diagrama-sugerido-1}
 
 ```plaintext
 [API Gateway] <--> [Service A] <--> [Service B] <--> [DB]
@@ -74,23 +74,23 @@ Cada modelo está associado a:
 
 ---
 
-## 🧐 Modelo 3 - Plataforma Crítica Regulada (Risco L3)
+## 🧐 Modelo 3 - Plataforma Crítica Regulada (Risco L3) {#-modelo-3---plataforma-crítica-regulada-risco-l3}
 
-### 📝 Descrição
+### 📝 Descrição {#-descrição-2}
 
 - Aplicação sujeita a regulação (ex: saúde, financeiro)
 - Controlo estrito de fronteiras
 - Segmentação física e lógica (Kubernetes namespaces, DMZs)
 
-### ✔️ Requisitos aplicáveis
+### ✔️ Requisitos aplicáveis {#️-requisitos-aplicáveis-2}
 
 - Todos os requisitos ARC-001 a ARC-013
 
-### 🔑 Ameaças mitigadas
+### 🔑 Ameaças mitigadas {#-ameaças-mitigadas-2}
 
 - STRIDE: Todas
 
-### 🖼️ Diagrama sugerido
+### 🖼️ Diagrama sugerido {#️-diagrama-sugerido-2}
 
 ```plaintext
 [Client] --> [Web Gateway] --> [Frontend Pod]
@@ -101,7 +101,7 @@ Cada modelo está associado a:
 
 ---
 
-## 📁 Sugestões de reutilização
+## 📁 Sugestões de reutilização {#-sugestões-de-reutilização}
 
 - Disponibilizar modelos em `.drawio` ou `.puml` no repositório interno
 - Atribuir owner técnico por modelo

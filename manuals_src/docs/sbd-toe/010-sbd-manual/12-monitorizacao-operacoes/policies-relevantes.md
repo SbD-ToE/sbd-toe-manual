@@ -12,7 +12,7 @@ A adoção eficaz do **Capítulo 12 - Monitorização e Operações** exige a ex
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas descritas neste capítulo - logging estruturado, regras de alerta, correlação de eventos, integração com IRP, medição de MTTD/MTTR - **devem ser sustentadas por políticas organizacionais claras, auditáveis e aplicáveis a todos os ambientes operacionais**.
 
@@ -25,20 +25,20 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas Recomendadas
+## 🧾 Políticas Recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                 | Obrigatória? | Aplicação                                 | Resumo do Conteúdo Necessário                                                  |
 |--------------------------------------------------|--------------|--------------------------------------------|---------------------------------------------------------------------------------|
 | [Política de Monitorização e Logging](/sbd-toe/assets/policies/policy-logging-estruturado)              | ✅ Sim        | Todos os serviços e aplicações             | Definição de eventos, níveis de logging, formatos estruturados, destinos centralizados. |
 | [Política de Alertas e Deteção de Comportamentos](/sbd-toe/assets/policies/policy-gestao-alertas)  | ✅ Sim        | Sistemas críticos e ambientes de produção  | Tipos de eventos sensíveis, thresholds, tolerância a falso-positivos, resposta. |
 | [Política de Observabilidade de Serviços](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)          | ⚠️ Opcional  | Microserviços e arquiteturas distribuídas  | Métricas mínimas, dashboards obrigatórios, correlação com logs.                |
-| [Política de Retenção e Acesso a Registos](/sbd-toe/assets/policies/policy-logging-estruturado)         | ✅ Sim        | Todos os logs de segurança e operação      | Retenção ≥30 dias, ACL, cifragem, registo de acessos.                          |
+| [Política de Retenção e Acesso a Registos](/sbd-toe/assets/policies/policy-logging-estruturado)         | ✅ Sim        | Todos os logs de segurança e operação      | Retenção por tipo de log e nível (Política 29 §7), ACL, cifragem, registo de acessos.                          |
 | [Política de Resposta a Incidentes Operacionais](/sbd-toe/assets/policies/policy-irp)   | ✅ Sim        | Todos os domínios com deteção ativa        | Canais de resposta, playbooks, reporte, owners de domínio.                     |
 | [Política de Cobertura de Agentes e Instrumentação](/sbd-toe/assets/policies/policy-monitorizacao-seguranca)| ⚠️ Opcional  | Infraestrutura, cloud, endpoints           | Tipos de agentes obrigatórios, cobertura mínima, manutenção de visibilidade.   |
 
 ---
 
-## 🧱 Estrutura Esperada de Cada Política
+## 🧱 Estrutura Esperada de Cada Política {#-estrutura-esperada-de-cada-política}
 
 Cada política organizacional deve conter:
 
@@ -52,7 +52,7 @@ Cada política organizacional deve conter:
 
 ---
 
-## ✅ Recomendações Finais
+## ✅ Recomendações Finais {#-recomendações-finais}
 
 - As políticas devem ser **revistas regularmente** com base na evolução das ameaças e da arquitetura;
 - Devem estar **acessíveis e compreendidas por todas as equipas técnicas e operacionais**;

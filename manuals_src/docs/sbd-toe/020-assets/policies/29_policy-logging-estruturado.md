@@ -9,7 +9,7 @@ sidebar_position: 29
 
 # Política de Logging Estruturado
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **produção, formatação, centralização, retenção e protecção de logs** em aplicações e sistemas da organização.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 Esta política aplica-se a todos os sistemas em execução que produzam eventos relevantes para segurança, operação ou auditoria. Inclui aplicações web, APIs, workers, jobs, pipelines CI/CD, infraestrutura e sistemas de autenticação.
 
@@ -37,16 +37,16 @@ Esta política aplica-se a todos os sistemas em execução que produzam eventos 
 
 ---
 
-## 3. Formato de logging
+## 3. Formato de logging {#3-formato-de-logging}
 
-### 3.1 Formato obrigatório
+### 3.1 Formato obrigatório {#31-formato-obrigatório}
 
 Em L2/L3, todos os logs devem ser produzidos em formato **JSON** (ou compatível com Elastic Common Schema - ECS), legível por máquina e processável sem parsing personalizado:
 
 - Sem logs em texto livre não estruturado em componentes críticos
 - Sem múltiplos formatos de log no mesmo sistema sem normalização na ingestão
 
-### 3.2 Schema mínimo de evento
+### 3.2 Schema mínimo de evento {#32-schema-mínimo-de-evento}
 
 Cada evento de log deve conter, no mínimo, os seguintes campos:
 
@@ -65,7 +65,7 @@ Cada evento de log deve conter, no mínimo, os seguintes campos:
 
 ---
 
-## 4. Eventos de segurança obrigatórios
+## 4. Eventos de segurança obrigatórios {#4-eventos-de-segurança-obrigatórios}
 
 Os seguintes eventos de segurança devem ser sempre registados, independentemente do nível de criticidade da aplicação:
 
@@ -84,7 +84,7 @@ Os seguintes eventos de segurança devem ser sempre registados, independentement
 
 ---
 
-## 5. Proibições absolutas nos logs
+## 5. Proibições absolutas nos logs {#5-proibições-absolutas-nos-logs}
 
 Os seguintes dados nunca devem aparecer em logs, independentemente do nível:
 
@@ -103,7 +103,7 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 
 ---
 
-## 6. Centralização de logs
+## 6. Centralização de logs {#6-centralização-de-logs}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -115,22 +115,32 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 
 ---
 
-## 7. Retenção de logs
+## 7. Retenção de logs {#7-retenção-de-logs}
 
-| Tipo de log | L2 | L3 |
-|---|---|---|
-| Logs operacionais (runtime, erros) | 90 dias | 1 ano |
-| Logs de segurança (autenticação, autorização, alterações) | 1 ano | 2 anos (ou conforme regulação) |
-| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 3 anos (DORA: 5 anos) |
-| Logs de pipeline CI/CD | 90 dias | 1 ano |
+| Tipo de log | L1 | L2 | L3 |
+|---|---|---|---|
+| Logs operacionais (runtime, erros) | 30 dias | 90 dias | 1 ano |
+| Logs de segurança (autenticação, autorização, alterações) | 90 dias | 1 ano | 2 anos |
+| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 1 ano | 3 anos |
+| Logs de pipeline CI/CD | 30 dias | 90 dias | 1 ano |
+| Registos gerados automaticamente por sistemas de IA de risco elevado (OPS-011/012) | Pelo menos 6 meses | 1 ano | 2 anos |
 
 :::note
-Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulatórios prevalecem sobre os mínimos desta política. O período mais longo é sempre o aplicável.
+**Precedência.** Os prazos desta tabela são o **mínimo recomendado pelo Manual** (escolha do Manual) e não esgotam o que se espera da organização. Prevalece o mais exigente de entre:
+
+- **(a) a lei da UE aplicável** — por exemplo, os registos gerados automaticamente por sistemas de IA de risco elevado são conservados «por um período adequado à finalidade prevista do sistema de IA de risco elevado, de pelo menos seis meses» (AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6), e a documentação técnica de produtos com elementos digitais, incluindo a SBOM, fica disponível «por, pelo menos, 10 anos após a data de colocação no mercado [...] ou pelo período de apoio, consoante o que for mais longo» (CRA, art. 13.º, n.º 13). No DORA, é a entidade financeira que estabelece o período de conservação, tendo em conta, entre outros fatores, os resultados da avaliação do risco associado às TIC (Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2); as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690 mantêm os registos «durante um período predefinido» (anexo, ponto 3.2.5);
+- **(b) a legislação nacional**, incluindo a transposição da NIS2 e os regimes sectoriais (por exemplo, prevenção do branqueamento de capitais, fiscal, laboral, saúde);
+- **(c) as orientações e expectativas dos supervisores** (por exemplo EBA, ESMA, EIOPA, Banco de Portugal, CMVM, ASF, ANACOM, CNCS), que não são lei mas são esperadas em auditoria;
+- **(d) as expectativas normais do sector**: normas e referenciais assumidos por contrato ou esperados pelo mercado (por exemplo PCI DSS para dados de cartões de pagamento, ISO/IEC 27001 e SOC 2 em auditorias de clientes, requisitos de clientes e de seguradoras).
+
+O Manual não reproduz os prazos dos regimes (b) a (d): a organização mapeia o prazo aplicável na versão em vigor de cada um. Em qualquer caso, quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e)).
 :::
+
+**Mapa de retenção da organização.** A organização mantém um mapa que indica, por tipo de registo, o regime que fixa o prazo — lei da UE, legislação nacional, supervisor, sector ou este Manual — e o valor adoptado, que é o mais exigente dos aplicáveis. É o artefacto que um auditor pede; revê-se sempre que muda um regime aplicável.
 
 ---
 
-## 8. Integridade e imutabilidade
+## 8. Integridade e imutabilidade {#8-integridade-e-imutabilidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -142,7 +152,7 @@ Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulat
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -153,7 +163,7 @@ Em contextos regulados (DORA, NIS2, RGPD, saúde, financeiro), os prazos regulat
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -163,7 +173,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|
@@ -171,6 +181,6 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 | Elastic Common Schema (ECS) | Schema de referência para campos normalizados |
 | OWASP Logging Cheat Sheet | Boas práticas de logging seguro |
 | GDPR / RGPD - Art. 5(1)(e) | Limitação de conservação de dados pessoais |
-| DORA - Art. 12 | Requisitos de logging para entidades financeiras |
+| DORA (art. 9.º) — Reg. Delegado (UE) 2024/1774, art. 12.º (quadro simplificado: art. 34.º, al. f)) | Requisitos de logging para entidades financeiras |
 | NIST SP 800-92 | Guide to Computer Security Log Management |
 | ISO/IEC 27001 - A.12.4 | Logging and monitoring |

@@ -7,7 +7,7 @@ tags: [containers, assinatura, trust, notary, cosign, rekor, supply-chain]
 
 # Assinatura de Imagens e Cadeia de Confiança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todas as imagens de container utilizadas em pipelines, ambientes de execução e produção **têm a sua proveniência e integridade tecnicamente verificáveis**, através de mecanismos de assinatura digital e registo auditável.
 
@@ -18,7 +18,7 @@ Este ficheiro define como produzir e verificar essa evidência de forma consiste
 
 ---
 
-## 🧬 O que é a cadeia de confiança em imagens
+## 🧬 O que é a cadeia de confiança em imagens {#-o-que-é-a-cadeia-de-confiança-em-imagens}
 
 A **cadeia de confiança** aplicada a imagens de containers permite responder, de forma verificável, a questões fundamentais:
 
@@ -39,7 +39,7 @@ Tecnicamente, a cadeia de confiança inclui:
 
 ---
 
-## ⚠️ Assinatura não é autorização
+## ⚠️ Assinatura não é autorização {#️-assinatura-não-é-autorização}
 
 É essencial evitar uma interpretação incorreta, mas comum:
 
@@ -63,7 +63,7 @@ Esta separação é fundamental para evitar **confiança implícita induzida por
 
 ---
 
-## 📘 Ferramentas e mecanismos recomendados
+## 📘 Ferramentas e mecanismos recomendados {#-ferramentas-e-mecanismos-recomendados}
 
 | Componente          | Ferramenta / Padrão | Função técnica                                             |
 |--------------------|---------------------|-------------------------------------------------------------|
@@ -76,7 +76,7 @@ Estas ferramentas **produzem evidência criptográfica**, não decisões.
 
 ---
 
-## 🛠️ Como aplicar assinatura e verificação
+## 🛠️ Como aplicar assinatura e verificação {#️-como-aplicar-assinatura-e-verificação}
 
 A aplicação correta da cadeia de confiança deve seguir uma sequência clara:
 
@@ -92,7 +92,7 @@ A verificação automática **não elimina** a necessidade de avaliação contex
 
 ---
 
-## 📂 Armazenamento, versionamento e rastreabilidade
+## 📂 Armazenamento, versionamento e rastreabilidade {#-armazenamento-versionamento-e-rastreabilidade}
 
 - Assinaturas devem residir **junto da imagem** no registry;
 - Utilizar digests e identificadores estáveis;
@@ -106,7 +106,7 @@ A rastreabilidade deve permitir reconstruir o percurso completo da imagem.
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Preferir identidades OIDC para reduzir gestão manual de chaves;
 - Proibir execução de imagens não assinadas em L2/L3;
@@ -118,13 +118,13 @@ A rastreabilidade deve permitir reconstruir o percurso completo da imagem.
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Relação com a cadeia de confiança              |
 |----------------------------------|------------------------------------------------|
 | `01-imagens-base.md`             | Assinatura após aprovação da imagem base       |
 | `05-policies-runtime-opa.md`    | Enforcement técnico de verificação             |
-| `06-sbom-containers.md`         | Ligação entre composição e integridade         |
+| `06-inventario-sbom.md`         | Ligação entre composição e integridade         |
 | `09-riscos-processo-imagens.md` | Separação entre evidência e decisão            |
 | `25-rastreabilidade.md`         | Demonstração auditável de integridade          |
 

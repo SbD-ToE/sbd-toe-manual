@@ -8,7 +8,7 @@ tags: [formacao, manual, por capitulo, sbdtoe, referencia cruzada]
 
 # Manual de Formação por Perfil
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Organizar os conteúdos formativos sugeridos pelo manual SbD-ToE por **perfil funcional técnico**.  
 Este documento serve de base para:
@@ -21,9 +21,9 @@ Este documento serve de base para:
 
 ---
 
-## 🧬 Conteúdos sugeridos por função
+## 🧬 Conteúdos sugeridos por função {#-conteúdos-sugeridos-por-função}
 
-### 👤 Dev (Desenvolvedores)
+### 👤 Dev (Desenvolvedores) {#-dev-desenvolvedores}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -37,7 +37,7 @@ Este documento serve de base para:
 
 ---
 
-### 👤 QA (Testers / Quality Assurance)
+### 👤 QA (Testers / Quality Assurance) {#-qa-testers--quality-assurance}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -50,7 +50,7 @@ Este documento serve de base para:
 
 ---
 
-### 👤 PO (Product Owners)
+### 👤 PO (Product Owners) {#-po-product-owners}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -62,7 +62,7 @@ Este documento serve de base para:
 
 ---
 
-### 👤 DevOps / Engenharia de Plataforma
+### 👤 DevOps / Engenharia de Plataforma {#-devops--engenharia-de-plataforma}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -75,7 +75,7 @@ Este documento serve de base para:
 
 ---
 
-### 👤 AppSec (Segurança Aplicacional)
+### 👤 AppSec (Segurança Aplicacional) {#-appsec-segurança-aplicacional}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -88,7 +88,7 @@ Este documento serve de base para:
 
 ---
 
-### 👤 Gestão (Team Leads, Executivos, Segurança Organizacional)
+### 👤 Gestão (Team Leads, Executivos, Segurança Organizacional) {#-gestão-team-leads-executivos-segurança-organizacional}
 
 | Tópico                                    | Formato recomendado                   |
 |-------------------------------------------|----------------------------------------|
@@ -100,7 +100,7 @@ Este documento serve de base para:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Definir **trilhos por perfil + risco (L1–L3)** com base neste mapeamento
 - Incluir ações no **backlog, LMS, ou planos de onboarding**
@@ -109,7 +109,7 @@ Este documento serve de base para:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                          | Relação direta                        |
 |------------------------------------|----------------------------------------|

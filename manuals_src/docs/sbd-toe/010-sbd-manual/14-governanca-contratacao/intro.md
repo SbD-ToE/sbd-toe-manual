@@ -49,7 +49,7 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 ---
 
-## 🧪 2. Prescrição prática
+## 🧪 2. Prescrição prática {#-2-prescrição-prática}
 
 - **O que fazer:**  
   - Criar um **modelo formal e aprovado** de governação de segurança.  
@@ -76,7 +76,7 @@ A delegação de execução a processos ou sistemas é sempre uma decisão organ
 
 ---
 
-## 👥 Papéis envolvidos
+## 👥 Papéis envolvidos {#-papéis-envolvidos}
 
 A governação eficaz exige papéis claramente definidos, com autoridade proporcional e responsabilidades explícitas.
 
@@ -84,7 +84,7 @@ A governação eficaz exige papéis claramente definidos, com autoridade proporc
 - **AppSec Engineer** → valida exceções e supervisiona a rastreabilidade.  
 - **DevOps / SRE** → garante aplicação prática em pipelines e deploy.  
 - **Gestão Executiva** → aprova risco residual e governa a adoção organizacional.  
-- **GRC / Compliance (Jurídico + Procurement)** → integra cláusulas de segurança em contratos.  
+- **Jurídico + Procurement** → integra cláusulas de segurança em contratos.  
 - **GRC / Compliance** → recolhe evidências, gere métricas e auditorias.  
 
 👉 Cada papel exerce autoridade **derivada do modelo de governação definido**
@@ -92,7 +92,7 @@ e tem **user stories associadas** no `aplicacao-lifecycle.md`.
 
 ---
 
-## 🔗 Integração no ciclo
+## 🔗 Integração no ciclo {#-integração-no-ciclo}
 
 A governação atua como camada **horizontal e transversal** em todo o ciclo SbD-ToE:
 
@@ -106,7 +106,7 @@ A existência de mecanismos técnicos automatizados não cria, por si só, autor
 
 ---
 
-## 📊 Rastreabilidade organizacional
+## 📊 Rastreabilidade organizacional {#-rastreabilidade-organizacional}
 
 A governação eficaz exige rastreabilidade completa e consistente:
 
@@ -119,7 +119,7 @@ A governação eficaz exige rastreabilidade completa e consistente:
 
 ---
 
-## 🏁 Conclusão
+## 🏁 Conclusão {#-conclusão}
 
 Este capítulo é o que **fecha e legitima o ciclo do SbD-ToE**:
 
@@ -134,14 +134,14 @@ defensável e sustentável**.
 
 ---
 
-## 📜 Políticas Organizacionais Relevantes
+## 📜 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Política | Obrigatória? | Aplicação | Conteúdo mínimo |
 |----------|--------------|-----------|-----------------|
 | [Política de Gestão de Exceções de Segurança](/sbd-toe/assets/policies/policy-gestao-excecoes) | Sim | AppSec Engineer + Gestão Executiva | Fluxo formal de pedido, aprovação e prazo |
-| [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura) | Sim | GRC / Compliance (Jurídico + Procurement) | Cláusulas SbD-ToE, validação contínua |
+| [Política de Contratação Segura](/sbd-toe/assets/policies/policy-contratacao-segura) | Sim | Jurídico + Procurement | Cláusulas SbD-ToE, validação contínua |
 | [Política de Rastreabilidade Organizacional](/sbd-toe/assets/policies/policy-rastreabilidade-organizacional) | Sim | GRC / Compliance | Registo centralizado, dashboards |
-| [Política de Contratação Segura — Auditoria de Fornecedores](/sbd-toe/assets/policies/policy-contratacao-segura) | Recomendado | AppSec Engineer + GRC / Compliance (Procurement) | Auditorias periódicas de segurança |
+| [Política de Contratação Segura — Auditoria de Fornecedores](/sbd-toe/assets/policies/policy-contratacao-segura) | Recomendado | Procurement + AppSec Engineer | Auditorias periódicas de segurança |
 | [Política de KPIs de Governação de Segurança](/sbd-toe/assets/policies/policy-kpis-governacao) | Sim | GRC / Compliance + Gestão Executiva | Métricas, relatórios, objetivos |
 
 Na versão impressa, consultar o **Anexo de Políticas Organizacionais do manual**,

@@ -12,13 +12,13 @@ tags: [exceções, deploy, emergency, break-glass, gates, aprovacao, rollback]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a requisitos do catálogo de deploy seguro: `DPL-001` a `DPL-009`. Inclui o cenário de emergency deploy (break glass) como caso de excepção imediata com evidência post-facto.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - deploy de emergência (hotfix crítico, resposta a incidente em produção) que não pode aguardar o processo normal de aprovação e gates - "break glass" (DPL-001, DPL-003);
 - artefacto sem proveniência verificável em contexto de recuperação de desastre onde o pipeline normal está indisponível (DPL-002);
@@ -28,7 +28,7 @@ Excepções a requisitos do catálogo de deploy seguro: `DPL-001` a `DPL-009`. I
 
 ---
 
-## Emergency deploy - break glass
+## Emergency deploy - break glass {#emergency-deploy---break-glass}
 
 O emergency deploy é o único cenário em que a excepção pode ser aprovada *post-facto*, imediatamente após o deploy e antes do término da janela de deploy. Não é um bypass permanente - é uma excepção única e rastreável.
 
@@ -47,7 +47,7 @@ A ausência de registo de change de emergência ou de notificação ao CISO inva
 
 ---
 
-## Campos adicionais obrigatórios (deploy)
+## Campos adicionais obrigatórios (deploy) {#campos-adicionais-obrigatórios-deploy}
 
 | Campo | Obrigatório | Notas |
 |---|---|---|
@@ -59,7 +59,7 @@ A ausência de registo de change de emergência ou de notificação ao CISO inva
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

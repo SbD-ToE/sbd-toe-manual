@@ -9,37 +9,38 @@ sidebar_position: 6
 
 # Arquitetos de Software
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Arquitetos desenham soluções que **resistem ao tempo e às ameaças**.  
 Garantem que princípios de segurança estão embutidos nas decisões estruturais desde o início. Aplicam **padrões seguros desde a fundação**.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - Desenham soluções com padrões seguros (Cap. 04)
 - Antecipam implicações de risco em integrações e fluxos de dados
 - Garantem consistência da arquitetura em pipelines, IaC e deploys
 - Tomam decisões arquiteturais documentadas (ADR)
+- São donos das regras de desenho: aceitam as *policies* que as verificam de forma automática e aprovam as exceções a essas regras
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 O trabalho dos arquitetos suporta princípios de *security by design* previstos em **GDPR**, **AI Act** e também obrigações de **NIS2** relacionadas com planeamento de medidas técnicas adequadas. Sem arquitetura segura, correções posteriores são caras e ineficazes.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Concretizam:
-- **GDPR** e **AI Act**: *Security by design* e *privacy by design*
+- **GDPR** (proteção de dados desde a conceção, art. 25.º) e **AI Act** (sistemas de IA de risco elevado «concebidos e desenvolvidos de maneira que alcancem um nível apropriado de exatidão, solidez e cibersegurança», art. 15.º, n.º 1)
 - **NIS2**: Medidas técnicas estruturais adequadas
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Cap. 02 - Requisitos de Segurança
+### Cap. 02 - Requisitos de Segurança {#cap-02---requisitos-de-segurança}
 Rever **classificação e requisitos** sempre que ocorra integração crítica ou mudança estrutural relevante.
 
 **User Stories:**
 - [US-02: Revisão em alterações críticas](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-02---revisão-por-alteração-relevante) - Atualizar controlos e rastreabilidade
 
-### Cap. 03 - Threat Modeling
+### Cap. 03 - Threat Modeling {#cap-03---threat-modeling}
 Criar **modelo de ameaça inicial** com DFDs e STRIDE/LINDDUN, validar arquitetura identificando ameaças críticas antes do design, atualizar modelo em alterações significativas, aplicar LINDDUN quando há tratamento de dados pessoais.
 
 **User Stories:**
@@ -48,7 +49,7 @@ Criar **modelo de ameaça inicial** com DFDs e STRIDE/LINDDUN, validar arquitetu
 - [US-03: Atualização em alterações significativas](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-03---atualização-do-modelo-após-alteração-técnica) - Manter modelo válido
 - [US-06: Aplicação de LINDDUN para privacidade](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-06---validação-de-impacto-no-negócio) - Cobertura de ameaças GDPR
 
-### Cap. 04 - Arquitetura Segura
+### Cap. 04 - Arquitetura Segura {#cap-04---arquitetura-segura}
 Definir **princípios de arquitetura segura**, produzir ficha de arquitetura com controlos, registar decisões (ADR) com racional de segurança, rever trust boundaries e integrações, sincronizar modelo de ameaças com decisões, manter triggers de revisão, catálogo de padrões seguros, especificar controlos de isolamento, executar threat modeling no design inicial L2-L3.
 
 **User Stories:**
@@ -62,19 +63,19 @@ Definir **princípios de arquitetura segura**, produzir ficha de arquitetura com
 - [US-12: Controlos de isolamento técnico](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-12---gate-arquitetural-antes-do-go-live) - Resiliência a sobre-carga e falhas
 - [US-15: Identificação e governação de componentes não determinísticos](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identifica%C3%A7%C3%A3o-e-governa%C3%A7%C3%A3o-de-componentes-n%C3%A3o-determin%C3%ADsticos) - Especificar controlos proporcionais
 
-### Cap. 08 - IaC e Infraestrutura
+### Cap. 08 - IaC e Infraestrutura {#cap-08---iac-e-infraestrutura}
 Colaborar na **segregação de ambientes** com tagging e permissões mínimas, governar módulos IaC com origem confiável.
 
 **User Stories:**
 - [US-02: Segregação de ambientes com tagging](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-02---segregação-de-ambientes-tagging-e-permissões-mínimas) - Isolamento e rastreabilidade
 - [US-04: Governança de módulos IaC](/sbd-toe/sbd-manual/iac-infraestrutura/aplicacao-lifecycle#us-04---governança-e-origem-confiável-de-módulos) - Evitar propagação de más práticas
 
-### Cap. 11-12 - Deploy e Operações
+### Cap. 11-12 - Deploy e Operações {#cap-11-12---deploy-e-operações}
 Apoiar desenho **resiliente de ambientes** de produção com padrões de disponibilidade e recuperação.
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

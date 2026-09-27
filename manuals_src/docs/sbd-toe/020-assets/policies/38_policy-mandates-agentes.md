@@ -9,7 +9,7 @@ sidebar_position: 38
 
 # Política de Mandates de Agentes AI
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define o **ciclo de vida do *mandate*** de cada agente AI em uso operacional na organização: como se regista, quem é o *owner*, que nível de autonomia (A0–A4) lhe atribuímos, que *tools* pode invocar, em que ambientes opera, e com que cadência revemos.
 
@@ -17,7 +17,7 @@ Operacionaliza directamente o requisito [`REQ-AGN-001`](/sbd-toe/sbd-manual/requ
 
 > 🧭 **Em duas frases:** a Policy 16 diz *o que* o agente pode e não pode fazer; esta Policy 38 diz *quem decidiu*, *com que autoridade*, *durante quanto tempo*, e *quando voltamos a perguntar*.
 
-## 2. Âmbito
+## 2. Âmbito {#2-âmbito}
 
 Esta política aplica-se a **qualquer agente AI** em uso operacional na organização que opere em **nível A1 ou superior**, incluindo (sem carácter exclusivo):
 
@@ -30,7 +30,7 @@ Não está no âmbito:
 - Uso A0 (consulta sem execução), que continua coberto pela Policy 16 secções 1–10
 - Modelos AI que são parte do produto sem capacidade de tool-use externa (caem em Cap. 04 ARC-014 e cross-check AI Act)
 
-## 3. Princípio fundamental: o mandate é um acto formal de autorização
+## 3. Princípio fundamental: o mandate é um acto formal de autorização {#3-princípio-fundamental-o-mandate-é-um-acto-formal-de-autorização}
 
 Um *mandate* é a forma como a organização declara, por escrito e versionada, que **autoriza este agente, com este nível de autonomia, a actuar neste escopo, durante este período, sob este *owner*, com este *kill-switch***. Não é metadado — é um contrato interno entre quem opera o agente e quem responde pelo seu efeito.
 
@@ -40,7 +40,7 @@ Operar um agente A1+ sem *mandate* válido é o equivalente a dar acesso *produc
 
 A4 exige adicionalmente **mandate assinado pelo `CISO`** (ou equivalente); sem essa assinatura, o agente não opera em A4.
 
-## 4. Conteúdo mínimo de um mandate
+## 4. Conteúdo mínimo de um mandate {#4-conteúdo-mínimo-de-um-mandate}
 
 Cada *mandate* é um documento versionado em VCS (formato Markdown ou YAML, à escolha da organização — o conteúdo é que importa) com, no mínimo:
 
@@ -63,17 +63,17 @@ Cada *mandate* é um documento versionado em VCS (formato Markdown ou YAML, à e
 
 > 💡 Templates de exemplo: ver `020-assets/templates/mandate-agente.yaml` quando estiver publicado. Até lá, o esquema acima é suficiente para começar.
 
-## 5. Ciclo de vida do mandate
+## 5. Ciclo de vida do mandate {#5-ciclo-de-vida-do-mandate}
 
 ```
 [Proposta] → [Avaliação] → [Aprovação] → [Activação] → [Operação] → [Revisão / Renovação | Revogação]
 ```
 
-### 5.1 Proposta
+### 5.1 Proposta {#51-proposta}
 
 Quem quer operar um agente em A1+ submete proposta de *mandate* contendo todos os campos da secção 4 e justificação do nível de autonomia escolhido. A justificação responde a *"porquê A2 e não A1?"* — não basta declarar; é preciso fundamentar.
 
-### 5.2 Avaliação
+### 5.2 Avaliação {#52-avaliação}
 
 | Critério | Quem avalia |
 |---|---|
@@ -83,7 +83,7 @@ Quem quer operar um agente em A1+ submete proposta de *mandate* contendo todos o
 | Cobertura de testes de revert (A3+) | `qa` + `tech lead` |
 | Conformidade regulatória (AI Act, RGPD, etc., se aplicável) | `grc` / `compliance` |
 
-### 5.3 Aprovação
+### 5.3 Aprovação {#53-aprovação}
 
 | Nível | Aprovador exigido |
 |---|---|
@@ -94,7 +94,7 @@ Quem quer operar um agente em A1+ submete proposta de *mandate* contendo todos o
 
 A aprovação é registada no próprio *mandate* (campo `approver` + commit assinado em VCS).
 
-### 5.4 Activação
+### 5.4 Activação {#54-activação}
 
 Ao activar, verificamos pré-requisitos operacionais:
 
@@ -106,23 +106,23 @@ Ao activar, verificamos pré-requisitos operacionais:
 
 Sem todos os pré-requisitos, o agente fica em A1; não opera no nível pedido.
 
-### 5.5 Operação
+### 5.5 Operação {#55-operação}
 
 Durante a operação o *mandate* é a fonte da verdade do que o agente pode fazer. Qualquer alteração de *scope*, *tools_allowlist* ou *autonomy_level* obriga a **novo ciclo Proposta → Aprovação** — não há *amendments* informais.
 
-### 5.6 Revisão / Renovação
+### 5.6 Revisão / Renovação {#56-revisão--renovação}
 
 Na cadência declarada (`review_cadence`), o *owner* + `appsec` revêem:
 
 - [ ] *Intent events* da janela: *intent-action divergence* observada?
 - [ ] *Off-policy actions* registadas?
 - [ ] *Kill-switch* exercitado conforme cadência exigida (A3 trimestral, A4 mensal)?
-- [ ] Provider de modelo manteve a versão pinned?
+- [ ] O fornecedor de serviços de IA manteve a versão *pinned* do modelo?
 - [ ] *Tools_allowlist* continua proporcional ao trabalho real?
 
 Resultado: renovação (com ou sem alterações), descida de nível, ou revogação.
 
-### 5.7 Revogação
+### 5.7 Revogação {#57-revogação}
 
 Revogação é executada **imediatamente** pelo *kill-switch* nas situações:
 
@@ -130,11 +130,11 @@ Revogação é executada **imediatamente** pelo *kill-switch* nas situações:
 - *Prompt injection* bem-sucedida resultando em tool call não autorizada
 - *Credential exposure* da identidade do agente
 - Falha de *kill-switch* (mesmo sem incidente material — quebra de confiança operacional)
-- Alteração silenciosa do provider/modelo (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
+- Alteração silenciosa do modelo pelo fornecedor de serviços de IA (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
 
 Revogação não é sinónimo de extinção definitiva — pode haver re-emissão após análise *post-mortem* e *mandate* novo.
 
-## 6. Revisão periódica obrigatória do registo organizacional
+## 6. Revisão periódica obrigatória do registo organizacional {#6-revisão-periódica-obrigatória-do-registo-organizacional}
 
 Independentemente das revisões por *mandate*, a organização revê **o conjunto** dos *mandates* activos com cadência:
 
@@ -146,7 +146,7 @@ Independentemente das revisões por *mandate*, a organização revê **o conjunt
 
 A revisão organizacional cobre: *mandates* sem *owner* activo (ex: pessoa saiu da empresa), *mandates* com `effective_until` ultrapassado, agentes operacionais sem *mandate* correspondente, e *mandates* em níveis que não justificam (sub-uso ou *overprivilege*).
 
-## 7. Responsabilidades
+## 7. Responsabilidades {#7-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -158,7 +158,7 @@ A revisão organizacional cobre: *mandates* sem *owner* activo (ex: pessoa saiu 
 | **CISO** | Assinar mandates A4; aprovar política e revisões; arbitrar conflitos de escopo |
 | **Auditores** | Auditar registo de mandates + intent events vs acções reais; flag de divergências |
 
-## 8. Proporcionalidade por nível de criticidade
+## 8. Proporcionalidade por nível de criticidade {#8-proporcionalidade-por-nível-de-criticidade}
 
 | Requisito | L1 | L2 | L3 |
 |---|---|---|---|
@@ -169,7 +169,7 @@ A revisão organizacional cobre: *mandates* sem *owner* activo (ex: pessoa saiu 
 | Revisão organizacional do registo de mandates | Anual | Semestral | Trimestral |
 | Mandate assinado pelo `CISO` | Apenas A4 (raro) | Apenas A4 | A4 sempre; A3 recomendado |
 
-## 9. Gestão de exceções
+## 9. Gestão de exceções {#9-gestão-de-exceções}
 
 Excepções a esta política seguem o processo formal definido no Cap. 14 e na [`Policy 05 — Gestão de Excepções`](./policy-gestao-excecoes):
 
@@ -177,7 +177,7 @@ Excepções a esta política seguem o processo formal definido no Cap. 14 e na [
 - Excepção em A3/A4 exige aprovação adicional do `CISO`.
 - Excepções acumuladas (>2 sobre o mesmo agente em 12 meses) obrigam a revisão do *mandate*.
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista semestralmente** dada a rápida evolução das capacidades de agentes AI, ou após qualquer um dos seguintes eventos:
 
@@ -186,7 +186,7 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 - Mudança significativa nas capacidades dos *runtimes* AI suportados (e.g. nova classe de tool-use)
 - Revisão da [Policy 16 — Uso de Ferramentas de Apoio ao Desenvolvimento](./policy-uso-ferramentas-apoio) com impacto no perímetro
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|
@@ -204,4 +204,4 @@ Esta política deve ser **revista semestralmente** dada a rápida evolução das
 | NIST SP 800-207 | Zero Trust — agente como *principal* não-humano |
 | NIST SP 800-218A | SSDF Profile for GenAI |
 | ISO/IEC 42001:2023 | AI Management System — ciclo de vida, ownership, revisão |
-| EU AI Act (Reg. (UE) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obrigações de *deployers*) — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |
+| EU AI Act (Reg. (UE) 2024/1689) | Art. 14 (Human oversight); Art. 26 (Obrigações dos responsáveis pela implantação de sistemas de IA de risco elevado) — ver [cross-check AI Act](/sbd-toe/cross-check-normativo/ai-act/intro) |

@@ -10,7 +10,7 @@ tags: [kpi, metricas, TRN, formacao, onboarding, champions, L1, L2, L3]
 
 # KPIs e Métricas - Formação e Onboarding
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **eficácia, cobertura e impacto mensurável do programa de formação e onboarding em segurança**. A formação é um controlo organizacional, não um evento de compliance: o seu valor reside na mudança de comportamento observável, não na conclusão de módulos.
 
@@ -22,7 +22,7 @@ Os indicadores TRN alimentam a dimensão transversal **T-04 (Cobertura de owners
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -30,7 +30,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -51,7 +51,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -65,7 +65,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **TRN-K01 - Onboarding concluído:** considera-se concluído quando o colaborador completou o módulo obrigatório de segurança (definido no catálogo formativo `addon/01-catalogo-formativo.md`) e existe registo rastreável de conclusão com data. Módulos parciais ou em progresso não satisfazem este critério.
 
@@ -73,7 +73,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 **TRN-K03 - Fornecedor com formação:** para fornecedores de sistemas L3, o requisito é formação ou questionário de segurança específico ao contexto (não genérico). Para sistemas L2, um questionário de segurança documentado é suficiente. O critério de onboarding completo de fornecedores é definido em Cap. 14 `addon/03-modelo-validacao-fornecedores.md`.
 
-**TRN-K04 - Conteúdo actualizado:** um conteúdo está desactualizado quando: (a) referencia requisitos revogados ou alterados; (b) não reflecte mudanças no catálogo de ameaças relevante para o domínio; ou (c) tem mais de 24 meses sem revisão. O prazo de actualização após alteração significativa do catálogo é de 90 dias.
+**TRN-K04 - Conteúdo actualizado:** um conteúdo está desactualizado quando: (a) referencia requisitos revogados ou alterados; (b) não reflecte mudanças no catálogo de ameaças relevante para o domínio; ou (c) tem mais de 12 meses sem revisão. O prazo de actualização após alteração significativa do catálogo é de 90 dias.
 
 **TRN-K05 - Incidente com causa raiz de formação:** um incidente tem causa raiz de formação quando a análise post-mortem identifica que: (a) o comportamento que originou o incidente era coberto por conteúdo de formação existente; e (b) o colaborador envolvido não tinha a formação concluída ou a tinha expirada. Este indicador deve tender a zero e qualquer valor não-zero é um sinal de alerta imediato.
 
@@ -83,7 +83,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Suporte de instrumentação | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -97,7 +97,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
@@ -105,4 +105,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-programa-champions.md` | Critérios de actividade de champion (TRN-K07) |
 | `addon/90-indicadores-metricas.md` | Síntese operacional de métricas para uso quotidiano das equipas |
 | Cap. 14 `addon/03-modelo-validacao-fornecedores.md` | Requisitos de formação de fornecedores (TRN-K03) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensão transversal T-04 (ownership e formação) |
+| Cap. 14 `kpis-governanca.md` | Dimensão transversal T-04 (ownership e formação) |

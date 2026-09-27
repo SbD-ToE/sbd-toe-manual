@@ -18,7 +18,7 @@ Estas políticas asseguram que:
 
 ---
 
-## 📄 Políticas Organizacionais Relevantes
+## 📄 Políticas Organizacionais Relevantes {#-políticas-organizacionais-relevantes}
 
 | Nome da Política | Obrigatória? | Aplicação | Resumo do Conteúdo Necessário |
 |------------------|--------------|------------|--------------------------------|
@@ -33,7 +33,7 @@ Estas políticas asseguram que:
 
 ---
 
-## 📃 Estrutura mínima de cada política
+## 📃 Estrutura mínima de cada política {#-estrutura-mínima-de-cada-política}
 
 Cada política deve conter:
 
@@ -46,7 +46,7 @@ Cada política deve conter:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Todas as políticas devem ser **publicadas e aprovadas pela direção de segurança e engenharia**, e integradas nos processos de *DevSecOps*.  
 - A conformidade deve ser **validada periodicamente** através de _checklists_, auditorias técnicas e métricas de maturidade.  

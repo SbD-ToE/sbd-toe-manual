@@ -9,51 +9,51 @@ sidebar_position: 12
 
 # Security Champion
 
-## Visão Geral
+## Visão Geral {#visão-geral}
 
 Security Champions são **catalisadores locais de segurança**.  
 Não substituem AppSec, mas tornam a segurança **próxima do quotidiano da equipa**, assegurando que boas práticas são seguidas e histórias de segurança não são ignoradas.
 
-### Responsabilidades Principais
+### Responsabilidades Principais {#responsabilidades-principais}
 - São catalisadores de boas práticas em cada equipa
 - Reforçam a adoção das prescrições de forma próxima do quotidiano
 - Garantem que a segurança não é ignorada em sprint planning
 - Mentoram e evangelizam a equipa
 
-### Contexto Organizacional
+### Contexto Organizacional {#contexto-organizacional}
 Facilitam a criação de uma **cultura de segurança** - elemento previsto tanto em **NIS2** como em **DORA**, que pedem demonstração de formação e sensibilização.
 
-## Enquadramento Regulatório
+## Enquadramento Regulatório {#enquadramento-regulatório}
 
 Apoiam a criação de cultura de segurança exigida em:
 - **NIS2** e **DORA**: Awareness e capacitação técnica contínua
 
 ---
 
-## Atividades por Capítulo
+## Atividades por Capítulo {#atividades-por-capítulo}
 
-### Transversal - Todos os Capítulos
+### Transversal - Todos os Capítulos {#transversal---todos-os-capítulos}
 Ajudar **Developers e QA** no dia-a-dia, garantir que **checklists de segurança** são seguidos, assegurar que **histórias de segurança** (requisitos, threat modeling, correções) não são ignoradas no backlog.
 
-### Cap. 13 - Formação e Onboarding
+### Cap. 13 - Formação e Onboarding {#cap-13---formação-e-onboarding}
 **Mentorar e evangelizar** a equipa em práticas de segurança. Liderar sessões de threat modeling por feature, épico ou refactor.
 
 **User Stories:**
 - [US-06: Threat modeling por feature/épico/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - Security Champion lidera análise de ameaças (referenciada como Developer no lifecycle)
 
-### Cap. 14 - Governança e Contratação
-Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, revisar trimestralmente acesso, recolher feedback pós-projeto.
+### Cap. 14 - Governança e Contratação {#cap-14---governança-e-contratação}
+Ser **owner de segurança designado** para aplicações críticas. Executar processo estruturado de preparação de contractors, executar offboarding seguro, rever periodicamente o acesso (semestral em L1, trimestral em L2/L3), recolher feedback pós-projeto.
 
 **User Stories:**
 - [US-05: Designação formal de Security Champion](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Responsabilização clara (com Gestão Executiva)
-- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Garantir preparação antes de acesso (com Security Champion (RH))
-- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revogar acesso completamente (com Security Champion (RH) / DevOps / SRE)
-- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Manter least privilege (com Scrum Master / Team Lead)
-- [US-16: Feedback pós-projeto](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Informar re-hire (com Scrum Master / Team Lead)
+- [US-11: Preparação técnica de contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-11---consolidação-de-kpis-de-governação-e-maturidade) - Garantir preparação antes de acesso (com RH / PeopleOps)
+- [US-12: Offboarding seguro](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-12---formaliza%C3%A7%C3%A3o-de-modelo-de-governa%C3%A7%C3%A3o-por-n%C3%ADvel-de-risco) - Revogar acesso completamente (com RH / PeopleOps / DevOps / SRE)
+- [US-15: Revisão trimestral de acesso](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Manter least privilege (com Tech Lead)
+- [US-16: Feedback pós-projeto](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Informar re-hire (com Tech Lead)
 
 ---
 
-## Referências aos Capítulos
+## Referências aos Capítulos {#referências-aos-capítulos}
 
 Para contexto e enquadramento completo:
 

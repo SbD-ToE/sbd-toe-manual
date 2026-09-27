@@ -15,7 +15,7 @@ Este anexo apresenta práticas **facultativas** destinadas a organizações com 
 
 ---
 
-## 🧱 1. Baselines e *Tailoring* de Modelos de Ameaça
+## 🧱 1. Baselines e *Tailoring* de Modelos de Ameaça {#-1-baselines-e-tailoring-de-modelos-de-ameaça}
 
 **Objetivo:** Normalizar o processo de Threat Modeling entre projetos e reutilizar conhecimento previamente validado, reduzindo variabilidade e risco de omissão.
 
@@ -34,7 +34,7 @@ Este anexo apresenta práticas **facultativas** destinadas a organizações com 
 
 ---
 
-## 🔄 2. Sincronização entre Representações do Modelo
+## 🔄 2. Sincronização entre Representações do Modelo {#-2-sincronização-entre-representações-do-modelo}
 
 **Objetivo:** Evitar divergências entre a representação do Threat Model no repositório versionado e outras representações usadas pela equipa (ex.: exportações, templates internos, formatos estruturados).
 
@@ -55,13 +55,13 @@ Este anexo apresenta práticas **facultativas** destinadas a organizações com 
 
 ---
 
-## ⚖️ 3. *Gates* de Segurança Proporcionais (L1–L3)
+## ⚖️ 3. *Gates* de Segurança Proporcionais (L1–L3) {#️-3-gates-de-segurança-proporcionais-l1l3}
 
 **Objetivo:** Garantir que o Threat Modeling influencia efetivamente decisões de release, de forma proporcional ao risco, e com evidência auditável.
 
 Em vez de percentagens rígidas, usar **critérios determinísticos baseados em estado**:
 
-### 3.1 Critérios mínimos (por nível L1–L3)
+### 3.1 Critérios mínimos (por nível L1–L3) {#31-critérios-mínimos-por-nível-l1l3}
 
 - **L1 (baixo risco)**
   - Threat Model existente **ou** justificativa de não aplicabilidade aprovada.
@@ -83,7 +83,7 @@ Em vez de percentagens rígidas, usar **critérios determinísticos baseados em 
     - aceitação formal com compensações, *sunset* curto e aprovação apropriada.
   - Revalidação obrigatória quando existirem alterações estruturais desde a última aprovação.
 
-### 3.2 Evidência do *gate*
+### 3.2 Evidência do *gate* {#32-evidência-do-gate}
 O *gate* deve produzir evidência verificável:
 - versão do Threat Model referenciada (commit/tag);
 - relatório de estado (ameaças altas, decisões, owners, prazos);
@@ -103,7 +103,7 @@ O *gate* deve produzir evidência verificável:
 
 ---
 
-## 📈 4. Métricas e *Dashboards* de Cobertura
+## 📈 4. Métricas e *Dashboards* de Cobertura {#-4-métricas-e-dashboards-de-cobertura}
 
 **Objetivo:** Medir eficácia, atualidade e disciplina do processo de Threat Modeling sem incentivar “gaming”.
 
@@ -124,7 +124,7 @@ Os *dashboards* devem ser:
 
 ---
 
-## ✅ Considerações finais
+## ✅ Considerações finais {#-considerações-finais}
 
 Estas práticas elevam maturidade e disciplina operacional quando:
 - existe exigência regulatória/certificação;

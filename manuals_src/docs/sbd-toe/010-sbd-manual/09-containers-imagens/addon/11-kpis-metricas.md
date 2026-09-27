@@ -10,7 +10,7 @@ tags: [kpi, metricas, CNT, containers, imagens, kubernetes, admission-controller
 
 # KPIs e Métricas - Containers e Imagens
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **segurança do ciclo de vida de imagens de container**: desde a composição e ausência de vulnerabilidades conhecidas, até à assinatura e verificação de proveniência, à aplicação de políticas de admissão em runtime, e à velocidade de resposta a CVEs críticos em imagens de produção.
 
@@ -20,7 +20,7 @@ Os indicadores CNT alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,12 +48,12 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | CNT-K01 | % imagens em produção sem CVEs críticos (CVSS ≥ 9.0) sem excepção formal válida | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-03 | Semanal |
-| CNT-K02 | MTTR - tempo desde identificação de CVE crítico em imagem de produção até substituição/patch | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Por evento |
+| CNT-K02 | MTTR - tempo desde identificação de CVE crítico em imagem de produção até substituição/patch | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Por evento |
 | CNT-K03 | % imagens de produção assinadas digitalmente e com verificação de assinatura antes de deploy | Q% | - | ≥ 70% | 100% | T-01, T-05 | Por release |
 | CNT-K04 | % workloads em orquestrador com política de admission controller activa e em modo de bloqueio | Q% | - | ≥ 80% | 100% | T-01 | Mensal |
 | CNT-K05 | % imagens base de produção actualizadas dentro do ciclo definido por política (sem tags mutáveis) | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-05 | Mensal |
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **CNT-K01 - CVE sem excepção formal:** uma imagem está conforme se não tiver CVEs críticos, ou se os CVEs identificados tiverem excepção formal activa (não expirada) com compensação documentada. Imagens com CVEs críticos sem excepção, mesmo que o patch não esteja disponível, não satisfazem este indicador - devem ter excepção formal.
 
@@ -78,7 +78,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -92,11 +92,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/00-catalogo-requisitos.md` | Requisitos CNT-001..012 que fundamentam os indicadores |
 | `addon/10-excecoes-containers.md` | Processo de excepção de containers (CNT-K01, CNT-K04) |
 | `addon/07-vulnerabilidades-imagens.md` | Gestão de vulnerabilidades que alimenta CNT-K01/K02 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-03, T-05 |

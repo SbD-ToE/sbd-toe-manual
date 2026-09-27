@@ -10,7 +10,7 @@ tags: [kpi, metricas, RQS, requisitos, rastreabilidade, cobertura, L1, L2, L3]
 
 # KPIs e Métricas - Requisitos de Segurança
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **aplicação efectiva, rastreabilidade e validação dos requisitos de segurança** definidos no catálogo SbD-ToE. O catálogo de requisitos é o elo entre a classificação de risco (Cap. 01) e os controlos técnicos implementados nos capítulos de domínio (Cap. 04–12). Sem este elo, os domínios técnicos funcionam sem referência normativa, e a governação não tem base para avaliar conformidade.
 
@@ -20,7 +20,7 @@ Os indicadores RQS alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores RQS usam como denominador **F-02 - aplicações com classificação de risco formal**, definido em Cap. 01 (`addon/12-kpis-metricas.md`, CLA-K01). RQS-K01 estabelece F-03 - aplicações com requisitos mapeados - que por sua vez é o denominador da camada seguinte do funil de adoptabilidade SbD-ToE.
 
@@ -28,7 +28,7 @@ A interpretação de qualquer percentagem RQS pressupõe que F-02 está completo
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -47,7 +47,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -60,7 +60,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **RQS-K01 - Mapeamento formal:** considera-se formal um mapeamento que identifica, por aplicação: (a) o nível de risco classificado; (b) os requisitos obrigatórios para esse nível em cada domínio relevante; (c) o estado de cada requisito (aplicado, excepcionado, não aplicável com justificação). Tabelas de requisitos sem estado actualizado não satisfazem este critério.
 
@@ -76,7 +76,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Suporte de instrumentação | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -89,7 +89,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
@@ -97,4 +97,4 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 | `addon/03-taxonomia-rastreabilidade.md` | Modelo de rastreabilidade que fundamenta RQS-K03 |
 | `addon/07-validacao-requisitos.md` | Processo de validação de requisitos (RQS-K04/K05) |
 | `addon/08-gestao-excecoes.md` | Requisitos excepcionados (RQS-K02, RQS-K06) |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-06 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-06 |

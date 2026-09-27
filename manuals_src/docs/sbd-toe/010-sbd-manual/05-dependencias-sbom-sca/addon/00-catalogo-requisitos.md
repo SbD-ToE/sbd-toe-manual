@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Dependências, SBOM e SCA
 
-## Âmbito: gestão da cadeia de fornecimento de software
+## Âmbito: gestão da cadeia de fornecimento de software {#âmbito-gestão-da-cadeia-de-fornecimento-de-software}
 
 Este catálogo cobre **requisitos de segurança aplicáveis à gestão de dependências de terceiros** ao longo do ciclo de vida do software - desde a selecção e aprovação de bibliotecas, passando pela geração de SBOM e scanning de vulnerabilidades, até às políticas de actualização e rastreabilidade de correcções.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-DEP-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo DEP - Dependências, SBOM e SCA
+## Catálogo DEP - Dependências, SBOM e SCA {#catálogo-dep---dependências-sbom-e-sca}
 
 Requisitos que garantem que todas as dependências de terceiros são conhecidas, analisadas, governadas e actualizadas de forma proporcional ao risco.
 
@@ -48,18 +48,18 @@ Requisitos que garantem que todas as dependências de terceiros são conhecidas,
 | DEP-004 | Proibição de dependências introduzidas por cópia manual | ✔ | ✔ | ✔ | Ausência de bibliotecas de terceiros copiadas directamente para o repositório fora do package manager; verificável por scan de estrutura; processo documentado que o proíbe explicitamente. |
 | DEP-005 | Registries e repositórios de origem controlados | - | ✔ | ✔ | Lista de registries e repositórios permitidos definida e enforced; downloads de fontes não aprovadas bloqueados em pipeline ou por política de rede; evidência de enforcement activo. |
 | DEP-006 | Aprovação formal para introdução de novas dependências | - | ✔ | ✔ | Processo documentado de aprovação de novas bibliotecas com critérios mínimos: actividade de manutenção, licença compatível, ausência de CVEs activos, popularidade verificada; registo de aprovação disponível por dependência. |
-| DEP-007 | Política de actualização com SLA definido por severidade | ✔ | ✔ | ✔ | SLA de actualização definido por nível de severidade de CVE (ex: crítico ≤ 48h, elevado ≤ 7 dias, médio ≤ 30 dias); evidência de cumprimento nos ciclos mais recentes; excepções formalizadas quando aplicável. |
+| DEP-007 | Política de actualização com SLA definido por severidade | ✔ | ✔ | ✔ | SLA de actualização definido por nível de severidade de CVE (conforme a Política 19 §4.3: p. ex. crítico 30 / 7 / 3 dias e elevado 90 / 30 / 15 dias em L1 / L2 / L3; com indício de exploração ativa, o prazo antecipa-se); evidência de cumprimento nos ciclos mais recentes; excepções formalizadas quando aplicável. |
 | DEP-008 | Actualização automatizada com análise de impacto | - | ✔ | ✔ | Bot de actualização activo (ex: Dependabot, Renovate); PRs gerados automaticamente com informação de impacto semver, changelogs e testes; intervenção humana obrigatória para breaking changes; PRs não integrados automaticamente sem revisão. |
 | DEP-009 | Detecção de dependências não-intencionais ou emergentes | - | - | ✔ | Processo definido para detectar dependências introduzidas via tooling, geração de código, pipelines ou runtime loading; fronteiras de inventário documentadas; desvios detectados e tratados. |
 | DEP-010 | Rastreabilidade SBOM → vulnerabilidade → correcção | - | ✔ | ✔ | Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada (PR de correcção, actualização de versão ou excepção formalizada com justificação e data de revisão). |
 | DEP-011 | Inventário e proveniência de dependências AI/ML | - | ✔ | ✔ | Sistemas com componentes AI/ML têm inventário dedicado de dependências AI: (1) modelos base com versão, hash do artefacto e fonte (model registry, fine-tuning provenance); (2) datasets de treino e fine-tuning com versão, fonte e processo de curadoria; (3) MCP servers e tools expostas a agentes com identificador, versão e scope (`AML.T0110` AI Agent Tool Poisoning); (4) prompts embebidos relevantes para comportamento (system prompts, RAG templates) com versão e owner. O inventário é gerado por build e integrado no SBOM principal (DEP-001); incidentes upstream em modelos, datasets ou MCP servers (LLM03-2025 Supply Chain, `AML.T0010` AI Supply Chain Compromise) accionam o mesmo processo de triagem de DEP-002/DEP-007. |
 | DEP-012 | AI BOM gerado por *build* em formato standardizado | - | ✔ | ✔ | O inventário AI/ML (DEP-011) é materializado como **AI BOM** em formato standardizado por *build* — prefere-se CycloneDX 1.6 com extensão `ml-bom` (publicada em 2024) ou equivalente reconhecido (`ML-BOM`, `AIBOM`). O AI BOM é artefacto do *build* (não análise separada), versionado, e ligado ao SBOM principal. Inclui modelos, datasets, MCP servers/tools e prompts embebidos com versão *pinned*, hash, *provider* e licença. |
 | DEP-013 | Versão *pinned* explícita para modelos AI e providers | - | ✔ | ✔ | Modelos AI usados em produção ou em pipeline têm **versão fixa explícita** — ex.: `claude-opus-4-7@sha:…` em vez de `claude-latest`. Ranges semver, *aliases* dinâmicos (`latest`, `stable`) e referências sem versão são **proibidos** em qualquer ambiente que não seja exploratório. Mudança de versão maior do provider exige nova *eval suite* (Cap. 10 §C5) e revisão do *threat model* (Cap. 03 US-11). Mitiga *AI Supply Chain Rug Pull* (`AML.T0109`). |
-| DEP-014 | Lista de *providers* AI aprovados com classificação de risco | - | ✔ | ✔ | Providers de modelos AI (Anthropic, OpenAI, HuggingFace, providers próprios self-hosted) usados pela organização estão numa **lista aprovada** com classificação de risco e cláusulas contratuais aplicáveis (cross-link Cap. 14 — contratação de AI providers). Critérios mínimos de aprovação: zero retention para dados sensíveis quando aplicável; localização de processamento conforme RGPD Art. 44–49; auditoria contratualizada; SLA de notificação prévia de mudanças de versão; conformidade declarada com AI Act Art. 53/55 se fornecer GPAI. Lista revista periodicamente conforme nível de criticidade. |
+| DEP-014 | Lista de *providers* AI aprovados com classificação de risco | - | ✔ | ✔ | Providers de modelos AI (Anthropic, OpenAI, HuggingFace, providers próprios self-hosted) usados pela organização estão numa **lista aprovada** com classificação de risco e cláusulas contratuais aplicáveis (cross-link Cap. 14 — contratação de AI providers). Critérios mínimos de aprovação: zero retention para dados sensíveis quando aplicável; localização de processamento conforme RGPD Art. 44–49; auditoria contratualizada; SLA de notificação prévia de mudanças de versão; conformidade declarada com o AI Act art. 53.º (e art. 55.º, se o modelo tiver risco sistémico) se fornecer GPAI. Lista revista periodicamente conforme nível de criticidade. |
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **DEP-001**: O SBOM deve ser gerado como artefacto do próprio processo de build, não como análise separada. Ferramentas de referência: Syft, Trivy, CycloneDX Maven Plugin, OWASP Dependency Track.
 - **DEP-002**: A política de severidade deve ser explícita quanto ao que bloqueia vs. o que apenas alerta. Para L1, o mínimo aceitável é bloqueio em severidade crítica; para L2/L3, severidade elevada ou superior.

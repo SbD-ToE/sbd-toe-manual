@@ -19,19 +19,19 @@ Há uma simetria útil neste caso de uso: o MCP serve para que **o próprio agen
 
 O exemplo de cross-check (`exemplo-playbook/exemplo-agentic-sdlc`) descreve **o que** acontece em cada paragem do processo; este caso de uso descreve **como** o MCP é invocado em cada uma. Os dois são deliberadamente acoplados mas separados — a vista regulatória vive no cross-check, a vista operacional via MCP vive aqui.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado (ver [Instalação](../03-instalacao.md))
 - Skill canónica em `.claude/skills/sbd-toe.md` (ver [Skills](../04-skills-agentes.md))
 - Familiaridade com o [processo agentic transversal](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc) — esta receita assume que estás a percorrê-lo
 
-## Mapa MCP por paragem do processo
+## Mapa MCP por paragem do processo {#mapa-mcp-por-paragem-do-processo}
 
 A tabela mostra, para cada paragem do fluxo agentic, qual *tool* / *resource* / *prompt* do MCP usar e o resultado esperado.
 
 | Paragem | Tool MCP | Output esperado |
 |---|---|---|
-| **1. Classificar nível A0–A4** | `setup_sbd_toe_agent(riskLevel, projectRole)` + `consult_security_requirements(risk_level, ["requirements"])` | Lista activa de requisitos `REQ-AGN-*`; capítulos activos para o nível |
+| **1. Classificar nível A0–A4** | `setup_sbd_toe_agent(riskLevel, projectRole)` + `consult_security_requirements(risk_level, ["agents"])` | Lista activa de requisitos `REQ-AGN-*` (o *concern* `agents` ativa a categoria AGN); exigência por capítulo no nível |
 | **2. Threat model agentic** | `get_threat_landscape(risk_level, concerns=["auth","api","integrity","distribution"])` + `search_sbd_toe_manual("playbook agentic threat library")` | Threat library MITRE ATLAS aplicável + mitigações citáveis (Cap. 03) |
 | **3. Validar arquitectura ARC-015** | `query_sbd_toe_entities(query="ARC-015")` + `consult_security_requirements(risk_level, ["architecture"])` | Critério de aceitação completo de `ARC-015` + controlos arquitectónicos `ARC-001..014` complementares |
 | **4. Registar mandate** | `plan_sbd_toe_repo_governance()` filtrando por capítulos 02+14 + `get_sbd_toe_chapter_brief("02-requisitos-seguranca")` (para `artifact_ids` reais) | Artefactos que o manual exige; template de mandate ancorado em Policy 38 |
@@ -45,7 +45,7 @@ A tabela mostra, para cada paragem do fluxo agentic, qual *tool* / *resource* / 
 
 > 📌 Quando uma paragem se dirige a tema fora do **canon 00-14** do MCP (e.g. cláusulas contratuais detalhadas com providers AI — fica fora porque o conteúdo legal-específico vive no manual web, em Cap. 14 US-21 e Policy 33), o agente deve usar `WebFetch` para o manual web em vez de inventar — ver [Caso de uso: Cross-check normativo](./06-cross-check-conformidade.md) e [troubleshooting / content lag](../10-troubleshooting-faq.md#content-lag).
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 Em cada paragem do processo, o agente que executa via MCP deve:
 
@@ -58,13 +58,13 @@ Em cada paragem do processo, o agente que executa via MCP deve:
 3. **Preservar `mandate_ref`** em qualquer artefacto que gere — pipeline manifests, *audit events*, eval reports — para que a auditoria reconstrua "que agente, sob que mandate, com que autoridade".
 4. **Distinguir três classes de artefacto** (cross-link [Casos de uso — Codegen grounded §disciplina](./codegen-grounded)): código, testes, evidência. *Tests* são evidência; código não é.
 
-## Sequência típica numa sessão
+## Sequência típica numa sessão {#sequência-típica-numa-sessão}
 
 Para uma decisão concreta — por exemplo, "este agente pode subir de A2 para A3?" — a sequência MCP é:
 
-1. `setup_sbd_toe_agent("L2", "appsec")` — carrega capítulos activos + regras de role
+1. `setup_sbd_toe_agent("L2", "appsec")` — carrega a exigência por capítulo + regras de role
 2. Ler `sbd://toe/agent-guide` (uma vez por sessão)
-3. `consult_security_requirements("L2", ["requirements"])` — confirma se `REQ-AGN-002` está activo (sim, em L1+)
+3. `consult_security_requirements("L2", ["agents"])` — confirma se `REQ-AGN-002` está activo (sim, em L1+)
 4. `search_sbd_toe_manual("A0 A4 níveis de autonomia subir nível critérios")` — extrai a regra de promoção
 5. `get_guide_by_role("L2", "appsec", "operate")` — práticas de revisão aplicáveis
 6. Combinar com o que está em VCS: ler o *mandate* actual; verificar se *kill-switch* foi exercitado conforme cadência; verificar se *eval suite* confirma o nível pretendido
@@ -72,7 +72,7 @@ Para uma decisão concreta — por exemplo, "este agente pode subir de A2 para A
 
 O passo 7 é onde o agente devolve a resposta ao humano que pediu — citando IDs reais (`REQ-AGN-002`, regra X), referindo o que verificou (`observed`: kill-switch exercitado 2026-04-15), e indicando se a subida pode avançar (`inferred`: condições satisfeitas) ou se há bloqueio (`not verified`: falta evidência de Y).
 
-## Skill / subagent — Claude Code
+## Skill / subagent — Claude Code {#skill--subagent--claude-code}
 
 `.claude/agents/sbd-toe-agentic-sdlc.md`:
 
@@ -102,15 +102,15 @@ tools: Read, Glob, Grep, mcp__sbd-toe__*
 
 # Hard rules
 
-- citation_map (quando `prepare_sbd_toe_codegen_context` é usado) é
-  mundo fechado de IDs válidos — não inventar.
+- citations (quando `prepare_sbd_toe_codegen_context` é usado) é
+  mundo fechado de ids válidos — não inventar.
 - Em dúvida, marcar `not verified` em vez de assumir.
 - Em decisões A3/A4, propor mas nunca decidir; escalação ao CISO via
   Policy 38 §5.3 é obrigatória.
 - mandate_ref preservado em qualquer artefacto produzido.
 ```
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ **"O Claude consultou o MCP e disse que sim"** sem citar IDs concretos — desperdiça a vantagem do MCP, que é grounding citável.
 - ❌ **Não distinguir `manual-grounded` de `observed`** — o manual diz X, o repo está em estado Y; estes são dois factos diferentes e a sua conjugação é uma inferência.
@@ -118,10 +118,10 @@ tools: Read, Glob, Grep, mcp__sbd-toe__*
 - ❌ **Promover de nível A com base em interacções soltas no chat sem audit `mandate_ref`** — viola Policy 38 §5.5 (sem *amendments* informais).
 - ❌ **Tratar o MCP como oráculo** — o MCP devolve o que o manual diz; a interpretação para o caso concreto continua ser de quem opera (humano + agente como assistente).
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - **Vista regulatória do mesmo processo**: [Cross-check — Agentic SDLC ponta-a-ponta](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-agentic-sdlc) — descreve **o quê** e mapeia para AI Act/NIS2/DORA/CRA
-- [Caso de uso — Codegen grounded](./codegen-grounded) — disciplina de `citation_map` aplicada a *codegen*
+- [Caso de uso — Codegen grounded](./codegen-grounded) — disciplina de `citations` aplicada a *codegen*
 - [Caso de uso — Threat modeling](./threat-modeling) — paragem 2 detalhada
 - [Caso de uso — Bootstrap de governança](./governance-bootstrap) — paragem 4 detalhada (mandate scaffolding)
 - [Caso de uso — Auditoria de PR](./auditoria-pr) — caso operacional realista de agente A2

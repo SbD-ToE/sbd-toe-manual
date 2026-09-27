@@ -13,7 +13,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 ---
 
-## 📊 Tabela de validações por tipo
+## 📊 Tabela de validações por tipo {#-tabela-de-validações-por-tipo}
 
 | Tipo de Validação       | Descrição                                                        | Exemplo / Ferramenta             |
 |-------------------------|------------------------------------------------------------------|----------------------------------|
@@ -26,7 +26,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 ---
 
-## 🚫 Exemplos de bloqueios (gates) recomendados
+## 🚫 Exemplos de bloqueios (gates) recomendados {#-exemplos-de-bloqueios-gates-recomendados}
 
 | Nível de Risco | Gate de bloqueio se...                                       |
 |----------------|--------------------------------------------------------------|
@@ -38,7 +38,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 ---
 
-## 🔗 Integração recomendada no pipeline CI/CD
+## 🔗 Integração recomendada no pipeline CI/CD {#-integração-recomendada-no-pipeline-cicd}
 
 1. **Etapa de build**:
    - Gera SBOM automaticamente
@@ -54,7 +54,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 ---
 
-## 🏢 Integração com controlo organizacional
+## 🏢 Integração com controlo organizacional {#-integração-com-controlo-organizacional}
 
 - Releases devem ser ligadas a um artefacto de validação:
   - Relatório de findings por risco
@@ -68,7 +68,7 @@ Aplica-se a ambientes de **QA, staging e produção**, devendo ser incorporado c
 
 ---
 
-## ✅ Exemplos de critérios de aprovação
+## ✅ Exemplos de critérios de aprovação {#-exemplos-de-critérios-de-aprovação}
 
 - [ ] Todos os testes automatizados passaram
 - [ ] Foram revistos findings em aberto e justificados

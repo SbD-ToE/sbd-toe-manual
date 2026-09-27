@@ -8,7 +8,7 @@ genia: us-format-normalization
 
 # Aplicação de Deploy Seguro no Ciclo de Vida
 
-## 🧭 Quando aplicar
+## 🧭 Quando aplicar {#-quando-aplicar}
 
 Um *deploy* seguro não acontece de repente: é o culminar de várias etapas críticas, desde a construção do artefacto até à auditoria pós-*release*.  
 Cada fase tem riscos específicos e, por isso, exige controlos próprios e evidências claras.
@@ -25,7 +25,7 @@ A tabela seguinte mostra onde cada prática deve ser aplicada e como comprovar a
 
 ---
 
-## 👥 Quem executa cada ação
+## 👥 Quem executa cada ação {#-quem-executa-cada-ação}
 
 A responsabilidade por um *deploy* seguro é necessariamente partilhada.  
 Não existe um “dono único”: cada papel contribui com uma parte da garantia de integridade.  
@@ -41,14 +41,14 @@ O quadro seguinte clarifica esta divisão:
 
 ---
 
-## 📖 User Stories Reutilizáveis
+## 📖 User Stories Reutilizáveis {#-user-stories-reutilizáveis}
 
 As histórias seguintes descrevem cenários típicos de risco no *deploy* e como devem ser tratados de forma consistente.  
 Ao formalizá-las em *backlog*, a organização consegue alinhar papéis, práticas e evidências de forma auditável.
 
 ---
 
-### US-01 - Deploy apenas de artefactos assinados
+### US-01 - Deploy apenas de artefactos assinados {#us-01---deploy-apenas-de-artefactos-assinados}
 
 A integridade começa pela proveniência: se não controlarmos a origem, todo o processo fica vulnerável.
 
@@ -88,7 +88,7 @@ Como **DevOps/SRE**, quero **executar *deploy* apenas de artefactos assinados e 
 
 ---
 
-### US-02 - Validação em *staging* antes da promoção
+### US-02 - Validação em *staging* antes da promoção {#us-02---validação-em-staging-antes-da-promoção}
 
 *Staging* é o “ensaio geral”: sem ele, a produção torna-se campo de teste.
 
@@ -138,7 +138,7 @@ Como **QA**, quero **validar *releases* em *staging* com ambiente segregado, dad
 
 ---
 
-### US-03 - *Gates* de aprovação no *deploy*
+### US-03 - *Gates* de aprovação no *deploy* {#us-03---gates-de-aprovação-no-deploy}
 
 Sem *gates*, a promoção a produção torna-se uma aposta - e a segurança não pode ser um jogo de sorte.
 
@@ -175,7 +175,7 @@ Como **AppSec Engineer**, quero **definir *gates* automáticos e *thresholds* no
 
 ---
 
-### US-04 - *Rollback* rápido e testado
+### US-04 - *Rollback* rápido e testado {#us-04---rollback-rápido-e-testado}
 
 Falhas acontecem. A diferença entre crise e resiliência está em quão rápido conseguimos voltar atrás.
 
@@ -206,13 +206,13 @@ Como **DevOps/SRE**, quero **ter *rollback* rápido e testado periodicamente**, 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Produção | Incidente ou falha | DevOps/SRE | ≤ 1h |
+| Produção | Incidente ou falha | DevOps/SRE | RTO de rollback conforme a Política 27 §6 (≤ 30 min em L2, ≤ 15 min em L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
-### US-05 - Rastreabilidade *end-to-end*
+### US-05 - Rastreabilidade *end-to-end* {#us-05---rastreabilidade-end-to-end}
 
 Se não for possível reconstituir o caminho desde o *commit* até ao *deploy*, não existe governação real.
 
@@ -249,7 +249,7 @@ Como **Product Owner**, quero **garantir rastreabilidade entre *commit* → buil
 
 ---
 
-### US-06 - Monitorização pós-deploy
+### US-06 - Monitorização pós-deploy {#us-06---monitorização-pós-deploy}
 
 Um *deploy* não termina no *merge*: só se considera concluído quando a versão está estável e visível em produção.
 
@@ -286,7 +286,7 @@ Como **DevOps/SRE**, quero **ativar monitorização pós-deploy**, para **deteta
 
 ---
 
-### US-07 - Controlo de execução com *feature flags*
+### US-07 - Controlo de execução com *feature flags* {#us-07---controlo-de-execução-com-feature-flags}
 
 A capacidade de ativar ou desativar funcionalidades em produção sem novo *deploy* é essencial para mitigar riscos e responder rapidamente a incidentes.
 
@@ -334,7 +334,7 @@ Como **DevOps/AppSec**, quero **implementar *feature flags* com metadados, *owne
 
 ---
 
-### US-08 - Gestão segura de segredos no *deploy*
+### US-08 - Gestão segura de segredos no *deploy* {#us-08---gestão-segura-de-segredos-no-deploy}
 
 Segredos embebidos em artefactos criam exposição difícil de revogar e amplificam risco de *supply chain*.
 
@@ -382,7 +382,7 @@ Como **DevOps/AppSec**, quero **garantir que segredos nunca são embebidos em ar
 
 ---
 
-### US-09 - Versionamento semântico e *changelog* técnico
+### US-09 - Versionamento semântico e *changelog* técnico {#us-09---versionamento-semântico-e-changelog-técnico}
 
 A comunicação clara das alterações em cada *release* é essencial para decisões informadas sobre aceitação de risco e para auditorias pós-incidente.
 
@@ -426,7 +426,7 @@ Como **Developer/Gestão Executiva**, quero **manter versionamento semântico co
 
 ---
 
-### US-10 - *Deploy* progressivo com estratégias *canary*/*blue-green*
+### US-10 - *Deploy* progressivo com estratégias *canary*/*blue-green* {#us-10---deploy-progressivo-com-estratégias-canaryblue-green}
 
 Promover para 100% dos utilizadores simultaneamente amplifica o impacto de qualquer falha. Progressividade permite detetar regressões com risco controlado.
 
@@ -475,7 +475,7 @@ Como **DevOps / SRE / Gestão Executiva**, quero **implementar *deploy* progress
 
 ---
 
-### US-11 - Validações técnicas pré-deploy com *gates* condicionais
+### US-11 - Validações técnicas pré-deploy com *gates* condicionais {#us-11---validações-técnicas-pré-deploy-com-gates-condicionais}
 
 Sem validações estruturadas antes do *deploy*, código inseguro ou não funcional pode chegar a produção.
 
@@ -521,7 +521,7 @@ Como **AppSec/QA**, quero **executar validações técnicas (SAST, DAST, SBOM, a
 
 ---
 
-### US-12 - *Rollback* estruturado por tipo (binário, configuração, BD, infra)
+### US-12 - *Rollback* estruturado por tipo (binário, configuração, BD, infra) {#us-12---rollback-estruturado-por-tipo-binário-configuração-bd-infra}
 
 Nem todos os *rollbacks* são iguais. Sem plano específico por tipo, a reversão tende a ser manual, lenta e arriscada.
 
@@ -561,13 +561,13 @@ Como **DevOps/SRE**, quero **documentar e testar *rollback* para cada tipo de al
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |------|---------|-------------|-----|
-| Incidente | Falha em produção | DevOps/SRE | ≤ 15 min |
+| Incidente | Falha em produção | DevOps/SRE | RTO de rollback conforme a Política 27 §6 (≤ 30 min em L2, ≤ 15 min em L3) |
 
 **Ligações úteis.** [Monitorização & Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 ---
 
-### US-13 - Validação humana obrigatória após deploy automatizado
+### US-13 - Validação humana obrigatória após deploy automatizado {#us-13---validação-humana-obrigatória-após-deploy-automatizado}
 
 Um deploy automático bem-sucedido não é sinónimo de operação segura.
 Esta US garante que qualquer promoção automática para produção é validada por um responsável humano.
@@ -600,7 +600,7 @@ L3: validação + aprovação dupla
 
 ---
 
-### US-14 - Controlo e validação de drift operacional
+### US-14 - Controlo e validação de drift operacional {#us-14---controlo-e-validação-de-drift-operacional}
 
 Automação contínua introduz risco de drift silencioso entre estado desejado e real.
 
@@ -628,7 +628,7 @@ L3: bloqueio até validação
 
 ---
 
-### US-15 - Reprodutibilidade de incidentes em runtime
+### US-15 - Reprodutibilidade de incidentes em runtime {#us-15---reprodutibilidade-de-incidentes-em-runtime}
 
 Sem reprodutibilidade, não existe auditoria nem melhoria.
 
@@ -655,7 +655,7 @@ L3: reprodutibilidade completa e auditável
 | Produção | Incidente | Ops/AppSec | SLA definido |
 
 ---
-## 📦 Artefactos esperados
+## 📦 Artefactos esperados {#-artefactos-esperados}
 
 Cada prática deve deixar um rasto verificável.  
 Estes artefactos constituem a evidência objetiva necessária para auditorias e conformidade:
@@ -677,13 +677,13 @@ Estes artefactos constituem a evidência objetiva necessária para auditorias e 
 
 ---
 
-### US-16 - Separação entre ação automática e autorização irreversível
+### US-16 - Separação entre ação automática e autorização irreversível {#us-16---separação-entre-ação-automática-e-autorização-irreversível}
 
 Ferramentas podem agir, mas não decidir impactos irreversíveis.
 
 :::userstory
 **História.**  
-Como **Ops**, quero **separar execução automática de ações irreversíveis da autorização humana**, para **garantir controlo e responsabilidade explícita**.
+Como **DevOps / SRE**, quero **separar execução automática de ações irreversíveis da autorização humana**, para **garantir controlo e responsabilidade explícita**.
 
 **Critérios de aceitação (BDD).**  
 - **Dado** que uma ação irreversível é proposta automaticamente  
@@ -701,11 +701,11 @@ L3: dupla aprovação
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Produção | Ação crítica | Ops | Antes da execução |
+| Produção | Ação crítica | DevOps / SRE | Antes da execução |
 
 ---
 
-### US-17 - Evidência operacional auditável
+### US-17 - Evidência operacional auditável {#us-17---evidência-operacional-auditável}
 
 Logs e métricas só têm valor quando tratados como evidência.
 
@@ -802,7 +802,7 @@ Como **DevOps / SRE** e **AppSec**, quero que o *release* de sistemas com agente
 
 ---
 
-### US-19 - Credenciais de *deploy* isoladas por aplicação e efémeras
+### US-19 - Credenciais de *deploy* isoladas por aplicação e efémeras {#us-19---credenciais-de-deploy-isoladas-por-aplicação-e-efémeras}
 
 Uma credencial de *deploy* partilhada transforma o compromisso de um pipeline no compromisso de todos os que ela alcança.  
 
@@ -847,7 +847,7 @@ Como **DevOps/SRE**, quero **que cada aplicação use credenciais de *deploy* pr
 
 ---
 
-### US-20 - *Feature flags* avaliadas no *backend* como fronteira de confiança
+### US-20 - *Feature flags* avaliadas no *backend* como fronteira de confiança {#us-20---feature-flags-avaliadas-no-backend-como-fronteira-de-confiança}
 
 Um *toggle* avaliado no cliente não controla nada: protege apenas o que o utilizador escolhe não contornar.  
 
@@ -892,7 +892,7 @@ Como **Dev/AppSec**, quero **que toggles que controlam lógica sensível sejam a
 
 ---
 
-## ⚖️ Matriz de proporcionalidade L1–L3
+## ⚖️ Matriz de proporcionalidade L1–L3 {#️-matriz-de-proporcionalidade-l1l3}
 
 Nem todas as aplicações exigem o mesmo nível de controlo.  
 A proporcionalidade permite adaptar rigor sem comprometer segurança:
@@ -904,4 +904,20 @@ A proporcionalidade permite adaptar rigor sem comprometer segurança:
 | *Gates* de aprovação | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
 | *Rollback* | Manual | Automatizado | Automatizado + testado |
 | Rastreabilidade | Básica | Completa | Completa + auditoria |
-| Monitorização | Básica | Crítica
+| Monitorização | Básica | Crítica | Completa + resposta automática |
+| Feature flags e toggles | Opcional | Recomendado | Obrigatório |
+| Gestão de segredos (OIDC/Workload Identity) | Recomendado | Obrigatório | Obrigatório + rotação automática |
+| Versionamento semântico e changelog | Básico | Completo + segurança | Completo + segurança + compatibilidade |
+| Deploy progressivo (Canary/Blue-Green) | Recomendado (manual) | Automatizado com métricas | Automatizado + threshold-triggered rollback |
+| Validações técnicas pré-deploy | SAST + Aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+| Rollback por tipo (binário, config, BD, infra) | Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
+
+---
+
+## 🏁 Recomendações finais {#-recomendações-finais}
+
+- **Nunca promover diretamente** para produção sem staging.  
+- **Automatizar deploys, rastrear e reverter** sempre que necessário.  
+- **Rollback testado regularmente** assegura resiliência.  
+- **Monitorização pós-deploy** deve estar integrada com resposta a incidentes (Cap. 12).  
+- **Aplicar proporcionalidade L1–L3** garante equilíbrio entre custo e risco.  

@@ -15,16 +15,16 @@ tags:
 
 O *threat modelling* tem uma falha previsível em ambientes acelerados — ou se faz cedo demais (e fica desactualizado quando o código chega), ou se faz tarde demais (e vira teatro de conformidade). O MCP ajuda a fazê-lo num momento útil: o agente extrai do manual as *threats* já catalogadas para o *risk level* do projecto e os *concerns* do sistema, e ancora-as nos controlos que as mitigam — com IDs.
 
-O exemplo aqui é uma API pública de gestão de utilizadores (criar conta, autenticar, recuperar password). Em duas chamadas ao servidor, o agente reúne o material para um *threat model* defensável, com confiança explicitamente marcada (`derived` vs `heuristic`) sempre que a ligação entre *threat* e controlo é inferida e não estrutural.
+O exemplo aqui é uma API pública de gestão de utilizadores (criar conta, autenticar, recuperar password). Em duas chamadas ao servidor, o agente reúne o material para um *threat model* defensável, com a confiança de cada ligação marcada em `mitigation_confidence`. Hoje, todas as ligações servidas são `derived`, estruturais. Se aparecer outro valor, a ligação é inferida e rotula-se como tal.
 
-## Pré-requisitos
+## Pré-requisitos {#pré-requisitos}
 
 - MCP instalado, skill carregada.
 - *Risk level* do projecto — `L2` no exemplo (API pública, dados de utilizador).
 
-## Fluxo
+## Fluxo {#fluxo}
 
-### 1. Identificar *concerns* do sistema
+### 1. Identificar *concerns* do sistema {#1-identificar-concerns-do-sistema}
 
 Da descrição em prosa, mapear para o vocabulário ontológico:
 
@@ -38,7 +38,7 @@ Da descrição em prosa, mapear para o vocabulário ontológico:
 
 → `concerns = ["auth", "api", "validation", "encryption", "logging"]`
 
-### 2. Threat landscape
+### 2. Threat landscape {#2-threat-landscape}
 
 **Importante:** `get_threat_landscape` corre `consult` internamente — **não chamar `consult_security_requirements` antes**.
 
@@ -66,11 +66,11 @@ get_threat_landscape({
 }
 ```
 
-:::warning Routing dos *concerns*
-À data desta versão, os *concerns* de **base** (`auth`, `validation`, `api`) roteiam para o **cap. 02** e devolvem meta-ameaças de **processo** (`MT-021..038`), não as ameaças técnicas do domínio. Para ameaças técnicas, incluir um *concern* de **domínio** (ex.: `architecture` → cap. 04, `MT-055..072`) e cruzar com os requisitos de `consult_security_requirements`. *(Verificar o comportamento ao vivo — há fix em curso no servidor.)*
+:::info Routing dos *concerns* — `routing_basis`
+A resposta declara, para cada *concern*, a base do *routing* em `routing_basis`: `domain_chapter` quando o *concern* tem um capítulo de ameaças próprio, `activated_controls` quando as ameaças chegam pelos capítulos que definem os controlos ativados. Ler `routing_basis` antes de estruturar o *threat model* diz de onde veio cada ameaça — e, com isso, como a apresentar.
 :::
 
-### 3. Práticas por *role* (opcional, mas útil)
+### 3. Práticas por *role* (opcional, mas útil) {#3-práticas-por-role-opcional-mas-útil}
 
 Para o *role* que vai mitigar (ex.: `arquitetos-software` no design, `developer` no implement):
 
@@ -80,7 +80,7 @@ get_guide_by_role({"risk_level": "L2", "role": "arquitetos-software", "phase": "
 
 → devolve *practice assignments* + *user stories* a usar como *acceptance criteria*.
 
-### 4. Estruturar o threat model
+### 4. Estruturar o threat model {#4-estruturar-o-threat-model}
 
 Modelo recomendado (STRIDE adaptado ao output):
 
@@ -115,14 +115,14 @@ Modelo recomendado (STRIDE adaptado ao output):
 <o que não foi endereçado>
 ```
 
-## Disciplina de output
+## Disciplina de output {#disciplina-de-output}
 
 - **`mitigation_confidence: "derived"`** (strength tipicamente `"parcial"`) → ligação estrutural. Apresentar como ligação fiável.
 - *Fallback* sem ligação estrutural → tratar como **inferido**; rotular explicitamente, não como certeza.
 - Se `threats: []` → escrever *"Sem threats catalogados no manual para este escopo — não confundir com ausência de risco"*. Não inventar.
 - Citar IDs `MT-*` e `CTRL-*` exactamente como devolvidos.
 
-## Skill / subagent — Cursor
+## Skill / subagent — Cursor {#skill--subagent--cursor}
 
 `.cursorrules`, secção dedicada:
 
@@ -139,14 +139,14 @@ Quando for pedido threat model ou análise de ameaças:
 6. Não inventar threats nem ligações. Threats vazios → flag para revisão humana.
 ```
 
-## Anti-patterns
+## Anti-patterns {#anti-patterns}
 
 - ❌ Chamar `consult_security_requirements` **antes** de `get_threat_landscape` — duplicação desnecessária; a *tool* já corre `consult` internamente.
 - ❌ Apresentar uma ligação inferida (sem `mitigation_confidence: "derived"`) como certeza.
 - ❌ Inventar `MT-CUSTOM-001` para encaixar uma ameaça que conheces mas não está no output — escrever em secção separada como *threat observada* e marcar `not verified` no manual.
 - ❌ Confundir `concerns` técnicos (`auth`) com domínios STRIDE (`Spoofing`).
 
-## Relacionado
+## Relacionado {#relacionado}
 
 - [Codegen grounded](./codegen-grounded) — depois do *threat model*, gerar mitigações com IDs.
 - [`get_threat_landscape`](../05-tools-reference.md#get_threat_landscape) na referência.

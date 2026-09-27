@@ -15,7 +15,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🔐 1. Validação de SBOM em runtime
+## 🔐 1. Validação de SBOM em runtime {#-1-validação-de-sbom-em-runtime}
 
 - Integrar SBOM como artefacto verificável durante a execução (ex: embed como label em container, sidecar de validação)
 - Comparar SBOM runtime com imagem oficial para deteção de drift
@@ -25,7 +25,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧬 2. Política “Zero Unknowns”
+## 🧬 2. Política “Zero Unknowns” {#-2-política-zero-unknowns}
 
 - **Nenhuma dependência transitiva pode ser desconhecida ou não catalogada**
 - SBOMs devem conter `purl` ou identificador único por componente
@@ -35,7 +35,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧪 3. Sandboxing determinístico para build e SCA
+## 🧪 3. Sandboxing determinístico para build e SCA {#-3-sandboxing-determinístico-para-build-e-sca}
 
 - Executar build e análise SCA em ambiente **sandboxed, imutável e auditável**
 - Usar file system de só leitura e isolamento de rede para prevenir scripts maliciosos
@@ -45,7 +45,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧰 4. Empacotamento e selagem de bibliotecas críticas
+## 🧰 4. Empacotamento e selagem de bibliotecas críticas {#-4-empacotamento-e-selagem-de-bibliotecas-críticas}
 
 - Criação de bundles internos de bibliotecas já verificadas e seladas
 - Uso de assinaturas digitais (`cosign`, `gpg`) para garantir integridade e origem
@@ -55,7 +55,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧼 5. Remoção sistemática de código não utilizado (dependency hygiene)
+## 🧼 5. Remoção sistemática de código não utilizado (dependency hygiene) {#-5-remoção-sistemática-de-código-não-utilizado-dependency-hygiene}
 
 - Verificação periódica de pacotes não utilizados (ex: `depcheck`, `pip-check`, `npm-prune`)
 - Foco em reduzir a superfície de ataque associada a código morto
@@ -65,9 +65,9 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 📊 6. Métricas de maturidade para dependências
+## 📊 6. Métricas de maturidade para dependências {#-6-métricas-de-maturidade-para-dependências}
 
-- % de findings SCA resolvidos em < 5 dias
+- % de findings SCA resolvidos dentro do SLA do nível (Política 19 §4.3)
 - % de dependências com SBOM completo e versionado
 - Nº médio de dependências por serviço / por imagem
 - Nº de exceções de risco ativas e expiração associada
@@ -75,7 +75,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 > Estas métricas podem ser usadas para dashboards de risco, SLA internos e auditorias externas
 
 ---
-## 🧮 7. Análise da cadeia transitiva de dependências
+## 🧮 7. Análise da cadeia transitiva de dependências {#-7-análise-da-cadeia-transitiva-de-dependências}
 
 - Avaliação do **comportamento completo da cadeia de dependências**, incluindo scripts pós-instalação, hooks e toolchains
 - Aplicação de scanners que avaliem `package.json`, `requirements.txt`, `setup.py`, `postinstall`, etc.
@@ -85,7 +85,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🌐 8. Reputação e origem confiável de componentes
+## 🌐 8. Reputação e origem confiável de componentes {#-8-reputação-e-origem-confiável-de-componentes}
 
 - Aplicar política de **score mínimo de reputação** para pacotes públicos
 - Apenas permitir bibliotecas com:
@@ -98,7 +98,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧱 9. Fallback hardened para registries externos
+## 🧱 9. Fallback hardened para registries externos {#-9-fallback-hardened-para-registries-externos}
 
 - O fallback para repositórios externos (ex: `npmjs`, `PyPI`, `DockerHub`) **deve ser controlado e justificado**
 - Requisitos mínimos:
@@ -110,7 +110,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🛰️ 10. Validação cruzada de SBOM com threat intelligence externo
+## 🛰️ 10. Validação cruzada de SBOM com threat intelligence externo {#️-10-validação-cruzada-de-sbom-com-threat-intelligence-externo}
 
 - Enriquecer SBOMs com dados de risco provenientes de fontes como:
   - CISA KEV (Known Exploited Vulnerabilities)
@@ -123,7 +123,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 ---
 
-## 🧯 11. Análise de blast radius por dependência crítica
+## 🧯 11. Análise de blast radius por dependência crítica {#-11-análise-de-blast-radius-por-dependência-crítica}
 
 - Identificar bibliotecas cujo compromisso teria alto impacto organizacional
 - Calcular blast radius com base em:
@@ -137,7 +137,7 @@ Este anexo apresenta práticas de segurança reforçadas aplicáveis a contextos
 
 > Permite gerir risco não só por vulnerabilidade, mas pelo **impacto sistémico de cada dependência**.
 
-## 🔗 Ligações com outras práticas reforçadas
+## 🔗 Ligações com outras práticas reforçadas {#-ligações-com-outras-práticas-reforçadas}
 
 | Domínio técnico      | Recomendações avançadas relacionadas                |
 |----------------------|----------------------------------------------------|

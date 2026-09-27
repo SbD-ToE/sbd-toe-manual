@@ -10,7 +10,7 @@ A adoção eficaz do Capítulo 01 - Gestão de Risco - exige a existência de **
 
 ---
 
-## 📌 Nota fundamental
+## 📌 Nota fundamental {#-nota-fundamental}
 
 > ⚠️ As práticas operacionais prescritas neste capítulo (classificação, revisão, aceitação, rastreabilidade) **devem ser legitimadas formalmente por políticas organizacionais aprovadas**.
 
@@ -26,18 +26,18 @@ Estas políticas:
 
 ---
 
-## 🧾 Políticas recomendadas
+## 🧾 Políticas recomendadas {#-políticas-recomendadas}
 
 | Nome da Política                                   | Obrigatória? | Aplicação                             | Conteúdo mínimo esperado                                                                                      |
 |----------------------------------------------------|--------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | [Política de Classificação de Risco Aplicacional](/sbd-toe/assets/policies/policy-classificacao-risco)    | ✅ Sim       | Todos os projetos e equipas de produto | Modelo de classificação obrigatório (exposição, dados, impacto); momentos de aplicação; registo e rastreio. |
 | [Política de Aceitação de Risco Residual](/sbd-toe/assets/policies/policy-aceitacao-risco)            | ✅ Sim       | Segurança, gestão, donos de produto    | Critérios formais para aceitação; responsáveis; validade temporal; registo e rastreabilidade.               |
-| [Política de Revisão Periódica de Risco](/sbd-toe/assets/policies/policy-revisao-periodica-risco)             | ✅ Sim       | Toda a organização                     | Frequência mínima (ex: 6 meses); triggers obrigatórios; evidência exigida.                                   |
+| [Política de Revisão Periódica de Risco](/sbd-toe/assets/policies/policy-revisao-periodica-risco)             | ✅ Sim       | Toda a organização                     | Frequência mínima por nível (12 / 6 / 3 meses); triggers obrigatórios; evidência exigida.                                   |
 | [Política de Rastreabilidade de Decisões de Segurança](/sbd-toe/assets/policies/policy-rastreabilidade) | ⚠️ Opcional | Organizações sujeitas a auditoria      | Versionamento de classificações; ligação com arquitetura, requisitos e controlos.                           |
 
 ---
 
-## 🧩 Correspondência com frameworks normativas
+## 🧩 Correspondência com frameworks normativas {#-correspondência-com-frameworks-normativas}
 
 | Framework              | Requisitos cobertos pelas políticas acima                                       |
 |------------------------|----------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ Estas políticas:
 
 ---
 
-## 🧱 Estrutura sugerida de cada política
+## 🧱 Estrutura sugerida de cada política {#-estrutura-sugerida-de-cada-política}
 
 Cada política organizacional deve conter, no mínimo:
 
@@ -64,7 +64,7 @@ Cada política organizacional deve conter, no mínimo:
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 - Estas políticas devem ser **oficialmente aprovadas** pela gestão de segurança e da organização;
 - Devem estar **publicadas e acessíveis** a todas as equipas;

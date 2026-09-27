@@ -14,7 +14,7 @@ A maturidade organizacional não resulta apenas do aumento da automação, mas d
 
 ---
 
-## 🔄 2. Escalonamento de maturidade
+## 🔄 2. Escalonamento de maturidade {#-2-escalonamento-de-maturidade}
 
 | Nível | Característica-chave                                                           |
 | ----- | ------------------------------------------------------------------------------ |
@@ -27,7 +27,7 @@ A maturidade organizacional não resulta apenas do aumento da automação, mas d
 
 ---
 
-## 🌍 3. Aplicação transversal
+## 🌍 3. Aplicação transversal {#-3-aplicação-transversal}
 
 A maturidade de governança afeta **todos os restantes capítulos**:
 
@@ -38,18 +38,18 @@ A maturidade de governança afeta **todos os restantes capítulos**:
 
 ---
 
-## 🗓️ 4. Maturidade como programa evolutivo
+## 🗓️ 4. Maturidade como programa evolutivo {#️-4-maturidade-como-programa-evolutivo}
 
 A evolução do modelo SbD-ToE pode ser guiada por:
 
 * Adoção formal do modelo de governança (`addon/01-modelo-governancao.md`);
 * Integração de revisões e exceções num ciclo trimestral;
-* Geração de KPIs e dashboards (`addon/kpis-governanca.md`);
+* Geração de KPIs e dashboards (`kpis-governanca.md`);
 * Auditorias cruzadas entre aplicações, contratos e rastreabilidade.
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Rever anualmente a estrutura de governança e roles atribuídos;
 * Consolidar dados operacionais (checklists) com dados de processo (decisões);
@@ -57,10 +57,10 @@ A evolução do modelo SbD-ToE pode ser guiada por:
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 * `achievable-maturity.md` de cada capítulo
 * `addon/01` a `addon/07` - componentes de suporte à maturidade
-* `addon/kpis-governanca.md` - KPIs de governança
+* `kpis-governanca.md` - KPIs de governança
 
 ---

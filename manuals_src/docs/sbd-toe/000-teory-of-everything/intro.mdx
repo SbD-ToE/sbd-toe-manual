@@ -16,8 +16,10 @@ Esta abordagem assegura uma continuidade explícita entre obrigações normativa
 
 ---
 
+import {translate} from '@docusaurus/Translate';
+
 export const ToeChart = () => (
-  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Diagrama conceptual da Theory of Everything" style={{maxWidth: '100%'}}>
+  <svg viewBox="0 -20 1407 744" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" role="img" aria-label={translate({id: 'toe.chart.ariaLabel', message: 'Diagrama conceptual da Theory of Everything'})} style={{maxWidth: '100%'}}>
     <defs>
       <radialGradient id="toeGlow" cx="50%" cy="50%" r="50%">
         <stop offset="0%" stopColor="var(--ifm-color-primary)" stopOpacity="0.18"/>
@@ -38,17 +40,17 @@ export const ToeChart = () => (
     <circle cx="704" cy="148" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="704" cy="148" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="704" y="70" textAnchor="middle" className="toe-title">Top-Down</text>
-    <text x="704" y="92" textAnchor="middle" className="toe-text">Normas &amp; Regulação</text>
+    <text x="704" y="92" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.topDown', message: 'Normas & Regulação'})}</text>
     <line x1="704" y1="195" x2="704" y2="268" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
     <circle cx="704" cy="558" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="704" cy="558" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="704" y="635" textAnchor="middle" className="toe-title">Bottom-Up</text>
-    <text x="704" y="657" textAnchor="middle" className="toe-text">Ameaças &amp; Incidentes</text>
+    <text x="704" y="657" textAnchor="middle" className="toe-text">{translate({id: 'toe.chart.bottomUp', message: 'Ameaças & Incidentes'})}</text>
     <line x1="704" y1="511" x2="704" y2="438" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
     <circle cx="499" cy="353" r="47" fill="var(--ifm-background-surface-color)"/>
     <circle cx="499" cy="353" r="47" fill="none" stroke="var(--ifm-color-emphasis-400)"/>
     <text x="420" y="345" textAnchor="end" className="toe-title">Engineering</text>
-    <text x="420" y="365" textAnchor="end" className="toe-text">Execução &amp; Ciclo de vida</text>
+    <text x="420" y="365" textAnchor="end" className="toe-text">{translate({id: 'toe.chart.engineering', message: 'Execução & Ciclo de vida'})}</text>
     <line x1="546" y1="353" x2="619" y2="353" stroke="var(--ifm-color-emphasis-400)" strokeWidth="3.6"/>
 </svg>
 );
@@ -64,7 +66,7 @@ Na prática, o *Security by Design* surge fragmentado entre regulação, framewo
 
 ---
 
-## 🧠 O problema estrutural do Security by Design moderno
+## 🧠 O problema estrutural do Security by Design moderno {#-o-problema-estrutural-do-security-by-design-moderno}
 
 No contexto organizacional contemporâneo, a segurança tende a manifestar-se de forma assimétrica:
 
@@ -86,13 +88,13 @@ O SbD–ToE parte do princípio de que **a segurança só é defensável quando 
 
 ---
 
-## 🧭 Os três vetores basilares do SbD–ToE
+## 🧭 Os três vetores basilares do SbD–ToE {#-os-três-vetores-basilares-do-sbdtoe}
 
 O SbD–ToE assenta em **três vetores fundamentais**, que representam forças estruturais irredutíveis presentes em qualquer sistema de engenharia segura. Estes vetores são **necessários e suficientes**; tudo o que é relevante para o *Security by Design* emerge da sua interação disciplinada.
 
 ---
 
-### 🏛️ Vetor Top-Down — Normativo, regulatório e intencional
+### 🏛️ Vetor Top-Down — Normativo, regulatório e intencional {#️-vetor-top-down--normativo-regulatório-e-intencional}
 
 O vetor **top-down** representa aquilo que é **exigido, esperado ou considerado aceitável** por reguladores, clientes e pela própria organização.
 
@@ -111,7 +113,7 @@ Por natureza, este vetor é **declarativo e abstrato**. Não descreve como desen
 
 ---
 
-### 🔍 Vetor Bottom-Up — Ameaças, falhas e impacto real
+### 🔍 Vetor Bottom-Up — Ameaças, falhas e impacto real {#-vetor-bottom-up--ameaças-falhas-e-impacto-real}
 
 O vetor **bottom-up** representa a realidade empírica da falha: como os sistemas são efetivamente comprometidos, abusados ou degradados no mundo real.
 
@@ -124,7 +126,7 @@ Este vetor define o **espaço de risco real** e atua como força corretiva sobre
 
 ---
 
-### ⚙️ Vetor de Engenharia — Prática, execução e experiência
+### ⚙️ Vetor de Engenharia — Prática, execução e experiência {#️-vetor-de-engenharia--prática-execução-e-experiência}
 
 O terceiro vetor corresponde à **engenharia real**: o espaço onde normas e ameaças colidem com pessoas, processos, tooling e limitações organizacionais.
 
@@ -138,7 +140,7 @@ Este vetor define o **espaço de execução possível** e funciona como **mecani
 
 ---
 
-## 🧱 Propriedades emergentes e invariantes do sistema
+## 🧱 Propriedades emergentes e invariantes do sistema {#-propriedades-emergentes-e-invariantes-do-sistema}
 
 Da interação disciplinada entre os três vetores emergem **propriedades estruturais** que não são opcionais. Entre estas, destacam-se os **invariantes do processo de engenharia segura**.
 
@@ -158,7 +160,7 @@ Os invariantes **não constituem um vetor autónomo**. São **propriedades emerg
 
 ---
 
-## 🔗 Os cinco macro-processos: invariantes em forma de processo
+## 🔗 Os cinco macro-processos: invariantes em forma de processo {#-os-cinco-macro-processos-invariantes-em-forma-de-processo}
 
 Os capítulos 01–14 do Manual organizam a engenharia segura por **áreas de capacidade**: dizem *o que* tem de existir e *como* se faz, com proporcionalidade L1–L3. Uma organização que os aplique tem os mecanismos. A falha sistémica que os macro-processos endereçam não é a ausência de um mecanismo; é a **ausência de uma camada de ligação governada** entre mecanismos que existem — a classificação que não seleciona os requisitos, o *threat model* que os testes não fecham, o SBOM que descreve outro *build*, a exceção aprovada sem alçada, o indicador que mede atividade em vez de estado.
 
@@ -176,7 +178,7 @@ Cada macro-processo é definido como processo — finalidade, percurso de capít
 
 ---
 
-## 📚 *Security by Design* nos referenciais normativos e regulatórios
+## 📚 *Security by Design* nos referenciais normativos e regulatórios {#-security-by-design-nos-referenciais-normativos-e-regulatórios}
 
 O princípio de *Security by Design* encontra-se hoje amplamente consagrado nos principais referenciais normativos, técnicos e regulatórios, ainda que com diferentes graus de explicitação, prescrição e detalhe operacional. Existe uma convergência clara na premissa de que a segurança deve ser integrada desde a conceção e mantida ao longo de todo o ciclo de vida, mas essa convergência ocorre sobretudo ao nível do **princípio normativo**, deixando em aberto a sua **operacionalização sistemática**.
 
@@ -205,7 +207,7 @@ Em particular:
 
 ---
 
-## 🧱 Convergência no princípio, lacuna na operacionalização
+## 🧱 Convergência no princípio, lacuna na operacionalização {#-convergência-no-princípio-lacuna-na-operacionalização}
 
 Em conjunto, estes referenciais:
 - convergem no **quê** (integração da segurança desde a conceção);
@@ -221,7 +223,7 @@ Deixam, porém, sistematicamente em aberto:
 
 ---
 
-## 🔄 O papel do SbD–ToE
+## 🔄 O papel do SbD–ToE {#-o-papel-do-sbdtoe}
 
 É precisamente neste espaço — entre o princípio normativo e a execução técnica — que o **Security by Design – Theory of Everything (SbD–ToE)** se posiciona.
 

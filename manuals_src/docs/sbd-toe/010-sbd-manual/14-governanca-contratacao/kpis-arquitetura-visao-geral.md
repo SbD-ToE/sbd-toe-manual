@@ -14,7 +14,7 @@ Para definições, thresholds e catálogo completo de indicadores, ver [`kpis-go
 
 ---
 
-## D1 - Cascata de camadas
+## D1 - Cascata de camadas {#d1---cascata-de-camadas}
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ flowchart LR
 
 ---
 
-## D2 - Mapeamento capítulo → dimensão transversal
+## D2 - Mapeamento capítulo → dimensão transversal {#d2---mapeamento-capítulo--dimensão-transversal}
 
 | Capítulo | T-01 Cobertura | T-02 Excepções | T-03 Velocidade | T-04 Ownership | T-05 Cadeia | T-06 Maturidade |
 |----------|:--------------:|:--------------:|:---------------:|:--------------:|:-----------:|:---------------:|
@@ -62,7 +62,7 @@ flowchart LR
 
 ---
 
-## D3 - Funil de adoptabilidade
+## D3 - Funil de adoptabilidade {#d3---funil-de-adoptabilidade}
 
 ```mermaid
 flowchart LR

@@ -12,13 +12,13 @@ tags: [exceções, visibilidade, cicd, governação, auditoria]
 
 ---
 
-## Âmbito
+## Âmbito {#âmbito}
 
 Excepções a gates de segurança, políticas de pipeline e controlos de CI/CD - bypass temporário de validações, desactivação de ferramentas ou desvio a políticas de execução.
 
 ---
 
-## Triggers específicos deste domínio
+## Triggers específicos deste domínio {#triggers-específicos-deste-domínio}
 
 - gate de segurança bloqueante em contexto de incidente crítico com necessidade de deploy urgente e documentado;
 - ferramenta de validação indisponível com impacto no ciclo de release;
@@ -27,7 +27,7 @@ Excepções a gates de segurança, políticas de pipeline e controlos de CI/CD -
 
 ---
 
-## Visibilidade obrigatória no pipeline
+## Visibilidade obrigatória no pipeline {#visibilidade-obrigatória-no-pipeline}
 
 Toda a excepção activa deve ser **explicitamente assinalada** nos logs, artefactos de execução ou metadados do pipeline. Uma excepção invisível no pipeline é equivalente a um bypass não controlado.
 
@@ -42,7 +42,7 @@ Mecanismos de sinalização por ferramenta:
 
 ---
 
-## Métricas associadas
+## Métricas associadas {#métricas-associadas}
 
 As excepções CI/CD contribuem directamente para os KPIs de maturidade (ver Cap. 14 - `kpis-governanca.md`):
 
@@ -54,7 +54,7 @@ Estes indicadores devem ser reportados no ciclo de governação.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |---|---|

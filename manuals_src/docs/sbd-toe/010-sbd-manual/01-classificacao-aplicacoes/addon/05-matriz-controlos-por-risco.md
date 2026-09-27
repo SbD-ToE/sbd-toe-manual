@@ -21,7 +21,7 @@ A matriz pode ser usada:
 
 ---
 
-## 🧠 Enquadramento normativo
+## 🧠 Enquadramento normativo {#-enquadramento-normativo}
 
 No *Security by Design – Theory of Everything (SbD-ToE)*, o nível de risco da aplicação determina **o grau mínimo de rigor** esperado na aplicação de controlos de segurança.
 
@@ -39,7 +39,7 @@ Esta matriz deve, por isso, ser aplicada **em conjunto** com:
 
 ---
 
-## 🛠️ Matriz de Controlos por Nível de Risco
+## 🛠️ Matriz de Controlos por Nível de Risco {#️-matriz-de-controlos-por-nível-de-risco}
 
 | Domínio                          | Risco Baixo (L1)                              | Risco Médio (L2)                                           | Risco Elevado (L3)                                                      |
 |----------------------------------|-----------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -59,7 +59,7 @@ Esta matriz deve, por isso, ser aplicada **em conjunto** com:
 
 ---
 
-## ⚠️ Regra de reforço obrigatório de controlos
+## ⚠️ Regra de reforço obrigatório de controlos {#️-regra-de-reforço-obrigatório-de-controlos}
 
 > ⚠️ **Nota normativa essencial**
 
@@ -77,7 +77,7 @@ Esta regra aplica-se a qualquer tecnologia ou prática de desenvolvimento e **n�
 
 ---
 
-## 🔄 Atualização e manutenção da matriz
+## 🔄 Atualização e manutenção da matriz {#-atualização-e-manutenção-da-matriz}
 
 Esta matriz deve ser:
 - revista sempre que ocorram alterações relevantes no manual;
@@ -91,7 +91,7 @@ A sua utilização não dispensa:
 
 ---
 
-## 📌 Nota final
+## 📌 Nota final {#-nota-final}
 
 Esta matriz **não define “o máximo a fazer”**,  
 define **o mínimo aceitável** para cada nível de risco.
@@ -101,7 +101,7 @@ não da mera conformidade com uma tabela.
 
 ---
 
-## 🔗 Ligações úteis
+## 🔗 Ligações úteis {#-ligações-úteis}
 
 - [Capítulo 01 – Classificação da Criticidade Aplicacional](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 - [Modelo de Classificação por Eixos (E/D/I)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos)

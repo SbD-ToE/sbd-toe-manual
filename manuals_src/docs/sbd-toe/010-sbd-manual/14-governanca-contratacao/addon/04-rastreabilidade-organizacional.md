@@ -10,7 +10,7 @@ tags: [rastreabilidade, evidencias, compliance, auditoria]
 
 # Modelo de Rastreabilidade Organizacional
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Garantir que existe uma **ligação clara, documentada e auditável** entre:
 
@@ -27,7 +27,7 @@ A existência de evidência técnica não substitui a necessidade de decisão co
 
 ---
 
-## 📈 Estrutura de rastreabilidade recomendada
+## 📈 Estrutura de rastreabilidade recomendada {#-estrutura-de-rastreabilidade-recomendada}
 
 | Aplicativo / Projeto | Risco (L1-L3) | Requisitos aplicados | Exceções aprovadas  | Fornecedor / Serviço | Evidência existente | Owner de segurança  |
 | -------------------- | ------------- | -------------------- | ------------------- | -------------------- | ------------------- | ------------------- |
@@ -41,7 +41,7 @@ Quando aplicável, a coluna de evidência deve permitir identificar se a valida�
 
 ---
 
-## 🔄 Mecanismos de atualização
+## 🔄 Mecanismos de atualização {#-mecanismos-de-atualização}
 
 * A tabela deve ser atualizada:
 
@@ -53,7 +53,7 @@ Quando aplicável, a coluna de evidência deve permitir identificar se a valida�
 
 ---
 
-## 🔢 Integração com GRC, auditorias e conformidade
+## 🔢 Integração com GRC, auditorias e conformidade {#-integração-com-grc-auditorias-e-conformidade}
 
 * Este modelo pode ser usado como **fonte de verdade** para:
 
@@ -69,7 +69,7 @@ Quando aplicável, a coluna de evidência deve permitir identificar se a valida�
 
 ---
 
-## 📊 Sugestão de visualização
+## 📊 Sugestão de visualização {#-sugestão-de-visualização}
 
 ```mermaid
 flowchart LR
@@ -83,21 +83,21 @@ flowchart LR
 
 ---
 
-## ✅ Recomendações finais
+## ✅ Recomendações finais {#-recomendações-finais}
 
 * Esta tabela deve ser usada como **base para governação técnica** e decisão executiva;
 * Deve integrar os dados provenientes dos **checklists por capítulo SbD-ToE**;
-* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver `addon/kpis-governanca.md`).
+* Pode ser usada para **construir KPIs de maturidade e visibilidade** (ver `kpis-governanca.md`).
 
 ---
 
-## 🔗 Ligações cruzadas
+## 🔗 Ligações cruzadas {#-ligações-cruzadas}
 
 * Cap. 1 - Classificação de risco
 * Cap. 2 - Requisitos e matriz de aplicação
 * `addon/01-modelo-governancao.md` - Governação e exceções
 * `addon/02-clausulas-contratuais.md` - Cláusulas contratuais
 * `addon/03-modelo-validacao-fornecedores.md` - Validação de fornecedores
-* `addon/kpis-governanca.md` - KPIs de governação
+* `kpis-governanca.md` - KPIs de governação
 
 ---

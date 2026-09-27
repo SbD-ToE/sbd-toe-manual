@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Classificação de Aplicações
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As referências externas relevantes para este domínio encontram-se nos capítulos onde cada slice ancora primariamente.
 
@@ -19,9 +19,9 @@ Este capítulo **não é âncora primária** de nenhuma slice AppSec Core V1. As
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **59 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **78 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -40,7 +40,26 @@ Total: **59 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `01-classificacao-aplicacoes:mapeamento-de-ameacas-por-nivel-de-risco` | Mapeamento de ameaças por nível de risco | normative | explicit | deterministic |
 | Practice | `01-classificacao-aplicacoes:revisao-por-alteracao-relevante-event-based` | Revisão por alteração relevante (event-based) | normative | explicit | deterministic |
 | Practice | `01-classificacao-aplicacoes:validacao-antes-do-go-live` | Validação antes do go-live | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-001` | Falta de aplicação de controlos mínimos | normative | heuristic | bounded |
+| Threat | `MT-002` | Overengineering e fricção excessiva | normative | heuristic | bounded |
+| Threat | `MT-003` | Inconsistência entre projetos com mesmo risco | normative | heuristic | bounded |
+| Threat | `MT-004` | Segurança opcional em produtos low-risk | normative | heuristic | bounded |
+| Threat | `MT-005` | Mudanças críticas sem reclassificação | normative | heuristic | bounded |
+| Threat | `MT-006` | Integração com APIs ou terceiros ignorada | normative | heuristic | bounded |
+| Threat | `MT-007` | Deploy com risco alterado não revisto | normative | heuristic | bounded |
+| Threat | `MT-008` | Versões diferentes com classificações divergentes | normative | heuristic | bounded |
+| Threat | `MT-009` | Aceitação informal de riscos críticos | normative | heuristic | bounded |
+| Threat | `MT-010` | Impossibilidade de auditoria posterior | normative | heuristic | bounded |
+| Threat | `MT-011` | Risco aceite por responsáveis inapropriados | normative | heuristic | bounded |
+| Threat | `MT-012` | Falta de explicabilidade regulatória | normative | heuristic | bounded |
+| Threat | `MT-013` | Interfaces expostas mal avaliadas | normative | heuristic | bounded |
+| Threat | `MT-014` | Dados sensíveis não reconhecidos | normative | heuristic | bounded |
+| Threat | `MT-015` | Assunção de ambientes seguros por defeito | normative | heuristic | bounded |
+| Threat | `MT-016` | Ignorar dependências críticas | normative | heuristic | bounded |
+| Threat | `MT-017` | Risco residual nunca revisto | normative | heuristic | bounded |
+| Threat | `MT-018` | Falta de eventos de reavaliação planeados | normative | heuristic | bounded |
+| Threat | `MT-019` | Reclassificação dependente de exceções | normative | heuristic | bounded |
+| Threat | `MT-020` | Decisões de risco sem feedback do negócio | normative | heuristic | bounded |
 | Concept | `sem:concept:aceitacao-de-risco` | aceitação de risco | semantic | scored | bounded |
 | Concept | `sem:concept:atributos-do-risco` | atributos do risco | semantic | scored | bounded |
 | Concept | `sem:concept:ciclo-de-desenvolvimento` | ciclo de desenvolvimento | semantic | scored | bounded |
@@ -70,7 +89,7 @@ Total: **59 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

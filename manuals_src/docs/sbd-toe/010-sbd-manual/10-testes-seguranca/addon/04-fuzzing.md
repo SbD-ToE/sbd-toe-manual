@@ -9,7 +9,7 @@ sidebar_position: 5
 
 # Fuzzing de Segurança
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Descobrir vulnerabilidades e falhas de robustez através da **geração automática e massiva de inputs malformados, inesperados ou aleatórios**, com o objetivo de:
 
@@ -22,7 +22,7 @@ Descobrir vulnerabilidades e falhas de robustez através da **geração automát
 
 ---
 
-## 🔍 O que é fuzzing
+## 🔍 O que é fuzzing {#-o-que-é-fuzzing}
 
 Fuzzing é uma técnica de segurança que consiste em alimentar a aplicação com **inputs gerados de forma aleatória ou sistemática**, com o intuito de provocar erros, falhas ou crashes.
 
@@ -38,7 +38,7 @@ Tipos comuns:
 
 ---
 
-## ⚙️ Como aplicar
+## ⚙️ Como aplicar {#️-como-aplicar}
 
 1. **Selecionar alvo e contexto de teste** (ex: endpoint REST, ficheiro, fluxo de API);
 2. **Configurar fuzzer com tipos de input relevantes** (estrutura, tipos, encoding);
@@ -49,7 +49,7 @@ Tipos comuns:
 
 ---
 
-## ✅ Boas práticas
+## ✅ Boas práticas {#-boas-práticas}
 
 - Utilizar fuzzing em endpoints críticos e APIs externas;
 - Priorizar formatos ricos (JSON, XML, JWT) e campos menos validados;
@@ -60,7 +60,7 @@ Tipos comuns:
 
 ---
 
-## 📎 Referências cruzadas
+## 📎 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                       | Relevância estratégica                       |
 |--------------------------------|----------------------------------------------|

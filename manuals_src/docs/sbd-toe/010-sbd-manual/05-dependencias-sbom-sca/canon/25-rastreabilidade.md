@@ -1,6 +1,6 @@
 # 25. Rastreabilidade — Dependências, SBOM e SCA
 
-## Sumário
+## Sumário {#sumário}
 
 Este capítulo é a **âncora primária** das slices AppSec Core V1: `ACO-SCBI` (Integridade da supply chain de software e do build).
 
@@ -14,9 +14,9 @@ Cobertura V1 entity-level: **20 entidades** primárias. Estrutura abaixo expõe 
 
 ---
 
-## § Manual ontology V2 — entities canónicas deste capítulo
+## § Manual ontology V2 — entities canónicas deste capítulo {#-manual-ontology-v2--entities-canónicas-deste-capítulo}
 
-Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
+Total: **63 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-knowledge-graph` canonical data (post-merge 5550a74).
 
 | Entity type | ID | Label | Authority class | Source mode | Confidence |
 |---|---|---|---|---|---|
@@ -44,17 +44,36 @@ Total: **44 entidades** Manual ontology V2 mapped a este capítulo via `sbd-toe-
 | Practice | `05-dependencias-sbom-sca:sca-automatico-com-gates` | SCA automático com *gates* | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-automatica-de-compatibilidade-de-licencas` | Validação Automática de Compatibilidade de Licenças | normative | explicit | deterministic |
 | Practice | `05-dependencias-sbom-sca:validacao-de-release-go-no-go` | Validação de release (*go/no-go*) | normative | explicit | deterministic |
-| Threat | `None` | hybrid | normative | heuristic | bounded |
+| Threat | `MT-073` | Inclusão de bibliotecas com CVEs ativos | normative | heuristic | bounded |
+| Threat | `MT-074` | Dependências desatualizadas | normative | heuristic | bounded |
+| Threat | `MT-075` | Ausência de registo de versões | normative | heuristic | bounded |
+| Threat | `MT-076` | Inclusão de bibliotecas não auditadas | normative | heuristic | bounded |
+| Threat | `MT-077` | Desconhecimento de bibliotecas utilizadas | normative | heuristic | bounded |
+| Threat | `MT-078` | Falta de associação entre vulnerabilidade e artefacto | normative | heuristic | bounded |
+| Threat | `MT-079` | Falta de histórico de introdução de pacotes | normative | heuristic | bounded |
+| Threat | `MT-080` | Inclusão de pacotes de repositórios maliciosos | normative | heuristic | bounded |
+| Threat | `MT-081` | Dependência transitiva com componente inseguro | normative | heuristic | bounded |
+| Threat | `MT-082` | Pipeline injeta versão não autenticada | normative | heuristic | bounded |
+| Threat | `MT-083` | CVEs ignoradas sem justificação | normative | heuristic | bounded |
+| Threat | `MT-084` | Mitigações aplicadas sem rastreio | normative | heuristic | bounded |
+| Threat | `MT-085` | Falta de ciclo de revisão de exceções | normative | heuristic | bounded |
+| Threat | `MT-086` | Uso arbitrário de bibliotecas | normative | heuristic | bounded |
+| Threat | `MT-087` | Bibliotecas proibidas são usadas | normative | heuristic | bounded |
+| Threat | `MT-088` | Falta de política de substituição | normative | heuristic | bounded |
+| Threat | `MT-089` | Introdução de dependência vulnerável não declarada | normative | heuristic | bounded |
+| Threat | `MT-090` | Confusão de dependências | normative | heuristic | bounded |
+| Threat | `MT-091` | Backdoor via ferramenta de build | normative | heuristic | bounded |
+| Threat | `MT-092` | Drift de composição entre builds | normative | heuristic | bounded |
 
 > Authority class / source mode / confidence model: per Manual ontology V2 definition (`sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml`, `meta.version: '2.0'`).
 
 ---
 
-## § Core-mapped coverage
+## § Core-mapped coverage {#-core-mapped-coverage}
 
 Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual section anchor + §26 methodology label + substrate v7 ES grounding.
 
-### Slice `ACO-SCBI` — Integridade da supply chain de software e do build
+### Slice `ACO-SCBI` — Integridade da supply chain de software e do build {#slice-aco-scbi--integridade-da-supply-chain-de-software-e-do-build}
 
 | V1 entity | Type | Manual V2 anchor | Manual section anchor | Authority | Source mode | §26 label | ES grounding |
 |---|---|---|---|---|---|---|---|
@@ -81,7 +100,7 @@ Tabela expondo cobertura V1 entity-level com Manual ontology V2 anchor + Manual 
 
 ---
 
-## § Manual-only coverage (out-of-Core-scope; ES-grounded direct)
+## § Manual-only coverage (out-of-Core-scope; ES-grounded direct) {#-manual-only-coverage-out-of-core-scope-es-grounded-direct}
 
 Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (maturity models, organizational policies, KPIs/metrics, glossaries) mas com ES grounding direct.
 
@@ -93,7 +112,7 @@ Manual sections que cobrem tópicos fora do scope V1 AppSec Core ontology (matur
 
 ---
 
-## § Out-of-AppSec coverage (pure editorial)
+## § Out-of-AppSec coverage (pure editorial) {#-out-of-appsec-coverage-pure-editorial}
 
 Manual sections que são pure editorial content (worked examples, narrativas, illustrative cases, vendor-specific tooling integration). Sem ES grounding.
 
@@ -104,13 +123,13 @@ Manual sections que são pure editorial content (worked examples, narrativas, il
 
 ---
 
-## § Future-work register (P8 §10 candidates)
+## § Future-work register (P8 §10 candidates) {#-future-work-register-p8-10-candidates}
 
 _(Sem entradas no future-work register para este capítulo.)_
 
 ---
 
-## Generation provenance
+## Generation provenance {#generation-provenance}
 
 - **Manual ontology V2 canonical:** `sbd-toe-knowledge-graph/ontology/sbdtoe-ontology.yaml` (`meta.version: '2.0'`)
 - **KG canonical state:** sbd-toe-knowledge-graph master @ `5550a74` (`kg-v1-cycle-b-iter-3-aligned-2026-05-11`)

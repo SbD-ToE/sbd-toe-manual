@@ -8,9 +8,9 @@ sidebar_position: 7
 
 # FAQ - Perguntas Frequentes
 
-## Âmbito e Aplicabilidade
+## Âmbito e Aplicabilidade {#âmbito-e-aplicabilidade}
 
-### Para quem é o SbD-ToE?
+### Para quem é o SbD-ToE? {#para-quem-é-o-sbd-toe}
 
 Organizações que:
 - **Desenvolvem** software (produto próprio, ferramentas internas, apps para clientes).
@@ -23,7 +23,7 @@ O SbD-ToE **não** é apenas para empresas de software. É para qualquer organiz
 
 ---
 
-### A minha organização não desenvolve software. O SbD-ToE é relevante?
+### A minha organização não desenvolve software. O SbD-ToE é relevante? {#a-minha-organização-não-desenvolve-software-o-sbd-toe-é-relevante}
 
 **Sim, muito provavelmente.**
 
@@ -50,7 +50,7 @@ O SbD-ToE ajuda a:
 
 ---
 
-### Qual a diferença entre SbD-ToE e ISO 27001?
+### Qual a diferença entre SbD-ToE e ISO 27001? {#qual-a-diferença-entre-sbd-toe-e-iso-27001}
 
 | Aspeto | SbD-ToE | ISO 27001 |
 |--------|---------|-----------|
@@ -68,9 +68,9 @@ O SbD-ToE ajuda a:
 
 ---
 
-## Compliance e Regulação
+## Compliance e Regulação {#compliance-e-regulação}
 
-### O SbD-ToE cobre DORA/NIS2/CRA/GDPR?
+### O SbD-ToE cobre DORA/NIS2/CRA/GDPR? {#o-sbd-toe-cobre-doranis2cragdpr}
 
 **Sim, mas de forma diferente:**
 
@@ -85,7 +85,7 @@ O SbD-ToE ajuda a:
 
 ---
 
-### Posso usar o SbD-ToE como evidência de compliance?
+### Posso usar o SbD-ToE como evidência de compliance? {#posso-usar-o-sbd-toe-como-evidência-de-compliance}
 
 **Sim.** Cada capítulo gera artefactos reutilizáveis:
 
@@ -99,7 +99,7 @@ O SbD-ToE ajuda a:
 
 ---
 
-### E certificação? Há certificação SbD-ToE?
+### E certificação? Há certificação SbD-ToE? {#e-certificação-há-certificação-sbd-toe}
 
 **Não.** O SbD-ToE não é um esquema de certificação. É um **framework operacional interno**.
 
@@ -114,9 +114,9 @@ Ver: [Certificação ENISA/CSA](/sbd-toe/cross-check-normativo/enisa-csa/intro)
 
 ---
 
-## Implementação
+## Implementação {#implementação}
 
-### Quanto tempo demora implementar o SbD-ToE?
+### Quanto tempo demora implementar o SbD-ToE? {#quanto-tempo-demora-implementar-o-sbd-toe}
 
 Depende da maturidade inicial:
 
@@ -131,7 +131,7 @@ Depende da maturidade inicial:
 
 ---
 
-### Preciso implementar todos os capítulos?
+### Preciso implementar todos os capítulos? {#preciso-implementar-todos-os-capítulos}
 
 **Não necessariamente.** Depende do contexto:
 
@@ -152,7 +152,7 @@ Depende da maturidade inicial:
 
 ---
 
-### Quanto custa implementar o SbD-ToE?
+### Quanto custa implementar o SbD-ToE? {#quanto-custa-implementar-o-sbd-toe}
 
 Não há custo de licença (é framework aberto). Os custos são **internos** (tempo de equipa) e **ferramentas**:
 
@@ -168,9 +168,9 @@ Não há custo de licença (é framework aberto). Os custos são **internos** (t
 
 ---
 
-## Exceções e Desvios
+## Exceções e Desvios {#exceções-e-desvios}
 
-### O que são "exceções" no SbD-ToE?
+### O que são "exceções" no SbD-ToE? {#o-que-são-exceções-no-sbd-toe}
 
 **Exceção** = desvio formal de um requisito de segurança, com:
 - Justificação técnica ou de negócio.
@@ -185,7 +185,7 @@ Ver: Cap. 02 addon 08, Cap. 05 addon 09, Cap. 14.
 
 ---
 
-### Todas as exceções são permitidas?
+### Todas as exceções são permitidas? {#todas-as-exceções-são-permitidas}
 
 **Não.** Há categorias de **exceções inaceitáveis**:
 
@@ -200,9 +200,9 @@ Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#g
 
 ---
 
-## Relação com Outros Frameworks
+## Relação com Outros Frameworks {#relação-com-outros-frameworks}
 
-### SbD-ToE vs. OWASP SAMM/BSIMM/SSDF?
+### SbD-ToE vs. OWASP SAMM/BSIMM/SSDF? {#sbd-toe-vs-owasp-sammbsimmssdf}
 
 | Framework | Tipo | Relação com SbD-ToE |
 |-----------|------|---------------------|
@@ -214,7 +214,7 @@ Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#g
 
 ---
 
-### Posso usar SbD-ToE com DevSecOps?
+### Posso usar SbD-ToE com DevSecOps? {#posso-usar-sbd-toe-com-devsecops}
 
 **Sim, é o core do SbD-ToE.**
 
@@ -227,9 +227,9 @@ Ver: [DORA cross-check - Exceções](/sbd-toe/cross-check-normativo/dora/intro#g
 
 ---
 
-## Regulação Multi-Jurisdicional
+## Regulação Multi-Jurisdicional {#regulação-multi-jurisdicional}
 
-### Estou sujeito a DORA + NIS2 + GDPR. Há duplicação?
+### Estou sujeito a DORA + NIS2 + GDPR. Há duplicação? {#estou-sujeito-a-dora--nis2--gdpr-há-duplicação}
 
 **Muito pouca.** A maioria dos controlos técnicos convergem:
 
@@ -247,9 +247,9 @@ Ver: [Convergência DORA & NIS2](/sbd-toe/cross-check-normativo/dora/convergenci
 
 ---
 
-## Métricas e Melhoria Contínua
+## Métricas e Melhoria Contínua {#métricas-e-melhoria-contínua}
 
-### Como medir se estou "SbD-ToE compliant"?
+### Como medir se estou "SbD-ToE compliant"? {#como-medir-se-estou-sbd-toe-compliant}
 
 Métricas-chave por capítulo:
 
@@ -267,7 +267,7 @@ Métricas-chave por capítulo:
 
 ---
 
-### O SbD-ToE é "one-time" ou contínuo?
+### O SbD-ToE é "one-time" ou contínuo? {#o-sbd-toe-é-one-time-ou-contínuo}
 
 **Contínuo.**
 
@@ -281,9 +281,9 @@ Métricas-chave por capítulo:
 
 ---
 
-## Próximos Passos
+## Próximos Passos {#próximos-passos}
 
-### Por onde começo?
+### Por onde começo? {#por-onde-começo}
 
 1. **Ler:** [Como usar este manual](/sbd-toe/sbd-manual/fundamentos/como-usar)
 2. **Inventariar:** Cap. 01 - Listar e classificar apps críticas.
@@ -293,7 +293,7 @@ Métricas-chave por capítulo:
 
 ---
 
-### Onde obter suporte?
+### Onde obter suporte? {#onde-obter-suporte}
 
 - **Documentação completa:** SbD-ToE Capítulos 01–14
 - **Cross-checks normativos:** Secção 002

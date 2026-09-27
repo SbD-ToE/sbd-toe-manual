@@ -17,7 +17,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objetivos {#-objetivos}
 
 - Registar de forma fiável e verificável todas as execuções relevantes do pipeline;
 - Associar artefactos a builds, utilizadores, commits e ambientes específicos;
@@ -25,7 +25,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 ---
 
-## 🛠️ Práticas
+## 🛠️ Práticas {#️-práticas}
 
 1. **Assinatura digital de builds e releases críticas**  
    - Cada artefacto publicado deve ser assinado digitalmente (ex: GPG, Sigstore, JWT);
@@ -49,7 +49,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 ---
 
-## ⚖️ Aplicação proporcional por nível de risco
+## ⚖️ Aplicação proporcional por nível de risco {#️-aplicação-proporcional-por-nível-de-risco}
 
 | Nível | Registos obrigatórios                                 | Requisitos reforçados                                      |
 |-------|--------------------------------------------------------|-------------------------------------------------------------|
@@ -59,7 +59,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 ---
 
-## 📌 Exemplos práticos
+## 📌 Exemplos práticos {#-exemplos-práticos}
 
 - **GitHub Actions**  
   - Uso de `github.run_id`, `github.sha`, `GITHUB_ACTOR` nos artefactos e tags;  
@@ -79,7 +79,7 @@ Esta prática define os mecanismos necessários para assegurar que **cada execu�
 
 ---
 
-## 📉 Riscos mitigados
+## 📉 Riscos mitigados {#-riscos-mitigados}
 
 - Ambiguidade sobre a origem de deploys (OSC&R: CI0004);
 - Ausência de cadeia de confiança auditável (OSC&R: CI0011, CI0016);

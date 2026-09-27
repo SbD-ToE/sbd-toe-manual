@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de CI/CD Seguro
 
-## Âmbito: o pipeline como produto de engenharia com risco próprio
+## Âmbito: o pipeline como produto de engenharia com risco próprio {#âmbito-o-pipeline-como-produto-de-engenharia-com-risco-próprio}
 
 Este catálogo cobre **requisitos de segurança aplicáveis ao design, operação e auditoria de pipelines de CI/CD** - tratando o pipeline como um produto de engenharia crítico que, se comprometido, compromete todo o software que por ele transita.
 
@@ -25,7 +25,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-CIC-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -36,7 +36,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo CIC - CI/CD Seguro
+## Catálogo CIC - CI/CD Seguro {#catálogo-cic---cicd-seguro}
 
 Requisitos que garantem que o pipeline de integração e entrega é concebido, operado e auditado com controlos proporcionais ao risco do software que processa.
 
@@ -56,7 +56,7 @@ Requisitos que garantem que o pipeline de integração e entrega é concebido, o
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **CIC-001**: O pipeline-como-código (Pipeline as Code) é condição necessária para rastreabilidade e revisão - um pipeline editável apenas na UI da plataforma é inauditável por definição.
 - **CIC-002**: O risco de envenenamento de pipeline via forks (ex: GitHub Actions pull_request_target) é um vector estabelecido; triggers de pull requests de forks externos devem ser tratados como não confiáveis por omissão.

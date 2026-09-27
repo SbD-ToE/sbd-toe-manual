@@ -10,7 +10,7 @@ tags: [kpi, metricas, IAC, infraestrutura, policy-as-code, drift, opa, sentinel,
 
 # KPIs e Métricas - IaC e Infraestrutura
 
-## Âmbito e propósito
+## Âmbito e propósito {#âmbito-e-propósito}
 
 Os indicadores deste domínio avaliam a **segurança da infraestrutura definida como código**: a cobertura de policy-as-code, a detecção e resolução de drift de configuração, a ausência de segredos em repositórios de IaC, e a proporção de infraestrutura gerida declarativamente vs provisionada manualmente.
 
@@ -20,7 +20,7 @@ Os indicadores IAC alimentam as dimensões transversais **T-01 (Cobertura de con
 
 ---
 
-## Denominador e fundação de portfólio
+## Denominador e fundação de portfólio {#denominador-e-fundação-de-portfólio}
 
 Os indicadores deste domínio usam como denominador **F-02 - aplicações com classificação de risco formal** (Cap. 01, CLA-K01). As percentagens são interpretáveis apenas em relação ao conjunto de aplicações classificadas ao nível de risco relevante - não ao portfólio total ou a subconjuntos ad-hoc.
 
@@ -28,7 +28,7 @@ Ver `kpis-governanca.md` - secção "Fundação de portfólio" - para o funil de
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -48,7 +48,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Catálogo de indicadores
+## Catálogo de indicadores {#catálogo-de-indicadores}
 
 | ID | Indicador | Tipo | L1 | L2 | L3 | Dim. T | Período |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
@@ -62,7 +62,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Definições complementares
+## Definições complementares {#definições-complementares}
 
 **IAC-K01 - Policy-as-code em modo bloqueio:** apenas contam módulos onde a falha de policy (OPA/Rego, Sentinel, Checkov, tfsec, kube-linter, cfn-guard) bloqueia o pipeline. Execuções em modo `plan-only` sem bloqueio não satisfazem este critério.
 
@@ -78,7 +78,7 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Recolha e instrumentação
+## Recolha e instrumentação {#recolha-e-instrumentação}
 
 | Indicador | Fonte primária | Ferramentas de referência | Automação |
 |-----------|---------------|--------------------------|-----------|
@@ -92,11 +92,11 @@ Os thresholds são cumulativos: L3 inclui todas as obrigações de L1 e L2.
 
 ---
 
-## Referências cruzadas
+## Referências cruzadas {#referências-cruzadas}
 
 | Documento | Relação |
 |-----------|---------|
 | `addon/08-matriz-requisitos-iac.md` | Requisitos IAC-001..013 que fundamentam os indicadores |
 | `addon/09-gestao-excecoes.md` | Processo de excepção de policy IaC (IAC-K04) |
 | `addon/06-controle-enforcement.md` | Mecanismos de enforcement que alimentam IAC-K01/K07 |
-| Cap. 14 `addon/kpis-governanca.md` | Dimensões transversais T-01, T-02 |
+| Cap. 14 `kpis-governanca.md` | Dimensões transversais T-01, T-02 |

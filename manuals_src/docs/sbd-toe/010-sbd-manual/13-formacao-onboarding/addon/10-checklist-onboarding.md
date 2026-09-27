@@ -14,7 +14,7 @@ Este checklist permite verificar se o processo de onboarding de um colaborador (
 
 ---
 
-## 📋 Itens a validar (por colaborador)
+## 📋 Itens a validar (por colaborador) {#-itens-a-validar-por-colaborador}
 
 | Item                                                                                                 | Verificado? |
 |------------------------------------------------------------------------------------------------------|-------------|
@@ -29,7 +29,7 @@ Este checklist permite verificar se o processo de onboarding de um colaborador (
 
 ---
 
-## 🧭 Notas de aplicação
+## 🧭 Notas de aplicação {#-notas-de-aplicação}
 
 - Aplicável a perfis **Dev, QA, DevOps, AppSec** e **terceiros com acesso a sistemas ou pipelines**
 - Deve ser **executado antes de qualquer atividade técnica significativa**
@@ -41,7 +41,7 @@ Este checklist permite verificar se o processo de onboarding de um colaborador (
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                         | Função                                                   |
 |-----------------------------------|-----------------------------------------------------------|

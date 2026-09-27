@@ -11,7 +11,7 @@ sidebar_position: 0
 
 # Catálogo de Requisitos de Governação e Contratação
 
-## Âmbito: governação como requisito verificável
+## Âmbito: governação como requisito verificável {#âmbito-governação-como-requisito-verificável}
 
 Este catálogo cobre os **requisitos de governação organizacional de segurança** - os controlos que asseguram que as práticas prescritas nos capítulos técnicos do SbD-ToE são aplicadas, rastreadas, auditadas e evoluídas de forma sustentável.
 
@@ -27,7 +27,7 @@ Para instanciação em projecto e nomenclatura operacional (`SEC-Lx-GOV-CODIGO`)
 
 ---
 
-## Convenções
+## Convenções {#convenções}
 
 | Símbolo | Significado |
 |---------|-------------|
@@ -38,7 +38,7 @@ Os níveis são cumulativos: L3 inclui todos os requisitos de L1 e L2; L2 inclui
 
 ---
 
-## Catálogo GOV - Governação e Contratação
+## Catálogo GOV - Governação e Contratação {#catálogo-gov---governação-e-contratação}
 
 Requisitos que garantem que a segurança é aplicada com autoridade formal, rastreabilidade completa e capacidade de evolução organizacional sustentada.
 
@@ -53,7 +53,7 @@ Requisitos que garantem que a segurança é aplicada com autoridade formal, rast
 | GOV-007 | Validação formal de fornecedores antes de onboarding | ✔ | ✔ | ✔ | Fornecedores com acesso a dados, código ou pipelines são validados com questionário ou checklist antes de onboarding; validação proporcional ao risco (L3: SBOM, SLA de incidentes, direito de auditoria formal); registo de validação retido e rastreável. |
 | GOV-008 | Rastreabilidade organizacional de decisões de segurança por aplicação | - | ✔ | ✔ | Existe registo consolidado por aplicação que liga: classificação de risco → requisitos aplicados → excepções aprovadas → fornecedores validados → owner de segurança; registo actualizado em cada release relevante ou mudança de risco; disponível para auditoria. |
 | GOV-009 | Evidência de decisões rastreável, referenciável e retida | ✔ | ✔ | ✔ | Toda a decisão de risco ou excepção tem artefactos de evidência referenciáveis (ticket, nota, registo GRC, ADR ou equivalente); a cadeia de autoridade - quem pediu, quem avaliou, quem aprovou - é verificável; evidência retida pelo período definido em política. |
-| GOV-010 | Ciclo de validação contínua e revisão periódica de conformidade | - | ✔ | ✔ | Ciclo de revisão periódica definido por tipo de activo (aplicações L3: trimestral; L2: semestral; fornecedores críticos: anual); revisões produzem evidência rastreável; desvios identificados geram acções correctivas com owner e prazo definidos. |
+| GOV-010 | Ciclo de validação contínua e revisão periódica de conformidade | - | ✔ | ✔ | Ciclo de revisão periódica definido por tipo de activo (aplicações L3: trimestral; L2: semestral; fornecedores: anual, semestral em L3 e por evento crítico); revisões produzem evidência rastreável; desvios identificados geram acções correctivas com owner e prazo definidos. |
 | GOV-011 | KPIs de governação definidos, recolhidos e reportados | - | ✔ | ✔ | KPIs de governação estão definidos, são recolhidos periodicamente e reportados à gestão; desvios face a thresholds definidos geram acção correctiva; KPIs incluem pelo menos: excepções activas por domínio, % aplicações com owner atribuído, % contratos com cláusulas de segurança. |
 | GOV-012 | Modelo de maturidade activo com evolução medida e planeada | - | - | ✔ | Avaliação de maturidade de segurança activa (SAMM, DSOMM ou equivalente); realizada pelo menos anualmente; resultados documentados com plano de evolução e metas definidas; evolução comparada com ciclo anterior e reportada à gestão. |
 | GOV-013 | Onboarding técnico e formação obrigatória pré-acesso de terceiros | rec. | ✔ | ✔ | Contractors e terceiros completam preparação técnica estruturada **antes de acesso real** a sistemas: formação de segurança por perfil (Dev, DevOps, QA, Arquitetura), quiz de compreensão com score mínimo (tipicamente 80%), ambiente sandbox para prática e NDA/confidentiality agreement assinados; o acesso só é concedido após *sign-off* de conclusão validado (Security Champion/AppSec + Tech Lead); o registo é rastreável (GRC/LMS) com datas, scores e validador, e mantido conforme retenção regulatória aplicável (DORA, NIS2). Em L1 é recomendado; em L2/L3 é obrigatório, com quiz validado em L3. |
@@ -61,7 +61,7 @@ Requisitos que garantem que a segurança é aplicada com autoridade formal, rast
 
 ---
 
-## Notas explicativas
+## Notas explicativas {#notas-explicativas}
 
 - **GOV-001**: A aprovação formal pela direcção não é formalismo - é o mecanismo que confere autoridade ao modelo. Um modelo de governação não aprovado pela direcção não tem força para exigir conformidade nem para sustentar auditorias externas.
 - **GOV-002**: O owner de segurança é o ponto de responsabilização de cada aplicação. Sem owner definido, excepções não têm aprovador, desvios não têm destinatário, e auditorias não têm interlocutor. A rotatividade de equipas é o principal trigger de ownership não actualizado.

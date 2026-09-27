@@ -9,7 +9,7 @@ sidebar_position: 35
 
 # Política de KPIs de Governação de Segurança
 
-## 1. Objetivo
+## 1. Objetivo {#1-objetivo}
 
 Esta política define os requisitos para a **definição, recolha, análise e reporte de indicadores-chave de desempenho (KPIs) do programa de governação de segurança** da organização.
 
@@ -25,7 +25,7 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 2. Âmbito e obrigatoriedade
+## 2. Âmbito e obrigatoriedade {#2-âmbito-e-obrigatoriedade}
 
 | Nível | Obrigatoriedade |
 |---|---|
@@ -35,11 +35,11 @@ O objetivo desta política é garantir que:
 
 ---
 
-## 3. Categorias de KPIs
+## 3. Categorias de KPIs {#3-categorias-de-kpis}
 
 Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 
-### 3.1 Conformidade e rastreabilidade
+### 3.1 Conformidade e rastreabilidade {#31-conformidade-e-rastreabilidade}
 
 | KPI | Descrição | Target |
 |---|---|---|
@@ -49,16 +49,16 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | % de excepções activas dentro do TTL | Excepções não expiradas como proporção do total activo | > 95% |
 | % de excepções resolvidas dentro do prazo | Excepções com remediação concluída no prazo aprovado | > 70% |
 
-### 3.2 Qualidade e velocidade de remediação
+### 3.2 Qualidade e velocidade de remediação {#32-qualidade-e-velocidade-de-remediação}
 
 | KPI | Descrição | Target |
 |---|---|---|
-| MTTR por severidade | Tempo médio entre identificação e remediação de findings | Critical ≤ 7 dias; High ≤ 30 dias |
+| MTTR por severidade | Tempo médio entre identificação e remediação de findings | Conforme a Política 19 §4.3 (Critical 30 / 7 / 3 dias; High 90 / 30 / 15 dias em L1 / L2 / L3) |
 | Taxa de reincidência de findings | % de findings do mesmo tipo que reaparecem dentro de 90 dias | &lt; 10% |
 | % de findings Critical/High remediados no SLA | Conformidade com SLAs definidos na política de testes | > 90% |
 | Taxa de exceções activas vs. findings totais | Indicador de acumulação de risco aceite | Trend descendente |
 
-### 3.3 Operações e resposta a incidentes
+### 3.3 Operações e resposta a incidentes {#33-operações-e-resposta-a-incidentes}
 
 | KPI | Descrição | Target |
 |---|---|---|
@@ -66,10 +66,10 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | Taxa de verdadeiros positivos (alertas P1/P2) | % de alertas P1/P2 que correspondem a incidentes reais | > 70% |
 | Número de incidentes de segurança por período | Tendência de ocorrências | Trend descendente ou estável |
 | Tempo médio de detecção (MTTD) | Tempo entre início do incidente e detecção | Referência interna por tipo |
-| Tempo médio de resolução (MTTR de incidentes) | Tempo entre detecção e resolução de incidentes | Referência interna por severidade |
+| Tempo médio de resposta a incidentes (MTTR, OPS-K04) | Tempo entre o alerta e o início da acção de mitigação | ≤ 8 h (L1), ≤ 4 h (L2), ≤ 1 h (L3) |
 | % de incidentes com post-mortem realizado no prazo | Post-mortems concluídos em ≤ 5 dias úteis após resolução | 100% para P1; > 80% para P2 |
 
-### 3.4 Pipeline e desenvolvimento
+### 3.4 Pipeline e desenvolvimento {#34-pipeline-e-desenvolvimento}
 
 | KPI | Descrição | Target |
 |---|---|---|
@@ -78,7 +78,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | % de artefactos com SBOM gerado e assinado | Cobertura de geração de SBOM | 100% em L3 |
 | % de segredos em vault vs. hardcoded detetados | Proporção de segredos geridos correctamente | Hardcoded = 0 |
 
-### 3.5 Fornecedores e terceiros
+### 3.5 Fornecedores e terceiros {#35-fornecedores-e-terceiros}
 
 | KPI | Descrição | Target |
 |---|---|---|
@@ -87,7 +87,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 | % de contractors com onboarding técnico concluído | Contractors activos com trilho formativo e quiz validados | 100% |
 | SLA de notificação de incidentes por fornecedores | Taxa de cumprimento do prazo contratual de notificação | > 90% |
 
-### 3.6 Formação e capacitação
+### 3.6 Formação e capacitação {#36-formação-e-capacitação}
 
 | KPI | Descrição | Target |
 |---|---|---|
@@ -97,7 +97,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 
 ---
 
-## 4. Fontes de dados e recolha
+## 4. Fontes de dados e recolha {#4-fontes-de-dados-e-recolha}
 
 | Categoria | Fontes primárias | Responsável pela recolha |
 |---|---|---|
@@ -110,7 +110,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 
 ---
 
-## 5. Cadência de recolha e reporte
+## 5. Cadência de recolha e reporte {#5-cadência-de-recolha-e-reporte}
 
 | Actividade | L1 | L2 | L3 |
 |---|---|---|---|
@@ -122,7 +122,7 @@ Os KPIs de governação de segurança devem cobrir as seguintes categorias:
 
 ---
 
-## 6. Thresholds de intervenção
+## 6. Thresholds de intervenção {#6-thresholds-de-intervenção}
 
 Determinados desvios nos KPIs devem activar acções correctivas imediatas, independentemente do ciclo de reporting regular:
 
@@ -137,7 +137,7 @@ Determinados desvios nos KPIs devem activar acções correctivas imediatas, inde
 
 ---
 
-## 7. Avaliação de maturidade
+## 7. Avaliação de maturidade {#7-avaliação-de-maturidade}
 
 Além dos KPIs operacionais, a organização deve avaliar periodicamente o nível de maturidade do programa de segurança com referência a frameworks reconhecidos:
 
@@ -160,7 +160,7 @@ A avaliação de maturidade não substitui os KPIs operacionais - são perspecti
 
 ---
 
-## 8. Formato e distribuição de relatórios
+## 8. Formato e distribuição de relatórios {#8-formato-e-distribuição-de-relatórios}
 
 | Tipo de relatório | Destinatários | Conteúdo mínimo |
 |---|---|---|
@@ -171,7 +171,7 @@ A avaliação de maturidade não substitui os KPIs operacionais - são perspecti
 
 ---
 
-## 9. Responsabilidades
+## 9. Responsabilidades {#9-responsabilidades}
 
 | Role | Responsabilidade |
 |---|---|
@@ -183,7 +183,7 @@ A avaliação de maturidade não substitui os KPIs operacionais - são perspecti
 
 ---
 
-## 10. Revisão e auditoria desta política
+## 10. Revisão e auditoria desta política {#10-revisão-e-auditoria-desta-política}
 
 Esta política deve ser **revista anualmente** ou após qualquer um dos seguintes eventos:
 
@@ -193,7 +193,7 @@ Esta política deve ser **revista anualmente** ou após qualquer um dos seguinte
 
 ---
 
-## 11. Referências normativas e técnicas
+## 11. Referências normativas e técnicas {#11-referências-normativas-e-técnicas}
 
 | Referência | Relevância |
 |---|---|

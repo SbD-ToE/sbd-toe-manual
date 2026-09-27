@@ -5,11 +5,11 @@ title: Controlo de Execução e Enforcement de Políticas em IaC
 sidebar_position: 6
 description: Mecanismos técnicos e organizacionais para garantir o enforcement automático de políticas de segurança em pipelines IaC.
 tags: [enforcement, controlo, políticas, iac, pipelines, segurança]
--------------------------------------------------------------------
+---
 
 # 🛡️ Enforcement Contínuo de Políticas e Regras de Segurança em IaC
 
-## 🌟 Objetivo
+## 🌟 Objetivo {#-objetivo}
 
 Assegurar que todos os projetos de Infraestrutura como Código (IaC) cumprem **requisitos mínimos de segurança de forma automática, consistente e verificável**, através de mecanismos de *policy enforcement* integrados no ciclo de vida de desenvolvimento e operação.
 
@@ -19,7 +19,7 @@ Este ficheiro define **como as políticas são aplicadas tecnicamente**, não qu
 
 ---
 
-## 🔖 O que deve ser feito
+## 🔖 O que deve ser feito {#-o-que-deve-ser-feito}
 
 1. Definir **políticas organizacionais formais** aplicáveis a IaC (segurança, identidade, rede, dados);
 2. Traduzir essas políticas em **regras executáveis e testáveis** (*policy-as-code*);
@@ -30,7 +30,7 @@ Este ficheiro define **como as políticas são aplicadas tecnicamente**, não qu
 
 ---
 
-## ⚖️ Como deve ser feito
+## ⚖️ Como deve ser feito {#️-como-deve-ser-feito}
 
 | Componente          | Prescrição técnica                                                  |
 | ------------------- | ------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ Este ficheiro define **como as políticas são aplicadas tecnicamente**, não qu
 
 ---
 
-## 🗓️ Quando aplicar
+## 🗓️ Quando aplicar {#️-quando-aplicar}
 
 | Momento                      | Ação esperada                                    |
 | ---------------------------- | ------------------------------------------------ |
@@ -55,9 +55,9 @@ Este ficheiro define **como as políticas são aplicadas tecnicamente**, não qu
 
 ---
 
-## 💼 Exemplos práticos
+## 💼 Exemplos práticos {#-exemplos-práticos}
 
-### ✏️ Exemplo de regra Rego (OPA)
+### ✏️ Exemplo de regra Rego (OPA) {#️-exemplo-de-regra-rego-opa}
 
 ```rego
 deny[msg] {
@@ -67,7 +67,7 @@ deny[msg] {
 }
 ```
 
-### 🌍 Integração em pipeline (GitHub Actions)
+### 🌍 Integração em pipeline (GitHub Actions) {#-integração-em-pipeline-github-actions}
 
 ```yaml
 - name: Policy enforcement (OPA)
@@ -82,7 +82,7 @@ deny[msg] {
 
 ---
 
-## 📈 Benefícios diretos
+## 📈 Benefícios diretos {#-benefícios-diretos}
 
 * Redução de risco por erro humano ou omissão;
 * Aplicação consistente de políticas organizacionais;
@@ -92,7 +92,7 @@ deny[msg] {
 
 ---
 
-## 🔗 Referências cruzadas
+## 🔗 Referências cruzadas {#-referências-cruzadas}
 
 | Documento                                       | Relação com este ficheiro                                 |
 | ----------------------------------------------- | --------------------------------------------------------- |

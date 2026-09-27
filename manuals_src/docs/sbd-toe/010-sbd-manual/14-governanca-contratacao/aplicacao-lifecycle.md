@@ -63,7 +63,7 @@ Como **Developer + AppSec Engineer**, quero **submeter exceções de segurança 
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional | Recomendado | Obrigatório |
+| Obrigatório (registo formal; aprovação pelo gestor da aplicação) | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -96,7 +96,7 @@ Como **Jurídico + Procurement**, quero **incluir cláusulas SbD-ToE em contrato
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Obrigatório | Obrigatório + auditorias |
+| Obrigatório (cláusulas mínimas) | Obrigatório | Obrigatório + auditorias |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -129,7 +129,7 @@ Como **GRC / Compliance**, quero **validar fornecedores de forma contínua**, pa
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional | Recomendado | Obrigatório |
+| Opcional | Obrigatório (anual) | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -162,7 +162,7 @@ Como **AppSec Engineer**, quero **agregar práticas de segurança por projeto em
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -217,7 +217,7 @@ Como **Gestão Executiva**, quero **definir e monitorizar KPIs de governação**
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -234,7 +234,7 @@ Como **Gestão Executiva**, quero **definir e monitorizar KPIs de governação**
 Como **Procurement Officer**, quero **executar o fluxo formal de validação de fornecedores (questionário → análise AppSec → aprovação)**, para **garantir que novos fornecedores cumprem requisitos mínimos antes do onboarding**.  
 
 **Critérios de aceitação (BDD).**  
-- **Dado** um novo fornecedor classificado como L2 ou L3  
+- **Dado** um novo fornecedor com acesso a dados, código ou pipelines  
   **Quando** o fluxo de validação é iniciado  
   **Então** questionário é enviado, analisado por AppSec, e aprovação/exceção é registada  
 
@@ -251,12 +251,12 @@ Como **Procurement Officer**, quero **executar o fluxo formal de validação de 
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional | Recomendado | Obrigatório |
+| Obrigatório (questionário ou checklist) | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento | Novo fornecedor L2/L3; início do fluxo de validação | AppSec Engineer + Procurement Officer | 2 semanas (L2), 1 semana (L3) |
+| Planeamento | Novo fornecedor com acesso a dados, código ou pipelines; início do fluxo de validação | AppSec Engineer + Procurement Officer | 2 semanas (L1 e L2), 1 semana (L3) |
 
 **Ligações úteis.**  
 - [Modelo de Validação de Fornecedores](./addon/modelo-validacao-fornecedores)
@@ -289,7 +289,7 @@ Como **AppSec Engineer**, quero **revisar e reavaliar exceções e compensaçõe
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -328,7 +328,7 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um repositó
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -348,15 +348,15 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um repositó
 
 :::userstory
 **História.**   
-Como **Gestão Executiva**, quero **designar formalmente um owner de segurança (Security Champion) por cada aplicação crítica**, para **garantir responsabilização clara, continuidade de decisões de segurança e comunicação de risco**.  
+Como **Gestão Executiva**, quero **designar formalmente um owner de segurança (por exemplo, o Security Champion) por cada aplicação**, para **garantir responsabilização clara, continuidade de decisões de segurança e comunicação de risco**.  
 
 **Critérios de aceitação (BDD).**  
-- **Dado** uma aplicação classificada como L2 ou L3  
-  **Quando** um Security Champion é designado  
+- **Dado** uma aplicação classificada como L1, L2 ou L3  
+  **Quando** o owner de segurança é designado  
   **Então** ele é responsável pela submissão de exceções, validações, comunicação de risco e cumprimento de políticas  
 
 **Critérios de aceitação (DoD).**  
-- [ ] Security Champion designado por escrito (e-mail oficial, documento, HR system)  
+- [ ] Owner de segurança designado por escrito (e-mail oficial, documento, HR system)  
 - [ ] Responsabilidades documentadas (exceções, validação, comunicação, rastreabilidade)  
 - [ ] Formação obrigatória em SbD-ToE completada (Cap. 13 - Formação e Onboarding)  
 - [ ] Registo centralizado mantido (Git, Confluence, SharePoint)  
@@ -369,12 +369,12 @@ Como **Gestão Executiva**, quero **designar formalmente um owner de segurança 
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Obrigatório | Obrigatório |
+| Obrigatório | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| Planeamento | Aplicação L2/L3; arranque do projeto ou rotação de owner | Gestão Executiva + Security Champion + AppSec Engineer | Designação no arranque do projeto ou mudança de owner |
+| Planeamento | Aplicação L1–L3; arranque do projeto ou rotação de owner | Gestão Executiva + Security Champion + AppSec Engineer | Designação no arranque do projeto ou mudança de owner |
 
 **Ligações úteis.**  
 - [Modelo de Governação](./addon/modelo-governancao)
@@ -450,7 +450,7 @@ Como **CISO + Gestão Executiva**, quero **consolidar e reportar KPIs de governa
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -492,7 +492,7 @@ Como **CISO + AppSec Engineer**, quero **formalizar e documentar o modelo de gov
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Obrigatório (modelo aprovado pela direção) | Obrigatório (+ alçadas por nível) | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -535,7 +535,7 @@ Como **AppSec Engineer + Scrum Master / Team Lead**, quero **manter um checklist
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório |
+| Básico | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -580,7 +580,7 @@ Como **Procurement Officer + AppSec Engineer**, quero **reavalia e reaprovar for
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Anual | Semestral | Trimestral / evento crítico |
+| Anual | Anual / evento crítico | Semestral / evento crítico |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -624,7 +624,7 @@ Como **Security Champion + RH / PeopleOps**, quero **executar processo estrutura
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Recomendado | Obrigatório + quiz validado |
+| Básico | Obrigatório | Obrigatório + quiz validado |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -675,7 +675,7 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Obrigatório | Obrigatório + 80% score requerido |
+| Obrigatório (onboarding equivalente ao dos colaboradores, concluído antes do acesso) | Obrigatório | Obrigatório + 80% score requerido |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -1027,21 +1027,21 @@ Como **GRC / Compliance** com apoio de **CISO + Gestão Executiva**, quero **man
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
-| Exceções formais com alçadas | Opcional | Recomendado | Obrigatório |
-| Cláusulas contratuais | Recomendado | Obrigatório | Obrigatório + auditorias |
-| Validação de fornecedores (inicial) | Opcional | Recomendado | Obrigatório |
-| Rastreabilidade organizacional | Básico | Recomendado | Obrigatório |
-| KPIs de governação | Básico | Recomendado | Obrigatório |
-| Fluxo formal de validação fornecedores | Opcional | Recomendado | Obrigatório |
-| Revisão contínua de exceções | Básico | Recomendado | Obrigatório |
-| Repositório de conformidade por app | Básico | Recomendado | Obrigatório |
-| Designação formal de owners de segurança | Recomendado | Obrigatório | Obrigatório |
+| Exceções formais com alçadas | Obrigatório (registo formal; aprovação pelo gestor da aplicação) | Obrigatório | Obrigatório |
+| Cláusulas contratuais | Obrigatório (cláusulas mínimas) | Obrigatório | Obrigatório + auditorias |
+| Validação contínua de fornecedores | Opcional | Obrigatório (anual) | Obrigatório |
+| Rastreabilidade organizacional | Básico | Obrigatório | Obrigatório |
+| KPIs de governação | Básico | Obrigatório | Obrigatório |
+| Fluxo formal de validação fornecedores | Obrigatório (questionário ou checklist) | Obrigatório | Obrigatório |
+| Revisão contínua de exceções | Básico | Obrigatório | Obrigatório |
+| Repositório de conformidade por app | Básico | Obrigatório | Obrigatório |
+| Designação formal de owners de segurança | Obrigatório | Obrigatório | Obrigatório |
 | Validação periódica de conformidade | Anual | Semestral | Trimestral |
-| KPIs de maturidade e reporta executiva | Básico | Recomendado | Obrigatório |
-| Modelo formal de governação | Básico | Recomendado | Obrigatório |
-| Checklist centralizado por capítulo | Básico | Recomendado | Obrigatório |
-| Reavaliação de fornecedores pós-onboarding | Anual | Anual | Semestral / evento crítico |
-| **Preparação técnica de contractors** | Básico | Recomendado | Obrigatório + quiz validado |
+| KPIs de maturidade e reporta executiva | Básico | Obrigatório | Obrigatório |
+| Modelo formal de governação | Obrigatório (modelo aprovado pela direção) | Obrigatório (+ alçadas por nível) | Obrigatório |
+| Checklist centralizado por capítulo | Básico | Obrigatório | Obrigatório |
+| Reavaliação de fornecedores pós-onboarding | Anual | Anual / evento crítico | Semestral / evento crítico |
+| **Preparação técnica de contractors** | Básico | Obrigatório | Obrigatório + quiz validado |
 | **Trilho de formação pré-acesso** | Básico | Obrigatório | Obrigatório + 80% score |
 | **Offboarding seguro** | Básico | Obrigatório | Obrigatório + audit trail |
 | **Monitorização contínua de fornecedores** | Não | Recomendado | Obrigatório |

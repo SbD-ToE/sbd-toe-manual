@@ -67,7 +67,7 @@ Como **RH / PeopleOps**, quero **garantir formação obrigatória de onboarding 
 **Proporcionalidade.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Obrigatório | Obrigatório + avaliação prática |
+| Obrigatório (conteúdo básico) | Obrigatório | Obrigatório + avaliação prática |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -306,7 +306,7 @@ Como **Developer / Security Champion**, quero **liderar sessões de threat model
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional / ad-hoc | Recomendado por épico | Obrigatório antes de design finalizador |
+| Opcional / ad-hoc | Obrigatório em alterações arquiteturais significativas (peer-led recomendado por épico) | Obrigatório antes de design finalizador |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -354,7 +354,7 @@ Como **Gestão Executiva / GRC**, quero **executar simulações de incidentes (w
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado anual | Semestral (mínimo) | Semestral (mínimo) + rotativo por ameaça |
+| Anual (mínimo) | Semestral (mínimo) | Semestral (mínimo) + rotativo por ameaça |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -401,7 +401,7 @@ Como **AppSec Engineer / GRC**, quero **manter e atualizar trilhos formativos po
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Ocasional | Anual | Anual + contínua por trigger |
+| Ocasional | Anual + por trigger | Anual + contínua por trigger |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -599,7 +599,7 @@ Como **GRC / Gestão Executiva**, quero **garantir que fornecedores e terceiros 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Obrigatório | Obrigatório + anual |
+| Obrigatório (trilho mínimo) | Obrigatório | Obrigatório + anual |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -712,7 +712,7 @@ Como **AppSec Engineer / RH**, quero **definir e executar um caminho de remedia�
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Reformação informal + nova tentativa | Plano de remediação documentado + bloqueio de acesso | Plano formal + limite de tentativas + escalonamento a AppSec e auditoria |
+| Remediação definida (reformação + nova tentativa) + acesso técnico bloqueado até aprovação | Plano de remediação documentado + bloqueio de acesso | Plano formal + limite de tentativas + escalonamento a AppSec e auditoria |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -922,19 +922,19 @@ Como **DevOps / AppSec Engineer**, quero **provisionar e operar um sandbox isola
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
-| Onboarding seguro | Básico | Obrigatório | Obrigatório + avaliação prática |
+| Onboarding seguro | Obrigatório (conteúdo básico) | Obrigatório | Obrigatório + avaliação prática |
 | Formação contínua | Anual | Semestral | Trimestral |
 | Champions | Opcional | Recomendado | Obrigatório |
 | Exercícios práticos | Opcional | Recomendado | Obrigatório |
 | Métricas de eficácia | Básico | Anual | Trimestral com metas |
 | **Code Clinics** | **Ocasional** | **Recorrente (quinzenal)** | **Recorrente + rotativo (semanal)** |
-| **Threat Modeling** | **Opcional** | **Recomendado por épico** | **Obrigatório antes de design** |
-| **Simulações de incidentes** | **Recomendado anual** | **Semestral (mínimo)** | **Semestral (mínimo) + rotativo** |
-| **Manutenção de trilhos** | **Ocasional** | **Anual** | **Anual + contínua por trigger** |
+| **Threat Modeling** | **Opcional** | **Obrigatório em alterações arquiteturais (peer-led recomendado por épico)** | **Obrigatório antes de design** |
+| **Simulações de incidentes** | **Anual (mínimo)** | **Semestral (mínimo)** | **Semestral (mínimo) + rotativo** |
+| **Manutenção de trilhos** | **Ocasional** | **Anual + por trigger** | **Anual + contínua por trigger** |
 | **Trilhos proporcionais por risco** | **Trilho básico** | **Trilho intermédio + labs** | **Trilho avançado + simulações + auditoria** |
 | **Validação de onboarding (checklist)** | **Básico** | **Estruturado (função + risco)** | **Estruturado + auditoria periódica** |
 | **Validação de conhecimento (quizzes)** | **Pontual** | **Periódica (anual)** | **Periódica + adaptativa** |
-| **Formação de terceiros** | **Recomendado** | **Obrigatório** | **Obrigatório + anual** |
+| **Formação de terceiros** | **Obrigatório (trilho mínimo)** | **Obrigatório** | **Obrigatório + anual** |
 
 ---
 

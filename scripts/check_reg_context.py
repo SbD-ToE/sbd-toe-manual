@@ -289,6 +289,7 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
             fail(gw, "declara_se_em inválido")
         if not isinstance(g.get("cumulativo"), bool):
             fail(gw, "cumulativo tem de ser booleano")
+        bilingual((g.get("criterio") or {}).get("referencia"), gw + " criterio/referencia")
     matrix_ids = {}
     for acto, m in matrices.items():
         matrix_ids[f"_matriz/{acto}.yaml"] = {it["id"] for it in m.get("itens") or []}
@@ -313,6 +314,7 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
             if oid not in mids:
                 fail(cw, f"criterio: obrigação {oid} fora da matriz")
         legal_quote(c["criterio"].get("citacao"), cw + " criterio/citacao")
+        bilingual(c["criterio"].get("referencia"), cw + " criterio/referencia")
         seen = set()
         for p in c.get("pisos") or []:
             pw = f"{cw} {p.get('id')}"
@@ -347,6 +349,7 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
             if not p.get("base", {}).get("obrigacoes"):
                 fail(pw, "base sem obrigações")
             legal_quote(p.get("base", {}).get("citacao"), pw + " base/citacao")
+            bilingual(p.get("base", {}).get("referencia"), pw + " base/referencia")
             if not isinstance(p.get("admite_justificacao"), bool):
                 fail(pw, "admite_justificacao tem de ser booleano")
     for a in ctx_doc.get("acrescentos") or []:
@@ -364,6 +367,7 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
         if not (a.get("base") or {}).get("obrigacoes"):
             fail(aw, "base sem obrigações")
         legal_quote((a.get("base") or {}).get("citacao"), aw + " base/citacao")
+        bilingual((a.get("base") or {}).get("referencia"), aw + " base/referencia")
         if a.get("grau") is not None and a["grau"] not in ((ctx_by_id.get(a.get("contexto")) or {}).get("graus_admitidos") or []):
             fail(aw, f"grau {a['grau']} não admitido")
         if a.get("controlos") == [] :
@@ -412,7 +416,10 @@ def main() -> int:
     check_matrices(master, ctx_doc, matrices)
     check_contexts(master, ctx_doc, matrices)
     check_lists(ctx_doc)
-    check_views()
+    if problems:
+        problems.append("vistas geradas não verificadas: corrigir primeiro os problemas acima")
+    else:
+        check_views()
     for p in problems:
         print(p)
     n_items = sum(len(m.get("itens") or []) for m in matrices.values())

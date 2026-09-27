@@ -414,7 +414,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
     body += [f"## {t['h_decl']} {{#quando-se-aplica}}", ""]
     cr = ctx["criterio"]
     body += [cr["texto"][lang] + " " + t["declara"][ctx["declara_se_em"]], "",
-             f"> {cr['referencia'] if lang == 'pt' else _ref_en(cr['referencia'])}: {q[0]}{cr['citacao'][lang]}{q[1]}", ""]
+             f"> {cr['referencia'][lang]}: {q[0]}{cr['citacao'][lang]}{q[1]}", ""]
     # grades
     if ctx.get("graus_admitidos"):
         body += [f"## {t['h_graus']} {{#graus}}", ""]
@@ -428,7 +428,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
     for p in ctx.get("pisos") or []:
         g = p.get("grau") or "—"
         amb = p["ambito"][lang] if p.get("ambito") else "—"
-        ref = p["base"]["referencia"] if lang == "pt" else _ref_en(p["base"]["referencia"])
+        ref = p["base"]["referencia"][lang]
         basis = f"{ref}: {q[0]}{p['base']['citacao'][lang]}{q[1]} ({', '.join(p['base']['obrigacoes'])})"
         just = t["sim"] if p.get("admite_justificacao") else t["nao"]
         body.append(f"| {p['id']} | {_target_text(p, lang)} | {g} | {_cell(_piso_text(p, lang, vocab))} | {_cell(amb)} | {_cell(basis)} | {just} |")
@@ -440,7 +440,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
     if adds:
         body += [f"## {t['h_acr']} {{#acrescentos}}", "", t["acr_intro"], "", t["cols_acr"], "|---|---|---|---|"]
         for a in adds:
-            ref = a["base"]["referencia"] if lang == "pt" else _ref_en(a["base"]["referencia"])
+            ref = a["base"]["referencia"][lang]
             basis = f"{ref}: {q[0]}{a['base']['citacao'][lang]}{q[1]} ({', '.join(a['base']['obrigacoes'])})"
             body.append(f"| `{a['id']}` | {_cell(a['nome'][lang])} | {_cell(a['criterio_aceitacao'][lang])} | {_cell(basis)} |")
         body.append("")
@@ -499,43 +499,6 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
         body.append(f"| {fnames[f]} | {len(counts.get(f, []))} |")
     body.append("")
     return "\n".join(fm + body)
-
-
-_REF_EN = [
-    (r"Reg\. Delegado \(UE\)", "Delegated Regulation (EU)"),
-    (r"Reg\. de Execução \(UE\)", "Implementing Regulation (EU)"),
-    (r"Reg\. \(UE\)", "Regulation (EU)"),
-    (r"Diretiva \(UE\)", "Directive (EU)"),
-    (r"anexo I, parte I, ponto (\d+), al\. (\w)\), e parte II, pontos (\d+), (\d+) e (\d+)", r"Annex I, Part I, point (\1)(\2), and Part II, points (\3), (\4) and (\5)"),
-    (r"anexo I, parte II, pontos (\d+) e (\d+)", r"Annex I, Part II, points (\1) and (\2)"),
-    (r"anexo I, parte II, ponto (\d+)", r"Annex I, Part II, point (\1)"),
-    (r"anexo II, ponto (\d+), als\. (\w)\) e (\w)\)", r"Annex II, point (\1)(\2) and (\3)"),
-    (r"anexo II, ponto (\d+)", r"Annex II, point (\1)"),
-    (r"anexo VII, ponto (\d+)", r"Annex VII, point (\1)"),
-    (r"art\. (\d+)\.º, n\.os (\d+), (\d+), (\d+) e (\d+)", r"Article \1(\2), (\3), (\4) and (\5)"),
-    (r"anexo I, parte I, ponto (\d+), al\. (\w)\)", r"Annex I, Part I, point (\1)(\2)"),
-    (r"anexo, pontos ([\d.]+) e ([\d.]+)", r"Annex, points \1 and \2"),
-    (r"anexo, ponto ([\d.]+), al\. (\w)\)", r"Annex, point \1(\2)"),
-    (r"anexo, ponto ([\d.]+)", r"Annex, point \1"),
-    (r"art\. (\d+)\.º, al\. (\w)\), subal\. (\w+)\)", r"Article \1, point (\2)(\3)"),
-    (r"art\. (\d+)\.º, n\.º (\d+), al\. (\w)\), e segundo parágrafo", r"Article \1(\2), point (\3), and second subparagraph"),
-    (r"art\. (\d+)\.º, n\.º (\d+), al\. (\w)\)", r"Article \1(\2), point (\3)"),
-    (r"art\. (\d+)\.º, al\. (\w)\)", r"Article \1, point (\2)"),
-    (r"art\. (\d+)\.º, n\.os (\d+) a (\d+)", r"Article \1(\2) to (\3)"),
-    (r"art\. (\d+)\.º, n\.os (\d+) e (\d+)", r"Article \1(\2) and (\3)"),
-    (r"art\. (\d+)\.º, n\.º (\d+)", r"Article \1(\2)"),
-    (r"art\. (\d+)\.º", r"Article \1"),
-    (r" \(regime simplificado\)", " (simplified framework)"),
-    (r"; ", "; "),
-    (r" e Article", " and Article"),
-]
-
-
-def _ref_en(ref: str) -> str:
-    out = ref
-    for pat, rep in _REF_EN:
-        out = re.sub(pat, rep, out)
-    return out
 
 
 def translation_block(pt_text: str, en_body: str, previous: Optional[str]) -> str:

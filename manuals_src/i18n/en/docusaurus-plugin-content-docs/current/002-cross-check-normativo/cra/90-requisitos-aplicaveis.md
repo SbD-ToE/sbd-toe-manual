@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72
+  source_sha256: e59888167c0e3084d36f09c6029059aef54632e32577c43588de43a6488a3cf8
   source_commit: null
-  target_sha256: fccab04259d20ef5a06bba051be7608d6e7b68462772c7e013d5c843b98cd089
+  target_sha256: 6cfd0e5eef39dbc35bf4e3acfce2f706f984db360d87679edbf53fd8381ed092
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -504,10 +504,10 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | CRA-14-7 | Article 14(7) | Partial | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Names the CSIRT designated as coordinator and the single reporting platform, but not the determination rule (Member State of the main establishment and fallback rule for manufacturers outside the EU). |
 | CRA-AnxI-P1-2b | Annex I, Part I, point 2(b) | Partial | `CFG-001`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CNT-003` | Hardened configuration of the production environment and “fail secure” exist, but not a secure by default configuration of the product delivered to the user nor the possibility of resetting to the original state. |
 | CRA-AnxI-P1-2f | Annex I, Part I, point 2(f) | Partial | `ENC-009`; `INT-005`; `CIC-007`; `DST-003`; `CFG-007`; `LOG-003` | Integrity of software (signing) and of messages covered at L2/L3; integrity of critical data and of configuration only at L3; reporting corruptions to the user is missing. |
-| CRA-AnxI-P1-2g | Annex I, Part I, point 2(g) | Partial | `PRI-001` | Minimisation covers only personal data and only from L2; the CRA covers data “personal or other”. |
+| CRA-AnxI-P1-2g | Annex I, Part I, point 2(g) | Partial | `PRI-001` | Minimisation covers personal data only (PRI-001, from L1); the CRA covers «personal or other» data. |
 | CRA-AnxI-P1-2i | Annex I, Part I, point 2(i) | Partial | `CNT-012`; `ARC-006` | Isolation and network policies contain lateral impact, but there is no requirement that the product's own functions do not degrade other devices/networks (e.g. limiting outbound traffic, retry storms). |
 | CRA-AnxI-P1-2l | Annex I, Part I, point 2(l) | Partial | `LOG-001`; `OPS-001`; `OPS-002` | Logging and monitoring of internal activity prescribed; the opt-out option for the user and the guidance to make that security information available to the user are missing. |
-| CRA-AnxI-P1-2m | Annex I, Part I, point 2(m) | Partial | `PRI-003` | Erasure/export on request covers only personal data of a data subject and from L2; removal by the user of all data and settings, securely and permanently, and secure transfer to other products are missing. |
+| CRA-AnxI-P1-2m | Annex I, Part I, point 2(m) | Partial | `PRI-003` | Erasure and export on request cover only the personal data of a data subject (PRI-003, from L1); removal by the user of all data and settings, securely and permanently, and secure transfer to other products are missing. |
 | CRA-AnxII-8a | Annex II, point 8(a) | Gap | — | Does not prescribe a guide for commissioning and secure use for the user (hardening guide); the criterion “Security documentation updated” of Policy 20 §4.1 does not define content. |
 | CRA-AnxII-8b | Annex II, point 8(b) | Gap | — | There is no instruction to the user on how changes to the product affect the security of data. |
 | CRA-AnxII-8d | Annex II, point 8(d) | Gap | — | There are no instructions for secure decommissioning and removal of data by the user (capability also missing, CRA-AnxI-P1-2m). |

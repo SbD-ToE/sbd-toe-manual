@@ -76,7 +76,7 @@ itens:
     pt: Art. 51.º, alínea b)
     en: Article 51, point (b)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -112,9 +112,15 @@ itens:
     citacao:
       pt: Snapshot/backup pré-deploy disponível
       en: Pre-deploy snapshot/backup available
-  falta:
-    pt: Integridade e rollback prescritos; faltam backups de dados com restauro testado (ver RGPD-32-1-c).
-    en: Integrity and rollback prescribed; data backups with tested restore are missing (see RGPD-32-1-c).
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -348,7 +354,7 @@ itens:
     pt: Art. 51.º, alínea h)
     en: Article 51, point (h)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -376,9 +382,23 @@ itens:
     citacao:
       pt: monitorizado continuamente fora da instância
       en: monitored continuously outside the instance
-  falta:
-    pt: Recuperação e rollback prescritos; sem backups com RPO/RTO e testes de restauro.
-    en: Recovery and rollback prescribed; no backups with RPO/RTO and restore tests.
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Objectivos e procedimento de recuperação da aplicação
+      en: Recovery objectives and procedure for the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -614,7 +634,7 @@ itens:
     pt: Art. 51.º-A, alínea d)
     en: Article 51a, point (d)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -634,9 +654,23 @@ itens:
     citacao:
       pt: Sistemas restaurados com versões limpas e verificadas
       en: Systems restored with clean and verified versions
-  falta:
-    pt: Sem backups/restauro testados.
-    en: No tested backups/restore.
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança com restauro testado
+      en: Backups with tested restore
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Objectivos e procedimento de recuperação da aplicação
+      en: Recovery objectives and procedure for the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

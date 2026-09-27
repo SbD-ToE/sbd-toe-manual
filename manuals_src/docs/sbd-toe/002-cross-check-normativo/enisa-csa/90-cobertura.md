@@ -17,22 +17,25 @@ derived_from:
 
 Todas as obrigações da matriz `_matriz/csa.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 19 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
 
-### Cobre (32) {#cobre}
+### Cobre (35) {#cobre}
 
 Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
 
 | Obrigação | Referência | Força | Forma |
 |---|---|---|---|
 | CSA-51-a | Art. 51.º, alínea a) | Cobre | `ENC-001`; `ENC-002`; `ACC-001`; `ACC-006` |
+| CSA-51-b | Art. 51.º, alínea b) | Cobre | `ENC-009`; `LOG-003`; `DPL-005`; [Política 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados); `OPS-016` |
 | CSA-51-c | Art. 51.º, alínea c) | Cobre | `ACC-001`; `ACC-002`; `ACC-003` |
 | CSA-51-d | Art. 51.º, alínea d) | Cobre | `DEP-001`; `DEP-010`; [Política 10 §8](/sbd-toe/assets/policies/policy-dependencias#8-alertas-de-vulnerabilidades-em-produção) |
 | CSA-51-e | Art. 51.º, alínea e) | Cobre | `LOG-001`; `LOG-002`; `OPS-002` |
 | CSA-51-f | Art. 51.º, alínea f) | Cobre | `LOG-003`; [Política 29 §8](/sbd-toe/assets/policies/policy-logging-estruturado#8-integridade-e-imutabilidade) |
 | CSA-51-g | Art. 51.º, alínea g) | Cobre | `DEP-002`; `DPL-003`; `TST-005`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go) |
+| CSA-51-h | Art. 51.º, alínea h) | Cobre | `DPL-005`; [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-015`; `OPS-016`; `OPS-017` |
 | CSA-51-i | Art. 51.º, alínea i) | Cobre | [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CFG-001`; `THR-001` |
 | CSA-51A-a | Art. 51.º-A, alínea a) | Apoia evidência | `TRN-001`; `GOV-001` |
 | CSA-51A-b | Art. 51.º-A, alínea b) | Apoia evidência | `GOV-001`; `GOV-010` |
 | CSA-51A-c | Art. 51.º-A, alínea c) | Cobre | `ENC-001`; `ENC-002`; `ACC-006` |
+| CSA-51A-d | Art. 51.º-A, alínea d) | Cobre | `DPL-005`; [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-016`; `OPS-017` |
 | CSA-51A-e | Art. 51.º-A, alínea e) | Cobre | `ACC-001`; `ACC-002` |
 | CSA-51A-f | Art. 51.º-A, alínea f) | Cobre | `LOG-001`; `LOG-002`; `LOG-003` |
 | CSA-52-1 | Art. 52.º, n.º 1 | Apoia evidência | `CLA-001`; `CLA-003` |
@@ -56,16 +59,13 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | CSA-EUCC-AnxIV-2-1 | Anexo IV, ponto IV.2, n.º 1 | Apoia evidência | [Política 08 §4.2](/sbd-toe/assets/policies/policy-threat-modeling#42-cadência-periódica); `CLA-004` |
 | CSA-EUCC-AnxIV-3-1 | Anexo IV, ponto IV.3, n.º 1 | Apoia evidência | `ARC-009`; [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
 
-### Lacuna declarada (26) {#lacuna}
+### Lacuna declarada (23) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
 | Obrigação | Referência | Força | Como o Manual responde | O que falta |
 |---|---|---|---|---|
-| CSA-51-b | Art. 51.º, alínea b) | Parcial | `ENC-009`; `LOG-003`; `DPL-005`; [Política 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados) | Integridade e rollback prescritos; faltam backups de dados com restauro testado (ver RGPD-32-1-c). |
-| CSA-51-h | Art. 51.º, alínea h) | Parcial | `DPL-005`; [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-015` | Recuperação e rollback prescritos; sem backups com RPO/RTO e testes de restauro. |
 | CSA-51-j | Art. 51.º, alínea j) | Parcial | `DEP-002`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `DST-003`; `DPL-002` | Sem vulnerabilidades conhecidas à saída e integridade dos artefactos; o mecanismo de atualização segura no produto entregue ao utilizador só está prescrito para produtos CRA (CTX-CRA-R02); não há contexto CSA. |
-| CSA-51A-d | Art. 51.º-A, alínea d) | Parcial | `DPL-005`; [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação) | Sem backups/restauro testados. |
 | CSA-51A-g | Art. 51.º-A, alínea g) | Parcial | `DEP-002`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura) | Aplica-se aos produtos próprios; não exige que as ferramentas de TIC de terceiros usadas na prestação do serviço sejam avaliadas como seguras desde a conceção e sem vulnerabilidades conhecidas. |
 | CSA-55-1-a | Art. 55.º, n.º 1, alínea a) | Lacuna | — | Sem guia de configuração, instalação, implantação, funcionamento e manutenção seguros para utilizadores finais (lacuna idêntica à do CRA, anexo II, ponto 8, al. a)). |
 | CSA-55-1-b | Art. 55.º, n.º 1, alínea b) | Lacuna | — | Sem definição nem publicação do período de apoio de segurança (o Manual só usa «período de apoio» como referência de retenção CRA). |

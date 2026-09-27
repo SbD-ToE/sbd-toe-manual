@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T22:25:35Z",
+  "generated_at": "2026-09-27T22:28:28Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -86,9 +86,9 @@
     },
     "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72",
-      "translated_source_sha256": "6c7367a2a0164bb2feebc24f0bca416a74420e880d314bdca58d860eb4147a72",
-      "target_sha256": "fccab04259d20ef5a06bba051be7608d6e7b68462772c7e013d5c843b98cd089",
+      "source_sha256": "e59888167c0e3084d36f09c6029059aef54632e32577c43588de43a6488a3cf8",
+      "translated_source_sha256": "e59888167c0e3084d36f09c6029059aef54632e32577c43588de43a6488a3cf8",
+      "target_sha256": "6cfd0e5eef39dbc35bf4e3acfce2f706f984db360d87679edbf53fd8381ed092",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -147,9 +147,9 @@
     },
     "002-cross-check-normativo/enisa-csa/90-cobertura.md": {
       "state": "synced",
-      "source_sha256": "862187fbc03e2a6081625a140e32bd4aff0a0ca2a0d3341b34371edee56cf8d5",
-      "translated_source_sha256": "862187fbc03e2a6081625a140e32bd4aff0a0ca2a0d3341b34371edee56cf8d5",
-      "target_sha256": "c23bed8d15768bcd83b3b5b3d79194fcdaae72b562e54e1156ea29a9a2a0880a",
+      "source_sha256": "1db817fb7a5ecbdd86c2bba3ab00ca933e4c4105bc59eb4003d95327a4fa29fc",
+      "translated_source_sha256": "1db817fb7a5ecbdd86c2bba3ab00ca933e4c4105bc59eb4003d95327a4fa29fc",
+      "target_sha256": "8dcbfb3583f0c5d3f7c67cfac83505c4dc4c1ede468e7a74a3b17c36f522667e",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",

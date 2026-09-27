@@ -10,9 +10,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/enisa-csa/90-cobertura.md
-  source_sha256: 862187fbc03e2a6081625a140e32bd4aff0a0ca2a0d3341b34371edee56cf8d5
+  source_sha256: 1db817fb7a5ecbdd86c2bba3ab00ca933e4c4105bc59eb4003d95327a4fa29fc
   source_commit: null
-  target_sha256: c23bed8d15768bcd83b3b5b3d79194fcdaae72b562e54e1156ea29a9a2a0880a
+  target_sha256: 8dcbfb3583f0c5d3f7c67cfac83505c4dc4c1ede468e7a74a3b17c36f522667e
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -31,22 +31,25 @@ translation:
 
 All the obligations of the matrix `_matriz/csa.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 19 obligations addressed to the authorities create no duty for the organisation and are not listed.
 
-### Covers (32) {#cobre}
+### Covers (35) {#cobre}
 
 Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
 
 | Obligation | Reference | Strength | Form |
 |---|---|---|---|
 | CSA-51-a | Article 51, point (a) | Covers | `ENC-001`; `ENC-002`; `ACC-001`; `ACC-006` |
+| CSA-51-b | Article 51, point (b) | Covers | `ENC-009`; `LOG-003`; `DPL-005`; [Policy 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados); `OPS-016` |
 | CSA-51-c | Article 51, point (c) | Covers | `ACC-001`; `ACC-002`; `ACC-003` |
 | CSA-51-d | Article 51, point (d) | Covers | `DEP-001`; `DEP-010`; [Policy 10 §8](/sbd-toe/assets/policies/policy-dependencias#8-alertas-de-vulnerabilidades-em-produção) |
 | CSA-51-e | Article 51, point (e) | Covers | `LOG-001`; `LOG-002`; `OPS-002` |
 | CSA-51-f | Article 51, point (f) | Covers | `LOG-003`; [Policy 29 §8](/sbd-toe/assets/policies/policy-logging-estruturado#8-integridade-e-imutabilidade) |
 | CSA-51-g | Article 51, point (g) | Covers | `DEP-002`; `DPL-003`; `TST-005`; [Policy 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go) |
+| CSA-51-h | Article 51, point (h) | Covers | `DPL-005`; [Policy 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-015`; `OPS-016`; `OPS-017` |
 | CSA-51-i | Article 51, point (i) | Covers | [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CFG-001`; `THR-001` |
 | CSA-51A-a | Article 51a, point (a) | Supports evidence | `TRN-001`; `GOV-001` |
 | CSA-51A-b | Article 51a, point (b) | Supports evidence | `GOV-001`; `GOV-010` |
 | CSA-51A-c | Article 51a, point (c) | Covers | `ENC-001`; `ENC-002`; `ACC-006` |
+| CSA-51A-d | Article 51a, point (d) | Covers | `DPL-005`; [Policy 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-016`; `OPS-017` |
 | CSA-51A-e | Article 51a, point (e) | Covers | `ACC-001`; `ACC-002` |
 | CSA-51A-f | Article 51a, point (f) | Covers | `LOG-001`; `LOG-002`; `LOG-003` |
 | CSA-52-1 | Article 52(1) | Supports evidence | `CLA-001`; `CLA-003` |
@@ -70,16 +73,13 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | CSA-EUCC-AnxIV-2-1 | Annex IV, point IV.2, (1) | Supports evidence | [Policy 08 §4.2](/sbd-toe/assets/policies/policy-threat-modeling#42-cadência-periódica); `CLA-004` |
 | CSA-EUCC-AnxIV-3-1 | Annex IV, point IV.3, (1) | Supports evidence | `ARC-009`; [Ch. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
 
-### Declared gap (26) {#lacuna}
+### Declared gap (23) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
 | Obligation | Reference | Strength | How the Manual responds | What is missing |
 |---|---|---|---|---|
-| CSA-51-b | Article 51, point (b) | Partial | `ENC-009`; `LOG-003`; `DPL-005`; [Policy 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados) | Integrity and rollback prescribed; data backups with tested restore are missing (see RGPD-32-1-c). |
-| CSA-51-h | Article 51, point (h) | Partial | `DPL-005`; [Policy 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); `OPS-015` | Recovery and rollback prescribed; no backups with RPO/RTO and restore tests. |
 | CSA-51-j | Article 51, point (j) | Partial | `DEP-002`; [Policy 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `DST-003`; `DPL-002` | No known vulnerabilities at release and integrity of artefacts; the secure update mechanism in the product delivered to the user is prescribed only for CRA products (CTX-CRA-R02); there is no CSA context. |
-| CSA-51A-d | Article 51a, point (d) | Partial | `DPL-005`; [Policy 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação) | No tested backups/restore. |
 | CSA-51A-g | Article 51a, point (g) | Partial | `DEP-002`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura) | Applies to own products; does not require that third-party ICT tools used in providing the service be assessed as secure by design and free of known vulnerabilities. |
 | CSA-55-1-a | Article 55(1), point (a) | Gap | — | No guidance on secure configuration, installation, deployment, operation and maintenance for end users (gap identical to that of the CRA, Annex II, point (8)(a)). |
 | CSA-55-1-b | Article 55(1), point (b) | Gap | — | No definition or publication of the security support period (the Manual only uses “support period” as a CRA retention reference). |

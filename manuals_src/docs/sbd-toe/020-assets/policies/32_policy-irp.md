@@ -124,6 +124,7 @@ Alguns incidentes requerem notificação a autoridades regulatórias dentro de p
 | RGPD - Art. 33 | Violação de dados pessoais | ≤ 72 horas após conhecimento |
 | DORA - Art. 19 + Reg. Delegado (UE) 2025/301, art. 5.º | Incidente de caráter severo relacionado com as TIC (entidade financeira) | Notificação inicial ≤ 4 h após a classificação como severo e ≤ 24 h após o conhecimento; relatório intercalar ≤ 72 h após a notificação inicial; relatório final ≤ 1 mês após o último relatório intercalar |
 | NIS2 - Art. 23 | Incidente significativo em entidade essencial/importante | ≤ 24 horas (alerta) + 72 horas (notificação) |
+| CRA - Art. 14 (aplicável desde 11.9.2026) | Vulnerabilidade ativamente explorada ou incidente grave num produto com elementos digitais colocado no mercado pela organização | À CSIRT designada como coordenadora e à ENISA, pela plataforma única: alerta precoce ≤ 24 h; notificação ≤ 72 h; relatório final ≤ 14 dias após a medida corretiva (vulnerabilidade) ou ≤ 1 mês após a notificação (incidente grave) |
 
 :::warning
 A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. O prazo começa a contar a partir do momento em que a organização tem conhecimento do incidente - não quando a causa raiz é identificada. No DORA, o prazo de 4 h conta da classificação do incidente como de caráter severo (com o limite de 24 h a contar do conhecimento) e o de 72 h conta da notificação inicial (Reg. Delegado (UE) 2025/301, art. 5.º).

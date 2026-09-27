@@ -211,11 +211,11 @@ Os capítulos anteriores cobrem segredos clássicos — *tokens*, chaves, creden
 
 Cada uso operacional em que o agente vê PII tem **base legal RGPD declarada** — Art. 6.º (consentimento, contrato, obrigação legal, interesse legítimo, etc.) e, quando categorias especiais (Art. 9.º), base legal reforçada. A base legal é parte do *mandate* do agente (Policy 38 — adicionar campo `legal_basis` quando aplicável) ou da ficha de tratamento do projecto, e é revisitada nas revisões periódicas.
 
-### 10.3 Sub-processadores {#103-sub-processadores}
+### 10.3 Subcontratantes {#103-sub-processadores}
 
 O *provider* do modelo é um **subcontratante** quando trata dados pessoais por conta da organização (RGPD, art. 28.º); se a própria organização for subcontratante, o *provider* é «outro subcontratante» (art. 28.º, n.os 2 e 4). Aplica-se a cláusula contratual prevista em [Policy 33 §10](./policy-contratacao-segura):
 
-- Contrato de sub-processador com cláusulas explícitas (retention, *training opt-out*, audit rights).
+- Contrato com o subcontratante (RGPD, art. 28.º, n.º 3) com cláusulas explícitas (retention, *training opt-out*, audit rights).
 - Localização de processamento documentada; *Standard Contractual Clauses* (SCCs) ou outro mecanismo válido para transferências internacionais (RGPD Art. 44.º–49.º) quando o *provider* processa fora do EEA.
 - **Sem PII para *providers* fora da lista aprovada** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
@@ -240,7 +240,7 @@ Quando a interacção do utilizador com o agente gera dados pessoais, aplicam-se
 |---|:--:|:--:|:--:|
 | Minimização / redacção antes do envio | Recomendado | Obrigatório quando viável | Obrigatório (categorias especiais sempre redactadas) |
 | Base legal declarada | Recomendado | Obrigatório | Obrigatório (revisão GRC) |
-| Sub-processador com cláusulas Art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
+| Subcontratante com cláusulas do art. 28.º | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório + revisão Legal |
 | *Training opt-out* contratualizado | Obrigatório (sempre que há PII) | Obrigatório | Obrigatório |
 | Localização EEA / SCCs quando aplicável | Obrigatório (quando há PII e processamento fora EEA) | Obrigatório | Obrigatório (preferência por processamento EEA) |
 | Redacção de PII nos `audit events` ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) | Recomendado | Obrigatório | Obrigatório |

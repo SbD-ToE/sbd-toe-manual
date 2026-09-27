@@ -47,7 +47,7 @@ O catálogo KEV da CISA, estabelecido pela *Binding Operational Directive* 22-01
 
 A presença de um CVE no KEV altera a natureza da decisão:
 
-- Uma vulnerabilidade no KEV deixou de ser um risco hipotético — está a ser explorada. **Deve ser escalada para o prazo de remediação mais curto do programa, independentemente do seu CVSS ou EPSS.**
+- Uma vulnerabilidade no KEV deixou de ser um risco hipotético — está a ser explorada. **Deve ser escalada para o prazo de remediação mais curto do programa, independentemente do seu CVSS ou EPSS.** Se afetar um produto com elementos digitais que a organização coloca no mercado, desencadeia também a notificação do CRA, art. 14.º (alerta precoce ≤24 h à CSIRT designada como coordenadora e à ENISA).
 - A **ausência** de um CVE no KEV **não significa ausência de exploração** — significa apenas que não há, ainda, exploração confirmada e catalogada. A ausência do KEV não é prova de segurança.
 
 ---

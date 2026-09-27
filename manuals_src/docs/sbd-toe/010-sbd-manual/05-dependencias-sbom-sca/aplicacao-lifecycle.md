@@ -558,6 +558,8 @@ Como **Gestor de Aplicação** e **AppSec**, quero **receber alertas correlacion
 | L2 | Sim | 2 dias úteis | 14 dias | Incluir *medium* em serviços expostos; escalonamento automático. |
 | L3 | Sim | 1 dia útil | 7 dias | *Blockers* com auto-rollback/kill-switch quando aplicável. |
 
+> Estes SLAs são escolha do Manual. Uma vulnerabilidade com indício de exploração ativa num produto com elementos digitais que a organização coloca no mercado sai desta escada: triagem ≤4 h e, se confirmada, trilho do CRA art. 14.º (notificação de alerta precoce ≤24 h à CSIRT designada como coordenadora e à ENISA).
+
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|

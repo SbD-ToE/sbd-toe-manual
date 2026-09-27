@@ -202,6 +202,8 @@ Este template estrutura sistemas de tickets de incidentes:
 
 ---
 
+> 📌 **CRA em paralelo.** Se o incidente envolver uma vulnerabilidade ativamente explorada, ou um incidente grave, num produto com elementos digitais que a organização coloca no mercado, aplica-se também o CRA, art. 14.º (desde 11 de setembro de 2026): notificação de alerta precoce ≤24 h, notificação ≤72 h e relatório final, à CSIRT designada como coordenadora e à ENISA, através da plataforma única de comunicação de informações.
+
 ## Retenção de Logs {#retenção-de-logs}
 
 **Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Reg. Delegado (UE) 2024/1774, art. 22.º, al. d) — período definido pela entidade, proporcional à criticalidade e não superior ao necessário):**

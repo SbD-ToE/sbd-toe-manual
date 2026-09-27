@@ -81,7 +81,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 ### Fase 6 (M5–M6): Reporte de Exploração Ativa {#fase-6-m5m6-reporte-de-exploração-ativa}
 1. Definir critérios de "explorada ativamente" (IOC, telemetria confirmada)  
 2. Criar script export JSON incidente + SBOM componente afetado  
-3. Runbook notificação autoridade / CSIRT coordenador e matriz de comunicação a utilizadores  
+3. Runbook de notificação à CSIRT designada como coordenadora e à ENISA, através da plataforma única (alerta precoce ≤24 h, notificação ≤72 h e relatório final (art. 14.º; aplicável desde 11.9.2026)), e matriz de comunicação a utilizadores (art. 14.º, n.º 8)  
 4. Simulação exercício interno  
 **Evidências:** Script; runbook; relatório exercício; matriz de comunicação
 
@@ -141,12 +141,12 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Canal reporte funcional (email/portal)
 - [ ] Runbook triagem interna
 - [ ] Ponto de contacto de segurança identificado
-- [ ] Tempo resposta médio `<`5 dias úteis
+- [ ] Tempo resposta médio `<`5 dias úteis para reportes sem indício de exploração; com indício de exploração ativa, triagem ≤4 h e trilho do art. 14.º (escolha do Manual)
 
 ### Checklist Reporte Exploração {#checklist-reporte-exploração}
 - [ ] Critérios "explorada ativamente" definidos
 - [ ] Script export JSON pronto
-- [ ] Runbook notificação autoridade
+- [ ] Runbook de notificação do art. 14.º (24 h / 72 h / relatório final)
 - [ ] Matriz de comunicação a utilizadores
 - [ ] Simulação concluída
 - [ ] Evidência testes arquivada
@@ -176,7 +176,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 | MTTP Crítico | Tempo médio até patch crítico | ≤15 dias |
 | % SLA Cumprido | (Vulns patch dentro SLA) / total | ≥90% |
 | Cobertura SBOM | % componentes identificados | ≥95% |
-| Tempo Médio Resposta Disclosure | Receção → primeira resposta | ≤5 dias úteis |
+| Tempo Médio Resposta Disclosure | Receção → primeira resposta | ≤5 dias úteis sem indício de exploração; triagem ≤4 h com indício de exploração ativa (escolha do Manual) |
 | Gate Efetividade | Releases bloqueadas por CVE crítico | 100% bloqueadas |
 | Exceções Críticas Ativas | Nº exceções críticas abertas | Tendência decrescente |
 

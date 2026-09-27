@@ -39,7 +39,7 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 | Cibersegurança do produto | Art. 15 | Anexo I, Partes I e II | **Presunção** (CRA Art. 12) |
 | Tratamento de vulnerabilidades | Implícito no Art. 15 | Anexo I, Parte II (detalhado) | Base técnica comum — a presunção (CRA Art. 12) é o mecanismo de conformidade, não a mera adoção do processo |
 | Cadeia de fornecimento / SBOM | Art. 15 (integridade) | Anexo I | SBOM único ([Cap. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro)) |
-| Reporte | Art. 73 (incidentes graves) | Art. 14 (vulnerabilidades ativamente exploradas / incidentes graves a ENISA) | Circuitos **distintos**, base de deteção partilhada ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) |
+| Reporte | Art. 73 (incidentes graves) | Art. 14 (vulnerabilidades ativamente exploradas / incidentes graves, à CSIRT coordenadora e à ENISA: 24 h / 72 h / relatório final) | Circuitos **distintos**, base de deteção partilhada ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)) |
 | Marcação CE / declaração | Art. 43, 47–49 | Avaliação CRA | Coordenadas via Art. 12 |
 | Governação de dados, supervisão humana, transparência, FRIA | Art. 10, 13, 14, 27 | — | **Só AI Act** (fora do CRA e do SbD-ToE) |
 
@@ -47,7 +47,7 @@ O CRA Art. 12 remete a avaliação para o **procedimento de avaliação de confo
 
 **Só o AI Act** (não coberto pela presunção do CRA): gestão de risco (Art. 9), governação de dados e enviesamento (Art. 10), supervisão humana (Art. 14), transparência (Art. 13 e 50), avaliação de impacto sobre direitos fundamentais (Art. 27) e as obrigações GPAI (Art. 53/55). A presunção do Art. 12 do CRA **cobre apenas o Art. 15** (cibersegurança) - todas as restantes obrigações de alto risco do AI Act mantêm-se integralmente.
 
-**Só o CRA**: tratamento de vulnerabilidades ao longo de todo o ciclo de vida (Anexo I, Parte II), divulgação coordenada de vulnerabilidades, obrigação de atualizações de segurança e período de suporte, e o reporte de vulnerabilidades ativamente exploradas a ENISA/CSIRT (Art. 14).
+**Só o CRA**: tratamento de vulnerabilidades ao longo de todo o ciclo de vida (Anexo I, Parte II), divulgação coordenada de vulnerabilidades, obrigação de atualizações de segurança e período de suporte, e o reporte de vulnerabilidades ativamente exploradas à CSIRT designada como coordenadora e à ENISA (Art. 14).
 
 ## Riscos de Duplicação (Evitar) {#riscos-de-duplicação-evitar}
 
@@ -94,7 +94,7 @@ Não substitui. Cria uma **presunção de conformidade** com o Art. 15 quando cu
 Implementa o do CRA (Anexo I, Parte II) — é o mais detalhado e serve de base comum. Não satisfaz, por si só, o Art. 15: a presunção do art. 12.º do CRA exige também a Parte I e a demonstração na declaração UE, e cobre apenas a cibersegurança (não a exatidão nem a solidez).
 
 **Q4. Os reportes são os mesmos?**
-Não. O AI Act (Art. 73, incidentes graves) e o CRA (Art. 14, vulnerabilidades ativamente exploradas/incidentes graves a ENISA) têm gatilhos, prazos e circuitos distintos. Partilham a **deteção técnica** ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)); a submissão é parametrizada por regulamento.
+Não. O AI Act (Art. 73, incidentes graves) e o CRA (Art. 14, vulnerabilidades ativamente exploradas/incidentes graves, à CSIRT coordenadora e à ENISA) têm gatilhos, prazos e circuitos distintos. Partilham a **deteção técnica** ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)); a submissão é parametrizada por regulamento.
 
 ## Referências {#referências}
 

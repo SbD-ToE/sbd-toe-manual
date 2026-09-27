@@ -5535,8 +5535,8 @@ itens:
       pt: Quando é publicado um CVE que afecta uma GBI activa
       en: When a CVE affecting an active GBI is published
   falta:
-    pt: Correções de dependências e imagens com SLA, integridade verificada e controlos compensatórios; falta a gestão de correções de sistemas operativos, equipamentos de rede e software de prateleira, e o teste prévio de correções não aplicacionais.
-    en: Fixes for dependencies and images with SLA, verified integrity and compensating controls; management of patches for operating systems, network equipment and off-the-shelf software, and prior testing of non-application patches, are missing.
+    pt: Correcções de dependências e imagens com SLA, integridade verificada e controlos compensatórios estão prescritas; a gestão de correcções de sistemas operativos e equipamentos da entidade fica fora de âmbito por decisão do lead (segurança da entidade).
+    en: Patching of dependencies and images with SLA, verified integrity and compensating controls is prescribed; patch management of the entity's operating systems and equipment is out of scope by the lead's decision (entity-wide security).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -8070,7 +8070,7 @@ itens:
     pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
     en: Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8090,10 +8090,10 @@ itens:
     citacao:
       pt: A pontuação combinada dos três eixos determina o nível de criticidade global da aplicação.
       en: The combined score of the three axes determines the overall criticality level of the application.
-  falta:
-    pt: Classificação de aplicações por criticidade; não há níveis de classificação de todos os ativos, incluindo informação.
-    en: Classification of applications by criticality; there are no classification levels for all assets, including information.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -8108,7 +8108,7 @@ itens:
     pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.1.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
     en: Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8119,10 +8119,10 @@ itens:
     citacao:
       pt: Cada aplicação tem classificação de criticidade formalizada segundo os eixos de exposição, sensibilidade de dados e impacto de incidente
       en: Each application has a criticality classification formalised according to the axes of exposure, data sensitivity and incident impact
-  falta:
-    pt: Eixos exposição/dados/impacto aproximam C/I/D, mas não há atribuição de nível a cada ativo com base em confidencialidade, integridade, autenticidade e disponibilidade alinhada com a continuidade.
-    en: The exposure/data/impact axes approximate C/I/A, but there is no assignment of a level to each asset based on confidentiality, integrity, authenticity and availability aligned with continuity.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8315,7 +8315,7 @@ itens:
     pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.1 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
     en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8342,10 +8342,10 @@ itens:
     citacao:
       pt: Inventário de componentes expostos externamente
       en: Inventory of externally exposed components
-  falta:
-    pt: Inventários de aplicações, componentes (SBOM) e exposições com histórico; não há inventário exaustivo de todos os ativos (infraestrutura, equipamentos, informação).
-    en: Inventories of applications, components (SBOM) and exposures with history; there is no exhaustive inventory of all assets (infrastructure, equipment, information).
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -8360,7 +8360,7 @@ itens:
     pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.2 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
     en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8379,10 +8379,10 @@ itens:
     citacao:
       pt: cobertura verificável por inventário
       en: coverage verifiable by inventory
-  falta:
-    pt: Não liga operações e serviços da entidade aos SRI e ativos que os suportam.
-    en: Does not link the entity's operations and services to the network and information systems and assets that support them.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8397,7 +8397,7 @@ itens:
     pt: Reg. Exec. (UE) 2024/2690, anexo, ponto 12.4.3 (artigo 21.o, n.o 2, alínea i), da Diretiva (UE) 2022/2555)
     en: Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8408,10 +8408,10 @@ itens:
     citacao:
       pt: Existe inventário central ou GRC com registo de cada aplicação
       en: A central inventory or GRC exists with a record of each application
-  falta:
-    pt: Atualização após alteração de classificação; revisão regular do inventário de ativos em geral não prescrita.
-    en: Update after a change of classification; regular review of the asset inventory in general not prescribed.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media

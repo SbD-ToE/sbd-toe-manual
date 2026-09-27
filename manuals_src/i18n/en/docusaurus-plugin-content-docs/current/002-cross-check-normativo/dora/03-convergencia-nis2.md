@@ -1,1 +1,0 @@
-../nis2/03-convergencia-dora.md

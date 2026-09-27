@@ -4843,8 +4843,8 @@ itens:
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-28-30]
   nota:
-    pt: Registo consolidado por aplicação inclui fornecedores validados; os modelos ITS são lacuna intencional.
-    en: Consolidated per-application register includes validated suppliers; the ITS templates are an intentional gap.
+    pt: Registo consolidado por aplicação inclui fornecedores validados; os modelos ITS ficam fora de âmbito (plano regulatório da entidade).
+    en: Consolidated per-application register includes validated suppliers; the ITS templates are out of scope (the entity's regulatory plane).
 - id: DORA-28-3-p2
   acto_fonte: 32022R2554
   referencia:
@@ -4856,8 +4856,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -4875,8 +4875,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -4894,8 +4894,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5308,8 +5308,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Risco de concentração de terceiros TIC — análise regulatória; lacuna intencional (sem fórmulas de concentração).
-    en: ICT third-party concentration risk — regulatory analysis; intentional gap (no concentration formulas).
+    pt: 'Risco de concentração de terceiros TIC — análise regulatória; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'ICT third-party concentration risk — regulatory analysis; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -6134,8 +6134,8 @@ itens:
       en: SbD-ToE does not prescribe specific institutional arrangements or processes for notifying the supervisor
   falta: null
   razao_fora_de_ambito:
-    pt: Acordos institucionais de partilha de informação sobre ciberameaças (faculdade condicionada); o cross-check declara lacuna intencional.
-    en: Institutional cyber threat information-sharing arrangements (conditional option); the cross-check declares an intentional gap.
+    pt: 'Acordos institucionais de partilha de informação sobre ciberameaças (faculdade condicionada); fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Institutional cyber threat information-sharing arrangements (conditional option); out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -7012,8 +7012,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7040,8 +7040,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7068,8 +7068,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7096,8 +7096,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7124,8 +7124,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7152,8 +7152,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7180,8 +7180,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7208,8 +7208,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7236,8 +7236,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7264,8 +7264,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -7292,8 +7292,8 @@ itens:
       en: SbD-ToE does not include ITS templates or DORA concentration-analysis formulas
   falta: null
   razao_fora_de_ambito:
-    pt: Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA.
-    en: Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check.
+    pt: 'Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software.'
+    en: 'Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity''s regulatory plane, not a software engineering prescription.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -8683,7 +8683,7 @@ itens:
     pt: art. 4.º, n.º 1
     en: Article 4(1)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8711,10 +8711,10 @@ itens:
     citacao:
       pt: Alertas configurados quando CVE publicado afeta componente presente no inventário de runtime
       en: Alerts configured when a published CVE affects a component present in the runtime inventory
-  falta:
-    pt: Política de gestão de ativos TIC abrangendo hardware, rede e licenças.
-    en: ICT asset management policy covering hardware, network and licences.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8727,7 +8727,7 @@ itens:
     pt: art. 4.º, n.º 2, al. a)
     en: Article 4(2), point (a)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: politica
@@ -8747,10 +8747,10 @@ itens:
     citacao:
       pt: Existe inventário central ou GRC com registo de cada aplicação
       en: A central inventory or GRC exists with a record of each application
-  falta:
-    pt: Gestão do ciclo de vida de todos os ativos TIC.
-    en: Lifecycle management of all ICT assets.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -8763,7 +8763,7 @@ itens:
     pt: art. 4.º, n.º 2, al. b)
     en: Article 4(2), point (b)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -8790,10 +8790,10 @@ itens:
     citacao:
       pt: SBOM presente e acessível para cada build
       en: SBOM present and accessible for each build
-  falta:
-    pt: 'Atributos obrigatórios: localização física/lógica, funções apoiadas, RTO/RPO, datas de fim de suporte.'
-    en: 'Mandatory attributes: physical/logical location, functions supported, RTO/RPO, end-of-support dates.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -8806,7 +8806,7 @@ itens:
     pt: art. 4.º, n.º 2, al. c)
     en: Article 4(2), point (c)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: pagina
@@ -8818,10 +8818,10 @@ itens:
     citacao:
       pt: Identificar e classificar o ativo legado** (usando critérios do Cap. 1)
       en: '**Identify and classify the legacy asset** (using the criteria of Ch. 1)'
-  falta:
-    pt: Registos específicos para a avaliação anual de risco de sistemas legados.
-    en: Specific records for the annual risk assessment of legacy systems.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -15344,7 +15344,7 @@ itens:
     pt: art. 34.º, al. a)
     en: Article 34, point (a)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: politica
@@ -15364,10 +15364,10 @@ itens:
     citacao:
       pt: Existe inventário central ou GRC com registo de cada aplicação
       en: A central inventory or GRC exists with a record of each application
-  falta:
-    pt: Ciclo de vida de todos os ativos TIC.
-    en: Lifecycle of all ICT assets.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca.'
+    en: 'Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead''s decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it.'
   conflito: false
   explicacao_conflito: null
   confianca: media

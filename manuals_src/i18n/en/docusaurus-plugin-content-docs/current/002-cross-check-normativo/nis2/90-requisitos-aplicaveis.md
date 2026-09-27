@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: 69ca694c40e182805af67b60e64b1e637910b8b262500bfea7505e96bbf90759
+  source_sha256: b738ea335d8a8aeb94bbaa8bf00abb097c212e5a80e6e47952348229c4fbe984
   source_commit: null
-  target_sha256: 2583a84874917802bc2f944bb9bffc33c6956cfe03fc47ed9e0c275da929b64d
+  target_sha256: 8dcd3a423f697485177a4286fd0b6238c4b83a924d5398a935c8347ae5478e83
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -686,10 +686,10 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 | Strength | Obligations |
 |---|--:|
 | Covers | 98 |
-| Partial | 62 |
+| Partial | 57 |
 | Supports evidence | 12 |
 | Gap | 10 |
-| Out of scope | 38 |
+| Out of scope | 43 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
@@ -812,7 +812,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | NIS2-IR2690-11.7.2 | Implementing Regulation (EU) 2024/2690, Annex, point 11.7.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Covers | `AUT-001`; `AUT-008`; `CLA-003` |
 | NIS2-IR2690-12.1.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Covers | `CLA-005`; `CLA-006` |
 
-### Declared gap (72) {#lacuna}
+### Declared gap (67) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -864,7 +864,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | NIS2-IR2690-6.3.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.3.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `IAC-003`; [Policy 21 §3](/sbd-toe/assets/policies/policy-iac-seguro#3-princípios-de-iac-seguro); `IAC-012`; `CFG-007` | Secure configurations enforced on new systems via the pipeline; on systems in operation, drift detection is mandatory only at L2/L3 (IaC) and L3 (application). |
 | NIS2-IR2690-6.3.3 | Implementing Regulation (EU) 2024/2690, Annex, point 6.3.3 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); `IAC-013`; `CNT-010` | Review of configurations after a significant incident prescribed; the formal review of modules remains L3 only. |
 | NIS2-IR2690-6.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.4.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DPL-001`; `DPL-003`; `DPL-007`; `IAC-007`; [Policy 26 §2](/sbd-toe/assets/policies/policy-aprovacao-release#2-âmbito-e-obrigatoriedade) | Approval and gates before production at all levels (DPL-001/003); validation in staging and approved plan only at L2/L3; impact assessment not explicit. |
-| NIS2-IR2690-6.6.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.6.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DEP-007`; `DEP-003`; `DEP-005`; `CNT-010`; [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Fixes for dependencies and images with SLA, verified integrity and compensating controls; management of patches for operating systems, network equipment and off-the-shelf software, and prior testing of non-application patches, are missing. |
+| NIS2-IR2690-6.6.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.6.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `DEP-007`; `DEP-003`; `DEP-005`; `CNT-010`; [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Patching of dependencies and images with SLA, verified integrity and compensating controls is prescribed; patch management of the entity's operating systems and equipment is out of scope by the lead's decision (entity-wide security). |
 | NIS2-IR2690-6.7.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.7.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `ARC-001`; `ARC-002`; `ARC-006`; `ARC-008`; `INT-004`; `INT-006` | Zones, exposure, isolation and secure protocols covered; missing: only authorised devices on the network, provider connections authorised and time-limited, restriction of security management systems, transition plans for next-generation protocols, email security standards, and DNS and routing good practices. |
 | NIS2-IR2690-6.8.2 | Implementing Regulation (EU) 2024/2690, Annex, point 6.8.2 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `ARC-006`; `CFG-002`; `IAC-002`; `ARC-011`; `CNT-012`; [📝 Description](/sbd-toe/sbd-manual/arquitetura-segura/addon/diagramas-referencia#-descrição-2) | Separation of production/development and domain isolation exist; DMZ only in an L3 reference diagram; network segregation between environments only at L3 (ARC-011); separating the administration network and channels from operational traffic, and production backups, is missing. |
 | NIS2-IR2690-6.9.1 | Implementing Regulation (EU) 2024/2690, Annex, point 6.9.1 (Article 21(2), point (e), of Directive (EU) 2022/2555) | Partial | `FIL-007`; `IDE-001`; `CNT-001`; `CNT-009`; `DEP-005` | Controls unauthorised software in the chain (images, libraries, tools) and file scanning (L2/L3); does not cover anti-malware protection of systems in operation. |
@@ -882,16 +882,11 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | NIS2-IR2690-11.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 11.4.2 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Gap | — | Exclusive use of administration systems, logical separation from application software and dedicated protection of access to them are not required. |
 | NIS2-IR2690-11.6.3 | Implementing Regulation (EU) 2024/2690, Annex, point 11.6.3 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Partial | `AUT-007`; `AUT-001`; `AUT-012`; `AUT-013` | Passwordless and FIDO2 methods are prescribed (AUT-001, AUT-012); federation and MFA remain L2/L3 only in the core. |
 | NIS2-IR2690-11.6.4 | Implementing Regulation (EU) 2024/2690, Annex, point 11.6.4 (Article 21(2), points (i) and (j), of Directive (EU) 2022/2555) | Gap | — | There is no periodic review of authentication procedures and technologies. |
-| NIS2-IR2690-12.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-001`; [Policy 02 §3](/sbd-toe/assets/policies/policy-classificacao-risco#3-modelo-de-classificação---eixos-edi) | Classification of applications by criticality; there are no classification levels for all assets, including information. |
-| NIS2-IR2690-12.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-001` | The exposure/data/impact axes approximate C/I/A, but there is no assignment of a level to each asset based on confidentiality, integrity, authenticity and availability aligned with continuity. |
 | NIS2-IR2690-12.2.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.2.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Gap | `PRI-002` | There is no asset handling policy (use, storage, transport, secure disposal); only retention/erasure of personal data (PRI-002, L2/L3). |
 | NIS2-IR2690-12.2.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.2.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Gap | [Policy 33 §7.1](/sbd-toe/assets/policies/policy-contratacao-segura#71-checklist-de-offboarding) | No rules for the asset lifecycle, transport and secure destruction; data disposal appears only in supplier offboarding. |
 | NIS2-IR2690-12.2.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.2.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Gap | — | No policy to review. |
-| NIS2-IR2690-12.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-008`; `DEP-001`; `ARC-002` | Inventories of applications, components (SBOM) and exposures with history; there is no exhaustive inventory of all assets (infrastructure, equipment, information). |
-| NIS2-IR2690-12.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-008`; `OPS-001` | Does not link the entity's operations and services to the network and information systems and assets that support them. |
-| NIS2-IR2690-12.4.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Partial | `CLA-008` | Update after a change of classification; regular review of the asset inventory in general not prescribed. |
 
-### Out of scope (38) {#fora-de-ambito}
+### Out of scope (43) {#fora-de-ambito}
 
 Obligations that the Manual declares out of scope, with the reason.
 
@@ -923,9 +918,14 @@ Obligations that the Manual declares out of scope, with the reason.
 | NIS2-IR2690-10.2.3 | Implementing Regulation (EU) 2024/2690, Annex, point 10.2.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-10.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 10.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-10.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 10.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Human resources management (background checks, disciplinary regime, staff assignment); outside the scope of a software security engineering manual. |
+| NIS2-IR2690-12.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.1.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | NIS2-IR2690-12.3.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
 | NIS2-IR2690-12.3.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
 | NIS2-IR2690-12.3.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.3.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Endpoint/workstation control (removable media, autorun, portable devices); IT operations outside the scope of a software security engineering manual. |
+| NIS2-IR2690-12.4.1 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.1 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.4.2 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.2 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| NIS2-IR2690-12.4.3 | Implementing Regulation (EU) 2024/2690, Annex, point 12.4.3 (Article 21(2), point (i), of Directive (EU) 2022/2555) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | NIS2-IR2690-13.1.1 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.1 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-13.1.2 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.2 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |
 | NIS2-IR2690-13.1.3 | Implementing Regulation (EU) 2024/2690, Annex, point 13.1.3 (Article 21(2), points (c), (e) and (i), of Directive (EU) 2022/2555) | Physical and environmental security of premises (perimeters, power, air conditioning, physical access); outside the scope of a software security engineering manual. |

@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: 178509d0555a84ecdf93ec9c0e78ae3caa0fcf10e7098cf1fa5908569f647ae8
+  source_sha256: 61b01f3e352f440b137982aaf493715bf8f36b3801ce45c4a9e367053c6def91
   source_commit: null
-  target_sha256: 7d087c35e31333fa34ef36a715a5604e2e18e16e421b4058fd61884ab922096d
+  target_sha256: 6e5a8f3c663ed0028a6d1b4476b2d47257158d0a03f486a00a6be603686ec5e4
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -685,10 +685,10 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 | Strength | Obligations |
 |---|--:|
 | Covers | 166 |
-| Partial | 109 |
+| Partial | 104 |
 | Supports evidence | 123 |
 | Gap | 3 |
-| Out of scope | 225 |
+| Out of scope | 230 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
@@ -990,7 +990,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | DORA-RTS1190-10-1 | Article 10(1) | Supports evidence | [6) Readiness checklist (binary)](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness#6-checklist-de-readiness-binário); [Ch. 12 US-16](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-16---cobertura-attck-e-priorização-epsskev) |
 | DORA-RTS1190-13-2 | Article 13(2) | Supports evidence | `TST-003`; [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) |
 
-### Declared gap (112) {#lacuna}
+### Declared gap (107) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -1041,10 +1041,6 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | DORA-RTS1774-2-1-b | Article 2(1), point (b) | Partial | `ACC-003`; `ACC-006`; `OPS-009` | Network-level intrusion detection. |
 | DORA-RTS1774-2-1-d | Article 2(1), point (d) | Partial | `INT-009`; `INT-010`; `INT-012` | Assurance of rapid transmission without undue delays (performance). |
 | DORA-RTS1774-3-c-p2 | Article 3, second subparagraph, points (a) to (c) | Partial | `GOV-010`; `OPS-010` | Systematic verification of whether the tolerance was met after treatment. |
-| DORA-RTS1774-4-1 | Article 4(1) | Partial | `CLA-008`; `DEP-001`; [Policy 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | ICT asset management policy covering hardware, network and licences. |
-| DORA-RTS1774-4-2-a | Article 4(2), point (a) | Partial | [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching); `CLA-008` | Lifecycle management of all ICT assets. |
-| DORA-RTS1774-4-2-b | Article 4(2), point (b) | Partial | `CLA-008`; `ARC-002`; `DEP-001` | Mandatory attributes: physical/logical location, functions supported, RTO/RPO, end-of-support dates. |
-| DORA-RTS1774-4-2-c | Article 4(2), point (c) | Partial | [🛠️ Proposed approach](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta) | Specific records for the annual risk assessment of legacy systems. |
 | DORA-RTS1774-5-1 | Article 5(1) | Partial | `CLA-008`; [Policy 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | ICT asset management procedure (not only applications and components). |
 | DORA-RTS1774-6-2-b | Article 6(2), point (b) and second subparagraph | Gap | — | Rules for data in use or an equivalent separate environment. |
 | DORA-RTS1774-8-1 | Article 8(1) | Partial | `OPS-001`; [Policy 31 §3](/sbd-toe/assets/policies/policy-gestao-alertas#3-classificação-de-alertas); [Policy 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback) | Operational documentation for the operation, control and restoration of ICT assets. |
@@ -1094,7 +1090,6 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | DORA-RTS1774-29-2 | Article 29(2) | Partial | `CLA-003`; `GOV-006` | Mitigating measures applied by ICT providers. |
 | DORA-RTS1774-30-1 | Article 30(1) | Partial | `CLA-001`; `CLA-008` | Identification of critical or important functions and interdependencies. |
 | DORA-RTS1774-33 | Article 33, first subparagraph | Partial | `ACC-001`; `ACC-010` | Physical access control. |
-| DORA-RTS1774-34-a | Article 34, point (a) | Partial | [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching); `CLA-008` | Lifecycle of all ICT assets. |
 | DORA-RTS1774-34-b | Article 34, point (b) | Partial | [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Verification of third-party support for all assets (EOL outside base images/dependencies). |
 | DORA-RTS1774-34-c | Article 34, point (c) | Partial | `OPS-015` | Capacity planning. |
 | DORA-RTS1774-34-e | Article 34, point (e) | Partial | [🛠️ Proposed approach](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta); [Policy 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Management of risks from obsolete/unsupported hardware. |
@@ -1109,7 +1104,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | DORA-RTS1774-40-1 | Article 40(1) and (2) | Partial | [Policy 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); [Policy 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback); `OPS-016` | Tests of the entity's continuity plans with scenarios (outside the scope of the Manual); testing of backup and restoration is prescribed (OPS-016). |
 | DORA-RTS1774-40-3 | Article 40(3) | Partial | [Policy 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp) | Reporting of deficiencies to the management body. |
 
-### Out of scope (225) {#fora-de-ambito}
+### Out of scope (230) {#fora-de-ambito}
 
 Obligations that the Manual declares out of scope, with the reason.
 
@@ -1147,9 +1142,9 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-27-3 | Article 27(3) | Regulated TLPT process (Delegated Regulation (EU) 2025/1190) — addon 14 of Ch. 10 expressly declares it out of the Manual's scope (compliance/GRC/supervisor). |
 | DORA-28-1-a | Article 28(1), point (a) | Principle of legal responsibility retained by the financial entity. |
 | DORA-28-2-orgao | Article 28(2), last sentence | Duty of the management body / internal governance structure; the Manual does not set corporate bodies or delegated authority levels. |
-| DORA-28-3-p2 | Article 28(3), second subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-28-3-p3 | Article 28(3), third subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-28-3-p4 | Article 28(3), fourth subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
+| DORA-28-3-p2 | Article 28(3), second subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-28-3-p3 | Article 28(3), third subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-28-3-p4 | Article 28(3), fourth subparagraph | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
 | DORA-28-3-p5 | Article 28(3), fifth subparagraph | Reporting to/relationship with the competent authority — legal-regulatory level, not a software engineering prescription. |
 | DORA-28-4-b | Article 28(4), point (b) | Verification of supervisory conditions for subcontracting — legal-regulatory plane. |
 | DORA-28-4-e | Article 28(4), point (e) | Conflicts of interest in the arrangement — legal/compliance plane. |
@@ -1157,7 +1152,7 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-28-8-p2 | Article 28(8), second subparagraph | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. Provider exit planning. |
 | DORA-28-8-p3 | Article 28(8), third subparagraph | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. Documented and tested exit plans. |
 | DORA-28-8-p5 | Article 28(8), fifth subparagraph | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. |
-| DORA-29-1 | Article 29(1), first subparagraph, points (a) and (b) | ICT third-party concentration risk — regulatory analysis; intentional gap (no concentration formulas). |
+| DORA-29-1 | Article 29(1), first subparagraph, points (a) and (b) | ICT third-party concentration risk — regulatory analysis; out of scope: the entity's regulatory plane, not a software engineering prescription. |
 | DORA-29-1-p2 | Article 29(1), second subparagraph | Idem 29-1. |
 | DORA-29-2 | Article 29(2), first subparagraph | Idem 29-1 (subcontracting in a third country). |
 | DORA-29-2-p2 | Article 29(2), second subparagraph | DORA-specific contractual/legal content with no prescriptive counterpart in the Manual. |
@@ -1179,7 +1174,7 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-42-1 | Article 42(1) | Oversight framework for critical third-party providers (Articles 31–44) — provider/authority relationship, outside an engineering manual. |
 | DORA-42-3-p2 | Article 42(3), second subparagraph | Oversight framework for critical third-party providers (Articles 31–44) — provider/authority relationship, outside an engineering manual. |
 | DORA-42-9-p2 | Article 42(9), second subparagraph | Oversight framework for critical third-party providers (Articles 31–44) — provider/authority relationship, outside an engineering manual. |
-| DORA-45-1 | Article 45(1), points (a) to (c) | Institutional cyber threat information-sharing arrangements (conditional option); the cross-check declares an intentional gap. |
+| DORA-45-1 | Article 45(1), points (a) to (c) | Institutional cyber threat information-sharing arrangements (conditional option); out of scope: the entity's regulatory plane, not a software engineering prescription. |
 | DORA-45-2 | Article 45(2) | DORA-specific contractual/legal content with no prescriptive counterpart in the Manual. |
 | DORA-45-3 | Article 45(3) | Reporting to/relationship with the competent authority — legal-regulatory level, not a software engineering prescription. |
 | DORA-59 | Article 59 (amends Regulation (EC) No 1060/2009, Annex I, Section A, point 4) | Amendments to sectoral acts (credit rating agencies, CCPs, APAs/CTPs/ARMs, benchmarks) — legal cross-reference. |
@@ -1199,17 +1194,17 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS1773-7-2 | Article 7(2) | Intra-group services — corporate organisation. |
 | DORA-RTS1773-8-4 | Article 8(4) | DORA-specific contractual/legal content with no prescriptive counterpart in the Manual. |
 | DORA-RTS1773-10 | Article 10 | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. Exit plan per arrangement. |
-| DORA-ITS2956-2 | Article 2 | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-1 | Article 3(1) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-2 | Article 3(2), points (a) and (b) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-3 | Article 3(3) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-4 | Article 3(4), points (a) to (f) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-5 | Article 3(5) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-3-6 | Article 3(6) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-4 | Article 4(2) and (3) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-5-1 | Article 5(1), points (a) to (o); Annex I | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-6 | Article 6(1) and (2) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
-| DORA-ITS2956-AnexoI | Annex I, Part 1 | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; intentional gap declared in the DORA cross-check. |
+| DORA-ITS2956-2 | Article 2 | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-1 | Article 3(1) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-2 | Article 3(2), points (a) and (b) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-3 | Article 3(3) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-4 | Article 3(4), points (a) to (f) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-5 | Article 3(5) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-3-6 | Article 3(6) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-4 | Article 4(2) and (3) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-5-1 | Article 5(1), points (a) to (o); Annex I | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-6 | Article 6(1) and (2) | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
+| DORA-ITS2956-AnexoI | Annex I, Part 1 | Regulatory register of information (Article 28(3); ITS 2024/2956) — templates and reporting to the authority; out of scope: the entity's regulatory plane, not a software engineering prescription. |
 | DORA-RTS532-1 | Article 1, points (a) to (l) | Proportionality in the management of subcontracting — contractual plane. |
 | DORA-RTS532-2 | Article 2 | Consistency across the group — corporate organisation. |
 | DORA-RTS532-3-1-f | Article 3(1), point (f) | Risk assessment of subcontracting chains (capability, failure, location, concentration, audit) — contractual/regulatory analysis. |
@@ -1235,6 +1230,10 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS532-5-4 | Article 5(4) | DORA-specific contractual/legal content with no prescriptive counterpart in the Manual. Clauses on subcontractors. |
 | DORA-RTS1774-2-2-e | Article 2(2), point (e) | Disciplinary consequences of non-compliance — HR/compliance regime. |
 | DORA-RTS1774-2-2-g | Article 2(2), point (g) | Duty of the management body / internal governance structure; the Manual does not set corporate bodies or delegated authority levels. Segregation of duties between lines of defence. |
+| DORA-RTS1774-4-1 | Article 4(1) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-a | Article 4(2), point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-b | Article 4(2), point (b) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
+| DORA-RTS1774-4-2-c | Article 4(2), point (c) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | DORA-RTS1774-8-2-b-ii | Article 8(2), point (b)(ii) | Processing scheduling with interdependencies — IT operations. |
 | DORA-RTS1774-9-2 | Article 9(2) | Systems with long procurement lead times or that are resource-intensive — IT procurement planning. |
 | DORA-RTS1774-11-2-e | Article 11(2), point (e) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
@@ -1261,6 +1260,7 @@ Obligations that the Manual declares out of scope, with the reason.
 | DORA-RTS1774-28-3 | Article 28(3) | Legal responsibility retained when outsourcing verification. |
 | DORA-RTS1774-28-4 | Article 28(4) | Duty of the management body / internal governance structure; the Manual does not set corporate bodies or corporate authority levels. Segregation between control and internal audit. |
 | DORA-RTS1774-32 | Article 32(1) to (3) | Physical and environmental security of premises — outside the scope of a software engineering manual. |
+| DORA-RTS1774-34-a | Article 34, point (a) | Asset management for the entity as a whole (inventory and classification of all assets, infrastructure, equipment, licences) is out of scope by the lead's decision: the Manual is application-centric. The inventory and classification of the application and its components (CLA-001, SBOM) give evidence for the part that concerns it. |
 | DORA-RTS1774-35-f | Article 35, point (f) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
 | DORA-RTS1774-35-g | Article 35, point (g) | Security of workstations/devices and physical media (corporate IT) — outside the secure development lifecycle. |
 | DORA-RTS1774-39-2-a | Article 39(2), points (a) to (c) | Organisation-level business continuity/crisis management (BCM) — the Manual deals with cyber incident response and rollback, not general BCM. |

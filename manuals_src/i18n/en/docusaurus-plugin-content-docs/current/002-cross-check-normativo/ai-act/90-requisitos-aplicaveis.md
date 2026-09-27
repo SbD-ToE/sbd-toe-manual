@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: dd588e99c9f7aca1d91678d3d67d46ebbeee4b479ded0c207a13f061ee1618e3
+  source_sha256: ad5c3f697df70cd9035d25429213a2a7fa6ec4400ded265e2be37e89457634aa
   source_commit: null
-  target_sha256: 895d7045e458069e6666ea7fc3390e127d58d5f76a012f0ef9392abe483a9080
+  target_sha256: 4da9f620a3cc93d290dcebe721948fb5d68c92973290f65679a37d7def0357e3
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -710,10 +710,10 @@ Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those add
 | Strength | Obligations |
 |---|--:|
 | Covers | 38 |
-| Partial | 22 |
+| Partial | 21 |
 | Supports evidence | 49 |
 | Gap | 4 |
-| Out of scope | 132 |
+| Out of scope | 133 |
 
 ## What this Manual covers and what stays out {#cobertura}
 
@@ -813,7 +813,7 @@ Strength “covers” or “supports evidence”. The form is the Manual's respo
 | AIA-86-1 | Article 86(1) | Covers | `CTX-AIA-RE-R03`; [Ch. 04 US-15](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identificação-e-governação-de-componentes-não-determinísticos); `OPS-011` |
 | AIA-111-4 | Article 111(4) | Covers | `CTX-AIA-RE-R02` |
 
-### Declared gap (26) {#lacuna}
+### Declared gap (25) {#lacuna}
 
 Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
 
@@ -832,7 +832,6 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | AIA-15-3 | Article 15(3) | Gap | — | **AppSec Core AISVS/SAIF round.** Declaration of the accuracy levels and parameters pending the AppSec Core AISVS/SAIF round. |
 | AIA-15-4 | Article 15(4) | Partial | [Design considerations](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#considerações-de-design); [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [🧱 Structured outputs — validation of what the model returns](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Fallback, fail-secure and fail-closed output validation exist; missing are redundancy/safety plans for performance and bias mitigation in feedback loops of systems that continue to learn. |
 | AIA-16-a | Article 16, point (a) | Partial | `THR-008`; `ARC-014`; `OPS-011` | **AppSec Core AISVS/SAIF round.** Cybersecurity (THR-008, ARC-014, DEP-011 to DEP-014), human oversight (ARC-014 with floor P08) and transparency (CTX-AIA-RE-R01/R02) covered; accuracy and robustness pending the AISVS/SAIF round; data governance out of scope. |
-| AIA-16-c | Article 16, point (c) | Partial | `GOV-001`; `TST-001` | See AIA-17-1-*: operational components of a QMS exist; missing is the formal QMS structure of Article 17. |
 | AIA-16-d | Article 16, point (d) | Partial | [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) | See AIA-18-1: no 10-year period for the documentation of high-risk AI systems. |
 | AIA-16-e | Article 16, point (e) | Partial | [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003` | See AIA-19-1. |
 | AIA-16-j | Article 16, point (j) | Partial | `DPL-005`; [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | See AIA-20-1/20-2. |
@@ -846,7 +845,7 @@ Strength “partial” or “gap”: the Manual does not cover, or covers only i
 | AIA-55-1-a | Article 55(1), point (a) | Partial | [Policy 19 §7.1](/sbd-toe/assets/policies/policy-estrategia-testes#71-composição-mínima); [C5 - Continuous eval suites for agents in development and production](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) | Red-team corpus and eval suites (agents A2+/A3+); missing are standardised model evaluation protocols and documented adversarial testing at model level. |
 | AIA-73-6 | Article 73(6) | Partial | [Policy 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); `LOG-009` | Evidence preservation and investigation exist; the prohibition on altering the system in a way that affects the analysis of causes without informing the authorities beforehand is missing (the IRP prioritises containment “when possible”). |
 
-### Out of scope (132) {#fora-de-ambito}
+### Out of scope (133) {#fora-de-ambito}
 
 Obligations that the Manual declares out of scope, with the reason.
 
@@ -884,6 +883,7 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-12-3 | Article 12(3) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead's decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
 | AIA-14-5 | Article 14(5) | The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead's decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*). |
 | AIA-16-b | Article 16, point (b) | Identification of the provider on the system/packaging: product labelling, compliance plane. |
+| AIA-16-c | Article 16, point (c) | Article 17 (quality management system) is out of scope by the lead's decision; see AIA-17-1-* for the evidence the Manual provides. |
 | AIA-16-f | Article 16, point (f) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-g | Article 16, point (g) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-16-h | Article 16, point (h) | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
@@ -947,14 +947,14 @@ Obligations that the Manual declares out of scope, with the reason.
 | AIA-AnxVIII-C | Annex VIII, Section C | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-AnxVII-3 | Annex VII, points 3.1, 3.3, 3.4 | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
 | AIA-AnxVII-5 | Annex VII, point 5.2 | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
-| AIA-AnxIII-1 | Annex III, point 1 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-2 | Annex III, point 2 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-3 | Annex III, point 3 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-4 | Annex III, point 4 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-5 | Annex III, point 5 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-6 | Annex III, point 6 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-7 | Annex III, point 7 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
-| AIA-AnxIII-8 | Annex III, point 8 | Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification). |
+| AIA-AnxIII-1 | Annex III, point 1 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-2 | Annex III, point 2 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-3 | Annex III, point 3 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-4 | Annex III, point 4 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-5 | Annex III, point 5 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-6 | Annex III, point 6 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-7 | Annex III, point 7 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-8 | Annex III, point 8 | Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3). |
 | AIA-50-4-b | Article 50(4), second subparagraph | Disclosure of AI-generated text published on matters of public interest, with the editorial-control exception: editorial process of the deployer. |
 | AIA-52-1 | Article 52(1) to (2) | Obligation of the GPAI model provider towards the Commission/AI Office; legal and AI-domain plane. The Manual deals with the GPAI consumer side (DEP-014, Policy 33 §10.6). |
 | AIA-53-1-c | Article 53(1), point (c) | Copyright/TDM opt-out policy: legal plane. |

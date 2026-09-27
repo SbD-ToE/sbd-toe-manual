@@ -696,10 +696,10 @@ Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigida
 | Força | Obrigações |
 |---|--:|
 | Cobre | 38 |
-| Parcial | 22 |
+| Parcial | 21 |
 | Apoia evidência | 49 |
 | Lacuna | 4 |
-| Fora de âmbito | 132 |
+| Fora de âmbito | 133 |
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
@@ -799,7 +799,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | AIA-86-1 | Art. 86.º, n.º 1 | Cobre | `CTX-AIA-RE-R03`; [Cap. 04 US-15](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identificação-e-governação-de-componentes-não-determinísticos); `OPS-011` |
 | AIA-111-4 | Art. 111.º, n.º 4 | Cobre | `CTX-AIA-RE-R02` |
 
-### Lacuna declarada (26) {#lacuna}
+### Lacuna declarada (25) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -818,7 +818,6 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | AIA-15-3 | Art. 15.º, n.º 3 | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Declaração dos níveis e parâmetros de exactidão pendente da ronda AISVS/SAIF do AppSec Core. |
 | AIA-15-4 | Art. 15.º, n.º 4 | Parcial | [Considerações de design](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#considerações-de-design); [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [🧱 Structured outputs — validação do que o modelo devolve](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Fallback, fail-secure e validação de output com falha fechada existem; faltam redundância/planos de segurança para desempenho e mitigação de enviesamento em circuitos de realimentação de sistemas que continuam a aprender. |
 | AIA-16-a | Art. 16.º, alínea a) | Parcial | `THR-008`; `ARC-014`; `OPS-011` | **Ronda AISVS/SAIF do AppSec Core.** Cibersegurança (THR-008, ARC-014, DEP-011 a DEP-014), supervisão humana (ARC-014 com o piso P08) e transparência (CTX-AIA-RE-R01/R02) cobertas; exatidão e solidez pendentes da ronda AISVS/SAIF; governação de dados fora de âmbito. |
-| AIA-16-c | Art. 16.º, alínea c) | Parcial | `GOV-001`; `TST-001` | Ver AIA-17-1-*: componentes operacionais de um SGQ existem; falta a estrutura formal do SGQ do art. 17.º. |
 | AIA-16-d | Art. 16.º, alínea d) | Parcial | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) | Ver AIA-18-1: sem prazo de 10 anos para a documentação de sistemas de IA de risco elevado. |
 | AIA-16-e | Art. 16.º, alínea e) | Parcial | [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003` | Ver AIA-19-1. |
 | AIA-16-j | Art. 16.º, alínea j) | Parcial | `DPL-005`; [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Ver AIA-20-1/20-2. |
@@ -832,7 +831,7 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | AIA-55-1-a | Art. 55.º, n.º 1, alínea a) | Parcial | [Política 19 §7.1](/sbd-toe/assets/policies/policy-estrategia-testes#71-composição-mínima); [C5 - Eval suites contínuas para agentes em desenvolvimento e produção](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) | Red-team corpus e eval suites (agentes A2+/A3+); faltam protocolos normalizados de avaliação de modelos e testagem antagónica documentada ao nível do modelo. |
 | AIA-73-6 | Art. 73.º, n.º 6 | Parcial | [Política 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); `LOG-009` | Preservação de evidência e investigação existem; falta a proibição de alterar o sistema de modo que afete a análise de causas sem informar previamente as autoridades (o IRP privilegia contenção «quando possível»). |
 
-### Fora de âmbito (132) {#fora-de-ambito}
+### Fora de âmbito (133) {#fora-de-ambito}
 
 Obrigações que o Manual declara fora de âmbito, com a razão.
 
@@ -870,6 +869,7 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | AIA-12-3 | Art. 12.º, n.º 3 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
 | AIA-14-5 | Art. 14.º, n.º 5 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
 | AIA-16-b | Art. 16.º, alínea b) | Identificação do prestador no sistema/embalagem: rotulagem de produto, plano da conformidade. |
+| AIA-16-c | Art. 16.º, alínea c) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead; ver AIA-17-1-* para a evidência que o Manual fornece. |
 | AIA-16-f | Art. 16.º, alínea f) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-g | Art. 16.º, alínea g) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-16-h | Art. 16.º, alínea h) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
@@ -933,14 +933,14 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | AIA-AnxVIII-C | Anexo VIII, secção C | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-AnxVII-3 | Anexo VII, pontos 3.1, 3.3, 3.4 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
 | AIA-AnxVII-5 | Anexo VII, ponto 5.2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
-| AIA-AnxIII-1 | Anexo III, ponto 1 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-2 | Anexo III, ponto 2 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-3 | Anexo III, ponto 3 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-4 | Anexo III, ponto 4 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-5 | Anexo III, ponto 5 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-6 | Anexo III, ponto 6 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-7 | Anexo III, ponto 7 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
-| AIA-AnxIII-8 | Anexo III, ponto 8 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-1 | Anexo III, ponto 1 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-2 | Anexo III, ponto 2 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-3 | Anexo III, ponto 3 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-4 | Anexo III, ponto 4 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-5 | Anexo III, ponto 5 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-6 | Anexo III, ponto 6 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-7 | Anexo III, ponto 7 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
+| AIA-AnxIII-8 | Anexo III, ponto 8 | Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3). |
 | AIA-50-4-b | Art. 50.º, n.º 4, segundo parágrafo | Divulgação de texto gerado por IA publicado sobre interesse público, com exceção de controlo editorial: processo editorial do responsável pela implantação. |
 | AIA-52-1 | Art. 52.º, n.os 1-2 | Obrigação do prestador de modelo GPAI perante a Comissão/Serviço para a IA; plano jurídico e de domínio de IA. O Manual trata o lado do consumidor de GPAI (DEP-014, Política 33 §10.6). |
 | AIA-53-1-c | Art. 53.º, n.º 1, alínea c) | Política de direitos de autor/opt-out TDM: plano jurídico. |

@@ -2681,7 +2681,7 @@ itens:
     pt: Art. 16.º, alínea c)
     en: Article 16, point (c)
   classe: organizacional
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -2700,10 +2700,10 @@ itens:
     citacao:
       pt: Documento de estratégia com tipologias de teste, frequência, responsáveis e critérios de aceitação por nível de risco
       en: Strategy document with test types, frequency, owners and acceptance criteria by risk level
-  falta:
-    pt: 'Ver AIA-17-1-*: componentes operacionais de um SGQ existem; falta a estrutura formal do SGQ do art. 17.º.'
-    en: 'See AIA-17-1-*: operational components of a QMS exist; missing is the formal QMS structure of Article 17.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead; ver AIA-17-1-* para a evidência que o Manual fornece.
+    en: Article 17 (quality management system) is out of scope by the lead's decision; see AIA-17-1-* for the evidence the Manual provides.
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5190,8 +5190,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5209,8 +5209,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5228,8 +5228,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5247,8 +5247,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5266,8 +5266,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5285,8 +5285,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5304,8 +5304,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -5323,8 +5323,8 @@ itens:
   resposta: []
   falta: null
   razao_fora_de_ambito:
-    pt: 'Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação).'
-    en: 'Definition of the high-risk use cases; the operative duty is in AIA-6-2-3 (gap: the Manual does not link the legal status to the classification).'
+    pt: Definição dos casos de uso de risco elevado (qualificação jurídica); o Manual recebe o resultado pela declaração do contexto CTX-AIA-RE (AIA-6-2-3).
+    en: Definition of the high-risk use cases (legal qualification); the Manual receives the result through the declaration of context CTX-AIA-RE (AIA-6-2-3).
   conflito: false
   explicacao_conflito: null
   confianca: alta
@@ -6608,8 +6608,8 @@ itens:
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota:
-    pt: 'Reforça AIA-6-2-3: o Manual não assegura que a classificação legal se reflete no nível.'
-    en: 'Reinforces AIA-6-2-3: the Manual does not ensure that the legal classification is reflected in the level.'
+    pt: A classificação legal entra no Manual pela declaração do contexto CTX-AIA-RE (AIA-6-2-3); o nível L1–L3 não é a classe regulatória.
+    en: The legal classification enters the Manual through the declaration of context CTX-AIA-RE (AIA-6-2-3); the L1–L3 level is not the regulatory class.
 - id: AIA-82-2
   acto_fonte: 32024R1689
   referencia:

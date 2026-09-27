@@ -12,13 +12,15 @@ sidebar_position: 2
 
 Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações SbD-ToE práticas**.
 
-**Princípio:** Implementar o SbD-ToE cobre grande parte da **base AppSec e operacional** exigida por DORA, mas a conformidade final depende também de **formalização regulatória adicional**, artefactos institucionais e parametrização de reporte que ficam fora do manual base.
+**Princípio:** Implementar o SbD-ToE cobre grande parte da **base AppSec e operacional** exigida por DORA, mas a conformidade final depende também de **formalização regulatória adicional** e de artefactos institucionais que ficam fora do âmbito do Manual.
+
+O que o Manual cobre, as lacunas que declara e o que fica fora de âmbito, obrigação a obrigação, estão em [Requisitos aplicáveis — O que este Manual cobre e o que fica de fora](./requisitos-aplicaveis#cobertura).
 
 **Estrutura:** Cada secção mostra:
 - DORA requisito ou bloco normativo
 - SbD-ToE capítulo/addon aplicável
 - O que fazer
-- Que parte fica dentro do manual e que parte continua em `overlay/compliance`
+- Que parte fica dentro do Manual (incluindo os pisos e os requisitos acrescentados pelo contexto DORA, em `_contextos-regulatorios.yaml`) e que parte fica fora do âmbito
 
 > 📚 **Recursos de Suporte:** Para templates práticos e exemplos de implementação, consultar [Exemplo-Playbook](/sbd-toe/cross-check-normativo/exemplo-playbook/exemplo-toolchain-options) com toolchains, KPIs, RACI e relatórios de incidentes reutilizáveis para DORA e outros frameworks.
 
@@ -68,9 +70,8 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
    - Referência: [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classificar por risco**
-   - L3: impacto direto em funções críticas
-   - L2: suporta processos importantes
-   - L1: ferramentas de suporte
+   - Nível L1–L3 por aplicação, segundo os eixos de exposição, sensibilidade dos dados e impacto (CLA-001)
+   - Marcar, por aplicação, se suporta uma função crítica ou importante (grau FCI do contexto DORA, com remissão para o inventário de funções da entidade): é um eixo separado do nível e acrescenta pisos próprios; L3 não equivale a função crítica ou importante
    - Referência: [Cap. 01 - Classificação de Aplicações](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 3. **Definir requisitos mínimos por nível**
@@ -106,7 +107,8 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 - **O que:** monitorizar, reagir, conter, recuperar e aprender com eventos e desvios
 - **Como:** logging estruturado; alertas com SLAs; rollback; runbooks; métricas; formação contínua
 - **Trilho:** evidência operacional, post-incident reviews, KPIs e reporting
-- **Recuperação:** cópias de segurança com restauro testado (OPS-016) e objectivos e procedimento de recuperação da aplicação (OPS-017); as capacidades redundantes e os testes de comutação para funções críticas ou importantes são requisito do contexto DORA. Os planos de continuidade da entidade (art. 11.º) ficam fora do Manual.
+- **Recuperação:** cópias de segurança com restauro testado (OPS-016) e objetivos e procedimento de recuperação da aplicação (OPS-017); as capacidades redundantes e os testes de comutação são requisito acrescentado pelo contexto DORA (CTX-DORA-R01). Os planos de continuidade da entidade (art. 11.º) ficam fora do Manual.
+- **Pisos do contexto DORA:** IRP em qualquer nível (Política 32 §2; CTX-DORA-P01); testes dinâmicos (TST-005; P03); revisão anual dos acessos e semestral nas funções críticas ou importantes (ACC-010; P05, P06); autenticação forte (AUT-001; P07); análise semanal de vulnerabilidades dos ativos que apoiam funções críticas ou importantes (Política 10 §9; P08); divulgação responsável (GOV-015; P10); contas privilegiadas e ciclo de vida das identidades (GOV-016, GOV-017; P13, P14); ciclo de vida das chaves e registo de certificados (ENC-007; P15, P16); agilidade criptográfica (ENC-003; P17); revisão semestral das regras de filtragem de rede (ARC-006; P18). Ver [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
 - **Referências:** [Cap. 11 - Deploy Seguro](/sbd-toe/sbd-manual/deploy-seguro/intro), [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 13 - Formação e Onboarding](/sbd-toe/sbd-manual/formacao-onboarding/intro)
 
 ---
@@ -129,8 +131,8 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 #### 4.3 Parametrização de reporte externo {#43-parametrização-de-reporte-externo}
 - **O que:** traduzir o processo interno em `initial`, `intermediate` e `final report`, nos prazos fixados pelas RTS (Reg. Delegado (UE) 2025/301, art. 5.º: notificação inicial ≤ 4 h após a classificação como severo e ≤ 24 h após o conhecimento; relatório intercalar ≤ 72 h após a notificação inicial; relatório final ≤ 1 mês após o último relatório intercalar) e informar os clientes afetados sem demora indevida (art. 19.º, n.º 3)
-- **Como:** parametrizar campos, templates e exportadores conforme RTS/ITS e autoridade competente
-- **Boundary:** esta parte já não fica toda no manual base; exige material regulatório complementar
+- **Como:** partir dos dados de impacto (Política 32 §4.3), classificar com os critérios do art. 18.º e os limiares do Reg. Delegado (UE) 2024/1772, com avaliação mensal dos recorrentes (CTX-DORA-R02), e usar o conteúdo da Política 32 §6.1 (modelos do Reg. de Execução (UE) 2025/302)
+- **Boundary:** a submissão, os canais e a relação com a autoridade competente ficam fora do âmbito do Manual
 - **Referências:** [Cap. 12 - Monitorização e Operações](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 ---
@@ -140,7 +142,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 
 #### 5.1 Testes contínuos {#51-testes-contínuos}
 - **SAST:** análise estática integrada
-- **DAST:** análise dinâmica em staging
+- **DAST:** análise dinâmica em staging, obrigatória em qualquer nível no contexto DORA, com testes aos sistemas e aplicações expostos à Internet (TST-005; CTX-DORA-P03)
 - **PenTesting:** testes manuais guiados por threat model
 - **Referência:** [Cap. 10 - Testes de Segurança](/sbd-toe/sbd-manual/testes-seguranca/intro)
 
@@ -178,7 +180,7 @@ Este playbook mapeia **requisitos DORA (Regulamento UE 2022/2554) para ações S
 #### 6.3 Concentração e saída {#63-concentração-e-saída}
 - **O que:** avaliar concentração, dependências críticas e estratégia de saída
 - **Como:** inventário, revalidação periódica, cláusulas contratuais e planos de transição
-- **Boundary:** parte desta leitura é regulatória e portfolio-wide, não apenas AppSec
+- **Boundary:** o registo de informações (Reg. de Execução (UE) 2024/2956), a análise de concentração e as estratégias de saída da entidade ficam fora do âmbito do Manual (relação com o supervisor e continuidade do negócio); os planos de transição e de migração integral dos dados são lacuna declarada.
 - **Referências:** [Cap. 05 - Dependências & SBOM](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Cap. 14 - Governança e Contratação](/sbd-toe/sbd-manual/governanca-contratacao/intro)
 
 ---
@@ -193,7 +195,7 @@ A lista abaixo permite validar a maturidade da **base AppSec e operacional** par
 - [ ] **Supply chain técnica:** SBOM gerado e SCA contínuo
 - [ ] **Pipeline:** Gates de segurança operacionais
 - [ ] **Monitorização:** Logs centralizados, proteção e retenção adequadas
-- [ ] **Incidentes:** Processo de deteção, classificação e reporte parametrizável
+- [ ] **Incidentes:** IRP em qualquer nível (CTX-DORA-P01); classificação DORA (CTX-DORA-R02) e conteúdo da Política 32 §6.1
 - [ ] **Fornecedores:** Inventário, due diligence e ciclo de vida operacional
 - [ ] **Testes:** SAST/DAST integrados; readiness para TLPT onde aplicável
 - [ ] **Evidência:** Data room com políticas, testes, logs, contratos e reporting
@@ -215,23 +217,25 @@ A lista abaixo permite validar a maturidade da **base AppSec e operacional** par
 | **[Cap. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 8–15 | Formação e capacitação contínua |
 | **[Cap. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro)** | Art. 5, 6, 17–23, 28–30 | Governança, RACI, reporte e ciclo de vida fornecedores |
 
+A coluna indica onde cada capítulo contribui, não que o artigo fique coberto. Nos arts. 28.º–30.º, o Manual cobre partes da devida diligência e das cláusulas e dá apoio à evidência; o registo de informações e a análise de concentração ficam fora do âmbito. No art. 19.º, a Política 32 §6 dá apoio à evidência, e a relação com a autoridade fica fora do âmbito. O detalhe está em [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
+
 ---
 
 ## Métrica Simples: Estou Bem Preparado? {#métrica-simples-estou-bem-preparado}
 
-Se consegues responder SIM a isto, tens uma base AppSec forte para uma implementação DORA defensável:
+Cada resposta afirmativa conta um ponto e indica a maturidade da base AppSec para uma implementação DORA defensável:
 
-1. **Governance:** Tenho política aprovada e cadeia de autoridade clara? ✓
-2. **Risk Management:** Todas as apps estão classificadas e ligadas a requisitos? ✓
-3. **Security by Design:** Meus requisitos e controlos são rastreáveis? ✓
-4. **Software Supply:** Tenho SBOM e SCA ativos? ✓
-5. **Operations:** Tenho monitorização centralizada com retenção e proteção adequadas? ✓
-6. **Incident Response:** Consigo detetar, classificar e parametrizar reporte de incidentes? ✓
-7. **Vendor Management:** Tenho ciclo de vida formal de contractors e terceiros críticos? ✓
-8. **Testing:** Faço SAST/DAST e tenho readiness para TLPT quando aplicável? ✓
-9. **Evidence:** Consigo demonstrar tudo isto em auditoria e reporte regulatório? ✓
+1. **Governance:** Tenho política aprovada e cadeia de autoridade clara?
+2. **Risk Management:** Todas as apps estão classificadas e ligadas a requisitos?
+3. **Security by Design:** Meus requisitos e controlos são rastreáveis?
+4. **Software Supply:** Tenho SBOM e SCA ativos?
+5. **Operations:** Tenho monitorização centralizada com retenção e proteção adequadas?
+6. **Incident Response:** Consigo detetar, classificar e parametrizar reporte de incidentes?
+7. **Vendor Management:** Tenho ciclo de vida formal de contractors e terceiros críticos?
+8. **Testing:** Faço SAST/DAST e tenho readiness para TLPT quando aplicável?
+9. **Evidence:** Consigo demonstrar tudo isto em auditoria e reporte regulatório?
 
-**Leitura prática:** quanto mais respostas positivas, mais madura está a tua base AppSec. A passagem para conformidade DORA plena continua a exigir artefactos regulatórios, templates de reporte e formalização institucional que não vivem apenas neste manual.
+**Leitura prática:** quanto mais respostas positivas, mais madura está a base AppSec. A passagem para a conformidade DORA plena continua a exigir o que o Manual deixa fora do âmbito, com razão (continuidade do negócio e gestão de crises, segurança física e dos postos de trabalho, registo de informações, TLPT regulado, canais de reporte), a formalização pelo órgão de administração e o fecho das lacunas declaradas em [Requisitos aplicáveis](./requisitos-aplicaveis#cobertura).
 
 ---
 
@@ -246,7 +250,7 @@ O que caracteriza uma exceção em SbD-ToE/DORA:
 - plano de remediação e owner;
 - trilho documental passível de auditoria.
 
-Quem aprova depende da criticidade, do modelo de governação e do enquadramento regulatório aplicável. Em contextos críticos, a leitura DORA tende a exigir elevação clara da decisão ao nível de gestão apropriado.
+Quem aprova depende da criticidade, do modelo de governação e do enquadramento regulatório aplicável. No Manual, a alçada das exceções sobe, no máximo, ao CISO (Política 05 §6), e o Critical não é aceitável como exceção em L3. Em contextos críticos, a leitura DORA tende a exigir a elevação da decisão ao órgão de administração: é decisão da entidade, fora do âmbito do Manual.
 
 Leitura prática:
 - exceções sem aprovação formal comprometem a supervisão;
@@ -275,7 +279,7 @@ Estes recursos são reutilizáveis para múltiplos frameworks e mostram como ope
 1. Fazer um audit de conformidade atual contra a matriz acima
 2. Sequenciar o roadmap por criticidade, gap e dependência
 3. Implementar por fases, com evidência versionada
-4. Parametrizar a camada regulatória de reporte e terceiros
+4. Ligar o conteúdo da Política 32 §6.1 aos canais da autoridade e assegurar o que fica fora do âmbito (registo de informações, concentração, continuidade)
 5. Validar periodicamente a prontidão documental e operacional
 
 Documentação completa: ver capítulos SbD-ToE 01–14 para detalhe técnico e operacional.
@@ -290,6 +294,6 @@ Documentação completa: ver capítulos SbD-ToE 01–14 para detalhe técnico e 
 
 ---
 
-**Versão:** 1.2 (recalibrado após validação regulatória)  
-**Data:** Abril 2026  
+**Versão:** 1.3 (alinhado com a matriz de cobertura e o contexto DORA)  
+**Data:** Setembro 2026  
 **Nota:** Este playbook complementa a [análise normativa DORA](intro) com implementação prática bounded e orientada a evidência.

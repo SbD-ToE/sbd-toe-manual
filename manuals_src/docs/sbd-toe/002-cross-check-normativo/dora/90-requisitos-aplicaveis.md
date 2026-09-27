@@ -671,10 +671,10 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 | Força | Obrigações |
 |---|--:|
 | Cobre | 166 |
-| Parcial | 109 |
+| Parcial | 104 |
 | Apoia evidência | 123 |
 | Lacuna | 3 |
-| Fora de âmbito | 225 |
+| Fora de âmbito | 230 |
 
 ## O que este Manual cobre e o que fica de fora {#cobertura}
 
@@ -976,7 +976,7 @@ Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requi
 | DORA-RTS1190-10-1 | art. 10.º, n.º 1 | Apoia evidência | [6) Checklist de readiness (binário)](/sbd-toe/sbd-manual/testes-seguranca/addon/tlpt-readiness#6-checklist-de-readiness-binário); [Cap. 12 US-16](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle#us-16---cobertura-attck-e-priorização-epsskev) |
 | DORA-RTS1190-13-2 | art. 13.º, n.º 2 | Apoia evidência | `TST-003`; [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem) |
 
-### Lacuna declarada (112) {#lacuna}
+### Lacuna declarada (107) {#lacuna}
 
 Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
 
@@ -1027,10 +1027,6 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | DORA-RTS1774-2-1-b | art. 2.º, n.º 1, al. b) | Parcial | `ACC-003`; `ACC-006`; `OPS-009` | Deteção de intrusões ao nível de rede. |
 | DORA-RTS1774-2-1-d | art. 2.º, n.º 1, al. d) | Parcial | `INT-009`; `INT-010`; `INT-012` | Garantia de transmissão rápida sem atrasos indevidos (desempenho). |
 | DORA-RTS1774-3-c-p2 | art. 3.º, segundo parágrafo, als. a) a c) | Parcial | `GOV-010`; `OPS-010` | Verificação sistemática de se a tolerância foi atingida após tratamento. |
-| DORA-RTS1774-4-1 | art. 4.º, n.º 1 | Parcial | `CLA-008`; `DEP-001`; [Política 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | Política de gestão de ativos TIC abrangendo hardware, rede e licenças. |
-| DORA-RTS1774-4-2-a | art. 4.º, n.º 2, al. a) | Parcial | [Política 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching); `CLA-008` | Gestão do ciclo de vida de todos os ativos TIC. |
-| DORA-RTS1774-4-2-b | art. 4.º, n.º 2, al. b) | Parcial | `CLA-008`; `ARC-002`; `DEP-001` | Atributos obrigatórios: localização física/lógica, funções apoiadas, RTO/RPO, datas de fim de suporte. |
-| DORA-RTS1774-4-2-c | art. 4.º, n.º 2, al. c) | Parcial | [🛠️ Abordagem proposta](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta) | Registos específicos para a avaliação anual de risco de sistemas legados. |
 | DORA-RTS1774-5-1 | art. 5.º, n.º 1 | Parcial | `CLA-008`; [Política 11 §7](/sbd-toe/assets/policies/policy-sbom#7-inventário-em-produção) | Procedimento de gestão de ativos TIC (não só aplicações e componentes). |
 | DORA-RTS1774-6-2-b | art. 6.º, n.º 2, al. b) e segundo parágrafo | Lacuna | — | Regras para dados em utilização ou ambiente separado equivalente. |
 | DORA-RTS1774-8-1 | art. 8.º, n.º 1 | Parcial | `OPS-001`; [Política 31 §3](/sbd-toe/assets/policies/policy-gestao-alertas#3-classificação-de-alertas); [Política 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback) | Documentação operacional de operação, controlo e restauração de ativos TIC. |
@@ -1080,7 +1076,6 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | DORA-RTS1774-29-2 | art. 29.º, n.º 2 | Parcial | `CLA-003`; `GOV-006` | Medidas mitigadoras aplicadas por prestadores TIC. |
 | DORA-RTS1774-30-1 | art. 30.º, n.º 1 | Parcial | `CLA-001`; `CLA-008` | Identificação de funções críticas ou importantes e interdependências. |
 | DORA-RTS1774-33 | art. 33.º, prim. parágrafo | Parcial | `ACC-001`; `ACC-010` | Controlo de acesso físico. |
-| DORA-RTS1774-34-a | art. 34.º, al. a) | Parcial | [Política 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching); `CLA-008` | Ciclo de vida de todos os ativos TIC. |
 | DORA-RTS1774-34-b | art. 34.º, al. b) | Parcial | [Política 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Verificação do suporte de terceiros para todos os ativos (EOL fora de imagens base/dependências). |
 | DORA-RTS1774-34-c | art. 34.º, al. c) | Parcial | `OPS-015` | Planeamento de capacidade. |
 | DORA-RTS1774-34-e | art. 34.º, al. e) | Parcial | [🛠️ Abordagem proposta](/sbd-toe/sbd-manual/governanca-contratacao/addon/governanca-legada#️-abordagem-proposta); [Política 24 §6](/sbd-toe/assets/policies/policy-golden-base-images#6-sla-de-patching) | Gestão de riscos de hardware obsoleto/sem suporte. |
@@ -1095,7 +1090,7 @@ Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e 
 | DORA-RTS1774-40-1 | art. 40.º, n.os 1 e 2 | Parcial | [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); [Política 27 §7](/sbd-toe/assets/policies/policy-rollback#7-teste-periódico-de-rollback); `OPS-016` | Testes dos planos de continuidade da entidade com cenários (fora do âmbito do Manual); o teste de salvaguarda e restauração está prescrito (OPS-016). |
 | DORA-RTS1774-40-3 | art. 40.º, n.º 3 | Parcial | [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp) | Reporte de deficiências ao órgão de administração. |
 
-### Fora de âmbito (225) {#fora-de-ambito}
+### Fora de âmbito (230) {#fora-de-ambito}
 
 Obrigações que o Manual declara fora de âmbito, com a razão.
 
@@ -1133,9 +1128,9 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-27-3 | art. 27.º, n.º 3 | Processo TLPT regulado (Reg. Delegado (UE) 2025/1190) — o addon 14 do Cap. 10 declara-o expressamente fora do âmbito do Manual (compliance/GRC/supervisor). |
 | DORA-28-1-a | art. 28.º, n.º 1, al. a) | Princípio de responsabilidade jurídica mantida pela entidade financeira. |
 | DORA-28-2-orgao | art. 28.º, n.º 2, última frase | Dever do órgão de administração / estrutura de governo interno; o Manual não fixa órgãos nem alçadas societárias. |
-| DORA-28-3-p2 | art. 28.º, n.º 3, 2.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-28-3-p3 | art. 28.º, n.º 3, 3.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-28-3-p4 | art. 28.º, n.º 3, 4.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
+| DORA-28-3-p2 | art. 28.º, n.º 3, 2.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-28-3-p3 | art. 28.º, n.º 3, 3.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-28-3-p4 | art. 28.º, n.º 3, 4.º parágrafo | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
 | DORA-28-3-p5 | art. 28.º, n.º 3, 5.º parágrafo | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. |
 | DORA-28-4-b | art. 28.º, n.º 4, al. b) | Verificação de condições de supervisão da subcontratação — plano jurídico-regulatório. |
 | DORA-28-4-e | art. 28.º, n.º 4, al. e) | Conflitos de interesses no acordo — plano jurídico/compliance. |
@@ -1143,7 +1138,7 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-28-8-p2 | art. 28.º, n.º 8, 2.º parágrafo | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. Planeamento de saída de prestadores. |
 | DORA-28-8-p3 | art. 28.º, n.º 8, 3.º parágrafo | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. Planos de saída documentados e testados. |
 | DORA-28-8-p5 | art. 28.º, n.º 8, 5.º parágrafo | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. |
-| DORA-29-1 | art. 29.º, n.º 1, 1.º parágrafo, al. a) e b) | Risco de concentração de terceiros TIC — análise regulatória; lacuna intencional (sem fórmulas de concentração). |
+| DORA-29-1 | art. 29.º, n.º 1, 1.º parágrafo, al. a) e b) | Risco de concentração de terceiros TIC — análise regulatória; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
 | DORA-29-1-p2 | art. 29.º, n.º 1, 2.º parágrafo | Idem 29-1. |
 | DORA-29-2 | art. 29.º, n.º 2, 1.º parágrafo | Idem 29-1 (subcontratação em país terceiro). |
 | DORA-29-2-p2 | art. 29.º, n.º 2, 2.º parágrafo | Conteúdo contratual/jurídico específico do DORA sem correspondente prescritivo no Manual. |
@@ -1165,7 +1160,7 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-42-1 | art. 42.º, n.º 1 | Quadro de superintendência de terceiros prestadores críticos (arts. 31.º–44.º) — relação prestador/autoridade, fora de um manual de engenharia. |
 | DORA-42-3-p2 | art. 42.º, n.º 3, 2.º parágrafo | Quadro de superintendência de terceiros prestadores críticos (arts. 31.º–44.º) — relação prestador/autoridade, fora de um manual de engenharia. |
 | DORA-42-9-p2 | art. 42.º, n.º 9, 2.º parágrafo | Quadro de superintendência de terceiros prestadores críticos (arts. 31.º–44.º) — relação prestador/autoridade, fora de um manual de engenharia. |
-| DORA-45-1 | art. 45.º, n.º 1, al. a) a c) | Acordos institucionais de partilha de informação sobre ciberameaças (faculdade condicionada); o cross-check declara lacuna intencional. |
+| DORA-45-1 | art. 45.º, n.º 1, al. a) a c) | Acordos institucionais de partilha de informação sobre ciberameaças (faculdade condicionada); fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
 | DORA-45-2 | art. 45.º, n.º 2 | Conteúdo contratual/jurídico específico do DORA sem correspondente prescritivo no Manual. |
 | DORA-45-3 | art. 45.º, n.º 3 | Reporte/relação com a autoridade competente — plano jurídico-regulatório, não prescrição de engenharia de software. |
 | DORA-59 | art. 59.º (altera Reg. (CE) 1060/2009, anexo I, secção A, ponto 4) | Alteração a atos sectoriais (agências de notação, CCP, APA/CTP/ARM, índices) — remissão jurídica. |
@@ -1185,17 +1180,17 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS1773-7-2 | art. 7.º, n.º 2 | Serviços intragrupo — organização societária. |
 | DORA-RTS1773-8-4 | art. 8.º, n.º 4 | Conteúdo contratual/jurídico específico do DORA sem correspondente prescritivo no Manual. |
 | DORA-RTS1773-10 | art. 10.º | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. Plano de saída por acordo. |
-| DORA-ITS2956-2 | art. 2.º | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-1 | art. 3.º, n.º 1 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-2 | art. 3.º, n.º 2, al. a) e b) | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-3 | art. 3.º, n.º 3 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-4 | art. 3.º, n.º 4, al. a) a f) | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-5 | art. 3.º, n.º 5 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-3-6 | art. 3.º, n.º 6 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-4 | art. 4.º, n.os 2 e 3 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-5-1 | art. 5.º, n.º 1, al. a) a o); anexo I | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-6 | art. 6.º, n.os 1 e 2 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
-| DORA-ITS2956-AnexoI | anexo I, parte 1 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; lacuna intencional declarada no cross-check DORA. |
+| DORA-ITS2956-2 | art. 2.º | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-1 | art. 3.º, n.º 1 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-2 | art. 3.º, n.º 2, al. a) e b) | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-3 | art. 3.º, n.º 3 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-4 | art. 3.º, n.º 4, al. a) a f) | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-5 | art. 3.º, n.º 5 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-3-6 | art. 3.º, n.º 6 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-4 | art. 4.º, n.os 2 e 3 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-5-1 | art. 5.º, n.º 1, al. a) a o); anexo I | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-6 | art. 6.º, n.os 1 e 2 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
+| DORA-ITS2956-AnexoI | anexo I, parte 1 | Registo de informações regulatório (art. 28.º, n.º 3; ITS 2024/2956) — modelos e reporte à autoridade; fora de âmbito: plano regulatório da entidade, não prescrição de engenharia de software. |
 | DORA-RTS532-1 | art. 1.º, al. a) a l) | Proporcionalidade na gestão da subcontratação — plano contratual. |
 | DORA-RTS532-2 | art. 2.º | Coerência no grupo — organização societária. |
 | DORA-RTS532-3-1-f | art. 3.º, n.º 1, al. f) | Avaliação de riscos de cadeias de subcontratação (capacidade, falha, localização, concentração, auditoria) — análise contratual/regulatória. |
@@ -1221,6 +1216,10 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS532-5-4 | art. 5.º, n.º 4 | Conteúdo contratual/jurídico específico do DORA sem correspondente prescritivo no Manual. Cláusulas sobre subcontratantes. |
 | DORA-RTS1774-2-2-e | art. 2.º, n.º 2, al. e) | Consequências disciplinares do incumprimento — regime de RH/compliance. |
 | DORA-RTS1774-2-2-g | art. 2.º, n.º 2, al. g) | Dever do órgão de administração / estrutura de governo interno; o Manual não fixa órgãos nem alçadas societárias. Segregação de funções entre linhas de defesa. |
+| DORA-RTS1774-4-1 | art. 4.º, n.º 1 | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-a | art. 4.º, n.º 2, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-b | art. 4.º, n.º 2, al. b) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
+| DORA-RTS1774-4-2-c | art. 4.º, n.º 2, al. c) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
 | DORA-RTS1774-8-2-b-ii | art. 8.º, n.º 2, al. b), subal. ii) | Calendarização de processamento (scheduling) com interdependências — operação de TI. |
 | DORA-RTS1774-9-2 | art. 9.º, n.º 2 | Sistemas com aquisição longa ou intensivos em recursos — planeamento de aquisição de TI. |
 | DORA-RTS1774-11-2-e | art. 11.º, n.º 2, al. e) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
@@ -1247,6 +1246,7 @@ Obrigações que o Manual declara fora de âmbito, com a razão.
 | DORA-RTS1774-28-3 | art. 28.º, n.º 3 | Responsabilidade jurídica mantida ao subcontratar verificação. |
 | DORA-RTS1774-28-4 | art. 28.º, n.º 4 | Dever do órgão de administração / estrutura de governo interno; o Manual não fixa órgãos nem alçadas societárias. Segregação entre controlo e auditoria interna. |
 | DORA-RTS1774-32 | art. 32.º, n.os 1 a 3 | Segurança física e ambiental de instalações — fora do âmbito de um manual de engenharia de software. |
+| DORA-RTS1774-34-a | art. 34.º, al. a) | A gestão de activos da entidade como um todo (inventário e classificação de todos os activos, infraestrutura, equipamentos, licenças) fica fora de âmbito por decisão do lead: o Manual é centrado na aplicação. O inventário e a classificação da aplicação e dos seus componentes (CLA-001, SBOM) dão evidência para a parte que lhe toca. |
 | DORA-RTS1774-35-f | art. 35.º, al. f) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
 | DORA-RTS1774-35-g | art. 35.º, al. g) | Segurança de postos de trabalho/dispositivos e suportes físicos (TI corporativa) — fora do ciclo de vida de desenvolvimento seguro. |
 | DORA-RTS1774-39-2-a | art. 39.º, n.º 2, als. a) a c) | Gestão da continuidade do negócio/crise (BCM) de nível organizacional — o Manual trata resposta a incidentes cibernéticos e rollback, não BCM geral. |

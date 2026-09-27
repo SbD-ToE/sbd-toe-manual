@@ -212,7 +212,7 @@ Como **AppSec Engineer**, quero **formalizar exceções a CVEs**, para **manter 
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Justificação simples |
+| L1 | Sim | Registo formal com justificação, compensação, aprovador e prazo |
 | L2 | Sim | Revalidação na expiração (TTL da Política 05 §7: 60 dias Low/Medium, 30 dias High) |
 | L3 | Sim | Validação executiva + métricas de risco
 
@@ -389,8 +389,8 @@ Como **DevOps/Developer**, quero **bots de atualização com avaliação de impa
 | Nível | Política |
 |---|---|
 | L1 | Bots opcionais; *auto‑PR* para *patch/minor* |
-| L2 | Bots obrigatórios; *auto‑merge* para *patch* com CI verde |
-| L3 | Bots obrigatórios; *impact analysis* + *canary*; *auto‑merge* apenas *patch*; *minor/major* requer aprovação humana e promoção por estágios |
+| L2 | Bots obrigatórios; *auto‑merge* apenas para actualizações *patch* ou de segurança, com todos os *gates* obrigatórios verdes, registo rastreável e declarado na política; *minor/major* requer revisão humana |
+| L3 | Bots obrigatórios; *impact analysis* + *canary*; *auto‑merge* apenas para actualizações *patch* ou de segurança, com todos os *gates* obrigatórios verdes, registo rastreável e declarado na política; *minor/major* requer aprovação humana e promoção por estágios |
 
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
@@ -768,7 +768,7 @@ Como **Developer/Lead**, quero **fixar todas as dependências a versões exactas
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| *Lockfile* presente; *pinning* recomendado | *Lockfile* obrigatório + verificação de hash | *Lockfile* + hash + proveniência verificada (*attestation*) e *gate* bloqueante |
+| *Lockfile* obrigatório, sem `latest`/`*`/ranges não limitados, + verificação de hash | *Lockfile* obrigatório + verificação de hash | *Lockfile* + hash + proveniência verificada (*attestation*) e *gate* bloqueante |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -884,15 +884,15 @@ Ums dos aspetos fundamentais no  **Cap. 12 - Monitorização & Operação Segura
 |---------|----|----|----|
 | SBOM | Básico por build | Completo por release | Assinado + integridade + proveniência |
 | Inventário runtime | Recomendado | Obrigatório | Contínuo + deteção de *drift* |
-| SCA | Aviso | Bloqueio High/Critical | Bloqueio Medium+ + feed CVE ativo |
-| Alertas CVE implantadas | Manual / ad hoc | Automático por ambiente | Automático + correlação e escalonamento |
-| Pinning de versões | Recomendado | Obrigatório | Obrigatório + validação de proveniência |
-| Exceções / VEX | Simples | Formais + revisão periódica | Formais + revalidação automática |
+| SCA | Bloqueio High/Critical | Bloqueio High/Critical | Bloqueio Medium+ + feed CVE ativo |
+| Alertas CVE implantadas | Manual, com triagem dentro do SLA por severidade | Automático por ambiente | Automático + correlação e escalonamento |
+| Pinning de versões | Obrigatório (*lockfile* + hash) | Obrigatório | Obrigatório + validação de proveniência |
+| Exceções / VEX | Formais (justificação, compensação, aprovador e prazo) | Formais + revisão periódica | Formais + revalidação automática |
 | Repositório interno | Recomendado | Obrigatório | Obrigatório + assinatura e *provenance attestation* |
 | Bibliotecas copiadas | Proibidas (política) | Auditoria periódica | Enforcement CI/CD + bloqueio |
 | Auditoria de libs copiadas | Política documentada; mensal | Scanner automático; quinzenal | Scanner automático; semanal + bloqueio CI/CD |
 | Validação de licenças | Manual, ad hoc | Automática com alerta | Automática com bloqueio (exceto exceções formais) |
-| Bots / automação de patching | Opcional | Ativos + *auto-merge patch* | Ativos + *impact analysis*, *canary* e rollback |
+| Bots / automação de patching | Opcional | Ativos + *auto-merge* só de *patch*/segurança com *gates* verdes, registo rastreável e declarado na política; *minor/major* com revisão humana | Ativos + *impact analysis*, *canary* e rollback |
 | Integração com Cap. 12 | Opcional | Alertas SIEM básicos | Total: SOAR, métricas MTTR/MTTA e escalonamento |
 
 ---

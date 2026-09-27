@@ -233,7 +233,7 @@ Como **DevOps / SRE**, quero integrar linters e SAST no pipeline, para detetar f
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |-------|--------------|---------|
-| L1    | Sim          | Linters básicos + SAST leve |
+| L1    | Sim          | Linters de segurança + SAST com bloqueio de findings High/Critical |
 | L2    | Sim          | SAST completo + *gating* de severidade |
 | L3    | Sim          | SAST + validações adicionais (IaC/DAST) |
 
@@ -368,7 +368,7 @@ Como **AppSec Engineer**, quero rever e publicar guidelines curadas trimestralme
 **Proporcionalidade por risco.**
 | Nível | Obrigatório? | Ajustes |
 |-------|--------------|---------|
-| L1    | Opcional     | Uso de regras upstream *default* |
+| L1    | Sim          | Regras upstream *default*, aprovadas e revistas dentro do período de validade |
 | L2    | Sim          | Curadoria organizacional obrigatória |
 | L3    | Sim          | *Policy-as-code* + distribuição controlada |
 
@@ -567,7 +567,7 @@ Como **Developer**, quero executar **linters e validações de segurança localm
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |-------|---------------|---------|
-| L1 | Recomendado | Linters básicos (style, typos) |
+| L1 | Sim | Linter com regras de segurança activo localmente (hook ou IDE) |
 | L2 | Sim | Linters obrigatórios + *secrets scanning* |
 | L3 | Sim | Pre-commit + SAST leve local + validação de padrões |
 
@@ -614,7 +614,7 @@ Como **AppSec Engineer**, quero que o pipeline **detete automaticamente padrões
 **Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |-------|---------------|---------|
-| L1 | Sim | Deteção de padrões **críticos** apenas (eval, exec) |
+| L1 | Sim | Deteção de padrões **críticos** e **high** (eval, exec, SQL, XSS) |
 | L2 | Sim | Deteção expandida (**críticos** + **high**: SQL, XSS) |
 | L3 | Sim | Deteção completa + contexto e reforço educativo |
 
@@ -752,7 +752,7 @@ Como **AppSec Engineer**, quero que a proveniência de todo o código incorporad
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Proveniência sinalizada; SAST com baseline básica | Proveniência identificada + revisão humana para origem não interna; baseline aprovada por AppSec + thresholds por perfil | + *policy-as-code* do gate, auditoria periódica da baseline e dos perfis, retenção auditável dos desvios |
+| Proveniência sinalizada; SAST com baseline aprovada por AppSec e bloqueio High/Critical | Proveniência identificada + revisão humana para origem não interna; baseline aprovada por AppSec + thresholds por perfil | + *policy-as-code* do gate, auditoria periódica da baseline e dos perfis, retenção auditável dos desvios |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -792,14 +792,14 @@ Como **AppSec Engineer**, quero que a proveniência de todo o código incorporad
 | Guidelines | Regras upstream | Curadas por stack | Auditadas e *policy-as-code* |
 | Revisão de código | Checklist básica | Dupla revisão | Revisão dedicada (inclui AppSec quando aplicável) |
 | Dependências | Validação simples | Validação formal | SBOM rastreável |
-| CI/CD | Linters básicos | SAST obrigatório | SAST + IaC/DAST + políticas |
+| CI/CD | Linters de segurança + SAST (bloqueio High/Critical) | SAST obrigatório | SAST + IaC/DAST + políticas |
 | Exceções | Registo simples | Revalidação por sprint | Dupla aprovação |
 | GenIA | Registo opcional | Revisão + constrangimentos obrigatórios | Revisão formal, licenças e evidência reforçada |
 | Governação | Curadoria anual | Trimestral | Contínua e automatizada |
 | Evidências | Export manual | Export automático | Arquivo imutável e auditado |
 | Security Gate | Básico | Completo | Reforçado e automatizado |
-| Validações Locais (US-12) | Recomendado | Obrigatório | Obrigatório + SAST leve |
-| Padrões Perigosos (US-13) | Críticos apenas | Críticos + High | Completo + educação |
+| Validações Locais (US-12) | Obrigatório (linter de segurança local) | Obrigatório | Obrigatório + SAST leve |
+| Padrões Perigosos (US-13) | Críticos + High | Críticos + High | Completo + educação |
 | Métricas & Conformidade (US-14) | Recomendado | Com alertas | Contínuo + SLA |
 
 ---

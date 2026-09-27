@@ -143,7 +143,7 @@ Histórico de commits; ficheiro `ci-pipeline.yml`; aprovação PR; logs de revis
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Versão única do pipeline com aprovação manual |
+| L1 | Sim | Pipeline versionado no repositório; alterações só por PR com revisão |
 | L2 | Sim | Versionamento e revisão obrigatória |
 | L3 | Sim | Controlo de alterações assinado e validação reforçada de proveniência |
 
@@ -181,7 +181,7 @@ Como **Developers**, quero que o pipeline execute validadores de segurança com 
 - [ ] Secrets scanning ativo  
 - [ ] IaC scanning (quando aplicável)  
 - [ ] Logs/artefactos de execução guardados  
-- [ ] Falhas High bloqueiam merge (L2/L3)
+- [ ] Falhas High/Critical bloqueiam merge (L1–L3)
 :::
 
 **🧾 Artefactos & evidências.**  
@@ -190,8 +190,8 @@ Relatórios de scanners; logs CI/CD; *exit codes*; registos de bloqueio; dashboa
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Validação base (SAST, secrets) |
-| L2 | Sim | Inclusão de IaC e análise de dependências |
+| L1 | Sim | Validação base bloqueante (SAST, SCA, secrets) + SBOM por build; scan de imagens quando existam containers |
+| L2 | Sim | Base L1 + inclusão de IaC |
 | L3 | Sim | Validação completa incluindo containers e SBOM |
 
 **Integração no SDLC.**
@@ -233,7 +233,7 @@ Políticas de segredos; logs de acesso; configuração OIDC; evidência de TTL/r
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Segredos armazenados encriptados + masking |
+| L1 | Sim | Segredos em cofre ou variáveis protegidas da plataforma + masking |
 | L2 | Sim | OIDC implementado com TTL controlado |
 | L3 | Sim | Tokens efémeros automáticos e rotação frequente |
 
@@ -308,7 +308,7 @@ Como **DevOps / SRE**, quero que todos os artefactos sejam assinados e tenham pr
 - [ ] Assinatura automática  
 - [ ] Proveniência gerada  
 - [ ] Verificação antes de release  
-- [ ] Rejeição automática em falha (L2/L3)
+- [ ] Rejeição automática em falha (L1–L3)
 :::
 
 **🧾 Artefactos & evidências.**  
@@ -319,7 +319,7 @@ Assinaturas digitais; ficheiros de proveniência; logs de promoção; auditoria 
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Assinatura recomendada + verificação manual em releases |
+| L1 | Sim | Hash verificável gerado no build + verificação antes da promoção, com rejeição em falha (assinatura recomendada) |
 | L2 | Sim | Assinatura automática + verificação obrigatória |
 | L3 | Sim | Bloqueio automático + validações reforçadas de proveniência |
 
@@ -364,7 +364,7 @@ Políticas de gates; logs de bloqueio; registos de alteração de thresholds; ev
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Sim | Bloqueio apenas em Critical |
+| L1 | Sim | Bloqueio High/Critical |
 | L2 | Sim | Bloqueio High/Critical + aprovação AppSec para exceções |
 | L3 | Sim | Bloqueio automático + governança reforçada (incl. GRC em exceções) |
 
@@ -407,7 +407,7 @@ Relatórios de scanning; SBOM; auditoria de imagens; logs de builds.
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---|---|
-| L1 | Opcional | Scans de imagens base periódicos |
+| L1 | Sim | Scan de imagens no pipeline (Critical bloqueia) + SBOM por build |
 | L2 | Sim | SBOM obrigatório + validação de base images |
 | L3 | Sim | Scans contínuos + correlação de CVEs + bloqueios em risco crítico |
 
@@ -1144,10 +1144,10 @@ A matriz assegura que o esforço é proporcional ao risco **sem nunca compromete
 | Determinismo        | Logging suficiente                 | Reprodutibilidade como requisito            | Reprodutibilidade + auditoria reforçada |
 | Sinal vs decisão    | Aprovação nominal para produção    | Aprovação nominal + separação de funções    | Aprovação nominal + controlo reforçado + auditoria |
 | Evidência empírica  | Logs básicos + artefactos chave    | Logs + *exit codes* + retenção reforçada    | Evidência completa + export imutável (quando exigido) |
-| Scanners            | SAST + secrets                     | + IaC + dependências                        | + containers + SBOM + cobertura alargada |
+| Scanners            | SAST + SCA + secrets + SBOM (+ imagens, se existirem) | + IaC                                        | + cobertura alargada |
 | Segredos            | Masking + armazenamento seguro     | OIDC preferido + TTL controlado             | OIDC obrigatório + TTL curto + rotação frequente |
 | Runners             | Partilhados com hardening          | Segregados por projeto                       | Efémeros + segmentação de rede + destruição automática |
-| Artefactos          | Assinatura recomendada             | Assinatura + verificação obrigatória        | Bloqueio automático em falha + proveniência reforçada |
+| Artefactos          | Hash verificado antes da promoção + rejeição em falha; assinatura recomendada | Assinatura + verificação obrigatória        | Bloqueio automático em falha + proveniência reforçada |
 | Exceções            | Registo simples                    | Aprovação dupla + TTL                         | Aprovação dupla + revisão frequente + auditoria |
 | Rastreabilidade     | Logs 30 dias                       | Logs 90 dias + correlação commit-build        | ≥1 ano + export imutável + dashboards |
 | DAST                | Manual periódico                   | Em staging pré-release                       | Contínuo + bloqueio automático |

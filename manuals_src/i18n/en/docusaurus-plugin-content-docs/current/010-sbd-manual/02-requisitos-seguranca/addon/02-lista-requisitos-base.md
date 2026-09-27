@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 9be78c355bbd0770e892a0f0b25b367dd476848986b15c57dc06365f74d36e24
-  source_commit: 550e045d15f912fcb68829e17082413a5d80bd97
-  target_sha256: 4d774d9093f6a33445ddea329878c1177973748bbcd099146aa6d265b2ef05b0
+  source_sha256: 09b7e66fbe01a405085c2ea22a4b7548720965c50e696b573405001e75f11f39
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 0886173da20f4e77ff45244a9be15ff04739c822fdfe3c6b5906a9c7c6b52f20
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-27T16:11:04Z
-  stamped_at: 2026-09-27T16:11:04Z
+  translated_at: 2026-09-27T18:03:41Z
+  stamped_at: 2026-09-27T18:03:41Z
   reviewed_by: null
 ---
 
@@ -260,17 +260,21 @@ Requirements that guarantee the protection of sensitive data in transit and at r
 
 Engineering requirements on personal data: what is collected, how long it is kept, and what the system is able to do with that data. The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue: it is a matter for the normative cross-check and the regulatory overlay.
 
+An application with personal data can be L1 (personal data score D=2, and E1+D2+I1 = 4). That is why `PRI-001`, `PRI-002`, `PRI-003`, `PRI-006` and `PRI-007` apply from L1: the harm to the data subject does not depend on the level. The inventory (`PRI-004`) and the PII-in-logs concept (`PRI-005`) stay at L2/L3; when the GDPR applies, the regulatory overlay raises them to all levels.
+
 | ID | Name | L1 | L2 | L3 | Acceptance criterion |
 |----|------|:--:|:--:|:--:|----------------------|
-| PRI-001 | Minimisation of the personal data collected | - | ✔ | ✔ | Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow. |
-| PRI-002 | Retention of personal data with a deadline and effective deletion | - | ✔ | ✔ | Personal-data sets have a defined retention period; deletion at the end of the period is carried out and verifiable by sampling or automated evidence. |
-| PRI-003 | Technical capability for deletion and export on request | - | ✔ | ✔ | A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database. |
-| PRI-004 | Record of purpose per personal-data set | - | ✔ | ✔ | An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded. |
-| PRI-005 | Documented and applied concept for PII in logs | - | ✔ | ✔ | A documented concept for handling PII in logs exists (what is logged, masked how, for how long) and its application is verified. |
+| PRI-001 | Minimisation of the personal data collected | ✔ | ✔ | ✔ | Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow. |
+| PRI-002 | Retention of personal data with a deadline and effective deletion | ✔ | ✔ | ✔ | Personal-data sets have a defined retention period; deletion at the end of the period is carried out, reaches replicas, caches and downstream systems, and is verifiable by sampling or automated evidence; in backups, the data expire with the backup retention cycle, within a declared period. Irreversible anonymisation is an accepted alternative to deletion. When the organisation processes data on behalf of a customer, at the end of the service the data and their copies are deleted or returned, as the contract provides, with evidence. |
+| PRI-003 | Technical capability for access, rectification, deletion and export on request | ✔ | ✔ | ✔ | A tested mechanism exists, without manual intervention in the database, to do the following with the personal data of an identified data subject: export a copy in a structured, commonly used and machine-readable format; rectify and complete them; delete them, including replicas, caches and downstream systems. Rectifications and deletions propagate to the known recipients (at L2/L3, those recorded in `PRI-004`). A request received outside the authenticated channel is carried out only after the requester's identity has been verified. At L1, a documented procedure with a tested administrative function or script is enough; at L2/L3, it is a feature of the application or of the back office, and each execution is logged. |
+| PRI-004 | Record of purpose and recipients per personal-data set | - | ✔ | ✔ | An inventory associates each personal-data set with its purpose, the system that processes it and the recipients, internal and external, to whom it is disclosed; changes of purpose or of recipients are recorded. |
+| PRI-005 | Documented and applied concept for PII in logs | - | ✔ | ✔ | A documented concept for handling PII in logs exists (what is logged, masked how, for how long) and its application is verified. In immutable (WORM) logs and backups, personal data enter only as a pseudonymous identifier; any identifying content is encrypted with a per-person key, and deletion is achieved by destroying that key (Policy 29 §8). |
+| PRI-006 | Technical management of consent and objection preferences | ✔ | ✔ | ✔ | When the application processes data on the basis of consent, or allows a person to refuse a processing operation (e.g. marketing communications, profiling): each consent is recorded in an auditable way (data subject, time, purpose, version of the text shown); withdrawal or objection is available through the same channel and takes no more effort than giving consent; it takes effect in the dependent processing and persists, without being reset by re-imports or synchronisations. |
+| PRI-007 | Privacy by default in user-facing settings | ✔ | ✔ | ✔ | Sharing, visibility and optional-processing settings start at the most protective option: optional processing requires action by the user (opt-in), and profiles and personal content are not visible to an indefinite number of people without the user's intervention; the default configuration is verified in testing. |
 
 The existing neighbours keep their object: `ENC-005` forbids sensitive data in clear text in logs, outputs and API responses; `ERR-007` requires pseudonymised context in error logs (L2+); `LOG-005` sets the **minimum** retention of logs. `PRI-002` sets the **maximum** retention of business personal data, and `PRI-005` adds what none of them prescribes: the documented and verified concept — it does not repeat the prohibition, it requires the concept.
 
-**Sources.** PRI-001…004 — [authorship] SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
+**Sources.** PRI-001…004, PRI-006 and PRI-007 — [authorship] SbD-ToE (reference threat: CWE-359); PRI-005 — DSOMM activity "PII logging concept" (`UNIT-DSOMM-ACTIVITY-613A73DC4F6049DBA6CE4FB7BF8519F9`: "A concept how to log PII is documented and applied") and CWE-359. The sources anchor the derivation; the prescription is an editorial choice of SbD-ToE.
 
 ---
 

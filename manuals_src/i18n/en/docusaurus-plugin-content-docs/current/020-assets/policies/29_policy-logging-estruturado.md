@@ -8,16 +8,16 @@ sidebar_position: 29
 translation:
   source_locale: pt
   source_path: 020-assets/policies/29_policy-logging-estruturado.md
-  source_sha256: 3d3fe5fefa5fbc079495d094260c12bbc0fca8da7945769d11a69a8a0bd7f515
-  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
-  target_sha256: cfe588dde1088f7f3334bdbf99045dfd44fbe22d93b73a73f384fa4678cec142
+  source_sha256: a5c568fe2f61efa0de8b657741031cf71a401f89319ea312a0e7c5440995ca12
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: d38907739e9ca670544d53e32932450c9a77813cde37c94afa1fbbdbf6c6a8e9
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, chapter_role, cra_pde, cra_support_period, dora_financial_entity, dora_ict_risk, eu_ai_high_risk_system, eu_ai_system, eu_placing_on_market, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd]
   glossary_sha256: 13eead8e525138156b7211211b2b0691110ae1f044a37b8f2f4049cea01e2c3b
-  translated_at: 2026-09-27T13:29:40Z
-  stamped_at: 2026-09-27T13:29:40Z
+  translated_at: 2026-09-27T18:03:17Z
+  stamped_at: 2026-09-27T18:03:17Z
   reviewed_by: null
 ---
 
@@ -163,6 +163,18 @@ The Manual does not reproduce the periods of regimes (b) to (d): the organisatio
 | Periodic hashing or signing of logs | Not applicable | Recommended | Mandatory |
 | Access to logs restricted and audited | Mandatory (restricted access); auditing of access recommended | Mandatory | Mandatory |
 | Alerts upon any attempt at alteration or deletion | Not applicable | Recommended | Mandatory |
+
+### 8.1 Immutability and deletion of personal data {#81-imutabilidade-e-apagamento-de-dados-pessoais}
+
+A record that cannot be altered cannot be deleted on request either. So that immutability does not prevent the deletion of personal data (`PRI-003`), this rule applies to immutable logs and backups:
+
+- personal data enter only as an internal pseudonymous identifier, never as a direct identifier (name, email, document number);
+- any identifying content that has to stay in the record is encrypted with a per-person key, kept outside the immutable storage;
+- a deletion request is met by destroying that person's key (*crypto-shredding*); what remains of the record no longer identifies the person and is kept until the end of the retention period, with restricted access;
+- when a backup is restored, the deletions requested after the backup date are re-applied;
+- the decision is logged, together with the originating request.
+
+Whether destroying the key counts legally as deletion is a matter for the DPO; the Manual prescribes the technical mechanism (`PRI-005`).
 
 ---
 

@@ -8,16 +8,16 @@ sidebar_position: 8
 translation:
   source_locale: pt
   source_path: 020-assets/policies/08_policy-threat-modeling.md
-  source_sha256: c2959df69bcf8fb7086fae3dcefa7bf2c1e15ef4551f638950f6db51609a55d3
-  source_commit: 32978973a6e4e01d6abcfe36fb0e33a8192cb20d
-  target_sha256: 527974bfe438bd4def007aae727917c2efa2b22114e8ff7d6e483d475c741cb5
+  source_sha256: c794ce952a47626eb99fe061ad2d96ad5fd6c31ba5ff64305341f12ea076612f
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 73af12d0b8b41fe48c1b83e453a8a409c96d1597b492dba63920425e8fc5e3ed
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, nist_sp_800_154_title, owasp_threat_modeling_cheat_sheet, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability]
   glossary_sha256: 0ed186f3703cb74264ad6c652f0dbf6244477db2bc9c60212228da1676bd5da3
-  translated_at: 2026-09-27T15:08:12Z
-  stamped_at: 2026-09-27T15:08:12Z
+  translated_at: 2026-09-27T18:03:16Z
+  stamped_at: 2026-09-27T18:03:16Z
   reviewed_by: null
 ---
 
@@ -58,7 +58,7 @@ The organisation adopts the following methodologies, selected proportionally to 
 | **LINDDUN** | Privacy threats | Systems with personal data, subject to the GDPR or consent obligations |
 | **PASTA** | Modelling based on business risk | Regulated or critical systems, or contexts with high formal demands |
 
-At L2, STRIDE is sufficient as the base methodology. At L3, LINDDUN must be applied whenever personal data exists, and PASTA must be considered in regulatory contexts.
+STRIDE is the base methodology at L2 and L3. Whenever personal data exists, LINDDUN is mandatory at all levels: at L1 in lightweight form (the seven categories worked through over the personal-data flows), at L2 and L3 as a formal analysis. PASTA must be considered in regulatory contexts.
 
 ---
 
@@ -200,7 +200,7 @@ Reuse without explicit review is equivalent to having no threat modelling - the 
 |---|---|---|---|
 | Threat modelling mandatory | No | Yes | Yes |
 | STRIDE as base methodology | Recommended | Mandatory | Mandatory |
-| LINDDUN (personal data) | Optional | Mandatory | Mandatory |
+| LINDDUN (personal data) | Mandatory (lightweight form) | Mandatory | Mandatory |
 | Formal approval | Not applicable | AppSec + Tech Lead | AppSec + Architect + independent review |
 | Gate in the CI/CD pipeline | Not applicable | Recommended | Mandatory |
 | Periodic review | On request | Annual / major release | Half-yearly / major release |

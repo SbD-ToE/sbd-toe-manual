@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/aplicacao-lifecycle.md
-  source_sha256: 006fcce718f93aa5d3ed5bc2b01276f82fc141334d1b4f0e7c2e0bdd541d4f2b
-  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
-  target_sha256: 721a44d65afd113d0ab0d5d4511d527addc0b2ee47500a0735e2e244a99d7ecf
+  source_sha256: e67701bee73eb6cb6adb944b609328813c3665c0f0ce7df16cb6c5b6afcebb47
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: b550ee0b448a4195624a106e6352451fb059429dbd0f9d5821498de0952d60ab
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, eu_startups, framework_source_corpus, gap_family, lifecycle_phase, llm, mapping, papel_suporte, plain_rag, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b9e81e02eb64c52b49420a86d83285b20fc614a9727106cda2975cea0f68b2b7
-  translated_at: 2026-09-27T15:08:21Z
-  stamped_at: 2026-09-27T15:08:21Z
+  translated_at: 2026-09-27T18:03:18Z
+  stamped_at: 2026-09-27T18:03:18Z
   reviewed_by: null
 ---
 
@@ -364,13 +364,13 @@ As **Software Architects + AppSec Engineer**, I want to apply **LINDDUN** whenev
 **Acceptance criteria (BDD).**
 - **Given** that the system processes personal data  
   **When** I carry out Threat Modelling  
-  **Then** **I include a LINDDUN analysis** with threats, mitigation and **mapping to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-005`)**  
+  **Then** **I include a LINDDUN analysis** with threats, mitigation and **mapping to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-007`)**  
 - And **I create a `privacy-dfd`** with specific trust boundaries  
 
 **Checklist.**
 - [ ] `privacy-dfd` created  
 - [ ] LINDDUN list filled in  
-- [ ] **Link to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-005`)**  
+- [ ] **Link to the privacy requirements of Ch. 02 (`PRI-001`–`PRI-007`)**  
 - [ ] **Threats classified by severity and mitigation**  
 - [ ] Evidence archived in the architecture repository  
 :::
@@ -383,7 +383,7 @@ As **Software Architects + AppSec Engineer**, I want to apply **LINDDUN** whenev
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |:---|:---|:---|
-| L1 | Optional | Simplified checklist |
+| L1 | Yes | Lightweight form: the seven LINDDUN categories worked through over the personal-data flows, with the threats linked to the `PRI-*` requirements |
 | L2 | Yes | Formal privacy analysis |
 | L3 | Yes | Full LINDDUN + independent validation (DPO) |
 

@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/07-validacao-requisitos.md
-  source_sha256: 944403f9f0c19b3deb1bd10157aaa4ee241b0c96246a9d85fcd72a612ead783d
-  source_commit: 550e045d15f912fcb68829e17082413a5d80bd97
-  target_sha256: 9be300f27844f5f72743034f801ec2fbf3cef8113409b0b2ee695b4e19c98b53
+  source_sha256: 29f6783bab28ef9a09a513b2c7b410be455ffa695c703023a6419a84597f6f92
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 5e1f4cedc3a7933f15f35c8ee4891aed05f8c50a900e7f2d8ae30a1a7eece04d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, eu_startups, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 79f8c164a9afdb1bcb219b5345eb9b77b29a1359d519ca25de5ddce4e941390e
-  translated_at: 2026-09-27T16:10:51Z
-  stamped_at: 2026-09-27T16:10:51Z
+  translated_at: 2026-09-27T18:03:21Z
+  stamped_at: 2026-09-27T18:03:21Z
   reviewed_by: null
 ---
 
@@ -283,6 +283,18 @@ For each requirement of the canonical catalogue the following are given: the ref
 | IDE-004 | SEC-Lx-IDE-EXT | L1+ | Verify the list of installed extensions. Confirm that they come from recognised sources. | List of extensions with documented origin. |
 | IDE-005 | SEC-Lx-IDE-PERM | L2+ | Verify the permissions granted to extensions. Confirm that only the necessary ones are active. | Reviewed permissions. Sandboxed execution confirmed. |
 | IDE-006 | SEC-Lx-IDE-LOCAL | L2+ | Verify control over the use of local environments. Confirm the existence of logs or a proxy where applicable. | Policy on the use of local environments. Network or proxy logs. |
+
+### PRI - Personal Data (engineering) {#pri---dados-pessoais-engenharia}
+
+| ID | Operational tag | Level | Validation method | Expected evidence |
+|----|-----------------|:-----:|---------------------|-------------------|
+| PRI-001 | SEC-Lx-PRI-MIN | L1+ | Compare the personal-data fields collected with the register of purposes. Confirm there are no fields without a purpose. | List of fields with their associated purpose. |
+| PRI-002 | SEC-Lx-PRI-RETAIN | L1+ | Check the defined periods and sample records beyond the period, including replicas and downstream systems. Confirm the declared period for backups. | Retention configuration. Evidence of deletion or anonymisation by sampling. |
+| PRI-003 | SEC-Lx-PRI-RIGHTS | L1+ | Run export, rectification and deletion for a test data subject. Confirm the machine-readable format, downstream propagation and identity verification for requests outside the authenticated channel. | Exported file. Log of the executions. Evidence of propagation. |
+| PRI-004 | SEC-Lx-PRI-INVENTORY | L2+ | Review the inventory. Confirm purpose, system and recipients per data set, and the record of changes. | Up-to-date inventory with change history. |
+| PRI-005 | SEC-Lx-PRI-LOGPII | L2+ | Review the PII-in-logs concept and sample logs. In immutable logs, confirm pseudonyms and per-person keys. | Documented concept. Compliant log samples. |
+| PRI-006 | SEC-Lx-PRI-CONSENT | L1+ | Give and withdraw consent (or object) with a test data subject. Confirm the auditable record, equivalent effort, effect on the dependent processing and persistence after synchronisation. | Consent record with the version of the text. Evidence of the effect of the withdrawal. |
+| PRI-007 | SEC-Lx-PRI-DEFAULT | L1+ | Create a new account and check the initial sharing, visibility and optional-processing settings. | Screenshot or automated test of the default settings. |
 
 ---
 

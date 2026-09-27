@@ -1,22 +1,22 @@
 ---
 id: linddun-privacidade
 title: LINDDUN — Privacy Threat Modelling
-description: LINDDUN methodology for privacy threat modelling — the seven threat categories, mapping to data flow diagrams and application to L3 systems and to personal or regulated data. It complements security threat modelling (STRIDE); it does not replace the legal compliance assessment.
-tags: [LINDDUN, privacidade, threat-modeling, RGPD, DPIA, dados-pessoais, DFD, KU-Leuven, L3]
+description: The LINDDUN methodology for privacy threat modelling — the seven threat categories, mapping to data flow diagrams and application to any system with personal or regulated data, at all levels. It complements security threat modelling (STRIDE); it does not replace the legal compliance assessment.
+tags: [LINDDUN, privacidade, threat-modeling, RGPD, DPIA, dados-pessoais, DFD, KU-Leuven, L1, L2, L3]
 sidebar_position: 13
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/addon/13-linddun-privacidade.md
-  source_sha256: ac172eb9917430eacde953c901f769f16c97f4b220904dfb3b224d1ae92bf66c
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 341fefbf620606fd931eb154233f5ae841d36700fb32d650aaf8982df398ac99
+  source_sha256: f9cb00175e50543d01296a1ed33d6bdf262f4a17861fca5dce0d2c481bc08cd3
+  source_commit: 44d2d3451e163f3ad4ab710e3ee2ec8d02f9e02d
+  target_sha256: 78924f59516027d7aff592261bc2d1918781accc40a3e9dabb017de389337ec9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, chapter_role, framework_source_corpus, instrument, layer, mapping, papel_suporte, practitioner_manual, slug_threat_modeling, threat]
   glossary_sha256: a88ae20b313c3760a5d3bd210d1a79e3d1ce60974a6b6aae415c78c3563da897
-  translated_at: 2026-09-25T20:17:02Z
-  stamped_at: 2026-09-26T18:33:22Z
+  translated_at: 2026-09-27T18:03:20Z
+  stamped_at: 2026-09-27T18:03:20Z
   reviewed_by: null
 ---
 
@@ -30,7 +30,7 @@ Security threat modelling (STRIDE) protects the system against an adversary. **P
 
 The manual already includes an [applied example of LINDDUN](/sbd-toe/sbd-manual/threat-modeling/exemplo-privacidade-lindunn). This addon provides the **method** behind it, so that it can be applied to any system, and not merely followed as an example.
 
-Applicability: **L3**, and any system that processes **personal or regulated data**, regardless of level. Where there is an obligation to carry out a *Data Protection Impact Assessment* (DPIA) under the GDPR, LINDDUN is the instrument that structures its technical component.
+Applicability: any system that processes **personal or regulated data**, at all levels (`THR-003`). At L1, in lightweight form: the seven categories worked through over the personal-data flows. At L2 and L3, as a formal analysis; at L3, with independent review by the DPO. Where there is an obligation to carry out a *Data Protection Impact Assessment* (DPIA) under the GDPR, LINDDUN is the instrument that structures its technical component.
 
 > LINDDUN structures the **elicitation** of privacy threats. It does not replace the legal compliance assessment or the DPO's opinion — the *Non-compliance* category points to legal obligations; it does not resolve them.
 

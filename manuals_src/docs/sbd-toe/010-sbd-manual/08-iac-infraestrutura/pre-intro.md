@@ -114,7 +114,7 @@ Cada requisito de IaC transforma-se numa **user story própria**, porque isso:
 
 | Domínio | L1 (baixo) | L2 (médio) | L3 (crítico) |
 |---------|------------|------------|--------------|
-| Validações automáticas | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
+| Validações automáticas | Bloqueio (falha bloqueia o `apply`) | Bloqueio High/Critical | Bloqueio Medium+ |
 | Aprovação de `plan` | Recomendado | Obrigatório | Obrigatório + dupla aprovação |
 | Backend remoto/estado | Recomendado | Remoto com locking | Remoto + monitorização e break-glass |
 | Origem de módulos | Pinagem recomendada | Pinagem obrigatória | Allowlist + revisão formal + SBOM |

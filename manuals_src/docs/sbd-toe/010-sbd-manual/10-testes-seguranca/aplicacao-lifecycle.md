@@ -79,7 +79,7 @@ Como **AppSec Engineer**, quero **definir uma estratégia de testes de seguranç
 | Nível | Obrigatório? | Cobertura mínima |
 |---|---|---|
 | L1 | Sim | SAST + checklist |
-| L2 | Sim | + DAST autenticado |
+| L2 | Sim | + DAST autenticado + PenTest anual |
 | L3 | Sim | + fuzzing/IAST + PenTest |
 
 **Integração no SDLC.**  
@@ -118,7 +118,7 @@ Como **Developer**, quero **executar SAST automático no PR com comentários inl
 **Proporcionalidade por risco.**  
 | Nível | Política de gate |
 |---|---|
-| L1 | Aviso |
+| L1 | Bloqueio High/Critical |
 | L2 | Bloqueio High/Critical |
 | L3 | Bloqueio Medium+ |
 
@@ -199,7 +199,7 @@ Como **DevOps / SRE**, quero **integrar gates automáticos no pipeline (SAST/SCA
 **Proporcionalidade por risco.**  
 | Nível | Política |
 |---|---|
-| L1 | Aviso |
+| L1 | Bloqueio de Critical; High/Critical em SAST e SCA |
 | L2 | Bloqueio High/Critical |
 | L3 | Bloqueio Medium+ |
 
@@ -326,7 +326,7 @@ Como **Product Owner**, quero **estabelecer critérios de aceitação de seguran
 **Proporcionalidade por risco.**  
 | Nível | Política |
 |---|---|
-| L1 | Checklist simples |
+| L1 | Checklist simples + bloqueio de Critical |
 | L2 | Bloqueio High/Critical |
 | L3 | Nenhum crítico sem exceção formal |
 
@@ -497,7 +497,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **centralizar todos os findings d
 **Proporcionalidade por risco.**  
 | Nível | Exigência | Detalhes |
 |---|---|---|
-| L1 | Centralização simples | Triagem manual, SLA recomendado |
+| L1 | Centralização simples | Triagem manual, SLA por severidade obrigatório (Política 19 §4.3) |
 | L2 | Centralização com SLA | Estados formais, alertas por exceção |
 | L3 | Centralização + auditoria | SLA rigoroso, dupla aprovação, relatório mensal |
 
@@ -823,7 +823,7 @@ Como **DevOps / SRE**, quero **separar formalmente o sinal automático (resultad
 **Proporcionalidade por risco.**  
 | Nível | Exigência |
 |---|---|
-| L1 | Overrides permitidos com registo simples |
+| L1 | Overrides permitidos com registo de justificação, compensação, aprovador e prazo |
 | L2 | Override exige aprovação AppSec Engineer + expiração |
 | L3 | Override exige dupla aprovação (AppSec Engineer + Product Owner / Tech Lead) + expiração + retest obrigatório |
 
@@ -1027,7 +1027,7 @@ Como **AppSec Engineer + DevOps / SRE**, quero **enquadrar o uso de IA em testes
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Política C1–C4; eval suite recomendada (A1) | C1–C4 obrigatórios; eval suite como gate para agentes A2+ | + red-team manual periódico, drift em janelas curtas e telemetria de produção (A4) |
+| Política C1–C4; eval suite recomendada (A1) | C1–C4 obrigatórios; eval suite como gate obrigatório em cada promoção que altere modelo, *skill files* ou *system prompts* | + red-team manual periódico, drift em janelas curtas e telemetria de produção (A4) |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -1106,14 +1106,14 @@ O objetivo é calibrar testes de acordo com a criticidade da aplicação:
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
-| SAST | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
+| SAST | Bloqueio High/Critical | Bloqueio High/Critical | Bloqueio Medium+ |
 | DAST | Manual | Automático autenticado | Automático + cobertura ampliada |
 | **IAST** | **N/A** | **Recomendado (críticos)** | **Obrigatório (cobertura total)** |
 | Fuzzing | Opcional | Endpoints prioritários | Endpoints críticos |
 | Regressões | Casos críticos | Por findings | Obrigatório |
-| PenTesting | N/A | Ocasional | Pré-produção obrigatório |
-| **Gestão findings** | **Backlog simples** | **Centralizado com SLA** | **Centralizado + auditoria** |
-| Release | Checklist simples | Bloqueio High/Critical | Nenhum crítico sem exceção |
+| PenTesting | N/A | Anual + após alteração de arquitectura significativa | Anual + pré-produção obrigatório |
+| **Gestão findings** | **Backlog simples com SLA por severidade** | **Centralizado com SLA** | **Centralizado + auditoria** |
+| Release | Checklist simples + bloqueio Critical | Bloqueio High/Critical | Nenhum crítico sem exceção |
 
 ---
 

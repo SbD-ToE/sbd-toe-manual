@@ -206,8 +206,8 @@ Relatórios de lint, outputs de scanners, logs de pipeline, badges de conformida
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Sim | Linters + aviso |
-| L2 | Sim | Linters + scanners + bloqueio severo |
+| L1 | Sim | Linters + scanners de segurança + validação de política; falha bloqueia o `apply` |
+| L2 | Sim | Linters + scanners + validação de política; falha bloqueia o `apply` |
 | L3 | Sim | Linters + scanners + policies + cobertura 100% |
 
 **Integração no SDLC.**
@@ -317,7 +317,7 @@ Ficheiro `NAMING.md`, logs de Git com commits estruturados, tags e releases no r
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Naming simples + git básico |
+| L1 | Sim | Naming simples + histórico Git intacto, tags semânticas por release e notas de versão |
 | L2 | Sim | Naming + convenções commit + tagging |
 | L3 | Sim | Naming + convenções + tagging semântico + CHANGELOG |
 
@@ -624,7 +624,7 @@ Procedimento `rollback.md`; *snapshots*; *logs* de confirmação dupla.
 **⚖️ Proporcionalidade.**
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Sim | *Rollback* manual documentado |
+| L1 | Sim | *Rollback* manual documentado e testado anualmente |
 | L2 | Sim | *Snapshots* automáticos |
 | L3 | Sim | *Rollback* automatizado e *kill-switch* |
 
@@ -793,17 +793,17 @@ A proporcionalidade permite equilibrar custo, risco e controlo.
 | Prática | L1 (baixo) | L2 (médio) | L3 (alto/crítico) |
 |---|---|---|---|
 | Backend remoto + locking | **Obrigatório** | Obrigatório | Obrigatório + auditoria reforçada |
-| Validações automáticas | Aviso | Bloqueio falhas severas | Bloqueio total + cobertura completa |
+| Validações automáticas | Bloqueio (lint, scanners e política) | Bloqueio (lint, scanners e política) | Bloqueio total + cobertura completa |
 | Governança de módulos | Whitelist simples | Whitelist + validação automática | Whitelist + validação + SBOM + revisão reforçada |
 | Segregação ambientes + tagging | **Obrigatório (mínimo)** | Obrigatório + tagging completo | Obrigatório + tags + validação OPA |
-| Rastreabilidade e naming | Recomendado | Obrigatório + convenções formais | Obrigatório + pre-commit + CHANGELOG |
+| Rastreabilidade e naming | Obrigatório (histórico Git + tags semânticas + notas de versão) | Obrigatório + convenções formais | Obrigatório + pre-commit + CHANGELOG |
 | Revisão formal de plan | Recomendado | Obrigatório | Obrigatório + dupla aprovação + janela de mudança |
 | Rastreabilidade ficheiro→recurso | Recomendado | Obrigatório + documentação | Obrigatório + dashboard automático |
 | Enforcement de políticas | Recomendado | OPA/Rego obrigatório | OPA + exceções formais + métricas |
 | Origem confiável de módulos | Recomendado | Obrigatório + pinagem | Obrigatório + proveniência formal |
-| Gestão de segredos IaC | Recomendado | Obrigatório (OIDC/TTL curto) | Obrigatório + JIT + auditoria |
+| Gestão de segredos IaC | Obrigatório (sem *hardcoding*; cofre + scan de segredos) | Obrigatório (OIDC/TTL curto) | Obrigatório + JIT + auditoria |
 | Drift detection | Recomendado | Obrigatório (quinzenal) | Obrigatório (semanal) + alertas |
-| Rollback e guardrails | Recomendado | Obrigatório (snapshots) | Obrigatório + rollback automatizado |
+| Rollback e guardrails | Obrigatório (*rollback* manual documentado e testado) | Obrigatório (snapshots) | Obrigatório + rollback automatizado |
 | Assinatura + proveniência | Recomendado | Obrigatório (gate críticos) | Obrigatório + rejeição automática |
 
 ---

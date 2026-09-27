@@ -98,7 +98,7 @@ Como **Dev Team**, quero construir imagens a partir de bases confiáveis, versio
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Sim | Imagens oficiais com versão (não `latest`) |
+| L1 | Sim | Imagens oficiais de origem aprovada com versão (não `latest`) + sem ferramentas interativas não justificadas |
 | L2 | Sim | Digest fixo + validação Hadolint + sem ferramentas interativas |
 | L3 | Sim | Digest fixo + Hadolint + multi-stage + Distroless + scanner integrado na build |
 
@@ -149,7 +149,7 @@ Como **DevOps / SRE**, quero que o pipeline execute scanners de vulnerabilidades
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Sim | Aviso de Critical + Medium |
+| L1 | Sim | Bloqueio de Critical; aviso de High/Medium |
 | L2 | Sim | Bloqueio de High/Critical |
 | L3 | Sim | Bloqueio de Medium+ |
 
@@ -201,7 +201,7 @@ Como **AppSec Engineer**, quero que todas as imagens produzidas sejam assinadas 
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
 | L1 | Recomendado | Assinatura opcional, aviso se não assinada |
-| L2 | Recomendado | Assinatura recomendada, verificação em Admission Control |
+| L2 | Sim | Assinatura obrigatória, verificação em Admission Control com rejeição de imagens sem assinatura válida |
 | L3 | Sim | Assinatura obrigatória, verificação bloqueante |
 
 **Integração no SDLC.**  
@@ -256,7 +256,7 @@ Como **DevOps / SRE**, quero que todas as execuções de containers em Kubernete
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Validação básica (non-root) em modo audit |
+| L1 | Sim | Non-root com enforcement activo (containers como root rejeitados); restantes policies em modo audit |
 | L2 | Sim | Policies restritivas em modo enforce |
 | L3 | Sim | Policies completas + auditoria detalhada + revisão periódica |
 
@@ -421,7 +421,7 @@ Como **DevOps + AppSec**, quero impor allowlist de registries confiáveis e ***e
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Aviso para registries não confiáveis |
+| L1 | Sim | Allowlist de origens aprovadas para imagens base, com rejeição de origem não aprovada; aviso para restantes registries não confiáveis |
 | L2 | Sim | Allowlist com bloqueio por origem, digest recomendado |
 | L3 | Sim | Allowlist restritivo + digest-only obrigatório + assinatura verificada |
 
@@ -476,7 +476,7 @@ Como **DevOps / SRE**, quero proibir credenciais estáticas em imagens e usar id
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Secret scanning, credenciais não em env vars |
+| L1 | Sim | Secret scanning ativo no pipeline; credenciais não embebidas na imagem nem em env vars |
 | L2 | Sim | Secret scanning obrigatório, OIDC com TTL curto |
 | L3 | Sim | Secret scanning + OIDC + rotação automática + auditoria contínua |
 
@@ -530,7 +530,7 @@ Como **DevOps + AppSec**, quero ***enforce* uso de ServiceAccounts dedicadas com
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | SA dedicadas, permissões razoáveis |
+| L1 | Sim | SA dedicadas (não default), sem permissões desnecessárias |
 | L2 | Sim | SA dedicada obrigatória, RBAC mínimo validado |
 | L3 | Sim | SA dedicada + RBAC mínimo + revisão periódica + no wildcard permissions |
 
@@ -631,8 +631,8 @@ Como **DevOps + AppSec**, quero manter catálogo de Golden Base Images com versi
 **Proporcionalidade L1–L3.**  
 | Nível | Prescrição | SLA Patch | Assinatura | Deprecation | Auditoria |
 |-------|-----------|----------|-----------|------------|-----------|
-| **L1** | Recomendado; catálogo informal | Ad-hoc | Não | Manual | Anual |
-| **L2** | Obrigatório para prod; catálogo publicado | 7d crítico | Cosign recomendado | Aviso na depreciação; remoção ≤ 60d | Semestral |
+| **L1** | Obrigatório (renovação periódica); catálogo informal | Política de renovação definida (rebuild periódico ou por *trigger* da base) | Não | Manual | Anual |
+| **L2** | Obrigatório para prod; catálogo publicado | 7d crítico | Cosign obrigatório | Aviso na depreciação; remoção ≤ 60d | Semestral |
 | **L3** | Obrigatório; SLA rigoroso | 3d crítico | Cosign + OIDC obrigatório | Aviso na depreciação; remoção ≤ 60d + validação | Mensal |
 
 **Integração no SDLC.**  
@@ -850,7 +850,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero gerir um catálogo de Golden Base
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Catálogo simples + revisão ad-hoc |
+| L1 | Sim | Catálogo simples de imagens base aprovadas, mantido, com decisão de seleção documentada + revisão ad-hoc |
 | L2 | Sim | Aprovação formal + revisão trimestral + depreciação com prazos |
 | L3 | Sim | Aprovação formal + revisão mensal/event-driven + revogação rápida bloqueante |
 
@@ -899,7 +899,7 @@ Como **Release Manager/DevOps + AppSec**, quero que a promoção de uma imagem e
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Promoção automatizada com logging e rastreabilidade |
+| L1 | Sim | Aprovação explícita antes de produção; promoção automatizada entre ambientes não produtivos com logging e rastreabilidade |
 | L2 | Sim | Aprovação explícita + revalidação mínima por ambiente |
 | L3 | Sim | Aprovação explícita + revalidação reforçada + TTL curto + auditoria |
 
@@ -947,7 +947,7 @@ Como **AppSec + GRC**, quero gerir exceções a findings/policies como decisões
 **⚖️ Proporcionalidade.**  
 | Nível | Obrigatório? | Ajustes |
 |---|---:|---|
-| L1 | Recomendado | Exceções registadas, TTL opcional mas incentivado |
+| L1 | Sim | Exceções registadas com justificação, compensação, aprovador e prazo |
 | L2 | Sim | TTL obrigatório + compensações mínimas + revisão mensal |
 | L3 | Sim | TTL curto + compensações reforçadas + revisão semanal/mensal + auditoria |
 
@@ -1088,7 +1088,7 @@ Como **DevOps + AppSec**, quero que o container e a API de inferência apliquem 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Autenticação **sempre** obrigatória; container *hardening* e limites recomendados | Container *hardening* + *network policy* + *rate limit*/`max_tokens` + *pinning*/SCA obrigatórios | Tudo de L2 + auditoria por *principal* reforçada e revisão periódica |
+| Autenticação **sempre** obrigatória; *non-root*, versão do runtime *pinned* e SCA obrigatórios; restante *hardening* e limites recomendados | Container *hardening* + *network policy* + *rate limit*/`max_tokens` + *pinning*/SCA obrigatórios | Tudo de L2 + auditoria por *principal* reforçada e revisão periódica |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -1180,7 +1180,7 @@ Como **DevOps / SRE**, quero uma política de retenção/limpeza de imagens com 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Renovação ≤90 dias recomendada; limpeza ad-hoc | Renovação obrigatória + sinalização + retenção definida | Renovação ≤30 dias + limpeza automatizada + rastreabilidade preservada e auditada |
+| Renovação periódica obrigatória (≤90 dias ou por *trigger* da base) com sinalização de imagens desatualizadas; limpeza ad-hoc | Renovação obrigatória + sinalização + retenção definida | Renovação ≤30 dias + limpeza automatizada + rastreabilidade preservada e auditada |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -1228,16 +1228,16 @@ A tabela seguinte mostra como escalar cada prática.
 |---------|----|----|----|
 | Imagens base confiáveis | Sim | Sim | Sim |
 | Pinagem por digest | Recomendado | Obrigatório | Obrigatório |
-| Scanning de imagens | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
-| Assinatura & proveniência | Opcional | Recomendado | Obrigatório |
-| Políticas de runtime | Básico (non-root) | Restritivas | Completo + auditoria |
+| Scanning de imagens | Bloqueio Critical | Bloqueio High/Critical | Bloqueio Medium+ |
+| Assinatura & proveniência | Opcional | Obrigatório | Obrigatório |
+| Políticas de runtime | Non-root com enforcement activo | Restritivas | Completo + auditoria |
 | Monitorização runtime | Básico | Crítico | Total + resposta automática |
 | **SBOM por imagem** | Recomendado | Obrigatório | Obrigatório (+ com proveniência) |
-| **Allowlist de registries/digest-only** | Aviso | Bloqueio por origem | Bloqueio + digest-only |
-| **Segredos fora da imagem / OIDC** | Recomendado | Obrigatório | Obrigatório + rotação automática |
-| **RBAC mínimo / SA dedicada** | Recomendado | Obrigatório | Obrigatório + revisão periódica |
+| **Allowlist de registries/digest-only** | Bloqueio por origem (imagens base) | Bloqueio por origem | Bloqueio + digest-only |
+| **Segredos fora da imagem / OIDC** | Obrigatório (secret scanning; sem credenciais na imagem) | Obrigatório | Obrigatório + rotação automática |
+| **RBAC mínimo / SA dedicada** | Obrigatório (SA dedicada, menor privilégio) | Obrigatório | Obrigatório + revisão periódica |
 | **NetworkPolicy (ingress/egress)** | Básico | Ingress+egress crítico | Ingress+egress total + auditoria |
-| **Golden base + SLA patch** | Recomendado | Obrigatório | Obrigatório + rollout acelerado |
+| **Golden base + SLA patch** | Obrigatório (renovação periódica) | Obrigatório | Obrigatório + rollout acelerado |
 | **Builders/runners ephemerais/assinados** | Recomendado | Obrigatório | Obrigatório + segmentação rede |
 | **Enforcement centralizado com auditoria** | Recomendado | Sim (logging + alertas) | Sim (logging + alertas + dashboard + revisão) |
 | **Sandboxing avançado (gVisor/Kata)** | Opcional | Recomendado (workloads sensíveis) | Obrigatório (workloads críticas) |

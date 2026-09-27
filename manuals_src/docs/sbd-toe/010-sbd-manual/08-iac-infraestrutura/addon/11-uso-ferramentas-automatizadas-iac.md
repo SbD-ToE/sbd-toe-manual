@@ -103,7 +103,7 @@ deve ser tratado como **dependência de segurança**:
 
 | Dimensão | L1 | L2 | L3 |
 |---|---|---|---|
-| Uso de automação/assistência | Permitido com revisão | Permitido com gates bloqueantes | Permitido com gates + SoD reforçada |
+| Uso de automação/assistência | Permitido com revisão + validações bloqueantes em pipeline | Permitido com gates bloqueantes | Permitido com gates + SoD reforçada |
 | Validação semântica do `plan` | Recomendado | Obrigatório | Obrigatório (reforçado) |
 | Aprovação antes de `apply` | Simples | 2º revisor | Dupla aprovação + janela de mudança |
 | Evidência e retenção | Básica | Obrigatória | Obrigatória + retenção reforçada |

@@ -104,6 +104,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | AUT-008 | SEC-Lx-AUT-STEPUP | L2+ | Simular acção sensível. Confirmar exigência de factor adicional. | Captura de step-up. Log associado à acção crítica. |
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Tentar alterar credenciais sem reautenticação. Confirmar bloqueio. | Log da tentativa bloqueada. Evidência de verificação da sessão activa. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simular login anómalo. Confirmar notificação ao utilizador e registo. | Exemplo de notificação enviada. Log do evento crítico detectado. |
+| AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verificar que não existem contas nem credenciais por defeito activas na aplicação e nos componentes em produção. Confirmar alteração da credencial inicial no primeiro uso. | Inventário de contas sem credenciais por defeito. Evidência do fluxo de primeiro acesso. |
 
 ---
 
@@ -120,7 +121,7 @@ Para cada requisito do catálogo canónico são indicados: a tag operacional de 
 | ACC-007 | SEC-Lx-ACC-MODEL | L2+ | Verificar existência de modelo de permissões revisto e documentado. | Documentação do modelo. Registo de revisão datada. |
 | ACC-008 | SEC-Lx-ACC-REVOKE | L1+ | Revogar acesso. Testar imediatamente após revogação. Confirmar falha. | Log de tentativa falhada após revogação. Timestamp de revogação. |
 | ACC-009 | SEC-Lx-ACC-ABAC | L3 | Testar decisão de acesso com atributos distintos. Confirmar aplicação de política dinâmica. | Logs com avaliação de atributos. Teste com variação de contexto. |
-| ACC-010 | SEC-Lx-ACC-REVIEW | L2+ | Verificar existência de processo de revisão periódica. Confirmar remoção de permissões obsoletas. | Registos de revisão datados. Evidência de limpeza de permissões. |
+| ACC-010 | SEC-Lx-ACC-REVIEW | L1+ | Verificar existência de processo de revisão periódica. Confirmar remoção de permissões obsoletas. | Registos de revisão datados. Evidência de limpeza de permissões. |
 
 ---
 

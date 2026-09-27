@@ -95,6 +95,7 @@ Requisitos que garantem que apenas entidades legítimas acedem ao sistema, com c
 | AUT-008 | Step-up para acções sensíveis | - | ✔ | ✔ | Operações críticas requerem factor adicional; teste evidencia bloqueio sem step-up. |
 | AUT-009 | Reautenticação para alterações críticas | ✔ | ✔ | ✔ | Alterações de credenciais ou dados sensíveis exigem confirmação da identidade activa. |
 | AUT-010 | Alerta de acessos suspeitos | - | ✔ | ✔ | Acessos anómalos geram alerta ou notificação ao utilizador; log do evento disponível. |
+| AUT-011 | Sem credenciais por defeito | ✔ | ✔ | ✔ | A aplicação não é entregue nem posta em produção com contas ou credenciais por defeito; credenciais iniciais únicas por instalação e alteradas no primeiro uso; contas por defeito de componentes e plataformas desactivadas ou com a credencial alterada. |
 
 ---
 
@@ -113,7 +114,7 @@ Requisitos que asseguram que cada entidade acede apenas aos recursos e operaçõ
 | ACC-007 | Validação do modelo de acesso | - | ✔ | ✔ | Modelo de permissões revisto e documentado; ameaças de controlo de acesso mapeadas. |
 | ACC-008 | Revogação em tempo real | ✔ | ✔ | ✔ | Remoção de acesso reflecte-se imediatamente; teste de permissão falha após revogação. |
 | ACC-009 | Autorização baseada em atributos (ABAC) | - | - | ✔ | Decisão de acesso depende de atributos dinâmicos; logs evidenciam avaliação de política. |
-| ACC-010 | Revisão periódica de permissões | - | ✔ | ✔ | Auditorias periódicas removem permissões obsoletas; registos de revisão mantidos e datados. |
+| ACC-010 | Revisão periódica de permissões | ✔ | ✔ | ✔ | Auditorias periódicas removem permissões obsoletas; registos de revisão mantidos e datados; cadência mínima (escolha do Manual): anual em L1, semestral em L2, trimestral em L3. |
 
 ---
 

@@ -28,7 +28,7 @@ A aplicação utiliza uma framework legada sem suporte nativo a validação auto
 **Controlos substituídos:** VAL-002, VAL-006  
 **Compensação aplicada:** Validação em proxy com schema + testes de fuzzing  
 
-**Validade da exceção:** 6 meses  
+**Validade da exceção:** 60 dias (L2, Low/Medium — Política 05 §7)  
 **Owner:** paula.lima@empresa  
 
 **Aprovadores:** AppSec + gestor de produto  

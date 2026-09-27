@@ -264,7 +264,7 @@ DORA Art. 5 estabelece que a **resiliência digital é responsabilidade última 
 | Processo | SbD-ToE | DORA Exigência | Gap |
 |----------|---------|----------------|-----|
 | **Criação de exceção** | Documenta com owner, TTL, critérios | ✅ Bom | ✅ Alinhado |
-| **Reavaliação periódica** | Revisão 30 dias antes expiração; re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
+| **Reavaliação periódica** | Revalidação na data de expiração, com alerta 15 dias antes (Política 05 §7, escolha do Manual); re-aprovação obrigatória | ✅ Bom | ✅ Alinhado |
 | **Rastreamento centralizado** | Ferramenta GRC; audit trail por aplicação | ✅ Bom | ⚠️ Manual não descreve formato de reporte a DORA |
 | **Escalada ao regulador** | Não mencionado no manual | ⚠️ O DORA exige a comunicação de incidentes de caráter severo relacionados com as TIC (art. 19.º); exceções relacionadas devem constar da documentação de suporte | ❌ **GAP** - Sem guia de como integrar exceções no reporte de incidentes |
 

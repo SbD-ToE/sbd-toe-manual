@@ -239,7 +239,7 @@ Análise:
   - Contexto: Usado para checksum de ficheiro, não criptografia
   - É falso positivo? ✓
 Ação: "Solicitar exceção formal com justificação"
-Aprovação: "AppSec valida contexto, aprova exceção com validade 6 meses"
+Aprovação: "AppSec valida contexto, aprova exceção com validade conforme a Política 05 §7 (p. ex. 60 dias em L2)"
 ```
 
 ---

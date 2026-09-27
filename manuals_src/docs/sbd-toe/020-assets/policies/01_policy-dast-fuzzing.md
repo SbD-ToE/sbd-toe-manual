@@ -217,7 +217,7 @@ Toda exceção à presente política requer:
 1. Justificação técnica documentada
 2. Aprovação de AppSec Engineer
 3. Mitigação compensatória definida e ativa
-4. Prazo de validade máximo: **30 dias** (renovável com nova aprovação explícita)
+4. Prazo de validade máximo conforme a Política 05 §7, por nível e severidade (L1 90 dias; L2 60 / 30 dias; L3 30 / 14 dias; Critical 7 dias com plano, não aceitável em L3), renovável com nova aprovação explícita
 5. Registo formal no repositório de exceções do projeto
 
 Exceções a findings de severidade Critical têm prazo máximo de **7 dias** e requerem aprovação adicional do responsável de segurança.

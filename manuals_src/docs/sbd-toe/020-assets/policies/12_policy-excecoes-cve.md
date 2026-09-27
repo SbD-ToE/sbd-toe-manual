@@ -160,7 +160,7 @@ O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 |---|---|---|---|
 | Bloquear build se CVE Critical/High sem exceção aprovada | Não | Sim | Sim |
 | Bloquear build se exceção expirada sem reavaliação | Não | Sim | Sim |
-| Alertar se exceção com menos de 7 dias para expirar | Recomendado | Obrigatório | Obrigatório |
+| Alertar 15 dias antes da expiração (ou a meio do TTL, se inferior a 30 dias — Política 05 §7) | Recomendado | Obrigatório | Obrigatório |
 | Gerar relatório de exceções ativas por build | Recomendado | Obrigatório | Obrigatório |
 
 ---

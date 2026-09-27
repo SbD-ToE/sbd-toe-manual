@@ -836,7 +836,7 @@ Como **DevOps / SRE + AppSec Engineer**, quero gerir um catálogo de Golden Base
 **Checklist.**  
 - [ ] Catálogo versionado em Git (imagem, digest/tag, owner, data aprovação, revisão, estado: active/deprecated/revoked)
 - [ ] Critérios mínimos de aprovação documentados (SBOM, scan, proveniência quando aplicável, EOL conhecido)
-- [ ] Cadência de revisão definida (L2: trimestral; L3: mensal ou por evento)
+- [ ] Cadência de revisão definida (L2: semestral; L3: mensal ou por evento)
 - [ ] Processo de revogação com gatilhos e comunicação (inclui rollback/patch plan)
 - [ ] Bloqueio automático em L2/L3 para bases revogadas (admission/pipeline gate)
 

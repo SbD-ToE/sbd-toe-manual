@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 5ec6f0491984267b8d82e41418a837daa8398ec7ec21d748094725e09bf99ecc
+  source_sha256: 8e484165a9d5fd9ba67b830e55023613e5f09afe0fad197418118211fe82bf63
   source_commit: null
-  target_sha256: a22143852912eb25193d6463e8aaa69b13ff56ca0939ec017a70d2bc08cfac91
+  target_sha256: 8b3441888df9c1d66d4a41243ed3dc526021664d8764c25abe5af85ef4a35e3a
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -53,7 +53,7 @@ The AI system is high-risk under Article 6 (with the legal qualification attache
 
 ## Grades {#graus}
 
-- **ART50** — Covered by Article 50 (transparency) (declarable on its own). AI system covered by the transparency obligations of Article 50 (direct interaction with natural persons, synthetic content, deep fakes), whether or not it is high-risk.
+- **ART50** — Covered by Article 50 (transparency) (declarable on its own). AI system covered by the transparency obligations of Article 50 (direct interaction with natural persons, synthetic content, emotion recognition or biometric categorisation, deep fakes), whether or not it is high-risk.
 
 ## Context floor list {#pisos}
 
@@ -66,8 +66,21 @@ The AI system is high-risk under Article 6 (with the legal qualification attache
 | CTX-AIA-RE-P05 | `ARC-014` | — | mandatory | — | Regulation (EU) 2024/1689, Article 15(5): “High-risk AI systems shall be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting system vulnerabilities.” (AIA-15-5) | not admitted |
 | CTX-AIA-RE-P06 | `DEP-011` | — | mandatory | — | Regulation (EU) 2024/1689, Article 15(5): “High-risk AI systems shall be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting system vulnerabilities.” (AIA-15-5) | not admitted |
 | CTX-AIA-RE-P07 | `DEP-012` | — | mandatory | — | Regulation (EU) 2024/1689, Article 15(5): “High-risk AI systems shall be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting system vulnerabilities.” (AIA-15-5) | not admitted |
+| CTX-AIA-RE-P08 | `ARC-014` | — | mandatory | Human oversight at any level, with an interface that lets the overseer understand the system's capabilities and limitations, detect anomalies, interpret the output, decide not to use or to override it and stop the system; measures proportionate to the risks, autonomy and context; the overseer is made aware of automation bias. | Regulation (EU) 2024/1689, Article 14(1) to (4): “can be effectively overseen by natural persons during the period in which they are in use” (AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4) | not admitted |
+| CTX-AIA-RE-P09 | `THR-008` | ART50 | mandatory | Systems that generate or manipulate realistic images, video or audio, at any level: the threat model covers the reasonably foreseeable misuse of the generated content, and the safeguards are assessed with red-teaming and content-safety tests. | Regulation (EU) 2024/1689, Article 5(1), als. b-A) e b-B), e n.º 1-A (Regulation (EU) 2026/1744): “reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation” (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitted |
+| CTX-AIA-RE-P10 | `ARC-014` | ART50 | mandatory | Systems that generate or manipulate realistic images, video or audio, at any level: content-safety filters and classifiers on input and output, and correction of observed or reported misuse. | Regulation (EU) 2024/1689, Article 5(1), als. b-A) e b-B), e n.º 1-A (Regulation (EU) 2026/1744): “reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation” (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitted |
 
-> **ART50.** No floor for now: the Article 50 obligations (informing people and marking synthetic content) are declared as gaps in the matrix _matriz/aiact.yaml.
+> **ART50.** The ART50 grade carries the floor CTX-AIA-RE-P09 and the floor CTX-AIA-RE-P10 (content-safety safeguards in generators of realistic images, video or audio, Article 5(1a)) and the additions CTX-AIA-RE-R01 (informing) and R02 (marking synthetic content).
+
+## Requirements added by the regime {#acrescentos}
+
+These requirements only make sense under the regime, so they do not live in the Manual's catalogues; they are defined here, each with its legal basis.
+
+| Requirement | Name | Acceptance criterion | Legal basis |
+|---|---|---|---|
+| `CTX-AIA-RE-R01` | Informing people that they are interacting with AI | People who interact directly with the system are informed that they are interacting with an AI system, unless this is obvious from the context; people exposed to emotion recognition or biometric categorisation are informed of that operation; image, audio or video content that constitutes a deep fake is disclosed as generated or manipulated. The information is clear and distinguishable, given at the latest at the first interaction or exposure, and meets the accessibility requirements; the presence of the notice is verified in testing. | Regulation (EU) 2024/1689, Article 50, n.os 1, 3, 4 (1.º parágrafo) e 5: “in a clear and distinguishable manner at the latest at the time of the first interaction or exposure” (AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5) |
+| `CTX-AIA-RE-R02` | Marking of synthetic content | The audio, image, video or text outputs generated or manipulated by the system are marked in a machine-readable format and detectable as artificial (e.g. provenance metadata, content credentials, watermarking), with a solution that is effective, interoperable and robust as far as technically feasible; the marking is verified in testing and is not stripped by later pipeline steps; the exceptions of Article 50(2) (assistive function for standard editing, no substantial alteration of the input data) are recorded. | Regulation (EU) 2024/1689, Article 50(2), and Article 111(4): “are marked in a machine-readable format and detectable as artificially generated or manipulated” (AIA-50-2, AIA-111-4) |
+| `CTX-AIA-RE-R03` | Informing and explaining to affected persons | When an Annex III high-risk AI system supports decisions about natural persons: the persons are informed that they are subject to its use; the application records, per decision, the system's output and the main elements that determined it (OPS-011), so that it can give the affected person clear and meaningful explanations of the role of the system and the main elements of the decision. When the decision is solely automated and personal data are involved, CTX-RGPD-R05 also applies. | Regulation (EU) 2024/1689, Article 26(11), and Article 86(1): “clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision taken” (AIA-26-11, AIA-86-1) |
 
 ## How to read the list {#como-se-le}
 
@@ -236,7 +249,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ARC-011` | Logical and physical segmentation between environments | — | — | ✔ | — |
 | `ARC-012` | Formal approval criteria for high-risk applications | — | — | ✔ | — |
 | `ARC-013` | Automatic topology validation in CI/CD or as code | — | — | ✔ | — |
-| `ARC-014` | Architectural patterns specific to systems with AI/ML components | ▲ | ▲ | ▲ | CTX-AIA-RE-P05 |
+| `ARC-014` | Architectural patterns specific to systems with AI/ML components | ▲ | ▲ | ▲ | CTX-AIA-RE-P05, CTX-AIA-RE-P08 |
 | `ARC-015` | AI agents operate as isolated principals with a mandate and least privilege | — | ✔ | ✔ | — |
 | `DEP-001` | SBOM generated per build, in a standardised format | ✔ | ✔ | ✔ | — |
 | `DEP-002` | SCA integrated into the pipeline with blocking by severity policy | ✔ | ✔ | ✔ | — |
@@ -361,6 +374,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
 | `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
+| `CTX-AIA-RE-R03` | Informing and explaining to affected persons | ▲ | ▲ | ▲ | — |
 
 ## Requirement list — ART50 {#lista-art50}
 
@@ -509,7 +523,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `THR-005` | Traceability threat → requirement → backlog → validation | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versioned and updated within the cycle or after a trigger | — | ✔ | ✔ | — |
 | `THR-007` | Independent review by AppSec before go-live in L2 and L3 | — | ✔ | ✔ | — |
-| `THR-008` | Threat modelling extended to systems with AI/ML components | — | ✔ | ✔ | — |
+| `THR-008` | Threat modelling extended to systems with AI/ML components | ▲ | ▲ | ▲ | CTX-AIA-RE-P09 |
 | `ARC-001` | Trust zones identified and documented | ✔ | ✔ | ✔ | — |
 | `ARC-002` | External exposure minimised and justified | ✔ | ✔ | ✔ | — |
 | `ARC-003` | Security-focused architecture review | — | ✔ | ✔ | — |
@@ -523,7 +537,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ARC-011` | Logical and physical segmentation between environments | — | — | ✔ | — |
 | `ARC-012` | Formal approval criteria for high-risk applications | — | — | ✔ | — |
 | `ARC-013` | Automatic topology validation in CI/CD or as code | — | — | ✔ | — |
-| `ARC-014` | Architectural patterns specific to systems with AI/ML components | — | ✔ | ✔ | — |
+| `ARC-014` | Architectural patterns specific to systems with AI/ML components | ▲ | ▲ | ▲ | CTX-AIA-RE-P10 |
 | `ARC-015` | AI agents operate as isolated principals with a mandate and least privilege | — | ✔ | ✔ | — |
 | `DEP-001` | SBOM generated per build, in a standardised format | ✔ | ✔ | ✔ | — |
 | `DEP-002` | SCA integrated into the pipeline with blocking by severity policy | ✔ | ✔ | ✔ | — |
@@ -648,6 +662,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | — |
 | `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
+| `CTX-AIA-RE-R01` | Informing people that they are interacting with AI | ▲ | ▲ | ▲ | — |
+| `CTX-AIA-RE-R02` | Marking of synthetic content | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -655,8 +671,8 @@ Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those add
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 14 |
-| Partial | 62 |
+| Covers | 32 |
+| Partial | 54 |
 | Supports evidence | 29 |
-| Gap | 32 |
+| Gap | 22 |
 | Out of scope | 108 |

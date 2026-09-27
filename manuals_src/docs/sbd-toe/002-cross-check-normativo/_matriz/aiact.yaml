@@ -386,20 +386,28 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-A)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
   resposta:
+  - tipo: requisito
+    alvo: THR-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: o modelo cobre também a utilização indevida razoavelmente previsível do conteúdo gerado
+      en: the model also covers the reasonably foreseeable misuse of the generated content
   - tipo: requisito
     alvo: ARC-014
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: controlos de input sanitization e output filtering específicos para prompt injection directa e indirecta
-      en: input sanitisation and output filtering controls specific to direct and indirect prompt injection
-  falta:
-    pt: Aplica-se desde 2.12.2026. Para sistemas generativos de imagem/vídeo/áudio o Manual não prescreve salvaguardas técnicas de segurança de conteúdo (filtros de output, classificadores, bloqueio de geração não consentida); o output filtering do ARC-014 visa prompt injection, não conteúdo.
-    en: Applies from 2.12.2026. For generative image/video/audio systems the Manual does not prescribe technical content-safety safeguards (output filters, classifiers, blocking of non-consensual generation); the output filtering of ARC-014 targets prompt injection, not content.
+      pt: filtros e classificadores de segurança de conteúdo na entrada e na saída
+      en: content-safety filters and classifiers on input and output
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -411,20 +419,28 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 5.º, n.º 1, primeiro parágrafo, alínea b-B)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
   resposta:
+  - tipo: requisito
+    alvo: THR-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: o modelo cobre também a utilização indevida razoavelmente previsível do conteúdo gerado
+      en: the model also covers the reasonably foreseeable misuse of the generated content
   - tipo: requisito
     alvo: ARC-014
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: controlos de input sanitization e output filtering específicos para prompt injection directa e indirecta
-      en: input sanitisation and output filtering controls specific to direct and indirect prompt injection
-  falta:
-    pt: Aplica-se desde 2.12.2026. Idem AIA-5-1-b-A para material de abuso sexual de crianças (sem controlos de segurança de conteúdo gerado).
-    en: Applies from 2.12.2026. Idem AIA-5-1-b-A for child sexual abuse material (no safety controls on generated content).
+      pt: filtros e classificadores de segurança de conteúdo na entrada e na saída
+      en: content-safety filters and classifiers on input and output
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -556,8 +572,10 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 5.º, n.º 1-A
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
   resposta:
   - tipo: requisito
     alvo: THR-008
@@ -565,8 +583,16 @@ itens:
     ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
     ancora: catálogo-thr---threat-modeling
     citacao:
-      pt: têm threat model estendido que cobre ameaças adversariais específicas
-      en: have an extended threat model covering specific adversarial threats
+      pt: o modelo cobre também a utilização indevida razoavelmente previsível do conteúdo gerado
+      en: the model also covers the reasonably foreseeable misuse of the generated content
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: filtros e classificadores de segurança de conteúdo na entrada e na saída
+      en: content-safety filters and classifiers on input and output
   - tipo: pagina
     rotulo:
       pt: C5 - Eval suites contínuas para agentes em desenvolvimento e produção
@@ -576,9 +602,7 @@ itens:
     citacao:
       pt: Modelos LLM não são determinísticos, mas em *eval* usa-se `temperature=0` ou parametrização equivalente, e medimos com tolerância explícita
       en: LLM models are not deterministic, but in *eval* `temperature=0` or equivalent parameterisation is used, and measurement is made with an explicit tolerance
-  falta:
-    pt: Aplica-se desde 2.12.2026. A proibição depende de existirem «salvaguardas técnicas razoáveis» contra a geração indevida; o Manual não exige threat model de uso indevido de conteúdo nem eval/red-team de segurança de conteúdo para sistemas generativos (as eval suites do §C5 visam agentes e prompt injection).
-    en: Applies from 2.12.2026. The prohibition depends on whether there are “reasonable technical safeguards” against improper generation; the Manual does not require a threat model of content misuse nor content-safety eval/red-team for generative systems (the eval suites of §C5 target agents and prompt injection).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1703,7 +1727,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 12.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-AIA-RE
     grau: null
@@ -1733,9 +1757,7 @@ itens:
     citacao:
       pt: Registos gerados automaticamente por sistemas de IA de risco elevado (OPS-011/012) | Pelo menos 6 meses
       en: Logs automatically generated by high-risk AI systems (OPS-011/012) | At least 6 months
-  falta:
-    pt: Logging genérico L1+ (LOG-001); o logging específico de IA (inputs/outputs, versões de modelo) só em L2/L3 (OPS-011).
-    en: Generic L1+ logging (LOG-001); AI-specific logging (inputs/outputs, model versions) only at L2/L3 (OPS-011).
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -1930,9 +1952,19 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 14.º, n.º 1
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Supervisão humana mínima, proporcional à autonomia
+      en: Minimum human oversight, proportionate to autonomy
   - tipo: requisito
     alvo: ARC-015
     niveis: [L2, L3]
@@ -1951,25 +1983,33 @@ itens:
     citacao:
       pt: são definidos controlos arquiteturais adequados (isolamento, supervisão, *fallback*, logging)
       en: adequate architectural controls are defined (isolation, supervision, *fallback*, logging)
-  falta:
-    pt: 'Agentes: aprovação humana out-of-band e kill-switch (L2+); não agênticos: «supervisão» só como controlo arquitetural a definir (US-15, L2+). Faltam interfaces homem-máquina e supervisão efetiva como requisito de conceção.'
-    en: 'Agents: out-of-band human approval and kill-switch (L2+); non-agentic: “oversight” only as an architectural control to be defined (US-15, L2+). Missing are human-machine interfaces and effective oversight as a design requirement.'
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-14]
   nota:
-    pt: O addon REQ-AGN exclui expressamente «sistemas cujo produto final seja um sistema de IA».
-    en: The REQ-AGN addon expressly excludes “systems whose final product is an AI system”.
+    pt: O piso CTX-AIA-RE-P08 sobe o ARC-014 (supervisão mínima) a todos os níveis nos sistemas de risco elevado; o âmbito do piso acrescenta a interface de supervisão do art. 14.º, n.º 4. Os agentes do produto continuam no ARC-015.
+    en: Floor CTX-AIA-RE-P08 raises ARC-014 (minimum oversight) to all levels in high-risk systems; the floor scope adds the oversight interface of Article 14(4). Product agents remain under ARC-015.
 - id: AIA-14-2
   acto_fonte: 32024R1689
   referencia: Art. 14.º, n.º 2
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Supervisão humana mínima, proporcional à autonomia
+      en: Minimum human oversight, proportionate to autonomy
   - tipo: requisito
     alvo: ARC-015
     niveis: [L2, L3]
@@ -1986,13 +2026,11 @@ itens:
     citacao:
       pt: O gate audita *intent* vs *acção real* a posteriori.
       en: The gate audits *intent* against *actual action* after the fact.
-  falta:
-    pt: Orientada a ações destrutivas de agentes; falta orientação para riscos a saúde, segurança e direitos fundamentais e uso indevido previsível.
-    en: Oriented to destructive agent actions; missing is guidance for risks to health, safety and fundamental rights and reasonably foreseeable misuse.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-14]
   nota: null
@@ -2000,9 +2038,19 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 14.º, n.º 3
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Supervisão humana mínima, proporcional à autonomia
+      en: Minimum human oversight, proportionate to autonomy
   - tipo: requisito
     alvo: REQ-AGN-002
     niveis: [L1, L2, L3]
@@ -2020,25 +2068,31 @@ itens:
     citacao:
       pt: Modelos AI que são parte do produto sem capacidade de tool-use externa (caem em Cap. 04 ARC-014 e cross-check AI Act)
       en: AI models that are part of the product without external tool-use capability (these fall under Ch. 04 ARC-014 and the AI Act cross-check)
-  falta:
-    pt: Níveis A0–A4 são proporcionais à autonomia, mas só para agentes com tool-use; a Política 38 exclui modelos de produto sem tool-use e o addon REQ-AGN exclui produtos de IA.
-    en: Levels A0–A4 are proportional to autonomy, but only for agents with tool-use; Policy 38 excludes product models without tool-use and the REQ-AGN addon excludes AI products.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-14]
-  nota:
-    pt: Ver AGN-ambito.
-    en: See AGN-ambito.
+  nota: null
 - id: AIA-14-4
   acto_fonte: 32024R1689
   referencia: Art. 14.º, n.º 4
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Supervisão humana mínima, proporcional à autonomia
+      en: Minimum human oversight, proportionate to autonomy
   - tipo: requisito
     alvo: REQ-AGN-003
     niveis: [L2, L3]
@@ -2062,15 +2116,13 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md
     ancora: -âmbito-e-enquadramento
     citacao:
-      pt: a sistemas cujo **produto final seja um sistema de IA** (ver manual SbD-AI-ToE);
-      en: to systems whose **final product is an AI system** (see the SbD-AI-ToE manual);
-  falta:
-    pt: Paragem segura (kill-switch) e anulação (OOB) para agentes A2+; faltam compreensão de limitações, deteção de anomalias pelo supervisor, consciência do enviesamento da automatização e interpretação de resultados, e tudo para sistemas não agênticos.
-    en: Safe stop (kill-switch) and override (OOB) for agents A2+; missing are understanding of limitations, anomaly detection by the overseer, awareness of automation bias and interpretation of outputs, and everything for non-agentic systems.
+      pt: quando o sistema é regulado pelo AI Act, também pelo overlay regulatório
+      en: when the system is regulated by the AI Act, also by the regulatory overlay
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-14]
   nota: null
@@ -3099,7 +3151,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 19.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-AIA-RE
     grau: null
@@ -3129,9 +3181,7 @@ itens:
     citacao:
       pt: Logs mantidos pelo período definido em política; verificação de retenção efectiva.
       en: Logs kept for the period defined in policy; effective retention verified.
-  falta:
-    pt: Piso de 6 meses prescrito (Política 29 §7 em todos os níveis; OPS-003 L2+); o piso é derrogável por exceção.
-    en: 6-month floor prescribed (Policy 29 §7 at all levels; OPS-003 L2+); the floor can be derogated from by exception.
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -3838,7 +3888,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 26.º, n.º 6
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-AIA-RE
     grau: null
@@ -3869,9 +3919,7 @@ itens:
     citacao:
       pt: para os registos gerados automaticamente por sistemas de IA de risco elevado, pelo menos seis meses
       en: for logs automatically generated by high-risk AI systems, at least six months
-  falta:
-    pt: Idem AIA-19-1 do lado do implantador.
-    en: Idem AIA-19-1 on the deployer's side.
+  falta: null
   razao_fora_de_ambito: null
   conflito: true
   explicacao_conflito:
@@ -3963,12 +4011,14 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 26.º, n.º 11
   classe: organizacional
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Informar as pessoas sujeitas a decisões apoiadas por sistemas do anexo III: nenhum requisito de transparência para pessoas afetadas.'
-    en: 'Informing persons subject to decisions supported by Annex III systems: no transparency requirement for affected persons.'
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R03
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4767,16 +4817,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 50.º, n.º 1
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Em vigor desde 2.8.2026. Nenhum requisito para informar que se interage com um sistema de IA (chatbots/assistentes).
-    en: In force since 2.8.2026. No requirement to inform that one is interacting with an AI system (chatbots/assistants).
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota: null
@@ -4784,16 +4836,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 50.º, n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Em vigor desde 2.8.2026 (sistemas anteriores: 2.12.2026). Nenhum requisito de marcação legível por máquina de conteúdos sintéticos (watermarking, metadados de proveniência, credenciais de conteúdo); o cross-check só admite suportá-la «quando essa decisão de produto for tomada».'
-    en: 'In force since 2.8.2026 (earlier systems: 2.12.2026). No requirement for machine-readable marking of synthetic content (watermarking, provenance metadata, content credentials); the cross-check only admits supporting it “when that product decision is taken”.'
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota: null
@@ -4801,12 +4855,14 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 50.º, n.º 3
   classe: organizacional
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Informação a pessoas expostas a reconhecimento de emoções/categorização biométrica: nenhuma prescrição.'
-    en: 'Information to persons exposed to emotion recognition/biometric categorisation: no prescription.'
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4818,16 +4874,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 50.º, n.º 4, primeiro parágrafo
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Divulgação de falsificações profundas: nenhuma prescrição técnica (rotulagem/marcação).'
-    en: 'Disclosure of deep fakes: no technical prescription (labelling/marking).'
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota: null
@@ -4852,16 +4910,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 50.º, n.º 5
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: 'Forma, momento (primeira interação) e acessibilidade da informação: nenhuma prescrição.'
-    en: 'Form, timing (first interaction) and accessibility of the information: no prescription.'
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota: null
@@ -5984,9 +6044,13 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 86.º, n.º 1
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R03
   - tipo: us
     alvo: 04-arquitetura-segura-us-15
     rotulo:
@@ -6005,9 +6069,7 @@ itens:
     citacao:
       pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
       en: complete logging of model inputs and outputs (with PII sanitisation)
-  falta:
-    pt: Impacto em explicabilidade analisado e logging de decisões relevantes (L2+); falta capacidade de fornecer à pessoa afetada explicação clara do papel do sistema e dos principais elementos da decisão.
-    en: Impact on explainability analysed and logging of relevant decisions (L2+); the capability to provide the affected person with a clear explanation of the role of the system and the main elements of the decision is missing.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -6138,16 +6200,18 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 111.º, n.º 4
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Até 2.12.2026 os sistemas generativos já no mercado têm de cumprir o art. 50.º, n.º 2; sem requisito de marcação (ver AIA-50-2).
-    en: By 2.12.2026 generative systems already on the market must comply with Article 50(2); no marking requirement (see AIA-50-2).
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: ART50
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-07-27'
   substitui: []
   nota: null

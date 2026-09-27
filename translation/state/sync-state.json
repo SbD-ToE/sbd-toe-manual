@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T18:07:17Z",
+  "generated_at": "2026-09-27T18:55:37Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "5ec6f0491984267b8d82e41418a837daa8398ec7ec21d748094725e09bf99ecc",
-      "translated_source_sha256": "5ec6f0491984267b8d82e41418a837daa8398ec7ec21d748094725e09bf99ecc",
-      "target_sha256": "a22143852912eb25193d6463e8aaa69b13ff56ca0939ec017a70d2bc08cfac91",
+      "source_sha256": "8e484165a9d5fd9ba67b830e55023613e5f09afe0fad197418118211fe82bf63",
+      "translated_source_sha256": "8e484165a9d5fd9ba67b830e55023613e5f09afe0fad197418118211fe82bf63",
+      "target_sha256": "8b3441888df9c1d66d4a41243ed3dc526021664d8764c25abe5af85ef4a35e3a",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -227,9 +227,9 @@
     },
     "002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "53ed265ae6a44cd08e4f1f641ce445e3714db998de25e293a0ebad8b94279c4c",
-      "translated_source_sha256": "53ed265ae6a44cd08e4f1f641ce445e3714db998de25e293a0ebad8b94279c4c",
-      "target_sha256": "d3ffdd7b559c4d54769033eae489455254ec1009eb290937f1908e8f029ca2f2",
+      "source_sha256": "6d3755aabef2409de940e5bcf667bddc05c968469478009d0a077e3bfc2a6882",
+      "translated_source_sha256": "6d3755aabef2409de940e5bcf667bddc05c968469478009d0a077e3bfc2a6882",
+      "target_sha256": "12d6d0a5893810337aae8df0743004544db02fbb12a485e2cea9e7034c0fe8d9",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -817,12 +817,12 @@
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md": {
       "state": "synced",
-      "source_sha256": "852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4",
-      "translated_source_sha256": "852b6ee83cef8557a2ccce4993287bf3e4d077753713f4eada6adc2bd0e49fe4",
-      "target_sha256": "329c7938e9d2bcee896e58a1bd5eb09c552b6936f7c8759321705773ef82601a",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "af5265cd3e841ca525b0af6dbc39411e63b17e0e4ec606bea0edd666e7766b71",
-      "translated_at": "2026-09-26T17:45:15Z",
+      "source_sha256": "2c98ddbab80b7ebba13764b4e2c51e6bd43b90b6e5426ca5db79fcd88ea53e48",
+      "translated_source_sha256": "2c98ddbab80b7ebba13764b4e2c51e6bd43b90b6e5426ca5db79fcd88ea53e48",
+      "target_sha256": "a58283fa5520e2968785beea3605d5b9f00deb76e31aebd8b33fd1a434b601d3",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "99bd217c01b2110ac5dc70d87c6809b50319bfca636ef6f08812cac3e128af17",
+      "translated_at": "2026-09-27T18:45:48Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/02-requisitos-seguranca/addon/10-validacao-requisitos.md": {
@@ -957,12 +957,12 @@
     },
     "010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md": {
       "state": "synced",
-      "source_sha256": "9be321621eac9807d29e45fa66f106a6dac96133947494a42aaa6153922a7d09",
-      "translated_source_sha256": "9be321621eac9807d29e45fa66f106a6dac96133947494a42aaa6153922a7d09",
-      "target_sha256": "16fca63b02e870fef0c48a38202d9d3e883bb320c1b566e9ad3a15c035235bf3",
+      "source_sha256": "e00ad5060fd015733a607b9dc0cae299b93c3c3c3538119ae01684e20d8dadfe",
+      "translated_source_sha256": "e00ad5060fd015733a607b9dc0cae299b93c3c3c3538119ae01684e20d8dadfe",
+      "target_sha256": "80392f1ce40a288087cfc80f95e063ffcde38345757f2ca9a9e5a24b3effc7d5",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
-      "glossary_sha256_at_translation": "4195795bebf215e4664e664d2d0d7a96de3ba2c777ee0631bdc370a563726f72",
-      "translated_at": "2026-09-27T18:03:20Z",
+      "glossary_sha256_at_translation": "c6b37791095aec6c34b1e369e8a0f5e411b498498bd7b9b16fe3235438ad2c96",
+      "translated_at": "2026-09-27T18:45:46Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/03-threat-modeling/addon/01-metodologias-e-ferramentas.md": {
@@ -1167,12 +1167,12 @@
     },
     "010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md": {
       "state": "synced",
-      "source_sha256": "d7635a0fc66efbb4438ca8ac32a1faeb0064024750a934af30f22f9d8505f0f1",
-      "translated_source_sha256": "d7635a0fc66efbb4438ca8ac32a1faeb0064024750a934af30f22f9d8505f0f1",
-      "target_sha256": "6a0e97644336124a63c16a6cb8a10f7ab05d2575d818f840e734014a8bb905e0",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "34d9a689833df33ba363374f94fa94f6a82ef40540cad775cb9b05cd58a295d0",
-      "translated_at": "2026-09-26T08:32:02Z",
+      "source_sha256": "c94702e524d295fbf606b4984e38afb5f69fce02558fafffc00f80d7d8f0a2c6",
+      "translated_source_sha256": "c94702e524d295fbf606b4984e38afb5f69fce02558fafffc00f80d7d8f0a2c6",
+      "target_sha256": "369cf16c8ded9581af0779e724eff46dac90b506afa19f409622053c0586f053",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "831f553b1476b531889ff3ec9884e8c06452a88e8febcf78627fabee356480c5",
+      "translated_at": "2026-09-27T18:45:47Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/04-arquitetura-segura/addon/02-casos-praticos.md": {
@@ -2977,12 +2977,12 @@
     },
     "010-sbd-manual/12-monitorizacao-operacoes/addon/10-excecoes-operacoes.md": {
       "state": "synced",
-      "source_sha256": "bcc9d469895751ff6d747e5f39c8727d1beb30f6d746783a91c719c5c7a6c8b1",
-      "translated_source_sha256": "bcc9d469895751ff6d747e5f39c8727d1beb30f6d746783a91c719c5c7a6c8b1",
-      "target_sha256": "21b6d3ae7b5760865297a904652811a9bf4cc6b096175f7a809ef961050a6577",
-      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
+      "source_sha256": "fb0fd2491f23648ac37d3a2bbf9bdc0b7233f4b4dc679b9acd519e910423882c",
+      "translated_source_sha256": "fb0fd2491f23648ac37d3a2bbf9bdc0b7233f4b4dc679b9acd519e910423882c",
+      "target_sha256": "738025cfeb2b95963d10dea30375bb25581c45023371d7154a0640873b52792a",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "99e0d8587c7733c5c6dc374a84d95e5ca9b4bffd25c4838cac143ed3a2e2ab05",
-      "translated_at": "2026-09-27T07:53:55Z",
+      "translated_at": "2026-09-27T18:45:46Z",
       "pending_blocks": 0
     },
     "010-sbd-manual/12-monitorizacao-operacoes/addon/11-kpis-metricas.md": {

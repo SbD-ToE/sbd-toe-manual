@@ -39,7 +39,7 @@ O sistema de IA é de risco elevado nos termos do art. 6.º (com a qualificaçã
 
 ## Graus {#graus}
 
-- **ART50** — Abrangido pelo art. 50.º (transparência) (declarável sozinho). Sistema de IA abrangido pelas obrigações de transparência do art. 50.º (interacção directa com pessoas singulares, conteúdo sintético, falsificações profundas), seja ou não de risco elevado.
+- **ART50** — Abrangido pelo art. 50.º (transparência) (declarável sozinho). Sistema de IA abrangido pelas obrigações de transparência do art. 50.º (interacção directa com pessoas singulares, conteúdo sintético, reconhecimento de emoções ou categorização biométrica, falsificações profundas), seja ou não de risco elevado.
 
 ## Pisos do contexto {#pisos}
 
@@ -52,8 +52,21 @@ O sistema de IA é de risco elevado nos termos do art. 6.º (com a qualificaçã
 | CTX-AIA-RE-P05 | `ARC-014` | — | obrigatório | — | Reg. (UE) 2024/1689, art. 15.º, n.º 5: «Os sistemas de IA de risco elevado devem ser resistentes a tentativas de terceiros não autorizados de alterar a sua utilização, os seus resultados ou seu desempenho explorando as vulnerabilidades do sistema.» (AIA-15-5) | não admitida |
 | CTX-AIA-RE-P06 | `DEP-011` | — | obrigatório | — | Reg. (UE) 2024/1689, art. 15.º, n.º 5: «Os sistemas de IA de risco elevado devem ser resistentes a tentativas de terceiros não autorizados de alterar a sua utilização, os seus resultados ou seu desempenho explorando as vulnerabilidades do sistema.» (AIA-15-5) | não admitida |
 | CTX-AIA-RE-P07 | `DEP-012` | — | obrigatório | — | Reg. (UE) 2024/1689, art. 15.º, n.º 5: «Os sistemas de IA de risco elevado devem ser resistentes a tentativas de terceiros não autorizados de alterar a sua utilização, os seus resultados ou seu desempenho explorando as vulnerabilidades do sistema.» (AIA-15-5) | não admitida |
+| CTX-AIA-RE-P08 | `ARC-014` | — | obrigatório | Supervisão humana em qualquer nível, com interface que permita a quem supervisiona compreender as capacidades e limitações do sistema, detectar anomalias, interpretar o resultado, decidir não o usar ou anulá-lo e parar o sistema; medidas proporcionais aos riscos, à autonomia e ao contexto; quem supervisiona é advertido para o enviesamento da automatização. | Reg. (UE) 2024/1689, art. 14.º, n.os 1 a 4: «ser eficazmente supervisionados por pessoas singulares durante o período em que estão em utilização» (AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4) | não admitida |
+| CTX-AIA-RE-P09 | `THR-008` | ART50 | obrigatório | Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: o threat model cobre a utilização indevida razoavelmente previsível do conteúdo gerado, e as salvaguardas são avaliadas com red-team e testes de segurança de conteúdo. | Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744): «medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação» (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitida |
+| CTX-AIA-RE-P10 | `ARC-014` | ART50 | obrigatório | Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: filtros e classificadores de segurança de conteúdo na entrada e na saída, e correcção da utilização indevida observada ou assinalada. | Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744): «medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação» (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitida |
 
-> **ART50.** Sem pisos por enquanto: as obrigações do art. 50.º (informar as pessoas e marcar o conteúdo sintético) estão declaradas como lacunas na matriz _matriz/aiact.yaml.
+> **ART50.** O grau ART50 recebe os pisos CTX-AIA-RE-P09 e CTX-AIA-RE-P10 (salvaguardas de segurança de conteúdo em geradores de imagem, vídeo ou áudio realistas, art. 5.º, n.º 1-A) e os acrescentos CTX-AIA-RE-R01 (informar) e R02 (marcar conteúdo sintético).
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-AIA-RE-R01` | Informar que se interage com IA | As pessoas que interagem directamente com o sistema são informadas de que estão a interagir com um sistema de IA, salvo se for óbvio pelo contexto; as pessoas expostas a reconhecimento de emoções ou a categorização biométrica são informadas desse funcionamento; o conteúdo de imagem, áudio ou vídeo que constitua falsificação profunda é divulgado como gerado ou manipulado. A informação é clara e perceptível, dada o mais tardar na primeira interacção ou exposição, e cumpre os requisitos de acessibilidade; a presença do aviso é verificada em teste. | Reg. (UE) 2024/1689, art. 50.º, n.os 1, 3, 4 (1.º parágrafo) e 5: «de forma clara e percetível o mais tardar aquando da primeira interação ou exposição» (AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5) |
+| `CTX-AIA-RE-R02` | Marcação de conteúdo sintético | Os resultados de áudio, imagem, vídeo ou texto gerados ou manipulados pelo sistema são marcados num formato legível por máquina e detectáveis como artificiais (p. ex. metadados de proveniência, credenciais de conteúdo, marca de água), com uma solução eficaz, interoperável e sólida na medida do tecnicamente viável; a marcação é verificada em teste e não é removida pelos passos seguintes do pipeline; as excepções do art. 50.º, n.º 2 (apoio à edição normalizada, sem alteração substancial dos dados de entrada) ficam registadas. | Reg. (UE) 2024/1689, art. 50.º, n.º 2, e art. 111.º, n.º 4: «sejam marcados num formato legível por máquina e detetáveis como tendo sido artificialmente gerados ou manipulados» (AIA-50-2, AIA-111-4) |
+| `CTX-AIA-RE-R03` | Informar e explicar às pessoas afectadas | Quando um sistema de IA de risco elevado do anexo III apoia decisões sobre pessoas singulares: as pessoas são informadas de que estão sujeitas à sua utilização; a aplicação regista, por decisão, o resultado do sistema e os principais elementos que o determinaram (OPS-011), de modo a poder dar à pessoa afectada explicações claras e pertinentes sobre o papel do sistema e os principais elementos da decisão. Quando a decisão é exclusivamente automatizada e há dados pessoais, aplica-se também CTX-RGPD-R05. | Reg. (UE) 2024/1689, art. 26.º, n.º 11, e art. 86.º, n.º 1: «explicações claras e pertinentes sobre o papel do sistema de IA no processo de tomada de decisão e sobre os principais elementos da decisão tomada» (AIA-26-11, AIA-86-1) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -222,7 +235,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ARC-011` | Segmentação lógica e física entre ambientes | — | — | ✔ | — |
 | `ARC-012` | Critérios formais de aprovação para aplicações de risco elevado | — | — | ✔ | — |
 | `ARC-013` | Validação automática de topologia em CI/CD ou como código | — | — | ✔ | — |
-| `ARC-014` | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | ▲ | ▲ | ▲ | CTX-AIA-RE-P05 |
+| `ARC-014` | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | ▲ | ▲ | ▲ | CTX-AIA-RE-P05, CTX-AIA-RE-P08 |
 | `ARC-015` | Agentes AI operam como principals isolados com mandate e least privilege | — | ✔ | ✔ | — |
 | `DEP-001` | SBOM gerado por build, em formato standardizado | ✔ | ✔ | ✔ | — |
 | `DEP-002` | SCA integrado em pipeline com bloqueio por política de severidade | ✔ | ✔ | ✔ | — |
@@ -347,6 +360,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
+| `CTX-AIA-RE-R03` | Informar e explicar às pessoas afectadas | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — ART50 {#lista-art50}
 
@@ -495,7 +509,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `THR-005` | Rastreabilidade ameaça → requisito → backlog → validação | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versionado e actualizado dentro do ciclo ou após trigger | — | ✔ | ✔ | — |
 | `THR-007` | Revisão independente por AppSec antes de go-live em L2 e L3 | — | ✔ | ✔ | — |
-| `THR-008` | Threat modeling estendido para sistemas com componentes AI/ML | — | ✔ | ✔ | — |
+| `THR-008` | Threat modeling estendido para sistemas com componentes AI/ML | ▲ | ▲ | ▲ | CTX-AIA-RE-P09 |
 | `ARC-001` | Zonas de confiança identificadas e documentadas | ✔ | ✔ | ✔ | — |
 | `ARC-002` | Exposição externa minimizada e justificada | ✔ | ✔ | ✔ | — |
 | `ARC-003` | Revisão de arquitectura com foco em segurança | — | ✔ | ✔ | — |
@@ -509,7 +523,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ARC-011` | Segmentação lógica e física entre ambientes | — | — | ✔ | — |
 | `ARC-012` | Critérios formais de aprovação para aplicações de risco elevado | — | — | ✔ | — |
 | `ARC-013` | Validação automática de topologia em CI/CD ou como código | — | — | ✔ | — |
-| `ARC-014` | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | — | ✔ | ✔ | — |
+| `ARC-014` | Padrões arquitetónicos específicos para sistemas com componentes AI/ML | ▲ | ▲ | ▲ | CTX-AIA-RE-P10 |
 | `ARC-015` | Agentes AI operam como principals isolados com mandate e least privilege | — | ✔ | ✔ | — |
 | `DEP-001` | SBOM gerado por build, em formato standardizado | ✔ | ✔ | ✔ | — |
 | `DEP-002` | SCA integrado em pipeline com bloqueio por política de severidade | ✔ | ✔ | ✔ | — |
@@ -634,6 +648,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
+| `CTX-AIA-RE-R01` | Informar que se interage com IA | ▲ | ▲ | ▲ | — |
+| `CTX-AIA-RE-R02` | Marcação de conteúdo sintético | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -641,8 +657,8 @@ Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigida
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 14 |
-| Parcial | 62 |
+| Cobre | 32 |
+| Parcial | 54 |
 | Apoia evidência | 29 |
-| Lacuna | 32 |
+| Lacuna | 22 |
 | Fora de âmbito | 108 |

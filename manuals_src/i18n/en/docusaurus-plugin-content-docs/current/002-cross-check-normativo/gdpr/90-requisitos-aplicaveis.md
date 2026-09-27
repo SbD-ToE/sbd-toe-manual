@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: 53ed265ae6a44cd08e4f1f641ce445e3714db998de25e293a0ebad8b94279c4c
+  source_sha256: 6d3755aabef2409de940e5bcf667bddc05c968469478009d0a077e3bfc2a6882
   source_commit: null
-  target_sha256: d3ffdd7b559c4d54769033eae489455254ec1009eb290937f1908e8f029ca2f2
+  target_sha256: 12d6d0a5893810337aae8df0743004544db02fbb12a485e2cea9e7034c0fe8d9
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -71,7 +71,7 @@ These requirements only make sense under the regime, so they do not live in the 
 | `CTX-RGPD-R02` | Erasure of data made public | Where the application made personal data public and must later erase them: the reasonable technical steps to inform those processing them (e.g. removal requests to known search engines and aggregators, no-index headers and metadata, invalidation of public caches) are defined and carried out with the erasure, and logged. | Regulation (EU) 2016/679, Article 17(2): “shall take reasonable steps, including technical measures” (RGPD-17-2) |
 | `CTX-RGPD-R03` | Age and parental consent verification | Where an information society service is offered directly to children on the basis of consent: age is verified against the applicable threshold (16, or the national threshold, not below 13), and consent from the holder of parental responsibility is obtained and verified by means appropriate to the available technology, recorded under PRI-006. | Regulation (EU) 2016/679, Article 8(2): “shall make reasonable efforts to verify in such cases that consent is given or authorised by the holder of parental responsibility over the child” (RGPD-8-2) |
 | `CTX-RGPD-R04` | Objection by automated means | In information society services, automated objection signals sent by the browser or user agent (e.g. Global Privacy Control) are recognised and treated as a valid objection, with the same effect as an objection given through the interface (PRI-006). | Regulation (EU) 2016/679, Article 21(5): “the data subject may exercise his or her right to object by automated means using technical specifications” (RGPD-21-5) |
-| `CTX-RGPD-R05` | Solely automated decisions | Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4). | Regulation (EU) 2016/679, Article 22, n.os 1, 3 e 4: “at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision” (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
+| `CTX-RGPD-R05` | Solely automated decisions | Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4). When the decision is supported by an Annex III high-risk AI system, CTX-AIA-RE-R03 also applies. | Regulation (EU) 2016/679, Article 22, n.os 1, 3 e 4: “at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision” (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
 
 ## How to read the list {#como-se-le}
 

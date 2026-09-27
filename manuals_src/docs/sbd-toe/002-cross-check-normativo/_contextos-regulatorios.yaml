@@ -115,14 +115,14 @@ graus:
     declara_se_em: aplicacao
     cumulativo: false   # declarável sozinho: um sistema só abrangido pelo art. 50.º não recebe os pisos de risco elevado
     criterio:
-      obrigacoes: [AIA-50-1, AIA-50-2, AIA-50-4-a, AIA-50-5]
+      obrigacoes: [AIA-50-1, AIA-50-2, AIA-50-3, AIA-50-4-a, AIA-50-5]
       referencia: "Reg. (UE) 2024/1689, art. 50.º"
       citacao:
         pt: "Os prestadores devem assegurar que os sistemas de IA destinados a interagir diretamente com pessoas singulares sejam concebidos e desenvolvidos de maneira que as pessoas singulares em causa sejam informadas de que estão a interagir com um sistema de IA"
         en: "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system"
       texto:
-        pt: Sistema de IA abrangido pelas obrigações de transparência do art. 50.º (interacção directa com pessoas singulares, conteúdo sintético, falsificações profundas), seja ou não de risco elevado.
-        en: AI system covered by the transparency obligations of Article 50 (direct interaction with natural persons, synthetic content, deep fakes), whether or not it is high-risk.
+        pt: Sistema de IA abrangido pelas obrigações de transparência do art. 50.º (interacção directa com pessoas singulares, conteúdo sintético, reconhecimento de emoções ou categorização biométrica, falsificações profundas), seja ou não de risco elevado.
+        en: AI system covered by the transparency obligations of Article 50 (direct interaction with natural persons, synthetic content, emotion recognition or biometric categorisation, deep fakes), whether or not it is high-risk.
 
 contextos:
   - id: CTX-NIS2
@@ -753,10 +753,46 @@ contextos:
           referencia: "Reg. (UE) 2024/1689, art. 15.º, n.º 5"
           citacao: {pt: "Os sistemas de IA de risco elevado devem ser resistentes a tentativas de terceiros não autorizados de alterar a sua utilização, os seus resultados ou seu desempenho explorando as vulnerabilidades do sistema.", en: "High-risk AI systems shall be resilient against attempts by unauthorised third parties to alter their use, outputs or performance by exploiting system vulnerabilities."}
         admite_justificacao: false
+      - id: CTX-AIA-RE-P08
+        alvo: {tipo: requisito, alvo: ARC-014}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Supervisão humana em qualquer nível, com interface que permita a quem supervisiona compreender as capacidades e limitações do sistema, detectar anomalias, interpretar o resultado, decidir não o usar ou anulá-lo e parar o sistema; medidas proporcionais aos riscos, à autonomia e ao contexto; quem supervisiona é advertido para o enviesamento da automatização.", en: "Human oversight at any level, with an interface that lets the overseer understand the system's capabilities and limitations, detect anomalies, interpret the output, decide not to use or to override it and stop the system; measures proportionate to the risks, autonomy and context; the overseer is made aware of automation bias."}
+        base:
+          obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4]
+          referencia: "Reg. (UE) 2024/1689, art. 14.º, n.os 1 a 4"
+          citacao: {pt: "ser eficazmente supervisionados por pessoas singulares durante o período em que estão em utilização", en: "can be effectively overseen by natural persons during the period in which they are in use"}
+        admite_justificacao: false
+      - id: CTX-AIA-RE-P09
+        alvo: {tipo: requisito, alvo: THR-008}
+        grau: ART50
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: o threat model cobre a utilização indevida razoavelmente previsível do conteúdo gerado, e as salvaguardas são avaliadas com red-team e testes de segurança de conteúdo.", en: "Systems that generate or manipulate realistic images, video or audio, at any level: the threat model covers the reasonably foreseeable misuse of the generated content, and the safeguards are assessed with red-teaming and content-safety tests."}
+        base:
+          obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]
+          referencia: "Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744)"
+          citacao: {pt: "medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação", en: "reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation"}
+        admite_justificacao: true
+      - id: CTX-AIA-RE-P10
+        alvo: {tipo: requisito, alvo: ARC-014}
+        grau: ART50
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: filtros e classificadores de segurança de conteúdo na entrada e na saída, e correcção da utilização indevida observada ou assinalada.", en: "Systems that generate or manipulate realistic images, video or audio, at any level: content-safety filters and classifiers on input and output, and correction of observed or reported misuse."}
+        base:
+          obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]
+          referencia: "Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744)"
+          citacao: {pt: "medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação", en: "reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation"}
+        admite_justificacao: true
     nota_graus:
       ART50:
-        pt: "Sem pisos por enquanto: as obrigações do art. 50.º (informar as pessoas e marcar o conteúdo sintético) estão declaradas como lacunas na matriz _matriz/aiact.yaml."
-        en: "No floor for now: the Article 50 obligations (informing people and marking synthetic content) are declared as gaps in the matrix _matriz/aiact.yaml."
+        pt: "O grau ART50 recebe os pisos CTX-AIA-RE-P09 e CTX-AIA-RE-P10 (salvaguardas de segurança de conteúdo em geradores de imagem, vídeo ou áudio realistas, art. 5.º, n.º 1-A) e os acrescentos CTX-AIA-RE-R01 (informar) e R02 (marcar conteúdo sintético)."
+        en: "The ART50 grade carries the floor CTX-AIA-RE-P09 and the floor CTX-AIA-RE-P10 (content-safety safeguards in generators of realistic images, video or audio, Article 5(1a)) and the additions CTX-AIA-RE-R01 (informing) and R02 (marking synthetic content)."
 
   - id: CTX-RGPD
     nome: {pt: Tratamento de dados pessoais (RGPD), en: Processing of personal data (GDPR)}
@@ -985,14 +1021,56 @@ acrescentos:
     niveis: null
     nome: {pt: "Decisões exclusivamente automatizadas", en: "Solely automated decisions"}
     criterio_aceitacao:
-      pt: "As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4."
-      en: "Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4)."
+      pt: "As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4. Quando a decisão é apoiada por um sistema de IA de risco elevado do anexo III, aplica-se também CTX-AIA-RE-R03."
+      en: "Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4). When the decision is supported by an Annex III high-risk AI system, CTX-AIA-RE-R03 also applies."
     base:
       obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]
       referencia: "Reg. (UE) 2016/679, art. 22.º, n.os 1, 3 e 4"
       citacao: {pt: "o direito de, pelo menos, obter intervenção humana por parte do responsável, manifestar o seu ponto de vista e contestar a decisão", en: "at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision"}
     controlos: []
     sem_controlo_razao: {pt: "Capacidade funcional e de processo; sem controlo técnico próprio no Manual.", en: "A functional and process capability; no dedicated technical control in the Manual."}
+  - id: CTX-AIA-RE-R01
+    contexto: CTX-AIA-RE
+    grau: ART50
+    niveis: null
+    nome: {pt: "Informar que se interage com IA", en: "Informing people that they are interacting with AI"}
+    criterio_aceitacao:
+      pt: "As pessoas que interagem directamente com o sistema são informadas de que estão a interagir com um sistema de IA, salvo se for óbvio pelo contexto; as pessoas expostas a reconhecimento de emoções ou a categorização biométrica são informadas desse funcionamento; o conteúdo de imagem, áudio ou vídeo que constitua falsificação profunda é divulgado como gerado ou manipulado. A informação é clara e perceptível, dada o mais tardar na primeira interacção ou exposição, e cumpre os requisitos de acessibilidade; a presença do aviso é verificada em teste."
+      en: "People who interact directly with the system are informed that they are interacting with an AI system, unless this is obvious from the context; people exposed to emotion recognition or biometric categorisation are informed of that operation; image, audio or video content that constitutes a deep fake is disclosed as generated or manipulated. The information is clear and distinguishable, given at the latest at the first interaction or exposure, and meets the accessibility requirements; the presence of the notice is verified in testing."
+    base:
+      obrigacoes: [AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5]
+      referencia: "Reg. (UE) 2024/1689, art. 50.º, n.os 1, 3, 4 (1.º parágrafo) e 5"
+      citacao: {pt: "de forma clara e percetível o mais tardar aquando da primeira interação ou exposição", en: "in a clear and distinguishable manner at the latest at the time of the first interaction or exposure"}
+    controlos: []
+    sem_controlo_razao: {pt: "Requisito de interface e de conteúdo, verificado em teste funcional; sem controlo técnico próprio no Manual.", en: "An interface and content requirement, verified in functional testing; no dedicated technical control in the Manual."}
+  - id: CTX-AIA-RE-R02
+    contexto: CTX-AIA-RE
+    grau: ART50
+    niveis: null
+    nome: {pt: "Marcação de conteúdo sintético", en: "Marking of synthetic content"}
+    criterio_aceitacao:
+      pt: "Os resultados de áudio, imagem, vídeo ou texto gerados ou manipulados pelo sistema são marcados num formato legível por máquina e detectáveis como artificiais (p. ex. metadados de proveniência, credenciais de conteúdo, marca de água), com uma solução eficaz, interoperável e sólida na medida do tecnicamente viável; a marcação é verificada em teste e não é removida pelos passos seguintes do pipeline; as excepções do art. 50.º, n.º 2 (apoio à edição normalizada, sem alteração substancial dos dados de entrada) ficam registadas."
+      en: "The audio, image, video or text outputs generated or manipulated by the system are marked in a machine-readable format and detectable as artificial (e.g. provenance metadata, content credentials, watermarking), with a solution that is effective, interoperable and robust as far as technically feasible; the marking is verified in testing and is not stripped by later pipeline steps; the exceptions of Article 50(2) (assistive function for standard editing, no substantial alteration of the input data) are recorded."
+    base:
+      obrigacoes: [AIA-50-2, AIA-111-4]
+      referencia: "Reg. (UE) 2024/1689, art. 50.º, n.º 2, e art. 111.º, n.º 4"
+      citacao: {pt: "sejam marcados num formato legível por máquina e detetáveis como tendo sido artificialmente gerados ou manipulados", en: "are marked in a machine-readable format and detectable as artificially generated or manipulated"}
+    controlos: []
+    sem_controlo_razao: {pt: "A técnica de marcação depende do tipo de conteúdo e do estado da arte; sem controlo técnico próprio no Manual.", en: "The marking technique depends on the type of content and the state of the art; no dedicated technical control in the Manual."}
+  - id: CTX-AIA-RE-R03
+    contexto: CTX-AIA-RE
+    grau: null
+    niveis: null
+    nome: {pt: "Informar e explicar às pessoas afectadas", en: "Informing and explaining to affected persons"}
+    criterio_aceitacao:
+      pt: "Quando um sistema de IA de risco elevado do anexo III apoia decisões sobre pessoas singulares: as pessoas são informadas de que estão sujeitas à sua utilização; a aplicação regista, por decisão, o resultado do sistema e os principais elementos que o determinaram (OPS-011), de modo a poder dar à pessoa afectada explicações claras e pertinentes sobre o papel do sistema e os principais elementos da decisão. Quando a decisão é exclusivamente automatizada e há dados pessoais, aplica-se também CTX-RGPD-R05."
+      en: "When an Annex III high-risk AI system supports decisions about natural persons: the persons are informed that they are subject to its use; the application records, per decision, the system's output and the main elements that determined it (OPS-011), so that it can give the affected person clear and meaningful explanations of the role of the system and the main elements of the decision. When the decision is solely automated and personal data are involved, CTX-RGPD-R05 also applies."
+    base:
+      obrigacoes: [AIA-26-11, AIA-86-1]
+      referencia: "Reg. (UE) 2024/1689, art. 26.º, n.º 11, e art. 86.º, n.º 1"
+      citacao: {pt: "explicações claras e pertinentes sobre o papel do sistema de IA no processo de tomada de decisão e sobre os principais elementos da decisão tomada", en: "clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision taken"}
+    controlos: []
+    sem_controlo_razao: {pt: "Capacidade funcional e de processo; o registo por decisão apoia-se em OPS-011.", en: "A functional and process capability; the per-decision record relies on OPS-011."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -4563,12 +4641,13 @@ lista_ids:
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
         - {id: THR-008, origem: elevado, cap: '03', pisos: [CTX-AIA-RE-P04], obrigacoes: [AIA-15-5]}
-        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05], obrigacoes: [AIA-15-5]}
+        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05, CTX-AIA-RE-P08], obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4, AIA-15-5]}
         - {id: DEP-011, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P06], obrigacoes: [AIA-15-5]}
         - {id: DEP-012, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P07], obrigacoes: [AIA-15-5]}
         - {id: OPS-003, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P03], obrigacoes: [AIA-19-1, AIA-26-6]}
         - {id: OPS-011, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P01], obrigacoes: [AIA-12-1, AIA-12-2]}
         - {id: OPS-012, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P02], obrigacoes: [AIA-12-1, AIA-12-2]}
+        - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4717,7 +4796,7 @@ lista_ids:
         - {id: ARC-008, origem: base, cap: '04'}
         - {id: ARC-009, origem: base, cap: '04'}
         - {id: ARC-010, origem: base, cap: '04'}
-        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05], obrigacoes: [AIA-15-5]}
+        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05, CTX-AIA-RE-P08], obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4, AIA-15-5]}
         - {id: ARC-015, origem: base, cap: '04'}
         - {id: DEP-001, origem: base, cap: '05'}
         - {id: DEP-002, origem: base, cap: '05'}
@@ -4826,6 +4905,7 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4984,7 +5064,7 @@ lista_ids:
         - {id: ARC-011, origem: base, cap: '04'}
         - {id: ARC-012, origem: base, cap: '04'}
         - {id: ARC-013, origem: base, cap: '04'}
-        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05], obrigacoes: [AIA-15-5]}
+        - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05, CTX-AIA-RE-P08], obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4, AIA-15-5]}
         - {id: ARC-015, origem: base, cap: '04'}
         - {id: DEP-001, origem: base, cap: '05'}
         - {id: DEP-002, origem: base, cap: '05'}
@@ -5109,6 +5189,7 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
     ART50:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -5246,6 +5327,10 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: THR-008, origem: elevado, cap: '03', grau: ART50, pisos: [CTX-AIA-RE-P09], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
+        - {id: ARC-014, origem: elevado, cap: '04', grau: ART50, pisos: [CTX-AIA-RE-P10], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
+        - {id: CTX-AIA-RE-R01, origem: acrescentado, grau: ART50, obrigacoes: [AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5]}
+        - {id: CTX-AIA-RE-R02, origem: acrescentado, grau: ART50, obrigacoes: [AIA-111-4, AIA-50-2]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5383,7 +5468,7 @@ lista_ids:
         - {id: THR-005, origem: base, cap: '03'}
         - {id: THR-006, origem: base, cap: '03'}
         - {id: THR-007, origem: base, cap: '03'}
-        - {id: THR-008, origem: base, cap: '03'}
+        - {id: THR-008, origem: elevado, cap: '03', grau: ART50, pisos: [CTX-AIA-RE-P09], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-003, origem: base, cap: '04'}
@@ -5394,7 +5479,7 @@ lista_ids:
         - {id: ARC-008, origem: base, cap: '04'}
         - {id: ARC-009, origem: base, cap: '04'}
         - {id: ARC-010, origem: base, cap: '04'}
-        - {id: ARC-014, origem: base, cap: '04'}
+        - {id: ARC-014, origem: elevado, cap: '04', grau: ART50, pisos: [CTX-AIA-RE-P10], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
         - {id: ARC-015, origem: base, cap: '04'}
         - {id: DEP-001, origem: base, cap: '05'}
         - {id: DEP-002, origem: base, cap: '05'}
@@ -5503,6 +5588,8 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-AIA-RE-R01, origem: acrescentado, grau: ART50, obrigacoes: [AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5]}
+        - {id: CTX-AIA-RE-R02, origem: acrescentado, grau: ART50, obrigacoes: [AIA-111-4, AIA-50-2]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5647,7 +5734,7 @@ lista_ids:
         - {id: THR-005, origem: base, cap: '03'}
         - {id: THR-006, origem: base, cap: '03'}
         - {id: THR-007, origem: base, cap: '03'}
-        - {id: THR-008, origem: base, cap: '03'}
+        - {id: THR-008, origem: elevado, cap: '03', grau: ART50, pisos: [CTX-AIA-RE-P09], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-003, origem: base, cap: '04'}
@@ -5661,7 +5748,7 @@ lista_ids:
         - {id: ARC-011, origem: base, cap: '04'}
         - {id: ARC-012, origem: base, cap: '04'}
         - {id: ARC-013, origem: base, cap: '04'}
-        - {id: ARC-014, origem: base, cap: '04'}
+        - {id: ARC-014, origem: elevado, cap: '04', grau: ART50, pisos: [CTX-AIA-RE-P10], obrigacoes: [AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A]}
         - {id: ARC-015, origem: base, cap: '04'}
         - {id: DEP-001, origem: base, cap: '05'}
         - {id: DEP-002, origem: base, cap: '05'}
@@ -5786,6 +5873,8 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-AIA-RE-R01, origem: acrescentado, grau: ART50, obrigacoes: [AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5]}
+        - {id: CTX-AIA-RE-R02, origem: acrescentado, grau: ART50, obrigacoes: [AIA-111-4, AIA-50-2]}
   CTX-RGPD:
     base:
       L1:

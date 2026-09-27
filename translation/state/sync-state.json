@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T14:32:20Z",
+  "generated_at": "2026-09-27T14:36:27Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -86,9 +86,9 @@
     },
     "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "449a78fbdb1cfb13f3d14ecf02586eb604bfd91c300ab47dc783e4f6434f4d9c",
-      "translated_source_sha256": "449a78fbdb1cfb13f3d14ecf02586eb604bfd91c300ab47dc783e4f6434f4d9c",
-      "target_sha256": "31f461070ea9bbf44cd8ad55cc1ebca1ab761d1e795bf9ac2dce1d481bdc0e10",
+      "source_sha256": "474747f53665dd5da6ed4befef36189a476dc55f58635ce489a6596b1b1bab30",
+      "translated_source_sha256": "474747f53665dd5da6ed4befef36189a476dc55f58635ce489a6596b1b1bab30",
+      "target_sha256": "3066ac823bb4cda425e81a032518d3db1e477eaa980b75ccb760ab2b72581fbf",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",

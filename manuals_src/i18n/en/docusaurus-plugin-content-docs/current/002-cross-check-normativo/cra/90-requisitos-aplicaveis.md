@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 449a78fbdb1cfb13f3d14ecf02586eb604bfd91c300ab47dc783e4f6434f4d9c
+  source_sha256: 474747f53665dd5da6ed4befef36189a476dc55f58635ce489a6596b1b1bab30
   source_commit: null
-  target_sha256: 31f461070ea9bbf44cd8ad55cc1ebca1ab761d1e795bf9ac2dce1d481bdc0e10
+  target_sha256: 3066ac823bb4cda425e81a032518d3db1e477eaa980b75ccb760ab2b72581fbf
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -356,10 +356,10 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-CRA-P04 |
-| `CTX-CRA-R01` | Support period determined, communicated and honoured | ▲ | ▲ | ▲ | CTX-CRA-R01 |
-| `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | ▲ | ▲ | ▲ | CTX-CRA-R02 |
-| `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | ▲ | ▲ | ▲ | CTX-CRA-R03 |
-| `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | ▲ | ▲ | ▲ | CTX-CRA-R04 |
+| `CTX-CRA-R01` | Support period determined, communicated and honoured | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R02` | Distribution and mechanism of security updates at the user | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R03` | Public security advisories on fixed vulnerabilities | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 

@@ -144,6 +144,8 @@ def sha256(data: bytes) -> str:
 
 
 def _entry(rid: str, origem: str, master: dict, pisos=None, obrigacoes=None, grau=None) -> dict:
+    """One lista_ids entry. «pisos» carries only floor ids (CTX-*-Pnn); an «acrescentado» entry has no pisos,
+    only the obligations that ground it."""
     e = {"id": rid, "origem": origem}
     cap = master.get(rid, {}).get("cap")
     if cap and cap != "02":
@@ -152,6 +154,7 @@ def _entry(rid: str, origem: str, master: dict, pisos=None, obrigacoes=None, gra
         e["grau"] = grau
     if pisos:
         e["pisos"] = sorted(pisos)
+    if obrigacoes:
         e["obrigacoes"] = sorted(obrigacoes)
     return e
 
@@ -198,7 +201,7 @@ def build_lists(ctx_doc: dict, master: dict) -> dict:
                         ps, obs, g = elevated[rid]
                         ids.append(_entry(rid, "elevado", master, ps, obs, g))
                 for a in added:
-                    ids.append(_entry(a["id"], "acrescentado", master, [a["id"]], a["base"]["obrigacoes"], a.get("grau")))
+                    ids.append(_entry(a["id"], "acrescentado", master, None, a["base"]["obrigacoes"], a.get("grau")))
                 lists[lvl] = ids
             per_grade["base" if grade is None else grade] = lists
         out[ctx["id"]] = per_grade
@@ -221,6 +224,7 @@ def render_lists_yaml(lists: dict) -> str:
                         parts.append(f"grau: {e['grau']}")
                     if "pisos" in e:
                         parts.append("pisos: [" + ", ".join(e["pisos"]) + "]")
+                    if "obrigacoes" in e:
                         parts.append("obrigacoes: [" + ", ".join(e["obrigacoes"]) + "]")
                     lines.append("        - {" + ", ".join(parts) + "}")
     return "\n".join(lines) + "\n"

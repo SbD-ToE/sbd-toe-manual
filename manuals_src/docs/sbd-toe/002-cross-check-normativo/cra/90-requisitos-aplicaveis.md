@@ -342,10 +342,10 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-CRA-P04 |
-| `CTX-CRA-R01` | Período de apoio determinado, comunicado e cumprido | ▲ | ▲ | ▲ | CTX-CRA-R01 |
-| `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | ▲ | ▲ | ▲ | CTX-CRA-R02 |
-| `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | ▲ | ▲ | ▲ | CTX-CRA-R03 |
-| `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | ▲ | ▲ | ▲ | CTX-CRA-R04 |
+| `CTX-CRA-R01` | Período de apoio determinado, comunicado e cumprido | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R02` | Distribuição e mecanismo de actualizações de segurança no utilizador | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R03` | Avisos de segurança públicos sobre vulnerabilidades corrigidas | ▲ | ▲ | ▲ | — |
+| `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 

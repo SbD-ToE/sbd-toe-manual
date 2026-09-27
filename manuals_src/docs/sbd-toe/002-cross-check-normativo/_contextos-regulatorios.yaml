@@ -7,6 +7,8 @@
 #
 # - Pisos: autoria do Manual agent, com base nas matrizes _matriz/<acto>.yaml (ids de obrigação estáveis) e no texto oficial
 #   sic em translation/sources/eurlex/. As citações PT e EN são recortes literais dos textos EUR-Lex (verificados por script).
+# - niveis: null = todos os níveis (em pisos e acrescentos). controlos (acrescentos): [] com sem_controlo_razao, ou control_id
+#   publicados no KG (CTRL-<domínio>-<slug>-<hash>, controls.json).
 # - lista_ids (fim do ficheiro): GERADA por scripts/gen_reg_views.py a partir dos catálogos e dos pisos; verificada no CI por
 #   scripts/check_reg_context.py. Não editar à mão.
 # - Páginas «Requisitos aplicáveis» (002-cross-check-normativo/<acto>/): vistas geradas deste ficheiro (sbdtoe_generated).
@@ -3522,10 +3524,10 @@ lista_ids:
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
         - {id: DEP-006, origem: elevado, cap: '05', pisos: [CTX-CRA-P03], obrigacoes: [CRA-13-5]}
-        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
-        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
-        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
-        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3776,10 +3778,10 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
-        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
-        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
-        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
-        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4056,10 +4058,10 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-CRA-P04], obrigacoes: [CRA-13-17, CRA-AnxI-P2-5, CRA-AnxI-P2-6, CRA-AnxII-2]}
-        - {id: CTX-CRA-R01, origem: acrescentado, pisos: [CTX-CRA-R01], obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
-        - {id: CTX-CRA-R02, origem: acrescentado, pisos: [CTX-CRA-R02], obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
-        - {id: CTX-CRA-R03, origem: acrescentado, pisos: [CTX-CRA-R03], obrigacoes: [CRA-AnxI-P2-4]}
-        - {id: CTX-CRA-R04, origem: acrescentado, pisos: [CTX-CRA-R04], obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
+        - {id: CTX-CRA-R01, origem: acrescentado, obrigacoes: [CRA-13-11, CRA-13-19-p2, CRA-13-8-p2, CRA-13-8-p3, CRA-13-8-p5, CRA-13-9, CRA-AnxII-7, CRA-AnxVII-4]}
+        - {id: CTX-CRA-R02, origem: acrescentado, obrigacoes: [CRA-AnxI-P1-2c, CRA-AnxI-P2-2, CRA-AnxI-P2-7, CRA-AnxI-P2-8, CRA-AnxII-8c, CRA-AnxII-8e]}
+        - {id: CTX-CRA-R03, origem: acrescentado, obrigacoes: [CRA-AnxI-P2-4]}
+        - {id: CTX-CRA-R04, origem: acrescentado, obrigacoes: [CRA-13-6-a, CRA-13-6-b]}
   CTX-AIA-RE:
     base:
       L1:

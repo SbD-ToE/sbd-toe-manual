@@ -355,6 +355,23 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
         fail(w, "«remover» não existe em overlays regulatórios")
 
 
+def check_lists(ctx_doc: dict) -> None:
+    """lista_ids: «pisos» only carries floor ids (CTX-*-Pnn) that exist; «acrescentado» entries carry no pisos."""
+    floors = {p["id"] for c in ctx_doc.get("contextos") or [] for p in c.get("pisos") or []}
+    for cid, grades in (ctx_doc.get("lista_ids") or {}).items():
+        for g, levels in (grades or {}).items():
+            for lvl, ids in (levels or {}).items():
+                for e in ids or []:
+                    w = f"lista_ids {cid}/{g}/{lvl} {e.get('id')}"
+                    for pid in e.get("pisos") or []:
+                        if not re.fullmatch(r"CTX-[A-Z0-9-]+-P\d\d", pid) or pid not in floors:
+                            fail(w, f"pisos só leva ids de pisos declarados (CTX-*-Pnn): {pid}")
+                    if e.get("origem") == "acrescentado" and e.get("pisos"):
+                        fail(w, "entrada acrescentada não leva pisos")
+                    if e.get("origem") == "elevado" and not e.get("pisos"):
+                        fail(w, "entrada elevada sem pisos")
+
+
 def check_views() -> None:
     for path, text in gen_reg_views.planned_outputs().items():
         current = path.read_text(encoding="utf-8") if path.exists() else None
@@ -375,6 +392,7 @@ def main() -> int:
     ADDITIONS.update(a.get("id") for a in ctx_doc.get("acrescentos") or [])
     check_matrices(master, ctx_doc, matrices)
     check_contexts(master, ctx_doc, matrices)
+    check_lists(ctx_doc)
     check_views()
     for p in problems:
         print(p)

@@ -1,23 +1,23 @@
 ---
 id: catalogo-requisitos-governanca
 title: Governance and Contracting Requirements Catalogue
-description: Canonical catalogue of organisational security governance requirements (GOV-001 to GOV-015), with applicability by risk level and acceptance criteria for ownership, exceptions, contracting, traceability, continuous validation, maturity, technical onboarding of third parties, access review and coordinated vulnerability disclosure.
+description: Canonical catalogue of organisational security governance requirements (GOV-001 to GOV-017), with applicability by risk level and acceptance criteria for ownership, exceptions, contracting, traceability, continuous validation, maturity, technical onboarding of third parties, access review, coordinated vulnerability disclosure, privileged accounts and identity lifecycle.
 requirement_class: dominio
 tags: [tipo:catalogo, classe:dominio, tema:governanca, GOV, ownership, excecoes, contratacao, rastreabilidade, maturidade, divulgacao-vulnerabilidades, L1, L2, L3, auditoria]
 sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
-  source_sha256: 6ec00fe7332a77c4adbc832f2a872396065f9b391c8b58c8bf4064da42357bb2
-  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
-  target_sha256: 51f8054c4c9b379e9db2b6e40d7204a4b4991a58ee3393ad15fa4c406a14ea65
+  source_sha256: 98e1daf33d502610132723f7732befdb4cd401011ac3b40bf71ef97a6d53dc29
+  source_commit: 3a847e42f3df100b127ae714e2c6f4a05f5395c4
+  target_sha256: bd6c01edf894315f29e181cb88b87b591465a43e1414e104f572d5dcc2c99cf9
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [alcada, audit_trail, avaliacao, cycle_iteration, gap_family, layer, mapping, maturity, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 53d793aa57da3ad735e7c493c668c3601da8730301a650b0ebed1de33980c0f8
-  translated_at: 2026-09-27T14:30:47Z
-  stamped_at: 2026-09-27T14:30:47Z
+  glossary_keys: [alcada, audit_trail, avaliacao, cycle_iteration, gap_family, layer, lifecycle_phase, mapping, maturity, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 5f28ce3541d1479139075edbbb02d0cfffe0ce607541368d7b98aba8dd44cd7e
+  translated_at: 2026-09-27T16:10:53Z
+  stamped_at: 2026-09-27T16:10:53Z
   reviewed_by: null
 ---
 
@@ -71,8 +71,10 @@ Requirements ensuring that security is applied with formal authority, complete t
 | GOV-011 | Governance KPIs defined, collected and reported | - | ✔ | ✔ | Governance KPIs are defined, collected periodically and reported to management; deviations from defined thresholds generate corrective action; KPIs include at least: active exceptions per domain, % of applications with an assigned owner, % of contracts with security clauses. |
 | GOV-012 | Active maturity model with measured and planned evolution | - | - | ✔ | Active security maturity assessment (SAMM, DSOMM or equivalent); carried out at least annually; results documented with an evolution plan and defined targets; evolution compared with the previous cycle and reported to management. |
 | GOV-013 | Technical onboarding and mandatory pre-access training of third parties | rec. | ✔ | ✔ | Contractors and third parties complete structured technical preparation **before real access** to systems: security training by profile (Dev, DevOps, QA, Architecture), comprehension quiz with a minimum score (typically 80%), sandbox environment for practice and NDA/confidentiality agreement signed; access is granted only after validated completion *sign-off* (Security Champion/AppSec + Tech Lead); the record is traceable (GRC/LMS) with dates, scores and validator, and kept according to the applicable regulatory retention (DORA, NIS2). At L1 it is recommended; at L2/L3 it is mandatory, with a validated quiz at L3. |
-| GOV-014 | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | The access of active contractors to systems (repositories, CI/CD, databases, cloud IAM, VPN) is reviewed periodically — half-yearly at L1, quarterly at L2/L3 — validating, per third party, that each access remains necessary for the project; excessive or obsolete access is removed on the same day; the review is signed (Tech Lead + Security Champion), the changes are kept in an *audit trail* and a consolidated report (% kept / % removed) is delivered. Additional triggers: change of project, incident. |
+| GOV-014 | Periodic review of access to supporting systems (least privilege) | ✔ | ✔ | ✔ | Access to systems (repositories, CI/CD, databases, cloud IAM, VPN) is reviewed periodically: that of active contractors half-yearly at L1 and quarterly at L2/L3; that of internal identities at least annually at L1, half-yearly at L2 and quarterly at L3; that of privileged and administration accounts quarterly at all levels (cadences for internal and privileged accounts: the Manual's choice). The review validates, per identity, that each access remains necessary for the project; excessive or obsolete access is removed on the same day; the review is signed (Tech Lead + Security Champion), the changes are kept in an *audit trail* and a consolidated report (% kept / % removed) is delivered. Additional triggers: project change, incident. |
 | GOV-015 | Coordinated vulnerability disclosure with a published reporting channel | ✔ | ✔ | ✔ | Coordinated vulnerability disclosure policy published, with the scope of the systems covered and a channel for receiving external reports (e.g. `security.txt` under RFC 9116, or a dedicated address); receipt acknowledged and initial assessment made within defined time limits (the Manual's choice: acknowledgement within 5 working days, initial assessment within 15 days); confirmed reports handled as findings, with the SLAs of Policy 19 §4.3 (TST-003); affected users informed of the fix or mitigation; disclosure coordinated with the reporter. |
+| GOV-016 | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | Privileged and administrative access to the systems that support the application (production, cloud, CI/CD, databases, administration consoles) made with dedicated, individual accounts, separate from those for everyday use, with privileges restricted to what is necessary: at L1, dedicated accounts, multi-factor authentication and logging of actions; at L2, also access granted by need and limited in time (*just-in-time*), emergency access (*break-glass*) logged and reviewed, and administration consoles restricted to those who administer; at L3, also automated privileged access management (PAM) and logging of privileged sessions. Supplier connections authorised and limited in time. |
+| GOV-017 | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | Each identity with access to the application's systems is unique and associated with a person or, if it is a system or machine identity, with an owner; granting, change and removal of access recorded (joining, change of role, leaving), with removal within the time limits of Policy 33 §7.2, also for internal identities; shared identities only by documented and approved need, recorded and considered in the risk; at L2, deprovisioning from the IdP or the HR record; at L3, automated provisioning and periodic reconciliation between identities and people. |
 
 ---
 
@@ -89,6 +91,8 @@ Requirements ensuring that security is applied with formal authority, complete t
 - **GOV-013**: The risk of an unprepared third party is not bad faith - it is involuntary error: exposed credentials, unauthorised access to data, insecure practices through lack of knowledge. The *sign-off* before access is the point where preparation becomes a precondition and not a subsequent formality. It links Ch. 13 (Training) to Ch. 14 (Governance): training provides the content, governance provides the access *gate* and the traceability.
 - **GOV-014**: *Access creep* is silent - permissions accumulate over time and nobody removes them without a cycle that forces it. Periodic review is the mechanism that keeps *least privilege* alive rather than declared. The difference from internal access review is the risk profile of the third party and the frequency: for an L3 contractor, the quarter is the acceptable limit between the end of a need and the removal of the corresponding access.
 - **GOV-015**: Vulnerabilities that come from outside (researchers, customers, users) do not pass through the internal scanners: without a known channel and a process with time limits, they get lost, or become public before the fix. The policy does not require rewards (*bug bounty*): it requires that there is somewhere to report, someone who responds and a known next step. A confirmed report enters the same circuit as internal findings, and informing the affected users closes the cycle. The acknowledgement and initial-assessment time limits are the Manual's choice; an applicable regime may set others.
+- **GOV-016**: A compromised administration account is worth more than many user accounts. That is why the account is dedicated (you do not administer with your everyday account), belongs to one person (not to a team), requires a second factor and leaves a trail. At the higher levels, the privilege exists only while it is needed. The requirement covers access to the supporting systems; what the application itself imposes on its administrators lives in Ch. 02 (ACC-004, AUT-001).
+- **GOV-017**: Residual access is born of departures and changes of role that nobody recorded. Each identity has an owner, each grant and removal is recorded, and shared accounts are an approved exception, not a convenience. The periodic review (GOV-014) confirms what the lifecycle should already have ensured.
 
 ---
 

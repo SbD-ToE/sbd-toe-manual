@@ -7,16 +7,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/07-validacao-requisitos.md
-  source_sha256: d2cad2c1f76e0ec120514ca3e31df69d50e0ad07d03d93df9e9e20acf49a07df
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 32b7c988390c130cf70a2a854f363cd75b1bbae76af8efb1b52aff6b7673986c
+  source_sha256: 944403f9f0c19b3deb1bd10157aaa4ee241b0c96246a9d85fcd72a612ead783d
+  source_commit: 550e045d15f912fcb68829e17082413a5d80bd97
+  target_sha256: 9be300f27844f5f72743034f801ec2fbf3cef8113409b0b2ee695b4e19c98b53
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 239d9004390c1fa44600ae10c0f86aba42f41047870a62934359937f9f982671
-  translated_at: 2026-09-25T20:20:10Z
-  stamped_at: 2026-09-26T18:33:02Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, eu_startups, gap_family, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, threat, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 79f8c164a9afdb1bcb219b5345eb9b77b29a1359d519ca25de5ddce4e941390e
+  translated_at: 2026-09-27T16:10:51Z
+  stamped_at: 2026-09-27T16:10:51Z
   reviewed_by: null
 ---
 
@@ -118,6 +118,7 @@ For each requirement of the canonical catalogue the following are given: the ref
 | AUT-008 | SEC-Lx-AUT-STEPUP | L2+ | Simulate a sensitive action. Confirm that an additional factor is required. | Screenshot of step-up. Log associated with the critical action. |
 | AUT-009 | SEC-Lx-AUT-CHANGE | L1+ | Attempt to change credentials without re-authentication. Confirm the block. | Log of the blocked attempt. Evidence of active session verification. |
 | AUT-010 | SEC-Lx-AUT-ALERT | L2+ | Simulate an anomalous login. Confirm notification to the user and logging. | Example of the notification sent. Log of the critical event detected. |
+| AUT-011 | SEC-Lx-AUT-DEFAULT | L1+ | Verify that no default accounts or credentials are active in the application and in the components in production. Confirm that the initial credential is changed at first use. | Inventory of accounts without default credentials. Evidence of the first-access flow. |
 
 ---
 
@@ -134,7 +135,7 @@ For each requirement of the canonical catalogue the following are given: the ref
 | ACC-007 | SEC-Lx-ACC-MODEL | L2+ | Verify the existence of a reviewed and documented permissions model. | Documentation of the model. Dated review record. |
 | ACC-008 | SEC-Lx-ACC-REVOKE | L1+ | Revoke access. Test immediately after revocation. Confirm failure. | Log of the failed attempt after revocation. Revocation timestamp. |
 | ACC-009 | SEC-Lx-ACC-ABAC | L3 | Test the access decision with distinct attributes. Confirm enforcement of the dynamic policy. | Logs with attribute evaluation. Test with context variation. |
-| ACC-010 | SEC-Lx-ACC-REVIEW | L2+ | Verify the existence of a periodic review process. Confirm removal of obsolete permissions. | Dated review records. Evidence of permissions clean-up. |
+| ACC-010 | SEC-Lx-ACC-REVIEW | L1+ | Verify the existence of a periodic review process. Confirm removal of obsolete permissions. | Dated review records. Evidence of permissions clean-up. |
 
 ---
 

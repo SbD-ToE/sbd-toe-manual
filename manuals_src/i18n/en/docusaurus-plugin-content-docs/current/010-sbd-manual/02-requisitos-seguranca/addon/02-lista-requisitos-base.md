@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: ed6406108276f24865fc06fb84e86726900f6998926529af559a8cce6435a17d
-  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
-  target_sha256: 8bbf8a8b6a2686c34b148c60879a5e04a6265d7f379b87ae1a55f7697a1d0231
+  source_sha256: 9be78c355bbd0770e892a0f0b25b367dd476848986b15c57dc06365f74d36e24
+  source_commit: 550e045d15f912fcb68829e17082413a5d80bd97
+  target_sha256: 4d774d9093f6a33445ddea329878c1177973748bbcd099146aa6d265b2ef05b0
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-27T14:19:32Z
-  stamped_at: 2026-09-27T14:19:32Z
+  translated_at: 2026-09-27T16:11:04Z
+  stamped_at: 2026-09-27T16:11:04Z
   reviewed_by: null
 ---
 
@@ -109,6 +109,7 @@ Requirements that ensure only legitimate entities access the system, with contro
 | AUT-008 | Step-up for sensitive actions | - | ✔ | ✔ | Critical operations require an additional factor; testing evidences the block without step-up. |
 | AUT-009 | Re-authentication for critical changes | ✔ | ✔ | ✔ | Changes to credentials or sensitive data require confirmation of the active identity. |
 | AUT-010 | Alert on suspicious access | - | ✔ | ✔ | Anomalous access generates an alert or a notification to the user; log of the event available. |
+| AUT-011 | No default credentials | ✔ | ✔ | ✔ | The application is not delivered or put into production with default accounts or credentials; initial credentials unique per installation and changed at first use; default accounts of components and platforms disabled or with their credential changed. |
 
 ---
 
@@ -127,7 +128,7 @@ Requirements that ensure each entity accesses only the resources and operations 
 | ACC-007 | Validation of the access model | - | ✔ | ✔ | Permission model reviewed and documented; access-control threats mapped. |
 | ACC-008 | Real-time revocation | ✔ | ✔ | ✔ | Removal of access takes effect immediately; the permission test fails after revocation. |
 | ACC-009 | Attribute-based authorisation (ABAC) | - | - | ✔ | The access decision depends on dynamic attributes; logs evidence the policy evaluation. |
-| ACC-010 | Periodic review of permissions | - | ✔ | ✔ | Periodic audits remove obsolete permissions; review records kept and dated. |
+| ACC-010 | Periodic review of permissions | ✔ | ✔ | ✔ | Periodic audits remove obsolete permissions; review records kept and dated; minimum cadence (the Manual's choice): annual at L1, half-yearly at L2, quarterly at L3. |
 
 ---
 

@@ -152,6 +152,7 @@ Para sistemas em produção, deve existir um mecanismo de correlação entre o S
 
 - [ ] Inventário de componentes implantados por serviço e ambiente (`inventario-runtime-<servico>-<ambiente>.json`)
 - [ ] Integração com feed de vulnerabilidades (NVD, OSV, GitHub Advisory Database)
+- [ ] Fontes de informação sobre vulnerabilidades registadas (bases públicas, avisos de fornecedores, CSIRT) e revistas a intervalos planeados, pelo menos na revisão anual desta política
 - [ ] Alerta gerado quando CVE afeta versão implantada, com componente, versão, ambiente e severidade
 - [ ] SLA de resposta definido por severidade (ver Política de Exceções a CVEs)
 

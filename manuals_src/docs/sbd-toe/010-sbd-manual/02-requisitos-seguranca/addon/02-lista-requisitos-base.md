@@ -322,7 +322,7 @@ Requisitos que garantem a integridade e rastreabilidade dos artefactos ao longo 
 |----|------|:--:|:--:|:--:|----------------------|
 | DST-001 | Repositórios autenticados e auditáveis | ✔ | ✔ | ✔ | Autenticação obrigatória e logs activos para acesso a repositórios de artefactos. |
 | DST-002 | Aprovação para publicação pública | - | ✔ | ✔ | Publicação em registry público requer aprovação e documentação formal do processo. |
-| DST-003 | Assinatura digital ou checksum | - | ✔ | ✔ | Artefactos assinados ou validados por hash antes de publicação; verificação automatizada. |
+| DST-003 | Assinatura digital ou checksum | - | ✔ | ✔ | Artefactos assinados ou validados por hash antes de publicação; verificação automatizada; as actualizações distribuídas a utilizadores ou clientes levam assinatura ou hash publicados, que o produto ou quem instala verifica antes da instalação. |
 | DST-004 | Inclusão de SBOM nos artefactos | - | ✔ | ✔ | SBOM gerado e anexado a cada release; rastreabilidade de dependências disponível. |
 | DST-005 | Acesso segregado por role e ambiente | - | ✔ | ✔ | Apenas utilizadores e automações autorizados acedem a artefactos de produção. |
 | DST-006 | Deploy apenas via pipeline validado | - | ✔ | ✔ | Artefactos só deployados por pipeline controlado e auditado; sem deploy manual em produção. |

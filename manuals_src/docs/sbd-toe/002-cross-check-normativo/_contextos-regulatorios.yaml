@@ -861,6 +861,18 @@ contextos:
           referencia: "Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744)"
           citacao: {pt: "medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação", en: "reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation"}
         admite_justificacao: true
+      - id: CTX-AIA-RE-P11
+        alvo: {tipo: requisito, alvo: ARC-009}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Em qualquer nível, o limiar de alteração significativa distingue as alterações predeterminadas (declaradas antecipadamente na documentação técnica, p. ex. aprendizagem contínua dentro de limites) das modificações substanciais; cada alteração é classificada e a classificação fica registada; uma modificação substancial é sinalizada para nova avaliação da conformidade; os registos permitem identificar situações de risco e modificações substanciais.", en: "At any level, the significant-change threshold distinguishes predetermined changes (declared beforehand in the technical documentation, e.g. continuous learning within limits) from substantial modifications; each change is classified and the classification recorded; a substantial modification is flagged for a new conformity assessment; the logs allow risk situations and substantial modifications to be identified."}
+        base:
+          obrigacoes: [AIA-43-4, AIA-AnxIV-2-f, AIA-12-2]
+          referencia: "Reg. (UE) 2024/1689, art. 43.º, n.º 4, art. 12.º, n.º 2, e anexo IV, ponto 2, al. f)"
+          citacao: {pt: "devem ser sujeitos a um novo procedimento de avaliação da conformidade caso sejam substancialmente modificados", en: "shall undergo a new conformity assessment procedure in the event of a substantial modification"}
+        admite_justificacao: false
     nota_graus:
       ART50:
         pt: "O grau ART50 recebe os pisos CTX-AIA-RE-P09 e CTX-AIA-RE-P10 (salvaguardas de segurança de conteúdo em geradores de imagem, vídeo ou áudio realistas, art. 5.º, n.º 1-A) e os acrescentos CTX-AIA-RE-R01 (informar) e R02 (marcar conteúdo sintético)."
@@ -1227,6 +1239,20 @@ acrescentos:
       citacao: {pt: "O responsável pelo tratamento documenta quaisquer violações de dados pessoais", en: "The controller shall document any personal data breaches"}
     controlos: []
     sem_controlo_razao: {pt: "Registo de processo, apoiado no registo de incidentes da Política 32; sem controlo técnico próprio no Manual.", en: "A process record, relying on the incident record of Policy 32; no dedicated technical control in the Manual."}
+  - id: CTX-AIA-RE-R04
+    contexto: CTX-AIA-RE
+    grau: null
+    niveis: null
+    nome: {pt: "Plano de acompanhamento pós-comercialização", en: "Post-market monitoring plan"}
+    criterio_aceitacao:
+      pt: "Quando a organização é o prestador: plano de acompanhamento pós-comercialização por sistema, integrado na documentação técnica (anexo IV, ponto 9), que nomeia os sinais recolhidos em produção (OPS-011) e os fornecidos pelos responsáveis pela implantação, os critérios de desempenho contra os quais são analisados, a cadência e o responsável da análise, e os gatilhos para acção correctiva (rollback, reclassificação, revisão do threat model, notificação de incidente grave); a análise é activa e sistemática ao longo da vida útil e inclui, se for caso disso, a interacção com outros sistemas de IA. As métricas de desvio do modelo ficam pendentes da ronda AISVS/SAIF do AppSec Core."
+      en: "When the organisation is the provider: a post-market monitoring plan per system, part of the technical documentation (Annex IV, point 9), naming the signals collected in production (OPS-011) and those provided by deployers, the performance criteria against which they are analysed, the cadence and owner of the analysis, and the triggers for corrective action (rollback, reclassification, threat model review, serious incident notification); the analysis is active and systematic over the lifetime and includes, where relevant, the interaction with other AI systems. Model drift metrics are pending the AppSec Core AISVS/SAIF round."
+    base:
+      obrigacoes: [AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9]
+      referencia: "Reg. (UE) 2024/1689, art. 72.º, n.os 1 a 3, e anexo IV, ponto 9"
+      citacao: {pt: "O sistema de acompanhamento pós-comercialização deve basear-se num plano de acompanhamento pós-comercialização", en: "The post-market monitoring system shall be based on a post-market monitoring plan"}
+    controlos: []
+    sem_controlo_razao: {pt: "Plano e processo do prestador, apoiados nos sinais do OPS-011; sem controlo técnico próprio no Manual.", en: "A provider plan and process, relying on the OPS-011 signals; no dedicated technical control in the Manual."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -4827,6 +4853,7 @@ lista_ids:
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
         - {id: THR-008, origem: elevado, cap: '03', pisos: [CTX-AIA-RE-P04], obrigacoes: [AIA-15-5]}
+        - {id: ARC-009, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P11], obrigacoes: [AIA-12-2, AIA-43-4, AIA-AnxIV-2-f]}
         - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05, CTX-AIA-RE-P08], obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4, AIA-15-5]}
         - {id: DEP-011, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P06], obrigacoes: [AIA-15-5]}
         - {id: DEP-012, origem: elevado, cap: '05', pisos: [CTX-AIA-RE-P07], obrigacoes: [AIA-15-5]}
@@ -4834,6 +4861,7 @@ lista_ids:
         - {id: OPS-011, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P01], obrigacoes: [AIA-12-1, AIA-12-2]}
         - {id: OPS-012, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P02], obrigacoes: [AIA-12-1, AIA-12-2]}
         - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
+        - {id: CTX-AIA-RE-R04, origem: acrescentado, obrigacoes: [AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -4980,7 +5008,7 @@ lista_ids:
         - {id: ARC-006, origem: base, cap: '04'}
         - {id: ARC-007, origem: base, cap: '04'}
         - {id: ARC-008, origem: base, cap: '04'}
-        - {id: ARC-009, origem: base, cap: '04'}
+        - {id: ARC-009, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P11], obrigacoes: [AIA-12-2, AIA-43-4, AIA-AnxIV-2-f]}
         - {id: ARC-010, origem: base, cap: '04'}
         - {id: ARC-014, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P05, CTX-AIA-RE-P08], obrigacoes: [AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4, AIA-15-5]}
         - {id: ARC-015, origem: base, cap: '04'}
@@ -5092,6 +5120,7 @@ lista_ids:
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
         - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
+        - {id: CTX-AIA-RE-R04, origem: acrescentado, obrigacoes: [AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5245,7 +5274,7 @@ lista_ids:
         - {id: ARC-006, origem: base, cap: '04'}
         - {id: ARC-007, origem: base, cap: '04'}
         - {id: ARC-008, origem: base, cap: '04'}
-        - {id: ARC-009, origem: base, cap: '04'}
+        - {id: ARC-009, origem: elevado, cap: '04', pisos: [CTX-AIA-RE-P11], obrigacoes: [AIA-12-2, AIA-43-4, AIA-AnxIV-2-f]}
         - {id: ARC-010, origem: base, cap: '04'}
         - {id: ARC-011, origem: base, cap: '04'}
         - {id: ARC-012, origem: base, cap: '04'}
@@ -5376,6 +5405,7 @@ lista_ids:
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
         - {id: CTX-AIA-RE-R03, origem: acrescentado, obrigacoes: [AIA-26-11, AIA-86-1]}
+        - {id: CTX-AIA-RE-R04, origem: acrescentado, obrigacoes: [AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9]}
     ART50:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}

@@ -282,6 +282,9 @@ T = {
         "act_rule": "Regra de activação",
         "declara": {"entidade": "Declara-se por entidade e é herdado por todas as aplicações.", "aplicacao": "Declara-se por aplicação."},
         "no_pisos": "Sem pisos neste grau por enquanto.",
+        "h_mapa": "Mapa de evidência da documentação técnica",
+        "mapa_intro": "Obrigações documentais do regime ({anexo}) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/{acto}.yaml`.",
+        "cols_mapa": "| Obrigação | Referência | Força | Como o Manual responde | Nota |",
         "matrix_note": "Contagem das obrigações da matriz `_matriz/{acto}.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.",
         "graus_cum": "cumulativo com o contexto",
         "graus_ind": "declarável sozinho",
@@ -313,10 +316,19 @@ T = {
         "act_rule": "Activation rule",
         "declara": {"entidade": "Declared per entity and inherited by all applications.", "aplicacao": "Declared per application."},
         "no_pisos": "No floor at this grade for now.",
+        "h_mapa": "Evidence map for the technical documentation",
+        "mapa_intro": "Documentary obligations of the regime ({anexo}) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/{acto}.yaml`.",
+        "cols_mapa": "| Obligation | Reference | Strength | How the Manual responds | Note |",
         "matrix_note": "Count of the obligations in the matrix `_matriz/{acto}.yaml` (excluding those addressed to the authorities). The section “What this Manual covers and what stays out” of the cross-check page details them.",
         "graus_cum": "cumulative with the context",
         "graus_ind": "declarable on its own",
     },
+}
+
+# Documentary obligations rendered as an evidence map on the regime view (lead decision 2026-09-27).
+EVIDENCE_MAP = {
+    "aiact": {"prefixos": ("AIA-11-1-", "AIA-AnxIV-", "AIA-13-"), "anexo": {"pt": "art. 11.º, anexo IV e art. 13.º do AI Act", "en": "AI Act Article 11, Annex IV and Article 13"}},
+    "cra": {"prefixos": ("CRA-AnxVII-",), "anexo": {"pt": "anexo VII do CRA", "en": "CRA Annex VII"}},
 }
 
 CTX_ACTO = {"CTX-NIS2": "nis2", "CTX-DORA": "dora", "CTX-CRA": "cra", "CTX-AIA-RE": "aiact", "CTX-RGPD": "rgpd"}
@@ -336,6 +348,28 @@ def _link_policy(ficheiro: str, ancora: str, rotulo: str) -> str:
 
 def _link_req(rid: str, master: dict) -> str:
     return f"`{rid}`"
+
+
+def _link_page(ficheiro: str, ancora: Optional[str], rotulo: str) -> str:
+    # Docusaurus drops numeric prefixes at every path level; the last segment is the front-matter id when present
+    text = (DOCS / ficheiro).read_text(encoding="utf-8")
+    m = re.search(r"^id:\s*(\S+)\s*$", text.split("\n---", 1)[0], re.M)
+    parts = [re.sub(r"^\d+[-_]", "", x) for x in Path(ficheiro).parent.parts]
+    last = m.group(1) if m else re.sub(r"^\d+[-_]", "", Path(ficheiro).stem)
+    url = "/sbd-toe/" + "/".join(parts + [last])
+    return f"[{rotulo}]({url}{'#' + ancora if ancora else ''})"
+
+
+def _resp_text(r: dict, lang: str) -> str:
+    tipo = r.get("tipo")
+    if tipo in ("requisito", "acrescento"):
+        return f"`{r['alvo']}`"
+    if tipo == "politica":
+        return _link_policy(r["ficheiro"], r["ancora"], r["rotulo"][lang])
+    if tipo in ("pagina", "us"):
+        rot = (r.get("rotulo") or {}).get(lang) or r.get("alvo") or r["ficheiro"]
+        return _link_page(r["ficheiro"], r.get("ancora"), rot)
+    return r.get("alvo") or ""
 
 
 def _piso_text(p: dict, lang: str, vocab: dict) -> str:
@@ -444,8 +478,21 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
             name = master[rid]["nome"][lang] if rid in master else (add["nome"][lang] if add else rid)
             body.append(f"| `{rid}` | {_cell(name)} | {' | '.join(marks)} | {', '.join(sorted(pisos)) or '—'} |")
         body.append("")
-    # strength summary
     acto = CTX_ACTO[cid]
+    # evidence map (documentary obligations)
+    em = EVIDENCE_MAP.get(acto)
+    if em:
+        fn = {f["id"]: f["nome"][lang] for f in vocab["forca"]}
+        body += [f"## {t['h_mapa']} {{#mapa-evidencia}}", "", t["mapa_intro"].format(anexo=em["anexo"][lang], acto=acto), "", t["cols_mapa"], "|---|---|---|---|---|"]
+        for it in matrix["itens"]:
+            if it.get("retirado") or not it["id"].startswith(em["prefixos"]):
+                continue
+            resp = "; ".join(_resp_text(r, lang) for r in it.get("resposta") or []) or "—"
+            note = it.get("razao_fora_de_ambito") or it.get("falta") or {}
+            ref = it["referencia"] if lang == "pt" else _ref_en(it["referencia"])
+            body.append(f"| {it['id']} | {_cell(ref)} | {fn[it['forca']]} | {_cell(resp)} | {_cell(note.get(lang, '—') if note else '—')} |")
+        body.append("")
+    # strength summary
     counts: Dict[str, List[str]] = {}
     for it in matrix["itens"]:
         counts.setdefault(it["forca"], []).append(it["id"])

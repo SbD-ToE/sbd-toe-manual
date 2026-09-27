@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T19:41:12Z",
+  "generated_at": "2026-09-27T20:40:42Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "8638c44663fc84cd732c2cab86a66b7e01fd81360d539d1a7368506c1bb94313",
-      "translated_source_sha256": "8638c44663fc84cd732c2cab86a66b7e01fd81360d539d1a7368506c1bb94313",
-      "target_sha256": "352ad154137e58b50de5bb6d44124e33c4bd6eb760010735c8e26fb378d2d05d",
+      "source_sha256": "9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66",
+      "translated_source_sha256": "9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66",
+      "target_sha256": "8b03ae35de6ba62336b38a2b6398109ea5ab7ab59dafeebc21533aae5278db6d",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -86,9 +86,9 @@
     },
     "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "b31ce7e63baf4dcc69d1f0c1f2f19c1edf653a4fef093807013a456b6037122b",
-      "translated_source_sha256": "b31ce7e63baf4dcc69d1f0c1f2f19c1edf653a4fef093807013a456b6037122b",
-      "target_sha256": "8d4a93daa1285fd6ea0b708799e7d19f10d46547fa391090068ac86050e7adf6",
+      "source_sha256": "852c5d5c06682a76a77ebc0dc9e654d2e08a07a57830c4f45b56b51fcc289de3",
+      "translated_source_sha256": "852c5d5c06682a76a77ebc0dc9e654d2e08a07a57830c4f45b56b51fcc289de3",
+      "target_sha256": "e877b20021a47eeeaa05df3ef1fbabaa13f4a591b49ce0d3414ebac09950cfe3",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -3877,12 +3877,12 @@
     },
     "020-assets/policies/06_policy-rastreabilidade.md": {
       "state": "synced",
-      "source_sha256": "f4ba401a504d1d3f6d39afab15228672b0b39c46251dbcafb2c6f71aba7d82a5",
-      "translated_source_sha256": "f4ba401a504d1d3f6d39afab15228672b0b39c46251dbcafb2c6f71aba7d82a5",
-      "target_sha256": "2702b04b12725b074e9bd0d3f0a19435fb0df70d2cdee05281d20f55cc754a42",
-      "terms_sha256_at_translation": "740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f",
-      "glossary_sha256_at_translation": "9b234151e8d7d9065bcd702907cac5c99b0768a3610c9c89eac8e74850abb83b",
-      "translated_at": "2026-09-27T07:09:00Z",
+      "source_sha256": "cf65b2854b1342286a9d2c951c5ebdf741397c1319cbeb0c12633ed00c22b0b6",
+      "translated_source_sha256": "cf65b2854b1342286a9d2c951c5ebdf741397c1319cbeb0c12633ed00c22b0b6",
+      "target_sha256": "4a1689fca07af83e91a311842eb3e30f332c451e591d29d152e1dfa47f37ca87",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "b183d2d6ee23f991ad14e34618f4436c326893efc7aea162fcb536c9790b6c9c",
+      "translated_at": "2026-09-27T20:35:22Z",
       "pending_blocks": 0
     },
     "020-assets/policies/07_policy-requisitos-seguranca.md": {

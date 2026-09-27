@@ -4485,7 +4485,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VII, ponto 3
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -4505,8 +4505,8 @@ itens:
       pt: O threat model tem controlo de versão explícito
       en: The threat model is under explicit version control
   falta:
-    pt: 'Ver CRA-13-3: a avaliação de riscos não mostra como se aplicam os requisitos da parte I do anexo I.'
-    en: 'See CRA-13-3: the risk assessment does not show how the requirements of Part I of Annex I apply.'
+    pt: A ligação ao anexo I é redigida pelo fabricante na documentação técnica; o Manual fornece a evidência (ver o mapa de evidência).
+    en: The link to Annex I is drafted by the manufacturer in the technical documentation; the Manual provides the evidence (see the evidence map).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4518,14 +4518,14 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VII, ponto 4
   classe: organizacional
-  forca: lacuna
+  forca: cobre
   contexto:
     id: CTX-CRA
     grau: null
-  resposta: []
-  falta:
-    pt: Sem informação para determinar o período de apoio (ver CRA-13-8-p2).
-    en: No information to determine the support period (see CRA-13-8-p2).
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-CRA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -4554,7 +4554,7 @@ itens:
   acto_fonte: 32024R2847
   referencia: Anexo VII, ponto 6
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -4575,8 +4575,8 @@ itens:
       pt: Relatórios de SAST, DAST, SCA e fuzzing (quando aplicável) arquivados como artefactos do pipeline
       en: SAST, DAST, SCA and fuzzing reports (where applicable) archived as pipeline artefacts
   falta:
-    pt: Relatórios de teste por release existem, mas não mapeados aos requisitos essenciais das partes I e II do anexo I, nem ensaios dos processos de tratamento de vulnerabilidades.
-    en: Per-release test reports exist, but not mapped to the essential requirements of Parts I and II of Annex I, nor tests of the vulnerability handling processes.
+    pt: A ligação ao anexo I é redigida pelo fabricante na documentação técnica; o Manual fornece a evidência (ver o mapa de evidência).
+    en: The link to Annex I is drafted by the manufacturer in the technical documentation; the Manual provides the evidence (see the evidence map).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

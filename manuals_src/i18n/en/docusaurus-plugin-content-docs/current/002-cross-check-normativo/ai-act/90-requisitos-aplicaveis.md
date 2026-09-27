@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: 8638c44663fc84cd732c2cab86a66b7e01fd81360d539d1a7368506c1bb94313
+  source_sha256: 9b70fd2c678f992adbb6e56a9fb3db7bb86cbca66459ad663f77238b150daa66
   source_commit: null
-  target_sha256: 352ad154137e58b50de5bb6d44124e33c4bd6eb760010735c8e26fb378d2d05d
+  target_sha256: 8b03ae35de6ba62336b38a2b6398109ea5ab7ab59dafeebc21533aae5278db6d
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -69,6 +69,7 @@ The AI system is high-risk under Article 6 (with the legal qualification attache
 | CTX-AIA-RE-P08 | `ARC-014` | — | mandatory | Human oversight at any level, with an interface that lets the overseer understand the system's capabilities and limitations, detect anomalies, interpret the output, decide not to use or to override it and stop the system; measures proportionate to the risks, autonomy and context; the overseer is made aware of automation bias. | Regulation (EU) 2024/1689, Article 14(1) to (4): “can be effectively overseen by natural persons during the period in which they are in use” (AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4) | not admitted |
 | CTX-AIA-RE-P09 | `THR-008` | ART50 | mandatory | Systems that generate or manipulate realistic images, video or audio, at any level: the threat model covers the reasonably foreseeable misuse of the generated content, and the safeguards are assessed with red-teaming and content-safety tests. | Regulation (EU) 2024/1689, Article 5(1), als. b-A) e b-B), e n.º 1-A (Regulation (EU) 2026/1744): “reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation” (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitted |
 | CTX-AIA-RE-P10 | `ARC-014` | ART50 | mandatory | Systems that generate or manipulate realistic images, video or audio, at any level: content-safety filters and classifiers on input and output, and correction of observed or reported misuse. | Regulation (EU) 2024/1689, Article 5(1), als. b-A) e b-B), e n.º 1-A (Regulation (EU) 2026/1744): “reasonable and adequate technical safety measures and other safeguards to reliably prevent that generation or manipulation” (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitted |
+| CTX-AIA-RE-P11 | `ARC-009` | — | mandatory | At any level, the significant-change threshold distinguishes predetermined changes (declared beforehand in the technical documentation, e.g. continuous learning within limits) from substantial modifications; each change is classified and the classification recorded; a substantial modification is flagged for a new conformity assessment; the logs allow risk situations and substantial modifications to be identified. | Regulation (EU) 2024/1689, Article 43(4), Article 12(2), e anexo IV, ponto 2, al. f): “shall undergo a new conformity assessment procedure in the event of a substantial modification” (AIA-43-4, AIA-AnxIV-2-f, AIA-12-2) | not admitted |
 
 > **ART50.** The ART50 grade carries the floor CTX-AIA-RE-P09 and the floor CTX-AIA-RE-P10 (content-safety safeguards in generators of realistic images, video or audio, Article 5(1a)) and the additions CTX-AIA-RE-R01 (informing) and R02 (marking synthetic content).
 
@@ -81,6 +82,7 @@ These requirements only make sense under the regime, so they do not live in the 
 | `CTX-AIA-RE-R01` | Informing people that they are interacting with AI | People who interact directly with the system are informed that they are interacting with an AI system, unless this is obvious from the context; people exposed to emotion recognition or biometric categorisation are informed of that operation; image, audio or video content that constitutes a deep fake is disclosed as generated or manipulated. The information is clear and distinguishable, given at the latest at the first interaction or exposure, and meets the accessibility requirements; the presence of the notice is verified in testing. | Regulation (EU) 2024/1689, Article 50, n.os 1, 3, 4 (1.º parágrafo) e 5: “in a clear and distinguishable manner at the latest at the time of the first interaction or exposure” (AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5) |
 | `CTX-AIA-RE-R02` | Marking of synthetic content | The audio, image, video or text outputs generated or manipulated by the system are marked in a machine-readable format and detectable as artificial (e.g. provenance metadata, content credentials, watermarking), with a solution that is effective, interoperable and robust as far as technically feasible; the marking is verified in testing and is not stripped by later pipeline steps; the exceptions of Article 50(2) (assistive function for standard editing, no substantial alteration of the input data) are recorded. | Regulation (EU) 2024/1689, Article 50(2), and Article 111(4): “are marked in a machine-readable format and detectable as artificially generated or manipulated” (AIA-50-2, AIA-111-4) |
 | `CTX-AIA-RE-R03` | Informing and explaining to affected persons | When an Annex III high-risk AI system supports decisions about natural persons: the persons are informed that they are subject to its use; the application records, per decision, the system's output and the main elements that determined it (OPS-011), so that it can give the affected person clear and meaningful explanations of the role of the system and the main elements of the decision. When the decision is solely automated and personal data are involved, CTX-RGPD-R05 also applies. | Regulation (EU) 2024/1689, Article 26(11), and Article 86(1): “clear and meaningful explanations of the role of the AI system in the decision-making procedure and the main elements of the decision taken” (AIA-26-11, AIA-86-1) |
+| `CTX-AIA-RE-R04` | Post-market monitoring plan | When the organisation is the provider: a post-market monitoring plan per system, part of the technical documentation (Annex IV, point 9), naming the signals collected in production (OPS-011) and those provided by deployers, the performance criteria against which they are analysed, the cadence and owner of the analysis, and the triggers for corrective action (rollback, reclassification, threat model review, serious incident notification); the analysis is active and systematic over the lifetime and includes, where relevant, the interaction with other AI systems. Model drift metrics are pending the AppSec Core AISVS/SAIF round. | Regulation (EU) 2024/1689, Article 72(1) to (3), e anexo IV, ponto 9: “The post-market monitoring system shall be based on a post-market monitoring plan” (AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9) |
 
 ## How to read the list {#como-se-le}
 
@@ -244,7 +246,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ARC-006` | Technical isolation controls between sensitive domains | ✔ | ✔ | ✔ | — |
 | `ARC-007` | Reusable and approved architecture patterns | — | ✔ | ✔ | — |
 | `ARC-008` | Data flows between trust zones protected | ✔ | ✔ | ✔ | — |
-| `ARC-009` | Significant changes trigger a new review | — | ✔ | ✔ | — |
+| `ARC-009` | Significant changes trigger a new review | ▲ | ▲ | ▲ | CTX-AIA-RE-P11 |
 | `ARC-010` | Architecture diagrams versioned and accessible | ✔ | ✔ | ✔ | — |
 | `ARC-011` | Logical and physical segmentation between environments | — | — | ✔ | — |
 | `ARC-012` | Formal approval criteria for high-risk applications | — | — | ✔ | — |
@@ -375,6 +377,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-016` | Privileged and administration accounts of supporting systems | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Lifecycle of identities with access to systems | ✔ | ✔ | ✔ | — |
 | `CTX-AIA-RE-R03` | Informing and explaining to affected persons | ▲ | ▲ | ▲ | — |
+| `CTX-AIA-RE-R04` | Post-market monitoring plan | ▲ | ▲ | ▲ | — |
 
 ## Requirement list — ART50 {#lista-art50}
 
@@ -665,14 +668,45 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CTX-AIA-RE-R01` | Informing people that they are interacting with AI | ▲ | ▲ | ▲ | — |
 | `CTX-AIA-RE-R02` | Marking of synthetic content | ▲ | ▲ | ▲ | — |
 
+## Evidence map for the technical documentation {#mapa-evidencia}
+
+Documentary obligations of the regime (AI Act Article 11, Annex IV and Article 13) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/aiact.yaml`.
+
+| Obligation | Reference | Strength | How the Manual responds | Note |
+|---|---|---|---|---|
+| AIA-11-1-a | Art. 11.º, n.º 1, primeiro parágrafo | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | Drafting the document is for the provider; the Manual provides the evidence (see the evidence map on the “Applicable requirements” page). |
+| AIA-11-1-b | Art. 11.º, n.º 1, segundo parágrafo | Supports evidence | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | The Annex IV points without an artefact are declared gaps in the evidence map. |
+| AIA-AnxIV-1 | Anexo IV, ponto 1 | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014`; `DEP-011`; `DEP-012`; `DEP-013` | Declared gap: intended purpose (point (a)), forms of placing on the market (point (d)), hardware outside self-hosted inference (point (e)) and description of the interface for the deployer (point (g)). Out of scope: photographs and markings (point (f)). |
+| AIA-AnxIV-2-a | Anexo IV, ponto 2, alínea a | Supports evidence | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | The training methodology is out of scope (data governance, Article 10). |
+| AIA-AnxIV-2-b | Anexo IV, ponto 2, alínea b | Supports evidence | `ARC-004` | Declared gap: general logic, algorithms and what the system optimises. Assumptions about groups of persons are out of scope (bias). |
+| AIA-AnxIV-2-c | Anexo IV, ponto 2, alínea c | Supports evidence | `ARC-001`; `ARC-010`; `ARC-014` | Declared gap: computational resources for development, training, testing and validation. |
+| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Out of scope | — | Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence. |
+| AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Supports evidence | `ARC-014`; `REQ-AGN-003` | Assessment of the oversight measures supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
+| AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Covers | `ARC-009`; `DEP-013` | — |
+| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Supports evidence | `TST-004`; `DPL-010`; `CIC-007` | Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias). |
+| AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Covers | `REQ-001`; `THR-008`; `ARC-014` | — |
+| AIA-AnxIV-3 | Anexo IV, ponto 3 | Supports evidence | `OPS-011`; `ARC-014`; `THR-008` | Declared gap: performance capabilities and limitations and input data specifications. Accuracy by groups of persons is out of scope (bias). |
+| AIA-AnxIV-4 | Anexo IV, ponto 4 | Gap | — | Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round. |
+| AIA-AnxIV-5 | Anexo IV, ponto 5 | Out of scope | — | The risk management system of Article 9 is out of scope by the lead's decision. |
+| AIA-AnxIV-6 | Anexo IV, ponto 6 | Covers | `THR-006`; `ARC-010`; `CIC-005` | — |
+| AIA-AnxIV-7 | Anexo IV, ponto 7 | Out of scope | — | List of harmonised standards/common specifications applied: conformity level. |
+| AIA-AnxIV-8 | Anexo IV, ponto 8 | Out of scope | — | Conformity assessment/market plane (EU declaration, CE marking, notified bodies, registration in the EU database); outside a security engineering manual — the Manual's own cross-check declares it out of scope (“does not replace”). |
+| AIA-AnxIV-9 | Anexo IV, ponto 9 | Covers | `CTX-AIA-RE-R04`; `OPS-011` | — |
+| AIA-13-1 | Art. 13.º, n.º 1 | Supports evidence | `ARC-014`; `OPS-011` | Interpretation of the output is supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08). |
+| AIA-13-2 | Art. 13.º, n.º 2 | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3 | Art. 13.º, n.º 3 | Supports evidence | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Gap | — | Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round. |
+| AIA-13-3-e | Art. 13.º, n.º 3, alínea e) | Supports evidence | `DEP-013` | — |
+| AIA-13-3-f | Art. 13.º, n.º 3, alínea f) | Supports evidence | `OPS-011` | — |
+
 ## Obligations of the regime by coverage strength {#forca}
 
 Count of the obligations in the matrix `_matriz/aiact.yaml` (excluding those addressed to the authorities). The section “What this Manual covers and what stays out” of the cross-check page details them.
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 34 |
-| Partial | 52 |
-| Supports evidence | 29 |
-| Gap | 22 |
-| Out of scope | 108 |
+| Covers | 41 |
+| Partial | 33 |
+| Supports evidence | 44 |
+| Gap | 11 |
+| Out of scope | 116 |

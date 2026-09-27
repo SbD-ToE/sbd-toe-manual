@@ -917,7 +917,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 9.º, n.os 6-7
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -937,13 +937,13 @@ itens:
     citacao:
       pt: 'Por cada agente AI em nível A1+ no projecto:'
       en: 'For each AI agent at level A1+ in the project:'
-  falta:
-    pt: Testes de segurança e eval suites (só agentes A1+); faltam testes para escolher medidas de gestão de riscos e verificar desempenho face à finalidade em sistemas não agênticos.
-    en: Security tests and eval suites (agents A1+ only); missing are tests to choose risk management measures and to verify performance against the purpose in non-agentic systems.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead.
+    en: Article 9 (risk management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-9]
   nota: null
@@ -951,7 +951,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 9.º, n.º 8
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: pagina
@@ -973,13 +973,13 @@ itens:
     citacao:
       pt: Eval suite versionada em VCS, corrida em CI antes de merge de prompt/skill/modelo (C5)
       en: Eval suite versioned in VCS, run in CI before merging prompt/skill/model (C5)
-  falta:
-    pt: Só as eval suites de agentes declaram tolerâncias; faltam métricas e limiares probabilísticos definidos antes dos testes para qualquer sistema de IA, e testes obrigatórios antes da colocação no mercado.
-    en: Only the agent eval suites declare tolerances; missing are probabilistic metrics and thresholds defined before testing for any AI system, and mandatory testing before placing on the market.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead.
+    en: Article 9 (risk management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-9]
   nota: null
@@ -1160,7 +1160,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 11.º, n.º 1, primeiro parágrafo
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1169,31 +1169,47 @@ itens:
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
-      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+      pt: Decisões de arquitectura documentadas
+      en: Architecture decisions documented
+  - tipo: requisito
+    alvo: ARC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagramas de arquitectura versionados e acessíveis
+      en: Architecture diagrams versioned and accessible
   - tipo: requisito
     alvo: THR-006
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
     ancora: catálogo-thr---threat-modeling
     citacao:
-      pt: O threat model tem controlo de versão explícito
-      en: The threat model is under explicit version control
+      pt: Threat model versionado e actualizado dentro do ciclo ou após trigger
+      en: Threat model versioned and updated within the cycle or after a trigger
   - tipo: requisito
     alvo: DEP-012
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: versionado, e ligado ao SBOM principal
-      en: versioned, and linked to the main SBOM
+      pt: AI BOM gerado por *build* em formato standardizado
+      en: AI BOM generated per *build* in a standardised format
+  - tipo: requisito
+    alvo: TST-004
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Evidência de testes reproduzível, auditável e ligada ao build
+      en: Reproducible, auditable test evidence linked to the build
   falta:
-    pt: Artefactos versionados existem (ADR, threat model, AI BOM); falta um dossiê técnico por sistema elaborado antes da colocação no mercado e mantido atualizado.
-    en: Versioned artefacts exist (ADR, threat model, AI BOM); missing is a technical file per system drawn up before placing on the market and kept up to date.
+    pt: A redacção do documento é do prestador; o Manual fornece a evidência (ver o mapa de evidência da página «Requisitos aplicáveis»).
+    en: Drafting the document is for the provider; the Manual provides the evidence (see the evidence map on the “Applicable requirements” page).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1201,7 +1217,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 11.º, n.º 1, segundo parágrafo
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1210,23 +1226,47 @@ itens:
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
-      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+      pt: Decisões de arquitectura documentadas
+      en: Architecture decisions documented
+  - tipo: requisito
+    alvo: ARC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagramas de arquitectura versionados e acessíveis
+      en: Architecture diagrams versioned and accessible
+  - tipo: requisito
+    alvo: THR-006
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: Threat model versionado e actualizado dentro do ciclo ou após trigger
+      en: Threat model versioned and updated within the cycle or after a trigger
   - tipo: requisito
     alvo: DEP-012
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: versionado, e ligado ao SBOM principal
-      en: versioned, and linked to the main SBOM
+      pt: AI BOM gerado por *build* em formato standardizado
+      en: AI BOM generated per *build* in a standardised format
+  - tipo: requisito
+    alvo: TST-004
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Evidência de testes reproduzível, auditável e ligada ao build
+      en: Reproducible, auditable test evidence linked to the build
   falta:
-    pt: Sem índice do anexo IV; vários elementos do anexo IV não têm artefacto no Manual (ver AIA-AnxIV-*).
-    en: No Annex IV index; several Annex IV elements have no artefact in the Manual (see AIA-AnxIV-*).
+    pt: Os pontos do anexo IV sem artefacto ficam como lacuna declarada no mapa de evidência.
+    en: The Annex IV points without an artefact are declared gaps in the evidence map.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1251,40 +1291,64 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 1
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Zonas de confiança identificadas e documentadas
+      en: Trust zones identified and documented
   - tipo: requisito
     alvo: ARC-010
     niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: Diagrama no repositório com histórico de versões
-      en: Diagram in the repository with version history
+      pt: Diagramas de arquitectura versionados e acessíveis
+      en: Architecture diagrams versioned and accessible
   - tipo: requisito
-    alvo: DEP-013
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: DEP-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: Modelos AI usados em produção ou em pipeline têm
-      en: AI models used in production or in a pipeline have
+      pt: Inventário e proveniência de dependências AI/ML
+      en: Inventory and provenance of AI/ML dependencies
   - tipo: requisito
     alvo: DEP-012
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: versionado, e ligado ao SBOM principal
-      en: versioned, and linked to the main SBOM
+      pt: AI BOM gerado por *build* em formato standardizado
+      en: AI BOM generated per *build* in a standardised format
+  - tipo: requisito
+    alvo: DEP-013
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
   falta:
-    pt: Versões e componentes (AI BOM, pinning) e diagramas versionados; faltam finalidade prevista, interface com o utilizador, formas de disponibilização e instruções.
-    en: Versions and components (AI BOM, pinning) and versioned diagrams; missing are intended purpose, user interface, forms of making available and instructions.
+    pt: 'Lacuna declarada: finalidade prevista (al. a)), formas de colocação no mercado (al. d)), hardware fora da inferência própria (al. e)) e descrição da interface para o implantador (al. g)). Fora de âmbito: fotografias e marcações (al. f)).'
+    en: 'Declared gap: intended purpose (point (a)), forms of placing on the market (point (d)), hardware outside self-hosted inference (point (e)) and description of the interface for the deployer (point (g)). Out of scope: photographs and markings (point (f)).'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1292,7 +1356,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea a
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1301,23 +1365,39 @@ itens:
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: modelos base com versão, hash do artefacto e fonte (model registry, fine-tuning provenance)
-      en: base models with version, artefact hash and source (model registry, fine-tuning provenance)
+      pt: Inventário e proveniência de dependências AI/ML
+      en: Inventory and provenance of AI/ML dependencies
   - tipo: requisito
     alvo: DEP-012
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: versionado, e ligado ao SBOM principal
-      en: versioned, and linked to the main SBOM
+      pt: AI BOM gerado por *build* em formato standardizado
+      en: AI BOM generated per *build* in a standardised format
+  - tipo: requisito
+    alvo: DEP-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Lista de *providers* AI aprovados com classificação de risco
+      en: List of approved AI *providers* with risk classification
+  - tipo: requisito
+    alvo: CIC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cic---cicd-seguro
+    citacao:
+      pt: Pipelines como código, versionados e sujeitos a revisão
+      en: Pipelines as code, versioned and subject to review
   falta:
-    pt: Modelos pré-treinados de terceiros com fonte e proveniência de fine-tuning (L2+); faltam métodos e passos de desenvolvimento/treino do sistema.
-    en: Third-party pre-trained models with source and fine-tuning provenance (L2+); missing are the methods and steps of development/training of the system.
+    pt: A metodologia de treino fica fora de âmbito (governação de dados, art. 10.º).
+    en: The training methodology is out of scope (data governance, Article 10).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1325,7 +1405,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea b
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1334,11 +1414,11 @@ itens:
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
-      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+      pt: Decisões de arquitectura documentadas
+      en: Architecture decisions documented
   falta:
-    pt: ADR regista decisões estruturais e compromissos; faltam lógica geral e algoritmos, o que o sistema otimiza e resultados esperados.
-    en: ADR records structural decisions and trade-offs; missing are general logic and algorithms, what the system optimises and expected outputs.
+    pt: 'Lacuna declarada: lógica geral, algoritmos e o que o sistema optimiza. Os pressupostos sobre grupos de pessoas ficam fora de âmbito (enviesamento).'
+    en: 'Declared gap: general logic, algorithms and what the system optimises. Assumptions about groups of persons are out of scope (bias).'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1350,7 +1430,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea c
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1359,23 +1439,31 @@ itens:
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: Diagrama com zonas de confiança delimitadas, identificadas e justificadas
-      en: Diagram with trust zones delimited, identified and justified
+      pt: Zonas de confiança identificadas e documentadas
+      en: Trust zones identified and documented
+  - tipo: requisito
+    alvo: ARC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagramas de arquitectura versionados e acessíveis
+      en: Architecture diagrams versioned and accessible
   - tipo: requisito
     alvo: ARC-014
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
     ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: controlos de input sanitization e output filtering específicos para prompt injection directa e indirecta
-      en: input sanitisation and output filtering controls specific to direct and indirect prompt injection
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
   falta:
-    pt: Arquitetura com zonas de confiança incluindo componentes de IA; faltam recursos computacionais de desenvolvimento, treino, teste e validação.
-    en: Architecture with trust zones including AI components; missing are the computational resources for development, training, testing and validation.
+    pt: 'Lacuna declarada: recursos computacionais de desenvolvimento, treino, teste e validação.'
+    en: 'Declared gap: computational resources for development, training, testing and validation.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1383,33 +1471,16 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea d
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
-  resposta:
-  - tipo: requisito
-    alvo: DEP-011
-    niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
-    ancora: catálogo-dep---dependências-sbom-e-sca
-    citacao:
-      pt: datasets de treino e fine-tuning com versão, fonte e processo de curadoria
-      en: training and fine-tuning datasets with version, source and curation process
-  - tipo: politica
-    rotulo:
-      pt: Política 39 §4
-      en: Policy 39 §4
-    ficheiro: 020-assets/policies/39_policy-ai-bom-supply-chain.md
-    ancora: 4-ai-bom--formato-e-conteúdo-mínimo
-    citacao:
-      pt: Inclui `dataset_id`, `version`, `source`, `hash`, `curation_process`
-      en: Includes `dataset_id`, `version`, `source`, `hash`, `curation_process`
-  falta:
-    pt: Versão, fonte, hash e curadoria dos datasets; faltam metodologia de treino, rotulagem, limpeza e folhas de dados.
-    en: Version, source, hash and curation of datasets; missing are training methodology, labelling, cleaning and datasheets.
-  razao_fora_de_ambito: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental.
+    en: Governance of training data (Article 10) is out of scope by the lead's decision; DEP-011 and Policy 39 §4 give only incidental evidence.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1417,25 +1488,32 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea e
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 38 §4
-      en: Policy 38 §4
-    ficheiro: 020-assets/policies/38_policy-mandates-agentes.md
-    ancora: 4-conteúdo-mínimo-de-um-mandate
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: Necessariamente humano; com *backup* nomeado
-      en: Necessarily human; with a named *backup*
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: REQ-AGN-003
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/09-governaca-automatismos.md
+    ancora: req-agn
+    citacao:
+      pt: '*Kill-switch operacional documentado e testado*'
+      en: '*Documented and tested operational kill-switch*'
   falta:
-    pt: 'Só existe para agentes com tool-use (mandate: owner, kill-switch); nada para sistemas não agênticos nem interpretabilidade.'
-    en: 'Exists only for agents with tool-use (mandate: owner, kill-switch); nothing for non-agentic systems nor interpretability.'
+    pt: Avaliação das medidas de supervisão apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08).
+    en: Assessment of the oversight measures supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1443,20 +1521,28 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea f
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-009
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Alterações significativas desencadeiam nova revisão
+      en: Significant changes trigger a new review
   - tipo: requisito
     alvo: DEP-013
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: Modelos AI usados em produção ou em pipeline têm
-      en: AI models used in production or in a pipeline have
-  falta:
-    pt: Alterações predeterminadas (aprendizagem contínua) não são modeladas; o Manual só impõe pinning e revisão em mudança de versão maior.
-    en: Pre-determined changes (continuous learning) are not modelled; the Manual only imposes pinning and review on a major version change.
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1468,7 +1554,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 2, alínea g
   classe: engenharia
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1477,33 +1563,31 @@ itens:
     ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
     ancora: catálogo-tst---testes-de-segurança
     citacao:
-      pt: Relatórios de testes de segurança associados ao build que os gerou
-      en: Security test reports associated with the build that generated them
-  - tipo: us
-    alvo: 10-testes-seguranca-us-21
-    rotulo:
-      pt: Cap. 10 US-21
-      en: Ch. 10 US-21
-    ficheiro: 010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md
-    ancora: us-21---governação-do-uso-de-ia-em-testes-e-eval-suites-para-agentes
+      pt: Evidência de testes reproduzível, auditável e ligada ao build
+      en: Reproducible, auditable test evidence linked to the build
+  - tipo: requisito
+    alvo: DPL-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
     citacao:
-      pt: Eval suite versionada em VCS, corrida em CI antes de merge de prompt/skill/modelo (C5)
-      en: Eval suite versioned in VCS, run in CI before merging prompt/skill/model (C5)
+      pt: Release gates para sistemas com agentes AI
+      en: Release gates for systems with AI agents
   - tipo: requisito
     alvo: CIC-007
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
     ancora: catálogo-cic---cicd-seguro
     citacao:
-      pt: Artefactos assinados digitalmente ou com hash verificável gerado no momento do build
-      en: Artefacts digitally signed or with a verifiable hash generated at build time
+      pt: Integridade e proveniência verificável dos artefactos produzidos
+      en: Verifiable integrity and provenance of the artefacts produced
   falta:
-    pt: Relatórios ligados ao build e eval_run_id arquivados; faltam métricas de exatidão/solidez, impactos discriminatórios e relatórios datados e assinados pelos responsáveis.
-    en: Reports linked to the build and eval_run_id archived; missing are accuracy/robustness metrics, discriminatory impacts and reports dated and signed by the responsible persons.
+    pt: Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento).
+    en: Accuracy and robustness metrics for non-agentic systems pending the AppSec Core AISVS/SAIF round; discriminatory impacts out of scope (bias).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1552,7 +1636,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 3
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1561,15 +1645,31 @@ itens:
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
-      en: complete logging of model inputs and outputs (with PII sanitisation)
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: THR-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: Threat modeling estendido para sistemas com componentes AI/ML
+      en: Threat modelling extended to systems with AI/ML components
   falta:
-    pt: 'Capacidades e limitações de desempenho, exatidão por grupos de pessoas, resultados não pretendidos previsíveis e especificações dos dados de entrada: nenhuma prescrição.'
-    en: 'Performance capabilities and limitations, accuracy by groups of persons, foreseeable unintended outcomes and input data specifications: no prescription.'
+    pt: 'Lacuna declarada: capacidades e limitações de desempenho e especificações dos dados de entrada. A exactidão por grupos de pessoas fica fora de âmbito (enviesamento).'
+    en: 'Declared gap: performance capabilities and limitations and input data specifications. Accuracy by groups of persons is out of scope (bias).'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1581,12 +1681,12 @@ itens:
   contexto: null
   resposta: []
   falta:
-    pt: 'Adequação das métricas de desempenho: nenhuma prescrição.'
-    en: 'Appropriateness of performance metrics: no prescription.'
+    pt: 'Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core.'
+    en: 'Declared gap: appropriateness of the performance metrics, pending the AppSec Core AISVS/SAIF round.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1594,32 +1694,16 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 5
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
-  resposta:
-  - tipo: requisito
-    alvo: CLA-001
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-cla---classificação-de-aplicações
-    citacao:
-      pt: Cada aplicação tem classificação de criticidade formalizada segundo os eixos de exposição, sensibilidade de dados e impacto de incidente
-      en: Each application has a criticality classification formalised according to the axes of exposure, data sensitivity and incident impact
-  - tipo: requisito
-    alvo: THR-008
-    niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
-    ancora: catálogo-thr---threat-modeling
-    citacao:
-      pt: têm threat model estendido que cobre ameaças adversariais específicas
-      en: have an extended threat model covering specific adversarial threats
-  falta:
-    pt: Existem os artefactos de classificação e threat model; falta a descrição do sistema de gestão de riscos do art. 9.º (ver AIA-9-1).
-    en: The classification and threat model artefacts exist; missing is the description of the risk management system of Article 9 (see AIA-9-1).
-  razao_fora_de_ambito: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead.
+    en: The risk management system of Article 9 is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1702,24 +1786,26 @@ itens:
   acto_fonte: 32024R1689
   referencia: Anexo IV, ponto 9
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R04
   - tipo: requisito
     alvo: OPS-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: registo de drift de comportamento e degradação de precisão
-      en: recording of behaviour drift and accuracy degradation
-  falta:
-    pt: Não há plano de acompanhamento pós-comercialização; só sinais operacionais (drift, degradação) que o alimentariam.
-    en: There is no post-market monitoring plan; only operational signals (drift, degradation) that would feed it.
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-11]
   nota: null
@@ -1759,10 +1845,8 @@ itens:
       en: Logs automatically generated by high-risk AI systems (OPS-011/012) | At least 6 months
   falta: null
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (níveis): os requisitos específicos de IA (OPS-011/012, THR-008, ARC-014, DEP-011/012) só são exigidos em L2/L3 e o Cap. 01 declara que a IA «não cria novos eixos de risco» nem altera por si só a criticidade; não há regra que imponha a um sistema de IA de risco elevado (art. 6.º) um piso L2/L3. Um sistema de risco elevado classificado L1 (soma E+D+I ≤ 4) fica sem o requisito que a lei torna obrigatório.'
-    en: 'CONFLICT (levels): the AI-specific requirements (OPS-011/012, THR-008, ARC-014, DEP-011/012) are required only at L2/L3 and Ch. 01 states that AI “does not create new risk axes” nor by itself alters criticality; there is no rule imposing an L2/L3 floor on a high-risk AI system (Article 6). A high-risk system classified L1 (sum E+D+I ≤ 4) is left without the requirement that the law makes mandatory.'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-12]
@@ -1771,36 +1855,32 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 12.º, n.º 2
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto:
     id: CTX-AIA-RE
     grau: null
   resposta:
   - tipo: requisito
-    alvo: OPS-011
+    alvo: ARC-009
     niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-ops---monitorização-e-operações
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: registo de drift de comportamento e degradação de precisão
-      en: recording of behaviour drift and accuracy degradation
+      pt: Alterações significativas desencadeiam nova revisão
+      en: Significant changes trigger a new review
   - tipo: requisito
     alvo: OPS-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: audit trail completo de model versions deployed e dataset versions usados em inferência
-      en: complete audit trail of deployed model versions and dataset versions used in inference
-  falta:
-    pt: Drift, degradação e versões de modelo/dataset registados (L2+); falta orientação explícita para identificar situações de risco/modificação substancial e para o controlo pelo implantador.
-    en: Drift, degradation and model/dataset versions recorded (L2+); missing is explicit guidance to identify risk situations/substantial modification and for monitoring by the deployer.
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (níveis): os requisitos específicos de IA (OPS-011/012, THR-008, ARC-014, DEP-011/012) só são exigidos em L2/L3 e o Cap. 01 declara que a IA «não cria novos eixos de risco» nem altera por si só a criticidade; não há regra que imponha a um sistema de IA de risco elevado (art. 6.º) um piso L2/L3. Um sistema de risco elevado classificado L1 (soma E+D+I ≤ 4) fica sem o requisito que a lei torna obrigatório.'
-    en: 'CONFLICT (levels): the AI-specific requirements (OPS-011/012, THR-008, ARC-014, DEP-011/012) are required only at L2/L3 and Ch. 01 states that AI “does not create new risk axes” nor by itself alters criticality; there is no rule imposing an L2/L3 floor on a high-risk AI system (Article 6). A high-risk system classified L1 (sum E+D+I ≤ 4) is left without the requirement that the law makes mandatory.'
-  confianca: alta
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-12]
   nota: null
@@ -1808,16 +1888,16 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 12.º, n.º 3
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: 'Campos mínimos para identificação biométrica à distância (período, base de referência, correspondências, verificadores): não prescritos.'
-    en: 'Minimum fields for remote biometric identification (period, reference database, matches, verifiers): not prescribed.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
+    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead''s decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2027-12-02'
   substitui: [EXT-AI-ACT-OBL-12]
   nota: null
@@ -1825,25 +1905,32 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 13.º, n.º 1
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 38 §4
-      en: Policy 38 §4
-    ficheiro: 020-assets/policies/38_policy-mandates-agentes.md
-    ancora: 4-conteúdo-mínimo-de-um-mandate
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
     citacao:
-      pt: Necessariamente humano; com *backup* nomeado
-      en: Necessarily human; with a named *backup*
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: OPS-011
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
   falta:
-    pt: 'Transparência de funcionamento para o implantador interpretar resultados: nenhuma prescrição; o mandate da Política 38 é artefacto interno de governação de agentes, não informação ao implantador.'
-    en: 'Transparency of operation for the deployer to interpret outputs: no prescription; the Policy 38 mandate is an internal agent governance artefact, not information to the deployer.'
+    pt: A interpretação do output é apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08).
+    en: Interpretation of the output is supported by the minimum oversight of ARC-014 (floor CTX-AIA-RE-P08).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-13]
   nota: null
@@ -1851,16 +1938,48 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 13.º, n.º 2
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
-  resposta: []
+  resposta:
+  - tipo: requisito
+    alvo: DEP-013
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
+  - tipo: requisito
+    alvo: DEP-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Lista de *providers* AI aprovados com classificação de risco
+      en: List of approved AI *providers* with risk classification
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: OPS-011
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
   falta:
-    pt: 'Instruções de utilização: nenhuma prescrição.'
-    en: 'Instructions for use: no prescription.'
+    pt: 'A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core.'
+    en: 'Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-13]
   nota: null
@@ -1868,16 +1987,48 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 13.º, n.º 3
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
-  resposta: []
+  resposta:
+  - tipo: requisito
+    alvo: DEP-013
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
+  - tipo: requisito
+    alvo: DEP-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Lista de *providers* AI aprovados com classificação de risco
+      en: List of approved AI *providers* with risk classification
+  - tipo: requisito
+    alvo: ARC-014
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Padrões arquitetónicos específicos para sistemas com componentes AI/ML
+      en: Architectural patterns specific to systems with AI/ML components
+  - tipo: requisito
+    alvo: OPS-011
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
   falta:
-    pt: 'Conteúdo mínimo das instruções: nenhuma prescrição.'
-    en: 'Minimum content of the instructions: no prescription.'
+    pt: 'A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core.'
+    en: 'Drafting the instructions is for the provider. Declared gap: intended purpose and interface description; the accuracy and robustness levels are pending the AppSec Core AISVS/SAIF round.'
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-13]
   nota: null
@@ -1889,12 +2040,12 @@ itens:
   contexto: null
   resposta: []
   falta:
-    pt: 'Declaração dos níveis testados de exatidão, solidez e cibersegurança: nenhuma prescrição.'
-    en: 'Declaration of the tested levels of accuracy, robustness and cybersecurity: no prescription.'
+    pt: Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core.
+    en: Declaration of the accuracy and robustness levels pending the AppSec Core AISVS/SAIF round.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-13]
   nota: null
@@ -1902,7 +2053,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 13.º, n.º 3, alínea e)
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1911,11 +2062,9 @@ itens:
     ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
     ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: Modelos AI usados em produção ou em pipeline têm
-      en: AI models used in production or in a pipeline have
-  falta:
-    pt: 'Informação ao implantador sobre vida útil, manutenção e frequência de atualizações: nenhuma prescrição (DEP-013 trata só a gestão interna de versões).'
-    en: 'Information to the deployer on lifetime, maintenance and frequency of updates: no prescription (DEP-013 deals only with internal version management).'
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1927,7 +2076,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 13.º, n.º 3, alínea f)
   classe: engenharia
-  forca: lacuna
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: requisito
@@ -1936,11 +2085,9 @@ itens:
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
-      en: complete logging of model inputs and outputs (with PII sanitisation)
-  falta:
-    pt: 'Descrição ao implantador dos mecanismos para recolher, armazenar e interpretar registos: nenhuma prescrição.'
-    en: 'Description to the deployer of the mechanisms to collect, store and interpret logs: no prescription.'
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2130,13 +2277,13 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 14.º, n.º 5
   classe: engenharia
-  forca: lacuna
+  forca: fora_de_ambito
   contexto: null
   resposta: []
-  falta:
-    pt: 'Verificação por duas pessoas antes de decisão com base em identificação biométrica: não prescrita.'
-    en: 'Verification by two persons before a decision based on biometric identification: not prescribed.'
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*).'
+    en: 'The specifics of biometric identification systems (Annex III, point 1: logs of Article 12(3) and two-person verification of Article 14(5)) are out of scope by the lead''s decision; developing such an application follows the Manual like any other. Biometrics as an authentication factor belongs to the authentication requirements (AUT-*).'
   conflito: false
   explicacao_conflito: null
   confianca: media
@@ -2167,8 +2314,8 @@ itens:
       pt: registo de drift de comportamento e degradação de precisão
       en: recording of behaviour drift and accuracy degradation
   falta:
-    pt: Cibersegurança coberta (L2+); exatidão e solidez sem requisito nem nível declarado.
-    en: Cybersecurity covered (L2+); accuracy and robustness without a requirement or declared level.
+    pt: Cibersegurança coberta (THR-008, ARC-014, DEP-011 a DEP-014, OPS-011 a OPS-014, DPL-010/011); exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core.
+    en: Cybersecurity covered (THR-008, ARC-014, DEP-011 to DEP-014, OPS-011 to OPS-014, DPL-010/011); accuracy and robustness pending the AppSec Core AISVS/SAIF round.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2184,8 +2331,8 @@ itens:
   contexto: null
   resposta: []
   falta:
-    pt: 'Declaração de níveis e parâmetros de exatidão nas instruções: nenhuma prescrição.'
-    en: 'Declaration of accuracy levels and parameters in the instructions: no prescription.'
+    pt: Declaração dos níveis e parâmetros de exactidão pendente da ronda AISVS/SAIF do AppSec Core.
+    en: Declaration of the accuracy levels and parameters pending the AppSec Core AISVS/SAIF round.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2289,10 +2436,8 @@ itens:
       en: Integrity verified before loading
   falta: null
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (níveis): os requisitos específicos de IA (OPS-011/012, THR-008, ARC-014, DEP-011/012) só são exigidos em L2/L3 e o Cap. 01 declara que a IA «não cria novos eixos de risco» nem altera por si só a criticidade; não há regra que imponha a um sistema de IA de risco elevado (art. 6.º) um piso L2/L3. Um sistema de risco elevado classificado L1 (soma E+D+I ≤ 4) fica sem o requisito que a lei torna obrigatório.'
-    en: 'CONFLICT (levels): the AI-specific requirements (OPS-011/012, THR-008, ARC-014, DEP-011/012) are required only at L2/L3 and Ch. 01 states that AI “does not create new risk axes” nor by itself alters criticality; there is no rule imposing an L2/L3 floor on a high-risk AI system (Article 6). A high-risk system classified L1 (sum E+D+I ≤ 4) is left without the requirement that the law makes mandatory.'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-15]
@@ -2453,10 +2598,8 @@ itens:
     pt: Ver AIA-19-1.
     en: See AIA-19-1.
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (retenção): o Cap. 12 addon 10 admite «Excepções a OPS-003 com retenção abaixo de um prazo mínimo legal aplicável» (com validação jurídica), citando expressamente os seis meses do AI Act — um piso legal não é derrogável por exceção interna; além disso OPS-003 é «-» em L1 (a Política 29 §7 compensa com «Pelo menos 6 meses» e LOG-005 L1+).'
-    en: 'CONFLICT (retention): Ch. 12 addon 10 admits “Exceptions to OPS-003 with retention below an applicable statutory minimum” (with legal validation), expressly citing the six months of the AI Act — a legal floor cannot be derogated from by internal exception; moreover OPS-003 is “-” at L1 (Policy 29 §7 compensates with “At least 6 months” and LOG-005 L1+).'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: []
@@ -2722,7 +2865,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 17.º, n.º 1, alínea d)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -2742,13 +2885,13 @@ itens:
     citacao:
       pt: 'Por cada agente AI em nível A1+ no projecto:'
       en: 'For each AI agent at level A1+ in the project:'
-  falta:
-    pt: Exame e teste de segurança antes/durante/depois cobertos; falta validação de desempenho/exatidão do sistema de IA.
-    en: Security examination and testing before/during/after covered; missing is validation of the performance/accuracy of the AI system.
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead.
+    en: Article 17 (quality management system) is out of scope by the lead's decision.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-17]
   nota: null
@@ -2855,7 +2998,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 17.º, n.º 1, alínea h)
   classe: engenharia
-  forca: parcial
+  forca: fora_de_ambito
   contexto: null
   resposta:
   - tipo: requisito
@@ -2866,13 +3009,13 @@ itens:
     citacao:
       pt: registo de drift de comportamento e degradação de precisão
       en: recording of behaviour drift and accuracy degradation
-  falta:
-    pt: Ver AIA-72-1 (sem plano de acompanhamento pós-comercialização).
-    en: See AIA-72-1 (no post-market monitoring plan).
-  razao_fora_de_ambito: null
+  falta: null
+  razao_fora_de_ambito:
+    pt: O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. O plano do art. 72.º está em CTX-AIA-RE-R04.
+    en: Article 17 (quality management system) is out of scope by the lead's decision. The Article 72 plan is in CTX-AIA-RE-R04.
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-17]
   nota: null
@@ -3088,7 +3231,7 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 18.º, n.º 1
   classe: organizacional
-  forca: parcial
+  forca: apoia_evidencia
   contexto: null
   resposta:
   - tipo: politica
@@ -3098,20 +3241,9 @@ itens:
     ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
     ancora: 10-prazos-de-retenção-mínimos
     citacao:
-      pt: Pacote de evidências de validação por release (índice + export assinado)
-      en: Validation evidence package per release (index + signed export)
-  - tipo: politica
-    rotulo:
-      pt: Política 06 §10
-      en: Policy 06 §10
-    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
-    ancora: 10-prazos-de-retenção-mínimos
-    citacao:
-      pt: Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector
-      en: The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails
-  falta:
-    pt: Prazos do Manual de 1–3 anos (L1–L3); a extensão a 10 anos existe só para produtos CRA, não para a documentação de sistemas de IA de risco elevado. A cláusula de precedência evita contradição formal.
-    en: Manual periods of 1–3 years (L1–L3); the extension to 10 years exists only for CRA products, not for the documentation of high-risk AI systems. The precedence clause avoids a formal contradiction.
+      pt: o prestador conserva a documentação técnica e os artefactos que a alimentam durante 10 anos
+      en: the provider keeps the technical documentation and the artefacts that feed it for 10 years
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3183,10 +3315,8 @@ itens:
       en: Logs kept for the period defined in policy; effective retention verified.
   falta: null
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (retenção): o Cap. 12 addon 10 admite «Excepções a OPS-003 com retenção abaixo de um prazo mínimo legal aplicável» (com validação jurídica), citando expressamente os seis meses do AI Act — um piso legal não é derrogável por exceção interna; além disso OPS-003 é «-» em L1 (a Política 29 §7 compensa com «Pelo menos 6 meses» e LOG-005 L1+).'
-    en: 'CONFLICT (retention): Ch. 12 addon 10 admits “Exceptions to OPS-003 with retention below an applicable statutory minimum” (with legal validation), expressly citing the six months of the AI Act — a legal floor cannot be derogated from by internal exception; moreover OPS-003 is “-” at L1 (Policy 29 §7 compensates with “At least 6 months” and LOG-005 L1+).'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-12]
@@ -3921,10 +4051,8 @@ itens:
       en: for logs automatically generated by high-risk AI systems, at least six months
   falta: null
   razao_fora_de_ambito: null
-  conflito: true
-  explicacao_conflito:
-    pt: 'CONFLITO (retenção): o Cap. 12 addon 10 admite «Excepções a OPS-003 com retenção abaixo de um prazo mínimo legal aplicável» (com validação jurídica), citando expressamente os seis meses do AI Act — um piso legal não é derrogável por exceção interna; além disso OPS-003 é «-» em L1 (a Política 29 §7 compensa com «Pelo menos 6 meses» e LOG-005 L1+).'
-    en: 'CONFLICT (retention): Ch. 12 addon 10 admits “Exceptions to OPS-003 with retention below an applicable statutory minimum” (with legal validation), expressly citing the six months of the AI Act — a legal floor cannot be derogated from by internal exception; moreover OPS-003 is “-” at L1 (Policy 29 §7 compensates with “At least 6 months” and LOG-005 L1+).'
+  conflito: false
+  explicacao_conflito: null
   confianca: alta
   aplicavel_desde: 2027-12-02 (anexo III) / 2028-08-02 (anexo I)
   substitui: [EXT-AI-ACT-OBL-26]
@@ -4284,41 +4412,40 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 43.º, n.º 4
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: requisito
+    alvo: ARC-009
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Alterações significativas desencadeiam nova revisão
+      en: Significant changes trigger a new review
   - tipo: requisito
     alvo: CLA-006
     niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-cla---classificação-de-aplicações
     citacao:
-      pt: a classificação é reavaliada no prazo máximo de 30 dias
-      en: the classification is reassessed within a maximum of 30 days
+      pt: Reavaliação de classificação após evento de mudança significativa
+      en: Classification reassessment after a significant change event
   - tipo: requisito
-    alvo: THR-006
+    alvo: DEP-013
     niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
-    ancora: catálogo-thr---threat-modeling
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
     citacao:
-      pt: O threat model tem controlo de versão explícito
-      en: The threat model is under explicit version control
-  - tipo: politica
-    rotulo:
-      pt: Política 39 §5
-      en: Policy 39 §5
-    ficheiro: 020-assets/policies/39_policy-ai-bom-supply-chain.md
-    ancora: 5-version-pinning--regras-operacionais
-    citacao:
-      pt: 'Mudança de versão maior em qualquer destes obriga a:'
-      en: 'A major version change in any of these requires:'
-  falta:
-    pt: Mudanças significativas (incluindo versão maior de modelo) disparam reclassificação, revisão do threat model e nova eval; falta qualificar «modificação substancial» e ligá-la a nova avaliação da conformidade.
-    en: Significant changes (including a major model version) trigger reclassification, threat model review and a new eval; missing is qualifying “substantial modification” and linking it to a new conformity assessment.
+      pt: Versão *pinned* explícita para modelos AI e providers
+      en: Explicit *pinned* version for AI models and providers
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: []
   nota: null
@@ -5542,34 +5669,26 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 72.º, n.º 1
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R04
   - tipo: requisito
     alvo: OPS-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: registo de drift de comportamento e degradação de precisão
-      en: recording of behaviour drift and accuracy degradation
-  - tipo: us
-    alvo: 12-monitorizacao-operacoes-us-13
-    rotulo:
-      pt: Cap. 12 US-13
-      en: Ch. 12 US-13
-    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-    ancora: us-13
-    citacao:
-      pt: Telemetria de agentes AI em produção
-      en: Telemetry of AI agents in production
-  falta:
-    pt: Sinais de desempenho e drift (L2+) e telemetria de agentes; falta um sistema de acompanhamento pós-comercialização criado e documentado por sistema.
-    en: Performance and drift signals (L2+) and agent telemetry; a post-market monitoring system established and documented per system is missing.
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: [EXT-AI-ACT-OBL-72]
   nota: null
@@ -5577,32 +5696,26 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 72.º, n.º 2
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R04
   - tipo: requisito
     alvo: OPS-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: registo de drift de comportamento e degradação de precisão
-      en: recording of behaviour drift and accuracy degradation
-  - tipo: requisito
-    alvo: OPS-012
-    niveis: [L2, L3]
-    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
-    ancora: catálogo-ops---monitorização-e-operações
-    citacao:
-      pt: divergência entre `intent` declarado e acção real gera alerta accionável
-      en: divergence between the declared `intent` and the actual action generates an actionable alert
-  falta:
-    pt: Recolha de telemetria existe; falta análise ativa e sistemática do desempenho ao longo da vida útil, incluindo a interação com outros sistemas de IA.
-    en: Telemetry collection exists; active and systematic analysis of performance throughout the lifetime is missing, including interaction with other AI systems.
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: [EXT-AI-ACT-OBL-72]
   nota: null
@@ -5610,24 +5723,26 @@ itens:
   acto_fonte: 32024R1689
   referencia: Art. 72.º, n.º 3
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-AIA-RE
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-AIA-RE-R04
   - tipo: requisito
     alvo: OPS-011
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
     ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: logging completo de inputs e outputs do modelo (com sanitização de PII)
-      en: complete logging of model inputs and outputs (with PII sanitisation)
-  falta:
-    pt: 'Plano de acompanhamento pós-comercialização integrado na documentação técnica: inexistente.'
-    en: 'Post-market monitoring plan integrated into the technical documentation: non-existent.'
+      pt: Observabilidade dedicada a componentes AI/ML em produção
+      en: Dedicated observability for AI/ML components in production
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: '2026-08-02'
   substitui: [EXT-AI-ACT-OBL-72]
   nota: null

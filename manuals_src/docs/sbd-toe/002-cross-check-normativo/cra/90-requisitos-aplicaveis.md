@@ -356,14 +356,31 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CTX-CRA-R04` | Comunicação ao mantenedor de vulnerabilidades em componentes | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R05` | Critério de incidente grave | ▲ | ▲ | ▲ | — |
 
+## Mapa de evidência da documentação técnica {#mapa-evidencia}
+
+Obrigações documentais do regime (anexo VII do CRA) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/cra.yaml`.
+
+| Obrigação | Referência | Força | Como o Manual responde | Nota |
+|---|---|---|---|---|
+| CRA-AnxVII-7 | Anexo VII, ponto 7 | Fora de âmbito | — | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVII-1 | Anexo VII, ponto 1 | Apoia evidência | [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) | — |
+| CRA-AnxVII-2a | Anexo VII, ponto 2, alínea a) | Cobre | `ARC-010`; `ARC-004`; [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo) | — |
+| CRA-AnxVII-2b | Anexo VII, ponto 2, alínea b) | Cobre | `DEP-001`; [Política 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); `DST-003`; `GOV-015`; `CTX-CRA-R02` | — |
+| CRA-AnxVII-2c | Anexo VII, ponto 2, alínea c) | Cobre | `CIC-001`; `CIC-005`; [Política 20 §7](/sbd-toe/assets/policies/policy-release-seguro#7-rastreabilidade-ponta-a-ponta) | — |
+| CRA-AnxVII-3 | Anexo VII, ponto 3 | Apoia evidência | `THR-001`; `THR-006` | A ligação ao anexo I é redigida pelo fabricante na documentação técnica; o Manual fornece a evidência (ver o mapa de evidência). |
+| CRA-AnxVII-4 | Anexo VII, ponto 4 | Cobre | `CTX-CRA-R01` | — |
+| CRA-AnxVII-5 | Anexo VII, ponto 5 | Fora de âmbito | — | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
+| CRA-AnxVII-6 | Anexo VII, ponto 6 | Apoia evidência | `TST-004`; [Política 19 §5](/sbd-toe/assets/policies/policy-estrategia-testes#5-rastreabilidade-e-evidência-por-release) | A ligação ao anexo I é redigida pelo fabricante na documentação técnica; o Manual fornece a evidência (ver o mapa de evidência). |
+| CRA-AnxVII-8 | Anexo VII, ponto 8 | Cobre | [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Política 11 §10](/sbd-toe/assets/policies/policy-sbom#10-responsabilidades) | — |
+
 ## Obrigações do regime por força de cobertura {#forca}
 
 Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 38 |
-| Parcial | 23 |
-| Apoia evidência | 18 |
-| Lacuna | 15 |
+| Cobre | 39 |
+| Parcial | 21 |
+| Apoia evidência | 20 |
+| Lacuna | 14 |
 | Fora de âmbito | 97 |

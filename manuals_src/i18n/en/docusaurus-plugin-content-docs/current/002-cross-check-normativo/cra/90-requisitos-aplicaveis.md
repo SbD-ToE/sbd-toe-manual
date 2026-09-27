@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: b31ce7e63baf4dcc69d1f0c1f2f19c1edf653a4fef093807013a456b6037122b
+  source_sha256: 852c5d5c06682a76a77ebc0dc9e654d2e08a07a57830c4f45b56b51fcc289de3
   source_commit: null
-  target_sha256: 8d4a93daa1285fd6ea0b708799e7d19f10d46547fa391090068ac86050e7adf6
+  target_sha256: e877b20021a47eeeaa05df3ef1fbabaa13f4a591b49ce0d3414ebac09950cfe3
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -370,14 +370,31 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `CTX-CRA-R04` | Reporting of component vulnerabilities to the maintainer | ▲ | ▲ | ▲ | — |
 | `CTX-CRA-R05` | Severe incident criterion | ▲ | ▲ | ▲ | — |
 
+## Evidence map for the technical documentation {#mapa-evidencia}
+
+Documentary obligations of the regime (CRA Annex VII) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/cra.yaml`.
+
+| Obligation | Reference | Strength | How the Manual responds | Note |
+|---|---|---|---|---|
+| CRA-AnxVII-7 | Anexo VII, ponto 7 | Out of scope | — | Obligation at the formal conformity/market level (EU declaration, CE marking, notified bodies, authorities); outside the scope of a software security engineering manual — the Manual itself declares it out of scope (“does not replace”). |
+| CRA-AnxVII-1 | Anexo VII, ponto 1 | Supports evidence | [Policy 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); [Ch. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) | — |
+| CRA-AnxVII-2a | Anexo VII, ponto 2, alínea a) | Covers | `ARC-010`; `ARC-004`; [Policy 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo) | — |
+| CRA-AnxVII-2b | Anexo VII, ponto 2, alínea b) | Covers | `DEP-001`; [Policy 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); `DST-003`; `GOV-015`; `CTX-CRA-R02` | — |
+| CRA-AnxVII-2c | Anexo VII, ponto 2, alínea c) | Covers | `CIC-001`; `CIC-005`; [Policy 20 §7](/sbd-toe/assets/policies/policy-release-seguro#7-rastreabilidade-ponta-a-ponta) | — |
+| CRA-AnxVII-3 | Anexo VII, ponto 3 | Supports evidence | `THR-001`; `THR-006` | The link to Annex I is drafted by the manufacturer in the technical documentation; the Manual provides the evidence (see the evidence map). |
+| CRA-AnxVII-4 | Anexo VII, ponto 4 | Covers | `CTX-CRA-R01` | — |
+| CRA-AnxVII-5 | Anexo VII, ponto 5 | Out of scope | — | List of harmonised standards/common specifications applied: conformity level. |
+| CRA-AnxVII-6 | Anexo VII, ponto 6 | Supports evidence | `TST-004`; [Policy 19 §5](/sbd-toe/assets/policies/policy-estrategia-testes#5-rastreabilidade-e-evidência-por-release) | The link to Annex I is drafted by the manufacturer in the technical documentation; the Manual provides the evidence (see the evidence map). |
+| CRA-AnxVII-8 | Anexo VII, ponto 8 | Covers | [Policy 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Policy 11 §10](/sbd-toe/assets/policies/policy-sbom#10-responsabilidades) | — |
+
 ## Obligations of the regime by coverage strength {#forca}
 
 Count of the obligations in the matrix `_matriz/cra.yaml` (excluding those addressed to the authorities). The section “What this Manual covers and what stays out” of the cross-check page details them.
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 38 |
-| Partial | 23 |
-| Supports evidence | 18 |
-| Gap | 15 |
+| Covers | 39 |
+| Partial | 21 |
+| Supports evidence | 20 |
+| Gap | 14 |
 | Out of scope | 97 |

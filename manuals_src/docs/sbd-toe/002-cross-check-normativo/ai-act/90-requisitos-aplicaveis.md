@@ -55,6 +55,7 @@ O sistema de IA é de risco elevado nos termos do art. 6.º (com a qualificaçã
 | CTX-AIA-RE-P08 | `ARC-014` | — | obrigatório | Supervisão humana em qualquer nível, com interface que permita a quem supervisiona compreender as capacidades e limitações do sistema, detectar anomalias, interpretar o resultado, decidir não o usar ou anulá-lo e parar o sistema; medidas proporcionais aos riscos, à autonomia e ao contexto; quem supervisiona é advertido para o enviesamento da automatização. | Reg. (UE) 2024/1689, art. 14.º, n.os 1 a 4: «ser eficazmente supervisionados por pessoas singulares durante o período em que estão em utilização» (AIA-14-1, AIA-14-2, AIA-14-3, AIA-14-4) | não admitida |
 | CTX-AIA-RE-P09 | `THR-008` | ART50 | obrigatório | Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: o threat model cobre a utilização indevida razoavelmente previsível do conteúdo gerado, e as salvaguardas são avaliadas com red-team e testes de segurança de conteúdo. | Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744): «medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação» (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitida |
 | CTX-AIA-RE-P10 | `ARC-014` | ART50 | obrigatório | Sistemas que geram ou manipulam imagem, vídeo ou áudio realistas, em qualquer nível: filtros e classificadores de segurança de conteúdo na entrada e na saída, e correcção da utilização indevida observada ou assinalada. | Reg. (UE) 2024/1689, art. 5.º, n.º 1, als. b-A) e b-B), e n.º 1-A (Reg. (UE) 2026/1744): «medidas técnicas de segurança razoáveis e adequadas e de outras garantias para prevenir de forma segura essa geração ou manipulação» (AIA-5-1-b-A, AIA-5-1-b-B, AIA-5-1A) | admitida |
+| CTX-AIA-RE-P11 | `ARC-009` | — | obrigatório | Em qualquer nível, o limiar de alteração significativa distingue as alterações predeterminadas (declaradas antecipadamente na documentação técnica, p. ex. aprendizagem contínua dentro de limites) das modificações substanciais; cada alteração é classificada e a classificação fica registada; uma modificação substancial é sinalizada para nova avaliação da conformidade; os registos permitem identificar situações de risco e modificações substanciais. | Reg. (UE) 2024/1689, art. 43.º, n.º 4, art. 12.º, n.º 2, e anexo IV, ponto 2, al. f): «devem ser sujeitos a um novo procedimento de avaliação da conformidade caso sejam substancialmente modificados» (AIA-43-4, AIA-AnxIV-2-f, AIA-12-2) | não admitida |
 
 > **ART50.** O grau ART50 recebe os pisos CTX-AIA-RE-P09 e CTX-AIA-RE-P10 (salvaguardas de segurança de conteúdo em geradores de imagem, vídeo ou áudio realistas, art. 5.º, n.º 1-A) e os acrescentos CTX-AIA-RE-R01 (informar) e R02 (marcar conteúdo sintético).
 
@@ -67,6 +68,7 @@ Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catál
 | `CTX-AIA-RE-R01` | Informar que se interage com IA | As pessoas que interagem directamente com o sistema são informadas de que estão a interagir com um sistema de IA, salvo se for óbvio pelo contexto; as pessoas expostas a reconhecimento de emoções ou a categorização biométrica são informadas desse funcionamento; o conteúdo de imagem, áudio ou vídeo que constitua falsificação profunda é divulgado como gerado ou manipulado. A informação é clara e perceptível, dada o mais tardar na primeira interacção ou exposição, e cumpre os requisitos de acessibilidade; a presença do aviso é verificada em teste. | Reg. (UE) 2024/1689, art. 50.º, n.os 1, 3, 4 (1.º parágrafo) e 5: «de forma clara e percetível o mais tardar aquando da primeira interação ou exposição» (AIA-50-1, AIA-50-3, AIA-50-4-a, AIA-50-5) |
 | `CTX-AIA-RE-R02` | Marcação de conteúdo sintético | Os resultados de áudio, imagem, vídeo ou texto gerados ou manipulados pelo sistema são marcados num formato legível por máquina e detectáveis como artificiais (p. ex. metadados de proveniência, credenciais de conteúdo, marca de água), com uma solução eficaz, interoperável e sólida na medida do tecnicamente viável; a marcação é verificada em teste e não é removida pelos passos seguintes do pipeline; as excepções do art. 50.º, n.º 2 (apoio à edição normalizada, sem alteração substancial dos dados de entrada) ficam registadas. | Reg. (UE) 2024/1689, art. 50.º, n.º 2, e art. 111.º, n.º 4: «sejam marcados num formato legível por máquina e detetáveis como tendo sido artificialmente gerados ou manipulados» (AIA-50-2, AIA-111-4) |
 | `CTX-AIA-RE-R03` | Informar e explicar às pessoas afectadas | Quando um sistema de IA de risco elevado do anexo III apoia decisões sobre pessoas singulares: as pessoas são informadas de que estão sujeitas à sua utilização; a aplicação regista, por decisão, o resultado do sistema e os principais elementos que o determinaram (OPS-011), de modo a poder dar à pessoa afectada explicações claras e pertinentes sobre o papel do sistema e os principais elementos da decisão. Quando a decisão é exclusivamente automatizada e há dados pessoais, aplica-se também CTX-RGPD-R05. | Reg. (UE) 2024/1689, art. 26.º, n.º 11, e art. 86.º, n.º 1: «explicações claras e pertinentes sobre o papel do sistema de IA no processo de tomada de decisão e sobre os principais elementos da decisão tomada» (AIA-26-11, AIA-86-1) |
+| `CTX-AIA-RE-R04` | Plano de acompanhamento pós-comercialização | Quando a organização é o prestador: plano de acompanhamento pós-comercialização por sistema, integrado na documentação técnica (anexo IV, ponto 9), que nomeia os sinais recolhidos em produção (OPS-011) e os fornecidos pelos responsáveis pela implantação, os critérios de desempenho contra os quais são analisados, a cadência e o responsável da análise, e os gatilhos para acção correctiva (rollback, reclassificação, revisão do threat model, notificação de incidente grave); a análise é activa e sistemática ao longo da vida útil e inclui, se for caso disso, a interacção com outros sistemas de IA. As métricas de desvio do modelo ficam pendentes da ronda AISVS/SAIF do AppSec Core. | Reg. (UE) 2024/1689, art. 72.º, n.os 1 a 3, e anexo IV, ponto 9: «O sistema de acompanhamento pós-comercialização deve basear-se num plano de acompanhamento pós-comercialização» (AIA-72-1, AIA-72-2, AIA-72-3, AIA-AnxIV-9) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -230,7 +232,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ARC-006` | Controlos técnicos de isolamento entre domínios sensíveis | ✔ | ✔ | ✔ | — |
 | `ARC-007` | Padrões de arquitectura reutilizáveis e aprovados | — | ✔ | ✔ | — |
 | `ARC-008` | Fluxos de dados entre zonas de confiança protegidos | ✔ | ✔ | ✔ | — |
-| `ARC-009` | Alterações significativas desencadeiam nova revisão | — | ✔ | ✔ | — |
+| `ARC-009` | Alterações significativas desencadeiam nova revisão | ▲ | ▲ | ▲ | CTX-AIA-RE-P11 |
 | `ARC-010` | Diagramas de arquitectura versionados e acessíveis | ✔ | ✔ | ✔ | — |
 | `ARC-011` | Segmentação lógica e física entre ambientes | — | — | ✔ | — |
 | `ARC-012` | Critérios formais de aprovação para aplicações de risco elevado | — | — | ✔ | — |
@@ -361,6 +363,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
 | `CTX-AIA-RE-R03` | Informar e explicar às pessoas afectadas | ▲ | ▲ | ▲ | — |
+| `CTX-AIA-RE-R04` | Plano de acompanhamento pós-comercialização | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — ART50 {#lista-art50}
 
@@ -651,14 +654,45 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `CTX-AIA-RE-R01` | Informar que se interage com IA | ▲ | ▲ | ▲ | — |
 | `CTX-AIA-RE-R02` | Marcação de conteúdo sintético | ▲ | ▲ | ▲ | — |
 
+## Mapa de evidência da documentação técnica {#mapa-evidencia}
+
+Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/aiact.yaml`.
+
+| Obrigação | Referência | Força | Como o Manual responde | Nota |
+|---|---|---|---|---|
+| AIA-11-1-a | Art. 11.º, n.º 1, primeiro parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | A redacção do documento é do prestador; o Manual fornece a evidência (ver o mapa de evidência da página «Requisitos aplicáveis»). |
+| AIA-11-1-b | Art. 11.º, n.º 1, segundo parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` | Os pontos do anexo IV sem artefacto ficam como lacuna declarada no mapa de evidência. |
+| AIA-AnxIV-1 | Anexo IV, ponto 1 | Apoia evidência | `ARC-001`; `ARC-010`; `ARC-014`; `DEP-011`; `DEP-012`; `DEP-013` | Lacuna declarada: finalidade prevista (al. a)), formas de colocação no mercado (al. d)), hardware fora da inferência própria (al. e)) e descrição da interface para o implantador (al. g)). Fora de âmbito: fotografias e marcações (al. f)). |
+| AIA-AnxIV-2-a | Anexo IV, ponto 2, alínea a | Apoia evidência | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` | A metodologia de treino fica fora de âmbito (governação de dados, art. 10.º). |
+| AIA-AnxIV-2-b | Anexo IV, ponto 2, alínea b | Apoia evidência | `ARC-004` | Lacuna declarada: lógica geral, algoritmos e o que o sistema optimiza. Os pressupostos sobre grupos de pessoas ficam fora de âmbito (enviesamento). |
+| AIA-AnxIV-2-c | Anexo IV, ponto 2, alínea c | Apoia evidência | `ARC-001`; `ARC-010`; `ARC-014` | Lacuna declarada: recursos computacionais de desenvolvimento, treino, teste e validação. |
+| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Fora de âmbito | — | Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental. |
+| AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Apoia evidência | `ARC-014`; `REQ-AGN-003` | Avaliação das medidas de supervisão apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08). |
+| AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Cobre | `ARC-009`; `DEP-013` | — |
+| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Apoia evidência | `TST-004`; `DPL-010`; `CIC-007` | Métricas de exactidão e solidez para sistemas não agênticos pendente da ronda AISVS/SAIF do AppSec Core; impactos discriminatórios fora de âmbito (enviesamento). |
+| AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Cobre | `REQ-001`; `THR-008`; `ARC-014` | — |
+| AIA-AnxIV-3 | Anexo IV, ponto 3 | Apoia evidência | `OPS-011`; `ARC-014`; `THR-008` | Lacuna declarada: capacidades e limitações de desempenho e especificações dos dados de entrada. A exactidão por grupos de pessoas fica fora de âmbito (enviesamento). |
+| AIA-AnxIV-4 | Anexo IV, ponto 4 | Lacuna | — | Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-AnxIV-5 | Anexo IV, ponto 5 | Fora de âmbito | — | Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead. |
+| AIA-AnxIV-6 | Anexo IV, ponto 6 | Cobre | `THR-006`; `ARC-010`; `CIC-005` | — |
+| AIA-AnxIV-7 | Anexo IV, ponto 7 | Fora de âmbito | — | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
+| AIA-AnxIV-8 | Anexo IV, ponto 8 | Fora de âmbito | — | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxIV-9 | Anexo IV, ponto 9 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` | — |
+| AIA-13-1 | Art. 13.º, n.º 1 | Apoia evidência | `ARC-014`; `OPS-011` | A interpretação do output é apoiada pela supervisão mínima do ARC-014 (piso CTX-AIA-RE-P08). |
+| AIA-13-2 | Art. 13.º, n.º 2 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3 | Art. 13.º, n.º 3 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` | A redacção das instruções é do prestador. Lacuna declarada: finalidade prevista e descrição da interface; os níveis de exactidão e solidez ficam pendentes da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Lacuna | — | Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3-e | Art. 13.º, n.º 3, alínea e) | Apoia evidência | `DEP-013` | — |
+| AIA-13-3-f | Art. 13.º, n.º 3, alínea f) | Apoia evidência | `OPS-011` | — |
+
 ## Obrigações do regime por força de cobertura {#forca}
 
 Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 34 |
-| Parcial | 52 |
-| Apoia evidência | 29 |
-| Lacuna | 22 |
-| Fora de âmbito | 108 |
+| Cobre | 41 |
+| Parcial | 33 |
+| Apoia evidência | 44 |
+| Lacuna | 11 |
+| Fora de âmbito | 116 |

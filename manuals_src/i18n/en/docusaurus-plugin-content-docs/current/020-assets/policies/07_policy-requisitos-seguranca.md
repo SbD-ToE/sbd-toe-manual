@@ -8,16 +8,16 @@ sidebar_position: 7
 translation:
   source_locale: pt
   source_path: 020-assets/policies/07_policy-requisitos-seguranca.md
-  source_sha256: 5a1f36ee640835ff764d5fb2c4b00e8cc0844d7bb3a79f5a43aadfe6401361f6
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 264c91aa2f496767907448ce52c0b06f1b76fddb22da0b3b9e85e3fcf33191ff
+  source_sha256: b371665d6512c151f72ffe640386bf5f982813429af39e3088f2768f1a06529f
+  source_commit: 32978973a6e4e01d6abcfe36fb0e33a8192cb20d
+  target_sha256: 51560c5ee9e1e93ab082723fb4e2b5fe043495a2480d2ae397ebb87ae9e0a489
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [alcada, cycle_iteration, gap_family, lifecycle_phase, mapping, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 7402313977f920ab2096c07c547d11d17b370dd3166547ecbb21842daf7e7631
-  translated_at: 2026-09-26T14:10:46Z
-  stamped_at: 2026-09-26T18:36:47Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [alcada, cycle_iteration, eu_startups, gap_family, lifecycle_phase, mapping, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: e4219dcb2318ea65d9efb4015721052fea5e12551c2287d96f1be46cc6cfa02d
+  translated_at: 2026-09-27T15:08:13Z
+  stamped_at: 2026-09-27T15:08:13Z
   reviewed_by: null
 ---
 
@@ -153,9 +153,9 @@ When a requirement mandatory for the level cannot be implemented, the process de
 
 | Policy requirement | L1 | L2 | L3 |
 |---|---|---|---|
-| Project catalogue created and versioned | Recommended | Mandatory | Mandatory |
-| `SEC-Lx-*` tags in the backlog | Recommended | Mandatory | Mandatory |
-| Validation criteria per requirement | Recommended | Mandatory | Mandatory |
+| Project catalogue created and versioned | Mandatory | Mandatory | Mandatory |
+| `SEC-Lx-*` tags in the backlog | Mandatory | Mandatory | Mandatory |
+| Validation criteria per requirement | Mandatory | Mandatory | Mandatory |
 | Automatic validation of tags in the pipeline | Not applicable | Recommended | Mandatory |
 | Independent review of the selection | Not applicable | Recommended | Mandatory |
 | Exportable traceability report | Optional | Recommended | Mandatory |

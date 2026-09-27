@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/04-arquitetura-segura/aplicacao-lifecycle.md
-  source_sha256: c3213c8e94382c853f45c3f0833608397023ee9fd4ac1ad30cd6c235871f22ef
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 65bd2ab7a554d0aad774f9019abd2bec3229d8fa5eac8676fb57a048d89bdb67
+  source_sha256: 1a6d28e22f64cd7590e275653a8ef9b24dc83ffa1a6b723599b7c6eaa987c8d0
+  source_commit: 777d9e091c59c017d479b1ec53ba153c809a6d1f
+  target_sha256: 175c256a1ec4424f09b77d0935600da14c272fd574f736838f038afd45f0cf67
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, layer, lifecycle_phase, llm, papel_suporte, plain_rag, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 75162a3183fc28d9e63e1cd304c05dc15abbcc8a7ef7d40154b281a5ca8323b7
-  translated_at: 2026-09-26T17:23:46Z
-  stamped_at: 2026-09-26T18:33:38Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, eu_startups, layer, lifecycle_phase, llm, papel_suporte, plain_rag, provenance, requirement_runtime, risk_level, segregacao_de_funcoes, slug_threat_modeling, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 4e96458f660141c992117bd78ffdbaef750f95288b541f90a8c024f31538ab28
+  translated_at: 2026-09-27T15:08:26Z
+  stamped_at: 2026-09-27T15:08:26Z
   reviewed_by: null
 ---
 
@@ -139,7 +139,7 @@ As **Software Architects**, I want to produce an architecture sheet with securit
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Optional | Simplified sheet and essential controls |
+| L1 | Yes | Simplified sheet: trust zones, justified external exposure, isolation of sensitive domains and controls at the boundaries |
 | L2 | Yes | Detailed sheet + minimum traceability |
 | L3 | Yes | Full sheet + independent review + reinforced evidence |
 
@@ -267,7 +267,7 @@ As **Software Architects + AppSec Engineer**, I want to review trust boundaries 
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Yes | Reduced scope (critical integrations) |
+| L1 | Yes | All trust boundaries identified, with explicit controls at each one; in-depth review focused on critical integrations |
 | L2 | Yes | Full scope |
 | L3 | Yes | Full scope + reinforced validations (according to risk) |
 
@@ -895,7 +895,7 @@ As **Software Architects** and **AppSec Engineer**, I want to apply architectura
 
 | Level | Application of Secure Architecture practices |
 |---|---|
-| L1 | Minimum principles; decisions (ADR) for high impact only; critical integrations; simplified gate where applicable; minimum triggers |
+| L1 | Trust zones, justified external exposure, isolation of sensitive domains and controls at the boundaries (simplified sheet); versioned diagrams; minimum principles; decisions (ADR) for high impact only; simplified gate where applicable; minimum triggers |
 | L2 | Full principles; detailed sheet; formal review; ADRs for significant decisions; formal exceptions; automatable validations where applicable; synchronisation with threat modelling |
 | L3 | Full coverage; segregation of duties; reinforced evidence; formal governance; rigorous gates; independent review where applicable; “living architecture” discipline |
 

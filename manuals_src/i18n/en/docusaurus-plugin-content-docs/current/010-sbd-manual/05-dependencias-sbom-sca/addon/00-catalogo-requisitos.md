@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
-  source_sha256: aaea605a614c279b611a3da81fa95b39cf42eac0c406e1dff594015f382e5154
-  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
-  target_sha256: 0b6adba8b0412f6822a74cfc048187deb350ffd3fbe5aa6e73ca37407c2074d3
+  source_sha256: 88f230ccf8f5e642879fe0f2103f925416318ab0c9d10e0e4f0f6f14d6b6d8b8
+  source_commit: a7cc396e338fab4654022c3d9077a3472e358da2
+  target_sha256: 1238462c75645b12e31e907c4a2b93892e0c11f3c98921859fe01e427e3cfcd3
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, mcp, plain_rag, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: e7ba97c1aa6ad5aceda3c6fc13a15a3a4be183c2b0fc6b9a8929cf71d8b88c14
-  translated_at: 2026-09-27T14:19:07Z
-  stamped_at: 2026-09-27T14:19:07Z
+  translated_at: 2026-09-27T15:08:30Z
+  stamped_at: 2026-09-27T15:08:30Z
   reviewed_by: null
 ---
 
@@ -63,7 +63,7 @@ Requirements that guarantee that all third-party dependencies are known, analyse
 | DEP-005 | Controlled registries and source repositories | - | ✔ | ✔ | List of permitted registries and repositories defined and enforced; downloads from unapproved sources blocked in the pipeline or by network policy; evidence of active enforcement. |
 | DEP-006 | Formal approval for the introduction of new dependencies | - | ✔ | ✔ | Documented approval process for new libraries with minimum criteria: maintenance activity, compatible licence, no active CVEs, verified popularity; approval record available per dependency. |
 | DEP-007 | Update policy with an SLA defined by severity | ✔ | ✔ | ✔ | Update SLA defined by CVE severity level (in line with Policy 19 §4.3: e.g. critical 30 / 7 / 3 days and high 90 / 30 / 15 days at L1 / L2 / L3; with an indication of active exploitation, the time limit is brought forward); evidence of compliance in the most recent cycles; exceptions formalised where applicable. |
-| DEP-008 | Automated updates with impact analysis | - | ✔ | ✔ | Update bot active (e.g. Dependabot, Renovate); PRs generated automatically with semver impact information, changelogs and tests; human intervention mandatory for breaking changes; PRs not merged automatically without review. |
+| DEP-008 | Automated updates with impact analysis | - | ✔ | ✔ | Update bot active (e.g. Dependabot, Renovate); PRs generated automatically with semver impact information, changelogs and tests; human intervention mandatory for breaking changes; automatic integration (*auto-merge*) allowed only for *patch* or security updates, with all mandatory gates green, a traceable record and declared in the update policy; *minor* and *major* updates require human review. |
 | DEP-009 | Detection of unintended or emergent dependencies | - | - | ✔ | Defined process to detect dependencies introduced via tooling, code generation, pipelines or runtime loading; inventory boundaries documented; deviations detected and handled. |
 | DEP-010 | SBOM → vulnerability → fix traceability | - | ✔ | ✔ | Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken (fix PR, version update or formalised exception with justification and review date); sources of vulnerability information defined (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals. |
 | DEP-011 | Inventory and provenance of AI/ML dependencies | - | ✔ | ✔ | Systems with AI/ML components have a dedicated inventory of AI dependencies: (1) base models with version, artefact hash and source (model registry, fine-tuning provenance); (2) training and fine-tuning datasets with version, source and curation process; (3) MCP servers and tools exposed to agents with identifier, version and scope (`AML.T0110` AI Agent Tool Poisoning); (4) embedded prompts relevant to behaviour (system prompts, RAG templates) with version and owner. The inventory is generated per build and integrated into the main SBOM (DEP-001); upstream incidents in models, datasets or MCP servers (LLM03-2025 Supply Chain, `AML.T0010` AI Supply Chain Compromise) trigger the same triage process as DEP-002/DEP-007. |
@@ -79,7 +79,7 @@ Requirements that guarantee that all third-party dependencies are known, analyse
 - **DEP-002**: The severity policy must be explicit about what blocks vs. what only alerts. For L1, the minimum acceptable is blocking at critical severity; for L2/L3, high severity or above.
 - **DEP-004**: This prohibition extends to Git submodules with third-party code, vendor directories without version control, and third-party binaries versioned directly.
 - **DEP-006**: The approval criteria must include verification of the project's last update, the number of active maintainers and presence in databases of supply chain incidents (e.g. OpenSSF Scorecard, Socket.dev).
-- **DEP-008**: Update automation must be configured with caution in high-risk environments: automatic updates of transitive dependencies or of critical security components must always require human review.
+- **DEP-008**: Update automation must be configured with caution in high-risk environments. Automatic integration is limited to *patch* or security updates that pass all mandatory gates, is recorded and is declared in the update policy (Policy 13); everything else, including *minor* and *major* updates, requires human review.
 ### Detailed note — DEP-011 {#dep-011}
 
 AI/ML dependencies are not limited to packages via a package manager — they include **opaque artefacts** with a distinct attack surface. Three regimes of model consumption are distinguished, with different risk implications in the chain:

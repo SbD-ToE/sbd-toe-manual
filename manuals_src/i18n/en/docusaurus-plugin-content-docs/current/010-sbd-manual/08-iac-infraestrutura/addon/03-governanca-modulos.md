@@ -8,16 +8,16 @@ tags: [governação, módulos, iac, reutilização, segurança, supply-chain, ra
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/03-governanca-modulos.md
-  source_sha256: 0d9bed6efd9f3534b9f6a74ee82cb7a6ce004bcb338a7ee1342b7f7287545cf1
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 8293c5779a80592befb92c547382eae18829988f0c4fe4c80027dd7e2a3555f3
+  source_sha256: 77430f70e86e30c88de5b90370761183989e268340ee31bfddce098128ad4b89
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: e6c1112b4790ff8b5a6ca64efaefaf610ac0bbab8bbecca567223abb51098982
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, papel_suporte, provenance, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 96f2bac96bf978a0e5c844c3e4aba3a03d6b73d19a0dc2f974f00c3a9890c527
-  translated_at: 2026-09-26T17:23:47Z
-  stamped_at: 2026-09-26T18:34:33Z
+  translated_at: 2026-09-27T15:08:31Z
+  stamped_at: 2026-09-27T15:08:31Z
   reviewed_by: null
 ---
 
@@ -178,7 +178,7 @@ ALLOW_MODULE_SOURCES = [
 | --------------------- | ----------- | ----------- | ------------------------------ |
 | Source allowlist   | Recommended | Mandatory | Mandatory                    |
 | Version pinning     | Mandatory | Mandatory | Mandatory                    |
-| Automated validation  | Recommended | Mandatory | Mandatory                    |
+| Automated validation  | Mandatory | Mandatory | Mandatory                    |
 | Formal approval      | Recommended | Mandatory | Mandatory (reinforced)        |
 | Inventory/SBOM       | Recommended | Mandatory | Mandatory                    |
 | Periodic revalidation | Recommended | Mandatory | Mandatory + higher frequency |

@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md
-  source_sha256: eb8cb2b18a4ad52b94399a329ef61446b7ece470acd81ab89849ce295e6702eb
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 67a90f295c428052adb714f275673d192ec7fe29380204096a094e51cc16d367
+  source_sha256: b1051b75705bcd8b99b1a3ba514d6eea9ca35637b7642268cff99ab4e53bf5e7
+  source_commit: a516e3d115d1fa2cd512e36541105c7a3b83afb2
+  target_sha256: e04b94fe5b90477127e01277eb623257de563736c812aec1f8c65b3af1360cc2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 96ccc90382d8ea1505027b5e23de3f10c3833065fdf3702a08846e3637b0a810
-  translated_at: 2026-09-27T07:53:58Z
-  stamped_at: 2026-09-27T07:53:58Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, eu_startups, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: b6d3ed1cc1f06e90f86d867bd8af73244af390928f29d67318e1f3603503f9cb
+  translated_at: 2026-09-27T15:08:18Z
+  stamped_at: 2026-09-27T15:08:18Z
   reviewed_by: null
 ---
 
@@ -81,7 +81,7 @@ As **HR / People Operations**, I want **to ensure mandatory onboarding training 
 **Proportionality.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Mandatory | Mandatory + practical assessment |
+| Mandatory (basic content) | Mandatory | Mandatory + practical assessment |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -320,7 +320,7 @@ As a **Developer / Security Champion**, I want **to lead threat modelling sessio
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional / ad hoc | Recommended per epic | Mandatory before design is finalised |
+| Optional / ad hoc | Mandatory for significant architectural changes (peer-led recommended per epic) | Mandatory before design is finalised |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -368,7 +368,7 @@ As **Executive Management / GRC**, I want **to run incident simulations (war roo
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended annually | Half-yearly (minimum) | Half-yearly (minimum) + rotating by threat |
+| Annual (minimum) | Half-yearly (minimum) | Half-yearly (minimum) + rotating by threat |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -415,7 +415,7 @@ As an **AppSec Engineer / GRC**, I want **to maintain and update training tracks
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Occasional | Annual | Annual + continuous on trigger |
+| Occasional | Annual + per trigger | Annual + continuous on trigger |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -613,7 +613,7 @@ As **GRC / Executive Management**, I want **to ensure that suppliers and third p
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Mandatory | Mandatory + annual |
+| Mandatory (minimum track) | Mandatory | Mandatory + annual |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -726,7 +726,7 @@ As an **AppSec Engineer / HR**, I want **to define and execute a remediation pat
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Informal retraining + new attempt | Documented remediation plan + access block | Formal plan + attempt limit + escalation to AppSec and audit |
+| Defined remediation (retraining + new attempt) + technical access blocked until approval | Documented remediation plan + access block | Formal plan + attempt limit + escalation to AppSec and audit |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -936,19 +936,19 @@ As a **DevOps / AppSec Engineer**, I want **to provision and operate an isolated
 
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
-| Secure onboarding | Basic | Mandatory | Mandatory + practical assessment |
+| Secure onboarding | Mandatory (basic content) | Mandatory | Mandatory + practical assessment |
 | Continuous training | Annual | Half-yearly | Quarterly |
 | Champions | Optional | Recommended | Mandatory |
 | Practical exercises | Optional | Recommended | Mandatory |
 | Effectiveness metrics | Basic | Annual | Quarterly with targets |
 | **Code Clinics** | **Occasional** | **Recurring (fortnightly)** | **Recurring + rotating (weekly)** |
-| **Threat Modelling** | **Optional** | **Recommended per epic** | **Mandatory before design** |
-| **Incident simulations** | **Recommended annually** | **Half-yearly (minimum)** | **Half-yearly (minimum) + rotating** |
-| **Track maintenance** | **Occasional** | **Annual** | **Annual + continuous on trigger** |
+| **Threat Modelling** | **Optional** | **Mandatory for architectural changes (peer-led recommended per epic)** | **Mandatory before design** |
+| **Incident simulations** | **Annual (minimum)** | **Half-yearly (minimum)** | **Half-yearly (minimum) + rotating** |
+| **Track maintenance** | **Occasional** | **Annual + per trigger** | **Annual + continuous on trigger** |
 | **Tracks proportional to risk** | **Basic track** | **Intermediate track + labs** | **Advanced track + simulations + audit** |
 | **Onboarding validation (checklist)** | **Basic** | **Structured (role + risk)** | **Structured + periodic audit** |
 | **Knowledge validation (quizzes)** | **One-off** | **Periodic (annual)** | **Periodic + adaptive** |
-| **Third-party training** | **Recommended** | **Mandatory** | **Mandatory + annual** |
+| **Third-party training** | **Mandatory (minimum track)** | **Mandatory** | **Mandatory + annual** |
 
 ---
 

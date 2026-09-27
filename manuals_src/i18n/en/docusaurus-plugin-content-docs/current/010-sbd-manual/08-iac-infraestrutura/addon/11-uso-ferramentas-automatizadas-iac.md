@@ -6,16 +6,16 @@ tags: [tipo:addon, iac, automacao, assistencia, validacao, evidencias, supply-ch
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/08-iac-infraestrutura/addon/11-uso-ferramentas-automatizadas-iac.md
-  source_sha256: e8be8f104a89a252ea0376ae926e1641c62cc3dc8b6bb0aa24747ce7d60aa4b0
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 10d81e2bd91b687f9b5cc5cf53c99bd58480343069c72cec8cf636c9c574de31
+  source_sha256: a57bee54e292712744d7c889309df89b928bc5926184a95448f5bf3c1b317ee5
+  source_commit: 8c37aface9444e69cebb46642452fce7912a8fce
+  target_sha256: a54a02e42bda2fedad3b3a07fe11bd5710c98fd43b407549a8dd9cdd80f572f1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, risk_level, traceability, validation_evaluation]
   glossary_sha256: 1beb8e92eccab3f807589439992a37a2a36a1bd2b707fd4f3e568694d990f56b
-  translated_at: 2026-09-26T09:25:39Z
-  stamped_at: 2026-09-26T18:34:39Z
+  translated_at: 2026-09-27T15:08:31Z
+  stamped_at: 2026-09-27T15:08:31Z
   reviewed_by: null
 ---
 
@@ -117,7 +117,7 @@ must be treated as a **security dependency**:
 
 | Dimension | L1 | L2 | L3 |
 |---|---|---|---|
-| Use of automation/assistance | Permitted with review | Permitted with blocking gates | Permitted with gates + reinforced SoD |
+| Use of automation/assistance | Permitted with review + blocking validations in the pipeline | Permitted with blocking gates | Permitted with gates + reinforced SoD |
 | Semantic validation of the `plan` | Recommended | Mandatory | Mandatory (reinforced) |
 | Approval before `apply` | Simple | 2nd reviewer | Dual approval + change window |
 | Evidence and retention | Basic | Mandatory | Mandatory + reinforced retention |

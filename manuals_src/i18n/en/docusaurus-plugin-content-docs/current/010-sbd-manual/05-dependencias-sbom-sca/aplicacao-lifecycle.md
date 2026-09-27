@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md
-  source_sha256: 7224adc952f68a33351be28821909b7f69cafc91ba7f214cbacbe18e9f158f65
-  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
-  target_sha256: ab42b4751408ea74eab1c2deab8a46f684c1a6835262c7ead0c94774636117b4
+  source_sha256: 838568365bfc022d8c9a988d97bbb4fc8db080406552ce25cf0f9da9054080a7
+  source_commit: 810e8083697d2705d15e9913f01ca8634db01cd4
+  target_sha256: 306b6b8183cbe91931180b896b6e4b27ec96128f6092e9d21d991ed5ceed2e63
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, chapter_role, como_fazer, cra_pde, cycle_iteration, eu_startups, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 89835127121febfa7f22d2e5d73221c4e6b128713d2606b31a491997dc8d0822
-  translated_at: 2026-09-27T13:30:07Z
-  stamped_at: 2026-09-27T13:30:07Z
+  translated_at: 2026-09-27T15:09:24Z
+  stamped_at: 2026-09-27T15:09:24Z
   reviewed_by: null
 ---
 
@@ -226,7 +226,7 @@ As an **AppSec Engineer**, I want to **formalise CVE exceptions**, so that **gov
 **Proportionality by risk.**
 | Level | Mandatory? | Adjustments |
 |---|---|---|
-| L1 | Optional | Simple justification |
+| L1 | Yes | Formal record with justification, compensating control, approver and deadline |
 | L2 | Yes | Revalidation at expiry (TTL of Policy 05 §7: 60 days Low/Medium, 30 days High) |
 | L3 | Yes | Executive validation + risk metrics
 
@@ -403,8 +403,8 @@ As **DevOps/Developer**, I want **update bots with impact assessment**, so that 
 | Level | Policy |
 |---|---|
 | L1 | Optional bots; *auto‑PR* for *patch/minor* |
-| L2 | Mandatory bots; *auto‑merge* for *patch* with green CI |
-| L3 | Mandatory bots; *impact analysis* + *canary*; *auto‑merge* only for *patch*; *minor/major* requires human approval and staged promotion |
+| L2 | Mandatory bots; *auto‑merge* only for *patch* or security updates, with all mandatory *gates* green, a traceable record and declared in the policy; *minor/major* requires human review |
+| L3 | Mandatory bots; *impact analysis* + *canary*; no *auto‑merge*: *patch* and security updates with human review (expedited for CVEs, Policy 13 §4.1); *minor/major* requires human approval and staged promotion |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
@@ -782,7 +782,7 @@ As a **Developer/Lead**, I want to **pin all dependencies to exact versions and 
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| *Lockfile* present; *pinning* recommended | Mandatory *lockfile* + hash verification | *Lockfile* + hash + verified provenance (*attestation*) and blocking *gate* |
+| *Lockfile* mandatory, no `latest`/`*`/unbounded ranges, + hash verification | Mandatory *lockfile* + hash verification | *Lockfile* + hash + verified provenance (*attestation*) and blocking *gate* |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -898,15 +898,15 @@ One of the fundamental aspects in **Ch. 12 - Monitoring and Operations.** is pre
 |---------|----|----|----|
 | SBOM | Basic per build | Complete per release | Signed + integrity + provenance |
 | Runtime inventory | Recommended | Mandatory | Continuous + *drift* detection |
-| SCA | Warning | Block High/Critical | Block Medium+ + active CVE feed |
-| Alerts for deployed CVEs | Manual / ad hoc | Automatic per environment | Automatic + correlation and escalation |
-| Version pinning | Recommended | Mandatory | Mandatory + provenance validation |
-| Exceptions / VEX | Simple | Formal + periodic review | Formal + automatic revalidation |
+| SCA | Block High/Critical | Block High/Critical | Block Medium+ + active CVE feed |
+| Alerts for deployed CVEs | Manual, with triage within the SLA by severity | Automatic per environment | Automatic + correlation and escalation |
+| Version pinning | Mandatory (*lockfile* + hash) | Mandatory | Mandatory + provenance validation |
+| Exceptions / VEX | Formal (justification, compensating control, approver and deadline) | Formal + periodic review | Formal + automatic revalidation |
 | Internal repository | Recommended | Mandatory | Mandatory + signature and *provenance attestation* |
 | Copied libraries | Prohibited (policy) | Periodic audit | CI/CD enforcement + blocking |
 | Audit of copied libs | Documented policy; monthly | Automatic scanner; fortnightly | Automatic scanner; weekly + CI/CD blocking |
 | Licence validation | Manual, ad hoc | Automatic with alert | Automatic with blocking (except formal exceptions) |
-| Bots / patching automation | Optional | Active + *auto-merge patch* | Active + *impact analysis*, *canary* and rollback |
+| Bots / patching automation | Optional | Active + *auto-merge* only for *patch*/security with green *gates*, a traceable record and declared in the policy; *minor/major* with human review | Active + *impact analysis*, *canary* and rollback |
 | Integration with Ch. 12 | Optional | Basic SIEM alerts | Full: SOAR, MTTR/MTTA metrics and escalation |
 
 ---

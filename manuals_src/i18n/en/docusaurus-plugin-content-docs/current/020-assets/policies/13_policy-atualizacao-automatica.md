@@ -8,15 +8,16 @@ sidebar_position: 13
 translation:
   source_locale: pt
   source_path: 020-assets/policies/13_policy-atualizacao-automatica.md
-  source_sha256: 8d7cab5f4ef127db452cbf0648562f6b3f2206957490d9b384359d8b25cbba4b
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: dd697639639d42443eee299b7687903932eefd904087cd189da5f3c16d8fc161
+  source_sha256: 9be0861040b5d9e27937440e717fbaab32316e4fee7f68b5c99d99d20795c894
+  source_commit: 32978973a6e4e01d6abcfe36fb0e33a8192cb20d
+  target_sha256: 6f084e2ea966ef377e6524ebbd521babebb3c7563837480cd5df380108134212
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [framework_source_corpus, mirror_osf, practitioner_manual, requirement_runtime, sbdtoe_sbd]
-  glossary_sha256: 05793a370ed1fb201060fb6b2cf031539a610595620b79431a30c5c282aa2aa9
-  translated_at: 2026-09-26T14:10:50Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [framework_source_corpus, mirror_osf, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd]
+  glossary_sha256: d28cee49fed70ce111a4e88cb69e29b3a9dc847756e51a3c97cc20e5e2e9e1a9
+  translated_at: 2026-09-27T15:08:13Z
+  stamped_at: 2026-09-27T15:08:13Z
   reviewed_by: null
 ---
 
@@ -31,7 +32,7 @@ Outdated dependencies accumulate vulnerabilities and drift from the approved sec
 The objective of this policy is to ensure that:
 
 - Update bots are active and configured in all L2/L3 repositories
-- The auto-merge criterion is restricted to updates with verified zero or minimal impact
+- The auto-merge criterion is restricted to *patch* or security updates, with all mandatory gates green and a traceable record
 - Updates with breaking change potential require human review and approval
 - The cadence and grouping of PRs are configured to minimise operational noise
 
@@ -43,7 +44,7 @@ The objective of this policy is to ensure that:
 |---|---|
 | L1 | Recommended; minimal configuration without auto-merge |
 | L2 | Mandatory; active bot with conditional auto-merge |
-| L3 | Mandatory; active bot with restricted auto-merge and human handoff for any update with an impact |
+| L3 | Mandatory; active bot without auto-merge and human handoff for all updates (expedited review for *security patches*) |
 
 ---
 
@@ -61,28 +62,28 @@ The organisation accepts the following tools for dependency update automation:
 
 ## 4. Auto-merge criteria {#4-critérios-de-auto-merge}
 
-Automatic auto-merge of update PRs is only permitted when **all** of the following criteria are met:
+Automatic auto-merge of update PRs is only permitted at the levels and for the update types declared in section 4.1, when **all** of the following criteria are met and each automatic merge is recorded traceably (PR, previous and new version, gate results):
 
 | Criterion | Requirement |
 |---|---|
-| Type of update | Patch or minor with no declared breaking change |
+| Type of update | Patch or security update (CVE fix), with no declared breaking change; minor and major always require human review |
 | Impact analysis | The bot confirms: no change to the public API, no semver major, no breaking change flags in the release notes |
-| CI pipeline | All jobs pass (tests, SAST, SCA, linters) |
+| CI pipeline | All mandatory jobs and gates pass (tests, SAST, SCA, linters) |
 | Security gates | No new CVE introduced by the update |
 | Licence | Licence of the new version identical or equivalent to the previous one; no new licence added that is not on the whitelist |
 
 :::warning
-Auto-merge at L3 is restricted to patch updates. Minor updates at L3 require human review, even if CI passes.
+Minor and major updates always require human review, at any level, even if CI passes. At L3 there is no auto-merge: patches and *security patches* follow human review (expedited in the case of a CVE), as per section 4.1.
 :::
 
 ### 4.1 Proportionality of auto-merge {#41-proporcionalidade-do-auto-merge}
 
 | Type of update | L1 | L2 | L3 |
 |---|---|---|---|
-| Patch (e.g. 1.2.3 → 1.2.4) | Auto-merge if CI is green | Auto-merge if CI is green + gates OK | Requires human review |
+| Patch (e.g. 1.2.3 → 1.2.4) | Requires review (no auto-merge at L1, see §2) | Auto-merge if CI is green + gates OK | Requires human review |
 | Minor without breaking (e.g. 1.2.x → 1.3.0) | Requires review | Requires review | Requires review + AppSec approval |
 | Major (e.g. 1.x → 2.0.0) | Requires review + tests | Requires review + AppSec + tests | Requires review + AppSec + architect |
-| Security patch (CVE fix) | Auto-merge if CI is green | Priority auto-merge if CI is green | Expedited review: deadline ≤ 24h |
+| Security patch (CVE fix) | Requires review (no auto-merge at L1, see §2) | Priority auto-merge if CI is green + gates OK | Expedited review: deadline ≤ 24h |
 
 ---
 

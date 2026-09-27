@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
-  source_sha256: 6f3c3f7dff86f3e15c5ff419ca48cb6755a03eaab3b786724e8a9450f9b66821
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 334df86dff4b6eded85915f727bad72e122766a1ec2bf82a89b7741709f467f1
+  source_sha256: a700cb969f0276173ea35e8f6d8ae58dd99dd53e30ee8a274ca44acef1660527
+  source_commit: 5e4b3eab6144ef4347232513856d6d9cb86a487c
+  target_sha256: 604643eff7eb18909239ded16c0b55c236d7358ef72d5a42047937dea9223253
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 410e2f7f722940e5914aa42cf99df37d8ecb03914d9a4e9362e539d5458c0ac1
-  translated_at: 2026-09-27T07:30:03Z
-  stamped_at: 2026-09-27T07:30:03Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, eu_startups, lifecycle_phase, papel_suporte, practitioner_manual, provenance, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 9e6c5264e0dcf80bffbf109b706282f8a82f7579508ae44459a982778bc99a09
+  translated_at: 2026-09-27T15:08:15Z
+  stamped_at: 2026-09-27T15:08:15Z
   reviewed_by: null
 ---
 
@@ -88,7 +88,7 @@ As a **DevOps/SRE**, I want **to *deploy* only signed and versioned artefacts**,
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Mandatory | Mandatory + automatic rejection |
+| Mandatory (verified signature or *hash*) + automatic rejection | Mandatory + automatic rejection | Mandatory + automatic rejection |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -141,7 +141,7 @@ As a **QA** role, I want **to validate *releases* in *staging* with a segregated
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Optional | Recommended | Mandatory |
+| Optional | Mandatory | Mandatory |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -178,7 +178,7 @@ As an **AppSec Engineer**, I want **to define automatic *gates* and *thresholds*
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Warning | Blocking on High/Critical | Blocking on Medium+ |
+| Block on Critical | Blocking on High/Critical | Blocking on Medium+ |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -215,7 +215,7 @@ As a **DevOps/SRE**, I want **to have fast and periodically tested *rollback***,
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Manual | Automated | Automated + periodically tested |
+| Documented manual + tested annually | Automated + tested quarterly | Automated + tested quarterly |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -252,7 +252,7 @@ As a **Product Owner**, I want **to ensure traceability across *commit* → buil
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic | Complete | Complete + continuous audit |
+| Complete (who approved, artefact + *commit* SHA, when, environment, *gates*) | Complete | Complete + continuous audit |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -385,7 +385,7 @@ As **DevOps/AppSec**, I want **to ensure that secrets are never embedded in *dep
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended | Mandatory | Mandatory + automatic rotation |
+| Mandatory (blocking *secret scanning*, no embedded secrets; OIDC recommended) | Mandatory | Mandatory + automatic rotation |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -524,7 +524,7 @@ As **AppSec/QA**, I want **to run technical validations (SAST, DAST, SBOM, *find
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| SAST + warning | SAST + DAST + blocking on High/Critical | SAST + DAST + blocking on Medium+ |
+| SAST + block on Critical | SAST + DAST + blocking on High/Critical | SAST + DAST + blocking on Medium+ |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -570,7 +570,7 @@ As a **DevOps/SRE**, I want **to document and test *rollback* for each type of c
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Documented manual | Automated (binary + config) | Automated for all types + tested |
+| Documented manual + tested annually | Automated (binary + config) + tested quarterly | Automated for all types + tested quarterly |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -708,7 +708,7 @@ As **DevOps / SRE**, I want **to separate the automatic execution of irreversibl
 **Artefacts & evidence.** Authorisation record, execution logs, identity of the decision-maker.
 
 **Proportionality.**  
-L1: simple record  
+L1: explicit recorded human authorisation  
 L2: formal authorisation  
 L3: dual approval
 
@@ -736,7 +736,7 @@ As **GRC/AppSec**, I want **to treat operational evidence as an auditable artefa
 **Artefacts & evidence.** Immutable logs, defined retention, audit trails.
 
 **Proportionality.**  
-L1: short retention  
+L1: minimum retention defined in policy  
 L2: defined retention  
 L3: retention + periodic review
 
@@ -850,7 +850,7 @@ As a **DevOps/SRE**, I want **each application to use its own *deployment* crede
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Minimum scope documented; no sharing between apps | OIDC/*workload identity* (ephemeral tokens); isolation per app | OIDC mandatory + periodic audit of scope and usage logs |
+| Minimum scope and duration documented; no sharing between apps; usage logs available | OIDC/*workload identity* (ephemeral tokens); isolation per app | OIDC mandatory + periodic audit of scope and usage logs |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -913,18 +913,18 @@ Proportionality makes it possible to adapt rigour without compromising security:
 
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
-| Deployment of signed artefacts | Recommended | Mandatory | Mandatory + automatic rejection |
-| Validation in *staging* | Optional | Recommended | Mandatory |
-| Approval *gates* | Warning | Blocking on High/Critical | Blocking on Medium+ |
-| *Rollback* | Manual | Automated | Automated + tested |
-| Traceability | Basic | Complete | Complete + audit |
+| Deployment of signed artefacts | Mandatory + automatic rejection | Mandatory + automatic rejection | Mandatory + automatic rejection |
+| Validation in *staging* | Optional | Mandatory | Mandatory |
+| Approval *gates* | Block on Critical | Blocking on High/Critical | Blocking on Medium+ |
+| *Rollback* | Manual + tested annually | Automated + tested quarterly | Automated + tested quarterly |
+| Traceability | Complete | Complete | Complete + audit |
 | Monitoring | Basic | Critical | Complete + automatic response |
 | Feature flags and toggles | Optional | Recommended | Mandatory |
-| Secrets management (OIDC/Workload Identity) | Recommended | Mandatory | Mandatory + automatic rotation |
+| Secrets management (OIDC/Workload Identity) | Mandatory (no embedded secrets; OIDC recommended) | Mandatory | Mandatory + automatic rotation |
 | Semantic versioning and changelog | Basic | Complete + security | Complete + security + compatibility |
 | Progressive deployment (Canary/Blue-Green) | Recommended (manual) | Automated with metrics | Automated + threshold-triggered rollback |
-| Pre-deployment technical validations | SAST + Warning | SAST + DAST + blocking on High/Critical | SAST + DAST + blocking on Medium+ |
-| Rollback by type (binary, config, DB, infra) | Documented manual | Automated (binary + config) | Automated for all types + tested |
+| Pre-deployment technical validations | SAST + block on Critical | SAST + DAST + blocking on High/Critical | SAST + DAST + blocking on Medium+ |
+| Rollback by type (binary, config, DB, infra) | Documented manual + tested annually | Automated (binary + config) + tested quarterly | Automated for all types + tested quarterly |
 
 ---
 

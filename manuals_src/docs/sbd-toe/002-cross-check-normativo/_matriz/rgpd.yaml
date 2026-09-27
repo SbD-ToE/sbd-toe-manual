@@ -53,11 +53,11 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
@@ -77,17 +77,17 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 5.º, n.º 1, alínea c)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada; campos sem finalidade são removidos do fluxo de recolha
-      en: Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow
+      pt: Cada campo de dados pessoais recolhido está associado a uma finalidade registada
+      en: Each personal-data field collected is associated with a recorded purpose
   - tipo: requisito
     alvo: PRI-005
     niveis: [L2, L3]
@@ -131,9 +131,7 @@ itens:
     citacao:
       pt: Redacção / pseudonimização antes do envio
       en: Redaction / pseudonymisation before sending
-  falta:
-    pt: Minimização prescrita em L2/L3 (PRI-001) e, em todos os níveis, só nos logs (Política 29 §5, ENC-005); os requisitos PRI-* só se aplicam a L2/L3, mas uma aplicação interna com dados pessoais e impacto baixo soma E1+D2+I1 = 4 → L1, e fica sem requisito de privacidade (o RGPD aplica-se independentemente do nível). Telemetria e esquemas de dados fora de logs/prompts sem regra em L1.
-    en: Minimisation prescribed at L2/L3 (PRI-001) and, at all levels, only in logs (Policy 29 §5, ENC-005); the PRI-* requirements apply only to L2/L3, but an internal application with personal data and low impact scores E1+D2+I1 = 4 → L1, and is left without any privacy requirement (the GDPR applies regardless of the level). Telemetry and data schemas outside logs/prompts have no rule at L1.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -145,16 +143,22 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 5.º, n.º 1, alínea d)
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: Nenhum requisito sobre exatidão/atualização dos dados pessoais nem capacidade técnica de retificação (PRI-003 só prevê apagar e exportar).
-    en: No requirement on the accuracy/updating of personal data nor on a technical rectification capability (PRI-003 only provides for erasure and export).
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: rectificar e completar
+      en: rectify and complete them
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: [EXT-RGPD-OBL-5]
   nota: null
@@ -162,17 +166,33 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 5.º, n.º 1, alínea e)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Conjuntos de dados pessoais têm prazo de retenção definido; o apagamento no fim do prazo é executado e verificável
-      en: Personal-data sets have a defined retention period; deletion at the end of the period is carried out and verifiable
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: chega às réplicas, caches e sistemas a jusante
+      en: reaches replicas, caches and downstream systems
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: A anonimização irreversível é alternativa aceite ao apagamento
+      en: Irreversible anonymisation is an accepted alternative to deletion
   - tipo: politica
     rotulo:
       pt: Política 29 §7
@@ -200,9 +220,7 @@ itens:
     citacao:
       pt: sempre com o limite do RGPD quando há dados pessoais
       en: always within the GDPR limit where personal data are involved
-  falta:
-    pt: Prazo máximo e apagamento verificável só em L2/L3 (PRI-002); os requisitos PRI-* só se aplicam a L2/L3, mas uma aplicação interna com dados pessoais e impacto baixo soma E1+D2+I1 = 4 → L1, e fica sem requisito de privacidade (o RGPD aplica-se independentemente do nível). Não se estende explicitamente a backups, réplicas e sistemas a jusante, nem prevê anonimização como alternativa ao apagamento.
-    en: Maximum period and verifiable erasure only at L2/L3 (PRI-002); the PRI-* requirements apply only to L2/L3, but an internal application with personal data and low impact scores E1+D2+I1 = 4 → L1, and is left without any privacy requirement (the GDPR applies regardless of the level). It does not explicitly extend to backups, replicas and downstream systems, nor does it provide for anonymisation as an alternative to erasure.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -368,8 +386,8 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -384,12 +402,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 7.º, n.º 1
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: Não há requisito de registo auditável de consentimentos (quem, quando, para quê, versão do texto). A única menção — «Implementar registo de consentimento com data, IP e finalidade» — está no exemplo LINDDUN do cap. 03, com identificadores declarados ilustrativos.
-    en: There is no requirement for an auditable record of consents (who, when, for what, version of the text). The only mention — “Implement a consent record with date, IP and purpose” — is in the Ch. 03 LINDDUN example, with identifiers declared illustrative.
+  resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: cada consentimento fica registado de forma auditável
+      en: each consent is recorded in an auditable way
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -418,12 +442,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 7.º, n.º 3
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
-  resposta: []
-  falta:
-    pt: Nenhum requisito de mecanismo de retirada do consentimento tão fácil como a sua prestação, nem de propagação da retirada aos tratamentos dependentes.
-    en: No requirement for a mechanism to withdraw consent as easily as giving it, nor for propagation of the withdrawal to dependent processing.
+  resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -452,9 +482,13 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 8.º, n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
   resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R03
   - tipo: politica
     rotulo:
       pt: Política 18 §10.8
@@ -464,9 +498,7 @@ itens:
     citacao:
       pt: ou dados de crianças (art. 8.º), que exigem condições reforçadas
       en: or children's data (Art. 8), which require reinforced conditions
-  falta:
-    pt: Sem requisito de verificação de idade/consentimento parental; a Política 18 §10.8 apenas assinala, como anti-padrão na fatia de IA, que dados de crianças exigem condições reforçadas.
-    en: No requirement for age verification/parental consent; Policy 18 §10.8 only notes, as an anti-pattern in the AI slice, that children's data require reinforced conditions.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -595,12 +627,22 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
   - tipo: politica
     rotulo:
       pt: Política 18 §10.7
@@ -620,8 +662,8 @@ itens:
       pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
       en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
   falta:
-    pt: Existe capacidade técnica de apagar/exportar (L2/L3) e, na fatia de IA, procedimento de direitos obrigatório em L2/L3; faltam canal de pedidos, retificação, limitação, oposição e portabilidade estruturada, e L1.
-    en: There is a technical capability to erase/export (L2/L3) and, in the AI slice, a rights procedure mandatory at L2/L3; a request channel, rectification, restriction, objection and structured portability are missing, as is L1.
+    pt: A parte técnica do exercício dos direitos está prescrita (PRI-003, PRI-006; limitação em CTX-RGPD-R01). O canal de pedidos e a resposta formal ao titular são matéria jurídica, a declarar fora de âmbito.
+    en: The technical part of exercising the rights is prescribed (PRI-003, PRI-006; restriction in CTX-RGPD-R01). The request channel and the formal reply to the data subject are legal matters, to be declared out of scope.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -686,7 +728,7 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 12.º, n.º 6
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
@@ -697,9 +739,15 @@ itens:
     citacao:
       pt: Alterações de credenciais ou dados sensíveis exigem confirmação da identidade activa
       en: Changes to credentials or sensitive data require confirmation of the active identity
-  falta:
-    pt: A reautenticação cobre pedidos feitos dentro do canal autenticado; não há procedimento de verificação de identidade para pedidos de titulares fora desse canal (risco de divulgação a impostor).
-    en: Re-authentication covers requests made within the authenticated channel; there is no identity verification procedure for data subject requests outside that channel (risk of disclosure to an impostor).
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: Um pedido recebido fora do canal autenticado só é executado depois de verificada a identidade de quem pede
+      en: A request received outside the authenticated channel is carried out only after the requester's identity has been verified
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -818,23 +866,23 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
   - tipo: requisito
     alvo: PRI-004
     niveis: [L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta:
-    pt: Exportação dos dados do titular (L2/L3) e inventário de finalidades existem; não se exige que a resposta inclua finalidades, destinatários, prazo, origem e lógica de decisões automatizadas, nem existe mapa de destinatários.
-    en: Export of the data subject's data (L2/L3) and a purposes inventory exist; the response is not required to include purposes, recipients, period, source and logic of automated decisions, nor is there a recipients map.
+    pt: A cópia dos dados e o inventário de finalidades e destinatários estão prescritos (PRI-003, PRI-004). O conteúdo informativo da resposta (finalidades, destinatários, prazo, origem, direitos) é matéria da resposta formal, a declarar fora de âmbito.
+    en: The copy of the data and the inventory of purposes and recipients are prescribed (PRI-003, PRI-004). The informational content of the reply (purposes, recipients, period, source, rights) belongs to the formal reply, to be declared out of scope.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -863,24 +911,22 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 15.º, n.º 3
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
-  falta:
-    pt: O mecanismo de exportação não fixa formato eletrónico de uso corrente nem salvaguarda de direitos de terceiros (n.º 4); os requisitos PRI-* só se aplicam a L2/L3, mas uma aplicação interna com dados pessoais e impacto baixo soma E1+D2+I1 = 4 → L1, e fica sem requisito de privacidade (o RGPD aplica-se independentemente do nível).
-    en: The export mechanism does not fix a commonly used electronic format nor a safeguard for the rights of third parties (paragraph 4); the PRI-* requirements apply only to L2/L3, but an internal application with personal data and low impact scores E1+D2+I1 = 4 → L1, and is left without any privacy requirement (the GDPR applies regardless of the level).
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -888,9 +934,25 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 16.º
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: rectificar e completar
+      en: rectify and complete them
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: As rectificações e os apagamentos propagam-se aos destinatários conhecidos
+      en: Rectifications and deletions propagate to the known recipients
   - tipo: politica
     rotulo:
       pt: Política 18 §10.6
@@ -900,9 +962,7 @@ itens:
     citacao:
       pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
       en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
-  falta:
-    pt: Sem capacidade técnica de retificação/complemento prescrita; a Política 18 §10.6 só enuncia o direito (art. 16.º) na fatia de agentes de IA.
-    en: No technical rectification/completion capability prescribed; Policy 18 §10.6 only states the right (Article 16) in the AI agents slice.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -914,17 +974,34 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 17.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
+      pt: apagar, incluindo réplicas, caches e sistemas a jusante
+      en: delete them, including replicas, caches and downstream systems
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: chega às réplicas, caches e sistemas a jusante
+      en: reaches replicas, caches and downstream systems
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §8.1
+      en: Policy 29 §8.1
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 81-imutabilidade-e-apagamento-de-dados-pessoais
+    citacao:
+      pt: um pedido de apagamento cumpre-se destruindo a chave desse titular
+      en: a deletion request is met by destroying that person's key
   - tipo: politica
     rotulo:
       pt: Política 18 §10.6
@@ -934,18 +1011,7 @@ itens:
     citacao:
       pt: quando o titular exerce direito ao esquecimento (sujeito a obrigações legais de retenção concorrentes)
       en: when the data subject exercises the right to be forgotten (subject to competing legal retention obligations)
-  - tipo: politica
-    rotulo:
-      pt: Política 29 §8
-      en: Policy 29 §8
-    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
-    ancora: 8-integridade-e-imutabilidade
-    citacao:
-      pt: Armazenamento WORM (Write Once, Read Many)
-      en: WORM storage (Write Once, Read Many)
-  falta:
-    pt: Apagamento testado do titular (L2/L3) e dos audit events de IA; não abrange explicitamente backups, réplicas, caches, logs e sistemas a jusante, nem L1.
-    en: Tested erasure of the data subject (L2/L3) and of AI audit events; it does not explicitly cover backups, replicas, caches, logs and downstream systems, nor L1.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -953,22 +1019,24 @@ itens:
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota:
-    pt: 'Tensão interna: a Política 18 §10.6 exige apagar audit events sob controlo do deployer quando o titular exerce o direito, enquanto a Política 29 §8 torna obrigatório em L3 o armazenamento WORM de logs que contêm user.id e src.ip. Não é contradição com a lei (o art. 17.º, n.º 3, admite conservar para cumprimento de obrigação legal ou defesa em juízo), mas o Manual não diz qual das regras prevalece nem exige pseudonimização dos identificadores em armazenamento imutável.'
-    en: 'Internal tension: Policy 18 §10.6 requires erasing audit events under the deployer''s control when the data subject exercises the right, while Policy 29 §8 makes WORM storage of logs containing user.id and src.ip mandatory at L3. This is not a contradiction with the law (Article 17(3) allows retention for compliance with a legal obligation or for the defence of legal claims), but the Manual does not say which rule prevails nor require pseudonymisation of identifiers in immutable storage.'
+    pt: 'A tensão entre o armazenamento WORM (Política 29 §8, obrigatório em L3) e o apagamento resolve-se na Política 29 §8.1: nos registos imutáveis os dados pessoais entram só como pseudónimo, o conteúdo identificador vai cifrado com chave por titular e o apagamento cumpre-se destruindo a chave (PRI-005). Se isso vale juridicamente como apagamento é matéria do DPO.'
+    en: 'The tension between WORM storage (Policy 29 §8, mandatory at L3) and erasure is resolved in Policy 29 §8.1: in immutable logs, personal data enter only as a pseudonym, identifying content is encrypted with a per-person key, and erasure is achieved by destroying the key (PRI-005). Whether this counts legally as erasure is a matter for the DPO.'
 - id: RGPD-17-2
   acto_fonte: 32016R0679
   referencia: Art. 17.º, n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem medidas para informar outros responsáveis do pedido de apagamento de dados tornados públicos (ligações, cópias, reproduções).
-    en: No measures to inform other controllers of the erasure request for data made public (links, copies, replications).
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R02
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -976,16 +1044,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 18.º, n.º 1
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem capacidade técnica de marcar e bloquear dados (limitação do tratamento).
-    en: No technical capability to mark and block data (restriction of processing).
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -993,16 +1063,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 18.º, n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem controlo que restrinja o tratamento de dados marcados como limitados a conservação/exceções.
-    en: No control restricting the processing of data marked as restricted to storage/exceptions.
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1027,8 +1099,10 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 19.º
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
   resposta:
   - tipo: requisito
     alvo: PRI-004
@@ -1036,11 +1110,17 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
-  falta:
-    pt: Não há mapa de destinatários por conjunto de dados nem mecanismo de propagação de retificação/apagamento/limitação a destinatários; PRI-004 associa dados a sistemas internos, não a destinatários.
-    en: There is no recipients map per dataset nor a mechanism to propagate rectification/erasure/restriction to recipients; PRI-004 associates data with internal systems, not with recipients.
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: As rectificações e os apagamentos propagam-se aos destinatários conhecidos
+      en: Rectifications and deletions propagate to the known recipients
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1052,24 +1132,22 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 20.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
-  falta:
-    pt: Exportação existe (L2/L3), mas sem exigência de formato estruturado, de uso corrente e de leitura automática, nem delimitação aos dados fornecidos pelo titular.
-    en: Export exists (L2/L3), but without a requirement for a structured, commonly used and machine-readable format, nor delimitation to the data provided by the data subject.
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1077,16 +1155,24 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 20.º, n.º 2
   classe: engenharia
-  forca: lacuna
+  forca: parcial
   contexto: null
-  resposta: []
+  resposta:
+  - tipo: requisito
+    alvo: PRI-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
   falta:
-    pt: Sem transmissão direta entre responsáveis (API/formatos de portabilidade).
-    en: No direct transmission between controllers (API/portability formats).
+    pt: A exportação em formato de leitura automática está prescrita (PRI-003); a transmissão directa entre responsáveis, quando tecnicamente possível, não está.
+    en: Export in a machine-readable format is prescribed (PRI-003); direct transmission between controllers, where technically feasible, is not.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1113,9 +1199,17 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 21.º, n.º 2 e n.º 3
   classe: engenharia
-  forca: lacuna
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: PRI-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: a retirada ou a oposição está disponível pelo mesmo canal e não exige mais esforço do que o consentimento
+      en: withdrawal or objection is available through the same channel and takes no more effort than giving consent
   - tipo: politica
     rotulo:
       pt: Política 18 §10.6
@@ -1125,13 +1219,11 @@ itens:
     citacao:
       pt: aplicam-se os direitos do RGPD (acesso Art. 15.º, rectificação Art. 16.º, apagamento Art. 17.º, oposição Art. 21.º)
       en: the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21)
-  falta:
-    pt: Sem mecanismo técnico de oposição (opt-out) à comercialização direta e à definição de perfis, nem supressão persistente; a oposição só é enunciada na fatia de IA (Política 18 §10.6).
-    en: No technical mechanism for objection (opt-out) to direct marketing and profiling, nor persistent suppression; objection is only stated in the AI slice (Policy 18 §10.6).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1156,16 +1248,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 21.º, n.º 5
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem suporte a sinais automatizados de oposição (p. ex. Global Privacy Control) em serviços da sociedade da informação.
-    en: No support for automated objection signals (e.g. Global Privacy Control) in information society services.
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R04
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1173,16 +1267,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 22.º, n.º 1 e n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem requisito que identifique decisões exclusivamente automatizadas com efeitos sobre titulares; os princípios de «decisão humana» do Manual (cap. 10 addon 13, cap. 11) referem-se a decisões de segurança/deploy, não a decisões sobre pessoas.
-    en: No requirement identifying solely automated decisions with effects on data subjects; the Manual's “human decision” principles (Ch. 10 addon 13, Ch. 11) refer to security/deploy decisions, not to decisions about people.
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1190,16 +1286,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 22.º, n.º 3
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem salvaguardas de intervenção humana, expressão do ponto de vista e contestação para o titular.
-    en: No safeguards of human intervention, expression of point of view and contestation for the data subject.
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1207,16 +1305,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 22.º, n.º 4
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem regra que impeça basear decisões automatizadas em categorias especiais.
-    en: No rule preventing automated decisions from being based on special categories.
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-RGPD-R05
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: alta
+  confianca: media
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: []
   nota: null
@@ -1301,17 +1401,17 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 25.º, n.º 1
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: THR-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
     ancora: catálogo-thr---threat-modeling
     citacao:
-      pt: LINDDUN em aplicações com fluxos de dados pessoais ou contexto de privacidade
-      en: LINDDUN in applications with personal data flows or a privacy context
+      pt: exige-se só a vertente LINDDUN em forma leve
+      en: only the LINDDUN strand is required, in lightweight form
   - tipo: us
     alvo: 03-threat-modeling-us-08
     rotulo:
@@ -1333,7 +1433,7 @@ itens:
       en: derive privacy requirements and mitigation measures — minimisation, anonymisation, consent, transparency
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
@@ -1347,9 +1447,7 @@ itens:
     citacao:
       pt: dados pessoais ou credenciais nunca registados em logs de erro
       en: personal data or credentials are never recorded in error logs
-  falta:
-    pt: 'Privacidade desde a conceção prescrita em L2/L3 (LINDDUN com ligação a PRI-001…005, pseudonimização em logs de erro); os requisitos PRI-* só se aplicam a L2/L3, mas uma aplicação interna com dados pessoais e impacto baixo soma E1+D2+I1 = 4 → L1, e fica sem requisito de privacidade (o RGPD aplica-se independentemente do nível). Inconsistência de nível: THR-003 e o cap. 03 US-08 tornam o LINDDUN obrigatório em L2 quando há dados pessoais, mas a Política 08 §11 marca-o só «Recomendado» em L2. Sem catálogo de padrões de privacidade (pseudonimização/anonimização como padrão arquitetural).'
-    en: 'Privacy by design prescribed at L2/L3 (LINDDUN linked to PRI-001…005, pseudonymisation in error logs); the PRI-* requirements apply only to L2/L3, but an internal application with personal data and low impact scores E1+D2+I1 = 4 → L1, and is left without any privacy requirement (the GDPR applies regardless of the level). Level inconsistency: THR-003 and Ch. 03 US-08 make LINDDUN mandatory at L2 when there is personal data, but Policy 08 §11 marks it only “Recommended” at L2. No catalogue of privacy patterns (pseudonymisation/anonymisation as an architectural pattern).'
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1361,9 +1459,25 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 25.º, n.º 2
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: PRI-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: os tratamentos opcionais exigem acção do utilizador (opt-in)
+      en: optional processing requires action by the user (opt-in)
+  - tipo: requisito
+    alvo: PRI-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: não ficam visíveis a um número indeterminado de pessoas sem intervenção do utilizador
+      en: are not visible to an indefinite number of people without the user's intervention
   - tipo: politica
     rotulo:
       pt: Política 09 §3
@@ -1375,7 +1489,7 @@ itens:
       en: No component, service or data item may have greater exposure than its function requires
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
@@ -1383,12 +1497,12 @@ itens:
       en: Each personal-data field collected is associated with a recorded purpose; fields without a purpose are removed from the collection flow
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Conjuntos de dados pessoais têm prazo de retenção definido; o apagamento no fim do prazo é executado e verificável
-      en: Personal-data sets have a defined retention period; deletion at the end of the period is carried out and verifiable
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
   - tipo: requisito
     alvo: ACC-002
     niveis: [L1, L2, L3]
@@ -1397,13 +1511,11 @@ itens:
     citacao:
       pt: Contas sem permissões desnecessárias
       en: Accounts without unnecessary permissions
-  falta:
-    pt: Minimização de exposição e de privilégios por princípio; faltam configurações de privacidade por defeito voltadas ao utilizador (opt-in, visibilidade restrita) e a regra de não disponibilizar dados, sem intervenção humana, a um número indeterminado de pessoas; os requisitos PRI-* só se aplicam a L2/L3, mas uma aplicação interna com dados pessoais e impacto baixo soma E1+D2+I1 = 4 → L1, e fica sem requisito de privacidade (o RGPD aplica-se independentemente do nível).
-    en: Minimisation of exposure and privileges by principle; user-facing privacy-by-default settings (opt-in, restricted visibility) and the rule of not making data accessible, without human intervention, to an indefinite number of persons are missing; the PRI-* requirements apply only to L2/L3, but an internal application with personal data and low impact scores E1+D2+I1 = 4 → L1, and is left without any privacy requirement (the GDPR applies regardless of the level).
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
-  confianca: media
+  confianca: alta
   aplicavel_desde: 25.5.2018 (art. 99.º, n.º 2)
   substitui: [EXT-RGPD-OBL-25]
   nota: null
@@ -1680,20 +1792,18 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 28.º, n.º 3, alínea e)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado, sem intervenção manual em base de dados
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject, without manual intervention in the database
-  falta:
-    pt: Capacidade técnica de apagar/exportar existe (L2/L3), mas o papel de subcontratante que assiste o responsável (encaminhamento de pedidos, SLAs, retificação/limitação) não é modelado.
-    en: Technical capability to erase/export exists (L2/L3), but the role of the processor assisting the controller (request routing, SLAs, rectification/restriction) is not modelled.
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1740,9 +1850,17 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 28.º, n.º 3, alínea g)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
+  - tipo: requisito
+    alvo: PRI-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: no fim do serviço os dados e as respectivas cópias são apagados ou devolvidos
+      en: at the end of the service the data and their copies are deleted or returned
   - tipo: politica
     rotulo:
       pt: Política 33 §7.1
@@ -1752,9 +1870,7 @@ itens:
     citacao:
       pt: Confirmação de eliminação ou devolução de dados da organização em posse do fornecedor (quando aplicável)
       en: Confirmation of deletion or return of the organisation's data held by the supplier (where applicable)
-  falta:
-    pt: Prescrito apenas do lado do responsável (confirmar eliminação/devolução pelo fornecedor); não há obrigação, quando a organização é subcontratante, de apagar/devolver os dados do cliente e as cópias no fim do serviço.
-    en: Prescribed only on the controller side (confirming deletion/return by the vendor); there is no obligation, when the organisation is a processor, to delete/return the customer's data and copies at the end of the service.
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -1886,8 +2002,8 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   - tipo: requisito
     alvo: CLA-008
     niveis: [L1, L2, L3]
@@ -1927,8 +2043,8 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata; alterações de finalidade são registadas
-      en: An inventory associates each personal-data set with its purpose and the system that processes it; changes of purpose are recorded
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -2019,7 +2135,9 @@ itens:
   referencia: Art. 32.º, n.º 1, alínea a)
   classe: engenharia
   forca: cobre
-  contexto: null
+  contexto:
+    id: CTX-RGPD
+    grau: null
   resposta:
   - tipo: requisito
     alvo: ENC-002
@@ -2054,6 +2172,14 @@ itens:
     citacao:
       pt: Redacção / pseudonimização antes do envio
       en: Redaction / pseudonymisation before sending
+  - tipo: requisito
+    alvo: PRI-005
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: pri
+    citacao:
+      pt: os dados pessoais entram só como identificador pseudónimo
+      en: personal data enter only as a pseudonymous identifier
   falta: null
   razao_fora_de_ambito: null
   conflito: false
@@ -2591,12 +2717,12 @@ itens:
       en: mapping to the privacy requirements of Ch. 02
   - tipo: requisito
     alvo: THR-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
     ancora: catálogo-thr---threat-modeling
     citacao:
       pt: LINDDUN em aplicações com fluxos de dados pessoais ou contexto de privacidade
-      en: LINDDUN in applications with personal data flows or a privacy context
+      en: LINDDUN in applications with personal-data flows or a privacy context
   - tipo: pagina
     rotulo:
       pt: Âmbito e propósito

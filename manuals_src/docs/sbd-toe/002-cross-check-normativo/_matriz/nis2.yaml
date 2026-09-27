@@ -7561,12 +7561,12 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: o apagamento no fim do prazo é executado e verificável
-      en: deletion at the end of the period is carried out and verifiable
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
   falta:
     pt: Não há política de tratamento de ativos (utilização, armazenamento, transporte, eliminação segura); só retenção/apagamento de dados pessoais (PRI-002, L2/L3).
     en: There is no asset handling policy (use, storage, transport, secure disposal); only retention/erasure of personal data (PRI-002, L2/L3).

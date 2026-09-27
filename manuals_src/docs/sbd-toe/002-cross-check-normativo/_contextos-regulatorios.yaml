@@ -811,6 +811,30 @@ contextos:
           referencia: "Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c)"
           citacao: {pt: "A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico", en: "the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident"}
         admite_justificacao: false
+      - id: CTX-RGPD-P04
+        alvo: {tipo: requisito, alvo: PRI-004}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Inventário de finalidades e destinatários em qualquer nível: sem ele, as rectificações, os apagamentos e as limitações não chegam aos destinatários.", en: "Inventory of purposes and recipients at any level: without it, rectifications, erasures and restrictions do not reach the recipients."}
+        base:
+          obrigacoes: [RGPD-19]
+          referencia: "Reg. (UE) 2016/679, art. 19.º"
+          citacao: {pt: "a cada destinatário a quem os dados pessoais tenham sido transmitidos", en: "to each recipient to whom the personal data have been disclosed"}
+        admite_justificacao: false
+      - id: CTX-RGPD-P05
+        alvo: {tipo: requisito, alvo: PRI-005}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Conceito de PII em registos em qualquer nível, com pseudónimos e chave por titular nos registos imutáveis (Política 29 §8.1).", en: "PII-in-logs concept at any level, with pseudonyms and a per-person key in immutable logs (Policy 29 §8.1)."}
+        base:
+          obrigacoes: [RGPD-32-1-a]
+          referencia: "Reg. (UE) 2016/679, art. 32.º, n.º 1, al. a)"
+          citacao: {pt: "A pseudonimização e a cifragem dos dados pessoais", en: "the pseudonymisation and encryption of personal data"}
+        admite_justificacao: false
 
 # CTX-<regime>-Rnn: requisitos que só fazem sentido sob o regime (destilação §6.7; lista aprovada pelo lead em 2026-09-27).
 # Vivem só aqui, nunca nos catálogos; cada um declara a ligação a controlos.
@@ -899,6 +923,76 @@ acrescentos:
       citacao: {pt: "asseguram a disponibilidade suficiente de recursos através, no mínimo, da redundância parcial dos seguintes elementos", en: "shall ensure sufficient availability of resources by at least partial redundancy of the following"}
     controlos: []
     sem_controlo_razao: {pt: "Decisão de arquitectura e de capacidade, sem controlo técnico próprio no Manual.", en: "An architecture and capacity decision, with no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R01
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Limitação do tratamento", en: "Restriction of processing"}
+    criterio_aceitacao:
+      pt: "Capacidade de marcar os dados pessoais de um titular como limitados; a marca é respeitada em todos os caminhos de tratamento (aplicação, integrações, exportações, análise), que passam a só conservar os dados, salvo consentimento do titular ou as excepções do art. 18.º, n.º 2; a marca propaga-se aos destinatários registados em PRI-004 e o levantamento da limitação fica registado."
+      en: "Ability to flag a data subject's personal data as restricted; the flag is honoured on every processing path (application, integrations, exports, analytics), which then only store the data, save with the data subject's consent or under the exceptions of Article 18(2); the flag propagates to the recipients recorded in PRI-004, and lifting the restriction is logged."
+    base:
+      obrigacoes: [RGPD-18-1, RGPD-18-2]
+      referencia: "Reg. (UE) 2016/679, art. 18.º, n.os 1 e 2"
+      citacao: {pt: "os dados pessoais só podem, à exceção da conservação, ser objeto de tratamento com o consentimento do titular", en: "such personal data shall, with the exception of storage, only be processed with the data subject's consent"}
+    controlos: []
+    sem_controlo_razao: {pt: "Capacidade funcional da aplicação, verificada em teste com PRI-003; sem controlo técnico próprio no Manual.", en: "A functional capability of the application, verified in testing together with PRI-003; no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R02
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Apagamento de dados tornados públicos", en: "Erasure of data made public"}
+    criterio_aceitacao:
+      pt: "Quando a aplicação tornou públicos dados pessoais que depois tem de apagar: as medidas técnicas razoáveis para informar quem os trata (p. ex. pedido de remoção a motores de busca e a agregadores conhecidos, cabeçalhos e metadados de não indexação, invalidação de caches públicas) estão definidas e são executadas com o apagamento, com registo."
+      en: "Where the application made personal data public and must later erase them: the reasonable technical steps to inform those processing them (e.g. removal requests to known search engines and aggregators, no-index headers and metadata, invalidation of public caches) are defined and carried out with the erasure, and logged."
+    base:
+      obrigacoes: [RGPD-17-2]
+      referencia: "Reg. (UE) 2016/679, art. 17.º, n.º 2"
+      citacao: {pt: "toma as medidas que forem razoáveis, incluindo de caráter técnico", en: "shall take reasonable steps, including technical measures"}
+    controlos: []
+    sem_controlo_razao: {pt: "Procedimento ligado ao apagamento de PRI-003; sem controlo técnico próprio no Manual.", en: "A procedure attached to the erasure in PRI-003; no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R03
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Verificação da idade e do consentimento parental", en: "Age and parental consent verification"}
+    criterio_aceitacao:
+      pt: "Quando um serviço da sociedade da informação é oferecido directamente a crianças com base em consentimento: a idade é verificada abaixo do limiar aplicável (16 anos, ou o limiar nacional, não inferior a 13) e o consentimento do titular das responsabilidades parentais é obtido e verificado com os meios adequados à tecnologia disponível, com registo em PRI-006."
+      en: "Where an information society service is offered directly to children on the basis of consent: age is verified against the applicable threshold (16, or the national threshold, not below 13), and consent from the holder of parental responsibility is obtained and verified by means appropriate to the available technology, recorded under PRI-006."
+    base:
+      obrigacoes: [RGPD-8-2]
+      referencia: "Reg. (UE) 2016/679, art. 8.º, n.º 2"
+      citacao: {pt: "envida todos os esforços adequados para verificar que o consentimento foi dado ou autorizado pelo titular das responsabilidades parentais da criança", en: "shall make reasonable efforts to verify in such cases that consent is given or authorised by the holder of parental responsibility over the child"}
+    controlos: []
+    sem_controlo_razao: {pt: "O meio de verificação depende do serviço e da tecnologia disponível; sem controlo técnico próprio no Manual.", en: "The means of verification depends on the service and the available technology; no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R04
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Oposição por meios automatizados", en: "Objection by automated means"}
+    criterio_aceitacao:
+      pt: "Nos serviços da sociedade da informação, os sinais automatizados de oposição enviados pelo navegador ou pelo agente do utilizador (p. ex. Global Privacy Control) são reconhecidos e tratados como oposição válida, com o mesmo efeito da oposição dada pela interface (PRI-006)."
+      en: "In information society services, automated objection signals sent by the browser or user agent (e.g. Global Privacy Control) are recognised and treated as a valid objection, with the same effect as an objection given through the interface (PRI-006)."
+    base:
+      obrigacoes: [RGPD-21-5]
+      referencia: "Reg. (UE) 2016/679, art. 21.º, n.º 5"
+      citacao: {pt: "o titular dos dados pode exercer o seu direito de oposição por meios automatizados, utilizando especificações técnicas", en: "the data subject may exercise his or her right to object by automated means using technical specifications"}
+    controlos: []
+    sem_controlo_razao: {pt: "Verificado em teste com PRI-006; sem controlo técnico próprio no Manual.", en: "Verified in testing together with PRI-006; no dedicated technical control in the Manual."}
+  - id: CTX-RGPD-R05
+    contexto: CTX-RGPD
+    grau: null
+    niveis: null
+    nome: {pt: "Decisões exclusivamente automatizadas", en: "Solely automated decisions"}
+    criterio_aceitacao:
+      pt: "As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4."
+      en: "Decisions taken solely by automated processing, including profiling, with legal or similarly significant effects on the person are identified in the inventory; where permitted, the application allows the person to obtain human intervention, express their point of view and contest the decision, and each challenge is logged with its outcome; these decisions do not use special categories of data, save for the exceptions of Article 22(4)."
+    base:
+      obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]
+      referencia: "Reg. (UE) 2016/679, art. 22.º, n.os 1, 3 e 4"
+      citacao: {pt: "o direito de, pelo menos, obter intervenção humana por parte do responsável, manifestar o seu ponto de vista e contestar a decisão", en: "at least the right to obtain human intervention on the part of the controller, to express his or her point of view and to contest the decision"}
+    controlos: []
+    sem_controlo_razao: {pt: "Capacidade funcional e de processo; sem controlo técnico próprio no Manual.", en: "A functional and process capability; no dedicated technical control in the Manual."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -957,6 +1051,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -977,6 +1076,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -1123,6 +1223,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -1382,6 +1484,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -1625,6 +1729,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -1645,6 +1754,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -1798,6 +1908,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2058,6 +2170,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2303,6 +2417,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2323,6 +2442,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -2473,6 +2593,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2733,6 +2855,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2977,6 +3101,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -2997,6 +3126,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -3149,6 +3279,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -3409,6 +3541,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -3654,6 +3788,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -3674,6 +3813,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -3824,6 +3964,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -4087,6 +4229,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -4335,6 +4479,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -4355,6 +4504,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -4507,6 +4657,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -4766,6 +4918,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -5009,6 +5163,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -5029,6 +5188,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -5174,6 +5334,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -5433,6 +5595,8 @@ lista_ids:
         - {id: PRI-003, origem: base}
         - {id: PRI-004, origem: base}
         - {id: PRI-005, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -5677,6 +5841,11 @@ lista_ids:
         - {id: ENC-004, origem: base}
         - {id: ENC-005, origem: base}
         - {id: ENC-006, origem: base}
+        - {id: PRI-001, origem: base}
+        - {id: PRI-002, origem: base}
+        - {id: PRI-003, origem: base}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -5697,6 +5866,7 @@ lista_ids:
         - {id: IDE-004, origem: base}
         - {id: REQ-AGN-001, origem: base}
         - {id: REQ-AGN-002, origem: base}
+        - {id: THR-003, origem: base, cap: '03'}
         - {id: ARC-001, origem: base, cap: '04'}
         - {id: ARC-002, origem: base, cap: '04'}
         - {id: ARC-006, origem: base, cap: '04'}
@@ -5754,6 +5924,13 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: PRI-004, origem: elevado, pisos: [CTX-RGPD-P04], obrigacoes: [RGPD-19]}
+        - {id: PRI-005, origem: elevado, pisos: [CTX-RGPD-P05], obrigacoes: [RGPD-32-1-a]}
+        - {id: CTX-RGPD-R01, origem: acrescentado, obrigacoes: [RGPD-18-1, RGPD-18-2]}
+        - {id: CTX-RGPD-R02, origem: acrescentado, obrigacoes: [RGPD-17-2]}
+        - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
+        - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
+        - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -5840,8 +6017,10 @@ lista_ids:
         - {id: PRI-001, origem: base}
         - {id: PRI-002, origem: base}
         - {id: PRI-003, origem: base}
-        - {id: PRI-004, origem: base}
-        - {id: PRI-005, origem: base}
+        - {id: PRI-004, origem: elevado, pisos: [CTX-RGPD-P04], obrigacoes: [RGPD-19]}
+        - {id: PRI-005, origem: elevado, pisos: [CTX-RGPD-P05], obrigacoes: [RGPD-32-1-a]}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -6009,6 +6188,11 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-RGPD-R01, origem: acrescentado, obrigacoes: [RGPD-18-1, RGPD-18-2]}
+        - {id: CTX-RGPD-R02, origem: acrescentado, obrigacoes: [RGPD-17-2]}
+        - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
+        - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
+        - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -6099,8 +6283,10 @@ lista_ids:
         - {id: PRI-001, origem: base}
         - {id: PRI-002, origem: base}
         - {id: PRI-003, origem: base}
-        - {id: PRI-004, origem: base}
-        - {id: PRI-005, origem: base}
+        - {id: PRI-004, origem: elevado, pisos: [CTX-RGPD-P04], obrigacoes: [RGPD-19]}
+        - {id: PRI-005, origem: elevado, pisos: [CTX-RGPD-P05], obrigacoes: [RGPD-32-1-a]}
+        - {id: PRI-006, origem: base}
+        - {id: PRI-007, origem: base}
         - {id: API-001, origem: base}
         - {id: API-002, origem: base}
         - {id: API-003, origem: base}
@@ -6290,3 +6476,8 @@ lista_ids:
         - {id: GOV-015, origem: base, cap: '14'}
         - {id: GOV-016, origem: base, cap: '14'}
         - {id: GOV-017, origem: base, cap: '14'}
+        - {id: CTX-RGPD-R01, origem: acrescentado, obrigacoes: [RGPD-18-1, RGPD-18-2]}
+        - {id: CTX-RGPD-R02, origem: acrescentado, obrigacoes: [RGPD-17-2]}
+        - {id: CTX-RGPD-R03, origem: acrescentado, obrigacoes: [RGPD-8-2]}
+        - {id: CTX-RGPD-R04, origem: acrescentado, obrigacoes: [RGPD-21-5]}
+        - {id: CTX-RGPD-R05, origem: acrescentado, obrigacoes: [RGPD-22-1, RGPD-22-3, RGPD-22-4]}

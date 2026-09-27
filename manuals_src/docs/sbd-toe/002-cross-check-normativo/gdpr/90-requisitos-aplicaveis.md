@@ -44,6 +44,20 @@ A aplicação trata dados pessoais. A declaração é sempre explícita (sim ou 
 | CTX-RGPD-P01 | [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização) | — | obrigatório | Contrato do art. 28.º, n.º 3, obrigatório em qualquer nível sempre que um subcontratante trata dados pessoais. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
 | CTX-RGPD-P02 | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | obrigatório | Contrato do art. 28.º, n.º 3, com os subcontratantes que recebem dados pessoais em prompts, em qualquer nível. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
 | CTX-RGPD-P03 | `OPS-016` | — | obrigatório | Dados pessoais incluídos nas cópias, com restauro testado. | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c): «A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico» (RGPD-32-1-c) | não admitida |
+| CTX-RGPD-P04 | `PRI-004` | — | obrigatório | Inventário de finalidades e destinatários em qualquer nível: sem ele, as rectificações, os apagamentos e as limitações não chegam aos destinatários. | Reg. (UE) 2016/679, art. 19.º: «a cada destinatário a quem os dados pessoais tenham sido transmitidos» (RGPD-19) | não admitida |
+| CTX-RGPD-P05 | `PRI-005` | — | obrigatório | Conceito de PII em registos em qualquer nível, com pseudónimos e chave por titular nos registos imutáveis (Política 29 §8.1). | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. a): «A pseudonimização e a cifragem dos dados pessoais» (RGPD-32-1-a) | não admitida |
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-RGPD-R01` | Limitação do tratamento | Capacidade de marcar os dados pessoais de um titular como limitados; a marca é respeitada em todos os caminhos de tratamento (aplicação, integrações, exportações, análise), que passam a só conservar os dados, salvo consentimento do titular ou as excepções do art. 18.º, n.º 2; a marca propaga-se aos destinatários registados em PRI-004 e o levantamento da limitação fica registado. | Reg. (UE) 2016/679, art. 18.º, n.os 1 e 2: «os dados pessoais só podem, à exceção da conservação, ser objeto de tratamento com o consentimento do titular» (RGPD-18-1, RGPD-18-2) |
+| `CTX-RGPD-R02` | Apagamento de dados tornados públicos | Quando a aplicação tornou públicos dados pessoais que depois tem de apagar: as medidas técnicas razoáveis para informar quem os trata (p. ex. pedido de remoção a motores de busca e a agregadores conhecidos, cabeçalhos e metadados de não indexação, invalidação de caches públicas) estão definidas e são executadas com o apagamento, com registo. | Reg. (UE) 2016/679, art. 17.º, n.º 2: «toma as medidas que forem razoáveis, incluindo de caráter técnico» (RGPD-17-2) |
+| `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | Quando um serviço da sociedade da informação é oferecido directamente a crianças com base em consentimento: a idade é verificada abaixo do limiar aplicável (16 anos, ou o limiar nacional, não inferior a 13) e o consentimento do titular das responsabilidades parentais é obtido e verificado com os meios adequados à tecnologia disponível, com registo em PRI-006. | Reg. (UE) 2016/679, art. 8.º, n.º 2: «envida todos os esforços adequados para verificar que o consentimento foi dado ou autorizado pelo titular das responsabilidades parentais da criança» (RGPD-8-2) |
+| `CTX-RGPD-R04` | Oposição por meios automatizados | Nos serviços da sociedade da informação, os sinais automatizados de oposição enviados pelo navegador ou pelo agente do utilizador (p. ex. Global Privacy Control) são reconhecidos e tratados como oposição válida, com o mesmo efeito da oposição dada pela interface (PRI-006). | Reg. (UE) 2016/679, art. 21.º, n.º 5: «o titular dos dados pode exercer o seu direito de oposição por meios automatizados, utilizando especificações técnicas» (RGPD-21-5) |
+| `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | As decisões tomadas exclusivamente por tratamento automatizado, incluindo a definição de perfis, com efeitos jurídicos ou significativos para a pessoa estão identificadas no inventário; quando admitidas, a aplicação permite obter intervenção humana, manifestar o ponto de vista e contestar a decisão, e cada contestação fica registada com o resultado; estas decisões não usam categorias especiais de dados, salvo as excepções do art. 22.º, n.º 4. | Reg. (UE) 2016/679, art. 22.º, n.os 1, 3 e 4: «o direito de, pelo menos, obter intervenção humana por parte do responsável, manifestar o seu ponto de vista e contestar a decisão» (RGPD-22-1, RGPD-22-3, RGPD-22-4) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -141,11 +155,13 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
-| `PRI-001` | Minimização dos dados pessoais recolhidos | — | ✔ | ✔ | — |
-| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | — | ✔ | ✔ | — |
-| `PRI-003` | Capacidade técnica de apagamento e exportação a pedido | — | ✔ | ✔ | — |
-| `PRI-004` | Registo de finalidade por conjunto de dados pessoais | — | ✔ | ✔ | — |
-| `PRI-005` | Conceito documentado e aplicado de PII em registos | — | ✔ | ✔ | — |
+| `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Capacidade técnica de acesso, rectificação, apagamento e exportação a pedido | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Registo de finalidade e destinatários por conjunto de dados pessoais | ▲ | ▲ | ▲ | CTX-RGPD-P04 |
+| `PRI-005` | Conceito documentado e aplicado de PII em registos | ▲ | ▲ | ▲ | CTX-RGPD-P05 |
+| `PRI-006` | Gestão técnica do consentimento e das preferências de oposição | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacidade por defeito nas definições voltadas ao utilizador | ✔ | ✔ | ✔ | — |
 | `API-001` | Autenticação e autorização de chamadas API | ✔ | ✔ | ✔ | — |
 | `API-002` | Endpoints desnecessários removidos ou ocultos | ✔ | ✔ | ✔ | — |
 | `API-003` | Validação de input em APIs | ✔ | ✔ | ✔ | — |
@@ -191,7 +207,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `REQ-AGN-004` | Intent declaration antes de tool-call destrutivo | — | ✔ | ✔ | — |
 | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | — | ✔ | ✔ | — |
 | `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | — | ✔ | ✔ | — |
-| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | — | ✔ | ✔ | — |
+| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | ✔ | ✔ | ✔ | — |
 | `THR-004` | Disposição formal de cada ameaça identificada com owner | — | ✔ | ✔ | — |
 | `THR-005` | Rastreabilidade ameaça → requisito → backlog → validação | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versionado e actualizado dentro do ciclo ou após trigger | — | ✔ | ✔ | — |
@@ -335,6 +351,11 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ✔ | ✔ | ✔ | — |
 | `GOV-016` | Contas privilegiadas e de administração dos sistemas de suporte | ✔ | ✔ | ✔ | — |
 | `GOV-017` | Ciclo de vida das identidades com acesso aos sistemas | ✔ | ✔ | ✔ | — |
+| `CTX-RGPD-R01` | Limitação do tratamento | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R02` | Apagamento de dados tornados públicos | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R03` | Verificação da idade e do consentimento parental | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R04` | Oposição por meios automatizados | ▲ | ▲ | ▲ | — |
+| `CTX-RGPD-R05` | Decisões exclusivamente automatizadas | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -342,8 +363,8 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 12 |
-| Parcial | 21 |
+| Cobre | 36 |
+| Parcial | 12 |
 | Apoia evidência | 17 |
-| Lacuna | 15 |
+| Lacuna | 0 |
 | Fora de âmbito | 49 |

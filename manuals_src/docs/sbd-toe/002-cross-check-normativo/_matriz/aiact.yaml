@@ -146,7 +146,7 @@ itens:
       en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
@@ -254,12 +254,12 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: o apagamento no fim do prazo é executado e verificável por amostragem ou evidência automática
-      en: deletion at the end of the period is carried out and verifiable by sampling or automated evidence
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
   falta:
     pt: PRI-002 impõe prazo e apagamento verificável, mas não o gatilho legal «logo que o enviesamento seja corrigido».
     en: PRI-002 imposes a deadline and verifiable deletion, but not the legal trigger “once the bias has been corrected”.
@@ -283,8 +283,8 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata
-      en: An inventory associates each personal-data set with its purpose and the system that processes it
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta:
     pt: O inventário regista finalidade; não regista os motivos da estrita necessidade nem a impossibilidade de usar outros dados.
     en: The inventory records the purpose; it does not record the reasons for strict necessity nor the impossibility of using other data.
@@ -304,12 +304,12 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: o apagamento no fim do prazo é executado e verificável por amostragem ou evidência automática
-      en: deletion at the end of the period is carried out and verifiable by sampling or automated evidence
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
   - tipo: requisito
     alvo: ACC-001
     niveis: [L1, L2, L3]
@@ -2754,8 +2754,8 @@ itens:
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Inventário associa cada conjunto de dados pessoais à finalidade e ao sistema que o trata
-      en: An inventory associates each personal-data set with its purpose and the system that processes it
+      pt: Inventário associa cada conjunto de dados pessoais à finalidade, ao sistema que o trata e aos destinatários
+      en: An inventory associates each personal-data set with its purpose, the system that processes it and the recipients
   falta:
     pt: Inventário de datasets e registo de finalidades; falta procedimento de gestão de dados (aquisição, rotulagem, armazenamento, filtragem, agregação, conservação) para dados de treino.
     en: Dataset inventory and record of purposes; missing is a data management procedure (acquisition, labelling, storage, filtration, aggregation, retention) for training data.
@@ -5370,12 +5370,12 @@ itens:
       en: Accounts without unnecessary permissions; audit evidences effective restriction.
   - tipo: requisito
     alvo: PRI-002
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: o apagamento no fim do prazo é executado e verificável por amostragem ou evidência automática
-      en: deletion at the end of the period is carried out and verifiable by sampling or automated evidence
+      pt: Conjuntos de dados pessoais têm prazo de retenção definido
+      en: Personal-data sets have a defined retention period
   falta: null
   razao_fora_de_ambito: null
   conflito: false

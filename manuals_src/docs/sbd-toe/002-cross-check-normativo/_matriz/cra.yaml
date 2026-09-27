@@ -3301,7 +3301,7 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-001
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
@@ -3553,12 +3553,12 @@ itens:
   resposta:
   - tipo: requisito
     alvo: PRI-003
-    niveis: [L2, L3]
+    niveis: [L1, L2, L3]
     ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
     ancora: pri
     citacao:
-      pt: Existe mecanismo testado para apagar e para exportar os dados pessoais de um titular identificado
-      en: A tested mechanism exists to delete and to export the personal data of an identified data subject
+      pt: exportar uma cópia em formato estruturado, de uso corrente e de leitura automática
+      en: export a copy in a structured, commonly used and machine-readable format
   falta:
     pt: Apagamento/exportação a pedido cobre só dados pessoais de um titular e a partir de L2; falta remoção pelo utilizador de todos os dados e parâmetros, de forma segura e permanente, e transferência segura para outros produtos.
     en: Erasure/export on request covers only personal data of a data subject and from L2; removal by the user of all data and settings, securely and permanently, and secure transfer to other products are missing.

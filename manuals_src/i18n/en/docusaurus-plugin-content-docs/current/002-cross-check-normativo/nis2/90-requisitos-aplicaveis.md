@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: 08a29f154bb65bbd0c47673fc3ccd81dbd76ce8aa4c6118a468cd6a27b710761
+  source_sha256: dbfedd6fd7c74efbdf98bc5ca8473cf2519dbfe4a7c006e48c15853348fb08dd
   source_commit: null
-  target_sha256: 822097d5804852e5ebc22e1912701ea15772d36f8ea57d25479822587f80b41c
+  target_sha256: 22ca6bd791678e1bba43da282a9da41c94409977efdfb9356112299ec6fcfb78
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -183,11 +183,13 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
-| `PRI-001` | Minimisation of the personal data collected | — | ✔ | ✔ | — |
-| `PRI-002` | Retention of personal data with a deadline and effective deletion | — | ✔ | ✔ | — |
-| `PRI-003` | Technical capability for deletion and export on request | — | ✔ | ✔ | — |
-| `PRI-004` | Record of purpose per personal-data set | — | ✔ | ✔ | — |
+| `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retention of personal data with a deadline and effective deletion | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Technical capability for access, rectification, deletion and export on request | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Record of purpose and recipients per personal-data set | — | ✔ | ✔ | — |
 | `PRI-005` | Documented and applied concept for PII in logs | — | ✔ | ✔ | — |
+| `PRI-006` | Technical management of consent and objection preferences | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacy by default in user-facing settings | ✔ | ✔ | ✔ | — |
 | `API-001` | Authentication and authorisation of API calls | ✔ | ✔ | ✔ | — |
 | `API-002` | Unnecessary endpoints removed or hidden | ✔ | ✔ | ✔ | — |
 | `API-003` | Input validation in APIs | ✔ | ✔ | ✔ | — |
@@ -233,7 +235,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `REQ-AGN-004` | Intent declaration before a destructive tool-call | — | ✔ | ✔ | — |
 | `THR-001` | Formal threat modelling in L2+ applications and significant architectural changes | — | ✔ | ✔ | — |
 | `THR-002` | Current architecture represented with explicit DFDs and trust boundaries | — | ✔ | ✔ | — |
-| `THR-003` | Structured methodology applied with guaranteed minimum coverage | — | ✔ | ✔ | — |
+| `THR-003` | Structured methodology applied with guaranteed minimum coverage | ✔ | ✔ | ✔ | — |
 | `THR-004` | Formal disposition of each identified threat, with an owner | — | ✔ | ✔ | — |
 | `THR-005` | Traceability threat → requirement → backlog → validation | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versioned and updated within the cycle or after a trigger | — | ✔ | ✔ | — |
@@ -468,11 +470,13 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `ENC-007` | Periodic rotation of keys and secrets | — | ✔ | ✔ | — |
 | `ENC-008` | Prevention of client-side caching of sensitive data | — | ✔ | ✔ | — |
 | `ENC-009` | Verifiable integrity of critical data | — | — | ✔ | — |
-| `PRI-001` | Minimisation of the personal data collected | — | ✔ | ✔ | — |
-| `PRI-002` | Retention of personal data with a deadline and effective deletion | — | ✔ | ✔ | — |
-| `PRI-003` | Technical capability for deletion and export on request | — | ✔ | ✔ | — |
-| `PRI-004` | Record of purpose per personal-data set | — | ✔ | ✔ | — |
+| `PRI-001` | Minimisation of the personal data collected | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retention of personal data with a deadline and effective deletion | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Technical capability for access, rectification, deletion and export on request | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Record of purpose and recipients per personal-data set | — | ✔ | ✔ | — |
 | `PRI-005` | Documented and applied concept for PII in logs | — | ✔ | ✔ | — |
+| `PRI-006` | Technical management of consent and objection preferences | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacy by default in user-facing settings | ✔ | ✔ | ✔ | — |
 | `API-001` | Authentication and authorisation of API calls | ✔ | ✔ | ✔ | — |
 | `API-002` | Unnecessary endpoints removed or hidden | ✔ | ✔ | ✔ | — |
 | `API-003` | Input validation in APIs | ✔ | ✔ | ✔ | — |
@@ -518,7 +522,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `REQ-AGN-004` | Intent declaration before a destructive tool-call | — | ✔ | ✔ | — |
 | `THR-001` | Formal threat modelling in L2+ applications and significant architectural changes | — | ✔ | ✔ | — |
 | `THR-002` | Current architecture represented with explicit DFDs and trust boundaries | — | ✔ | ✔ | — |
-| `THR-003` | Structured methodology applied with guaranteed minimum coverage | — | ✔ | ✔ | — |
+| `THR-003` | Structured methodology applied with guaranteed minimum coverage | ✔ | ✔ | ✔ | — |
 | `THR-004` | Formal disposition of each identified threat, with an owner | — | ✔ | ✔ | — |
 | `THR-005` | Traceability threat → requirement → backlog → validation | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versioned and updated within the cycle or after a trigger | — | ✔ | ✔ | — |

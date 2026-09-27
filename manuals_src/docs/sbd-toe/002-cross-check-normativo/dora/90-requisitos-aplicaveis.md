@@ -164,11 +164,13 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
-| `PRI-001` | Minimização dos dados pessoais recolhidos | — | ✔ | ✔ | — |
-| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | — | ✔ | ✔ | — |
-| `PRI-003` | Capacidade técnica de apagamento e exportação a pedido | — | ✔ | ✔ | — |
-| `PRI-004` | Registo de finalidade por conjunto de dados pessoais | — | ✔ | ✔ | — |
+| `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Capacidade técnica de acesso, rectificação, apagamento e exportação a pedido | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Registo de finalidade e destinatários por conjunto de dados pessoais | — | ✔ | ✔ | — |
 | `PRI-005` | Conceito documentado e aplicado de PII em registos | — | ✔ | ✔ | — |
+| `PRI-006` | Gestão técnica do consentimento e das preferências de oposição | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacidade por defeito nas definições voltadas ao utilizador | ✔ | ✔ | ✔ | — |
 | `API-001` | Autenticação e autorização de chamadas API | ✔ | ✔ | ✔ | — |
 | `API-002` | Endpoints desnecessários removidos ou ocultos | ✔ | ✔ | ✔ | — |
 | `API-003` | Validação de input em APIs | ✔ | ✔ | ✔ | — |
@@ -214,7 +216,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `REQ-AGN-004` | Intent declaration antes de tool-call destrutivo | — | ✔ | ✔ | — |
 | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | — | ✔ | ✔ | — |
 | `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | — | ✔ | ✔ | — |
-| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | — | ✔ | ✔ | — |
+| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | ✔ | ✔ | ✔ | — |
 | `THR-004` | Disposição formal de cada ameaça identificada com owner | — | ✔ | ✔ | — |
 | `THR-005` | Rastreabilidade ameaça → requisito → backlog → validação | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versionado e actualizado dentro do ciclo ou após trigger | — | ✔ | ✔ | — |
@@ -450,11 +452,13 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `ENC-007` | Rotação periódica de chaves e segredos | — | ✔ | ✔ | — |
 | `ENC-008` | Prevenção de caching de dados sensíveis no cliente | — | ✔ | ✔ | — |
 | `ENC-009` | Integridade verificável de dados críticos | — | — | ✔ | — |
-| `PRI-001` | Minimização dos dados pessoais recolhidos | — | ✔ | ✔ | — |
-| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | — | ✔ | ✔ | — |
-| `PRI-003` | Capacidade técnica de apagamento e exportação a pedido | — | ✔ | ✔ | — |
-| `PRI-004` | Registo de finalidade por conjunto de dados pessoais | — | ✔ | ✔ | — |
+| `PRI-001` | Minimização dos dados pessoais recolhidos | ✔ | ✔ | ✔ | — |
+| `PRI-002` | Retenção de dados pessoais com prazo e apagamento efectivo | ✔ | ✔ | ✔ | — |
+| `PRI-003` | Capacidade técnica de acesso, rectificação, apagamento e exportação a pedido | ✔ | ✔ | ✔ | — |
+| `PRI-004` | Registo de finalidade e destinatários por conjunto de dados pessoais | — | ✔ | ✔ | — |
 | `PRI-005` | Conceito documentado e aplicado de PII em registos | — | ✔ | ✔ | — |
+| `PRI-006` | Gestão técnica do consentimento e das preferências de oposição | ✔ | ✔ | ✔ | — |
+| `PRI-007` | Privacidade por defeito nas definições voltadas ao utilizador | ✔ | ✔ | ✔ | — |
 | `API-001` | Autenticação e autorização de chamadas API | ✔ | ✔ | ✔ | — |
 | `API-002` | Endpoints desnecessários removidos ou ocultos | ✔ | ✔ | ✔ | — |
 | `API-003` | Validação de input em APIs | ✔ | ✔ | ✔ | — |
@@ -500,7 +504,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `REQ-AGN-004` | Intent declaration antes de tool-call destrutivo | — | ✔ | ✔ | — |
 | `THR-001` | Threat modeling formal em aplicações L2+ e alterações arquitecturais significativas | — | ✔ | ✔ | — |
 | `THR-002` | Arquitectura actual representada com DFDs e trust boundaries explícitos | — | ✔ | ✔ | — |
-| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | — | ✔ | ✔ | — |
+| `THR-003` | Metodologia estruturada aplicada com cobertura mínima garantida | ✔ | ✔ | ✔ | — |
 | `THR-004` | Disposição formal de cada ameaça identificada com owner | — | ✔ | ✔ | — |
 | `THR-005` | Rastreabilidade ameaça → requisito → backlog → validação | — | ✔ | ✔ | — |
 | `THR-006` | Threat model versionado e actualizado dentro do ciclo ou após trigger | — | ✔ | ✔ | — |

@@ -7,16 +7,16 @@ tags: [fornecedores, validacao, terceiros, contratacao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/03-modelo-validacao-fornecedores.md
-  source_sha256: c81b99fee4ee624edad33a624d08592b6193cc452e8521de14e4f30c96d96540
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: ac4bb068f1c2ce96bf19bca819e6e0dc6bb6051ab563b2e0d10b2dd6071022e5
+  source_sha256: d8489e339d255b6cdeec882909987ceb5ac6ae9a5a03ccbda3f06093201d6226
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 6faa414a8f112ae0da6775ddcf5e8b3d857758fd584d18e786d53ea727388c66
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, audit_trail, chapter_role, lifecycle_phase, risk_level, role_procurement, traceability, validation_evaluation]
   glossary_sha256: a434679b09aecbc542f47a2687e82aff39f0e5dac6a0d0919f3dd3b0b65d8f70
-  translated_at: 2026-09-26T12:49:05Z
-  stamped_at: 2026-09-26T18:36:13Z
+  translated_at: 2026-09-27T07:54:00Z
+  stamped_at: 2026-09-27T07:54:00Z
   reviewed_by: null
 ---
 
@@ -98,7 +98,7 @@ flowchart TD
 
 | Area                    | Question                                                   | Mandatory (L2/L3) |
 | ----------------------- | ---------------------------------------------------------- | ------------------- |
-| Vulnerabilities        | Is there a formal patching policy with an SLA &lt; 7 days?       | Yes (L2+)           |
+| Vulnerabilities        | Is there a formal patching policy with an SLA for critical CVEs (≤ 7 days at L2; ≤ 72 hours at L3)? | Yes (L2+)           |
 | Privileged access   | Is MFA used for remote administration of systems?         | Yes (L2+)           |
 | Secure development  | Do they adopt ASVS or equivalent practices?                      | Recommended         |
 | Security incidents | Is there a 24/7 channel and a formal incident response plan? | Yes (L3)            |

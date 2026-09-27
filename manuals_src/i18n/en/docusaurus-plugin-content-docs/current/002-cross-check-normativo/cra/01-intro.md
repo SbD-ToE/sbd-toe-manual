@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/01-intro.md
-  source_sha256: 8d0c32cbad309af68bac91fe63c28c95c38b78af640965e06e5f07c86af323b0
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 9659fee7f0dc1da30e466bd2dcdfb77e902a950e2506528134e69a4803765dae
+  source_sha256: 91828b5c3a1fcc60f1b5829d6817325e6fe7862179ed69df716b2fae4a39c0bd
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: d2bf6c42914cc503b072c12806fe636394b16d07724fc8344228e292412027d0
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_economic_operator, cra_pde, cra_support_period, csa_certification_scheme, cycle_iteration, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, gap_family, lifecycle_phase, normative_empirical, papel_suporte, practitioner_manual, provenance, role_juridico, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: 65e3761ca8f3fcf186a68a382295b6910c3a06b27e92e479ad1fc272b84f8f61
-  translated_at: 2026-09-27T07:29:52Z
-  stamped_at: 2026-09-27T07:29:52Z
+  translated_at: 2026-09-27T07:53:29Z
+  stamped_at: 2026-09-27T07:53:29Z
   reviewed_by: null
 ---
 
@@ -95,7 +95,7 @@ SbD-ToE covers the technical "how", but **does not replace**:
 | SBOM / Transparency | Provision of information on critical components and dependencies | Ch. 05 (continuous SBOM) | Exact format for external provision (e.g. public CycloneDX export) | Create a sanitised SBOM export routine for stakeholders |
 | Rapid Fixes and Patches | Apply security fixes without undue delay | Ch. 05 (CVE management), Ch. 07 (CI/CD automation), Ch. 12 (exploitation detection) | The CRA requires vulnerabilities to be addressed and remediated «without delay» (Annex I, Part II, point (2)), without setting a number of days | Apply the Manual's single internal remediation ladder ([Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle)) as the operationalisation of «without delay» — the Manual's choice, not a CRA time limit |
 | Reporting of actively exploited vulnerabilities | Notify the CSIRT designated as coordinator and ENISA, via the single reporting platform, of actively exploited vulnerabilities and severe incidents: early warning ≤24 h, notification ≤72 h and final report (Art. 14; applicable since 11.9.2026) | Ch. 12 (detection, exploitation metrics), Ch. 14 (governance) | Does not sufficiently separate mandatory reporting, communication to users and the official platform/regime | Add a technical runbook + a formal notification and communication interface |
-| Vulnerability Prevention Measures | Quality control and security testing before release | Ch. 10 (SAST/DAST/fuzzing), Ch. 11 (release gate) | Formal rejection/release criteria by criticality | Add a matrix: criticality level → automatic release block |
+| Vulnerability Prevention Measures | Quality control and security testing before release | Ch. 10 (SAST/DAST/fuzzing), Ch. 11 (release gate) | Formal rejection/release criteria by criticality | Add a blocking criterion based on known exploitability, not only on criticality: the CRA requires products to be made available on the market «without known exploitable vulnerabilities» (Annex I, Part I, point (2)(a)) |
 | Security Documentation | Security instructions and information for users/admins | Ch. 04 (architecture), Ch. 11 (secure deploy) | The manual does not on its own generate the entire `Annex II` surface (support period, contact point, end-of-support wording) | Create a "Product Security Guide" artefact + a support period and contact point table |
 | Post-Market Monitoring | Continuous observation of exploitation and failures | Ch. 12 (monitoring, alerts) | Integration with a user feedback channel | Create a dedicated "Security Feedback" backlog + weekly triage |
 | Exception Management | Justification of temporary deviations | Ch. 02 addon 08, Ch. 05 addon 09, Ch. 14 governance | Does not map CRA acceptability limits | Introduce a list of "non-exceptionable" vulnerabilities (e.g. critical RCE) |
@@ -126,7 +126,7 @@ Continuous SBOM (Ch. 05) is the basis for providing visibility. The CRA may requ
 **Action:** Generate a sanitised export (without sensitive internal paths) and keep one version per major release.
 
 ### 4. Rapid Patching {#4-patching-rápido}
-Define a CRA SLA differentiated by severity and product criticality. Integrate it into the pipeline: if critical CVE → automatic task + CISO alert.
+Apply the Manual's internal remediation ladder ([Policy 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); the Manual's choice) as the operationalisation of the CRA's «without delay» (Annex I, Part II, point (2)); with an indication of active exploitation, the time limit is brought forward. Integrate into the pipeline: if critical CVE → automatic task + CISO alert.
 
 **Action:** Automation: a CI workflow that opens an issue + "CRA-Patch" label.
 

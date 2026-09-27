@@ -8,16 +8,16 @@ sidebar_position: 30
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/recomendacoes-avancadas.md
-  source_sha256: 103fd7817e060ab60b5d1d829a3bf014ad74e28d6817d8548e7be940f554d308
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a0f12f17f3dfab4f1c5ab77267d5b717cc5e66c8085231c8307eefda63f21d00
+  source_sha256: 34f1d1a1702ab3e367e290c970fae105d7f5b5f9c03123427ba51b09f8e4cbe7
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 6a1a04b7a111639d6dc97ca46802f5c7f10a661904574cd740aa1479df78659b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, deterministic, maturity, mirror_osf, provenance, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: f824039445774a69dc3aed2b27dc76e4a713573b2e2c47e0f4a409831ff84ea9
-  translated_at: 2026-09-26T08:45:32Z
-  stamped_at: 2026-09-26T18:33:57Z
+  translated_at: 2026-09-27T07:53:43Z
+  stamped_at: 2026-09-27T07:53:43Z
   reviewed_by: null
 ---
 
@@ -81,7 +81,7 @@ This annex presents reinforced security practices applicable to contexts with hi
 
 ## 📊 6. Maturity metrics for dependencies {#-6-métricas-de-maturidade-para-dependências}
 
-- % of SCA findings resolved in < 5 days
+- % of SCA findings resolved within the level SLA (Policy 19 §4.3)
 - % of dependencies with a complete and versioned SBOM
 - Average no. of dependencies per service / per image
 - No. of active risk exceptions and associated expiry

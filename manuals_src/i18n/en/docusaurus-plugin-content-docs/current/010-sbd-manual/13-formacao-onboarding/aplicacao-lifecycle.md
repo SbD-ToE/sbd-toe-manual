@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/aplicacao-lifecycle.md
-  source_sha256: 64b9b01d70d5cba2e78c852a2e6452ee96b53393e4bb22193b0045eabc958c2d
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 496a062239eddf8411d52934fd2f121d81c912a2ccb287797b4f58d54748cff5
+  source_sha256: eb8cb2b18a4ad52b94399a329ef61446b7ece470acd81ab89849ce295e6702eb
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 67a90f295c428052adb714f275673d192ec7fe29380204096a094e51cc16d367
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, risk_level, role_rh_peopleops, role_tech_lead, slug_threat_modeling, threat, traceability, transversal, trilho_formativo, v1_entity_tmr_peer_review, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 96ccc90382d8ea1505027b5e23de3f10c3833065fdf3702a08846e3637b0a810
-  translated_at: 2026-09-26T17:23:52Z
-  stamped_at: 2026-09-26T18:36:04Z
+  translated_at: 2026-09-27T07:53:58Z
+  stamped_at: 2026-09-27T07:53:58Z
   reviewed_by: null
 ---
 
@@ -72,7 +72,7 @@ As **HR / People Operations**, I want **to ensure mandatory onboarding training 
 - [ ] Technical access blocked until completion  
 - [ ] Automatic block in Git/Azure DevOps/CI/CD pipelines  
 - [ ] Exceptions documented with AppSec/Management approval  
-- [ ] Biennial re-authentication or on a new-risk trigger  
+- [ ] Annual recertification (12-month validity) or upon a new-risk trigger  
 
 :::
 
@@ -355,7 +355,7 @@ As **Executive Management / GRC**, I want **to run incident simulations (war roo
 - [ ] Detection, response and resolution times measured (MTTD/MTTR)  
 - [ ] Role of each participant documented (playbooks)  
 - [ ] Debrief held with recommendations  
-- [ ] Cadence defined (annual minimum, quarterly ideal)  
+- [ ] Cadence defined (minimum: annual at L1, half-yearly at L2/L3 — Policy 32 §8; quarterly recommended)  
 
 :::
 
@@ -368,7 +368,7 @@ As **Executive Management / GRC**, I want **to run incident simulations (war roo
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recommended annually | Quarterly | Quarterly + rotating by threat |
+| Recommended annually | Half-yearly (minimum) | Half-yearly (minimum) + rotating by threat |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -937,13 +937,13 @@ As a **DevOps / AppSec Engineer**, I want **to provision and operate an isolated
 | Practice | L1 | L2 | L3 |
 |---------|----|----|----|
 | Secure onboarding | Basic | Mandatory | Mandatory + practical assessment |
-| Continuous training | Basic | Annual | Quarterly |
+| Continuous training | Annual | Half-yearly | Quarterly |
 | Champions | Optional | Recommended | Mandatory |
 | Practical exercises | Optional | Recommended | Mandatory |
 | Effectiveness metrics | Basic | Annual | Quarterly with targets |
 | **Code Clinics** | **Occasional** | **Recurring (fortnightly)** | **Recurring + rotating (weekly)** |
 | **Threat Modelling** | **Optional** | **Recommended per epic** | **Mandatory before design** |
-| **Incident simulations** | **Recommended annually** | **Quarterly** | **Quarterly + rotating** |
+| **Incident simulations** | **Recommended annually** | **Half-yearly (minimum)** | **Half-yearly (minimum) + rotating** |
 | **Track maintenance** | **Occasional** | **Annual** | **Annual + continuous on trigger** |
 | **Tracks proportional to risk** | **Basic track** | **Intermediate track + labs** | **Advanced track + simulations + audit** |
 | **Onboarding validation (checklist)** | **Basic** | **Structured (role + risk)** | **Structured + periodic audit** |

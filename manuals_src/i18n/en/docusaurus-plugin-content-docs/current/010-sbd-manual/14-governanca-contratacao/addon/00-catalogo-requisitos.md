@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
-  source_sha256: 9e3270f6d48dfad2a88827edcc0d57525151445e831e6e9afe0c022f37f2fbee
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: a6daac8f3d46fef466cdc33e4a9114b5107db84c8161ddc8db4274cad4c64f6e
+  source_sha256: ae20f41319c771a6ae27aa239acf06229509bae1d0a3193ea6579c79b7b49b43
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 4ee3dacd4e5b40b267851c99af39d9dcdc87bbe3ca804dea6d6ba763095e7a88
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, audit_trail, avaliacao, cycle_iteration, gap_family, layer, mapping, maturity, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: f3c23b36fdf46d42849c77714330460b55ab9f2566d6e60e877d554426b0dea4
-  translated_at: 2026-09-26T12:00:11Z
-  stamped_at: 2026-09-26T18:36:10Z
+  translated_at: 2026-09-27T07:53:59Z
+  stamped_at: 2026-09-27T07:53:59Z
   reviewed_by: null
 ---
 
@@ -67,7 +67,7 @@ Requirements ensuring that security is applied with formal authority, complete t
 | GOV-007 | Formal supplier validation before onboarding | ✔ | ✔ | ✔ | Suppliers with access to data, code or pipelines are validated with a questionnaire or checklist before onboarding; validation proportional to risk (L3: SBOM, incident SLA, formal right to audit); validation record retained and traceable. |
 | GOV-008 | Organisational traceability of security decisions per application | - | ✔ | ✔ | A consolidated record per application exists that links: risk classification → requirements applied → approved exceptions → validated suppliers → security owner; record updated at each relevant release or change of risk; available for audit. |
 | GOV-009 | Evidence of decisions traceable, referenceable and retained | ✔ | ✔ | ✔ | Every risk decision or exception has referenceable evidence artefacts (ticket, note, GRC record, ADR or equivalent); the chain of authority - who requested, who assessed, who approved - is verifiable; evidence retained for the period defined in policy. |
-| GOV-010 | Continuous validation cycle and periodic compliance review | - | ✔ | ✔ | Periodic review cycle defined by asset type (L3 applications: quarterly; L2: half-yearly; critical suppliers: annual); reviews produce traceable evidence; deviations identified generate corrective actions with a defined owner and deadline. |
+| GOV-010 | Continuous validation cycle and periodic compliance review | - | ✔ | ✔ | Periodic review cycle defined by asset type (L3 applications: quarterly; L2: half-yearly; suppliers: annual, half-yearly at L3 and upon a critical event); reviews produce traceable evidence; identified deviations generate corrective actions with a defined owner and deadline. |
 | GOV-011 | Governance KPIs defined, collected and reported | - | ✔ | ✔ | Governance KPIs are defined, collected periodically and reported to management; deviations from defined thresholds generate corrective action; KPIs include at least: active exceptions per domain, % of applications with an assigned owner, % of contracts with security clauses. |
 | GOV-012 | Active maturity model with measured and planned evolution | - | - | ✔ | Active security maturity assessment (SAMM, DSOMM or equivalent); carried out at least annually; results documented with an evolution plan and defined targets; evolution compared with the previous cycle and reported to management. |
 | GOV-013 | Technical onboarding and mandatory pre-access training of third parties | rec. | ✔ | ✔ | Contractors and third parties complete structured technical preparation **before real access** to systems: security training by profile (Dev, DevOps, QA, Architecture), comprehension quiz with a minimum score (typically 80%), sandbox environment for practice and NDA/confidentiality agreement signed; access is granted only after validated completion *sign-off* (Security Champion/AppSec + Tech Lead); the record is traceable (GRC/LMS) with dates, scores and validator, and kept according to the applicable regulatory retention (DORA, NIS2). At L1 it is recommended; at L2/L3 it is mandatory, with a validated quiz at L3. |

@@ -8,16 +8,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 020-assets/policies/05_policy-gestao-excecoes.md
-  source_sha256: b782b67e8e0938dd4231488fc6352665157e5312a6cbcef250742da38cfb21ca
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 68588615797f27475104e27214bd20dabe17cf788a82cf871c1bf69819984f8b
+  source_sha256: b9adf494a568662f0823bb2c74746b9632b92b3279069ace506b28852b1a4a13
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 2db99a05272685ac724d0909d44df169ee529c3ff9dda4062e4c263883360f9b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, cycle_iteration, mcp_reading_programa, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal, validation_evaluation]
   glossary_sha256: a5302cbd5b98385fac17cd6ac1b703a0b26bf260a6ba51d8206b8655aee9bdad
-  translated_at: 2026-09-27T07:06:12Z
-  stamped_at: 2026-09-27T07:06:12Z
+  translated_at: 2026-09-27T07:54:09Z
+  stamped_at: 2026-09-27T07:54:09Z
   reviewed_by: null
 ---
 
@@ -122,12 +122,16 @@ Exceptions to controls with a **Critical** risk impact are not acceptable at L3.
 
 | Level | Severity | Maximum TTL |
 |---|---|---|
-| L1 | Any | 90 days |
+| L1 | Low / Medium / High | 90 days |
 | L2 | Low / Medium | 60 days |
 | L2 | High | 30 days |
 | L3 | Low / Medium | 30 days |
 | L3 | High | 14 days |
-| Any | Critical | 7 days (with a mandatory remediation plan) |
+| L1 | Critical | 7 days (with a mandatory remediation plan) |
+| L2 | Critical | 7 days (CISO approval and remediation plan mandatory) |
+| L3 | Critical | Not acceptable |
+
+This table is the master for exception validity periods: Policies 03 and 12 and the chapters refer to it, and 90 days is the absolute ceiling. Revalidation takes place on the expiry date, with an alert to the owner 15 days before (or at the midpoint of the TTL, if it is shorter than 30 days).
 
 Renewing an exception requires **new explicit approval** with a documented reassessment. Renewal by default or by timeout is not valid.
 

@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/02-playbook.md
-  source_sha256: e5da6a955c8171c13588988c7fbdd1b9381fede67b201703d4dbfc575fc8dfb8
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 4382be780609c15dfec1f5159b64f8ace99bd4c88736ca4143733ff8ff89a5a6
+  source_sha256: fa34e0d0a85a87e857b7a7d2e08cffbeb3ff6422d3f8547b0c352acd35769add
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: f1c337824d90233438b3e6d45c7cd419a9318b3c1c23e0f6b302eef6d8d3af0b
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cra_economic_operator, cra_pde, cra_support_period, cycle_iteration, eu_placing_on_market, lifecycle_phase, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd, validation_evaluation]
   glossary_sha256: add33d9a5f390ac71a175848cc9b05861423da22abdbf4138f3f3c577e2d1732
-  translated_at: 2026-09-27T07:29:53Z
-  stamped_at: 2026-09-27T07:29:53Z
+  translated_at: 2026-09-27T07:53:30Z
+  stamped_at: 2026-09-27T07:53:30Z
   reviewed_by: null
 ---
 
@@ -72,7 +72,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 
 ### Phase 3 (M2–M3): Vulnerability Handling & SLAs {#fase-3-m2m3-vulnerability-handling--slas}
 1. Define severity (Critical/High/Medium/Low)  
-2. Establish a patch SLA (Critical ≤15d, High ≤30d, Medium ≤90d)  
+2. Adopt the internal remediation ladder of Policy 19 §4.3 (the Manual's choice, not a CRA time limit)  
 3. Automate issue creation for critical CVEs  
 4. Patch compliance dashboard  
 **Evidence:** SLA policy; initial dashboard; example issues
@@ -144,7 +144,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 - [ ] SAST integrated
 - [ ] DAST integrated
 - [ ] Fuzzing (if applicable)
-- [ ] Gate blocks known critical CVEs
+- [ ] Gate blocks known exploitable vulnerabilities (Annex I, Part I, point (2)(a)), not only critical CVEs
 - [ ] Release quality report archived
 - [ ] Formal exception override process
 
@@ -189,7 +189,7 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 ## Key Metrics {#métricas-chave}
 | Metric | Definition | Initial Target |
 |---------|-----------|------------------|
-| Critical MTTP | Mean time to critical patch | ≤15 days |
+| Critical MTTP | Mean time to critical patch | ≤ the level SLA (Policy 19 §4.3; 3 days at L3) |
 | % SLA Met | (Vulns patched within SLA) / total | ≥90% |
 | SBOM Coverage | % of components identified | ≥95% |
 | Mean Disclosure Response Time | Receipt → first response | ≤5 business days with no indication of exploitation; triage ≤4 h with an indication of active exploitation (the Manual's choice) |
@@ -216,8 +216,8 @@ Outside that context, SbD-ToE remains useful as a technical basis, but the readi
 ## Exceptions (Summary Policy) {#exceções-política-resumida}
 Categories:
 - Unacceptable: critical RCE, authentication bypass, exposure of credentials in cleartext
-- Acceptable (short TTL ≤30d): Critical with no patch available + robust compensation
-- Acceptable (medium TTL ≤90d): High with partial mitigation
+- Acceptable (TTL of Policy 05 §7: Critical 7 days with a remediation plan; not acceptable at L3): Critical with no patch available + robust compensation
+- Acceptable (TTL of Policy 05 §7: High 90 / 30 / 14 days at L1 / L2 / L3): High with partial mitigation
 
 Records: ID | Vulnerability | Severity | Justification | Approver | TTL | Mitigation | Review Date
 

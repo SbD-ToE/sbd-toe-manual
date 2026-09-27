@@ -8,16 +8,16 @@ sidebar_position: 20
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/canon/20-checklist-revisao.md
-  source_sha256: acb8e6b96ee3da656d82317f1717ded44b2e98310c7313fb7628edf8159fb583
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: bb05f8ae3db9417e124a95a06c794be1ac0bae201ca5f4c6b6098406102b8e6c
+  source_sha256: fec0daccadd10f5fd7fe4c27521a10a2ec6fd6dc1430b5320d002dcbdb4bce8c
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: c44d6f5f90f92889bbce8927b66a6f3e4e04a760817480183493e16b672e18c9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, instrument, maturity, papel_suporte, provenance, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: ef311bd8c338ee2dfc64c9d9869862a083ec88e5ca593f66cda13d1c117fa006
-  translated_at: 2026-09-26T09:09:20Z
-  stamped_at: 2026-09-26T18:34:27Z
+  translated_at: 2026-09-27T07:53:46Z
+  stamped_at: 2026-09-27T07:53:46Z
   reviewed_by: null
 ---
 
@@ -33,7 +33,7 @@ This file works as:
 - An **operational KPI** of DevSecOps maturity
 - An objective criterion for the **promotion of applications** to production
 
-> 🗓️ **Review is recommended at least every 6 months**, or whenever there are relevant changes to the pipeline, runners, secrets, policies, external integrations or promotion model.
+> 🗓️ **A review is recommended at least annually at L1/L2 and half-yearly at L3**, or whenever there are relevant changes to the pipeline, runners, secrets, policies, external integrations or promotion model.
 
 ---
 

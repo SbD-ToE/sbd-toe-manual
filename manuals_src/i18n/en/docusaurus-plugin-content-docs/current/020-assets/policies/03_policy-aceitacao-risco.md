@@ -8,16 +8,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 020-assets/policies/03_policy-aceitacao-risco.md
-  source_sha256: 93dfe5585ce71ba2aa8ff5965ad887a23aa821cf15097fc55c20ab123232f17d
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 6b28a3facb3e0f9ee23a10ca85e9d547d1f1c96906894aaf717e1fbbc4996cc7
+  source_sha256: c593449fe8f7f21d393a60f2b1f78faa6766b16a6a4d665c31fa29f59ae10af8
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 038850aecfd1534fa495d43b3dc40e6bbb6a8d274cdd65ccca678a79d58e27ab
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, cycle_iteration, mcp_reading_programa, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability]
   glossary_sha256: 034cc5d6d8d631cc594516f3ebe34bab806bce90df395766cab2e6dbdfddceb2
-  translated_at: 2026-09-27T07:06:11Z
-  stamped_at: 2026-09-27T07:06:11Z
+  translated_at: 2026-09-27T07:54:07Z
+  stamped_at: 2026-09-27T07:54:07Z
   reviewed_by: null
 ---
 
@@ -79,8 +79,8 @@ Risk acceptance does not replace remediation. It is a temporary, documented deci
 | Level | Maximum severity acceptable without escalation | Maximum acceptance period |
 |---|---|---|
 | L1 | High (with justification and compensation) | 90 days |
-| L2 | Medium without escalation; High requires AppSec approval | 60 days |
-| L3 | Medium requires AppSec; High requires CISO; Critical is not acceptable | 30 days |
+| L2 | Medium without escalation; High requires AppSec approval | 60 days (High: 30 days; Policy 05 §7) |
+| L3 | Medium requires AppSec; High requires CISO; Critical is not acceptable | 30 days (High: 14 days; Policy 05 §7) |
 
 :::note
 Findings of **Critical** severity may not be accepted as residual risk at any level without an active remediation plan with a defined deadline. Accepting a Critical finding is a last-resort exception, subject to CISO approval and formal recording with a maximum period of 7 days.

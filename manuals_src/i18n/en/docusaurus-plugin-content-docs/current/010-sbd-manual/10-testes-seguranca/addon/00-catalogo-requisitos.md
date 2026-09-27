@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
-  source_sha256: f33d36ea8c6b914979a4a9977a8db62fba3278734c6cd0f682098b20923253de
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 806906b450fc52b00120f392e4ca46bd2a32acf12d7be4e13e48e9b4613b554d
+  source_sha256: 07f47bc43ffa034d6635bce652eb4e639023f13b855f17320726dc54c5bdb60d
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: b61d57abea64f5d93b18dc11938ade41b37b6a75ae7d436ba7a157fd16711329
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: f454bc3f9d0beb71948426a943ca3f6893072f2e70d1f7e2b99aaca49fde7301
-  translated_at: 2026-09-26T10:31:24Z
-  stamped_at: 2026-09-26T18:35:03Z
+  translated_at: 2026-09-27T07:53:50Z
+  stamped_at: 2026-09-27T07:53:50Z
   reviewed_by: null
 ---
 
@@ -58,12 +58,12 @@ Requirements ensuring that the security testing programme is planned, executed, 
 |----|------|:--:|:--:|:--:|----------------------|
 | TST-001 | Formal security testing strategy by risk level | ✔ | ✔ | ✔ | Strategy document with test types, frequency, owners and acceptance criteria by risk level; reviewed at least annually or after a significant change in risk or architecture. |
 | TST-002 | SAST with a managed coverage profile and false-positive baseline | ✔ | ✔ | ✔ | SAST scanner with a documented and versioned rule profile; false-positive baseline approved by AppSec; evidence of coverage of critical components; false-positive rate reviewed periodically. |
-| TST-003 | Formal findings management with remediation SLA by severity | ✔ | ✔ | ✔ | Remediation SLA defined by severity (e.g. critical ≤ 7 days, high ≤ 30 days); traceability finding → ticket → fix → verification; findings not resolved within the SLA with a formalised exception. |
+| TST-003 | Formal findings management with remediation SLA by severity | ✔ | ✔ | ✔ | Remediation SLA defined by severity (in line with Policy 19 §4.3: critical 30 / 7 / 3 days and high 90 / 30 / 15 days at L1 / L2 / L3); traceability finding → ticket → fix → verification; findings not resolved within the SLA with a formalised exception. |
 | TST-004 | Reproducible, auditable test evidence linked to the build | ✔ | ✔ | ✔ | Security test reports associated with the build that generated them; reproducible from the same code state; retained for the period defined in policy; available for audit without the need for re-execution. |
 | TST-005 | DAST integrated in a staging environment before promotion | - | ✔ | ✔ | DAST scanner active in a staging environment representative of production; findings policy defined (what blocks vs. what alerts); evidence of execution per release; staging environment with non-real data. |
 | TST-006 | Security regression tests for fixed vulnerabilities | - | ✔ | ✔ | Each fixed vulnerability gives rise to a regression test that proves the fix and prevents recurrence; regression tests integrated in the pipeline; coverage evidence available. |
 | TST-007 | Minimum security test coverage thresholds by risk | - | ✔ | ✔ | Minimum coverage criteria defined by risk level (e.g. authentication, authorisation, input validation components); coverage measured and reported; deviations documented and addressed. |
-| TST-008 | Periodic penetration tests with defined scope and methodology | - | ✔ | ✔ | Pentesting executed with a minimum frequency defined by risk level (e.g. annual for L2, half-yearly for L3); documented scope; report with findings, severity and remediation plan; fixes verified in retest. |
+| TST-008 | Periodic penetration tests with defined scope and methodology | - | ✔ | ✔ | Pentesting performed at a minimum frequency defined by risk level (annual at L2 and L3, plus the triggers of Policy 36 §9); scope documented; report with findings, severity and remediation plan; fixes verified by retest. |
 | TST-009 | Systematic fuzzing of components processing complex input | - | - | ✔ | Fuzzing integrated in the pipeline or executed periodically for parsers, deserialisers, APIs with structured input or logic with high input entropy; managed corpus and evidence of execution available. |
 | TST-010 | IAST in a staging environment for behavioural validation at runtime | - | - | ✔ | IAST instrumented in a staging environment for L3 applications; coverage of critical flows verified; IAST findings processed under the same management policy as other test findings. |
 

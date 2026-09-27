@@ -7,16 +7,16 @@ tags: [kpi, metricas, CIC, cicd, pipeline, gates, artefactos, secrets, L1, L2, L
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/07-cicd-seguro/addon/13-kpis-metricas.md
-  source_sha256: e7af2c1f1cec117212a6c07c00fc92d09a026c21e231101795bcbcffa609ea16
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 4449af86fd274115e6e9835aaf0cfba6df40f88d39cff6517073f459a7814fe9
+  source_sha256: 4eaf03f6c7e32c911dce1ce24ee460cff40290c827c177bdb595cfa22b50b921
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: ae66935e0f0d7d369777ac3f964fbf8b666d55bf5ecd06d9c88fe91610bad563
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, framework_source_corpus, mapping, practitioner_manual, provenance, risk_level, sbdtoe_sbd, traceability, transversal, verificacao_check, verification_taxonomy]
   glossary_sha256: def10fc568e77372e4ec5973c0ae4df1f03a0f463ee40df5796da2409a1e3a21
-  translated_at: 2026-09-26T12:48:44Z
-  stamped_at: 2026-09-26T18:34:25Z
+  translated_at: 2026-09-27T07:53:45Z
+  stamped_at: 2026-09-27T07:53:45Z
   reviewed_by: null
 ---
 
@@ -70,9 +70,9 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | CIC-K02 | % of security gate bypasses with a recorded and traceable formal approval (vs total bypasses) | Q% | ≥ 80% | 100% | 100% | T-02 | Per event |
 | CIC-K03 | % of build artefacts digitally signed and with signature verification before deploy | Q% | - | ≥ 70% | 100% | T-01 | Per release |
 | CIC-K04 | % of pipeline secrets injected via a centralised vault (Vault, KMS, secret store) vs hardcoded or unmanaged env vars | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Quarterly |
-| CIC-K05 | MTTR - time from detection of a critical vulnerability in a pipeline to confirmed mitigation | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Per event |
+| CIC-K05 | MTTR - time from detection of a critical vulnerability in a pipeline to confirmed mitigation | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Per event |
 | CIC-K06 | % of CI/CD runners/agents with effective isolation between jobs from different trust contexts | Q% | - | ≥ 80% | 100% | T-01 | Quarterly |
-| CIC-K07 | # of pipelines with no record of a last security review in more than 12 months | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Half-yearly |
+| CIC-K07 | # pipelines with no record of a security review within the cadence (annual at L1/L2; half-yearly at L3) | Q# ↓ | - | ≤ 5 | = 0 | T-01 | Half-yearly |
 
 ---
 

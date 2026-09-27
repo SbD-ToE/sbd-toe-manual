@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
-  source_sha256: b3bef9b42a6d0b794245e16f5ef830f96b39ad159f6e612c79b1ab81a9a0c444
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 93cc38956e83a668ca36fded79ed42320cb6e047f405ed43a89933c0386b96af
+  source_sha256: cd856ae9e225f28b75e7adacf277282bd763e2883db562205b6574c5b841e82f
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 4d54137564ec560f80b26fa916020d04d29fcc0256efe646858103b6830de940
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, mcp, plain_rag, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: e7ba97c1aa6ad5aceda3c6fc13a15a3a4be183c2b0fc6b9a8929cf71d8b88c14
-  translated_at: 2026-09-26T08:45:21Z
-  stamped_at: 2026-09-26T18:33:44Z
+  translated_at: 2026-09-27T07:53:40Z
+  stamped_at: 2026-09-27T07:53:40Z
   reviewed_by: null
 ---
 
@@ -62,7 +62,7 @@ Requirements that guarantee that all third-party dependencies are known, analyse
 | DEP-004 | Prohibition of dependencies introduced by manual copying | ✔ | ✔ | ✔ | No third-party libraries copied directly into the repository outside the package manager; verifiable by a structure scan; documented process that explicitly prohibits it. |
 | DEP-005 | Controlled registries and source repositories | - | ✔ | ✔ | List of permitted registries and repositories defined and enforced; downloads from unapproved sources blocked in the pipeline or by network policy; evidence of active enforcement. |
 | DEP-006 | Formal approval for the introduction of new dependencies | - | ✔ | ✔ | Documented approval process for new libraries with minimum criteria: maintenance activity, compatible licence, no active CVEs, verified popularity; approval record available per dependency. |
-| DEP-007 | Update policy with an SLA defined by severity | ✔ | ✔ | ✔ | Update SLA defined by CVE severity level (e.g. critical ≤ 48h, high ≤ 7 days, medium ≤ 30 days); evidence of compliance in the most recent cycles; exceptions formalised where applicable. |
+| DEP-007 | Update policy with an SLA defined by severity | ✔ | ✔ | ✔ | Update SLA defined by CVE severity level (in line with Policy 19 §4.3: e.g. critical 30 / 7 / 3 days and high 90 / 30 / 15 days at L1 / L2 / L3; with an indication of active exploitation, the time limit is brought forward); evidence of compliance in the most recent cycles; exceptions formalised where applicable. |
 | DEP-008 | Automated updates with impact analysis | - | ✔ | ✔ | Update bot active (e.g. Dependabot, Renovate); PRs generated automatically with semver impact information, changelogs and tests; human intervention mandatory for breaking changes; PRs not merged automatically without review. |
 | DEP-009 | Detection of unintended or emergent dependencies | - | - | ✔ | Defined process to detect dependencies introduced via tooling, code generation, pipelines or runtime loading; inventory boundaries documented; deviations detected and handled. |
 | DEP-010 | SBOM → vulnerability → fix traceability | - | ✔ | ✔ | Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken (fix PR, version update or formalised exception with justification and review date). |

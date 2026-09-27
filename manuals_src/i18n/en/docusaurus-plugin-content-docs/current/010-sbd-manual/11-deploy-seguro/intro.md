@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/intro.md
-  source_sha256: 727db834a0062b02dcb28fbddbfbe25348bb0c13399b95317af922fb7b0dadaf
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: b353a9f1b601675d7990a5d9156a8e59585e3466e16f0f61372b043042719ec6
+  source_sha256: f697bb3cc8987c761dbacd610ccc8a5047117a11d09cd463934625720fa9d6e1
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 537a07a5bb266700032736c8411085679adf48cf23641a8300ac2e090d3c6756
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, basilar, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, papel_suporte, practitioner_manual, provenance, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 2f72bf25038fa5c0520ab79fd6e18609ad7e5dfbf2ae2a150befa1773c40d3f0
-  translated_at: 2026-09-26T17:23:52Z
-  stamped_at: 2026-09-26T18:35:35Z
+  translated_at: 2026-09-27T07:53:54Z
+  stamped_at: 2026-09-27T07:53:54Z
   reviewed_by: null
 ---
 
@@ -123,7 +123,7 @@ Exceptions to automatic gates (e.g. non-applicable CVE, SAST false positive) fol
    justification: "Query parametrizada, não-vulnerável"
    approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
-   expiration_date: "2026-07-04"  # Máximo 6 meses
+   expiration_date: "2026-03-05"  # Tecto da Política 05 §7 (p. ex. 60 dias em L2, Low/Medium)
    evidence: "link/to/code-review-PR-123"
    ```
 
@@ -132,7 +132,7 @@ Exceptions to automatic gates (e.g. non-applicable CVE, SAST false positive) fol
    - HIGH: AppSec Engineer
    - MEDIUM: Tech Lead
 
-3. **Time validity**: Exceptions expire automatically (max. 6 months L2, 3 months L3)
+3. **Time validity**: Exceptions expire automatically (ceilings of Policy 05 §7: L1 90 days; L2 60 days (Low/Medium) and 30 days (High); L3 30 days (Low/Medium) and 14 days (High); Critical 7 days with a remediation plan, not acceptable at L3)
 
 4. **Reassessment**: Before expiry, a new analysis is mandatory
 

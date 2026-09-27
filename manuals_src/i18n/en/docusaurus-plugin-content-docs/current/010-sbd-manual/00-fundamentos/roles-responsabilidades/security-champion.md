@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/security-champion.md
-  source_sha256: c61c613154aec68aee5c7e5627d10463843c4f76436c0089fbf6b4803057005f
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 8e6fe3956edcb7ff64d37abb4393b142ab02e3804e4275bc5d46eb9252e0c359
+  source_sha256: 642cfd1abe5d5e7c339c465cb0a3e4b7b28d0e9af6a3425a1562b5229cabe2ed
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 3946d80e1c71bd551f808aa9be817f18ccccfe1045263e9e06c6f63a4d8c0076
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [capacitacao, chapter_role, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, transversal]
   glossary_sha256: 8b8164c78ee0a92a41d6d9ca373d72cd5d688e3ba2df2ac41bedb8ea52248266
-  translated_at: 2026-09-26T17:23:41Z
-  stamped_at: 2026-09-26T18:32:41Z
+  translated_at: 2026-09-27T07:53:35Z
+  stamped_at: 2026-09-27T07:53:35Z
   reviewed_by: null
 ---
 
@@ -56,7 +56,7 @@ Help **Developers and QA** day to day, ensure that **security checklists** are f
 - [US-06: Threat modelling per feature/epic/refactor](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-06---code-clinics-estruturadas-e-recorrentes) - The Security Champion leads the threat analysis (referenced as Developer in the lifecycle)
 
 ### Ch. 14 - Governance and Contracting {#cap-14---governança-e-contratação}
-Act as the **designated security owner** for critical applications. Run a structured contractor preparation process, run secure offboarding, review access quarterly, and collect post-project feedback.
+Be the **designated security owner** for critical applications. Run the structured contractor preparation process, run secure offboarding, review access periodically (half-yearly at L1, quarterly at L2/L3), collect post-project feedback.
 
 **User Stories:**
 - [US-05: Formal Security Champion appointment](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-05---kpis-de-governação) - Clear accountability (with Executive Management)

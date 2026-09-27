@@ -7,16 +7,16 @@ tags: [excecoes, governanca, risco, aprovacao, rastreabilidade, lifecycle]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/12-processo-excecoes.md
-  source_sha256: 197eb3d53699388bfc5c91211b5f4bb389e33cf52752261231b0b5fc2b3e5480
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 2e856048e3770aa778c5b4521d5045d17bc04bba66f6f6eacd8d172d6450217b
+  source_sha256: b7f1b832ddfb6662411cd7606322da7f3c76a92a2f9dfc24be9b766410392be4
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 52d2e9c245eeaf45d141d4c68650a88d5122be9e466dfc11ca7a418cc456ddb8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, maturity, papel_suporte, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal, validation_evaluation]
   glossary_sha256: e369fca5209e396286ce719b0c316a74a1c84e29f1844996e975804c90e4126e
-  translated_at: 2026-09-26T12:00:18Z
-  stamped_at: 2026-09-26T18:36:19Z
+  translated_at: 2026-09-27T07:54:01Z
+  stamped_at: 2026-09-27T07:54:01Z
   reviewed_by: null
 ---
 
@@ -107,7 +107,7 @@ After approval, the exception is recorded with all the mandatory fields and inte
 | Approval date | Yes | |
 | **Chain of authority** | Yes | See section below |
 | **Technical evidence** | Yes | Artefacts that support the justification and the compensation - scanner reports, tickets, logs, ADRs, test evidence; reference by URL or traceable path |
-| Expiry date | Yes | Max. 90 days; an extension requires reassessment |
+| Expiry date | Yes | Ceiling of Policy 05 §7 (absolute maximum 90 days, at L1); an extension requires reassessment |
 | Review trigger | Yes | Fixed date or condition (incident, architectural change, etc.) |
 
 Missing fields invalidate the record. An invalid record does not produce an approval.
@@ -149,7 +149,7 @@ L3 exceptions without the approval of AppSec and GRC/CISO are non-compliant rega
 
 ## Validity, renewal and expiry {#validade-renovação-e-expiração}
 
-The default maximum period is **90 days**. Extensions require a new full assessment - they are neither automatic nor granted by default.
+The maximum time limit is that of [Policy 05 §7](/sbd-toe/assets/policies/policy-gestao-excecoes#7-prazos-máximos-de-validade-ttl), by level and severity; **90 days** is the absolute ceiling (L1). Extensions require a new full assessment - they are neither automatic nor granted by default.
 
 Expired exceptions without active renewal constitute **non-compliance** from the expiry date onwards. They must be treated as such in the audit cycle.
 

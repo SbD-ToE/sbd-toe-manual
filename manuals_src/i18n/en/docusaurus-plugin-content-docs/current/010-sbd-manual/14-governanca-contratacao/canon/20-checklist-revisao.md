@@ -8,16 +8,16 @@ sidebar_label: Review Checklist
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/canon/20-checklist-revisao.md
-  source_sha256: f6c7205315c4523a3a66fef8246ab0db2be27dd04abdb0cb411a6beac7cbe728
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 67079d60e671d93a0a6c08e83f982ffbac334433c9d5c275bde7aebbc3188040
+  source_sha256: 4363d94b4776ee9e058fd0a02b5a5a8f6e63b5602fa6a4a42872948693895fef
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: a40fb85aa08d8b9b436a3a0a4956fff91ae8e9a181f7d5fe722f2c46390eec33
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, chapter_role, cycle_iteration, maturity, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 22d2b29f5da2ed7f1c130445c62c7ccb9fcaa0398a5a6a758039b80813d638a1
-  translated_at: 2026-09-26T12:00:22Z
-  stamped_at: 2026-09-26T18:36:23Z
+  translated_at: 2026-09-27T07:54:04Z
+  stamped_at: 2026-09-27T07:54:04Z
   reviewed_by: null
 ---
 
@@ -39,12 +39,12 @@ This checklist applies to **projects, applications or contracts** with a technic
 | Is the criticality level (L1–L3) documented and justified?                                                         | ☐           |
 | Are the approval authorities per risk level documented and known to the decision-makers, with traceable escalation? (`GOV-003`) | ☐           |
 | Are the risk-proportional minimum requirements identified and applied?                                         | ☐           |
-| Is there a formal exception management process, recording each exception with owner, compensating measure, referenceable evidence, expiry date and revalidation alert (max. 90 days)? (`GOV-004`/`GOV-005`) | ☐           |
+| Is there a formal exception management process, recording each exception with owner, compensating measure, referenceable evidence, expiry date (TTL of Policy 05 §7) and a revalidation alert 15 days before (or at the midpoint of the TTL, if shorter than 30 days)? (`GOV-004`/`GOV-005`) | ☐           |
 | Do contracts with third parties include risk-proportional security clauses? (`GOV-006`)                         | ☐           |
 | Have suppliers with technical access been validated (questionnaire/checklist; L3: SBOM, incident SLA, right to audit) before onboarding? (`GOV-007`) | ☐           |
 | Is there organisational traceability per application linking risk → requirements → exceptions → suppliers → owner? (`GOV-008`) | ☐           |
 | Is the chain of authority of each risk decision (who requested, assessed, approved) verifiable, with referenceable and retained evidence? (`GOV-009`) | ☐           |
-| Is there a periodic compliance review cycle per asset type (L3 quarterly, L2 half-yearly, suppliers annually), with corrective actions (owner and deadline)? (`GOV-010`) | ☐           |
+| Is there a periodic compliance review cycle by asset type (L3 quarterly, L2 half-yearly, L1 annual; suppliers annual, half-yearly at L3), with corrective actions (owner and deadline)? (`GOV-010`) | ☐           |
 | Are there governance KPIs defined, collected and reported to management, with thresholds that trigger corrective action? (`GOV-011`) | ☐           |
 | Is there an active maturity assessment (SAMM/DSOMM or equivalent) within ≤12 months, with an evolution plan (L3)? (`GOV-012`) | ☐           |
 | Is the application included in the control matrix of SbD-ToE practices, and are the relevant organisational policies formally approved and audited? | ☐           |

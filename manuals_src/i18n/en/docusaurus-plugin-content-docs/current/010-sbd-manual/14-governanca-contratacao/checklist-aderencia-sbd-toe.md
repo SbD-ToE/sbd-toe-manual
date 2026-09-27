@@ -7,16 +7,16 @@ tags: [checklist, aderencia, auditoria, governacao, L1, L2, L3, conformidade]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/checklist-aderencia-sbd-toe.md
-  source_sha256: b2657a548206b3f3f74aac8c2ec6e800edea2d375728df73715b7e58f3f94960
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 0ed070da3a888ab5536782d398ff89edd12123763f90a71eeedee3fbc4c11c71
+  source_sha256: df1018b341cb8b32567430df4c78dfa469fe19125bf30064ff1e771bee9caeaf
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 9d60e1d1e7b166b11c241fda68561aa1e475146bf2c5ef4b08bdef94c285d3be
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, instrument, mcp_reading_programa, nis2_early_warning, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, segregacao_de_funcoes, slug_threat_modeling, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b01001ad8668dd55ed6980a2bf52c61db449dfa29d725b9323bb7d978033cf65
-  translated_at: 2026-09-27T07:30:08Z
-  stamped_at: 2026-09-27T07:30:08Z
+  translated_at: 2026-09-27T07:54:05Z
+  stamped_at: 2026-09-27T07:54:05Z
   reviewed_by: null
 ---
 
@@ -81,7 +81,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 1.03 | The classification is reassessed when the defined triggers occur: new external integration, new data type, change of exposure, change of architecture, new user profile | **S** | pol-02, pol-04 |
 | 1.04 | The classification is reassessed periodically: L1 annual, L2 half-yearly, L3 quarterly | **L1+** | pol-04 |
 | 1.05 | For L3, the periodic reassessment requires AppSec + CISO approval | **L3** | pol-02 |
-| 1.06 | Exceptions to controls have a defined maximum TTL (L1: 90 days; L2: 60 days; L3: 30 days), technical justification and documented compensating mitigation | **S** | pol-03, pol-05 |
+| 1.06 | Exceptions to controls have a defined maximum TTL (ceilings of Policy 05 §7: L1 90 days; L2 60 days (Low/Medium) and 30 days (High); L3 30 days (Low/Medium) and 14 days (High); Critical 7 days with a remediation plan, not acceptable at L3), technical justification and documented compensating mitigation | **S** | pol-03, pol-05 |
 | 1.07 | Exceptions are reassessed before expiry - there are no expired exceptions without renewal or formal closure | **S** | pol-05 |
 
 ---
@@ -246,7 +246,7 @@ The levels are cumulative: L3 includes all L2+ items, which include all L1+ item
 | 9.06 | There is a set of security KPIs defined with data sources, owners and collection cadence | **L2+** | pol-35 |
 | 9.07 | Suppliers and third parties undergo security due diligence before contract (security policy, vulnerability management, incidents in the last 12 months) | **L2+** | pol-33 |
 | 9.08 | Contracts with suppliers include SbD-ToE clauses (incident notification, prohibition of subcontracting without approval, termination for non-compliance) | **L2+** | pol-33 |
-| 9.09 | Offboarding of suppliers and staff includes revocation of all access in less than 2 hours (immediate in the event of a security incident) | **S** | pol-33 |
+| 9.09 | Offboarding of suppliers and employees includes revocation of all access on the same day for planned departures, within ≤ 2 hours for unplanned departures and immediately for security reasons | **S** | pol-33 |
 | 9.10 | L3 suppliers deliver SBOM per release and periodic security testing reports | **L3** | pol-33 |
 | 9.11 | There is a Security Champion with specific training, with active participation in a champions community (monthly meetings) | **L3** | pol-37 |
 | 9.12 | Practical security exercises are carried out periodically (labs, CTF or incident tabletop) | **L3** | pol-37 |

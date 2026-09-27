@@ -7,16 +7,16 @@ tags: [kpi, metricas, CNT, containers, imagens, kubernetes, admission-controller
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/11-kpis-metricas.md
-  source_sha256: e1ae462dfdc909c770edcf2cc8dad38ab9d1c2f0e344de79a572125278965802
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 06943880f2631d057d2d68a9c294f610d7866a675a36caf362864313f3dc9624
+  source_sha256: 9af805d5fe8afa4389d9feca111dadbb0c4da1b42017f0483ad15cef6d2325ec
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 0c06d36a2f59b3d60f5930834da211ca11e3ff7283770ade5171660d109bac29
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, mapping, provenance, risk_level, sbdtoe_sbd, transversal, verificacao_check, verification_taxonomy]
   glossary_sha256: 177a63a568c8f07a90985279983bd080d9b1dbf7d387ea8fa74022e6859fa237
-  translated_at: 2026-09-26T12:48:48Z
-  stamped_at: 2026-09-26T18:34:55Z
+  translated_at: 2026-09-27T07:53:48Z
+  stamped_at: 2026-09-27T07:53:48Z
   reviewed_by: null
 ---
 
@@ -67,7 +67,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | ID | Indicator | Type | L1 | L2 | L3 | Dim. T | Period |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | CNT-K01 | % of production images without critical CVEs (CVSS ≥ 9.0) without a valid formal exception | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-03 | Weekly |
-| CNT-K02 | MTTR - time from the identification of a critical CVE in a production image to its replacement/patch | Qt | ≤ 14d | ≤ 7d | ≤ 3d | T-03 | Per event |
+| CNT-K02 | MTTR - time from the identification of a critical CVE in a production image to its replacement/patch | Qt | ≤ 30d | ≤ 7d | ≤ 3d | T-03 | Per event |
 | CNT-K03 | % of production images digitally signed and with signature verification before deploy | Q% | - | ≥ 70% | 100% | T-01, T-05 | Per release |
 | CNT-K04 | % of workloads in an orchestrator with an admission controller policy active and in blocking mode | Q% | - | ≥ 80% | 100% | T-01 | Monthly |
 | CNT-K05 | % of production base images updated within the cycle defined by policy (without mutable tags) | Q% | ≥ 70% | ≥ 90% | 100% | T-01, T-05 | Monthly |

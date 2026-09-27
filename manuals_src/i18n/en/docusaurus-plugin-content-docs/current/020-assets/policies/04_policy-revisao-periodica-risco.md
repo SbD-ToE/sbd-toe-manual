@@ -8,16 +8,16 @@ sidebar_position: 4
 translation:
   source_locale: pt
   source_path: 020-assets/policies/04_policy-revisao-periodica-risco.md
-  source_sha256: abc4bc1a901e7bb9be3c51e458919d0d19e23015e5c38bc23bcef471d93d4c57
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 0955f71c08688774a63b8cca900812d174be2b6d8c0082f2845d32d127fab040
+  source_sha256: c2844fc15823d733184516650683140307a5d846e01c307f03120a10d1125c49
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 68442164cfc9bd5d4ec04ffe43860a132e4c49eefa73b7aea339499f89cfc4b8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, cycle_iteration, lifecycle_phase, mcp_reading_programa, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: 24dcf33bc58faa933548c4084bfc00d9a3f08faeabe0993196d4d80717b9def8
-  translated_at: 2026-09-26T14:10:44Z
-  stamped_at: 2026-09-26T18:36:44Z
+  translated_at: 2026-09-27T07:54:08Z
+  stamped_at: 2026-09-27T07:54:08Z
   reviewed_by: null
 ---
 
@@ -84,7 +84,7 @@ Lowering the criticality level requires rigorous technical justification and app
 
 ### 4.1 Triggers that require an immediate review {#41-triggers-que-obrigam-a-revisão-imediata}
 
-The review of the classification must be triggered **immediately** (within a maximum of 5 working days) when any of the following events occurs:
+The review of the classification must be triggered **immediately** — started within at most 5 working days and completed within 30 days — when any of the following events occurs:
 
 | Trigger | Description |
 |---|---|

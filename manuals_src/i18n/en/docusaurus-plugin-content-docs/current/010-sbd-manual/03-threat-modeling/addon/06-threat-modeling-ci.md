@@ -6,16 +6,16 @@ tags: [ci, cd, devsecops, threat modeling, automação, validação, iriusrisk]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/03-threat-modeling/addon/06-threat-modeling-ci.md
-  source_sha256: 6a0fa96ea28bb61616e01b81e34d307e4395aea33ee79fcc3702fddfd04dd774
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: ba52b35580323844f245c2083bb9e0b2f0f36137153781b07ec3e967bf8c4be5
+  source_sha256: e06fdc32a00904115d7086397454fc1be8e11291792e4b8e8af1f9bf5dd90016
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: adc1b410aa9a24048c1996e144f71b23feb7de6993420c4fd09a49402a533465
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [como_fazer, cycle_iteration, lifecycle_phase, mapping, practitioner_manual, requirement_runtime, sbdtoe_sbd, threat, traceability, validation_evaluation]
   glossary_sha256: ab801d496384b679b03c1ad3c038b6b1d1ba3c5f559337976bbc75fad4a59ad1
-  translated_at: 2026-09-25T20:16:59Z
-  stamped_at: 2026-09-26T18:33:19Z
+  translated_at: 2026-09-27T07:53:39Z
+  stamped_at: 2026-09-27T07:53:39Z
   reviewed_by: null
 ---
 
@@ -73,7 +73,7 @@ The CI/CD pipeline must verify not only that the files are present, but also whe
 | `mitigations.md` or `yaml` file has a defined state per threat  | ☑️         |
 | `decisions.md` documents accepted risks with date + justification     | ☑️         |
 | Commits or issues reference threats (`TM-001`, etc.)              | ☑️         |
-| Last review of the model carried out within the last 30 days              | ☑️         |
+| Model reviewed within the cadence of Policy 08 and ≤ 30 days after the latest architectural change | ☑️         |
 
 ---
 
@@ -146,7 +146,7 @@ fi
 | Type of failure                                 | Recommended pipeline reaction    |
 | --------------------------------------------- | --------------------------------- |
 | Model missing                            | ❌ Critical failure                   |
-| Model outdated (> 30 days)              | ⚠️ Alert + conditional block  |
+| Outdated model (> 30 days after an architectural change, or outside the cadence of Policy 08) | ⚠️ Alert + conditional block  |
 | Threats neither mitigated nor justified        | ⚠️ Warning + requires issue/document |
 | Linting fails (invalid YAML, Mermaid)        | ❌ Build fails                     |
 | No link between threat and code/backlog | ⚠️ Alert for manual review     |

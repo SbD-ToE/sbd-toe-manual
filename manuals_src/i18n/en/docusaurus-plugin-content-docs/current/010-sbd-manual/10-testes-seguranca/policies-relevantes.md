@@ -7,16 +7,16 @@ sidebar_position: 60
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/policies-relevantes.md
-  source_sha256: ef090de3c6fd9e24d5db43578f9ecfa8b6fbcd2f728e0a96312ec2f96b5b162e
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 39e0c2433ccac74c3d257a2101943be4b5955496b85e778ed71594a5e5116561
+  source_sha256: 320587559f4efab7483861eb48e1b320688b291eab8a36a04aca82374aefc05f
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 5eaf9f2f139a658fa25f437e7338a538917f8b0dc056e62c1d5fc7f0fee1df69
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, lifecycle_phase, maturity, practitioner_manual, traceability, validation_evaluation]
   glossary_sha256: 8848f1828c56b0d4511ed27e9a8b9e346d3aafde7b9d366d88933826ae528972
-  translated_at: 2026-09-26T10:31:39Z
-  stamped_at: 2026-09-26T18:35:20Z
+  translated_at: 2026-09-27T07:53:52Z
+  stamped_at: 2026-09-27T07:53:52Z
   reviewed_by: null
 ---
 
@@ -55,7 +55,7 @@ These policies:
 | [Application Security Validation Policy](/sbd-toe/assets/policies/policy-estrategia-testes)       | ✅ Yes       | All applications with continuous delivery   | Required test types (SAST, DAST, fuzzing), minimum levels by criticality, approved tools. |
 | [Security Findings Management Policy](/sbd-toe/assets/policies/policy-estrategia-testes)            | ✅ Yes       | All products with an active scanner        | Process for triage, classification, prioritisation, tracking, ownership and reporting of findings. |
 | [Policy on Exceptions to Identified Vulnerabilities](/sbd-toe/assets/policies/policy-excecoes-cve)  | ✅ Yes       | When a finding is not fixed          | Technical justification, validity period, periodic review, compensating mitigation. |
-| [Offensive PenTesting Execution Policy](/sbd-toe/assets/policies/policy-pentesting)            | ⚠️ Optional  | L2/L3 applications, external APIs, critical products | Defined periodicity (e.g. half-yearly), scope, methodology, objectives (black-box/grey-box), reporting and mandatory follow-up. |
+| [Offensive PenTesting Execution Policy](/sbd-toe/assets/policies/policy-pentesting)            | ⚠️ Optional  | L2/L3 applications, external APIs, critical products | Defined periodicity (annual at L2/L3, with triggers), scope, methodology, objectives (black-box/grey-box), mandatory reporting and follow-up. |
 | [Security Test Coverage Policy](/sbd-toe/assets/policies/policy-estrategia-testes)           | ⚠️ Optional  | Critical applications (L2–L3)                | Definition of expected coverage metrics, targeted fuzzing, regression testing. |
 | [Policy on Integrating Testing with the Lifecycle](/sbd-toe/assets/policies/policy-estrategia-testes)     | ⚠️ Optional  | Teams with DevSecOps integration           | Definition of BDD criteria, integration with pipelines, PRs and release processes. |
 | [Test Revalidation and Observability Policy](/sbd-toe/assets/policies/policy-estrategia-testes)    | ⚠️ Optional  | Environments with audit requirements      | Revalidation of findings, logging of tests, analysis of execution failures. |

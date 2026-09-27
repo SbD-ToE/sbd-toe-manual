@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/aplicacao-lifecycle.md
-  source_sha256: edf5ec33b867163d4128cc94330b763ff9b3829dac7f6310f7b26ad476c010d9
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 5d60e85d2510f908dddf5b173c64ce3e401bc24671ec7e234a95501dc72c2a23
+  source_sha256: 185f2e88bfa7ffe21305ca02dcd8c67cb1b2de64873aed9ef7bb4bd9c7d6b5c9
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 68097900e4b5fec8d9349319e16fe941de216efce3e26be587929a24fec351e5
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, como_fazer, cra_support_period, cycle_iteration, discipline, lifecycle_phase, papel_suporte, practitioner_manual, provenance, risk_level, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c2753e8f6683dd662128141b2367ef4a76a91da340ee5e3eaff416993b57e772
-  translated_at: 2026-09-27T07:05:59Z
-  stamped_at: 2026-09-27T07:05:59Z
+  translated_at: 2026-09-27T07:53:49Z
+  stamped_at: 2026-09-27T07:53:49Z
   reviewed_by: null
 ---
 
@@ -620,16 +620,16 @@ Heterogeneous bases increase operational cost and configuration risk. A patching
 As **DevOps + AppSec**, I want to maintain a catalogue of Golden Base Images with semantic versioning and a patching SLA, so as to standardise security and reduce configuration drift.
 
 **Acceptance criteria (BDD).**  
-- **Given** that an Ubuntu 22.04 base receives a critical CVE (CVSS≥9) **When** the patch is available **Then** a new tag is cut (e.g. ubuntu-22.04:v1.2.3→v1.2.4) and propagated in `<7d` (L3) or `<30d` (L2)
+- **Given** that an Ubuntu 22.04 base receives a critical CVE (CVSS≥9) **When** the patch is available **Then** a new tag is cut (e.g. ubuntu-22.04:v1.2.3→v1.2.4) and propagated within ≤ 3 days (L3) or ≤ 7 days (L2), in line with Policy 24
 - **Given** that a microservice builds on a discontinued base **When** the pipeline validation runs **Then** the build fails with a clear end-of-life message
 - **Given** that the node:20 base is updated **When** a new release is published **Then** a changelog is added to `golden-images-catalog.md` with an SBOM diff
 
 **Checklist.**  
 - [ ] `golden-images-catalog.md` catalogue with semantic versioning (ubuntu-22.04:v1.2.3, alpine:v3.19.1)
 - [ ] Signing of every golden image (Cosign + OIDC via Rekor)
-- [ ] Patching SLA defined by criticality (L1: recommended, L2: 30d, L3: 7–14d)
+- [ ] Patching SLA defined by criticality (Policy 24: critical 7 days at L2, 3 days at L3; L1 recommended)
 - [ ] Integration with a CVE feed (e.g. Trivy API, Red Hat advisories)
-- [ ] Deprecation policy with 90d notice before removing a tag
+- [ ] Deprecation policy with notice on the deprecation date and removal of the tag ≤ 60 days later (Policy 24)
 - [ ] Record of every push with SBOM (CycloneDX JSON in `image:tag@digest.sbom.json`)
 - [ ] Dashboard: time-to-patch by criticality, adoption rate of old images
 
@@ -646,8 +646,8 @@ As **DevOps + AppSec**, I want to maintain a catalogue of Golden Base Images wit
 | Level | Prescription | Patch SLA | Signing | Deprecation | Audit |
 |-------|-----------|----------|-----------|------------|-----------|
 | **L1** | Recommended; informal catalogue | Ad hoc | No | Manual | Annual |
-| **L2** | Mandatory for prod; published catalogue | 30d critical | Cosign recommended | 90d notice | Half-yearly |
-| **L3** | Mandatory; strict SLA | 7–14d critical | Cosign + OIDC mandatory | 90d notice + validation | Monthly |
+| **L2** | Mandatory for prod; published catalogue | 7d critical | Cosign recommended | Notice at deprecation; removal ≤ 60d | Half-yearly |
+| **L3** | Mandatory; strict SLA | 3d critical | Cosign + OIDC mandatory | Notice at deprecation; removal ≤ 60d + validation | Monthly |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -655,7 +655,7 @@ As **DevOps + AppSec**, I want to maintain a catalogue of Golden Base Images wit
 | Cataloguing | Base submission | AppSec Engineer | Review within 5d |
 | Patching | CVE published | DevOps / SRE (automatic if via Dependabot) | Per SLA |
 | Validation | New tag | CI/CD pipeline | `<2h` for approval |
-| Sunsetting | EOL reached | DevOps / SRE + GRC / Compliance | Notification 90d in advance |
+| Sunsetting | EOL reached | DevOps / SRE + GRC / Compliance | Notice at deprecation; removal ≤ 60d |
 
 **Useful links.**  
 [Secure Base Images](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base)
@@ -946,7 +946,7 @@ As **AppSec + GRC**, I want to manage exceptions to findings/policies as formal,
 
 **Checklist.**  
 - [ ] Versioned exception record (ticket/PR) with owner and approver  
-- [ ] Mandatory and short TTL at L3 (e.g. 7–30 days); defined at L2 (e.g. 30–90 days)  
+- [ ] TTL in line with Policy 05 §7 (L3: 30 days Low/Medium, 14 days High, Critical not acceptable; L2: 60 / 30 days)  
 - [ ] Compensating measures documented (e.g. egress restriction, runtime sandbox, reinforced monitoring)  
 - [ ] Revalidation per event (new CVE, incident, change of architecture/runtime)  
 - [ ] Periodic report of active exceptions (inventory + aggregate risk)
@@ -1173,7 +1173,7 @@ As **DevOps / SRE**, I want an image retention/clean-up policy with periodic ren
 **Acceptance criteria (BDD).**  
 - **Given** a base image with a security patch available  
   **When** the renewal SLA applies  
-  **Then** a rebuild (or automatic trigger) takes place within the deadline (L3: ≤30 days; L1: ≤90 days)  
+  **Then** a rebuild (or automatic trigger) takes place within the time limit (L3: ≤30 days; L2: ≤60 days; L1: ≤90 days)  
 - **Given** an image not rebuilt for longer than the defined limit  
   **When** the periodic verification runs  
   **Then** it is flagged and subject to renewal or deprecation  
@@ -1199,7 +1199,7 @@ As **DevOps / SRE**, I want an image retention/clean-up policy with periodic ren
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Ops | Base patch / renewal window | DevOps / SRE | Per SLA (L3: ≤30d) |
+| Ops | Base patch / renewal window | DevOps / SRE | Per SLA (L1 ≤90d; L2 ≤60d; L3 ≤30d) |
 | GRC | Retention audit | GRC / Compliance | Periodic |
 
 **Useful links.** [Secure Base Images](/sbd-toe/sbd-manual/containers-imagens/addon/imagens-base), [Inventory and SBOM](/sbd-toe/sbd-manual/containers-imagens/addon/sbom-containers)

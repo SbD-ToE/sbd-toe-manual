@@ -7,16 +7,16 @@ tags: [kpi, metricas, DEV, desenvolvimento, sast, secrets, code-review, L1, L2, 
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/06-desenvolvimento-seguro/addon/11-kpis-metricas.md
-  source_sha256: b469f2cc361b1c0ce471333236a1b0d077f2982a6456a5503936fb85dc349eba
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 4e124fab717cafb0108fd5200a1176545096a2f7505d5cfad4b67af3f4e3d684
+  source_sha256: f508a15f951a3d63b3298623ee02d98037c786a568e5f5f837ae288d387ff1f1
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: ee8b5a42ff5bc858717ffca11f33e5373cac6ab16f2b8cf74fefa2941fbb41f9
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, framework_source_corpus, mapping, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 128a402e6c476555ea03664ca566067d5eddb32cf87161653352578aea7f5ba3
-  translated_at: 2026-09-26T12:48:43Z
-  stamped_at: 2026-09-26T18:34:06Z
+  translated_at: 2026-09-27T07:53:44Z
+  stamped_at: 2026-09-27T07:53:44Z
   reviewed_by: null
 ---
 
@@ -66,7 +66,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 | ID | Indicator | Type | L1 | L2 | L3 | Dim. T | Period |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
-| DEV-K01 | % of SAST findings of critical/high severity resolved within SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 85% (SLA: 14d) | ≥ 98% (SLA: 7d) | T-03 | Per release |
+| DEV-K01 | % of SAST findings of critical/high severity resolved within SLA | Q% | ≥ 70% (SLA: 30d critical / 90d high) | ≥ 85% (SLA: 7d / 30d) | ≥ 98% (SLA: 3d / 15d) | T-03 | Per release |
 | DEV-K02 | # of secrets detected in commits and not removed/rotated in less than 24h | Q# ↓ | ≤ 2/month | = 0 | = 0 | T-01 | Continuous |
 | DEV-K03 | % of PRs in L2/L3 applications with explicit verification of a security criterion in the code review | Q% | - | ≥ 80% | 100% | T-01, T-04 | Monthly |
 | DEV-K04 | % of SAST exceptions (mutes/waives) with a recorded and traceable formal approval | Q% | ≥ 80% | 100% | 100% | T-02 | Monthly |

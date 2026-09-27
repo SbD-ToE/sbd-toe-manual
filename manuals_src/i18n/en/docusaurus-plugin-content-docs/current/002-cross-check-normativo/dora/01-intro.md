@@ -7,16 +7,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/01-intro.md
-  source_sha256: c9dfe05bd0670310d7d185d485956d2d1e2eeb85ba37a7a8ef8a5ed9650ebc8b
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: f2daad69669394a61092ac883daf83cea6fefe68dec14df38d3cc2826bf4c1ed
+  source_sha256: 415fd175088f8e6f5519d4c255d4313a580b10f16656de99826582967f1ef98d
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 7a9ca124a6d944392dfa458c865393ac52154735f35a9d0b4b0238a2209f3220
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, dora_digital_operational_resilience, dora_financial_entity, dora_ict_risk, dora_ict_rmf, dora_ict_tpp, dora_major_ict_incident, dora_register_of_information, eu_management_body, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, traceability, validation_evaluation]
   glossary_sha256: ff9e9c7c0e48c0bfc306a7cdfc46074c67f972a6fafd399ec6fc1eaa64ef69d0
-  translated_at: 2026-09-27T07:29:54Z
-  stamped_at: 2026-09-27T07:29:54Z
+  translated_at: 2026-09-27T07:53:31Z
+  stamped_at: 2026-09-27T07:53:31Z
   reviewed_by: null
 ---
 
@@ -326,17 +326,17 @@ B. Exceções ACEITÁVEIS com aprovação board-level (L3 DORA):
    - Componentes legados sem patch aplicável
    - CVEs com "no fix available" + compensação (ex: isolamento de rede)
    - Arquitetura herdada em transição
-   ➜ Ação: APROVAR se board/CRO assina; TTL ≤ 90 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se board/CRO assina; TTL da Política 05 §7 (L3: 30 dias; High 14 dias; Critical não aceitável); reavaliação obrigatória
 
 C. Exceções ACEITÁVEIS com aprovação CISO-level (L2 DORA):
    - Requisitos técnicos com compensação equivalente
    - Testes legítimos de resiliência suspensos (ex: TLPT adiado)
-   ➜ Ação: APROVAR se CISO/AppSec assina; TTL ≤ 180 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se CISO/AppSec assina; TTL da Política 05 §7 (L2: 60 dias; High 30 dias; Critical 7 dias); reavaliação obrigatória
 
 D. Exceções ACEITÁVEIS com aprovação AppSec-level (L1):
    - MVP com funcionalidade reduzida de segurança
    - Prototipagem com dados não-sensíveis
-   ➜ Ação: APROVAR se AppSec assina; TTL ≤ 365 dias; reavaliação obrigatória
+   ➜ Ação: APROVAR se AppSec assina; TTL da Política 05 §7 (L1: 90 dias; Critical 7 dias); reavaliação obrigatória
 
 Rastreamento:
 - Ferramenta GRC centralizada (SAP GRC, AuditBoard, ou custom)

@@ -5,16 +5,16 @@ tags: [canon, politicas, risco, classificacao, excecao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/policies-relevantes.md
-  source_sha256: 55b234ea202a9995d2f827e3c5e06df944998446b5d88267740439de6e58f6b7
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 39c4e1c49590ce826c769b3c34203c2ae433fa483f0115be7e499ed68126691d
+  source_sha256: 572a8a3b8e9493c2bdfb9631cd83415f5445e3bcb0da0a72ac4297b8cf9b3f9e
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 11401a40b7a5a871665826a0b162ff06e6d33f2a33a197938ea097a3008a16d7
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, categorize_sw, chapter_role, framework_source_corpus, maturity, practitioner_manual, traceability]
   glossary_sha256: 35da5116b0bd7b0369ceb0fa7cdd9e3bb1bc2cd08f4b7580a76763aa7f89afd5
-  translated_at: 2026-09-25T20:18:55Z
-  stamped_at: 2026-09-26T18:32:55Z
+  translated_at: 2026-09-27T07:53:39Z
+  stamped_at: 2026-09-27T07:53:39Z
   reviewed_by: null
 ---
 
@@ -46,7 +46,7 @@ These policies:
 |----------------------------------------------------|--------------|----------------------------------------|---------------------------------------------------------------------------------------------------------------|
 | [Application Risk Classification Policy](/sbd-toe/assets/policies/policy-classificacao-risco)    | ✅ Yes       | All projects and product teams | Mandatory classification model (exposure, data, impact); moments of application; recording and tracking. |
 | [Residual Risk Acceptance Policy](/sbd-toe/assets/policies/policy-aceitacao-risco)            | ✅ Yes       | Security, management, product owners    | Formal criteria for acceptance; those responsible; temporal validity; recording and traceability.               |
-| [Periodic Risk Review Policy](/sbd-toe/assets/policies/policy-revisao-periodica-risco)             | ✅ Yes       | The whole organisation                     | Minimum frequency (e.g. 6 months); mandatory triggers; required evidence.                                   |
+| [Periodic Risk Review Policy](/sbd-toe/assets/policies/policy-revisao-periodica-risco)             | ✅ Yes       | The whole organisation                     | Minimum frequency per level (12 / 6 / 3 months); mandatory triggers; evidence required.                                   |
 | [Security Decision Traceability Policy](/sbd-toe/assets/policies/policy-rastreabilidade) | ⚠️ Optional | Organisations subject to audit      | Versioning of classifications; link to architecture, requirements and controls.                           |
 
 ---

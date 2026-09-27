@@ -6,16 +6,16 @@ tags: [base, classificacao, risco, proporcionalidade, ciclo-vida]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/intro.md
-  source_sha256: b289e7aa0f89193cb030454414943dde07970c2773de5c4998ae389630b5ee81
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 034ddf62b8bd4d79ea7cddfb1d727c5a5e046065f06593dae1b107d336c847d1
+  source_sha256: 20b5a0eb3e281ff8950aa448e52a5caa3fbe3ba1550cd4827c554098f438ed9e
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: e8ad62636824ecda2d1d2913fc7dd4984fab4ee843b59b9bd102cb2e603712e1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [basilar, chapter_role, cycle_iteration, evidenciabilidade, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, risk_level, role_tech_lead, sbdtoe_sbd, traceability]
   glossary_sha256: cbe1f3640988274ebc7dbade162cd30240f42b41d9cf02457079156d87079c0c
-  translated_at: 2026-09-26T17:58:12Z
-  stamped_at: 2026-09-26T18:32:54Z
+  translated_at: 2026-09-27T07:53:38Z
+  stamped_at: 2026-09-27T07:53:38Z
   reviewed_by: null
 ---
 
@@ -96,7 +96,7 @@ What varies are the **attributes of the risk** - such as origin, mechanism, dete
 - When automation/assistance mechanisms (incl. AI) with an impact on the risk attributes are introduced or changed;
 - At major releases or critical milestones (e.g. production);
 - After relevant security incidents;
-- At least every **6 months** or **at each architecture review or security roadmap review**.
+- Periodically, in line with Policy 04 (**annual** at L1, **half-yearly** at L2, **quarterly** at L3), and **at each architecture or security roadmap review**.
 
 > Periodic review of the risk classification directly supports **intermediate maturity** practices in **SAMM**, **DSOMM** and **SSDF**.
 
@@ -136,7 +136,7 @@ Risk classification **is not a one-off event**, but a continuous process. It mus
 
 - On changes to architecture, exposure, data or automation/assistance;
 - Before critical releases;
-- Periodically (e.g. every 6 months);
+- Periodically (annual at L1, half-yearly at L2, quarterly at L3 — Policy 04);
 - After relevant incidents or detections.
 
 > 📌 See: [Risk Classification Lifecycle](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)

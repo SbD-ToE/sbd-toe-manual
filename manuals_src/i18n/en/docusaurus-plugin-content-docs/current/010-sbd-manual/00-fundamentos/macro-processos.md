@@ -8,16 +8,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/macro-processos.md
-  source_sha256: bb0c4fdb48c5af7ed06c7b7c12fffc01518f41439715b4e231bb81d7ed2b938c
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 9667b444f00198d922c9709e3291570bcf14a674fe96fee9a87d3fbca6e74a1e
+  source_sha256: 87c45851af5810a41d08ad190bbea50648855ef62274418ccb494a584f151225
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: f94f37d4561b00db16e23ff4c3c33a039373a56050fe88180d81c7ecc14d25fa
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, audit_trail, avaliacao, capacitacao, chapter_role, como_fazer, cycle_iteration, deterministic, discipline, esquema_regime, eu_ai_training_data, evidenciabilidade, framework_source_corpus, gap_family, layer, lifecycle_phase, macro_processo, macroprocess_entity, mapping, maturity, mcp, mcp_reading_programa, oracle, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, provenance, requirement_runtime, risk_level, role_procurement, sbdtoe_sbd, schema, slug_threat_modeling, threat, traceability, transversal, travessia_relacao, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: f170aa9185d54dbe6f0e30426beaa60241d5132ee314f06b6fe843d414fd03fc
-  translated_at: 2026-09-26T17:58:10Z
-  stamped_at: 2026-09-26T18:32:27Z
+  translated_at: 2026-09-27T07:53:33Z
+  stamped_at: 2026-09-27T07:53:33Z
   reviewed_by: null
 ---
 
@@ -396,7 +396,7 @@ It applies to the **person in a role** (staff member, security *owner*, approver
 
 - Arrival of a staff member or change of function (Training and Onboarding, US-01; `TRN-002`); designation or rotation of the security *owner* (Governance and Contracting, US-09).
 - *Onboarding* of a supplier or *contractor* (`GOV-007`, `GOV-013`); periodic access review — half-yearly at L1, quarterly at L2/L3 (`GOV-014`); *offboarding* (Governance and Contracting, US-17).
-- Exception request (canonical process, step 1); expiry — default maximum term of 90 days — or an out-of-term *trigger*: an incident related to the missing control, a change of architecture, risk or classification, a change of supplier, dependency or environment (`GOV-005`; canonical process, "Validity, renewal and expiry").
+- Exception request (canonical process, step 1); expiry — TTL of Policy 05 §7, with an absolute ceiling of 90 days — or an out-of-cycle *trigger*: incident related to the missing control, change of architecture, risk or classification, change of supplier, dependency or environment (`GOV-005`; canonical process, "Validity, renewal and expiry").
 - New agent, or change of autonomy level, *scope* or *tool* *allowlist*, which reopens the proposal → approval cycle (Security Requirements, [US-15](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-15)).
 - *Emergency deploy* — the only scenario with *post-facto* approval, within a maximum of 24h and with notification to Executive Management / CISO before or during ([deploy exceptions](/sbd-toe/sbd-manual/deploy-seguro/addon/excecoes-deploy)).
 
@@ -434,7 +434,7 @@ It applies to the **person in a role** (staff member, security *owner*, approver
 
 - **Access blocked until *onboarding* is validated** (`TRN-004`; Training and Onboarding, US-01: automatic blocking in Git and *pipelines*).
 - **Explicit, nominal and recorded formal approval** — the canonical process invalidates tacit approvals and chains with missing steps.
-- **Expiry** — 90 days by default; non-renewal turns the exception into an active non-conformity (`GOV-005`).
+- **Expiry** — TTL of Policy 05 §7 (absolute ceiling of 90 days); non-renewal converts the exception into active non-compliance (`GOV-005`).
 - **Periodic review of third-party access** with same-day removal (`GOV-014`; Governance and Contracting, US-19).
 - **Reopening of the *mandate* cycle** at every change of level, *scope* or *allowlist* — informal *amendments* are prohibited (Security Requirements, US-15); ***kill-switch* exercised** (`REQ-AGN-003`).
 - **Separation between the automated signal and the decision** to promote, to block and to take an irreversible action (Secure CI/CD, US-15; Security Testing, US-16; Secure Deployment, US-16): the tool signals, the role with authority decides.

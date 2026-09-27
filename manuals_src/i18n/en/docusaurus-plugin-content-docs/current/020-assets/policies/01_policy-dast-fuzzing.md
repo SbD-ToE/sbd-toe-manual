@@ -8,16 +8,16 @@ sidebar_position: 1
 translation:
   source_locale: pt
   source_path: 020-assets/policies/01_policy-dast-fuzzing.md
-  source_sha256: 510a592508c76597b018d117e07e2dd075f1b1cf7695be0c4277c671161ef0b4
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 6d5df6480904863cb55acc237dd17d0bce7d7e3ee1a06ea24af3cffcc09590d4
+  source_sha256: 0d8906d64ec8ac0f1bfc4b08f59dd6e163913ebb486d6534f8afb0819e8009fa
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 1225b106419d9f291a8e6894381a8091abf30303cd9e8df6454228b89feae8c2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 2190616af45c704d0bdde9b6b05175705cda4e10018fb8b2c46ae504cde9f3e4
-  translated_at: 2026-09-27T07:06:10Z
-  stamped_at: 2026-09-27T07:06:10Z
+  translated_at: 2026-09-27T07:54:06Z
+  stamped_at: 2026-09-27T07:54:06Z
   reviewed_by: null
 ---
 
@@ -94,7 +94,7 @@ This policy is **mandatory for L2 and L3**. For L1, the practices described here
 |---|---|
 | Critical | Blocks automatically; immediate escalation to AppSec Engineer |
 | High | Blocks automatically; requires a validated fix or a formal exception |
-| Medium | Does not block; mandatory recording in the centralised platform; 30-day SLA |
+| Medium | Does not block; mandatory recording in the centralised platform; SLA in line with Policy 19 §4.3 (180 / 90 / 45 days at L1 / L2 / L3) |
 | Low / Info | Does not block; recording; quarterly review |
 
 :::note Separation between automated signal and human decision
@@ -196,12 +196,14 @@ All DAST and fuzzing findings are consolidated in the centralised security manag
 
 ### 5.1 Resolution SLAs {#51-slas-de-resolução}
 
-| Severity | SLA |
-|---|---|
-| Critical | 24 hours |
-| High | 7 days |
-| Medium | 30 days |
-| Low | 90 days |
+In line with the single ladder of Policy 19 §4.3 (triage: Critical 24 hours, High 48 hours, at any level):
+
+| Severity | L1 | L2 | L3 |
+|---|---|---|---|
+| Critical | 30 days | 7 days | 3 days |
+| High | 90 days | 30 days | 15 days |
+| Medium | 180 days | 90 days | 45 days |
+| Low | 365 days | 180 days | 90 days |
 
 ---
 

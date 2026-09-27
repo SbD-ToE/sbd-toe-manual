@@ -7,16 +7,16 @@ tags: [canon, checklist, controlo, projeto, aplicacao]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/canon/20-checklist-revisao.md
-  source_sha256: 3f66b9c3f9c495f6f234d4a00d3dd7373fa8008b44c8317fcbcfa6130dbededf
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 53562c351c5fe046b3d9c19654f801d7daae84ccab5d014bd433b6f2a7098cf6
+  source_sha256: 68ff021f8f90c962dd15063740f61e25a6c49747d984dcf8d9a8ab9be41885ef
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 07d8ac01f377e89c1389a9105bd9a54892acecaf29732018b2066596f13414af
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, deterministic, instrument, maturity, role_tech_lead, sbdtoe_sbd, threat, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 5db6a4b25194691c747c03f273d909edd249bc4d5c6c1a0b2080d00bf13ad42d
-  translated_at: 2026-09-25T20:18:52Z
-  stamped_at: 2026-09-26T18:32:53Z
+  translated_at: 2026-09-27T07:53:37Z
+  stamped_at: 2026-09-27T07:53:37Z
   reviewed_by: null
 ---
 
@@ -29,7 +29,7 @@ It serves as an **instrument for periodic verification, internal audit and an op
 - The corresponding minimum controls have been applied;
 - There is traceable evidence supporting the risk decisions.
 
-> 🗓️ **Review is recommended at least every 6 months**, or whenever relevant changes occur (functionality, data, exposure).
+> 🗓️ **A review is recommended at least at the cadence of Policy 04 (annual at L1, half-yearly at L2, quarterly at L3)**, or whenever there are relevant changes (functionality, data, exposure).
 
 ---
 

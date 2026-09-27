@@ -7,16 +7,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/intro.md
-  source_sha256: c6a3ea15865bcb07e3a81cb45dc615ad11ab9f7a7583add938d47b473d41b15f
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 62d9be1bea56ce79558963777f9c524276ebf8ff2a699a0147935800096532cd
+  source_sha256: 95e9292315352a3f41ceb3e2cbeab785b50db8d10ec0d3a6fe29ce2a34bc6f56
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: ce4e8fc97c1c0f22e43d0bc2d860f06a7f9b41fe36399e859239d2ccde003b42
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [basilar, capacitacao, chapter_role, cycle_iteration, lifecycle_phase, practitioner_manual, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: 4e4c8a329c7550f5284f312e7fe7b7b5197dee9c019258792f558e2fc096478c
-  translated_at: 2026-09-26T12:48:59Z
-  stamped_at: 2026-09-26T18:35:49Z
+  translated_at: 2026-09-27T07:53:57Z
+  stamped_at: 2026-09-27T07:53:57Z
   reviewed_by: null
 ---
 
@@ -118,7 +118,7 @@ Alert exceptions (e.g. a legitimate but suspicious pattern) follow a formal proc
    justification: "Processo de backup automático, validado com Dev"
    approved_by: "AppSec Engineer (email@example.com)"
    approved_date: "2026-01-04"
-   expiration_date: "2026-07-04"  # Máximo 6 meses
+   expiration_date: "2026-03-05"  # Tecto da Política 05 §7 (p. ex. 60 dias em L2, Low/Medium)
    evidence: "link/to/ticket-JIRA-123"
    ```
 
@@ -127,7 +127,7 @@ Alert exceptions (e.g. a legitimate but suspicious pattern) follow a formal proc
    - HIGH: AppSec Engineer
    - MEDIUM: IR Analyst
 
-3. **Time validity**: Exceptions expire automatically (max. 6 months L2, 3 months L3)
+3. **Time validity**: Exceptions expire automatically (ceilings of Policy 05 §7: L1 90 days; L2 60 days (Low/Medium) and 30 days (High); L3 30 days (Low/Medium) and 14 days (High); Critical 7 days with a remediation plan, not acceptable at L3)
 
 4. **Reassessment**: Before expiry, the pattern is reassessed
 

@@ -6,16 +6,16 @@ tags: [governanca, contractors, offboarding, rescisao, seguranca, auditoria]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/13-checklist-offboarding.md
-  source_sha256: a94e0d32d777d4dbdf4b51596f00ef925f88bbca2e812706875e19f5fcd7281a
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: c46c1c6ee86eb786e867804062593daa02551cfab62064ff5899b6c7256c85fe
+  source_sha256: af3cfe45f4752aa63bf79f4271214deb7cfe0973a054f375e7c63355ae17b1e4
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: b6b211abaec6da5d0a90413ad53deb416f62f09d724e3c8de933cfe75704a4b8
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [cycle_iteration, framework_source_corpus, mirror_osf, role_tech_lead, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 5eeae2b4c43fea6604885323ecebdb95dc382b55f9ce490f85c63a7bc3e12612
-  translated_at: 2026-09-27T07:06:07Z
-  stamped_at: 2026-09-27T07:06:07Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [cycle_iteration, framework_source_corpus, mirror_osf, practitioner_manual, role_tech_lead, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 61461bcc9bf3491e7ba4723a058e2f416e19ce1a2ec6d9bee6926491062f1e7e
+  translated_at: 2026-09-27T07:54:01Z
+  stamped_at: 2026-09-27T07:54:01Z
   reviewed_by: null
 ---
 
@@ -120,7 +120,7 @@ Location: /archive/offboarded/{contractor-name}/{date}/
 
 ## 🔐 OFFBOARDING EXECUTION (T+0 END DATE) {#-offboarding-execution-t0-data-de-término}
 
-### 4. Revocation of Technical Access (`<`24h after T+0) {#4-revogação-de-acesso-técnico-24h-após-t0}
+### 4. Revocation of Technical Access (on the same day as T+0) {#4-revogação-de-acesso-técnico-24h-após-t0}
 
 **Timeline:** Start revocation between T+0 (end of the working day) and T+1 (morning)
 
@@ -241,7 +241,7 @@ git clone https://github.com/[org]/[private-repo]
 | **OAuth tokens** | DevOps | Revoke all tokens for contractor's app | [ ] | App reauthenticates |
 | **Certificates/SSL keys** | DevOps | Rotate if contractor had access | [ ] | Old cert expires or revoked |
 
-**Timing:** All rotations SAME DAY or next day latest (DORA requirement)
+**Time limit:** all rotations on the same day for planned departures, within ≤ 2 h for unplanned departures and immediately for security reasons (the Manual's choice; Policy 33 §7).
 
 ---
 

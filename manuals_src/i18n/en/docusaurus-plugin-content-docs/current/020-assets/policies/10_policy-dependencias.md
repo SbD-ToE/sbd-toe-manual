@@ -8,16 +8,16 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 020-assets/policies/10_policy-dependencias.md
-  source_sha256: 54f62e0b2e37e709afe8f857a9370f4ae2bf57baee8047f60da302f6e0407764
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 27d4af420b2ec346d06bf4caad08109c3a691b6aa3b9b58acf297e8548f39f76
+  source_sha256: 8831e75c6bb8edd059aecfdcd87e4610f468359507ff842d9313ec756d43f5ae
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: a21aed9f99b729d691b8fa672d89b56ac059a1e4f557db9cd8691a8a2dc9fcb7
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 052afe4201bb7845b32e009aa3b254cfdb16b45b4b61f9aab43bcc31b8ab7ef9
-  translated_at: 2026-09-26T14:10:48Z
-  stamped_at: 2026-09-26T18:36:49Z
+  translated_at: 2026-09-27T07:54:09Z
+  stamped_at: 2026-09-27T07:54:09Z
   reviewed_by: null
 ---
 
@@ -173,7 +173,7 @@ For systems in production, there must be a mechanism for correlating the SBOM of
 
 ## 9. Periodic audit {#9-auditoria-periódica}
 
-Regardless of the build gates, dependencies must be audited periodically:
+Regardless of the build gates and of the automated review (SCA per build; scan monthly at L1, fortnightly at L2 and weekly at L3 — Ch. 05), a **hygiene audit** of dependencies (unused or outdated) is carried out:
 
 | Level | Minimum cadence |
 |---|---|

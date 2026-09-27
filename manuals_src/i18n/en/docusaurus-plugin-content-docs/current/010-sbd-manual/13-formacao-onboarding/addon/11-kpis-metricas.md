@@ -7,16 +7,16 @@ tags: [kpi, metricas, TRN, formacao, onboarding, champions, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/13-formacao-onboarding/addon/11-kpis-metricas.md
-  source_sha256: 0201793f053a19aa7c8ddd21094582b56fe5a1866638e258c4115ca1bd026b04
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 1bf61338d077e6e6766e0f19bdc120e7cb077149b273ad8f8b442723e3991f06
+  source_sha256: fac9893196619040ff6204d922657e27b86faf67bcbffa1c9a2fd5160776aee7
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 2c4b927b4d2f9630a3a5bb7c062fb006e8105665afe92e594fe046144bad6589
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, framework_source_corpus, gap_family, mapping, mcp_reading_programa, programme_line, requirement_runtime, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: 003b36c90a58f5ead594d43759f36018025633f3bf8db9de4bed72c270474e3c
-  translated_at: 2026-09-26T12:49:00Z
-  stamped_at: 2026-09-26T18:35:58Z
+  translated_at: 2026-09-27T07:53:57Z
+  stamped_at: 2026-09-27T07:53:57Z
   reviewed_by: null
 ---
 
@@ -87,7 +87,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 **TRN-K03 - Supplier with training:** for suppliers of L3 systems, the requirement is security training or a security questionnaire specific to the context (not generic). For L2 systems, a documented security questionnaire is sufficient. The criterion for complete supplier onboarding is defined in Ch. 14 `addon/03-modelo-validacao-fornecedores.md`.
 
-**TRN-K04 - Updated content:** content is out of date when: (a) it references revoked or changed requirements; (b) it does not reflect changes in the threat catalogue relevant to the domain; or (c) it has gone more than 24 months without review. The deadline for updating after a significant change to the catalogue is 90 days.
+**TRN-K04 - Up-to-date content:** a piece of content is outdated when: (a) it references revoked or changed requirements; (b) it does not reflect changes in the threat catalogue relevant to the domain; or (c) it has gone more than 12 months without review. The update time limit after a significant change to the catalogue is 90 days.
 
 **TRN-K05 - Incident with a training root cause:** an incident has a training root cause when the post-mortem analysis identifies that: (a) the behaviour that gave rise to the incident was covered by existing training content; and (b) the member of staff involved had not completed the training or had let it expire. This indicator must tend towards zero, and any non-zero value is an immediate warning sign.
 

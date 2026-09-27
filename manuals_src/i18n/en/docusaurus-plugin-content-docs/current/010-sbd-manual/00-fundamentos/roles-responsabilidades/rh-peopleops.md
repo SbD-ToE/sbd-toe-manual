@@ -8,16 +8,16 @@ sidebar_position: 11.3
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/00-fundamentos/roles-responsabilidades/rh-peopleops.md
-  source_sha256: a4772be8bc204cca0d6cf8d10df8fd6bfb01d8c826865a16f0d0fa14452021ae
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: f1aa3d1bd2d77d3c665bc480230ed9875fdf96dd68c2db1ed71d36825eff63c9
+  source_sha256: e631ed8b163539e9fb62414e953d01563c7f72c49112f87e9302d8e3610d130b
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 680932581f66e02d49b79c505bb81cec1ddf2d3d70a2b496edabde91a9855a5f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, dora_ict_risk, practitioner_manual, role_rh_formacao, role_rh_peopleops, role_rh_recrutamento, sbdtoe_sbd, trilho_formativo, validation_evaluation]
   glossary_sha256: 37dda1941f888484dfcb369739cc1248517800399d9240af881449a5ab0dfb63
-  translated_at: 2026-09-26T17:23:58Z
-  stamped_at: 2026-09-26T18:32:40Z
+  translated_at: 2026-09-27T07:53:34Z
+  stamped_at: 2026-09-27T07:53:34Z
   reviewed_by: null
 ---
 
@@ -66,7 +66,7 @@ Coordinate the **preparation of contractors** before access, the mandatory train
 **User Stories:**
 - [US-15: Technical preparation and validation of contractors before access](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-15---preparação-técnica-e-validação-de-contractors-pré-acesso) - Contractors prepared before access (with Security Champion)
 - [US-16: Mandatory pre-access training track](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-16---trilho-de-formação-obrigatória-pré-acesso-contractors) - Training Manager coordinates the track (with CISO)
-- [US-17: Secure offboarding of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Access revoked in less than 24h (with Security Champion and DevOps / SRE)
+- [US-17: Secure offboarding of contractors](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-17---offboarding-seguro-de-contractors-e-rescisão-de-fornecedores) - Access revoked on the same day, ≤ 2 h for unplanned departures (with Security Champion and DevOps / SRE)
 
 ---
 

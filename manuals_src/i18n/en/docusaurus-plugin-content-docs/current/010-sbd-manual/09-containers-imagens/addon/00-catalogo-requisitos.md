@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/09-containers-imagens/addon/00-catalogo-requisitos.md
-  source_sha256: dcb9cedacb51b581683a0abbbb8c5a87c6d1757f6a499e528b3b0705a675a7ed
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: aeea3e19b44dd104ee57d246a986f26fdccb2c4eb01e7c54546141cd01d8f154
+  source_sha256: 98c24c2fdd7e43843bfc9e7a0cba781e227210fe3dc4b3df97ba85b397573b94
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 67797e57bf6a23ea7a956ece08107bf4988e7c449fe40bde19cea9f8e5acf5de
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, cycle_iteration, lifecycle_phase, mapping, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: bcb250f3a75280ac3f789b6ddd45cca571eb93db76926e8cc69e33e12d4a5730
-  translated_at: 2026-09-26T09:58:13Z
-  stamped_at: 2026-09-26T18:34:47Z
+  translated_at: 2026-09-27T07:53:46Z
+  stamped_at: 2026-09-27T07:53:46Z
   reviewed_by: null
 ---
 
@@ -78,7 +78,7 @@ Requirements that guarantee that containers are built, validated, promoted and e
 - **CNT-006**: Restricting capabilities is a fundamental preventive control: a container with `CAP_SYS_ADMIN` or `--privileged` effectively has control of the host node in Kubernetes.
 - **CNT-007**: The signing chain of trust must be verified downstream at the point of deploy - generating the signature without verifying it before execution does not constitute an effective control.
 - **CNT-009**: The admission controller must be configured in `Enforce` mode, not only `Audit`, to be considered an effective control. Audit mode without enforcement is only observability, not protection.
-- **CNT-010**: The renewal interval must be proportional to the risk: for L3 workloads, a maximum cycle of 30 days is reasonable; for L1, 90 days. The relevant criterion is the coverage of critical patches, not only the calendar.
+- **CNT-010**: The renewal interval must be proportional to risk: for L3 workloads, a maximum cycle of 30 days; for L2, 60 days; for L1, 90 days. The relevant criterion is coverage of critical patches, not just the calendar.
 
 ---
 

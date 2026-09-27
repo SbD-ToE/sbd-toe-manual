@@ -6,16 +6,16 @@ tags: [dependencias, sbom, sca, supply-chain, policies]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/05-politica-atualizacoes.md
-  source_sha256: 01edc727e4df24efaaf091361bae81426ec920f44613cfb3a62e6bc98ede775f
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 13302bfff63fe310d3858a02eb2dd7a58ec8118fb485180f7747d23bc91248fe
+  source_sha256: 170b7409b566b28280f17485bd0d0c8028eb3bf9d155dde2e47f0b71728fab88
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: ecc17e2606d21e8e86d59ff3e4f2c82b5b9479308b20c236f0d40dffa6aa95ec
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [cycle_iteration, practitioner_manual, traceability, validation_evaluation]
   glossary_sha256: 0890addb66b0a1785ebe537d8e6194079c88936b2aab252a8d2f0cc8b5426c0b
-  translated_at: 2026-09-26T08:45:24Z
-  stamped_at: 2026-09-26T18:33:48Z
+  translated_at: 2026-09-27T07:53:41Z
+  stamped_at: 2026-09-27T07:53:41Z
   reviewed_by: null
 ---
 
@@ -54,7 +54,7 @@ Establish systematic practices for the **proactive updating of third-party libra
 
 ## 🔧 Recommended review frequency {#-frequência-recomendada-de-revisão}
 
-| Project type         | Minimum dependency review frequency |
+| Project type         | Minimum frequency of automated dependency review (scan) |
 |--------------------------|------------------------------------------------|
 | Critical production (L3)    | Weekly (automatic + manual validation)      |
 | Backend / API (L2)       | Fortnightly                                     |
@@ -81,7 +81,7 @@ Establish systematic practices for the **proactive updating of third-party libra
 | Are periodic updates carried out traceably? | ☑         |
 | Do all updates go through CI/CD with tests?           | ☑         |
 | Are the versions audited by SCA after an update?                 | ☑         |
-| Are critical updates handled in under 48h?          | ☑         |
+| Are critical updates triaged within ≤ 24h and fixed within the level SLA (Policy 19 §4.3)? | ☑         |
 
 ---
 

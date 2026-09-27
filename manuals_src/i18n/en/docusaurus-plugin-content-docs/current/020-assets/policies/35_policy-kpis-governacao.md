@@ -8,16 +8,16 @@ sidebar_position: 35
 translation:
   source_locale: pt
   source_path: 020-assets/policies/35_policy-kpis-governacao.md
-  source_sha256: 8f802355f74be928cfdb591f64178137c3f3da75b448f3d22974b7c20280f869
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 5a4e061892b3347aff346d626c07ec9c0068b0916bb2f0a6b2351a1884c62d89
+  source_sha256: 6749af4509253e94fb3d9f289ae1e7dae669d3b68f77680681a7b238c94484cd
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: f93c66cc10786d246f63cf069e82426dc0ef8d47f96a145c820483efc77e77ab
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, capacitacao, chapter_role, cycle_iteration, framework_source_corpus, maturity, mcp_reading_programa, programme_line, risk_level, role_procurement, role_tech_lead, sbdtoe_sbd, traceability, trilho_formativo]
   glossary_sha256: 639410b3fc031123bcb00e29436061550d3fbf8c70c46e03b9ed66b38b339fcf
-  translated_at: 2026-09-27T07:30:14Z
-  stamped_at: 2026-09-27T07:30:14Z
+  translated_at: 2026-09-27T07:54:13Z
+  stamped_at: 2026-09-27T07:54:13Z
   reviewed_by: null
 ---
 
@@ -67,7 +67,7 @@ Security governance KPIs must cover the following categories:
 
 | KPI | Description | Target |
 |---|---|---|
-| MTTR by severity | Average time between identification and remediation of findings | Critical ≤ 7 days; High ≤ 30 days |
+| MTTR by severity | Average time between identification and remediation of findings | In line with Policy 19 §4.3 (Critical 30 / 7 / 3 days; High 90 / 30 / 15 days at L1 / L2 / L3) |
 | Finding recurrence rate | % of findings of the same type that reappear within 90 days | &lt; 10% |
 | % of Critical/High findings remediated within the SLA | Compliance with the SLAs defined in the testing policy | > 90% |
 | Rate of active exceptions vs. total findings | Indicator of accumulation of accepted risk | Downward trend |

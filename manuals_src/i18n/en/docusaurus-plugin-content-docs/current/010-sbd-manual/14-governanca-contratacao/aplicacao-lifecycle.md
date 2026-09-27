@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: df61dd6181bc8f29d8a3649ab83510cc7602ee2cf4e7332444830c5f8a32a9e3
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: ee8e571bd658aa0bb5d3865533ed875482cca6633ea0013fbd8130d69912022a
+  source_sha256: d9fd509841ae4254cb2ea440dff6d3e74eed873e81aa043e1a7b0f888e119c29
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: bd9afc8deb004786943fd0048392e70d56766573ea4f18e937edb7a5043508a9
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 6ad151d9bc2278156099eb5faf6f457f411a758d7babc3b1edfcee003ea5133c
-  translated_at: 2026-09-27T07:30:07Z
-  stamped_at: 2026-09-27T07:30:07Z
+  translated_at: 2026-09-27T07:54:03Z
+  stamped_at: 2026-09-27T07:54:03Z
   reviewed_by: null
 ---
 
@@ -60,13 +60,13 @@ As **Developer + AppSec Engineer**, I want **to submit security exceptions throu
 - **Given** that a control cannot be met in an application classified as L1, L2 or L3  
   **When** I submit an exception with technical justification and compensation  
   **Then** it is routed to the appropriate approval authority, assessed, and approved or rejected  
-- And a revalidation schedule is automatically created (L3: 3 months, L2: 6 months, L1: annual)  
+- And revalidation is automatically scheduled for the expiry date, within the TTL of Policy 05 §7  
 
 **Acceptance criteria (DoD).**  
 - [ ] Exception recorded in a GRC tool with mandatory fields: application, risk (L1–L3), missing control, justification, compensation, owner  
 - [ ] Approval authority determined automatically by risk level  
 - [ ] Formal approval received (digital signature or timestamp record)  
-- [ ] Revalidation schedule created and owner notified (30 days before expiry)  
+- [ ] Revalidation schedule created and owner notified (15 days before expiry, or at the midpoint of the TTL if it is shorter than 30 days)  
 - [ ] Mitigation issue created in the security backlog for the next release  
 - [ ] Automatic notification sent to the owner if the exception is approaching expiry  
 
@@ -469,8 +469,8 @@ As **CISO + Executive Management**, I want **to consolidate and report governanc
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Audit | Quarterly (minimum), Half-yearly (recommended) | GRC / Compliance + AppSec Engineer + CISO | Report published 5 days after the end of the period |
-| Operation | Quarterly (minimum), Half-yearly (recommended) | GRC / Compliance + AppSec Engineer + CISO | Report published 5 days after the end of the period |
+| Audit | In line with Policy 35: annual (L1), half-yearly (L2), quarterly (L3) | GRC / Compliance + AppSec Engineer + CISO | Report published 5 days after the end of the period |
+| Operation | In line with Policy 35: annual (L1), half-yearly (L2), quarterly (L3) | GRC / Compliance + AppSec Engineer + CISO | Report published 5 days after the end of the period |
 
 **Useful links.**  
 - [Governance and Maturity](./addon/governancao-maturidade)
@@ -571,7 +571,7 @@ As **AppSec Engineer + Scrum Master / Team Lead**, I want **to maintain a centra
 
 :::userstory
 **Story.**   
-As **Procurement Officer + AppSec Engineer**, I want **to reassess and re-approve suppliers periodically (annual by default, half-yearly for L2, quarterly for L3), with updated technical validation, SLA compliance analysis, and escalation for a penalty or replacement decision if necessary**, so that **they are ensured to continue meeting requirements and SLAs, risk is mitigated, and continuity decisions are based on evidence**.
+As **Procurement Officer + AppSec Engineer**, I want to **reassess and re-approve suppliers periodically (annual for L1 and L2, half-yearly for L3, and upon a critical event), with updated technical validation, SLA compliance analysis, and escalation for a decision on penalty or replacement if necessary**, so as to **ensure that they continue to meet requirements and SLAs, that risk is mitigated, and that continuity decisions are evidence-based**.
 
 **Acceptance criteria (BDD).**  
 - **Given** an active supplier with a contract in force  
@@ -579,7 +579,7 @@ As **Procurement Officer + AppSec Engineer**, I want **to reassess and re-approv
   **Then** the supplier is reassessed with an updated questionnaire, validated technical evidence (SBOM, SLA compliance, changes) and the decision is formalised  
 
 **Acceptance criteria (DoD).**  
-- [ ] Supplier review schedule defined and communicated (annual minimum, 6 months for L2, quarterly for L3, or per critical event)  
+- [ ] Supplier review schedule defined and communicated (annual for L1 and L2, half-yearly for L3, or upon a critical event)  
 - [ ] Updated questionnaire with security and SLA questions sent to the supplier  
 - [ ] Technical analysis documented (AppSec): SBOM validated, CVEs analysed, SLA compliance verified, organisational/technical changes identified  
 - [ ] Decision formalised and recorded in GRC: Approved / Exception created / Penalty proposed / Termination initiated  
@@ -720,7 +720,7 @@ As **Security Champion + HR / People Operations + DevOps / SRE**, I want **to ex
 **Acceptance criteria (DoD).**  
 - [ ] Offboarding checklist prepared 2 weeks in advance (DevOps / SRE, HR / People Operations, AppSec Engineer, Tech Lead)  
 - [ ] Formal notification sent to the contractor/supplier with the exact deactivation date  
-- [ ] Access to systems revoked (at most 24h after the end date):  
+- [ ] Access to systems revoked (on the same day as the end date; ≤ 2 h for unplanned departures; immediately for security reasons):  
     - User accounts deactivated in Git, Jira, CI/CD  
     - SSH keys and API tokens removed  
     - VPN, cloud IAM access revoked  
@@ -1054,7 +1054,7 @@ As **GRC / Compliance** with the support of **CISO + Executive Management**, I w
 | Maturity KPIs and executive reporting | Basic | Recommended | Mandatory |
 | Formal governance model | Basic | Recommended | Mandatory |
 | Centralised checklist per chapter | Basic | Recommended | Mandatory |
-| Post-onboarding supplier reassessment | Annual | Half-yearly | Quarterly / critical event |
+| Post-onboarding supplier reassessment | Annual | Annual | Half-yearly / critical event |
 | **Technical preparation of contractors** | Basic | Recommended | Mandatory + validated quiz |
 | **Pre-access training track** | Basic | Mandatory | Mandatory + 80% score |
 | **Secure offboarding** | Basic | Mandatory | Mandatory + audit trail |

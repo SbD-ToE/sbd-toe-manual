@@ -7,16 +7,16 @@ tags: [kpi, metricas, DEP, sbom, sca, dependencias, cve, supply-chain, L1, L2, L
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/10-kpis-metricas.md
-  source_sha256: 9a1494a5907537dee035a3718973f523c947df4885856033103360e810715d43
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 2fbe2954b35a6504e086f1baa00c40145578ad9e23303a082864db43712d11e5
+  source_sha256: e37f2f710b1a19b4ccfb7a24ca8181517e50eb5601e660e2a98bffb3ab13532e
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 31b55c353c29fa0d564ead996aba90af9a79a083897a1e6b19dc41c02c6e1af1
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, framework_source_corpus, mapping, practitioner_manual, risk_level, role_procurement, sbdtoe_sbd, snyk_license, traceability, transversal]
   glossary_sha256: 73ae23406f6c14ac98b65ad2d04bac7577b35356412e7c95e2dc203fb788ad29
-  translated_at: 2026-09-26T12:48:43Z
-  stamped_at: 2026-09-26T18:33:52Z
+  translated_at: 2026-09-27T07:53:42Z
+  stamped_at: 2026-09-27T07:53:42Z
   reviewed_by: null
 ---
 
@@ -67,8 +67,8 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | ID | Indicator | Type | L1 | L2 | L3 | Dim. T | Period |
 |----|-----------|:----:|:--:|:--:|:--:|:------:|---------|
 | DEP-K01 | % of applications with an SBOM generated automatically and updated at each release | Q% | ≥ 50% | ≥ 90% | 100% | T-01, T-05 | Per release |
-| DEP-K02 | % of critical CVEs (CVSS ≥ 9.0) in direct dependencies mitigated within SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 14d) | 100% (SLA: 5d) | T-03 | Continuous |
-| DEP-K03 | % of high CVEs (CVSS 7.0–8.9) in direct dependencies mitigated within SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 14d) | T-03 | Monthly |
+| DEP-K02 | % of critical CVEs (CVSS ≥ 9.0) in direct dependencies mitigated within SLA | Q% | ≥ 70% (SLA: 30d) | ≥ 90% (SLA: 7d) | 100% (SLA: 3d) | T-03 | Continuous |
+| DEP-K03 | % of high CVEs (CVSS 7.0–8.9) in direct dependencies mitigated within SLA | Q% | ≥ 60% (SLA: 90d) | ≥ 80% (SLA: 30d) | ≥ 95% (SLA: 15d) | T-03 | Monthly |
 | DEP-K04 | # of direct dependencies without an active maintainer (EOL, abandoned ≥ 24 months) in production | Q# ↓ | ≤ 5 | ≤ 2 | = 0 | T-05 | Quarterly |
 | DEP-K05 | % of pipelines with automated SCA integrated with a blocking gate for critical CVEs | Q% | ≥ 60% | ≥ 90% | 100% | T-01 | Monthly |
 | DEP-K06 | % of dependencies with a licence incompatible with organisational policy active in production | Q% ↓ | - | = 0% | = 0% | T-05 | Quarterly |
@@ -105,10 +105,10 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 | Severity (CVSS) | L1 | L2 | L3 |
 |-------------------|:--:|:--:|:--:|
-| Critical (≥ 9.0) | 30 days | 14 days | 5 days |
-| High (7.0–8.9) | 90 days | 30 days | 14 days |
-| Medium (4.0–6.9) | - | 90 days | 60 days |
-| Low (&lt; 4.0) | - | - | 180 days |
+| Critical (≥ 9.0) | 30 days | 7 days | 3 days |
+| High (7.0–8.9) | 90 days | 30 days | 15 days |
+| Medium (4.0–6.9) | 180 days | 90 days | 45 days |
+| Low (&lt; 4.0) | 365 days | 180 days | 90 days |
 
 These thresholds are a baseline reference. Sectoral regulation (DORA, NIS2) may impose shorter deadlines, which prevail.
 

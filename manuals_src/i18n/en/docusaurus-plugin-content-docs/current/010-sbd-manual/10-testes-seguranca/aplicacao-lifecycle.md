@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/aplicacao-lifecycle.md
-  source_sha256: 32ca61b7ea261f6ce9b4fe562b089d3c60f694c0d28162f88fa2ebc243a936ba
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: cbc54609294b4b5d9576be51b0429544139b4cd7fd86fd44981f0dbf6acfc2ee
+  source_sha256: 81214fa795470ee1b6ff8e353399d9c4311e5cd24b2b094a3ecbdd85f01a1e67
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 69fdd59ddb9a98ba09e718d9dfd924af56a3876888ddd4e55fb3e8181724781d
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, candidate, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, gap_family, lifecycle_phase, mapping, maturity, mcp_reading_programa, oracle, papel_suporte, practitioner_manual, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: 2ef62e6832b405cb282ff0bf137e48289f24be2502c02c91f2166c43fb4cfc32
-  translated_at: 2026-09-26T17:23:50Z
-  stamped_at: 2026-09-26T18:35:17Z
+  translated_at: 2026-09-27T07:53:51Z
+  stamped_at: 2026-09-27T07:53:51Z
   reviewed_by: null
 ---
 
@@ -411,8 +411,8 @@ As an **AppSec Engineer**, I want **to offensively validate the effectiveness of
 | Level | Requirement |
 |---|---|
 | L1 | Not applicable |
-| L2 | Occasional, by risk |
-| L3 | Mandatory pre-production |
+| L2 | Annual + after a significant architectural change (Policy 36) |
+| L3 | Annual + before the first production release + major release (Policy 36) |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -499,7 +499,7 @@ As an **AppSec Engineer + DevOps / SRE**, I want **to centralise all findings fr
 - [ ] Connectors for all tools (SAST, DAST, IAST, SCA) configured  
 - [ ] Deduplication and correlation rules active  
 - [ ] Triage criteria documented (CWE, OWASP, organisational risk)  
-- [ ] SLAs defined by severity and Lx (Critical: `<24h`, High: `<7d`, Medium: `<30d`)  
+- [ ] SLAs defined by severity and Lx (Policy 19 §4.3; e.g. Critical: 30 / 7 / 3 days, High: 90 / 30 / 15 days at L1 / L2 / L3)  
 - [ ] Public dashboards with KPIs (open findings, resolution rate, mean time)  
 - [ ] Integration with the backlog (Jira/Azure Boards) for automatic assignment  
 - [ ] Audit of exceptions with dual approval for L2/L3  

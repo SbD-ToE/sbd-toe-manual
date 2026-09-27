@@ -8,16 +8,16 @@ sidebar_position: 12
 translation:
   source_locale: pt
   source_path: 020-assets/policies/12_policy-excecoes-cve.md
-  source_sha256: 82cc7a35a15542a61db5b560c7aaffae2a92f68e461a3c06839f9d07e61e2709
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 7aebd9192e663936f45e78a11125026fd8f10a163302dada0bcb85543a55061a
+  source_sha256: 232d26762c544ec525f6d5bc6ef389ce9fdf370c9982eb702038a31005547db4
+  source_commit: a75f1a5abdeee57ae29956bbc2366d15959420bb
+  target_sha256: b404af00cf59822818a05ba483a59e8456b2f731de7d7d54a0337d64a6e2f67a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, cra_pde, framework_source_corpus, layer, practitioner_manual, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, transversal]
   glossary_sha256: d08b98b471eb30727a46f86ffaccdaa8a76183dd5cfbcd23195832b870d197fc
-  translated_at: 2026-09-27T07:30:11Z
-  stamped_at: 2026-09-27T07:30:11Z
+  translated_at: 2026-09-27T07:54:10Z
+  stamped_at: 2026-09-27T07:54:10Z
   reviewed_by: null
 ---
 
@@ -125,12 +125,14 @@ Each exception must be recorded in `excecoes.yaml` (or equivalent, e.g. `vex.yam
 
 | CVE severity | Type | L1 | L2 | L3 |
 |---|---|---|---|---|
-| Critical | Fix deferred / Risk accepted | 30 days | 15 days | 7 days |
-| High | Fix deferred / Risk accepted | 60 days | 30 days | 15 days |
-| Medium | Any | 180 days | 90 days | 45 days |
-| Low | Any | 365 days | 180 days | 90 days |
-| Fix not available | Any | 90 days | 60 days | 30 days |
+| Critical | Fix deferred / Risk accepted | 7 days (remediation plan mandatory) | 7 days (CISO + remediation plan) | Not acceptable |
+| High | Fix deferred / Risk accepted | 90 days | 30 days | 14 days |
+| Medium | Any | 90 days | 60 days | 30 days |
+| Low | Any | 90 days | 60 days | 30 days |
+| Fix not available | Any | Ceiling of the severity (above) | Ceiling of the severity (above) | Ceiling of the severity (above) |
 | Not affected | - | No TTL* | No TTL* | No TTL* |
+
+The ceilings follow Policy 05 §7, which is the master for exception validity periods.
 
 *Exceptions of the "Not affected" type must be reassessed whenever the component is updated or when new information about the CVE is published that changes the exploitability context.
 

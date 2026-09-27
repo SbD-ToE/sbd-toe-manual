@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
-  source_sha256: bfe0f24d6e18a3724fecec4a3a26a44d2b0f172673adb3186efa3a96a7191689
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5c480c2fe2a85f41739a5a3223918b95d3f6feb8bfe391ecdd7b7a58024ef2eb
+  source_sha256: e67c42f8e7abd437983fd7afe544ccc56a5b2df0fd81095007ca785f1830896c
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 1f03bcc59dddd05d8d2728f393b36b1d4d0682a299e7e59a33c9f749848938ae
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [chapter_role, cycle_iteration, lifecycle_phase, mapping, papel_suporte, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: efb659fb3d56858ee45fc3a432848ac268a64e6c85589a757d7438d8e66654cd
-  translated_at: 2026-09-26T11:00:46Z
-  stamped_at: 2026-09-26T18:35:22Z
+  translated_at: 2026-09-27T07:53:53Z
+  stamped_at: 2026-09-27T07:53:53Z
   reviewed_by: null
 ---
 
@@ -60,7 +60,7 @@ Requirements ensuring that each promotion to production is approved, traceable, 
 | DPL-002 | Promotion only of artefacts with verified provenance | ✔ | ✔ | ✔ | Artefacts promoted to production with a digital signature or hash verified at deployment time; traceable provenance (commit SHA, pipeline run ID); artefacts without verifiable provenance rejected automatically. |
 | DPL-003 | Automated security gates as a condition of promotion | ✔ | ✔ | ✔ | Gates that verify the absence of critical CVEs, passed security tests and the absence of detected secrets run before each promotion; failure of any gate blocks the deployment; evidence of execution available per deployment. |
 | DPL-004 | End-to-end traceability of each deployment | ✔ | ✔ | ✔ | Each deployment identifiable by a unique ID with a record of: who approved, what was deployed (artefact + commit SHA), when, to which environment and which gates were executed; traceability from an incident back to the original commit. |
-| DPL-005 | Rollback configured, tested and with a defined SLA | ✔ | ✔ | ✔ | Rollback procedure defined, documented and tested periodically (at least once per release cycle or annually); maximum rollback time defined and verified in testing; last rollback test with a recorded date. |
+| DPL-005 | Rollback configured, tested and with a defined SLA | ✔ | ✔ | ✔ | Rollback procedure defined, documented and tested periodically (annually at L1 and quarterly at L2/L3, in line with Policy 27); maximum rollback time defined and verified in testing; last rollback test with a recorded date. |
 | DPL-006 | Deployment credentials with minimum scope and a short life | ✔ | ✔ | ✔ | Credentials used in the deployment with scope limited to what is necessary and minimum duration (short-lived tokens preferred over permanent credentials); no deployment credentials shared between applications; credential usage logs available. |
 | DPL-007 | Validation in staging before promotion to production | - | ✔ | ✔ | Staging environment with functional and security validation before promotion; staging acceptance criteria documented and evidenced; staging sufficiently representative of production for the purposes of validation. |
 | DPL-008 | Active monitoring during and after deployment | - | ✔ | ✔ | Health metrics and alerts active during the deployment window and in the post-deployment observation period; observation period defined by risk level; anomalies in that period trigger automatic rollback or an urgent alert with a response SLA. |

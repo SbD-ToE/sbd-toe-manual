@@ -8,16 +8,16 @@ sidebar_position: 20
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/11-deploy-seguro/canon/20-checklist-revisao.md
-  source_sha256: f1bd2ca2a40aacbfd57058595c7fb93dfa4da7053108607da9287db43f5a2af0
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 60bff5d3ed63a3f1619f8f956a9f5670108be96ba5b8923119f26f706f4e223b
+  source_sha256: 82bfa09fe870719e7b705f80635d6de79c8beefb60fcc849d658d19de6a9ba1a
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 5fc0629c6ddb34982e8258a97c179b851dbc4618dc61b23e827f35e2052c830b
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, cycle_iteration, instrument, lifecycle_phase, maturity, provenance, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 51c3d06f65294a323ca963b5646b740dc82e58db90ddb5654e56d1a6d6b04566
-  translated_at: 2026-09-26T11:00:54Z
-  stamped_at: 2026-09-26T18:35:32Z
+  translated_at: 2026-09-27T07:53:54Z
+  stamped_at: 2026-09-27T07:53:54Z
   reviewed_by: null
 ---
 
@@ -53,7 +53,7 @@ It serves as an instrument of binary and auditable verification of the **practic
 | For critical components, is the deployment progressive (canary, blue-green or feature flags), with thresholds and rollback criteria per stage (L3)? (`DPL-009`) | ☐           |
 | Do the feature flags have mandatory metadata (owner, scope, activation, expiry), are they versioned as code, auditable, evaluated in the backend and reviewed periodically? | ☐           |
 | Does the release follow semantic versioning with a technical and security changelog (fixed CVEs, breaking changes)? | ☐           |
-| Do exceptions to gates follow a versioned template (approver by severity, maximum validity 6 months), and do irreversible actions and go/no-go decisions require a human record (who, when, why, evidence)? | ☐           |
+| Do exceptions to gates follow a versioned template (approver by severity, validity in line with Policy 05 §7), and do irreversible actions and go/no-go decisions require a human record (who, when, why, evidence)? | ☐           |
 | In systems with a *load-bearing* AI agent or model, does the *eval suite* run as a mandatory gate whenever the model/*skill files*/*system prompts* change, is the *rollback* of the model and of the *prompt/skill* independent of the application rollback, and do the *release notes* record the model/skill/eval version + `mandate_ref` (`DPL-010`)? | ☐           |
 | In L3 agentic systems, is a major model version change promoted via *canary* with objective criteria, and is there an automatic gate that lowers the `autonomy_level` when the *eval suite* does not confirm the level (`DPL-011`)? | ☐           |
 

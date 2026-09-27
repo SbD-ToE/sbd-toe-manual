@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: 4bde13af14987325cf4ad25462c4e744fcb25ee2b8d5509b9da85e4706fb6884
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: b031a13c7cd02c026e8a185f2ea9337d41442bcf67b129e6739bc32127be7df1
+  source_sha256: dbe6c25fc24be2e6f350ac2a6a73e10f8941eff1c2a13f5b4de2d621eebbb20e
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 78d7ff2a747033edd6bed2f269712a58c73b3962748d464277e0ebb019685110
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
   glossary_sha256: 914582ffaf8812b31229ca5a0f97367099d874a098bb96818fee212816bd6fbd
-  translated_at: 2026-09-27T07:30:00Z
-  stamped_at: 2026-09-27T07:30:00Z
+  translated_at: 2026-09-27T07:53:32Z
+  stamped_at: 2026-09-27T07:53:32Z
   reviewed_by: null
 ---
 
@@ -326,7 +326,7 @@ Regulatory implication:
 Suggested:
 1. Clear policy on who approves per risk level
 2. Audited trail: What, who, when, justification, TTL
-3. Remediation SLAs: Critical ≤30d, High ≤90d, Medium ≤180d
+3. Remediation SLAs from the Manual's internal ladder (Policy 19 §4.3; the Manual's choice — Article 21(2)(e) requires vulnerability handling without setting time limits)
 4. List of unacceptable exceptions (policy)
 5. Periodic review, escalation if expired
 

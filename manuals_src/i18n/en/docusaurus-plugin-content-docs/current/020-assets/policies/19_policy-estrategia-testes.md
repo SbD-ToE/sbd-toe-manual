@@ -8,16 +8,16 @@ sidebar_position: 19
 translation:
   source_locale: pt
   source_path: 020-assets/policies/19_policy-estrategia-testes.md
-  source_sha256: c347475e642b983ed20ecbb23ec9ea6b463efdc08bb5da7c2eee079ee2eefa32
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 4457112a7ff3f6e1bddb545cb9e2edd4a866d26b1c68c8c8e983ac8c8ad5e072
+  source_sha256: 51d8213a913900c2bd8c862e9473d82e220db680f5b82ef3775857c0370b7573
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 766670d64926a63d224b4abe79c5ca677887a11c08ee789948ddc16ec48cf315
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, llm, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 11ab60cf00ad1cc8d2b92b29aacda14b014b8500df7ae344df638b0af44aceb2
-  translated_at: 2026-09-26T14:10:54Z
-  stamped_at: 2026-09-26T18:36:55Z
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, llm, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 7755814a9872b7e85d0772cf178a8a08473e49eb120e49039ec7e60514513933
+  translated_at: 2026-09-27T07:54:11Z
+  stamped_at: 2026-09-27T07:54:11Z
   reviewed_by: null
 ---
 
@@ -119,12 +119,16 @@ Each blocking finding must be triaged with a documented decision:
 
 ### 4.3 Triage and resolution SLAs {#43-slas-de-triagem-e-resolução}
 
-| Severity | Triage SLA | Resolution SLA (L2) | Resolution SLA (L3) |
-|---|---|---|---|
-| Critical | 24 hours | 7 days | 3 days |
-| High | 48 hours | 30 days | 15 days |
-| Medium | 5 working days | 90 days | 45 days |
-| Low | 10 working days | 180 days | 90 days |
+| Severity | Triage SLA (all levels) | Resolution SLA (L1) | Resolution SLA (L2) | Resolution SLA (L3) |
+|---|---|---|---|---|
+| Critical (CVSS ≥ 9.0) | 24 hours | 30 days | 7 days | 3 days |
+| High (CVSS 7.0–8.9) | 48 hours | 90 days | 30 days | 15 days |
+| Medium (CVSS 4.0–6.9) | 5 working days | 180 days | 90 days | 45 days |
+| Low (CVSS < 4.0) | 10 working days | 365 days (or the next maintenance cycle, if earlier) | 180 days | 90 days |
+
+:::note
+This is the Manual's single remediation ladder, for all findings (testing, SCA, images, pipeline, pentest), and the KPIs measure compliance with it. The time limits are the minimum recommended by the Manual (the Manual's choice), not regulatory time limits: the CRA requires vulnerabilities to be addressed and remediated «without delay» (Annex I, Part II, point (2)), and NIS2 (Article 21(2)(e)) and DORA (Article 24(5)) require handling and remediation processes, without setting a number of days. With an indication of active exploitation (for example, KEV) or for products within the scope of the CRA, the level time limit is a ceiling: these signals only bring it forward. The most demanding of law, supervisors, sector and contracts prevails — see the [precedence clause of Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs).
+:::
 
 ---
 

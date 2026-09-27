@@ -6,16 +6,16 @@ tags: [exemplos, kpis, metricas, targets, monitoramento]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/02-exemplo-kpis-targets.md
-  source_sha256: 218e9ce778fa01b8980d2068a528acde988cdd9dac186d97757f2fa9e6a68acc
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: e3c5c95ca1d5039269361ab0bf3b585160227c3c8bf0a4b54d1d5bf78e0f0b9e
+  source_sha256: f4c5e5289649536835d3fb348f163e486b9e9b629c459de5674f1f9829a1bb80
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 398c102f9714dbe1f10d162fcea554156c0063f55e025e3cc50b3c4d0ad2be10
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, cycle_iteration, gdpr_dpo, maturity, practitioner_manual, requirement_runtime, sbdtoe_sbd]
   glossary_sha256: 07b8d257fffe6e0515d8b110f8bb5a96d4a5740a2a4c82f729fcde517572c2f2
-  translated_at: 2026-09-27T07:29:56Z
-  stamped_at: 2026-09-27T07:29:56Z
+  translated_at: 2026-09-27T07:53:32Z
+  stamped_at: 2026-09-27T07:53:32Z
   reviewed_by: null
 ---
 
@@ -365,7 +365,7 @@ graph TB
 
 - Start conservatively (better to exceed than to fail)
 - Iterate according to capacity
-- Align with DORA requirements
+- Align with the DORA requirements
 - Communicate trade-offs
 - Document decisions
 

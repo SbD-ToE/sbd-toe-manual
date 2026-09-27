@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/aplicacao-lifecycle.md
-  source_sha256: db2d929faaaba648b9d0bd65fc69d5bd2890b7aa086c21e983b4b834ad4b0df4
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: c27722d90d322f6116b36174710680530b3de4a968a269af76727b88c846e693
+  source_sha256: 78a2f6ad145ab5a4740f4e04a587918d2995f81fc9987eefdce306d5d5c294fb
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: f6b3a661e65640684b0b8245f143ef8ed525b155c985824a8e96aa834f7fe1a8
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, chapter_role, como_fazer, cycle_iteration, deterministic, framework_source_corpus, lifecycle_phase, mapping, mcp_reading_programa, papel_suporte, piso_limiar, piso_relacao, practitioner_manual, programme_line, requirement_runtime, risk_level, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 554488124abc29c0a074ab0f564738d25c3197109db2ea24fbb3cc6f965ed64c
-  translated_at: 2026-09-27T07:30:05Z
-  stamped_at: 2026-09-27T07:30:05Z
+  translated_at: 2026-09-27T07:53:56Z
+  stamped_at: 2026-09-27T07:53:56Z
   reviewed_by: null
 ---
 
@@ -642,9 +642,9 @@ As **DevOps/AppSec**, I want **to ensure that no secret or PII is logged in clea
 - **Given** a component in production that emits logs  
   **When** a field contains a credential, token or PII  
   **Then** the value is redacted/masked before persistence and the redaction is verifiable by sampling  
-- **Given** a legitimate pattern that triggers an unwarranted alert  
+- **Given** a legitimate pattern that triggers an undue alert  
   **When** it is to be suppressed  
-  **Then** a versioned exception is created with justification, approver by severity and expiry date (max 6 months L2, 3 months L3)  
+  **Then** a versioned exception is created with justification, approver by severity and expiry date (ceilings of Policy 05 §7)  
 
 **Checklist.**  
 - [ ] Redaction/masking of secrets and PII applied before persistence  
@@ -658,7 +658,7 @@ As **DevOps/AppSec**, I want **to ensure that no secret or PII is logged in clea
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Basic redaction of credentials | Redaction + formal exceptions (max 6 months) | Redaction verified by sampling + exceptions (max 3 months) + pre-expiry reassessment |
+| Basic redaction of credentials | Redaction + formal exceptions (TTL of Policy 05 §7) | Redaction verified by sampling + exceptions (TTL of Policy 05 §7) + pre-expiry reassessment |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
@@ -781,12 +781,12 @@ As **IR/AppSec**, I want **to run end-to-end incident response exercises at a de
 **Proportionality L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Occasional manual walkthrough | Annual exercise of critical playbooks | Periodic end-to-end exercises + MTTR measurement and continuous improvement |
+| Annual tabletop | Half-yearly exercise of critical playbooks (tabletop + simulation) | Half-yearly end-to-end exercises (war room with active simulation) + MTTR measurement and continuous improvement |
 
 **Integration into the SDLC.**  
 | Phase | Trigger | Responsible | SLA |
 |------|---------|-------------|-----|
-| Operations | Exercise cycle / playbook review | Operations (Ops) + AppSec | In the last cycle (annual minimum) |
+| Operations | Exercise cycle / playbook review | Operations (Ops) + AppSec | In the last cycle (Policy 32 §8: annual at L1, half-yearly at L2/L3) |
 
 **Useful links.** [Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro); [Operations Requirements Catalogue](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes)
 

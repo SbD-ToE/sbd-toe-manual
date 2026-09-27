@@ -7,16 +7,16 @@ tags: [kpi, metricas, TST, testes, sast, dast, pentest, findings, regressao, L1,
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/10-testes-seguranca/addon/15-kpis-metricas.md
-  source_sha256: e5d8034c3fcae11cd566d10366756f249c7eecb53b14812c91f5c69b64ff6e1a
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: ab7ba1197d2b6a8f25c9256a0b403003574ab8eed71bb1b0afc3450f1325929f
+  source_sha256: a3c4f88b6d48aa76de48509e629a9c002755f705471a38124cca011784c789e2
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: b05c1094def0c721127777d9ae6cbcd81383c7f3aece860eff066cd7e0857080
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, framework_source_corpus, mapping, maturity, mcp_reading_programa, practitioner_manual, programme_line, risk_level, sbdtoe_sbd, transversal]
   glossary_sha256: 2c92163b752775c634a63056ec96fa60207e7acd9504b68d32116da8f73463a7
-  translated_at: 2026-09-26T12:48:50Z
-  stamped_at: 2026-09-26T18:35:14Z
+  translated_at: 2026-09-27T07:53:50Z
+  stamped_at: 2026-09-27T07:53:50Z
   reviewed_by: null
 ---
 
@@ -82,9 +82,9 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 
 | Severity | L1 | L2 | L3 |
 |------------|:--:|:--:|:--:|
-| Critical (CVSS ≥ 9.0) | 30 days | 14 days | 7 days |
-| High (CVSS 7.0–8.9) | 90 days | 30 days | 14 days |
-| Medium (CVSS 4.0–6.9) | - | 90 days | 60 days |
+| Critical (CVSS ≥ 9.0) | 30 days | 7 days | 3 days |
+| High (CVSS 7.0–8.9) | 90 days | 30 days | 15 days |
+| Medium (CVSS 4.0–6.9) | 180 days | 90 days | 45 days |
 
 Findings with an active formal exception are excluded from the TST-K03 calculation but recorded separately.
 

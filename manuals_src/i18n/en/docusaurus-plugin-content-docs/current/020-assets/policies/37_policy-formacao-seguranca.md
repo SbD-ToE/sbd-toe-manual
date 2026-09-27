@@ -8,16 +8,16 @@ sidebar_position: 37
 translation:
   source_locale: pt
   source_path: 020-assets/policies/37_policy-formacao-seguranca.md
-  source_sha256: 568e7a02864e7dfe8cc6fbd04f5d3e44302101e63de47c9ca66b32c0a3d188c7
-  source_commit: be49273442123786a27c269d98751832652acabb
-  target_sha256: f1612613832c0c1676a889be16859214a784e04952146bff19009e35ce1142e1
+  source_sha256: 318978182e69c350d0d63b5660e008ee67cfe82af37cd0ef52b510a2e42f25ed
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 8f6dfbce1e5c2cd4bc9e6cbab4c91914f10ad50d603c0ad063ffe196af72ad79
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, capacitacao, chapter_role, framework_source_corpus, gap_family, llm, maturity, mcp_reading_programa, papel_suporte, programme_line, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, threat, traceability, trilho_formativo, validation_evaluation]
   glossary_sha256: 6e53f6d4a50c57cb34d3c03f1edf2f42f065e601c553b88784126070c79929a8
-  translated_at: 2026-09-26T23:27:34Z
-  stamped_at: 2026-09-26T23:27:34Z
+  translated_at: 2026-09-27T07:54:15Z
+  stamped_at: 2026-09-27T07:54:15Z
   reviewed_by: null
 ---
 
@@ -131,7 +131,7 @@ Purely theoretical training has a low retention rate and does not develop the ca
 | Labs on vulnerable applications | Controlled environments with real vulnerabilities for identification and exploitation (e.g. OWASP WebGoat, Juice Shop, DVWA) | Recommended | Mandatory |
 | CTF (Capture the Flag) | Competitions or structured exercises with security challenges by category | Recommended | Mandatory (minimum 1/year) |
 | Threat modelling simulation | Practical threat modelling session on a real or fictitious architecture, with a documented result | Recommended | Mandatory |
-| Incident response tabletop | Incident simulation exercise without real activation of systems (see IRP Policy) | Recommended | Mandatory (half-yearly) |
+| Incident response tabletop | Incident simulation exercise without real activation of systems (see IRP Policy) | Mandatory (half-yearly; Policy 32 §8) | Mandatory (half-yearly) |
 | Guided security code review | Code review with injected anti-patterns, in a training context | Recommended | Mandatory |
 
 The results of the exercises must be recorded with date, participants, exercise type and performance metrics (where applicable).

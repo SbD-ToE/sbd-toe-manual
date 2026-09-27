@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: 8658afec7ee5cb9e6696d36257c78f61c48237d1c5054fbd6e148a8cbc59ae7f
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 8a4a3e640e47d58d1cd6a0ad01806d6753b84f9d8cb2b72f34225dd4a805c2ad
+  source_sha256: e39b860537c1637be1e477a029fc71406298837d648ef198395df0d00bbd828c
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 7d398bb02e4b42de4d8e553014242758f440b7e5cc751e13f3fe651e2f950ebd
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: 22ff3b5b5d71ad18aa105d9d275a156caffe5cf8e5bae336bb9a65530f5117b6
-  translated_at: 2026-09-27T07:30:13Z
-  stamped_at: 2026-09-27T07:30:13Z
+  translated_at: 2026-09-27T07:54:13Z
+  stamped_at: 2026-09-27T07:54:13Z
   reviewed_by: null
 ---
 
@@ -255,7 +255,7 @@ When the supplier is an **AI model provider** (Anthropic, OpenAI, Google, Mistra
 ### 10.7 Operationalisation {#107-operacionalização}
 
 - The provider enters the **approved list [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** only after validation of clauses 10.1 to 10.6 (proportional to the risk level).
-- Critical clauses recorded in the provider's record; review scheduled according to the risk level (L1 annual; L2 half-yearly; L3 quarterly).
+- Critical clauses recorded in the provider record; scheduled review of the AI provider clauses — an object distinct from the general supplier reassessment (section 6) — according to the risk level (L1 annual; L2 half-yearly; L3 quarterly).
 - Complete operational detail in [Policy 39 — AI BOM and Supply Chain](./policy-ai-bom-supply-chain) and in Ch. 14 US "AI provider contracting".
 
 | Clause | L1 | L2 | L3 |

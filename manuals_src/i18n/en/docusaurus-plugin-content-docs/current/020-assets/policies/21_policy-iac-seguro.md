@@ -8,16 +8,16 @@ sidebar_position: 21
 translation:
   source_locale: pt
   source_path: 020-assets/policies/21_policy-iac-seguro.md
-  source_sha256: 08af210a8367bd5a9a9293d0fcfcebb3fa7afd699b2320c07ccb1e231d16ddfc
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7e0901ef7ef47d548fa366fee6b95a4f46dd538c8a064341be7bebf7fe7ee367
+  source_sha256: 49842f1b4c1afe785c0bca522c4d91f5dc8ed1a9d10b704e9e07ef2859dc85ed
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 9466c371d3fa20c6e1f57aeb1ffd825b697e3b2fb822a183ceccfb03c87de726
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, practitioner_manual, requirement_runtime, sbdtoe_sbd, traceability, validation_evaluation]
   glossary_sha256: ecd53498f823c203ba2d1f1bbc6d567b9d66ef95eca0b82734cae6f66172431d
-  translated_at: 2026-09-26T14:10:55Z
-  stamped_at: 2026-09-26T18:36:56Z
+  translated_at: 2026-09-27T07:54:12Z
+  stamped_at: 2026-09-27T07:54:12Z
   reviewed_by: null
 ---
 
@@ -150,7 +150,7 @@ Manual changes to the real infrastructure create a divergence (drift) from the s
 
 | Requirement | L1 | L2 | L3 |
 |---|---|---|---|
-| Scheduled drift detection job | Recommended | Mandatory (monthly) | Mandatory (fortnightly) |
+| Scheduled drift detection job | Recommended (monthly) | Mandatory (fortnightly) | Mandatory (weekly; drift resolved within ≤ 7 days) |
 | Drift report per environment generated and archived | Recommended | Mandatory | Mandatory |
 | Critical drift in production triggers an immediate alert | Recommended | Mandatory | Mandatory |
 | Drift correction via PR with approval (never manual) | Recommended | Mandatory | Mandatory |

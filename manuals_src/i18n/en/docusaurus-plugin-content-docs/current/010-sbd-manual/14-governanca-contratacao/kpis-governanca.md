@@ -7,16 +7,16 @@ tags: [kpi, metricas, governanca, transversal, dashboard, executivo, L1, L2, L3]
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/kpis-governanca.md
-  source_sha256: 6c98e6292a505c80ef002dd6484c95f627214dc3563ef3762fb3584906ede3cb
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: 2eebec27ef3dfd22ac335269d3fc232bde9f40fb64b3d10b38807721c499d607
+  source_sha256: 241894422ba7d8b3b0fbbe1c7fe4f23b6aa46a98270275ea38264ade66206974
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 0d478195886f6d171986d0fd0c987f5c2e7d990b520252d7992a45dae93fff20
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [atomic_composite, avaliacao, chapter_role, cycle_iteration, layer, maturity, mcp_reading_programa, programme_line, risk_level, role_procurement, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: e85b50d4956bf3aa0ed8b11f98f9be00bf1310af09331fcd01a2d5873713cc27
-  translated_at: 2026-09-27T07:30:09Z
-  stamped_at: 2026-09-27T07:30:09Z
+  translated_at: 2026-09-27T07:54:06Z
+  stamped_at: 2026-09-27T07:54:06Z
   reviewed_by: null
 ---
 
@@ -168,10 +168,10 @@ Each layer of the funnel is the denominator of the next layer. The difference be
 
 | MTTR threshold - critical findings | L1 | L2 | L3 |
 |------------------------------------|:--:|:--:|:--:|
-| SCA/Dependencies (CVE ≥ 9.0) | 30 days | 14 days | 5 days |
-| SAST (critical severity) | 30 days | 14 days | 7 days |
-| Containers (CVE ≥ 9.0 in image) | 14 days | 7 days | 3 days |
-| Pipeline (detection → mitigation) | 14 days | 7 days | 3 days |
+| SCA/Dependencies (CVE ≥ 9.0) | 30 days | 7 days | 3 days |
+| SAST (critical severity) | 30 days | 7 days | 3 days |
+| Containers (CVE ≥ 9.0 in image) | 30 days | 7 days | 3 days |
+| Pipeline (detection → mitigation) | 30 days | 7 days | 3 days |
 | Operations (alert → mitigation, OPS-K04) | 8h | 4h | 1h |
 
 **Domain indicators that feed T-03:**
@@ -226,7 +226,7 @@ Each layer of the funnel is the denominator of the next layer. The difference be
 |-------------------|:------------:|:------------:|:------------:|
 | % applications with an up-to-date SBOM | ≥ 50% | ≥ 90% | 100% |
 | % L2/L3 contracts with security clauses | ≥ 80% | 100% | 100% |
-| % L3 suppliers with annual validation | - | - | 100% |
+| % of L3 suppliers with half-yearly validation | - | - | 100% |
 | % production images signed and verified | - | ≥ 70% | 100% |
 | # EOL dependencies without an active maintainer in production | ≤ 5 | ≤ 2 | = 0 |
 
@@ -238,7 +238,7 @@ Each layer of the funnel is the denominator of the next layer. The difference be
 | Ch. 09 - Containers | CNT-K03 (signing), CNT-K05 (base images), CNT-K06 (image SBOM) |
 | Ch. 14 - Governance and Contracting | GOV-K05 (contractual clauses), GOV-K06 (supplier validation) |
 
-**Measurement frequency:** monthly for SBOM and images; half-yearly for contracts; annual for supplier validation.
+**Measurement frequency:** monthly for SBOM and images; half-yearly for contracts; annual (L1/L2) or half-yearly (L3) for supplier validation.
 
 ---
 
@@ -311,7 +311,7 @@ The executive dashboard is a condensed view of the six dimensions, oriented towa
 - T-02: any expired exception without renewal → **immediate red alert**
 - T-03: MTTR of a critical finding above twice the defined threshold → **red alert**
 - T-04: % of owners with valid training below 80% at any level → **amber alert**
-- T-05: any L3 supplier without annual validation → **red alert**
+- T-05: any L3 supplier without half-yearly validation → **red alert**
 - T-06: any domain below the minimum expected level for the organisation's dominant risk level → **amber alert with a mandatory plan**
 
 ---

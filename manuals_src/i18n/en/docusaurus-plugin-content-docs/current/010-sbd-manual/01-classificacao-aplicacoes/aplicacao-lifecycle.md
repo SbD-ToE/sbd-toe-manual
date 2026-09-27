@@ -6,16 +6,16 @@ tags: [tipo:aplicacao, ciclo-vida, classificacao, risco, user-stories, genia:us-
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/01-classificacao-aplicacoes/aplicacao-lifecycle.md
-  source_sha256: 494e19cc6498d3d3e3e6fb37e0b853dcf5b674b99cf5539dd93069c6f05ef76f
-  source_commit: 112711064196b71c545672fe3fb3ae412b36575e
-  target_sha256: 04eea28956d3fd7297b2ac19b7437c5e88eb96cb2d6ee959d0bd9dd0c51a931b
+  source_sha256: f4e5883d1f6044fd7dd470991b5655143aad6c94c0372120ba27bd1e357fc0fa
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: fa56d885b84b5e7512691556b257cc2c21d59a3c09d5922ea4756370963b554f
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, deterministic, evidenciabilidade, framework_source_corpus, lifecycle_phase, mapping, maturity, normative_empirical, papel_suporte, practitioner_manual, provenance, requirement_runtime, risk_level, role_tech_lead, slug_threat_modeling, threat, traceability, validation_evaluation]
   glossary_sha256: f6ae917127ac6e8e5843bed4b0ae5149090a1084fca0c5e241cb591a7f0239e0
-  translated_at: 2026-09-26T17:58:47Z
-  stamped_at: 2026-09-26T18:32:52Z
+  translated_at: 2026-09-27T07:53:36Z
+  stamped_at: 2026-09-27T07:53:36Z
   reviewed_by: null
 ---
 
@@ -209,7 +209,7 @@ As an **AppSec Engineer**, I want **to review the criticality classification whe
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |
 |---|---|---|---|
-| Continuous | Change in architecture, data or exposure | **AppSec Engineer + Developer + GRC/Compliance + Product Owner** | 3 working days after the trigger |
+| Continuous | Change in architecture, data or exposure | **AppSec Engineer + Developer + GRC/Compliance + Product Owner** | Start ≤ 5 working days after the trigger; completion ≤ 30 days (Policy 04) |
 
 **Useful links.**
 - [Risk Lifecycle](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/ciclo-vida-risco)  
@@ -456,9 +456,9 @@ As a **GRC/Compliance** role, I want to record acceptances with an **explicit TT
 **Proportionality (TTL per level).**
 | Level | TTL | Revalidation | Mandatory? |
 |---|---|---|---|
-| L1 | per master policy (Ch. 14) | Yearly | Recommended |
-| L2 | per master policy (Ch. 14) | Half-yearly | Mandatory |
-| L3 | per master policy (Ch. 14) | Quarterly | **Mandatory + Executive Management** |
+| L1 | Policy 05 §7 (90 days) | At expiry | Recommended |
+| L2 | Policy 05 §7 (60 days; High 30 days) | At expiry | Mandatory |
+| L3 | Policy 05 §7 (30 days; High 14 days) | At expiry | **Mandatory + Executive Management** |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |

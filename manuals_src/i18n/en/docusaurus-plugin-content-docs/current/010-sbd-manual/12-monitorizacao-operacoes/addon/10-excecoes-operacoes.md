@@ -7,16 +7,16 @@ tags: [exceções, operacoes, monitorizacao, alertas, retencao, DORA, NIS2, SIEM
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/12-monitorizacao-operacoes/addon/10-excecoes-operacoes.md
-  source_sha256: 7609a2d94bca704d066d88703f9d90114b5c05b6f8b10aa98bf06860866ea638
-  source_commit: 50f5914ebc90e4135e6678b2278709d5082dd237
-  target_sha256: 444dd407783cc3833dc76634606db0621c834f919c594a3649b57c646a509fb4
+  source_sha256: bcc9d469895751ff6d747e5f39c8727d1beb30f6d746783a91c719c5c7a6c8b1
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 21b6d3ae7b5760865297a904652811a9bf4cc6b096175f7a809ef961050a6577
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, practitioner_manual, requirement_runtime, risk_level, validation_evaluation]
   glossary_sha256: 99e0d8587c7733c5c6dc374a84d95e5ca9b4bffd25c4838cac143ed3a2e2ab05
-  translated_at: 2026-09-27T07:06:03Z
-  stamped_at: 2026-09-27T07:06:03Z
+  translated_at: 2026-09-27T07:53:55Z
+  stamped_at: 2026-09-27T07:53:55Z
   reviewed_by: null
 ---
 
@@ -61,7 +61,7 @@ Exceptions to OPS-003 with retention below an applicable statutory minimum (e.g.
 
 - the chain of authority must include legal or compliance validation, not only AppSec;
 - the exception must reference the specific regulatory requirement that is being compromised;
-- the maximum duration is determined by the regulatory risk, not by the generic 90-day deadline.
+- the maximum time limit is the lower of the ceiling of Policy 05 §7 and what the regulatory risk allows.
 
 ---
 

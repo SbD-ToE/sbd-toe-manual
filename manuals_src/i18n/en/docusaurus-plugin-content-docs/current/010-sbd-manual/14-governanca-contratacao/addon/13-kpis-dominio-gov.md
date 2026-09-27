@@ -7,16 +7,16 @@ tags: [kpi, metricas, GOV, governanca, excecoes, ownership, contratos, fornecedo
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/addon/13-kpis-dominio-gov.md
-  source_sha256: 2442a7af2256dd79966420e947f3d082d76114bd9953ae077b9a545e7b727e74
-  source_commit: 0866ff96fdef02aa75e70c17c9ea0a919e437310
-  target_sha256: 523405c7d166854c3f95e86548b2367ded08a0c3147f00595aaa1ed4f2d8c1e2
+  source_sha256: d45e002475775f4de0dcb0108f8c13908b932e59344b16b6c1ace90ee07717a3
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: ce8ad86e9032ed05c186cef33f5cbc4e1523843a98c7f1068b9eaa513dfc9b52
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [alcada, avaliacao, cycle_iteration, discipline, framework_source_corpus, mapping, mcp_reading_programa, programme_line, risk_level, sbdtoe_sbd, traceability, transversal, validation_evaluation]
   glossary_sha256: 3efa6fa839d580c9ac40b4e89b64a6cddc53b840ca91a9439e8e17615bc664c8
-  translated_at: 2026-09-26T12:49:08Z
-  stamped_at: 2026-09-26T18:36:21Z
+  translated_at: 2026-09-27T07:54:02Z
+  stamped_at: 2026-09-27T07:54:02Z
   reviewed_by: null
 ---
 
@@ -71,7 +71,7 @@ Thresholds are cumulative: L3 includes all the obligations of L1 and L2.
 | GOV-K03 | % of active exceptions with a defined expiry date and a scheduled reassessment date | Q% | ≥ 80% | 100% | 100% | T-02 | Monthly |
 | GOV-K04 | # of expired exceptions without formal renewal (must be treated as active non-compliance) | Q# ↓ | = 0 | = 0 | = 0 | T-02 | Weekly |
 | GOV-K05 | % of contracts with suppliers of L2/L3 systems with signed security clauses proportional to the risk | Q% | ≥ 80% | 100% | 100% | T-05 | Half-yearly |
-| GOV-K06 | % of L3 suppliers with the annual security validation completed and documented | Q% | - | - | 100% | T-05 | Annual |
+| GOV-K06 | % of L3 suppliers with half-yearly security validation completed and documented | Q% | - | - | 100% | T-05 | Half-yearly |
 | GOV-K07 | % of applications with complete and up-to-date organisational traceability (risk → requirements → exceptions → owner) | Q% | - | ≥ 80% | 100% | T-04 | Quarterly |
 | GOV-K08 | % of deviations identified in continuous validation cycles with a corrective action assigned to an owner with a deadline | Q% | ≥ 80% | 100% | 100% | T-02 | Per cycle |
 

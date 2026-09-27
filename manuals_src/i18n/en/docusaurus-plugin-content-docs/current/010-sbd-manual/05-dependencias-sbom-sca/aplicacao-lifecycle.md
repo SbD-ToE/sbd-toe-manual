@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md
-  source_sha256: 8387eec28e1b7db954197feaa6bab5a96f55550dae756f2c6876774af0e68f0b
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: b624721ae62191ae7f89a559d7b4e8e6dcb98271753511b3596744d836cb05cd
+  source_sha256: 1d6c1b849d690fd9d838f349d929292bbeeb4a0d291865e1e37d2def6fe73595
+  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
+  target_sha256: 88598bd98ccc303983e2d1d70bbd89298caff1028db0f502088d04d151474d09
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
   glossary_keys: [avaliacao, chapter_role, como_fazer, cra_pde, cycle_iteration, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: f5a983cfcc9856f17c8558b5cf1fc5b3d8ca697b5b3aa1cfa049e8a5b947c60d
-  translated_at: 2026-09-27T07:30:02Z
-  stamped_at: 2026-09-27T07:30:02Z
+  translated_at: 2026-09-27T07:53:42Z
+  stamped_at: 2026-09-27T07:53:42Z
   reviewed_by: null
 ---
 
@@ -227,7 +227,7 @@ As an **AppSec Engineer**, I want to **formalise CVE exceptions**, so that **gov
 | Level | Mandatory? | Adjustments |
 |---|---|---|
 | L1 | Optional | Simple justification |
-| L2 | Yes | Periodic review (30–90 days) |
+| L2 | Yes | Revalidation at expiry (TTL of Policy 05 §7: 60 days Low/Medium, 30 days High) |
 | L3 | Yes | Executive validation + risk metrics
 
 **Integration into the SDLC.**
@@ -568,9 +568,9 @@ Signed `sbom-<build>.json`; `inventario-runtime-<servico>-<ambiente>.json`; feed
 **Proportionality.**
 | Level | Mandatory? | Triage SLA | Mitigation SLA | Adjustments |
 |---|---:|---:|---:|---|
-| L1 | Yes | Critical ≤ 24 h; High ≤ 48 h; others 5 working days | 30 days | Alert only on deployed *high/critical* without compensating measures. |
-| L2 | Yes | Critical ≤ 24 h; High ≤ 48 h; others 2 working days | 14 days | Include *medium* in exposed services; automatic escalation. |
-| L3 | Yes | Critical ≤ 24 h; High ≤ 48 h; others 1 working day | 7 days | *Blockers* with auto-rollback/kill-switch where applicable. |
+| L1 | Yes | Critical ≤ 24 h; High ≤ 48 h; Medium 5 working days; Low 10 working days | Critical 30 days | Alert only on deployed *high/critical* without compensating measures. |
+| L2 | Yes | Critical ≤ 24 h; High ≤ 48 h; Medium 5 working days; Low 10 working days | Critical 7 days | Include *medium* in exposed services; automatic escalation. |
+| L3 | Yes | Critical ≤ 24 h; High ≤ 48 h; Medium 5 working days; Low 10 working days | Critical 3 days | *Blockers* with auto-rollback/kill-switch where applicable. |
 
 > These SLAs are the Manual's choice. A vulnerability with an indication of active exploitation in a product with digital elements that the organisation places on the market leaves this ladder: triage ≤4 h and, if confirmed, the CRA Article 14 track (early warning notification ≤24 h to the CSIRT designated as coordinator and to ENISA).
 
@@ -579,7 +579,7 @@ Signed `sbom-<build>.json`; `inventario-runtime-<servico>-<ambiente>.json`; feed
 |---|---|---|---|
 | CVE publication | New public vulnerability | Automatic (feed) | Automatic detection (1–6h) |
 | Triage | CVE correlated with a deployed version | AppSec + DevOps | L1: 5d, L2: 2d, L3: 1d |
-| Mitigation | Remediation plan or exception | DevOps + AppSec | L1: 30d, L2: 14d, L3: 7d |
+| Mitigation | Remediation plan or exception | DevOps + AppSec | Critical: L1 30d, L2 7d, L3 3d (Policy 19 §4.3) |
 
 **Useful links.**
 - [US-02 - SBOM in every build](#us-02---sbom-em-cada-build)

@@ -74,7 +74,7 @@ Como **DevOps/SRE**, quero **executar *deploy* apenas de artefactos assinados e 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Obrigatório | Obrigatório + rejeição automática |
+| Obrigatório (assinatura ou *hash* verificado) + rejeição automática | Obrigatório + rejeição automática | Obrigatório + rejeição automática |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -127,7 +127,7 @@ Como **QA**, quero **validar *releases* em *staging* com ambiente segregado, dad
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Opcional | Recomendado | Obrigatório |
+| Opcional | Obrigatório | Obrigatório |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -164,7 +164,7 @@ Como **AppSec Engineer**, quero **definir *gates* automáticos e *thresholds* no
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
+| Bloqueio Critical | Bloqueio High/Critical | Bloqueio Medium+ |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -201,7 +201,7 @@ Como **DevOps/SRE**, quero **ter *rollback* rápido e testado periodicamente**, 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Manual | Automatizado | Automatizado + testado periodicamente |
+| Manual documentado + testado anualmente | Automatizado + testado trimestralmente | Automatizado + testado trimestralmente |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -238,7 +238,7 @@ Como **Product Owner**, quero **garantir rastreabilidade entre *commit* → buil
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básica | Completa | Completa + auditoria contínua |
+| Completa (quem aprovou, artefacto + *commit* SHA, quando, ambiente, *gates*) | Completa | Completa + auditoria contínua |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -371,7 +371,7 @@ Como **DevOps/AppSec**, quero **garantir que segredos nunca são embebidos em ar
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Recomendado | Obrigatório | Obrigatório + rotação automática |
+| Obrigatório (*secret scanning* bloqueante, sem segredos embebidos; OIDC recomendado) | Obrigatório | Obrigatório + rotação automática |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -510,7 +510,7 @@ Como **AppSec/QA**, quero **executar validações técnicas (SAST, DAST, SBOM, a
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| SAST + aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+| SAST + bloqueio Critical | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -556,7 +556,7 @@ Como **DevOps/SRE**, quero **documentar e testar *rollback* para cada tipo de al
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
+| Manual documentado + testado anualmente | Automatizado (binário + config) + testado trimestralmente | Automatizado todos os tipos + testado trimestralmente |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -694,7 +694,7 @@ Como **DevOps / SRE**, quero **separar execução automática de ações irrever
 **Artefactos & evidências.** Registo de autorização, logs de execução, identidade do decisor.
 
 **Proporcionalidade.**  
-L1: registo simples  
+L1: autorização humana explícita registada  
 L2: autorização formal  
 L3: dupla aprovação
 
@@ -722,7 +722,7 @@ Como **GRC/AppSec**, quero **tratar evidência operacional como artefacto audit�
 **Artefactos & evidências.** Logs imutáveis, retenção definida, trilhos de auditoria.
 
 **Proporcionalidade.**  
-L1: retenção curta  
+L1: retenção mínima definida em política  
 L2: retenção definida  
 L3: retenção + revisão periódica
 
@@ -836,7 +836,7 @@ Como **DevOps/SRE**, quero **que cada aplicação use credenciais de *deploy* pr
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Âmbito mínimo documentado; sem partilha entre apps | OIDC/*workload identity* (tokens efémeros); isolamento por app | OIDC obrigatório + auditoria periódica de âmbito e logs de uso |
+| Âmbito e duração mínimos documentados; sem partilha entre apps; logs de uso disponíveis | OIDC/*workload identity* (tokens efémeros); isolamento por app | OIDC obrigatório + auditoria periódica de âmbito e logs de uso |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -899,18 +899,18 @@ A proporcionalidade permite adaptar rigor sem comprometer segurança:
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
-| Deploy de artefactos assinados | Recomendado | Obrigatório | Obrigatório + rejeição automática |
-| Validação em *staging* | Opcional | Recomendado | Obrigatório |
-| *Gates* de aprovação | Aviso | Bloqueio High/Critical | Bloqueio Medium+ |
-| *Rollback* | Manual | Automatizado | Automatizado + testado |
-| Rastreabilidade | Básica | Completa | Completa + auditoria |
+| Deploy de artefactos assinados | Obrigatório + rejeição automática | Obrigatório + rejeição automática | Obrigatório + rejeição automática |
+| Validação em *staging* | Opcional | Obrigatório | Obrigatório |
+| *Gates* de aprovação | Bloqueio Critical | Bloqueio High/Critical | Bloqueio Medium+ |
+| *Rollback* | Manual + testado anualmente | Automatizado + testado trimestralmente | Automatizado + testado trimestralmente |
+| Rastreabilidade | Completa | Completa | Completa + auditoria |
 | Monitorização | Básica | Crítica | Completa + resposta automática |
 | Feature flags e toggles | Opcional | Recomendado | Obrigatório |
-| Gestão de segredos (OIDC/Workload Identity) | Recomendado | Obrigatório | Obrigatório + rotação automática |
+| Gestão de segredos (OIDC/Workload Identity) | Obrigatório (sem segredos embebidos; OIDC recomendado) | Obrigatório | Obrigatório + rotação automática |
 | Versionamento semântico e changelog | Básico | Completo + segurança | Completo + segurança + compatibilidade |
 | Deploy progressivo (Canary/Blue-Green) | Recomendado (manual) | Automatizado com métricas | Automatizado + threshold-triggered rollback |
-| Validações técnicas pré-deploy | SAST + Aviso | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
-| Rollback por tipo (binário, config, BD, infra) | Manual documentado | Automatizado (binário + config) | Automatizado todos os tipos + testado |
+| Validações técnicas pré-deploy | SAST + bloqueio Critical | SAST + DAST + bloqueio High/Critical | SAST + DAST + bloqueio Medium+ |
+| Rollback por tipo (binário, config, BD, infra) | Manual documentado + testado anualmente | Automatizado (binário + config) + testado trimestralmente | Automatizado todos os tipos + testado trimestralmente |
 
 ---
 

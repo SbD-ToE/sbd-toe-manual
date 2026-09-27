@@ -75,7 +75,7 @@ Como **Developer**, quero **gerar logs estruturados e centralizados**, para **as
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Estruturado | Estruturado + correlação em SIEM |
+| Estruturado, persistido fora da instância | Estruturado + centralizado (SIEM ou equivalente) | Estruturado + correlação em SIEM |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -114,7 +114,7 @@ Como **AppSec Engineer**, quero **definir eventos e métricas críticas de segur
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico | Definição parcial | Definição completa + revisão trimestral |
+| Catálogo de eventos críticos definido, verificado e revisto por release | Catálogo definido e verificado, revisto por release | Definição completa + revisão trimestral |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -272,7 +272,7 @@ Como **AppSec/DevOps**, quero **classificar e mapear domínios de monitorizaçã
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Básico (técnica) | Técnica + segurança | Completo (técnica, segurança, negócio, conformidade, CI/CD) |
+| Técnica + segurança (eventos críticos) | Técnica + segurança | Completo (técnica, segurança, negócio, conformidade, CI/CD) |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -315,7 +315,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local: 30 dias (operacionais), 90 dias (segurança) | WORM + 1 ano (segurança) | WORM + 2 anos (segurança) + integridade verificável |
+| Persistidos fora da instância, protegidos contra alteração; 30 dias (operacionais), 90 dias (segurança) | WORM + 1 ano (segurança) | WORM + 2 anos (segurança) + integridade verificável |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -490,7 +490,7 @@ Documento de classificação de risco, matriz de proporcionalidade com controlos
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Logging local + mapeamento de domínios básico | Matriz aplicada; SIEM e alertas implementados | Matriz aplicada + revisão contínua com métricas |
+| Logging estruturado persistido fora da instância + catálogo de eventos críticos + mapeamento de domínios básico | Matriz aplicada; SIEM e alertas implementados | Matriz aplicada + revisão contínua com métricas |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -644,7 +644,7 @@ Como **DevOps/AppSec**, quero **assegurar que nenhum secret ou PII é registado 
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Redacção básica de credenciais | Redacção + exceções formais (TTL da Política 05 §7) | Redacção verificada por amostragem + exceções (TTL da Política 05 §7) + reavaliação pré-expiração |
+| Redacção de credenciais, *tokens* e PII, verificada por amostragem + exceções formais com prazo | Redacção verificada por amostragem + exceções formais (TTL da Política 05 §7) + alerta pré-expiração | Redacção verificada por amostragem + exceções (TTL da Política 05 §7) + reavaliação pré-expiração |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -726,7 +726,7 @@ Como **AppSec/IR**, quero **mapear as regras de deteção a técnicas MITRE ATT&
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Não aplicável | Mapeamento ATT&CK das regras críticas + KEV na priorização | Cobertura ATT&CK completa + EPSS/KEV com revisão contínua |
+| KEV na priorização (exploração ativa antecipa o SLA) | Mapeamento ATT&CK das regras críticas + KEV na priorização | Cobertura ATT&CK completa + EPSS/KEV com revisão contínua |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |
@@ -848,17 +848,17 @@ A matriz seguinte traduz os controlos em níveis proporcionais (L1–L3), equili
 
 | Prática | L1 | L2 | L3 |
 |---------|----|----|----|
-| Logging | Básico | Estruturado | Estruturado + SIEM |
-| Eventos críticos | Básico | Definição parcial | Completa + revisão trimestral |
+| Logging | Estruturado, persistido fora da instância | Estruturado + SIEM (ou equivalente) | Estruturado + SIEM + correlação |
+| Eventos críticos | Catálogo definido, verificado e revisto por release | Catálogo definido e verificado, revisto por release | Completa + revisão trimestral |
 | Alertas | Aviso | SLA crítico | SLA crítico + automação |
 | Integração IRP | Manual | Playbooks definidos | Playbooks automatizados |
 | Métricas | Básico | Calculadas | Calculadas + metas |
-| Domínios de monitorização | Técnica apenas | Técnica + segurança | Completo (técnica, segurança, negócio, conformidade, CI/CD) |
-| Segurança de logs | Básico | WORM + acesso controlado | WORM + assinatura + isolamento de função |
+| Domínios de monitorização | Técnica + segurança (eventos críticos) | Técnica + segurança | Completo (técnica, segurança, negócio, conformidade, CI/CD) |
+| Segurança de logs | Persistidos fora da instância + proteção contra alteração | WORM + acesso controlado | WORM + assinatura + isolamento de função |
 | Integração SIEM | Opcional | Forwarder configurado | SIEM + parsing + dashboards |
 | Correlação comportamental | Não aplicável | Opcional | Obrigatório |
 | Validação de alertas | Manual ocasional | Periódica | Contínua + automação |
-| Proporcionalidade por domínio | Logging local + mapeamento básico | Matriz aplicada; SIEM e alertas implementados | Matriz aplicada + revisão contínua com métricas |
+| Proporcionalidade por domínio | Logging estruturado fora da instância + catálogo de eventos críticos + mapeamento básico | Matriz aplicada; SIEM e alertas implementados | Matriz aplicada + revisão contínua com métricas |
 | Rastreabilidade regulatória | Mapeamento básico | Mapeamento + evidência documentada | Mapeamento + evidência + métricas + auditoria contínua |
 
 ---

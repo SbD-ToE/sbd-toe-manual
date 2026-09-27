@@ -39,8 +39,8 @@ LEVELS = ("L1", "L2", "L3")
 REQ_ID = r"[A-Z]{2,4}(?:-[A-Z]{2,4})?-\d{3}"
 ACTOS = ("cra", "dora", "nis2", "aiact", "rgpd", "csa")
 # context -> folder of its cross-check pages (the generated view lives there)
-CTX_FOLDER = {"CTX-NIS2": "nis2", "CTX-DORA": "dora", "CTX-CRA": "cra", "CTX-AIA-RE": "ai-act", "CTX-RGPD": "gdpr"}
 VIEW_FILE = "90-requisitos-aplicaveis.md"
+COVERAGE_FILE = "90-cobertura.md"
 
 sys.path.insert(0, str(ROOT / "translation/scripts"))
 import common  # noqa: E402  (i18n helpers: hashing, translation block, glossary hash)
@@ -285,7 +285,22 @@ T = {
         "h_mapa": "Mapa de evidência da documentação técnica",
         "mapa_intro": "Obrigações documentais do regime ({anexo}) ligadas aos artefactos do Manual que as alimentam. «Apoia evidência»: o Manual produz a evidência de engenharia e a redacção do documento é de quem coloca o produto no mercado. As lacunas e o que fica fora de âmbito aparecem com a razão. Gerado da matriz `_matriz/{acto}.yaml`.",
         "cols_mapa": "| Obrigação | Referência | Força | Como o Manual responde | Nota |",
-        "matrix_note": "Contagem das obrigações da matriz `_matriz/{acto}.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.",
+        "h_cob": "O que este Manual cobre e o que fica de fora",
+        "cob_intro": "Todas as obrigações da matriz `_matriz/{acto}.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As {n_exc} obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.",
+        "h_cobre": "Cobre",
+        "cobre_intro": "Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.",
+        "h_lacuna": "Lacuna declarada",
+        "lacuna_intro": "Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.",
+        "h_foracob": "Fora de âmbito",
+        "fora_intro": "Obrigações que o Manual declara fora de âmbito, com a razão.",
+        "cols_cobre": "| Obrigação | Referência | Força | Forma |",
+        "cols_lacuna": "| Obrigação | Referência | Força | Como o Manual responde | O que falta |",
+        "cols_foracob": "| Obrigação | Referência | Razão |",
+        "cov_title": "Cobertura — {nome}",
+        "cov_desc": "Vista gerada: o que o Manual cobre, as lacunas declaradas e o que fica fora de âmbito, a partir da matriz de cobertura do {nome}.",
+        "cov_h1": "Cobertura: {nome}",
+        "cov_gen": "> **Página gerada** por `scripts/gen_reg_views.py` a partir da matriz `002-cross-check-normativo/_matriz/{acto}.yaml`. Não se edita à mão. Este regime não tem contexto no overlay regulatório (não eleva nem acrescenta requisitos); responde só nas três categorias.",
+        "matrix_note": "Contagem das obrigações da matriz `_matriz/{acto}.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.",
         "graus_cum": "cumulativo com o contexto",
         "graus_ind": "declarável sozinho",
     },
@@ -319,13 +334,32 @@ T = {
         "h_mapa": "Evidence map for the technical documentation",
         "mapa_intro": "Documentary obligations of the regime ({anexo}) linked to the Manual artefacts that feed them. “Supports evidence”: the Manual produces the engineering evidence and drafting the document is for whoever places the product on the market. Gaps and what stays out of scope appear with the reason. Generated from the matrix `_matriz/{acto}.yaml`.",
         "cols_mapa": "| Obligation | Reference | Strength | How the Manual responds | Note |",
-        "matrix_note": "Count of the obligations in the matrix `_matriz/{acto}.yaml` (excluding those addressed to the authorities). The section “What this Manual covers and what stays out” of the cross-check page details them.",
+        "h_cob": "What this Manual covers and what stays out",
+        "cob_intro": "All the obligations of the matrix `_matriz/{acto}.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The {n_exc} obligations addressed to the authorities create no duty for the organisation and are not listed.",
+        "h_cobre": "Covers",
+        "cobre_intro": "Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.",
+        "h_lacuna": "Declared gap",
+        "lacuna_intro": "Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.",
+        "h_foracob": "Out of scope",
+        "fora_intro": "Obligations that the Manual declares out of scope, with the reason.",
+        "cols_cobre": "| Obligation | Reference | Strength | Form |",
+        "cols_lacuna": "| Obligation | Reference | Strength | How the Manual responds | What is missing |",
+        "cols_foracob": "| Obligation | Reference | Reason |",
+        "cov_title": "Coverage — {nome}",
+        "cov_desc": "Generated view: what the Manual covers, the declared gaps and what stays out of scope, from the coverage matrix of the {nome}.",
+        "cov_h1": "Coverage: {nome}",
+        "cov_gen": "> **Generated page**, produced by `scripts/gen_reg_views.py` from the matrix `002-cross-check-normativo/_matriz/{acto}.yaml`. It is not edited by hand. This regime has no context in the regulatory overlay (it neither elevates nor adds requirements); it answers only in the three categories.",
+        "matrix_note": "Count of the obligations in the matrix `_matriz/{acto}.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.",
         "graus_cum": "cumulative with the context",
         "graus_ind": "declarable on its own",
     },
 }
 
-CTX_ACTO = {"CTX-NIS2": "nis2", "CTX-DORA": "dora", "CTX-CRA": "cra", "CTX-AIA-RE": "aiact", "CTX-RGPD": "rgpd"}
+
+
+def ctx_acto(ctx: dict) -> str:
+    """The matrix a context rests on, from the overlay data (``matriz: _matriz/<acto>.yaml``)."""
+    return Path(ctx["matriz"]).stem
 
 
 def _cell(text) -> str:
@@ -391,6 +425,54 @@ def _target_text(p: dict, lang: str) -> str:
     return _link_policy(a["ficheiro"], a["ancora"], a["rotulo"][lang])
 
 
+def render_coverage(matrix: dict, vocab: dict, acto: str, lang: str) -> List[str]:
+    """Three-category coverage section (lead decision 2026-09-27): covers / declared gap / out of scope."""
+    t = T[lang]
+    fn = {f["id"]: f["nome"][lang] for f in vocab["forca"]}
+    rn = {r["id"]: r["nome"][lang] for r in vocab.get("rondas") or []}
+    itens = [it for it in matrix["itens"] if not it.get("retirado")]
+    out = [f"## {t['h_cob']} {{#cobertura}}", "", t["cob_intro"].format(acto=acto, n_exc=len(matrix.get("excluidas") or [])), ""]
+    resp = lambda it: "; ".join(_resp_text(r, lang) for r in it.get("resposta") or []) or "—"
+    cob = [it for it in itens if it["forca"] in ("cobre", "apoia_evidencia")]
+    out += [f"### {t['h_cobre']} ({len(cob)}) {{#cobre}}", "", t["cobre_intro"], "", t["cols_cobre"], "|---|---|---|---|"]
+    out += [f"| {it['id']} | {_cell(it['referencia'][lang])} | {fn[it['forca']]} | {_cell(resp(it))} |" for it in cob]
+    lac = [it for it in itens if it["forca"] in ("parcial", "lacuna")]
+    out += ["", f"### {t['h_lacuna']} ({len(lac)}) {{#lacuna}}", "", t["lacuna_intro"], "", t["cols_lacuna"], "|---|---|---|---|---|"]
+    for it in lac:
+        falta = (it.get("falta") or {}).get(lang, "—")
+        if it.get("pendente"):
+            ronda = it["pendente"].get("ronda")
+            falta = f"**{rn.get(ronda, ronda)}.** " + falta
+        out.append(f"| {it['id']} | {_cell(it['referencia'][lang])} | {fn[it['forca']]} | {_cell(resp(it))} | {_cell(falta)} |")
+    fora = [it for it in itens if it["forca"] == "fora_de_ambito"]
+    out += ["", f"### {t['h_foracob']} ({len(fora)}) {{#fora-de-ambito}}", "", t["fora_intro"], "", t["cols_foracob"], "|---|---|---|"]
+    out += [f"| {it['id']} | {_cell(it['referencia'][lang])} | {_cell((it.get('razao_fora_de_ambito') or {}).get(lang, '—'))} |" for it in fora]
+    out.append("")
+    return out
+
+
+def render_coverage_page(acto: str, matrix: dict, ctx_doc: dict, lang: str) -> str:
+    """Coverage-only page for a regime with a matrix but no context in the overlay (e.g. CSA)."""
+    t = T[lang]
+    nome = matrix["nome"][lang]
+    fm = [
+        "---",
+        "id: cobertura",
+        f"title: {json.dumps(t['cov_title'].format(nome=nome), ensure_ascii=False)}",
+        f"description: {json.dumps(t['cov_desc'].format(nome=nome), ensure_ascii=False)}",
+        "sidebar_position: 90",
+        f"tags: [cross-check, {matrix['pasta']}, cobertura, gerado]",
+        f"{GENERATED_KEY}: {VIEW_NAME}",
+        "derived_from:",
+        f"  - {XC}/_matriz/{acto}.yaml",
+        "---",
+        "",
+    ]
+    body = [f"# {t['cov_h1'].format(nome=nome)}", "", t["cov_gen"].format(acto=acto), ""]
+    body += render_coverage(matrix, ctx_doc["vocabulario"], acto, lang)
+    return "\n".join(fm + body)
+
+
 def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dict, lang: str) -> str:
     t = T[lang]
     cid = ctx["id"]
@@ -405,7 +487,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
         f"title: {json.dumps(t['title'].format(nome=nome), ensure_ascii=False)}",
         f"description: {json.dumps(t['desc'].format(cid=cid), ensure_ascii=False)}",
         "sidebar_position: 90",
-        f"tags: [cross-check, {CTX_FOLDER[cid]}, requisitos, overlay, gerado]",
+        f"tags: [cross-check, {matrix['pasta']}, requisitos, overlay, gerado]",
         f"{GENERATED_KEY}: {VIEW_NAME}",
         "derived_from:",
     ] + [f"  - {d}" for d in derived] + ["---", ""]
@@ -472,7 +554,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
             name = master[rid]["nome"][lang] if rid in master else (add["nome"][lang] if add else rid)
             body.append(f"| `{rid}` | {_cell(name)} | {' | '.join(marks)} | {', '.join(sorted(pisos)) or '—'} |")
         body.append("")
-    acto = CTX_ACTO[cid]
+    acto = ctx_acto(ctx)
     # evidence map (documentary obligations)
     em = matrix.get("mapa_evidencia")
     if em:
@@ -498,6 +580,7 @@ def render_view(ctx: dict, ctx_doc: dict, lists: dict, master: dict, matrix: dic
     for f in [x["id"] for x in vocab["forca"]]:
         body.append(f"| {fnames[f]} | {len(counts.get(f, []))} |")
     body.append("")
+    body += render_coverage(matrix, vocab, acto, lang)
     return "\n".join(fm + body)
 
 

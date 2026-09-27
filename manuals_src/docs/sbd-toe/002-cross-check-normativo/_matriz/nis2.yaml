@@ -2,6 +2,7 @@
 # Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/nis2.json.
 schema: sbdtoe-reg-coverage/1
 acto: nis2
+pasta: nis2
 version: 1
 decided: '2026-09-27'
 framework_legado: EXT-NIS2

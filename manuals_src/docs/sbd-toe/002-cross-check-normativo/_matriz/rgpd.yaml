@@ -2,6 +2,7 @@
 # Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/rgpd.json.
 schema: sbdtoe-reg-coverage/1
 acto: rgpd
+pasta: gdpr
 version: 1
 decided: '2026-09-27'
 framework_legado: EXT-RGPD

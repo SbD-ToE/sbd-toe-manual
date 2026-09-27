@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: a2afe60f89d18ccd7a354d1f131a67867b9e05c6803af853b98d581d9dd96d75
+  source_sha256: 3b575d32b7fab4a48f014a4ca03e5d13744ed322c4d9a67f99b0fd97c8d9d47f
   source_commit: null
-  target_sha256: 562fb46701083f48a3f386b644791c017b4dfa8348d1ea92198d31faf783c545
+  target_sha256: b75f2f842243d22c3b809aa148ce4493bf1b495db6d20fc9fa5501f37ee3e54a
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -377,7 +377,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 
 ## Obligations of the regime by coverage strength {#forca}
 
-Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addressed to the authorities). The section “What this Manual covers and what stays out” of the cross-check page details them.
+Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addressed to the authorities). The section [“What this Manual covers and what stays out”](#cobertura) lists them.
 
 | Strength | Obligations |
 |---|--:|
@@ -386,3 +386,142 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 | Supports evidence | 17 |
 | Gap | 0 |
 | Out of scope | 49 |
+
+## What this Manual covers and what stays out {#cobertura}
+
+All the obligations of the matrix `_matriz/rgpd.yaml` in three categories: what the Manual **covers**, and in what form; the **declared gaps** (what it does not cover by omission); and what is **out of scope**, with the reason. Generated from the matrix; no obligation is left in silence. The 6 obligations addressed to the authorities create no duty for the organisation and are not listed.
+
+### Covers (55) {#cobre}
+
+Strength “covers” or “supports evidence”. The form is the Manual's response: catalogue requirement, policy, section, floor or requirement added by the regime.
+
+| Obligation | Reference | Strength | Form |
+|---|---|---|---|
+| RGPD-5-1-b | Article 5(1), point (b) | Supports evidence | `PRI-004`; `PRI-001` |
+| RGPD-5-1-c | Article 5(1), point (c) | Covers | `PRI-001`; `PRI-005`; [Policy 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Policy 29 §3.2](/sbd-toe/assets/policies/policy-logging-estruturado#32-schema-mínimo-de-evento); `ENC-005`; [Policy 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização) |
+| RGPD-5-1-d | Article 5(1), point (d) | Covers | `PRI-003` |
+| RGPD-5-1-e | Article 5(1), point (e) | Covers | `PRI-002`; `PRI-002`; `PRI-002`; [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Policy 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-5-1-f | Article 5(1), point (f) | Covers | `ENC-001`; `ENC-002`; `ACC-001`; `ACC-006`; `LOG-003`; `ENC-009` |
+| RGPD-5-2 | Article 5(2) | Supports evidence | `GOV-009`; [Regulatory Framework](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/grc-compliance#enquadramento-regulatório); [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-6-4 | Article 6(4) | Supports evidence | `PRI-004` |
+| RGPD-7-1 | Article 7(1) | Covers | `PRI-006` |
+| RGPD-7-3 | Article 7(3) | Covers | `PRI-006` |
+| RGPD-8-2 | Article 8(2) | Covers | `CTX-RGPD-R03`; [Policy 18 §10.8](/sbd-toe/assets/policies/policy-gestao-segredos#108-anti-padrões) |
+| RGPD-9-1 | Article 9(1) and (2) | Supports evidence | [📑 Data Type (D)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos#-tipo-de-dados-d); [Policy 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade) |
+| RGPD-12-6 | Article 12(6) | Covers | `AUT-009`; `PRI-003` |
+| RGPD-15-3 | Article 15(3) | Covers | `PRI-003` |
+| RGPD-16 | Article 16 | Covers | `PRI-003`; `PRI-003`; [Policy 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-1 | Article 17(1) | Covers | `PRI-003`; `PRI-002`; [Policy 29 §8.1](/sbd-toe/assets/policies/policy-logging-estruturado#81-imutabilidade-e-apagamento-de-dados-pessoais); [Policy 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-2 | Article 17(2) | Covers | `CTX-RGPD-R02` |
+| RGPD-18-1 | Article 18(1) | Covers | `CTX-RGPD-R01` |
+| RGPD-18-2 | Article 18(2) | Covers | `CTX-RGPD-R01` |
+| RGPD-19 | Article 19 | Covers | `PRI-004`; `PRI-003` |
+| RGPD-20-1 | Article 20(1) | Covers | `PRI-003` |
+| RGPD-21-2-3 | Article 21(2) and (3) | Covers | `PRI-006`; [Policy 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-21-5 | Article 21(5) | Covers | `CTX-RGPD-R04` |
+| RGPD-22-1 | Article 22(1) and (2) | Covers | `CTX-RGPD-R05` |
+| RGPD-22-3 | Article 22(3) | Covers | `CTX-RGPD-R05` |
+| RGPD-22-4 | Article 22(4) | Covers | `CTX-RGPD-R05` |
+| RGPD-24-1 | Article 24(1) | Supports evidence | `CLA-003`; `GOV-010`; [Policy 04 §1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#1-objetivo) |
+| RGPD-25-1 | Article 25(1) | Covers | `THR-003`; [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [The method](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `PRI-001`; `ERR-007` |
+| RGPD-25-2 | Article 25(2) | Covers | `PRI-007`; `PRI-007`; [Policy 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `PRI-001`; `PRI-002`; `ACC-002` |
+| RGPD-28-1 | Article 28(1) | Supports evidence | [Policy 33 §3](/sbd-toe/assets/policies/policy-contratacao-segura#3-due-diligence-pré-contratual); `GOV-007` |
+| RGPD-28-2 | Article 28(2) | Supports evidence | [Policy 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3-b | Article 28(3), point (b) | Supports evidence | [Policy 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding) |
+| RGPD-28-3-c | Article 28(3), point (c) | Covers | `CLA-003`; [Policy 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco); `ENC-002`; `ACC-001` |
+| RGPD-28-3-e | Article 28(3), point (e) | Covers | `PRI-003` |
+| RGPD-28-3-f | Article 28(3), point (f) | Supports evidence | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3-g | Article 28(3), point (g) | Covers | `PRI-002`; [Policy 33 §7.1](/sbd-toe/assets/policies/policy-contratacao-segura#71-checklist-de-offboarding) |
+| RGPD-28-3-h | Article 28(3), point (h) | Supports evidence | [Policy 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco) |
+| RGPD-30-1 | Article 30(1) | Supports evidence | `PRI-004`; `CLA-008`; `ARC-001` |
+| RGPD-30-2 | Article 30(2) | Supports evidence | `PRI-004` |
+| RGPD-32-1 | Article 32(1) | Covers | `CLA-001`; `CLA-003`; `THR-001` |
+| RGPD-32-1-a | Article 32(1), point (a) | Covers | `ENC-002`; `ENC-001`; `ERR-007`; [Policy 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); `PRI-005` |
+| RGPD-32-1-b | Article 32(1), point (b) | Covers | `ENC-001`; `ACC-001`; `ENC-009`; `OPS-015`; `ARC-006` |
+| RGPD-32-1-c | Article 32(1), point (c) | Covers | `DPL-005`; [Policy 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados); [Policy 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); [Policy 32 §5](/sbd-toe/assets/policies/policy-irp#5-playbooks-de-resposta); `OPS-016`; `OPS-016` |
+| RGPD-32-1-d | Article 32(1), point (d) | Covers | `TST-001`; `TST-008`; [Policy 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); `GOV-010` |
+| RGPD-32-2 | Article 32(2) | Covers | `THR-001`; `THR-002`; `CLA-001` |
+| RGPD-32-4 | Article 32(4) | Supports evidence | `ACC-002`; `ACC-010`; [Policy 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding); `TRN-001` |
+| RGPD-33-1 | Article 33(1) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) |
+| RGPD-33-2 | Article 33(2) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-33-3 | Article 33(3) | Covers | [Policy 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Policy 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| RGPD-33-4 | Article 33(4) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| RGPD-33-5 | Article 33(5) | Covers | `CTX-RGPD-R06`; [Policy 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-34-1 | Article 34(1) | Covers | [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) |
+| RGPD-35-1 | Article 35(1) | Supports evidence | [Scope and purpose](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito); [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); `THR-003`; [Scope and purpose](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito) |
+| RGPD-35-7 | Article 35(7) | Supports evidence | [The method](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `THR-002`; [The method](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método) |
+| RGPD-35-11 | Article 35(11) | Supports evidence | [Policy 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); `ARC-009`; `CLA-006` |
+| RGPD-39-1 | Article 39(1) | Supports evidence | [The method](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Key Responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) |
+
+### Declared gap (10) {#lacuna}
+
+Strength “partial” or “gap”: the Manual does not cover, or covers only in part, and says what is missing. Gaps pending an AppSec Core round are marked with the name of the round.
+
+| Obligation | Reference | Strength | How the Manual responds | What is missing |
+|---|---|---|---|---|
+| RGPD-12-2 | Article 12(2) | Partial | `PRI-003`; `PRI-006`; `CTX-RGPD-R01`; [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) | The technical part of exercising the rights is prescribed (PRI-003, PRI-006; restriction in CTX-RGPD-R01). The request channel and the formal reply to the data subject are legal matters, to be declared out of scope. |
+| RGPD-15-1 | Article 15(1) | Partial | `PRI-003`; `PRI-004` | The copy of the data and the inventory of purposes and recipients are prescribed (PRI-003, PRI-004). The informational content of the reply (purposes, recipients, period, source, rights) belongs to the formal reply, to be declared out of scope. |
+| RGPD-20-2 | Article 20(2) | Partial | `PRI-003` | Export in a machine-readable format is prescribed (PRI-003); direct transmission between controllers, where technically feasible, is not. |
+| RGPD-24-2 | Article 24(2) | Partial | [Policy 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Policy 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | There is no data protection policy among the 39 policies; there is only the section on personal data in AI prompts (Policy 18 §10) and the prohibitions in logs (Policy 29 §5). |
+| RGPD-28-3 | Article 28(3) | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Policy 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | The Article 28(3) contract is prescribed only for AI service vendors; for other processors Policy 33 §4 requires only security clauses. |
+| RGPD-34-2 | Article 34(2) | Partial | [Policy 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Requires honest communication, but not the minimum content (nature of the breach in clear language, DPO contact, consequences, measures). |
+| RGPD-35-2 | Article 35(2) | Partial | [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Key Responsibilities](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Review by the DPO only at L3 and of the LINDDUN analysis, not of the DPIA. |
+| RGPD-38-1 | Article 38(1) | Partial | [Policy 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Policy 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Ch. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | DPO involved in breaches (≤ 1 h) and in the L3 LINDDUN review; not involved in design, DPIA, choice of processors or exceptions. |
+| RGPD-44 | Article 44 | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Policy 33 §10.2](/sbd-toe/assets/policies/policy-contratacao-segura#102-localização-de-processamento) | Only in the AI service vendors slice; hosting, SaaS and other processors outside the EEA have no location/transfer rule. |
+| RGPD-46-1 | Article 46(1) to (3) | Partial | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | Requires SCCs “or another valid mechanism” only for AI vendors; does not address transfer impact assessment nor supplementary technical measures. |
+
+### Out of scope (49) {#fora-de-ambito}
+
+Obligations that the Manual declares out of scope, with the reason.
+
+| Obligation | Reference | Reason |
+|---|---|---|
+| RGPD-5-1-a | Article 5(1), point (a) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-6-1 | Article 6(1) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-7-2 | Article 7(2) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-8-1 | Article 8(1) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-9-3 | Article 9(3) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-10 | Article 10 | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-11-2 | Article 11(2) | Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items. |
+| RGPD-12-1 | Article 12(1) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-12-3 | Article 12(3) | Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items. |
+| RGPD-12-4 | Article 12(4) | Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items. |
+| RGPD-12-5 | Article 12(5) | Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items. |
+| RGPD-13-1 | Article 13(1) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-13-2 | Article 13(2) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-13-3 | Article 13(3) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-14-1-2 | Article 14(1) and (2) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-14-3 | Article 14(3) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-14-4 | Article 14(4) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-15-2 | Article 15(2) | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |
+| RGPD-18-3 | Article 18(3) | Formal procedure for responding to the data subject (time limits, reasons, costs): “formal rights”, delimited by the Manual to the legal side; the corresponding technical capability is addressed in the engineering items. |
+| RGPD-21-1 | Article 21(1) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-21-4 | Article 21(4) | Content and form of the information to the data subject (privacy notices): legal-communication matter, referred by the Manual to Legal/DPO. |
+| RGPD-26-1 | Article 26(1) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-26-2 | Article 26(2) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-27-1 | Article 27(1) and (2) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-28-3-a | Article 28(3), point (a) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-28-3-2 | Article 28(3), second subparagraph | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-28-3-d | Article 28(3), point (d) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-28-4 | Article 28(4) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-28-10 | Article 28(10) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-29 | Article 29 | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-30-3-4 | Article 30(3) and (4) | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-31 | Article 31 | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-35-3 | Article 35(3) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-35-9 | Article 35(9) | Legal duty (content/validity of the processing or legal relationship) — the Manual explicitly delimits it out of scope: “The legal side — legal bases, formal rights, regulatory obligations — does not live in this catalogue” (Ch. 02, PRI); the GDPR cross-check refers it to Legal/DPO. |
+| RGPD-36-1 | Article 36(1) | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-36-3 | Article 36(3) | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-37-1 | Article 37(1) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-37-5 | Article 37(5) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-37-7 | Article 37(7) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-38-2 | Article 38(2) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-38-3 | Article 38(3) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-38-6 | Article 38(6) | Status, designation and independence of the DPO: a matter of legal organisation; the Manual only assumes the DPO role where there is personal data (Roles — Legal). |
+| RGPD-40-4 | Article 40(4) | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-42-6-7 | Article 42(6) and (7) | Relationship with the supervisory authority/supervisory bodies; legal plane, not engineering. |
+| RGPD-47-2 | Article 47(2) | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |
+| RGPD-48 | Article 48 | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |
+| RGPD-49-1 | Article 49(1) | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |
+| RGPD-49-1-2 | Article 49(1), second subparagraph | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |
+| RGPD-49-6 | Article 49(6) | Legal regime for international transfers (mechanisms, derogations, BCR): Legal/DPO. The Manual only touches on transfers in the AI vendors slice (Policies 18 §10.3 and 33 §10.2). |

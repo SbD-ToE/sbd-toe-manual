@@ -2,6 +2,7 @@
 # Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/aiact.json.
 schema: sbdtoe-reg-coverage/1
 acto: aiact
+pasta: ai-act
 version: 1
 decided: '2026-09-27'
 framework_legado: EXT-AI-ACT

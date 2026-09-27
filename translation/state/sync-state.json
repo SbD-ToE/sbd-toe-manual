@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T21:30:50Z",
+  "generated_at": "2026-09-27T22:07:33Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -56,9 +56,9 @@
     },
     "002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "2e9c047c4d0ab90e91aad4c38bbab25d9e6925ef8f2768c8265957481f2aa16f",
-      "translated_source_sha256": "2e9c047c4d0ab90e91aad4c38bbab25d9e6925ef8f2768c8265957481f2aa16f",
-      "target_sha256": "266599a07811eb4ffc4e12b35792a087bdfbb789d244cd9908b4ff9b16d89bce",
+      "source_sha256": "9316d6519baa39e5ff2e361b12c85582ddddbac86e9de4b1bd5fa2763edf3a2d",
+      "translated_source_sha256": "9316d6519baa39e5ff2e361b12c85582ddddbac86e9de4b1bd5fa2763edf3a2d",
+      "target_sha256": "4542ec94a822e66e06eee39bececa6e6a115d6b5b1d040a3e105ab40d948e711",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -86,9 +86,9 @@
     },
     "002-cross-check-normativo/cra/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "6c0d65a4a889a4d39e2e37ab9f72aa4de5ea528cdff9af507fd29e847b73ed76",
-      "translated_source_sha256": "6c0d65a4a889a4d39e2e37ab9f72aa4de5ea528cdff9af507fd29e847b73ed76",
-      "target_sha256": "1465308a33526884832e656c3d95d3cf935e6bf6eb3d7c6f5401471479e02594",
+      "source_sha256": "7669fba8bf4aec2a7ede4a30803898c2cd3799bf69135076510cdc451e456432",
+      "translated_source_sha256": "7669fba8bf4aec2a7ede4a30803898c2cd3799bf69135076510cdc451e456432",
+      "target_sha256": "0a0ce4240efd17a176ff5cccee5f92e5f1a568f3f5873c252ca623418aae0a73",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -127,9 +127,9 @@
     },
     "002-cross-check-normativo/dora/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "6c34e3740fcbddb53946ee996d41547633a21339c713c421ec625e1812e69aa9",
-      "translated_source_sha256": "6c34e3740fcbddb53946ee996d41547633a21339c713c421ec625e1812e69aa9",
-      "target_sha256": "a2d7ca1282c7e20ccd25516396e93dd7f977221b96fe2ea4dc900117ed98ebab",
+      "source_sha256": "2333270cd1b3d5ad4cd6ca2f8227bc022f2f8b5fe792c87c6a5e9047bfb6e006",
+      "translated_source_sha256": "2333270cd1b3d5ad4cd6ca2f8227bc022f2f8b5fe792c87c6a5e9047bfb6e006",
+      "target_sha256": "9877fa4deb1fb013d05f2769f242f35990c05a76ad69f21d791f7d1d3c69b3ef",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -143,6 +143,16 @@
       "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
       "glossary_sha256_at_translation": "adee14336371e09a6aa3ffbea429a07e1d77ba52180aa9766019790067b5cb10",
       "translated_at": "2026-09-26T23:27:17Z",
+      "pending_blocks": 0
+    },
+    "002-cross-check-normativo/enisa-csa/90-cobertura.md": {
+      "state": "synced",
+      "source_sha256": "862187fbc03e2a6081625a140e32bd4aff0a0ca2a0d3341b34371edee56cf8d5",
+      "translated_source_sha256": "862187fbc03e2a6081625a140e32bd4aff0a0ca2a0d3341b34371edee56cf8d5",
+      "target_sha256": "c23bed8d15768bcd83b3b5b3d79194fcdaae72b562e54e1156ea29a9a2a0880a",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "translated_at": "2026-09-27T00:00:00Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/exemplo-playbook/01-exemplo-toolchain-options.md": {
@@ -227,9 +237,9 @@
     },
     "002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "a2afe60f89d18ccd7a354d1f131a67867b9e05c6803af853b98d581d9dd96d75",
-      "translated_source_sha256": "a2afe60f89d18ccd7a354d1f131a67867b9e05c6803af853b98d581d9dd96d75",
-      "target_sha256": "562fb46701083f48a3f386b644791c017b4dfa8348d1ea92198d31faf783c545",
+      "source_sha256": "3b575d32b7fab4a48f014a4ca03e5d13744ed322c4d9a67f99b0fd97c8d9d47f",
+      "translated_source_sha256": "3b575d32b7fab4a48f014a4ca03e5d13744ed322c4d9a67f99b0fd97c8d9d47f",
+      "target_sha256": "b75f2f842243d22c3b809aa148ce4493bf1b495db6d20fc9fa5501f37ee3e54a",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -267,9 +277,9 @@
     },
     "002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md": {
       "state": "synced",
-      "source_sha256": "1eab8e3d0b967b0d1822b10d060fd9747fb2a5d220dbb5241781f89f0917b54a",
-      "translated_source_sha256": "1eab8e3d0b967b0d1822b10d060fd9747fb2a5d220dbb5241781f89f0917b54a",
-      "target_sha256": "4af8afba7b241e87eaa2fb22091224f8fbea55d3db63367ea7c05436aa1d4306",
+      "source_sha256": "f2bfb7574c6e8a17de0b1c159ee65c87fd574e71843c2cff8a1fdd2d338e5492",
+      "translated_source_sha256": "f2bfb7574c6e8a17de0b1c159ee65c87fd574e71843c2cff8a1fdd2d338e5492",
+      "target_sha256": "ff8a7374c2f92b5ce1775eddfbf96c9a4c427e99466060b820a4e7d2b7f4c0c7",
       "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
       "glossary_sha256_at_translation": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "translated_at": "2026-09-27T00:00:00Z",
@@ -4228,7 +4238,7 @@
   },
   "totals": {
     "untranslated": 0,
-    "synced": 422,
+    "synced": 423,
     "partial": 0,
     "pt-ahead": 0,
     "en-ahead": 0,

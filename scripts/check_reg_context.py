@@ -152,6 +152,11 @@ def check_matrices(master: dict, ctx_doc: dict, matrices: dict) -> None:
         if L.sha256(raw) != fo.get("sha256"):
             fail(w, "sha256 de fonte_obrigacoes não confere")
         O = {o["id"]: o for o in obl["obrigacoes"]}
+        pasta = m.get("pasta")
+        if not (isinstance(pasta, str) and (L.DOCS / L.XC / pasta).is_dir()):
+            fail(w, f"pasta de cross-check inexistente ou em falta: {pasta!r}")
+        if acto not in {Path(c["matriz"]).stem for c in ctx_doc.get("contextos") or []}:
+            bilingual(m.get("nome"), w + "/nome (obrigatório numa matriz sem contexto)")
         me = m.get("mapa_evidencia")
         if me is not None:
             pref = me.get("prefixos") if isinstance(me, dict) else None
@@ -299,8 +304,6 @@ def check_contexts(master: dict, ctx_doc: dict, matrices: dict) -> None:
         if mids is None:
             fail(cw, f"matriz inexistente {c.get('matriz')}")
             mids = set()
-        if c["id"] not in L.CTX_FOLDER:
-            fail(cw, "contexto sem pasta de cross-check declarada no gerador")
         if c.get("declara_se_em") not in ("entidade", "aplicacao"):
             fail(cw, "declara_se_em inválido")
         for gid in c.get("graus_admitidos") or []:

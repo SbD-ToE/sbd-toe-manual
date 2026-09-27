@@ -2,6 +2,10 @@
 # Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/csa.json.
 schema: sbdtoe-reg-coverage/1
 acto: csa
+pasta: enisa-csa
+nome:
+  pt: Regulamento Cibersegurança (CSA)
+  en: Cybersecurity Act (CSA)
 version: 1
 decided: '2026-09-27'
 framework_legado: null

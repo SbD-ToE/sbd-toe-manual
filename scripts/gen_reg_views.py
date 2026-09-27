@@ -36,12 +36,17 @@ def planned_outputs() -> dict:
     lists = L.build_lists(ctx_doc, master)
     head, _tail = L.load_contexts_text()
     out = {L.CTX_FILE: head + L.render_lists_yaml(lists)}
+    pages = []
     for ctx in ctx_doc["contextos"]:
-        folder = L.CTX_FOLDER[ctx["id"]]
-        rel = f"{L.XC}/{folder}/{L.VIEW_FILE}"
-        matrix = matrices[L.CTX_ACTO[ctx["id"]]]
-        pt = L.render_view(ctx, ctx_doc, lists, master, matrix, "pt")
-        en_body = L.render_view(ctx, ctx_doc, lists, master, matrix, "en")
+        matrix = matrices[L.ctx_acto(ctx)]
+        rel = f"{L.XC}/{matrix['pasta']}/{L.VIEW_FILE}"
+        pages.append((rel, L.render_view(ctx, ctx_doc, lists, master, matrix, "pt"), L.render_view(ctx, ctx_doc, lists, master, matrix, "en")))
+    with_ctx = {L.ctx_acto(c) for c in ctx_doc["contextos"]}
+    for acto, matrix in matrices.items():
+        if acto not in with_ctx:
+            rel = f"{L.XC}/{matrix['pasta']}/{L.COVERAGE_FILE}"
+            pages.append((rel, L.render_coverage_page(acto, matrix, ctx_doc, "pt"), L.render_coverage_page(acto, matrix, ctx_doc, "en")))
+    for rel, pt, en_body in pages:
         en_path = L.EN_DOCS / rel
         previous = en_path.read_text(encoding="utf-8") if en_path.exists() else None
         meta = L.translation_block(pt, en_body, previous)

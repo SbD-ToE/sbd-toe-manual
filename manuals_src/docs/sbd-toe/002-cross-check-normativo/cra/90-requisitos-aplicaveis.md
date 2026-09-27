@@ -377,7 +377,7 @@ Obrigações documentais do regime (anexo VII do CRA) ligadas aos artefactos do 
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.
+Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -386,3 +386,219 @@ Contagem das obrigações da matriz `_matriz/cra.yaml` (excluídas as dirigidas 
 | Apoia evidência | 20 |
 | Lacuna | 14 |
 | Fora de âmbito | 97 |
+
+## O que este Manual cobre e o que fica de fora {#cobertura}
+
+Todas as obrigações da matriz `_matriz/cra.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 46 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+
+### Cobre (59) {#cobre}
+
+Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
+
+| Obrigação | Referência | Força | Forma |
+|---|---|---|---|
+| CRA-12-1 | Art. 12.º, n.º 1 | Apoia evidência | `ARC-014`; `THR-008` |
+| CRA-13-2 | Art. 13.º, n.º 2 | Cobre | `CLA-001`; `THR-001`; [Política 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); [Política 04 §1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#1-objetivo) |
+| CRA-13-5 | Art. 13.º, n.º 5 | Cobre | `DEP-006`; [Política 10 §3.1](/sbd-toe/assets/policies/policy-dependencias#31-validação-obrigatória-por-dependência-nova); `GOV-007`; `DEP-002` |
+| CRA-13-6-a | Art. 13.º, n.º 6, 1.º período | Cobre | `CTX-CRA-R04` |
+| CRA-13-6-b | Art. 13.º, n.º 6, 2.º período | Cobre | `CTX-CRA-R04` |
+| CRA-13-7 | Art. 13.º, n.º 7 | Cobre | `DEP-010`; `TST-003`; `GOV-009`; [Política 10 §8](/sbd-toe/assets/policies/policy-dependencias#8-alertas-de-vulnerabilidades-em-produção) |
+| CRA-13-8-p1 | Art. 13.º, n.º 8, 1.º parágrafo | Cobre | [Política 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); `DEP-007`; [Política 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02`; `CTX-CRA-R03` |
+| CRA-13-8-p6 | Art. 13.º, n.º 8, 6.º parágrafo | Cobre | [Política 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); [Política 19 §4.2](/sbd-toe/assets/policies/policy-estrategia-testes#42-triagem-formal); `DEP-007`; `GOV-015`; `GOV-015` |
+| CRA-13-12-p1 | Art. 13.º, n.º 12, 1.º parágrafo | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos) |
+| CRA-13-12-p2 | Art. 13.º, n.º 12, 2.º parágrafo | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); `TST-004` |
+| CRA-13-15 | Art. 13.º, n.º 15 | Apoia evidência | [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico); [Política 20 §8](/sbd-toe/assets/policies/policy-release-seguro#8-registo-histórico-de-releases) |
+| CRA-13-17 | Art. 13.º, n.º 17 | Cobre | `GOV-015` |
+| CRA-13-21 | Art. 13.º, n.º 21 | Apoia evidência | `DST-007`; `DPL-005` |
+| CRA-14-1 | Art. 14.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 12 §6](/sbd-toe/assets/policies/policy-excecoes-cve#6-prazos-máximos-e-reavaliação); [Cap. 05 US-11](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-11---alertas-sobre-vulnerabilidades-em-componentes-usados) |
+| CRA-14-3 | Art. 14.º, n.os 3 e 5 | Cobre | `CTX-CRA-R05`; [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| CRA-14-4-c | Art. 14.º, n.º 4, alínea c) | Cobre | [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| CRA-14-8 | Art. 14.º, n.º 8 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente); `DST-007` |
+| CRA-17-2 | Art. 17.º, n.º 2 | Apoia evidência | [Política 32 §9](/sbd-toe/assets/policies/policy-irp#9-responsabilidades) |
+| CRA-23 | Art. 23.º | Apoia evidência | [Política 33 §8](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade); [Política 10 §3.2](/sbd-toe/assets/policies/policy-dependencias#32-registo-de-aprovação) |
+| CRA-31-1 | Art. 31.º, n.º 1 | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos) |
+| CRA-31-2 | Art. 31.º, n.º 2 | Apoia evidência | `THR-006`; `ARC-010` |
+| CRA-69-3 | Art. 69.º, n.º 3 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| CRA-AnxI-P1-1 | Anexo I, parte I, ponto 1 | Cobre | `CLA-003`; `CLA-001`; `THR-001` |
+| CRA-AnxI-P1-2c | Anexo I, parte I, ponto 2, alínea c) | Cobre | `CTX-CRA-R02` |
+| CRA-AnxI-P1-2d | Anexo I, parte I, ponto 2, alínea d) | Cobre | `ACC-001`; `ACC-003`; `AUT-001`; `AUT-010` |
+| CRA-AnxI-P1-2e | Anexo I, parte I, ponto 2, alínea e) | Cobre | `ENC-001`; `ENC-002`; `ENC-003` |
+| CRA-AnxI-P1-2h | Anexo I, parte I, ponto 2, alínea h) | Cobre | `API-004`; `FIL-001`; `OPS-015`; `DPL-005`; [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação) |
+| CRA-AnxI-P1-2j | Anexo I, parte I, ponto 2, alínea j) | Cobre | `ARC-002`; `API-002`; `CNT-003`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura) |
+| CRA-AnxI-P1-2k | Anexo I, parte I, ponto 2, alínea k) | Cobre | `ARC-006`; `ACC-002`; `CNT-004`; `CNT-006` |
+| CRA-AnxI-P2-1 | Anexo I, parte II, ponto 1 | Cobre | `DEP-001`; [Política 11 §3.2](/sbd-toe/assets/policies/policy-sbom#32-conteúdo-mínimo-obrigatório); `DEP-010` |
+| CRA-AnxI-P2-2 | Anexo I, parte II, ponto 2 | Cobre | [Política 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); `DEP-007`; `TST-003`; `CTX-CRA-R02` |
+| CRA-AnxI-P2-3 | Anexo I, parte II, ponto 3 | Cobre | `TST-001`; `TST-008`; [Política 19 §5](/sbd-toe/assets/policies/policy-estrategia-testes#5-rastreabilidade-e-evidência-por-release) |
+| CRA-AnxI-P2-4 | Anexo I, parte II, ponto 4 | Cobre | [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico); `CTX-CRA-R03`; `GOV-015` |
+| CRA-AnxI-P2-5 | Anexo I, parte II, ponto 5 | Cobre | `GOV-015` |
+| CRA-AnxI-P2-6 | Anexo I, parte II, ponto 6 | Cobre | `GOV-015` |
+| CRA-AnxI-P2-7 | Anexo I, parte II, ponto 7 | Cobre | `DST-003`; `CIC-007`; `DPL-002`; `CTX-CRA-R02`; `DST-003` |
+| CRA-AnxI-P2-8 | Anexo I, parte II, ponto 8 | Cobre | `CTX-CRA-R02` |
+| CRA-AnxII-2 | Anexo II, ponto 2 | Cobre | `GOV-015` |
+| CRA-AnxII-3 | Anexo II, ponto 3 | Apoia evidência | [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
+| CRA-AnxII-4 | Anexo II, ponto 4 | Apoia evidência | [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); `ARC-001` |
+| CRA-AnxII-5 | Anexo II, ponto 5 | Apoia evidência | [Cap. 03 US-13](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-13---derivação-de-abusemisuse-cases-para-o-backlog); `THR-001` |
+| CRA-AnxII-8c | Anexo II, ponto 8, alínea c) | Cobre | `CTX-CRA-R02` |
+| CRA-AnxII-8e | Anexo II, ponto 8, alínea e) | Cobre | `CTX-CRA-R02` |
+| CRA-AnxII-8f | Anexo II, ponto 8, alínea f) | Apoia evidência | `DST-004`; `DEP-001` |
+| CRA-AnxVII-1 | Anexo VII, ponto 1 | Apoia evidência | [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo); [Cap. 11 US-09](/sbd-toe/sbd-manual/deploy-seguro/aplicacao-lifecycle#us-09---versionamento-semântico-e-changelog-técnico) |
+| CRA-AnxVII-2a | Anexo VII, ponto 2, alínea a) | Cobre | `ARC-010`; `ARC-004`; [Política 09 §4.1](/sbd-toe/assets/policies/policy-arquitetura-segura#41-arranque-de-projeto-ou-épico-significativo) |
+| CRA-AnxVII-2b | Anexo VII, ponto 2, alínea b) | Cobre | `DEP-001`; [Política 12 §4](/sbd-toe/assets/policies/policy-excecoes-cve#4-tipos-de-exceção); `DST-003`; `GOV-015`; `CTX-CRA-R02` |
+| CRA-AnxVII-2c | Anexo VII, ponto 2, alínea c) | Cobre | `CIC-001`; `CIC-005`; [Política 20 §7](/sbd-toe/assets/policies/policy-release-seguro#7-rastreabilidade-ponta-a-ponta) |
+| CRA-AnxVII-3 | Anexo VII, ponto 3 | Apoia evidência | `THR-001`; `THR-006` |
+| CRA-AnxVII-4 | Anexo VII, ponto 4 | Cobre | `CTX-CRA-R01` |
+| CRA-AnxVII-6 | Anexo VII, ponto 6 | Apoia evidência | `TST-004`; [Política 19 §5](/sbd-toe/assets/policies/policy-estrategia-testes#5-rastreabilidade-e-evidência-por-release) |
+| CRA-AnxVII-8 | Anexo VII, ponto 8 | Cobre | [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Política 11 §10](/sbd-toe/assets/policies/policy-sbom#10-responsabilidades) |
+| CRA-AnxVIII-PI-2 | Anexo VIII, parte I (módulo A), ponto 2 | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| CRA-AnxVIII-PI-3 | Anexo VIII, parte I (módulo A), ponto 3 | Cobre | [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); [Política 19 §4.3](/sbd-toe/assets/policies/policy-estrategia-testes#43-slas-de-triagem-e-resolução); `CIC-001`; `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02`; `CTX-CRA-R03` |
+| CRA-AnxVIII-PII-7 | Anexo VIII, parte II (módulo B), ponto 7, 2.º parágrafo | Apoia evidência | `ARC-009`; `CLA-006` |
+| CRA-AnxVIII-PIII-2 | Anexo VIII, parte III (módulo C), ponto 2 | Cobre | [Política 20 §6](/sbd-toe/assets/policies/policy-release-seguro#6-imutabilidade-do-artefacto); `DPL-002` |
+| CRA-AnxVIII-PIV-2 | Anexo VIII, parte IV (módulo H), ponto 2 | Apoia evidência | `GOV-001`; `GOV-010` |
+| CRA-AnxVIII-PIV-3.2 | Anexo VIII, parte IV (módulo H), ponto 3.2 | Cobre | `GOV-001`; `TST-001`; `TRN-001`; `GOV-011`; `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02` |
+| CRA-AnxVIII-PIV-3.4a3.5 | Anexo VIII, parte IV (módulo H), pontos 3.4 e 3.5 | Apoia evidência | `GOV-010` |
+
+### Lacuna declarada (35) {#lacuna}
+
+Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
+
+| Obrigação | Referência | Força | Como o Manual responde | O que falta |
+|---|---|---|---|---|
+| CRA-4-3 | Art. 4.º, n.os 3 e 4 | Lacuna | — | Não há regra para canais beta/pré-lançamento de software inacabado: período limitado ao ensaio, sinal visível de não conformidade e utilização exclusiva para ensaio. |
+| CRA-6 | Art. 6.º | Parcial | [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `DEP-001`; `TST-001`; `GOV-015`; `CTX-CRA-R01`; `CTX-CRA-R02`; `CTX-CRA-R03` | Cobertura agregada das partes I e II do anexo I é parcial: o Manual não prescreve a reposição do estado original (P1-2b) nem a remoção/transferência segura de dados (P1-2m). A divulgação coordenada e o contacto (GOV-015), os avisos (CTX-CRA-R03), o mecanismo e a distribuição de atualizações (CTX-CRA-R02) e o período de apoio (CTX-CRA-R01) estão prescritos. |
+| CRA-7-1 | Art. 7.º, n.os 1 e 2 | Lacuna | — | O modelo de classificação do Manual (eixos E/D/I → L1–L3, CLA-001) não identifica se o produto pertence às categorias do anexo III (classes I/II) ou do anexo IV, que determinam a rota de avaliação da conformidade. |
+| CRA-13-1 | Art. 13.º, n.º 1 | Parcial | `REQ-001`; `CLA-003`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `CTX-CRA-R02` | Conceção/desenvolvimento conformes com toda a parte I do anexo I: faltam reposição do estado original, remoção e transferência seguras de todos os dados, minimização de dados não pessoais e comunicação de corrupções/acessos ao utilizador em L1. O mecanismo de atualização do produto está em CTX-CRA-R02. |
+| CRA-13-3 | Art. 13.º, n.º 3 | Parcial | `THR-006`; [Política 08 §4.2](/sbd-toe/assets/policies/policy-threat-modeling#42-cadência-periódica) | A avaliação de riscos do Manual não indica, requisito a requisito, se e como se aplicam as alíneas do anexo I, parte I, ponto 2, nem como se aplicam o ponto 1 e a parte II; não é estruturada por finalidade prevista, utilização razoavelmente previsível, ambiente operacional e período de utilização; a atualização não está ancorada ao período de apoio. |
+| CRA-13-4 | Art. 13.º, n.º 4 | Parcial | [Política 07 §9](/sbd-toe/assets/policies/policy-requisitos-seguranca#9-gestão-de-exceções-a-requisitos); `GOV-009` | Existe justificação formal de requisitos não implementados (exceções), mas não a integração da avaliação de riscos na documentação técnica (anexo VII) nem a justificação por requisito essencial do CRA considerado não aplicável. |
+| CRA-13-8-p2 | Art. 13.º, n.º 8, 2.º parágrafo | Lacuna | — | O Manual não define o período de apoio nem os critérios para o determinar (vida útil expectável, expectativas razoáveis, orientações). |
+| CRA-13-8-p3 | Art. 13.º, n.º 8, 3.º parágrafo | Lacuna | — | Não prescreve o período de apoio mínimo de 5 anos (salvo produto com utilização prevista inferior). |
+| CRA-13-8-p5 | Art. 13.º, n.º 8, 5.º parágrafo | Lacuna | — | Não há registo da fundamentação do período de apoio para a documentação técnica. |
+| CRA-13-9 | Art. 13.º, n.º 9 | Lacuna | — | Não há dever de manter disponíveis as atualizações de segurança emitidas por ≥10 anos ou pelo resto do período de apoio. |
+| CRA-13-10 | Art. 13.º, n.º 10 | Lacuna | — | Sem política de versões suportadas: não prevê a faculdade de corrigir só a última versão nem a condição de acesso gratuito a ela. |
+| CRA-13-11 | Art. 13.º, n.º 11 | Lacuna | — | Sem regra para arquivos públicos de versões anteriores (aviso de risco e indicação de que não são apoiadas). |
+| CRA-13-13 | Art. 13.º, n.º 13 | Parcial | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 11 §8.2](/sbd-toe/assets/policies/policy-sbom#82-prazos-de-retenção-mínimos); [Política 08 §9.3](/sbd-toe/assets/policies/policy-threat-modeling#93-retenção) | A regra dos 10 anos cobre a SBOM e o pacote de evidências; outros elementos da documentação técnica (versões históricas do threat model: 3 anos; registos de aprovação: 1–3 anos) não estão abrangidos; a declaração UE está fora de âmbito. |
+| CRA-13-14 | Art. 13.º, n.º 14 | Parcial | `ARC-009`; `CLA-006`; `REQ-005`; `THR-006` | Alterações de conceção/processo disparam revisão, mas falta acompanhar alterações das normas harmonizadas/especificações comuns que servem de referência à declaração de conformidade. |
+| CRA-13-18 | Art. 13.º, n.º 18 | Parcial | [Política 20 §4.1](/sbd-toe/assets/policies/policy-release-seguro#41-critérios-obrigatórios) | Só existe o critério genérico «Documentação de segurança atualizada» (recomendado em L2, obrigatório em L3); falta prescrever o conteúdo do anexo II, o destinatário (utilizador), a língua e a conservação por 10 anos/período de apoio. |
+| CRA-13-19-p2 | Art. 13.º, n.º 19, 2.º parágrafo | Lacuna | — | Não há notificação ao utilizador do fim do período de apoio (nem mecanismo técnico para a fazer). |
+| CRA-14-2-a | Art. 14.º, n.º 2, alínea a) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | O prazo de 24 h e o registo do momento do conhecimento estão prescritos; falta o conteúdo mínimo (indicação dos Estados-Membros onde o produto foi disponibilizado). |
+| CRA-14-2-b | Art. 14.º, n.º 2, alínea b) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 72 h prescrito; falta o conteúdo mínimo (informação geral do produto, natureza da exploração e da vulnerabilidade, medidas corretivas tomadas e a tomar pelos utilizadores, sensibilidade da informação). |
+| CRA-14-2-c | Art. 14.º, n.º 2, alínea c) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 14 dias após a medida corretiva prescrito (e a regra de contagem está correta na nota da Política 32 §6); falta o conteúdo do relatório final (gravidade e impacto, agente malicioso, pormenores da atualização). |
+| CRA-14-4-a | Art. 14.º, n.º 4, alínea a) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 24 h prescrito; falta indicar a suspeita de ato ilícito/malicioso e os Estados-Membros. |
+| CRA-14-4-b | Art. 14.º, n.º 4, alínea b) | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Prazo de 72 h prescrito; falta o conteúdo (natureza, avaliação inicial, medidas, sensibilidade). |
+| CRA-14-6 | Art. 14.º, n.º 6 | Lacuna | — | A linha CRA da Política 32 §6 não prevê o relatório intercalar a pedido da CSIRT (existe só na linha NIS2). |
+| CRA-14-7 | Art. 14.º, n.º 7 | Parcial | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Nomeia a CSIRT designada como coordenadora e a plataforma única, mas não a regra de determinação (Estado-Membro do estabelecimento principal e regra subsidiária para fabricantes fora da UE). |
+| CRA-AnxI-P1-2a | Anexo I, parte I, ponto 2, alínea a) | Parcial | `DEP-002`; [Política 20 §5.1](/sbd-toe/assets/policies/policy-release-seguro#51-critérios-de-bloqueio-automático-no-go); `TST-005`; `TST-008`; [Política 12 §8](/sbd-toe/assets/policies/policy-excecoes-cve#8-integração-no-pipeline) | O critério de bloqueio é a severidade (Critical/High), não a explorabilidade conhecida; a checklist de release só tem colunas L2/L3; as exceções «Fix deferred»/«Risk accepted» permitem colocar no mercado com vulnerabilidade explorável conhecida. |
+| CRA-AnxI-P1-2b | Anexo I, parte I, ponto 2, alínea b) | Parcial | `CFG-001`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `CNT-003` | Configuração endurecida do ambiente de produção e «fail secure» existem, mas não configuração segura por defeito do produto entregue ao utilizador nem a possibilidade de repor o estado original. |
+| CRA-AnxI-P1-2f | Anexo I, parte I, ponto 2, alínea f) | Parcial | `ENC-009`; `INT-005`; `CIC-007`; `DST-003`; `CFG-007`; `LOG-003` | Integridade de programas (assinatura) e de mensagens coberta em L2/L3; integridade de dados críticos e de configuração só em L3; falta comunicar as corrupções ao utilizador. |
+| CRA-AnxI-P1-2g | Anexo I, parte I, ponto 2, alínea g) | Parcial | `PRI-001` | A minimização cobre só dados pessoais e só a partir de L2; o CRA abrange dados «pessoais ou outros». |
+| CRA-AnxI-P1-2i | Anexo I, parte I, ponto 2, alínea i) | Parcial | `CNT-012`; `ARC-006` | Isolamento e políticas de rede contêm o impacto lateral, mas não há requisito para que as funções do próprio produto não degradem outros dispositivos/redes (p. ex. limitação de tráfego de saída, tempestades de retry). |
+| CRA-AnxI-P1-2l | Anexo I, parte I, ponto 2, alínea l) | Parcial | `LOG-001`; `OPS-001`; `OPS-002` | Registo e monitorização de atividade interna prescritos; falta a opção de exclusão (opt-out) para o utilizador e a orientação para disponibilizar essa informação de segurança ao utilizador. |
+| CRA-AnxI-P1-2m | Anexo I, parte I, ponto 2, alínea m) | Parcial | `PRI-003` | Apagamento/exportação a pedido cobre só dados pessoais de um titular e a partir de L2; falta remoção pelo utilizador de todos os dados e parâmetros, de forma segura e permanente, e transferência segura para outros produtos. |
+| CRA-AnxII-7 | Anexo II, ponto 7 | Lacuna | — | Sem tipo de apoio nem data-limite do período de apoio (depende de CRA-13-8-p2). |
+| CRA-AnxII-8a | Anexo II, ponto 8, alínea a) | Lacuna | — | Não prescreve guia de colocação em funcionamento e utilização segura para o utilizador (hardening guide); o critério «Documentação de segurança atualizada» da Política 20 §4.1 não define conteúdo. |
+| CRA-AnxII-8b | Anexo II, ponto 8, alínea b) | Lacuna | — | Não há instrução ao utilizador sobre como alterações do produto afetam a segurança dos dados. |
+| CRA-AnxII-8d | Anexo II, ponto 8, alínea d) | Lacuna | — | Não há instruções de desativação segura e remoção de dados pelo utilizador (capacidade também em falta, CRA-AnxI-P1-2m). |
+| CRA-AnxII-9 | Anexo II, ponto 9 | Parcial | `DST-004` | A SBOM é anexada a cada release (L2/L3), mas não se prescreve indicar ao utilizador onde lhe aceder quando o fabricante opta por a disponibilizar. |
+
+### Fora de âmbito (97) {#fora-de-ambito}
+
+Obrigações que o Manual declara fora de âmbito, com a razão.
+
+| Obrigação | Referência | Razão |
+|---|---|---|
+| CRA-2-1 | Art. 2.º, n.º 1 | Disposição delimitadora de âmbito/qualificação jurídica do produto; não cria dever de engenharia. |
+| CRA-2-2a7 | Art. 2.º, n.os 2 a 8 | Disposição delimitadora de âmbito/qualificação jurídica do produto; não cria dever de engenharia. |
+| CRA-4-2 | Art. 4.º, n.º 2 | Exposição de protótipos em feiras/demonstrações: logística de mercado, não engenharia. |
+| CRA-8-1 | Art. 8.º, n.º 1 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-11 | Art. 11.º | Articulação entre atos legislativos (RSGP); plano jurídico. |
+| CRA-12-2a4 | Art. 12.º, n.os 2 a 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-13-12-p3 | Art. 13.º, n.º 12, 3.º parágrafo | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-13-16 | Art. 13.º, n.º 16 | Identificação do fabricante no produto/embalagem: dever de rotulagem. |
+| CRA-13-19-p1 | Art. 13.º, n.º 19, 1.º parágrafo | Indicação comercial da data de fim do apoio no ato de compra; plano de mercado. |
+| CRA-13-20 | Art. 13.º, n.º 20 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-13-22 | Art. 13.º, n.º 22 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-13-23 | Art. 13.º, n.º 23 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-15-1a2 | Art. 15.º, n.os 1 e 2 | Faculdade (notificação voluntária), não dever; a sua ausência não é lacuna, embora seja prática recomendável de PSIRT. |
+| CRA-18-1a2 | Art. 18.º, n.os 1 e 2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-18-3 | Art. 18.º, n.º 3, proémio | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-18-3-a | Art. 18.º, n.º 3, alínea a) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-18-3-b | Art. 18.º, n.º 3, alínea b) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-18-3-c | Art. 18.º, n.º 3, alínea c) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-1 | Art. 19.º, n.º 1 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-2-a | Art. 19.º, n.º 2, alínea a) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-2-b | Art. 19.º, n.º 2, alínea b) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-2-c | Art. 19.º, n.º 2, alínea c) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-2-d | Art. 19.º, n.º 2, alínea d) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-2-p2 | Art. 19.º, n.º 2, 2.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-3-p1 | Art. 19.º, n.º 3, 1.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-3-p2 | Art. 19.º, n.º 3, 2.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-4 | Art. 19.º, n.º 4 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-5-p1 | Art. 19.º, n.º 5, 1.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-6 | Art. 19.º, n.º 6 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-7 | Art. 19.º, n.º 7 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-8 | Art. 19.º, n.º 8 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-1 | Art. 20.º, n.º 1 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-2-a | Art. 20.º, n.º 2, alínea a) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-2-b | Art. 20.º, n.º 2, alínea b) | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-3 | Art. 20.º, n.º 3 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-4-p1 | Art. 20.º, n.º 4, 1.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-5 | Art. 20.º, n.º 5 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-6 | Art. 20.º, n.º 6 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-19-5-p2 | Art. 19.º, n.º 5, 2.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-20-4-p2 | Art. 20.º, n.º 4, 2.º parágrafo | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do fabricante. |
+| CRA-21 | Art. 21.º | Requalificação jurídica como fabricante. |
+| CRA-22 | Art. 22.º | Requalificação jurídica como fabricante. |
+| CRA-24-1 | Art. 24.º, n.º 1 | Dever do administrador de software de código aberto (steward); o Manual não modela esse papel. |
+| CRA-24-2 | Art. 24.º, n.º 2 | Dever do administrador de software de código aberto (steward); o Manual não modela esse papel. |
+| CRA-52-3 | Art. 52.º, n.º 3 | Dever do administrador de software de código aberto (steward); o Manual não modela esse papel. |
+| CRA-24-3 | Art. 24.º, n.º 3 | Dever do administrador de software de código aberto (steward); o Manual não modela esse papel. |
+| CRA-28-1a2 | Art. 28.º, n.os 1 e 2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-28-3 | Art. 28.º, n.º 3 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-28-4 | Art. 28.º, n.º 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-30-1 | Art. 30.º, n.os 1 e 2 (e art. 29.º) | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-30-3a4 | Art. 30.º, n.os 3 e 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-31-3a4 | Art. 31.º, n.os 3 e 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-32-1 | Art. 32.º, n.º 1 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-32-2 | Art. 32.º, n.º 2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-32-3 | Art. 32.º, n.º 3 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-32-4 | Art. 32.º, n.º 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-32-5 | Art. 32.º, n.º 5 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-33-5 | Art. 33.º, n.º 5 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-58 | Art. 58.º | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxV | Anexo V | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVI | Anexo VI | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVII-7 | Anexo VII, ponto 7 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PI-4 | Anexo VIII, parte I (módulo A), pontos 4.1 e 4.2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PI-5 | Anexo VIII, parte I (módulo A), ponto 5 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PII-3 | Anexo VIII, parte II (módulo B), ponto 3 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PII-10 | Anexo VIII, parte II (módulo B), ponto 10 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PII-11 | Anexo VIII, parte II (módulo B), ponto 11 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIII-3 | Anexo VIII, parte III (módulo C), pontos 3.1 e 3.2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIII-4 | Anexo VIII, parte III (módulo C), ponto 4 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIV-3.1 | Anexo VIII, parte IV (módulo H), ponto 3.1 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIV-4.2 | Anexo VIII, parte IV (módulo H), ponto 4.2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIV-5 | Anexo VIII, parte IV (módulo H), pontos 5.1 e 5.2 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIV-6 | Anexo VIII, parte IV (módulo H), ponto 6 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxVIII-PIV-8 | Anexo VIII, parte IV (módulo H), ponto 8 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-AnxII-6 | Anexo II, ponto 6 | Obrigação do plano da conformidade formal/mercado (declaração UE, marcação CE, organismos notificados, autoridades); fora do âmbito de um manual de engenharia de segurança de software — o próprio Manual declara-o fora («não substitui»). |
+| CRA-53 | Art. 53.º | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-54-1-4 | Art. 54.º, n.º 1 (1.º parágrafo, 2.º período) e n.º 4 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-56-3 | Art. 56.º, n.º 3 (último período) | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-57-2-7 | Art. 57.º, n.os 2 e 7 (último período) | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-64-2 | Art. 64.º, n.º 2 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-64-3 | Art. 64.º, n.º 3 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-64-4 | Art. 64.º, n.º 4 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-64-10 | Art. 64.º, n.º 10 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-65 | Art. 65.º | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-69-1 | Art. 69.º, n.º 1 | Relação com autoridades de fiscalização/regime sancionatório; plano jurídico, não de engenharia. |
+| CRA-69-2 | Art. 69.º, n.º 2 | Regime transitório (aplicação a produtos anteriores só com modificação substancial); plano jurídico. |
+| CRA-71-2 | Art. 71.º, n.º 2 | Datas de aplicação; o Manual regista-as corretamente (art. 14.º desde 11.9.2026) na Política 32 §6. |
+| CRA-AnxII-1 | Anexo II, ponto 1 | Identificação e contactos do fabricante: rotulagem. |
+| CRA-AnxIII-I | Anexo III, classe I | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-AnxIII-II | Anexo III, classe II | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-AnxIV | Anexo IV | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-R2025-2392-2 | Reg. de Execução (UE) 2025/2392, arts. 1.º e 2.º | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-R2025-2392-AnxI-CI | Reg. de Execução (UE) 2025/2392, anexo I, classe I | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-R2025-2392-AnxI-CII | Reg. de Execução (UE) 2025/2392, anexo I, classe II | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-R2025-2392-AnxII | Reg. de Execução (UE) 2025/2392, anexo II | Listas/descrições técnicas das categorias regulamentares de produto (determinam a rota de conformidade). |
+| CRA-R2025-1535-1 | Reg. Delegado (UE) 2025/1535, art. 1.º | Disposição delimitadora de âmbito/qualificação jurídica do produto; não cria dever de engenharia. |
+| CRA-AnxVII-5 | Anexo VII, ponto 5 | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |

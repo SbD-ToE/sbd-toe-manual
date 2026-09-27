@@ -363,7 +363,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.
+Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -372,3 +372,142 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 | Apoia evidência | 17 |
 | Lacuna | 0 |
 | Fora de âmbito | 49 |
+
+## O que este Manual cobre e o que fica de fora {#cobertura}
+
+Todas as obrigações da matriz `_matriz/rgpd.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 6 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+
+### Cobre (55) {#cobre}
+
+Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
+
+| Obrigação | Referência | Força | Forma |
+|---|---|---|---|
+| RGPD-5-1-b | Art. 5.º, n.º 1, alínea b) | Apoia evidência | `PRI-004`; `PRI-001` |
+| RGPD-5-1-c | Art. 5.º, n.º 1, alínea c) | Cobre | `PRI-001`; `PRI-005`; [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Política 29 §3.2](/sbd-toe/assets/policies/policy-logging-estruturado#32-schema-mínimo-de-evento); `ENC-005`; [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização) |
+| RGPD-5-1-d | Art. 5.º, n.º 1, alínea d) | Cobre | `PRI-003` |
+| RGPD-5-1-e | Art. 5.º, n.º 1, alínea e) | Cobre | `PRI-002`; `PRI-002`; `PRI-002`; [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-5-1-f | Art. 5.º, n.º 1, alínea f) | Cobre | `ENC-001`; `ENC-002`; `ACC-001`; `ACC-006`; `LOG-003`; `ENC-009` |
+| RGPD-5-2 | Art. 5.º, n.º 2 | Apoia evidência | `GOV-009`; [Enquadramento Regulatório](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/grc-compliance#enquadramento-regulatório); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-6-4 | Art. 6.º, n.º 4 | Apoia evidência | `PRI-004` |
+| RGPD-7-1 | Art. 7.º, n.º 1 | Cobre | `PRI-006` |
+| RGPD-7-3 | Art. 7.º, n.º 3 | Cobre | `PRI-006` |
+| RGPD-8-2 | Art. 8.º, n.º 2 | Cobre | `CTX-RGPD-R03`; [Política 18 §10.8](/sbd-toe/assets/policies/policy-gestao-segredos#108-anti-padrões) |
+| RGPD-9-1 | Art. 9.º, n.º 1 e n.º 2 | Apoia evidência | [📑 Tipo de Dados (D)](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos#-tipo-de-dados-d); [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade) |
+| RGPD-12-6 | Art. 12.º, n.º 6 | Cobre | `AUT-009`; `PRI-003` |
+| RGPD-15-3 | Art. 15.º, n.º 3 | Cobre | `PRI-003` |
+| RGPD-16 | Art. 16.º | Cobre | `PRI-003`; `PRI-003`; [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-1 | Art. 17.º, n.º 1 | Cobre | `PRI-003`; `PRI-002`; [Política 29 §8.1](/sbd-toe/assets/policies/policy-logging-estruturado#81-imutabilidade-e-apagamento-de-dados-pessoais); [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-17-2 | Art. 17.º, n.º 2 | Cobre | `CTX-RGPD-R02` |
+| RGPD-18-1 | Art. 18.º, n.º 1 | Cobre | `CTX-RGPD-R01` |
+| RGPD-18-2 | Art. 18.º, n.º 2 | Cobre | `CTX-RGPD-R01` |
+| RGPD-19 | Art. 19.º | Cobre | `PRI-004`; `PRI-003` |
+| RGPD-20-1 | Art. 20.º, n.º 1 | Cobre | `PRI-003` |
+| RGPD-21-2-3 | Art. 21.º, n.º 2 e n.º 3 | Cobre | `PRI-006`; [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) |
+| RGPD-21-5 | Art. 21.º, n.º 5 | Cobre | `CTX-RGPD-R04` |
+| RGPD-22-1 | Art. 22.º, n.º 1 e n.º 2 | Cobre | `CTX-RGPD-R05` |
+| RGPD-22-3 | Art. 22.º, n.º 3 | Cobre | `CTX-RGPD-R05` |
+| RGPD-22-4 | Art. 22.º, n.º 4 | Cobre | `CTX-RGPD-R05` |
+| RGPD-24-1 | Art. 24.º, n.º 1 | Apoia evidência | `CLA-003`; `GOV-010`; [Política 04 §1](/sbd-toe/assets/policies/policy-revisao-periodica-risco#1-objetivo) |
+| RGPD-25-1 | Art. 25.º, n.º 1 | Cobre | `THR-003`; [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `PRI-001`; `ERR-007` |
+| RGPD-25-2 | Art. 25.º, n.º 2 | Cobre | `PRI-007`; `PRI-007`; [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); `PRI-001`; `PRI-002`; `ACC-002` |
+| RGPD-28-1 | Art. 28.º, n.º 1 | Apoia evidência | [Política 33 §3](/sbd-toe/assets/policies/policy-contratacao-segura#3-due-diligence-pré-contratual); `GOV-007` |
+| RGPD-28-2 | Art. 28.º, n.º 2 | Apoia evidência | [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3-b | Art. 28.º, n.º 3, alínea b) | Apoia evidência | [Política 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding) |
+| RGPD-28-3-c | Art. 28.º, n.º 3, alínea c) | Cobre | `CLA-003`; [Política 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco); `ENC-002`; `ACC-001` |
+| RGPD-28-3-e | Art. 28.º, n.º 3, alínea e) | Cobre | `PRI-003` |
+| RGPD-28-3-f | Art. 28.º, n.º 3, alínea f) | Apoia evidência | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-28-3-g | Art. 28.º, n.º 3, alínea g) | Cobre | `PRI-002`; [Política 33 §7.1](/sbd-toe/assets/policies/policy-contratacao-segura#71-checklist-de-offboarding) |
+| RGPD-28-3-h | Art. 28.º, n.º 3, alínea h) | Apoia evidência | [Política 33 §4.2](/sbd-toe/assets/policies/policy-contratacao-segura#42-cláusulas-adicionais-por-nível-de-risco) |
+| RGPD-30-1 | Art. 30.º, n.º 1 | Apoia evidência | `PRI-004`; `CLA-008`; `ARC-001` |
+| RGPD-30-2 | Art. 30.º, n.º 2 | Apoia evidência | `PRI-004` |
+| RGPD-32-1 | Art. 32.º, n.º 1 | Cobre | `CLA-001`; `CLA-003`; `THR-001` |
+| RGPD-32-1-a | Art. 32.º, n.º 1, alínea a) | Cobre | `ENC-002`; `ENC-001`; `ERR-007`; [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); `PRI-005` |
+| RGPD-32-1-b | Art. 32.º, n.º 1, alínea b) | Cobre | `ENC-001`; `ACC-001`; `ENC-009`; `OPS-015`; `ARC-006` |
+| RGPD-32-1-c | Art. 32.º, n.º 1, alínea c) | Cobre | `DPL-005`; [Política 27 §3.3](/sbd-toe/assets/policies/policy-rollback#33-rollback-de-base-de-dados); [Política 32 §4.5](/sbd-toe/assets/policies/policy-irp#45-recuperação); [Política 32 §5](/sbd-toe/assets/policies/policy-irp#5-playbooks-de-resposta); `OPS-016`; `OPS-016` |
+| RGPD-32-1-d | Art. 32.º, n.º 1, alínea d) | Cobre | `TST-001`; `TST-008`; [Política 32 §8](/sbd-toe/assets/policies/policy-irp#8-testes-periódicos-do-irp); `GOV-010` |
+| RGPD-32-2 | Art. 32.º, n.º 2 | Cobre | `THR-001`; `THR-002`; `CLA-001` |
+| RGPD-32-4 | Art. 32.º, n.º 4 | Apoia evidência | `ACC-002`; `ACC-010`; [Política 33 §5.1](/sbd-toe/assets/policies/policy-contratacao-segura#51-processo-de-onboarding); `TRN-001` |
+| RGPD-33-1 | Art. 33.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §2](/sbd-toe/assets/policies/policy-irp#2-âmbito-e-obrigatoriedade) |
+| RGPD-33-2 | Art. 33.º, n.º 2 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 33 §4.1](/sbd-toe/assets/policies/policy-contratacao-segura#41-cláusulas-universais-todos-os-níveis) |
+| RGPD-33-3 | Art. 33.º, n.º 3 | Cobre | [Política 32 §6.1](/sbd-toe/assets/policies/policy-irp#61-critério-e-conteúdo-mínimo-por-regime); [Política 32 §4.3](/sbd-toe/assets/policies/policy-irp#43-investigação) |
+| RGPD-33-4 | Art. 33.º, n.º 4 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| RGPD-33-5 | Art. 33.º, n.º 5 | Cobre | `CTX-RGPD-R06`; [Política 32 §4.6](/sbd-toe/assets/policies/policy-irp#46-post-mortem); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| RGPD-34-1 | Art. 34.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) |
+| RGPD-35-1 | Art. 35.º, n.º 1 | Apoia evidência | [Âmbito e propósito](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito); [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); `THR-003`; [Âmbito e propósito](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#âmbito-e-propósito) |
+| RGPD-35-7 | Art. 35.º, n.º 7 | Apoia evidência | [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); `THR-002`; [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método) |
+| RGPD-35-11 | Art. 35.º, n.º 11 | Apoia evidência | [Política 08 §4.1](/sbd-toe/assets/policies/policy-threat-modeling#41-triggers-obrigatórios); `ARC-009`; `CLA-006` |
+| RGPD-39-1 | Art. 39.º, n.º 1 | Apoia evidência | [O método](/sbd-toe/sbd-manual/threat-modeling/addon/linddun-privacidade#o-método); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) |
+
+### Lacuna declarada (10) {#lacuna}
+
+Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
+
+| Obrigação | Referência | Força | Como o Manual responde | O que falta |
+|---|---|---|---|---|
+| RGPD-12-2 | Art. 12.º, n.º 2 | Parcial | `PRI-003`; `PRI-006`; `CTX-RGPD-R01`; [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 18 §10.6](/sbd-toe/assets/policies/policy-gestao-segredos#106-direitos-do-titular-dos-dados) | A parte técnica do exercício dos direitos está prescrita (PRI-003, PRI-006; limitação em CTX-RGPD-R01). O canal de pedidos e a resposta formal ao titular são matéria jurídica, a declarar fora de âmbito. |
+| RGPD-15-1 | Art. 15.º, n.º 1 | Parcial | `PRI-003`; `PRI-004` | A cópia dos dados e o inventário de finalidades e destinatários estão prescritos (PRI-003, PRI-004). O conteúdo informativo da resposta (finalidades, destinatários, prazo, origem, direitos) é matéria da resposta formal, a declarar fora de âmbito. |
+| RGPD-20-2 | Art. 20.º, n.º 2 | Parcial | `PRI-003` | A exportação em formato de leitura automática está prescrita (PRI-003); a transmissão directa entre responsáveis, quando tecnicamente possível, não está. |
+| RGPD-24-2 | Art. 24.º, n.º 2 | Parcial | [Política 18 §10.1](/sbd-toe/assets/policies/policy-gestao-segredos#101-princípio-de-minimização); [Política 29 §5](/sbd-toe/assets/policies/policy-logging-estruturado#5-proibições-absolutas-nos-logs) | Não existe política de proteção de dados entre as 39 políticas; há apenas a secção de dados pessoais em prompts de IA (Política 18 §10) e as proibições em logs (Política 29 §5). |
+| RGPD-28-3 | Art. 28.º, n.º 3 | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 18 §10.7](/sbd-toe/assets/policies/policy-gestao-segredos#107-proporcionalidade); [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização); `GOV-006` | Contrato do art. 28.º, n.º 3, só é prescrito para fornecedores de serviços de IA; para os demais subcontratantes a Política 33 §4 exige apenas cláusulas de segurança. |
+| RGPD-34-2 | Art. 34.º, n.º 2 | Parcial | [Política 32 §7](/sbd-toe/assets/policies/policy-irp#7-comunicação-durante-o-incidente) | Exige comunicação honesta, mas não o conteúdo mínimo (natureza da violação em linguagem clara, contacto do EPD, consequências, medidas). |
+| RGPD-35-2 | Art. 35.º, n.º 2 | Parcial | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo); [Responsabilidades Principais](/sbd-toe/sbd-manual/fundamentos/roles-responsabilidades/legal#responsabilidades-principais) | Revisão pelo DPO só em L3 e sobre a análise LINDDUN, não sobre a AIPD. |
+| RGPD-38-1 | Art. 38.º, n.º 1 | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | EPD envolvido em violações (≤ 1 h) e na revisão LINDDUN L3; não é envolvido em design, AIPD, escolha de subcontratantes ou exceções. |
+| RGPD-44 | Art. 44.º | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores); [Política 33 §10.2](/sbd-toe/assets/policies/policy-contratacao-segura#102-localização-de-processamento) | Só na fatia de fornecedores de serviços de IA; hosting, SaaS e outros subcontratantes fora do EEE não têm regra de localização/transferência. |
+| RGPD-46-1 | Art. 46.º, n.º 1 a n.º 3 | Parcial | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | Exige SCC «ou outro mecanismo válido» apenas para fornecedores de IA; não trata avaliação de impacto da transferência nem medidas técnicas suplementares. |
+
+### Fora de âmbito (49) {#fora-de-ambito}
+
+Obrigações que o Manual declara fora de âmbito, com a razão.
+
+| Obrigação | Referência | Razão |
+|---|---|---|
+| RGPD-5-1-a | Art. 5.º, n.º 1, alínea a) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-6-1 | Art. 6.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-7-2 | Art. 7.º, n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-8-1 | Art. 8.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-9-3 | Art. 9.º, n.º 3 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-10 | Art. 10.º | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-11-2 | Art. 11.º, n.º 2 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-1 | Art. 12.º, n.º 1 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-12-3 | Art. 12.º, n.º 3 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-4 | Art. 12.º, n.º 4 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-12-5 | Art. 12.º, n.º 5 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-13-1 | Art. 13.º, n.º 1 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-13-2 | Art. 13.º, n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-13-3 | Art. 13.º, n.º 3 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-1-2 | Art. 14.º, n.º 1 e n.º 2 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-3 | Art. 14.º, n.º 3 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-14-4 | Art. 14.º, n.º 4 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-15-2 | Art. 15.º, n.º 2 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-18-3 | Art. 18.º, n.º 3 | Procedimento formal de resposta ao titular (prazos, fundamentação, custos): «direitos formais», delimitados pelo Manual para o lado jurídico; a capacidade técnica correspondente é tratada nos itens de engenharia. |
+| RGPD-21-1 | Art. 21.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-21-4 | Art. 21.º, n.º 4 | Conteúdo e forma da informação ao titular (avisos de privacidade): matéria jurídico-comunicacional, remetida pelo Manual para Jurídico/DPO. |
+| RGPD-26-1 | Art. 26.º, n.º 1 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-26-2 | Art. 26.º, n.º 2 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-27-1 | Art. 27.º, n.º 1 e n.º 2 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-a | Art. 28.º, n.º 3, alínea a) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-2 | Art. 28.º, n.º 3, segundo parágrafo | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-3-d | Art. 28.º, n.º 3, alínea d) | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-4 | Art. 28.º, n.º 4 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-28-10 | Art. 28.º, n.º 10 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-29 | Art. 29.º | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-30-3-4 | Art. 30.º, n.º 3 e n.º 4 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-31 | Art. 31.º | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-35-3 | Art. 35.º, n.º 3 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-35-9 | Art. 35.º, n.º 9 | Dever jurídico (conteúdo/validade do tratamento ou relação jurídica) — o Manual delimita-o explicitamente para fora: «O lado legal — bases legais, direitos formais, obrigações regulatórias — não vive neste catálogo» (cap. 02, PRI); o cross-check RGPD remete-o para Jurídico/DPO. |
+| RGPD-36-1 | Art. 36.º, n.º 1 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-36-3 | Art. 36.º, n.º 3 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-37-1 | Art. 37.º, n.º 1 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-37-5 | Art. 37.º, n.º 5 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-37-7 | Art. 37.º, n.º 7 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-2 | Art. 38.º, n.º 2 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-3 | Art. 38.º, n.º 3 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-38-6 | Art. 38.º, n.º 6 | Estatuto, designação e independência do EPD: matéria de organização jurídica; o Manual só assume o papel do DPO onde há dados pessoais (Papéis — Jurídico). |
+| RGPD-40-4 | Art. 40.º, n.º 4 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-42-6-7 | Art. 42.º, n.º 6 e n.º 7 | Relação com a autoridade de controlo/organismos de supervisão; plano jurídico, não de engenharia. |
+| RGPD-47-2 | Art. 47.º, n.º 2 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-48 | Art. 48.º | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-1 | Art. 49.º, n.º 1 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-1-2 | Art. 49.º, n.º 1, segundo parágrafo | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |
+| RGPD-49-6 | Art. 49.º, n.º 6 | Regime jurídico das transferências internacionais (mecanismos, derrogações, BCR): Jurídico/DPO. O Manual só toca transferências na fatia de fornecedores de IA (Políticas 18 §10.3 e 33 §10.2). |

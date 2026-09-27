@@ -2,6 +2,7 @@
 # Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/cra.json.
 schema: sbdtoe-reg-coverage/1
 acto: cra
+pasta: cra
 version: 1
 decided: '2026-09-27'
 framework_legado: EXT-CRA
@@ -3576,7 +3577,7 @@ itens:
       en: Logs cannot be altered by ordinary users
   falta:
     pt: Integridade de programas (assinatura) e de mensagens coberta em L2/L3; integridade de dados críticos e de configuração só em L3; falta comunicar as corrupções ao utilizador.
-    en: Integrity of programs (signing) and of messages covered at L2/L3; integrity of critical data and of configuration only at L3; reporting corruptions to the user is missing.
+    en: Integrity of software (signing) and of messages covered at L2/L3; integrity of critical data and of configuration only at L3; reporting corruptions to the user is missing.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

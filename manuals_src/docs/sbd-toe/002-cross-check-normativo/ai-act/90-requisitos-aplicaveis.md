@@ -691,7 +691,7 @@ Obrigações documentais do regime (art. 11.º, anexo IV e art. 13.º do AI Act)
 
 ## Obrigações do regime por força de cobertura {#forca}
 
-Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigidas às autoridades). A secção «O que este Manual cobre e o que fica de fora» da página do cross-check detalha-as.
+Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigidas às autoridades). A secção [«O que este Manual cobre e o que fica de fora»](#cobertura) lista-as.
 
 | Força | Obrigações |
 |---|--:|
@@ -700,3 +700,273 @@ Contagem das obrigações da matriz `_matriz/aiact.yaml` (excluídas as dirigida
 | Apoia evidência | 44 |
 | Lacuna | 11 |
 | Fora de âmbito | 116 |
+
+## O que este Manual cobre e o que fica de fora {#cobertura}
+
+Todas as obrigações da matriz `_matriz/aiact.yaml` em três categorias: o que o Manual **cobre**, e de que forma; as **lacunas declaradas** (o que não cobre por omissão); e o que fica **fora de âmbito**, com a razão. Gerado da matriz; nenhuma obrigação fica em silêncio. As 15 obrigações dirigidas às autoridades não criam dever para a organização e não entram nas listas.
+
+### Cobre (85) {#cobre}
+
+Força «cobre» ou «apoia evidência». A forma é a resposta do Manual: requisito do catálogo, política, secção, piso ou requisito acrescentado pelo regime.
+
+| Obrigação | Referência | Força | Forma |
+|---|---|---|---|
+| AIA-4a-2 | Art. 4.º-A, n.º 2 | Apoia evidência | `PRI-002`; `ACC-001` |
+| AIA-5-1-a | Art. 5.º, n.º 1, primeiro parágrafo, alínea a) | Apoia evidência | [Cap. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais) |
+| AIA-5-1-b | Art. 5.º, n.º 1, primeiro parágrafo, alínea b) | Apoia evidência | [Cap. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais) |
+| AIA-5-1-b-A | Art. 5.º, n.º 1, primeiro parágrafo, alínea b-A) | Cobre | `THR-008`; `ARC-014` |
+| AIA-5-1-b-B | Art. 5.º, n.º 1, primeiro parágrafo, alínea b-B) | Cobre | `THR-008`; `ARC-014` |
+| AIA-5-1-e | Art. 5.º, n.º 1, primeiro parágrafo, alínea e) | Apoia evidência | [Cap. 02 US-17](/sbd-toe/sbd-manual/requisitos-seguranca/aplicacao-lifecycle#us-17---incorporação-de-restrições-legais-normativas-e-contratuais); `DEP-011` |
+| AIA-5-1A | Art. 5.º, n.º 1-A | Cobre | `THR-008`; `ARC-014`; [C5 - Eval suites contínuas para agentes em desenvolvimento e produção](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) |
+| AIA-6-4 | Art. 6.º, n.º 4 | Apoia evidência | `CLA-001`; `GOV-009` |
+| AIA-11-1-a | Art. 11.º, n.º 1, primeiro parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
+| AIA-11-1-b | Art. 11.º, n.º 1, segundo parágrafo | Apoia evidência | `ARC-004`; `ARC-010`; `THR-006`; `DEP-012`; `TST-004` |
+| AIA-AnxIV-1 | Anexo IV, ponto 1 | Apoia evidência | `ARC-001`; `ARC-010`; `ARC-014`; `DEP-011`; `DEP-012`; `DEP-013` |
+| AIA-AnxIV-2-a | Anexo IV, ponto 2, alínea a | Apoia evidência | `DEP-011`; `DEP-012`; `DEP-014`; `CIC-001` |
+| AIA-AnxIV-2-b | Anexo IV, ponto 2, alínea b | Apoia evidência | `ARC-004` |
+| AIA-AnxIV-2-c | Anexo IV, ponto 2, alínea c | Apoia evidência | `ARC-001`; `ARC-010`; `ARC-014` |
+| AIA-AnxIV-2-e | Anexo IV, ponto 2, alínea e | Apoia evidência | `ARC-014`; `REQ-AGN-003` |
+| AIA-AnxIV-2-f | Anexo IV, ponto 2, alínea f | Cobre | `ARC-009`; `DEP-013` |
+| AIA-AnxIV-2-g | Anexo IV, ponto 2, alínea g | Apoia evidência | `TST-004`; `DPL-010`; `CIC-007` |
+| AIA-AnxIV-2-h | Anexo IV, ponto 2, alínea h | Cobre | `REQ-001`; `THR-008`; `ARC-014` |
+| AIA-AnxIV-3 | Anexo IV, ponto 3 | Apoia evidência | `OPS-011`; `ARC-014`; `THR-008` |
+| AIA-AnxIV-6 | Anexo IV, ponto 6 | Cobre | `THR-006`; `ARC-010`; `CIC-005` |
+| AIA-AnxIV-9 | Anexo IV, ponto 9 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` |
+| AIA-12-1 | Art. 12.º, n.º 1 | Cobre | `LOG-001`; `OPS-011`; [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs) |
+| AIA-12-2 | Art. 12.º, n.º 2 | Cobre | `ARC-009`; `OPS-011` |
+| AIA-13-1 | Art. 13.º, n.º 1 | Apoia evidência | `ARC-014`; `OPS-011` |
+| AIA-13-2 | Art. 13.º, n.º 2 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` |
+| AIA-13-3 | Art. 13.º, n.º 3 | Apoia evidência | `DEP-013`; `DEP-014`; `ARC-014`; `OPS-011` |
+| AIA-13-3-e | Art. 13.º, n.º 3, alínea e) | Apoia evidência | `DEP-013` |
+| AIA-13-3-f | Art. 13.º, n.º 3, alínea f) | Apoia evidência | `OPS-011` |
+| AIA-14-1 | Art. 14.º, n.º 1 | Cobre | `ARC-014`; `ARC-015`; [Cap. 04 US-15](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identificação-e-governação-de-componentes-não-determinísticos) |
+| AIA-14-2 | Art. 14.º, n.º 2 | Cobre | `ARC-014`; `ARC-015`; `REQ-AGN-004` |
+| AIA-14-3 | Art. 14.º, n.º 3 | Cobre | `ARC-014`; `REQ-AGN-002`; [Política 38 §2](/sbd-toe/assets/policies/policy-mandates-agentes#2-âmbito) |
+| AIA-14-4 | Art. 14.º, n.º 4 | Cobre | `ARC-014`; `REQ-AGN-003`; `ARC-015`; [🎯 Âmbito e enquadramento](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#-âmbito-e-enquadramento) |
+| AIA-15-5 | Art. 15.º, n.º 5 | Cobre | `THR-008`; `ARC-014`; `DEP-011`; `OPS-014`; [1. Os pesos do modelo são activo crítico](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference#1-os-pesos-do-modelo-são-activo-crítico) |
+| AIA-17-1-b | Art. 17.º, n.º 1, alínea b) | Cobre | `ARC-004`; `THR-006`; `REQ-005` |
+| AIA-17-1-c | Art. 17.º, n.º 1, alínea c) | Cobre | `DEV-001`; `DEV-004`; `CIC-005` |
+| AIA-17-1-i | Art. 17.º, n.º 1, alínea i) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| AIA-17-1-k | Art. 17.º, n.º 1, alínea k) | Cobre | `GOV-009`; [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| AIA-17-1-m | Art. 17.º, n.º 1, alínea m) | Cobre | `GOV-001`; `GOV-002` |
+| AIA-17-2 | Art. 17.º, n.º 2 | Apoia evidência | `CLA-001` |
+| AIA-18-1 | Art. 18.º, n.º 1 | Apoia evidência | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) |
+| AIA-18-3 | Art. 18.º, n.º 3 | Apoia evidência | [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs) |
+| AIA-19-1 | Art. 19.º, n.º 1 | Cobre | [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003`; `LOG-005` |
+| AIA-19-2 | Art. 19.º, n.º 2 | Apoia evidência | [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs) |
+| AIA-21-2 | Art. 21.º, n.º 2 | Apoia evidência | `LOG-003`; `OPS-003` |
+| AIA-25-2 | Art. 25.º, n.º 2 | Apoia evidência | `DEP-012`; [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada) |
+| AIA-26-6 | Art. 26.º, n.º 6 | Cobre | [Política 18 §10.5](/sbd-toe/assets/policies/policy-gestao-segredos#105-telemetria-sob-controlo-do-deployer); [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003` |
+| AIA-26-9 | Art. 26.º, n.º 9 | Apoia evidência | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) |
+| AIA-26-11 | Art. 26.º, n.º 11 | Cobre | `CTX-AIA-RE-R03` |
+| AIA-27-1 | Art. 27.º, n.º 1 | Apoia evidência | `THR-008`; [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) |
+| AIA-27-2 | Art. 27.º, n.º 2 | Apoia evidência | `THR-006` |
+| AIA-27-4 | Art. 27.º, n.º 4 | Apoia evidência | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) |
+| AIA-42-3 | Art. 42.º, n.º 3 | Apoia evidência | `THR-008`; `ARC-014` |
+| AIA-43-4 | Art. 43.º, n.º 4 | Cobre | `ARC-009`; `CLA-006`; `DEP-013` |
+| AIA-AnxVI | Anexo VI | Apoia evidência | `GOV-010`; `GOV-009` |
+| AIA-AnxVII-4 | Anexo VII, pontos 4.1-4.5, 4.7 | Apoia evidência | `DEP-011`; `DEP-012` |
+| AIA-50-1 | Art. 50.º, n.º 1 | Cobre | `CTX-AIA-RE-R01` |
+| AIA-50-2 | Art. 50.º, n.º 2 | Cobre | `CTX-AIA-RE-R02` |
+| AIA-50-3 | Art. 50.º, n.º 3 | Cobre | `CTX-AIA-RE-R01` |
+| AIA-50-4-a | Art. 50.º, n.º 4, primeiro parágrafo | Cobre | `CTX-AIA-RE-R01` |
+| AIA-50-5 | Art. 50.º, n.º 5 | Cobre | `CTX-AIA-RE-R01` |
+| AIA-53-1-a | Art. 53.º, n.º 1, alínea a) | Apoia evidência | `DEP-012`; [Cap. 10 US-21](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-21---governação-do-uso-de-ia-em-testes-e-eval-suites-para-agentes) |
+| AIA-53-1-b | Art. 53.º, n.º 1, alínea b) | Apoia evidência | [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); `DEP-014` |
+| AIA-55-1-b | Art. 55.º, n.º 1, alínea b) | Apoia evidência | `THR-008` |
+| AIA-55-1-c | Art. 55.º, n.º 1, alínea c) | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-55-1-d | Art. 55.º, n.º 1, alínea d) | Cobre | [1. Os pesos do modelo são activo crítico](/sbd-toe/sbd-manual/containers-imagens/addon/self-hosted-inference#1-os-pesos-do-modelo-são-activo-crítico); `ARC-014`; `DEP-011` |
+| AIA-AnxXI-1 | Anexo XI, secção 1 | Apoia evidência | `DEP-012`; [Política 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) |
+| AIA-AnxXI-2 | Anexo XI, secção 2 | Apoia evidência | [Cap. 10 US-21](/sbd-toe/sbd-manual/testes-seguranca/aplicacao-lifecycle#us-21---governação-do-uso-de-ia-em-testes-e-eval-suites-para-agentes) |
+| AIA-AnxXII | Anexo XII | Apoia evidência | [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada) |
+| AIA-59-1 | Art. 59.º, n.º 1 | Apoia evidência | `ENC-002`; `ACC-002`; `PRI-002` |
+| AIA-60-7 | Art. 60.º, n.os 7-8 | Apoia evidência | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); `DPL-005` |
+| AIA-72-1 | Art. 72.º, n.º 1 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` |
+| AIA-72-2 | Art. 72.º, n.º 2 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` |
+| AIA-72-3 | Art. 72.º, n.º 3 | Cobre | `CTX-AIA-RE-R04`; `OPS-011` |
+| AIA-73-1 | Art. 73.º, n.º 1 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) |
+| AIA-73-2 | Art. 73.º, n.º 2 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-73-3 | Art. 73.º, n.º 3 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-73-4 | Art. 73.º, n.º 4 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-73-5 | Art. 73.º, n.º 5 | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-74-12 | Art. 74.º, n.º 12 | Apoia evidência | `DEP-011`; [Política 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) |
+| AIA-74-13 | Art. 74.º, n.º 13 | Apoia evidência | `CIC-005` |
+| AIA-75-1A | Art. 75.º, n.º 1-A | Cobre | [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória); [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) |
+| AIA-79-4 | Art. 79.º, n.os 2 e 4 | Apoia evidência | `DPL-005`; `GOV-010` |
+| AIA-82-2 | Art. 82.º, n.º 2 | Apoia evidência | `DPL-005`; `GOV-010` |
+| AIA-86-1 | Art. 86.º, n.º 1 | Cobre | `CTX-AIA-RE-R03`; [Cap. 04 US-15](/sbd-toe/sbd-manual/arquitetura-segura/aplicacao-lifecycle#us-15---identificação-e-governação-de-componentes-não-determinísticos); `OPS-011` |
+| AIA-111-4 | Art. 111.º, n.º 4 | Cobre | `CTX-AIA-RE-R02` |
+
+### Lacuna declarada (44) {#lacuna}
+
+Força «parcial» ou «lacuna»: o Manual não cobre, ou cobre só em parte, e diz o que falta. As lacunas pendentes de uma ronda do AppSec Core estão marcadas com o nome da ronda.
+
+| Obrigação | Referência | Força | Como o Manual responde | O que falta |
+|---|---|---|---|---|
+| AIA-4-1 | Art. 4.º, n.º 1 (substituído) | Parcial | [Política 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca#11-formação-em-agentes-ai-e-tooling-pervasivo-módulo-obrigatório); [Cap. 13 US-19](/sbd-toe/sbd-manual/formacao-onboarding/aplicacao-lifecycle#us-19---formação-em-uso-seguro-de-ia-e-tooling); `TRN-001` | Cobre papéis técnicos do SDLC (developer, AppSec, DevOps, GRC, PO, CISO) e o uso de IA como ferramenta/agentes; faltam o pessoal de negócio que opera ou utiliza sistemas de IA de produto em nome da organização e a ponderação do contexto de utilização e das pessoas visadas. |
+| AIA-4a-1-b | Art. 4.º-A, n.º 1, alínea b) | Parcial | `ENC-002`; `PRI-001`; `ACC-002` | Encriptação em repouso (L2+) e minimização existem; faltam limitações técnicas à reutilização e pseudonimização exigida para estes conjuntos (a pseudonimização no Manual é só em logs, ERR-007). |
+| AIA-4a-1-c | Art. 4.º-A, n.º 1, alínea c) | Parcial | `ACC-001`; `ACC-003`; `LOG-001` | Controlo de acesso RBAC e registo de acessos (L1+) cobrem o núcleo; falta documentação criteriosa por acesso a estes conjuntos e o dever de confidencialidade de quem acede. |
+| AIA-4a-1-d | Art. 4.º-A, n.º 1, alínea d) | Parcial | [Política 18 §10.4](/sbd-toe/assets/policies/policy-gestao-segredos#104-training-opt-out-obrigatório-para-pii); `DEP-014` | Só há proibição de uso para treino/retenção pelo fornecedor de serviços de IA; não há proibição geral de transmissão ou consulta destes dados por terceiros. |
+| AIA-4a-1-e | Art. 4.º-A, n.º 1, alínea e) | Parcial | `PRI-002` | PRI-002 impõe prazo e apagamento verificável, mas não o gatilho legal «logo que o enviesamento seja corrigido». |
+| AIA-4a-1-f | Art. 4.º-A, n.º 1, alínea f) | Parcial | `PRI-004` | O inventário regista finalidade; não regista os motivos da estrita necessidade nem a impossibilidade de usar outros dados. |
+| AIA-6-1 | Art. 6.º, n.os 1, 1-A, 1-B, 1-C | Lacuna | `CLA-004` | A determinação jurídica é de compliance, mas o Manual não recolhe o resultado («sistema de IA de risco elevado») como entrada da classificação nem lhe associa piso de nível e ativação dos requisitos de IA; CLA-004 só prevê reclassificação genérica por «novos contextos regulatórios». Aplica-se desde 2.8.2028. |
+| AIA-6-2-3 | Art. 6.º, n.os 2 e 3 | Lacuna | `CLA-004`; [🧩 Critérios complementares em contextos de automação e apoio à decisão](/sbd-toe/sbd-manual/classificacao-aplicacoes/addon/modelo-classificacao-eixos#-critérios-complementares-em-contextos-de-automação-e-apoio-à-decisão) | Idem AIA-6-1 para o anexo III (aplica-se desde 2.12.2027). O Cap. 01 afirma que a IA não altera por si só a criticidade — não há ponte entre o estatuto legal de risco elevado e L2/L3. Raiz dos conflitos de nível. |
+| AIA-8-1 | Art. 8.º, n.º 1 | Parcial | `THR-008`; `ARC-014`; `OPS-011` | Cibersegurança coberta (L2+); faltam exatidão, governação de dados, transparência/instruções e supervisão humana para sistemas não agênticos — ver arts. 10.º, 13.º, 14.º, 15.º. |
+| AIA-9-1 | Art. 9.º, n.º 1 | Parcial | `CLA-001`; `THR-008`; [Cap. 03 US-12](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-12---threat-modeling-estendido-para-componentes-aiml-não-agentic) | Existe gestão de risco de segurança (classificação + threat modeling estendido a IA); falta um sistema de gestão de riscos para saúde, segurança e direitos fundamentais, documentado e mantido ao longo do ciclo de vida. |
+| AIA-9-2 | Art. 9.º, n.º 2 | Parcial | `THR-008`; [Cap. 03 US-13](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-13---derivação-de-abusemisuse-cases-para-o-backlog); `OPS-011` | Identificação de ameaças e de abuso (misuse) e monitorização de drift existem; faltam estimativa de riscos para saúde/segurança/direitos fundamentais em uso previsto e a avaliação de riscos a partir de dados pós-comercialização. |
+| AIA-9-4 | Art. 9.º, n.º 4 | Lacuna | — | Nenhuma prescrição sobre efeitos combinados dos requisitos da secção 2 (p. ex. conflito exatidão × supervisão × transparência). |
+| AIA-9-5 | Art. 9.º, n.º 5 | Parcial | `CLA-007`; `GOV-004` | Risco residual com compensação, owner e TTL existe; faltam a hierarquia legal (eliminar por conceção → mitigar → informar o implantador → formar) e o critério de aceitabilidade do risco residual para pessoas afetadas. |
+| AIA-9-9 | Art. 9.º, n.º 9 | Lacuna | [Cap. 03 US-08](/sbd-toe/sbd-manual/threat-modeling/aplicacao-lifecycle#us-08---aplicação-linddun-quando-existir-tratamento-de-dados-pessoais--novo) | O LINDDUN cobre privacidade; nenhuma prescrição sobre impacto em menores ou grupos vulneráveis. |
+| AIA-10-1 | Art. 10.º, n.º 1 | Parcial | `DEP-011`; [Política 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) | Proveniência, versão e curadoria de datasets (L2+); faltam critérios de qualidade dos conjuntos de treino/validação/teste. |
+| AIA-10-2 | Art. 10.º, n.º 2 | Parcial | `DEP-011`; `ARC-014`; [Política 39 §4](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#4-ai-bom--formato-e-conteúdo-mínimo) | Cobre origem/recolha, proveniência e integridade; faltam escolhas de conceção, pressupostos, avaliação de disponibilidade, exame e mitigação de enviesamentos e identificação de lacunas. |
+| AIA-10-3 | Art. 10.º, n.º 3 | Lacuna | — | Pertinência, representatividade, ausência de erros e propriedades estatísticas: nenhuma prescrição (abstenção declarada no cross-check). |
+| AIA-10-4 | Art. 10.º, n.º 4 | Lacuna | — | Adequação ao contexto geográfico/comportamental/funcional: nenhuma prescrição. |
+| AIA-10-6 | Art. 10.º, n.º 6 | Lacuna | — | Qualidade dos conjuntos de teste em sistemas sem treino (p. ex. LLM de terceiros): as eval suites (§C5) testam agentes quanto a regressão/abuso, sem critérios de representatividade dos dados de teste. |
+| AIA-AnxIV-4 | Anexo IV, ponto 4 | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Lacuna declarada: adequação das métricas de desempenho, pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-13-3-b-ii | Art. 13.º, n.º 3, alínea b), subalínea ii) | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Declaração dos níveis de exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-15-1 | Art. 15.º, n.º 1 | Parcial | `ARC-014`; `OPS-011` | **Ronda AISVS/SAIF do AppSec Core.** Cibersegurança coberta (THR-008, ARC-014, DEP-011 a DEP-014, OPS-011 a OPS-014, DPL-010/011); exactidão e solidez pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-15-3 | Art. 15.º, n.º 3 | Lacuna | — | **Ronda AISVS/SAIF do AppSec Core.** Declaração dos níveis e parâmetros de exactidão pendente da ronda AISVS/SAIF do AppSec Core. |
+| AIA-15-4 | Art. 15.º, n.º 4 | Parcial | [Considerações de design](/sbd-toe/sbd-manual/arquitetura-segura/recomendacoes-avancadas#considerações-de-design); [Política 09 §3](/sbd-toe/assets/policies/policy-arquitetura-segura#3-princípios-de-arquitetura-segura); [🧱 Structured outputs — validação do que o modelo devolve](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#structured-outputs) | Fallback, fail-secure e validação de output com falha fechada existem; faltam redundância/planos de segurança para desempenho e mitigação de enviesamento em circuitos de realimentação de sistemas que continuam a aprender. |
+| AIA-16-a | Art. 16.º, alínea a) | Parcial | `THR-008`; `ARC-014`; `OPS-011` | Remete para a secção 2: ver AIA-9 a AIA-15 (cibersegurança sim; dados, transparência, supervisão e exatidão com lacunas). |
+| AIA-16-c | Art. 16.º, alínea c) | Parcial | `GOV-001`; `TST-001` | Ver AIA-17-1-*: componentes operacionais de um SGQ existem; falta a estrutura formal do SGQ do art. 17.º. |
+| AIA-16-d | Art. 16.º, alínea d) | Parcial | [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos); [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) | Ver AIA-18-1: sem prazo de 10 anos para a documentação de sistemas de IA de risco elevado. |
+| AIA-16-e | Art. 16.º, alínea e) | Parcial | [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs); `OPS-003` | Ver AIA-19-1. |
+| AIA-16-j | Art. 16.º, alínea j) | Parcial | `DPL-005`; [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Ver AIA-20-1/20-2. |
+| AIA-17-1-a | Art. 17.º, n.º 1, alínea a) | Parcial | `GOV-001`; `CLA-006`; `THR-006` | Governação e gatilhos de reavaliação por mudança existem; falta estratégia de cumprimento regulamentar documentada, incluindo procedimentos de avaliação da conformidade e de gestão de modificações. |
+| AIA-17-1-e | Art. 17.º, n.º 1, alínea e) | Parcial | `REQ-001`; `DEV-001` | Especificações técnicas próprias (catálogo, guidelines); falta a gestão de normas harmonizadas/especificações comuns (plano da conformidade). |
+| AIA-17-1-f | Art. 17.º, n.º 1, alínea f) | Parcial | `DEP-011`; `PRI-004` | Inventário de datasets e registo de finalidades; falta procedimento de gestão de dados (aquisição, rotulagem, armazenamento, filtragem, agregação, conservação) para dados de treino. |
+| AIA-17-1-g | Art. 17.º, n.º 1, alínea g) | Parcial | `CLA-001`; `THR-008` | Ver AIA-9-1. |
+| AIA-17-1-j | Art. 17.º, n.º 1, alínea j) | Parcial | [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | Comunicação a autoridades via trilho regulatório do IRP; falta comunicação com organismos notificados, outros operadores, clientes e partes interessadas. |
+| AIA-17-1-l | Art. 17.º, n.º 1, alínea l) | Parcial | `DEP-014`; [Política 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain#7-resposta-a-incidentes-upstream); `GOV-007` | Segurança do aprovisionamento de modelos/fornecedores de IA coberta; falta a gestão de recursos (pessoal, meios). |
+| AIA-20-1 | Art. 20.º, n.º 1 | Parcial | `DPL-005`; [Política 27 §3](/sbd-toe/assets/policies/policy-rollback#3-tipos-de-rollback-e-requisitos-específicos) | Rollback testado permite repor/desativar; faltam retirada/recolha do sistema e informação a distribuidores, implantadores, mandatário e importadores. |
+| AIA-20-2 | Art. 20.º, n.º 2 | Parcial | [Política 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); [Política 32 §4.1](/sbd-toe/assets/policies/policy-irp#41-triagem-t0----15-minutos-de-detecção) | Investigação de incidentes existe; faltam investigação conjunta com o implantador e informação à autoridade de fiscalização sobre a não conformidade (não só sobre incidentes graves). |
+| AIA-25-4 | Art. 25.º, n.º 4, primeiro parágrafo | Parcial | [Política 33 §10.3](/sbd-toe/assets/policies/policy-contratacao-segura#103-audit-rights); [Política 33 §10.6](/sbd-toe/assets/policies/policy-contratacao-segura#106-conformidade-regulatória-declarada); `DEP-014`; [Cap. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-21) | Cláusulas contratuais específicas para fornecedores de serviços de IA (retenção, auditoria, notificação, conformidade declarada); não especificam a informação, capacidades, acesso técnico e assistência necessários para o prestador cumprir o regulamento. |
+| AIA-26-1 | Art. 26.º, n.º 1 | Parcial | [Política 38 §4](/sbd-toe/assets/policies/policy-mandates-agentes#4-conteúdo-mínimo-de-um-mandate); [Cap. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle#us-21) | Para agentes, o mandate define como se usa o sistema; para sistemas de IA adquiridos não há procedimento para operar conforme as instruções de utilização do prestador. |
+| AIA-26-2 | Art. 26.º, n.º 2 | Parcial | [Política 38 §4](/sbd-toe/assets/policies/policy-mandates-agentes#4-conteúdo-mínimo-de-um-mandate); [Política 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca#11-formação-em-agentes-ai-e-tooling-pervasivo-módulo-obrigatório) | Owner humano nomeado e formação obrigatória para agentes; nada para supervisores de sistemas de IA de risco elevado não agênticos (competência, autoridade, apoio). |
+| AIA-26-4 | Art. 26.º, n.º 4 | Lacuna | `VAL-001` | VAL-001 valida entradas por segurança; não há dever de assegurar que os dados de entrada são pertinentes e representativos para a finalidade. |
+| AIA-26-5 | Art. 26.º, n.º 5 | Parcial | `OPS-011`; `REQ-AGN-003`; [Política 32 §6](/sbd-toe/assets/policies/policy-irp#6-notificação-regulatória) | Monitorização (L2+), kill-switch de agentes e notificação à autoridade existem; faltam a informação ao prestador/distribuidor e a suspensão de sistemas não agênticos quando há risco. |
+| AIA-55-1-a | Art. 55.º, n.º 1, alínea a) | Parcial | [Política 19 §7.1](/sbd-toe/assets/policies/policy-estrategia-testes#71-composição-mínima); [C5 - Eval suites contínuas para agentes em desenvolvimento e produção](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) | Red-team corpus e eval suites (agentes A2+/A3+); faltam protocolos normalizados de avaliação de modelos e testagem antagónica documentada ao nível do modelo. |
+| AIA-73-6 | Art. 73.º, n.º 6 | Parcial | [Política 32 §4.2](/sbd-toe/assets/policies/policy-irp#42-contenção-t1---início-imediato-após-confirmação); `LOG-009` | Preservação de evidência e investigação existem; falta a proibição de alterar o sistema de modo que afete a análise de causas sem informar previamente as autoridades (o IRP privilegia contenção «quando possível»). |
+
+### Fora de âmbito (116) {#fora-de-ambito}
+
+Obrigações que o Manual declara fora de âmbito, com a razão.
+
+| Obrigação | Referência | Razão |
+|---|---|---|
+| AIA-2-1 | Art. 2.º, n.º 1 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-2-12 | Art. 2.º, n.º 12 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-2-13 | Art. 2.º, n.º 13 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-4a-1-a | Art. 4.º-A, n.º 1, alínea a) | Juízo de necessidade (eficácia de dados sintéticos/anonimizados para corrigir enviesamento) — decisão de ciência de dados e proteção de dados, não de engenharia de segurança. |
+| AIA-5-1-c | Art. 5.º, n.º 1, primeiro parágrafo, alínea c) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
+| AIA-5-1-d | Art. 5.º, n.º 1, primeiro parágrafo, alínea d) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
+| AIA-5-1-f | Art. 5.º, n.º 1, primeiro parágrafo, alínea f) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
+| AIA-5-1-g | Art. 5.º, n.º 1, primeiro parágrafo, alínea g) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
+| AIA-5-1-h | Art. 5.º, n.º 1, primeiro parágrafo, alínea h) | Juízo de admissibilidade da finalidade (prática proibida) — qualificação jurídica e de produto; o Manual declara-o fora. Gancho genérico: Cap. 02 US-17 (obrigações legais mapeadas a requisitos). |
+| AIA-5-1B | Art. 5.º, n.º 1-B | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-8-2 | Art. 8.º, n.º 2 | Conformidade integrada com legislação setorial do anexo I; plano da conformidade de produto. |
+| AIA-9-6 | Art. 9.º, n.os 6-7 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead. |
+| AIA-9-8 | Art. 9.º, n.º 8 | O art. 9.º (sistema de gestão de riscos) fica fora de âmbito por decisão do lead. |
+| AIA-9-10 | Art. 9.º, n.º 10 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-11-2 | Art. 11.º, n.º 2 | Documentação técnica única com legislação setorial do anexo I; organização documental da conformidade. |
+| AIA-AnxIV-2-d | Anexo IV, ponto 2, alínea d | Governação de dados de treino (art. 10.º) fora de âmbito por decisão do lead; DEP-011 e a Política 39 §4 dão só evidência incidental. |
+| AIA-AnxIV-5 | Anexo IV, ponto 5 | Sistema de gestão de riscos do art. 9.º fora de âmbito por decisão do lead. |
+| AIA-AnxIV-7 | Anexo IV, ponto 7 | Lista de normas harmonizadas/especificações comuns aplicadas: plano da conformidade. |
+| AIA-AnxIV-8 | Anexo IV, ponto 8 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-12-3 | Art. 12.º, n.º 3 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
+| AIA-14-5 | Art. 14.º, n.º 5 | As especificidades dos sistemas de identificação biométrica (anexo III, ponto 1: registos do art. 12.º, n.º 3, e verificação por duas pessoas do art. 14.º, n.º 5) ficam fora de âmbito por decisão do lead; o desenvolvimento dessa aplicação segue o Manual como qualquer outra. A biometria como factor de autenticação pertence aos requisitos de autenticação (AUT-*). |
+| AIA-16-b | Art. 16.º, alínea b) | Identificação do prestador no sistema/embalagem: rotulagem de produto, plano da conformidade. |
+| AIA-16-f | Art. 16.º, alínea f) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-16-g | Art. 16.º, alínea g) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-16-h | Art. 16.º, alínea h) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-16-i | Art. 16.º, alínea i) | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-16-k | Art. 16.º, alínea k) | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-16-l | Art. 16.º, alínea l) | Requisitos de acessibilidade (Diretivas 2016/2102 e 2019/882): qualidade de produto, fora de um manual de engenharia de segurança. |
+| AIA-17-1-d | Art. 17.º, n.º 1, alínea d) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. |
+| AIA-17-1-h | Art. 17.º, n.º 1, alínea h) | O art. 17.º (sistema de gestão da qualidade) fica fora de âmbito por decisão do lead. O plano do art. 72.º está em CTX-AIA-RE-R04. |
+| AIA-17-3-4 | Art. 17.º, n.os 3 e 4 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-21-1 | Art. 21.º, n.º 1 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-22-1 | Art. 22.º, n.os 1-2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-22-3 | Art. 22.º, n.º 3 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-22-4 | Art. 22.º, n.º 4 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-1 | Art. 23.º, n.º 1 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-2 | Art. 23.º, n.º 2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-3 | Art. 23.º, n.º 3 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-4 | Art. 23.º, n.º 4 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-5 | Art. 23.º, n.º 5 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-6 | Art. 23.º, n.º 6 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-23-7 | Art. 23.º, n.º 7 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-1 | Art. 24.º, n.º 1 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-2 | Art. 24.º, n.º 2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-3 | Art. 24.º, n.º 3 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-4 | Art. 24.º, n.º 4 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-5 | Art. 24.º, n.º 5 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-24-6 | Art. 24.º, n.º 6 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-25-1 | Art. 25.º, n.º 1 | Qualificação jurídica de quem se torna prestador. |
+| AIA-25-3 | Art. 25.º, n.º 3 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-25-5 | Art. 25.º, n.º 5 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-26-7 | Art. 26.º, n.º 7 | Informação e consulta de trabalhadores: direito do trabalho/RH. |
+| AIA-26-8 | Art. 26.º, n.º 8 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-26-10 | Art. 26.º, n.º 10 | Autorização judicial/administrativa para biometria em diferido para aplicação da lei; plano jurídico. |
+| AIA-26-12 | Art. 26.º, n.º 12 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-27-3 | Art. 27.º, n.º 3 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-41-5 | Art. 41.º, n.º 5 | Justificação de soluções alternativas a especificações comuns: plano da conformidade. |
+| AIA-42-1 | Art. 42.º, n.º 1 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-42-2 | Art. 42.º, n.º 2 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-43-1 | Art. 43.º, n.º 1 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-43-2 | Art. 43.º, n.º 2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-43-3 | Art. 43.º, n.º 3 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-47-1 | Art. 47.º, n.º 1 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-47-2 | Art. 47.º, n.º 2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-47-3 | Art. 47.º, n.º 3 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-47-4 | Art. 47.º, n.º 4 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxV | Anexo V | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-48-2 | Art. 48.º, n.º 2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). A implementação técnica da marcação CE digital é trivial face ao dever. |
+| AIA-48-3 | Art. 48.º, n.os 3-5 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-49-1 | Art. 49.º, n.º 1 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-49-2 | Art. 49.º, n.º 2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-49-3 | Art. 49.º, n.º 3 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-49-4 | Art. 49.º, n.º 4 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-49-5 | Art. 49.º, n.º 5 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxVIII-A | Anexo VIII, secção A | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxVIII-B | Anexo VIII, secção B | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxVIII-C | Anexo VIII, secção C | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxVII-3 | Anexo VII, pontos 3.1, 3.3, 3.4 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxVII-5 | Anexo VII, ponto 5.2 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-AnxIII-1 | Anexo III, ponto 1 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-2 | Anexo III, ponto 2 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-3 | Anexo III, ponto 3 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-4 | Anexo III, ponto 4 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-5 | Anexo III, ponto 5 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-6 | Anexo III, ponto 6 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-7 | Anexo III, ponto 7 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-AnxIII-8 | Anexo III, ponto 8 | Definição dos casos de uso de risco elevado; o dever operativo está em AIA-6-2-3 (lacuna: o Manual não liga o estatuto legal à classificação). |
+| AIA-50-4-b | Art. 50.º, n.º 4, segundo parágrafo | Divulgação de texto gerado por IA publicado sobre interesse público, com exceção de controlo editorial: processo editorial do responsável pela implantação. |
+| AIA-52-1 | Art. 52.º, n.os 1-2 | Obrigação do prestador de modelo GPAI perante a Comissão/Serviço para a IA; plano jurídico e de domínio de IA. O Manual trata o lado do consumidor de GPAI (DEP-014, Política 33 §10.6). |
+| AIA-53-1-c | Art. 53.º, n.º 1, alínea c) | Política de direitos de autor/opt-out TDM: plano jurídico. |
+| AIA-53-1-d | Art. 53.º, n.º 1, alínea d) | Resumo público dos conteúdos de treino segundo modelo do Serviço para a IA: plano jurídico/domínio de IA. |
+| AIA-53-3 | Art. 53.º, n.º 3 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-53-4 | Art. 53.º, n.º 4 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-54-1 | Art. 54.º, n.os 1-2 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-54-3 | Art. 54.º, n.os 3-5 | Dever de outro operador económico (importador/distribuidor/mandatário), não do processo de engenharia do prestador ou do responsável pela implantação. |
+| AIA-55-2 | Art. 55.º, n.º 2 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-91-5 | Art. 91.º, n.º 5 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-92-5 | Art. 92.º, n.os 3 e 5 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-57-12 | Art. 57.º, n.º 12 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-60-4 | Art. 60.º, n.º 4 | Condições regulamentares da testagem em condições reais (plano aprovado, registo, consentimento): plano jurídico. |
+| AIA-60-9 | Art. 60.º, n.º 9 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-61-1 | Art. 61.º | Consentimento informado dos participantes: plano jurídico/ético. |
+| AIA-72-4 | Art. 72.º, n.º 4 | Faculdade/presunção (não cria dever autónomo); plano da estratégia de conformidade. |
+| AIA-73-9-10 | Art. 73.º, n.os 9-10 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-75-1E | Art. 75.º, n.º 1-E, segundo parágrafo | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-75c-3 | Art. 75.º-C, n.º 3 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-80-4 | Art. 80.º, n.os 4, 5 e 7 | Reclassificação pela autoridade e sanção por classificação errada: plano jurídico. |
+| AIA-83-1 | Art. 83.º, n.º 1 | Plano da avaliação da conformidade/mercado (declaração UE, marcação CE, organismos notificados, registo na base de dados da UE); fora de um manual de engenharia de segurança — o cross-check do próprio Manual declara-o fora («não substitui»). |
+| AIA-87 | Art. 87.º | Canais de denúncia (Diretiva 2019/1937): RH/jurídico. |
+| AIA-99-3 | Art. 99.º, n.º 3 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-99-4 | Art. 99.º, n.º 4 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-99-5 | Art. 99.º, n.º 5 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-101-1 | Art. 101.º, n.º 1 | Relação com autoridades / regime sancionatório; plano jurídico, não de engenharia. |
+| AIA-111-2 | Art. 111.º, n.º 2 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-111-3 | Art. 111.º, n.º 3 | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |
+| AIA-113-3 | Art. 113.º, terceiro parágrafo | Disposição delimitadora de âmbito, definição ou qualificação jurídica; não cria dever de engenharia. |

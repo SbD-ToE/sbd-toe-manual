@@ -88,7 +88,7 @@ def marker(n: int) -> str:
 # Protected spans inside a line of translatable text
 # --------------------------------------------------------------------------- #
 
-_INLINE_COMMENT_RE = re.compile(r"<!--.*?-->")
+_INLINE_COMMENT_RE = re.compile(r"<!--.*?--!?>")
 _REF_LINK_RE = re.compile(r"(?<=\])\[[^\]]*\]")
 _HTML_TAG_RE = re.compile(r"</?[A-Za-z][^>]*>|<[A-Za-z][A-Za-z0-9+.-]*:[^>\s]*>")
 _URL_RE = re.compile(r"(?:https?://|www\.)[^\s<>\]\)]+")

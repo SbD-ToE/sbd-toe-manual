@@ -459,7 +459,7 @@ def parse_heading_id(heading: str) -> Tuple[str, Optional[str]]:
 _MD_LINK_RE = re.compile(r"\[(?P<alt>[^\]]+)\]\([^)]+\)")
 _MD_IMAGE_RE = re.compile(r"!\[(?P<alt>[^\]]*)\]\([^)]+\)")
 _INLINE_HTML_RE = re.compile(r"</?[A-Za-z][^>]*>")
-_HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
+_HTML_COMMENT_RE = re.compile(r"<!--.*?--!?>", re.S)
 _UNDERSCORE_EMPHASIS_RE = re.compile(r"(?<![\w])_{1,3}(?P<inner>[^_\s](?:[^_]*?[^_\s])?)_{1,3}(?![\w])")
 _MD_ESCAPE_RE = re.compile(r"\\([\\`*_{}\[\]()#+\-.!|<>~])")
 _CODE_SPAN_RE = re.compile(r"(`+)(.+?)\1")

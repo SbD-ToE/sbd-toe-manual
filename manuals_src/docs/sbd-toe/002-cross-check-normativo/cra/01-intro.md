@@ -30,7 +30,7 @@ O CRA impõe obrigações aos fabricantes, importadores e distribuidores, inclui
 - requisitos essenciais de **segurança por conceção e por defeito** durante todo o ciclo de vida;
 - processos de **gestão de vulnerabilidades**, incluindo receção, análise, correção e divulgação responsável;
 - **tratamento de vulnerabilidades durante o período de apoio** (Anexo I, Parte II) e correção sem demora;
-- requisitos de **documentação técnica**, instruções e informação ao utilizador;
+- requisitos de **documentação técnica**, instruções e informação ao utilizador — a documentação técnica e a declaração de conformidade UE ficam à disposição das autoridades de fiscalização do mercado «por, pelo menos, 10 anos após a data de colocação no mercado do produto com elementos digitais ou pelo período de apoio, consoante o que for mais longo» (art. 13.º, n.º 13);
 - obrigações de **notificação de vulnerabilidades exploradas ativamente e incidentes graves**.
 
 ### Gate de âmbito {#gate-de-âmbito}

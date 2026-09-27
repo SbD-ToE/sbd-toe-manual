@@ -148,7 +148,7 @@ Antes de qualquer ação técnica, é necessário estabelecer o enquadramento ju
 
 #### 5.1 Logging de inferência + audit per *tool invocation* {#51-logging-de-inferência--audit-per-tool-invocation}
 - **O que:** Esquema de logs estendido com metadados de inferência (id/versão do modelo, *features* relevantes, decisão e confiança, *correlation id*) + **audit per *tool invocation*** ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) quando há agentes AI: `timestamp`, `agent_id`, `session_id`, `mandate_ref`, `autonomy_level`, `tool`, `tool_version`, `args` (PII redactada), `intent_event_ref`, `outcome`, `external_effect`.
-- **Retenção:** Alinhada com a vida útil do sistema e com o RGPD; imutabilidade.
+- **Retenção:** Período adequado à finalidade prevista do sistema, de pelo menos seis meses (AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6); no SbD-ToE, 1 ano em L2 e 2 anos em L3 (escolha do Manual; [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs)); conservação limitada pelo RGPD quando houver dados pessoais; imutabilidade.
 - **Referência:** [Cap. 12 — `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) + [Cap. 12 US-13](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)
 
 #### 5.2 Plano de monitorização pós-mercado (Art. 72) {#52-plano-de-monitorização-pós-mercado-art-72}

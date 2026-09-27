@@ -99,7 +99,7 @@ Este anexo apresenta **exemplos práticos** de aplicação das recomendações d
 
 - Logging local em ficheiro rotativo com formato estruturado (JSON)
 - Eventos registados: `login`, `erro`, `config.change`
-- Retenção de 15 dias em disco local com backups semanais
+- Retenção de 30 dias em disco local com backups semanais
 - Validação manual do funcionamento do logging nas revisões de release
 - Sem SIEM, sem correlação automática nem alertas em tempo real
 

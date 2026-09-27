@@ -646,7 +646,7 @@ Todos os exemplos acima garantem:
 **Evidência de Auditoria:**
 - Logs com timestamp UTC, user/session IDs, action performed
 - Correlação com traces (Datadog APM, Elasticsearch APM)
-- Retention policy configurada (3+ anos para L3)
+- Retention policy configurada conforme a Política 29 (p. ex. ≥ 1 ano para logs de pipeline em L3)
 
 ---
 
@@ -821,7 +821,7 @@ jobs:
 
 **Trilho Auditoria ([Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)):**
 ```
-Workflow logs (7 anos retention)
+Workflow logs (retenção conforme nível: ≥ 1 ano em L3)
 ├── SAST: SonarQube scan results
 ├── SCA: Dependency check report
 ├── Secrets: Trufflehog findings

@@ -140,7 +140,7 @@ Os SBOMs devem ser arquivados como artefactos do pipeline CI/CD ou em repositór
 | Attestation de proveniência | Por release | 1 ano | 2 anos |
 
 :::note
-Em contextos regulados (DORA, NIS2, saúde, financeiro), os prazos de retenção podem ser superiores. Prevalecem sempre os requisitos regulatórios aplicáveis.
+Os prazos desta tabela são escolha do Manual. Em produtos com elementos digitais no âmbito do CRA, a SBOM faz parte da documentação técnica (anexo VII), que o fabricante mantém à disposição das autoridades de fiscalização do mercado «por, pelo menos, 10 anos após a data de colocação no mercado do produto com elementos digitais ou pelo período de apoio, consoante o que for mais longo» (CRA, art. 13.º, n.º 13); esse prazo prevalece sobre o nível. Quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e)).
 :::
 
 ---

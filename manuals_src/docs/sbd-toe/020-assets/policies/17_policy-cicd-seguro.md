@@ -150,7 +150,7 @@ O próprio pipeline é um vector de ataque - deve ser tratado com o mesmo rigor 
 | Logs de execução | Output completo de cada run | 90 dias (L2), 1 ano (L3) |
 | Relatórios de scanners (SAST, SCA, secrets) | Resultados por run, ligados ao commit | 90 dias (L2), 1 ano (L3) |
 | SBOM por build | Ver Política de SBOM | Ver Política de SBOM |
-| Registos de aprovação de promoção | Identidade, timestamp, artefacto aprovado | 1 ano (L2), 2 anos (L3) |
+| Registos de aprovação de promoção | Identidade, timestamp, artefacto aprovado | 2 anos (L2), 3 anos (L3) |
 | Configuração de gates/thresholds | Thresholds documentados e versionados | Histórico de versões |
 
 ---

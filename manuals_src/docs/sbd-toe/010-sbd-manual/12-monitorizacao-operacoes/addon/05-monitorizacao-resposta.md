@@ -44,7 +44,7 @@ Cada etapa depende da **qualidade, contexto e disponibilidade** dos dados monito
 | **Contexto de utilizador/sessão**  | Atribuir ações e rastrear movimentos             |
 | **Correlação entre fontes**        | Unificar eventos de aplicação, infra, CI/CD      |
 | **Integração com IRP**             | Automatiza tickets, workflow de resposta         |
-| **Retenção de pelo menos 90 dias** | Permite investigação e auditoria retroativa (L3) |
+| **Retenção conforme a Política 29** (1 ano em L2, 2 anos em L3) | Permite investigação e auditoria retroativa |
 
 ---
 

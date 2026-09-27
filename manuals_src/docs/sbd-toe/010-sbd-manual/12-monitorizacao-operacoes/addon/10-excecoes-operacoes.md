@@ -43,7 +43,7 @@ Alertas silenciados sem data de fim ou sem controlo compensatório são tratados
 
 ## Retenção de logs - implicações regulatórias {#retenção-de-logs---implicações-regulatórias}
 
-Excepções a OPS-003 com retenção abaixo do mínimo regulatório (DORA, NIS2, ou política interna) têm implicações que excedem a aprovação técnica:
+Excepções a OPS-003 com retenção abaixo de um prazo mínimo legal aplicável (p. ex. pelo menos seis meses para os registos de sistemas de IA de risco elevado — AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6), do período fixado pela entidade na sua avaliação de risco (DORA; NIS2, quando aplicável) ou da política interna têm implicações que excedem a aprovação técnica:
 
 - a cadeia de autoridade deve incluir validação jurídica ou de compliance, não apenas AppSec;
 - a excepção deve referenciar o requisito regulatório específico que está a ser comprometido;

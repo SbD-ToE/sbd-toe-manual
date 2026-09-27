@@ -160,7 +160,7 @@ Segredos não devem ser incluídos em imagens de container em nenhuma circunstâ
 | SBOM da imagem | Inventário por build | Ver Política de SBOM |
 | Assinatura da imagem | Por build, no registo de imagens | Enquanto a imagem estiver em uso |
 | Attestation de proveniência | Por build | 1 ano (L2), 2 anos (L3) |
-| Logs de admissão | Violações de política no cluster | 90 dias (L2), 1 ano (L3) |
+| Logs de admissão | Violações de política no cluster | 1 ano (L2), 2 anos (L3) |
 
 ---
 

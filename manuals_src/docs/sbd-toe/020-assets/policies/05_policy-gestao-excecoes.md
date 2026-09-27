@@ -168,9 +168,9 @@ O pipeline CI/CD e os processos de release devem, sempre que possível, impedir 
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
-| Registo de exceção | `docs/security/exceptions/` ou plataforma GRC | 2 anos após encerramento |
+| Registo de exceção | `docs/security/exceptions/` ou plataforma GRC | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento |
 | Evidência de mitigação compensatória | Associada ao registo | Enquanto a exceção estiver ativa |
-| Aprovações formais | Associadas ao registo | 2 anos após encerramento |
+| Aprovações formais | Associadas ao registo | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento |
 | Relatório de exceções ativas | GRC / dashboard de conformidade | Atualizado continuamente |
 
 ---

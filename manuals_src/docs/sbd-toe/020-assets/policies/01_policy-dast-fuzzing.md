@@ -71,7 +71,7 @@ Esta política é **obrigatória para L2 e L3**. Para L1, as práticas aqui desc
 
 - [ ] Job DAST executado **após** deploy em staging e **antes** de promoção a produção
 - [ ] Relatório correlacionado com commit SHA e release tag
-- [ ] Relatório arquivado como artefacto do pipeline com retenção mínima de 90 dias
+- [ ] Relatório arquivado como artefacto do pipeline com retenção mínima de 30 dias (L1), 90 dias (L2) ou 1 ano (L3)
 - [ ] Resultado do DAST rastreável no registo de release
 
 ### 3.4 Critérios de bloqueio e resposta {#34-critérios-de-bloqueio-e-resposta}
@@ -91,10 +91,10 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 
 | Artefacto | Retenção mínima |
 |---|---|
-| Relatório DAST (HTML/JSON/SARIF) | 90 dias |
-| Evidência de gate (pass/fail) em log de pipeline | 90 dias |
+| Relatório DAST (HTML/JSON/SARIF) | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
+| Evidência de gate (pass/fail) em log de pipeline | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
 | Findings abertos na plataforma centralizada | Até fecho ou aceitação formal |
-| Registo de exceções | 1 ano |
+| Registo de exceções | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento (Política 06 §10) |
 
 ---
 
@@ -157,10 +157,10 @@ O pipeline reporta o resultado (sinal automático). A decisão de override ou ex
 
 | Artefacto | Retenção mínima |
 |---|---|
-| Relatório de fuzzing | 90 dias |
+| Relatório de fuzzing | 30 dias (L1), 90 dias (L2), 1 ano (L3) |
 | Corpora de inputs (versionados) | Permanente |
 | Casos reproduzíveis (PoC) na plataforma de findings | Até fecho |
-| Registo de exceções | 1 ano |
+| Registo de exceções | 1 ano (L1), 2 anos (L2), 3 anos (L3) após encerramento (Política 06 §10) |
 
 ---
 

@@ -142,9 +142,9 @@ Registos expirados sem reavaliação documentada são tratados como **risco não
 
 | Artefacto | Localização sugerida | Retenção |
 |---|---|---|
-| Registo de risco aceite | `docs/security/risk-acceptance/` ou plataforma GRC | 2 anos após expiração |
+| Registo de risco aceite | `docs/security/risk-acceptance/` ou plataforma GRC | 1 ano (L1), 2 anos (L2), 3 anos (L3) após expiração |
 | Evidência de mitigação compensatória | Associada ao registo | Enquanto o risco estiver ativo |
-| Aprovações formais | Associadas ao registo (PR, issue, documento assinado) | 2 anos após expiração |
+| Aprovações formais | Associadas ao registo (PR, issue, documento assinado) | 1 ano (L1), 2 anos (L2), 3 anos (L3) após expiração |
 
 ---
 

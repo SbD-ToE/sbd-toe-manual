@@ -20,7 +20,7 @@ Esta matriz define os **requisitos mínimos obrigatórios de monitorização** p
 | ---------------------------------------------- | :-: | :-: | :-: |
 | Logging estruturado e persistente              |  ✔️ |  ✔️ |  ✔️ |
 | Eventos críticos definidos (login, erro, etc.) |  ✔️ |  ✔️ |  ✔️ |
-| Retenção mínima (>= 30 dias)                   |     |  ✔️ |  ✔️ |
+| Retenção mínima conforme a Política 29 (logs de segurança: 90 dias L1, 1 ano L2, 2 anos L3) |  ✔️ |  ✔️ |  ✔️ |
 | Logs enviados para sistema centralizado (SIEM) |     |  ✔️ |  ✔️ |
 | Alertas automáticos configurados               |     |  ✔️ |  ✔️ |
 | Simulações de trigger testadas                 |     |  ✔️ |  ✔️ |

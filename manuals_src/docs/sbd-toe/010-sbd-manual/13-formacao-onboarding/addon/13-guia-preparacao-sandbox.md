@@ -333,7 +333,7 @@ T+0: Backup de work realizado (se necessário)
      Contractor removido de org/namespace
      Credentials revogadas
      Resources deletados
-     Logs arquivados (7 anos)
+     Logs arquivados (conforme a Política 29 §7)
 ```
 
 ---
@@ -414,7 +414,7 @@ Sandbox é **componente prático de US-16 (Trilho de Formação)**:
 [ ] Backup de work realizado
 [ ] Sandbox credentials revogadas
 [ ] Sign-off de conclusão assinado
-[ ] Histórico arquivado (7 anos)
+[ ] Histórico arquivado (conforme a Política 33 §8)
 [ ] Acesso real concedido (US-15 completo)
 ```
 

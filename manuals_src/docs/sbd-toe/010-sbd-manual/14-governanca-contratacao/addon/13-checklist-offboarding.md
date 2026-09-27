@@ -80,7 +80,7 @@ T+7 dias: Auditoria
 | **Backup de código-fonte desenvolvido** | DevOps | [ ] | [ ] | Archive zip, versionado com timestamp |
 | **Backup de documentação criada** | Tech Lead | [ ] | [ ] | Wikis, README, specs, design docs |
 | **Backup de comunicação importante** | HR | [ ] | [ ] | Mails críticas, mensagens Slack (se compliance requer) |
-| **Arquivo em storage seguro** | DevOps | [ ] | [ ] | Rétention: 7 anos (DORA requirement), acesso restricted |
+| **Arquivo em storage seguro** | DevOps | [ ] | [ ] | Retenção: 5 anos (Política 33 §8), acesso restrito |
 
 **Armazenamento:**
 ```
@@ -319,7 +319,7 @@ Contacto para follow-up: _________________
 
 ## 📊 Artefactos & Documentação {#-artefactos--documentação}
 
-**Manter por 7 anos (DORA requirement):**
+**Manter por 5 anos (Política 33 §8):**
 
 ```
 Archive Location: /compliance/offboarding/{contractor-name}/{date}/
@@ -410,7 +410,7 @@ Offboarding é considerado **COMPLETO** quando:
 - ✅ Sign-off form assinado por 4+ partes
 - ✅ Auditoria de logs show nenhuma atividade pós-termo
 - ✅ Confidentiality obligations reforçadas
-- ✅ Arquivo completo em storage de compliance (7 anos)
+- ✅ Arquivo completo em storage de compliance (5 anos)
 
 ---
 

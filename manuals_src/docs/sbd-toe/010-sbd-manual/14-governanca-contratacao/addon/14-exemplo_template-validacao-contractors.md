@@ -230,6 +230,6 @@ Após aprovação neste template, o contractor segue:
 ## 🏁 Notas Finais {#-notas-finais}
 
 - **Este template é obrigatório para L2–L3** e recomendado para L1.
-- **Manter histórico de todas as validações** por 7 anos (DORA requirement).
+- **Manter histórico de todas as validações** pela duração do contrato + 1 ano (+ 3 anos em L3), conforme a [Política 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade).
 - **Revisar este template anualmente** contra políticas de segurança atualizadas.
 - **Escalação:** Se algum campo levanta red flag, contactar CISO antes de aprovação.

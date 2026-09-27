@@ -141,7 +141,7 @@ Artefactos de evidência:
 | Artefacto | Descrição | Retenção |
 |---|---|---|
 | Log de execução do deploy | Output completo do pipeline de deploy | 90 dias (L2), 1 ano (L3) |
-| Registo de aprovação | Identidade, timestamp, digest aprovado | 1 ano (L2), 2 anos (L3) |
+| Registo de aprovação | Identidade, timestamp, digest aprovado | 2 anos (L2), 3 anos (L3) |
 | Configuração de rollout | Estratégia e critérios de promoção | Versão activa |
 | CHANGELOG e tags Git | Versionamento e metadata da release | Histórico |
 | Rastreabilidade end-to-end | Referência cruzada commit→artefacto→deploy | Conforme Política de Rastreabilidade |

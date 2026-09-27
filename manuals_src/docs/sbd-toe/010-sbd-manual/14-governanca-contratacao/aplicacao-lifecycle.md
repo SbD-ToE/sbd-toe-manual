@@ -666,7 +666,7 @@ Como **CISO + Training Manager**, quero **definir e executar trilho de formaçã
 - [ ] SLA de conclusão comunicado ao contractor: Máximo **5 dias úteis antes de data de início**  
 - [ ] Notificação automática enviada se SLA em risco (ex.: 2 dias antes da deadline)  
 - [ ] Sign-off de "formação completa" fornecido ao AppSec Engineer (libera acesso técnico)  
-- [ ] Histórico mantido por 3 anos (DORA, NIS2 requirement)  
+- [ ] Histórico mantido conforme a [Política 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade) (duração do contrato + 1 ano em L1 e L2; duração do contrato + 3 anos em L3)  
 
 :::
 
@@ -720,7 +720,7 @@ Como **Security Champion + RH / PeopleOps + DevOps / SRE**, quero **executar pro
 - [ ] Last backup de trabalho do contractor realizado (ex.: clone de repos privados)  
 - [ ] Sign-off formal de "offboarding completo" registado em GRC com timestamp  
 - [ ] Reminder legal enviado ao contractor: Confidentiality obligations continuam pós-término (duração, consequências)  
-- [ ] Relatório de offboarding arquivado por 7 anos (DORA requirement)  
+- [ ] Relatório de offboarding arquivado por 5 anos ([Política 33](/sbd-toe/assets/policies/policy-contratacao-segura#8-registo-e-rastreabilidade))  
 
 :::
 

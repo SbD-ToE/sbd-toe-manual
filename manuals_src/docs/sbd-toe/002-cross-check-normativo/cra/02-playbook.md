@@ -160,6 +160,7 @@ Fora desse contexto, o SbD-ToE continua útil como base técnica, mas a leitura 
 - [ ] Recomendações configuração endurecida
 - [ ] Secção gestão de vulnerabilidades
 - [ ] Versão e data
+- [ ] Documentação técnica (incluindo a SBOM) e declaração de conformidade UE conservadas por pelo menos 10 anos após a colocação no mercado ou pelo período de apoio, consoante o que for mais longo (art. 13.º, n.º 13)
 
 ### Checklist Supply Chain Física (se aplicável) {#checklist-supply-chain-física-se-aplicável}
 - [ ] Lista firmware/hardware

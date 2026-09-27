@@ -165,9 +165,9 @@ O pipeline CI/CD deve verificar o estado das exceções ativas em cada build:
 
 | Artefacto | Descrição | Retenção |
 |---|---|---|
-| `excecoes.yaml` / `vex.yaml` | Registo de exceções ativas com aprovações e prazos | Enquanto a exceção estiver ativa + 1 ano |
+| `excecoes.yaml` / `vex.yaml` | Registo de exceções ativas com aprovações e prazos | Enquanto a exceção estiver ativa + 1 ano (L1), 2 anos (L2), 3 anos (L3) |
 | `sca-report.*` | Relatório SCA com findings e estado de exceções | 90 dias (L2), 1 ano (L3) |
-| Histórico de reavaliações | Registos de reavaliações anteriores com decisões | 2 anos (L3), 1 ano (L2) |
+| Histórico de reavaliações | Registos de reavaliações anteriores com decisões | 2 anos (L2), 3 anos (L3) após encerramento da exceção |
 
 ---
 

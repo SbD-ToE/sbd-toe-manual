@@ -296,7 +296,7 @@ Como **AppSec + GRC**, quero monitorizar comportamento de containers em execuç�
 - [ ] Alertas para eventos críticos (escalada de privilégios, file modifications, network escape)
 - [ ] Integração com sistema de alertas (SIEM, Prometheus, webhooks)
 - [ ] Playbook de resposta a incidentes documentado e testado
-- [ ] Retenção de logs com período mínimo definido (ex: 90 dias L2, 180 dias L3)
+- [ ] Retenção de logs conforme a Política 29 (logs de segurança: 1 ano em L2, 2 anos em L3)
 - [ ] Dashboard de eventos em tempo real
 
 :::
@@ -351,7 +351,7 @@ Como **DevOps / SRE**, quero gerar SBOM (Software Bill of Materials) automaticam
 - [ ] SBOM anexado ao artefacto de build (registry label, armazenamento separado)
 - [ ] Incluem todas as dependências diretas e transitivas
 - [ ] Versionado com hash da imagem e identificador de build
-- [ ] Retenção mínima de 1 ano
+- [ ] Retenção conforme o nível (Política 11: 1 ano em L2, 2 anos em L3; em produtos no âmbito do CRA, pelo menos 10 anos ou o período de apoio, se for mais longo)
 - [ ] Consulta disponível para auditoria e compliance
 
 :::
@@ -588,7 +588,7 @@ Como **DevOps / SRE + Arquitetos de Software**, quero aplicar NetworkPolicy com 
 |------|---------|-------------|-----|
 | Design | Levantamento de dependências | Developer | Antes de especificar pods |
 | Deploy | Aplicação de manifesto | DevOps / SRE + Admission Controller | Antes de workload scheduling |
-| Ops | Auditoria de fluxos | DevOps / SRE + AppSec Engineer | 30d audit log retention |
+| Ops | Auditoria de fluxos | DevOps / SRE + AppSec Engineer | Retenção do audit log conforme a Política 29 |
 | GRC | Exceções vs conformidade | GRC / Compliance | Revisão trimestral |
 
 **Ligações úteis.**  

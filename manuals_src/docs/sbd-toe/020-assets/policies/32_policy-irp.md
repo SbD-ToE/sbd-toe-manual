@@ -130,6 +130,8 @@ Alguns incidentes requerem notificação a autoridades regulatórias dentro de p
 A determinação de se um incidente é notificável deve ser feita pelo GRC/Compliance com o apoio do Encarregado de Proteção de Dados (EPD/DPO) quando aplicável. O prazo começa a contar a partir do momento em que a organização tem conhecimento do incidente - não quando a causa raiz é identificada. No DORA, o prazo de 4 h conta da classificação do incidente como de caráter severo (com o limite de 24 h a contar do conhecimento) e o de 72 h conta da notificação inicial (Reg. Delegado (UE) 2025/301, art. 5.º).
 :::
 
+**Retenção dos registos de incidentes.** A timeline, o post-mortem e as notificações enviadas conservam-se por 1 ano em L1 e L2 e por 3 anos em L3 (escolha do Manual; ver a [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos)). No DORA, o período é definido pela entidade (Reg. Delegado (UE) 2024/1774, art. 22.º, al. d)).
+
 ---
 
 ## 7. Comunicação durante o incidente {#7-comunicação-durante-o-incidente}

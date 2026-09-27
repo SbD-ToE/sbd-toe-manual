@@ -55,7 +55,7 @@ Mesmo sob DORA, aspetos NIS2 podem manter valor:
 - [ ] Catálogo de requisitos SbD-ToE tem coluna `Fonte` preenchida.
 - [ ] Política mestra inclui secção "Lex Specialis: DORA como ato setorial (NIS2 art. 4.º; DORA art. 1.º, n.º 2) — obrigações NIS2 de gestão de riscos e notificação (e respetiva supervisão) não aplicáveis".
 - [ ] Esquema de incidentes baseado em RTS/ITS DORA, com campos NIS2 opcionais.
-- [ ] Retenção de logs definida ≥3 anos (justificada como cobrindo ambas).
+- [ ] Retenção de logs definida por tipo de registo, com um prazo único que satisfaça DORA e NIS2 e fundamentado na avaliação de risco (no SbD-ToE, em L3: 2 anos para logs de segurança e 3 anos para auditoria, escolha do Manual).
 - [ ] Inventário de fornecedores indica criticidade + origem regulatória.
 - [ ] Formação anual da gestão registada (conteúdos DORA + NIS2 integrados).
 - [ ] Processo formal de exceções com aprovação board para L3.
@@ -70,7 +70,7 @@ Não. Segue circuito DORA. Se autoridade nacional exigir visão agregada NIS2, r
 Mapeia exigência do fornecedor a controlo já satisfeito por DORA; envia SoA com origem regulatória.
 
 **Q3. Logs de 1 ano bastam para NIS2?**  
-Para convergência, manter 3+ anos (DORA) reduz discussões. Documentar racional.
+Nem o DORA nem a NIS2 fixam um número: no DORA, a entidade estabelece o período de conservação tendo em conta a avaliação do risco associado às TIC (Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2); o Reg. de Execução (UE) 2024/2690 pede que os registos sejam mantidos «durante um período predefinido» (anexo, ponto 3.2.5). Para convergência, um prazo único por tipo de registo reduz discussões — no SbD-ToE, 2 anos para logs de segurança e 3 anos para auditoria em L3 (escolha do Manual). Documentar o racional.
 
 **Q4. TLPT vs. testes NIS2?**  
 Executar TLPT (se aplicável) satisfaz e supera a exigência genérica NIS2 de avaliação de eficácia.

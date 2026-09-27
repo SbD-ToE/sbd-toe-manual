@@ -305,7 +305,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 - [ ] Acesso a logs restrito e auditado  
 - [ ] Hash ou assinatura digital aplicada por lote  
 - [ ] Logs separados de aplicação (forwarder, sidecar, serviço)  
-- [ ] Retenção mínima: 30d (L1), 90d (L2/L3)  
+- [ ] Retenção mínima conforme a [Política 29](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs): logs de segurança 90 dias (L1), 1 ano (L2), 2 anos (L3); logs operacionais 30 dias (L1), 90 dias (L2), 1 ano (L3)  
 - [ ] Teste de reversão de retenção trimestralmente  
 
 :::
@@ -315,7 +315,7 @@ Como **DevOps/GRC**, quero **garantir segurança e integridade de logs** (reten�
 **Proporcionalidade L1–L3.**  
 | L1 | L2 | L3 |
 |----|----|----|
-| Local (sem retenção) | WORM + 90d | WORM + 180d + integridade verificável |
+| Local: 30 dias (operacionais), 90 dias (segurança) | WORM + 1 ano (segurança) | WORM + 2 anos (segurança) + integridade verificável |
 
 **Integração no SDLC.**  
 | Fase | Trigger | Responsável | SLA |

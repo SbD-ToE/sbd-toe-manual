@@ -117,15 +117,16 @@ O registo de dados sensíveis em logs de debug ou de erro é uma das fontes mais
 
 ## 7. Retenção de logs {#7-retenção-de-logs}
 
-| Tipo de log | L2 | L3 |
-|---|---|---|
-| Logs operacionais (runtime, erros) | 90 dias | 1 ano |
-| Logs de segurança (autenticação, autorização, alterações) | 1 ano | 2 anos (ou conforme regulação) |
-| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 3 anos (ou o período definido na avaliação de risco exigida pela RTS DORA 2024/1774, art. 12.º, se superior) |
-| Logs de pipeline CI/CD | 90 dias | 1 ano |
+| Tipo de log | L1 | L2 | L3 |
+|---|---|---|---|
+| Logs operacionais (runtime, erros) | 30 dias | 90 dias | 1 ano |
+| Logs de segurança (autenticação, autorização, alterações) | 90 dias | 1 ano | 2 anos |
+| Logs de auditoria (operações administrativas, acesso a dados sensíveis) | 1 ano | 1 ano | 3 anos |
+| Logs de pipeline CI/CD | 30 dias | 90 dias | 1 ano |
+| Registos gerados automaticamente por sistemas de IA de risco elevado (OPS-011/012) | Pelo menos 6 meses | 1 ano | 2 anos |
 
 :::note
-Em contextos regulados (DORA, NIS2, saúde, financeiro), os prazos regulatórios prevalecem sobre os mínimos desta política. Para logs com dados pessoais, o RGPD impõe o limite oposto: conservação apenas durante o período necessário (art. 5.º, n.º 1, alínea e)).
+Os prazos desta tabela são escolha do Manual. Prevalece o prazo mínimo legal mais longo que seja aplicável: por exemplo, os registos gerados automaticamente por sistemas de IA de risco elevado são conservados «por um período adequado à finalidade prevista do sistema de IA de risco elevado, de pelo menos seis meses» (AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6), e a documentação técnica de produtos com elementos digitais fica disponível «por, pelo menos, 10 anos após a data de colocação no mercado [...] ou pelo período de apoio, consoante o que for mais longo» (CRA, art. 13.º, n.º 13). No DORA, é a entidade financeira que estabelece o período de conservação, tendo em conta, entre outros fatores, os resultados da avaliação do risco associado às TIC (Reg. Delegado (UE) 2024/1774, art. 12.º, n.º 2); na NIS2, as entidades abrangidas pelo Reg. de Execução (UE) 2024/2690 mantêm os registos «durante um período predefinido» (anexo, ponto 3.2.5). Quando os registos contêm dados pessoais, a conservação não excede o necessário para a finalidade (RGPD, art. 5.º, n.º 1, al. e)).
 :::
 
 ---

@@ -162,7 +162,7 @@ Os artefactos de threat modeling (diagramas, modelos, decisões) são **ativos s
 |---|---|
 | Modelo de ameaças (versão ativa) | Enquanto a aplicação estiver ativa |
 | Versões históricas aprovadas | 3 anos após substituição |
-| Registos de aprovação | 3 anos |
+| Registos de aprovação | 1 ano (L1), 2 anos (L2), 3 anos (L3) |
 | Riscos aceites associados | Conforme Política de Aceitação de Risco Residual |
 
 ---

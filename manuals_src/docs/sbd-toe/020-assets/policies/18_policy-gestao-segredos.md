@@ -225,7 +225,7 @@ Quando o conteúdo do *prompt* inclui dados pessoais, é exigido contratualmente
 
 ### 10.5 Telemetria sob controlo do *deployer* {#105-telemetria-sob-controlo-do-deployer}
 
-Os logs de inferência sob controlo da organização (Art. 19.º AI Act / RGPD Art. 5.º) cumprem [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retenção) e [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) com **redacção de PII nos `args`** — o *audit trail* preserva o suficiente para responder a auditoria sem replicar os dados pessoais.
+Os logs de inferência sob controlo da organização (Art. 19.º AI Act / RGPD Art. 5.º) cumprem [`OPS-003`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (retenção: pelo menos seis meses nos sistemas de IA de risco elevado, AI Act, art. 19.º, n.º 1, e art. 26.º, n.º 6) e [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation*) com **redacção de PII nos `args`** — o *audit trail* preserva o suficiente para responder a auditoria sem replicar os dados pessoais.
 
 ### 10.6 Direitos do titular dos dados {#106-direitos-do-titular-dos-dados}
 

@@ -515,7 +515,7 @@ Como **Quality Assurance (QA)** e **DevOps / SRE**, quero **arquivar centralment
 - [ ] Repositório de evidências definido (preferencialmente WORM)  
 - [ ] Export automático por *build/release*  
 - [ ] Índice de evidências por aplicação e *commit*  
-- [ ] Política de retenção definida (≥ 2 anos; L3 ≥ 5 anos)  
+- [ ] Política de retenção definida (1 ano em L1, 2 anos em L2, 3 anos em L3; em produtos no âmbito do CRA, pelo menos 10 anos após a colocação no mercado ou o período de apoio, consoante o que for mais longo)  
 - [ ] Acesso auditado e controlado
 :::
 
@@ -532,7 +532,7 @@ diretório `evidencias/`, `evidencias-index.json`, registos de acesso
 **Integração no SDLC.**
 | Fase | Trigger | Responsável | SLA |
 |---|---|---|---|
-| CI/CD | Conclusão da execução de validações no pipeline | **Quality Assurance (QA)** + **DevOps / SRE** | Export por *build*/*release*; retenção ≥ 2 anos (≥ 5 anos em L3) |
+| CI/CD | Conclusão da execução de validações no pipeline | **Quality Assurance (QA)** + **DevOps / SRE** | Export por *build*/*release*; retenção de 1 ano (L1), 2 anos (L2), 3 anos (L3); ≥ 10 anos em produtos no âmbito do CRA |
 
 ---
 

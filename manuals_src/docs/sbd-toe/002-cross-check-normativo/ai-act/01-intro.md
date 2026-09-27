@@ -222,7 +222,7 @@ Sugere-se construir um "índice Anexo IV" que aponte para os artefactos SbD-ToE 
 
 **Conteúdo normativo**
 
-O Art. 12 exige capacidade de **registo automático de eventos** (logs) ao longo do ciclo de vida, com nível de rastreabilidade adequado à finalidade, permitindo identificar situações de risco e suportar a monitorização pós-comercialização. O Art. 19 obriga os fornecedores a **conservar os logs** gerados automaticamente, na medida em que estejam sob o seu controlo.
+O Art. 12 exige capacidade de **registo automático de eventos** (logs) ao longo do ciclo de vida, com nível de rastreabilidade adequado à finalidade, permitindo identificar situações de risco e suportar a monitorização pós-comercialização. O Art. 19 obriga os prestadores a **conservar os logs** gerados automaticamente, na medida em que estejam sob o seu controlo, «por um período adequado à finalidade prevista do sistema de IA de risco elevado, de pelo menos seis meses» (art. 19.º, n.º 1); o art. 26.º, n.º 6, impõe o mesmo mínimo aos responsáveis pela implantação.
 
 **Cobertura SbD-ToE**
 
@@ -247,7 +247,7 @@ O esquema do *model output* (versão de modelo, *features* relevantes, decisão,
 
 **Como cumprir**
 
-A camada operacional já está implementada (`OPS-011..014` + Cap. 12 US-13). Resta declarar o esquema do *model output* por sistema, garantindo retenção alinhada com a vida útil e com requisitos do RGPD. Documentar o período de conservação como evidência para Art. 12/19.
+A camada operacional já está implementada (`OPS-011..014` + Cap. 12 US-13). Resta declarar o esquema do *model output* por sistema, garantindo retenção por um período adequado à finalidade prevista do sistema, de pelo menos seis meses (art. 19.º, n.º 1, e art. 26.º, n.º 6), e compatível com o RGPD. Documentar o período de conservação como evidência para Art. 12/19.
 
 ---
 

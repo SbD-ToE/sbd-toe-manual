@@ -198,7 +198,7 @@ Este template estrutura sistemas de tickets de incidentes:
 ### Compliance (conforme DORA) {#compliance-conforme-dora}
 - [ ] Análise DORA (reportável?)
 - [ ] Notificação supervisor (se aplica)
-- [ ] Arquivo para 3+ anos (audit trail)
+- [ ] Arquivo conforme a Política 06 §10 (1 ano em L1/L2, 3 anos em L3; audit trail)
 
 ---
 
@@ -206,12 +206,13 @@ Este template estrutura sistemas de tickets de incidentes:
 
 ## Retenção de Logs {#retenção-de-logs}
 
-**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Reg. Delegado (UE) 2024/1774, art. 22.º, al. d) — período definido pela entidade, proporcional à criticalidade e não superior ao necessário):**
+**Conformidade [Cap. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) (DORA: Reg. Delegado (UE) 2024/1774, art. 22.º, al. d) — período definido pela entidade, proporcional à criticalidade e não superior ao necessário). Os valores abaixo são escolha do Manual, conforme a [Política 06 §10](/sbd-toe/assets/policies/policy-rastreabilidade#10-prazos-de-retenção-mínimos) e a [Política 29 §7](/sbd-toe/assets/policies/policy-logging-estruturado#7-retenção-de-logs):**
 
 ```
-Todos os incidentes + trilho auditoria devem ser retidos:
-- Mínimo: 3 anos
-- Recomendado: 5 anos
+Registos de incidentes (timeline, post-mortem, notificações):
+- L1 / L2: 1 ano
+- L3: 3 anos
+Trilho de auditoria: 1 ano (L1/L2), 3 anos (L3)
 - Acesso: Immutable (WORM - Write Once Read Many)
 - Verificação: Integridade criptográfica (hash)
 ```

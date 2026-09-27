@@ -208,7 +208,7 @@ Os níveis são cumulativos: L3 inclui todos os itens L2+, que incluem todos os 
 | 8.06 | Existe período de observação pós-deploy com métricas monitorizadas e critérios formais de fecho (L2: 30 min; L3: 60 min) | **L2+** | pol-28 |
 | 8.07 | Logs de eventos de segurança estão em formato estruturado (JSON) com schema mínimo obrigatório (timestamp UTC, level, event.action, application, trace.id) | **L2+** | pol-29 |
 | 8.08 | Logs não contêm passwords, tokens completos, dados de cartão ou PII não mascarada | **S** | pol-29 |
-| 8.09 | Logs de segurança estão centralizados com retenção mínima de 1 ano (L2) / 2 anos para segurança e 3 anos para auditoria (L3/DORA) | **L2+** | pol-29 |
+| 8.09 | Logs de segurança estão centralizados com retenção mínima de 1 ano (L2) / 2 anos para segurança e 3 anos para auditoria (L3) | **L2+** | pol-29 |
 | 8.10 | Eventos de segurança críticos têm alertas definidos com runbooks (diagnóstico, acções imediatas, escalamento) | **L2+** | pol-30, pol-31 |
 | 8.11 | Cada alerta tem SLA de resposta e encaminhamento automático definidos | **L2+** | pol-31 |
 | 8.12 | Existe Incident Response Plan com critérios de activação, fases estruturadas e playbooks | **L2+** | pol-32 |

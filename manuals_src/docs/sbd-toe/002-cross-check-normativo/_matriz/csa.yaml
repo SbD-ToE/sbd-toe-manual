@@ -1,0 +1,2653 @@
+# Matriz de cobertura regulatória — CSA. Schema sbdtoe-reg-coverage/1.
+# Dado canónico; verificado por scripts/check_reg_context.py. Texto sic das obrigações em translation/sources/eurlex/obrigacoes/csa.json.
+schema: sbdtoe-reg-coverage/1
+acto: csa
+version: 1
+decided: '2026-09-27'
+framework_legado: null
+fonte_obrigacoes:
+  caminho: translation/sources/eurlex/obrigacoes/csa.json
+  sha256: e73769d755cb410e89bb3cde476e77fb3126704e77596f498ebf7bc64be8ed26
+versao_consolidada:
+  32024R0482: 02024R0482-20251229
+  32019R0881: 02019R0881-20250204
+origem:
+  pt: Mapa mapa-rgpd-csa.json do despacho 2026-09-27-cobertura-cross-check (hub), convertido por script e revisto pelo Manual agent.
+  en: Map mapa-rgpd-csa.json from the 2026-09-27-cobertura-cross-check dispatch (hub), converted by script and reviewed by the Manual agent.
+itens:
+- id: CSA-51-a
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea a)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Toda a comunicação entre cliente e servidor e entre serviços internos usa TLS
+      en: All communication between client and server and between internal services uses TLS
+  - tipo: requisito
+    alvo: ENC-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
+      en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  - tipo: requisito
+    alvo: ACC-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Acesso não autorizado a dados críticos é impedido e registado
+      en: Unauthorised access to critical data is prevented and logged
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-b
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea b)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-009
+    niveis: [L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados críticos com mecanismo de verificação de integridade (MACs, assinaturas, checksums); adulterações detectadas e registadas
+      en: Critical data with an integrity verification mechanism (MACs, signatures, checksums); tampering detected and logged
+  - tipo: requisito
+    alvo: LOG-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Logs não alteráveis por utilizadores comuns
+      en: Logs cannot be altered by ordinary users
+  - tipo: requisito
+    alvo: DPL-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: Procedimento de rollback definido, documentado e testado periodicamente
+      en: Rollback procedure defined, documented and tested periodically
+  - tipo: politica
+    rotulo:
+      pt: Política 27 §3.3
+      en: Policy 27 §3.3
+    ficheiro: 020-assets/policies/27_policy-rollback.md
+    ancora: 33-rollback-de-base-de-dados
+    citacao:
+      pt: Snapshot/backup pré-deploy disponível
+      en: Pre-deploy snapshot/backup available
+  falta:
+    pt: Integridade e rollback prescritos; faltam backups de dados com restauro testado (ver RGPD-32-1-c).
+    en: Integrity and rollback prescribed; data backups with tested restore are missing (see RGPD-32-1-c).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-c
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea c)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  - tipo: requisito
+    alvo: ACC-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Contas sem permissões desnecessárias
+      en: Accounts without unnecessary permissions
+  - tipo: requisito
+    alvo: ACC-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Tentativas de acesso não autorizado são bloqueadas e registadas com contexto suficiente.
+      en: Unauthorised access attempts are blocked and logged with sufficient context.
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-d
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea d)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: SBOM presente e acessível para cada build, em formato CycloneDX ou SPDX; inclui dependências directas e transitivas
+      en: SBOM present and accessible for each build, in CycloneDX or SPDX format; includes direct and transitive dependencies
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  - tipo: politica
+    rotulo:
+      pt: Política 10 §8
+      en: Policy 10 §8
+    ficheiro: 020-assets/policies/10_policy-dependencias.md
+    ancora: 8-alertas-de-vulnerabilidades-em-produção
+    citacao:
+      pt: Alerta gerado quando CVE afeta versão implantada, com componente, versão, ambiente e severidade
+      en: Alert generated when a CVE affects a deployed version, with component, version, environment and severity
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-e
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea e)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: LOG-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Acessos, alterações e falhas de segurança críticas são registados
+      en: Access, changes and critical security failures are logged
+  - tipo: requisito
+    alvo: LOG-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: 'Cada entrada inclui: quem, quando, o quê e onde'
+      en: 'Each entry includes: who, when, what and where'
+  - tipo: requisito
+    alvo: OPS-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Catálogo de eventos críticos definido por aplicação
+      en: Catalogue of critical events defined per application
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-f
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea f)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: LOG-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Logs não alteráveis por utilizadores comuns
+      en: Logs cannot be altered by ordinary users
+  - tipo: politica
+    rotulo:
+      pt: Política 29 §8
+      en: Policy 29 §8
+    ficheiro: 020-assets/policies/29_policy-logging-estruturado.md
+    ancora: 8-integridade-e-imutabilidade
+    citacao:
+      pt: Armazenamento WORM (Write Once, Read Many)
+      en: WORM storage (Write Once, Read Many)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-g
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea g)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: CVEs de severidade crítica ou elevada bloqueiam a promoção
+      en: CVEs of critical or high severity block promotion
+  - tipo: requisito
+    alvo: DPL-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: Gates que verificam ausência de CVEs críticos, testes de segurança passados e ausência de segredos detectados executam antes de cada promoção
+      en: Gates that verify the absence of critical CVEs, passed security tests and the absence of detected secrets run before each promotion
+  - tipo: requisito
+    alvo: TST-005
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Scanner DAST activo em ambiente de staging representativo de produção
+      en: DAST scanner active in a staging environment representative of production
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §5.1
+      en: Policy 20 §5.1
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 51-critérios-de-bloqueio-automático-no-go
+    citacao:
+      pt: Existir finding Critical ou High em aberto sem exceção formal válida
+      en: There is an open Critical or High finding without a valid formal exception
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: 'Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Tensão: a Política 12 admite «Fix deferred»/«Risk accepted» para CVE Critical (7 dias em L1/L2) e High (até 90 dias em L1), e a Política 20 §5.1 bloqueia só sem «exceção formal válida» — um produto a certificar tem de demonstrar ausência de vulnerabilidades conhecidas na avaliação.'
+    en: 'Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Tension: Policy 12 allows “Fix deferred”/“Risk accepted” for Critical CVEs (7 days at L1/L2) and High (up to 90 days at L1), and Policy 20 §5.1 blocks only without a “valid formal exception” — a product to be certified must demonstrate the absence of known vulnerabilities in the evaluation.'
+- id: CSA-51-h
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea h)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DPL-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: Procedimento de rollback definido, documentado e testado periodicamente
+      en: Rollback procedure defined, documented and tested periodically
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.5
+      en: Policy 32 §4.5
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 45-recuperação
+    citacao:
+      pt: Sistemas restaurados com versões limpas e verificadas
+      en: Systems restored with clean and verified versions
+  - tipo: requisito
+    alvo: OPS-015
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: monitorizado continuamente fora da instância
+      en: monitored continuously outside the instance
+  falta:
+    pt: Recuperação e rollback prescritos; sem backups com RPO/RTO e testes de restauro.
+    en: Recovery and rollback prescribed; no backups with RPO/RTO and restore tests.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-i
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea i)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 09 §3
+      en: Policy 09 §3
+    ficheiro: 020-assets/policies/09_policy-arquitetura-segura.md
+    ancora: 3-princípios-de-arquitetura-segura
+    citacao:
+      pt: Nenhum componente, serviço ou dado deve ter exposição superior à necessária para a sua função
+      en: No component, service or data item may have greater exposure than its function requires
+  - tipo: politica
+    rotulo:
+      pt: Política 09 §3
+      en: Policy 09 §3
+    ficheiro: 020-assets/policies/09_policy-arquitetura-segura.md
+    ancora: 3-princípios-de-arquitetura-segura
+    citacao:
+      pt: Em caso de falha, o comportamento padrão deve ser o mais restritivo, não o mais permissivo
+      en: In the event of failure, the default behaviour must be the most restrictive, not the most permissive
+  - tipo: requisito
+    alvo: CFG-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: cfg
+    citacao:
+      pt: Parâmetros de debug, trace e dev_mode desligados em produção
+      en: Debug, trace and dev_mode parameters switched off in production
+  - tipo: requisito
+    alvo: THR-001
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/03-threat-modeling/addon/00-catalogo-requisitos.md
+    ancora: catálogo-thr---threat-modeling
+    citacao:
+      pt: Aplicações com classificação L2 ou superior têm threat model formal documentado
+      en: Applications classified L2 or higher have a formal, documented threat model
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51-j
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º, alínea j)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: CVEs de severidade crítica ou elevada bloqueiam a promoção
+      en: CVEs of critical or high severity block promotion
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §5.1
+      en: Policy 20 §5.1
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 51-critérios-de-bloqueio-automático-no-go
+    citacao:
+      pt: Existir finding Critical ou High em aberto sem exceção formal válida
+      en: There is an open Critical or High finding without a valid formal exception
+  - tipo: requisito
+    alvo: DST-003
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: dst
+    citacao:
+      pt: Artefactos assinados ou validados por hash antes de publicação
+      en: Artefacts signed or validated by hash before publication
+  - tipo: requisito
+    alvo: DPL-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: artefactos sem proveniência verificável rejeitados automaticamente
+      en: artefacts without verifiable provenance rejected automatically
+  falta:
+    pt: Sem vulnerabilidades conhecidas à saída e integridade dos artefactos; falta o mecanismo de atualização segura no produto entregue ao utilizador (lacuna já registada no mapa CRA, anexo I, parte I, ponto 2, al. c)).
+    en: No known vulnerabilities at release and integrity of artefacts; the secure update mechanism in the product delivered to the user is missing (gap already recorded in the CRA map, Annex I, Part I, point (2)(c)).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Ver a tensão com as exceções de CVE em CSA-51-g.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. See the tension with the CVE exceptions in CSA-51-g.
+- id: CSA-51A-a
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea a)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: TRN-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/13-formacao-onboarding/addon/00-catalogo-requisitos.md
+    ancora: catálogo-trn---formação-e-onboarding
+    citacao:
+      pt: Existem trilhos de formação de segurança definidos por perfil de colaborador
+      en: Security training tracks exist, defined by staff profile
+  - tipo: requisito
+    alvo: GOV-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Modelo documentado e aprovado formalmente pela direcção, com papéis, responsabilidades e ciclo de decisão definidos
+      en: Model documented and formally approved by senior management, with roles, responsibilities and decision cycle defined
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. O Manual não modela a prestação de serviços de segurança geridos; os trilhos de formação e o modelo de governação são evidência genérica.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The Manual does not model the provision of managed security services; the training tracks and the governance model are generic evidence.
+- id: CSA-51A-b
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea b)
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: GOV-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Modelo documentado e aprovado formalmente pela direcção, com papéis, responsabilidades e ciclo de decisão definidos
+      en: Model documented and formally approved by senior management, with roles, responsibilities and decision cycle defined
+  - tipo: requisito
+    alvo: GOV-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Ciclo de revisão periódica definido por tipo de activo
+      en: Periodic review cycle defined by asset type
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Serviços de segurança geridos não modelados.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Managed security services not modelled.
+- id: CSA-51A-c
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea c)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ENC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Toda a comunicação entre cliente e servidor e entre serviços internos usa TLS
+      en: All communication between client and server and between internal services uses TLS
+  - tipo: requisito
+    alvo: ENC-002
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: enc
+    citacao:
+      pt: Dados classificados como sensíveis (PII, credenciais, dados financeiros) encriptados em armazenamento persistente
+      en: Data classified as sensitive (PII, credentials, financial data) encrypted in persistent storage
+  - tipo: requisito
+    alvo: ACC-006
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Acesso não autorizado a dados críticos é impedido e registado
+      en: Unauthorised access to critical data is prevented and logged
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Objetivo genérico de proteção de dados, aplicado aos sistemas que suportam o serviço.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Generic data protection objective, applied to the systems supporting the service.
+- id: CSA-51A-d
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea d)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DPL-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: Procedimento de rollback definido, documentado e testado periodicamente
+      en: Rollback procedure defined, documented and tested periodically
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §4.5
+      en: Policy 32 §4.5
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 45-recuperação
+    citacao:
+      pt: Sistemas restaurados com versões limpas e verificadas
+      en: Systems restored with clean and verified versions
+  falta:
+    pt: Sem backups/restauro testados.
+    en: No tested backups/restore.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51A-e
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea e)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ACC-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Perfis e permissões mapeados; role com privilégio reduzido não acede a recursos restritos.
+      en: Profiles and permissions mapped; a role with reduced privilege does not access restricted resources.
+  - tipo: requisito
+    alvo: ACC-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: acc
+    citacao:
+      pt: Contas sem permissões desnecessárias
+      en: Accounts without unnecessary permissions
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51A-f
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea f)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: LOG-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Acessos, alterações e falhas de segurança críticas são registados
+      en: Access, changes and critical security failures are logged
+  - tipo: requisito
+    alvo: LOG-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: 'Cada entrada inclui: quem, quando, o quê e onde'
+      en: 'Each entry includes: who, when, what and where'
+  - tipo: requisito
+    alvo: LOG-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: log
+    citacao:
+      pt: Logs não alteráveis por utilizadores comuns
+      en: Logs cannot be altered by ordinary users
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-51A-g
+  acto_fonte: 32019R0881
+  referencia: Art. 51.º-A, alínea g)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: CVEs de severidade crítica ou elevada bloqueiam a promoção
+      en: CVEs of critical or high severity block promotion
+  - tipo: politica
+    rotulo:
+      pt: Política 09 §3
+      en: Policy 09 §3
+    ficheiro: 020-assets/policies/09_policy-arquitetura-segura.md
+    ancora: 3-princípios-de-arquitetura-segura
+    citacao:
+      pt: Nenhum componente, serviço ou dado deve ter exposição superior à necessária para a sua função
+      en: No component, service or data item may have greater exposure than its function requires
+  falta:
+    pt: Aplica-se aos produtos próprios; não exige que as ferramentas de TIC de terceiros usadas na prestação do serviço sejam avaliadas como seguras desde a conceção e sem vulnerabilidades conhecidas.
+    en: Applies to own products; does not require that third-party ICT tools used in providing the service be assessed as secure by design and free of known vulnerabilities.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-52-1
+  acto_fonte: 32019R0881
+  referencia: Art. 52.º, n.º 1
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: CLA-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: Cada aplicação tem classificação de criticidade formalizada segundo os eixos de exposição, sensibilidade de dados e impacto de incidente
+      en: Each application has a criticality classification formalised according to the axes of exposure, data sensitivity and incident impact
+  - tipo: requisito
+    alvo: CLA-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: O nível de classificação determina o conjunto de controlos base obrigatórios
+      en: The classification level determines the set of mandatory baseline controls
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. A classificação L1–L3 é análoga ao juízo de proporcionalidade, mas a escolha do nível de garantia («substancial»/«elevado») é decisão do requerente no esquema.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The L1–L3 classification is analogous to the proportionality judgement, but the choice of assurance level (“substantial”/“high”) is the applicant's decision within the scheme.
+- id: CSA-52-6
+  acto_fonte: 32019R0881
+  referencia: Art. 52.º, n.º 6
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: CVEs de severidade crítica ou elevada bloqueiam a promoção
+      en: CVEs of critical or high severity block promotion
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §5.1
+      en: Policy 20 §5.1
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 51-critérios-de-bloqueio-automático-no-go
+    citacao:
+      pt: Existir finding Critical ou High em aberto sem exceção formal válida
+      en: There is an open Critical or High finding without a valid formal exception
+  - tipo: requisito
+    alvo: TST-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Scanner SAST com perfil de regras documentado e versionado
+      en: SAST scanner with a documented and versioned rule profile
+  - tipo: requisito
+    alvo: TST-005
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Scanner DAST activo em ambiente de staging representativo de produção
+      en: DAST scanner active in a staging environment representative of production
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §5
+      en: Policy 19 §5
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 5-rastreabilidade-e-evidência-por-release
+    citacao:
+      pt: Relatórios de SAST, DAST, SCA e fuzzing (quando aplicável) arquivados como artefactos do pipeline
+      en: SAST, DAST, SCA and fuzzing reports (where applicable) archived as pipeline artefacts
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. O Manual produz a evidência (ausência de vulnerabilidades conhecidas, testes das funções de segurança); a avaliação é feita pelo ITSEF.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The Manual produces the evidence (absence of known vulnerabilities, tests of the security functions); the evaluation is performed by the ITSEF.
+- id: CSA-52-7
+  acto_fonte: 32019R0881
+  referencia: Art. 52.º, n.º 7
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: TST-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Pentesting executado com frequência mínima definida por nível de risco
+      en: Pentesting performed at a minimum frequency defined by risk level
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Pentest interno/externo com metodologia; a avaliação AVA_VAN 3–5 é do ITSEF.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Internal/external pentest with methodology; the AVA_VAN 3–5 evaluation is the ITSEF's.
+- id: CSA-53-1
+  acto_fonte: 32019R0881
+  referencia: Art. 53.º, n.º 1
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Disposição sobre a arquitetura do sistema de certificação (autoavaliação, níveis, retirada); não cria dever de engenharia.
+    en: Provision on the architecture of the certification scheme (self-assessment, levels, withdrawal); does not create an engineering duty.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-53-2
+  acto_fonte: 32019R0881
+  referencia: Art. 53.º, n.º 2
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Declaração UE de conformidade e assunção de responsabilidade: plano jurídico da conformidade.'
+    en: 'EU statement of conformity and assumption of responsibility: legal plane of conformity.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-53-3
+  acto_fonte: 32019R0881
+  referencia: Art. 53.º, n.º 3
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector
+      en: The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §7
+      en: Policy 20 §7
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 7-rastreabilidade-ponta-a-ponta
+    citacao:
+      pt: Para qualquer release em produção deve ser possível, em qualquer momento futuro, reconstruir a cadeia
+      en: For any release in production it must be possible, at any future moment, to reconstruct the chain
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Evidência reconstruível e retida; os prazos do Manual (1–3 anos) cedem ao prazo fixado no sistema pela cláusula de precedência, que não identifica o CSA.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Evidence reconstructible and retained; the Manual's periods (1–3 years) yield to the period fixed in the scheme through the precedence clause, which does not identify the CSA.
+- id: CSA-55-1-a
+  acto_fonte: 32019R0881
+  referencia: Art. 55.º, n.º 1, alínea a)
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem guia de configuração, instalação, implantação, funcionamento e manutenção seguros para utilizadores finais (lacuna idêntica à do CRA, anexo II, ponto 8, al. a)).
+    en: No guidance on secure configuration, installation, deployment, operation and maintenance for end users (gap identical to that of the CRA, Annex II, point (8)(a)).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-55-1-b
+  acto_fonte: 32019R0881
+  referencia: Art. 55.º, n.º 1, alínea b)
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem definição nem publicação do período de apoio de segurança (o Manual só usa «período de apoio» como referência de retenção CRA).
+    en: No definition or publication of the security support period (the Manual only uses “support period” as a CRA retention reference).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-55-1-c
+  acto_fonte: 32019R0881
+  referencia: Art. 55.º, n.º 1, alínea c)
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem contacto/canal publicado para receção de vulnerabilidades (security.txt ou equivalente) nem política de divulgação coordenada.
+    en: No published contact/channel for receiving vulnerabilities (security.txt or equivalent) nor coordinated disclosure policy.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-55-1-d
+  acto_fonte: 32019R0881
+  referencia: Art. 55.º, n.º 1, alínea d)
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta:
+  - tipo: us
+    alvo: 11-deploy-seguro-us-09
+    rotulo:
+      pt: Cap. 11 US-09
+      en: Ch. 11 US-09
+    ficheiro: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
+    ancora: us-09---versionamento-semântico-e-changelog-técnico
+    citacao:
+      pt: Secção de segurança com CVEs/mitigações e severidade
+      en: Security section with CVEs/mitigations and severity
+  falta:
+    pt: Sem referência pública a repositórios de vulnerabilidades do produto nem avisos de segurança; existe apenas a secção de segurança do changelog técnico (L2/L3).
+    en: No public reference to the product's vulnerability repositories nor security advisories; there is only the security section of the technical changelog (L2/L3).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-55-2
+  acto_fonte: 32019R0881
+  referencia: Art. 55.º, n.º 2
+  classe: organizacional
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem informação complementar publicada, logo sem regra de formato eletrónico e atualização até à caducidade.
+    en: No supplementary information published, hence no rule on electronic format and updating until expiry.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.6.2019 (entrada em vigor; art. 69.º, n.º 1)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-56-7
+  acto_fonte: 32019R0881
+  referencia: Art. 56.º, n.º 7
+  classe: organizacional
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §5
+      en: Policy 19 §5
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 5-rastreabilidade-e-evidência-por-release
+    citacao:
+      pt: Relatórios de SAST, DAST, SCA e fuzzing (quando aplicável) arquivados como artefactos do pipeline
+      en: SAST, DAST, SCA and fuzzing reports (where applicable) archived as pipeline artefacts
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §7
+      en: Policy 20 §7
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 7-rastreabilidade-ponta-a-ponta
+    citacao:
+      pt: Para qualquer release em produção deve ser possível, em qualquer momento futuro, reconstruir a cadeia
+      en: For any release in production it must be possible, at any future moment, to reconstruct the chain
+  - tipo: requisito
+    alvo: ARC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagrama no repositório com histórico de versões
+      en: Diagram in the repository with version history
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. O dossiê de certificação é construído a partir da evidência por release e da documentação de arquitetura.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The certification dossier is built from the per-release evidence and the architecture documentation.
+- id: CSA-56-8
+  acto_fonte: 32019R0881
+  referencia: Art. 56.º, n.º 8
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 32 §6
+      en: Policy 32 §6
+    ficheiro: 020-assets/policies/32_policy-irp.md
+    ancora: 6-notificação-regulatória
+    citacao:
+      pt: 'À autoridade de controlo (em Portugal, a CNPD): sem demora injustificada e, sempre que possível, até 72 horas após ter tido conhecimento'
+      en: 'To the supervisory authority (in Portugal, the CNPD): without undue delay and, where feasible, not later than 72 hours after having become aware of it'
+  falta:
+    pt: A tabela de notificação regulatória (Política 32 §6) não inclui o dever de informar o organismo emissor de vulnerabilidades/irregularidades detetadas após a certificação.
+    en: The regulatory notification table (Policy 32 §6) does not include the duty to inform the issuing body of vulnerabilities/irregularities detected after certification.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 4.2.2025 (alteração pelo Reg. (UE) 2025/37)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-6
+  acto_fonte: 32024R0482
+  referencia: Art. 6.º
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Disposição sobre a arquitetura do sistema de certificação (autoavaliação, níveis, retirada); não cria dever de engenharia.
+    en: Provision on the architecture of the certification scheme (self-assessment, levels, withdrawal); does not create an engineering duty.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-7-1
+  acto_fonte: 32024R0482
+  referencia: Art. 7.º, n.º 1
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: TST-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Documento de estratégia com tipologias de teste, frequência, responsáveis e critérios de aceitação por nível de risco
+      en: Strategy document with test types, frequency, owners and acceptance criteria by risk level
+  - tipo: requisito
+    alvo: TST-008
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Pentesting executado com frequência mínima definida por nível de risco
+      en: Pentesting performed at a minimum frequency defined by risk level
+  - tipo: requisito
+    alvo: CIC-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cic---cicd-seguro
+    citacao:
+      pt: possível reconstruir o que correu, quando, com que inputs, com que resultado e quem aprovou
+      en: possible to reconstruct what ran, when, with which inputs, with which result and who approved
+  - tipo: requisito
+    alvo: ARC-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
+      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+  falta:
+    pt: Não há meta de segurança (Security Target) nem mapeamento às classes de garantia dos Critérios Comuns (ADV, ALC, ATE, AVA).
+    en: There is no Security Target nor mapping to the Common Criteria assurance classes (ADV, ALC, ATE, AVA).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. As práticas do Manual geram evidência reutilizável para ALC/ATE/AVA, mas nada no Manual está estruturado segundo os Critérios Comuns/CEM.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The Manual's practices generate reusable evidence for ALC/ATE/AVA, but nothing in the Manual is structured according to the Common Criteria/CEM.
+- id: CSA-EUCC-8-1
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 1
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-8-2
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 2
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ARC-010
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: Diagrama no repositório com histórico de versões
+      en: Diagram in the repository with version history
+  - tipo: requisito
+    alvo: ARC-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
+      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §7
+      en: Policy 20 §7
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 7-rastreabilidade-ponta-a-ponta
+    citacao:
+      pt: Para qualquer release em produção deve ser possível, em qualquer momento futuro, reconstruir a cadeia
+      en: For any release in production it must be possible, at any future moment, to reconstruct the chain
+  - tipo: requisito
+    alvo: CIC-005
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cic---cicd-seguro
+    citacao:
+      pt: possível reconstruir o que correu, quando, com que inputs, com que resultado e quem aprovou
+      en: possible to reconstruct what ran, when, with which inputs, with which result and who approved
+  falta:
+    pt: Os «elementos de ação do criador» dos CC (especificação funcional, desenho do TOE, representação da implementação) não são artefactos prescritos.
+    en: The CC “Developer action elements” (functional specification, TOE design, implementation representation) are not prescribed artefacts.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-8-5
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 5
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-001
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: SBOM presente e acessível para cada build, em formato CycloneDX ou SPDX; inclui dependências directas e transitivas
+      en: SBOM present and accessible for each build, in CycloneDX or SPDX format; includes direct and transitive dependencies
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. A SBOM identifica componentes de plataforma; a certificação de produto composto exige os elementos do documento sobre o estado da arte, não previstos.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The SBOM identifies platform components; certification of a composite product requires the elements of the state-of-the-art document, which are not provided for.
+- id: CSA-EUCC-8-6-a
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 6, alínea a)
+  classe: organizacional
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Depende das informações complementares do art. 55.º, que o Manual não prevê (CSA-55-1-a…d).
+    en: Depends on the supplementary information of Article 55, which the Manual does not provide for (CSA-55-1-a…d).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-8-6-b
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 6, alínea b)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §5.1
+      en: Policy 12 §5.1
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 51-etapas-obrigatórias
+    citacao:
+      pt: Análise de impacto e exploitabilidade | Developer + AppSec Engineer | Justificação técnica documentada
+      en: Impact and exploitability analysis | Developer + AppSec Engineer | Documented technical justification
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §4.2
+      en: Policy 19 §4.2
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 42-triagem-formal
+    citacao:
+      pt: Cada finding bloqueante deve ser triado com decisão documentada
+      en: Each blocking finding must be triaged with a documented decision
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  falta:
+    pt: Procedimentos de gestão de vulnerabilidades descritos (triagem, exceções, rastreabilidade); falta o procedimento de divulgação de vulnerabilidades.
+    en: Vulnerability management procedures described (triage, exceptions, traceability); the vulnerability disclosure procedure is missing.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-8-7
+  acto_fonte: 32024R0482
+  referencia: Art. 8.º, n.º 7
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector
+      en: The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Registos de incidentes (timeline, post-mortem, notificações)
+      en: Incident records (timeline, post-mortem, notifications)
+  falta:
+    pt: Prazos de retenção do Manual (máx. 3 anos em L3) inferiores a 5 anos após a caducidade; a cláusula de precedência faz prevalecer o prazo EUCC, mas o mapa de retenção não o identifica.
+    en: The Manual's retention periods (max. 3 years at L3) are shorter than 5 years after expiry; the precedence clause makes the EUCC period prevail, but the retention map does not identify it.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-9-2-a
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea a)
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 29.12.2025 (redação dada pelo Reg. de Execução (UE) 2025/2462)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-9-2-b
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea b)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-9-2-c
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea c)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-9-2-d
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea d)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-9-2-e
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea e)
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §6
+      en: Policy 20 §6
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 6-imutabilidade-do-artefacto
+    citacao:
+      pt: O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes
+      en: The artefact promoted to production must be exactly the same one that went through all the tests
+  - tipo: requisito
+    alvo: DPL-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: artefactos sem proveniência verificável rejeitados automaticamente
+      en: artefacts without verifiable provenance rejected automatically
+  - tipo: requisito
+    alvo: CIC-007
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/07-cicd-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cic---cicd-seguro
+    citacao:
+      pt: Artefactos assinados digitalmente ou com hash verificável gerado no momento do build
+      en: Artefacts digitally signed or with a verifiable hash generated at build time
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Imutabilidade do artefacto e proveniência verificada garantem identidade entre o avaliado e o distribuído; falta ligar a versão ao identificador do certificado.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Artefact immutability and verified provenance ensure identity between what was evaluated and what is distributed; linking the version to the certificate identifier is missing.
+- id: CSA-EUCC-9-2-f
+  acto_fonte: 32024R0482
+  referencia: Art. 9.º, n.º 2, alínea f)
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-11-1
+  acto_fonte: 32024R0482
+  referencia: Art. 11.º, n.º 1
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-11-2
+  acto_fonte: 32024R0482
+  referencia: Art. 11.º, n.º 2
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-11-3
+  acto_fonte: 32024R0482
+  referencia: Art. 11.º, n.º 3
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 29.12.2025 (redação dada pelo Reg. de Execução (UE) 2025/2462)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-11-4
+  acto_fonte: 32024R0482
+  referencia: Art. 11.º, n.º 4
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Promoção, marca e rótulo do certificado: plano jurídico-comercial da certificação.'
+    en: 'Promotion, mark and label of the certificate: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. O código QR remete para as informações do art. 55.º, que são lacuna (CSA-55-1-a…d).
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The QR code points to the information of Article 55, which is a gap (CSA-55-1-a…d).
+- id: CSA-EUCC-16
+  acto_fonte: 32024R0482
+  referencia: Art. 16.º
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Certificação de perfis de proteção: atividade de quem desenvolve perfis, não do processo de engenharia do produto.'
+    en: 'Certification of protection profiles: an activity of those who develop profiles, not of the product engineering process.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-27-1-a
+  acto_fonte: 32024R0482
+  referencia: Art. 27.º, n.º 1, alínea a)
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 10 §8
+      en: Policy 10 §8
+    ficheiro: 020-assets/policies/10_policy-dependencias.md
+    ancora: 8-alertas-de-vulnerabilidades-em-produção
+    citacao:
+      pt: Alerta gerado quando CVE afeta versão implantada, com componente, versão, ambiente e severidade
+      en: Alert generated when a CVE affects a deployed version, with component, version, environment and severity
+  - tipo: us
+    alvo: 05-dependencias-sbom-sca-us-11
+    rotulo:
+      pt: Cap. 05 US-11
+      en: Ch. 05 US-11
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md
+    ancora: us-11---alertas-sobre-vulnerabilidades-em-componentes-usados
+    citacao:
+      pt: Uma vulnerabilidade com indício de exploração ativa num produto com elementos digitais que a organização coloca no mercado sai desta escada
+      en: A vulnerability with an indication of active exploitation in a product with digital elements that the organisation places on the market leaves this ladder
+  - tipo: requisito
+    alvo: DEP-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: CVEs de severidade crítica ou elevada bloqueiam a promoção
+      en: CVEs of critical or high severity block promotion
+  - tipo: pagina
+    rotulo:
+      pt: KEV — exploração confirmada
+      en: KEV — confirmed exploitation
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/12-epss-kev-priorizacao.md
+    ancora: kev--exploração-confirmada
+    citacao:
+      pt: Deve ser escalada para o prazo de remediação mais curto do programa, independentemente do seu CVSS ou EPSS.
+      en: It must be escalated to the programme's shortest remediation deadline, regardless of its CVSS or EPSS.
+  falta:
+    pt: Monitorização contínua de CVE em dependências e de exploração (KEV); faltam as comunicações de utilizadores e investigadores (sem canal de receção).
+    en: Continuous monitoring of CVEs in dependencies and of exploitation (KEV); communications from users and researchers are missing (no reception channel).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-27-1-b
+  acto_fonte: 32024R0482
+  referencia: Art. 27.º, n.º 1, alínea b)
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 08 §4.2
+      en: Policy 08 §4.2
+    ficheiro: 020-assets/policies/08_policy-threat-modeling.md
+    ancora: 42-cadência-periódica
+    citacao:
+      pt: Anual ou por cada release major
+      en: Annual or with each major release
+  - tipo: requisito
+    alvo: GOV-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/14-governanca-contratacao/addon/00-catalogo-requisitos.md
+    ancora: catálogo-gov---governação-e-contratação
+    citacao:
+      pt: Ciclo de revisão periódica definido por tipo de activo
+      en: Periodic review cycle defined by asset type
+  - tipo: politica
+    rotulo:
+      pt: Política 04 §1
+      en: Policy 04 §1
+    ficheiro: 020-assets/policies/04_policy-revisao-periodica-risco.md
+    ancora: 1-objetivo
+    citacao:
+      pt: revisão da classificação de risco aplicacional e dos controlos de segurança associados, ao longo de todo o ciclo de vida de cada aplicação
+      en: reviewing the application risk classification and the associated security controls throughout the entire lifecycle of each application
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. A revisão periódica do threat model e dos controlos permite detetar erosão da garantia; não há controlo referido às declarações do certificado.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Periodic review of the threat model and controls makes it possible to detect erosion of assurance; there is no control referring to the certificate's claims.
+- id: CSA-EUCC-27-2
+  acto_fonte: 32024R0482
+  referencia: Art. 27.º, n.º 2
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-28-3
+  acto_fonte: 32024R0482
+  referencia: Art. 28.º, n.º 3
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-29-1
+  acto_fonte: 32024R0482
+  referencia: Art. 29.º, n.º 1
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-30-3
+  acto_fonte: 32024R0482
+  referencia: Art. 30.º, n.º 3
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Comunicação da suspensão do certificado a adquirentes e ao público: plano jurídico-comercial da certificação.'
+    en: 'Communication of the certificate''s suspension to purchasers and the public: legal-commercial plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-33-1
+  acto_fonte: 32024R0482
+  referencia: Art. 33.º, n.º 1
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §5.1
+      en: Policy 12 §5.1
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 51-etapas-obrigatórias
+    citacao:
+      pt: Análise de impacto e exploitabilidade | Developer + AppSec Engineer | Justificação técnica documentada
+      en: Impact and exploitability analysis | Developer + AppSec Engineer | Documented technical justification
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §4.2
+      en: Policy 19 §4.2
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 42-triagem-formal
+    citacao:
+      pt: Cada finding bloqueante deve ser triado com decisão documentada
+      en: Each blocking finding must be triaged with a documented decision
+  - tipo: requisito
+    alvo: TST-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: SLA de correcção definido por severidade
+      en: Remediation SLA defined by severity
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  falta:
+    pt: Processo interno de tratamento de vulnerabilidades (deteção, triagem, SLA, exceções, rastreabilidade) prescrito; sem alinhamento à EN ISO/IEC 30111 e sem receção externa, verificação de relatos e divulgação.
+    en: Internal vulnerability handling process (detection, triage, SLA, exceptions, traceability) prescribed; no alignment with EN ISO/IEC 30111 and no external reception, verification of reports and disclosure.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-33-2
+  acto_fonte: 32024R0482
+  referencia: Art. 33.º, n.º 2
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem métodos publicados de receção de vulnerabilidades de fontes externas.
+    en: No published methods for receiving vulnerabilities from external sources.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-33-3
+  acto_fonte: 32024R0482
+  referencia: Art. 33.º, n.º 3
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §6
+      en: Policy 12 §6
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 6-prazos-máximos-e-reavaliação
+    citacao:
+      pt: Cada CVE que afete um componente implantado é triado (afetado / não afetado / decisão)
+      en: Every CVE affecting a deployed component is triaged (affected / not affected / decision)
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §4.2
+      en: Policy 19 §4.2
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 42-triagem-formal
+    citacao:
+      pt: Cada finding bloqueante deve ser triado com decisão documentada
+      en: Each blocking finding must be triaged with a documented decision
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  falta:
+    pt: Registo e triagem de vulnerabilidades detetadas (testes, SCA) prescritos; as comunicadas por terceiros não têm entrada.
+    en: Recording and triage of detected vulnerabilities (tests, SCA) prescribed; those reported by third parties have no entry point.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-33-4
+  acto_fonte: 32024R0482
+  referencia: Art. 33.º, n.º 4
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DST-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: dst
+    citacao:
+      pt: Versões comprometidas são removidas prontamente; utilizadores e dependentes notificados.
+      en: Compromised versions are removed promptly; users and dependants notified.
+  falta:
+    pt: A notificação a dependentes está prevista só para versões comprometidas (DST-007); não para vulnerabilidades que afetam produtos compostos com certificado próprio.
+    en: Notification to dependants is provided for only for compromised versions (DST-007); not for vulnerabilities affecting composite products with their own certificate.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-33-5
+  acto_fonte: 32024R0482
+  referencia: Art. 33.º, n.º 5
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §5.1
+      en: Policy 12 §5.1
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 51-etapas-obrigatórias
+    citacao:
+      pt: Análise de impacto e exploitabilidade | Developer + AppSec Engineer | Justificação técnica documentada
+      en: Impact and exploitability analysis | Developer + AppSec Engineer | Documented technical justification
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. A rastreabilidade componente→CVE→ação fornece a informação; a transmissão ao organismo é plano da certificação.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The component→CVE→action traceability provides the information; transmission to the body is certification plane.
+- id: CSA-EUCC-34-1
+  acto_fonte: 32024R0482
+  referencia: Art. 34.º, n.º 1
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §6
+      en: Policy 12 §6
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 6-prazos-máximos-e-reavaliação
+    citacao:
+      pt: Cada CVE que afete um componente implantado é triado (afetado / não afetado / decisão)
+      en: Every CVE affecting a deployed component is triaged (affected / not affected / decision)
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §4.3
+      en: Policy 19 §4.3
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 43-slas-de-triagem-e-resolução
+    citacao:
+      pt: Com indício de exploração ativa (por exemplo, KEV) ou em produtos no âmbito do CRA, o prazo do nível é um tecto
+      en: With an indication of active exploitation (for example, KEV) or for products within the scope of the CRA, the level time limit is a ceiling
+  - tipo: pagina
+    rotulo:
+      pt: Integração na priorização de remediação
+      en: Integration into remediation prioritisation
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/12-epss-kev-priorizacao.md
+    ancora: integração-na-priorização-de-remediação
+    citacao:
+      pt: 'A ordem de remediação resulta da composição de três sinais: severidade (CVSS), probabilidade (EPSS) e exploração confirmada (KEV)'
+      en: 'The order of remediation results from the composition of three signals: severity (CVSS), probability (EPSS) and confirmed exploitation (KEV)'
+  falta:
+    pt: Prazos de triagem e remediação segundo severidade/exploração (KEV, EPSS); a análise não é referida ao alvo de avaliação nem às declarações do certificado.
+    en: Triage and remediation deadlines according to severity/exploitation (KEV, EPSS); the analysis is not referred to the target of evaluation nor to the certificate's claims.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-34-2
+  acto_fonte: 32024R0482
+  referencia: Art. 34.º, n.º 2
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem cálculo do potencial de ataque segundo CC/CEM (o Manual usa CVSS/EPSS/KEV).
+    en: No calculation of attack potential according to CC/CEM (the Manual uses CVSS/EPSS/KEV).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-35-1
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 1
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §5.1
+      en: Policy 12 §5.1
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 51-etapas-obrigatórias
+    citacao:
+      pt: Análise de impacto e exploitabilidade | Developer + AppSec Engineer | Justificação técnica documentada
+      en: Impact and exploitability analysis | Developer + AppSec Engineer | Documented technical justification
+  - tipo: politica
+    rotulo:
+      pt: Política 19 §4.2
+      en: Policy 19 §4.2
+    ficheiro: 020-assets/policies/19_policy-estrategia-testes.md
+    ancora: 42-triagem-formal
+    citacao:
+      pt: Cada finding bloqueante deve ser triado com decisão documentada
+      en: Each blocking finding must be triaged with a documented decision
+  falta:
+    pt: Existe justificação técnica documentada por CVE/finding; não há relatório de análise do impacto na conformidade com o certificado.
+    en: There is documented technical justification per CVE/finding; there is no report analysing the impact on conformity with the certificate.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-35-2
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 2
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §5.1
+      en: Policy 12 §5.1
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 51-etapas-obrigatórias
+    citacao:
+      pt: Análise de impacto e exploitabilidade | Developer + AppSec Engineer | Justificação técnica documentada
+      en: Impact and exploitability analysis | Developer + AppSec Engineer | Documented technical justification
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §4
+      en: Policy 12 §4
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 4-tipos-de-exceção
+    citacao:
+      pt: CVE exploitável mas risco mitigado por controlo compensatório
+      en: Exploitable CVE but risk mitigated by a compensating control
+  - tipo: pagina
+    rotulo:
+      pt: Integração na priorização de remediação
+      en: Integration into remediation prioritisation
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/12-epss-kev-priorizacao.md
+    ancora: integração-na-priorização-de-remediação
+    citacao:
+      pt: 'A ordem de remediação resulta da composição de três sinais: severidade (CVSS), probabilidade (EPSS) e exploração confirmada (KEV)'
+      en: 'The order of remediation results from the composition of three signals: severity (CVSS), probability (EPSS) and confirmed exploitation (KEV)'
+  falta:
+    pt: Impacto, exploitabilidade e mitigação são avaliados; faltam proximidade/exequibilidade do ataque em termos CC e a conclusão sobre corrigibilidade face ao certificado.
+    en: Impact, exploitability and mitigation are assessed; proximity/feasibility of the attack in CC terms and the conclusion on remediability with respect to the certificate are missing.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-35-3
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 3
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 36 §4.2
+      en: Policy 36 §4.2
+    ficheiro: 020-assets/policies/36_policy-pentesting.md
+    ancora: 42-regras-de-engajamento
+    citacao:
+      pt: Os resultados são confidenciais; o relatório só pode ser partilhado com destinatários autorizados
+      en: The results are confidential; the report may only be shared with authorised recipients
+  falta:
+    pt: A confidencialidade é prescrita para relatórios de pentest (incluindo PoC); não para meios de exploração em relatórios de vulnerabilidade em geral nem com distribuição limitada.
+    en: Confidentiality is prescribed for pentest reports (including PoC); not for means of exploitation in vulnerability reports in general nor with limited distribution.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-35-4
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 4
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Relacionado com CSA-56-8 (lacuna).
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Related to CSA-56-8 (gap).
+- id: CSA-EUCC-35-6
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 6
+  classe: juridico-contratual
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Disposição sobre a arquitetura do sistema de certificação (autoavaliação, níveis, retirada); não cria dever de engenharia.
+    en: Provision on the architecture of the certification scheme (self-assessment, levels, withdrawal); does not create an engineering duty.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-35-7
+  acto_fonte: 32024R0482
+  referencia: Art. 35.º, n.º 7
+  classe: engenharia
+  forca: cobre
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §6.2
+      en: Policy 12 §6.2
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 62-reavaliação
+    citacao:
+      pt: 'a situação agravou (ex: exploit público publicado); a exceção é reclassificada'
+      en: the situation has worsened (e.g. a public exploit has been published); the exception is reclassified
+  - tipo: politica
+    rotulo:
+      pt: Política 12 §6
+      en: Policy 12 §6
+    ficheiro: 020-assets/policies/12_policy-excecoes-cve.md
+    ancora: 6-prazos-máximos-e-reavaliação
+    citacao:
+      pt: Cada CVE que afete um componente implantado é triado (afetado / não afetado / decisão)
+      en: Every CVE affecting a deployed component is triaged (affected / not affected / decision)
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Exceções (incluindo «Not affected») são reavaliadas antes da expiração e sempre que surge nova informação (exploit público) — é o controlo das vulnerabilidades residuais.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Exceptions (including “Not affected”) are reassessed before expiry and whenever new information emerges (public exploit) — this is the control of residual vulnerabilities.
+- id: CSA-EUCC-36
+  acto_fonte: 32024R0482
+  referencia: Art. 36.º
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: TST-003
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: SLA de correcção definido por severidade
+      en: Remediation SLA defined by severity
+  - tipo: requisito
+    alvo: DEP-010
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: Evidência rastreável desde o componente identificado no SBOM até à CVE associada e à acção tomada
+      en: Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken
+  - tipo: requisito
+    alvo: TST-006
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Cada vulnerabilidade corrigida origina um teste de regressão
+      en: Each fixed vulnerability gives rise to a regression test
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. O plano de correção, a rastreabilidade e os testes de regressão sustentam a proposta de medidas corretivas; a apresentação ao organismo é plano da certificação.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. The remediation plan, traceability and regression tests underpin the proposal of corrective measures; submission to the body is certification plane.
+- id: CSA-EUCC-39
+  acto_fonte: 32024R0482
+  referencia: Art. 39.º
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta:
+  - tipo: us
+    alvo: 11-deploy-seguro-us-09
+    rotulo:
+      pt: Cap. 11 US-09
+      en: Ch. 11 US-09
+    ficheiro: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
+    ancora: us-09---versionamento-semântico-e-changelog-técnico
+    citacao:
+      pt: Secção de segurança com CVEs/mitigações e severidade
+      en: Security section with CVEs/mitigations and severity
+  falta:
+    pt: Sem divulgação pública de vulnerabilidades corrigidas nem inscrição na base de dados europeia de vulnerabilidades (art. 12.º NIS2).
+    en: No public disclosure of fixed vulnerabilities nor entry in the European vulnerability database (NIS2 Article 12).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-41-1
+  acto_fonte: 32024R0482
+  referencia: Art. 41.º, n.º 1
+  classe: organizacional
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Depende das informações do art. 55.º, inexistentes (CSA-55-1-a…d).
+    en: Depends on the information of Article 55, which does not exist (CSA-55-1-a…d).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-41-2
+  acto_fonte: 32024R0482
+  referencia: Art. 41.º, n.º 2
+  classe: organizacional
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §6
+      en: Policy 20 §6
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 6-imutabilidade-do-artefacto
+    citacao:
+      pt: O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes
+      en: The artefact promoted to production must be exactly the same one that went through all the tests
+  - tipo: politica
+    rotulo:
+      pt: Política 06 §10
+      en: Policy 06 §10
+    ficheiro: 020-assets/policies/06_policy-rastreabilidade.md
+    ancora: 10-prazos-de-retenção-mínimos
+    citacao:
+      pt: Prevalece o mais exigente de entre a lei da UE, a legislação nacional, as orientações dos supervisores e as expectativas normais do sector
+      en: The most demanding of EU law, national legislation, supervisory guidance and normal sector expectations prevails
+  falta:
+    pt: Artefactos imutáveis e retidos, mas por 1–2 anos (artefactos de build/SBOM); não se prevê conservar um exemplar do produto certificado e os registos da certificação ≥ 5 anos após a retirada.
+    en: Artefacts immutable and retained, but for 1–2 years (build artefacts/SBOM); keeping a sample of the certified product and the certification records ≥ 5 years after withdrawal is not provided for.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-41-3
+  acto_fonte: 32024R0482
+  referencia: Art. 41.º, n.º 3
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: 'Conservação conjunta de documentação de certificados: plano documental da certificação.'
+    en: 'Joint retention of certificate documentation: documentary plane of certification.'
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-41-4
+  acto_fonte: 32024R0482
+  referencia: Art. 41.º, n.º 4
+  classe: organizacional
+  forca: fora_de_ambito
+  contexto: null
+  resposta: []
+  falta: null
+  razao_fora_de_ambito:
+    pt: Relação formal com o organismo de certificação/ITSEF/autoridade nacional (plano da certificação), fora do âmbito de um manual de engenharia; o cross-check ENISA/CSA remete-a para o dossiê de certificação.
+    en: Formal relationship with the certification body/ITSEF/national authority (certification plane), outside the scope of an engineering manual; the ENISA/CSA cross-check refers it to the certification dossier.
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-AnxIV-2-1
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.2, n.º 1
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: politica
+    rotulo:
+      pt: Política 08 §4.2
+      en: Policy 08 §4.2
+    ficheiro: 020-assets/policies/08_policy-threat-modeling.md
+    ancora: 42-cadência-periódica
+    citacao:
+      pt: Anual ou por cada release major
+      en: Annual or with each major release
+  - tipo: requisito
+    alvo: CLA-004
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/01-classificacao-aplicacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-cla---classificação-de-aplicações
+    citacao:
+      pt: exposição a novos contextos regulatórios
+      en: exposure to new regulatory contexts
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: baixa
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade. Revisão periódica e gatilhos de reavaliação detetam alterações do ambiente de ameaças; o pedido de reavaliação é plano da certificação.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity. Periodic review and reassessment triggers detect changes in the threat environment; the request for reassessment is certification plane.
+- id: CSA-EUCC-AnxIV-3-1
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.3, n.º 1
+  classe: engenharia
+  forca: apoia_evidencia
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ARC-009
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: evidência de revisão executada após a última alteração que atingiu esse limiar
+      en: evidence of a review carried out after the last change that reached that threshold
+  - tipo: us
+    alvo: 11-deploy-seguro-us-09
+    rotulo:
+      pt: Cap. 11 US-09
+      en: Ch. 11 US-09
+    ficheiro: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
+    ancora: us-09---versionamento-semântico-e-changelog-técnico
+    citacao:
+      pt: Secção de segurança com CVEs/mitigações e severidade
+      en: Security section with CVEs/mitigations and severity
+  falta: null
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-AnxIV-3-2
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.3, n.º 2
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: ARC-004
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: ADR (Architecture Decision Record) ou equivalente para cada decisão estrutural significativa
+      en: ADR (Architecture Decision Record) or equivalent for each significant structural decision
+  - tipo: requisito
+    alvo: ARC-009
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/04-arquitetura-segura/addon/01-catalogo-requisitos.md
+    ancora: catálogo-arc---arquitectura-segura
+    citacao:
+      pt: evidência de revisão executada após a última alteração que atingiu esse limiar
+      en: evidence of a review carried out after the last change that reached that threshold
+  - tipo: us
+    alvo: 11-deploy-seguro-us-09
+    rotulo:
+      pt: Cap. 11 US-09
+      en: Ch. 11 US-09
+    ficheiro: 010-sbd-manual/11-deploy-seguro/aplicacao-lifecycle.md
+    ancora: us-09---versionamento-semântico-e-changelog-técnico
+    citacao:
+      pt: Secção de segurança com CVEs/mitigações e severidade
+      en: Security section with CVEs/mitigations and severity
+  falta:
+    pt: Alterações descritas (ADR, changelog) e revisão por alteração significativa; falta identificar alterações aos elementos de prova do criador e concluir sobre o impacto na garantia.
+    en: Changes described (ADR, changelog) and review upon significant change; identifying changes to the developer's evidence elements and concluding on the impact on assurance are missing.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-AnxIV-4-4
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.4, n.º 4
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DEP-007
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dep---dependências-sbom-e-sca
+    citacao:
+      pt: SLA de actualização definido por nível de severidade de CVE
+      en: Update SLA defined by CVE severity level
+  - tipo: politica
+    rotulo:
+      pt: Política 20 §6
+      en: Policy 20 §6
+    ficheiro: 020-assets/policies/20_policy-release-seguro.md
+    ancora: 6-imutabilidade-do-artefacto
+    citacao:
+      pt: O artefacto promovido a produção deve ser exatamente o mesmo que passou por todos os testes
+      en: The artefact promoted to production must be exactly the same one that went through all the tests
+  - tipo: requisito
+    alvo: DPL-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: artefactos sem proveniência verificável rejeitados automaticamente
+      en: artefacts without verifiable provenance rejected automatically
+  - tipo: requisito
+    alvo: TST-006
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/10-testes-seguranca/addon/00-catalogo-requisitos.md
+    ancora: catálogo-tst---testes-de-segurança
+    citacao:
+      pt: Cada vulnerabilidade corrigida origina um teste de regressão
+      en: Each fixed vulnerability gives rise to a regression test
+  falta:
+    pt: Desenvolvimento e lançamento de correções controlados e testes de regressão; falta o mecanismo técnico de adoção das atualizações no produto e a avaliação da sua eficácia.
+    en: Controlled development and release of fixes and regression tests; the technical mechanism for adopting updates in the product and the assessment of their effectiveness are missing.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: alta
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-AnxIV-4-5
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.4, n.º 5
+  classe: engenharia
+  forca: parcial
+  contexto: null
+  resposta:
+  - tipo: requisito
+    alvo: DPL-002
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
+    ancora: catálogo-dpl---deploy-seguro
+    citacao:
+      pt: artefactos sem proveniência verificável rejeitados automaticamente
+      en: artefacts without verifiable provenance rejected automatically
+  - tipo: requisito
+    alvo: DST-003
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
+    ancora: dst
+    citacao:
+      pt: Artefactos assinados ou validados por hash antes de publicação
+      en: Artefacts signed or validated by hash before publication
+  falta:
+    pt: Integridade e proveniência dos artefactos de atualização verificáveis; sem descrição do procedimento nem separação dos limites do TOE.
+    en: Integrity and provenance of update artefacts verifiable; no description of the procedure nor separation of the TOE boundaries.
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+- id: CSA-EUCC-AnxIV-4-6
+  acto_fonte: 32024R0482
+  referencia: Anexo IV, ponto IV.4, n.º 6
+  classe: engenharia
+  forca: lacuna
+  contexto: null
+  resposta: []
+  falta:
+    pt: Sem rota de atualização corretiva consciente da certificação (classificação fora do TOE / alteração menor / vulnerabilidade crítica e submissão ao ITSEF em 5 dias úteis).
+    en: No certification-aware corrective update route (classification outside the TOE / minor change / critical vulnerability and submission to the ITSEF within 5 working days).
+  razao_fora_de_ambito: null
+  conflito: false
+  explicacao_conflito: null
+  confianca: media
+  aplicavel_desde: 27.2.2025 (art. 50.º)
+  substitui: []
+  nota:
+    pt: Certificação voluntária salvo imposição do direito da União/nacional (CSA art. 56.º, n.º 2); o dever só se constitui para quem requer/detém certificado EUCC ou emite declaração UE de conformidade.
+    en: Certification is voluntary unless required by Union/national law (CSA Article 56(2)); the duty arises only for those who apply for/hold an EUCC certificate or issue an EU statement of conformity.
+excluidas:
+- id: CSA-54-1
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-TitII-ENISA
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-47-49
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-56-4-6
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-57
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-58
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-59
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-60-Anexo
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-61
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-62
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-63-64
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-65
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-CB
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-ACRED
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-CTRL
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-VULN
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-REG
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-ENISA
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.
+- id: CSA-EUCC-AUT-PEER
+  razao:
+    pt: Dirigida às autoridades competentes ou de supervisão; não cria dever para a organização.
+    en: Addressed to the competent or supervisory authorities; creates no duty for the organisation.

@@ -559,11 +559,11 @@ O Art. 73 obriga os prestadores a comunicar **incidentes graves** às autoridade
 
 **Lacuna declarada (parcial)**
 
-A definição de incidente grave e os prazos estão na Política 32 (§4.1 e " + "§6), e a matriz dá os n.os 1 a 5 do art. 73.º como cobertos. Os prazos são os do art. 73.º (15 dias / 10 dias / 2 dias, a contar do conhecimento). Falta a regra de não alterar o sistema, de forma que afecte a análise de causas, sem informar previamente a autoridade (art. 73.º, n.º 6): o IRP privilegia a contenção «quando possível».
+A definição de incidente grave e os prazos estão na Política 32 (§4.1 e §6), e a matriz dá os n.os 1 a 5 do art. 73.º como cobertos. Os prazos são os do art. 73.º (15 dias / 10 dias / 2 dias, a contar do conhecimento). Falta a regra de não alterar o sistema, de forma que afecte a análise de causas, sem informar previamente a autoridade (art. 73.º, n.º 6): o IRP privilegia a contenção «quando possível».
 
 **Como cumprir**
 
-Configurar o esquema de incidente do Cap. 12 e os exportadores do SIEM/ITSM para produzir a notificação prevista na " + POL32 + ", e acrescentar ao runbook a informação prévia à autoridade antes de qualquer alteração ao sistema que afecte a análise de causas.
+Configurar o esquema de incidente do Cap. 12 e os exportadores do SIEM/ITSM para produzir a notificação prevista na Política 32 §6, e acrescentar ao runbook a informação prévia à autoridade antes de qualquer alteração ao sistema que afecte a análise de causas.
 
 ---
 

@@ -8,16 +8,16 @@ sidebar_position: 11
 translation:
   source_locale: pt
   source_path: 020-assets/policies/11_policy-sbom.md
-  source_sha256: 5dd7db3992c266bea32a576fb615eb159f1a1d97c17f895c26af9704a65493ab
-  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
-  target_sha256: f6aa08f1fcd5d48da05195c6872194408fa4699aa61fd48e3b313e28d8efe09b
+  source_sha256: 5a87027218468bc91423203403e52b9854753a5e33e3f257a67bda5652bd7253
+  source_commit: cdec9170438c29c7a3bd21b0463b30a06569c461
+  target_sha256: b21a124f50ba4cd51dcc1382ec08ed91ea5d15af6e49789767f3ccda6348fbe2
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [cra_pde, cra_support_period, discipline, eu_market_surveillance_authority, eu_placing_on_market, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
-  glossary_sha256: c0cd3efb7990023eb226d8e79a7b8424f59bff7dfdc0cff2214e8fb1b067f940
-  translated_at: 2026-09-27T07:09:01Z
-  stamped_at: 2026-09-27T07:14:36Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, cra_pde, cra_support_period, discipline, eu_market_surveillance_authority, eu_placing_on_market, framework_source_corpus, layer, mcp, practitioner_manual, provenance, requirement_runtime, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
+  glossary_sha256: 397ec8b9d83c2b41e1051072fcb4652dd075845def344eb9303d068a588f6b38
+  translated_at: 2026-09-27T09:05:44Z
+  stamped_at: 2026-09-27T09:05:44Z
   reviewed_by: null
 ---
 
@@ -191,7 +191,7 @@ When the system includes AI components — models, datasets, MCP servers/tools, 
 
 ### 11.1 Preferred format {#111-formato-preferido}
 
-**CycloneDX 1.6 with the `ml-bom` extension** (published in 2024 by OWASP). Recognised alternatives: SPDX 3.0 AI Profile; the *provider*'s proprietary formats when they can be consumed by the organisation's governance *pipeline*.
+**CycloneDX 1.6 with the `ml-bom` extension** (published in 2024 by OWASP). Recognised alternatives: SPDX 3.0 AI Profile; the AI service vendor's proprietary formats when they can be consumed by the organisation's governance *pipeline*.
 
 ### 11.2 Minimum content {#112-conteúdo-mínimo}
 
@@ -201,7 +201,7 @@ In addition to the fields common to all components:
 - **Datasets**: `dataset_id`, `version`, `source`, `hash`, `curation_process`
 - **MCP servers/tools**: `server_id`, `version`, `scopes`, `source`, `audit_log_sink`
 - **Embedded prompts**: `prompt_id`, `version` (commit SHA), `owner`, type (`system|rag|skill`)
-- **Providers**: list with `name`, `risk_classification`, `contract_ref`, critical clauses
+- **AI service vendors**: list with `name`, `risk_classification`, `contract_ref`, critical clauses
 
 ### 11.3 Applicability {#113-obrigatoriedade}
 
@@ -213,7 +213,7 @@ In addition to the fields common to all components:
 
 ### 11.4 Detailed operation {#114-operação-detalhada}
 
-The complete operation of the AI BOM — generation, *pinning*, list of approved *providers*, response to *upstream* incidents — lives in [Policy 39 — AI BOM and Supply Chain](./policy-ai-bom-supply-chain). This policy remains the reference for the SBOM discipline in general; Policy 39 specialises in the AI slice.
+The complete operation of the AI BOM — generation, *pinning*, list of approved AI service vendors, response to *upstream* incidents — lives in [Policy 39 — AI BOM and Supply Chain](./policy-ai-bom-supply-chain). This policy remains the reference for the SBOM discipline in general; Policy 39 specialises in the AI slice.
 
 > 📌 In short: the SBOM covers what comes from the *package manager*; the AI BOM covers what comes from *model registries*, *dataset hubs* and MCP servers. Equivalent discipline, compatible format, coherent process.
 
@@ -237,7 +237,7 @@ This policy must be **reviewed annually** or after any of the following events:
 | SbD-ToE Ch. 05 - Dependencies, SBOM and SCA | Generation, correlation with SCA, runtime inventory; **DEP-012 AI BOM**; **US-14** |
 | SbD-ToE Ch. 07 - Secure CI/CD | SBOM integration into the build and release pipeline |
 | SbD-ToE Ch. 09 - Containers and Images | SBOM per image layer |
-| Dependency Management Policy (`10_policy-dependencias.md`) | Approval and traceability of components; AI Providers annex |
+| Dependency Management Policy (`10_policy-dependencias.md`) | Approval and traceability of components; AI service vendors annex |
 | AI BOM Policy (`39_policy-ai-bom-supply-chain.md`) | Specific handling of models, datasets, MCP, prompts |
 | Traceability Policy (`06_policy-rastreabilidade.md`) | Archiving and retention of build artefacts |
 | CycloneDX 1.6 `ml-bom` (OWASP, 2024) | Preferred format for AI BOM |

@@ -7,16 +7,16 @@ sidebar_position: 5
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/exemplo-playbook/05-exemplo-agentic-sdlc.md
-  source_sha256: d02c20c772278cfeba31a565d55cac71a335bc6bd899884844edb41ff83dc55c
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: d0f5f447759efe96d747b096f6032c1c207e42ef30a02d75d60213292eb700a6
+  source_sha256: da053b0f3d0ded907433344d7445f952f259282e150de7e8e4b502964e84f811
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 82abcb2a10d3876ed528bc2ff14c206ed9df03937f425b3ecf5998e0599e7cd5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_human_oversight, eu_ai_post_market_monitoring, framework_source_corpus, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, transversal, trilho_formativo, validation_evaluation]
-  glossary_sha256: dd29d428c2371d2b9f6332eb992cfa579f0b0045064ebba773867e00b9f3ab2e
-  translated_at: 2026-09-27T08:34:20Z
-  stamped_at: 2026-09-27T08:34:20Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_human_oversight, eu_ai_post_market_monitoring, eu_startups, framework_source_corpus, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, plain_rag, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, slug_threat_modeling, transversal, trilho_formativo, validation_evaluation]
+  glossary_sha256: e0a1730710a666f995801451af095665f6db4434a9fb97fa3dcf4263d178683f
+  translated_at: 2026-09-27T09:05:39Z
+  stamped_at: 2026-09-27T09:05:39Z
   reviewed_by: null
 ---
 
@@ -132,7 +132,7 @@ Each stop in the flow has **normative substance** in a SbD-ToE chapter and — w
 | **`DEP-011..014`** | [Ch. 05 §DEP-011](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011) | AI inventory + AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + approved *providers* |
 | **User story** | [Ch. 05 US-14](/sbd-toe/sbd-manual/dependencias-sbom-sca/aplicacao-lifecycle#us-14) | Generate an AI BOM per *build*; an approved *provider* is mandatory |
 | **Policy 39** | [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | AI BOM lifecycle; response to *upstream* incidents per class (`AML.T0019/T0109/T0110`) |
-| **Policy 33 §10** (contracting) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Art. 53/55 clauses declared + GDPR Art. 28 |
+| **Policy 33 §10** (contracting) | [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura) | Clauses of Article 53 (and of Article 55, if the model has systemic risk) declared + GDPR Art. 28 |
 
 ---
 

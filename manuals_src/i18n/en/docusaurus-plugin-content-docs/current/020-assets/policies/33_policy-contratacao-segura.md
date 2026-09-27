@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: e3654308a2163ffc8e1a704c26a0cd4ad03f78ad423abe139b66b3ebbad10546
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: 894af758de496685f9f71834ff2bc5c1f3321b5157b2958ad43d65fe8c50e751
+  source_sha256: c8a4b478f9c2536af0ce9f4ed13fc5a335b9d7176ba965101186dfef64c9d3b2
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 523bcb4a0d637d4adda1302f683e6cfa215ec45a099978175a72f2ec4223ac11
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, discipline, eu_ai_deployer, eu_ai_gpai_model, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 9d4c9230e1266fdaa3a04d2b9658ef7a4142d394c4c478658cfbfd3e30bd1884
-  translated_at: 2026-09-27T08:34:26Z
-  stamped_at: 2026-09-27T08:34:26Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, audit_trail, avaliacao, cycle_iteration, discipline, dora_ict_tpp, eu_ai_deployer, eu_ai_gpai_model, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: fea0ad6b475dabee1f63ac359ec777b052598383abcc5ad20898c386125b0da9
+  translated_at: 2026-09-27T09:05:45Z
+  stamped_at: 2026-09-27T09:05:45Z
   reviewed_by: null
 ---
 
@@ -213,15 +213,15 @@ For each supplier and contractor, the organisation must maintain an up-to-date r
 
 ---
 
-## 10. Annex — Specific clauses for AI model providers {#anexo-ai-providers}
+## 10. Annex — Specific clauses for AI service vendors {#anexo-ai-providers}
 
-When the supplier is an **AI model provider** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace or an equivalent *self-hosted* option), the set of contractual clauses provided for in section 4 is extended with six specific clauses. They do not replace any of the preceding ones — they add discipline to the AI slice.
+When the supplier is an **AI service vendor** (Anthropic, OpenAI, Google, Mistral, Cohere, HuggingFace or an equivalent *self-hosted* option), the set of contractual clauses provided for in section 4 is extended with six specific clauses. They do not replace any of the preceding ones — they add discipline to the AI slice.
 
 ### 10.1 *Data retention* and *training opt-out* {#101-data-retention-e-training-opt-out}
 
-- The *provider*'s retention policy made explicit: for how long submitted data is retained; in which systems; with what access controls.
+- The AI service vendor's retention policy made explicit: for how long submitted data is retained; in which systems; with what access controls.
 - *Training opt-out* contractually agreed where applicable — preference for **zero retention** for sensitive data (PII, proprietary code, secrets potentially exposed in prompts).
-- When the *provider* has *training* "opt-out by default", that guarantee is declared in the approval record (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
+- When the AI service vendor has *training* "opt-out by default", that guarantee is declared in the approval record (cross-link [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 ### 10.2 Processing location {#102-localização-de-processamento}
 
@@ -243,19 +243,19 @@ When the supplier is an **AI model provider** (Anthropic, OpenAI, Google, Mistra
 ### 10.5 Availability SLA and *fallback* {#105-sla-de-disponibilidade-e-fallback}
 
 - Declared availability SLA; communication mechanism in the event of an *outage*.
-- The system architecture provides for a *fallback* for when the *provider* is unavailable or returns degraded *outputs* (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
+- The system architecture provides for a *fallback* for when the AI service vendor is unavailable or returns degraded *outputs* (cross-link [`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)/[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)).
 
 ### 10.6 Declared regulatory compliance {#106-conformidade-regulatória-declarada}
 
 - **AI Act Art. 53** (obligations for providers of general-purpose AI models): technical documentation of the model (paragraph 1, point (a)), information and documentation for downstream providers (point (b)), a policy to comply with Union law on copyright (point (c)) and a public summary of the content used for training (point (d)).
 - **AI Act Art. 55** (obligations of providers of general-purpose AI models with systemic risk): model evaluation with documented «adversarial testing» (paragraph 1, point (a)), assessment and mitigation of systemic risks (point (b)), tracking and reporting of serious incidents to the AI Office (point (c)) and cybersecurity protection of the model and its physical infrastructure (point (d)).
 - **GDPR, Art. 28** (processors): contract with the processor (paragraph 3) and prior information on the engagement or replacement of other processors (paragraph 2).
-- **NIS2 Art. 21** and **DORA Art. 28–30**: applicable to any ICT services *provider* to a covered entity; reinforced contractual requirements when the service supports critical or important functions (DORA Article 30(3)).
+- **NIS2 Art. 21** and **DORA Art. 28–30**: applicable to any ICT third-party service provider to a covered entity; reinforced contractual requirements when the service supports critical or important functions (DORA Article 30(3)).
 
 ### 10.7 Operationalisation {#107-operacionalização}
 
-- The provider enters the **approved list [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** only after validation of clauses 10.1 to 10.6 (proportional to the risk level).
-- Critical clauses recorded in the provider record; scheduled review of the AI provider clauses — an object distinct from the general supplier reassessment (section 6) — according to the risk level (L1 annual; L2 half-yearly; L3 quarterly).
+- The AI service vendor enters the **approved list [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)** only after validation of clauses 10.1 to 10.6 (proportional to the risk level).
+- Critical clauses recorded in the AI service vendor record; scheduled review of the AI service vendor clauses — an object distinct from the general supplier reassessment (section 6) — according to the risk level (L1 annual; L2 half-yearly; L3 quarterly).
 - Complete operational detail in [Policy 39 — AI BOM and Supply Chain](./policy-ai-bom-supply-chain) and in Ch. 14 US "AI provider contracting".
 
 | Clause | L1 | L2 | L3 |
@@ -286,8 +286,8 @@ This policy must be **reviewed annually** or after any of the following events:
 | SbD-ToE Ch. 14 - Governance and Contracting | US-02: clauses; US-14: reassessment; US-15: contractor onboarding; US-17: offboarding; **US-21 — AI provider contracting** |
 | Organisational Traceability Policy (`34_policy-rastreabilidade-organizacional.md`) | Record and evidence of compliance |
 | Secrets Management Policy (`18_policy-gestao-segredos.md`) | Contractor credentials and revocation |
-| AI BOM Policy (`39_policy-ai-bom-supply-chain.md`) | Operationalisation of the AI provider lifecycle |
-| AI Agent Mandates Policy (`38_policy-mandates-agentes.md`) | When the provider supplies agents / runtimes |
+| AI BOM Policy (`39_policy-ai-bom-supply-chain.md`) | Operationalisation of the AI service vendor lifecycle |
+| AI Agent Mandates Policy (`38_policy-mandates-agentes.md`) | When the AI service vendor supplies agents / runtimes |
 | ISO/IEC 27001 - A.15 | Supplier relationships |
 | ISO/IEC 27036 | Information security for supplier relationships |
 | ISO/IEC 42001:2023 | AI Management System — relationships with AI suppliers |

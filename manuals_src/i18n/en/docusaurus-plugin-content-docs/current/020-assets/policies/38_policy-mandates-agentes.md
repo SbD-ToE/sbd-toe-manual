@@ -8,16 +8,16 @@ sidebar_position: 38
 translation:
   source_locale: pt
   source_path: 020-assets/policies/38_policy-mandates-agentes.md
-  source_sha256: 9974f1ca0f2e5e47a6de918e4b9cdc5528bc0d3412d84e833634ad4e3ccfde38
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: 8b439e39f94dd133b127699afc0155a194f023193bbd79324570e4f5cd662606
+  source_sha256: 9e71f1c393a5b4a99b945fc1d210e09ef05a0f5dd028f582476913295ca79fbb
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 04214cca965ceef23813273f717ffeabd3409cd67da8cd16b89730f0acacd1c5
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, lifecycle_phase, llm, mcp, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
-  glossary_sha256: d36d9ddddd1d27e837c4e11ee08e63e70748ad0b1b905532ec5681e4546078de
-  translated_at: 2026-09-27T08:34:28Z
-  stamped_at: 2026-09-27T08:34:28Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, avaliacao, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, lifecycle_phase, llm, mcp, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema]
+  glossary_sha256: d97e883ef6d84f02314edd476b91df971c2176fad6b6a558febc4e5234329223
+  translated_at: 2026-09-27T09:05:46Z
+  stamped_at: 2026-09-27T09:05:46Z
   reviewed_by: null
 ---
 
@@ -131,7 +131,7 @@ At the declared cadence (`review_cadence`), the *owner* + `appsec` review:
 - [ ] *Intent events* in the window: any *intent-action divergence* observed?
 - [ ] Any *off-policy actions* recorded?
 - [ ] *Kill-switch* exercised at the required cadence (A3 quarterly, A4 monthly)?
-- [ ] Did the model provider keep the pinned version?
+- [ ] Did the model AI service vendor keep the pinned version?
 - [ ] Is the *tools_allowlist* still proportionate to the actual work?
 
 Outcome: renewal (with or without changes), downgrade of level, or revocation.
@@ -144,7 +144,7 @@ Revocation is carried out **immediately** through the *kill-switch* in the follo
 - Successful *prompt injection* resulting in an unauthorised tool call
 - *Credential exposure* of the agent's identity
 - *Kill-switch* failure (even without a material incident — a breach of operational trust)
-- Silent change of provider/model (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
+- Silent change of AI service vendor/model (e.g. *AI supply chain "rug pull"*, `AML.T0109`)
 
 Revocation is not synonymous with definitive termination — re-issue may follow after a *post-mortem* analysis and a new *mandate*.
 

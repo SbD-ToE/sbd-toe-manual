@@ -7,16 +7,16 @@ tags: [ai-act, cra, convergencia, presuncao-conformidade, ciberseguranca]
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/03-convergencia-cra.md
-  source_sha256: 901c09aad2d320e2153f4afd6aad05a4aebf1695326c1f523deb298ad0919143
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: fdb3a4153f978c74547d754e967acad8f6df71de971edba8869a6ea1d080c185
+  source_sha256: 3ee8d4e06f6adce3041c676df9aeed9d11a6d394ca40aea285693b44f7d796fd
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 9f109931a467513d4396995e2af120c9aba87a97adf5b7eca69633251cf2081a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_pde, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_system, eu_ce_marking, eu_notified_body, framework_source_corpus, layer, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, transversal]
-  glossary_sha256: 026890615258206851eb9a4efd1c2cb34995f570449c022032fde0d7d4acd863
-  translated_at: 2026-09-27T08:34:18Z
-  stamped_at: 2026-09-27T08:34:18Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, avaliacao, chapter_role, cra_actively_exploited_vulnerability, cra_pde, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_system, eu_ce_marking, eu_notified_body, framework_source_corpus, layer, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, sbdtoe_sbd, slug_threat_modeling, transversal]
+  glossary_sha256: 6d697c41d8ee4a28ef2fa24211d74ffb5a60f8541b4aac1cac67ebb14f03d3a0
+  translated_at: 2026-09-27T09:05:39Z
+  stamped_at: 2026-09-27T09:05:39Z
   reviewed_by: null
 ---
 
@@ -79,7 +79,7 @@ CRA Art. 12 refers the assessment to the **conformity assessment procedure of Ar
 1. **Single cybersecurity evidence** ([Ch. 03 agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic), [Ch. 04 `ARC-014`/`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites), [Ch. 12 + `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)) — serves Article 15 of the AI Act and Annex I (Parts I and II) of the CRA at the same time.
 2. **Single vulnerability handling process** ([Ch. 05 `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Policy 39 §7](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) in accordance with Annex I (Part II) of the CRA — it also serves as evidence for the cybersecurity strand of Art. 15 (the accuracy and robustness of Art. 15 fall outside the presumption of Article 12 of the CRA and must be demonstrated separately), including the response to *upstream* incidents in the AI supply chain (`AML.T0019`, `AML.T0109`, `AML.T0110`).
 3. **SBOM + single AI BOM** ([Ch. 05 `DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) in CycloneDX 1.6 *ml-bom* format, [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)) feeding both regulations — it satisfies CRA Annex I Part II(1) (SBOM) and serves as evidence for AI Act Article 10(2), point (b) (origin of data) and for Article 11/Annex IV (description of third-party components and tools).
-4. **EU declaration of conformity** demonstrating the level of cybersecurity of Art. 15, invoking the presumption of Article 12 of the CRA. Contractual clauses with AI *providers* (Ch. 14 US-21 + Policy 33 §10) declare conformity with Art. 53/55 when GPAI.
+4. **EU declaration of conformity** demonstrating the level of cybersecurity of Art. 15, invoking the presumption of Article 12 of the CRA. Contractual clauses with AI service vendors (Ch. 14 US-21 + Policy 33 §10) declare conformity with Art. 53/55 when GPAI.
 5. **Single conformity assessment** under the relevant procedure of Art. 43 of the AI Act (with a notified body where that procedure provides for one), extended to Annex I of the CRA (CRA, Article 12(2)).
 6. **Regulatory origin matrix** — in the catalogue of [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), column `Fonte` with enum `AI Act`, `CRA`, `Ambos`, `Outras`.
 7. ⚡ **Cross-cutting agentic layer** — [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (agent as *principal*), `REQ-AGN-001..004` (mandate, *kill-switch*, *intent*), `OPS-012..014` (audit per *tool*, *budget*, *jailbreak detection*) and Policy 38 (*mandates lifecycle*) provide technical controls relevant to Art. 14, Art. 15 and Art. 26 of the AI Act and to Annex I (Parts I and II) of the CRA (*cybersec by design*). These controls are **technical evidence, not a declaration of conformity**: the **CRA (Art. 12) establishes** a presumption of conformity **only with Art. 15** of the AI Act (cybersecurity) when Annex I is complied with and demonstrated in the EU declaration of conformity. Art. 14 (human oversight) and Art. 26 (deployers) are **not** covered by that presumption — they remain obligations in their own right.

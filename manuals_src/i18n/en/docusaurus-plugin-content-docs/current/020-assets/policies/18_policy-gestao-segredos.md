@@ -8,16 +8,16 @@ sidebar_position: 18
 translation:
   source_locale: pt
   source_path: 020-assets/policies/18_policy-gestao-segredos.md
-  source_sha256: 100844ccb37cda055c1b64c8873c9b25d77cb94e40bdb6101738037a652b6c36
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: 6db90ea0825f8abea16afe8e818b4844490ce5fb4879ad2541b3a7848cf4994d
+  source_sha256: ee58aedf69cf9c41c6b734af7e3191e23e67ff1633297f6fe4368d447e4a2137
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: a5edd153d9e01f44a00601c920cf1c45f891977910fb4df0761447a1e17ae1db
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
-  glossary_sha256: 9c57e5e3cb95b4877fd10c41f44e8fe27f499f0c9e1b096402883bbd5fbef5fd
-  translated_at: 2026-09-27T08:34:25Z
-  stamped_at: 2026-09-27T08:34:25Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, audit_trail, chapter_role, cycle_iteration, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_system, framework_source_corpus, gdpr_pseudonymisation, lifecycle_phase, practitioner_manual, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: ff6a8b36e98572de567a5d95a91ea4225ab8b824b39944a85d6516d855373837
+  translated_at: 2026-09-27T09:05:45Z
+  stamped_at: 2026-09-27T09:05:45Z
   reviewed_by: null
 ---
 
@@ -213,7 +213,7 @@ The exercise measures the total time between triggering and effective revocation
 
 ## 10. PII and sensitive data in *prompts* (cross-link GDPR) {#10-pii-e-dados-sensíveis-em-prompts-cross-link-rgpd}
 
-The previous chapters cover classic secrets — *tokens*, keys, credentials. When an AI agent receives user input (chat, *document upload*, *form*), **personal data** enter the *prompt* and, by extension, may travel all the way to the model *provider*. The category of the problem is similar — sensitive information flowing through an uncontrolled channel — but the applicable legal regime is the **GDPR**, not this policy. This section explicitly links the two so that operational coherence is not lost at the boundary.
+The previous chapters cover classic secrets — *tokens*, keys, credentials. When an AI agent receives user input (chat, *document upload*, *form*), **personal data** enter the *prompt* and, by extension, may travel all the way to the model AI service vendor. The category of the problem is similar — sensitive information flowing through an uncontrolled channel — but the applicable legal regime is the **GDPR**, not this policy. This section explicitly links the two so that operational coherence is not lost at the boundary.
 
 ### 10.1 Minimisation principle {#101-princípio-de-minimização}
 
@@ -227,15 +227,15 @@ Each operational use in which the agent sees PII has a **declared GDPR legal bas
 
 ### 10.3 Processors {#103-sub-processadores}
 
-The model *provider* is a **processor** when it processes personal data on behalf of the organisation (GDPR, Art. 28); if the organisation is itself a processor, the *provider* is «another processor» (Art. 28(2) and (4)). The contractual clause set out in [Policy 33 §10](./policy-contratacao-segura) applies:
+The model AI service vendor is a **processor** when it processes personal data on behalf of the organisation (GDPR, Art. 28); if the organisation is itself a processor, the AI service vendor is «another processor» (Art. 28(2) and (4)). The contractual clause set out in [Policy 33 §10](./policy-contratacao-segura) applies:
 
 - Contract with the processor (GDPR, Article 28(3)) with explicit clauses (retention, *training opt-out*, audit rights).
-- Processing location documented; *Standard Contractual Clauses* (SCCs) or another valid mechanism for international transfers (GDPR Arts. 44–49) when the *provider* processes outside the EEA.
-- **No PII to *providers* outside the approved list** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
+- Processing location documented; *Standard Contractual Clauses* (SCCs) or another valid mechanism for international transfers (GDPR Arts. 44–49) when the AI service vendor processes outside the EEA.
+- **No PII to AI service vendors outside the approved list** ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)).
 
 ### 10.4 Mandatory *training opt-out* for PII {#104-training-opt-out-obrigatório-para-pii}
 
-When the content of the *prompt* includes personal data, the *provider* is contractually required **not to use that content for future training of the model**. **Zero retention** is preferred for PII; where the *provider* keeps operational logs, retention is minimised and its purpose declared.
+When the content of the *prompt* includes personal data, the AI service vendor is contractually required **not to use that content for future training of the model**. **Zero retention** is preferred for PII; where the AI service vendor keeps operational logs, retention is minimised and its purpose declared.
 
 ### 10.5 Telemetry under the control of the deployer {#105-telemetria-sob-controlo-do-deployer}
 
@@ -246,7 +246,7 @@ Inference logs under the organisation's control (AI Act, Article 19(1), for the 
 When the user's interaction with the agent generates personal data, the GDPR rights apply (access Art. 15, rectification Art. 16, erasure Art. 17, objection Art. 21). In particular:
 
 - **Erasure of the *audit events*** under the *deployer*'s control when the data subject exercises the right to be forgotten (subject to competing legal retention obligations).
-- **Non-retention by the *provider*** — verified contractually. Where retention by the *provider* exists, the data subject must be able to exercise the right there too.
+- **Non-retention by the AI service vendor** — verified contractually. Where retention by the AI service vendor exists, the data subject must be able to exercise the right there too.
 
 ### 10.7 Proportionality {#107-proporcionalidade}
 
@@ -262,9 +262,9 @@ When the user's interaction with the agent generates personal data, the GDPR rig
 
 ### 10.8 Anti-patterns {#108-anti-padrões}
 
-- ❌ Sending PII to a *provider* outside the approved list — *shadow AI* with GDPR risk.
+- ❌ Sending PII to an AI service vendor outside the approved list — *shadow AI* with GDPR risk.
 - ❌ Logging *prompts* with PII without redaction in [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) — the `audit trail` itself becomes a repository of personal data with no specific legal basis.
-- ❌ Trusting that the *provider* "does not use it for training" without a contractual clause — operational statements do not replace Art. 28.
+- ❌ Trusting that the AI service vendor "does not use it for training" without a contractual clause — operational statements do not replace Art. 28.
 - ❌ Ignoring special categories (Art. 9 GDPR) in the prompt — health, biometric data for the purpose of uniquely identifying a natural person, racial or ethnic origin, etc. — or children's data (Art. 8), which require reinforced conditions that many chatbot use cases do not meet.
 - ❌ Treating redaction as sufficient obfuscation — *pseudonymisation* (GDPR) is not anonymisation; pseudonymised PII remains personal data.
 

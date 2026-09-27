@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
-  source_sha256: cd856ae9e225f28b75e7adacf277282bd763e2883db562205b6574c5b841e82f
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 4d54137564ec560f80b26fa916020d04d29fcc0256efe646858103b6830de940
+  source_sha256: 2f498c1719b6af76665e40b150c5a4e9d516f9c85af44a146e4d5240a6bebd5b
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 04d8fea09cf27a59af13e6bc5018d535a4d50f0c491abdeeb675e8a2830f0499
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, mcp, plain_rag, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: e7ba97c1aa6ad5aceda3c6fc13a15a3a4be183c2b0fc6b9a8929cf71d8b88c14
-  translated_at: 2026-09-27T07:53:40Z
-  stamped_at: 2026-09-27T07:53:40Z
+  translated_at: 2026-09-27T09:05:40Z
+  stamped_at: 2026-09-27T09:05:40Z
   reviewed_by: null
 ---
 
@@ -69,7 +69,7 @@ Requirements that guarantee that all third-party dependencies are known, analyse
 | DEP-011 | Inventory and provenance of AI/ML dependencies | - | ✔ | ✔ | Systems with AI/ML components have a dedicated inventory of AI dependencies: (1) base models with version, artefact hash and source (model registry, fine-tuning provenance); (2) training and fine-tuning datasets with version, source and curation process; (3) MCP servers and tools exposed to agents with identifier, version and scope (`AML.T0110` AI Agent Tool Poisoning); (4) embedded prompts relevant to behaviour (system prompts, RAG templates) with version and owner. The inventory is generated per build and integrated into the main SBOM (DEP-001); upstream incidents in models, datasets or MCP servers (LLM03-2025 Supply Chain, `AML.T0010` AI Supply Chain Compromise) trigger the same triage process as DEP-002/DEP-007. |
 | DEP-012 | AI BOM generated per *build* in a standardised format | - | ✔ | ✔ | The AI/ML inventory (DEP-011) is materialised as an **AI BOM** in a standardised format per *build* — CycloneDX 1.6 with the `ml-bom` extension (published in 2024) is preferred, or a recognised equivalent (`ML-BOM`, `AIBOM`). The AI BOM is a *build* artefact (not a separate analysis), versioned, and linked to the main SBOM. It includes models, datasets, MCP servers/tools and embedded prompts with *pinned* version, hash, *provider* and licence. |
 | DEP-013 | Explicit *pinned* version for AI models and providers | - | ✔ | ✔ | AI models used in production or in a pipeline have an **explicit fixed version** — e.g. `claude-opus-4-7@sha:…` instead of `claude-latest`. Semver ranges, dynamic *aliases* (`latest`, `stable`) and unversioned references are **prohibited** in any environment that is not exploratory. A major version change by the provider requires a new *eval suite* (Ch. 10 §C5) and a review of the *threat model* (Ch. 03 US-11). Mitigates *AI Supply Chain Rug Pull* (`AML.T0109`). |
-| DEP-014 | List of approved AI *providers* with risk classification | - | ✔ | ✔ | Providers of AI models (Anthropic, OpenAI, HuggingFace, the organisation's own self-hosted providers) used by the organisation are on an **approved list** with a risk classification and applicable contractual clauses (cross-link Ch. 14 — contracting of AI providers). Minimum approval criteria: zero retention for sensitive data where applicable; processing location compliant with GDPR Art. 44–49; contractually agreed audit; SLA for prior notification of version changes; declared compliance with AI Act Art. 53/55 if it supplies GPAI. The list is reviewed periodically according to the level of criticality. |
+| DEP-014 | List of approved AI *providers* with risk classification | - | ✔ | ✔ | Providers of AI models (Anthropic, OpenAI, HuggingFace, the organisation's own self-hosted providers) used by the organisation are on an **approved list** with a risk classification and applicable contractual clauses (cross-link Ch. 14 — contracting of AI providers). Minimum approval criteria: zero retention for sensitive data where applicable; processing location compliant with GDPR Art. 44–49; contractually agreed audit; SLA for prior notification of version changes; declared compliance with AI Act Article 53 (and Article 55, if the model has systemic risk) if it supplies GPAI. The list is reviewed periodically according to the level of criticality. |
 
 ---
 

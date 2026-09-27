@@ -7,16 +7,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/02-playbook.md
-  source_sha256: 2d739d5b031657083f782285e7ad72148e6aa15f2c38ac13b3006dd750bb7904
-  source_commit: 5caf1bb9d128df1f7fb0b1e5b2a5603db3e6127f
-  target_sha256: e3d1bd99ad756d0907a3e3a82f4e1fe378373bfff5d38bb1a3ae83c0f28eadbf
+  source_sha256: 6b2b3b853209ff6129a389ecd93245407c745f2db8e29cd729947a7b2b7802b3
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 3b462ecf7de2e2d89967429cc991fb4f84b31ddd5a965989014fda4dc4bd9250
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_market_surveillance_authority, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 90b2c2790f46bebc3a998e3c9463cf7fc84a6271d33f8bb8dab1b33633726b36
-  translated_at: 2026-09-27T08:34:17Z
-  stamped_at: 2026-09-27T08:34:17Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, avaliacao, chapter_role, cycle_iteration, esquema_regime, eu_ai_deployer, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_widespread_infringement, eu_ce_marking, eu_market_surveillance_authority, eu_startups, framework_source_corpus, layer, lifecycle_phase, llm, mapping, maturity, mcp, mcp_reading_programa, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 4ec93f6428e0a85cc82c5fa75f119e1d938d8a9808ac024c87bc5c0fd87df14b
+  translated_at: 2026-09-27T09:08:12Z
+  stamped_at: 2026-09-27T09:08:12Z
   reviewed_by: null
 ---
 
@@ -62,14 +62,14 @@ Before any technical action, the legal framing must be established - **complianc
 |---|---|---|---|
 | **4** | AI literacy (measures to support its development — wording of Regulation (EU) 2026/1744) | [Ch. 13](/sbd-toe/sbd-manual/formacao-onboarding/intro) + [Policy 37 §11](/sbd-toe/assets/policies/policy-formacao-seguranca) | Training track per *role*; mandatory with A1+ agents (the Manual's choice) |
 | **9** | Risk management | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 02 §A0–A4](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia), [Ch. 03 agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) | Classify L1–L3 + level A0–A4; threat model with ATLAS |
-| **10** | Data and data governance | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) (`DEP-011..014`) + [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + approved *providers* |
+| **10** | Data and data governance | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro) (`DEP-011..014`) + [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain) | AI BOM (CycloneDX 1.6 *ml-bom*) + *pinning* + approved AI service vendors |
 | **11 / Annex IV** | Technical documentation | [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 04](/sbd-toe/sbd-manual/arquitetura-segura/intro), [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) (mandate) | Annex IV index + *model card* + mandate + AI BOM |
 | **12 / 19** | Logging and retention | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) + `OPS-011..014` + Ch. 12 US-13 | Inference logs + audit per *tool invocation* |
 | **13** | Transparency and provision of information to deployers | Ch. 04 + [Policy 38](/sbd-toe/assets/policies/policy-mandates-agentes) (mandate) | *Mandate* as the source of capabilities/limitations/oversight |
 | **14** ⚡ | Human oversight | [Ch. 02 §A0–A4](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos#niveis-autonomia) + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) + Policy 38 | Autonomy level model + *kill-switch* + *intent declaration* + OOB approval |
 | **15** | Accuracy, robustness and cybersecurity | [Ch. 03 playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic), `ARC-014/015`, [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) (*eval suites*), [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak*) | Continuous *eval suites* + threat library + *off-policy detection* |
 | **17** | QMS | [Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), Ch. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Map gates + formal cycles to Art. 17 |
-| **25** | Responsibilities along the AI value chain | `DEP-013/014` + Policy 39 + Ch. 14 US-21 | *Pinning* + approved *providers* + clauses |
+| **25** | Responsibilities along the AI value chain | `DEP-013/014` + Policy 39 + Ch. 14 US-21 | *Pinning* + approved AI service vendors + clauses |
 | **26** | Obligations of deployers | Policy 38 (mandate) + Ch. 00 (composite function) + Ch. 12 US-13 | *Deployer* mandate + qualified oversight + logs under control |
 | **53 / 55** | GPAI | [Ch. 03 playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) + Ch. 05 (`DEP-011..014`) + [Ch. 10 §C5](/sbd-toe/sbd-manual/testes-seguranca/addon/ia-nos-testes#c5-eval-suites) + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) + Ch. 14 US-21 | AI red teaming via *eval suites* + protection of weights + Art. 53/55 clauses |
 | **72** | Post-market monitoring | Ch. 12 + `OPS-011..014` + Ch. 12 US-13 | Agentic telemetry + *drift detection* + improvement cycle |
@@ -106,7 +106,7 @@ Before any technical action, the legal framing must be established - **complianc
    - Reference: [Ch. 01 - Application Classification](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro)
 
 2. **Classify criticality (L1–L3) and align with the AI Act category**
-   - High-risk AI system (Annex III) → typically L3
+   - High-risk AI system (Annex III) → typically L3 (note: L3 is the Manual's risk classification; it is not equivalent to a high-risk AI system within the meaning of the AI Act (Article 6).)
    - Document that proportionality follows the AI Act category
 
 3. **Threat model extended to the adversarial vector**
@@ -186,7 +186,7 @@ Before any technical action, the legal framing must be established - **complianc
 **AI Act Art. 53, 55**
 
 #### 7.1 Model protection (Art. 55 — cybersecurity) {#71-proteção-do-modelo-art-55--cibersegurança}
-- **What:** Treat weights, *checkpoints*, *datasets*, MCP *tools* and embedded prompts as critical *supply chain* assets: provenance, integrity, *pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)), approved *providers* ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)), AI BOM per *release* ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012)), access control.
+- **What:** Treat weights, *checkpoints*, *datasets*, MCP *tools* and embedded prompts as critical *supply chain* assets: provenance, integrity, *pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)), approved AI service vendors ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)), AI BOM per *release* ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012)), access control.
 - **Reference:** [Ch. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011), [Ch. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), [Policy 39](/sbd-toe/assets/policies/policy-ai-bom-supply-chain)
 
 #### 7.2 Continuous AI red teaming (Art. 55) {#72-ai-red-teaming-contínuo-art-55}
@@ -196,12 +196,12 @@ Before any technical action, the legal framing must be established - **complianc
 #### 7.3 Hardening of physical and logical infrastructure (Art. 55) {#73-hardening-de-infraestrutura-física-e-lógica-art-55}
 - **Reference:** [Ch. 08 — IaC](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Ch. 09 — Containers/Runtime](/sbd-toe/sbd-manual/containers-imagens/intro), [Ch. 04 `ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)
 
-#### 7.4 Declared contractual compliance (Art. 53/55 *providers*) {#74-conformidade-contratual-declarada-art-5355-providers}
-- **What:** When GPAI is consumed from a *provider*, the contract declares compliance with Art. 53 (technical documentation, *summary of training data*, *copyright* policy) and — where applicable — Art. 55 (model evaluation with documented adversarial testing, assessment and mitigation of systemic risks, reporting of serious incidents to the AI Office, cybersecurity of the model and of the physical infrastructure).
+#### 7.4 Declared contractual compliance (Article 53 and, where there is systemic risk, Article 55 — AI service vendors) {#74-conformidade-contratual-declarada-art-5355-providers}
+- **What:** When GPAI is consumed from an AI service vendor, the contract declares compliance with Art. 53 (technical documentation, *summary of training data*, *copyright* policy) and — where applicable — Art. 55 (model evaluation with documented adversarial testing, assessment and mitigation of systemic risks, reporting of serious incidents to the AI Office, cybersecurity of the model and of the physical infrastructure).
 - **Reference:** [Ch. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle), [Policy 33 §10](/sbd-toe/assets/policies/policy-contratacao-segura)
 
 #### 7.5 GPAI documentation, copyright and data summary (delegated) {#75-documentação-gpai-copyright-e-resumo-de-dados-delegado}
-- **Outside the AppSec scope** — domain and legal obligations (Art. 53). Applies when the organisation is a GPAI *provider*.
+- **Outside the AppSec scope** — domain and legal obligations (Art. 53). Applies when the organisation is a provider of general-purpose AI models.
 
 ---
 
@@ -215,15 +215,15 @@ The list below makes it possible to validate the **technical alignment** of the 
 - [ ] **Classification:** AI systems inventoried and classified (L1–L3); levels A0–A4 declared in the *mandates*
 - [ ] **Risk management (Art. 9):** Threat model with the [agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic) carried out; MITRE ATLAS + OWASP LLM Top 10 threat library already included
 - [ ] **Oversight (Art. 14):** `REQ-AGN-001..004` operational; [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) validated; *kill-switch* exercised with recorded cadence
-- [ ] **Data (Art. 10):** AI BOM CycloneDX 1.6 *ml-bom* generated per *build* ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012)); approved *providers* ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); AI *data governance* under way
+- [ ] **Data (Art. 10):** AI BOM CycloneDX 1.6 *ml-bom* generated per *build* ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012)); approved AI service vendors ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); AI *data governance* under way
 - [ ] **Documentation (Art. 11/Annex IV):** Annex IV index + *model card* + *mandate* + AI BOM
 - [ ] **Robustness (Art. 15):** Continuous *eval suites* operational (Ch. 10 §C5); *off-policy* / *jailbreak detection* ([`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014))
-- [ ] **Supply chain (Art. 25):** *Pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)); list of approved *providers* ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); contractual clauses (Ch. 14 US-21)
+- [ ] **Supply chain (Art. 25):** *Pinning* ([`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013)); list of approved AI service vendors ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)); contractual clauses (Ch. 14 US-21)
 - [ ] **Deployer (Art. 26):** Deployer *mandate* documented when the organisation uses the AI system under its own authority (Article 3, point (4)) without being its provider
 - [ ] **Logging (Art. 12/19):** Inference logs + audit per *tool invocation* ([`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012)) with retention and immutability
 - [ ] **Monitoring (Art. 72):** Agentic telemetry + *dashboards* for *drift*, *budget*, *off-policy*
 - [ ] **Incidents (Art. 73):** Parameterised *runbook* + agentic classes (Policy 16 §11.4) + *upstream* IR (Policy 39 §7)
-- [ ] **GPAI (Art. 53/55, if applicable):** AI BOM + *eval suites* + *kill-switch* exercised monthly + declared clauses
+- [ ] **GPAI (Article 53; Article 55 if the model has systemic risk):** AI BOM + *eval suites* + *kill-switch* exercised monthly + declared clauses
 - [ ] **Evidence:** *Data room* with technical documentation, *mandates*, AI BOMs, eval reports, audit trails, telemetry
 
 ---
@@ -239,7 +239,7 @@ The list below makes it possible to validate the **technical alignment** of the 
 | **[Ch. 02 §A0–A4 + `REQ-AGN`](/sbd-toe/sbd-manual/requisitos-seguranca/addon/governanca-automatismos)** | Art. 9, 14 | Autonomy level model A0–A4 + mandate + *intent declaration* |
 | **[Ch. 03 agentic playbook](/sbd-toe/sbd-manual/threat-modeling/addon/metodologias-e-ferramentas#playbook-agentic)** | Art. 9, 15 | Threat modelling with MITRE ATLAS + OWASP LLM Top 10 2025 |
 | **[Ch. 04 — `ARC-014`/`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)** | Art. 14, 15 | Defensive architecture + agent as an isolated *principal* + *kill-switch* |
-| **[Ch. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011)** | Art. 10, 15, 25, 55 | AI BOM + *pinning* + approved *providers* |
+| **[Ch. 05 — `DEP-011..014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-011)** | Art. 10, 15, 25, 55 | AI BOM + *pinning* + approved AI service vendors |
 | **[Ch. 06 — Prompts as code](/sbd-toe/sbd-manual/desenvolvimento-seguro/addon/genia-e-seguranca#prompts-como-codigo)** | Art. 15, 17 | Versioning + review of *system prompts*, *skill files*, *agent files* |
 | **[Ch. 07 US-19](/sbd-toe/sbd-manual/cicd-seguro/aplicacao-lifecycle)** | Art. 15, 17 | Secure pipeline + AI agents as *principals* with OIDC + audit |
 | **[Ch. 09](/sbd-toe/sbd-manual/containers-imagens/intro)** | Art. 15, 55 | Runtime/inference hardening |
@@ -247,7 +247,7 @@ The list below makes it possible to validate the **technical alignment** of the 
 | **[Ch. 11](/sbd-toe/sbd-manual/deploy-seguro/intro)** | Art. 17 | Release gate, pre-production validation |
 | **[Ch. 12 US-13 + `OPS-011..014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/aplicacao-lifecycle)** | Art. 12, 19, 72, 73 | Agentic telemetry + audit per tool + jailbreak detection |
 | **[Ch. 13 (training)](/sbd-toe/sbd-manual/formacao-onboarding/intro)** | Art. 4 | AI literacy per *role* |
-| **[Ch. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle)** | Art. 17, 25, 26, 73 | Governance + contracting of AI *providers* + escalation |
+| **[Ch. 14 US-21](/sbd-toe/sbd-manual/governanca-contratacao/aplicacao-lifecycle)** | Art. 17, 25, 26, 73 | Governance + contracting of AI service vendors + escalation |
 
 ---
 

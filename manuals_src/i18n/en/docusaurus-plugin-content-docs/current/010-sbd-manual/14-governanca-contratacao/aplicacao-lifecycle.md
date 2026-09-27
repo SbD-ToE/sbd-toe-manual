@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/14-governanca-contratacao/aplicacao-lifecycle.md
-  source_sha256: d9fd509841ae4254cb2ea440dff6d3e74eed873e81aa043e1a7b0f888e119c29
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: bd9afc8deb004786943fd0048392e70d56766573ea4f18e937edb7a5043508a9
+  source_sha256: dbf6bc99c49ee9558d2b9d2451e9a786aff3af183f2477333cdc4f05250cfaf0
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 7a5bc76d1139593076c83ab6b109eee495d2f6073e55e69288edb4bc9a5bac63
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 6ad151d9bc2278156099eb5faf6f457f411a758d7babc3b1edfcee003ea5133c
-  translated_at: 2026-09-27T07:54:03Z
-  stamped_at: 2026-09-27T07:54:03Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [alcada, audit_trail, avaliacao, chapter_role, como_fazer, cycle_iteration, eu_startups, lifecycle_phase, maturity, mcp_reading_programa, nis2_significant_incident, papel_suporte, programme_line, provenance, risk_level, role_juridico, role_procurement, role_rh_peopleops, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 17ea8f20dee371f9538e7253b0d310b1692a0e8b2ee9981a9721f918ac97cb29
+  translated_at: 2026-09-27T09:05:41Z
+  stamped_at: 2026-09-27T09:05:41Z
   reviewed_by: null
 ---
 
@@ -929,7 +929,7 @@ As **GRC / Compliance + Procurement** with support from **Legal**, I want each c
 - [ ] **Audit rights**: contracted access to inference logs or equivalent when required (typical at L3)
 - [ ] **Prior notification SLA** for changes that alter behaviour (major model version, data policy, discontinuation)
 - [ ] **Availability SLA** declared; architectural *fallback* in case of *outage* (cross-link Ch. 04 §AI/ML)
-- [ ] **Declared compliance with AI Act Art. 53/55** when the provider supplies GPAI
+- [ ] **Declared compliance with AI Act Article 53 (and Article 55, if the model has systemic risk)** when the provider supplies GPAI
 - [ ] **Declared compliance with GDPR Article 28** (processors) when personal data are involved
 - [ ] Provider included in the approved list ([`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014)) with `risk_classification`
 - [ ] Critical clauses recorded in the provider's record sheet; review scheduled
@@ -947,7 +947,7 @@ As **GRC / Compliance + Procurement** with support from **Legal**, I want each c
 |---|---|---|
 | L1 | Recommended | Minimum clauses: location + zero retention for sensitive data |
 | L2 | Yes | Detailed clauses: retention, opt-out, location, SLA, basic audit rights |
-| L3 | Yes | Detailed clauses + operational audit rights + AI Act Art. 53/55 when GPAI; Legal review mandatory |
+| L3 | Yes | Detailed clauses + operational audit rights + AI Act Article 53 (and Article 55, if the model has systemic risk) when GPAI; Legal review mandatory |
 
 **Integration into the SDLC.**
 | Phase | Trigger | Responsible | SLA |

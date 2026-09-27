@@ -8,16 +8,16 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 020-assets/policies/10_policy-dependencias.md
-  source_sha256: 8831e75c6bb8edd059aecfdcd87e4610f468359507ff842d9313ec756d43f5ae
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: a21aed9f99b729d691b8fa672d89b56ac059a1e4f557db9cd8691a8a2dc9fcb7
+  source_sha256: e50d2f126e7df5c584cd7dca9cf6d94abf2e7a2d9342ed93231c046d5e811bf7
+  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
+  target_sha256: 402c2ee4242135b8ed4fa1f7038e6a85127e86c017dc075a8aee0ea1b7f7dfd1
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 052afe4201bb7845b32e009aa3b254cfdb16b45b4b61f9aab43bcc31b8ab7ef9
-  translated_at: 2026-09-27T07:54:09Z
-  stamped_at: 2026-09-27T07:54:09Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [ai_service_vendor, framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: c4a5dc988eb18558948a8787872ca650b4201a15571961c26cb014e9cbd7dc30
+  translated_at: 2026-09-27T09:08:13Z
+  stamped_at: 2026-09-27T09:08:13Z
   reviewed_by: null
 ---
 
@@ -216,11 +216,11 @@ The audit must cover:
 
 ---
 
-## 12. Annex — AI providers as a supply dependency {#12-anexo--provedores-ai-como-dependência-de-fornecimento}
+## 12. Annex — AI service vendors as a supply dependency {#12-anexo--provedores-ai-como-dependência-de-fornecimento}
 
-AI models consumed via an external *provider* (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) or *self-hosted* (HuggingFace, vLLM, Ollama) are **supply dependencies** with particular characteristics — the version can change behaviour without changing a visible tag, the artefact is opaque, and the typical attack has a name of its own (`AML.T0109` Supply Chain Rug Pull). The following apply here:
+AI models consumed via an external AI service vendor (Anthropic, OpenAI, Google, Mistral, Cohere, etc.) or *self-hosted* (HuggingFace, vLLM, Ollama) are **supply dependencies** with particular characteristics — the version can change behaviour without changing a visible tag, the artefact is opaque, and the typical attack has a name of its own (`AML.T0109` Supply Chain Rug Pull). The following apply here:
 
-- **Approval criteria** (section 3 extended): *data retention*, *training opt-out*, processing location (GDPR Art. 44–49 where applicable), AI Act Art. 53/55 (when GPAI), the SLA for notification of version changes and contractually agreed *audit rights* are additionally assessed.
+- **Approval criteria** (section 3 extended): *data retention*, *training opt-out*, processing location (GDPR Art. 44–49 where applicable), AI Act Article 53 (and Article 55, if the model has systemic risk) when GPAI, the SLA for notification of version changes and contractually agreed *audit rights* are additionally assessed.
 - **Version pinning** (section 4 extended): `latest`/range/dynamic alias is prohibited for AI models; cross-link `DEP-013`.
 - **Extended SCA** (section 7 extended): for AI components an AI BOM (CycloneDX 1.6 `ml-bom`) generated per *build* is used — see [Policy 11 §AI BOM](./policy-sbom) and [Policy 39 — AI BOM and Supply Chain](./policy-ai-bom-supply-chain).
 - **Response to *upstream* incidents**: same triage as in section 8, extended with the classes `AML.T0010` / `AML.T0019` / `AML.T0109` / `AML.T0110` and LLM03-2025.
@@ -258,4 +258,4 @@ This policy must be **reviewed annually** or after any of the following events:
 | NIST AI RMF 1.0 — MAP-4.x (third-party AI) | Risk mapping of third-party AI |
 | SSDF PW.4 | Reuse of existing, well-secured software |
 | SLSA (Supply chain Levels for Software Artifacts) | Supply chain integrity framework |
-| EU AI Act (Reg. (EU) 2024/1689) — Art. 25, 53, 55 | When applicable to AI / GPAI providers |
+| EU AI Act (Reg. (EU) 2024/1689) — Art. 25, 53, 55 | When applicable to AI service vendors / GPAI |

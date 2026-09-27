@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-27T23:11:26Z",
+  "generated_at": "2026-09-27T23:22:14Z",
   "source_locale": "pt",
   "target_locale": "en",
   "terms_sha256": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
@@ -206,12 +206,12 @@
     },
     "002-cross-check-normativo/exemplo-playbook/README.md": {
       "state": "synced",
-      "source_sha256": "c2440286db9403eddff03b9cc17ca605dfdabd8a31d3123691e02a22de44bb5f",
-      "translated_source_sha256": "c2440286db9403eddff03b9cc17ca605dfdabd8a31d3123691e02a22de44bb5f",
-      "target_sha256": "e31f2fc5953f67334df00ed5c35d077b731d5646333f42696fc1bd3b8d992658",
-      "terms_sha256_at_translation": "bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10",
-      "glossary_sha256_at_translation": "9053b641651a969706a59eb8e62170db5c2fc63079d736cd8d2e403901801db5",
-      "translated_at": "2026-09-26T23:27:20Z",
+      "source_sha256": "bf9f51377107ba299ba342e82a713d57c137b45cc6dd6ab33c48c65b3ba5b19c",
+      "translated_source_sha256": "bf9f51377107ba299ba342e82a713d57c137b45cc6dd6ab33c48c65b3ba5b19c",
+      "target_sha256": "b07bf09c48700521468cfc6b3bf7511f2b59f51a2bbf1bfec18dc2d408649fe1",
+      "terms_sha256_at_translation": "153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99",
+      "glossary_sha256_at_translation": "274c8014149e431f890a33a2b4a6fe38b5f53736a81b39e0d79108ddf32a403c",
+      "translated_at": "2026-09-27T23:21:27Z",
       "pending_blocks": 0
     },
     "002-cross-check-normativo/gdpr/01-intro.md": {

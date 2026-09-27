@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/gdpr/90-requisitos-aplicaveis.md
-  source_sha256: 37a96ff4dafad959c773c27f3a52662f1c0bb530476aa80ba24d196b4352d87d
+  source_sha256: bd2fbe7876f40de142d33cb3ad23e94b62b638b6b7c457913fba55c0eb30128c
   source_commit: null
-  target_sha256: 2802b29fbab4323922d1662a513067e692572006d5621f976c7c3a84fa46842d
+  target_sha256: 6bdb16ac4f3f622444340cc048eecf25e4e55381dce43b0f9d60831e036be73c
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -57,6 +57,7 @@ The application processes personal data. The declaration is always explicit (yes
 |---|---|---|---|---|---|---|
 | CTX-RGPD-P01 | [Policy 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização) | — | mandatory | Article 28(3) contract mandatory at any level whenever a processor processes personal data. | Regulation (EU) 2016/679, Article 28(3): “Processing by a processor shall be governed by a contract” (RGPD-28-3) | admitted |
 | CTX-RGPD-P02 | [Policy 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | mandatory | Article 28(3) contract with the processors that receive personal data in prompts, at any level. | Regulation (EU) 2016/679, Article 28(3): “Processing by a processor shall be governed by a contract” (RGPD-28-3) | admitted |
+| CTX-RGPD-P03 | `OPS-016` | — | mandatory | Personal data included in the backups, with tested restore. | Regulation (EU) 2016/679, Article 32(1), point (c): “the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident” (RGPD-32-1-c) | not admitted |
 
 ## How to read the list {#como-se-le}
 
@@ -319,6 +320,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ▲ | ▲ | ▲ | CTX-RGPD-P03 |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -350,8 +353,8 @@ Count of the obligations in the matrix `_matriz/rgpd.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 11 |
-| Partial | 22 |
+| Covers | 12 |
+| Partial | 21 |
 | Supports evidence | 17 |
 | Gap | 15 |
 | Out of scope | 49 |

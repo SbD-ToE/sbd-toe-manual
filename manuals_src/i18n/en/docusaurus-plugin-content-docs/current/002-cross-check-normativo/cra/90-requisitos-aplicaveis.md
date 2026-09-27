@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/cra/90-requisitos-aplicaveis.md
-  source_sha256: 474747f53665dd5da6ed4befef36189a476dc55f58635ce489a6596b1b1bab30
+  source_sha256: 589cc6fae5dc1cf6bc9dc5ce8bfd5a7064207a9fb86f312a7cdd67862aca9309
   source_commit: null
-  target_sha256: 3066ac823bb4cda425e81a032518d3db1e477eaa980b75ccb760ab2b72581fbf
+  target_sha256: da6e0dafda2b5bd7b6a58ce5ea4d9c5aae9b1ca535223cbb1f4bf040124b4b6c
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -332,6 +332,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ✔ | ✔ | ✔ | — |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |

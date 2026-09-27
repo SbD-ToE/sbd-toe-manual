@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/dora/90-requisitos-aplicaveis.md
-  source_sha256: f87b555f1a5426df3c9b987e0ab481dd9b6c2eb395f3d2f112a42f9ee78e2504
+  source_sha256: edbf29593c52d0e37283fa8439a7051a01b577345e4bb59085d660478ecf346b
   source_commit: null
-  target_sha256: 2cedfeb2676f69f6004e9383ffe679fc00b19d05f173b6a28be5c54c06a0475c
+  target_sha256: e95150a115e4fabcfc2433d3329b48dc12e547fdecf126e936d4b7aa3d40777a
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -69,6 +69,16 @@ The organisation is one of the financial entities listed in Article 2(1) of Regu
 | CTX-DORA-P08 | [Policy 10 §9](/sbd-toe/assets/policies/policy-dependencias#9-auditoria-periódica) | FCI | mandatory; frequency of automated vulnerability scanning ≥ weekly (“on at least a weekly basis”) | Automated vulnerability scanning of the ICT assets supporting critical or important functions, not only of dependencies and images. | Delegated Regulation (EU) 2024/1774, Article 10(2), point (b), and second subparagraph: “financial entities shall perform the automated vulnerability scanning and assessments on ICT assets for the ICT assets supporting critical or important functions on at least a weekly basis” (DORA-RTS1774-10-2-b) | not admitted |
 | CTX-DORA-P09 | `OPS-005` | FCI | mandatory | — | Delegated Regulation (EU) 2024/1774, Article 23(2), point (b): “tools generating alerts for anomalous activities and behaviour, at least for ICT assets and information assets supporting critical or important functions” (DORA-RTS1774-23-2-b) | not admitted |
 | CTX-DORA-P10 | `GOV-015` | — | mandatory | Responsible disclosure to clients, counterparties and the public. | Delegated Regulation (EU) 2024/1774, Article 10(2), point (e): “establish procedures for the responsible disclosure of vulnerabilities to clients, counterparties, and to the public” (DORA-RTS1774-10-2-e) | not admitted |
+| CTX-DORA-P11 | `OPS-016` | — | mandatory | Restoration on systems physically and logically segregated from the source system, protected against unauthorised access and corruption; periodic testing of backup and restoration. | Regulation (EU) 2022/2554, Article 12(1) to (3); Delegated Regulation (EU) 2024/1774, Article 8(2), point (b), subal. i), and Article 39(2), point (g): “financial entities shall use ICT systems that are physically and logically segregated from the source ICT system” (DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-8-2-b-i, DORA-RTS1774-39-2-g) | not admitted |
+| CTX-DORA-P12 | `OPS-017` | FCI | mandatory | Also at L1 for applications supporting critical or important functions: recovery levels and timeframes and dependencies on ICT third-party service providers. | Regulation (EU) 2022/2554, Article 12(6); Delegated Regulation (EU) 2024/1774, Article 39(2), point (d): “In determining the recovery time and recovery point objectives for each function” (DORA-12-6, DORA-RTS1774-39-2-d) | not admitted |
+
+## Requirements added by the regime {#acrescentos}
+
+These requirements only make sense under the regime, so they do not live in the Manual's catalogues; they are defined here, each with its legal basis.
+
+| Requirement | Name | Acceptance criterion | Legal basis |
+|---|---|---|---|
+| `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | Redundant ICT capacities, with resources, capabilities and functions adequate to business needs, for the systems the application depends on (microenterprises assess the need based on their risk profile); response and recovery plans tested at least yearly, including, for entities other than microenterprises, cyber-attack scenarios and switchover between the primary ICT infrastructure and the redundant capacity. | Regulation (EU) 2022/2554, Article 12(4), and Article 11(6), point (a): “shall maintain redundant ICT capacities equipped with resources, capabilities and functions that are adequate to ensure business needs” (DORA-12-4, DORA-11-6-a) |
 
 ## How to read the list {#como-se-le}
 
@@ -331,6 +341,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ▲ | ▲ | ▲ | CTX-DORA-P11 |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -355,6 +367,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | ▲ | ▲ | ▲ | — |
 
 ## Requirement list — FCI {#lista-fci}
 
@@ -611,6 +624,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ▲ | ▲ | ▲ | CTX-DORA-P11 |
+| `OPS-017` | Recovery objectives and procedure for the application | ▲ | ▲ | ▲ | CTX-DORA-P12 |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -635,6 +650,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `CTX-DORA-R01` | Redundant ICT capacities and switchover testing | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -642,8 +658,8 @@ Count of the obligations in the matrix `_matriz/dora.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 117 |
-| Partial | 138 |
+| Covers | 127 |
+| Partial | 134 |
 | Supports evidence | 123 |
-| Gap | 14 |
+| Gap | 8 |
 | Out of scope | 234 |

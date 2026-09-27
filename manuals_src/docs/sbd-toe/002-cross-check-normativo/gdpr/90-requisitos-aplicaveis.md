@@ -43,6 +43,7 @@ A aplicação trata dados pessoais. A declaração é sempre explícita (sim ou 
 |---|---|---|---|---|---|---|
 | CTX-RGPD-P01 | [Política 33 §10.7](/sbd-toe/assets/policies/policy-contratacao-segura#107-operacionalização) | — | obrigatório | Contrato do art. 28.º, n.º 3, obrigatório em qualquer nível sempre que um subcontratante trata dados pessoais. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
 | CTX-RGPD-P02 | [Política 18 §10.3](/sbd-toe/assets/policies/policy-gestao-segredos#103-sub-processadores) | — | obrigatório | Contrato do art. 28.º, n.º 3, com os subcontratantes que recebem dados pessoais em prompts, em qualquer nível. | Reg. (UE) 2016/679, art. 28.º, n.º 3: «O tratamento em subcontratação é regulado por contrato» (RGPD-28-3) | admitida |
+| CTX-RGPD-P03 | `OPS-016` | — | obrigatório | Dados pessoais incluídos nas cópias, com restauro testado. | Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c): «A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico» (RGPD-32-1-c) | não admitida |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -305,6 +306,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
 | `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ▲ | ▲ | ▲ | CTX-RGPD-P03 |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | — | ✔ | ✔ | — |
 | `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
@@ -336,8 +339,8 @@ Contagem das obrigações da matriz `_matriz/rgpd.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 11 |
-| Parcial | 22 |
+| Cobre | 12 |
+| Parcial | 21 |
 | Apoia evidência | 17 |
 | Lacuna | 15 |
 | Fora de âmbito | 49 |

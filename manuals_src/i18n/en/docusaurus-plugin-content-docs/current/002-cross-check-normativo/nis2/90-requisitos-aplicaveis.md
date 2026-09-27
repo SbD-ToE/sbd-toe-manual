@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/90-requisitos-aplicaveis.md
-  source_sha256: 92996bcf35caa2ec88bb9065c2c4df074c8c741e964e0237e765543ed1e5df8a
+  source_sha256: b4880adf7477d726884df2536e6202e2611cd0f833e063bef8e8998a0b933b01
   source_commit: null
-  target_sha256: 7314186a2fc39ee984f605f14cf692ba735875027df3fc25f9629339b1d08b29
+  target_sha256: 083f62d3576b28effa24bde45bdd28faa247d6d012362eca306a21b8f9c03b84
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -74,6 +74,16 @@ The entity is essential or important under Article 3 of Directive (EU) 2022/2555
 | CTX-NIS2-P13 | `AUT-001` | PERTINENTE | mandatory | Privileged accounts and system administration accounts. | Implementing Regulation (EU) 2024/2690, Annex, point 11.3.2(a): “establish strong identification, authentication such as multi-factor authentication, and authorisation procedures for privileged accounts and system administration accounts” (NIS2-IR2690-11.3.2) | admitted |
 | CTX-NIS2-P14 | `GOV-015` | — | mandatory | Vulnerability handling and disclosure, including vulnerabilities reported by external sources. | Directive (EU) 2022/2555, Article 21(2), point (e): “including vulnerability handling and disclosure” (NIS2-21-2-e) | not admitted |
 | CTX-NIS2-P15 | `GOV-015` | PERTINENTE | mandatory | The disclosure procedure follows the national coordinated vulnerability disclosure policy. | Implementing Regulation (EU) 2024/2690, Annex, point 6.10.2(e): “lay down a procedure for disclosing vulnerabilities in accordance with the applicable national coordinated vulnerability disclosure policy” (NIS2-IR2690-6.10.2) | not admitted |
+| CTX-NIS2-P16 | `OPS-016` | PERTINENTE | mandatory | Complete and accurate backups, including configuration data and data in cloud environments, stored in a safe location outside the system's network; integrity verified and recovery tested, at any level. | Implementing Regulation (EU) 2024/2690, anexo, pontos 4.2.1 a 4.2.3 e 4.2.6: “the relevant entities shall lay down backup plans” (NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6) | not admitted |
+| CTX-NIS2-P17 | `OPS-017` | PERTINENTE | mandatory | Recovery plan with activation and deactivation conditions and recovery order, also at L1. | Implementing Regulation (EU) 2024/2690, Annex, points 4.1.1 and 4.1.2: “The relevant entities’ operations shall be restored according to the business continuity and disaster recovery plan.” (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | not admitted |
+
+## Requirements added by the regime {#acrescentos}
+
+These requirements only make sense under the regime, so they do not live in the Manual's catalogues; they are defined here, each with its legal basis.
+
+| Requirement | Name | Acceptance criterion | Legal basis |
+|---|---|---|---|
+| `CTX-NIS2-R01` | At least partial redundancy | Based on the risk assessment and the continuity plan, sufficient availability of resources through at least partial redundancy of the network and information systems and of the communication channels the application depends on; resources monitored and adjusted according to the backup and redundancy requirements. | Implementing Regulation (EU) 2024/2690, Annex, points 4.2.4 and 4.2.5: “shall ensure sufficient availability of resources by at least partial redundancy of the following” (NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5) |
 
 ## How to read the list {#como-se-le}
 
@@ -336,6 +346,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ✔ | ✔ | ✔ | — |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -616,6 +628,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ▲ | ▲ | ▲ | CTX-NIS2-P16 |
+| `OPS-017` | Recovery objectives and procedure for the application | ▲ | ▲ | ▲ | CTX-NIS2-P17 |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -640,6 +654,7 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `GOV-013` | Technical onboarding and mandatory pre-access training of third parties | — | ✔ | ✔ | — |
 | `GOV-014` | Periodic review of third-party access (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Coordinated vulnerability disclosure with a published reporting channel | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
+| `CTX-NIS2-R01` | At least partial redundancy | ▲ | ▲ | ▲ | — |
 
 ## Obligations of the regime by coverage strength {#forca}
 
@@ -647,8 +662,8 @@ Count of the obligations in the matrix `_matriz/nis2.yaml` (excluding those addr
 
 | Strength | Obligations |
 |---|--:|
-| Covers | 61 |
-| Partial | 86 |
+| Covers | 68 |
+| Partial | 88 |
 | Supports evidence | 12 |
-| Gap | 23 |
+| Gap | 14 |
 | Out of scope | 38 |

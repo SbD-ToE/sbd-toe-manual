@@ -321,6 +321,30 @@ contextos:
           referencia: "Reg. de Execução (UE) 2024/2690, anexo, ponto 6.10.2, al. e)"
           citacao: {pt: "procedimento para a divulgação de vulnerabilidades em conformidade com a política nacional aplicável em matéria de divulgação coordenada de vulnerabilidades", en: "lay down a procedure for disclosing vulnerabilities in accordance with the applicable national coordinated vulnerability disclosure policy"}
         admite_justificacao: false
+      - id: CTX-NIS2-P16
+        alvo: {tipo: requisito, alvo: OPS-016}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Cópias completas e exactas, incluindo dados de configuração e dados em nuvem, guardadas em local seguro fora da rede do sistema; integridade verificada e recuperação testada, em qualquer nível.", en: "Complete and accurate backups, including configuration data and data in cloud environments, stored in a safe location outside the system's network; integrity verified and recovery tested, at any level."}
+        base:
+          obrigacoes: [NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.1 a 4.2.3 e 4.2.6"
+          citacao: {pt: "as entidades pertinentes estabelecem planos de reserva", en: "the relevant entities shall lay down backup plans"}
+        admite_justificacao: false
+      - id: CTX-NIS2-P17
+        alvo: {tipo: requisito, alvo: OPS-017}
+        grau: PERTINENTE
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Plano de recuperação com condições de activação e desactivação e ordem de recuperação, também em L1.", en: "Recovery plan with activation and deactivation conditions and recovery order, also at L1."}
+        base:
+          obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]
+          referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1.1 e 4.1.2"
+          citacao: {pt: "As operações das entidades pertinentes devem ser restabelecidas de acordo com o plano de continuidade das atividades e de recuperação de desastres.", en: "The relevant entities’ operations shall be restored according to the business continuity and disaster recovery plan."}
+        admite_justificacao: false
 
   - id: CTX-DORA
     nome: {pt: Entidade financeira (DORA), en: Financial entity (DORA)}
@@ -481,6 +505,30 @@ contextos:
           obrigacoes: [DORA-RTS1774-10-2-e]
           referencia: "Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. e)"
           citacao: {pt: "Estabelecer procedimentos para a divulgação responsável das vulnerabilidades aos clientes, às contrapartes e ao público", en: "establish procedures for the responsible disclosure of vulnerabilities to clients, counterparties, and to the public"}
+        admite_justificacao: false
+      - id: CTX-DORA-P11
+        alvo: {tipo: requisito, alvo: OPS-016}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Restauro em sistemas física e logicamente separados do sistema de origem, protegidos contra acesso não autorizado e corrupção; testes periódicos de salvaguarda e de restauração.", en: "Restoration on systems physically and logically segregated from the source system, protected against unauthorised access and corruption; periodic testing of backup and restoration."}
+        base:
+          obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-8-2-b-i, DORA-RTS1774-39-2-g]
+          referencia: "Reg. (UE) 2022/2554, art. 12.º, n.os 1 a 3; Reg. Delegado (UE) 2024/1774, art. 8.º, n.º 2, al. b), subal. i), e art. 39.º, n.º 2, al. g)"
+          citacao: {pt: "utilizam sistemas de TIC que estejam física e logicamente separados do sistema de TIC de origem", en: "financial entities shall use ICT systems that are physically and logically segregated from the source ICT system"}
+        admite_justificacao: false
+      - id: CTX-DORA-P12
+        alvo: {tipo: requisito, alvo: OPS-017}
+        grau: FCI
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Também em L1 para aplicações que suportam funções críticas ou importantes: níveis e prazos de recuperação e dependências de prestadores de serviços de TIC.", en: "Also at L1 for applications supporting critical or important functions: recovery levels and timeframes and dependencies on ICT third-party service providers."}
+        base:
+          obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]
+          referencia: "Reg. (UE) 2022/2554, art. 12.º, n.º 6; Reg. Delegado (UE) 2024/1774, art. 39.º, n.º 2, al. d)"
+          citacao: {pt: "Ao determinar o tempo de recuperação e os objetivos concretos de recuperação para cada função", en: "In determining the recovery time and recovery point objectives for each function"}
         admite_justificacao: false
 
   - id: CTX-CRA
@@ -703,6 +751,18 @@ contextos:
           referencia: "Reg. (UE) 2016/679, art. 28.º, n.º 3"
           citacao: {pt: "O tratamento em subcontratação é regulado por contrato", en: "Processing by a processor shall be governed by a contract"}
         admite_justificacao: true
+      - id: CTX-RGPD-P03
+        alvo: {tipo: requisito, alvo: OPS-016}
+        grau: null
+        niveis: null
+        operador: elevar
+        piso: {obrigatorio: true}
+        ambito: {pt: "Dados pessoais incluídos nas cópias, com restauro testado.", en: "Personal data included in the backups, with tested restore."}
+        base:
+          obrigacoes: [RGPD-32-1-c]
+          referencia: "Reg. (UE) 2016/679, art. 32.º, n.º 1, al. c)"
+          citacao: {pt: "A capacidade de restabelecer a disponibilidade e o acesso aos dados pessoais de forma atempada no caso de um incidente físico ou técnico", en: "the ability to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident"}
+        admite_justificacao: false
 
 # CTX-<regime>-Rnn: requisitos que só fazem sentido sob o regime (destilação §6.7; lista aprovada pelo lead em 2026-09-27).
 # Vivem só aqui, nunca nos catálogos; cada um declara a ligação a controlos.
@@ -763,6 +823,34 @@ acrescentos:
       citacao: {pt: "os fabricantes devem comunicar a vulnerabilidade à pessoa ou entidade responsável pelo fabrico ou pela manutenção do componente", en: "report the vulnerability to the person or entity manufacturing or maintaining the component"}
     controlos: []
     sem_controlo_razao: {pt: "Dever de comunicação na cadeia de fornecimento, sem controlo técnico próprio.", en: "A supply-chain communication duty, with no dedicated technical control."}
+  - id: CTX-DORA-R01
+    contexto: CTX-DORA
+    grau: null
+    niveis: null
+    nome: {pt: "Capacidades de TIC redundantes e teste de comutação", en: "Redundant ICT capacities and switchover testing"}
+    criterio_aceitacao:
+      pt: "Capacidades de TIC redundantes, com recursos, capacidade e funções adequados às necessidades do negócio, para os sistemas de que a aplicação depende (as microempresas avaliam a necessidade pelo perfil de risco); planos de resposta e recuperação testados pelo menos uma vez por ano, incluindo, nas entidades que não sejam microempresas, cenários de ciberataque e de comutação entre a infraestrutura primária e a capacidade redundante."
+      en: "Redundant ICT capacities, with resources, capabilities and functions adequate to business needs, for the systems the application depends on (microenterprises assess the need based on their risk profile); response and recovery plans tested at least yearly, including, for entities other than microenterprises, cyber-attack scenarios and switchover between the primary ICT infrastructure and the redundant capacity."
+    base:
+      obrigacoes: [DORA-12-4, DORA-11-6-a]
+      referencia: "Reg. (UE) 2022/2554, art. 12.º, n.º 4, e art. 11.º, n.º 6, al. a)"
+      citacao: {pt: "mantêm capacidades de TIC redundantes equipadas com recursos, capacidade e funções suficientes", en: "shall maintain redundant ICT capacities equipped with resources, capabilities and functions that are adequate to ensure business needs"}
+    controlos: []
+    sem_controlo_razao: {pt: "Decisão de arquitectura e de capacidade, sem controlo técnico próprio no Manual; o teste apoia-se em OPS-016 e OPS-017.", en: "An architecture and capacity decision, with no dedicated technical control in the Manual; the test relies on OPS-016 and OPS-017."}
+  - id: CTX-NIS2-R01
+    contexto: CTX-NIS2
+    grau: PERTINENTE
+    niveis: null
+    nome: {pt: "Redundância pelo menos parcial", en: "At least partial redundancy"}
+    criterio_aceitacao:
+      pt: "Com base na avaliação de riscos e no plano de continuidade, disponibilidade suficiente de recursos através de redundância, pelo menos parcial, dos sistemas de rede e informação e dos canais de comunicação de que a aplicação depende; recursos acompanhados e ajustados em função dos requisitos de cópias de segurança e de redundância."
+      en: "Based on the risk assessment and the continuity plan, sufficient availability of resources through at least partial redundancy of the network and information systems and of the communication channels the application depends on; resources monitored and adjusted according to the backup and redundancy requirements."
+    base:
+      obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]
+      referencia: "Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.4 e 4.2.5"
+      citacao: {pt: "asseguram a disponibilidade suficiente de recursos através, no mínimo, da redundância parcial dos seguintes elementos", en: "shall ensure sufficient availability of resources by at least partial redundancy of the following"}
+    controlos: []
+    sem_controlo_razao: {pt: "Decisão de arquitectura e de capacidade, sem controlo técnico próprio no Manual.", en: "An architecture and capacity decision, with no dedicated technical control in the Manual."}
 
 # --- GERADO por scripts/gen_reg_views.py — não editar abaixo desta linha ---
 lista_ids:
@@ -880,6 +968,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -1122,6 +1211,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -1396,6 +1487,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -1533,6 +1626,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P16], obrigacoes: [NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -1554,6 +1648,8 @@ lista_ids:
         - {id: DPL-007, origem: elevado, cap: '11', grau: PERTINENTE, pisos: [CTX-NIS2-P10], obrigacoes: [NIS2-IR2690-6.4.2]}
         - {id: OPS-005, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P05], obrigacoes: [NIS2-IR2690-3.2.4]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-NIS2-P02], obrigacoes: [NIS2-21-2-b, NIS2-IR2690-3.1.1]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P17], obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]}
+        - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -1782,6 +1878,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P16], obrigacoes: [NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P17], obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -1804,6 +1902,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
+        - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2056,6 +2155,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P16], obrigacoes: [NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: PERTINENTE, pisos: [CTX-NIS2-P17], obrigacoes: [NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -2080,6 +2181,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', grau: PERTINENTE, pisos: [CTX-NIS2-P14, CTX-NIS2-P15], obrigacoes: [NIS2-21-2-e, NIS2-IR2690-6.10.2]}
+        - {id: CTX-NIS2-R01, origem: acrescentado, grau: PERTINENTE, obrigacoes: [NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5]}
   CTX-DORA:
     base:
       L1:
@@ -2194,6 +2296,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -2212,6 +2315,7 @@ lista_ids:
         - {id: LOG-008, origem: elevado, pisos: [CTX-DORA-P04], obrigacoes: [DORA-RTS1774-12-2-e]}
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-DORA-P02], obrigacoes: [DORA-17-1]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2440,6 +2544,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -2462,6 +2568,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -2714,6 +2821,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -2738,6 +2847,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
     FCI:
       L1:
         - {id: CLA-001, origem: base, cap: '01'}
@@ -2851,6 +2961,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -2870,6 +2981,8 @@ lista_ids:
         - {id: TST-005, origem: elevado, cap: '10', pisos: [CTX-DORA-P03], obrigacoes: [DORA-RTS1774-16-3]}
         - {id: OPS-005, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P09], obrigacoes: [DORA-RTS1774-23-2-b]}
         - {id: OPS-007, origem: elevado, cap: '12', pisos: [CTX-DORA-P02], obrigacoes: [DORA-17-1]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P12], obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L2:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3098,6 +3211,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P12], obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -3120,6 +3235,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
       L3:
         - {id: CLA-001, origem: base, cap: '01'}
         - {id: CLA-002, origem: base, cap: '01'}
@@ -3372,6 +3488,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-DORA-P11], obrigacoes: [DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-39-2-g, DORA-RTS1774-8-2-b-i]}
+        - {id: OPS-017, origem: elevado, cap: '12', grau: FCI, pisos: [CTX-DORA-P12], obrigacoes: [DORA-12-6, DORA-RTS1774-39-2-d]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -3396,6 +3514,7 @@ lista_ids:
         - {id: GOV-013, origem: base, cap: '14'}
         - {id: GOV-014, origem: base, cap: '14'}
         - {id: GOV-015, origem: elevado, cap: '14', pisos: [CTX-DORA-P10], obrigacoes: [DORA-RTS1774-10-2-e]}
+        - {id: CTX-DORA-R01, origem: acrescentado, obrigacoes: [DORA-11-6-a, DORA-12-4]}
   CTX-CRA:
     base:
       L1:
@@ -3510,6 +3629,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -3756,6 +3876,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -4034,6 +4156,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -4176,6 +4300,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -4424,6 +4549,8 @@ lista_ids:
         - {id: OPS-012, origem: elevado, cap: '12', pisos: [CTX-AIA-RE-P02], obrigacoes: [AIA-12-1, AIA-12-2]}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -4698,6 +4825,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -4835,6 +4964,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -5076,6 +5206,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -5350,6 +5482,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: base, cap: '12'}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -5488,6 +5622,7 @@ lista_ids:
         - {id: DPL-006, origem: base, cap: '11'}
         - {id: OPS-001, origem: base, cap: '12'}
         - {id: OPS-002, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-RGPD-P03], obrigacoes: [RGPD-32-1-c]}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -5729,6 +5864,8 @@ lista_ids:
         - {id: OPS-012, origem: base, cap: '12'}
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-RGPD-P03], obrigacoes: [RGPD-32-1-c]}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}
@@ -6003,6 +6140,8 @@ lista_ids:
         - {id: OPS-013, origem: base, cap: '12'}
         - {id: OPS-014, origem: base, cap: '12'}
         - {id: OPS-015, origem: base, cap: '12'}
+        - {id: OPS-016, origem: elevado, cap: '12', pisos: [CTX-RGPD-P03], obrigacoes: [RGPD-32-1-c]}
+        - {id: OPS-017, origem: base, cap: '12'}
         - {id: TRN-001, origem: base, cap: '13'}
         - {id: TRN-002, origem: base, cap: '13'}
         - {id: TRN-003, origem: base, cap: '13'}

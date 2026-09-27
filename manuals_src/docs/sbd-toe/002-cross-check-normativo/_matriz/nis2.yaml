@@ -333,30 +333,28 @@ itens:
   acto_fonte: 32022L2555
   referencia: Art. 21.º, n.º 2, al. c)
   classe: organizacional
-  forca: lacuna
+  forca: parcial
   contexto: null
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 27 §3
-      en: Policy 27 §3
-    ficheiro: 020-assets/policies/27_policy-rollback.md
-    ancora: 3-tipos-de-rollback-e-requisitos-específicos
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: Snapshot/backup pré-deploy disponível | Recomendado | Obrigatório | Obrigatório
-      en: Pre-deploy snapshot/backup available | Recommended | Mandatory | Mandatory
-  - tipo: politica
-    rotulo:
-      pt: Política 18 §4
-      en: Policy 18 §4
-    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
-    ancora: 4-armazenamento-centralizado
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: Cofre com alta disponibilidade e backup | Recomendado | Obrigatório | Obrigatório
-      en: Vault with high availability and backup | Recommended | Mandatory | Mandatory
+      pt: RTO e RPO definidos por aplicação
+      en: RTO and RPO defined per application
   falta:
-    pt: 'O Manual não prescreve cópias de segurança, recuperação de desastres nem continuidade das atividades dos sistemas: existem apenas fragmentos (snapshot pré-deploy em L2/L3, backup do cofre de segredos em L2/L3). O cross-check NIS2 afirma que o Cap. 12 cobre «Backups com testes de restauração», mas nenhum texto prescritivo do Cap. 12 o faz. A gestão de crises institucional está fora de âmbito.'
-    en: 'The Manual does not prescribe backups, disaster recovery or business continuity for the systems: there are only fragments (pre-deploy snapshot at L2/L3, secrets vault backup at L2/L3). The NIS2 cross-check states that Ch. 12 covers “Backups with restore tests”, but no prescriptive text in Ch. 12 does so. Institutional crisis management is out of scope.'
+    pt: A continuidade das actividades e a gestão de crises da entidade ficam fora do âmbito do Manual; a recuperação da aplicação está prescrita (OPS-016, OPS-017).
+    en: The entity's business continuity and crisis management fall outside the scope of the Manual; recovery of the application is prescribed (OPS-016, OPS-017).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3661,20 +3659,30 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: organizacional
-  forca: lacuna
-  contexto: null
+  forca: parcial
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
   - tipo: requisito
-    alvo: DPL-005
-    niveis: [L1, L2, L3]
-    ficheiro: 010-sbd-manual/11-deploy-seguro/addon/00-catalogo-requisitos.md
-    ancora: catálogo-dpl---deploy-seguro
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: Procedimento de rollback definido, documentado e testado periodicamente
-      en: Rollback procedure defined, documented and tested periodically
+      pt: RTO e RPO definidos por aplicação
+      en: RTO and RPO defined per application
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
   falta:
-    pt: Não há plano de continuidade nem de recuperação de desastres dos sistemas; o rollback (DPL-005) é reversão de deploy, não DR. O BCM corporativo está fora de âmbito, mas o DR dos sistemas que o Manual governa não.
-    en: There is no continuity plan or disaster recovery plan for the systems; rollback (DPL-005) is deploy reversal, not DR. Corporate BCM is out of scope, but DR of the systems the Manual governs is not.
+    pt: A continuidade das actividades e a gestão de crises da entidade ficam fora do âmbito do Manual; a recuperação da aplicação está prescrita (OPS-016, OPS-017).
+    en: The entity's business continuity and crisis management fall outside the scope of the Manual; recovery of the application is prescribed (OPS-016, OPS-017).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3688,12 +3696,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: organizacional
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem conteúdo de plano de recuperação (condições de ativação, ordem de recuperação, recursos, RTO/RPO por sistema).
-    en: No recovery plan content (activation conditions, recovery order, resources, RTO/RPO per system).
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
+  resposta:
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3743,12 +3759,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.1.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: organizacional
-  forca: lacuna
+  forca: parcial
   contexto: null
-  resposta: []
+  resposta:
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
   falta:
-    pt: Sem teste do plano de continuidade/DR (os testes de rollback e de IRP não o substituem).
-    en: No testing of the continuity/DR plan (rollback and IRP tests do not replace it).
+    pt: O exercício do procedimento de recuperação só é obrigatório em L3 (OPS-017); a actualização do plano de continuidade da entidade fica fora do âmbito.
+    en: Exercising the recovery procedure is mandatory only at L3 (OPS-017); updating the entity's continuity plan is out of scope.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3762,30 +3786,22 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.1 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 18 §4
-      en: Policy 18 §4
-    ficheiro: 020-assets/policies/18_policy-gestao-segredos.md
-    ancora: 4-armazenamento-centralizado
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: Cofre com alta disponibilidade e backup | Recomendado | Obrigatório | Obrigatório
-      en: Vault with high availability and backup | Recommended | Mandatory | Mandatory
-  - tipo: politica
-    rotulo:
-      pt: Política 27 §3
-      en: Policy 27 §3
-    ficheiro: 020-assets/policies/27_policy-rollback.md
-    ancora: 3-tipos-de-rollback-e-requisitos-específicos
-    citacao:
-      pt: Snapshot/backup pré-deploy disponível | Recomendado | Obrigatório | Obrigatório
-      en: Pre-deploy snapshot/backup available | Recommended | Mandatory | Mandatory
-  falta:
-    pt: Não há requisito geral de cópias de segurança de dados e sistemas nem de redundância; só o cofre de segredos e o snapshot pré-deploy (L2/L3).
-    en: There is no general requirement for backups of data and systems or for redundancy; only the secrets vault and the pre-deploy snapshot (L2/L3).
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: acrescento
+    alvo: CTX-NIS2-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3799,12 +3815,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.2 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem plano de backup (tempos de recuperação, completude, cópias fora da rede e a distância, controlos de acesso, conservação).
-    en: No backup plan (recovery times, completeness, off-network and remote copies, access controls, retention).
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3818,12 +3842,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.3 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem verificação regular da integridade das cópias de segurança.
-    en: No regular verification of the integrity of backups.
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3837,30 +3869,14 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.4 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 31 §7
-      en: Policy 31 §7
-    ficheiro: 020-assets/policies/31_policy-gestao-alertas.md
-    ancora: 7-alertas-p1-em-horas-não-laborais-on-call
-    citacao:
-      pt: Primeiro on-call e segundo on-call (backup) definidos para cada período
-      en: Primary on-call and secondary on-call (backup) defined for each period
-  - tipo: politica
-    rotulo:
-      pt: Política 34 §4.1
-      en: Policy 34 §4.1
-    ficheiro: 020-assets/policies/34_policy-rastreabilidade-organizacional.md
-    ancora: 41-requisitos-de-designação
-    citacao:
-      pt: Para continuidade em ausências prolongadas (L3 obrigatório)
-      en: For continuity during prolonged absences (mandatory for L3)
-  falta:
-    pt: Redundância de pessoal (segundo on-call, substituto do Champion em L3); sem redundância de sistemas, ativos e canais de comunicação.
-    en: Staff redundancy (second on-call, substitute for the Champion at L3); no redundancy of systems, assets and communication channels.
+  - tipo: acrescento
+    alvo: CTX-NIS2-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3874,12 +3890,14 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.5 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: organizacional
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sem acompanhamento e ajustamento de recursos com base nos requisitos de backup e redundância.
-    en: No monitoring and adjustment of resources based on backup and redundancy requirements.
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-NIS2-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3893,21 +3911,20 @@ itens:
   acto_fonte: 32024R2690
   referencia: Reg. Exec. (UE) 2024/2690, anexo, ponto 4.2.6 (artigo 21.o, n.o 2, alínea c), da Diretiva (UE) 2022/2555)
   classe: engenharia
-  forca: lacuna
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-NIS2
+    grau: PERTINENTE
   resposta:
-  - tipo: politica
-    rotulo:
-      pt: Política 27 §7
-      en: Policy 27 §7
-    ficheiro: 020-assets/policies/27_policy-rollback.md
-    ancora: 7-teste-periódico-de-rollback
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
     citacao:
-      pt: A capacidade de rollback deve ser testada periodicamente
-      en: Rollback capability must be tested periodically
-  falta:
-    pt: Sem testes de recuperação de cópias de segurança; os testes periódicos de rollback não cobrem restauro de dados.
-    en: No backup recovery testing; periodic rollback tests do not cover data restoration.
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

@@ -2152,7 +2152,9 @@ itens:
   referencia: art. 11.º, n.º 6, al. a), e 2.º parágrafo
   classe: engenharia
   forca: parcial
-  contexto: null
+  contexto:
+    id: CTX-DORA
+    grau: null
   resposta:
   - tipo: politica
     rotulo:
@@ -2172,9 +2174,19 @@ itens:
     citacao:
       pt: A capacidade de rollback deve ser testada periodicamente
       en: Rollback capability must be tested periodically
+  - tipo: acrescento
+    alvo: CTX-DORA-R01
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
   falta:
-    pt: Testes anuais de comutação para capacidade redundante, cópias e equipamentos redundantes.
-    en: Annual switchover tests to redundant capacity, backups and redundant equipment.
+    pt: Testes dos planos de continuidade das actividades da entidade (fora do âmbito do Manual); a recuperação da aplicação (OPS-016, OPS-017) e a comutação para a capacidade redundante (CTX-DORA-R01) estão prescritas.
+    en: Tests of the entity's business continuity plans (outside the scope of the Manual); recovery of the application (OPS-016, OPS-017) and switchover to the redundant capacity (CTX-DORA-R01) are prescribed.
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2323,12 +2335,20 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 1, al. a)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Política de cópias de segurança (âmbito dos dados, frequência mínima por criticidade) inexistente; só snapshots pré-deploy de BD (Política 27 §3.3).
-    en: No backup policy (scope of data, minimum frequency by criticality); only pre-deploy DB snapshots (Policy 27 §3.3).
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2342,7 +2362,7 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 1, al. b)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -2363,9 +2383,15 @@ itens:
     citacao:
       pt: Sistemas restaurados com versões limpas e verificadas
       en: Systems restored with clean and verified versions
-  falta:
-    pt: Procedimentos de restauração a partir de cópias de segurança.
-    en: Procedures for restoration from backups.
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2377,12 +2403,28 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 2
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Sistemas de backup e testes periódicos de salvaguarda/restauração não prescritos.
-    en: Backup systems and periodic backup/restoration tests not prescribed.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2394,19 +2436,29 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 3
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Restauração em sistemas física e logicamente separados da origem.
-    en: Restoration on systems physically and logically segregated from the source.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
   confianca: baixa
   aplicavel_desde: '2025-01-17'
   substitui: [EXT-DORA-OBL-8-15]
-  nota: null
+  nota:
+    pt: 'Restauro em sistemas separados da origem: piso CTX-DORA-P11.'
+    en: 'Restoration on systems segregated from the source: floor CTX-DORA-P11.'
 - id: DORA-12-3-p2
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 3, 2.º e 3.º parágrafos
@@ -2428,12 +2480,14 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 4
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Capacidades de TIC redundantes.
-    en: Redundant ICT capacities.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: acrescento
+    alvo: CTX-DORA-R01
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -2462,8 +2516,10 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 12.º, n.º 6
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: FCI
   resposta:
   - tipo: pagina
     rotulo:
@@ -2483,9 +2539,15 @@ itens:
     citacao:
       pt: RTO alvo (rollback de binário)
       en: Target RTO (binary rollback)
-  falta:
-    pt: RTO/RPO por função; o Manual só fixa RTO de rollback (L2/L3) e reutiliza RTO/RPO de DRP.
-    en: RTO/RPO per function; the Manual only sets rollback RTO (L2/L3) and reuses the DRP's RTO/RPO.
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: RTO e RPO definidos por aplicação
+      en: RTO and RPO defined per application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -3047,7 +3109,7 @@ itens:
   acto_fonte: 32022R2554
   referencia: art. 16.º, n.º 1, 2.º parágrafo, al. f)
   classe: engenharia
-  forca: parcial
+  forca: cobre
   contexto: null
   resposta:
   - tipo: politica
@@ -3068,9 +3130,23 @@ itens:
     citacao:
       pt: A capacidade de rollback deve ser testada periodicamente
       en: Rollback capability must be tested periodically
-  falta:
-    pt: Cópias de segurança e restauração.
-    en: Backups and restoration.
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -8693,12 +8769,28 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 8.º, n.º 2, al. b), subal. i)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Requisitos de cópias de segurança e restauração dos sistemas TIC.
-    en: Requirements for backup and restoration of ICT systems.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -14895,8 +14987,10 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 39.º, n.º 2, als. d) a f)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: FCI
   resposta:
   - tipo: pagina
     rotulo:
@@ -14925,9 +15019,23 @@ itens:
     citacao:
       pt: O IRP é activado formalmente quando um alerta ou evento de segurança é confirmado como incidente
       en: The IRP is formally activated when a security alert or event is confirmed as an incident
-  falta:
-    pt: Níveis e prazos de recuperação por função e dependências de prestadores.
-    en: Recovery levels and timeframes per function and provider dependencies.
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: RTO e RPO definidos por aplicação
+      en: RTO and RPO defined per application
+  - tipo: requisito
+    alvo: OPS-017
+    niveis: [L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: procedimento de recuperação do sistema documentado, com condições de activação, ordem de recuperação e dependências
+      en: system recovery procedure documented, with activation conditions, recovery order and dependencies
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -14939,12 +15047,20 @@ itens:
   acto_fonte: 32024R1774
   referencia: art. 39.º, n.º 2, al. g)
   classe: engenharia
-  forca: lacuna
-  contexto: null
-  resposta: []
-  falta:
-    pt: Procedimentos de salvaguarda com âmbito e frequência mínima de cópias de segurança.
-    en: Backup procedures with scope and minimum backup frequency.
+  forca: cobre
+  contexto:
+    id: CTX-DORA
+    grau: null
+  resposta:
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null
@@ -14994,9 +15110,17 @@ itens:
     citacao:
       pt: A capacidade de rollback deve ser testada periodicamente
       en: Rollback capability must be tested periodically
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
   falta:
-    pt: Teste anual de salvaguarda e restauração (backups) — ausente.
-    en: Annual backup and restoration test — absent.
+    pt: Testes dos planos de continuidade da entidade com cenários (fora do âmbito do Manual); o teste de salvaguarda e restauração está prescrito (OPS-016).
+    en: Tests of the entity's continuity plans with scenarios (outside the scope of the Manual); testing of backup and restoration is prescribed (OPS-016).
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

@@ -2123,8 +2123,10 @@ itens:
   acto_fonte: 32016R0679
   referencia: Art. 32.º, n.º 1, alínea c)
   classe: engenharia
-  forca: parcial
-  contexto: null
+  forca: cobre
+  contexto:
+    id: CTX-RGPD
+    grau: null
   resposta:
   - tipo: requisito
     alvo: DPL-005
@@ -2161,9 +2163,23 @@ itens:
     citacao:
       pt: Isolamento, forensics, recuperação de backup
       en: Isolation, forensics, recovery from backup
-  falta:
-    pt: Rollback testado, snapshot pré-deploy e recuperação pós-incidente; não há requisito de backups de dados com RPO/RTO, cópias isoladas e testes periódicos de restauro (o DRP/BIA aparece só como fonte de classificação no cap. 01).
-    en: Tested rollback, pre-deploy snapshot and post-incident recovery; there is no requirement for data backups with RPO/RTO, isolated copies and periodic restore tests (the DRP/BIA appears only as a classification source in Ch. 01).
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Cópias de segurança dos dados e da configuração necessários para repor a aplicação
+      en: Backups of the data and configuration needed to restore the application
+  - tipo: requisito
+    alvo: OPS-016
+    niveis: [L1, L2, L3]
+    ficheiro: 010-sbd-manual/12-monitorizacao-operacoes/addon/00-catalogo-requisitos.md
+    ancora: catálogo-ops---monitorização-e-operações
+    citacao:
+      pt: Restauro testado a partir das cópias
+      en: Restore tested from the backups
+  falta: null
   razao_fora_de_ambito: null
   conflito: false
   explicacao_conflito: null

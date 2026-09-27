@@ -26,9 +26,9 @@ derived_from:
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/90-requisitos-aplicaveis.md
-  source_sha256: bb0666b470b1200273f9b1955f4b31446ea6f0afaa4b70f88826be2aabec96c6
+  source_sha256: 163f828d3bd1e6ce48a0073fa180f85fd5edfde389a255e5d39436fabdff8af5
   source_commit: null
-  target_sha256: 92c4175ceef16fbb0ecd1fdb3fc0b1c5bedaa41f03088b2d6ca16a29e58df9af
+  target_sha256: 919c5364ec029a197de468e05480d84be264841b7db0bcf9ed7ac0bf33914ba7
   engine: gen_reg_views
   prompt_sha256: null
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
@@ -330,6 +330,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ✔ | ✔ | ✔ | — |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |
@@ -610,6 +612,8 @@ Key: ✔ base selection for the level; ▲ elevated or added by the regime (appl
 | `OPS-013` | Budget and runaway detection in model consumption (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detection of jailbreak / off-policy actions in production | — | — | ✔ | — |
 | `OPS-015` | Continuous operational health and availability signals | — | ✔ | ✔ | — |
+| `OPS-016` | Backups with tested restore | ✔ | ✔ | ✔ | — |
+| `OPS-017` | Recovery objectives and procedure for the application | — | ✔ | ✔ | — |
 | `TRN-001` | Security training tracks defined by profile and criticality level | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Mandatory security onboarding before autonomous work | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Objective validation of onboarding with a defined acceptance criterion | ✔ | ✔ | ✔ | — |

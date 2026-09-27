@@ -60,6 +60,16 @@ A entidade é essencial ou importante nos termos do art. 3.º da Diretiva (UE) 2
 | CTX-NIS2-P13 | `AUT-001` | PERTINENTE | obrigatório | Contas privilegiadas e contas de administração do sistema. | Reg. de Execução (UE) 2024/2690, anexo, ponto 11.3.2, al. a): «Estabelecem fortes procedimentos de identificação, autenticação (autenticação multifatores, por exemplo) e autorização para as contas privilegiadas e as contas de administração do sistema» (NIS2-IR2690-11.3.2) | admitida |
 | CTX-NIS2-P14 | `GOV-015` | — | obrigatório | Tratamento e divulgação de vulnerabilidades, incluindo as comunicadas por fontes externas. | Diretiva (UE) 2022/2555, art. 21.º, n.º 2, al. e): «incluindo o tratamento e a divulgação de vulnerabilidades» (NIS2-21-2-e) | não admitida |
 | CTX-NIS2-P15 | `GOV-015` | PERTINENTE | obrigatório | O procedimento de divulgação segue a política nacional de divulgação coordenada de vulnerabilidades. | Reg. de Execução (UE) 2024/2690, anexo, ponto 6.10.2, al. e): «procedimento para a divulgação de vulnerabilidades em conformidade com a política nacional aplicável em matéria de divulgação coordenada de vulnerabilidades» (NIS2-IR2690-6.10.2) | não admitida |
+| CTX-NIS2-P16 | `OPS-016` | PERTINENTE | obrigatório | Cópias completas e exactas, incluindo dados de configuração e dados em nuvem, guardadas em local seguro fora da rede do sistema; integridade verificada e recuperação testada, em qualquer nível. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.1 a 4.2.3 e 4.2.6: «as entidades pertinentes estabelecem planos de reserva» (NIS2-IR2690-4.2.1, NIS2-IR2690-4.2.2, NIS2-IR2690-4.2.3, NIS2-IR2690-4.2.6) | não admitida |
+| CTX-NIS2-P17 | `OPS-017` | PERTINENTE | obrigatório | Plano de recuperação com condições de activação e desactivação e ordem de recuperação, também em L1. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.1.1 e 4.1.2: «As operações das entidades pertinentes devem ser restabelecidas de acordo com o plano de continuidade das atividades e de recuperação de desastres.» (NIS2-IR2690-4.1.1, NIS2-IR2690-4.1.2) | não admitida |
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-NIS2-R01` | Redundância pelo menos parcial | Com base na avaliação de riscos e no plano de continuidade, disponibilidade suficiente de recursos através de redundância, pelo menos parcial, dos sistemas de rede e informação e dos canais de comunicação de que a aplicação depende; recursos acompanhados e ajustados em função dos requisitos de cópias de segurança e de redundância. | Reg. de Execução (UE) 2024/2690, anexo, pontos 4.2.4 e 4.2.5: «asseguram a disponibilidade suficiente de recursos através, no mínimo, da redundância parcial dos seguintes elementos» (NIS2-IR2690-4.2.4, NIS2-IR2690-4.2.5) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -322,6 +332,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
 | `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ✔ | ✔ | ✔ | — |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | — | ✔ | ✔ | — |
 | `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
@@ -602,6 +614,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
 | `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ▲ | ▲ | ▲ | CTX-NIS2-P16 |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | ▲ | ▲ | ▲ | CTX-NIS2-P17 |
 | `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
@@ -626,6 +640,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-NIS2-P14, CTX-NIS2-P15 |
+| `CTX-NIS2-R01` | Redundância pelo menos parcial | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -633,8 +648,8 @@ Contagem das obrigações da matriz `_matriz/nis2.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 61 |
-| Parcial | 86 |
+| Cobre | 68 |
+| Parcial | 88 |
 | Apoia evidência | 12 |
-| Lacuna | 23 |
+| Lacuna | 14 |
 | Fora de âmbito | 38 |

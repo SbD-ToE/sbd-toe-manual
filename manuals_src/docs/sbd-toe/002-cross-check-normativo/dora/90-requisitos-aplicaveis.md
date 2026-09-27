@@ -55,6 +55,16 @@ A organização é uma das entidades financeiras enumeradas no art. 2.º, n.º 1
 | CTX-DORA-P08 | [Política 10 §9](/sbd-toe/assets/policies/policy-dependencias#9-auditoria-periódica) | FCI | obrigatório; frequência da análise automatizada de vulnerabilidades ≥ semanal («pelo menos semanalmente») | Análise automatizada de vulnerabilidades dos activos de TIC que apoiam funções críticas ou importantes, não só das dependências e imagens. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. b), e segundo parágrafo: «as entidades financeiras devem realizar, pelo menos semanalmente, uma análise automatizada da vulnerabilidade e avaliações dos ativos de TIC para os ativos de TIC que apoiam funções críticas ou importantes» (DORA-RTS1774-10-2-b) | não admitida |
 | CTX-DORA-P09 | `OPS-005` | FCI | obrigatório | — | Reg. Delegado (UE) 2024/1774, art. 23.º, n.º 2, al. b): «implementar ferramentas geradoras de alertas para atividades e comportamentos anómalos, pelo menos para os ativos de TIC e de informação que apoiem funções críticas ou importantes» (DORA-RTS1774-23-2-b) | não admitida |
 | CTX-DORA-P10 | `GOV-015` | — | obrigatório | Divulgação responsável aos clientes, às contrapartes e ao público. | Reg. Delegado (UE) 2024/1774, art. 10.º, n.º 2, al. e): «Estabelecer procedimentos para a divulgação responsável das vulnerabilidades aos clientes, às contrapartes e ao público» (DORA-RTS1774-10-2-e) | não admitida |
+| CTX-DORA-P11 | `OPS-016` | — | obrigatório | Restauro em sistemas física e logicamente separados do sistema de origem, protegidos contra acesso não autorizado e corrupção; testes periódicos de salvaguarda e de restauração. | Reg. (UE) 2022/2554, art. 12.º, n.os 1 a 3; Reg. Delegado (UE) 2024/1774, art. 8.º, n.º 2, al. b), subal. i), e art. 39.º, n.º 2, al. g): «utilizam sistemas de TIC que estejam física e logicamente separados do sistema de TIC de origem» (DORA-12-1-a, DORA-12-2, DORA-12-3, DORA-RTS1774-8-2-b-i, DORA-RTS1774-39-2-g) | não admitida |
+| CTX-DORA-P12 | `OPS-017` | FCI | obrigatório | Também em L1 para aplicações que suportam funções críticas ou importantes: níveis e prazos de recuperação e dependências de prestadores de serviços de TIC. | Reg. (UE) 2022/2554, art. 12.º, n.º 6; Reg. Delegado (UE) 2024/1774, art. 39.º, n.º 2, al. d): «Ao determinar o tempo de recuperação e os objetivos concretos de recuperação para cada função» (DORA-12-6, DORA-RTS1774-39-2-d) | não admitida |
+
+## Requisitos acrescentados pelo regime {#acrescentos}
+
+Estes requisitos só fazem sentido sob o regime e por isso não vivem nos catálogos do Manual; definem-se aqui, com a base legal de cada um.
+
+| Requisito | Nome | Critério de aceitação | Base legal |
+|---|---|---|---|
+| `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | Capacidades de TIC redundantes, com recursos, capacidade e funções adequados às necessidades do negócio, para os sistemas de que a aplicação depende (as microempresas avaliam a necessidade pelo perfil de risco); planos de resposta e recuperação testados pelo menos uma vez por ano, incluindo, nas entidades que não sejam microempresas, cenários de ciberataque e de comutação entre a infraestrutura primária e a capacidade redundante. | Reg. (UE) 2022/2554, art. 12.º, n.º 4, e art. 11.º, n.º 6, al. a): «mantêm capacidades de TIC redundantes equipadas com recursos, capacidade e funções suficientes» (DORA-12-4, DORA-11-6-a) |
 
 ## Como se lê a lista {#como-se-le}
 
@@ -317,6 +327,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
 | `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ▲ | ▲ | ▲ | CTX-DORA-P11 |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | — | ✔ | ✔ | — |
 | `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
@@ -341,6 +353,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
 
 ## Lista de requisitos — FCI {#lista-fci}
 
@@ -597,6 +610,8 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `OPS-013` | Budget e detecção de runaway em consumo de modelo (token spend) | — | ✔ | ✔ | — |
 | `OPS-014` | Detecção de jailbreak / off-policy actions em produção | — | — | ✔ | — |
 | `OPS-015` | Sinais contínuos de saúde e disponibilidade operacional | — | ✔ | ✔ | — |
+| `OPS-016` | Cópias de segurança com restauro testado | ▲ | ▲ | ▲ | CTX-DORA-P11 |
+| `OPS-017` | Objectivos e procedimento de recuperação da aplicação | ▲ | ▲ | ▲ | CTX-DORA-P12 |
 | `TRN-001` | Trilhos de formação de segurança definidos por perfil e nível de criticidade | ✔ | ✔ | ✔ | — |
 | `TRN-002` | Onboarding de segurança obrigatório antes de trabalho autónomo | ✔ | ✔ | ✔ | — |
 | `TRN-003` | Validação objectiva do onboarding com critério de aceitação definido | ✔ | ✔ | ✔ | — |
@@ -621,6 +636,7 @@ Legenda: ✔ selecção base do nível; ▲ elevado ou acrescentado pelo regime 
 | `GOV-013` | Onboarding técnico e formação obrigatória pré-acesso de terceiros | — | ✔ | ✔ | — |
 | `GOV-014` | Revisão periódica de acesso de terceiros (least privilege) | ✔ | ✔ | ✔ | — |
 | `GOV-015` | Divulgação coordenada de vulnerabilidades com canal de receção publicado | ▲ | ▲ | ▲ | CTX-DORA-P10 |
+| `CTX-DORA-R01` | Capacidades de TIC redundantes e teste de comutação | ▲ | ▲ | ▲ | — |
 
 ## Obrigações do regime por força de cobertura {#forca}
 
@@ -628,8 +644,8 @@ Contagem das obrigações da matriz `_matriz/dora.yaml` (excluídas as dirigidas
 
 | Força | Obrigações |
 |---|--:|
-| Cobre | 117 |
-| Parcial | 138 |
+| Cobre | 127 |
+| Parcial | 134 |
 | Apoia evidência | 123 |
-| Lacuna | 14 |
+| Lacuna | 8 |
 | Fora de âmbito | 234 |

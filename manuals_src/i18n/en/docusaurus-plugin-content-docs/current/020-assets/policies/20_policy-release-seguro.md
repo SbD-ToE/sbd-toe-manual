@@ -8,15 +8,16 @@ sidebar_position: 20
 translation:
   source_locale: pt
   source_path: 020-assets/policies/20_policy-release-seguro.md
-  source_sha256: e4fa267d97dbbc38d76c9db9959e41b9ab98804166307b6f9e84120d706a8137
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 5ff91ba0b0e9863ad0e3302690af20d737286110056b10233d4868b23c9245e6
+  source_sha256: cb962889fec6b8feaf79c74e1375d51a9c7926562f76c8ae42bfec5589158afe
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: d0961a2145074e38afdbd7744ef259f308b04fa48df38938f4ef12b5713cf32a
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bc04ded428e40ee1c214f8535dfb1904655b64166d0aa82b5df521e4230b8cb0
-  glossary_keys: [candidate, cycle_iteration, framework_source_corpus, sbdtoe_sbd, traceability]
-  glossary_sha256: 8618a66c3b4e8de121f1052fc2e99db96b62445be2212a0b8f36d4c73d3172d3
-  translated_at: 2026-09-26T14:10:55Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [candidate, cycle_iteration, framework_source_corpus, role_tech_lead, sbdtoe_sbd, traceability]
+  glossary_sha256: ff0aea7d4dc0b904848dd2e4c716156ed9c048b8e7db11901db5c3e4813a7341
+  translated_at: 2026-09-27T13:29:45Z
+  stamped_at: 2026-09-27T13:29:45Z
   reviewed_by: null
 ---
 
@@ -42,7 +43,7 @@ The objective of this policy is to ensure that:
 
 | Level | Applicability |
 |---|---|
-| L1 | Recommended; simplified checklist; approval by the Tech Lead |
+| L1 | Mandatory; simplified checklist; automated security gates; explicit approval by the Tech Lead, recorded |
 | L2 | Mandatory; full checklist; automated gate; formal approval |
 | L3 | Mandatory; full checklist; automated gate; dual approval; immutable decision artefact |
 

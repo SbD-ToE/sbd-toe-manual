@@ -8,16 +8,16 @@ sidebar_position: 4
 translation:
   source_locale: pt
   source_path: 020-assets/policies/04_policy-revisao-periodica-risco.md
-  source_sha256: c2844fc15823d733184516650683140307a5d846e01c307f03120a10d1125c49
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 68442164cfc9bd5d4ec04ffe43860a132e4c49eefa73b7aea339499f89cfc4b8
+  source_sha256: 2bb455aa265fda7ed047cfbf40eb6f95f0311c794b88cfe347802bdc7b6fdd2d
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: f480133276fe3ce1aaacdef67aa20bcee746d444809d0c8201398aeb7e0ef1f6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, avaliacao, cycle_iteration, lifecycle_phase, mcp_reading_programa, programme_line, risk_level, role_tech_lead, sbdtoe_sbd, verificacao_check, verification_taxonomy]
   glossary_sha256: 24dcf33bc58faa933548c4084bfc00d9a3f08faeabe0993196d4d80717b9def8
-  translated_at: 2026-09-27T07:54:08Z
-  stamped_at: 2026-09-27T07:54:08Z
+  translated_at: 2026-09-27T13:29:43Z
+  stamped_at: 2026-09-27T13:29:43Z
   reviewed_by: null
 ---
 
@@ -50,7 +50,7 @@ Applications in the process of decommissioning retain the review obligation unti
 
 | Level | Minimum cadence | Mandatory status |
 |---|---|---|
-| L1 | Annual (12 months) | Recommended |
+| L1 | Annual (12 months) | Mandatory |
 | L2 | Half-yearly (6 months) | Mandatory |
 | L3 | Quarterly (3 months) | Mandatory |
 

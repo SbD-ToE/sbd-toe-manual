@@ -8,16 +8,16 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 020-assets/policies/10_policy-dependencias.md
-  source_sha256: e50d2f126e7df5c584cd7dca9cf6d94abf2e7a2d9342ed93231c046d5e811bf7
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 402c2ee4242135b8ed4fa1f7038e6a85127e86c017dc075a8aee0ea1b7f7dfd1
+  source_sha256: 728382a85bdc9e77f96081e062be68336b1118116a5173fe49ed576ea685261a
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: d6e3ea458f1c7b9c2251ddf8688eac6b47b0f1c6154b92e8c1d6126372522198
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c4a5dc988eb18558948a8787872ca650b4201a15571961c26cb014e9cbd7dc30
-  translated_at: 2026-09-27T09:08:13Z
-  stamped_at: 2026-09-27T09:08:13Z
+  translated_at: 2026-09-27T13:29:44Z
+  stamped_at: 2026-09-27T13:29:44Z
   reviewed_by: null
 ---
 
@@ -146,7 +146,7 @@ The CI/CD pipeline must include automatic SCA analysis in every build, covering 
 
 | Level | SCA requirement |
 |---|---|
-| L1 | Alert; does not block |
+| L1 | Blocks High and Critical findings without an approved exception |
 | L2 | Blocks High and Critical findings without an approved exception |
 | L3 | Blocks Medium, High and Critical findings without an approved exception |
 

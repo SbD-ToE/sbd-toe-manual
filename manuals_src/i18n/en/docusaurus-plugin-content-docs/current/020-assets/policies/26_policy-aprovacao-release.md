@@ -8,16 +8,16 @@ sidebar_position: 26
 translation:
   source_locale: pt
   source_path: 020-assets/policies/26_policy-aprovacao-release.md
-  source_sha256: 7bea1a5c0c5eda9e32b4bb78b4390b7499d4fb727c4d1bebdb6eeb54114a10e3
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 7845272c13531fba1558d4d1a4326d6e0663257baa4b1898a302bf9d4d29ef6b
+  source_sha256: 46bb5d920ea35e16e60c5ec1b0eee7b2317327903a7eb7c008d4d1f4f94a2e0c
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: 682f3dd366826ac94bf1bbdf0e308578d0a06ff6f9251ae2a0aad255b9bbc092
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [alcada, audit_trail, avaliacao, framework_source_corpus, risk_level, role_tech_lead, sbdtoe_sbd, traceability]
   glossary_sha256: 6ce9fcad1522a0807988d7b11d9ea74fbf7ed818e7f8c968ae0a033f3d4c7036
-  translated_at: 2026-09-26T14:10:58Z
-  stamped_at: 2026-09-26T18:36:59Z
+  translated_at: 2026-09-27T13:29:42Z
+  stamped_at: 2026-09-27T13:29:42Z
   reviewed_by: null
 ---
 
@@ -42,7 +42,7 @@ The objective of this policy is to ensure that:
 
 | Level | Applicability |
 |---|---|
-| L1 | Recommended; informal approval by the Tech Lead |
+| L1 | Mandatory; explicit approval by the Tech Lead, recorded with the approver's date and identity |
 | L2 | Mandatory; formal recorded approval; explicit acceptance of residual risk if applicable |
 | L3 | Mandatory; dual approval; immutable record; acceptance of residual risk with CISO approval authority |
 

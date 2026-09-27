@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/01-intro.md
-  source_sha256: cb414e2076574b10836632500526baee9c75f25c5bdf31fd67b1a2e7bfc53129
-  source_commit: 232525e0dcc4d471dd8fd05dbda57c4dc55449f2
-  target_sha256: a2a23fc92fcb79fbadac22f05d7c118513c16845e8cada6b38e44e2dd276d3bf
+  source_sha256: ed56bc3eeb54cdb5a364d502afae2e7a000d766503874a4402606b2c5228a6a0
+  source_commit: 5c2b16d193f5e7fe0cc6b566c47e456677cca656
+  target_sha256: e4632608d7607b1c4e7498601b7c87d0706c80156e86359c658c900aac323f8e
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: 764cf9d1501abafbe67affc33a2ba7827210289ef006b10bbbf86fa9300b5785
-  translated_at: 2026-09-27T07:32:31Z
-  stamped_at: 2026-09-27T07:32:31Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, esquema_regime, eu_management_body, gap_family, layer, mapping, mcp_reading_programa, nis2_crm_measures, nis2_early_warning, nis2_essential_entity, nis2_significant_incident, normative_empirical, practitioner_manual, programme_line, requirement_runtime, sbdtoe_sbd, verificacao_check, verification_taxonomy]
+  glossary_sha256: 2ae14a21f4f058c8b6407e4751c715b4136d395e7233f4a9c71e073837fabfdb
+  translated_at: 2026-09-27T13:29:49Z
+  stamped_at: 2026-09-27T13:29:49Z
   reviewed_by: null
 ---
 
@@ -81,7 +81,7 @@ In 2024/2025, the Commission and ENISA published technical guidance and practica
 |---|---|---|
 | Policies on risk analysis | Ch. 02, Ch. 03 | Security requirements, threat modelling |
 | Incident handling | Ch. 12 | Detection, response, post-incident |
-| Business continuity/crisis management (backups, DR) | Ch. 12 | Runbooks, exercises, tested backups |
+| Business continuity/crisis management (backups, DR) | Ch. 11, Ch. 12 | Partial: runbooks, response exercises and tested rollback; backups, restore tests and disaster recovery of the systems not yet prescribed |
 | Supply chain security | Ch. 05, Ch. 14 | SBOM/SCA, dependencies, contractual requirements |
 | Security in development | Ch. 06, Ch. 07, Ch. 08 | Secure development, CI/CD, IaC |
 | Effectiveness assessment | Ch. 10, Ch. 12 | Security testing, continuous monitoring |
@@ -186,18 +186,21 @@ NIS2 calls for business continuity, crisis management, tested backups and DR, an
 | NIS2 requirement | SbD-ToE chapter | Coverage |
 |---|---|---|
 | Response/recovery runbooks and exercises | Ch. 12 | Runbooks, exercises, tests |
-| Backups with restore tests | Ch. 12 | Tested backups, validation |
+| Backups with restore tests | — | Not yet prescribed: only the pre-deploy snapshot (Policy 27 §3) and the backup of the secrets vault (Policy 18 §4) exist |
 | Logging/observability "by design" | Ch. 12 | Logging, observability, retention |
 
 **What SbD-ToE covers**
 
 - Response/recovery runbooks and exercises (Ch. 12).
-- Backups with restore tests and validation (Ch. 12).
 - Logging/observability "by design" (Ch. 12), with guidance on retention that can be aligned with standards.
 
 **Intentional gaps**
 
 Retention periods and exact log fields: these vary between NIS2, DORA and sectoral regimes; the manual defines "logs with mandatory fields" and leaves the final fields to be plugged in according to the applicable normative framework (NIS2 here). Broad business continuity, corporate BCM and institutional crisis management may also require artefacts outside the core manual.
+
+**Gap to cover**
+
+Backups, restore tests and disaster recovery of the systems that the Manual governs (Article 21(2), point (c); Implementing Regulation (EU) 2024/2690, Annex, points 4.1 and 4.2) are not yet prescribed. Rollback ([`DPL-005`](/sbd-toe/sbd-manual/deploy-seguro/addon/catalogo-requisitos-deploy#catálogo-dpl---deploy-seguro)) reverts a deployment; it does not recover data or systems.
 
 **How to comply**
 

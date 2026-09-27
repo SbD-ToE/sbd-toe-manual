@@ -7,16 +7,16 @@ sidebar_position: 6
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/ai-act/01-intro.md
-  source_sha256: 520feba27b21b46d3d1791322a56187b709d81dbd6582650786db91282fdf5bf
-  source_commit: cdec9170438c29c7a3bd21b0463b30a06569c461
-  target_sha256: 1ed30bf10a04bd5e4ade9f89425cc80ac8d986b6058c1075d2bfe1d51f03ddff
+  source_sha256: 9d97625779e851dc080b2cb67409b60dd8cdba1f0886f4ebcf8f54af05d95aef
+  source_commit: 5c2b16d193f5e7fe0cc6b566c47e456677cca656
+  target_sha256: 4fa41a25d956701686ccbc8feed1765c2fa4bfd6424bee3766a6f3e9f99f316f
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
-  glossary_keys: [ai_service_vendor, audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, eu_startups, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation]
-  glossary_sha256: 2805c0372e89edbab2e6c08497efef4950804deeb215705453d6b1def5c114fb
-  translated_at: 2026-09-27T09:05:36Z
-  stamped_at: 2026-09-27T09:05:36Z
+  glossary_keys: [ai_service_vendor, audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, discipline, esquema_regime, eu_ai_deployer, eu_ai_fria, eu_ai_gpai_model, eu_ai_high_risk_system, eu_ai_human_oversight, eu_ai_instructions_for_use, eu_ai_literacy, eu_ai_post_market_monitoring, eu_ai_qms, eu_ai_system, eu_ai_training_data, eu_ai_widespread_infringement, eu_biometric_identification, eu_ce_marking, eu_market_surveillance_authority, eu_notified_body, eu_placing_on_market, eu_reasonably_foreseeable_misuse, eu_startups, framework_source_corpus, gap_family, layer, lifecycle_phase, llm, mapping, mcp, mcp_reading_programa, normative_empirical, papel_suporte, practitioner_manual, programme_line, provenance, requirement_runtime, role_juridico, role_tech_lead, sbdtoe_sbd, schema, slug_threat_modeling, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 43626fa343483e8424b78edf6d7af8e2929ffba73052442078fddbe9e55c362a
+  translated_at: 2026-09-27T13:29:47Z
+  stamped_at: 2026-09-27T13:29:47Z
   reviewed_by: null
 ---
 
@@ -69,7 +69,7 @@ SbD-ToE covers the **technical "how"** of the high-risk requirements, but **does
 - **Risk classification** (Art. 6 and Annexes I/III) - the legal determination of whether a system is high-risk.
 - **Governance of training data, validation data and testing data** (Art. 10) - representativeness, detection and mitigation of bias (*bias*), statistical quality of the data sets. These are **AI/data science domain** questions, not AppSec ones.
 - **Transparency and provision of information to deployers** (Art. 13) and to natural persons (Art. 50).
-- **Human oversight** (Art. 14) - the **design/UX** of *human-in-the-loop* / *human-on-the-loop* mechanisms and human judgement (oversight-as-understanding). The **interruption (*stop/override*) and governance** facet is technically covered (see matrix, Art. 14).
+- **Human oversight** (Art. 14) - the **design/UX** of *human-in-the-loop* / *human-on-the-loop* mechanisms and human judgement (oversight-as-understanding). The **interruption (*stop/override*) and governance** facet is technically covered for agents with tool use; for product AI systems without agents, coverage is partial (see matrix, Art. 14).
 - **Fundamental rights impact assessment (FRIA)** (Art. 27) - an obligation of certain deployers: bodies governed by public law, private entities providing public services and deployers of the systems referred to in Annex III, point 5, points (b) and (c), for high-risk systems under Article 6(2) (with the exception of those in Annex III, point 2) (Article 27(1)).
 - **Conformity assessment** (Art. 43), involvement of **notified bodies**, **EU declaration of conformity** (Art. 47), **CE marking** (Art. 48) and **registration in the EU database** (Art. 49/71).
 - **Determination of prohibited practices** (Art. 5) and the legal qualification of roles (provider, deployer, importer, distributor).
@@ -90,7 +90,7 @@ These dimensions fall within the remit of compliance, legal, data science teams 
 | Technical documentation | Art. 11, Annex IV | Ch. 02, Ch. 04 (architecture + [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 ([`DEP-012`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-012) AI BOM), Ch. 06, Policy 38 (mandate) | Formal structure of Annex IV; *model cards* | Map SbD-ToE artefacts (including mandate + AI BOM) to the Annex IV index |
 | Recording of events (logging) | Art. 12, Art. 19 | Ch. 12 (observability), [`OPS-011`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes) (AI/ML), [`OPS-012`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-012) (audit per *tool invocation* with `mandate_ref`), Ch. 12 US-13 (agentic telemetry), Policy 30 §9 | Field schema specific to the *model output* remains configurable | Document the inference schema per system |
 | Transparency to deployers | Art. 13 | Ch. 02, Ch. 04 (partial), Policy 38 (mandate as a structured source of *capabilities*, limitations and oversight) | Model-specific performance metrics | Derive "instructions for use" from the mandate + Ch. 04/06 artefacts |
-| Human oversight | Art. 14 ⚡ | Ch. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, level classification, *kill-switch*, *intent declaration*), Ch. 04 [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval + architectural *kill-switch*), Policy 38 (mandate lifecycle) | Human intervention UX/flow (AI/product domain) | UX design remains with the AI team; technical control and operational governance already inside |
+| Human oversight | Art. 14 ⚡ | Ch. 02 §A0–A4 + `REQ-AGN-001..004` (mandate, level classification, *kill-switch*, *intent declaration*), Ch. 04 [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015) (OOB approval + architectural *kill-switch*), Policy 38 (mandate lifecycle) | Human intervention UX/flow (AI/product domain); oversight of product AI systems without agents; verification by two persons (Art. 14(5)) | UX design remains with the AI team; technical control and operational governance inside for agents with tool use |
 | Accuracy, robustness and cybersecurity | Art. 15 | Ch. 03 agentic playbook + MITRE ATLAS, Ch. 04 ([`ARC-014`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-014)+[`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015)), Ch. 05 (AI BOM), Ch. 10 §C5 (*eval suites*), Ch. 12 + [`OPS-014`](/sbd-toe/sbd-manual/monitorizacao-operacoes/addon/catalogo-requisitos-operacoes#ops-014) (*jailbreak* / *off-policy*) | Declared accuracy metrics; regulatory thresholds | Declare metrics in coordination with the AI team |
 | Quality management system | Art. 17 | Ch. 07 (CI/CD), Ch. 11 (release), Ch. 06, Ch. 14, Policy 38 (mandate lifecycle), Policy 39 (AI BOM lifecycle) | Formal quality manual | Map SbD-ToE gates + Policy 38/39 cycles to the QMS elements |
 | Supply chain | Art. 25 | [`DEP-013`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-013) (*pinning*), [`DEP-014`](/sbd-toe/sbd-manual/dependencias-sbom-sca/addon/catalogo-requisitos-dependencias#dep-014) (list of approved AI service vendors), Policy 39, Ch. 14 US-21 | — | — |
@@ -299,7 +299,7 @@ It is suggested to derive an "instructions for use" document from the ***mandate
 
 ### Article 14 - Human oversight {#artigo-14---supervisão-humana}
 
-> ⚡ **Refresh 2026-05-30.** The first version of this cross-check treated Art. 14 as largely outside AppSec ("the design of oversight mechanisms is an AI/product problem"). With the agentic layer introduced in 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — the **interruption (*stop/override*) and governance facet** became covered. **Oversight-as-understanding** (human judgement and the intervention UX) remains the domain of the AI/product team; the architectural *how* and the governance *when* already live in the manual.
+> ⚡ **Refresh 2026-05-30.** The first version of this cross-check treated Art. 14 as largely outside AppSec ("the design of oversight mechanisms is an AI/product problem"). With the agentic layer introduced in 2026 — A0–A4, `REQ-AGN-*`, [`ARC-015`](/sbd-toe/sbd-manual/arquitetura-segura/addon/catalogo-requisitos-arquitetura#arc-015), Policy 38 — the **interruption (*stop/override*) and governance facet** became covered for agents with tool use. **Oversight-as-understanding** (human judgement and the intervention UX) remains the domain of the AI/product team; the architectural *how* and the governance *when* already live in the manual.
 
 **Normative content**
 
@@ -327,6 +327,8 @@ Art. 14 requires high-risk AI systems to be designed to enable **effective human
 **Residual gaps**
 
 The **UX of the human decision** (how the user interprets the output and decides to intervene) and the specification of the **cognitive oversight points** (when the system should ask for confirmation, what information to show) remain outside the AppSec scope — they are AI system design and human factors. SbD-ToE ensures that interruption is **implementable, exercised, audited and required by governance**; it does not design the oversight interface.
+
+The coverage above applies to agents with tool use: Policy 38 and `REQ-AGN` exclude product AI systems without *tool use*, whose human oversight (human-machine interfaces, anomaly detection by the overseer, awareness of automation bias) the Manual does not yet prescribe. Verification by two persons before a decision based on biometric identification (Art. 14(5)) is not prescribed either. In the coverage matrix, Art. 14(1) to (4) are partial and Art. 14(5) is a gap.
 
 **How to comply**
 

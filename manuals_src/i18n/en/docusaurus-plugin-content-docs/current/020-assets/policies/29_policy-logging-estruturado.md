@@ -8,16 +8,16 @@ sidebar_position: 29
 translation:
   source_locale: pt
   source_path: 020-assets/policies/29_policy-logging-estruturado.md
-  source_sha256: 7d83c75529dbaa30904ffd8437e0574b63025a194fc1f13b10b701b713256a8e
-  source_commit: ebf462b7f3a4272103adfe1b228ff31ae5fca3c8
-  target_sha256: fc0bc1e60e3ef3c4f77e290902697dc942a819d8dc096a79054ab2a8a4224822
+  source_sha256: 3d3fe5fefa5fbc079495d094260c12bbc0fca8da7945769d11a69a8a0bd7f515
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: cfe588dde1088f7f3334bdbf99045dfd44fbe22d93b73a73f384fa4678cec142
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [avaliacao, chapter_role, cra_pde, cra_support_period, dora_financial_entity, dora_ict_risk, eu_ai_high_risk_system, eu_ai_system, eu_placing_on_market, papel_suporte, practitioner_manual, requirement_runtime, sbdtoe_sbd]
   glossary_sha256: 13eead8e525138156b7211211b2b0691110ae1f044a37b8f2f4049cea01e2c3b
-  translated_at: 2026-09-27T07:09:02Z
-  stamped_at: 2026-09-27T07:14:37Z
+  translated_at: 2026-09-27T13:29:40Z
+  stamped_at: 2026-09-27T13:29:40Z
   reviewed_by: null
 ---
 
@@ -45,7 +45,7 @@ This policy applies to all running systems that produce events relevant to secur
 
 | Level | Applicability |
 |---|---|
-| L1 | Basic logging; structured format recommended; centralisation recommended |
+| L1 | Mandatory; structured format; security events from section 4; logs persisted outside the instance; minimum retention; centralisation recommended |
 | L2 | Mandatory; structured JSON format; mandatory security events; centralisation; minimum retention |
 | L3 | Mandatory; JSON/ECS; complete events; centralisation + SIEM; WORM; regulatory retention |
 
@@ -158,10 +158,10 @@ The Manual does not reproduce the periods of regimes (b) to (d): the organisatio
 
 | Requirement | L1 | L2 | L3 |
 |---|---|---|---|
-| Logs protected from modification | Recommended | Mandatory | Mandatory |
+| Logs protected from modification | Mandatory | Mandatory | Mandatory |
 | WORM storage (Write Once, Read Many) | Not applicable | Recommended | Mandatory |
 | Periodic hashing or signing of logs | Not applicable | Recommended | Mandatory |
-| Access to logs restricted and audited | Recommended | Mandatory | Mandatory |
+| Access to logs restricted and audited | Mandatory (restricted access); auditing of access recommended | Mandatory | Mandatory |
 | Alerts upon any attempt at alteration or deletion | Not applicable | Recommended | Mandatory |
 
 ---

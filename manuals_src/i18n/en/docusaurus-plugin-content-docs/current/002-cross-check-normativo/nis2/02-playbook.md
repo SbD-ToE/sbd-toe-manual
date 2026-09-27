@@ -7,16 +7,16 @@ sidebar_position: 3
 translation:
   source_locale: pt
   source_path: 002-cross-check-normativo/nis2/02-playbook.md
-  source_sha256: dbe6c25fc24be2e6f350ac2a6a73e10f8941eff1c2a13f5b4de2d621eebbb20e
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 78d7ff2a747033edd6bed2f269712a58c73b3962748d464277e0ebb019685110
+  source_sha256: 53572c97c6b8255adcd162b8d751cc30e9a154f93d5fbe909fd36ab236784013
+  source_commit: 5c2b16d193f5e7fe0cc6b566c47e456677cca656
+  target_sha256: 7bbc638b5931cb2bfade9e6d60ddddbc579f19e343664c9090116bc4ec887f95
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
-  glossary_sha256: 914582ffaf8812b31229ca5a0f97367099d874a098bb96818fee212816bd6fbd
-  translated_at: 2026-09-27T07:53:32Z
-  stamped_at: 2026-09-27T07:53:32Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, cycle_iteration, entity_type, eu_management_body, eu_startups, lifecycle_phase, maturity, mcp_reading_programa, nis2_early_warning, nis2_significant_incident, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, slug_threat_modeling, validation_evaluation]
+  glossary_sha256: 8a1c34891c4a75132fe7d9d1a3f2804c5199e2e543230143312b7ff1851111f2
+  translated_at: 2026-09-27T13:29:50Z
+  stamped_at: 2026-09-27T13:29:50Z
   reviewed_by: null
 ---
 
@@ -50,7 +50,7 @@ Where necessary, the text explicitly distinguishes:
 | **21** | Cybersecurity Risk-Management Measures | [Ch. 01](/sbd-toe/sbd-manual/classificacao-aplicacoes/intro), [Ch. 02](/sbd-toe/sbd-manual/requisitos-seguranca/intro), [Ch. 03](/sbd-toe/sbd-manual/threat-modeling/intro), [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 07](/sbd-toe/sbd-manual/cicd-seguro/intro), [Ch. 08](/sbd-toe/sbd-manual/iac-infraestrutura/intro), [Ch. 10](/sbd-toe/sbd-manual/testes-seguranca/intro), [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Implement technical controls, evidence and continuous review |
 | **23** | Incident Reporting | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | Detection, internal escalation and preparation of external reporting |
 | **Supply Chain** | Supplier Security | [Ch. 05](/sbd-toe/sbd-manual/dependencias-sbom-sca/intro), [Ch. 14](/sbd-toe/sbd-manual/governanca-contratacao/intro) | SBOM, technical due diligence and complementary supplier governance (`Art. 21(2)(d)`, `21(3)`, `22`) |
-| **Continuity** | Business Continuity and Crisis Management | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Backups, runbooks and exercises (`Art. 21(2)(c)`); broad corporate BCM remains out of scope |
+| **Continuity** | Business Continuity and Crisis Management | [Ch. 12](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro) | Runbooks and exercises (`Art. 21(2)(c)`); backups and DR not yet prescribed in the Manual; broad corporate BCM remains out of scope |
 
 ---
 
@@ -205,6 +205,7 @@ Where necessary, the text explicitly distinguishes:
 - **What:** Regular, tested, off-site backups
 - **How:** Automation, periodic restore tests
 - **Trail:** Logs of backups, tests, results
+- **State in the Manual:** not yet prescribed. Ch. 12 covers response and operational recovery; backups and restore tests remain for the organisation to define.
 - **Reference:** [Ch. 12 - Monitoring and Operations](/sbd-toe/sbd-manual/monitorizacao-operacoes/intro)
 
 #### 6.2 Crisis Management {#62-gestão-de-crise}

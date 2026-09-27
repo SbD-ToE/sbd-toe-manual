@@ -8,16 +8,16 @@ sidebar_position: 19
 translation:
   source_locale: pt
   source_path: 020-assets/policies/19_policy-estrategia-testes.md
-  source_sha256: 51d8213a913900c2bd8c862e9473d82e220db680f5b82ef3775857c0370b7573
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 766670d64926a63d224b4abe79c5ca677887a11c08ee789948ddc16ec48cf315
+  source_sha256: 6337da96c19d0074a0ae607e43e7c4cc3863cbd8232ad5506284938d6723f027
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: 8fcca0605956864a1b54d89da44d8acd90cd9f5eaab109d4fed65595b97abca6
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [audit_trail, avaliacao, cycle_iteration, framework_source_corpus, lifecycle_phase, llm, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
-  glossary_sha256: 7755814a9872b7e85d0772cf178a8a08473e49eb120e49039ec7e60514513933
-  translated_at: 2026-09-27T07:54:11Z
-  stamped_at: 2026-09-27T07:54:11Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [audit_trail, avaliacao, cycle_iteration, eu_startups, framework_source_corpus, lifecycle_phase, llm, practitioner_manual, requirement_runtime, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation]
+  glossary_sha256: 2380dcdd5294fe256f86f0027cb7514c5c7a0810f6a69b6848672f3874a727b3
+  translated_at: 2026-09-27T13:29:39Z
+  stamped_at: 2026-09-27T13:29:39Z
   reviewed_by: null
 ---
 
@@ -44,14 +44,14 @@ The objective of this policy is to ensure that:
 
 | Technique | L1 | L2 | L3 |
 |---|---|---|---|
-| **SAST** (static analysis) | Recommended | Mandatory | Mandatory |
+| **SAST** (static analysis) | Mandatory | Mandatory | Mandatory |
 | **Secret detection** | Mandatory | Mandatory | Mandatory |
-| **SCA** (software composition) | Mandatory (alert) | Mandatory (gate) | Mandatory (gate) |
+| **SCA** (software composition) | Mandatory (gate) | Mandatory (gate) | Mandatory (gate) |
 | **DAST** (dynamic analysis) | Recommended | Mandatory in staging | Mandatory in staging + coverage criteria |
-| **IAST** (runtime instrumentation) | Optional | Recommended | Recommended |
+| **IAST** (runtime instrumentation) | Optional | Recommended | Mandatory in staging |
 | **Fuzzing** | Optional | Recommended (critical endpoints) | Mandatory (public endpoints + parsing) |
 | **Manual security testing** | Not mandatory | Recommended per release | Mandatory per major release |
-| **PenTesting** | Not mandatory | Recommended annually | Mandatory (see PenTesting Policy) |
+| **PenTesting** | Not mandatory | Mandatory annually (see PenTesting Policy) | Mandatory (see PenTesting Policy) |
 
 ### 2.2 SAST {#22-sast}
 
@@ -81,10 +81,10 @@ Blocking thresholds must be documented and versioned in `gates-config.yaml` or e
 
 | Gate | L1 | L2 | L3 |
 |---|---|---|---|
-| SAST Critical/High | Alert | Blocks merge | Blocks merge |
+| SAST Critical/High | Blocks merge | Blocks merge | Blocks merge |
 | SAST Medium | Not applicable | Alert | Blocks merge |
 | Secret detection (any finding) | Blocks | Blocks | Blocks |
-| SCA High/Critical CVE without exception | Alert | Blocks promotion | Blocks promotion |
+| SCA High/Critical CVE without exception | Blocks promotion | Blocks promotion | Blocks promotion |
 | DAST High/Critical in staging | Not applicable | Blocks promotion to production | Blocks promotion to production |
 | DAST coverage below threshold | Not applicable | Alert | Blocks (threshold: 80% of endpoints) |
 | Fuzzing with a confirmed crash | Not applicable | Blocks release | Blocks release |

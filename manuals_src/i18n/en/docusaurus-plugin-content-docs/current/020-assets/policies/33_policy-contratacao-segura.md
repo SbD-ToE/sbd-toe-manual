@@ -8,16 +8,16 @@ sidebar_position: 33
 translation:
   source_locale: pt
   source_path: 020-assets/policies/33_policy-contratacao-segura.md
-  source_sha256: c8a4b478f9c2536af0ce9f4ed13fc5a335b9d7176ba965101186dfef64c9d3b2
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 523bcb4a0d637d4adda1302f683e6cfa215ec45a099978175a72f2ec4223ac11
+  source_sha256: 530d09913e46a6b233014a8e98f69a33061c35631c3ddea8ba5c9965edfca5e9
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: ee3e3c3aaf903402b8d17b4df2886309bacaf424a38fad5b232fade5b31c1916
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, audit_trail, avaliacao, cycle_iteration, discipline, dora_ict_tpp, eu_ai_deployer, eu_ai_gpai_model, lifecycle_phase, practitioner_manual, risk_level, role_juridico, role_procurement, sbdtoe_sbd, traceability, trilho_formativo, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: fea0ad6b475dabee1f63ac359ec777b052598383abcc5ad20898c386125b0da9
-  translated_at: 2026-09-27T09:05:45Z
-  stamped_at: 2026-09-27T09:05:45Z
+  translated_at: 2026-09-27T13:29:39Z
+  stamped_at: 2026-09-27T13:29:39Z
   reviewed_by: null
 ---
 
@@ -50,7 +50,7 @@ This policy applies to all suppliers, partners and contractors that:
 
 | Level | Applicability |
 |---|---|
-| L1 | Recommended; basic confidentiality and good-practice clauses; security contact defined |
+| L1 | Mandatory; proportionate security clauses (confidentiality and good practice); supplier validation before onboarding, with a questionnaire or checklist; security contact defined |
 | L2 | Mandatory; pre-contractual due diligence; SbD-ToE clauses; documented onboarding; annual reassessment |
 | L3 | Mandatory; formal due diligence; technical audit; complete clauses; SBOM and test reports mandatory; half-yearly reassessment; formal right to audit |
 

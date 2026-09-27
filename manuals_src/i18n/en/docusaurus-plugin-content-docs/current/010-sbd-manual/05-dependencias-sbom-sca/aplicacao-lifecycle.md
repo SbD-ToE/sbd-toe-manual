@@ -7,16 +7,16 @@ genia: us-format-normalization
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/aplicacao-lifecycle.md
-  source_sha256: 1d6c1b849d690fd9d838f349d929292bbeeb4a0d291865e1e37d2def6fe73595
-  source_commit: 036d74010f423f247be988e4a417375c74edb9d9
-  target_sha256: 88598bd98ccc303983e2d1d70bbd89298caff1028db0f502088d04d151474d09
+  source_sha256: 7224adc952f68a33351be28821909b7f69cafc91ba7f214cbacbe18e9f158f65
+  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
+  target_sha256: ab42b4751408ea74eab1c2deab8a46f684c1a6835262c7ead0c94774636117b4
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: 740bf440657434f2680e8b3e2e5b7f069a9b07bceba4d9fc3fab698ab88c4a2f
-  glossary_keys: [avaliacao, chapter_role, como_fazer, cra_pde, cycle_iteration, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
-  glossary_sha256: f5a983cfcc9856f17c8558b5cf1fc5b3d8ca697b5b3aa1cfa049e8a5b947c60d
-  translated_at: 2026-09-27T07:53:42Z
-  stamped_at: 2026-09-27T07:53:42Z
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
+  glossary_keys: [avaliacao, chapter_role, como_fazer, cra_pde, cycle_iteration, eu_startups, framework_source_corpus, lifecycle_phase, mcp, papel_suporte, practitioner_manual, provenance, spdx_license_list, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
+  glossary_sha256: 89835127121febfa7f22d2e5d73221c4e6b128713d2606b31a491997dc8d0822
+  translated_at: 2026-09-27T13:30:07Z
+  stamped_at: 2026-09-27T13:30:07Z
   reviewed_by: null
 ---
 
@@ -176,7 +176,7 @@ As an **AppSec Engineer**, I want to **run automatic SCA in the pipelines**, so 
 **Proportionality by risk.**
 | Level | Policy |
 |---|---|
-| L1 | Alert |
+| L1 | Block High/Critical |
 | L2 | Block High/Critical |
 | L3 | Block Medium+
 

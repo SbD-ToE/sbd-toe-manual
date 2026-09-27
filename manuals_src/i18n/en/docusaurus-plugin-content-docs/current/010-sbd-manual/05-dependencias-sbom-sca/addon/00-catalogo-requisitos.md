@@ -8,16 +8,16 @@ sidebar_position: 0
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/05-dependencias-sbom-sca/addon/00-catalogo-requisitos.md
-  source_sha256: 2f498c1719b6af76665e40b150c5a4e9d516f9c85af44a146e4d5240a6bebd5b
-  source_commit: b8ce768a94df0281215156c8358b55b7d012b568
-  target_sha256: 04d8fea09cf27a59af13e6bc5018d535a4d50f0c491abdeeb675e8a2830f0499
-  engine: claude-fable-5-1
+  source_sha256: aaea605a614c279b611a3da81fa95b39cf42eac0c406e1dff594015f382e5154
+  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
+  target_sha256: 0b6adba8b0412f6822a74cfc048187deb350ffd3fbe5aa6e73ca37407c2074d3
+  engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, mcp, plain_rag, practitioner_manual, provenance, requirement_runtime, risk_level, sbdtoe_sbd, traceability, verificacao_check, verification_taxonomy]
   glossary_sha256: e7ba97c1aa6ad5aceda3c6fc13a15a3a4be183c2b0fc6b9a8929cf71d8b88c14
-  translated_at: 2026-09-27T09:05:40Z
-  stamped_at: 2026-09-27T09:05:40Z
+  translated_at: 2026-09-27T14:19:07Z
+  stamped_at: 2026-09-27T14:19:07Z
   reviewed_by: null
 ---
 
@@ -65,7 +65,7 @@ Requirements that guarantee that all third-party dependencies are known, analyse
 | DEP-007 | Update policy with an SLA defined by severity | ✔ | ✔ | ✔ | Update SLA defined by CVE severity level (in line with Policy 19 §4.3: e.g. critical 30 / 7 / 3 days and high 90 / 30 / 15 days at L1 / L2 / L3; with an indication of active exploitation, the time limit is brought forward); evidence of compliance in the most recent cycles; exceptions formalised where applicable. |
 | DEP-008 | Automated updates with impact analysis | - | ✔ | ✔ | Update bot active (e.g. Dependabot, Renovate); PRs generated automatically with semver impact information, changelogs and tests; human intervention mandatory for breaking changes; PRs not merged automatically without review. |
 | DEP-009 | Detection of unintended or emergent dependencies | - | - | ✔ | Defined process to detect dependencies introduced via tooling, code generation, pipelines or runtime loading; inventory boundaries documented; deviations detected and handled. |
-| DEP-010 | SBOM → vulnerability → fix traceability | - | ✔ | ✔ | Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken (fix PR, version update or formalised exception with justification and review date). |
+| DEP-010 | SBOM → vulnerability → fix traceability | - | ✔ | ✔ | Traceable evidence from the component identified in the SBOM to the associated CVE and to the action taken (fix PR, version update or formalised exception with justification and review date); sources of vulnerability information defined (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals. |
 | DEP-011 | Inventory and provenance of AI/ML dependencies | - | ✔ | ✔ | Systems with AI/ML components have a dedicated inventory of AI dependencies: (1) base models with version, artefact hash and source (model registry, fine-tuning provenance); (2) training and fine-tuning datasets with version, source and curation process; (3) MCP servers and tools exposed to agents with identifier, version and scope (`AML.T0110` AI Agent Tool Poisoning); (4) embedded prompts relevant to behaviour (system prompts, RAG templates) with version and owner. The inventory is generated per build and integrated into the main SBOM (DEP-001); upstream incidents in models, datasets or MCP servers (LLM03-2025 Supply Chain, `AML.T0010` AI Supply Chain Compromise) trigger the same triage process as DEP-002/DEP-007. |
 | DEP-012 | AI BOM generated per *build* in a standardised format | - | ✔ | ✔ | The AI/ML inventory (DEP-011) is materialised as an **AI BOM** in a standardised format per *build* — CycloneDX 1.6 with the `ml-bom` extension (published in 2024) is preferred, or a recognised equivalent (`ML-BOM`, `AIBOM`). The AI BOM is a *build* artefact (not a separate analysis), versioned, and linked to the main SBOM. It includes models, datasets, MCP servers/tools and embedded prompts with *pinned* version, hash, *provider* and licence. |
 | DEP-013 | Explicit *pinned* version for AI models and providers | - | ✔ | ✔ | AI models used in production or in a pipeline have an **explicit fixed version** — e.g. `claude-opus-4-7@sha:…` instead of `claude-latest`. Semver ranges, dynamic *aliases* (`latest`, `stable`) and unversioned references are **prohibited** in any environment that is not exploratory. A major version change by the provider requires a new *eval suite* (Ch. 10 §C5) and a review of the *threat model* (Ch. 03 US-11). Mitigates *AI Supply Chain Rug Pull* (`AML.T0109`). |

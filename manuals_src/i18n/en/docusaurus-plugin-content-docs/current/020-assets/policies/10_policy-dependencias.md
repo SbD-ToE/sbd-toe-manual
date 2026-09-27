@@ -8,16 +8,16 @@ sidebar_position: 10
 translation:
   source_locale: pt
   source_path: 020-assets/policies/10_policy-dependencias.md
-  source_sha256: 728382a85bdc9e77f96081e062be68336b1118116a5173fe49ed576ea685261a
-  source_commit: dd613d67894f2b585927cbcec942859cd49a4dcb
-  target_sha256: d6e3ea458f1c7b9c2251ddf8688eac6b47b0f1c6154b92e8c1d6126372522198
+  source_sha256: bdb0e4beaeadf34a033f47ee40cb3c85dd532572a135a5802aad7ebb0b68a750
+  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
+  target_sha256: dcd656cb52925a7628e089b4b94d509334ea5bdd596ce1189fdbcf4fadfa7e38
   engine: claude-opus-5-5
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
   terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [ai_service_vendor, framework_source_corpus, llm, mcp, mirror_osf, provenance, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: c4a5dc988eb18558948a8787872ca650b4201a15571961c26cb014e9cbd7dc30
-  translated_at: 2026-09-27T13:29:44Z
-  stamped_at: 2026-09-27T13:29:44Z
+  translated_at: 2026-09-27T14:19:05Z
+  stamped_at: 2026-09-27T14:19:05Z
   reviewed_by: null
 ---
 
@@ -166,6 +166,7 @@ For systems in production, there must be a mechanism for correlating the SBOM of
 
 - [ ] Inventory of deployed components per service and environment (`inventario-runtime-<servico>-<ambiente>.json`)
 - [ ] Integration with a vulnerability feed (NVD, OSV, GitHub Advisory Database)
+- [ ] Sources of vulnerability information recorded (public databases, supplier advisories, CSIRTs) and reviewed at planned intervals, at least at the annual review of this policy
 - [ ] Alert generated when a CVE affects a deployed version, with component, version, environment and severity
 - [ ] Response SLA defined per severity (see CVE Exceptions Policy)
 

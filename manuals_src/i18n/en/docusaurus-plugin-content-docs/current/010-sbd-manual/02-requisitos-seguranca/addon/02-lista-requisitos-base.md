@@ -8,16 +8,16 @@ sidebar_position: 2
 translation:
   source_locale: pt
   source_path: 010-sbd-manual/02-requisitos-seguranca/addon/02-lista-requisitos-base.md
-  source_sha256: 4bd848ac503f87450c8da9e7dd30afa2dc9cb15a64c93b07717dab27ba4d8d17
-  source_commit: 895786c4e9c09e4191e51a58b865c83ff4510ec7
-  target_sha256: 192a6581a72e4f990be9459af7625e003370a0db722a40775de8cf655186efbc
+  source_sha256: ed6406108276f24865fc06fb84e86726900f6998926529af559a8cce6435a17d
+  source_commit: 62e6744cbd2001d8397d05f09a404fa2c18e3d61
+  target_sha256: 8bbf8a8b6a2686c34b148c60879a5e04a6265d7f379b87ae1a55f7697a1d0231
   engine: claude-fable-5-1
   prompt_sha256: 08d32de4a4f6d574fc1f0eafc6b83ac308535546bb6b11a18a339b25053005c0
-  terms_sha256: bee9c6ee01a569777d9cc1d02cb14939f64a74ce4571924f95ce9be1f7d53a10
+  terms_sha256: 153599a2c96a49fbaadae86b2e07971761ed2be92b9effb3351f1cbec07dcc99
   glossary_keys: [audit_trail, avaliacao, capacitacao, chapter_role, cycle_iteration, esquema_regime, framework_source_corpus, lifecycle_phase, mapping, maturity, mcp_reading_programa, normative_empirical, practitioner_manual, programme_line, requirement_runtime, risk_level, role_tech_lead, sbdtoe_sbd, schema, threat, traceability, validation_evaluation, verificacao_check, verification_taxonomy]
   glossary_sha256: b5b719bdacb01d3e004a1446e0d542ec14541a3d0bda952c9470360d990c028a
-  translated_at: 2026-09-25T20:22:31Z
-  stamped_at: 2026-09-26T18:32:59Z
+  translated_at: 2026-09-27T14:19:32Z
+  stamped_at: 2026-09-27T14:19:32Z
   reviewed_by: null
 ---
 
@@ -336,7 +336,7 @@ Requirements that guarantee the integrity and traceability of artefacts througho
 |----|------|:--:|:--:|:--:|----------------------|
 | DST-001 | Authenticated and auditable repositories | ✔ | ✔ | ✔ | Mandatory authentication and active logs for access to artefact repositories. |
 | DST-002 | Approval for public publication | - | ✔ | ✔ | Publication in a public registry requires approval and formal documentation of the process. |
-| DST-003 | Digital signature or checksum | - | ✔ | ✔ | Artefacts signed or validated by hash before publication; automated verification. |
+| DST-003 | Digital signature or checksum | - | ✔ | ✔ | Artefacts signed or validated by hash before publication; automated verification; updates distributed to users or customers carry a published signature or hash, which the product or the installer verifies before installation. |
 | DST-004 | Inclusion of an SBOM in the artefacts | - | ✔ | ✔ | SBOM generated and attached to each release; dependency traceability available. |
 | DST-005 | Access segregated by role and environment | - | ✔ | ✔ | Only authorised users and automations access production artefacts. |
 | DST-006 | Deploy only via a validated pipeline | - | ✔ | ✔ | Artefacts deployed only by a controlled and audited pipeline; no manual deploy to production. |
